@@ -85,11 +85,6 @@ Performance/Detect:
 Performance/RedundantBlockCall:
   Enabled: false
 
-# Offense count: 4
-# Cop supports --auto-correct.
-Performance/RedundantMatch:
-  Enabled: false
-
 # Offense count: 11
 # Cop supports --auto-correct.
 # Configuration parameters: MaxKeyValuePairs.
@@ -605,8 +600,4 @@ Style/WhileUntilModifier:
 # Configuration parameters: EnforcedStyle, SupportedStyles, MinSize, WordRegex.
 # SupportedStyles: percent, brackets
 Style/WordArray:
-  Enabled: false
-
-# Offense count: 7
-Style/ZeroLengthPredicate:
   Enabled: false

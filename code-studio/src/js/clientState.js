@@ -1,34 +1,160 @@
 /**
- * @file Helper functions for accessing client state. This state is stored in a
- *       combination of cookies and HTML5 web storage.
+ * @file A module for accessing persistent per-user client state.
+ *
+ * Client state for signed-in users persists even across logins.
+ * Client-state for signed-out users is per-tab and goes aways when the tab
+ * is closed.
+ *
+ * Before getting or setting client state, the developer must call
+ * setCurrentUserKey with a unique key for the current user, or setAnonymousUser
+ * to use temporary state for an anonymous user.
+ *
+ * Client state for logged in users is "reasonably" durable but not quite hard
+ * state-- the client state module garbage-collects the oldest client state
+ * if the total size of the client state exceeds the 5MB browser limit. In
+ * practice this limit will rarely be reached, but in this case this does
+ * occur the database typically has the same state and can be used to refill
+ * the client state cache.
+ *
+ * Implementation notes:
+ * We use the 'lscache' npm module to divide local storage into per-user buckets
+ * and to expire the least recently created storage slots.
+ *
+ * The current user key for is kept in the 'user_key' slot in localStorage. For
+ * unauthenticated users, where the user_key is the empty string, a second
+ * 'anon_user_key' slot in *session* storage is used to store a randomly
+ * generated temporary key. By using session storage, we ensure that each tab
+ * uses its own key and has its own client state bucket. The temporary
+ * localStorage for anonymous user keys is cleared when setCurrentUserKey is
+ * called for a signed in user.
+ *
+ * The code that uses this module typically merges the client state with the
+ * state from the server (if available) so it captures both progress on the
+ * current machine and progress by the same user on other machines.
  */
+
 'use strict';
 
-module.exports = function (sessionStorage, $) {
+var lscache = require('lscache');
+
+module.exports = function () {
 
 var clientState = {};
 
 /**
- * Number of days before client state cookie expires.
- * @type {number}
- * @private
+ * Max number of minutes before client state expires, current 10 years.
+ * @private {number}
  */
-clientState.EXPIRY_DAYS = 365;
+clientState.EXPIRY_MINUTES = 365 * 10 * 24 * 60;
 
 /**
- * Maximum number of lines of code that can be stored in the cookie
- * @type {number}
- * @private
+ * Maximum number of lines of code that can be added at once.
+ * @private {number}
  */
 var MAX_LINES_TO_SAVE = 1000;
 
-var COOKIE_OPTIONS = {expires: clientState.EXPIRY_DAYS, path: '/'};
+/**
+ * A special key indicating that the user is not signed in.
+ * @const {string}
+ */
+var ANON_USER_KEY = '';
 
+/**
+ * Returns the storage key for the current user.
+ * @return {string}
+ */
+function getStorageBucketForCurrentUser() {
+  var userBucket = localStorage.getItem('user_key');
+  if (userBucket == ANON_USER_KEY) {
+    userBucket = sessionStorage.getItem('anon_key');
+  }
+  return userBucket;
+}
+
+/** Sets the current user to be anonymous. */
+clientState.setAnonymousUser = function() {
+  clientState.setCurrentUserKey(ANON_USER_KEY);
+};
+
+/**
+ * Sets the current user storage key, or if key is the empty string, assigns a
+ * temporary storage key which will be used only for the current tab.
+ * @param key {string} A unique key for the current user, or ANON_USER_KEY.
+ */
+clientState.setCurrentUserKey = function(key) {
+  if (key === null || key === undefined) {
+    throw new Error('User key must be defined in setCurrentUserKey.');
+  }
+
+  // Do nothing if the key is the same as the current key.
+  if (key == localStorage.getItem('user_key')) {
+    return;
+  }
+
+  // Remember the new key.
+  localStorage.setItem('user_key', key);
+
+  // Delete anonymous user state when transitioning to a signed-in user.
+  var anonKey = sessionStorage.getItem('anon_key');
+  if (anonKey) {
+    lscache.setBucket(anonKey);
+    lscache.flush();
+    sessionStorage.removeItem('anon_key');
+  }
+
+  // Generate a random session key if the new current user is anonymous.
+  if (key == ANON_USER_KEY) {
+    sessionStorage.setItem('anon_key', 'temp_' + Math.random());
+  }
+};
+
+/**
+ * Return true if the user key has been set.
+ * @return {boolean}
+ */
+clientState.isUserKeySet = function() {
+  return localStorage.getItem('user_key') !== undefined;
+};
+
+/**
+ * Applies the lscache storage bucket for the current user.
+ * Throws an exception if the current user has not been set.
+ */
+function applyUserBucket() {
+  var bucket = getStorageBucketForCurrentUser();
+  if (bucket === undefined) {
+    throw new Error('User key must be set before accessing client state.');
+  }
+  lscache.setBucket(bucket);
+}
+
+/**
+ * Returns the given item for the current user.
+ * @param key {string}
+ * @returns {Object}
+ */
+function getItem(key) {
+  applyUserBucket();
+
+  return lscache.get(key);
+}
+
+/**
+ * Sets the given item for the current user.
+ * @param key {string}
+ * @param value {Object}
+ */
+function setItem(key, value) {
+  applyUserBucket();
+  lscache.set(key, value, clientState.EXPIRY_MINUTES);
+}
+
+/***
+ * Resets the client state for the current user.
+ */
 clientState.reset = function() {
-  try {
-    $.removeCookie('lines', {path: '/'});
-    sessionStorage.clear();
-  } catch (e) {}
+  applyUserBucket();
+  lscache.flush();
 };
 
 /**
@@ -62,34 +188,26 @@ clientState.queryParams = function (name) {
  *   the cached copy is missing/stale.
  */
 clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
-  var data = sessionStorage.getItem(createKey(scriptName, levelId, 'source'));
-  if (data) {
-    var parsed;
-    try {
-      parsed = JSON.parse(data);
-    } catch (e) {
-      return;
-    }
-    if (!timestamp || parsed.timestamp > timestamp) {
-      return parsed.source;
-    }
+  var parsed = getItem(createKey(scriptName, levelId, 'source'));
+  if (parsed && (!timestamp || parsed.timestamp > timestamp)) {
+    return parsed.source;
   }
+  return;  // Return undefined for missing source.
 };
 
 /**
  * Cache a copy of the level source along with a timestamp. Posts to /milestone
- * may be queued, so save the data in sessionStorage to present a consistent
- * client view.
+ * may be queued, so save the data in storage to present a consistent client view.
  * @param {string} scriptName
  * @param {number} levelId
  * @param {number} timestamp
  * @param {string} source
  */
 clientState.writeSourceForLevel = function (scriptName, levelId, timestamp, source) {
-  safelySetItem(createKey(scriptName, levelId, 'source'), JSON.stringify({
+  setItem(createKey(scriptName, levelId, 'source'), {
     source: source,
     timestamp: timestamp
-  }));
+  });
 };
 
 /**
@@ -155,7 +273,7 @@ function setLevelProgress(scriptName, levelId, progress) {
     progressMap[scriptName] = {};
   }
   progressMap[scriptName][levelId] = progress;
-  safelySetItem('progress', JSON.stringify(progressMap));
+  setItem('progress', progressMap);
 }
 
 /**
@@ -163,21 +281,21 @@ function setLevelProgress(scriptName, levelId, progress) {
  * @return {Object<String, number>}
  */
 clientState.allLevelsProgress = function() {
-  var progressJson = sessionStorage.getItem('progress');
-  try {
-    return progressJson ? JSON.parse(progressJson) : {};
-  } catch(e) {
-    // Recover from malformed data.
+  var progressJson = getItem('progress');
+  if (progressJson && typeof progressJson == 'object') {
+    return progressJson;
+  } else {
+    // Return empty for missing or malformed progress json.
     return {};
   }
 };
 
 /**
- * Returns the number of lines completed from the cookie.
+ * Returns the number of lines completed.
  * @returns {number}
  */
 clientState.lines = function() {
-  var linesStr = $.cookie('lines');
+  var linesStr = getItem('lines');
   return isFinite(linesStr) ? Number(linesStr) : 0;
 };
 
@@ -187,14 +305,13 @@ clientState.lines = function() {
  */
 function addLines(addedLines) {
   var newLines = Math.min(clientState.lines() + Math.max(addedLines, 0), MAX_LINES_TO_SAVE);
-
-  $.cookie('lines', String(newLines), COOKIE_OPTIONS);
+  setItem('lines', String(newLines));
 }
 
 /**
  * Returns whether or not the user has seen a given video based on contents of the local storage
  * @param videoId
- * @returns {*}
+ * @returns {boolean}
  */
 clientState.hasSeenVideo = function(videoId) {
   return hasSeenVisualElement('video', videoId);
@@ -225,24 +342,20 @@ clientState.recordCalloutSeen = function (calloutId) {
   recordVisualElementSeen('callout', calloutId);
 };
 
+/** Sets an arbitrary key and value in the user's storage, for testing only.*/
+clientState.setItemForTest = function(key, value) {
+  setItem(key, value);
+};
+
 /**
  * Private helper for videos and callouts - persists info in the local storage that a given element has been seen
  * @param visualElementType
  * @param visualElementId
  */
 function recordVisualElementSeen(visualElementType, visualElementId) {
-  var elementSeenJson = sessionStorage.getItem(visualElementType) || '{}';
-  var elementSeen;
-  try {
-    elementSeen = JSON.parse(elementSeenJson);
-    elementSeen[visualElementId] = true;
-    safelySetItem(visualElementType, JSON.stringify(elementSeen));
-  } catch (e) {
-    //Something went wrong parsing the json. Blow it up and just put in the new callout
-    elementSeen = {};
-    elementSeen[visualElementId] = true;
-    safelySetItem(visualElementType, JSON.stringify(elementSeen));
-  }
+  var elementSeenMap = getElementSeenMap(visualElementType);
+  elementSeenMap[visualElementId] = true;
+  setItem(visualElementType, elementSeenMap);
 }
 
 /**
@@ -251,17 +364,26 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
  * @param visualElementId
  */
 function hasSeenVisualElement(visualElementType, visualElementId) {
-  var elementSeenJson = sessionStorage.getItem(visualElementType) || '{}';
-  try {
-    var elementSeen = JSON.parse(elementSeenJson);
-    return elementSeen[visualElementId] === true;
-  } catch (e) {
-    return false;
-  }
+  var elementSeenMap = getElementSeenMap(visualElementType);
+  return elementSeenMap[visualElementId] === true;
 }
 
 /**
- * Creates standardized keys for storing values in sessionStorage.
+ * Private helper to return the elementSeen map for videos and callouts.
+ * @param visualElementType
+ * @return Object<string, boolean>
+ */
+function getElementSeenMap(visualElementType) {
+  var elementSeenMap = getItem(visualElementType) || {};
+  // Cope with invalid json which lscache returns as a string. (Shouldn't happen unless there is a bug.)
+  if (typeof elementSeenMap !== 'object') {
+    elementSeenMap = {};
+  }
+  return elementSeenMap;
+}
+
+/**
+ * Creates standardized keys for storing values in localStorage.
  * @param {string} scriptName
  * @param {number} levelId
  * @param {string=} prefix
@@ -269,19 +391,6 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
  */
 function createKey(scriptName, levelId, prefix) {
   return (prefix ? prefix + '_' : '') + scriptName + '_' + levelId;
-}
-
-/**
- * Don't throw storage errors in Safari private browsing mode.
- */
-function safelySetItem(key, value) {
-  try {
-    sessionStorage.setItem(key, value);
-  } catch (e) {
-    if (e.name !== "QuotaExceededError") {
-      throw e;
-    }
-  }
 }
 
 return clientState;

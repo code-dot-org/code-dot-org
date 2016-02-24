@@ -1,12 +1,23 @@
 class HomeController < ApplicationController
   before_filter :authenticate_user!, only: :gallery_activities
 
-
   # Don't require an authenticity token on set_locale because we post to that
   # action from publicly cached page without a valid token. The worst case impact
   # is that an attacker could change a user's language if they fooled them into
   # clicking on a link.
   skip_before_action :verify_authenticity_token, :only => 'set_locale'
+
+  # Sets the client state key for the current user and redirects to params[:redirect] or
+  # the root if unspecified.
+  def update_login
+    @redirect = params[:redirect] || '/'
+    # Please see update_login.html.haml for the client logic.
+  end
+
+  def reset_session_endpoint
+    reset_session
+    # Please see reset_session_endpoint.html.haml for additional client logic.
+  end
 
   def set_locale
     set_locale_cookie(params[:locale]) if params[:locale]
