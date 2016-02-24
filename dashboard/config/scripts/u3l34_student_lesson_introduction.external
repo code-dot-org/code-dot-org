@@ -23,3 +23,15 @@ A skill that programmers must develop is the ability to plan and execute a proje
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The following two "student" exemplars and target papers were created by Code.org staff to help give a sense of student work that would score highly against the rubric.
+
+#### Student Exemplar 1: Super Bot
+ * [Student Writeup (PDF)](https://drive.google.com/file/d/0B21d4g64Z62YTWRLbGJsenhLUmM/view) 
+ * [Student App Lab Project](https://studio.code.org/projects/applab/iZNpsIAD3HiU58jVJON_7A/view)
+ 
+#### Student Exemplar 2: Grumpy Cat
+ * [Student Writeup (PDF)](https://drive.google.com/open?id=0B21d4g64Z62YUUhyeVR6bHlOQjg)
+ * [Student App Lab Project](https://studio.code.org/projects/applab/2OfiUCcRVbZmRoiDsZ_UeA/view)
+MARKDOWN

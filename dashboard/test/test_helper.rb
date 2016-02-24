@@ -313,3 +313,16 @@ end
 def storage_id(_)
   SecureRandom.hex
 end
+
+# A fake slogger implementation that captures the records written to it.
+class FakeSlogger
+  attr_reader :records
+
+  def initialize
+    @records = []
+  end
+
+  def write(json)
+    @records << json
+  end
+end
