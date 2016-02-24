@@ -18,8 +18,9 @@ module AdminReportsHelper
   # The max_counts parameter is used to determine the space of subkeys, e.g.,
   # cumulatives[key][subkey] will exist exactly when subkey <= max_counts[key].
   def get_cumulatives(max_counts, stats)
-    # Construct the cumulatives hash manually. Since we ultimately want to display zero values, we
-    # explicitly initialize the hash.
+    # Initialize the cumulatives hash manually. Since we ultimately want the hash to explicitly
+    # contain all subkeys between 0 and max_counts[key], we explicitly initialize the hash. Note
+    # that implicitly containing zero values is insufficient when iteration over the hash is used.
     cumulatives = Hash.new {|hash, key| hash[key] = {}}
     max_counts.each do |key, max_count|
       (0..max_count).each do |n|
@@ -28,6 +29,7 @@ module AdminReportsHelper
     end
     # Populate the cumulatives hash by incrementing cumulatives[key][subkey] when appropriate.
     stats.each do |key, key_data|
+      next if !max_counts.include? key
       key_data.each do |subkey, subkey_count|
         # Add stats[key][subkey] to all appropriate cumulatives[key] buckets.
         top_index = [subkey.to_s.to_i, max_counts[key]].min

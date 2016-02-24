@@ -53,4 +53,11 @@ class AdminReportsHelperTest < ActionView::TestCase
 
     assert_equal({17 => {0 => 100.0, 1 => 60.0}}, get_cumulatives(max_counts, stats))
   end
+
+  def test_get_cumulatives_extra_key
+    max_counts = {17 => 1}
+    stats = {17 => {0 => 2, 1 => 1, 2 => 2}, 18 => {0 => 1}}
+
+    assert_equal({17 => {0 => 100.0, 1 => 60.0}}, get_cumulatives(max_counts, stats))
+  end
 end
