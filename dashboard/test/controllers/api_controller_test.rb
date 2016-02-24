@@ -123,15 +123,41 @@ class ApiControllerTest < ActionController::TestCase
     create :user_level, user: user, best_result: 100, script: script, level: script.script_levels[1].level
     sign_in user
 
+    # Test user progress.
     get :user_progress, script_name: script.name
     assert_response :success
 
     body = JSON.parse(response.body)
     assert_equal 2, body['linesOfCode']
-    level_id = script.script_levels[1].level.id
+    script_level = script.script_levels[1]
+    level_id = script_level.level.id
     assert_equal 'perfect', body['levels'][level_id.to_s]['status']
     assert_equal 100, body['levels'][level_id.to_s]['result']
 
+    # Test user_progress_for_stage.
+    # Configure a fake slogger to verify that the correct data is logged.
+    slogger = FakeSlogger.new
+    CDO.set_slogger_for_test(slogger)
+
+    get :user_progress, script_name: script.name, stage_position: 1, level_position: 1
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 2, body['linesOfCode']
+    assert_equal 0, body['trophies']['current']
+    assert_equal 27, body['trophies']['max']
+    assert_equal 'perfect', body['levels'][level_id.to_s]['status']
+    assert_equal 100, body['levels'][level_id.to_s]['result']
+    assert_equal([{
+                      application: :dashboard,
+                      tag: 'activity_start',
+                      script_level_id: script_level.id,
+                      level_id: level_id,
+                      user_agent: 'Rails Testing',
+                      locale: :'en-us'
+                  }],
+                 slogger.records)
+
+    # Test user_progress_for_all_scripts.
     get :user_progress_for_all_scripts
     assert_response :success
     body = JSON.parse(response.body)

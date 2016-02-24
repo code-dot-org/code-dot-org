@@ -910,6 +910,61 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
+    },
+
+    {
+      description: "new radio buttons have default group ids",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // Switch to design mode
+        $('#designModeButton').click();
+
+        // Add first radio button
+        testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
+        var radio1 = $("#design_radio_button1")[0];
+
+        // Validate that a default group id got generated and shown in properties tab
+        assert.equal(radio1.name, 'radio_group1', "default group id generated for new radio button");
+        assertPropertyRowValue(1, 'group id', 'radio_group1', assert);
+
+        // Add second radio button
+        testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
+        var radio2 = $('#design_radio_button2')[0];
+
+        // Validate that it has the same group id as the first radio button
+        assert.equal(radio2.name, radio1.name, "new radio button reused group id of existing radio button");
+        assertPropertyRowValue(1, 'group id', 'radio_group1', assert);
+
+        // Change the group id of radio button 2
+        radio2.name = "radio_group_changed";
+
+        // Add third radio button
+        testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
+        var radio3 = $('#design_radio_button3')[0];
+
+        // Validate that it has the same group id as the most recently created radio button, i.e. radio button 2
+        assert.equal(radio3.name, radio2.name, "new radio button reused updated group id of existing radio button");
+        assertPropertyRowValue(1, 'group id', 'radio_group_changed', assert);
+
+        // Add a new screen
+        testUtils.dragToVisualization('SCREEN', 10, 10);
+
+        // Add fourth radio button
+        testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
+        var radio4 = $('#design_radio_button4')[0];
+
+        // Validate that a new group id got generated, and not group id from the other screen
+        assert.equal(radio4.name, "radio_group2");
+        assertPropertyRowValue(1, 'group id', 'radio_group2', assert);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     }
   ]
 };

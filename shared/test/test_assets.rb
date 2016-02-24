@@ -287,7 +287,7 @@ class AssetsTest < Minitest::Test
         delete(@assets, channel_id, added_filename1)
         delete(@assets, channel_id, added_filename2)
 
-        assert (JSON.parse(list(@assets, channel_id)).length == 0), "No unexpected assets were written to storage."
+        assert (JSON.parse(list(@assets, channel_id)).empty?), "No unexpected assets were written to storage."
 
         delete_channel(@channels, channel_id)
       end
@@ -333,7 +333,7 @@ class AssetsTest < Minitest::Test
           delete(@assets, channel_id, filetodelete1)
           delete(@assets, channel_id, filetodelete2)
 
-          assert (JSON.parse(list(@assets, channel_id)).length == 0), "No unexpected assets were written to storage."
+          assert (JSON.parse(list(@assets, channel_id)).empty?), "No unexpected assets were written to storage."
           delete_channel(@channels, channel_id)
         end
       end
