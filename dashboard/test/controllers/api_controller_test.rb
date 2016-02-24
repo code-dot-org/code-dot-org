@@ -123,6 +123,7 @@ class ApiControllerTest < ActionController::TestCase
     create :user_level, user: user, best_result: 100, script: script, level: script.script_levels[1].level
     sign_in user
 
+    # Test user progress.
     get :user_progress, script_name: script.name
     assert_response :success
 
@@ -132,6 +133,17 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 'perfect', body['levels'][level_id.to_s]['status']
     assert_equal 100, body['levels'][level_id.to_s]['result']
 
+    # Test user_progress_for_stage.
+    get :user_progress, script_name: script.name, stage_position: 1, level_position: 1
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 2, body['linesOfCode']
+    assert_equal 0, body['trophies']['current']
+    assert_equal 27, body['trophies']['total']
+    assert_equal 'perfect', body['levels'][level_id.to_s]['status']
+    assert_equal 100, body['levels'][level_id.to_s]['result']
+
+    # Test user_progress_for_all_scripts.
     get :user_progress_for_all_scripts
     assert_response :success
     body = JSON.parse(response.body)
