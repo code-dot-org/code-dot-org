@@ -19,6 +19,54 @@ var RecordListener = module.exports = function () {
 };
 
 /**
+ * Number of ms to wait before polling each table for more data after finishing
+ * processing the last batch of data for that table.
+ * @type {number}
+ */
+var RECORD_INTERVAL = 1000; // 1 second
+
+var EventType = {
+  CREATE: 'create',
+  UPDATE: 'update',
+  DELETE: 'delete'
+};
+RecordListener.EventType = EventType;
+
+/**
+ * Adds a listener which calls the callback when changes are made to the table.
+ * The callback is called once per changed record.
+ * @param {string} tableName Name of the table to listen to.
+ * @param {function(Object, EventType)} callback Callback to call with the record
+ * and the type of event which happened to it. For create and update events,
+ * the entire new record is included. For delete events, only the id is included.
+ * @returns {boolean} true if adding the listener succeeded, or false if
+ * a listener already existed for the specified table.
+ */
+RecordListener.prototype.addListener = function (tableName, callback) {
+  if (this.tableHandlers_[tableName]) {
+    return false;
+  }
+
+  this.tableHandlers_[tableName] = new TableHandler(tableName, callback);
+
+  return true;
+};
+
+/**
+ * Clears the timeouts and resets internal state.
+ */
+RecordListener.prototype.reset = function () {
+  for (var tableName in this.tableHandlers_) {
+    this.tableHandlers_[tableName].reset();
+  }
+  this.tableHandlers_ = {};
+};
+
+//////////////////////////////////////////////////
+// TableHandler
+//////////////////////////////////////////////////
+
+/**
  *
  * @param {string} tableName
  * @param {function} callback
@@ -56,40 +104,6 @@ var TableHandler = function (tableName, callback) {
 };
 
 /**
- * Number of ms to wait before polling each table for more data after finishing
- * processing the last batch of data for that table.
- * @type {number}
- */
-var RECORD_INTERVAL = 1000; // 1 second
-
-var EventType = {
-  CREATE: 'create',
-  UPDATE: 'update',
-  DELETE: 'delete'
-};
-RecordListener.EventType = EventType;
-
-/**
- * Adds a listener which calls the callback when changes are made to the table.
- * The callback is called once per changed record.
- * @param {string} tableName Name of the table to listen to.
- * @param {function(Object, EventType)} callback Callback to call with the record
- * and the type of event which happened to it. For create and update events,
- * the entire new record is included. For delete events, only the id is included.
- * @returns {boolean} true if adding the listener succeeded, or false if
- * a listener already existed for the specified table.
- */
-RecordListener.prototype.addListener = function (tableName, callback) {
-  if (this.tableHandlers_[tableName]) {
-    return false;
-  }
-
-  this.tableHandlers_[tableName] = new TableHandler(tableName, callback);
-
-  return true;
-};
-
-/**
  * @private
  */
 TableHandler.prototype.scheduleNextFetch_ = function () {
@@ -111,7 +125,6 @@ TableHandler.prototype.fetchNewRecords_ = function () {
 
 /**
  * @param {XMLHttpRequest} req
- * @param {string} tableName
  * @private
  */
 TableHandler.prototype.reportRecords_ = function (req) {
@@ -167,16 +180,6 @@ TableHandler.prototype.reportRecords_ = function (req) {
   this.idToJsonMap_ = newIdToJsonMap;
 
   this.scheduleNextFetch_();
-};
-
-/**
- * Clears the timeouts and resets internal state.
- */
-RecordListener.prototype.reset = function () {
-  for (var tableName in this.tableHandlers_) {
-    this.tableHandlers_[tableName].reset();
-  }
-  this.tableHandlers_ = {};
 };
 
 TableHandler.prototype.reset = function() {
