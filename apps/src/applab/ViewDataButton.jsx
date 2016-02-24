@@ -20,7 +20,9 @@ var ViewDataButton = React.createClass({
   },
 
   render: function () {
-    var showDataButtonStyle = $.extend(
+    var showDataButtonStyle = $.extend({},
+      styles.buttonStyle,
+      styles.inactiveStyle,
       {
         float: 'right',
         textAlign: 'left',
@@ -28,9 +30,7 @@ var ViewDataButton = React.createClass({
         whiteSpace: 'nowrap',
         overflow: 'hidden',
         textOverflow: 'ellipsis'
-      },
-      styles.buttonStyle,
-      styles.inactiveStyle
+      }
     );
 
     return (
