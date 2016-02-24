@@ -85,7 +85,6 @@ class ApiController < ApplicationController
   end
 
   def user_progress_for_stage
-    puts "user_progress_for_stage"
     response = {}
 
     script = Script.get_from_cache(params[:script_name])
