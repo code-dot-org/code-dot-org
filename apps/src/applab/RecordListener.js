@@ -181,7 +181,7 @@ TableHandler.prototype.reportRecords_ = function (req) {
   // Look for 'delete' events.
   for (var oldId in oldIdToJsonMap) {
     if (!newIdToJsonMap[oldId]) {
-      var deletedRecord = {id: oldId};
+      var deletedRecord = {id: parseInt(oldId, 10)};
       callback(deletedRecord, EventType.DELETE);
     }
   }
