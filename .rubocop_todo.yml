@@ -308,10 +308,6 @@ Style/HashSyntax:
 Style/IdenticalConditionalBranches:
   Enabled: false
 
-# Offense count: 4
-Style/IfInsideElse:
-  Enabled: false
-
 # Offense count: 64
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
