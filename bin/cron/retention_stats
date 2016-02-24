@@ -26,12 +26,12 @@ def main()
     joins("INNER JOIN user_levels ON user_levels.user_id = user_scripts.user_id AND user_levels.script_id = user_scripts.script_id")
   # Determine, for each (user, script), the number of levels the user attempted. Then construct a
   # hash of hashes of the form {script_id: {level_count: number_of_users}}.
-  levels = Hash.new {|hash, key| hash[key] = Hash.new {|hash, key| hash[key] = 0}}
+  levels = Hash.new {|hash, key| hash[key] = Hash.new(0)}
   drop_off_with_levels.
     group('user_levels.user_id', 'user_levels.script_id').
     count.
     each{|pair, count| levels[pair.second][count] += 1}
-  # Determine, for each (user, script, stage), the number of levels attempted. The construct a hash
+  # Determine, for each (user, script, stage), the number of levels attempted. Then construct a hash
   # of hashes of hashes of the form {script_id: {stage_id: {level_count: number_of_users}}}.
   stages = Hash.new {|hash, key| hash[key] = Hash.new {|hash, key| hash[key] = Hash.new {|hash, key| hash[key] = 0}}}
   drop_off_with_levels.
