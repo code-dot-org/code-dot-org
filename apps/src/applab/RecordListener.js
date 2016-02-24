@@ -11,26 +11,48 @@
  */
 var RecordListener = module.exports = function () {
   /**
-   *  Map from tableName to callback.
-   *  @type {Object.<string, function>}
+   * Map from table name to table handler.
+   * @type {Object.<string, TableHandler>}
+   * @private
+   */
+  this.tableHandlers_ = {};
+};
+
+/**
+ *
+ * @param {string} tableName
+ * @param {function} callback
+ * @constructor
+ */
+var TableHandler = function (tableName, callback) {
+  /**
+   * @type {{string}}
+   * @private
+   */
+  this.tableName_ = tableName;
+
+  /**
+   *  @type {function}
    *  @private
    */
-  this.recordListeners_ = {};
+  this.callback_ = callback;
 
   /**
-   * Map from tableName to an IdToJsonMap representing the contents of the table.
+   * IdToJsonMap representing the contents of the table.
    * We use this to efficiently test whether a record's contents has changed.
-   * @type {Object.<string, IdToJsonMap>}
+   * @type {IdToJsonMap}
    * @private
    */
-  this.idToJsonMaps_ = {};
+  this.idToJsonMap_ = {};
 
   /**
-   * Map from table name to the pending timeout id.
-   * @type {{Object.<string, number>}}
+   * Timeout id of the pending call to window.setTimeout.
+   * @type {number}
    * @private
    */
-  this.recordTimeouts_ = {};
+  this.timeoutId_ = null;
+
+  this.scheduleNextFetch_();
 };
 
 /**
@@ -58,36 +80,31 @@ RecordListener.EventType = EventType;
  * a listener already existed for the specified table.
  */
 RecordListener.prototype.addListener = function (tableName, callback) {
-  if (typeof this.recordListeners_[tableName] === 'function') {
+  if (this.tableHandlers_[tableName]) {
     return false;
   }
 
-  this.recordListeners_[tableName] = callback;
-  this.idToJsonMaps_[tableName] = {};
-
-  this.scheduleNextFetch_(tableName);
+  this.tableHandlers_[tableName] = new TableHandler(tableName, callback);
 
   return true;
 };
 
 /**
- * @param {string} tableName
  * @private
  */
-RecordListener.prototype.scheduleNextFetch_ = function (tableName) {
-  this.recordTimeouts_[tableName] = setTimeout(function recordListener() {
-    this.fetchNewRecords_(tableName);
+TableHandler.prototype.scheduleNextFetch_ = function () {
+  this.timeoutId_ = setTimeout(function recordListener() {
+    this.fetchNewRecords_();
   }.bind(this), RECORD_INTERVAL);
 };
 
 /**
- * @param {string} tableName
  * @private
  */
-RecordListener.prototype.fetchNewRecords_ = function (tableName) {
+TableHandler.prototype.fetchNewRecords_ = function () {
   var req = new XMLHttpRequest();
-  req.onreadystatechange = this.reportRecords_.bind(this, req, tableName);
-  var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
+  req.onreadystatechange = this.reportRecords_.bind(this, req);
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' + this.tableName_;
   req.open('GET', url, true);
   req.send();
 };
@@ -97,7 +114,7 @@ RecordListener.prototype.fetchNewRecords_ = function (tableName) {
  * @param {string} tableName
  * @private
  */
-RecordListener.prototype.reportRecords_ = function (req, tableName) {
+TableHandler.prototype.reportRecords_ = function (req) {
   var done = XMLHttpRequest.DONE || 4;
   if (req.readyState !== done) {
     return;
@@ -108,7 +125,7 @@ RecordListener.prototype.reportRecords_ = function (req, tableName) {
     return;
   }
 
-  if (!this.idToJsonMaps_[tableName]) {
+  if (!this.idToJsonMap_) {
     // The maps may have been reset while we were fetching the data.
     return;
   }
@@ -120,9 +137,9 @@ RecordListener.prototype.reportRecords_ = function (req, tableName) {
   // performance improvement is to only poll when Pusher tells us to, which would render
   // the responseText check unnecessary.
 
-  var callback = this.recordListeners_[tableName];
+  var callback = this.callback_;
   var records = JSON.parse(req.responseText);
-  var oldIdToJsonMap = this.idToJsonMaps_[tableName];
+  var oldIdToJsonMap = this.idToJsonMap_;
 
   // Look for 'create' and 'update' events, and build the new map of this table.
   var newIdToJsonMap = {};
@@ -147,23 +164,28 @@ RecordListener.prototype.reportRecords_ = function (req, tableName) {
   }
 
   // Update our map of this table.
-  this.idToJsonMaps_[tableName] = newIdToJsonMap;
+  this.idToJsonMap_ = newIdToJsonMap;
 
-  this.scheduleNextFetch_(tableName);
+  this.scheduleNextFetch_();
 };
 
 /**
  * Clears the timeouts and resets internal state.
  */
 RecordListener.prototype.reset = function () {
-  for (var tableName in this.recordTimeouts_) {
-    var timeoutId = this.recordTimeouts_[tableName];
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
+  for (var tableName in this.tableHandlers_) {
+    this.tableHandlers_[tableName].reset();
+  }
+  this.tableHandlers_ = {};
+};
+
+TableHandler.prototype.reset = function() {
+  if (this.timeoutId_) {
+    clearTimeout(this.timeoutId_);
   }
 
-  this.recordTimeouts_ = {};
-  this.recordListeners_ = {};
-  this.idToJsonMaps_ = {};
+  // Make sure we don't call the callback after reset.
+  this.timeoutId_ = null;
+  this.callback_ = null;
+  this.idToJsonMap_ = null;
 };
