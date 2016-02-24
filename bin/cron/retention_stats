@@ -21,7 +21,7 @@ def main()
     where(last_progress_at: (Time.now - 4 * ONE_WEEK)..(Time.now - 2 * ONE_WEEK))
   script_starts = drop_off.group(:script_id).count
   script_finishes = drop_off.where.not(completed_at: nil).group(:script_id).count
-  # 
+
   drop_off_with_levels = drop_off.
     joins("INNER JOIN user_levels ON user_levels.user_id = user_scripts.user_id AND user_levels.script_id = user_scripts.script_id")
   # Determine, for each (user, script), the number of levels the user attempted. Then construct a
