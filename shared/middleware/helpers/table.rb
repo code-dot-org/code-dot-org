@@ -116,9 +116,10 @@ class Table
   end
 
   def self.table_names(channel_id)
-    PEGASUS_DB[:app_tables].where(app_id: channel_id, storage_id: nil).group(:table_name).map do |row|
-      row[:table_name]
-    end
+    tables_from_records = PEGASUS_DB[:app_tables].where(app_id: channel_id, storage_id: nil).group(:table_name).select_map(:table_name)
+    #TODO - same thing for dynamo
+    tables_from_metadata = PEGASUS_DB[:channel_table_metadata].where(channel_id: channel_id, table_type: 'shared').group(:table_name).select_map(:table_name)
+    tables_from_records.concat(tables_from_metadata).uniq
   end
 
 end
