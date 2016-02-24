@@ -178,16 +178,19 @@ class ApiControllerTest < ActionController::TestCase
   end
 
 
-  test "should get user progress for unsigned-in user" do
+  test "should get user progress for stage for signed-out user" do
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
-    script = Script.twenty_hour_script
+    script = Script.hoc_2014_script
+    script_level = script.script_levels[0]
+    level = script_level.level
 
     get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
     assert_response :success
     body = JSON.parse(response.body)
-    puts body
 
+    assert_equal false, body['disableSocialShare']
+    assert_equal({}, body['progress'])
     assert_equal([{
                       application: :dashboard,
                       tag: 'activity_start',
