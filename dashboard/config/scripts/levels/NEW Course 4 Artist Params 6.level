@@ -242,7 +242,7 @@
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation>
               <arg name="length"/>
-              <description>draw a hexagon that is 75 pixels in size</description>
+              <description>draw a hexagon that is 75 pixels' length in size</description>
             </mutation>
             <title name="NAME">draw a hexagon</title>
             <statement name="STACK">
@@ -312,7 +312,7 @@
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation>
               <arg name="length"/>
-              <description>draw a square that is 100 pixels in size</description>
+              <description>draw a square that is 100 pixels' length in size</description>
             </mutation>
             <title name="NAME">draw a square</title>
             <statement name="STACK">
