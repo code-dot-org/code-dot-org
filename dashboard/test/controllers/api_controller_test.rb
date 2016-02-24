@@ -139,7 +139,7 @@ class ApiControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
     assert_equal 2, body['linesOfCode']
     assert_equal 0, body['trophies']['current']
-    assert_equal 27, body['trophies']['total']
+    assert_equal 27, body['trophies']['max']
     assert_equal 'perfect', body['levels'][level_id.to_s]['status']
     assert_equal 100, body['levels'][level_id.to_s]['result']
 
