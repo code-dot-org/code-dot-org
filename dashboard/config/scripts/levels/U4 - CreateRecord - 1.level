@@ -39,9 +39,6 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "video_key": "csp_applab_databases_1"
   },
   "published": true
