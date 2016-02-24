@@ -4,23 +4,23 @@ require 'helpers/table_metadata'
 class TablesTest < Minitest::Test
   include SetupTest
 
-  def test_generate_column_metadata
+  def test_generate_column_info
     records = [
       { "col1" => 1, "col2" => 2 }
     ]
     expected = ["col1", "col2"]
-    assert_equal expected, TableMetadata.generate_column_metadata(records)
+    assert_equal expected, TableMetadata.generate_column_info(records)
 
     records = [
       { "col1" => 1, "col2" => 2 },
       { "col2" => 3, "col3" => 4 }
     ]
     expected = ["col1", "col2", "col3"]
-    assert_equal expected, TableMetadata.generate_column_metadata(records)
+    assert_equal expected, TableMetadata.generate_column_info(records)
 
     records = []
     expected = []
-    assert_equal expected, TableMetadata.generate_column_metadata(records)
+    assert_equal expected, TableMetadata.generate_column_info(records)
   end
 
   def test_remove_column

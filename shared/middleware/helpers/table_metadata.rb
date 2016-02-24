@@ -4,7 +4,7 @@
 require 'csv'
 require 'set'
 module TableMetadata
-  def TableMetadata.generate_column_metadata(records)
+  def TableMetadata.generate_column_info(records)
     records.map(&:keys).flatten.uniq
   end
 
@@ -29,10 +29,43 @@ module TableMetadata
       @table_type = table_type
 
       @table = PEGASUS_DB[:channel_table_metadata]
+      @data = nil
     end
 
-    def exists?()
-      !@table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name).limit(1).first.nil?
+    def data
+      @data ||= @table.where(channel_id: @channel_id, table_name: @table_name, table_type: @table_type).limit(1).first
+    end
+
+    def insert(column_info)
+      raise ArgumentError, 'Value is not an array' unless column_info.is_a? Array
+      row = {
+        channel_id: @channel_id,
+        table_type: @table_type,
+        table_name: @table_name,
+        column_info: column_info.to_json,
+        updated_at: DateTime.now
+      }
+
+      tries = 0
+      begin
+        row[:id] = @table.insert(row)
+      rescue Sequel::UniqueConstraintViolation
+        retry if (tries += 1) < 5
+        raise
+      end
+    end
+
+    def get_column_info
+      column_info = @data.slice(:column_info)
+      return JSON.parse(column_info) unless column_info.nil?
+    end
+
+    def set_column_info(column_info)
+      if @data.nil?
+        insert(column_info)
+      else
+        @data.update({column_info: column_info.to_json, updated_at: DateTime.now})
+      end
     end
   end
 
