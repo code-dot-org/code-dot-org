@@ -54,12 +54,6 @@ Lint/ShadowingOuterLocalVariable:
 Lint/UnderscorePrefixedVariableName:
   Enabled: false
 
-# Offense count: 84
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoreEmptyBlocks.
-Lint/UnusedBlockArgument:
-  Enabled: false
-
 # Offense count: 33
 # Cop supports --auto-correct.
 # Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
@@ -308,10 +302,6 @@ Style/HashSyntax:
 Style/IdenticalConditionalBranches:
   Enabled: false
 
-# Offense count: 4
-Style/IfInsideElse:
-  Enabled: false
-
 # Offense count: 64
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
@@ -405,12 +395,6 @@ Style/NestedParenthesizedCalls:
 # Configuration parameters: EnforcedStyle, MinBodyLength, SupportedStyles.
 # SupportedStyles: skip_modifier_ifs, always
 Style/Next:
-  Enabled: false
-
-# Offense count: 4
-# Cop supports --auto-correct.
-# Configuration parameters: IncludeSemanticChanges.
-Style/NonNilCheck:
   Enabled: false
 
 # Offense count: 10
