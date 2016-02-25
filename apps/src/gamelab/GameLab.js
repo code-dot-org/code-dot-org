@@ -127,7 +127,6 @@ GameLab.prototype.init = function (config) {
       });
     }.bind(this),
     onMount: function () {
-      config.html = undefined; // We rendered this ourselves, via React!
       config.loadAudio = this.loadAudio_.bind(this);
       config.afterInject = this.afterInject_.bind(this, config);
       config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);

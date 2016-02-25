@@ -532,8 +532,6 @@ Maze.init = function(config) {
 
   Maze.cachedBlockStates = [];
 
-  config.html = undefined;
-
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');

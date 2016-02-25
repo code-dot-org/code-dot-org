@@ -1809,8 +1809,6 @@ Studio.init = function(config) {
     finishButton: !finishButtonFirstLine && showFinishButton
   });
 
-  config.html = undefined;
-
   var levelTracks = [];
   if (level.music && skin.musicMetadata) {
     levelTracks = skin.musicMetadata.filter(function(trackMetadata) {

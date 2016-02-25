@@ -496,8 +496,6 @@ Flappy.init = function(config) {
 
   loadLevel();
 
-  config.html = undefined;
-
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
