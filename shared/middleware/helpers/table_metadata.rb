@@ -4,8 +4,10 @@
 require 'csv'
 require 'set'
 module TableMetadata
-  def TableMetadata.generate_column_info(records)
-    records.map(&:keys).flatten.uniq
+  def TableMetadata.generate_column_list(records)
+    return [] if records.nil?
+    # TODO - test for id
+    records.map(&:keys).flatten.uniq - ['id']
   end
 
   def TableMetadata.remove_column(column_list, column_name)
@@ -68,7 +70,7 @@ module TableMetadata
     end
 
     def delete()
-      dataset.delete
+      # dataset.delete
     end
 
     def get_column_info

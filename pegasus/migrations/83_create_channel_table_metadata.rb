@@ -1,18 +1,18 @@
 Sequel.migration do
   up do
-    # TODO - app_id -> channel_id in apps_table
+    # TODO - app_id -> channel_id
 
     create_table?(:channel_table_metadata, charset: 'utf8') do
       primary_key :id, unsigned: true, null: false
-      foreign_key :channel_id, index: true, null: false
-      String :table_type, size: 50, index: true, null: false
+      foreign_key :app_id, index: true, null: false
+      foreign_key :storage_id, index: true
       String :table_name, size: 50, index: true, null: false
 
-      Text :column_info
+      Text :column_list
 
       DateTime :updated_at, null: false
 
-      index [:channel_id,:table_name,:table_type], unique: true
+      index [:channel_id,:storage_id,:table_name], unique: true
     end
   end
 

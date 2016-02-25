@@ -58,14 +58,13 @@ angular: recordsApp
         addColumn: {
           method: 'POST',
           url: "#{api_base_url}/column"
+        },
+        getMetadata: {
+          method: 'GET',
+          url: "#{api_base_url}/metadata"
         }
       }, {});
       return Table;
-    }]);
-  services.factory('tableMetadataService', ['$resource',
-    function ($resource) {
-      var TableMetadata = $resource("#{api_base_url}/metadata", {}, {});
-      return TableMetadata;
     }]);
 
   // CONTROLLERS
@@ -73,8 +72,8 @@ angular: recordsApp
   var controllers = angular.module('recordsApp.controllers', []).
       value('version', '0.1');
 
-  controllers.controller('RecordsController', ['$scope', '$http', '$route', '$routeParams', '$location', '$window', 'recordsService', 'tablesService', 'tableMetadataService',
-      function($scope, $http, $route, $routeParams, $location, $window, recordsService, tablesService, tableMetadataService) {
+  controllers.controller('RecordsController', ['$scope', '$http', '$route', '$routeParams', '$location', '$window', 'recordsService', 'tablesService',
+      function($scope, $http, $route, $routeParams, $location, $window, recordsService, tablesService) {
     $scope.records = recordsService.query();
     $scope.newColumnName = '';
     $scope.newRecord = new recordsService();
@@ -82,16 +81,23 @@ angular: recordsApp
     $scope.channelId = "#{channel_id}";
     $scope.importing = false;
     $scope.reverse = true;
-    $scope.tableMetadata = tableMetadataService.get();
-    $scope.tableMetadata.$promise.then(function (metadata) {
-      // Server should generate metadata for us from records if we don't already have some
-      if (metadata && metadata.column_info) {
-        var columnInfo = JSON.parse(metadata.column_info);
-        $scope.columns = columnInfo.map(makeColumn);
-      } else {
-        throw new Error('Server should have generated column_metadata for us');
-      }
-    }).catch($scope.genericError);;
+
+    // Attempt to get metadata. The first time through, if we don't have any
+    // we will tell the serve to create some.
+    function getMetadata(createIfNeeded) {
+      $scope.tableMetadata = tablesService.getMetadata();
+      $scope.tableMetadata.$promise.then(function (metadata) {
+        if (metadata && metadata.column_list) {
+          var columnInfo = JSON.parse(metadata.column_list);
+          $scope.columns = columnInfo.map(makeColumn);
+        } else if (createIfNeeded) {
+          $scope.initializeTable().then(function () {
+            getMetadata(false);
+          });
+        }
+      }).catch($scope.genericError);;
+    }
+    getMetadata(true);
 
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
@@ -192,6 +198,15 @@ angular: recordsApp
         }
        $scope.records = recordsService.query();
       });
+    }
+    $scope.initializeTable = function () {
+      return $http({
+        method:'POST',
+        url: "/v3/shared-tables/#{channel_id}",
+        data: {
+          "#{table_name}": []
+        }
+      })
     }
     function castValue(val) {
       if (val == '') return undefined;
