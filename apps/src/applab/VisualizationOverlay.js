@@ -173,13 +173,58 @@ VisualizationOverlay.prototype.recalculateTransformAtScale_ = function (scale) {
  * @private
  */
 VisualizationOverlay.prototype.getMouseoverApplabControlId_ = function (eventTarget) {
-  if (eventTarget && $(eventTarget).parents('div.screen').length > 0 && eventTarget.id) {
+
+  // Check that the element is a child of a screen
+  if (eventTarget && $(eventTarget).parents('div.screen').length > 0) {
+    var controlElement = eventTarget;
+
+    // Check to see the mouseover target is a resize handle.
+    // If so, grab the id of associated control instead of the resize handle itself.
+    // We need to do this because for very small controls, the resize handle completely
+    // covers the control itself, making it impossible to show the id tooltip
+    if (VisualizationOverlay.isResizeHandle_(controlElement)) {
+      controlElement = VisualizationOverlay.getAssociatedControl_(controlElement);
+    }
 
     // If we're in design mode, get the element id without the prefix
     if (this.props_.isInDesignMode) {
-      return elementUtils.getId(eventTarget);
+      return elementUtils.getId(controlElement);
     }
-    return eventTarget.id;
+
+    return controlElement.id;
   }
+
+  return null;
+};
+
+/**
+ * Determines whether an element is a resize handle. The criteria we're using here are:
+ * 1) The element has a screen element as its ancestor
+ * AND
+ * 2) It either doesn't have an id OR it has the 'ui-resizable-handle' class
+ * @param {HTMLElement} element
+ * @returns {boolean} True if element is a resize handle
+ * @private
+ * @static
+ */
+VisualizationOverlay.isResizeHandle_ = function (element) {
+  return ($(element).parents('div.screen').length > 0 ) &&
+      (!element.id || $(element).hasClass('.ui-resizable-handle'));
+};
+
+/**
+ * Given a resize handle element, find the actual ui control it's associated with
+ * @param {HTMLElement} resizeHandleElement
+ * @returns {HTMLELement} The UI control element assocaited with the resize handle. Or null if none exists.
+ * @private
+ * @static
+ */
+VisualizationOverlay.getAssociatedControl_ = function (resizeHandleElement) {
+  var siblingControl = $(resizeHandleElement).siblings().not('.ui-resizable-handle');
+
+  if (siblingControl.length > 0 && siblingControl[0].id) {
+    return siblingControl[0];
+  }
+
   return null;
 };
