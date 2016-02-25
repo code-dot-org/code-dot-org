@@ -1,7 +1,9 @@
 
-var Multi = function (id, standalone, type, answers, lastAttemptString) {
+var Multi = function (id, levelId, standalone, type, answers, lastAttemptString) {
 
   this.id = id;
+
+  this.levelId = levelId;
 
   // Whether this multi is the only puzzle on a page, or part of a group of them.
   this.standalone = standalone;
@@ -16,7 +18,7 @@ var Multi = function (id, standalone, type, answers, lastAttemptString) {
   this.answers = answers; // #{data['answers'].map {|answer| answer['correct']}};
 
   // A string of the last result.  Looks like "1" or "2,3".
-  var lastAttemptString = lastAttemptString; // #{@last_attempt.to_json};
+  this.lastAttemptString = lastAttemptString; // #{@last_attempt.to_json};
 
   // Tracking which answers are currently selected.
   this.selectedAnswers = [];
@@ -42,7 +44,7 @@ Multi.prototype.enableButton = function(enable)
 
 Multi.prototype.choiceClicked = function(button)
 {
-  var index = $(button).attr('index');
+  var index = parseInt($(button).attr('index'));
   CDOSounds.play('click');
 
   //console.log("choiceclicked", index);
@@ -57,40 +59,9 @@ Multi.prototype.choiceClicked = function(button)
 
 Multi.prototype.submitSelection = function()
 {
-  var results = this.getResult();
-  var response = results.response;
-  var result = results.result;
-  var errorType = results.errorType;
 
-  sendReport({
-    program: response,
-    fallbackResponse: appOptions.dialog.fallbackResponse,
-    callback: appOptions.dialog.callback,
-    app: appOptions.dialog.app,
-    level: appOptions.dialog.level,
-    result: result,
-    pass: result,
-    testResult: result ? 100 : 0,
-    onComplete: function () {
-      console.log("submitted", result);
-      /*var willRedirect = !!lastServerResponse.nextRedirect;
-      if (onComplete) {
-        onComplete(willRedirect);
-      }
-
-      if (lastServerResponse.videoInfo)
-      {
-        showVideoDialog(lastServerResponse.videoInfo);
-      } else if (lastServerResponse.nextRedirect) {
-        if (appOptions.dialog.shouldShowDialog) {
-          showDialog("success");
-        } else {
-          window.location.href = lastServerResponse.nextRedirect;
-        }
-      }*/
-    }
-  });
 };
+
 
 Multi.prototype.clickItem = function(index)
 {
@@ -175,13 +146,34 @@ Multi.prototype.ready = function()
   // Pre-select previously submitted response if available.
   if (this.lastAttemptString)
   {
-    var previousResult = this.lastAttemptString.split(',');
+    var previousResult = this.lastAttemptString.replace(/[\[\]]/g, "").split(',');
 
     for (var i = 0; i < previousResult.length; i++)
     {
-      clickItem(previousResult[i]);
+      this.clickItem(parseInt(previousResult[i]));
     }
   }
+};
+
+Multi.prototype.getCurrentAnswer = function()
+{
+  var answer;
+
+  if (this.numAnswers == 1)
+  {
+    answer = this.lastSelectionIndex;
+  }
+  else
+  {
+    answer = this.selectedAnswers;
+  }
+
+  return answer;
+};
+
+Multi.prototype.getLevelId = function()
+{
+  return this.levelId;
 };
 
 // called by external result-posting code
@@ -205,7 +197,7 @@ Multi.prototype.getResult = function()
   }
 
   return {
-    "response": this.answer,
+    "response": answer,
     "result": this.validateAnswers(),
     "errorType": errorType
   }

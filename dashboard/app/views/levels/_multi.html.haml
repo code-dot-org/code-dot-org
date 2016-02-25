@@ -1,6 +1,10 @@
 - index ||= 0
 - standalone ||= false
 
+- # As part of a LevelGroup we'll be passed last_attempt, otherwise use the
+- # real @last_attempt.
+- last_attempt = last_attempt || @last_attempt
+
 .multi{id: "multi_#{index}"}
 
   - data = @level.properties
@@ -22,7 +26,7 @@
     %br/
     %br/
 
-    - unless data['options'].try(:[], 'hide_submit')
+    - if standalone && !data['options'].try(:[], 'hide_submit')
       .buttons
         %a.btn.btn-large.btn-primary.next-stage.submitButton
           =t('submit')
@@ -76,18 +80,19 @@
 
 = render partial: 'levels/common_audio'
 
+- # Only include multi.js once per page
 - if !@included_multi
-  Including Multi
   :javascript
     #{render template: 'levels/multi.js', formats: [:js]}
   - @included_multi = true
-- else
-  Not including Multi
 
 :javascript
-  var multi1 = new Multi(
+
+  window["multi_#{index}"] = new Multi(
     "multi_#{index}",
+    #{@level.id},
     #{standalone},
     "#{data['type']}" == "multi2" ? 2 : 1,
     #{data['answers'].map {|answer| answer['correct']}},
-    #{@last_attempt.to_json} );
+    "#{last_attempt.to_json}"
+    );
