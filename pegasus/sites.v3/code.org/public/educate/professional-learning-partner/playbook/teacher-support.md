@@ -11,12 +11,13 @@ title: Teacher Support
 ## Quick Links
 
 - [Code.org Forums](http://forums.code.org)<br/>
-- [PD FAQ](/educate/pd/15-16/faq)<br/>
-- Online coursework support<br/>
-- Building a community<br/>
-- Helping your teachers start teaching<br/>
-- Technology in the classroom<br/>
-- Privacy policy
+	- These forums are program specific and are a great way for teachers to help each other with questions about their online coursework and workshops.
+- [Code.org FAQ](/educate/pd/15-16/faq)<br/>
+	- Our Workshop FAQ has a lot fo helpful information for teachers about online coursework and program questions. Feel free to use it when helping your teachers! 
+- [Online coursework support](#online)<br/>
+- [Helping your teachers start teaching](#teaching)<br/>
+- [Technology in the classroom](#technology)<br/>
+- [Privacy policy](#privacy)
 
 
 ________________
@@ -24,63 +25,69 @@ ________________
 <br/>
 <br/>
 
+<a id="online"></a>
 ### **Online Coursework Support**
 
+You should have each online coursework assignment in your Code Stuido account. If you are having trouble accessing your account, see the video below on how to log in at [studio.code.org](studio.code.org).
 
-
-[**Back to the top**](#top)
-<br/>
-
-________________
-<a id="csp"></a>
-<br/>
-<br/>
-
-### **Building a Community**
-
-Your guide to building a thriving community among your local group of teachers and conencting to the larger Computer Science community in your state, and nationally.
+(MAKE SCREEN CAST OF HOW TO LOG IN)
 
 [**Back to the top**](#top)
 <br/>
 
 
 ________________
-<a id="csp"></a>
+<a id="teaching"></a>
 <br/>
 <br/>
 
 ### **Helping your teachers start teaching**
 
-We want all the teachers they are providing PD for teaching the course because…..explain why
+Carly needs help writing this one....
 
 [**Back to the top**](#top)
 <br/>
 
 ________________
-<a id="csp"></a>
+<a id="technology"></a>
 <br/>
 <br/>
 
 ### **Technology in Classroom**
 
-As part of the application and selection process, it's important to ensure that schools, districts, and teachers selected to participate in our programs can meet Code.org’s technology requirements before selection into the program. The document below includes the information for whitelisting all communications and websites for teachers to successfully participate in the professional learning program and workshops.
+As part of the application and selection process, it's important to ensure that schools, districts, and teachers selected to participate in our programs can meet Code.org’s technology requirements before they are selcting to participate in the program. 
 
-[Whitelisting One Pager]()
+Whitelisting is the act of placing a domain or email on an ‘acceptable list’ for an organization's (school district or company) firewall. Some school districts will block all websites and emails that are not specifically entered into their whitelist. Generally, to whitelist a domain or email you will need to reach out to the organization’s IT department.    
 
+The following guidelines will need to be met for teachers to be able to participate fully in their Professional Learning Program.   
 
-Should a district contact you with issues regarding technology, please contact code.org.
+Please review each of these sites for the general guidlines for whitelisting:
+
+[Teacher Participtaion Guidelines](/educate/it) <br/>
+[Classroom Requirements for Teaching](/educate/pd/supports) <br/>
+[Receiving Code.org Newsletter Guidelines](http://mailchimp.com/about/ips/?_ga=1.79156244.163239085.1437758796) <br/>
+
+The following email addresses should also be whitelisted:
+
+Hadi_Partovi@code.org<br/>
+PD@code.org<br/>
+no_reply@code.org<br/>
+amazonses.com <br/>
+mail221.suw14.mcdlv.net<br/>
+
+Should a district contact you with issues regarding technology, please email us at partner@code.org.
 
 [**Back to the top**](#top)
 <br/>
 
 ________________
-<a id="csp"></a>
+<a id="privacy"></a>
 <br/>
 <br/>
 
 ### **Privacy Policy**
 
-
+Please review our Code.org Privacy Policy [here](/privacy), as well as the Privacy Policy in your Agreement carefully.
 
 
 
