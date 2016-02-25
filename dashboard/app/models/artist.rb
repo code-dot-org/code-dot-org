@@ -306,7 +306,7 @@ class Artist < Blockly
         toolbox.root.add_child toolboxified_block
       else
         category = toolbox.xpath('//category[@name=\'NEW BLOCKS\']').first ||
-          toolbox.xpath('//category').last.add_next_sibling(NEW_CATEGORY_XML)[0]
+          toolbox.xpath('//category').last.add_next_sibling(NEW_CATEGORY_XML).first
         category.add_child toolboxified_block
       end
       toolbox_blocks.push toolboxified_block
