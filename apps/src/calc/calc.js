@@ -28,6 +28,7 @@ var commonMsg = require('../locale');
 var calcMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
+var AppView = require('../templates/AppView.jsx');
 var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
@@ -148,22 +149,7 @@ Calc.init = function(config) {
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
-      controls: require('./controls.html.ejs')({
-        assetUrl: studioApp.assetUrl
-      }),
-      blockUsed : undefined,
-      idealBlockNumber : undefined,
-      editCode: level.editCode,
-      blockCounterClass : 'block-counter-default',
-      inputOutputTable: level.inputOutputTable,
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
+  config.html = undefined;
 
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
@@ -215,7 +201,29 @@ Calc.init = function(config) {
     }
   };
 
-  studioApp.init(config);
+  React.render(React.createElement(AppView, {
+    renderCodeApp: function () {
+      return page({
+        assetUrl: studioApp.assetUrl,
+        data: {
+          localeDirection: studioApp.localeDirection(),
+          visualization: require('./visualization.html.ejs')(),
+          controls: require('./controls.html.ejs')({
+            assetUrl: studioApp.assetUrl
+          }),
+          blockUsed : undefined,
+          idealBlockNumber : undefined,
+          editCode: level.editCode,
+          blockCounterClass : 'block-counter-default',
+          inputOutputTable: level.inputOutputTable,
+          readonlyWorkspace: config.readonlyWorkspace
+        }
+      });
+    },
+    onMount: function () {
+      studioApp.init(config);
+    }
+  }), document.getElementById(config.containerId));
 };
 
 /**
