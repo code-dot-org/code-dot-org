@@ -144,18 +144,6 @@ XML
     assert_equal @level.strip_block(block1), @level.strip_block(block2)
   end
 
-  test 'add missing block' do
-    level = make_level(@empty_toolbox_xml, @solution_xml)
-    level.add_missing_toolbox_blocks
-    assert_blocktype_in_toolbox level, "draw_move_by_constant"
-  end
-
-  test 'do not add non-editable solution blocks' do
-    level = make_level(@empty_toolbox_xml, @non_editable_solution_xml)
-    level.add_missing_toolbox_blocks
-    assert_equal @empty_toolbox_xml, level.properties['toolbox_blocks']
-  end
-
   test 'identical blocks match' do
     toolbox_block = make_toolbox_node @draw_block_xml
     solution_block = make_solution_node @draw_block_xml
@@ -196,6 +184,18 @@ XML
     toolbox_block = make_toolbox_node @draw_with_dropdown_xml
     solution_block = make_solution_node @draw_block_xml
     assert_blocks_match toolbox_block, solution_block
+  end
+
+  test 'add missing block' do
+    level = make_level(@empty_toolbox_xml, @solution_xml)
+    level.add_missing_toolbox_blocks
+    assert_blocktype_in_toolbox level, "draw_move_by_constant"
+  end
+
+  test 'do not add non-editable solution blocks' do
+    level = make_level(@empty_toolbox_xml, @non_editable_solution_xml)
+    level.add_missing_toolbox_blocks
+    assert_equal @empty_toolbox_xml, level.properties['toolbox_blocks']
   end
 
   test 'create "NEW CATEGORY" if adding a block and using categories' do
