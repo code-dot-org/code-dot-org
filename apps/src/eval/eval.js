@@ -83,8 +83,6 @@ Eval.init = function(config) {
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
 
-  config.html = undefined;
-
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');

@@ -667,8 +667,6 @@ Bounce.init = function(config) {
   window.addEventListener("keydown", Bounce.onKey, false);
   window.addEventListener("keyup", Bounce.onKey, false);
 
-  config.html = undefined;
-
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');

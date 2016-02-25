@@ -122,8 +122,6 @@ Jigsaw.init = function(config) {
   }
   Blockly.SNAP_RADIUS = level.snapRadius || 90;
 
-  config.html = undefined;
-
   // TODO (br-pair) : I think this is something that's happening in all apps?
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');

@@ -647,8 +647,6 @@ Applab.init = function(config) {
     });
   }
 
-  config.html = undefined; // We render this ourselves, via React!
-
   config.loadAudio = function() {
     studioApp.loadAudio(skin.failureSound, 'failure');
   };

@@ -205,8 +205,6 @@ Artist.prototype.init = function(config) {
   }
 
   var iconPath = 'media/turtle/' + (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
-  config.html = undefined;
-
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
