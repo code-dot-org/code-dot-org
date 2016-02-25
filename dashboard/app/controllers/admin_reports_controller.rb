@@ -112,6 +112,8 @@ class AdminReportsController < ApplicationController
     require Rails.root.join('scripts/archive/ga_client/ga_client')
 
     @is_sampled = false
+    # If the window dates are not explicitly specified, we render the page without data so as to
+    # not make the user wait on a lengthy GA query whose data will be discarded.
     if params[:start_date].blank? || params[:end_date].blank?
       @start_date = (DateTime.now - 7).strftime('%Y-%m-%d')
       @end_date = DateTime.now.prev_day.strftime('%Y-%m-%d')
