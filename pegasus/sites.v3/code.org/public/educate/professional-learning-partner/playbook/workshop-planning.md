@@ -1,6 +1,6 @@
 ---
 title: Workshop Planning
-
+nav: plp_playbook_nav
 ---
 <a id="top"></a>
 
