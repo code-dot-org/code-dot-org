@@ -18,6 +18,7 @@
   "fillTooltip": "Colocar 1 unidad de tierra",
   "finalLevel": "¡ Felicidades! Ha resuelto el rompecabezas final.",
   "flowerEmptyError": "La flor en la que estás no tiene más néctar.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "obtener",
   "heightParameter": "altura",
   "holePresent": "hay un agujero",

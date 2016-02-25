@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "填充1单位的土"},
 "finalLevel":function(d){return "恭喜你！你完成了最后一个谜题。"},
 "flowerEmptyError":function(d){return "你呆的这朵花里没有更多的花蜜。"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "获得"},
 "heightParameter":function(d){return "高度"},
 "holePresent":function(d){return "地上有一个坑"},

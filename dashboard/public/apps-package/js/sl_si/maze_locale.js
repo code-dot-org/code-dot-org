@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "postavi 1 enoto umazanije"},
 "finalLevel":function(d){return "Čestitke! Rešil/a si zadnjo uganko."},
 "flowerEmptyError":function(d){return "Roža, na kateri si, nima več medu."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "najdi"},
 "heightParameter":function(d){return "višina"},
 "holePresent":function(d){return "tam je luknja"},

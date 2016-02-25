@@ -83,7 +83,7 @@ class CsvToSqlTable
   def column_name_to_schema(name)
     i = name.rindex('_')
 
-    if name.ends_with?('!') or name.ends_with?('*')
+    if name.ends_with?('!') || name.ends_with?('*')
       type_flag = name[-1..-1]
       name = name[0..-2]
     end

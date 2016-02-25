@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "uzlikt 1 dubļa vienību"},
 "finalLevel":function(d){return "Apsveicu! Jūs esat atrisinājis pēdējo puzli."},
 "flowerEmptyError":function(d){return "Zieds, uz kura tu atrodies, vairs nesatur nektāru."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "iegūt"},
 "heightParameter":function(d){return "augstums"},
 "holePresent":function(d){return "šeit ir bedre"},

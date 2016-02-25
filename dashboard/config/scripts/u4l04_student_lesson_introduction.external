@@ -4,23 +4,21 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 4: Lesson 04 - Reading Records
+## Unit 4: Lesson 03 - Reading Records
 
 # Background
 
-Keeping data in a remote database has the benefit of allowing data storage to be permanent, but it also presents a number of new challenges. Accessing a remote databse takes time, and so as a programmer you must consider what portions of your program depend on a response and which can run without waiting. If you wish to manipulate information in a database, you must understand how individual records are identified with a unique ID. Finally, the fact that data will often be replicated between your app and your database means you must carefully ensure that these two versions of your data stay in sync.
+Keeping data in a remote database has the benefit of allowing data storage to be permanent, but it also presents a number of new challenges. Accessing a remote database takes time, and so as a programmer you must consider what portions of your program depend on a response and which can run without waiting. If you wish to manipulate information in a database, you must understand how individual records are identified with a unique ID. Finally, the fact that data will often be replicated between your app and your database means you must carefully ensure that these two versions of your data stay in sync.
 
 # Vocabulary
 
-**Synchronous Programming:** each command waits for the previous command to finish before running.
-
-**Asynchronous Programming:** commands run before previous commands finish running.
+* **Synchronous Programming:** each command waits for the previous command to finish before running.
+* **Asynchronous Programming:** commands run before previous commands finish running.
 
 # Lesson
 
 * Read data from a remote database into your app using `readRecords`.
 * Use callback functions to correctly sequence programs that involve data commands.
-* Delete records in a database by using and id and `deleteRecord`.
 * Improve the Contacts App.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

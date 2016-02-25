@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "Đặt 1 đơn vị của bụi bẩn"},
 "finalLevel":function(d){return "Xin chúc mừng! Bạn đã hoàn thành câu đố cuối cùng."},
 "flowerEmptyError":function(d){return "Bông hoa bạn đang ở trên không còn mật."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "nhận được"},
 "heightParameter":function(d){return "chiều cao"},
 "holePresent":function(d){return "có một cái hố"},

@@ -164,7 +164,7 @@
           description_short: "Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!"
         hourofcode:
           Maze: "Λαβύρινθος"
-          title: "Η Ώρα του Κώδικα"
+          title: "Κλασικός λαβύρινθος"
           description: "Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με χαρακτήρες
             από τα Angry Birds, τα Plants vs. Zombies και τον Scrat από την Εποχή
             των Παγετών!"
@@ -1775,3 +1775,4 @@
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps

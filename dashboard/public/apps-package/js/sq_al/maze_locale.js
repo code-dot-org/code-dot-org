@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "vendos 1 njësi baltë"},
 "finalLevel":function(d){return "Urime! Ju keni përfunduar formuesen përfundimatar."},
 "flowerEmptyError":function(d){return "Lulja në të cilën je ti, nuk ka më nektar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "merr"},
 "heightParameter":function(d){return "gjatësia"},
 "holePresent":function(d){return "është një gropë"},

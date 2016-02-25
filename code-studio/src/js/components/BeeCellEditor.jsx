@@ -24,7 +24,7 @@ var BeeCellEditor = React.createClass({
     // strange-looking for loop
     // https://google.github.io/styleguide/javascriptguide.xml?showone=Tips_and_Tricks#Tips_and_Tricks
     for (var i = 0, node; (node = nodes[i]); i++) {
-      values[node.name] = isNaN(node.value) ? undefined : parseInt(node.value);
+      values[node.name] = isNaN(node.value) ? undefined : Number(node.value);
     }
     this.props.onUpdate(values);
   },
@@ -55,12 +55,13 @@ var BeeCellEditor = React.createClass({
       values.flowerColor = undefined;
     }
 
-    // stringify undefined values so they play nicely with the <select>s
-    for (var value in values) {
+    // We want undefined values that are going to be in <selects> to
+    // actually be the STRING 'undefined' rather than the value.
+    ['tileType', 'featureType', 'cloudType', 'flowerColor'].forEach(function (value) {
       if (values[value] === undefined) {
         values[value] = 'undefined';
       }
-    }
+    });
 
     return (
       <form className="span4 offset1">
@@ -87,10 +88,10 @@ var BeeCellEditor = React.createClass({
         </select>
 
         <label htmlFor="value">Value:</label>
-        <input type="number" name="value" value={values.value} disabled={values.featureType === 'undefined'} onChange={this.handleChange} />
+        <input type="number" name="value" min="0" value={values.value} disabled={values.featureType === 'undefined'} onChange={this.handleChange} />
 
         <label htmlFor="range">Range (defaults to value):</label>
-        <input type="number" name="range" value={values.range} disabled={values.featureType === 'undefined'} onChange={this.handleChange} />
+        <input type="number" name="range" min={values.value} value={values.range} disabled={values.featureType === 'undefined'} onChange={this.handleChange} />
 
         <label htmlFor="cloudType">Cloud Type:</label>
         <select name="cloudType" value={values.cloudType} onChange={this.handleChange}>

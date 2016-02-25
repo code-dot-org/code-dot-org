@@ -642,7 +642,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundIcy3":function(d){return "set icy 3 background"},
 "setBackgroundIcy4":function(d){return "set icy 4 background"},
 "setBackgroundIcy5":function(d){return "set icy 5 background"},
-"setBackgroundGround":function(d){return "set ground background"},
+"setBackgroundGround":function(d){return "sett bakke bakgrunn"},
 "setBackgroundSnowy":function(d){return "sett snøbakgrunn"},
 "setBackgroundEndor":function(d){return "velg Endor som bakgrunn"},
 "setBackgroundHoth":function(d){return "velg Hoth som bakgrunn"},

@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "1 adet toprak yerleştirin"},
 "finalLevel":function(d){return "Tebrikler! Son bulmacayı da çözdünüz."},
 "flowerEmptyError":function(d){return "Üstünde bulunduğun çiçekte daha fazla nektar kalmadı."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "değer al"},
 "heightParameter":function(d){return "Yükseklik"},
 "holePresent":function(d){return "bir delik var"},

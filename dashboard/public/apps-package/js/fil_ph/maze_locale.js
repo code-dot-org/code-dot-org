@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "maglagay ng 1 unit ng dumi"},
 "finalLevel":function(d){return "Maligayang pagbati! Nalutas mo na ang pinakahuling puzzle."},
 "flowerEmptyError":function(d){return "Ang bulaklak kung saan ikaw ang nakadapo ay wala ng nectar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "kunin"},
 "heightParameter":function(d){return "taas"},
 "holePresent":function(d){return "merong butas"},
