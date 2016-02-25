@@ -5,7 +5,7 @@ require 'rmagick'
 require_relative '../script_constants'
 
 def create_certificate_image2(image_path, name, params={})
-  name = name.to_s.gsub(/@/,'\@').strip
+  name = name.to_s.force_8859_to_utf8.gsub(/@/, '\@').strip
   name = ' ' if name.empty?
 
   background = Magick::Image.read(image_path).first
@@ -31,7 +31,7 @@ end
 # This method returns a newly-allocated Magick::Image object.
 # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=nil)
-  name = name.gsub(/@/,'\@')
+  name = name.force_8859_to_utf8.gsub(/@/, '\@')
   name = ' ' if name.empty?
 
   course ||= ScriptConstants::HOC_NAME

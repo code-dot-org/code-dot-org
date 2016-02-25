@@ -26,9 +26,9 @@
   twentyhours_heading: Prøv vår introduksjon til koding
   twentyhours_text: Fullført din første kodetime? Lær mer grunnleggende koding og
     programmering i dette oppfølgingskurset.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Hvert eneste barn fortjener en mulighet
+  og_description: Hver eneste student i hver skole fortjener muligheten til å studere
+    Informatikk.
   hoc2014_heading: Bli med i <a href="http://hourofcode.com">Kodetimen</a><br/> 8.
     – 14. desember 2014<br/>
   hoc2014_students: Elever
@@ -75,18 +75,18 @@
   congratulations_volunteer: 'Gratulerer: nå har du prøvd ut Kodetimen,<a href="https://code.org/volunteer">
     meld deg på for å hjelpe til i et klasserom</a> og hjelp flere elever med å gjennomføre
     Kodetimen!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: Gratulerer med å fullføre Kurs 1
+  congratulations_on_completing_course2: Gratulerer med å fullføre Kurs 2
+  congratulations_on_completing_course3: Gratulerer med å fullføre Kurs 3
+  congratulations_on_completing_course4: Gratulerer med å fullføre Kurs 4
+  congratulations_on_completing_accelerated: Gratulerer med å fullføre det Akselererte
+    Kurs
   congrats_next_tutorials_title: Prøv disse kursene
   congrats_next_tutorials_desc: Prøv disse kortere, 1-timers-kursene eller prøv et
     kurs fra våre <a href="%{current_path}/next">samarbeidspartenere</a>.
   get_a_certificate_of_achievement: Hent et diplom for din prestasjon
-  view_course: View course
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  view_course: Se kurset
+  congrats_guest_speaker_title: Finn en gjeste høyttaler for ditt klasserom
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
     real world by inviting a guest speaker to your classroom. You can use our map
@@ -94,11 +94,7 @@
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -110,8 +106,8 @@
   third_party_platform_mobile: 'Platform: iPad & Android'
   third_party_platform_web: 'Platform: Web'
   third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_free: 'Pris: Gratis'
+  third_party_price_299: 'Pris: $2.99/nedlasting'
   third_party_price_2500: 'Price: Free plans & $2,500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
@@ -119,7 +115,7 @@
     and game-based programming activities provide an easy introduction to programming,
     and empower children to innovate and create.
   third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_tynker_btn_site: Besøk Tynker
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
@@ -127,62 +123,61 @@
     add their own voices and sounds, even insert photos of themselves - then use the
     programming blocks to make their characters come to life.
   third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratchjr_btn_site: Besøk Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
     games, and animations and share your creations with others in the online community.
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_curriculum: Last ned Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratch_btn_site: Besøk Bunnen
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
     or on Android or iOS devices. Students play the initial set of “Basic” levels
     in Lightbot. They will learn how to tell a computer what to do with a series of
     basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_lightbot_btn_curriculum: Last ned Lightbot Curriculun
+  third_party_lightbot_btn_site: Besøk Lightbot
   third_party_khan_desc: Learn how to program drawings, animations, and games using
     JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
     can share whatever you create, explore what others have created and learn from
     each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_khan_btn_learn: Lær CS med Khan Akadamiet
+  third_party_khan_btn_forum: Khan Akademiet CS Forum
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
     apps for Android devices. Newcomers to App Inventor can have their first app up
     and running in an hour or less, and can program more complex apps in significantly
     less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_appinv_btn_curriculum: Last ned Appen Inventor 2 Curriculum
+  third_party_appinv_btn_forum: Appen Iventor 2 Forum
+  third_party_appinv_btn_site: Besøk Appen Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
     fun and accessible for beginners. With CodeHS, you can get the help that every
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
+  third_party_codehs_btn_demos: Besøk CodeHS Demoene
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
     native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_curriculum: Last ned Codecademy Curriculum
+  third_party_codecademy_btn_site: Besøk Codecademy
+  third_party_organization: Organisasjon
   third_party_curriculum: Skoleplan
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
+  third_party_pricing: Prising
+  third_party_cost_free: Gratis
+  third_party_cost_5permonth: "$5/måned per klasse"
+  third_party_cost_299: "$2.99/nedlasting"
+  third_party_cost_free_399: Gratis å prøve, $399/klasserommet
+  third_party_cost_free_2: Gratis å prøve. $2/student
+  third_party_cost_free_10: Gratis å prøve, $9.99/måned
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
+  third_party_desc_10to12_kto3: Omtrent 10-12 leksjoner, rettet mot karakterer K-3
+  third_party_desc_11_kto5: Omtrent 11 leksjoner, rettet mot karakterer K-5
+  third_party_desc_10to12_kto5: Omtrent 10-12 leksjoner, rettet mot karakterer K-3
   third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
   third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
   third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
@@ -367,12 +362,15 @@
   homepage_solot_text_link_volunteer: Meld deg som frivillig til Kodetimen
   homepage_slot_text_title_students: Elever
   homepage_slot_text_blurb_students: Utforsk alle våre opplæringsprogrammer
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Utforsk våre kurs
   homepage_slot_text_link_codestudio: Prøv Code Studio
   homepage_slot_text_link_local: Finn et lokalt kurs
   homepage_slot_text_link_othercourses: Andre nettbaserte kurs
   homepage_slot_text_title_educators: Lærere
   homepage_slot_text_blurb_educators: Lær opp elevene dine
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Ungdomskole
+  homepage_slot_text_link_high: Videregående
   homepage_slot_text_link_k5: Kurs for barnehage til 5.trinn
   homepage_slot_text_link_fullcurriculum: Se vår fullstendige læreplan
   homepage_slot_text_link_pd: Profesjonell utvikling
@@ -438,8 +436,8 @@
   starwars_javascript_start_button: Prøv nå
   starwars_blocks_title: Blokker
   starwars_blocks_description: Bruk dra-og-slipp blokker.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Mange språk | Moderne nettlesere, smarttelefoner, nettbrett
+    | Alderen 6-106
   starwars_blocks_start_button: Lær mer
   starwars_watch_videos: Før du starter, se en av disse videoene
   starwars_speak_languages: Snakker du et annet språk?
@@ -452,7 +450,7 @@
     i Minecraft.
   mc_gradelevel: Passer for de som er 6 år og eldre
   mc_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Mange språk | Moderne nettlesere og nettbrett | Alderen 6-106
   minecraft_subtitle: Kodetimen med Minecraft
   volunteer_engineer_submission_title: Meld deg som frivillig til Kodetimen og inspirer
     elevene.
@@ -478,7 +476,7 @@
   volunteer_engineer_submission_intro_links: Ser du ikke etter en frivillig? <a href="%{learn_more}">
     Lær mer</a> om å organisere din egen "Hour of code" begivenhet og finne en lokal
     frivillig på våre <a href="%{volunteer_local}"> frivillige kart</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Oppdater din informasjon
   volunteer_engineer_submission_header_shared: Informasjon deles med lærere på frivillig-kartet
   volunteer_engineer_submission_field_name: Navn
   volunteer_engineer_submission_field_name_placeholder: Fullt navn
@@ -963,12 +961,12 @@
   infinity_gradelevel: Alder 4-104
   artist_gradelevel: Alder 4-104
   monstercoding_gradelevel: Alderen 5 til 13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Aldre 5-10
+  csfirst_gradelevel: Aldre 9-14
   boxisland_gradelevel: Grunnskole
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Aldre 12-14
+  texasinstruments_gradelevel: Aldre- 13-16
+  teacherled_gradelevel: Aldre 5+
   course1_gradelevel: Fra 4 år (krever ikke leseferdigheter)
   course2_gradelevel: Alder 6+ (leseferdigheter kreves)
   course3_gradelevel: Alder 8+ (etter kurs 2)
@@ -1015,12 +1013,12 @@
   frozen_platformtext: Moderne nettlesere + nettbrett
   starwars_platformtext: Moderne nettlesere + nettbrett
   playlab_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Moderne nettlesere, iOS, Android
+  allcancode_platformtext: Moderne nettlesere, iOS
   csfirst_platformtext: Moderne nettlesere
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Moderne nettlesere
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI Kalkulatorer
   teacherled_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   codeorg_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
   codeintl_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
@@ -1607,4 +1605,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spill
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

@@ -184,7 +184,6 @@ Dashboard::Application.routes.draw do
   get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
 
   # internal report dashboards
-  get '/admin/concepts', to: 'admin_reports#admin_concepts', as: 'admin_concepts'
   get '/admin/funometer', to: 'admin_reports#funometer', as: 'funometer'
   get '/admin/funometer/script/:script_id', to: 'admin_reports#funometer_by_script', as: 'funometer_by_script'
   get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_reports#funometer_by_script_level', as: 'funometer_by_script_level'
@@ -268,6 +267,16 @@ Dashboard::Application.routes.draw do
   namespace :ops, path: ::OPS::DASHBOARDAPI, shallow_path: ::OPS::DASHBOARDAPI do
     concerns :ops_routes
   end
+
+  namespace :plc do
+    resources :courses
+    resources :learning_modules
+    resources :tasks
+    resources :user_course_enrollments
+  end
+
+  get '/plc/enrollment_evaluations/:enrollment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
+  post '/plc/enrollment_evaluations/:enrollment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'

@@ -172,7 +172,7 @@ Feature: Checking the footer appearance
 
     Then I close my eyes
 
-  @eyes_mobile
+  @eyes_mobile @skip
   Scenario: Mobile Star Wars share small footer
     Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/15?noautoplay=true"
     And I rotate to landscape
