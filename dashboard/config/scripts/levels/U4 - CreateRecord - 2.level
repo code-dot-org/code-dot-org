@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Change the name from \"Alice\" to something else in the createRecord command.  Run the program and use the Data Viewer to see the changes to your table. (Click to see full instructions)",
-    "markdown_instructions": "# Data Viewer\r\n\r\n**Where did that data go?** App Lab's database is \"remote\" which means the data is stored separately from the app code on a server. A common term for this is \"cloud storage\".\r\n\r\nTo see the data you have to use the **Data Viewer**. You may have noticed a button right above the app display that looks like this. <img src=\"https://images.code.org/715018a7c273b86f47b41e3fe166088f-image-1449168835417.png\" style=\"width: 100px\">\r\n \r\n* Click **View Data** to see all of the \"tables\" in your database (We'll explain what a table is later).\r\n* You should see one table called **mytable**.  \r\n* Click **view** to see all of the data stored in that table.\r\n* **Notice** that an **id number was automatically generated** for every row in the table.\r\n![](https://images.code.org/48994996542a35a3473a14d2f99d45e2-image-1449168371760.gif)\r\n \r\n# Do This\r\n<img src=\"https://images.code.org/dffe4d9d3b8541189242aa95913ecfee-image-1449168144127.gif\" style=\"width: 300px; float: right\">\r\n\r\n* In the code **change \"Alice\" to a different name** in the call to `createRecord`\r\n* **Run the app** a few times by repeatedly clicking \"Run\" and \"Reset\"\r\n* **Check the Data Viewer** to make sure it worked! \r\n* **Note:** If you already had the Data Viewer open you will need to **refresh the page** to see the changes.\r\n",
+    "markdown_instructions": "# Data Viewer\r\n\r\n**Where did that data go?** App Lab's database is \"remote\" which means the data is stored separately from the app code on a server. A common term for this is \"cloud storage\".\r\n\r\nTo see the data you have to use the **Data Viewer**. You may have noticed a button right above the app display that looks like this. <img src=\"https://images.code.org/715018a7c273b86f47b41e3fe166088f-image-1449168835417.png\" style=\"width: 100px\">\r\n \r\n* Click **View Data** to see all of the \"tables\" in your database (We'll explain what a table is later).\r\n* You should see one table called **mytable**.  \r\n* Click **view** to see all of the data stored in that table.\r\n* **Notice** that an **id number was automatically generated** for every row in the table.\r\n![](https://images.code.org/48994996542a35a3473a14d2f99d45e2-image-1449168371760.gif)\r\n \r\n# Do This:\r\n<img src=\"https://images.code.org/dffe4d9d3b8541189242aa95913ecfee-image-1449168144127.gif\" style=\"width: 300px; float: right\">\r\n\r\n* In the code, **change \"Alice\" to a different name** in the call to `createRecord`.\r\n* **Run the app** a few times by repeatedly clicking \"Run\" and \"Reset.\"\r\n* **Check the Data Viewer** to make sure it worked! \r\n* **Note:** If you already had the Data Viewer open you will need to **refresh the page** to see the changes.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -39,9 +39,6 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "video_key": "csp_applab_databases_2"
   },
   "published": true
