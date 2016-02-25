@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "polož 1 jednotku hliny"},
 "finalLevel":function(d){return "Gratulujem! Vyriešil si poslednú úlohu."},
 "flowerEmptyError":function(d){return "Táto kvetina nemá viac nektáru."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "získať"},
 "heightParameter":function(d){return "výška"},
 "holePresent":function(d){return "tam je jama"},

@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "place 1 unit of dirt"},
 "finalLevel":function(d){return "बधाइयाँ! आपने अंतिम पहेली हल कर दी है।"},
 "flowerEmptyError":function(d){return "The flower you're on has no more nectar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "पाना"},
 "heightParameter":function(d){return "ऊँचाई"},
 "holePresent":function(d){return "वहाँ एक छेद है"},

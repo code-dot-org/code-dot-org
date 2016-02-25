@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "פונקציות"},
 "catText":function(d){return "טקסט"},
 "catVariables":function(d){return "משתנים"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "התחל מחדש"},
 "clearPuzzleConfirm":function(d){return "זה יאפס את הפאזל למצבו ההתחלתי, וימחק את כל הבלוקים שהוספת או שינית."},
 "clearPuzzleConfirmHeader":function(d){return "האם אתה בטוח שאתה רוצה להתחיל מחדש?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "צפה בסרטון"},
 "when":function(d){return "מתי"},
 "whenRun":function(d){return "התחל ריצה"},
-"workspaceHeaderShort":function(d){return "סביבת העבודה: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "סביבת העבודה: "}};

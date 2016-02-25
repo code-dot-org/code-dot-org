@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "bir parça torpaq qoy"},
 "finalLevel":function(d){return "Təbriklər! Axırıncı tapmacanı da tapdınız."},
 "flowerEmptyError":function(d){return "The flower you're on has no more nectar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "götür"},
 "heightParameter":function(d){return "hündürlük"},
 "holePresent":function(d){return "çuxur var"},

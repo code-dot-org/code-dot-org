@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funkce"},
 "catText":function(d){return "text"},
 "catVariables":function(d){return "Proměnné"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Začít znovu"},
 "clearPuzzleConfirm":function(d){return "Toto obnoví hádanku do jejího původního stavu a odstraní všechny bloky, které jste přidali nebo změnili."},
 "clearPuzzleConfirmHeader":function(d){return "Jste si jisti, že chcete začít znovu?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Shlédnout Video"},
 "when":function(d){return "když"},
 "whenRun":function(d){return "po spuštění"},
-"workspaceHeaderShort":function(d){return "Pracovní prostor: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Pracovní prostor: "}};

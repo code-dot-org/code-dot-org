@@ -1108,7 +1108,9 @@
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1959,11 +1961,13 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee - Ryan_instruction: |
+        These clouds are bugging me! Some of the clouds
+        have flowers inside, and some don't. I should check each cloud, and only
+        get nectar from the flowers.
+      Quantum Bee_instruction: Lilla blomster kan ha enten 1 eller 0 nektar, men du vet ikke hvilken! Vær forsiktig med å samle nektar fra en lilla blomst hvis den ikke har noe. Sjekk om nektar er lik 1 ved hjelp av hvis blokken.
       Ryan - 4-5 Bee Conditionals 2_instruction: Bien vil bare ha nektar akkura nå. Ikke alle objektene er blomster, så sjekk under HVER ENESTE SKY for å se om det gjemmer seg en blomst der. Hvis det gjør det kan du samle nektar.
-      Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: Bien ønsker bare nektar akkurat nå. Ikke alle objekter er blomster, så sjekk under HVER SKY til å se om det skjuler seg en blomst. Hvis det er, så du kan samle nektar.
       Ryan Test Locked Blocks_instruction: 'Her er en funksjon kalt "patruljer". Endre den slik at Katt beveger seg opp 400 piksler og så ned 400 piksler.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
@@ -3466,7 +3470,7 @@
         right of the starting location. (Click to show full instructions)
       U4 - add createRecord to contacts App_instruction: |
         Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
@@ -3617,7 +3621,7 @@
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
       U4 - Objects - pullValues_instruction: |
-        Create an event handler for the "Add
+        Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |
@@ -3625,7 +3629,7 @@
         starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |
         Add code to your event handler
-        fro the "Add Contact" button so that when a new contact is added the inputs
+        for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
       U4 - Objects - showContact1_instruction: |
@@ -3655,11 +3659,11 @@
       U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\r\n"
       U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\r\n"
       U4 - ReadRecords - Contacts App 1_instruction: |
-        Write a function called "updateLocalData"
-        that copies the data in your database into your "contacts" global variable.
+        Use readRecords to copy the
+        data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |
-        Create a function called "refreshLocalData"
+        Create a function called refreshLocalData.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |
         Add a call to "refreshLocalData"
@@ -3679,7 +3683,7 @@
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: Template
+      U4L02 - Objects - Template1_instruction: Mal
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
@@ -3706,6 +3710,22 @@
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - updateRecord - Callback Success Parameter_instruction: |
+        Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: |
+        Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: 'Under noen av blokkene skjuler det seg lava, som du må dekke til før du går videre. Her hjelper det med en "hvis"-kommando. Legg til en "flytt fremover"-kommando på riktig sted for å utvinne disse blokkene.'
       Underground If Statements_instruction: 'Det er nå det blir vanskelig. Utvinn tre rødsteiner, men ikke fall ned i lavaen. Bruk en "hvis"-kommando for å plassere brostein over lavaen du finner.'
       Underground Iron_instruction: Det er ikke lurt å gå rett inn i smeltet lava. Bruk brostein til å lage en bro, og så utvinner du minst to av jernblokkene.

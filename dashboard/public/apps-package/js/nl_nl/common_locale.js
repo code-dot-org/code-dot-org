@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Functies"},
 "catText":function(d){return "tekst"},
 "catVariables":function(d){return "Variabelen"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Begin opnieuw"},
 "clearPuzzleConfirm":function(d){return "Hiermee breng je de puzzel terug naar zijn beginstaat en verwijder je alle blokken die je toegevoegd of veranderd hebt."},
 "clearPuzzleConfirmHeader":function(d){return "Weet je zeker dat je opnieuw wilt beginnen?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Bekijk de video"},
 "when":function(d){return "wanneer"},
 "whenRun":function(d){return "als gestart"},
-"workspaceHeaderShort":function(d){return "Werkplaats: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Werkplaats: "}};

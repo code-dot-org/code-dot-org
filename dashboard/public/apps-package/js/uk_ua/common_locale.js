@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Функції"},
 "catText":function(d){return "текст"},
 "catVariables":function(d){return "Змінні"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Почати знову"},
 "clearPuzzleConfirm":function(d){return "Це скине задачу до початкового стану, видаливши всі блоки, які ви додали чи змінили."},
 "clearPuzzleConfirmHeader":function(d){return "Ви впевнені, що хочете почати все спочатку?"},
@@ -202,8 +203,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Викликає іменовану функцію, яка приймає один або більше параметрів"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Викликає функцію з параметрами"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Виклик функції"},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"},
+"dropletBlock_comment_description":function(d){return "Напишіть опис до якогось коду"},
+"dropletBlock_comment_signatureOverride":function(d){return "коментар"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Задає змінну і привласнює їй безліч значень із заданими початковими параметрами"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Переглянути відео"},
 "when":function(d){return "коли"},
 "whenRun":function(d){return "коли гра починається"},
-"workspaceHeaderShort":function(d){return "Робоча область: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Робоча область: "}};

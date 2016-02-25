@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "place 1 unit of dirt"},
 "finalLevel":function(d){return "Congratulations! You have solved the final puzzle."},
 "flowerEmptyError":function(d){return "The flower you're on has no more nectar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "get"},
 "heightParameter":function(d){return "height"},
 "holePresent":function(d){return "there is a hole"},

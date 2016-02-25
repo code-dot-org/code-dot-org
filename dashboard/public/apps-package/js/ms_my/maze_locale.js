@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "Letakkan 1 unit kotoran"},
 "finalLevel":function(d){return "Tahniah! Anda berjaya menyelesaikan puzzle terakhir."},
 "flowerEmptyError":function(d){return "The flower you're on has no more nectar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "ambil"},
 "heightParameter":function(d){return "ketinggian"},
 "holePresent":function(d){return "terdapat lubang"},

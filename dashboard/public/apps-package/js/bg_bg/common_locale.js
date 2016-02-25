@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Функции"},
 "catText":function(d){return "Текст"},
 "catVariables":function(d){return "Променливи"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Стартиране отначало"},
 "clearPuzzleConfirm":function(d){return "Това ще рестартира пъзела в начално състояние и ще изтрие всички блокове, които сте добавили или променили."},
 "clearPuzzleConfirmHeader":function(d){return "Наистина ли искате да започнете отначало?"},
@@ -202,8 +203,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Извиква функция, която взима един или повече параметри"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Призовава функция с параметри"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Призовава функция"},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"},
+"dropletBlock_comment_description":function(d){return "Напишете описание на някакъв код"},
+"dropletBlock_comment_signatureOverride":function(d){return "коментар"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Декларира променлива и я възлага на масив с първоначалните стойности"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "Името, което ще използвате в програмата за адресиране на променливата"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Гледайте видеото"},
 "when":function(d){return "когато"},
 "whenRun":function(d){return "при стартиране"},
-"workspaceHeaderShort":function(d){return "Работна област: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Работна област: "}};

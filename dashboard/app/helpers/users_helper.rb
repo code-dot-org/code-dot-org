@@ -97,7 +97,7 @@ module UsersHelper
     summary = summarize_user_progress(script, user)
     script.stages.map do |stage|
       levels = stage.script_levels.map(&:level)
-      completed = levels.select{|l|sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}.count
+      completed = levels.count{|l| sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}
       completed.to_f / levels.count
     end
   end
@@ -105,7 +105,7 @@ module UsersHelper
   def percent_complete_total(script, user = current_user)
     summary = summarize_user_progress(script, user)
     levels = script.script_levels.map(&:level)
-    completed = levels.select { |l| sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}.count
+    completed = levels.count{|l| sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}
     completed.to_f / levels.count
   end
 

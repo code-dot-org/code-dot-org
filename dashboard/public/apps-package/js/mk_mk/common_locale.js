@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Functions"},
 "catText":function(d){return "Текст"},
 "catVariables":function(d){return "Променливи"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Започни"},
 "clearPuzzleConfirm":function(d){return "This will delete all blocks and reset the puzzle to its start state."},
 "clearPuzzleConfirmHeader":function(d){return "Дали сте сигурни дека сакате да започнете?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Погледни го видеото"},
 "when":function(d){return "Кога"},
 "whenRun":function(d){return "Кога трча"},
-"workspaceHeaderShort":function(d){return "Работна површина: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Работна површина: "}};

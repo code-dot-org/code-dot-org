@@ -28,7 +28,7 @@ We implemented this model in September 2014 with 80 facilitators nationwide. So 
 For each workshop you host, CS Fundamentals Facilitators will receive a per-teacher budget to cover your costs, and also to compensate you as well as any teaching assistants. We will also provide the materials (at no cost) needed to host the workshop including take home supplies for teachers. 
 
 ## How to become a CS Fundamentals Facilitator?
-Become a CS Fundamentals Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (New Orleans, LA). At the Summit, Code.org will prepare facilitators to deliver their own one-day, in-person workshops to local educators interested in teaching the Code.org CS Fundamentals curriculum.
+Become a CS Fundamentals Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (Nashville, TN). At the Summit, Code.org will prepare facilitators to deliver their own one-day, in-person workshops to local educators interested in teaching the Code.org CS Fundamentals curriculum.
 
 Once you become an official CS Fundamentals Facilitator, you can host workshops listed on the [Code.org professional development page](/professional-development-workshops), and together we will recruit elementary school teachers to attend these workshops to offer computer science modules in their classrooms. 
 

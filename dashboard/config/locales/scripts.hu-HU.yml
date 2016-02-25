@@ -180,12 +180,11 @@
         course4:
           description_short: A 4. tanfolyam azoknak a tanulóknak ajánlott, akik már
             befejezték a 2. és a 3. tanfolyamot.
-          description: A 4. tanfolyam azoknak a tanulóknak ajánlott, akik már elvégezték
-            a 2. és a 3. tanfolyamot. A tanulók mélyebbre hatóan fogják tanulmányozni
-            az előző tanfolyamokban bevezetett programozási fogalmakat az összetettebb
-            problémák rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók
-            interaktív történeteteket és játékokat hoznak létre, amit bárkivel megoszthatnak.
-            4.-8. osztályosok számára ajánlott.
+          description: 4. tanfolyam célja a diákok akik teljesítették a 2. és 3. tanfolyamot
+            megtanulják, hogyan boldoguljanak a növekvő bonyolultságú feladványokkal
+            és hogyan alkalmazzanak több koncepciót a feladvány megoldásához. A tanfolyam
+            befejezése után a diákok az általuk létrehozott programokkal demonstrálhatják
+            a ciklusok, funkciók használatát paraméterekkel. 4-8 évfolyamnak ajánlott.
           'Artist: Variables': 'Művész: változók'
           'Bee: For Loops': 'Méh: számláló ciklusok'
           title: 4. tanfolyam
@@ -1470,6 +1469,9 @@
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: Unit 5 Challenge Planning & Creation
           Getting Started: Getting Started
+          Unit 5 lessons: Unit 5 lessons
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1748,3 +1750,18 @@
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        cspunit6draft:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, and it concludes with a sampling of example projects
+            that can be built using these tools.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Updating Records: Updating Records
+          Deleting Records: Deleting Records
+          Sample Apps: Sample Apps

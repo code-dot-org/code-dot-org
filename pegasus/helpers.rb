@@ -1,11 +1,13 @@
 require 'cdo/aws/s3'
 require_relative '../shared/middleware/helpers/storage_id'
 
-def avatar_image(name,width=320)
+def avatar_image(name,width=320,square_photo=false)
   basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
   path = resolve_image("images/avatars/#{basename}")
   return nil unless path
-  "/images/fit-#{width}/avatars/#{File.basename(path)}"
+  dimensions = "fit-#{width}"
+  dimensions = "fill-#{width}x#{width}" if square_photo == true
+  "/images/#{dimensions}/avatars/#{File.basename(path)}"
 end
 
 def authentication_required!(url=request.url)

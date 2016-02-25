@@ -14,6 +14,7 @@
   "catProcedures": "Funktioner",
   "catText": "text",
   "catVariables": "Variabler",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Börja om",
   "clearPuzzleConfirm": "Detta kommer att återställa pusslet och ta bort alla block du har lagt till eller ändrat.",
   "clearPuzzleConfirmHeader": "Är du säker på att du vill börja om?",
@@ -255,6 +256,5 @@
   "watchVideo": "Titta på videon",
   "when": "när",
   "whenRun": "vid start",
-  "workspaceHeaderShort": "Arbetsyta: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Arbetsyta: "
 }

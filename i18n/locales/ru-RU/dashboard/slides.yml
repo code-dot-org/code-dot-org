@@ -740,7 +740,7 @@ ru:
         text: 'Блокли делится на три основные части. Слева Птичий лабиринт, в котором ваша программа будет выполняться. Инструкции для каждого уровня расположены под Лабиринтом. Средняя часть - это панель инструментов, в которой каждый блок является командой исполняемой птицей. Пространство справа называется рабочей областью. В ней мы будем создавать программу.'
       3:
         image: notes/C2_maze_intro_3.png
-        text: 'If I drag the move block to our work space and press "Run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
+        text: Если переместить блок в пространство нашей работы и нажать кнопку «Run», что происходит? Птица движется вперед на одну ячейку на сетке. И что делать, если я хочу чтобы птица сделала что-то после того, как она продвинется вперед на одну ячейку? Я могу добавить еще один блок к нашей программе.
       4:
         image: notes/C2_maze_intro_4.png
         text: |-
@@ -885,13 +885,13 @@ ru:
         text: "The good news is that you can get better at figuring things out on your own when you know a few thinking tricks. These tricks are unique ways for looking at and solving problems. In this lesson, you'll learn about four tricks and practice them with your friends to figure out the rules to a game."
       3:
         image: notes/C3_computational_thinking_3.png
-        text: "When you break down a big problem into smaller pieces, you're using your brain to decompose the big problem. Once we've decomposed the big problem into several smaller problems, we can go on to our next trick, which is called pattern match."
+        text: Когда Вы разбиваете большую задачу на маленькие подзадачи, Вы используете свой мозг для декомпозиции задачи. После того как мы разбили большую задачу на несколько задач поменьше, мы можем использовать следующий способ, который называется сопоставление с образцом.
       4:
         image: notes/C3_computational_thinking_4.png
-        text: "That's when we look for similarities between things. Once I find the things that are the same, I can figure out what things are different. When I remove those differences, that's called abstraction."
+        text: Это когда мы ищем сходство между вещами. Как только я нашел одинаковые вещи, я могу выяснить какие вещи разные. Процесс удаления этих разных вещей называется абстракцией.
       5:
         image: notes/C3_computational_thinking_5.png
-        text: "After I have figured out the steps to solving a problem, I can put those steps in a specific order called an algorithm so that anyone can use my directions to solve that problem. We're going to use these four steps to figure out how to play the game with no rules. By the end of the game, you'll be able to play something that looks like this!"
+        text: После того как я нашел шаги, необходимые для решения задачи, я могу составить последовательность шагов, которая называется алгоритм, чтобы кто угодно мог использовать мои шаги для решения задачи. Мы будем использовать этих четыре шага для того, чтобы понять как играть в игру без правил. К концу игры, Вы сможете играть во что-то похожее!
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png

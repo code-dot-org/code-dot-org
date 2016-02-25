@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "메우기 1번"},
 "finalLevel":function(d){return "짝짝짝 축하합니다! 마지막 퍼즐을 해결했습니다."},
 "flowerEmptyError":function(d){return "이 꽃에는 꽃꿀이 없습니다."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "아이템 가져오기"},
 "heightParameter":function(d){return "높이"},
 "holePresent":function(d){return "구덩이가 있으면"},

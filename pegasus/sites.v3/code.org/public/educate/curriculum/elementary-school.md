@@ -1,5 +1,5 @@
 ---
-title: Curriculum
+title: CS Fundamentals for grades K-5
 nav: educate_nav
 ---
 
@@ -157,6 +157,8 @@ check out Code.org’s [live events for teachers](http://www.eventbrite.com/o/co
 Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators. 
 
 ## 3rd Party resources for elementary school CS
+
+[](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|---------------|
