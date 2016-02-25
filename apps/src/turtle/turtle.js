@@ -33,6 +33,7 @@ var Colours = require('./colours');
 var codegen = require('../codegen');
 var ArtistAPI = require('./api');
 var apiJavascript = require('./apiJavascript');
+var AppView = require('../templates/AppView.jsx');
 var page = require('../templates/page.html.ejs');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -204,24 +205,31 @@ Artist.prototype.init = function(config) {
   }
 
   var iconPath = 'media/turtle/' + (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
-  config.html = page({
-    assetUrl: this.studioApp_.assetUrl,
-    data: {
-      visualization: '',
-      localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath}),
-      blockUsed : undefined,
-      idealBlockNumber : undefined,
-      editCode: this.level.editCode,
-      blockCounterClass : 'block-counter-default',
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
+  config.html = undefined;
 
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
-  this.studioApp_.init(config);
+  React.render(React.createElement(AppView, {
+    renderCodeApp: function () {
+      return page({
+        assetUrl: this.studioApp_.assetUrl,
+        data: {
+          visualization: '',
+          localeDirection: this.studioApp_.localeDirection(),
+          controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath}),
+          blockUsed : undefined,
+          idealBlockNumber : undefined,
+          editCode: this.level.editCode,
+          blockCounterClass : 'block-counter-default',
+          readonlyWorkspace: config.readonlyWorkspace
+        }
+      });
+    }.bind(this),
+    onMount: function () {
+      this.studioApp_.init(config);
+    }.bind(this)
+  }), document.getElementById(config.containerId));
 };
 
 Artist.prototype.loadAudio_ = function () {
