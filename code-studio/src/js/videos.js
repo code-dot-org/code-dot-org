@@ -1,5 +1,5 @@
 'use strict';
-/* global dashboard, Dialog, YT */
+/* global dashboard, Dialog, YT, YTConfig */
 
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
@@ -19,12 +19,22 @@ function onVideoEnded() {
   $('.video-modal').trigger("ended");
 }
 
+var currentVideoOptions;
 function onYouTubeIframeAPIReady() {
   // requires there be an iframe#video present on the page
-  var player = new YT.Player('video');
-  player.addEventListener('onStateChange', function (state) {
-    if (state.data === YT.PlayerState.ENDED) {
-      onVideoEnded();
+  var player = new YT.Player('video', {
+    events: {
+      'onStateChange': function (state) {
+        if (state.data === YT.PlayerState.ENDED) {
+          onVideoEnded();
+        }
+      },
+      'onError': function (error) {
+        if (currentVideoOptions) {
+          var size = error.target.f.getBoundingClientRect();
+          addFallbackVideoPlayer(currentVideoOptions, size.width, size.height);
+        }
+      }
     }
   });
 }
@@ -164,6 +174,7 @@ window.showVideoDialog = function(options, forceShowVideo) {
 
   notesDiv.height(divHeight);
 
+  currentVideoOptions = options;
   if (window.YT && window.YT.loaded) {
     onYouTubeIframeAPIReady();
   } else {
