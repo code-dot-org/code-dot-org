@@ -67,7 +67,7 @@ namespace :circle do
   task :run_tests, [:force_all_tests_tag] do |_, args|
     run_all_tests_tag = args[:force_all_tests_tag]
     if RakeUtils.circle_commit_contains(run_all_tests_tag)
-      HipChat.log "Commit message '#{RakeUtils.circle_commit_message}' contains #{run_all_tests_tag}, force-running all tests."
+      HipChat.log "Commit message: '#{RakeUtils.circle_commit_message}' contains #{run_all_tests_tag}, force-running all tests."
       RakeUtils.rake 'test:all'
     else
       RakeUtils.rake 'test:changed'
@@ -77,7 +77,7 @@ namespace :circle do
   task :run_ui_tests, [:force_tests_commit_tag] do |_, args|
     run_ui_tests_tag = args[:force_tests_commit_tag]
     if RakeUtils.circle_commit_contains(run_ui_tests_tag)
-      HipChat.log "Commit message '#{RakeUtils.circle_commit_message}' contains #{run_ui_tests_tag}, running UI tests."
+      HipChat.log "Commit message: '#{RakeUtils.circle_commit_message}' contains #{run_ui_tests_tag}, running UI tests."
       RakeUtils.exec_in_background './bin/dashboard-server'
       RakeUtils.system_stdout 'wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz'
       RakeUtils.system_stdout 'tar -xzf sc-latest-linux.tar.gz'
@@ -89,7 +89,7 @@ namespace :circle do
         RakeUtils.system_stdout 'bundle exec ./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 7 --magic_retry --html'
       end
     else
-      HipChat.log "Commit message '#{RakeUtils.circle_commit_message}' does not contain #{run_ui_tests_tag}, skipping UI tests."
+      HipChat.log "Commit message: '#{RakeUtils.circle_commit_message}' does not contain #{run_ui_tests_tag}, skipping UI tests."
     end
   end
 end
