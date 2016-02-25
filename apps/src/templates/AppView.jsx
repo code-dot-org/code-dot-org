@@ -1,5 +1,7 @@
 'use strict';
 
+var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
+
 /**
  * Top-level React wrapper for our standard blockly apps.
  */
@@ -10,12 +12,12 @@ var AppView = React.createClass({
   },
 
   componentDidMount: function () {
-    this.refs.placeholder.getDOMNode().innerHTML = this.props.renderCodeApp();
+    this.refs.codeApp.getDOMNode().innerHTML = this.props.renderCodeApp();
     this.props.onMount();
   },
 
   render: function () {
-    return <div ref="placeholder"></div>;
+    return <ProtectedStatefulDiv ref="codeApp" />;
   }
 });
 module.exports = AppView;
