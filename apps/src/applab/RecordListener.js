@@ -26,7 +26,7 @@ var RecordListener = module.exports = function () {
  * processing the last batch of data for that table.
  * @type {number}
  */
-var RECORD_INTERVAL = 1000; // 1 second
+var RECORD_INTERVAL = 3000; // 3 seconds
 
 var EventType = {
   CREATE: 'create',
@@ -36,8 +36,8 @@ var EventType = {
 RecordListener.EventType = EventType;
 
 /**
- * Adds a listener which calls the callback when changes are made to the table.
- * The callback is called once per changed record.
+ * Sets the listener which calls the callback when changes are made to the table.
+ * Only one listener can be set per table. The callback is called once per changed record.
  * @param {string} tableName Name of the table to listen to.
  * @param {function(Object, EventType)} callback Callback to call with the record
  * and the type of event which happened to it. For create and update events,
@@ -45,7 +45,7 @@ RecordListener.EventType = EventType;
  * @returns {boolean} true if adding the listener succeeded, or false if
  * a listener already existed for the specified table.
  */
-RecordListener.prototype.addListener = function (tableName, callback) {
+RecordListener.prototype.setListener = function (tableName, callback) {
   if (this.tableHandlers_[tableName]) {
     return false;
   }
@@ -56,7 +56,9 @@ RecordListener.prototype.addListener = function (tableName, callback) {
 };
 
 /**
- * Clears the timeouts and resets internal state.
+ * Stop listening for changes to tables, and forget about all tables it was listening to.
+ * It is necessary to call reset before any registered callbacks to become invalid,
+ * e.g. when the user presses the resetButton.
  */
 RecordListener.prototype.reset = function () {
   for (var tableName in this.tableHandlers_) {
@@ -77,14 +79,10 @@ RecordListener.prototype.reset = function () {
  * @constructor
  */
 var TableHandler = function (tableName, callback) {
-  /**
-   * @private {string}
-   */
+  /** @private {string} */
   this.tableName_ = tableName;
 
-  /**
-   *  @private {function}
-   */
+  /** @private {function} */
   this.callback_ = callback;
 
   /**
@@ -108,21 +106,18 @@ var TableHandler = function (tableName, callback) {
   this.scheduleNextFetch_();
 };
 
-/**
- * @private
- */
+/** @private */
 TableHandler.prototype.scheduleNextFetch_ = function () {
   this.timeoutId_ = setTimeout(function recordListener() {
     this.fetchRecords_();
   }.bind(this), RECORD_INTERVAL);
 };
 
-/**
- * @private
- */
+/** @private */
 TableHandler.prototype.fetchRecords_ = function () {
   var req = new XMLHttpRequest();
   req.onreadystatechange = this.handleFetchRecords_.bind(this, req);
+  // TODO(dave): extract url creation logic from here and AppStorage
   var url = '/v3/shared-tables/' + Applab.channelId + '/' + this.tableName_;
   req.open('GET', url, true);
   req.send();
@@ -133,14 +128,7 @@ TableHandler.prototype.fetchRecords_ = function () {
  * @private
  */
 TableHandler.prototype.handleFetchRecords_ = function (req) {
-  var done = XMLHttpRequest.DONE || 4;
-  if (req.readyState !== done) {
-    return;
-  }
-
-  if (req.status < 200 || req.status >= 300) {
-    // Ignore errors. In the future we may want to add monitoring or notify
-    // the user that this is happening.
+  if (req.readyState !== XMLHttpRequest.DONE) {
     return;
   }
 
@@ -162,6 +150,12 @@ TableHandler.prototype.handleFetchRecords_ = function (req) {
   // the data below, since it is small compared to the amount of time taken to
   // retrieve the data.
   this.scheduleNextFetch_();
+
+  if (req.status < 200 || req.status >= 300) {
+    // Ignore errors. In the future we may want to add monitoring or notify
+    // the user that this is happening.
+    return;
+  }
 
   var callback = this.callback_;
   var records = JSON.parse(req.responseText);

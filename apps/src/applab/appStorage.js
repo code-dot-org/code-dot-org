@@ -265,7 +265,7 @@ AppStorage.onRecordEvent = function(tableName, onRecord, onError) {
     return;
   }
 
-  if (!recordListener.addListener(tableName, onRecord)) {
+  if (!recordListener.setListener(tableName, onRecord)) {
     onError('You are already listening for events on table "' + tableName + '". ' +
       'only one event handler can be registered per table.');
   }
