@@ -145,26 +145,11 @@ CrosshairOverlay.prototype.create_ = function () {
   this.hGuide_.setAttribute('x2', 0);
   this.ownElement_.appendChild(this.hGuide_);
 
-  this.bubble_ = document.createElementNS(SVG_NS, 'rect');
-  this.bubble_.setAttribute('width', TEXT_RECT_WIDTH);
-  this.bubble_.setAttribute('height', TEXT_RECT_HEIGHT);
-  this.bubble_.setAttribute('rx', TEXT_RECT_RADIUS);
-  this.bubble_.setAttribute('ry', TEXT_RECT_RADIUS);
-  this.ownElement_.appendChild(this.bubble_);
+  // Create the cooordinates tooltip
+  [this.bubble_, this.text_] = this.createTextBubbleElement_();
 
-  this.text_ = document.createElementNS(SVG_NS, 'text');
-  this.ownElement_.appendChild(this.text_);
-
-  this.elementIdBubble_ = document.createElementNS(SVG_NS, 'rect');
-  this.elementIdBubble_.setAttribute('width', TEXT_RECT_WIDTH);
-  this.elementIdBubble_.setAttribute('height', TEXT_RECT_HEIGHT);
-  this.elementIdBubble_.setAttribute('rx', TEXT_RECT_RADIUS);
-  this.elementIdBubble_.setAttribute('ry', TEXT_RECT_RADIUS);
-  this.ownElement_.appendChild(this.elementIdBubble_);
-
-  this.elementIdText_ = document.createElementNS(SVG_NS, 'text');
-  this.ownElement_.appendChild(this.elementIdText_);
-
+  // Create the element id tooltip
+  [this.elementIdBubble_, this.elementIdText_] = this.createTextBubbleElement_();
 };
 
 CrosshairOverlay.prototype.moveToParent_ = function (newParent) {
@@ -198,3 +183,17 @@ CrosshairOverlay.ellipsifyText = function (inputText, maxLength) {
   }
   return inputText || '';
 };
+
+CrosshairOverlay.prototype.createTextBubbleElement_ = function () {
+  var bubbleElement = document.createElementNS(SVG_NS, 'rect');
+  bubbleElement.setAttribute('width', TEXT_RECT_WIDTH);
+  bubbleElement.setAttribute('height', TEXT_RECT_HEIGHT);
+  bubbleElement.setAttribute('rx', TEXT_RECT_RADIUS);
+  bubbleElement.setAttribute('ry', TEXT_RECT_RADIUS);
+  this.ownElement_.appendChild(bubbleElement);
+
+  var textElement = document.createElementNS(SVG_NS, 'text');
+  this.ownElement_.appendChild(textElement);
+
+  return [bubbleElement, textElement];
+}
