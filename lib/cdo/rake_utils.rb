@@ -8,11 +8,16 @@ require 'digest'
 module RakeUtils
 
   def self.system__(command)
-    system_with_stdout__ "#{command} 2>&1"
+    CDO.log.info command
+    system_status_output__ "#{command} 2>&1"
   end
 
   def self.system_with_stdout__(command)
     CDO.log.info command
+    system_status_output__ command
+  end
+
+  def self.system_status_output__(command)
     output = `#{command}`
     status = $?.exitstatus
     [status, output]
