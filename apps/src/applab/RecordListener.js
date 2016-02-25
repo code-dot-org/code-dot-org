@@ -169,6 +169,7 @@ TableHandler.prototype.handleFetchRecords_ = function (req) {
   // Update the IdToJsonMap before calling the callback. This is so that in the future
   // readRecords can share this cache of records with the guarantee that calls to
   // readRecords made during the callback will return a up-to-date view of the data.
+  // This work is tracked by: https://www.pivotaltracker.com/story/show/114505801
   var oldIdToJsonMap = this.idToJsonMap_;
   var newIdToJsonMap = TableHandler.buildIdToJsonMap_(records);
   this.idToJsonMap_ = newIdToJsonMap;
