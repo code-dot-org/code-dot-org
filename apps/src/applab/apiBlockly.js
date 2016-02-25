@@ -412,13 +412,6 @@ exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
                            'onError': onError});
 };
 
-exports.onRecordEvent = function (blockId, table, onRecord) {
-  return Applab.executeCmd(blockId,
-                          'onRecordEvent',
-                          {'table': table,
-                           'onRecord': onRecord});
-};
-
 exports.getUserId = function (blockId) {
   return Applab.executeCmd(blockId,
                           'getUserId',

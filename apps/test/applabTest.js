@@ -17,7 +17,6 @@ window.Applab = {
 window.dashboard = window.dashboard || {};
 
 var Applab = require('@cdo/apps/applab/applab');
-var RecordListener = require('@cdo/apps/applab/RecordListener');
 var designMode = require('@cdo/apps/applab/designMode');
 var applabCommands = require('@cdo/apps/applab/commands');
 var constants = require('@cdo/apps/applab/constants');
@@ -410,108 +409,5 @@ describe('startSharedAppAfterWarnings', function () {
     component.props.handleClose();
     assert.strictEqual(localStorage.getItem('dataAlerts'),
       JSON.stringify(['other_channel', 'current_channel']));
-  });
-});
-
-describe('RecordListener', function() {
-  describe('TableHandler', function() {
-    var TableHandler = RecordListener.__TestInterface.TableHandler;
-    var records, oldIdToJsonMap, newIdToJsonMap, events, callback;
-
-    beforeEach (function() {
-      records = [];
-      oldIdToJsonMap = {};
-      newIdToJsonMap = {};
-      events = [];
-      callback = createSpyCallback(events);
-    });
-
-    function createSpyCallback(events) {
-      return function (record, eventType) {
-        events.push([record, eventType]);
-      };
-    }
-
-    function createRecord(id, name, age) {
-      return {id: id, name: name, age: age};
-    }
-
-    function addOldRecord(record) {
-      oldIdToJsonMap[record.id] = JSON.stringify(record);
-    }
-
-    function addNewRecord(record) {
-      records.push(record);
-      newIdToJsonMap[record.id] = JSON.stringify(record);
-    }
-
-    it('reports "create" events', function() {
-      var alice = createRecord(1, 'Alice', 7);
-      addNewRecord(alice);
-
-      TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
-
-      assert.equal(events.length, 1, 'One event is reported');
-      var actualRecord = events[0][0];
-      var actualEventType = events[0][1];
-      assert.equal(JSON.stringify(actualRecord), JSON.stringify(alice),
-        'Reported record has correct contents');
-      assert.equal(actualEventType, 'create', 'Event has correct type');
-    });
-
-    it('reports "update" events', function() {
-      var alice = createRecord(1, 'Alice', 7);
-      var bob = createRecord(1, 'Bob', 8);
-      addOldRecord(alice);
-      addNewRecord(bob);
-
-      TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
-
-      assert.equal(events.length, 1, 'One event is reported');
-      var actualRecord = events[0][0];
-      var actualEventType = events[0][1];
-      assert.equal(JSON.stringify(actualRecord), JSON.stringify(bob),
-        'Reported record has correct contents');
-      assert.equal(actualEventType, 'update', 'Event has correct type');
-    });
-
-    it('reports "delete" events', function() {
-      var bob = createRecord(1, 'Bob', 8);
-      addOldRecord(bob);
-
-      TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
-
-      assert.equal(events.length, 1, 'One event is reported');
-      var actualRecord = events[0][0];
-      var actualEventType = events[0][1];
-      assert.equal(JSON.stringify(actualRecord), JSON.stringify({id: bob.id}),
-        'Reported record has correct contents');
-      assert.equal(actualEventType, 'delete', 'Event has correct type');
-    });
-
-    it('reports multiple events', function() {
-      var alice = createRecord(1, 'Alice', 7);
-      var bob = createRecord(2, 'Bob', 8);
-      var charlie = createRecord(3, 'Charlie', 9);
-      var eve = createRecord(2, 'Eve', 11);
-
-      // create charlie, update bob to eve, delete alice
-
-      addOldRecord(alice);
-      addOldRecord(bob);
-      addNewRecord(eve);
-      addNewRecord(charlie);
-
-      TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
-
-      var expectedEvents = [
-        [eve, 'update'],
-        [charlie, 'create'],
-        [{id: alice.id}, 'delete']
-      ];
-
-      assert.equal(JSON.stringify(events), JSON.stringify(expectedEvents),
-        'Create, update and delete events were reported');
-    });
   });
 });

@@ -115,7 +115,6 @@ module.exports.blocks = [
   {func: 'readRecords', parent: api, category: 'Data', paletteParams: ['table','terms','callback'], params: ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
   {func: 'updateRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1, name:'Bob'}", "function(record, success) {\n  \n}"] },
   {func: 'deleteRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1}", "function(success) {\n  \n}"] },
-  {func: 'onRecordEvent', parent: api, category: 'Data', paletteParams: ['table','callback'], params: ['"mytable"', "function(record, eventType) {\n  if (eventType === 'create') {\n    textLabel('id', 'record with id ' + record.id + ' was created');\n  } \n}"] },
   {func: 'getUserId', parent: api, category: 'Data', type: 'value' },
   {func: 'drawChart', parent: api, category: 'Data', paletteParams: ['chartId', 'chartType', 'chartData'], params: ['"chartId"', '"bar"', '[\n\t{ label: "Row 1", value: 1 },\n\t{ label: "Row 2", value: 2 }\n]'], dropdown: { 0: idDropdownWithSelector(".chart"), 1: ChartApi.getChartTypeDropdown } },
   {func: 'drawChartFromRecords', parent: api, category: 'Data', paletteParams: ['chartId', 'chartType', 'tableName', 'columns'], params: ['"chartId"', '"bar"', '"mytable"', '["columnOne", "columnTwo"]'], dropdown: { 0: idDropdownWithSelector(".chart"), 1: ChartApi.getChartTypeDropdown } },
