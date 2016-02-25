@@ -18,24 +18,6 @@ class TablesApi < Sinatra::Base
   end
 
   TableType = CDO.use_dynamo_tables ? DynamoTable : Table
-  # TODO - get rid of
-  MetadataTableType = CDO.use_dynamo_tables ? TableMetadata::DynamoTableMetadata : TableMetadata::SqlTableMetadata
-
-  #
-  # POST /v3/(shared|user)-tables/<channel-id>?table_name=<name>
-  #
-  # Creates a new table
-  #
-  # post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id|
-  #   dont_cache
-  #   content_type :json
-  #
-  #   table_name = request.GET['table_name']
-  #   if table_name.empty?
-  #     halt 400, {}, "Requires table name"
-  #   end
-  #   TableType.new(channel_id, storage_id(endpoint), table_name).create_metadata
-  # end
 
   #
   # GET /v3/(shared|user)-tables/<channel-id>/<table-name>
@@ -122,8 +104,7 @@ class TablesApi < Sinatra::Base
     if column_name.empty?
       halt 400, {}, "New column name cannot be empty"
     end
-    # TODO
-    # MetadataTableType.new(channel_id, table_name, endpoint).add_column(column_name)
+    TableType.new(channel_id, storage_id(endpoint), table_name).add_column(column_name)
     no_content
   end
 
@@ -135,7 +116,7 @@ class TablesApi < Sinatra::Base
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
     dont_cache
     TableType.new(channel_id, storage_id(endpoint), table_name).delete_all
-    MetadataTableType.new(channel_id, table_name, endpoint).delete
+    #TODO - delete metadata
     no_content
   end
 
@@ -263,10 +244,6 @@ class TablesApi < Sinatra::Base
     records.each do |record|
       table.insert(record, request.ip)
     end
-
-    column_info = TableMetadata.generate_column_list(records)
-    # TODO - table type
-    MetadataTableType.new(channel_id, table_name, 'shared').set_column_info(column_info)
 
     redirect "#{table_url}"
   end

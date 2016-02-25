@@ -53,6 +53,7 @@ class Table
 
   def delete_all()
     items.delete
+    @metadata.delete if metadata
   end
 
   def rename_column(old_name, new_name, ip_address)
@@ -77,7 +78,19 @@ class Table
     end
   end
 
+  def add_column(column_name)
+    ensure_metadata()
+    column_list = JSON.parse(metadata.first[:column_list])
+    new_column_list = TableMetadata.add_column(column_list, column_name)
+    metadata.update({column_list: new_column_list.to_json})
+  end
+
   def delete_column(column_name, ip_address)
+    ensure_metadata()
+    column_list = JSON.parse(metadata.first[:column_list])
+    new_column_list = TableMetadata.remove_column(column_list, column_name)
+    metadata.update({column_list: new_column_list.to_json})
+
     items.each do |r|
       value = JSON.load(r[:value])
       value.delete(column_name)
