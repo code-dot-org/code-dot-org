@@ -33,19 +33,23 @@ These guidelines will give your facilitators the space they need to run a succes
 
 | |Requirements and Suggestions| 
 |:-----|:-----------|
-|Location|Keep these in mind:<br/><Br/> - Is the location central to the spread of teachers attending?<br/><Br/>- Catering: Are there several options nearby (within 20 miles)? Is there an internal or preferred caterer?<br/><br/> - Parking: Does it cost anything? Will teachers need passes? | 
-|Logistical Information|- Physical Address of Workshop<br/><br/>- Address to ship supplies (If needed)<br/><Br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps.<br/><br/> - Wifi strength and password. All participants will need to be on the network at the same time with no lag.<br/><br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.|  |
+|**Location**|**Consideration of these factors will help you find the ideal location for your workshop.**<br/><br/> -Central to attendees: Is the location central to the spread of teachers attending?<br/> <br/>-Catering: Are there several options to order from within 20 miles? Is there an internal or preferred caterer for the venue?<br/><br/> -Parking: Does it cost anything? Will teachers need parking passes? Is the lot close to an entrance?<br/><br/> Access: Will there be someone from the venue there to open the building, help with getting supplies to your room(s), and be available to help with technology as needed during the workshop?| 
 |Rooms & Seating| Reservation time: <br/>7:30am to 4:30pm.<Br/> Facilitators will arrive at 7:30 to set up, teachers will arrive at 8:00am for breakfast. Teachers will leave at 4:00pm, and facilitators will leave after cleaning up at 4:30pm.<br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We want to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with Blue painter's tape<br/><br/>Seating<br/>- Classroom style seating with tables that can seat pairs.| 
 |Technology <br/>Requirements| - Projector and Screen<br/> - Power outlets and Extention cords<br/> - Wifi that can support access by all participants<br/> |
-|Information for Facilitator One Pager|
+|Logistical Information|- Physical Address of Workshop<br/><br/>- Address to ship supplies (If needed)<br/><Br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps.<br/><br/> - Wifi strength and password. All participants will need to be on the network at the same time with no lag.<br/><br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.| 
+|Information for Facilitator One Pager| use facilitator one pager to fill in information.
 
 
 **Example Workshop Agenda**<br/> 
+
+- [Phase 1](/files/k-5_PD1_agenda.pdf)
+- [Phase 2](/files/k-5_PD2_agenda.pdf)
 
 **Supplies**<br/>
 
 - How to Order Supplies
 - Supplies List
+
 
 **Catering** <br/>
 
