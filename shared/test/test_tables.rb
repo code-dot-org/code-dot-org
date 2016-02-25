@@ -6,30 +6,6 @@ class TablesTest < Minitest::Test
   include SetupTest
 
   TableType = CDO.use_dynamo_tables ? DynamoTable : Table
-  MetadataTableType = CDO.use_dynamo_tables ? TableMetadata::DynamoTableMetadata : TableMetadata::SqlTableMetadata
-
-  # def test_foo
-  #   init_apis
-  #   create_channel
-  #
-  #   table = TableType.new(@channel_id, storage_id('shared'), 'my_table')
-  #   metadata = table.metadata
-  #
-  #   assert metadata.first.nil?
-  #
-  #   table.ensure_metadata
-  #
-  #   assert !metadata.first.nil?
-  #   assert_equal [], JSON.parse(metadata.first[:column_list])
-  #
-  #   _, decrypted_channel_id = storage_decrypt_channel_id(@channel_id)
-  #   PEGASUS_DB[:channel_table_metadata].where(app_id: decrypted_channel_id).limit(1).update(
-  #     column_list: ['foo'].to_json)
-  #
-  #   assert_equal ['foo'], JSON.parse(metadata.first[:column_list])
-  #
-  #   delete_channel
-  # end
 
   def test_create_read_update_delete
     init_apis
@@ -162,10 +138,10 @@ class TablesTest < Minitest::Test
     create_channel
 
     add_column('one')
-    assert_equal ['one'], JSON.parse(read_metadata["column_info"])
+    assert_equal ['one'], JSON.parse(read_metadata["column_list"])
 
     add_column('two')
-    assert_equal ['one', 'two'], JSON.parse(read_metadata["column_info"])
+    assert_equal ['one', 'two'], JSON.parse(read_metadata["column_list"])
 
     delete_channel
   end
@@ -241,11 +217,62 @@ class TablesTest < Minitest::Test
 
     assert_equal ['table1', 'table2'], TableType.table_names(decrypted_channel_id)
 
+    #TODO
+
     # Now add metadata for a table (that has no records)
-    MetadataTableType.new(@channel_id, 'new_table', 'shared').set_column_info([])
-    assert_equal ['table1', 'table2', 'new_table'], TableType.table_names(decrypted_channel_id)
+    # MetadataTableType.new(@channel_id, 'new_table', 'shared').set_column_list([])
+    # assert_equal ['table1', 'table2', 'new_table'], TableType.table_names(decrypted_channel_id)
 
     delete_channel
+  end
+
+  def test_metadata_generate_column_info
+    records = [
+      { "col1" => 1, "col2" => 2 }
+    ]
+    expected = ["col1", "col2"]
+    assert_equal expected, Table::Metadata.generate_column_list(records)
+
+    records = [
+      { "col1" => 1, "col2" => 2 },
+      { "col2" => 3, "col3" => 4 }
+    ]
+    expected = ["col1", "col2", "col3"]
+    assert_equal expected, Table::Metadata.generate_column_list(records)
+
+    records = []
+    expected = []
+    assert_equal expected, Table::Metadata.generate_column_list(records)
+  end
+
+  def test_metadata_remove_column
+    column_list = ["col1", "col2", "col3"]
+
+    assert_equal ["col1", "col2"], Table::Metadata.remove_column(column_list, "col3")
+    assert_equal ["col1", "col3"], Table::Metadata.remove_column(column_list, "col2")
+    assert_equal ["col2", "col3"], Table::Metadata.remove_column(column_list, "col1")
+
+    assert_raises 'No such column' do
+      Table::Metadata.remove_column(column_list, "col4")
+    end
+
+    assert_raises 'No such column' do
+      Table::Metadata.remove_column([], "col4")
+    end
+  end
+
+  def test_metadata_add_column
+    column_list = ["col1", "col2"]
+
+    assert_equal ["col1", "col2", "col3"], Table::Metadata.add_column(column_list, "col3")
+
+    assert_raises 'Column already exists' do
+      Table::Metadata.add_column(column_list, "col1")
+    end
+
+    assert_raises 'Column already exists' do
+      Table::Metadata.add_column(column_list, "col2")
+    end
   end
 
   # Methods below this line are test utilities, not actual tests

@@ -3,8 +3,35 @@
 #
 require 'csv'
 require 'set'
-require_relative './table_metadata'
 class Table
+  class Metadata
+    def self.generate_column_list(records)
+      return [] if records.nil?
+      # TODO - test for id
+      records.map(&:keys).flatten.uniq - ['id']
+    end
+
+    def self.remove_column(column_list, column_name)
+      raise 'No such column' unless column_list.include? column_name
+
+      new_list = column_list.dup
+      new_list.delete(column_name)
+      new_list
+    end
+
+    def self.add_column(column_list, column_name)
+      return [column_name] if column_list.nil?
+      raise 'Column already exists' if column_list.include? column_name
+      column_list.dup.push(column_name)
+    end
+
+    def self.rename_column(column_list, old_name, new_name)
+      raise 'Column doesnt exist' unless column_list.include? old_name
+      raise 'Column already exists' if column_list.include? new_name
+
+      column_list.map { |x| x == old_name ? new_name : x }
+    end
+  end
 
   class NotFound < Sinatra::NotFound
   end
@@ -36,7 +63,7 @@ class Table
       app_id: @channel_id,
       storage_id: @storage_id,
       table_name: @table_name,
-      column_list: TableMetadata.generate_column_list(to_a).to_json,
+      column_list: Table::Metadata.generate_column_list(to_a).to_json,
       updated_at: DateTime.now
     })
   end
@@ -59,7 +86,7 @@ class Table
   def rename_column(old_name, new_name, ip_address)
     ensure_metadata()
     column_list = JSON.parse(metadata.first[:column_list])
-    new_column_list = TableMetadata.rename_column(column_list, old_name, new_name)
+    new_column_list = Table::Metadata.rename_column(column_list, old_name, new_name)
     metadata.update({column_list: new_column_list.to_json})
 
     items.each do |r|
@@ -81,14 +108,14 @@ class Table
   def add_column(column_name)
     ensure_metadata()
     column_list = JSON.parse(metadata.first[:column_list])
-    new_column_list = TableMetadata.add_column(column_list, column_name)
+    new_column_list = Table::Metadata.add_column(column_list, column_name)
     metadata.update({column_list: new_column_list.to_json})
   end
 
   def delete_column(column_name, ip_address)
     ensure_metadata()
     column_list = JSON.parse(metadata.first[:column_list])
-    new_column_list = TableMetadata.remove_column(column_list, column_name)
+    new_column_list = Table::Metadata.remove_column(column_list, column_name)
     metadata.update({column_list: new_column_list.to_json})
 
     items.each do |r|
@@ -132,7 +159,7 @@ class Table
   def ensure_column_metadata(row)
     ensure_metadata
     column_list = JSON.parse(metadata.first[:column_list])
-    row_columns = TableMetadata.generate_column_list([row])
+    row_columns = Table::Metadata.generate_column_list([row])
     new_column_list = column_list.dup.concat(row_columns).uniq
 
     if column_list != new_column_list
