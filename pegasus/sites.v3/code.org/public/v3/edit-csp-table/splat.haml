@@ -47,13 +47,17 @@ angular: recordsApp
   services.factory('tablesService', ['$resource',
     function($resource) {
       var Table = $resource("#{api_base_url}", {}, {
-        'deleteColumn': {
+        deleteColumn: {
           method:'DELETE',
           url: "#{api_base_url}/column/:column_name"
         },
-        'renameColumn': {
+        renameColumn: {
           method:'POST',
           url: "#{api_base_url}/column/:column_name"
+        },
+        addColumn: {
+          method: 'POST',
+          url: "#{api_base_url}/column"
         }
       }, {});
       return Table;
@@ -100,6 +104,7 @@ angular: recordsApp
         return;
       }
       if (!columnExists($scope.newColumnName)) {
+        new tablesService().$addColumn({column_name: $scope.newColumnName});
         $scope.columns.push(makeColumn($scope.newColumnName));
       }
       $scope.newColumnName = '';
