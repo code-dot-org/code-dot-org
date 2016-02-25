@@ -996,7 +996,8 @@ Applab.renderVisualizationOverlay = function() {
 
   Applab.visualizationOverlay_.render(visualizationOverlay, {
     isApplabRunning: Applab.isRunning(),
-    scale: scaledWidth / unscaledWidth
+    scale: scaledWidth / unscaledWidth,
+    isInDesignMode: Applab.isInDesignMode()
   });
 };
 
