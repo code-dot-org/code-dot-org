@@ -282,7 +282,7 @@ class Artist < Blockly
     stripped_block['type'] = stripped_block['type'].chomp '_dropdown'
     STRIPPED_ATTRS.each {|attr| stripped_block.remove_attribute(attr)}
     stripped_block.content = stripped_block.content.strip
-    return stripped_block
+    return stripped_block.to_xml
   end
 
   # Add blocks to the toolbox that appear in the solution, but aren't already
@@ -295,7 +295,7 @@ class Artist < Blockly
 
       stripped_block = strip_block block
       next if toolbox_blocks.any? do |toolbox_block|
-        stripped_block.to_xml == (strip_block toolbox_block).to_xml
+        stripped_block == strip_block(toolbox_block)
       end
 
       # Solution block does not appear in the toolbox, add it
