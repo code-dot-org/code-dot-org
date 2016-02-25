@@ -111,17 +111,23 @@ class AdminReportsController < ApplicationController
 # noinspection RubyResolve
     require Rails.root.join('scripts/archive/ga_client/ga_client')
 
-    @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
-    @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
-
     @is_sampled = false
+    if params[:start_date].blank? || params[:end_date].blank?
+      @start_date = (DateTime.now - 7).strftime('%Y-%m-%d')
+      @end_date = DateTime.now.prev_day.strftime('%Y-%m-%d')
+
+      (render locals: {headers: [], data: []}) && return
+    end
+
+    @start_date = DateTime.parse(params[:start_date]).strftime('%Y-%m-%d')
+    @end_date = DateTime.parse(params[:end_date]).strftime('%Y-%m-%d')
 
     output_data = {}
     %w(Attempt Success).each do |key|
       dimension = 'ga:eventLabel'
       metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
       filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
-      if params[:filter]
+      if params[:filter].present?
         filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
       end
       ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
