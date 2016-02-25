@@ -2,8 +2,6 @@
 
 /* global Applab */
 
-var RecordListener = require('./RecordListener');
-
 /**
  * Namespace for app storage.
  */
@@ -244,35 +242,6 @@ var handleDeleteRecord = function(tableName, record, onComplete, onError) {
     return;
   }
   onComplete(true);
-};
-
-var recordListener = new RecordListener();
-
-/**
- * This is a partial implementation of onRecordEvent in the following ways:
- * 1. it polls instead of properly listening for notifications when data changes;
- * 2. it only issues callbacks when records are created (not updated or deleted);
- * 3. it assumes that record ids are strictly increasing. This is not currently true but
- *    would become so if we decide to implement
- *    https://www.pivotaltracker.com/story/show/110169770
- * @param tableName Table to listen to.
- * @param onRecord Callback to call when a record is added to the table.
- * @param onError Callback to call with an error to show to the user.
- */
-AppStorage.onRecordEvent = function(tableName, onRecord, onError) {
-  if (!tableName) {
-    onError('Error listening for record events: missing required parameter "tableName"');
-    return;
-  }
-
-  if (!recordListener.addListener(tableName, onRecord)) {
-    onError('You are already listening for events on table "' + tableName + '". ' +
-      'only one event handler can be registered per table.');
-  }
-};
-
-AppStorage.resetRecordListener = function () {
-  recordListener.reset();
 };
 
 /**
