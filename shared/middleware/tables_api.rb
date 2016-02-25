@@ -3,7 +3,6 @@ require 'cdo/db'
 require 'cdo/rack/request'
 require 'csv'
 require_relative './helpers/table_coerce'
-require_relative './helpers/table_metadata'
 
 class TablesApi < Sinatra::Base
 
