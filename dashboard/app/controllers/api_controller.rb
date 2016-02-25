@@ -84,6 +84,11 @@ class ApiController < ApplicationController
     end
   end
 
+  # Return the JSON details of the users progress on a particular script
+  # level and marks the user as having started that level. (Because of the
+  # later side effect, this should only be called when the user sees the level,
+  # to avoid spurious activity monitor warnings about the level being started
+  # but not completed.)
   def user_progress_for_stage
     response = {}
 
