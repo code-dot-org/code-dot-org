@@ -113,16 +113,16 @@ var TableHandler = function (tableName, callback) {
  */
 TableHandler.prototype.scheduleNextFetch_ = function () {
   this.timeoutId_ = setTimeout(function recordListener() {
-    this.fetchNewRecords_();
+    this.fetchRecords_();
   }.bind(this), RECORD_INTERVAL);
 };
 
 /**
  * @private
  */
-TableHandler.prototype.fetchNewRecords_ = function () {
+TableHandler.prototype.fetchRecords_ = function () {
   var req = new XMLHttpRequest();
-  req.onreadystatechange = this.reportRecords_.bind(this, req);
+  req.onreadystatechange = this.handleFetchRecords_.bind(this, req);
   var url = '/v3/shared-tables/' + Applab.channelId + '/' + this.tableName_;
   req.open('GET', url, true);
   req.send();
@@ -132,7 +132,7 @@ TableHandler.prototype.fetchNewRecords_ = function () {
  * @param {XMLHttpRequest} req
  * @private
  */
-TableHandler.prototype.reportRecords_ = function (req) {
+TableHandler.prototype.handleFetchRecords_ = function (req) {
   var done = XMLHttpRequest.DONE || 4;
   if (req.readyState !== done) {
     return;
@@ -165,20 +165,43 @@ TableHandler.prototype.reportRecords_ = function (req) {
 
   var callback = this.callback_;
   var records = JSON.parse(req.responseText);
-  var oldIdToJsonMap = this.idToJsonMap_;
 
-  // Look for 'create' and 'update' events, and build the new map of this table.
-  var newIdToJsonMap = {};
+  // Update the IdToJsonMap before calling the callback. This is so that in the future
+  // readRecords can share this cache of records with the guarantee that calls to
+  // readRecords made during the callback will return a up-to-date view of the data.
+  var oldIdToJsonMap = this.idToJsonMap_;
+  var newIdToJsonMap = TableHandler.buildIdToJsonMap_(records);
+  this.idToJsonMap_ = newIdToJsonMap;
+
+  TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
+};
+
+/**
+ * Builds an IdToJsonMap based on the array of records.
+ * @param {Array.<Object>} records Array of records.
+ * @returns {IdToJsonMap}
+ * @private
+ */
+TableHandler.buildIdToJsonMap_ = function(records) {
+  var idToJsonMap = {};
+  for (var i = 0; i < records.length; i++) {
+    var record = records[i];
+    idToJsonMap[record.id] = JSON.stringify(record);
+  }
+  return idToJsonMap;
+};
+
+TableHandler.reportEvents_ = function(records, oldIdToJsonMap, newIdToJsonMap, callback) {
+  // Look for 'create' and 'update' events.
   for (var i = 0; i < records.length; i++) {
     var record = records[i];
     var oldJson = oldIdToJsonMap[record.id];
-    var newJson = JSON.stringify(record);
+    var newJson = newIdToJsonMap[record.id];
     if (!oldJson) {
       callback(record, EventType.CREATE);
     } else if (oldJson !== newJson) {
       callback(record, EventType.UPDATE);
     }
-    newIdToJsonMap[record.id] = newJson;
   }
 
   // Look for 'delete' events.
@@ -188,9 +211,6 @@ TableHandler.prototype.reportRecords_ = function (req) {
       callback(deletedRecord, EventType.DELETE);
     }
   }
-
-  // Update our map of this table.
-  this.idToJsonMap_ = newIdToJsonMap;
 };
 
 TableHandler.prototype.reset = function() {
@@ -202,4 +222,8 @@ TableHandler.prototype.reset = function() {
   this.timeoutId_ = null;
   this.callback_ = null;
   this.idToJsonMap_ = null;
+};
+
+RecordListener.__TestInterface = {
+  TableHandler: TableHandler
 };
