@@ -24,12 +24,12 @@ module TableMetadata
     column_list.dup.push(column_name)
   end
 
-  # def TableMetadata.rename_column(column_list, old_name, new_name)
-  #   raise 'Column doesnt exist' unless column_list.include? old_name
-  #   raise 'Column already exists' if column_list.include? new_name
-  #
-  #   column_list.map { |x| x == old_name ? new_name : x }
-  # end
+  def TableMetadata.rename_column(column_list, old_name, new_name)
+    raise 'Column doesnt exist' unless column_list.include? old_name
+    raise 'Column already exists' if column_list.include? new_name
+
+    column_list.map { |x| x == old_name ? new_name : x }
+  end
 
   class SqlTableMetadata
 

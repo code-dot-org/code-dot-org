@@ -109,7 +109,6 @@ class TablesApi < Sinatra::Base
       halt 400, {}, "New column name cannot be empty"
     end
     TableType.new(channel_id, storage_id(endpoint), table_name).rename_column(column_name, new_name, request.ip)
-    # TODO - update metadata
     no_content
   end
 
@@ -123,7 +122,8 @@ class TablesApi < Sinatra::Base
     if column_name.empty?
       halt 400, {}, "New column name cannot be empty"
     end
-    MetadataTableType.new(channel_id, table_name, endpoint).add_column(column_name)
+    # TODO
+    # MetadataTableType.new(channel_id, table_name, endpoint).add_column(column_name)
     no_content
   end
 
