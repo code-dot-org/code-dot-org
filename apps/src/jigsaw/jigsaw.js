@@ -9,6 +9,7 @@
 
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
+var AppView = require('../templates/AppView.jsx');
 var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 
@@ -121,15 +122,7 @@ Jigsaw.init = function(config) {
   }
   Blockly.SNAP_RADIUS = level.snapRadius || 90;
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
-      editCode: level.editCode,
-      blockCounterClass: 'block-counter-default'
-    }
-  });
+  config.html = undefined;
 
   // TODO (br-pair) : I think this is something that's happening in all apps?
   config.loadAudio = function() {
@@ -157,20 +150,35 @@ Jigsaw.init = function(config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  studioApp.init(config);
+  React.render(React.createElement(AppView, {
+    renderCodeApp: function () {
+      return page({
+        assetUrl: studioApp.assetUrl,
+        data: {
+          localeDirection: studioApp.localeDirection(),
+          controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
+          editCode: level.editCode,
+          blockCounterClass: 'block-counter-default'
+        }
+      });
+    },
+    onMount: function () {
+      studioApp.init(config);
 
-  document.getElementById('runButton').style.display = 'none';
-  Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function(evt) {
-    checkForSuccess();
-  });
+      document.getElementById('runButton').style.display = 'none';
+      Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function(evt) {
+        checkForSuccess();
+      });
 
-  // Only used by level1, in which the success criteria is clicking on the block
-  var block1 = document.querySelectorAll("[block-id='1']")[0];
-  if (block1) {
-    dom.addMouseDownTouchEvent(block1, function () {
-      Jigsaw.block1Clicked = true;
-    });
-  }
+      // Only used by level1, in which the success criteria is clicking on the block
+      var block1 = document.querySelectorAll("[block-id='1']")[0];
+      if (block1) {
+        dom.addMouseDownTouchEvent(block1, function () {
+          Jigsaw.block1Clicked = true;
+        });
+      }
+    }
+  }), document.getElementById(config.containerId));
 };
 
 function checkForSuccess() {
