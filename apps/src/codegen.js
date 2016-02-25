@@ -358,7 +358,7 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
  * from native to interpreter before calling the supplied callback.
  *
  * @param {Object} opts Options block with interpreter and maxDepth provided
- * @param {function} callback The interpreter supplied callback function
+ * @param {Function} callback The interpreter supplied callback function
  */
 var createNativeCallbackForAsyncFunction = function (opts, callback) {
   return function (nativeValue) {
@@ -376,32 +376,41 @@ var createNativeCallbackForAsyncFunction = function (opts, callback) {
  * invoked by a special native function that can execute these callbacks inline
  * on the interpreter stack.
  *
- * @param {Object} opts Options block with interpreter and maxDepth provided
- * @param {function} intFunc The interpreter supplied callback function
+ * @param {!Object} opts Options block
+ * @param {!Interpreter} opts.interpreter Interpreter instance
+ * @param {number} [opts.maxDepth] Maximum depth to marshal objects
+ * @param {boolean} [opts.dontMarshal] Do not marshal parameters if true
+ * @param {Object} [opts.callbackState] callback state object, which will
+          hold the unmarshaled return value as a 'value' property later.
+ * @param {Function} intFunc The interpreter supplied callback function
  */
-var createNativeInterpreterCallback = function (opts, intFunc) {
+exports.createNativeInterpreterCallback = function (opts, intFunc) {
   return function (nativeValue) {
     var args = Array.prototype.slice.call(arguments);
-    var intArgs = [];
-    for (var i = 0; i < args.length; i++) {
-      intArgs[i] = exports.marshalNativeToInterpreter(
-          opts.interpreter,
-          args[i],
-          null,
-          opts.maxDepth);
+    var intArgs;
+    if (opts.dontMarshal) {
+      intArgs = args;
+    } else {
+      for (var i = 0; i < args.length; i++) {
+        intArgs[i] = exports.marshalNativeToInterpreter(
+            opts.interpreter,
+            args[i],
+            null,
+            opts.maxDepth);
+      }
     }
     // Shift a CallExpression node on the stack that already has its func_,
     // arguments, and other state populated:
-    var state = {
-      node: {
-        type: 'CallExpression',
-        arguments: intArgs /* this just needs to be array of the same size */
-        },
-      doneCallee_: true,
-      func_: intFunc,
-      arguments: intArgs,
-      n_: intArgs.length
+    var state = opts.callbackState || {};
+    state.node = {
+      type: 'CallExpression',
+      arguments: intArgs /* this just needs to be an array of the same size */
     };
+    state.doneCallee_ = true;
+    state.func_ = intFunc;
+    state.arguments = intArgs;
+    state.n_ = intArgs.length;
+
     opts.interpreter.stateStack.unshift(state);
   };
 };
@@ -432,7 +441,7 @@ exports.makeNativeMemberFunction = function (opts) {
           // A select class of native functions is aware of the interpreter and
           // capable of calling the interpreter on the stack immediately. We
           // marshal these differently:
-          nativeArgs[i] = createNativeInterpreterCallback(opts, arguments[i]);
+          nativeArgs[i] = exports.createNativeInterpreterCallback(opts, arguments[i]);
         } else {
           nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
         }
