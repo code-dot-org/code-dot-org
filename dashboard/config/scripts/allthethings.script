@@ -101,6 +101,7 @@ level 'allthethings design mode elements'
 level 'allthethings_template_backed1'
 level 'allthethings_template_backed2'
 level 'allthethings_moviebot'
+level 'Applab allthethings onRecordEvent'
 
 stage 'Online PD'
 level 'PDK5 Intro C'
