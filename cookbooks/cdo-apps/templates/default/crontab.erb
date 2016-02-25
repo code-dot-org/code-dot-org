@@ -75,6 +75,7 @@ if node['cdo-apps']['daemon']
   cronjob at:'45 5 * * *', do:deploy_dir('bin', 'cron', 'admin_stats')
   cronjob at:'40 4 * * *', do:deploy_dir('bin', 'cron', 'funometer')
   cronjob at: '30 6 * * *', do: deploy_dir('bin', 'cron', 'admin_progress')
+  cronjob at: '10 7 * * *', do: deploy_dir('bin', 'cron', 'retention_stats')
 end
 
 # cronjobs that run on all instances in all environments go here:

@@ -32,7 +32,7 @@ clientState.reset = function() {
 };
 
 /**
- * Get the URL querystring params
+ * Gets the URL querystring params.
  * @param name {string=} Optionally pull a specific param.
  * @return {object|string} Hash of params, or param string if `name` is specified.
  */

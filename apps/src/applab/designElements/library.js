@@ -86,7 +86,7 @@ module.exports = {
       throw new Error('Unknown elementType: ' + elementType);
     }
 
-    var element = elementClass.create();
+    var element = elementClass.create(withoutId);
 
     // Stuff that's common across all elements
     if (!withoutId) {

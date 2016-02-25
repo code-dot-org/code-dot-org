@@ -14,11 +14,6 @@ Lint/AmbiguousOperator:
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
-# Offense count: 5
-# Cop supports --auto-correct.
-Lint/DeprecatedClassMethods:
-  Enabled: false
-
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: AlignWith, SupportedStyles, AutoCorrect.
@@ -52,12 +47,6 @@ Lint/ShadowingOuterLocalVariable:
 
 # Offense count: 1
 Lint/UnderscorePrefixedVariableName:
-  Enabled: false
-
-# Offense count: 84
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoreEmptyBlocks.
-Lint/UnusedBlockArgument:
   Enabled: false
 
 # Offense count: 33
@@ -308,10 +297,6 @@ Style/HashSyntax:
 Style/IdenticalConditionalBranches:
   Enabled: false
 
-# Offense count: 4
-Style/IfInsideElse:
-  Enabled: false
-
 # Offense count: 64
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
@@ -405,12 +390,6 @@ Style/NestedParenthesizedCalls:
 # Configuration parameters: EnforcedStyle, MinBodyLength, SupportedStyles.
 # SupportedStyles: skip_modifier_ifs, always
 Style/Next:
-  Enabled: false
-
-# Offense count: 4
-# Cop supports --auto-correct.
-# Configuration parameters: IncludeSemanticChanges.
-Style/NonNilCheck:
   Enabled: false
 
 # Offense count: 10
@@ -589,19 +568,9 @@ Style/UnneededPercentQ:
 Style/VariableName:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: MaxLineLength.
-Style/WhileUntilModifier:
-  Enabled: false
-
 # Offense count: 71
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, MinSize, WordRegex.
 # SupportedStyles: percent, brackets
 Style/WordArray:
-  Enabled: false
-
-# Offense count: 7
-Style/ZeroLengthPredicate:
   Enabled: false
