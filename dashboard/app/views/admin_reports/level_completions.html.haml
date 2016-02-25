@@ -18,10 +18,11 @@
 
 %br
 
-%h2
-  #samplingMessage{style: 'color: red; display: none'} CAUTION: Data is sampled.
-  #{link_to 'Download CSV', {:format => :csv }}
-#completionTable
+- if params[:start_date] && params[:end_date]
+  %h2
+    #samplingMessage{style: 'color: red; display: none'} CAUTION: Data is sampled.
+    #{link_to 'Download CSV', {:format => :csv}}
+  #completionTable
 
 :css
   .htNumeric { font-family: monospace; }
