@@ -1,7 +1,5 @@
 DEFAULT_WAIT_TIMEOUT = 2 * 60
-
-DEFAULT_WAIT_TIMEOUT = 2.minutes
-SHORT_WAIT_TIMEOUT = 30.seconds
+SHORT_WAIT_TIMEOUT = 30
 
 def wait_with_timeout(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout)
