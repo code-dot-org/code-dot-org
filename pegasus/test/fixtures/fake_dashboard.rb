@@ -102,6 +102,6 @@ module FakeDashboard
   # Remove the sqlite3 database file from the filesystem.
   # Should be called after all tests have run; possibly from a post-test task
   def self.destroy_fake_dashboard_db
-    File.delete(DATABASE_FILENAME) if File.exists?(DATABASE_FILENAME)
+    File.delete(DATABASE_FILENAME) if File.exist?(DATABASE_FILENAME)
   end
 end
