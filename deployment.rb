@@ -218,7 +218,7 @@ class CDOImpl < OpenStruct
   end
 
   def slog(params)
-    return unless slog_token && Gatekeeper.allows('activityMonitor', default: true)
+    return unless slog_token && Gatekeeper.allows('slogging', default: true)
     @slog ||= Slog::Writer.new(secret: slog_token)
     @slog.write params
   end
