@@ -56,6 +56,11 @@ class Table
   end
 
   def rename_column(old_name, new_name, ip_address)
+    ensure_metadata()
+    column_list = JSON.parse(metadata.first[:column_list])
+    new_column_list = TableMetadata.rename_column(column_list, old_name, new_name)
+    metadata.update({column_list: new_column_list.to_json})
+
     items.each do |r|
       # We want to preserve the order of the columns so creating
       # a new hash is required.
@@ -88,7 +93,6 @@ class Table
 
   def insert(value, ip_address)
     raise ArgumentError, 'Value is not a hash' unless value.is_a? Hash
-    ensure_column_metadata(value)
 
     row = {
       app_id: @channel_id,
@@ -107,6 +111,7 @@ class Table
       retry if (tries += 1) < 5
       raise
     end
+    ensure_column_metadata(value)
 
     JSON.load(row[:value]).merge('id' => row[:row_id])
   end
@@ -135,6 +140,8 @@ class Table
     }
     update_count = items.where(row_id: id).update(row)
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" if update_count == 0
+
+    ensure_column_metadata(value)
 
     JSON.load(row[:value]).merge('id' => id)
   end
@@ -353,6 +360,8 @@ class DynamoTable
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException
       raise NotFound, "row `#{id}` not found in `#{@table_name}` table"
     end
+
+    new
 
     value.merge('id' => id)
   end
