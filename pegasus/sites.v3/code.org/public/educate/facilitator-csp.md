@@ -10,7 +10,7 @@ The ideal CSP Facilitator is an enthusiastic supporter of computer science educa
 <br/>
 <br/>
 
-[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
+[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
 <br/>
 <br/>
 
@@ -23,13 +23,13 @@ For each workshop you host, CSP Facilitators will receive compensation for facil
 
 
 ## How to become a CSP Facilitator?
-Become a CSP Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (New Orleans, LA) and attend a 5 day training workshop with teachers enrolled in Code.org’s CSP Professional Learning Program to to observe, support and reflect on sessions led by master CSP Facilitators. At the Summit and teacher training, Code.org will prepare facilitators to deliver 4 in-person workshops to local high school teachers enrolled in Code.org’s CSP Professional Learning Program throughout the 2016-2017 school year. 
+Become a CSP Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (Nashville, TN) and attend a 5 day training workshop with teachers enrolled in Code.org’s CSP Professional Learning Program to to observe, support and reflect on sessions led by master CSP Facilitators. At the Summit and teacher training, Code.org will prepare facilitators to deliver 4 in-person workshops to local high school teachers enrolled in Code.org’s CSP Professional Learning Program throughout the 2016-2017 school year. 
 
 Before applying please carefully review the the [criteria, requirements and commitments](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub) for the CSP Facilitator program.
 <br/>
 <br/>
 
-[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
+[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
 <br/>
 <br/>
 

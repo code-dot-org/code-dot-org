@@ -42,7 +42,6 @@ Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as att
   Then I wait to see a dialog titled "Puzzle 6 of 20"
   And I debug cookies
   And I close the dialog
-  Then I wait until element "#runButton" is visible
   And I press "runButton"
   Then I wait to see ".modal"
   Then I close the dialog
@@ -66,7 +65,6 @@ Scenario: Progress on the server that is not on the client
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
   And I verify progress in the header of the current page is "not_tried" for level 20
   And I close the dialog
-  And I wait until element "#runButton" is visible
   And I press "runButton"
   And I wait to see ".modal"
   Then I am on "http://studio.code.org/hoc/reset"

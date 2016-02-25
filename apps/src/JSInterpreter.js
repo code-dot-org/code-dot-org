@@ -45,6 +45,7 @@ var JSInterpreter = module.exports = function (options) {
   this.paused = false;
   this.yieldExecution = false;
   this.startedHandlingEvents = false;
+  this.executionError = null;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
   this.executeLoopDepth = 0;
@@ -114,10 +115,17 @@ JSInterpreter.prototype.parse = function (options) {
     // Store globalScope on JSInterpreter
     self.globalScope = scope;
     // Override Interpreter's get/set Property functions with JSInterpreter
-    self.baseGetProperty = interpreter.getProperty;
-    interpreter.getProperty = self.getProperty.bind(self);
+    interpreter.getProperty = self.getProperty.bind(
+        self,
+        interpreter,
+        interpreter.getProperty);
+    // Store this for later because we need to bypass our overriden function
+    // in createGlobalProperty()
     self.baseSetProperty = interpreter.setProperty;
-    interpreter.setProperty = self.setProperty.bind(self);
+    interpreter.setProperty = self.setProperty.bind(
+        self,
+        interpreter,
+        interpreter.setProperty);
     codegen.initJSInterpreter(
         interpreter,
         options.blocks,
@@ -155,7 +163,8 @@ JSInterpreter.prototype.parse = function (options) {
     /* jshint nonew:true */
   }
   catch(err) {
-    this.handleError(err);
+    this.executionError = err;
+    this.handleError();
   }
 
 };
@@ -260,8 +269,8 @@ function safeStepInterpreter(jsi) {
 /**
  * Find a bpRow from the "stopped at breakpoint" array by matching the scope
  *
- * @param scope scope to match from the list
- * @param row (Optional) row to match from the list - in addition to scope
+ * @param {!Object} scope to match from the list
+ * @param {number} [row] to match from the list - in addition to scope
  */
 JSInterpreter.prototype.findStoppedAtBreakpointRow = function (scope, row) {
   for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
@@ -275,25 +284,26 @@ JSInterpreter.prototype.findStoppedAtBreakpointRow = function (scope, row) {
 };
 
 /**
- * Replace or remove a bpRow from the "stopped at breakpoint" array by matching
- * the scope
+ * Replace a bpRow from the "stopped at breakpoint" array by matching
+ * the scope.
  *
- * @param scope scope to match from the list
- * @param row row to replace in the list. If -1, delete that bpRow
+ * If no rows are found matching the given scope, a new one is introduced.
+ *
+ * @param {!Object} scope to match from the list
+ * @param {!number} row to replace in the list.
+ * @throws {TypeError} when given an invalid row.
  */
 JSInterpreter.prototype.replaceStoppedAtBreakpointRowForScope = function (scope, row) {
+  if (typeof row !== 'number' || row < 0) {
+    throw new TypeError('Row ' + row + ' is not a valid row in user code.');
+  }
+
   for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
     var bpRow = this.stoppedAtBreakpointRows[i];
     if (bpRow.scope === scope) {
-      if (row === -1) {
-        // Remove from array
-        this.stoppedAtBreakpointRows.splice(i, 1);
-        return;
-      } else {
-        // Update row number
-        bpRow.row = row;
-        return;
-      }
+      // Update row number
+      bpRow.row = row;
+      return;
     }
   }
   // Scope not found, insert new object in array:
@@ -301,6 +311,36 @@ JSInterpreter.prototype.replaceStoppedAtBreakpointRowForScope = function (scope,
     row: row,
     scope: scope
   });
+};
+
+/**
+ * Remove a bpRow from the "stopped at breakpoint" array by matching
+ * the scope.
+ *
+ * Does nothing if no rows are found matching the given scope.
+ *
+ * @param {!Object} scope to match from the list
+ */
+JSInterpreter.prototype.removeStoppedAtBreakpointRowForScope = function (scope) {
+  for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
+    var bpRow = this.stoppedAtBreakpointRows[i];
+    if (bpRow.scope === scope) {
+        // Remove from array
+        this.stoppedAtBreakpointRows.splice(i, 1);
+        return;
+    }
+  }
+};
+
+/**
+ * Determines if the program is done executing.
+ *
+ * @return {boolean} true if program is complete (or an error has occurred).
+ */
+JSInterpreter.prototype.isProgramDone = function () {
+  return this.executionError ||
+      !this.interpreter ||
+      !this.interpreter.stateStack.length;
 };
 
 /**
@@ -429,15 +469,15 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // If we've moved past the place of the last breakpoint hit without being
     // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
     if (inUserCode && !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)) {
-      this.replaceStoppedAtBreakpointRowForScope(currentScope, -1);
+      this.removeStoppedAtBreakpointRowForScope(currentScope);
     }
     // If we're unwinding, continue to update the stoppedAtBreakpoint properties
     // to ensure that we have the right properties stored when the unwind completes:
     if (inUserCode && unwindingAfterStep) {
       this.replaceStoppedAtBreakpointRowForScope(currentScope, userCodeRow);
     }
-    var err = safeStepInterpreter(this);
-    if (!err) {
+    this.executionError = safeStepInterpreter(this);
+    if (!this.executionError && this.interpreter.stateStack.length) {
       var state = this.interpreter.stateStack[0], nodeType = state.node.type;
       this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
       if (inUserCode) {
@@ -517,7 +557,9 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         }
       }
     } else {
-      this.handleError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      if (this.executionError) {
+        this.handleError(inUserCode ? (userCodeRow + 1) : undefined);
+      }
       this.executeLoopDepth--;
       return;
     }
@@ -532,19 +574,22 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
 
 /**
  * Helper that wraps some error preprocessing before we notify observers that
- * an execution error has occurred.
- * @param {!Error} err
+ * an execution error has occurred. Operates on the current error that is
+ * already saved as this.executionError
+ *
  * @param {number} [lineNumber]
  */
-JSInterpreter.prototype.handleError = function (err, lineNumber) {
-  if (!lineNumber && err instanceof SyntaxError) {
+JSInterpreter.prototype.handleError = function (lineNumber) {
+  if (!lineNumber && this.executionError instanceof SyntaxError) {
     // syntax errors came before execution (during parsing), so we need
     // to determine the proper line number by looking at the exception
-    lineNumber = err.loc.line;
+    lineNumber = this.executionError.loc.line;
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
-    codegen.selectEditorRowColError(this.studioApp.editor, lineNumber - 1,
-        err.loc.column);
+    codegen.selectEditorRowColError(
+        this.studioApp.editor,
+        lineNumber - 1,
+        this.executionError.loc.column);
   }
 
   // Select code that just executed:
@@ -554,7 +599,7 @@ JSInterpreter.prototype.handleError = function (err, lineNumber) {
     lineNumber = 1 + this.getNearestUserCodeLine();
   }
 
-  this.onExecutionError.notifyObservers(err, lineNumber);
+  this.onExecutionError.notifyObservers(this.executionError, lineNumber);
 };
 
 /**
@@ -571,11 +616,17 @@ JSInterpreter.prototype.createPrimitive = function (data) {
  * Wrapper to Interpreter's getProperty (extended for custom marshaling)
  *
  * Fetch a property value from a data object.
+ * @param {!Object} interpeter Interpreter instance.
+ * @param {!Function} baseGetProperty Original getProperty() implementation.
  * @param {!Object} obj Data object.
  * @param {*} name Name of property.
  * @return {!Object} Property value (may be UNDEFINED).
  */
-JSInterpreter.prototype.getProperty = function (obj, name) {
+JSInterpreter.prototype.getProperty = function (
+    interpreter,
+    baseGetProperty,
+    obj,
+    name) {
   name = name.toString();
   var nativeParent;
   if (obj.isCustomMarshal ||
@@ -590,12 +641,12 @@ JSInterpreter.prototype.getProperty = function (obj, name) {
     var type = typeof value;
     if (type === 'number' || type === 'boolean' || type === 'string' ||
         type === 'undefined' || value === null) {
-      return this.interpreter.createPrimitive(value);
+      return interpreter.createPrimitive(value);
     } else {
-      return codegen.marshalNativeToInterpreter(this.interpreter, value, obj.data);
+      return codegen.marshalNativeToInterpreter(interpreter, value, obj.data);
     }
   } else {
-    return this.baseGetProperty.call(this.interpreter, obj, name);
+    return baseGetProperty.call(interpreter, obj, name);
   }
 };
 
@@ -603,24 +654,32 @@ JSInterpreter.prototype.getProperty = function (obj, name) {
  * Wrapper to Interpreter's setProperty (extended for custom marshaling)
  *
  * Set a property value on a data object.
+ * @param {!Object} interpeter Interpreter instance.
+ * @param {!Function} baseSetProperty Original setProperty() implementation.
  * @param {!Object} obj Data object.
  * @param {*} name Name of property.
  * @param {*} value New property value.
  * @param {boolean} opt_fixed Unchangeable property if true.
  * @param {boolean} opt_nonenum Non-enumerable property if true.
  */
-JSInterpreter.prototype.setProperty = function(obj, name, value,
-                                               opt_fixed, opt_nonenum) {
+JSInterpreter.prototype.setProperty = function(
+    interpreter,
+    baseSetProperty,
+    obj,
+    name,
+    value,
+    opt_fixed,
+    opt_nonenum) {
   name = name.toString();
   var nativeParent;
   if (obj.isCustomMarshal) {
-    obj.data[name] = codegen.marshalInterpreterToNative(this.interpreter, value);
+    obj.data[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else if (obj === this.globalScope &&
       (!!(nativeParent = this.customMarshalGlobalProperties[name]))) {
-    nativeParent[name] = codegen.marshalInterpreterToNative(this.interpreter, value);
+    nativeParent[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else {
-    return this.baseSetProperty.call(
-        this.interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    return baseSetProperty.call(
+        interpreter, obj, name, value, opt_fixed, opt_nonenum);
   }
 };
 
@@ -793,6 +852,13 @@ JSInterpreter.prototype.getLocalFunctionNames = function (scope) {
 };
 
 /**
+ * Returns the current interpreter state object.
+ */
+JSInterpreter.prototype.getCurrentState = function () {
+  return this.interpreter && this.interpreter.stateStack[0];
+};
+
+/**
  * Evaluate an expression in the interpreter's current scope, and return the
  * value of the evaluated expression.
  * @param {!string} expression
@@ -818,6 +884,16 @@ JSInterpreter.prototype.evalInCurrentScope = function (expression) {
     'UNDEFINED'].forEach(function (prop) {
     evalInterpreter[prop] = this.interpreter[prop];
   }, this);
+
+  // Patch getProperty and setProperty to enable custom marshalling
+  evalInterpreter.getProperty = this.getProperty.bind(
+      this,
+      evalInterpreter,
+      evalInterpreter.getProperty);
+  evalInterpreter.setProperty = this.setProperty.bind(
+      this,
+      evalInterpreter,
+      evalInterpreter.setProperty);
 
   // run() may throw if there's a problem in the expression
   evalInterpreter.run();

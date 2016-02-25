@@ -3,7 +3,7 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var DesignWorkspace = require('./DesignWorkspace.jsx');
-var DesignToggleRow = require('./DesignToggleRow.jsx');
+var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var showAssetManager = require('../assetManagement/show');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');
@@ -56,7 +56,7 @@ designMode.onDesignModeVizClick = function (event) {
  * @returns {HTMLElement} The currently visible screen element.
  */
 designMode.activeScreen = function () {
-  return $('#designModeViz .screen').filter(function () {
+  return elementUtils.getScreens().filter(function () {
     return this.style.display !== 'none';
   }).first()[0];
 };
@@ -460,6 +460,7 @@ designMode.onDepthChange = function (element, depthDirection) {
 designMode.onInsertEvent = function(code) {
   Applab.appendToEditor(code);
   $('#codeModeButton').click(); // TODO(dave): reactify / extract toggle state
+  Applab.scrollToEnd();
 };
 
 /**/
@@ -478,7 +479,7 @@ designMode.serializeToLevelHtml = function () {
     elementUtils.removeIdPrefix(this);
   });
 
-  var serialization = new XMLSerializer().serializeToString(designModeVizClone[0]);
+  var serialization = designModeVizClone[0] ? designModeVizClone[0].outerHTML : '';
   if (madeUndraggable) {
     makeDraggable(designModeViz.children().children());
   }
@@ -808,7 +809,7 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configureDesignToggleRow = function () {
+designMode.configurePlaySpaceHeader = function () {
   var designToggleRow = document.getElementById('designToggleRow');
   if (!designToggleRow) {
     return;
@@ -836,7 +837,7 @@ designMode.createScreen = function () {
 designMode.changeScreen = function (screenId) {
   currentScreenId = screenId;
   var screenIds = [];
-  $('#designModeViz .screen').each(function () {
+  elementUtils.getScreens().each(function () {
     screenIds.push(elementUtils.getId(this));
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
@@ -851,19 +852,19 @@ designMode.getCurrentScreenId = function() {
 };
 
 designMode.renderToggleRow = function (screenIds) {
-  screenIds = screenIds || $('#designModeViz .screen').get().map(function (screen) {
+  screenIds = screenIds || elementUtils.getScreens().get().map(function (screen) {
     return elementUtils.getId(screen);
   });
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
     React.render(
-      React.createElement(DesignToggleRow, {
+      React.createElement(PlaySpaceHeader, {
         hideToggle: Applab.hideDesignModeToggle(),
         hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),
         initialScreen: currentScreenId,
-        screens: screenIds,
+        screenIds: screenIds,
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
         onViewDataButton: Applab.onViewData,
@@ -882,10 +883,10 @@ designMode.renderToggleRow = function (screenIds) {
 designMode.loadDefaultScreen = function () {
   var defaultScreen;
 
-  if ($('#designModeViz .screen').length === 0) {
+  if (elementUtils.getScreens().length === 0) {
     defaultScreen = designMode.createScreen();
   } else {
-    defaultScreen = elementUtils.getId($('#designModeViz .screen')[0]);
+    defaultScreen = elementUtils.getId(elementUtils.getScreens()[0]);
   }
   designMode.changeScreen(defaultScreen);
 };

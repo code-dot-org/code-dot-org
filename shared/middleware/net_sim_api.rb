@@ -159,7 +159,7 @@ class NetSimApi < Sinatra::Base
   #         current user is the teacher who owns the shard indicated by the
   #         shard_id parameter.
   def allowed_to_delete_shard?(shard_id)
-    admin? or owns_shard? shard_id
+    admin? || owns_shard?(shard_id)
   end
 
   # @param [String] shard_id - The shard we're checking ownership for.
@@ -309,7 +309,7 @@ class NetSimApi < Sinatra::Base
   def validate_wire(shard_id, wire)
     # Check for another wire between the same nodes in the same direction.
     wire_already_exists = get_table(shard_id, TABLE_NAMES[:wire]).to_a.any? do |stored_wire|
-      stored_wire['localNodeID'] == wire['localNodeID'] and stored_wire['remoteNodeID'] == wire['remoteNodeID']
+      stored_wire['localNodeID'] == wire['localNodeID'] && stored_wire['remoteNodeID'] == wire['remoteNodeID']
     end
     return VALIDATION_ERRORS[:conflict] if wire_already_exists
     nil
@@ -391,7 +391,7 @@ class NetSimApi < Sinatra::Base
   # @param [Request] request
   # @return [Boolean]
   def has_json_utf8_headers(request)
-    request.content_type.to_s.split(';').first == 'application/json' and
+    request.content_type.to_s.split(';').first == 'application/json' &&
         request.content_charset.to_s.downcase == 'utf-8'
   end
 
@@ -422,7 +422,7 @@ class NetSimApi < Sinatra::Base
     wire_table = get_table(shard_id, TABLE_NAMES[:wire])
     wire_ids = wire_table.to_a.select {|wire|
       node_ids.any? { |node_id|
-        wire['localNodeID'] == node_id or wire['remoteNodeID'] == node_id
+        wire['localNodeID'] == node_id || wire['remoteNodeID'] == node_id
       }
     }.map {|wire|
       wire['id']

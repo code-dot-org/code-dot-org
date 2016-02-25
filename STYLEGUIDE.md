@@ -151,6 +151,52 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
   myObject.doSomething()
       .doSomethingElse();
   ```
+  
+* <a name="js-module-exports"></a>
+  We have a few different patterns for how we export things in our JS files currently. There's not necessarily
+  an expectation that we'll go fix these all, but new code should try to follow these patterns.
+  <sup>[[link](#js-module-exports)]</sup>
+  ```javascript
+  // good
+  module.exports.foo = function foo() { }
+  // elsewhere
+  foo();
+  
+  // okay, unless you're calling this method locally
+  module.exports.foo = function () {
+  }
+  // elsewhere - bad
+  module.exports.foo();
+  
+  // good
+  var Foo = module.exports = function () {
+  };
+  Foo.prototype.bar = function () {
+  }
+  
+  // good
+  // React is a bit of a special case, in that var Foo = module.exports = React.createClass({
+  // results in React devtools thinking our component is named exports instead of Foo. As such,
+  // we prefer a slightly different pattern in this context.
+  var Foo = React.createClass({
+  ...
+  });
+  module.exports = Foo;
+  
+  
+  // bad
+  module.exports = {
+    foo: function () {
+    }
+  }
+  
+  // bad
+  function foo() {
+  }
+  module.exports = {
+    foo: foo
+  }
+  ```
 
 * <a name="js-avoid-inlinejs"></a>
   Avoid inline Javacript in HAML and ERB views. Inline Javascript is
@@ -178,6 +224,31 @@ Use lodash and jQuery libraries in `/apps`.
 ### In /blockly-core
 
 Use Google Closure Tools in `/blockly-core`, especially for color conversion and keyboard identifiers. Prefer raw HTML over Closure Tools UI constructs for new code.
+
+## JSX
+
+* <a name="jsx-child-elements-on-own-line"></a>
+  Since JSX [removes newlines before rendering to HTML](http://andrewhfarmer.com/how-whitespace-works-in-jsx/)
+  you can and should put child elements on their own line, instead of putting
+  them on the same line to avoid extra spaces.
+  
+  ```
+  // good
+  <Component
+      prop1="prop1"
+      prop2="prop2">
+    textContent
+  </Component>
+  
+  
+  // bad
+  <Component
+      prop1="prop1"
+      prop2="prop2">textContent</Component>
+      
+  // good - fine to put content on same line if the tag opens & closes on that line
+  <Component>textContent</Component>
+  ```
 
 ## CSS
 
