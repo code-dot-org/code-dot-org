@@ -68,7 +68,7 @@ end
 #
 def create_threads(count)
   [].tap do |threads|
-    (1..count).each do |i|
+    count.times do
       threads << Thread.new do
         yield
       end

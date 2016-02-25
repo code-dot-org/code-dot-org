@@ -194,7 +194,7 @@ class CDOImpl < OpenStruct
 
   def hosts_by_env(env)
     hosts = []
-    GlobalConfig['hosts'].each_pair do |key, i|
+    GlobalConfig['hosts'].each_pair do |_key, i|
       hosts << i if i['env'] == env.to_s
     end
     hosts
@@ -208,8 +208,17 @@ class CDOImpl < OpenStruct
     rack_env == env
   end
 
+  # Sets the slogger to use in a test.
+  # slogger must support a `write` method.
+  def set_slogger_for_test(slogger)
+    @slog = slogger
+    # Set a fake slog token so that the slog method will actually call
+    # the test slogger.
+    CDO.slog_token = 'fake_slog_token'
+  end
+
   def slog(params)
-    return unless slog_token
+    return unless slog_token && Gatekeeper.allows('slogging', default: true)
     @slog ||= Slog::Writer.new(secret: slog_token)
     @slog.write params
   end

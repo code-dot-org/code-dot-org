@@ -13,7 +13,7 @@ if Rails.env.development?
   # RACK_MINI_PROFILER environment variable is 'on'. This can be done either by
   # setting the environment variable prior to running the server, or by hitting
   # a page with a "pp=enabled" query string parameter and then refreshing the page.
-  Rack::MiniProfiler.config.pre_authorize_cb = lambda {|env|
+  Rack::MiniProfiler.config.pre_authorize_cb = lambda {|_env|
     ENV['RACK_MINI_PROFILER'] == 'on'
   }
 end

@@ -836,7 +836,7 @@ Applab.init = function(config) {
 
     designMode.renderDesignWorkspace();
 
-    designMode.configureDesignToggleRow();
+    designMode.configurePlaySpaceHeader();
 
     designMode.toggleDesignMode(Applab.startInDesignMode());
 
@@ -960,6 +960,8 @@ Applab.reset = function(first) {
   if (jsInterpreterLogger) {
     jsInterpreterLogger.detach();
   }
+
+  AppStorage.resetRecordListener();
 
   // Reset the Globals object used to contain program variables:
   Applab.Globals = {};

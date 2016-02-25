@@ -9,12 +9,6 @@ class AdminReportsController < ApplicationController
   before_action :set_script
   include LevelSourceHintsHelper
 
-  def admin_concepts
-    SeamlessDatabasePool.use_persistent_read_connection do
-      render 'admin_concepts', formats: [:html]
-    end
-  end
-
   def funometer
     require 'cdo/properties'
     SeamlessDatabasePool.use_persistent_read_connection do
@@ -117,17 +111,25 @@ class AdminReportsController < ApplicationController
 # noinspection RubyResolve
     require Rails.root.join('scripts/archive/ga_client/ga_client')
 
-    @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
-    @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
-
     @is_sampled = false
+    # If the window dates are not explicitly specified, we render the page without data so as to
+    # not make the user wait on a lengthy GA query whose data will be discarded.
+    if params[:start_date].blank? || params[:end_date].blank?
+      @start_date = (DateTime.now - 7).strftime('%Y-%m-%d')
+      @end_date = DateTime.now.prev_day.strftime('%Y-%m-%d')
+
+      (render locals: {headers: [], data: []}) && return
+    end
+
+    @start_date = DateTime.parse(params[:start_date]).strftime('%Y-%m-%d')
+    @end_date = DateTime.parse(params[:end_date]).strftime('%Y-%m-%d')
 
     output_data = {}
     %w(Attempt Success).each do |key|
       dimension = 'ga:eventLabel'
       metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
       filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
-      if params[:filter]
+      if params[:filter].present?
         filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
       end
       ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
@@ -185,16 +187,19 @@ class AdminReportsController < ApplicationController
   end
 
   def admin_progress
+    require 'cdo/properties'
     SeamlessDatabasePool.use_persistent_read_connection do
-      @user_count = User.count
-      @all_script_levels = Script.twenty_hour_script.script_levels.includes({ level: :game })
+      stats = Properties.get(:admin_progress)
+      if stats.present?
+        @user_count = stats['user_count']
+        @levels_attempted = stats['levels_attempted']
+        @levels_attempted.default = 0
+        @levels_passed = stats['levels_passed']
+        @levels_passed.default = 0
 
-      @levels_attempted = User.joins(:user_levels).group(:level_id).where('best_result > 0').count
-      @levels_attempted.default = 0
-      @levels_passed = User.joins(:user_levels).group(:level_id).where('best_result >= 20').count
-      @levels_passed.default = 0
-
-      @stage_map = @all_script_levels.group_by { |sl| sl.level.game }
+        @all_script_levels = Script.twenty_hour_script.script_levels.includes({level: :game})
+        @stage_map = @all_script_levels.group_by {|sl| sl.level.game}
+      end
     end
   end
 
@@ -283,7 +288,7 @@ class AdminReportsController < ApplicationController
     send_data(
       CSV.generate do |csv|
         csv << @headers
-        @responses.each do |level_id, level_responses|
+        @responses.each_value do |level_responses|
           level_responses.each do |response|
             csv << response
           end

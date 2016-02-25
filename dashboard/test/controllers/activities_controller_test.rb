@@ -99,11 +99,14 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   def _test_logged_in_milestone(async_activity_writes:)
+    # Configure a fake slogger to verify that the correct data is logged.
+    slogger = FakeSlogger.new
+    CDO.set_slogger_for_test(slogger)
+
     Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
-      # do all the logging
+    # do all the logging
     @controller.expects :log_milestone
-    @controller.expects :slog
 
     @controller.expects(:trophy_check).with(@user)
 
@@ -131,6 +134,16 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # created activity and userlevel with the correct script
     assert_equal @script_level.script, UserLevel.last.script
+
+    assert_equal([{
+                      application: :dashboard,
+                      tag: 'activity_finish',
+                      script_level_id: @script_level.id,
+                      level_id: @script_level.level.id,
+                      user_agent: 'Rails Testing',
+                      locale: :'en-us'
+                  }],
+                 slogger.records)
   end
 
   test "successful milestone does not require script_level_id" do
@@ -920,7 +933,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @controller.stubs(:find_share_failure).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
-      params[:tag] == 'share_checking_error' && params[:error] == 'OpenURI::HTTPError: something broke' && params[:level_source_id] != nil
+      params[:tag] == 'share_checking_error' && params[:error] == 'OpenURI::HTTPError: something broke' && !params[:level_source_id].nil?
     end
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
@@ -937,7 +950,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # allow sharing when there's an error, slog so it's possible to look up and review later
 
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
-      params[:tag] == 'share_checking_error' && params[:error] == 'IO::EAGAINWaitReadable: Resource temporarily unavailable' && params[:level_source_id] != nil
+      params[:tag] == 'share_checking_error' && params[:error] == 'IO::EAGAINWaitReadable: Resource temporarily unavailable' && !params[:level_source_id].nil?
     end
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
