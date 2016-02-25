@@ -343,6 +343,7 @@ en:
     heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
     heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>"
     heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
     no_primary_course: "Try a Code Studio course"
@@ -437,6 +438,11 @@ en:
       current: "Current Levels"
       unused: "Unused Levels"
   upsell:
+    applab:
+      title: 'App Lab'
+      body: 'App Lab is a web-based environment for students to make simple apps. Simply use "design mode" to design your app, write code for you app with blocks or in JavaScript, then send the app to your phone in seconds.'
+      audience: 'Ages 13+'
+      cta: 'Learn how'
     hoc:
       title: 'Classic Maze'
       body: 'Try the basics of computer science. Millions have given it a shot.'
