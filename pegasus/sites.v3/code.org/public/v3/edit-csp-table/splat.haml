@@ -129,7 +129,7 @@ angular: recordsApp
 
     $scope.deleteTable = function () {
       if (confirm("Are you sure you want to delete '" + $scope.tableName + "'?")) {
-        var ts = new tablesService().$remove(function () {
+        new tablesService().$remove(function () {
           window.location.href = "/v3/edit-csp-app/#{channel_id}";
         });
         $scope.deletingTable = true;

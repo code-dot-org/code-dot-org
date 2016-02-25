@@ -106,6 +106,7 @@ class TablesApi < Sinatra::Base
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
     dont_cache
     TableType.new(channel_id, storage_id(endpoint), table_name).delete_all
+    MetadataTableType.new(channel_id, table_name, endpoint).delete
     no_content
   end
 
