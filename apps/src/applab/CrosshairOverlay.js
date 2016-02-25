@@ -12,10 +12,12 @@ var SVG_NS = constants.SVG_NS;
 
 var CROSSHAIR_MARGIN = 6;
 var EDGE_MARGIN = 5;
-var TEXT_RECT_WIDTH = 104;
+var TEXT_RECT_WIDTH = 110;
 var TEXT_RECT_HEIGHT = 21;
 var TEXT_RECT_RADIUS = TEXT_RECT_HEIGHT / 3;
 var TEXT_Y_OFFSET = -7;
+var ELEMENT_ID_Y_OFFSET = TEXT_RECT_HEIGHT + 4;
+var ELEMENT_ID_TEXT_MAX_CHAR = 10;
 
 /**
  * Creates and controls a coordinates crosshair on the app visualization.
@@ -31,8 +33,10 @@ var CrosshairOverlay = function () {
     y: 0,
     appWidth: 0,
     appHeight: 0,
-    isDragging: false
+    isDragging: false,
+    mouseoverApplabControlId: null
   };
+
 };
 module.exports = CrosshairOverlay;
 
@@ -43,6 +47,8 @@ module.exports = CrosshairOverlay;
  * @param {number} nextProps.y
  * @param {number} nextProps.appWidth
  * @param {number} nextProps.appHeight
+ * @param {boolean} nextProps.isDragging True if user is currently dragging a control
+ * @param {string} nextProps.mouseoverApplabControlId Element id of control user's hovering over
  */
 CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
   // Create element if necessary
@@ -74,7 +80,7 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
   // If we're dragging an element, instead put the text above and right of the
   // cross hair, while making sure it doesnt go past the top of the overlay
   if (this.props_.isDragging) {
-    rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
+    rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT - ELEMENT_ID_Y_OFFSET;
     rectY = Math.max(0, rectY);
   }
 
@@ -95,6 +101,29 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
   this.text_.setAttribute('x', textX);
   this.text_.setAttribute('y', textY);
   this.text_.textContent = this.getCoordinateText();
+
+  // If user is hovering over a control, show the element's id as a second tooltip
+  if (this.props_.mouseoverApplabControlId) {
+    var elementIdRectX = rectX;
+    var elementIdRectY = rectY + ELEMENT_ID_Y_OFFSET;
+
+    var elementIdTextX = textX;
+    var elementIdTextY = textY + ELEMENT_ID_Y_OFFSET;
+
+    this.elementIdBubble_.setAttribute('x', elementIdRectX);
+    this.elementIdBubble_.setAttribute('y', elementIdRectY);
+
+    this.elementIdText_.setAttribute('x', elementIdTextX);
+    this.elementIdText_.setAttribute('y', elementIdTextY);
+    this.elementIdText_.textContent = this.getElementIdText_();
+
+    this.elementIdBubble_.style.display = 'block';
+    this.elementIdText_.style.display = 'block';
+  } else {
+    // Otherwise, hide the element id tooltip
+    this.elementIdBubble_.style.display = 'none';
+    this.elementIdText_.style.display = 'none';
+  }
 };
 
 CrosshairOverlay.prototype.destroy = function () {
@@ -125,6 +154,17 @@ CrosshairOverlay.prototype.create_ = function () {
 
   this.text_ = document.createElementNS(SVG_NS, 'text');
   this.ownElement_.appendChild(this.text_);
+
+  this.elementIdBubble_ = document.createElementNS(SVG_NS, 'rect');
+  this.elementIdBubble_.setAttribute('width', TEXT_RECT_WIDTH);
+  this.elementIdBubble_.setAttribute('height', TEXT_RECT_HEIGHT);
+  this.elementIdBubble_.setAttribute('rx', TEXT_RECT_RADIUS);
+  this.elementIdBubble_.setAttribute('ry', TEXT_RECT_RADIUS);
+  this.ownElement_.appendChild(this.elementIdBubble_);
+
+  this.elementIdText_ = document.createElementNS(SVG_NS, 'text');
+  this.ownElement_.appendChild(this.elementIdText_);
+
 };
 
 CrosshairOverlay.prototype.moveToParent_ = function (newParent) {
@@ -139,4 +179,24 @@ CrosshairOverlay.prototype.moveToParent_ = function (newParent) {
 CrosshairOverlay.prototype.getCoordinateText = function () {
   return "x: " + Math.floor(this.props_.x) +
       ", y: " + Math.floor(this.props_.y);
+};
+
+/**
+ * Internal helper to generate the element id string to display in tooltip.
+ * Since ids can be very long, this method also ellipsifies the id as needed.
+ * @returns {string}
+ * @private
+ */
+CrosshairOverlay.prototype.getElementIdText_ = function () {
+  if (!this.props_.mouseoverApplabControlId) {
+    return '';
+  }
+
+  // Check the length of the id and ellipsify as needed
+  var elementIdText = this.props_.mouseoverApplabControlId;
+  if (elementIdText.length > ELEMENT_ID_TEXT_MAX_CHAR) {
+    elementIdText = elementIdText.substr(0, ELEMENT_ID_TEXT_MAX_CHAR) + "...";
+  }
+
+  return "id: " + elementIdText;
 };
