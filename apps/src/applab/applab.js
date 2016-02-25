@@ -836,7 +836,7 @@ Applab.init = function(config) {
 
     designMode.renderDesignWorkspace();
 
-    designMode.configureDesignToggleRow();
+    designMode.configurePlaySpaceHeader();
 
     designMode.toggleDesignMode(Applab.startInDesignMode());
 
