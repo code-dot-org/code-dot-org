@@ -28,6 +28,9 @@ Style/DotPosition:
 Style/ExtraSpacing:
   Enabled: false
 
+Style/IfInsideElse:
+  Enabled: false
+
 Metrics/AbcSize:
   Enabled: false
 

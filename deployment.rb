@@ -194,7 +194,7 @@ class CDOImpl < OpenStruct
 
   def hosts_by_env(env)
     hosts = []
-    GlobalConfig['hosts'].each_pair do |key, i|
+    GlobalConfig['hosts'].each_pair do |_key, i|
       hosts << i if i['env'] == env.to_s
     end
     hosts
@@ -218,7 +218,7 @@ class CDOImpl < OpenStruct
   end
 
   def slog(params)
-    return unless slog_token
+    return unless slog_token && Gatekeeper.allows('slogging', default: true)
     @slog ||= Slog::Writer.new(secret: slog_token)
     @slog.write params
   end
