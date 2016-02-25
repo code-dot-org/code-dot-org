@@ -102,6 +102,7 @@ levels.custom = {
     "readRecords": null,
     "updateRecord": null,
     "deleteRecord": null,
+    "onRecordEvent": null,
     "getUserId": null,
     "drawChart": null,
     "drawChartFromRecords": null,
