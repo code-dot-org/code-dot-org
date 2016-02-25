@@ -53,12 +53,14 @@ class TablesTest < Minitest::Test
     populate_table(data1, true)
 
     @table_name = 'table1'
+    assert_equal ['name'], JSON.parse(read_metadata["column_list"])
     records = read_records
 
     assert_equal records.first['name'], 'trevor'
     assert_equal records.length, 2
 
     @table_name = 'table2'
+    assert_equal ['word'], JSON.parse(read_metadata["column_list"])
     records = read_records
 
     assert_equal records.first['word'], 'cow'
@@ -67,6 +69,7 @@ class TablesTest < Minitest::Test
     # Test overwrite off
     populate_table(data2, false)
     @table_name = 'table1'
+    assert_equal ['name'], JSON.parse(read_metadata["column_list"])
     records = read_records
 
     assert_equal records.first['name'], 'trevor'
@@ -76,10 +79,12 @@ class TablesTest < Minitest::Test
     populate_table(data2, true)
     @table_name = 'table1'
     records = read_records
+    assert_equal ['city'], JSON.parse(read_metadata["column_list"])
 
     assert_equal records.first['city'], 'SFO'
 
     @table_name = 'table2'
+    assert_equal ['state', 'country'], JSON.parse(read_metadata["column_list"])
     records = read_records
 
     assert_equal records.last['country'], 'USA'
@@ -92,11 +97,13 @@ class TablesTest < Minitest::Test
     create_channel
 
     # this record should not appear in the output
-    create_record('name' => 'eve', 'age' => 9)
+    create_record('name' => 'eve', 'age' => 9, 'original_column' => true)
+    assert_equal ['name', 'age', 'original_column'], JSON.parse(read_metadata["column_list"])
 
     csv_filename = File.expand_path('../roster.csv', __FILE__)
     import(csv_filename)
 
+    assert_equal ['name', 'male', 'age'], JSON.parse(read_metadata["column_list"])
     records = read_records
     assert_equal 34, records.length
     assert_equal 'alice', records[0]['name']
@@ -152,8 +159,10 @@ class TablesTest < Minitest::Test
 
     create_record('name' => 'trevor', 'age' => 30)
     create_record('name' => 'mitra', 'age' => 29)
+    assert_equal ['name', 'age'], JSON.parse(read_metadata["column_list"])
 
     delete_column('age')
+    assert_equal ['name'], JSON.parse(read_metadata["column_list"])
 
     records = read_records
     assert_nil records[0]['age']
@@ -173,6 +182,8 @@ class TablesTest < Minitest::Test
     assert_equal 2, records.length
 
     delete_table
+
+    assert read_metadata.nil?
 
     records = read_records
 
@@ -217,11 +228,9 @@ class TablesTest < Minitest::Test
 
     assert_equal ['table1', 'table2'], TableType.table_names(decrypted_channel_id)
 
-    #TODO
-
-    # Now add metadata for a table (that has no records)
-    # MetadataTableType.new(@channel_id, 'new_table', 'shared').set_column_list([])
-    # assert_equal ['table1', 'table2', 'new_table'], TableType.table_names(decrypted_channel_id)
+    # Now add a data that has no records (but should have metadata)
+    populate_table({ 'new_table' => [] }, false)
+    assert_equal ['table1', 'table2', 'new_table'], TableType.table_names(decrypted_channel_id)
 
     delete_channel
   end
@@ -308,6 +317,7 @@ class TablesTest < Minitest::Test
 
   def read_metadata
     @tables.get "/v3/shared-tables/#{@channel_id}/#{@table_name}/metadata"
+    return nil if @tables.last_response.body.empty?
     JSON.parse(@tables.last_response.body)
   end
 
