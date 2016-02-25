@@ -933,7 +933,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @controller.stubs(:find_share_failure).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
-      params[:tag] == 'share_checking_error' && params[:error] == 'OpenURI::HTTPError: something broke' && params[:level_source_id] != nil
+      params[:tag] == 'share_checking_error' && params[:error] == 'OpenURI::HTTPError: something broke' && !params[:level_source_id].nil?
     end
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
@@ -950,7 +950,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # allow sharing when there's an error, slog so it's possible to look up and review later
 
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
-      params[:tag] == 'share_checking_error' && params[:error] == 'IO::EAGAINWaitReadable: Resource temporarily unavailable' && params[:level_source_id] != nil
+      params[:tag] == 'share_checking_error' && params[:error] == 'IO::EAGAINWaitReadable: Resource temporarily unavailable' && !params[:level_source_id].nil?
     end
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
