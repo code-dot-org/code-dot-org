@@ -118,7 +118,7 @@ end
 #########################################################################################
 
 puts "Copying files from cdo/i18n to hoc.com/i18n..."
-languages.each_pair do |name, codes|
+languages.each_value do |codes|
   unless codes[locale_index] == "en-US"
     puts "Copied locale #{codes[code_index]}"
 
