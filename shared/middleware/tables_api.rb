@@ -296,12 +296,14 @@ class TablesApi < Sinatra::Base
     overwrite = request.GET['overwrite'] == '1'
     json_data.keys.each do |table_name|
       table = TableType.new(channel_id, storage_id(endpoint), table_name)
-      table.ensure_metadata()
       if table.exists? && !overwrite
+        # make sure we have metadata (for cases where we previously didn't store metadata)
+        table.ensure_metadata()
         next
       end
 
       table.delete_all()
+      table.ensure_metadata()
       json_data[table_name].each do |record|
         table.insert(record, request.ip)
       end
