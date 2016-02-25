@@ -18,7 +18,24 @@ class TablesApi < Sinatra::Base
   end
 
   TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+  # TODO - get rid of
   MetadataTableType = CDO.use_dynamo_tables ? TableMetadata::DynamoTableMetadata : TableMetadata::SqlTableMetadata
+
+  #
+  # POST /v3/(shared|user)-tables/<channel-id>?table_name=<name>
+  #
+  # Creates a new table
+  #
+  # post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id|
+  #   dont_cache
+  #   content_type :json
+  #
+  #   table_name = request.GET['table_name']
+  #   if table_name.empty?
+  #     halt 400, {}, "Requires table name"
+  #   end
+  #   TableType.new(channel_id, storage_id(endpoint), table_name).create_metadata
+  # end
 
   #
   # GET /v3/(shared|user)-tables/<channel-id>/<table-name>
@@ -39,13 +56,10 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/metadata$} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
-    table_metadata = MetadataTableType.new(channel_id, table_name, endpoint)
-    if table_metadata.metadata.nil?
-      records = TableType.new(channel_id, storage_id(endpoint), table_name).to_a
-      column_info = TableMetadata.generate_column_info(records)
-      table_metadata.set_column_info(column_info)
-    end
-    table_metadata.metadata.to_json
+    table_metadata = TableType.new(channel_id, storage_id(endpoint), table_name).metadata.first
+
+    no_content if table_metadata.nil?
+    table_metadata.to_json
   end
 
   #
@@ -250,7 +264,7 @@ class TablesApi < Sinatra::Base
       table.insert(record, request.ip)
     end
 
-    column_info = TableMetadata.generate_column_info(records)
+    column_info = TableMetadata.generate_column_list(records)
     # TODO - table type
     MetadataTableType.new(channel_id, table_name, 'shared').set_column_info(column_info)
 
@@ -292,7 +306,8 @@ class TablesApi < Sinatra::Base
   #     'table_1': [{'name': 'trevor', 'age': 30}, ...],
   #     'table_2': [{'city': 'SF', 'people': 6}, ...],
   #   }
-  #
+  # Also creates metadata (if it doesn't alrelady exist) based on any existing
+  # data for each of the passed in tables.
   post %r{/v3/(shared|user)-tables/([^/]+)$} do |endpoint, channel_id|
     begin
       json_data = JSON.parse(request.body.read)
@@ -304,6 +319,7 @@ class TablesApi < Sinatra::Base
     overwrite = request.GET['overwrite'] == '1'
     json_data.keys.each do |table_name|
       table = TableType.new(channel_id, storage_id(endpoint), table_name)
+      table.ensure_metadata()
       if table.exists? && !overwrite
         next
       end

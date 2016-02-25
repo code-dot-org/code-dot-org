@@ -8,6 +8,29 @@ class TablesTest < Minitest::Test
   TableType = CDO.use_dynamo_tables ? DynamoTable : Table
   MetadataTableType = CDO.use_dynamo_tables ? TableMetadata::DynamoTableMetadata : TableMetadata::SqlTableMetadata
 
+  # def test_foo
+  #   init_apis
+  #   create_channel
+  #
+  #   table = TableType.new(@channel_id, storage_id('shared'), 'my_table')
+  #   metadata = table.metadata
+  #
+  #   assert metadata.first.nil?
+  #
+  #   table.ensure_metadata
+  #
+  #   assert !metadata.first.nil?
+  #   assert_equal [], JSON.parse(metadata.first[:column_list])
+  #
+  #   _, decrypted_channel_id = storage_decrypt_channel_id(@channel_id)
+  #   PEGASUS_DB[:channel_table_metadata].where(app_id: decrypted_channel_id).limit(1).update(
+  #     column_list: ['foo'].to_json)
+  #
+  #   assert_equal ['foo'], JSON.parse(metadata.first[:column_list])
+  #
+  #   delete_channel
+  # end
+
   def test_create_read_update_delete
     init_apis
 
