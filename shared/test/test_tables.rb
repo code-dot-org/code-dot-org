@@ -5,6 +5,9 @@ require 'tables_api'
 class TablesTest < Minitest::Test
   include SetupTest
 
+  TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+  MetadataTableType = CDO.use_dynamo_tables ? TableMetadata::DynamoTableMetadata : TableMetadata::SqlTableMetadata
+
   def test_create_read_update_delete
     init_apis
 
@@ -131,6 +134,19 @@ class TablesTest < Minitest::Test
     delete_channel
   end
 
+  def test_add_column
+    init_apis
+    create_channel
+
+    add_column('one')
+    assert_equal ['one'], JSON.parse(read_metadata["column_info"])
+
+    add_column('two')
+    assert_equal ['one', 'two'], JSON.parse(read_metadata["column_info"])
+
+    delete_channel
+  end
+
   def test_delete_column
     init_apis
     create_channel
@@ -187,8 +203,6 @@ class TablesTest < Minitest::Test
     delete_channel
   end
 
-  TableType = CDO.use_dynamo_tables ? DynamoTable : Table
-  MetadataTableType = CDO.use_dynamo_tables ? TableMetadata::DynamoTableMetadata : TableMetadata::SqlTableMetadata
   def test_table_names
     init_apis
     create_channel
@@ -242,6 +256,11 @@ class TablesTest < Minitest::Test
     JSON.parse(@tables.last_response.body)
   end
 
+  def read_metadata
+    @tables.get "/v3/shared-tables/#{@channel_id}/#{@table_name}/metadata"
+    JSON.parse(@tables.last_response.body)
+  end
+
   def update_record(id, record)
     @tables.put "/v3/shared-tables/#{@channel_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     JSON.parse(@tables.last_response.body)
@@ -266,6 +285,10 @@ class TablesTest < Minitest::Test
 
   def rename_column(old, new)
     @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/column/#{old}?new_name=#{new}"
+  end
+
+  def add_column(new)
+    @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/column?column_name=#{new}"
   end
 
   def delete_table

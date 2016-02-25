@@ -39,13 +39,13 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/metadata$} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
-    metadata = MetadataTableType.new(channel_id, table_name, endpoint)
-    if metadata.data.nil?
+    table_metadata = MetadataTableType.new(channel_id, table_name, endpoint)
+    if table_metadata.metadata.nil?
       records = TableType.new(channel_id, storage_id(endpoint), table_name).to_a
       column_info = TableMetadata.generate_column_info(records)
-      metadata.set_column_info(column_info)
+      table_metadata.set_column_info(column_info)
     end
-    metadata.data.to_json
+    table_metadata.metadata.to_json
   end
 
   #
@@ -95,6 +95,21 @@ class TablesApi < Sinatra::Base
       halt 400, {}, "New column name cannot be empty"
     end
     TableType.new(channel_id, storage_id(endpoint), table_name).rename_column(column_name, new_name, request.ip)
+    # TODO - update metadata
+    no_content
+  end
+
+  # POST /v3/(shared|user)-tables/<channel-id>/<table-name>/column?column_name=foo
+  #
+  # Adds a new column
+  #
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/column} do |endpoint, channel_id, table_name|
+    dont_cache
+    column_name = request.GET['column_name']
+    if column_name.empty?
+      halt 400, {}, "New column name cannot be empty"
+    end
+    MetadataTableType.new(channel_id, table_name, endpoint).add_column(column_name)
     no_content
   end
 
