@@ -28,7 +28,7 @@ IGNORED_SOLUTION_BLOCK_ATTRS = {
   'disabled' => 'true',
   'movable' => 'false'
 }
-NEW_CATEGORY_XML = '<category name=\'NEW BLOCKS\'/>'
+NEW_CATEGORY_XML = '<category name="NEW BLOCKS"/>'
 STRIPPED_NODES_XPATH = './next|./value|./statement|./title'
 STRIPPED_ATTRS = ['id', 'inline'] + IGNORED_SOLUTION_BLOCK_ATTRS.keys
 
@@ -298,19 +298,21 @@ class Artist < Blockly
         stripped_block.to_xml == (strip_block toolbox_block).to_xml
       end
 
+      # Solution block does not appear in the toolbox, add it
       toolboxified_block = block.dup
       toolboxified_block.xpath(STRIPPED_NODES_XPATH).remove
-      puts 'adding: ', toolboxified_block
-
-      if toolbox_blocks.xpath('//category').empty?
+      toolboxified_block.content = toolboxified_block.content.strip
+      if toolbox.xpath('//category').empty?
         toolbox.root.add_child toolboxified_block
       else
-        category = toolbox_blocks.xpath('//category[@name=\'NEW BLOCKS\']').first ||
+        category = toolbox.xpath('//category[@name=\'NEW BLOCKS\']').first ||
           toolbox.xpath('//category').last.add_next_sibling(NEW_CATEGORY_XML)[0]
         category.add_child toolboxified_block
       end
+      toolbox_blocks.push toolboxified_block
     end
-    properties['toolbox_blocks'] = toolbox.to_xml
+    properties['toolbox_blocks'] =
+      toolbox.to_xml save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION
   end
 
 end
