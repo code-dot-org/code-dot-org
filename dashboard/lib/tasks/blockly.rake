@@ -37,7 +37,7 @@ namespace :blockly do
     Rake::Task['blockly:get'].invoke(latest)
   end
 
-  task :get, [:version] => :environment do |t, args|
+  task :get, [:version] => :environment do |_t, args|
     clean!
     filepath = dist_file(args[:version])
     puts "Downloading and extracting #{filepath}"
@@ -48,7 +48,7 @@ namespace :blockly do
     FileUtils.mv("#{dirname}/package", dest)
   end
 
-  task :dev, [:src] => :environment do |t, args|
+  task :dev, [:src] => :environment do |_t, args|
     src = args[:src] || '../apps'
     fullsrc = "#{File.absolute_path(src)}/build/package"
     unless File.directory?(fullsrc)
