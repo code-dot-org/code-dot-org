@@ -35,15 +35,12 @@ dependencies:
     - 'echo "build_shared_js: true" >> locals.yml'
     - 'echo "build_dashboard: true" >> locals.yml'
     - 'echo "build_pegasus: true" >> locals.yml'
-database:
-  override:
     - bundle exec rake db:create:
         pwd:
             dashboard
     - bundle exec rake db:schema:load:
         pwd:
             dashboard
-  post:
     - bundle exec rake assets:precompile:
         pwd:
             dashboard
@@ -51,12 +48,15 @@ database:
     - ./set_hoc_flags.rb green:
         pwd:
             bin/dynamic_config
-test:
-  override:
     # Run rake install
     - bundle exec rake install
     # Run rake build (twice in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build && break; done
+database:
+  override:
+    - 'echo "Skipping database phase (already ran)."'
+test:
+  override:
     # Run tests only for changed sub-projects, unless [test all] in commit
     - bundle exec rake circle:run_tests['[test all]']:
         timeout:
