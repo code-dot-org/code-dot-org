@@ -54,11 +54,16 @@ class Table
   end
 
   def metadata
-    @metadata ||= @metadata_table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name).limit(1)
+    dataset = metadata_dataset
+    dataset && dataset.first
+  end
+
+  def metadata_dataset
+    @metadata_dataset ||= @metadata_table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name).limit(1)
   end
 
   # create a new metadata row, based on the contents of any existing records
-  def create_metadata()
+  def create_metadata
     @metadata_table.insert({
       app_id: @channel_id,
       storage_id: @storage_id,
@@ -69,7 +74,8 @@ class Table
   end
 
   def ensure_metadata
-    create_metadata if metadata.first.nil?
+    create_metadata unless metadata
+    metadata_dataset
   end
 
   def delete(id)
@@ -80,14 +86,14 @@ class Table
 
   def delete_all()
     items.delete
-    @metadata.delete if metadata
+    @metadata_dataset.delete if metadata_dataset
   end
 
   def rename_column(old_name, new_name, ip_address)
     ensure_metadata()
-    column_list = JSON.parse(metadata.first[:column_list])
+    column_list = JSON.parse(metadata[:column_list])
     new_column_list = Table::Metadata.rename_column(column_list, old_name, new_name)
-    metadata.update({column_list: new_column_list.to_json})
+    metadata_dataset.update({column_list: new_column_list.to_json})
 
     items.each do |r|
       # We want to preserve the order of the columns so creating
@@ -107,16 +113,16 @@ class Table
 
   def add_column(column_name)
     ensure_metadata()
-    column_list = JSON.parse(metadata.first[:column_list])
+    column_list = JSON.parse(metadata[:column_list])
     new_column_list = Table::Metadata.add_column(column_list, column_name)
-    metadata.update({column_list: new_column_list.to_json})
+    metadata_dataset.update({column_list: new_column_list.to_json})
   end
 
   def delete_column(column_name, ip_address)
     ensure_metadata()
-    column_list = JSON.parse(metadata.first[:column_list])
+    column_list = JSON.parse(metadata[:column_list])
     new_column_list = Table::Metadata.remove_column(column_list, column_name)
-    metadata.update({column_list: new_column_list.to_json})
+    metadata_dataset.update({column_list: new_column_list.to_json})
 
     items.each do |r|
       value = JSON.load(r[:value])
@@ -158,12 +164,12 @@ class Table
 
   def ensure_column_metadata(row)
     ensure_metadata
-    column_list = JSON.parse(metadata.first[:column_list])
+    column_list = JSON.parse(metadata[:column_list])
     row_columns = Table::Metadata.generate_column_list([row])
     new_column_list = column_list.dup.concat(row_columns).uniq
 
     if column_list != new_column_list
-      @metadata.update({column_list: new_column_list.to_json})
+      @metadata_dataset.update({column_list: new_column_list.to_json})
     end
   end
 

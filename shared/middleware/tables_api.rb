@@ -37,7 +37,7 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/metadata$} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
-    table_metadata = TableType.new(channel_id, storage_id(endpoint), table_name).metadata.first
+    table_metadata = TableType.new(channel_id, storage_id(endpoint), table_name).metadata
 
     no_content if table_metadata.nil?
     table_metadata.to_json
