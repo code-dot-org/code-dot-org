@@ -55,6 +55,10 @@ module TableMetadata
       end
     end
 
+    def delete()
+      @table.where(channel_id: @channel_id, table_name: @table_name, table_type: @table_type).limit(1).delete
+    end
+
     def get_column_info
       column_info = @data.slice(:column_info)
       return JSON.parse(column_info) unless column_info.nil?
