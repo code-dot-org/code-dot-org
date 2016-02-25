@@ -961,8 +961,6 @@ Applab.reset = function(first) {
     jsInterpreterLogger.detach();
   }
 
-  AppStorage.resetRecordListener();
-
   // Reset the Globals object used to contain program variables:
   Applab.Globals = {};
   Applab.executionError = null;
