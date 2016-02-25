@@ -6,15 +6,15 @@
 %form{method: 'get'}
   %h2
     From
-    %input#dateFrom{name: 'start_date', value: params[:start_date], style: 'position: relative; z-index: 102;'}
+    %input#dateFrom{type: 'date', name: 'start_date', value: params[:start_date], style: 'position: relative;'}
     To
-    %input#dateTo{name: 'end_date', value: params[:end_date], style: 'position: relative; z-index: 102;'}
+    %input#dateTo{type: 'date', name: 'end_date', value: params[:end_date], style: 'position: relative;'}
     Filter
     %input#filter{name: 'filter', value: params[:filter]}
 
     %br
 
-    %input{type: 'submit', name: 'submit'}
+    %input{type: 'submit', value: 'Submit'}
 
 %br
 
@@ -22,25 +22,18 @@
   %h2
     #samplingMessage{style: 'color: red; display: none'} CAUTION: Data is sampled.
     #{link_to 'Download CSV', {:format => :csv}}
-  #completionTable
+#completionTable{style: 'display: none'}
 
 :css
   .htNumeric { font-family: monospace; }
 
 :javascript
-  var basePage = '#{ level_completions_path }';
-  var baseFilter = '#{ params[:filter]}';
   $(function() {
-    var filter = $('#filter');
-    var from = $('#dateFrom');
-    var to = $('#dateTo');
-    filter.val(baseFilter);
-    from.datepicker({ dateFormat: 'yy-mm-dd' });
-    to.datepicker({ dateFormat: 'yy-mm-dd' });
-    from.datepicker('setDate', '#{ @start_date }');
-    to.datepicker('setDate', '#{ @end_date }');
     if(#{ @is_sampled }) {
       $('#samplingMessage').show();
+    }
+    if(#{ params[:start_date].present? }) {
+      $('#completionTable').show();
     }
   });
   var data = eval(#{ data.try(:to_json)});
