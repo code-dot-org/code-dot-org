@@ -17,7 +17,7 @@ var TEXT_RECT_HEIGHT = 21;
 var TEXT_RECT_RADIUS = TEXT_RECT_HEIGHT / 3;
 var TEXT_Y_OFFSET = -7;
 var ELEMENT_ID_Y_OFFSET = TEXT_RECT_HEIGHT + 4;
-var ELEMENT_ID_TEXT_MAX_CHAR = 10;
+var ELEMENT_ID_TEXT_MAX_CHAR = 12;
 
 /**
  * Creates and controls a coordinates crosshair on the app visualization.
@@ -183,20 +183,18 @@ CrosshairOverlay.prototype.getCoordinateText = function () {
 
 /**
  * Internal helper to generate the element id string to display in tooltip.
- * Since ids can be very long, this method also ellipsifies the id as needed.
  * @returns {string}
  * @private
  */
 CrosshairOverlay.prototype.getElementIdText_ = function () {
-  if (!this.props_.mouseoverApplabControlId) {
-    return '';
-  }
+  return "id: " +
+      CrosshairOverlay.ellipsifyText(this.props_.mouseoverApplabControlId, ELEMENT_ID_TEXT_MAX_CHAR);
+};
 
-  // Check the length of the id and ellipsify as needed
-  var elementIdText = this.props_.mouseoverApplabControlId;
-  if (elementIdText.length > ELEMENT_ID_TEXT_MAX_CHAR) {
-    elementIdText = elementIdText.substr(0, ELEMENT_ID_TEXT_MAX_CHAR) + "...";
-  }
 
-  return "id: " + elementIdText;
+CrosshairOverlay.ellipsifyText = function (inputText, maxLength) {
+  if (inputText && inputText.length > maxLength) {
+    return inputText.substr(0, maxLength - 3) + "...";
+  }
+  return inputText || '';
 };
