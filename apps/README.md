@@ -54,6 +54,7 @@ npm run build
 ```
 
 * `npm run build` builds a 'debug' version with more readable javascript
+* `npm run build -- --app=maze` builds a 'debug' version of only the maze app
 * `npm run build:dist` builds a minified version suitable for production 
 * `npm run clean` will clean the build directory
 
@@ -62,21 +63,20 @@ See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
 #### Running with live-reload server
 
 ```
-grunt dev
-open http://localhost:8000
+npm start
 ```
 
-This will serve a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to blockly.  Caveats:
+This will serve and open a playground with a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to apps.  Caveats:
 * This does not update asset files. For that, use a full `grunt build`.
 * The live-reload server does not pick up changes to blockly-core.  For that, see [Full build with blockly-core](#full-build-with-blockly-core-changes).
 * If you get `Error: EMFILE, too many open files` while running the live-reload server (common on OSX) try increasing the OS open file limit by running `ulimit -n 1024` (and adding it to your `.bashrc`).
 
 ##### Rebuild only a single app
 
-To have grunt rebuild only a single app, use the MOOC_APP parameter:
+To have grunt rebuild only a single app, use the --app parameter:
 
 ```
-MOOC_APP=studio grunt dev
+npm start -- --app=maze
 ```
 
 ##### Build a single foreign language

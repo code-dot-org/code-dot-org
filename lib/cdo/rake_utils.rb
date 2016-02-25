@@ -12,7 +12,7 @@ module RakeUtils
   end
 
   def self.system_with_stdout__(command)
-    puts command
+    CDO.log.info command
     output = `#{command}`
     status = $?.exitstatus
     [status, output]
@@ -48,6 +48,7 @@ module RakeUtils
       error = RuntimeError.new("'#{command}' returned #{status}")
       raise error, error.message, CDO.filter_backtrace([output])
     end
+    status
   end
 
   def self.system_stdout(*args)

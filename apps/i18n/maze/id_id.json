@@ -18,6 +18,7 @@
   "fillTooltip": "tempat 1 unit tanah",
   "finalLevel": "Selamat! Anda telah menyelesaikan teka-teki terakhir.",
   "flowerEmptyError": "Bunga dimana anda berada sekarang tidak memiliki madu lebih.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "dapatkan",
   "heightParameter": "tinggi",
   "holePresent": "ada lubang",
@@ -81,6 +82,5 @@
   "whileTooltip": "Ulangi aksi sampai tujuan tercapai.",
   "word": "Cari kata",
   "yes": "Ya",
-  "youSpelled": "Anda mengejanya",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Anda mengejanya"
 }

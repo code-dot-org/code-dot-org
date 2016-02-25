@@ -847,15 +847,22 @@ Applab.init = function(config) {
   }
 };
 
-Applab.appendToEditor = function(newCode) {
+/**
+ * @param {string} newCode Code to append to the end of the editor
+ */
+Applab.appendToEditor = function (newCode) {
   var code = studioApp.editor.addEmptyLine(studioApp.editor.getValue()) + newCode;
   studioApp.editor.setValue(code);
+};
+
+Applab.scrollToEnd = function () {
+  studioApp.editor.scrollCursorToEndOfDocument();
 };
 
 /**
  * Clear the event handlers and stop the onTick timer.
  */
-Applab.clearEventHandlersKillTickLoop = function() {
+Applab.clearEventHandlersKillTickLoop = function () {
   Applab.whenRunFunc = null;
   Applab.running = false;
   $('#headers').removeClass('dimmed');
@@ -1121,6 +1128,10 @@ Applab.execute = function() {
       var session = studioApp.editor.aceEditor.getSession();
       annotationList.attachToSession(session, studioApp.editor);
       annotationList.clearRuntimeAnnotations();
+      studioApp.editor.aceEditor.session.on("change", function () {
+        // clear any runtime annotations whenever a change is made
+        annotationList.clearRuntimeAnnotations();
+      });
     }
   } else {
     // Define any top-level procedures the user may have created
@@ -1539,7 +1550,7 @@ Applab.getIdDropdownForCurrentScreenFromDom_ = function (documentRoot) {
  * @returns {HTMLElement} The first "screen" that isn't hidden.
  */
 Applab.activeScreen = function () {
-  return $('#divApplab .screen').filter(function () {
+  return Applab.getScreens().filter(function () {
     return this.style.display !== 'none';
   }).first()[0];
 };
@@ -1549,7 +1560,7 @@ Applab.activeScreen = function () {
  * unless they match the provided screenId. Also focuses the screen.
  */
 Applab.changeScreen = function(screenId) {
-  $('#divApplab .screen').each(function () {
+  Applab.getScreens().each(function () {
     $(this).toggle(this.id === screenId);
     if ((this.id === screenId)) {
       // Allow the active screen to receive keyboard events.
@@ -1559,9 +1570,12 @@ Applab.changeScreen = function(screenId) {
 };
 
 Applab.loadDefaultScreen = function() {
-  var defaultScreen = $('#divApplab .screen[is-default=true]').first().attr('id') ||
-    $('#divApplab .screen').first().attr('id');
-  Applab.changeScreen(defaultScreen);
+  var defaultScreenId = Applab.getScreens().first().attr('id');
+  Applab.changeScreen(defaultScreenId);
+};
+
+Applab.getScreens = function() {
+  return $('#divApplab > .screen');
 };
 
 // Wrap design mode function so that we can call from commands

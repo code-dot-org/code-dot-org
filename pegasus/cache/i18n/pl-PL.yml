@@ -99,11 +99,7 @@
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -183,6 +179,7 @@
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -375,6 +372,9 @@
   homepage_slot_text_link_othercourses: Pozostałe kursy online
   homepage_slot_text_title_educators: Nauczyciele
   homepage_slot_text_blurb_educators: Naucz twoich uczniów/studentów
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Gimnazjum
+  homepage_slot_text_link_high: Szkoła ponadgimnazjalna
   homepage_slot_text_link_k5: Kursy dla szkoły podstawowej
   homepage_slot_text_link_fullcurriculum: Zobacz nasz pełny program nauczania
   homepage_slot_text_link_pd: Rozwój zawodowy
@@ -1675,4 +1675,3 @@
   infinity_shortcode: inf
   playlab_shortcode: zagraj
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

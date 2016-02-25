@@ -18,6 +18,7 @@
   "fillTooltip": "aseta maha 1 ühik mulda",
   "finalLevel": "Tubli! Sa lahendasid viimase mõistatuse.",
   "flowerEmptyError": "Lillel, millel oled, ei ole rohkem nektarit.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "võta",
   "heightParameter": "kõrgus",
   "holePresent": "seal on auk",
@@ -81,6 +82,5 @@
   "whileTooltip": "Korrake lisatud tegevusi kuni lõpppunkt on saavutatud.",
   "word": "Leia sõna",
   "yes": "Jah",
-  "youSpelled": "Sa kirjutasid",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Sa kirjutasid"
 }

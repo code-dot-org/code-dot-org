@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "setja 1 einingu moldar"},
 "finalLevel":function(d){return "Til hamingju! Þú hefur leyst síðustu þrautina."},
 "flowerEmptyError":function(d){return "Blómið sem þú ert á hefur ekki meiri blómasafa."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "sækja"},
 "heightParameter":function(d){return "hæð"},
 "holePresent":function(d){return "það er hola"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Endurtaka aðgerðirnar í kubbnum þar til endamarki er náð."},
 "word":function(d){return "Finna orðið"},
 "yes":function(d){return "Já"},
-"youSpelled":function(d){return "Þú stafaðir"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "Þú stafaðir"}};

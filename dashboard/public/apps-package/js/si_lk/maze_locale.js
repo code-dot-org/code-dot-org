@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "කුණු ඒකක 1ක් ස්ථාන ගත කරන්න"},
 "finalLevel":function(d){return "සුභපැතුම්! ඔබ අවසාන ප්‍රහේලිකාව විසඳා ඇත."},
 "flowerEmptyError":function(d){return "ඔබ සිටින මල තුල තව දුරටත් මල්පැණි නැත."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "ලබාගන්න"},
 "heightParameter":function(d){return "උස"},
 "holePresent":function(d){return "සිදුරක් ඇත"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Repeat the enclosed actions until finish point is reached."},
 "word":function(d){return "වචනය සොයන්න"},
 "yes":function(d){return "ඔව්"},
-"youSpelled":function(d){return "You spelled"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "You spelled"}};
