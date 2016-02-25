@@ -16,8 +16,7 @@
 var RecordListener = module.exports = function () {
   /**
    * Map from table name to table handler.
-   * @type {Object.<string, TableHandler>}
-   * @private
+   * @private {Object.<string, TableHandler>}
    */
   this.tableHandlers_ = {};
 };
@@ -79,14 +78,12 @@ RecordListener.prototype.reset = function () {
  */
 var TableHandler = function (tableName, callback) {
   /**
-   * @type {{string}}
-   * @private
+   * @private {string}
    */
   this.tableName_ = tableName;
 
   /**
-   *  @type {function}
-   *  @private
+   *  @private {function}
    */
   this.callback_ = callback;
 
@@ -98,15 +95,13 @@ var TableHandler = function (tableName, callback) {
   /**
    * IdToJsonMap representing the contents of the table.
    * We use this to efficiently test whether a record's contents has changed.
-   * @type {IdToJsonMap}
-   * @private
+   * @private {IdToJsonMap}
    */
   this.idToJsonMap_ = {};
 
   /**
    * Timeout id of the pending call to window.setTimeout.
-   * @type {number}
-   * @private
+   * @private {number}
    */
   this.timeoutId_ = null;
 
@@ -144,7 +139,8 @@ TableHandler.prototype.reportRecords_ = function (req) {
   }
 
   if (req.status < 200 || req.status >= 300) {
-    // ignore errors
+    // Ignore errors. In the future we may want to add monitoring or notify
+    // the user that this is happening.
     return;
   }
 
@@ -159,6 +155,13 @@ TableHandler.prototype.reportRecords_ = function (req) {
   // the responseText here and return if it has not changed (only 1ms). However, a better
   // performance improvement is to only poll when Pusher tells us to, which would render
   // the responseText check unnecessary.
+
+  // Schedule the next data fetch before doing anything that could raise an exception,
+  // so that an exception doesn't cause us to stop polling for new data.
+  // Per above profiling notes, don't worry about the amount of time needed to process
+  // the data below, since it is small compared to the amount of time taken to
+  // retrieve the data.
+  this.scheduleNextFetch_();
 
   var callback = this.callback_;
   var records = JSON.parse(req.responseText);
@@ -188,8 +191,6 @@ TableHandler.prototype.reportRecords_ = function (req) {
 
   // Update our map of this table.
   this.idToJsonMap_ = newIdToJsonMap;
-
-  this.scheduleNextFetch_();
 };
 
 TableHandler.prototype.reset = function() {
