@@ -86,7 +86,7 @@ namespace :circle do
       end
       RakeUtils.system_stdout 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
       Dir.chdir('dashboard/test/ui') do
-        RakeUtils.system_stdout 'bundle exec ./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 7 --auto_retry --html'
+        RakeUtils.system_stdout 'bundle exec ./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 7 --magic_retry --html'
       end
     else
       HipChat.log "Commit message '#{RakeUtils.circle_commit_message}' does not contain #{run_ui_tests_tag}, skipping UI tests."
