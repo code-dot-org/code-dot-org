@@ -36,17 +36,16 @@ video_player: true
 
 #videos
   %h1.responsive-body Video library
-  - DB[:cdo_cspunit3_videos].each_slice(3) do |group|
-    - group.each do |item|
-      // Show the category title at the beginning of
-      // each video chapter
-      - if item[:order_s].eql? "first"
-        .clear
-        %h2= item[:category_title_s]
-      %div{style: "float:left; padding:10px; width: 275px;"}
-        = view :display_video_thumbnail, id: item[:id_s],  video_code:item[:code_s], caption: item[:caption_s], play_button: 'center', download_path: item[:download_path_s]
-        - unless item[:studio_stage_s].nil_or_empty?
-          %a{href: CDO.studio_url(item[:studio_stage_s])} Try it now
+  - DB[:cdo_cspunit3_videos].each do |item|
+    // Show the chapter title at the 
+    // beginning of each video chapter
+    - unless item[:category_title_s].nil_or_empty?
+      .clear
+      %h2= item[:category_title_s]
+    %div{style: "float:left; padding:10px; width: 275px;"}
+      = view :display_video_thumbnail, id: item[:id_s],  video_code:item[:code_s], caption: item[:caption_s], play_button: 'center', download_path: item[:download_path_s]
+      - unless item[:studio_stage_s].nil_or_empty?
+        %a{href: CDO.studio_url(item[:studio_stage_s])} Try it now
 
 :javascript
   $(function() {

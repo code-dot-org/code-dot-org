@@ -1,14 +1,14 @@
-caption_s,id_s,code_s,download_path_s,studio_stage_s,category_title_s,order_s
-Turtle Programming,turtle,i2KHYUhtOlM,//videos.code.org/2015/csp/applab/turtle.mp4,/s/cspunit3/stage/2/puzzle/1,Procedural abstraction and top-down design,first
-Defining and Calling Functions,functions,yPWQfa4CHbw,//videos.code.org/2015/csp/applab/functions.mp4,/s/cspunit3/stage/2/puzzle/1,Procedural abstraction and top-down design,
-Creating Functions with Parameters,functions_params,k7Ji1E97-V0,//videos.code.org/2015/csp/applab/functions_parameters.mp4,/s/cspunit3/stage/2/puzzle/1,Documentation and simple loops,first
-Loops,loops,G8hfAk4PfOM,//videos.code.org/2015/csp/applab/loops.mp4,/s/cspunit3/stage/2/puzzle/1,Documentation and simple loops,
-Design Mode,design_mode,-EoTeD4mSNU,//videos.code.org/2015/csp/applab/design.mp4,/s/cspunit3/stage/2/puzzle/1,Event-driven programming and apps,first
-Introduction to Variables Part 1,variables_1,G41G_PEWFjE,//videos.code.org/2015/csp/applab/variables_1.mp4,/s/cspunit3/stage/2/puzzle/1,Variables and strings,first
-Introduction to Variables Part 2,variables_1,ijjVDBPwA1o,//videos.code.org/2015/csp/applab/variables_2.mp4,/s/cspunit3/stage/2/puzzle/1,Variables and strings,
-Conditionals Part 1 - Boolean Expressions,conditionals_1,y3rCKJNOwpA,//videos.code.org/2015/csp/applab/conditionals_1.mp4,/s/cspunit3/stage/2/puzzle/1,Conditionals and boolean logic,first
-Conditionals Part 2 - If/Else Statements,conditionals_2,UDi7xgIIW8E,//videos.code.org/2015/csp/applab/conditionals_2.mp4,/s/cspunit3/stage/2/puzzle/1,Conditionals and boolean logic,
-Conditionals Part 3 - AND & OR Operators,conditionals_3,kyFdniI-ZZs,//videos.code.org/2015/csp/applab/conditionals_3.mp4,/s/cspunit3/stage/2/puzzle/1,Conditionals and boolean logic,
-Introduction to Lists,intro_lists,KFy7u3Rhozs,//videos.code.org/2015/csp/applab/lists_intro_full.mp4,/s/cspunit3/stage/2/puzzle/1,Loops and arrays,first
-Processing Lists,processing_lists,RQ6GJt9f2vg,//videos.code.org/2015/csp/applab/processing_lists.mp4,/s/cspunit3/stage/2/puzzle/1,Processing arrays of data,
-App Lab Deep Dive,app_lab_deep_dive,4DntNOOYmpo,//videos.code.org/2015/csp/AppLabDemo.mp4,,Deep dive into App Lab,first
+caption_s,id_s,code_s,download_path_s,studio_stage_s,category_title_s
+Turtle Programming,turtle,i2KHYUhtOlM,//videos.code.org/2015/csp/applab/turtle.mp4,/s/cspunit3/stage/2/puzzle/1,Procedural abstraction and top-down design
+Defining and Calling Functions,functions,yPWQfa4CHbw,//videos.code.org/2015/csp/applab/functions.mp4,/s/cspunit3/stage/2/puzzle/1,
+Creating Functions with Parameters,functions_params,k7Ji1E97-V0,//videos.code.org/2015/csp/applab/functions_parameters.mp4,/s/cspunit3/stage/2/puzzle/1,Documentation and simple loops
+Loops,loops,G8hfAk4PfOM,//videos.code.org/2015/csp/applab/loops.mp4,/s/cspunit3/stage/2/puzzle/1,
+Design Mode,design_mode,-EoTeD4mSNU,//videos.code.org/2015/csp/applab/design.mp4,/s/cspunit3/stage/2/puzzle/1,Event-driven programming and apps
+Introduction to Variables Part 1,variables_1,G41G_PEWFjE,//videos.code.org/2015/csp/applab/variables_1.mp4,/s/cspunit3/stage/2/puzzle/1,Variables and strings
+Introduction to Variables Part 2,variables_1,ijjVDBPwA1o,//videos.code.org/2015/csp/applab/variables_2.mp4,/s/cspunit3/stage/2/puzzle/1,
+Conditionals Part 1 - Boolean Expressions,conditionals_1,y3rCKJNOwpA,//videos.code.org/2015/csp/applab/conditionals_1.mp4,/s/cspunit3/stage/2/puzzle/1,Conditionals and boolean logic
+Conditionals Part 2 - If/Else Statements,conditionals_2,UDi7xgIIW8E,//videos.code.org/2015/csp/applab/conditionals_2.mp4,/s/cspunit3/stage/2/puzzle/1,
+Conditionals Part 3 - AND & OR Operators,conditionals_3,kyFdniI-ZZs,//videos.code.org/2015/csp/applab/conditionals_3.mp4,/s/cspunit3/stage/2/puzzle/1,
+Introduction to Lists,intro_lists,KFy7u3Rhozs,//videos.code.org/2015/csp/applab/lists_intro_full.mp4,/s/cspunit3/stage/2/puzzle/1,Loops and arrays
+Processing Lists,processing_lists,RQ6GJt9f2vg,//videos.code.org/2015/csp/applab/processing_lists.mp4,/s/cspunit3/stage/2/puzzle/1,
+App Lab Deep Dive,app_lab_deep_dive,4DntNOOYmpo,//videos.code.org/2015/csp/AppLabDemo.mp4,,Deep dive into App Lab
