@@ -178,9 +178,9 @@ class ActionController::TestCase
   # override default html document to ask it to raise errors on invalid html
   def html_document
     @html_document ||= if @response.content_type === Mime::XML
-                         Nokogiri::XML::Document.parse(@response.body) { |config| config.strict }
+                         Nokogiri::XML::Document.parse(@response.body, &:strict)
                        else
-                         Nokogiri::HTML::Document.parse(@response.body) { |config| config.strict }
+                         Nokogiri::HTML::Document.parse(@response.body, &:strict)
                        end
   end
 
@@ -312,4 +312,17 @@ end
 # Mock storage_id to generate random IDs
 def storage_id(_)
   SecureRandom.hex
+end
+
+# A fake slogger implementation that captures the records written to it.
+class FakeSlogger
+  attr_reader :records
+
+  def initialize
+    @records = []
+  end
+
+  def write(json)
+    @records << json
+  end
 end

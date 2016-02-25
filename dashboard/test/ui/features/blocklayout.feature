@@ -3,7 +3,7 @@ Feature: Block auto-layout
 Background:
   Given I am on "http://learn.code.org/flappy/10?noautoplay=true"
   And I rotate to landscape
-  And I press "x-close"
+  And I close the dialog
 
 Scenario: Auto-placing malformed start blocks
   When I've initialized the workspace with an auto-positioned flappy puzzle with extra newlines
@@ -18,7 +18,7 @@ Scenario: Auto-placing blocks
 Scenario: Auto-placing blocks with XML positioning
   Given I am on "http://learn.code.org/s/allthethings/stage/5/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I press "x-close"
+  And I close the dialog
 
   When I've initialized the workspace with a manually-positioned playlab puzzle
 

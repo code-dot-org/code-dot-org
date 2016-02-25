@@ -1,6 +1,6 @@
 saw_failure = false
 
-Before('@stop_after_failure') do |scenario|
+Before('@stop_after_failure') do
   if saw_failure
     fail 'skipping due to seen failure'
   end

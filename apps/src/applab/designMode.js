@@ -3,7 +3,7 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var DesignWorkspace = require('./DesignWorkspace.jsx');
-var DesignToggleRow = require('./DesignToggleRow.jsx');
+var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var showAssetManager = require('../assetManagement/show');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');
@@ -197,22 +197,12 @@ designMode.updateProperty = function(element, name, value) {
       if (isDraggableContainer(element.parentNode)) {
         element.parentNode.style.width = newWidth;
       }
-
-      if (element.style.backgroundSize) {
-        element.style.backgroundSize = element.style.width + ' ' +
-          element.style.height;
-      }
       break;
     case 'style-height':
       var newHeight = appendPx(value);
       element.style.height = newHeight;
       if (isDraggableContainer(element.parentNode)) {
         element.parentNode.style.height = newHeight;
-      }
-
-      if (element.style.backgroundSize) {
-        element.style.backgroundSize = element.style.width + ' ' +
-          element.style.height;
       }
       break;
     case 'text':
@@ -237,10 +227,11 @@ designMode.updateProperty = function(element, name, value) {
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
         backgroundImage.onload = function() {
-          element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
-            backgroundImage.naturalHeight + 'px';
-          element.style.width = backgroundImage.naturalWidth + 'px';
-          element.style.height = backgroundImage.naturalHeight + 'px';
+          // Fit the image into the button
+          element.style.backgroundSize = 'contain';
+          element.style.backgroundPosition = '50% 50%';
+          element.style.backgroundRepeat = 'no-repeat';
+
           // Re-render properties
           if (currentlyEditedElement === element) {
             designMode.editElementProperties(element);
@@ -460,6 +451,7 @@ designMode.onDepthChange = function (element, depthDirection) {
 designMode.onInsertEvent = function(code) {
   Applab.appendToEditor(code);
   $('#codeModeButton').click(); // TODO(dave): reactify / extract toggle state
+  Applab.scrollToEnd();
 };
 
 /**/
@@ -808,7 +800,7 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configureDesignToggleRow = function () {
+designMode.configurePlaySpaceHeader = function () {
   var designToggleRow = document.getElementById('designToggleRow');
   if (!designToggleRow) {
     return;
@@ -858,7 +850,7 @@ designMode.renderToggleRow = function (screenIds) {
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
     React.render(
-      React.createElement(DesignToggleRow, {
+      React.createElement(PlaySpaceHeader, {
         hideToggle: Applab.hideDesignModeToggle(),
         hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),

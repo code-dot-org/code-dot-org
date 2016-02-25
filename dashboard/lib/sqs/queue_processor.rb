@@ -59,7 +59,7 @@ module SQS
           poller = Aws::SQS::QueuePoller.new(@config.queue_url)
 
           # Break out of the polling loop when we leave the running state.
-          poller.before_request do |stats|
+          poller.before_request do |_stats|
             throw :stop_polling if @state != :running
           end
 
@@ -78,7 +78,7 @@ module SQS
                 start_time_sec = Time.now.to_f
                 begin
                   # Use with_connection to return the thread to pool when the operation is done.
-                  ActiveRecord::Base.connection_pool.with_connection do |conn|
+                  ActiveRecord::Base.connection_pool.with_connection do |_conn|
                     @handler.handle(messages)
                   end
                   @metrics.successes.increment(batch_size)
@@ -112,9 +112,7 @@ module SQS
     def stop
       assert_state :running, "Can't stop in state #{@state}, must be :running"
       @state = :stopping
-      @worker_threads.each do |thread|
-        thread.join
-      end
+      @worker_threads.each(&:join)
       @state = :stopped
     end
 
