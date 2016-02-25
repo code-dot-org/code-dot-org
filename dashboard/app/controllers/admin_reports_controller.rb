@@ -280,7 +280,7 @@ class AdminReportsController < ApplicationController
     send_data(
       CSV.generate do |csv|
         csv << @headers
-        @responses.each do |level_id, level_responses|
+        @responses.each do |_level_id, level_responses|
           level_responses.each do |response|
             csv << response
           end

@@ -226,7 +226,7 @@ Dashboard::Application.routes.draw do
   post '/report_abuse', :to => 'report_abuse#report_abuse'
   get '/report_abuse', :to => 'report_abuse#report_abuse_form'
 
-  get '/too_young', :to => redirect { |p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
+  get '/too_young', :to => redirect { |_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
