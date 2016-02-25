@@ -11,6 +11,7 @@
 #  best_result     :integer
 #  script_id       :integer
 #  level_source_id :integer
+#  submitted       :boolean
 #
 # Indexes
 #
