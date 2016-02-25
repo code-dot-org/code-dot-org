@@ -19,7 +19,7 @@ dependencies:
     - "~/.rvm/gems/ruby-2.2.3"
   override:
     - sudo apt-get install libicu-dev
-    - bundle install
+    - bundle install --with development
     - 'echo "bundler_use_sudo: false" >> locals.yml'
     - 'echo "npm_use_sudo: false" >> locals.yml'
     - 'echo "assets_s3_directory: assets_circle/$RANDOM" >> locals.yml'
