@@ -3,6 +3,7 @@
 #
 require 'csv'
 require 'set'
+require_relative './table_metadata'
 class Table
 
   class NotFound < Sinatra::NotFound
@@ -14,6 +15,7 @@ class Table
     @table_name = table_name
 
     @table = PEGASUS_DB[:app_tables]
+    @metadata_table = PEGASUS_DB[:channel_table_metadata]
   end
 
   def exists?()
@@ -22,6 +24,25 @@ class Table
 
   def items()
     @items ||= @table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name)
+  end
+
+  def metadata
+    @metadata ||= @metadata_table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name).limit(1)
+  end
+
+  # create a new metadata row, based on the contents of any existing records
+  def create_metadata()
+    @metadata_table.insert({
+      app_id: @channel_id,
+      storage_id: @storage_id,
+      table_name: @table_name,
+      column_list: TableMetadata.generate_column_list(to_a).to_json,
+      updated_at: DateTime.now
+    })
+  end
+
+  def ensure_metadata
+    create_metadata if metadata.first.nil?
   end
 
   def delete(id)
@@ -67,6 +88,8 @@ class Table
 
   def insert(value, ip_address)
     raise ArgumentError, 'Value is not a hash' unless value.is_a? Hash
+    ensure_column_metadata(value)
+
     row = {
       app_id: @channel_id,
       storage_id: @storage_id,
@@ -86,6 +109,17 @@ class Table
     end
 
     JSON.load(row[:value]).merge('id' => row[:row_id])
+  end
+
+  def ensure_column_metadata(row)
+    ensure_metadata
+    column_list = JSON.parse(metadata.first[:column_list])
+    row_columns = TableMetadata.generate_column_list([row])
+    new_column_list = column_list.dup.concat(row_columns).uniq
+
+    if column_list != new_column_list
+      @metadata.update({column_list: new_column_list.to_json})
+    end
   end
 
   def next_id()
@@ -118,7 +152,7 @@ class Table
   def self.table_names(channel_id)
     tables_from_records = PEGASUS_DB[:app_tables].where(app_id: channel_id, storage_id: nil).group(:table_name).select_map(:table_name)
     #TODO - same thing for dynamo
-    tables_from_metadata = PEGASUS_DB[:channel_table_metadata].where(channel_id: channel_id, table_type: 'shared').group(:table_name).select_map(:table_name)
+    tables_from_metadata = PEGASUS_DB[:channel_table_metadata].where(app_id: channel_id, storage_id: nil).group(:table_name).select_map(:table_name)
     tables_from_records.concat(tables_from_metadata).uniq
   end
 
