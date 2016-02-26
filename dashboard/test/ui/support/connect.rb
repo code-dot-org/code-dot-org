@@ -128,7 +128,7 @@ After do |scenario|
   log_result all_passed
 end
 
-After do |s|
+After do |_s|
   unless @browser.nil?
     # clear session state (or get a new browser)
     if slow_browser?

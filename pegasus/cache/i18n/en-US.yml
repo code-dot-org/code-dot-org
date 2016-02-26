@@ -1,7 +1,4 @@
 "en-US":
-  cspunit3_name: "CS Principles Unit 3"
-  cspunit3_gradelevel: "Ages 13+"
-  cspunit3_shortdescription_congrats: "Code.org has created a new high school course called CS Principles that uses App Lab. This programming unit gives you an introduction to App Lab so you can be on your way to create rich, interactive projects."
   hour_of_code: "Hour of Code"
   hello: "Hello world"
   select_language: "Please select your language"
@@ -740,6 +737,9 @@
   course3_name: "Course 3"
   course4_name: "Course 4"
   accelerated_name: "Accelerated Course"
+  cspunit3_name: "CS Principles Unit 3"
+  cspunit3_gradelevel: "Grades 9-12"
+  cspunit3_shortdescription_congrats: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools."
   codeorg_gradelevel: "Ages 4-104"
   codeintl_gradelevel: "Ages 4-104"
   thinkersmithspanish_gradelevel: "Por todos"
