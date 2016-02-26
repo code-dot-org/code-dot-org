@@ -372,6 +372,10 @@ describe('generateDropletModeOptions', function () {
           "color": "#D3E965",
           "title": "deleteRecord"
         },
+        "onRecordEvent": {
+          "color": "#D3E965",
+          "title": "onRecordEvent"
+        },
         "getUserId": {
           "value": true,
           "color": "#D3E965",

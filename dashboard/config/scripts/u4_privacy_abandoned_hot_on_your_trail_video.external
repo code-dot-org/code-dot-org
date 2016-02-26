@@ -9,4 +9,6 @@ markdown <<MARKDOWN
 <iframe width="560" height = "315" src="https://www.youtube.com/embed/bqWuioPHhz0" frameborder="0" allowfullscreen></iframe>
 
 [Source](https://www.youtube.com/embed/bqWuioPHhz0)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
