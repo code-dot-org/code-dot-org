@@ -122,11 +122,6 @@ Style/AsciiComments:
 Style/BlockDelimiters:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/BlockEndNewline:
-  Enabled: false
-
 # Offense count: 293
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
