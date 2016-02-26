@@ -136,7 +136,6 @@ class Applab < Blockly
         "readRecords": null,
         "updateRecord": null,
         "deleteRecord": null,
-        "onRecordEvent": null,
         "getUserId": null,
         "drawChartFromRecords": null,
 

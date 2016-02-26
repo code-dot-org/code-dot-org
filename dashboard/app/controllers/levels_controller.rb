@@ -110,7 +110,7 @@ class LevelsController < ApplicationController
       params[:level][:failure_condition] = Studio.default_failure_condition
     end
     params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
-    params.merge!(user: current_user)
+    params[:user] = current_user
 
     begin
       @level = type_class.create_from_level_builder(params, level_params)

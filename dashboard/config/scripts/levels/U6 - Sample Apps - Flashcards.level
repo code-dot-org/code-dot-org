@@ -38,10 +38,7 @@
     "submittable": "false",
     "data_tables": "{\r\n \"cards\":\r\n [\r\n  {\r\n    \"question\": \"What kind of tree can you carry in your hand?\",\r\n    \"answer\": \"A palm tree\",\r\n    \"id\": 5\r\n  },\r\n  {\r\n    \"question\": \"What has one eye but cannot see?\",\r\n    \"answer\": \"A needle\",\r\n    \"id\": 6\r\n  },\r\n  {\r\n    \"question\": \"What do you call a bear with no teeth?\",\r\n    \"answer\": \"A gummy bear\",\r\n    \"id\": 7\r\n  },\r\n  {\r\n    \"question\": \"What did the ocean say to the beach?\",\r\n    \"answer\": \"Nothing. It just waved.\",\r\n    \"id\": 8\r\n  },\r\n  {\r\n    \"question\": \"Why did the skeleton go to the party alone?\",\r\n    \"answer\": \"He had no body to go with him\",\r\n    \"id\": 9\r\n  },\r\n  {\r\n    \"question\": \"What happens when you cross a snowman and a vampire?\",\r\n    \"answer\": \"You get frostbite\",\r\n    \"id\": 10\r\n  },\r\n  {\r\n    \"question\": \"Why can't you trust atoms?\",\r\n    \"answer\": \"They make up everything\",\r\n    \"id\": 11\r\n  },\r\n  {\r\n    \"question\": \"Why did the programmer quit his job?\",\r\n    \"answer\": \"Because he didn't get arrays\",\r\n    \"id\": 12\r\n  },\r\n  {\r\n    \"question\": \"What do you call 8 Hobbits?\",\r\n    \"answer\": \"A Hobbyte\",\r\n    \"id\": 13\r\n  }\r\n ]\r\n}",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ]
+    "debugger_disabled": "false"
   },
   "published": true
 }]]></config>
