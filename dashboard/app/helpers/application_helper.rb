@@ -137,7 +137,7 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       end
-    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO, Game::CRAFT].include? app
+    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO, Game::CRAFT, Game::APPLAB].include? app
       asset_url "#{app}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'
