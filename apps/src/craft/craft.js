@@ -17,6 +17,7 @@ var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../MusicController');
 var AppView = require('../templates/AppView.jsx');
+var pageEJS = require('../templates/page.html.ejs');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -241,7 +242,7 @@ Craft.init = function (config) {
 
   React.render(React.createElement(AppView, {
     renderCodeApp: function () {
-      return require('../templates/page.html.ejs')({
+      return pageEJS({
         assetUrl: studioApp.assetUrl,
         data: {
           localeDirection: studioApp.localeDirection(),
