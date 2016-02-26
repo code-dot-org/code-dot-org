@@ -587,8 +587,8 @@ en:
     name: "Name"
     updated: "Updated"
     project_type: "Project Type"
-    help_text: "Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time."
-    need_help: "Need help getting started?"
+    help_text: "Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time."
+    need_help: "Try these courses to help you get started with your new project"
     really_delete: 'Delete?'
     delete_yes: 'Yes'
     delete_no: 'No'
