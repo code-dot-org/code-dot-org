@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-# coding: utf-8
 #
 # This script monitors level completion rates and issues HipChat complaints if a significant
 # number of browsers has attempted a level without anybody finishing it successfully.
