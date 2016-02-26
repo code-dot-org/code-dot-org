@@ -108,7 +108,7 @@ var TableHandler = function (tableName, callback) {
 
 /** @private */
 TableHandler.prototype.scheduleNextFetch_ = function () {
-  this.timeoutId_ = setTimeout(function recordListener() {
+  this.timeoutId_ = window.setTimeout(function recordListener() {
     this.fetchRecords_();
   }.bind(this), RECORD_INTERVAL);
 };
@@ -210,7 +210,7 @@ TableHandler.reportEvents_ = function(records, oldIdToJsonMap, newIdToJsonMap, c
 
 TableHandler.prototype.reset = function() {
   if (this.timeoutId_) {
-    clearTimeout(this.timeoutId_);
+    window.clearTimeout(this.timeoutId_);
   }
 
   // Make sure we don't call the callback after reset.
