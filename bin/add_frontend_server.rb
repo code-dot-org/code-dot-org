@@ -89,7 +89,7 @@ def determine_frontend_instance_distribution
 
   frontend_instances = instances.reservations.map do |reservation|
     reservation.instances.select { |instance| instance.state.name == 'running' &&
-        instance.tags.detect { |tag| tag.key == 'Name' && tag.value.include?('frontend') } 
+        instance.tags.detect { |tag| tag.key == 'Name' && tag.value.include?('frontend') }
     }
   end
 
