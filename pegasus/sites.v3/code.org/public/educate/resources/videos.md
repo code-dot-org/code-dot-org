@@ -171,7 +171,7 @@ App Lab is a JavaScript programming environment for students to make simple apps
 
 <br>
 <br>
-<a href="/educate/applab2"><button>Learn more</button></a>
+<a href="/educate/applab"><button>Learn more</button></a>
 
 </div>
 
