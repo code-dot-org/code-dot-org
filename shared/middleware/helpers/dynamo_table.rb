@@ -5,6 +5,7 @@ require 'aws-sdk'
 #
 class DynamoTable
   MAX_BATCH_SIZE ||= 25
+  CHANNEL_TABLE_NAME_INDEX ||= "channel_id-table_name-index"
 
   class NotFound < Sinatra::NotFound
   end
@@ -257,7 +258,14 @@ class DynamoTable
   end
 
   def ensure_column_metadata(row)
-    # TODO
+    ensure_metadata
+    column_list = JSON.parse(metadata['column_list'])
+    row_columns = TableMetadata.generate_column_list([row])
+    new_column_list = column_list.dup.concat(row_columns).uniq
+
+    if column_list != new_column_list
+      set_column_list_metadata(new_column_list)
+    end
   end
 
   def items()
@@ -305,7 +313,7 @@ class DynamoTable
     begin
       page = @dynamo_db.query(
         table_name: CDO.dynamo_tables_table,
-        index_name: CDO.dynamo_tables_index,
+        index_name: CHANNEL_TABLE_NAME_INDEX,
         key_conditions: {
           "channel_id" => {
             attribute_value_list: [channel_id.to_i],
@@ -322,6 +330,29 @@ class DynamoTable
 
       last_evaluated_key = page[:last_evaluated_key]
     end while last_evaluated_key
+
+    # now same thing for metadata
+    begin
+      page = @dynamo_db.query(
+        table_name: CDO.dynamo_table_metadata_table,
+        index_name: CHANNEL_TABLE_NAME_INDEX,
+        key_conditions: {
+          "channel_id" => {
+            attribute_value_list: [channel_id.to_i],
+            comparison_operator: "EQ",
+          },
+        },
+        attributes_to_get: ['table_name'],
+        exclusive_start_key: last_evaluated_key,
+      ).first
+
+      page[:items].each do |item|
+        results[item['table_name']] = true
+      end
+
+      last_evaluated_key = page[:last_evaluated_key]
+    end while last_evaluated_key
+
     results.keys
   end
 

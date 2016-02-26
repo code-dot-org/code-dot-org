@@ -89,7 +89,6 @@ def load_configuration()
     'use_dynamo_tables'           => [:staging, :adhoc, :test, :production].include?(rack_env),
     'use_dynamo_properties'       => [:staging, :adhoc, :test, :production].include?(rack_env),
     'dynamo_tables_table'         => "#{rack_env}_tables",
-    'dynamo_tables_index'         => "channel_id-table_name-index",
     'dynamo_properties_table'     => "#{rack_env}_properties",
     'dynamo_table_metadata_table'         => "#{rack_env}_table_metadata",
     'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
