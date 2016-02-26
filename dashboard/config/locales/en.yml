@@ -245,7 +245,7 @@ en:
       free_play:
         playlab: 'Make a Play Lab app'
         artist: 'Draw something'
-        calculate: 'Calculate Something'
+        calculate: 'Calculate something'
         applab: 'Make an App Lab app'
     user:
       classroom: 'Teacher Home Page'
