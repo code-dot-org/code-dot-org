@@ -140,8 +140,14 @@ XML
     assert_equal occurrances, blocks.length
   end
 
-  def assert_blocks_match(block1, block2)
-    assert_equal @level.strip_block(block1), @level.strip_block(block2)
+  def assert_blocks_match(toolbox_block, solution_block)
+    assert_equal @level.strip_toolbox_block(toolbox_block),
+      @level.strip_solution_block(solution_block)
+  end
+
+  def assert_blocks_dont_match(toolbox_block, solution_block)
+    assert_not_equal @level.strip_toolbox_block(toolbox_block),
+      @level.strip_solution_block(solution_block)
   end
 
   test 'identical blocks match' do
@@ -180,10 +186,16 @@ XML
     assert_blocks_match toolbox_block, solution_block
   end
 
-  test '*_constant_dropdown blocks match *_constant blocks' do
+  test '*_constant_dropdown blocks in the toolbox match *_constant blocks in the solution' do
     toolbox_block = make_toolbox_node @draw_with_dropdown_xml
     solution_block = make_solution_node @draw_block_xml
     assert_blocks_match toolbox_block, solution_block
+  end
+
+  test '*_constant_dropdown blocks in the solution do not match *_constant blocks in the toolbox' do
+    toolbox_block = make_toolbox_node @draw_block_xml
+    solution_block = make_solution_node @draw_with_dropdown_xml
+    assert_blocks_dont_match toolbox_block, solution_block
   end
 
   test 'add missing block' do
