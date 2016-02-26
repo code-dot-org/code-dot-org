@@ -13,6 +13,7 @@ var flappyMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
+var AppView = require('../templates/AppView.jsx');
 var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var constants = require('./constants');
@@ -495,20 +496,6 @@ Flappy.init = function(config) {
 
   loadLevel();
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
-      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl, shareable: level.shareable}),
-      blockUsed: undefined,
-      idealBlockNumber: undefined,
-      editCode: level.editCode,
-      blockCounterClass: 'block-counter-default',
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
@@ -588,10 +575,29 @@ Flappy.init = function(config) {
     config.blockArrangement.flappy_whenClick.y = row2;
   }
 
-  studioApp.init(config);
+  React.render(React.createElement(AppView, {
+    renderCodeApp: function () {
+      return page({
+        assetUrl: studioApp.assetUrl,
+        data: {
+          localeDirection: studioApp.localeDirection(),
+          visualization: require('./visualization.html.ejs')(),
+          controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl, shareable: level.shareable}),
+          blockUsed: undefined,
+          idealBlockNumber: undefined,
+          editCode: level.editCode,
+          blockCounterClass: 'block-counter-default',
+          readonlyWorkspace: config.readonlyWorkspace
+        }
+      });
+    },
+    onMount: function () {
+      studioApp.init(config);
 
-  var rightButton = document.getElementById('rightButton');
-  dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+      var rightButton = document.getElementById('rightButton');
+      dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+    }
+  }), document.getElementById(config.containerId));
 };
 
 /**

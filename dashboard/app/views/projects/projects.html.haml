@@ -54,10 +54,11 @@
 
   .row
     .span12
-      %h2.lesson{style: 'text-align:center'}
+      %h3.lesson{style: 'text-align:center'}
         = t('project.need_help')
   .row
-    .center{style: 'width: 480px;'}
+    .center{style: 'width: 720px;'}
+      = render partial: 'shared/course_tall_block', locals: { id: 'cspunit3' }
       = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
       = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
 
