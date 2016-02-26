@@ -1,7 +1,5 @@
 Sequel.migration do
   up do
-    # TODO - app_id -> channel_id
-
     create_table?(:channel_table_metadata, charset: 'utf8') do
       primary_key :id, unsigned: true, null: false
       foreign_key :app_id, index: true, null: false
