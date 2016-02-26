@@ -7,6 +7,12 @@ Ubuntu 14.04
 #### apt packages installed (from PPA)
 - `nginx`
 
+## Attributes
+
+- `node['cdo-nginx']['common_name']`: Common name used for SSL self-signed certificate.
+- `node['cdo-nginx']['ssl_cert']['content']` and `node['cdo-nginx']['ssl_key']['content']`: Provide these attributes
+to use an existing SSL certificate. If left blank, a self-signed certificate will be created.
+
 ## Running Tests
 The integration tests run using [Test Kitchen](http://kitchen.ci/).
 See `test/cookbooks/nginx_test/README.md` for more details.
