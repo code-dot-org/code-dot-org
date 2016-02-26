@@ -440,7 +440,7 @@ en:
   upsell:
     applab:
       title: 'App Lab'
-      body: 'App Lab is a web-based environment for students to make simple apps. Simply use "design mode" to design your app, write code for you app with blocks or in JavaScript, then send the app to your phone in seconds.'
+      body: "App Lab is a programming environment to make simple apps that live on the web. It's easy: simply drag and drop to design your app, write code for your app with JavaScript blocks or with text, then share your app with friends in seconds."
       audience: 'Ages 13+'
       cta: 'Learn how'
     hoc:
