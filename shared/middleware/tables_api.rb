@@ -16,7 +16,7 @@ class TablesApi < Sinatra::Base
     end
   end
 
-  TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+  TableType = CDO.use_dynamo_tables ? DynamoTable : SqlTable
 
   #
   # GET /v3/(shared|user)-tables/<channel-id>/<table-name>
