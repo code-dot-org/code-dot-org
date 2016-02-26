@@ -14,11 +14,6 @@ Lint/AmbiguousOperator:
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
-# Offense count: 5
-# Cop supports --auto-correct.
-Lint/DeprecatedClassMethods:
-  Enabled: false
-
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: AlignWith, SupportedStyles, AutoCorrect.
@@ -52,12 +47,6 @@ Lint/ShadowingOuterLocalVariable:
 
 # Offense count: 1
 Lint/UnderscorePrefixedVariableName:
-  Enabled: false
-
-# Offense count: 84
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoreEmptyBlocks.
-Lint/UnusedBlockArgument:
   Enabled: false
 
 # Offense count: 33
