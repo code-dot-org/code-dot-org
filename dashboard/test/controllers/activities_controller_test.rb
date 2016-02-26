@@ -1020,7 +1020,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone changes to next stage in default script' do
-    last_level_in_stage = @script_level.script.script_levels.select{|x|x.level.game.name == 'Artist'}.last
+    last_level_in_stage = @script_level.script.script_levels.reverse.find{|x|x.level.game.name == 'Artist'}
     post :milestone, @milestone_params.merge(script_level_id: last_level_in_stage.id)
     assert_response :success
     response = JSON.parse(@response.body)

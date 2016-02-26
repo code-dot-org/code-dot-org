@@ -11,8 +11,8 @@
 #   LogEntries.
 #
 # including dashboard environment doesn't work if not in the dashboard dir
-Dir.chdir(File.expand_path('../../dashboard', __FILE__))
-require_relative '../dashboard/config/environment'
+Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
+require_relative '../../dashboard/config/environment'
 require 'cdo/only_one'
 require 'cdo/hip_chat'
 require 'cdo/user_agent_parser'
