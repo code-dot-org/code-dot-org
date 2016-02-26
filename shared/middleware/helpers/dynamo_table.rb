@@ -31,7 +31,7 @@ class DynamoTable
     ).item
 
     # only return the parts we care about
-    @metadata_item.slice("column_list") if @metadata_item
+    @metadata_item.select{|k,v| k == "column_list"} if @metadata_item
   end
 
   def set_column_list_metadata(column_list)
