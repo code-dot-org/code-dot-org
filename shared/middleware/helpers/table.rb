@@ -228,10 +228,40 @@ class DynamoTable
     @table_name = table_name
 
     @hash = "#{@channel_id}:#{@table_name}:#{@storage_id}"
+    @metadata_hash = "#{@channel_id}:#{@table_name}:#{@storage_id}:metadata"
   end
 
   def db
     @@dynamo_db ||= Aws::DynamoDB::Client.new
+  end
+
+  def metadata
+    @metadata_item ||= db.get_item(
+        table_name: CDO.dynamo_table_metadata_table,
+        consistent_read: true,
+        key: {'hash'=>@metadata_hash}
+    ).item
+
+    # only return the parts we care about
+    @metadata_item.slice("column_list") if @metadata_item
+  end
+
+  def create_metadata
+    db.put_item(
+      table_name: CDO.dynamo_table_metadata_table,
+      item: {
+        hash: @metadata_hash,
+        channel_id: @channel_id,
+        table_name: @table_name,
+        column_list: Table::Metadata.generate_column_list(to_a).to_json,
+        updated_at: DateTime.now.to_s,
+      }
+    )
+  end
+
+  def ensure_metadata
+    create_metadata unless metadata
+    metadata
   end
 
   def delete(id)
@@ -261,6 +291,10 @@ class DynamoTable
         CDO.dynamo_tables_table => items.slice(start_index, MAX_BATCH_SIZE)
       })
     end
+    db.delete_item(
+      table_name: CDO.dynamo_table_metadata_table,
+      key: {'hash'=>@metadata_hash}
+    )
     true
   end
 
@@ -363,6 +397,12 @@ class DynamoTable
   end
 
   def rename_column(old_name, new_name, ip_address)
+    ensure_metadata()
+    column_list = JSON.parse(metadata[:column_list])
+    new_column_list = Table::Metadata.rename_column(column_list, old_name, new_name)
+
+    metadata_dataset.update({column_list: new_column_list.to_json})
+
     items.each do |r|
       # We want to preserve the order of the columns so creating
       # a new hash is required.
@@ -377,6 +417,9 @@ class DynamoTable
       end
       update(r['row_id'], new_value, ip_address)
     end
+  end
+
+  def add_column(column_name)
   end
 
   def delete_column(column_name, ip_address)
@@ -406,8 +449,6 @@ class DynamoTable
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException
       raise NotFound, "row `#{id}` not found in `#{@table_name}` table"
     end
-
-    new
 
     value.merge('id' => id)
   end
