@@ -19,6 +19,7 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
   belongs_to :plc_enrollment_module_assignment, class_name: '::Plc::EnrollmentModuleAssignment'
   belongs_to :plc_task, class_name: '::Plc::Task'
 
+
   validates :plc_enrollment_module_assignment, presence: true
 
   after_update :check_course_completion

@@ -1,0 +1,17 @@
+-@task = @plc_enrollment_task_assignment.plc_task
+
+%p#notice= notice
+
+%p
+  This is the task assignment completion page for #{@task.name}
+
+%p
+  Here is the subpage for actually completing the task #{@task.type.underscore[4..-1]}
+= render partial: 'plc/enrollment_task_assignments/complete/' + @task.type.underscore[4..-1] unless @task.type == 'Plc::Task'
+
+%p
+  = link_to @task.resource_url
+
+= link_to 'Edit', edit_plc_enrollment_task_assignment_path(@plc_enrollment_task_assignment)
+\|
+= link_to 'Back', plc_enrollment_task_assignments_path
