@@ -7,7 +7,7 @@ require_relative './dynamo_table'
 class TableMetadata
   def self.generate_column_list(records)
     return [] if records.nil?
-    # TODO - test for id
+    # don't include 'id', since that's a reserved column that will always exist
     records.map(&:keys).flatten.uniq - ['id']
   end
 
