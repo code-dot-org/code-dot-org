@@ -237,14 +237,14 @@ class TablesTest < Minitest::Test
 
   def test_metadata_generate_column_info
     records = [
-      { "col1" => 1, "col2" => 2 }
+      { "id" => 1, "col1" => 1, "col2" => 2 }
     ]
     expected = ["col1", "col2"]
     assert_equal expected, TableMetadata.generate_column_list(records)
 
     records = [
-      { "col1" => 1, "col2" => 2 },
-      { "col2" => 3, "col3" => 4 }
+      { "id" => 1, "col1" => 1, "col2" => 2 },
+      { "id" => 2, "col2" => 3, "col3" => 4 }
     ]
     expected = ["col1", "col2", "col3"]
     assert_equal expected, TableMetadata.generate_column_list(records)
