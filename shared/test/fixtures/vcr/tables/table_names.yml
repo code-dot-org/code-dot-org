@@ -1,0 +1,159 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:_testTable:"}],"ComparisonOperator":"EQ"}},"AttributesToGet":["row_id"]}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '154'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - DSLOLI7R6EUI0IFVSIJ0K9J9FJVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3413411624'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '39'
+      Date:
+      - Fri, 26 Feb 2016 00:13:16 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":0,"Items":[],"ScannedCount":0}'
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 00:13:17 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:table1:"}],"ComparisonOperator":"EQ"}},"AttributesToGet":["row_id"],"Limit":1,"ScanIndexForward":false}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '185'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - ORIP1942DT9R4R73QN7J9SV98BVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '829569283'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '124'
+      Date:
+      - Fri, 26 Feb 2016 00:13:16 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":1,"Items":[{"row_id":{"N":"2"}}],"LastEvaluatedKey":{"row_id":{"N":"2"},"hash":{"S":"1:table1:"}},"ScannedCount":1}'
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 00:13:17 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:table1:"}],"ComparisonOperator":"EQ"}},"AttributesToGet":["row_id"]}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '150'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - C2PR9DUTUMTS2C3OE22I18E9QFVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3677345942'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '80'
+      Date:
+      - Fri, 26 Feb 2016 00:13:16 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":2,"Items":[{"row_id":{"N":"1"}},{"row_id":{"N":"2"}}],"ScannedCount":2}'
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 00:13:17 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"RequestItems":{"test_tables":[{"DeleteRequest":{"Key":{"hash":{"S":"1:table1:"},"row_id":{"N":"0.1E1"}}}},{"DeleteRequest":{"Key":{"hash":{"S":"1:table1:"},"row_id":{"N":"0.2E1"}}}}]}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.BatchWriteItem
+      Content-Length:
+      - '186'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - P73UF3GSJ8FL9VAD2BM26NE2T3VV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '4185382651'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '23'
+      Date:
+      - Fri, 26 Feb 2016 00:13:17 GMT
+    body:
+      encoding: UTF-8
+      string: '{"UnprocessedItems":{}}'
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 00:13:18 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_table_metadata","Key":{"hash":{"S":"1:table1::metadata"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.DeleteItem
+      Content-Length:
+      - '77'
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Amzn-Requestid:
+      - 0CJV7V3E1N6BIDMOGR02ITRIUNVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3737639027'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '112'
+      Date:
+      - Fri, 26 Feb 2016 00:13:17 GMT
+    body:
+      encoding: UTF-8
+      string: '{"__type":"com.amazonaws.dynamodb.v20120810#ResourceNotFoundException","message":"Requested
+        resource not found"}'
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 00:13:18 GMT
+recorded_with: VCR 3.0.0
