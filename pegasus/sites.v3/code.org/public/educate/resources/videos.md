@@ -1,15 +1,15 @@
 ---
-title: Video library
+title: Tools and videos
 nav: educate_nav
 video_player: true
 ---
 
 
-# Video Library
+# Video library
 
 We are building a growing library of educational videos available for re-use by educators worldwide, online or in classrooms. Our goal is to enable our efforts to be amplified beyond our own curriculum's reach. **Note:** see below for the licensing restrictions on use of these videos.
 
-## High school Computer Science Principles:
+## High school Computer Science Principles
 
 <div style="float:left; padding:10px; width:49%">
 
@@ -29,7 +29,7 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style="clear: both;"></div>
 
-## How the internet works:
+## How the internet works
 
 <div style="float:left; padding:10px; width:49%">
 
@@ -83,7 +83,7 @@ We are building a growing library of educational videos available for re-use by 
 <div style="clear: both;"></div>
 
 
-## The basics of computer science:
+## The basics of computer science
 
 <div style="float:left; padding:10px; width:49%">
 
@@ -139,6 +139,16 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style='clear:both'></div>
 
+## Inspirational videos
+
+<div style="float:left; padding:10px">
+
+<%= view :inspirational_videos %>
+
+</div>
+
+<div style='clear:both'></div>
+
 ---
 
 Code.org’s library of videos may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS, (using the embedded video player provided, or download link IF provided) with attribution to Code.org (2) the videos are not incorporated into any mash-ups, (3) the videos are used for computer science education purposes, and (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge.
@@ -147,4 +157,40 @@ The celebrities and video "cast" members appearing in Code.org tutorial videos r
 
 ![image](/images/cc-logo.png)
 
+# Create apps in minutes with App Lab
 
+[col-50]
+
+<%= view :display_video_thumbnail, id: "AppLabIntro", video_code: "4wY8JmFzZ8c", play_button: 'center', download_path: "//videos.code.org/2015/csp/IntroToAppLab.mp4" %>
+
+[/col-50]
+
+<div style="float:left; padding:20px; width:49%">
+
+App Lab is a JavaScript programming environment for students to make simple apps that live on the web.  Use this standalone tool in your classroom to supplement any CS course.  It's easy: simply drag and drop to design your app, write code for your app with JavaScript blocks or with text, then send the app to your phone in seconds.
+
+<br>
+<br>
+<a href="/educate/applab2"><button>Learn more</button></a>
+
+</div>
+
+<div style='clear:both'></div>
+
+# Find a guest speaker for your classroom
+ 
+<div style="float:left; padding:10px; width: 49%">
+
+<img src='/images/fill-350x230/guest-speaker-alice.jpg' style='border-radius: 5px;'>
+ 
+</div>
+
+<div style="float:left; padding: 5px; width: 49%">
+
+Connect what your students are learning to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
+
+<br>
+<br>
+<a href="/volunteer/local"><button>Find a guest speaker</button></a>
+
+</div>
