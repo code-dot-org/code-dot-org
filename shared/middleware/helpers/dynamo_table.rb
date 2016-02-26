@@ -33,22 +33,27 @@ class DynamoTable
     @metadata_item.slice("column_list") if @metadata_item
   end
 
-  def create_metadata
+  def set_column_list_metadata(column_list)
     db.put_item(
       table_name: CDO.dynamo_table_metadata_table,
       item: {
         hash: @metadata_hash,
         channel_id: @channel_id,
         table_name: @table_name,
-        column_list: TableMetadata.generate_column_list(to_a).to_json,
+        column_list: column_list.to_json,
         updated_at: DateTime.now.to_s,
       }
     )
+
+    metadata
+  end
+
+  def create_metadata
+    set_column_list_metadata TableMetadata.generate_column_list(to_a)
   end
 
   def ensure_metadata
     create_metadata unless metadata
-    metadata
   end
 
   def delete(id)
@@ -148,6 +153,8 @@ class DynamoTable
       retry
     end
 
+    ensure_column_metadata(value)
+
     value.merge('id' => row_id)
   end
 
@@ -185,10 +192,9 @@ class DynamoTable
 
   def rename_column(old_name, new_name, ip_address)
     ensure_metadata()
-    column_list = JSON.parse(metadata[:column_list])
+    column_list = JSON.parse(metadata["column_list"])
     new_column_list = TableMetadata.rename_column(column_list, old_name, new_name)
-
-    metadata_dataset.update({column_list: new_column_list.to_json})
+    set_column_list_metadata(new_column_list)
 
     items.each do |r|
       # We want to preserve the order of the columns so creating
@@ -207,9 +213,18 @@ class DynamoTable
   end
 
   def add_column(column_name)
+    ensure_metadata()
+    column_list = JSON.parse(metadata["column_list"])
+    new_column_list = TableMetadata.add_column(column_list, column_name)
+    set_column_list_metadata(new_column_list)
   end
 
   def delete_column(column_name, ip_address)
+    ensure_metadata()
+    column_list = JSON.parse(metadata["column_list"])
+    new_column_list = TableMetadata.remove_column(column_list, column_name)
+    set_column_list_metadata(new_column_list)
+
     items.each do |r|
       value = JSON.load(r['value'])
       value.delete(column_name)
@@ -236,8 +251,13 @@ class DynamoTable
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException
       raise NotFound, "row `#{id}` not found in `#{@table_name}` table"
     end
+    ensure_column_metadata(value)
 
     value.merge('id' => id)
+  end
+
+  def ensure_column_metadata(row)
+    # TODO
   end
 
   def items()
