@@ -8,34 +8,43 @@ video_player: true
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet"}
 %link{href: "/css/highlights.css", rel: "stylesheet"}
 
-= view :jumbotron_banner, img: CDO.code_org_url("/images/app-lab/girl-cropped.jpg"), title: "App Lab", desc: "App Lab is a web-based environment for students to make simple apps. Simply use \"design mode\" to design your app, write code for you app with blocks or in JavaScript, then send the app to your phone in seconds.", specs: "Grades 9-12, All modern browsers, English only", url: CDO.studio_url('/p/applab'), cta: "Make an app", nav_bar: [{text: 'Resources', url: '#resources'}, {text: 'Challenges', url: '#challenges'}, {text: 'Video Library', url: '#videos'}]
+= view :jumbotron_banner, img: CDO.code_org_url("/images/app-lab/girl-cropped.jpg"), title: "App Lab", desc: "App Lab is a web-based environment for students to make simple apps. Simply drag and drop to design your app, write code for your app with JavaScript blocks or with text, then send the app to your phone in seconds.", specs: "Ages 13+, All modern browsers, English only", url: CDO.studio_url('/p/applab'), cta: "Make an app", nav_bar: [{text: 'Resources', url: '#resources'}, {text: 'Challenges', url: '#challenges'}, {text: 'Video Library', url: '#videos'}]
 
 #resources.responsive-body
   %h1 Resources to get you started
-  Code.org has created a new programming tool, called <a href="#{CDO.studio_url('/p/applab')}">App Lab</a> for the new <a href="#{CDO.code_org_url('/educate/csp')}">Computer Science Principles</a> high school course. You do not need to complete the Computer Science Principles course to use App Lab, but if you'd like an introduction to the tool here are some resources to help.
-  .clear
   .col-50
     %h2 Try the course that introduces App Lab
-    = view :course_block, id: "cspunit3", height: "363"
+    - img_src =  CDO.code_org_url("/shared/images/courses/logo_cspunit3.jpg")
+    .courseblock-span6.courseblock-wide-large{style: "height: 363px;"}
+      %a{:href=>CDO.studio_url("/s/cspunit3")}
+        %img{src: img_src, style: "width: 100%"}
+        .courseblock-span5{style: "margin-left: 20px; margin-top: 20px;"}
+          %h3= I18n.t("cspunit3_name")
+          %h4= I18n.t("cspunit3_gradelevel")
+          .smalltext= I18n.t("cspunit3_shortdescription_congrats")
+          %button{style: "margin-left: 10px; margin-top: 20px;"}= I18n.t(:view_unit)
+    .clear
+
   .col-50
     %h2 Watch this video introduction to App Lab
     = view :display_video_thumbnail, id: "AppLabIntro", video_code: "4wY8JmFzZ8c", play_button: 'center', download_path: "//videos.code.org/2015/csp/IntroToAppLab.mp4"
   .clear
 
 #challenges.responsive-body
-  %h1 Try your hand at these challenges
+  %h2 Try your hand at these challenges
   .highlights-content
     - cta = "Remix the project"
-    = view :highlight_item, item: {image: "etch-a-sketch", title: "Slider sketch", desc: "Try it now!", cta: cta, url: CDO.studio_url('/projects/applab/R733v_Jibm3iMGP4l_OLdw')}
-    = view :highlight_item, item: {image: "art-flashcard", title: "Art flaschards", desc: "Try it now!", cta: cta, url: CDO.studio_url('/projects/applab/v4ybZ5a0mn77KyXmc9caWQ')}
-    = view :highlight_item, item: {image: "milk-adventure", title: "Choose your own adventure", desc: "Try it now!", cta: cta, url: CDO.studio_url('/projects/applab/r1A1E1G0dLO-9xe_N2ybZQ')}
-    = view :highlight_item, item: {image: "poke-pig", title: "Poke the pig", desc: "Try it now!", cta: cta, url: CDO.studio_url('/projects/applab/zL2kDJpxRjMGTeVRDidiaA')}
-    = view :highlight_item, item: {image: "pet-data", title: "Pet poll", desc: "Try it now!", cta: cta, url: CDO.studio_url('/projects/applab/QzJdV431pNEgnMb0-QKVeA')}
-    = view :highlight_item, item: {image: "buddha-board", title: "Pensive painter", desc: "Try it now!", cta: cta, url: CDO.studio_url('/projects/applab/-LH9pPrihOxyQtn63ml5_Q')}
+    = view :highlight_item, item: {image: "slider-sketch", title: "Slider sketch", desc: "Use the sliders to draw cool patterns and designs. Challenge: Add another slider to change the thickness of the line.", cta: cta, url: 'https://studio.code.org/projects/applab/JNbplBXMisx2aMefUkh39g/remix'}
+    = view :highlight_item, item: {image: "art-flashcard", title: "Art flaschards", desc: "Want to learn more about a new subject or practice for a test? Use this app to create flashcards. Challenge: add more cards to the deck or create a whole new deck for your favorite subject.", cta: cta, url: 'https://studio.code.org/projects/applab/v4ybZ5a0mn77KyXmc9caWQ/remix'}
+    = view :highlight_item, item: {image: "milk-adventure", title: "Choose your own adventure", desc: "Choose carefully as you go through this short adventure. Challenge: continue the story by adding in more scenarios and choices. Or create a totally different story!", cta: cta, url: 'https://studio.code.org//projects/applab/r1A1E1G0dLO-9xe_N2ybZQ/remix'}
+    = view :highlight_item, item: {image: "poke-pig", title: "Poke the pig", desc: "How many times you can poke the pig before time runs out? Challenge: Add a button and event to be able to play again and again, so you can improve your score.", cta: cta, url: 'https://studio.code.org//projects/applab/KNy2mHA6p302KIMHHbUCgA/remix'}
+    = view :highlight_item, item: {image: "pet-data", title: "Pet poll", desc: "Vote for your favorite pet in this fun app. Challenge: Add more animals so you can vote for more favorites.", cta: cta, url: 'https://studio.code.org//projects/applab/yz9M1Db77nIBEpfNfyRFhw/remix'}
+    = view :highlight_item, item: {image: "pensive-painter", title: "Pensive painter", desc: "Take a deep breath, relax, and paint whatever you desire. Challenge: Add a click event to clear the screen so you can start painting a new masterpiece.", cta: cta, url: 'https://studio.code.org//projects/applab/IAK_Qyc23QrkAB61KGvn1g/remix'}
   .clear
 
 #videos
   %h1.responsive-body Video library
+  Some of these videos appear in the CS Principles programming unit and are displayed here as a quick introduction to each of the main concepts from the unit. Check out each video to see how you can add new features to your app.
   - DB[:cdo_cspunit3_videos].each do |item|
     // Show the chapter title at the 
     // beginning of each video chapter
