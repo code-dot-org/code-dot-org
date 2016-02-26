@@ -12,12 +12,11 @@ var AppView = React.createClass({
   },
 
   componentDidMount: function () {
-    this.refs.codeApp.getDOMNode().innerHTML = this.props.renderCodeApp();
     this.props.onMount();
   },
 
   render: function () {
-    return <ProtectedStatefulDiv ref="codeApp" />;
+    return <ProtectedStatefulDiv renderContents={this.props.renderCodeApp} />;
   }
 });
 module.exports = AppView;
