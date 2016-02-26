@@ -297,7 +297,8 @@ module LevelsHelper
     # Process level view options
     level_overrides = level_view_options.dup
     if level_options['embed'] || level_overrides[:embed]
-      level_overrides.merge!(hide_source: true, show_finish: true)
+      level_overrides[:hide_source] = true
+      level_overrides[:show_finish] = true
     end
     if level_overrides[:embed]
       view_options(no_header: true, no_footer: true, white_background: true)

@@ -3,5 +3,6 @@
   .educate-box{style: "background-color: #{color}"}
     %h1.educate-h1= item[:title_s]
     %p.educate-p= item[:description_t]
-    %a{:href => item[:url_s]}
-      %button.educate-button= item[:button_s]
+    - unless item[:url_s].nil_or_empty?
+      %a{:href => item[:url_s]}
+        %button.educate-button= item[:button_s]
