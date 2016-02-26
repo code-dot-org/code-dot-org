@@ -173,11 +173,11 @@ CrosshairOverlay.prototype.getCoordinateText = function () {
  */
 CrosshairOverlay.prototype.getElementIdText_ = function () {
   return "id: " +
-      CrosshairOverlay.ellipsifyText(this.props_.mouseoverApplabControlId, ELEMENT_ID_TEXT_MAX_CHAR);
+      CrosshairOverlay.ellipsify(this.props_.mouseoverApplabControlId, ELEMENT_ID_TEXT_MAX_CHAR);
 };
 
 
-CrosshairOverlay.ellipsifyText = function (inputText, maxLength) {
+CrosshairOverlay.ellipsify = function (inputText, maxLength) {
   if (inputText && inputText.length > maxLength) {
     return inputText.substr(0, maxLength - 3) + "...";
   }
@@ -196,4 +196,4 @@ CrosshairOverlay.prototype.createTextBubbleElement_ = function () {
   this.ownElement_.appendChild(textElement);
 
   return [bubbleElement, textElement];
-}
+};
