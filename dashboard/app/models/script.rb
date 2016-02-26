@@ -433,10 +433,8 @@ class Script < ActiveRecord::Base
             name: stage_name,
             script: script
           )
-        script_level_attributes.merge!(
-          stage_id: stage.id,
-          position: (script_level_position[stage.id] += 1)
-        )
+        script_level_attributes[:stage_id] = stage.id
+        script_level_attributes[:position] = (script_level_position[stage.id] += 1)
         script_level.reload
         script_level.assign_attributes(script_level_attributes)
         script_level.save! if script_level.changed?
