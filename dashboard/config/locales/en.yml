@@ -243,10 +243,10 @@ en:
       finished_hoc: "I've finished my Hour of Code"
       sign_in_to_save: 'Sign in to save progress'
       free_play:
-        playlab: 'Make an App'
-        artist: 'Draw Something'
+        playlab: 'Make a Play Lab app'
+        artist: 'Draw something'
         calculate: 'Calculate Something'
-        applab: 'Make an App'
+        applab: 'Make an App Lab app'
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
