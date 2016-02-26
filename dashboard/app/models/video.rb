@@ -59,10 +59,8 @@ class Video < ActiveRecord::Base
 
     language = I18n.locale.to_s.downcase.split('-').first
     if language != 'en'
-      defaults.merge!(
-          cc_lang_pref: language,
-          cc_load_policy: 1
-      )
+      defaults[:cc_lang_pref] = language
+      defaults[:cc_load_policy] = 1
     end
     defaults.merge!(args)
     "#{Video.youtube_base_url}/embed/#{youtube_code}/?#{defaults.to_query}"

@@ -9,6 +9,7 @@ metadata
   varnish
   mysql
   ruby
+  nginx
 ).map{|x|"cdo-#{x}"}.
   push('sudo-user').
   each do |dep|
