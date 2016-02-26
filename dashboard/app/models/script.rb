@@ -248,7 +248,7 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_id(script_level_id)
-    self.script_levels.select { |sl| sl.id == script_level_id.to_i }.first
+    self.script_levels.find { |sl| sl.id == script_level_id.to_i }
   end
 
   def get_script_level_by_stage_and_position(stage_position, puzzle_position)
@@ -433,10 +433,8 @@ class Script < ActiveRecord::Base
             name: stage_name,
             script: script
           )
-        script_level_attributes.merge!(
-          stage_id: stage.id,
-          position: (script_level_position[stage.id] += 1)
-        )
+        script_level_attributes[:stage_id] = stage.id
+        script_level_attributes[:position] = (script_level_position[stage.id] += 1)
         script_level.reload
         script_level.assign_attributes(script_level_attributes)
         script_level.save! if script_level.changed?

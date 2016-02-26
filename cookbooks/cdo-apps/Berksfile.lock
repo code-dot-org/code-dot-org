@@ -6,6 +6,8 @@ DEPENDENCIES
     path: ../cdo-github-access
   cdo-mysql
     path: ../cdo-mysql
+  cdo-nginx
+    path: ../cdo-nginx
   cdo-postfix
     path: ../cdo-postfix
   cdo-repository
@@ -31,10 +33,11 @@ GRAPH
     apt (>= 0.0.0)
   build-essential (2.3.1)
     7-zip (>= 0.0.0)
-  cdo-apps (0.2.2)
+  cdo-apps (0.2.6)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
+    cdo-nginx (>= 0.0.0)
     cdo-postfix (>= 0.0.0)
     cdo-repository (>= 0.0.0)
     cdo-ruby (>= 0.0.0)
@@ -44,10 +47,13 @@ GRAPH
     sudo-user (>= 0.0.0)
   cdo-github-access (0.1.1)
   cdo-mysql (0.1.1)
+  cdo-nginx (0.0.2)
+    apt (>= 0.0.0)
+    ssl_certificate (>= 0.0.0)
   cdo-postfix (0.2.0)
     apt (>= 0.0.0)
     postfix (>= 0.0.0)
-  cdo-repository (0.2.0)
+  cdo-repository (0.2.1)
     cdo-github-access (>= 0.0.0)
   cdo-ruby (0.1.1)
     brightbox-ruby (>= 0.0.0)
@@ -59,6 +65,7 @@ GRAPH
   ohai (2.1.0)
   omnibus_updater (2.0.0)
   postfix (3.7.0)
+  ssl_certificate (1.11.0)
   sudo-user (0.1.0)
     ohai (>= 0.0.0)
   windows (1.39.1)

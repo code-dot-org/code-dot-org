@@ -1,32 +1,19 @@
 ---
 title: Professional Learning Partner Virtual Playbook
-
 ---
 
-3x3<br/>
-Need to add to the nav on the main PLP page
+<link type="text/css" rel="stylesheet" href="/css/educate.css" />
 
-<b>Top row <br/></b>
+<%= view :educate_box, item: {title_s: 'Workshop Planning', description_t: "A guide to everything you'll need to take care of to make sure your summer workshops are a success", url_s: CDO.code_org_url('/educate/professional-learning-partner/playbook/workshop-planning'), button_s: "Learn more"} %>
 
-Left: Workshop Planning - A guide to everything you'll need to take care of to make sure your summer workshops are a success <br/>
- 
-Middle: Communications - The who, what, when, where and why about communicating with your teachers and facilitators<br/>
+<%= view :educate_box, item: {title_s: 'Communications', description_t: "Coming Soon!"} %>
 
-Right: Community Building - Start building your local teacher community and to learn how to connect with other communities nationally<br/>
+<%= view :educate_box, item: {title_s: 'Community Building', description_t: "Coming Soon!"} %>
 
-<b>Middle row<br/></b>
+<%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/reporting-and-evaluations"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Teacher Support', description_t: "These resources will help you provide support to the teachers enrolled in the Professional Learning Program", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/teacher-support"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Workshop Dashboard', description_t: "Coming soon!", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/dashboard"), button_s: "Learn more"} %>
 
-Left: Reporting and Evaluations - <Br/>
-
-Middle: Teacher Support - These resources will help you provide support to the teachers enrolled in the Professional Learning Program<br/>
-
-Right: Workshop Dashboard - Coming Soon!
-
-<b>Bottom row</b><br/>
-Left: Counselor and Administrator Professional Development - Coming Soon! <br/>
-
-Middle: Facilitator Support - Support your facilitators with these essential resources<br/>
-
-Right: FAQ - Can't find what you're looking for? Check the FAQ.
-
-
+<%= view :educate_box, item: {title_s: 'Counselor and Administrator Professional Development', description_t: "Coming soon!"} %>
+<%= view :educate_box, item: {title_s: 'Facilitator Support', description_t: "Support your facilitators with these essential resources", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/facilitator-support"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'FAQ', description_t: "Can't find what you're looking for? Check the FAQ.", url_s: CDO.code_org_url("/educate/professional-learning-partner/faq"), button_s: "Learn more"} %>
