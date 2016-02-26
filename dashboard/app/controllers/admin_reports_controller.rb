@@ -267,6 +267,30 @@ class AdminReportsController < ApplicationController
     end
   end
 
+  def retention
+    require 'cdo/properties'
+    SeamlessDatabasePool.use_persistent_read_connection do
+      # Extract the desired scripts from the parameter, defaulting to the CSF scripts.
+      @scripts = params[:scripts_ids].present? ?
+        params[:script_ids].split(',').map{|i| i.to_i} :
+        [1, 17, 18, 19, 23]
+      # Extract the cached per-level and per-stage data for these scripts.
+      @level_stats = Properties.
+        get(:retention_stats)['script_progress_levels'].
+        select{|script, script_data| @scripts.include? script.to_i}
+      @stage_stats = Properties.
+        get(:retention_stats)['script_progress_stages'].
+        select{|script, stage, script_stage_data| @scripts.include? script.to_i}
+
+      # Retrieve the number of stages and levels in each script.
+      # TODO(asher): Add a where(script_id: @scripts) clause.
+      @stages_per_script = Stage.group(:script_id).count.
+        keep_if{|script, counts| @scripts.include? script.to_i}
+      @levels_per_script = ScriptLevel.group(:script_id).count.
+        keep_if{|script, counts| @scripts.include? script.to_i}
+    end
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_script
     @script = Script.get_from_cache(params[:script_id]) if params[:script_id]

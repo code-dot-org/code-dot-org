@@ -1,0 +1,49 @@
+- content_for :head do
+  %script{src:'https://www.google.com/jsapi'}
+  %script{src:'https://www.gstatic.com/charts/loader.js'}
+
+%h1
+  = "Retention for Scripts #{@scripts.join(', ')}"
+
+%br
+
+#chart_by_level
+#table_by_level
+
+%br
+
+#chart_by_stages
+#table_by_stages
+
+- content_for :body_scripts do
+  :javascript
+    // Load the Visualization API and the appropriate packages, setting a callback
+    // to run when the API is loaded.
+    console.log("javascript");
+    google.load('visualization', '1.0', {'packages':['corechart', 'table']});
+    google.setOnLoadCallback(drawChartAndTable);
+    var scripts = #{@scripts};
+    console.log(scripts);
+    var script_data = [[0, 100.0, 100.0, 100.0, 100.0, 100.0], [1, 50.0, 25.0, 40.0, 60.0, 30.0], [2, 20.0, 10.0, 0.0, 0.0, 20.0]];
+    console.log(script_data);
+    // The callback that creates and populates the data tables, instantiates the
+    // charts, and draws them.
+    function drawChartAndTable() {
+      console.log("drawChartAndTable");
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Number of Levels');
+      for (var i = 0; i < scripts.length; i++) {
+        console.log('Adding: script ' + scripts[i]);
+        data.addColumn('number', 'Script ' + scripts[i]);
+      }
+      for (var j = 0; j < script_data.length; j++) {
+        data.addRow(script_data[j]);
+      }
+
+      var table = new google.visualization.Table(document.getElementById('table_by_level'));
+      table.draw(data);
+
+      var options = {'title': 'Script Completion Data', 'width':800, 'height':500};
+      var chart = new google.visualization.LineChart(document.getElementById('chart_by_level'));
+      chart.draw(data, options);      
+    }
