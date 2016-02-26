@@ -28,7 +28,7 @@ ________________
 <a id="online"></a>
 ### **Online Coursework Support**
 
-You should have each online coursework assignment in your Code Stuido account. If you are having trouble accessing your account, see the video below on how to log in at [studio.code.org](studio.code.org).
+You should have each online coursework assignment in your Code Studio account. If you are having trouble accessing your account, see the video below on how to log in at [studio.code.org](studio.code.org).
 
 (MAKE SCREEN CAST OF HOW TO LOG IN)
 
@@ -69,9 +69,9 @@ Please review each of these sites for the general guidlines for whitelisting:
 
 The following email addresses should also be whitelisted:
 
-Hadi_Partovi@code.org<br/>
-PD@code.org<br/>
-no_reply@code.org<br/>
+"Hadi_Partovi@code.org"<br/>
+"PD@code.org"<br/>
+"no_reply@code.org"<br/>
 amazonses.com <br/>
 mail221.suw14.mcdlv.net<br/>
 
