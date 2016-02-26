@@ -262,24 +262,18 @@ class AdminReportsController < ApplicationController
   def retention
     require 'cdo/properties'
     SeamlessDatabasePool.use_persistent_read_connection do
-      # Extract the desired scripts from the parameter, defaulting to the CSF scripts.
       @scripts = params[:scripts_ids].present? ?
-        params[:script_ids].split(',').map{|i| i.to_i} :
-        [1, 17, 18, 19, 23]
-      # Extract the cached per-level and per-stage data for these scripts.
-      @level_stats = Properties.
-        get(:retention_stats)['script_progress_levels'].
-        select{|script, script_data| @scripts.include? script.to_i}
-      @stage_stats = Properties.
-        get(:retention_stats)['script_progress_stages'].
-        select{|script, stage, script_stage_data| @scripts.include? script.to_i}
-
-      # Retrieve the number of stages and levels in each script.
-      # TODO(asher): Add a where(script_id: @scripts) clause.
-      @stages_per_script = Stage.group(:script_id).count.
-        keep_if{|script, counts| @scripts.include? script.to_i}
-      @levels_per_script = ScriptLevel.group(:script_id).count.
-        keep_if{|script, counts| @scripts.include? script.to_i}
+        params[:script_ids].split(',').map(&:to_i) :
+        [1, 17, 18, 19, 23]  # Default to the CSF scripts.
+      # Get the cached retention_stats from the DB, trimming those stats to only the requested
+      # scripts.
+      @retention_stats = Properties.get(:retention_stats).each_pair do |key, key_data|
+        key_data.delete_if{|script_id, script_data| !@scripts.include? script_id.to_i}
+      end
+      # Transform the count stats into row format to facilitate being added to charts and tables.
+      ['script_level_counts', 'script_stage_counts'].each do |key|
+        @retention_stats[key] = build_row_arrays(@retention_stats[key])
+      end
     end
   end
 
@@ -298,6 +292,26 @@ class AdminReportsController < ApplicationController
 
   def get_percentage_positive(ratings_to_process)
     return 100.0 * ratings_to_process.where(rating: 1).count / ratings_to_process.count
+  end
+
+  # Manipulates the count_stats hash of arrays to an array of arrays, each inner array representing
+  # a slice across the hash arrays.
+  def build_row_arrays(count_stats)
+    # Determine the number of final number of rows, being the maximum array size in the hash.
+    array_length = count_stats.max_by{|k,v| v.length}[1].size
+
+    # Initialize and construct the row_arrays.
+    row_arrays = Array.new(array_length) {Array.new(count_stats.size + 1, 0)}
+    row_arrays.each_with_index do |subarray, index|
+      subarray[0] = index
+    end
+    count_stats.values.each_with_index do |counts, index|
+      counts.each_with_index do |count, subindex|
+        row_arrays[subindex][index + 1] = count
+      end
+    end
+
+    return row_arrays
   end
 
   def level_answers_csv
