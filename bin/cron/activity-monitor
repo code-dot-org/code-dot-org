@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# coding: utf-8
 #
 # This script monitors level completion rates and issues HipChat complaints if a significant
 # number of browsers has attempted a level without anybody finishing it successfully.
@@ -11,8 +12,8 @@
 #   LogEntries.
 #
 # including dashboard environment doesn't work if not in the dashboard dir
-Dir.chdir(File.expand_path('../../dashboard', __FILE__))
-require_relative '../dashboard/config/environment'
+Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
+require_relative '../../dashboard/config/environment'
 require 'cdo/only_one'
 require 'cdo/hip_chat'
 require 'cdo/user_agent_parser'
