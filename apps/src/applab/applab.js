@@ -740,6 +740,7 @@ Applab.init = function(config) {
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
 
   React.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
     renderCodeApp: function () {
       return page({
         assetUrl: studioApp.assetUrl,

@@ -1,12 +1,14 @@
 'use strict';
 
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
+var RotateContainer = require('./RotateContainer.jsx');
 
 /**
  * Top-level React wrapper for our standard blockly apps.
  */
 var AppView = React.createClass({
   propTypes: {
+    assetUrl: React.PropTypes.func.isRequired,
     renderCodeApp: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
@@ -18,6 +20,7 @@ var AppView = React.createClass({
   render: function () {
     return (
       <div>
+        <RotateContainer assetUrl={this.props.assetUrl} />
         <ProtectedStatefulDiv renderContents={this.props.renderCodeApp} />
         <div className="clear"></div>
       </div>
