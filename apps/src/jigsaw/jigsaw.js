@@ -148,35 +148,39 @@ Jigsaw.init = function(config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
+  var renderCodeApp = function () {
+    return page({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default'
+      }
+    });
+  };
+
+  var onMount = function () {
+    studioApp.init(config);
+
+    document.getElementById('runButton').style.display = 'none';
+    Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function(evt) {
+      checkForSuccess();
+    });
+
+    // Only used by level1, in which the success criteria is clicking on the block
+    var block1 = document.querySelectorAll("[block-id='1']")[0];
+    if (block1) {
+      dom.addMouseDownTouchEvent(block1, function () {
+        Jigsaw.block1Clicked = true;
+      });
+    }
+  };
+
   React.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
-    renderCodeApp: function () {
-      return page({
-        assetUrl: studioApp.assetUrl,
-        data: {
-          localeDirection: studioApp.localeDirection(),
-          controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
-          editCode: level.editCode,
-          blockCounterClass: 'block-counter-default'
-        }
-      });
-    },
-    onMount: function () {
-      studioApp.init(config);
-
-      document.getElementById('runButton').style.display = 'none';
-      Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function(evt) {
-        checkForSuccess();
-      });
-
-      // Only used by level1, in which the success criteria is clicking on the block
-      var block1 = document.querySelectorAll("[block-id='1']")[0];
-      if (block1) {
-        dom.addMouseDownTouchEvent(block1, function () {
-          Jigsaw.block1Clicked = true;
-        });
-      }
-    }
+    renderCodeApp: renderCodeApp,
+    onMount: onMount
   }), document.getElementById(config.containerId));
 };
 

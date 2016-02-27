@@ -240,92 +240,95 @@ Craft.init = function (config) {
       break;
   }
 
+  var renderCodeApp = function () {
+    return pageEJS({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({
+          assetUrl: studioApp.assetUrl,
+          shareable: config.level.shareable
+        }),
+        editCode: config.level.editCode,
+        blockCounterClass: 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
+
+  var onMount = function () {
+    studioApp.init($.extend({}, config, {
+      forceInsertTopBlock: 'when_run',
+      appStrings: {
+        generatedCodeDescription: craftMsg.generatedCodeDescription(),
+      },
+      loadAudio: function () {},
+      afterInject: function () {
+        var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
+        Craft.gameController = new GameController({
+          Phaser: window.Phaser,
+          containerId: 'phaser-game',
+          assetRoot: Craft.skin.assetUrl(''),
+          audioPlayer: {
+            register: studioApp.registerAudio.bind(studioApp),
+            play: studioApp.playAudio.bind(studioApp)
+          },
+          debug: false,
+          customSlowMotion: slowMotionURLParam, // NaN if not set
+          /**
+           * First asset packs to load while video playing, etc.
+           * Won't matter for levels without delayed level initialization
+           * (due to e.g. character / house select popups).
+           */
+          earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
+          afterAssetsLoaded: function () {
+            // preload music after essential game asset downloads completely finished
+            Craft.musicController.preload();
+          },
+          earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
+        });
+
+        if (!config.level.showPopupOnLoad) {
+          Craft.initializeAppLevel(config.level);
+        }
+
+        if (studioApp.hideSource) {
+          // Set visualizationColumn width in share mode so it can be centered
+          var visualizationColumn = document.getElementById('visualizationColumn');
+          visualizationColumn.style.width = this.nativeVizWidth + 'px';
+        }
+      },
+      twitter: {
+        text: "Share on Twitter",
+        hashtag: "Craft"
+      }
+    }));
+
+    var interfaceImagesToLoad = [];
+    interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
+
+    if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
+      interfaceImagesToLoad =
+          interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
+    }
+
+    interfaceImagesToLoad.forEach(function(url) {
+      preloadImage(url);
+    });
+
+    var shareButton = $('.mc-share-button');
+    if (shareButton.length) {
+      dom.addClickTouchEvent(shareButton[0], function () {
+        Craft.reportResult(true);
+      });
+    }
+  };
+
   React.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
-    renderCodeApp: function () {
-      return pageEJS({
-        assetUrl: studioApp.assetUrl,
-        data: {
-          localeDirection: studioApp.localeDirection(),
-          visualization: require('./visualization.html.ejs')(),
-          controls: require('./controls.html.ejs')({
-            assetUrl: studioApp.assetUrl,
-            shareable: config.level.shareable
-          }),
-          editCode: config.level.editCode,
-          blockCounterClass: 'block-counter-default',
-          readonlyWorkspace: config.readonlyWorkspace
-        }
-      });
-    },
-    onMount: function () {
-      studioApp.init($.extend({}, config, {
-        forceInsertTopBlock: 'when_run',
-        appStrings: {
-          generatedCodeDescription: craftMsg.generatedCodeDescription(),
-        },
-        loadAudio: function () {
-        },
-        afterInject: function () {
-          var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
-          Craft.gameController = new GameController({
-            Phaser: window.Phaser,
-            containerId: 'phaser-game',
-            assetRoot: Craft.skin.assetUrl(''),
-            audioPlayer: {
-              register: studioApp.registerAudio.bind(studioApp),
-              play: studioApp.playAudio.bind(studioApp)
-            },
-            debug: false,
-            customSlowMotion: slowMotionURLParam, // NaN if not set
-            /**
-             * First asset packs to load while video playing, etc.
-             * Won't matter for levels without delayed level initialization
-             * (due to e.g. character / house select popups).
-             */
-            earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
-            afterAssetsLoaded: function () {
-              // preload music after essential game asset downloads completely finished
-              Craft.musicController.preload();
-            },
-            earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
-          });
-
-          if (!config.level.showPopupOnLoad) {
-            Craft.initializeAppLevel(config.level);
-          }
-
-          if (studioApp.hideSource) {
-            // Set visualizationColumn width in share mode so it can be centered
-            var visualizationColumn = document.getElementById('visualizationColumn');
-            visualizationColumn.style.width = this.nativeVizWidth + 'px';
-          }
-        },
-        twitter: {
-          text: "Share on Twitter",
-          hashtag: "Craft"
-        }
-      }));
-
-      var interfaceImagesToLoad = [];
-      interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
-
-      if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
-        interfaceImagesToLoad =
-            interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
-      }
-
-      interfaceImagesToLoad.forEach(function(url) {
-        preloadImage(url);
-      });
-    
-      var shareButton = $('.mc-share-button');
-      if (shareButton.length) {
-        dom.addClickTouchEvent(shareButton[0], function () {
-          Craft.reportResult(true);
-        });
-      }
-    }
+    renderCodeApp: renderCodeApp,
+    onMount: onMount
   }), document.getElementById(config.containerId));
 };
 

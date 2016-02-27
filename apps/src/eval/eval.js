@@ -146,28 +146,28 @@ Eval.init = function(config) {
     }
   };
 
+  var renderCodeApp = function () {
+    return page({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({
+          assetUrl: studioApp.assetUrl
+        }),
+        blockUsed : undefined,
+        idealBlockNumber : undefined,
+        editCode: level.editCode,
+        blockCounterClass : 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
+
   React.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
-    renderCodeApp: function () {
-      return page({
-        assetUrl: studioApp.assetUrl,
-        data: {
-          localeDirection: studioApp.localeDirection(),
-          visualization: require('./visualization.html.ejs')(),
-          controls: require('./controls.html.ejs')({
-            assetUrl: studioApp.assetUrl
-          }),
-          blockUsed : undefined,
-          idealBlockNumber : undefined,
-          editCode: level.editCode,
-          blockCounterClass : 'block-counter-default',
-          readonlyWorkspace: config.readonlyWorkspace
-        }
-      });
-    },
-    onMount: function () {
-      studioApp.init(config);
-    }
+    renderCodeApp: renderCodeApp,
+    onMount: studioApp.init.bind(studioApp, config)
   }), document.getElementById(config.containerId));
 };
 

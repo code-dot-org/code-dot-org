@@ -739,118 +739,122 @@ Applab.init = function(config) {
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
 
-  React.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    renderCodeApp: function () {
-      return page({
-        assetUrl: studioApp.assetUrl,
-        data: {
-          localeDirection: studioApp.localeDirection(),
-          visualization: require('./visualization.html.ejs')({
-            appWidth: Applab.appWidth,
-            appHeight: Applab.footerlessAppHeight
-          }),
-          controls: firstControlsRow,
-          extraControlRows: extraControlRows,
-          blockUsed: undefined,
-          idealBlockNumber: undefined,
-          editCode: level.editCode,
-          blockCounterClass: 'block-counter-default',
-          pinWorkspaceToBottom: true,
-          // TODO (brent) - seems a little gross that we've made this part of a
-          // template shared across all apps
-          // disable designMode if we're readonly
-          hasDesignMode: !config.readonlyWorkspace,
-          readonlyWorkspace: config.readonlyWorkspace
+  var renderCodeApp = function () {
+    return page({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        visualization: require('./visualization.html.ejs')({
+          appWidth: Applab.appWidth,
+          appHeight: Applab.footerlessAppHeight
+        }),
+        controls: firstControlsRow,
+        extraControlRows: extraControlRows,
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default',
+        pinWorkspaceToBottom: true,
+        // TODO (brent) - seems a little gross that we've made this part of a
+        // template shared across all apps
+        // disable designMode if we're readonly
+        hasDesignMode: !config.readonlyWorkspace,
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  var onMount = function () {
+    studioApp.init(config);
+
+    var viz = document.getElementById('visualization');
+    var vizCol = document.getElementById('visualizationColumn');
+
+    if (!config.noPadding) {
+      viz.className += " with_padding";
+      vizCol.className += " with_padding";
+    }
+
+    if (config.embed || config.hideSource) {
+      // no responsive styles active in embed or hideSource mode, so set sizes:
+      viz.style.width = Applab.appWidth + 'px';
+      viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
+      // Use offsetWidth of viz so we can include any possible border width:
+      vizCol.style.maxWidth = viz.offsetWidth + 'px';
+    }
+
+    if (debuggerUi) {
+      debuggerUi.initializeAfterDomCreated({
+        defaultStepSpeed: config.level.sliderSpeed
+      });
+    }
+
+    window.addEventListener('resize', Applab.renderVisualizationOverlay);
+
+    var finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
+    }
+
+    var submitButton = document.getElementById('submitButton');
+    if (submitButton) {
+      dom.addClickTouchEvent(submitButton, Applab.onPuzzleSubmit);
+    }
+
+    var unsubmitButton = document.getElementById('unsubmitButton');
+    if (unsubmitButton) {
+      dom.addClickTouchEvent(unsubmitButton, Applab.onPuzzleUnsubmit);
+    }
+
+    if (level.editCode) {
+      // Prevent the backspace key from navigating back. Make sure it's still
+      // allowed on other elements.
+      // Based on http://stackoverflow.com/a/2768256/2506748
+      $(document).on('keydown', function (event) {
+        var doPrevent = false;
+        if (event.keyCode !== KeyCodes.BACKSPACE) {
+          return;
+        }
+        var d = event.srcElement || event.target;
+        if ((d.tagName.toUpperCase() === 'INPUT' && (
+            d.type.toUpperCase() === 'TEXT' ||
+            d.type.toUpperCase() === 'PASSWORD' ||
+            d.type.toUpperCase() === 'FILE' ||
+            d.type.toUpperCase() === 'EMAIL' ||
+            d.type.toUpperCase() === 'SEARCH' ||
+            d.type.toUpperCase() === 'NUMBER' ||
+            d.type.toUpperCase() === 'DATE' )) ||
+            d.tagName.toUpperCase() === 'TEXTAREA') {
+          doPrevent = d.readOnly || d.disabled;
+        }
+        else {
+          doPrevent = !d.isContentEditable;
+        }
+
+        if (doPrevent) {
+          event.preventDefault();
         }
       });
-    }.bind(this),
-    onMount: function () {
-      studioApp.init(config);
 
-      var viz = document.getElementById('visualization');
-      var vizCol = document.getElementById('visualizationColumn');
+      designMode.addKeyboardHandlers();
 
-      if (!config.noPadding) {
-        viz.className += " with_padding";
-        vizCol.className += " with_padding";
-      }
+      designMode.renderDesignWorkspace();
 
-      if (config.embed || config.hideSource) {
-        // no responsive styles active in embed or hideSource mode, so set sizes:
-        viz.style.width = Applab.appWidth + 'px';
-        viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
-        // Use offsetWidth of viz so we can include any possible border width:
-        vizCol.style.maxWidth = viz.offsetWidth + 'px';
-      }
+      designMode.configurePlaySpaceHeader();
 
-      if (debuggerUi) {
-        debuggerUi.initializeAfterDomCreated({
-          defaultStepSpeed: config.level.sliderSpeed
-        });
-      }
+      designMode.toggleDesignMode(Applab.startInDesignMode());
 
-      window.addEventListener('resize', Applab.renderVisualizationOverlay);
+      designMode.configureDragAndDrop();
 
-      var finishButton = document.getElementById('finishButton');
-      if (finishButton) {
-        dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
-      }
+      var designModeViz = document.getElementById('designModeViz');
+      designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
+    }
+  }.bind(this);
 
-      var submitButton = document.getElementById('submitButton');
-      if (submitButton) {
-        dom.addClickTouchEvent(submitButton, Applab.onPuzzleSubmit);
-      }
-
-      var unsubmitButton = document.getElementById('unsubmitButton');
-      if (unsubmitButton) {
-        dom.addClickTouchEvent(unsubmitButton, Applab.onPuzzleUnsubmit);
-      }
-
-      if (level.editCode) {
-        // Prevent the backspace key from navigating back. Make sure it's still
-        // allowed on other elements.
-        // Based on http://stackoverflow.com/a/2768256/2506748
-        $(document).on('keydown', function (event) {
-          var doPrevent = false;
-          if (event.keyCode !== KeyCodes.BACKSPACE) {
-            return;
-          }
-          var d = event.srcElement || event.target;
-          if ((d.tagName.toUpperCase() === 'INPUT' && (
-              d.type.toUpperCase() === 'TEXT' ||
-              d.type.toUpperCase() === 'PASSWORD' ||
-              d.type.toUpperCase() === 'FILE' ||
-              d.type.toUpperCase() === 'EMAIL' ||
-              d.type.toUpperCase() === 'SEARCH' ||
-              d.type.toUpperCase() === 'NUMBER' ||
-              d.type.toUpperCase() === 'DATE' )) ||
-              d.tagName.toUpperCase() === 'TEXTAREA') {
-            doPrevent = d.readOnly || d.disabled;
-          }
-          else {
-            doPrevent = !d.isContentEditable;
-          }
-
-          if (doPrevent) {
-            event.preventDefault();
-          }
-        });
-
-        designMode.addKeyboardHandlers();
-
-        designMode.renderDesignWorkspace();
-
-        designMode.configurePlaySpaceHeader();
-
-        designMode.toggleDesignMode(Applab.startInDesignMode());
-
-        designMode.configureDragAndDrop();
-
-        var designModeViz = document.getElementById('designModeViz');
-        designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
-      }
-    }.bind(this)
+  React.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
+    renderCodeApp: renderCodeApp,
+    onMount: onMount
   }), document.getElementById(config.containerId));
 };
 

@@ -773,29 +773,33 @@ Bounce.init = function(config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
+  var renderCodeApp = function () {
+    return page({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
+
+  var onMount = function () {
+    studioApp.init(config);
+
+    var finishButton = document.getElementById('finishButton');
+    dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
+  };
+
   React.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
-    renderCodeApp: function () {
-      return page({
-        assetUrl: studioApp.assetUrl,
-        data: {
-          localeDirection: studioApp.localeDirection(),
-          visualization: require('./visualization.html.ejs')(),
-          controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
-          blockUsed: undefined,
-          idealBlockNumber: undefined,
-          editCode: level.editCode,
-          blockCounterClass: 'block-counter-default',
-          readonlyWorkspace: config.readonlyWorkspace
-        }
-      });
-    },
-    onMount: function () {
-      studioApp.init(config);
-
-      var finishButton = document.getElementById('finishButton');
-      dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
-    }
+    renderCodeApp: renderCodeApp,
+    onMount: onMount
   }), document.getElementById(config.containerId));
 };
 
