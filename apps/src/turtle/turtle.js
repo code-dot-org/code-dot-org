@@ -208,26 +208,26 @@ Artist.prototype.init = function(config) {
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
+  var renderCodeApp = function () {
+    return page({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        visualization: '',
+        localeDirection: this.studioApp_.localeDirection(),
+        controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath}),
+        blockUsed : undefined,
+        idealBlockNumber : undefined,
+        editCode: this.level.editCode,
+        blockCounterClass : 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
   React.render(React.createElement(AppView, {
     assetUrl: this.studioApp_.assetUrl,
-    renderCodeApp: function () {
-      return page({
-        assetUrl: this.studioApp_.assetUrl,
-        data: {
-          visualization: '',
-          localeDirection: this.studioApp_.localeDirection(),
-          controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath}),
-          blockUsed : undefined,
-          idealBlockNumber : undefined,
-          editCode: this.level.editCode,
-          blockCounterClass : 'block-counter-default',
-          readonlyWorkspace: config.readonlyWorkspace
-        }
-      });
-    }.bind(this),
-    onMount: function () {
-      this.studioApp_.init(config);
-    }.bind(this)
+    renderCodeApp: renderCodeApp,
+    onMount: this.studioApp_.init.bind(this.studioApp_, config)
   }), document.getElementById(config.containerId));
 };
 
