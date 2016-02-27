@@ -1629,12 +1629,6 @@ StudioApp.prototype.runButtonClickWrapper = function (callback) {
  */
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
-  // Skip this step if config.html wasn't provided, because that means we've
-  // switched to doing top-level rendering with React.
-  // TODO: (bbuchanan) Remove when all apps use React for top-level rendering.
-  if (typeof config.html !== 'undefined') {
-    container.innerHTML = config.html;
-  }
   if (!this.enableShowCode) {
     document.getElementById('show-code-header').style.display = 'none';
   }
