@@ -34,7 +34,6 @@ class FeatureModeManager
         gatekeeper_hoc_tutorial_settings: {
           postMilestone: true,
           shareEnabled: true,
-          slogging: true
         },
         dcdo_settings: {
           hoc_activity_sample_weight: 1,
@@ -48,12 +47,11 @@ class FeatureModeManager
         hint_view_request: false,
         postMilestone: true,
         shareEnabled: true,
-        slogging: true
+        slogging: false
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: false,
         shareEnabled: true,
-        slogging: false
       },
       dcdo_settings: {
         hoc_activity_sample_weight: 10,
@@ -72,7 +70,6 @@ class FeatureModeManager
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: false,
         shareEnabled: false,
-        slogging: false
       },
       dcdo_settings: {
         hoc_activity_sample_weight: 10,
