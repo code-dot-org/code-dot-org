@@ -774,6 +774,7 @@ Bounce.init = function(config) {
   config.enableShowBlockCount = false;
 
   React.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
     renderCodeApp: function () {
       return page({
         assetUrl: studioApp.assetUrl,

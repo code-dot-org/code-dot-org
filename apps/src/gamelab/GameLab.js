@@ -109,6 +109,7 @@ GameLab.prototype.init = function (config) {
   });
 
   React.render(React.createElement(AppView, {
+    assetUrl: this.studioApp_.assetUrl,
     renderCodeApp: function () {
       return page({
         assetUrl: this.studioApp_.assetUrl,

@@ -209,6 +209,7 @@ Artist.prototype.init = function(config) {
   config.afterInject = _.bind(this.afterInject_, this, config);
 
   React.render(React.createElement(AppView, {
+    assetUrl: this.studioApp_.assetUrl,
     renderCodeApp: function () {
       return page({
         assetUrl: this.studioApp_.assetUrl,

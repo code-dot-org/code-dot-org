@@ -1961,6 +1961,7 @@ Studio.init = function(config) {
   Studio.makeThrottledSpriteWallCollisionHelpers();
 
   React.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
     renderCodeApp: function () {
       return page({
         assetUrl: studioApp.assetUrl,
