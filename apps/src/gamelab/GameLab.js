@@ -108,40 +108,44 @@ GameLab.prototype.init = function (config) {
     showConsole: true
   });
 
+  var renderCodeApp = function () {
+    return page({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        localeDirection: this.studioApp_.localeDirection(),
+        controls: firstControlsRow,
+        extraControlRows: extraControlRows,
+        blockUsed : undefined,
+        idealBlockNumber : undefined,
+        editCode: this.level.editCode,
+        blockCounterClass : 'block-counter-default',
+        pinWorkspaceToBottom: true,
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  var onMount = function () {
+    config.loadAudio = this.loadAudio_.bind(this);
+    config.afterInject = this.afterInject_.bind(this, config);
+    config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
+
+    // Store p5specialFunctions in the unusedConfig array so we don't give warnings
+    // about these functions not being called:
+    config.unusedConfig = this.gameLabP5.p5specialFunctions;
+
+    this.studioApp_.init(config);
+
+    this.debugger_.initializeAfterDomCreated({
+      defaultStepSpeed: 1
+    });
+  }.bind(this);
+
   React.render(React.createElement(AppView, {
     assetUrl: this.studioApp_.assetUrl,
-    renderCodeApp: function () {
-      return page({
-        assetUrl: this.studioApp_.assetUrl,
-        data: {
-          visualization: require('./visualization.html.ejs')(),
-          localeDirection: this.studioApp_.localeDirection(),
-          controls: firstControlsRow,
-          extraControlRows: extraControlRows,
-          blockUsed : undefined,
-          idealBlockNumber : undefined,
-          editCode: this.level.editCode,
-          blockCounterClass : 'block-counter-default',
-          pinWorkspaceToBottom: true,
-          readonlyWorkspace: config.readonlyWorkspace
-        }
-      });
-    }.bind(this),
-    onMount: function () {
-      config.loadAudio = this.loadAudio_.bind(this);
-      config.afterInject = this.afterInject_.bind(this, config);
-      config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
-
-      // Store p5specialFunctions in the unusedConfig array so we don't give warnings
-      // about these functions not being called:
-      config.unusedConfig = this.gameLabP5.p5specialFunctions;
-
-      this.studioApp_.init(config);
-
-      this.debugger_.initializeAfterDomCreated({
-        defaultStepSpeed: 1
-      });
-    }.bind(this)
+    renderCodeApp: renderCodeApp,
+    onMount: onMount
   }), document.getElementById(config.containerId));
 };
 
