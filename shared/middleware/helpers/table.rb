@@ -1,10 +1,44 @@
-#
-# Table
-#
 require 'csv'
 require 'set'
-class Table
 
+require_relative './sql_table'
+require_relative './dynamo_table'
+
+class TableMetadata
+  def self.generate_column_list(records)
+    return [] if records.nil?
+    # don't include 'id', since that's a reserved column that will always exist
+    records.map(&:keys).flatten.uniq - ['id']
+  end
+
+  def self.remove_column(column_list, column_name)
+    raise 'No such column' unless column_list.include? column_name
+
+    new_list = column_list.dup
+    new_list.delete(column_name)
+    new_list
+  end
+
+  def self.add_column(column_list, column_name)
+    return [column_name] if column_list.nil?
+    raise 'Column already exists' if column_list.include? column_name
+    column_list.dup.push(column_name)
+  end
+
+  def self.rename_column(column_list, old_name, new_name)
+    raise 'Column doesnt exist' unless column_list.include? old_name
+    raise 'Column already exists' if column_list.include? new_name
+
+    column_list.map { |x| x == old_name ? new_name : x }
+  end
+end
+
+require 'aws-sdk'
+
+#
+# SqlTable
+#
+class SqlTable
   class NotFound < Sinatra::NotFound
   end
 
@@ -14,6 +48,7 @@ class Table
     @table_name = table_name
 
     @table = PEGASUS_DB[:app_tables]
+    @metadata_table = PEGASUS_DB[:channel_table_metadata]
   end
 
   def exists?()
@@ -24,6 +59,31 @@ class Table
     @items ||= @table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name)
   end
 
+  def metadata
+    dataset = metadata_dataset
+    dataset && dataset.first
+  end
+
+  def metadata_dataset
+    @metadata_dataset ||= @metadata_table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name).limit(1)
+  end
+
+  # create a new metadata row, based on the contents of any existing records
+  def create_metadata
+    @metadata_table.insert({
+      app_id: @channel_id,
+      storage_id: @storage_id,
+      table_name: @table_name,
+      column_list: TableMetadata.generate_column_list(to_a).to_json,
+      updated_at: DateTime.now
+    })
+  end
+
+  def ensure_metadata
+    create_metadata unless metadata
+    metadata_dataset
+  end
+
   def delete(id)
     delete_count = items.where(row_id: id).delete
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless delete_count > 0
@@ -32,9 +92,15 @@ class Table
 
   def delete_all()
     items.delete
+    @metadata_dataset.delete if metadata_dataset
   end
 
   def rename_column(old_name, new_name, ip_address)
+    ensure_metadata()
+    column_list = JSON.parse(metadata[:column_list])
+    new_column_list = TableMetadata.rename_column(column_list, old_name, new_name)
+    metadata_dataset.update({column_list: new_column_list.to_json})
+
     items.each do |r|
       # We want to preserve the order of the columns so creating
       # a new hash is required.
@@ -51,7 +117,19 @@ class Table
     end
   end
 
+  def add_column(column_name)
+    ensure_metadata()
+    column_list = JSON.parse(metadata[:column_list])
+    new_column_list = TableMetadata.add_column(column_list, column_name)
+    metadata_dataset.update({column_list: new_column_list.to_json})
+  end
+
   def delete_column(column_name, ip_address)
+    ensure_metadata()
+    column_list = JSON.parse(metadata[:column_list])
+    new_column_list = TableMetadata.remove_column(column_list, column_name)
+    metadata_dataset.update({column_list: new_column_list.to_json})
+
     items.each do |r|
       value = JSON.load(r[:value])
       value.delete(column_name)
@@ -67,6 +145,7 @@ class Table
 
   def insert(value, ip_address)
     raise ArgumentError, 'Value is not a hash' unless value.is_a? Hash
+
     row = {
       app_id: @channel_id,
       storage_id: @storage_id,
@@ -84,8 +163,20 @@ class Table
       retry if (tries += 1) < 5
       raise
     end
+    ensure_column_metadata(value)
 
     JSON.load(row[:value]).merge('id' => row[:row_id])
+  end
+
+  def ensure_column_metadata(row)
+    ensure_metadata
+    column_list = JSON.parse(metadata[:column_list])
+    row_columns = TableMetadata.generate_column_list([row])
+    new_column_list = column_list.dup.concat(row_columns).uniq
+
+    if column_list != new_column_list
+      @metadata_dataset.update({column_list: new_column_list.to_json})
+    end
   end
 
   def next_id()
@@ -102,6 +193,8 @@ class Table
     update_count = items.where(row_id: id).update(row)
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" if update_count == 0
 
+    ensure_column_metadata(value)
+
     JSON.load(row[:value]).merge('id' => id)
   end
 
@@ -116,20 +209,19 @@ class Table
   end
 
   def self.table_names(channel_id)
-    PEGASUS_DB[:app_tables].where(app_id: channel_id, storage_id: nil).group(:table_name).map do |row|
-      row[:table_name]
-    end
+    tables_from_records = PEGASUS_DB[:app_tables].where(app_id: channel_id, storage_id: nil).group(:table_name).select_map(:table_name)
+    tables_from_metadata = PEGASUS_DB[:channel_table_metadata].where(app_id: channel_id, storage_id: nil).group(:table_name).select_map(:table_name)
+    tables_from_records.concat(tables_from_metadata).uniq
   end
 
 end
-
-require 'aws-sdk'
 
 #
 # DynamoTable
 #
 class DynamoTable
   MAX_BATCH_SIZE ||= 25
+  CHANNEL_TABLE_NAME_INDEX ||= "channel_id-table_name-index"
 
   class NotFound < Sinatra::NotFound
   end
@@ -140,10 +232,45 @@ class DynamoTable
     @table_name = table_name
 
     @hash = "#{@channel_id}:#{@table_name}:#{@storage_id}"
+    @metadata_hash = "#{@channel_id}:#{@table_name}:#{@storage_id}:metadata"
   end
 
   def db
     @@dynamo_db ||= Aws::DynamoDB::Client.new
+  end
+
+  def metadata
+    @metadata_item ||= db.get_item(
+        table_name: CDO.dynamo_table_metadata_table,
+        consistent_read: true,
+        key: {'hash'=>@metadata_hash}
+    ).item
+
+    # only return the parts we care about
+    @metadata_item.select{|k,_| k == "column_list"} if @metadata_item
+  end
+
+  def set_column_list_metadata(column_list)
+    db.put_item(
+      table_name: CDO.dynamo_table_metadata_table,
+      item: {
+        hash: @metadata_hash,
+        channel_id: @channel_id,
+        table_name: @table_name,
+        column_list: column_list.to_json,
+        updated_at: DateTime.now.to_s,
+      }
+    )
+
+    metadata
+  end
+
+  def create_metadata
+    set_column_list_metadata TableMetadata.generate_column_list(to_a)
+  end
+
+  def ensure_metadata
+    create_metadata unless metadata
   end
 
   def delete(id)
@@ -173,6 +300,10 @@ class DynamoTable
         CDO.dynamo_tables_table => items.slice(start_index, MAX_BATCH_SIZE)
       })
     end
+    db.delete_item(
+      table_name: CDO.dynamo_table_metadata_table,
+      key: {'hash'=>@metadata_hash}
+    )
     true
   end
 
@@ -239,6 +370,8 @@ class DynamoTable
       retry
     end
 
+    ensure_column_metadata(value)
+
     value.merge('id' => row_id)
   end
 
@@ -275,6 +408,11 @@ class DynamoTable
   end
 
   def rename_column(old_name, new_name, ip_address)
+    ensure_metadata()
+    column_list = JSON.parse(metadata["column_list"])
+    new_column_list = TableMetadata.rename_column(column_list, old_name, new_name)
+    set_column_list_metadata(new_column_list)
+
     items.each do |r|
       # We want to preserve the order of the columns so creating
       # a new hash is required.
@@ -291,7 +429,19 @@ class DynamoTable
     end
   end
 
+  def add_column(column_name)
+    ensure_metadata()
+    column_list = JSON.parse(metadata["column_list"])
+    new_column_list = TableMetadata.add_column(column_list, column_name)
+    set_column_list_metadata(new_column_list)
+  end
+
   def delete_column(column_name, ip_address)
+    ensure_metadata()
+    column_list = JSON.parse(metadata["column_list"])
+    new_column_list = TableMetadata.remove_column(column_list, column_name)
+    set_column_list_metadata(new_column_list)
+
     items.each do |r|
       value = JSON.load(r['value'])
       value.delete(column_name)
@@ -318,8 +468,20 @@ class DynamoTable
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException
       raise NotFound, "row `#{id}` not found in `#{@table_name}` table"
     end
+    ensure_column_metadata(value)
 
     value.merge('id' => id)
+  end
+
+  def ensure_column_metadata(row)
+    ensure_metadata
+    column_list = JSON.parse(metadata['column_list'])
+    row_columns = TableMetadata.generate_column_list([row])
+    new_column_list = column_list.dup.concat(row_columns).uniq
+
+    if column_list != new_column_list
+      set_column_list_metadata(new_column_list)
+    end
   end
 
   def items()
@@ -367,7 +529,7 @@ class DynamoTable
     begin
       page = @dynamo_db.query(
         table_name: CDO.dynamo_tables_table,
-        index_name: CDO.dynamo_tables_index,
+        index_name: CHANNEL_TABLE_NAME_INDEX,
         key_conditions: {
           "channel_id" => {
             attribute_value_list: [channel_id.to_i],
@@ -384,10 +546,34 @@ class DynamoTable
 
       last_evaluated_key = page[:last_evaluated_key]
     end while last_evaluated_key
+
+    # now same thing for metadata
+    begin
+      page = @dynamo_db.query(
+        table_name: CDO.dynamo_table_metadata_table,
+        index_name: CHANNEL_TABLE_NAME_INDEX,
+        key_conditions: {
+          "channel_id" => {
+            attribute_value_list: [channel_id.to_i],
+            comparison_operator: "EQ",
+          },
+        },
+        attributes_to_get: ['table_name'],
+        exclusive_start_key: last_evaluated_key,
+      ).first
+
+      page[:items].each do |item|
+        results[item['table_name']] = true
+      end
+
+      last_evaluated_key = page[:last_evaluated_key]
+    end while last_evaluated_key
+
     results.keys
   end
 
 end
+
 
 # Converts an array of hashes into a csv string
 def table_to_csv(table_array, column_order: nil)
