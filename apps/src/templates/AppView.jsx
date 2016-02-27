@@ -16,7 +16,12 @@ var AppView = React.createClass({
   },
 
   render: function () {
-    return <ProtectedStatefulDiv renderContents={this.props.renderCodeApp} />;
+    return (
+      <div>
+        <ProtectedStatefulDiv renderContents={this.props.renderCodeApp} />
+        <div className="clear"></div>
+      </div>
+    );
   }
 });
 module.exports = AppView;
