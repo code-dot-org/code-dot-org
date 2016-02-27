@@ -147,6 +147,7 @@ Eval.init = function(config) {
   };
 
   React.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
     renderCodeApp: function () {
       return page({
         assetUrl: studioApp.assetUrl,
