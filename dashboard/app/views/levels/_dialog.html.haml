@@ -48,8 +48,8 @@
         - elsif app == 'text_match' && data['answers'].blank?
           =t('text_match.open_response_title')
         - else
-          - if data['longassessment']
-            =t("#{app}-longassessment.correct_title")
+          - if data['submittable']
+            =t("#{app}-submittable.correct_title")
           - else
             =t("#{app}.correct_title")
       %p
@@ -58,8 +58,8 @@
         - elsif app == 'text_match' && data['answers'].blank?
           =t('text_match.open_response_body')
         - else
-          - if data['longassessment']
-            =t("#{app}-longassessment.correct_body")
+          - if data['submittable']
+            =t("#{app}-submittable.correct_body")
           - else
             =t("#{app}.correct_body")
       .farSide
