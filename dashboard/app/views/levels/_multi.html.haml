@@ -240,7 +240,7 @@
     var result;
     var submitted;
 
-    if ("#{data['longassessment']}" == "true")
+    if (appOptions.level.submittable)
     {
       result = true;
       submitted = true;
@@ -260,8 +260,8 @@
   }
 
   $('.submitButton').click(function() {
-    // Don't show right/wrong answers for longassessments.
-    if ("#{data['longassessment']}" == "true")
+    // Don't show right/wrong answers for submittable.
+    if (appOptions.level.submittable)
     {
       return;
     }

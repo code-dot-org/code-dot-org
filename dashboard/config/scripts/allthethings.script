@@ -46,6 +46,7 @@ level 'blockly:Bounce:1'
 stage 'Multi'
 level 'K-1 Happy Maps Multi 1'
 level 'Multi Horizontal Scroll Test'
+level 'Submittable Multi'
 
 stage 'Multi2'
 level 'Choose 2 Test'
@@ -111,6 +112,3 @@ level 'Test External Markdown'
 
 stage 'Studio'
 level 'Resizing Test'
-
-stage 'Long Assessments'
-level 'Longassessment multi'

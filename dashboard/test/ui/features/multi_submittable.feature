@@ -1,9 +1,9 @@
 @dashboard_db_access
 @as_student
-Feature: Long assessment multi
+Feature: Submittable multi
 
 Background:
-  Given I am on "http://learn.code.org/s/allthethings/stage/22/puzzle/1?noautoplay=true"
+  Given I am on "http://learn.code.org/s/allthethings/stage/9/puzzle/3?noautoplay=true"
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible

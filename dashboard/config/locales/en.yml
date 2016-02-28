@@ -490,7 +490,7 @@ en:
     correct_body: "That is the correct answer."
     toofew_title: "Too few answers."
     toofew_body: "Please select two answers before submitting."
-  multi-longassessment:
+  multi-submittable:
     wrong_title: "Thank you"
     wrong_body: "Thank you for submitting an answer."
     correct_title: "Thank you"
