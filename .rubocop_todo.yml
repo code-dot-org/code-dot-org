@@ -233,13 +233,6 @@ Style/EmptyLinesAroundAccessModifier:
 Style/EmptyLinesAroundBlockBody:
   Enabled: false
 
-# Offense count: 261
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: empty_lines, no_empty_lines
-Style/EmptyLinesAroundClassBody:
-  Enabled: false
-
 # Offense count: 22
 # Cop supports --auto-correct.
 Style/EmptyLinesAroundMethodBody:
