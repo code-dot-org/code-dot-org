@@ -91,6 +91,8 @@
 
   var submitAllowed = true;
 
+  var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
+
   // Are we read-only?  This can be because we're a teacher OR because an answer
   // has been previously submitted.
   if (window.appOptions.readonlyWorkspace)
@@ -240,7 +242,7 @@
     var result;
     var submitted;
 
-    if (appOptions.level.submittable)
+    if (appOptions.level.submittable || forceSubmittable)
     {
       result = true;
       submitted = true;
@@ -261,7 +263,7 @@
 
   $('.submitButton').click(function() {
     // Don't show right/wrong answers for submittable.
-    if (appOptions.level.submittable)
+    if (appOptions.level.submittable || forceSubmittable)
     {
       return;
     }
