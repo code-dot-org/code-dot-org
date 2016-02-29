@@ -2,7 +2,6 @@ require 'net/http'
 require 'uri'
 
 class Slack
-
   COLOR_MAP = {
     green: 'good',
     yellow: 'warning',
@@ -48,5 +47,4 @@ class Slack
       return false
     end
   end
-
 end

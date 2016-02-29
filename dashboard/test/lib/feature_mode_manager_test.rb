@@ -140,5 +140,4 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
       FeatureModeManager.set_mode('invalid', @gatekeeper, @dcdo, ['fake'])
     end
   end
-
 end

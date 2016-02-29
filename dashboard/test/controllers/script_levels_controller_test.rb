@@ -914,5 +914,4 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select 'button', I18n.t('teacher.panel.example')
   end
-
 end

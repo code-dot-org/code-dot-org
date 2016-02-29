@@ -66,5 +66,4 @@ class SectionTest < ActiveSupport::TestCase
 
     assert !Section.exists?(section.id)
   end
-
 end

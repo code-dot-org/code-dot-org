@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class SurveyResultsControllerTest < ActionController::TestCase
-
   setup do
     @teacher = create(:teacher)
   end
@@ -18,5 +17,4 @@ class SurveyResultsControllerTest < ActionController::TestCase
     assert survey_result["properties"]["survey2016_ethnicity_asian"] == 22
     assert survey_result["properties"]["survey2016_foodstamps"] == 3
   end
-
 end

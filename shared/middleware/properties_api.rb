@@ -4,7 +4,6 @@ require 'cdo/rack/request'
 require 'json'
 
 class PropertiesApi < Sinatra::Base
-
   helpers do
     [
       'core.rb',

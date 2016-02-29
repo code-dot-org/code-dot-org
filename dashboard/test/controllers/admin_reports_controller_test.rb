@@ -43,5 +43,4 @@ class AdminReportsControllerTest < ActionController::TestCase
     get :admin_progress
     assert_select 'h1', 'Admin progress'
   end
-
 end

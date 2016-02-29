@@ -223,5 +223,4 @@ class WorkshopTest < ActiveSupport::TestCase
     assert_equal string_500, workshop.location
     assert_equal string_500, workshop.instructions
   end
-
 end

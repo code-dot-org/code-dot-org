@@ -34,5 +34,4 @@ wrong 'wrong answer'
 right 'right answer'
 ruby
   end
-
 end

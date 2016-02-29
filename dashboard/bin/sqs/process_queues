@@ -107,7 +107,6 @@ class QueueProcessorManager
       sleep update_interval
     end # loop
   end
-
 end
 
 QueueProcessorManager.new(ARGV).run

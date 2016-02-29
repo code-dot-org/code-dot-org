@@ -141,7 +141,6 @@ class DSLDefined < Level
   def delete_level_file
     File.delete(file_path) if File.exist?(file_path)
   end
-
 end
 
 # The following capitalization variant is needed so that annotate_models

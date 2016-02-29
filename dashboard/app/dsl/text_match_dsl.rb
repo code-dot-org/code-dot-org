@@ -20,5 +20,4 @@ class TextMatchDSL < ContentDSL
 
     {@name => strings}
   end
-
 end

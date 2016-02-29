@@ -4,7 +4,6 @@ require_relative '../helper_modules/dashboard'
 
 # TODO -- change the APIs below to check logged in user instead of passing in a user id
 class DashboardStudent
-
   def self.fetch_user_students(user_id)
     Dashboard::db[:users].
       join(:followers, :student_user_id=>:users__id).
@@ -149,7 +148,6 @@ class DashboardStudent
 end
 
 class DashboardSection
-
   def initialize(row)
     @row = row
   end
@@ -431,7 +429,6 @@ class DashboardSection
       :sections__user_id___teacher_id
     ]
   end
-
 end
 
 class DashboardUserScript

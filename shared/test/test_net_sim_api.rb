@@ -801,5 +801,4 @@ class NetSimApiTest < Minitest::Test
   def last_error_details
     JSON.parse(@net_sim_api.last_response.body)['details']
   end
-
 end

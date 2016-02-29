@@ -919,5 +919,4 @@ SQL
     # if you log in only through picture passwords you can't edit your account
     return !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
   end
-
 end

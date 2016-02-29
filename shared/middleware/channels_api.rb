@@ -4,7 +4,6 @@ require 'cdo/db'
 require 'cdo/rack/request'
 
 class ChannelsApi < Sinatra::Base
-
   helpers do
     %w(
       core.rb

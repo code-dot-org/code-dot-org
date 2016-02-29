@@ -50,7 +50,6 @@ class ScaryChangeDetector
     detect_db_changes
     detect_new_models
   end
-
 end
 
 ScaryChangeDetector.new.detect_scary_changes

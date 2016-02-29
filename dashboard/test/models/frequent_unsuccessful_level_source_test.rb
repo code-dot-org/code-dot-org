@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class FrequentUnsuccessfulLevelSourceTest < ActiveSupport::TestCase
-
   def setup_activities(level_source, result, count)
     count.times do
       create :activity, level_id: level_source.level_id,

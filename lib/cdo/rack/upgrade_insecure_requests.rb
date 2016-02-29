@@ -6,7 +6,6 @@ require 'cdo/rack/process_html'
 
 module Rack
   class UpgradeInsecureRequests < ProcessHtml
-
     # Hash of domains we want to rewrite links from http-explicit to protocol-relative urls.
     # Most of the time, switching scheme from http to https will work, but we can add any exceptions to this list.
     # Only the first match is rewritten

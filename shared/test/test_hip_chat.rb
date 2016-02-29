@@ -4,7 +4,6 @@ require 'webmock/minitest'
 require 'cdo/hip_chat'
 
 class HipchatTest < Minitest::Test
-
   # Use a short retry backoff for this test to keep the test fast.
   BACKOFF = 0.02
 
@@ -87,5 +86,4 @@ class HipchatTest < Minitest::Test
     assert_equal 0, HipChat.retries_for_test
     assert_equal 0.0, HipChat.total_backoff_for_test
   end
-
 end

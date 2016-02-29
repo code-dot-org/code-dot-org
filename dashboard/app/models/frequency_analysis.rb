@@ -22,7 +22,6 @@
 #
 
 class FrequencyAnalysis < Widget
-
   before_validation do
     self.href = 'frequency/frequency.html'
   end

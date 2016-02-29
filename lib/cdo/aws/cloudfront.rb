@@ -7,7 +7,6 @@ require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
   class CloudFront
-
     ALLOWED_METHODS = %w(HEAD DELETE POST GET OPTIONS PUT PATCH)
     CACHED_METHODS = %w(HEAD GET OPTIONS)
 

@@ -1,5 +1,4 @@
 class ClassSubmission
-
   def self.normalize(data)
     result = {}
 
@@ -186,5 +185,4 @@ class ClassSubmission
       sort: "school_name_s asc"
     }
   end
-
 end

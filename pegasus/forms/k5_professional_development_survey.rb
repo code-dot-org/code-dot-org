@@ -1,5 +1,4 @@
 class K5ProfessionalDevelopmentSurvey
-
   AGREEMENT_ANSWERS = (-2..2).map(&:to_s)
   SCALE_ANSWERS = (1..10).map(&:to_s)
   SIMPLE_ANSWERS = (
@@ -205,5 +204,4 @@ class K5ProfessionalDevelopmentSurvey
     result
 
   end
-
 end

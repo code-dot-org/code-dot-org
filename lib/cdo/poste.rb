@@ -203,7 +203,6 @@ module Poste2
 
 
   class DeliveryMethod
-
     ALLOWED_SENDERS = Set.new ['pd@code.org', 'noreply@code.org']
     def initialize(settings)
     end
@@ -220,7 +219,6 @@ module Poste2
       recipient = Poste2::ensure_recipient(mail.to.first, ip_address: '127.0.0.1')
       Poste2::send_message('dashboard', recipient, body: body, subject: subject, from: sender)
     end
-
   end
 
 end

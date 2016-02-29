@@ -15,7 +15,6 @@ unless ENV['USE_REAL_SQS']
 end
 
 class ActivityTest < ActiveSupport::TestCase
-
   def setup
     @sqs = Aws::SQS::Client.new
 
@@ -107,5 +106,4 @@ class ActivityTest < ActiveSupport::TestCase
     response = @sqs.receive_message(queue_url: queue_url, wait_time_seconds: 10)
     handler.handle(response.messages.map {|msg| SQS::Message.new(msg.body)})
   end
-
 end

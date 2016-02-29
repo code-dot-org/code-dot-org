@@ -8,7 +8,6 @@ require_relative '../middleware/helpers/redis_property_bag'
 require_relative 'fake_redis_client'
 
 class RedisPropertyBagTest < Minitest::Test
-
   def setup
     # Create a redis client.
     # If the USE_REAL_REDIS environment variable is true, creates a real client
@@ -180,5 +179,4 @@ class RedisPropertyBagTest < Minitest::Test
       @redis.time_travel seconds
     end
   end
-
 end

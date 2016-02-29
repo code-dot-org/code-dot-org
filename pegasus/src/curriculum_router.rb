@@ -46,7 +46,6 @@ end
 # HttpDocument normalizes a document-in-transition through our system.
 #
 class HttpDocument
-
   attr_accessor :status, :headers, :body
 
   def initialize(body, headers={}, status=200)
@@ -202,13 +201,11 @@ class HttpDocument
     @headers['X-Pegasus-Theme'] = header['theme'] unless header['theme'].nil?
     @headers['X-Pegasus-Header'] = header.to_json
   end
-
 end
 
 module Pegasus
 
   class Base < Sinatra::Base
-
     configure do
       settings.set :environment, :development if rack_env?(:staging)
       settings.set :read_only, CDO.read_only
@@ -351,7 +348,6 @@ module Pegasus
         halt 400, {'Content-Type'=>'text/json'}, e.errors.to_json
       end
     end
-
   end
 
 end
@@ -359,7 +355,6 @@ end
 require src_dir 'course'
 
 class CurriculumRouter < Pegasus::Base
-
   get '/curriculum/mss*' do
     redirect "/curriculum/science/#{params['splat'][0]}"
   end
@@ -439,5 +434,4 @@ class CurriculumRouter < Pegasus::Base
 
     pass
   end
-
 end

@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class CachingTest < ActionDispatch::IntegrationTest
-
   def setup
     Script.clear_cache
     # turn on the cache (off by default in test env so tests don't confuse each other)
@@ -144,5 +143,4 @@ class CachingTest < ActionDispatch::IntegrationTest
     post "/milestone/0/#{sl.id}", params
     assert_response 200
   end
-
 end

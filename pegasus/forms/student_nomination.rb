@@ -1,5 +1,4 @@
 class StudentNomination
-
   def self.normalize(data)
     result = {}
     result[:email_s] = required email_address data[:email_s]
@@ -22,5 +21,4 @@ class StudentNomination
       'student_nomination_notice_3',
     ]
   end
-
 end

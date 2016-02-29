@@ -97,5 +97,4 @@ DSL
     i18n_expected = {'en' => {'data' => {'multi' => {'name1' => {}}}}}
     assert_equal i18n_expected, i18n
   end
-
 end

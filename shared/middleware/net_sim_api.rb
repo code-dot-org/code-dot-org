@@ -8,7 +8,6 @@ require_relative '../middleware/channels_api'
 
 # NetSimApi implements a rest service for interacting with NetSim tables.
 class NetSimApi < Sinatra::Base
-
   TABLE_NAMES = {
       node: 'n',
       wire: 'w',
@@ -444,7 +443,6 @@ class NetSimApi < Sinatra::Base
     }
     message_table.delete(message_ids) unless message_ids.empty?
   end
-
 end
 
 # Convert a query_string of the form "t[]=table1@1&t[]=table2@1" into a

@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ScriptLevelsHelperTest < ActionView::TestCase
-
   include LocaleHelper
   include ApplicationHelper
   include LevelsHelper
@@ -45,5 +44,4 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     script_level = Script.twenty_hour_script.script_levels.fifth
     assert_equal 'Stage 2: The Maze', script_level.stage.summarize[:title]
   end
-
 end

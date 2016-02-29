@@ -2,7 +2,6 @@ require_relative 'test_helper'
 require 'cdo/env'
 
 class ENVTest < Minitest::Test
-
   def test_with_sensitive_values_redacted
     ENV['SAFE'] = 'safe value'
     orig_key = ENV['AWS_SECRET_KEY']

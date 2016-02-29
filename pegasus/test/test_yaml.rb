@@ -3,7 +3,6 @@ require_relative '../../lib/cdo/yaml'
 require 'minitest/autorun'
 
 class YamlTest < Minitest::Test
-
   def test_markdown_no_front_matter
     content = "
     # This is some markdown content
@@ -32,5 +31,4 @@ some long variable name: also works
     assert_equal({'a' => 'b', 'b' => 1, 'c' => true, 'some long variable name' => 'also works'}, head)
     assert_equal("# This is some markdown content\n", body)
   end
-
 end

@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class LevelSourceTest < ActiveSupport::TestCase
-
   setup do
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
@@ -61,5 +60,4 @@ class LevelSourceTest < ActiveSupport::TestCase
     level_source_image = LevelSourceImage.new(level_source_id: @level_source.id)
     assert !level_source_image.save_to_s3('')
   end
-
 end

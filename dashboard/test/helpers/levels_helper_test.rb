@@ -293,5 +293,4 @@ class LevelsHelperTest < ActionView::TestCase
     app_options = self.app_options # ha ha
     assert_equal false, app_options[:level]['submittable']
   end
-
 end

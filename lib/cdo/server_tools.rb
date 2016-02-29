@@ -7,7 +7,6 @@ require 'json'
 require_relative 'newrelic'
 
 class ServerTools
-
   # For each of the production frontend servers whose name matches `name_glob`,
   # do all of the following:
   # - deregister it from the load balancer

@@ -14,5 +14,4 @@ class MockPegasus
     env['HTTP_HOST'] = canonical_hostname('code.org') + (CDO.https_development ? '' : ":#{CDO.pegasus_port}")
     @app.call(env)
   end
-
 end
