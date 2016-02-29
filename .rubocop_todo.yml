@@ -14,11 +14,6 @@ Lint/AmbiguousOperator:
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
-# Offense count: 5
-# Cop supports --auto-correct.
-Lint/DeprecatedClassMethods:
-  Enabled: false
-
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: AlignWith, SupportedStyles, AutoCorrect.
@@ -54,12 +49,6 @@ Lint/ShadowingOuterLocalVariable:
 Lint/UnderscorePrefixedVariableName:
   Enabled: false
 
-# Offense count: 84
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoreEmptyBlocks.
-Lint/UnusedBlockArgument:
-  Enabled: false
-
 # Offense count: 33
 # Cop supports --auto-correct.
 # Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
@@ -75,20 +64,9 @@ Lint/Void:
 Performance/Casecmp:
   Enabled: false
 
-# Offense count: 6
-# Cop supports --auto-correct.
-Performance/Detect:
-  Enabled: false
-
 # Offense count: 1
 # Cop supports --auto-correct.
 Performance/RedundantBlockCall:
-  Enabled: false
-
-# Offense count: 11
-# Cop supports --auto-correct.
-# Configuration parameters: MaxKeyValuePairs.
-Performance/RedundantMerge:
   Enabled: false
 
 # Offense count: 11
@@ -131,11 +109,6 @@ Style/AsciiComments:
 # FunctionalMethods: let, let!, subject, watch
 # IgnoredMethods: lambda, proc, it
 Style/BlockDelimiters:
-  Enabled: false
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/BlockEndNewline:
   Enabled: false
 
 # Offense count: 293

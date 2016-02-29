@@ -187,7 +187,7 @@ Dashboard::Application.routes.draw do
   get '/admin/funometer', to: 'admin_reports#funometer', as: 'funometer'
   get '/admin/funometer/script/:script_id', to: 'admin_reports#funometer_by_script', as: 'funometer_by_script'
   get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_reports#funometer_by_script_level', as: 'funometer_by_script_level'
-  get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'admin_reports#level_completions', as: 'level_completions'
+  get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
@@ -226,7 +226,7 @@ Dashboard::Application.routes.draw do
   post '/report_abuse', :to => 'report_abuse#report_abuse'
   get '/report_abuse', :to => 'report_abuse#report_abuse_form'
 
-  get '/too_young', :to => redirect { |p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
+  get '/too_young', :to => redirect { |_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
