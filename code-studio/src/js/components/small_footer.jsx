@@ -41,6 +41,8 @@ var SmallFooter = React.createClass({
         newWindow: React.PropTypes.bool
       })
     ).isRequired,
+    // True if we're displaying this inside a phone (real, or our wireframe)
+    phoneFooter: React.PropTypes.bool,
     className: React.PropTypes.string
   },
 
@@ -151,7 +153,7 @@ var SmallFooter = React.createClass({
       },
       copyrightScrollArea: {
         overflowY: 'auto',
-        maxHeight: 210,
+        maxHeight: this.props.phoneFooter ? 210 : undefined,
         padding: '0.8em',
         borderBottom: 'solid thin #e7e8ea',
         marginBottom: this.state.baseHeight
