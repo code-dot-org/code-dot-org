@@ -557,23 +557,13 @@
           on the same project.
       2:
         image: notes/C1_pair_programming_2.png
-        text: In pair programming, one person is the driver and the other person is
-          the navigator, just like driving a car. The driver sits at the computer
-          and is the one using the keyboard and mouse or touchscreen and controlling
-          the main actions of the computer. The other person is the navigator. The
-          navigator helps the driver by answering the driver's questions and pointing
-          out potential problems or mistakes.
+        text: https://crowdin.com/translate/codeorg/38/enus-zhtw#49894
       3:
         image: notes/C1_pair_programming_3.png
-        text: Communication is key to successful pair programming. No insults, be
-          respectful, don't be a bossy navigator, because nobody likes a backseat
-          driver. You and your partner should always be talking. The driver can explain
-          what she or he is doing. And the navigator can help suggest what to do next.
+        text: https://crowdin.com/translate/codeorg/38/enus-zhtw#49896
       4:
         image: notes/C1_pair_programming_4.png
-        text: The navigator should be thinking about the big picture and the driver
-          focuses on the details. Both roles are important. Pair programming is all
-          about working together as a team.
+        text: https://crowdin.com/translate/codeorg/38/enus-zhtw#49898
     C1_planting_seed:
       1:
         image: notes/C1_planting_seed_1.png

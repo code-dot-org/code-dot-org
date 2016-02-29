@@ -25,6 +25,7 @@
   hello: Helo dunia
   welcome_back: Selamat datang kembali, % {nama}
   submit: Hantar
+  unsubmit: Unsubmit
   add_teacher_form:
     code:
       label: 'Tambahkan guru:'
@@ -374,6 +375,8 @@
     heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
       (all ages)</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
@@ -490,6 +493,13 @@
       current: Tahap semasa
       unused: Tahap yang tidak digunakan
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Hour of Code
       body: Cuba asas-asas sains komputer. Ramai yang telah mencuba.
@@ -546,11 +556,19 @@
     report_bug: Report Bug
     support: Get Help
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Jawapan yang salah
     wrong_body: Jawapan yang telah anda masukkan adalah tidak betul.  Sila cuba lagi!
     correct_title: Betul
     correct_body: Itulah jawapan yang betul.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Thank you
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

@@ -24,6 +24,7 @@ ar:
   hello: مرحباً بالعالم
   welcome_back: 'أهلاً بكم من جديد، %{name}'
   submit: تسجيل
+  unsubmit: عدم تقديم
   add_teacher_form:
     code:
       label: 'إضافة معلِّماً:'
@@ -223,7 +224,7 @@ ar:
       free_play:
         playlab: اصنع تطبيقا
         artist: ارسم شيئا
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: اصنع تطبيقا
     user:
       classroom: الصفحة الرئيسية المعلم
@@ -321,6 +322,7 @@ ar:
     heading_hoc2014: '<h2>ساعة من البرمجة </h2><h1>لجميع الأعمار</h1>'
     heading_elementary: '<h2>دورات 20 ساعة</h2> <h1>أساسيات علوم الكمبيوتر (جميع الإعمار)</h1>'
     heading_apps: '<h2>المتعة</h2><h1>للجميع</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>الدورات المعجلةـ</h2><h1>جميع الأعمار</h1>'
     your_gallery: معرض
     no_primary_course: 'جرب الدورة تدريبية في "كود استوديو"'
@@ -415,6 +417,11 @@ ar:
       current: المستويات الحالية
       unused: المستويات غير المستخدمة
   upsell:
+    applab:
+      title: مختبر التطبيق
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: المتاهة الكلاسيكية
       body: جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك.
@@ -460,11 +467,19 @@ ar:
     report_bug: الإبلاغ عن خلل
     support: للحصول على المساعدة
     support_url: support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: الإجابة غير صحيحة
     wrong_body: 'أن الإجابة التي قمت بإدخالها غير صحيحة.  الرجاء المحاولة مرة أخرى!'
     correct_title: صحيح
     correct_body: هذا هو الجواب الصحيح.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: شكراً
+    wrong_body: Thank you for submitting an answer.
+    correct_title: شكراً
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

@@ -25,6 +25,7 @@
   hello: Olá, mundo
   welcome_back: Bem-vindo de volta, %{name}
   submit: Enviar
+  unsubmit: Cancelar envio
   add_teacher_form:
     code:
       label: 'Adicionar professor:'
@@ -383,6 +384,8 @@
     heading_elementary: "<h2>Cursos de 20 horas sobre</h2><h1>Fundamentos de Ciência
       da Computação (todas as idades)</h1>"
     heading_apps: "<h2>Diversão para</h2><h1>todos</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Nosso curso acelerado para</h2><h1>todas as idades</h1>"
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
@@ -510,6 +513,13 @@
       current: Níveis Atuais
       unused: Níveis não Utilizados
   upsell:
+    applab:
+      title: Laboratório de Aplicativo
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas
@@ -571,11 +581,19 @@
     report_bug: Reportar erro
     support: Obter ajuda
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Obrigado
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Obrigado
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
