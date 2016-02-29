@@ -39,11 +39,13 @@
       drawChartAndTable(
           'script_level_counts',
           'Script Level Count Cumulative Percentages',
+          'Levels',
           scripts,
           #{@retention_stats['script_level_counts'].try(:to_json)});
       drawChartAndTable(
           'script_stage_counts',
           'Script Stage Count Cumulative Percentages',
+          'Stages',
           scripts,
           #{@retention_stats['script_stage_counts'].try(:to_json)});
     }
@@ -77,13 +79,14 @@
 
     // dom_element_suffix: The suffix of the DOM ID for the chart and table.
     // chart_title: The title of the chart to be made.
+    // column_count: A string describing the counts, e.g., 'Stages' or 'Levels'.
     // script_ids: An array of script_ids.
     // stats: The data to insert into the chart.
     function drawChartAndTable(
-        dom_element_suffix, chart_title, script_ids, stats) {
+        dom_element_suffix, chart_title, column_count, script_ids, stats) {
       // Trasnfer stats into a Google DataTable.
       var data = new google.visualization.DataTable();
-      data.addColumn('number', 'Number of Levels');
+      data.addColumn('number', 'Number of ' + column_count);
       for (var i = 0; i < script_ids.length; i++) {
         data.addColumn('number', 'Script ID: ' + script_ids[i]);
       }
