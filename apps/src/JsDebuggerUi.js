@@ -73,7 +73,7 @@ var JsDebuggerUi = module.exports = function (runApp) {
  * @param {!Object} options
  * @param {!boolean} options.showButtons - Whether to show the debug buttons
  * @param {!boolean} options.showConsole - Whether to show the debug console
- * @returns {string} of HTML markup to be embedded in page.html.ejs
+ * @returns {string} of HTML markup to be embedded in codeWorkspace.html.ejs
  */
 JsDebuggerUi.prototype.getMarkup = function (assetUrl, options) {
   return require('./JsDebuggerUi.html.ejs')({

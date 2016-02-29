@@ -17,7 +17,8 @@ var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../MusicController');
 var AppView = require('../templates/AppView.jsx');
-var pageEJS = require('../templates/page.html.ejs');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -240,19 +241,27 @@ Craft.init = function (config) {
       break;
   }
 
-  var renderCodeApp = function () {
-    return pageEJS({
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
       assetUrl: studioApp.assetUrl,
       data: {
         localeDirection: studioApp.localeDirection(),
+        editCode: config.level.editCode,
+        blockCounterClass: 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
+
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
         visualization: require('./visualization.html.ejs')(),
         controls: require('./controls.html.ejs')({
           assetUrl: studioApp.assetUrl,
           shareable: config.level.shareable
-        }),
-        editCode: config.level.editCode,
-        blockCounterClass: 'block-counter-default',
-        readonlyWorkspace: config.readonlyWorkspace
+        })
       }
     });
   };
@@ -328,7 +337,8 @@ Craft.init = function (config) {
   React.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
     requireLandscape: !(config.share || config.embed),
-    renderCodeApp: renderCodeApp,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };
