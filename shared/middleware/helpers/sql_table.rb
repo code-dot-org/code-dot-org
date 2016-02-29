@@ -41,6 +41,8 @@ class SqlTable
       column_list: TableMetadata.generate_column_list(to_a).to_json,
       updated_at: DateTime.now
     })
+  rescue Sequel::UniqueConstraintViolation
+      # catch and ignore
   end
 
   def ensure_metadata
@@ -132,6 +134,8 @@ class SqlTable
     JSON.load(row[:value]).merge('id' => row[:row_id])
   end
 
+  # Given a row from our table, ensure that all columns in that row appear in
+  # our column_list metadata, updating metadata as appropriate to add them
   def ensure_column_metadata(row)
     ensure_metadata
     column_list = JSON.parse(metadata[:column_list])
