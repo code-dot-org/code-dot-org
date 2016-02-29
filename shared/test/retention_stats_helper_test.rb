@@ -18,4 +18,40 @@ class RetentionStatsHelperTest < Minitest::Test
     stats = {17 => [0, 0]}
     assert_equal({17 => [0.0, 0.0]}, get_cumulatives(stats))
   end
+
+  def test_add_missing_keys_no_missing_keys
+    base_hash = {1 => 11, 2 => 22}
+    other_hash = {1 => 111, 2 => 222}
+
+    add_missing_keys(base_hash, other_hash, 0)
+
+    assert_equal({1 => 111, 2 => 222}, other_hash)
+  end
+
+  def test_add_missing_keys_extra_keys
+    base_hash = {1 => 11, 2 => 22}
+    other_hash = {1 => 111, 2 => 222, 3 => 333}
+
+    add_missing_keys(base_hash, other_hash, 0)
+
+    assert_equal({1 => 111, 2 => 222, 3 => 333}, other_hash)
+  end
+
+  def test_add_missing_keys_with_missing_keys
+    base_hash = {1 => 11, 2 => 22}
+    other_hash = {1 => 111}
+
+    add_missing_keys(base_hash, other_hash, 0)
+
+    assert_equal({1 => 111, 2 => 0}, other_hash)
+  end
+
+  def test_add_missing_keys_default_value
+    base_hash = {1 => 11, 2 => 22}
+    other_hash = {1 => 111}
+
+    add_missing_keys(base_hash, other_hash, ['a', 'b'])
+
+    assert_equal({1 => 111, 2 => ['a', 'b']}, other_hash)
+  end
 end
