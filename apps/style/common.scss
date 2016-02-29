@@ -1137,8 +1137,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   margin: 15px 0 0 0;
 }
 
-@import "RotateContainer";
-
 .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,
     .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {
   @include font;
@@ -1604,3 +1602,5 @@ a.WireframeSendToPhone_send-to-phone-link {
     display: none;
   }
 }
+
+@import "RotateContainer";
