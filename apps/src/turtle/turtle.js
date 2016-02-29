@@ -226,6 +226,7 @@ Artist.prototype.init = function(config) {
 
   React.render(React.createElement(AppView, {
     assetUrl: this.studioApp_.assetUrl,
+    requireLandscape: !(config.share || config.embed),
     renderCodeApp: renderCodeApp,
     onMount: this.studioApp_.init.bind(this.studioApp_, config)
   }), document.getElementById(config.containerId));

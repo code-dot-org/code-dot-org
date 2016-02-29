@@ -1998,6 +1998,7 @@ Studio.init = function(config) {
 
   React.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
+    requireLandscape: !(config.share || config.embed),
     renderCodeApp: renderCodeApp,
     onMount: onMount
   }), document.getElementById(config.containerId));

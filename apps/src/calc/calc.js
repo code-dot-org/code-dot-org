@@ -220,6 +220,7 @@ Calc.init = function(config) {
 
   React.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
+    requireLandscape: !(config.share || config.embed),
     renderCodeApp: renderCodeApp,
     onMount: studioApp.init.bind(studioApp, config)
   }), document.getElementById(config.containerId));
