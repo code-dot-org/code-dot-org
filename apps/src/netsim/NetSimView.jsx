@@ -1,7 +1,7 @@
 'use strict';
 
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
-var RotateContainer = require('../templates/RotateContainer.jsx');
+var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 
 /**
  * Top-level React wrapper for our NetSim app.
@@ -20,11 +20,11 @@ var NetSimView = React.createClass({
 
   render: function () {
     return (
-      <div>
-        {this.props.requireLandscape && <RotateContainer assetUrl={this.props.assetUrl} />}
+      <StudioAppWrapper
+          assetUrl={this.props.assetUrl}
+          requireLandscape={this.props.requireLandscape}>
         <ProtectedStatefulDiv renderContents={this.props.renderCodeApp} />
-        <div className="clear"></div>
-      </div>
+      </StudioAppWrapper>
     );
   }
 });

@@ -1,7 +1,7 @@
 'use strict';
 
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
-var RotateContainer = require('./RotateContainer.jsx');
+var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 
 /**
  * Top-level React wrapper for our standard blockly apps.
@@ -21,8 +21,9 @@ var AppView = React.createClass({
 
   render: function () {
     return (
-      <div>
-        {this.props.requireLandscape && <RotateContainer assetUrl={this.props.assetUrl} />}
+      <StudioAppWrapper
+          assetUrl={this.props.assetUrl}
+          requireLandscape={this.props.requireLandscape}>
         <ProtectedStatefulDiv
             id="visualizationColumn"
             renderContents={this.props.renderVisualizationColumn} />
@@ -30,8 +31,7 @@ var AppView = React.createClass({
         <ProtectedStatefulDiv
             id="codeWorkspace"
             renderContents={this.props.renderCodeWorkspace} />
-        <div className="clear"></div>
-      </div>
+      </StudioAppWrapper>
     );
   }
 });
