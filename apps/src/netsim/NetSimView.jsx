@@ -9,7 +9,8 @@ var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 var NetSimView = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
-    requireLandscape: React.PropTypes.bool.isRequired,
+    isEmbedView: React.PropTypes.bool.isRequired,
+    isShareView: React.PropTypes.bool.isRequired,
     renderCodeApp: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
@@ -22,7 +23,8 @@ var NetSimView = React.createClass({
     return (
       <StudioAppWrapper
           assetUrl={this.props.assetUrl}
-          requireLandscape={this.props.requireLandscape}>
+          isEmbedView={this.props.isEmbedView}
+          isShareView={this.props.isShareView}>
         <ProtectedStatefulDiv renderContents={this.props.renderCodeApp} />
       </StudioAppWrapper>
     );

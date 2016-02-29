@@ -10,13 +10,18 @@ var RotateContainer = require('../templates/RotateContainer.jsx');
 var StudioAppWrapper = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
-    requireLandscape: React.PropTypes.bool.isRequired
+    isEmbedView: React.PropTypes.bool.isRequired,
+    isShareView: React.PropTypes.bool.isRequired
+  },
+
+  requiresLandscape: function () {
+    return !(this.props.isEmbedView || this.props.isShareView);
   },
 
   render: function () {
     return (
       <div>
-        {this.props.requireLandscape && <RotateContainer assetUrl={this.props.assetUrl} />}
+        {this.requiresLandscape() && <RotateContainer assetUrl={this.props.assetUrl} />}
         {this.props.children}
         <div className="clear"></div>
       </div>

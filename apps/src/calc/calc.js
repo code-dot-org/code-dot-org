@@ -229,7 +229,8 @@ Calc.init = function(config) {
 
   React.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
-    requireLandscape: !(config.share || config.embed),
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
     renderCodeWorkspace: renderCodeWorkspace,
     renderVisualizationColumn: renderVisualizationColumn,
     onMount: studioApp.init.bind(studioApp, config)
