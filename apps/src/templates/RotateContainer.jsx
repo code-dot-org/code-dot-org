@@ -14,7 +14,7 @@ var RotateContainer = React.createClass({
     return (
       <div id="rotateContainer" style={this.getStyle()}>
         <div id="rotateText">
-          <p>{ msg.rotateText() }<br />{msg.orientationLock()}</p>
+          <p>{msg.rotateText()}<br />{msg.orientationLock()}</p>
         </div>
       </div>
     );
