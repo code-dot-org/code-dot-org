@@ -1,3 +1,4 @@
+@no_mobile
 @as_student
 Feature: Submittable multi
 
