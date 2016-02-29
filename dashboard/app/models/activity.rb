@@ -32,11 +32,6 @@ class Activity < ActiveRecord::Base
   has_one :activity_hint
   has_many :experiment_activities
 
-  def Activity.submitted?(result)
-    return false if result.nil?
-    (result == SUBMITTED_RESULT)
-  end
-
   def Activity.best?(result)
     return false if result.nil?
     (result == BEST_PASS_RESULT)
@@ -50,10 +45,6 @@ class Activity < ActiveRecord::Base
   def Activity.finished?(result)
     return false if result.nil?
     (result >= MINIMUM_FINISHED_RESULT)
-  end
-
-  def submitted?
-    Activity.submitted? test_result
   end
 
   def best?
