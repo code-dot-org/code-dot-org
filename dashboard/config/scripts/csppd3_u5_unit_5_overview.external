@@ -1,0 +1,29 @@
+name 'CSPPD3-u5 unit 5 overview'
+css 'unplugged'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Unit 5 Overview > What’s Inside
+
+<br/>
+#### What’s in the Unit 5 Overview? 
+
+- Visual breakdown of Unit 5 organized in two logical chunks
+- Philosophy of Unit 5
+
+##### What's next?
+
+After the Unit 5 overview, on the subsequent stages go more in-depth with each chunk. For both the **Explore** and **Create** Performance Tasks will see:
+
+ - A **breakdown of the Performance Task**, requirements, and rubric
+ - An explanation of the **associated lessons** that prepare students to do the task
+ - Explanation of **what you can and cannot do** as a teacher to assist students during adminstration of the Peroformance Task.  
+ - Identifying potential **technological and time hurdles**
+    
+
+Click “Continue” below to get started learning more about Unit 4! 
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

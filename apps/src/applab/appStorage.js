@@ -2,6 +2,8 @@
 
 /* global Applab */
 
+var RecordListener = require('./RecordListener');
+
 /**
  * Namespace for app storage.
  */
@@ -242,6 +244,38 @@ var handleDeleteRecord = function(tableName, record, onComplete, onError) {
     return;
   }
   onComplete(true);
+};
+
+var recordListener = new RecordListener();
+
+/**
+ * Listens to tableName for any changes to the data it contains, and calls
+ * onRecord with the record and eventType as follows:
+ * - for 'create' events, returns the new record
+ * - for 'update' events, returns the updated record
+ * - for 'delete' events, returns a record containing the id of the deleted record
+ * @param {string} tableName Table to listen to.
+ * @param {function(Object, RecordListener.EventType)} onRecord Callback to call when
+ * a change occurs with the record object (described above) and event type.
+ * @param {function(string)} onError Callback to call with an error to show to the user.
+ */
+AppStorage.onRecordEvent = function(tableName, onRecord, onError) {
+  if (!onError || typeof onError !== 'function') {
+    throw new Error('onError is a required parameter to AppStorage.onRecordEvent');
+  }
+  if (!tableName) {
+    onError('Error listening for record events: missing required parameter "tableName"');
+    return;
+  }
+
+  if (!recordListener.setListener(tableName, onRecord)) {
+    onError('You are already listening for events on table "' + tableName + '". ' +
+      'only one event handler can be registered per table.');
+  }
+};
+
+AppStorage.resetRecordListener = function () {
+  recordListener.reset();
 };
 
 /**

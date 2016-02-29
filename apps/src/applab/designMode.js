@@ -197,22 +197,12 @@ designMode.updateProperty = function(element, name, value) {
       if (isDraggableContainer(element.parentNode)) {
         element.parentNode.style.width = newWidth;
       }
-
-      if (element.style.backgroundSize) {
-        element.style.backgroundSize = element.style.width + ' ' +
-          element.style.height;
-      }
       break;
     case 'style-height':
       var newHeight = appendPx(value);
       element.style.height = newHeight;
       if (isDraggableContainer(element.parentNode)) {
         element.parentNode.style.height = newHeight;
-      }
-
-      if (element.style.backgroundSize) {
-        element.style.backgroundSize = element.style.width + ' ' +
-          element.style.height;
       }
       break;
     case 'text':
@@ -237,10 +227,11 @@ designMode.updateProperty = function(element, name, value) {
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
         backgroundImage.onload = function() {
-          element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
-            backgroundImage.naturalHeight + 'px';
-          element.style.width = backgroundImage.naturalWidth + 'px';
-          element.style.height = backgroundImage.naturalHeight + 'px';
+          // Fit the image into the button
+          element.style.backgroundSize = 'contain';
+          element.style.backgroundPosition = '50% 50%';
+          element.style.backgroundRepeat = 'no-repeat';
+
           // Re-render properties
           if (currentlyEditedElement === element) {
             designMode.editElementProperties(element);
