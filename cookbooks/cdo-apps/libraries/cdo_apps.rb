@@ -91,8 +91,17 @@ module CdoApps
 
       # Restart when gem bundle is updated
       subscribes :restart, 'execute[bundle-install]', :delayed
+
+      # Ensure globals.yml is up-to-date before (re)starting service.
+      notifies :create, 'template[globals]', :before
       only_if { File.exist? init_script }
     end
 
+    # Always restart service whenever port/socket listener configuration is changed.
+    file "#{app_name}_listeners" do
+      path "#{Chef::Config[:file_cache_path]}/#{app_name}_listeners"
+      content lazy { "#{node['cdo-secrets']["#{app_name}_sock"]}:#{node['cdo-secrets']["#{app_name}_port"]}" }
+      notifies :restart, "service[#{app_name}]", :immediately
+    end
   end
 end
