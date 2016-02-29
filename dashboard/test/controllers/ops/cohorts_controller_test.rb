@@ -299,9 +299,9 @@ module Ops
       assert_equal expected_district, cohort_json['teachers'].first['district']
 
       # no notification to the ops team
-      assert ActionMailer::Base.deliveries.collect(&:subject).none? {|subject| subject.include? '[ops notification]'}
+      assert ActionMailer::Base.deliveries.map(&:subject).none? {|subject| subject.include? '[ops notification]'}
       # all account confirmation instructions
-      assert ActionMailer::Base.deliveries.collect(&:subject).all? {|subject| subject =~ /instructions/}
+      assert ActionMailer::Base.deliveries.map(&:subject).all? {|subject| subject =~ /instructions/}
     end
 
     test 'Create Cohort with districts' do
@@ -363,7 +363,7 @@ module Ops
       assert_response :success
 
       # only the two new districts
-      assert_equal [8], @cohort.reload.cohorts_districts.collect(&:max_teachers)
+      assert_equal [8], @cohort.reload.cohorts_districts.map(&:max_teachers)
     end
 
     test 'Can create Cohort without providing list of acceptable districts' do
