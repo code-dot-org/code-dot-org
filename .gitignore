@@ -36,3 +36,4 @@
 /.ruby-version
 /levelbuilder_ci_last_run
 /levelbuilder_ci_lock
+/coverage

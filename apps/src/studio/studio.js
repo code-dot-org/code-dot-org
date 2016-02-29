@@ -1960,41 +1960,47 @@ Studio.init = function(config) {
 
   Studio.makeThrottledSpriteWallCollisionHelpers();
 
-  React.render(React.createElement(AppView, {
-    renderCodeApp: function () {
-      return page({
-        assetUrl: studioApp.assetUrl,
-        data: {
-          localeDirection: studioApp.localeDirection(),
-          visualization: require('./visualization.html.ejs')(),
-          controls: firstControlsRow,
-          extraControlRows: extraControlRows,
-          blockUsed: undefined,
-          idealBlockNumber: undefined,
-          editCode: level.editCode,
-          blockCounterClass: 'block-counter-default',
-          inputOutputTable: level.inputOutputTable,
-          readonlyWorkspace: config.readonlyWorkspace
-        }
-      });
-    },
-    onMount: function () {
-      studioApp.init(config);
-
-      var finishButton = document.getElementById('finishButton');
-      if (finishButton) {
-        dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
+  var renderCodeApp = function () {
+    return page({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        visualization: require('./visualization.html.ejs')(),
+        controls: firstControlsRow,
+        extraControlRows: extraControlRows,
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default',
+        inputOutputTable: level.inputOutputTable,
+        readonlyWorkspace: config.readonlyWorkspace
       }
+    });
+  };
 
-      // pre-load images asynchronously
-      // (to reduce the likelihood that there is a delay when images
-      //  are changed at runtime)
-      if (config.skin.preloadAssets) {
-        preloadActorImages();
-        preloadProjectileAndItemImages();
-        preloadBackgroundImages();
-      }
+  var onMount = function () {
+    studioApp.init(config);
+
+    var finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
     }
+
+    // pre-load images asynchronously
+    // (to reduce the likelihood that there is a delay when images
+    //  are changed at runtime)
+    if (config.skin.preloadAssets) {
+      preloadActorImages();
+      preloadProjectileAndItemImages();
+      preloadBackgroundImages();
+    }
+  };
+
+  React.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
+    requireLandscape: !(config.share || config.embed),
+    renderCodeApp: renderCodeApp,
+    onMount: onMount
   }), document.getElementById(config.containerId));
 };
 
