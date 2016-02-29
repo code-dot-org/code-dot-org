@@ -14,6 +14,7 @@ var skins = require('../skins');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
+var AppView = require('../templates/AppView.jsx');
 var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var Hammer = require('../hammer');
@@ -666,20 +667,6 @@ Bounce.init = function(config) {
   window.addEventListener("keydown", Bounce.onKey, false);
   window.addEventListener("keyup", Bounce.onKey, false);
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
-      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
-      blockUsed: undefined,
-      idealBlockNumber: undefined,
-      editCode: level.editCode,
-      blockCounterClass: 'block-counter-default',
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
@@ -786,10 +773,29 @@ Bounce.init = function(config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  studioApp.init(config);
+  React.render(React.createElement(AppView, {
+    renderCodeApp: function () {
+      return page({
+        assetUrl: studioApp.assetUrl,
+        data: {
+          localeDirection: studioApp.localeDirection(),
+          visualization: require('./visualization.html.ejs')(),
+          controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
+          blockUsed: undefined,
+          idealBlockNumber: undefined,
+          editCode: level.editCode,
+          blockCounterClass: 'block-counter-default',
+          readonlyWorkspace: config.readonlyWorkspace
+        }
+      });
+    },
+    onMount: function () {
+      studioApp.init(config);
 
-  var finishButton = document.getElementById('finishButton');
-  dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
+      var finishButton = document.getElementById('finishButton');
+      dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
+    }
+  }), document.getElementById(config.containerId));
 };
 
 /**

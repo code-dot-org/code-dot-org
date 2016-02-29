@@ -1,4 +1,9 @@
 #!/bin/sh
+###
+# Unicorn init script
+# Derived from http://bogomips.org/unicorn.git/tree/examples/init.sh
+###
+
 set -e
 # Example init script, this can be used with nginx, too,
 # since nginx and unicorn accept the same signals
@@ -9,6 +14,7 @@ APP_ROOT=<%= @app_root %>
 PID=<%= @pid_file %>
 CMD="cd $APP_ROOT; LANG=en_US.UTF-8 bundle exec unicorn -D -c <%= @src_file %> -E <%= @env %>"
 AS_USER=<%= @user %>
+<%= @bundle_env ? @bundle_env.map{|k,v|"#{k}=#{v}"}.join("\n") : '' %>
 action="$1"
 set -u
 
