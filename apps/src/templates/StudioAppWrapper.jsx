@@ -1,6 +1,5 @@
 'use strict';
 
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
 var RotateContainer = require('../templates/RotateContainer.jsx');
 
 /**
