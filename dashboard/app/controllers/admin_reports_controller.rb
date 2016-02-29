@@ -282,7 +282,7 @@ class AdminReportsController < ApplicationController
       end
       @retention_stats = {}
       raw_retention_stats.each_pair do |key, key_data|
-        @retention_stats[key] = key_data.select{|script_id, script_data| @scripts.include? script_id.to_i}
+        @retention_stats[key] = key_data.select{|script_id, _script_data| @scripts.include? script_id.to_i}
       end
       if @retention_stats['script_starts'].empty?
         render(layout: false, text: 'No data could be found for the specified scripts. Please '\
