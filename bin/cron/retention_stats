@@ -59,7 +59,7 @@ def main()
     distinct.    
     count('script_levels.stage_id').
     each_pair do |user_id_script_id, stage_count|
-      script_stage_counts[user_id_script_id.second][stage_count] += 1
+      script_stage_counts[user_id_script_id[1]][stage_count] += 1
     end
   # Determine, for each (user, script, stage), the number of levels attempted. Then increment the
   # appropriate index in the stage_level_counts hash.
