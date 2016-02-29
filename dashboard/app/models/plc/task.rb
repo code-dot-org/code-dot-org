@@ -25,10 +25,10 @@ class Plc::Task < ActiveRecord::Base
 
   # Can be overridden by subclasses, otherwise they will default to something like Learning Resource Task
   def titleized_task_name
-    type.underscore[4..-1].gsub('_', ' ').titleize
+    type.underscore.partition('/').last.gsub('_', ' ').titleize
   end
 
   def underscore_task_name
-    type.underscore[4..-1]
+    type.underscore.partition('/').last
   end
 end

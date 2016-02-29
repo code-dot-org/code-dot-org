@@ -1,7 +1,0 @@
-name 'Bills Fandom Final Exam'
-title 'Final Exam'
-description 'Final exam for Bills Fandom'
-question 'What is the best football team?'
-wrong 'New England Patriots'
-wrong 'Seattle Seahawks'
-right 'Buffalo Bills'
