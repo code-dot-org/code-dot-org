@@ -174,19 +174,28 @@ Object.keys(PROP_NAMES).map(function (elementType) {
   });
 });
 
-// May belong in droplet
-function getValueOfNthParam(block, n) {
+/**
+ * @param {DropletBlock} block
+ * @param {AceEditor}
+ */
+function getFirstSetPropertyParam(block, editor) {
+  if (!block) {
+    // If we're not given a block, assume that we're in text mode
+    var cursor = editor.session.selection.getCursor();
+    var contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
+
+    var match = /setProperty\("(.*)"/.exec(contents);
+    return match ? match[1] : null;
+  }
+  // We have a block. Parse it to find our first socket.
   var token = block.start;
   do {
     if (token.type === 'socketStart') {
-      if (n === 0) {
-        var textToken = token.next;
-        if (textToken.type !== 'text') {
-          throw new Error('unexpected');
-        }
-        return textToken.value;
+      var textToken = token.next;
+      if (textToken.type !== 'text') {
+        throw new Error('unexpected');
       }
-      n--;
+      return textToken.value;
     }
     token = token.next;
   } while(token);
@@ -225,9 +234,12 @@ module.exports.getInternalPropertyInfo = function (element, friendlyPropName) {
  *   types, provides full list of properties across all types.
  */
 module.exports.setPropertyDropdown = function () {
-  return function () {
+  return function (editor) {
     // Note: We depend on "this" being the droplet socket.
-    var param1 = getValueOfNthParam(this.parent, 0);
+    var param1 = getFirstSetPropertyParam(this.parent, editor);
+    if (!param1) {
+      return fullDropdownOptions;
+    }
 
     var elementId = stripQuotes(param1);
     var element = document.querySelector("#divApplab #" + elementId);
