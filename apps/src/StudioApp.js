@@ -354,14 +354,6 @@ StudioApp.prototype.init = function(config) {
     }, this));
   }
 
-  // The share and embed pages do not show the rotateContainer.
-  if (this.share || config.embed) {
-    var rotateContainer = document.getElementById('rotateContainer');
-    if (rotateContainer) {
-      rotateContainer.style.display = 'none';
-    }
-  }
-
   // In embed mode, the display scales down when the width of the
   // visualizationColumn goes below the min width
   if(config.embed && config.centerEmbedded) {
