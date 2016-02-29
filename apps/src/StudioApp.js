@@ -1437,6 +1437,7 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
 * {string} level The ID of the current level.
 * {number} result An indicator of the success of the code.
 * {number} testResult More specific data on success or failure of code.
+* {boolean} submitted Whether the (submittable) level is being submitted.
 * {string} program The user program, which will get URL-encoded.
 * {function} onComplete Function to be called upon completion.
 */
@@ -1629,7 +1630,12 @@ StudioApp.prototype.runButtonClickWrapper = function (callback) {
  */
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
-  container.innerHTML = config.html;
+  // Skip this step if config.html wasn't provided, because that means we've
+  // switched to doing top-level rendering with React.
+  // TODO: (bbuchanan) Remove when all apps use React for top-level rendering.
+  if (typeof config.html !== 'undefined') {
+    container.innerHTML = config.html;
+  }
   if (!this.enableShowCode) {
     document.getElementById('show-code-header').style.display = 'none';
   }

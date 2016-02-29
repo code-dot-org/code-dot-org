@@ -88,8 +88,10 @@ def determine_frontend_instance_distribution
   instances = @ec2client.describe_instances
 
   frontend_instances = instances.reservations.map do |reservation|
-    reservation.instances.select { |instance| instance.state.name == 'running' &&
-        instance.tags.detect { |tag| tag.key == 'Name' && tag.value.include?('frontend') } }
+    reservation.instances.select do |instance|
+      instance.state.name == 'running' &&
+        instance.tags.detect { |tag| tag.key == 'Name' && tag.value.include?('frontend') }
+    end
   end
 
   frontend_instances.flatten!

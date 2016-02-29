@@ -20,14 +20,15 @@ end
   node.override['cdo-secrets']["#{app}_sock"] = socket_path
 end
 
-# Get/create the SSL cert via the `ssl_certificate` cookbook resource
+# Get/create the SSL cert via the `ssl_certificate` cookbook resource, if provided.
+# Otherwise, create a self-signed certificate.
 node.default['ssl_certificate']['service']['compatibility'] = 'modern'
-ssl = node['cdo-nginx']['ssl_key']['content'] != '' &&
+ssl_cert_provided = node['cdo-nginx']['ssl_key']['content'] != '' &&
   node['cdo-nginx']['ssl_cert']['content'] != ''
 
 cert = ssl_certificate 'cdo-nginx' do
   namespace node['cdo-nginx']
-  if ssl
+  if ssl_cert_provided
     chain_name 'cdo-chain'
     chain_source 'attribute'
     source 'attribute'

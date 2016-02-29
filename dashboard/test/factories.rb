@@ -185,6 +185,10 @@ FactoryGirl.define do
     game {Game.applab}
   end
 
+  factory :multi, :parent => Level, :class => Applab do
+    game {Game.multi}
+  end
+
   factory :level_source do
     level
     data '<xml/>'
