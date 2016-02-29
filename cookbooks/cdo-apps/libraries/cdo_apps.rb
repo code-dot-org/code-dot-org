@@ -36,7 +36,7 @@ module CdoApps
     setup_cmd = "execute[#{node['cdo-apps']['local_mysql'] ? "setup-#{app_name}" : "build-#{app_name}"}]"
 
     template init_script do
-      source 'init.d.erb'
+      source 'unicorn.sh.erb'
       user 'root'
       group 'root'
       mode '0755'
@@ -44,7 +44,8 @@ module CdoApps
         app_root: app_root,
         pid_file: "#{app_root}/config/unicorn.rb.pid",
         user: user,
-        env: node.chef_environment
+        env: node.chef_environment,
+        bundle_env: node['cdo-apps']['bundle_env']
       notifies :restart, "service[#{app_name}]", :delayed
 
       # Bootstrap the first cdo-apps Rakefile build on a new system.

@@ -3148,6 +3148,14 @@ en:
         rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds * 10 - 3
         rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds * 7 + 10
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3
+      Submittable Multi:
+        Submittable Multiple choice: Submittable Multiple choice
+        What is your favorite color?: What is your favorite color?
+        blue: blue
+        green: green
+        real orange of course: real orange of course
+        red: red
+        yellow: yellow
       U1L07 Assessment 1:
         A: A
         B: B
