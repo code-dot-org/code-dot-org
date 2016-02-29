@@ -56,7 +56,7 @@ def main()
   # appropriate index in the script_stage_counts hash.
   drop_off_with_levels_and_stages.
     group('user_levels.user_id', 'script_levels.script_id', 'script_levels.stage_id').
-    distinct.    
+    distinct.
     count('script_levels.stage_id').
     each_pair do |user_id_script_id, stage_count|
       script_stage_counts[user_id_script_id[1]][stage_count] += 1
