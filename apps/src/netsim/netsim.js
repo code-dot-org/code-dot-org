@@ -226,7 +226,6 @@ NetSim.prototype.init = function(config) {
 
   var renderCodeApp = function () {
     return page({
-      assetUrl: this.studioApp_.assetUrl,
       data: {
         visualization: '',
         localeDirection: this.studioApp_.localeDirection(),
