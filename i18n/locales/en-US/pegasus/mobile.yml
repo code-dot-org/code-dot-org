@@ -67,6 +67,8 @@ en-US:
   congrats_next_tutorials_desc: 'crwdns48531:0%{current_path}crwdne48531:0'
   get_a_certificate_of_achievement: crwdns3615:0crwdne3615:0
   view_course: crwdns56012:0crwdne56012:0
+  view_unit: crwdns56162:0crwdne56162:0
+  make_app: crwdns56163:0crwdne56163:0
   congrats_guest_speaker_title: crwdns56013:0crwdne56013:0
   congrats_guest_speaker_desc: crwdns56014:0crwdne56014:0
   congrats_guest_speaker_cta: crwdns56015:0crwdne56015:0
@@ -84,7 +86,8 @@ en-US:
   third_party_price_varies: crwdns56031:0crwdne56031:0
   third_party_price_free: crwdns56032:0crwdne56032:0
   third_party_price_299: crwdns56033:0crwdne56033:0
-  third_party_price_2500: crwdns56034:0crwdne56034:0
+  third_party_price_individual: crwdns56164:0crwdne56164:0
+  third_party_price_school: crwdns56165:0crwdne56165:0
   third_party_tynker_desc: crwdns56035:0crwdne56035:0
   third_party_tynker_btn_curriculum: crwdns56036:0crwdne56036:0
   third_party_tynker_btn_site: crwdns56037:0crwdne56037:0
@@ -107,7 +110,6 @@ en-US:
   third_party_appinv_btn_site: crwdns56054:0crwdne56054:0
   third_party_codehs_desc: crwdns56055:0crwdne56055:0
   third_party_codehs_btn_try: crwdns56056:0crwdne56056:0
-  third_party_codehs_btn_demos: crwdns56057:0crwdne56057:0
   third_party_codecademy_desc: crwdns56058:0crwdne56058:0
   third_party_codecademy_btn_curriculum: crwdns56059:0crwdne56059:0
   third_party_codecademy_btn_site: crwdns56060:0crwdne56060:0
@@ -709,6 +711,12 @@ en-US:
   course3_name: crwdns56087:0crwdne56087:0
   course4_name: crwdns56088:0crwdne56088:0
   accelerated_name: crwdns56089:0crwdne56089:0
+  cspunit3_name: crwdns56166:0crwdne56166:0
+  cspunit3_gradelevel: crwdns56167:0crwdne56167:0
+  cspunit3_shortdescription_congrats: crwdns56168:0crwdne56168:0
+  applab_name: crwdns56169:0crwdne56169:0
+  applab_gradelevel: crwdns56170:0crwdne56170:0
+  applab_shortdescription_congrats: crwdns56171:0crwdne56171:0
   codeorg_gradelevel: crwdns21487:0crwdne21487:0
   codeintl_gradelevel: crwdns23748:0crwdne23748:0
   thinkersmithspanish_gradelevel: crwdns21488:0crwdne21488:0

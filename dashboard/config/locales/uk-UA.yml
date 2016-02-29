@@ -24,6 +24,7 @@
   hello: "Привіт, світе"
   welcome_back: "З поверненням, %{name}"
   submit: "Надіслати"
+  unsubmit: "Відкликати"
   add_teacher_form:
     code:
       label: "Додати учителя:"
@@ -373,6 +374,8 @@
     heading_elementary: "<h2>20-годинні курси</h2><h1>вступу до інформатики (для будь-якого
       віку)</h1>"
     heading_apps: "<h2>Цікавинки</h2><h1>для усіх</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Прискорений курс</h2><h1>для будь-якого віку</h1>"
     your_gallery: "Галерея"
     no_primary_course: "Спробуйте курс Code Studio"
@@ -495,6 +498,13 @@
       current: "Поточні рівні"
       unused: "Невикористані рівні"
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: "Класичний лабіринт"
       body: "Спробуйте основи інформатики. Мільйони вже скористались цим шансом."
@@ -551,11 +561,19 @@
     report_bug: "Повідомити про помилку"
     support: "Отримати допомогу"
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: "Неправильна відповідь"
     wrong_body: "Подана відповідь не є правильною.  Будь ласка, спробуйте ще раз!"
     correct_title: "Правильно"
     correct_body: "Це правильна відповідь."
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: "Дякую"
+    wrong_body: Thank you for submitting an answer.
+    correct_title: "Дякую"
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

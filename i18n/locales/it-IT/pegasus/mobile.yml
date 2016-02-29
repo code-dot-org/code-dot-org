@@ -71,6 +71,8 @@ it-IT:
   congrats_next_tutorials_desc: 'Prova questi corsi più brevi, da 1 ora, oppure prova un <a href="%{current_path}/next">corso di un partner</a>.'
   get_a_certificate_of_achievement: Ottieni un certificato dei risultati ottenuti
   view_course: Visualizza il corso
+  view_unit: View unit
+  make_app: Make an app
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
@@ -88,7 +90,8 @@ it-IT:
   third_party_price_varies: 'Prezzo: varie possibilità'
   third_party_price_free: 'Prezzo: gratuito'
   third_party_price_299: 'Prezzo: $ 2,99/per download'
-  third_party_price_2500: 'Prezzo: Gratuito & $2.500 +'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
   third_party_tynker_btn_site: Visita Tynker
@@ -109,9 +112,8 @@ it-IT:
   third_party_appinv_btn_curriculum: Scarica il curriculum di App Inventor 2
   third_party_appinv_btn_forum: Forum di App Inventor 2
   third_party_appinv_btn_site: Visita App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. With CodeHS, you can get the help that every new programmer needs to work through problems and keep learning. Our tutors are everywhere!
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
   third_party_codehs_btn_try: "Prova l'ntroduzione all'informatica di CodeHS"
-  third_party_codehs_btn_demos: Visita la demo di CodeHS
   third_party_codecademy_desc: "Stiamo ripensare l'istruzione dal basso verso l'alto. Il web ha ripensato quasi tutto - commercio, social networking, assistenza sanitaria e altro ancora. Stiamo costruendo il modello formativo di cui il mondo ha bisogno - il primo modello formativo veramente nativo digitale."
   third_party_codecademy_btn_curriculum: Scarica il curriculum Codecademy
   third_party_codecademy_btn_site: Visita Codecademy
@@ -762,6 +764,12 @@ it-IT:
   course3_name: Corso 3
   course4_name: Corso 4
   accelerated_name: Corso rapido
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  applab_name: Laboratorio per le App
+  applab_gradelevel: Ages 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: Da 4 a 104 anni
   codeintl_gradelevel: Da 4 a 104 anni
   thinkersmithspanish_gradelevel: Por todos
