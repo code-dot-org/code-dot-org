@@ -395,7 +395,8 @@ function renderFooterInSharedGame() {
       paddingLeft: 0
     },
     className: 'dark',
-    menuItems: menuItems
+    menuItems: menuItems,
+    phoneFooter: true
   }), footerDiv);
 }
 
