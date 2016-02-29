@@ -3,7 +3,7 @@ Sequel.migration do
     create_table?(:channel_table_metadata, charset: 'utf8') do
       primary_key :id, unsigned: true, null: false
       foreign_key :app_id, index: true, null: false
-      foreign_key :storage_id, index: true
+      String :table_type, size: 50, index: true, null: false
       String :table_name, size: 50, index: true, null: false
 
       Text :column_list

@@ -8,6 +8,7 @@ class SqlTable
   def initialize(channel_id, storage_id, table_name)
     _, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
     @storage_id = storage_id
+    @table_type = storage_id.nil? ? 'shared' : 'user'
     @table_name = table_name
 
     @table = PEGASUS_DB[:app_tables]
@@ -28,14 +29,14 @@ class SqlTable
   end
 
   def metadata_dataset
-    @metadata_dataset ||= @metadata_table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name).limit(1)
+    @metadata_dataset ||= @metadata_table.where(app_id: @channel_id, table_type: @table_type, table_name: @table_name).limit(1)
   end
 
   # create a new metadata row, based on the contents of any existing records
   def create_metadata
     @metadata_table.insert({
       app_id: @channel_id,
-      storage_id: @storage_id,
+      table_type: @table_type,
       table_name: @table_name,
       column_list: TableMetadata.generate_column_list(to_a).to_json,
       updated_at: DateTime.now
@@ -173,7 +174,7 @@ class SqlTable
 
   def self.table_names(channel_id)
     tables_from_records = PEGASUS_DB[:app_tables].where(app_id: channel_id, storage_id: nil).group(:table_name).select_map(:table_name)
-    tables_from_metadata = PEGASUS_DB[:channel_table_metadata].where(app_id: channel_id, storage_id: nil).group(:table_name).select_map(:table_name)
+    tables_from_metadata = PEGASUS_DB[:channel_table_metadata].where(app_id: channel_id, table_type: 'shared').group(:table_name).select_map(:table_name)
     tables_from_records.concat(tables_from_metadata).uniq
   end
 
