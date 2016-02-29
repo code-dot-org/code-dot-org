@@ -9,7 +9,8 @@ var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 var AppView = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
-    requireLandscape: React.PropTypes.bool.isRequired,
+    isEmbedView: React.PropTypes.bool.isRequired,
+    isShareView: React.PropTypes.bool.isRequired,
     renderCodeWorkspace: React.PropTypes.func.isRequired,
     renderVisualizationColumn: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
@@ -23,7 +24,8 @@ var AppView = React.createClass({
     return (
       <StudioAppWrapper
           assetUrl={this.props.assetUrl}
-          requireLandscape={this.props.requireLandscape}>
+          isEmbedView={this.props.isEmbedView}
+          isShareView={this.props.isShareView}>
         <ProtectedStatefulDiv
             id="visualizationColumn"
             renderContents={this.props.renderVisualizationColumn} />

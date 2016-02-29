@@ -259,7 +259,8 @@ NetSim.prototype.init = function(config) {
 
   React.render(React.createElement(NetSimView, {
     assetUrl: this.studioApp_.assetUrl,
-    requireLandscape: !(config.share || config.embed),
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
     renderCodeApp: renderCodeApp,
     onMount: onMount
   }), document.getElementById(config.containerId));
