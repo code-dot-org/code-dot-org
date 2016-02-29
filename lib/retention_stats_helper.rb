@@ -28,3 +28,10 @@ def get_cumulatives(stats)
 
   return cumulatives
 end
+
+# Adds any keys in base_hash missing in other_hash to other_hash with value default_value.
+def add_missing_keys(base_hash, other_hash, default_value)
+  base_hash.keys.each do |key|
+    other_hash[key] = default_value unless other_hash.keys.include? key
+  end
+end
