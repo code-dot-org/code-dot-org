@@ -19,10 +19,12 @@ level 'CSPPD3-u5 unit overview checkin'
 stage 'Explore PT Breakdown'
 level 'CSPPD3-u5 chapter 1 concepts'
 level 'CSPPD3-u5 chapter 1 resources'
+level 'CSPPD3-u5 Explore PT checkin'
 
 stage 'Create PT Breakdown'
 level 'CSPPD3-u5 chapter 2 concepts'
 level 'CSPPD3-u5 chapter 2 resources'
+level 'CSPPD3-u5 Create PT checkin'
 
 stage 'Challenge Overview'
 level 'CSPPD3-u5 challenge overview'
