@@ -19,5 +19,4 @@ class TextRenderTest < Minitest::Test
   def test_yaml
     assert_equal 'headline', TextRender.r(YamlEngine,'yaml_variable: <%= variable %>', variable: 'headline')['yaml_variable']
   end
-
 end

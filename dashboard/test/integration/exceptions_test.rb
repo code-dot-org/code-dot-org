@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ExceptionsTest < ActionDispatch::IntegrationTest
-
   def setup
   end
 

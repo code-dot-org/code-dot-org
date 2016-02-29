@@ -220,5 +220,4 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     # pretend to succeed
     assert_response :created
   end
-
 end

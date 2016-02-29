@@ -14,7 +14,6 @@ end
 module Slog
 
   class Writer
-
     def initialize(params)
       @secret = params[:secret]
       @logger = Le.new(@secret) unless @secret.nil?
@@ -27,7 +26,6 @@ module Slog
   end
 
   class Reader
-
     def initialize(params)
       @secret = params[:secret]
       @api_host = params[:api_host] || 'pull.logentries.com'
@@ -71,7 +69,6 @@ module Slog
       uri += params.nil? ? '/' : "/?#{hash_to_query(params)}"
       uri
     end
-
   end
 
 end

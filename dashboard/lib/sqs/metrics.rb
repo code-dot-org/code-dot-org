@@ -23,12 +23,10 @@ module SQS
     def to_s
       as_json.to_json
     end
-
   end
 
   # A thread safe counter.
   class Counter
-
     def initialize
       @lock = Mutex.new
       reset

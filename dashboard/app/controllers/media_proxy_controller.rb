@@ -14,7 +14,6 @@ require 'set'
 require 'uri'
 
 class MediaProxyController < ApplicationController
-
   # Content types that we are willing to proxy
   ALLOWED_CONTENT_TYPES = Set.new(
     ['image/bmp', 'image/x-windows-bmp', 'image/gif', 'image/jpeg', 'image/png',
@@ -85,5 +84,4 @@ class MediaProxyController < ApplicationController
     prevent_caching
     render text: text, status: status
   end
-
 end

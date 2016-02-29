@@ -138,7 +138,6 @@ end
 ##########
 
 class CDOImpl < OpenStruct
-
   @slog = nil
 
   def initialize()

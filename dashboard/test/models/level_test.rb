@@ -417,5 +417,4 @@ EOS
     level.calculate_ideal_level_source_id
     assert_equal right, level.ideal_level_source
   end
-
 end

@@ -21,7 +21,6 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-
     if Rails.env.development?
       require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
@@ -113,6 +112,5 @@ module Dashboard
     else
       config.cache_store = :memory_store, { size: MAX_CACHED_BYTES }
     end
-
   end
 end

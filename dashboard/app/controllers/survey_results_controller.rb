@@ -19,5 +19,4 @@ class SurveyResultsController < ApplicationController
   def survey_result_params
     params.require(:survey).permit(SurveyResult::RESULT_ATTRS.map(&:to_sym))
   end
-
 end

@@ -93,5 +93,4 @@ DSL
     assert_equal 'visible to teachers only', new_level.properties['teacher_markdown']
     assert new_level.encrypted
   end
-
 end

@@ -4,7 +4,6 @@
 require 'csv'
 require 'set'
 class Table
-
   class NotFound < Sinatra::NotFound
   end
 
@@ -120,7 +119,6 @@ class Table
       row[:table_name]
     end
   end
-
 end
 
 require 'aws-sdk'
@@ -386,7 +384,6 @@ class DynamoTable
     end while last_evaluated_key
     results.keys
   end
-
 end
 
 # Converts an array of hashes into a csv string

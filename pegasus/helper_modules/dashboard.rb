@@ -83,7 +83,6 @@ module Dashboard
     def owned_sections
       Dashboard::db[:sections].select(:id).where(user_id: id).all
     end
-
   end
 
 end

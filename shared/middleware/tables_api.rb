@@ -5,7 +5,6 @@ require 'csv'
 require_relative './helpers/table_coerce'
 
 class TablesApi < Sinatra::Base
-
   helpers do
     [
       'core.rb',

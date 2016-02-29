@@ -1,7 +1,6 @@
 module SQS
   # A generic queued message with a body.
   class Message
-
     # @type [String]
     attr_reader :body
 

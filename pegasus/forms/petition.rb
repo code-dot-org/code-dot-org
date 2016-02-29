@@ -1,5 +1,4 @@
 class Petition
-
   def self.normalize(data)
     result = {}
     result[:email_s] = required email_address data[:email_s]
@@ -44,5 +43,4 @@ class Petition
   def self.receipt()
     'petition_receipt'
   end
-
 end

@@ -50,5 +50,4 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
   end
-
 end

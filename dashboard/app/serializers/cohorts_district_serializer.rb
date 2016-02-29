@@ -27,5 +27,4 @@ class CohortsDistrictSerializer < ActiveModel::Serializer
   def location
     object.district.location
   end
-
 end

@@ -6,5 +6,4 @@ class SurveyResultTest < ActiveSupport::TestCase
     assert SurveyResult::RESULT_ATTRS.include? "survey2016_ethnicity_asian"
     assert SurveyResult::RESULT_ATTRS.include? "survey2016_foodstamps"
   end
-
 end

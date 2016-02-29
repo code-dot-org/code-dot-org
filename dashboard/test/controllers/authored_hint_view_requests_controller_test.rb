@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
-
   setup do
     AuthoredHintViewRequest.stubs(:enabled?).returns true
     @script = create :script
@@ -32,5 +31,4 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
 
     assert_equal(2, final_count - initial_count)
   end
-
 end

@@ -254,5 +254,4 @@ class HomeControllerTest < ActionController::TestCase
       get :debug
     end
   end
-
 end

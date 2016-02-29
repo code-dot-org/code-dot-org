@@ -4,7 +4,6 @@ require_relative 'test_helper'
 require 'cdo/email_validator'
 
 class EmailValidatorTest < Minitest::Test
-
   def test_valid_addresses
     valid_addresses = [
       'email@example.com',
@@ -53,5 +52,4 @@ class EmailValidatorTest < Minitest::Test
       assert !EmailValidator::email_address?(address), "#{address} should be an invalid email address"
     end
   end
-
 end

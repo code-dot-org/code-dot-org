@@ -227,5 +227,4 @@ class ReportsControllerTest < ActionController::TestCase
     assert_select 'div.stage', 2
     assert_select 'div.stage', 'Stage 1: report-stage-1'
   end
-
 end

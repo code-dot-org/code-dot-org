@@ -5,7 +5,6 @@ require_relative 'fake_redis_client'
 require_relative 'spy_pub_sub_api'
 
 class RedisTableTest < Minitest::Test
-
   def setup
     @redis = FakeRedisClient.new
     @pubsub = SpyPubSubApi.new
@@ -245,5 +244,4 @@ class RedisTableTest < Minitest::Test
   def make_pubsub_event(channel, event, data)
     { :channel => channel, :event => event, :data => data }
   end
-
 end

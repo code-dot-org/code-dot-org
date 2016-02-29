@@ -79,7 +79,6 @@ class StudioEC < Studio
       }
     JSON
   end
-
 end
 
 # Another name for this class to match the capitalization conventions of the annotation gem.

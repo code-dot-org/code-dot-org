@@ -2,7 +2,6 @@ require 'cdo/db'
 DB = PEGASUS_DB
 
 class Properties
-
   @@table = DB[:properties]
 
   def self.get(key)
@@ -36,7 +35,6 @@ class Properties
       'number_teachers'=>178289
     }
   end
-
 end
 
 def fetch_metrics()

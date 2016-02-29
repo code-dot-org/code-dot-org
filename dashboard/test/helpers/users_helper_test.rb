@@ -85,5 +85,4 @@ class UsersHelperTest < ActionView::TestCase
          }
      }, summarize_user_progress_for_all_scripts(user))
   end
-
 end

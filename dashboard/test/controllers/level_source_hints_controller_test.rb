@@ -93,5 +93,4 @@ class LevelSourceHintsControllerTest < ActionController::TestCase
     get :show_pop_hints, idx: 0
     assert_response :forbidden
   end
-
 end

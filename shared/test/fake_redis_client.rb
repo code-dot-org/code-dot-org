@@ -2,7 +2,6 @@
 # Note that this does not implement the entire Redis client API,
 # only that portion required by the RedisPropertyBag.
 class FakeRedisClient
-
   def initialize
     @hash = Hash.new
     @expirations = Hash.new

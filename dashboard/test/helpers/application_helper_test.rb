@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ApplicationHelperTest < ActionView::TestCase
-
   # Stub current_user
   def current_user
   end

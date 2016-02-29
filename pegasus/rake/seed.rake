@@ -2,7 +2,6 @@ require 'cdo/google_drive'
 #require src_dir 'database'
 
 class CsvToSqlTable
-
   def initialize(path, params={})
     @db = params[:db]||DB
     @path = path
@@ -114,11 +113,9 @@ class CsvToSqlTable
       seed_info.insert(table: @table.to_s, mtime: mtime)
     end
   end
-
 end
 
 class GSheetToCsv
-
   @@gdrive = nil
 
   def initialize(path)
@@ -187,7 +184,6 @@ class GSheetToCsv
 
     return @csv_path
   end
-
 end
 
 $gdrive_ = nil

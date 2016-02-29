@@ -3,7 +3,6 @@ require_relative '../../pegasus/helpers/prize_helpers'
 require 'securerandom'
 
 class HocSurveyPrizeTest < SequelTestCase
-
   TYPE1 = 'apple'
   TYPE2 = 'orange'
   USER1 = 'user1@code.org'

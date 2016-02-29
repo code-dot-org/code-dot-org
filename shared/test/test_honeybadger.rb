@@ -5,7 +5,6 @@ require 'cdo/env'
 require 'cdo/honeybadger'
 
 class HoneybadgerTest < Minitest::Test
-
   def teardown
     ENV.unstub(:with_sensitive_values_redacted)
   end
@@ -75,5 +74,4 @@ class HoneybadgerTest < Minitest::Test
     Honeybadger.expects(:notify).with(expected_opts).once
     Honeybadger.notify_command_error 'ls', 1, '', error
   end
-
 end

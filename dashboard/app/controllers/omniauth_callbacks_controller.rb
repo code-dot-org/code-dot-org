@@ -1,5 +1,4 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
-
   # GET /users/auth/:provider/callback
   def all
     @user = User.from_omniauth(request.env["omniauth.auth"], request.env['omniauth.params'])

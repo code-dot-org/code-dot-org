@@ -100,7 +100,6 @@ module TextRender
   # Markdown
   #
   class MarkdownEngine
-
     class HTMLWithTags < Redcarpet::Render::HTML
       def postprocess(full_document)
         full_document.gsub!(/<p>\[\/(.*)\]<\/p>/) do
@@ -147,7 +146,6 @@ module TextRender
   # SafeMarkdown
   #
   class SafeMarkdownEngine
-
     def initialize(template)
       @template = ErbEngine.new(template)
       @engine = Redcarpet::Markdown.new(

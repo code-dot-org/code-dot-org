@@ -4,9 +4,7 @@ require 'cdo/hip_chat'
 module Google
 
   class Drive
-
     class File
-
       def initialize(session,file)
         @session = session
         @file = file
@@ -91,7 +89,6 @@ module Google
       titles.unshift 'Pegasus'
       titles
     end
-
   end
 
 end

@@ -324,5 +324,4 @@ class Artist < Blockly
     properties['toolbox_blocks'] =
       toolbox.to_xml save_with: Blockly::XML_OPTIONS
   end
-
 end

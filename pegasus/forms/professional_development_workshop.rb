@@ -126,5 +126,4 @@ class ProfessionalDevelopmentWorkshop
       sort: 'first_date_dt asc',
     }
   end
-
 end

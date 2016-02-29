@@ -170,5 +170,4 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 10, user.age
     assert_equal 'f', user.gender
   end
-
 end

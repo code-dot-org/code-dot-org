@@ -2,7 +2,6 @@
 # include activities and user_level updates.
 
 class AsyncProgressHandler
-
   # Returns a thread-local SQS queue for handle asynchronous user progress operations
   # (Activity and UserLevel updates.) The queue is thread-local because the SQS client
   # is not thread-safe.
@@ -26,5 +25,4 @@ class AsyncProgressHandler
       end
     end
   end
-
 end

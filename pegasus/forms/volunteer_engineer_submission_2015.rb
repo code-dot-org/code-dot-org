@@ -1,7 +1,6 @@
 require pegasus_dir 'forms/volunteer_engineer_submission'
 
 class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
-
   UNSUBSCRIBE_2016 = "until2016"
   UNSUBSCRIBE_FOREVER = "forever"
   DEFAULT_DISTANCE = 24 # kilometers

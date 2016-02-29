@@ -76,5 +76,4 @@ class SmsControllerTest < ActionController::TestCase
 
     assert_response :not_acceptable
   end
-
 end

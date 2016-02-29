@@ -1036,5 +1036,4 @@ class UserTest < ActiveSupport::TestCase
     student_with_oauth.reload
     assert student_with_oauth.can_edit_account? # only in a picture section
   end
-
 end

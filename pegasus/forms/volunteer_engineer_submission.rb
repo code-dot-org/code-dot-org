@@ -1,5 +1,4 @@
 class VolunteerEngineerSubmission
-
   def self.normalize(data)
     result = {}
 
@@ -83,5 +82,4 @@ class VolunteerEngineerSubmission
     end
     results
   end
-
 end
