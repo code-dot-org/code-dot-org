@@ -18,7 +18,7 @@ var _ = utils.getLodash();
 var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
-var AppView = require('../templates/AppView.jsx');
+var NetSimView = require('./NetSimView.jsx');
 var page = require('./page.html.ejs');
 var NetSimAlert = require('./NetSimAlert');
 var NetSimConstants = require('./NetSimConstants');
@@ -257,7 +257,7 @@ NetSim.prototype.init = function(config) {
     this.runLoop_.begin();
   }.bind(this);
 
-  React.render(React.createElement(AppView, {
+  React.render(React.createElement(NetSimView, {
     assetUrl: this.studioApp_.assetUrl,
     requireLandscape: !(config.share || config.embed),
     renderCodeApp: renderCodeApp,
