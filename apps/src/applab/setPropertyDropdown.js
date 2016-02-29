@@ -184,7 +184,7 @@ function getFirstSetPropertyParam(block, editor) {
     var cursor = editor.session.selection.getCursor();
     var contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
 
-    var match = /setProperty\("(.*)"/.exec(contents);
+    var match = /setProperty\(['|"](.*)['|"]/.exec(contents);
     return match ? match[1] : null;
   }
   // We have a block. Parse it to find our first socket.
