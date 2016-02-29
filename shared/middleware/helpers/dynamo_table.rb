@@ -13,10 +13,11 @@ class DynamoTable
   def initialize(channel_id, storage_id, table_name)
     _, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
     @storage_id = storage_id
+    @table_type = storage_id.nil? ? 'shared' : 'user'
     @table_name = table_name
 
     @hash = "#{@channel_id}:#{@table_name}:#{@storage_id}"
-    @metadata_hash = "#{@channel_id}:#{@table_name}:#{@storage_id}:metadata"
+    @metadata_hash = "#{@channel_id}:#{@table_name}:#{@table_type}:metadata"
   end
 
   def db
