@@ -1,4 +1,5 @@
-=javascript_include_tag 'plc/perform_evaluation'
+- content_for(:head) do
+  =javascript_include_tag 'js/plc'
 
 %h1 Self Evaluation for #{@course.name}
 
@@ -11,7 +12,7 @@
     - answers = question.plc_evaluation_answers
     - answers.each do |answer|
       %p
-        %input.radio{type: "radio", value: answer.plc_task_id, checked: answer == answers.first}
+        %input.radio{type: "radio", name: question.id, value: answer.plc_task_id, checked: answer == answers.first}
           #{answer.answer} (corresponds with #{answer.plc_task.try(:name)})
   = hidden_field_tag('answerTaskList')
   = submit_tag('Submit evaluation', id: 'submitEvaluation')

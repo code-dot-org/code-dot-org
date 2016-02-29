@@ -21,7 +21,7 @@ http {
   proxy_redirect off;
   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
   client_max_body_size 4G;
-  keepalive_timeout 5;
+  keepalive_timeout 30;
 
   server {
     listen <%= node['cdo-apps']['dashboard']['port'] %> default deferred;

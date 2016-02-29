@@ -8,7 +8,7 @@ video_player: true
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet"}
 %link{href: "/css/highlights.css", rel: "stylesheet"}
 
-= view :jumbotron_banner, img: CDO.code_org_url("/images/app-lab/girl-cropped.jpg"), title: "App Lab", desc: "App Lab is a web-based environment for students to make simple apps. Simply drag and drop to design your app, write code for your app with JavaScript blocks or with text, then send the app to your phone in seconds.", specs: "Ages 13+, All modern browsers, English only", url: CDO.studio_url('/p/applab'), cta: "Make an app", nav_bar: [{text: 'Resources', url: '#resources'}, {text: 'Challenges', url: '#challenges'}, {text: 'Video Library', url: '#videos'}]
+= view :jumbotron_banner, img: CDO.code_org_url("/images/app-lab/girl-cropped.jpg"), title: "App Lab", desc: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.", specs: "Ages 13+, All modern browsers, English only", url: CDO.studio_url('/p/applab'), cta: "Make an app", nav_bar: [{text: 'Resources', url: '#resources'}, {text: 'Challenges', url: '#challenges'}, {text: 'Video Library', url: '#videos'}]
 
 #resources.responsive-body
   %h1 Resources to get you started
@@ -31,7 +31,7 @@ video_player: true
   .clear
 
 #challenges.responsive-body
-  %h2 Try your hand at these challenges
+  %h2 Try these challenges
   .highlights-content
     - cta = "Remix the project"
     = view :highlight_item, item: {image: "slider-sketch", title: "Slider sketch", desc: "Use the sliders to draw cool patterns and designs. Challenge: Add another slider to change the thickness of the line.", cta: cta, url: 'https://studio.code.org/projects/applab/JNbplBXMisx2aMefUkh39g/remix'}
