@@ -575,28 +575,34 @@ Flappy.init = function(config) {
     config.blockArrangement.flappy_whenClick.y = row2;
   }
 
-  React.render(React.createElement(AppView, {
-    renderCodeApp: function () {
-      return page({
-        assetUrl: studioApp.assetUrl,
-        data: {
-          localeDirection: studioApp.localeDirection(),
-          visualization: require('./visualization.html.ejs')(),
-          controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl, shareable: level.shareable}),
-          blockUsed: undefined,
-          idealBlockNumber: undefined,
-          editCode: level.editCode,
-          blockCounterClass: 'block-counter-default',
-          readonlyWorkspace: config.readonlyWorkspace
-        }
-      });
-    },
-    onMount: function () {
-      studioApp.init(config);
+  var renderCodeApp = function () {
+    return page({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl, shareable: level.shareable}),
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
 
-      var rightButton = document.getElementById('rightButton');
-      dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
-    }
+  var onMount = function () {
+    studioApp.init(config);
+
+    var rightButton = document.getElementById('rightButton');
+    dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+  };
+
+  React.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
+    requireLandscape: !(config.share || config.embed),
+    renderCodeApp: renderCodeApp,
+    onMount: onMount
   }), document.getElementById(config.containerId));
 };
 
