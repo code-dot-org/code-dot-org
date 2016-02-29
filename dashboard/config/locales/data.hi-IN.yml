@@ -5,8 +5,8 @@
         20-hour:
           desc: K-8 Intro to Computer Science Course
           Unplug1: Stage 1
-          Maze: Stage 2
-          Unplug2: Stage 3
+          Maze: Star 2
+          Unplug2: Star 3
           Unplug3: Stage 4
           Artist: Stage 5
           Unplug4: Stage 6
@@ -48,13 +48,13 @@
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Stage 1
-          Applab: Stage 2
-          ArtistEC: Stage 3
+          Applab: Star 2
+          ArtistEC: Star 3
           StudioEC: Stage 4
         events:
           desc: Bounce (beta)
           Bounce: Stage 1
-          Studio: Stage 2
+          Studio: Star 2
         builder:
           desc: User-Created Puzzles (beta)
           Custom: Stage 1
@@ -634,7 +634,7 @@
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
-        Unplug1: What is CS?
+        Unplug1: CS क्या है?
         Unplug2: Computational Thinking
         Unplug3: Graph Paper Programming
         Unplug4: Algorithms
