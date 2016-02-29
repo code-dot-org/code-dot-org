@@ -160,12 +160,6 @@ Style/ClassVars:
 Style/ClosingParenthesisIndentation:
   Enabled: false
 
-# Offense count: 36
-# Cop supports --auto-correct.
-# Configuration parameters: PreferredMethods.
-Style/CollectionMethods:
-  Enabled: false
-
 # Offense count: 128
 # Cop supports --auto-correct.
 Style/ColonMethodCall:
