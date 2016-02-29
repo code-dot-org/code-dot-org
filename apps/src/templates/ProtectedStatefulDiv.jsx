@@ -10,6 +10,7 @@
  */
 var ProtectedStatefulDiv = React.createClass({
   propTypes: {
+    id: React.PropTypes.string,
     renderContents: React.PropTypes.func.isRequired
   },
 
@@ -26,7 +27,7 @@ var ProtectedStatefulDiv = React.createClass({
   },
 
   render: function () {
-    return <div ref="root"></div>;
+    return <div id={this.props.id} ref="root"></div>;
   }
 });
 module.exports = ProtectedStatefulDiv;

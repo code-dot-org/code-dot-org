@@ -10,7 +10,8 @@ var AppView = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
     requireLandscape: React.PropTypes.bool.isRequired,
-    renderCodeApp: React.PropTypes.func.isRequired,
+    renderCodeWorkspace: React.PropTypes.func.isRequired,
+    renderVisualizationColumn: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
 
@@ -22,7 +23,13 @@ var AppView = React.createClass({
     return (
       <div>
         {this.props.requireLandscape && <RotateContainer assetUrl={this.props.assetUrl} />}
-        <ProtectedStatefulDiv renderContents={this.props.renderCodeApp} />
+        <ProtectedStatefulDiv
+            id="visualizationColumn"
+            renderContents={this.props.renderVisualizationColumn} />
+        <div id="visualizationResizeBar" className="fa fa-ellipsis-v"></div>
+        <ProtectedStatefulDiv
+            id="codeWorkspace"
+            renderContents={this.props.renderCodeWorkspace} />
         <div className="clear"></div>
       </div>
     );

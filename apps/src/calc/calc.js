@@ -29,7 +29,8 @@ var calcMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
 var AppView = require('../templates/AppView.jsx');
-var page = require('../templates/page.html.ejs');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
@@ -199,21 +200,29 @@ Calc.init = function(config) {
     }
   };
 
-  var renderCodeApp = function () {
-    return page({
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
       assetUrl: studioApp.assetUrl,
       data: {
         localeDirection: studioApp.localeDirection(),
-        visualization: require('./visualization.html.ejs')(),
-        controls: require('./controls.html.ejs')({
-          assetUrl: studioApp.assetUrl
-        }),
         blockUsed : undefined,
         idealBlockNumber : undefined,
         editCode: level.editCode,
         blockCounterClass : 'block-counter-default',
-        inputOutputTable: level.inputOutputTable,
         readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
+
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({
+          assetUrl: studioApp.assetUrl
+        }),
+        inputOutputTable: level.inputOutputTable
       }
     });
   };
@@ -221,7 +230,8 @@ Calc.init = function(config) {
   React.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
     requireLandscape: !(config.share || config.embed),
-    renderCodeApp: renderCodeApp,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
     onMount: studioApp.init.bind(studioApp, config)
   }), document.getElementById(config.containerId));
 };

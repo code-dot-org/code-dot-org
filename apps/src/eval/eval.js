@@ -30,7 +30,8 @@ var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
 var AppView = require('../templates/AppView.jsx');
-var page = require('../templates/page.html.ejs');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
@@ -146,15 +147,11 @@ Eval.init = function(config) {
     }
   };
 
-  var renderCodeApp = function () {
-    return page({
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
       assetUrl: studioApp.assetUrl,
       data: {
         localeDirection: studioApp.localeDirection(),
-        visualization: require('./visualization.html.ejs')(),
-        controls: require('./controls.html.ejs')({
-          assetUrl: studioApp.assetUrl
-        }),
         blockUsed : undefined,
         idealBlockNumber : undefined,
         editCode: level.editCode,
@@ -164,10 +161,23 @@ Eval.init = function(config) {
     });
   };
 
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({
+          assetUrl: studioApp.assetUrl
+        })
+      }
+    });
+  };
+
   React.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
     requireLandscape: !(config.share || config.embed),
-    renderCodeApp: renderCodeApp,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
     onMount: studioApp.init.bind(studioApp, config)
   }), document.getElementById(config.containerId));
 };

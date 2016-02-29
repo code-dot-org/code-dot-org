@@ -34,7 +34,8 @@ var codegen = require('../codegen');
 var ArtistAPI = require('./api');
 var apiJavascript = require('./apiJavascript');
 var AppView = require('../templates/AppView.jsx');
-var page = require('../templates/page.html.ejs');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
@@ -208,13 +209,11 @@ Artist.prototype.init = function(config) {
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
-  var renderCodeApp = function () {
-    return page({
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
       assetUrl: this.studioApp_.assetUrl,
       data: {
-        visualization: '',
         localeDirection: this.studioApp_.localeDirection(),
-        controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath}),
         blockUsed : undefined,
         idealBlockNumber : undefined,
         editCode: this.level.editCode,
@@ -224,10 +223,21 @@ Artist.prototype.init = function(config) {
     });
   }.bind(this);
 
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        visualization: '',
+        controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath})
+      }
+    });
+  }.bind(this);
+
   React.render(React.createElement(AppView, {
     assetUrl: this.studioApp_.assetUrl,
     requireLandscape: !(config.share || config.embed),
-    renderCodeApp: renderCodeApp,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
     onMount: this.studioApp_.init.bind(this.studioApp_, config)
   }), document.getElementById(config.containerId));
 };
