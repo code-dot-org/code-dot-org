@@ -894,7 +894,18 @@ Applab.reactMountPoint_ = null;
  * Trigger a top-level React render
  */
 Applab.render = function () {
-  var nextProps = $.extend({}, Applab.reactInitialProps_, {});
+  var nextProps = $.extend({}, Applab.reactInitialProps_, {
+    hideToggle: Applab.hideDesignModeToggle(),
+    hideViewDataButton: Applab.hideViewDataButton(),
+    startInDesignMode: Applab.startInDesignMode(),
+    initialScreen: designMode.getCurrentScreenId(),
+    screenIds: designMode.getAllScreenIds(),
+    onDesignModeButton: Applab.onDesignModeButton,
+    onCodeModeButton: Applab.onCodeModeButton,
+    onViewDataButton: Applab.onViewData,
+    onScreenChange: designMode.changeScreen,
+    onScreenCreate: designMode.createScreen
+  });
   React.render(React.createElement(AppLabView, nextProps), Applab.reactMountPoint_);
 };
 
