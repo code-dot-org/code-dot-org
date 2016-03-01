@@ -15,6 +15,7 @@
 #  type                     :string(255)
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
+#  notes                    :string(255)
 #
 # Indexes
 #
