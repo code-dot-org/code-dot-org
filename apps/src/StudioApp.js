@@ -1814,7 +1814,20 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // Extend the command list on the ace Autocomplete object to include the period:
   var Autocomplete = window.ace.require("ace/autocomplete").Autocomplete;
   Autocomplete.prototype.commands['.'] = function(editor) {
-    editor.completer.detach(); editor.insert(".");
+    // First, insert the period and update the completions:
+    editor.insert(".");
+    editor.completer.updateCompletions(true);
+    var filtered = editor.completer.completions &&
+        editor.completer.completions.filtered;
+    for (var i = 0; i < (filtered && filtered.length); i++) {
+      // If we have any exact maches in our filtered completions that include
+      // this period, allow the completer to stay active:
+      if (filtered[i].exactMatch) {
+        return;
+      }
+    }
+    // Otherwise, detach the completer:
+    editor.completer.detach();
   };
 
   var langTools = window.ace.require("ace/ext/language_tools");
