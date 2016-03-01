@@ -800,11 +800,6 @@ designMode.configureDragAndDrop = function () {
 };
 
 designMode.configurePlaySpaceHeader = function () {
-  var designToggleRow = document.getElementById('designToggleRow');
-  if (!designToggleRow) {
-    return;
-  }
-
   designMode.loadDefaultScreen();
 };
 

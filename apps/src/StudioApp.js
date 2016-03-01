@@ -1142,14 +1142,14 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
-  var designToggleRow = document.getElementById('designToggleRow');
+  var playSpaceHeader = document.getElementById('playSpaceHeader');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
-  if (designToggleRow) {
-    top += $(designToggleRow).outerHeight(true);
+  if (playSpaceHeader) {
+    top += $(playSpaceHeader).outerHeight(true);
   }
 
   if (visualization) {
