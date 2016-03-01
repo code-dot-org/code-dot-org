@@ -29,7 +29,7 @@ var AppView = React.createClass({
         <ProtectedStatefulDiv
             id="visualizationColumn"
             renderContents={this.props.renderVisualizationColumn} />
-        <div id="visualizationResizeBar" className="fa fa-ellipsis-v"></div>
+        <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <ProtectedStatefulDiv
             id="codeWorkspace"
             renderContents={this.props.renderCodeWorkspace} />
