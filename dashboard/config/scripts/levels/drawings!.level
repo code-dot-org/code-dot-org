@@ -93,6 +93,8 @@
         <block type="variables_get">
           <title name="VAR">counter</title>
         </block>
+        <block type="alpha" inline="true" id="alpha"/>
+        <block type="math_number_dropdown"/>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
@@ -106,20 +108,29 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">3</title>
-              <statement name="DO">
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
-                  <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">120</title>
-                    </block>
-                  </next>
+            <block type="alpha" inline="true" id="alpha">
+              <value name="VALUE">
+                <block type="math_number_dropdown">
+                  <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">60</title>
                 </block>
-              </statement>
+              </value>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">120</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
             </block>
           </next>
         </block>
