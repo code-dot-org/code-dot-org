@@ -7,9 +7,9 @@ var dom = require('./dom');
 var msg = require('./locale');
 var HintSelect = require('./templates/HintSelect.jsx');
 var HintsDisplay = require('./templates/HintsDisplay.jsx');
+var HintDialogContent = require('./templates/HintDialogContent.jsx');
 var authoredHintUtils = require('./authoredHintUtils');
-var lightbulbSVG = require('./templates/lightbulb.svg.ejs')();
-var lightbulbDimSVG = require('./templates/lightbulb_dim.svg.ejs')();
+var Lightbulb = require('./templates/Lightbulb.jsx');
 
 var AuthoredHints = function (studioApp) {
   this.studioApp_ = studioApp;
@@ -183,19 +183,11 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function (animate) {
     this.promptIcon.parentNode.insertBefore(this.lightbulb, this.promptIcon);
   }
 
-  // If there are more than nine hints, simply display "9+"
-  var hintText = (hintCount > 9) ? "9+" : hintCount;
-  if (hintCount === 0) {
-    this.lightbulb.innerHTML = lightbulbDimSVG;
-  } else {
-    this.lightbulb.innerHTML = lightbulbSVG;
-    this.lightbulb.querySelector('#hintCount').textContent = hintText;
-  }
-
-  var bulb = document.getElementById("bulb");
-  if (animate && bulb) {
-    bulb.setAttribute('class', 'animate-hint');
-  }
+  React.render(React.createElement(Lightbulb, {
+    count: hintCount,
+    lit: hintCount > 0,
+    animate: animate,
+  }), this.lightbulb);
 };
 
 AuthoredHints.prototype.getHintsDisplay = function () {
@@ -203,7 +195,6 @@ AuthoredHints.prototype.getHintsDisplay = function () {
     hintReviewTitle: msg.hintReviewTitle(),
     seenHints: this.getSeenHints(),
     unseenHints: this.getUnseenHints(),
-    lightbulbSVG: lightbulbSVG,
     onUserViewedHint: function () {
       var nextHint = this.getUnseenHints()[0];
       this.recordUserViewedHint_(nextHint);
@@ -232,8 +223,8 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
             callback();
           }.bind(this),
           showHint: function () {
+            var content = document.createElement('div');
             if (hint.block) {
-              var content = document.createElement('div');
               content.innerHTML = hint.content;
               var blockContainer = document.createElement('div');
               blockContainer.style.height = '100px';
@@ -242,7 +233,10 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
 
               Blockly.BlockSpace.createReadOnlyBlockSpace(blockContainer, hint.block);
             } else {
-              api.set('content.text', hint.content);
+              React.render(React.createElement(HintDialogContent, {
+                renderedContent: hint.content
+              }), content);
+              api.set('content.text', content);
             }
             $(api.elements.content).find('img').on('load', function (e) {
               api.reposition(e);
@@ -260,7 +254,7 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
       }
     },
     style: {
-      classes: "cdo-qtips",
+      classes: "cdo-qtips qtip-authored-hint",
       tip: {
         width: 20,
         height: 20
