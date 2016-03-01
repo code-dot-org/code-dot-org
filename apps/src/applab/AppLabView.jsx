@@ -11,11 +11,12 @@ var AppLabView = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
     isDesignModeHidden: React.PropTypes.bool.isRequired,
+    isEditingProject: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     isReadOnlyView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
+    isViewDataButtonHidden: React.PropTypes.bool.isRequired,
 
-    hideViewDataButton: React.PropTypes.bool.isRequired,
     startInDesignMode: React.PropTypes.bool.isRequired,
     activeScreenId: React.PropTypes.string,
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
@@ -38,8 +39,8 @@ var AppLabView = React.createClass({
     var playSpaceHeader;
     if (!this.props.isReadOnlyView) {
       playSpaceHeader = <PlaySpaceHeader
-          hideToggle={this.props.isShareView || this.props.isDesignModeHidden}
-          hideViewDataButton={this.props.hideViewDataButton}
+          hideToggle={this.shouldHideToggle()}
+          hideViewDataButton={this.shouldHideViewDataButton()}
           startInDesignMode={this.props.startInDesignMode}
           activeScreenId={this.props.activeScreenId}
           screenIds={this.props.screenIds}
@@ -65,6 +66,17 @@ var AppLabView = React.createClass({
             renderContents={this.props.renderCodeWorkspace} />
       </StudioAppWrapper>
     );
+  },
+
+  shouldHideToggle: function () {
+    return this.props.isShareView || this.props.isDesignModeHidden;
+  },
+
+  shouldHideViewDataButton: function () {
+    return this.props.isViewDataButtonHidden ||
+        this.props.isDesignModeHidden ||
+        this.props.isShareView ||
+        !this.props.isEditingProject;
   }
 });
 module.exports = AppLabView;
