@@ -1811,6 +1811,12 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   var aceEditor = this.editor.aceEditor;
   aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
+  // Extend the command list on the ace Autocomplete object to include the period:
+  var Autocomplete = window.ace.require("ace/autocomplete").Autocomplete;
+  Autocomplete.prototype.commands['.'] = function(editor) {
+    editor.completer.detach(); editor.insert(".");
+  };
+
   var langTools = window.ace.require("ace/ext/language_tools");
 
   // We don't want to include the textCompleter. langTools doesn't give us a way
