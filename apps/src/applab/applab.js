@@ -898,7 +898,7 @@ Applab.render = function () {
     hideToggle: Applab.hideDesignModeToggle(),
     hideViewDataButton: Applab.hideViewDataButton(),
     startInDesignMode: Applab.startInDesignMode(),
-    initialScreen: designMode.getCurrentScreenId(),
+    activeScreenId: designMode.getCurrentScreenId(),
     screenIds: designMode.getAllScreenIds(),
     onDesignModeButton: Applab.onDesignModeButton,
     onCodeModeButton: Applab.onCodeModeButton,

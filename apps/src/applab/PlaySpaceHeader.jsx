@@ -19,7 +19,7 @@ var PlaySpaceHeader = React.createClass({
     hideToggle: React.PropTypes.bool.isRequired,
     hideViewDataButton: React.PropTypes.bool.isRequired,
     startInDesignMode: React.PropTypes.bool.isRequired,
-    initialScreen: React.PropTypes.string.isRequired,
+    activeScreenId: React.PropTypes.string,
     screenIds: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
@@ -30,8 +30,7 @@ var PlaySpaceHeader = React.createClass({
 
   getInitialState: function () {
     return {
-      mode: this.props.startInDesignMode ? Mode.DESIGN :  Mode.CODE,
-      activeScreen: null
+      mode: this.props.startInDesignMode ? Mode.DESIGN :  Mode.CODE
     };
   },
 
@@ -58,10 +57,6 @@ var PlaySpaceHeader = React.createClass({
     this.props.onScreenChange(screenId);
   },
 
-  componentWillReceiveProps: function (newProps) {
-    this.setState({ activeScreen: newProps.initialScreen });
-  },
-
   render: function () {
     var leftSide, rightSide;
 
@@ -79,7 +74,7 @@ var PlaySpaceHeader = React.createClass({
     } else if (this.state.mode === Mode.DESIGN) {
       rightSide = <ScreenSelector
           screenIds={this.props.screenIds}
-          activeScreen={this.state.activeScreen}
+          activeScreenId={this.props.activeScreenId}
           onChange={this.handleScreenChange} />;
     }
 
