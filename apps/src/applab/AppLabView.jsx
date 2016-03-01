@@ -10,11 +10,11 @@ var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 var AppLabView = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
+    isDesignModeHidden: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     isReadOnlyView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
 
-    hideToggle: React.PropTypes.bool.isRequired,
     hideViewDataButton: React.PropTypes.bool.isRequired,
     startInDesignMode: React.PropTypes.bool.isRequired,
     activeScreenId: React.PropTypes.string,
@@ -38,7 +38,7 @@ var AppLabView = React.createClass({
     var playSpaceHeader;
     if (!this.props.isReadOnlyView) {
       playSpaceHeader = <PlaySpaceHeader
-          hideToggle={this.props.hideToggle}
+          hideToggle={this.props.isShareView || this.props.isDesignModeHidden}
           hideViewDataButton={this.props.hideViewDataButton}
           startInDesignMode={this.props.startInDesignMode}
           activeScreenId={this.props.activeScreenId}
