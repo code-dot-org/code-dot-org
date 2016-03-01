@@ -1,20 +1,28 @@
 var msg = require('../locale');
 var Lightbulb = require('./Lightbulb.jsx');
+var ReadOnlyBlockSpace = require('./ReadOnlyBlockSpace.jsx');
 
-module.exports = React.createClass({
+var HintDialogContent = React.createClass({
   propTypes: {
-    renderedContent: React.PropTypes.string.isRequired,
+    content: React.PropTypes.string.isRequired,
+    block: React.PropTypes.object,
   },
+
   render: function () {
-    return (
-      <div>
-        <h3>
-          <Lightbulb size={32} style={{ margin: "-9px 0 -9px -5px" }}/>
-          { msg.hintTitle() }
-        </h3>
-        <div dangerouslySetInnerHTML={{ __html: this.props.renderedContent }}/>
-      </div>
-    );
+    var block;
+    if (this.props.block) {
+      block = (<ReadOnlyBlockSpace block={this.props.block} />);
+    }
+
+    return (<div>
+      <h3>
+        <Lightbulb size={32} style={{ margin: "-9px 5px -9px -5px" }}/>
+        { msg.hintTitle() }
+      </h3>
+      <div dangerouslySetInnerHTML={{ __html: this.props.content }}/>
+      {block}
+    </div>);
   }
 });
 
+module.exports = HintDialogContent;
