@@ -334,7 +334,7 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
       };
       if (opts.autocompleteFunctionsWithParens) {
         newApi.completer = {
-          insertMatch: _.bind(function (editor) {
+          insertMatch: function (editor) {
             // Remove the filterText that was already typed (ace's built-in
             // insertMatch would normally do this automatically)
             if (editor.completer.completions.filterText) {
@@ -345,7 +345,7 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
               }
             }
             // Insert the function name plus parentheses and semicolon:
-            editor.execCommand("insertstring", this.value + '();');
+            editor.execCommand("insertstring", this + '();');
             if (this.params) {
               // Move the selection back so parameters can be entered:
               var curRange = editor.selection.getRange();
@@ -353,7 +353,7 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
               curRange.end.column -= 2;
               editor.selection.setSelectionRange(curRange);
             }
-          }, newApi)
+          }.bind(newApi.value)
         };
       }
       if (newApi.value.indexOf('*.') === 0 || newApi.value.indexOf('?.') === 0) {
