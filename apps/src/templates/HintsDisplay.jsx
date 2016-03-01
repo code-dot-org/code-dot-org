@@ -34,34 +34,6 @@ module.exports = React.createClass({
     });
   },
 
-  /**
-   * Many of our hints include Blockly blocks. Unfortunately, Blockly
-   * BlockSpaces have a real problem with being created before they are
-   * in the DOM, so we need to inject this BlockSpace outside of our
-   * React render method once we're confident that this component is in
-   * the DOM.
-   */
-  injectBlocklyHint: function (hint) {
-    var ref = this.refs[hint.hintId];
-    ref.injectBlocklyHint();
-  },
-
-  componentDidMount: function () {
-    // now that we're in the DOM, we can render our Blockly blocks for
-    // those hints that have them
-    this.props.seenHints.filter(function (hint) {
-      return hint.block;
-    }).forEach(this.injectBlocklyHint);
-  },
-
-  componentDidUpdate: function () {
-    // if our update has us showing a new hint, make sure to render the
-    // block if it has one
-    if (this.state.showNextUnseenHint && this.props.unseenHints[0].block) {
-      this.injectBlocklyHint(this.props.unseenHints[0]);
-    }
-  },
-
   render: function () {
     var hintsToShow = this.props.seenHints;
     if (this.state.showNextUnseenHint) {
@@ -72,7 +44,7 @@ module.exports = React.createClass({
     if (hintsToShow && hintsToShow.length) {
       seenHints = [
           <h1>
-            <Lightbulb size={32} style={{ margin: "-9px 0 -9px -5px" }}/>
+            <Lightbulb size={32} style={{ margin: "-9px 5px -9px -5px" }}/>
             { this.props.hintReviewTitle }
           </h1>,
           <ol>

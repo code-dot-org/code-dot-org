@@ -224,20 +224,13 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
           }.bind(this),
           showHint: function () {
             var content = document.createElement('div');
-            if (hint.block) {
-              content.innerHTML = hint.content;
-              var blockContainer = document.createElement('div');
-              blockContainer.style.height = '100px';
-              content.appendChild(blockContainer);
-              api.set('content.text', content);
+            api.set('content.text', content);
 
-              Blockly.BlockSpace.createReadOnlyBlockSpace(blockContainer, hint.block);
-            } else {
-              React.render(React.createElement(HintDialogContent, {
-                renderedContent: hint.content
-              }), content);
-              api.set('content.text', content);
-            }
+            React.render(React.createElement(HintDialogContent, {
+              content: hint.content,
+              block: hint.block
+            }), content);
+
             $(api.elements.content).find('img').on('load', function (e) {
               api.reposition(e);
             });
