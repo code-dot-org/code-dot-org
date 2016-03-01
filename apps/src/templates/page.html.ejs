@@ -3,12 +3,6 @@
   var hideRunButton = locals.hideRunButton || false;
 %>
 
-<div id="rotateContainer" style="background-image: url(<%= assetUrl('media/turnphone_horizontal.png') %>)">
-  <div id="rotateText">
-    <p><%= msg.rotateText() %><br><%= msg.orientationLock() %></p>
-  </div>
-</div>
-
 <% var gameButtons = function() { -%>
   <div id="gameButtons">
     <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
@@ -125,5 +119,3 @@
     </div>
   <% } %>
 </div>
-
-<div class="clear"></div>

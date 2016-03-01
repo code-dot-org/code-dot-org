@@ -18,6 +18,7 @@ var _ = utils.getLodash();
 var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
+var AppView = require('../templates/AppView.jsx');
 var page = require('./page.html.ejs');
 var NetSimAlert = require('./NetSimAlert');
 var NetSimConstants = require('./NetSimConstants');
@@ -164,7 +165,6 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * @param {string} config.rackEnv - development/production/etc.
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
- * @param {string} config.html - rendered markup to be created inside this method
  */
 NetSim.prototype.init = function(config) {
   if (!this.studioApp_) {
@@ -224,35 +224,45 @@ NetSim.prototype.init = function(config) {
    */
   this.reportingInfo_ = config.report;
 
-  config.html = page({
-    assetUrl: this.studioApp_.assetUrl,
-    data: {
-      visualization: '',
-      localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl})
-    },
-    hideRunButton: true
-  });
+  var renderCodeApp = function () {
+    return page({
+      data: {
+        visualization: '',
+        localeDirection: this.studioApp_.localeDirection(),
+        controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl})
+      },
+      hideRunButton: true
+    });
+  }.bind(this);
 
   config.enableShowCode = false;
   config.pinWorkspaceToBottom = true;
   config.loadAudio = this.loadAudio_.bind(this);
 
-  // Override certain StudioApp methods - netsim does a lot of configuration
-  // itself, because of its nonstandard layout.
-  this.studioApp_.configureDom = NetSim.configureDomOverride_.bind(this.studioApp_);
-  this.studioApp_.onResize = NetSim.onResizeOverride_.bind(this.studioApp_);
+  var onMount = function () {
+    // Override certain StudioApp methods - netsim does a lot of configuration
+    // itself, because of its nonstandard layout.
+    this.studioApp_.configureDom = NetSim.configureDomOverride_.bind(this.studioApp_);
+    this.studioApp_.onResize = NetSim.onResizeOverride_.bind(this.studioApp_);
 
-  this.studioApp_.init(config);
+    this.studioApp_.init(config);
 
-  // Create netsim lobby widget in page
-  this.currentUser_.whenReady(function () {
-    this.initWithUser_(this.currentUser_);
-  }.bind(this));
+    // Create netsim lobby widget in page
+    this.currentUser_.whenReady(function () {
+      this.initWithUser_(this.currentUser_);
+    }.bind(this));
 
-  // Begin the main simulation loop
-  this.runLoop_.tick.register(this.tick.bind(this));
-  this.runLoop_.begin();
+    // Begin the main simulation loop
+    this.runLoop_.tick.register(this.tick.bind(this));
+    this.runLoop_.begin();
+  }.bind(this);
+
+  React.render(React.createElement(AppView, {
+    assetUrl: this.studioApp_.assetUrl,
+    requireLandscape: !(config.share || config.embed),
+    renderCodeApp: renderCodeApp,
+    onMount: onMount
+  }), document.getElementById(config.containerId));
 };
 
 /**
@@ -915,14 +925,12 @@ NetSim.prototype.loadAudio_ = function () {
 /**
  * Replaces StudioApp.configureDom.
  * Should be bound against StudioApp instance.
- * @param {Object} config Should at least contain
- *   containerId: ID of a parent DOM element for app content
- *   html: Content to put inside #containerId
+ * @param {!Object} config Should at least contain
+ * @param {!string} config.containerId: ID of a parent DOM element for app content
  * @private
  */
 NetSim.configureDomOverride_ = function (config) {
   var container = document.getElementById(config.containerId);
-  container.innerHTML = config.html;
 
   var vizHeight = this.MIN_WORKSPACE_HEIGHT;
   var visualizationColumn = document.getElementById('netsim-leftcol');

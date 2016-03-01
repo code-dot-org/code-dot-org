@@ -233,7 +233,15 @@ module LevelsHelper
     level_options[:lastAttempt] = @last_attempt
     level_options.merge! @level.properties.camelize_keys
 
+    if current_user.nil? || current_user.teachers.empty?
+      # only students with teachers should be able to submit
+      level_options['submittable'] = false
+    end
+
     app_options.merge! view_options.camelize_keys
+
+    app_options[:submitted] = level_view_options[:submitted]
+    app_options[:unsubmitUrl] = level_view_options[:unsubmit_url]
 
     app_options
   end

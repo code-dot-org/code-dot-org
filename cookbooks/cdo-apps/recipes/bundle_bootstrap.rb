@@ -39,8 +39,6 @@ directory(env['BUNDLE_APP_CONFIG']) { owner user; group user }
 execute 'bundle-install' do
   command 'bundle install'
   cwd root
-  user user
-  group user
   environment node['cdo-apps']['bundle_env']
   not_if 'bundle check', cwd: root
 end

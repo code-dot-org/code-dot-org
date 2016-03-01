@@ -20,10 +20,10 @@
 
 -elsif id == 'applab'
   - url = CDO.code_org_url('/educate/applab')
-  .courseblock-span6.courseblock-wide-small{style: "min-height: 250px;"}
+  .courseblock-span6.courseblock-wide-small{style: "min-height: 215px;"}
     =link_to url do
       .courseblock-span2.imgspan
-        %img{src: CDO.code_org_url("/images/fit-150x100/#{id}.jpg")}
+        %img{src: CDO.code_org_url("/images/#{id}.png")}
       .courseblock-span4.heading
         %h3= t("upsell.#{id}.title")
         %h4= t("upsell.#{id}.audience")
