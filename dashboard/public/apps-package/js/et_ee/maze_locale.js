@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "aseta maha 1 ühik mulda"},
 "finalLevel":function(d){return "Tubli! Sa lahendasid viimase mõistatuse."},
 "flowerEmptyError":function(d){return "Lillel, millel oled, ei ole rohkem nektarit."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "võta"},
 "heightParameter":function(d){return "kõrgus"},
 "holePresent":function(d){return "seal on auk"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Korrake lisatud tegevusi kuni lõpppunkt on saavutatud."},
 "word":function(d){return "Leia sõna"},
 "yes":function(d){return "Jah"},
-"youSpelled":function(d){return "Sa kirjutasid"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "Sa kirjutasid"}};

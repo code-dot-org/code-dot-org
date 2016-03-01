@@ -83,8 +83,12 @@ angular: recordsApp
       window.location.href = '/v3/export-shared-tables/' + $scope.channelId + '/' + $scope.tableName;
     }
     $scope.addColumn = function() {
-      if ($scope.newColumnName == '') return;
-      $scope.columns.push(makeColumn($scope.newColumnName));
+      if ($scope.newColumnName === '') {
+        return;
+      }
+      if (!columnExists($scope.newColumnName)) {
+        $scope.columns.push(makeColumn($scope.newColumnName));
+      }
       $scope.newColumnName = '';
     }
 
@@ -140,6 +144,12 @@ angular: recordsApp
       }
     }
     $scope.renameColumn = function (column) {
+      if (columnExists(column.name)) {
+        // If we're trying to rename to an existing column, ignore the change
+        column.name = column.id;
+        column.editing = false;
+        return;
+      }
       if (column.id != column.name) {
         new tablesService().$renameColumn({column_name: column.id, new_name: column.name});
         for (var i= 0; i < $scope.records.length; i += 1) {
@@ -173,6 +183,11 @@ angular: recordsApp
       return val;
     }
 
+    function columnExists(columnName) {
+      return $scope.columns.some(function (col) {
+        return col.id === columnName;
+      });
+    }
   }]);
   function makeColumn(name) {
     /*

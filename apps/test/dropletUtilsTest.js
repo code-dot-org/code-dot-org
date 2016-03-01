@@ -372,6 +372,10 @@ describe('generateDropletModeOptions', function () {
           "color": "#D3E965",
           "title": "deleteRecord"
         },
+        "onRecordEvent": {
+          "color": "#D3E965",
+          "title": "onRecordEvent"
+        },
         "getUserId": {
           "value": true,
           "color": "#D3E965",
@@ -642,7 +646,7 @@ describe('generateDropletModeOptions', function () {
           "color": "#68D995"
         },
         "returns": {
-          "color": "#64B5F6"
+          "color": "#68D995"
         },
         "comments": {
           "color": "#FFFFFF"
@@ -754,7 +758,7 @@ describe('generateDropletModeOptions', function () {
           "color": "#68D995"
         },
         "returns": {
-          "color": "#64B5F6"
+          "color": "#68D995"
         },
         "comments": {
           "color": "#FFFFFF"

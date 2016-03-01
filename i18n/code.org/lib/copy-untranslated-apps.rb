@@ -76,7 +76,7 @@ untranslated_apps = [
   'netsim'
 ]
 
-locales.each_pair do |language, locale|
+locales.each_value do |locale|
   if locale != 'en-US'
     untranslated_apps.each do |app|
       app_locale = locale.sub '-', '_'

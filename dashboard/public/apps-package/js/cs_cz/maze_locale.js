@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "umísti 1 jednotku hlíny"},
 "finalLevel":function(d){return "Dobrá práce! Vyřešil jsi poslední hádanku."},
 "flowerEmptyError":function(d){return "Květina, na které jsi, už nemá nektar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "získat"},
 "heightParameter":function(d){return "výška"},
 "holePresent":function(d){return "tady je díra"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Opakuje obsažené akce dokud nedosáhne cíle."},
 "word":function(d){return "Najdi slovo"},
 "yes":function(d){return "Ano"},
-"youSpelled":function(d){return "Vyhláskoval(a) jsi"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "Vyhláskoval(a) jsi"}};

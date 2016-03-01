@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "насыпать 1 кучу земли"},
 "finalLevel":function(d){return "Поздравляю! Последняя головоломка решена."},
 "flowerEmptyError":function(d){return "У этого цветка больше нет нектара."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "взять"},
 "heightParameter":function(d){return "высота"},
 "holePresent":function(d){return "здесь яма"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Повторять указанные действия до конечной точки."},
 "word":function(d){return "Найти слово"},
 "yes":function(d){return "Да"},
-"youSpelled":function(d){return "Вы ввели"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "Вы ввели"}};

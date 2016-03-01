@@ -181,12 +181,13 @@
         course4:
           description_short: Gli studenti che seguono il Corso 4 dovrebbero aver già
             svolto i Corsi 2 e 3.
-          description: Il Corso 4 è progettato per studenti che hanno già svolto i
-            Corsi 2 e 3. Gli studenti approfondiscono ancora di più i concetti della
-            programmazione introdotti nei corsi precedenti e imparano a definire soluzioni
-            flessibili per problemi molto complessi. Alla fine del corso gli studenti
-            creano giochi interattivi e storie da condividere con tutti. Il corso
-            è raccomandato per studenti dalla quarta elementare alla terza media.
+          description: Il corso 4 è progettato per gli studenti che hanno seguito
+            i corsi 2 e 3. Gli studenti impareranno come affrontare problemi di maggiore
+            complessità e a combinare diversi concetti per risolvere i diversi problemi
+            via via proposti. Una volta completato questo corso, gli studenti saranno
+            in grado di creare programmi che consentono loro di mostrare molteplici
+            competenze, anche per cicli e funzioni con parametri. Consigliato per
+            classi 4-8.
           'Artist: Variables': 'Artista: Variabili'
           'Bee: For Loops': 'Ape: Cicli con Contatore'
           title: Corso 4
@@ -1782,3 +1783,4 @@
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps

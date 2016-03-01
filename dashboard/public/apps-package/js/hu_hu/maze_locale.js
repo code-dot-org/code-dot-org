@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "rakj le 1 adag földet"},
 "finalLevel":function(d){return "Gratulálok, megoldottad az utolsó feladatot."},
 "flowerEmptyError":function(d){return "Ebben a virágban nincs több nektár."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "listából értéke"},
 "heightParameter":function(d){return "magasság"},
 "holePresent":function(d){return "van egy lyuk"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Ismételd a közbülső műveleteket a végpont eléréséig."},
 "word":function(d){return "Ezt a szót keresd"},
 "yes":function(d){return "Igen"},
-"youSpelled":function(d){return "Amit találtál"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "Amit találtál"}};

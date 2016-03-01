@@ -18,6 +18,7 @@
   "fillTooltip": "وضع وحدة 1 من التراب",
   "finalLevel": "تهانينا! لقد قمت بحل اللغز الأخير.",
   "flowerEmptyError": "الزهرة التي تقف عليها لم تعد تحتوي على المزيد من الرحيق.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "الحصول على",
   "heightParameter": "الارتفاع",
   "holePresent": "يوجد هناك ثقب",
@@ -81,6 +82,5 @@
   "whileTooltip": "تكرار الإجراءات المغلقة حتى الوصول إلى نقطة النهاية.",
   "word": "ابحث عن الكلمة",
   "yes": "نعم",
-  "youSpelled": "قمت بكتابة",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "قمت بكتابة"
 }

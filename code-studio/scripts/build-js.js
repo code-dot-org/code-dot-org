@@ -63,6 +63,24 @@ Promise.all([
       'embedVideo.js'
     ],
     commonFile: 'embedVideo'
+  })),
+
+  // only-react.js is just React in a bundle. In the future, this might be
+  // expanded to include a small set of libraries that we expect on the global
+  // namespace
+  build_commands.bundle(_.extend({}, defaultOptions, {
+    filenames: [
+      'react-only.js'
+    ],
+    commonFile: 'react-only'
+  })),
+
+  // Have a bundle for plc stuff - no sense in expanding this to everything yet
+  build_commands.bundle(_.extend({}, defaultOptions, {
+    filenames: [
+      'plc/perform_evaluation.js'
+    ],
+    commonFile: 'plc'
   }))
 ]).then(function (results) {
   var allStepsSucceeded = !results.some(function (result) {

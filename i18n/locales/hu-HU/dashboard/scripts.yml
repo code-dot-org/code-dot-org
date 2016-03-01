@@ -156,7 +156,7 @@ hu:
           description_short: Használj kódot, és csatlakozz Annához és Elsához, akik felfedezik a jég varázslatos és szépséges világát.
         course4:
           description_short: A 4. tanfolyam azoknak a tanulóknak ajánlott, akik már befejezték a 2. és a 3. tanfolyamot.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: 4. tanfolyam célja a diákok akik teljesítették a 2. és 3. tanfolyamot megtanulják, hogyan boldoguljanak a növekvő bonyolultságú feladványokkal és hogyan alkalmazzanak több koncepciót a feladvány megoldásához. A tanfolyam befejezése után a diákok az általuk létrehozott programokkal demonstrálhatják a ciklusok, funkciók használatát paraméterekkel. 4-8 évfolyamnak ajánlott.
           "Artist: Variables": 'Művész: változók'
           "Bee: For Loops": 'Méh: számláló ciklusok'
           title: 4. tanfolyam
@@ -1382,7 +1382,7 @@ hu:
           Discover a Data Story: Discover a Data Story
           Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
           Welcome!: Üdvözlünk!
@@ -1576,3 +1576,4 @@ hu:
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps

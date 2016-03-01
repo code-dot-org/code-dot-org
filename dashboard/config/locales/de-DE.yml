@@ -21,7 +21,7 @@
         gender: Geschlecht
         edit_header: Kontodaten bearbeiten
         error:
-          future: kann nicht in der Zukunft sein
+          future: darf nicht in der Zukunft liegen
   hello: Hallo Welt
   welcome_back: Willkommen zurück, %{name}
   submit: Absenden
@@ -108,8 +108,8 @@
       herstellen könnten.'
     teacher_terms: Ich erkläre mich mit den <a href='http://code.org/tos'>Nutzungsbedingungen</a>
       von Code.org einverstanden.
-    additional_information: Wir benötigen noch einige Informationen, um mit der Anmeldung
-      fortzufahren.
+    additional_information: Wir benötigen noch ein paar weitere Informationen, um
+      mit deiner Anmeldung fortzufahren.
   signin_form:
     title: Hast du bereits einen Account? Einloggen
     login: E-Mail oder Benutzername
@@ -159,7 +159,7 @@
         es dann erneut.
       section_not_found: Es konnte kein Abschnitt mit dem Code '%{section_code}' gefunden
         werden.
-      blank_code: Gib bitte einen Abschnittscode ein
+      blank_code: Bitte gib einen Abschnittscode ein
       cant_join_own_section: Es tut uns leid, aber du kannst nicht an deinem eigenen
         Abschnitt teilnehmen.
     mail:
@@ -330,16 +330,17 @@
     delete_text: Klicke auf den unteren Button um deinen Account zu löschen.
     delete_text_teacher_note: 'Bitte beachten Sie: Das Löschen Ihres Accounts löscht
       nicht automatisch auch die Accounts Ihrer Schüler.'
-    delete_confirm: Sind Sie sicher, dass Sie Ihren Account löschen möchten?
+    delete_confirm: Bist du sicher, dass du deinen Account löschen willst?
   user_level:
     completed: Abgeschlossen
     tried: Versucht
   home:
     title: Code Studio
-    description: Code-Studio ist Heimat von online Kurse erstellt von Code.org
+    description: Code Studio ist die Heimat von Online-Kursen, die von Code.org erstellt
+      wurden
     lines_of_code: "%{lines_count} Codezeilen von den Studenten erstellt"
-    lines_of_code_linebreak: "%{lines_count} Zeilen CODE <br/> von %{students_count}
-      Millionen Studenten geschrieben"
+    lines_of_code_linebreak: "%{lines_count} ZEILEN CODE <br/> GESCHRIEBEN VON %{students_count}
+      MILLIONEN SCHÜLERN"
     all_courses: "Übersicht der Level 1, 2 und 3"
     lesson_plans: Arbeitsplan
     signin_message: Schon registriert? %{link}

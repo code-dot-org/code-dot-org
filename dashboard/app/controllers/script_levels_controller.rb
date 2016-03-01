@@ -77,12 +77,6 @@ class ScriptLevelsController < ApplicationController
     return if redirect_applab_under_13(@script_level.level)
 
     present_level
-
-    slog(tag: 'activity_start',
-         script_level_id: @script_level.id,
-         level_id: @script_level.level.id,
-         user_agent: request.user_agent,
-         locale: locale) if @script_level.level.finishable?
   end
 
   private

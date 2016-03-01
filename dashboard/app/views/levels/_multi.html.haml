@@ -30,6 +30,8 @@
       .buttons
         %a.btn.btn-large.btn-primary.next-stage.submitButton
           =t('submit')
+        %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
+          =t('unsubmit')
 
     - if data['height'] == 'auto'
       - height = 'auto'
@@ -77,6 +79,7 @@
   %br/
 
   .clear
+
 
 = render partial: 'levels/common_audio'
 

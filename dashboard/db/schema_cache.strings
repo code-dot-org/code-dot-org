@@ -1,0 +1,2010 @@
+U:2ActiveRecord::ConnectionAdapters::SchemaCache[
+{?I"
+activities
+o:CActiveRecord::ConnectionAdapters::AbstractMysqlAdapter::Column
+@strictT:
+@collation0:
+@extraI"
+auto_increment
+@nameI"
+@cast_typeo: ActiveRecord::Type::Integer	:
+@precision0:
+@scale0:
+@limiti	:
+@rangeo:
+Range
+:	exclT:
+beginl-
+endl+
+@sql_typeI"
+int(11)
+@nullF:
+@default0:
+@default_function0o;
+T;	0;
+user_id
+int(11)
+T;	0;
+level_id
+int(11)
+T;	I"
+utf8_unicode_ci
+action
+o:HActiveRecord::ConnectionAdapters::AbstractMysqlAdapter::MysqlString
+varchar(255)
+T;	I"
+utf8_unicode_ci
+varchar(255)
+T;	0;
+created_at
+o:JActiveRecord::ConnectionAdapters::AbstractMysqlAdapter::MysqlDateTime
+datetime
+T;	0;
+updated_at
+datetime
+T;	0;
+attempt
+int(11)
+T;	0;
+I"	time
+int(11)
+T;	0;
+test_result
+int(11)
+T;	0;
+level_source_id
+int(11)
+T;	0;
+lines
+int(11)
+activity_hints
+T;	0;
+auto_increment
+int(11)
+T;	0;
+activity_id
+int(11)
+T;	0;
+level_source_hint_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	0;
+hint_visibility
+int(11)
+T;	0;
+ip_hash
+int(11)
+0I" authored_hint_view_requests
+T;	0;
+auto_increment
+int(11)
+T;	0;
+user_id
+int(11)
+T;	0;
+script_id
+int(11)
+T;	0;
+level_id
+int(11)
+T;	I"
+utf8_unicode_ci
+hint_id
+varchar(255)
+T;	I"
+utf8_unicode_ci
+hint_class
+varchar(255)
+T;	I"
+utf8_unicode_ci
+hint_type
+varchar(255)
+T;	0;
+prev_time
+int(11)
+T;	0;
+prev_attempt
+int(11)
+T;	0;
+prev_test_result
+int(11)
+T;	0;
+prev_activity_id
+int(11)
+T;	0;
+prev_level_source_id
+int(11)
+T;	0;
+next_time
+int(11)
+T;	0;
+next_attempt
+int(11)
+T;	0;
+next_test_result
+int(11)
+T;	0;
+next_activity_id
+int(11)
+T;	0;
+next_level_source_id
+int(11)
+T;	0;
+final_time
+int(11)
+T;	0;
+final_attempt
+int(11)
+T;	0;
+final_test_result
+int(11)
+T;	0;
+final_activity_id
+int(11)
+T;	0;
+final_level_source_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+callouts
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+element_id
+varchar(1024)
+T;	I"
+utf8_unicode_ci
+localization_key
+varchar(1024)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	0;
+script_level_id
+int(11)
+T;	I"
+utf8_unicode_ci
+qtip_config
+ActiveRecord::Type::Text
+I"	text
+T;	I"
+utf8_unicode_ci
+varchar(255)
+T;	I"
+utf8_unicode_ci
+callout_text
+varchar(255)
+channel_tokens
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+channel
+varchar(255)
+T;	0;
+user_id
+int(11)
+T;	0;
+level_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+cohorts
+T;	0;
+auto_increment
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	I"
+utf8_unicode_ci
+program_type
+varchar(255)
+T;	0;
+cutoff_date
+datetime
+T;	0;
+script_id
+int(11)
+cohorts_deleted_users
+T;	0;
+user_id
+int(11)
+T;	0;
+cohort_id
+int(11)
+cohorts_districts
+T[	o;
+T;	0;
+auto_increment
+int(11)
+T;	0;
+cohort_id
+int(11)
+T;	0;
+district_id
+int(11)
+T;	0;
+max_teachers
+int(11)
+cohorts_users
+T;	0;
+user_id
+int(11)
+T;	0;
+cohort_id
+int(11)
+concepts
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	0;
+video_id
+int(11)
+concepts_levels
+T;	0;
+auto_increment
+int(11)
+T;	0;
+concept_id
+int(11)
+T;	0;
+level_id
+int(11)
+districts
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	I"
+utf8_unicode_ci
+location
+varchar(255)
+T;	0;
+contact_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+districts_users
+T;	0;
+user_id
+int(11)
+T;	0;
+district_id
+int(11)
+experiment_activities
+T;	0;
+auto_increment
+int(11)
+T;	0;
+activity_id
+int(11)
+T;	I"
+utf8_unicode_ci
+feedback_design
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+facilitators_workshops
+T;	0;
+workshop_id
+int(11)
+T;	0;
+facilitator_id
+int(11)
+followers
+T;	0;
+auto_increment
+int(11)
+T;	0;
+user_id
+int(11)
+T;	0;
+student_user_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	0;
+section_id
+int(11)
+0I"(frequent_unsuccessful_level_sources
+T;	0;
+auto_increment
+int(11)
+T;	0;
+level_source_id
+int(11)
+T;	0;
+active
+o: ActiveRecord::Type::Boolean
+tinyint(1)
+T;	0;
+level_id
+int(11)
+T;	0;
+num_of_attempts
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+gallery_activities
+T;	0;
+auto_increment
+int(11)
+T;	0;
+user_id
+int(11)
+T;	0;
+activity_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	0;
+autosaved
+tinyint(1)
+T;	I"
+utf8_unicode_ci
+varchar(255)
+turtle
+games
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	I"
+utf8_unicode_ci
+varchar(255)
+T;	0;
+intro_video_id
+int(11)
+hint_view_requests
+T;	0;
+auto_increment
+int(11)
+T;	0;
+user_id
+int(11)
+T;	0;
+script_id
+int(11)
+T;	0;
+level_id
+int(11)
+T;	0;
+feedback_type
+int(11)
+T;	I"
+utf8_unicode_ci
+feedback_xml
+I"	text
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+level_source_hints
+T;	0;
+auto_increment
+int(11)
+T;	0;
+level_source_id
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	hint
+I"	text
+T;	0;
+times_proposed
+int(11)
+T;	0;
+priority
+ActiveRecord::Type::Float
+float
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	0;
+user_id
+int(11)
+T;	I"
+utf8_unicode_ci
+status
+varchar(255)
+T;	I"
+utf8_unicode_ci
+source
+varchar(255)
+level_source_images
+T;	0;
+auto_increment
+int(11)
+T;	0;
+level_source_id
+int(11)
+T;	0;
+image
+ActiveRecord::Type::Binary
+mediumblob
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+level_sources
+T;	0;
+auto_increment
+int(11)
+T;	0;
+level_id
+int(11)
+T;	I"
+utf8_unicode_ci
+varchar(32)
+T;	I"
+utf8_unicode_ci
+I"	data
+varchar(20000)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	0;
+hidden
+tinyint(1)
+levels
+T;	0;
+auto_increment
+int(11)
+T;	0;
+game_id
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	I"
+utf8_unicode_ci
+level_num
+varchar(255)
+T;	0;
+ideal_level_source_id
+int(11)
+T;	0;
+solution_level_source_id
+int(11)
+T;	0;
+user_id
+int(11)
+T;	I"
+utf8_unicode_ci
+properties
+I"	text
+T;	I"
+utf8_unicode_ci
+I"	type
+varchar(255)
+T;	I"
+utf8_unicode_ci
+varchar(255)
+T;	0;
+published
+tinyint(1)
+plc_courses
+T[	o;
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+0I"&plc_enrollment_module_assignments
+T;	0;
+auto_increment
+int(11)
+T;	0;
+I""plc_user_course_enrollment_id
+int(11)
+T;	0;
+plc_learning_module_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+0I"$plc_enrollment_task_assignments
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+status
+varchar(255)
+T;	0;
+I"(plc_enrollment_module_assignment_id
+int(11)
+T;	0;
+plc_task_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+plc_evaluation_answers
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+answer
+varchar(255)
+T;	0;
+plc_evaluation_question_id
+int(11)
+T;	0;
+plc_task_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+plc_evaluation_questions
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+question
+varchar(255)
+T;	0;
+plc_course_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+plc_learning_modules
+T[	o;
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+plc_tasks
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	0;
+plc_learning_module_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+0I" plc_user_course_enrollments
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+status
+varchar(255)
+T;	0;
+plc_course_id
+int(11)
+T;	0;
+user_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+prize_providers
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	I"
+utf8_unicode_ci
+varchar(255)
+T;	I"
+utf8_unicode_ci
+description_token
+varchar(255)
+T;	I"
+utf8_unicode_ci
+image_name
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+prizes
+T;	0;
+auto_increment
+int(11)
+T;	0;
+prize_provider_id
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	code
+varchar(255)
+T;	0;
+user_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+puzzle_ratings
+T;	0;
+auto_increment
+int(11)
+T;	0;
+user_id
+int(11)
+T;	0;
+script_id
+int(11)
+T;	0;
+level_id
+int(11)
+T;	0;
+rating
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+schema_migrations
+T;	I"
+utf8_unicode_ci
+version
+varchar(255)
+script_levels
+T;	0;
+auto_increment
+int(11)
+T;	0;
+level_id
+int(11)
+T;	0;
+script_id
+int(11)
+T;	0;
+chapter
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	0;
+stage_id
+int(11)
+T;	0;
+position
+int(11)
+T;	0;
+assessment
+tinyint(1)
+scripts
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	0;
+wrapup_video_id
+int(11)
+T;	0;
+trophies
+tinyint(1)
+T;	0;
+hidden
+tinyint(1)
+T;	0;
+user_id
+int(11)
+T;	0;
+login_required
+tinyint(1)
+T;	I"
+utf8_unicode_ci
+properties
+I"	text
+secret_pictures
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	I"
+utf8_unicode_ci
+I"	path
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+secret_words
+T[	o;
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	word
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+sections
+T;	0;
+auto_increment
+int(11)
+T;	0;
+user_id
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	I"
+utf8_unicode_ci
+I"	code
+varchar(255)
+T;	0;
+script_id
+int(11)
+T;	I"
+utf8_unicode_ci
+grade
+varchar(255)
+T;	I"
+utf8_unicode_ci
+admin_code
+varchar(255)
+T;	I"
+utf8_unicode_ci
+login_type
+varchar(255)
+email
+segments
+T;	0;
+auto_increment
+int(11)
+T;	0;
+workshop_id
+int(11)
+T;	0;
+start
+datetime
+T;	0;
+datetime
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+stages
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	0;
+position
+int(11)
+T;	0;
+script_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+survey_results
+T;	0;
+auto_increment
+int(11)
+T;	0;
+user_id
+int(11)
+T;	I"
+utf8_unicode_ci
+properties
+I"	text
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+teacher_bonus_prizes
+T;	0;
+auto_increment
+int(11)
+T;	0;
+prize_provider_id
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	code
+varchar(255)
+T;	0;
+user_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+teacher_prizes
+T;	0;
+auto_increment
+int(11)
+T;	0;
+prize_provider_id
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	code
+varchar(255)
+T;	0;
+user_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+trophies
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	I"
+utf8_unicode_ci
+image_name
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+0I""unexpected_teachers_workshops
+T;	0;
+workshop_id
+int(11)
+T;	0;
+unexpected_teacher_id
+int(11)
+user_levels
+T;	0;
+auto_increment
+int(11)
+T;	0;
+user_id
+int(11)
+T;	0;
+level_id
+int(11)
+T;	0;
+attempts
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	0;
+best_result
+int(11)
+T;	0;
+script_id
+int(11)
+T;	0;
+level_source_id
+int(11)
+T;	0;
+submitted
+tinyint(1)
+0I"!user_module_task_assignments
+T[	o;
+T;	0;
+auto_increment
+int(11)
+T;	0;
+I")user_enrollment_module_assignment_id
+int(11)
+T;	0;
+I""professional_learning_task_id
+int(11)
+T;	I"
+utf8_unicode_ci
+status
+varchar(255)
+user_permissions
+T;	0;
+auto_increment
+int(11)
+T;	0;
+user_id
+int(11)
+T;	I"
+utf8_unicode_ci
+permission
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+user_scripts
+T;	0;
+auto_increment
+int(11)
+T;	0;
+user_id
+int(11)
+T;	0;
+script_id
+int(11)
+T;	0;
+started_at
+datetime
+T;	0;
+completed_at
+datetime
+T;	0;
+assigned_at
+datetime
+T;	0;
+last_progress_at
+datetime
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+user_trophies
+T;	0;
+auto_increment
+int(11)
+T;	0;
+user_id
+int(11)
+T;	0;
+trophy_id
+int(11)
+T;	0;
+concept_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+users
+T[9o;
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+email
+varchar(255)
+T;	I"
+utf8_unicode_ci
+encrypted_password
+varchar(255)
+T;	I"
+utf8_unicode_ci
+reset_password_token
+varchar(255)
+T;	0;
+reset_password_sent_at
+datetime
+T;	0;
+remember_created_at
+datetime
+T;	0;
+sign_in_count
+int(11)
+T;	0;
+current_sign_in_at
+datetime
+T;	0;
+last_sign_in_at
+datetime
+T;	I"
+utf8_unicode_ci
+current_sign_in_ip
+varchar(255)
+T;	I"
+utf8_unicode_ci
+last_sign_in_ip
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	I"
+utf8_unicode_ci
+username
+varchar(255)
+T;	I"
+utf8_unicode_ci
+provider
+varchar(255)
+T;	I"
+utf8_unicode_ci
+varchar(255)
+T;	0;
+admin
+tinyint(1)
+T;	I"
+utf8_unicode_ci
+gender
+varchar(1)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	I"
+utf8_unicode_ci
+locale
+varchar(10)
+en-US
+T;	0;
+birthday
+ActiveRecord::Type::Date
+I"	date
+T;	I"
+utf8_unicode_ci
+parent_email
+varchar(255)
+T;	I"
+utf8_unicode_ci
+user_type
+varchar(16)
+T;	I"
+utf8_unicode_ci
+school
+varchar(255)
+T;	I"
+utf8_unicode_ci
+full_address
+varchar(1024)
+T;	0;
+total_lines
+int(11)
+T;	0;
+prize_earned
+tinyint(1)
+T;	0;
+prize_id
+int(11)
+T;	0;
+teacher_prize_earned
+tinyint(1)
+T;	0;
+teacher_prize_id
+int(11)
+T;	0;
+teacher_bonus_prize_earned
+tinyint(1)
+T;	0;
+teacher_bonus_prize_id
+int(11)
+T;	I"
+utf8_unicode_ci
+confirmation_token
+varchar(255)
+T;	0;
+confirmed_at
+datetime
+T;	0;
+confirmation_sent_at
+datetime
+T;	I"
+utf8_unicode_ci
+unconfirmed_email
+varchar(255)
+T;	0;
+prize_teacher_id
+int(11)
+T;	0;
+hint_access
+tinyint(1)
+T;	0;
+secret_picture_id
+int(11)
+T;	0;
+active
+tinyint(1)
+T;	I"
+utf8_unicode_ci
+hashed_email
+varchar(255)
+T;	0;
+deleted_at
+datetime
+T;	I"
+utf8_unicode_ci
+secret_words
+varchar(255)
+T;	I"
+utf8_unicode_ci
+properties
+I"	text
+T;	I"
+utf8_unicode_ci
+invitation_token
+varchar(255)
+T;	0;
+invitation_created_at
+datetime
+T;	0;
+invitation_sent_at
+datetime
+T;	0;
+invitation_accepted_at
+datetime
+T;	0;
+invitation_limit
+int(11)
+T;	0;
+invited_by_id
+int(11)
+T;	I"
+utf8_unicode_ci
+invited_by_type
+varchar(255)
+T;	0;
+invitations_count
+int(11)
+videos
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+varchar(255)
+T;	I"
+utf8_unicode_ci
+youtube_code
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	I"
+utf8_unicode_ci
+download
+varchar(255)
+workshop_attendance
+T;	0;
+auto_increment
+int(11)
+T;	0;
+teacher_id
+int(11)
+T;	0;
+segment_id
+int(11)
+T;	I"
+utf8_unicode_ci
+status
+varchar(255)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	I"
+utf8_unicode_ci
+notes
+I"	text
+workshop_cohorts
+T;	0;
+auto_increment
+int(11)
+T;	0;
+workshop_id
+int(11)
+T;	0;
+cohort_id
+int(11)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+workshops
+T;	0;
+auto_increment
+int(11)
+T;	I"
+utf8_unicode_ci
+I"	name
+varchar(255)
+T;	I"
+utf8_unicode_ci
+program_type
+varchar(255)
+T;	I"
+utf8_unicode_ci
+location
+varchar(1000)
+T;	I"
+utf8_unicode_ci
+instructions
+varchar(1000)
+T;	0;
+created_at
+datetime
+T;	0;
+updated_at
+datetime
+T;	0;
+phase
+int(11)
+0{?I"
+activities
+user_id
+level_id
+action
+T@!I"
+created_at
+T@&I"
+updated_at
+T@+I"
+attempt
+T@/I"	time
+T@3I"
+test_result
+T@7I"
+level_source_id
+T@;I"
+lines
+T@?I"
+activity_hints
+T@FI"
+activity_id
+T@JI"
+level_source_hint_id
+T@NI"
+created_at
+T@RI"
+updated_at
+T@VI"
+hint_visibility
+T@ZI"
+ip_hash
+T@^@b{
+T@dI"
+user_id
+T@hI"
+script_id
+T@lI"
+level_id
+T@pI"
+hint_id
+T@tI"
+hint_class
+T@yI"
+hint_type
+T@~I"
+prev_time
+prev_attempt
+prev_test_result
+prev_activity_id
+prev_level_source_id
+next_time
+next_attempt
+next_test_result
+next_activity_id
+next_level_source_id
+final_time
+final_attempt
+final_test_result
+final_activity_id
+final_level_source_id
+created_at
+updated_at
+callouts
+element_id
+localization_key
+created_at
+updated_at
+script_level_id
+qtip_config
+callout_text
+channel_tokens
+channel
+user_id
+level_id
+created_at
+updated_at
+cohorts
+created_at
+updated_at
+I"	name
+program_type
+cutoff_date
+script_id
+cohorts_deleted_users
+user_id
+cohort_id
+cohorts_districts
+T{	I"
+cohort_id
+district_id
+max_teachers
+cohorts_users
+user_id
+cohort_id
+concepts
+I"	name
+created_at
+updated_at
+video_id
+concepts_levels
+concept_id
+level_id
+districts
+I"	name
+location
+contact_id
+created_at
+updated_at
+districts_users
+user_id
+district_id
+experiment_activities
+activity_id
+feedback_design
+created_at
+updated_at
+facilitators_workshops
+workshop_id
+facilitator_id
+followers
+user_id
+student_user_id
+created_at
+updated_at
+section_id
+level_source_id
+active
+level_id
+num_of_attempts
+created_at
+updated_at
+gallery_activities
+user_id
+activity_id
+created_at
+updated_at
+autosaved
+games
+I"	name
+created_at
+updated_at
+intro_video_id
+hint_view_requests
+user_id
+script_id
+level_id
+feedback_type
+feedback_xml
+created_at
+updated_at
+level_source_hints
+level_source_id
+I"	hint
+times_proposed
+priority
+created_at
+updated_at
+user_id
+status
+source
+level_source_images
+level_source_id
+image
+created_at
+updated_at
+level_sources
+level_id
+I"	data
+created_at
+updated_at
+hidden
+levels
+game_id
+I"	name
+created_at
+updated_at
+level_num
+ideal_level_source_id
+solution_level_source_id
+user_id
+properties
+I"	type
+published
+plc_courses
+T{	I"
+I"	name
+created_at
+updated_at
+I""plc_user_course_enrollment_id
+plc_learning_module_id
+created_at
+updated_at
+status
+I"(plc_enrollment_module_assignment_id
+plc_task_id
+created_at
+updated_at
+plc_evaluation_answers
+answer
+plc_evaluation_question_id
+plc_task_id
+created_at
+updated_at
+question
+plc_course_id
+created_at
+updated_at
+plc_learning_modules
+T{	I"
+I"	name
+created_at
+updated_at
+plc_tasks
+I"	name
+plc_learning_module_id
+created_at
+updated_at
+status
+plc_course_id
+user_id
+created_at
+updated_at
+prize_providers
+I"	name
+description_token
+image_name
+created_at
+updated_at
+prizes
+prize_provider_id
+I"	code
+user_id
+created_at
+updated_at
+puzzle_ratings
+user_id
+script_id
+level_id
+rating
+created_at
+updated_at
+schema_migrations
+version
+script_levels
+level_id
+script_id
+chapter
+created_at
+updated_at
+stage_id
+position
+assessment
+scripts
+I"	name
+created_at
+updated_at
+wrapup_video_id
+trophies
+hidden
+user_id
+login_required
+properties
+secret_pictures
+I"	name
+I"	path
+created_at
+updated_at
+secret_words
+T{	I"
+I"	word
+created_at
+updated_at
+sections
+user_id
+I"	name
+created_at
+updated_at
+I"	code
+script_id
+grade
+admin_code
+login_type
+segments
+workshop_id
+start
+created_at
+updated_at
+stages
+I"	name
+position
+script_id
+created_at
+updated_at
+survey_results
+user_id
+properties
+created_at
+updated_at
+teacher_bonus_prizes
+prize_provider_id
+I"	code
+user_id
+created_at
+updated_at
+teacher_prizes
+prize_provider_id
+I"	code
+user_id
+created_at
+updated_at
+trophies
+I"	name
+image_name
+created_at
+updated_at
+workshop_id
+unexpected_teacher_id
+user_levels
+user_id
+level_id
+attempts
+created_at
+updated_at
+best_result
+script_id
+level_source_id
+submitted
+{	I"
+I")user_enrollment_module_assignment_id
+I""professional_learning_task_id
+status
+user_permissions
+user_id
+permission
+created_at
+updated_at
+user_scripts
+user_id
+script_id
+started_at
+completed_at
+assigned_at
+last_progress_at
+created_at
+updated_at
+user_trophies
+user_id
+trophy_id
+concept_id
+created_at
+updated_at
+users
+T{9I"
+email
+encrypted_password
+reset_password_token
+reset_password_sent_at
+remember_created_at
+sign_in_count
+current_sign_in_at
+last_sign_in_at
+current_sign_in_ip
+last_sign_in_ip
+created_at
+updated_at
+username
+provider
+admin
+gender
+I"	name
+locale
+birthday
+parent_email
+user_type
+school
+full_address
+total_lines
+prize_earned
+prize_id
+teacher_prize_earned
+teacher_prize_id
+teacher_bonus_prize_earned
+teacher_bonus_prize_id
+confirmation_token
+confirmed_at
+confirmation_sent_at
+unconfirmed_email
+prize_teacher_id
+hint_access
+secret_picture_id
+active
+hashed_email
+deleted_at
+secret_words
+properties
+invitation_token
+invitation_created_at
+invitation_sent_at
+invitation_accepted_at
+invitation_limit
+invited_by_id
+invited_by_type
+invitations_count
+videos
+youtube_code
+created_at
+updated_at
+download
+workshop_attendance
+teacher_id
+segment_id
+status
+created_at
+updated_at
+notes
+workshop_cohorts
+workshop_id
+cohort_id
+created_at
+updated_at
+workshops
+I"	name
+program_type
+location
+instructions
+created_at
+updated_at
+phase
+{?I"
+activities
+activity_hints
+T@bI"
+callouts
+channel_tokens
+cohorts
+cohorts_deleted_users
+T0I"
+cohorts_districts
+cohorts_users
+T0I"
+concepts
+concepts_levels
+districts
+districts_users
+T0I"
+experiment_activities
+facilitators_workshops
+T0I"
+followers
+gallery_activities
+games
+hint_view_requests
+level_source_hints
+level_source_images
+level_sources
+levels
+plc_courses
+plc_evaluation_answers
+plc_learning_modules
+plc_tasks
+prize_providers
+prizes
+puzzle_ratings
+schema_migrations
+T0I"
+script_levels
+scripts
+secret_pictures
+secret_words
+sections
+segments
+stages
+survey_results
+teacher_bonus_prizes
+teacher_prizes
+trophies
+user_levels
+user_permissions
+user_scripts
+user_trophies
+users
+videos
+workshop_attendance
+workshop_cohorts
+workshops
+T{?I"
+activities
+TTI"
+activity_hints
+TTI" authored_hint_view_requests
+TTI"
+callouts
+TTI"
+channel_tokens
+TTI"
+cohorts
+TTI"
+cohorts_deleted_users
+TTI"
+cohorts_districts
+TTI"
+cohorts_users
+TTI"
+concepts
+TTI"
+concepts_levels
+TTI"
+districts
+TTI"
+districts_users
+TTI"
+experiment_activities
+TTI"
+facilitators_workshops
+TTI"
+followers
+TTI"(frequent_unsuccessful_level_sources
+TTI"
+gallery_activities
+TTI"
+games
+TTI"
+hint_view_requests
+TTI"
+level_source_hints
+TTI"
+level_source_images
+TTI"
+level_sources
+TTI"
+levels
+TTI"
+plc_courses
+TTI"&plc_enrollment_module_assignments
+TTI"$plc_enrollment_task_assignments
+TTI"
+plc_evaluation_answers
+TTI"
+plc_evaluation_questions
+TTI"
+plc_learning_modules
+TTI"
+plc_tasks
+TTI" plc_user_course_enrollments
+TTI"
+prize_providers
+TTI"
+prizes
+TTI"
+puzzle_ratings
+TTI"
+schema_migrations
+TTI"
+script_levels
+TTI"
+scripts
+TTI"
+secret_pictures
+TTI"
+secret_words
+TTI"
+sections
+TTI"
+segments
+TTI"
+stages
+TTI"
+survey_results
+TTI"
+teacher_bonus_prizes
+TTI"
+teacher_prizes
+TTI"
+trophies
+TTI""unexpected_teachers_workshops
+TTI"
+user_levels
+TTI"!user_module_task_assignments
+TTI"
+user_permissions
+TTI"
+user_scripts
+TTI"
+user_trophies
+TTI"
+users
+TTI"
+videos
+TTI"
+workshop_attendance
+TTI"
+workshop_cohorts
+TTI"
+workshops

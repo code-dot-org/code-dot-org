@@ -18,6 +18,18 @@
         %h3= t('upsell.flappy.title')
         .smalltext= t('upsell.flappy.body')
 
+-elsif id == 'applab'
+  - url = CDO.code_org_url('/educate/applab')
+  .courseblock-span6.courseblock-wide-small{style: "min-height: 215px;"}
+    =link_to url do
+      .courseblock-span2.imgspan
+        %img{src: CDO.code_org_url("/images/#{id}.png")}
+      .courseblock-span4.heading
+        %h3= t("upsell.#{id}.title")
+        %h4= t("upsell.#{id}.audience")
+        .smalltext= t("upsell.#{id}.body")
+      .bottombar.smalltext.trynow= t("upsell.#{id}.cta")
+
 -elsif id == Script::TWENTY_HOUR_NAME && view == 'large'
   - url = script_reset_url(id)
   .courseblock-span6.courseblock-wide-large

@@ -188,7 +188,7 @@ applabCommands.setScreen = function (opts) {
   apiValidateDomIdExistence(opts, 'setScreen', 'screenId', opts.screenId, true);
   var element = document.getElementById(opts.screenId);
   var divApplab = document.getElementById('divApplab');
-  if (!divApplab.contains(element)) {
+  if (!element || (element.parentNode != divApplab)) {
     return;
   }
 
@@ -1564,6 +1564,13 @@ applabCommands.handleDeleteRecord = function(opts, success) {
   if (opts.onComplete) {
     opts.onComplete.call(null, success);
   }
+};
+
+applabCommands.onRecordEvent = function (opts) {
+  apiValidateType(opts, 'onRecordEvent', 'table', opts.table, 'string');
+  apiValidateType(opts, 'onRecordEvent', 'callback', opts.onRecord, 'function');
+  var onError = errorHandler.handleError.bind(this, opts);
+  AppStorage.onRecordEvent(opts.table, opts.onRecord, onError);
 };
 
 applabCommands.getUserId = function (opts) {

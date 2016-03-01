@@ -17,6 +17,7 @@ var api = require('./api');
 var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
+var AppView = require('../templates/AppView.jsx');
 var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
@@ -646,29 +647,6 @@ Applab.init = function(config) {
     });
   }
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')({
-        appWidth: Applab.appWidth,
-        appHeight: Applab.footerlessAppHeight
-      }),
-      controls: firstControlsRow,
-      extraControlRows: extraControlRows,
-      blockUsed: undefined,
-      idealBlockNumber: undefined,
-      editCode: level.editCode,
-      blockCounterClass: 'block-counter-default',
-      pinWorkspaceToBottom: true,
-      // TODO (brent) - seems a little gross that we've made this part of a
-      // template shared across all apps
-      // disable designMode if we're readonly
-      hasDesignMode: !config.readonlyWorkspace,
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
   config.loadAudio = function() {
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
@@ -761,101 +739,136 @@ Applab.init = function(config) {
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
 
-  studioApp.init(config);
+  React.render(React.createElement(AppView, {
+    renderCodeApp: function () {
+      return page({
+        assetUrl: studioApp.assetUrl,
+        data: {
+          localeDirection: studioApp.localeDirection(),
+          visualization: require('./visualization.html.ejs')({
+            appWidth: Applab.appWidth,
+            appHeight: Applab.footerlessAppHeight
+          }),
+          controls: firstControlsRow,
+          extraControlRows: extraControlRows,
+          blockUsed: undefined,
+          idealBlockNumber: undefined,
+          editCode: level.editCode,
+          blockCounterClass: 'block-counter-default',
+          pinWorkspaceToBottom: true,
+          // TODO (brent) - seems a little gross that we've made this part of a
+          // template shared across all apps
+          // disable designMode if we're readonly
+          hasDesignMode: !config.readonlyWorkspace,
+          readonlyWorkspace: config.readonlyWorkspace
+        }
+      });
+    }.bind(this),
+    onMount: function () {
+      studioApp.init(config);
 
-  var viz = document.getElementById('visualization');
-  var vizCol = document.getElementById('visualizationColumn');
+      var viz = document.getElementById('visualization');
+      var vizCol = document.getElementById('visualizationColumn');
 
-  if (!config.noPadding) {
-    viz.className += " with_padding";
-    vizCol.className += " with_padding";
-  }
-
-  if (config.embed || config.hideSource) {
-    // no responsive styles active in embed or hideSource mode, so set sizes:
-    viz.style.width = Applab.appWidth + 'px';
-    viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
-    // Use offsetWidth of viz so we can include any possible border width:
-    vizCol.style.maxWidth = viz.offsetWidth + 'px';
-  }
-
-  if (debuggerUi) {
-    debuggerUi.initializeAfterDomCreated({
-      defaultStepSpeed: config.level.sliderSpeed
-    });
-  }
-
-  window.addEventListener('resize', Applab.renderVisualizationOverlay);
-
-  var finishButton = document.getElementById('finishButton');
-  if (finishButton) {
-    dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
-  }
-
-  var submitButton = document.getElementById('submitButton');
-  if (submitButton) {
-    dom.addClickTouchEvent(submitButton, Applab.onPuzzleSubmit);
-  }
-
-  var unsubmitButton = document.getElementById('unsubmitButton');
-  if (unsubmitButton) {
-    dom.addClickTouchEvent(unsubmitButton, Applab.onPuzzleUnsubmit);
-  }
-
-  if (level.editCode) {
-    // Prevent the backspace key from navigating back. Make sure it's still
-    // allowed on other elements.
-    // Based on http://stackoverflow.com/a/2768256/2506748
-    $(document).on('keydown', function (event) {
-      var doPrevent = false;
-      if (event.keyCode !== KeyCodes.BACKSPACE) {
-        return;
-      }
-      var d = event.srcElement || event.target;
-      if ((d.tagName.toUpperCase() === 'INPUT' && (
-          d.type.toUpperCase() === 'TEXT' ||
-          d.type.toUpperCase() === 'PASSWORD' ||
-          d.type.toUpperCase() === 'FILE' ||
-          d.type.toUpperCase() === 'EMAIL' ||
-          d.type.toUpperCase() === 'SEARCH' ||
-          d.type.toUpperCase() === 'NUMBER' ||
-          d.type.toUpperCase() === 'DATE' )) ||
-          d.tagName.toUpperCase() === 'TEXTAREA') {
-        doPrevent = d.readOnly || d.disabled;
-      }
-      else {
-        doPrevent = !d.isContentEditable;
+      if (!config.noPadding) {
+        viz.className += " with_padding";
+        vizCol.className += " with_padding";
       }
 
-      if (doPrevent) {
-        event.preventDefault();
+      if (config.embed || config.hideSource) {
+        // no responsive styles active in embed or hideSource mode, so set sizes:
+        viz.style.width = Applab.appWidth + 'px';
+        viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
+        // Use offsetWidth of viz so we can include any possible border width:
+        vizCol.style.maxWidth = viz.offsetWidth + 'px';
       }
-    });
 
-    designMode.addKeyboardHandlers();
+      if (debuggerUi) {
+        debuggerUi.initializeAfterDomCreated({
+          defaultStepSpeed: config.level.sliderSpeed
+        });
+      }
 
-    designMode.renderDesignWorkspace();
+      window.addEventListener('resize', Applab.renderVisualizationOverlay);
 
-    designMode.configureDesignToggleRow();
+      var finishButton = document.getElementById('finishButton');
+      if (finishButton) {
+        dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
+      }
 
-    designMode.toggleDesignMode(Applab.startInDesignMode());
+      var submitButton = document.getElementById('submitButton');
+      if (submitButton) {
+        dom.addClickTouchEvent(submitButton, Applab.onPuzzleSubmit);
+      }
 
-    designMode.configureDragAndDrop();
+      var unsubmitButton = document.getElementById('unsubmitButton');
+      if (unsubmitButton) {
+        dom.addClickTouchEvent(unsubmitButton, Applab.onPuzzleUnsubmit);
+      }
 
-    var designModeViz = document.getElementById('designModeViz');
-    designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
-  }
+      if (level.editCode) {
+        // Prevent the backspace key from navigating back. Make sure it's still
+        // allowed on other elements.
+        // Based on http://stackoverflow.com/a/2768256/2506748
+        $(document).on('keydown', function (event) {
+          var doPrevent = false;
+          if (event.keyCode !== KeyCodes.BACKSPACE) {
+            return;
+          }
+          var d = event.srcElement || event.target;
+          if ((d.tagName.toUpperCase() === 'INPUT' && (
+              d.type.toUpperCase() === 'TEXT' ||
+              d.type.toUpperCase() === 'PASSWORD' ||
+              d.type.toUpperCase() === 'FILE' ||
+              d.type.toUpperCase() === 'EMAIL' ||
+              d.type.toUpperCase() === 'SEARCH' ||
+              d.type.toUpperCase() === 'NUMBER' ||
+              d.type.toUpperCase() === 'DATE' )) ||
+              d.tagName.toUpperCase() === 'TEXTAREA') {
+            doPrevent = d.readOnly || d.disabled;
+          }
+          else {
+            doPrevent = !d.isContentEditable;
+          }
+
+          if (doPrevent) {
+            event.preventDefault();
+          }
+        });
+
+        designMode.addKeyboardHandlers();
+
+        designMode.renderDesignWorkspace();
+
+        designMode.configurePlaySpaceHeader();
+
+        designMode.toggleDesignMode(Applab.startInDesignMode());
+
+        designMode.configureDragAndDrop();
+
+        var designModeViz = document.getElementById('designModeViz');
+        designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
+      }
+    }.bind(this)
+  }), document.getElementById(config.containerId));
 };
 
-Applab.appendToEditor = function(newCode) {
+/**
+ * @param {string} newCode Code to append to the end of the editor
+ */
+Applab.appendToEditor = function (newCode) {
   var code = studioApp.editor.addEmptyLine(studioApp.editor.getValue()) + newCode;
   studioApp.editor.setValue(code);
+};
+
+Applab.scrollToEnd = function () {
+  studioApp.editor.scrollCursorToEndOfDocument();
 };
 
 /**
  * Clear the event handlers and stop the onTick timer.
  */
-Applab.clearEventHandlersKillTickLoop = function() {
+Applab.clearEventHandlersKillTickLoop = function () {
   Applab.whenRunFunc = null;
   Applab.running = false;
   $('#headers').removeClass('dimmed');
@@ -953,6 +966,8 @@ Applab.reset = function(first) {
   if (jsInterpreterLogger) {
     jsInterpreterLogger.detach();
   }
+
+  AppStorage.resetRecordListener();
 
   // Reset the Globals object used to contain program variables:
   Applab.Globals = {};
@@ -1121,6 +1136,10 @@ Applab.execute = function() {
       var session = studioApp.editor.aceEditor.getSession();
       annotationList.attachToSession(session, studioApp.editor);
       annotationList.clearRuntimeAnnotations();
+      studioApp.editor.aceEditor.session.on("change", function () {
+        // clear any runtime annotations whenever a change is made
+        annotationList.clearRuntimeAnnotations();
+      });
     }
   } else {
     // Define any top-level procedures the user may have created
@@ -1275,7 +1294,7 @@ Applab.onPuzzleSubmit = function() {
 
 Applab.unsubmit = function() {
   $.post(level.unsubmitUrl,
-         {"_method": 'PUT', user_level: {best_result: 1}},
+         {"_method": 'PUT', user_level: {submitted: false}},
          function( data ) {
            location.reload();
          });
@@ -1310,12 +1329,8 @@ Applab.onPuzzleComplete = function(submit) {
     Applab.testResults = studioApp.getTestResults(levelComplete, {
         executionError: Applab.executionError
     });
-  } else {
-    if (submit) {
-      Applab.testResults = TestResults.SUBMITTED;
-    } else {
-      Applab.testResults = TestResults.FREE_PLAY;
-    }
+  } else if (!submit) {
+    Applab.testResults = TestResults.FREE_PLAY;
   }
 
   // Stop everything on screen
@@ -1350,6 +1365,7 @@ Applab.onPuzzleComplete = function(submit) {
       level: level.id,
       result: levelComplete,
       testResult: Applab.testResults,
+      submitted: submit,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,
       onComplete: (submit ? Applab.onSubmitComplete : Applab.onReportComplete)
@@ -1539,7 +1555,7 @@ Applab.getIdDropdownForCurrentScreenFromDom_ = function (documentRoot) {
  * @returns {HTMLElement} The first "screen" that isn't hidden.
  */
 Applab.activeScreen = function () {
-  return $('#divApplab .screen').filter(function () {
+  return Applab.getScreens().filter(function () {
     return this.style.display !== 'none';
   }).first()[0];
 };
@@ -1549,7 +1565,7 @@ Applab.activeScreen = function () {
  * unless they match the provided screenId. Also focuses the screen.
  */
 Applab.changeScreen = function(screenId) {
-  $('#divApplab .screen').each(function () {
+  Applab.getScreens().each(function () {
     $(this).toggle(this.id === screenId);
     if ((this.id === screenId)) {
       // Allow the active screen to receive keyboard events.
@@ -1559,9 +1575,12 @@ Applab.changeScreen = function(screenId) {
 };
 
 Applab.loadDefaultScreen = function() {
-  var defaultScreen = $('#divApplab .screen[is-default=true]').first().attr('id') ||
-    $('#divApplab .screen').first().attr('id');
-  Applab.changeScreen(defaultScreen);
+  var defaultScreenId = Applab.getScreens().first().attr('id');
+  Applab.changeScreen(defaultScreenId);
+};
+
+Applab.getScreens = function() {
+  return $('#divApplab > .screen');
 };
 
 // Wrap design mode function so that we can call from commands

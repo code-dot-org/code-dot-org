@@ -28,6 +28,7 @@ var commonMsg = require('../locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
+var AppView = require('../templates/AppView.jsx');
 var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var utils = require('../utils');
@@ -531,25 +532,6 @@ Maze.init = function(config) {
 
   Maze.cachedBlockStates = [];
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
-      controls: require('./controls.html.ejs')({
-        assetUrl: studioApp.assetUrl,
-        showStepButton: level.step && !level.edit_blocks
-      }),
-      extraControlRows: extraControlRows,
-      blockUsed: undefined,
-      idealBlockNumber: undefined,
-      editCode: level.editCode,
-      blockCounterClass: 'block-counter-default',
-      readonlyWorkspace: config.readonlyWorkspace
-    },
-    hideRunButton: level.stepOnly && !level.edit_blocks
-  });
-
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
@@ -632,7 +614,31 @@ Maze.init = function(config) {
     }
   };
 
-  studioApp.init(config);
+  React.render(React.createElement(AppView, {
+    renderCodeApp: function () {
+      return page({
+        assetUrl: studioApp.assetUrl,
+        data: {
+          localeDirection: studioApp.localeDirection(),
+          visualization: require('./visualization.html.ejs')(),
+          controls: require('./controls.html.ejs')({
+            assetUrl: studioApp.assetUrl,
+            showStepButton: level.step && !level.edit_blocks
+          }),
+          extraControlRows: extraControlRows,
+          blockUsed: undefined,
+          idealBlockNumber: undefined,
+          editCode: level.editCode,
+          blockCounterClass: 'block-counter-default',
+          readonlyWorkspace: config.readonlyWorkspace
+        },
+        hideRunButton: level.stepOnly && !level.edit_blocks
+      });
+    },
+    onMount: function () {
+      studioApp.init(config);
+    }
+  }), document.getElementById(config.containerId));
 };
 
 /**
