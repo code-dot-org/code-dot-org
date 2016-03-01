@@ -169,7 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "الدوال"},
 "catText":function(d){return "النص"},
 "catVariables":function(d){return "المتغيرات"},
-"choosePrefix":function(d){return "Choose..."},
+"choosePrefix":function(d){return "اختر..."},
 "clearPuzzle":function(d){return "البدء من جديد"},
 "clearPuzzleConfirm":function(d){return "سيقوم هذا بإعادة اللغز إلى حالته الأصلية وحذف جميع المربعات البرمجية التي قمت بإضافتها أو تعديلها."},
 "clearPuzzleConfirmHeader":function(d){return "هل أنت متأكد من أنك تريد البدء من جديد؟"},

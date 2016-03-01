@@ -169,7 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funções"},
 "catText":function(d){return "Texto"},
 "catVariables":function(d){return "Variáveis"},
-"choosePrefix":function(d){return "Choose..."},
+"choosePrefix":function(d){return "Escolha..."},
 "clearPuzzle":function(d){return "Começar do início"},
 "clearPuzzleConfirm":function(d){return "Esta ação retornará o desafio a seu estado inicial e excluirá todos os blocos que você adicionou ou alterou."},
 "clearPuzzleConfirmHeader":function(d){return "Tem certeza de que deseja começar do início?"},
