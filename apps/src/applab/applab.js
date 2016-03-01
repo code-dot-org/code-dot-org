@@ -867,6 +867,7 @@ Applab.init = function(config) {
     isEmbedView: !!config.embed,
     isReadOnlyView: !!config.readonlyWorkspace,
     isShareView: !!config.share,
+    isViewDataButtonHidden: !!config.level.hideViewDataButton,
     renderCodeWorkspace: renderCodeWorkspace,
     renderVisualizationColumn: renderVisualizationColumn,
     onMount: onMount
@@ -896,7 +897,7 @@ Applab.reactMountPoint_ = null;
  */
 Applab.render = function () {
   var nextProps = $.extend({}, Applab.reactInitialProps_, {
-    hideViewDataButton: Applab.hideViewDataButton(),
+    isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     startInDesignMode: Applab.startInDesignMode(),
     activeScreenId: designMode.getCurrentScreenId(),
     screenIds: designMode.getAllScreenIds(),
@@ -1528,11 +1529,6 @@ var checkFinished = function () {
 
 Applab.startInDesignMode = function () {
   return !!level.designModeAtStart;
-};
-
-Applab.hideViewDataButton = function () {
-  var isEditing = window.dashboard && window.dashboard.project.isEditing();
-  return !!level.hideViewDataButton || !!level.hideDesignMode || !!studioApp.share || !isEditing;
 };
 
 Applab.isInDesignMode = function () {
