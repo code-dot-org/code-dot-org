@@ -1,4 +1,5 @@
 require 'rack/attack'
+require 'active_support/core_ext/numeric/time'
 
 redis_url = CDO.geocoder_redis_url || 'redis://localhost:6379'
 Rack::Attack.cache.store = Rack::Attack::StoreProxy::RedisStoreProxy.new(Redis.new(url: redis_url))
