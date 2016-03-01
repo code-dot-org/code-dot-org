@@ -107,7 +107,7 @@ designMode.editElementProperties = function(element) {
 designMode.resetPropertyTab = function() {
   var element = currentlyEditedElement || designMode.activeScreen();
   designMode.editElementProperties(element);
-  designMode.renderToggleRow();
+  Applab.render();
 };
 
 /**
@@ -830,7 +830,7 @@ designMode.changeScreen = function (screenId) {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
 
-  designMode.renderToggleRow();
+  Applab.render();
 
   designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
 };
@@ -845,10 +845,6 @@ designMode.getAllScreenIds = function () {
   return elementUtils.getScreens().get().map(function (screen) {
     return elementUtils.getId(screen);
   });
-};
-
-designMode.renderToggleRow = function () {
-  Applab.render();
 };
 
 /**
