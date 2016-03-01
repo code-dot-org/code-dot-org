@@ -14,16 +14,16 @@ var hideRunButton = locals.hideRunButton || false;
     <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
   </button>
   <% if (data.controls) { %>
-  <%- data.controls %>
+    <%- data.controls %>
   <% } %>
   <% if (!data.pinWorkspaceToBottom && data.extraControlRows) { %>
-  <%- data.extraControlRows %>
+    <%- data.extraControlRows %>
   <% } %>
 </div>
 <% }; -%>
 
 <% if (data.hasDesignMode) { %>
-<div id="designToggleRow"></div>
+  <div id="designToggleRow"></div>
 <% } %>
 
 <div id="visualization">
@@ -48,20 +48,20 @@ var hideRunButton = locals.hideRunButton || false;
       </tr>
     </table>
     <% if (data.inputOutputTable) { %>
-    <div id="input-table">
-      <table>
-        <tr>
-          <th>Input</th>
-          <th>Output</th>
-        </tr>
-        <% for (var i = 0; i < data.inputOutputTable.length; i++) { %>
-        <tr>
-          <td><%- data.inputOutputTable[i][0] %></td>
-          <td><%- data.inputOutputTable[i][1] %></td>
-        </tr>
-        <% } %>
-      </table>
-    </div>
+      <div id="input-table">
+        <table>
+          <tr>
+            <th>Input</th>
+            <th>Output</th>
+          </tr>
+          <% for (var i = 0; i < data.inputOutputTable.length; i++) { %>
+          <tr>
+            <td><%- data.inputOutputTable[i][0] %></td>
+            <td><%- data.inputOutputTable[i][1] %></td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
     <% } %>
     <div id="ani-gif-preview-wrapper">
       <div id="ani-gif-preview">
