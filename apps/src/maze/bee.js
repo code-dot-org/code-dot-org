@@ -264,7 +264,7 @@ Bee.prototype.checkedAllClouded = function () {
 Bee.prototype.checkedAllPurple = function () {
   for (var row = 0; row < this.currentStaticGrid.length; row++) {
     for (var col = 0; col < this.currentStaticGrid[row].length; col++) {
-      if (this.shouldCheckPurple(row, col) && !this.userChecks_[row][col].checkedForNectar) {
+      if (this.isPurpleFlower(row, col) && !this.userChecks_[row][col].checkedForNectar) {
         return false;
       }
     }
@@ -370,16 +370,6 @@ Bee.prototype.isCloudable = function (row, col) {
  */
 Bee.prototype.shouldCheckCloud = function (row, col) {
   return this.variableGrid[row][col].isStaticCloud();
-};
-
-/**
- * Likewise, the only flowers we care about checking are flowers that
- * were defined as purple flowers without a variable range in the
- * original grid; variable range flowers will handle 'requiring' checks
- * through their quantum nature.
- */
-Bee.prototype.shouldCheckPurple = function (row, col) {
-  return this.isPurpleFlower(row, col) && !this.variableGrid[row][col].isVariableRange();
 };
 
 /**
