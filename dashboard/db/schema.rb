@@ -340,13 +340,6 @@ ActiveRecord::Schema.define(version: 20160225192540) do
     t.datetime "updated_at",             null: false
   end
 
-  create_table "plc_resource_tasks", force: :cascade do |t|
-    t.string   "url",         limit: 255
-    t.string   "description", limit: 255
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-  end
-
   create_table "plc_tasks", force: :cascade do |t|
     t.string   "name",                   limit: 255
     t.integer  "plc_learning_module_id", limit: 4
