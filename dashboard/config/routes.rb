@@ -6,7 +6,6 @@ module OPS
 end
 
 Dashboard::Application.routes.draw do
-  resources :controllers
   resources :survey_results, only: [:create], defaults: { format: 'json' }
 
   def redirect_to_teacher_dashboard
