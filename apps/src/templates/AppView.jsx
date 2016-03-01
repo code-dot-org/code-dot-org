@@ -1,7 +1,7 @@
 'use strict';
 
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
-var RotateContainer = require('./RotateContainer.jsx');
+var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 
 /**
  * Top-level React wrapper for our standard blockly apps.
@@ -9,8 +9,10 @@ var RotateContainer = require('./RotateContainer.jsx');
 var AppView = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
-    requireLandscape: React.PropTypes.bool.isRequired,
-    renderCodeApp: React.PropTypes.func.isRequired,
+    isEmbedView: React.PropTypes.bool.isRequired,
+    isShareView: React.PropTypes.bool.isRequired,
+    renderCodeWorkspace: React.PropTypes.func.isRequired,
+    renderVisualizationColumn: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
 
@@ -20,11 +22,18 @@ var AppView = React.createClass({
 
   render: function () {
     return (
-      <div>
-        {this.props.requireLandscape && <RotateContainer assetUrl={this.props.assetUrl} />}
-        <ProtectedStatefulDiv renderContents={this.props.renderCodeApp} />
-        <div className="clear"></div>
-      </div>
+      <StudioAppWrapper
+          assetUrl={this.props.assetUrl}
+          isEmbedView={this.props.isEmbedView}
+          isShareView={this.props.isShareView}>
+        <ProtectedStatefulDiv
+            id="visualizationColumn"
+            renderContents={this.props.renderVisualizationColumn} />
+        <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
+        <ProtectedStatefulDiv
+            id="codeWorkspace"
+            renderContents={this.props.renderCodeWorkspace} />
+      </StudioAppWrapper>
     );
   }
 });
