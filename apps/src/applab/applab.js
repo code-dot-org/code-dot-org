@@ -17,7 +17,7 @@ var api = require('./api');
 var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
-var AppView = require('../templates/AppView.jsx');
+var AppLabView = require('./AppLabView.jsx');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
@@ -867,7 +867,7 @@ Applab.init = function(config) {
     }
   }.bind(this);
 
-  React.render(React.createElement(AppView, {
+  React.render(React.createElement(AppLabView, {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
