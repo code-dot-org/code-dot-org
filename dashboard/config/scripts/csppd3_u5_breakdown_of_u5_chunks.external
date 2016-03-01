@@ -1,0 +1,85 @@
+name 'CSPPD3-u5 breakdown of u5 chunks'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Unit 5 Overview > Unit 5 Description and Breakdown
+<br/>
+<img src="https://images.code.org/b0c75238b9ee9dcc1a4520ac4f7dff39-image-1456439409451.png" width="450" style="float:left; margin-left:10px; margin-right: 30px">
+
+#### What’s in Unit 5?
+
+Unit 5 is mostly time set aside for administration of the AP Performance Tasks.  There are two Performance Tasks, and each has a lesson that prepares students to start doing the task.  
+
+**Students should be prepared** in terms of skills for doing the tasks.  For each task there is a lesson in front of it that helps students understand and familiarize themselves with the Task.  
+
+##### Explore Performance Task
+
+The skinny: The Explore Performance Task is essentially a research paper.  Students must investigate a modern computing innovation, write about how it works, and describe its impacts (both good and bad) on society.
+
+**Unit 5 - Lesson 1** gears students up to actually do the task.  In that lesson students will:
+
+- Review the Explore Performance Task description and rubric
+- Understand what **computational artifact** means
+- Understand what a **computing innovation** is for this context
+- Review **research practices** and strategies (how to cite sources properly)
+
+**Unit 5 - Lesson 2** is the actual administration of the task.  The associated lesson plan contains:
+
+- Timeline for administering the task
+- Tips on the role of the role of the instructor
+- Instructor Dos and Don'ts during administration of the Task 
+
+##### Create Performance Task
+
+The skinny: The Create Performance task asks students to write a program and identify key aspects of it through a) the code itself b) a video demonstration of the program and c) writing. The writing prompts ask students to identify the program’s intended purpose, and the key algorithms and abstractions in the code.
+
+**Unit 5 - Lesson 3** gears students up to actually do the task.  In that lesson students will:
+
+- Review the Create Performance Task description and rubric
+- Understand **collaboration strategies** and the role of collaboration in this task
+- Review where and how to identify an **algorithm** in their program
+- Review where and how to identify an **abstraction** in their program
+- Learn how to make a **video screen capture** of themselves using their program
+
+**Unit 5 - Lesson 4** is the actual administration of the task.  The associated lesson plan contains:
+
+- Timeline for administering the task
+- Tips on the role of the role of the instructor
+- Instructor Dos and Don'ts during administration of the Task 
+
+
+#### Tool Talk
+
+The potentially new tools to students for the performance task will be tools needed to:
+
+ * Create (or save) a PDF from word processing document
+ * Highlight and modify elements in a PDF
+ * Make a video screen capture
+
+Some time might need to be spent with small practice tasks to make sure students can do this BEFORE starting the task.  Students shouldn't have to spend time during the administration of the actual task to learn how to do these things.
+
+**Students do not need to be experts** in using whatever PDF and Video tools you use in your classroom.  A suggestion is to prepare a simple document that lays out a procedure students can use.
+
+<br>
+
+#### Philosophy of this Unit
+
+This unit does not have much new learning or teaching involved.  It's mostly just preparing for and doing the Performance Tasks.  
+<br><br>
+The teacher should approach these tasks in a way that gets students excited and motivated to do them.  If students have been excited or interested in any particular part of the course then there should be an **opportunity to express that interest** through the performance tasks.
+<br><br>
+**Motivation**
+<br><br>
+You can interpret the **Explore PT as an opportunity** to ask a student: “What do you think is cool/fun/interesting about computing in the world?  It really could be anything! Go find out more about it and why you think it’s impactful”.  
+<br><br>
+You can interpret the **Create PT as an opportunity** for a student to write a program to do almost anything!  Anything they want!  It can be something completely new, an improvement on another program, a collaboration with a friend, or even just an investigation into a relatively small bit of code that interests them.
+<br><br>
+
+#### Learn more about the Performance Tasks
+
+Click continue to move on.  The subsequent stages will have a bit deeper breakdown of each of the Performance tasks and your role as the teacher.
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

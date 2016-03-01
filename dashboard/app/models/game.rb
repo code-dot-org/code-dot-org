@@ -105,6 +105,10 @@ class Game < ActiveRecord::Base
     @@game_frequency_analysis ||= find_by_name("FrequencyAnalysis")
   end
 
+  def self.multi
+    @@game_multi ||= find_by_name("Multi")
+  end
+
   def unplugged?
     app == UNPLUG
   end

@@ -1,19 +1,5 @@
 /* global Blockly, ace:true, droplet, marked, dashboard, addToHome */
 
-/**
- * For the most part, we depend on dashboard providing us with React as a global.
- * However, there is at least one context in which this won't be true - when we
- * show feedback blocks in their own iframe. In that case, load React from
- * our module.
- * This approach has a couple of drawbacks
- * (1) ability for dashboard React and apps React versions to get out of sync
- * (2) if we end up in other cases where React isn't provided to us as a global
- *     we probably won't notice, which may not be intended behavior
- */
-if (!window.React) {
-  window.React = require('react');
-}
-
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
@@ -1451,6 +1437,7 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
 * {string} level The ID of the current level.
 * {number} result An indicator of the success of the code.
 * {number} testResult More specific data on success or failure of code.
+* {boolean} submitted Whether the (submittable) level is being submitted.
 * {string} program The user program, which will get URL-encoded.
 * {function} onComplete Function to be called upon completion.
 */
@@ -1643,7 +1630,12 @@ StudioApp.prototype.runButtonClickWrapper = function (callback) {
  */
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
-  container.innerHTML = config.html;
+  // Skip this step if config.html wasn't provided, because that means we've
+  // switched to doing top-level rendering with React.
+  // TODO: (bbuchanan) Remove when all apps use React for top-level rendering.
+  if (typeof config.html !== 'undefined') {
+    container.innerHTML = config.html;
+  }
   if (!this.enableShowCode) {
     document.getElementById('show-code-header').style.display = 'none';
   }
@@ -1816,7 +1808,20 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // Init and define our custom ace mode:
   aceMode.defineForAce(config.dropletConfig, config.unusedConfig, this.editor);
   // Now set the editor to that mode:
-  this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
+  var aceEditor = this.editor.aceEditor;
+  aceEditor.session.setMode('ace/mode/javascript_codeorg');
+
+  var langTools = window.ace.require("ace/ext/language_tools");
+
+  // We don't want to include the textCompleter. langTools doesn't give us a way
+  // to remove base completers (note: it does in newer versions of ace), so
+  // we set aceEditor.completers manually
+  aceEditor.completers = [langTools.snippetCompleter, langTools.keyWordCompleter];
+  // make setCompleters fail so that attempts to use it result in clear failure
+  // instead of just silently not working
+  langTools.setCompleters = function () {
+    throw new Error('setCompleters disabled. set aceEditor.completers directly');
+  };
 
   // Add an ace completer for the API functions exposed for this level
   if (config.dropletConfig) {
@@ -1824,8 +1829,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     if (config.level.autocompletePaletteApisOnly) {
        functionsFilter = config.level.codeFunctions;
     }
-    var langTools = window.ace.require("ace/ext/language_tools");
-    langTools.addCompleter(
+
+    aceEditor.completers.push(
       dropletUtils.generateAceApiCompleter(functionsFilter, config.dropletConfig));
   }
 
@@ -2389,6 +2394,9 @@ StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
  * @returns {boolean} True if we detect an instance of this.
  */
 StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
+  if (this.editCode) {
+    return false;
+  }
   return Blockly.mainBlockSpace.getAllBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
 };
 

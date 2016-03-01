@@ -2,24 +2,24 @@ name 'U6 - Sample Apps - Student Introduction'
 title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
+css 'unplugged'
 markdown <<MARKDOWN
 ## Unit 4: Lesson 08 - Sample Apps
 
 # Background
 
-words
-
-# Vocabulary
-* **words:**
+Now that you understand the basics of how to use App Lab's Data Tools, there are many different kinds of apps you can create. The following levels contain examples of the kinds of features you can build using a database. These projects are meant to provide ideas and inspiration for you before you begin building your final project for the year.
 
 # Lesson
 
-* words.
-
+* Sample App: Login Page.
+* Sample App: Class Survey.
+* Sample App: Clicker Game.
+* Sample App: Flashcards.
 
 # Resources
 
-* Video: <a href="https://google.com" target="_blank"> Tutorial - JavaScript Objects</a>
+* Activity Guide: <a href="https://drive.google.com/open?id=1Zel8Ywoj470x_54bbkwM4XYqSxaA0J7IsqNHzCBD5-w" target="_blank"> Sample Apps Overview</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

@@ -16,6 +16,7 @@ var sharedConstants = require('../constants');
 var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
+var AppView = require('../templates/AppView.jsx');
 var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var Collidable = require('./collidable');
@@ -1808,22 +1809,6 @@ Studio.init = function(config) {
     finishButton: !finishButtonFirstLine && showFinishButton
   });
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
-      controls: firstControlsRow,
-      extraControlRows: extraControlRows,
-      blockUsed: undefined,
-      idealBlockNumber: undefined,
-      editCode: level.editCode,
-      blockCounterClass: 'block-counter-default',
-      inputOutputTable: level.inputOutputTable,
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
   var levelTracks = [];
   if (level.music && skin.musicMetadata) {
     levelTracks = skin.musicMetadata.filter(function(trackMetadata) {
@@ -1975,21 +1960,42 @@ Studio.init = function(config) {
 
   Studio.makeThrottledSpriteWallCollisionHelpers();
 
-  studioApp.init(config);
+  React.render(React.createElement(AppView, {
+    renderCodeApp: function () {
+      return page({
+        assetUrl: studioApp.assetUrl,
+        data: {
+          localeDirection: studioApp.localeDirection(),
+          visualization: require('./visualization.html.ejs')(),
+          controls: firstControlsRow,
+          extraControlRows: extraControlRows,
+          blockUsed: undefined,
+          idealBlockNumber: undefined,
+          editCode: level.editCode,
+          blockCounterClass: 'block-counter-default',
+          inputOutputTable: level.inputOutputTable,
+          readonlyWorkspace: config.readonlyWorkspace
+        }
+      });
+    },
+    onMount: function () {
+      studioApp.init(config);
 
-  var finishButton = document.getElementById('finishButton');
-  if (finishButton) {
-    dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
-  }
+      var finishButton = document.getElementById('finishButton');
+      if (finishButton) {
+        dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
+      }
 
-  // pre-load images asynchronously
-  // (to reduce the likelihood that there is a delay when images
-  //  are changed at runtime)
-  if (config.skin.preloadAssets) {
-    preloadActorImages();
-    preloadProjectileAndItemImages();
-    preloadBackgroundImages();
-  }
+      // pre-load images asynchronously
+      // (to reduce the likelihood that there is a delay when images
+      //  are changed at runtime)
+      if (config.skin.preloadAssets) {
+        preloadActorImages();
+        preloadProjectileAndItemImages();
+        preloadBackgroundImages();
+      }
+    }
+  }), document.getElementById(config.containerId));
 };
 
 /**

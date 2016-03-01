@@ -448,6 +448,13 @@ exports.deleteRecord = function (table, record, onComplete, onError) {
                            'onError': onError});
 };
 
+exports.onRecordEvent = function (table, onRecord) {
+  return Applab.executeCmd(null,
+                           'onRecordEvent',
+                           {'table': table,
+                            'onRecord': onRecord});
+};
+
 exports.getUserId = function () {
   return Applab.executeCmd(null,
                           'getUserId',

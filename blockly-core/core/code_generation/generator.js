@@ -62,14 +62,16 @@ Blockly.Generator.get = function(name) {
  * Generate code for all blocks in the blockSpace to the specified language.
  * @param {string} name Language name (e.g. 'JavaScript').
  * @param {array} blocks Return code under blocks in this array.
+ * @param {boolean} opt_showHidden Whether or not to show non-user visible
+ *   blocks, defaults to true. Nested blocks always inherit visibility.
  * @return {string} Generated code.
  */
-Blockly.Generator.blocksToCode = function(name, blocks) {
+Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
   var code = [];
   var generator = Blockly.Generator.get(name);
   generator.init();
   for (var x = 0, block; block = blocks[x]; x++) {
-    var line = generator.blockToCode(block);
+    var line = generator.blockToCode(block, opt_showHidden);
     if (line instanceof Array) {
       // Value blocks return tuples of code and operator order.
       // Top-level blocks don't care about operator order.
@@ -98,9 +100,11 @@ Blockly.Generator.blocksToCode = function(name, blocks) {
  * @param {string} name Language name (e.g. 'JavaScript').
  * @param {?string|Array.<string>} opt_typeFilter Only return code under top
  *   blocks of this type (or list of types).
+ * @param {boolean} opt_showHidden Whether or not to show non-user visible
+ *   blocks, defaults to true. Nested blocks always inherit visibility.
  * @return {string} Generated code.
  */
-Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
+Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter, opt_showHidden) {
   var blocksToGenerate;
   if (opt_typeFilter) {
     if (typeof opt_typeFilter == 'string') {
@@ -114,7 +118,7 @@ Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
     // Generate all top blocks.
     blocksToGenerate = Blockly.mainBlockSpace.getTopBlocks(true);
   }
-  return Blockly.Generator.blocksToCode(name, blocksToGenerate);
+  return Blockly.Generator.blocksToCode(name, blocksToGenerate, opt_showHidden);
 };
 
 // The following are some helpful functions which can be used by multiple
@@ -164,18 +168,21 @@ Blockly.CodeGenerator = function(name) {
 /**
  * Generate code for the specified block (and attached blocks).
  * @param {Blockly.Block} block The block to generate code for.
+ * @param {boolean} opt_showHidden Whether or not to show non-user visible
+ *     blocks, defaults to true. Nested blocks always inherit visibility.
  * @return {string|!Array} For statement blocks, the generated code.
  *     For value blocks, an array containing the generated code and an
  *     operator order value.  Returns '' if block is null.
  */
-Blockly.CodeGenerator.prototype.blockToCode = function(block) {
+Blockly.CodeGenerator.prototype.blockToCode = function(block, opt_showHidden) {
   if (!block) {
     return '';
   }
-  if (block.disabled) {
-    // Skip past this block if it is disabled.
+  var showHidden = opt_showHidden == undefined ? true : opt_showHidden;
+  if (block.disabled || (!showHidden && !block.isUserVisible())) {
+    // Skip past this block if it is disabled or hidden.
     var nextBlock = block.nextConnection && block.nextConnection.targetBlock();
-    return this.blockToCode(nextBlock);
+    return this.blockToCode(nextBlock, opt_showHidden);
   }
 
   var func = this[block.type];
@@ -186,9 +193,9 @@ Blockly.CodeGenerator.prototype.blockToCode = function(block) {
   var code = func.call(block);
   if (code instanceof Array) {
     // Value blocks return tuples of code and operator order.
-    return [this.scrub_(block, code[0]), code[1]];
+    return [this.scrub_(block, code[0], opt_showHidden), code[1]];
   } else {
-    return this.scrub_(block, code);
+    return this.scrub_(block, code, opt_showHidden);
   }
 };
 

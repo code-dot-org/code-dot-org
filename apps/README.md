@@ -54,6 +54,7 @@ npm run build
 ```
 
 * `npm run build` builds a 'debug' version with more readable javascript
+* `npm run build -- --app=maze` builds a 'debug' version of only the maze app
 * `npm run build:dist` builds a minified version suitable for production 
 * `npm run clean` will clean the build directory
 
@@ -62,21 +63,39 @@ See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
 #### Running with live-reload server
 
 ```
-grunt dev
-open http://localhost:8000
+npm start
 ```
 
-This will serve a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to blockly.  Caveats:
-* This does not update asset files. For that, use a full `grunt build`.
+This will perform an initial build, then serve and open a playground with a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to apps.  Caveats:
 * The live-reload server does not pick up changes to blockly-core.  For that, see [Full build with blockly-core](#full-build-with-blockly-core-changes).
 * If you get `Error: EMFILE, too many open files` while running the live-reload server (common on OSX) try increasing the OS open file limit by running `ulimit -n 1024` (and adding it to your `.bashrc`).
 
 ##### Rebuild only a single app
 
-To have grunt rebuild only a single app, use the MOOC_APP parameter:
+To have grunt rebuild only a single app, use the `--app` parameter:
 
 ```
-MOOC_APP=studio grunt dev
+npm start -- --app=maze
+```
+
+##### Rebuild with custom polling interval
+
+The `grunt watch` task when run with a low filesystem polling interval is [known to cause high CPU usage](https://github.com/gruntjs/grunt-contrib-watch/issues/145) on OS X.
+
+To set a custom polling interval, use the `--delay` parameter:
+
+```
+npm start -- --delay=5000
+```
+
+Since the longer the polling is, the longer the delay before builds can be, we'll try to keep the polling interval a happy medium. The default polling interval is set to 700ms which as of 2/24/2016 uses roughly 10% CPU on a Macbook Pro.
+
+##### Rebuild without live reload
+
+To have grunt rebuild on changes but not run an express server, you can use the constituent commands:
+
+```
+MOOC_DEV=1 grunt build watch
 ```
 
 ##### Build a single foreign language
