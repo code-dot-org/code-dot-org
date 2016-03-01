@@ -827,26 +827,28 @@ designMode.createScreen = function () {
  */
 designMode.changeScreen = function (screenId) {
   currentScreenId = screenId;
-  var screenIds = [];
   elementUtils.getScreens().each(function () {
-    screenIds.push(elementUtils.getId(this));
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
 
-  designMode.renderToggleRow(screenIds);
+  designMode.renderToggleRow();
 
   designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
 };
 
+/** @returns {string} Id of active/visible screen */
 designMode.getCurrentScreenId = function() {
   return currentScreenId;
 };
 
-designMode.renderToggleRow = function (screenIds) {
-  screenIds = screenIds || elementUtils.getScreens().get().map(function (screen) {
+/** @returns {string[]} Array of all screen Ids in current app */
+designMode.getAllScreenIds = function () {
+  return elementUtils.getScreens().get().map(function (screen) {
     return elementUtils.getId(screen);
   });
+};
 
+designMode.renderToggleRow = function () {
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
     React.render(
@@ -854,8 +856,8 @@ designMode.renderToggleRow = function (screenIds) {
         hideToggle: Applab.hideDesignModeToggle(),
         hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),
-        initialScreen: currentScreenId,
-        screenIds: screenIds,
+        initialScreen: designMode.getCurrentScreenId(),
+        screenIds: designMode.getAllScreenIds(),
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
         onViewDataButton: Applab.onViewData,
