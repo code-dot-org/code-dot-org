@@ -1079,7 +1079,7 @@ html[dir=rtl] .qtip-content {
 }
 
 .tooltip-x-close.qtip-icon {
-  @include close-button($cornerOffset: -35px);
+  @include close-button($cornerOffset: -20px);
 }
 
 a.download-video {

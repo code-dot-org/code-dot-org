@@ -1,5 +1,6 @@
 var msg = require('../locale');
 var Hint = require('./Hint.jsx');
+var Lightbulb = require('./Lightbulb.jsx');
 
 /**
  * @overview React Component for displaying Authored Hints in the
@@ -18,7 +19,6 @@ module.exports = React.createClass({
     seenHints: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     unseenHints: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     onUserViewedHint: React.PropTypes.func.isRequired,
-    lightbulbSVG: React.PropTypes.node.isRequired,
   },
 
   getInitialState: function () {
@@ -71,12 +71,15 @@ module.exports = React.createClass({
     var seenHints;
     if (hintsToShow && hintsToShow.length) {
       seenHints = [
-          <h1>{ this.props.hintReviewTitle }</h1>,
-          <ul>
+          <h1>
+            <Lightbulb size={32} style={{ margin: "-9px 0 -9px -5px" }}/>
+            { this.props.hintReviewTitle }
+          </h1>,
+          <ol>
             {hintsToShow.map(function (hint) {
               return <Hint hint={hint} ref={hint.hintId} />;
             })}
-          </ul>
+          </ol>
       ];
     }
 
@@ -84,7 +87,7 @@ module.exports = React.createClass({
     if (!this.state.showNextUnseenHint && this.props.unseenHints && this.props.unseenHints.length) {
       viewHintButton = (
         <button id="hint-button" onClick={ this.viewHint } className="lightbulb-button">
-          <span dangerouslySetInnerHTML={{ __html: this.props.lightbulbSVG }} />
+          <Lightbulb size={32} />
           {msg.hintSelectNewHint()}
         </button>
       );
