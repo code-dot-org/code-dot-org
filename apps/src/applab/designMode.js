@@ -799,10 +799,6 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configurePlaySpaceHeader = function () {
-  designMode.loadDefaultScreen();
-};
-
 /**
  * Create a new screen
  * @returns {string} The id of the newly created screen
