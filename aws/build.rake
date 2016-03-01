@@ -95,68 +95,46 @@ def threaded_each(array, thread_count=2)
   threads.each(&:join)
 end
 
-if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
-  #
-  # Define the BLOCKLY[-CORE] BUILD task
-  #
-  BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
-  BLOCKLY_CORE_PRODUCT_FILES = Dir.glob(blockly_core_dir('build-output', '**/*'))
-  BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PRODUCT_FILES
-  BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCKLY_CORE_SOURCE_FILES) do
-    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:blockly_core'
+#
+# Define the BLOCKLY[-CORE] BUILD task
+#
+BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
+BLOCKLY_CORE_PRODUCT_FILES = Dir.glob(blockly_core_dir('build-output', '**/*'))
+BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PRODUCT_FILES
+BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCKLY_CORE_SOURCE_FILES) do
+  puts 'BUILD BCORE'
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:blockly_core'
+  HipChat.log 'Committing updated <b>blockly core</b> files...', color: 'purple'
+  message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-apps'))}"
+  RakeUtils.system 'git', 'add', *BLOCKLY_CORE_PRODUCT_FILES
+  RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
+  puts 'RakeUtils.git_push' # TODO
+  # RakeUtils.git_push
+end
+
+APPS_TASK = build_task('apps', [BLOCKLY_CORE_TASK] + Dir.glob(apps_dir('**/*'))) do
+  puts 'APPS_TASK'
+  packager = S3Packaging.new('apps', apps_dir, dashboard_dir('public/apps-package'))
+
+  updated_package = packager.update_from_s3
+  if updated_package
+    HipChat.log "Downloaded package from S3: #{packager.commit_hash}"
+    next # no need to do anything if we already got a package from s3
   end
 
-  #
-  # Define the APPS BUILD task
-  #
-  APPS_DEPENDENCIES = [BLOCKLY_CORE_TASK]
-  APPS_NODE_MODULES = Dir.glob(apps_dir('node_modules', '**/*'))
-  APPS_BUILD_PRODUCTS = ['npm-debug.log'].map{|i| apps_dir(i)} + Dir.glob(apps_dir('build', '**/*'))
-  APPS_SOURCE_FILES = Dir.glob(apps_dir('**/*')) - APPS_NODE_MODULES - APPS_BUILD_PRODUCTS
-  APPS_TASK = build_task('apps', APPS_DEPENDENCIES + APPS_SOURCE_FILES) do
-    RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
-    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:apps'
-    Dir.chdir(apps_dir) { RakeUtils.system 'grunt test' }
-    RakeUtils.system 'rm', '-rf', dashboard_dir('public/apps-package')
-    RakeUtils.system 'cp', '-R', apps_dir('build/package'), dashboard_dir('public/apps-package')
-  end
+  # Test and staging are the only environments that should be uploading new packages
+  raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
 
-  #
-  # Define the APPS COMMIT task. If APPS_TASK produces new output, that output needs to be
-  #   committed because it's input for the DASHBOARD task.
-  #
-  APPS_COMMIT_TASK = build_task('apps-commit', [deploy_dir('rebuild'), APPS_TASK]) do
-    blockly_core_changed = !`git status --porcelain #{BLOCKLY_CORE_PRODUCT_FILES.join(' ')}`.strip.empty?
+  puts 'BUILDING APPS'
+  HipChat.log 'Building apps...'
+  RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:apps'
+  HipChat.log 'apps built'
+  puts 'DONE BUILDING APPS'
 
-    apps_changed = false
-    Dir.chdir(dashboard_dir('public/apps-package')) do
-      apps_changed = !`git status --porcelain .`.strip.empty?
-    end
-
-    if blockly_core_changed || apps_changed
-      if RakeUtils.git_updates_available?
-        # NOTE: If we have local changes as a result of building APPS_TASK, but there are new
-        # commits pending in the repository, it is better to pull the repository first and commit
-        # these changes after we're caught up with the repository because, if we committed the changes
-        # before pulling we would need to manually handle a "merge commit" even though it's impossible
-        # for there to be file conflicts (because nobody changes the files APPS_TASK builds manually).
-        HipChat.log '<b>Apps</b> package updated but git changes are pending; commmiting after next build.', color: 'yellow'
-      else
-        HipChat.log 'Committing updated <b>apps</b> package...', color: 'purple'
-        RakeUtils.system 'git', 'add', *BLOCKLY_CORE_PRODUCT_FILES
-        RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/apps-package')
-        message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-apps'))}"
-        RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
-        RakeUtils.git_push
-        RakeUtils.system 'rm', '-f', deploy_dir('rebuild-apps')
-      end
-    else
-      HipChat.log '<b>apps</b> package unmodified, nothing to commit.'
-      RakeUtils.system 'rm', '-f', deploy_dir('rebuild-apps')
-    end
-  end
-else
-  APPS_COMMIT_TASK = build_task('apps-commit') {}
+  # upload to s3
+  package = packager.upload_package_to_s3('/build')
+  packager.decompress_package(package)
 end
 
 #
@@ -307,7 +285,7 @@ task :deploy do
   end
 end
 
-$websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK, CODE_STUDIO_TASK, :build_with_cloudfront, :deploy])
+$websites = build_task('websites', [deploy_dir('rebuild'), APPS_TASK, CODE_STUDIO_TASK, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
 
 task :pegasus_unit_tests do
@@ -394,6 +372,6 @@ end
 # do the eyes and browserstack ui tests in parallel
 multitask ui_tests: [:eyes_ui_tests, :regular_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), CODE_STUDIO_TASK, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :ui_test_flakiness, :ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), APPS_TASK, CODE_STUDIO_TASK, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :ui_test_flakiness, :ui_tests])
 
 task 'test-websites' => [$websites_test]
