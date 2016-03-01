@@ -281,17 +281,20 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
     var block = funcInfo.block;
     var expansion = funcInfo.expansion;
     if (!block) {
+      var nameWithPrefix = funcInfo.func;
+      if (funcInfo.blockPrefix) {
+        nameWithPrefix = funcInfo.blockPrefix + nameWithPrefix;
+      }
       if (funcInfo.type === 'property') {
-        block = funcInfo.func;
+        block = nameWithPrefix;
       } else {
-        var prefix = funcInfo.blockPrefix || funcInfo.func;
         var paletteParams = funcInfo.paletteParams || funcInfo.params;
-        block = buildFunctionPrototype(prefix, paletteParams);
+        block = buildFunctionPrototype(nameWithPrefix, paletteParams);
         if (funcInfo.paletteParams) {
           // If paletteParams were specified and used for the 'block', then use
           // the regular params for the 'expansion' which appears when the block
           // is dragged out of the palette:
-          expansion = buildFunctionPrototype(prefix, funcInfo.params);
+          expansion = buildFunctionPrototype(nameWithPrefix, funcInfo.params);
         }
       }
     }
