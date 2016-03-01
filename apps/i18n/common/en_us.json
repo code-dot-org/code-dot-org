@@ -186,7 +186,7 @@
   "infinity": "Infinity",
   "jump": "jump",
   "keepPlaying": "Keep playing",
-  "levelIncompleteError": "You are using all of the necessary types of blocks but not in the right way.",
+  "levelIncompleteError": "Keep coding! Something's not quite right yet.",
   "listVariable": "list",
   "makeYourOwnFlappy": "Make Your Own Flappy Game",
   "missingRecommendedBlocksErrorMsg": "Not quite. Try using a block you aren’t using yet.",
