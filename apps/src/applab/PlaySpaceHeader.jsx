@@ -79,7 +79,7 @@ var PlaySpaceHeader = React.createClass({
     }
 
     return (
-      <div id="designToggleRow">
+      <div id="playSpaceHeader">
         <table style={{width: '100%'}}>
           <tbody>
             <tr>
