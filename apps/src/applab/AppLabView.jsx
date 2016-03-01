@@ -17,7 +17,7 @@ var AppLabView = React.createClass({
     hideToggle: React.PropTypes.bool.isRequired,
     hideViewDataButton: React.PropTypes.bool.isRequired,
     startInDesignMode: React.PropTypes.bool.isRequired,
-    initialScreen: React.PropTypes.string.isRequired,
+    activeScreenId: React.PropTypes.string,
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
@@ -41,7 +41,7 @@ var AppLabView = React.createClass({
           hideToggle={this.props.hideToggle}
           hideViewDataButton={this.props.hideViewDataButton}
           startInDesignMode={this.props.startInDesignMode}
-          initialScreen={this.props.initialScreen}
+          activeScreenId={this.props.activeScreenId}
           screenIds={this.props.screenIds}
           onDesignModeButton={this.props.onDesignModeButton}
           onCodeModeButton={this.props.onCodeModeButton}
