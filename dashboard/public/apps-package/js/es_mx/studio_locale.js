@@ -420,7 +420,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveSprite":function(d){return "mover"},
 "moveSpriteN":function(d){return "mover actor "+studio_locale.v(d,"spriteIndex")},
 "toXY":function(d){return "a x, y"},
-"moveDown":function(d){return "Baja"},
+"moveDown":function(d){return "Bajar"},
 "moveDownTooltip":function(d){return "Mover un actor hacia abajo."},
 "moveLeft":function(d){return "mover hacia la izquierda"},
 "moveLeftTooltip":function(d){return "Mover un actor a la izquierda."},
