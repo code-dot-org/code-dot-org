@@ -167,8 +167,7 @@ namespace :build do
 
       unless rack_env?(:development)
         HipChat.log 'Precompiling <b>dashboard</b> assets...'
-        # TODO - dont commit with this commented out
-        # RakeUtils.rake 'assets:precompile'
+        RakeUtils.rake 'assets:precompile'
       end
 
       HipChat.log 'Starting <b>dashboard</b>.'

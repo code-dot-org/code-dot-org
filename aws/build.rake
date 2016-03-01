@@ -102,18 +102,15 @@ BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
 BLOCKLY_CORE_PRODUCT_FILES = Dir.glob(blockly_core_dir('build-output', '**/*'))
 BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PRODUCT_FILES
 BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCKLY_CORE_SOURCE_FILES) do
-  puts 'BUILD BCORE'
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:blockly_core'
   HipChat.log 'Committing updated <b>blockly core</b> files...', color: 'purple'
   message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-apps'))}"
   RakeUtils.system 'git', 'add', *BLOCKLY_CORE_PRODUCT_FILES
   RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
-  puts 'RakeUtils.git_push' # TODO
-  # RakeUtils.git_push
+  RakeUtils.git_push
 end
 
 APPS_TASK = build_task('apps', [BLOCKLY_CORE_TASK] + Dir.glob(apps_dir('**/*'))) do
-  puts 'APPS_TASK'
   packager = S3Packaging.new('apps', apps_dir, dashboard_dir('public/apps-package'))
 
   updated_package = packager.update_from_s3
@@ -125,12 +122,10 @@ APPS_TASK = build_task('apps', [BLOCKLY_CORE_TASK] + Dir.glob(apps_dir('**/*')))
   # Test and staging are the only environments that should be uploading new packages
   raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
 
-  puts 'BUILDING APPS'
   HipChat.log 'Building apps...'
   RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:apps'
   HipChat.log 'apps built'
-  puts 'DONE BUILDING APPS'
 
   # upload to s3
   package = packager.upload_package_to_s3('/build')
