@@ -24,6 +24,7 @@ az:
   hello: Salam, dünya
   welcome_back: 'Bir daha xoş gəldiniz, %{name}'
   submit: Göndər
+  unsubmit: Unsubmit
   add_teacher_form:
     code:
       label: 'Müəllim əlavə edin:'
@@ -223,10 +224,10 @@ az:
       finished_hoc: Kod Saatımı bitirdim
       sign_in_to_save: Nəticələri itirməmək üçün daxil olun
       free_play:
-        playlab: Make an App
-        artist: Draw Something
-        calculate: Calculate Something
-        applab: Make an App
+        playlab: Make a Play Lab app
+        artist: Draw something
+        calculate: Calculate something
+        applab: Make an App Lab app
     user:
       classroom: Müəllimin ev səhifəsi
       district_dashboard: District Dashboard
@@ -323,6 +324,7 @@ az:
     heading_hoc2014: '<h2>Kod Saatı</h2><h1>Bütün yaşlar üçün</h1>'
     heading_elementary: '<h2>20 saatlıq kurslar</h2><h1>Başlayanlar (bütün yaşlar) üçün</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Bizim ümumi kursumuz</h2><h1>Bütün yaşlar üçün</h1>'
     your_gallery: Qalereya
     no_primary_course: Try a Code Studio course
@@ -417,6 +419,11 @@ az:
       current: Cari Səviyyələr
       unused: Unused Levels
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Classic Maze
       body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq bu fürsətdən istifadə edib.
@@ -462,11 +469,19 @@ az:
     report_bug: Report Bug
     support: Kömək istə
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Yanlış cavab
     wrong_body: Daxil etdiyiniz cavab yanlışdır. Lütfən, bir daha cəhd edin!
     correct_title: Düzgün
     correct_body: Bu düzgün cavabdır.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Təşəkkür
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Təşəkkür
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -561,8 +576,8 @@ az:
     name: Ad
     updated: Updated
     project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time.'
+    need_help: Try these courses to help you get started with your new project
     really_delete: Delete?
     delete_yes: Bəli
     delete_no: Xeyr

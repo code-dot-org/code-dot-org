@@ -25,6 +25,7 @@
   hello: "សួស្ដី​ពិភពលោក"
   welcome_back: "ស្វាគមន៍​ការ​មក​វិញ, %{name}"
   submit: "បញ្ជូន"
+  unsubmit: Unsubmit
   add_teacher_form:
     code:
       label: "បន្ថែម​គ្រូ​ម្នាក់៖"
@@ -370,6 +371,8 @@
     heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
       (all ages)</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
@@ -486,6 +489,13 @@
       current: "កម្រិត​បច្ចុប្បន្ន"
       unused: "កម្រិត​ដែល​មិន​បាន​ប្រើ"
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: "ពេលវេលា​នៃ​កូដ"
       body: "សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។"
@@ -542,11 +552,19 @@
     report_bug: Report Bug
     support: Get Help
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: "សំណួរ​មិន​ត្រឹមត្រូវ"
     wrong_body: "សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!"
     correct_title: "ត្រឹម​ត្រូវ"
     correct_body: "នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។"
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Thank you
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

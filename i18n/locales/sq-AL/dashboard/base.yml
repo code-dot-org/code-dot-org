@@ -24,6 +24,7 @@ sq:
   hello: Përshëndetje Botë
   welcome_back: 'Mirë se erdhët sërish, %{name}'
   submit: Dorëzo
+  unsubmit: Unsubmit
   add_teacher_form:
     code:
       label: 'Shto një mësues:'
@@ -225,7 +226,7 @@ sq:
       free_play:
         playlab: Bëj një Aplikacion
         artist: Vizato Diçka
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Bëj një Aplikacion
     user:
       classroom: Faqja Kryesore e Mësuesit
@@ -323,6 +324,7 @@ sq:
     heading_hoc2014: '<h2>Ora e Kodimit për</h2><h1>Të gjitha moshat</h1>'
     heading_elementary: '<h2>20 orë kurse për</h2><h1>Fillestarët (të gjitha moshat)</h1>'
     heading_apps: '<h2>Zbavitje për</h2><h1>Të Gjithë</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Kursi jonë i përgjithshëm për</h2><h1>Të Gjitha Moshat</h1>'
     your_gallery: Galeria
     no_primary_course: Provo një kurs të Code Studio
@@ -417,6 +419,11 @@ sq:
       current: Nivelet Aktuale
       unused: Nivelet e Papërdorur
   upsell:
+    applab:
+      title: Laboratori i Aplikacioneve
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Classic Maze
       body: Provo bazat e shkencave kompjuterike. Miliona veta e kanë provuar.
@@ -462,11 +469,19 @@ sq:
     report_bug: Raportoni një problem
     support: Merr Ndihmë
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Përgjigje e pasaktë
     wrong_body: Përgjigja që keni futur nuk është e saktë. Ju lutemi provojeni përsëri!
     correct_title: E saktë
     correct_body: Kjo është përgjigja e saktë.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Faleminderit
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Faleminderit
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

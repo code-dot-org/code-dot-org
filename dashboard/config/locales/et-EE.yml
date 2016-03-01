@@ -25,6 +25,7 @@
   hello: Tere maailm
   welcome_back: Tere tulemast tagasi, %{name}
   submit: Esita
+  unsubmit: Võta vastus tagasi
   add_teacher_form:
     code:
       label: 'Lisa õpetaja:'
@@ -366,6 +367,8 @@
     heading_elementary: "<h2>20-tunnised kursused </h2><h1> Arvutiteaduse Põhialused
       (kõik vanused)</h1>"
     heading_apps: "<h2>Lõbu</h2> <h1>Kõigile</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Meie kiirendatud kursus</h2> <h1>Igas vanuses</h1>"
     your_gallery: Galerii
     no_primary_course: Proovige Code Studio kursust
@@ -491,6 +494,13 @@
       current: Olemasolevad tasemed
       unused: Kasutamata tasemed
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassikaline labürint
       body: Proovige arvutiteaduse alused. Miljonid on proovinud.
@@ -548,11 +558,19 @@
     report_bug: Raporteeri veast
     support: Abi saamine
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Vale vastus
     wrong_body: Sinu poolt sisestatud vastus ei ole õige. Palun proovi uuesti!
     correct_title: "Õige"
     correct_body: See on õige vastus.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -661,7 +679,7 @@
     help_text: Klõpsake <strong>teha App</strong> või <strong>Joonista midagi</strong>
       allpool, et teha uus Play Lab või kunstniku projekt<br/> Sa võid tagasi tulla
       oma projekti juurde ja jätkata nendega tööd igal ajal.
-    need_help: Vajad abi kuidas alustada?
+    need_help: Vajad abi, kuidas alustada?
     really_delete: Kas kustutan?
     delete_yes: Jah
     delete_no: Ei

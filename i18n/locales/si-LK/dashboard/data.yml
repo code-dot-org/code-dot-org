@@ -31,19 +31,19 @@ si:
           desc: කේතය සංස්කරණය (බීටා)
           MazeEC: අදියර 1
         2014 Levels:
-          desc: Bounce (beta)
+          desc: පොළා පැනීම (beta)
           Bounce: අදියර 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
+          desc: භාවිතා කරන්නා විසින් සෑදූ ප්‍රෙහේලිකා (beta)
           Custom: අදියර 1
         Flappy Levels:
-          desc: Flappy Bird
+          desc: Flappy කුරුල්ලා
           Flappy: අදියර 1
         Jigsaw Levels:
-          desc: Jigsaw (beta)
+          desc: පින්තූර ප්‍රෙහේලිකාව (beta)
           Jigsaw: අදියර 1
         Step Levels:
-          desc: Maze (beta)
+          desc: අවුල් ජාලය (beta)
           MazeStep: Stage Step
         edit-code:
           desc: කේතය සංස්කරණය (බීටා)
@@ -52,29 +52,29 @@ si:
           ArtistEC: අදියර 3
           StudioEC: අදියර 4
         events:
-          desc: Bounce (beta)
+          desc: පොළා පැනීම (beta)
           Bounce: අදියර 1
           Studio: අදියර 2
         builder:
-          desc: User-Created Puzzles (beta)
+          desc: භාවිතා කරන්නා විසින් සෑදූ ප්‍රෙහේලිකා (beta)
           Custom: අදියර 1
         flappy:
-          desc: Flappy Bird
+          desc: Flappy කුරුල්ලා
           Flappy: අදියර 1
         jigsaw:
-          desc: Jigsaw (beta)
+          desc: පින්තූර ප්‍රෙහේලිකාව (beta)
           Jigsaw: අදියර 1
         step:
-          desc: Maze (beta)
+          desc: අවුල් ජාලය (beta)
           MazeStep: Stage Step
         wordsearch:
-          desc: Spelling Bee (beta)
+          desc: අක්ෂර වින්‍යාස තරඟය (beta)
           WordSearch: අදියර 1
     game:
       name:
         Unplug1: පරිඝණක විද්‍යාව හැදින්වීම
         Maze: වංකගිරිය
-        Multi: Multiple Choice Stuffs
+        Multi: බහු වරණ දේවල්
         Unplug2: සංඛ්‍යාත්මක සිතීම
         Unplug3: Graph Paper Programming
         Artist: කලාකරුවා
@@ -92,19 +92,19 @@ si:
         Farmer3: ගොවියා 3
         Unplug10: අන්තර්ජාලය
         Artist5: කලාකරුවා 5
-        Unplug11: Wrap-up
+        Unplug11: වෙළනවා
         MazeEC: වංකගිරිය
-        Bounce: Bounce
-        Flappy: Flappy Bird
-        Jigsaw: Jigsaw
-        MazeStep: Maze Step Mode
-        Wordsearch: වචනය සෙවීම
-        Webapp: App Lab
+        Bounce: පොළා පනිනවා
+        Flappy: Flappy කුරුල්ලා
+        Jigsaw: පින්තූර ප්‍රෙහේලිකාව
+        MazeStep: ප්‍රෙහේලිකා පියවර ආකාරය
+        Wordsearch: වචන සෙවීම
+        Webapp: මෘදුකාංග විද්‍යාගාරය
         ArtistEC: කලාකරුවා
-        TextMatch: Text Match
+        TextMatch: වචන ගැළපීම
         StudioEC: Play Lab
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: මෘදුකාංග විද්‍යාගාරය
+        NetSim: අන්තර්ජාල සමාකෘතිය
         Custom: Artist
         CustomStudio: Play Lab
     trophy:
@@ -115,17 +115,17 @@ si:
     concept:
       description:
         sequence: පටිපාටිය
-        if: If block
-        if_else: If-else block
-        loop_times: Repeat times block
-        loop_until: Repeat until block
-        loop_while: While block
-        loop_for: Counter block
+        if: If බ්ලොක් එක
+        if_else: If-else බ්ලොක් එක
+        loop_times: නැවත කරන වාරයන් බ්ලොක් එක
+        loop_until: මෙතෙක් නැවත කරන්න
+        loop_while: While බ්ලොක් එක
+        loop_for: ගණිනය බ්ලොක් එක
         function: ශ්‍රිතයන්
-        parameters: Functions with parameters
+        parameters: පරාමිතියන් සහිත ශ්‍රිත
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_2: 'ඔයාට පුලුවන්ද මට අර නරක ඌරව අල්ලන්න පොඩ්ඩක් උදව් කරන්න? මට එතනට යන්න උදව් කිරීම සඳහා, "ඉදිරියට චලනය වන්න" බ්ලොක්ස් දෙක තුනක් එකට එකතු කරලා "ක්‍රියාත්මක කරන්න" බොත්තම ඔබන්න. '
         maze_2_1: This pig is ruffling my feathers. Help me to find him!
         maze_2_2_5: Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly!
         maze_2_3: Guide me to the green evilness! (Watch out for TNT)
@@ -400,7 +400,7 @@ si:
         Unplug8: ඇබ්ස්ට්‍රැක්ෂන්
         Unplug9: Relay programming
         Unplug10: Internet
-        Unplug11: Wrap-up
+        Unplug11: වෙළනවා
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
@@ -444,7 +444,7 @@ si:
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
-        C3_bounce: Bounce
+        C3_bounce: පොළා පනිනවා
         C3_playlab_create_game: 'Play Lab - Create a Game'
         C3_computational_thinking: සංඛ්‍යාත්මක සිතීම
         C3_dice_race: Dice Race

@@ -24,6 +24,7 @@ km:
   hello: សួស្ដី​ពិភពលោក
   welcome_back: 'ស្វាគមន៍​ការ​មក​វិញ, %{name}'
   submit: បញ្ជូន
+  unsubmit: Unsubmit
   add_teacher_form:
     code:
       label: បន្ថែម​គ្រូ​ម្នាក់៖
@@ -221,10 +222,10 @@ km:
       finished_hoc: "I've finished my Hour of Code"
       sign_in_to_save: Sign in to save progress
       free_play:
-        playlab: Make an App
-        artist: Draw Something
-        calculate: Calculate Something
-        applab: Make an App
+        playlab: Make a Play Lab app
+        artist: Draw something
+        calculate: Calculate something
+        applab: Make an App Lab app
     user:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
@@ -322,6 +323,7 @@ km:
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
     heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
     no_primary_course: Try a Code Studio course
@@ -416,6 +418,11 @@ km:
       current: កម្រិត​បច្ចុប្បន្ន
       unused: កម្រិត​ដែល​មិន​បាន​ប្រើ
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Classic Maze
       body: សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។
@@ -461,11 +468,19 @@ km:
     report_bug: Report Bug
     support: Get Help
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: សំណួរ​មិន​ត្រឹមត្រូវ
     wrong_body: សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!
     correct_title: ត្រឹម​ត្រូវ
     correct_body: នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Thank you
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -560,8 +575,8 @@ km:
     name: ឈ្មោះ
     updated: Updated
     project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time.'
+    need_help: Try these courses to help you get started with your new project
     really_delete: Delete?
     delete_yes: យល់ព្រម
     delete_no: ទេ
