@@ -771,11 +771,7 @@ Applab.init = function(config) {
         }),
         controls: firstControlsRow,
         extraControlRows: extraControlRows,
-        pinWorkspaceToBottom: true,
-        // TODO (brent) - seems a little gross that we've made this part of a
-        // template shared across all apps
-        // disable designMode if we're readonly
-        hasDesignMode: !config.readonlyWorkspace,
+        pinWorkspaceToBottom: true
       }
     });
   }.bind(this);
@@ -870,6 +866,7 @@ Applab.init = function(config) {
   React.render(React.createElement(AppLabView, {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
+    isReadOnlyView: !!config.readonlyWorkspace,
     isShareView: !!config.share,
     renderCodeWorkspace: renderCodeWorkspace,
     renderVisualizationColumn: renderVisualizationColumn,

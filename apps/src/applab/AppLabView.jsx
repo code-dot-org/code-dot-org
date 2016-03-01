@@ -10,6 +10,7 @@ var AppLabView = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
+    isReadOnlyView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     renderCodeWorkspace: React.PropTypes.func.isRequired,
     renderVisualizationColumn: React.PropTypes.func.isRequired,
@@ -26,9 +27,10 @@ var AppLabView = React.createClass({
           assetUrl={this.props.assetUrl}
           isEmbedView={this.props.isEmbedView}
           isShareView={this.props.isShareView}>
-        <ProtectedStatefulDiv
-            id="visualizationColumn"
-            renderContents={this.props.renderVisualizationColumn} />
+        <div id="visualizationColumn">
+          {!this.props.isReadOnlyView && <ProtectedStatefulDiv id="designToggleRow" />}
+          <ProtectedStatefulDiv renderContents={this.props.renderVisualizationColumn} />
+        </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <ProtectedStatefulDiv
             id="codeWorkspace"
