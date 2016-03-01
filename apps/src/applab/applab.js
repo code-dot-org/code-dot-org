@@ -861,7 +861,7 @@ Applab.init = function(config) {
     }
   }.bind(this);
 
-  React.render(React.createElement(AppLabView, {
+  Applab.reactInitialProps_ = {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isReadOnlyView: !!config.readonlyWorkspace,
@@ -869,7 +869,33 @@ Applab.init = function(config) {
     renderCodeWorkspace: renderCodeWorkspace,
     renderVisualizationColumn: renderVisualizationColumn,
     onMount: onMount
-  }), document.getElementById(config.containerId));
+  };
+
+  Applab.reactMountPoint_ = document.getElementById(config.containerId);
+
+  Applab.render();
+};
+
+/**
+ * Cache of props, established during init, to use when re-rendering top-level
+ * view.  Eventually, it would be best to replace these with a Redux store.
+ * @type {Object}
+ */
+Applab.reactInitialProps_ = {};
+
+/**
+ * Element on which to mount the top-level React view.
+ * @type {Element}
+ * @private
+ */
+Applab.reactMountPoint_ = null;
+
+/**
+ * Trigger a top-level React render
+ */
+Applab.render = function () {
+  var nextProps = $.extend({}, Applab.reactInitialProps_, {});
+  React.render(React.createElement(AppLabView, nextProps), Applab.reactMountPoint_);
 };
 
 /**
