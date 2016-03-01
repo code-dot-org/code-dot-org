@@ -36,8 +36,13 @@ module Dashboard
     end
 
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, Rack::Attack
-    config.middleware.insert_after Rack::Attack, FilesApi
+    config.middleware.insert_after VarnishEnvironment, FilesApi
+
+    if CDO.throttle_data_apis
+      require 'cdo/rack/attack'
+      config.middleware.insert_after VarnishEnvironment, Rack::Attack
+    end
+
     config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, PropertiesApi
     config.middleware.insert_after PropertiesApi, TablesApi
