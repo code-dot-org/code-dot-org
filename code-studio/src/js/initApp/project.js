@@ -5,7 +5,7 @@ var AUTOSAVE_INTERVAL = 30 * 1000;
 
 var ABUSE_THRESHOLD = 10;
 
-var NON_REMIXABLE_SKINS = ['hoc0215', 'infinity', 'gumball', 'iceage'];
+var NON_REMIXABLE_SKINS = ['hoc2015', 'infinity', 'gumball', 'iceage'];
 
 var hasProjectChanged = false;
 
