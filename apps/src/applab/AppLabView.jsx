@@ -1,12 +1,12 @@
 'use strict';
 
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
-var StudioAppWrapper = require('./StudioAppWrapper.jsx');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
+var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 
 /**
  * Top-level React wrapper for our standard blockly apps.
  */
-var AppView = React.createClass({
+var AppLabView = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
@@ -37,4 +37,4 @@ var AppView = React.createClass({
     );
   }
 });
-module.exports = AppView;
+module.exports = AppLabView;
