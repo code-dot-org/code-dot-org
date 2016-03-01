@@ -1,5 +1,6 @@
 'use strict';
 
+var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
 var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 
@@ -12,6 +13,18 @@ var AppLabView = React.createClass({
     isEmbedView: React.PropTypes.bool.isRequired,
     isReadOnlyView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
+
+    hideToggle: React.PropTypes.bool.isRequired,
+    hideViewDataButton: React.PropTypes.bool.isRequired,
+    startInDesignMode: React.PropTypes.bool.isRequired,
+    initialScreen: React.PropTypes.string.isRequired,
+    screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+    onDesignModeButton: React.PropTypes.func.isRequired,
+    onCodeModeButton: React.PropTypes.func.isRequired,
+    onViewDataButton: React.PropTypes.func.isRequired,
+    onScreenChange: React.PropTypes.func.isRequired,
+    onScreenCreate: React.PropTypes.func.isRequired,
+
     renderCodeWorkspace: React.PropTypes.func.isRequired,
     renderVisualizationColumn: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
@@ -22,13 +35,28 @@ var AppLabView = React.createClass({
   },
 
   render: function () {
+    var playSpaceHeader;
+    if (!this.props.isReadOnlyView) {
+      playSpaceHeader = <PlaySpaceHeader
+          hideToggle={this.props.hideToggle}
+          hideViewDataButton={this.props.hideViewDataButton}
+          startInDesignMode={this.props.startInDesignMode}
+          initialScreen={this.props.initialScreen}
+          screenIds={this.props.screenIds}
+          onDesignModeButton={this.props.onDesignModeButton}
+          onCodeModeButton={this.props.onCodeModeButton}
+          onViewDataButton={this.props.onViewDataButton}
+          onScreenChange={this.props.onScreenChange}
+          onScreenCreate={this.props.onScreenCreate} />;
+    }
+
     return (
       <StudioAppWrapper
           assetUrl={this.props.assetUrl}
           isEmbedView={this.props.isEmbedView}
           isShareView={this.props.isShareView}>
         <div id="visualizationColumn">
-          {!this.props.isReadOnlyView && <ProtectedStatefulDiv id="designToggleRow" />}
+          {playSpaceHeader}
           <ProtectedStatefulDiv renderContents={this.props.renderVisualizationColumn} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />

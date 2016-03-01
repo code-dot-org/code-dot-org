@@ -84,14 +84,16 @@ var PlaySpaceHeader = React.createClass({
     }
 
     return (
-      <table style={{width: '100%'}}>
-        <tbody>
-          <tr>
-            <td style={{width: '120px'}}>{leftSide}</td>
-            <td style={{maxWidth: 0}}>{rightSide}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div id="designToggleRow">
+        <table style={{width: '100%'}}>
+          <tbody>
+            <tr>
+              <td style={{width: '120px'}}>{leftSide}</td>
+              <td style={{maxWidth: 0}}>{rightSide}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     );
   }
 });
