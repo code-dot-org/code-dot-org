@@ -158,7 +158,7 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "nextLevel":function(d){return "Təbriklər! Siz bu tapmacanı tamamladınız."},
 "no":function(d){return "Xeyr"},
 "numBlocksNeeded":function(d){return "Bu  tapmaca %1 blokla həll oluna bilər."},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try Again\" button to go back to playing your game."},
+"reinfFeedbackMsg":function(d){return "Oyununuzu təkrar oynamaq üçün \"Təkrar\" düyməsinə basa bilərsiniz."},
 "share":function(d){return "Bölüşün"},
 "shareGame":function(d){return "Oyununuzu bölüşün:"},
 "yes":function(d){return "Bəli"}};

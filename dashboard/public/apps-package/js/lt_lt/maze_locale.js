@@ -173,7 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "iškrauk 1 žemių krūvą"},
 "finalLevel":function(d){return "Sveikinu! Tu išsprendei paskutinį galvosūkį."},
 "flowerEmptyError":function(d){return "Gėlėje, prie kurios esi, nebėra nektaro."},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
+"didNotCollectEverything":function(d){return "Įsitikink, kad nepraleidai nė vieno nektaro ar medaus!"},
 "get":function(d){return "paimk"},
 "heightParameter":function(d){return "aukštis"},
 "holePresent":function(d){return "čia yra duobė"},

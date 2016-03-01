@@ -60,8 +60,8 @@ For more information about how to teach this material, please refer to this <a h
 
 <table cellpadding="10">
   <colgroup>
-    <col width="30%" style="border:1px solid #999999;">
-    <col width="40%" style="border:1px solid #999999;">
+    <col width="31%" style="border:1px solid #999999;">
+    <col width="39%" style="border:1px solid #999999;">
     <col width="30%" style="border:1px solid #999999;">
   </colgroup>
   <thead>

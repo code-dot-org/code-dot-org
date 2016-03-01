@@ -25,6 +25,7 @@
   hello: Salutare lume
   welcome_back: Bine ai revenit, %{name}
   submit: Trimite
+  unsubmit: Retrage
   add_teacher_form:
     code:
       label: 'Adaugă un profesor:'
@@ -269,10 +270,10 @@
       finished_hoc: Am terminat Ora mea de Programare
       sign_in_to_save: Loghează-te pentru a salva progresul
       free_play:
-        playlab: Creează o aplicație
+        playlab: Creare aplicație
         artist: Desenează ceva
         calculate: Calculate Something
-        applab: Creează o aplicație
+        applab: Creare aplicație
     user:
       classroom: Pagina de Start a Profesorilor
       district_dashboard: Tabel de instrumente pe zonă districtuală
@@ -382,6 +383,8 @@
     heading_hoc2014: "<h2>Ora de Programare pentru</h2><h1>toate vârstele</h1>"
     heading_elementary: "<h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>"
     heading_apps: "<h2>Distracţie pentru</h2><h1>Toată lumea</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>"
     your_gallery: Galerie
     no_primary_course: "Încearcă un curs cu Atelierul de programare"
@@ -501,6 +504,13 @@
       current: Niveluri curente
       unused: Niveluri neutilizate
   upsell:
+    applab:
+      title: Laboratului Aplicației
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Labirint Clasic
       body: "Încearcă bazele programarii. Milioane de oameni au încercat."
@@ -560,11 +570,19 @@
     report_bug: Raporteazã eroare
     support: Obţine ajutor
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Răspuns incorect
     wrong_body: Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!
     correct_title: Corect
     correct_body: Acela este răspunsul corect.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Mulţumesc
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Mulţumesc
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

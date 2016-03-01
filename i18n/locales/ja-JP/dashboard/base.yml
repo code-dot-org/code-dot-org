@@ -24,6 +24,7 @@ ja:
   hello: 世界の皆さん、こんにちは
   welcome_back: 'Welcome Back, %{name}'
   submit: 送信
+  unsubmit: 取り消す
   add_teacher_form:
     code:
       label: 先生を追加：
@@ -220,10 +221,10 @@ ja:
       finished_hoc: Hour of Codeを終了
       sign_in_to_save: 進捗状況を保存するためにサインインする
       free_play:
-        playlab: アプリケーションをを作る
-        artist: 何かの絵を描く
-        calculate: Calculate Something
-        applab: アプリケーションをを作る
+        playlab: アプリを作る
+        artist: 絵を描く
+        calculate: Calculate something
+        applab: アプリを作る
     user:
       classroom: 先生用ホームページ
       district_dashboard: 地区のダッシュ ボード
@@ -322,6 +323,7 @@ ja:
     heading_hoc2014: '<h2>Hour of Code</h2> <h1>全年齢対象</h1>'
     heading_elementary: '<h2>20時間コース</h2> <h1>全年齢の初心者対象</h1>'
     heading_apps: '<h2>お楽しみ</h2><h1>みんなの</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h1>全年齢対象のコース</h1>'
     your_gallery: ギャラリー
     no_primary_course: コード スタジオ でコースを見る
@@ -416,6 +418,11 @@ ja:
       current: 現在のレベル
       unused: 未使用のレベル
   upsell:
+    applab:
+      title: アプリ ラボ
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: 古典的な迷路
       body: コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます
@@ -461,11 +468,19 @@ ja:
     report_bug: バグを報告
     support: 説明を見る
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: 不正解
     wrong_body: 不正解です。やりなおしてみてください。
     correct_title: 正解
     correct_body: 正解です。
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: ありがとうございます
+    wrong_body: Thank you for submitting an answer.
+    correct_title: ありがとうございます
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

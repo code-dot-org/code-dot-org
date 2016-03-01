@@ -267,6 +267,36 @@ class AdminReportsController < ApplicationController
     end
   end
 
+  def retention
+    require 'cdo/properties'
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @scripts = params[:scripts_ids].present? ?
+        params[:scripts_ids].split(',').map(&:to_i) :
+        [1, 17, 18, 19, 23]  # Default to the CSF scripts.
+      # Get the cached retention_stats from the DB, trimming those stats to only the requested
+      # scripts, exiting early if the stats are blank.
+      raw_retention_stats = Properties.get(:retention_stats)
+      if raw_retention_stats.blank?
+        render(layout: false, text: 'Properties.get(:retention_stats) not found. Please contact '\
+          'an engineer.') && return
+      end
+      @retention_stats = {}
+      raw_retention_stats.each_pair do |key, key_data|
+        @retention_stats[key] = key_data.select{|script_id, _script_data| @scripts.include? script_id.to_i}
+      end
+      if @retention_stats['script_starts'].empty?
+        render(layout: false, text: 'No data could be found for the specified scripts. Please '\
+          'check the IDs, contacting an engineer as necessary.') && return
+      end
+      # Remove the stage_level_counts data, which are not used in this view.
+      @retention_stats.delete('stage_level_counts')
+      # Transform the count stats into row format to facilitate being added to charts and tables.
+      ['script_level_counts', 'script_stage_counts'].each do |key|
+        @retention_stats[key] = build_row_arrays(@retention_stats[key])
+      end
+    end
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_script
     @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
@@ -282,6 +312,27 @@ class AdminReportsController < ApplicationController
 
   def get_percentage_positive(ratings_to_process)
     return 100.0 * ratings_to_process.where(rating: 1).count / ratings_to_process.count
+  end
+
+  # Manipulates the count_stats hash of arrays to an array of arrays, each inner array representing
+  # a slice across the hash arrays.
+  # Returns nil if the hash is blank.
+  def build_row_arrays(count_stats)
+    # Determine the number of final number of rows, being the maximum array size in the hash.
+    array_length = count_stats.max_by{|_k,v| v.size}[1].size
+
+    # Initialize and construct the row_arrays.
+    row_arrays = Array.new(array_length) {Array.new(count_stats.size + 1, 0)}
+    row_arrays.each_with_index do |subarray, index|
+      subarray[0] = index
+    end
+    count_stats.values.each_with_index do |counts, index|
+      counts.each_with_index do |count, subindex|
+        row_arrays[subindex][index + 1] = count
+      end
+    end
+
+    return row_arrays
   end
 
   def level_answers_csv
