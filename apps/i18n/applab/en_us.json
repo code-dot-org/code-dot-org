@@ -165,6 +165,7 @@
   "dropletBlock_line_param2_description": "The x position in pixels of the end of the line.",
   "dropletBlock_line_param3_description": "The y position in pixels of the end of the line.",
   "dropletBlock_listLength_description": "The length of the array",
+  "dropletBlock_listLength_signatureOverride": "[list].length",
   "dropletBlock_moveBackward_description": "Moves the turtle backward a given number of pixels from the current direction.",
   "dropletBlock_moveBackward_param0_description": "The number of pixels to move the turtle back in its current direction. If not provided, the turtle will move back 25 pixels.",
   "dropletBlock_moveForward_description": "Moves the turtle forward a given number of pixels in the current direction.",
