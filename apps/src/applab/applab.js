@@ -769,9 +769,7 @@ Applab.init = function(config) {
           appWidth: Applab.appWidth,
           appHeight: Applab.footerlessAppHeight
         }),
-        controls: firstControlsRow,
-        extraControlRows: extraControlRows,
-        pinWorkspaceToBottom: true
+        controls: firstControlsRow
       }
     });
   }.bind(this);
