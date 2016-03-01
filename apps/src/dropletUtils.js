@@ -320,7 +320,7 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   return addedPalette;
 };
 
-function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
+function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, configBlocks) {
   for (var i = 0; i < configBlocks.length; i++) {
     var block = configBlocks[i];
     if (!block.noAutocomplete) {
@@ -328,7 +328,7 @@ function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
       // other completers that are suggesting the same name
       var newApi = {
         name: 'api',
-        value: block.func,
+        value: block.modeOptionName || block.func,
         score: 100,
         meta: block.category
       };
@@ -345,7 +345,7 @@ function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
               }
             }
             // Insert the function name plus parentheses and semicolon:
-            editor.execCommand("insertstring", this.func + '();');
+            editor.execCommand("insertstring", this.value + '();');
             if (this.params) {
               // Move the selection back so parameters can be entered:
               var curRange = editor.selection.getRange();
@@ -353,10 +353,16 @@ function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
               curRange.end.column -= 2;
               editor.selection.setSelectionRange(curRange);
             }
-          }, block)
+          }, newApi)
         };
       }
-      apis.push(newApi);
+      if (newApi.value.indexOf('*.') === 0 || newApi.value.indexOf('?.') === 0) {
+        // If we find '*.' or '?.' at the beginning, skip over it:
+        newApi.value = newApi.value.substring(2);
+        methodsAndProperties.push(newApi);
+      } else {
+        apis.push(newApi);
+      }
     }
   }
 }
@@ -384,17 +390,21 @@ function populateCompleterFromPredefValues(apis, predefValues) {
  */
 exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   var apis = [];
+  var methodsAndProperties = [];
   var opts = {};
+
+  var acUtil = window.ace.require("ace/autocomplete/util");
+
   // If autocompleteFunctionsWithParens is set, we will append "();" after functions
   opts.autocompleteFunctionsWithParens = dropletConfig.autocompleteFunctionsWithParens;
 
   if (functionFilter) {
     var mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, true);
-    populateCompleterApisFromConfigBlocks(opts, apis, mergedBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, mergedBlocks);
   } else {
-    populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletGlobalConfigBlocks);
-    populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletBuiltinConfigBlocks);
-    populateCompleterApisFromConfigBlocks(opts, apis, dropletConfig.blocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, exports.dropletGlobalConfigBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, exports.dropletBuiltinConfigBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, dropletConfig.blocks);
     populateCompleterFromPredefValues(apis, dropletConfig.additionalPredefValues);
   }
 
@@ -404,7 +414,15 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
         callback(null, []);
         return;
       }
-      callback(null, apis);
+      var line = session.getLine(pos.row);
+      var identifier = acUtil.retrievePrecedingIdentifier(line, pos.column);
+      if (pos.column > (identifier.length + 1) &&
+          line[pos.column - identifier.length - 1] === '.') {
+        // Following a dot, we autocomplete from methodsAndProperties:
+        callback(null, methodsAndProperties);
+      } else {
+        callback(null, apis);
+      }
     }
   };
 };

@@ -133,6 +133,8 @@ DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (func
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
   var dropletFunctionTooltipMarkup = DropletFunctionTooltipMarkup({
     functionName: tooltipInfo.functionName,
+    isProperty: tooltipInfo.isProperty,
+    tipPrefix: tooltipInfo.tipPrefix,
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,

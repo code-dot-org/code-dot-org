@@ -215,6 +215,8 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
   return DropletFunctionTooltipMarkup({
     funcName: tooltipInfo.functionName,
     functionName: tooltipInfo.functionName,
+    isProperty: tooltipInfo.isProperty,
+    tipPrefix: tooltipInfo.tipPrefix,
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
