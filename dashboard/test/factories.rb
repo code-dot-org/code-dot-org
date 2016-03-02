@@ -28,6 +28,11 @@ FactoryGirl.define do
     plc_course nil
     user nil
   end
+
+  factory :plc_script_completion_task, parent: :plc_task, :class => 'Plc::ScriptCompletionTask' do
+
+  end
+
   factory :plc_task, :class => 'Plc::Task' do
     name "MyString"
     plc_learning_module nil
