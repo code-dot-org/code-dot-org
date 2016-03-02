@@ -113,9 +113,11 @@ window.dashboard.progress = (function () {
   };
 
   progress.renderCourseProgress = function (scriptData) {
-    $('.user-stats-block').prepend(ReactDOM.renderToStaticMarkup(React.createElement(dashboard.CourseProgress, {
+    var mountPoint = document.createElement('div');
+    $('.user-stats-block').prepend(mountPoint);
+    ReactDOM.render(React.createElement(dashboard.CourseProgress, {
       stages: scriptData.stages
-    })));
+    }), mountPoint);
     progress.populateProgress(scriptData.name);
   };
 
