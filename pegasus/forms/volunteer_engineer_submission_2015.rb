@@ -3,6 +3,7 @@ require pegasus_dir 'forms/volunteer_engineer_submission'
 class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
 
   UNSUBSCRIBE_2016 = "until2016"
+  UNSUBSCRIBE_HOC = "untilhoc"
   UNSUBSCRIBE_FOREVER = "forever"
   DEFAULT_DISTANCE = 24 # kilometers
   DEFAULT_NUM_VOLUNTEERS = 10
@@ -103,7 +104,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   end
 
   def self.solr_query(params)
-    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && volunteer_after_hoc_b:true && -unsubscribed_s:\"#{UNSUBSCRIBE_FOREVER}\""
+    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && volunteer_after_hoc_b:true && -unsubscribed_s:\"#{UNSUBSCRIBE_FOREVER}\" -unsubscribed_s:\"#{UNSUBSCRIBE_HOC}\" -unsubscribed_s:\"#{UNSUBSCRIBE_2016}\""
 
     coordinates = params['coordinates']
     distance = params['distance'] || DEFAULT_DISTANCE
