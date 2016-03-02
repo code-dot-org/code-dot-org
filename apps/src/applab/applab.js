@@ -558,7 +558,7 @@ Applab.startSharedAppAfterWarnings = function () {
       // we closed the dialog without hitting too_young
       // Only want to ask about age once across apps
       if (!Applab.user.isSignedIn) {
-        localStorage.setItem('is13Plus', 'true');
+        utils.trySetLocalStorage('is13Plus', 'true');
       }
       // Only want to ask about storing data once per app.
       if (showStoreDataAlert) {
@@ -567,7 +567,7 @@ Applab.startSharedAppAfterWarnings = function () {
       window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
     },
     handleTooYoung: function () {
-      localStorage.setItem('is13Plus', 'false');
+      utils.trySetLocalStorage('is13Plus', 'false');
       window.location.href = '/too_young';
     }
   }), modal);
