@@ -60,7 +60,7 @@ var SmallFooter = React.createClass({
   },
 
   captureBaseElementDimensions: function () {
-    var base = React.findDOMNode(this.refs.base);
+    var base = ReactDOM.findDOMNode(this.refs.base);
     this.setState({
       baseWidth: base.offsetWidth,
       baseHeight: base.offsetHeight
@@ -71,7 +71,7 @@ var SmallFooter = React.createClass({
     // The first time we click anywhere, hide any open children
     $(document.body).one('click', function (event) {
       // menu copyright has its own click handler
-      if (event.target === React.findDOMNode(this.refs.menuCopyright)) {
+      if (event.target === ReactDOM.findDOMNode(this.refs.menuCopyright)) {
         return;
       }
 

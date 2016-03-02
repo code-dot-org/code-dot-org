@@ -179,7 +179,7 @@ dashboard.header = (function () {
         appType: dashboard.project.getStandaloneApp(),
         onClickPopup: dashboard.popupWindow
       });
-      React.render(dialog, dialogDom);
+      ReactDOM.render(dialog, dialogDom);
     });
   }
 

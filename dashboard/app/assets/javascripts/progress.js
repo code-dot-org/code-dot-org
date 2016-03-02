@@ -106,14 +106,14 @@ window.dashboard.progress = (function () {
       };
     });
 
-    $('.progress_container').replaceWith(React.renderToStaticMarkup(React.createElement(dashboard.StageProgress, {
+    $('.progress_container').replaceWith(ReactDOM.renderToStaticMarkup(React.createElement(dashboard.StageProgress, {
       levels: combinedProgress,
       currentLevelIndex: currentLevelIndex
     })));
   };
 
   progress.renderCourseProgress = function (scriptData) {
-    $('.user-stats-block').prepend(React.renderToStaticMarkup(React.createElement(dashboard.CourseProgress, {
+    $('.user-stats-block').prepend(ReactDOM.renderToStaticMarkup(React.createElement(dashboard.CourseProgress, {
       stages: scriptData.stages
     })));
     progress.populateProgress(scriptData.name);

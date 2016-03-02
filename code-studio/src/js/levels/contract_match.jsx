@@ -225,20 +225,20 @@ $(window).load(function () {
       );
     },
     componentDidMount: function () {
-      $(React.findDOMNode(this)).coloriconselectmenu({
+      $(ReactDOM.findDOMNode(this)).coloriconselectmenu({
         select: function () {
           addSquareIconToButton(this);
         },
         change: this.selectmenuChange
       });
-      $(React.findDOMNode(this)).coloriconselectmenu("styleCurrentValue");
+      $(ReactDOM.findDOMNode(this)).coloriconselectmenu("styleCurrentValue");
     },
     componentWillUnmount: function () {
-      $(React.findDOMNode(this)).coloriconselectmenu('destroy');
+      $(ReactDOM.findDOMNode(this)).coloriconselectmenu('destroy');
     }
   });
 
-  var contractForm = React.render(<ContractForm />, document.getElementById('contractForm'));
+  var contractForm = ReactDOM.render(<ContractForm />, document.getElementById('contractForm'));
 
   /**
    * Creates a getResult function compatible with _dialog.html.haml's getResult call
