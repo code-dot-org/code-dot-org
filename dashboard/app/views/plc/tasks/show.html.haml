@@ -8,7 +8,9 @@
   %strong Associated module
   = @task.plc_learning_module.try(:name)
 
-= render partial: 'plc/tasks/view/' + @task.underscore_task_name
+-unless @task.type == :plc_task
+  %p
+    = render partial: 'plc/tasks/view/' + @task.underscore_task_name
 
 = link_to 'Edit', edit_plc_task_path(@task)
 \|

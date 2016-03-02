@@ -23,7 +23,7 @@ class Plc::TasksController < ApplicationController
   # POST /plc/tasks.json
   def create
     if @task.save
-      redirect_to @task, notice: 'Task was successfully created.'
+      redirect_to plc_task_url(@task), notice: 'Task was successfully created.'
     else
       redirect_to action: :new
     end
@@ -33,7 +33,7 @@ class Plc::TasksController < ApplicationController
   # PATCH/PUT /plc/tasks/1.json
   def update
     if @task.update(task_params)
-      redirect_to plc_task_url, notice: 'Task was susccessfully updated.'
+      redirect_to plc_task_url(@task), notice: 'Task was successfully updated.'
     else
       redirect_to action: :edit
     end
@@ -49,6 +49,14 @@ class Plc::TasksController < ApplicationController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def task_params
-    params.require(:plc_task).permit(:name, :description, :type, :plc_learning_module_id)
+    #Depending on the task, we'll require different parameters. Extend this later when we know what the better
+    #symbols are
+    if params[:plc_learning_resource_task]
+      params.require(:plc_learning_resource_task).permit(:name, :plc_learning_module_id, :type)
+    elsif params[:plc_script_completion_task]
+      params.require(:plc_script_completion_task).permit(:name, :plc_learning_module_id, :type)
+    elsif params[:plc_task]
+      params.require(:plc_task).permit(:name, :plc_learning_module_id, :type)
+    end
   end
 end
