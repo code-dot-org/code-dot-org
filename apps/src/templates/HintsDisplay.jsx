@@ -59,7 +59,7 @@ module.exports = React.createClass({
     if (!this.state.showNextUnseenHint && this.props.unseenHints && this.props.unseenHints.length) {
       viewHintButton = (
         <button id="hint-button" onClick={ this.viewHint } className="lightbulb-button">
-          <Lightbulb size={32} />
+          <Lightbulb size={32} style={{ margin: "-9px 0px -9px -5px" }}/>
           {msg.hintSelectNewHint()}
         </button>
       );

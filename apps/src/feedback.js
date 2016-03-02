@@ -34,6 +34,7 @@ var constants = require('./constants');
 var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
 var puzzleRatingUtils = require('./puzzleRatingUtils');
+var Buttons = require('./templates/Buttons.jsx');
 
 /**
  * @typedef {Object} TestableBlock
@@ -416,8 +417,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
     tryAgainText = options.keepPlayingText;
   }
 
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
+  React.render(React.createElement(Buttons, {
       previousLevel:
         !this.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
@@ -428,8 +428,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
       isK1: options.isK1,
       assetUrl: this.studioApp_.assetUrl,
       freePlay: options.freePlay
-    }
-  });
+  }), buttons);
 
   return buttons;
 };

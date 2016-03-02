@@ -19,6 +19,7 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/Instructions.jsx');
+var Buttons = require('./templates/Buttons.jsx');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
@@ -1023,13 +1024,10 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   instructionsDiv.appendChild(instructionsReactContainer);
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      ok: true
-    }
-  });
-
   instructionsDiv.appendChild(buttons);
+  React.render(React.createElement(Buttons, {
+    ok: true
+  }), buttons);
 
   // If there is an instructions block on the screen, we want the instructions dialog to
   // shrink down to that instructions block when it's dismissed.
