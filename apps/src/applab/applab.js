@@ -18,7 +18,8 @@ var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var AppView = require('../templates/AppView.jsx');
-var page = require('../templates/page.html.ejs');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -395,7 +396,8 @@ function renderFooterInSharedGame() {
       paddingLeft: 0
     },
     className: 'dark',
-    menuItems: menuItems
+    menuItems: menuItems,
+    phoneFooter: true
   }), footerDiv);
 }
 
@@ -739,16 +741,11 @@ Applab.init = function(config) {
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
 
-  var renderCodeApp = function () {
-    return page({
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
       assetUrl: studioApp.assetUrl,
       data: {
         localeDirection: studioApp.localeDirection(),
-        visualization: require('./visualization.html.ejs')({
-          appWidth: Applab.appWidth,
-          appHeight: Applab.footerlessAppHeight
-        }),
-        controls: firstControlsRow,
         extraControlRows: extraControlRows,
         blockUsed: undefined,
         idealBlockNumber: undefined,
@@ -760,6 +757,25 @@ Applab.init = function(config) {
         // disable designMode if we're readonly
         hasDesignMode: !config.readonlyWorkspace,
         readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')({
+          appWidth: Applab.appWidth,
+          appHeight: Applab.footerlessAppHeight
+        }),
+        controls: firstControlsRow,
+        extraControlRows: extraControlRows,
+        pinWorkspaceToBottom: true,
+        // TODO (brent) - seems a little gross that we've made this part of a
+        // template shared across all apps
+        // disable designMode if we're readonly
+        hasDesignMode: !config.readonlyWorkspace,
       }
     });
   }.bind(this);
@@ -853,8 +869,10 @@ Applab.init = function(config) {
 
   React.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
-    requireLandscape: !(config.share || config.embed),
-    renderCodeApp: renderCodeApp,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };

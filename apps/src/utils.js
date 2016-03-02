@@ -387,3 +387,13 @@ exports.escapeText = function (text) {
 
   return returnValue;
 };
+
+/**
+ * Converts degrees into radians.
+ *
+ * @param degrees - The degrees to convert to radians
+ * @return `degrees` converted to radians
+ */
+exports.degreesToRadians = function (degrees) {
+    return degrees * (Math.PI / 180);
+};
