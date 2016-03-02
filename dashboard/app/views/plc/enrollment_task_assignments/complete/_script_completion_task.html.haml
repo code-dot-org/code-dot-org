@@ -1,5 +1,9 @@
 Hello, this is a script you have to complete.
 
-%p
-  Go and complete the script here:
-  = link_to script.name, script
+- script = @task.script_id ? Script.find(@task.script_id) : nil
+- if script
+  %p
+    Go do this script, make sure you are signed in:
+    = link_to script.name, script
+- else
+  %p But there is no script assigned here right now.
