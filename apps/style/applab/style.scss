@@ -22,7 +22,7 @@ div#visualizationResizeBar {
   top: $workspace-headers-height;
 }
 
-#designToggleRow > div {
+#playSpaceHeader > div {
   height: $workspace-headers-height;
 }
 
@@ -217,7 +217,7 @@ div#visualizationResizeBar {
   margin: 0 auto;
   padding: 20px 0;
 
-  #designToggleRow, #gameButtons {
+  #playSpaceHeader, #gameButtons {
     display: none;
   }
 
@@ -229,7 +229,7 @@ div#visualizationResizeBar {
 }
 
 #visualizationColumn.chromelessShare {
-  #designToggleRow, #gameButtons {
+  #playSpaceHeader, #gameButtons {
     display: none;
   }
 }
