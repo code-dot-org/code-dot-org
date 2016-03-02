@@ -475,6 +475,7 @@ module.exports = function (grunt) {
         $: true,
         jQuery: true,
         React: true,
+        ReactDOM: true,
         Blockly: true,
         Phaser: true,
         //TODO: Eliminate the globals below here. Could at least warn about them

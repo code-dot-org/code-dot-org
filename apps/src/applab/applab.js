@@ -382,7 +382,7 @@ function renderFooterInSharedGame() {
     });
   }
 
-  React.render(React.createElement(window.dashboard.SmallFooter,{
+  ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
     i18nDropdown: '',
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
@@ -551,7 +551,7 @@ Applab.startSharedAppAfterWarnings = function () {
 
   var modal = document.createElement('div');
   document.body.appendChild(modal);
-  return React.render(React.createElement(ShareWarningsDialog, {
+  return ReactDOM.render(React.createElement(ShareWarningsDialog, {
     showStoreDataAlert: showStoreDataAlert,
     is13Plus: is13Plus,
     handleClose: function () {
@@ -907,7 +907,7 @@ Applab.render = function () {
     onScreenChange: designMode.changeScreen,
     onScreenCreate: designMode.createScreen
   });
-  React.render(React.createElement(AppLabView, nextProps), Applab.reactMountPoint_);
+  ReactDOM.render(React.createElement(AppLabView, nextProps), Applab.reactMountPoint_);
 };
 
 /**

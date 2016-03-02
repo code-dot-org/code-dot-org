@@ -14,7 +14,7 @@ module.exports = React.createClass({
   componentDidMount: function () {
     var props = this.props;
 
-    $(React.findDOMNode(this.refs.uploader)).fileupload({
+    $(ReactDOM.findDOMNode(this.refs.uploader)).fileupload({
       dataType: 'json',
       url: '/v3/assets/' + props.channelId + '/',
       // prevent fileupload from replacing the input DOM element, which
@@ -34,7 +34,7 @@ module.exports = React.createClass({
   },
 
   componentWillUnmount: function () {
-    $(React.findDOMNode(this.refs.uploader)).fileupload('destroy');
+    $(ReactDOM.findDOMNode(this.refs.uploader)).fileupload('destroy');
   },
 
   /**
@@ -42,7 +42,7 @@ module.exports = React.createClass({
    * Forward clicks on the button to the hidden file input.
    */
   fileUploadClicked: function () {
-    var uploader = React.findDOMNode(this.refs.uploader);
+    var uploader = ReactDOM.findDOMNode(this.refs.uploader);
     uploader.click();
   },
 
