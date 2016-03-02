@@ -3,10 +3,11 @@ require 'active_support/core_ext/numeric/time'
 
 class Rack::Attack
   # maximum requests per minute over a 4-minute stretch.
-  MAX_TABLE_READS_PER_MIN = 2 * 60
-  MAX_TABLE_WRITES_PER_MIN = 4 * 60
-  MAX_PROPERTY_READS_PER_MIN = 4 * 60
-  MAX_PROPERTY_WRITES_PER_MIN = 4 * 60
+  # Rack::Attack returns a 429 for requests that exceed the rate limit.
+  MAX_TABLE_READS_PER_MIN = 20 * 60
+  MAX_TABLE_WRITES_PER_MIN = 40 * 60
+  MAX_PROPERTY_READS_PER_MIN = 40 * 60
+  MAX_PROPERTY_WRITES_PER_MIN = 40 * 60
 
   redis_url = CDO.geocoder_redis_url || 'redis://localhost:6379'
   cache.store = StoreProxy::RedisStoreProxy.new(Redis.new(url: redis_url))
