@@ -155,7 +155,7 @@ p:function(d,k,o,l,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:(k=bounce_lo
 s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).bounce_locale = {
 "bounceBall":function(d){return "Rebotar pelota"},
-"bounceBallTooltip":function(d){return "Rebotar una pelota contra un objeto."},
+"bounceBallTooltip":function(d){return "Rebota una pelota contra un objeto."},
 "continue":function(d){return "Continuar"},
 "dirE":function(d){return "E"},
 "dirN":function(d){return "N"},
@@ -175,10 +175,10 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "incrementPlayerScoreTooltip":function(d){return "Añadir uno a la puntuación actual del jugador."},
 "isWall":function(d){return "¿Es esto una pared?"},
 "isWallTooltip":function(d){return "Devuelve verdadero si hay un muro aqui"},
-"launchBall":function(d){return "lanzar nueva pelota"},
+"launchBall":function(d){return "lanzar pelota nueva"},
 "launchBallTooltip":function(d){return "Lanza una pelota en el juego."},
 "makeYourOwn":function(d){return "Crea tu Propio Juego de Rebotar"},
-"moveDown":function(d){return "Baja"},
+"moveDown":function(d){return "Bajar"},
 "moveDownTooltip":function(d){return "Mover la paleta hacia abajo."},
 "moveForward":function(d){return "avanzar"},
 "moveForwardTooltip":function(d){return "Avanzar un espacio."},

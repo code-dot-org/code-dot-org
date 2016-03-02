@@ -24,6 +24,7 @@ es:
   hello: Hola mundo
   welcome_back: 'Bienvenido, %{name}'
   submit: Enviar
+  unsubmit: NO enviado
   add_teacher_form:
     code:
       label: 'Agregar un maestro:'
@@ -222,7 +223,7 @@ es:
       free_play:
         playlab: Hacer una aplicación
         artist: Dibujar algo
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Hacer una aplicación
     user:
       classroom: Página de inicio del maestro
@@ -320,6 +321,7 @@ es:
     heading_hoc2014: '<h2>La Hora Del Código Para</h2><h1>Todas Las Edades</h1>'
     heading_elementary: '<h2>Cursos de 20 Horas sobre</h2><h1>Fundamentos de la Ciencia Computacional (todas las edades)</h1>'
     heading_apps: '<h2>Diversión para</h2><h1>Todos</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Nuestro curso acelerado para</h2><h1>Todas las edades</h1>'
     your_gallery: Galeria
     no_primary_course: Prueba un curso de Code Studio
@@ -414,6 +416,11 @@ es:
       current: Niveles actuales
       unused: Niveles no utilizados
   upsell:
+    applab:
+      title: Laboratorio de App
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Laberinto clásico
       body: Prueba los fundamentos de la ciencia de la computación. Millones lo han intentado.
@@ -459,11 +466,19 @@ es:
     report_bug: Informar sobre un error
     support: Obtener ayuda
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Respuesta incorrecta
     wrong_body: La respuesta no es correcta. Por favor ¡intenta de nuevo!
     correct_title: Correcto
     correct_body: Esa respuesta es la correcta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Gracias
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Gracias
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

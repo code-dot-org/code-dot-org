@@ -589,6 +589,7 @@ en:
           description: crwdns43250:0crwdne43250:0
         cspunit3:
           title: crwdns37941:0crwdne37941:0
+          title_short: crwdns56137:0crwdne56137:0
           description_short: crwdns37942:0crwdne37942:0
           description: crwdns38391:0crwdne38391:0
           Getting to know AppLab: crwdns37944:0crwdne37944:0
@@ -1557,3 +1558,29 @@ en:
           Updating Records: crwdns56111:0crwdne56111:0
           Deleting Records: crwdns56112:0crwdne56112:0
           Sample Apps: crwdns56115:0crwdne56115:0
+          Final Project: crwdns56138:0crwdne56138:0
+        CSPPD3-Unit5:
+          title: crwdns56139:0crwdne56139:0
+          description_short: crwdns56140:0crwdne56140:0
+          description: crwdns56141:0crwdne56141:0
+          Getting Started: crwdns56142:0crwdne56142:0
+          Unit 5 Overview: crwdns56143:0crwdne56143:0
+          Explore PT Breakdown: crwdns56144:0crwdne56144:0
+          Create PT Breakdown: crwdns56145:0crwdne56145:0
+          Challenge Overview: crwdns56146:0crwdne56146:0
+          Complete the Challlege: crwdns56147:0crwdne56147:0
+          Share out and Submit: crwdns56148:0crwdne56148:0
+          Complete the Challlenge: crwdns56149:0crwdne56149:0
+        cspunit6:
+          title: crwdns56150:0crwdne56150:0
+          description_short: crwdns56151:0crwdne56151:0
+          description: crwdns56152:0crwdne56152:0
+          Creating Javascript Objects: crwdns56153:0crwdne56153:0
+          Permanent Data Storage: crwdns56154:0crwdne56154:0
+          Reading Records: crwdns56155:0crwdne56155:0
+          Deleting Records: crwdns56156:0crwdne56156:0
+          Updating Records: crwdns56157:0crwdne56157:0
+          Importing and Exporting Data: crwdns56158:0crwdne56158:0
+          Visualizing Data: crwdns56159:0crwdne56159:0
+          Sample Apps: crwdns56160:0crwdne56160:0
+          Final Project: crwdns56161:0crwdne56161:0

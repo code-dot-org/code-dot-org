@@ -169,7 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Процедуры"},
 "catText":function(d){return "текст"},
 "catVariables":function(d){return "Переменные"},
-"choosePrefix":function(d){return "Choose..."},
+"choosePrefix":function(d){return "Выбрать..."},
 "clearPuzzle":function(d){return "Начать заново"},
 "clearPuzzleConfirm":function(d){return "Так вы удалите все блоки, которые вы добавили или изменили, и начнёте головоломку сначала."},
 "clearPuzzleConfirmHeader":function(d){return "Вы уверены, что хотите начать заново?"},
