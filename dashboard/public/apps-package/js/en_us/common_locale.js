@@ -341,7 +341,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "infinity":function(d){return "Infinity"},
 "jump":function(d){return "jump"},
 "keepPlaying":function(d){return "Keep playing"},
-"levelIncompleteError":function(d){return "You are using all of the necessary types of blocks but not in the right way."},
+"levelIncompleteError":function(d){return "Keep coding! Something's not quite right yet."},
 "listVariable":function(d){return "list"},
 "makeYourOwnFlappy":function(d){return "Make Your Own Flappy Game"},
 "missingRecommendedBlocksErrorMsg":function(d){return "Not quite. Try using a block you aren’t using yet."},
