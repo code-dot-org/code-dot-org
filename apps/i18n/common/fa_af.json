@@ -186,7 +186,7 @@
   "infinity": "بی نهایت",
   "jump": "پرش",
   "keepPlaying": "به بازی کردن ادامه دهید",
-  "levelIncompleteError": "شما همه‌ی بلوک‌های مورد نیاز را بکار بردید، ولی نه به روش درست.",
+  "levelIncompleteError": "You are using all of the necessary types of blocks but not in the right way.",
   "listVariable": "فهرست",
   "makeYourOwnFlappy": "پرنده ی فلاپیِ خودتان را بسازید",
   "missingRecommendedBlocksErrorMsg": "Not quite. Try using a block you aren’t using yet.",

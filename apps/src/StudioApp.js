@@ -354,14 +354,6 @@ StudioApp.prototype.init = function(config) {
     }, this));
   }
 
-  // The share and embed pages do not show the rotateContainer.
-  if (this.share || config.embed) {
-    var rotateContainer = document.getElementById('rotateContainer');
-    if (rotateContainer) {
-      rotateContainer.style.display = 'none';
-    }
-  }
-
   // In embed mode, the display scales down when the width of the
   // visualizationColumn goes below the min width
   if(config.embed && config.centerEmbedded) {
@@ -738,7 +730,8 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
         link: "https://code.org/privacy",
         newWindow: true
       }
-    ]
+    ],
+    phoneFooter: true
   };
 
   React.render(React.createElement(window.dashboard.SmallFooter, reactProps),
@@ -1149,14 +1142,14 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
-  var designToggleRow = document.getElementById('designToggleRow');
+  var playSpaceHeader = document.getElementById('playSpaceHeader');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
-  if (designToggleRow) {
-    top += $(designToggleRow).outerHeight(true);
+  if (playSpaceHeader) {
+    top += $(playSpaceHeader).outerHeight(true);
   }
 
   if (visualization) {
@@ -1437,6 +1430,7 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
 * {string} level The ID of the current level.
 * {number} result An indicator of the success of the code.
 * {number} testResult More specific data on success or failure of code.
+* {boolean} submitted Whether the (submittable) level is being submitted.
 * {string} program The user program, which will get URL-encoded.
 * {function} onComplete Function to be called upon completion.
 */
@@ -1629,7 +1623,6 @@ StudioApp.prototype.runButtonClickWrapper = function (callback) {
  */
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
-  container.innerHTML = config.html;
   if (!this.enableShowCode) {
     document.getElementById('show-code-header').style.display = 'none';
   }

@@ -322,7 +322,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "exampleErrorMessage":function(d){return "За функцију "+common_locale.v(d,"functionName")+" је потребно дорадити један или више примера. Уверите се да се они поклапају са вашом дефиницијом и одговарају на питање."},
 "examplesFailedOnClose":function(d){return "Један или више ваших примера се не поклапају са вашом дефиницијом. Проверите своје примере пре затварања"},
 "extraTopBlocks":function(d){return "Имате неповезане блокове."},
-"extraTopBlocksWhenRun":function(d){return "Имате неповезане блокове. Да ли мислите да их повежете у блок \"покретања\"?"},
+"extraTopBlocksWhenRun":function(d){return "Неки блокови нису повезани. Можете ли да их повежете или склоните из радног простора?"},
 "finalStage":function(d){return "Честитамо! Завршили сте последњу загонетку."},
 "finalStageTrophies":function(d){return "Честитамо! Завршио-ла си последњи ниво и освојио-ла  "+common_locale.p(d,"numTrophies",0,"sr",{"one":"трофеј","other":common_locale.n(d,"numTrophies")+" трофеја"})+"."},
 "finish":function(d){return "Заврши"},
@@ -410,5 +410,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "wantToLearn":function(d){return "Желиш да научиш да програмираш?"},
 "watchVideo":function(d){return "Погледај видео"},
 "when":function(d){return "када"},
-"whenRun":function(d){return "када се извршава"},
+"whenRun":function(d){return "Када кренеш"},
 "workspaceHeaderShort":function(d){return "Радни простор: "}};

@@ -23,6 +23,8 @@
       .buttons
         %a.btn.btn-large.btn-primary.next-stage.submitButton
           =t('submit')
+        %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
+          =t('unsubmit')
 
     - if data['height'] == 'auto'
       - height = 'auto'
@@ -66,6 +68,7 @@
 
   .clear
 
+
 = render partial: 'levels/common_audio'
 
 
@@ -86,6 +89,30 @@
   // Tracking which answers have been crossed out.
   var crossedAnswers = [];
 
+  var submitAllowed = true;
+
+  var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
+
+  // Are we read-only?  This can be because we're a teacher OR because an answer
+  // has been previously submitted.
+  if (window.appOptions.readonlyWorkspace)
+  {
+    // hide the Submit buttons.
+    $('.submitButton').hide();
+
+    // grey out the marks
+    $('.item-mark').css('opacity', 0.5);
+
+    submitAllowed = false;
+
+    // Are we a student viewing their own previously-submitted work?
+    if (window.appOptions.submitted)
+    {
+      // show the Unsubmit button.
+      $('.unsubmitButton').show();
+    }
+  }
+
   function enableButton(enable)
   {
     $('.submitButton').attr('disabled', !enable);
@@ -93,6 +120,11 @@
 
   function choiceClicked(button)
   {
+    if (!submitAllowed)
+    {
+      return;
+    }
+
     var index = $(button).attr('index');
     CDOSounds.play('click');
 
@@ -207,14 +239,35 @@
       answer = selectedAnswers
     }
 
+    var result;
+    var submitted;
+
+    if (appOptions.level.submittable || forceSubmittable)
+    {
+      result = true;
+      submitted = true;
+    }
+    else
+    {
+      result = validateAnswers();
+      submitted = false;
+    }
+
     return {
       "response": answer,
-      "result": validateAnswers(),
-      "errorType": errorType
+      "result": result,
+      "errorType": errorType,
+      "submitted": submitted
     }
   }
 
   $('.submitButton').click(function() {
+    // Don't show right/wrong answers for submittable.
+    if (appOptions.level.submittable || forceSubmittable)
+    {
+      return;
+    }
+
     // If the solution only takes one answer, and it's wrong, and it's not
     // already crossed out, then mark it as answered wrong.
     if (numAnswers == 1 &&
@@ -225,6 +278,39 @@
       $("#cross_" + lastSelectionIndex).show();
       crossedAnswers.unshift(lastSelectionIndex);
     }
+  });
+
+  $('.unsubmitButton').click(function() {
+
+    var dialog = new Dialog({
+      body:
+        '<div class="modal-content no-modal-icon">' +
+          '<p class="dialog-title">Unsubmit answer</p>' +
+          '<p class="dialog-body">' +
+          'This will unsubmit your last answer.' +
+          '</p>' +
+          '<button id="continue-button">Okay</button>' +
+          '<button id="cancel-button">Cancel</button>' +
+        '</div>'
+    });
+
+    var dialog_div = $(dialog.div);
+    dialog.show();
+
+    dialog_div.find('#continue-button').click(function () {
+      $.post(window.appOptions.unsubmitUrl,
+        {"_method": 'PUT', user_level: {submitted: false}},
+        function(data)
+        {
+          // Just reload so that the progress in the header is shown correctly.
+          location.reload();
+        }
+      );
+    });
+
+    dialog_div.find('#cancel-button').click(function () {
+      dialog.hide();
+    });
   });
 
   function validateAnswers()

@@ -833,7 +833,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     level = create(:applab, submittable: true)
     script_level = create(:script_level, level: level)
     Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
-    ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::SUBMITTED_RESULT)
+    ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::FREE_PLAY_RESULT, submitted: true)
 
     get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level
     assert_response :success

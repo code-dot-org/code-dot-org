@@ -14,7 +14,7 @@ el:
         course1:
           "Jigsaw: Learn to drag and drop": 'Παζλ: Μάθε την μεταφορά και απόθεση'
           "Maze: Sequence": 'Λαβύρινθος: Ακολουθία'
-          "Maze: Debugging": 'Λαβύρινθος: εκσφαλμάτωση'
+          "Maze: Debugging": 'Λαβύρινθο: εντοπισμός σφαλμάτων'
           "Artist 1: Intro": 'Καλλιτέχνης 1: Εισαγωγή'
           Artists 2: Καλλιτέχνες 2
           Spelling Bee: Η μέλισσα της ορθογραφίας
@@ -23,7 +23,7 @@ el:
           "Maze 2: Loops": 'Λαβύρινθος 2: Βρόγχοι'
           "Bee 2: Loops": 'Μέλισσα 2: Βρόγχοι'
           Multi & Match: Πολλαπλότητα και ταίριασμα
-          K-1 Flappy: Πουλάκι για Νηπιαγωγείο
+          K-1 Flappy: "Πουλάκι για Νηπιαγωγείο έως Α' Δημοτικού"
           Flappy non blockly: Πουλάκι σε μορφή κώδικα χωρίς μπλοκ
           title: Μάθημα 1
           Artist 2: Καλλιτέχνης 2
@@ -156,7 +156,8 @@ el:
           description_short: Ας χρησιμοποιήσουμε τον Κώδικα να πάμε μαζί με την Άννα και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.
         course4:
           description_short: Οι μαθητές που λαμβάνουν μέρος στο Μάθημα 4 πρέπει να έχουν ολοκληρώσει τα Μαθήματα 2 και 3.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: |-
+            Το Μάθημα 4 έχει σχεδιαστεί για τους μαθητές που έχουν πάρει τα μαθήματα 2 και 3. Οι μαθητές θα μάθουν πώς να αντιμετωπίσουν παζλ με αυξημένη πολυπλοκότητα δεδομένου ότι μαθαίνουν πώς να συνδυάσουν πολλές έννοιες κατά την επίλυση κάθε πρόκλησης. Από τη στιγμή που θα ολοκληρωθεί αυτό το μάθημα, οι μαθητές θα δημιουργήσουν προγράμματα που επιτρέπουν να δείχνουν πολλές δεξιότητες, συμπεριλαμβανομένων βρόχων "για" και λειτουργίες με παραμέτρους. Συνιστάται για Τάξεις Δ' Δημοτικού έως Β' Γυμνασίου.
           "Artist: Variables": 'Καλλιτέχνης: Μεταβλητές'
           "Bee: For Loops": 'Μέλισσα: Βρόχοι Για'
           title: Μάθημα 4
@@ -589,7 +590,8 @@ el:
           description: Test Wednesday
         cspunit3:
           title: 'CSP Unit 3 - Programming'
-          description_short: Programming
+          title_short: CSP Unit 3
+          description_short: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: Συναρτήσεις
@@ -1577,3 +1579,29 @@ el:
           Updating Records: Updating Records
           Deleting Records: Deleting Records
           Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+        cspunit6:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project

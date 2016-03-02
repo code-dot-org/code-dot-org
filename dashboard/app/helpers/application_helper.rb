@@ -52,8 +52,6 @@ module ApplicationHelper
     # For definitions of the result values, see /app/src/constants.js.
     if result.nil? || result == 0
       'not_tried'
-    elsif result >= Activity::SUBMITTED_RESULT
-      'submitted'
     elsif result >= Activity::FREE_PLAY_RESULT
       'perfect'
     elsif result >= Activity::MINIMUM_PASS_RESULT
