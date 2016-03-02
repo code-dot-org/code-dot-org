@@ -33,10 +33,6 @@ var handleGetKeyValue = function(onSuccess, onError) {
     onSuccess(undefined);
     return;
   }
-  if (this.status === 429) {
-    onError('Rate limit exceeded while calling getKeyValue.');
-    return;
-  }
   if (this.status < 200 || this.status >= 300) {
     onError('error reading value: unexpected http status ' + this.status);
     return;
@@ -64,10 +60,6 @@ AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
 var handleSetKeyValue = function(onSuccess, onError) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
-    return;
-  }
-  if (this.status === 429) {
-    onError('Rate limit exceeded while calling setKeyValue.');
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -108,10 +100,6 @@ var handleCreateRecord = function(onSuccess, onError) {
   if (this.readyState !== done) {
     return;
   }
-  if (this.status === 429) {
-    onError('Rate limit exceeded while calling createRecord.');
-    return;
-  }
   if (this.status < 200 || this.status >= 300) {
     onError('error creating record: unexpected http status ' + this.status);
     return;
@@ -149,10 +137,6 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
 var handleReadRecords = function(searchParams, onSuccess, onError) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
-    return;
-  }
-  if (this.status === 429) {
-    onError('Rate limit exceeded while calling readRecords.');
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -210,10 +194,6 @@ var handleUpdateRecord = function(tableName, record, onComplete, onError) {
     onComplete(null, false);
     return;
   }
-  if (this.status === 429) {
-    onError('Rate limit exceeded while calling updateRecord.');
-    return;
-  }
   if (this.status < 200 || this.status >= 300) {
     onError('error updating record: unexpected http status ' + this.status);
     return;
@@ -257,10 +237,6 @@ var handleDeleteRecord = function(tableName, record, onComplete, onError) {
   }
   if (this.status === 404) {
     onComplete(false);
-    return;
-  }
-  if (this.status === 429) {
-    onError('Rate limit exceeded while calling deleteRecord.');
     return;
   }
   if (this.status < 200 || this.status >= 300) {
