@@ -87,7 +87,7 @@ DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip 
   }
 
   var filteredCompletions = aceEditor.completer.completions.filtered;
-  var funcName = filteredCompletions[keyboardRow].value;
+  var funcName = filteredCompletions[keyboardRow].docFunc || filteredCompletions[keyboardRow].value;
 
   this.destroyAutocompleteTooltips_();
 

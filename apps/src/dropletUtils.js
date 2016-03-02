@@ -4,7 +4,8 @@ var _ = utils.getLodash();
 /**
  * @name DropletBlock
  * @description Definition of a block to be used in Droplet
- * @property {String} func identifying the function this block runs
+ * @property {string} func identifying the function this block runs
+ * @property {string} blockPrefix Prepend this string before the normal block name in the palette
  * @property {Object} parent object within which this function is defined as a property, keyed by the func name
  * @property {String} category category within which to place the block
  * @property {String} type type of the block (e.g. value, either, property)
@@ -15,6 +16,7 @@ var _ = utils.getLodash();
  * @property {bool} dontMarshal API expects params in interpreter form and will return an interpreter value
  * @property {bool} noAutocomplete Do not include this function in our ace completer
  * @property {bool} nativeIsAsync The native function is internally async and will call a callback function to resume the interpreter
+ * @property {string} tipPrefix Prepend this string before the tooltip formed from the function name and (optionally) parameters
  * @property {string} docFunc Use the provided func as the key for our documentation.
  * @property {string} modeOptionName Alternate name to be used when generating droplet mode options
  */
@@ -306,7 +308,7 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
     var blockPair = {
       block: block,
       expansion: expansion,
-      title: funcInfo.func
+      title: funcInfo.modeOptionName || funcInfo.func
     };
     mergedCategories[funcInfo.category].blocks.push(blockPair);
   }
@@ -360,10 +362,17 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
         };
       }
       if (newApi.value.indexOf('*.') === 0 || newApi.value.indexOf('?.') === 0) {
-        // If we find '*.' or '?.' at the beginning, skip over it:
+        // Populate this in a special methodsAndProperties collection:
+
+        // Store the original name in a docFunc property for the
+        // benefit of our DropletAutocompletePopupTooltipManager:
+        newApi.docFunc = newApi.value;
+        // Update the value to skip over the '*.' or '?.' at the beginning:
         newApi.value = newApi.value.substring(2);
         methodsAndProperties.push(newApi);
+        
       } else {
+        // Populate this in the "normal" apis collection:
         apis.push(newApi);
       }
     }
@@ -386,6 +395,30 @@ function populateCompleterFromPredefValues(apis, predefValues) {
 }
 
 /**
+ * Determines if the ace editor cursor position is at the beginning of a method
+ * or property (after a dot).
+ * @param {Object} session Ace editor session
+ * @param {Object} pos Ace editor position
+ * @return {boolean} true if position is at the start of a method or property
+ */
+function isPositionAfterDot (session, pos) {
+  var acUtil = window.ace.require("ace/autocomplete/util");
+  var line = session.getLine(pos.row);
+  var identifier = acUtil.retrievePrecedingIdentifier(line, pos.column);
+  // If we're typing a valid identifier, inspect the preceeding
+  // character to see if it is a period and ensure there's at least one
+  // character before
+  if (identifier.length > 0 && identifier.length < pos.column) {
+    // We have an identifier and it is shorter than our column position in
+    // this line, which means it is safe to check the line[] before the
+    // identifier
+    var posBeforeIdentifier = pos.column - identifier.length - 1;
+    return line[posBeforeIdentifier] === '.';
+  }
+  return false;
+}
+
+/**
  * Generate an Ace editor completer for a set of APIs based on some level data.
  *
  * If functionFilter is non-null, use it to filter the dropletConfig
@@ -395,8 +428,6 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   var apis = [];
   var methodsAndProperties = [];
   var opts = {};
-
-  var acUtil = window.ace.require("ace/autocomplete/util");
 
   // If autocompleteFunctionsWithParens is set, we will append "();" after functions
   opts.autocompleteFunctionsWithParens = dropletConfig.autocompleteFunctionsWithParens;
@@ -417,10 +448,7 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
         callback(null, []);
         return;
       }
-      var line = session.getLine(pos.row);
-      var identifier = acUtil.retrievePrecedingIdentifier(line, pos.column);
-      if (pos.column > (identifier.length + 1) &&
-          line[pos.column - identifier.length - 1] === '.') {
+      if (isPositionAfterDot(session, pos)) {
         // Following a dot, we autocomplete from methodsAndProperties:
         callback(null, methodsAndProperties);
       } else {
