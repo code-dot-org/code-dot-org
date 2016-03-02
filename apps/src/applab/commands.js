@@ -92,6 +92,11 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
       case 'array':
         properType = Array.isArray(varValue);
         break;
+      case 'record':
+        // Validate that we have a data record. These must be objects, and
+        // not arrays
+        properType = typeof varValue === 'object' && !Array.isArray(varValue);
+        break;
       default:
         properType = (typeof varValue === expectedType);
         break;
@@ -1425,10 +1430,13 @@ applabCommands.createRecord = function (opts) {
   // PARAMNAME: createRecord: table vs. tableName
   // PARAMNAME: createRecord: callback vs. callbackFunction
   apiValidateType(opts, 'createRecord', 'table', opts.table, 'string');
-  apiValidateType(opts, 'createRecord', 'record', opts.record, 'object');
+  var validRecord = apiValidateType(opts, 'createRecord', 'record', opts.record, 'record');
   apiValidateType(opts, 'createRecord', 'record.id', opts.record.id, 'undefined');
   apiValidateType(opts, 'createRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'createRecord', 'onError', opts.onError, 'function', OPTIONAL);
+  if (!validRecord) {
+    return;
+  }
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
@@ -1532,10 +1540,13 @@ applabCommands.updateRecord = function (opts) {
   // PARAMNAME: updateRecord: table vs. tableName
   // PARAMNAME: updateRecord: callback vs. callbackFunction
   apiValidateType(opts, 'updateRecord', 'table', opts.table, 'string');
-  apiValidateType(opts, 'updateRecord', 'record', opts.record, 'object');
+  var validRecord = apiValidateType(opts, 'updateRecord', 'record', opts.record, 'record');
   apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
   apiValidateType(opts, 'updateRecord', 'callback', opts.onComplete, 'function', OPTIONAL);
   apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
+  if (!validRecord) {
+    return;
+  }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.updateRecord(opts.table, opts.record, onComplete, onError);
@@ -1551,10 +1562,13 @@ applabCommands.deleteRecord = function (opts) {
   // PARAMNAME: deleteRecord: table vs. tableName
   // PARAMNAME: deleteRecord: callback vs. callbackFunction
   apiValidateType(opts, 'deleteRecord', 'table', opts.table, 'string');
-  apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'object');
+  var validRecord = apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'record');
   apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
   apiValidateType(opts, 'deleteRecord', 'callback', opts.onComplete, 'function', OPTIONAL);
   apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
+  if (!validRecord) {
+    return;
+  }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.deleteRecord(opts.table, opts.record, onComplete, onError);
