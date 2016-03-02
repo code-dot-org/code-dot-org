@@ -188,7 +188,7 @@ $(window).load(function () {
       });
       var typeChoiceNodes = sortedDomains.map(function (object) {
         return (
-          <div className="clear">
+          <div className="clear" key={object.key}>
             <TypeChooser
               order={object.order}
               type={object.type}
@@ -216,7 +216,7 @@ $(window).load(function () {
         backgroundColor: typesToColors[this.props.type]
       };
       return (
-        <select value={this.props.type} style={divStyle}>
+        <select defaultValue={this.props.type} style={divStyle}>
           <option data-color={typesToColors[blockValueType.NUMBER]} value={blockValueType.NUMBER}>{blockValueType.NUMBER}</option>
           <option data-color={typesToColors[blockValueType.STRING]} value={blockValueType.STRING}>{blockValueType.STRING}</option>
           <option data-color={typesToColors[blockValueType.IMAGE]} value={blockValueType.IMAGE}>{blockValueType.IMAGE}</option>
