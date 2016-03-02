@@ -7,7 +7,7 @@
 
 -unless @task.type == :plc_task
   %p
-    Here is the subpage for actually completing the task with type #{@task.titleized_task_name}
-  = render partial: 'plc/enrollment_task_assignments/complete/' + @task.underscore_task_name
+    Here is the subpage for actually completing the task with type #{@task.titleized_task_type}
+  = render partial: 'plc/enrollment_task_assignments/complete/' + @task.underscored_task_type
 
 = link_to 'Back', plc_enrollment_task_assignments_path

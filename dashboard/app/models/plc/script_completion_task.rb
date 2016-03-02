@@ -17,4 +17,8 @@
 
 class Plc::ScriptCompletionTask < Plc::Task
   serialized_attrs %w(script_id)
+
+  def script
+    script_id ? Script.find(script_id) : nil
+  end
 end

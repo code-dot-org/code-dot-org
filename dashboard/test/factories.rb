@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :plc_learning_resource_task, :parent => :plc_task, :class => 'Plc::LearningResourceTask' do
+  factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
     resource_url nil
   end
 

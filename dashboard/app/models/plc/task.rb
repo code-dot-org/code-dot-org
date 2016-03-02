@@ -24,11 +24,11 @@ class Plc::Task < ActiveRecord::Base
   include StiFactory
 
   # Can be overridden by subclasses, otherwise they will default to something like Learning Resource Task
-  def titleized_task_name
+  def titleized_task_type
     self.class.name.demodulize.titleize
   end
 
-  def underscore_task_name
+  def underscored_task_type
     self.class.name.demodulize.underscore
   end
 end

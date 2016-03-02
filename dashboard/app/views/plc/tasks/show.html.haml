@@ -10,7 +10,7 @@
 
 -unless @task.type == :plc_task
   %p
-    = render partial: 'plc/tasks/view/' + @task.underscore_task_name
+    = render partial: 'plc/tasks/view/' + @task.underscored_task_type
 
 = link_to 'Edit', edit_plc_task_path(@task)
 \|

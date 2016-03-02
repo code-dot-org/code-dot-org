@@ -20,7 +20,7 @@ class Plc::TasksControllerTest < ActionController::TestCase
 
   test 'should create new learning resource task' do
     task_name = SecureRandom.hex
-    assert_difference('Plc::Task.count', 1) do
+    assert_creates(Plc::Task) do
       post :create, plc_task: {name: task_name, plc_learning_module_id: @learning_module.id, type: 'Plc::LearningResourceTask'}
     end
     assert_equal task_name, Plc::LearningResourceTask.find_by(name: task_name).name
@@ -37,8 +37,10 @@ class Plc::TasksControllerTest < ActionController::TestCase
   end
 
   test 'should update task' do
-    patch :update, id: @learning_resource_task, plc_learning_resource_task: {plc_learning_resource_task: @learning_resource_task}
+    assert 'name', @learning_resource_task.name
+    patch :update, id: @learning_resource_task, plc_learning_resource_task: {name: 'New name', type: 'Plc::LearningResourceTask', plc_learning_module: @learning_module}
     assert_redirected_to plc_task_path(assigns(:task))
+    assert 'New name', @learning_resource_task.name
   end
 
   test 'should destroy task' do
