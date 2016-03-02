@@ -1,5 +1,6 @@
 class Plc::EnrollmentTaskAssignmentsController < ApplicationController
   before_action :set_plc_enrollment_task_assignment, only: [:show, :destroy]
+  load_and_authorize_resource
 
   # GET /plc/enrollment_task_assignments
   # GET /plc/enrollment_task_assignments.json
@@ -16,10 +17,7 @@ class Plc::EnrollmentTaskAssignmentsController < ApplicationController
   # DELETE /plc/enrollment_task_assignments/1.json
   def destroy
     @plc_enrollment_task_assignment.destroy
-    respond_to do |format|
-      format.html { redirect_to plc_enrollment_task_assignments_url }
-      format.json { head :no_content }
-    end
+    redirect_to action: :index
   end
 
   private

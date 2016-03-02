@@ -1,6 +1,4 @@
 %p This is a learning resource
 
-%p It points to #{link_to @task.resource_url}
-
-%p
-  %iframe{width: '800px', height: '800px', src: 'http://' + @task.resource_url}
+-if @task.resource_url
+  %p It points to #{link_to @task.resource_url}

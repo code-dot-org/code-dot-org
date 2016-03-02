@@ -5,9 +5,10 @@
 %p
   This is the task assignment completion page for #{@task.name}
 
-%p
-  Here is the subpage for actually completing the task #{@task.type.underscore[4..-1]}
-= render partial: 'plc/enrollment_task_assignments/complete/' + @task.type.underscore[4..-1] unless @task.type == 'Plc::Task'
+-unless @task.type == :plc_task
+  %p
+    Here is the subpage for actually completing the task with type #{@task.type.titleized_task_name}
+  = render partial: 'plc/enrollment_task_assignments/complete/' + @task.type.underscore_task_name
 
 %p
   = link_to @task.resource_url
