@@ -267,6 +267,64 @@ class AdminReportsController < ApplicationController
     end
   end
 
+  def retention
+    require 'cdo/properties'
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @scripts = params[:scripts_ids].present? ?
+        params[:scripts_ids].split(',').map(&:to_i) :
+        [1, 17, 18, 19, 23]  # Default to the CSF scripts.
+      # Get the cached retention_stats from the DB, trimming those stats to only the requested
+      # scripts, exiting early if the stats are blank.
+      raw_retention_stats = Properties.get(:retention_stats)
+      if raw_retention_stats.blank?
+        render(layout: false, text: 'Properties.get(:retention_stats) not found. Please contact '\
+          'an engineer.') && return
+      end
+      @retention_stats = {}
+      raw_retention_stats.each_pair do |key, key_data|
+        @retention_stats[key] = key_data.select{|script_id, _script_data| @scripts.include? script_id.to_i}
+      end
+      if @retention_stats['script_starts'].empty?
+        render(layout: false, text: 'No data could be found for the specified scripts. Please '\
+          'check the IDs, contacting an engineer as necessary.') && return
+      end
+      # Remove the stage_level_counts data, which are not used in this view.
+      @retention_stats.delete('stage_level_counts')
+      # Transform the count stats into row format to facilitate being added to charts and tables.
+      ['script_level_counts', 'script_stage_counts'].each do |key|
+        @retention_stats[key] = build_row_arrays(@retention_stats[key])
+      end
+    end
+  end
+
+  def retention_stages
+    require 'cdo/properties'
+
+    # Grab the requested stage IDs from the stage_ids parameter.
+    if !params[:stage_ids].present?
+      render(text: 'Please specify stage IDs in the stage_ids parameter, e.g., '\
+        '/admin/retention/stages/stage_ids=XXX,YYY,ZZZ.') && return
+    end
+    @stages = params[:stage_ids].split(',').map(&:to_i)
+
+    SeamlessDatabasePool.use_persistent_read_connection do
+      # Grab the data from the database, keeping data only for the requested stages.
+      raw_retention_stats = Properties.get(:retention_stats)
+      if raw_retention_stats.blank? || !raw_retention_stats.key?('stage_level_counts')
+        render(text: "Properties.get(:retention_stats) or "\
+          "Properties.get(:retention_stats)['stage_level_counts'] not found. Please contact an "\
+          "engineer.") && return
+      end
+      raw_retention_stats = raw_retention_stats['stage_level_counts'].
+        select{|stage_id, _stage_data| @stages.include? stage_id.to_i}
+      if raw_retention_stats.blank?
+        render(text: 'No data could be found for the specified stages. Please check the IDs, '\
+          'contacting an engineer as necessary.') && return
+      end
+      @retention_stats = build_row_arrays(raw_retention_stats)
+    end
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_script
     @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
@@ -282,6 +340,27 @@ class AdminReportsController < ApplicationController
 
   def get_percentage_positive(ratings_to_process)
     return 100.0 * ratings_to_process.where(rating: 1).count / ratings_to_process.count
+  end
+
+  # Manipulates the count_stats hash of arrays to an array of arrays, each inner array representing
+  # a slice across the hash arrays.
+  # Returns nil if the hash is blank.
+  def build_row_arrays(count_stats)
+    # Determine the number of final number of rows, being the maximum array size in the hash.
+    array_length = count_stats.max_by{|_k,v| v.size}[1].size
+
+    # Initialize and construct the row_arrays.
+    row_arrays = Array.new(array_length) {Array.new(count_stats.size + 1, 0)}
+    row_arrays.each_with_index do |subarray, index|
+      subarray[0] = index
+    end
+    count_stats.values.each_with_index do |counts, index|
+      counts.each_with_index do |count, subindex|
+        row_arrays[subindex][index + 1] = count
+      end
+    end
+
+    return row_arrays
   end
 
   def level_answers_csv

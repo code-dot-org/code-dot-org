@@ -191,6 +191,8 @@ Dashboard::Application.routes.draw do
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
+  get '/admin/retention', to: 'admin_reports#retention', as: 'retention'
+  get '/admin/retention/stages', to: 'admin_reports#retention_stages', as: 'retention_stages'
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
   get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
   get '/admin/debug', to: 'admin_reports#debug'

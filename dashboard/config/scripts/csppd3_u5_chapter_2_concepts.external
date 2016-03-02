@@ -3,25 +3,71 @@ css 'unplugged'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-### Unit 4 Overview > Chapter 1: Data Explorations > Concepts
+### Unit 5 Overview > Chapter 2: Create Performance Task > Concepts
 
-<br/>
-<img src="https://images.code.org/81f3498b01b714386b7055bddaff112a-image-1454694327476.45.09 AM.png" width="550" style="float:right; margin-left:30px">
+#### What's Inside?
+
+The skinny: The Create Performance task asks students to write a program and identify key aspects of it through a) the code itself b) a video demonstration of the program and c) writing. The writing prompts ask students to identify the program’s intended purpose, and the key algorithms and abstractions in the code.<br><br>
+
+**Unit 5 - Lesson 3** gears students up to actually do the task.  In that lesson students will:
+
+- Review the Create Performance Task description and rubric
+- Understand **collaboration strategies** and the role of collaboration in this task
+- Review where and how to identify an **algorithm** in their program
+- Review where and how to identify an **abstraction** in their program
+- Learn how to make a **video screen capture** of themselves using their program
+
+**Unit 5 - Lesson 4** is the actual administration of the task.  The associated lesson plan contains:
+
+- Timeline for administering the task
+- Tips on the role of the role of the instructor
+- Instructor Dos and Don'ts during administration of the Task 
 
 #### Content Overview
-Unit 4 begins by asking students to consider what data can be collected and to propose ways it could be used to **test hypotheses and develop new insights** about the world. Students will also begin collecting data about themselves by making daily entries into a survey that will be used as part of the Class Data Tracker project that runs through the entirety of the first chapter.
-<br><br>
-Students will be introduced to the power of **data visualization** as a tool for finding, understanding, and presenting trends in data. They will use interactive data visualization tools to identify trends and patterns, learn to identify assumptions made when interpreting visualizations, and critique data visualizations based on their clarity and usefulness.
-<br><br>
-Having developed intuitions on how to use visualizations to help interpret data, students will begin creating visualizations of their own. They will learn how to use a spreadsheet tool to create a variety of charts of digital data. They will also be introduced to the way **summary tables** provide new perspectives on a data set by grouping and aggregating information.
-<br><br>
-For the remainder of the chapter students will be working with the data collected with the Class Data Tracker they began using at the beginning of the unit. In preparing the data for analysis they will learn why **cleaning data** is an important step in analysis. They will learn to make summary tables of their own using the **pivot table** tools included in most spreadsheet software, and will use this skill to search for trends and patterns within the data they have collected.
-<br><br>
-To conclude the chapter students will complete a Practice PT in which they visualize and present an interesting trend, pattern, or relationship they found within their tracker data.
-<br><br>
 
-#### What it looks like
-Students will use computer for most lessons in this chapter. At the beginning of the unit students will be looking at external tools or resources to familiarize themselves with the ways data and data visualization are used. In the second half of the chapter they will be working primarily in a **spreadsheet tool (e.g. Google Sheets, Microsoft Excel, etc.)**. While the Practice PT itself should be completed individually, the lessons leading up to that project including cleaning and summarizing the data lends itself much more readily to group work and class discussions.
+##### About the Create Performance Task
+
+Students need to be given 12 hours of class time to complete the Create PT. The AP Create Performance Task and Rubric make a list of all the steps in the process. This list includes:
+
+
+* Planning and wireframing ideas.
+* Creating a program.
+* Getting feedback.
+* Responding to peer feedback.
+* Creating a video.
+* Written responses.
+
+For more details about the performance task, refer to the following documents:
+
+* <a href=”https://drive.google.com/open?id=0B78N8p4zhHFgWHRQVE9PeEs5WmM” target=”_blank”>AP Create Performance Task Overview</a>
+* Official rubric coming soon
+
+##### About Collaboration on the Performance Task
+
+There are multiple ways students can collaborate with a partner on the Create PT. Collaboration on the PT is allowed but not required. Sharing code is acceptable, but each student must have some element of original work that he or she can point to and claim ownership of.
+
+Various forms of collaboration include:
+
+
+* Brainstorming ideas.
+* Working together to write the actual program (by each contributing separate independent components).
+* Giving and receiving feedback on programs created separately.
+* Responding to feedback provided by peers.
+
+##### How Have Students Prepared for This Task?
+
+Previously in this class, students have done a number of practice PTs to prepare them for the actual Create PT, including: 
+
+* Unit 3, Lesson 8: Design a Digital Scene
+* Unit 3, Lesson 29: Improve Your App
+
+In these practice PTs, students practiced the following skills:
+
+* Iteratively designing a program.
+* Testing the program.
+* Working with classmates to give and receive feedback.
+* Creating a video of their program running.
+* Responding to questions about their work.
 
 <br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

@@ -530,22 +530,23 @@ en:
       4-5 Bee Conditionals 1 (copy 1)_instruction: "The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb."
-      4-5 Bee Conditionals 1_instruction: "What's under this cloud? Gather nectar
-        only from flowers, but first check if there's a flower under the cloud."
+      4-5 Bee Conditionals 1_instruction: "This cloud is blocking my view! Check
+        to see if there's a flower under the cloud, and only get nectar if there's
+        a flower. Be careful, it can change!"
       4-5 Bee Conditionals 2 (copy 1)_instruction: "The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers."
-      4-5 Bee Conditionals 2_instruction: "The bee only wants nectar right now. Not
-        all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding
-        a flower. If it is, then you can gather nectar."
-      4-5 Bee Conditionals 3_instruction: "Now the bee just wants to make honey.
-        Check to make honey only at honeycombs."
+      4-5 Bee Conditionals 2_instruction: "More clouds! Not all clouds cover flowers,
+        so check underneath every cloud to see if it is hiding a flower before you
+        get nectar. Remember: clouds don't always hide the same thing!"
+      4-5 Bee Conditionals 3_instruction: "Now I just want to make honey. Some of
+        these clouds might have honeycombs under them. Be sure to check each cloud!"
       4-5 Bee Conditionals 4 (copy 1)_instruction: "The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb)."
-      4-5 Bee Conditionals 4_instruction: "The unknown object is either a flower
-        or a honeycomb. Use the if/else block to collect nectar if it is a flower,
-        else to make honey (because it is a honeycomb)."
+      4-5 Bee Conditionals 4_instruction: "Sometimes this cloud covers a flower,
+        and sometimes it covers a honeycomb! Use the if/else block to collect nectar
+        if it is a flower, else to make honey (because it is a honeycomb)."
       4-5 Bee Conditionals 5_instruction: "There might be a flower or a honeycomb
         under those clouds. Use the if/else block to collect nectar if there is a
         flower, else to make honey (because there is a honeycomb)."
@@ -553,16 +554,16 @@ en:
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar."
-      4-5 Bee Conditionals 6_instruction: "This purple flower may have either 3,
-        2, or 1 nectar. Here an if-else block is combined with another if-else block
-        to create an if, else-if, else block. Complete the solution to collect the
-        unknown amount of nectar."
+      4-5 Bee Conditionals 6_instruction: "I am not sure how much nectar the purple
+        flower has, but I know it has either 1, 2, or 3 nectar. Here an if-else block
+        is combined with another if-else block to create an if, else-if, else block.
+        Complete the solution to collect the unknown amount of nectar."
       4-5 Bee Conditionals 7_instruction: "Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the \"check purple flower\" function and use
-        it to collect all of the nectar at the flowers."
+        3, 2, or 1 nectar. Complete the \"check purple flower\" function and use it
+        to collect all of the nectar at the flowers."
       4-5 Bee Conditionals 8_instruction: "Write inside the function \"check flower
         make honey\". Your function should check if the purple flower has 3, 2, or
-        1 nectar and collect all of the nectar. Then, move forward and make honey."
+        1 nectar and get all of the nectar. Then, move forward and make honey."
       4-5 Bee Conditionals Assessment 1_instruction: "Assessment: This code is wrong.
         Complete the \"get nectar or make honey\" function, then call it to collect
         all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars."
@@ -723,6 +724,10 @@ en:
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script)."
       App Lab test_instruction: "test"
+      Applab allthethings onRecordEvent_instruction: "Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script)."
       Applab test_instruction: "This level is submittable. For testing only!"
       AppLab_test02_instruction: "One sentence summary of the activity. Click to
         view full instructions."
@@ -1733,12 +1738,12 @@ en:
       Course 4 SCV 1_instruction: "Click here to view the instructions again."
       Course 4 SCV 2_instruction: "Click here to view the instructions again."
       Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.
-        Tag Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when
-        Cat and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks
-        necessary to make this game work the way it's been explained.  How will you
-        get Dog to move in all directions using the arrow keys?  How will you add
-        points when Dog tags Cat or Penguin?  How will you subtract points when Cat
-        and Penguin touch?"
+        Tag Penguin to get 3 points.  Get exactly 10 points to win!\r\nBut be careful,
+        when Cat and Penguin tag each other, they take points away.\r\n\r\nAdd the
+        blocks necessary to make this game work the way it's been explained.  How
+        will you get Dog to move in all directions using the arrow keys?  How will
+        you add points when Dog tags Cat or Penguin?  How will you subtract points
+        when Cat and Penguin touch?"
       Course 4 SCV 4_instruction: "Solve this puzzle with the fewest number of blocks
         possible."
       Course 4 SCV 5_instruction: "Solve this puzzle with the fewest number of blocks
@@ -3108,8 +3113,8 @@ en:
       U3 - Loops - 1_instruction: "Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)"
       U3 - Loops - 10_instruction: "Write a program that simulates the rolling of
-        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
-        is something other than 7 or 11. (Click to see full instructions)"
+        two dice. Roll the dice repeatedly until the sum of the dice is either 7 or
+        11."
       U3 - Loops - 11_instruction: "Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)"
@@ -4123,13 +4128,16 @@ en:
         in the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records
         to display your sentence."
+      U6 - Final Project - Project Level_instruction: "Build your final project here.
+        (Click to see full instructions)"
       U6 - updateRecord - Callback Success Parameter_instruction: "Add an if-else
         block inside the callback function for updateRecord. (Click to see full instructions)"
-      U6 - updateRecord - Contacts - Edit event handler_instruction: "(Click to see
-        full instructions)"
-      U6 - updateRecord - Contacts - Edit UI_instruction: "(Click to see full instructions)"
-      U6 - updateRecord - Contacts - Save edited contact_instruction: "(Click to
-        see full instructions)"
+      U6 - updateRecord - Contacts - Edit event handler_instruction: "Write event
+        handlers for the Edit Contacts UI elements. (Click to see full instructions)"
+      U6 - updateRecord - Contacts - Edit UI_instruction: "Set up the UI elements
+        needed to edit contacts. (Click to see full instructions)"
+      U6 - updateRecord - Contacts - Save edited contact_instruction: "Use updateRecord
+        to store the user's edits in the database. (Click to see full instructions)"
       U6 - updateRecord - Default Block_instruction: "Use updateRecord to change
         the record for \"Eye of the Tiger.\" (Click to see full instructions)"
       U6 - updateRecord - Update Nonexistent Record_instruction: "Force updateRecord

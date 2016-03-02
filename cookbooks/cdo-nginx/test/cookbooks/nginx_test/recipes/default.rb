@@ -3,24 +3,33 @@ include_recipe 'cdo-ruby'
 
 # Set up a minimal test Rackup app
 file '/home/kitchen/config.ru' do
-  content <<RB
+  content <<RUBY
 class HelloWorld
   def self.call(env)
     [200, {"Content-Type" => "text/plain"}, ["Hello world!"]]
   end
 end
 run HelloWorld
-RB
+RUBY
 end
 
 # Install Unicorn and configure as a service
 
-cookbook_file '/home/kitchen/unicorn.rb' do
-  source 'unicorn.rb'
+file '/home/kitchen/unicorn.rb' do
+  content <<RUBY
+listen '/run/unicorn/dashboard.sock'
+worker_processes 1
+pid "/home/kitchen/dashboard.pid"
+timeout 60
+preload_app true
+stderr_path '/home/kitchen/dashboard_unicorn_stderr.log'
+stdout_path '/home/kitchen/dashboard_unicorn_stdout.log'
+working_directory '/home/kitchen'
+RUBY
 end
 
-template "/etc/init.d/dashboard" do
-  source 'init.d.erb'
+template "/etc/init.d/nginx_test" do
+  source 'unicorn.sh.erb'
   mode '0755'
   variables src_file: "/home/#{node[:current_user]}/unicorn.rb",
     app_root: "/home/#{node[:current_user]}",
@@ -30,18 +39,18 @@ template "/etc/init.d/dashboard" do
 end
 
 file '/home/kitchen/Gemfile' do
-  content <<RB
+  content <<RUBY
 source 'https://rubygems.org'
 gem 'unicorn', '~> 4.8.2'
-RB
+RUBY
 end
 
 execute "bundle install" do
   cwd "/home/#{node[:current_user]}"
 end
 
-service 'dashboard' do
+service 'nginx_test' do
   supports reload: true
-  reload_command 'sudo /etc/init.d/dashboard upgrade'
+  reload_command 'sudo /etc/init.d/nginx_test upgrade'
   action [:enable, :start]
 end

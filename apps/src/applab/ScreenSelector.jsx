@@ -18,7 +18,7 @@ var elementUtils = require('./designElements/elementUtils');
 var ScreenSelector = React.createClass({
   propTypes: {
     screenIds: React.PropTypes.array.isRequired,
-    activeScreen: React.PropTypes.string.isRequired,
+    activeScreenId: React.PropTypes.string,
     onChange: React.PropTypes.func.isRequired
   },
 
@@ -52,7 +52,7 @@ var ScreenSelector = React.createClass({
       <select
           id="screenSelector"
           style={dropdownStyle}
-          value={this.props.activeScreen}
+          value={this.props.activeScreenId}
           onChange={this.props.onChange}
           disabled={Applab.isRunning()}>
         {options}

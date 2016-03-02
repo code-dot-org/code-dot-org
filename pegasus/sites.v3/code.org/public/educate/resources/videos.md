@@ -167,7 +167,7 @@ The celebrities and video "cast" members appearing in Code.org tutorial videos r
 
 <div style="float:left; padding:20px; width:49%">
 
-App Lab is a JavaScript programming environment for students to make simple apps that live on the web.  Use this standalone tool in your classroom to supplement any CS course.  It's easy: simply drag and drop to design your app, write code for your app with JavaScript blocks or with text, then send the app to your phone in seconds.
+App Lab is a JavaScript programming environment for students to make simple apps that live on the web.  Use this standalone tool in your classroom to supplement any CS course. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
 
 <br>
 <br>
