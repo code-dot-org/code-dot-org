@@ -10,7 +10,8 @@
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
 var AppView = require('../templates/AppView.jsx');
-var page = require('../templates/page.html.ejs');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 
 /**
@@ -148,14 +149,22 @@ Jigsaw.init = function(config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  var renderCodeApp = function () {
-    return page({
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
       assetUrl: studioApp.assetUrl,
       data: {
         localeDirection: studioApp.localeDirection(),
-        controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
         editCode: level.editCode,
         blockCounterClass: 'block-counter-default'
+      }
+    });
+  };
+
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl})
       }
     });
   };
@@ -179,8 +188,10 @@ Jigsaw.init = function(config) {
 
   React.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
-    requireLandscape: !(config.share || config.embed),
-    renderCodeApp: renderCodeApp,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };

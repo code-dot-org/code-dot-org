@@ -730,7 +730,8 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
         link: "https://code.org/privacy",
         newWindow: true
       }
-    ]
+    ],
+    phoneFooter: true
   };
 
   React.render(React.createElement(window.dashboard.SmallFooter, reactProps),

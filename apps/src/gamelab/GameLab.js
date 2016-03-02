@@ -6,7 +6,8 @@ var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
 var apiJavascript = require('./apiJavascript');
-var page = require('../templates/page.html.ejs');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
@@ -108,18 +109,29 @@ GameLab.prototype.init = function (config) {
     showConsole: true
   });
 
-  var renderCodeApp = function () {
-    return page({
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
       assetUrl: this.studioApp_.assetUrl,
       data: {
-        visualization: require('./visualization.html.ejs')(),
         localeDirection: this.studioApp_.localeDirection(),
-        controls: firstControlsRow,
         extraControlRows: extraControlRows,
         blockUsed : undefined,
         idealBlockNumber : undefined,
         editCode: this.level.editCode,
         blockCounterClass : 'block-counter-default',
+        pinWorkspaceToBottom: true,
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: firstControlsRow,
+        extraControlRows: extraControlRows,
         pinWorkspaceToBottom: true,
         readonlyWorkspace: config.readonlyWorkspace
       }
@@ -144,8 +156,10 @@ GameLab.prototype.init = function (config) {
 
   React.render(React.createElement(AppView, {
     assetUrl: this.studioApp_.assetUrl,
-    requireLandscape: !(config.share || config.embed),
-    renderCodeApp: renderCodeApp,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };
