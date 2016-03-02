@@ -179,5 +179,3 @@ gem 'oj'
 gem 'daemons'
 
 gem 'rest-client', '~> 1.8'
-
-gem 'rack-attack', '~> 4.4'
