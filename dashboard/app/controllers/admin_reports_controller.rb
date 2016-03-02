@@ -270,9 +270,12 @@ class AdminReportsController < ApplicationController
   def retention
     require 'cdo/properties'
     SeamlessDatabasePool.use_persistent_read_connection do
-      @scripts = params[:scripts_ids].present? ?
-        params[:scripts_ids].split(',').map(&:to_i) :
-        [1, 17, 18, 19, 23]  # Default to the CSF scripts.
+      # If no scripts are specified, default to the CSF scripts.
+      if !params[:script_ids].present?
+        params[:script_ids] = '1, 17, 18, 19, 23'
+      end
+      @scripts = params[:script_ids].split(',').map(&:to_i)
+
       # Get the cached retention_stats from the DB, trimming those stats to only the requested
       # scripts, exiting early if the stats are blank.
       raw_retention_stats = Properties.get(:retention_stats)
@@ -299,15 +302,13 @@ class AdminReportsController < ApplicationController
 
   def retention_stages
     require 'cdo/properties'
-
-    # Grab the requested stage IDs from the stage_ids parameter.
-    if !params[:stage_ids].present?
-      render(text: 'Please specify stage IDs in the stage_ids parameter, e.g., '\
-        '/admin/retention/stages/stage_ids=XXX,YYY,ZZZ.') && return
-    end
-    @stages = params[:stage_ids].split(',').map(&:to_i)
-
     SeamlessDatabasePool.use_persistent_read_connection do
+      # If no stages are specified, default to popular HOC stages.
+      if !params[:stage_ids].present?
+        params[:stage_ids] = '2, 6, 25, 105, 107, 108'
+      end
+      @stages = params[:stage_ids].split(',').map(&:to_i)
+
       # Grab the data from the database, keeping data only for the requested stages.
       raw_retention_stats = Properties.get(:retention_stats)
       if raw_retention_stats.blank? || !raw_retention_stats.key?('stage_level_counts')
