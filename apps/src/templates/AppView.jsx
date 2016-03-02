@@ -1,7 +1,7 @@
 'use strict';
 
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
-var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
+var StudioAppWrapper = require('./StudioAppWrapper.jsx');
 
 /**
  * Top-level React wrapper for our standard blockly apps.

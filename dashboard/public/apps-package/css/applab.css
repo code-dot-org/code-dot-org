@@ -316,7 +316,7 @@ div#visualization.with_padding {
 div#visualizationResizeBar {
   top: 30px; }
 
-#designToggleRow > div {
+#playSpaceHeader > div {
   height: 30px; }
 
 /* Shrink the visualization area on small displays. */
@@ -446,14 +446,14 @@ div#visualizationResizeBar {
   height: 612px;
   margin: 0 auto;
   padding: 20px 0; }
-  #visualizationColumn.wireframeShare #designToggleRow, #visualizationColumn.wireframeShare #gameButtons {
+  #visualizationColumn.wireframeShare #playSpaceHeader, #visualizationColumn.wireframeShare #gameButtons {
     display: none; }
   #visualizationColumn.wireframeShare #visualization {
     top: 68px;
     left: 16px;
     border: 0; }
 
-#visualizationColumn.chromelessShare #designToggleRow, #visualizationColumn.chromelessShare #gameButtons {
+#visualizationColumn.chromelessShare #playSpaceHeader, #visualizationColumn.chromelessShare #gameButtons {
   display: none; }
 
 #divApplab, #designModeViz, #visualizationOverlay {

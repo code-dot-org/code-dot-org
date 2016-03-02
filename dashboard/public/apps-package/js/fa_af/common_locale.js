@@ -341,7 +341,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "infinity":function(d){return "بی نهایت"},
 "jump":function(d){return "پرش"},
 "keepPlaying":function(d){return "به بازی کردن ادامه دهید"},
-"levelIncompleteError":function(d){return "شما همه‌ی بلوک‌های مورد نیاز را بکار بردید، ولی نه به روش درست."},
+"levelIncompleteError":function(d){return "You are using all of the necessary types of blocks but not in the right way."},
 "listVariable":function(d){return "فهرست"},
 "makeYourOwnFlappy":function(d){return "پرنده ی فلاپیِ خودتان را بسازید"},
 "missingRecommendedBlocksErrorMsg":function(d){return "Not quite. Try using a block you aren’t using yet."},
