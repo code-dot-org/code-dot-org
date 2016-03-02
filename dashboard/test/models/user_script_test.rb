@@ -74,4 +74,31 @@ class UserScriptTest < ActiveSupport::TestCase
                               completed_at: Time.now,
                               last_progress_at: Time.now).empty?
   end
+
+  test "Completing a script updates script completion levels" do
+    #If I have to do this boilerplate setup a lot, put this in a common file
+    @script.update(pd: true)
+    course = create(:plc_course)
+    learning_module = create(:plc_learning_module)
+    create(:plc_script_completion_task, plc_learning_module: learning_module, script_id: @script.id)
+
+    enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: course)
+    enrollment.enroll_user_in_course_with_learning_modules([learning_module])
+
+    task_assignment = enrollment.plc_task_assignments.all.first
+
+    assert 'not_started', task_assignment.status
+    @script_levels.each do |script_level|
+      user_level = UserLevel.where(user: @user, level: script_level.level, script: @script).create
+      user_level.update(best_result: 100)
+      task_assignment.reload
+      if script_level == @script_levels.last
+        assert @user_script.check_completed?
+        assert 'completed', task_assignment.status
+      else
+        assert !@user_script.check_completed?
+        assert 'not_completed', task_assignment.status
+      end
+    end
+  end
 end
