@@ -174,13 +174,17 @@ standardConfig.categories = {
  * @param {DropletConfig} otherConfig optionally used to supply a standardConfig
  *  object which is not app specific. It will be used first, then overriden
  *  by the primary dropletConfig if there is overlap between the two.
- * @param paletteOnly boolean: ignore blocks not in codeFunctions palette
+ * @param {Object} options
+ * @param {boolean} options.paletteOnly ignore blocks not in codeFunctions palette
+ * @param {boolean} options.ignoreDocFunc don't include based on block.docFunc
  * @returns {Array<DropletBlock>}
  */
-function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, paletteOnly) {
+function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, options) {
   if (!codeFunctions || !dropletConfig || !dropletConfig.blocks) {
     return [];
   }
+
+  var options = options || {};
 
   var blocks = [];
   if (otherConfig) {
@@ -194,16 +198,18 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, pal
       return;
     }
 
-    // For cases where we use a different block for our tooltips, make sure that
-    // the target block ends up in the list of blocks we want
-    var docFunc = block.docFunc;
-    if (docFunc && !(docFunc in codeFunctions)) {
-      docFunctions[docFunc] = null;
+    if (!options.ignoreDocFunc) {
+      // For cases where we use a different block for our tooltips, make sure that
+      // the target block ends up in the list of blocks we want
+      var docFunc = block.docFunc;
+      if (docFunc && !(docFunc in codeFunctions)) {
+        docFunctions[docFunc] = null;
+      }
     }
   });
 
   return blocks.filter(function (block) {
-    return !paletteOnly || block.func in codeFunctions || block.func in docFunctions;
+    return !options.paletteOnly || block.func in codeFunctions || block.func in docFunctions;
   }).map(function (block) {
     // We found this particular block, now override the defaults with extend
     return $.extend({}, block, codeFunctions[block.func]);
@@ -275,8 +281,12 @@ function buildFunctionPrototype(prefix, params) {
  */
 exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
-  var mergedFunctions = filteredBlocksFromConfig(codeFunctions, dropletConfig,
-    standardConfig, true);
+  var mergedFunctions = filteredBlocksFromConfig(
+      codeFunctions,
+      dropletConfig,
+      standardConfig,
+      { paletteOnly: true, ignoreDocFunc: true }
+  );
 
   for (var i = 0; i < mergedFunctions.length; i++) {
     var funcInfo = mergedFunctions[i];
@@ -433,7 +443,7 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   opts.autocompleteFunctionsWithParens = dropletConfig.autocompleteFunctionsWithParens;
 
   if (functionFilter) {
-    var mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, true);
+    var mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, { paletteOnly: true });
     populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, mergedBlocks);
   } else {
     populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, exports.dropletGlobalConfigBlocks);
@@ -546,7 +556,12 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, p
   var hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
   var configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
   if (codeFunctions && hasConfiguredBlocks) {
-    configuredBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, paletteOnly);
+    configuredBlocks = filteredBlocksFromConfig(
+        codeFunctions,
+        dropletConfig,
+        null,
+        { paletteOnly: paletteOnly }
+    );
   }
   return exports.dropletGlobalConfigBlocks
     .concat(exports.dropletBuiltinConfigBlocks)
