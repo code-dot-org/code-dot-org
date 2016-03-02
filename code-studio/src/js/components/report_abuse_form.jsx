@@ -76,7 +76,7 @@ var ReportAbuseForm = React.createClass({
       return;
     }
 
-    if (this.refs.age.value === '') {
+    if (ReactDOM.findDOMNode(this.refs.age).value === '') {
       alert(i18n.t('project.abuse.report_abuse_form.validation.age'));
       event.preventDefault();
       return;
