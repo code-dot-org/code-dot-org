@@ -7,11 +7,17 @@
 
 %br
 
+%form{method: 'get'}
+  Stage IDs:
+  %input{name: "stage_ids", id: "stage_ids", value: params[:stage_ids]}
+  %input{type: "submit", name: "submit"}
+
+%br
+
 #chart-stage-level-counts
 #table-stage-level-counts
 
 %br
-
 
 - content_for :body_scripts do
   :javascript
