@@ -397,3 +397,17 @@ exports.escapeText = function (text) {
 exports.degreesToRadians = function (degrees) {
     return degrees * (Math.PI / 180);
 };
+
+/**
+ * Simple wrapper around localStorage.setItem that catches any exceptions (for
+ * example when we call setItem in Safari's private mode)
+ * @return {boolean} True if we set successfully
+ */
+exports.trySetLocalStorage = function (item, value) {
+  try {
+    localStorage.setItem(item, value);
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
