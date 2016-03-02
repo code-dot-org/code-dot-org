@@ -43,7 +43,7 @@ class MediaProxyController < ApplicationController
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
     path = (url.path.empty?) ? '/' : url.path
-    query = url.query
+    query = url.query || ''
 
     # Limit how long we're willing to wait.
     http.open_timeout = 3
