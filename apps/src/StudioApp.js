@@ -354,14 +354,6 @@ StudioApp.prototype.init = function(config) {
     }, this));
   }
 
-  // The share and embed pages do not show the rotateContainer.
-  if (this.share || config.embed) {
-    var rotateContainer = document.getElementById('rotateContainer');
-    if (rotateContainer) {
-      rotateContainer.style.display = 'none';
-    }
-  }
-
   // In embed mode, the display scales down when the width of the
   // visualizationColumn goes below the min width
   if(config.embed && config.centerEmbedded) {
@@ -738,7 +730,8 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
         link: "https://code.org/privacy",
         newWindow: true
       }
-    ]
+    ],
+    phoneFooter: true
   };
 
   React.render(React.createElement(window.dashboard.SmallFooter, reactProps),
@@ -1630,12 +1623,6 @@ StudioApp.prototype.runButtonClickWrapper = function (callback) {
  */
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
-  // Skip this step if config.html wasn't provided, because that means we've
-  // switched to doing top-level rendering with React.
-  // TODO: (bbuchanan) Remove when all apps use React for top-level rendering.
-  if (typeof config.html !== 'undefined') {
-    container.innerHTML = config.html;
-  }
   if (!this.enableShowCode) {
     document.getElementById('show-code-header').style.display = 'none';
   }

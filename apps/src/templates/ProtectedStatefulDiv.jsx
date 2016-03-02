@@ -10,7 +10,7 @@
  */
 var ProtectedStatefulDiv = React.createClass({
   propTypes: {
-    renderContents: React.PropTypes.func.isRequired
+    renderContents: React.PropTypes.func
   },
 
   shouldComponentUpdate: function () {
@@ -18,7 +18,9 @@ var ProtectedStatefulDiv = React.createClass({
   },
 
   componentDidMount: function () {
-    this.refs.root.getDOMNode().innerHTML = this.props.renderContents();
+    if (typeof this.props.renderContents === 'function') {
+      this.refs.root.getDOMNode().innerHTML = this.props.renderContents();
+    }
   },
 
   componentWillUnmount: function () {
@@ -26,7 +28,7 @@ var ProtectedStatefulDiv = React.createClass({
   },
 
   render: function () {
-    return <div ref="root"></div>;
+    return <div {...this.props} ref="root"></div>;
   }
 });
 module.exports = ProtectedStatefulDiv;
