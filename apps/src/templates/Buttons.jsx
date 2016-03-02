@@ -84,7 +84,6 @@ var Buttons = React.createClass({
       {previousButton}
       {againButton}
       {nextButton}
-      <div className="after-feedback-buttons" />
     </div>);
   },
 });
