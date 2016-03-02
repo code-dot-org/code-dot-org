@@ -37,7 +37,7 @@ var AgeDropdown = React.createClass({
     }
 
     return (
-      <select name="age" style={style} value={age}>{
+      <select name="age" style={style} defaultValue={age}>{
         ages.map(function (age) {
           return <option key={age} value={age}>{age}</option>;
         })
