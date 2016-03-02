@@ -184,7 +184,7 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, opt
     return [];
   }
 
-  var options = options || {};
+  options = options || {};
 
   var blocks = [];
   if (otherConfig) {
