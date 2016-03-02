@@ -9,7 +9,10 @@
   - level_blob = Level.find_by_name(level_name)
   - @level = level_blob
   - # Parse the array of the level resuts; see sample below in JavaScript.
-  - last_attempt = JSON.parse(@last_attempt).each.select{|item| item["level_id"]==@level.id}.first["result"]
+  - if @last_attempt
+    - last_attempt = JSON.parse(@last_attempt).each.select{|item| item["level_id"]==@level.id}.first["result"]
+  - else
+    - last_attempt = ""
   = render partial: 'levels/multi', locals: {index: index, standalone: false, last_attempt: last_attempt }
 
 -# One submisison button for this level.
@@ -30,7 +33,7 @@
     for (var i = 0; i < levelCount; i++)
     {
       var multiName = "multi_" + i;
-      var multiResult = window[multiName].getCurrentAnswer();
+      var multiResult = window[multiName].getCurrentAnswer().toString();
       var levelId = window[multiName].getLevelId();
       attemptArray.push({level_id: levelId, result: multiResult});
     }
