@@ -30,6 +30,8 @@ by March 31st
 ### Beauty and Joy of Computing:<br />
 Apply for more than 170 hours of paid professional development to bring this made-for-NYC course to your school (per-session included).
 
+![image](https://code.org/images/email/fit-300/BJC4NYC.jpg)
+
 [Watch teachers from our first cohort talk about their experience teaching the course](https://www.youtube.com/watch?v=4eOAlxy581s)
 
 [Attend a webinar](http://sepnyc.org/apcs/webinar) to learn more!
