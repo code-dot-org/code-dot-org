@@ -1,8 +1,8 @@
 @as_student
 @dashboard_db_access
 @no_mobile
+@no_safari
 Feature: Pixelation levels
-  @no_safari
   Scenario: Pixelation version 2 in black and white with no sliders
     Given I am on "http://studio.code.org/s/allthethings/stage/17/puzzle/1?noautoplay=true"
     And I wait to see a visible dialog with title containing "Puzzle 1"
@@ -20,7 +20,6 @@ Feature: Pixelation levels
     And I save pixelation data and reload
     Then pixelation data has text "0000 0011 0000 0010 0 1 0 1 1 1 1 1"
 
-  @no_safari
   Scenario: Pixelation version 3 in color with sliders
     Given I am on "http://studio.code.org/s/allthethings/stage/17/puzzle/2?noautoplay=true"
     And I wait to see a visible dialog with title containing "Puzzle 2"
