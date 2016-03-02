@@ -1,12 +1,12 @@
 # == Schema Information
 #
-# Table name: level_groups
+# Table name: levels
 #
 #  id                       :integer          not null, primary key
 #  game_id                  :integer
-#  name                     :string(255)
-#  created_at               :datetime         not null
-#  updated_at               :datetime         not null
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
 #  level_num                :string(255)
 #  ideal_level_source_id    :integer
 #  solution_level_source_id :integer
@@ -14,7 +14,11 @@
 #  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
-#  published                :boolean
+#  published                :boolean          default(FALSE), not null
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
 #
 
 class LevelGroup < DSLDefined
