@@ -106,10 +106,13 @@ window.dashboard.progress = (function () {
       };
     });
 
-    $('.progress_container').replaceWith(ReactDOM.renderToStaticMarkup(React.createElement(dashboard.StageProgress, {
+    var mountPoint = document.createElement('div');
+    mountPoint.style.display = 'inline-block';
+    $('.progress_container').replaceWith(mountPoint);
+    ReactDOM.render(React.createElement(dashboard.StageProgress, {
       levels: combinedProgress,
       currentLevelIndex: currentLevelIndex
-    })));
+    }), mountPoint);
   };
 
   progress.renderCourseProgress = function (scriptData) {
