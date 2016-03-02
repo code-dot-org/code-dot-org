@@ -1,3 +1,4 @@
+/* global $, Dialog, appOptions, CDOSounds */
 
 var Multi = function (id, levelId, standalone, type, answers, lastAttemptString) {
 
@@ -26,6 +27,10 @@ var Multi = function (id, levelId, standalone, type, answers, lastAttemptString)
   // Tracking which answers have been crossed out.
   this.crossedAnswers = [];
 
+  this.submitAllowed = true;
+
+  this.forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
+
   var self = this;
 
   console.log("init multi", id);
@@ -44,22 +49,15 @@ Multi.prototype.enableButton = function(enable)
 
 Multi.prototype.choiceClicked = function(button)
 {
-  var index = parseInt($(button).attr('index'));
-  CDOSounds.play('click');
+  if (!this.submitAllowed)
+  {
+    return;
+  }
 
-  //console.log("choiceclicked", index);
+  var index = parseInt($(button).attr('index'));
+  window.CDOSounds.play('click');
 
   this.clickItem(index);
-
-  if (!this.standalone)
-  {
-    this.submitSelection(index);
-  }
-};
-
-Multi.prototype.submitSelection = function()
-{
-
 };
 
 
@@ -124,9 +122,25 @@ Multi.prototype.unclickItem = function(index)
 // called on $.ready
 Multi.prototype.ready = function()
 {
-  console.log("multi ready", this.id);
+  // Are we read-only?  This can be because we're a teacher OR because an answer
+  // has been previously submitted.
+  if (window.appOptions.readonlyWorkspace)
+  {
+    // hide the Submit buttons.
+    $("#" + this.id +'.submitButton').hide();
 
-  self = this;
+    // grey out the marks
+    $("#" + this.id +'.item-mark').css('opacity', 0.5);
+
+    this.submitAllowed = false;
+
+    // Are we a student viewing their own previously-submitted work?
+    if (window.appOptions.submitted)
+    {
+      // show the Unsubmit button.
+      $("#" + this.id +'.unsubmitButton').show();
+    }
+  }
 
   $("#" + this.id + " span.answerbutton").click($.proxy(function(event) {
     //console.log("answerbutton clicked", this.id);
@@ -193,19 +207,41 @@ Multi.prototype.getResult = function()
   }
   else
   {
-    answer = this.selectedAnswers
+    answer = this.selectedAnswers;
+  }
+
+
+  var result;
+  var submitted;
+
+  if (window.appOptions.level.submittable || this.forceSubmittable)
+  {
+    result = true;
+    submitted = true;
+  }
+  else
+  {
+    result = this.validateAnswers();
+    submitted = false;
   }
 
   return {
     "response": answer,
-    "result": this.validateAnswers(),
-    "errorType": errorType
-  }
+    "result": result,
+    "errorType": errorType,
+    "submitted": submitted
+  };
 };
 
 // called by $('.submitButton').click
 Multi.prototype.submitButtonClick = function()
 {
+  // Don't show right/wrong answers for submittable.
+  if (window.appOptions.level.submittable || this.forceSubmittable)
+  {
+    return;
+  }
+
   // If the solution only takes one answer, and it's wrong, and it's not
   // already crossed out, then mark it as answered wrong.
   if (this.numAnswers == 1 &&
@@ -219,6 +255,40 @@ Multi.prototype.submitButtonClick = function()
 };
 
 
+$('.unsubmitButton').click(function() {
+
+  var dialog = new Dialog({
+    body:
+      '<div class="modal-content no-modal-icon">' +
+        '<p class="dialog-title">Unsubmit answer</p>' +
+        '<p class="dialog-body">' +
+        'This will unsubmit your last answer.' +
+        '</p>' +
+        '<button id="continue-button">Okay</button>' +
+        '<button id="cancel-button">Cancel</button>' +
+      '</div>'
+  });
+
+  var dialogDiv = $(dialog.div);
+  dialog.show();
+
+  dialogDiv.find('#continue-button').click(function () {
+    $.post(window.appOptions.unsubmitUrl,
+      {"_method": 'PUT', user_level: {submitted: false}},
+      function(data)
+      {
+        // Just reload so that the progress in the header is shown correctly.
+        location.reload();
+      }
+    );
+  });
+
+  dialogDiv.find('#cancel-button').click(function () {
+    dialog.hide();
+  });
+});
+
+
 Multi.prototype.validateAnswers = function()
 {
   if (this.selectedAnswers.length == this.numAnswers)
@@ -227,7 +297,7 @@ Multi.prototype.validateAnswers = function()
     {
       if (! this.answers[this.selectedAnswers[i]])
       {
-        return false
+        return false;
       }
     }
     return true;

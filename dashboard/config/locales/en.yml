@@ -521,6 +521,9 @@ en:
     placeholder: "Enter your answer here"
     open_response_title: "Thanks"
     open_response_body: "Thanks for your response!"
+  level_group:
+    correct_title: "Thank you"
+    correct_body: "Thank you for submitting an answer"
   dialog:
     ok: "OK"
     startover_title: "Are you sure you want to start over?"

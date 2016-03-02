@@ -91,11 +91,13 @@
 
 :javascript
 
+  var lastAttempt = #{last_attempt.to_json};
+  // legacy multi/match
   window["multi_#{index}"] = new Multi(
     "multi_#{index}",
     #{@level.id},
     #{standalone},
     "#{data['type']}" == "multi2" ? 2 : 1,
     #{data['answers'].map {|answer| answer['correct']}},
-    "#{last_attempt.to_json}"
+    #{last_attempt.to_json}
     );
