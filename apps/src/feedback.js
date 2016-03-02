@@ -418,16 +418,16 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   }
 
   React.render(React.createElement(Buttons, {
-      previousLevel:
-        !this.canContinueToNextLevel(options.feedbackType) &&
-        options.showPreviousButton,
-      tryAgain: tryAgainText,
-      continueText: options.continueText || (options.finalLevel ? msg.finish() : msg.continue()),
-      nextLevel: this.canContinueToNextLevel(options.feedbackType),
-      shouldPromptForHint: this.shouldPromptForHint(options.feedbackType),
-      isK1: options.isK1,
-      assetUrl: this.studioApp_.assetUrl,
-      freePlay: options.freePlay
+    previousLevel:
+      !this.canContinueToNextLevel(options.feedbackType) &&
+      options.showPreviousButton,
+    tryAgain: tryAgainText,
+    continueText: options.continueText || (options.finalLevel ? msg.finish() : msg.continue()),
+    nextLevel: this.canContinueToNextLevel(options.feedbackType),
+    shouldPromptForHint: this.shouldPromptForHint(options.feedbackType),
+    isK1: options.isK1,
+    assetUrl: this.studioApp_.assetUrl,
+    freePlay: options.freePlay
   }), buttons);
 
   return buttons;
@@ -924,11 +924,9 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog, appStrings) {
   });
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      ok: true
-    }
-  });
+  React.render(React.createClass(Buttons, {
+    ok: true
+  }), buttons);
   codeDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({
@@ -987,13 +985,11 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   }
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      confirmText: options.confirmText,
-      cancelText: options.cancelText,
-      cancelButtonClass: options.cancelButtonClass
-    }
-  });
+  React.render(React.createClass(Buttons, {
+    confirmText: options.confirmText,
+    cancelText: options.cancelText,
+    cancelButtonClass: options.cancelButtonClass
+  }), buttons);
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({
@@ -1034,11 +1030,9 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      ok: true
-    }
-  });
+  React.render(React.createElement(Buttons, {
+    ok: true
+  }), buttons);
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({

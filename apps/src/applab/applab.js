@@ -43,6 +43,7 @@ var elementUtils = require('./designElements/elementUtils');
 var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
+var Buttons = require('./templates/Buttons.jsx');
 
 var applabConstants = require('./constants');
 
@@ -1272,12 +1273,10 @@ Applab.showConfirmationDialog = function(config) {
       '<p>' + config.text + '</p>';
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('../templates/buttons.html.ejs')({
-    data: {
-      confirmText: commonMsg.dialogOK(),
-      cancelText: commonMsg.dialogCancel()
-    }
-  });
+  React.render(React.createElement(Buttons, {
+    confirmText: commonMsg.dialogOK(),
+    cancelText: commonMsg.dialogCancel()
+  }), buttons);
   contentDiv.appendChild(buttons);
 
   var dialog = studioApp.createModalDialog({
