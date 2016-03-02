@@ -42,7 +42,7 @@ ExcludedBrowsers = [
   /Edmodo/, # edmodo customer support said we can ignore this
 ]
 
-ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415]
+ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415, 4186, 4188, 4283]
 
 HardLevelAttemptsPerHour = {
   50 => 10,
