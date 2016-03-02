@@ -94,6 +94,9 @@ git push
 * unplugged.en.yml
 2. DO NOT directly modify `match.en.yml` or `multi.en.yml` Please make changes to the levels directly in levelbuilder.
 
+### Updating UI tests
+Many UI tests compare against strings on the page to validate expected results. Follow the instructions in dashboard/test/ui/README.md to verify that the UI tests still pass after changing a string, or update them if necessary.
+
 ## Adding a new language
 1. Add target language to ALL projects on Crowdin-in
 2. Add the language's name and key to the following files:
