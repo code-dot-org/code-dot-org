@@ -173,7 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "وضع وحدة 1 من التراب"},
 "finalLevel":function(d){return "تهانينا! لقد قمت بحل اللغز الأخير."},
 "flowerEmptyError":function(d){return "الزهرة التي تقف عليها لم تعد تحتوي على المزيد من الرحيق."},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
+"didNotCollectEverything":function(d){return "تأكد من أنك لا تترك أي الرحيق أو العسل وراء!"},
 "get":function(d){return "الحصول على"},
 "heightParameter":function(d){return "الارتفاع"},
 "holePresent":function(d){return "يوجد هناك ثقب"},

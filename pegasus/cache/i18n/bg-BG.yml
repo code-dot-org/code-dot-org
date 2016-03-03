@@ -91,6 +91,8 @@
     <a href="%{current_path}/next"> партньорските предложения</a>.
   get_a_certificate_of_achievement: "Получете сертификат за постижение"
   view_course: "Преглед на курса"
+  view_unit: View unit
+  make_app: Make an app
   congrats_guest_speaker_title: "Намери гост-лектор за твоята класна стая"
   congrats_guest_speaker_desc: "Сега след като твоите студенти завършиха курса по
     компютърни науки, помислете за празнуване и го свържете с неща, които могат да
@@ -114,7 +116,8 @@
   third_party_price_varies: 'Price: Plans vary'
   third_party_price_free: 'Price: Free'
   third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
@@ -164,7 +167,6 @@
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -946,6 +948,18 @@
   course3_name: "Курс 3"
   course4_name: "Курс 4"
   accelerated_name: "Ускорен курс"
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: "Тази част въвежда фундаменталните концепции
+    за компютърно програмиране, което отключва възможността да се правят богати, интерактивни
+    приложения. Този курс използва JavaScript като език за програмиране, както и Ап
+    лабораторията като програмната среда за изграждане на приложения, но концепцията,
+    която ще научите в тези уроци обхваща всички езици за програмиране и инструменти."
+  applab_name: "Лаборатория за приложения"
+  applab_gradelevel: Ages 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you
+    can make simple apps. Design an app, code with blocks or JavaScript to make it
+    work, then share your app in seconds
   codeorg_gradelevel: "Възраст 4-104"
   codeintl_gradelevel: "Възраст 4-104"
   thinkersmithspanish_gradelevel: "От всички"

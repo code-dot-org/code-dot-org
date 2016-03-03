@@ -169,7 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funciones"},
 "catText":function(d){return "texto"},
 "catVariables":function(d){return "Variables"},
-"choosePrefix":function(d){return "Choose..."},
+"choosePrefix":function(d){return "Elegir..."},
 "clearPuzzle":function(d){return "Volver a empezar"},
 "clearPuzzleConfirm":function(d){return "Esto reabrirá el crucigrama en su formato original, eliminando todos los bloques que hayas agregado o cambiado."},
 "clearPuzzleConfirmHeader":function(d){return "¿Seguro que quieres empezar de nuevo?"},
@@ -411,4 +411,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Mira el Video"},
 "when":function(d){return "cuando"},
 "whenRun":function(d){return "cuando se ejecuta"},
-"workspaceHeaderShort":function(d){return "Espacio de trabajo: "}};
+"workspaceHeaderShort":function(d){return "Espacio de trabajo: "},
+"dropletBlock_greaterThanOrEqualOperator_description":function(d){return "Tests whether a value is greater than or equal to another value. Returns true if the value on the left-hand side of the expression is greater than or equal to the value on the right-hand side of the expression."},
+"dropletBlock_greaterThanOrEqualOperator_signatureOverride":function(d){return "Greater than or equal operator"},
+"dropletBlock_lessThanOrEqualOperator_description":function(d){return "Tests whether a value is less than or equal to another value. Returns true if the value on the left-hand side of the expression is less than or equal to the value on the right-hand side of the expression."},
+"dropletBlock_lessThanOrEqualOperator_signatureOverride":function(d){return "Less than or equal operator"}};

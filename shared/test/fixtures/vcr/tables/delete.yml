@@ -17,55 +17,20 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - 1O4ANTBSR8U9JLS70QFDGLGQ9VVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - 21TB0OP5GMNHKF86BRKRLH48QBVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
-      - '3677345942'
+      - '3413411624'
       Content-Type:
       - application/x-amz-json-1.0
       Content-Length:
-      - '80'
+      - '39'
       Date:
-      - Mon, 18 Jan 2016 21:28:43 GMT
+      - Fri, 26 Feb 2016 07:11:29 GMT
     body:
       encoding: UTF-8
-      string: '{"Count":2,"Items":[{"row_id":{"N":"1"}},{"row_id":{"N":"2"}}],"ScannedCount":2}'
+      string: '{"Count":0,"Items":[],"ScannedCount":0}'
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 21:28:44 GMT
-- request:
-    method: post
-    uri: https://dynamodb.us-east-1.amazonaws.com/
-    body:
-      encoding: UTF-8
-      string: '{"RequestItems":{"test_tables":[{"DeleteRequest":{"Key":{"hash":{"S":"1:_testTable:"},"row_id":{"N":"0.1E1"}}}},{"DeleteRequest":{"Key":{"hash":{"S":"1:_testTable:"},"row_id":{"N":"0.2E1"}}}}]}}'
-    headers:
-      X-Amz-Target:
-      - DynamoDB_20120810.BatchWriteItem
-      Content-Length:
-      - '194'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Server
-      Date:
-      - Mon, 18 Jan 2016 21:28:44 GMT
-      Content-Type:
-      - application/x-amz-json-1.0
-      Content-Length:
-      - '23'
-      Connection:
-      - keep-alive
-      X-Amzn-Requestid:
-      - 54E2A113ELA9KEQ0LOU8DE7MGNVV4KQNSO5AEMVJF66Q9ASUAAJG
-      X-Amz-Crc32:
-      - '4185382651'
-    body:
-      encoding: UTF-8
-      string: '{"UnprocessedItems":{}}'
-    http_version: 
-  recorded_at: Mon, 18 Jan 2016 21:28:44 GMT
+  recorded_at: Fri, 26 Feb 2016 07:11:30 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
@@ -83,7 +48,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - QKMLTD5H3KEDMH05PAVNPKR9IRVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - NUPJ29SUHT4O62UHMR3RLUTHHJVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '3413411624'
       Content-Type:
@@ -91,18 +56,18 @@ http_interactions:
       Content-Length:
       - '39'
       Date:
-      - Mon, 18 Jan 2016 21:28:44 GMT
+      - Fri, 26 Feb 2016 07:11:30 GMT
     body:
       encoding: UTF-8
       string: '{"Count":0,"Items":[],"ScannedCount":0}'
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 21:28:45 GMT
+  recorded_at: Fri, 26 Feb 2016 07:11:31 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
     body:
       encoding: UTF-8
-      string: '{"TableName":"test_tables","Item":{"hash":{"S":"1:_testTable:"},"channel_id":{"N":"1"},"table_name":{"S":"_testTable"},"row_id":{"N":"1"},"updated_at":{"S":"2016-01-18T13:28:45-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"{\"name\":\"trevor\",\"age\":30}"}},"Expected":{"row_id":{"Value":{"N":"1"},"ComparisonOperator":"NE"}}}'
+      string: '{"TableName":"test_tables","Item":{"hash":{"S":"1:_testTable:"},"channel_id":{"N":"1"},"table_name":{"S":"_testTable"},"row_id":{"N":"1"},"updated_at":{"S":"2016-02-25T23:11:31-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"{\"name\":\"trevor\",\"age\":30}"}},"Expected":{"row_id":{"Value":{"N":"1"},"ComparisonOperator":"NE"}}}'
     headers:
       X-Amz-Target:
       - DynamoDB_20120810.PutItem
@@ -114,7 +79,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - 8N5178NA4D3QST073GLPRE2SDRVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - FIMCOO3BQP50QJUN261GT2KIARVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '2745614147'
       Content-Type:
@@ -122,61 +87,30 @@ http_interactions:
       Content-Length:
       - '2'
       Date:
-      - Mon, 18 Jan 2016 21:28:44 GMT
+      - Fri, 26 Feb 2016 07:11:30 GMT
     body:
       encoding: UTF-8
       string: "{}"
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 21:28:45 GMT
+  recorded_at: Fri, 26 Feb 2016 07:11:32 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
     body:
       encoding: UTF-8
-      string: '{"TableName":"test_tables","KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:_testTable:"}],"ComparisonOperator":"EQ"}},"AttributesToGet":["row_id"],"Limit":1,"ScanIndexForward":false}'
+      string: '{"TableName":"test_table_metadata","ConsistentRead":true,"Key":{"hash":{"S":"1:_testTable::metadata"}}}'
     headers:
       X-Amz-Target:
-      - DynamoDB_20120810.Query
+      - DynamoDB_20120810.GetItem
       Content-Length:
-      - '189'
+      - '103'
   response:
     status:
       code: 200
       message: OK
     headers:
       X-Amzn-Requestid:
-      - DSDK15BV56PILEPFDIF2LG6MDJVV4KQNSO5AEMVJF66Q9ASUAAJG
-      X-Amz-Crc32:
-      - '266774047'
-      Content-Type:
-      - application/x-amz-json-1.0
-      Content-Length:
-      - '59'
-      Date:
-      - Mon, 18 Jan 2016 21:28:45 GMT
-    body:
-      encoding: UTF-8
-      string: '{"Count":1,"Items":[{"row_id":{"N":"1"}}],"ScannedCount":1}'
-    http_version: 
-  recorded_at: Mon, 18 Jan 2016 21:28:46 GMT
-- request:
-    method: post
-    uri: https://dynamodb.us-east-1.amazonaws.com/
-    body:
-      encoding: UTF-8
-      string: '{"TableName":"test_tables","Item":{"hash":{"S":"1:_testTable:"},"channel_id":{"N":"1"},"table_name":{"S":"_testTable"},"row_id":{"N":"2"},"updated_at":{"S":"2016-01-18T13:28:46-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"{\"name\":\"mitra\",\"age\":29}"}},"Expected":{"row_id":{"Value":{"N":"2"},"ComparisonOperator":"NE"}}}'
-    headers:
-      X-Amz-Target:
-      - DynamoDB_20120810.PutItem
-      Content-Length:
-      - '333'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Amzn-Requestid:
-      - IQ1L6N1842C4U5H6I448IESPM3VV4KQNSO5AEMVJF66Q9ASUAAJG
+      - 3C9GGVBJCHFN2GRDB5AJJ9KH6JVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '2745614147'
       Content-Type:
@@ -184,12 +118,12 @@ http_interactions:
       Content-Length:
       - '2'
       Date:
-      - Mon, 18 Jan 2016 21:28:45 GMT
+      - Fri, 26 Feb 2016 07:11:30 GMT
     body:
       encoding: UTF-8
       string: "{}"
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 21:28:46 GMT
+  recorded_at: Fri, 26 Feb 2016 07:11:32 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
@@ -207,20 +141,206 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - PAAE308EVCQF6LSBSRQBRBC4UVVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - 8G40LTM6H16IULQI0432T7LOB3VV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
-      - '2779545890'
+      - '1466299197'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '270'
+      Date:
+      - Fri, 26 Feb 2016 07:11:32 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":1,"Items":[{"value":{"S":"{\"name\":\"trevor\",\"age\":30}"},"hash":{"S":"1:_testTable:"},"row_id":{"N":"1"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"_testTable"},"updated_at":{"S":"2016-02-25T23:11:31-08:00"}}],"ScannedCount":1}'
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 07:11:33 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_table_metadata","Item":{"hash":{"S":"1:_testTable::metadata"},"channel_id":{"N":"1"},"table_name":{"S":"_testTable"},"column_list":{"S":"[\"name\",\"age\"]"},"updated_at":{"S":"2016-02-25T23:11:33-08:00"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.PutItem
+      Content-Length:
+      - '225'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - ML828HMHSF0DL8OR7CS4PBBANJVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '2745614147'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '2'
+      Date:
+      - Fri, 26 Feb 2016 07:11:32 GMT
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 07:11:34 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_table_metadata","ConsistentRead":true,"Key":{"hash":{"S":"1:_testTable::metadata"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.GetItem
+      Content-Length:
+      - '103'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - 3RBIUQUNFRIOABLAGI9IOE7UGNVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3566826429'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '191'
+      Date:
+      - Fri, 26 Feb 2016 07:11:33 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Item":{"channel_id":{"N":"1"},"hash":{"S":"1:_testTable::metadata"},"table_name":{"S":"_testTable"},"updated_at":{"S":"2016-02-25T23:11:33-08:00"},"column_list":{"S":"[\"name\",\"age\"]"}}}'
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 07:11:34 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:_testTable:"}],"ComparisonOperator":"EQ"}},"AttributesToGet":["row_id"],"Limit":1,"ScanIndexForward":false}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '189'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - B34KIQE5F1JJMSM9GU319ADMT7VV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '266774047'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '59'
+      Date:
+      - Fri, 26 Feb 2016 07:11:34 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":1,"Items":[{"row_id":{"N":"1"}}],"ScannedCount":1}'
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 07:11:35 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","Item":{"hash":{"S":"1:_testTable:"},"channel_id":{"N":"1"},"table_name":{"S":"_testTable"},"row_id":{"N":"2"},"updated_at":{"S":"2016-02-25T23:11:35-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"{\"name\":\"mitra\",\"age\":29}"}},"Expected":{"row_id":{"Value":{"N":"2"},"ComparisonOperator":"NE"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.PutItem
+      Content-Length:
+      - '333'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - C4831H7NNH7U1G549H5TOGJ2SVVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '2745614147'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '2'
+      Date:
+      - Fri, 26 Feb 2016 07:11:34 GMT
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 07:11:35 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_table_metadata","ConsistentRead":true,"Key":{"hash":{"S":"1:_testTable::metadata"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.GetItem
+      Content-Length:
+      - '103'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - MVDSPJIA7COSH6H9G66T4PL2RJVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3566826429'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '191'
+      Date:
+      - Fri, 26 Feb 2016 07:11:34 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Item":{"channel_id":{"N":"1"},"hash":{"S":"1:_testTable::metadata"},"table_name":{"S":"_testTable"},"updated_at":{"S":"2016-02-25T23:11:33-08:00"},"column_list":{"S":"[\"name\",\"age\"]"}}}'
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 07:11:36 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","ConsistentRead":true,"KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:_testTable:"}],"ComparisonOperator":"EQ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '147'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - 5CSG4IB4UG710F9RNJJJPQC8I3VV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3481343155'
       Content-Type:
       - application/x-amz-json-1.0
       Content-Length:
       - '501'
       Date:
-      - Mon, 18 Jan 2016 21:28:46 GMT
+      - Fri, 26 Feb 2016 07:11:35 GMT
     body:
       encoding: UTF-8
-      string: '{"Count":2,"Items":[{"value":{"S":"{\"name\":\"trevor\",\"age\":30}"},"hash":{"S":"1:_testTable:"},"row_id":{"N":"1"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"_testTable"},"updated_at":{"S":"2016-01-18T13:28:45-08:00"}},{"value":{"S":"{\"name\":\"mitra\",\"age\":29}"},"hash":{"S":"1:_testTable:"},"row_id":{"N":"2"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"_testTable"},"updated_at":{"S":"2016-01-18T13:28:46-08:00"}}],"ScannedCount":2}'
+      string: '{"Count":2,"Items":[{"value":{"S":"{\"name\":\"trevor\",\"age\":30}"},"hash":{"S":"1:_testTable:"},"row_id":{"N":"1"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"_testTable"},"updated_at":{"S":"2016-02-25T23:11:31-08:00"}},{"value":{"S":"{\"name\":\"mitra\",\"age\":29}"},"hash":{"S":"1:_testTable:"},"row_id":{"N":"2"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"_testTable"},"updated_at":{"S":"2016-02-25T23:11:35-08:00"}}],"ScannedCount":2}'
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 21:28:46 GMT
+  recorded_at: Fri, 26 Feb 2016 07:11:36 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
@@ -238,7 +358,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - HI3A39JNECHGE41QRV92T6KF43VV4KQNSO5AEMVJF66Q9ASUAAJG
+      - ILEMIDHB0V1HQ22D9OI64QFNE7VV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '3677345942'
       Content-Type:
@@ -246,12 +366,12 @@ http_interactions:
       Content-Length:
       - '80'
       Date:
-      - Mon, 18 Jan 2016 21:28:46 GMT
+      - Fri, 26 Feb 2016 07:11:35 GMT
     body:
       encoding: UTF-8
       string: '{"Count":2,"Items":[{"row_id":{"N":"1"}},{"row_id":{"N":"2"}}],"ScannedCount":2}'
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 21:28:47 GMT
+  recorded_at: Fri, 26 Feb 2016 07:11:37 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
@@ -269,7 +389,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - P6LE63L9CK3P6IEP02C7E30FSBVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - 30TG2J6RKK6UJD7OIQ8C5NDCLVVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '4185382651'
       Content-Type:
@@ -277,12 +397,74 @@ http_interactions:
       Content-Length:
       - '23'
       Date:
-      - Mon, 18 Jan 2016 21:28:47 GMT
+      - Fri, 26 Feb 2016 07:11:36 GMT
     body:
       encoding: UTF-8
       string: '{"UnprocessedItems":{}}'
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 21:28:47 GMT
+  recorded_at: Fri, 26 Feb 2016 07:11:37 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_table_metadata","Key":{"hash":{"S":"1:_testTable::metadata"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.DeleteItem
+      Content-Length:
+      - '81'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - JH5N4CNK33FU38UCJCJUVP08TNVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '2745614147'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '2'
+      Date:
+      - Fri, 26 Feb 2016 07:11:36 GMT
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 07:11:38 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_table_metadata","ConsistentRead":true,"Key":{"hash":{"S":"1:_testTable::metadata"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.GetItem
+      Content-Length:
+      - '103'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - EBNNMU27MN3K54LRRJ672RAPSNVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '2745614147'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '2'
+      Date:
+      - Fri, 26 Feb 2016 07:11:37 GMT
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 07:11:38 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
@@ -300,7 +482,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - 554RTDKO7SQBTBT3N5GOM5LRKNVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - QRB7OUCEMUBSA4QRIETR01R31BVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '3413411624'
       Content-Type:
@@ -308,10 +490,10 @@ http_interactions:
       Content-Length:
       - '39'
       Date:
-      - Mon, 18 Jan 2016 21:28:47 GMT
+      - Fri, 26 Feb 2016 07:11:37 GMT
     body:
       encoding: UTF-8
       string: '{"Count":0,"Items":[],"ScannedCount":0}'
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 21:28:47 GMT
+  recorded_at: Fri, 26 Feb 2016 07:11:39 GMT
 recorded_with: VCR 3.0.0

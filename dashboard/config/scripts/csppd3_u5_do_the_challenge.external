@@ -1,0 +1,96 @@
+name 'CSPPD3-u5 do the challenge'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Complete the Challenge > Get into the Lesson 
+<br/>
+
+It's time to go read the lesson plan and complete the activies related to your lesson! 
+<br><br>
+
+#### What to do 
+-  **Read through** the lesson plan(s) and Performance Task documents. (linked below)
+-  **Start the performance taks (spend 2 hours)**. Save the artifact you create while doing the specified level. 
+- While you do the PT make sure to **jot down your thoughts** about: 
+    - ahha! moments during the activity
+    - what was difficult about this activity?
+    - what did you enjoy about this lesson?
+    - what additional resources might be useful for teaching this lesson? 
+
+<hr>
+#### Reminder of Challenges
+
+##### Challenge 1: Try the Explore Performance Task - Make a computational artifact
+**Consider doing if:** 
+
+* You want to see what it takes to research a "computing innovation"
+* You want to try to make a "visual artifact" in accordance with the PT description
+
+**Lesson Plan:**
+
+* You should look at the lesson plan <a href=”https://docs.google.com/document/d/1c6Lg3II_Zk7AbEoR7fY4S8TsiGYAGUHfury77z2X5hM/edit” target =_blank>Lesson 1: Preparing for the Explore PT </a> to see what kinds of preparation students get.
+* Please note, however, that this challenge is to actually start doing the Explore PT itself.
+
+>* **You will learn:** What it takes to create a "computational artifact" for the Explore PT
+>* **You will do:** A little rapid research on the innovation of your choosing, but spend most of your time trying to produce the computational artifact
+>* **You will produce:** a "computational artifact" that attempts to achieve the goals of the artifact in the Explore PT.
+>* **You will share:** The computational artifact you produced.
+
+For reference:
+
+ * [Explore PT description](https://drive.google.com/file/d/0B2UNlnU_5Vg4eWlNN1dKNnRCTG8/view)
+ * [Explore PT rubric - Coming Soon](http://)
+
+<br>
+
+##### Challenge 2: Try the Create Performance Task - Making the PDF and reflection
+**Consider doing if:** 
+
+ * You want to program something new, or modify an existing program
+ * You want to see what it takes to make a program that is "PT Ready"
+ * You want to try out the making an annotated PDF document in accordance with the Create PT
+ 
+ **Lesson Plan:** 
+
+ * You should look at the lesson plan <a href=”https://docs.google.com/document/d/19pREXHYzUypjIiaiPT8jSEtDg5bQ3BUTU27MyvJSwIo/edit” target =_blank>Lesson 3: Preparing for the Create PT </a> to see what kinds of preparation students get.
+ * Please note, however, that this challenge is to actually start doing the Create PT itself.
+ 
+>* **You will learn:** What it takes for a program to meet the PT requirements and create the annotated PDF
+>* **You will do:** 
+  * **Write** a new program **or modify** an existing program. 
+  * **Add** to the code **either** a segment that addresses the **Algorithm** requirement or the **Abstraction** requirement of the Create PT.
+>* **You will produce:** A an annotated PDF containing:
+>	* Your code (or a relevant portion if it's unreasonably long)
+>	* In accordance with the PT requirement - an oval (for algorithm) or a rectangle (for abstraction) drawn around the portion of code you addressed
+>	* The written reflection for algorithm or abstraction (response 2c or 2d) that goes along with your code.
+>* **You will share:** The PDF you produced.
+
+##### Challenge 3: Try the Create Performance Task - Making the Video Walkthrough
+**Consider doing if:** 
+
+ * You want to program something new, or modify an existing program
+ * You want to try to do a video walkthrough of a program you've already written
+ 
+ **Lesson Plan:** 
+
+ * You should look at the lesson plan <a href=”https://docs.google.com/document/d/19pREXHYzUypjIiaiPT8jSEtDg5bQ3BUTU27MyvJSwIo/edit” target =_blank>Lesson 3: Preparing for the Create PT </a> to see what kinds of preparation students get.
+ * Please note, however, that this challenge is to actually start doing the Create PT itself.
+
+>* **You will learn:** What it takes to make the video requirement of the PT
+>* **You will do: Write** a new program **or modify or use** an existing program that you think more or less meets the requirements of the Create PT
+>* **You will produce:** A 1-minute long video and **either** a **written** response or **audio** narration in your video that:
+>   * Identifies the programming language.  
+>   * Identifies the purpose of your program.
+>   * Explains what the video illustrates.
+>* **You will share:** The Video you produced (and the written response if you did not do audio narration).
+
+For reference:
+
+ * [Create PT description](https://drive.google.com/file/d/0B78N8p4zhHFgWHRQVE9PeEs5WmM/view)
+ * [Create PT rubric - Coming Soon](http://)
+
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

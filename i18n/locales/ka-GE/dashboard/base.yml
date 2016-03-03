@@ -24,6 +24,7 @@ ka:
   hello: ჰეი, სამყარო
   welcome_back: 'კარგია, რომ დაბრუნდით, %{name}'
   submit: გაგზავნა
+  unsubmit: ჩაბარების გაუქმება
   add_teacher_form:
     code:
       label: 'მასწავლებლის დამატება:'
@@ -222,7 +223,7 @@ ka:
       free_play:
         playlab: აპლიკაციის შექმნა
         artist: დახატეთ რამე
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: აპლიკაციის შექმნა
     user:
       classroom: მასწავლებლის მთავარი გვერდი
@@ -320,6 +321,7 @@ ka:
     heading_hoc2014: '<h2>კოდის ერთი საათი</h2><h1>ნებისმიერი ასაკისთვის</h1>'
     heading_elementary: '<h2>ოცსაათიანი კურსები</h2><h1>დამწყებთათვის (ასაკი: ნებისმიერი)</h1>'
     heading_apps: '<h2>გასართობი</h2><h1>ყველასთვის</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>ჩვენი დაჩქარებული კურსი</h2><h1>ნებისმიერი ასაკისთვის</h1>'
     your_gallery: გალერეა
     no_primary_course: ნახეთ კურსი კოდის სტუდიაში
@@ -414,6 +416,11 @@ ka:
       current: მიმდინარე დონეები
       unused: გამოუყენებელი დონეები
   upsell:
+    applab:
+      title: აპლიკაციების ლაბორატორია
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: კლასიკური ლაბირინთი
       body: სცადეთ პროგრამირების საფუძვლების სწავლა. ეს შანსი უკვე მილიონებმა გამოიყენეს.
@@ -459,11 +466,19 @@ ka:
     report_bug: შეცდომის შესახებ შეტყობინება
     support: დახმარების მიღება
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: პასუხი არასწორია
     wrong_body: ეს პასუხი არასწორია. სცადეთ კიდევ ერთხელ!
     correct_title: სწორია
     correct_body: ეს პასუხი სწორია.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: მადლობა
+    wrong_body: Thank you for submitting an answer.
+    correct_title: მადლობა
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

@@ -72,5 +72,8 @@ include_recipe 'cdo-varnish'
 include_recipe 'cdo-apps::bundle_bootstrap'
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'
+include_recipe node['cdo-apps']['nginx_enabled'] ?
+  'cdo-nginx' :
+  'cdo-nginx::stop'
 include_recipe 'cdo-apps::chef_credentials'
 include_recipe 'cdo-apps::crontab'

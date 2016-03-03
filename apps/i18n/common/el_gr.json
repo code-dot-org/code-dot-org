@@ -91,7 +91,7 @@
   "dropletBlock_functionParams_none_description": "Ένα σετ εντολών που εκτελεί μία εργασία ή υπολογίζει μία τιμή όταν καλείται η συνάρτηση",
   "dropletBlock_functionParams_none_signatureOverride": "Ορισμός μίας συνάρτησης",
   "dropletBlock_getTime_description": "Παίρνει την τρέχουσα ώρα σε χιλιοστά του δευτερολέπτου",
-  "dropletBlock_greaterThanOperator_description": "Compare two numbers",
+  "dropletBlock_greaterThanOperator_description": "Tests whether a number is greater than another number. Returns true if the value on the left-hand side of the expression is strictly greater than the value on the right-hand side of the expression",
   "dropletBlock_greaterThanOperator_param0": "x",
   "dropletBlock_greaterThanOperator_param0_description": "The first value to use for comparison.",
   "dropletBlock_greaterThanOperator_param1": "y",
@@ -256,5 +256,9 @@
   "watchVideo": "Δείτε το βίντεο",
   "when": "όταν",
   "whenRun": "όταν εκτελείται",
-  "workspaceHeaderShort": "Χώρος εργασίας: "
+  "workspaceHeaderShort": "Χώρος εργασίας: ",
+  "dropletBlock_greaterThanOrEqualOperator_description": "Tests whether a value is greater than or equal to another value. Returns true if the value on the left-hand side of the expression is greater than or equal to the value on the right-hand side of the expression.",
+  "dropletBlock_greaterThanOrEqualOperator_signatureOverride": "Greater than or equal operator",
+  "dropletBlock_lessThanOrEqualOperator_description": "Tests whether a value is less than or equal to another value. Returns true if the value on the left-hand side of the expression is less than or equal to the value on the right-hand side of the expression.",
+  "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Less than or equal operator"
 }

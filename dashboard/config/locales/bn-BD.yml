@@ -25,6 +25,7 @@
   hello: "হ্যালো ওয়ার্ল্ড"
   welcome_back: "স্বাগতম %{name}"
   submit: "জমা করুন"
+  unsubmit: Unsubmit
   add_teacher_form:
     code:
       label: "শিক্ষক যুক্ত করুন:"
@@ -376,6 +377,8 @@
     heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
       (all ages)</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
@@ -492,6 +495,13 @@
       current: Current Levels
       unused: Unused Levels
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: "এক ঘন্টার কোড"
       body: Try the basics of computer science. Millions have given it a shot.
@@ -548,11 +558,19 @@
     report_bug: Report Bug
     support: Get Help
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
     correct_title: Correct
     correct_body: That is the correct answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Thank you
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

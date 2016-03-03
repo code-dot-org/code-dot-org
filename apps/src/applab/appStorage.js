@@ -2,10 +2,36 @@
 
 /* global Applab */
 
+var RecordListener = require('./RecordListener');
+
 /**
  * Namespace for app storage.
  */
 var AppStorage = module.exports;
+
+/**
+ * @param {number} status Http status code.
+ * @returns {string} An error message corresponding to the http status code.
+ */
+function getStatusDescription(status) {
+  if (status === 429) {
+    return 'Rate limit exceeded.';
+  } else {
+    return 'Unexpected http status ' + status;
+  }
+}
+
+/**
+ * Calls onError with a message generated from commandName and status.
+ * @param {function} onError Function to call with error message.
+ * @param {string} commandName App Lab command name to include in error message.
+ * @param {number} status Http status code.
+ */
+function onErrorStatus(onError, commandName, status) {
+  if (onError) {
+    onError('Error in ' + commandName + ': ' + getStatusDescription(status));
+  }
+}
 
 /**
  * Reads the value associated with the key, accessible to all users of the app.
@@ -32,7 +58,7 @@ var handleGetKeyValue = function(onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error reading value: unexpected http status ' + this.status);
+    onErrorStatus(onError, 'getKeyValue', this.status);
     return;
   }
   var value = JSON.parse(this.responseText);
@@ -61,7 +87,7 @@ var handleSetKeyValue = function(onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error writing value: unexpected http status ' + this.status);
+    onErrorStatus(onError, 'setKeyValue', this.status);
     return;
   }
   onSuccess();
@@ -99,7 +125,7 @@ var handleCreateRecord = function(onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error creating record: unexpected http status ' + this.status);
+    onErrorStatus(onError, 'createRecord', this.status);
     return;
   }
   var record = JSON.parse(this.responseText);
@@ -138,7 +164,7 @@ var handleReadRecords = function(searchParams, onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error reading records: unexpected http status ' + this.status);
+    onErrorStatus(onError, 'readRecords', this.status);
     return;
   }
   var records = JSON.parse(this.responseText);
@@ -193,7 +219,7 @@ var handleUpdateRecord = function(tableName, record, onComplete, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error updating record: unexpected http status ' + this.status);
+    onErrorStatus(onError, 'updateRecord', this.status);
     return;
   }
   onComplete(record, true);
@@ -238,10 +264,42 @@ var handleDeleteRecord = function(tableName, record, onComplete, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error deleting record: unexpected http status ' + this.status);
+    onErrorStatus(onError, 'deleteRecord', this.status);
     return;
   }
   onComplete(true);
+};
+
+var recordListener = new RecordListener();
+
+/**
+ * Listens to tableName for any changes to the data it contains, and calls
+ * onRecord with the record and eventType as follows:
+ * - for 'create' events, returns the new record
+ * - for 'update' events, returns the updated record
+ * - for 'delete' events, returns a record containing the id of the deleted record
+ * @param {string} tableName Table to listen to.
+ * @param {function(Object, RecordListener.EventType)} onRecord Callback to call when
+ * a change occurs with the record object (described above) and event type.
+ * @param {function(string)} onError Callback to call with an error to show to the user.
+ */
+AppStorage.onRecordEvent = function(tableName, onRecord, onError) {
+  if (!onError || typeof onError !== 'function') {
+    throw new Error('onError is a required parameter to AppStorage.onRecordEvent');
+  }
+  if (!tableName) {
+    onError('Error listening for record events: missing required parameter "tableName"');
+    return;
+  }
+
+  if (!recordListener.setListener(tableName, onRecord)) {
+    onError('You are already listening for events on table "' + tableName + '". ' +
+      'only one event handler can be registered per table.');
+  }
+};
+
+AppStorage.resetRecordListener = function () {
+  recordListener.reset();
 };
 
 /**

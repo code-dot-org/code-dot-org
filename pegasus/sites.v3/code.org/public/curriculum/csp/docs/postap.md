@@ -3,19 +3,17 @@ title: Post-AP Material
 video_player: true
 ---
 
-<style>
-  .centertext {
-    text-align: center;
-  }
-</style>
-
 # Post-AP Material - App Lab Database Tools
+
+* <a href="https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit?usp=sharing" target="_blank">Post-AP Teacher Overview Document
 
 The following table is intended to outline the main programming topics for the post-AP material in Code Studio, so that teachers may familiarize themselves with the material and feel more comfortable assisting students.
 
-In Code Studio, there is a <a href="https://studio.code.org/s/cspunit6/" target="_blank">collection of levels</a> that are intended to familiarize students with the different components of creating data-driven apps in App Lab. These stages will take several (approximately 4) weeks to complete, and students should work through the material at their own pace. The last stage includes examples of apps that can be made using the data tools, which students can use as inspiration for their final projects.
+In Code Studio, there is a <a href="https://studio.code.org/s/cspunit6/" target="_blank">collection of levels</a> that are intended to familiarize students with the different components of creating data-driven apps in App Lab. These stages will take several (approximately 4) weeks to complete, and students should work through the material at their own pace. Stage 8 includes examples of apps that can be made using the data tools, which students can use as inspiration for their final projects. The final stage contains a single level, in which students may build their final projects.
 
-For more information about how to teach this material, please refer to this <a href="" target="_blank">teacher document - COMING SOON</a>.
+For more information about how to teach this material, please refer to this <a href="https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit?usp=sharing" target="_blank">teacher document</a>.
+
+**NOTE:** This material was not designed to be a formal set of lessons, but rather a set of skill-building resources that you may use however you see fit.
 
 <table cellpadding="10">
   <colgroup>
@@ -164,7 +162,7 @@ For more information about how to teach this material, please refer to this <a h
       <td>
         <ul>
           <li>
-            <a href="" target="_blank">Activity Guide: Sample Apps Overview - COMING SOON</a>
+            <a href="https://docs.google.com/document/d/1Zel8Ywoj470x_54bbkwM4XYqSxaA0J7IsqNHzCBD5-w/edit?usp=sharing" target="_blank">Activity Guide - Sample Apps Overview</a>
           </li>
         </ul>
       </td>
@@ -177,7 +175,13 @@ For more information about how to teach this material, please refer to this <a h
       <td>
         This stage contains a single level, in which students can build their final projects. Alternatively, if students want to remix a previous project and make alterations and improvements, they can submit the "Share" link for their final project by pasting the link into a comment in this level.
       </td>
-      <td></td>
+      <td>
+        <ul>
+          <li>
+            <a href="https://docs.google.com/document/d/1ppeLDnI6FP8FDErzj6uLfCB8x689Tv9lc4IAOJvCI4E/edit?usp=sharing" target="_blank">Activity Guide - Final Project Planning Guide</a>
+          </li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>

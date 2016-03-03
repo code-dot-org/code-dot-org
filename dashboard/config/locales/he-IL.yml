@@ -24,6 +24,7 @@
   hello: "שלום עולם"
   welcome_back: "ברוך שובך, %{name}"
   submit: "שלח"
+  unsubmit: "בטל הגשה"
   add_teacher_form:
     code:
       label: "הוסף מורה:"
@@ -360,6 +361,8 @@
     heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
       (all ages)</h1>"
     heading_apps: "<h2>כיף</h1><h2>לכולם</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
     your_gallery: "גלריה"
     no_primary_course: "נסה קורס קוד סטודיו"
@@ -475,6 +478,13 @@
       current: "שלבים נוכחיים"
       unused: "שלבים שלא נוצלו"
   upsell:
+    applab:
+      title: "מעבדת היישומים"
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: "מבוך קלאסי"
       body: "נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו."
@@ -528,11 +538,19 @@
     report_bug: "דווח על באג"
     support: "קבל עזרה"
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: "תשובה לא נכונה"
     wrong_body: "התשובה שענית אינה נכונה. נא נסה שנית!"
     correct_title: "נכון"
     correct_body: "זאת התשובה הנכונה."
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: "תודה רבה"
+    wrong_body: Thank you for submitting an answer.
+    correct_title: "תודה רבה"
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

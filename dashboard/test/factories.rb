@@ -1,4 +1,8 @@
 FactoryGirl.define do
+  factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
+    resource_url nil
+  end
+
   factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
     answer "MyString"
     plc_evaluation_question nil
@@ -183,6 +187,10 @@ FactoryGirl.define do
 
   factory :applab, :parent => Level, :class => Applab do
     game {Game.applab}
+  end
+
+  factory :multi, :parent => Level, :class => Applab do
+    game {Game.multi}
   end
 
   factory :level_source do

@@ -1,0 +1,23 @@
+name 'U6 - Final Project - Student Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## Unit 4: Lesson 09 - Final Project
+
+# Background
+
+Congratulations on reaching the end of the year! You've learned so much since the beginning of the year, and it's time to show off all that knowledge by building a final project. The next level is an empty level that provides space for you to build a new project. Or, if you want to remix an old project, paste the "Share" link for your final project in a comment in the level provided.
+
+# Lesson
+
+* Create and submit final project.
+
+# Resources
+
+* Activity Guide: <a href="https://docs.google.com/document/d/1ppeLDnI6FP8FDErzj6uLfCB8x689Tv9lc4IAOJvCI4E/edit?usp=sharing" target="blank">Final Project Planning Guide</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

@@ -173,7 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "постави 1 комад земље"},
 "finalLevel":function(d){return "Честитамо! Решили сте финалну слагалицу."},
 "flowerEmptyError":function(d){return "Цвет на којем се налазиш нема више нектара."},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
+"didNotCollectEverything":function(d){return "Пази да не заборавиш и оставиш нектар или мед!"},
 "get":function(d){return "узми"},
 "heightParameter":function(d){return "висина"},
 "holePresent":function(d){return "ту је рупа"},

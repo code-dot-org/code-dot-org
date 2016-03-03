@@ -88,8 +88,10 @@ def determine_frontend_instance_distribution
   instances = @ec2client.describe_instances
 
   frontend_instances = instances.reservations.map do |reservation|
-    reservation.instances.select { |instance| instance.state.name == 'running' &&
-        instance.tags.detect { |tag| tag.key == 'Name' && tag.value.include?('frontend') } }
+    reservation.instances.select do |instance|
+      instance.state.name == 'running' &&
+        instance.tags.detect { |tag| tag.key == 'Name' && tag.value.include?('frontend') }
+    end
   end
 
   frontend_instances.flatten!
@@ -238,7 +240,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   @ec2client.wait_until(:instance_running, instance_ids: [instance_id]) do |waiting|
     waiting.max_attempts = nil
 
-    waiting.before_wait do |attempts, response|
+    waiting.before_wait do |_attempts, _response|
       if Time.now - started_at > MAX_WAIT_TIME
         puts "Instance #{instance_id} still not created. Giving up - check the EC2 console and see if there's an error."
         exit(1)
@@ -253,7 +255,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   @ec2client.wait_until(:instance_status_ok, instance_ids: [instance_id]) do |waiting|
     waiting.max_attempts = nil
 
-    waiting.before_wait do |attempts, response|
+    waiting.before_wait do |_attempts, _response|
       if Time.now - started_at > MAX_WAIT_TIME
         print "Instance #{instance_id} was created but has not passed status checks. Check EC2 console.\n"
         exit(1)
