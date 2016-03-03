@@ -74,7 +74,12 @@ class PropertiesApi < Sinatra::Base
 
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
     parsed_value = PropertyBag.parse_value(request.body.read)
-    value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
+    begin
+      value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
+    rescue Exception => e
+      puts e.message
+      raise e
+    end
 
     dont_cache
     content_type :json

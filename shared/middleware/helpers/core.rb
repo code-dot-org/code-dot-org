@@ -46,9 +46,19 @@ def not_found()
 end
 
 def too_large()
-  halt(413, "Payload too large\n")
+  raise TooLarge
 end
 
 def unsupported_media_type()
   halt(415, "Unsupported Media Type\n")
+end
+
+class TooLarge < StandardError
+  def http_status
+    413
+  end
+
+  def message
+    'Payload too large\n'
+  end
 end

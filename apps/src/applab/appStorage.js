@@ -86,6 +86,14 @@ var handleSetKeyValue = function(onSuccess, onError) {
   if (this.readyState !== done) {
     return;
   }
+  if (this.status === 429) {
+    onError('Rate limit exceeded while calling setKeyValue.');
+    return;
+  }
+  if (this.status === 413) {
+    onError('Storage limit exceeded while calling setKeyValue.');
+    return;
+  }
   if (this.status < 200 || this.status >= 300) {
     onErrorStatus(onError, 'setKeyValue', this.status);
     return;
