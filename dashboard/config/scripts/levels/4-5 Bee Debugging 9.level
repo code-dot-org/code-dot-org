@@ -99,5 +99,65 @@
     <required_blocks>
       <xml/>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="procedures_callnoreturn">
+                  <mutation name="make all honey"/>
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="make all honey"/>
+                              <next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <next>
+                                    <block type="maze_moveForward">
+                                      <next>
+                                        <block type="maze_moveForward">
+                                          <next>
+                                            <block type="procedures_callnoreturn">
+                                              <mutation name="make all honey"/>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">make all honey</title>
+          <statement name="STACK">
+            <block type="bee_whileNectarAmount">
+              <title name="ARG1">honeyAvailable</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>
+              <statement name="DO">
+                <block type="maze_honey"/>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

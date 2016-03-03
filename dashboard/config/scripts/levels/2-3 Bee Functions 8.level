@@ -86,5 +86,58 @@
         </block>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward" deletable="false" movable="false">
+              <next>
+                <block type="procedures_callnoreturn" deletable="false" movable="false">
+                  <mutation name="get 7 nectar make 7 honey"/>
+                  <next>
+                    <block type="maze_moveForward" deletable="false" movable="false">
+                      <next>
+                        <block type="maze_moveForward" deletable="false" movable="false">
+                          <next>
+                            <block type="procedures_callnoreturn" deletable="false" movable="false">
+                              <mutation name="get 7 nectar make 7 honey"/>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">get 7 nectar make 7 honey</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">7</title>
+              <statement name="DO">
+                <block type="maze_nectar"/>
+              </statement>
+              <next>
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">7</title>
+                      <statement name="DO">
+                        <block type="maze_honey"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>
