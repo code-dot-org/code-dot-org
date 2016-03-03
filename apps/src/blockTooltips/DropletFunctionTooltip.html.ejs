@@ -1,13 +1,18 @@
+<% function getPrefixedName () {
+  return tipPrefix ? tipPrefix + functionName : functionName;
+} %>
 <div class="function-name">
   <% if (signatureOverride) { -%>
     <%= signatureOverride %>
+  <% } else if (isProperty) { -%>
+    <%= getPrefixedName() %>
   <% } else {
     /**
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
     -%>
-    <%= functionName %>(<% for (var i = 0; i < parameters.length; i++) { -%><%- parameters[i].name -%><% if (i < parameters.length - 1) { -%>, <% } -%><% } -%>)
+    <%= getPrefixedName() %>(<% for (var i = 0; i < parameters.length; i++) { -%><%- parameters[i].name -%><% if (i < parameters.length - 1) { -%>, <% } -%><% } -%>)
   <% } %>
 </div>
 <% if (functionShortDescription) { %><div><%= functionShortDescription %></div><% } %>
