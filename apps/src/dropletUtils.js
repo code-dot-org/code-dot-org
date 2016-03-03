@@ -490,6 +490,7 @@ function getModeOptionFunctionsFromConfig(config) {
     } else if (config.blocks[i].type === 'property') {
       newFunc.property = true;
       newFunc.value = true;
+      newFunc.command = true;
     }
 
     var category = mergedCategories[config.blocks[i].category];

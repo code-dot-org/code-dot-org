@@ -23,10 +23,10 @@ var spriteBlockPrefix = 'sprite.';
 var groupBlockPrefix = 'group.';
 var animBlockPrefix = 'anim.';
 
-var GameLab;
+var gameLab;
 
 exports.injectGameLab = function (gamelab) {
-  GameLab = gamelab;
+  gameLab = gamelab;
 };
 
 // Flip the argument order so we can bind `typeFilter`.
@@ -53,19 +53,19 @@ module.exports.blocks = [
   {func: 'textAlign', category: 'Game Lab', paletteParams: ['horiz','vert'], params: ["CENTER", "TOP"] },
   {func: 'textSize', category: 'Game Lab', paletteParams: ['pixels'], params: ["12"] },
   {func: 'drawSprites', category: 'Game Lab' },
-  {func: 'allSprites', category: 'Game Lab', block: 'allSprites', type: 'property' },
+  {func: 'allSprites', category: 'Game Lab', block: 'allSprites', type: 'property', expansion: function (pos) { return gameLab.expandPropertyBlock('allSprites', pos); } },
   {func: 'background', category: 'Game Lab', paletteParams: ['color'], params: ["'black'"] },
-  {func: 'width', category: 'Game Lab', type: 'property' },
-  {func: 'height', category: 'Game Lab', type: 'property' },
-  {func: 'camera', category: 'Game Lab', type: 'property' },
+  {func: 'width', category: 'Game Lab', type: 'property', expansion: function (pos) { return gameLab.expandPropertyBlock('width', pos); } },
+  {func: 'height', category: 'Game Lab', type: 'property', expansion: function (pos) { return gameLab.expandPropertyBlock('height', pos); } },
+  {func: 'camera', category: 'Game Lab', type: 'property', expansion: function (pos) { return gameLab.expandPropertyBlock('camera', pos); } },
   {func: 'camera.on', category: 'Game Lab' },
   {func: 'camera.off', category: 'Game Lab' },
-  {func: 'camera.active', category: 'Game Lab', type: 'property' },
-  {func: 'camera.mouseX', category: 'Game Lab', type: 'property' },
-  {func: 'camera.mouseY', category: 'Game Lab', type: 'property' },
-  {func: 'camera.position.x', category: 'Game Lab', type: 'property' },
-  {func: 'camera.position.y', category: 'Game Lab', type: 'property' },
-  {func: 'camera.zoom', category: 'Game Lab', type: 'property' },
+  {func: 'camera.active', category: 'Game Lab', type: 'property', expansion: function (pos) { return gameLab.expandPropertyBlock('camera.active', pos); } },
+  {func: 'camera.mouseX', category: 'Game Lab', type: 'property', expansion: function (pos) { return gameLab.expandPropertyBlock('camera.mouseX', pos); } },
+  {func: 'camera.mouseY', category: 'Game Lab', type: 'property', expansion: function (pos) { return gameLab.expandPropertyBlock('camera.mouseY', pos); } },
+  {func: 'camera.position.x', category: 'Game Lab', type: 'property', expansion: function (pos) { return gameLab.expandPropertyBlock('camera.position.x', pos); } },
+  {func: 'camera.position.y', category: 'Game Lab', type: 'property', expansion: function (pos) { return gameLab.expandPropertyBlock('camera.position.y', pos); } },
+  {func: 'camera.zoom', category: 'Game Lab', type: 'property', expansion: function (pos) { return gameLab.expandPropertyBlock('camera.zoom', pos); } },
 
   // Sprites
   {func: 'createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either' },
