@@ -32,6 +32,6 @@ class Plc::ScriptCompletionTask < Plc::Task
                           where('plc_tasks.type': 'Plc::ScriptCompletionTask').
                           includes(:plc_task).
                           select {|x| x.plc_task.script_id == user_script.script_id}.
-                          map(&:complete_assignment)
+                          each(&:complete_assignment!)
   end
 end
