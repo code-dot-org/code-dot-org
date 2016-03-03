@@ -7311,6 +7311,9 @@ hook('mousemove', 1, function(point, event, state) {
       }
       this.draggingBlock = (expansion || this.draggingBlock).clone();
       if ('function' === typeof this.clickedBlockPaletteEntry.expansion) {
+        if (indexOf.call(this.draggingBlock.classes, 'mostly-value') >= 0) {
+          this.draggingBlock.classes.push('any-drop');
+        }
         this.draggingBlock.lastExpansionText = expansion;
         this.draggingBlock.expansion = this.clickedBlockPaletteEntry.expansion;
       }
@@ -7391,7 +7394,7 @@ hook('mousemove', 1, function(point, event, state) {
   }
 });
 
-Editor.prototype.getClosestDroppableBlock = function(position) {
+Editor.prototype.getClosestDroppableBlock = function(mainPoint) {
   var best, min, testPoints;
   best = null;
   min = Infinity;
@@ -7399,18 +7402,18 @@ Editor.prototype.getClosestDroppableBlock = function(position) {
     return null;
   }
   testPoints = this.dropPointQuadTree.retrieve({
-    x: position.x - MAX_DROP_DISTANCE,
-    y: position.y - MAX_DROP_DISTANCE,
+    x: mainPoint.x - MAX_DROP_DISTANCE,
+    y: mainPoint.y - MAX_DROP_DISTANCE,
     w: MAX_DROP_DISTANCE * 2,
     h: MAX_DROP_DISTANCE * 2
   }, (function(_this) {
     return function(point) {
       var distance;
       if (!((point.acceptLevel === helper.DISCOURAGE) && !event.shiftKey)) {
-        distance = position.from(point);
+        distance = mainPoint.from(point);
         distance.y *= 2;
         distance = distance.magnitude();
-        if (distance < min && position.from(point).magnitude() < MAX_DROP_DISTANCE && (_this.view.getViewNodeFor(point._droplet_node).highlightArea != null)) {
+        if (distance < min && mainPoint.from(point).magnitude() < MAX_DROP_DISTANCE && (_this.view.getViewNodeFor(point._droplet_node).highlightArea != null)) {
           best = point._droplet_node;
           return min = distance;
         }
@@ -7420,14 +7423,13 @@ Editor.prototype.getClosestDroppableBlock = function(position) {
   return best;
 };
 
-Editor.prototype.isDragPointOverSocket = function(position) {
-  var dropBlock, mainPoint;
+Editor.prototype.getClosestDroppableBlockFromPosition = function(position) {
+  var mainPoint;
   if (!this.currentlyUsingBlocks) {
-    return true;
+    return nil;
   }
   mainPoint = this.trackerPointToMain(position);
-  dropBlock = this.getClosestDroppableBlock(mainPoint);
-  return dropBlock && dropBlock.type === 'socket';
+  return this.getClosestDroppableBlock(mainPoint);
 };
 
 Editor.prototype.getAcceptLevel = function(drag, drop) {
@@ -7456,11 +7458,14 @@ hook('mousemove', 0, function(point, event, state) {
   if (this.draggingBlock != null) {
     position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
     if (this.draggingBlock.expansion) {
-      expansionText = this.draggingBlock.expansion(position);
+      expansionText = this.draggingBlock.expansion(this.getClosestDroppableBlockFromPosition(position));
       if (expansionText !== this.draggingBlock.lastExpansionText) {
         newBlock = parseBlock(this.mode, expansionText);
         newBlock.lastExpansionText = expansionText;
         newBlock.expansion = this.draggingBlock.expansion;
+        if (indexOf.call(this.draggingBlock.classes, 'any-drop') >= 0) {
+          newBlock.classes.push('any-drop');
+        }
         this.draggingBlock = newBlock;
         this.drawDraggingBlock();
       }
@@ -11633,7 +11638,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
     if (node.type in CLASS_EXCEPTIONS) {
       return CLASS_EXCEPTIONS[node.type].concat([node.type]);
     } else {
-      if (node.type === 'CallExpression' || node.type === 'NewExpression' || node.type === 'Identifier') {
+      if (node.type === 'CallExpression' || node.type === 'NewExpression' || node.type === 'Identifier' || node.type === 'MemberExpression') {
         known = this.lookupKnownName(node);
         if (!known || (known.fn.value && known.fn.command)) {
           return [node.type, 'any-drop'];
