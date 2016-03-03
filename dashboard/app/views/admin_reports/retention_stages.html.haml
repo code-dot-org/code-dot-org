@@ -9,7 +9,7 @@
 
 %form{method: 'get'}
   Stage IDs:
-  %input{name: "stage_ids", id: "stage_ids", value: params[:stage_ids]}
+  %input{name: "stage_ids", id: "stage_ids", value: @stages.join(", ")}
   %input{type: "submit", name: "submit"}
 
 %br
