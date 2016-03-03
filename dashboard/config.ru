@@ -3,6 +3,7 @@
 require ::File.expand_path('../config/environment',  __FILE__)
 
 # Force out-of-band garbage collection after every request for all endpoints in the application.
+require 'unicorn'
 require 'gctools/oobgc'
 use GC::OOB::UnicornMiddleware
 use Rack::ContentLength
