@@ -172,6 +172,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
  * @protected
  */
 Blockly.FunctionEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
+  this.setDeleteButtonVisible_(targetFunctionDefinitionBlock.userCreated);
 };
 
 /**
@@ -797,6 +798,20 @@ Blockly.FunctionEditor.prototype.addDeleteButton_ = function () {
       this.modalBlockSpaceEditor.getSVGElement(), Blockly.Msg.DELETE,
       this.onDeletePressed.bind(this));
 };
+
+/**
+ * Show or hide delete button. If none exists and it should be shown, create
+ * it.
+ */
+Blockly.FunctionEditor.prototype.setDeleteButtonVisible_ = function(visible) {
+  if (this.deleteButton_) {
+    this.deleteButton_.setVisible(visible);
+  } else if (visible) {
+    this.hasDeleteButton = true;
+    this.addDeleteButton_();
+    this.resizeUIComponents_();
+  }
+}
 
 Blockly.FunctionEditor.prototype.onDeletePressed = function () {
   var functionName = this.functionDefinitionBlock.getProcedureInfo().name;
