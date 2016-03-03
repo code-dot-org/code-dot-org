@@ -32,7 +32,8 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "true"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -98,7 +99,7 @@
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE"/>
-        <category name="Variables" custom="VARIABLE">
+        <category name="Variables">
           <block type="variables_get">
             <title name="VAR">left</title>
           </block>

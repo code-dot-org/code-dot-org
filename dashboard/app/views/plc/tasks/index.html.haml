@@ -1,0 +1,25 @@
+%h1 Listing plc_tasks
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+      %th
+      %th
+      %th
+
+  %tbody
+    - @tasks.each do |plc_task|
+      %tr
+        %td= plc_task.id
+        %td= plc_task.name
+        %td= plc_task.titleized_task_type
+        %td= link_to 'Show', plc_task_path(plc_task)
+        %td= link_to 'Edit', edit_plc_task_path(plc_task)
+        %td= link_to 'Destroy', plc_task_path(plc_task), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Task', new_plc_task_path

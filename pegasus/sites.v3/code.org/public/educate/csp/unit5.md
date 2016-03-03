@@ -9,7 +9,7 @@ nav: educate_nav
 
 ### Quick Links
 
-[General CSP Forum](http://forum.code.org/c/csp) | [Unit 5 Discussion Forum]() | [CSP Unit 4 in Code Studio](https://studio.code.org/s/cspunit5)  | [Writing Team](team) 
+[General CSP Forum](http://forum.code.org/c/csp) | [Unit 5 Discussion Forum](http://forum.code.org/c/csp-unit5) | [CSP Unit 5 in Code Studio](https://studio.code.org/s/cspunit5)  | [Writing Team](team) 
 
 
 

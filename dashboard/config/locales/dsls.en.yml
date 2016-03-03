@@ -239,7 +239,23 @@ en:
       CSPPD3-u4 tips for prep: {}
       CSPPD3-u4 unit 4 overview: {}
       CSPPD3-u4 what is a challenge: {}
+      CSPPD3-u5 Welcome: {}
+      CSPPD3-u5 breakdown of u5 chunks: {}
+      CSPPD3-u5 challenge overview: {}
+      CSPPD3-u5 chapter 1 concepts: {}
+      CSPPD3-u5 chapter 1 resources: {}
+      CSPPD3-u5 chapter 2 concepts: {}
+      CSPPD3-u5 chapter 2 resources: {}
+      CSPPD3-u5 complete the challenge overview: {}
+      CSPPD3-u5 completing the challenge: {}
+      CSPPD3-u5 do the challenge: {}
       CSPPD3-u5 intro to u5: {}
+      CSPPD3-u5 list of challenges: {}
+      CSPPD3-u5 overview: {}
+      CSPPD3-u5 pick a challenge: {}
+      CSPPD3-u5 tips for prep: {}
+      CSPPD3-u5 unit 5 overview: {}
+      CSPPD3-u5 what is a challenge: {}
       CSPPD3-u5 what is data: {}
       CSPStudentLessonPlanTemplate:
         description here: description here
@@ -501,6 +517,29 @@ en:
       ECSPD3-u5 share out overview: {}
       ECSPD3-u5 tools: {}
       ECSPD3-u5 what is a challenge: {}
+      ECSPD3-u6 about: {}
+      ECSPD3-u6 alt lesson overview: {}
+      ECSPD3-u6 connections: {}
+      ECSPD3-u6 day 1: {}
+      ECSPD3-u6 day 10-13: {}
+      ECSPD3-u6 day 14: {}
+      ECSPD3-u6 day 15: {}
+      ECSPD3-u6 day 16-18: {}
+      ECSPD3-u6 day 19-23: {}
+      ECSPD3-u6 day 2-3: {}
+      ECSPD3-u6 day 24-33: {}
+      ECSPD3-u6 day 4: {}
+      ECSPD3-u6 day 5: {}
+      ECSPD3-u6 day 6-7: {}
+      ECSPD3-u6 day 8-9: {}
+      ECSPD3-u6 ideas for culminating projects: {}
+      ECSPD3-u6 intro to u6: {}
+      ECSPD3-u6 lesson ideas: {}
+      ECSPD3-u6 lesson overview: {}
+      ECSPD3-u6 links to online simulations: {}
+      ECSPD3-u6 overview: {}
+      ECSPD3-u6 plan: {}
+      ECSPD3-u6 why study robotics: {}
       ECSU4 Challenge Submission: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
@@ -1164,6 +1203,9 @@ en:
       U4L10 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L11 Data and Medicine - Video:
+        Data and Medicine- Video: Data and Medicine- Video
+        description here: description here
       U4L11 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1222,6 +1264,9 @@ en:
         description here: description here
         title: title
       U6 - Charts - Student Introduction:
+        description here: description here
+        title: title
+      U6 - Final Project - Student Introduction:
         description here: description here
         title: title
       U6 - ImportExport - Student Introduction:
@@ -2335,7 +2380,7 @@ en:
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         Maze Multiple Choice: Maze Multiple Choice
-        Which blocks work?: Which blocks work?
+        Which set of blocks will get me to the pig?: Which set of blocks will get me to the pig?
       2-3 Relay Programming Multi 1:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
@@ -2655,6 +2700,18 @@ en:
         I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
         My understanding of these lessons has not changed: My understanding of these lessons has not changed
       CSPPD3-u4 unit overview checkin:
+        I feel like I could teach this right now: I feel like I could teach this right now
+        I feel like I need to do A LOT of review of lessons, content, etc before I teach this: I feel like I need to do A LOT of review of lessons, content, etc before I teach this
+        I feel like I need to do SOME review of lessons, content, etc before I teach this: I feel like I need to do SOME review of lessons, content, etc before I teach this
+      CSPPD3-u5 Create PT checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u5 Explore PT checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u5 unit overview checkin:
         I feel like I could teach this right now: I feel like I could teach this right now
         I feel like I need to do A LOT of review of lessons, content, etc before I teach this: I feel like I need to do A LOT of review of lessons, content, etc before I teach this
         I feel like I need to do SOME review of lessons, content, etc before I teach this: I feel like I need to do SOME review of lessons, content, etc before I teach this
@@ -3122,6 +3179,14 @@ en:
         rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds * 10 - 3
         rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds * 7 + 10
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3
+      Submittable Multi:
+        Submittable Multiple choice: Submittable Multiple choice
+        What is your favorite color?: What is your favorite color?
+        blue: blue
+        green: green
+        real orange of course: real orange of course
+        red: red
+        yellow: yellow
       U1L07 Assessment 1:
         A: A
         B: B

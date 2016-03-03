@@ -73,6 +73,14 @@ Promise.all([
       'react-only.js'
     ],
     commonFile: 'react-only'
+  })),
+
+  // Have a bundle for plc stuff - no sense in expanding this to everything yet
+  build_commands.bundle(_.extend({}, defaultOptions, {
+    filenames: [
+      'plc/perform_evaluation.js'
+    ],
+    commonFile: 'plc'
   }))
 ]).then(function (results) {
   var allStepsSucceeded = !results.some(function (result) {

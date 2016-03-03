@@ -1,0 +1,8 @@
+source 'https://supermarket.chef.io'
+
+metadata
+cookbook 'cdo-ruby', path: '../cdo-ruby'
+cookbook 'nginx_test', path: './test/cookbooks/nginx_test'
+cookbook 'ssl_certificate'
+cookbook 'cdo-varnish', path: '../cdo-varnish'
+cookbook 'sudo-user', path: '../sudo-user'

@@ -5,8 +5,10 @@ REPO_DIR = File.expand_path('../../../', __FILE__)
 APPS_DIR = "#{REPO_DIR}/apps"
 
 def filter_grunt_jshint(modified_files)
-  modified_files.select { |f| (f.end_with?(".js") || f.end_with?(".jsx")) &&
-    !(f.end_with?('.min.js') || f.match(/public\/.+package\//) || f.match(/blockly-core\//) || f.match(/apps\/lib\//) || f.match(/shared\//))}
+  modified_files.select do |f|
+    (f.end_with?(".js", ".jsx")) &&
+      !(f.end_with?('.min.js') || f.match(/public\/.+package\//) || f.match(/blockly-core\//) || f.match(/apps\/lib\//) || f.match(/shared\//))
+  end
 end
 
 RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile']
@@ -57,7 +59,7 @@ def do_linting()
   }
 
   todo.each do |func, files|
-    if files.length > 0
+    if !files.empty?
       stdout, stderr, status = func.call(files)
       lint_failure(stdout + stderr) unless status.success?
     end

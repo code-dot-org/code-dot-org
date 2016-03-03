@@ -944,7 +944,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown;
       var input = this.appendDummyInput();
       input.appendTitle(msg.drawStamp());
-      dropdown = new blockly.FieldImageDropdown(this.VALUES, 50, 30);
+      dropdown = new blockly.FieldImageDropdown(this.VALUES, 60, 50);
 
       input.appendTitle(dropdown, 'VALUE');
 

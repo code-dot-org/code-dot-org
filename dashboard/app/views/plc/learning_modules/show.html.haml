@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %strong Name:
+  = @learning_module.name
+
+%p
+  %strong Task requirements
+  %ul
+    - @learning_module.plc_tasks.each do |task|
+      %li #{task.name}
+
+= link_to 'Edit', edit_plc_learning_module_path(@learning_module)
+\|
+= link_to 'Back', plc_learning_modules_path

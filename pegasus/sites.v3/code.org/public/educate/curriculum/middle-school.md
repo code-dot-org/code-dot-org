@@ -6,7 +6,7 @@ nav: educate_nav
 # Middle School
 Our current middle school curriculum focuses on using computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels. Our newest course-in-development, CS Discoveries, will be a year-long computer science course designed for middle school students.
 
-## Computer Science in Science
+# Computer Science in Science
 
 <img src="<%= CDO.shared_image_url("courses/logo_science.png") %>">
 
@@ -22,7 +22,7 @@ Our current middle school curriculum focuses on using computer science and progr
 
 [<button>Learn more about curriculum</button>](/curriculum/science) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-science)
 
-## Computer Science in Algebra
+# Computer Science in Algebra
 
 <img src="<%= CDO.shared_image_url("courses/logo_algebra.png") %>">
 
@@ -32,7 +32,7 @@ Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to develo
 
 [<button>Learn more about curriculum</button>](/curriculum/algebra) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-algebra)
 
-## Computer Science Fundamentals - Accelerated
+# Computer Science Fundamentals - Accelerated
 
 <img src="/images/code20hr.jpg">
 
@@ -40,12 +40,12 @@ Code.org offers a four course [Computer Science Fundamentals](https://studio.cod
 
 [<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
 
-## Computer Science Discoveries
+# Computer Science Discoveries
 Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course is currently in development and will be ready for the 2017-2018 school year.
 
 [<button>Learn more about curriculum</button>](/educate/csd)
 
-## 3rd Party resources for middle school CS
+# 3rd Party resources for middle school CS
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 
@@ -62,12 +62,12 @@ Computer Science Discoveries is a full-year introductory computer science survey
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>
 
-## Additional Resources and Videos
+# Additional Resources and Videos
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
 
 [<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)
 
-## Find a guest speaker for your classroom
+# Find a guest speaker for your classroom
 Thousands of engineers and individuals passionate about computer science have signed up to volunteer as a mentor or a guest speaker. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
 
 [<button>Find a guest speaker</button>](/volunteer/local)

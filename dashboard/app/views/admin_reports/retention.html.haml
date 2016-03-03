@@ -1,0 +1,105 @@
+- content_for :head do
+  %script{src:'https://www.google.com/jsapi'}
+  %script{src:'https://www.gstatic.com/charts/loader.js'}
+
+%h1
+  = "Retention for Scripts #{@scripts.join(', ')}"
+
+%br
+
+#table_starts_and_finishes
+
+%br
+
+#chart_script_level_counts
+#chart_script_stage_counts
+
+%br
+
+#table_script_level_counts
+
+%br
+
+#table_script_stage_counts
+
+- content_for :body_scripts do
+  :javascript
+    // Load the Visualization API and the appropriate packages, setting a
+    // callback to run when the API is loaded.
+    google.load('visualization', '1.0', {'packages':['corechart', 'table']});
+    google.setOnLoadCallback(drawChartsAndTables);
+
+    // The callback that creates and populates the data tables, instantiates the
+    // charts and tables, and draws them.
+    function drawChartsAndTables() {
+      scripts = #{@scripts}
+      drawStartsAndFinishesChart(
+          #{@retention_stats['script_starts'].try(:to_json)},
+          #{@retention_stats['script_finishes'].try(:to_json)});
+      drawChartAndTable(
+          'script_level_counts',
+          'Script Level Count Cumulative Percentages',
+          'Levels',
+          scripts,
+          #{@retention_stats['script_level_counts'].try(:to_json)});
+      drawChartAndTable(
+          'script_stage_counts',
+          'Script Stage Count Cumulative Percentages',
+          'Stages',
+          scripts,
+          #{@retention_stats['script_stage_counts'].try(:to_json)});
+    }
+
+    // Populates the table_starts_and_finishes DOM element with the script
+    // retention data contained within start_data and finish_data.
+    // start_data: A map from script_id to the number of users starting the
+    //     script.
+    // finish_data: A map from script_id to the number of users finishing the
+    //     script.
+    function drawStartsAndFinishesChart(start_data, finish_data) {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Script ID');
+      data.addColumn('number', 'Number of Starts');
+      data.addColumn('number', 'Number of Finishes');
+      data.addColumn('string', 'Percentage');
+      for (var i = 0; i < Object.keys(start_data).length; i++) {
+        var script_id = Object.keys(start_data)[i];
+        var new_row = [
+            script_id,
+            start_data[script_id],
+            finish_data[script_id],
+            (100.0 * finish_data[script_id] / start_data[script_id]).toFixed(2)
+        ];
+        data.addRow(new_row);
+      }
+      var table = new google.visualization.Table(
+          document.getElementById('table_starts_and_finishes'));
+      table.draw(data);
+    }
+
+    // dom_element_suffix: The suffix of the DOM ID for the chart and table.
+    // chart_title: The title of the chart to be made.
+    // column_count: A string describing the counts, e.g., 'Stages' or 'Levels'.
+    // script_ids: An array of script_ids.
+    // stats: The data to insert into the chart.
+    function drawChartAndTable(
+        dom_element_suffix, chart_title, column_count, script_ids, stats) {
+      // Trasnfer stats into a Google DataTable.
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Number of ' + column_count);
+      for (var i = 0; i < script_ids.length; i++) {
+        data.addColumn('number', 'Script ID: ' + script_ids[i]);
+      }
+      data.addRows(stats);
+
+      // Push the Google DataTable into the chart.
+      var options = {'title': chart_title, 'width': 800, 'height': 500};
+      var chart = new google.visualization.LineChart(
+          document.getElementById('chart_' + dom_element_suffix));
+      chart.draw(data, options);
+
+      // Push the Google DataTable into the table.
+      var table = new google.visualization.Table(
+        document.getElementById('table_' + dom_element_suffix));
+      table.draw(data);
+    }

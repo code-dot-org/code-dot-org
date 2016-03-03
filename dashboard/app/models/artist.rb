@@ -15,11 +15,23 @@
 #  type                     :string(255)
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
 #  index_levels_on_game_id  (game_id)
 #
+
+IGNORED_SOLUTION_BLOCK_ATTRS = {
+  'uservisible' => 'false',
+  'deletable' => 'false',
+  'editable' => 'false',
+  'disabled' => 'true',
+  'movable' => 'false'
+}
+NEW_CATEGORY_XML = '<category name="NEW BLOCKS"/>'
+STRIPPED_NODES_XPATH = './next|./value|./statement|./title'
+STRIPPED_ATTRS = ['id', 'inline'] + IGNORED_SOLUTION_BLOCK_ATTRS.keys
 
 class Artist < Blockly
   serialized_attrs %w(
@@ -261,4 +273,54 @@ class Artist < Blockly
       <block type="simple_jump_left"></block>
     XML
   end
+
+  def strip_block(block, toolbox_block, create_for_toolbox)
+    stripped_block = block.dup
+    stripped_block.xpath(STRIPPED_NODES_XPATH).remove
+    stripped_block['type'] = stripped_block['type'].chomp '_dropdown' if toolbox_block
+    STRIPPED_ATTRS.each {|attr| stripped_block.remove_attribute(attr)} unless create_for_toolbox
+    stripped_block.content = stripped_block.content.strip
+    return create_for_toolbox ? stripped_block : stripped_block.to_xml
+  end
+
+  def strip_toolbox_block(block)
+    strip_block block, true, false
+  end
+
+  def strip_solution_block(block)
+    strip_block block, false, false
+  end
+
+  def create_toolbox_block(block)
+    strip_block block, false, true
+  end
+
+  # Add blocks to the toolbox that appear in the solution, but aren't already
+  # in the toolbox
+  def add_missing_toolbox_blocks
+    toolbox = Nokogiri::XML(properties['toolbox_blocks'])
+    toolbox_blocks = toolbox.xpath('//block')
+    Nokogiri::XML(properties['solution_blocks']).xpath('//block').each do |block|
+      next if IGNORED_SOLUTION_BLOCK_ATTRS.any? {|kvpair| block.attr(kvpair[0]) == kvpair[1]}
+
+      stripped_block = strip_solution_block block
+      next if toolbox_blocks.any? do |toolbox_block|
+        stripped_block == strip_toolbox_block(toolbox_block)
+      end
+
+      # Solution block does not appear in the toolbox, add it
+      toolboxified_block = create_toolbox_block block
+      if toolbox.xpath('//category').empty?
+        toolbox.root.add_child toolboxified_block
+      else
+        category = toolbox.xpath('//category[@name=\'NEW BLOCKS\']').first ||
+          toolbox.xpath('//category').last.add_next_sibling(NEW_CATEGORY_XML).first
+        category.add_child toolboxified_block
+      end
+      toolbox_blocks.push toolboxified_block
+    end
+    properties['toolbox_blocks'] =
+      toolbox.to_xml save_with: Blockly::XML_OPTIONS
+  end
+
 end

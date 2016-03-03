@@ -1,4 +1,50 @@
 FactoryGirl.define do
+  factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
+    resource_url nil
+  end
+
+  factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
+    answer "MyString"
+    plc_evaluation_question nil
+    plc_task nil
+  end
+
+  factory :plc_evaluation_question, :class => 'Plc::EvaluationQuestion' do
+    question "MyString"
+    plc_course nil
+  end
+
+  factory :plc_enrollment_task_assignment, :class => 'Plc::EnrollmentTaskAssignment' do
+    status "MyString"
+    plc_enrollment_module_assignment nil
+    plc_task nil
+  end
+  factory :plc_enrollment_module_assignment, :class => 'Plc::EnrollmentModuleAssignment' do
+    plc_user_course_enrollment nil
+    plc_learning_module nil
+  end
+  factory :plc_user_course_enrollment, :class => 'Plc::UserCourseEnrollment' do
+    status "MyString"
+    plc_course nil
+    user nil
+  end
+  factory :plc_task, :class => 'Plc::Task' do
+    name "MyString"
+    plc_learning_module nil
+  end
+
+  factory :plc_learning_module, :class => 'Plc::LearningModule' do
+    name "MyString"
+  end
+  factory :plc_course, :class => 'Plc::Course' do
+    name "MyString"
+  end
+
+  factory :user_professional_learning_course_enrollment do
+    user nil
+    professional_learning_course nil
+  end
+
   factory :survey_result do
     user { create :teacher }
     properties {{survey2016_ethnicity_asian: "1"}}
@@ -141,6 +187,10 @@ FactoryGirl.define do
 
   factory :applab, :parent => Level, :class => Applab do
     game {Game.applab}
+  end
+
+  factory :multi, :parent => Level, :class => Applab do
+    game {Game.multi}
   end
 
   factory :level_source do
