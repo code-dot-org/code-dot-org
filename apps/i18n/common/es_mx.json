@@ -256,5 +256,9 @@
   "watchVideo": "Mira el Video",
   "when": "cuando",
   "whenRun": "cuando se ejecuta",
-  "workspaceHeaderShort": "Espacio de trabajo: "
+  "workspaceHeaderShort": "Espacio de trabajo: ",
+  "dropletBlock_greaterThanOrEqualOperator_description": "Tests whether a value is greater than or equal to another value. Returns true if the value on the left-hand side of the expression is greater than or equal to the value on the right-hand side of the expression.",
+  "dropletBlock_greaterThanOrEqualOperator_signatureOverride": "Greater than or equal operator",
+  "dropletBlock_lessThanOrEqualOperator_description": "Tests whether a value is less than or equal to another value. Returns true if the value on the left-hand side of the expression is less than or equal to the value on the right-hand side of the expression.",
+  "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Less than or equal operator"
 }
