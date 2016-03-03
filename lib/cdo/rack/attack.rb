@@ -14,6 +14,7 @@ class Rack::Attack
   cache.store = StoreProxy::RedisStoreProxy.new(Redis.new(url: redis_url))
 
   # Don't strip trailing slashes.
+  remove_const(:PathNormalizer)
   PathNormalizer = FallbackPathNormalizer
 
   def self.limits(max_per_min)
