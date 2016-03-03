@@ -43,13 +43,14 @@ class MediaProxyController < ApplicationController
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
     path = (url.path.empty?) ? '/' : url.path
+    query = url.query || ''
 
     # Limit how long we're willing to wait.
     http.open_timeout = 3
     http.read_timeout = 3
 
     # Get the media.
-    media = http.request_get(path)
+    media = http.request_get(path + '?' + query)
 
     # generate content-type from file name if we weren't given one
     if media.content_type.nil?
