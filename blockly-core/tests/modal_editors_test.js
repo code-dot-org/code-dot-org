@@ -65,8 +65,7 @@ var USER_CREATED_PROCEDURE =
 function initializeFunctionEditor(opt_functionDefinitionXML) {
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
   Blockly.hasTrashcan = true;
-  var functionDefinitionXML = opt_functionDefinitionXML || PROCEDURE;
-  var xml = Blockly.Xml.textToDom(functionDefinitionXML);
+  var xml = Blockly.Xml.textToDom(opt_functionDefinitionXML || PROCEDURE);
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
   Blockly.useModalFunctionEditor = true;
   Blockly.functionEditor = new Blockly.FunctionEditor();
