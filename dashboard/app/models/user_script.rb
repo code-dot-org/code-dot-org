@@ -40,15 +40,6 @@ class UserScript < ActiveRecord::Base
   end
 
   def check_plc_task_assignment_updating
-    if self.script.pd && check_completed?
-      #Get all the task assignments for the user for script level tasks
-
-      #I'm not wild about the joinery here - we can definitely save time by adding denormalizing user_id on the
-      #enrollment_task_assignment table. The number of script completions tasks associated with a user won't be that
-      #high, so it's okay to select all of them and pick the ones we want
-      task_assignments_for_user = (Plc::UserCourseEnrollment.where(user: user).map {|x| x.plc_task_assignments.all}).flatten
-      tasks_to_update = task_assignments_for_user.select {|x| x.plc_task.type == 'Plc::ScriptCompletionTask' && x.plc_task.script_id == script.id}
-      tasks_to_update.map(&:complete_assignment)
-    end
+    Plc::ScriptCompletionTask.check_for_script_completion(self)
   end
 end
