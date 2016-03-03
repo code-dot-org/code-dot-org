@@ -211,7 +211,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_declareAssign_x_array_1_4_param1":function(d){return "1,2,3,4"},
 "dropletBlock_declareAssign_x_array_1_4_param1_description":function(d){return "The initial values to the array"},
 "dropletBlock_declareAssign_x_array_1_4_signatureOverride":function(d){return "Declare a variable assigned to an array"},
-"dropletBlock_declareAssign_x_description":function(d){return "Create a variable for the first time"},
+"dropletBlock_declareAssign_x_description":function(d){return "Declares a variable with the given name after 'var', and assigns it to the value on the right side of the expression"},
 "dropletBlock_declareAssign_x_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_param0_description":function(d){return "The name you will use in the program to reference the variable"},
 "dropletBlock_declareAssign_x_param1":function(d){return "0"},
@@ -246,7 +246,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_functionParams_none_description":function(d){return "Даје назив сету акција које желиш да твој компјутер изврши."},
 "dropletBlock_functionParams_none_signatureOverride":function(d){return "Дефинише функцију"},
 "dropletBlock_getTime_description":function(d){return "Get the current time in milliseconds"},
-"dropletBlock_greaterThanOperator_description":function(d){return "Compare two numbers"},
+"dropletBlock_greaterThanOperator_description":function(d){return "Tests whether a number is greater than another number. Returns true if the value on the left-hand side of the expression is strictly greater than the value on the right-hand side of the expression"},
 "dropletBlock_greaterThanOperator_param0":function(d){return "x"},
 "dropletBlock_greaterThanOperator_param0_description":function(d){return "Прва вредност која се користи за поређење."},
 "dropletBlock_greaterThanOperator_param1":function(d){return "у"},
@@ -411,4 +411,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Погледај видео"},
 "when":function(d){return "када"},
 "whenRun":function(d){return "Када кренеш"},
-"workspaceHeaderShort":function(d){return "Радни простор: "}};
+"workspaceHeaderShort":function(d){return "Радни простор: "},
+"dropletBlock_greaterThanOrEqualOperator_description":function(d){return "Tests whether a value is greater than or equal to another value. Returns true if the value on the left-hand side of the expression is greater than or equal to the value on the right-hand side of the expression."},
+"dropletBlock_greaterThanOrEqualOperator_signatureOverride":function(d){return "Greater than or equal operator"},
+"dropletBlock_lessThanOrEqualOperator_description":function(d){return "Tests whether a value is less than or equal to another value. Returns true if the value on the left-hand side of the expression is less than or equal to the value on the right-hand side of the expression."},
+"dropletBlock_lessThanOrEqualOperator_signatureOverride":function(d){return "Less than or equal operator"}};

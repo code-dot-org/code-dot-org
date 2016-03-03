@@ -233,7 +233,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_declareNoAssign_x_signatureOverride":function(d){return "変数を宣言します。"},
 "dropletBlock_divideOperator_description":function(d){return "二つの値を割り算する"},
 "dropletBlock_divideOperator_signatureOverride":function(d){return "Divide operator"},
-"dropletBlock_equalityOperator_description":function(d){return "等しいさをテスト"},
+"dropletBlock_equalityOperator_description":function(d){return "Test whether two values are equal. Returns true if the value on the left-hand side of the expression equals the value on the right-hand side of the expression, and false otherwise"},
 "dropletBlock_equalityOperator_param0":function(d){return "x"},
 "dropletBlock_equalityOperator_param0_description":function(d){return "The first value to use for comparison."},
 "dropletBlock_equalityOperator_param1":function(d){return "y"},
@@ -246,7 +246,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_functionParams_none_description":function(d){return "関数が呼び出されるとタスクを実行したり値を計算したりする一連のステートメント"},
 "dropletBlock_functionParams_none_signatureOverride":function(d){return "関数を定義します。"},
 "dropletBlock_getTime_description":function(d){return "現在の時刻をミリ秒単位で取得します。"},
-"dropletBlock_greaterThanOperator_description":function(d){return "Compare two numbers"},
+"dropletBlock_greaterThanOperator_description":function(d){return "Tests whether a number is greater than another number. Returns true if the value on the left-hand side of the expression is strictly greater than the value on the right-hand side of the expression"},
 "dropletBlock_greaterThanOperator_param0":function(d){return "x"},
 "dropletBlock_greaterThanOperator_param0_description":function(d){return "The first value to use for comparison."},
 "dropletBlock_greaterThanOperator_param1":function(d){return "y"},
@@ -411,4 +411,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ビデオを見る"},
 "when":function(d){return "とき"},
 "whenRun":function(d){return "実行した時"},
-"workspaceHeaderShort":function(d){return "ワークスペース："}};
+"workspaceHeaderShort":function(d){return "ワークスペース："},
+"dropletBlock_greaterThanOrEqualOperator_description":function(d){return "Tests whether a value is greater than or equal to another value. Returns true if the value on the left-hand side of the expression is greater than or equal to the value on the right-hand side of the expression."},
+"dropletBlock_greaterThanOrEqualOperator_signatureOverride":function(d){return "Greater than or equal operator"},
+"dropletBlock_lessThanOrEqualOperator_description":function(d){return "Tests whether a value is less than or equal to another value. Returns true if the value on the left-hand side of the expression is less than or equal to the value on the right-hand side of the expression."},
+"dropletBlock_lessThanOrEqualOperator_signatureOverride":function(d){return "Less than or equal operator"}};

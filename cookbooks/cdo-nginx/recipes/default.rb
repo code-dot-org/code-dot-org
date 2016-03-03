@@ -9,6 +9,10 @@ run_unicorn = '/run/unicorn'
 directory run_unicorn do
   user node[:current_user]
   group node[:current_user]
+  # Ensure directory is created before app-services are (re)loaded.
+  %w(dashboard pegasus).each do |app|
+    subscribes :create, "service[#{app}]", :before
+  end
 end
 
 %w(dashboard pegasus).each do |app|
