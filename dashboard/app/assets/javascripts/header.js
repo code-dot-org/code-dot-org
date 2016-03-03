@@ -209,8 +209,10 @@ dashboard.header = (function () {
     $('.project_remix').click(remixProject);
   };
 
-  // Project header with "Share" and "Remix".
-  header.showShareRemixHeader = function () {
+  // Project header for script levels that are backed by a project. Shows a
+  // Share and Remix button, and places a last_modified time below the stage
+  // name
+  header.showHeaderForProjectBacked = function () {
     if ($('.project_info .project_share').length !== 0) {
       return;
     }
@@ -219,6 +221,25 @@ dashboard.header = (function () {
         .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));
     $('.project_share').click(shareProject);
     $('.project_remix').click(remixProject);
+
+    // Add updated_at below the level name. Do this by creating a new div, moving
+    // the level text into it, applying some styling, and placing that div where
+    // levelText was previously.
+    // I really don't like that we're modifying DOM elements/styles of other
+    // elements here, but until this is all Reactified, I'm not sure if theres
+    // a better solution
+    var levelText = $(".header_level_container").children().first().detach();
+    $(".header_level_container").prepend(
+      $('<div>').css({display: 'inline-block', verticalAlign: 'bottom'})
+        .append(levelText.css('display', 'block'))
+        .append($('<div class="project_updated_at header_text">').css({
+          display: 'block',
+          textAlign: 'left'
+        }))
+    );
+    $(".header_level_container .progress_container").css("vertical-align", 'top');
+
+    header.updateTimestamp();
   };
 
   header.showProjectHeader = function () {
