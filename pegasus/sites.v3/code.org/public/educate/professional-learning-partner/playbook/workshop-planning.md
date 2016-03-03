@@ -54,7 +54,7 @@ These guidelines will give your facilitators the space they need to run a succes
  
 **Example Workshop Agendas**<br/> 
 
-- Summer Workshop<br/>
+- [Summer Workshop](files/alegbra-p2-agenda.pdf)<br/>
 - Academic Year<br/>
 	- Fall<br/>
 	- Spring<br/>
@@ -134,7 +134,7 @@ These guidelines will give your facilitators the space they need to run a succes
 
 **Example PD agendas**<br/>
 
-- Phase 2: Summer Workshop<br/>
+- [Phase 2: Summer Workshop](files/ecs-p2-agenda.pdf)<br/>
 - Phae 3: Academic Year Development<br/>
 	- Session A<br/>
 	- Session B<Br/>

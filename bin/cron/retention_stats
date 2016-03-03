@@ -18,15 +18,18 @@ def main()
 
   # Initialize the hashes of arrays that will contain the final data.
   script_level_counts = {}
-  ScriptLevel.group(:script_id).count.each do |script_id, level_count|
+  script_levels = ScriptLevel.group(:script_id).count
+  script_levels.each do |script_id, level_count|
     script_level_counts[script_id] = Array.new(level_count + 1, 0)
   end
   script_stage_counts = {}
-  Stage.group(:script_id).count.each do |script_id, stage_count|
+  script_stages = Stage.group(:script_id).count
+  script_stages.each do |script_id, stage_count|
     script_stage_counts[script_id] = Array.new(stage_count + 1, 0)
   end
   stage_level_counts = {}
-  ScriptLevel.group(:script_id, :stage_id).count.each do |script_id_stage_id, level_count|
+  stage_levels = ScriptLevel.group(:script_id, :stage_id).count
+  stage_levels.each do |script_id_stage_id, level_count|
     stage_level_counts[script_id_stage_id.second] = Array.new(level_count + 1, 0)
   end
 
@@ -50,7 +53,10 @@ def main()
     group('user_levels.user_id', 'user_levels.script_id').
     count.
     each_pair do |user_id_script_id, level_count|
-      script_level_counts[user_id_script_id.second][level_count] += 1
+      # Adjust the number of levels downward if the user completed more levels than currently exist.
+      script_id = user_id_script_id[1]
+      adjusted_level_count = [script_stages[script_id], level_count].min
+      script_level_counts[script_id][adjusted_level_count] += 1
     end
   # Determine, for each (user, script), the number of stages attempted. Then increment the
   # appropriate index in the script_stage_counts hash.
@@ -59,7 +65,10 @@ def main()
     distinct.
     count('script_levels.stage_id').
     each_pair do |user_id_script_id, stage_count|
-      script_stage_counts[user_id_script_id[1]][stage_count] += 1
+      # Adjust the number of stages downward if the user completed more stages than currently exist.
+      script_id = user_id_script_id[1]
+      adjusted_stage_count = [script_stages[script_id], stage_count].min
+      script_stage_counts[script_id][adjusted_stage_count] += 1
     end
   # Determine, for each (user, script, stage), the number of levels attempted. Then increment the
   # appropriate index in the stage_level_counts hash.
@@ -67,7 +76,11 @@ def main()
     group('user_levels.user_id', 'script_levels.script_id', 'script_levels.stage_id').
     count.
     each_pair do |user_id_script_id_stage_id, level_count|
-      stage_level_counts[user_id_script_id_stage_id[2]][level_count] += 1
+      # Adjust the number of levels downward if the user completed more levels than currently exist.
+      script_id = user_id_script_id_stage_id[1]
+      stage_id = user_id_script_id_stage_id[2]
+      adjusted_level_count = [stage_levels[[script_id, stage_id]], level_count].min
+      stage_level_counts[stage_id][adjusted_level_count] += 1
     end
 
   # Manipulate the hashes to be more output-friendly.
