@@ -228,6 +228,7 @@ class LevelsController < ApplicationController
   def level_params
     permitted_params = [
       :name,
+      :notes,
       :type,
       :level_num,
       :user,
