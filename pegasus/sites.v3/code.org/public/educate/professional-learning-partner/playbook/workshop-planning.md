@@ -19,7 +19,7 @@ Click on the program name below to find out more about the workshop requirements
 - **[CS in Science](#science)**<Br/>
 - **[Exploring CS](#ecs)**<br/>
 - **[CS Principles](#csp)**<br/>
-- **[Counselor and Administrator PD](#c-a)**
+
 
 ________________
 <a id="csf"></a>
@@ -54,16 +54,15 @@ These guidelines will give your facilitators the space they need to run a succes
  
 **Example Workshop Agendas**<br/> 
 
-- [Summer Workshop](files/alegbra-p2-agenda.pdf)<br/>
-- Academic Year<br/>
-	- Fall<br/>
-	- Spring<br/>
+- Phase 2: Summer Study- More details coming soon!<br/>
+- Phase 3: Academic Year Development<br/>
+	- [Fall](/files/algebra-p3a-agenda.pdf)<br/>
+	- [Spring](/files/algebra-p3b-agenda.pdf)<br/>
 	
 	
 **Supplies**<br/>
  
-- How to Order Supplies
-- Supplies List
+- How to Order Supplies - More details coming soon!
 
 **Catering** <br/>
 For multi-day events like summer workshops, we provide a heartier breakfast to get them through the day, ideally breakfast sandwiches or a hot buffet, with juice/coffee service. We also provide lunch that should vary from day to day.<br/>
@@ -96,16 +95,16 @@ These guidelines will help you run a successful PD by giving your facilitators t
 
 **Example Workshop Agendas**<br/> 
 
-- Summer Workshop<br/>
-- Academic Year<br/>
-	- Fall<br/>
-	- Spring<br/>
+- Phase 2: Summer Study - More details coming soon!<br/> 
+- Phase 3: Academic Year Development<br/>
+	- [Fall](/files/science-p3a-agenda.pdf)<br/>
+	- [Spring](/files/science-p3b-agenda.pdf)<br/>
 	
 	
 **Supplies**<br/>
  
-- How to Order Supplies
-- Supplies List
+- How to Order Supplies - More details coming soon!
+
 
 **Catering** <br/>
 For multi-day events like summer workshops, we provide a heartier breakfast to get them through the day, ideally breakfast sandwiches or a hot buffet, with juice/coffee service. We also provide lunch that should vary from day to day.<br/>
@@ -134,21 +133,21 @@ These guidelines will give your facilitators the space they need to run a succes
 
 **Example PD agendas**<br/>
 
-- [Phase 2: Summer Workshop](files/ecs-p2-agenda.pdf)<br/>
+- [Phase 2: Summer Workshop](/files/ecs-p2-agenda.pdf)<br/>
 - Phae 3: Academic Year Development<br/>
-	- Session A<br/>
-	- Session B<Br/>
-	- Session C<br/>
-	- Session D<br/>
-- Phase 4: Summer Wrap-Up
+	- [Session A](/files/ecs-p3a-agenda.pdf)<br/>
+	- [Session B](/files/ecs-p3b-agenda.pdf)<Br/>
+	- [Session C](/files/ecs-p3c-agenda.pdf)<br/>
+	- [Session D](/files/ecs-p3d-agenda.pdf)<br/>
+- [Phase 4: Summer Wrap-Up](/files/ecs-p4-agenda.pdf)
  
 **Supplies**<br/>
 
 - How to Order Supplies - More details coming soon!
-- Supplies List
+
 
 **Catering** <br/>
-For multi-day events like summer workshops, we provide a heartier breakfast to get them through the day, ideally breakfast sandwiches or a hot buffet, with juice/coffee service. We also provide lunch that should vary from day to day.<br/>
+For multi-day events like summer workshops, we provide a heartier breakfast to get them through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. We also provide lunch that should vary from day to day.<br/>
 
 We always accommodate vegetarian needs, roughly ⅓ of the order. In our communications to teachers and workshop attendees we ask that if they have special dietary restrictions that they plan accordingly. It’s very difficult to plan for every need, and is often more expensive.<br/><br/>
 
@@ -176,7 +175,7 @@ These guidelines will give your facilitators the space they need to run a succes
 **Example Workshop Agendas**<br/> 
 
 - Phase 2: Summer Workshop<br/>
-- Phae 3: Academic Year Development<br/>
+- Phase 3: Academic Year Development<br/>
 	- Session A<br/>
 	- Session B<Br/>
 	- Session C<br/>
@@ -186,10 +185,12 @@ These guidelines will give your facilitators the space they need to run a succes
 **Supplies**<br/>
 
 - How to Order Supplies - More details coming soon!
-- Supplies List
+
 
 **Catering** <br/>
+For multi-day events like summer workshops, we provide a heartier breakfast to get them through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. We also provide lunch that should vary from day to day.<br/>
 
+We always accommodate vegetarian needs, roughly ⅓ of the order. In our communications to teachers and workshop attendees we ask that if they have special dietary restrictions that they plan accordingly. It’s very difficult to plan for every need, and is often more expensive.<br/><br/>
 
 
 
