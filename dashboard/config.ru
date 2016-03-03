@@ -2,6 +2,7 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 
+# Force out-of-band garbage collection once every 5 requests for all endpoints in the application.
 require 'unicorn/oob_gc'
 use Unicorn::OobGC
 use Rack::ContentLength
