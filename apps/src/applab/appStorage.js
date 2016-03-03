@@ -17,7 +17,7 @@ function getStatusDescription(status) {
   if (status === 429) {
     return 'Rate limit exceeded.';
   } else if (status === 413) {
-    return 'Storage limit exceeded';
+    return 'Storage item size exceeded';
   } else {
     return 'Unexpected http status ' + status;
   }
