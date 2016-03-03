@@ -40,6 +40,8 @@ class UserScript < ActiveRecord::Base
   end
 
   def check_plc_task_assignment_updating
-    Plc::ScriptCompletionTask.check_for_script_completion(self)
+    if self.completed_at && self.script.pd
+      Plc::ScriptCompletionTask.check_for_script_completion(self)
+    end
   end
 end
