@@ -38,7 +38,9 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "Use updateRecord to change the record for \"Eye of the Tiger.\" (Click to see full instructions)",
-    "project_template_level_name": "U6 - updateRecord - Template"
+    "project_template_level_name": "U6 - updateRecord - Template",
+    "encrypted_examples": "H8MT9GDsycHDp9eg7UguTC2sClg9L9voIL9JJXVAjfMuB66ULSFConItLK/d\nu7qh\n",
+    "data_tables": "{\r\n \"mySongs\":\r\n [\r\n  {\r\n    \"title\": \"Thriller\",\r\n    \"seconds\": 358,\r\n    \"artist\": \"Michael Jackson\",\r\n    \"id\": 1\r\n  },\r\n  {\r\n    \"title\": \"Wonderwall\",\r\n    \"seconds\": 280,\r\n    \"artist\": \"Oasis\",\r\n    \"id\": 2\r\n  },\r\n  {\r\n    \"title\": \"I Will Survive\",\r\n    \"seconds\": 180,\r\n    \"artist\": \"Gloria Gaynor\",\r\n    \"id\": 3\r\n  },\r\n  {\r\n    \"title\": \"Single Ladies\",\r\n    \"seconds\": 199,\r\n    \"artist\": \"Beyonce\",\r\n    \"id\": 4\r\n  },\r\n  {\r\n    \"title\": \"Eye of the Tiger\",\r\n    \"id\": 5\r\n  }\r\n]\r\n}"
   },
   "published": true
 }]]></config>
