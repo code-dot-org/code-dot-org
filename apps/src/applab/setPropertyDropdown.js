@@ -174,8 +174,17 @@ Object.keys(PROP_NAMES).map(function (elementType) {
   });
 });
 
+function getFirstSetPropertyParamFromCode(code) {
+  var prefix = 'setProperty(';
+  code = code.slice(code.lastIndexOf(prefix));
+
+  // quote, followed by param, followed by end quote, comma, and optional whitespace
+  var match = /^setProperty\((['"])(.*)\1,\s*$/.exec(code);
+  return match ? match[2] : null;
+}
+
 /**
- * @param {DropletBlock} block
+ * @param {DropletBlock} block Droplet block, or undefined if in text mode
  * @param {AceEditor}
  */
 function getFirstSetPropertyParam(block, editor) {
@@ -184,8 +193,7 @@ function getFirstSetPropertyParam(block, editor) {
     var cursor = editor.session.selection.getCursor();
     var contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
 
-    var match = /setProperty\(['|"](.*)['|"]/.exec(contents);
-    return match ? match[1] : null;
+    return getFirstSetPropertyParamFromCode(contents);
   }
   // We have a block. Parse it to find our first socket.
   var token = block.start;
@@ -206,7 +214,7 @@ function getFirstSetPropertyParam(block, editor) {
  * Given a string like <"asdf"> strips quotes and returns <asdf>
  */
 function stripQuotes(str) {
-  var match = str.match(/^['|"](.*)['|"]$/);
+  var match = str.match(/^['|"](.*)['|"],\s*$/);
   if (match) {
     return match[1];
   }
@@ -235,7 +243,9 @@ module.exports.getInternalPropertyInfo = function (element, friendlyPropName) {
  */
 module.exports.setPropertyDropdown = function () {
   return function (editor) {
-    // Note: We depend on "this" being the droplet socket.
+    // Note: We depend on "this" being the droplet socket when in block mode,
+    // such that parent ends up being the block. In text mode, this.parent
+    // ends up being undefined.
     var param1 = getFirstSetPropertyParam(this.parent, editor);
     if (!param1) {
       return fullDropdownOptions;
@@ -259,4 +269,8 @@ module.exports.setPropertyDropdown = function () {
 
     return keys.map(function (key) { return '"' + key + '"'; });
   };
+};
+
+module.exports.__TestInterface = {
+  getFirstSetPropertyParamFromCode: getFirstSetPropertyParamFromCode
 };
