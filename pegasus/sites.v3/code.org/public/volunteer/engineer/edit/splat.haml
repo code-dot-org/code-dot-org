@@ -17,8 +17,8 @@ rightbar: blank
 
   #error-message{style: 'display: none'}
   %p
-    - if unsubscribed == 'until2016'
-      You've <strong>unsubscribed</strong> from teacher requests <strong>this year</strong>.
+    - if unsubscribed == 'until2016' || unsubscribed == 'untilhoc'
+      You've <strong>unsubscribed</strong> from teacher requests <strong>until the next Hour of Code</strong>.
     - elsif unsubscribed == 'forever'
       You've <strong>unsubscribed</strong> from teacher requests <strong>forever</strong>.
     - else
@@ -28,8 +28,8 @@ rightbar: blank
   .form-group
     .radio-row
       %label.radio-inline
-        %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", required: true, value: "until2016"}/
-        Stop sending me teacher requests for the rest of the year
+        %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", required: true, value: "untilhoc"}/
+        Stop sending me teacher requests until the next Hour of Code
       %label.radio-inline
         %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", required: true, value: "forever"}/
         Stop sending me teacher requests forever

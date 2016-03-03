@@ -55,7 +55,7 @@ def main()
     each_pair do |user_id_script_id, level_count|
       # Adjust the number of levels downward if the user completed more levels than currently exist.
       script_id = user_id_script_id[1]
-      adjusted_level_count = [script_stages[script_id], level_count].min
+      adjusted_level_count = [script_levels[script_id], level_count].min
       script_level_counts[script_id][adjusted_level_count] += 1
     end
   # Determine, for each (user, script), the number of stages attempted. Then increment the
