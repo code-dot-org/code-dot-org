@@ -17,7 +17,7 @@ var CellEditor = React.createClass({
 
   handleChange: function (event) {
     var values = {};
-    var nodes = this.getDOMNode().querySelectorAll('[name]');
+    var nodes = ReactDOM.findDOMNode(this).querySelectorAll('[name]');
     for (var i = 0, node; (node = nodes[i]); i++) {
       values[node.name] = isNaN(parseInt(node.value)) ? undefined : parseInt(node.value);
     }
