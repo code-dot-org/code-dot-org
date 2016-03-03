@@ -19,17 +19,17 @@ class Plc::EnrollmentTaskAssignmentTest < ActiveSupport::TestCase
     assert_not_equal :completed, enrollment.status
     assert_empty task_assignments.where(status: :completed).all
 
-    task_assignments.first.complete_assignment
+    task_assignments.first.complete_assignment!
     assert_equal 'completed', task_assignments.first.status
     enrollment.reload
     assert_not_equal 'completed ', enrollment.status
 
-    task_assignments.second.complete_assignment
+    task_assignments.second.complete_assignment!
     assert_equal 'completed', task_assignments.second.status
     enrollment.reload
     assert_not_equal 'completed', enrollment.status
 
-    task_assignments.third.complete_assignment
+    task_assignments.third.complete_assignment!
     assert_equal 'completed', task_assignments.third.status
     enrollment.reload
     assert_equal 'completed', enrollment.status
