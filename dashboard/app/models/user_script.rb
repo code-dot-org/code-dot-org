@@ -40,7 +40,7 @@ class UserScript < ActiveRecord::Base
   end
 
   def check_plc_task_assignment_updating
-    if check_completed? && self.script.pd
+    if self.script.pd && check_completed?
       #Get all the task assignments for the user for script level tasks
 
       #I'm not wild about the joinery here - we can definitely save time by adding denormalizing user_id on the
