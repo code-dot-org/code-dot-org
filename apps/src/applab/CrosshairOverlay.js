@@ -146,10 +146,12 @@ CrosshairOverlay.prototype.create_ = function () {
   this.ownElement_.appendChild(this.hGuide_);
 
   // Create the cooordinates tooltip
-  [this.bubble_, this.text_] = this.createTextBubbleElement_();
+  this.bubble_ = this.createBubbleElement_();
+  this.text_ = this.createTextElement_();
 
   // Create the element id tooltip
-  [this.elementIdBubble_, this.elementIdText_] = this.createTextBubbleElement_();
+  this.elementIdBubble_ = this.createBubbleElement_();
+  this.elementIdText_ = this.createTextElement_();
 };
 
 CrosshairOverlay.prototype.moveToParent_ = function (newParent) {
@@ -184,7 +186,7 @@ CrosshairOverlay.ellipsify = function (inputText, maxLength) {
   return inputText || '';
 };
 
-CrosshairOverlay.prototype.createTextBubbleElement_ = function () {
+CrosshairOverlay.prototype.createBubbleElement_ = function () {
   var bubbleElement = document.createElementNS(SVG_NS, 'rect');
   bubbleElement.setAttribute('width', TEXT_RECT_WIDTH);
   bubbleElement.setAttribute('height', TEXT_RECT_HEIGHT);
@@ -192,8 +194,12 @@ CrosshairOverlay.prototype.createTextBubbleElement_ = function () {
   bubbleElement.setAttribute('ry', TEXT_RECT_RADIUS);
   this.ownElement_.appendChild(bubbleElement);
 
+  return bubbleElement;
+};
+
+CrosshairOverlay.prototype.createTextElement_ = function () {
   var textElement = document.createElementNS(SVG_NS, 'text');
   this.ownElement_.appendChild(textElement);
 
-  return [bubbleElement, textElement];
+  return textElement;
 };
