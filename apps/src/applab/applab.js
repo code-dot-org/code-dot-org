@@ -17,7 +17,7 @@ var api = require('./api');
 var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
-var AppView = require('../templates/AppView.jsx');
+var AppLabView = require('./AppLabView.jsx');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
@@ -558,7 +558,7 @@ Applab.startSharedAppAfterWarnings = function () {
       // we closed the dialog without hitting too_young
       // Only want to ask about age once across apps
       if (!Applab.user.isSignedIn) {
-        localStorage.setItem('is13Plus', 'true');
+        utils.trySetLocalStorage('is13Plus', 'true');
       }
       // Only want to ask about storing data once per app.
       if (showStoreDataAlert) {
@@ -567,7 +567,7 @@ Applab.startSharedAppAfterWarnings = function () {
       window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
     },
     handleTooYoung: function () {
-      localStorage.setItem('is13Plus', 'false');
+      utils.trySetLocalStorage('is13Plus', 'false');
       window.location.href = '/too_young';
     }
   }), modal);
@@ -769,13 +769,7 @@ Applab.init = function(config) {
           appWidth: Applab.appWidth,
           appHeight: Applab.footerlessAppHeight
         }),
-        controls: firstControlsRow,
-        extraControlRows: extraControlRows,
-        pinWorkspaceToBottom: true,
-        // TODO (brent) - seems a little gross that we've made this part of a
-        // template shared across all apps
-        // disable designMode if we're readonly
-        hasDesignMode: !config.readonlyWorkspace,
+        controls: firstControlsRow
       }
     });
   }.bind(this);
@@ -856,7 +850,7 @@ Applab.init = function(config) {
 
       designMode.renderDesignWorkspace();
 
-      designMode.configurePlaySpaceHeader();
+      designMode.loadDefaultScreen();
 
       designMode.toggleDesignMode(Applab.startInDesignMode());
 
@@ -867,14 +861,53 @@ Applab.init = function(config) {
     }
   }.bind(this);
 
-  React.render(React.createElement(AppView, {
+  Applab.reactInitialProps_ = {
     assetUrl: studioApp.assetUrl,
+    isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
+    isReadOnlyView: !!config.readonlyWorkspace,
     isShareView: !!config.share,
+    isViewDataButtonHidden: !!config.level.hideViewDataButton,
     renderCodeWorkspace: renderCodeWorkspace,
     renderVisualizationColumn: renderVisualizationColumn,
     onMount: onMount
-  }), document.getElementById(config.containerId));
+  };
+
+  Applab.reactMountPoint_ = document.getElementById(config.containerId);
+
+  Applab.render();
+};
+
+/**
+ * Cache of props, established during init, to use when re-rendering top-level
+ * view.  Eventually, it would be best to replace these with a Redux store.
+ * @type {Object}
+ */
+Applab.reactInitialProps_ = {};
+
+/**
+ * Element on which to mount the top-level React view.
+ * @type {Element}
+ * @private
+ */
+Applab.reactMountPoint_ = null;
+
+/**
+ * Trigger a top-level React render
+ */
+Applab.render = function () {
+  var nextProps = $.extend({}, Applab.reactInitialProps_, {
+    isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
+    startInDesignMode: Applab.startInDesignMode(),
+    activeScreenId: designMode.getCurrentScreenId(),
+    screenIds: designMode.getAllScreenIds(),
+    onDesignModeButton: Applab.onDesignModeButton,
+    onCodeModeButton: Applab.onCodeModeButton,
+    onViewDataButton: Applab.onViewData,
+    onScreenChange: designMode.changeScreen,
+    onScreenCreate: designMode.createScreen
+  });
+  React.render(React.createElement(AppLabView, nextProps), Applab.reactMountPoint_);
 };
 
 /**
@@ -1496,15 +1529,6 @@ var checkFinished = function () {
 
 Applab.startInDesignMode = function () {
   return !!level.designModeAtStart;
-};
-
-Applab.hideDesignModeToggle = function () {
-  return !!level.hideDesignMode || !!studioApp.share;
-};
-
-Applab.hideViewDataButton = function () {
-  var isEditing = window.dashboard && window.dashboard.project.isEditing();
-  return !!level.hideViewDataButton || !!level.hideDesignMode || !!studioApp.share || !isEditing;
 };
 
 Applab.isInDesignMode = function () {

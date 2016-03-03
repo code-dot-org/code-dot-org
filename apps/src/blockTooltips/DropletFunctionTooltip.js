@@ -54,6 +54,12 @@ var DropletFunctionTooltip = function (appMsg, definition) {
   /** @type {string} */
   this.functionName = definition.func;
 
+  /** @type {boolean} */
+  this.isProperty = definition.type === 'property';
+
+  /** @type {string} */
+  this.tipPrefix = definition.tipPrefix;
+
   var description = this.getLocalization(this.descriptionKey());
   if (description) {
     this.description = description();
@@ -68,13 +74,21 @@ var DropletFunctionTooltip = function (appMsg, definition) {
   this.parameterInfos = [];
 
   for (var paramId = 0; ; paramId++) {
+    var paramInfo = {};
+    /*
+     * Parameter names can be specified in the localization file if desired,
+     * but will also be pulled from the block definition's paletteParams array.
+     */
     var paramName = this.getLocalization(this.parameterNameKey(paramId));
-    if (!paramName) {
+    if (paramName) {
+      paramInfo.name = paramName();
+    } else {
+      paramInfo.name = definition.paletteParams && definition.paletteParams[paramId];
+    }
+    if (!paramInfo.name) {
       break;
     }
 
-    var paramInfo = {};
-    paramInfo.name = paramName();
     var paramDesc = this.getLocalization(this.parameterDescriptionKey(paramId));
     if (paramDesc) {
       paramInfo.description = paramDesc();
