@@ -440,6 +440,14 @@ GameLab.prototype.completeRedrawIfDrawComplete = function () {
   }
 };
 
+GameLab.prototype.expandPropertyBlock = function (value, position) {
+  if (!position || this.studioApp_.editor.isDragPointOverSocket(position)) {
+    return value;
+  } else {
+    return value + ' = __;';
+  }
+};
+
 GameLab.prototype.handleExecutionError = function (err, lineNumber) {
 /*
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
