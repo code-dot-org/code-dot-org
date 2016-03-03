@@ -1,4 +1,5 @@
 require 'rack/attack'
+require 'rack/attack/path_normalizer'
 require 'active_support/core_ext/numeric/time'
 
 class Rack::Attack
@@ -11,6 +12,9 @@ class Rack::Attack
 
   redis_url = CDO.geocoder_redis_url || 'redis://localhost:6379'
   cache.store = StoreProxy::RedisStoreProxy.new(Redis.new(url: redis_url))
+
+  # Don't strip trailing slashes.
+  PathNormalizer = FallbackPathNormalizer
 
   def self.limits(max_per_min)
     # allow 4x the max rate over 15s, 2x the max rate over 60s, and 1x the max rate over 4min.
