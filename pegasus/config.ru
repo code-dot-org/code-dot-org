@@ -1,8 +1,8 @@
 require File.expand_path('../router', __FILE__)
 
-# Force out-of-band garbage collection once every 5 requests for all endpoints in the application.
-require 'unicorn/oob_gc'
-use Unicorn::OobGC
+# Force out-of-band garbage collection after every request for all endpoints in the application.
+require 'gctools/oobgc'
+use GC::OOB::UnicornMiddleware
 
 require 'rack/ssl-enforcer'
 use Rack::SslEnforcer,

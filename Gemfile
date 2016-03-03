@@ -76,6 +76,7 @@ group :doc do
 end
 
 gem 'unicorn', '~> 4.8.2'
+gem 'gctools', require: false
 
 gem 'chronic', '~> 0.10.2'
 
