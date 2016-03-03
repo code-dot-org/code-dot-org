@@ -38,6 +38,7 @@ def saucelabs_browser
   end
 
   capabilities[:javascript_enabled] = 'true'
+  capabilities[:takes_screenshot] = 'true'
   capabilities[:name] = ENV['TEST_RUN_NAME']
   capabilities[:build] = ENV['BUILD']
 
