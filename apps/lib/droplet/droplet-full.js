@@ -7426,7 +7426,7 @@ Editor.prototype.getClosestDroppableBlock = function(mainPoint) {
 Editor.prototype.getClosestDroppableBlockFromPosition = function(position) {
   var mainPoint;
   if (!this.currentlyUsingBlocks) {
-    return nil;
+    return null;
   }
   mainPoint = this.trackerPointToMain(position);
   return this.getClosestDroppableBlock(mainPoint);
