@@ -91,6 +91,7 @@ def load_configuration()
     'dynamo_tables_table'         => "#{rack_env}_tables",
     'dynamo_properties_table'     => "#{rack_env}_properties",
     'dynamo_table_metadata_table'         => "#{rack_env}_table_metadata",
+    'throttle_data_apis'          => false,
     'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
