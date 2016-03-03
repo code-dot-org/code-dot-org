@@ -240,9 +240,9 @@ var projects = module.exports = {
     }
   },
 
-  showShareRemixHeader: function() {
+  showHeaderForProjectBacked: function() {
     if (this.shouldUpdateHeaders()) {
-      dashboard.header.showShareRemixHeader();
+      dashboard.header.showHeaderForProjectBacked();
     }
   },
   setName: function(newName) {
@@ -306,7 +306,7 @@ var projects = module.exports = {
 
         if (current.hidden) {
           if (!this.isFrozen()) {
-            this.showShareRemixHeader();
+            this.showHeaderForProjectBacked();
           }
         } else {
           if (current.isOwner || !parsePath().channelId) {
@@ -610,7 +610,7 @@ var projects = module.exports = {
           deferred.reject();
         } else {
           fetchSource(data, function () {
-            projects.showShareRemixHeader();
+            projects.showHeaderForProjectBacked();
             fetchAbuseScore(function () {
               deferred.resolve();
             });
