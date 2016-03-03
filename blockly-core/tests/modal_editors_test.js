@@ -146,17 +146,12 @@ function test_functionEditor_deleteButton() {
   initializeFunctionEditor(USER_CREATED_PROCEDURE);
   openFunctionEditor('test-usercreated-function');
 
-  assertNotNull('functionEditor exists',
-      Blockly.functionEditor);
   assertNotNull('Function exists',
       Blockly.mainBlockSpace.findFunction('test-usercreated-function'));
-  assertNotNull('Delete',
-      goog.dom.getElementByClass('svgTextButton'));
-  assertEquals('Delete',
+  assertEquals('Delete button says "Delete"', 'Delete',
       goog.dom.getElementByClass('svgTextButton').textContent);
-  assertNotNull('mainBlockSpace exists',
-      Blockly.mainBlockSpace);
 
+  // Skip confirmation dialog
   Blockly.customSimpleDialog = function(e) {e.onCancel();};
   Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
 
