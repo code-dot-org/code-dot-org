@@ -28,7 +28,7 @@ nav: events_nav
 -pass unless results.count > 0
 -require 'active_support/core_ext/hash/slice'
 -results.each do |result|
-  -events << result.extract!('organization_name_s', 'location_city_s')
+  -events << result.slice('organization_name_s', 'location_city_s')
 
 %h1= hoc_s(:events_all_title) + ' — ' + (state ? state : country)
 
