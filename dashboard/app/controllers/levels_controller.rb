@@ -42,16 +42,6 @@ class LevelsController < ApplicationController
     type = params[:type]
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
 
-    # The concept of ideal level sources predates the concept of
-    # solution blocks for all Blockly levels. A level could have an
-    # ideal level source but no solution blocks if it had an ideal level
-    # source before solution blocks were added; in that case, we want to
-    # use the ideal level source to define the initial set of solution
-    # blocks
-    if type == 'solution_blocks' && blocks_xml == EMPTY_XML && @level.ideal_level_source
-      blocks_xml = @level.ideal_level_source.data
-    end
-
     blocks_xml = Blockly.convert_category_to_toolbox(blocks_xml) if type == 'toolbox_blocks'
     level_view_options(
       start_blocks: blocks_xml,
