@@ -1,0 +1,67 @@
+<%
+var msg = require('../locale');
+var hideRunButton = locals.hideRunButton || false;
+%>
+
+<% var gameButtons = function() { -%>
+<div id="gameButtons">
+  <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
+    <div><%= msg.runProgram() %></div>
+    <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
+  </button>
+  <button id="resetButton" class="launch blocklyLaunch" style="display: none">
+    <div><%= msg.resetProgram() %></div>
+    <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
+  </button>
+  <% if (data.controls) { %>
+    <%- data.controls %>
+  <% } %>
+  <% if (!data.pinWorkspaceToBottom && data.extraControlRows) { %>
+    <%- data.extraControlRows %>
+  <% } %>
+</div>
+<% }; -%>
+
+<div id="visualization">
+  <%- data.visualization %>
+</div>
+
+<% gameButtons() %>
+
+<div id="belowVisualization">
+
+  <div id="bubble" class="clearfix">
+    <table id="prompt-table">
+      <tr>
+        <td id="prompt-icon-cell" style="display: none">
+          <img id="prompt-icon"/>
+        </td>
+        <td id="prompt-cell">
+          <p id="prompt">
+          <p id="prompt2" style="display:none">
+          </p>
+        </td>
+      </tr>
+    </table>
+    <% if (data.inputOutputTable) { %>
+      <div id="input-table">
+        <table>
+          <tr>
+            <th>Input</th>
+            <th>Output</th>
+          </tr>
+          <% for (var i = 0; i < data.inputOutputTable.length; i++) { %>
+          <tr>
+            <td><%- data.inputOutputTable[i][0] %></td>
+            <td><%- data.inputOutputTable[i][1] %></td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
+    <% } %>
+    <div id="ani-gif-preview-wrapper">
+      <div id="ani-gif-preview">
+      </div>
+    </div>
+  </div>
+</div>

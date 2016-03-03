@@ -1,0 +1,23 @@
+name 'CSPPD3-u5 Create PT checkin'
+skip_sound true
+answer_line true
+success_title "Got it!"
+success_body "Thanks for your response"
+
+right 'I better understand what these lessons are about'
+right 'My understanding of these lessons has not changed'
+right 'I understand what these lessons are about less than I did before I started' 
+
+markdown <<MARKDOWN
+
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Unit 5 Overview > Checking in on the Create PT
+
+<br/>
+#### Feelings about Chapter
+
+Now that you've had a chance to learn a little more about the lessons in the second chapter of Unit 5, and seen a couple of resources to help explain the concepts covered, how are you feeling about what you see? 
+<br><br>
+*Again, there's no right or wrong answer, and absolutely no judgement here-- we're just trying to get a sense of how you feel about what's covered in the unit!* 
+MARKDOWN

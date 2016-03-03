@@ -1,0 +1,87 @@
+name 'CSPPD3-u5 chapter 1 concepts'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Unit 5 Overview > Chapter 1: Explore Performance Task > Concepts
+
+#### What's Inside?
+
+The skinny: The Explore Performance Task is essentially a research paper.  Students must investigate a modern computing innovation, write about how it works, and describe its impacts (both good and bad) on society.<br><br>
+
+**Unit 5 - Lesson 1** gears students up to actually do the task.  In that lesson students will:
+
+- Review the Explore Performance Task description and rubric
+- Understand what **computational artifact** means
+- Understand what a **computing innovation** is for this context
+- Review **research practices** and strategies (how to cite sources properly)
+
+**Unit 5 - Lesson 2** is the actual administration of the task.  The associated lesson plan contains:
+
+- Timeline for administering the task
+- Tips on the role of the role of the instructor
+- Instructor Dos and Don'ts during administration of the Task 
+
+#### Content Overview
+
+Students need to be given 8 hours of class time to complete the Explore PT. The AP Explore Performance Task and Rubric make a list of all the steps in the process. This list includes:
+
+* Coming up with a computing innovation to research.
+* Finding sources about your computing innovation.
+* Written responses.
+* Computational Artifact.
+
+For more details about the performance task, refer to the following documents:
+
+* [AP Explore Performance Task Overview](https://drive.google.com/open?id=0B2UNlnU_5Vg4eWlNN1dKNnRCTG8)
+* Official rubric coming soon
+
+##### What is a Computational Innovation?
+
+The College Board requires that students select and investigate a computational artifact that:
+
+* Has or has had the potential to have significant beneficial and harmful effects on society, economy, or culture.
+* Consumes, produces, and/or transforms data.
+* Raises at least one data storage concern, data privacy concern, or data security concern.
+
+##### What is a Computational Artifact?
+
+The College Board defines a “computational artifact” as “a visualization, a graphic, a program, video, or audio that students create using a computer.”
+
+Students should understand which computational artifacts would be considered effective and ineffective:<br><br>
+
+**Effective artifacts include:**
+
+* Visual, graphical and/or audio content to help a reader understand the purpose of a computing innovation.
+* Using communication media such as animations, comic strips, infographics, and/or public service announcements to illustrate the purpose of a computing innovation.
+
+**Ineffective artifacts include:**
+
+* Artifacts that repeat information previously supplied in the written responses.
+* Multi-slide presentations with paragraphs of text or bullets.
+* Artifacts that have not been created by the student.
+* Artifacts that focus on advertising the computing innovation’s functionality instead of the purpose of the innovation.
+
+In Unit 4 we spent time learning how to make data visualizations *because* they work as very effective artifacts that can tell a story without text.  A suggested strategy is to find some data, or even create some data to create a chart or some kind that conveys a “story” in the chart.
+
+##### How Have Students Prepared for This Task?
+
+Previously in this class, students have done a number of practice PTs to prepare them for the actual Explore PT, including: 
+
+* Unit 2, Lesson 12: The Internet and Society
+* Unit 2, Lesson 20: Cybersecurity Innovations View Lesson Plan 
+* Unit 4, Lesson 09 : Tell a Data Story
+* Unit 4, Lesson 11: Data Innovations
+* Unit 4, Lesson 14: Propose an Innovation
+
+In these practice PTs, students practiced the following skills:
+
+* Researching a specific innovation
+* Writing about the innovation
+* Creating visualizations 
+* Understanding and explaining how data is used
+
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

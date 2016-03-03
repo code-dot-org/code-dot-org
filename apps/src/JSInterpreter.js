@@ -71,11 +71,12 @@ var JSInterpreter = module.exports = function (options) {
  */
 JSInterpreter.prototype.parse = function (options) {
   if (!this.studioApp.hideSource) {
-    this.codeInfo = {};
-    this.codeInfo.userCodeStartOffset = 0;
-    this.codeInfo.userCodeLength = options.code.length;
+    this.calculateCodeInfo(options.code);
+
     var session = this.studioApp.editor.aceEditor.getSession();
-    this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+    this.isBreakpointRow = codegen.isAceBreakpointRow.bind(null, session);
+  } else {
+    this.isBreakpointRow = function () { return false; };
   }
 
   var self = this;
@@ -167,6 +168,17 @@ JSInterpreter.prototype.parse = function (options) {
     this.handleError();
   }
 
+};
+
+/**
+ * Init `this.codeInfo` with cumulative length info (used to locate breakpoints).
+ * @param code
+ */
+JSInterpreter.prototype.calculateCodeInfo = function (code) {
+  this.codeInfo = {};
+  this.codeInfo.userCodeStartOffset = 0;
+  this.codeInfo.userCodeLength = code.length;
+  this.codeInfo.cumulativeLength = codegen.calculateCumulativeLength(code);
 };
 
 /**
@@ -398,10 +410,6 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
   var unwindingAfterStep = false;
   var inUserCode;
   var userCodeRow;
-  var session;
-  if (!this.studioApp.hideSource) {
-    session = this.studioApp.editor.aceEditor.getSession();
-  }
 
   // In each tick, we will step the interpreter multiple times in a tight
   // loop as long as we are interpreting code that the user can't see
@@ -411,12 +419,21 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
        stepsThisTick++) {
     // Check this every time because the speed is allowed to change...
     atMaxSpeed = this.shouldRunAtMaxSpeed();
-    // NOTE: when running with no source visible or at max speed, we
-    // call a simple function to just get the line number, otherwise we call a
-    // function that also selects the code:
-    var selectCodeFunc = (this.studioApp.hideSource || (atMaxSpeed && !this.paused)) ?
-            this.getUserCodeLine :
-            this.selectCurrentCode;
+    // NOTE:
+    // (1) When running with no source visible AND at max speed, always set
+    //   `userCodeRow` to -1. We'll never hit a breakpoint or need to add delay.
+    // (2) When running with no source visible OR at max speed, call a simple
+    //   function to just get the line number. Need to check `inUserCode` to
+    //   maybe stop at a breakpoint, or add a `speed(n)` delay.
+    // (3) Otherwise call a function that also highlights the code.
+    var selectCodeFunc;
+    if (this.studioApp.hideSource && atMaxSpeed) {
+      selectCodeFunc = function () { return -1; };
+    } else if (this.studioApp.hideSource || atMaxSpeed) {
+      selectCodeFunc = this.getUserCodeLine;
+    } else {
+      selectCodeFunc = this.selectCurrentCode;
+    }
     var currentScope = this.interpreter.getScope();
 
     if ((reachedBreak && !unwindingAfterStep) ||
@@ -447,7 +464,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     //       we have already stopped from the last step/breakpoint
     if (inUserCode && !unwindingAfterStep && !this.atInterstitialNode &&
         (atInitialBreakpoint ||
-         (codegen.isAceBreakpointRow(session, userCodeRow) &&
+         (this.isBreakpointRow(userCodeRow) &&
           !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)))) {
       // Yes, arrived at a new breakpoint:
       if (this.paused) {
@@ -708,9 +725,6 @@ JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
  * of the userCode area, the return value is -1
  */
 JSInterpreter.prototype.getUserCodeLine = function () {
-  if (this.studioApp.hideSource) {
-    return -1;
-  }
   var userCodeRow = -1;
   if (this.interpreter.stateStack[0]) {
     var node = this.interpreter.stateStack[0].node;

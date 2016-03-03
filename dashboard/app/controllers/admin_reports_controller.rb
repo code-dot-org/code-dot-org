@@ -9,12 +9,6 @@ class AdminReportsController < ApplicationController
   before_action :set_script
   include LevelSourceHintsHelper
 
-  def admin_concepts
-    SeamlessDatabasePool.use_persistent_read_connection do
-      render 'admin_concepts', formats: [:html]
-    end
-  end
-
   def funometer
     require 'cdo/properties'
     SeamlessDatabasePool.use_persistent_read_connection do
@@ -117,17 +111,25 @@ class AdminReportsController < ApplicationController
 # noinspection RubyResolve
     require Rails.root.join('scripts/archive/ga_client/ga_client')
 
-    @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
-    @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
-
     @is_sampled = false
+    # If the window dates are not explicitly specified, we render the page without data so as to
+    # not make the user wait on a lengthy GA query whose data will be discarded.
+    if params[:start_date].blank? || params[:end_date].blank?
+      @start_date = (DateTime.now - 7).strftime('%Y-%m-%d')
+      @end_date = DateTime.now.prev_day.strftime('%Y-%m-%d')
+
+      (render locals: {headers: [], data: []}) && return
+    end
+
+    @start_date = DateTime.parse(params[:start_date]).strftime('%Y-%m-%d')
+    @end_date = DateTime.parse(params[:end_date]).strftime('%Y-%m-%d')
 
     output_data = {}
     %w(Attempt Success).each do |key|
       dimension = 'ga:eventLabel'
       metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
       filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
-      if params[:filter]
+      if params[:filter].present?
         filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
       end
       ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
@@ -185,16 +187,19 @@ class AdminReportsController < ApplicationController
   end
 
   def admin_progress
+    require 'cdo/properties'
     SeamlessDatabasePool.use_persistent_read_connection do
-      @user_count = User.count
-      @all_script_levels = Script.twenty_hour_script.script_levels.includes({ level: :game })
+      stats = Properties.get(:admin_progress)
+      if stats.present?
+        @user_count = stats['user_count']
+        @levels_attempted = stats['levels_attempted']
+        @levels_attempted.default = 0
+        @levels_passed = stats['levels_passed']
+        @levels_passed.default = 0
 
-      @levels_attempted = User.joins(:user_levels).group(:level_id).where('best_result > 0').count
-      @levels_attempted.default = 0
-      @levels_passed = User.joins(:user_levels).group(:level_id).where('best_result >= 20').count
-      @levels_passed.default = 0
-
-      @stage_map = @all_script_levels.group_by { |sl| sl.level.game }
+        @all_script_levels = Script.twenty_hour_script.script_levels.includes({level: :game})
+        @stage_map = @all_script_levels.group_by {|sl| sl.level.game}
+      end
     end
   end
 
@@ -262,6 +267,64 @@ class AdminReportsController < ApplicationController
     end
   end
 
+  def retention
+    require 'cdo/properties'
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @scripts = params[:scripts_ids].present? ?
+        params[:scripts_ids].split(',').map(&:to_i) :
+        [1, 17, 18, 19, 23]  # Default to the CSF scripts.
+      # Get the cached retention_stats from the DB, trimming those stats to only the requested
+      # scripts, exiting early if the stats are blank.
+      raw_retention_stats = Properties.get(:retention_stats)
+      if raw_retention_stats.blank?
+        render(layout: false, text: 'Properties.get(:retention_stats) not found. Please contact '\
+          'an engineer.') && return
+      end
+      @retention_stats = {}
+      raw_retention_stats.each_pair do |key, key_data|
+        @retention_stats[key] = key_data.select{|script_id, _script_data| @scripts.include? script_id.to_i}
+      end
+      if @retention_stats['script_starts'].empty?
+        render(layout: false, text: 'No data could be found for the specified scripts. Please '\
+          'check the IDs, contacting an engineer as necessary.') && return
+      end
+      # Remove the stage_level_counts data, which are not used in this view.
+      @retention_stats.delete('stage_level_counts')
+      # Transform the count stats into row format to facilitate being added to charts and tables.
+      ['script_level_counts', 'script_stage_counts'].each do |key|
+        @retention_stats[key] = build_row_arrays(@retention_stats[key])
+      end
+    end
+  end
+
+  def retention_stages
+    require 'cdo/properties'
+
+    # Grab the requested stage IDs from the stage_ids parameter.
+    if !params[:stage_ids].present?
+      render(text: 'Please specify stage IDs in the stage_ids parameter, e.g., '\
+        '/admin/retention/stages/stage_ids=XXX,YYY,ZZZ.') && return
+    end
+    @stages = params[:stage_ids].split(',').map(&:to_i)
+
+    SeamlessDatabasePool.use_persistent_read_connection do
+      # Grab the data from the database, keeping data only for the requested stages.
+      raw_retention_stats = Properties.get(:retention_stats)
+      if raw_retention_stats.blank? || !raw_retention_stats.key?('stage_level_counts')
+        render(text: "Properties.get(:retention_stats) or "\
+          "Properties.get(:retention_stats)['stage_level_counts'] not found. Please contact an "\
+          "engineer.") && return
+      end
+      raw_retention_stats = raw_retention_stats['stage_level_counts'].
+        select{|stage_id, _stage_data| @stages.include? stage_id.to_i}
+      if raw_retention_stats.blank?
+        render(text: 'No data could be found for the specified stages. Please check the IDs, '\
+          'contacting an engineer as necessary.') && return
+      end
+      @retention_stats = build_row_arrays(raw_retention_stats)
+    end
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_script
     @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
@@ -279,11 +342,32 @@ class AdminReportsController < ApplicationController
     return 100.0 * ratings_to_process.where(rating: 1).count / ratings_to_process.count
   end
 
+  # Manipulates the count_stats hash of arrays to an array of arrays, each inner array representing
+  # a slice across the hash arrays.
+  # Returns nil if the hash is blank.
+  def build_row_arrays(count_stats)
+    # Determine the number of final number of rows, being the maximum array size in the hash.
+    array_length = count_stats.max_by{|_k,v| v.size}[1].size
+
+    # Initialize and construct the row_arrays.
+    row_arrays = Array.new(array_length) {Array.new(count_stats.size + 1, 0)}
+    row_arrays.each_with_index do |subarray, index|
+      subarray[0] = index
+    end
+    count_stats.values.each_with_index do |counts, index|
+      counts.each_with_index do |count, subindex|
+        row_arrays[subindex][index + 1] = count
+      end
+    end
+
+    return row_arrays
+  end
+
   def level_answers_csv
     send_data(
       CSV.generate do |csv|
         csv << @headers
-        @responses.each do |level_id, level_responses|
+        @responses.each_value do |level_responses|
           level_responses.each do |response|
             csv << response
           end

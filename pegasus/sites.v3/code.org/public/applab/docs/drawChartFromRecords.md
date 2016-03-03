@@ -80,10 +80,10 @@ ____________________________________________________
 
 [example]
 
-**Example: Sales and Price** Display both the count sold and price to see if a relationship exists. Includes use of 'options' paraemter on chart.
+**Example: Sales and Price** Display both the count sold and price to see if a relationship exists. Includes use of 'options' parameter on chart.
 
 ```
-// Display both the count sold and price to see if a relationship exists. Includes use of 'options' paraemter on chart.
+// Display both the count sold and price to see if a relationship exists. Includes use of 'options' parameter on chart.
 textLabel("foodChoiceLabel", "Vote for your favorite food:");
 dropdown("foodChoices", "","hotdogs $1.50", "pasta $2.00", "pizza $4.50", "tacos $3.00");
 var prices = [1.50, 2.00, 4.50, 3.00];

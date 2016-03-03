@@ -36,7 +36,7 @@ module CdoApps
     setup_cmd = "execute[#{node['cdo-apps']['local_mysql'] ? "setup-#{app_name}" : "build-#{app_name}"}]"
 
     template init_script do
-      source 'init.d.erb'
+      source 'unicorn.sh.erb'
       user 'root'
       group 'root'
       mode '0755'
@@ -44,7 +44,8 @@ module CdoApps
         app_root: app_root,
         pid_file: "#{app_root}/config/unicorn.rb.pid",
         user: user,
-        env: node.chef_environment
+        env: node.chef_environment,
+        bundle_env: node['cdo-apps']['bundle_env']
       notifies :restart, "service[#{app_name}]", :delayed
 
       # Bootstrap the first cdo-apps Rakefile build on a new system.
@@ -90,8 +91,17 @@ module CdoApps
 
       # Restart when gem bundle is updated
       subscribes :restart, 'execute[bundle-install]', :delayed
+
+      # Ensure globals.yml is up-to-date before (re)starting service.
+      notifies :create, 'template[globals]', :before
       only_if { File.exist? init_script }
     end
 
+    # Always restart service whenever port/socket listener configuration is changed.
+    file "#{app_name}_listeners" do
+      path "#{Chef::Config[:file_cache_path]}/#{app_name}_listeners"
+      content lazy { "#{node['cdo-secrets']["#{app_name}_sock"]}:#{node['cdo-secrets']["#{app_name}_port"]}" }
+      notifies :restart, "service[#{app_name}]", :immediately
+    end
   end
 end
