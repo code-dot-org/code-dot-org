@@ -2,6 +2,12 @@ require pegasus_dir 'forms/volunteer_engineer_submission'
 
 class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
 
+  # Ability for volunteers to have a custom unsubscribe preference from teacher
+  # requests was added during HoC 2015. They had two options to unsubscribe: until the
+  # following year or to unsubscribe from teacher requests forever. Language was later
+  # updated so that "until next year" was "until next Hour of Code." That way we don't
+  # have to have an untilXXXX every year, and we can just update the query before
+  # and after each Hour of Code.
   UNSUBSCRIBE_2016 = "until2016"
   UNSUBSCRIBE_HOC = "untilhoc"
   UNSUBSCRIBE_FOREVER = "forever"
