@@ -76,6 +76,8 @@ class PropertiesApi < Sinatra::Base
     parsed_value = PropertyBag.parse_value(request.body.read)
     value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
 
+    too_large if value[:status] == 'TOO_LARGE'
+
     dont_cache
     content_type :json
     value.to_json
