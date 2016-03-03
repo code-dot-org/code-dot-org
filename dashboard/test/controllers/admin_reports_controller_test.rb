@@ -33,6 +33,7 @@ class AdminReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :admin_progress
   generate_admin_only_tests_for :admin_stats
   generate_admin_only_tests_for :debug
+  generate_admin_only_tests_for :diversity_survey
   generate_admin_only_tests_for :funometer
   generate_admin_only_tests_for :level_answers
   generate_admin_only_tests_for :funometer_by_script, script_id: 1
