@@ -283,7 +283,7 @@ ActiveRecord::Schema.define(version: 20160301213220) do
     t.string   "type",                     limit: 255
     t.string   "md5",                      limit: 255
     t.boolean  "published",                              default: false, null: false
-    t.string   "notes",                    limit: 255
+    t.text     "notes",                    limit: 65535
   end
 
   add_index "levels", ["game_id"], name: "index_levels_on_game_id", using: :btree
