@@ -411,4 +411,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Гледайте видеото"},
 "when":function(d){return "когато"},
 "whenRun":function(d){return "при стартиране"},
-"workspaceHeaderShort":function(d){return "Работна област: "}};
+"workspaceHeaderShort":function(d){return "Работна област: "},
+"dropletBlock_greaterThanOrEqualOperator_description":function(d){return "Tests whether a value is greater than or equal to another value. Returns true if the value on the left-hand side of the expression is greater than or equal to the value on the right-hand side of the expression."},
+"dropletBlock_greaterThanOrEqualOperator_signatureOverride":function(d){return "Greater than or equal operator"},
+"dropletBlock_lessThanOrEqualOperator_description":function(d){return "Tests whether a value is less than or equal to another value. Returns true if the value on the left-hand side of the expression is less than or equal to the value on the right-hand side of the expression."},
+"dropletBlock_lessThanOrEqualOperator_signatureOverride":function(d){return "Less than or equal operator"}};

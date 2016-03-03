@@ -95,11 +95,12 @@ DropletTooltipManager.prototype.registerBlocks = function () {
     this.codeFunctions,
     this.autocompletePaletteApisOnly);
   blocks.forEach(function (dropletBlockDefinition) {
+    var key = dropletBlockDefinition.modeOptionName || dropletBlockDefinition.func;
     if (dropletBlockDefinition.docFunc) {
       // If a docFunc was specified, update our mapping
-      this.docFuncMapping_[dropletBlockDefinition.func] = dropletBlockDefinition.docFunc;
+      this.docFuncMapping_[key] = dropletBlockDefinition.docFunc;
     } else {
-      this.blockTypeToTooltip_[dropletBlockDefinition.func] =
+      this.blockTypeToTooltip_[key] =
         new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
     }
   }, this);

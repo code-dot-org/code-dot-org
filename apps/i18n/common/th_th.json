@@ -56,7 +56,7 @@
   "dropletBlock_declareAssign_x_array_1_4_param1": "1,2,3,4",
   "dropletBlock_declareAssign_x_array_1_4_param1_description": "The initial values to the array",
   "dropletBlock_declareAssign_x_array_1_4_signatureOverride": "Declare a variable assigned to an array",
-  "dropletBlock_declareAssign_x_description": "Create a variable for the first time",
+  "dropletBlock_declareAssign_x_description": "Declares a variable with the given name after 'var', and assigns it to the value on the right side of the expression",
   "dropletBlock_declareAssign_x_param0": "x",
   "dropletBlock_declareAssign_x_param0_description": "The name you will use in the program to reference the variable",
   "dropletBlock_declareAssign_x_param1": "0",
@@ -78,7 +78,7 @@
   "dropletBlock_declareNoAssign_x_signatureOverride": "ประกาศตัวแปร",
   "dropletBlock_divideOperator_description": "หารตัวเลขสองตัว",
   "dropletBlock_divideOperator_signatureOverride": "Divide operator",
-  "dropletBlock_equalityOperator_description": "ตรวจสอบความเท่ากัน",
+  "dropletBlock_equalityOperator_description": "Test whether two values are equal. Returns true if the value on the left-hand side of the expression equals the value on the right-hand side of the expression, and false otherwise",
   "dropletBlock_equalityOperator_param0": "x",
   "dropletBlock_equalityOperator_param0_description": "The first value to use for comparison.",
   "dropletBlock_equalityOperator_param1": "y",
@@ -91,7 +91,7 @@
   "dropletBlock_functionParams_none_description": "กลุ่มของคำสั่งที่ทำงานเมื่อเรียกใช้งาน",
   "dropletBlock_functionParams_none_signatureOverride": "กำหนดฟังก์ชัน",
   "dropletBlock_getTime_description": "รับเวลาในปัจจุบันเป็นหน่วยมิลลิวินาที",
-  "dropletBlock_greaterThanOperator_description": "Compare two numbers",
+  "dropletBlock_greaterThanOperator_description": "Tests whether a number is greater than another number. Returns true if the value on the left-hand side of the expression is strictly greater than the value on the right-hand side of the expression",
   "dropletBlock_greaterThanOperator_param0": "x",
   "dropletBlock_greaterThanOperator_param0_description": "The first value to use for comparison.",
   "dropletBlock_greaterThanOperator_param1": "y",
@@ -256,5 +256,9 @@
   "watchVideo": "ดูวีดีโอ",
   "when": "เมื่อ",
   "whenRun": "เมื่อเรียกให้ทำงาน",
-  "workspaceHeaderShort": "พื้นที่ทำงาน: "
+  "workspaceHeaderShort": "พื้นที่ทำงาน: ",
+  "dropletBlock_greaterThanOrEqualOperator_description": "Tests whether a value is greater than or equal to another value. Returns true if the value on the left-hand side of the expression is greater than or equal to the value on the right-hand side of the expression.",
+  "dropletBlock_greaterThanOrEqualOperator_signatureOverride": "Greater than or equal operator",
+  "dropletBlock_lessThanOrEqualOperator_description": "Tests whether a value is less than or equal to another value. Returns true if the value on the left-hand side of the expression is less than or equal to the value on the right-hand side of the expression.",
+  "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Less than or equal operator"
 }

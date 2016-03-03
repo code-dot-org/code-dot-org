@@ -233,7 +233,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_declareNoAssign_x_signatureOverride":function(d){return "Deklariraj varijablu"},
 "dropletBlock_divideOperator_description":function(d){return "Podijeli dva broja"},
 "dropletBlock_divideOperator_signatureOverride":function(d){return "Divide operator"},
-"dropletBlock_equalityOperator_description":function(d){return "Test for equality"},
+"dropletBlock_equalityOperator_description":function(d){return "Test whether two values are equal. Returns true if the value on the left-hand side of the expression equals the value on the right-hand side of the expression, and false otherwise"},
 "dropletBlock_equalityOperator_param0":function(d){return "x"},
 "dropletBlock_equalityOperator_param0_description":function(d){return "The first value to use for comparison."},
 "dropletBlock_equalityOperator_param1":function(d){return "y"},
@@ -246,7 +246,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_functionParams_none_description":function(d){return "Skup izjava koji izvršavaju zadatak ili računaju vrijednost pri pozivu funkcije"},
 "dropletBlock_functionParams_none_signatureOverride":function(d){return "Definiraj funkciju"},
 "dropletBlock_getTime_description":function(d){return "Uzmi trenutno vrijeme u milisekundama"},
-"dropletBlock_greaterThanOperator_description":function(d){return "Compare two numbers"},
+"dropletBlock_greaterThanOperator_description":function(d){return "Tests whether a number is greater than another number. Returns true if the value on the left-hand side of the expression is strictly greater than the value on the right-hand side of the expression"},
 "dropletBlock_greaterThanOperator_param0":function(d){return "x"},
 "dropletBlock_greaterThanOperator_param0_description":function(d){return "The first value to use for comparison."},
 "dropletBlock_greaterThanOperator_param1":function(d){return "y"},
@@ -411,4 +411,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Pogledaj Video"},
 "when":function(d){return "kada"},
 "whenRun":function(d){return "pri pokretanju"},
-"workspaceHeaderShort":function(d){return "Radni prostor: "}};
+"workspaceHeaderShort":function(d){return "Radni prostor: "},
+"dropletBlock_greaterThanOrEqualOperator_description":function(d){return "Tests whether a value is greater than or equal to another value. Returns true if the value on the left-hand side of the expression is greater than or equal to the value on the right-hand side of the expression."},
+"dropletBlock_greaterThanOrEqualOperator_signatureOverride":function(d){return "Greater than or equal operator"},
+"dropletBlock_lessThanOrEqualOperator_description":function(d){return "Tests whether a value is less than or equal to another value. Returns true if the value on the left-hand side of the expression is less than or equal to the value on the right-hand side of the expression."},
+"dropletBlock_lessThanOrEqualOperator_signatureOverride":function(d){return "Less than or equal operator"}};
