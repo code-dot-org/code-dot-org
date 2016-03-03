@@ -28,10 +28,10 @@ class Plc::ScriptCompletionTask < Plc::Task
     #I'm not wild about the joinery here - we can definitely save time by adding denormalizing user_id on the
     #enrollment_task_assignment table. The number of script completions tasks associated with a user won't be that
     #high, so it's okay to select all of them and pick the ones we want
-     user_script.user.plc_task_assignments.joins(:plc_task)
-                          .where('plc_tasks.type': 'Plc::ScriptCompletionTask')
-                          .includes(:plc_task)
-                          .select {|x| x.plc_task.script_id == user_script.script_id}
-                          .map(&:complete_assignment)
+    user_script.user.plc_task_assignments.joins(:plc_task).
+                          where('plc_tasks.type': 'Plc::ScriptCompletionTask').
+                          includes(:plc_task).
+                          select {|x| x.plc_task.script_id == user_script.script_id}.
+                          map(&:complete_assignment)
   end
 end
