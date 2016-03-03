@@ -44,6 +44,26 @@ class TablesApi < Sinatra::Base
   end
 
   #
+  # post /v3/(shared|user)-tables/<channel-id>/<table-name>/metadata
+  #
+  # Sets the metdata for the given table
+  #
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/metadata$} do |endpoint, channel_id, table_name|
+    dont_cache
+    content_type :json
+
+    table = TableType.new(channel_id, storage_id(endpoint), table_name)
+
+    # create metadata from records if we don't have any
+    table.ensure_metadata
+
+    column_list = request.GET['column_list']
+    JSON.parse(column_list).each{ |col| table.add_column(col) } unless column_list.nil?
+
+    table.metadata.to_json
+  end
+
+  #
   # GET /v3/(shared|user)-tables/<channel-id>/<table-name>/<row-id>
   #
   # Returns a single row by id.
@@ -296,8 +316,6 @@ class TablesApi < Sinatra::Base
     json_data.keys.each do |table_name|
       table = TableType.new(channel_id, storage_id(endpoint), table_name)
       if table.exists? && !overwrite
-        # make sure we have metadata (for cases where we previously didn't store metadata)
-        table.ensure_metadata()
         next
       end
 

@@ -155,8 +155,6 @@ class DynamoTable
       retry
     end
 
-    ensure_column_metadata(value)
-
     value.merge('id' => row_id)
   end
 
@@ -253,22 +251,8 @@ class DynamoTable
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException
       raise NotFound, "row `#{id}` not found in `#{@table_name}` table"
     end
-    ensure_column_metadata(value)
 
     value.merge('id' => id)
-  end
-
-  # Given a row from our table, ensure that all columns in that row appear in
-  # our column_list metadata, updating metadata as appropriate to add them
-  def ensure_column_metadata(row)
-    ensure_metadata
-    column_list = JSON.parse(metadata['column_list'])
-    row_columns = TableMetadata.generate_column_list([row])
-    new_column_list = (column_list + row_columns).uniq
-
-    if column_list != new_column_list
-      set_column_list_metadata(new_column_list)
-    end
   end
 
   def items()
