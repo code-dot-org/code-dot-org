@@ -1,3 +1,5 @@
+require 'sinatra/base'
+
 #
 # PropertyBag
 #
@@ -114,6 +116,12 @@ class DynamoPropertyBag
       },
     )
     value
+  rescue Aws::DynamoDB::Errors::ValidationException => e
+    if e.message == 'Item size has exceeded the maximum allowed size'
+      too_large
+    else
+      raise e
+    end
   end
 
   def to_hash()
