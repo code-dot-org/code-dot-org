@@ -372,6 +372,10 @@ describe('generateDropletModeOptions', function () {
           "color": "#D3E965",
           "title": "deleteRecord"
         },
+        "onRecordEvent": {
+          "color": "#D3E965",
+          "title": "onRecordEvent"
+        },
         "getUserId": {
           "value": true,
           "color": "#D3E965",
@@ -893,7 +897,7 @@ describe('filteredBlocksFromConfig', function () {
   };
 
   it('returns source and target when paletteOnly is true', function () {
-    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, true);
+    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, { paletteOnly: true });
     assert.deepEqual(mergedBlocks, [
       {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
       {func: 'targetBlock', category: 'Math', type: 'value'}
@@ -901,7 +905,7 @@ describe('filteredBlocksFromConfig', function () {
   });
 
   it('returns all blocks when paletteOnly is false', function () {
-    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, false);
+    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null);
     assert.deepEqual(mergedBlocks, dropletConfig.blocks);
   });
 
@@ -909,7 +913,7 @@ describe('filteredBlocksFromConfig', function () {
     var codeFunctions = {
       thirdBlock: null
     };
-    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, true);
+    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, { paletteOnly: true });
     assert.deepEqual(mergedBlocks, [
       {func: 'thirdBlock',  category: 'Math', type: 'value'}
     ]);

@@ -67,6 +67,9 @@ class LevelsController < ApplicationController
     type = params[:type]
     blocks_xml = Blockly.convert_toolbox_to_category(blocks_xml) if type == 'toolbox_blocks'
     @level.properties[type] = blocks_xml
+    if @level.respond_to?("add_missing_toolbox_blocks") && type == 'solution_blocks'
+      @level.add_missing_toolbox_blocks
+    end
     @level.save!
     render json: { redirect: level_url(@level) }
   end
@@ -111,7 +114,7 @@ class LevelsController < ApplicationController
       params[:level][:failure_condition] = Studio.default_failure_condition
     end
     params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
-    params.merge!(user: current_user)
+    params[:user] = current_user
 
     begin
       @level = type_class.create_from_level_builder(params, level_params)
@@ -226,6 +229,7 @@ class LevelsController < ApplicationController
   def level_params
     permitted_params = [
       :name,
+      :notes,
       :type,
       :level_num,
       :user,

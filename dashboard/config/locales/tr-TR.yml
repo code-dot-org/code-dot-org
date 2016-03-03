@@ -25,6 +25,7 @@
   hello: Merhaba dünya
   welcome_back: Hoş geldiniz %{name}
   submit: Gönder
+  unsubmit: Gönderme
   add_teacher_form:
     code:
       label: "Öğretmen ekleyin:"
@@ -368,6 +369,8 @@
     heading_elementary: "<h2>20 saat ders</h2><h1> yeni başlayanlar (bütün yaşlar)
       için </h1>"
     heading_apps: "<h1>Herkes</h1> için <h2>eğlence</h2>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>"
     your_gallery: Galeri
     no_primary_course: Code Studio'daki kurslardan birisini deneyin
@@ -488,6 +491,13 @@
       current: "Şu anki Seviyeler"
       unused: Kullanılmamış Seviyeler
   upsell:
+    applab:
+      title: Uygulama Laboratuvarı
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klasik Labirent
       body: Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.
@@ -545,11 +555,19 @@
     report_bug: Hata bildir
     support: Yardım Al
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Yanlış cevap
     wrong_body: Girdiğiniz cevap doğru değil.  Lütfen tekrar deneyin!
     correct_title: Doğru
     correct_body: "İşte bu doğru cevap."
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Teşekkür ederiz
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Teşekkür ederiz
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

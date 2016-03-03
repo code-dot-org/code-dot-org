@@ -5,6 +5,8 @@ var AUTOSAVE_INTERVAL = 30 * 1000;
 
 var ABUSE_THRESHOLD = 10;
 
+var NON_REMIXABLE_SKINS = ['hoc2015', 'infinity', 'gumball', 'iceage'];
+
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
@@ -238,9 +240,9 @@ var projects = module.exports = {
     }
   },
 
-  showShareRemixHeader: function() {
+  showHeaderForProjectBacked: function() {
     if (this.shouldUpdateHeaders()) {
-      dashboard.header.showShareRemixHeader();
+      dashboard.header.showHeaderForProjectBacked();
     }
   },
   setName: function(newName) {
@@ -304,7 +306,7 @@ var projects = module.exports = {
 
         if (current.hidden) {
           if (!this.isFrozen()) {
-            this.showShareRemixHeader();
+            this.showHeaderForProjectBacked();
           }
         } else {
           if (current.isOwner || !parsePath().channelId) {
@@ -350,7 +352,7 @@ var projects = module.exports = {
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
-        } else if (appOptions.skinId === 'hoc2015' || appOptions.skinId === 'infinity') {
+        } else if (NON_REMIXABLE_SKINS.indexOf(appOptions.skinId) != -1) {
           return null;
         }
         return 'playlab';
@@ -608,7 +610,7 @@ var projects = module.exports = {
           deferred.reject();
         } else {
           fetchSource(data, function () {
-            projects.showShareRemixHeader();
+            projects.showHeaderForProjectBacked();
             fetchAbuseScore(function () {
               deferred.resolve();
             });

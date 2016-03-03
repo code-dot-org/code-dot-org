@@ -25,6 +25,7 @@
   hello: Halo dunia
   welcome_back: Selamat datang kembali, %{name}
   submit: Kirim
+  unsubmit: Unsubmit
   add_teacher_form:
     code:
       label: 'Tambahkan seorang guru:'
@@ -383,6 +384,8 @@
     heading_hoc2014: "<h2>The Hour of Code untuk</h2><h1>Segala Usia</h1>"
     heading_elementary: "<h2>20 jam kursus untuk</h2><h1>Pemula (segala usia)</h1>"
     heading_apps: "<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>"
     your_gallery: Galeri
     no_primary_course: Coba kursus di Code Studio
@@ -508,6 +511,13 @@
       current: Tingkat saat ini
       unused: Tingkat yang tidak terpakai
   upsell:
+    applab:
+      title: Laboratorium Aplikasi
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Labirin klasik
       body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
@@ -566,11 +576,19 @@
     report_bug: Laporkan kesalahan
     support: Dapatkan bantuan
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Jawaban Salah
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!
     correct_title: Benar
     correct_body: Itu jawaban yang benar.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Terima kasih
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Terima kasih
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:

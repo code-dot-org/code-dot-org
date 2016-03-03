@@ -32,8 +32,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show script level for twenty hour' do
-    @controller.expects :slog
-
     get_show_script_level_page(@script_level)
     assert_response :success
 
@@ -104,11 +102,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should not log an activity monitor start for netsim' do
-    @controller.expects(:slog).never # don't log activity monitor start
-
     allthethings_script = Script.find_by_name('allthethings')
-    netsim_level = allthethings_script.levels.select { |level| level.game == Game.netsim }.first
-    netsim_script_level = allthethings_script.script_levels.select { |script_level| script_level.level_id == netsim_level.id }.first
+    netsim_level = allthethings_script.levels.find { |level| level.game == Game.netsim }
+    netsim_script_level = allthethings_script.script_levels.find { |script_level| script_level.level_id == netsim_level.id }
     get :show, script_id: allthethings_script, stage_id: netsim_script_level.stage.position, id: netsim_script_level.position
     assert_response :success
 
@@ -401,8 +397,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should show special script level by chapter" do
-    @controller.expects :slog
-
     # this works for 'special' scripts like flappy, hoc
     expected_script_level = ScriptLevel.where(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5).first
 
@@ -421,8 +415,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should show script level by stage and puzzle position" do
-    @controller.expects :slog
-
     # this works for custom scripts
 
     get :show, script_id: @custom_script, stage_id: 2, id: 1
@@ -433,8 +425,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show new style unplugged level with PDF link' do
-    @controller.expects(:slog).never
-
     script_level = Script.find_by_name('course1').script_levels.first
 
     get :show, script_id: script_level.script, stage_id: script_level.stage.position, id: script_level.position
@@ -506,8 +496,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should render blockly partial for blockly levels" do
-    @controller.expects :slog
-
     script = create(:script)
     level = create(:level, :blockly)
     stage = create(:stage, script: script)
@@ -521,8 +509,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "with callout defined should define callout JS" do
-    @controller.expects :slog
-
     script = create(:script)
     level = create(:level, :blockly, user_id: nil)
     stage = create(:stage, script: script)
@@ -847,7 +833,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     level = create(:applab, submittable: true)
     script_level = create(:script_level, level: level)
     Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
-    ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::SUBMITTED_RESULT)
+    ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::FREE_PLAY_RESULT, submitted: true)
 
     get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level
     assert_response :success

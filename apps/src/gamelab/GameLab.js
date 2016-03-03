@@ -6,7 +6,8 @@ var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
 var apiJavascript = require('./apiJavascript');
-var page = require('../templates/page.html.ejs');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
@@ -17,6 +18,7 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var assetPrefix = require('../assetManagement/assetPrefix');
+var AppView = require('../templates/AppView.jsx');
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -107,35 +109,59 @@ GameLab.prototype.init = function (config) {
     showConsole: true
   });
 
-  config.html = page({
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        localeDirection: this.studioApp_.localeDirection(),
+        extraControlRows: extraControlRows,
+        blockUsed : undefined,
+        idealBlockNumber : undefined,
+        editCode: this.level.editCode,
+        blockCounterClass : 'block-counter-default',
+        pinWorkspaceToBottom: true,
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: firstControlsRow,
+        extraControlRows: extraControlRows,
+        pinWorkspaceToBottom: true,
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  var onMount = function () {
+    config.loadAudio = this.loadAudio_.bind(this);
+    config.afterInject = this.afterInject_.bind(this, config);
+    config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
+
+    // Store p5specialFunctions in the unusedConfig array so we don't give warnings
+    // about these functions not being called:
+    config.unusedConfig = this.gameLabP5.p5specialFunctions;
+
+    this.studioApp_.init(config);
+
+    this.debugger_.initializeAfterDomCreated({
+      defaultStepSpeed: 1
+    });
+  }.bind(this);
+
+  React.render(React.createElement(AppView, {
     assetUrl: this.studioApp_.assetUrl,
-    data: {
-      visualization: require('./visualization.html.ejs')(),
-      localeDirection: this.studioApp_.localeDirection(),
-      controls: firstControlsRow,
-      extraControlRows: extraControlRows,
-      blockUsed : undefined,
-      idealBlockNumber : undefined,
-      editCode: this.level.editCode,
-      blockCounterClass : 'block-counter-default',
-      pinWorkspaceToBottom: true,
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
-  config.loadAudio = this.loadAudio_.bind(this);
-  config.afterInject = this.afterInject_.bind(this, config);
-  config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
-
-  // Store p5specialFunctions in the unusedConfig array so we don't give warnings
-  // about these functions not being called:
-  config.unusedConfig = this.gameLabP5.p5specialFunctions;
-
-  this.studioApp_.init(config);
-
-  this.debugger_.initializeAfterDomCreated({
-    defaultStepSpeed: 1
-  });
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
+    onMount: onMount
+  }), document.getElementById(config.containerId));
 };
 
 GameLab.prototype.loadAudio_ = function () {

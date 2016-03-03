@@ -246,7 +246,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_functionParams_none_description":function(d){return "Ένα σετ εντολών που εκτελεί μία εργασία ή υπολογίζει μία τιμή όταν καλείται η συνάρτηση"},
 "dropletBlock_functionParams_none_signatureOverride":function(d){return "Ορισμός μίας συνάρτησης"},
 "dropletBlock_getTime_description":function(d){return "Παίρνει την τρέχουσα ώρα σε χιλιοστά του δευτερολέπτου"},
-"dropletBlock_greaterThanOperator_description":function(d){return "Compare two numbers"},
+"dropletBlock_greaterThanOperator_description":function(d){return "Tests whether a number is greater than another number. Returns true if the value on the left-hand side of the expression is strictly greater than the value on the right-hand side of the expression"},
 "dropletBlock_greaterThanOperator_param0":function(d){return "x"},
 "dropletBlock_greaterThanOperator_param0_description":function(d){return "The first value to use for comparison."},
 "dropletBlock_greaterThanOperator_param1":function(d){return "y"},
@@ -411,4 +411,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Δείτε το βίντεο"},
 "when":function(d){return "όταν"},
 "whenRun":function(d){return "όταν εκτελείται"},
-"workspaceHeaderShort":function(d){return "Χώρος εργασίας: "}};
+"workspaceHeaderShort":function(d){return "Χώρος εργασίας: "},
+"dropletBlock_greaterThanOrEqualOperator_description":function(d){return "Tests whether a value is greater than or equal to another value. Returns true if the value on the left-hand side of the expression is greater than or equal to the value on the right-hand side of the expression."},
+"dropletBlock_greaterThanOrEqualOperator_signatureOverride":function(d){return "Greater than or equal operator"},
+"dropletBlock_lessThanOrEqualOperator_description":function(d){return "Tests whether a value is less than or equal to another value. Returns true if the value on the left-hand side of the expression is less than or equal to the value on the right-hand side of the expression."},
+"dropletBlock_lessThanOrEqualOperator_signatureOverride":function(d){return "Less than or equal operator"}};

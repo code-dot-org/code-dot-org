@@ -180,7 +180,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "calloutPutCommandsHereRunStart":function(d){return "Pon aquí los comandos a ejecutar cuando se inicia el programa"},
 "calloutBlocklyPlaceGoUpHere":function(d){return "Coloca un bloque de \"subir\" aquí para subir"},
 "calloutClickEvents":function(d){return "Da click en el encabezado de eventos para ver los bloques de funciones de eventos."},
-"calloutUseArrowButtons":function(d){return "Mantén pulsado en tu teclado esos botones o las flechas de dirección para activar los eventos de movimiento"},
+"calloutUseArrowButtons":function(d){return "Mantén pulsado esos botones o las flechas de dirección en tu teclado para activar los eventos de movimiento"},
 "calloutUseArrowButtonsAutoSteer":function(d){return "Hemos escondido el código que escribiste, pero todavía puedes utilizar las teclas de flecha para moverte"},
 "calloutMoveRightRunButton":function(d){return "Agrega un segundo comando mueveAlaDerecha a tu código. Luego da clic aquí para ejecutarlo"},
 "calloutBlocklyMoveRightRunButton":function(d){return "Agrega un segundo comando \"mueveAlaDerecha\" a tu código. Luego da clic aquí para ejecutarlo"},
