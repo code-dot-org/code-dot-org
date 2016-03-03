@@ -23,7 +23,7 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
 
   after_update :check_course_completion
 
-  def complete_assignment
+  def complete_assignment!
     update!(status: :completed)
   end
 
