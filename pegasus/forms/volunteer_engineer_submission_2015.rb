@@ -110,6 +110,9 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   end
 
   def self.solr_query(params)
+    # TODO: UNSUBSCRIBE_2016 can be removed completely immediately before Hour of Code 2016.
+    # Notify the volunteers that teacher requests will be starting again for Hour of Code 2016.
+    # Then we'll regularly remove and add UNSUBSCRIBE_HOC before and after each Hour of Code.
     query = "kind_s:\"#{self.name}\" && allow_contact_b:true && volunteer_after_hoc_b:true && -unsubscribed_s:\"#{UNSUBSCRIBE_FOREVER}\" -unsubscribed_s:\"#{UNSUBSCRIBE_HOC}\" -unsubscribed_s:\"#{UNSUBSCRIBE_2016}\""
 
     coordinates = params['coordinates']
