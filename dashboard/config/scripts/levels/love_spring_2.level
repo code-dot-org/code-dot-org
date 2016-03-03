@@ -30,8 +30,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "true",
     "nectar_goal": "14",
-    "honey_goal": "14",
-    "maze_data": null
+    "honey_goal": "14"
   },
   "published": true
 }]]></config>
