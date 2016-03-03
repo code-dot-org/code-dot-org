@@ -1,4 +1,4 @@
-module.exports = React.createClass({
+var Instructions = React.createClass({
 
   propTypes: {
     puzzleTitle: React.PropTypes.string,
@@ -38,14 +38,14 @@ module.exports = React.createClass({
         dangerouslySetInnerHTML={{ __html: this.props.renderedMarkdown }}
       />);
     } else {
-      body = [<p className='dialog-title'>{ this.props.puzzleTitle }</p>];
+      body = [<p key='dialog-title' className='dialog-title'>{ this.props.puzzleTitle }</p>];
 
       if (this.props.instructions) {
-        body.push(<p dangerouslySetInnerHTML={{ __html: this.props.instructions }}/>);
+        body.push(<p key='instructions-1' dangerouslySetInnerHTML={{ __html: this.props.instructions }}/>);
       }
 
       if (this.props.instructions2) {
-        body.push(<p className='instructions2' dangerouslySetInnerHTML={{ __html: this.props.instructions2 }}/>);
+        body.push(<p key='instructions-2' className='instructions2' dangerouslySetInnerHTML={{ __html: this.props.instructions2 }}/>);
       }
     }
 
@@ -63,3 +63,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = Instructions;

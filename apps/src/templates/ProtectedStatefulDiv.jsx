@@ -19,7 +19,7 @@ var ProtectedStatefulDiv = React.createClass({
 
   componentDidMount: function () {
     if (typeof this.props.renderContents === 'function') {
-      this.refs.root.getDOMNode().innerHTML = this.props.renderContents();
+      this.refs.root.innerHTML = this.props.renderContents();
     }
   },
 

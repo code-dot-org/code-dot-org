@@ -251,7 +251,7 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
           }.bind(this),
         });
 
-        React.render(element, container);
+        ReactDOM.render(element, container);
 
         return container;
       }.bind(this),
