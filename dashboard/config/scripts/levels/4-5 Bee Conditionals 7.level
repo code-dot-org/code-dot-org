@@ -91,5 +91,62 @@
         <block type="maze_nectar"/>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="procedures_callnoreturn">
+                      <mutation name="check purple flower"/>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">check purple flower</title>
+          <statement name="STACK">
+            <block type="bee_ifelseNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">==</title>
+              <title name="ARG2">3</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="maze_nectar"/>
+                  </statement>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="bee_ifelseNectarAmount">
+                  <title name="ARG1">nectarRemaining</title>
+                  <title name="OP">==</title>
+                  <title name="ARG2">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_nectar"/>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="maze_nectar"/>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>
