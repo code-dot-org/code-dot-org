@@ -83,7 +83,7 @@ Feature: Applab visualization overlay tooltips
     Then I see no difference for "tooltip for label"
 
     When I hover over the screen at xpos 300 and ypos 100
-    Then I see no difference for "tooltip for blank screen area"
+    Then I see no difference for "tooltip for blank screen area at (300, 100)"
 
     When I hover over element with id "text_input1"
     Then I see no difference for "tooltip for text input"
@@ -95,6 +95,6 @@ Feature: Applab visualization overlay tooltips
     Then I see no difference for "tooltip for checkbox"
 
     When I hover over the screen at xpos 300 and ypos 200
-    Then I see no difference for "tooltip for blank screen area"
+    Then I see no difference for "tooltip for blank screen area at (300, 200)"
 
     And I close my eyes
