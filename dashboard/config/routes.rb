@@ -192,6 +192,7 @@ Dashboard::Application.routes.draw do
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
   get '/admin/retention', to: 'admin_reports#retention', as: 'retention'
+  get '/admin/retention/stages', to: 'admin_reports#retention_stages', as: 'retention_stages'
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
   get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
   get '/admin/debug', to: 'admin_reports#debug'
@@ -274,6 +275,7 @@ Dashboard::Application.routes.draw do
     resources :learning_modules
     resources :tasks
     resources :user_course_enrollments
+    resources :enrollment_task_assignments, only: [:index, :show, :destroy]
   end
 
   get '/plc/enrollment_evaluations/:enrollment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
