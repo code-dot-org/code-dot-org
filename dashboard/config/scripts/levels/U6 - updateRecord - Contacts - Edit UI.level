@@ -38,9 +38,11 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "instructions": "Set up the UI elements needed to edit contacts. (Click to see full instructions)"
+    "instructions": "Set up the UI elements needed to edit contacts. (Click to see full instructions)",
+    "encrypted_examples": "DKHIkXsJpwzLMHadbQls/A14qMk/5IrRM0e+dxRAlaTgba2pePIP1kOGUewP\nYBlr\n"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>
