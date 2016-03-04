@@ -157,7 +157,7 @@
           description_short: "让我们用代码同安娜和爱莎一起去探寻冰雪的魔力与美丽。"
         course4:
           description_short: "学生在上了课程2和3以后才能上课程4。"
-          description: "课程3是为学了课程2的学生准备的。学生将深入理解前面介绍过的编程话题，从而能够用灵活的方案来解决更复杂的问题。到课程结束时，学生们会创建出互动故事和游戏，并且可与任何人分享。建议4到5年级学生学习。"
+          description: "课程4是为已经通过课程2和课程3的同学们准备的。这节课里同学们将学习怎样结合几种概念解决更复杂的问题。当这节课结束的时候，同学们将得以真正地编写程序来展现他们所学会的多种技能，包括用于循环的函数与带有参数的函数。建议4-8年级同学学习。"
           'Artist: Variables': "小艺术家：变量"
           'Bee: For Loops': "蜜蜂：计数循环"
           title: "第4课"
@@ -604,6 +604,7 @@
           description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
+          title_short: CSP Unit 3
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
@@ -1703,3 +1704,32 @@
           Updating Records: Updating Records
           Deleting Records: Deleting Records
           Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+        cspunit6:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project

@@ -40,9 +40,8 @@
     "debugger_disabled": "false",
     "slider_speed": "1",
     "project_template_level_name": "U4 - Read Record - part 1 - template",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "VInuQnEtDowmA/mpqHpMigAvg9gM/JBKu3WN8A799kdWiNLwdt2YGJOYD6Hm\nYQ7y\n",
+    "data_tables": "{\r\n  \"myTable\" :[\r\n  {\r\n    \"name\": \"New York City\",\r\n    \"state\": \"New York\",\r\n    \"population\": 9000000\r\n  },\r\n  {\r\n     \"name\": \"Los Angeles\",\r\n    \"state\": \"California\",\r\n    \"population\": 4000000\r\n  },\r\n  {\r\n     \"name\": \"Chicago\",\r\n    \"state\": \"Illinios\",\r\n    \"population\": 3000000\r\n  },\r\n  {\r\n    \"name\": \"Houston\",\r\n    \"state\": \"Texas\",\r\n    \"population\": 2000000\r\n  }\r\n]\r\n}"
   },
   "published": true
 }]]></config>

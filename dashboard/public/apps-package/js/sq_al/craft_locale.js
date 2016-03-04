@@ -158,7 +158,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockIf":function(d){return "nese"},
 "blockIfLavaAhead":function(d){return "nese lavë përpara"},
 "blockMoveForward":function(d){return "levis perpara"},
-"blockPlaceTorch":function(d){return "place torch"},
+"blockPlaceTorch":function(d){return "Shto torqin"},
 "blockPlaceXAheadAhead":function(d){return "përpara"},
 "blockPlaceXAheadPlace":function(d){return "vend"},
 "blockPlaceXPlace":function(d){return "vend"},

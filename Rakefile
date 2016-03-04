@@ -8,20 +8,16 @@ require 'cdo/aws/s3_packaging'
 
 # Helper functions
 def make_blockly_symlink
-  if local_environment?
-    Dir.chdir(apps_dir) do
-      apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
-      RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
-    end
+  Dir.chdir(apps_dir) do
+    apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
+    RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
   end
 end
 
 def make_code_studio_symlink
-  if local_environment?
-    Dir.chdir(code_studio_dir) do
-      code_studio_build = CDO.use_my_code_studio ? code_studio_dir('build') : 'code-studio-package'
-      RakeUtils.ln_s code_studio_build, dashboard_dir('public','code-studio')
-    end
+  Dir.chdir(code_studio_dir) do
+    code_studio_build = CDO.use_my_code_studio ? code_studio_dir('build') : 'code-studio-package'
+    RakeUtils.ln_s code_studio_build, dashboard_dir('public','code-studio')
   end
 end
 

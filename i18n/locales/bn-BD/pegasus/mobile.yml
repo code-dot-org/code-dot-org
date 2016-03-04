@@ -68,6 +68,8 @@ bn-BD:
   congrats_next_tutorials_desc: 'এই ছোট, ১ ঘন্টা টিউটোরিয়াল চেষ্টা করুন বা <a href="%{current_path}/next"> সঙ্গী টিউটোরিয়াল</a> চেষ্টা করুন।'
   get_a_certificate_of_achievement: আপনার প্রশংসাপত্র গ্রহণ করুন
   view_course: কোর্স দেখুন
+  view_unit: View unit
+  make_app: Make an app
   congrats_guest_speaker_title: আপনার শ্রেনীকক্ষের জন্য অতিথি স্পীকার খুঁজুন
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: অতিথি স্পীকার সন্ধান করুন
@@ -85,7 +87,8 @@ bn-BD:
   third_party_price_varies: 'দাম: পরিকল্পনা মত তারতম্য'
   third_party_price_free: 'দাম: বিনামূল্যে'
   third_party_price_299: 'মূল্য: ২.৯৯ ডলার/ডাউনলোড'
-  third_party_price_2500: 'দাম: মুক্ত পরিকল্পনা & ২,৫০০ ডলার +'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: শুরুর দিকের পাঠকরা Tynker-এর পাঠক্রম চেষ্টা করুন।
   third_party_tynker_btn_site: ভিজিট করুন Tynker
@@ -106,9 +109,8 @@ bn-BD:
   third_party_appinv_btn_curriculum: অ্যাপ ইনভেন্টর ২ পাঠক্রম ডাউনলোড করুন
   third_party_appinv_btn_forum: অ্যাপ ইনভেন্টর ২ ফোরাম
   third_party_appinv_btn_site: অ্যাপ ইনভেন্টর ২ পরিদর্শন করুন
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. With CodeHS, you can get the help that every new programmer needs to work through problems and keep learning. Our tutors are everywhere!
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
   third_party_codehs_btn_try: কম্পিউটার বিজ্ঞানের ভুমিকার জন্য CodeHS চেষ্টা করুন।
-  third_party_codehs_btn_demos: CodeHS প্রদর্শন পরিদর্শন করুন
   third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
   third_party_codecademy_btn_curriculum: Codecademy পাঠক্রম ডাউনলোড করুন
   third_party_codecademy_btn_site: ভিজিট করুন Codecademy
@@ -719,6 +721,12 @@ bn-BD:
   course3_name: Course 3
   course4_name: Course 4
   accelerated_name: Accelerated Course
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  applab_name: App Lab
+  applab_gradelevel: Ages 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: বয়স 4-104
   codeintl_gradelevel: বয়স 4-104
   thinkersmithspanish_gradelevel: Por todos

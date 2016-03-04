@@ -28,7 +28,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     client_state.reset
     Gatekeeper.clear
 
+    # rubocop:disable Lint/Void
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
+    # rubocop:enable Lint/Void
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
 
     Geocoder.stubs(:find_potential_street_address).returns(nil) # don't actually call geocoder service

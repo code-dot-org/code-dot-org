@@ -3,7 +3,7 @@
 -encrypted_channel_id = request.splat_path_info[1..-1].split('/').first
 -not_authorized! unless owns_channel? encrypted_channel_id
 -channel_id = storage_decrypt_channel_id(encrypted_channel_id).last.to_s
--TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+-TableType = CDO.use_dynamo_tables ? DynamoTable : SqlTable
 
 %form#csp_tables
   %table

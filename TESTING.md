@@ -42,7 +42,7 @@ To run a specific unit test, you can run
 `bundle exec ruby -Itest ./path/to/your/test.rb --name your_amazing_test_name`
 
 ### UI Tests and Eyes Tests
-We have a set of integration tests, divided into "UI tests" (Selenim+Cucumber) and "Eyes tests" (Selenim+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).
+We have a set of integration tests, divided into "UI tests" (Selenium+Cucumber) and "Eyes tests" (Selenium+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).
 
 ###Dealing with test failures (non-Eyes)
 Our tests are pretty reliable, but not entirely reliable. If you see a test failure, you should investigate it and not immediately assume it is spurious.
