@@ -11638,7 +11638,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
     if (node.type in CLASS_EXCEPTIONS) {
       return CLASS_EXCEPTIONS[node.type].concat([node.type]);
     } else {
-      if (node.type === 'CallExpression' || node.type === 'NewExpression' || node.type === 'Identifier' || node.type === 'MemberExpression') {
+      if (node.type === 'CallExpression' || node.type === 'NewExpression' || node.type === 'Identifier') {
         known = this.lookupKnownName(node);
         if (!known || (known.fn.value && known.fn.command)) {
           return [node.type, 'any-drop'];
