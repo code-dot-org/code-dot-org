@@ -222,14 +222,17 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
             api.destroy();
             callback();
           }.bind(this),
+
           showHint: function () {
             var content = document.createElement('div');
             api.set('content.text', content);
 
             React.render(React.createElement(HintDialogContent, {
               content: hint.content,
-              block: hint.block
-            }), content);
+              block: hint.block,
+            }), content, function () {
+              api.reposition();
+            });
 
             $(api.elements.content).find('img').on('load', function (e) {
               api.reposition(e);

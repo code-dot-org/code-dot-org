@@ -890,6 +890,35 @@ input[type="radio"] {
   color: $charcoal;
 }
 
+.authored-hints {
+
+  h1, p, pre {
+    color: $charcoal;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  #hint-button {
+    margin-left: 35px;
+  }
+
+  ol {
+    counter-reset: list;
+    margin: 0 0 35px 35px;
+
+    li {
+      list-style: none;
+      &:before {
+        content: counter(list, decimal) ") ";
+        counter-increment: list;
+        position: absolute;
+        left: 35px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
 .modal-content {
   .instructionsImage {
     height: 35px;
