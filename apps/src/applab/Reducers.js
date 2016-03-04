@@ -22,6 +22,9 @@ function rootReducer(state, action) {
       if (typeof action.props.assetUrl !== 'undefined') {
         state.assetUrl = action.props.assetUrl;
       }
+      if (typeof action.props.isDesignModeHidden !== 'undefined') {
+        state.isDesignModeHidden = action.props.isDesignModeHidden;
+      }
       if (typeof action.props.isReadOnlyWorkspace !== 'undefined') {
         state.isReadOnlyWorkspace = action.props.isReadOnlyWorkspace;
       }
