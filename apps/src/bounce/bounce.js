@@ -805,7 +805,7 @@ Bounce.init = function(config) {
     dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
   };
 
-  React.render(React.createElement(AppView, {
+  ReactDOM.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
