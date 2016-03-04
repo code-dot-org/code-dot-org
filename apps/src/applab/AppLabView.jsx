@@ -1,15 +1,21 @@
+/** @file Top-level view for App Lab */
+// Strict linting: Absorb into global config when possible
+/* jshint
+ unused: true,
+ eqeqeq: true,
+ maxlen: 120
+ */
 'use strict';
 
 var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
-var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
+var ConnectedStudioAppWrapper = require('./ConnectedStudioAppWrapper.jsx');
 
 /**
- * Top-level React wrapper for our standard blockly apps.
+ * Top-level React wrapper for App Lab.
  */
 var AppLabView = React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func.isRequired,
     isDesignModeHidden: React.PropTypes.bool.isRequired,
     isEditingProject: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
@@ -52,8 +58,7 @@ var AppLabView = React.createClass({
     }
 
     return (
-      <StudioAppWrapper
-          assetUrl={this.props.assetUrl}
+      <ConnectedStudioAppWrapper
           isEmbedView={this.props.isEmbedView}
           isShareView={this.props.isShareView}>
         <div id="visualizationColumn">
@@ -64,7 +69,7 @@ var AppLabView = React.createClass({
         <ProtectedStatefulDiv
             id="codeWorkspace"
             renderContents={this.props.renderCodeWorkspace} />
-      </StudioAppWrapper>
+      </ConnectedStudioAppWrapper>
     );
   },
 
