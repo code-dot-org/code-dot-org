@@ -8,6 +8,7 @@
 
 var constants = require('./constants');
 var msg = require('../locale');
+var connect = require('react-redux').connect;
 var ScreenSelector = require('./ScreenSelector.jsx');
 var ToggleGroup = require('./ToggleGroup.jsx');
 var ViewDataButton = require('./ViewDataButton.jsx');
@@ -92,4 +93,8 @@ var PlaySpaceHeader = React.createClass({
     );
   }
 });
-module.exports = PlaySpaceHeader;
+module.exports = connect(
+  (state) => ({
+    hideToggle: state.isShareView || state.isDesignModeHidden
+  })
+)(PlaySpaceHeader);
