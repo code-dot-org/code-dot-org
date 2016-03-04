@@ -500,18 +500,18 @@ function getModeOptionFunctionsFromConfig(config) {
     var newFunc = {};
 
     switch (config.blocks[i].type) {
-        case 'value':
-          newFunc.value = true;
-          break;
-        case 'either':
-          newFunc.value = true;
-          newFunc.command = true;
-          break;
-        case 'property':
-        case 'readonlyproperty':
-          newFunc.property = true;
-          newFunc.value = true;
-          break;
+      case 'value':
+        newFunc.value = true;
+        break;
+      case 'either':
+        newFunc.value = true;
+        newFunc.command = true;
+        break;
+      case 'property':
+      case 'readonlyproperty':
+        newFunc.property = true;
+        newFunc.value = true;
+        break;
     }
 
     var category = mergedCategories[config.blocks[i].category];
