@@ -29,17 +29,6 @@ exports.injectGameLab = function (gamelab) {
   gameLab = gamelab;
 };
 
-// Generate a read-write property expansion function:
-function genPropExpansion (propname) {
-  return function (block) {
-    if (!block || block.type === 'socket') {
-      return propname;
-    } else {
-      return propname + ' = __;';
-    }
-  };
-}
-
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
   showAssetManager(callback, typeFilter);
