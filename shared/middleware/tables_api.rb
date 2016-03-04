@@ -327,7 +327,6 @@ class TablesApi < Sinatra::Base
 
       table.delete_all()
       json_data[table_name].each do |record|
-        puts record
         table.insert(record, request.ip)
       end
       table.ensure_metadata()
