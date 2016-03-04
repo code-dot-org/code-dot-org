@@ -25,6 +25,8 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
 var copyrightStrings;
 
+console.log('I am a temporary change to the apps package');
+
 /**
 * The minimum width of a playable whole blockly game.
 */
