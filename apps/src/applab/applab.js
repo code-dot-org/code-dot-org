@@ -767,8 +767,8 @@ Applab.init = function(config) {
         // TODO (brent) - seems a little gross that we've made this part of a
         // template shared across all apps
         // disable designMode if we're readonly
-        hasDesignMode: !config.readonlyWorkspace,
-        readonlyWorkspace: config.readonlyWorkspace
+        hasDesignMode: !reduxStore.getState().isReadOnlyView,
+        readonlyWorkspace: reduxStore.getState().isReadOnlyView
       }
     });
   }.bind(this);
@@ -875,13 +875,13 @@ Applab.init = function(config) {
 
   // Push initial level properties into the Redux store
   reduxStore.dispatch(setLevelProps({
-    assetUrl: studioApp.assetUrl
+    assetUrl: studioApp.assetUrl,
+    isReadOnlyView: !!config.readonlyWorkspace
   }));
 
   Applab.reactInitialProps_ = {
     isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
-    isReadOnlyView: !!config.readonlyWorkspace,
     isShareView: !!config.share,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
     renderCodeWorkspace: renderCodeWorkspace,

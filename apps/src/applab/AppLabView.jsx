@@ -7,6 +7,7 @@
  */
 'use strict';
 
+var connect = require('react-redux').connect;
 var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
 var ConnectedStudioAppWrapper = require('./ConnectedStudioAppWrapper.jsx');
@@ -16,10 +17,11 @@ var ConnectedStudioAppWrapper = require('./ConnectedStudioAppWrapper.jsx');
  */
 var AppLabView = React.createClass({
   propTypes: {
+    isReadOnlyView: React.PropTypes.bool.isRequired,
+
     isDesignModeHidden: React.PropTypes.bool.isRequired,
     isEditingProject: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
-    isReadOnlyView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isViewDataButtonHidden: React.PropTypes.bool.isRequired,
 
@@ -84,4 +86,8 @@ var AppLabView = React.createClass({
         !this.props.isEditingProject;
   }
 });
-module.exports = AppLabView;
+module.exports = connect(
+  (state) => ({
+    isReadOnlyView: state.isReadOnlyView
+  })
+)(AppLabView);
