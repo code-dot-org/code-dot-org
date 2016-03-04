@@ -977,7 +977,13 @@ StudioApp.prototype.onReportComplete = function (response) {
 };
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
+  var markdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+
   var instructionsDiv = document.createElement('div');
+  instructionsDiv.className = markdownMode ?
+    'markdown-instructions-container' :
+    "instructions-container";
+
   var renderedMarkdown;
   var headerElement;
 
@@ -986,12 +992,9 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     puzzle_number: level.puzzle_number
   });
 
-  var markdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
-
   if (markdownMode) {
     var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
     renderedMarkdown = marked(markdownWithImages);
-    instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
     headerElement.innerHTML = puzzleTitle;
@@ -1020,7 +1023,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   // container just yet, because our React component could contain some
   // elements that don't want to be rendered until they are in the DOM
   var instructionsReactContainer = document.createElement('div');
-  instructionsReactContainer.className='instructions-container';
+  instructionsReactContainer.className='instructions-content';
   instructionsDiv.appendChild(instructionsReactContainer);
 
   var buttons = document.createElement('div');
@@ -1066,7 +1069,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     defaultBtnSelector: '#ok-button',
     onHidden: hideFn,
     scrollContent: true,
-    scrollableSelector: ".instructions-container",
+    scrollableSelector: ".instructions-content",
     header: headerElement
   });
 

@@ -35,7 +35,7 @@ var Buttons = React.createClass({
     }
 
     if (this.props.confirmText) {
-      confirmButton = (<button id="confirm-button" className="launch" style="float: right">
+      confirmButton = (<button id="confirm-button" className="launch" style={{ 'float': "right" }}>
         {this.props.confirmText}
       </button>);
     }
@@ -72,7 +72,7 @@ var Buttons = React.createClass({
             <div className="arrow-head"><img src={this.props.assetUrl('media/next-arrow-head.png')} alt="Arrowhead" width="66" height="130"/></div>
             <div className="arrow-text">{this.props.continueText}</div>
           </div>) :
-          (<button id="continue-button" className="launch" style="float: right">
+          (<button id="continue-button" className="launch" style={{ 'float': "right" }}>
             {this.props.continueText}
           </button>);
     }

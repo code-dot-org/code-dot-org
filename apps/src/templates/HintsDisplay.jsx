@@ -42,17 +42,17 @@ module.exports = React.createClass({
 
     var seenHints;
     if (hintsToShow && hintsToShow.length) {
-      seenHints = [
-          <h1>
-            <Lightbulb size={32} style={{ margin: "-9px 5px -9px -5px" }}/>
-            { this.props.hintReviewTitle }
-          </h1>,
-          <ol>
-            {hintsToShow.map(function (hint) {
-              return <Hint hint={hint} ref={hint.hintId} />;
-            })}
-          </ol>
-      ];
+      seenHints = (<div>
+        <h1>
+          <Lightbulb size={32} style={{ margin: "-9px 9px -9px -5px" }}/>
+          { this.props.hintReviewTitle }
+        </h1>
+        <ol>
+          {hintsToShow.map(function (hint) {
+            return <Hint key={hint.hintId} hint={hint} ref={hint.hintId} />;
+          })}
+        </ol>
+      </div>);
     }
 
     var viewHintButton;

@@ -43,7 +43,7 @@ var elementUtils = require('./designElements/elementUtils');
 var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
-var Buttons = require('./templates/Buttons.jsx');
+var Buttons = require('../templates/Buttons.jsx');
 
 var applabConstants = require('./constants');
 
