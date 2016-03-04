@@ -16,18 +16,21 @@ var ActionType = module.exports.ActionType = {
 /**
  * Push lots of view properties of the level into the store.
  * Should be called during level init.
+ * Any properties omitted from the props argument are not set in the state.
  *
- * @param {!Object} levelProps
- * @param {function} levelProps.assetUrl - Helper function for retrieving assets
- *        for this particular level type.
- * @param {boolean} levelProps.isReadOnlyWorkspace - Whether the loaded level should
- *        restrict editing the student code.
+ * @param {!Object} props
+ * @param {function} [props.assetUrl] - Helper function for retrieving
+ *        assets for this particular level type.
+ * @param {boolean} [props.isReadOnlyWorkspace] - Whether the loaded level
+ *        should restrict editing the student code.
+ * @param {boolean} [props.isShareView] - Whether we are displaying the level
+ *        on a share page.
  *
- * @returns {{type: string, levelProps: Object}}
+ * @returns {{type: string, props: Object}}
  */
-module.exports.setLevelProps = function (levelProps) {
+module.exports.setLevelProps = function (props) {
   return {
     type: ActionType.SET_LEVEL_PROPS,
-    levelProps: levelProps
+    props: props
   };
 };
