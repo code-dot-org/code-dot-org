@@ -47,7 +47,6 @@ var AppLabView = React.createClass({
     var playSpaceHeader;
     if (!this.props.isReadOnlyWorkspace) {
       playSpaceHeader = <PlaySpaceHeader
-          hideToggle={this.shouldHideToggle()}
           hideViewDataButton={this.shouldHideViewDataButton()}
           startInDesignMode={this.props.startInDesignMode}
           activeScreenId={this.props.activeScreenId}
@@ -72,10 +71,6 @@ var AppLabView = React.createClass({
             renderContents={this.props.renderCodeWorkspace} />
       </ConnectedStudioAppWrapper>
     );
-  },
-
-  shouldHideToggle: function () {
-    return this.props.isShareView || this.props.isDesignModeHidden;
   },
 
   shouldHideViewDataButton: function () {
