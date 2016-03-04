@@ -1,6 +1,7 @@
 #
 # SqlTable
 #
+
 class SqlTable
   class NotFound < Sinatra::NotFound
   end
@@ -25,11 +26,18 @@ class SqlTable
 
   def metadata
     dataset = metadata_dataset
-    dataset && dataset.first
+    if dataset && dataset.first
+      # dynamo gives us stringified keys rather than symbols, so convert to the same
+      Hash[dataset.first.map{ |k, v| [k.to_s, v] }]
+    end
   end
 
   def metadata_dataset
-    @metadata_dataset ||= @metadata_table.where(app_id: @channel_id, table_type: @table_type, table_name: @table_name).limit(1)
+    @metadata_dataset ||= @metadata_table.where(
+      app_id: @channel_id,
+      table_type: @table_type,
+      table_name: @table_name
+    ).limit(1)
   end
 
   # create a new metadata row, based on the contents of any existing records
@@ -63,7 +71,7 @@ class SqlTable
 
   def rename_column(old_name, new_name, ip_address)
     ensure_metadata()
-    column_list = JSON.parse(metadata[:column_list])
+    column_list = JSON.parse(metadata['column_list'])
     new_column_list = TableMetadata.rename_column(column_list, old_name, new_name)
     metadata_dataset.update({column_list: new_column_list.to_json})
 
@@ -83,16 +91,18 @@ class SqlTable
     end
   end
 
-  def add_column(column_name)
+  def add_columns(column_names)
     ensure_metadata()
-    column_list = JSON.parse(metadata[:column_list])
-    new_column_list = TableMetadata.add_column(column_list, column_name)
-    metadata_dataset.update({column_list: new_column_list.to_json})
+    column_list = JSON.parse(metadata['column_list'])
+    column_names.each do |col|
+      column_list = TableMetadata.add_column(column_list, col)
+    end
+    metadata_dataset.update({column_list: column_list.to_json})
   end
 
   def delete_column(column_name, ip_address)
     ensure_metadata()
-    column_list = JSON.parse(metadata[:column_list])
+    column_list = JSON.parse(metadata['column_list'])
     new_column_list = TableMetadata.remove_column(column_list, column_name)
     metadata_dataset.update({column_list: new_column_list.to_json})
 
@@ -129,22 +139,8 @@ class SqlTable
       retry if (tries += 1) < 5
       raise
     end
-    ensure_column_metadata(value)
 
     JSON.load(row[:value]).merge('id' => row[:row_id])
-  end
-
-  # Given a row from our table, ensure that all columns in that row appear in
-  # our column_list metadata, updating metadata as appropriate to add them
-  def ensure_column_metadata(row)
-    ensure_metadata
-    column_list = JSON.parse(metadata[:column_list])
-    row_columns = TableMetadata.generate_column_list([row])
-    new_column_list = column_list.dup.concat(row_columns).uniq
-
-    if column_list != new_column_list
-      @metadata_dataset.update({column_list: new_column_list.to_json})
-    end
   end
 
   def next_id()
@@ -160,8 +156,6 @@ class SqlTable
     }
     update_count = items.where(row_id: id).update(row)
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" if update_count == 0
-
-    ensure_column_metadata(value)
 
     JSON.load(row[:value]).merge('id' => id)
   end
