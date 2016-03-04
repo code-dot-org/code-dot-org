@@ -876,12 +876,12 @@ Applab.init = function(config) {
   reduxStore.dispatch(setLevelProps({
     assetUrl: studioApp.assetUrl,
     isDesignModeHidden: !!config.level.hideDesignMode,
+    isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share
   }));
 
   Applab.reactInitialProps_ = {
-    isEmbedView: !!config.embed,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
     renderCodeWorkspace: renderCodeWorkspace,
     renderVisualizationColumn: renderVisualizationColumn,

@@ -22,7 +22,6 @@ var AppLabView = React.createClass({
     isShareView: React.PropTypes.bool.isRequired,
 
     isEditingProject: React.PropTypes.bool.isRequired,
-    isEmbedView: React.PropTypes.bool.isRequired,
     isViewDataButtonHidden: React.PropTypes.bool.isRequired,
 
     startInDesignMode: React.PropTypes.bool.isRequired,
@@ -59,8 +58,7 @@ var AppLabView = React.createClass({
     }
 
     return (
-      <ConnectedStudioAppWrapper
-          isEmbedView={this.props.isEmbedView}>
+      <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
           {playSpaceHeader}
           <ProtectedStatefulDiv renderContents={this.props.renderVisualizationColumn} />
