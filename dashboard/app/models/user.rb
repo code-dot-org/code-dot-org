@@ -199,6 +199,7 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
+  has_many :plc_task_assignments, class_name: '::Plc::EnrollmentTaskAssignment', through: :plc_enrollments
 
   has_many :user_levels, -> {order 'id desc'}
   has_many :activities

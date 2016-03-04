@@ -19,7 +19,7 @@ module.exports = function(assetChosen, typeFilter) {
     defaultBtnSelector: 'again-button',
     id: 'manageAssetsModal'
   });
-  React.render(React.createElement(AssetManager, {
+  ReactDOM.render(React.createElement(AssetManager, {
     typeFilter: typeFilter,
     channelId: dashboard.project.getCurrentId(),
     uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
