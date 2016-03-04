@@ -3,6 +3,7 @@ require_relative 'test_helper'
 require 'channels_api'
 require 'tables_api'
 require 'properties_api'
+require "fakeredis"
 
 # Allow 3 requests of each type in the first 15 seconds
 REDUCED_RATE_LIMIT_FOR_TESTING = 3.0 / 60
