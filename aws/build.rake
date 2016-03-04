@@ -128,7 +128,7 @@ APPS_TASK = build_task('apps', [BLOCKLY_CORE_TASK] + Dir.glob(apps_dir('**/*')))
   HipChat.log 'apps built'
 
   # upload to s3
-  package = packager.upload_package_to_s3('/build')
+  package = packager.upload_package_to_s3('/build/package')
   packager.decompress_package(package)
 end
 
