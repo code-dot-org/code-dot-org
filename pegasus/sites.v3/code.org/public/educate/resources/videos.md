@@ -29,6 +29,16 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style="clear: both;"></div>
 
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/bMrDHtGHFR4'} %>
+<% twitter = {:url=>'https://youtu.be/bMrDHtGHFR4', :related=>'codeorg', :text=>'Computer science in Data and Medicine @codeorg'} %>
+<%=view :display_video_thumbnail, id: "DATAMEDICINE", video_code: "bMrDHtGHFR4", caption: "Computer science in Data and Medicine", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/concept_bigdata_medicine.mp4"%>
+
+</div>
+
+<div style="clear: both;"></div>
+
 ## How the internet works
 
 <div style="float:left; padding:10px; width:49%">
@@ -54,7 +64,6 @@ We are building a growing library of educational videos available for re-use by 
 <%=view :display_video_thumbnail, id: "PACKETS", video_code: "AYdF7b3nMto", caption: "THE INTERNET: Packets, Routing and Reliability", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/concept_internet_packets_reliability.mp4" %>
 
 </div>
-
 
 <div style="float:left; padding:10px; width:49%">
 
@@ -82,6 +91,105 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style="clear: both;"></div>
 
+## Begin programming with JavaScript to make apps
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/i2KHYUhtOlM'} %>
+<% twitter = {:url=>'https://youtu.be/i2KHYUhtOlM', :related=>'codeorg', :text=>'Program a turtle to move on the screen to draw anything from basic shapes to complex designs. @codeorg'} %>
+<%=view :display_video_thumbnail, id: "turtle", video_code: "i2KHYUhtOlM", caption: "Program a turtle to move on the screen to draw anything from basic shapes to complex designs.", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/applab/turtle.mp4" %>
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/yPWQfa4CHbw'} %>
+<% twitter = {:url=>'https://youtu.be/yPWQfa4CHbw', :related=>'codeorg', :text=>'Learn how to define and call functions so you can easily reuse code more efficiently. @codeorg'} %>
+<%=view :display_video_thumbnail, id: "functions", video_code: "yPWQfa4CHbw", caption: "Learn how to define and call functions so you can easily reuse code more efficiently.", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/applab/functions.mp4" %>
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/k7Ji1E97-V0'} %>
+<% twitter = {:url=>'https://youtu.be/k7Ji1E97-V0', :related=>'codeorg', :text=>'Functions with parameters are more flexible and can be used to solve different kinds of problems. @codeorg'} %>
+<%=view :display_video_thumbnail, id: "functions_params", video_code: "k7Ji1E97-V0", caption: "Functions with parameters are more flexible and can be used to solve different kinds of problems.", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/applab/functions_parameters.mp4" %>
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/G8hfAk4PfOM'} %>
+<% twitter = {:url=>'https://youtu.be/G8hfAk4PfOM', :related=>'codeorg', :text=>'Learn how to use loops to repeat code and simplify your app. @codeorg'} %>
+<%=view :display_video_thumbnail, id: "loops", video_code: "G8hfAk4PfOM", caption: "Learn how to use loops to repeat code and simplify your app.", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/applab/loops.mp4" %>
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/-EoTeD4mSNU'} %>
+<% twitter = {:url=>'https://youtu.be/-EoTeD4mSNU', :related=>'codeorg', :text=>'Start using design mode to create a user interface for your app. @codeorg'} %>
+<%=view :display_video_thumbnail, id: "design_mode", video_code: "-EoTeD4mSNU", caption: "Start using design mode to create a user interface for your app.", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/applab/design.mp4" %>
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/G41G_PEWFjE'} %>
+<% twitter = {:url=>'https://youtu.be/G41G_PEWFjE', :related=>'codeorg', :text=>'An introduction to variables that can be used throughout your code. @codeorg'} %>
+<%=view :display_video_thumbnail, id: "variables_1", video_code: "G41G_PEWFjE", caption: "An introduction to variables that can be used throughout your code.", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/applab/variables_1.mp4" %>
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/ijjVDBPwA1o'} %>
+<% twitter = {:url=>'https://youtu.be/ijjVDBPwA1o', :related=>'codeorg', :text=>'Learn how to use different kinds of variables to make your apps more complex. @codeorg'} %>
+<%=view :display_video_thumbnail, id: "variables_1", video_code: "ijjVDBPwA1o", caption: "Learn how to use different kinds of variables to make your apps more complex.", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/applab/variables_2.mp4" %>
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/y3rCKJNOwpA'} %>
+<% twitter = {:url=>'https://youtu.be/y3rCKJNOwpA', :related=>'codeorg', :text=>'Use boolean expressions to make decisions in your app logic. @codeorg'} %>
+<%=view :display_video_thumbnail, id: "conditionals_1", video_code: "y3rCKJNOwpA", caption: "Use boolean expressions to make decisions in your app logic.", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/applab/conditionals_1.mp4" %>
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/UDi7xgIIW8E'} %>
+<% twitter = {:url=>'https://youtu.be/UDi7xgIIW8E', :related=>'codeorg', :text=>'Create conditions with if/else statements to make your app more unique. @codeorg'} %>
+<%=view :display_video_thumbnail, id: "conditionals_2", video_code: "UDi7xgIIW8E", caption: "Create conditions with if/else statements to make your app more unique.", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/applab/conditionals_2.mp4" %>
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/kyFdniI-ZZs'} %>
+<% twitter = {:url=>'https://youtu.be/kyFdniI-ZZs', :related=>'codeorg', :text=>'Add more complex logic like AND and OR to give users more choices in your apps. @codeorg'} %>
+<%=view :display_video_thumbnail, id: "conditionals_3", video_code: "kyFdniI-ZZs", caption: "Add more complex logic like AND and OR to give users more choices in your apps.", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/applab/conditionals_3.mp4" %>
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/KFy7u3Rhozs'} %>
+<% twitter = {:url=>'https://youtu.be/KFy7u3Rhozs', :related=>'codeorg', :text=>'Organize your information by using a list in your app. @codeorg'} %>
+<%=view :display_video_thumbnail, id: "intro_lists", video_code: "KFy7u3Rhozs", caption: "Organize your information by using a list in your app.", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/applab/lists_intro_full.mp4" %>
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/RQ6GJt9f2vg'} %>
+<% twitter = {:url=>'https://youtu.be/RQ6GJt9f2vg', :related=>'codeorg', :text=>'Create charts with your data by processing a list. @codeorg'} %>
+<%=view :display_video_thumbnail, id: "processing_lists", video_code: "RQ6GJt9f2vg", caption: "Create charts with your data by processing a list.", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/applab/processing_lists.mp4" %>
+
+</div>
+
+<div style='clear:both'></div>
 
 ## The basics of computer science
 
