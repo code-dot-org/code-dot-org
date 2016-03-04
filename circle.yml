@@ -52,8 +52,6 @@ dependencies:
     - bundle exec rake install
     # Run rake build (twice in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build && break; done
-    - sed -i.bak 's/development\://' .bundle/config
-    - bundle install
 database:
   override:
     - 'echo "Skipping database phase (already ran)."'
