@@ -10,7 +10,7 @@
   - @level = level_blob
   - # Parse the array of the level resuts; see sample below in JavaScript.
   - if @last_attempt
-    - last_attempt = JSON.parse(@last_attempt).each.select{|item| item["level_id"]==@level.id}.first["result"]
+    - last_attempt = JSON.parse(@last_attempt).find{|item| item["level_id"]==@level.id}["result"]
   - else
     - last_attempt = ""
   = render partial: 'levels/multi', locals: {index: index, standalone: false, last_attempt: last_attempt }

@@ -1,6 +1,6 @@
 /* global $, Dialog, appOptions, CDOSounds */
 
-var Multi = function (id, levelId, standalone, type, answers, lastAttemptString) {
+var Multi = function (id, levelId, standalone, numAnswers, answers, lastAttemptString) {
 
   this.id = id;
 
@@ -13,7 +13,7 @@ var Multi = function (id, levelId, standalone, type, answers, lastAttemptString)
   this.lastSelectionIndex = -1;
 
   // How many answers should there be?
-  this.numAnswers = type; // "#{data['type']}" == 'multi2' ? 2 : 1;
+  this.numAnswers = numAnswers;
 
   // A boolean array of the answers.  true is correct.
   this.answers = answers; // #{data['answers'].map {|answer| answer['correct']}};
@@ -31,13 +31,9 @@ var Multi = function (id, levelId, standalone, type, answers, lastAttemptString)
 
   this.forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
-  var self = this;
-
-  console.log("init multi", id);
-
-  $(document).ready(function(){
-    self.ready();
-  });
+  $(document).ready($.proxy(function() {
+    this.ready();
+  }, this));
 
 };
 
@@ -127,7 +123,7 @@ Multi.prototype.ready = function()
   if (window.appOptions.readonlyWorkspace)
   {
     // hide the Submit buttons.
-    $("#" + this.id +'.submitButton').hide();
+    $('.submitButton').hide();
 
     // grey out the marks
     $("#" + this.id +'.item-mark').css('opacity', 0.5);
@@ -138,7 +134,7 @@ Multi.prototype.ready = function()
     if (window.appOptions.submitted)
     {
       // show the Unsubmit button.
-      $("#" + this.id +'.unsubmitButton').show();
+      $("#" + this.id +' .unsubmitButton').show();
     }
   }
 
@@ -156,6 +152,13 @@ Multi.prototype.ready = function()
   }, this));
 
   this.enableButton(false);
+
+  // If we are relying on the containing page's submission buttons/dialog, then
+  // we need to provide a window.getResult function.
+  if (this.standalone)
+  {
+    window.getResult = $.proxy(this.getResult, this);
+  }
 
   // Pre-select previously submitted response if available.
   if (this.lastAttemptString)
