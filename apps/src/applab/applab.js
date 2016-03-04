@@ -129,7 +129,6 @@ var defaultAppWidth = 400;
 var defaultAppHeight = 400;
 
 function loadLevel() {
-  Applab.hideDesignMode = level.hideDesignMode;
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
@@ -683,7 +682,7 @@ Applab.init = function(config) {
     // should never be present on such levels, however some levels do
     // have levelHtml stored due to a previous bug. HTML set by levelbuilder
     // is stored in startHtml, not levelHtml.
-    if (config.level.hideDesignMode) {
+    if (reduxStore.getState().isDesignModeHidden) {
       config.level.levelHtml = '';
     }
 
