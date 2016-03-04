@@ -51,6 +51,7 @@ dependencies:
     # Run rake install
     - bundle exec rake install
     - sed -i.bak 's/development\://' .bundle/config
+    - bundle install
     # Run rake build (twice in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build && break; done
 database:
