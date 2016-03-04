@@ -8,7 +8,7 @@ var _ = utils.getLodash();
  * @property {string} blockPrefix Prepend this string before the normal block name in the palette
  * @property {Object} parent object within which this function is defined as a property, keyed by the func name
  * @property {String} category category within which to place the block
- * @property {String} type type of the block (e.g. value, either, property)
+ * @property {String} type type of the block (e.g. value, either, property, readonlyproperty)
  * @property {string[]} paletteParams
  * @property {string[]} params
  * @property {Object.<number, function>} dropdown
@@ -272,6 +272,17 @@ function buildFunctionPrototype(prefix, params) {
   return proto + ")";
 }
 
+// Generate a read-write property expansion function:
+function generatePropertyExpansion (propname) {
+  return function (block) {
+    if (!block || block.type === 'socket') {
+      return propname;
+    } else {
+      return propname + ' = __;';
+    }
+  };
+}
+
 /**
  * Generate a palette for the droplet editor based on some level data.
  * @param {object} codeFunctions The set of functions we want to use for this level
@@ -297,7 +308,7 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
       if (funcInfo.blockPrefix) {
         nameWithPrefix = funcInfo.blockPrefix + nameWithPrefix;
       }
-      if (funcInfo.type === 'property') {
+      if (funcInfo.type === 'property' || funcInfo.type === 'readonlyproperty') {
         block = nameWithPrefix;
       } else {
         var paletteParams = funcInfo.paletteParams || funcInfo.params;
@@ -309,6 +320,12 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
           expansion = buildFunctionPrototype(nameWithPrefix, funcInfo.params);
         }
       }
+    }
+
+    // For properties that aren't read-only, we automatically generate an
+    // expansion function so the block can morph to be a setter and a getter:
+    if (!expansion && funcInfo.type === 'property') {
+      expansion = generatePropertyExpansion(block);
     }
 
     /**
@@ -482,14 +499,19 @@ function getModeOptionFunctionsFromConfig(config) {
   for (var i = 0; i < config.blocks.length; i++) {
     var newFunc = {};
 
-    if (config.blocks[i].type === 'value') {
-      newFunc.value = true;
-    } else if (config.blocks[i].type === 'either') {
-      newFunc.value = true;
-      newFunc.command = true;
-    } else if (config.blocks[i].type === 'property') {
-      newFunc.property = true;
-      newFunc.value = true;
+    switch (config.blocks[i].type) {
+      case 'value':
+        newFunc.value = true;
+        break;
+      case 'either':
+        newFunc.value = true;
+        newFunc.command = true;
+        break;
+      case 'property':
+      case 'readonlyproperty':
+        newFunc.property = true;
+        newFunc.value = true;
+        break;
     }
 
     var category = mergedCategories[config.blocks[i].category];
