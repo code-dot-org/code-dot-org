@@ -5,7 +5,7 @@ class LevelGroupDSL < BaseDSL
     @title = nil
     @description_short = nil
     @description = nil
-    @hash.merge! levels: []
+    @hash[:levels] = []
   end
 
   integer :id

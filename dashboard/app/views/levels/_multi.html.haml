@@ -1,13 +1,15 @@
 - index ||= 0
 - standalone ||= true
 
-- # As part of a LevelGroup we'll be passed last_attempt, otherwise use the
-- # real @last_attempt.
+- # As part of a LevelGroup we'll be passed level and last_attempt,
+- # otherwise use the real @level and @last_attempt.
+- level = level || @level
 - last_attempt = last_attempt || @last_attempt
+
 
 .multi{id: "multi_#{index}"}
 
-  - data = @level.properties
+  - data = level.properties
   - app = 'multi'
 
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
@@ -71,8 +73,8 @@
         = render partial: 'levels/dialog', locals: {app: app, data: data}
 
   .clear
-  = render partial: 'levels/multi_answer', locals: {data: @level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class}
-  = render partial: 'levels/teacher_markdown', locals: {data: @level.properties}
+  = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class}
+  = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
 
   %br/
   %br/
@@ -95,7 +97,7 @@
   // legacy multi/match
   window["multi_#{index}"] = new Multi(
     "multi_#{index}",
-    #{@level.id},
+    #{level.id},
     #{standalone},
     "#{data['type']}" == "multi2" ? 2 : 1,
     #{data['answers'].map {|answer| answer['correct']}},
