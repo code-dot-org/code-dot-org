@@ -18,7 +18,7 @@ var Buttons = React.createClass({
   },
 
   render: function () {
-    var okButton, cancelButton, confirmButton, previousButton, againButton, nextButton;
+    var okButton, cancelButton, confirmButton, previousButton, hintButton, againButton, nextButton;
 
     if (this.props.ok) {
       okButton = (<div className="farSide">
@@ -53,14 +53,13 @@ var Buttons = React.createClass({
           <div className="arrow-text">{this.props.tryAgain}</div>
         </div>);
       } else {
-        againButton = [];
         if (this.props.shouldPromptForHint) {
-          againButton.push(<button id="hint-request-button" className="lightbulb-button">
+          hintButton = (<button id="hint-request-button" className="lightbulb-button">
             <Lightbulb size={32} style={{ margin: "-9px 0px -9px -5px" }}/>
             {msg.hintRequest()}
           </button>);
         }
-        againButton.push(<button id="again-button" className="launch">
+        againButton = (<button id="again-button" className="launch">
           {this.props.tryAgain}
         </button>);
       }
@@ -82,6 +81,7 @@ var Buttons = React.createClass({
       {cancelButton}
       {confirmButton}
       {previousButton}
+      {hintButton}
       {againButton}
       {nextButton}
     </div>);
