@@ -18,11 +18,11 @@ var ConnectedStudioAppWrapper = require('./ConnectedStudioAppWrapper.jsx');
 var AppLabView = React.createClass({
   propTypes: {
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
+    isShareView: React.PropTypes.bool.isRequired,
 
     isDesignModeHidden: React.PropTypes.bool.isRequired,
     isEditingProject: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
     isViewDataButtonHidden: React.PropTypes.bool.isRequired,
 
     startInDesignMode: React.PropTypes.bool.isRequired,
@@ -61,8 +61,7 @@ var AppLabView = React.createClass({
 
     return (
       <ConnectedStudioAppWrapper
-          isEmbedView={this.props.isEmbedView}
-          isShareView={this.props.isShareView}>
+          isEmbedView={this.props.isEmbedView}>
         <div id="visualizationColumn">
           {playSpaceHeader}
           <ProtectedStatefulDiv renderContents={this.props.renderVisualizationColumn} />
@@ -88,6 +87,7 @@ var AppLabView = React.createClass({
 });
 module.exports = connect(
   (state) => ({
-    isReadOnlyWorkspace: state.isReadOnlyWorkspace
+    isReadOnlyWorkspace: state.isReadOnlyWorkspace,
+    isShareView: state.isShareView
   })
 )(AppLabView);

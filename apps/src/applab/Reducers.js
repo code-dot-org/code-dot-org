@@ -19,11 +19,14 @@ function rootReducer(state, action) {
 
   switch (action.type) {
     case ActionType.SET_LEVEL_PROPS:
-      if (typeof action.levelProps.assetUrl !== 'undefined') {
-        state.assetUrl = action.levelProps.assetUrl;
+      if (typeof action.props.assetUrl !== 'undefined') {
+        state.assetUrl = action.props.assetUrl;
       }
-      if (typeof action.levelProps.isReadOnlyWorkspace !== 'undefined') {
-        state.isReadOnlyWorkspace = action.levelProps.isReadOnlyWorkspace;
+      if (typeof action.props.isReadOnlyWorkspace !== 'undefined') {
+        state.isReadOnlyWorkspace = action.props.isReadOnlyWorkspace;
+      }
+      if (typeof action.props.isShareView !== 'undefined') {
+        state.isShareView = action.props.isShareView;
       }
       return state;
 

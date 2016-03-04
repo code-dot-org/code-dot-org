@@ -12,6 +12,7 @@ var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 
 module.exports = connect(
   (state) => ({
-    assetUrl: state.assetUrl
+    assetUrl: state.assetUrl,
+    isShareView: state.isShareView
   })
 )(StudioAppWrapper);
