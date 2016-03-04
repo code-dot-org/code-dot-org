@@ -236,21 +236,6 @@ ActiveRecord::Schema.define(version: 20160301213220) do
   add_index "hint_view_requests", ["script_id", "level_id"], name: "index_hint_view_requests_on_script_id_and_level_id", using: :btree
   add_index "hint_view_requests", ["user_id"], name: "index_hint_view_requests_on_user_id", using: :btree
 
-  create_table "level_groups", force: :cascade do |t|
-    t.integer  "game_id",                  limit: 4
-    t.string   "name",                     limit: 255
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.string   "level_num",                limit: 255
-    t.integer  "ideal_level_source_id",    limit: 4
-    t.integer  "solution_level_source_id", limit: 4
-    t.integer  "user_id",                  limit: 4
-    t.text     "properties",               limit: 65535
-    t.string   "type",                     limit: 255
-    t.string   "md5",                      limit: 255
-    t.boolean  "published"
-  end
-
   create_table "level_source_hints", force: :cascade do |t|
     t.integer  "level_source_id", limit: 4
     t.text     "hint",            limit: 65535
