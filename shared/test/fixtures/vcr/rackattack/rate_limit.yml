@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","ConsistentRead":true,"KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:stub_rack_attack_table:"}],"ComparisonOperator":"EQ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '159'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - GHLH9T1NLF42IO1GE45QII3SFRVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3413411624'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '39'
+      Date:
+      - Fri, 04 Mar 2016 04:55:30 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":0,"Items":[],"ScannedCount":0}'
+    http_version: 
+  recorded_at: Fri, 04 Mar 2016 04:55:31 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","ConsistentRead":true,"KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:stub_rack_attack_table:"}],"ComparisonOperator":"EQ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '159'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - QNNTH8JDBC0BD57RJF48S6HLVJVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3413411624'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '39'
+      Date:
+      - Fri, 04 Mar 2016 04:55:30 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":0,"Items":[],"ScannedCount":0}'
+    http_version: 
+  recorded_at: Fri, 04 Mar 2016 04:55:31 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","ConsistentRead":true,"KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:stub_rack_attack_table:"}],"ComparisonOperator":"EQ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '159'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - KAPBCI0MF21AK1P541D51T4IJNVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3413411624'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '39'
+      Date:
+      - Fri, 04 Mar 2016 04:55:30 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":0,"Items":[],"ScannedCount":0}'
+    http_version: 
+  recorded_at: Fri, 04 Mar 2016 04:55:31 GMT
+recorded_with: VCR 3.0.0
