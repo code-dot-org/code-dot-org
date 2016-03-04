@@ -876,12 +876,12 @@ Applab.init = function(config) {
   // Push initial level properties into the Redux store
   reduxStore.dispatch(setLevelProps({
     assetUrl: studioApp.assetUrl,
+    isDesignModeHidden: !!config.level.hideDesignMode,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share
   }));
 
   Applab.reactInitialProps_ = {
-    isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
     renderCodeWorkspace: renderCodeWorkspace,
