@@ -13,6 +13,7 @@ var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 module.exports = connect(
   (state) => ({
     assetUrl: state.assetUrl,
+    isEmbedView: state.isEmbedView,
     isShareView: state.isShareView
   })
 )(StudioAppWrapper);

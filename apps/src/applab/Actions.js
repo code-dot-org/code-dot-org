@@ -23,6 +23,8 @@ var ActionType = module.exports.ActionType = {
  *        assets for this particular level type.
  * @param {boolean} [props.isDesignModeHidden] - Whether the level restricts
  *        use of design mode.
+ * @param {boolean} [props.isEmbedView] - Whether the level is being embedded
+ *        in an iFrame.
  * @param {boolean} [props.isReadOnlyWorkspace] - Whether the loaded level
  *        should restrict editing the student code.
  * @param {boolean} [props.isShareView] - Whether we are displaying the level

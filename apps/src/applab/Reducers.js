@@ -19,19 +19,19 @@ function rootReducer(state, action) {
 
   switch (action.type) {
     case ActionType.SET_LEVEL_PROPS:
-      if (typeof action.props.assetUrl !== 'undefined') {
-        state.assetUrl = action.props.assetUrl;
-      }
-      if (typeof action.props.isDesignModeHidden !== 'undefined') {
-        state.isDesignModeHidden = action.props.isDesignModeHidden;
-      }
-      if (typeof action.props.isReadOnlyWorkspace !== 'undefined') {
-        state.isReadOnlyWorkspace = action.props.isReadOnlyWorkspace;
-      }
-      if (typeof action.props.isShareView !== 'undefined') {
-        state.isShareView = action.props.isShareView;
-      }
-      return state;
+      var newState = $.extend({}, state);
+      [
+        'assetUrl',
+        'isDesignModeHidden',
+        'isEmbedView',
+        'isReadOnlyWorkspace',
+        'isShareView'
+      ].forEach(function (propName) {
+        if (typeof action.props[propName] !== 'undefined') {
+          newState[propName] = action.props[propName];
+        }
+      });
+      return newState;
 
     default:
       return state;
