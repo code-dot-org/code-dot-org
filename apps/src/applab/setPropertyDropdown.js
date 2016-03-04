@@ -214,9 +214,9 @@ function getFirstSetPropertyParam(block, editor) {
  * Given a string like <"asdf"> strips quotes and returns <asdf>
  */
 function stripQuotes(str) {
-  var match = str.match(/^['|"](.*)['|"],\s*$/);
+  var match = str.match(/^(['"])(.*)\1$/);
   if (match) {
-    return match[1];
+    return match[2];
   }
   return str;
 }
@@ -272,5 +272,6 @@ module.exports.setPropertyDropdown = function () {
 };
 
 module.exports.__TestInterface = {
-  getFirstSetPropertyParamFromCode: getFirstSetPropertyParamFromCode
+  getFirstSetPropertyParamFromCode: getFirstSetPropertyParamFromCode,
+  stripQuotes: stripQuotes
 };
