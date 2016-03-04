@@ -796,7 +796,7 @@ Applab.init = function(config) {
       vizCol.className += " with_padding";
     }
 
-    if (config.embed || config.hideSource) {
+    if (reduxStore.getState().isEmbedView || config.hideSource) {
       // no responsive styles active in embed or hideSource mode, so set sizes:
       viz.style.width = Applab.appWidth + 'px';
       viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
