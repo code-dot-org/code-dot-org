@@ -98,7 +98,7 @@ class TablesTest < Minitest::Test
 
     # this record should not appear in the output
     create_record('name' => 'eve', 'age' => 9, 'original_column' => true)
-    assert_equal ['name', 'age', 'original_column'], JSON.parse(read_metadata["column_list"])
+    assert read_metadata.nil?
 
     csv_filename = File.expand_path('../roster.csv', __FILE__)
     import(csv_filename)
@@ -157,8 +157,11 @@ class TablesTest < Minitest::Test
     init_apis
     create_channel
 
+    write_column_metadata([])
+
     create_record('name' => 'trevor', 'age' => 30)
     create_record('name' => 'mitra', 'age' => 29)
+    write_column_metadata(['name', 'age'])
     assert_equal ['name', 'age'], JSON.parse(read_metadata["column_list"])
 
     delete_column('age')
@@ -217,14 +220,19 @@ class TablesTest < Minitest::Test
     init_apis
     create_channel
 
+    _, decrypted_channel_id = storage_decrypt_channel_id(@channel_id)
+
+    delete_table 'table1'
+    delete_table 'table2'
+    delete_table 'new_table'
+    assert_equal [], TableType.table_names(decrypted_channel_id)
+
     data1 = {
       'table1' => [{'name'=> 'trevor'}, {'name'=>'alex'}],
       'table2' => [{'word'=> 'cow'}, {'word'=>'pig'}],
     }
 
     populate_table(data1, true)
-
-    _, decrypted_channel_id = storage_decrypt_channel_id(@channel_id)
 
     assert_equal ['table1', 'table2'], TableType.table_names(decrypted_channel_id)
 
@@ -321,6 +329,12 @@ class TablesTest < Minitest::Test
     JSON.parse(@tables.last_response.body)
   end
 
+  def write_column_metadata(column_list)
+    @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/metadata?column_list=#{column_list.to_json}"
+    return nil if @tables.last_response.body.empty?
+    JSON.parse(@tables.last_response.body)
+  end
+
   def update_record(id, record)
     @tables.put "/v3/shared-tables/#{@channel_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     JSON.parse(@tables.last_response.body)
@@ -351,8 +365,8 @@ class TablesTest < Minitest::Test
     @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/column?column_name=#{new}"
   end
 
-  def delete_table
-    @tables.delete "/v3/shared-tables/#{@channel_id}/#{@table_name}"
+  def delete_table(table_name = @table_name)
+    @tables.delete "/v3/shared-tables/#{@channel_id}/#{table_name}"
   end
 
   def populate_table(data, overwrite)
