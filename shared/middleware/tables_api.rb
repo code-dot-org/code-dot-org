@@ -56,9 +56,14 @@ class TablesApi < Sinatra::Base
 
     # create metadata from records if we don't have any
     table.ensure_metadata
+    existing_columns = JSON.parse(table.metadata['column_list'])
 
     column_list = request.GET['column_list']
-    JSON.parse(column_list).each{ |col| table.add_column(col) } unless column_list.nil?
+    unless column_list.nil?
+      # filter out existing columns, as some may have been created during our ensure_metadata step
+      new_columns = JSON.parse(column_list).reject{ |col| existing_columns.include?(col) }
+      table.add_columns(new_columns)
+    end
 
     table.metadata.to_json
   end
@@ -123,7 +128,7 @@ class TablesApi < Sinatra::Base
     if column_name.empty?
       halt 400, {}, "New column name cannot be empty"
     end
-    TableType.new(channel_id, storage_id(endpoint), table_name).add_column(column_name)
+    TableType.new(channel_id, storage_id(endpoint), table_name).add_columns([column_name])
     no_content
   end
 
@@ -263,6 +268,7 @@ class TablesApi < Sinatra::Base
     records.each do |record|
       table.insert(record, request.ip)
     end
+    table.ensure_metadata
 
     redirect "#{table_url}"
   end
@@ -320,10 +326,11 @@ class TablesApi < Sinatra::Base
       end
 
       table.delete_all()
-      table.ensure_metadata()
       json_data[table_name].each do |record|
+        puts record
         table.insert(record, request.ip)
       end
+      table.ensure_metadata()
     end
   end
 end
