@@ -44,6 +44,11 @@ var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
 
+var createStore = require('redux').createStore;
+var Provider = require('react-redux').Provider;
+var rootReducer = require('./Reducers').rootReducer;
+var setLevelProps = require('./Actions').setLevelProps;
+
 var applabConstants = require('./constants');
 
 var ResultType = studioApp.ResultType;
@@ -63,6 +68,13 @@ var jsInterpreterLogger = null;
  * @type {JsDebuggerUi} Controller for JS debug buttons and console area
  */
 var debuggerUi = null;
+
+/**
+ * Redux Store holding application state, transformable by actions.
+ * @type {Store}
+ * @see http://redux.js.org/docs/basics/Store.html
+ */
+var reduxStore = createStore(rootReducer);
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
@@ -861,8 +873,12 @@ Applab.init = function(config) {
     }
   }.bind(this);
 
+  // Push initial level properties into the Redux store
+  reduxStore.dispatch(setLevelProps({
+    assetUrl: studioApp.assetUrl
+  }));
+
   Applab.reactInitialProps_ = {
-    assetUrl: studioApp.assetUrl,
     isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
     isReadOnlyView: !!config.readonlyWorkspace,
@@ -907,7 +923,13 @@ Applab.render = function () {
     onScreenChange: designMode.changeScreen,
     onScreenCreate: designMode.createScreen
   });
-  ReactDOM.render(React.createElement(AppLabView, nextProps), Applab.reactMountPoint_);
+  /* jshint ignore:start */
+  ReactDOM.render(
+    <Provider store={reduxStore}>
+      <AppLabView {...nextProps} />
+    </Provider>,
+    Applab.reactMountPoint_);
+  /* jshint ignore:end */
 };
 
 /**
