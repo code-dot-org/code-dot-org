@@ -9,10 +9,6 @@
 'use strict';
 
 var redux = require('redux');
-var applyMiddleware = redux.applyMiddleware;
-var compose = redux.compose;
-var createStore = redux.createStore;
-var createLogger = require('redux-logger');
 
 /**
  * Creates a store configured for use the way we want for Code.org.
@@ -22,9 +18,17 @@ var createLogger = require('redux-logger');
  * @return {Store} Configured Redux store, ready for use.
  */
 module.exports = function createStoreCDO(reducer, initialState) {
-  var reduxLogger = createLogger();
-  return createStore(reducer, initialState, compose(
-      applyMiddleware(reduxLogger),
-      window.devToolsExtension ? window.devToolsExtension() : undefined
-  ));
+  if (process.env.NODE_ENV !== "production") {
+    var createLogger = require('redux-logger');
+    var reduxLogger = createLogger();
+    var devTools = window.devToolsExtension ?
+        window.devToolsExtension() :
+        function (f) { return f; };
+    return redux.createStore(reducer, initialState, redux.compose(
+        redux.applyMiddleware(reduxLogger),
+        devTools
+    ));
+  }
+
+  return redux.createStore(reducer, initialState);
 };

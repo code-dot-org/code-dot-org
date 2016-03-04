@@ -335,6 +335,7 @@ module.exports = function (grunt) {
   var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc' +
       ' --cachefile ' + outputDir + 'browserifyinc-cache.json' +
       ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
+      (envOptions.dev ? '' : ' -t [ envify --NODE_ENV production ]') +
       ' -d ' + allFilesSrc.join(' ') +
       (
           APPS.length > 1 ?
