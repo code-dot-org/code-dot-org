@@ -1,5 +1,6 @@
 require 'rack/attack'
 require 'rack/attack/path_normalizer'
+require 'redis'
 require 'active_support/core_ext/numeric/time'
 
 class Rack::Attack
