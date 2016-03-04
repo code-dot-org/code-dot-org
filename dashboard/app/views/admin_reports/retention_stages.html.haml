@@ -3,13 +3,16 @@
   %script{src:'https://www.gstatic.com/charts/loader.js'}
 
 %h1
-  = "Retention for Stages #{@stages.join(', ')}"
+  = "Retention for Stages #{@stage_ids.join(', ')}"
+The data is restricted to users whose last script progress was between four
+weeks and two weeks ago.
 
+%br
 %br
 
 %form{method: 'get'}
   Stage IDs:
-  %input{name: "stage_ids", id: "stage_ids", value: @stages.join(", ")}
+  %input{name: "stage_ids", id: "stage_ids", value: @stage_ids.join(", ")}
   %input{type: "submit", name: "submit"}
 
 %br
@@ -21,7 +24,7 @@
 
 - content_for :body_scripts do
   :javascript
-    stages = #{@stages};
+    stages = #{@stage_ids};
     stats = #{@retention_stats};
     // Load the Visualization API and the appropriate packages, setting a
     // callback to run when the API is loaded.
