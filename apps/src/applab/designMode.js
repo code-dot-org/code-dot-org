@@ -875,7 +875,7 @@ designMode.renderDesignWorkspace = function(element) {
     handleManageAssets: showAssetManager,
     isDimmed: Applab.running
   };
-  React.render(React.createElement(DesignWorkspace, props), designWorkspace);
+  ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };
 
 /**

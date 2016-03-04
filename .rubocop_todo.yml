@@ -55,10 +55,6 @@ Lint/UnderscorePrefixedVariableName:
 Lint/UnusedMethodArgument:
   Enabled: false
 
-# Offense count: 3
-Lint/Void:
-  Enabled: false
-
 # Offense count: 17
 # Cop supports --auto-correct.
 Performance/Casecmp:
@@ -512,10 +508,6 @@ Style/StringLiterals:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: single_quotes, double_quotes
 Style/StringLiteralsInInterpolation:
-  Enabled: false
-
-# Offense count: 1
-Style/StructInheritance:
   Enabled: false
 
 # Offense count: 12

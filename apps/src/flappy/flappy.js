@@ -607,7 +607,7 @@ Flappy.init = function(config) {
     dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
   };
 
-  React.render(React.createElement(AppView, {
+  ReactDOM.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,

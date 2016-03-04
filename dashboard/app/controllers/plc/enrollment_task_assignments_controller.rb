@@ -1,5 +1,4 @@
 class Plc::EnrollmentTaskAssignmentsController < ApplicationController
-  before_action :set_plc_enrollment_task_assignment, only: [:show, :destroy]
   load_and_authorize_resource
 
   # GET /plc/enrollment_task_assignments

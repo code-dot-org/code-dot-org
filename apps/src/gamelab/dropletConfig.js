@@ -23,10 +23,10 @@ var spriteBlockPrefix = 'sprite.';
 var groupBlockPrefix = 'group.';
 var animBlockPrefix = 'anim.';
 
-var GameLab;
+var gameLab;
 
 exports.injectGameLab = function (gamelab) {
-  GameLab = gamelab;
+  gameLab = gamelab;
 };
 
 // Flip the argument order so we can bind `typeFilter`.
@@ -53,16 +53,16 @@ module.exports.blocks = [
   {func: 'textAlign', category: 'Game Lab', paletteParams: ['horiz','vert'], params: ["CENTER", "TOP"] },
   {func: 'textSize', category: 'Game Lab', paletteParams: ['pixels'], params: ["12"] },
   {func: 'drawSprites', category: 'Game Lab' },
-  {func: 'allSprites', category: 'Game Lab', block: 'allSprites', type: 'property' },
+  {func: 'allSprites', category: 'Game Lab', block: 'allSprites', type: 'readonlyproperty' },
   {func: 'background', category: 'Game Lab', paletteParams: ['color'], params: ["'black'"] },
-  {func: 'width', category: 'Game Lab', type: 'property' },
-  {func: 'height', category: 'Game Lab', type: 'property' },
-  {func: 'camera', category: 'Game Lab', type: 'property' },
+  {func: 'width', category: 'Game Lab', type: 'readonlyproperty' },
+  {func: 'height', category: 'Game Lab', type: 'readonlyproperty' },
+  {func: 'camera', category: 'Game Lab', type: 'readonlyproperty' },
   {func: 'camera.on', category: 'Game Lab' },
   {func: 'camera.off', category: 'Game Lab' },
-  {func: 'camera.active', category: 'Game Lab', type: 'property' },
-  {func: 'camera.mouseX', category: 'Game Lab', type: 'property' },
-  {func: 'camera.mouseY', category: 'Game Lab', type: 'property' },
+  {func: 'camera.active', category: 'Game Lab', type: 'readonlyproperty' },
+  {func: 'camera.mouseX', category: 'Game Lab', type: 'readonlyproperty' },
+  {func: 'camera.mouseY', category: 'Game Lab', type: 'readonlyproperty' },
   {func: 'camera.position.x', category: 'Game Lab', type: 'property' },
   {func: 'camera.position.y', category: 'Game Lab', type: 'property' },
   {func: 'camera.zoom', category: 'Game Lab', type: 'property' },
@@ -104,14 +104,14 @@ module.exports.blocks = [
   {func: 'previousPosition', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.previousPosition', type: 'property' },
   {func: 'sprite.previousPosition.x', category: 'Sprites', modeOptionName: 'sprite_previousPosition_x', type: 'property', noAutocomplete: true },
   {func: 'sprite.previousPosition.y', category: 'Sprites', modeOptionName: 'sprite_previousPosition_y', type: 'property', noAutocomplete: true },
-  {func: 'removed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.removed', type: 'property' },
+  {func: 'removed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.removed', type: 'readonlyproperty' },
   {func: 'restitution', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.restitution', type: 'property' },
   {func: 'rotateToDirection', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotateToDirection', type: 'property' },
   {func: 'rotation', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotation', type: 'property' },
   {func: 'rotationSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotationSpeed', type: 'property' },
   {func: 'scale', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.scale', type: 'property' },
   {func: 'shapeColor', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.shapeColor', type: 'property' },
-  {func: 'touching', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.touching', type: 'property' },
+  {func: 'touching', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.touching', type: 'readonlyproperty' },
   {func: 'velocity', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.velocity', type: 'property' },
   {func: 'sprite.velocity.x', category: 'Sprites', modeOptionName: 'sprite_velocity_x', type: 'property', noAutocomplete: true },
   {func: 'sprite.velocity.y', category: 'Sprites', modeOptionName: 'sprite_velocity_y', type: 'property', noAutocomplete: true },
@@ -152,11 +152,11 @@ update() - USEFUL?
   {func: 'play', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.play' },
   {func: 'rewind', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.rewind' },
   {func: 'stop', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.stop' },
-  {func: 'frameChanged', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.frameChanged', type: 'property' },
+  {func: 'frameChanged', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.frameChanged', type: 'readonlyproperty' },
   {func: 'frameDelay', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.frameDelay', type: 'property' },
   {func: 'images', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.images', type: 'property' },
   {func: 'looping', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.looping', type: 'property' },
-  {func: 'playing', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.playing', type: 'property' },
+  {func: 'playing', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.playing', type: 'readonlyproperty' },
   {func: 'anim.visible', category: 'Animations', modeOptionName: '*.visible', type: 'property' },
 /* TODO: decide whether to expose these Animation methods:
 draw(xy)
