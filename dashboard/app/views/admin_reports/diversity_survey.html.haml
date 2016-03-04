@@ -1,0 +1,70 @@
+%h1
+  March 2016 Diversity Survey Results
+
+%h2 Response Rates
+Number of Participants: #{@participants}
+%br
+Number of Respondents: #{@respondents}
+%br
+Percentage of Teachers Responding:
+= number_to_percentage(100.0 * @respondents / [@participants, 1].max, precision: 2)
+
+%h2 Free and Reduced Meals Responses
+FARM Student Count: #{@foodstamps_student_count}
+%br
+Student Count: #{@student_count}
+
+%table
+  %tr
+    %th
+      %span Min Percentage
+    %th
+      %span Max Percentage
+    %th
+      %span Count
+  - (0..6).each do |index|
+    %tr
+      %td
+        %span= (index * 10).to_s + '%'
+      %td
+        %span= ((index + 1) * 10).to_s + '%'
+      %td
+        %span= @foodstamps[index]
+  %tr
+    %td
+      %span 70%
+    %td
+      %span 100%
+    %td
+      %span= @foodstamps[7]
+  %tr
+    %td
+      Title I Designation
+    %td
+    %td
+      %span= @foodstamps[8]
+  %tr
+    %td
+      %span Other
+    %td
+    %td
+      %span= @foodstamps[9]
+
+%h2 Ethnicity Responses
+All Ethnicities: #{@ethnic_student_count}
+%table
+  %tr
+    %th
+      %span Ethnicity
+    %th
+      %span Count
+    %th
+      %span Percentage
+  - ['american_indian', 'asian', 'black', 'hispanic', 'native', 'white', 'other'].each do |ethnicity|
+    %tr
+      %td
+        %span= ethnicity
+      %td
+        %span= @ethnicities[('survey2016_ethnicity_' + ethnicity).to_sym]
+      %td
+        %span= number_to_percentage(100.0 * @ethnicities[('survey2016_ethnicity_' + ethnicity).to_sym] / @ethnic_student_count, precision: 2)
