@@ -10,7 +10,7 @@ video_player: true
 
 [col-50]
 
-In fall 2016, the College Board will launch its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+In fall 2016, the College Board will launch its newest AP&reg; course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
 
 For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.org/APCSP).
 
