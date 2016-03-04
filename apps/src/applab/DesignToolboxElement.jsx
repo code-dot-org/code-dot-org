@@ -54,7 +54,7 @@ module.exports = React.createClass({
    * Create a draggable item as we drag an item from the toolbox.
    */
   makeDraggable: function () {
-    $(this.getDOMNode()).find('.new-design-element').draggable({
+    $(ReactDOM.findDOMNode(this)).find('.new-design-element').draggable({
       // Create an item (without an id) for dragging that looks identical to the
       // element that will ultimately be dropped. Note, this item has no
       // containment, and doesn't snap to a grid as we drag (but does on drop)

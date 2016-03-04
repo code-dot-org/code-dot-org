@@ -11,7 +11,6 @@ video_player: true
 = view :jumbotron_banner, img: CDO.code_org_url("/images/app-lab/girl-cropped.jpg"), title: "App Lab", desc: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.", specs: "Ages 13+, All modern browsers, English only", url: CDO.studio_url('/p/applab'), cta: "Make an app", nav_bar: [{text: 'Resources', url: '#resources'}, {text: 'Challenges', url: '#challenges'}, {text: 'Video Library', url: '#videos'}]
 
 #resources.responsive-body
-  %h1 Resources to get you started
   .col-50
     %h2 Try the course that introduces App Lab
     - img_src =  CDO.code_org_url("/shared/images/courses/logo_cspunit3.jpg")
@@ -27,11 +26,19 @@ video_player: true
 
   .col-50
     %h2 Watch this video introduction to App Lab
-    = view :display_video_thumbnail, id: "AppLabIntro", video_code: "4wY8JmFzZ8c", play_button: 'center', download_path: "//videos.code.org/2015/csp/IntroToAppLab.mp4"
+    = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4"
+  .clear
+  %h2 See how to use App Lab and build your own app with these 10 minute demos
+  .col-33{style: "padding-right: 10px;"}
+    = view :display_video_thumbnail, id: "app_lab_intro", video_code: "xlbRL5eOgkI", play_button: 'center', download_path: "//videos.code.org/applab/how-to-introduction.mp4"
+  .col-33{style: "padding-right: 10px;"}
+    = view :display_video_thumbnail, id: "choose_adventure", video_code: "xbCQEodOm3E", play_button: 'center', download_path: "//videos.code.org/applab/how-to-choose-your-own-adventure.mp4"
+  .col-33{style: "padding-right: 10px;"}
+    = view :display_video_thumbnail, id: "whack_e_moji", video_code: "h2AS5G9a4j4", play_button: 'center', download_path: "//videos.code.org/applab/whack-e-moji.mp4"
   .clear
 
 #challenges.responsive-body
-  %h2 Try these challenges
+  %h2 Explore these sample apps and take the challenge to make them even better
   .highlights-content
     - cta = "Remix the project"
     = view :highlight_item, item: {image: "slider-sketch", title: "Slider sketch", desc: "Use the sliders to draw cool patterns and designs. Challenge: Add another slider to change the thickness of the line.", cta: cta, url: 'https://studio.code.org/projects/applab/JNbplBXMisx2aMefUkh39g/remix'}
