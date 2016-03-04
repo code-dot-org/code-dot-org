@@ -22,6 +22,9 @@ function rootReducer(state, action) {
       if (typeof action.levelProps.assetUrl !== 'undefined') {
         state.assetUrl = action.levelProps.assetUrl;
       }
+      if (typeof action.levelProps.isReadOnlyView !== 'undefined') {
+        state.isReadOnlyView = action.levelProps.isReadOnlyView;
+      }
       return state;
 
     default:
