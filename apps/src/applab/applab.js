@@ -74,7 +74,8 @@ var debuggerUi = null;
  * @type {Store}
  * @see http://redux.js.org/docs/basics/Store.html
  */
-var reduxStore = createStore(rootReducer);
+var reduxStore = createStore(rootReducer, undefined,
+    window.devToolsExtension ? window.devToolsExtension() : undefined);
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab

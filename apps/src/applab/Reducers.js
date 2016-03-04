@@ -12,7 +12,9 @@ var ActionType = require('./Actions').ActionType;
 
 function rootReducer(state, action) {
   if (typeof state === 'undefined') {
-    state = {};
+    state = {
+      assetUrl: function () {}
+    };
   }
 
   switch (action.type) {
