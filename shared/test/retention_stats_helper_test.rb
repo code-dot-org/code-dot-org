@@ -19,6 +19,11 @@ class RetentionStatsHelperTest < Minitest::Test
     assert_equal({17 => [0.0, 0.0]}, get_cumulatives(stats))
   end
 
+  def test_get_cumulatives_rounding
+    stats = {17 => [1, 1, 1]}
+    assert_equal({17 => [100.000, 66.667, 33.333]}, get_cumulatives(stats))
+  end
+
   def test_add_missing_keys_no_missing_keys
     base_hash = {1 => 11, 2 => 22}
     other_hash = {1 => 111, 2 => 222}
