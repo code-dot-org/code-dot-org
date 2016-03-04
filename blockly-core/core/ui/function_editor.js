@@ -256,6 +256,7 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
       block.firstElementChild.textContent = newName;
     }
   });
+  this.functionDefinitionBlock.renameVar(oldName, newName);
 };
 
 Blockly.FunctionEditor.prototype.changeParameterTypeInFlyoutXML = function(name, newType) {
