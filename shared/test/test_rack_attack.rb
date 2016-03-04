@@ -2,6 +2,7 @@ require 'mocha/mini_test'
 require_relative 'test_helper'
 require 'channels_api'
 require 'tables_api'
+require 'properties_api'
 
 # Allow 3 requests of each type in the first 15 seconds
 REDUCED_RATE_LIMIT_FOR_TESTING = 3.0 / 60
@@ -23,7 +24,7 @@ class RackAttackTest < Minitest::Test
   TABLE_NAME = 'stub_rack_attack_table'
 
   def build_rack_mock_session
-    @session = Rack::MockSession.new(Rack::Attack.new(TablesApi), 'studio.code.org')
+    @session = Rack::MockSession.new(Rack::Attack.new(TablesApi.new(PropertiesApi)), 'studio.code.org')
   end
 
   def setup
@@ -86,6 +87,26 @@ class RackAttackTest < Minitest::Test
     assert_equal 429, last_response.status, "2nd delete is rate limited."
   end
 
+  def test_property_limits_enforced
+    set_key_value
+    assert last_response.successful?, '1st property set succeeds'
+    set_key_value
+    assert last_response.successful?, '2nd property set succeeds'
+    set_key_value
+    assert last_response.successful?, '3rd property set succeeds'
+    set_key_value
+    assert_equal 429, last_response.status, "4th property set is rate limited."
+
+    get_key_value
+    assert last_response.successful?, '1st property get succeeds'
+    get_key_value
+    assert last_response.successful?, '2nd property get succeeds'
+    get_key_value
+    assert last_response.successful?, '3rd property get succeeds'
+    get_key_value
+    assert_equal 429, last_response.status, "4th property get is rate limited."
+  end
+
   # Helper methods
 
   def table_path
@@ -113,5 +134,17 @@ class RackAttackTest < Minitest::Test
 
   def delete_record(id)
     delete "#{table_path}/#{id}"
+  end
+
+  def property_path
+    "/v3/shared-properties/#{@channel_id}/key"
+  end
+
+  def set_key_value
+    post property_path, "value".to_json, content_type_json
+  end
+
+  def get_key_value
+    get property_path
   end
 end
