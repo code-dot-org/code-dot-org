@@ -17,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - FM2JB2B28G32SIBGI6SBEN8O33VV4KQNSO5AEMVJF66Q9ASUAAJG
+      - BROAR4Q55O0F8683MTGHF3P53JVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '3419873179'
       Content-Type:
@@ -25,18 +25,18 @@ http_interactions:
       Content-Length:
       - '140'
       Date:
-      - Fri, 04 Mar 2016 06:37:46 GMT
+      - Fri, 04 Mar 2016 06:51:47 GMT
     body:
       encoding: UTF-8
       string: '{"Count":1,"Items":[{"row_id":{"N":"7"}}],"LastEvaluatedKey":{"row_id":{"N":"7"},"hash":{"S":"1:stub_rack_attack_table:"}},"ScannedCount":1}'
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 06:37:47 GMT
+  recorded_at: Fri, 04 Mar 2016 06:51:47 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
     body:
       encoding: UTF-8
-      string: '{"TableName":"test_tables","Item":{"hash":{"S":"1:stub_rack_attack_table:"},"channel_id":{"N":"1"},"table_name":{"S":"stub_rack_attack_table"},"row_id":{"N":"8"},"updated_at":{"S":"2016-03-03T22:37:47-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"{\"name\":\"Alice\",\"age\":7}"}},"Expected":{"row_id":{"Value":{"N":"8"},"ComparisonOperator":"NE"}}}'
+      string: '{"TableName":"test_tables","Item":{"hash":{"S":"1:stub_rack_attack_table:"},"channel_id":{"N":"1"},"table_name":{"S":"stub_rack_attack_table"},"row_id":{"N":"8"},"updated_at":{"S":"2016-03-03T22:51:47-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"{\"name\":\"Alice\",\"age\":7}"}},"Expected":{"row_id":{"Value":{"N":"8"},"ComparisonOperator":"NE"}}}'
     headers:
       X-Amz-Target:
       - DynamoDB_20120810.PutItem
@@ -48,7 +48,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - 3FVT0L9DIJH7DCBEOQQSHHAUNFVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - ORMUCQF0DORAERE8VS09CMTPOBVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '2745614147'
       Content-Type:
@@ -56,12 +56,12 @@ http_interactions:
       Content-Length:
       - '2'
       Date:
-      - Fri, 04 Mar 2016 06:37:46 GMT
+      - Fri, 04 Mar 2016 06:51:47 GMT
     body:
       encoding: UTF-8
       string: "{}"
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 06:37:47 GMT
+  recorded_at: Fri, 04 Mar 2016 06:51:47 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
@@ -79,7 +79,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - UN0RL8A650F6DD36V4LGFBJGK7VV4KQNSO5AEMVJF66Q9ASUAAJG
+      - RHKOOH1ROD243SP97UC27REEHVVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '3065187367'
       Content-Type:
@@ -87,18 +87,18 @@ http_interactions:
       Content-Length:
       - '221'
       Date:
-      - Fri, 04 Mar 2016 06:37:47 GMT
+      - Fri, 04 Mar 2016 06:51:47 GMT
     body:
       encoding: UTF-8
       string: '{"Item":{"channel_id":{"N":"1"},"hash":{"S":"1:stub_rack_attack_table:shared:metadata"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:19:34-08:00"},"column_list":{"S":"[\"name\",\"age\"]"}}}'
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 06:37:47 GMT
+  recorded_at: Fri, 04 Mar 2016 06:51:48 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
     body:
       encoding: UTF-8
-      string: '{"TableName":"test_tables","Item":{"hash":{"S":"1:stub_rack_attack_table:"},"channel_id":{"N":"1"},"table_name":{"S":"stub_rack_attack_table"},"row_id":{"N":"8"},"updated_at":{"S":"2016-03-03T22:37:47-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"{\"name\":\"Bob\",\"age\":8}"}},"Expected":{"row_id":{"Value":{"N":"8"},"ComparisonOperator":"EQ"}}}'
+      string: '{"TableName":"test_tables","Item":{"hash":{"S":"1:stub_rack_attack_table:"},"channel_id":{"N":"1"},"table_name":{"S":"stub_rack_attack_table"},"row_id":{"N":"8"},"updated_at":{"S":"2016-03-03T22:51:48-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"{\"name\":\"Bob\",\"age\":8}"}},"Expected":{"row_id":{"Value":{"N":"8"},"ComparisonOperator":"EQ"}}}'
     headers:
       X-Amz-Target:
       - DynamoDB_20120810.PutItem
@@ -110,7 +110,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - L7R7E1JU38UN3EV71IH73GN307VV4KQNSO5AEMVJF66Q9ASUAAJG
+      - 0B6DS4AGTGDRGADGGR9C4UMHH3VV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '2745614147'
       Content-Type:
@@ -118,12 +118,12 @@ http_interactions:
       Content-Length:
       - '2'
       Date:
-      - Fri, 04 Mar 2016 06:37:47 GMT
+      - Fri, 04 Mar 2016 06:51:47 GMT
     body:
       encoding: UTF-8
       string: "{}"
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 06:37:48 GMT
+  recorded_at: Fri, 04 Mar 2016 06:51:48 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
@@ -141,7 +141,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - GSVCSH2LPEFI6O3H1HPGDOI9L3VV4KQNSO5AEMVJF66Q9ASUAAJG
+      - QR561UCAM4JNLIH39DRG6E26SBVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '3065187367'
       Content-Type:
@@ -149,12 +149,12 @@ http_interactions:
       Content-Length:
       - '221'
       Date:
-      - Fri, 04 Mar 2016 06:37:48 GMT
+      - Fri, 04 Mar 2016 06:51:48 GMT
     body:
       encoding: UTF-8
       string: '{"Item":{"channel_id":{"N":"1"},"hash":{"S":"1:stub_rack_attack_table:shared:metadata"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:19:34-08:00"},"column_list":{"S":"[\"name\",\"age\"]"}}}'
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 06:37:48 GMT
+  recorded_at: Fri, 04 Mar 2016 06:51:48 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
@@ -172,7 +172,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - PG36H9BSR9ID3DTNB4DI5VMQARVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - 6T0P4PVCIBTOU77U2TK0CN336RVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '2745614147'
       Content-Type:
@@ -180,10 +180,10 @@ http_interactions:
       Content-Length:
       - '2'
       Date:
-      - Fri, 04 Mar 2016 06:37:48 GMT
+      - Fri, 04 Mar 2016 06:51:49 GMT
     body:
       encoding: UTF-8
       string: "{}"
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 06:37:48 GMT
+  recorded_at: Fri, 04 Mar 2016 06:51:49 GMT
 recorded_with: VCR 3.0.0
