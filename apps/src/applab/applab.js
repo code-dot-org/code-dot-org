@@ -44,12 +44,8 @@ var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
 
-var redux = require('redux');
-var applyMiddleware = redux.applyMiddleware;
-var compose = redux.compose;
-var createStore = redux.createStore;
+var createStore = require('../ReduxCDO');
 var Provider = require('react-redux').Provider;
-var createLogger = require('redux-logger');
 var rootReducer = require('./Reducers').rootReducer;
 var setLevelProps = require('./Actions').setLevelProps;
 
@@ -73,17 +69,12 @@ var jsInterpreterLogger = null;
  */
 var debuggerUi = null;
 
-var reduxLogger = createLogger();
-
 /**
  * Redux Store holding application state, transformable by actions.
  * @type {Store}
  * @see http://redux.js.org/docs/basics/Store.html
  */
-var reduxStore = createStore(rootReducer, compose(
-    applyMiddleware(reduxLogger),
-    window.devToolsExtension ? window.devToolsExtension() : undefined
-));
+var reduxStore = createStore(rootReducer);
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
