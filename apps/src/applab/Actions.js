@@ -20,7 +20,7 @@ var ActionType = module.exports.ActionType = {
  * @param {!Object} levelProps
  * @param {function} levelProps.assetUrl - Helper function for retrieving assets
  *        for this particular level type.
- * @param {boolean} levelProps.isReadOnlyView - Whether the loaded level should
+ * @param {boolean} levelProps.isReadOnlyWorkspace - Whether the loaded level should
  *        restrict editing the student code.
  *
  * @returns {{type: string, levelProps: Object}}

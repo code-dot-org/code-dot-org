@@ -17,7 +17,7 @@ var ConnectedStudioAppWrapper = require('./ConnectedStudioAppWrapper.jsx');
  */
 var AppLabView = React.createClass({
   propTypes: {
-    isReadOnlyView: React.PropTypes.bool.isRequired,
+    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
 
     isDesignModeHidden: React.PropTypes.bool.isRequired,
     isEditingProject: React.PropTypes.bool.isRequired,
@@ -45,7 +45,7 @@ var AppLabView = React.createClass({
 
   render: function () {
     var playSpaceHeader;
-    if (!this.props.isReadOnlyView) {
+    if (!this.props.isReadOnlyWorkspace) {
       playSpaceHeader = <PlaySpaceHeader
           hideToggle={this.shouldHideToggle()}
           hideViewDataButton={this.shouldHideViewDataButton()}
@@ -88,6 +88,6 @@ var AppLabView = React.createClass({
 });
 module.exports = connect(
   (state) => ({
-    isReadOnlyView: state.isReadOnlyView
+    isReadOnlyWorkspace: state.isReadOnlyWorkspace
   })
 )(AppLabView);
