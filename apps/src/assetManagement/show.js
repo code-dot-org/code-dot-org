@@ -1,5 +1,4 @@
-/* global Dialog, dashboard, Applab */
-// TODO (josh) - don't pass `Dialog` into `createModalDialog`.
+/* global dashboard */
 
 var AssetManager = require('./AssetManager.jsx');
 var studioApp = require('../StudioApp').singleton;
