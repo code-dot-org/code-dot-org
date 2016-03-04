@@ -14,7 +14,8 @@ var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
 var AppView = require('../templates/AppView.jsx');
-var page = require('../templates/page.html.ejs');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
@@ -575,28 +576,44 @@ Flappy.init = function(config) {
     config.blockArrangement.flappy_whenClick.y = row2;
   }
 
-  React.render(React.createElement(AppView, {
-    renderCodeApp: function () {
-      return page({
-        assetUrl: studioApp.assetUrl,
-        data: {
-          localeDirection: studioApp.localeDirection(),
-          visualization: require('./visualization.html.ejs')(),
-          controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl, shareable: level.shareable}),
-          blockUsed: undefined,
-          idealBlockNumber: undefined,
-          editCode: level.editCode,
-          blockCounterClass: 'block-counter-default',
-          readonlyWorkspace: config.readonlyWorkspace
-        }
-      });
-    },
-    onMount: function () {
-      studioApp.init(config);
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
 
-      var rightButton = document.getElementById('rightButton');
-      dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
-    }
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl, shareable: level.shareable})
+      }
+    });
+  };
+
+  var onMount = function () {
+    studioApp.init(config);
+
+    var rightButton = document.getElementById('rightButton');
+    dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+  };
+
+  ReactDOM.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
+    onMount: onMount
   }), document.getElementById(config.containerId));
 };
 

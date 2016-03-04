@@ -10,7 +10,8 @@
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
 var AppView = require('../templates/AppView.jsx');
-var page = require('../templates/page.html.ejs');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 
 /**
@@ -148,34 +149,50 @@ Jigsaw.init = function(config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  React.render(React.createElement(AppView, {
-    renderCodeApp: function () {
-      return page({
-        assetUrl: studioApp.assetUrl,
-        data: {
-          localeDirection: studioApp.localeDirection(),
-          controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
-          editCode: level.editCode,
-          blockCounterClass: 'block-counter-default'
-        }
-      });
-    },
-    onMount: function () {
-      studioApp.init(config);
-
-      document.getElementById('runButton').style.display = 'none';
-      Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function(evt) {
-        checkForSuccess();
-      });
-
-      // Only used by level1, in which the success criteria is clicking on the block
-      var block1 = document.querySelectorAll("[block-id='1']")[0];
-      if (block1) {
-        dom.addMouseDownTouchEvent(block1, function () {
-          Jigsaw.block1Clicked = true;
-        });
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default'
       }
+    });
+  };
+
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl})
+      }
+    });
+  };
+
+  var onMount = function () {
+    studioApp.init(config);
+
+    document.getElementById('runButton').style.display = 'none';
+    Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function(evt) {
+      checkForSuccess();
+    });
+
+    // Only used by level1, in which the success criteria is clicking on the block
+    var block1 = document.querySelectorAll("[block-id='1']")[0];
+    if (block1) {
+      dom.addMouseDownTouchEvent(block1, function () {
+        Jigsaw.block1Clicked = true;
+      });
     }
+  };
+
+  ReactDOM.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
+    onMount: onMount
   }), document.getElementById(config.containerId));
 };
 

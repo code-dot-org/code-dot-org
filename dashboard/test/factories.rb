@@ -1,5 +1,4 @@
 FactoryGirl.define do
-
   factory :level_group do
     game_id 1
     name "MyString"
@@ -13,6 +12,14 @@ FactoryGirl.define do
     type ""
     md5 "MyString"
     published false
+  end
+
+  factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
+    resource_url nil
+  end
+
+  factory :plc_script_completion_task, parent: :plc_task, class: 'Plc::ScriptCompletionTask' do
+    script_id nil
   end
 
   factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
@@ -40,6 +47,7 @@ FactoryGirl.define do
     plc_course nil
     user nil
   end
+
   factory :plc_task, :class => 'Plc::Task' do
     name "MyString"
     plc_learning_module nil

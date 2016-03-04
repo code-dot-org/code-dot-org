@@ -55,10 +55,6 @@ Lint/UnderscorePrefixedVariableName:
 Lint/UnusedMethodArgument:
   Enabled: false
 
-# Offense count: 3
-Lint/Void:
-  Enabled: false
-
 # Offense count: 17
 # Cop supports --auto-correct.
 Performance/Casecmp:

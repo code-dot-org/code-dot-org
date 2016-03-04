@@ -1,0 +1,74 @@
+name 'ECSPD3-u6 links to online simulations' 
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+## Alternative Ideas for Unit 6 >  Links to Online Simulations Using Robots and Tangibles 
+ 
+<br><br> 
+#### Concepts Covered  
+Online Robot Simulations and Tangibles.  
+ 
+#### Overview 
+If you don't have physical robots there are a variety of other options to give students the experience of working with robots.  Listed are some virtual options you can try out.
+
+##### Simulations
+- <a href="http://www.robotvirtualworlds.com/" target=_blank>Robot Virtual Worlds</a>  
+- <a href="https://www.robomindacademy.com/go/course/robomind/Teaser/A1/0" target=_blank>Robot Mind Academy</a>  
+- <a href="http://simspark.sourceforge.net/wiki/index.php/Main_Page" target=_blank>SimSpark - Soccer Game Simulation for the Robo Cup Challenge </a>   
+- <a href="http://www.mind.ilstu.edu/curriculum/virtual_robotics_lab/lab.html" target=_blank>Virtual Robots Lab</a>
+	- The software doesn't save your work with the free version
+-  <a href=" https://www.cs2n.org/activities/cs2n-learn" target=_blank>CS2N Free Robots Courses</a>
+	- They would like you to attend their PD, but not necessary
+- <a href=" http://gazebosim.org/" target=_blank>Gazebosimo Robot Simulation</a>
+- <a href="http://education.rec.ri.cmu.edu/vex/" target=_blank>Vex Robot Simulation</a>
+- <a href=" http://kidsahead.com/subjects/1-robotics/activities/30" target=_blank>Build a Virtual Robot</a>
+- <a href=" http://kidsahead.com/subjects/4-video-games/activities/213" target=_blank>Build a 3D Robot</a>
+
+##### Tangibles
+- Makey Makey
+	- <a href="https://vimeo.com/60307041"target=_blank>Makey Makey Video</a>  
+	- <a href="http://makeymakey.com/guides/"target=_blank>Makey Makey Guide</a>
+- RaspberryPi
+	- <a href="https://www.youtube.com/watch?v=nnLTrJ6YQ-o#t=15" target=_blank>RaaspberriPi Video</a>
+	- <a href="https://www.raspberrypi.org/learning/getting-started-with-raspberry-pi-lesson/" target=_blank>RaspberryPi Lesson Plan</a>
+- Arduino
+	- <a href="https://www.arduino.cc/en/Tutorial/HomePage" target=_blank>Arduino Lesson Plans</a>
+- Picoboard
+	- <a href="http://www.picocricket.com/picoboard.html" target=_blank>PicoBoard with Scratch Lesson Plans</a>
+	- <a href="http://wiki.scratch.mit.edu/wiki/PicoBoard" target=_blank>Additional PicoBoard with Scratch Lesson Plans</a>
+- Kinect2Scratch
+	- <a href="http://scratch.saorog.com/l" target=_blank>Kinect2 Scratch Lesson Plans</a>
+- LEGO WeDoKit
+	- <a href="http://wiki.scratch.mit.edu/wiki/LEGO_Education_WeDo_Robotics_Kit" target=_blank>LEGO We Do with Scratch Lesson Plans</a>
+- LittleBits
+	- <a href="http://littlebits.cc/lessons?type=lesson&sort=recent&page=1&per_page=12#browse" target=_blank>Littlebits Lesson Plans</a>
+- Circuits
+	- <a href="http://chibitronics.com/education/" target=_blank>Circuitsi Lesson Plan</a>
+- Augmented Realty
+	- <a href="http://engagetheirminds.com/augmented-reality/" target=_blank>Augmented Reality Lesson Plans</a>
+- E-Textiles
+	<br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/4DjdJydl-ds" frameborder="0" allowfullscreen></iframe>
+	<br>
+	- <a href="http://www.ncwit.org/sites/default/files/resources/etextiles_box.pdf" target=_blank>E-Textiles Lesson Plan</a>
+	- <a href="https://www.sparkfun.com/products/11590" target=_blank>ProtoSnap LilyTwinkle E-Textiles Lesson Plan</a>
+- Chatbots
+	- <a href="http://www.pandorabots.com/botmaster/en/~1d56de3c6c48d8546f1249~/home" target=_blank>Create your own Chabot with Pandorabots</a>
+	- Free open-source-based community webservice provided
+	- <a href="https://www.oppia.org/explore/8ddJdz-g_9oH" target=_blank>Create your own Chatbot with Oppia</a>
+- 3D Printing
+	- <a href="http://www.thingiverse.com/" target=_blank>Thingverse Tutorials</a>
+	- <a href="https://www.tinkercad.com/about/learn" target=_blank>Tinkercad Tutorials</a>
+	- <a href="http://www.123dapp.com/howto/design" target=_blank>123 Design Tutorials</a>
+	- <a href="http://www.schrockguide.net/3d-printing.html" target=_blank>3D Printing Lesson Plans and Resources</a>
+		
+<br>
+
+Click “Continue” below to learn about the next lesson.  
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

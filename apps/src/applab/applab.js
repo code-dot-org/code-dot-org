@@ -17,8 +17,9 @@ var api = require('./api');
 var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
-var AppView = require('../templates/AppView.jsx');
-var page = require('../templates/page.html.ejs');
+var AppLabView = require('./AppLabView.jsx');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -381,7 +382,7 @@ function renderFooterInSharedGame() {
     });
   }
 
-  React.render(React.createElement(window.dashboard.SmallFooter,{
+  ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
     i18nDropdown: '',
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
@@ -395,7 +396,8 @@ function renderFooterInSharedGame() {
       paddingLeft: 0
     },
     className: 'dark',
-    menuItems: menuItems
+    menuItems: menuItems,
+    phoneFooter: true
   }), footerDiv);
 }
 
@@ -549,14 +551,14 @@ Applab.startSharedAppAfterWarnings = function () {
 
   var modal = document.createElement('div');
   document.body.appendChild(modal);
-  return React.render(React.createElement(ShareWarningsDialog, {
+  return ReactDOM.render(React.createElement(ShareWarningsDialog, {
     showStoreDataAlert: showStoreDataAlert,
     is13Plus: is13Plus,
     handleClose: function () {
       // we closed the dialog without hitting too_young
       // Only want to ask about age once across apps
       if (!Applab.user.isSignedIn) {
-        localStorage.setItem('is13Plus', 'true');
+        utils.trySetLocalStorage('is13Plus', 'true');
       }
       // Only want to ask about storing data once per app.
       if (showStoreDataAlert) {
@@ -565,7 +567,7 @@ Applab.startSharedAppAfterWarnings = function () {
       window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
     },
     handleTooYoung: function () {
-      localStorage.setItem('is13Plus', 'false');
+      utils.trySetLocalStorage('is13Plus', 'false');
       window.location.href = '/too_young';
     }
   }), modal);
@@ -739,118 +741,173 @@ Applab.init = function(config) {
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
 
-  React.render(React.createElement(AppView, {
-    renderCodeApp: function () {
-      return page({
-        assetUrl: studioApp.assetUrl,
-        data: {
-          localeDirection: studioApp.localeDirection(),
-          visualization: require('./visualization.html.ejs')({
-            appWidth: Applab.appWidth,
-            appHeight: Applab.footerlessAppHeight
-          }),
-          controls: firstControlsRow,
-          extraControlRows: extraControlRows,
-          blockUsed: undefined,
-          idealBlockNumber: undefined,
-          editCode: level.editCode,
-          blockCounterClass: 'block-counter-default',
-          pinWorkspaceToBottom: true,
-          // TODO (brent) - seems a little gross that we've made this part of a
-          // template shared across all apps
-          // disable designMode if we're readonly
-          hasDesignMode: !config.readonlyWorkspace,
-          readonlyWorkspace: config.readonlyWorkspace
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        extraControlRows: extraControlRows,
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default',
+        pinWorkspaceToBottom: true,
+        // TODO (brent) - seems a little gross that we've made this part of a
+        // template shared across all apps
+        // disable designMode if we're readonly
+        hasDesignMode: !config.readonlyWorkspace,
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')({
+          appWidth: Applab.appWidth,
+          appHeight: Applab.footerlessAppHeight
+        }),
+        controls: firstControlsRow
+      }
+    });
+  }.bind(this);
+
+  var onMount = function () {
+    studioApp.init(config);
+
+    var viz = document.getElementById('visualization');
+    var vizCol = document.getElementById('visualizationColumn');
+
+    if (!config.noPadding) {
+      viz.className += " with_padding";
+      vizCol.className += " with_padding";
+    }
+
+    if (config.embed || config.hideSource) {
+      // no responsive styles active in embed or hideSource mode, so set sizes:
+      viz.style.width = Applab.appWidth + 'px';
+      viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
+      // Use offsetWidth of viz so we can include any possible border width:
+      vizCol.style.maxWidth = viz.offsetWidth + 'px';
+    }
+
+    if (debuggerUi) {
+      debuggerUi.initializeAfterDomCreated({
+        defaultStepSpeed: config.level.sliderSpeed
+      });
+    }
+
+    window.addEventListener('resize', Applab.renderVisualizationOverlay);
+
+    var finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
+    }
+
+    var submitButton = document.getElementById('submitButton');
+    if (submitButton) {
+      dom.addClickTouchEvent(submitButton, Applab.onPuzzleSubmit);
+    }
+
+    var unsubmitButton = document.getElementById('unsubmitButton');
+    if (unsubmitButton) {
+      dom.addClickTouchEvent(unsubmitButton, Applab.onPuzzleUnsubmit);
+    }
+
+    if (level.editCode) {
+      // Prevent the backspace key from navigating back. Make sure it's still
+      // allowed on other elements.
+      // Based on http://stackoverflow.com/a/2768256/2506748
+      $(document).on('keydown', function (event) {
+        var doPrevent = false;
+        if (event.keyCode !== KeyCodes.BACKSPACE) {
+          return;
+        }
+        var d = event.srcElement || event.target;
+        if ((d.tagName.toUpperCase() === 'INPUT' && (
+            d.type.toUpperCase() === 'TEXT' ||
+            d.type.toUpperCase() === 'PASSWORD' ||
+            d.type.toUpperCase() === 'FILE' ||
+            d.type.toUpperCase() === 'EMAIL' ||
+            d.type.toUpperCase() === 'SEARCH' ||
+            d.type.toUpperCase() === 'NUMBER' ||
+            d.type.toUpperCase() === 'DATE' )) ||
+            d.tagName.toUpperCase() === 'TEXTAREA') {
+          doPrevent = d.readOnly || d.disabled;
+        }
+        else {
+          doPrevent = !d.isContentEditable;
+        }
+
+        if (doPrevent) {
+          event.preventDefault();
         }
       });
-    }.bind(this),
-    onMount: function () {
-      studioApp.init(config);
 
-      var viz = document.getElementById('visualization');
-      var vizCol = document.getElementById('visualizationColumn');
+      designMode.addKeyboardHandlers();
 
-      if (!config.noPadding) {
-        viz.className += " with_padding";
-        vizCol.className += " with_padding";
-      }
+      designMode.renderDesignWorkspace();
 
-      if (config.embed || config.hideSource) {
-        // no responsive styles active in embed or hideSource mode, so set sizes:
-        viz.style.width = Applab.appWidth + 'px';
-        viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
-        // Use offsetWidth of viz so we can include any possible border width:
-        vizCol.style.maxWidth = viz.offsetWidth + 'px';
-      }
+      designMode.loadDefaultScreen();
 
-      if (debuggerUi) {
-        debuggerUi.initializeAfterDomCreated({
-          defaultStepSpeed: config.level.sliderSpeed
-        });
-      }
+      designMode.toggleDesignMode(Applab.startInDesignMode());
 
-      window.addEventListener('resize', Applab.renderVisualizationOverlay);
+      designMode.configureDragAndDrop();
 
-      var finishButton = document.getElementById('finishButton');
-      if (finishButton) {
-        dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
-      }
+      var designModeViz = document.getElementById('designModeViz');
+      designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
+    }
+  }.bind(this);
 
-      var submitButton = document.getElementById('submitButton');
-      if (submitButton) {
-        dom.addClickTouchEvent(submitButton, Applab.onPuzzleSubmit);
-      }
+  Applab.reactInitialProps_ = {
+    assetUrl: studioApp.assetUrl,
+    isDesignModeHidden: !!config.level.hideDesignMode,
+    isEmbedView: !!config.embed,
+    isReadOnlyView: !!config.readonlyWorkspace,
+    isShareView: !!config.share,
+    isViewDataButtonHidden: !!config.level.hideViewDataButton,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
+    onMount: onMount
+  };
 
-      var unsubmitButton = document.getElementById('unsubmitButton');
-      if (unsubmitButton) {
-        dom.addClickTouchEvent(unsubmitButton, Applab.onPuzzleUnsubmit);
-      }
+  Applab.reactMountPoint_ = document.getElementById(config.containerId);
 
-      if (level.editCode) {
-        // Prevent the backspace key from navigating back. Make sure it's still
-        // allowed on other elements.
-        // Based on http://stackoverflow.com/a/2768256/2506748
-        $(document).on('keydown', function (event) {
-          var doPrevent = false;
-          if (event.keyCode !== KeyCodes.BACKSPACE) {
-            return;
-          }
-          var d = event.srcElement || event.target;
-          if ((d.tagName.toUpperCase() === 'INPUT' && (
-              d.type.toUpperCase() === 'TEXT' ||
-              d.type.toUpperCase() === 'PASSWORD' ||
-              d.type.toUpperCase() === 'FILE' ||
-              d.type.toUpperCase() === 'EMAIL' ||
-              d.type.toUpperCase() === 'SEARCH' ||
-              d.type.toUpperCase() === 'NUMBER' ||
-              d.type.toUpperCase() === 'DATE' )) ||
-              d.tagName.toUpperCase() === 'TEXTAREA') {
-            doPrevent = d.readOnly || d.disabled;
-          }
-          else {
-            doPrevent = !d.isContentEditable;
-          }
+  Applab.render();
+};
 
-          if (doPrevent) {
-            event.preventDefault();
-          }
-        });
+/**
+ * Cache of props, established during init, to use when re-rendering top-level
+ * view.  Eventually, it would be best to replace these with a Redux store.
+ * @type {Object}
+ */
+Applab.reactInitialProps_ = {};
 
-        designMode.addKeyboardHandlers();
+/**
+ * Element on which to mount the top-level React view.
+ * @type {Element}
+ * @private
+ */
+Applab.reactMountPoint_ = null;
 
-        designMode.renderDesignWorkspace();
-
-        designMode.configurePlaySpaceHeader();
-
-        designMode.toggleDesignMode(Applab.startInDesignMode());
-
-        designMode.configureDragAndDrop();
-
-        var designModeViz = document.getElementById('designModeViz');
-        designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
-      }
-    }.bind(this)
-  }), document.getElementById(config.containerId));
+/**
+ * Trigger a top-level React render
+ */
+Applab.render = function () {
+  var nextProps = $.extend({}, Applab.reactInitialProps_, {
+    isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
+    startInDesignMode: Applab.startInDesignMode(),
+    activeScreenId: designMode.getCurrentScreenId(),
+    screenIds: designMode.getAllScreenIds(),
+    onDesignModeButton: Applab.onDesignModeButton,
+    onCodeModeButton: Applab.onCodeModeButton,
+    onViewDataButton: Applab.onViewData,
+    onScreenChange: designMode.changeScreen,
+    onScreenCreate: designMode.createScreen
+  });
+  ReactDOM.render(React.createElement(AppLabView, nextProps), Applab.reactMountPoint_);
 };
 
 /**
@@ -1472,15 +1529,6 @@ var checkFinished = function () {
 
 Applab.startInDesignMode = function () {
   return !!level.designModeAtStart;
-};
-
-Applab.hideDesignModeToggle = function () {
-  return !!level.hideDesignMode || !!studioApp.share;
-};
-
-Applab.hideViewDataButton = function () {
-  var isEditing = window.dashboard && window.dashboard.project.isEditing();
-  return !!level.hideViewDataButton || !!level.hideDesignMode || !!studioApp.share || !isEditing;
 };
 
 Applab.isInDesignMode = function () {

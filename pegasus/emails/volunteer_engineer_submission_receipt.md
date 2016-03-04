@@ -18,8 +18,9 @@ Volunteer Coordinator, Code.org
 
 <hr/>
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. You can update your email preferences at any time.
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. You can update your email preferences and edit your submitted information at any time.
 
+- [Edit my information](<%= update_preferences %>)
 - [Unsubscribe from additional teacher requests **this year**](<%= update_preferences %>)
 - [Unsubscribe from teacher requests **forever**](<%= update_preferences %>)
 - [Unsubscribe from all Code.org emails](<%= unsubscribe_link %>)
