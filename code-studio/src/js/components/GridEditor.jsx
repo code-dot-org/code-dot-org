@@ -20,7 +20,7 @@ var CellJSON = React.createClass({
   },
 
   componentDidUpdate: function () {
-    var node = this.refs.serializedInput.getDOMNode();
+    var node = this.refs.serializedInput;
     node.focus();
     node.select();
   },

@@ -257,7 +257,7 @@ NetSim.prototype.init = function(config) {
     this.runLoop_.begin();
   }.bind(this);
 
-  React.render(React.createElement(NetSimView, {
+  ReactDOM.render(React.createElement(NetSimView, {
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,

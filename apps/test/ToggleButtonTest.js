@@ -3,8 +3,8 @@
  */
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
-window.React = require('react/addons');
-var ReactTestUtils = React.addons.TestUtils;
+window.React = require('react');
+var ReactTestUtils = require('react-addons-test-utils');
 window.$ = require('jquery');
 
 describe('ToggleButton', function () {

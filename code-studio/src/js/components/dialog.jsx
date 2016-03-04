@@ -31,7 +31,7 @@ var Dialog = React.createClass({
 
   focusDialog: function () {
     if (this.props.isOpen) {
-      this.refs.dialog.getDOMNode().focus();
+      this.refs.dialog.focus();
     }
   },
 
