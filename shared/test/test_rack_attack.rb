@@ -26,19 +26,19 @@ class RackAttackTest < Minitest::Test
 
   def test_limits
     expected_limits = [[1200, 15], [2400, 60], [4800, 240]]
-    actual_limits = Rack::Attack.limits Rack::Attack::MAX_TABLE_READS_PER_SEC
+    actual_limits = Rack::Attack.limits CDO.max_table_reads_per_sec
     assert_equal expected_limits, actual_limits, "Max table read limits and periods are set correctly"
 
     expected_limits = [[2400, 15], [4800, 60], [9600, 240]]
-    actual_limits = Rack::Attack.limits Rack::Attack::MAX_TABLE_WRITES_PER_SEC
+    actual_limits = Rack::Attack.limits CDO.max_table_writes_per_sec
     assert_equal expected_limits, actual_limits, "Max table write limits and periods are set correctly"
 
     expected_limits = [[2400, 15], [4800, 60], [9600, 240]]
-    actual_limits = Rack::Attack.limits Rack::Attack::MAX_PROPERTY_READS_PER_SEC
+    actual_limits = Rack::Attack.limits CDO.max_property_reads_per_sec
     assert_equal expected_limits, actual_limits, "Max property read limits and periods are set correctly"
 
     expected_limits = [[2400, 15], [4800, 60], [9600, 240]]
-    actual_limits = Rack::Attack.limits Rack::Attack::MAX_PROPERTY_WRITES_PER_SEC
+    actual_limits = Rack::Attack.limits CDO.max_property_writes_per_sec
     assert_equal expected_limits, actual_limits, "Max property write limits and periods are set correctly"
   end
 
