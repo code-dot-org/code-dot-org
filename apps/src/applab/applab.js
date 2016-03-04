@@ -878,11 +878,11 @@ Applab.init = function(config) {
     isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isShareView: !!config.share
+    isShareView: !!config.share,
+    isViewDataButtonHidden: !!config.level.hideViewDataButton
   }));
 
   Applab.reactInitialProps_ = {
-    isViewDataButtonHidden: !!config.level.hideViewDataButton,
     renderCodeWorkspace: renderCodeWorkspace,
     renderVisualizationColumn: renderVisualizationColumn,
     onMount: onMount
