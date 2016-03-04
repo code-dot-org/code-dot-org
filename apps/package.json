@@ -82,6 +82,7 @@
     "react-dom": "0.14.7",
     "react-redux": "^4.4.0",
     "redux": "^3.3.1",
+    "redux-logger": "^2.6.1",
     "require-globify": "1.2.1",
     "rgbcolor": "0.0.4",
     "sanitize-html": "^1.11.3",
