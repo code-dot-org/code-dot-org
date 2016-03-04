@@ -16,10 +16,10 @@ var Multi = function (id, levelId, standalone, numAnswers, answers, lastAttemptS
   this.numAnswers = numAnswers;
 
   // A boolean array of the answers.  true is correct.
-  this.answers = answers; // #{data['answers'].map {|answer| answer['correct']}};
+  this.answers = answers;
 
   // A string of the last result.  Looks like "1" or "2,3".
-  this.lastAttemptString = lastAttemptString; // #{@last_attempt.to_json};
+  this.lastAttemptString = lastAttemptString;
 
   // Tracking which answers are currently selected.
   this.selectedAnswers = [];
