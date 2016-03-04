@@ -17,12 +17,8 @@ var ConnectedStudioAppWrapper = require('./ConnectedStudioAppWrapper.jsx');
  */
 var AppLabView = React.createClass({
   propTypes: {
-    isDesignModeHidden: React.PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
-
     isEditingProject: React.PropTypes.bool.isRequired,
-    isViewDataButtonHidden: React.PropTypes.bool.isRequired,
+    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
 
     startInDesignMode: React.PropTypes.bool.isRequired,
     activeScreenId: React.PropTypes.string,
@@ -46,7 +42,7 @@ var AppLabView = React.createClass({
     var playSpaceHeader;
     if (!this.props.isReadOnlyWorkspace) {
       playSpaceHeader = <PlaySpaceHeader
-          hideViewDataButton={this.shouldHideViewDataButton()}
+          isEditingProject={this.props.isEditingProject}
           startInDesignMode={this.props.startInDesignMode}
           activeScreenId={this.props.activeScreenId}
           screenIds={this.props.screenIds}
@@ -69,19 +65,10 @@ var AppLabView = React.createClass({
             renderContents={this.props.renderCodeWorkspace} />
       </ConnectedStudioAppWrapper>
     );
-  },
-
-  shouldHideViewDataButton: function () {
-    return this.props.isViewDataButtonHidden ||
-        this.props.isDesignModeHidden ||
-        this.props.isShareView ||
-        !this.props.isEditingProject;
   }
 });
 module.exports = connect(
   (state) => ({
-    isDesignModeHidden: state.isDesignModeHidden,
-    isReadOnlyWorkspace: state.isReadOnlyWorkspace,
-    isShareView: state.isShareView
+    isReadOnlyWorkspace: state.isReadOnlyWorkspace
   })
 )(AppLabView);

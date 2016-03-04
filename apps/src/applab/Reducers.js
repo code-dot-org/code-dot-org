@@ -25,7 +25,8 @@ function rootReducer(state, action) {
         'isDesignModeHidden',
         'isEmbedView',
         'isReadOnlyWorkspace',
-        'isShareView'
+        'isShareView',
+        'isViewDataButtonHidden'
       ].forEach(function (propName) {
         if (typeof action.props[propName] !== 'undefined') {
           newState[propName] = action.props[propName];

@@ -17,11 +17,13 @@ var Mode = constants.MODE;
 
 var PlaySpaceHeader = React.createClass({
   propTypes: {
-    hideToggle: React.PropTypes.bool.isRequired,
-    hideViewDataButton: React.PropTypes.bool.isRequired,
-    startInDesignMode: React.PropTypes.bool.isRequired,
     activeScreenId: React.PropTypes.string,
+    isDesignModeHidden: React.PropTypes.bool.isRequired,
+    isEditingProject: React.PropTypes.bool.isRequired,
+    isShareView: React.PropTypes.bool.isRequired,
+    isViewDataButtonHidden: React.PropTypes.bool.isRequired,
     screenIds: React.PropTypes.array.isRequired,
+    startInDesignMode: React.PropTypes.bool.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
     onViewDataButton: React.PropTypes.func.isRequired,
@@ -61,7 +63,7 @@ var PlaySpaceHeader = React.createClass({
   render: function () {
     var leftSide, rightSide;
 
-    if (!this.props.hideToggle) {
+    if (!this.shouldHideToggle()) {
       leftSide = (
         <ToggleGroup selected={this.state.mode} onChange={this.handleSetMode}>
           <button id='codeModeButton' value={Mode.CODE}>{msg.codeMode()}</button>
@@ -70,7 +72,7 @@ var PlaySpaceHeader = React.createClass({
       );
     }
 
-    if (this.state.mode === Mode.CODE && !this.props.hideViewDataButton) {
+    if (this.state.mode === Mode.CODE && !this.shouldHideViewDataButton()) {
       rightSide = <ViewDataButton onClick={this.props.onViewDataButton} />;
     } else if (this.state.mode === Mode.DESIGN) {
       rightSide = <ScreenSelector
@@ -91,10 +93,24 @@ var PlaySpaceHeader = React.createClass({
         </table>
       </div>
     );
+  },
+
+  shouldHideToggle: function () {
+    return this.props.isShareView || this.props.isDesignModeHidden;
+  },
+
+  shouldHideViewDataButton: function () {
+    return this.props.isViewDataButtonHidden ||
+        this.props.isDesignModeHidden ||
+        this.props.isShareView ||
+        !this.props.isEditingProject;
   }
 });
 module.exports = connect(
   (state) => ({
-    hideToggle: state.isShareView || state.isDesignModeHidden
+    hideToggle: state.isShareView || state.isDesignModeHidden,
+    isDesignModeHidden: state.isDesignModeHidden,
+    isShareView: state.isShareView,
+    isViewDataButtonHidden: state.isViewDataButtonHidden
   })
 )(PlaySpaceHeader);
