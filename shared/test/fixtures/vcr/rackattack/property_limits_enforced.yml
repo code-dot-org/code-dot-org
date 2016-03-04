@@ -5,7 +5,7 @@ http_interactions:
     uri: https://dynamodb.us-east-1.amazonaws.com/
     body:
       encoding: UTF-8
-      string: '{"TableName":"test_properties","Item":{"hash":{"S":"1:"},"name":{"S":"key"},"updated_at":{"S":"2016-03-03T22:51:49-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"\"value\""}}}'
+      string: '{"TableName":"test_properties","Item":{"hash":{"S":"1:"},"name":{"S":"key"},"updated_at":{"S":"2016-03-04T17:14:27-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"\"value\""}}}'
     headers:
       X-Amz-Target:
       - DynamoDB_20120810.PutItem
@@ -17,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - 6J715LG8J383U1M9LL37HNS3DNVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - FNEJIMD2UHFGVRHBTHMMHJN54NVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '2745614147'
       Content-Type:
@@ -25,18 +25,18 @@ http_interactions:
       Content-Length:
       - '2'
       Date:
-      - Fri, 04 Mar 2016 06:51:49 GMT
+      - Sat, 05 Mar 2016 01:14:27 GMT
     body:
       encoding: UTF-8
       string: "{}"
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 06:51:49 GMT
+  recorded_at: Sat, 05 Mar 2016 01:14:27 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
     body:
       encoding: UTF-8
-      string: '{"TableName":"test_properties","Item":{"hash":{"S":"1:"},"name":{"S":"key"},"updated_at":{"S":"2016-03-03T22:51:49-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"\"value\""}}}'
+      string: '{"TableName":"test_properties","Item":{"hash":{"S":"1:"},"name":{"S":"key"},"updated_at":{"S":"2016-03-04T17:14:27-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"\"value\""}}}'
     headers:
       X-Amz-Target:
       - DynamoDB_20120810.PutItem
@@ -48,7 +48,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - PUTOBL1NU808QCLCO93SIHT2ERVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - 3RI8NRIIOJ6M6RGO4NMH120K37VV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '2745614147'
       Content-Type:
@@ -56,18 +56,18 @@ http_interactions:
       Content-Length:
       - '2'
       Date:
-      - Fri, 04 Mar 2016 06:51:49 GMT
+      - Sat, 05 Mar 2016 01:14:28 GMT
     body:
       encoding: UTF-8
       string: "{}"
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 06:51:49 GMT
+  recorded_at: Sat, 05 Mar 2016 01:14:28 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
     body:
       encoding: UTF-8
-      string: '{"TableName":"test_properties","Item":{"hash":{"S":"1:"},"name":{"S":"key"},"updated_at":{"S":"2016-03-03T22:51:49-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"\"value\""}}}'
+      string: '{"TableName":"test_properties","Item":{"hash":{"S":"1:"},"name":{"S":"key"},"updated_at":{"S":"2016-03-04T17:14:28-08:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"\"value\""}}}'
     headers:
       X-Amz-Target:
       - DynamoDB_20120810.PutItem
@@ -79,7 +79,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - NA0QU8OPB2N8VONJ5S3R6N934VVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - QCSGUAUULMPHPIPMCTN4DLLH8RVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '2745614147'
       Content-Type:
@@ -87,12 +87,12 @@ http_interactions:
       Content-Length:
       - '2'
       Date:
-      - Fri, 04 Mar 2016 06:51:50 GMT
+      - Sat, 05 Mar 2016 01:14:27 GMT
     body:
       encoding: UTF-8
       string: "{}"
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 06:51:50 GMT
+  recorded_at: Sat, 05 Mar 2016 01:14:28 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
@@ -110,20 +110,20 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - N0NN7U7Q5KI06VH3OJSQV4MSTNVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - SF7C9PEB710JCIO8FEB72V9TUNVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
-      - '2831922964'
+      - '2009813319'
       Content-Type:
       - application/x-amz-json-1.0
       Content-Length:
       - '151'
       Date:
-      - Fri, 04 Mar 2016 06:51:49 GMT
+      - Sat, 05 Mar 2016 01:14:27 GMT
     body:
       encoding: UTF-8
-      string: '{"Item":{"hash":{"S":"1:"},"value":{"S":"\"value\""},"updated_ip":{"S":"127.0.0.1"},"name":{"S":"key"},"updated_at":{"S":"2016-03-03T22:51:49-08:00"}}}'
+      string: '{"Item":{"hash":{"S":"1:"},"value":{"S":"\"value\""},"updated_ip":{"S":"127.0.0.1"},"name":{"S":"key"},"updated_at":{"S":"2016-03-04T17:14:28-08:00"}}}'
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 06:51:50 GMT
+  recorded_at: Sat, 05 Mar 2016 01:14:28 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
@@ -141,20 +141,20 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - B7Q2QF69OO001L12UJCLRE5BB7VV4KQNSO5AEMVJF66Q9ASUAAJG
+      - ECRQPAQ850BAMSFFPUKKKG5LN7VV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
-      - '2831922964'
+      - '2009813319'
       Content-Type:
       - application/x-amz-json-1.0
       Content-Length:
       - '151'
       Date:
-      - Fri, 04 Mar 2016 06:51:50 GMT
+      - Sat, 05 Mar 2016 01:14:28 GMT
     body:
       encoding: UTF-8
-      string: '{"Item":{"hash":{"S":"1:"},"value":{"S":"\"value\""},"updated_ip":{"S":"127.0.0.1"},"name":{"S":"key"},"updated_at":{"S":"2016-03-03T22:51:49-08:00"}}}'
+      string: '{"Item":{"hash":{"S":"1:"},"value":{"S":"\"value\""},"updated_ip":{"S":"127.0.0.1"},"name":{"S":"key"},"updated_at":{"S":"2016-03-04T17:14:28-08:00"}}}'
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 06:51:50 GMT
+  recorded_at: Sat, 05 Mar 2016 01:14:28 GMT
 - request:
     method: post
     uri: https://dynamodb.us-east-1.amazonaws.com/
@@ -172,18 +172,18 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - SSR23GVH7C4JIN6SUNNUDHJNFBVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - TED17D65OR9BTPKG4BNTBG085JVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
-      - '2831922964'
+      - '2009813319'
       Content-Type:
       - application/x-amz-json-1.0
       Content-Length:
       - '151'
       Date:
-      - Fri, 04 Mar 2016 06:51:50 GMT
+      - Sat, 05 Mar 2016 01:14:28 GMT
     body:
       encoding: UTF-8
-      string: '{"Item":{"hash":{"S":"1:"},"value":{"S":"\"value\""},"updated_ip":{"S":"127.0.0.1"},"name":{"S":"key"},"updated_at":{"S":"2016-03-03T22:51:49-08:00"}}}'
+      string: '{"Item":{"hash":{"S":"1:"},"value":{"S":"\"value\""},"updated_ip":{"S":"127.0.0.1"},"name":{"S":"key"},"updated_at":{"S":"2016-03-04T17:14:28-08:00"}}}'
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 06:51:51 GMT
+  recorded_at: Sat, 05 Mar 2016 01:14:29 GMT
 recorded_with: VCR 3.0.0
