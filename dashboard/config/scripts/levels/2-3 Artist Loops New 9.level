@@ -30,8 +30,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The artist needs to turn 45 degrees to the right before he starts drawing.\",\r\n  \"hint_id\": \"2-3_Artist_Loops_New_9_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n   {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"This V is really just half of a square.  What would the code be to draw half of a square?\",\r\n  \"hint_id\": \"2-3_Artist_Loops_New_9_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -41,11 +45,11 @@
       <xml>
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
+          <title name="VALUE">50</title>
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE" config="45,60,90,120,180">45</title>
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
@@ -76,20 +80,7 @@
       <xml/>
     </required_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">45</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-        </block>
-      </xml>
+      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>
