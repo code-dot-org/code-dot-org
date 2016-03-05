@@ -16,9 +16,9 @@ var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var gridUtils = require('./gridUtils');
 var logToCloud = require('../logToCloud');
+var Actions = require('./Actions');
 
 var currentlyEditedElement = null;
-var currentScreenId = null;
 
 /**
  * If in design mode and program is not running, display Properties
@@ -391,7 +391,9 @@ designMode.onDeletePropertiesButton = function(element, event) {
   if (isScreen) {
     designMode.loadDefaultScreen();
   } else {
-    designMode.editElementProperties(elementUtils.getPrefixedElementById(currentScreenId));
+    designMode.editElementProperties(
+        elementUtils.getPrefixedElementById(
+            designMode.getCurrentScreenId()));
   }
 };
 
@@ -816,11 +818,14 @@ designMode.createScreen = function () {
  * change, and opens the element property editor for the new screen.
  */
 designMode.changeScreen = function (screenId) {
-  currentScreenId = screenId;
   elementUtils.getScreens().each(function () {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
 
+  Applab.reduxStore.dispatch(Actions.changeScreen(screenId));
+  // We still have to call render() to get an updated list of screens, in case
+  // we added or removed one.  Can probably stop doing this once the screens
+  // list is also in Redux and managed through actions.
   Applab.render();
 
   designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
@@ -828,7 +833,7 @@ designMode.changeScreen = function (screenId) {
 
 /** @returns {string} Id of active/visible screen */
 designMode.getCurrentScreenId = function() {
-  return currentScreenId;
+  return Applab.reduxStore.getState().currentScreenId;
 };
 
 /** @returns {string[]} Array of all screen Ids in current app */

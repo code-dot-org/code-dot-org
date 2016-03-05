@@ -13,11 +13,17 @@ var ActionType = require('./Actions').ActionType;
 function rootReducer(state, action) {
   if (typeof state === 'undefined') {
     state = {
-      assetUrl: function () {}
+      assetUrl: function () {},
+      currentScreenId: null
     };
   }
 
   switch (action.type) {
+    case ActionType.CHANGE_SCREEN:
+      return $.extend({}, state, {
+        currentScreenId: action.screenId
+      });
+
     case ActionType.SET_LEVEL_PROPS:
       var newState = $.extend({}, state);
       [
