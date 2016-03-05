@@ -289,6 +289,12 @@ Blockly.FunctionEditor.prototype.removeParameter = function(nameToRemove) {
   });
   keysToDelete.forEach(function(key) { this.orderedParamIDsToBlocks_.remove(key); }, this);
   this.refreshParamsEverywhere();
+  this.functionDefinitionBlock.getDescendants().forEach(function(block) {
+    if (block.type == 'parameters_get' &&
+        Blockly.Names.equals(nameToRemove, block.getTitleValue('VAR'))) {
+      block.dispose(true, false);
+    }
+  });
 };
 
 Blockly.FunctionEditor.prototype.refreshParamsEverywhere = function() {
