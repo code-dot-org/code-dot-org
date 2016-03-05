@@ -10,7 +10,7 @@
   - level = level_blob
   - # Parse the array of the level resuts; see sample below in JavaScript.
   - if @last_attempt
-    - last_attempt = JSON.parse(@last_attempt).find{|item| item["level_id"]==@level.id}["result"]
+    - last_attempt = JSON.parse(@last_attempt).find{|item| item["level_id"]==level.id}["result"]
   - else
     - last_attempt = ""
   = render partial: 'levels/multi', locals: {index: index, standalone: false, level: level, last_attempt: last_attempt }
@@ -18,32 +18,6 @@
 -# One submisison button for this level.
 = render partial: 'levels/dialog', locals: {app: app, data: data}
 
-
 :javascript
-
-  window.getResult = function()
-  {
-    // Construct an array of all the level results.
-    // When submitted it's something like this:
-    //
-    //   [{"level_id":1977,"result":"0"},{"level_id":2007,"result":"3"},{"level_id":1939,"result":"2,1"}]
-    //
-
-    var levelCount = #{data["levels"].count};
-
-    var attemptArray = [];
-    for (var i = 0; i < levelCount; i++)
-    {
-      var multiName = "multi_" + i;
-      var multiResult = window[multiName].getCurrentAnswer().toString();
-      var levelId = window[multiName].getLevelId();
-      attemptArray.push({level_id: levelId, result: multiResult});
-    }
-    var response = JSON.stringify(attemptArray);
-
-    return {
-      "response": response,
-      "result": true,
-      "errorType": null
-    };
-  };
+  var levelCount = #{data["levels"].count};
+  #{render template: 'levels/levelGroup.js', formats: [:js]}

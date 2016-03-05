@@ -1,5 +1,5 @@
 - index ||= 0
-- standalone ||= true
+- standalone = false if standalone.nil?
 
 - # As part of a LevelGroup we'll be passed level and last_attempt,
 - # otherwise use the real @level and @last_attempt.

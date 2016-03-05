@@ -163,7 +163,7 @@ Multi.prototype.ready = function()
   // Pre-select previously submitted response if available.
   if (this.lastAttemptString)
   {
-    var previousResult = this.lastAttemptString.replace(/[\[\]]/g, "").split(',');
+    var previousResult = this.lastAttemptString.split(',');
 
     for (var i = 0; i < previousResult.length; i++)
     {
