@@ -14742,7 +14742,6 @@ goog.require("goog.asserts");
 goog.require("goog.string");
 goog.require("goog.Timer");
 Blockly.uidCounter_ = 0;
-console.log("this is a change to blockly-core");
 Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.id = ++Blockly.uidCounter_;
   this.htmlId = htmlId;
