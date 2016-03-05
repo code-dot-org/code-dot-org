@@ -49,6 +49,8 @@ goog.require('goog.Timer');
  */
 Blockly.uidCounter_ = 0;
 
+console.log('this is a change to blockly-core');
+
 /**
  * Class for one block.
  * @param {!Blockly.BlockSpace} blockSpace The new block's blockSpace.
