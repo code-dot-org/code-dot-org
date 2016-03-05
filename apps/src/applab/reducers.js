@@ -30,20 +30,21 @@ function rootReducer(state, action) {
       });
 
     case ActionType.SET_LEVEL_PROPS:
-      var newState = $.extend({}, state);
-      [
+      var allowedKeys = [
         'assetUrl',
         'isDesignModeHidden',
         'isEmbedView',
         'isReadOnlyWorkspace',
         'isShareView',
         'isViewDataButtonHidden'
-      ].forEach(function (propName) {
-        if (typeof action.props[propName] !== 'undefined') {
-          newState[propName] = action.props[propName];
+      ];
+      Object.keys(action.props).forEach(function (key) {
+        if (-1 === allowedKeys.indexOf(key)) {
+          throw new Error('Property "' + key + '" may not be set using the ' +
+              action.type + ' action.');
         }
       });
-      return newState;
+      return $.extend({}, state, action.props);
 
     default:
       return state;
