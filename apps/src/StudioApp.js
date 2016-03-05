@@ -25,8 +25,6 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
 var copyrightStrings;
 
-console.log('temp string that will go away but will kick off a build');
-
 /**
 * The minimum width of a playable whole blockly game.
 */
