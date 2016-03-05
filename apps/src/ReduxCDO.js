@@ -23,9 +23,16 @@ if (process.env.NODE_ENV !== "production") {
 module.exports = function createStoreCDO(reducer, initialState) {
   if (process.env.NODE_ENV !== "production") {
     var reduxLogger = createLogger();
+
+    // window.devToolsExtension is a Redux middleware function that must be
+    //   included to attach to the Redux DevTools Chrome extension.
+    // If it's not present then the extension isn't available, and we use
+    //   a no-op identity function instead.
+    // see https://github.com/zalmoxisus/redux-devtools-extension
     var devTools = window.devToolsExtension ?
         window.devToolsExtension() :
         function (f) { return f; };
+
     return redux.createStore(reducer, initialState, redux.compose(
         redux.applyMiddleware(reduxLogger),
         devTools
