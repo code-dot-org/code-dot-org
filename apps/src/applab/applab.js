@@ -74,7 +74,7 @@ var debuggerUi = null;
  * @type {Store}
  * @see http://redux.js.org/docs/basics/Store.html
  */
-var reduxStore = createStore(rootReducer);
+Applab.reduxStore = createStore(rootReducer);
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
@@ -682,7 +682,7 @@ Applab.init = function(config) {
     // should never be present on such levels, however some levels do
     // have levelHtml stored due to a previous bug. HTML set by levelbuilder
     // is stored in startHtml, not levelHtml.
-    if (reduxStore.getState().isDesignModeHidden) {
+    if (Applab.reduxStore.getState().isDesignModeHidden) {
       config.level.levelHtml = '';
     }
 
@@ -766,8 +766,8 @@ Applab.init = function(config) {
         // TODO (brent) - seems a little gross that we've made this part of a
         // template shared across all apps
         // disable designMode if we're readonly
-        hasDesignMode: !reduxStore.getState().isReadOnlyWorkspace,
-        readonlyWorkspace: reduxStore.getState().isReadOnlyWorkspace
+        hasDesignMode: !Applab.reduxStore.getState().isReadOnlyWorkspace,
+        readonlyWorkspace: Applab.reduxStore.getState().isReadOnlyWorkspace
       }
     });
   }.bind(this);
@@ -796,7 +796,7 @@ Applab.init = function(config) {
       vizCol.className += " with_padding";
     }
 
-    if (reduxStore.getState().isEmbedView || config.hideSource) {
+    if (Applab.reduxStore.getState().isEmbedView || config.hideSource) {
       // no responsive styles active in embed or hideSource mode, so set sizes:
       viz.style.width = Applab.appWidth + 'px';
       viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
@@ -873,7 +873,7 @@ Applab.init = function(config) {
   }.bind(this);
 
   // Push initial level properties into the Redux store
-  reduxStore.dispatch(setLevelProps({
+  Applab.reduxStore.dispatch(setLevelProps({
     assetUrl: studioApp.assetUrl,
     isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
@@ -914,7 +914,6 @@ Applab.render = function () {
   var nextProps = $.extend({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     startInDesignMode: Applab.startInDesignMode(),
-    activeScreenId: designMode.getCurrentScreenId(),
     screenIds: designMode.getAllScreenIds(),
     onDesignModeButton: Applab.onDesignModeButton,
     onCodeModeButton: Applab.onCodeModeButton,
@@ -924,7 +923,7 @@ Applab.render = function () {
   });
   /* jshint ignore:start */
   ReactDOM.render(
-    <Provider store={reduxStore}>
+    <Provider store={Applab.reduxStore}>
       <AppLabView {...nextProps} />
     </Provider>,
     Applab.reactMountPoint_);

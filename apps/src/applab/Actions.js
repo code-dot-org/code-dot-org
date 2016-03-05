@@ -10,6 +10,7 @@
 
 /** @enum {string} */
 var ActionType = module.exports.ActionType = {
+  CHANGE_SCREEN: 'CHANGE_SCREEN',
   SET_LEVEL_PROPS: 'SET_LEVEL_PROPS'
 };
 
@@ -38,5 +39,12 @@ module.exports.setLevelProps = function (props) {
   return {
     type: ActionType.SET_LEVEL_PROPS,
     props: props
+  };
+};
+
+module.exports.changeScreen = function (screenId) {
+  return {
+    type: ActionType.CHANGE_SCREEN,
+    screenId: screenId
   };
 };

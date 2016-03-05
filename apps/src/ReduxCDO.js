@@ -9,6 +9,9 @@
 'use strict';
 
 var redux = require('redux');
+if (process.env.NODE_ENV !== "production") {
+  var createLogger = require('redux-logger');
+}
 
 /**
  * Creates a store configured for use the way we want for Code.org.
@@ -19,7 +22,6 @@ var redux = require('redux');
  */
 module.exports = function createStoreCDO(reducer, initialState) {
   if (process.env.NODE_ENV !== "production") {
-    var createLogger = require('redux-logger');
     var reduxLogger = createLogger();
     var devTools = window.devToolsExtension ?
         window.devToolsExtension() :

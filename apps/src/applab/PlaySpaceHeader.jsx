@@ -17,7 +17,6 @@ var Mode = constants.MODE;
 
 var PlaySpaceHeader = React.createClass({
   propTypes: {
-    activeScreenId: React.PropTypes.string,
     isDesignModeHidden: React.PropTypes.bool.isRequired,
     isEditingProject: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
@@ -77,7 +76,6 @@ var PlaySpaceHeader = React.createClass({
     } else if (this.state.mode === Mode.DESIGN) {
       rightSide = <ScreenSelector
           screenIds={this.props.screenIds}
-          activeScreenId={this.props.activeScreenId}
           onChange={this.handleScreenChange} />;
     }
 
