@@ -8,7 +8,7 @@
  */
 'use strict';
 
-var ActionType = require('./Actions').ActionType;
+var ActionType = require('./actions').ActionType;
 
 function rootReducer(state, action) {
   if (typeof state === 'undefined') {

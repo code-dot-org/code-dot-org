@@ -44,10 +44,10 @@ var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
 
-var createStore = require('../ReduxCDO');
+var createStore = require('../redux');
 var Provider = require('react-redux').Provider;
-var rootReducer = require('./Reducers').rootReducer;
-var setLevelProps = require('./Actions').setLevelProps;
+var rootReducer = require('./reducers').rootReducer;
+var setLevelProps = require('./actions').setLevelProps;
 
 var applabConstants = require('./constants');
 
