@@ -58,29 +58,39 @@ var PROCEDURE_WITH_PARAM =
 '<xml>' +
   '<block type="procedures_defnoreturn">' +
     '<mutation>' +
-      '<arg name="length"/>' +
+      '<arg name="x"/>' +
+      '<arg name="y"/>' +
     '</mutation>' +
     '<title name="NAME">procedure with param 1</title>' +
     '<statement name="STACK">' +
       '<block type="controls_repeat_ext" inline="true">' +
         '<value name="TIMES">' +
           '<block type="parameters_get">' +
-            '<title name="VAR">length</title>' +
+            '<title name="VAR">x</title>' +
           '</block>' +
         '</value>' +
+        '<next>' +
+          '<block type="controls_repeat_ext" inline="true">' +
+            '<value name="TIMES">' +
+              '<block type="parameters_get">' +
+                '<title name="VAR">y</title>' +
+              '</block>' +
+            '</value>' +
+          '</block>' +
+        '</next>' +
       '</block>' +
     '</statement>' +
   '</block>' +
   '<block type="procedures_defnoreturn">' +
     '<mutation>' +
-      '<arg name="length"/>' +
+      '<arg name="x"/>' +
     '</mutation>' +
     '<title name="NAME">procedure with param 2</title>' +
     '<statement name="STACK">' +
       '<block type="controls_repeat_ext" inline="true">' +
         '<value name="TIMES">' +
           '<block type="parameters_get">' +
-            '<title name="VAR">length</title>' +
+            '<title name="VAR">x</title>' +
           '</block>' +
         '</value>' +
       '</block>' +
@@ -124,6 +134,17 @@ function initializeWithContractEditor(xmlString) {
 
 function openFunctionEditor(opt_name) {
   Blockly.functionEditor.autoOpenFunction(opt_name || 'test-function');
+}
+
+function getParametersUsedInFunctionEditor() {
+  var paramsUsed = []
+  Blockly.functionEditor.functionDefinitionBlock.getDescendants().forEach(
+      function(block) {
+        if (block.type == 'parameters_get') {
+          paramsUsed.push(block.getTitleValue('VAR'));
+        }
+      });
+  return paramsUsed;
 }
 
 function cleanupFunctionEditor() {
@@ -202,32 +223,34 @@ function test_functionEditor_renameParam() {
   var container = Blockly.Test.initializeBlockSpaceEditor();
   initializeFunctionEditor(PROCEDURE_WITH_PARAM);
   openFunctionEditor('procedure with param 1');
-  Blockly.functionEditor.renameParameter('length', 'newname');
-  var paramFound = false;
-  Blockly.functionEditor.functionDefinitionBlock.getDescendants().forEach(
-      function(block) {
-        if (block.type == 'parameters_get') {
-          assertEquals('parameter is named newname',
-            'newname', block.getTitleValue('VAR'));
-          paramFound = true;
-        }
-      });
-  assert(paramFound);
+  Blockly.functionEditor.renameParameter('x', 'new_x');
+
+  var paramsUsed = getParametersUsedInFunctionEditor();
+  assertContains('Renamed to new_x', 'new_x', paramsUsed);
+  assertContains('Does not change other parameter', 'y', paramsUsed);
+  assertNotContains('No more old parameter', 'x', paramsUsed);
 
   cleanupFunctionEditor()
 
   // Check that the rename was limited to procedure 1's scope
   openFunctionEditor('procedure with param 2');
-  paramFound = false;
-  Blockly.functionEditor.functionDefinitionBlock.getDescendants().forEach(
-      function(block) {
-        if (block.type == 'parameters_get') {
-          assertEquals('parameter is named length',
-            'length', block.getTitleValue('VAR'));
-          paramFound = true;
-        }
-      });
-  assert(paramFound);
+  paramsUsed = getParametersUsedInFunctionEditor();
+  assertContains('Still has old parameter', 'x', paramsUsed);
+  assertNotContains('No new parameter', 'new_x', paramsUsed);
+
+  cleanupFunctionEditor();
+  goog.dom.removeNode(container);
+}
+
+function test_functionEditor_deleteParam() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+  initializeFunctionEditor(PROCEDURE_WITH_PARAM);
+  openFunctionEditor('procedure with param 1');
+  Blockly.functionEditor.removeParameter('x');
+
+  var paramsUsed = getParametersUsedInFunctionEditor();
+  assertNotContains('Parameter deleted', 'x', paramsUsed);
+  assertContains('Still has other parameter', 'y', paramsUsed);
 
   cleanupFunctionEditor();
   goog.dom.removeNode(container);
