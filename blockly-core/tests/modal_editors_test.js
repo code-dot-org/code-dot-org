@@ -54,6 +54,40 @@ var PROCEDURE =
   '</block>' +
 '</xml>';
 
+var PROCEDURE_WITH_PARAM =
+'<xml>' +
+  '<block type="procedures_defnoreturn">' +
+    '<mutation>' +
+      '<arg name="length"/>' +
+    '</mutation>' +
+    '<title name="NAME">procedure with param 1</title>' +
+    '<statement name="STACK">' +
+      '<block type="controls_repeat_ext" inline="true">' +
+        '<value name="TIMES">' +
+          '<block type="parameters_get">' +
+            '<title name="VAR">length</title>' +
+          '</block>' +
+        '</value>' +
+      '</block>' +
+    '</statement>' +
+  '</block>' +
+  '<block type="procedures_defnoreturn">' +
+    '<mutation>' +
+      '<arg name="length"/>' +
+    '</mutation>' +
+    '<title name="NAME">procedure with param 2</title>' +
+    '<statement name="STACK">' +
+      '<block type="controls_repeat_ext" inline="true">' +
+        '<value name="TIMES">' +
+          '<block type="parameters_get">' +
+            '<title name="VAR">length</title>' +
+          '</block>' +
+        '</value>' +
+      '</block>' +
+    '</statement>' +
+  '</block>' +
+'</xml>';
+
 var USER_CREATED_PROCEDURE =
 '<xml>' +
   '<block type="procedures_defnoreturn" usercreated="true">' +
@@ -159,6 +193,41 @@ function test_functionEditor_deleteButton() {
 
   assertNull('Function no longer exists',
       Blockly.mainBlockSpace.findFunction('test-usercreated-function'));
+
+  cleanupFunctionEditor();
+  goog.dom.removeNode(container);
+}
+
+function test_functionEditor_renameParam() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+  initializeFunctionEditor(PROCEDURE_WITH_PARAM);
+  openFunctionEditor('procedure with param 1');
+  Blockly.functionEditor.renameParameter('length', 'newname');
+  var paramFound = false;
+  Blockly.functionEditor.functionDefinitionBlock.getDescendants().forEach(
+      function(block) {
+        if (block.type == 'parameters_get') {
+          assertEquals('parameter is named newname',
+            'newname', block.getTitleValue('VAR'));
+          paramFound = true;
+        }
+      });
+  assert(paramFound);
+
+  cleanupFunctionEditor()
+
+  // Check that the rename was limited to procedure 1's scope
+  openFunctionEditor('procedure with param 2');
+  paramFound = false;
+  Blockly.functionEditor.functionDefinitionBlock.getDescendants().forEach(
+      function(block) {
+        if (block.type == 'parameters_get') {
+          assertEquals('parameter is named length',
+            'length', block.getTitleValue('VAR'));
+          paramFound = true;
+        }
+      });
+  assert(paramFound);
 
   cleanupFunctionEditor();
   goog.dom.removeNode(container);
