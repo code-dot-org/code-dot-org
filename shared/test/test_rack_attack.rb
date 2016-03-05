@@ -33,6 +33,9 @@ class RackAttackTest < Minitest::Test
   include SetupTest
 
   TABLE_NAME = 'stub_rack_attack_table'
+  OTHER_TABLE = 'other_table'
+  PROPERTY_KEY = 'key'
+  OTHER_KEY = 'other_key'
 
   def build_rack_mock_session
     # TODO(dave): chain middleware components like this in other middleware tests to reduce complexity.
@@ -86,6 +89,9 @@ class RackAttackTest < Minitest::Test
     # don't increment the index here because throttled requests don't affect the counts.
     assert_read_records 3, RATE_LIMITED
 
+    msg = 'Other tables in the same app count against the same rate limit'
+    assert_read_records 3, RATE_LIMITED, msg, OTHER_TABLE
+
     Timecop.travel 16
 
     assert_read_records 4, SUCCESSFUL, '15s rate limit expires'
@@ -136,6 +142,14 @@ class RackAttackTest < Minitest::Test
     assert_equal RATE_LIMITED, last_response.status, "2nd update is rate limited."
     delete_record id
     assert_equal RATE_LIMITED, last_response.status, "2nd delete is rate limited."
+
+    create_record OTHER_TABLE
+    assert_equal RATE_LIMITED, last_response.status, "create on other table is rate limited."
+    update_record id, OTHER_TABLE
+    assert_equal RATE_LIMITED, last_response.status, "update on other table is rate limited."
+    delete_record id, OTHER_TABLE
+    assert_equal RATE_LIMITED, last_response.status, "delete on other table is rate limited."
+
   end
 
   def test_property_limits_enforced
@@ -148,6 +162,9 @@ class RackAttackTest < Minitest::Test
     set_key_value
     assert_equal RATE_LIMITED, last_response.status, "4th property set is rate limited."
 
+    set_key_value OTHER_KEY
+    assert_equal RATE_LIMITED, last_response.status, "property set on other key is rate limited."
+
     get_key_value
     assert last_response.successful?, '1st property get succeeds'
     get_key_value
@@ -156,6 +173,9 @@ class RackAttackTest < Minitest::Test
     assert last_response.successful?, '3rd property get succeeds'
     get_key_value
     assert_equal RATE_LIMITED, last_response.status, "4th property get is rate limited."
+
+    get_key_value OTHER_KEY
+    assert_equal RATE_LIMITED, last_response.status, "property get other key is rate limited."
   end
 
   # Helper methods
@@ -176,47 +196,48 @@ class RackAttackTest < Minitest::Test
     Time.new(now.year, now.month, now.day, now.hour, rounded_min)
   end
 
-  def table_path
-    "/v3/shared-tables/#{@channel_id}/#{TABLE_NAME}"
+  def table_path(table_name = TABLE_NAME)
+    "/v3/shared-tables/#{@channel_id}/#{table_name}"
   end
 
   def content_type_json
     {'CONTENT_TYPE' => 'application/json;charset=utf-8'}
   end
 
-  def create_record
+  def create_record(table_name = TABLE_NAME)
     record = {name: "Alice", age: 7}
-    post table_path, record.to_json, content_type_json
+    post table_path(table_name), record.to_json, content_type_json
     last_response.location.split('/').last if last_response.location
   end
 
-  def read_records
-    get table_path
+  def read_records(table_name = TABLE_NAME)
+    get table_path(table_name)
   end
 
-  def assert_read_records(index, expected_status, msg = nil)
-    read_records
+
+  def assert_read_records(index, expected_status, msg = nil, table_name = TABLE_NAME)
+    read_records(table_name)
     assert_equal expected_status, last_response.status, "request #{index} expected #{expected_status} #{msg}"
   end
 
-  def update_record(id)
+  def update_record(id, table_name = TABLE_NAME)
     record = {name: "Bob", age: 8}
-    put "#{table_path}/#{id}", record.to_json, content_type_json
+    put "#{table_path(table_name)}/#{id}", record.to_json, content_type_json
   end
 
-  def delete_record(id)
-    delete "#{table_path}/#{id}"
+  def delete_record(id, table_name = TABLE_NAME)
+    delete "#{table_path(table_name)}/#{id}"
   end
 
-  def property_path
-    "/v3/shared-properties/#{@channel_id}/key"
+  def property_path(key = PROPERTY_KEY)
+    "/v3/shared-properties/#{@channel_id}/#{key}"
   end
 
-  def set_key_value
-    post property_path, "value".to_json, content_type_json
+  def set_key_value(key = PROPERTY_KEY)
+    post property_path(key), "value".to_json, content_type_json
   end
 
-  def get_key_value
-    get property_path
+  def get_key_value(key = PROPERTY_KEY)
+    get property_path(key)
   end
 end
