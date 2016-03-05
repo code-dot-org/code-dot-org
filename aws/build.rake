@@ -104,7 +104,7 @@ BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PR
 BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCKLY_CORE_SOURCE_FILES) do
   # only let staging build/commit blockly-core
   if rack_env?(:staging)
-    apps_sentinel = apps_dir('/src/lib/blockly/sentinel')
+    apps_sentinel = apps_dir('/lib/blockly/sentinel')
     RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:blockly_core'
     HipChat.log 'Committing updated <b>blockly core</b> files...', color: 'purple'
     message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-apps'))}"
