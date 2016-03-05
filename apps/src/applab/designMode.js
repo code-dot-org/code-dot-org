@@ -393,7 +393,7 @@ designMode.onDeletePropertiesButton = function(element, event) {
   } else {
     designMode.editElementProperties(
         elementUtils.getPrefixedElementById(
-            designMode.getCurrentScreenId()));
+            Applab.reduxStore.getState().currentScreenId));
   }
 };
 
@@ -829,11 +829,6 @@ designMode.changeScreen = function (screenId) {
   Applab.render();
 
   designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
-};
-
-/** @returns {string} Id of active/visible screen */
-designMode.getCurrentScreenId = function() {
-  return Applab.reduxStore.getState().currentScreenId;
 };
 
 /** @returns {string[]} Array of all screen Ids in current app */

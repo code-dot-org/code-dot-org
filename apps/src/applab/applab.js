@@ -1302,7 +1302,7 @@ Applab.onCodeModeButton = function() {
     Applab.serializeAndSave();
     var divApplab = document.getElementById('divApplab');
     designMode.parseFromLevelHtml(divApplab, false);
-    Applab.changeScreen(designMode.getCurrentScreenId());
+    Applab.changeScreen(Applab.reduxStore.getState().currentScreenId);
   } else {
     Applab.activeScreen().focus();
   }
