@@ -49,6 +49,8 @@ class RackAttackTest < Minitest::Test
     delete "/v3/channels/#{@channel_id}"
   end
 
+  # Test cases
+
   # non-stubbed rate limits from CDO are used here
   def test_limits
     expected_limits = [[1200, 15], [2400, 60], [4800, 240]]
@@ -124,16 +126,16 @@ class RackAttackTest < Minitest::Test
     id = create_record
     assert last_response.redirect?, '1st create succeeds'
     update_record id
-    assert last_response.ok?, '1st update succeeds'
+    assert last_response.successful?, '1st update succeeds'
     delete_record id
     assert last_response.successful?, '1st delete succeeds'
 
     create_record
-    assert_equal 429, last_response.status, "2nd create is rate limited."
+    assert_equal RATE_LIMITED, last_response.status, "2nd create is rate limited."
     update_record id
-    assert_equal 429, last_response.status, "2nd update is rate limited."
+    assert_equal RATE_LIMITED, last_response.status, "2nd update is rate limited."
     delete_record id
-    assert_equal 429, last_response.status, "2nd delete is rate limited."
+    assert_equal RATE_LIMITED, last_response.status, "2nd delete is rate limited."
   end
 
   def test_property_limits_enforced
@@ -144,7 +146,7 @@ class RackAttackTest < Minitest::Test
     set_key_value
     assert last_response.successful?, '3rd property set succeeds'
     set_key_value
-    assert_equal 429, last_response.status, "4th property set is rate limited."
+    assert_equal RATE_LIMITED, last_response.status, "4th property set is rate limited."
 
     get_key_value
     assert last_response.successful?, '1st property get succeeds'
@@ -153,7 +155,7 @@ class RackAttackTest < Minitest::Test
     get_key_value
     assert last_response.successful?, '3rd property get succeeds'
     get_key_value
-    assert_equal 429, last_response.status, "4th property get is rate limited."
+    assert_equal RATE_LIMITED, last_response.status, "4th property get is rate limited."
   end
 
   # Helper methods
