@@ -10,13 +10,18 @@
 
 var ActionType = require('./actions').ActionType;
 
+var initialState = {
+  assetUrl: function () {},
+  isDesignModeHidden: undefined,
+  isEmbedView: undefined,
+  isReadOnlyWorkspace: undefined,
+  isShareView: undefined,
+  isViewDataButtonHidden: undefined,
+  currentScreenId: null
+};
+
 function rootReducer(state, action) {
-  if (typeof state === 'undefined') {
-    state = {
-      assetUrl: function () {},
-      currentScreenId: null
-    };
-  }
+  state = state || initialState;
 
   switch (action.type) {
     case ActionType.CHANGE_SCREEN:
