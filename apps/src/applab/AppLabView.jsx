@@ -65,8 +65,8 @@ var AppLabView = React.createClass({
     );
   }
 });
-module.exports = connect(
-  (state) => ({
+module.exports = connect(function propsFromState(state) {
+  return {
     isReadOnlyWorkspace: state.isReadOnlyWorkspace
-  })
-)(AppLabView);
+  };
+})(AppLabView);

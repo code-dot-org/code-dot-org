@@ -10,10 +10,10 @@
 var connect = require('react-redux').connect;
 var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 
-module.exports = connect(
-  (state) => ({
+module.exports = connect(function propsFromState(state) {
+  return {
     assetUrl: state.assetUrl,
     isEmbedView: state.isEmbedView,
     isShareView: state.isShareView
-  })
-)(StudioAppWrapper);
+  };
+})(StudioAppWrapper);
