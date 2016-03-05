@@ -104,11 +104,10 @@ var PlaySpaceHeader = React.createClass({
         !this.props.isEditingProject;
   }
 });
-module.exports = connect(
-  (state) => ({
-    hideToggle: state.isShareView || state.isDesignModeHidden,
+module.exports = connect(function propsFromState(state) {
+  return {
     isDesignModeHidden: state.isDesignModeHidden,
     isShareView: state.isShareView,
     isViewDataButtonHidden: state.isViewDataButtonHidden
-  })
-)(PlaySpaceHeader);
+  };
+})(PlaySpaceHeader);
