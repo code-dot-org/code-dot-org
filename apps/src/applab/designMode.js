@@ -21,6 +21,22 @@ var actions = require('./actions');
 var currentlyEditedElement = null;
 
 /**
+ * Subscribe to state changes on the store.
+ * @param {!Store} store
+ */
+designMode.subscribeToRedux = function (store) {
+  var state = {};
+  store.subscribe(function () {
+    var lastState = state;
+    state = store.getState();
+
+    if (state.currentScreenId !== lastState.currentScreenId) {
+      onScreenChange(state.currentScreenId);
+    }
+  });
+};
+
+/**
  * If in design mode and program is not running, display Properties
  * pane for editing the clicked element.
  * @param event
@@ -813,23 +829,36 @@ designMode.createScreen = function () {
 };
 
 /**
- * Changes the active screen by toggling all screens to be non-visible, unless
- * they match the provided screenId. Also updates our dropdown to reflect the
- * change, and opens the element property editor for the new screen.
+ * Changes the active screen by triggering a 'CHANGE_SCREEN' action on the
+ * Redux store.  This change propagates across the app, updates the state of
+ * React-rendered components, and eventually calls onScreenChange, below.
+ * @param {!string} screenId
  */
 designMode.changeScreen = function (screenId) {
+  Applab.reduxStore.dispatch(actions.changeScreen(screenId));
+};
+
+/**
+ * Responds to changing the active screen by toggling all screens to be
+ * non-visible, unless they match the provided screenId, and opens the element
+ * property editor for the new screen.
+ *
+ * This method is called in response to a change in the application state.  If
+ * you want to change the current screen, call designMode.changeScreen instead.
+ *
+ * @param {!string} screenId
+ */
+function onScreenChange(screenId) {
   elementUtils.getScreens().each(function () {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
+  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
 
-  Applab.reduxStore.dispatch(actions.changeScreen(screenId));
   // We still have to call render() to get an updated list of screens, in case
   // we added or removed one.  Can probably stop doing this once the screens
   // list is also in Redux and managed through actions.
   Applab.render();
-
-  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
-};
+}
 
 /** @returns {string[]} Array of all screen Ids in current app */
 designMode.getAllScreenIds = function () {
