@@ -8,6 +8,7 @@
 
 var constants = require('./constants');
 var msg = require('../locale');
+var actions = require('./actions');
 var connect = require('react-redux').connect;
 var ScreenSelector = require('./ScreenSelector.jsx');
 var ToggleGroup = require('./ToggleGroup.jsx');
@@ -109,5 +110,11 @@ module.exports = connect(function propsFromState(state) {
     isDesignModeHidden: state.isDesignModeHidden,
     isShareView: state.isShareView,
     isViewDataButtonHidden: state.isViewDataButtonHidden
+  };
+}, function propsFromDispatch(dispatch) {
+  return {
+    onScreenChange: function (screenId) {
+      dispatch(actions.changeScreen(screenId));
+    }
   };
 })(PlaySpaceHeader);

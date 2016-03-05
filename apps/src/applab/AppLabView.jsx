@@ -25,7 +25,6 @@ var AppLabView = React.createClass({
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
     onViewDataButton: React.PropTypes.func.isRequired,
-    onScreenChange: React.PropTypes.func.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
 
     renderCodeWorkspace: React.PropTypes.func.isRequired,
@@ -47,7 +46,6 @@ var AppLabView = React.createClass({
           onDesignModeButton={this.props.onDesignModeButton}
           onCodeModeButton={this.props.onCodeModeButton}
           onViewDataButton={this.props.onViewDataButton}
-          onScreenChange={this.props.onScreenChange}
           onScreenCreate={this.props.onScreenCreate} />;
     }
 
