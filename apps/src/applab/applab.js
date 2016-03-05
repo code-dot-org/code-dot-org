@@ -920,7 +920,6 @@ Applab.render = function () {
     onDesignModeButton: Applab.onDesignModeButton,
     onCodeModeButton: Applab.onCodeModeButton,
     onViewDataButton: Applab.onViewData,
-    onScreenChange: designMode.changeScreen,
     onScreenCreate: designMode.createScreen
   });
   /* jshint ignore:start */
