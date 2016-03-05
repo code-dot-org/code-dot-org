@@ -256,7 +256,12 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
       block.firstElementChild.textContent = newName;
     }
   });
-  this.functionDefinitionBlock.renameVar(oldName, newName);
+  this.functionDefinitionBlock.getDescendants().forEach(function(block) {
+    if (block.type == 'parameters_get' &&
+        Blockly.Names.equals(oldName, block.getTitleValue('VAR'))) {
+      block.setTitleValue(newName, 'VAR');
+    }
+  });
 };
 
 Blockly.FunctionEditor.prototype.changeParameterTypeInFlyoutXML = function(name, newType) {

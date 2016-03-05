@@ -209,15 +209,6 @@ Blockly.Blocks.procedures_defnoreturn = {
           }
         }
       }
-      if (Blockly.useModalFunctionEditor) {
-        var blocks = this.getDescendants();
-        for (var x = 0, block; block = blocks[x]; x++) {
-          if (block.type == 'parameters_get' &&
-              Blockly.Names.equals(oldName, block.getTitleValue('VAR'))) {
-            block.setTitleValue(newName, 'VAR');
-          }
-        }
-      }
     }
   },
   removeVar: function(oldName) {
