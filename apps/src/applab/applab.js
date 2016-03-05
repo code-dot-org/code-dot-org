@@ -857,6 +857,8 @@ Applab.init = function(config) {
         }
       });
 
+      designMode.subscribeToRedux(Applab.reduxStore);
+
       designMode.addKeyboardHandlers();
 
       designMode.renderDesignWorkspace();
