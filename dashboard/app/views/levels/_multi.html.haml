@@ -1,105 +1,11 @@
-- index ||= 0
-- standalone = false if standalone.nil?
-
-- # As part of a LevelGroup we'll be passed level and last_attempt,
-- # otherwise use the real @level and @last_attempt.
-- level = level || @level
-- last_attempt = last_attempt || @last_attempt
-
-
-.multi{id: "multi_#{index}"}
-
-  - data = level.properties
-  - app = 'multi'
-
-  - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
-  = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_blank ? nil : 'question'}
-
-  .answers{class: question_content_blank ? 'question-content-blank' : ''}
-    - if data['options'].try(:[], 'answer_line')
-      :css
-        .btn {
-          display: table;
-        }
-
-    %span
-      %h4.multi-question!= multi_t(data['questions'][0]['text']) if data['questions']
-
-    %br/
-    %br/
-
-    - if standalone && !data['options'].try(:[], 'hide_submit')
-      .buttons
-        %a.btn.btn-large.btn-primary.next-stage.submitButton
-          =t('submit')
-        %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
-          =t('unsubmit')
-
-    - if data['height'] == 'auto'
-      - height = 'auto'
-    - else
-      - height = "#{data['height'] || '20'}px"
-
-    -# multi2 gets checkboxes; regular multi gets radio buttons.
-    - if data['type'] == 'multi2'
-      - unchecked_class = 'fa-square-o'
-      - checked_class = 'fa-check-square-o'
-      - cross_class = 'fa-times'
-    - else
-      - unchecked_class = 'fa-circle-o'
-      - checked_class = 'fa-dot-circle-o'
-      - cross_class = 'fa-times'
-
-    .mainblock
-      %form#voteform{onsubmit: 'return false;'}
-        - data['answers'].each_with_index do |answer, i|
-          - correct = answer['correct']
-          %span.answerbutton.btn{style: "height: #{height}", correct: "#{correct}", index: "#{i}"}
-            .item-mark{id: "unchecked_#{i}"}
-              .fa{class: unchecked_class}
-            .item-mark{id: "checked_#{i}", style: 'display: none;'}
-              .fa{class: checked_class}
-            .item-mark{id: "cross_#{i}", style: 'display: none;'}
-              .fa{class: cross_class}
-            .item-label
-              %label{style: "height: #{height}"}!= multi_t(answer['text'])
-
-      .clear
-
-      -# Standalone still has the multi managing its Submit button and dialogs.
-      -# Non-standalone (i.e. LevelGroup) has the containing level dealing with all that UI,
-      -# and just submits silently.
-      - if standalone
-        = render partial: 'levels/dialog', locals: {app: app, data: data}
-
-  .clear
-  = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class}
-  = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
-
-  %br/
-  %br/
-  %br/
-
-  .clear
-
+- app = 'multi'
+- data = @level.properties
 
 = render partial: 'levels/common_audio'
+= render partial: 'levels/dialog', locals: {app: app, data: data}
 
-- # Only include multi.js once per page
-- if !@included_multi
-  :javascript
-    #{render template: 'levels/multi.js', formats: [:js]}
-  - @included_multi = true
+= render partial: 'levels/single_multi', locals: {index: 0, standalone: true, level: @level, last_attempt: @last_attempt }
+
 
 :javascript
-
-  var lastAttempt = #{last_attempt.to_json};
-  // legacy multi/match
-  window["multi_#{index}"] = new Multi(
-    "multi_#{index}",
-    #{level.id},
-    #{standalone},
-    "#{data['type']}" == "multi2" ? 2 : 1,
-    #{data['answers'].map {|answer| answer['correct']}},
-    #{last_attempt.to_json}
-    );
+  #{render template: 'levels/multi.js', formats: [:js]}
