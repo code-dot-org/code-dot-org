@@ -34,7 +34,7 @@ var ScreenSelector = React.createClass({
     };
 
     var options = this.props.screenIds.map(function (item) {
-      return <option key={item}>{item}</option>;
+      return <option key={item} value={item}>{item}</option>;
     });
 
     var defaultScreenId = elementUtils.getScreens().first().attr('id') || '';
