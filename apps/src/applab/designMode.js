@@ -16,7 +16,7 @@ var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var gridUtils = require('./gridUtils');
 var logToCloud = require('../logToCloud');
-var Actions = require('./Actions');
+var actions = require('./actions');
 
 var currentlyEditedElement = null;
 
@@ -822,7 +822,7 @@ designMode.changeScreen = function (screenId) {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
 
-  Applab.reduxStore.dispatch(Actions.changeScreen(screenId));
+  Applab.reduxStore.dispatch(actions.changeScreen(screenId));
   // We still have to call render() to get an updated list of screens, in case
   // we added or removed one.  Can probably stop doing this once the screens
   // list is also in Redux and managed through actions.

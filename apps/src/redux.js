@@ -20,7 +20,7 @@ if (process.env.NODE_ENV !== "production") {
  * @param {?} [initialState] optionally give the store an initial state.
  * @return {Store} Configured Redux store, ready for use.
  */
-module.exports = function createStoreCDO(reducer, initialState) {
+module.exports = function createStore(reducer, initialState) {
   if (process.env.NODE_ENV !== "production") {
     var reduxLogger = createLogger();
 
