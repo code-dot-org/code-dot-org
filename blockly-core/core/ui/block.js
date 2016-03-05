@@ -49,7 +49,7 @@ goog.require('goog.Timer');
  */
 Blockly.uidCounter_ = 0;
 
-console.log('change to blockly-core');
+console.log('this is a change to blockly-core');
 
 /**
  * Class for one block.
