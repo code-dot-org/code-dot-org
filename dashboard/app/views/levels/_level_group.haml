@@ -1,5 +1,6 @@
 - app = 'level_group'
 - data = @level.properties
+
 :javascript
   window.levelData = #{data.to_json};
 
@@ -13,11 +14,13 @@
     - last_attempt = JSON.parse(@last_attempt).find{|item| item["level_id"]==level.id}["result"]
   - else
     - last_attempt = ""
-  = render partial: 'levels/multi', locals: {index: index, standalone: false, level: level, last_attempt: last_attempt }
+  = render partial: 'levels/single_multi', locals: {index: index, standalone: false, level: level, last_attempt: last_attempt }
 
--# One submisison button for this level.
+= render partial: 'levels/common_audio'
 = render partial: 'levels/dialog', locals: {app: app, data: data}
 
 :javascript
+  #{render template: 'levels/multi.js', formats: [:js]}
+
   var levelCount = #{data["levels"].count};
   #{render template: 'levels/levelGroup.js', formats: [:js]}
