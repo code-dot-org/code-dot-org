@@ -244,7 +244,7 @@ class TablesApi < Sinatra::Base
       table.insert(record, request.ip)
     end
 
-    redirect "#{table_url}"
+    redirect table_url.to_s
   end
 
   #
