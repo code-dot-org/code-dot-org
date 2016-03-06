@@ -170,6 +170,8 @@ Multi.prototype.ready = function()
       this.clickItem(parseInt(previousResult[i]));
     }
   }
+
+  $('.submitButton').click($.proxy(this.submitButtonClick, this));
 };
 
 Multi.prototype.getCurrentAnswer = function()
@@ -236,7 +238,7 @@ Multi.prototype.getResult = function()
   };
 };
 
-// called by $('.submitButton').click
+// This behavior should only be available when this is a standalone Multi.
 Multi.prototype.submitButtonClick = function()
 {
   // Don't show right/wrong answers for submittable.
@@ -258,6 +260,7 @@ Multi.prototype.submitButtonClick = function()
 };
 
 
+// Unsubmit button should only be available when this is a standalone Multi.
 $('.unsubmitButton').click(function() {
 
   var dialog = new Dialog({
