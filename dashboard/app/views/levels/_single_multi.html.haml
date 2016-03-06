@@ -3,6 +3,9 @@
   - data = level.properties
   - app = 'multi'
 
+  - # setting this so that multi_t works
+  - @level = level
+
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_blank ? nil : 'question'}
 
