@@ -1,11 +1,9 @@
 - app = 'multi'
 - data = @level.properties
 
-= render partial: 'levels/common_audio'
-= render partial: 'levels/dialog', locals: {app: app, data: data}
-
 = render partial: 'levels/single_multi', locals: {index: 0, standalone: true, level: @level, last_attempt: @last_attempt }
 
+= render partial: 'levels/common_audio'
 
 :javascript
   #{render template: 'levels/multi.js', formats: [:js]}
