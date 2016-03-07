@@ -60,7 +60,7 @@ var DropletFunctionTooltip = function (appMsg, definition) {
   /** @type {string} */
   this.tipPrefix = definition.tipPrefix;
 
-  /** @type {string} */
+  /** @type {?string} */
   this.customDocURL = definition.customDocURL;
 
   var description = this.getLocalization(this.descriptionKey());
