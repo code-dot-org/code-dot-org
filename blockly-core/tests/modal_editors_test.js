@@ -46,12 +46,26 @@ var SINGLE_DEFINITION_NOT_FILLED = '' +
   '</block>' +
 '</xml>';
 
+var PROCEDURE =
+'<xml>' +
+  '<block type="procedures_defnoreturn" editable="false">' +
+    '<mutation></mutation>' +
+    '<title name="NAME">test-function</title>' +
+  '</block>' +
+'</xml>';
 
-function initializeFunctionEditor() {
+var USER_CREATED_PROCEDURE =
+'<xml>' +
+  '<block type="procedures_defnoreturn" usercreated="true">' +
+    '<mutation></mutation>' +
+    '<title name="NAME">test-usercreated-function</title>' +
+  '</block>' +
+'</xml>';
+
+function initializeFunctionEditor(opt_functionDefinitionXML) {
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
   Blockly.hasTrashcan = true;
-  var functionDefinitionXML = '<xml><block type="procedures_defnoreturn" editable="false"><mutation></mutation><title name="NAME">test-function</title></block></xml>'
-  var xml = Blockly.Xml.textToDom(functionDefinitionXML);
+  var xml = Blockly.Xml.textToDom(opt_functionDefinitionXML || PROCEDURE);
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
   Blockly.useModalFunctionEditor = true;
   Blockly.functionEditor = new Blockly.FunctionEditor();
@@ -74,8 +88,8 @@ function initializeWithContractEditor(xmlString) {
   return container;
 }
 
-function openFunctionEditor() {
-  Blockly.functionEditor.autoOpenFunction('test-function');
+function openFunctionEditor(opt_name) {
+  Blockly.functionEditor.autoOpenFunction(opt_name || 'test-function');
 }
 
 function cleanupFunctionEditor() {
@@ -120,6 +134,31 @@ function test_initializeFunctionEditor() {
   assertEquals(false, definitionBlock.shouldBeGrayedOut());
   assertEquals(false, definitionBlock.isDeletable());
   assertEquals(false, definitionBlock.isEditable());
+  assertEquals(false,
+      goog.style.isElementShown(Blockly.functionEditor.deleteButton_);
+
+  cleanupFunctionEditor();
+  goog.dom.removeNode(container);
+}
+
+function test_functionEditor_deleteButton() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+  initializeFunctionEditor(USER_CREATED_PROCEDURE);
+  openFunctionEditor('test-usercreated-function');
+
+  assertNotNull('Function exists',
+      Blockly.mainBlockSpace.findFunction('test-usercreated-function'));
+  assertNotNull('Function editor has delete button',
+      goog.dom.getElementByClass('svgTextButton'));
+  assertEquals('Delete button says "Delete"', 'Delete',
+      goog.dom.getElementByClass('svgTextButton').textContent);
+
+  // Skip confirmation dialog
+  Blockly.customSimpleDialog = function(e) {e.onCancel();};
+  Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
+
+  assertNull('Function no longer exists',
+      Blockly.mainBlockSpace.findFunction('test-usercreated-function'));
 
   cleanupFunctionEditor();
   goog.dom.removeNode(container);
