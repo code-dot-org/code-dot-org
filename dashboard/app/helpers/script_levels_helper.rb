@@ -2,7 +2,7 @@ module ScriptLevelsHelper
   def script_level_solved_response(response, script_level)
     next_user_redirect = next_progression_level_or_redirect_path(script_level)
 
-    if has_another_level_to_go_to(script_level)
+    if has_another_level_to_go_to?(script_level)
       if script_level.end_of_stage?
         response[:stage_changing] = {previous: {name: script_level.name}}
       end
@@ -19,7 +19,7 @@ module ScriptLevelsHelper
     response[:redirect] = next_user_redirect
   end
 
-  def has_another_level_to_go_to(script_level)
+  def has_another_level_to_go_to?(script_level)
     script_level.next_progression_level
   end
 

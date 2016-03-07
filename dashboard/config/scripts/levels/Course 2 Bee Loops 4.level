@@ -77,5 +77,48 @@
     <required_blocks>
       <xml/>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_turn" deletable="false" editable="false">
+                  <title name="DIR">turnLeft</title>
+                  <next>
+                    <block type="maze_moveForward" deletable="false">
+                      <next>
+                        <block type="maze_moveForward" deletable="false">
+                          <next>
+                            <block type="maze_moveForward" deletable="false">
+                              <next>
+                                <block type="maze_nectar" deletable="false"/>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_honey"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>
