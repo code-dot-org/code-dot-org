@@ -81,7 +81,8 @@ Applab.log = function (object) {
   }
 };
 
-var errorHandler = require('./errorHandler');
+var errorHandler = require('../errorHandler');
+errorHandler.setLogMethod(Applab.log);
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 

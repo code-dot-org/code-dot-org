@@ -20,6 +20,9 @@ var gameLabSprite = require('./GameLabSprite');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var AppView = require('../templates/AppView.jsx');
 var gamelabCommands = require('./commands');
+var errorHandler = require('../errorHandler');
+var outputError = errorHandler.outputError;
+var ErrorLevel = errorHandler.ErrorLevel;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -57,9 +60,20 @@ var GameLab = function () {
   this.apiJS.injectGameLab(this);
 
   dropletConfig.injectGameLab(this);
+
+  errorHandler.setLogMethod(this.log.bind(this));
 };
 
 module.exports = GameLab;
+
+/**
+ * Forward a log message to both logger objects.
+ * @param {?} object
+ */
+GameLab.prototype.log = function (object) {
+  this.consoleLogger_.log(object);
+  this.debugger_.log(object);
+};
 
 /**
  * Inject the studioApp singleton.
@@ -203,17 +217,22 @@ GameLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
   }
 };
 
+GameLab.prototype.haltExecution_ = function () {
+  this.eventHandlers = {};
+  if (this.tickIntervalId !== 0) {
+    window.clearInterval(this.tickIntervalId);
+  }
+  this.tickIntervalId = 0;
+  this.tickCount = 0;
+};
+
 /**
  * Reset GameLab to its initial state.
  * @param {boolean} ignore Required by the API but ignored by this
  *     implementation.
  */
 GameLab.prototype.reset = function (ignore) {
-
-  this.eventHandlers = {};
-  window.clearInterval(this.tickIntervalId);
-  this.tickIntervalId = 0;
-  this.tickCount = 0;
+  this.haltExecution_();
 
   /*
   var divGameLab = document.getElementById('divGameLab');
@@ -462,23 +481,10 @@ GameLab.prototype.completeRedrawIfDrawComplete = function () {
 };
 
 GameLab.prototype.handleExecutionError = function (err, lineNumber) {
-/*
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
-  Studio.executionError = { err: err, lineNumber: lineNumber };
-
-  // Call onPuzzleComplete() if syntax error or any time we're not on a freeplay level:
-  if (err instanceof SyntaxError) {
-    // Mark preExecutionFailure and testResults immediately so that an error
-    // message always appears, even on freeplay:
-    Studio.preExecutionFailure = true;
-    Studio.testResults = TestResults.SYNTAX_ERROR_FAIL;
-    Studio.onPuzzleComplete();
-  } else if (!level.freePlay) {
-    Studio.onPuzzleComplete();
-  }
-*/
-  this.consoleLogger_.log(err);
-  throw err;
+  this.executionError = { err: err, lineNumber: lineNumber };
+  this.haltExecution_();
+  // TODO: Call onPuzzleComplete?
 };
 
 /**
