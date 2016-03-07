@@ -1,8 +1,6 @@
-/* global $ */
+/* global ColorPicker */
 var rowStyle = require('./rowStyle');
 var colors = require('../../sharedJsxStyles').colors;
-
-var colorPicker = require('../colpick');
 
 var ColorPickerPropertyRow = React.createClass({
   propTypes: {
@@ -12,36 +10,22 @@ var ColorPickerPropertyRow = React.createClass({
 
   getInitialState: function () {
     return {
-      value: this.props.initialValue
+      value: this.props.initialValue,
+      displayColorPicker: false,
     };
-  },
-
-  componentDidMount: function () {
-    this.ensureColorPicker();
-  },
-
-  componentDidUpdate: function () {
-    this.ensureColorPicker();
-  },
-
-  /**
-   * Make our button a colpick color picker, if it isn't already
-   */
-  ensureColorPicker: function () {
-    $(this.refs.colorPicker).colpick({
-      color: this.state.value,
-      layout: 'rgbhex',
-      submit: 0,
-      onChange: this.handleColorChange
-    });
   },
 
   handleChangeInternal: function(event) {
     this.changeColor(event.target.value);
   },
 
-  handleColorChange: function (hsbColor, hexColor) {
-    this.changeColor('#' + hexColor);
+  handleColorChange: function (color) {
+    if (color.rgb.a == 1) {
+      // no transparency set
+      this.changeColor('#' + color.hex);
+    } else {
+      this.changeColor(`rgba(${color.rgb.r},${color.rgb.g},${color.rgb.b},${color.rgb.a})`);
+    }
   },
 
   changeColor: function (color) {
@@ -49,12 +33,20 @@ var ColorPickerPropertyRow = React.createClass({
     this.setState({value: color});
   },
 
+  toggleColorPicker: function() {
+    this.setState({displayColorPicker: !this.state.displayColorPicker});
+  },
+
   render: function() {
     var buttonStyle = {
       backgroundColor: this.state.value,
       verticalAlign: 'top'
     };
-
+    let colorPicker = this.state.displayColorPicker ? (
+      <ColorPicker type="sketch"
+                   color={this.state.value}
+                   onChangeComplete={this.handleColorChange}/>
+    ) : null;
     return (
       <div style={rowStyle.container}>
         <div style={rowStyle.description}>{this.props.desc}</div>
@@ -66,8 +58,9 @@ var ColorPickerPropertyRow = React.createClass({
           <button
             className={this.state.value === '' ? 'rainbow-gradient' : undefined}
             style={buttonStyle}
-            ref='colorPicker'>
+            onClick={this.toggleColorPicker}>
           </button>
+          {colorPicker}
         </div>
       </div>
     );
