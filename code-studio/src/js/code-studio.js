@@ -16,6 +16,8 @@ require('./videos');
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
+window.ColorPicker = require('react-color').default;
+
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.
 require('./components/abuse_error.jsx');
