@@ -66,6 +66,7 @@ module.exports.blocks = [
   {func: 'camera.position.x', category: 'Game Lab', type: 'property' },
   {func: 'camera.position.y', category: 'Game Lab', type: 'property' },
   {func: 'camera.zoom', category: 'Game Lab', type: 'property' },
+  {func: 'playSound', parent: api, category: 'Game Lab', paletteParams: ['url'], params: ['"https://studio.code.org/blockly/media/example.mp3"'], dropdown: { 0: function () { return getAssetDropdown('audio'); } }, 'assetTooltip': { 0: chooseAsset.bind(null, 'audio') } },
 
   // Sprites
   {func: 'createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either' },
