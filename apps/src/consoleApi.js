@@ -1,4 +1,4 @@
-var codegen = require('../codegen');
+var codegen = require('./codegen');
 var vsprintf = require('sprintf-js').vsprintf;
 
 var consoleApi = module.exports;
