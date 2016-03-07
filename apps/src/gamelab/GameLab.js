@@ -19,6 +19,7 @@ var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var AppView = require('../templates/AppView.jsx');
+var gamelabCommands = require('./commands');
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -484,7 +485,11 @@ GameLab.prototype.handleExecutionError = function (err, lineNumber) {
  * Executes an API command.
  */
 GameLab.prototype.executeCmd = function (id, name, opts) {
-  console.log("GameLab executeCmd " + name);
+  var retVal = false;
+  if (gamelabCommands[name] instanceof Function) {
+    retVal = gamelabCommands[name](opts);
+  }
+  return retVal;
 };
 
 /**
