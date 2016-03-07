@@ -78,7 +78,7 @@ class AdminReportsController < ApplicationController
   def funometer_by_script
     SeamlessDatabasePool.use_persistent_read_connection do
       @script_id = params[:script_id]
-      @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+      @script_name = Script.find(@script_id)[:name]
 
       # Compute the global funometer percentage for the script.
       ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id)
@@ -133,9 +133,9 @@ class AdminReportsController < ApplicationController
   def funometer_by_script_level
     SeamlessDatabasePool.use_persistent_read_connection do
       @script_id = params[:script_id]
-      @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+      @script_name = Script.find(@script_id)[:name]
       @level_id = params[:level_id]
-      @level_name = Level.where('id = ?', @level_id).pluck(:name)[0]
+      @level_name = Level.find(@level_id)[:name]
 
       ratings = PuzzleRating.
                 where('puzzle_ratings.script_id = ?', @script_id).
