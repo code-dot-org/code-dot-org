@@ -1,6 +1,8 @@
 /* global $, Dialog, appOptions, CDOSounds */
 
-var Multi = function (id, levelId, standalone, numAnswers, answers, lastAttemptString) {
+var Multi = function (page, id, levelId, standalone, numAnswers, answers, lastAttemptString) {
+
+  this.page = page;
 
   this.id = id;
 
@@ -151,6 +153,12 @@ Multi.prototype.ready = function()
     event.stopPropagation();
   }, this));
 
+  $(".nextPageButton").click($.proxy(function(event) {
+    var newLocation = window.location.href.replace(/\?page=[0-9]+/, "");
+    newLocation += "?page=" + (this.page+1);
+    window.location.href = newLocation;
+  }, this));
+
   this.enableButton(false);
 
   // If we are relying on the containing page's submission buttons/dialog, then
@@ -258,7 +266,6 @@ Multi.prototype.submitButtonClick = function()
     this.crossedAnswers.unshift(this.lastSelectionIndex);
   }
 };
-
 
 // Unsubmit button should only be available when this is a standalone Multi.
 $('.unsubmitButton').click(function() {
