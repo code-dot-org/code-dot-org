@@ -28,16 +28,13 @@ level 'CSPPD3-u5 Create PT checkin'
 
 stage 'Challenge Overview'
 level 'CSPPD3-u5 challenge overview'
-level 'CSPPD3-u5 what is a challenge'
 level 'CSPPD3-u5 completing the challenge'
 level 'CSPPD3-u5 list of challenges'
-level 'CSPPD3-u2 expectations'
 level 'CSPPD3-u5 pick a challenge'
 
 stage 'Complete the Challlenge'
 level 'CSPPD3-u5 complete the challenge overview'
 level 'CSPPD3-u5 do the challenge'
-level 'CSPPD3-u2 create your extension'
 level 'CSPPD3-u2 reflect on challenge'
 
 stage 'Share out and Submit'
