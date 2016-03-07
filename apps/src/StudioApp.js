@@ -497,7 +497,7 @@ StudioApp.prototype.init = function(config) {
         defaultBtnSelector: 'again-button',
         id: 'showVersionsModal'
       });
-      React.render(React.createElement(VersionHistory, {
+      ReactDOM.render(React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
       }), codeDiv);
 
@@ -735,7 +735,7 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
     phoneFooter: true
   };
 
-  React.render(React.createElement(window.dashboard.SmallFooter, reactProps),
+  ReactDOM.render(React.createElement(window.dashboard.SmallFooter, reactProps),
     footerDiv);
 };
 
@@ -1076,7 +1076,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   // Now that our elements are guaranteed to be in the DOM, we can
   // render in our react components
   $(this.instructionsDialog.div).on('show.bs.modal', function () {
-    React.render(instructionsContent, instructionsReactContainer);
+    ReactDOM.render(instructionsContent, instructionsReactContainer);
   });
 
   if (autoClose) {
@@ -1143,14 +1143,14 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
-  var designToggleRow = document.getElementById('designToggleRow');
+  var playSpaceHeader = document.getElementById('playSpaceHeader');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
-  if (designToggleRow) {
-    top += $(designToggleRow).outerHeight(true);
+  if (playSpaceHeader) {
+    top += $(playSpaceHeader).outerHeight(true);
   }
 
   if (visualization) {
@@ -1729,7 +1729,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
         var div = document.createElement('div');
         document.body.appendChild(div);
-        React.render(React.createElement(WireframeSendToPhone, {
+        ReactDOM.render(React.createElement(WireframeSendToPhone, {
           channelId: dashboard.project.getCurrentId(),
           appType: dashboard.project.getStandaloneApp()
         }), div);
@@ -1798,6 +1798,25 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // Now set the editor to that mode:
   var aceEditor = this.editor.aceEditor;
   aceEditor.session.setMode('ace/mode/javascript_codeorg');
+
+  // Extend the command list on the ace Autocomplete object to include the period:
+  var Autocomplete = window.ace.require("ace/autocomplete").Autocomplete;
+  Autocomplete.prototype.commands['.'] = function(editor) {
+    // First, insert the period and update the completions:
+    editor.insert(".");
+    editor.completer.updateCompletions(true);
+    var filtered = editor.completer.completions &&
+        editor.completer.completions.filtered;
+    for (var i = 0; i < (filtered && filtered.length); i++) {
+      // If we have any exact maches in our filtered completions that include
+      // this period, allow the completer to stay active:
+      if (filtered[i].exactMatch) {
+        return;
+      }
+    }
+    // Otherwise, detach the completer:
+    editor.completer.detach();
+  };
 
   var langTools = window.ace.require("ace/ext/language_tools");
 
@@ -2350,7 +2369,7 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
   }, props);
 
   var element = React.createElement(Alert, reactProps);
-  React.render(element, container[0]);
+  ReactDOM.render(element, container[0]);
 };
 
 /**

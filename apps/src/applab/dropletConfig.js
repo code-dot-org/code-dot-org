@@ -23,6 +23,11 @@ var COLOR_RED = '#F78183';
 var COLOR_CYAN = '#4DD0E1';
 var COLOR_YELLOW = '#FFF176';
 
+var stringMethodPrefix = '[string].';
+var arrayMethodPrefix = '[list].';
+
+var stringBlockPrefix = 'str.';
+
 /**
  * Generate a list of screen ids for our setScreen dropdown
  */
@@ -149,14 +154,14 @@ module.exports.blocks = [
 
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'declareAssign_str_hello_world', block: 'var str = "Hello World";', category: 'Variables', noAutocomplete: true },
-  {func: 'substring', blockPrefix: 'str.substring', category: 'Variables', paletteParams: ['start','end'], params: ["6", "11"], modeOptionName: '*.substring', type: 'value' },
-  {func: 'indexOf', blockPrefix: 'str.indexOf', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.indexOf', type: 'value' },
-  {func: 'includes', blockPrefix: 'str.includes', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.includes', type: 'value' },
-  {func: 'length', block: 'str.length', category: 'Variables', modeOptionName: '*.length', type: 'property' },
-  {func: 'toUpperCase', blockPrefix: 'str.toUpperCase', category: 'Variables', modeOptionName: '*.toUpperCase', type: 'value' },
-  {func: 'toLowerCase', blockPrefix: 'str.toLowerCase', category: 'Variables', modeOptionName: '*.toLowerCase', type: 'value' },
+  {func: 'substring', blockPrefix: stringBlockPrefix, category: 'Variables', paletteParams: ['start','end'], params: ["6", "11"], modeOptionName: '*.substring', tipPrefix: stringMethodPrefix, type: 'value' },
+  {func: 'indexOf', blockPrefix: stringBlockPrefix, category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.indexOf', tipPrefix: stringMethodPrefix, type: 'value' },
+  {func: 'includes', blockPrefix: stringBlockPrefix, category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.includes', tipPrefix: stringMethodPrefix, type: 'value' },
+  {func: 'length', blockPrefix: stringBlockPrefix, category: 'Variables', modeOptionName: '*.length', tipPrefix: stringMethodPrefix, type: 'property' },
+  {func: 'toUpperCase', blockPrefix: stringBlockPrefix, category: 'Variables', modeOptionName: '*.toUpperCase', tipPrefix: stringMethodPrefix, type: 'value' },
+  {func: 'toLowerCase', blockPrefix: stringBlockPrefix, category: 'Variables', modeOptionName: '*.toLowerCase', tipPrefix: stringMethodPrefix, type: 'value' },
   {func: 'declareAssign_list_abd', block: 'var list = ["a", "b", "d"];', category: 'Variables', noAutocomplete: true },
-  {func: 'listLength', block: 'list.length', category: 'Variables', noAutocomplete: true, type: 'property' },
+  {func: 'listLength', block: 'list.length', category: 'Variables', noAutocomplete: true, tipPrefix: arrayMethodPrefix, type: 'property' },
   {func: 'insertItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','index','item'], params: ["list", "2", '"c"'], dontMarshal: true },
   {func: 'appendItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','item'], params: ["list", '"f"'], dontMarshal: true },
   {func: 'removeItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','index'], params: ["list", "0"], dontMarshal: true },

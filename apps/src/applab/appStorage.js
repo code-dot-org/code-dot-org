@@ -10,6 +10,32 @@ var RecordListener = require('./RecordListener');
 var AppStorage = module.exports;
 
 /**
+ * @param {number} status Http status code.
+ * @returns {string} An error message corresponding to the http status code.
+ */
+function getStatusDescription(status) {
+  if (status === 429) {
+    return 'Rate limit exceeded.';
+  } else if (status === 413) {
+    return 'Storage item size exceeded';
+  } else {
+    return 'Unexpected http status ' + status;
+  }
+}
+
+/**
+ * Calls onError with a message generated from commandName and status.
+ * @param {function} onError Function to call with error message.
+ * @param {string} commandName App Lab command name to include in error message.
+ * @param {number} status Http status code.
+ */
+function onErrorStatus(onError, commandName, status) {
+  if (onError) {
+    onError('Error in ' + commandName + ': ' + getStatusDescription(status));
+  }
+}
+
+/**
  * Reads the value associated with the key, accessible to all users of the app.
  * @param {string} key The name of the key.
  * @param {function(Object)} onSuccess Function to call on success with the
@@ -34,7 +60,7 @@ var handleGetKeyValue = function(onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error reading value: unexpected http status ' + this.status);
+    onErrorStatus(onError, 'getKeyValue', this.status);
     return;
   }
   var value = JSON.parse(this.responseText);
@@ -63,7 +89,7 @@ var handleSetKeyValue = function(onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error writing value: unexpected http status ' + this.status);
+    onErrorStatus(onError, 'setKeyValue', this.status);
     return;
   }
   onSuccess();
@@ -101,7 +127,7 @@ var handleCreateRecord = function(onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error creating record: unexpected http status ' + this.status);
+    onErrorStatus(onError, 'createRecord', this.status);
     return;
   }
   var record = JSON.parse(this.responseText);
@@ -140,7 +166,7 @@ var handleReadRecords = function(searchParams, onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error reading records: unexpected http status ' + this.status);
+    onErrorStatus(onError, 'readRecords', this.status);
     return;
   }
   var records = JSON.parse(this.responseText);
@@ -195,7 +221,7 @@ var handleUpdateRecord = function(tableName, record, onComplete, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error updating record: unexpected http status ' + this.status);
+    onErrorStatus(onError, 'updateRecord', this.status);
     return;
   }
   onComplete(record, true);
@@ -240,7 +266,7 @@ var handleDeleteRecord = function(tableName, record, onComplete, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error deleting record: unexpected http status ' + this.status);
+    onErrorStatus(onError, 'deleteRecord', this.status);
     return;
   }
   onComplete(true);

@@ -47,7 +47,30 @@ exports.load = function (assetUrl, id) {
   // stamps aren't actually used on production anywhere right now. if we were
   // to want to use them, define the mapping from image to name here.
   skin.stampValues = [
-    [skin.avatar, 'DEFAULT']
+    [skin.stickers.elephant, 'Elephant'],
+    [skin.stickers.dragon, 'Dragon'],
+    [skin.stickers.triceratops, 'Triceratops'],
+    [skin.stickers.monkey, 'Monkey'],
+    [skin.stickers.cat, 'Cat'],
+    [skin.stickers.turtle, 'Turtle'],
+    [skin.stickers.goat, 'Goat'],
+    [skin.stickers.zebra, 'Zebra'],
+    [skin.stickers.hippo, 'Hippo'],
+    [skin.stickers.bunny, 'Bunny'],
+    [skin.stickers.peacock, 'Peacock'],
+    [skin.stickers.llama, 'Llama'],
+    [skin.stickers.giraffe, 'Giraffe'],
+    [skin.stickers.mouse, 'Mouse'],
+    [skin.stickers.beaver, 'Beaver'],
+    [skin.stickers.bat, 'Bat'],
+    [skin.stickers.grasshopper, 'Grasshopper'],
+    [skin.stickers.chicken, 'Chicken'],
+    [skin.stickers.moose, 'Moose'],
+    [skin.stickers.owl, 'Owl'],
+    [skin.stickers.penguin, 'Penguin'],
+    [skin.stickers.lion, 'Lion'],
+    [skin.stickers.robot, 'Robot'],
+    [skin.stickers.rocket, 'Rocket'],
   ];
 
   // Get properties from config

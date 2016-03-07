@@ -1,6 +1,6 @@
 var msg = require('../locale');
 
-module.exports = React.createClass({
+var HintSelect = React.createClass({
   propTypes: {
     showInstructions: React.PropTypes.func.isRequired,
     showHint: React.PropTypes.func.isRequired
@@ -15,3 +15,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = HintSelect;
