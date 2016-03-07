@@ -1309,7 +1309,7 @@ Applab.showConfirmationDialog = function(config) {
       '<p>' + config.text + '</p>';
 
   var buttons = document.createElement('div');
-  React.render(React.createElement(DialogButtons, {
+  ReactDOM.render(React.createElement(DialogButtons, {
     confirmText: commonMsg.dialogOK(),
     cancelText: commonMsg.dialogCancel()
   }), buttons);

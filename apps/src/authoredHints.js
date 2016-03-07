@@ -183,7 +183,7 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function (animate) {
     this.promptIcon.parentNode.insertBefore(this.lightbulb, this.promptIcon);
   }
 
-  React.render(React.createElement(Lightbulb, {
+  ReactDOM.render(React.createElement(Lightbulb, {
     count: hintCount,
     lit: hintCount > 0,
     animate: animate,
@@ -227,7 +227,7 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
             var content = document.createElement('div');
             api.set('content.text', content);
 
-            React.render(React.createElement(HintDialogContent, {
+            ReactDOM.render(React.createElement(HintDialogContent, {
               content: hint.content,
               block: hint.block,
             }), content, function () {
