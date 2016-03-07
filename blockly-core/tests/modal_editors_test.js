@@ -148,6 +148,8 @@ function test_functionEditor_deleteButton() {
 
   assertNotNull('Function exists',
       Blockly.mainBlockSpace.findFunction('test-usercreated-function'));
+  assertNotNull('Function editor has delete button',
+      goog.dom.getElementByClass('svgTextButton'));
   assertEquals('Delete button says "Delete"', 'Delete',
       goog.dom.getElementByClass('svgTextButton').textContent);
 
