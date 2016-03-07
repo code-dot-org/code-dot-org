@@ -73,17 +73,17 @@ class DynamoTable
 
   def delete_all()
     ids = ids_to_a
-    return true if ids.empty?
+    unless ids.empty?
+      items = ids.map do |id|
+        { delete_request: { key: {'hash'=>@hash, 'row_id'=>id} } }
+      end
 
-    items = ids.map do |id|
-      { delete_request: { key: {'hash'=>@hash, 'row_id'=>id} } }
-    end
-
-    # batch_write_items can only handle 25 items at a time, so split into groups of 25
-    (0..ids.length).step(MAX_BATCH_SIZE).each do |start_index|
-      db.batch_write_item(request_items: {
-        CDO.dynamo_tables_table => items.slice(start_index, MAX_BATCH_SIZE)
-      })
+      # batch_write_items can only handle 25 items at a time, so split into groups of 25
+      (0..ids.length).step(MAX_BATCH_SIZE).each do |start_index|
+        db.batch_write_item(request_items: {
+          CDO.dynamo_tables_table => items.slice(start_index, MAX_BATCH_SIZE)
+        })
+      end
     end
     db.delete_item(
       table_name: CDO.dynamo_table_metadata_table,
@@ -155,8 +155,6 @@ class DynamoTable
       retry
     end
 
-    ensure_column_metadata(value)
-
     value.merge('id' => row_id)
   end
 
@@ -214,11 +212,13 @@ class DynamoTable
     end
   end
 
-  def add_column(column_name)
+  def add_columns(column_names)
     ensure_metadata()
     column_list = JSON.parse(metadata["column_list"])
-    new_column_list = TableMetadata.add_column(column_list, column_name)
-    set_column_list_metadata(new_column_list)
+    column_names.each do |col|
+      column_list = TableMetadata.add_column(column_list, col)
+    end
+    set_column_list_metadata(column_list)
   end
 
   def delete_column(column_name, ip_address)
@@ -253,22 +253,8 @@ class DynamoTable
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException
       raise NotFound, "row `#{id}` not found in `#{@table_name}` table"
     end
-    ensure_column_metadata(value)
 
     value.merge('id' => id)
-  end
-
-  # Given a row from our table, ensure that all columns in that row appear in
-  # our column_list metadata, updating metadata as appropriate to add them
-  def ensure_column_metadata(row)
-    ensure_metadata
-    column_list = JSON.parse(metadata['column_list'])
-    row_columns = TableMetadata.generate_column_list([row])
-    new_column_list = (column_list + row_columns).uniq
-
-    if column_list != new_column_list
-      set_column_list_metadata(new_column_list)
-    end
   end
 
   def items()
