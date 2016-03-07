@@ -43,7 +43,7 @@ var elementUtils = require('./designElements/elementUtils');
 var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
-var Buttons = require('../templates/Buttons.jsx');
+var DialogButtons = require('../templates/DialogButtons.jsx');
 
 var applabConstants = require('./constants');
 
@@ -1306,7 +1306,7 @@ Applab.showConfirmationDialog = function(config) {
       '<p>' + config.text + '</p>';
 
   var buttons = document.createElement('div');
-  React.render(React.createElement(Buttons, {
+  React.render(React.createElement(DialogButtons, {
     confirmText: commonMsg.dialogOK(),
     cancelText: commonMsg.dialogCancel()
   }), buttons);

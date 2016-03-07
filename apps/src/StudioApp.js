@@ -19,7 +19,7 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/Instructions.jsx');
-var Buttons = require('./templates/Buttons.jsx');
+var DialogButtons = require('./templates/DialogButtons.jsx');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
@@ -1028,7 +1028,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
 
   var buttons = document.createElement('div');
   instructionsDiv.appendChild(buttons);
-  React.render(React.createElement(Buttons, {
+  React.render(React.createElement(DialogButtons, {
     ok: true
   }), buttons);
 
