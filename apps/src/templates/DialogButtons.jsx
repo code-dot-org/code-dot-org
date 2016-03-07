@@ -1,7 +1,7 @@
 var msg = require('../locale');
 var Lightbulb = require('./Lightbulb.jsx');
 
-var Buttons = React.createClass({
+var DialogButtons = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func,
     cancelButtonClass: React.PropTypes.string,
@@ -88,5 +88,5 @@ var Buttons = React.createClass({
   },
 });
 
-module.exports = Buttons;
+module.exports = DialogButtons;
 

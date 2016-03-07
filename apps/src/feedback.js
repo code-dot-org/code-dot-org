@@ -34,7 +34,7 @@ var constants = require('./constants');
 var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
 var puzzleRatingUtils = require('./puzzleRatingUtils');
-var Buttons = require('./templates/Buttons.jsx');
+var DialogButtons = require('./templates/DialogButtons.jsx');
 
 /**
  * @typedef {Object} TestableBlock
@@ -417,7 +417,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
     tryAgainText = options.keepPlayingText;
   }
 
-  React.render(React.createElement(Buttons, {
+  React.render(React.createElement(DialogButtons, {
     previousLevel:
       !this.canContinueToNextLevel(options.feedbackType) &&
       options.showPreviousButton,
@@ -924,7 +924,7 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog, appStrings) {
   });
 
   var buttons = document.createElement('div');
-  React.render(React.createClass(Buttons, {
+  React.render(React.createElement(DialogButtons, {
     ok: true
   }), buttons);
   codeDiv.appendChild(buttons);
@@ -985,7 +985,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   }
 
   var buttons = document.createElement('div');
-  React.render(React.createClass(Buttons, {
+  React.render(React.createElement(DialogButtons, {
     confirmText: options.confirmText,
     cancelText: options.cancelText,
     cancelButtonClass: options.cancelButtonClass
@@ -1030,7 +1030,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  React.render(React.createElement(Buttons, {
+  React.render(React.createElement(DialogButtons, {
     ok: true
   }), buttons);
   contentDiv.appendChild(buttons);
