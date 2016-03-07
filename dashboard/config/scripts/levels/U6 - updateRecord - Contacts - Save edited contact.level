@@ -38,9 +38,11 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "instructions": "Use updateRecord to store the user's edits in the database. (Click to see full instructions)"
+    "instructions": "Use updateRecord to store the user's edits in the database. (Click to see full instructions)",
+    "encrypted_examples": "RMwL1AABGXVmmw/vxXgR/+zgUosXeYw0VcO6Z6Xj0KuvwNDKC54ipReSE7L+\nN9gR\n"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

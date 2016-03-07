@@ -181,11 +181,13 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
   # one-off internal reports
+  get '/admin/temp/diversity_survey', to: 'admin_reports#diversity_survey', as: 'diversity_survey'
   get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
 
   # internal report dashboards
   get '/admin/funometer', to: 'admin_reports#funometer', as: 'funometer'
   get '/admin/funometer/script/:script_id', to: 'admin_reports#funometer_by_script', as: 'funometer_by_script'
+  get '/admin/funometer/stage/:stage_id', to: 'admin_reports#funometer_by_stage', as: 'funometer_by_stage'
   get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_reports#funometer_by_script_level', as: 'funometer_by_script_level'
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'

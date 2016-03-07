@@ -496,7 +496,7 @@ StudioApp.prototype.init = function(config) {
         defaultBtnSelector: 'again-button',
         id: 'showVersionsModal'
       });
-      React.render(React.createElement(VersionHistory, {
+      ReactDOM.render(React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
       }), codeDiv);
 
@@ -734,7 +734,7 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
     phoneFooter: true
   };
 
-  React.render(React.createElement(window.dashboard.SmallFooter, reactProps),
+  ReactDOM.render(React.createElement(window.dashboard.SmallFooter, reactProps),
     footerDiv);
 };
 
@@ -1075,7 +1075,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   // Now that our elements are guaranteed to be in the DOM, we can
   // render in our react components
   $(this.instructionsDialog.div).on('show.bs.modal', function () {
-    React.render(instructionsContent, instructionsReactContainer);
+    ReactDOM.render(instructionsContent, instructionsReactContainer);
   });
 
   if (autoClose) {
@@ -1728,7 +1728,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
         var div = document.createElement('div');
         document.body.appendChild(div);
-        React.render(React.createElement(WireframeSendToPhone, {
+        ReactDOM.render(React.createElement(WireframeSendToPhone, {
           channelId: dashboard.project.getCurrentId(),
           appType: dashboard.project.getStandaloneApp()
         }), div);
@@ -2368,7 +2368,7 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
   }, props);
 
   var element = React.createElement(Alert, reactProps);
-  React.render(element, container[0]);
+  ReactDOM.render(element, container[0]);
 };
 
 /**

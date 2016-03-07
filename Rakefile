@@ -276,6 +276,16 @@ def ensure_code_studio_package
   raise "No valid package found" unless package_found
 end
 
+def ensure_apps_package
+  # never download if we build our own
+  return if CDO.use_my_apps
+
+  packager = S3Packaging.new('apps', apps_dir, dashboard_dir('public/apps-package'))
+  package_found = packager.update_from_s3
+  raise "No valid package found" unless package_found
+end
+
+
 namespace :install do
 
   # Create a symlink in the public directory that points at the appropriate blockly
@@ -350,6 +360,10 @@ namespace :update_package do
 
   task :code_studio do
     ensure_code_studio_package
+  end
+
+  task :apps do
+    ensure_apps_package
   end
 
 end

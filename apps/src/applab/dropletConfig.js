@@ -157,7 +157,7 @@ module.exports.blocks = [
   {func: 'substring', blockPrefix: stringBlockPrefix, category: 'Variables', paletteParams: ['start','end'], params: ["6", "11"], modeOptionName: '*.substring', tipPrefix: stringMethodPrefix, type: 'value' },
   {func: 'indexOf', blockPrefix: stringBlockPrefix, category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.indexOf', tipPrefix: stringMethodPrefix, type: 'value' },
   {func: 'includes', blockPrefix: stringBlockPrefix, category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.includes', tipPrefix: stringMethodPrefix, type: 'value' },
-  {func: 'length', block: 'str.length', category: 'Variables', modeOptionName: '*.length', tipPrefix: stringMethodPrefix, type: 'property' },
+  {func: 'length', blockPrefix: stringBlockPrefix, category: 'Variables', modeOptionName: '*.length', tipPrefix: stringMethodPrefix, type: 'property' },
   {func: 'toUpperCase', blockPrefix: stringBlockPrefix, category: 'Variables', modeOptionName: '*.toUpperCase', tipPrefix: stringMethodPrefix, type: 'value' },
   {func: 'toLowerCase', blockPrefix: stringBlockPrefix, category: 'Variables', modeOptionName: '*.toLowerCase', tipPrefix: stringMethodPrefix, type: 'value' },
   {func: 'declareAssign_list_abd', block: 'var list = ["a", "b", "d"];', category: 'Variables', noAutocomplete: true },
