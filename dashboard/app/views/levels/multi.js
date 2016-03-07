@@ -1,8 +1,6 @@
 /* global $, Dialog, appOptions, CDOSounds */
 
-var Multi = function (page, id, levelId, standalone, numAnswers, answers, lastAttemptString) {
-
-  this.page = page;
+var Multi = function (id, levelId, standalone, numAnswers, answers, lastAttemptString) {
 
   this.id = id;
 
@@ -151,12 +149,6 @@ Multi.prototype.ready = function()
     this.choiceClicked(button);
     event.preventDefault();
     event.stopPropagation();
-  }, this));
-
-  $(".nextPageButton").click($.proxy(function(event) {
-    var newLocation = window.location.href.replace(/\?page=[0-9]+/, "");
-    newLocation += "?page=" + (this.page+1);
-    window.location.href = newLocation;
   }, this));
 
   this.enableButton(false);

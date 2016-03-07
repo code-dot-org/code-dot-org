@@ -25,6 +25,10 @@
     - last_attempt = ""
   = render partial: 'levels/single_multi', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
 
+- if data["per_page"]
+  %a.btn.btn-large.btn-primary.nextPageButton
+    =t('nextPage')
+
 = render partial: 'levels/common_audio'
 = render partial: 'levels/dialog', locals: {app: app, data: data}
 
@@ -32,4 +36,5 @@
   #{render template: 'levels/multi.js', formats: [:js]}
 
   var levelCount = #{data["levels"].count};
+  var page = #{page};
   #{render template: 'levels/levelGroup.js', formats: [:js]}
