@@ -982,7 +982,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
     'markdown-instructions-container' :
-    "instructions-container";
+    'instructions-container';
 
   var renderedMarkdown;
   var headerElement;

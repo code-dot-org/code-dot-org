@@ -20,6 +20,18 @@ var DialogButtons = React.createClass({
   render: function () {
     var okButton, cancelButton, confirmButton, previousButton, hintButton, againButton, nextButton;
 
+    var style = {
+      confirmButton: {
+        'float': 'right'
+      },
+      nextButton: {
+        'float': 'right'
+      },
+      lightbulb: {
+        margin: '-9px 0px -9px -5px'
+      }
+    };
+
     if (this.props.ok) {
       okButton = (<div className="farSide">
         <button id="ok-button" className="secondary">
@@ -35,7 +47,7 @@ var DialogButtons = React.createClass({
     }
 
     if (this.props.confirmText) {
-      confirmButton = (<button id="confirm-button" className="launch" style={{ 'float': "right" }}>
+      confirmButton = (<button id="confirm-button" className="launch" style={style.confirmButton}>
         {this.props.confirmText}
       </button>);
     }
@@ -55,7 +67,7 @@ var DialogButtons = React.createClass({
       } else {
         if (this.props.shouldPromptForHint) {
           hintButton = (<button id="hint-request-button" className="lightbulb-button">
-            <Lightbulb size={32} style={{ margin: "-9px 0px -9px -5px" }}/>
+            <Lightbulb size={32} style={style.lightbulb}/>
             {msg.hintRequest()}
           </button>);
         }
@@ -71,7 +83,7 @@ var DialogButtons = React.createClass({
             <div className="arrow-head"><img src={this.props.assetUrl('media/next-arrow-head.png')} alt="Arrowhead" width="66" height="130"/></div>
             <div className="arrow-text">{this.props.continueText}</div>
           </div>) :
-          (<button id="continue-button" className="launch" style={{ 'float': "right" }}>
+          (<button id="continue-button" className="launch" style={style.nextButton}>
             {this.props.continueText}
           </button>);
     }

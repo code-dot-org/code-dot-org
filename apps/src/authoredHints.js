@@ -167,10 +167,10 @@ AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
  * Adjusts the displayed number of unseen hints. Dims the lightbulb
  * image if there are no hints. Optionally plays a simple CSS animation
  * to highlight the update.
- * @param {boolean} animate defaults to false
+ * @param {boolean} shouldAnimate defaults to false
  */
-AuthoredHints.prototype.updateLightbulbDisplay_ = function (animate) {
-  animate = animate || false;
+AuthoredHints.prototype.updateLightbulbDisplay_ = function (shouldAnimate) {
+  shouldAnimate = shouldAnimate || false;
 
   var hintCount = this.getUnseenHints().length; 
 
@@ -186,7 +186,7 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function (animate) {
   ReactDOM.render(React.createElement(Lightbulb, {
     count: hintCount,
     lit: hintCount > 0,
-    animate: animate,
+    shouldAnimate: shouldAnimate,
   }), this.lightbulb);
 };
 
