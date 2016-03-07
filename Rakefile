@@ -129,7 +129,8 @@ namespace :build do
   task :dashboard do
     make_blockly_symlink
     make_code_studio_symlink
-    # Make sure we have an up to date package for code studio
+    # Make sure we have an up to date package for apps and code studio
+    ensure_apps_package
     ensure_code_studio_package
 
     Dir.chdir(dashboard_dir) do
