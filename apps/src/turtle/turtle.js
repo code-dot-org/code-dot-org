@@ -47,6 +47,8 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
+var MAX_STICKER_SIZE = 150;
+
 var JOINT_RADIUS = 4;
 
 var SMOOTH_ANIMATE_STEP_SIZE = 5;
@@ -233,7 +235,7 @@ Artist.prototype.init = function(config) {
     });
   }.bind(this);
 
-  React.render(React.createElement(AppView, {
+  ReactDOM.render(React.createElement(AppView, {
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
@@ -1015,7 +1017,7 @@ Artist.prototype.step = function(command, values, options) {
     case 'DP':  // Draw Print
       this.ctxScratch.save();
       this.ctxScratch.translate(this.x, this.y);
-      this.ctxScratch.rotate(2 * Math.PI * (this.heading - 90) / 360);
+      this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
       this.ctxScratch.fillText(values[0], 0, 0);
       this.ctxScratch.restore();
       break;
@@ -1059,18 +1061,53 @@ Artist.prototype.step = function(command, values, options) {
       break;
     case 'stamp':
       var img = this.stamps[values[0]];
-      var width = img.width / 2;
-      var height = img.height / 2;
-      var x = this.x - width / 2;
-      var y = this.y - height / 2;
-      if (img.width !== 0) {
-        this.ctxScratch.drawImage(img, x, y, width, height);
-      }
+
+      var dimensions = scaleToBoundingBox(MAX_STICKER_SIZE, img.width, img.height);
+      var width = dimensions.width;
+      var height = dimensions.height;
+
+      // Rotate the image such the the turtle is at the center of the bottom of
+      // the image and the image is pointing (from bottom to top) in the same
+      // direction as the turtle.
+      this.ctxScratch.save();
+      this.ctxScratch.translate(this.x, this.y);
+      this.ctxScratch.rotate(utils.degreesToRadians(this.heading));
+      this.ctxScratch.drawImage(img, -width / 2, -height, width, height);
+      this.ctxScratch.restore();
+
       break;
   }
 
   return tupleDone;
 };
+
+/**
+ * Given the width and height of a rectangle this scales the dimensions
+ * proportionally such that neither is larger than a given maximum size.
+ *
+ * @param maxSize - The maximum size of either dimension
+ * @param width - The current width of a rectangle
+ * @param height - The current height of a rectangle
+ * @return an object containing the scaled width and height.
+ */
+function scaleToBoundingBox(maxSize, width, height) {
+  if (width < maxSize && height < maxSize) {
+    return {width: width, height: height};
+  }
+
+  var newWidth;
+  var newHeight;
+
+  if (width > height) {
+    newWidth = maxSize;
+    newHeight = height * (maxSize / width);
+  } else {
+    newHeight = maxSize;
+    newWidth = width * (maxSize / height);
+  }
+
+  return {width: newWidth, height: newHeight};
+}
 
 Artist.prototype.setPattern = function (pattern) {
   if (this.loadedPathPatterns[pattern]) {
@@ -1083,8 +1120,8 @@ Artist.prototype.setPattern = function (pattern) {
 };
 
 Artist.prototype.jumpForward_ = function (distance) {
-  this.x += distance * Math.sin(2 * Math.PI * this.heading / 360);
-  this.y -= distance * Math.cos(2 * Math.PI * this.heading / 360);
+  this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
+  this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
 };
 
 Artist.prototype.moveByRelativePosition_ = function (x, y) {
@@ -1213,7 +1250,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
     this.ctxPattern.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.ctxPattern.rotate(Math.PI * (this.heading - 90) / 180);
+    this.ctxPattern.rotate(utils.degreesToRadians(this.heading - 90));
 
     var clipSize;
     if (lineDistance % this.smoothAnimateStepSize === 0) {
@@ -1250,7 +1287,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
     this.ctxScratch.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.ctxScratch.rotate(Math.PI * (this.heading - 90) / 180);
+    this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
 
     if (img.width !== 0) {
       this.ctxScratch.drawImage(img,

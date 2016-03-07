@@ -517,6 +517,30 @@ en:
       ECSPD3-u5 share out overview: {}
       ECSPD3-u5 tools: {}
       ECSPD3-u5 what is a challenge: {}
+      ECSPD3-u6 about: {}
+      ECSPD3-u6 alt lesson overview: {}
+      ECSPD3-u6 challenge inside: {}
+      ECSPD3-u6 connections: {}
+      ECSPD3-u6 day 1: {}
+      ECSPD3-u6 day 10-13: {}
+      ECSPD3-u6 day 14: {}
+      ECSPD3-u6 day 15: {}
+      ECSPD3-u6 day 16-18: {}
+      ECSPD3-u6 day 19-23: {}
+      ECSPD3-u6 day 2-3: {}
+      ECSPD3-u6 day 24-33: {}
+      ECSPD3-u6 day 4: {}
+      ECSPD3-u6 day 5: {}
+      ECSPD3-u6 day 6-7: {}
+      ECSPD3-u6 day 8-9: {}
+      ECSPD3-u6 ideas for culminating projects: {}
+      ECSPD3-u6 intro to u6: {}
+      ECSPD3-u6 lesson ideas: {}
+      ECSPD3-u6 lesson overview: {}
+      ECSPD3-u6 links to online simulations: {}
+      ECSPD3-u6 overview: {}
+      ECSPD3-u6 plan: {}
+      ECSPD3-u6 why study robotics: {}
       ECSU4 Challenge Submission: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
@@ -1605,7 +1629,7 @@ en:
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
-        Artist Loops Matching One: Artist Loops Matching One
+        Artist Loops Matching 1: Artist Loops Matching 1
         Match the loop to the shape: Match the loop to the shape
       2-3 artist match 1:
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
@@ -2357,7 +2381,7 @@ en:
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         Maze Multiple Choice: Maze Multiple Choice
-        Which blocks work?: Which blocks work?
+        Which set of blocks will get me to the pig?: Which set of blocks will get me to the pig?
       2-3 Relay Programming Multi 1:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"

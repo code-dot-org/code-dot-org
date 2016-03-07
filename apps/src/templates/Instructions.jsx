@@ -41,7 +41,6 @@ var Instructions = React.createClass({
         dangerouslySetInnerHTML={{ __html: this.props.renderedMarkdown }}
       />);
     } else {
-
       bodyStyle.marginLeft = '80px';
 
       var instructions = (this.props.instructions) ?

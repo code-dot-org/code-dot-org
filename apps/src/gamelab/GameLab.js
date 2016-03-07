@@ -154,7 +154,7 @@ GameLab.prototype.init = function (config) {
     });
   }.bind(this);
 
-  React.render(React.createElement(AppView, {
+  ReactDOM.render(React.createElement(AppView, {
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,

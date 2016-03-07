@@ -15,10 +15,18 @@ var COLOR_WHITE = '#FFFFFF';
 var COLOR_BLUE = '#64B5F6';
 var COLOR_ORANGE = '#FFB74D';
 
-var GameLab;
+var spriteMethodPrefix = '[Sprite].';
+var groupMethodPrefix = '[Group].';
+var animMethodPrefix = '[Animation].';
+
+var spriteBlockPrefix = 'sprite.';
+var groupBlockPrefix = 'group.';
+var animBlockPrefix = 'anim.';
+
+var gameLab;
 
 exports.injectGameLab = function (gamelab) {
-  GameLab = gamelab;
+  gameLab = gamelab;
 };
 
 // Flip the argument order so we can bind `typeFilter`.
@@ -29,7 +37,7 @@ function chooseAsset(typeFilter, callback) {
 module.exports.blocks = [
   // Game Lab
   {func: 'loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], type: 'either', dropdown: { 0: function () { return getAssetDropdown('image'); } }, assetTooltip: { 0: chooseAsset.bind(null, 'image') } },
-  {func: 'var_loadImage', category: 'Game Lab', blockPrefix: 'var img = loadImage', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], noAutocomplete: true },
+  {func: 'var img = loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], noAutocomplete: true },
   {func: 'image', category: 'Game Lab', paletteParams: ['image','srcX','srcY','srcW','srcH','x','y','w','h'], params: ["img", "0", "0", "img.width", "img.height", "0", "0", "img.width", "img.height"] },
   {func: 'fill', category: 'Game Lab', paletteParams: ['color'], params: ["'yellow'"] },
   {func: 'noFill', category: 'Game Lab' },
@@ -45,69 +53,69 @@ module.exports.blocks = [
   {func: 'textAlign', category: 'Game Lab', paletteParams: ['horiz','vert'], params: ["CENTER", "TOP"] },
   {func: 'textSize', category: 'Game Lab', paletteParams: ['pixels'], params: ["12"] },
   {func: 'drawSprites', category: 'Game Lab' },
-  {func: 'allSprites', category: 'Game Lab', block: 'allSprites', type: 'property' },
+  {func: 'allSprites', category: 'Game Lab', block: 'allSprites', type: 'readonlyproperty' },
   {func: 'background', category: 'Game Lab', paletteParams: ['color'], params: ["'black'"] },
-  {func: 'width', category: 'Game Lab', type: 'property' },
-  {func: 'height', category: 'Game Lab', type: 'property' },
-  {func: 'camera', category: 'Game Lab', type: 'property' },
+  {func: 'width', category: 'Game Lab', type: 'readonlyproperty' },
+  {func: 'height', category: 'Game Lab', type: 'readonlyproperty' },
+  {func: 'camera', category: 'Game Lab', type: 'readonlyproperty' },
   {func: 'camera.on', category: 'Game Lab' },
   {func: 'camera.off', category: 'Game Lab' },
-  {func: 'camera.active', category: 'Game Lab', type: 'property' },
-  {func: 'camera.mouseX', category: 'Game Lab', type: 'property' },
-  {func: 'camera.mouseY', category: 'Game Lab', type: 'property' },
+  {func: 'camera.active', category: 'Game Lab', type: 'readonlyproperty' },
+  {func: 'camera.mouseX', category: 'Game Lab', type: 'readonlyproperty' },
+  {func: 'camera.mouseY', category: 'Game Lab', type: 'readonlyproperty' },
   {func: 'camera.position.x', category: 'Game Lab', type: 'property' },
   {func: 'camera.position.y', category: 'Game Lab', type: 'property' },
   {func: 'camera.zoom', category: 'Game Lab', type: 'property' },
 
   // Sprites
   {func: 'createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either' },
-  {func: 'var_createSprite', category: 'Sprites', blockPrefix: 'var sprite = createSprite', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], noAutocomplete: true },
-  {func: 'sprite.setSpeed', category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], modeOptionName: '*.setSpeed' },
-  {func: 'sprite.getAnimationLabel', category: 'Sprites', modeOptionName: '*.getAnimationLabel', type: 'value' },
-  {func: 'sprite.getDirection', category: 'Sprites', modeOptionName: '*.getDirection', type: 'value' },
-  {func: 'sprite.getSpeed', category: 'Sprites', modeOptionName: '*.getSpeed', type: 'value' },
-  {func: 'sprite.remove', category: 'Sprites', modeOptionName: '*.remove' },
-  {func: 'sprite.addAnimation', category: 'Sprites', paletteParams: ['label','animation'], params: ['"anim1"', "anim"], modeOptionName: '*.addAnimation' },
-  {func: 'sprite.addImage', category: 'Sprites', paletteParams: ['label','image'], params: ['"img1"', "img"], modeOptionName: '*.addImage' },
-  {func: 'sprite.addSpeed', category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], modeOptionName: '*.addSpeed' },
-  {func: 'sprite.addToGroup', category: 'Sprites', paletteParams: ['group'], params: ["group"], modeOptionName: '*.addToGroup' },
-  {func: 'sprite.bounce', category: 'Sprites', paletteParams: ['target'], params: ["group"], modeOptionName: '*.bounce', type: 'either' },
-  {func: 'sprite.collide', category: 'Sprites', paletteParams: ['target'], params: ["group"], modeOptionName: '*.collide', type: 'either' },
-  {func: 'sprite.displace', category: 'Sprites', paletteParams: ['target'], params: ["group"], modeOptionName: '*.displace', type: 'either' },
-  {func: 'sprite.overlap', category: 'Sprites', paletteParams: ['target'], params: ["group"], modeOptionName: '*.overlap', type: 'either' },
-  {func: 'sprite.changeAnimation', category: 'Sprites', paletteParams: ['label'], params: ['"anim1"'], modeOptionName: '*.changeAnimation' },
-  {func: 'sprite.changeImage', category: 'Sprites', paletteParams: ['label'], params: ['"img1"'], modeOptionName: '*.changeImage' },
-  {func: 'sprite.attractionPoint', category: 'Sprites', paletteParams: ['speed','x','y'], params: ["1", "200", "200"], modeOptionName: '*.attractionPoint' },
-  {func: 'sprite.limitSpeed', category: 'Sprites', paletteParams: ['max'], params: ["3"], modeOptionName: '*.limitSpeed' },
-  {func: 'sprite.setCollider', category: 'Sprites', paletteParams: ['type','x','y','w','h'], params: ['"rectangle"', "0", "0", "20", "20"], modeOptionName: '*.setCollider' },
-  {func: 'sprite.setVelocity', category: 'Sprites', paletteParams: ['x','y'], params: ["1", "1"], modeOptionName: '*.setVelocity' },
+  {func: 'var sprite = createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], noAutocomplete: true, docFunc: 'createSprite' },
+  {func: 'setSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setSpeed' },
+  {func: 'getAnimationLabel', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getAnimationLabel', type: 'value' },
+  {func: 'getDirection', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getDirection', type: 'value' },
+  {func: 'getSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getSpeed', type: 'value' },
+  {func: 'remove', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.remove' },
+  {func: 'addAnimation', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label','animation'], params: ['"anim1"', "anim"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addAnimation' },
+  {func: 'addImage', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label','image'], params: ['"img1"', "img"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addImage' },
+  {func: 'addSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addSpeed' },
+  {func: 'addToGroup', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['group'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addToGroup' },
+  {func: 'bounce', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.bounce', type: 'either' },
+  {func: 'collide', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.collide', type: 'either' },
+  {func: 'displace', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.displace', type: 'either' },
+  {func: 'overlap', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.overlap', type: 'either' },
+  {func: 'changeAnimation', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label'], params: ['"anim1"'], tipPrefix: spriteMethodPrefix, modeOptionName: '*.changeAnimation' },
+  {func: 'changeImage', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label'], params: ['"img1"'], tipPrefix: spriteMethodPrefix, modeOptionName: '*.changeImage' },
+  {func: 'attractionPoint', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','x','y'], params: ["1", "200", "200"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.attractionPoint' },
+  {func: 'limitSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['max'], params: ["3"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.limitSpeed' },
+  {func: 'setCollider', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['type','x','y','w','h'], params: ['"rectangle"', "0", "0", "20", "20"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setCollider' },
+  {func: 'setVelocity', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['x','y'], params: ["1", "1"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setVelocity' },
   {func: 'sprite.height', category: 'Sprites', modeOptionName: '*.height', type: 'property' },
   {func: 'sprite.width', category: 'Sprites', modeOptionName: '*.width', type: 'property' },
   {func: 'sprite.animation', category: 'Sprites', modeOptionName: '*.animation', type: 'property' },
-  {func: 'sprite.depth', category: 'Sprites', modeOptionName: '*.depth', type: 'property' },
-  {func: 'sprite.friction', category: 'Sprites', modeOptionName: '*.friction', type: 'property' },
-  {func: 'sprite.immovable', category: 'Sprites', modeOptionName: '*.immovable', type: 'property' },
-  {func: 'sprite.life', category: 'Sprites', modeOptionName: '*.life', type: 'property' },
-  {func: 'sprite.mass', category: 'Sprites', modeOptionName: '*.mass', type: 'property' },
-  {func: 'sprite.maxSpeed', category: 'Sprites', modeOptionName: '*.maxSpeed', type: 'property' },
-  {func: 'sprite.position', category: 'Sprites', modeOptionName: '*.position', type: 'property' },
-  {func: 'sprite.position.x', category: 'Sprites', modeOptionName: '*.x', type: 'property' },
-  {func: 'sprite.position.y', category: 'Sprites', modeOptionName: '*.y', type: 'property' },
-  {func: 'sprite.previousPosition', category: 'Sprites', modeOptionName: '*.previousPosition', type: 'property' },
-  {func: 'sprite.previousPosition.x', category: 'Sprites', modeOptionName: '*.x', type: 'property' },
-  {func: 'sprite.previousPosition.y', category: 'Sprites', modeOptionName: '*.y', type: 'property' },
-  {func: 'sprite.removed', category: 'Sprites', modeOptionName: '*.removed', type: 'property' },
-  {func: 'sprite.restitution', category: 'Sprites', modeOptionName: '*.restitution', type: 'property' },
-  {func: 'sprite.rotateToDirection', category: 'Sprites', modeOptionName: '*.rotateToDirection', type: 'property' },
-  {func: 'sprite.rotation', category: 'Sprites', modeOptionName: '*.rotation', type: 'property' },
-  {func: 'sprite.rotationSpeed', category: 'Sprites', modeOptionName: '*.rotationSpeed', type: 'property' },
-  {func: 'sprite.scale', category: 'Sprites', modeOptionName: '*.scale', type: 'property' },
-  {func: 'sprite.shapeColor', category: 'Sprites', modeOptionName: '*.shapeColor', type: 'property' },
-  {func: 'sprite.touching', category: 'Sprites', modeOptionName: '*.touching', type: 'property' },
-  {func: 'sprite.velocity', category: 'Sprites', modeOptionName: '*.velocity', type: 'property' },
-  {func: 'sprite.velocity.x', category: 'Sprites', modeOptionName: '*.x', type: 'property' },
-  {func: 'sprite.velocity.y', category: 'Sprites', modeOptionName: '*.y', type: 'property' },
-  {func: 'sprite.visible', category: 'Sprites', modeOptionName: '*.visible', type: 'property' },
+  {func: 'depth', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.depth', type: 'property' },
+  {func: 'friction', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.friction', type: 'property' },
+  {func: 'immovable', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.immovable', type: 'property' },
+  {func: 'life', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.life', type: 'property' },
+  {func: 'mass', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.mass', type: 'property' },
+  {func: 'maxSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.maxSpeed', type: 'property' },
+  {func: 'position', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.position', type: 'property' },
+  {func: 'sprite.position.x', category: 'Sprites', modeOptionName: 'sprite_position_x', type: 'property', noAutocomplete: true },
+  {func: 'sprite.position.y', category: 'Sprites', modeOptionName: 'sprite_position_y', type: 'property', noAutocomplete: true },
+  {func: 'previousPosition', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.previousPosition', type: 'property' },
+  {func: 'sprite.previousPosition.x', category: 'Sprites', modeOptionName: 'sprite_previousPosition_x', type: 'property', noAutocomplete: true },
+  {func: 'sprite.previousPosition.y', category: 'Sprites', modeOptionName: 'sprite_previousPosition_y', type: 'property', noAutocomplete: true },
+  {func: 'removed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.removed', type: 'readonlyproperty' },
+  {func: 'restitution', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.restitution', type: 'property' },
+  {func: 'rotateToDirection', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotateToDirection', type: 'property' },
+  {func: 'rotation', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotation', type: 'property' },
+  {func: 'rotationSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotationSpeed', type: 'property' },
+  {func: 'scale', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.scale', type: 'property' },
+  {func: 'shapeColor', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.shapeColor', type: 'property' },
+  {func: 'touching', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.touching', type: 'readonlyproperty' },
+  {func: 'velocity', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.velocity', type: 'property' },
+  {func: 'sprite.velocity.x', category: 'Sprites', modeOptionName: 'sprite_velocity_x', type: 'property', noAutocomplete: true },
+  {func: 'sprite.velocity.y', category: 'Sprites', modeOptionName: 'sprite_velocity_y', type: 'property', noAutocomplete: true },
+  {func: 'visible', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.visible', type: 'property' },
 /* TODO: decide whether to expose these Sprite properties:
 camera
 collider - USEFUL? (marshal AABB and CircleCollider)
@@ -132,23 +140,23 @@ update() - USEFUL?
 
   // Animations
   {func: 'loadAnimation', category: 'Animations', paletteParams: ['url1','url2'], params: ['"http://p5play.molleindustria.org/examples/assets/ghost_standing0001.png"', '"http://p5play.molleindustria.org/examples/assets/ghost_standing0002.png"'], type: 'either' },
-  {func: 'var_loadAnimation', category: 'Animations', blockPrefix: 'var anim = loadAnimation', paletteParams: ['url1','url2'], params: ['"http://p5play.molleindustria.org/examples/assets/ghost_standing0001.png"', '"http://p5play.molleindustria.org/examples/assets/ghost_standing0002.png"'], noAutocomplete: true },
+  {func: 'var anim = loadAnimation', category: 'Animations', paletteParams: ['url1','url2'], params: ['"http://p5play.molleindustria.org/examples/assets/ghost_standing0001.png"', '"http://p5play.molleindustria.org/examples/assets/ghost_standing0002.png"'], noAutocomplete: true, docFunc: 'loadAnimation' },
   {func: 'animation', category: 'Animations', paletteParams: ['animation','x','y'], params: ["anim", "50", "50"] },
-  {func: 'anim.changeFrame', category: 'Animations', paletteParams: ['frame'], params: ["0"], modeOptionName: '*.changeFrame' },
-  {func: 'anim.nextFrame', category: 'Animations', modeOptionName: '*.nextFrame' },
-  {func: 'anim.previousFrame', category: 'Animations', modeOptionName: '*.previousFrame' },
-  {func: 'anim.clone', category: 'Animations', modeOptionName: '*.clone', type: 'value' },
-  {func: 'anim.getFrame', category: 'Animations', modeOptionName: '*.getFrame', type: 'value' },
-  {func: 'anim.getLastFrame', category: 'Animations', modeOptionName: '*.getLastFrame', type: 'value' },
-  {func: 'anim.goToFrame', category: 'Animations', paletteParams: ['frame'], params: ["1"], modeOptionName: '*.goToFrame' },
-  {func: 'anim.play', category: 'Animations', modeOptionName: '*.play' },
-  {func: 'anim.rewind', category: 'Animations', modeOptionName: '*.rewind' },
-  {func: 'anim.stop', category: 'Animations', modeOptionName: '*.stop' },
-  {func: 'anim.frameChanged', category: 'Animations', modeOptionName: '*.frameChanged', type: 'property' },
-  {func: 'anim.frameDelay', category: 'Animations', modeOptionName: '*.frameDelay', type: 'property' },
-  {func: 'anim.images', category: 'Animations', modeOptionName: '*.images', type: 'property' },
-  {func: 'anim.looping', category: 'Animations', modeOptionName: '*.looping', type: 'property' },
-  {func: 'anim.playing', category: 'Animations', modeOptionName: '*.playing', type: 'property' },
+  {func: 'changeFrame', blockPrefix: animBlockPrefix, category: 'Animations', paletteParams: ['frame'], params: ["0"], tipPrefix: animMethodPrefix, modeOptionName: '*.changeFrame' },
+  {func: 'nextFrame', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.nextFrame' },
+  {func: 'previousFrame', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.previousFrame' },
+  {func: 'clone', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.clone', type: 'value' },
+  {func: 'getFrame', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.getFrame', type: 'value' },
+  {func: 'getLastFrame', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.getLastFrame', type: 'value' },
+  {func: 'goToFrame', blockPrefix: animBlockPrefix, category: 'Animations', paletteParams: ['frame'], params: ["1"], tipPrefix: animMethodPrefix, modeOptionName: '*.goToFrame' },
+  {func: 'play', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.play' },
+  {func: 'rewind', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.rewind' },
+  {func: 'stop', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.stop' },
+  {func: 'frameChanged', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.frameChanged', type: 'readonlyproperty' },
+  {func: 'frameDelay', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.frameDelay', type: 'property' },
+  {func: 'images', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.images', type: 'property' },
+  {func: 'looping', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.looping', type: 'property' },
+  {func: 'playing', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.playing', type: 'readonlyproperty' },
   {func: 'anim.visible', category: 'Animations', modeOptionName: '*.visible', type: 'property' },
 /* TODO: decide whether to expose these Animation methods:
 draw(xy)
@@ -159,18 +167,19 @@ getWidth()
 */
 
   // Groups
-  {func: 'Group', blockPrefix: 'var group = new Group', category: 'Groups', type: 'either' },
-  {func: 'group.add', category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], modeOptionName: '*.add' },
-  {func: 'group.remove', category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], modeOptionName: '*.remove' },
-  {func: 'group.clear', category: 'Groups', modeOptionName: '*.clear' },
-  {func: 'group.contains', category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], modeOptionName: '*.contains', type: 'value' },
-  {func: 'group.get', category: 'Groups', paletteParams: ['i'], params: ["0"], modeOptionName: '*.get', type: 'value' },
-  {func: 'group.bounce', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_bounce' }, /* avoid modeOptionName conflict */
-  {func: 'group.collide', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_bounce' }, /* avoid modeOptionName conflict */
-  {func: 'group.displace', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_bounce' }, /* avoid modeOptionName conflict */
-  {func: 'group.overlap', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_bounce' }, /* avoid modeOptionName conflict */
-  {func: 'group.maxDepth', category: 'Groups', modeOptionName: '*.maxDepth', type: 'value' },
-  {func: 'group.minDepth', category: 'Groups', modeOptionName: '*.minDepth', type: 'value' },
+  {func: 'Group', category: 'Groups', type: 'either' },
+  {func: 'var group = new Group', category: 'Groups', type: 'either', docFunc: 'Group' },
+  {func: 'add', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], tipPrefix: groupMethodPrefix, modeOptionName: '*.add' },
+  {func: 'group.remove', category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], modeOptionName: 'group_remove', noAutocomplete: true }, /* avoid sprite.remove conflict */
+  {func: 'clear', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.clear' },
+  {func: 'contains', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], tipPrefix: groupMethodPrefix, modeOptionName: '*.contains', type: 'value' },
+  {func: 'get', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['i'], params: ["0"], tipPrefix: groupMethodPrefix, modeOptionName: '*.get', type: 'value' },
+  {func: 'group.bounce', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_bounce', noAutocomplete: true }, /* avoid sprite.bounce conflict */
+  {func: 'group.collide', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_collide', noAutocomplete: true }, /* avoid sprite.collide conflict */
+  {func: 'group.displace', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_displace', noAutocomplete: true }, /* avoid sprite.displace conflict */
+  {func: 'group.overlap', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_overlap', noAutocomplete: true }, /* avoid sprite.overlap conflict */
+  {func: 'maxDepth', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.maxDepth', type: 'value' },
+  {func: 'minDepth', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.minDepth', type: 'value' },
 
 /* TODO: decide whether to expose these Group methods:
 draw() - USEFUL?
@@ -230,6 +239,10 @@ draw() - USEFUL?
   {func: 'round', category: 'Math', paletteParams: ['num'], params: ["0.9"], type: 'value' },
   {func: 'sq', category: 'Math', paletteParams: ['num'], params: ["2"], type: 'value' },
   {func: 'sqrt', category: 'Math', paletteParams: ['num'], params: ["9"], type: 'value' },
+
+  // Vector
+  {func: 'x', category: 'Vector', modeOptionName: '*.x', type: 'property' },
+  {func: 'y', category: 'Vector', modeOptionName: '*.y', type: 'property' },
 
   // Advanced
 ];

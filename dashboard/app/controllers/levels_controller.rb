@@ -41,6 +41,7 @@ class LevelsController < ApplicationController
     authorize! :edit, @level
     type = params[:type]
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
+
     blocks_xml = Blockly.convert_category_to_toolbox(blocks_xml) if type == 'toolbox_blocks'
     level_view_options(
       start_blocks: blocks_xml,
@@ -228,6 +229,7 @@ class LevelsController < ApplicationController
   def level_params
     permitted_params = [
       :name,
+      :notes,
       :type,
       :level_num,
       :user,

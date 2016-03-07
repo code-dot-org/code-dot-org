@@ -12,7 +12,7 @@ var Lightbulb = require('./Lightbulb.jsx');
  * Closing the instructions and re-opening them will reset this
  * Component, allowing the button to be pressed once more.
  */
-module.exports = React.createClass({
+var HintsDisplay = React.createClass({
 
   propTypes: {
     hintReviewTitle: React.PropTypes.string.isRequired,
@@ -49,7 +49,7 @@ module.exports = React.createClass({
         </h1>
         <ol>
           {hintsToShow.map(function (hint) {
-            return <Hint key={hint.hintId} hint={hint} ref={hint.hintId} />;
+            return <Hint hint={hint} key={hint.hintId} ref={hint.hintId} />;
           })}
         </ol>
       </div>);
@@ -73,3 +73,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+module.exports = HintsDisplay;

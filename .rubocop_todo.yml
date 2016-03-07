@@ -55,10 +55,6 @@ Lint/UnderscorePrefixedVariableName:
 Lint/UnusedMethodArgument:
   Enabled: false
 
-# Offense count: 3
-Lint/Void:
-  Enabled: false
-
 # Offense count: 17
 # Cop supports --auto-correct.
 Performance/Casecmp:
@@ -275,10 +271,6 @@ Style/GlobalVars:
 # Configuration parameters: EnforcedStyle, SupportedStyles, UseHashRocketsWithSymbolValues.
 # SupportedStyles: ruby19, ruby19_no_mixed_keys, hash_rockets
 Style/HashSyntax:
-  Enabled: false
-
-# Offense count: 2
-Style/IdenticalConditionalBranches:
   Enabled: false
 
 # Offense count: 64
@@ -512,10 +504,6 @@ Style/StringLiterals:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: single_quotes, double_quotes
 Style/StringLiteralsInInterpolation:
-  Enabled: false
-
-# Offense count: 1
-Style/StructInheritance:
   Enabled: false
 
 # Offense count: 12
