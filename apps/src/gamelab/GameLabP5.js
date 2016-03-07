@@ -190,7 +190,15 @@ GameLabP5.prototype.init = function (options) {
 GameLabP5.prototype.resetExecution = function () {
 
   if (this.p5) {
-    this.p5.remove();
+    // TODO (bbuchanan): Remove this hack to swallow the p5 exception once we
+    // update the p5 library so it has the fix.
+    try {
+      this.p5.remove();
+    } catch (e) {
+      if (!(/Failed to execute 'removeEventListener'/.test(e.message))) {
+        throw e;
+      }
+    }
     this.p5 = null;
     this.p5decrementPreload = null;
 
