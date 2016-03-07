@@ -147,15 +147,6 @@ module.exports = React.createClass({
       );
     }
 
-    var title = this.props.assetChosen ?
-        <p className="dialog-title">Choose Assets</p> :
-        <p className="dialog-title">Manage Assets</p>;
-
-    return (
-      <div className="modal-content" style={{margin: "0 0 0 -10px"}}>
-        {title}
-        {assetList}
-      </div>
-    );
+    return assetList;
   }
 });
