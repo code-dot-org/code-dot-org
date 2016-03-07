@@ -1,5 +1,6 @@
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
+var consoleApi = require('../consoleApi');
 var showAssetManager = require('../assetManagement/show');
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 
@@ -66,6 +67,7 @@ module.exports.blocks = [
   {func: 'camera.position.x', category: 'Game Lab', type: 'property' },
   {func: 'camera.position.y', category: 'Game Lab', type: 'property' },
   {func: 'camera.zoom', category: 'Game Lab', type: 'property' },
+  {func: 'console.log', parent: consoleApi, category: 'Game Lab', paletteParams: ['message'], params: ['"message"'] },
 
   // Sprites
   {func: 'createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either' },
