@@ -78,7 +78,7 @@ class AdminReportsController < ApplicationController
   def funometer_by_script
     SeamlessDatabasePool.use_persistent_read_connection do
       @script_id = params[:script_id]
-      @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+      @script_name = Script.find(@script_id)[:name]
 
       # Compute the global funometer percentage for the script.
       ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id)
@@ -105,12 +105,37 @@ class AdminReportsController < ApplicationController
     end
   end
 
+  def funometer_by_stage
+    SeamlessDatabasePool.use_persistent_read_connection do
+      stage = Stage.find(params[:stage_id])
+      @stage_name = stage[:name]
+      @script_id = stage[:script_id]
+      @level_ids = ScriptLevel.where('stage_id = ?', params[:stage_id]).pluck(:level_id)
+
+      # Compute the global funometer percentage for the stage.
+      ratings = PuzzleRating.where(level_id: @level_ids)
+      @overall_percentage = get_percentage_positive(ratings)
+
+      # Generate the funometer percentages for the stage, by day.
+      @ratings_by_day = get_ratings_by_day(ratings)
+
+      # Generate the funometer percentages for the stage, by level.
+      ratings_by_level = ratings.joins(:level).group(:level_id)
+      @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
+      @ratings_by_level = ratings_by_level.
+                          select('level_id',
+                                 'name',
+                                 '100.0 * SUM(rating) / COUNT(rating) AS percentage',
+                                 'COUNT(rating) AS cnt')
+    end
+  end
+
   def funometer_by_script_level
     SeamlessDatabasePool.use_persistent_read_connection do
       @script_id = params[:script_id]
-      @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+      @script_name = Script.find(@script_id)[:name]
       @level_id = params[:level_id]
-      @level_name = Level.where('id = ?', @level_id).pluck(:name)[0]
+      @level_name = Level.find(@level_id)[:name]
 
       ratings = PuzzleRating.
                 where('puzzle_ratings.script_id = ?', @script_id).
@@ -328,26 +353,27 @@ class AdminReportsController < ApplicationController
   def retention
     require 'cdo/properties'
     SeamlessDatabasePool.use_persistent_read_connection do
-      @scripts = params[:scripts_ids].present? ?
-        params[:scripts_ids].split(',').map(&:to_i) :
-        [1, 17, 18, 19, 23]  # Default to the CSF scripts.
-      # Get the cached retention_stats from the DB, trimming those stats to only the requested
+      @all_scripts_names_ids = Script.order(:id).pluck(:name, :id).to_h
+      selected_scripts_names = params[:selected_scripts_names] ||
+        ["20-hour", "course1", "course2", "course3", "course4"]
+      @selected_scripts_names_ids = @all_scripts_names_ids.select{|name, _id| selected_scripts_names.include? name}
+
+      # Get the cached retention_stats from the DB, trimming those stats to only the selected
       # scripts, exiting early if the stats are blank.
       raw_retention_stats = Properties.get(:retention_stats)
       if raw_retention_stats.blank?
-        render(layout: false, text: 'Properties.get(:retention_stats) not found. Please contact '\
-          'an engineer.') && return
+        render(text: 'Properties.get(:retention_stats) not found. Please contact an engineer.') &&
+          return
       end
+      # Remove the stage_level_counts data, which is not used in this view.
+      raw_retention_stats.delete('stage_level_counts')
+
       @retention_stats = {}
       raw_retention_stats.each_pair do |key, key_data|
-        @retention_stats[key] = key_data.select{|script_id, _script_data| @scripts.include? script_id.to_i}
+        @retention_stats[key] = key_data.select do |script_id, _script_data|
+          @selected_scripts_names_ids.values.include? script_id.to_i
+        end
       end
-      if @retention_stats['script_starts'].empty?
-        render(layout: false, text: 'No data could be found for the specified scripts. Please '\
-          'check the IDs, contacting an engineer as necessary.') && return
-      end
-      # Remove the stage_level_counts data, which are not used in this view.
-      @retention_stats.delete('stage_level_counts')
       # Transform the count stats into row format to facilitate being added to charts and tables.
       ['script_level_counts', 'script_stage_counts'].each do |key|
         @retention_stats[key] = build_row_arrays(@retention_stats[key])
@@ -357,24 +383,19 @@ class AdminReportsController < ApplicationController
 
   def retention_stages
     require 'cdo/properties'
-
-    # Grab the requested stage IDs from the stage_ids parameter.
-    if !params[:stage_ids].present?
-      render(text: 'Please specify stage IDs in the stage_ids parameter, e.g., '\
-        '/admin/retention/stages/stage_ids=XXX,YYY,ZZZ.') && return
-    end
-    @stages = params[:stage_ids].split(',').map(&:to_i)
-
     SeamlessDatabasePool.use_persistent_read_connection do
+      @stage_ids = params[:stage_ids].present? ?
+        params[:stage_ids].split(',').map(&:to_i) :
+        [2, 6, 25, 105, 107, 108]  # Default to popular HOC stages.
       # Grab the data from the database, keeping data only for the requested stages.
       raw_retention_stats = Properties.get(:retention_stats)
       if raw_retention_stats.blank? || !raw_retention_stats.key?('stage_level_counts')
-        render(text: "Properties.get(:retention_stats) or "\
+        render(text: 'Properties.get(:retention_stats) or '\
           "Properties.get(:retention_stats)['stage_level_counts'] not found. Please contact an "\
-          "engineer.") && return
+          'engineer.') && return
       end
       raw_retention_stats = raw_retention_stats['stage_level_counts'].
-        select{|stage_id, _stage_data| @stages.include? stage_id.to_i}
+        select{|stage_id, _stage_data| @stage_ids.include? stage_id.to_i}
       if raw_retention_stats.blank?
         render(text: 'No data could be found for the specified stages. Please check the IDs, '\
           'contacting an engineer as necessary.') && return

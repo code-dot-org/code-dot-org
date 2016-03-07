@@ -55,5 +55,29 @@
         </block>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">3</title>
+          <statement name="DO">
+            <block type="maze_moveForward"/>
+          </statement>
+          <next>
+            <block type="bee_whileNectarAmount" inline="true">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <value name="ARG2">
+                <block type="math_number">
+                  <title name="NUM">0</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="maze_nectar"/>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

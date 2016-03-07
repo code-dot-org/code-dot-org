@@ -9,8 +9,7 @@
           = link_to 'edit', edit_level_path(@level)
           - if @level.is_a? Blockly
             %ul
-              - if @level.is_a? Artist or @level.is_a? Calc or @level.is_a? Eval
-                %li= link_to 'solution', level_edit_blocks_path(@level, :solution_blocks)
+              %li= link_to 'solution', level_edit_blocks_path(@level, :solution_blocks)
               %li= link_to 'toolbox', level_edit_blocks_path(@level, :toolbox_blocks)
               %li= link_to "start (#{Blockly.count_xml_blocks(@level.start_blocks)})", level_edit_blocks_path(@level, :start_blocks)
               %li= link_to "required (#{Blockly.count_xml_blocks(@level.required_blocks)})", level_edit_blocks_path(@level, :required_blocks)
