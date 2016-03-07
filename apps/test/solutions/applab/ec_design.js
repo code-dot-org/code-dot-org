@@ -523,8 +523,6 @@ module.exports = {
         assert.equal($('#designModeViz .textArea').first().prop('innerHTML'),
           'I said hey-hey-hey-hey<div>What\'s going on?</div>');
 
-
-
         Applab.onPuzzleComplete();
       },
       expected: {
@@ -583,6 +581,45 @@ module.exports = {
         var deleteButton = $('#designWorkspaceBody').find('button:contains(Delete)')[0];
         ReactTestUtils.Simulate.click(deleteButton);
         assert.equal(designModeViz.find('img').length, 0);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "exercise duplicate button on elements",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // Switch to design mode
+        var designModeButton = $('#designModeButton');
+        designModeButton.click();
+
+        // Add an image
+        testUtils.dragToVisualization('IMAGE', 0, 0);
+        var designModeViz = $('#designModeViz');
+        var newImage = designModeViz.find('img');
+        assert.equal(newImage.length, 1);
+
+        // Duplicate the image
+        var imageDuplicateButton = $('#designWorkspaceBody').find('button:contains(Duplicate)')[0];
+        ReactTestUtils.Simulate.click(imageDuplicateButton);
+        assert.equal(designModeViz.find('img').length, 2);
+
+        // Add a chart
+        testUtils.dragToVisualization('CHART', 0, 0);
+        var newChart = designModeViz.find('.chart');
+        assert.equal(newChart.length, 1);
+
+        // Duplicate the chart
+        var chartDuplicateButton = $('#designWorkspaceBody').find('button:contains(Duplicate)')[0];
+        ReactTestUtils.Simulate.click(chartDuplicateButton);
+        assert.equal(designModeViz.find('.chart').length, 2);
 
         Applab.onPuzzleComplete();
       },
