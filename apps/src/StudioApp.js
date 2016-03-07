@@ -977,10 +977,10 @@ StudioApp.prototype.onReportComplete = function (response) {
 };
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
-  var markdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+  var isMarkdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
 
   var instructionsDiv = document.createElement('div');
-  instructionsDiv.className = markdownMode ?
+  instructionsDiv.className = isMarkdownMode ?
     'markdown-instructions-container' :
     "instructions-container";
 
@@ -992,7 +992,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     puzzle_number: level.puzzle_number
   });
 
-  if (markdownMode) {
+  if (isMarkdownMode) {
     var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
     renderedMarkdown = marked(markdownWithImages);
     headerElement = document.createElement('h1');
@@ -1063,7 +1063,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
-    markdownMode: markdownMode,
+    markdownMode: isMarkdownMode,
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
