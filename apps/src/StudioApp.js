@@ -1028,7 +1028,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
 
   var buttons = document.createElement('div');
   instructionsDiv.appendChild(buttons);
-  React.render(React.createElement(DialogButtons, {
+  ReactDOM.render(React.createElement(DialogButtons, {
     ok: true
   }), buttons);
 
