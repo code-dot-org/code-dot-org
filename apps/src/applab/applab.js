@@ -45,7 +45,7 @@ var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
 
 var applabConstants = require('./constants');
-var consoleApi = require('./consoleApi');
+var consoleApi = require('../consoleApi');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
