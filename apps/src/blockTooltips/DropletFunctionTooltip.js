@@ -60,6 +60,9 @@ var DropletFunctionTooltip = function (appMsg, definition) {
   /** @type {string} */
   this.tipPrefix = definition.tipPrefix;
 
+  /** @type {?string} */
+  this.customDocURL = definition.customDocURL;
+
   var description = this.getLocalization(this.descriptionKey());
   if (description) {
     this.description = description();
@@ -149,6 +152,9 @@ DropletFunctionTooltip.prototype.i18nPrefix = function () {
  * @returns {string} URL for full doc about this function
  */
 DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
+  if (this.customDocURL) {
+    return this.customDocURL;
+  }
   return '//' + utils.getPegasusHost() + '/applab/docs/' + this.functionName + '?embedded';
 };
 
