@@ -34,11 +34,7 @@ class AdminReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :admin_stats
   generate_admin_only_tests_for :debug
   generate_admin_only_tests_for :diversity_survey
-  generate_admin_only_tests_for :funometer
   generate_admin_only_tests_for :level_answers
-  generate_admin_only_tests_for :funometer_by_script, script_id: 1
-  generate_admin_only_tests_for :funometer_by_stage, stage_id: 1
-  generate_admin_only_tests_for :funometer_by_script_level, script_id: 1, level_id: 1
   generate_admin_only_tests_for :hoc_signups
   generate_admin_only_tests_for :retention
   generate_admin_only_tests_for :retention_stages
