@@ -36,36 +36,36 @@ function chooseAsset(typeFilter, callback) {
 
 module.exports.blocks = [
   // Game Lab
-  {func: 'loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], type: 'either', dropdown: { 0: function () { return getAssetDropdown('image'); } }, assetTooltip: { 0: chooseAsset.bind(null, 'image') } },
-  {func: 'var img = loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], noAutocomplete: true },
-  {func: 'image', category: 'Game Lab', paletteParams: ['image','srcX','srcY','srcW','srcH','x','y','w','h'], params: ["img", "0", "0", "img.width", "img.height", "0", "0", "img.width", "img.height"] },
-  {func: 'fill', category: 'Game Lab', paletteParams: ['color'], params: ["'yellow'"] },
-  {func: 'noFill', category: 'Game Lab' },
-  {func: 'stroke', category: 'Game Lab', paletteParams: ['color'], params: ["'blue'"] },
-  {func: 'noStroke', category: 'Game Lab' },
-  {func: 'arc', category: 'Game Lab', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "HALF_PI"] },
-  {func: 'ellipse', category: 'Game Lab', paletteParams: ['x','y','w','h'], params: ["200", "200", "400", "400"] },
-  {func: 'line', category: 'Game Lab', paletteParams: ['x1','y1','x2','y2'], params: ["0", "0", "400", "400"] },
-  {func: 'point', category: 'Game Lab', paletteParams: ['x','y'], params: ["200", "200"] },
-  {func: 'rect', category: 'Game Lab', paletteParams: ['x','y','w','h'], params: ["100", "100", "200", "200"] },
-  {func: 'triangle', category: 'Game Lab', paletteParams: ['x1','y1','x2','y2','x3','y3'], params: ["200", "0", "0", "400", "400", "400"] },
-  {func: 'text', category: 'Game Lab', paletteParams: ['str','x','y','w','h'], params: ["'text'", "0", "0", "400", "100"] },
-  {func: 'textAlign', category: 'Game Lab', paletteParams: ['horiz','vert'], params: ["CENTER", "TOP"] },
-  {func: 'textSize', category: 'Game Lab', paletteParams: ['pixels'], params: ["12"] },
-  {func: 'drawSprites', category: 'Game Lab' },
-  {func: 'allSprites', category: 'Game Lab', block: 'allSprites', type: 'readonlyproperty' },
-  {func: 'background', category: 'Game Lab', paletteParams: ['color'], params: ["'black'"] },
-  {func: 'width', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'height', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'camera', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'camera.on', category: 'Game Lab' },
-  {func: 'camera.off', category: 'Game Lab' },
-  {func: 'camera.active', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'camera.mouseX', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'camera.mouseY', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'camera.position.x', category: 'Game Lab', type: 'property' },
-  {func: 'camera.position.y', category: 'Game Lab', type: 'property' },
-  {func: 'camera.zoom', category: 'Game Lab', type: 'property' },
+  {func: 'loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], type: 'either', dropdown: { 0: function () { return getAssetDropdown('image'); } }, assetTooltip: { 0: chooseAsset.bind(null, 'image') }, customDocURL: "http://p5js.org/reference/#/p5/loadImage" },
+  {func: 'var img = loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/loadImage" },
+  {func: 'image', category: 'Game Lab', paletteParams: ['image','srcX','srcY','srcW','srcH','x','y','w','h'], params: ["img", "0", "0", "img.width", "img.height", "0", "0", "img.width", "img.height"], customDocURL: "http://p5js.org/reference/#/p5/image" },
+  {func: 'fill', category: 'Game Lab', paletteParams: ['color'], params: ["'yellow'"], customDocURL: "http://p5js.org/reference/#/p5/fill" },
+  {func: 'noFill', category: 'Game Lab', customDocURL: "http://p5js.org/reference/#/p5/noFill" },
+  {func: 'stroke', category: 'Game Lab', paletteParams: ['color'], params: ["'blue'"], customDocURL: "http://p5js.org/reference/#/p5/stroke" },
+  {func: 'noStroke', category: 'Game Lab', customDocURL: "http://p5js.org/reference/#/p5/noStroke" },
+  {func: 'arc', category: 'Game Lab', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "HALF_PI"], customDocURL: "http://p5js.org/reference/#/p5/arc" },
+  {func: 'ellipse', category: 'Game Lab', paletteParams: ['x','y','w','h'], params: ["200", "200", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/ellipse" },
+  {func: 'line', category: 'Game Lab', paletteParams: ['x1','y1','x2','y2'], params: ["0", "0", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/line" },
+  {func: 'point', category: 'Game Lab', paletteParams: ['x','y'], params: ["200", "200"], customDocURL: "http://p5js.org/reference/#/p5/point" },
+  {func: 'rect', category: 'Game Lab', paletteParams: ['x','y','w','h'], params: ["100", "100", "200", "200"], customDocURL: "http://p5js.org/reference/#/p5/rect" },
+  {func: 'triangle', category: 'Game Lab', paletteParams: ['x1','y1','x2','y2','x3','y3'], params: ["200", "0", "0", "400", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/triangle" },
+  {func: 'text', category: 'Game Lab', paletteParams: ['str','x','y','w','h'], params: ["'text'", "0", "0", "400", "100"], customDocURL: "http://p5js.org/reference/#/p5/text" },
+  {func: 'textAlign', category: 'Game Lab', paletteParams: ['horiz','vert'], params: ["CENTER", "TOP"], customDocURL: "http://p5js.org/reference/#/p5/textAlign" },
+  {func: 'textSize', category: 'Game Lab', paletteParams: ['pixels'], params: ["12"], customDocURL: "http://p5js.org/reference/#/p5/textSize" },
+  {func: 'drawSprites', category: 'Game Lab', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-updateSprites" },
+  {func: 'allSprites', category: 'Game Lab', block: 'allSprites', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#prop-allSprites" },
+  {func: 'background', category: 'Game Lab', paletteParams: ['color'], params: ["'black'"], customDocURL: "http://p5js.org/reference/#/p5/background" },
+  {func: 'width', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5js.org/reference/#/p5/width" },
+  {func: 'height', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5js.org/reference/#/p5/height" },
+  {func: 'camera', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html" },
+  {func: 'camera.on', category: 'Game Lab', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#method-on" },
+  {func: 'camera.off', category: 'Game Lab', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#method-off" },
+  {func: 'camera.active', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-active" },
+  {func: 'camera.mouseX', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-mouseX" },
+  {func: 'camera.mouseY', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-mouseY" },
+  {func: 'camera.position.x', category: 'Game Lab', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-position" },
+  {func: 'camera.position.y', category: 'Game Lab', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-position" },
+  {func: 'camera.zoom', category: 'Game Lab', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-zoom" },
 
   // Sprites
   {func: 'createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either' },
@@ -307,3 +307,9 @@ module.exports.additionalPredefValues = [
   'CURVE', '_DEFAULT_STROKE', '_DEFAULT_FILL'
 ];
 module.exports.showParamDropdowns = true;
+
+/*
+ * Set the showExamplesLink config value so that the droplet tooltips will show
+ * an 'Examples' link that opens documentation in a lightbox:
+ */
+module.exports.showExamplesLink = true;
