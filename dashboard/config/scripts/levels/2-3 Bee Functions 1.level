@@ -71,5 +71,37 @@
         </block>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="procedures_callnoreturn">
+                      <mutation name="get 2 nectar"/>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">get 2 nectar</title>
+          <statement name="STACK">
+            <block type="maze_nectar" deletable="false">
+              <next>
+                <block type="maze_nectar" deletable="false"/>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

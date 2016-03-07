@@ -121,6 +121,11 @@ For those of you implementing the CS in Algebra curriculum, you can continue to 
 
 Note: you will not receive payment for any CS in Algebra Phase 3 online work you complete. 
 
+**Deadline for Online Coursework is June 30th.**<br/>
+<br/>
+Phase 3 Part 3: Refection - This final online course will launch in early May on your Code Studio Teacher Dashboard. If you need support while finishing your work or teaching the course, check out the CS in Algebra forum [here](http://forum.code.org/c/cs-in-algebra).
+
+
 [**Back to the top**](#top)
 
 <a id="science"></a>
