@@ -21,6 +21,14 @@ class LevelGroupDSL < BaseDSL
     @hash[:levels] << name
   end
 
+  def submittable(text)
+    @hash[:submittable] = text
+  end
+
+  def per_page(value)
+    @hash[:per_page] = value
+  end
+
   def i18n_strings
     @i18n_strings['title'] = @title if @title
     @i18n_strings['description_short'] = @description_short if @description_short

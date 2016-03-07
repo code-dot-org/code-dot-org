@@ -29,6 +29,9 @@
         %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
           =t('unsubmit')
 
+    %a.btn.btn-large.btn-primary.nextPageButton
+      =t('nextPage')
+
     - if data['height'] == 'auto'
       - height = 'auto'
     - else
@@ -78,6 +81,7 @@
 
   $(document).ready(function() {
     window["multi_#{index}"] = new Multi(
+      #{page},
       "multi_#{index}",
       #{level.id},
       #{standalone},
