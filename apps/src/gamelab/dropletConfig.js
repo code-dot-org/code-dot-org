@@ -1,5 +1,6 @@
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
+var consoleApi = require('../consoleApi');
 var showAssetManager = require('../assetManagement/show');
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 
@@ -66,6 +67,7 @@ module.exports.blocks = [
   {func: 'camera.position.x', category: 'Game Lab', type: 'property' },
   {func: 'camera.position.y', category: 'Game Lab', type: 'property' },
   {func: 'camera.zoom', category: 'Game Lab', type: 'property' },
+  {func: 'console.log', parent: consoleApi, category: 'Game Lab', paletteParams: ['message'], params: ['"message"'] },
   {func: 'playSound', parent: api, category: 'Game Lab', paletteParams: ['url'], params: ['"https://studio.code.org/blockly/media/example.mp3"'], dropdown: { 0: function () { return getAssetDropdown('audio'); } }, 'assetTooltip': { 0: chooseAsset.bind(null, 'audio') } },
 
   // Sprites

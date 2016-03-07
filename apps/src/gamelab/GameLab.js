@@ -6,6 +6,7 @@ var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
 var apiJavascript = require('./apiJavascript');
+var consoleApi = require('../consoleApi');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var utils = require('../utils');
@@ -61,6 +62,7 @@ var GameLab = function () {
 
   dropletConfig.injectGameLab(this);
 
+  consoleApi.setLogMethod(this.log.bind(this));
   errorHandler.setLogMethod(this.log.bind(this));
 };
 
