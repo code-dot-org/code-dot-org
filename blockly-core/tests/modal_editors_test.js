@@ -134,7 +134,8 @@ function test_initializeFunctionEditor() {
   assertEquals(false, definitionBlock.shouldBeGrayedOut());
   assertEquals(false, definitionBlock.isDeletable());
   assertEquals(false, definitionBlock.isEditable());
-  assertNull(Blockly.functionEditor.deleteButton_);
+  assertEquals(false,
+      goog.style.isElementShown(Blockly.functionEditor.deleteButton_);
 
   cleanupFunctionEditor();
   goog.dom.removeNode(container);
