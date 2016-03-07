@@ -1,5 +1,5 @@
-var annotationList = require('../acemode/annotationList');
-var logToCloud = require('../logToCloud');
+var annotationList = require('./acemode/annotationList');
+var logToCloud = require('./logToCloud');
 
 var ErrorLevel = {
   WARNING: 'WARNING',
