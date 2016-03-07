@@ -1,4 +1,4 @@
-var errorHandler = require('./errorHandler');
+var errorHandler = require('../errorHandler');
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 
