@@ -22,7 +22,7 @@ var SharingWarnings = module.exports = React.createClass({
       return;
     }
 
-    var ageElement = React.findDOMNode(this.refs.age);
+    var ageElement = ReactDOM.findDOMNode(this.refs.age);
     if (ageElement.value === '') {
       // ignore close if we haven't selected a value from dropdown
       return;
