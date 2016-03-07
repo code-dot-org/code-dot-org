@@ -187,6 +187,7 @@ Dashboard::Application.routes.draw do
   # internal report dashboards
   get '/admin/funometer', to: 'admin_reports#funometer', as: 'funometer'
   get '/admin/funometer/script/:script_id', to: 'admin_reports#funometer_by_script', as: 'funometer_by_script'
+  get '/admin/funometer/stage/:stage_id', to: 'admin_reports#funometer_by_stage', as: 'funometer_by_stage'
   get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_reports#funometer_by_script_level', as: 'funometer_by_script_level'
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
