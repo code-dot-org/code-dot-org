@@ -6,8 +6,8 @@
   "user_id": 5,
   "properties": {
     "skin": "bee",
-    "instructions": "Assessment: Use the repeat block to collect all of the nectar.",
-    "step_mode": 1,
+    "instructions": "Assessment: Collect all of the nectar using the fewest blocks possible.",
+    "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "start_direction": "1",
@@ -28,8 +28,13 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "fast_get_nectar_animation": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
