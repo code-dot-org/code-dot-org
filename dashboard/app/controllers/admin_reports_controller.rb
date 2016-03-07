@@ -78,7 +78,7 @@ class AdminReportsController < ApplicationController
   def funometer_by_script
     SeamlessDatabasePool.use_persistent_read_connection do
       @script_id = params[:script_id]
-      @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+      @script_name = Script.find(@script_id)[:name]
 
       # Compute the global funometer percentage for the script.
       ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id)
@@ -105,12 +105,37 @@ class AdminReportsController < ApplicationController
     end
   end
 
+  def funometer_by_stage
+    SeamlessDatabasePool.use_persistent_read_connection do
+      stage = Stage.find(params[:stage_id])
+      @stage_name = stage[:name]
+      @script_id = stage[:script_id]
+      @level_ids = ScriptLevel.where('stage_id = ?', params[:stage_id]).pluck(:level_id)
+
+      # Compute the global funometer percentage for the stage.
+      ratings = PuzzleRating.where(level_id: @level_ids)
+      @overall_percentage = get_percentage_positive(ratings)
+
+      # Generate the funometer percentages for the stage, by day.
+      @ratings_by_day = get_ratings_by_day(ratings)
+
+      # Generate the funometer percentages for the stage, by level.
+      ratings_by_level = ratings.joins(:level).group(:level_id)
+      @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
+      @ratings_by_level = ratings_by_level.
+                          select('level_id',
+                                 'name',
+                                 '100.0 * SUM(rating) / COUNT(rating) AS percentage',
+                                 'COUNT(rating) AS cnt')
+    end
+  end
+
   def funometer_by_script_level
     SeamlessDatabasePool.use_persistent_read_connection do
       @script_id = params[:script_id]
-      @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+      @script_name = Script.find(@script_id)[:name]
       @level_id = params[:level_id]
-      @level_name = Level.where('id = ?', @level_id).pluck(:name)[0]
+      @level_name = Level.find(@level_id)[:name]
 
       ratings = PuzzleRating.
                 where('puzzle_ratings.script_id = ?', @script_id).
