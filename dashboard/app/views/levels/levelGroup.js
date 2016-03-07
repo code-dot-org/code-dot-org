@@ -1,4 +1,4 @@
-/* global levelCount */
+/* global levelCount, page */
 
 window.getResult = function()
 {
@@ -24,3 +24,11 @@ window.getResult = function()
     "errorType": null
   };
 };
+
+$(document).ready(function() {
+  $(".nextPageButton").click($.proxy(function(event) {
+    var newLocation = window.location.href.replace(/\?page=[0-9]+/, "");
+    newLocation += "?page=" + (page+1);
+    window.location.href = newLocation;
+  }, this));
+});
