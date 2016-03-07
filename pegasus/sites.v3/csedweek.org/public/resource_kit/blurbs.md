@@ -15,9 +15,9 @@ This page contains brief blurbs and other content that you can use to help promo
 - A.P. Computer Science is taught in only 5% of U.S. high schools
 - Fewer than 20 percent of AP Computer Science students are women. Fewer than 10% are Black/African American and Hispanic/Latino.
  
-## Infographic version:
- 
-![image](/images/fit-7000/Code.org_infographic.png)
+<%= view :stats_carousel %>
+
+<br>
 
 ---
 
