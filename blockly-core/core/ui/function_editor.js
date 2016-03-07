@@ -336,7 +336,7 @@ Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
 
 Blockly.FunctionEditor.prototype.forEachParameterGetBlock = function(paramName, callback) {
   this.functionDefinitionBlock.getDescendants().forEach(function(block) {
-    if (block.type == this.parameterBlockType &&
+    if (block.type == 'parameters_get' &&
         Blockly.Names.equals(paramName, block.getTitleValue('VAR'))) {
       callback(block);
     }
