@@ -630,6 +630,36 @@ module.exports = {
     },
 
     {
+      description: "exercise copy paste button on elements",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // Switch to design mode
+        var designModeButton = $('#designModeButton');
+        designModeButton.click();
+
+        // Add an image
+        testUtils.dragToVisualization('IMAGE', 0, 0);
+        var designModeViz = $('#designModeViz');
+        var newImage = designModeViz.find('img');
+        assert.equal(newImage.length, 1);
+
+        // Copy and paste the image
+        newImage.focus();
+        testUtils.createKeyEvent('keydown', designModeViz, 67, true);
+        testUtils.createKeyEvent('keydown', designModeViz, 86, true);
+        assert.equal(designModeViz.find('img').length, 2);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
       description: "images have correct urls",
       editCode: true,
       xml: '',
