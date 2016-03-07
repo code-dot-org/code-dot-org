@@ -81,5 +81,69 @@
         </block>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="procedures_callnoreturn">
+                      <mutation name="move and get nectar"/>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="procedures_callnoreturn">
+                          <mutation name="move and get nectar"/>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">move and get nectar</title>
+          <statement name="STACK">
+            <block type="maze_turn" deletable="false" editable="false">
+              <title name="DIR">turnRight</title>
+              <next>
+                <block type="maze_move" deletable="false" editable="false">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="maze_nectar" deletable="false" editable="false">
+                      <next>
+                        <block type="maze_move" deletable="false" editable="false">
+                          <title name="DIR">moveBackward</title>
+                          <next>
+                            <block type="maze_turn" deletable="false" editable="false">
+                              <title name="DIR">turnLeft</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

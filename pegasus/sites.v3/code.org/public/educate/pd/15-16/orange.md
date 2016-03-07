@@ -171,37 +171,10 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the dates:**
-
-Semester 1: Saturday, October 17, 2015 in Orange County.
-
-
-Semester 2: Saturday, February 20, 2016 in Los Angeles.
-
-
-8:00am - 4:00pm
+In person workshop complete!<br/><br/>
+**Deadline for Online Coursework is June 30th.**<br/>
 <br/>
-Breakfast and lunch will be served.
-
-**February 20th Location**
-
-[Columbia Memorial Space Center<br/> 
-12400 Columbia Way<br/> 
-Downey, CA 90242](https://www.google.com/maps/place/Columbia+Memorial+Space+Center/@33.9198421,-118.1335994,15z/data=!4m2!3m1!1s0x0:0xd6cb5baba4c4a1d2)
-
-**What to bring to Phase 3 quarterly sessions:**
-
-Laptop and Charger
-<br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Phase 3 Part 3: Refection - This final online course will launch in early May on your Code Studio Teacher Dashboard. If you need support while finishing your work or teaching the course, check out the CS in Algebra forum [here](http://forum.code.org/c/cs-in-algebra).
 
 
 [**Back to the top**](#top)
