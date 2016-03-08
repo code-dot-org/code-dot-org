@@ -43,7 +43,11 @@ module.exports = React.createClass({
     }
 
     return (
-      <div>
+      <div style={{
+        height: '330px',
+        overflowY: 'scroll',
+        clear: 'both'
+      }}>
         {list}
       </div>
     );
