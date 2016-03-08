@@ -31,7 +31,7 @@ module.exports = React.createClass({
         <i className={'fa fa-' + this.props.iconId} style={{
           float: 'left',
           fontSize: '24px',
-          width: '24px',
+          width: '32px',
           textAlign: 'center'
         }}/>
         <p style={{float: 'left', margin: '0 5px', fontSize: '13px', color: '#000'}}>{this.highlightSearch(this.props.iconId)}</p>
