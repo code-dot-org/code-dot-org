@@ -110,7 +110,7 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
         return;
       }
       if (typeof block.dropdown[paramInfo.currentParameterIndex] === 'function') {
-        dropdownList = block.dropdown[paramInfo.currentParameterIndex]();
+        dropdownList = block.dropdown[paramInfo.currentParameterIndex](editor);
       } else {
         dropdownList = block.dropdown[paramInfo.currentParameterIndex];
       }

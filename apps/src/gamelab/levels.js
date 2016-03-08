@@ -66,6 +66,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "camera.position.x": null,
     "camera.position.y": null,
     "camera.zoom": null,
+    "playSound": null,
 
     // Sprites
     "var sprite = createSprite": null,

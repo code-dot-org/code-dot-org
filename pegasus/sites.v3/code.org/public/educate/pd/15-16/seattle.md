@@ -174,35 +174,10 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the dates:**
-
-Semester 1: Saturday, September 26, 2015 
-
-Semester 2: Saturday, February 20, 2016 
-
-8:00am - 4:00pm<br/>
-Breakfast and lunch will be served. 
-
-**February 20th Location**
-
-[Courtyard Marriott Southcenter<br/>
-400 Andover Park West<br/>
-Tukwila, WA 98188](https://www.google.com/maps/place/Courtyard+Seattle+Southcenter/@47.45377,-122.253993,15z/data=!4m2!3m1!1s0x0:0x63b7ebb79d35ed90)
-
-Free parking is available.
-
-**What to bring to Phase 3 bi-yearly sessions:**
-
-Laptop and Charger
+In person workshop complete!<br/><br/>
+**Deadline for Online Coursework is June 30th.**<br/>
 <br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Phase 3 Part 3: Refection - This final online course will launch in early May on your Code Studio Teacher Dashboard. If you need support while finishing your work or teaching the course, check out the CS in Algebra forum [here](http://forum.code.org/c/cs-in-algebra).
 
 
 [**Back to the top**](#top)

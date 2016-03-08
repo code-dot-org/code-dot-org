@@ -129,7 +129,8 @@ namespace :build do
   task :dashboard do
     make_blockly_symlink
     make_code_studio_symlink
-    # Make sure we have an up to date package for code studio
+    # Make sure we have an up to date package for apps and code studio
+    ensure_apps_package
     ensure_code_studio_package
 
     Dir.chdir(dashboard_dir) do
@@ -276,6 +277,16 @@ def ensure_code_studio_package
   raise "No valid package found" unless package_found
 end
 
+def ensure_apps_package
+  # never download if we build our own
+  return if CDO.use_my_apps
+
+  packager = S3Packaging.new('apps', apps_dir, dashboard_dir('public/apps-package'))
+  package_found = packager.update_from_s3
+  raise "No valid package found" unless package_found
+end
+
+
 namespace :install do
 
   # Create a symlink in the public directory that points at the appropriate blockly
@@ -350,6 +361,10 @@ namespace :update_package do
 
   task :code_studio do
     ensure_code_studio_package
+  end
+
+  task :apps do
+    ensure_apps_package
   end
 
 end

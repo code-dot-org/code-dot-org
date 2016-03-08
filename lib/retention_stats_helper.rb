@@ -22,7 +22,9 @@ def get_cumulatives(stats)
   cumulatives.each_pair do |key, data_array|
     key_count = cumulatives[key][0]
     data_array.each_with_index do |value, index|
-      cumulatives[key][index] = key_count > 0 ? 100.0 * value / key_count : 0.0
+      percentage = key_count > 0 ? 100.0 * value / key_count : 0.0
+      rounded_percentage = percentage.round(3)
+      cumulatives[key][index] = rounded_percentage
     end
   end
 
