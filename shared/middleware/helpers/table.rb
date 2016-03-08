@@ -56,7 +56,7 @@ def table_to_csv(table_array, column_order: nil)
   csv_string = CSV.generate do |csv|
     csv << unique_columns
     table_array.each do |table_row|
-      csv << unique_columns.collect { |x| table_row[x] }
+      csv << unique_columns.map { |x| table_row[x] }
     end
   end
   return csv_string

@@ -14,7 +14,7 @@ class CohortTest < ActiveSupport::TestCase
     CohortsDistrict.create!(cohort_id: c.id, district_id: d2.id, max_teachers: 10)
 
     c = c.reload
-    assert_equal [6, 10], c.cohorts_districts.collect(&:max_teachers)
+    assert_equal [6, 10], c.cohorts_districts.map(&:max_teachers)
     assert_equal [d1, d2], c.districts
   end
 

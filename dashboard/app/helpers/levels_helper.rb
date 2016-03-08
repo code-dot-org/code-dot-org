@@ -89,7 +89,7 @@ module LevelsHelper
     is_legacy_level = @script_level && @script_level.script.legacy_curriculum?
 
     if is_legacy_level
-      autoplay_video = @level.related_videos.find { |video| !client_state.video_seen?(video.key) }
+      autoplay_video = @level.related_videos.detect { |video| !client_state.video_seen?(video.key) }
     elsif @level.specified_autoplay_video
       unless client_state.video_seen?(@level.specified_autoplay_video.key)
         autoplay_video = @level.specified_autoplay_video

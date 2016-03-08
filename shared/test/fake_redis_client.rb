@@ -49,7 +49,7 @@ class FakeRedisClient
     raise ArgumentError, "Can't pass empty array to hdel", caller if fields.empty?
 
     hash = get_hash_for_key(key)
-    result = fields.reduce(0) do |num_deleted, field|
+    result = fields.inject(0) do |num_deleted, field|
       num_deleted += 1 if hash.delete(field)
       num_deleted
     end

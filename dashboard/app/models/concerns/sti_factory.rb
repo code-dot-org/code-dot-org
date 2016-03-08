@@ -46,7 +46,7 @@ module StiFactory
     end
 
     def class_name_from_column_definition
-      self.columns.find { |col| col.name.to_s == inheritance_column.to_s }.try(:default)
+      self.columns.detect { |col| col.name.to_s == inheritance_column.to_s }.try(:default)
     end
   end
 end

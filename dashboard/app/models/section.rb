@@ -46,7 +46,7 @@ class Section < ActiveRecord::Base
   end
 
   def students_attributes=(params)
-    follower_params = params.collect do |student|
+    follower_params = params.map do |student|
       {
        user_id: user.id,
        student_user_attributes: student
@@ -75,7 +75,7 @@ class Section < ActiveRecord::Base
   private
   CHARS = ("A".."Z").to_a - %w(A E I O U)
   def random_text(len)
-    len.times.to_a.collect{ CHARS.sample }.join
+    len.times.to_a.map{ CHARS.sample }.join
   end
 
   def random_code

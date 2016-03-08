@@ -914,7 +914,7 @@ SQL
     return true if teacher? || encrypted_password.present? || oauth?
 
     # sections_as_student should be a method but I already did that in another branch so I'm avoiding conflicts for now
-    sections_as_student = followeds.collect(&:section)
+    sections_as_student = followeds.map(&:section)
     return true if sections_as_student.empty?
 
     # if you log in only through picture passwords you can't edit your account

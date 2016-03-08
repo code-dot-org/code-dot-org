@@ -5,7 +5,7 @@ require 'le'
 require 'rack'
 
 def hash_to_query(hash, namespace=nil)
-  hash.collect do |key, value|
+  hash.map do |key, value|
     key = "#{namespace}[#{key}]" unless namespace.nil?
     "#{Rack::Utils.escape(key)}=#{Rack::Utils.escape(value.to_s)}"
   end.sort * '&'
