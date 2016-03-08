@@ -41,6 +41,8 @@ var SmallFooter = React.createClass({
         newWindow: React.PropTypes.bool
       })
     ).isRequired,
+    // True if we're displaying this inside a phone (real, or our wireframe)
+    phoneFooter: React.PropTypes.bool,
     className: React.PropTypes.string
   },
 
@@ -58,7 +60,7 @@ var SmallFooter = React.createClass({
   },
 
   captureBaseElementDimensions: function () {
-    var base = React.findDOMNode(this.refs.base);
+    var base = this.refs.base;
     this.setState({
       baseWidth: base.offsetWidth,
       baseHeight: base.offsetHeight
@@ -69,7 +71,7 @@ var SmallFooter = React.createClass({
     // The first time we click anywhere, hide any open children
     $(document.body).one('click', function (event) {
       // menu copyright has its own click handler
-      if (event.target === React.findDOMNode(this.refs.menuCopyright)) {
+      if (event.target === this.refs.menuCopyright) {
         return;
       }
 
@@ -151,7 +153,7 @@ var SmallFooter = React.createClass({
       },
       copyrightScrollArea: {
         overflowY: 'auto',
-        maxHeight: 210,
+        maxHeight: this.props.phoneFooter ? 210 : undefined,
         padding: '0.8em',
         borderBottom: 'solid thin #e7e8ea',
         marginBottom: this.state.baseHeight

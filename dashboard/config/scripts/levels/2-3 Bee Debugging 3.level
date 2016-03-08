@@ -6,10 +6,10 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "These blocks are really bugging me. Fix the error(s) to collect all of the nectar.",
+    "instructions": "Ooh, this one stings!\r\n\r\nFix the error(s) to collect all of the nectar.",
     "step_mode": "2",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "start_direction": "2",
     "nectar_goal": "2",
     "flower_type": "redWithNectar",
@@ -32,9 +32,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
-    "raw_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,2,1,0,0],[0,0,1,1,\"+1\",1,0,0],[0,0,1,\"+1\",1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]"
+    "raw_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,2,1,0,0],[0,0,1,1,\"+1\",1,0,0],[0,0,1,\"+1\",1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "markdown_instructions": "Ooh, this one stings!\r\n\r\nFix the error(s) to collect all of the nectar."
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -93,5 +95,40 @@
         </block>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_nectar">
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
+                              <next>
+                                <block type="maze_moveForward">
+                                  <next>
+                                    <block type="maze_nectar"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

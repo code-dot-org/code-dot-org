@@ -2,7 +2,7 @@
  * Copyright (c) 2016 Anthony Bau.
  * MIT License.
  *
- * Date: 2016-02-22
+ * Date: 2016-03-08
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -5468,6 +5468,14 @@ function base64DetectIncompleteChar(buffer) {
     }
   }
 
+  function charAt (chunk, i) {
+    var result = ''
+    if (i < chunk.length) {
+      result = chunk.charAt(i)
+    }
+    return result
+  }
+
   function write (chunk) {
     var parser = this
     if (this.error) {
@@ -5483,7 +5491,7 @@ function base64DetectIncompleteChar(buffer) {
     var i = 0
     var c = ''
     while (true) {
-      c = chunk.charAt(i++)
+      c = charAt(chunk, i++)
       parser.c = c
       if (!c) {
         break
@@ -5514,7 +5522,7 @@ function base64DetectIncompleteChar(buffer) {
           if (parser.sawRoot && !parser.closedRoot) {
             var starti = i - 1
             while (c && c !== '<' && c !== '&') {
-              c = chunk.charAt(i++)
+              c = charAt(chunk, i++)
               if (c && parser.trackPosition) {
                 parser.position++
                 if (c === '\n') {
@@ -7269,6 +7277,17 @@ hook('mouseup', 0, function(point, event, state) {
   }
 });
 
+Editor.prototype.drawDraggingBlock = function() {
+  var draggingBlockView;
+  this.dragView.clearCache();
+  draggingBlockView = this.dragView.getViewNodeFor(this.draggingBlock);
+  draggingBlockView.layout(1, 1);
+  this.dragCanvas.width = Math.min(draggingBlockView.totalBounds.width + 10, window.screen.width);
+  this.dragCanvas.height = Math.min(draggingBlockView.totalBounds.height + 10, window.screen.height);
+  draggingBlockView.drawShadow(this.dragCtx, 5, 5);
+  return draggingBlockView.draw(this.dragCtx, new this.draw.Rectangle(0, 0, this.dragCanvas.width, this.dragCanvas.height));
+};
+
 Editor.prototype.wouldDelete = function(position) {
   var mainPoint, palettePoint, ref1, ref2, ref3, ref4;
   mainPoint = this.trackerPointToMain(position);
@@ -7277,7 +7296,7 @@ Editor.prototype.wouldDelete = function(position) {
 };
 
 hook('mousemove', 1, function(point, event, state) {
-  var acceptLevel, allowed, bound, draggingBlockView, dropPoint, dropletDocument, expansion, head, i, j, k, l, len, len1, line, mainPoint, position, record, ref1, ref2, ref3, viewNode;
+  var acceptLevel, allowed, bound, dropPoint, dropletDocument, expansion, head, i, j, k, l, len, len1, line, mainPoint, position, record, ref1, ref2, ref3, viewNode;
   if (!state.capturedPickup && (this.clickedBlock != null) && point.from(this.clickedPoint).magnitude() > MIN_DRAG_DISTANCE) {
     this.draggingBlock = this.clickedBlock;
     this.dragReplacing = false;
@@ -7291,6 +7310,13 @@ hook('mousemove', 1, function(point, event, state) {
         expansion = parseBlock(this.mode, expansion);
       }
       this.draggingBlock = (expansion || this.draggingBlock).clone();
+      if ('function' === typeof this.clickedBlockPaletteEntry.expansion) {
+        if (indexOf.call(this.draggingBlock.classes, 'mostly-value') >= 0) {
+          this.draggingBlock.classes.push('any-drop');
+        }
+        this.draggingBlock.lastExpansionText = expansion;
+        this.draggingBlock.expansion = this.clickedBlockPaletteEntry.expansion;
+      }
     } else {
       mainPoint = this.trackerPointToMain(this.clickedPoint);
       viewNode = this.view.getViewNodeFor(this.draggingBlock);
@@ -7308,13 +7334,7 @@ hook('mousemove', 1, function(point, event, state) {
         this.draggingOffset = viewNode.bounds[0].upperLeftCorner().from(mainPoint);
       }
     }
-    this.dragView.clearCache();
-    draggingBlockView = this.dragView.getViewNodeFor(this.draggingBlock);
-    draggingBlockView.layout(1, 1);
-    this.dragCanvas.width = Math.min(draggingBlockView.totalBounds.width + 10, window.screen.width);
-    this.dragCanvas.height = Math.min(draggingBlockView.totalBounds.height + 10, window.screen.height);
-    draggingBlockView.drawShadow(this.dragCtx, 5, 5);
-    draggingBlockView.draw(this.dragCtx, new this.draw.Rectangle(0, 0, this.dragCanvas.width, this.dragCanvas.height));
+    this.drawDraggingBlock();
     position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
     this.dropPointQuadTree = QUAD.init({
       x: this.scrollOffsets.main.x,
@@ -7374,6 +7394,44 @@ hook('mousemove', 1, function(point, event, state) {
   }
 });
 
+Editor.prototype.getClosestDroppableBlock = function(mainPoint) {
+  var best, min, testPoints;
+  best = null;
+  min = Infinity;
+  if (!this.dropPointQuadTree) {
+    return null;
+  }
+  testPoints = this.dropPointQuadTree.retrieve({
+    x: mainPoint.x - MAX_DROP_DISTANCE,
+    y: mainPoint.y - MAX_DROP_DISTANCE,
+    w: MAX_DROP_DISTANCE * 2,
+    h: MAX_DROP_DISTANCE * 2
+  }, (function(_this) {
+    return function(point) {
+      var distance;
+      if (!((point.acceptLevel === helper.DISCOURAGE) && !event.shiftKey)) {
+        distance = mainPoint.from(point);
+        distance.y *= 2;
+        distance = distance.magnitude();
+        if (distance < min && mainPoint.from(point).magnitude() < MAX_DROP_DISTANCE && (_this.view.getViewNodeFor(point._droplet_node).highlightArea != null)) {
+          best = point._droplet_node;
+          return min = distance;
+        }
+      }
+    };
+  })(this));
+  return best;
+};
+
+Editor.prototype.getClosestDroppableBlockFromPosition = function(position) {
+  var mainPoint;
+  if (!this.currentlyUsingBlocks) {
+    return null;
+  }
+  mainPoint = this.trackerPointToMain(position);
+  return this.getClosestDroppableBlock(mainPoint);
+};
+
 Editor.prototype.getAcceptLevel = function(drag, drop) {
   var next;
   if (drop.type === 'socket') {
@@ -7396,9 +7454,22 @@ Editor.prototype.getAcceptLevel = function(drag, drop) {
 };
 
 hook('mousemove', 0, function(point, event, state) {
-  var best, head, mainPoint, min, palettePoint, pos, position, rect, ref1, ref2, ref3, testPoints;
+  var dropBlock, expansionText, head, mainPoint, newBlock, palettePoint, pos, position, rect, ref1, ref2, ref3;
   if (this.draggingBlock != null) {
     position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
+    if (this.draggingBlock.expansion) {
+      expansionText = this.draggingBlock.expansion(this.getClosestDroppableBlockFromPosition(position));
+      if (expansionText !== this.draggingBlock.lastExpansionText) {
+        newBlock = parseBlock(this.mode, expansionText);
+        newBlock.lastExpansionText = expansionText;
+        newBlock.expansion = this.draggingBlock.expansion;
+        if (indexOf.call(this.draggingBlock.classes, 'any-drop') >= 0) {
+          newBlock.classes.push('any-drop');
+        }
+        this.draggingBlock = newBlock;
+        this.drawDraggingBlock();
+      }
+    }
     if (!this.currentlyUsingBlocks) {
       if (this.trackerPointIsInAce(position)) {
         pos = this.aceEditor.renderer.screenToTextCoordinates(position.x, position.y);
@@ -7415,8 +7486,6 @@ hook('mousemove', 0, function(point, event, state) {
     this.dragCanvas.style.top = (position.y - rect.top) + "px";
     this.dragCanvas.style.left = (position.x - rect.left) + "px";
     mainPoint = this.trackerPointToMain(position);
-    best = null;
-    min = Infinity;
     head = this.tree.start.next;
     while (((ref1 = head.type) === 'newline' || ref1 === 'cursor') || head.type === 'text' && head.value === '') {
       head = head.next;
@@ -7426,37 +7495,19 @@ hook('mousemove', 0, function(point, event, state) {
       this.lastHighlight = this.tree;
     } else {
       if (this.hitTest(mainPoint, this.draggingBlock)) {
-        best = null;
+        dropBlock = null;
         this.dragReplacing = true;
       } else {
         this.dragReplacing = false;
-        testPoints = this.dropPointQuadTree.retrieve({
-          x: mainPoint.x - MAX_DROP_DISTANCE,
-          y: mainPoint.y - MAX_DROP_DISTANCE,
-          w: MAX_DROP_DISTANCE * 2,
-          h: MAX_DROP_DISTANCE * 2
-        }, (function(_this) {
-          return function(point) {
-            var distance;
-            if (!((point.acceptLevel === helper.DISCOURAGE) && !event.shiftKey)) {
-              distance = mainPoint.from(point);
-              distance.y *= 2;
-              distance = distance.magnitude();
-              if (distance < min && mainPoint.from(point).magnitude() < MAX_DROP_DISTANCE && (_this.view.getViewNodeFor(point._droplet_node).highlightArea != null)) {
-                best = point._droplet_node;
-                return min = distance;
-              }
-            }
-          };
-        })(this));
+        dropBlock = this.getClosestDroppableBlock(mainPoint);
       }
-      if (best !== this.lastHighlight) {
+      if (dropBlock !== this.lastHighlight) {
         this.redrawHighlights();
-        if (best != null) {
-          this.view.getViewNodeFor(best).highlightArea.draw(this.highlightCtx);
-          this.maskFloatingPaths(best.getDocument());
+        if (dropBlock != null) {
+          this.view.getViewNodeFor(dropBlock).highlightArea.draw(this.highlightCtx);
+          this.maskFloatingPaths(dropBlock.getDocument());
         }
-        this.lastHighlight = best;
+        this.lastHighlight = dropBlock;
       }
     }
     palettePoint = this.trackerPointToPalette(position);
@@ -11874,8 +11925,8 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         break;
       case 'AssignmentExpression':
         this.jsBlock(node, depth, bounds);
-        this.jsSocketAndMark(indentDepth, node.left, depth + 1, null);
-        return this.jsSocketAndMark(indentDepth, node.right, depth + 1, null);
+        this.jsSocketAndMark(indentDepth, node.left, depth + 1, NEVER_PAREN);
+        return this.jsSocketAndMark(indentDepth, node.right, depth + 1, NEVER_PAREN);
       case 'ReturnStatement':
         this.jsBlock(node, depth, bounds);
         if (node.argument != null) {

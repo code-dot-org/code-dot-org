@@ -174,19 +174,36 @@ Object.keys(PROP_NAMES).map(function (elementType) {
   });
 });
 
-// May belong in droplet
-function getValueOfNthParam(block, n) {
+function getFirstSetPropertyParamFromCode(code) {
+  var prefix = 'setProperty(';
+  code = code.slice(code.lastIndexOf(prefix));
+
+  // quote, followed by param, followed by end quote, comma, and optional whitespace
+  var match = /^setProperty\((['"])(.*)\1,\s*$/.exec(code);
+  return match ? match[2] : null;
+}
+
+/**
+ * @param {DropletBlock} block Droplet block, or undefined if in text mode
+ * @param {AceEditor}
+ */
+function getFirstSetPropertyParam(block, editor) {
+  if (!block) {
+    // If we're not given a block, assume that we're in text mode
+    var cursor = editor.session.selection.getCursor();
+    var contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
+
+    return getFirstSetPropertyParamFromCode(contents);
+  }
+  // We have a block. Parse it to find our first socket.
   var token = block.start;
   do {
     if (token.type === 'socketStart') {
-      if (n === 0) {
-        var textToken = token.next;
-        if (textToken.type !== 'text') {
-          throw new Error('unexpected');
-        }
-        return textToken.value;
+      var textToken = token.next;
+      if (textToken.type !== 'text') {
+        throw new Error('unexpected');
       }
-      n--;
+      return textToken.value;
     }
     token = token.next;
   } while(token);
@@ -197,9 +214,9 @@ function getValueOfNthParam(block, n) {
  * Given a string like <"asdf"> strips quotes and returns <asdf>
  */
 function stripQuotes(str) {
-  var match = str.match(/^['|"](.*)['|"]$/);
+  var match = str.match(/^(['"])(.*)\1$/);
   if (match) {
-    return match[1];
+    return match[2];
   }
   return str;
 }
@@ -225,9 +242,14 @@ module.exports.getInternalPropertyInfo = function (element, friendlyPropName) {
  *   types, provides full list of properties across all types.
  */
 module.exports.setPropertyDropdown = function () {
-  return function () {
-    // Note: We depend on "this" being the droplet socket.
-    var param1 = getValueOfNthParam(this.parent, 0);
+  return function (editor) {
+    // Note: We depend on "this" being the droplet socket when in block mode,
+    // such that parent ends up being the block. In text mode, this.parent
+    // ends up being undefined.
+    var param1 = getFirstSetPropertyParam(this.parent, editor);
+    if (!param1) {
+      return fullDropdownOptions;
+    }
 
     var elementId = stripQuotes(param1);
     var element = document.querySelector("#divApplab #" + elementId);
@@ -247,4 +269,9 @@ module.exports.setPropertyDropdown = function () {
 
     return keys.map(function (key) { return '"' + key + '"'; });
   };
+};
+
+module.exports.__TestInterface = {
+  getFirstSetPropertyParamFromCode: getFirstSetPropertyParamFromCode,
+  stripQuotes: stripQuotes
 };

@@ -3,7 +3,6 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var DesignWorkspace = require('./DesignWorkspace.jsx');
-var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var showAssetManager = require('../assetManagement/show');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');
@@ -108,7 +107,7 @@ designMode.editElementProperties = function(element) {
 designMode.resetPropertyTab = function() {
   var element = currentlyEditedElement || designMode.activeScreen();
   designMode.editElementProperties(element);
-  designMode.renderToggleRow();
+  Applab.render();
 };
 
 /**
@@ -800,15 +799,6 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configurePlaySpaceHeader = function () {
-  var designToggleRow = document.getElementById('designToggleRow');
-  if (!designToggleRow) {
-    return;
-  }
-
-  designMode.loadDefaultScreen();
-};
-
 /**
  * Create a new screen
  * @returns {string} The id of the newly created screen
@@ -827,44 +817,25 @@ designMode.createScreen = function () {
  */
 designMode.changeScreen = function (screenId) {
   currentScreenId = screenId;
-  var screenIds = [];
   elementUtils.getScreens().each(function () {
-    screenIds.push(elementUtils.getId(this));
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
 
-  designMode.renderToggleRow(screenIds);
+  Applab.render();
 
   designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
 };
 
+/** @returns {string} Id of active/visible screen */
 designMode.getCurrentScreenId = function() {
   return currentScreenId;
 };
 
-designMode.renderToggleRow = function (screenIds) {
-  screenIds = screenIds || elementUtils.getScreens().get().map(function (screen) {
+/** @returns {string[]} Array of all screen Ids in current app */
+designMode.getAllScreenIds = function () {
+  return elementUtils.getScreens().get().map(function (screen) {
     return elementUtils.getId(screen);
   });
-
-  var designToggleRow = document.getElementById('designToggleRow');
-  if (designToggleRow) {
-    React.render(
-      React.createElement(PlaySpaceHeader, {
-        hideToggle: Applab.hideDesignModeToggle(),
-        hideViewDataButton: Applab.hideViewDataButton(),
-        startInDesignMode: Applab.startInDesignMode(),
-        initialScreen: currentScreenId,
-        screenIds: screenIds,
-        onDesignModeButton: Applab.onDesignModeButton,
-        onCodeModeButton: Applab.onCodeModeButton,
-        onViewDataButton: Applab.onViewData,
-        onScreenChange: designMode.changeScreen,
-        onScreenCreate: designMode.createScreen
-      }),
-      designToggleRow
-    );
-  }
 };
 
 /**
@@ -904,7 +875,7 @@ designMode.renderDesignWorkspace = function(element) {
     handleManageAssets: showAssetManager,
     isDimmed: Applab.running
   };
-  React.render(React.createElement(DesignWorkspace, props), designWorkspace);
+  ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };
 
 /**

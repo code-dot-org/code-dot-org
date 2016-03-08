@@ -6,9 +6,9 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Workshop Planning', description_t: "A guide to everything you'll need to take care of to make sure your summer workshops are a success", url_s: CDO.code_org_url('/educate/professional-learning-partner/playbook/workshop-planning'), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Communications', description_t: "The who, what, when, where and why about communicating with your teachers and facilitators", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/communications"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Communications', description_t: "Coming Soon!"} %>
 
-<%= view :educate_box, item: {title_s: 'Community Building', description_t: "Start building your local teacher community and to learn how to connect with other communities nationally"} %>
+<%= view :educate_box, item: {title_s: 'Community Building', description_t: "Coming Soon!"} %>
 
 <%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/reporting-and-evaluations"), button_s: "Learn more"} %>
 <%= view :educate_box, item: {title_s: 'Teacher Support', description_t: "These resources will help you provide support to the teachers enrolled in the Professional Learning Program", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/teacher-support"), button_s: "Learn more"} %>

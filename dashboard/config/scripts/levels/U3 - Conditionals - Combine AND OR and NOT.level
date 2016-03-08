@@ -57,11 +57,13 @@
     "debugger_disabled": "true",
     "markdown_instructions": "# Combining AND and OR and NOT\r\n\r\nYou can stick a NOT (`!`) in front of any boolean expression to invert its result. This opens the door to express the same logical statements in different ways.  \r\n\r\nFor example, let's say you want to determine if a person, based on his or her age (under 12 or over 65) gets to pay a reduced price for a movie ticket.  You might express that like this:\r\n\r\n```\r\n// If your age is less than 12 or greater than 65\r\nif( (age < 12) || (age > 65) ){\r\n\twrite(\"You qualify for a reduced price!\");\r\n}\r\n```\r\n\r\nBut you might also figure out a way to determine if a person gets a reduced price ticket by determining if his or her age is between 12 and 65 (`(age >= 12) && (age <= 65)`) and then taking the inverse of that.  So using the NOT operator this would work as well:\r\n\r\n```\r\n// If your age is NOT between 12 and 65\r\nif( !( (age >= 12) && (age <= 65) ) ){\r\n\twrite(\"You qualify for a reduced price!\");\r\n}\r\n```\r\n\r\n**Why use one over the other?** Personal preference.  Use the one that makes the most sense to you, but it should be a clear expression of what you are trying to say.  \r\n\r\n\r\n# Do This:\r\nWe've provided you with starting code that prompts the user to enter a **day** and their **age** and store it in variables.\r\n\r\n**Add an `if` statement that uses both AND and OR operators**\r\n\r\n * The app should write \"Time for school!\" if it's a weekday and the user is under 18.\r\n \t* Hint: one way to say that it's a weekday is to say that it's NOT a weekend.\r\n * Otherwise, if it's a weekday and the user is 18 or older, it should write \"Time to go to work!\"\r\n * Otherwise, it should write \"Time to relax for the weekend!\"\r\n \r\n \r\n**WARNING** logic can get tricky sometimes.  Make sure to test your program with inputs that cover every possibility. There are 4 basic cases to test for:\r\n\r\n * It is a weekday and age is under 18\r\n * It is a weekday and age is not under 18\r\n * It's not a weekday and age is under 18\r\n * It's not a weekday and age is not under 18\r\n\r\nTry it out!",
     "start_blocks": "var day = prompt(\"Enter a day of the week.\");\r\nvar age = promptNum(\"Enter your age.\");\r\nwrite(\"Day is: \" + day);\r\nwrite(\"Age is: \" + age);\r\n//write your code here\r\n",
-    "instructions": "Write an if statement that uses AND and OR to display \"Time to go to school!\" if it's not the weekend and the user is under 18. (Click to see full instrucitons.",
+    "instructions": "Write an if statement that uses AND and OR to display \"Time to go to school!\" if it's not the weekend and the user is under 18. (Click to see full instructions.)",
     "slider_speed": "1.0",
     "lock_zero_param_functions": "false",
     "encrypted_examples": "sjtZ0AfIxlfgg4yCm2TSnXBB7lORqo4t95G9ynqgPDhBlek3cng1FS71NwxC\nZwzj2YQmQUD4uNMmumWT9Q3QkcDLg0WQJF21L/MRcuZL1tkChHYD68zEfCNQ\nrRFE+Ftl\n"
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

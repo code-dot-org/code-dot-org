@@ -6,7 +6,9 @@ var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
 var apiJavascript = require('./apiJavascript');
-var page = require('../templates/page.html.ejs');
+var consoleApi = require('../consoleApi');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
@@ -17,6 +19,11 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var assetPrefix = require('../assetManagement/assetPrefix');
+var AppView = require('../templates/AppView.jsx');
+var gamelabCommands = require('./commands');
+var errorHandler = require('../errorHandler');
+var outputError = errorHandler.outputError;
+var ErrorLevel = errorHandler.ErrorLevel;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -54,9 +61,21 @@ var GameLab = function () {
   this.apiJS.injectGameLab(this);
 
   dropletConfig.injectGameLab(this);
+
+  consoleApi.setLogMethod(this.log.bind(this));
+  errorHandler.setLogMethod(this.log.bind(this));
 };
 
 module.exports = GameLab;
+
+/**
+ * Forward a log message to both logger objects.
+ * @param {?} object
+ */
+GameLab.prototype.log = function (object) {
+  this.consoleLogger_.log(object);
+  this.debugger_.log(object);
+};
 
 /**
  * Inject the studioApp singleton.
@@ -107,35 +126,59 @@ GameLab.prototype.init = function (config) {
     showConsole: true
   });
 
-  config.html = page({
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        localeDirection: this.studioApp_.localeDirection(),
+        extraControlRows: extraControlRows,
+        blockUsed : undefined,
+        idealBlockNumber : undefined,
+        editCode: this.level.editCode,
+        blockCounterClass : 'block-counter-default',
+        pinWorkspaceToBottom: true,
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: firstControlsRow,
+        extraControlRows: extraControlRows,
+        pinWorkspaceToBottom: true,
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  var onMount = function () {
+    config.loadAudio = this.loadAudio_.bind(this);
+    config.afterInject = this.afterInject_.bind(this, config);
+    config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
+
+    // Store p5specialFunctions in the unusedConfig array so we don't give warnings
+    // about these functions not being called:
+    config.unusedConfig = this.gameLabP5.p5specialFunctions;
+
+    this.studioApp_.init(config);
+
+    this.debugger_.initializeAfterDomCreated({
+      defaultStepSpeed: 1
+    });
+  }.bind(this);
+
+  ReactDOM.render(React.createElement(AppView, {
     assetUrl: this.studioApp_.assetUrl,
-    data: {
-      visualization: require('./visualization.html.ejs')(),
-      localeDirection: this.studioApp_.localeDirection(),
-      controls: firstControlsRow,
-      extraControlRows: extraControlRows,
-      blockUsed : undefined,
-      idealBlockNumber : undefined,
-      editCode: this.level.editCode,
-      blockCounterClass : 'block-counter-default',
-      pinWorkspaceToBottom: true,
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
-  config.loadAudio = this.loadAudio_.bind(this);
-  config.afterInject = this.afterInject_.bind(this, config);
-  config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
-
-  // Store p5specialFunctions in the unusedConfig array so we don't give warnings
-  // about these functions not being called:
-  config.unusedConfig = this.gameLabP5.p5specialFunctions;
-
-  this.studioApp_.init(config);
-
-  this.debugger_.initializeAfterDomCreated({
-    defaultStepSpeed: 1
-  });
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
+    onMount: onMount
+  }), document.getElementById(config.containerId));
 };
 
 GameLab.prototype.loadAudio_ = function () {
@@ -176,17 +219,22 @@ GameLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
   }
 };
 
+GameLab.prototype.haltExecution_ = function () {
+  this.eventHandlers = {};
+  if (this.tickIntervalId !== 0) {
+    window.clearInterval(this.tickIntervalId);
+  }
+  this.tickIntervalId = 0;
+  this.tickCount = 0;
+};
+
 /**
  * Reset GameLab to its initial state.
  * @param {boolean} ignore Required by the API but ignored by this
  *     implementation.
  */
 GameLab.prototype.reset = function (ignore) {
-
-  this.eventHandlers = {};
-  window.clearInterval(this.tickIntervalId);
-  this.tickIntervalId = 0;
-  this.tickCount = 0;
+  this.haltExecution_();
 
   /*
   var divGameLab = document.getElementById('divGameLab');
@@ -435,30 +483,21 @@ GameLab.prototype.completeRedrawIfDrawComplete = function () {
 };
 
 GameLab.prototype.handleExecutionError = function (err, lineNumber) {
-/*
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
-  Studio.executionError = { err: err, lineNumber: lineNumber };
-
-  // Call onPuzzleComplete() if syntax error or any time we're not on a freeplay level:
-  if (err instanceof SyntaxError) {
-    // Mark preExecutionFailure and testResults immediately so that an error
-    // message always appears, even on freeplay:
-    Studio.preExecutionFailure = true;
-    Studio.testResults = TestResults.SYNTAX_ERROR_FAIL;
-    Studio.onPuzzleComplete();
-  } else if (!level.freePlay) {
-    Studio.onPuzzleComplete();
-  }
-*/
-  this.consoleLogger_.log(err);
-  throw err;
+  this.executionError = { err: err, lineNumber: lineNumber };
+  this.haltExecution_();
+  // TODO: Call onPuzzleComplete?
 };
 
 /**
  * Executes an API command.
  */
 GameLab.prototype.executeCmd = function (id, name, opts) {
-  console.log("GameLab executeCmd " + name);
+  var retVal = false;
+  if (gamelabCommands[name] instanceof Function) {
+    retVal = gamelabCommands[name](opts);
+  }
+  return retVal;
 };
 
 /**

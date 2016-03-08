@@ -29,6 +29,16 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style="clear: both;"></div>
 
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/bMrDHtGHFR4'} %>
+<% twitter = {:url=>'https://youtu.be/bMrDHtGHFR4', :related=>'codeorg', :text=>'Computer science in Data and Medicine @codeorg'} %>
+<%=view :display_video_thumbnail, id: "DATAMEDICINE", video_code: "bMrDHtGHFR4", caption: "Computer science in Data and Medicine", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/concept_bigdata_medicine.mp4"%>
+
+</div>
+
+<div style="clear: both;"></div>
+
 ## How the internet works
 
 <div style="float:left; padding:10px; width:49%">
@@ -55,7 +65,6 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
-
 <div style="float:left; padding:10px; width:49%">
 
 <% facebook = {:u=>'https://youtu.be/kBXQZMmiA4s'} %>
@@ -81,7 +90,6 @@ We are building a growing library of educational videos available for re-use by 
 </div>
 
 <div style="clear: both;"></div>
-
 
 ## The basics of computer science
 
@@ -161,13 +169,13 @@ The celebrities and video "cast" members appearing in Code.org tutorial videos r
 
 [col-50]
 
-<%= view :display_video_thumbnail, id: "AppLabIntro", video_code: "4wY8JmFzZ8c", play_button: 'center', download_path: "//videos.code.org/2015/csp/IntroToAppLab.mp4" %>
+<%= view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4" %>
 
 [/col-50]
 
 <div style="float:left; padding:20px; width:49%">
 
-App Lab is a JavaScript programming environment for students to make simple apps that live on the web.  Use this standalone tool in your classroom to supplement any CS course.  It's easy: simply drag and drop to design your app, write code for your app with JavaScript blocks or with text, then send the app to your phone in seconds.
+App Lab is a JavaScript programming environment for students to make simple apps that live on the web.  Use this standalone tool in your classroom to supplement any CS course. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
 
 <br>
 <br>

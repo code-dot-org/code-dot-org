@@ -28,7 +28,9 @@ var commonMsg = require('../locale');
 var calcMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
-var page = require('../templates/page.html.ejs');
+var AppView = require('../templates/AppView.jsx');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
@@ -148,23 +150,6 @@ Calc.init = function(config) {
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
-      controls: require('./controls.html.ejs')({
-        assetUrl: studioApp.assetUrl
-      }),
-      blockUsed : undefined,
-      idealBlockNumber : undefined,
-      editCode: level.editCode,
-      blockCounterClass : 'block-counter-default',
-      inputOutputTable: level.inputOutputTable,
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
@@ -215,7 +200,41 @@ Calc.init = function(config) {
     }
   };
 
-  studioApp.init(config);
+  var renderCodeWorkspace = function () {
+    return codeWorkspaceEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        blockUsed : undefined,
+        idealBlockNumber : undefined,
+        editCode: level.editCode,
+        blockCounterClass : 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
+
+  var renderVisualizationColumn = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({
+          assetUrl: studioApp.assetUrl
+        }),
+        inputOutputTable: level.inputOutputTable
+      }
+    });
+  };
+
+  ReactDOM.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    renderCodeWorkspace: renderCodeWorkspace,
+    renderVisualizationColumn: renderVisualizationColumn,
+    onMount: studioApp.init.bind(studioApp, config)
+  }), document.getElementById(config.containerId));
 };
 
 /**

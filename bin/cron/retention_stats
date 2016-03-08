@@ -9,45 +9,96 @@ require_relative '../../dashboard/config/environment'
 require src_dir 'database'
 require 'cdo/properties'
 
+require_relative '../../lib/retention_stats_helper'
+
 ONE_WEEK = 7 * 24 * 60 * 60
 
+# TODO(asher): Refactor this so that it can be unit tested.
 def main()
   return unless only_one_running?(__FILE__)
 
-  # Find the (user, script) pairs where drop off happened, e.g., those users with progress on a
-  # script -28 to -14 days ago but not -14 to 0 days ago.
-  # Note that we intentionally keep (user, script) pairs where the script was completed.
+  # Initialize the hashes of arrays that will contain the final data.
+  script_level_counts = {}
+  script_levels = ScriptLevel.group(:script_id).count
+  script_levels.each do |script_id, level_count|
+    script_level_counts[script_id] = Array.new(level_count + 1, 0)
+  end
+  script_stage_counts = {}
+  script_stages = Stage.group(:script_id).count
+  script_stages.each do |script_id, stage_count|
+    script_stage_counts[script_id] = Array.new(stage_count + 1, 0)
+  end
+  stage_level_counts = {}
+  stage_levels = ScriptLevel.group(:script_id, :stage_id).count
+  stage_levels.each do |script_id_stage_id, level_count|
+    stage_level_counts[script_id_stage_id.second] = Array.new(level_count + 1, 0)
+  end
+
+  # Find the user_scripts where dropoff happened, e.g., those users with progress on a script -28 to
+  # -14 days ago but not -14 to 0 days ago. Note that we intentionally keep user_scripts pairs where
+  # the script was completed.
   drop_off = UserScript.
     where(last_progress_at: (Time.now - 4 * ONE_WEEK)..(Time.now - 2 * ONE_WEEK))
+  drop_off_with_levels = drop_off.
+    joins('INNER JOIN user_levels ON user_levels.user_id = user_scripts.user_id AND user_levels.script_id = user_scripts.script_id')
+  drop_off_with_levels_and_stages = drop_off_with_levels.
+    joins('INNER JOIN script_levels ON script_levels.script_id = user_levels.script_id AND script_levels.level_id = user_levels.level_id')
+
+  # Hashes mapping script_id to the number of users starting / finishing the script.
   script_starts = drop_off.group(:script_id).count
   script_finishes = drop_off.where.not(completed_at: nil).group(:script_id).count
 
-  drop_off_with_levels = drop_off.
-    joins("INNER JOIN user_levels ON user_levels.user_id = user_scripts.user_id AND user_levels.script_id = user_scripts.script_id")
-  # Determine, for each (user, script), the number of levels the user attempted. Then construct a
-  # hash of hashes of the form {script_id: {level_count: number_of_users}}.
-  levels = Hash.new {|hash, key| hash[key] = Hash.new(0)}
+  # Determine, for each (user, script), the number of levels attempted. Then increment the
+  # appropriate index in the script_level_counts hash.
   drop_off_with_levels.
     group('user_levels.user_id', 'user_levels.script_id').
     count.
-    each{|pair, count| levels[pair.second][count] += 1}
-  # Determine, for each (user, script, stage), the number of levels attempted. Then construct a hash
-  # of hashes of hashes of the form {script_id: {stage_id: {level_count: number_of_users}}}.
-  stages = Hash.new {|hash, key| hash[key] = Hash.new {|hash, key| hash[key] = Hash.new {|hash, key| hash[key] = 0}}}
-  drop_off_with_levels.
-    joins("INNER JOIN script_levels ON script_levels.script_id = user_levels.script_id AND script_levels.level_id = user_levels.level_id").
+    each_pair do |user_id_script_id, level_count|
+      # Adjust the number of levels downward if the user completed more levels than currently exist.
+      script_id = user_id_script_id[1]
+      adjusted_level_count = [script_levels[script_id], level_count].min
+      script_level_counts[script_id][adjusted_level_count] += 1
+    end
+  # Determine, for each (user, script), the number of stages attempted. Then increment the
+  # appropriate index in the script_stage_counts hash.
+  drop_off_with_levels_and_stages.
+    select('user_levels.user_id', 'script_levels.script_id', 'script_levels.stage_id').
+    distinct.
+    group('user_levels.user_id', 'script_levels.script_id').
+    count.
+    each_pair do |user_id_script_id, stage_count|
+      # Adjust the number of stages downward if the user completed more stages than currently exist.
+      script_id = user_id_script_id[1]
+      adjusted_stage_count = [script_stages[script_id], stage_count].min
+      script_stage_counts[script_id][adjusted_stage_count] += 1
+    end
+  # Determine, for each (user, script, stage), the number of levels attempted. Then increment the
+  # appropriate index in the stage_level_counts hash.
+  drop_off_with_levels_and_stages.
     group('user_levels.user_id', 'script_levels.script_id', 'script_levels.stage_id').
     count.
-    each{|triple, count| stages[triple.second][triple.third][count] += 1}
+    each_pair do |user_id_script_id_stage_id, level_count|
+      # Adjust the number of levels downward if the user completed more levels than currently exist.
+      script_id = user_id_script_id_stage_id[1]
+      stage_id = user_id_script_id_stage_id[2]
+      adjusted_level_count = [stage_levels[[script_id, stage_id]], level_count].min
+      stage_level_counts[stage_id][adjusted_level_count] += 1
+    end
 
-  # Write these results to the Properties table in the Pegasus DB.
+  # Manipulate the hashes to be more output-friendly.
+  add_missing_keys(script_starts, script_finishes, 0)
+  script_level_counts = get_cumulatives(script_level_counts)
+  script_stage_counts = get_cumulatives(script_stage_counts)
+  stage_level_counts = get_cumulatives(stage_level_counts)
+
+  # Write the values to the Properties table in the Pegasus DB.
   Properties.set(:retention_stats, {
     script_starts: script_starts,
     script_finishes: script_finishes,
-    script_progress_levels: levels,
-    script_progress_stages: stages,
+    script_level_counts: script_level_counts,
+    script_stage_counts: script_stage_counts,
+    stage_level_counts: stage_level_counts,
   })
-
 end
 
 main()
