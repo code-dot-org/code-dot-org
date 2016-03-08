@@ -77,20 +77,19 @@
   congratulations_volunteer: 'Felicidades: ahora que has probado la Hora del Código,
     <a href="https://code.org/volunteer"> inscríbete como voluntario en el aula</a>
     y ¡ayuda estudiantes a realizar la Hora de Código!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: Enhorabuena por completar el curso 1
+  congratulations_on_completing_course2: Enhorabuena por completar el curso 2
+  congratulations_on_completing_course3: Enhorabuena por completar el curso 3
+  congratulations_on_completing_course4: Enhorabuena por completar el curso 4
+  congratulations_on_completing_accelerated: Enhorabuena por completar el curso acelerado
   congrats_next_tutorials_title: Prueba estos tutoriales a continuación
   congrats_next_tutorials_desc: Prueba estos tutoriales más cortos de una hora o prueba
     un <a href="%{current_path}/next">tutorial para colaboradores</a>.
   get_a_certificate_of_achievement: Recibe un certificado de tu logro
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  view_course: Ver el curso
+  view_unit: Ver la unidad
+  make_app: Crear una aplicación
+  congrats_guest_speaker_title: Encontrar un orador invitado para tu clase
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
     real world by inviting a guest speaker to your classroom. You can use our map
@@ -111,7 +110,7 @@
   third_party_platform_web: 'Platform: Web'
   third_party_price_varies: 'Price: Plans vary'
   third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_299: 'Precio: $ 2,99/descarga'
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
@@ -127,7 +126,7 @@
     move, jump, dance, and sing. Children can modify characters in the paint editor,
     add their own voices and sounds, even insert photos of themselves - then use the
     programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_curriculum: Descargar currículum de Scratch Jr.
   third_party_scratchjr_btn_site: Visit Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
     games, and animations and share your creations with others in the online community.
