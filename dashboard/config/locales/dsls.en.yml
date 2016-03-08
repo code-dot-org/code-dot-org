@@ -253,6 +253,10 @@ en:
       CSPPD3-u5 list of challenges: {}
       CSPPD3-u5 overview: {}
       CSPPD3-u5 pick a challenge: {}
+      CSPPD3-u5 post survey: {}
+      CSPPD3-u5 post to forum: {}
+      CSPPD3-u5 reflect on challenge: {}
+      CSPPD3-u5 share out overview: {}
       CSPPD3-u5 tips for prep: {}
       CSPPD3-u5 unit 5 overview: {}
       CSPPD3-u5 what is a challenge: {}
@@ -519,7 +523,9 @@ en:
       ECSPD3-u5 what is a challenge: {}
       ECSPD3-u6 about: {}
       ECSPD3-u6 alt lesson overview: {}
+      ECSPD3-u6 challenge details: {}
       ECSPD3-u6 challenge inside: {}
+      ECSPD3-u6 complete the challenge: {}
       ECSPD3-u6 connections: {}
       ECSPD3-u6 day 1: {}
       ECSPD3-u6 day 10-13: {}
@@ -533,13 +539,18 @@ en:
       ECSPD3-u6 day 5: {}
       ECSPD3-u6 day 6-7: {}
       ECSPD3-u6 day 8-9: {}
+      ECSPD3-u6 do the challenge: {}
       ECSPD3-u6 ideas for culminating projects: {}
       ECSPD3-u6 intro to u6: {}
       ECSPD3-u6 lesson ideas: {}
       ECSPD3-u6 lesson overview: {}
       ECSPD3-u6 links to online simulations: {}
+      ECSPD3-u6 list of challenges: {}
       ECSPD3-u6 overview: {}
       ECSPD3-u6 plan: {}
+      ECSPD3-u6 post survey: {}
+      ECSPD3-u6 post to forum: {}
+      ECSPD3-u6 share out overview: {}
       ECSPD3-u6 why study robotics: {}
       ECSU4 Challenge Submission: {}
       Embedded Arduino Sketch Test:
@@ -2401,7 +2412,9 @@ en:
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700"
+        Artist Debugging Multiple Choice 1: Artist Debugging Multiple Choice 1
         Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
+        What would you need to fix to make this a finished circle?: What would you need to fix to make this a finished circle?
         Why won't this circle go all the way around?: Why won't this circle go all the way around?
       2-3 artist functions multi 1:
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
@@ -4553,6 +4566,7 @@ en:
       CSPPD3-u3 pick a challenge: {}
       CSPPD3-u3 submit forum link: {}
       CSPPD3-u4 submit forum link: {}
+      CSPPD3-u5 submit forum link: {}
       ECSPD Fence post Q1: {}
       ECSPD Handshake Q1: {}
       ECSPD Online U1D1-2 Assessment 1:
@@ -4610,6 +4624,8 @@ en:
       ECSPD3-u5 pick a challenge: {}
       ECSPD3-u5 submit: {}
       ECSPD3-u5 submit forum link: {}
+      ECSPD3-u6 pick a challenge: {}
+      ECSPD3-u6 submit forum link: {}
       ECSU2 Challenge Submission: {}
       ECSU3 Challenge Submission: {}
       ECSU4 Challenge Submission fin: {}

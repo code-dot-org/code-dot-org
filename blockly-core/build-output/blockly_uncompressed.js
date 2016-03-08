@@ -20187,7 +20187,6 @@ Blockly.FunctionEditor.CLOSE_BUTTON_OVERHANG = 14;
 Blockly.FunctionEditor.RTL_CLOSE_BUTTON_OFFSET = 5;
 Blockly.FunctionEditor.prototype.definitionBlockType = "procedures_defnoreturn";
 Blockly.FunctionEditor.prototype.parameterBlockType = "parameters_get";
-Blockly.FunctionEditor.prototype.hasDeleteButton = false;
 Blockly.FunctionEditor.prototype.autoOpenFunction = function(autoOpenFunction) {
   this.autoOpenWithLevelConfiguration({autoOpenFunction:autoOpenFunction})
 };
@@ -20217,6 +20216,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.setupUIAfterBlockInEditor_();
   goog.dom.getElement("functionNameText").value = functionName;
   goog.dom.getElement("functionDescriptionText").value = this.functionDefinitionBlock.description_ || "";
+  this.deleteButton_.setVisible(targetFunctionDefinitionBlock.userCreated);
   Blockly.fireUiEvent(window, "function_editor_opened")
 };
 Blockly.FunctionEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
@@ -20530,9 +20530,6 @@ Blockly.FunctionEditor.prototype.positionCloseButton_ = function(absoluteLeft, v
   this.closeButton_.setAttribute("transform", "translate(" + (Blockly.RTL ? Blockly.FunctionEditor.RTL_CLOSE_BUTTON_OFFSET : absoluteLeft + viewWidth + Blockly.FunctionEditor.CLOSE_BUTTON_OVERHANG - this.closeButton_.firstElementChild.getAttribute("width")) + ",19)")
 };
 Blockly.FunctionEditor.prototype.positionDeleteButton_ = function(absoluteLeft, viewWidth) {
-  if(!this.hasDeleteButton) {
-    return
-  }
   var closeButtonWidth = this.closeButton_.firstElementChild.getAttribute("width");
   var deleteButtonWidth = this.deleteButton_.getButtonWidth();
   var rightEdge = absoluteLeft + viewWidth;
@@ -20584,9 +20581,6 @@ Blockly.FunctionEditor.prototype.addCloseButton_ = function() {
   r.setAttribute("y", -bounds.height + padding - 1)
 };
 Blockly.FunctionEditor.prototype.addDeleteButton_ = function() {
-  if(!this.hasDeleteButton) {
-    return
-  }
   this.deleteButton_ = new Blockly.SvgTextButton(this.modalBlockSpaceEditor.getSVGElement(), Blockly.Msg.DELETE, this.onDeletePressed.bind(this))
 };
 Blockly.FunctionEditor.prototype.onDeletePressed = function() {
@@ -23103,7 +23097,6 @@ Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = Blockly.BlockValueType.NUMBER;
 Blockly.ContractEditor.GRID_LINE_COLOR = "#5b6770";
 Blockly.ContractEditor.prototype.definitionBlockType = "functional_definition";
 Blockly.ContractEditor.prototype.parameterBlockType = "functional_parameters_get";
-Blockly.ContractEditor.prototype.hasDeleteButton = true;
 Blockly.ContractEditor.prototype.create_ = function() {
   Blockly.ContractEditor.superClass_.create_.call(this);
   var canvasToDrawOn = this.modalBlockSpace.svgBlockCanvas_;

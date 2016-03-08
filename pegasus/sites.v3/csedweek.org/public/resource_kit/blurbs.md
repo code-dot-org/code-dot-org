@@ -8,16 +8,15 @@ This page contains brief blurbs and other content that you can use to help promo
 
 ## Some shocking statistics (USA)
 
-- There will be 1 million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries)
-- More than 50 percent of all projected math and science occupations are in computing occupations. 
-- Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-- In 36 states, computer science classes don’t count toward math or science high school graduation requirements. 
-- A.P. Computer Science is taught in only 5% of U.S. high schools
-- Fewer than 20 percent of AP Computer Science students are women. Fewer than 10% are Black/African American and Hispanic/Latino.
+- Nine in ten parents want their child to study computer science, but only one in four schools teach computer programming.
+- Computing makes up 2/3 of projected new jobs in STEM (Science, Technology, Engineering, and Math).
+- Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science, and only 8% of STEM graduates are in computer science.
+- In 22 states, computer science classes don’t count toward math or science high school graduation requirements. 
+- Only 22 percent of AP Computer Science students are women. Only 13% are Black/African American or Hispanic/Latino.
  
-## Infographic version:
- 
-![image](/images/fit-7000/Code.org_infographic.png)
+<%= view :stats_carousel %>
+
+<br>
 
 ---
 

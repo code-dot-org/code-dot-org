@@ -62,6 +62,10 @@ angular: recordsApp
         getMetadata: {
           method: 'GET',
           url: "#{api_base_url}/metadata"
+        },
+        setMetadata: {
+          method: 'POST',
+          url: "#{api_base_url}/metadata"
         }
       }, {});
       return Table;
@@ -89,9 +93,9 @@ angular: recordsApp
       $scope.tableMetadata.$promise.then(function (metadata) {
         if (metadata && metadata.column_list) {
           var columnInfo = JSON.parse(metadata.column_list);
-          $scope.columns = columnInfo.map(makeColumn);
+          rationalizeColumnsAndRecords(columnInfo);
         } else if (createIfNeeded) {
-          $scope.initializeTable().then(function () {
+          tablesService.setMetadata().$promise.then(function () {
             getMetadata(false);
           });
         }
@@ -199,15 +203,6 @@ angular: recordsApp
        $scope.records = recordsService.query();
       });
     }
-    $scope.initializeTable = function () {
-      return $http({
-        method:'POST',
-        url: "/v3/shared-tables/#{channel_id}",
-        data: {
-          "#{table_name}": []
-        }
-      })
-    }
     function castValue(val) {
       if (val == '') return undefined;
       if (val == 'true' || val === true) return true;
@@ -219,6 +214,33 @@ angular: recordsApp
     function columnExists(columnName) {
       return $scope.columns.some(function (col) {
         return col.id === columnName;
+      });
+    }
+
+    /**
+     * Give metadata about a set of columns, go through our records and see
+     * if there are any missing columns. If there are, post to the server
+     * to update our metadata
+     */
+    function rationalizeColumnsAndRecords(columnInfo) {
+      // make sure we've loaded our records
+      $scope.records.$promise.then(function (records) {
+        var newColumns = [];
+        records.forEach(function (record) {
+          Object.keys(record).forEach(function (key) {
+            if (key === 'id' || key === '$$hashKey') {
+              return;
+            }
+            if (columnInfo.indexOf(key) === -1) {
+              columnInfo.push(key);
+              newColumns.push(key);
+            }
+          });
+        });
+        if (newColumns.length !== 0) {
+          new tablesService().$setMetadata({ column_list: JSON.stringify(newColumns) });
+        }
+        $scope.columns = columnInfo.map(makeColumn);
       });
     }
   }]);
