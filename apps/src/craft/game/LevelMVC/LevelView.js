@@ -1708,7 +1708,7 @@ export default class LevelView {
         break;
 
       case "sheep":
-        let sFrames = 10;
+        var sFrames = 10;
         // Facing Left: Eat Grass: 199-216
         sprite = plane.create(-22 + 40 * x, -12 + 40 * y, "sheep", "Sheep_199");
         frameList = Phaser.Animation.generateFrameNames("Sheep_", 199, 215, "", 0);
@@ -1966,7 +1966,7 @@ export default class LevelView {
         sprite = plane.create(xOffset + 40 * x, yOffset + plane.yOffset + 40 * y, atlas, frame);
 
         frameList = [];
-        let animationFrames = Phaser.Animation.generateFrameNames("Door", 0, 3, "", 1);
+        var animationFrames = Phaser.Animation.generateFrameNames("Door", 0, 3, "", 1);
         for(var j = 0; j < 5; ++j)
         {
           frameList.push("Door0");

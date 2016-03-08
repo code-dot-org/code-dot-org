@@ -9,4 +9,6 @@ src/applab/colpick.js
 # disabled because it uses spread operator
 src/templates/ProtectedStatefulDiv.jsx
 
+lib
 build
+node_modules

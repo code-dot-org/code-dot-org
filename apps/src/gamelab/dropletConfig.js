@@ -5,7 +5,6 @@ var showAssetManager = require('../assetManagement/show');
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 
 var COLOR_LIGHT_GREEN = '#D3E965';
-var COLOR_BLUE = '#19C3E1';
 var COLOR_RED = '#F78183';
 var COLOR_CYAN = '#4DD0E1';
 var COLOR_YELLOW = '#FFF176';

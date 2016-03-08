@@ -22,7 +22,6 @@ var Calc = module.exports;
  * Create a namespace for the application.
  */
 var studioApp = require('../StudioApp').singleton;
-var Calc = module.exports;
 var jsnums = require('./js-numbers/js-numbers.js');
 var commonMsg = require('../locale');
 var calcMsg = require('./locale');

@@ -8,7 +8,7 @@
     "npm": "^2.9.1"
   },
   "scripts": {
-    "lint": "grunt jshint",
+    "lint": "grunt jshint:all",
     "test": "grunt test",
     "clean": "grunt clean",
     "build": "MOOC_DEV=1 grunt build",

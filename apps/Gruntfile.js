@@ -346,7 +346,8 @@ module.exports = function (grunt) {
 
   config.exec = {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
-    mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
+    mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : ''),
+    lint: './node_modules/.bin/eslint . --ext .js,.jsx'
   };
 
   var ext = envOptions.dev ? 'uncompressed' : 'compressed';
@@ -608,7 +609,7 @@ module.exports = function (grunt) {
     'exec:mochaTest'
   ]);
 
-  grunt.registerTask('test', ['jshint:all', 'mochaTest']);
+  grunt.registerTask('test', ['exec:lint', 'mochaTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 
