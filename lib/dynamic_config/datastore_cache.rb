@@ -52,9 +52,10 @@ class DatastoreCache
   # @param value [JSONable]
   def set(key, value)
     raise ArgumentError unless key.is_a? String
+    old_value = @cache[key]
     @datastore.set(key, value)
     set_local(key, value)
-    notify_change_listeners()
+    notify_change_listeners() if value != old_value
   end
 
   # Return all cached elements
