@@ -115,12 +115,20 @@ DropletTooltipManager.prototype.showDocFor = function (functionName) {
   if (!this.tooltipsEnabled) {
     return;
   }
+
+  var tooltip = this.getDropletTooltip(functionName);
+  if (tooltip.customDocURL) {
+    var win = window.open(tooltip.customDocURL, '_blank');
+    win.focus();
+    return;
+  }
+
   $('.tooltipstered').tooltipster('hide');
   var dialog = new window.Dialog({
     body: $('<iframe>')
       .addClass('markdown-instructions-container')
       .width('100%')
-      .attr('src', this.getDropletTooltip(functionName).getFullDocumentationURL()),
+      .attr('src', tooltip.getFullDocumentationURL()),
     autoResizeScrollableElement: '.markdown-instructions-container',
     id: 'block-documentation-lightbox'
   });
