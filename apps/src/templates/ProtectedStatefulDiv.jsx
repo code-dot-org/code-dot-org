@@ -1,5 +1,9 @@
 'use strict';
 
+// Note: This file is not linted, because it uses the JSX spread operator, and
+// our linter can't support that without enabling ES6 linting everywhere (which
+// we don't yet want)
+
 /**
  * A div DOM element that will never update its contents and will throw an
  * exception if it is ever unmounted, enforcing that it must always be rendered
