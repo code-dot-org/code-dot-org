@@ -29,7 +29,7 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 <div style="clear: both;"></div>
 
 ## Code.org's CS Principles Curriculum
-Check back often as batches of lessons will be released on a rolling basis. The resources will be distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+Check back often as batches of lessons will be released on a rolling basis. The resources are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos).
 
 ### <a name="features"></a>Features
 
@@ -39,7 +39,7 @@ Check back often as batches of lessons will be released on a rolling basis. The 
 - Learn from a diverse cast of role models, from well-known tech celebrities to social innovators who are using CS to tackle society's problems
 - Engage all students in constructing their own understanding of computer science concepts through equitable teaching practices and inquiry-based instructional strategies
 - Prepare for the AP® CS Principles exam through a curriculum intentionally designed around the latest developments in the College Board framework, including built-in preparation for the performance tasks  
-- Use, share, and customize the resources, as they are distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+- Use, share, and customize the resources, as they are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos).
 
 [<button>See App Lab in action</button>](/educate/applab) &nbsp;&nbsp; [<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
