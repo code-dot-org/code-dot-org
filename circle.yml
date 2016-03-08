@@ -39,10 +39,6 @@ dependencies:
     - 'echo "build_pegasus: true" >> locals.yml'
     # Run rake install
     - bundle exec rake install
-    # temporarily set hoc flags to green, currently required for dev enlistments
-    - ./set_hoc_flags.rb green:
-        pwd:
-            bin/dynamic_config
     - bundle exec rake assets:precompile:
         pwd:
             dashboard
