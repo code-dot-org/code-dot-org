@@ -2,10 +2,10 @@
 -# Expects an array of three column arrays [date, percentage, count] in the variable
 -# @ratings_by_day.
 
-.by_day
+.by-day
   %h3
     Percentages by Day
-  #chart_by_day
+  #chart-by-day
   %table
     %tr
       - ['Date', 'Percentage', 'Count'].each do |header|
@@ -22,22 +22,5 @@
 
 - content_for :body_scripts do
   :javascript
-    // Load the Visualization API and the appropriate packages, setting a callback
-    // to run when the API is loaded.
-    google.load('visualization', '1.0', {'packages':['corechart']});
-    google.setOnLoadCallback(drawChart);
-    var percentages_by_day = #{@ratings_by_day.map{|row| [row[0], row[1].to_f]}.try(:to_json)}
-
-    // The callback that creates and populates the data table, instantiates the
-    // chart, and draws it.
-    function drawChart() {
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Date');
-      data.addColumn('number', 'Percentage');
-      data.addRows(percentages_by_day);
-
-      // Instantiate and draw our chart, passing in some options.
-      var options = {'title': 'Fun-O-Meter By Day', 'width':800, 'height':500};
-      var chart = new google.visualization.LineChart(document.getElementById('chart_by_day'));
-      chart.draw(data, options);
-    }
+    var percentagesByDay = #{@ratings_by_day.map{|row| [row[0], row[1].to_f]}.try(:to_json)}
+    #{render template: 'admin_funometer/funometerPercentagesByDay.js', formats: [:js]}
