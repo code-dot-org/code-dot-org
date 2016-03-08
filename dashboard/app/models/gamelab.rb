@@ -94,6 +94,7 @@ class Gamelab < Blockly
         "camera.position.x": null,
         "camera.position.y": null,
         "camera.zoom": null,
+        "playSound": null,
 
         // Sprites
         "createSprite": null,

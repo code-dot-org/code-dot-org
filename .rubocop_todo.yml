@@ -273,10 +273,6 @@ Style/GlobalVars:
 Style/HashSyntax:
   Enabled: false
 
-# Offense count: 2
-Style/IdenticalConditionalBranches:
-  Enabled: false
-
 # Offense count: 64
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
@@ -508,10 +504,6 @@ Style/StringLiterals:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: single_quotes, double_quotes
 Style/StringLiteralsInInterpolation:
-  Enabled: false
-
-# Offense count: 1
-Style/StructInheritance:
   Enabled: false
 
 # Offense count: 12

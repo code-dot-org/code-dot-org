@@ -1,5 +1,6 @@
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
+var consoleApi = require('../consoleApi');
 var showAssetManager = require('../assetManagement/show');
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 
@@ -23,10 +24,10 @@ var spriteBlockPrefix = 'sprite.';
 var groupBlockPrefix = 'group.';
 var animBlockPrefix = 'anim.';
 
-var GameLab;
+var gameLab;
 
 exports.injectGameLab = function (gamelab) {
-  GameLab = gamelab;
+  gameLab = gamelab;
 };
 
 // Flip the argument order so we can bind `typeFilter`.
@@ -36,86 +37,88 @@ function chooseAsset(typeFilter, callback) {
 
 module.exports.blocks = [
   // Game Lab
-  {func: 'loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], type: 'either', dropdown: { 0: function () { return getAssetDropdown('image'); } }, assetTooltip: { 0: chooseAsset.bind(null, 'image') } },
-  {func: 'var img = loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], noAutocomplete: true },
-  {func: 'image', category: 'Game Lab', paletteParams: ['image','srcX','srcY','srcW','srcH','x','y','w','h'], params: ["img", "0", "0", "img.width", "img.height", "0", "0", "img.width", "img.height"] },
-  {func: 'fill', category: 'Game Lab', paletteParams: ['color'], params: ["'yellow'"] },
-  {func: 'noFill', category: 'Game Lab' },
-  {func: 'stroke', category: 'Game Lab', paletteParams: ['color'], params: ["'blue'"] },
-  {func: 'noStroke', category: 'Game Lab' },
-  {func: 'arc', category: 'Game Lab', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "HALF_PI"] },
-  {func: 'ellipse', category: 'Game Lab', paletteParams: ['x','y','w','h'], params: ["200", "200", "400", "400"] },
-  {func: 'line', category: 'Game Lab', paletteParams: ['x1','y1','x2','y2'], params: ["0", "0", "400", "400"] },
-  {func: 'point', category: 'Game Lab', paletteParams: ['x','y'], params: ["200", "200"] },
-  {func: 'rect', category: 'Game Lab', paletteParams: ['x','y','w','h'], params: ["100", "100", "200", "200"] },
-  {func: 'triangle', category: 'Game Lab', paletteParams: ['x1','y1','x2','y2','x3','y3'], params: ["200", "0", "0", "400", "400", "400"] },
-  {func: 'text', category: 'Game Lab', paletteParams: ['str','x','y','w','h'], params: ["'text'", "0", "0", "400", "100"] },
-  {func: 'textAlign', category: 'Game Lab', paletteParams: ['horiz','vert'], params: ["CENTER", "TOP"] },
-  {func: 'textSize', category: 'Game Lab', paletteParams: ['pixels'], params: ["12"] },
-  {func: 'drawSprites', category: 'Game Lab' },
-  {func: 'allSprites', category: 'Game Lab', block: 'allSprites', type: 'property' },
-  {func: 'background', category: 'Game Lab', paletteParams: ['color'], params: ["'black'"] },
-  {func: 'width', category: 'Game Lab', type: 'property' },
-  {func: 'height', category: 'Game Lab', type: 'property' },
-  {func: 'camera', category: 'Game Lab', type: 'property' },
-  {func: 'camera.on', category: 'Game Lab' },
-  {func: 'camera.off', category: 'Game Lab' },
-  {func: 'camera.active', category: 'Game Lab', type: 'property' },
-  {func: 'camera.mouseX', category: 'Game Lab', type: 'property' },
-  {func: 'camera.mouseY', category: 'Game Lab', type: 'property' },
-  {func: 'camera.position.x', category: 'Game Lab', type: 'property' },
-  {func: 'camera.position.y', category: 'Game Lab', type: 'property' },
-  {func: 'camera.zoom', category: 'Game Lab', type: 'property' },
+  {func: 'loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], type: 'either', dropdown: { 0: function () { return getAssetDropdown('image'); } }, assetTooltip: { 0: chooseAsset.bind(null, 'image') }, customDocURL: "http://p5js.org/reference/#/p5/loadImage" },
+  {func: 'var img = loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/loadImage" },
+  {func: 'image', category: 'Game Lab', paletteParams: ['image','srcX','srcY','srcW','srcH','x','y','w','h'], params: ["img", "0", "0", "img.width", "img.height", "0", "0", "img.width", "img.height"], customDocURL: "http://p5js.org/reference/#/p5/image" },
+  {func: 'fill', category: 'Game Lab', paletteParams: ['color'], params: ["'yellow'"], customDocURL: "http://p5js.org/reference/#/p5/fill" },
+  {func: 'noFill', category: 'Game Lab', customDocURL: "http://p5js.org/reference/#/p5/noFill" },
+  {func: 'stroke', category: 'Game Lab', paletteParams: ['color'], params: ["'blue'"], customDocURL: "http://p5js.org/reference/#/p5/stroke" },
+  {func: 'noStroke', category: 'Game Lab', customDocURL: "http://p5js.org/reference/#/p5/noStroke" },
+  {func: 'arc', category: 'Game Lab', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "HALF_PI"], customDocURL: "http://p5js.org/reference/#/p5/arc" },
+  {func: 'ellipse', category: 'Game Lab', paletteParams: ['x','y','w','h'], params: ["200", "200", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/ellipse" },
+  {func: 'line', category: 'Game Lab', paletteParams: ['x1','y1','x2','y2'], params: ["0", "0", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/line" },
+  {func: 'point', category: 'Game Lab', paletteParams: ['x','y'], params: ["200", "200"], customDocURL: "http://p5js.org/reference/#/p5/point" },
+  {func: 'rect', category: 'Game Lab', paletteParams: ['x','y','w','h'], params: ["100", "100", "200", "200"], customDocURL: "http://p5js.org/reference/#/p5/rect" },
+  {func: 'triangle', category: 'Game Lab', paletteParams: ['x1','y1','x2','y2','x3','y3'], params: ["200", "0", "0", "400", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/triangle" },
+  {func: 'text', category: 'Game Lab', paletteParams: ['str','x','y','w','h'], params: ["'text'", "0", "0", "400", "100"], customDocURL: "http://p5js.org/reference/#/p5/text" },
+  {func: 'textAlign', category: 'Game Lab', paletteParams: ['horiz','vert'], params: ["CENTER", "TOP"], customDocURL: "http://p5js.org/reference/#/p5/textAlign" },
+  {func: 'textSize', category: 'Game Lab', paletteParams: ['pixels'], params: ["12"], customDocURL: "http://p5js.org/reference/#/p5/textSize" },
+  {func: 'drawSprites', category: 'Game Lab', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-updateSprites" },
+  {func: 'allSprites', category: 'Game Lab', block: 'allSprites', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#prop-allSprites" },
+  {func: 'background', category: 'Game Lab', paletteParams: ['color'], params: ["'black'"], customDocURL: "http://p5js.org/reference/#/p5/background" },
+  {func: 'width', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5js.org/reference/#/p5/width" },
+  {func: 'height', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5js.org/reference/#/p5/height" },
+  {func: 'camera', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html" },
+  {func: 'camera.on', category: 'Game Lab', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#method-on" },
+  {func: 'camera.off', category: 'Game Lab', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#method-off" },
+  {func: 'camera.active', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-active" },
+  {func: 'camera.mouseX', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-mouseX" },
+  {func: 'camera.mouseY', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-mouseY" },
+  {func: 'camera.position.x', category: 'Game Lab', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-position" },
+  {func: 'camera.position.y', category: 'Game Lab', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-position" },
+  {func: 'camera.zoom', category: 'Game Lab', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-zoom" },
+  {func: 'console.log', parent: consoleApi, category: 'Game Lab', paletteParams: ['message'], params: ['"message"'] },
+  {func: 'playSound', parent: api, category: 'Game Lab', paletteParams: ['url'], params: ['"https://studio.code.org/blockly/media/example.mp3"'], dropdown: { 0: function () { return getAssetDropdown('audio'); } }, 'assetTooltip': { 0: chooseAsset.bind(null, 'audio') } },
 
   // Sprites
-  {func: 'createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either' },
-  {func: 'var sprite = createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], noAutocomplete: true, docFunc: 'createSprite' },
-  {func: 'setSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setSpeed' },
-  {func: 'getAnimationLabel', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getAnimationLabel', type: 'value' },
-  {func: 'getDirection', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getDirection', type: 'value' },
-  {func: 'getSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getSpeed', type: 'value' },
-  {func: 'remove', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.remove' },
-  {func: 'addAnimation', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label','animation'], params: ['"anim1"', "anim"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addAnimation' },
-  {func: 'addImage', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label','image'], params: ['"img1"', "img"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addImage' },
-  {func: 'addSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addSpeed' },
-  {func: 'addToGroup', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['group'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addToGroup' },
-  {func: 'bounce', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.bounce', type: 'either' },
-  {func: 'collide', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.collide', type: 'either' },
-  {func: 'displace', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.displace', type: 'either' },
-  {func: 'overlap', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.overlap', type: 'either' },
-  {func: 'changeAnimation', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label'], params: ['"anim1"'], tipPrefix: spriteMethodPrefix, modeOptionName: '*.changeAnimation' },
-  {func: 'changeImage', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label'], params: ['"img1"'], tipPrefix: spriteMethodPrefix, modeOptionName: '*.changeImage' },
-  {func: 'attractionPoint', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','x','y'], params: ["1", "200", "200"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.attractionPoint' },
-  {func: 'limitSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['max'], params: ["3"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.limitSpeed' },
-  {func: 'setCollider', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['type','x','y','w','h'], params: ['"rectangle"', "0", "0", "20", "20"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setCollider' },
-  {func: 'setVelocity', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['x','y'], params: ["1", "1"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setVelocity' },
-  {func: 'sprite.height', category: 'Sprites', modeOptionName: '*.height', type: 'property' },
-  {func: 'sprite.width', category: 'Sprites', modeOptionName: '*.width', type: 'property' },
-  {func: 'sprite.animation', category: 'Sprites', modeOptionName: '*.animation', type: 'property' },
-  {func: 'depth', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.depth', type: 'property' },
-  {func: 'friction', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.friction', type: 'property' },
-  {func: 'immovable', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.immovable', type: 'property' },
-  {func: 'life', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.life', type: 'property' },
-  {func: 'mass', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.mass', type: 'property' },
-  {func: 'maxSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.maxSpeed', type: 'property' },
-  {func: 'position', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.position', type: 'property' },
-  {func: 'sprite.position.x', category: 'Sprites', modeOptionName: 'sprite_position_x', type: 'property', noAutocomplete: true },
-  {func: 'sprite.position.y', category: 'Sprites', modeOptionName: 'sprite_position_y', type: 'property', noAutocomplete: true },
-  {func: 'previousPosition', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.previousPosition', type: 'property' },
-  {func: 'sprite.previousPosition.x', category: 'Sprites', modeOptionName: 'sprite_previousPosition_x', type: 'property', noAutocomplete: true },
-  {func: 'sprite.previousPosition.y', category: 'Sprites', modeOptionName: 'sprite_previousPosition_y', type: 'property', noAutocomplete: true },
-  {func: 'removed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.removed', type: 'property' },
-  {func: 'restitution', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.restitution', type: 'property' },
-  {func: 'rotateToDirection', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotateToDirection', type: 'property' },
-  {func: 'rotation', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotation', type: 'property' },
-  {func: 'rotationSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotationSpeed', type: 'property' },
-  {func: 'scale', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.scale', type: 'property' },
-  {func: 'shapeColor', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.shapeColor', type: 'property' },
-  {func: 'touching', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.touching', type: 'property' },
-  {func: 'velocity', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.velocity', type: 'property' },
-  {func: 'sprite.velocity.x', category: 'Sprites', modeOptionName: 'sprite_velocity_x', type: 'property', noAutocomplete: true },
-  {func: 'sprite.velocity.y', category: 'Sprites', modeOptionName: 'sprite_velocity_y', type: 'property', noAutocomplete: true },
-  {func: 'visible', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.visible', type: 'property' },
+  {func: 'createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-createSprite" },
+  {func: 'var sprite = createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], noAutocomplete: true, docFunc: 'createSprite', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-createSprite" },
+  {func: 'setSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setSpeed', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-setSpeed" },
+  {func: 'getAnimationLabel', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getAnimationLabel', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-getAnimationLabel" },
+  {func: 'getDirection', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getDirection', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-getDirection" },
+  {func: 'getSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getSpeed', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-getSpeed" },
+  {func: 'remove', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.remove', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-remove" },
+  {func: 'addAnimation', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label','animation'], params: ['"anim1"', "anim"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addAnimation', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-addAnimation" },
+  {func: 'addImage', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label','image'], params: ['"img1"', "img"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addImage', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-addImage" },
+  {func: 'addSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addSpeed', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-addSpeed" },
+  {func: 'addToGroup', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['group'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addToGroup', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-addToGroup" },
+  {func: 'bounce', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.bounce', type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-bounce" },
+  {func: 'collide', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.collide', type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-collide" },
+  {func: 'displace', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.displace', type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-displace" },
+  {func: 'overlap', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.overlap', type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-overlap" },
+  {func: 'changeAnimation', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label'], params: ['"anim1"'], tipPrefix: spriteMethodPrefix, modeOptionName: '*.changeAnimation', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-changeAnimation" },
+  {func: 'changeImage', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label'], params: ['"img1"'], tipPrefix: spriteMethodPrefix, modeOptionName: '*.changeImage', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-changeImage" },
+  {func: 'attractionPoint', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','x','y'], params: ["1", "200", "200"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.attractionPoint', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-attractionPoint" },
+  {func: 'limitSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['max'], params: ["3"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.limitSpeed', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-limitSpeed" },
+  {func: 'setCollider', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['type','x','y','w','h'], params: ['"rectangle"', "0", "0", "20", "20"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setCollider', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-setCollider" },
+  {func: 'setVelocity', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['x','y'], params: ["1", "1"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setVelocity', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-setVelocity" },
+  {func: 'sprite.height', category: 'Sprites', modeOptionName: '*.height', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-height" },
+  {func: 'sprite.width', category: 'Sprites', modeOptionName: '*.width', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-width" },
+  {func: 'sprite.animation', category: 'Sprites', modeOptionName: '*.animation', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-animation" },
+  {func: 'depth', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.depth', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-depth" },
+  {func: 'friction', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.friction', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-friction" },
+  {func: 'immovable', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.immovable', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-immovable" },
+  {func: 'life', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.life', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-life" },
+  {func: 'mass', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.mass', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-mass" },
+  {func: 'maxSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.maxSpeed', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-maxSpeed" },
+  {func: 'position', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.position', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-position" },
+  {func: 'sprite.position.x', category: 'Sprites', modeOptionName: 'sprite_position_x', type: 'property', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-position" },
+  {func: 'sprite.position.y', category: 'Sprites', modeOptionName: 'sprite_position_y', type: 'property', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-position" },
+  {func: 'previousPosition', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.previousPosition', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-previousPosition" },
+  {func: 'sprite.previousPosition.x', category: 'Sprites', modeOptionName: 'sprite_previousPosition_x', type: 'property', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-previousPosition" },
+  {func: 'sprite.previousPosition.y', category: 'Sprites', modeOptionName: 'sprite_previousPosition_y', type: 'property', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-previousPosition" },
+  {func: 'removed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.removed', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-removed" },
+  {func: 'restitution', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.restitution', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-restitution" },
+  {func: 'rotateToDirection', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotateToDirection', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-rotateToDirection" },
+  {func: 'rotation', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotation', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-rotation" },
+  {func: 'rotationSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.rotationSpeed', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-rotationSpeed" },
+  {func: 'scale', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.scale', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-scale" },
+  {func: 'shapeColor', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.shapeColor', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-shapeColor" },
+  {func: 'touching', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.touching', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-touching" },
+  {func: 'velocity', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.velocity', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-velocity" },
+  {func: 'sprite.velocity.x', category: 'Sprites', modeOptionName: 'sprite_velocity_x', type: 'property', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-velocity" },
+  {func: 'sprite.velocity.y', category: 'Sprites', modeOptionName: 'sprite_velocity_y', type: 'property', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-velocity" },
+  {func: 'visible', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.visible', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-visible" },
 /* TODO: decide whether to expose these Sprite properties:
 camera
 collider - USEFUL? (marshal AABB and CircleCollider)
@@ -139,25 +142,25 @@ update() - USEFUL?
 */
 
   // Animations
-  {func: 'loadAnimation', category: 'Animations', paletteParams: ['url1','url2'], params: ['"http://p5play.molleindustria.org/examples/assets/ghost_standing0001.png"', '"http://p5play.molleindustria.org/examples/assets/ghost_standing0002.png"'], type: 'either' },
-  {func: 'var anim = loadAnimation', category: 'Animations', paletteParams: ['url1','url2'], params: ['"http://p5play.molleindustria.org/examples/assets/ghost_standing0001.png"', '"http://p5play.molleindustria.org/examples/assets/ghost_standing0002.png"'], noAutocomplete: true, docFunc: 'loadAnimation' },
-  {func: 'animation', category: 'Animations', paletteParams: ['animation','x','y'], params: ["anim", "50", "50"] },
-  {func: 'changeFrame', blockPrefix: animBlockPrefix, category: 'Animations', paletteParams: ['frame'], params: ["0"], tipPrefix: animMethodPrefix, modeOptionName: '*.changeFrame' },
-  {func: 'nextFrame', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.nextFrame' },
-  {func: 'previousFrame', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.previousFrame' },
-  {func: 'clone', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.clone', type: 'value' },
-  {func: 'getFrame', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.getFrame', type: 'value' },
-  {func: 'getLastFrame', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.getLastFrame', type: 'value' },
-  {func: 'goToFrame', blockPrefix: animBlockPrefix, category: 'Animations', paletteParams: ['frame'], params: ["1"], tipPrefix: animMethodPrefix, modeOptionName: '*.goToFrame' },
-  {func: 'play', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.play' },
-  {func: 'rewind', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.rewind' },
-  {func: 'stop', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.stop' },
-  {func: 'frameChanged', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.frameChanged', type: 'property' },
-  {func: 'frameDelay', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.frameDelay', type: 'property' },
-  {func: 'images', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.images', type: 'property' },
-  {func: 'looping', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.looping', type: 'property' },
-  {func: 'playing', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.playing', type: 'property' },
-  {func: 'anim.visible', category: 'Animations', modeOptionName: '*.visible', type: 'property' },
+  {func: 'loadAnimation', category: 'Animations', paletteParams: ['url1','url2'], params: ['"http://p5play.molleindustria.org/examples/assets/ghost_standing0001.png"', '"http://p5play.molleindustria.org/examples/assets/ghost_standing0002.png"'], type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-loadAnimation" },
+  {func: 'var anim = loadAnimation', category: 'Animations', paletteParams: ['url1','url2'], params: ['"http://p5play.molleindustria.org/examples/assets/ghost_standing0001.png"', '"http://p5play.molleindustria.org/examples/assets/ghost_standing0002.png"'], noAutocomplete: true, docFunc: 'loadAnimation', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-loadAnimation" },
+  {func: 'animation', category: 'Animations', paletteParams: ['animation','x','y'], params: ["anim", "50", "50"], customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-animation" },
+  {func: 'changeFrame', blockPrefix: animBlockPrefix, category: 'Animations', paletteParams: ['frame'], params: ["0"], tipPrefix: animMethodPrefix, modeOptionName: '*.changeFrame', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#method-changeFrame" },
+  {func: 'nextFrame', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.nextFrame', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#method-changeFrame" },
+  {func: 'previousFrame', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.previousFrame', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#method-changeFrame" },
+  {func: 'clone', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.clone', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#method-clone" },
+  {func: 'getFrame', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.getFrame', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#method-getFrame" },
+  {func: 'getLastFrame', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.getLastFrame', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#method-getLastFrame" },
+  {func: 'goToFrame', blockPrefix: animBlockPrefix, category: 'Animations', paletteParams: ['frame'], params: ["1"], tipPrefix: animMethodPrefix, modeOptionName: '*.goToFrame', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#method-goToFrame" },
+  {func: 'play', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.play', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#method-play" },
+  {func: 'rewind', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.rewind', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#method-rewind" },
+  {func: 'stop', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.stop', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#method-stop" },
+  {func: 'frameChanged', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.frameChanged', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#prop-frameChanged" },
+  {func: 'frameDelay', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.frameDelay', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#prop-frameDelay" },
+  {func: 'images', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.images', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#prop-images" },
+  {func: 'looping', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.looping', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#prop-looping" },
+  {func: 'playing', blockPrefix: animBlockPrefix, category: 'Animations', tipPrefix: animMethodPrefix, modeOptionName: '*.playing', type: 'readonlyproperty', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#prop-playing" },
+  {func: 'anim.visible', category: 'Animations', modeOptionName: '*.visible', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Animation.html#prop-visible" },
 /* TODO: decide whether to expose these Animation methods:
 draw(xy)
 getFrameImage()
@@ -167,46 +170,46 @@ getWidth()
 */
 
   // Groups
-  {func: 'Group', category: 'Groups', type: 'either' },
-  {func: 'var group = new Group', category: 'Groups', type: 'either', docFunc: 'Group' },
-  {func: 'add', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], tipPrefix: groupMethodPrefix, modeOptionName: '*.add' },
-  {func: 'group.remove', category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], modeOptionName: 'group_remove', noAutocomplete: true }, /* avoid sprite.remove conflict */
-  {func: 'clear', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.clear' },
-  {func: 'contains', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], tipPrefix: groupMethodPrefix, modeOptionName: '*.contains', type: 'value' },
-  {func: 'get', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['i'], params: ["0"], tipPrefix: groupMethodPrefix, modeOptionName: '*.get', type: 'value' },
-  {func: 'group.bounce', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_bounce', noAutocomplete: true }, /* avoid sprite.bounce conflict */
-  {func: 'group.collide', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_collide', noAutocomplete: true }, /* avoid sprite.collide conflict */
-  {func: 'group.displace', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_displace', noAutocomplete: true }, /* avoid sprite.displace conflict */
-  {func: 'group.overlap', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_overlap', noAutocomplete: true }, /* avoid sprite.overlap conflict */
-  {func: 'maxDepth', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.maxDepth', type: 'value' },
-  {func: 'minDepth', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.minDepth', type: 'value' },
+  {func: 'Group', category: 'Groups', type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html" },
+  {func: 'var group = new Group', category: 'Groups', type: 'either', docFunc: 'Group', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html" },
+  {func: 'add', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], tipPrefix: groupMethodPrefix, modeOptionName: '*.add', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-add" },
+  {func: 'group.remove', category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], modeOptionName: 'group_remove', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-remove" }, /* avoid sprite.remove conflict */
+  {func: 'clear', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.clear', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-clear" },
+  {func: 'contains', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], tipPrefix: groupMethodPrefix, modeOptionName: '*.contains', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-contains" },
+  {func: 'get', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['i'], params: ["0"], tipPrefix: groupMethodPrefix, modeOptionName: '*.get', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-get" },
+  {func: 'group.bounce', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_bounce', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-bounce" }, /* avoid sprite.bounce conflict */
+  {func: 'group.collide', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_collide', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-collide" }, /* avoid sprite.collide conflict */
+  {func: 'group.displace', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_displace', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-displace" }, /* avoid sprite.displace conflict */
+  {func: 'group.overlap', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_overlap', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-overlap" }, /* avoid sprite.overlap conflict */
+  {func: 'maxDepth', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.maxDepth', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-maxDepth" },
+  {func: 'minDepth', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.minDepth', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-minDepth" },
 
 /* TODO: decide whether to expose these Group methods:
 draw() - USEFUL?
 */
 
   // Events
-  {func: 'keyIsPressed', category: 'Events', type: 'property' },
-  {func: 'key', category: 'Events', type: 'property' },
-  {func: 'keyCode', category: 'Events', type: 'property' },
-  {func: 'keyDown', paletteParams: ['code'], params: ["UP_ARROW"], category: 'Events', type: 'value' },
-  {func: 'keyWentDown', paletteParams: ['code'], params: ["UP_ARROW"], category: 'Events', type: 'value' },
-  {func: 'keyWentUp', paletteParams: ['code'], params: ["UP_ARROW"], category: 'Events', type: 'value' },
-  {func: 'keyPressed', block: 'function keyPressed() {}', expansion: 'function keyPressed() {\n  __;\n}', category: 'Events' },
-  {func: 'keyReleased', block: 'function keyReleased() {}', expansion: 'function keyReleased() {\n  __;\n}', category: 'Events' },
-  {func: 'keyTyped', block: 'function keyTyped() {}', expansion: 'function keyTyped() {\n  __;\n}', category: 'Events' },
-  {func: 'mouseX', category: 'Events', type: 'property' },
-  {func: 'mouseY', category: 'Events', type: 'property' },
-  {func: 'pmouseX', category: 'Events', type: 'property' },
-  {func: 'pmouseY', category: 'Events', type: 'property' },
-  {func: 'mouseButton', category: 'Events', type: 'property' },
-  {func: 'mouseIsPressed', category: 'Events', type: 'property' },
-  {func: 'mouseMoved', block: 'function mouseMoved() {}', expansion: 'function mouseMoved() {\n  __;\n}', category: 'Events' },
-  {func: 'mouseDragged', block: 'function mouseDragged() {}', expansion: 'function mouseDragged() {\n  __;\n}', category: 'Events' },
-  {func: 'mousePressed', block: 'function mousePressed() {}', expansion: 'function mousePressed() {\n  __;\n}', category: 'Events' },
-  {func: 'mouseReleased', block: 'function mouseReleased() {}', expansion: 'function mouseReleased() {\n  __;\n}', category: 'Events' },
-  {func: 'mouseClicked', block: 'function mouseClicked() {}', expansion: 'function mouseClicked() {\n  __;\n}', category: 'Events' },
-  {func: 'mouseWheel', block: 'function mouseWheel() {}', expansion: 'function mouseWheel() {\n  __;\n}', category: 'Events' },
+  {func: 'keyIsPressed', category: 'Events', type: 'property', customDocURL: "http://p5js.org/reference/#/p5/keyIsPressed" },
+  {func: 'key', category: 'Events', type: 'property', customDocURL: "http://p5js.org/reference/#/p5/key" },
+  {func: 'keyCode', category: 'Events', type: 'property', customDocURL: "http://p5js.org/reference/#/p5/keyCode" },
+  {func: 'keyDown', paletteParams: ['code'], params: ["UP_ARROW"], category: 'Events', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-keyDown" },
+  {func: 'keyWentDown', paletteParams: ['code'], params: ["UP_ARROW"], category: 'Events', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-keyWentDown" },
+  {func: 'keyWentUp', paletteParams: ['code'], params: ["UP_ARROW"], category: 'Events', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-keyWentUp" },
+  {func: 'keyPressed', block: 'function keyPressed() {}', expansion: 'function keyPressed() {\n  __;\n}', category: 'Events', customDocURL: "http://p5js.org/reference/#/p5/keyPressed" },
+  {func: 'keyReleased', block: 'function keyReleased() {}', expansion: 'function keyReleased() {\n  __;\n}', category: 'Events', customDocURL: "http://p5js.org/reference/#/p5/keyReleased" },
+  {func: 'keyTyped', block: 'function keyTyped() {}', expansion: 'function keyTyped() {\n  __;\n}', category: 'Events', customDocURL: "http://p5js.org/reference/#/p5/keyTyped" },
+  {func: 'mouseX', category: 'Events', type: 'property', customDocURL: "http://p5js.org/reference/#/p5/mouseX" },
+  {func: 'mouseY', category: 'Events', type: 'property', customDocURL: "http://p5js.org/reference/#/p5/mouseY" },
+  {func: 'pmouseX', category: 'Events', type: 'property', customDocURL: "http://p5js.org/reference/#/p5/pmouseX" },
+  {func: 'pmouseY', category: 'Events', type: 'property', customDocURL: "http://p5js.org/reference/#/p5/pmouseY" },
+  {func: 'mouseButton', category: 'Events', type: 'property', customDocURL: "http://p5js.org/reference/#/p5/mouseButton" },
+  {func: 'mouseIsPressed', category: 'Events', type: 'property', customDocURL: "http://p5js.org/reference/#/p5/mouseIsPressed" },
+  {func: 'mouseMoved', block: 'function mouseMoved() {}', expansion: 'function mouseMoved() {\n  __;\n}', category: 'Events', customDocURL: "http://p5js.org/reference/#/p5/mouseMoved" },
+  {func: 'mouseDragged', block: 'function mouseDragged() {}', expansion: 'function mouseDragged() {\n  __;\n}', category: 'Events', customDocURL: "http://p5js.org/reference/#/p5/mouseDragged" },
+  {func: 'mousePressed', block: 'function mousePressed() {}', expansion: 'function mousePressed() {\n  __;\n}', category: 'Events', customDocURL: "http://p5js.org/reference/#/p5/mousePressed" },
+  {func: 'mouseReleased', block: 'function mouseReleased() {}', expansion: 'function mouseReleased() {\n  __;\n}', category: 'Events', customDocURL: "http://p5js.org/reference/#/p5/mouseReleased" },
+  {func: 'mouseClicked', block: 'function mouseClicked() {}', expansion: 'function mouseClicked() {\n  __;\n}', category: 'Events', customDocURL: "http://p5js.org/reference/#/p5/mouseClicked" },
+  {func: 'mouseWheel', block: 'function mouseWheel() {}', expansion: 'function mouseWheel() {\n  __;\n}', category: 'Events', customDocURL: "http://p5js.org/reference/#/p5/mouseWheel" },
 
   // Math
   {func: 'sin', category: 'Math', paletteParams: ['angle'], params: ["0"], type: 'value' },
@@ -307,3 +310,9 @@ module.exports.additionalPredefValues = [
   'CURVE', '_DEFAULT_STROKE', '_DEFAULT_FILL'
 ];
 module.exports.showParamDropdowns = true;
+
+/*
+ * Set the showExamplesLink config value so that the droplet tooltips will show
+ * an 'Examples' link that opens documentation in a lightbox:
+ */
+module.exports.showExamplesLink = true;

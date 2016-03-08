@@ -64,6 +64,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     end
     assert @gatekeeper.allows('postMilestone')
     assert @gatekeeper.allows('shareEnabled')
+    assert @gatekeeper.allows('slogging')
     assert_equal 1, @dcdo.get('hoc_activity_sample_weight', nil).to_i
     assert_equal 180, @dcdo.get('public_proxy_max_age', nil)
     assert_equal 360, @dcdo.get('public_max_age', nil)
@@ -114,6 +115,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     end
     assert @gatekeeper.allows('postMilestone')
     assert @gatekeeper.allows('shareEnabled')
+    refute @gatekeeper.allows('slogging')
     assert_equal 10, @dcdo.get('hoc_activity_sample_weight', nil).to_i
     assert_equal 14400, @dcdo.get('public_proxy_max_age', nil)
     assert_equal 28800, @dcdo.get('public_max_age', nil)
@@ -130,6 +132,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     end
     refute @gatekeeper.allows('postMilestone')
     refute @gatekeeper.allows('shareEnabled')
+    refute @gatekeeper.allows('slogging')
     assert_equal 10, @dcdo.get('hoc_activity_sample_weight', nil).to_i
     assert_equal 86400, @dcdo.get('public_proxy_max_age', nil)
     assert_equal 172800, @dcdo.get('public_max_age', nil)
