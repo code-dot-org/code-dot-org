@@ -1,7 +1,7 @@
 el:
   errors:
     messages:
-      not_saved: 'Παρακαλώ διορθώστε τα ακόλουθα σφάλματα:'
+      not_saved: 'Παρακαλώ διόρθωσε τα ακόλουθα σφάλματα:'
       too_young: Αυτό το περιεχόμενο έχει ηλικιακούς περιορισμούς σε ισχύ και δεν είναι διαθέσιμο για τους νεότερους μαθητές
   activerecord:
     errors:
@@ -24,6 +24,7 @@ el:
   hello: Γεια σου κόσμε
   welcome_back: 'Καλώς ήρθες, %{name}'
   submit: Υποβολή
+  unsubmit: Ανακλήθηκε
   add_teacher_form:
     code:
       label: 'Προσθέστε ένα δάσκαλο:'
@@ -223,7 +224,7 @@ el:
       free_play:
         playlab: Δημιουργήστε μια εφαρμογή
         artist: Ζωγραφίστε κάτι
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Δημιουργήστε μια εφαρμογή
     user:
       classroom: Αρχική Σελίδα Εκπαιδευτή
@@ -321,6 +322,7 @@ el:
     heading_hoc2014: '<h2>Η Ώρα του Κώδικα για</h2><h1>κάθε ηλικία</h1>'
     heading_elementary: '<h2>Μαθήματα 20 ωρών για</h2><h1>Αρχάριους (κάθε ηλικίας)</h1>'
     heading_apps: '<h2>Διασκέδαση για</h2><h1>όλους</h1>'
+    heading_tools: '<h2>Έτοιμοι για το επόμενο βήμα;</h2><h1>JavaScript Tools για Λύκεια</h1>'
     heading_legacy: '<h2>Το γενικό μάθημα για </h2><h1>όλες τις ηλικίες</h1>'
     your_gallery: Συλλογή φωτογραφιών
     no_primary_course: Δοκιμάστε μία σειρά μαθημάτων στο Στούντιο Κώδικα
@@ -415,6 +417,12 @@ el:
       current: Τρέχοντα επίπεδα
       unused: Αχρησιμοποίητα επίπεδα
   upsell:
+    applab:
+      title: Εργαστήριο εφαρμογών
+      body: Το App Lab (Εργαστήριο εφαρμογών) είναι ένα περιβάλλον προγραμματισμού όπου μπορείς να φτιάξεις απλές εφαρμογές (apps). Σχεδίασε μια εφαρμογή (app), γράψε κώδικα ή JavaScript με πακέτα για να την κάνεις να δουλέψει και μετά μοιράσου την εφαρμογή σου σε δευτερόλεπτα.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ηλικίες 13+
+      cta: Μάθε πώς
     hoc:
       title: Κλασικός λαβύρινθος
       body: 'Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών. Εκατομμύρια τα  έχουν ήδη δοκιμάσει.'
@@ -460,11 +468,19 @@ el:
     report_bug: Αναφορά σφάλματος
     support: Λάβετε βοήθεια
     support_url: //support.code.org
+    help_resources: Βοήθεια και πόροι
   multi:
     wrong_title: Λανθασμένη απάντηση
     wrong_body: 'Η απάντηση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε ξανά!'
     correct_title: Σωστό
     correct_body: Αυτή είναι η σωστή απάντηση.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Ευχαριστούμε
+    wrong_body: Ευχαριστούμε για την υποβολή της απάντησης.
+    correct_title: Ευχαριστούμε
+    correct_body: Ευχαριστούμε για την υποβολή της απάντησης.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -484,6 +500,9 @@ el:
     placeholder: Εισάγετε την απάντησή σας εδώ
     open_response_title: Ευχαριστούμε
     open_response_body: Ευχαριστούμε για την απάντησή σου!
+  level_group:
+    correct_title: Ευχαριστούμε
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OΚ
     startover_title: Είστε βέβαιος ότι θέλετε να ξεκινήσετε από την αρχή;

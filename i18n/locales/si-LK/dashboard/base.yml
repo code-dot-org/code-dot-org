@@ -24,6 +24,7 @@ si:
   hello: හේලෝ ලෝකය
   welcome_back: '%{name}, ඔබව නැවතත් පිළිගන්නවා'
   submit: යොමුකරන්න
+  unsubmit: Unsubmit
   add_teacher_form:
     code:
       label: 'ගුරුවරයෙක් එකතු කරන්න:'
@@ -223,7 +224,7 @@ si:
       free_play:
         playlab: App එකක් හදන්න
         artist: යමක් අඳින්න
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: App එකක් හදන්න
     user:
       classroom: Teacher Home Page
@@ -322,6 +323,7 @@ si:
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
     heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
     no_primary_course: Code Studio පාඨමාලාවක් හදාරන්න
@@ -416,6 +418,12 @@ si:
       current: Current Levels
       unused: Unused Levels
   upsell:
+    applab:
+      title: මෘදුකාංග විද්‍යාගාරය
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Classic Maze
       body: Try the basics of computer science. Millions have given it a shot.
@@ -461,11 +469,19 @@ si:
     report_bug: Report Bug
     support: උපකාර ලබාගන්න
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: පිළිතුර වැරදියි
     wrong_body: "The answer you've entered is not correct.  Please try again!"
     correct_title: නිවැරදියි
     correct_body: That is the correct answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: ස්තුතියි ඔබට
+    wrong_body: Thank you for submitting an answer.
+    correct_title: ස්තුතියි ඔබට
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -485,6 +501,9 @@ si:
     placeholder: ඔබගේ පිළිතුර මෙතනට ඇතුල් කරන්න
     open_response_title: ස්තූතියි
     open_response_body: ඔබගේ ප්‍රතිචාරය සඳහා ස්තූතියි!
+  level_group:
+    correct_title: ස්තුතියි ඔබට
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: හරි
     startover_title: මුල සිට පටන් ගැනීම ඔබ තහවුරු කරනවද?
@@ -517,7 +536,7 @@ si:
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
         jigsaw:
-          title: Jigsaw
+          title: පින්තූර ප්‍රෙහේලිකාව
           description: ""
         step:
           title: පියවර
@@ -560,8 +579,8 @@ si:
     name: නම
     updated: Updated
     project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time.'
+    need_help: Try these courses to help you get started with your new project
     really_delete: Delete?
     delete_yes: ඔව්
     delete_no: නැහැ

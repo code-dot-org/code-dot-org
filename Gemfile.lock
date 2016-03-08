@@ -151,6 +151,8 @@ GEM
     fake_sqs (0.3.1)
       builder
       sinatra
+    fakeredis (0.5.0)
+      redis (~> 3.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.10)
@@ -330,6 +332,8 @@ GEM
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
+    rack-attack (4.4.1)
+      rack
     rack-cache (1.5.1)
       rack (>= 0.4)
     rack-contrib (1.2.0)
@@ -545,6 +549,7 @@ DEPENDENCIES
   eyes_selenium (~> 2.5.0)
   factory_girl_rails
   fake_sqs
+  fakeredis
   font-awesome-rails
   geocoder
   google-api-client
@@ -589,6 +594,7 @@ DEPENDENCIES
   poltergeist
   pusher (~> 0.14.5)
   quiet_assets
+  rack-attack (~> 4.4)
   rack-cache
   rack-contrib (~> 1.1)
   rack-mini-profiler

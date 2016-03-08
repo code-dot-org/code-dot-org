@@ -24,6 +24,7 @@ da:
   hello: Hej verden
   welcome_back: 'Velkommen tilbage %{name}'
   submit: Indsend
+  unsubmit: Fortryd indsendelse
   add_teacher_form:
     code:
       label: 'Tilføje en lærer:'
@@ -222,7 +223,7 @@ da:
       free_play:
         playlab: Lav en App
         artist: Tegn noget
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Lav en App
     user:
       classroom: Lærerens startside
@@ -320,6 +321,7 @@ da:
     heading_hoc2014: '<h2>Hour of Code for</h2><h1>Alle - uanset alder</h1>'
     heading_elementary: '<h2>20 timers kurser for</h2><h1>Begyndere (alle aldre)</h1>'
     heading_apps: '<h2>Sjov for</h2><h1>Alle</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>'
     your_gallery: Galleri
     no_primary_course: Prøv et kursusforløb på Code Studio
@@ -414,6 +416,12 @@ da:
       current: Nuværende niveau
       unused: Ubrugte niveauer
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassisk labyrint
       body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
@@ -459,11 +467,19 @@ da:
     report_bug: Rapporter fejl
     support: Få hjælp
     support_url: Support.Code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Forkert svar
     wrong_body: 'Det svar, du har angivet er ikke korrekte.  Prøv venligst igen!'
     correct_title: Rigtigt
     correct_body: Det er det korrekte svar.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Tak skal du have
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Tak skal du have
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -483,6 +499,9 @@ da:
     placeholder: Skriv dit svar her
     open_response_title: Tak
     open_response_body: Tak for dit svar!
+  level_group:
+    correct_title: Tak skal du have
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: Ok
     startover_title: Sikker på, at du vil starte forfra?

@@ -15,6 +15,7 @@
 #  type                     :string(255)
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
@@ -93,6 +94,7 @@ class Gamelab < Blockly
         "camera.position.x": null,
         "camera.position.y": null,
         "camera.zoom": null,
+        "playSound": null,
 
         // Sprites
         "createSprite": null,

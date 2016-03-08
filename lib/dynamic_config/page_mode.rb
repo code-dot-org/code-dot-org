@@ -17,10 +17,7 @@ class PageModeBase
     # otherwise return a sw or mc page mode.
 
     # 50/50 chance of being in sw or mc page mode
-    # page_mode = rand(2) == 0 ? "feature-starwars" : "feature-mc"
-
-    # temporarily always set to sw mode for 1 week
-    page_mode = "feature-starwars"
+    page_mode = rand(2) == 0 ? "feature-starwars" : "feature-mc"
 
     (request && request.cookies[PAGE_MODE_KEY]) ||
         DCDO.get('page_mode', DEFAULT_PAGE_MODE) ||

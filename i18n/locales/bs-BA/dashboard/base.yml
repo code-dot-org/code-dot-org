@@ -24,6 +24,7 @@ bs:
   hello: Pozdrav svijete
   welcome_back: 'Dobrodošao/la natrag, %{name}'
   submit: Potvrdi
+  unsubmit: Poništi objavu
   add_teacher_form:
     code:
       label: 'Dodaj učitelja:'
@@ -220,7 +221,7 @@ bs:
       free_play:
         playlab: Napravi Aplikaciju
         artist: Nacrtaj Nešto
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Napravi Aplikaciju
     user:
       classroom: Početna Stranica za Učitelje
@@ -318,6 +319,7 @@ bs:
     heading_hoc2014: '<h2>Sat Kodiranja za</h2><h1>sve uzraste</h1>'
     heading_elementary: '<h2>20-satni tečajevi za</h2><h1>početnike (svih uzrasta)</h1>'
     heading_apps: '<h2>Zabava za</h2><h1>sve</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Naš opšti kurs za</h2><h1>sve uzraste</h1>'
     your_gallery: Galerija
     no_primary_course: Probajte Code Studio kurs
@@ -412,6 +414,12 @@ bs:
       current: Trenutni nivoi
       unused: Neiskorišteni nivoi
   upsell:
+    applab:
+      title: Laboratorij za Aplikacije
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Classic Maze
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
@@ -457,11 +465,19 @@ bs:
     report_bug: Prijavi Grešku
     support: Potraži Pomoći
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Netačan odgovor
     wrong_body: 'Odgovor koji ste unijeli nije ispravan.  Molimo pokušajte ponovo!'
     correct_title: Ispravno
     correct_body: To je tačan odgovor.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Hvala ti
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Hvala ti
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -481,6 +497,9 @@ bs:
     placeholder: Ovdje unesite vaš odgovor
     open_response_title: Hvala
     open_response_body: Hvala na vašem odgovoru!
+  level_group:
+    correct_title: Hvala ti
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: U redu
     startover_title: Jesi li siguran/na da želiš početi iznova?

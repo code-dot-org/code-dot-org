@@ -16,6 +16,7 @@ gem 'seamless_database_pool'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'redis', '~> 3.1.0'
+gem 'fakeredis'
 gem 'google_drive', '~> 1.0.0'
 gem 'dalli' # memcached
 gem 'parallel'
@@ -179,3 +180,5 @@ gem 'oj'
 gem 'daemons'
 
 gem 'rest-client', '~> 1.8'
+
+gem 'rack-attack', '~> 4.4'

@@ -11,7 +11,7 @@ var Hint = require('./Hint.jsx');
  * Closing the instructions and re-opening them will reset this
  * Component, allowing the button to be pressed once more.
  */
-module.exports = React.createClass({
+var HintsDisplay = React.createClass({
 
   propTypes: {
     hintReviewTitle: React.PropTypes.string.isRequired,
@@ -71,10 +71,10 @@ module.exports = React.createClass({
     var seenHints;
     if (hintsToShow && hintsToShow.length) {
       seenHints = [
-          <h1>{ this.props.hintReviewTitle }</h1>,
-          <ul>
+          <h1 key="hint-review-title">{ this.props.hintReviewTitle }</h1>,
+          <ul key="hints-to-show">
             {hintsToShow.map(function (hint) {
-              return <Hint hint={hint} ref={hint.hintId} />;
+              return <Hint hint={hint} key={hint.hintId} ref={hint.hintId} />;
             })}
           </ul>
       ];
@@ -98,3 +98,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = HintsDisplay;

@@ -181,19 +181,25 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
   # one-off internal reports
+  get '/admin/temp/diversity_survey', to: 'admin_reports#diversity_survey', as: 'diversity_survey'
   get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
 
   # internal report dashboards
-  get '/admin/funometer', to: 'admin_reports#funometer', as: 'funometer'
-  get '/admin/funometer/script/:script_id', to: 'admin_reports#funometer_by_script', as: 'funometer_by_script'
-  get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_reports#funometer_by_script_level', as: 'funometer_by_script_level'
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
+  get '/admin/retention', to: 'admin_reports#retention', as: 'retention'
+  get '/admin/retention/stages', to: 'admin_reports#retention_stages', as: 'retention_stages'
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
   get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
   get '/admin/debug', to: 'admin_reports#debug'
+
+  # Fun-O-Meter dashobards.
+  get '/admin/funometer', to: 'admin_funometer#funometer', as: 'funometer'
+  get '/admin/funometer/script/:script_id', to: 'admin_funometer#funometer_by_script', as: 'funometer_by_script'
+  get '/admin/funometer/stage/:stage_id', to: 'admin_funometer#funometer_by_stage', as: 'funometer_by_stage'
+  get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_funometer#funometer_by_script_level', as: 'funometer_by_script_level'
 
   # internal search tools
   get 'admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
@@ -273,6 +279,7 @@ Dashboard::Application.routes.draw do
     resources :learning_modules
     resources :tasks
     resources :user_course_enrollments
+    resources :enrollment_task_assignments, only: [:index, :show, :destroy]
   end
 
   get '/plc/enrollment_evaluations/:enrollment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'

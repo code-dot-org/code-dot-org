@@ -6,32 +6,32 @@ class UserLevelsControllerTest < ActionController::TestCase
     student = follower.student_user
     teacher = follower.user
 
-    user_level = create :user_level, user: student
+    user_level = create :user_level, user: student, submitted: true
 
     sign_in teacher
 
-    post :update, id: user_level.id, user_level: {best_result: Activity::FREE_PLAY_RESULT}
+    post :update, id: user_level.id, user_level: {submitted: false}
     assert_response :success
 
     user_level.reload
 
-    assert_equal Activity::FREE_PLAY_RESULT, user_level.best_result
+    assert_not user_level.submitted?
   end
 
   test "student can unsubmit own user level" do
     follower = create :follower
     student = follower.student_user
 
-    user_level = create :user_level, user: student, best_result: Activity::SUBMITTED_RESULT
+    user_level = create :user_level, user: student, submitted: true
 
     sign_in student
 
-    post :update, id: user_level.id, user_level: {best_result: Activity::FREE_PLAY_RESULT}
+    post :update, id: user_level.id, user_level: {submitted: false}
     assert_response :success
 
     user_level.reload
 
-    assert_equal Activity::FREE_PLAY_RESULT, user_level.best_result
+    assert_not user_level.submitted?
   end
 
 
@@ -39,16 +39,16 @@ class UserLevelsControllerTest < ActionController::TestCase
     follower = create :follower
     teacher = follower.user
 
-    user_level = create :user_level, user: create(:user), best_result: Activity::SUBMITTED_RESULT
+    user_level = create :user_level, user: create(:user), submitted: true
 
     sign_in teacher
 
-    post :update, id: user_level.id, user_level: {best_result: Activity::FREE_PLAY_RESULT}
+    post :update, id: user_level.id, user_level: {submitted: false}
     assert_response :forbidden
 
     user_level.reload
 
-    assert_equal Activity::SUBMITTED_RESULT, user_level.best_result
+    assert user_level.submitted?
   end
 
 end

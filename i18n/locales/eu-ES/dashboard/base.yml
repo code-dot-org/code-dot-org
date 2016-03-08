@@ -24,6 +24,7 @@ eu:
   hello: Kaixo mundua
   welcome_back: 'Ongi etorria berriro, %{name}'
   submit: Bidali
+  unsubmit: Bidalketa ezeztatu
   add_teacher_form:
     code:
       label: 'Irakaslea gehitu:'
@@ -222,7 +223,7 @@ eu:
       free_play:
         playlab: Aplikazio bat sortu
         artist: Marraztu zerbait
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Aplikazio bat sortu
     user:
       classroom: Irakasleen sarrera orria
@@ -320,6 +321,7 @@ eu:
     heading_hoc2014: '<h2>Kode Ordua</h2><h1>Adin guztietarako</h1>'
     heading_elementary: '<h2>20 orduko ikastaroak</h2><h1>informatikaren oinarriei buruz (adin guztiak)</h1>'
     heading_apps: '<h2>Dibertsioa</h2><h1>Guztiontzat</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Gure kurtso azkarra</h2><h1>adin guztietarako</h1>'
     your_gallery: Galeria
     no_primary_course: Probatu Code Studioko ikastaro bat
@@ -414,6 +416,12 @@ eu:
       current: Uneko mailak
       unused: Erabili gabeko mailak
   upsell:
+    applab:
+      title: App laborategia
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Labirinto klasikoa
       body: Oinarrizko informatikarekin saiatu. Miliokak egin du proba.
@@ -461,11 +469,19 @@ eu:
     report_bug: Akatsa jakinarazi
     support: Lortu laguntza
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Erantzun okerra
     wrong_body: Erantzuna ez da zuzena. Saiatu berriro!
     correct_title: Zuzena
     correct_body: Erantzun zuzena.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -485,6 +501,9 @@ eu:
     placeholder: Idatzi hemen zure erantzuna
     open_response_title: Eskerrik asko
     open_response_body: Eskerrik asko zure erantzunagatik!
+  level_group:
+    correct_title: Mila esker
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: Ongi
     startover_title: Ziur al zaude berriro hasi nahi duzula?

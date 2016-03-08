@@ -25,6 +25,7 @@
   hello: "ჰეი, სამყარო"
   welcome_back: "კარგია, რომ დაბრუნდით, %{name}"
   submit: "გაგზავნა"
+  unsubmit: "ჩაბარების გაუქმება"
   add_teacher_form:
     code:
       label: "მასწავლებლის დამატება:"
@@ -371,6 +372,8 @@
     heading_hoc2014: "<h2>კოდის ერთი საათი</h2><h1>ნებისმიერი ასაკისთვის</h1>"
     heading_elementary: "<h2>ოცსაათიანი კურსები</h2><h1>დამწყებთათვის (ასაკი: ნებისმიერი)</h1>"
     heading_apps: "<h2>გასართობი</h2><h1>ყველასთვის</h1>"
+    heading_tools: "<h2>მზად ხართ შემდეგი ნაბიჯისთვის?</h2><h1>JavaScript დამამთავრებელი
+      კლასებისთვის</h1>"
     heading_legacy: "<h2>ჩვენი დაჩქარებული კურსი</h2><h1>ნებისმიერი ასაკისთვის</h1>"
     your_gallery: "გალერეა"
     no_primary_course: "ნახეთ კურსი კოდის სტუდიაში"
@@ -497,6 +500,15 @@
       current: "მიმდინარე დონეები"
       unused: "გამოუყენებელი დონეები"
   upsell:
+    applab:
+      title: "აპლიკაციების ლაბორატორია"
+      body: "აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების
+        შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით
+        შემდეგ კი გაუზიარეთ იგი სხვებს."
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: "ასაკი 13+"
+      cta: "ისწავლეთ, როგორ"
     hoc:
       title: "კლასიკური ლაბირინთი"
       body: "სცადეთ პროგრამირების საფუძვლების სწავლა. ეს შანსი უკვე მილიონებმა გამოიყენეს."
@@ -552,11 +564,19 @@
     report_bug: "შეცდომის შესახებ შეტყობინება"
     support: "დახმარების მიღება"
     support_url: "//support.code.org"
+    help_resources: "დახმარება და რესურსები"
   multi:
     wrong_title: "პასუხი არასწორია"
     wrong_body: "ეს პასუხი არასწორია. სცადეთ კიდევ ერთხელ!"
     correct_title: "სწორია"
     correct_body: "ეს პასუხი სწორია."
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: "მადლობა"
+    wrong_body: "მადლობა პასუხისთვის."
+    correct_title: "მადლობა"
+    correct_body: "მადლობა პასუხისთვის."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -578,6 +598,9 @@
     placeholder: "შეიყვანეთ პასუხი აქ"
     open_response_title: "მადლობა"
     open_response_body: "მადლობა პასუხისთვის!"
+  level_group:
+    correct_title: "მადლობა"
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: "დარწმუნებული ხართ, რომ ხელახლა დაწყება გსურთ?"
