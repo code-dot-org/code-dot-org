@@ -4,21 +4,21 @@ require 'helpers/table_coerce'
 class TablesTest < Minitest::Test
   include SetupTest
 
-  def test_is_boolean
-    assert_equal true, TableCoerce.is_boolean?(true)
-    assert_equal true, TableCoerce.is_boolean?(false)
-    assert_equal true, TableCoerce.is_boolean?("false")
-    assert_equal true, TableCoerce.is_boolean?("true")
-    assert_equal true, TableCoerce.is_boolean?("False")
-    assert_equal true, TableCoerce.is_boolean?("True")
+  def test_boolean
+    assert_equal true, TableCoerce.boolean?(true)
+    assert_equal true, TableCoerce.boolean?(false)
+    assert_equal true, TableCoerce.boolean?("false")
+    assert_equal true, TableCoerce.boolean?("true")
+    assert_equal true, TableCoerce.boolean?("False")
+    assert_equal true, TableCoerce.boolean?("True")
 
-    assert_equal false, TableCoerce.is_boolean?("NotTrue")
-    assert_equal false, TableCoerce.is_boolean?("asdf")
-    assert_equal false, TableCoerce.is_boolean?("1.23")
-    assert_equal false, TableCoerce.is_boolean?("1,000")
-    assert_equal false, TableCoerce.is_boolean?(0)
-    assert_equal false, TableCoerce.is_boolean?(1)
-    assert_equal false, TableCoerce.is_boolean?(1.23)
+    assert_equal false, TableCoerce.boolean?("NotTrue")
+    assert_equal false, TableCoerce.boolean?("asdf")
+    assert_equal false, TableCoerce.boolean?("1.23")
+    assert_equal false, TableCoerce.boolean?("1,000")
+    assert_equal false, TableCoerce.boolean?(0)
+    assert_equal false, TableCoerce.boolean?(1)
+    assert_equal false, TableCoerce.boolean?(1.23)
   end
 
   def test_to_boolean
@@ -36,24 +36,24 @@ class TablesTest < Minitest::Test
     end
   end
 
-  def test_is_number
-    assert_equal true, TableCoerce.is_number?(0)
-    assert_equal true, TableCoerce.is_number?(1)
-    assert_equal true, TableCoerce.is_number?(1.23)
-    assert_equal true, TableCoerce.is_number?(1000)
+  def test_number
+    assert_equal true, TableCoerce.number?(0)
+    assert_equal true, TableCoerce.number?(1)
+    assert_equal true, TableCoerce.number?(1.23)
+    assert_equal true, TableCoerce.number?(1000)
 
-    assert_equal true, TableCoerce.is_number?("0")
-    assert_equal true, TableCoerce.is_number?("1")
-    assert_equal true, TableCoerce.is_number?("1.23")
-    assert_equal true, TableCoerce.is_number?("1000")
-    # assert_equal true, TableCoerce.is_number?("1,000")
+    assert_equal true, TableCoerce.number?("0")
+    assert_equal true, TableCoerce.number?("1")
+    assert_equal true, TableCoerce.number?("1.23")
+    assert_equal true, TableCoerce.number?("1000")
+    # assert_equal true, TableCoerce.number?("1,000")
 
-    assert_equal false, TableCoerce.is_number?("asdf")
-    assert_equal false, TableCoerce.is_number?("true")
-    assert_equal false, TableCoerce.is_number?("false")
-    assert_equal false, TableCoerce.is_number?(true)
-    assert_equal false, TableCoerce.is_number?(false)
-    assert_equal false, TableCoerce.is_number?("123asdf")
+    assert_equal false, TableCoerce.number?("asdf")
+    assert_equal false, TableCoerce.number?("true")
+    assert_equal false, TableCoerce.number?("false")
+    assert_equal false, TableCoerce.number?(true)
+    assert_equal false, TableCoerce.number?(false)
+    assert_equal false, TableCoerce.number?("123asdf")
   end
 
   def test_to_number
