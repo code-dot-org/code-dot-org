@@ -43,6 +43,7 @@
     "ejs": "0.8.4",
     "ejsify": "1.0.0",
     "es6-promise": "3.0.2",
+    "eslint": "^2.3.0",
     "express": "4.11.2",
     "factor-bundle": "2.3.3",
     "glob": "5.0.14",

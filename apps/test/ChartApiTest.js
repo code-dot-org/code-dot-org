@@ -5,7 +5,7 @@
  maxlen: 120
  */
 'use strict';
-/* global describe, beforeEach, it */
+/* global describe, beforeEach, it, Promise */
 
 var assert = require('./util/testUtils').assert;
 var ChartApi = require('@cdo/apps/applab/ChartApi');
