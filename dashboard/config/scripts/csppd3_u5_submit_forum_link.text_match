@@ -1,0 +1,19 @@
+name 'CSPPD3-u5 submit forum link'
+skip_sound true
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Share Out and Submit > Submit Link
+
+<br/>
+####  Submit the Link for your Forum Post for Review
+
+You've just shared your Challenge work on the forum. If you would like to receive payment for this online PD, please submit a link to that forum post here so we can review! 
+
+<br>
+In order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):
+<br><br>
+![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)
+
+MARKDOWN
