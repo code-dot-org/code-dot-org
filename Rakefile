@@ -78,7 +78,6 @@ namespace :circle do
     run_ui_tests_tag = args[:force_tests_commit_tag]
     if RakeUtils.circle_commit_contains(run_ui_tests_tag)
       HipChat.log "Commit message: '#{RakeUtils.circle_commit_message}' contains #{run_ui_tests_tag}, running UI tests."
-      RakeUtils.exec_in_background './bin/dashboard-server'
       RakeUtils.system_stdout 'wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz'
       RakeUtils.system_stdout 'tar -xzf sc-latest-linux.tar.gz'
       Dir.chdir(Dir.glob('sc-*-linux')[0]) do

@@ -10,6 +10,7 @@ machine:
     version: 0.12.0
   environment:
     RAILS_ENV: test
+    RACK_ENV: test
   services:
     - docker
 dependencies:
@@ -29,27 +30,22 @@ dependencies:
     - 'echo "saucelabs_authkey: $SAUCE_ACCESS_KEY" >> locals.yml'
     - 'echo "use_my_apps: true" >> locals.yml'
     - 'echo "use_my_shared_js: true" >> locals.yml'
+    - 'echo "use_my_code_studio: true" >> locals.yml'
     - 'echo "build_blockly_core: true" >> locals.yml'
     - 'echo "build_apps: true" >> locals.yml'
     - 'echo "build_code_studio: true" >> locals.yml'
     - 'echo "build_shared_js: true" >> locals.yml'
     - 'echo "build_dashboard: true" >> locals.yml'
     - 'echo "build_pegasus: true" >> locals.yml'
-    - bundle exec rake db:create:
-        pwd:
-            dashboard
-    - bundle exec rake db:schema:load:
-        pwd:
-            dashboard
-    - bundle exec rake assets:precompile:
-        pwd:
-            dashboard
     # temporarily set hoc flags to green, currently required for dev enlistments
     - ./set_hoc_flags.rb green:
         pwd:
             bin/dynamic_config
     # Run rake install
     - bundle exec rake install
+    - bundle exec rake assets:precompile:
+        pwd:
+            dashboard
     # Run rake build (twice in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build && break; done
 database:
