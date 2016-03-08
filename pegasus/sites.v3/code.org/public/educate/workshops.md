@@ -31,11 +31,11 @@ ________________
 
 The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -89,11 +89,11 @@ ________________
 
 The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -106,11 +106,7 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+TBD
 
 *More information coming soon*<br/>
  
@@ -137,11 +133,11 @@ Laptop and charger
 
 The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -154,11 +150,7 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+TBD
 
 *More information coming soon*<br/>
 
@@ -185,11 +177,11 @@ Laptop and charger
 
 The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -202,11 +194,7 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+TBD
 
 *More information coming soon*<br/>
  
@@ -243,11 +231,11 @@ ________________
 
 The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -260,11 +248,7 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+TBD
 
 *More information coming soon*<br/> 
 
@@ -290,11 +274,11 @@ Laptop and charger
 
 The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -307,11 +291,7 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+TBD
 
 *More information coming soon*<br/>
 
@@ -337,11 +317,11 @@ Laptop and charger
 
 The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -354,11 +334,7 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+TBD
 
 *More information coming soon*<br/>
  
@@ -394,11 +370,11 @@ ________________
 
 The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -416,16 +392,11 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+TBD
 
 *More information coming soon*<br/>
 
  
-
 **What do I bring to my workshop?**
 
 Water Bottle
@@ -447,11 +418,11 @@ The first phase of our professional learning program is a two-hour online introd
 </br>
 </br>
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into CS in Algebra with other teachers. During this 2-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -467,11 +438,7 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+TBD
 
 *More information coming soon*<br/>
  
@@ -497,11 +464,11 @@ The first phase of our professional learning program is a two-hour online introd
 </br>
 </br>
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into CS in Algebra with other teachers. During this 2-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -514,13 +481,10 @@ Wednesday, August 10 - Thursday, August 11<br/>
 8:00am - 4:00pm<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
+
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+TBD
 
 *More information coming soon*<br/>
 
@@ -551,11 +515,11 @@ ________________
 
 The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -568,11 +532,8 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+
+TBD
 
 *More information coming soon*<br/>
 
@@ -604,11 +565,11 @@ ________________
 
 The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -621,11 +582,7 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+TBD
 
 *More information coming soon*<br/>
 
@@ -661,11 +618,11 @@ ________________
 
 The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -678,11 +635,7 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+TBD
 
 *More information coming soon*<br/>
 
@@ -708,11 +661,11 @@ Laptop and charger
 
 The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 
-*ADD THE DUE DATE HERE (Before in person workshop?)*
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
 
 #### Phase 2: Summer Study (5 days in-person)
 
-*DESCRIPTION OF P2*
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
 
 **Save the dates**
 
@@ -725,11 +678,7 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-[UCLA<br/>
-Moore Hall <br/>
-Room 3140<br/>
-457 Portola Plaza<br/>
-Los Angeles, CA 90095](Link to google map)
+TBD
 
 *More information coming soon*<br/>
 

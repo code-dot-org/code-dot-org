@@ -132,11 +132,15 @@ Monday, July 18th - Wednesday, July 20th
 <br />
 8:30am - 3:30pm
 <br />
+
 Breakfast and lunch will be served.
 
 **Location**
 
-More Details Coming Soon!
+[General Assembly <br/>
+Level 3 Concourse Room<br/>
+10 E 21st St<br/>
+New York, NY 10010](https://www.google.com/maps/place/General+Assembly+New+York/@40.739884,-73.990081,15z/data=!4m2!3m1!1s0x0:0x3884039b8867e84b)
 
 **What do I bring to my Phase 4 Workshop?**
 

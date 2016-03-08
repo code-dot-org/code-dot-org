@@ -1,0 +1,26 @@
+- app = 'level_group'
+- data = @level.properties
+
+:javascript
+  window.levelData = #{data.to_json};
+
+= render partial: 'levels/common_audio'
+
+- data["levels"].each_with_index do |level_name, index|
+  - level_blob = Level.find_by_name(level_name)
+  - level = level_blob
+  - # Parse the array of the level resuts; see sample below in JavaScript.
+  - if @last_attempt
+    - last_attempt = JSON.parse(@last_attempt).find{|item| item["level_id"]==level.id}["result"]
+  - else
+    - last_attempt = ""
+  = render partial: 'levels/single_multi', locals: {index: index, standalone: false, level: level, last_attempt: last_attempt }
+
+= render partial: 'levels/common_audio'
+= render partial: 'levels/dialog', locals: {app: app, data: data}
+
+:javascript
+  #{render template: 'levels/multi.js', formats: [:js]}
+
+  var levelCount = #{data["levels"].count};
+  #{render template: 'levels/levelGroup.js', formats: [:js]}
