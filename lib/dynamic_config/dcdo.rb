@@ -77,7 +77,6 @@ class DCDOBase
     datastore_cache = DatastoreCache.new adapter, cache_expiration: cache_expiration
     DCDOBase.new datastore_cache
   end
-
 end
 
 DCDO = DCDOBase.create
