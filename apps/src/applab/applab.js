@@ -45,6 +45,7 @@ var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
 
 var applabConstants = require('./constants');
+var consoleApi = require('../consoleApi');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -80,8 +81,10 @@ Applab.log = function (object) {
     debuggerUi.log(object);
   }
 };
+consoleApi.setLogMethod(Applab.log);
 
-var errorHandler = require('./errorHandler');
+var errorHandler = require('../errorHandler');
+errorHandler.setLogMethod(Applab.log);
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 
@@ -1061,7 +1064,8 @@ Applab.renderVisualizationOverlay = function() {
 
   Applab.visualizationOverlay_.render(visualizationOverlay, {
     isApplabRunning: Applab.isRunning(),
-    scale: scaledWidth / unscaledWidth
+    scale: scaledWidth / unscaledWidth,
+    isInDesignMode: Applab.isInDesignMode()
   });
 };
 

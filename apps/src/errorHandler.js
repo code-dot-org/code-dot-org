@@ -1,5 +1,5 @@
-var annotationList = require('../acemode/annotationList');
-var logToCloud = require('../logToCloud');
+var annotationList = require('./acemode/annotationList');
+var logToCloud = require('./logToCloud');
 
 var ErrorLevel = {
   WARNING: 'WARNING',
@@ -8,6 +8,22 @@ var ErrorLevel = {
 
 // Rate at which we log errors to the cloud
 var ERROR_LOG_RATE = 1 / 20;
+
+/**
+ * Method that will do appropriate console/debug logging for the current app.
+ * No-op by default. Can be set by the app.
+ * TODO: Refactor this whole file into something less global.
+ * @type {function}
+ */
+var logMethod = function () {};
+
+/**
+ * Changes the log method used by the error handling methods in this file.
+ * @param {function} newLogMethod
+ */
+function setLogMethod(newLogMethod) {
+  logMethod = newLogMethod;
+}
 
 /**
  * Output error to console and gutter as appropriate
@@ -21,7 +37,7 @@ function outputError(warning, level, lineNum) {
     text += 'Line: ' + lineNum + ': ';
   }
   text += warning;
-  Applab.log(text);
+  logMethod(text);
   if (lineNum !== undefined) {
     annotationList.addRuntimeAnnotation(level, lineNum, warning);
   }
@@ -38,7 +54,7 @@ function handleError(opts, message) {
   if (opts.onError) {
     opts.onError.call(null, message);
   } else {
-    Applab.log(message);
+    logMethod(message);
   }
 }
 
@@ -46,5 +62,6 @@ function handleError(opts, message) {
 module.exports = {
   ErrorLevel: ErrorLevel,
   outputError: outputError,
-  handleError: handleError
+  handleError: handleError,
+  setLogMethod: setLogMethod
 };

@@ -158,7 +158,67 @@ And /^I delete the current design mode element$/ do
 end
 
 And /^I drag the grippy by ([-|\d]+) pixels$/ do |delta|
-  script = %Q{
+  script = get_mouse_event_creator_script
+
+  script += %Q{
+    var element = $("#visualizationResizeBar");
+    var start = {
+      x: element.offset().left,
+      y: element.offset().top
+    };
+    var end = {
+      x: start.x + #{delta},
+      y: start.y
+    }
+    var mousedown = createMouseEvent('mousedown', start.x, start.y);
+    var drag = createMouseEvent('mousemove', end.x, end.y);
+    var mouseup = createMouseEvent('mouseup', end.x, end.y);
+
+    element[0].dispatchEvent(mousedown);
+    element[0].dispatchEvent(drag);
+    element[0].dispatchEvent(mouseup);
+  }
+
+  @browser.execute_script(script)
+end
+
+And /^I hover over element with id "([^"]*)"$/ do |element_id|
+  script = get_mouse_event_creator_script
+  script += get_scale_script
+
+  script += %Q{
+    var element = $("#" + "#{element_id}");
+    var scale = getScale(element[0]);
+    var x = element.offset().left + (5 * scale);
+    var y = element.offset().top + (5 * scale);
+
+    var mousemove = createMouseEvent('mousemove', x, y);
+
+    element[0].dispatchEvent(mousemove);
+  }
+
+  @browser.execute_script(script)
+end
+
+And /^I hover over the screen at xpos ([\d]+) and ypos ([\d]+)$/ do |xpos, ypos|
+  script = get_mouse_event_creator_script
+  script += get_scale_script
+
+  script += %Q{
+    var visualization = $("#visualizationOverlay");
+    var scale = getScale(visualization[0]);
+    var x = visualization.offset().left + (#{xpos} * scale);
+    var y = visualization.offset().top + (#{ypos} * scale);
+    var mousemove = createMouseEvent('mousemove', x, y);
+
+    visualization[0].dispatchEvent(mousemove);
+  }
+
+  @browser.execute_script(script)
+end
+
+def get_mouse_event_creator_script
+  return %Q{
     function createMouseEvent(type, clientX, clientY) {
       var evt;
       var e = {
@@ -193,24 +253,13 @@ And /^I drag the grippy by ([-|\d]+) pixels$/ do |delta|
       }
       return evt;
     };
-
-    var element = $("#visualizationResizeBar");
-    var start = {
-      x: element.offset().left,
-      y: element.offset().top
-    };
-    var end = {
-      x: start.x + #{delta},
-      y: start.y
-    }
-    var mousedown = createMouseEvent('mousedown', start.x, start.y);
-    var drag = createMouseEvent('mousemove', end.x, end.y);
-    var mouseup = createMouseEvent('mouseup', end.x, end.y);
-
-    element[0].dispatchEvent(mousedown);
-    element[0].dispatchEvent(drag);
-    element[0].dispatchEvent(mouseup);
   }
+end
 
-  @browser.execute_script(script)
+def get_scale_script
+  return %Q{
+    function getScale(element) {
+      return element.getBoundingClientRect().width / element.offsetWidth;
+    };
+  }
 end
