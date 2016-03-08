@@ -16,7 +16,7 @@ The College Board has proposed a new AP® course called AP® Computer Science: P
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/teachers-1.png', text: '90% of workshop attendees ranked it the best professional development ever.'},
 {img: '/images/testimonials/fit-150/students-1.jpg', text: '"This is my 18th year of teaching and CSP is the best curriculum I have ever implemented."'},
-{img: '/images/testimonials/fit-150/students-2.jpg', text: '"This curriculum is way better than current high school curriculum for almost any subject."'}] %>
+{img: '/images/testimonials/fit-150/students-2.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
 
 <br />
 Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, and assessments that cover learning objectives from the [CS Principles Curriculum Framework](http://media.collegeboard.com/digitalServices/pdf/ap/comp-sci-principles-draft-cf-final.pdf). Course materials teach this class in the context of learning about the the Internet and programming in the JavaScript language.

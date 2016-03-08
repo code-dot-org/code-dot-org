@@ -15,7 +15,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
-    "disable_param_editing": "false",
+    "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
@@ -41,14 +41,15 @@
       "downButton",
       "upButton"
     ],
-    "markdown_instructions": "The sun is shining, the birds are chirping, and now it's time to play!  <br/><br/>\r\n\r\n<smaller>Robin has choosen a number between 10 and 30.  Use the up and down arrows to make a guess about what it is.  Click Robin to submit your guess.</smaller>  <br/><br/>\r\n\r\n<blockquote style=\"border:0; border-radius:20px; background-color:#eee; padding:20px;font-size:4;\"><big>Figure out how to change this code so that Robin chooses a number between 1 and 20.  What does the rest of the code do?</big></blockquote>\r\n\r\n<b>When you're ready, press \"Run\" and play until you guess Robin's number!</b>"
+    "markdown_instructions": "<b>The sun is shining, the birds are chirping, and now it's time to play!</b>  <br/><br/>\r\n\r\nRobin has chosen a number between 10 and 30.  \r\nUse the up and down arrows to make a guess about what it is.  \r\nClick Robin to submit your guess.\r\n\r\n- Robin will move up when your guess is too high\r\n- Robin will move down when your guess is too low\r\n- Where do you change how far Robin moves each time?\r\n- Where would you change the range of numbers to choose from?\r\n- Can you change the code so that Robin chooses a number between 1 & 20?\r\n\r\n<br/>\r\n<b>When you're ready, press \"Run\" and play until you guess Robin's number!</b>"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" editable="false">
+        <block type="procedures_defnoreturn" editable="false" movable="false" deletable="false">
           <mutation>
             <arg name="bottom"/>
             <arg name="top"/>
@@ -75,7 +76,7 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" editable="false">
+        <block type="procedures_defnoreturn" editable="false" movable="false" deletable="false">
           <mutation>
             <arg name="distance"/>
             <description>Move the bird up or down depending on whether guess is high or low</description>
