@@ -202,7 +202,9 @@ tr:
       2-3 Maze 7_instruction: Yeşil şeytana gitmeme önderlik et! (Patlayıcılara dikkat et)
       2-3 Maze 8_instruction: Beni domuza götür!
       2-3 Maze 9_instruction: Yeşil şeytana gitmeme önderlik et! (Patlayıcılara dikkat et)
-      2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
+      2-3 Maze Loops 1_instruction: |
+        Can you get me to the pig using 5 of the same
+        kind of blocks?
       2-3 Maze Loops 17_instruction: Beni ayçiçeğine götür!
       2-3 Maze Loops 18_instruction: Beni ayçiçeğine götür!
       2-3 Maze Loops 19_instruction: Beni ayçiçeğine götür!
@@ -255,6 +257,11 @@ tr:
       4-5 Artist For Loops 13_instruction: 'Bu dizayn "for" döngüsü olmadan çok fazla blok alıyor! "For" bloğu ile satırları azaltın. İpucu: son satır uzunluğu 250 pixel.'
       4-5 Artist For Loops 14_instruction: 'Birisi kodu başlattı ama daha sonra fark etti ki bunun daha kolay bir yolu olmalı! Üçgen sarmal tamamlamak için "For" bloğunu kullanın. (İpucu: son satı ruzunluğu 300 pixeldir.)'
       4-5 Artist For Loops 15_instruction: 'Birisi koda başladı ama daha sonra anladı ki bunun daha kolay bir yolu olmalı! Altıgen sarmal yapmak için "for" bloğunu kullanın.(İpucu: son satır uzunluğu 200 pixeldir.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: |-
         1'den 50'ye kadar nasıl sayabiliriz? "For" bloğunu düzenleyin.
       4-5 Artist For Loops 4_instruction: |-
@@ -292,10 +299,7 @@ tr:
       4-5 Artist Patterns 11_instruction: 'Yarım bir çember çizmek için bunu kaç kere döndürmelisin? İpucu: eğer bir çemberde 360 derece varsa ve her döngü 3 derece çizerse, tam bir çember çizmek için kaç kere döndürmelisin?'
       4-5 Artist Patterns 12_instruction: Bu döngüyü kopyalayıp sağa dön yerine sola dön seçerseniz ne olur? Bu dalgayı çizmek için işlemleri tekrarlayabilir misiniz?
       4-5 Artist Patterns 13_instruction: 'Şimdi fotoğraf çerçevesini yaratmak için bütün şeyi dört kere döndür. Köşelere dikkat et - sadece 90 derece döndüremezsin! Eğer 60 kere 3 dönüş yarım daire yapıyorsa, hangi kod bloğu köşeler için çeyrek daire yapacak?'
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
+      4-5 Artist Patterns 2_instruction: Eğer kare döngünüzü bir başka döngünün içerisine yerleştirirseniz, biz buna iç içe döngü diyoruz. 15 karenin yan yana hizalandığından emin olmak için dış döngüye ne eklemen gerekir?
       4-5 Artist Patterns 3_instruction: |
         Now let's go one level deeper! We've
         nested that whole block of code into another loop, but you need to get the
@@ -2280,6 +2284,15 @@ tr:
         Move one way, then another to
         get me to the pig.
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -4476,11 +4489,11 @@ tr:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

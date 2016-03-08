@@ -434,8 +434,8 @@
           ile bir kare oluşturmasına yardımcı olmaktır.
       3:
         image: notes/frozen2_3.jpg
-        text: Any blocks of code you put inside the "Repeat" block will be repeated
-          in sequence, as many times as you want.
+        text: "'Yenile' bloğu, içine koyduğunuz her kod istediğiniz kadar sırasıyla
+          tekrarlanır."
       4:
         image: notes/frozen2_4.jpg
         text: To draw a square, you can use the "Move Forward" and "Turn Right" block
@@ -445,8 +445,8 @@
           Right" block inside a "Repeat" block.
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: Unutmayın, "Tekrar" bloğundaki herşey için sayıyı değiştirebilirsiniz
+          ve bloğun içindekiler sayı kadar tekrar edecektir.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
@@ -471,7 +471,7 @@
           you've written code to create a square.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Bunu "bir kare oluşturun." adında bir fonksiyona tanımlayabilirsiniz '
       6:
         image: notes/frozen3_6.jpg
         text: Now you have a new block that you can use multiple times to create multiple
@@ -2969,8 +2969,7 @@
           below.
       5:
         image: notes/gumball_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
+        text: Bu orta alan araç kutusu ve buradaki her blok bir kod parçasıdır.
       6:
         image: notes/gumball_intro_6.JPG
         text: Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada
@@ -2998,8 +2997,8 @@
           happens and then when it does, the game performs an action.
       2:
         image: notes/gumball_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or
-          down arrow key or even a tap on the screen.
+        text: Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı
+          tuşu veya ekrana bir kere dokunma.
       3:
         image: notes/gumball_events_3.JPG
         text: Here, we're going to make the actor say something when the player clicks
@@ -3024,9 +3023,9 @@
           forever block.
       3:
         image: notes/gumball_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için
+          yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana
+          kendi oyununu yaparken tonla zaman kazandıracak.
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
@@ -3053,8 +3052,7 @@
           below.
       5:
         image: notes/iceage_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
+        text: Bu orta alan araç kutusu ve buradaki her blok bir kod parçasıdır.
       6:
         image: notes/iceage_intro_6.JPG
         text: Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada
@@ -3082,8 +3080,8 @@
           happens and then when it does, the game performs an action.
       2:
         image: notes/iceage_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or
-          down arrow key or even a tap on the screen.
+        text: Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı
+          tuşu veya ekrana bir kere dokunma.
       3:
         image: notes/iceage_events_3.JPG
         text: Here, we're going to make the actor say something when the player clicks
@@ -3108,6 +3106,6 @@
           forever block.
       3:
         image: notes/iceage_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için
+          yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana
+          kendi oyununu yaparken tonla zaman kazandıracak.

@@ -156,7 +156,7 @@ fr:
           description_short: Aidons Anna et Elsa à explorer la magie et la beauté de la glace.
         course4:
           description_short: Les cours 2 et 3 sont nécessaires pour suivre le cours 4.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: "Ce 4ème cours s'adresse aux étudiants qui ont déjà réalisé les cours 2 et 3. Les puzzles à réaliser sont d'une plus grande complexité, et apprennent aux étudiants à combiner plusieurs concepts pour résoudre des défis. Une fois ce cours achevé, les élèves seront capables de réaliser des programmes qui mettront en avant de multiples compétences, comme l'utilisation de boucles et de fonctions avec paramètres."
           "Artist: Variables": 'Artiste : Les variables'
           "Bee: For Loops": 'Abeille : Les boucles "pour"'
           title: Cours 4
@@ -1323,6 +1323,9 @@ fr:
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: 'Unit 6 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1433,6 +1436,7 @@ fr:
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Labo Age de Glace
           description_short: Crée une histoire ou fais un jeu avec le Labo Age de Glace !
@@ -1554,6 +1558,7 @@ fr:
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4

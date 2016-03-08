@@ -419,6 +419,7 @@ sk:
     applab:
       title: Laboratórium aplikácií
       body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
       audience: Ages 13+
       cta: Learn how
     hoc:
@@ -498,6 +499,9 @@ sk:
     placeholder: Zadajte vašu odpoveď
     open_response_title: Vďaka
     open_response_body: Ďakujeme za Vašu reakciu!
+  level_group:
+    correct_title: Ďakujeme
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: ok
     startover_title: Naozaj chceš začať odznova?
