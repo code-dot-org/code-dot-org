@@ -38,7 +38,7 @@ def run_rubocop(files)
 end
 
 def run_jshint(files)
-  run("grunt jshint:files --files #{files.join(",")}", APPS_DIR)
+  run("./node_modules/.bin/eslint -c .eslintrc.js #{files.join(",")}", APPS_DIR)
 end
 
 def run_haml(files)
