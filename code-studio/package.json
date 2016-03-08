@@ -22,7 +22,7 @@
     "postinstall": "linklocal",
     "lint": "npm run lint-js && npm run lint-css",
     "lint-css": "sass-lint src/css/*css",
-    "lint-js": "jshint src/js/*.js",
+    "lint-js": "jshint src/js/**/*.js",
     "test": "mochify test/**/*.js --transform babelify",
     "debug": "mochify --debug test/**/*.js --transform babelify",
     "coverage": "mochify test/**/*.js --transform babelify --plugin [ mochify-istanbul --report json --report lcov --dir ./coverage ] && istanbul check-coverage ./coverage/coverage-final.json",
