@@ -92,6 +92,6 @@ exports.showTurtle = function(id) {
   ArtistApi.log.push(['ST', null]);
 };
 
-exports.drawStamp = function(stamp) {
-  ArtistApi.log.push(['stamp', stamp, null]);
+exports.drawSticker = function(sticker) {
+  ArtistApi.log.push(['sticker', sticker, null]);
 };
