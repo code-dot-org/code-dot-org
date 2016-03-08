@@ -75,7 +75,7 @@
         <block type="draw_line_style_pattern">
           <title name="VALUE">DEFAULT</title>
         </block>
-        <block type="turtle_stamp">
+        <block type="sticker">
           <title name="VALUE">Elephant</title>
         </block>
       </xml>
