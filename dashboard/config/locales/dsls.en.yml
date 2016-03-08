@@ -253,6 +253,10 @@ en:
       CSPPD3-u5 list of challenges: {}
       CSPPD3-u5 overview: {}
       CSPPD3-u5 pick a challenge: {}
+      CSPPD3-u5 post survey: {}
+      CSPPD3-u5 post to forum: {}
+      CSPPD3-u5 reflect on challenge: {}
+      CSPPD3-u5 share out overview: {}
       CSPPD3-u5 tips for prep: {}
       CSPPD3-u5 unit 5 overview: {}
       CSPPD3-u5 what is a challenge: {}
@@ -2408,7 +2412,9 @@ en:
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700"
+        Artist Debugging Multiple Choice 1: Artist Debugging Multiple Choice 1
         Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
+        What would you need to fix to make this a finished circle?: What would you need to fix to make this a finished circle?
         Why won't this circle go all the way around?: Why won't this circle go all the way around?
       2-3 artist functions multi 1:
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
@@ -4560,6 +4566,7 @@ en:
       CSPPD3-u3 pick a challenge: {}
       CSPPD3-u3 submit forum link: {}
       CSPPD3-u4 submit forum link: {}
+      CSPPD3-u5 submit forum link: {}
       ECSPD Fence post Q1: {}
       ECSPD Handshake Q1: {}
       ECSPD Online U1D1-2 Assessment 1:

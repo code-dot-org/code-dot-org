@@ -79,18 +79,15 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveForward">
-              <next>
-                <block type="maze_nectar">
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
                   <next>
-                    <block type="maze_moveForward">
-                      <next>
-                        <block type="maze_nectar"/>
-                      </next>
-                    </block>
+                    <block type="maze_nectar"/>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>
