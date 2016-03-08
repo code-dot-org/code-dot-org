@@ -156,7 +156,7 @@ ka:
           description_short: გამოიყენეთ კოდი და შეუერთდით ანასა და ელზას ყინულის მაგიის აღმოჩენაში.
         course4:
           description_short: კურსი 4-ის მოსწავლეებს გავლილი უნდა ჰქონდეთ კურსები 2 და 3.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: კურსი 4 შექმნილია იმათთვის, ვინც უკვე გაიარა კურსები 2 და 3. მოსწავლეები გაიგებენ, როგორ გაუმკლავდნენ უფრო რთულ თავსატეხებს და ისწავლიან ამოცანის ამოსახსნელად რამდენიმე სხვადასხვა ცნების გამოყენებას. ამ კურსის დასასრულს მოსწავლეები შექმნიან პროგრამებს, რომლებიც მათ სხვადასხვა უნარებს გამოაჩენენ, მათ შორის ცოკლებისა და პარამეტრებიანი ფუნქციების შექმნას. რეკომენდირებულია მეოთხე-მერვე კლასებისთვის.
           "Artist: Variables": 'მხატვარი: ცვლადები'
           "Bee: For Loops": 'ფუტკარი: "მიზნისთვის" ციკლები'
           title: კურსი 4
@@ -1323,6 +1323,9 @@ ka:
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: 'Unit 6 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1433,6 +1436,7 @@ ka:
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: 'გამყინვარების პერიოდი - თამაშების ლაბორატორია'
           description_short: შექმენით ისტორია ან თამაში გამყინვარების პერიოდის თამაშების ლაბორატორიაში!
@@ -1455,7 +1459,7 @@ ka:
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
-          description_short: Programming
+          description_short: პროგრამირება
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           While Loop Basics: While Loop Basics
           While Loops_ Counting Flips: While Loops_ Counting Flips
@@ -1554,6 +1558,7 @@ ka:
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4

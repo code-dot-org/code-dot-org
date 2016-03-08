@@ -188,7 +188,9 @@ fi:
       2-3 Maze 7_instruction: Auta minut vihreän ilkiön luo! (Varo TNT:tä)
       2-3 Maze 8_instruction: Hoida minut tuon possun luo!
       2-3 Maze 9_instruction: Auta minut vihreän ilkiön luo! (Varo TNT:tä)
-      2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
+      2-3 Maze Loops 1_instruction: |
+        Can you get me to the pig using 5 of the same
+        kind of blocks?
       2-3 Maze Loops 17_instruction: Vie minut auringonkukan luo!
       2-3 Maze Loops 18_instruction: Vie minut auringonkukan luo!
       2-3 Maze Loops 19_instruction: Vie minut auringonkukan luo!
@@ -240,6 +242,11 @@ fi:
         Viimeisen viivan pituus on 250 pikseliä.
       4-5 Artist For Loops 14_instruction: 'Joku aloitti koodin, mutta tajusi että on oltava nopeampikin tapa! Käytä "for" lohkoa korvaamaan lohkot ja tee kolmiomainen spiraali valmiiksi. (Vihje: viimeisen viivan pituus on 300 pikseliä.)'
       4-5 Artist For Loops 15_instruction: 'Joku aloitti koodin, mutta tajusi että on oltava nopeampikin tapa! Käytä "for" lohkoa korvaamaan lohkot ja tee kuusikulmainen spiraali valmiiksi. (Vihje: viimeisen viivan pituus on 200 pikseliä.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: 'Kuinka voimme laskea 1:stä 50:een? Muokkaa "for" lohkoa.'
       4-5 Artist For Loops 4_instruction: 'Täydennä "for" lohko niin että se laskee 1:stä 10:een askelpituudella 1.'
       4-5 Artist For Loops 6_instruction: 'Piirrä neliöitä, joiden sivut ovat 50, 60, 70, 80, ja 90 pikseliä. Sinun tarvitsee käyttää "piirrä neliö" -toimintoa viisi kertaa.'
@@ -251,9 +258,7 @@ fi:
         Can you complete the program by placing
         the blocks inside a "for" block that counts from 10 to 200 by 10? You can
         find the "for" block in the Loops category.
-      4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
+      4-5 Artist For Loops 9_instruction: Nämä ympyrät ovat kokoa 5, 10, 15, 20, 25, 30 ja 35. Piirrä ympyrät käyttäen for-lohkoa.
       4-5 Artist Free Draw 1_instruction: Vapaa piirto! Piirrä mitä ikinä oletkaan insproitunut luomaan.
       4-5 Artist Functions 1_instruction: 'Käytä "toista" silmukkaa piirtääksesi kolmion.'
       4-5 Artist Functions 10a_instruction: |-
@@ -271,12 +276,8 @@ fi:
         Assessment:  Use the "draw
         a square" function to create the squares.  The squares are 50, 100, and 150
         pixels.
-      4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
+      4-5 Artist Functions 2a_instruction: 'Laita seuraavaksi nämä lohkot uuteen funktioon "piirrä pieni kolmio" ja kutsu funktiota.'
+      4-5 Artist Functions 2b_instruction: 'Luo seuraavaksi funktio "piirrä pieni kolmio" käyttäen annettuja lohkoja.'
       4-5 Artist Functions 3_instruction: |
         Now create the functions "draw a medium
         triangle" and "draw a large triangle". The "draw a small triangle" function
@@ -286,9 +287,7 @@ fi:
         This new "draw a triangle" function
         has a parameter and can do the work of all three functions before. Draw the
         same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
+      4-5 Artist Functions 5_instruction: 'Osaatko muuttaa "piirrä kolmio"-funktion "piirrä neliö"-funktioksi muuttaaksesi piirustusta?'
       4-5 Artist Functions 6_instruction: |
         Use the "draw a square" and "draw a
         triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
@@ -2279,6 +2278,15 @@ fi:
         Move one way, then another to
         get me to the pig.
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -4460,11 +4468,11 @@ fi:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

@@ -28,7 +28,7 @@
           desc: "Η Ώρα του Κώδικα"
           Maze: "Στάδιο 1"
         Edit Code:
-          desc: "Επεξεργαστείτε τον κώδικα (beta)"
+          desc: "Επεξεργασία κώδικα (beta)"
           MazeEC: "Στάδιο 1"
         2014 Levels:
           desc: "Αναπήδηση (beta)"
@@ -46,7 +46,7 @@
           desc: "Λαβύρινθος (beta)"
           MazeStep: "Βήμα Σταδίου"
         edit-code:
-          desc: "Επεξεργαστείτε τον κώδικα (beta)"
+          desc: "Επεξεργασία κώδικα (beta)"
           MazeEC: "Στάδιο 1"
           Applab: "Στάδιο 2"
           ArtistEC: "Στάδιο 3"

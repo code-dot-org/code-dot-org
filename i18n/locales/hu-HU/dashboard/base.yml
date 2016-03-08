@@ -317,7 +317,7 @@ hu:
     heading_hoc2014: '<h2>A Kódolás Órája</h2><h1>Minden korosztálynak</h1>'
     heading_elementary: '<h2>20 órás tanfolyamok</h2><h1>Számítástechnika alapjai (minden korosztálynak)</h1>'
     heading_apps: '<h2>Vidámság </h2><h1>Mindenkinek</h1>'
-    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
+    heading_tools: '<h2>Kész vagy a következő képésre?</h2><h1>JavaScript Eszközök középiskoláknak</h1>'
     heading_legacy: '<h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>'
     your_gallery: Galéria
     no_primary_course: Próbálj ki egy tanfolyamot a Kód stúdióban
@@ -414,9 +414,10 @@ hu:
   upsell:
     applab:
       title: App Lab
-      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: Az App Lab egy programozási környezet egyszerű alkalmazásokra. Tervezd meg, kódolj blokkokkal vagy JavaScript-el hogy működjön, majd oszd meg másodpercek alatt.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Kor 13+
+      cta: Ismerd meg hogyan
     hoc:
       title: Hagyományos Útvesztö
       body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
@@ -462,7 +463,7 @@ hu:
     report_bug: Hiba bejelentése
     support: Segítség kérés
     support_url: //support.code.org
-    help_resources: Help and Resources
+    help_resources: Súgó és erőforrások
   multi:
     wrong_title: Helytelen válasz
     wrong_body: 'A megadott válasz nem megfelelő.  Próbáld újra!'
@@ -472,9 +473,9 @@ hu:
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Köszönöm
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Köszönjük hogy elküldtél egy választ.
     correct_title: Köszönöm
-    correct_body: Thank you for submitting an answer.
+    correct_body: Köszönjük hogy elküldtél egy választ.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -494,6 +495,9 @@ hu:
     placeholder: Itt add meg a válaszod
     open_response_title: Köszönjük
     open_response_body: Köszönjük a választ!
+  level_group:
+    correct_title: Köszönöm
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Biztosan újra szeretnéd kezdeni?
