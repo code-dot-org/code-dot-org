@@ -18,8 +18,9 @@ class AdminReportsController < ApplicationController
       @participants = 0
       # The number of users choosing the i^th answer for the second question.
       @foodstamps = Array.new(10, 0)
-      # The number of FARM students based on FARM answer and class sizes.
-      @foodstamps_student_count = 0
+      # The number of FARM students and total students based on FARM answer and class sizes.
+      @foodstamps_count = 0
+      @foodstamps_all = 0
       # The number of users of each ethnicity.
       @ethnicities = {
         survey2016_ethnicity_american_indian: 0,
@@ -30,9 +31,11 @@ class AdminReportsController < ApplicationController
         survey2016_ethnicity_white: 0,
         survey2016_ethnicity_other: 0,
       }
-      # The number of students with reported ethnicities.
-      @ethnic_student_count = 0
-      # The number of students in sections associated to respondent teachers.
+      # The number of students with ethnicities and total reported.
+      @ethnic_count = 0
+      @ethnic_all = 0
+      # The number of students in sections associated to respondent teachers. Note that this may
+      # differ from @foodstamps_all and @ethnic_all as a teacher may not answer those questions.
       @student_count = 0
 
       SurveyResult.all.each do |survey_result|
@@ -40,29 +43,40 @@ class AdminReportsController < ApplicationController
         next if survey_result.properties.blank?
         @respondents += 1
 
+        # The number of born students associated with the teacher.
+        teachers_student_count = Follower.
+          where(user_id: survey_result.user_id).
+          joins('INNER JOIN users ON users.id = followers.student_user_id').
+          where('users.last_sign_in_at IS NOT NULL').
+          distinct.
+          count(:student_user_id)
+        @student_count += teachers_student_count
+
         foodstamp_answer = survey_result.properties['survey2016_foodstamps']
         if foodstamp_answer
           @foodstamps[foodstamp_answer.to_i] += 1
           # Note that this assumes XX% for the range XX% to YY%, so should undercount slightly.
           if foodstamp_answer.to_i <= 7
-            teachers_student_count = Follower.
-              where(user_id: survey_result.user_id).
-              joins('INNER JOIN users ON users.id = followers.student_user_id').
-              where('users.last_sign_in_at IS NOT NULL').
-              distinct.
-              count(:student_user_id)
-            @foodstamps_student_count += foodstamp_answer.to_f / 10 * teachers_student_count
-            @student_count += teachers_student_count
+            @foodstamps_count += foodstamp_answer.to_f / 10 * teachers_student_count
+            @foodstamps_all += teachers_student_count
           end
         end
 
+        has_ethnic_data = false
         @ethnicities.each_key do |ethnicity|
-          @ethnicities[ethnicity] += survey_result.properties[ethnicity.to_s].to_i
+          ethnicity_answer = survey_result.properties[ethnicity.to_s].to_i
+          if ethnicity_answer > 0
+            has_ethnic_data = true
+            @ethnicities[ethnicity] += ethnicity_answer
+          end
+        end
+        if has_ethnic_data
+          @ethnic_all += teachers_student_count
         end
       end
 
       @ethnicities.each_value do |count|
-        @ethnic_student_count += count
+        @ethnic_count += count
       end
     end
   end
