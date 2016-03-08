@@ -152,7 +152,7 @@ var Lightbulb = React.createClass({
       // If there are more than nine hints, simply display "9+"
       var countText = (this.props.count > 9) ? "9+" : this.props.count;
       countDisplay = (<g>
-        <text x="400" y="700" style={this.getHintCountStyle()} >{countText}</text>
+        <text id="hintCount" x="400" y="700" style={this.getHintCountStyle()} >{countText}</text>
       </g>);
     }
 
