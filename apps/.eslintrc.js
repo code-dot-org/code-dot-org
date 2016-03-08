@@ -1,8 +1,13 @@
 module.exports = {
   "extends": "eslint:recommended",
   "parserOptions": {
+    // TODO - renable file with spread
+    // Though we dont technically support ES6 everywhere, it is used by craft
+    "ecmaVersion": 6,
+    "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "modules": true
     },
   },
   "globals": {
