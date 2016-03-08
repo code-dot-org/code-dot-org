@@ -135,7 +135,7 @@ function test_initializeFunctionEditor() {
   assertEquals(false, definitionBlock.isDeletable());
   assertEquals(false, definitionBlock.isEditable());
   assertEquals(false,
-      goog.style.isElementShown(Blockly.functionEditor.deleteButton_);
+      goog.style.isElementShown(goog.dom.getElementByClass('svgTextButton')));
 
   cleanupFunctionEditor();
   goog.dom.removeNode(container);
