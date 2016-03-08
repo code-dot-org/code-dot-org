@@ -4,7 +4,7 @@
  * Dynamic generation and event bindings for project admin section of the admin box
  */
 
-dashboard.admin = (function (dashboard) {
+ dashboard.admin = (function (dashboard) {
   function showProjectAdmin() {
     if ($('.project_admin') === 0) {
       return;
