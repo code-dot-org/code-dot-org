@@ -37,7 +37,7 @@ def run_rubocop(files)
   run("bundle exec rubocop --force-exclusion #{files.join(" ")}", REPO_DIR)
 end
 
-def run_jshint(files)
+def run_eslint(files)
   run("./node_modules/.bin/eslint -c .eslintrc.js #{files.join(",")}", APPS_DIR)
 end
 
@@ -54,7 +54,7 @@ def do_linting()
   modified_files = HooksUtils.get_staged_files
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
-    Object.method(:run_jshint) => filter_grunt_jshint(modified_files),
+    Object.method(:run_eslint) => filter_grunt_jshint(modified_files),
     Object.method(:run_rubocop) => filter_rubocop(modified_files)
   }
 
