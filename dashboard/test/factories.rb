@@ -1,4 +1,19 @@
 FactoryGirl.define do
+  factory :level_group do
+    game_id 1
+    name "MyString"
+    created_at "2016-02-19 20:19:50"
+    updated_at "2016-02-19 20:19:50"
+    level_num "MyString"
+    ideal_level_source_id 1
+    solution_level_source_id 1
+    user_id 1
+    properties "MyText"
+    type ""
+    md5 "MyString"
+    published false
+  end
+
   factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
     resource_url nil
   end
@@ -6,7 +21,6 @@ FactoryGirl.define do
   factory :plc_script_completion_task, parent: :plc_task, class: 'Plc::ScriptCompletionTask' do
     script_id nil
   end
-
 
   factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
     answer "MyString"
