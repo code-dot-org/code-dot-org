@@ -25,12 +25,13 @@
     - last_attempt = ""
   = render partial: 'levels/single_multi', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
 
+= render partial: 'levels/common_audio'
+
 - if data["per_page"]
   %a.btn.btn-large.btn-primary.nextPageButton
     =t('nextPage')
-
-= render partial: 'levels/common_audio'
-= render partial: 'levels/dialog', locals: {app: app, data: data}
+- else
+  = render partial: 'levels/dialog', locals: {app: app, data: data}
 
 :javascript
   #{render template: 'levels/multi.js', formats: [:js]}
