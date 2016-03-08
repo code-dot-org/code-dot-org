@@ -10,7 +10,3 @@ class Languages
   end
 
 end
-
-def fetch_crowdin_languages()
-  Languages.get_crowdin_languages()
-end
