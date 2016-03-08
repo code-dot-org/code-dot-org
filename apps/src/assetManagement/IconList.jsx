@@ -13,7 +13,7 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    var query = new RegExp(this.props.search), results = {};
+    var query = new RegExp('(^|-)' + this.props.search), results = {};
 
     for (var i = 0; i < iconKeys.length; i++) {
       var keyword = iconKeys[i];
