@@ -1,0 +1,46 @@
+%h1 Directory of Admin Dashboards
+
+%h3 Code Studio Progress
+= link_to admin_progress_path do
+  Admin Progress
+%br
+= link_to level_completions_path do
+  Level Completion
+%br
+= link_to pd_progress_path(:script_id => 33) do
+  PD Progress
+%br
+
+%h3 Hour of Code
+= link_to hoc_signups_path do
+  Event Signups
+%br
+-# Students Served
+
+%h3 Fun-O-Meter
+= link_to funometer_path do
+  Overview
+%br
+= link_to funometer_by_script_path(:script_id => 1) do
+  By Script
+%br
+= link_to funometer_by_stage_path(:stage_id => 372) do
+  By Stage
+%br
+= link_to funometer_by_script_level_path(:script_id => 1, :level_id => 1) do
+  By Level
+
+%h3 Miscellaneous
+= link_to admin_stats_path do
+  Code Studio Stats
+%br
+= link_to diversity_survey_path do
+  Diversity Survey
+%br
+
+%h3 Retention
+= link_to retention_path do
+  By Script
+%br
+= link_to retention_stages_path do
+  By Stage
