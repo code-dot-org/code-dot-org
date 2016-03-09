@@ -60,8 +60,13 @@ class Rack::Attack
   end
 
   ActiveSupport::Notifications.subscribe('rack.attack') do |_, _, _, _, req|
+    throttle_name = req.env['rack.attack.matched']
+    throttle_data = req.env['rack.attack.throttle_data'][throttle_name]
     event_details = {
-        throttle_name: req.env['rack.attack.matched'],
+        throttle_name: throttle_name,
+        throttle_data_count: throttle_data[:count],
+        throttle_data_period: throttle_data[:period],
+        throttle_data_limit: throttle_data[:limit],
         encrypted_channel_id: req.env['rack.attack.match_discriminator'],
     }
 

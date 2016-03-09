@@ -89,11 +89,11 @@ class RackAttackTest < Minitest::Test
       assert_read_records 3, SUCCESSFUL
       # don't increment the index here because throttled requests don't affect the counts.
       assert_read_records 3, RATE_LIMITED
-      assert_custom_event 1, 'shared-tables/reads/15'
+      assert_custom_event 1, 'shared-tables/reads/15', count: 4, period: 15, limit: 3
 
       msg = 'Other tables in the same app count against the same rate limit'
       assert_read_records 3, RATE_LIMITED, msg, OTHER_TABLE
-      assert_custom_event 2, 'shared-tables/reads/15'
+      assert_custom_event 2, 'shared-tables/reads/15', count: 5, period: 15, limit: 3
 
       Timecop.travel 16
 
@@ -104,7 +104,7 @@ class RackAttackTest < Minitest::Test
 
       Timecop.travel 16 # elapsed time: 32s
       assert_read_records 6, RATE_LIMITED, '60s rate limit takes effect'
-      assert_custom_event 4, 'shared-tables/reads/60'
+      assert_custom_event 4, 'shared-tables/reads/60', count: 7, period: 60, limit: 6
 
       Timecop.travel 61 # elapsed time: 93s
 
@@ -124,7 +124,7 @@ class RackAttackTest < Minitest::Test
       Timecop.travel 61 # elapsed time: 168s
 
       assert_read_records 12, RATE_LIMITED, '240s rate limit takes effect'
-      assert_custom_event 6, 'shared-tables/reads/240'
+      assert_custom_event 6, 'shared-tables/reads/240', count: 13, period: 240, limit: 12
 
       Timecop.travel 241
 
@@ -247,11 +247,14 @@ class RackAttackTest < Minitest::Test
     get property_path(key)
   end
 
-  def assert_custom_event(index, throttle_name)
+  def assert_custom_event(index, throttle_name, count: nil, period: nil, limit: nil)
     assert_equal index, NewRelic::Agent.events.length, "custom events recorded: #{index}"
     last_event = NewRelic::Agent.events.last
     assert_equal 'RackAttackRequestThrottled', last_event.first, "custom event #{index} type"
     assert_equal @channel_id, last_event.last[:encrypted_channel_id], "custom event #{index} encrypted_channel_id"
     assert_equal throttle_name, last_event.last[:throttle_name], "custom event #{index} throttle_name"
+    assert_equal count, last_event.last[:throttle_data_count], "custom event #{index} throttle_data_count" if count
+    assert_equal period, last_event.last[:throttle_data_period], "custom event #{index} throttle_data_period" if period
+    assert_equal limit, last_event.last[:throttle_data_limit], "custom event #{index} throttle_data_limit" if limit
   end
 end
