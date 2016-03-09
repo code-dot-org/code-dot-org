@@ -5,6 +5,7 @@ require 'tables_api'
 require 'properties_api'
 require "fakeredis"
 require "timecop"
+require_relative 'spy_newrelic_agent'
 
 # The redis cache is a class property of Rack::Attack. This means that
 # the counts and time (as modified by timecop) used by each throttling rule
@@ -80,50 +81,55 @@ class RackAttackTest < Minitest::Test
   SUCCESSFUL = 200
   RATE_LIMITED = 429
 
-  def test_table_read_limits_with_exponential_backoff
+  def test_table_read_limits_with_exponential_backoff_and_logging
     Timecop.freeze rounded_time_now
+    CDO.stub(:newrelic_logging, true) do
+      assert_read_records 1, SUCCESSFUL
+      assert_read_records 2, SUCCESSFUL
+      assert_read_records 3, SUCCESSFUL
+      # don't increment the index here because throttled requests don't affect the counts.
+      assert_read_records 3, RATE_LIMITED
+      assert_custom_event 1, 'shared-tables/reads/15'
 
-    assert_read_records 1, SUCCESSFUL
-    assert_read_records 2, SUCCESSFUL
-    assert_read_records 3, SUCCESSFUL
-    # don't increment the index here because throttled requests don't affect the counts.
-    assert_read_records 3, RATE_LIMITED
+      msg = 'Other tables in the same app count against the same rate limit'
+      assert_read_records 3, RATE_LIMITED, msg, OTHER_TABLE
+      assert_custom_event 2, 'shared-tables/reads/15'
 
-    msg = 'Other tables in the same app count against the same rate limit'
-    assert_read_records 3, RATE_LIMITED, msg, OTHER_TABLE
+      Timecop.travel 16
 
-    Timecop.travel 16
+      assert_read_records 4, SUCCESSFUL, '15s rate limit expires'
+      assert_read_records 5, SUCCESSFUL
+      assert_read_records 6, SUCCESSFUL
+      assert_read_records 6, RATE_LIMITED, '15s rate limit takes effect a second time'
 
-    assert_read_records 4, SUCCESSFUL, '15s rate limit expires'
-    assert_read_records 5, SUCCESSFUL
-    assert_read_records 6, SUCCESSFUL
-    assert_read_records 6, RATE_LIMITED, '15s rate limit takes effect a second time'
+      Timecop.travel 16 # elapsed time: 32s
+      assert_read_records 6, RATE_LIMITED, '60s rate limit takes effect'
+      assert_custom_event 4, 'shared-tables/reads/60'
 
-    Timecop.travel 16 # elapsed time: 32s
-    assert_read_records 6, RATE_LIMITED, '60s rate limit takes effect'
+      Timecop.travel 61 # elapsed time: 93s
 
-    Timecop.travel 61 # elapsed time: 93s
+      assert_read_records 7, SUCCESSFUL
+      assert_read_records 8, SUCCESSFUL
+      assert_read_records 9, SUCCESSFUL
 
-    assert_read_records 7, SUCCESSFUL
-    assert_read_records 8, SUCCESSFUL
-    assert_read_records 9, SUCCESSFUL
+      # avoid triggering 15s limit. elapsed time: 107s
+      Timecop.travel 16
 
-    # avoid triggering 15s limit. elapsed time: 107s
-    Timecop.travel 16
+      assert_read_records 10, SUCCESSFUL
+      assert_read_records 11, SUCCESSFUL
+      assert_read_records 12, SUCCESSFUL
 
-    assert_read_records 10, SUCCESSFUL
-    assert_read_records 11, SUCCESSFUL
-    assert_read_records 12, SUCCESSFUL
+      assert_read_records 12, RATE_LIMITED, '60s rate limit takes effect a second time'
 
-    assert_read_records 12, RATE_LIMITED, '60s rate limit takes effect a second time'
+      Timecop.travel 61 # elapsed time: 168s
 
-    Timecop.travel 61 # elapsed time: 168s
+      assert_read_records 12, RATE_LIMITED, '240s rate limit takes effect'
+      assert_custom_event 6, 'shared-tables/reads/240'
 
-    assert_read_records 12, RATE_LIMITED, '240s rate limit takes effect'
+      Timecop.travel 241
 
-    Timecop.travel 241
-
-    assert_read_records 13, SUCCESSFUL, '240s rate limit expires'
+      assert_read_records 13, SUCCESSFUL, '240s rate limit expires'
+    end
   ensure
     Timecop.return
   end
@@ -239,5 +245,13 @@ class RackAttackTest < Minitest::Test
 
   def get_key_value(key = PROPERTY_KEY)
     get property_path(key)
+  end
+
+  def assert_custom_event(index, throttle_name)
+    assert_equal index, NewRelic::Agent.events.length, "custom events recorded: #{index}"
+    last_event = NewRelic::Agent.events.last
+    assert_equal 'RackAttackRequestThrottled', last_event.first, "custom event #{index} type"
+    assert_equal @channel_id, last_event.last[:encrypted_channel_id], "custom event #{index} encrypted_channel_id"
+    assert_equal throttle_name, last_event.last[:throttle_name], "custom event #{index} throttle_name"
   end
 end

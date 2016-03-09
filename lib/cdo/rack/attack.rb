@@ -1,3 +1,4 @@
+require 'active_support/notifications'
 require 'rack/attack'
 require 'rack/attack/path_normalizer'
 require 'active_support/core_ext/numeric/time'
@@ -56,5 +57,14 @@ class Rack::Attack
       # extract the channel id for writes to shared properties.
       req.write? && %r{^/v3/shared-properties/([^/]+)/[^/]+$}.match(req.path).try(:[], 1)
     end
+  end
+
+  ActiveSupport::Notifications.subscribe('rack.attack') do |_, _, _, _, req|
+    event_details = {
+        throttle_name: req.env['rack.attack.matched'],
+        encrypted_channel_id: req.env['rack.attack.match_discriminator'],
+    }
+
+    NewRelic::Agent.record_custom_event("RackAttackRequestThrottled", event_details) if CDO.newrelic_logging
   end
 end
