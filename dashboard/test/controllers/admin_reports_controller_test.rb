@@ -29,10 +29,11 @@ class AdminReportsControllerTest < ActionController::TestCase
     @follower = Follower.create(:section => @teacher_section, :user => @teacher, :student_user => @student)
   end
 
-  generate_admin_only_tests_for :all_usage
   generate_admin_only_tests_for :admin_progress
   generate_admin_only_tests_for :admin_stats
+  generate_admin_only_tests_for :all_usage
   generate_admin_only_tests_for :debug
+  generate_admin_only_tests_for :directory
   generate_admin_only_tests_for :diversity_survey
   generate_admin_only_tests_for :level_answers
   generate_admin_only_tests_for :hoc_signups
