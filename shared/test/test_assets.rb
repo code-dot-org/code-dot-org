@@ -447,14 +447,14 @@ class AssetsTest < Minitest::Test
     [response, tmp_filename]
   end
 
-  def assert_custom_metric(index, metric_type, length_msg = nil)
+  def assert_custom_metric(index, metric_type, length_msg = nil, expected_value = 1)
     # Filter out metrics from other test cases.
     metrics = NewRelic::Agent.get_metrics %r{^Custom/FilesApi}
     length_msg ||= "custom metrics recorded: #{index}"
     assert_equal index, metrics.length, length_msg
     last_metric = metrics.last
     assert_equal "Custom/FilesApi/#{metric_type}_assets", last_metric.first, "#{metric_type} metric recorded"
-    assert last_metric.last == 1, "#{metric_type} metric value 1"
+    assert_equal expected_value, last_metric.last, "#{metric_type} metric value"
   end
 
   def assert_custom_event(index, event_type)

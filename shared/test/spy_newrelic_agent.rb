@@ -17,14 +17,14 @@ class NewRelic
       @@events ||= []
       @@events.push([event, opts])
     end
-    # return metrics whose name match the regex
+    # return metrics whose names match the regex
     def self.get_metrics(regex)
       @@metrics ||= []
       @@metrics.select do |metric|
         regex.match metric.first
       end
     end
-    # return events whose name match the regex
+    # return events whose names match the regex
     def self.get_events(regex)
       @@events ||= []
       @@events.select do |event|

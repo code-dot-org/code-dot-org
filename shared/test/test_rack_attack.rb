@@ -263,13 +263,13 @@ class RackAttackTest < Minitest::Test
     assert_equal limit, last_event.last[:throttle_data_limit], "custom event #{index} throttle_data_limit" if limit
   end
 
-  def assert_custom_metric(index, throttle_type)
+  def assert_custom_metric(index, throttle_type, expected_value = 1)
     # Filter out metrics from other test cases.
     metrics = NewRelic::Agent.get_metrics %r{^Custom/RackAttackRequestThrottled}
     assert_equal index, metrics.length, "custom metrics recorded: #{index}"
     last_metric = metrics.last
     expected_metric_name = "Custom/RackAttackRequestThrottled/#{throttle_type}"
     assert_equal expected_metric_name, last_metric.first, "custom metric #{index} name"
-    assert_equal 1, last_metric.last, "custom metric #{index} value"
+    assert_equal expected_value, last_metric.last, "custom metric #{index} value"
   end
 end
