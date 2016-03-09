@@ -18,13 +18,28 @@ class Plc::TasksControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'should create new learning resource task' do
-    task_name = SecureRandom.hex
-    assert_creates(Plc::Task) do
-      post :create, plc_task: {name: task_name, plc_learning_module_id: @learning_module.id, type: 'Plc::LearningResourceTask'}
+  test 'should create new tasks for all task types' do
+    [
+        [Plc::Task, {}],
+        [Plc::LearningResourceTask, {resource_url: 'Some url'}],
+        [Plc::ScriptCompletionTask, {script_id: '1'}]
+
+    ].each do |task_type, task_params|
+      task_name = SecureRandom.hex
+      task_params[:name] = task_name
+      task_params[:plc_learning_module_id] = @learning_module.id
+      task_params[:type] = task_type.name
+
+      assert_creates(task_type) do
+        post :create, {('plc_' + task_type.underscored_task_type).to_sym => task_params}
+      end
+
+      created_task = task_type.find_by(name: task_name)
+
+      task_params.each do |k, v|
+        assert_equal v, created_task.send(k)
+      end
     end
-    assert_equal task_name, Plc::LearningResourceTask.find_by(name: task_name).name
-    assert_redirected_to plc_task_path(assigns(:task))
   end
 
   test 'should show task' do

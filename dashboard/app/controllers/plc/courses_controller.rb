@@ -22,6 +22,8 @@ class Plc::CoursesController < ApplicationController
   # POST /plc/courses
   # POST /plc/courses.json
   def create
+    @course = Plc::Course.new(course_params)
+
     if @course.save
       redirect_to @course, notice: 'Course was successfully created.'
     else
