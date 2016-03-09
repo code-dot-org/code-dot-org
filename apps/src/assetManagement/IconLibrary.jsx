@@ -1,4 +1,5 @@
 var IconList = require('./IconList.jsx');
+var msg = require('../locale');
 
 /**
  * A component for managing icons.
@@ -24,7 +25,7 @@ module.exports = React.createClass({
             border: '1px solid #999',
             borderRadius: '4px',
             padding: '3px 7px'
-          }}/>
+          }} placeholder={msg.iconSearchPlaceholder()}/>
           <i className="fa fa-search" style={{
             position: 'absolute',
             right: '5px',
