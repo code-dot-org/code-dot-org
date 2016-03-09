@@ -4,36 +4,44 @@
 - if @data.present?
   #summary
     Starts:
-    = number_with_delimiter(@data['started'])
+    %span= number_with_delimiter(@data['started'])
     %br
     Finishes:
-    = number_with_delimiter(@data['finished'])
+    %span= number_with_delimiter(@data['finished'])
     %br
     Code.org Starts:
-    = number_with_delimiter(@data['total_codedotorg_count'])
+    %span= number_with_delimiter(@data['total_codedotorg_count'])
 
   %br
 
   #tutorials
     %table
       %tr
-        %th Tutorial
-        %th Count
+        %th
+          %span Tutorial
+        %th
+          %span Count
       - @data['tutorials'].each do |tutorial, count|
         %tr
-          %td= tutorial
-          %td= number_with_delimiter(count)
+          %td
+            %span= tutorial
+          %td
+            %span= number_with_delimiter(count)
 
   %br
 
   #countries
     %table
       %tr
-        %th Country
-        %th Count
+        %th
+          %span Country
+        %th
+          %span Count
       - @data['countries'].each do |country, count|
         %tr
-          %td= country
-          %td= number_with_delimiter(count)
+          %td
+            %span= country
+          %td
+            %span= number_with_delimiter(count)
 - else
   Error, @data.present? is false.
