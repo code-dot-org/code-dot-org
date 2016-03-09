@@ -50,10 +50,16 @@ module.exports = function (callback) {
     }
 
     $.ajax('/api/user_progress/' + appOptions.scriptName + '/' + appOptions.stagePosition + '/' + appOptions.levelPosition).done(function (data) {
+      if (data.user_id) {
+        dashboard.clientState.setCurrentUserKey(data.user_id);
+      } else {
+        dashboard.clientState.setAnonymousUser();
+      }
       appOptions.disableSocialShare = data.disableSocialShare;
 
       // Merge progress from server (loaded via AJAX)
       var serverProgress = data.progress || {};
+
       var clientProgress = dashboard.clientState.allLevelsProgress()[appOptions.scriptName] || {};
       Object.keys(serverProgress).forEach(function (levelId) {
         if (serverProgress[levelId] !== clientProgress[levelId]) {
