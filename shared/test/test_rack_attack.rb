@@ -90,10 +90,12 @@ class RackAttackTest < Minitest::Test
       # don't increment the index here because throttled requests don't affect the counts.
       assert_read_records 3, RATE_LIMITED
       assert_custom_event 1, 'shared-tables/reads/15', count: 4, period: 15, limit: 3
+      assert_custom_metric 1, 'shared-tables_reads'
 
       msg = 'Other tables in the same app count against the same rate limit'
       assert_read_records 3, RATE_LIMITED, msg, OTHER_TABLE
       assert_custom_event 2, 'shared-tables/reads/15', count: 5, period: 15, limit: 3
+      assert_custom_metric 2, 'shared-tables_reads'
 
       Timecop.travel 16
 
@@ -105,6 +107,7 @@ class RackAttackTest < Minitest::Test
       Timecop.travel 16 # elapsed time: 32s
       assert_read_records 6, RATE_LIMITED, '60s rate limit takes effect'
       assert_custom_event 4, 'shared-tables/reads/60', count: 7, period: 60, limit: 6
+      assert_custom_metric 4, 'shared-tables_reads'
 
       Timecop.travel 61 # elapsed time: 93s
 
@@ -125,6 +128,7 @@ class RackAttackTest < Minitest::Test
 
       assert_read_records 12, RATE_LIMITED, '240s rate limit takes effect'
       assert_custom_event 6, 'shared-tables/reads/240', count: 13, period: 240, limit: 12
+      assert_custom_metric 6, 'shared-tables_reads'
 
       Timecop.travel 241
 
@@ -256,5 +260,13 @@ class RackAttackTest < Minitest::Test
     assert_equal count, last_event.last[:throttle_data_count], "custom event #{index} throttle_data_count" if count
     assert_equal period, last_event.last[:throttle_data_period], "custom event #{index} throttle_data_period" if period
     assert_equal limit, last_event.last[:throttle_data_limit], "custom event #{index} throttle_data_limit" if limit
+  end
+
+  def assert_custom_metric(index, throttle_type)
+    assert_equal index, NewRelic::Agent.metrics.length, "custom metrics recorded: #{index}"
+    last_metric = NewRelic::Agent.metrics.last
+    expected_metric_name = "Custom/RackAttackRequestThrottled/#{throttle_type}"
+    assert_equal expected_metric_name, last_metric.first, "custom metric #{index} name"
+    assert_equal 1, last_metric.last, "custom metric #{index} value"
   end
 end
