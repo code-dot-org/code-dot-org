@@ -428,6 +428,7 @@ he:
     applab:
       title: מעבדת היישומים
       body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
       audience: Ages 13+
       cta: Learn how
     hoc:
@@ -507,6 +508,9 @@ he:
     placeholder: הכנס את התשובה שלך כאן
     open_response_title: תודה
     open_response_body: תודה על תגובתך!
+  level_group:
+    correct_title: תודה רבה
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: אישור
     startover_title: האם אתה בטוח שאתה רוצה להתחיל מחדש?

@@ -421,6 +421,7 @@ si:
     applab:
       title: මෘදුකාංග විද්‍යාගාරය
       body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
       audience: Ages 13+
       cta: Learn how
     hoc:
@@ -500,6 +501,9 @@ si:
     placeholder: ඔබගේ පිළිතුර මෙතනට ඇතුල් කරන්න
     open_response_title: ස්තූතියි
     open_response_body: ඔබගේ ප්‍රතිචාරය සඳහා ස්තූතියි!
+  level_group:
+    correct_title: ස්තුතියි ඔබට
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: හරි
     startover_title: මුල සිට පටන් ගැනීම ඔබ තහවුරු කරනවද?

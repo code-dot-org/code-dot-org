@@ -67,8 +67,8 @@ el-GR:
   congrats_next_tutorials_desc: 'Δοκιμάστε αυτά τα μικρότερα, σεμινάρια 1 ώρας ή δοκιμάστε ένα <a href="%{current_path}/next">σεμινάριο συνεργάτη</a>.'
   get_a_certificate_of_achievement: Πάρε πιστοποιητικό για το επίτευγμα
   view_course: Προβολή μαθήματος
-  view_unit: View unit
-  make_app: Make an app
+  view_unit: Προβολή ενότητας
+  make_app: Δημιούργησε μια εφαρμογή
   congrats_guest_speaker_title: Βρείτε έναν προσκεκλημένο ομιλητή για την τάξη σου
   congrats_guest_speaker_desc: Τώρα που οι μαθητές σου έχουν τελειώσει μια σειρά μαθημάτων της επιστήμης υπολογιστών, γιορτάστε το και συνδέστε την γνώση που απέκτησαν με εφαρμογή στην καθημερινή ζωή, καλώντας έναν ομιλητή στην τάξη σου. Μπορείς να χρησιμοποιήσεις τον χάρτη εθελοντών για να επικοινωνήσεις με τους τοπικούς εθελοντές να επισκεφθού την τάξη σου ή πραγματοποίησε αναζήτηση σε κάθε πόλη για να βρείς φοιτητές επιστήμης υπολογιστών ή επαγγελματίες τεχνικούς που είναι έτοιμοι να εμπνεύσουν τους μαθητές σου από απόσταση, μέσω βίντεο chat.
   congrats_guest_speaker_cta: Βρείτε έναν προσκεκλημένο ομιλητή
@@ -86,8 +86,8 @@ el-GR:
   third_party_price_varies: 'Τιμή: Τα πλάνα μεταβάλλονται'
   third_party_price_free: 'Τιμή: δωρεάν'
   third_party_price_299: 'Τιμή: $2.99/λήψη'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  third_party_price_individual: 'Ατομική τιμή: Δωρεάν δοκιμή & 25 $/μήνα'
+  third_party_price_school: 'Σχολική τιμή: Σχέδια δωρεάν & Επαγγελματικά στα $2500 +'
   third_party_tynker_desc: Η δημιουργική υπολογιστική πλατφόρμα Tynker βοηθά τα παιδιά να αναπτύξουν αλγοριθμική σκέψη και γνώσεις προγραμματισμού με ένα διασκεδαστικό, έξυπνο και ευφάνταστο τρόπο. Μια καινοτόμος οπτική γλώσσα προγραμματισμού, διαδραστικά κατευθυνόμενη από μαθήματα και δραστηριότητες προγραμματισμού που βασίζεται στο παιχνίδι παρέχει μια εύκολη εισαγωγή στον προγραμματισμό, και χειραφέτηση των παιδιών να καινοτομούν και να δημιουργούν.
   third_party_tynker_btn_curriculum: Δοκιμάστε το πρόγραμμα σπουδών του Tynker για Πρόωρους Αναγνώστες
   third_party_tynker_btn_site: Επισκεφτείτε το Tynker
@@ -339,18 +339,18 @@ el-GR:
   playlab_gumball_title: Τσιχλόμπαλα
   playlab_iceage_title: 'Εποχή των Παγετώνων - Έρχεται σύντομα'
   playlab_iceage_title_live: Εποχή των Παγετώνων
-  starwars_subtitle: Χτίζοντας έναν Γαλαξία Με Κώδικα
+  starwars_subtitle: Κατασκευάζοντας έναν Γαλαξία Με Κώδικα
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Χρησιμοποιήστε μπλοκ με «σύρε και άφησε» και Javascript.
+  starwars_javascript_description: Χρησιμοποιήσε πακέτα «σύρε και άφησε» και Javascript.
   starwars_javascript_specs: Μόνο Αγγλικά | Σύγχρονα προγράμματα περιήγησης | Ηλικίες 11+
-  starwars_javascript_start_button: Δοκιμάστε τώρα
-  starwars_blocks_title: μπλοκ
-  starwars_blocks_description: Χρησιμοποιήστε μπλοκ με «σύρε και άφησε».
-  starwars_blocks_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης, έξυπνα κινητά, tablets | Ηλικίες 6-10
+  starwars_javascript_start_button: Δοκίμασε τώρα
+  starwars_blocks_title: Πακέτα
+  starwars_blocks_description: Χρησιμοποίησε πακέτα «σύρε και άφησε».
+  starwars_blocks_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης, έξυπνα κινητά, ταμπλέτες | Ηλικίες 6-10
   starwars_blocks_start_button: Δοκιμάστε τώρα
-  starwars_watch_videos: Πριν ξεκινήσετε, δείτε ένα βίντεο παρακίνησης
-  starwars_speak_languages: Μιλάτε άλλη γλώσσα;
-  starwars_help_translate: Βοηθήστε μας να μεταφράσουμε
+  starwars_watch_videos: Πριν ξεκινήσεις, δες ένα βίντεο παρακίνησης
+  starwars_speak_languages: Μιλάς άλλη γλώσσα;
+  starwars_help_translate: Βοήθησέ μας να μεταφράσουμε
   starwars_platform_text: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   mc_name: Η Ώρα του Κώδικα με το Minecraft
   mc_longdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
@@ -602,7 +602,7 @@ el-GR:
   dashboard_faq_k5: Συχνές ερωτήσεις για το επίπεδο πρωτοβάθμιας εκπαίδευσης (K-5)
   dashboard_announcements: Ανακοινώσεις
   dashboard_announce_view_all: Προβολή όλων
-  dashboard_announce_message: '<b>Η προθεσμία λήγει αυτή την Παρασκευή και εξακολουθούμε να έχουμε μερικές ελεύθερες θέσεις για καθηγητές δευτεροβάθμιας εκπαίδευσης στις συνεργαζόμενες συνοικίες.</b> Εγγραφείτε τώρα για να γίνετε μέλος στο ιδιαίτερα αξιολογημένο πρόγραμμα επαγγελματικής μάθησης και να μάθετε να διδάξετε τις αρχές της επιστήμης υπολογιστών AP. Ως τμήμα του προγράμματος μπορείτε να πάρετε δωρεάν ταξίδι στο TeacherCon αυτό το καλοκαίρι και συνεχή υποστήριξη για όλο το χρόνο.'
+  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
   dashboard_announce_button_text: Μάθετε περισσότερα
   dashboard_announce_hoc: "<b>15 Οκτωβρίου 2015</b> - Η Ώρα του Κώδικα πλησιάζει &mdash; κάθε συμμετέχον διοργανωτής θα λάβει μια κάρτα δώρου για το Amazon.com ή το Microsoft's Windows Store ως ευχαριστήριο δώρο. Εγγραφείτε σε τάξεις σε όλο τον κόσμο κατά την περίοδο 7-13 Δεκεμβρίου."
   dashboard_announce_playlab: '<b> 4 Δεκέμβρη, 2015 </b> - Η Ωρα του Κώδικα έφτασε! Δοκιμάστε τα 50 σεμινάρια για κάθε ηλικία και κάθε συσκευή. Νέα τελευταίας εβδομάδας: Προγραμμάτισε της δικές σου ιστορίες και παιχνίδια στο Play Lab! Δες πως μπορείς να προγραμματίσεις τα παιχίδια Ιce Age και Gumball.'
@@ -661,7 +661,7 @@ el-GR:
   older_systems_subheading: 'Αυτά θα πρέπει να λειτουργούν και με παλαιότερα προγράμματα περιήγησης Web. Για να αποκτήσετε πρόσβαση σε όλα τα σεμινάρια, χρησιμοποιήστε ένα <a href="http://browsehappy.com/" target="_blank"> σύγχρονο Φυλλομετρητή.</a>'
   mobile_devices: Μαθήματα για κινητές συσκευές
   frozen_name: Γράψτε Κώδικα με την Άννα και την Έλσα
-  starwars_name: 'Πόλεμος των Άστρων: Χτίζοντας έναν Γαλαξία με Κώδικα'
+  starwars_name: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα'
   codeorg_name: Κλασικός λαβύρινθος
   codeintl_name: Κλασικός λαβύρινθος
   thinkersmithspanish_name: Οι ρομποτικοί μου φίλοι
@@ -715,12 +715,12 @@ el-GR:
   course3_name: Μάθημα 3
   course4_name: Μάθημα 4
   accelerated_name: Επιταχυνόμενη πορεία μάθησης
-  cspunit3_name: CS Principles Unit 3
-  cspunit3_gradelevel: Grades 9-12
+  cspunit3_name: 'Αρχές CS - Ενότητα 3'
+  cspunit3_gradelevel: 'Τάξεις Γ΄ Γυμνασίου - Γ΄ Λυκείου'
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   applab_name: Εργαστήριο εφαρμογών
-  applab_gradelevel: Ages 13+
-  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
+  applab_gradelevel: Ηλικίες 13+
+  applab_shortdescription_congrats: Το App Lab (Εργαστήριο εφαρμογών) είναι ένα περιβάλλον προγραμματισμού όπου μπορείς να φτιάξεις απλές εφαρμογές (apps). Σχεδίασε μια εφαρμογή (app), γράψε κώδικα ή JavaScript με πακέτα για να την κάνεις να δουλέψει και μετά μοιράσου την εφαρμογή σου σε δευτερόλεπτα
   codeorg_gradelevel: Ηλικίες 4-104
   codeintl_gradelevel: Ηλικίες 4-104
   thinkersmithspanish_gradelevel: Για όλους

@@ -156,7 +156,7 @@ ru:
           description_short: Давайте использовать код, чтобы присоединиться к Анне и Эльзе, открывающим магию и красоту льда.
         course4:
           description_short: Для изучения Курса 4 ученики должны предварительно пройти Курсы 2 и 3.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: 4 курс предназначен для студентов, которые прошли курсы 2 и 3. Студенты научатся решать головоломки повышенной сложности, обучаясь тому, как совмещать сразу несколько принципов, работая над решением каждой задачи. К моменту завершения этого курса студенты будут создавать программы, которые позволят им продемонстрировать многочисленные навыки, включая цикл for и функции с параметрами. Рекомендуется для 4-8 классов.
           "Artist: Variables": 'Художник: Переменные'
           "Bee: For Loops": 'Пчела: циклы с параметром'
           title: Курс 4
@@ -1323,6 +1323,9 @@ ru:
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: 'Unit 6 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1433,6 +1436,7 @@ ru:
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Лаборатория игр Ледниковый период
           description_short: Создай сказку или игру с игровой лабораторией Ледниковый период!
@@ -1455,7 +1459,7 @@ ru:
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
-          description_short: Programming
+          description_short: Программирование
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           While Loop Basics: While Loop Basics
           While Loops_ Counting Flips: While Loops_ Counting Flips
@@ -1493,12 +1497,12 @@ ru:
           description: Создай сказку или игру с лабораторией игр Gumball!
           Gumball Play Lab: Лаборатория игр Gumball
         starwars:
-          title: 'Звездные войны: Создание галактики через код'
+          title: 'Звездные войны: Создай галактику, программируя'
           description_short: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           description: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           Hour of Code 2015: Час кода 2015
         starwarsblocks:
-          title: 'Звездные войны: Создание галактики через код'
+          title: 'Звездные войны: Создай галактику, программируя'
           description_short: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           description: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           Hour of Code 2015: Час кода 2015
@@ -1554,6 +1558,7 @@ ru:
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4

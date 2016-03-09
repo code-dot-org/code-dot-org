@@ -392,7 +392,7 @@
   "repeatDo":"esegui",
   "repeatForeverTooltip":"Esegue ripetutamente le azioni in questo blocco mentre la storia è in esecuzione.",
   "spaceInvasion":"Invasione Spaziale!",
-  "saySprite":"pronuncia",
+  "saySprite":"il personaggio dice",
   "saySpriteN":"il personaggio {spriteIndex} dice",
   "saySpriteTooltip":"Il personaggio specificato visualizza un fumetto con il testo indicato.",
   "saySpriteChoices_0":"Ciao!",
