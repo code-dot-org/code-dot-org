@@ -21,6 +21,8 @@ class Plc::LearningModulesController < ApplicationController
   # POST /plc/learning_modules
   # POST /plc/learning_modules.json
   def create
+    @learning_module = Plc::LearningModule.new(learning_module_params)
+
     if @learning_module.save
       redirect_to @learning_module, notice: 'Learning module was successfully created.'
     else
