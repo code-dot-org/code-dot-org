@@ -43,9 +43,9 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk libsqlite3-dev phantomjs build-essential`
-  * **Hit enter and select default options for any configuration popups**
+  * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 1. Upgrade npm to 2.0. If `npm -v` says less than 2.0 then
-  * `sudo add-apt-repository ppa:chris-lea/node.js  `
+  * `sudo add-apt-repository ppa:chris-lea/node.js`
   * `sudo apt-get update`
   * `sudo apt-get install nodejs`
 1. Either A. Install Ruby 2.2 from OS packages; B. Setup `rbenv`; or C. Setup `rvm`
@@ -66,6 +66,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Install Node.js 0.12.4 and npm 2.10.1
   1. Option A - nvm
     1. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
+      - After completion, close your current terminal window and open a new one.
     1. `nvm install 0.12.4`
   1. Option B - nodesource repository
     1. `curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -`
