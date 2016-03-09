@@ -1,0 +1,36 @@
+%h1
+  Hour of Code Data
+
+#summary
+  Starts:
+  = number_with_delimiter(@data['started'])
+  %br
+  Finishes:
+  = number_with_delimiter(@data['finished'])
+  %br
+  Code.org Starts:
+  = number_with_delimiter(@data['total_codedotorg_count'])
+
+%br
+
+#tutorials
+  %table
+    %tr
+      %th Tutorial
+      %th Count
+    - @data['tutorials'].each do |tutorial, count|
+      %tr
+        %td= tutorial
+        %td= number_with_delimiter(count)
+
+%br
+
+#countries
+  %table
+    %tr
+      %th Country
+      %th Count
+    - @data['countries'].each do |country, count|
+      %tr
+        %td= country
+        %td= number_with_delimiter(count)
