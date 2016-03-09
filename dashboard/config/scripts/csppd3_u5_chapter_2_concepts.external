@@ -3,9 +3,11 @@ css 'unplugged'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-### Unit 5 Overview > Chapter 2: Create Performance Task > Concepts
 
+### Create PT Breakdown > Concepts
 #### What's Inside?
+<img src="https://images.code.org/c7b52b3db8d2205cf1ee008e37dc1b49-image-1457476053581.46.11 PM.png" width="450" style="float:right; margin-right:10px; margin-left: 30px">
+
 
 The skinny: The Create Performance task asks students to write a program and identify key aspects of it through a) the code itself b) a video demonstration of the program and c) writing. The writing prompts ask students to identify the program’s intended purpose, and the key algorithms and abstractions in the code.<br><br>
 
@@ -54,6 +56,10 @@ Various forms of collaboration include:
 * Giving and receiving feedback on programs created separately.
 * Responding to feedback provided by peers.
 
+##### About Writing in the Performance Task
+
+Students will need to analyze their programs and prepare written responses that highlight examples of algorithms and abstraction in their code, as well as reflecting on the process used to develop the program submitted in the Create Task.  It's important to note that the College Board does not prescribe any particular format for these written elements of the task-- as long as they answer the prompts fully, students are allowed to format their responses however they like (bullet points, paragraph, etc).
+
 ##### How Have Students Prepared for This Task?
 
 Previously in this class, students have done a number of practice PTs to prepare them for the actual Create PT, including: 
@@ -67,7 +73,7 @@ In these practice PTs, students practiced the following skills:
 * Testing the program.
 * Working with classmates to give and receive feedback.
 * Creating a video of their program running.
-* Responding to questions about their work.
+* Responding in writing to questions about their work.
 
 <br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
