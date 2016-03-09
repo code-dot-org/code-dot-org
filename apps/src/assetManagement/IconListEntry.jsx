@@ -1,5 +1,7 @@
+var Icon = require('./Icon.jsx');
+
 /**
- * A component for managing icons.
+ * A list of icons, maybe filtered by a search query.
  */
 module.exports = React.createClass({
   propTypes: {
@@ -28,12 +30,7 @@ module.exports = React.createClass({
 
     return (
       <div style={{float: 'left', width: '33%', height: '35px'}}>
-        <i className={'fa fa-' + this.props.iconId} style={{
-          float: 'left',
-          fontSize: '24px',
-          width: '32px',
-          textAlign: 'center'
-        }}/>
+        <Icon iconId={this.props.iconId}/>
         <p style={{float: 'left', margin: '0 5px', fontSize: '13px', color: '#000'}}>{this.highlightSearch(this.props.iconId)}</p>
         {altMatchText}
       </div>
