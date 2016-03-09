@@ -119,9 +119,12 @@ class ProfessionalDevelopmentWorkshop
       first_date_dt: '[NOW TO *]',
     }.map{|key,value| "#{key}:#{value}"}.join(' AND ')
 
+    fl = 'location_p,location_name_p,location_name_s,dates_ss,id'
+
     {
       q: "*:*",
       fq: fq,
+      fl: fl,
       rows: 800,
       sort: 'first_date_dt asc',
     }
