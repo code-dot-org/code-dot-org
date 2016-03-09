@@ -1,4 +1,4 @@
-/* global Interpreter, CanvasPixelArray, ace */
+/* global Interpreter, CanvasPixelArray, ace, Uint8ClampedArray */
 
 var dropletUtils = require('./dropletUtils');
 var utils = require('./utils');

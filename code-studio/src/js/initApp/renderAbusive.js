@@ -1,4 +1,4 @@
-/* global dashboard, React */
+/* global dashboard, React, ReactDOM */
 
 var AbuseExclamation = require('../components/abuse_exclamation.jsx');
 
