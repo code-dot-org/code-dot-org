@@ -2,19 +2,6 @@
 p5.play
 by Paolo Pedercini/molleindustria, 2015
 http://molleindustria.org/
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 (function (root, factory) {
@@ -75,6 +62,8 @@ p5.prototype.allSprites = new Group();
    */
 
 p5.prototype.createSprite = function(x, y, width, height) {
+  this._ensureInGlobalMode();
+
   var s = new Sprite(x, y, width, height);
   s.depth = allSprites.maxDepth()+1;
   allSprites.add(s);
@@ -206,6 +195,8 @@ p5.prototype.drawSprite = function(sprite) {
 * @param {Sprite} sprite Sprite to be displayed
 */
 p5.prototype.loadAnimation = function() {
+  this._ensureInGlobalMode();
+
   return construct(Animation, arguments);
 }
 
@@ -254,7 +245,7 @@ p5.prototype.keyWentDown = function(key) {
   var keyCode;
 
   if(typeof key == "string")
-    keyCode = KEY[key.toUpperCase()];
+    keyCode = this._keyCodeFromAlias(key);
   else
     keyCode = key;
 
@@ -285,14 +276,14 @@ p5.prototype.keyWentUp = function(key) {
   var keyCode;
 
   if(typeof key == "string")
-    keyCode = KEY[key.toUpperCase()];
+    keyCode = this._keyCodeFromAlias(key);
   else
     keyCode = key;
 
   //if undefined start checking it
   if(keyStates[keyCode]===undefined)
   {
-    if(keyIsDown(key))
+    if(keyIsDown(keyCode))
       keyStates[keyCode] = KEY_IS_DOWN;
     else
       keyStates[keyCode] = KEY_IS_UP;
@@ -314,14 +305,18 @@ p5.prototype.keyDown = function(key) {
   var keyCode;
 
   if(typeof key == "string")
-    keyCode = KEY[key.toUpperCase()];
+  {
+    keyCode = this._keyCodeFromAlias(key);
+  }
   else
+  {
     keyCode = key;
+  }
 
   //if undefined start checking it
   if(keyStates[keyCode]===undefined)
   {
-    if(keyIsDown(key))
+    if(keyIsDown(keyCode))
       keyStates[keyCode] = KEY_IS_DOWN;
     else
       keyStates[keyCode] = KEY_IS_UP;
@@ -445,9 +440,8 @@ p5.prototype.mouseWentDown = function(buttonCode) {
 * Key.tab = 9
 *
 * @property KEY
-* @type {Group}
+* @type {Object}
 */
-
 p5.prototype.KEY = {
     'BACKSPACE': 8,
     'TAB': 9,
@@ -458,16 +452,20 @@ p5.prototype.KEY = {
     'PAUSE': 19,
     'CAPS_LOCK': 20,
     'ESC': 27,
+    'SPACE': 32,
+    ' ': 32,
     'PAGE_UP': 33,
-    'SPACE': 33,
-    ' ': 33,
     'PAGE_DOWN': 34,
     'END': 35,
     'HOME': 36,
     'LEFT_ARROW': 37,
+    'LEFT': 37,
     'UP_ARROW': 38,
+    'UP': 38,
     'RIGHT_ARROW': 39,
+    'RIGHT': 39,
     'DOWN_ARROW': 40,
+    'DOWN': 40,
     'INSERT': 45,
     'DELETE': 46,
     '0': 48,
@@ -518,7 +516,7 @@ p5.prototype.KEY = {
     '9NUMPAD': 105,
     'MULTIPLY': 106,
     'PLUS': 107,
-    'MINUT': 109,
+    'MINUS': 109,
     'DOT': 110,
     'SLASH1': 111,
     'F1': 112,
@@ -534,12 +532,46 @@ p5.prototype.KEY = {
     'F11': 122,
     'F12': 123,
     'EQUAL': 187,
-    'COMA': 188,
+    'COMMA': 188,
     'SLASH': 191,
     'BACKSLASH': 220
 }
 
+/**
+ * An object storing deprecated key aliases, which we still support but
+ * should be mapped to valid aliases and generate warnings.
+ *
+ * @property KEY_DEPRECATIONS
+ * @type {Object}
+ */
+p5.prototype.KEY_DEPRECATIONS = {
+  'MINUT': 'MINUS',
+  'COMA': 'COMMA'
+}
 
+/**
+ * Given a string key alias (as defined in the KEY property above), look up
+ * and return the numeric JavaScript key code for that key.  If a deprecated
+ * alias is passed (as defined in the KEY_DEPRECATIONS property) it will be
+ * mapped to a valid key code, but will also generate a warning about use
+ * of the deprecated alias.
+ *
+ * @method _keyCodeFromAlias
+ * @param {!string} alias - a case-insensitive key alias
+ * @returns {number|undefined} a numeric JavaScript key code, or undefined
+ *          if no key code matching the given alias is found.
+ * @private
+ */
+p5.prototype._keyCodeFromAlias = function (alias) {
+  alias = alias.toUpperCase();
+  if (this.KEY_DEPRECATIONS[alias]) {
+    this._warn('Key literal "' + alias + '" is deprecated and may be removed ' +
+      'in a future version of p5.play. ' +
+      'Please use "' + this.KEY_DEPRECATIONS[alias] + '" instead.');
+    alias = this.KEY_DEPRECATIONS[alias];
+  }
+  return this.KEY[alias];
+}
 
 //pre draw: detect keyStates
 p5.prototype.readPresses = function() {
@@ -631,6 +663,25 @@ deltaTime = ((now - then) / 1000)/INTERVAL_60; // seconds since last frame
 }
 */
 
+/**
+ * @method _ensureInGlobalMode
+ * @private
+ */
+p5.prototype._ensureInGlobalMode = function() {
+  // Unfortunately, p5.play doesn't currently support p5 instance mode.
+  // Instead of continuing execution and eventually throwing when some
+  // global property isn't found, we'll throw an exception with a
+  // helpful (if disappointing) message.
+  //
+  // For more information, see:
+  // https://github.com/molleindustria/p5.play/issues/12
+
+  if (!this._isGlobal) {
+    throw new Error("Unfortunately, p5.play does not yet support p5 " +
+                    "instance mode.");
+  }
+};
+
 }));
 
 /**
@@ -704,7 +755,7 @@ function Sprite(_x, _y, _w, _h) {
   *
   * @property friction
   * @type {Number}
-  * @default -1
+  * @default 1
   */
   this.friction = 1;
 
@@ -774,8 +825,8 @@ function Sprite(_x, _y, _w, _h) {
   * Coefficient of restitution. The velocity lost after bouncing.
   * 1: perfectly elastic, no energy is lost
   * 0: perfectly inelastic, no bouncing
-  * <1: inelastic, this is the most common in nature
-  * >1: hyper elastic, energy is increased like in a pinball bumper
+  * less than 1: inelastic, this is the most common in nature
+  * greater than 1: hyper elastic, energy is increased like in a pinball bumper
   *
   * @property restitution
   * @type {Number}
@@ -933,7 +984,7 @@ function Sprite(_x, _y, _w, _h) {
   this.originalHeight = this.height;
 
   /**
-  * False if the sprite has been removed.
+  * True if the sprite has been removed.
   *
   * @property removed
   * @type {Boolean}
@@ -3123,8 +3174,13 @@ function Animation() {
       var prefix1 = from.substring(0, from.length-(4+digits1));
       var prefix2 = to.substring(0, to.length-(4+digits2) );
 
-      var number1 = parseInt(from.substring(from.length-(4+digits1), from.length-4));
-      var number2 = parseInt(to.substring(to.length-(4+digits2), to.length-4));
+      // Our numbers likely have leading zeroes, which means that some
+      // browsers (e.g., PhantomJS) will interpret them as base 8 (octal)
+      // instead of decimal. To fix this, we'll explicity tell parseInt to
+      // use a base of 10 (decimal). For more details on this issue, see
+      // http://stackoverflow.com/a/8763427/2422398.
+      var number1 = parseInt(from.substring(from.length-(4+digits1), from.length-4), 10);
+      var number2 = parseInt(to.substring(to.length-(4+digits2), to.length-4), 10);
 
       //swap if inverted
       if(number2<number1)
@@ -3984,3 +4040,26 @@ p5.prototype.registerMethod('post', cameraPop);
 //deltaTime
 //p5.prototype.registerMethod('pre', updateDelta);
 
+/**
+ * Log a warning message to the host console, using native `console.warn`
+ * if it is available but falling back on `console.log` if not.  If no
+ * console is available, this method will fail silently.
+ * @method _warn
+ * @param {!string} message
+ * @private
+ */
+p5.prototype._warn = function (message) {
+  var console = window.console;
+
+  if(console)
+  {
+    if('function' === typeof console.warn)
+    {
+      console.warn(message);
+    }
+    else if('function' === typeof console.log)
+    {
+      console.log('Warning: ' + message);
+    }
+  }
+}
