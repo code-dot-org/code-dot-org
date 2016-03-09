@@ -1,3 +1,5 @@
+/* globals google */
+
 // Creates and populates the chart-by-day DOM element with the data in percentagesByDay via a
 // callback, after loading the Google Visualization API.
 function drawChart(percentagesByDay) {
@@ -5,7 +7,7 @@ function drawChart(percentagesByDay) {
   // to run when the API is loaded.
   google.load('visualization', '1.0', {'packages':['corechart']});
   google.setOnLoadCallback(function() {
-    drawChartCallback(percentagesByDay)
+    drawChartCallback(percentagesByDay);
   });
 }
 
