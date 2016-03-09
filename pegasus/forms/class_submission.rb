@@ -177,9 +177,11 @@ class ClassSubmission
       fq.push("school_level_ss:#{level}")
     } unless params['school_level_ss'].nil_or_empty?
 
+    fl = 'location_p,school_name_s,school_address_s,class_format_s,class_format_category_s,school_tuition_s,school_level_ss,class_languages_all_ss,school_website_s,class_description_s'
     {
       q: query,
       fq: fq,
+      fl: fl,
       facet: true,
       'facet.field'=>['class_format_category_s', 'class_languages_all_ss', 'school_level_ss', 'school_tuition_s'],
       rows: rows,
