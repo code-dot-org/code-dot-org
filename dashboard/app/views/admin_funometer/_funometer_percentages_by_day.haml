@@ -22,5 +22,5 @@
 
 - content_for :body_scripts do
   :javascript
-    var percentagesByDay = #{@ratings_by_day.map{|row| [row[0], row[1].to_f]}.try(:to_json)}
-    #{render template: 'admin_funometer/funometerPercentagesByDay.js', formats: [:js]}
+    var percentagesByDay = #{@ratings_by_day.map{|row| [row[0], row[1].to_f]}.try(:to_json)};
+    drawChart(percentagesByDay);
