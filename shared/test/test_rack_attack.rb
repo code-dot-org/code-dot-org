@@ -89,13 +89,13 @@ class RackAttackTest < Minitest::Test
       assert_read_records 3, SUCCESSFUL
       # don't increment the index here because throttled requests don't affect the counts.
       assert_read_records 3, RATE_LIMITED
-      assert_custom_event 1, 'shared-tables/reads/15', count: 4, period: 15, limit: 3
-      assert_custom_metric 1, 'shared-tables_reads'
+      assert_throttle_custom_event 1, 'shared-tables/reads/15', count: 4, period: 15, limit: 3
+      assert_throttle_custom_metric 1, 'shared-tables_reads'
 
       msg = 'Other tables in the same app count against the same rate limit'
       assert_read_records 3, RATE_LIMITED, msg, OTHER_TABLE
-      assert_custom_event 2, 'shared-tables/reads/15', count: 5, period: 15, limit: 3
-      assert_custom_metric 2, 'shared-tables_reads'
+      assert_throttle_custom_event 2, 'shared-tables/reads/15', count: 5, period: 15, limit: 3
+      assert_throttle_custom_metric 2, 'shared-tables_reads'
 
       Timecop.travel 16
 
@@ -106,8 +106,8 @@ class RackAttackTest < Minitest::Test
 
       Timecop.travel 16 # elapsed time: 32s
       assert_read_records 6, RATE_LIMITED, '60s rate limit takes effect'
-      assert_custom_event 4, 'shared-tables/reads/60', count: 7, period: 60, limit: 6
-      assert_custom_metric 4, 'shared-tables_reads'
+      assert_throttle_custom_event 4, 'shared-tables/reads/60', count: 7, period: 60, limit: 6
+      assert_throttle_custom_metric 4, 'shared-tables_reads'
 
       Timecop.travel 61 # elapsed time: 93s
 
@@ -127,8 +127,8 @@ class RackAttackTest < Minitest::Test
       Timecop.travel 61 # elapsed time: 168s
 
       assert_read_records 12, RATE_LIMITED, '240s rate limit takes effect'
-      assert_custom_event 6, 'shared-tables/reads/240', count: 13, period: 240, limit: 12
-      assert_custom_metric 6, 'shared-tables_reads'
+      assert_throttle_custom_event 6, 'shared-tables/reads/240', count: 13, period: 240, limit: 12
+      assert_throttle_custom_metric 6, 'shared-tables_reads'
 
       Timecop.travel 241
 
@@ -251,7 +251,7 @@ class RackAttackTest < Minitest::Test
     get property_path(key)
   end
 
-  def assert_custom_event(index, throttle_name, count: nil, period: nil, limit: nil)
+  def assert_throttle_custom_event(index, throttle_name, count: nil, period: nil, limit: nil)
     # Filter out events from other test cases.
     events = NewRelic::Agent.get_events %r{^RackAttackRequestThrottled$}
     assert_equal index, events.length, "custom events recorded: #{index}"
@@ -263,7 +263,7 @@ class RackAttackTest < Minitest::Test
     assert_equal limit, last_event.last[:throttle_data_limit], "custom event #{index} throttle_data_limit" if limit
   end
 
-  def assert_custom_metric(index, throttle_type, expected_value = 1)
+  def assert_throttle_custom_metric(index, throttle_type, expected_value = 1)
     # Filter out metrics from other test cases.
     metrics = NewRelic::Agent.get_metrics %r{^Custom/RackAttackRequestThrottled}
     assert_equal index, metrics.length, "custom metrics recorded: #{index}"

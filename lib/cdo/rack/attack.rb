@@ -72,8 +72,12 @@ class Rack::Attack
       }
 
       NewRelic::Agent.record_custom_event("RackAttackRequestThrottled", event_details)
+      # throttle names are of the form "shared-(tables|properties)/(reads|writes)/#{period}"
+      # as defined by the first parameters to the 'throttle' calls above. '/' is a special
+      # character in Custom Metric names so we have to rework the name a bit here.
       parts = throttle_name.split('/')
-      throttle_type = "#{parts[0]}_#{parts[1]}"
+      throttle_type = parts.length == 3 ? "#{parts[0]}_#{parts[1]}" : 'unknown'
+      # Always specify a value of 1 so that each metric can be treated as a simple counter.
       NewRelic::Agent.record_metric("Custom/RackAttackRequestThrottled/#{throttle_type}", 1)
     end
   end
