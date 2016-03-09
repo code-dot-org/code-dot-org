@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'timecop'
 require 'dynamic_config/datastore_cache'
 require 'dynamic_config/adapters/memory_adapter.rb'
 
@@ -69,23 +70,26 @@ class DatastoreCacheTest < ActiveSupport::TestCase
     key = "key"
     value = "1, 2, 3"
 
-    @data_adapter.set(key, 'not the real value')
-    cache = DatastoreCache.new @data_adapter, cache_expiration: 0.01
+    old_value = 'not the real value'
+    @data_adapter.set(key, old_value)
+    cache = DatastoreCache.new @data_adapter, cache_expiration: 30
 
+    Timecop.freeze(Time.local(2016))
     listener = FakeListener.new
     cache.add_change_listener(listener)
 
     @data_adapter.set(key, value)
-    sleep 0.1
+    Time.travel Time.now+31
+    assert_equal value, cache.get(key)
 
     assert_equal value, cache.get(key)
     assert listener.changed, 'on_change should be called after polled updated'
     listener.reset
-    sleep 0.1
+    Time.travel Time.now+31
     assert !listener.changed, 'on_change should not be called when polling detects no changes'
 
     @data_adapter.set(key, 'new value')
-    sleep 0.1
+    Time.travel Time.now+31
     assert_equal 'new value', cache.get(key)
     assert listener.changed, 'on_change should be called after second polled updated'
   end
