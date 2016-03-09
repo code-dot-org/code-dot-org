@@ -22,6 +22,7 @@ module.exports = {
     "no-unused-vars": 0,
     "comma-dangle": 0,
     "no-empty": 0,
-    "semi": 2
+    "semi": 2,
+    "no-console": 0
   }
 };
