@@ -26,35 +26,48 @@ class Rack::Attack
     end
   end
 
-  limits(CDO.max_table_reads_per_sec).each do |limit, period|
-    throttle("shared-tables/reads/#{period}", :limit => limit, :period => period.seconds) do |req|
-      # extract the channel id for get requests to shared tables. Only match full
-      # table reads, because createRecord commands get redirected to individual row
-      # reads and we don't want those reads to count toward these limits.
-      req.get? && %r{^/v3/shared-tables/([^/]+)/[^/]+$}.match(req.path).try(:[], 1)
+  def self.update_limits
+    limits(CDO.max_table_reads_per_sec).each do |limit, period|
+      throttle("shared-tables/reads/#{period}", :limit => limit, :period => period.seconds) do |req|
+        # extract the channel id for get requests to shared tables. Only match full
+        # table reads, because createRecord commands get redirected to individual row
+        # reads and we don't want those reads to count toward these limits.
+        req.get? && %r{^/v3/shared-tables/([^/]+)/[^/]+$}.match(req.path).try(:[], 1)
+      end
+    end
+
+    limits(CDO.max_table_writes_per_sec).each do |limit, period|
+      throttle("shared-tables/writes/#{period}", :limit => limit, :period => period.seconds) do |req|
+        # extract the channel id for create, update and delete requests to shared tables.
+        # TODO(dave): Make imports and other table/column operations not fall into this bucket
+        # once we are accounting for them separately.
+        req.write? && %r{^/v3/shared-tables/([^/]+)}.match(req.path).try(:[], 1)
+      end
+    end
+
+    limits(CDO.max_property_reads_per_sec).each do |limit, period|
+      throttle("shared-properties/reads/#{period}", :limit => limit, :period => period.seconds) do |req|
+        # extract the channel id for reads of shared properties.
+        req.get? && %r{^/v3/shared-properties/([^/]+)/[^/]+$}.match(req.path).try(:[], 1)
+      end
+    end
+
+    limits(CDO.max_property_writes_per_sec).each do |limit, period|
+      throttle("shared-properties/writes/#{period}", :limit => limit, :period => period.seconds) do |req|
+        # extract the channel id for writes to shared properties.
+        req.write? && %r{^/v3/shared-properties/([^/]+)/[^/]+$}.match(req.path).try(:[], 1)
+      end
     end
   end
 
-  limits(CDO.max_table_writes_per_sec).each do |limit, period|
-    throttle("shared-tables/writes/#{period}", :limit => limit, :period => period.seconds) do |req|
-      # extract the channel id for create, update and delete requests to shared tables.
-      # TODO(dave): Make imports and other table/column operations not fall into this bucket
-      # once we are accounting for them separately.
-      req.write? && %r{^/v3/shared-tables/([^/]+)}.match(req.path).try(:[], 1)
+  # Install a DCDO change listener to update the rack attack limits whenever the config changes.
+  class ChangeListener
+    def on_change
+      Rack::Attack.update_limits
     end
   end
+  DCDO.add_change_listener(ChangeListener.new)
 
-  limits(CDO.max_property_reads_per_sec).each do |limit, period|
-    throttle("shared-properties/reads/#{period}", :limit => limit, :period => period.seconds) do |req|
-      # extract the channel id for reads of shared properties.
-      req.get? && %r{^/v3/shared-properties/([^/]+)/[^/]+$}.match(req.path).try(:[], 1)
-    end
-  end
-
-  limits(CDO.max_property_writes_per_sec).each do |limit, period|
-    throttle("shared-properties/writes/#{period}", :limit => limit, :period => period.seconds) do |req|
-      # extract the channel id for writes to shared properties.
-      req.write? && %r{^/v3/shared-properties/([^/]+)/[^/]+$}.match(req.path).try(:[], 1)
-    end
-  end
+  # Set the initial limits.
+  update_limits
 end
