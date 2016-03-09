@@ -19,6 +19,7 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/Instructions.jsx');
+var DialogButtons = require('./templates/DialogButtons.jsx');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
@@ -976,7 +977,13 @@ StudioApp.prototype.onReportComplete = function (response) {
 };
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
+  var isMarkdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+
   var instructionsDiv = document.createElement('div');
+  instructionsDiv.className = isMarkdownMode ?
+    'markdown-instructions-container' :
+    'instructions-container';
+
   var renderedMarkdown;
   var headerElement;
 
@@ -985,12 +992,9 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     puzzle_number: level.puzzle_number
   });
 
-  var markdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
-
-  if (markdownMode) {
+  if (isMarkdownMode) {
     var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
     renderedMarkdown = marked(markdownWithImages);
-    instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
     headerElement.innerHTML = puzzleTitle;
@@ -1019,17 +1023,14 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   // container just yet, because our React component could contain some
   // elements that don't want to be rendered until they are in the DOM
   var instructionsReactContainer = document.createElement('div');
-  instructionsReactContainer.className='instructions-container';
+  instructionsReactContainer.className='instructions-content';
   instructionsDiv.appendChild(instructionsReactContainer);
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      ok: true
-    }
-  });
-
   instructionsDiv.appendChild(buttons);
+  ReactDOM.render(React.createElement(DialogButtons, {
+    ok: true
+  }), buttons);
 
   // If there is an instructions block on the screen, we want the instructions dialog to
   // shrink down to that instructions block when it's dismissed.
@@ -1062,13 +1063,13 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
-    markdownMode: markdownMode,
+    markdownMode: isMarkdownMode,
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
     onHidden: hideFn,
     scrollContent: true,
-    scrollableSelector: ".instructions-container",
+    scrollableSelector: ".instructions-content",
     header: headerElement
   });
 
