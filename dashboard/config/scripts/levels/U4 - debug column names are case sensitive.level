@@ -40,9 +40,12 @@
     "debugger_disabled": "false",
     "project_template_level_name": "U4 - Exploring Data Tools - Template",
     "slider_speed": "1.0",
-    "encrypted_examples": "jExMIashxcSUKHPlZFNN0/4pgHLp28ZTMHKCLfTSgootYCc7/KIykRa9EbLh\ndUW4\n"
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>
