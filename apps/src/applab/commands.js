@@ -13,7 +13,6 @@ var setPropertyDropdown = require('./setPropertyDropdown');
 var assetPrefix = require('../assetManagement/assetPrefix');
 
 var errorHandler = require('../errorHandler');
-var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var applabTurtle = require('./applabTurtle');
 var ChangeEventHandler = require('./ChangeEventHandler');
