@@ -24,6 +24,10 @@ Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, 
 <br />
 [<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
+# Computer Science Discoveries
+Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course is currently in development and will be ready for the 2017-2018 school year.
+
+[<button>Learn more about curriculum</button>](/educate/csd)
 
 # Exploring Computer Science
 
@@ -36,6 +40,7 @@ Download the [ECS version 5 curriculum overview](/files/ecs-curriculum-overview.
 <img src="<%= CDO.code_org_url("/images/testimonials/fit-750/exploring-cs-testimonial.png") %>">
 
 [<button>Learn more about professional learning</button>](/educate/professional-learning/exploring-cs)
+
 
 # 3rd Party resources for high school CS
 
