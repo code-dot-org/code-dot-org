@@ -10,7 +10,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,5,0,0,0,0,0,0],[0,0,0,0,0,5,0,0],[0,5,0,0,0,0,0,0],[0,0,0,0,0,5,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "disable_param_editing": "false",
     "disable_variable_editing": "true",
     "start_direction": "2",
@@ -33,7 +33,8 @@
     "examples_required": "false",
     "fast_get_nectar_animation": "true"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -121,6 +122,69 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
+          <next>
+            <block type="variables_set" inline="false" uservisible="false">
+              <title name="VAR">left</title>
+              <value name="VALUE">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">0</title>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" inline="false" uservisible="false">
+                  <title name="VAR">right</title>
+                  <value name="VALUE">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="procedures_callnoreturn" inline="false">
+                      <mutation name="get 5 nectar">
+                        <arg name="direction"/>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="variables_get">
+                          <title name="VAR">right</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="procedures_callnoreturn" inline="false">
+                              <mutation name="get 5 nectar">
+                                <arg name="direction"/>
+                              </mutation>
+                              <value name="ARG0">
+                                <block type="variables_get">
+                                  <title name="VAR">left</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation>
             <arg name="direction"/>
@@ -214,101 +278,6 @@
               </next>
             </block>
           </statement>
-        </block>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="variables_set" inline="false" deletable="false" movable="false">
-              <title name="VAR">left</title>
-              <value name="VALUE">
-                <block type="math_number" deletable="false" movable="false" editable="false">
-                  <title name="NUM">0</title>
-                </block>
-              </value>
-              <next>
-                <block type="variables_set" inline="false" deletable="false" movable="false">
-                  <title name="VAR">right</title>
-                  <value name="VALUE">
-                    <block type="math_number" deletable="false" movable="false" editable="false">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="maze_move">
-                      <title name="DIR">moveForward</title>
-                      <next>
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
-                          <next>
-                            <block type="procedures_callnoreturn" inline="false">
-                              <mutation name="get 5 nectar">
-                                <arg name="direction"/>
-                              </mutation>
-                              <value name="ARG0">
-                                <block type="variables_get">
-                                  <title name="VAR">left</title>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="maze_move">
-                                  <title name="DIR">moveForward</title>
-                                  <next>
-                                    <block type="procedures_callnoreturn" inline="false">
-                                      <mutation name="get 5 nectar">
-                                        <arg name="direction"/>
-                                      </mutation>
-                                      <value name="ARG0">
-                                        <block type="variables_get">
-                                          <title name="VAR">right</title>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="maze_move">
-                                          <title name="DIR">moveForward</title>
-                                          <next>
-                                            <block type="maze_move">
-                                              <title name="DIR">moveForward</title>
-                                              <next>
-                                                <block type="procedures_callnoreturn" inline="false">
-                                                  <mutation name="get 5 nectar">
-                                                    <arg name="direction"/>
-                                                  </mutation>
-                                                  <value name="ARG0">
-                                                    <block type="variables_get">
-                                                      <title name="VAR">left</title>
-                                                    </block>
-                                                  </value>
-                                                  <next>
-                                                    <block type="procedures_callnoreturn" inline="false">
-                                                      <mutation name="get 5 nectar">
-                                                        <arg name="direction"/>
-                                                      </mutation>
-                                                      <value name="ARG0">
-                                                        <block type="variables_get">
-                                                          <title name="VAR">right</title>
-                                                        </block>
-                                                      </value>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
         </block>
       </xml>
     </solution_blocks>
