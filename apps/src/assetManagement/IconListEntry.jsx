@@ -22,17 +22,31 @@ module.exports = React.createClass({
 
   render: function () {
 
-    var query = new RegExp(this.props.search), altMatchText;
-    if (!query.test(this.props.iconId)) {
-      // We matched based on an alternate keyword, show that keyword next to the icon ID.
-      altMatchText = <p style={{float: 'left', fontSize: '13px', color: '#999'}}>({this.highlightSearch(this.props.altMatch)})</p>;
+    var iconLabel, columnWidth;
+
+    if (this.props.search) {
+      var query = new RegExp(this.props.search), altMatchText;
+      if (!query.test(this.props.iconId)) {
+        // We matched based on an alternate keyword, show that keyword next to the icon ID.
+        altMatchText = <p style={{
+          float: 'left',
+          fontSize: '13px',
+          color: '#999'
+        }}>({this.highlightSearch(this.props.altMatch)})</p>;
+      }
+
+      iconLabel = [
+        <p style={{float: 'left', margin: '0 5px', fontSize: '13px', color: '#000'}}>{this.highlightSearch(this.props.iconId)}</p>,
+        altMatchText
+      ];
+
+      columnWidth = '33%';
     }
 
     return (
-      <div style={{float: 'left', width: '33%', height: '35px'}}>
+      <div style={{float: 'left', width: columnWidth, height: '35px'}}>
         <Icon iconId={this.props.iconId}/>
-        <p style={{float: 'left', margin: '0 5px', fontSize: '13px', color: '#000'}}>{this.highlightSearch(this.props.iconId)}</p>
-        {altMatchText}
+        {iconLabel}
       </div>
     );
   }
