@@ -33,12 +33,13 @@
     "fast_get_nectar_animation": "true",
     "callout_json": "[]"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="0">
           <next>
             <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">left</title>

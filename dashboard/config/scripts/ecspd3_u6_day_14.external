@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 ## Unit 6 Lessons > Day 14 
  
 #### Concepts Covered  
-Tic-Tac-Toe game on paper, decisions needed for programming a robot to play Tic-Tac-Toe, If-then” logic to play the game, and RoboCup competition article.
+Tic-Tac-Toe game on paper, decisions needed for programming a robot to play Tic-Tac-Toe, "If-then” logic to play the game, and RoboCup competition article.
  
 #### Lesson Overview 
 In pairs, students play a game of Tic-Tac-Toe on paper to come up with questions around how the game works, the rules, decisions players need to make before taking turns, etc..  You will then ask them to read the article “Robot Competitors Meet on a Soccer Field of Dreams” and lead a discussion on how they might make clear instructions so that they could instruct robots how to play Tic-Tac-Toe.
