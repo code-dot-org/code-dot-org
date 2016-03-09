@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 Rubric for Rescue Challenge, Design, Build, Write a Rescue Program.
 
 #### Lesson Overview 
-This lesson is based on the second level of RoboCupJunior, in which they will need to have a robot simulate a robots that are sent to rescue people (victims) along a path through each “room” and avoid obstacles during a natural disaster.  Remind students of the problem solving process, when deciding on the victims, gaps, debris, room, construction, programming and creativity.  They will need to print out their program and hand it in at the time they compete.  Each group/team will be graded on their ability to cooperate on the challenge as a whole while playing fair.
+This lesson is based on the second level of RoboCupJunior, in which they will need to build a robot simulate a robot that are sent to rescue people (victims) along a path through each “room” and avoid obstacles during a natural disaster.  Remind students of the problem solving process, when deciding on the victims, gaps, debris, room, construction, programming and creativity.  They will need to print out their program and hand it in at the time they compete.  Each group/team will be graded on their ability to cooperate on the challenge as a whole while playing fair.
 <br><br> 
  
 #### Lesson Resources 
@@ -24,7 +24,7 @@ This lesson is based on the second level of RoboCupJunior, in which they will ne
 >#### Hints from an ECS Teacher: 
 Look over the activity well in advance so you know how to help facilitate your students experience.
 
-***Rescue Robot Activity***: The rescue robot assignment is based on the second level of RoboCupJunior, an international competition.  This robot simulates robots sent to rescue people during natural disasters. It must find “victims” along the path through each “room” and avoid obstacles. The goal is to program a robot that uses sensors to respond to different stimuli. 
+***Rescue Robot Activity***: The rescue robot assignment is based on the second level of RoboCupJunior, an international competition.  This robot simulates one sent to rescue victims during natural disasters. It must find “victims” along the path through each “room” and avoid obstacles. The goal is to program a robot that uses sensors to respond to different stimuli. 
  <br><br>
 ***Task***: Build a robot that follows a black line on a white background, counts green or metallic “people” and avoids obstacles. 
 <br><br>
