@@ -861,15 +861,22 @@ input[type="radio"] {
     #lightbulb {
       position: absolute;
       left: 40px;
+    }
+  }
+}
 
-      #hintCount {
-        font-weight: bold;
-        font-size: 400px;
-        fill: white;
-        stroke: black;
-        stroke-width: 30px;
-        font-family: Verdana, Geneva, sans-serif;
-      }
+.qtip.cdo-qtips.qtip-authored-hint {
+  .qtip-content {
+    font-family: $gotham-regular;
+    padding: 10px 10px 0 10px;
+    color: $charcoal;
+
+    h3 {
+      margin-top: 0;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 20px;
     }
   }
 }
@@ -881,6 +888,35 @@ input[type="radio"] {
 #prompt2 {
   font-size: 12px;
   color: $charcoal;
+}
+
+.authored-hints {
+
+  h1, p, pre {
+    color: $charcoal;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  #hint-button {
+    margin-left: 35px;
+  }
+
+  ol {
+    counter-reset: list;
+    margin: 0 0 35px 35px;
+
+    li {
+      list-style: none;
+      &:before {
+        content: counter(list, decimal) ") ";
+        counter-increment: list;
+        position: absolute;
+        left: 35px;
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .modal-content {
