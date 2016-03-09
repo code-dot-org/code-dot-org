@@ -252,9 +252,10 @@ class RackAttackTest < Minitest::Test
   end
 
   def assert_custom_event(index, throttle_name, count: nil, period: nil, limit: nil)
-    assert_equal index, NewRelic::Agent.events.length, "custom events recorded: #{index}"
-    last_event = NewRelic::Agent.events.last
-    assert_equal 'RackAttackRequestThrottled', last_event.first, "custom event #{index} type"
+    # Filter out events from other test cases.
+    events = NewRelic::Agent.get_events %r{^RackAttackRequestThrottled$}
+    assert_equal index, events.length, "custom events recorded: #{index}"
+    last_event = events.last
     assert_equal @channel_id, last_event.last[:encrypted_channel_id], "custom event #{index} encrypted_channel_id"
     assert_equal throttle_name, last_event.last[:throttle_name], "custom event #{index} throttle_name"
     assert_equal count, last_event.last[:throttle_data_count], "custom event #{index} throttle_data_count" if count
@@ -263,8 +264,10 @@ class RackAttackTest < Minitest::Test
   end
 
   def assert_custom_metric(index, throttle_type)
-    assert_equal index, NewRelic::Agent.metrics.length, "custom metrics recorded: #{index}"
-    last_metric = NewRelic::Agent.metrics.last
+    # Filter out metrics from other test cases.
+    metrics = NewRelic::Agent.get_metrics %r{^Custom/RackAttackRequestThrottled}
+    assert_equal index, metrics.length, "custom metrics recorded: #{index}"
+    last_metric = metrics.last
     expected_metric_name = "Custom/RackAttackRequestThrottled/#{throttle_type}"
     assert_equal expected_metric_name, last_metric.first, "custom metric #{index} name"
     assert_equal 1, last_metric.last, "custom metric #{index} value"
