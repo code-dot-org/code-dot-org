@@ -123,7 +123,8 @@ GameLab.prototype.init = function (config) {
   });
   var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
     showButtons: true,
-    showConsole: true
+    showConsole: true,
+    showWatch: true,
   });
 
   var renderCodeWorkspace = function () {

@@ -813,6 +813,48 @@ JSInterpreter.prototype.createGlobalProperty = function (name, value, parent) {
 };
 
 /**
+ * Returns an interpreter object representing the member expression.
+ */
+JSInterpreter.prototype.getValueFromMemberExpression = function (expression) {
+  var object;
+  if (expression.object.type === 'MemberExpression') {
+    object = this.getValueFromMemberExpression(expression.object);
+  } else if (expression.object.type === 'Identifier') {
+    object = this.interpreter.getValueFromScope(expression.object.name);
+  } else {
+    throw "Unsupported expression object";
+  }
+  if (expression.property.type === 'Identifier') {
+    return this.interpreter.getValue([object, expression.property.name]);
+  } else if (expression.property.type === 'Literal') {
+    return this.interpreter.getValue(
+        [object, this.interpreter.createPrimitive(expression.property.value)]);
+  }
+};
+
+/**
+ * Evaluate watch variable based on current scope.
+ */
+JSInterpreter.prototype.evaluateWatchVariable = function (watchVar) {
+  var value;
+  try {
+    var ast = window.acorn.parse(watchVar);
+    if (ast.type === 'Program' &&
+        ast.body[0].type === 'ExpressionStatement') {
+      var expressionNode = ast.body[0].expression;
+      if (expressionNode.type === 'Identifier') {
+        value = this.interpreter.getValueFromScope(expressionNode.name);
+      } else if (expressionNode.type === 'MemberExpression') {
+        value = this.getValueFromMemberExpression(expressionNode);
+      }
+    }
+  } catch (err) {
+    return err;
+  }
+  return codegen.marshalInterpreterToNative(this.interpreter, value);
+};
+
+/**
  * Returns the interpreter function object corresponding to 'funcName' if a
  * function with that name is found in the interpreter's global scope.
  */

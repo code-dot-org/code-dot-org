@@ -23,6 +23,10 @@ var StepType = JSInterpreter.StepType;
 var MIN_DEBUG_AREA_HEIGHT = 120;
 /** @const {number} */
 var MAX_DEBUG_AREA_HEIGHT = 400;
+/** @const {number} */
+var WATCH_TIMER_PERIOD = 500;
+/** @const {string} */
+var WATCH_COMMAND_PREFIX = "$watch ";
 
 /**
  * Debugger controls and debug console used in our rich JavaScript IDEs, like
@@ -55,6 +59,18 @@ var JsDebuggerUi = module.exports = function (runApp) {
   this.history_ = new CommandHistory();
 
   /**
+   * Collection of watch variables.
+   * @private {object}
+   */
+  this.watchVars_ = {};
+
+  /**
+   * Id for watch timer setInterval.
+   * @private {number}
+   */
+  this.watchIntervalId_ = 0;
+
+  /**
    * Helper that handles open/shut actions for debugger UI
    * @private {DebugArea}
    */
@@ -73,13 +89,15 @@ var JsDebuggerUi = module.exports = function (runApp) {
  * @param {!Object} options
  * @param {!boolean} options.showButtons - Whether to show the debug buttons
  * @param {!boolean} options.showConsole - Whether to show the debug console
+ * @param {!boolean} options.showWatch - Whether to show the debug watch area
  * @returns {string} of HTML markup to be embedded in codeWorkspace.html.ejs
  */
 JsDebuggerUi.prototype.getMarkup = function (assetUrl, options) {
   return require('./JsDebuggerUi.html.ejs')({
     assetUrl: assetUrl,
     debugButtons: options.showButtons,
-    debugConsole: options.showConsole
+    debugConsole: options.showConsole,
+    debugWatch: options.showWatch
   });
 };
 
@@ -97,6 +115,8 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
   this.observer_.observe(jsInterpreter.onExecutionWarning,
       this.log.bind(this));
 
+  this.watchIntervalId_ = setInterval(this.onWatchTimer.bind(this), WATCH_TIMER_PERIOD);
+
   this.updatePauseUiState();
   this.clearDebugOutput();
   this.clearDebugInput();
@@ -111,6 +131,10 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
 JsDebuggerUi.prototype.detach = function () {
   this.observer_.unobserveAll();
   this.jsInterpreter_ = null;
+
+  this.watchVars_ = {};
+  clearInterval(this.watchIntervalId_);
+  this.watchIntervalId_ = 0;
 
   this.resetDebugControls_();
 };
@@ -284,11 +308,16 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
     this.log('> ' + input);
     var jsInterpreter = this.jsInterpreter_;
     if (jsInterpreter) {
-      try {
-        var result = jsInterpreter.evalInCurrentScope(input);
-        this.log('< ' + String(result));
-      } catch (err) {
-        this.log('< ' + String(err));
+      if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
+        var watchVariable = input.substring(WATCH_COMMAND_PREFIX.length);
+        this.watchVars_[watchVariable] = {};
+      } else {
+        try {
+          var result = jsInterpreter.evalInCurrentScope(input);
+          this.log('< ' + String(result));
+        } catch (err) {
+          this.log('< ' + String(err));
+        }
       }
     } else {
       this.log('< (not running)');
@@ -533,3 +562,23 @@ JsDebuggerUi.prototype.onStepOutButton = function() {
     this.updatePauseUiState();
   }
 };
+
+/**
+ * Refresh the watch variables.
+ * @private
+ */
+JsDebuggerUi.prototype.onWatchTimer = function() {
+  var jsInterpreter = this.jsInterpreter_;
+  if (jsInterpreter) {
+    for (var watchVar in this.watchVars_) {
+      var currentValue = jsInterpreter.evaluateWatchVariable(watchVar);
+      if (this.watchVars_[watchVar].lastValue !== currentValue) {
+        // output change
+        this.log("Watch variable changed > " + watchVar + ": " + currentValue);
+        // Store new value
+        this.watchVars_[watchVar].lastValue = currentValue;
+      }
+    }
+  }
+};
+

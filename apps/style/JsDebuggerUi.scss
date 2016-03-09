@@ -85,6 +85,7 @@ $debug-area-initial-height: 120px;
   .workspace-header-button {
     background-color: $lightest_purple;
     color: $charcoal;
+    margin-right: 6px;
 
     &:hover {
       background-color: $cyan;
@@ -114,18 +115,26 @@ $debug-area-initial-height: 120px;
 }
 
 $debug-commands-column-width: 270px;
+$debug-watch-column-width: 130px;
+$debug-header-border-width: 1px;
 
 #debug-commands-header {
   width: $debug-commands-column-width;
   float: left;
-  border-right: 1px solid gray;
+  border-right: $debug-header-border-width solid gray;
 
   .fa {
     margin: 0 0.25em;
   }
 }
 
-.debug-commands, .debug-console {
+#debug-watch-header {
+  width: $debug-watch-column-width + $debug-header-border-width;
+  float: right;
+  border-left: $debug-header-border-width solid gray;
+}
+
+.debug-commands, .debug-console, .debug-watch {
   display: block;
   background-color: $white;
   border: 1px solid #ddd;
@@ -140,12 +149,20 @@ $debug-commands-column-width: 270px;
   text-align: center;
 }
 
+.debug-watch {
+  right: 0;
+  width: $debug-watch-column-width;
+}
+
 .debug-console {
-  &.full {
+  &.no-commands {
     left: 0;
   }
+  &.no-watch {
+    right: 0;
+  }
   left: $debug-commands-column-width;
-  right: 0;
+  right: $debug-watch-column-width;
 }
 
 .debug-console * {
