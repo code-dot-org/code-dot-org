@@ -543,6 +543,24 @@ function markSeenDataAlert(channelId) {
   localStorage.setItem('dataAlerts', JSON.stringify(channelIds));
 }
 
+function onCloseShareWarnings(showStoreDataAlert) {
+  // we closed the dialog without hitting too_young
+  // Only want to ask about age once across apps
+  if (!Applab.user.isSignedIn) {
+    utils.trySetLocalStorage('is13Plus', 'true');
+  }
+  // Only want to ask about storing data once per app.
+  if (showStoreDataAlert) {
+    markSeenDataAlert(Applab.channelId);
+  }
+  window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+}
+
+function handleShareWarningsTooYoung() {
+  utils.trySetLocalStorage('is13Plus', 'false');
+  window.location.href = '/too_young';
+}
+
 /**
  * Starts the app after (potentially) Showing a modal warning about data sharing
  * (if appropriate) and determining user is old enough
@@ -555,26 +573,12 @@ Applab.startSharedAppAfterWarnings = function () {
 
   var modal = document.createElement('div');
   document.body.appendChild(modal);
-  return ReactDOM.render(React.createElement(ShareWarningsDialog, {
-    showStoreDataAlert: showStoreDataAlert,
-    is13Plus: is13Plus,
-    handleClose: function () {
-      // we closed the dialog without hitting too_young
-      // Only want to ask about age once across apps
-      if (!Applab.user.isSignedIn) {
-        utils.trySetLocalStorage('is13Plus', 'true');
-      }
-      // Only want to ask about storing data once per app.
-      if (showStoreDataAlert) {
-        markSeenDataAlert(Applab.channelId);
-      }
-      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
-    },
-    handleTooYoung: function () {
-      utils.trySetLocalStorage('is13Plus', 'false');
-      window.location.href = '/too_young';
-    }
-  }), modal);
+
+  return ReactDOM.render(<ShareWarningsDialog
+    showStoreDataAlert={showStoreDataAlert}
+    is13Plus={is13Plus}
+    handleClose={onCloseShareWarnings.bind(null, showStoreDataAlert)}
+    handleTooYoung={handleShareWarningsTooYoung}/>, modal);
 };
 
 /**
