@@ -60,11 +60,6 @@ Lint/UnusedMethodArgument:
 Performance/Casecmp:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Performance/RedundantBlockCall:
-  Enabled: false
-
 # Offense count: 11
 # Cop supports --auto-correct.
 Performance/StringReplacement:
