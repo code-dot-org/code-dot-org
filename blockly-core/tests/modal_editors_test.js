@@ -274,6 +274,19 @@ function test_contractEditor_add_examples() {
   goog.dom.removeNode(container);
 }
 
+function test_contractEditor_deleteButton_notVisibleForPrewritten() {
+  var singleDefinitionString = SINGLE_DEFINITION_FILLED;
+  var container = initializeWithContractEditor(singleDefinitionString);
+  var contractEditor = Blockly.contractEditor;
+  contractEditor.autoOpenWithLevelConfiguration({
+    autoOpenFunction: 'functional-function'
+  });
+  assertFalse('Delete button is not visible',
+      goog.style.isElementShown(goog.dom.getElementByClass('svgTextButton')));
+  contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
 function test_contractEditor_run_test_with_definition_runs() {
   var container = initializeWithContractEditor(SINGLE_DEFINITION_FILLED);
   var contractEditor = Blockly.contractEditor;
