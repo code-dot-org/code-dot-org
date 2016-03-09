@@ -10,7 +10,7 @@
  maxlen: 120
  */
 'use strict';
-/* global google */
+/* global google, Promise */
 
 require("babelify/polyfill"); // required for Promises in IE / Phantom
 require('../utils');

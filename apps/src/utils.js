@@ -265,14 +265,14 @@ exports.isInfiniteRecursionError = function (err) {
   }
 
   // Firefox
-  /* jshint ignore:start */
+  /*eslint-disable */
   // Linter doesn't like our use of InternalError, even though we gate on its
   // existence.
   if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
       err.message === 'too much recursion') {
     return true;
   }
-  /* jshint ignore:end */
+  /*eslint-enable */
 
   // IE
   if (err instanceof Error &&
