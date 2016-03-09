@@ -292,6 +292,8 @@ class Documents < Sinatra::Base
         cache :document
       end
 
+      pass if request.post? && !@header['post']
+
       response.headers['X-Pegasus-Version'] = '3'
       begin
         render_(content, File.extname(path))
