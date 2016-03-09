@@ -1,15 +1,17 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-12-01T18:43:30.000Z",
+  "created_at": "2016-03-08T20:11:48.000Z",
   "level_num": "custom",
-  "user_id": 155,
+  "user_id": 208,
   "properties": {
     "skin": "applab",
     "edit_code": true,
+    "encrypted_examples": [
+
+    ],
     "embed": "false",
-    "instructions": "Add a property to the JavaScript object, then run the program.  View the data table and see how changing the object affects the data table. (Click to see full instructions)",
-    "markdown_instructions": "# What Happens When You Change the Object?\r\n\r\nLet's experiment by adding a property to the object and storing it again.\r\n\r\n# Do This:\r\n\r\n* **Add a property** to the song object: `song.artist = \"Beyonce\"`. It should now have 3 properties: title, seconds, and artist.\r\n* **Run the program** so that your updated object is added to the database. You shouldn't need to change anything about the call to `createRecord`.\r\n* In the Data Viewer, **confirm the new record was added to the table**. You'll learn more about the changes you see in the next exercise.",
+    "start_blocks": "var song = {};\r\nsong.title = \"Single Ladies\";\r\nsong.seconds = 199;\r\nsong.artist = \"Beyonce\";\r\ncreateRecord(\"mySongs\", song, function(record){\r\n  console.log(record);\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -27,7 +29,7 @@
     "disable_examples": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
-    "free_play": "true",
+    "free_play": "false",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
@@ -36,13 +38,9 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
+    "data_tables": "{\r\n \"mySongs\":\r\n [\r\n  {\r\n    \"title\": \"Thriller\",\r\n    \"seconds\": 358,\r\n    \"id\": 1\r\n  },\r\n  {\r\n    \"title\": \"Wonderwall\",\r\n    \"seconds\": 280,\r\n    \"id\": 2\r\n  },\r\n  {\r\n    \"title\": \"I Will Survive\",\r\n    \"seconds\": 180,\r\n    \"id\": 3\r\n  }\r\n]\r\n}",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
-    "project_template_level_name": "U4 - Exploring Data Tools - Template",
-    "slider_speed": "1.0",
-    "encrypted_examples": [
-
-    ]
+    "debugger_disabled": "false"
   },
   "published": true,
   "notes": ""
