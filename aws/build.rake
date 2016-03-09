@@ -128,6 +128,8 @@ APPS_TASK = build_task('apps', [BLOCKLY_CORE_TASK] + Dir.glob(apps_dir('**/*')))
   # Test and staging are the only environments that should be uploading new packages
   raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
 
+  raise 'Wont build apps with staged changes' if RakeUtils.git_staged_changes?(apps_dir)
+
   HipChat.log 'Building apps...'
   RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:apps'
@@ -156,6 +158,8 @@ CODE_STUDIO_TASK = build_task('code-studio', Dir.glob(code_studio_dir('**/*'))) 
 
   # Test and staging are the only environments that should be uploading new packages
   raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
+
+  raise 'Wont build code-studio with staged changes' if RakeUtils.git_staged_changes?(code_studio_dir)
 
   HipChat.log 'Building code-studio...'
   RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
