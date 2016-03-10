@@ -292,6 +292,11 @@ class Documents < Sinatra::Base
         cache :document
       end
 
+      if request.post? && !@header['allow_post']
+        response.headers['Allow'] = 'GET, HEAD'
+        error 405
+      end
+
       response.headers['X-Pegasus-Version'] = '3'
       begin
         render_(content, File.extname(path))
