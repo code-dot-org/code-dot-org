@@ -609,6 +609,7 @@ Applab.init = function(config) {
     isAdmin: (config.isAdmin === true),
     isSignedIn: config.isSignedIn
   };
+  Applab.isReadOnlyView = config.readonlyWorkspace;
 
   loadLevel();
 
@@ -1052,7 +1053,7 @@ Applab.renderVisualizationOverlay = function() {
   }
 
   // Enable crosshair cursor for divApplab and designModeViz
-  $(divApplab).toggleClass('withCrosshair', !Applab.isRunning());
+  $(divApplab).toggleClass('withCrosshair', Applab.isCrosshairAllowed());
   $(designModeViz).toggleClass('withCrosshair', true);
 
   if (!Applab.visualizationOverlay_) {
@@ -1064,7 +1065,7 @@ Applab.renderVisualizationOverlay = function() {
   var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
 
   Applab.visualizationOverlay_.render(visualizationOverlay, {
-    isApplabRunning: Applab.isRunning(),
+    isCrosshairAllowed: Applab.isCrosshairAllowed(),
     scale: scaledWidth / unscaledWidth,
     isInDesignMode: Applab.isInDesignMode()
   });
@@ -1637,4 +1638,8 @@ Applab.getScreens = function() {
 // Wrap design mode function so that we can call from commands
 Applab.updateProperty = function (element, property, value) {
   return designMode.updateProperty(element, property, value);
+};
+
+Applab.isCrosshairAllowed = function () {
+  return !Applab.isReadOnlyView && !Applab.isRunning();
 };
