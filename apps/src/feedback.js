@@ -972,6 +972,8 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, hideIcon,
  * @param {object} options Configurable options.
  * @param {string} headerText Text for header portion
  * @param {string} bodyText Text for body portion
+ * @param {boolean} prompt Whether to prompt for a string value
+ * @param {string} promptPrefill If prompting, textbox prefill value
  * @param {string} cancelText Text for cancel button
  * @param {string} confirmText Text for confirm button
  * @param {boolean} hideIcon Whether to hide the icon
@@ -986,6 +988,14 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   }
   if (options.bodyText) {
     contentDiv.innerHTML += '<p>' + options.bodyText + '</p>';
+  }
+  var textBox;
+  if (options.prompt) {
+    textBox = document.createElement('input');
+    if (options.promptPrefill) {
+      textBox.value = options.promptPrefill;
+    }
+    contentDiv.appendChild(textBox);
   }
 
   var buttons = document.createElement('div');
@@ -1007,7 +1017,11 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   if (cancelButton) {
     dom.addClickTouchEvent(cancelButton, function() {
       if (options.onCancel) {
-        options.onCancel();
+        if (options.prompt) {
+          options.onCancel(textBox.value);
+        } else {
+          options.onCancel();
+        }
       }
       dialog.hide();
     });
@@ -1024,6 +1038,9 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   }
 
   dialog.show();
+  if (textBox) {
+    textBox.focus();
+  }
 };
 
 /**

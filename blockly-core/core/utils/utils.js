@@ -754,6 +754,8 @@ Blockly.svgRectToRect = function (svgRect) {
  * @typedef {Object} DialogOptions
  * @property {string} headerText
  * @property {string} bodyText
+ * @property {boolean} prompt
+ * @property {string} promptPrefill
  * @property {string} cancelText
  * @property {string} confirmText
  * @property {function} onConfirm
