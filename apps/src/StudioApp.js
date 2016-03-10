@@ -2360,16 +2360,12 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
     container = $("<div class='react-alert'/>");
     parent.append(container);
   }
+  var renderElement = container[0];
 
-  var reactProps = $.extend({}, {
-    className: 'alert-error',
-    onClose: function () {
-      React.unmountComponentAtNode(container[0]);
-    }
-  }, props);
-
-  var element = React.createElement(Alert, reactProps);
-  ReactDOM.render(element, container[0]);
+  var handleAlertClose = function () {
+    React.unmountComponentAtNode(renderElement);
+  };
+  ReactDOM.render(<Alert onClose={handleAlertClose} {...props}/>, renderElement);
 };
 
 /**
