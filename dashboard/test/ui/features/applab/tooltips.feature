@@ -39,31 +39,49 @@ Feature: Applab visualization overlay tooltips
     And I wait for 1 seconds
 
     When I hover over element with id "design_text_area1"
-    Then I see no difference for "tooltip for text area" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for text area"
 
     When I hover over element with id "design_button1"
-    Then I see no difference for "tooltip for button" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for button"
 
     When I hover over element with id "design_label1"
-    Then I see no difference for "tooltip for label" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for label"
 
     When I hover over the screen at xpos 300 and ypos 100
-    Then I see no difference for "tooltip for blank screen area at (300, 100)" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for blank screen area at (300, 100)"
 
     When I hover over element with id "design_text_input1"
-    Then I see no difference for "tooltip for text input" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for text input"
 
     When I hover over element with id "design_radio_button1"
-    Then I see no difference for "tooltip for radio button" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for radio button"
 
     When I hover over element with id "design_checkbox1"
-    Then I see no difference for "tooltip for checkbox" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for checkbox"
 
     When I hover over element with id "design_image1"
-    Then I see no difference for "tooltip for image" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for image"
 
     When I hover over the screen at xpos 300 and ypos 200
-    Then I see no difference for "tooltip for blank screen area at (300, 200)" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for blank screen area at (300, 200)"
 
     And I close my eyes
 
@@ -74,27 +92,43 @@ Feature: Applab visualization overlay tooltips
     And I wait for 1 seconds
 
     When I hover over element with id "text_area1"
-    Then I see no difference for "tooltip for text area" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for text area"
 
     When I hover over element with id "button1"
-    Then I see no difference for "tooltip for button" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for button"
 
     When I hover over element with id "label1"
-    Then I see no difference for "tooltip for label" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for label"
 
     When I hover over the screen at xpos 300 and ypos 100
-    Then I see no difference for "tooltip for blank screen area at (300, 100)" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for blank screen area at (300, 100)"
 
     When I hover over element with id "text_input1"
-    Then I see no difference for "tooltip for text input" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for text input"
 
     When I hover over element with id "radio_button1"
-    Then I see no difference for "tooltip for radio button" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for radio button"
 
     When I hover over element with id "checkbox1"
-    Then I see no difference for "tooltip for checkbox" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for checkbox"
 
     When I hover over the screen at xpos 300 and ypos 200
-    Then I see no difference for "tooltip for blank screen area at (300, 200)" after saving project
+    And I save the project
+    And I wait until element ".project_updated_at" contains text "Saved"
+    Then I see no difference for "tooltip for blank screen area at (300, 200)"
 
     And I close my eyes
