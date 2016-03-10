@@ -132,21 +132,17 @@ Blockly.FieldVariable.prototype.dropdownChange = function(text) {
   if (text === Blockly.Msg.RENAME_VARIABLE) {
     var oldVar = this.getText();
     this.getParentEditor_().hideChaff();
-    text = Blockly.FieldVariable.promptName(Blockly.Msg.RENAME_VARIABLE_TITLE.replace('%1', oldVar),
-                      oldVar);
-    if (text) {
+    Blockly.FieldVariable.modalPromptName(Blockly.Msg.RENAME_VARIABLE_TITLE.replace('%1', oldVar),
+        Blockly.Msg.RENAME_VARIABLE, oldVar, function(text) {
       Blockly.Variables.renameVariable(oldVar, text, this.sourceBlock_.blockSpace);
-    }
+    }.bind(this));
     return null;
   } else if (text === Blockly.Msg.NEW_VARIABLE) {
     this.getParentEditor_().hideChaff();
-    text = Blockly.FieldVariable.promptName(Blockly.Msg.NEW_VARIABLE_TITLE, '');
-    // Since variables are case-insensitive, ensure that if the new variable
-    // matches with an existing variable, the new case prevails throughout.
-    if (text) {
+    Blockly.FieldVariable.modalPromptName(Blockly.Msg.NEW_VARIABLE_TITLE,
+        Blockly.Msg.CREATE_VARIABLE, '', function(text) {
       Blockly.Variables.renameVariable(text, text, this.sourceBlock_.blockSpace);
-      return text;
-    }
+    }.bind(this));
     return null;
   }
   return undefined;
@@ -166,6 +162,19 @@ Blockly.FieldVariable.promptName = function(promptText, defaultText) {
 
   return Blockly.FieldVariable.removeExtraWhitespace(newVar);
 };
+
+Blockly.FieldVariable.modalPromptName =
+    function(promptText, confirmButtonLabel, defaultText, callback) {
+  Blockly.showSimpleDialog({
+    bodyText: promptText,
+    prompt: true,
+    promptPrefill: defaultText,
+    cancelText: confirmButtonLabel,
+    confirmText: Blockly.Msg.CANCEL,
+    onConfirm: null,
+    onCancel: callback
+  });
+}
 
 Blockly.FieldVariable.removeExtraWhitespace = function(inputString) {
   var multipleWhitespaceCharactersRegex = /[\s\xa0]+/g;
