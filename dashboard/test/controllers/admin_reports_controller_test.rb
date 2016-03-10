@@ -4,8 +4,6 @@ class AdminReportsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
-    # Stub the DB[:forms] table (used by :hoc_signups).
-    DB.stubs(:[]).returns(stub(:where => stub(:group => stub(:group_and_count => stub(:order => stub(:all => []))))))
     # Stub used by :admin_stats.
     Properties.stubs(:get).returns(nil)
 
@@ -35,7 +33,6 @@ class AdminReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :debug
   generate_admin_only_tests_for :diversity_survey
   generate_admin_only_tests_for :level_answers
-  generate_admin_only_tests_for :hoc_signups
   generate_admin_only_tests_for :retention
   generate_admin_only_tests_for :retention_stages
 
