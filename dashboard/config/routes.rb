@@ -180,7 +180,7 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
-  get '/admin/directory', to: 'admin_reports#directory', as: 'admin_directory'
+  get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
 
   # one-off internal reports
   get '/admin/temp/diversity_survey', to: 'admin_reports#diversity_survey', as: 'diversity_survey'
