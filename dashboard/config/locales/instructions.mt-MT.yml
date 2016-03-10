@@ -5,26 +5,31 @@
         Hi, I'm an artist. You can write code to make
         me draw almost anything. Use a few blocks to make me draw over the grey lines
         in the picture. (Each line is 100 pixels long)
-      2-3 Artist 11_instruction: "Give the stop sign a border by making an octagon\nwith
-        8 sides, each 100 pixels long. How many degrees should you turn? (Hint:\nWhat
-        is 360 divided by 8?) \n"
-      2-3 Artist 12_instruction: |
-        Set the "repeat times" block so that it creates
-        a "circle" to finish the eyeball. If each movement turns right by one degree,
-        how many times do you need to repeat to complete the circle? 180? 360? 500?
+      2-3 Artist 11_instruction: |
+        Give the stop sign a border by making an octagon
+        with 100 pixels sides. \r
+        \r
+      2-3 Artist 12_instruction: |-
+        Create a circle to finish the eyeball!\r
+        \r
+        If
+        the artist turns 1 degree with each loop, how many times do you need to repeat
+        the code to draw a circle? 180? 360? 500?
       2-3 Artist 2 new_instruction: "This house has a half-finished wall. Each side\nis
         100, but the half-finished wall is only 50. Complete the wall. \n"
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. \n"
       2-3 Artist 3.4_instruction: |
         The jump block moves the artist without drawing.
-        Draw the dashed line by using both the jump and draw blocks.
+        Draw the dashed line using both the `jump forward` and `move forward` blocks.
       2-3 Artist 3_instruction: |
         This hat is 100 pixels high. Draw a hat that is
         70 pixels less.
-      2-3 Artist 3new_instruction: |
+      2-3 Artist 3new_instruction: |-
         The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
+        a black hat that is 70 pixels shorter. \r
+        (Note: The width of each hat is
+        50 pixels.)
       2-3 Artist 4_instruction: Help me complete the house for this cat.
       2-3 Artist 5_instruction: |
         Replace this code with a "repeat times" block
@@ -32,16 +37,17 @@
       2-3 Artist 6_instruction: |
         This house needs a roof! Draw the triangle.  Hint:
         all three sides are the same length.
-      2-3 Artist 7_instruction: "Finish drawing the right side of the last window.\nEach
-        square window pane is 25 pixels wide. \n"
+      2-3 Artist 7_instruction: "Finish drawing the last set of windows on the school\nso
+        that everyone in class can see outside. The sides of each square window\npane
+        are 25 pixels long. \n"
       2-3 Artist 8_instruction: |
         Complete the rooms for each of the animals by splitting
         the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
         and 100 pixels tall.
       2-3 Artist 9_instruction: Finish this kite
       2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
+        Assessment: Finish drawing the last tooth.
+        It is 25 pixels wide and 25 pixels tall.
       2-3 Artist Debugging 1_instruction: |
         Can you make this hat with a top length
         of 100?
@@ -161,21 +167,25 @@
         Let's draw this robot's head! Can you
         make a square with sides that are 100 pixels?
       2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together,
-        drawing them in a loop.
+        Now let's connect a bunch of V's together
+        in a loop.
       2-3 Artist Loops New 11_instruction: |
-        This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block.
+        Time to make something snazzy! Add a
+        left turn of 30 degrees to the code from the last puzzle and loop it 24 times.
       2-3 Artist Loops New 12_instruction: |
         Draw a diamond with sides of 100 pixels.
-      2-3 Artist Loops New 13_instruction: Now draw the diamond 3 times in a loop.
+      2-3 Artist Loops New 13_instruction: |
+        Loop the code from the last puzzle to
+        create this fun pattern!
       2-3 Artist Loops New 14_instruction: |
-        Now let's draw the diamond 10 times
-        but rotate 90 degrees between each diamond.
+        Play around with the code for the diamond
+        and see what other patterns you can make. Try changing how many degrees you
+        turn and how many times you loop.
       2-3 Artist Loops New 15_instruction: Draw something fun.
       2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
+        Here is the same puzzle that we just solved,
+        but this time, we have to use loops to pass it.  Can you put a `repeat` around
+        the starter code to finish the robot head?
       2-3 Artist Loops New 9_instruction: |
         Draw a simple V where both sides are 50
         pixels to complete the arrow.
@@ -353,8 +363,11 @@
       2-3 Bee Functions Assessment 2_instruction: |
         Assessment: Create a function
         to make 3 honey at a time.
-      2-3 Bee Loops 1_instruction: "Each flower contains one unit of nectar. Collect\nnectar
-        from each of the flowers. \n"
+      2-3 Bee Loops 1_instruction: |-
+        Those flowers look tasty!\r
+        \r
+        Collect nectar
+        from each of the flowers using the fewest blocks possible.
       2-3 Bee Loops 10_instruction: |
         Can you use a while loop inside of two other
         loops to collect all of the nectar?
@@ -365,38 +378,45 @@
         Use while loops to collect all of the nectar
         from the flowers in this field.
       2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+        Assessment: Collect all of the nectar using
+        the fewest blocks possible.
       2-3 Bee Loops 1A_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar
         from these flowers? \n"
       2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
+        Collect all the nectar and make all of the honey
+        using the fewest blocks possible.
       2-3 Bee Loops 2A_instruction: |
         Can you do the same task more easily with a
         loop?
       2-3 Bee Loops 3_instruction: |
         Collect nectar from each flower and make honey
-        at each honeycomb.
+        at each honeycomb using the fewest blocks possible.
       2-3 Bee Loops 3A_instruction: Can you use a loop to collect all that nectar?
       2-3 Bee Loops 3B_instruction: |
-        Now use the new repeat block to collect all
-        of the nectar and make all of the honey.
-      2-3 Bee Loops 4_instruction: |
-        Use a similar loop as the last puzzle, but work
-        a turn into it.
-      2-3 Bee Loops 4A_instruction: |
-        What happens if you loop this sequence 3 times?
-        Don't forget to make the honey at the end!
-      2-3 Bee Loops 5_instruction: |
-        Use a loop to go down the steps and collect the
-        nectar.
+        Now use the `repeat` block to collect all of
+        the nectar and make all of the honey.
+      2-3 Bee Loops 4_instruction: |-
+        Such a busy bee!\r
+        \r
+        Help bee collect all
+        of the nectar and make all of the honey with the fewest blocks possible.
+      2-3 Bee Loops 4A_instruction: |-
+        How many times can loops help you in this puzzle?  \r
+        \r
+        Loops
+        are your friend! Use a few of them to complete this puzzle with the fewest
+        blocks possible.
+      2-3 Bee Loops 5_instruction: |-
+        The shape of this path is different than the
+        others. \r
+        \r
+        Can you collect all of the nectar using as few blocks as possible?
       2-3 Bee Loops 6_instruction: |
-        Use a loop to collect nectar from each flower
-        and make honey at each honeycomb.
+        Can you find the quickest way for the bee to
+        collect all of the nectar and make all of the honey?
       2-3 Bee Loops 7_instruction: |
-        Put these blocks into a loop to collect nectar
-        from each flower.
+        What a beautiful field of flowers!   Help the
+        bee visit each one using the smallest number of blocks possible.
       2-3 Bee Loops 8_instruction: |
         These purple flowers have an unknown amount of
         nectar. Use the "while nectar" loop to collect all of the nectar. This loop
@@ -408,8 +428,8 @@
       2-3 Bee Loops Assessment 1_instruction: |
         Assessment - Use a while loop to collect
         all of the nectar from this flower.
-      2-3 Maze 1_instruction: "Can you help me to catch the naughty pig? Stack a\ncouple
-        of \"move forward\" blocks together and press \"Run\". \n"
+      2-3 Maze 1_instruction: "Can you help me catch the naughty pig? Stack a couple\nof
+        `move forward` blocks below the `when run` block and press \"Run\". \n"
       2-3 Maze 10_instruction: Guide me to the green evilness! (Watch out for TNT)
       2-3 Maze 11_instruction: |
         Get me to the flower I'm hungry! How many times
@@ -424,26 +444,30 @@
         Get me to the pig, now with the Repeat times
         block!
       2-3 Maze 12_instruction: |
-        Can you replace these five blocks with only two blocks?
-        (Hint: You need to create a loop using a "repeat" block to pass this level.)
+        Can you get to the pig by creating a loop that uses
+        only one `move forward` block inside of a `repeat`?
       2-3 Maze 13 (old)_instruction: |
         Get me to the pig, now with the Repeat until
         block!
       2-3 Maze 13_instruction: |-
-        Get me to the pig using only two blocks.\r
-        (Hint:
-        You must use the "repeat" block to pass this level)
+        Get me to the pig by adding only two blocks.\r
+        (Note:
+        You must use the magical `repeat` block to pass this level)
       2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
       2-3 Maze 14_instruction: |
         Get me to the sunflower! (Where is that "repeat
         times" block when I need it?)
       2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
       2-3 Maze 15_instruction: |
-        Use two "repeat" loops to get to the pig with the
-        fewest number of blocks.
+        In this puzzle, two `repeat` loops will help you
+        get to the pig with the fewest number of blocks!
       2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 16 before_instruction: Get me to the pig.
-      2-3 Maze 16_instruction: Get me to the sunflower. Loop the sequence!
+      2-3 Maze 16 before_instruction: |
+        Can you figure out the fastest way to get
+        me to the pig?
+      2-3 Maze 16_instruction: |
+        Loops even work with more than one block inside!  Can
+        you loop this sequence to get the zombie to the sunflower?
       2-3 Maze 2_instruction: This pig is ruffling my feathers. Help me get to him!
       2-3 Maze 3_instruction: |
         Trace the path and lead me to the silly pig. Avoid
@@ -456,15 +480,26 @@
       2-3 Maze 7_instruction: Guide me to the green evilness! (Watch out for TNT)
       2-3 Maze 8_instruction: Get me to the pig!
       2-3 Maze 9_instruction: Guide me to the green evilness! (Watch out for TNT)
-      2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
+      2-3 Maze Loops 1_instruction: |
+        Can you get me to the pig using 5 of the same
+        kind of blocks?
       2-3 Maze Loops 17_instruction: Get me to the sunflower!
       2-3 Maze Loops 18_instruction: |-
-        Get me to the sunflower!\r
-        (Hint: You'll
-        need to use one "repeat" loop inside of another to pass this level.)
-      2-3 Maze Loops 19_instruction: Get me to the sunflower!
-      2-3 Maze Loops 20_instruction: Get me to the sunflower!
-      2-3 Maze Loops 21_instruction: Get me to the sunflower!
+        Get me to the sunflower using the fewest blocks
+        possible!  \r
+        \r
+        (Note: You'll need to use one `repeat` loop inside of
+        another to pass this level.)
+      2-3 Maze Loops 19_instruction: |-
+        Let's take this to another level! \r
+        Use
+        loops to get me to the sunflower with the fewest loops possible.
+      2-3 Maze Loops 20_instruction: |
+        Get me to the sunflower using the fewest number
+        of blocks possible!
+      2-3 Maze Loops 21_instruction: |
+        Get me to the sunflower using the fewest blocks
+        possible!
       2-3 Maze Loops Assessment 1_instruction: "Assessment:  Get me to the sunflower\nusing
         only 5 blocks! \n"
       2-3 Maze sq1_instruction: |
@@ -516,10 +551,9 @@
         long and 15 pixels apart.
       4-5 Artist 2_instruction: Can you loop this code to complete the square?
       4-5 Artist 3.5_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat the code enough times
-        to complete the drawing. The colors will (most likely) be different every
-        time.
+        Try to figure out what happens if you run this
+        code (or just press "Run" and try it). Next, repeat the code enough times
+        to complete the drawing!
       4-5 Artist 3_instruction: |
         This rectangular flower bed has a perimeter of 600.
         The long side has a length of 200. Draw the rectangle.
@@ -565,6 +599,11 @@
         Someone started the code, but then realized
         there must be a quicker way! Use a "for" block to replace the blocks and
         complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: |
         How can we count from 1 to 50? Edit the
         "for" block.
@@ -2983,6 +3022,20 @@
         \r
         .\r
         \r
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: |-
+        Figure out how to change this code so that Robin
+        chooses a number between 1 and 20.  \r
+        \r
+        When you're ready, press "Run"
+        and play until you guess Robin's number!
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -5360,11 +5413,11 @@
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

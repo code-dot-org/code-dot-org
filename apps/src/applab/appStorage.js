@@ -105,14 +105,6 @@ var handleSetKeyValue = function(onSuccess, onError) {
  *    in case of failure.
  */
 AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
-  if (!tableName) {
-    onError('error creating record: missing required parameter "tableName"');
-    return;
-  }
-  if (record.id) {
-    onError('error creating record: record must not have an "id" property');
-    return;
-  }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
   var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
@@ -147,10 +139,6 @@ var handleCreateRecord = function(onSuccess, onError) {
  *     in case of failure.
  */
 AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
-  if (!tableName) {
-    onError('error reading records: missing required parameter "tableName"');
-    return;
-  }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadRecords.bind(req,
       searchParams, onSuccess, onError);
@@ -193,15 +181,7 @@ var handleReadRecords = function(searchParams, onSuccess, onError) {
  *     in case of other types of failures.
  */
 AppStorage.updateRecord = function(tableName, record, onComplete, onError) {
-  if (!tableName) {
-    onError('error updating record: missing required parameter "tableName"');
-    return;
-  }
   var recordId = record.id;
-  if (!recordId) {
-    onError('error updating record: missing required property "id"');
-    return;
-  }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onComplete, onError);
   var url = '/v3/shared-tables/' + Applab.channelId + '/' +
@@ -238,15 +218,7 @@ var handleUpdateRecord = function(tableName, record, onComplete, onError) {
  *     in case of other types of failures.
  */
 AppStorage.deleteRecord = function(tableName, record, onComplete, onError) {
-  if (!tableName) {
-    onError('error deleting record: missing required parameter "tableName"');
-    return;
-  }
   var recordId = record.id;
-  if (!recordId) {
-    onError('error deleting record: missing required property "id"');
-    return;
-  }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onComplete, onError);
   var url = '/v3/shared-tables/' + Applab.channelId + '/' +

@@ -7,7 +7,7 @@ ko:
       2-3 Artist 11_instruction: |
         8각형 모양을 만들어 정지 표지판을 만들어보세요. 각 변의 길이는 100 픽셀입니다. 몇 도나 회전시켜야 할까요?
         (힌트: 360을 8로 나누면?) 
-      2-3 Artist 12_instruction: '"반복 회수"블럭을 설정해서 "원"을 만들어 눈을 완성해보세요. 한 번 움직일 때마다 1도씩 오른쪽으로 움직인다고 할 때, 원을 완성시키려면 몇 번을 반복해야 할까요? 180? 360? 500?'
+      2-3 Artist 12_instruction: '"반복 회수"블럭을 설정해서 "원"을 만들어 눈알을 완성하세요. 한 번 움직일 때마다 1도씩 오른쪽으로 움직인다고 할 때 원을 완성시키려면 몇 번을 반복해야 할까요? 180? 360? 500?'
       2-3 Artist 2 new_instruction: '이 집의 벽은 다 완성되지 않았습니다. 각 측면은 100이지만, 완성되지 않은 벽은 50입니다. 벽을 완성해보세요. '
       2-3 Artist 2_instruction: |
         This house has a half-finished wall. Each side is
@@ -411,6 +411,11 @@ ko:
         힌트: 마지막 선은 250 픽셀 크기입니다.
       4-5 Artist For Loops 14_instruction: '코드를 배우기 시작하고나면 더 빠른 방법들이 있다는 것을 알게 됩니다. 삼각 나선구조를 완셩하기 위해서 사용된 블록들을 "for" 블록으로 바꿔보세요. (힌트: 마지막 선의 길이는 300 픽셀입니다.)'
       4-5 Artist For Loops 15_instruction: '코드를 배우기 시작하고나면 더 빠른 방법들이 있다는 것을 알게 됩니다. 육각 나선구조를 완셩하기 위해서 사용된 블록들을 "for" 블록으로 바꿔보세요. (힌트: 마지막 선의 길이는 200 픽셀입니다.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: |
         어떻게 하면 1부터 50까지 카운트 할 수 있을까요?
         "반복 ~인 동안" 블록을 수정해 보세요.
@@ -467,33 +472,31 @@ ko:
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
       4-5 Bee Conditionals 1_instruction: |
-        구름 아래에 무엇이 있을까요?
-        꽃인 경우만 꽃꿀을 모아야하는데, 그 전에 구름 아래에 꽃이 있는지 확인해야 합니다.
+        구름으로 가려 잘 보이지 않습니다!
+        구름 아래에 꽃이 있는지 살펴보고, 꽃이 있는 경우에만 꽃꿀을 모아보세요.
+        주의하세요, 계속 바뀝니다!
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: 꿀벌이 꽃꿀을 원합니다. 모두 꽃은 아니기 때문에, 안개 구름 아래에 꽃이 숨어있는지 모두 살펴보아야 합니다. 꽃이면 꽃꿀을 모으면 됩니다.
+      4-5 Bee Conditionals 2_instruction: '구름들이 더 많습니다! 모든 구름 아래에 꽃들이 있는 것은 아니기 때문에 구름 아래에 꽃이 숨어있는지 살펴보고 꽃꿀을 모아야 합니다. 기억하세요: 구름들 아래에 있는 것들이 똑같은 것들은 아닙니다!'
       4-5 Bee Conditionals 3_instruction: |
-        꿀벌이 꿀을 만들고 싶어합니다.
-        벌집에서만 꿀을 만들 수 있도록 해주세요.
+        이제 꿀을 만들고 싶습니다.
+        이 구름들 중 아래에 벌집이 있을 것입니다. 각 구름을 검사해야합니다!
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |
-        가려진 물체들은 꽃 또는 벌집입니다.
-        만약/아니면 블록을 사용해서, 꽃이면 꽃꿀을 뽑고, 아니면 꿀을 만들 수 있도록 해주세요.
-        (꽃이 아니면 벌집이기 때문입니다.)
+      4-5 Bee Conditionals 4_instruction: 이 구름들은 꽃이나 벌집을 가립니다! 만약/아니면 블록을 사용해서 꽃인 경우에 꽃꿀을 모으고, 꽃이 아닌 경우(즉, 벌집인 경우)에는 꿀을 만들도록 해주세요.
       4-5 Bee Conditionals 5_instruction: 이 안개 구름들 아래에는 꽃이나 벌집이 있을 수 있습니다. 만약/그렇지않으면 블록을 이용해서 꽃이면 꽃꿀을 모으고 아니면 (즉, 벌집이라면) 꿀을 만들도록 해보세요.
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: 이 분홍 꽃에는 꽃꿀이 3, 2, 1 만큼 있을 수 있습니다. 여기 만약~아니면 블록은 다른 만약~아니면 블록과 결합되어있는 것으로, 만약/만약~아니면/아니면 영역으로 구분되어 있습니다. 꽃꿀의 양을 모를 때에도 꽃꿀을 모을 수 있도록 방법을 만들어보세요.
-      4-5 Bee Conditionals 7_instruction: '분홍 꽃은 꽃꿀이 3, 2, 1 중 하나입니다. "분홍 꽃 확인" 함수를 완성하고 이용해서 꽃의 모든 꽃꿀들을 모을 수 있도록 해보세요.'
-      4-5 Bee Conditionals 8_instruction: '"꿀을 만드는지 확인" 함수의 안쪽을 완성해 주세요. 분홍 꽃의 꽃꿀이 3, 2, 1 인 경우에는 모든 꽃꿀을 모으고, 그 후에 앞으로 이동해서 꿀을 만들면 됩니다.'
+      4-5 Bee Conditionals 6_instruction: '이 자주색 꽃에는 꽃꿀이 1, 2, 3개 있을 수 있습니다. 이 "만약/아니면" 블록은 다른 "만약/아니면" 블록과 결합되어서, "만약/(아닌데 만약/아니면)" 명령을 만들어낼 수 있습니다. 꽃꿀의 양을 모르는 경우에도 꽃꿀을 모두 얻을 수 있게 해보세요.'
+      4-5 Bee Conditionals 7_instruction: '자주색 꽃은 꽃꿀이 3, 2, 1 중 하나입니다. "자주색 꽃 확인" 함수를 완성하고 이용해서 꽃의 모든 꽃꿀들을 모을 수 있도록 해보세요.'
+      4-5 Bee Conditionals 8_instruction: '"꽃을 확인하고 꿀 만들기" 함수의 내부를 완성해 주세요. 자주색 꽃의 꽃꿀이 3, 2, 1 인 경우에는 모든 꽃꿀을 모으고, 그 후에 앞으로 이동해서 꿀을 만들면 됩니다.'
       4-5 Bee Conditionals Assessment 1_instruction: |
         형성평가: 이 코드에는 오류가 있습니다.
         "꽃꿀을 모으거나 꿀 만들기" 함수를 완성해서, 모든 꽃꿀을 모으거나 꿀을 만들도록 만들어 주세요. 분홍 꽃에는 3, 2, 1 개의 꽃꿀이 있을 수 있습니다.
@@ -1947,6 +1950,15 @@ ko:
       K-1 Maze Sequence Assessment 1_instruction: "배운 것을 살펴봅시다!\\r\n한 방향으로 움직이다가 다른 방향으로 움직여서 돼지에게 갈 수 있도록 해주세요."
       K-1 Maze Sequence Assessment 2_instruction: 돼지를 잡을 수 있도록, 한 쪽으로 가다가 다시 다른 쪽으로 움직여주세요!
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -4066,11 +4078,11 @@ ko:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

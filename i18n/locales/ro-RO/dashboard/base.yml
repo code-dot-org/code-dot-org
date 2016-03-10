@@ -419,6 +419,7 @@ ro:
     applab:
       title: Laboratului Aplicației
       body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
       audience: Ages 13+
       cta: Learn how
     hoc:
@@ -498,6 +499,9 @@ ro:
     placeholder: Completează răspunsul tău aici
     open_response_title: Mulţumim
     open_response_body: Îți mulţumim pentru răspuns!
+  level_group:
+    correct_title: Mulţumesc
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Ești sigur că dorești să reîncepi?

@@ -419,6 +419,7 @@ kk:
     applab:
       title: Қосымшалар Лабораториясы
       body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
       audience: Ages 13+
       cta: Learn how
     hoc:
@@ -498,6 +499,9 @@ kk:
     placeholder: Жауабыңызды мұнда еңгізіңіз
     open_response_title: Рахмет
     open_response_body: Жауап бергеніңіз үшін рахмет!
+  level_group:
+    correct_title: Рахмет
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Сіз басынан бастауға сенімдісіз бе?

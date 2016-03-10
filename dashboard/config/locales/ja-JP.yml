@@ -453,6 +453,8 @@
       body: App Lab is a programming environment where you can make simple apps. Design
         an app, code with blocks or JavaScript to make it work, then share your app
         in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
       audience: Ages 13+
       cta: Learn how
     hoc:
@@ -534,6 +536,9 @@
     placeholder: "ここに答えを入力"
     open_response_title: "ありがとう"
     open_response_body: "ご回答ありがとうございます。"
+  level_group:
+    correct_title: "ありがとうございます"
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: "本当に最初からやり直してもよいですか？"

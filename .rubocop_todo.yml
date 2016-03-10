@@ -45,10 +45,6 @@ Lint/RescueException:
 Lint/ShadowingOuterLocalVariable:
   Enabled: false
 
-# Offense count: 1
-Lint/UnderscorePrefixedVariableName:
-  Enabled: false
-
 # Offense count: 33
 # Cop supports --auto-correct.
 # Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
@@ -58,11 +54,6 @@ Lint/UnusedMethodArgument:
 # Offense count: 17
 # Cop supports --auto-correct.
 Performance/Casecmp:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Performance/RedundantBlockCall:
   Enabled: false
 
 # Offense count: 11
@@ -123,10 +114,6 @@ Style/CaseEquality:
 # Configuration parameters: IndentWhenRelativeTo, SupportedStyles, IndentOneStep, IndentationWidth.
 # SupportedStyles: case, end
 Style/CaseIndentation:
-  Enabled: false
-
-# Offense count: 1
-Style/ClassAndModuleCamelCase:
   Enabled: false
 
 # Offense count: 7
