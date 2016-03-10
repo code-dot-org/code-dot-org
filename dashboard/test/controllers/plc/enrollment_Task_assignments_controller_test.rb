@@ -8,11 +8,12 @@ class Plc::EnrollmentTaskAssignmentsControllerTest < ActionController::TestCase
     course = create :plc_course
     learning_module = create :plc_learning_module
     task = create(:plc_script_completion_task, plc_learning_module: learning_module)
+    written_task = create(:plc_written_submission_task, plc_learning_module: learning_module)
 
     user_course_enrollment = create(:plc_user_course_enrollment, plc_course: course, user: @user)
     enrollment_module_assignment = create(:plc_enrollment_module_assignment, plc_user_course_enrollment: user_course_enrollment)
     @enrollment_task_assignment = create(:plc_enrollment_task_assignment, plc_enrollment_module_assignment: enrollment_module_assignment, plc_task: task)
-
+    @written_task_assignment = create(:written_enrollment_task_assignment, plc_enrollment_module_assignment: enrollment_module_assignment, plc_task: written_task)
   end
 
   test 'should get index' do
@@ -26,7 +27,12 @@ class Plc::EnrollmentTaskAssignmentsControllerTest < ActionController::TestCase
   end
 
   test 'should update written enrollment task assignments' do
+    assert_nil @written_task_assignment.submission
 
+    patch :update, id: @written_task_assignment, plc_written_enrollment_task_assignment: {submission: 'Some submission'}
+
+    @written_task_assignment.reload
+    assert_equal 'Some submission', @written_task_assignment.submission
   end
 
   test 'should destroy enrollment task assignment' do
