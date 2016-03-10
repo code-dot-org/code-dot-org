@@ -18,6 +18,7 @@ crowdin.yaml
 /rebuild-apps
 /rebuild-shared
 /rebuild-code-studio
+/i18n/code.org/crowdin.yaml
 /i18n/hourofcode.com/crowdin.yaml
 /i18n/curriculum/crowdin.yaml
 /dashboard/config/newrelic.yml
