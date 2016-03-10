@@ -6,6 +6,7 @@ var msg = require('../locale');
  */
 module.exports = React.createClass({
   propTypes: {
+    assetChosen: React.PropTypes.func.isRequired
   },
 
   getInitialState: function() {
@@ -34,7 +35,7 @@ module.exports = React.createClass({
             color: '#999'
           }}/>
         </div>
-        <IconList search={this.state.search}/>
+        <IconList assetChosen={this.props.assetChosen} search={this.state.search}/>
       </div>
     );
   }
