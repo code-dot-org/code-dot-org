@@ -34,7 +34,7 @@ class Plc::TasksController < ApplicationController
   # PATCH/PUT /plc/tasks/1
   # PATCH/PUT /plc/tasks/1.json
   def update
-    if @task.update(editable_task_params)
+    if @task.update(task_params)
       redirect_to plc_task_url(@task), notice: 'Task was successfully updated.'
     else
       redirect_to action: :edit
@@ -61,12 +61,5 @@ class Plc::TasksController < ApplicationController
     elsif params[:plc_task]
       params.require(:plc_task).permit(:name, :plc_learning_module_id, :type)
     end
-  end
-
-  #Type should not be editable, so drop any parameter that is trying to edit it
-  def editable_task_params
-    editable_params = task_params.dup
-    editable_params.extract!(:type)
-    editable_params
   end
 end
