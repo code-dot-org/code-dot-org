@@ -28,16 +28,4 @@ class HocSignup2014
       results.merge! location.to_solr if location
     end
   end
-
-  def self.solr_query(params)
-    query = '*:*'
-
-    fq = []
-    fq.push("kind_s:#{self.name}")
-    {
-      q: query,
-      fq: fq,
-      rows: 100000,
-    }
-  end
 end
