@@ -2347,7 +2347,7 @@ function rectFromElementBoundingBox(element) {
 /**
  * Displays a small alert box inside DOM element at parentSelector.
  * @param {string} parentSelector
- * @param {ReactComponent} alertContents
+ * @param {React.Component} alertContents
  */
 StudioApp.prototype.displayAlert = function (parentSelector, alertContents) {
   // Each parent is assumed to have at most a single alert. This assumption
