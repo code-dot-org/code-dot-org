@@ -27,6 +27,7 @@
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
   "debugWatchHeader": "Watch",
+  "debugWatchNotAvailable": "<not available>",
   "defaultTwitterText": "Check out what I made",
   "designMode": "Design",
   "dialogCancel": "Cancel",

@@ -115,7 +115,7 @@ $debug-area-initial-height: 120px;
 }
 
 $debug-commands-column-width: 270px;
-$debug-watch-column-width: 130px;
+$debug-watch-column-width: 150px;
 $debug-header-border-width: 1px;
 
 #debug-commands-header {
@@ -152,6 +152,20 @@ $debug-header-border-width: 1px;
 .debug-watch {
   right: 0;
   width: $debug-watch-column-width;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.debug-watch-item {
+  margin: 0 5px;
+  line-height: 14px;
+
+  .watch-variable, .watch-separator {
+    color: purple;
+  }
+  .watch-unavailable {
+    color: red;
+  }
 }
 
 .debug-console {
