@@ -9,6 +9,9 @@ class AdminReportsController < ApplicationController
   before_action :set_script
   include LevelSourceHintsHelper
 
+  def directory
+  end
+
   # Parses and presents the data in the SurveyResult dashboard table.
   def diversity_survey
     SeamlessDatabasePool.use_persistent_read_connection do
