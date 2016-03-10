@@ -162,62 +162,6 @@ class ReportsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  generate_admin_only_tests_for :assume_identity_form
-
-  test "should assume_identity" do
-    post :assume_identity, {:user_id => @not_admin.id}
-    assert_redirected_to '/'
-
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first
-  end
-
-  test "should assume_identity by username" do
-    post :assume_identity, {:user_id => @not_admin.username}
-    assert_redirected_to '/'
-
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first
-  end
-
-  test "should assume_identity by email" do
-    post :assume_identity, {:user_id => @not_admin.email}
-    assert_redirected_to '/'
-
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first
-  end
-
-
-  test "should assume_identity by hashed email" do
-    email = 'someone_under13@somewhere.xx'
-    user = create :user, age: 12, email: email
-
-    post :assume_identity, {:user_id => email}
-    assert_redirected_to '/'
-
-    assert_equal user.id, session['warden.user.user.key'].first.first
-  end
-
-  test "should assume_identity error if not found" do
-    post :assume_identity, {:user_id => 'asdkhaskdj'}
-
-    assert_response :success
-
-    assert_select '.container .alert-danger', 'User not found'
-  end
-
-  test "should not assume_identity if not admin" do
-    sign_in @not_admin
-    post :assume_identity, {:user_id => @admin.id}
-    assert_response :forbidden
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first # no change
-  end
-
-  test "should not assume_identity if not signed in" do
-    sign_out @admin
-    post :assume_identity, {:user_id => @admin.id}
-
-    assert_redirected_to_sign_in
-  end
-
   # 'report-stage-1' instead of 'report-stage-1: Report Stage 1'
   test "should render single stage name for custom script" do
     # first script has 1 stage, second script has 2 stages
