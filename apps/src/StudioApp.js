@@ -2347,8 +2347,9 @@ function rectFromElementBoundingBox(element) {
 /**
  * Displays a small alert box inside DOM element at parentSelector.
  * @param {string} parentSelector
+ * @param {ReactComponent} alertContents
  */
-StudioApp.prototype.displayAlert = function (parentSelector) {
+StudioApp.prototype.displayAlert = function (parentSelector, alertContents) {
   // Each parent is assumed to have at most a single alert. This assumption
   // could be changed, but we would then want to clean up our DOM element on
   // close
@@ -2363,13 +2364,9 @@ StudioApp.prototype.displayAlert = function (parentSelector) {
   var handleAlertClose = function () {
     React.unmountComponentAtNode(renderElement);
   };
-  var i18n = {
-    tos: window.dashboard.i18n.t('project.abuse.tos'),
-    contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
-  };
   ReactDOM.render(
     <Alert onClose={handleAlertClose}>
-      <dashboard.AbuseError i18n={i18n}/>
+      {alertContents}
     </Alert>, renderElement);
 };
 
@@ -2380,7 +2377,11 @@ StudioApp.prototype.displayAlert = function (parentSelector) {
  */
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
   if (window.dashboard && dashboard.project.exceedsAbuseThreshold()) {
-    this.displayAlert(parentSelector);
+    var i18n = {
+      tos: window.dashboard.i18n.t('project.abuse.tos'),
+      contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
+    };
+    this.displayAlert(parentSelector, <dashboard.AbuseError i18n={i18n}/>);
   }
 };
 
