@@ -23,6 +23,8 @@ gem 'parallel'
 
 gem 'google-api-client'
 
+gem 'crowdin-cli'
+
 group :development do
   gem 'annotate', '~> 2.6.6'
   gem 'rack-mini-profiler'
