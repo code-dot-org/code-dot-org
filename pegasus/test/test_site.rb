@@ -11,17 +11,18 @@ class SiteTest < Minitest::Test
     Rack::Builder.parse_file(File.absolute_path('../config.ru', __dir__)).first
   end
 
-  # Ensure POST requests to the root are disabled.
-  def test_post_root
-    header 'host', 'code.org'
-    response = post '/'
-    assert_equal 404, response.status
-  end
-
-  # Ensure POST requests to whitelisted paths are allowed.
   def test_post_whitelist
     header 'host', 'code.org'
-    response = post '/custom-certificates'
-    assert_equal 200, response.status
+    # Ensure POST requests to Pegasus template paths return a 405 error by default.
+    %w(
+      /
+      /learn
+      /learn/beyond
+    ).each do |path|
+      assert_equal 405, post(path).status
+    end
+
+    # Ensure POST requests to whitelisted paths are allowed.
+    assert_equal 200, post('/custom-certificates').status
   end
 end
