@@ -1,12 +1,12 @@
+require_relative '../../dynamic_config/dcdo'
 require 'rack/attack'
 require 'rack/attack/path_normalizer'
 require 'active_support/core_ext/numeric/time'
+require 'redis'
 
+# Override the path normalize and request.write? methods in Rack::Attack.
 class Rack::Attack
   # Rack::Attack returns a 429 for requests that exceed the rate limit.
-
-  redis_url = CDO.geocoder_redis_url || 'redis://localhost:6379'
-  cache.store = StoreProxy::RedisStoreProxy.new(Redis.new(url: redis_url))
 
   # Don't strip trailing slashes.
   remove_const(:PathNormalizer)
@@ -17,19 +17,28 @@ class Rack::Attack
       put? || patch? || post? || delete?
     end
   end
-
 end
 
 # A configuration object for setting and dynamically updating the Rack attack limits based
 # on DCDO/CDO configuration.
-class RackAttackLimitConfiguration
-  def start_dynamic_updates
-    update_limits
+class RackAttackConfigBase
+
+  def initialize(cache_store)
+    Rack::Attack.cache.store = cache_store
     DCDO.add_change_listener(self)
+    update_limits
   end
 
   def on_change
     update_limits
+  end
+
+  def limits(max_per_sec)
+    # allow 4x the max rate over 15s, 2x the max rate over 60s, and 1x the max rate over 4min.
+    # this gives the experience of exponential backoff when limits are exceeded.
+    [[1 * max_per_sec * 60, 15],
+     [2 * max_per_sec * 60, 60],
+     [4 * max_per_sec * 60, 240]]
   end
 
   private
@@ -96,14 +105,8 @@ class RackAttackLimitConfiguration
     get_dcdo_key_with_cdo_default('max_property_writes_per_sec')
   end
 
-  def limits(max_per_sec)
-    # allow 4x the max rate over 15s, 2x the max rate over 60s, and 1x the max rate over 4min.
-    # this gives the experience of exponential backoff when limits are exceeded.
-    [[1 * max_per_sec * 60, 15],
-     [2 * max_per_sec * 60, 60],
-     [4 * max_per_sec * 60, 240]]
-  end
-
 end
 
-RackAttackLimitConfiguration.new.start_dynamic_updates
+redis_url = CDO.geocoder_redis_url || 'redis://localhost:6379'
+cache_store = Rack::Attack::StoreProxy::RedisStoreProxy.new(Redis.new(url: redis_url))
+RackAttackConfig = RackAttackConfigBase.new(cache_store)

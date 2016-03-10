@@ -1,6 +1,6 @@
 # Common settings Shared Rake test.
 
-ENV['RACK_ENV'] = 'test'
+ENV['RACK_ENV'] = ENV['RAILS_ENV'] = 'test'
 
 require 'minitest/autorun'
 require 'rack/test'

@@ -1,12 +1,12 @@
 require 'mocha/mini_test'
 require_relative 'test_helper'
+require 'cdo/rack/attack'
 require 'channels_api'
 require 'tables_api'
 require 'properties_api'
-require "fakeredis"
 require "timecop"
 
-# The redis cache is a class property of Rack::Attack. This means that
+# The cache is a class property of Rack::Attack. This means that
 # the counts and time (as modified by timecop) used by each throttling rule
 # (table reads, etc) for each channel id are shared across all tests.
 #
@@ -57,23 +57,23 @@ class RackAttackTest < Minitest::Test
   # non-stubbed rate limits from CDO are used here
   def test_limits
     expected_limits = [[1200, 15], [2400, 60], [4800, 240]]
-    actual_limits = Rack::Attack.limits CDO.max_table_reads_per_sec
+    actual_limits = RackAttackConfig.limits CDO.max_table_reads_per_sec
     assert_equal expected_limits, actual_limits, "Max table read limits and periods are set correctly"
 
     expected_limits = [[2400, 15], [4800, 60], [9600, 240]]
-    actual_limits = Rack::Attack.limits CDO.max_table_writes_per_sec
+    actual_limits = RackAttackConfig.limits CDO.max_table_writes_per_sec
     assert_equal expected_limits, actual_limits, "Max table write limits and periods are set correctly"
 
     expected_limits = [[2400, 15], [4800, 60], [9600, 240]]
-    actual_limits = Rack::Attack.limits CDO.max_property_reads_per_sec
+    actual_limits = RackAttackConfig.limits CDO.max_property_reads_per_sec
     assert_equal expected_limits, actual_limits, "Max property read limits and periods are set correctly"
 
     expected_limits = [[2400, 15], [4800, 60], [9600, 240]]
-    actual_limits = Rack::Attack.limits CDO.max_property_writes_per_sec
+    actual_limits = RackAttackConfig.limits CDO.max_property_writes_per_sec
     assert_equal expected_limits, actual_limits, "Max property write limits and periods are set correctly"
 
     expected_limits = [[3, 15], [6, 60], [12, 240]]
-    actual_limits = Rack::Attack.limits REDUCED_RATE_LIMIT_FOR_TESTING
+    actual_limits = RackAttackConfig.limits REDUCED_RATE_LIMIT_FOR_TESTING
     assert_equal expected_limits, actual_limits, "Reduced rate limits for testing are set correctly"
   end
 
