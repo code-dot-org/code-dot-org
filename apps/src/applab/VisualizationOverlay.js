@@ -23,7 +23,7 @@ var VisualizationOverlay = function () {
 
   /** @private {Object} */
   this.props_ = {
-    isApplabRunning: false,
+    isCrosshairAllowed: false,
     scale: 1,
     isInDesignMode: false
   };
@@ -51,7 +51,7 @@ module.exports = VisualizationOverlay;
 /**
  * @param {SVGSVGElement} intoElement - where this component should be rendered
  * @param {Object} nextProps
- * @param {boolean} nextProps.isApplabRunning
+ * @param {boolean} nextProps.isCrosshairAllowed
  * @param {number} nextProps.scale
  * @param {boolean} nextProps.isInDesignMode
  */
@@ -142,7 +142,7 @@ VisualizationOverlay.prototype.onSvgMouseMove_ = function (event) {
 };
 
 VisualizationOverlay.prototype.shouldShowCrosshair_ = function () {
-  return !this.props_.isApplabRunning && this.isMouseInVisualization_();
+  return this.props_.isCrosshairAllowed && this.isMouseInVisualization_();
 };
 
 VisualizationOverlay.prototype.isMouseInVisualization_ = function () {
