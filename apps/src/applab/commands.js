@@ -204,7 +204,6 @@ applabCommands.setScreen = function (opts) {
 };
 
 function reportUnsafeHtml(removed, unsafe, safe, warnings) {
-  var currentLineNumber = getCurrentLineNumber();
   var msg = "The following lines of HTML were modified or removed:\n" + removed +
       "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
   if (warnings.length > 0) {
@@ -1200,7 +1199,6 @@ applabCommands.setProperty = function(opts) {
 
   var info = setPropertyDropdown.getInternalPropertyInfo(element, property);
   if (!info) {
-    var currentLineNumber = getCurrentLineNumber();
     outputError('Cannot set property "' + property + '" on element "' + elementId + '".');
     return;
   }
@@ -1646,8 +1644,6 @@ applabCommands.drawChart = function (opts) {
   apiValidateType(opts, 'drawChart', 'callback', opts.callback, 'function', OPTIONAL);
   apiValidateDomIdExistence(opts, 'drawChart', 'chartId', opts.chartId, true);
 
-  var currentLineNumber = getCurrentLineNumber();
-
   var chartApi = new ChartApi();
 
   /**
@@ -1713,8 +1709,6 @@ applabCommands.drawChartFromRecords = function (opts) {
   apiValidateType(opts, 'drawChartFromRecords', 'options', opts.options, 'object', OPTIONAL);
   apiValidateType(opts, 'drawChartFromRecords', 'callback', opts.callback, 'function', OPTIONAL);
   apiValidateDomIdExistence(opts, 'drawChartFromRecords', 'chartId', opts.chartId, true);
-
-  var currentLineNumber = getCurrentLineNumber();
 
   var chartApi = new ChartApi();
 
@@ -1788,15 +1782,4 @@ function stopLoadingSpinnerFor(elementId) {
   element.className = element.className.split(/\s+/).filter(function (x) {
     return !(/loading/i.test(x));
   }).join(' ');
-}
-
-/**
- * For the provided interpreter, get the nearest line number in user code
- * up the stack from the last executed command.
- * @param {JSInterpreter} jsInterpreter
- * @returns {number}
- */
-function getCurrentLineNumber(jsInterpreter) {
-  jsInterpreter = jsInterpreter || Applab.JSInterpreter;
-  return 1 + jsInterpreter.getNearestUserCodeLine();
 }
