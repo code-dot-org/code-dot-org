@@ -44,7 +44,7 @@ module.exports = React.createClass({
         typeFilter={this.props.typeFilter}
         channelId={this.props.channelId}
         uploadsEnabled={this.props.uploadsEnabled}/> :
-      <IconLibrary/>;
+      <IconLibrary assetChosen={this.props.assetChosen}/>;
 
     return (
       <div className="modal-content" style={{margin: "0 0 0 -10px"}}>

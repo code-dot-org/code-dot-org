@@ -9,6 +9,7 @@ var MAX_RESULTS = 50;
  */
 module.exports = React.createClass({
   propTypes: {
+    assetChosen: React.PropTypes.func.isRequired,
     search: React.PropTypes.string.isRequired
   },
 
@@ -35,6 +36,7 @@ module.exports = React.createClass({
     for (var iconId in results) {
       var result = results[iconId];
       list.push(<IconListEntry
+        assetChosen={this.props.assetChosen}
         unicode={result.unicode}
         iconId={iconId}
         altMatch={result.alt}

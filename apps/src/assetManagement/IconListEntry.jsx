@@ -5,6 +5,7 @@ var Icon = require('./Icon.jsx');
  */
 module.exports = React.createClass({
   propTypes: {
+    assetChosen: React.PropTypes.func.isRequired,
     unicode: React.PropTypes.string.isRequired,
     iconId: React.PropTypes.string.isRequired,
     altMatch: React.PropTypes.string.isRequired,
@@ -44,7 +45,12 @@ module.exports = React.createClass({
     }
 
     return (
-      <div style={{float: 'left', width: columnWidth, height: '35px'}}>
+      <div style={{
+        float: 'left',
+        width: columnWidth,
+        height: '35px',
+        cursor: 'pointer'
+      }} title={this.props.iconId} onClick={this.props.assetChosen.bind(null, 'icon:' + this.props.iconId)}>
         <Icon iconId={this.props.iconId}/>
         {iconLabel}
       </div>
