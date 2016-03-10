@@ -2,7 +2,6 @@ require_relative '../../dynamic_config/dcdo'
 require 'rack/attack'
 require 'rack/attack/path_normalizer'
 require 'active_support/core_ext/numeric/time'
-require 'redis'
 
 # Override the path normalize and request.write? methods in Rack::Attack.
 class Rack::Attack
