@@ -15,12 +15,12 @@ end
 
 # Upload files to be translated into Code.org project
 def upload_files_to_crowdin
-  exec "bin/i18n-codeorg/up.sh"
+  exec "crowdin-cli upload sources"
 end
 
 # Download translated files from Code.org project
 def download_files_from_crowdin
-  exec "bin/i18n-codeorg/down.sh"
+  exec "crowdin-cli download"
   rename_from_crowdin_name_to_locale
 end
 
