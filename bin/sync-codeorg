@@ -1,0 +1,151 @@
+#!/usr/bin/env ruby
+require File.expand_path('../../pegasus/src/env', __FILE__)
+require 'cdo/languages'
+require 'fileutils'
+require 'yaml'
+require 'tempfile'
+
+# Pull in files from blockly-core, apps, pegasus, and dashboard
+# as well as instructions for levelbuilder supported levels
+# to be translated in Code.org project
+def pull_in_files_for_translation
+  localize_instructions
+  exec "bin/i18n-codeorg/in.sh"
+end
+
+# Upload files to be translated into Code.org project
+def upload_files_to_crowdin
+  exec "bin/i18n-codeorg/up.sh"
+end
+
+# Download translated files from Code.org project
+def download_files_from_crowdin
+  exec "bin/i18n-codeorg/down.sh"
+  rename_from_crowdin_name_to_locale
+end
+
+# Distribute downloaded translations back to
+# blockly-core, apps, pegasus, and dashboard
+def push_out_translated_files
+  exec "bin/i18n-codeorg/out.sh"
+  copy_untranslated_apps
+  cleanup_portuguese_codes
+  rebuild_blockly_js_files
+end
+
+def sync_new_pegasus_strings_to_all_locales
+  exec "bin/i18n-codeorg/sync-pegasus.sh"
+end
+
+# Files downloaded from Crowdin are organized by language name,
+# rename folders to be organized by locale
+def rename_from_crowdin_name_to_locale
+  Languages.get_crowdin_name_and_locale.each do |prop|
+    if File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
+      FileUtils.cp_r "i18n/locales/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
+      FileUtils.rm_r "i18n/locales/#{prop[:crowdin_name_s]}"
+    end
+  end
+end
+
+# For untranslated apps, copy English file for all locales
+def copy_untranslated_apps
+  untranslated_apps = ['applab', 'calc', 'eval', 'gamelab', 'netsim']
+
+  Languages.get_locale.each do |prop|
+    if prop[:locale_s] != 'en-US'
+      untranslated_apps.each do |app|
+        app_locale = prop[:locale_s].gsub('-', '_').downcase!
+        FileUtils.cp_r "apps/i18n/#{app}/en_us.json", "apps/i18n/#{app}/#{app_locale}.json"
+      end
+    end
+  end
+end
+
+def find_instruction(f)
+  pattern = /^\s*"instructions": (".*?"),?\n$/
+  f.each_line do |line|
+    matches = line.match pattern
+    if matches
+      return matches.captures.first
+    end
+  end
+  nil
+end
+
+def copy_instructions_to_yml(instructions)
+  File.open("dashboard/config/locales/instructions.en.yml", "w+") do |f|
+    f.write(({ "en" => { "data" => { "instructions" => instructions }}}).to_yaml)
+    File.write(f, File.read(f))
+  end
+end
+
+def reformat_quotes
+  temp_file = Tempfile.new("tempinstructions.yml")
+  File.open("dashboard/config/locales/instructions.en.yml", "r") do |f|
+    f.each_line { |line| temp_file.puts line.gsub("'\"", '"').gsub("\"'", '"').gsub("''", "'")}
+  end
+  temp_file.close
+  FileUtils.mv(temp_file.path, "dashboard/config/locales/instructions.en.yml")
+end
+
+# Pull in instructions for levelbuilder levels from .level files
+# and save them to instructions.en.yml to be translated
+def localize_instructions
+  level_instructions = Hash.new
+
+  Dir.glob("dashboard/config/scripts/levels/*.level").each do |file|
+    level = File.basename(file, ".*") + "_instruction"
+
+    File.open(file) do |f|
+      instruction = find_instruction(f)
+      if instruction
+        level_instructions[level] = instruction
+      end
+    end
+  end
+  copy_instructions_to_yml(level_instructions)
+  reformat_quotes
+end
+
+def cleanup_portuguese_codes
+  dashboard_categories = ['data', 'devise', 'dsls', 'instructions', 'scripts', 'slides', 'unplugged']
+
+  # Fix portuguese codes
+  file = "dashboard/config/locales/pt-BR.yml"
+  File.write(file, File.read(file).gsub(/"pt-BR":/, '"pt":'))
+  file = "dashboard/config/locales/pt-PT.yml"
+  File.write(file, File.read(file).gsub(/"pt":/, '"pt-PT":'))
+
+  dashboard_categories.each do |dashboard|
+    file = "dashboard/config/locales/#{dashboard}.pt-BR.yml"
+    File.write(file, File.read(file).gsub(/"pt-BR":/, '"pt":'))
+
+    file = "dashboard/config/locales/#{dashboard}.pt-PT.yml"
+    File.write(file, File.read(file).gsub(/"pt":/, '"pt-PT":'))
+  end
+end
+
+def rebuild_blockly_js_files
+  exec "blockly-core/i18n/codeorg-messages.sh"
+  FileUtils.cp_r 'blockly-core/msg/js/.', 'apps/lib/blockly/'
+end
+
+if ARGV[0] == "all"
+  pull_in_files_for_translation
+  upload_files_to_crowdin
+  download_files_from_crowdin
+  push_out_translated_files
+elsif ARGV[0] == "in"
+  pull_in_files_for_translation
+elsif ARGV[0] == "up"
+  upload_files_to_crowdin
+elsif ARGV[0] == "down"
+  download_files_from_crowdin
+elsif ARGV[0] == "out"
+  push_out_translated_files
+elsif ARGV[0] == "copy-untranslated-apps"
+  copy_untranslated_apps
+elsif ARGV[0] == "sync-pegasus"
+  sync_new_pegasus_strings_to_all_locales
+end
