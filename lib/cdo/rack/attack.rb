@@ -44,8 +44,6 @@ class RackAttackConfigBase
   private
 
   def update_limits
-    puts "Updating limits"
-
     limits(max_table_reads_per_sec).each do |limit, period|
       Rack::Attack.throttle("shared-tables/reads/#{period}",
                             :limit => limit, :period => period.seconds) do |req|

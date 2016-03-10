@@ -1,9 +1,9 @@
 require 'mocha/mini_test'
 require_relative 'test_helper'
-require 'cdo/rack/attack'
 require 'channels_api'
 require 'tables_api'
 require 'properties_api'
+require "fakeredis"
 require "timecop"
 
 # The cache is a class property of Rack::Attack. This means that
