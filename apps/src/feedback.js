@@ -501,7 +501,9 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
         }
         break;
       case TestResults.TOO_FEW_BLOCKS_FAIL:
-        message = options.level.tooFewBlocksMsg || msg.tooFewBlocksMsg();
+        message = options.level.tooFewBlocksMsg ||
+            options.level.levelIncompleteError ||
+            msg.levelIncompleteError();
         break;
       case TestResults.LEVEL_INCOMPLETE_FAIL:
         message = options.level.levelIncompleteError ||
