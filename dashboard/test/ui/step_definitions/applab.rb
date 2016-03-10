@@ -271,11 +271,3 @@ And /^I save the project$/ do
 
   @browser.execute_script(script)
 end
-
-And /^I see no difference for "([^"]*)" after saving project$/ do |test_identifier|
-  steps %{
-    And I save the project
-    And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "#{test_identifier}"
-  }
-end
