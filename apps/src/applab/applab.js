@@ -687,6 +687,11 @@ Applab.init = function(config) {
     // and sized in drawDiv().
     Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
 
+    if (config.level.templateBacked) {
+      studioApp.displayAlert('#codeWorkspace', <div>{commonMsg.projectWarning()}</div>,
+        'warning');
+    }
+
     studioApp.alertIfAbusiveProject('#codeWorkspace');
 
     // IE9 doesnt support the way we handle responsiveness. Instead, explicitly
