@@ -117,8 +117,6 @@ class ApiController < ApplicationController
       response[:disableSocialShare] = current_user.under_13?
       response[:disablePostMilestone] =
         !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
-    else
-      response[:user_id] = nil
     end
 
     slog(tag: 'activity_start',
