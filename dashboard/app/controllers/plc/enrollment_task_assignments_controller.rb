@@ -4,7 +4,6 @@ class Plc::EnrollmentTaskAssignmentsController < ApplicationController
   # GET /plc/enrollment_task_assignments
   # GET /plc/enrollment_task_assignments.json
   def index
-    @plc_enrollment_task_assignments = Plc::EnrollmentTaskAssignment.all
   end
 
   # GET /plc/enrollment_task_assignments/1
@@ -12,21 +11,30 @@ class Plc::EnrollmentTaskAssignmentsController < ApplicationController
   def show
   end
 
+  # PATCH/PUT /plc/enrollment_task_assignments/1
+  # PATCH/PUT /plc/enrollment_task_assignments/1.json
+  def update
+    if @enrollment_task_assignment.update(plc_enrollment_task_assignment_params)
+      redirect_to action: show, notice: 'Task assignment was successfully updated'
+    else
+      redirect_to action: edit
+    end
+  end
+
   # DELETE /plc/enrollment_task_assignments/1
   # DELETE /plc/enrollment_task_assignments/1.json
   def destroy
-    @plc_enrollment_task_assignment.destroy
+    @enrollment_task_assignment.destroy
     redirect_to action: :index
   end
 
   private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_plc_enrollment_task_assignment
-    @plc_enrollment_task_assignment = Plc::EnrollmentTaskAssignment.find(params[:id])
-  end
-
   # Never trust parameters from the scary internet, only allow the white list through.
   def plc_enrollment_task_assignment_params
-    params[:plc_enrollment_task_assignment]
+    if params[:plc_written_enrollment_task_assignment]
+      params.require(:plc_written_enrollment_task_assignment).permit(:submission)
+    else
+      params[:plc_enrollment_task_assignment]
+    end
   end
 end
