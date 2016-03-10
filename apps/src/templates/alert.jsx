@@ -8,6 +8,7 @@ var Alert = React.createClass({
   propTypes: {
     children: React.PropTypes.element.isRequired,
     type: React.PropTypes.oneOf("error", "warning").isRequired,
+    leftMargin: React.PropTypes.number.isRequired,
     onClose: React.PropTypes.func.isRequired
   },
 
@@ -16,10 +17,8 @@ var Alert = React.createClass({
       main: {
         position: 'absolute',
         zIndex: 1000,
-        // Note: This is currently only used in Applab's codeWorkspace. These
-        // might neeed to be configurable by the caller if we use elsewhere.
         top: 45,
-        left: 350,
+        left: this.props.leftMargin,
         right: 50
       },
       typeSpecific: {

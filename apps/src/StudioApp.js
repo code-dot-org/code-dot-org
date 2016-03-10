@@ -2347,10 +2347,12 @@ function rectFromElementBoundingBox(element) {
 /**
  * Displays a small alert box inside DOM element at parentSelector.
  * @param {string} parentSelector
+ * @param {number} leftMargin - How big of a margin to have from left of parent
  * @param {React.Component} alertContents
  * @param {string} type - Alert type (error or warning)
  */
-StudioApp.prototype.displayAlert = function (parentSelector, alertContents, type) {
+StudioApp.prototype.displayAlert = function (parentSelector, leftMargin, type,
+    alertContents) {
   // Each parent is assumed to have at most a single alert. This assumption
   // could be changed, but we would then want to clean up our DOM element on
   // close
@@ -2366,7 +2368,7 @@ StudioApp.prototype.displayAlert = function (parentSelector, alertContents, type
     React.unmountComponentAtNode(renderElement);
   };
   ReactDOM.render(
-    <Alert onClose={handleAlertClose} type={type}>
+    <Alert onClose={handleAlertClose} leftMargin={leftMargin} type={type}>
       {alertContents}
     </Alert>, renderElement);
 };
@@ -2382,7 +2384,7 @@ StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
       tos: window.dashboard.i18n.t('project.abuse.tos'),
       contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
     };
-    this.displayAlert(parentSelector, <dashboard.AbuseError i18n={i18n}/>, 'error');
+    this.displayAlert(parentSelector, 350, 'error', <dashboard.AbuseError i18n={i18n}/>);
   }
 };
 

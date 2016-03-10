@@ -1898,6 +1898,11 @@ Studio.init = function(config) {
     }
 
     drawMap();
+
+    if (!!config.level.projectTemplateLevelName) {
+      studioApp.displayAlert('#codeWorkspace', 200, 'warning',
+        <div>{commonMsg.projectWarning()}</div>);
+    }
   };
 
   config.afterClearPuzzle = function() {
