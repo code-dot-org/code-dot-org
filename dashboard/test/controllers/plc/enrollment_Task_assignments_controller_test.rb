@@ -2,28 +2,38 @@ require 'test_helper'
 
 class Plc::EnrollmentTaskAssignmentsControllerTest < ActionController::TestCase
   setup do
-    @enrollment_task_assignment = create :plc_enrollment_task_assignment
     @user = create :admin
     sign_in(@user)
+
+    course = create :plc_course
+    learning_module = create :plc_learning_module
+    task = create(:plc_script_completion_task, plc_learning_module: learning_module)
+
+    user_course_enrollment = create(:plc_user_course_enrollment, plc_course: course, user: @user)
+    enrollment_module_assignment = create(:plc_enrollment_module_assignment, plc_user_course_enrollment: user_course_enrollment)
+    @enrollment_task_assignment = create(:plc_enrollment_task_assignment, plc_enrollment_module_assignment: enrollment_module_assignment, plc_task: task)
+
   end
 
-  test "should get index" do
-  end
-
-  test "should update written enrollment task assignments" do
-
-  end
-
-  test "should show plc_user_course_enrollment" do
-    get :show, id: @user_course_enrollment
+  test 'should get index' do
+    get :index
     assert_response :success
   end
 
-  test "should destroy plc_user_course_enrollment" do
-    assert_difference('Plc::UserCourseEnrollment.count', -1) do
-      delete :destroy, id: @user_course_enrollment
+  test 'should show plc_user_course_enrollment' do
+    get :show, id: @enrollment_task_assignment
+    assert_response :success
+  end
+
+  test 'should update written enrollment task assignments' do
+
+  end
+
+  test 'should destroy enrollment task assignment' do
+    assert_difference('Plc::EnrollmentTaskAssignment.count', -1) do
+      delete :destroy, id: @enrollment_task_assignment
     end
 
-    assert_redirected_to plc_user_course_enrollments_path
+    assert_redirected_to plc_enrollment_task_assignments_path
   end
 end
