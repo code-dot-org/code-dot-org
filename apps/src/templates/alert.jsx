@@ -1,25 +1,24 @@
 /* global $ */
-
+var colors = require('../sharedJsxStyles').colors;
 
 /**
  * Simple boot-strapped style alert.
  */
 var Alert = React.createClass({
   propTypes: {
-    body: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.element
-    ]).isRequired,
-    style: React.PropTypes.object,
+    children: React.PropTypes.element.isRequired,
     onClose: React.PropTypes.func.isRequired
   },
 
   render: function () {
     var styles = {
-      main: $.extend({}, {
+      main: {
         position: 'absolute',
-        zIndex: 1000
-      }, this.props.style),
+        zIndex: 1000,
+        top: 45,
+        left: 350,
+        right: 50
+      },
       child: {
         // from bootstrap's alert
         padding: '8px 35px 8px 14px',
@@ -28,8 +27,8 @@ var Alert = React.createClass({
         border: '1px solid #fbeed5',
         borderRadius: 4,
         // from alert-error
-        backgroundColor: '#f2dede', // TODO - put colors in shared location?
-        color: '#b94a48'
+        backgroundColor: colors.bootstrap.errorBackground,
+        color: colors.bootstrap.errorText
       },
       closeButton: {
         margin: 0,
@@ -55,10 +54,10 @@ var Alert = React.createClass({
     return (
       <div style={styles.main}>
         <div style={styles.child}>
-          <button type="button" style={styles.closeButton}>
+          <button style={styles.closeButton}>
             <span onClick={this.props.onClose}>&times;</span>
           </button>
-          {this.props.body}
+          {this.props.children}
         </div>
       </div>
     );
