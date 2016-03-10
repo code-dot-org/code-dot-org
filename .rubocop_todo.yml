@@ -116,10 +116,6 @@ Style/CaseEquality:
 Style/CaseIndentation:
   Enabled: false
 
-# Offense count: 1
-Style/ClassAndModuleCamelCase:
-  Enabled: false
-
 # Offense count: 7
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: nested, compact
