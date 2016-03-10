@@ -209,7 +209,7 @@ namespace :seed do
     auto_id = db.columns.include?(:id)
 
     count = 0
-    CSV.foreach(path, headers: true) do |data|
+    CSV.foreach(path, headers: true, encoding: 'utf-8') do |data|
       record = {}
       db.columns.each{|column| record[column] = csv_smart_value(data[column.to_s])}
 
