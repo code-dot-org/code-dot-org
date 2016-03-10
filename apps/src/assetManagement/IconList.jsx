@@ -1,8 +1,5 @@
 var IconListEntry = require('./IconListEntry.jsx');
-
 var icons = require('./icons');
-var iconKeys = Object.keys(icons);
-var MAX_RESULTS = 50;
 
 /**
  * A component for managing icons.
@@ -14,21 +11,35 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    var query = new RegExp('(^|-)' + this.props.search), results = {};
+    var letters = this.props.search.split(''), results = {};
 
-    for (var i = 0; i < iconKeys.length; i++) {
-      var keyword = iconKeys[i];
-      if (query.test(keyword)) {
-        var matches = icons[keyword];
-        for (var match in matches) {
-          if (!results[match]) {
-            results[match] = {
-              unicode: matches[match],
-              alt: keyword
-            };
-          }
+    for (var i = 0, node = icons; i < letters.length; i++) {
+      node = node[letters[i]];
+      if (!node) {
+        // No matches found
+        break;
+      }
+    }
+
+    // Construct results
+    function getResults(node, prefix) {
+      if (node.$) {
+        for (var iconId in node.$) {
+          results[iconId] = {
+            unicode: node.$[iconId],
+            alt: prefix
+          };
         }
       }
+      for (var letter in node) {
+        if (letter !== '$') {
+          getResults(node[letter], prefix + letter);
+        }
+      }
+    }
+
+    if (node) {
+      getResults(node, this.props.search);
     }
 
     var list = [];

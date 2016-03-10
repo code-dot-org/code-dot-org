@@ -8,8 +8,14 @@ icons = data['icons']
 @keywords = {}
 
 def add_keyword_entry(keyword, icon)
-  @keywords[keyword.to_sym] ||= {}
-  @keywords[keyword.to_sym][icon['id'].to_sym] = icon['unicode']
+  keyword.split('-').each do |token|
+    k = @keywords
+    token.split('').each do |letter|
+      k = k[letter] ||= {}
+    end
+    k['$'] ||= {}
+    k['$'][icon['id']] = icon['unicode']
+  end
 end
 
 icons.each do |icon|
