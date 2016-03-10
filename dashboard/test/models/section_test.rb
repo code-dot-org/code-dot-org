@@ -38,7 +38,6 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal ["User must be a teacher"], student_section.errors.full_messages
   end
 
-
   test "can create section with duplicate name" do
     teacher = create(:teacher)
 

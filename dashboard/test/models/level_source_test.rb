@@ -93,7 +93,6 @@ class LevelSourceTest < ActiveSupport::TestCase
     end
   end
 
-
   test "should get selected external hint" do
     assert_equal @selected_stanford_message,
                  @level_source.get_external_hint.hint

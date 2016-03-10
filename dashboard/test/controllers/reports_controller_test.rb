@@ -125,7 +125,6 @@ class ReportsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-
   test "should not get header_stats with user_id when not signed in" do
     sign_out @admin
 
@@ -184,7 +183,6 @@ class ReportsControllerTest < ActionController::TestCase
 
     assert_equal @not_admin.id, session['warden.user.user.key'].first.first
   end
-
 
   test "should assume_identity by hashed email" do
     email = 'someone_under13@somewhere.xx'
