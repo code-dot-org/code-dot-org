@@ -7,6 +7,7 @@ var colors = require('../sharedJsxStyles').colors;
 var Alert = React.createClass({
   propTypes: {
     children: React.PropTypes.element.isRequired,
+    type: React.PropTypes.oneOf("error", "warning").isRequired,
     onClose: React.PropTypes.func.isRequired
   },
 
@@ -15,20 +16,31 @@ var Alert = React.createClass({
       main: {
         position: 'absolute',
         zIndex: 1000,
+        // Note: This is currently only used in Applab's codeWorkspace. These
+        // might neeed to be configurable by the caller if we use elsewhere.
         top: 45,
         left: 350,
         right: 50
+      },
+      typeSpecific: {
+        error: {
+          borderColor: colors.bootstrap.errorBorder,
+          backgroundColor: colors.bootstrap.errorBackground,
+          color: colors.bootstrap.errorText
+        },
+        warning: {
+          borderColor: colors.bootstrap.warningBorder,
+          backgroundColor: colors.bootstrap.warningBackground,
+          color: 'black'
+        },
       },
       child: {
         // from bootstrap's alert
         padding: '8px 35px 8px 14px',
         marginBottom: 20,
         textShadoow: '0 1px 0 rgba(255, 255, 255, 0.5)',
-        border: '1px solid #fbeed5',
+        border: '1px solid',
         borderRadius: 4,
-        // from alert-error
-        backgroundColor: colors.bootstrap.errorBackground,
-        color: colors.bootstrap.errorText
       },
       closeButton: {
         margin: 0,
@@ -51,9 +63,11 @@ var Alert = React.createClass({
       }
     };
 
+    var childStyle = $.extend({}, styles.child, styles.typeSpecific[this.props.type]);
+
     return (
       <div style={styles.main}>
-        <div style={styles.child}>
+        <div style={childStyle}>
           <button style={styles.closeButton}>
             <span onClick={this.props.onClose}>&times;</span>
           </button>

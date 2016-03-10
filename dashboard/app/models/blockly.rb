@@ -235,6 +235,7 @@ class Blockly < Level
       end
 
       level_prop['images'] = JSON.parse(level_prop['images']) if level_prop['images'].present?
+      level_prop['templateBacked'] = !level.project_template_level.nil?
 
       # Blockly requires startDirection as an integer not a string
       level_prop['startDirection'] = level_prop['startDirection'].to_i if level_prop['startDirection'].present?
