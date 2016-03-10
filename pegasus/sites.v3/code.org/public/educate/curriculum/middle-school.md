@@ -6,6 +6,11 @@ nav: educate_nav
 # Middle School
 Our current middle school curriculum focuses on using computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels. Our newest course-in-development, CS Discoveries, will be a year-long computer science course designed for middle school students.
 
+# Computer Science Discoveries
+Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course is currently in development and will be ready for the 2017-2018 school year.
+
+[<button>Learn more about curriculum</button>](/educate/csd)
+
 # Computer Science in Science
 
 <img src="<%= CDO.shared_image_url("courses/logo_science.png") %>">
@@ -39,11 +44,6 @@ Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to develo
 Code.org offers a four course [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students. If your students have not already taken all of these courses, the 20-hour accelerated course covers the core concepts from the first four courses at an accelerated pace designed for students ages 10-18. This can be worked into a middle school after-school program or as a unit in a technology or programming class.
 
 [<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
-
-# Computer Science Discoveries
-Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course is currently in development and will be ready for the 2017-2018 school year.
-
-[<button>Learn more about curriculum</button>](/educate/csd)
 
 # 3rd Party resources for middle school CS
 

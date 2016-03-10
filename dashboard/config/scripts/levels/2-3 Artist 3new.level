@@ -69,6 +69,9 @@
             <block type="colour_random"/>
           </value>
         </block>
+        <block type="draw_turn_by_constant_dropdown"/>
+        <block type="draw_turn_by_constant_dropdown"/>
+        <block type="draw_turn_by_constant_dropdown"/>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
@@ -93,29 +96,33 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">30</title>
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">turnLeft</title>
+              <title name="VALUE" config="45,60,90,120,180">90</title>
               <next>
-                <block type="draw_turn_by_constant_dropdown">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">30</title>
                   <next>
-                    <block type="draw_move_by_constant">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">50</title>
+                    <block type="draw_turn_by_constant_dropdown">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE" config="45,60,90,120,180">90</title>
                       <next>
-                        <block type="draw_turn_by_constant_dropdown">
-                          <title name="DIR">turnRight</title>
-                          <title name="VALUE" config="45,60,90,120,180">90</title>
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">50</title>
                           <next>
-                            <block type="draw_move_by_constant">
-                              <title name="DIR">moveForward</title>
-                              <title name="VALUE">30</title>
+                            <block type="draw_turn_by_constant_dropdown">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE" config="45,60,90,120,180">90</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">30</title>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>

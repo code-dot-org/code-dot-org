@@ -30,8 +30,8 @@ var ColorPickerPropertyRow = React.createClass({
   ensureColorPicker: function () {
     $(this.refs.colorPicker).colpick({
       color: this.state.value,
-    	layout: 'rgbhex',
-    	submit: 0,
+      layout: 'rgbhex',
+      submit: 0,
       onChange: this.handleColorChange
     });
   },

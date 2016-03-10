@@ -903,7 +903,7 @@
   projguts_name: "„Akmuo, popierius, žirklės“"
   hourofcode_name: Klasikinis labirintas
   playlab_name: Laboratorija
-  infinity_name: "Žaidimų laboratorija Infinity"
+  infinity_name: "Žaidimų laboratorija „Infinity“"
   artist_name: Menininkas
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Paleisti Marko!
@@ -925,7 +925,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: Programėlių laboratorija
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Amžius 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
@@ -1086,7 +1086,7 @@
   hourofcode_shortdescription: Išmokite koduoti su Marku Zuckerbergu ir Angry Birds!
   frozen_shortdescription: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo
     grožį ir magiją.
-  starwars_shortdescription: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų
+  starwars_shortdescription: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų
     žaidimą tolimoje galaktikoje.
   playlab_shortdescription: Sukurk istoriją arba žaidimą!
   infinity_shortdescription: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje
@@ -1249,7 +1249,7 @@
   frozen_longdescription: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo
     grožį ir magiją. Čiuožinėdami pačiūžomis, piešime snaigių raštus. Savo kūriniais
     galėsite pasidalinti su draugais!
-  starwars_longdescription: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų
+  starwars_longdescription: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų
     žaidimą tolimoje galaktikoje.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,

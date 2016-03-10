@@ -198,7 +198,6 @@ exports.calcBlockXml = function (type, args) {
         '</title></block>';
     } else if (/^<block/.test(arg)) {
       // we have xml, dont make any changes
-      arg = arg;
     } else {
       // we think we have a variable
       arg = exports.calcBlockGetVar(arg);
