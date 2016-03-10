@@ -137,14 +137,12 @@ function openFunctionEditor(opt_name) {
 }
 
 function getParametersUsedInFunctionEditor() {
-  var paramsUsed = []
-  Blockly.functionEditor.functionDefinitionBlock.getDescendants().forEach(
-      function(block) {
-        if (block.type == 'parameters_get') {
-          paramsUsed.push(block.getTitleValue('VAR'));
-        }
+  return Blockly.functionEditor.functionDefinitionBlock.getDescendants().
+      filter(function(block) {
+        return block.type == 'parameters_get';
+      }).map(function(block) {
+        return block.getTitleValue('VAR');
       });
-  return paramsUsed;
 }
 
 function cleanupFunctionEditor() {
