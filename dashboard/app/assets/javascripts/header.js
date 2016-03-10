@@ -26,7 +26,7 @@ dashboard.header = (function () {
    *   }>
    * }}
    */
-  header.build = function (stageData, progressData, currentLevelId, scriptName) {
+  header.build = function (stageData, progressData, currentLevelId, scriptName, page) {
     stageData = stageData || {};
     progressData = progressData || {};
 
@@ -51,7 +51,7 @@ dashboard.header = (function () {
       $('.header_popup .header_text').text(progressData.linesOfCodeText);
     }
 
-    dashboard.progress.renderStageProgress(stageData, progressData, clientProgress, currentLevelId);
+    dashboard.progress.renderStageProgress(stageData, progressData, clientProgress, currentLevelId, page);
 
     $('.level_free_play').qtip({
       content: {
