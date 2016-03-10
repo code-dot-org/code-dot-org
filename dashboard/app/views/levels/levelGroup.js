@@ -1,4 +1,4 @@
-/* global levelCount, page, fallbackResponse, callback, app, level, lastAttempt */
+/* global levelCount, page, fallbackResponse, callback, app, level, lastAttempt, sendReport */
 
 window.getResult = function()
 {
