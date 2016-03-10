@@ -285,10 +285,10 @@ Blockly.FunctionEditor.prototype.removeParameter = function(nameToRemove) {
     }
   });
   keysToDelete.forEach(function(key) { this.orderedParamIDsToBlocks_.remove(key); }, this);
-  this.refreshParamsEverywhere();
   this.forEachParameterGetBlock(nameToRemove, function(block) {
     block.dispose(true, false);
   });
+  this.refreshParamsEverywhere();
 };
 
 Blockly.FunctionEditor.prototype.refreshParamsEverywhere = function() {
