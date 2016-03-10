@@ -210,7 +210,6 @@
   "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again.",
   "textVariable": "text",
   "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
-  "tooFewBlocksMsg": "You are using all of the necessary types of blocks, but try using more of these types of blocks to complete this puzzle.",
   "tooManyBlocksMsg": "This puzzle can be solved with <x id='START_SPAN'/><x id='END_SPAN'/> blocks.",
   "tooMuchWork": "You made me do a lot of work!  Could you try repeating fewer times?",
   "toolboxHeader": "Blocks",
