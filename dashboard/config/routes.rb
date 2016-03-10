@@ -141,7 +141,6 @@ Dashboard::Application.routes.draw do
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
 
-
     # /s/xxx/level/yyy
     resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
 
@@ -227,7 +226,6 @@ Dashboard::Application.routes.draw do
   get '/notes/:key', to: 'notes#index'
 
   resources :zendesk_session, only: [:index]
-
 
   post '/report_abuse', :to => 'report_abuse#report_abuse'
   get '/report_abuse', :to => 'report_abuse#report_abuse_form'

@@ -269,7 +269,6 @@ class Documents < Sinatra::Base
       request.user_id
     end
 
-
     def document(path)
       content = IO.read(path)
       original_line_count = content.lines.count
