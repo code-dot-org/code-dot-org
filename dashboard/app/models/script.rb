@@ -540,29 +540,7 @@ class Script < ActiveRecord::Base
       stages: stages.map(&:summarize),
     }
 
-    # Go through all levels.  If we find an assessment with a per_page value,
-    # then it's a long assessment: we assume it's the final level in the
-    # stage, and generate some placeholder levels for the subsequent pages
-    # of the long assessment.  Each of those levels will have the same basic
-    # URL as the first, but with ?page=1, ?page=2, etc.
-    summary[:stages].each do |stage|
-      # We might append additional levels, so iterate over the original set.
-      stage[:levels][0..stage[:levels].length].each do |level|
-        if level[:kind] == "assessment"
-          levelInfo = Script.cache_find_level(level[:id])
-          if levelInfo[:properties]["per_page"]
-            extraLevelCount = levelInfo[:properties]["levels"].length / levelInfo[:properties]["per_page"].to_i - 1
-            (1..extraLevelCount).each do |pageIndex|
-              newLevel = level.deep_dup
-              newLevel[:url] << "?page=#{pageIndex}"
-              newLevel[:position] = level[:position] + pageIndex
-              newLevel[:title] = level[:title] + pageIndex
-              stage[:levels] << newLevel
-            end
-          end
-        end
-      end
-    end
+
 
     #summary[:stages][21][:levels][2] = summary[:stages][21][:levels][1].deep_dup
     #summary[:stages][21][:levels][2][:position] = 3

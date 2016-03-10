@@ -7,7 +7,8 @@
 = render partial: 'levels/common_audio'
 
 - if data["per_page"]
-  - page = params[:page] ? params[:page].to_i : 0
+  - # use a 0-based page internally, though the URL is 1-based.
+  - page = params[:page] ? (params[:page].to_i - 1) : 0
   - per_page = data["per_page"].to_i
   - first_level = page * per_page
   - last_level = [first_level + per_page - 1, data["levels"].length - 1].min
@@ -20,14 +21,15 @@
   - level = level_blob
   - # Parse the array of the level resuts; see sample below in JavaScript.
   - if @last_attempt
-    - last_attempt = JSON.parse(@last_attempt).find{|item| item["level_id"]==level.id}["result"]
+    - last_attempt_entry = JSON.parse(@last_attempt).find{|item| item["level_id"]==level.id}
+    - last_attempt = last_attempt_entry["result"] if last_attempt_entry
   - else
     - last_attempt = ""
   = render partial: 'levels/single_multi', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
 
 = render partial: 'levels/common_audio'
 
-- if data["per_page"]
+- if data["per_page"] && last_level < data["levels"].length - 1
   %a.btn.btn-large.btn-primary.nextPageButton
     =t('nextPage')
 - else
@@ -36,6 +38,13 @@
 :javascript
   #{render template: 'levels/multi.js', formats: [:js]}
 
-  var levelCount = #{data["levels"].count};
-  var page = #{page};
+  var levelCount = #{last_level - first_level + 1};
+  var page = #{page || -1};
+
+  var fallbackResponse = #{@fallback_response.to_json};
+  var callback = "#{@callback}";
+  var app = "#{app}";
+  var level = 2; // #{@level.to_json}; // #{@level.level_num};
+  var lastAttempt = #{@last_attempt};
+
   #{render template: 'levels/levelGroup.js', formats: [:js]}

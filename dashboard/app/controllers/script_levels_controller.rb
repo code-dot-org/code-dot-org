@@ -64,7 +64,7 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    if request.path != (canonical_path = build_script_level_path(@script_level))
+    if request.path != (canonical_path = build_script_level_path(@script_level, params))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
       return
