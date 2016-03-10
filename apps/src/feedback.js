@@ -501,6 +501,8 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
         }
         break;
       case TestResults.TOO_FEW_BLOCKS_FAIL:
+        // This should be replaced by the LEVEL_INCOMPLETE_FAIL case, but some
+        // levels still override tooFewBlocksMsg.
         message = options.level.tooFewBlocksMsg ||
             options.level.levelIncompleteError ||
             msg.levelIncompleteError();
