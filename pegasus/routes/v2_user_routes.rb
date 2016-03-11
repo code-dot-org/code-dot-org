@@ -21,7 +21,6 @@ get '/v2/students/:id' do |id|
   JSON.pretty_generate(student.to_hash)
 end
 
-
 patch '/v2/students/:id' do |id|
   only_for 'code.org'
   dont_cache

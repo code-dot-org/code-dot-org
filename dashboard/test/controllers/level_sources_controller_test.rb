@@ -228,7 +228,6 @@ class LevelSourcesControllerTest < ActionController::TestCase
       </xml>
     )
 
-
     flappy_level = create :level, game: Game.find_by_name(Game::FLAPPY)
     level_source = create :level_source, level: flappy_level, data: old_source
 
