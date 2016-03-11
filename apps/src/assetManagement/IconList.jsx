@@ -1,5 +1,6 @@
 var IconListEntry = require('./IconListEntry.jsx');
 var icons = require('./icons');
+var msg = require('../locale');
 
 /**
  * A component for managing icons.
@@ -69,6 +70,10 @@ module.exports = React.createClass({
         altMatch={result.alt}
         search={this.props.search}/>;
     }.bind(this));
+
+    if (list.length === 0) {
+      list = msg.noIconsFound();
+    }
 
     return (
       <div style={{
