@@ -6,11 +6,15 @@ require 'active_support/core_ext/numeric/time'
 # An object that dynamically updates the RackAttack configuration based on DCDO and CDO.
 # Callers should construct and instance and then call start.
 class RackAttackConfigUpdater
+
   def initialize
   end
 
   # Begin dynamically updating the RackAttack configuration and return self.
-  def start
+  # RackAttack will be configured to use the given cache store, or, if none is provided, a
+  # default store backed by Redis.
+  def start(cache_store = nil)
+    Rack::Attack.cache.store = cache_store || default_redis_cache_store
     DCDO.add_change_listener(self)
     update_limits
     self
@@ -31,6 +35,12 @@ class RackAttackConfigUpdater
   end
 
   private
+
+  # Returns a default rack attack store backed by Redis.
+  def default_redis_cache_store
+    Rack::Attack::StoreProxy::RedisStoreProxy.new(
+        Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379'))
+  end
 
   # Updates the RackAttack limits based on CDO defaults and DCDO overrides.
   def update_limits

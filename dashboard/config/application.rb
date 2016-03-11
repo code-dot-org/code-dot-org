@@ -41,10 +41,6 @@ module Dashboard
     if CDO.throttle_data_apis
       require 'cdo/rack/attack'
 
-      # Configure RackAttack to use redis.
-      Rack::Attack.cache.store = Rack::Attack::StoreProxy::RedisStoreProxy.new(
-          Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379'))
-
       # Start dynamic RackAttack configuration updates.
       RackAttackConfigUpdater.new.start
 
