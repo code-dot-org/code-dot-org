@@ -17,19 +17,20 @@ var CellEditor = React.createClass({
 
   handleChange: function (event) {
     var values = {};
-    var nodes = this.getDOMNode().querySelectorAll('[name]');
+    var nodes = ReactDOM.findDOMNode(this).querySelectorAll('[name]');
     for (var i = 0, node; (node = nodes[i]); i++) {
-      values[node.name] = isNaN(node.value) ? undefined : parseInt(node.value);
+      values[node.name] = isNaN(parseInt(node.value)) ? undefined : parseInt(node.value);
     }
     this.props.onUpdate(values);
   },
 
   render: function () {
     var values = this.props.cell.serialize();
-    for (var value in values) {
-      if (values[value] === undefined) {
-        values[value] = 'undefined';
-      }
+
+    // We want undefined values that are going to be in <selects> to
+    // actually be the STRING 'undefined' rather than the value.
+    if (values.tileType === undefined) {
+      values.tileType = 'undefined';
     }
     return (
       <form className="span4 offset1">

@@ -25,8 +25,10 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"There are two ways to solve this puzzle!\",\r\n  \"hint_id\": \"2-3_Maze_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+  },
+  "published": true
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -51,5 +53,45 @@
         </block>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_turn">
+              <title name="DIR">turnLeft</title>
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_moveForward">
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnRight</title>
+                                      <next>
+                                        <block type="maze_moveForward"/>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

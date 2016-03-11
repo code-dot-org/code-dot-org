@@ -29,8 +29,8 @@ class UsersHelperTest < ActionView::TestCase
       linesOfCode: 42,
       linesOfCodeText: 'Total lines of code: 42',
       levels: {
-        ul1.level_id => {status: 'perfect', result: 100},
-        ul3.level_id => {status: 'passed', result: 20}
+        ul1.level_id => {status: 'perfect', result: 100, submitted: false},
+        ul3.level_id => {status: 'passed', result: 20, submitted: false}
       },
       trophies: {current: 0, of: 'of', max: 27}
     }, summarize_user_progress(script, user))
@@ -49,8 +49,8 @@ class UsersHelperTest < ActionView::TestCase
        scripts: {
            script.name => {
                levels: {
-                   ul1.level_id => {status: 'perfect', result: 100},
-                   ul3.level_id => {status: 'passed', result: 20}
+                   ul1.level_id => {status: 'perfect', result: 100, submitted: false},
+                   ul3.level_id => {status: 'passed', result: 20, submitted: false}
                },
                trophies: {current: 0, of: 'of', max: 27},
            }
@@ -71,14 +71,14 @@ class UsersHelperTest < ActionView::TestCase
          scripts: {
              script.name => {
                  levels: {
-                     ul1.level_id => {status: 'perfect', result: 100},
-                     ul3.level_id => {status: 'passed', result: 20}
+                     ul1.level_id => {status: 'perfect', result: 100, submitted: false},
+                     ul3.level_id => {status: 'passed', result: 20, submitted: false}
                  },
                  trophies: {current: 0, of: 'of', max: 27}
              },
              course1.name => {
                  levels: {
-                     ul1b.level_id => {status: 'attempted', result: 10},
+                     ul1b.level_id => {status: 'attempted', result: 10, submitted: false},
                  }
              }
 

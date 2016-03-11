@@ -91,7 +91,6 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to section_path(id: @word_section.code)
   end
 
-
   test "login to section with a script redirects to script" do
     new_setup
 

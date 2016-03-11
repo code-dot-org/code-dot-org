@@ -33,8 +33,11 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "never_autoplay_video": "false"
-  }
+    "never_autoplay_video": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.\",\r\n  \"hint_id\": \"2-3_Artist_1_new_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Having trouble turning the corner? Use the `turn right 90 degrees` block.\",\r\n  \"hint_id\": \"2-3_Artist_1_new_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "callout_json": "[]"
+  },
+  "published": true
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -67,6 +70,7 @@
             <block type="colour_random"/>
           </value>
         </block>
+        <block type="draw_turn_by_constant_dropdown"/>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
@@ -83,17 +87,21 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_turn_by_constant">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE">90</title>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">100</title>
               <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>

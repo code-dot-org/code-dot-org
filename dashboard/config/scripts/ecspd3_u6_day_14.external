@@ -1,0 +1,35 @@
+name 'ECSPD3-u6 day 14'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Unit 6 Lessons > Day 14 
+ 
+#### Concepts Covered  
+Tic-Tac-Toe game on paper, decisions needed for programming a robot to play Tic-Tac-Toe, "If-then” logic to play the game, and RoboCup competition article.
+ 
+#### Lesson Overview 
+In pairs, students play a game of Tic-Tac-Toe on paper to come up with questions around how the game works, the rules, decisions players need to make before taking turns, etc..  You will then ask them to read the article “Robot Competitors Meet on a Soccer Field of Dreams” and lead a discussion on how they might make clear instructions so that they could instruct robots how to play Tic-Tac-Toe.
+<br><br> 
+ 
+#### Lesson Resources 
+##### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=284" target=_blank>Lesson Plan Link>> </a>
+ 
+- <a href= "http://www.nytimes.com/learning/teachers/lessons/20010802thursday.html" target=_blank>Lesson Plan from NY Times Lesson Plan Archive</a>
+- <a href="http://www.nytimes.com/learning/teachers/featured_articles/20010802thursday.html" target=_blank>Article "Robot Competitors Meet on a Soccer Field of Dreams"</a>
+- Dictionary 
+
+>#### Hints from an ECS Teacher: 
+Separate the article into sections and have students use the jigsaw reading strategy
+
+#### Things to keep in mind 
+Be aware that not all of your student may be familiar with Tic-Tac-Toe, and they will need to know the basics of the game to do this activity.
+
+<br>
+
+Click “Continue” below to learn about the next lesson.  
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

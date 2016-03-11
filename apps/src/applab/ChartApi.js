@@ -4,6 +4,7 @@
  * For now, uses Google charts.
  * @see {GoogleChart}
  */
+ /* global Promise */
 // Strict linting: Absorb into global config when possible
 /* jshint
  unused: true,

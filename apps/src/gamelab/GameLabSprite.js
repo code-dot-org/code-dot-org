@@ -1,4 +1,4 @@
-// jshint ignore: start
+/* eslint-disable */
 /*
  * Override Sprite.AABBops so it can be called as a stateful nativeFunc by the
  * interpreter. This enables the native method to be called multiple times so

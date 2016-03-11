@@ -12,5 +12,35 @@
     "step_mode": 1
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <solution_blocks>
+      <xml>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_moveForward"/>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_moveForward">
+          <next>
+            <block type="maze_moveForward"/>
+          </next>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+            <block type="maze_moveForward"/>
+          </next>
+        </block>
+        <block type="maze_moveForward"/>
+      </xml>
+    </solution_blocks>
+  </blocks>
 </Maze>

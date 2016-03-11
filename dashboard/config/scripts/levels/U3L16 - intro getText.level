@@ -36,13 +36,15 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Getting Text Input\r\n\r\nAs we saw a user can now type inside of a text input whenever they want, **but now we'll need a way to access that text**. In order to do that you'll need to use the `getText` command, which you can now find in the **UI Controls** tab.\r\n\r\n<img src=\"https://images.code.org/0c6774f2b6d33f8107ec2936102b1a10-image-1445533677192.58.24 PM.png\" style=\"width: 150px;\">\r\n\r\nYou can use a `getText` command just like a string within a `console.log` or `write` command. Just like with `setText` you will refer to the UI element by its ID.\r\n\r\n![](https://images.code.org/c17e419301d0cfeebf7f0ccee13e415f-image-1445892504376.47.54 PM.png)\r\n\r\n# Do This:\r\n\r\n* **Read the documentation **  for `getText`.\r\n* **Add an event handler to the Submit button** that fires when your button is clicked.\r\n* **Insider the event handler** place code that will **log the name your user input to the console**.\r\n\r\n",
-    "instructions": "Add text input UI elements for name and age. (Click to see full instructions)",
+    "markdown_instructions": "# Getting Text Input\r\n\r\nAs we saw a user can now type inside of a text input whenever they want, **but now we'll need a way to access that text**. In order to do that you'll need to use the `getText` command, which you can now find in the **UI Controls** tab.\r\n\r\n<img src=\"https://images.code.org/0c6774f2b6d33f8107ec2936102b1a10-image-1445533677192.58.24 PM.png\" style=\"width: 150px;\">\r\n\r\nYou can use a `getText` command just like a string within a `console.log` or `write` command. Just like with `setText` you will refer to the UI element by its ID.\r\n\r\n![](https://images.code.org/c17e419301d0cfeebf7f0ccee13e415f-image-1445892504376.47.54 PM.png)\r\n\r\n# Do This:\r\n\r\n* **Read the documentation **  for `getText`.\r\n* **Add an event handler to the Submit button** that fires when your button is clicked.\r\n* **Inside the event handler** place code that will **log the name your user input to the console**.\r\n\r\n",
+    "instructions": "Add an event handler to the Submit button so that when the button is clicked it will display the name entered in the text box to the console.  Use getText to get the value out of the text box. (Click to see full instructions)",
     "project_template_level_name": "U3L16 - nameAgeTemplate",
     "encrypted_examples": "33yVJUbnXqpsDc7F+neThWPBNsFARgKR5FgYA34FCL4WOa2E3J+eFX0YfVyq\nwguR\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false"
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,0 +1,30 @@
+name 'ECSPD3-u6 day 10-13'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Unit 6 Lessons > Days 10-13 
+ 
+#### Concepts Covered  
+Build robots that can execute the functions programmed through the Robot Educator Software.
+
+#### Lesson Overview 
+In this lesson the students will be working in groups of 3-4 in the Mindstorms Robot Educator Software to follow the tutorials that will guide them in first using the building blocks of the common palette and then the complete palette.  It will be most helpful for you as a teacher to go through the tutorials yourself before you have the students try it. Review with students the assessment model used in the tutorials.
+<br><br> 
+ 
+#### Lesson Resources 
+##### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=283" target=_blank>Lesson Plan Link>> </a>
+ 
+- LEGO Mindstorms NXT User Guide p. 50-53
+- <a href="http://www.lego.com/en-us/mindstorms/downloads" target=_blank>NXT Software Download ¾ down the page</a>
+- <a href="http://www.lego.com/en-us/mindstorms/downloads/download-software" target=_blank>EV3 Software download</a>
+
+#### Things to keep in mind 
+Talk with your IT department to make sure they can get the software installed and working before you get to this part of the lesson.
+<br><br>  
+Click “Continue” below to learn about the next lesson.  
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

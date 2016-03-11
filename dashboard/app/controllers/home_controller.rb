@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
   before_filter :authenticate_user!, only: :gallery_activities
 
-
   # Don't require an authenticity token on set_locale because we post to that
   # action from publicly cached page without a valid token. The worst case impact
   # is that an attacker could change a user's language if they fooled them into

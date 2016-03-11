@@ -861,15 +861,22 @@ input[type="radio"] {
     #lightbulb {
       position: absolute;
       left: 40px;
+    }
+  }
+}
 
-      #hintCount {
-        font-weight: bold;
-        font-size: 400px;
-        fill: white;
-        stroke: black;
-        stroke-width: 30px;
-        font-family: Verdana, Geneva, sans-serif;
-      }
+.qtip.cdo-qtips.qtip-authored-hint {
+  .qtip-content {
+    font-family: $gotham-regular;
+    padding: 10px 10px 0 10px;
+    color: $charcoal;
+
+    h3 {
+      margin-top: 0;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 20px;
     }
   }
 }
@@ -881,6 +888,35 @@ input[type="radio"] {
 #prompt2 {
   font-size: 12px;
   color: $charcoal;
+}
+
+.authored-hints {
+
+  h1, p, pre {
+    color: $charcoal;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  #hint-button {
+    margin-left: 35px;
+  }
+
+  ol {
+    counter-reset: list;
+    margin: 0 0 35px 35px;
+
+    li {
+      list-style: none;
+      &:before {
+        content: counter(list, decimal) ") ";
+        counter-increment: list;
+        position: absolute;
+        left: 35px;
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .modal-content {
@@ -1135,42 +1171,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
 #showVersionsModal .versionRow p {
   margin: 15px 0 0 0;
-}
-
-#rotateContainer {
-  position: fixed;
-  z-index: 10001;
-  background-color: white;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  background-position: 50% 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  #rotateText {
-    position: relative;
-    top: 50%;
-    left: -50%;
-    margin-left: 50px;
-    margin-right: -50px;
-  }
-
-  p {
-    text-align: center;
-    font-size: 26px;
-    line-height: 26px;
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-  }
-
-  @media screen and (orientation: portrait) and (max-device-width: 900px) {
-    display: block;
-  }
 }
 
 .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,
@@ -1638,3 +1638,5 @@ a.WireframeSendToPhone_send-to-phone-link {
     display: none;
   }
 }
+
+@import "RotateContainer";

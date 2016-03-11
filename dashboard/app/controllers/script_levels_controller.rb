@@ -18,13 +18,13 @@ class ScriptLevelsController < ApplicationController
   before_action :disable_session_for_cached_pages
 
   def disable_session_for_cached_pages
-    if ScriptLevelsController.is_cachable_request?(request)
+    if ScriptLevelsController.cachable_request?(request)
       request.session_options[:skip] = true
     end
   end
 
   # Return true if request is one that can be publicly cached.
-  def self.is_cachable_request?(request)
+  def self.cachable_request?(request)
     script_id = request.params[:script_id]
     script = Script.get_from_cache(script_id) if script_id
     script && ScriptConfig.allows_public_caching_for_script(script.name)
@@ -77,12 +77,6 @@ class ScriptLevelsController < ApplicationController
     return if redirect_applab_under_13(@script_level.level)
 
     present_level
-
-    slog(tag: 'activity_start',
-         script_level_id: @script_level.id,
-         level_id: @script_level.level.id,
-         user_agent: request.user_agent,
-         locale: locale) if @script_level.level.finishable?
   end
 
   private

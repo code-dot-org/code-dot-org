@@ -1,0 +1,28 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+transport:
+  name: sftp
+  connection_timeout: 10
+  connection_retries: 5
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 12.7.2
+  environments_path: test/environments
+  client_rb:
+    node_name: test_cdo-apps
+    environment: adhoc
+platforms:
+  - name: ubuntu-14.04
+    attributes:
+      cdo-repository:
+        branch: <%= `git rev-parse --abbrev-ref HEAD` %>
+    run_list:
+      - recipe[cdo-apps]
+suites:
+  - name: default
+  - name: nginx
+    attributes:
+      cdo-apps:
+        nginx_enabled: true

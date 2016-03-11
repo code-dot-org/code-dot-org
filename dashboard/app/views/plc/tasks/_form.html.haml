@@ -1,0 +1,18 @@
+= form_for(@task, url: @task.new_record? ? plc_tasks_path : plc_task_path(@task)) do |f|
+  - if @task.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@task.errors.count, "error")} prohibited this plc_task from being saved:"
+      %ul
+        - @task.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+    = f.label :learning_module_id
+    = f.select :plc_learning_module_id, options_for_select(options_for_plc_task_learning_modules, @task.plc_learning_module_id)
+    = f.label :type
+    = f.select :type, options_for_select(options_for_plc_tasks, @task.type)
+
+  .actions
+    = f.submit 'Save'

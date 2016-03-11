@@ -7,13 +7,28 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,2,0,0],[0,0,0,1,0,1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,4,0,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "pvz",
-    "instructions": "Get me to the sunflower. Loop the sequence!",
+    "instructions": "Loops even work with more than one block inside!  Can you loop this sequence to get the zombie to the sunflower?",
     "start_direction": "1",
-    "step_mode": 1,
+    "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "5"
-  }
+    "ideal": "5",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \\n\\nConnect it all back to the `when run` block and you're good to go!\",\r\n  \"hint_id\": \"2-3_Maze_16_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -48,17 +63,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="maze_moveForward"/>
-      </xml>
-    </required_blocks>
     <recommended_blocks>
       <xml>
         <block type="controls_repeat">
@@ -69,5 +73,28 @@
         </block>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_moveForward"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

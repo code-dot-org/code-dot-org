@@ -265,14 +265,14 @@ exports.isInfiniteRecursionError = function (err) {
   }
 
   // Firefox
-  /* jshint ignore:start */
+  /*eslint-disable */
   // Linter doesn't like our use of InternalError, even though we gate on its
   // existence.
   if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
       err.message === 'too much recursion') {
     return true;
   }
-  /* jshint ignore:end */
+  /*eslint-enable */
 
   // IE
   if (err instanceof Error &&
@@ -386,4 +386,28 @@ exports.escapeText = function (text) {
     }).join('');
 
   return returnValue;
+};
+
+/**
+ * Converts degrees into radians.
+ *
+ * @param degrees - The degrees to convert to radians
+ * @return `degrees` converted to radians
+ */
+exports.degreesToRadians = function (degrees) {
+    return degrees * (Math.PI / 180);
+};
+
+/**
+ * Simple wrapper around localStorage.setItem that catches any exceptions (for
+ * example when we call setItem in Safari's private mode)
+ * @return {boolean} True if we set successfully
+ */
+exports.trySetLocalStorage = function (item, value) {
+  try {
+    localStorage.setItem(item, value);
+    return true;
+  } catch (e) {
+    return false;
+  }
 };

@@ -2,7 +2,14 @@ require pegasus_dir 'forms/volunteer_engineer_submission'
 
 class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
 
+  # Ability for volunteers to have a custom unsubscribe preference from teacher
+  # requests was added during HoC 2015. They had two options to unsubscribe: until the
+  # following year or to unsubscribe from teacher requests forever. Language was later
+  # updated so that "until next year" was "until next Hour of Code." That way we don't
+  # have to have an untilXXXX every year, and we can just update the query before
+  # and after each Hour of Code.
   UNSUBSCRIBE_2016 = "until2016"
+  UNSUBSCRIBE_HOC = "untilhoc"
   UNSUBSCRIBE_FOREVER = "forever"
   DEFAULT_DISTANCE = 24 # kilometers
   DEFAULT_NUM_VOLUNTEERS = 10
@@ -103,7 +110,10 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   end
 
   def self.solr_query(params)
-    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && volunteer_after_hoc_b:true && -unsubscribed_s:\"#{UNSUBSCRIBE_FOREVER}\""
+    # TODO: UNSUBSCRIBE_2016 can be removed completely immediately before Hour of Code 2016.
+    # Notify the volunteers that teacher requests will be starting again for Hour of Code 2016.
+    # Then we'll regularly remove and add UNSUBSCRIBE_HOC before and after each Hour of Code.
+    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && volunteer_after_hoc_b:true && -unsubscribed_s:\"#{UNSUBSCRIBE_FOREVER}\" -unsubscribed_s:\"#{UNSUBSCRIBE_HOC}\" -unsubscribed_s:\"#{UNSUBSCRIBE_2016}\""
 
     coordinates = params['coordinates']
     distance = params['distance'] || DEFAULT_DISTANCE
@@ -119,9 +129,12 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
 
     fq.push("experience_s:#{params['experience_s']}") unless params['experience_s'].nil_or_empty?
 
+    fl = "name_s,company_s,experience_s,location_flexibility_ss,volunteer_after_hoc_b,time_commitment_s,linkedin_s,facebook_s,description_s,allow_contact_b,location_p,id"
+
     {
       q: query,
       fq: fq,
+      fl: fl,
       facet: true,
       'facet.field'=>['location_flexibility_ss', 'experience_s'],
       rows: rows,

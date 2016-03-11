@@ -1,5 +1,6 @@
 var msg = require('../locale');
 var Hint = require('./Hint.jsx');
+var Lightbulb = require('./Lightbulb.jsx');
 
 /**
  * @overview React Component for displaying Authored Hints in the
@@ -11,14 +12,13 @@ var Hint = require('./Hint.jsx');
  * Closing the instructions and re-opening them will reset this
  * Component, allowing the button to be pressed once more.
  */
-module.exports = React.createClass({
+var HintsDisplay = React.createClass({
 
   propTypes: {
     hintReviewTitle: React.PropTypes.string.isRequired,
     seenHints: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     unseenHints: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     onUserViewedHint: React.PropTypes.func.isRequired,
-    lightbulbSVG: React.PropTypes.node.isRequired,
   },
 
   getInitialState: function () {
@@ -34,34 +34,6 @@ module.exports = React.createClass({
     });
   },
 
-  /**
-   * Many of our hints include Blockly blocks. Unfortunately, Blockly
-   * BlockSpaces have a real problem with being created before they are
-   * in the DOM, so we need to inject this BlockSpace outside of our
-   * React render method once we're confident that this component is in
-   * the DOM.
-   */
-  injectBlocklyHint: function (hint) {
-    var ref = this.refs[hint.hintId];
-    ref.injectBlocklyHint();
-  },
-
-  componentDidMount: function () {
-    // now that we're in the DOM, we can render our Blockly blocks for
-    // those hints that have them
-    this.props.seenHints.filter(function (hint) {
-      return hint.block;
-    }).forEach(this.injectBlocklyHint);
-  },
-
-  componentDidUpdate: function () {
-    // if our update has us showing a new hint, make sure to render the
-    // block if it has one
-    if (this.state.showNextUnseenHint && this.props.unseenHints[0].block) {
-      this.injectBlocklyHint(this.props.unseenHints[0]);
-    }
-  },
-
   render: function () {
     var hintsToShow = this.props.seenHints;
     if (this.state.showNextUnseenHint) {
@@ -70,21 +42,24 @@ module.exports = React.createClass({
 
     var seenHints;
     if (hintsToShow && hintsToShow.length) {
-      seenHints = [
-          <h1>{ this.props.hintReviewTitle }</h1>,
-          <ul>
-            {hintsToShow.map(function (hint) {
-              return <Hint hint={hint} ref={hint.hintId} />;
-            })}
-          </ul>
-      ];
+      seenHints = (<div>
+        <h1>
+          <Lightbulb size={32} style={{ margin: "-9px 9px -9px -5px" }}/>
+          { this.props.hintReviewTitle }
+        </h1>
+        <ol>
+          {hintsToShow.map(function (hint) {
+            return <Hint hint={hint} key={hint.hintId} ref={hint.hintId} />;
+          })}
+        </ol>
+      </div>);
     }
 
     var viewHintButton;
     if (!this.state.showNextUnseenHint && this.props.unseenHints && this.props.unseenHints.length) {
       viewHintButton = (
         <button id="hint-button" onClick={ this.viewHint } className="lightbulb-button">
-          <span dangerouslySetInnerHTML={{ __html: this.props.lightbulbSVG }} />
+          <Lightbulb size={32} style={{ margin: "-9px 0px -9px -5px" }}/>
           {msg.hintSelectNewHint()}
         </button>
       );
@@ -98,3 +73,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+module.exports = HintsDisplay;

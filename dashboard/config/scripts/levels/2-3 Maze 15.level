@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,1,4],[0,0,0,0,0,4,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,3,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Use two \"repeat\" loops to get to the pig with the fewest number of blocks.",
+    "instructions": "In this puzzle, two `repeat` loops will help you get to the pig with the fewest number of blocks!",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -26,8 +26,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Use two `repeat` loops to get to the pig with the fewest number of blocks."
-  }
+    "markdown_instructions": "In this puzzle, two `repeat` loops will help you get to the pig with the fewest number of blocks!"
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -47,16 +48,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
-      </xml>
-    </required_blocks>
     <recommended_blocks>
       <xml>
         <block type="controls_repeat">
@@ -65,11 +56,34 @@
         <block type="controls_repeat">
           <title name="TIMES">5</title>
         </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="maze_moveForward"/>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">5</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

@@ -16,7 +16,7 @@ class ImageLibTest < ActiveSupport::TestCase
     expected_image = test_image(expected_image_name)
 
     matching = images_equal?(framed_image, expected_image)
-    if not matching
+    if !matching
       # Save the generated image to a file to help with debugger
       tmp_path = '/tmp/framed_image.png'
       framed_image.write(tmp_path)
@@ -65,7 +65,6 @@ class ImageLibTest < ActiveSupport::TestCase
     assert_not_equal original_jpg, png
     assert images_equal?(MiniMagick::Image.read(original_jpg), MiniMagick::Image.read(png))
   end
-
 
   private
 

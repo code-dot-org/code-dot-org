@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Get me to the sunflower!",
+    "instructions": "Let's take this to another level! \r\nUse loops to get me to the sunflower with the fewest loops possible.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",
@@ -26,9 +26,12 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Let's take this to another level! \r\n\r\nUse loops to get me to the sunflower with the fewest loops possible.",
+    "maze_data": null
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -45,17 +48,54 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-</xml>
-    </required_blocks>
     <recommended_blocks>
       <xml>
         <block type="controls_repeat">
           <title name="TIMES">3</title>
         </block>
-        <block type="maze_moveForward"/>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

@@ -11,6 +11,7 @@
 #  best_result     :integer
 #  script_id       :integer
 #  level_source_id :integer
+#  submitted       :boolean
 #
 # Indexes
 #
@@ -20,7 +21,7 @@
 require 'cdo/activity_constants'
 
 # Summary information about a User's Activity on a Level in a Script.
-# Includes number of attempts (attempts), best score and whether it was submitted (best_result)
+# Includes number of attempts (attempts), best score and whether it was submitted
 class UserLevel < ActiveRecord::Base
   belongs_to :user
   belongs_to :level
@@ -31,10 +32,6 @@ class UserLevel < ActiveRecord::Base
   scope :attempted, -> { where.not(best_result: nil) }
   scope :passing, -> { where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT) }
   scope :perfect, -> { where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT) }
-
-  def submitted?
-    Activity.submitted? best_result
-  end
 
   def best?
     Activity.best? best_result

@@ -189,7 +189,7 @@ Breakfast and lunch will be served.
 
 [University of Idaho - Boise<br/> 
 Idaho Water Center<br/> 
-Seminar Room 348A – 3rd floor <br/>
+Seminar Room 248A – 3rd floor <br/>
 322 E Front St <br/>Boise, ID 83702](https://www.google.com/maps/place/322+E+Front+St,+Boise,+ID+83702/@43.608919,-116.1961197,17z/data=!3m1!4b1!4m2!3m1!1s0x54aef8fed625b255:0x79c9ee7c26ccbdfc)
 
 Parking is free on Saturdays.  Please refer to parking directions [here](http://www.uidaho.edu/boise/contact-locations/hoursmapsparking).

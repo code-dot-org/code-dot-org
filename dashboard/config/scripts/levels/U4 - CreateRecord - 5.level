@@ -6,17 +6,10 @@
   "user_id": 155,
   "properties": {
     "skin": "applab",
-    "code_functions": {
-      "createRecord": null,
-      "declareAssign_x": null,
-      "declareNoAssign_x": null,
-      "assign_x": null,
-      "console.log": null
-    },
     "edit_code": true,
     "embed": "false",
     "instructions": "Add a property to the JavaScript object, then run the program.  View the data table and see how changing the object affects the data table. (Click to see full instructions)",
-    "markdown_instructions": "# What happens when you change the object?\r\n\r\nLet's experiment by adding a property to the object and storing it again.\r\n\r\n# Do This\r\n\r\n* **Add a property** to the song object: `song.artist = \"Beyonce\"`. It should now have 3 properties: title, seconds, and artist.\r\n* **Run the program** so that your updated object is added to the database. You shouldn't need to change anything about the call to `createRecord` \r\n* In the Data Viewer **confirm the new record was added to the table**. You'll learn more about the changes you see in the next exercise.",
+    "markdown_instructions": "# What Happens When You Change the Object?\r\n\r\nLet's experiment by adding a property to the object and storing it again.\r\n\r\n# Do This:\r\n\r\n* **Add a property** to the song object: `song.artist = \"Beyonce\"`. It should now have 3 properties: title, seconds, and artist.\r\n* **Run the program** so that your updated object is added to the database. You shouldn't need to change anything about the call to `createRecord`.\r\n* In the Data Viewer, **confirm the new record was added to the table**. You'll learn more about the changes you see in the next exercise.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -46,8 +39,11 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "project_template_level_name": "U4 - Exploring Data Tools - Template",
-    "slider_speed": "1.0"
-  }
+    "slider_speed": "1.0",
+    "encrypted_examples": "2qLTKWOuMywBTTDHYlfFaANbl7MODZL+GSfB7nPOeZVmg1RbL+QSAWkt19uO\nQ6mT\n"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

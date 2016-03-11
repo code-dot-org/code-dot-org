@@ -38,9 +38,12 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "instructions": "Add an if-else block inside the callback function for updateRecord. (Click to see full instructions)"
+    "instructions": "Add an if-else block inside the callback function for updateRecord. (Click to see full instructions)",
+    "data_tables": "{\r\n \"mySongs\":\r\n [\r\n  {\r\n    \"title\": \"Thriller\",\r\n    \"seconds\": 358,\r\n    \"artist\": \"Michael Jackson\",\r\n    \"id\": 1\r\n  },\r\n  {\r\n    \"title\": \"Wonderwall\",\r\n    \"seconds\": 280,\r\n    \"artist\": \"Oasis\",\r\n    \"id\": 2\r\n  },\r\n  {\r\n    \"title\": \"I Will Survive\",\r\n    \"seconds\": 180,\r\n    \"artist\": \"Gloria Gaynor\",\r\n    \"id\": 3\r\n  },\r\n  {\r\n    \"title\": \"Single Ladies\",\r\n    \"seconds\": 199,\r\n    \"artist\": \"Beyonce\",\r\n    \"id\": 4\r\n  },\r\n  {\r\n    \"title\": \"Eye of the Tiger\",\r\n    \"id\": 5\r\n  }\r\n]\r\n}",
+    "encrypted_examples": "VlIdMZesSs5PmPqXf4rimjnIpcR3OQSTQxgF/OCF+9krTPSLXWTDz3lBFkCy\nP0SO\n"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

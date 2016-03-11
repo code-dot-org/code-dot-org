@@ -8,8 +8,14 @@ module.exports = function (grunt) {
 
   var config = {};
 
-  /** @const {number} */
-  var DEV_WATCH_INTERVAL = parseInt(grunt.option('delay')) || 100;
+  /**
+   * Interval for filesystem polling in watch mode.
+   * Warning: 100ms hits 75% CPU on OS X. 700ms is around 10%.
+   * See https://github.com/gruntjs/grunt-contrib-watch/issues/145
+   * If OS X polling remains a CPU issue, can try grunt-este-watch
+   * @const {number}
+   */
+  var DEV_WATCH_INTERVAL = parseInt(grunt.option('delay')) || 700;
 
   /** @const {number} */
   var PLAYGROUND_PORT = grunt.option('playground-port') || 8000;
@@ -361,8 +367,7 @@ module.exports = function (grunt) {
       options: {
         port: PLAYGROUND_PORT,
         bases: path.resolve(__dirname, 'build/package'),
-        server: path.resolve(__dirname, './src/dev/server.js'),
-        livereload: true
+        server: path.resolve(__dirname, './src/dev/server.js')
       }
     }
   };
@@ -399,7 +404,7 @@ module.exports = function (grunt) {
   config.watch = {
     js: {
       files: ['src/**/*.{js,jsx}'],
-      tasks: ['newer:copy:src', 'exec:browserify'],
+      tasks: ['newer:copy:src', 'exec:browserify', 'notify:browserify'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -407,7 +412,7 @@ module.exports = function (grunt) {
     },
     style: {
       files: ['style/**/*.scss', 'style/**/*.sass'],
-      tasks: ['newer:sass'],
+      tasks: ['newer:sass', 'notify:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -415,7 +420,7 @@ module.exports = function (grunt) {
     },
     content: {
       files: ['static/**/*'],
-      tasks: ['newer:copy'],
+      tasks: ['newer:copy', 'notify:content'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -423,7 +428,7 @@ module.exports = function (grunt) {
     },
     vendor_js: {
       files: ['lib/**/*.js'],
-      tasks: ['newer:concat', 'newer:copy:lib'],
+      tasks: ['newer:concat', 'newer:copy:lib', 'notify:vendor_js'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -431,7 +436,7 @@ module.exports = function (grunt) {
     },
     ejs: {
       files: ['src/**/*.ejs'],
-      tasks: ['ejs', 'exec:browserify'],
+      tasks: ['ejs', 'exec:browserify', 'notify:ejs'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -439,7 +444,7 @@ module.exports = function (grunt) {
     },
     messages: {
       files: ['i18n/**/*.json'],
-      tasks: ['pseudoloc', 'messages'],
+      tasks: ['pseudoloc', 'messages', 'notify:messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -453,54 +458,6 @@ module.exports = function (grunt) {
     }
   };
 
-  config.jshint = {
-    options: {
-      browser: true,
-      curly: true,
-      esnext: true,
-      funcscope: true,
-      maxparams: 8,
-      maxstatements: 200,
-      mocha: true,
-      node: true,
-      nonew: true,
-      shadow: false,
-      undef: true,
-      globals: {
-        $: true,
-        jQuery: true,
-        React: true,
-        Blockly: true,
-        Phaser: true,
-        //TODO: Eliminate the globals below here. Could at least warn about them
-        // in their respective files
-        Studio: true,
-        Maze: true,
-        Turtle: true,
-        Bounce: true,
-        Eval: true,
-        Flappy: true,
-        Applab: true,
-        Calc: true,
-        Jigsaw: true
-      }
-    },
-    all: [
-      'Gruntfile.js',
-      'tasks/**/*.js',
-      'src/**/*.js*',
-      'test/**/*.js',
-      '!src/**/*.min.js*',
-      '!src/hammer.js',
-      '!src/lodash.js',
-      '!src/canvg/*.js',
-      '!src/calc/js-numbers/js-numbers.js',
-      '!src/ResizeSensor.js',
-      '!src/applab/colpick.js'
-    ],
-    some: [], // This gets dynamically populated in the register task
-  };
-
   config.strip_code = {
     options: {
       start_comment: 'start-test-block',
@@ -509,6 +466,15 @@ module.exports = function (grunt) {
     all: {
       src: ['build/js/*.js']
     }
+  };
+
+  config.notify = {
+    browserify: {options: {message: 'Browserify build completed.'}},
+    sass: {options: {message: 'SASS build completed.'}},
+    content: {options: {message: 'Content build completed.'}},
+    ejs: {options: {message: 'EJS build completed.'}},
+    messages: {options: {message: 'i18n messages build completed.'}},
+    vendor_js: { options: {message: 'Blockly concat & vendor JS copy done.'}}
   };
 
   grunt.initConfig(config);
@@ -558,6 +524,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'prebuild',
     'exec:browserify',
+    'notify:browserify',
     // Skip minification in development environment.
     envOptions.dev ? 'noop' : ('concurrent:uglify'),
     'postbuild'
@@ -572,19 +539,6 @@ module.exports = function (grunt) {
     'watch'
   ]);
 
-  grunt.registerTask('jshint:files', function () {
-    var files;
-    if (grunt.option('files')) {
-      files = grunt.option('files').split(",");
-      grunt.config('jshint.some', files);
-    } else if (grunt.option('glob')) {
-      files = glob.sync(grunt.option('glob'));
-      console.log('files: ' + files.join('\n'));
-      grunt.config('jshint.some', files);
-    }
-    grunt.task.run('jshint:some');
-  });
-
   grunt.registerTask('mochaTest', [
     'newer:messages',
     'newer:copy:static',
@@ -592,7 +546,7 @@ module.exports = function (grunt) {
     'exec:mochaTest'
   ]);
 
-  grunt.registerTask('test', ['jshint:all', 'mochaTest']);
+  grunt.registerTask('test', ['mochaTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 

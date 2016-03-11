@@ -65,5 +65,43 @@
         <block type="maze_honey"/>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-6">3</title>
+              <statement name="DO">
+                <block type="maze_moveWest"/>
+              </statement>
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="2-6">3</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth">
+                      <next>
+                        <block type="maze_nectar"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="controls_repeat_simplified_dropdown">
+                          <title name="TIMES" config="2-6">3</title>
+                          <statement name="DO">
+                            <block type="maze_honey"/>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

@@ -8,13 +8,13 @@ markdown <<MARKDOWN
 
 Let's look at two more features of pivot tables that will allow you to do more complex investigations of your data.
 
-We learned that **Rows** in a pivot table specify an **aggregation** or grouping of items for which you want to compute a value. **Columns** in a pivot table are just **another aggregation** but it displays the values across the top of the table. It's easier to understand when you see it...
+We learned that a **Row** in a pivot table specifies an **aggregation** or grouping of items for which you want to compute a value. A **Column** in a pivot table is just **another aggregation,** but it displays the values across the top of the table. It's easier to understand when you see it...
 
-**Do This:** Add columns that group your data by **gender**, like in the animation below.
+**Do This:** Add columns that group your data by **gender**, as in the animation below.
 
 ![](https://images.code.org/ec76826cc17a1795dfe8c4b0f6955fbe-image-1453403307134.gif)
 
-*Adding columns grouped by gender. The resulting table shows the average rating and count for each movie, but also broken down by gender.  The pivot table also preserves the "Grand Totals" which is what the data would like if no columns were specified*
+*Adding columns grouped by gender. The resulting table shows the average rating and count for each movie, but also broken down by gender.  The pivot table also preserves the "Grand Totals" which is what the data would look like if no columns were specified.*
 
 <hr>
 
@@ -34,17 +34,17 @@ If you want to maninpulate the data further, to sort or filter, **you shouldn't 
 
 **Note:** "Paste Values" is not the same as a normal "Paste". 
 
-**Do This**: Copy the pivot table, create a new tab in the spreadsheet and do **Edit** -> **Paste Special** -> **Paste *values* Only**. Watch the animation to how.
+**Do This**: Copy the pivot table, create a new tab in the spreadsheet and do **Edit** -> **Paste special** -> **Paste *values* only**. Watch the animation to see how.
 
 ![](https://images.code.org/e59c8c95b652f2b94c2d80b3ddb3166b-image-1453405236332.gif)
 
 *Copying a pivot table, making a new tab in the spreadsheet, and pasting values.*
 
-**"Why Paste Values Only instead of just Paste?"**
+**"Why *Paste values only* instead of just *Paste*?"**
 
-1. If you copy a pivot table and do a normal paste it will paste another copy of the *active, live, responsive* pivot table into a new tab.  We don't want the active table, we just want the values it produced.
+1. If you copy a pivot table and do a normal paste it will paste another copy of the *active, live, responsive* pivot table into a new tab.  We don't want the active table; we just want the values it produced.
     
-2. You probably want to add/change column headings headings to display the table, **especially to use it for charting**.  See this animation for how you might do this.
+2. You probably want to add/change column headings to display the table, **especially to use it for charting**.  See the image below for how you might do this.
     
 ![](https://images.code.org/f78763f5af3202d4adfc7e5fb2bd598c-image-1453488981775.gif)
 
@@ -71,7 +71,7 @@ You can't see any trend or pattern in the data just by looking at the table.  Bu
 |:-------------:|:-----:|
 | ![](https://images.code.org/c63f72209e876dd359d049ccabb5ee8e-image-1453478983091.png) | ![](https://images.code.org/a39dce08c6935343f970b62ec3cb6586-image-1453477725824.png) |
 
-**NOTE:** *a deeper investigation of the data shows that the number movies rated by people at this web site declined steadily after age 28.  The upward trend may be affected by the fewer number of ratings.*
+**NOTE:** *A deeper investigation of the data shows that the number of movies rated by people at this web site declined steadily after age 28.  The upward trend may be affected by the fewer number of ratings.*
 
 <hr>
 

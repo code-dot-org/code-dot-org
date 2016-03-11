@@ -59,7 +59,7 @@ class PropertiesApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)/delete$} do |endpoint, channel_id, name|
+  post %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)/delete$} do |_endpoint, _channel_id, _name|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
@@ -75,6 +75,8 @@ class PropertiesApi < Sinatra::Base
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
     parsed_value = PropertyBag.parse_value(request.body.read)
     value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
+
+    too_large if value.is_a?(Hash) && value[:status] == 'TOO_LARGE'
 
     dont_cache
     content_type :json
@@ -118,10 +120,10 @@ class PropertiesApi < Sinatra::Base
   # to differentiate between create and update so we map all three verbs to "create or update"
   # behavior via the POST handler.
   #
-  patch %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
+  patch %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |_endpoint, _channel_id, _name|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
-  put %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
+  put %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |_endpoint, _channel_id, _name|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 end

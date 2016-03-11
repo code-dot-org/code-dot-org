@@ -1,5 +1,10 @@
 require 'test_helper'
 
+# Define this here to ensure that we don't incorrectly use the :pegasus version.
+def slog(h)
+  CDO.slog ({ application: :dashboard }).merge(h)
+end
+
 class ApiControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
@@ -123,15 +128,18 @@ class ApiControllerTest < ActionController::TestCase
     create :user_level, user: user, best_result: 100, script: script, level: script.script_levels[1].level
     sign_in user
 
+    # Test user progress.
     get :user_progress, script_name: script.name
     assert_response :success
 
     body = JSON.parse(response.body)
     assert_equal 2, body['linesOfCode']
-    level_id = script.script_levels[1].level.id
+    script_level = script.script_levels[1]
+    level_id = script_level.level.id
     assert_equal 'perfect', body['levels'][level_id.to_s]['status']
     assert_equal 100, body['levels'][level_id.to_s]['result']
 
+    # Test user_progress_for_all_scripts.
     get :user_progress_for_all_scripts
     assert_response :success
     body = JSON.parse(response.body)
@@ -140,11 +148,89 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 'perfect', body['scripts'][script.name]['levels'][level_id.to_s]['status']
   end
 
-  test "should get progress for section with default script" do
-    get :section_progress, section_id: @section.id
-    assert_response :success
+  test "should get user progress for stage" do
+    slogger = FakeSlogger.new
+    CDO.set_slogger_for_test(slogger)
+    script = Script.hoc_2014_script
 
-    assert_equal Script.twenty_hour_script, assigns(:script)
+    user = create :user, total_lines: 2
+    sign_in user
+
+    script_level = script.script_levels[0]
+    level = script_level.level
+    create :user_level, user: user, best_result: 100, script: script, level: level
+
+    create(:activity, user: user, level: level,
+           level_source: create(:level_source, level: level, data: 'level source'))
+
+    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal false, body['disableSocialShare']
+    assert_equal false, body['disablePostMilestone']
+    assert_equal 100, body['progress'][level.id.to_s]
+    assert_equal 'level source', body['lastAttempt']['source']
+
+    assert_equal([{
+                      application: :dashboard,
+                      tag: 'activity_start',
+                      script_level_id: script_level.id,
+                      level_id: level.id,
+                      user_agent: 'Rails Testing',
+                      locale: :'en-us'
+                  }],
+                 slogger.records)
+  end
+
+  test "should get user progress for stage for signed-out user" do
+    slogger = FakeSlogger.new
+    CDO.set_slogger_for_test(slogger)
+    script = Script.hoc_2014_script
+    script_level = script.script_levels[0]
+    level = script_level.level
+
+    user = create :user
+    sign_out user
+
+    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
+    assert_response :success
+    body = JSON.parse(response.body)
+    puts body
+    assert_equal({}, body)
+    assert_equal([{
+                      application: :dashboard,
+                      tag: 'activity_start',
+                      script_level_id: script_level.id,
+                      level_id: level.id,
+                      user_agent: 'Rails Testing',
+                      locale: :'en-us'
+                  }],
+                 slogger.records)
+  end
+
+  test "should get user progress for stage with young student" do
+    script = Script.twenty_hour_script
+    young_student = create :young_student
+    sign_in young_student
+
+    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal true, body['disableSocialShare']
+    assert_equal false, body['disablePostMilestone']
+    assert_equal({}, body['progress'])
+  end
+
+  test "should get user progress for disabled milestone posts" do
+    Gatekeeper.set('postMilestone', value: false)
+    script = Script.course1_script
+    user = create :user, total_lines: 2
+    sign_in user
+
+    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal true, body['disablePostMilestone']
   end
 
   test "should get progress for section with section script" do
@@ -338,14 +424,11 @@ class ApiControllerTest < ActionController::TestCase
     assert_recognizes({controller: "api", action: "user_menu"},
                       {method: "get", path: "/api/user_menu"})
 
-
     assert_recognizes({controller: "api", action: "section_progress", section_id: '2'},
                       {method: "get", path: "/api/section_progress/2"})
 
-
     assert_recognizes({controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
                       {method: "get", path: "/api/student_progress/2/15"})
-
 
     assert_recognizes({controller: "api", action: "whatevvv"},
                       {method: "get", path: "/api/whatevvv"})

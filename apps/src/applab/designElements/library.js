@@ -86,7 +86,7 @@ module.exports = {
       throw new Error('Unknown elementType: ' + elementType);
     }
 
-    var element = elementClass.create();
+    var element = elementClass.create(withoutId);
 
     // Stuff that's common across all elements
     if (!withoutId) {
@@ -148,7 +148,6 @@ module.exports = {
           default:
             return ElementType.TEXT_INPUT;
         }
-        break;
     }
     // Unknown elements are expected. Return null because we don't know type.
     if (allowUnknown) {

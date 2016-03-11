@@ -1,0 +1,31 @@
+---
+transport:
+  name: sftp
+driver:
+  name: docker
+  use_sudo: false
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 12.7.2
+platforms:
+  - name: ubuntu-14.04
+    run_list:
+      - recipe[apt]
+      - recipe[sudo-user]
+    attributes:
+      cdo-apps:
+        dashboard:
+          port: 8080
+        pegasus:
+          port: 8081
+        i18n:
+          languages:
+            en: English
+suites:
+  - name: default
+    run_list:
+      - recipe[nginx_test]
+  - name: https
+    run_list:
+      - recipe[cdo-varnish]
+      - recipe[nginx_test]

@@ -1,0 +1,360 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2016-03-02T00:07:19.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "failure_condition": "function () {\r\n  return ((Studio.sprite[0].y > 380) || (Studio.sprite[0].y < 20)) ;\r\n}",
+    "timeout_after_when_run": "false",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,16,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "embed": "false",
+    "instructions": "Figure out how to change this code so that Robin chooses a number between 1 and 20.  \r\n\r\nWhen you're ready, press \"Run\" and play until you guess Robin's number!",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "disable_sharing": "false",
+    "coordinate_grid_background": "false",
+    "first_sprite_index": "7",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "true",
+    "sprites_hidden_to_start": "false",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "markdown_instructions": "<b>The sun is shining, the birds are chirping, and now it's time to play!</b>  <br/><br/>\r\n\r\nRobin has chosen a number between 10 and 30.  \r\nUse the up and down arrows to make a guess about what it is.  \r\nClick Robin to submit your guess.\r\n\r\n- Robin will move up when your guess is too high\r\n- Robin will move down when your guess is too low\r\n- Where do you change how far Robin moves each time?\r\n- Where would you change the range of numbers to choose from?\r\n- Can you change the code so that Robin chooses a number between 1 & 20?\r\n\r\n<br/>\r\n<b>When you're ready, press \"Run\" and play until you guess Robin's number!</b>"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="procedures_defnoreturn" editable="false" movable="false" deletable="false">
+          <mutation>
+            <arg name="bottom"/>
+            <arg name="top"/>
+            <description>Have the bird choose a number between bottom and top</description>
+          </mutation>
+          <title name="NAME">Choose Number</title>
+          <statement name="STACK">
+            <block type="variables_set" inline="false">
+              <title name="VAR">theNumber</title>
+              <value name="VALUE">
+                <block type="math_random_int" inline="true">
+                  <value name="FROM">
+                    <block type="parameters_get">
+                      <title name="VAR">bottom</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="parameters_get">
+                      <title name="VAR">top</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" editable="false" movable="false" deletable="false">
+          <mutation>
+            <arg name="distance"/>
+            <description>Move the bird up or down depending on whether guess is high or low</description>
+          </mutation>
+          <title name="NAME">Move Bird</title>
+          <statement name="STACK">
+            <block type="controls_if" inline="false">
+              <mutation elseif="1" else="1"/>
+              <value name="IF0">
+                <block type="logic_compare" inline="true">
+                  <title name="OP">GT</title>
+                  <value name="A">
+                    <block type="variables_get">
+                      <title name="VAR">score</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <title name="VAR">theNumber</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="studio_moveDistanceParamsSprite" inline="true">
+                  <title name="DIR">1</title>
+                  <value name="SPRITE">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="parameters_get">
+                      <title name="VAR">distance</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <value name="IF1">
+                <block type="logic_compare" inline="true">
+                  <title name="OP">LT</title>
+                  <value name="A">
+                    <block type="variables_get">
+                      <title name="VAR">score</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <title name="VAR">theNumber</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO1">
+                <block type="studio_moveDistanceParamsSprite" inline="true">
+                  <title name="DIR">4</title>
+                  <value name="SPRITE">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="parameters_get">
+                      <title name="VAR">distance</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="studio_saySpriteParams" inline="true">
+                  <value name="TEXT">
+                    <block type="text">
+                      <title name="TEXT">You guessed it!</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="studio_endGame">
+                      <title name="VALUE">win</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="when_run" uservisible="false">
+          <next>
+            <block type="studio_setSpriteSizeParams" inline="true" uservisible="false">
+              <value name="SPRITE">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="VALUE">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">0.65</title>
+                </block>
+              </value>
+              <next>
+                <block type="studio_showTitleScreen" uservisible="false">
+                  <title name="TITLE"/>
+                  <title name="TEXT">Use the arrows to change your guess, then click Robin to submit.</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow" uservisible="false">
+          <title name="VALUE">up</title>
+          <next>
+            <block type="variables_set" inline="false" uservisible="false">
+              <title name="VAR">score</title>
+              <value name="VALUE">
+                <block type="math_arithmetic" inline="true" uservisible="false">
+                  <title name="OP">ADD</title>
+                  <value name="A">
+                    <block type="variables_get" uservisible="false">
+                      <title name="VAR">score</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="studio_waitParams" inline="true" uservisible="false">
+                  <value name="VALUE">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">0.25</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="when_run">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"rainbow"</title>
+              <next>
+                <block type="variables_set" inline="false">
+                  <title name="VAR">score</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" inline="false">
+                      <mutation name="Choose Number">
+                        <arg name="bottom"/>
+                        <arg name="top"/>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="math_number">
+                          <title name="NUM">10</title>
+                        </block>
+                      </value>
+                      <value name="ARG1">
+                        <block type="math_number">
+                          <title name="NUM">30</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow" uservisible="false">
+          <title name="VALUE">down</title>
+          <next>
+            <block type="variables_set" inline="false" uservisible="false">
+              <title name="VAR">score</title>
+              <value name="VALUE">
+                <block type="math_arithmetic" inline="true" uservisible="false">
+                  <title name="OP">MINUS</title>
+                  <value name="A">
+                    <block type="variables_get" uservisible="false">
+                      <title name="VAR">score</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="studio_waitParams" inline="true" uservisible="false">
+                  <value name="VALUE">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">0.25</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <next>
+            <block type="procedures_callnoreturn" inline="false">
+              <mutation name="Move Bird">
+                <arg name="distance"/>
+              </mutation>
+              <value name="ARG0">
+                <block type="math_number">
+                  <title name="NUM">100</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_repeatForever" uservisible="false">
+          <statement name="DO">
+            <block type="studio_setScoreText" inline="true" uservisible="false">
+              <value name="TEXT">
+                <block type="variables_get" uservisible="false">
+                  <title name="VAR">score</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">random</title>
+        </block>
+        <block type="studio_saySprite">
+          <title name="TEXT">type here</title>
+        </block>
+        <block type="studio_throw">
+          <title name="VALUE">"yellow_hearts"</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">random</title>
+        </block>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+        </block>
+        <block type="math_number">
+          <title name="NUM">0</title>
+        </block>
+        <block type="variables_set" inline="false">
+          <title name="VAR">i</title>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">i</title>
+        </block>
+        <block type="procedures_callnoreturn" inline="false">
+          <mutation name="Choose Number">
+            <arg name="bottom"/>
+            <arg name="top"/>
+          </mutation>
+        </block>
+        <block type="procedures_callnoreturn" inline="false">
+          <mutation name="Move Bird">
+            <arg name="distance"/>
+          </mutation>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>

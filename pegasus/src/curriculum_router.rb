@@ -64,27 +64,27 @@ class HttpDocument
     self.new(IO.read(path), {'Content-Type'=>content_type, 'X-Pegasus-File'=>path}.merge(headers))
   end
 
-  def is_charset?(charset)
+  def charset?(charset)
     @headers['Content-Type'].to_s.include?("charset=#{charset}")
   end
 
-  def is_haml?()
+  def haml?()
     @headers['Content-Type'].to_s.include?('text/haml')
   end
 
-  def is_html?()
+  def html?()
     @headers['Content-Type'].to_s.include?('text/html')
   end
 
-  def is_markdown?()
+  def markdown?()
     @headers['Content-Type'].to_s.include?('text/markdown')
   end
 
   def to_html!(locals, options={})
-    to_html_from_haml!(locals, options) if is_haml?
-    to_html_from_markdown!(locals, options) if is_markdown?
+    to_html_from_haml!(locals, options) if haml?
+    to_html_from_markdown!(locals, options) if markdown?
 
-    return unless is_html?
+    return unless html?
 
     apply_encoding!
     apply_view!(locals)
@@ -96,7 +96,7 @@ class HttpDocument
   def apply_encoding!()
     # Ruby can't always detect utf-8 encoded data so if the content type indicates that this is
     # utf-8, FORCE Ruby to consider it such.
-    if is_charset?('utf-8')
+    if charset?('utf-8')
       @body = @body.force_encoding('UTF-8')
       @headers['Content-Length'] = @body.bytesize.to_s
     end
@@ -165,7 +165,7 @@ class HttpDocument
   end
 
   def resolve_template(site,view)
-    File.find_first_existing(
+    FileUtility.find_first_existing(
       String.multiply_concat([
         sites_dir("#{site}/views/#{view}"),
         sites_dir("all/views/#{view}"),

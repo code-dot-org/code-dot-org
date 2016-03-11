@@ -6,34 +6,35 @@ en:
         me draw almost anything. Use a few blocks to make me draw over the grey lines
         in the picture. (Each line is 100 pixels long)"
       2-3 Artist 11_instruction: "Give the stop sign a border by making an octagon
-        with 8 sides, each 100 pixels long. How many degrees should you turn? (Hint:
-        What is 360 divided by 8?) "
-      2-3 Artist 12_instruction: "Set the \"repeat times\" block so that it creates
-        a \"circle\" to finish the eyeball. If each movement turns right by one degree,
-        how many times do you need to repeat to complete the circle? 180? 360? 500?"
+        with 100 pixels sides. \r\n\r\n"
+      2-3 Artist 12_instruction: "Create a circle to finish the eyeball!\r\n\r\nIf
+        the artist turns 1 degree with each loop, how many times do you need to repeat
+        the code to draw a circle? 180? 360? 500?"
       2-3 Artist 2 new_instruction: "This house has a half-finished wall. Each side
         is 100, but the half-finished wall is only 50. Complete the wall. "
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is
         100, but the half-finished wall is only 50. Complete the wall. "
       2-3 Artist 3.4_instruction: "The jump block moves the artist without drawing.
-        Draw the dashed line by using both the jump and draw blocks."
+        Draw the dashed line using both the `jump forward` and `move forward` blocks."
       2-3 Artist 3_instruction: "This hat is 100 pixels high. Draw a hat that is
         70 pixels less."
       2-3 Artist 3new_instruction: "The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels."
+        a black hat that is 70 pixels shorter. \r\n(Note: The width of each hat is
+        50 pixels.)"
       2-3 Artist 4_instruction: "Help me complete the house for this cat."
       2-3 Artist 5_instruction: "Replace this code with a \"repeat times\" block
         to draw the same house using only 3 blocks."
       2-3 Artist 6_instruction: "This house needs a roof! Draw the triangle.  Hint:
         all three sides are the same length."
-      2-3 Artist 7_instruction: "Finish drawing the right side of the last window.
-        Each square window pane is 25 pixels wide. "
+      2-3 Artist 7_instruction: "Finish drawing the last set of windows on the school
+        so that everyone in class can see outside. The sides of each square window
+        pane are 25 pixels long. "
       2-3 Artist 8_instruction: "Complete the rooms for each of the animals by splitting
         the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
         and 100 pixels tall."
       2-3 Artist 9_instruction: "Finish this kite"
-      2-3 Artist Assessment 1_instruction: "Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall."
+      2-3 Artist Assessment 1_instruction: "Assessment: Finish drawing the last tooth.
+        It is 25 pixels wide and 25 pixels tall."
       2-3 Artist Debugging 1_instruction: "Can you make this hat with a top length
         of 100?"
       2-3 Artist Debugging 10_instruction: "The direction pad on my game controller
@@ -118,18 +119,21 @@ en:
         before, but add a step forward at the end of the outer loop."
       2-3 Artist Loops New 1_instruction: "Let's draw this robot's head! Can you
         make a square with sides that are 100 pixels?"
-      2-3 Artist Loops New 10_instruction: "Now let's connect a bunch of V's together,
-        drawing them in a loop."
-      2-3 Artist Loops New 11_instruction: "This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block."
+      2-3 Artist Loops New 10_instruction: "Now let's connect a bunch of V's together
+        in a loop."
+      2-3 Artist Loops New 11_instruction: "Time to make something snazzy! Add a
+        left turn of 30 degrees to the code from the last puzzle and loop it 24 times."
       2-3 Artist Loops New 12_instruction: "Draw a diamond with sides of 100 pixels.
         "
-      2-3 Artist Loops New 13_instruction: "Now draw the diamond 3 times in a loop."
-      2-3 Artist Loops New 14_instruction: "Now let's draw the diamond 10 times
-        but rotate 90 degrees between each diamond."
-      2-3 Artist Loops New 15_instruction: "Draw something fun."
-      2-3 Artist Loops New 2_instruction: "Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?"
+      2-3 Artist Loops New 13_instruction: "Loop the code from the last puzzle to
+        create this fun pattern!"
+      2-3 Artist Loops New 14_instruction: "Play around with the code for the diamond
+        and see what other patterns you can make. Try changing how many degrees you
+        turn and how many times you loop."
+      2-3 Artist Loops New 15_instruction: "Now, draw anything you like!"
+      2-3 Artist Loops New 2_instruction: "Here is the same puzzle that we just solved,
+        but this time, we have to use loops to pass it.  Can you put a `repeat` around
+        the starter code to finish the robot head?"
       2-3 Artist Loops New 9_instruction: "Draw a simple V where both sides are 50
         pixels to complete the arrow."
       2-3 Artist Match Hex Pic_instruction: "Match:  Help finish the Hexagon."
@@ -257,37 +261,37 @@ en:
         to collect nectar from each flower."
       2-3 Bee Functions Assessment 2_instruction: "Assessment: Create a function
         to make 3 honey at a time."
-      2-3 Bee Loops 1_instruction: "Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers. "
+      2-3 Bee Loops 1_instruction: "Those flowers look tasty!\r\n\r\nCollect nectar
+        from each of the flowers using the fewest blocks possible."
       2-3 Bee Loops 10_instruction: "Can you use a while loop inside of two other
         loops to collect all of the nectar?"
       2-3 Bee Loops 11_instruction: "Use while loops to collect all of the nectar
         from the flowers in this field."
       2-3 Bee Loops 12_instruction: "Use while loops to collect all of the nectar
         from the flowers in this field."
-      2-3 Bee Loops 13_instruction: "Assessment: Use the repeat block to collect
-        all of the nectar."
+      2-3 Bee Loops 13_instruction: "Assessment: Collect all of the nectar using
+        the fewest blocks possible."
       2-3 Bee Loops 1A_instruction: "Hi, I'm a bee. Can you help me collect the
         nectar from these flowers? "
-      2-3 Bee Loops 2_instruction: "Use a loop to collect the nectar and make the
-        honey."
-      2-3 Bee Loops 2A_instruction: "Can you do the same task more easily with a
-        loop?"
+      2-3 Bee Loops 2_instruction: "Collect all the nectar and make all of the honey
+        using the fewest blocks possible."
+      2-3 Bee Loops 2A_instruction: "This time, use a loop to gather all of the nectar."
       2-3 Bee Loops 3_instruction: "Collect nectar from each flower and make honey
-        at each honeycomb."
-      2-3 Bee Loops 3A_instruction: "Can you use a loop to collect all that nectar?"
-      2-3 Bee Loops 3B_instruction: "Now use the new repeat block to collect all
-        of the nectar and make all of the honey."
-      2-3 Bee Loops 4_instruction: "Use a similar loop as the last puzzle, but work
-        a turn into it."
-      2-3 Bee Loops 4A_instruction: "What happens if you loop this sequence 3 times?
-        Don't forget to make the honey at the end!"
-      2-3 Bee Loops 5_instruction: "Use a loop to go down the steps and collect the
-        nectar."
-      2-3 Bee Loops 6_instruction: "Use a loop to collect nectar from each flower
-        and make honey at each honeycomb."
-      2-3 Bee Loops 7_instruction: "Put these blocks into a loop to collect nectar
-        from each flower."
+        at each honeycomb using the fewest blocks possible."
+      2-3 Bee Loops 3A_instruction: "Use a `repeat` loop to collect all of the nectar."
+      2-3 Bee Loops 3B_instruction: "Now use the `repeat` block to collect all of
+        the nectar and make all of the honey."
+      2-3 Bee Loops 4_instruction: "Such a busy bee!\r\n\r\nHelp bee collect all
+        of the nectar and make all of the honey with the fewest blocks possible."
+      2-3 Bee Loops 4A_instruction: "How many times can loops help you in this puzzle?  \r\n\r\nLoops
+        are your friend! Use a few of them to complete this puzzle with the fewest
+        blocks possible."
+      2-3 Bee Loops 5_instruction: "The shape of this path is different than the
+        others. \r\n\r\nCan you collect all of the nectar using as few blocks as possible?"
+      2-3 Bee Loops 6_instruction: "Can you find the quickest way for the bee to
+        collect all of the nectar and make all of the honey?"
+      2-3 Bee Loops 7_instruction: "What a beautiful field of flowers!   Help the
+        bee visit each one using the smallest number of blocks possible."
       2-3 Bee Loops 8_instruction: "These purple flowers have an unknown amount of
         nectar. Use the \"while nectar\" loop to collect all of the nectar. This loop
         will run as long as the condition is true, in this case Nectar > 0."
@@ -296,8 +300,8 @@ en:
         task."
       2-3 Bee Loops Assessment 1_instruction: "Assessment - Use a while loop to collect
         all of the nectar from this flower."
-      2-3 Maze 1_instruction: "Can you help me to catch the naughty pig? Stack a
-        couple of \"move forward\" blocks together and press \"Run\". "
+      2-3 Maze 1_instruction: "Can you help me catch the naughty pig? Stack a couple
+        of `move forward` blocks below the `when run` block and press \"Run\". "
       2-3 Maze 10_instruction: "Guide me to the green evilness! (Watch out for TNT)"
       2-3 Maze 11_instruction: "Get me to the flower I'm hungry! How many times
         do you have to repeat a block?"
@@ -307,21 +311,23 @@ en:
         only two blocks? (Hint: Create a loop using a \"repeat times\" block.)"
       2-3 Maze 12 (old)_instruction: "Get me to the pig, now with the Repeat times
         block!"
-      2-3 Maze 12_instruction: "Can you replace these five blocks with only two blocks?
-        (Hint: You need to create a loop using a \"repeat\" block to pass this level.)"
+      2-3 Maze 12_instruction: "Can you get to the pig by creating a loop that uses
+        only one `move forward` block inside of a `repeat`?"
       2-3 Maze 13 (old)_instruction: "Get me to the pig, now with the Repeat until
         block!"
-      2-3 Maze 13_instruction: "Get me to the pig using only two blocks.\r\n(Hint:
-        You must use the \"repeat\" block to pass this level)"
+      2-3 Maze 13_instruction: "Get me to the pig by adding only two blocks.\r\n(Note:
+        You must use the magical `repeat` block to pass this level)"
       2-3 Maze 14 (old)_instruction: "Get me to the pig with the Repeat until block!"
       2-3 Maze 14_instruction: "Get me to the sunflower! (Where is that \"repeat
         times\" block when I need it?)"
       2-3 Maze 15 (old)_instruction: "Get me to the pig with the Repeat until block!"
-      2-3 Maze 15_instruction: "Use two \"repeat\" loops to get to the pig with the
-        fewest number of blocks."
+      2-3 Maze 15_instruction: "In this puzzle, two `repeat` loops will help you
+        get to the pig with the fewest number of blocks!"
       2-3 Maze 16 (old)_instruction: "Get me to the pig with the Repeat until block!"
-      2-3 Maze 16 before_instruction: "Get me to the pig."
-      2-3 Maze 16_instruction: "Get me to the sunflower. Loop the sequence!"
+      2-3 Maze 16 before_instruction: "Can you figure out the fastest way to get
+        me to the pig?"
+      2-3 Maze 16_instruction: "Loops even work with more than one block inside!  Can
+        you loop this sequence to get the zombie to the sunflower?"
       2-3 Maze 2_instruction: "This pig is ruffling my feathers. Help me get to him!"
       2-3 Maze 3_instruction: "Trace the path and lead me to the silly pig. Avoid
         TNT or feathers will fly!"
@@ -332,13 +338,18 @@ en:
       2-3 Maze 7_instruction: "Guide me to the green evilness! (Watch out for TNT)"
       2-3 Maze 8_instruction: "Get me to the pig!"
       2-3 Maze 9_instruction: "Guide me to the green evilness! (Watch out for TNT)"
-      2-3 Maze Loops 1_instruction: "Can you get me to the pig using 5 blocks?"
-      2-3 Maze Loops 17_instruction: "Get me to the sunflower!"
-      2-3 Maze Loops 18_instruction: "Get me to the sunflower!\r\n(Hint: You'll
-        need to use one \"repeat\" loop inside of another to pass this level.)"
-      2-3 Maze Loops 19_instruction: "Get me to the sunflower!"
-      2-3 Maze Loops 20_instruction: "Get me to the sunflower!"
-      2-3 Maze Loops 21_instruction: "Get me to the sunflower!"
+      2-3 Maze Loops 1_instruction: "Can you get me to the pig using 5 of the same
+        kind of blocks?"
+      2-3 Maze Loops 17_instruction: "Use what you learned to get me to the sunflower!"
+      2-3 Maze Loops 18_instruction: "Get me to the sunflower using the fewest blocks
+        possible!  \r\n\r\n(Note: You'll need to use one `repeat` loop inside of
+        another to pass this level.)"
+      2-3 Maze Loops 19_instruction: "Let's take this to another level! \r\nUse
+        loops to get me to the sunflower with the fewest loops possible."
+      2-3 Maze Loops 20_instruction: "Get me to the sunflower using the fewest number
+        of blocks possible!"
+      2-3 Maze Loops 21_instruction: "Get me to the sunflower using the fewest blocks
+        possible!"
       2-3 Maze Loops Assessment 1_instruction: "Assessment:  Get me to the sunflower
         using only 5 blocks! "
       2-3 Maze sq1_instruction: "This pig is ruffling my feathers.  Help me find
@@ -377,10 +388,9 @@ en:
       4-5 Artist 11_instruction: "Complete the green lines. The lines are 300 pixels
         long and 15 pixels apart."
       4-5 Artist 2_instruction: "Can you loop this code to complete the square?"
-      4-5 Artist 3.5_instruction: "Ok, try to figure out what happens if you run
-        this code (or press \"Run\" to try it). Then, repeat the code enough times
-        to complete the drawing. The colors will (most likely) be different every
-        time."
+      4-5 Artist 3.5_instruction: "Try to figure out what happens if you run this
+        code (or just press \"Run\" and try it). Next, repeat the code enough times
+        to complete the drawing!"
       4-5 Artist 3_instruction: "This rectangular flower bed has a perimeter of 600.
         The long side has a length of 200. Draw the rectangle."
       4-5 Artist 4_instruction: "How many degrees are in a circle?  Loop the blocks
@@ -414,6 +424,10 @@ en:
       4-5 Artist For Loops 15_instruction: "Someone started the code, but then realized
         there must be a quicker way! Use a \"for\" block to replace the blocks and
         complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)"
+      4-5 Artist For Loops 2_instruction: "This is a \"for\" block. Instead of typing
+        1,2,3... 10, the \"for\" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the \"to\" section of the \"for\"
+        block."
       4-5 Artist For Loops 3_instruction: "How can we count from 1 to 50? Edit the
         \"for\" block."
       4-5 Artist For Loops 4_instruction: "Complete the \"for\" block so that it
@@ -530,23 +544,23 @@ en:
       4-5 Bee Conditionals 1 (copy 1)_instruction: "The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb."
-      4-5 Bee Conditionals 1_instruction: "The bee can't tell if this is a flower
-        or a honeycomb. Gather nectar only from flowers, but first check if it is
-        a flower or a honeycomb."
+      4-5 Bee Conditionals 1_instruction: "This cloud is blocking my view! Check
+        to see if there's a flower under the cloud, and only get nectar if there's
+        a flower. Be careful, it can change!"
       4-5 Bee Conditionals 2 (copy 1)_instruction: "The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers."
-      4-5 Bee Conditionals 2_instruction: "The bee only wants nectar right now. Not
-        all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding
-        a flower. If it is, then you can gather nectar."
-      4-5 Bee Conditionals 3_instruction: "Now the bee just wants to make honey.
-        Check to make honey only at honeycombs."
+      4-5 Bee Conditionals 2_instruction: "More clouds! Not all clouds cover flowers,
+        so check underneath every cloud to see if it is hiding a flower before you
+        get nectar. Remember: clouds don't always hide the same thing!"
+      4-5 Bee Conditionals 3_instruction: "Now I just want to make honey. Some of
+        these clouds might have honeycombs under them. Be sure to check each cloud!"
       4-5 Bee Conditionals 4 (copy 1)_instruction: "The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb)."
-      4-5 Bee Conditionals 4_instruction: "The unknown object is either a flower
-        or a honeycomb. Use the if/else block to collect nectar if it is a flower,
-        else to make honey (because it is a honeycomb)."
+      4-5 Bee Conditionals 4_instruction: "Sometimes this cloud covers a flower,
+        and sometimes it covers a honeycomb! Use the if/else block to collect nectar
+        if it is a flower, else to make honey (because it is a honeycomb)."
       4-5 Bee Conditionals 5_instruction: "There might be a flower or a honeycomb
         under those clouds. Use the if/else block to collect nectar if there is a
         flower, else to make honey (because there is a honeycomb)."
@@ -554,16 +568,16 @@ en:
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar."
-      4-5 Bee Conditionals 6_instruction: "This purple flower may have either 3,
-        2, or 1 nectar. Here an if-else block is combined with another if-else block
-        to create an if, else-if, else block. Complete the solution to collect the
-        unknown amount of nectar."
+      4-5 Bee Conditionals 6_instruction: "I am not sure how much nectar the purple
+        flower has, but I know it has either 1, 2, or 3 nectar. Here an if-else block
+        is combined with another if-else block to create an if, else-if, else block.
+        Complete the solution to collect the unknown amount of nectar."
       4-5 Bee Conditionals 7_instruction: "Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the \"check purple flower\" function and use
-        it to collect all of the nectar at the flowers."
+        3, 2, or 1 nectar. Complete the \"check purple flower\" function and use it
+        to collect all of the nectar at the flowers."
       4-5 Bee Conditionals 8_instruction: "Write inside the function \"check flower
         make honey\". Your function should check if the purple flower has 3, 2, or
-        1 nectar and collect all of the nectar. Then, move forward and make honey."
+        1 nectar and get all of the nectar. Then, move forward and make honey."
       4-5 Bee Conditionals Assessment 1_instruction: "Assessment: This code is wrong.
         Complete the \"get nectar or make honey\" function, then call it to collect
         all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars."
@@ -724,6 +738,10 @@ en:
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script)."
       App Lab test_instruction: "test"
+      Applab allthethings onRecordEvent_instruction: "Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script)."
       Applab test_instruction: "This level is submittable. For testing only!"
       AppLab_test02_instruction: "One sentence summary of the activity. Click to
         view full instructions."
@@ -1734,12 +1752,12 @@ en:
       Course 4 SCV 1_instruction: "Click here to view the instructions again."
       Course 4 SCV 2_instruction: "Click here to view the instructions again."
       Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.
-        Tag Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when
-        Cat and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks
-        necessary to make this game work the way it's been explained.  How will you
-        get Dog to move in all directions using the arrow keys?  How will you add
-        points when Dog tags Cat or Penguin?  How will you subtract points when Cat
-        and Penguin touch?"
+        Tag Penguin to get 3 points.  Get exactly 10 points to win!\r\nBut be careful,
+        when Cat and Penguin tag each other, they take points away.\r\n\r\nAdd the
+        blocks necessary to make this game work the way it's been explained.  How
+        will you get Dog to move in all directions using the arrow keys?  How will
+        you add points when Dog tags Cat or Penguin?  How will you subtract points
+        when Cat and Penguin touch?"
       Course 4 SCV 4_instruction: "Solve this puzzle with the fewest number of blocks
         possible."
       Course 4 SCV 5_instruction: "Solve this puzzle with the fewest number of blocks
@@ -2202,6 +2220,15 @@ en:
       K-1 Maze Sequence Assessment 2_instruction: "Move one way, then another to
         get me to the pig."
       kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
+      love_spring_1_instruction: "Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?"
+      love_spring_2_instruction: "Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!"
+      love_spring_3_instruction: "Figure out how to change this code so that Robin
+        chooses a number between 1 and 20.  \r\n\r\nWhen you're ready, press \"Run\"
+        and play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: "Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
         of that pizza. Try ordering a pepperoni pizza to start."
@@ -2730,6 +2757,9 @@ en:
         are done."
       Poorva-test_instruction: "Here are regular instructions for a level. There
         is nothing fancy going on here."
+      Quantum Bee - Ryan_instruction: "These clouds are bugging me! Some of the clouds
+        have flowers inside, and some don't. I should check each cloud, and only
+        get nectar from the flowers."
       Quantum Bee_instruction: "Purple flowers may have either 1 or 0 nectar, but
         you don't know which one! Be careful not to collect nectar from a purple
         flower if it doesn't have any. Check if the nectar is equal to 1 by using
@@ -3106,8 +3136,8 @@ en:
       U3 - Loops - 1_instruction: "Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)"
       U3 - Loops - 10_instruction: "Write a program that simulates the rolling of
-        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
-        is something other than 7 or 11. (Click to see full instructions)"
+        two dice. Roll the dice repeatedly until the sum of the dice is either 7 or
+        11."
       U3 - Loops - 11_instruction: "Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)"
@@ -3923,7 +3953,7 @@ en:
       U3L2_TurtleSquare_right_instruction: "Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)"
       U4 - add createRecord to contacts App_instruction: "Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)"
       U4 - Add Row By Hand_instruction: "Add a new record to your table in the Data
         Viewer. (Click to see full instructions)"
@@ -3942,10 +3972,10 @@ en:
         as a CSV file, then remix this app and import the CSV file. (Click to see
         full instructions)"
       U4 - Charts - Import Data 1_instruction: "Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)"
-      U4 - Charts - Import Data 2_instruction: "Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)"
+      U4 - Charts - Import Data 2_instruction: "Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)"
       U4 - Charts - Line Chart 1_instruction: "Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)"
       U4 - Charts - Line Chart 2_instruction: "Add a second line to your chart to
@@ -4032,13 +4062,13 @@ en:
       U4 - Objects - loopingConditions_instruction: "Loop over your array of student
         objects and display the names of every student who is present in class. (Click
         to see full instructions)"
-      U4 - Objects - pullValues_instruction: "Create an event handler for the \"Add
+      U4 - Objects - pullValues_instruction: "Create an event handler for the \"Save
         Contact\" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)"
       U4 - Objects - readStarterCode_instruction: "Familiarize yourself with the
         starter code and UI elements provided. (Click to see full instructions)"
       U4 - Objects - resetIndexAndShow_instruction: "Add code to your event handler
-        fro the \"Add Contact\" button so that when a new contact is added the inputs
+        for the \"Save Contact\" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)"
       U4 - Objects - showContact1_instruction: "Add code to the showCurrentContact
@@ -4071,10 +4101,10 @@ en:
         movie in your database. (Click to see full instructions)\r\n"
       U4 - Read Record - part 1 - template_instruction: "Use console.log to display
         the records returned by a call to readRecords. (Click to see full instructions)\r\n"
-      U4 - ReadRecords - Contacts App 1_instruction: "Write a function called \"updateLocalData\"
-        that copies the data in your database into your \"contacts\" global variable.
+      U4 - ReadRecords - Contacts App 1_instruction: "Use readRecords to copy the
+        data in your database into your \"contacts\" global variable and call showCurrentContact.
         (Click to see full instructions)"
-      U4 - ReadRecords - Contacts App 2_instruction: "Create a function called \"refreshLocalData\"
+      U4 - ReadRecords - Contacts App 2_instruction: "Create a function called refreshLocalData.
         (Click to see full instructions)"
       U4 - ReadRecords - Contacts App 3_instruction: "Add a call to \"refreshLocalData\"
         to the callback function of the createRecord you use to add a new contact
@@ -4121,14 +4151,20 @@ en:
         in the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records
         to display your sentence."
-      U6 - updateRecord - Contacts - Edit event handler_instruction: "(Click to see
-        full instructions)"
-      U6 - updateRecord - Contacts - Edit UI_instruction: "(Click to see full instructions)"
-      U6 - updateRecord - Contacts - Save edited contact_instruction: "(Click to
-        see full instructions)"
-      U6 - updateRecord - Default Block_instruction: "(Click to see full instructions)"
-      U6 - updateRecord - Update Nonexistent Record_instruction: "(Click to see full
-        instructions)"
+      U6 - Final Project - Project Level_instruction: "Build your final project here.
+        (Click to see full instructions)"
+      U6 - updateRecord - Callback Success Parameter_instruction: "Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)"
+      U6 - updateRecord - Contacts - Edit event handler_instruction: "Write event
+        handlers for the Edit Contacts UI elements. (Click to see full instructions)"
+      U6 - updateRecord - Contacts - Edit UI_instruction: "Set up the UI elements
+        needed to edit contacts. (Click to see full instructions)"
+      U6 - updateRecord - Contacts - Save edited contact_instruction: "Use updateRecord
+        to store the user's edits in the database. (Click to see full instructions)"
+      U6 - updateRecord - Default Block_instruction: "Use updateRecord to change
+        the record for \"Eye of the Tiger.\" (Click to see full instructions)"
+      U6 - updateRecord - Update Nonexistent Record_instruction: "Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)"
       Underground Avoiding Lava_instruction: "Lava is hiding beneath some of these
         blocks, which you'll need to cover up before moving forward. An \"if\" command
         will come in handy here. Add a \"move forward\" command in the correct place

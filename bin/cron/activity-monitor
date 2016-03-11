@@ -11,12 +11,11 @@
 #   LogEntries.
 #
 # including dashboard environment doesn't work if not in the dashboard dir
-Dir.chdir(File.expand_path('../../dashboard', __FILE__))
-require_relative '../dashboard/config/environment'
+Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
+require_relative '../../dashboard/config/environment'
 require 'cdo/only_one'
 require 'cdo/hip_chat'
 require 'cdo/user_agent_parser'
-
 
 FiveMinutes = 5 * 60 * 1000
 OneHour = 60 * 60 * 1000
@@ -42,7 +41,7 @@ ExcludedBrowsers = [
   /Edmodo/, # edmodo customer support said we can ignore this
 ]
 
-ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415]
+ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415, 3468, 4186, 4188, 4283]
 
 HardLevelAttemptsPerHour = {
   50 => 10,
@@ -222,8 +221,7 @@ def main()
         level_url = "http://studio.code.org/s/#{sl.script.id}/level/#{sl.id}"
       end
       log_string += %[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">✈ Repro It</a>]
-      HipChat.notify('ActivityMonitor', log_string, color: 'red', notify: 1)
-      HipChat.developers log_string, color: 'red', notify: 1
+      HipChat.notify('ActivityMonitor', log_string, color: 'yellow', notify: 1)
     end
   end
 end

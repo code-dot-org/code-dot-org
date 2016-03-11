@@ -6,10 +6,10 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "These blocks are really bugging me. Fix the error(s) to collect all of the nectar and make all of the honey.",
+    "instructions": "This puzzle is making me loopy! \r\nFix the error(s) to collect all of the nectar and make all of the honey.",
     "step_mode": "1",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "start_direction": "1",
     "nectar_goal": "7",
     "honey_goal": "5",
@@ -29,8 +29,13 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null
-  }
+    "markdown_instructions": "This puzzle is making me loopy! \r\n\r\nFix the error(s) to collect all of the nectar and make all of the honey.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "fast_get_nectar_animation": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -96,5 +101,57 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_nectar"/>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_nectar"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                          <next>
+                            <block type="controls_repeat">
+                              <title name="TIMES">5</title>
+                              <statement name="DO">
+                                <block type="maze_moveForward">
+                                  <next>
+                                    <block type="maze_honey"/>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>
