@@ -14,7 +14,11 @@ module.exports = {
     // core theme
     bootstrap: {
       errorBackground: '#f2dede',
-      errorText: '#b94a48'
+      errorText: '#b94a48',
+      errorBorder: '#ebccd1',
+      warningBackground: '#fcf8e3',
+      warningText: '#c09853',
+      warningBorder: '#faebcc',
     }
   }
 };
