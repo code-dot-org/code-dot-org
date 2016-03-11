@@ -127,10 +127,9 @@ class RackAttackTest < Minitest::Test
 
     assert_read_records 13, SUCCESSFUL, '240s rate limit expires'
 
+    # Now test that a dynamic update to the rate limit is enforced correctly.
     Timecop.freeze rounded_time_now + 60
-
     _test_table_dynamic_rate_limit_enforced
-
   ensure
     Timecop.return
   end
