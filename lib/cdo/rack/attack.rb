@@ -3,25 +3,12 @@ require 'rack/attack'
 require 'rack/attack/path_normalizer'
 require 'active_support/core_ext/numeric/time'
 
-# Override the path normalize and request.write? methods in Rack::Attack.
-class Rack::Attack
-  # Rack::Attack returns a 429 for requests that exceed the rate limit.
-
-  # Don't strip trailing slashes.
-  remove_const(:PathNormalizer)
-  PathNormalizer = FallbackPathNormalizer
-
-  class Request < ::Rack::Request
-    def write?
-      put? || patch? || post? || delete?
-    end
-  end
-end
-
-# A configuration object for setting and dynamically updating the Rack attack limits based
+# A configuration object for setting and dynamically updating the RackAttack limits based
 # on DCDO/CDO configuration.
 class RackAttackConfigBase
 
+  # Configure rack attack to the use the specified cache store and dynamically update
+  # its configuration.
   def initialize(cache_store)
     Rack::Attack.cache.store = cache_store
     DCDO.add_change_listener(self)
@@ -35,13 +22,15 @@ class RackAttackConfigBase
     RackAttackConfigBase.new(cache_store)
   end
 
+  # DCDO change handler to update the RackAttack configuration ,
   def on_change
     update_limits
   end
 
+  # Returns the allowed limits by time interval given a base max rate.
+  # Allow 4x the max rate over 15s, 2x the max rate over 60s, and 1x the max rate over 4min.
+  # This gives the experience of exponential backoff when limits are exceeded.
   def limits(max_per_sec)
-    # allow 4x the max rate over 15s, 2x the max rate over 60s, and 1x the max rate over 4min.
-    # this gives the experience of exponential backoff when limits are exceeded.
     [[1 * max_per_sec * 60, 15],
      [2 * max_per_sec * 60, 60],
      [4 * max_per_sec * 60, 240]]
@@ -49,6 +38,7 @@ class RackAttackConfigBase
 
   private
 
+  # Updates the RackAttack limits based on CDO defaults and DCDO overrides.
   def update_limits
     limits(max_table_reads_per_sec).each do |limit, period|
       Rack::Attack.throttle("shared-tables/reads/#{period}",
@@ -111,3 +101,18 @@ class RackAttackConfigBase
 end
 
 RackAttackConfig = RackAttackConfigBase.create
+
+# Override the path normalize and request.write? methods in Rack::Attack.
+class Rack::Attack
+  # Rack::Attack returns a 429 for requests that exceed the rate limit.
+
+  # Don't strip trailing slashes.
+  remove_const(:PathNormalizer)
+  PathNormalizer = FallbackPathNormalizer
+
+  class Request < ::Rack::Request
+    def write?
+      put? || patch? || post? || delete?
+    end
+  end
+end
