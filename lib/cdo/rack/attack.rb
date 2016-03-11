@@ -28,6 +28,13 @@ class RackAttackConfigBase
     update_limits
   end
 
+  # A factory method that creates a RackAttackConfig backed by Redis.
+  def self.create
+    redis_url = CDO.geocoder_redis_url || 'redis://localhost:6379'
+    cache_store = Rack::Attack::StoreProxy::RedisStoreProxy.new(Redis.new(url: redis_url))
+    RackAttackConfigBase.new(cache_store)
+  end
+
   def on_change
     update_limits
   end
@@ -101,9 +108,6 @@ class RackAttackConfigBase
   def max_property_writes_per_sec
     get_dcdo_key_with_cdo_default('max_property_writes_per_sec')
   end
-
 end
 
-redis_url = CDO.geocoder_redis_url || 'redis://localhost:6379'
-cache_store = Rack::Attack::StoreProxy::RedisStoreProxy.new(Redis.new(url: redis_url))
-RackAttackConfig = RackAttackConfigBase.new(cache_store)
+RackAttackConfig = RackAttackConfigBase.create
