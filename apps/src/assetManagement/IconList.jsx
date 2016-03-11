@@ -10,8 +10,8 @@ module.exports = React.createClass({
     search: React.PropTypes.string.isRequired
   },
 
-  render: function () {
-    var letters = this.props.search.split(''), results = {};
+  getMatches: function (query) {
+    var letters = query.split(''), results = {};
 
     for (var i = 0, node = icons; i < letters.length; i++) {
       node = node[letters[i]];
@@ -39,21 +39,36 @@ module.exports = React.createClass({
     }
 
     if (node) {
-      getResults(node, this.props.search);
+      getResults(node, query);
     }
 
-    var list = [];
+    return results;
+  },
 
-    for (var iconId in results) {
+  render: function () {
+    var tokens = this.props.search.split('-'),
+      query = this.props.search,
+      results = this.getMatches(tokens[0]);
+
+    if (tokens.length > 1) {
+      var filtered = {};
+      Object.keys(results).forEach(function (key) {
+        if (key.indexOf(query) > -1) {
+          filtered[key] = results[key];
+        }
+      });
+      results = filtered;
+    }
+
+    var list = Object.keys(results).map(function (iconId) {
       var result = results[iconId];
-      list.push(<IconListEntry
+      return <IconListEntry
         assetChosen={this.props.assetChosen}
         unicode={result.unicode}
         iconId={iconId}
         altMatch={result.alt}
-        search={this.props.search}/>
-      );
-    }
+        search={this.props.search}/>;
+    }.bind(this));
 
     return (
       <div style={{
