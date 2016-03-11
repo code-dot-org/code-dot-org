@@ -234,9 +234,6 @@ namespace :build do
 end
 task :build => ['build:all']
 
-
-
-
 ##################################################################################################
 ##
 ##
@@ -286,7 +283,6 @@ def ensure_apps_package
   raise "No valid package found" unless package_found
 end
 
-
 namespace :install do
 
   # Create a symlink in the public directory that points at the appropriate blockly
@@ -308,7 +304,6 @@ namespace :install do
       RakeUtils.ln_s path, "#{git_path}/#{f}"
     end
   end
-
 
   task :apps do
     if local_environment?

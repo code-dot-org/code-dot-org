@@ -46,7 +46,6 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     assert_equal [@gallery_activity], assigns(:gallery_activities)
   end
 
-
   test "should show index with only apps" do
     get :index, app: Game::PLAYLAB, page: 1
 
@@ -55,7 +54,6 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     # does not include the autosaved one
     assert_equal [@playlab_gallery_activity], assigns(:gallery_activities)
   end
-
 
   test "annoying page number redirects to first page" do
     get :index, app: Game::PLAYLAB, page: 100000
@@ -87,7 +85,6 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
 
     assert_select 'b', '14,320'
   end
-
 
   test "should show index to user" do
     sign_in @user
@@ -198,7 +195,6 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
 
     assert_response 401
   end
-
 
   test "cannot create gallery activity with no activity id" do
     sign_in create(:user)
