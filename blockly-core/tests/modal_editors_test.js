@@ -54,6 +54,50 @@ var PROCEDURE =
   '</block>' +
 '</xml>';
 
+var PROCEDURE_WITH_PARAM =
+'<xml>' +
+  '<block type="procedures_defnoreturn">' +
+    '<mutation>' +
+      '<arg name="x"/>' +
+      '<arg name="y"/>' +
+    '</mutation>' +
+    '<title name="NAME">procedure with param 1</title>' +
+    '<statement name="STACK">' +
+      '<block type="controls_repeat_ext" inline="true">' +
+        '<value name="TIMES">' +
+          '<block type="parameters_get">' +
+            '<title name="VAR">x</title>' +
+          '</block>' +
+        '</value>' +
+        '<next>' +
+          '<block type="controls_repeat_ext" inline="true">' +
+            '<value name="TIMES">' +
+              '<block type="parameters_get">' +
+                '<title name="VAR">y</title>' +
+              '</block>' +
+            '</value>' +
+          '</block>' +
+        '</next>' +
+      '</block>' +
+    '</statement>' +
+  '</block>' +
+  '<block type="procedures_defnoreturn">' +
+    '<mutation>' +
+      '<arg name="x"/>' +
+    '</mutation>' +
+    '<title name="NAME">procedure with param 2</title>' +
+    '<statement name="STACK">' +
+      '<block type="controls_repeat_ext" inline="true">' +
+        '<value name="TIMES">' +
+          '<block type="parameters_get">' +
+            '<title name="VAR">x</title>' +
+          '</block>' +
+        '</value>' +
+      '</block>' +
+    '</statement>' +
+  '</block>' +
+'</xml>';
+
 var USER_CREATED_PROCEDURE =
 '<xml>' +
   '<block type="procedures_defnoreturn" usercreated="true">' +
@@ -61,6 +105,8 @@ var USER_CREATED_PROCEDURE =
     '<title name="NAME">test-usercreated-function</title>' +
   '</block>' +
 '</xml>';
+
+var defaultSimpleDialog = null;
 
 function initializeFunctionEditor(opt_functionDefinitionXML) {
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
@@ -92,8 +138,29 @@ function openFunctionEditor(opt_name) {
   Blockly.functionEditor.autoOpenFunction(opt_name || 'test-function');
 }
 
+function getParametersUsedInFunctionEditor() {
+  return Blockly.functionEditor.functionDefinitionBlock.getDescendants().
+      filter(function(block) {
+        return block.type == 'parameters_get';
+      }).map(function(block) {
+        return block.getTitleValue('VAR');
+      });
+}
+
 function cleanupFunctionEditor() {
   Blockly.functionEditor.hideIfOpen();
+}
+
+function setCustomSimpleDialog(func) {
+  if (!defaultSimpleDialog) {
+    defaultSimpleDialog = Blockly.customSimpleDialog;
+  }
+  Blockly.customSimpleDialog = func;
+}
+
+function resetCustomSimpleDialog() {
+  Blockly.customSimpleDialog = defaultSimpleDialog;
+  defaultSimpleDialog = null;
 }
 
 function test_functionEditorDoesntBumpBlocksInMainBlockspace() {
@@ -154,12 +221,76 @@ function test_functionEditor_deleteButton() {
       goog.dom.getElementByClass('svgTextButton').textContent);
 
   // Skip confirmation dialog
-  Blockly.customSimpleDialog = function(e) {e.onCancel();};
+  setCustomSimpleDialog(function(e) {e.onCancel();});
   Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
 
   assertNull('Function no longer exists',
       Blockly.mainBlockSpace.findFunction('test-usercreated-function'));
 
+  resetCustomSimpleDialog();
+  cleanupFunctionEditor();
+  goog.dom.removeNode(container);
+}
+
+function test_functionEditor_renameParam() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+  initializeFunctionEditor(PROCEDURE_WITH_PARAM);
+  openFunctionEditor('procedure with param 1');
+  Blockly.functionEditor.renameParameter('x', 'new_x');
+
+  var paramsUsed = getParametersUsedInFunctionEditor();
+  assertContains('Renamed to new_x', 'new_x', paramsUsed);
+  assertContains('Does not change other parameter', 'y', paramsUsed);
+  assertNotContains('No more old parameter', 'x', paramsUsed);
+
+  cleanupFunctionEditor()
+
+  // Check that the rename was limited to procedure 1's scope
+  openFunctionEditor('procedure with param 2');
+  paramsUsed = getParametersUsedInFunctionEditor();
+  assertContains('Still has old parameter', 'x', paramsUsed);
+  assertNotContains('No new parameter', 'new_x', paramsUsed);
+
+  cleanupFunctionEditor();
+  goog.dom.removeNode(container);
+}
+
+function test_functionEditor_deleteParam() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+  initializeFunctionEditor(PROCEDURE_WITH_PARAM);
+  openFunctionEditor('procedure with param 1');
+  Blockly.functionEditor.removeParameter('x');
+
+  var paramsUsed = getParametersUsedInFunctionEditor();
+  assertNotContains('Parameter deleted', 'x', paramsUsed);
+  assertContains('Still has other parameter', 'y', paramsUsed);
+
+
+  cleanupFunctionEditor();
+  goog.dom.removeNode(container);
+}
+
+function test_functionEditor_useSimpleDialogForParamDeletion() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+  initializeFunctionEditor(PROCEDURE_WITH_PARAM);
+  openFunctionEditor('procedure with param 1');
+  var dialogCreated = false;
+  setCustomSimpleDialog(function(config) {
+    dialogCreated = true;
+    config.onCancel();
+  });
+
+  Blockly.fireTestClickSequence(
+      document.querySelector('.blocklyUndraggable .blocklyArrow'));
+  var deleteOption = document.querySelectorAll('.goog-menuitem-content')[1];
+  assertEquals('Delete parameter...', deleteOption.textContent);
+  Blockly.fireTestClickSequence(deleteOption);
+
+  assert(dialogCreated);
+  var paramsUsed = getParametersUsedInFunctionEditor();
+  assertEquals('One parameter left', 1, paramsUsed.length);
+
+  resetCustomSimpleDialog();
   cleanupFunctionEditor();
   goog.dom.removeNode(container);
 }
@@ -407,18 +538,19 @@ function test_contractEditor_new_function_button_then_delete() {
   assertFalse(acceptDialogTriggered);
   assertFalse(rejectDialogTriggered);
 
-  Blockly.customSimpleDialog = instantRejectDialog;
+  setCustomSimpleDialog(instantRejectDialog);
   Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
 
   assertTrue(rejectDialogTriggered);
   beforeDeletionAssertions();
 
-  Blockly.customSimpleDialog = instantAcceptDialog;
+  setCustomSimpleDialog(instantAcceptDialog)
   Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
 
   assertTrue(acceptDialogTriggered);
   afterDeletionAssertions();
 
+  resetCustomSimpleDialog();
   contractEditor.hideIfOpen();
   goog.dom.removeNode(container);
 }
