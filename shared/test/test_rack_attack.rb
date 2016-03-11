@@ -25,6 +25,10 @@ CDO.max_property_writes_per_sec = REDUCED_RATE_LIMIT_FOR_TESTING
 
 require 'cdo/rack/attack'
 
+# Configure rack attack to use the fake Redis on localhost.
+Rack::Attack.cache.store = Rack::Attack::StoreProxy::RedisStoreProxy.new(
+    Redis.new(url: 'redis://localhost:6379'))
+
 class RackAttackTest < Minitest::Test
   include Rack::Test::Methods
   include SetupTest
@@ -33,6 +37,8 @@ class RackAttackTest < Minitest::Test
   OTHER_TABLE = 'other_table'
   PROPERTY_KEY = 'key'
   OTHER_KEY = 'other_key'
+
+  @@updater = RackAttackConfigUpdater.new.start
 
   def build_rack_mock_session
     # TODO(dave): chain middleware components like this in other middleware tests to reduce complexity.
@@ -59,23 +65,23 @@ class RackAttackTest < Minitest::Test
     max_property_writes_per_sec = 40
 
     expected_limits = [[1200, 15], [2400, 60], [4800, 240]]
-    actual_limits = RackAttackConfig.limits max_table_reads_per_sec
+    actual_limits = @@updater.limits max_table_reads_per_sec
     assert_equal expected_limits, actual_limits, "Max table read limits and periods are set correctly"
 
     expected_limits = [[2400, 15], [4800, 60], [9600, 240]]
-    actual_limits = RackAttackConfig.limits max_table_writes_per_sec
+    actual_limits = @@updater.limits max_table_writes_per_sec
     assert_equal expected_limits, actual_limits, "Max table write limits and periods are set correctly"
 
     expected_limits = [[2400, 15], [4800, 60], [9600, 240]]
-    actual_limits = RackAttackConfig.limits max_property_reads_per_sec
+    actual_limits = @@updater.limits max_property_reads_per_sec
     assert_equal expected_limits, actual_limits, "Max property read limits and periods are set correctly"
 
     expected_limits = [[2400, 15], [4800, 60], [9600, 240]]
-    actual_limits = RackAttackConfig.limits max_property_writes_per_sec
+    actual_limits = @@updater.limits max_property_writes_per_sec
     assert_equal expected_limits, actual_limits, "Max property write limits and periods are set correctly"
 
     expected_limits = [[3, 15], [6, 60], [12, 240]]
-    actual_limits = RackAttackConfig.limits REDUCED_RATE_LIMIT_FOR_TESTING
+    actual_limits = @@updater.limits REDUCED_RATE_LIMIT_FOR_TESTING
     assert_equal expected_limits, actual_limits, "Reduced rate limits for testing are set correctly"
   end
 
