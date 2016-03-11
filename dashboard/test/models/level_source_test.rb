@@ -40,7 +40,7 @@ class LevelSourceTest < ActiveSupport::TestCase
     # Set up standardized and variant level_sources.
     @standard_data = 'dummy data'
     @variant_data =
-        LevelSource::XMLNS_STRING + @standard_data + LevelSource::XMLNS_STRING
+      LevelSource::XMLNS_STRING + @standard_data + LevelSource::XMLNS_STRING
     @ls1_standard = create(:level_source,
         level_id: @level.id, data: @standard_data)
     @ls1_variant = create(:level_source,
@@ -49,12 +49,12 @@ class LevelSourceTest < ActiveSupport::TestCase
 
     level2_id = create(:level).id
     @ls2_standard =
-        create(:level_source, level_id: level2_id, data: @standard_data)
+      create(:level_source, level_id: level2_id, data: @standard_data)
     @ls2_variant =
-        create(:level_source, level_id: level2_id, data: @variant_data)
+      create(:level_source, level_id: level2_id, data: @variant_data)
     level3_id = create(:level).id
     @ls3_variant =
-        create(:level_source, level_id: level3_id, data: @variant_data)
+      create(:level_source, level_id: level3_id, data: @variant_data)
   end
 
   test "should not create level source with utf8mb8" do
