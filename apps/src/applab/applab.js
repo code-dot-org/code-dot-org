@@ -1671,6 +1671,14 @@ Applab.changeScreen = function(screenId) {
       this.focus();
     }
   });
+
+  // Hacky - showTurtleBeforeRun option is designed for authored levels, so we
+  // probably ought to make sure it's shown regardless of what screen we display.
+  if (!Applab.isRunning()) {
+    if (level.showTurtleBeforeRun) {
+      applabTurtle.turtleSetVisibility(true);
+    }
+  }
 };
 
 Applab.loadDefaultScreen = function() {
