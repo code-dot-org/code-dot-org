@@ -267,12 +267,6 @@ Style/HashSyntax:
 Style/IndentArray:
   Enabled: false
 
-# Offense count: 11
-# Cop supports --auto-correct.
-# Configuration parameters: IndentationWidth.
-Style/IndentAssignment:
-  Enabled: false
-
 # Offense count: 168
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
