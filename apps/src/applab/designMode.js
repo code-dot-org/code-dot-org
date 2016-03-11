@@ -482,6 +482,11 @@ designMode.serializeToLevelHtml = function () {
     elementUtils.removeIdPrefix(this);
   });
 
+  // Remove the src="data:img/png..." from icon images
+  designModeVizClone.find('img[data-canonical-image-url^="icon:"]').each(function () {
+    this.removeAttribute('src');
+  });
+
   var serialization = designModeVizClone[0] ? designModeVizClone[0].outerHTML : '';
   if (madeUndraggable) {
     makeDraggable(designModeViz.children().children());
