@@ -126,11 +126,18 @@ class RackAttackTest < Minitest::Test
     Timecop.travel 241
 
     assert_read_records 13, SUCCESSFUL, '240s rate limit expires'
+
+    Timecop.freeze rounded_time_now + 60
+
+    _test_table_dynamic_rate_limit_enforced
+
   ensure
     Timecop.return
   end
 
-  def test_table_dynamic_rate_limit_enforced
+  # Helper function for test_table_read_limits_with_exponential_backoff to test
+  # dynamic rate limit updates.
+  def _test_table_dynamic_rate_limit_enforced
     # Double the allowed rate in the dynamic configuration and make sure
     # that we can read twice as many rows as in the previous test before being
     # rate limited.
@@ -147,10 +154,6 @@ class RackAttackTest < Minitest::Test
 
     # don't increment the index here because throttled requests don't affect the counts.
     assert_read_records 6, RATE_LIMITED
-    Timecop.travel 61
-  ensure
-    DCDO.clear
-    Timecop.return
   end
 
   def test_table_write_limit_enforced
