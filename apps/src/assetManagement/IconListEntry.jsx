@@ -50,7 +50,7 @@ module.exports = React.createClass({
         width: columnWidth,
         height: '35px',
         cursor: 'pointer'
-      }} title={this.props.iconId} onClick={this.props.assetChosen.bind(null, 'icon:' + this.props.iconId)}>
+      }} title={this.props.iconId} onClick={this.props.assetChosen.bind(null, 'icon:' + this.props.unicode)}>
         <Icon iconId={this.props.iconId}/>
         {iconLabel}
       </div>
