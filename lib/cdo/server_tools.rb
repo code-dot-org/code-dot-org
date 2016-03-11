@@ -22,7 +22,6 @@ class ServerTools
   def self.deprovision_frontends(name_glob)
     ids = find_frontend_identifiers(name_glob)
 
-
     # Make sure the user hasn't forgotten to manually remove the server from the
     # chef production environment.
 

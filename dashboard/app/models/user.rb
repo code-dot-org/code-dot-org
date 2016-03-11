@@ -335,7 +335,6 @@ class User < ActiveRecord::Base
     end
   end
 
-
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin']
   def self.from_omniauth(auth, params)
     def self.name_from_omniauth(raw_name)
@@ -592,7 +591,6 @@ SQL
     return nil if name.blank?
     return name.strip[0].upcase
   end
-
 
   # override the default devise password to support old and new style hashed passwords
   # based on Devise::Models::DatabaseAuthenticatable#valid_password?

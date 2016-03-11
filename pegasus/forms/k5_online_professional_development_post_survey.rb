@@ -103,7 +103,6 @@ class K5OnlineProfessionalDevelopmentPostSurvey
     result[:number_teaching_i] = required stripped data[:number_teaching_i]
     result[:attend_in_person_pd_i] = required enum data[:attend_in_person_pd_i], SCALE_ANSWERS
 
-
     result
 
   end

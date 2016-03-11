@@ -13,9 +13,9 @@ class HoneybadgerTest < Minitest::Test
   COMMAND = '/home/ubuntu/staging/bin/deliver_poste_messages'
 
   ERROR =
-      "/home/ubuntu/staging/bin/deliver_poste_messages:126:in `send': undefined method `[]' for nil:NilClass (NoMethodError)\n" +
-      "\tfrom /home/ubuntu/staging/bin/deliver_poste_messages:274:in `block in main'\n" +
-      "\tfrom /home/ubuntu/staging/bin/deliver_poste_messages:250:in `block (3 levels) in create_threads'"
+    "/home/ubuntu/staging/bin/deliver_poste_messages:126:in `send': undefined method `[]' for nil:NilClass (NoMethodError)\n" +
+    "\tfrom /home/ubuntu/staging/bin/deliver_poste_messages:274:in `block in main'\n" +
+    "\tfrom /home/ubuntu/staging/bin/deliver_poste_messages:250:in `block (3 levels) in create_threads'"
 
   EXPECTED_MESSAGE = "undefined method `[]' for nil:NilClass (NoMethodError)"
   EXPECTED_BACKTRACE = [

@@ -125,7 +125,6 @@ class ReportsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-
   test "should not get header_stats with user_id when not signed in" do
     sign_out @admin
 

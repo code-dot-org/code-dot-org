@@ -144,6 +144,10 @@ Eval.init = function(config) {
       Blockly.contractEditor.registerTestHandler(getEvalExampleFailure);
       Blockly.contractEditor.registerTestResetHandler(resetExampleDisplay);
     }
+
+    if (!!config.level.projectTemplateLevelName) {
+      studioApp.displayAlert('warning', <div>{commonMsg.projectWarning()}</div>);
+    }
   };
 
   var renderCodeWorkspace = function () {

@@ -35,7 +35,6 @@ class ApiController < ApplicationController
       {id: student.id, levels: student_levels}
     end
 
-
     data = {
             students: students,
             script: {
@@ -115,7 +114,7 @@ class ApiController < ApplicationController
       end
       response[:disableSocialShare] = current_user.under_13?
       response[:disablePostMilestone] =
-          !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
+        !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
     end
 
     slog(tag: 'activity_start',
