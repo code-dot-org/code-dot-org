@@ -106,6 +106,8 @@ var USER_CREATED_PROCEDURE =
   '</block>' +
 '</xml>';
 
+var defaultSimpleDialog = null;
+
 function initializeFunctionEditor(opt_functionDefinitionXML) {
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
   Blockly.hasTrashcan = true;
@@ -147,6 +149,18 @@ function getParametersUsedInFunctionEditor() {
 
 function cleanupFunctionEditor() {
   Blockly.functionEditor.hideIfOpen();
+}
+
+function setCustomSimpleDialog(func) {
+  if (!defaultSimpleDialog) {
+    defaultSimpleDialog = Blockly.customSimpleDialog;
+  }
+  Blockly.customSimpleDialog = func;
+}
+
+function resetCustomSimpleDialog() {
+  Blockly.customSimpleDialog = defaultSimpleDialog;
+  defaultSimpleDialog = null;
 }
 
 function test_functionEditorDoesntBumpBlocksInMainBlockspace() {
@@ -207,12 +221,13 @@ function test_functionEditor_deleteButton() {
       goog.dom.getElementByClass('svgTextButton').textContent);
 
   // Skip confirmation dialog
-  Blockly.customSimpleDialog = function(e) {e.onCancel();};
+  setCustomSimpleDialog(function(e) {e.onCancel();});
   Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
 
   assertNull('Function no longer exists',
       Blockly.mainBlockSpace.findFunction('test-usercreated-function'));
 
+  resetCustomSimpleDialog();
   cleanupFunctionEditor();
   goog.dom.removeNode(container);
 }
@@ -260,10 +275,10 @@ function test_functionEditor_useSimpleDialogForParamDeletion() {
   initializeFunctionEditor(PROCEDURE_WITH_PARAM);
   openFunctionEditor('procedure with param 1');
   var dialogCreated = false;
-  Blockly.customSimpleDialog = function(config) {
+  setCustomSimpleDialog(function(config) {
     dialogCreated = true;
     config.onCancel();
-  };
+  });
 
   Blockly.fireTestClickSequence(
       document.querySelector('.blocklyUndraggable .blocklyArrow'));
@@ -275,6 +290,7 @@ function test_functionEditor_useSimpleDialogForParamDeletion() {
   var paramsUsed = getParametersUsedInFunctionEditor();
   assertEquals('One parameter left', 1, paramsUsed.length);
 
+  resetCustomSimpleDialog();
   cleanupFunctionEditor();
   goog.dom.removeNode(container);
 }
@@ -522,18 +538,19 @@ function test_contractEditor_new_function_button_then_delete() {
   assertFalse(acceptDialogTriggered);
   assertFalse(rejectDialogTriggered);
 
-  Blockly.customSimpleDialog = instantRejectDialog;
+  setCustomSimpleDialog(instantRejectDialog);
   Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
 
   assertTrue(rejectDialogTriggered);
   beforeDeletionAssertions();
 
-  Blockly.customSimpleDialog = instantAcceptDialog;
+  setCustomSimpleDialog(instantAcceptDialog)
   Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
 
   assertTrue(acceptDialogTriggered);
   afterDeletionAssertions();
 
+  resetCustomSimpleDialog();
   contractEditor.hideIfOpen();
   goog.dom.removeNode(container);
 }
