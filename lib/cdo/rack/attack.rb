@@ -3,23 +3,17 @@ require 'rack/attack'
 require 'rack/attack/path_normalizer'
 require 'active_support/core_ext/numeric/time'
 
-# A configuration object for setting and dynamically updating the RackAttack limits based
-# on DCDO/CDO configuration.
-class RackAttackConfigBase
-
-  # Configure rack attack to the use the specified cache store and dynamically update
-  # its configuration.
-  def initialize(cache_store)
-    Rack::Attack.cache.store = cache_store
-    DCDO.add_change_listener(self)
-    update_limits
+# An object that dynamically updates the RackAttack configuration based on DCDO and CDO.
+# Callers should construct and instance and then call start.
+class RackAttackConfigUpdater
+  def initialize
   end
 
-  # A factory method that creates a RackAttackConfig backed by Redis.
-  def self.create
-    redis_url = CDO.geocoder_redis_url || 'redis://localhost:6379'
-    cache_store = Rack::Attack::StoreProxy::RedisStoreProxy.new(Redis.new(url: redis_url))
-    RackAttackConfigBase.new(cache_store)
+  # Begin dynamically updating the RackAttack configuration and return self.
+  def start
+    DCDO.add_change_listener(self)
+    update_limits
+    self
   end
 
   # DCDO change handler to update the RackAttack configuration ,
@@ -99,8 +93,6 @@ class RackAttackConfigBase
     get_dcdo_key_with_cdo_default('max_property_writes_per_sec')
   end
 end
-
-RackAttackConfig = RackAttackConfigBase.create
 
 # Override the path normalize and request.write? methods in Rack::Attack.
 class Rack::Attack
