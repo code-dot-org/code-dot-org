@@ -289,6 +289,8 @@ class User < ActiveRecord::Base
   end
 
   def User.find_by_email_or_hashed_email(email)
+    return nil if email.blank?
+
     User.find_by_email(email.downcase) ||
       User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
   end
