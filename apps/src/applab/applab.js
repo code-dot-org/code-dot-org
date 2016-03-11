@@ -120,6 +120,8 @@ var vizAppWidth = 400;
 var defaultAppWidth = 400;
 var defaultAppHeight = 400;
 
+var hasSeenRateLimitAlert = false;
+
 function loadLevel() {
   Applab.hideDesignMode = level.hideDesignMode;
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
@@ -1650,4 +1652,19 @@ Applab.updateProperty = function (element, property, value) {
 
 Applab.isCrosshairAllowed = function () {
   return !Applab.isReadOnlyView && !Applab.isRunning();
+};
+
+Applab.showRateLimitAlert = function () {
+  // only show the alert once per session
+  if (hasSeenRateLimitAlert) {
+    return false;
+  }
+  hasSeenRateLimitAlert = true;
+
+  var alert = <div>The app has been reading or writing to the database too frequently.  Please try again a little later.  Let the developer know if you see this problem again.</div>;
+  if (studioApp.share) {
+    studioApp.displayPlayspaceAlert("error", alert);
+  } else {
+    studioApp.displayWorkspaceAlert("error", alert);
+  }
 };
