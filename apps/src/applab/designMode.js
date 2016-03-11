@@ -249,6 +249,19 @@ designMode.updateProperty = function(element, name, value) {
       break;
 
     case 'picture':
+      if (/^icon:/.test(value)) {
+        element.setAttribute('data-canonical-image-url', value);
+        var canvas = document.createElement('canvas');
+        canvas.width = canvas.height = 400;
+        var ctx = canvas.getContext('2d');
+        ctx.font = '300px FontAwesome, serif';
+        ctx.textBaseline = 'middle';
+        ctx.textAlign = 'center';
+        var unicode = '0x' + value.replace(/^icon:/, '');
+        ctx.fillText(String.fromCharCode(unicode), 200, 200);
+        element.src = canvas.toDataURL();
+        return;
+      }
       originalValue = element.getAttribute('data-canonical-image-url');
       element.src = assetPrefix.fixPath(value);
       element.setAttribute('data-canonical-image-url', value);
