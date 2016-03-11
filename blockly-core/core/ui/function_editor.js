@@ -256,6 +256,9 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
       block.firstElementChild.textContent = newName;
     }
   });
+  this.forEachParameterGetBlock(oldName, function(block) {
+    block.setTitleValue(newName, 'VAR');
+  });
 };
 
 Blockly.FunctionEditor.prototype.changeParameterTypeInFlyoutXML = function(name, newType) {
@@ -282,6 +285,9 @@ Blockly.FunctionEditor.prototype.removeParameter = function(nameToRemove) {
     }
   });
   keysToDelete.forEach(function(key) { this.orderedParamIDsToBlocks_.remove(key); }, this);
+  this.forEachParameterGetBlock(nameToRemove, function(block) {
+    block.dispose(true, false);
+  });
   this.refreshParamsEverywhere();
 };
 
@@ -327,6 +333,15 @@ Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
   }, this);
   return {paramNames: paramNames, paramIDs: paramIDs, paramTypes: paramTypes};
 };
+
+Blockly.FunctionEditor.prototype.forEachParameterGetBlock = function(paramName, callback) {
+  this.functionDefinitionBlock.getDescendants().forEach(function(block) {
+    if (block.type == 'parameters_get' &&
+        Blockly.Names.equals(paramName, block.getTitleValue('VAR'))) {
+      callback(block);
+    }
+  });
+}
 
 Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();

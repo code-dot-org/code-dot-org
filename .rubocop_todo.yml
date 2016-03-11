@@ -199,11 +199,6 @@ Style/EmptyElse:
 Style/EmptyLineBetweenDefs:
   Enabled: false
 
-# Offense count: 142
-# Cop supports --auto-correct.
-Style/EmptyLines:
-  Enabled: false
-
 # Offense count: 20
 # Cop supports --auto-correct.
 Style/EmptyLinesAroundAccessModifier:
@@ -267,12 +262,6 @@ Style/HashSyntax:
 Style/IndentArray:
   Enabled: false
 
-# Offense count: 11
-# Cop supports --auto-correct.
-# Configuration parameters: IndentationWidth.
-Style/IndentAssignment:
-  Enabled: false
-
 # Offense count: 168
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
@@ -309,11 +298,6 @@ Style/MethodDefParentheses:
 
 # Offense count: 9
 Style/MultilineBlockChain:
-  Enabled: false
-
-# Offense count: 4
-# Cop supports --auto-correct.
-Style/MultilineBlockLayout:
   Enabled: false
 
 # Offense count: 105

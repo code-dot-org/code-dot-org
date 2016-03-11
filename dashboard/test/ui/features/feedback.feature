@@ -37,8 +37,8 @@ Scenario: Attempt 2-3 Maze 1
   And element ".congrats" has text "Not quite. Try using a block you aren’t using yet."
   And element "#feedbackBlocks" is visible
 
-  # after we fulfill the requirements of the hint, we see a different
-  # hint
+  # after we fulfill the requirements of the hint, we see a generic failure
+  # message
   When I press "again-button"
   And I wait to see "#resetButton"
   And I press "resetButton"
@@ -48,11 +48,11 @@ Scenario: Attempt 2-3 Maze 1
   And I wait to see ".congrats"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "You are using all of the necessary types of blocks, but try using more of these types of blocks to complete this puzzle."
+  And element ".congrats" has text "Keep coding! Something's not quite right yet."
   And element "#hint-request-button" does not exist
   And element "#feedbackBlocks" does not exist
 
-  # after we have enough required blocks, we see a generic failure message
+  # after we have enough required blocks, we still see a generic failure message
   When I press "again-button"
   And I wait to see "#resetButton"
   And I press "resetButton"
