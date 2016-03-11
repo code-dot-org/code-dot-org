@@ -14,7 +14,7 @@ var ScreenSelector = require('./ScreenSelector.jsx');
 var ToggleGroup = require('./ToggleGroup.jsx');
 var ViewDataButton = require('./ViewDataButton.jsx');
 
-var Mode = constants.MODE;
+var ApplabMode = constants.ApplabMode;
 
 var PlaySpaceHeader = React.createClass({
   propTypes: {
@@ -22,34 +22,12 @@ var PlaySpaceHeader = React.createClass({
     isEditingProject: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isViewDataButtonHidden: React.PropTypes.bool.isRequired,
+    mode: React.PropTypes.oneOf([ApplabMode.CODE, ApplabMode.DESIGN]).isRequired,
     screenIds: React.PropTypes.array.isRequired,
-    startInDesignMode: React.PropTypes.bool.isRequired,
-    onDesignModeButton: React.PropTypes.func.isRequired,
-    onCodeModeButton: React.PropTypes.func.isRequired,
     onViewDataButton: React.PropTypes.func.isRequired,
     onScreenChange: React.PropTypes.func.isRequired,
-    onScreenCreate: React.PropTypes.func.isRequired
-  },
-
-  getInitialState: function () {
-    return {
-      mode: this.props.startInDesignMode ? Mode.DESIGN :  Mode.CODE
-    };
-  },
-
-  handleSetMode: function (newMode) {
-    if (this.state.mode === newMode) {
-      return;
-    }
-    if (newMode === Mode.CODE) {
-      this.props.onCodeModeButton();
-    } else {
-      this.props.onDesignModeButton();
-    }
-
-    this.setState({
-      mode: newMode
-    });
+    onScreenCreate: React.PropTypes.func.isRequired,
+    onModeChange: React.PropTypes.func.isRequired
   },
 
   handleScreenChange: function (evt) {
@@ -65,16 +43,16 @@ var PlaySpaceHeader = React.createClass({
 
     if (!this.shouldHideToggle()) {
       leftSide = (
-        <ToggleGroup selected={this.state.mode} onChange={this.handleSetMode}>
-          <button id='codeModeButton' value={Mode.CODE}>{msg.codeMode()}</button>
-          <button id='designModeButton' value={Mode.DESIGN}>{msg.designMode()}</button>
+        <ToggleGroup selected={this.props.mode} onChange={this.props.onModeChange}>
+          <button id='codeModeButton' value={ApplabMode.CODE}>{msg.codeMode()}</button>
+          <button id='designModeButton' value={ApplabMode.DESIGN}>{msg.designMode()}</button>
         </ToggleGroup>
       );
     }
 
-    if (this.state.mode === Mode.CODE && !this.shouldHideViewDataButton()) {
+    if (this.props.mode === ApplabMode.CODE && !this.shouldHideViewDataButton()) {
       rightSide = <ViewDataButton onClick={this.props.onViewDataButton} />;
-    } else if (this.state.mode === Mode.DESIGN) {
+    } else if (this.props.mode === ApplabMode.DESIGN) {
       rightSide = <ScreenSelector
           screenIds={this.props.screenIds}
           onChange={this.handleScreenChange} />;
@@ -109,12 +87,16 @@ module.exports = connect(function propsFromState(state) {
   return {
     isDesignModeHidden: state.isDesignModeHidden,
     isShareView: state.isShareView,
-    isViewDataButtonHidden: state.isViewDataButtonHidden
+    isViewDataButtonHidden: state.isViewDataButtonHidden,
+    mode: state.mode
   };
 }, function propsFromDispatch(dispatch) {
   return {
     onScreenChange: function (screenId) {
       dispatch(actions.changeScreen(screenId));
+    },
+    onModeChange: function (mode) {
+      dispatch(actions.changeMode(mode));
     }
   };
 })(PlaySpaceHeader);

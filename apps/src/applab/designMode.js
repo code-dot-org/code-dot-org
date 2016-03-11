@@ -9,8 +9,7 @@ var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
 var KeyCodes = require('../constants').KeyCodes;
-var constants = require('./constants');
-var applabCommands = require('./commands');
+var applabConstants = require('./constants');
 var designMode = module.exports;
 var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
@@ -19,6 +18,7 @@ var logToCloud = require('../logToCloud');
 var actions = require('./actions');
 
 var currentlyEditedElement = null;
+var ApplabMode = applabConstants.ApplabMode;
 
 /**
  * Subscribe to state changes on the store.
@@ -32,6 +32,10 @@ designMode.subscribeToRedux = function (store) {
 
     if (state.currentScreenId !== lastState.currentScreenId) {
       onScreenChange(state.currentScreenId);
+    }
+
+    if (state.mode !== lastState.mode) {
+      onModeChange(state.mode);
     }
   });
 };
@@ -361,7 +365,7 @@ designMode.updateProperty = function(element, name, value) {
 
         //Resort elements in the dropdown list
         var options = $('#screenSelector option');
-        var newScreenText = constants.NEW_SCREEN;
+        var newScreenText = applabConstants.NEW_SCREEN;
         var defaultScreenId = elementUtils.getId(element);
         options.sort(function (a, b) {
           if (a.text === defaultScreenId) {
@@ -552,6 +556,11 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
 };
 
 designMode.toggleDesignMode = function(enable) {
+  Applab.reduxStore.dispatch(actions.changeMode(enable ? ApplabMode.DESIGN : ApplabMode.CODE));
+};
+
+function onModeChange(mode) {
+  var enable = (ApplabMode.DESIGN === mode);
   var designWorkspace = document.getElementById('designWorkspace');
   if (!designWorkspace) {
     // Currently we don't run design mode in some circumstances (i.e. user is
@@ -564,7 +573,7 @@ designMode.toggleDesignMode = function(enable) {
   codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
 
   Applab.toggleDivApplab(!enable);
-};
+}
 
 /**
  * When we make elements resizable, we wrap them in an outer div. Given an outer
