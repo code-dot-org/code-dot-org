@@ -145,7 +145,6 @@ class NetSimApiTest < Minitest::Test
     assert_equal({}, JSON.parse(@net_sim_api.last_response.body))
   end
 
-
   def test_get_400_on_bad_json_insert
     # Send malformed JSON with an INSERT operation
     record_create_response = create_record_malformed({name: 'bob', age: 7, male: false})

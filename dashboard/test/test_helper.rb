@@ -91,7 +91,6 @@ class ActiveSupport::TestCase
     AWS::S3.expects(:upload_to_bucket).never
   end
 
-
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   #
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
@@ -164,7 +163,6 @@ class ActiveSupport::TestCase
   end
 end
 
-
 # Helpers for all controller test cases
 class ActionController::TestCase
   include Devise::TestHelpers
@@ -188,7 +186,6 @@ class ActionController::TestCase
     assert_response :redirect
     assert_redirected_to "http://test.host/users/sign_in"
   end
-
 
   def self.generate_admin_only_tests_for(action, params = {})
     test "should get #{action}" do
@@ -244,7 +241,6 @@ class ActionController::TestCase
     # <meta content="261" property="og:image:height" />
     # <meta content="500" name="twitter:image:width" />
     # <meta content="261" name="twitter:image:height" />
-
 
     # if this test is breaking and you don't know what's going on, you
     # can print the meta tags like this:
