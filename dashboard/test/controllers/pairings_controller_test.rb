@@ -16,7 +16,6 @@ class PairingsControllerTest < ActionController::TestCase
     assert_equal expected_response, JSON.parse(response.body)
   end
 
-
   test 'should get show for logged in user with sections' do
     sign_in user = create(:user)
     section_1 = create(:follower, student_user: user).section
@@ -57,7 +56,6 @@ class PairingsControllerTest < ActionController::TestCase
     assert_equal [classmate_1, classmate_2], session[:pairings]
   end
 
-
   test 'should not set pairings in session if they are not valid classmates' do
     sign_in user = create(:user)
     section = create(:follower, student_user: user).section
@@ -71,7 +69,6 @@ class PairingsControllerTest < ActionController::TestCase
     assert_equal [classmate], session[:pairings]
   end
 
-
   test 'should remove pairings in session' do
     sign_in create(:user)
     xhr :put, :update, pairings: []
@@ -79,5 +76,4 @@ class PairingsControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal nil, session[:pairings]
   end
-
 end
