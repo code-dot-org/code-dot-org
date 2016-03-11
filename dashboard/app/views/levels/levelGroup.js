@@ -1,4 +1,4 @@
-/* global levelCount, page, fallbackResponse, callback, app, level, lastAttempt, sendReport */
+/* global levelCount, page, fallbackResponse, callback, app, level, lastAttempt, sendReport, appOptions, Dialog */
 
 window.getResult = function()
 {
@@ -31,14 +31,48 @@ window.getResult = function()
 
   var response = JSON.stringify(lastAttempt);
 
+
+  var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
+
+  var result;
+  var submitted;
+
+  if (window.appOptions.level.submittable || this.forceSubmittable)
+  {
+    result = true;
+    submitted = true;
+  }
+  else
+  {
+    result = true; // this.validateAnswers();
+    submitted = false;
+  }
+
   return {
     "response": response,
     "result": true,
-    "errorType": null
+    "errorType": null,
+    "submitted": submitted
   };
 };
 
 $(document).ready(function() {
+
+  // Are we read-only?  This can be because we're a teacher OR because an answer
+  // has been previously submitted.
+  if (window.appOptions.readonlyWorkspace)
+  {
+    // hide the Submit button.
+    $('.submitButton').hide();
+
+    // Are we a student viewing their own previously-submitted work?
+    if (window.appOptions.submitted)
+    {
+      // show the Unsubmit button.
+      $('.unsubmitButton').show();
+    }
+  }
+
   $(".nextPageButton").click($.proxy(function(event) {
 
     // Submit what we have, and when that's done, go to the next page of the
@@ -48,6 +82,7 @@ $(document).ready(function() {
     var response = results.response;
     var result = results.result;
     var errorType = results.errorType;
+    var submitted = appOptions.submitted;
 
     sendReport({
       program: response,
@@ -58,10 +93,46 @@ $(document).ready(function() {
       result: result,
       pass: result,
       testResult: result ? 100 : 0,
+      submitted: submitted,
       onComplete: function () {
         var newLocation = window.location.href.replace("/page/" + (page+1), "/page/" + (page+2));
         window.location.href = newLocation;
       }
     });
   }, this));
+
+  // Unsubmit button should only be available when this is a standalone Multi.
+  $('.unsubmitButton').click(function() {
+
+    var dialog = new Dialog({
+      body:
+        '<div class="modal-content no-modal-icon">' +
+          '<p class="dialog-title">Unsubmit answer</p>' +
+          '<p class="dialog-body">' +
+          'This will unsubmit your last answer.' +
+          '</p>' +
+          '<button id="continue-button">Okay</button>' +
+          '<button id="cancel-button">Cancel</button>' +
+        '</div>'
+    });
+
+    var dialogDiv = $(dialog.div);
+    dialog.show();
+
+    dialogDiv.find('#continue-button').click(function () {
+      $.post(window.appOptions.unsubmitUrl,
+        {"_method": 'PUT', user_level: {submitted: false}},
+        function(data)
+        {
+          // Just reload so that the progress in the header is shown correctly.
+          location.reload();
+        }
+      );
+    });
+
+    dialogDiv.find('#cancel-button').click(function () {
+      dialog.hide();
+    });
+  });
+
 });

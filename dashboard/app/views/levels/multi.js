@@ -171,7 +171,10 @@ Multi.prototype.ready = function()
     }
   }
 
-  $('.submitButton').click($.proxy(this.submitButtonClick, this));
+  if (this.standalone) {
+    $('.submitButton').click($.proxy(this.submitButtonClick, this));
+    $('.unsubmitButton').click($.proxy(this.unsubmitButtonClick, this));
+  }
 };
 
 Multi.prototype.getCurrentAnswer = function()
@@ -260,8 +263,8 @@ Multi.prototype.submitButtonClick = function()
 };
 
 // Unsubmit button should only be available when this is a standalone Multi.
-$('.unsubmitButton').click(function() {
-
+Multi.prototype.unsubmitButtonClick = function()
+{
   var dialog = new Dialog({
     body:
       '<div class="modal-content no-modal-icon">' +
@@ -291,7 +294,7 @@ $('.unsubmitButton').click(function() {
   dialogDiv.find('#cancel-button').click(function () {
     dialog.hide();
   });
-});
+};
 
 
 Multi.prototype.validateAnswers = function()
