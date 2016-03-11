@@ -533,25 +533,11 @@ class Script < ActiveRecord::Base
   end
 
   def summarize
-
     summary = {
       id: id,
       name: name,
       stages: stages.map(&:summarize),
     }
-
-
-
-    #summary[:stages][21][:levels][2] = summary[:stages][21][:levels][1].deep_dup
-    #summary[:stages][21][:levels][2][:position] = 3
-    #summary[:stages][21][:levels][2][:title] = 3
-    #summary[:stages][21][:levels][2][:url] << "?page=1"
-    #summary[:stages][21][:levels][1][:url] << "?page=0"
-
-    #puts summary[:stages][21][:levels].to_json
-
-    #levelInfo = Script.cache_find_level(summary[:stages][21][:levels][1][:id])
-    #puts levelInfo.to_json
 
     summary[:trophies] = Concept.summarize_all if trophies
 
