@@ -2346,30 +2346,38 @@ function rectFromElementBoundingBox(element) {
 
 /**
  * Displays a small alert box inside DOM element at parentSelector.
- * @param {string} parentSelector
- * @param {object} props A set of React properties passed to the AbuseError
- *   component
+ * @param {React.Component} alertContents
+ * @param {string} type - Alert type (error or warning)
  */
-StudioApp.prototype.displayAlert = function (parentSelector, props) {
+StudioApp.prototype.displayAlert = function (type, alertContents) {
   // Each parent is assumed to have at most a single alert. This assumption
   // could be changed, but we would then want to clean up our DOM element on
   // close
-  var parent = $(parentSelector);
+  var parent = $("#codeWorkspace");
+  var toolbarWidth;
+  if (this.usingBlockly_) {
+    toolbarWidth = $(".blocklyToolboxDiv").width();
+  } else{
+    toolbarWidth = $(".droplet-palette-element").width() + $(".droplet-gutter").width();
+   }
   var container = parent.children('.react-alert');
   if (container.length === 0) {
-    container = $("<div class='react-alert'/>");
+    container = $("<div class='react-alert'/>").css({
+      position: 'absolute',
+      left: toolbarWidth,
+      top: $("#headers").height()
+    });
     parent.append(container);
   }
+  var renderElement = container[0];
 
-  var reactProps = $.extend({}, {
-    className: 'alert-error',
-    onClose: function () {
-      React.unmountComponentAtNode(container[0]);
-    }
-  }, props);
-
-  var element = React.createElement(Alert, reactProps);
-  ReactDOM.render(element, container[0]);
+  var handleAlertClose = function () {
+    React.unmountComponentAtNode(renderElement);
+  };
+  ReactDOM.render(
+    <Alert onClose={handleAlertClose} type={type}>
+      {alertContents}
+    </Alert>, renderElement);
 };
 
 /**
@@ -2379,19 +2387,11 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
  */
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
   if (window.dashboard && dashboard.project.exceedsAbuseThreshold()) {
-    this.displayAlert(parentSelector, {
-      body: React.createElement(dashboard.AbuseError, {
-        i18n: {
-          tos: window.dashboard.i18n.t('project.abuse.tos'),
-          contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
-        }
-      }),
-      style: {
-        top: 45,
-        left: 350,
-        right: 50
-      }
-    });
+    var i18n = {
+      tos: window.dashboard.i18n.t('project.abuse.tos'),
+      contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
+    };
+    this.displayAlert('error', <dashboard.AbuseError i18n={i18n}/>);
   }
 };
 

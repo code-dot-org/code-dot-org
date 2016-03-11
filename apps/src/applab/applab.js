@@ -543,6 +543,24 @@ function markSeenDataAlert(channelId) {
   localStorage.setItem('dataAlerts', JSON.stringify(channelIds));
 }
 
+function onCloseShareWarnings(showStoreDataAlert) {
+  // we closed the dialog without hitting too_young
+  // Only want to ask about age once across apps
+  if (!Applab.user.isSignedIn) {
+    utils.trySetLocalStorage('is13Plus', 'true');
+  }
+  // Only want to ask about storing data once per app.
+  if (showStoreDataAlert) {
+    markSeenDataAlert(Applab.channelId);
+  }
+  window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+}
+
+function handleShareWarningsTooYoung() {
+  utils.trySetLocalStorage('is13Plus', 'false');
+  window.location.href = '/too_young';
+}
+
 /**
  * Starts the app after (potentially) Showing a modal warning about data sharing
  * (if appropriate) and determining user is old enough
@@ -555,26 +573,12 @@ Applab.startSharedAppAfterWarnings = function () {
 
   var modal = document.createElement('div');
   document.body.appendChild(modal);
-  return ReactDOM.render(React.createElement(ShareWarningsDialog, {
-    showStoreDataAlert: showStoreDataAlert,
-    is13Plus: is13Plus,
-    handleClose: function () {
-      // we closed the dialog without hitting too_young
-      // Only want to ask about age once across apps
-      if (!Applab.user.isSignedIn) {
-        utils.trySetLocalStorage('is13Plus', 'true');
-      }
-      // Only want to ask about storing data once per app.
-      if (showStoreDataAlert) {
-        markSeenDataAlert(Applab.channelId);
-      }
-      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
-    },
-    handleTooYoung: function () {
-      utils.trySetLocalStorage('is13Plus', 'false');
-      window.location.href = '/too_young';
-    }
-  }), modal);
+
+  return ReactDOM.render(<ShareWarningsDialog
+    showStoreDataAlert={showStoreDataAlert}
+    is13Plus={is13Plus}
+    handleClose={onCloseShareWarnings.bind(null, showStoreDataAlert)}
+    handleTooYoung={handleShareWarningsTooYoung}/>, modal);
 };
 
 /**
@@ -609,6 +613,7 @@ Applab.init = function(config) {
     isAdmin: (config.isAdmin === true),
     isSignedIn: config.isSignedIn
   };
+  Applab.isReadOnlyView = config.readonlyWorkspace;
 
   loadLevel();
 
@@ -682,6 +687,10 @@ Applab.init = function(config) {
     // Set designModeViz contents after it is created in configureDom()
     // and sized in drawDiv().
     Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
+
+    if (!!config.level.projectTemplateLevelName) {
+      studioApp.displayAlert('warning', <div>{commonMsg.projectWarning()}</div>);
+    }
 
     studioApp.alertIfAbusiveProject('#codeWorkspace');
 
@@ -1052,7 +1061,7 @@ Applab.renderVisualizationOverlay = function() {
   }
 
   // Enable crosshair cursor for divApplab and designModeViz
-  $(divApplab).toggleClass('withCrosshair', !Applab.isRunning());
+  $(divApplab).toggleClass('withCrosshair', Applab.isCrosshairAllowed());
   $(designModeViz).toggleClass('withCrosshair', true);
 
   if (!Applab.visualizationOverlay_) {
@@ -1064,7 +1073,7 @@ Applab.renderVisualizationOverlay = function() {
   var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
 
   Applab.visualizationOverlay_.render(visualizationOverlay, {
-    isApplabRunning: Applab.isRunning(),
+    isCrosshairAllowed: Applab.isCrosshairAllowed(),
     scale: scaledWidth / unscaledWidth,
     isInDesignMode: Applab.isInDesignMode()
   });
@@ -1637,4 +1646,8 @@ Applab.getScreens = function() {
 // Wrap design mode function so that we can call from commands
 Applab.updateProperty = function (element, property, value) {
   return designMode.updateProperty(element, property, value);
+};
+
+Applab.isCrosshairAllowed = function () {
+  return !Applab.isReadOnlyView && !Applab.isRunning();
 };

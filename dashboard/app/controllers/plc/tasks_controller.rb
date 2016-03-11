@@ -22,8 +22,10 @@ class Plc::TasksController < ApplicationController
   # POST /plc/tasks
   # POST /plc/tasks.json
   def create
+    raise 'All tasks must have a distinct type' if @task.type == 'Plc::Task'
+
     if @task.save
-      redirect_to plc_task_url(@task), notice: 'Task was successfully created.'
+      redirect_to edit_plc_task_url(@task), notice: 'Task was successfully created.'
     else
       redirect_to action: :new
     end
@@ -49,12 +51,13 @@ class Plc::TasksController < ApplicationController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def task_params
-    #Depending on the task, we'll require different parameters. Extend this later when we know what the better
-    #symbols are
+    #Rails forms use the full name of the class including the module they are in, so we'll do the same
     if params[:plc_learning_resource_task]
-      params.require(:plc_learning_resource_task).permit(:name, :plc_learning_module_id, :type)
+      params.require(:plc_learning_resource_task).permit(:name, :plc_learning_module_id, :type, :resource_url)
     elsif params[:plc_script_completion_task]
-      params.require(:plc_script_completion_task).permit(:name, :plc_learning_module_id, :type)
+      params.require(:plc_script_completion_task).permit(:name, :plc_learning_module_id, :type, :script_id)
+    elsif params[:plc_written_assignment_task]
+      params.require(:plc_written_assignment_task).permit(:name, :plc_learning_module_id, :type, :assignment_description)
     elsif params[:plc_task]
       params.require(:plc_task).permit(:name, :plc_learning_module_id, :type)
     end

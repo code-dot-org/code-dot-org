@@ -13,7 +13,6 @@ var setPropertyDropdown = require('./setPropertyDropdown');
 var assetPrefix = require('../assetManagement/assetPrefix');
 
 var errorHandler = require('../errorHandler');
-var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var applabTurtle = require('./applabTurtle');
 var ChangeEventHandler = require('./ChangeEventHandler');
@@ -37,6 +36,17 @@ var toBeCached = {};
  * @type {EventSandboxer}
  */
 var eventSandboxer = new EventSandboxer();
+
+function outputWarning(errorString) {
+  var line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
+  errorHandler.outputError(errorString, ErrorLevel.WARNING, line);
+}
+
+function outputError(errorString) {
+  var line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
+  errorHandler.outputError(errorString, ErrorLevel.ERROR, line);
+}
+
 
 /**
  * @param value
@@ -92,16 +102,20 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
       case 'array':
         properType = Array.isArray(varValue);
         break;
+      case 'record':
+        // Validate that we have a data record. These must be objects, and
+        // not arrays
+        properType = typeof varValue === 'object' && !Array.isArray(varValue);
+        break;
       default:
         properType = (typeof varValue === expectedType);
         break;
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
-      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-      var errorString = funcName + "() " + varName + " parameter value (" +
-        varValue + ") is not a " + expectedType + ".";
-      outputError(errorString, ErrorLevel.WARNING, line);
+      outputWarning(funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not a " + expectedType + ".");
+
     }
     opts[validatedTypeKey] = properType;
   }
@@ -120,10 +134,8 @@ function apiValidateTypeAndRange(opts, funcName, varName, varValue,
     }
     inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!inRange) {
-      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-      var errorString = funcName + "() " + varName + " parameter value (" +
-        varValue + ") is not in the expected range.";
-      outputError(errorString, ErrorLevel.WARNING, line);
+      outputWarning(funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not in the expected range.");
     }
     opts[validatedRangeKey] = inRange;
   }
@@ -134,10 +146,8 @@ function apiValidateActiveCanvas(opts, funcName) {
   if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
     var activeCanvas = Boolean(Applab.activeCanvas);
     if (!activeCanvas) {
-      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-      var errorString = funcName + "() called without an active canvas. Call " +
-        "createCanvas() first.";
-      outputError(errorString, ErrorLevel.WARNING, line);
+      outputWarning(funcName + "() called without an active canvas. Call " +
+        "createCanvas() first.");
     }
     if (opts) {
       opts[validatedActiveCanvasKey] = activeCanvas;
@@ -165,17 +175,15 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
     var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
 
     if (!valid) {
-      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
       var errorString = "";
       if (existsOutsideApplab) {
         errorString = funcName + "() " + varName + " parameter refers to an id (" + id +
             ") which is already in use outside of Applab. Choose a different id.";
         throw new Error(errorString);
       } else {
-        errorString = funcName + "() " + varName +
+        outputWarning(funcName + "() " + varName +
             " parameter refers to an id (" + id + ") which " +
-            (existsInApplab ? "already exists." : "does not exist.");
-        outputError(errorString, ErrorLevel.WARNING, line);
+            (existsInApplab ? "already exists." : "does not exist."));
       }
     }
     opts[validatedDomKey] = valid;
@@ -196,13 +204,12 @@ applabCommands.setScreen = function (opts) {
 };
 
 function reportUnsafeHtml(removed, unsafe, safe, warnings) {
-  var currentLineNumber = getCurrentLineNumber(Applab.JSInterpreter);
   var msg = "The following lines of HTML were modified or removed:\n" + removed +
       "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
   if (warnings.length > 0) {
     msg += '\nwarnings:\n' + warnings.join('\n');
   }
-  outputError(msg, ErrorLevel.WARNING, currentLineNumber);
+  outputWarning(msg);
 }
 
 applabCommands.container = function (opts) {
@@ -1192,9 +1199,7 @@ applabCommands.setProperty = function(opts) {
 
   var info = setPropertyDropdown.getInternalPropertyInfo(element, property);
   if (!info) {
-    var currentLineNumber = getCurrentLineNumber(Applab.JSInterpreter);
-    outputError('Cannot set property "' + property + '" on element "' + elementId + '".',
-      ErrorLevel.ERROR, currentLineNumber);
+    outputError('Cannot set property "' + property + '" on element "' + elementId + '".');
     return;
   }
 
@@ -1425,10 +1430,20 @@ applabCommands.createRecord = function (opts) {
   // PARAMNAME: createRecord: table vs. tableName
   // PARAMNAME: createRecord: callback vs. callbackFunction
   apiValidateType(opts, 'createRecord', 'table', opts.table, 'string');
-  apiValidateType(opts, 'createRecord', 'record', opts.record, 'object');
-  apiValidateType(opts, 'createRecord', 'record.id', opts.record.id, 'undefined');
+  var validRecord = apiValidateType(opts, 'createRecord', 'record', opts.record, 'record');
   apiValidateType(opts, 'createRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'createRecord', 'onError', opts.onError, 'function', OPTIONAL);
+  if (!validRecord) {
+    return;
+  }
+  if (!opts.table) {
+    outputError('missing required parameter "tableName"');
+    return;
+  }
+  if (opts.record.id) {
+    outputError('record must not have an "id" property');
+    return;
+  }
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
@@ -1517,6 +1532,10 @@ applabCommands.readRecords = function (opts) {
   apiValidateType(opts, 'readRecords', 'searchTerms', opts.searchParams, 'object');
   apiValidateType(opts, 'readRecords', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
+  if (!opts.table) {
+    outputError('missing required parameter "tableName"');
+    return;
+  }
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
@@ -1532,10 +1551,21 @@ applabCommands.updateRecord = function (opts) {
   // PARAMNAME: updateRecord: table vs. tableName
   // PARAMNAME: updateRecord: callback vs. callbackFunction
   apiValidateType(opts, 'updateRecord', 'table', opts.table, 'string');
-  apiValidateType(opts, 'updateRecord', 'record', opts.record, 'object');
+  var validRecord = apiValidateType(opts, 'updateRecord', 'record', opts.record, 'record');
   apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
   apiValidateType(opts, 'updateRecord', 'callback', opts.onComplete, 'function', OPTIONAL);
   apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
+  if (!validRecord) {
+    return;
+  }
+  if (!opts.table) {
+    outputError('missing required parameter "tableName"');
+    return;
+  }
+  if (opts.record.id === undefined) {
+    outputError('missing required property "id"');
+    return;
+  }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.updateRecord(opts.table, opts.record, onComplete, onError);
@@ -1551,10 +1581,21 @@ applabCommands.deleteRecord = function (opts) {
   // PARAMNAME: deleteRecord: table vs. tableName
   // PARAMNAME: deleteRecord: callback vs. callbackFunction
   apiValidateType(opts, 'deleteRecord', 'table', opts.table, 'string');
-  apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'object');
+  var validRecord = apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'record');
   apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
   apiValidateType(opts, 'deleteRecord', 'callback', opts.onComplete, 'function', OPTIONAL);
   apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
+  if (!validRecord) {
+    return;
+  }
+  if (!opts.table) {
+    outputError('missing required parameter "tableName"');
+    return;
+  }
+  if (opts.record.id === undefined) {
+    outputError('missing required property "id"');
+    return;
+  }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.deleteRecord(opts.table, opts.record, onComplete, onError);
@@ -1603,12 +1644,6 @@ applabCommands.drawChart = function (opts) {
   apiValidateType(opts, 'drawChart', 'callback', opts.callback, 'function', OPTIONAL);
   apiValidateDomIdExistence(opts, 'drawChart', 'chartId', opts.chartId, true);
 
-  // Bind a reference to the current interpreter so we can later make sure we're
-  // not doing anything asynchronous across re-runs.
-  var jsInterpreter = Applab.JSInterpreter;
-
-  var currentLineNumber = getCurrentLineNumber(jsInterpreter);
-
   var chartApi = new ChartApi();
 
   /**
@@ -1623,7 +1658,7 @@ applabCommands.drawChart = function (opts) {
   var onSuccess = function () {
     stopLoadingSpinnerFor(opts.chartId);
     chartApi.warnings.forEach(function (warning) {
-      outputError(warning.message, ErrorLevel.WARNING, currentLineNumber);
+      outputWarning(warning.message);
     });
     if (opts.callback) {
       opts.callback.call(null);
@@ -1638,7 +1673,7 @@ applabCommands.drawChart = function (opts) {
    */
   var onError = function (error) {
     stopLoadingSpinnerFor(opts.chartId);
-    outputError(error.message, ErrorLevel.ERROR, currentLineNumber);
+    outputError(error.message);
   };
 
   startLoadingSpinnerFor(opts.chartId);
@@ -1675,12 +1710,6 @@ applabCommands.drawChartFromRecords = function (opts) {
   apiValidateType(opts, 'drawChartFromRecords', 'callback', opts.callback, 'function', OPTIONAL);
   apiValidateDomIdExistence(opts, 'drawChartFromRecords', 'chartId', opts.chartId, true);
 
-  // Bind a reference to the current interpreter so we can later make sure we're
-  // not doing anything asynchronous across re-runs.
-  var jsInterpreter = Applab.JSInterpreter;
-
-  var currentLineNumber = getCurrentLineNumber(jsInterpreter);
-
   var chartApi = new ChartApi();
 
   /**
@@ -1695,7 +1724,7 @@ applabCommands.drawChartFromRecords = function (opts) {
   var onSuccess = function () {
     stopLoadingSpinnerFor(opts.chartId);
     chartApi.warnings.forEach(function (warning) {
-      outputError(warning.message, ErrorLevel.WARNING, currentLineNumber);
+      outputWarning(warning.message);
     });
     if (opts.callback) {
       opts.callback.call(null);
@@ -1710,7 +1739,7 @@ applabCommands.drawChartFromRecords = function (opts) {
    */
   var onError = function (error) {
     stopLoadingSpinnerFor(opts.chartId);
-    outputError(error.message, ErrorLevel.ERROR, currentLineNumber);
+    outputError(error.message);
   };
 
   startLoadingSpinnerFor(opts.chartId);
@@ -1754,13 +1783,3 @@ function stopLoadingSpinnerFor(elementId) {
     return !(/loading/i.test(x));
   }).join(' ');
 }
-
-/**
- * For the provided interpreter, get the nearest line number in user code
- * up the stack from the last executed command.
- * @param {JSInterpreter} jsInterpreter
- * @returns {number}
- */
-var getCurrentLineNumber = function (jsInterpreter) {
-  return 1 + jsInterpreter.getNearestUserCodeLine();
-};
