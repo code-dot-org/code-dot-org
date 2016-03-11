@@ -6,7 +6,7 @@ require 'properties_api'
 require "fakeredis"
 require "timecop"
 
-# The redis cache is a class property of Rack::Attack. This means that
+# The cache is a class property of Rack::Attack. This means that
 # the counts and time (as modified by timecop) used by each throttling rule
 # (table reads, etc) for each channel id are shared across all tests.
 #
@@ -18,15 +18,12 @@ require "timecop"
 # Allow 3 requests of each type in the first 15 seconds
 REDUCED_RATE_LIMIT_FOR_TESTING = 3.0 / 60
 
-CDO.stub(:max_table_reads_per_sec, REDUCED_RATE_LIMIT_FOR_TESTING) do
-  CDO.stub(:max_table_writes_per_sec, REDUCED_RATE_LIMIT_FOR_TESTING) do
-    CDO.stub(:max_property_reads_per_sec, REDUCED_RATE_LIMIT_FOR_TESTING) do
-      CDO.stub(:max_property_writes_per_sec, REDUCED_RATE_LIMIT_FOR_TESTING) do
-        require 'cdo/rack/attack'
-      end
-    end
-  end
-end
+CDO.max_table_reads_per_sec = REDUCED_RATE_LIMIT_FOR_TESTING
+CDO.max_table_writes_per_sec = REDUCED_RATE_LIMIT_FOR_TESTING
+CDO.max_property_reads_per_sec = REDUCED_RATE_LIMIT_FOR_TESTING
+CDO.max_property_writes_per_sec = REDUCED_RATE_LIMIT_FOR_TESTING
+
+require 'cdo/rack/attack'
 
 class RackAttackTest < Minitest::Test
   include Rack::Test::Methods
@@ -36,6 +33,9 @@ class RackAttackTest < Minitest::Test
   OTHER_TABLE = 'other_table'
   PROPERTY_KEY = 'key'
   OTHER_KEY = 'other_key'
+
+  @@cache_store = Rack::Attack::StoreProxy::RedisStoreProxy.new(Redis.new(url: 'redis://localhost:6379'))
+  @@updater = RackAttackConfigUpdater.new.start(@@cache_store)
 
   def build_rack_mock_session
     # TODO(dave): chain middleware components like this in other middleware tests to reduce complexity.
@@ -54,26 +54,31 @@ class RackAttackTest < Minitest::Test
 
   # Test cases
 
-  # non-stubbed rate limits from CDO are used here
+  # non-stubbed rate limits from the real CDO config are used here
   def test_limits
+    max_table_reads_per_sec = 20
+    max_table_writes_per_sec = 40
+    max_property_reads_per_sec = 40
+    max_property_writes_per_sec = 40
+
     expected_limits = [[1200, 15], [2400, 60], [4800, 240]]
-    actual_limits = Rack::Attack.limits CDO.max_table_reads_per_sec
+    actual_limits = @@updater.limits max_table_reads_per_sec
     assert_equal expected_limits, actual_limits, "Max table read limits and periods are set correctly"
 
     expected_limits = [[2400, 15], [4800, 60], [9600, 240]]
-    actual_limits = Rack::Attack.limits CDO.max_table_writes_per_sec
+    actual_limits = @@updater.limits max_table_writes_per_sec
     assert_equal expected_limits, actual_limits, "Max table write limits and periods are set correctly"
 
     expected_limits = [[2400, 15], [4800, 60], [9600, 240]]
-    actual_limits = Rack::Attack.limits CDO.max_property_reads_per_sec
+    actual_limits = @@updater.limits max_property_reads_per_sec
     assert_equal expected_limits, actual_limits, "Max property read limits and periods are set correctly"
 
     expected_limits = [[2400, 15], [4800, 60], [9600, 240]]
-    actual_limits = Rack::Attack.limits CDO.max_property_writes_per_sec
+    actual_limits = @@updater.limits max_property_writes_per_sec
     assert_equal expected_limits, actual_limits, "Max property write limits and periods are set correctly"
 
     expected_limits = [[3, 15], [6, 60], [12, 240]]
-    actual_limits = Rack::Attack.limits REDUCED_RATE_LIMIT_FOR_TESTING
+    actual_limits = @@updater.limits REDUCED_RATE_LIMIT_FOR_TESTING
     assert_equal expected_limits, actual_limits, "Reduced rate limits for testing are set correctly"
   end
 
@@ -124,8 +129,33 @@ class RackAttackTest < Minitest::Test
     Timecop.travel 241
 
     assert_read_records 13, SUCCESSFUL, '240s rate limit expires'
+
+    # Now test that a dynamic update to the rate limit is enforced correctly.
+    Timecop.freeze rounded_time_now + 60
+    _test_table_dynamic_rate_limit_enforced
   ensure
     Timecop.return
+  end
+
+  # Helper function for test_table_read_limits_with_exponential_backoff to test
+  # dynamic rate limit updates.
+  def _test_table_dynamic_rate_limit_enforced
+    # Double the allowed rate in the dynamic configuration and make sure
+    # that we can read twice as many rows as in the previous test before being
+    # rate limited.
+    DCDO.set('max_table_reads_per_sec', 6.0 / 60)
+    DCDO.update_cache_for_test  # Make sure the updated limit applies immediately.
+
+    Timecop.freeze rounded_time_now
+    assert_read_records 1, SUCCESSFUL
+    assert_read_records 2, SUCCESSFUL
+    assert_read_records 3, SUCCESSFUL
+    assert_read_records 4, SUCCESSFUL
+    assert_read_records 5, SUCCESSFUL
+    assert_read_records 6, SUCCESSFUL
+
+    # don't increment the index here because throttled requests don't affect the counts.
+    assert_read_records 6, RATE_LIMITED
   end
 
   def test_table_write_limit_enforced
