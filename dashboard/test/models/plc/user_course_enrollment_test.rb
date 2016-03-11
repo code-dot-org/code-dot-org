@@ -21,5 +21,4 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     assert_equal @plc_task, task_assignments.first.plc_task
   end
 
-
 end

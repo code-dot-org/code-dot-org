@@ -216,7 +216,6 @@ class RackAttackTest < Minitest::Test
     get table_path(table_name)
   end
 
-
   def assert_read_records(index, expected_status, msg = nil, table_name = TABLE_NAME)
     read_records(table_name)
     assert_equal expected_status, last_response.status, "request #{index} expected #{expected_status} #{msg}"

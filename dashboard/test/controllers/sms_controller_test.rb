@@ -63,7 +63,6 @@ class SmsControllerTest < ActionController::TestCase
     twilio_messages_mock.expects(:create).raises(Twilio::REST::RequestError.new("New exception??"))
     Twilio::REST::Client.any_instance.stubs(:messages).returns(twilio_messages_mock)
 
-
     assert_raises(Twilio::REST::RequestError) do
       post :send_to_phone, level_source: create(:level_source).id, phone: 'xxxxxx'
     end

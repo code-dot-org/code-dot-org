@@ -201,7 +201,6 @@ module Poste2
     })
   end
 
-
   class DeliveryMethod
 
     ALLOWED_SENDERS = Set.new ['pd@code.org', 'noreply@code.org']
