@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","ConsistentRead":true,"KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:stub_rack_attack_table:"}],"ComparisonOperator":"EQ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '159'
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - Server
+      Date:
+      - Thu, 10 Mar 2016 21:03:44 GMT
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '132'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - N84ULUMUTKVFTDSQVBVM2N3ENJVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3880715766'
+    body:
+      encoding: UTF-8
+      string: '{"__type":"com.amazon.coral.service#UnrecognizedClientException","message":"The
+        security token included in the request is invalid."}'
+    http_version: 
+  recorded_at: Thu, 10 Mar 2016 21:00:00 GMT
+recorded_with: VCR 3.0.0
