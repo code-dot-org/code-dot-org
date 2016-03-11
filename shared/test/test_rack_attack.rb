@@ -83,7 +83,7 @@ class RackAttackTest < Minitest::Test
   RATE_LIMITED = 429
 
   def test_table_read_limits_with_exponential_backoff
-    Timecop.freeze rounded_time_now + 60
+    Timecop.freeze rounded_time_now
 
     assert_read_records 1, SUCCESSFUL
     assert_read_records 2, SUCCESSFUL
