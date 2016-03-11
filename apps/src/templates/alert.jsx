@@ -8,18 +8,17 @@ var Alert = React.createClass({
   propTypes: {
     children: React.PropTypes.element.isRequired,
     type: React.PropTypes.oneOf("error", "warning").isRequired,
-    leftMargin: React.PropTypes.number.isRequired,
     onClose: React.PropTypes.func.isRequired
   },
 
   render: function () {
     var styles = {
       main: {
-        position: 'absolute',
+        position: 'relative',
         zIndex: 1000,
-        top: 45,
-        left: this.props.leftMargin,
-        right: 50
+        marginTop: 20,
+        marginLeft: 50,
+        marginRight: 50
       },
       typeSpecific: {
         error: {

@@ -146,8 +146,7 @@ Eval.init = function(config) {
     }
 
     if (!!config.level.projectTemplateLevelName) {
-      studioApp.displayAlert('#codeWorkspace', 200, 'warning',
-        <div>{commonMsg.projectWarning()}</div>);
+      studioApp.displayAlert('warning', <div>{commonMsg.projectWarning()}</div>);
     }
   };
 

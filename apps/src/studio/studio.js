@@ -1900,8 +1900,7 @@ Studio.init = function(config) {
     drawMap();
 
     if (!!config.level.projectTemplateLevelName) {
-      studioApp.displayAlert('#codeWorkspace', 200, 'warning',
-        <div>{commonMsg.projectWarning()}</div>);
+      studioApp.displayAlert('warning', <div>{commonMsg.projectWarning()}</div>);
     }
   };
 
