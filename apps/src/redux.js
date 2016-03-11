@@ -21,7 +21,12 @@ if (process.env.NODE_ENV !== "production") {
  * @return {Store} Configured Redux store, ready for use.
  */
 module.exports = function createStore(reducer, initialState) {
-  if (process.env.NODE_ENV !== "production") {
+
+  // You have to manually enable debugging here, both to keep the logger out
+  // of production bundles, and because it causes a lot of console noise and
+  // makes our unit tests fail.
+  var enableReduxDebugging = false;
+  if (process.env.NODE_ENV !== "production" && enableReduxDebugging) {
     var reduxLogger = createLogger();
 
     // window.devToolsExtension is a Redux middleware function that must be
