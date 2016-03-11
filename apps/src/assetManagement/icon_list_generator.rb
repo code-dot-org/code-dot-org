@@ -8,7 +8,7 @@ icons = data['icons']
 @keywords = {}
 
 def add_keyword_entry(keyword, icon)
-  keyword.split('-').each do |token|
+  keyword.split(/-|\s/).each do |token|
     k = @keywords
     token.split('').each do |letter|
       k = k[letter] ||= {}
@@ -21,9 +21,10 @@ end
 icons.each do |icon|
   add_keyword_entry icon['id'], icon
   if icon['filter']
-    icon['filter'].each do |keyword|
-      add_keyword_entry keyword, icon
-    end
+    icon['filter'].each{ |keyword| add_keyword_entry keyword, icon }
+  end
+  if icon['aliases']
+    icon['aliases'].each{ |keyword| add_keyword_entry keyword, icon }
   end
 end
 
