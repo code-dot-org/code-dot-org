@@ -33,6 +33,9 @@ function onErrorStatus(onError, commandName, status) {
   if (onError) {
     onError('Error in ' + commandName + ': ' + getStatusDescription(status));
   }
+  if (status === 429) {
+    Applab.showRateLimitAlert();
+  }
 }
 
 /**
