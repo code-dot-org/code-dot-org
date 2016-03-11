@@ -14,7 +14,9 @@ module.exports = React.createClass({
   },
 
   search: function (e) {
-    this.setState({search: e.target.value});
+    this.setState({
+      search: e.target.value.toLowerCase().replace(/[^-a-z0-9]/g, '')
+    });
   },
 
   render: function () {
