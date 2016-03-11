@@ -305,11 +305,6 @@ Style/MethodDefParentheses:
 Style/MultilineBlockChain:
   Enabled: false
 
-# Offense count: 4
-# Cop supports --auto-correct.
-Style/MultilineBlockLayout:
-  Enabled: false
-
 # Offense count: 105
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
