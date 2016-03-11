@@ -13,27 +13,177 @@ http_interactions:
       - '159'
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
     headers:
-      Server:
-      - Server
-      Date:
-      - Thu, 10 Mar 2016 21:03:44 GMT
+      X-Amzn-Requestid:
+      - SEJ82P1KQC0T2316PDF0HH026VVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '552194579'
       Content-Type:
       - application/x-amz-json-1.0
       Content-Length:
-      - '132'
-      Connection:
-      - keep-alive
-      X-Amzn-Requestid:
-      - N84ULUMUTKVFTDSQVBVM2N3ENJVV4KQNSO5AEMVJF66Q9ASUAAJG
-      X-Amz-Crc32:
-      - '3880715766'
+      - '4366'
+      Date:
+      - Fri, 11 Mar 2016 19:06:23 GMT
     body:
       encoding: UTF-8
-      string: '{"__type":"com.amazon.coral.service#UnrecognizedClientException","message":"The
-        security token included in the request is invalid."}'
+      string: '{"Count":17,"Items":[{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"1"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:19:33-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"2"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:23-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"3"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:24-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"4"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:49-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"5"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:50-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"6"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:27:47-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"7"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:27:48-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"8"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T10:36:30-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"9"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T10:44:33-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"10"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:06:08-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"11"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:23:10-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"12"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:24:22-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"13"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:27:18-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"14"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:28:25-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"15"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:52:44-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"16"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T16:01:37-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"17"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-09T10:48:03-08:00"}}],"ScannedCount":17}'
     http_version: 
-  recorded_at: Thu, 10 Mar 2016 21:00:00 GMT
+  recorded_at: Fri, 11 Mar 2016 19:04:00 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","ConsistentRead":true,"KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:stub_rack_attack_table:"}],"ComparisonOperator":"EQ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '159'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - DDHP5BKFJ72PM84F2UR0TU1P9FVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '552194579'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '4366'
+      Date:
+      - Fri, 11 Mar 2016 19:06:24 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":17,"Items":[{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"1"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:19:33-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"2"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:23-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"3"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:24-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"4"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:49-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"5"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:50-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"6"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:27:47-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"7"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:27:48-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"8"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T10:36:30-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"9"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T10:44:33-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"10"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:06:08-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"11"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:23:10-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"12"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:24:22-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"13"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:27:18-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"14"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:28:25-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"15"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:52:44-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"16"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T16:01:37-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"17"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-09T10:48:03-08:00"}}],"ScannedCount":17}'
+    http_version: 
+  recorded_at: Fri, 11 Mar 2016 19:04:00 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","ConsistentRead":true,"KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:stub_rack_attack_table:"}],"ComparisonOperator":"EQ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '159'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - LIIP81NBPUECCK6R3SC0BTH6M7VV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '552194579'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '4366'
+      Date:
+      - Fri, 11 Mar 2016 19:06:25 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":17,"Items":[{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"1"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:19:33-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"2"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:23-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"3"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:24-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"4"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:49-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"5"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:50-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"6"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:27:47-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"7"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:27:48-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"8"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T10:36:30-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"9"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T10:44:33-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"10"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:06:08-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"11"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:23:10-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"12"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:24:22-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"13"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:27:18-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"14"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:28:25-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"15"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:52:44-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"16"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T16:01:37-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"17"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-09T10:48:03-08:00"}}],"ScannedCount":17}'
+    http_version: 
+  recorded_at: Fri, 11 Mar 2016 19:04:00 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","ConsistentRead":true,"KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:stub_rack_attack_table:"}],"ComparisonOperator":"EQ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '159'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - MP19M6UNKR58G3DKJ9EGTIKB8NVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '552194579'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '4366'
+      Date:
+      - Fri, 11 Mar 2016 19:06:24 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":17,"Items":[{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"1"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:19:33-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"2"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:23-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"3"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:24-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"4"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:49-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"5"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:50-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"6"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:27:47-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"7"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:27:48-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"8"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T10:36:30-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"9"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T10:44:33-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"10"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:06:08-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"11"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:23:10-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"12"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:24:22-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"13"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:27:18-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"14"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:28:25-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"15"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:52:44-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"16"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T16:01:37-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"17"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-09T10:48:03-08:00"}}],"ScannedCount":17}'
+    http_version: 
+  recorded_at: Fri, 11 Mar 2016 19:04:00 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","ConsistentRead":true,"KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:stub_rack_attack_table:"}],"ComparisonOperator":"EQ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '159'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - 7DVQ2EL6E9NU3OGA97EVPVKBKJVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '552194579'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '4366'
+      Date:
+      - Fri, 11 Mar 2016 19:06:25 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":17,"Items":[{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"1"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:19:33-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"2"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:23-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"3"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:24-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"4"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:49-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"5"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:50-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"6"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:27:47-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"7"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:27:48-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"8"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T10:36:30-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"9"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T10:44:33-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"10"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:06:08-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"11"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:23:10-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"12"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:24:22-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"13"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:27:18-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"14"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:28:25-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"15"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:52:44-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"16"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T16:01:37-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"17"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-09T10:48:03-08:00"}}],"ScannedCount":17}'
+    http_version: 
+  recorded_at: Fri, 11 Mar 2016 19:04:00 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","ConsistentRead":true,"KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:stub_rack_attack_table:"}],"ComparisonOperator":"EQ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '159'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - 98M2I4A08EQGHLQ2H2D690G5AFVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '552194579'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '4366'
+      Date:
+      - Fri, 11 Mar 2016 19:06:25 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":17,"Items":[{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"1"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:19:33-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"2"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:23-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"3"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:24-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"4"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:49-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"5"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:22:50-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"6"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:27:47-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"7"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-03T22:27:48-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"8"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T10:36:30-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"9"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T10:44:33-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"10"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:06:08-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"11"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:23:10-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"12"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:24:22-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"13"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:27:18-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"14"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:28:25-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"15"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T15:52:44-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"16"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-04T16:01:37-08:00"}},{"value":{"S":"{\"name\":\"Alice\",\"age\":7}"},"hash":{"S":"1:stub_rack_attack_table:"},"row_id":{"N":"17"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"stub_rack_attack_table"},"updated_at":{"S":"2016-03-09T10:48:03-08:00"}}],"ScannedCount":17}'
+    http_version: 
+  recorded_at: Fri, 11 Mar 2016 19:04:00 GMT
 recorded_with: VCR 3.0.0
