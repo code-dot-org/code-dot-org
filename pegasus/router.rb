@@ -8,6 +8,7 @@ require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
+require 'cdo/languages'
 require 'dynamic_config/page_mode'
 require 'active_support'
 require 'base64'
@@ -289,6 +290,11 @@ class Documents < Sinatra::Base
         cache_for @header['max_age']
       else
         cache :document
+      end
+
+      if request.post? && !@header['allow_post']
+        response.headers['Allow'] = 'GET, HEAD'
+        error 405
       end
 
       response.headers['X-Pegasus-Version'] = '3'

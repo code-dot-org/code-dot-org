@@ -226,6 +226,7 @@ ru:
       4-5 Artist For Loops 13_instruction: 'Этот проект начат без цикла «для» и занимает слишком много блоков!  Используйте блок «для», чтобы завершить спираль.  Подсказка:  длина последней строки составляет 250 пикселей.'
       4-5 Artist For Loops 14_instruction: 'Кто-то создал код, но потом понял, что его можно укоротить! Используйте блок "повторить" для замены блоков и завершения треугольной спирали. (Подсказка: длина последней строки составляет 300 пикселей).'
       4-5 Artist For Loops 15_instruction: 'Кто-то создал код, но затем понял, что его можно укоротить! Используй блок "повторить", чтобы заменить блоки и завершить шестиугольную спираль. (Подсказка: длина последней строки составляет 200 пикселей).'
+      4-5 Artist For Loops 2_instruction: 'Это блок "Повторить". Вместо того, чтобы вводить 1, 2, 3..., 10, блок "повторить" может повторять всё, что внутри него и считать числа за вас. Введите 10 в окно "до" в блоке "повторить".'
       4-5 Artist For Loops 3_instruction: 'Сможем посчитать от 1 до 50? Отредактируйте блок "повторить".'
       4-5 Artist For Loops 4_instruction: 'Заполните блок "повторить", чтобы посчитать от 1 до 10 по 1.'
       4-5 Artist For Loops 6_instruction: 'Нарисуйте квадраты со сторонами 50, 60, 70, 80 и 90 пикселей. Вам необходимо воспользоваться блоком "Нарисовать квадрат" 5 раз.'
@@ -1516,6 +1517,15 @@ ru:
       K-1 Maze Sequence Assessment 1_instruction: "Посмотрим, чему ты научился! \\r\nДвигайся сначала в одну, а затем в другую сторону, чтобы добраться до свиньи."
       K-1 Maze Sequence Assessment 2_instruction: Двигайся сначала в одну, а затем в другую сторону, чтобы добраться до свиньи.
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -3506,11 +3516,11 @@ ru:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

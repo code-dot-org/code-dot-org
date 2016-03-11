@@ -265,6 +265,11 @@ es-MX:
       4-5 Artist For Loops 13_instruction: '¡Éste diseño comienza sin un bloque "para" y toma demasiados bloques! Usa un bloque "para" para completar la espiral. Pista: La última línea mide 250 píxeles.'
       4-5 Artist For Loops 14_instruction: '¡Alguien comenzó el código, pero después se dió cuenta de que debe haber una forma más rápida! Usa un bloque "para" para reemplazar los bloques y completar la espiral triangular. (Pista: la última línea es de 300 píxeles.)'
       4-5 Artist For Loops 15_instruction: '¡Alguien comenzó el código, pero después se dió cuenta de que debe haber una forma más rápida! Usa un bloque "para" para reemplazar los bloques y completar la espiral triangular. (Pista: la última línea es de 200 píxeles.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: '¿Cómo podemos contar del 1 al 50? Edita el bloque "para".'
       4-5 Artist For Loops 4_instruction: 'Completa el bloque "para" de modo que cuente del 1 al 10 de 1 en 1.'
       4-5 Artist For Loops 6_instruction: 'Dibuja cuadrados con lados de 50, 60, 70, 80 y 90 píxeles. Necesitarás usar la función "dibujar un cuadrado" cinco veces.'
@@ -434,7 +439,7 @@ es-MX:
       4-5 While Loops 2_instruction: "Mueveme a la pila de tierra y remueve con 5 paleos, usando el bloque 'remover'."
       4-5 While Loops 3_instruction: 'Mueveme a la pila y remueve todo, despues mueveme hacia el agujero y llenalo completamente.  Sugerencia: Utiliza tan pocos bloques como sea posible.'
       4-5 While Loops 4_instruction: 'Wow, encontre un agujero realmente profundo! no se cuantas paleadas de tierra necesita. ¿Puedes escribir un programa que llene hasta que el suelo este parejo? Sugerencia: trata usando el bucle mientras.'
-      4-5 While Loops 5_instruction: 'Wow, ahora hay dos agujeros  muy profundos. ¿Puedes escribir un programa que llene los dos hasta que el suelo este parejo?'
+      4-5 While Loops 5_instruction: Wow, ahora hay dos agujeros muy profundos. ¿Puedes escribir un programa que llene ambos hasta que el suelo este parejo?
       4-5 While Loops 6_instruction: Wow, ahora hay un monton de tierra! ¿Puedes escribir un programa que quite todo eso para que el suelo quede parejo?
       4-5 While Loops 7_instruction: ¡Wow, ahora hay tres montones de tierra! ¿Puedes escribir un programa que elimine cada uno de ellos hasta que la tierre quede plana?
       4-5 While Loops 8_instruction: ' Hay un hueco muy profundo y mucha tierra amontonada. ¿Cúantas paladas son necesarias para aplanar la tierra? Sugerencia: Utiliza el circuito de bloque "while" para ambas.'
@@ -1639,6 +1644,15 @@ es-MX:
       K-1 Maze Sequence Assessment 1_instruction: "Esta es una prueba!\\r\nMuévete en una dirección,\nluego en otra para llevarme al cerdo"
       K-1 Maze Sequence Assessment 2_instruction: "Esta es una prueba!\\r\nMuévete en una dirección,\nluego enotra para llevarme al cerdo."
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -3632,11 +3646,11 @@ es-MX:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

@@ -9,6 +9,12 @@ module.exports = {
     green: '#b9bf15',
     white: '#fff',
     orange: '#ffa400',
-    teal: '#1abc9c'
+    teal: '#1abc9c',
+    // colors that are taken from bootstrap, and not necessarily part of our
+    // core theme
+    bootstrap: {
+      errorBackground: '#f2dede',
+      errorText: '#b94a48'
+    }
   }
 };

@@ -237,5 +237,260 @@
         </category>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="procedures_defnoreturn" editable="false">
+          <mutation>
+            <arg name="direction"/>
+            <arg name="nectars"/>
+            <arg name="honey"/>
+            <description>Move in a direction to either collect nectar or make honey.</description>
+          </mutation>
+          <title name="NAME">get nectar make honey</title>
+          <statement name="STACK">
+            <block type="controls_if" inline="false">
+              <mutation else="1"/>
+              <value name="IF0">
+                <block type="logic_compare" inline="true" movable="false">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="parameters_get">
+                      <title name="VAR">direction</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <title name="VAR">left</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="maze_turn">
+                  <title name="DIR">turnLeft</title>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                </block>
+              </statement>
+              <next>
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="controls_repeat_ext" inline="true">
+                          <value name="TIMES">
+                            <block type="parameters_get">
+                              <title name="VAR">nectars</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="maze_nectar"/>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="parameters_get">
+                                  <title name="VAR">honey</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="maze_honey"/>
+                              </statement>
+                              <next>
+                                <block type="maze_move">
+                                  <title name="DIR">moveBackward</title>
+                                  <next>
+                                    <block type="maze_move">
+                                      <title name="DIR">moveBackward</title>
+                                      <next>
+                                        <block type="controls_if" inline="false">
+                                          <mutation else="1"/>
+                                          <value name="IF0">
+                                            <block type="logic_compare" inline="true" movable="false">
+                                              <title name="OP">EQ</title>
+                                              <value name="A">
+                                                <block type="parameters_get">
+                                                  <title name="VAR">direction</title>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="variables_get">
+                                                  <title name="VAR">left</title>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <statement name="DO0">
+                                            <block type="maze_turn">
+                                              <title name="DIR">turnRight</title>
+                                            </block>
+                                          </statement>
+                                          <statement name="ELSE">
+                                            <block type="maze_turn">
+                                              <title name="DIR">turnLeft</title>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="variables_set" inline="false" deletable="false" movable="false">
+              <title name="VAR">left</title>
+              <value name="VALUE">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">0</title>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" inline="false" deletable="false" movable="false">
+                  <title name="VAR">right</title>
+                  <value name="VALUE">
+                    <block type="math_number" deletable="false" movable="false" editable="false">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="procedures_callnoreturn" inline="false">
+                          <mutation name="get nectar make honey">
+                            <arg name="direction"/>
+                            <arg name="nectars"/>
+                            <arg name="honey"/>
+                          </mutation>
+                          <value name="ARG0">
+                            <block type="variables_get">
+                              <title name="VAR">right</title>
+                            </block>
+                          </value>
+                          <value name="ARG1">
+                            <block type="math_number">
+                              <title name="NUM">0</title>
+                            </block>
+                          </value>
+                          <value name="ARG2">
+                            <block type="math_number">
+                              <title name="NUM">2</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="procedures_callnoreturn" inline="false">
+                                  <mutation name="get nectar make honey">
+                                    <arg name="direction"/>
+                                    <arg name="nectars"/>
+                                    <arg name="honey"/>
+                                  </mutation>
+                                  <value name="ARG0">
+                                    <block type="variables_get">
+                                      <title name="VAR">left</title>
+                                    </block>
+                                  </value>
+                                  <value name="ARG1">
+                                    <block type="math_number">
+                                      <title name="NUM">2</title>
+                                    </block>
+                                  </value>
+                                  <value name="ARG2">
+                                    <block type="math_number">
+                                      <title name="NUM">0</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="maze_move">
+                                      <title name="DIR">moveForward</title>
+                                      <next>
+                                        <block type="procedures_callnoreturn" inline="false">
+                                          <mutation name="get nectar make honey">
+                                            <arg name="direction"/>
+                                            <arg name="nectars"/>
+                                            <arg name="honey"/>
+                                          </mutation>
+                                          <value name="ARG0">
+                                            <block type="variables_get">
+                                              <title name="VAR">right</title>
+                                            </block>
+                                          </value>
+                                          <value name="ARG1">
+                                            <block type="math_number">
+                                              <title name="NUM">3</title>
+                                            </block>
+                                          </value>
+                                          <value name="ARG2">
+                                            <block type="math_number">
+                                              <title name="NUM">0</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="maze_move">
+                                              <title name="DIR">moveForward</title>
+                                              <next>
+                                                <block type="procedures_callnoreturn" inline="false">
+                                                  <mutation name="get nectar make honey">
+                                                    <arg name="direction"/>
+                                                    <arg name="nectars"/>
+                                                    <arg name="honey"/>
+                                                  </mutation>
+                                                  <value name="ARG0">
+                                                    <block type="variables_get">
+                                                      <title name="VAR">left</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ARG1">
+                                                    <block type="math_number">
+                                                      <title name="NUM">0</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ARG2">
+                                                    <block type="math_number">
+                                                      <title name="NUM">3</title>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

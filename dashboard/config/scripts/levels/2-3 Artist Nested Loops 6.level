@@ -14,7 +14,7 @@
     "ideal": "6",
     "slider_speed": ".8",
     "free_play": "false",
-    "instructions": "This dinosaur has 8 spikes running up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but make sure to move forward after each one.",
+    "instructions": "This dinosaur has 8 spikes running up its tail.\r\nEach spike is 30 pixels long. Loop the triangle 8 times, but make sure to jump forward after each one!",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -29,9 +29,12 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "This dinosaur has 8 spikes running up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but make sure to move forward after each one.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
-    "examples_required": "false"
-  }
+    "markdown_instructions": "This dinosaur has 8 spikes running up its tail.\r\n\r\nEach spike is 30 pixels long. \r\n\r\nLoop the triangle 8 times, but make sure to jump forward after each one!\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -92,10 +95,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-</xml>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
@@ -118,8 +117,8 @@
                     </block>
                   </statement>
                   <next>
-                    <block type="draw_move_by_constant">
-                      <title name="DIR">moveForward</title>
+                    <block type="jump_by_constant">
+                      <title name="DIR">jumpForward</title>
                       <title name="VALUE">30</title>
                     </block>
                   </next>

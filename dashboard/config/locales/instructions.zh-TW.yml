@@ -312,6 +312,11 @@
         提示: 最後一行的長度是250像素。
       4-5 Artist For Loops 14_instruction: 有人在開始寫程式碼之後，發現應該有更快的方式！用一個"for"的程式積木來取代其他積木，然後完成這個三角形螺旋。(提示：最後一行的長度是300像素。)
       4-5 Artist For Loops 15_instruction: 有人在開始寫程式碼之後，發現應該有更快的方式！用一個"for"的程式積木來取代其他積木，然後完成這個六角形螺旋。(提示：最後一行的長度是200像素。)
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: 我們該如何從1數到50？編輯"for"程式積木。
       4-5 Artist For Loops 4_instruction: 完成一個能從1數到10的"for"方塊
       4-5 Artist For Loops 6_instruction: "畫出邊長為50、60、70、80、90像素的正方形。你會需要用到「畫正方形」的函式五次。"
@@ -328,9 +333,8 @@
       4-5 Artist Functions 12_instruction: "完成畫波浪線函數。 每個波浪是一個上突波和一個下凹波組成。  提示: 繪製
         5 個藍色的波浪。"
       4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
+        這裡有一些讓你畫出星球、星型、火箭和機器人的工具
+        多多利用它們做出你原創的圖片，你還能跟你的好朋友們分享喔！
       4-5 Artist Functions 14 Free play_instruction: |
         Here, we've provided you with
         several functions.  Use them any way you like inside of one or more loops
@@ -2384,6 +2388,20 @@
         \r
         .\r
         \r
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: |-
+        Figure out how to change this code so that Robin
+        chooses a number between 1 and 20.  \r
+        \r
+        When you're ready, press "Run"
+        and play until you guess Robin's number!
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -4676,11 +4694,11 @@
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

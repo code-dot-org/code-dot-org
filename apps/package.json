@@ -8,8 +8,8 @@
     "npm": "^2.9.1"
   },
   "scripts": {
-    "lint": "grunt jshint",
-    "test": "grunt test",
+    "lint": "eslint . --ext .js,.jsx",
+    "test": "npm run lint && grunt test",
     "clean": "grunt clean",
     "build": "MOOC_DEV=1 grunt build",
     "build:dist": "MOOC_DEV=0 grunt clean build",
@@ -45,6 +45,7 @@
     "ejsify": "1.0.0",
     "envify": "^3.4.0",
     "es6-promise": "3.0.2",
+    "eslint": "^2.3.0",
     "express": "4.11.2",
     "factor-bundle": "2.3.3",
     "glob": "5.0.14",
@@ -58,7 +59,6 @@
     "grunt-contrib-watch": "0.6.1",
     "grunt-exec": "0.4.6",
     "grunt-express": "1.4.1",
-    "grunt-jsxhint": "0.6.0",
     "grunt-lodash": "0.3.0",
     "grunt-newer": "1.1.1",
     "grunt-notify": "0.4.1",

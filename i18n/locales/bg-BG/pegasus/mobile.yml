@@ -68,7 +68,7 @@ bg-BG:
   get_a_certificate_of_achievement: Получете сертификат за постижение
   view_course: Преглед на курса
   view_unit: View unit
-  make_app: Make an app
+  make_app: Направи приложение
   congrats_guest_speaker_title: Намери гост-лектор за твоята класна стая
   congrats_guest_speaker_desc: Сега след като твоите студенти завършиха курса по компютърни науки, помислете за празнуване и го свържете с неща, които могат да направят в реалния свят, като ги поканите за гост-лектор във вашата класна стая. Можете да използвате нашата карта на доброволците за да се свържете с местни доброволци които да посетят вашата класна стая, или потърсете в който и да е град студенти по компютърни науки или специалисти по компютърни технологии, които са готови да вдъхновяват вашите студенти от разстояние, чрез видео чат.
   congrats_guest_speaker_cta: Намери гост-лектор
@@ -83,24 +83,24 @@ bg-BG:
   third_party_platform_all: 'Платформа: Уеб, iPad & андроид'
   third_party_platform_mobile: 'Платформа: iPad & андроид'
   third_party_platform_web: 'Платформа: уеб'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
-  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
-  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_price_varies: 'Цена: Варианти на планове'
+  third_party_price_free: 'Цена: безплатно'
+  third_party_price_299: 'Цена: $2.99/изтегляне'
+  third_party_price_individual: 'Индивидуална цена: Безплатен пробен период & 25 $/ на месец'
+  third_party_price_school: 'Училищна цена: Безплатни планове & Pro от $2500 +'
+  third_party_tynker_desc: Творческата платформа на Tynker помага на децата да развиват изчислително мислене и умения за програмиране по забавен, интуитивен и творчески начин. Нашият новаторски визуален език за програмиране, интерактивни самостоятелни курсове и програмните дейности, базирани на игра предоставят лесен начин за въведение в програмирането и дава възможност на децата за иновативност и творчество.
+  third_party_tynker_btn_curriculum: Опитайте Tynker учебна програма за неможещи да четат деца
+  third_party_tynker_btn_site: Посетете Tynker
   third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratchjr_btn_curriculum: Изтегляне на Scratch Jr. учебна програма
+  third_party_scratchjr_btn_site: Посетете Scratch Jr.
+  third_party_scratch_desc: 'В Scratch можете да програмирате свои собствени интерактивни истории, игри и анимации и споделяте творенията си с други хора в онлайн общността. Scratch помага младите хора да се учат да мислят креативно, систематично и да работят в екип - основни умения, необходими през 21 век.'
+  third_party_scratch_btn_curriculum: Изтегляне на Scratch учебна програма
+  third_party_scratch_btn_forum: Scratch учителски форум
+  third_party_scratch_btn_site: Посетете Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_lightbot_btn_curriculum: Изтегли Lightbot програма
+  third_party_lightbot_btn_site: Посетете Lightbot
   third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
   third_party_khan_btn_learn: Learn CS with Khan Academy
   third_party_khan_btn_forum: Khan Academy CS Forum
@@ -599,7 +599,7 @@ bg-BG:
   dashboard_faq_k5: K-5 често задавани въпроси
   dashboard_announcements: Съобщения
   dashboard_announce_view_all: Преглед на всички
-  dashboard_announce_message: '<b> Февруари 1, 2016</b> - 9 от 10 родителя искат децата им да учат компютърни науки и въпреки това в повечето училища не се изучават. на 30 януари, Белият Дом обяви планове да предостави възможност за изучаване на компютърни науки на всеки ученик в Америка. Не можем да сме по-щастливи от двустранната подкрепа за компютърните науки.'
+  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
   dashboard_announce_button_text: Научете повече
   dashboard_announce_hoc: '<b>Ноември 23, 2015</b> - часът на кода 2015 идва! Присъединете се към класните стаи по целия свят за най-голямото обучително събитие в историята.'
   dashboard_announce_playlab: '<b>4 декември 2015 г.</b> -Hour of Code е тук! Опитайте тези 50 урока за всяка възраст и всяко устройство. Новото тази седмица: Програмирай свои собствени истории и игри в новата Игрална лаборатория, Ледена епоха и Гъмбол.'
@@ -716,7 +716,7 @@ bg-BG:
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
   applab_name: Лаборатория за приложения
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Възраст 13 +
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: Възраст 4-104
   codeintl_gradelevel: Възраст 4-104
