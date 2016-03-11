@@ -48,13 +48,16 @@ var DialogButtons = require('../templates/DialogButtons.jsx');
 var createStore = require('../redux');
 var Provider = require('react-redux').Provider;
 var rootReducer = require('./reducers').rootReducer;
-var setLevelProps = require('./actions').setLevelProps;
+var actions = require('./actions');
+var setLevelProps = actions.setLevelProps;
+var changeMode = actions.changeMode;
 
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
+var ApplabMode = applabConstants.ApplabMode;
 
 /**
  * Create a namespace for the application.
@@ -866,7 +869,7 @@ Applab.init = function(config) {
         }
       });
 
-      designMode.subscribeToRedux(Applab.reduxStore);
+      subscribeToRedux(Applab.reduxStore);
 
       designMode.addKeyboardHandlers();
 
@@ -893,6 +896,8 @@ Applab.init = function(config) {
     isViewDataButtonHidden: !!config.level.hideViewDataButton
   }));
 
+  Applab.reduxStore.dispatch(changeMode(Applab.startInDesignMode() ? ApplabMode.DESIGN : ApplabMode.CODE));
+
   Applab.reactInitialProps_ = {
     renderCodeWorkspace: renderCodeWorkspace,
     renderVisualizationColumn: renderVisualizationColumn,
@@ -903,6 +908,24 @@ Applab.init = function(config) {
 
   Applab.render();
 };
+
+/**
+ * Subscribe to state changes on the store.
+ * @param {!Store} store
+ */
+function subscribeToRedux(store) {
+  designMode.subscribeToRedux(store);
+
+  var state = {};
+  store.subscribe(function () {
+    var lastState = state;
+    state = store.getState();
+
+    if (state.mode !== lastState.mode) {
+      onModeChange(state.mode);
+    }
+  });
+}
 
 /**
  * Cache of props, established during init, to use when re-rendering top-level
@@ -924,10 +947,7 @@ Applab.reactMountPoint_ = null;
 Applab.render = function () {
   var nextProps = $.extend({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
-    startInDesignMode: Applab.startInDesignMode(),
     screenIds: designMode.getAllScreenIds(),
-    onDesignModeButton: Applab.onDesignModeButton,
-    onCodeModeButton: Applab.onCodeModeButton,
     onViewDataButton: Applab.onViewData,
     onScreenCreate: designMode.createScreen
   });
@@ -1301,23 +1321,25 @@ Applab.onViewData = function() {
     '_blank');
 };
 
-Applab.onDesignModeButton = function() {
-  designMode.toggleDesignMode(true);
-  studioApp.resetButtonClick();
-};
-
-Applab.onCodeModeButton = function() {
-  designMode.toggleDesignMode(false);
-  utils.fireResizeEvent();
-  if (!Applab.isRunning()) {
-    Applab.serializeAndSave();
-    var divApplab = document.getElementById('divApplab');
-    designMode.parseFromLevelHtml(divApplab, false);
-    Applab.changeScreen(Applab.reduxStore.getState().currentScreenId);
-  } else {
-    Applab.activeScreen().focus();
+/**
+ * Handle code/design mode change.
+ * @param {ApplabMode} mode
+ */
+function onModeChange(mode) {
+  if (mode === ApplabMode.DESIGN) {
+    studioApp.resetButtonClick();
+  } else if (mode === ApplabMode.CODE) {
+    utils.fireResizeEvent();
+    if (!Applab.isRunning()) {
+      Applab.serializeAndSave();
+      var divApplab = document.getElementById('divApplab');
+      designMode.parseFromLevelHtml(divApplab, false);
+      Applab.changeScreen(Applab.reduxStore.getState().currentScreenId);
+    } else {
+      Applab.activeScreen().focus();
+    }
   }
-};
+}
 
 /**
  * Show a modal dialog with a title, text, and OK and Cancel buttons

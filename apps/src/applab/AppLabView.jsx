@@ -20,10 +20,7 @@ var AppLabView = React.createClass({
     isEditingProject: React.PropTypes.bool.isRequired,
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
 
-    startInDesignMode: React.PropTypes.bool.isRequired,
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    onDesignModeButton: React.PropTypes.func.isRequired,
-    onCodeModeButton: React.PropTypes.func.isRequired,
     onViewDataButton: React.PropTypes.func.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
 
@@ -41,10 +38,7 @@ var AppLabView = React.createClass({
     if (!this.props.isReadOnlyWorkspace) {
       playSpaceHeader = <PlaySpaceHeader
           isEditingProject={this.props.isEditingProject}
-          startInDesignMode={this.props.startInDesignMode}
           screenIds={this.props.screenIds}
-          onDesignModeButton={this.props.onDesignModeButton}
-          onCodeModeButton={this.props.onCodeModeButton}
           onViewDataButton={this.props.onViewDataButton}
           onScreenCreate={this.props.onScreenCreate} />;
     }

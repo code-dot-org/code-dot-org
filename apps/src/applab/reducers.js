@@ -9,6 +9,8 @@
 'use strict';
 
 var ActionType = require('./actions').ActionType;
+var constants = require('./constants');
+var ApplabMode = constants.ApplabMode;
 
 var initialState = {
   assetUrl: function () {},
@@ -17,6 +19,7 @@ var initialState = {
   isReadOnlyWorkspace: undefined,
   isShareView: undefined,
   isViewDataButtonHidden: undefined,
+  mode: ApplabMode.CODE,
   currentScreenId: null
 };
 
@@ -25,8 +28,19 @@ function rootReducer(state, action) {
 
   switch (action.type) {
     case ActionType.CHANGE_SCREEN:
+      if (state.currentScreenId === action.screenId) {
+        return state;
+      }
       return $.extend({}, state, {
         currentScreenId: action.screenId
+      });
+
+    case ActionType.CHANGE_MODE:
+      if (state.mode === action.mode) {
+        return state;
+      }
+      return $.extend({}, state, {
+        mode: action.mode
       });
 
     case ActionType.SET_LEVEL_PROPS:
