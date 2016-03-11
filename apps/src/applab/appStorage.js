@@ -33,6 +33,7 @@ function onErrorStatus(onError, commandName, status) {
   if (onError) {
     onError('Error in ' + commandName + ': ' + getStatusDescription(status));
   }
+  // HTTP 429 - Too many requests. We hit this when our data APis are throttled
   if (status === 429) {
     Applab.showRateLimitAlert();
   }
