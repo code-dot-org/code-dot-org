@@ -138,6 +138,8 @@ class HomeControllerTest < ActionController::TestCase
     test "logged in user sees resume info and progress for course #{script.name}" do
       user = create(:user)
       UserScript.create!(user_id: user.id, script_id: script.id, started_at: Time.now)
+      puts script.id
+
       sign_in(user)
       get :index
       assert_response :success
