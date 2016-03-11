@@ -1,3 +1,4 @@
+require 'active_support/notifications'
 require_relative '../../dynamic_config/dcdo'
 require 'rack/attack'
 require 'rack/attack/path_normalizer'
@@ -115,6 +116,29 @@ class Rack::Attack
   class Request < ::Rack::Request
     def write?
       put? || patch? || post? || delete?
+    end
+  end
+
+  ActiveSupport::Notifications.subscribe('rack.attack') do |_, _, _, _, req|
+    if CDO.newrelic_logging
+      throttle_name = req.env['rack.attack.matched']
+      throttle_data = req.env['rack.attack.throttle_data'][throttle_name]
+      event_details = {
+          throttle_name: throttle_name,
+          throttle_data_count: throttle_data[:count],
+          throttle_data_period: throttle_data[:period],
+          throttle_data_limit: throttle_data[:limit],
+          encrypted_channel_id: req.env['rack.attack.match_discriminator'],
+      }
+
+      NewRelic::Agent.record_custom_event("RackAttackRequestThrottled", event_details)
+      # throttle names are of the form "shared-(tables|properties)/(reads|writes)/#{period}"
+      # as defined by the first parameters to the 'throttle' calls above. '/' is a special
+      # character in Custom Metric names so we have to rework the name a bit here.
+      parts = throttle_name.split('/')
+      throttle_type = parts.length == 3 ? "#{parts[0]}_#{parts[1]}" : 'unknown'
+      # Always specify a value of 1 so that each metric can be treated as a simple counter.
+      NewRelic::Agent.record_metric("Custom/RackAttackRequestThrottled/#{throttle_type}", 1)
     end
   end
 end
