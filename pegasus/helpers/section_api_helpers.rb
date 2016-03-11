@@ -352,12 +352,13 @@ class DashboardSection
       distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(deleted_at: nil).
-      map{ |row|
-                    row.merge({
-        location: "/v2/users/#{row[:id]}",
-        age: DashboardStudent::birthday_to_age(row[:birthday]),
-        completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
-      })}
+      map do |row|
+        row.merge({
+          location: "/v2/users/#{row[:id]}",
+          age: DashboardStudent::birthday_to_age(row[:birthday]),
+          completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
+        })
+      end
   end
 
   def teacher?(user_id)
