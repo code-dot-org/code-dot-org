@@ -159,7 +159,7 @@ class DynamoTable
   end
 
   def exists?()
-    return next_id > 1
+    next_id > 1
   end
 
   def next_id()
@@ -284,11 +284,11 @@ class DynamoTable
   end
 
   def to_a()
-    return items.map { |i| value_from_row(i) }
+    items.map { |i| value_from_row(i) }
   end
 
   def to_csv()
-    return table_to_csv(to_a, column_order: ['id'])
+    table_to_csv(to_a, column_order: ['id'])
   end
 
   def value_from_row(row)

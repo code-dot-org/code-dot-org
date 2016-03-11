@@ -88,13 +88,13 @@ class AdminFunometerController < ApplicationController
 
   private
   def get_ratings_by_day(ratings_to_process)
-    return ratings_to_process.
+    ratings_to_process.
            group('DATE(created_at)').
            order('DATE(created_at)').
            pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating)')
   end
 
   def get_percentage_positive(ratings_to_process)
-    return 100.0 * ratings_to_process.where(rating: 1).count / ratings_to_process.count
+    100.0 * ratings_to_process.where(rating: 1).count / ratings_to_process.count
   end
 end

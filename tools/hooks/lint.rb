@@ -30,7 +30,7 @@ end
 def run(cmd, working_dir)
   Dir.chdir working_dir
   stdout, stderr, status = Open3.capture3(cmd)
-  return stdout, stderr, status
+  [stdout, stderr, status]
 end
 
 def run_rubocop(files)

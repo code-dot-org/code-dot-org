@@ -71,7 +71,7 @@ def hoc_canonicalized_i18n_path(uri)
   # We no longer want the country to be part of the path we use to search:
   search_uri = File.join('/', [@language, path].compact)
   return search_uri if resolve_document(search_uri)
-  return "/#{path}"
+  "/#{path}"
 end
 
 def hoc_detect_country()
@@ -112,7 +112,7 @@ def codeorg_url()
 end
 
 def chapter_partner?
-  return CDO.partners.include?(@country)
+  CDO.partners.include?(@country)
 end
 
 def resolve_url(url)
@@ -128,7 +128,7 @@ def localized_file(path)
   localized_path = File.join('/', @language, path)
   return localized_path if resolve_static('public', localized_path)
 
-  return path
+  path
 end
 
 def localized_image(path)
@@ -151,19 +151,19 @@ def campaign_date(format)
 end
 
 def company_count
-  return fetch_hoc_metrics['hoc_company_totals'][@company]
+  fetch_hoc_metrics['hoc_company_totals'][@company]
 end
 
 def country_count
   code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
-  return fetch_hoc_metrics['hoc_country_totals'][code.upcase]
+  fetch_hoc_metrics['hoc_country_totals'][code.upcase]
 end
 
 def solr_country_code
   code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
-  return code
+  code
 end
 
 def country_full_name
-  return HOC_COUNTRIES[@country]['full_name']
+  HOC_COUNTRIES[@country]['full_name']
 end

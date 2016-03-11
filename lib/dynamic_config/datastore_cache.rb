@@ -44,7 +44,7 @@ class DatastoreCache
   # @returns stored value
   def get(key)
     raise ArgumentError unless key.is_a? String
-    return @cache[key]
+    @cache[key]
   end
 
   # Sets the given value for the key in both the local cache and datastore

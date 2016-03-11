@@ -37,7 +37,7 @@ module PDF
         next filename if URI.parse(filename).scheme == 'http'
         File.expand_path(filename, File.dirname(collate_file))
       end
-    return [options, all_paths]
+    [options, all_paths]
   end
 
   def self.merge_pdfs(output_file, *filenames)

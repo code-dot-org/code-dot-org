@@ -36,7 +36,7 @@ module TableCoerce
 
   def TableCoerce.column_types(records, columns)
     # do an initial pass to determine column types
-    return columns.map do |col|
+    columns.map do |col|
       if records.empty?
         :string
       elsif !records.any? { |record| !TableCoerce.boolean?(record[col]) }
@@ -77,7 +77,7 @@ module TableCoerce
   def TableCoerce.boolean?(val)
     return true if val == true || val == false
     return false unless val.is_a?(String)
-    return !TRUE.match(val).nil? || !FALSE.match(val).nil?
+    !TRUE.match(val).nil? || !FALSE.match(val).nil?
   end
 
   # converts a value to a boolean, throwing if unable to do so
@@ -94,7 +94,7 @@ module TableCoerce
     return true if val.is_a?(Numeric)
     return false unless val.is_a?(String)
     # TODO - doesnt work on things like 1,234
-    return !NUMBER.match(val).nil?
+    !NUMBER.match(val).nil?
   end
 
   # converts a value to a number, throwing if unable to do so

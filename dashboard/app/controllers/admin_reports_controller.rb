@@ -315,7 +315,7 @@ class AdminReportsController < ApplicationController
       end
     end
 
-    return row_arrays
+    row_arrays
   end
 
   def level_answers_csv

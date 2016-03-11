@@ -40,7 +40,7 @@ class S3Packaging
       @logger.info "update_from_s3 failed: #{e.message}"
       return false
     end
-    return true
+    true
   end
 
   # creates a package from the given assets location and upload it to s3

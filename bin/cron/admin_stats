@@ -25,7 +25,7 @@ def build_demographic_breakdowns(baseline)
     [1, baseline.where(locale: 'en-us').count].max.to_f
   non_us_students = comparison.exclude(locale: 'en-us').count.to_f /
     [1, baseline.exclude(locale: 'en-us').count].max.to_f
-  return {
+  {
     students: students,
     female_students: female_students,
     male_students: male_students,

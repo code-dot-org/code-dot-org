@@ -280,7 +280,7 @@ class Artist < Blockly
     stripped_block['type'] = stripped_block['type'].chomp '_dropdown' if toolbox_block
     STRIPPED_ATTRS.each {|attr| stripped_block.remove_attribute(attr)} unless create_for_toolbox
     stripped_block.content = stripped_block.content.strip
-    return create_for_toolbox ? stripped_block : stripped_block.to_xml
+    create_for_toolbox ? stripped_block : stripped_block.to_xml
   end
 
   def strip_toolbox_block(block)

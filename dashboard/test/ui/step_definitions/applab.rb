@@ -218,7 +218,7 @@ And /^I hover over the screen at xpos ([\d]+) and ypos ([\d]+)$/ do |xpos, ypos|
 end
 
 def get_mouse_event_creator_script
-  return %Q{
+  %Q{
     function createMouseEvent(type, clientX, clientY) {
       var evt;
       var e = {
@@ -257,7 +257,7 @@ def get_mouse_event_creator_script
 end
 
 def get_scale_script
-  return %Q{
+  %Q{
     function getScale(element) {
       return element.getBoundingClientRect().width / element.offsetWidth;
     };

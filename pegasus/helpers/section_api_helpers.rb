@@ -323,7 +323,7 @@ class DashboardSection
   def add_students(students)
     student_ids = students.map{|i| add_student(i)}.compact
     DashboardUserScript.assign_script_to_users(@row[:script_id], student_ids) if @row[:script_id] && !student_ids.blank?
-    return student_ids
+    student_ids
   end
 
   def remove_student(student_id)
@@ -334,7 +334,7 @@ class DashboardSection
   end
 
   def member?(user_id)
-    return teacher?(user_id) || student?(user_id)
+    teacher?(user_id) || student?(user_id)
   end
 
   def student?(user_id)

@@ -51,7 +51,7 @@ def international?(solr_record)
     end
   end
   # if the record has no country fields in it assume us
-  return false
+  false
 end
 
 def query_contacts(params)
