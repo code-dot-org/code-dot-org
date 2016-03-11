@@ -89,8 +89,13 @@ def load_configuration()
     'use_dynamo_tables'           => [:staging, :adhoc, :test, :production].include?(rack_env),
     'use_dynamo_properties'       => [:staging, :adhoc, :test, :production].include?(rack_env),
     'dynamo_tables_table'         => "#{rack_env}_tables",
-    'dynamo_tables_index'         => "channel_id-table_name-index",
     'dynamo_properties_table'     => "#{rack_env}_properties",
+    'dynamo_table_metadata_table'         => "#{rack_env}_table_metadata",
+    'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
+    'max_table_reads_per_sec'     => 20,
+    'max_table_writes_per_sec'    => 40,
+    'max_property_reads_per_sec'  => 40,
+    'max_property_writes_per_sec' => 40,
     'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
@@ -129,7 +134,6 @@ def load_configuration()
     ENV['AWS_DEFAULT_REGION'] ||= config['aws_region']
   end
 end
-
 
 ####################################################################################################
 ##
@@ -194,7 +198,7 @@ class CDOImpl < OpenStruct
 
   def hosts_by_env(env)
     hosts = []
-    GlobalConfig['hosts'].each_pair do |key, i|
+    GlobalConfig['hosts'].each_pair do |_key, i|
       hosts << i if i['env'] == env.to_s
     end
     hosts
@@ -208,8 +212,17 @@ class CDOImpl < OpenStruct
     rack_env == env
   end
 
+  # Sets the slogger to use in a test.
+  # slogger must support a `write` method.
+  def set_slogger_for_test(slogger)
+    @slog = slogger
+    # Set a fake slog token so that the slog method will actually call
+    # the test slogger.
+    CDO.slog_token = 'fake_slog_token'
+  end
+
   def slog(params)
-    return unless slog_token
+    return unless slog_token && Gatekeeper.allows('slogging', default: true)
     @slog ||= Slog::Writer.new(secret: slog_token)
     @slog.write params
   end
@@ -269,7 +282,6 @@ class CDOImpl < OpenStruct
 end
 
 CDO ||= CDOImpl.new
-
 
 ####################################################################################################
 ##

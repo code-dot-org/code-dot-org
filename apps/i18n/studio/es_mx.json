@@ -265,7 +265,7 @@
   "moveSprite": "mover",
   "moveSpriteN": "mover actor {spriteIndex}",
   "toXY": "a x, y",
-  "moveDown": "Baja",
+  "moveDown": "Bajar",
   "moveDownTooltip": "Mover un actor hacia abajo.",
   "moveLeft": "mover hacia la izquierda",
   "moveLeftTooltip": "Mover un actor a la izquierda.",

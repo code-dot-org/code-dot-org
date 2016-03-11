@@ -9,7 +9,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,-4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "bee",
-    "instructions": "Help me collect all of the nectar from the flowers and make honey. Use a loop.",
+    "instructions": "Look at all of that nectar!\r\n\r\nHelp me collect the nectar and make the honey using as few blocks as you can.  ",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",
@@ -17,8 +17,26 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "4",
     "skip_instructions_popup": "false",
-    "ideal": "13"
-  }
+    "ideal": "13",
+    "markdown_instructions": "Look at all of that nectar!\r\n\r\nHelp me collect the nectar and make the honey using as few blocks as you can.  ",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The code will be shortest if you use a loop each time you move forward, another loop to gather nectar, and another one to make honey.\",\r\n  \"hint_id\": \"2-3_Bee_Conditionals_3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -37,9 +55,61 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <solution_blocks>
       <xml>
-</xml>
-    </required_blocks>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnLeft</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">4</title>
+                          <statement name="DO">
+                            <block type="maze_nectar"/>
+                          </statement>
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
+                              <next>
+                                <block type="controls_repeat">
+                                  <title name="TIMES">3</title>
+                                  <statement name="DO">
+                                    <block type="maze_moveForward"/>
+                                  </statement>
+                                  <next>
+                                    <block type="controls_repeat">
+                                      <title name="TIMES">4</title>
+                                      <statement name="DO">
+                                        <block type="maze_honey"/>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

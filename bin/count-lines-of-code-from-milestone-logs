@@ -45,7 +45,7 @@ def main
 
   loop do
     objects = AWS::S3::Bucket.objects('cdo-logs', marker: marker, prefix: 'hosts')
-    break if objects.size == 0
+    break if objects.empty?
 
     objects.each do |i|
       match = i.key.match /^hosts\/(?<host>[^\/]+)\/dashboard\/milestone.log/

@@ -24,6 +24,7 @@ ru:
   hello: Привет, мир!
   welcome_back: 'С возвращением, %{name}'
   submit: Отправить
+  unsubmit: Снять подтверждение
   add_teacher_form:
     code:
       label: 'Добавить учителя:'
@@ -217,7 +218,7 @@ ru:
       free_play:
         playlab: Создать приложение
         artist: Нарисовать что-нибудь
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Создать приложение
     user:
       classroom: Домашняя страница Преподавателя
@@ -315,6 +316,7 @@ ru:
     heading_hoc2014: '<h2>Час Кода для</h2><h1>Для всех возрастов</h1>'
     heading_elementary: '<h2>20-часовые курсы по</h2><h1>Основам Информатики (для всех возрастов)</h1>ы'
     heading_apps: '<h2>Развлечения для</h2><h1>всех</h1>'
+    heading_tools: '<h2>Готовы к следующему шагу?</h2><h1> Использование JavaScript в средней школе</h1>'
     heading_legacy: '<h2>Наш ускоренный курс для</h2><h1>Для всех возрастов</h1>'
     your_gallery: Галерея
     no_primary_course: 'Попробуйте курс "Студии Кода"'
@@ -409,6 +411,12 @@ ru:
       current: Текущие уровни
       unused: Неиспользованные уровни
   upsell:
+    applab:
+      title: Лаборатория Программ
+      body: App Lab является средой программирования, в которой можно создавать простые приложения. Создавай дизайн, пиши код с помощью блоков или JavaScript и смотри результат. После этого в считанные секунды приложением можно поделиться.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Для возрастов 13+
+      cta: Узнать подробности
     hoc:
       title: Классический лабиринт
       body: Ознакомьтесь с основами информатики. Миллионы воспользовались этим шансом.
@@ -454,11 +462,19 @@ ru:
     report_bug: Сообщить об ошибке
     support: Получить помощь
     support_url: support.code.org
+    help_resources: Помощь и ресурсы
   multi:
     wrong_title: Неправильный ответ
     wrong_body: 'Ответ, который вы ввели неправильный.  Пожалуйста, попробуйте еще раз!'
     correct_title: Верно
     correct_body: Это правильный ответ.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Спасибо
+    wrong_body: Спасибо за ответ.
+    correct_title: Спасибо
+    correct_body: Спасибо за ответ.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -478,6 +494,9 @@ ru:
     placeholder: Внеси сюда свой ответ
     open_response_title: Спасибо
     open_response_body: Спасибо за ваш ответ!
+  level_group:
+    correct_title: Спасибо
+    correct_body: Спасибо за ответ
   dialog:
     ok: Продолжить
     startover_title: Вы уверены, что хотите начать заново?

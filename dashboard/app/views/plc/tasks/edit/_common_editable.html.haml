@@ -1,0 +1,6 @@
+= f.label :name
+= f.text_field :name
+= f.label :learning_module_id
+= f.select :plc_learning_module_id, options_for_select(options_for_plc_task_learning_modules, @task.plc_learning_module_id)
+= f.label :type
+= f.label @task.class.titleized_task_type

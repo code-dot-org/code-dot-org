@@ -51,9 +51,7 @@ class QueueProcessorManager
         processor.stop
       }
     end
-    threads.each do |thread|
-      thread.join
-    end
+    threads.each(&:join)
   end
 
   def run
@@ -89,7 +87,6 @@ class QueueProcessorManager
     }
 
     start_time = Time.now.to_i
-
 
     last_changed = false
     old_metrics_json = ""

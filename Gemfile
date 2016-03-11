@@ -55,6 +55,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'timecop'
   gem 'fake_sqs'
+  gem 'fakeredis', require: false
 
   # for ui testing
   gem 'cucumber'
@@ -179,3 +180,5 @@ gem 'oj'
 gem 'daemons'
 
 gem 'rest-client', '~> 1.8'
+
+gem 'rack-attack', '~> 4.4'

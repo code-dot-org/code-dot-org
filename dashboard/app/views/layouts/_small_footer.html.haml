@@ -33,9 +33,12 @@
         newWindow: true
       }
     ],
-    copyrightStrings: build_copyright_strings
+    copyrightStrings: build_copyright_strings,
+    # false because we're not rendering into a phone wireframe here
+    phoneFooter: false
   }
 
 :javascript
-  React.render(React.createElement(window.dashboard.SmallFooter, #{reactProps.to_json}),
+  // Render the footer on the non-share pages
+  ReactDOM.render(React.createElement(window.dashboard.SmallFooter, #{reactProps.to_json}),
     document.getElementById('page-small-footer'));

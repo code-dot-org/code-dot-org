@@ -18,6 +18,7 @@
   "fillTooltip": "aseta yksi yksikkö maata",
   "finalLevel": "Onneksi olkoon! Olet suorittanut viimeisen tehtävän.",
   "flowerEmptyError": "Kukkassa jonka päällä olet ei ole enään mettä.",
+  "didNotCollectEverything": "Varmista, ettet jätä yhtään mettä tai hunajaa keräämättä!",
   "get": "kerää",
   "heightParameter": "korkeus",
   "holePresent": "tässä on kuoppa",
@@ -81,6 +82,5 @@
   "whileTooltip": "Toista sisällä oleva toiminto kunnes saavutetaan loppupiste.",
   "word": "Etsi sana",
   "yes": "Kyllä",
-  "youSpelled": "Kirjoitit",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Kirjoitit"
 }

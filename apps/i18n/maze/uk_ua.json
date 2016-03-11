@@ -18,6 +18,7 @@
   "fillTooltip": "поставити 1 відро землі",
   "finalLevel": "Вітання! Ви розв'язали останнє завдання.",
   "flowerEmptyError": "У квітки, на якій ви перебуваєте, більше немає нектару.",
+  "didNotCollectEverything": "Переконайтеся, що ви не залишити нектар або мед позаду!",
   "get": "отримати",
   "heightParameter": "висота",
   "holePresent": "є ямка",
@@ -81,6 +82,5 @@
   "whileTooltip": "Повторювати вказані дії поки не досягнуто кінцевої точки.",
   "word": "Знайти слово",
   "yes": "Так",
-  "youSpelled": "Ви написали",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Ви написали"
 }

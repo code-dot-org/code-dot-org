@@ -475,6 +475,7 @@ $default-modal-width: 640px;
   .markdown {
     .modal-image {
       margin-top: -100px;
+      float: left;
     }
   }
 }
@@ -583,7 +584,7 @@ $default-modal-width: 640px;
     float: left;
     clear: left;
   }
-  // TODO: Remove when applab is no longer in beta
+  // TODO: Remove when Game Lab is no longer in beta
   .beta-notice {
     float: left;
     margin-left: 10px;
@@ -1079,7 +1080,7 @@ html[dir=rtl] .qtip-content {
 }
 
 .tooltip-x-close.qtip-icon {
-  @include close-button($cornerOffset: -35px);
+  @include close-button($cornerOffset: -20px);
 }
 
 a.download-video {
@@ -1949,13 +1950,13 @@ $modal-no-icon-gap: 22px;
 }
 
 .lightbulb-button {
-  background-color: $lightest_gray;
-  border: 1px solid $light_gray;
-  color: black;
-
-  svg {
-    margin: -12px -6px;
-  }
+  background-color: white;
+  font-family: $gotham-bold;
+  border: 1px solid $charcoal;
+  color: $charcoal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 #again-button {
@@ -1976,7 +1977,6 @@ $modal-no-icon-gap: 22px;
   width: $modal-image-width;
   height: auto;
   margin-top: -60px;
-  float: left;
   html[dir=rtl] & {
     float: right;
     -webkit-transform: scaleX(-1);
@@ -2003,6 +2003,14 @@ $modal-no-icon-gap: 22px;
   background-color: white;
   $outside-margin-side: 15px;
   width: $default-modal-width - ($modal-no-icon-gap * 2) - ($outside-margin-side * 2);
+}
+
+.modal-content.instructions-container {
+  margin: 0 10px 20px 20px;
+
+  button {
+    margin: 0;
+  }
 }
 
 .instructions-markdown {

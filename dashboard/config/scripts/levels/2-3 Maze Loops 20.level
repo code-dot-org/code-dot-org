@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Get me to the sunflower!",
+    "instructions": "Get me to the sunflower using the fewest number of blocks possible!",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",
@@ -27,7 +27,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -44,12 +45,45 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-</xml>
-    </required_blocks>
     <recommended_blocks>
       <xml/>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_moveForward">
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnRight</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

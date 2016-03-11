@@ -32,7 +32,8 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -51,10 +52,10 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <arg name="length"/>
-            <description>draw a pentagon the is 100 pixels in size</description>
+            <description>draw a pentagon that is 100 pixels in size</description>
           </mutation>
           <title name="NAME">draw a pentagon</title>
           <statement name="STACK">

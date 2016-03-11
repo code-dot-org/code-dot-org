@@ -1,0 +1,5 @@
+source 'https://supermarket.chef.io'
+
+metadata
+cookbook 'test-mysql', path: './test/cookbooks/test-mysql'
+cookbook 'apt'

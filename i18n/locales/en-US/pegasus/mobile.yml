@@ -67,14 +67,12 @@ en-US:
   congrats_next_tutorials_desc: 'crwdns48531:0%{current_path}crwdne48531:0'
   get_a_certificate_of_achievement: crwdns3615:0crwdne3615:0
   view_course: crwdns56012:0crwdne56012:0
+  view_unit: crwdns56162:0crwdne56162:0
+  make_app: crwdns56163:0crwdne56163:0
   congrats_guest_speaker_title: crwdns56013:0crwdne56013:0
   congrats_guest_speaker_desc: crwdns56014:0crwdne56014:0
   congrats_guest_speaker_cta: crwdns56015:0crwdne56015:0
-  congrats_third_party_course1: crwdns56016:0crwdne56016:0
-  congrats_third_party_course2: crwdns56017:0crwdne56017:0
-  congrats_third_party_course3: crwdns56018:0crwdne56018:0
-  congrats_third_party_course4: crwdns56019:0crwdne56019:0
-  congrats_third_party_accelerated: crwdns56020:0crwdne56020:0
+  congrats_third_party_title: crwdns56116:0crwdne56116:0
   third_party_gradelevel_kto8: crwdns56021:0crwdne56021:0
   third_party_gradelevel_kto2: crwdns56022:0crwdne56022:0
   third_party_gradelevel_2to8: crwdns56023:0crwdne56023:0
@@ -88,7 +86,8 @@ en-US:
   third_party_price_varies: crwdns56031:0crwdne56031:0
   third_party_price_free: crwdns56032:0crwdne56032:0
   third_party_price_299: crwdns56033:0crwdne56033:0
-  third_party_price_2500: crwdns56034:0crwdne56034:0
+  third_party_price_individual: crwdns56164:0crwdne56164:0
+  third_party_price_school: crwdns56165:0crwdne56165:0
   third_party_tynker_desc: crwdns56035:0crwdne56035:0
   third_party_tynker_btn_curriculum: crwdns56036:0crwdne56036:0
   third_party_tynker_btn_site: crwdns56037:0crwdne56037:0
@@ -111,7 +110,6 @@ en-US:
   third_party_appinv_btn_site: crwdns56054:0crwdne56054:0
   third_party_codehs_desc: crwdns56055:0crwdne56055:0
   third_party_codehs_btn_try: crwdns56056:0crwdne56056:0
-  third_party_codehs_btn_demos: crwdns56057:0crwdne56057:0
   third_party_codecademy_desc: crwdns56058:0crwdne56058:0
   third_party_codecademy_btn_curriculum: crwdns56059:0crwdne56059:0
   third_party_codecademy_btn_site: crwdns56060:0crwdne56060:0
@@ -124,6 +122,7 @@ en-US:
   third_party_cost_free_399: crwdns56067:0crwdne56067:0
   third_party_cost_free_2: crwdns56068:0crwdne56068:0
   third_party_cost_free_10: crwdns56069:0crwdne56069:0
+  third_party_desc_5_4to8: crwdns56117:0crwdne56117:0
   third_party_desc_10to12_kto3: crwdns56070:0crwdne56070:0
   third_party_desc_11_kto5: crwdns56071:0crwdne56071:0
   third_party_desc_10to12_kto5: crwdns56072:0crwdne56072:0
@@ -279,6 +278,9 @@ en-US:
   homepage_slot_text_link_othercourses: crwdns35776:0crwdne35776:0
   homepage_slot_text_title_educators: crwdns35777:0crwdne35777:0
   homepage_slot_text_blurb_educators: crwdns35778:0crwdne35778:0
+  homepage_slot_text_link_elementary: crwdns56118:0crwdne56118:0
+  homepage_slot_text_link_middle: crwdns56119:0crwdne56119:0
+  homepage_slot_text_link_high: crwdns56120:0crwdne56120:0
   homepage_slot_text_link_k5: crwdns35779:0crwdne35779:0
   homepage_slot_text_link_fullcurriculum: crwdns35780:0crwdne35780:0
   homepage_slot_text_link_pd: crwdns35781:0crwdne35781:0
@@ -596,7 +598,7 @@ en-US:
   dashboard_faq_k5: crwdns41887:0crwdne41887:0
   dashboard_announcements: crwdns50092:0crwdne50092:0
   dashboard_announce_view_all: crwdns50093:0crwdne50093:0
-  dashboard_announce_message: crwdns55999:0crwdne55999:0
+  dashboard_announce_message: crwdns56188:0crwdne56188:0
   dashboard_announce_button_text: crwdns55869:0crwdne55869:0
   dashboard_announce_hoc: crwdns50094:0crwdne50094:0
   dashboard_announce_playlab: crwdns55290:0crwdne55290:0
@@ -709,6 +711,12 @@ en-US:
   course3_name: crwdns56087:0crwdne56087:0
   course4_name: crwdns56088:0crwdne56088:0
   accelerated_name: crwdns56089:0crwdne56089:0
+  cspunit3_name: crwdns56166:0crwdne56166:0
+  cspunit3_gradelevel: crwdns56167:0crwdne56167:0
+  cspunit3_shortdescription_congrats: crwdns56168:0crwdne56168:0
+  applab_name: crwdns56169:0crwdne56169:0
+  applab_gradelevel: crwdns56170:0crwdne56170:0
+  applab_shortdescription_congrats: crwdns56171:0crwdne56171:0
   codeorg_gradelevel: crwdns21487:0crwdne21487:0
   codeintl_gradelevel: crwdns23748:0crwdne23748:0
   thinkersmithspanish_gradelevel: crwdns21488:0crwdne21488:0

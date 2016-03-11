@@ -24,6 +24,7 @@ pt:
   hello: Olá mundo
   welcome_back: 'Olá outra vez, %{name}'
   submit: OK
+  unsubmit: Remover submissão
   add_teacher_form:
     code:
       label: 'Adiciona um professor:'
@@ -221,8 +222,8 @@ pt:
       sign_in_to_save: Inicia sessão para guardares o teu progresso
       free_play:
         playlab: Desenvolver uma aplicação
-        artist: Desenhar alguma coisa
-        calculate: Calculate Something
+        artist: Desenhe alguma coisa
+        calculate: Calculate something
         applab: Desenvolver uma aplicação
     user:
       classroom: Página inicial do Professor
@@ -320,6 +321,7 @@ pt:
     heading_hoc2014: '<h2>A Hora de Código para</h2><h1>Todas as idades</h1>'
     heading_elementary: '<h2>Cursos de 20 horas para</h2><h1>Iniciantes (todas as idades)</h1>'
     heading_apps: '<h2>Diversão para</h2><h1>todos</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>O nosso curso acelerado para</h2><h1>Todas as idades</h1>'
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
@@ -414,6 +416,12 @@ pt:
       current: Níveis atuais
       unused: Níveis por utilizar
   upsell:
+    applab:
+      title: Laboratório de aplicações
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas já experimentaram.
@@ -459,11 +467,19 @@ pt:
     report_bug: Comunicar erro
     support: Obter ajuda
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
     correct_title: Certo
     correct_body: A tua resposta está correta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Obrigado
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Obrigado
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -483,6 +499,9 @@ pt:
     placeholder: Insira sua resposta aqui
     open_response_title: Obrigado
     open_response_body: Obrigado por responderes!
+  level_group:
+    correct_title: Obrigado
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Tens a certeza de que pretendes recomeçar?

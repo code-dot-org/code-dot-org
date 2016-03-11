@@ -8,6 +8,7 @@ require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
+require 'cdo/languages'
 require 'dynamic_config/page_mode'
 require 'active_support'
 require 'base64'
@@ -268,7 +269,6 @@ class Documents < Sinatra::Base
       request.user_id
     end
 
-
     def document(path)
       content = IO.read(path)
       original_line_count = content.lines.count
@@ -289,6 +289,11 @@ class Documents < Sinatra::Base
         cache_for @header['max_age']
       else
         cache :document
+      end
+
+      if request.post? && !@header['allow_post']
+        response.headers['Allow'] = 'GET, HEAD'
+        error 405
       end
 
       response.headers['X-Pegasus-Version'] = '3'
@@ -464,7 +469,7 @@ class Documents < Sinatra::Base
         end
       end
 
-      if not metadata['og:image']
+      if !metadata['og:image']
         if request.site != 'csedweek.org'
           metadata['og:image'] = CDO.code_org_url('/images/default-og-image.png', 'https:')
           metadata['og:image:width'] = 1220

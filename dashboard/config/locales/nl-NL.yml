@@ -24,6 +24,7 @@
   hello: Hallo wereld
   welcome_back: Welkom terug, %{name}
   submit: Insturen
+  unsubmit: Intrekken
   add_teacher_form:
     code:
       label: 'Voeg een leraar toe:'
@@ -382,6 +383,8 @@
     heading_hoc2014: "<h2>Uur Code voor</h2><h1>Alle leeftijden</h1>"
     heading_elementary: "<h2>20 uur cursussen voor</h2><h1>Beginners (alle leeftijden)</h1>"
     heading_apps: "<h2>Leuk voor</h2><h1>Iedereen</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>"
     your_gallery: Galerij
     no_primary_course: Probeer een cursus bij Code Studio
@@ -508,6 +511,15 @@
       current: Huidige niveaus
       unused: Ongebruikte niveaus
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassiek doolhof
       body: Probeer de beginselen van de informatica. Miljoenen gingen je voor!
@@ -566,11 +578,19 @@
     report_bug: Meld Bug
     support: Help
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Onjuist antwoord
     wrong_body: Het antwoord dat je hebt ingevoerd is niet correct.  Probeer het opnieuw!
     correct_title: Juist
     correct_body: Dat is het juiste antwoord.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Bedankt
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Bedankt
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -592,6 +612,9 @@
     placeholder: Voer uw antwoord hier in
     open_response_title: Bedankt
     open_response_body: Bedankt voor uw reactie!
+  level_group:
+    correct_title: Bedankt
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Weet je zeker dat je opnieuw wilt beginnen?

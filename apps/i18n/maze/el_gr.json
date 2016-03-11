@@ -18,6 +18,7 @@
   "fillTooltip": "βάλε 1 μονάδα χώματος",
   "finalLevel": "Συγχαρητήρια! Έλυσες το τελευταίο Παζλ.",
   "flowerEmptyError": "Το λουλούδι στο οποίο βρίσκεσαι δεν έχει άλλο νέκταρ.",
+  "didNotCollectEverything": "Βεβαιώσου ότι δεν αφήνεις νέκταρ ή μέλι πίσω!",
   "get": "πάρε",
   "heightParameter": "ύψος",
   "holePresent": "υπάρχει μια τρύπα",
@@ -81,6 +82,5 @@
   "whileTooltip": "Επανάλαβε τις εσωτερικές ενέργειες μέχρι το τελικό σημείο.",
   "word": "Βρες τη λέξη",
   "yes": "Ναι",
-  "youSpelled": "Έγραψες",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Έγραψες"
 }

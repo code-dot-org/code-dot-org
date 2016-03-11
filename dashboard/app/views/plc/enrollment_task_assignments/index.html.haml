@@ -1,0 +1,17 @@
+%h1 Listing plc_enrollment_task_assignments
+
+%table
+  %thead
+    %tr
+      %th User
+      %th Task Name
+      %th Task Type
+      %th
+
+  %tbody
+    - @plc_enrollment_task_assignments.each do |plc_enrollment_task_assignment|
+      %tr
+        %td= plc_enrollment_task_assignment.plc_enrollment_module_assignment.plc_user_course_enrollment.user.name
+        %td= plc_enrollment_task_assignment.plc_task.name
+        %td= plc_enrollment_task_assignment.plc_task.class.titleized_task_type
+        %td= link_to 'Show', plc_enrollment_task_assignment

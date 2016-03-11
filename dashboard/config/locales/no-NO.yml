@@ -25,12 +25,13 @@
   hello: Hei, verden
   welcome_back: Velkommen tilbake, %{name}
   submit: Send
+  unsubmit: Trekk tilbake
   add_teacher_form:
     code:
       label: 'Legg til en lærer:'
       placeholder: Seksjonskode (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Angi koden delt med deg av din lærer. Det er en kode med 6 bokstaver
+        som "ABCDEF".
     submit: Legg til lærer
   add_hint_form:
     placeholder: Skriv inn et hint her
@@ -298,8 +299,8 @@
       remove: Er du sikker på at du vil fjerne denne læreren?
     students:
       dashboard: Gå til lærer-oversikten
-    user_not_found: Læreren eller eleven ble ikke funnet
-    student_teacher_disassociated: "%{teacher_name} er fjernet som lærer for %{student_name}"
+    user_not_found: Læreren kunne ikke bli funnet.
+    student_teacher_disassociated: Du har fjernet %{teacher_name} som din lærer.
     panel:
       answer_viewer: Visning av svaret
       student: elev
@@ -370,6 +371,8 @@
     heading_hoc2014: "<h2>Kodetimen for</h2><h1>Alle aldre</h1>"
     heading_elementary: "<h2>20-timers kurs for</h2><h1>Nybegynnere (alle aldre)</h1>"
     heading_apps: "<h2>Moro for</h2><h1>Alle</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>"
     your_gallery: Galleri
     no_primary_course: Prøv et kurs på Code Studio
@@ -379,7 +382,7 @@
     title: Lære i Code Studio
     description: Alle kan lære programmering. Lag egne spill, programmer og tegninger
       ved å kode.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prøv en Time av Kode!
   gender:
     male: Mann
     female: Kvinne
@@ -396,12 +399,23 @@
       å lage denne guiden.
     help_from_html_old: Utviklere fra Google, Microsoft, Facebook og Twitter hjelpte
       til med å lage disse kursene.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Alle rettigheter reservert.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
-      Arts Inc. Alle rettigheter reservert.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Alle rettigheter
-      tilhører Rovio Entertainment Ltd.<br />Plants vs. Zombies&#8482; &amp; &copy;
-      %{current_year} Alle rettigheter tilhører Electronic Arts Inc.
+    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Alle rettigheter
+      reservert. < br / > Star Wars &#8482; © %{current_year} Disney og Lucasfilm.
+      Alle rettigheter reservert. < br / > Frost &#8482; © %{current_year} Disney.
+      Alle rettigheter reservert. < br / > Istid &#8482; © %{current_year} 20th Century
+      Fox. Alle rettigheter reservert. < br / > Angry Birds &#8482; © 2009-%{current_year}
+      Rovio Entertainment Ltd Alle rettigheter reservert. < br / > planter vs. Zombies
+      &#8482; © %{current_year} Electronic Arts Inc. Alle rettigheter reservert. <
+      br / > Gumballs fantastiske verden er varemerke og © 2015 Cartoon Network.
+    art_from_html_old: Minecraft &#8482; &copy %{current_year} Microsoft. Alle rettigheter
+      reservert. < br / > Star Wars &#8482; &copy %{current_year} Disney og Lucasfilm.
+      Alle rettigheter reservert. < br / > Frost &#8482; &copy %{current_year} Disney.
+      Alle rettigheter reservert. < br / > Istid &#8482; &copy %{current_year} 20th
+      Century Fox. Alle rettigheter reservert. < br / > Angry Birds &#8482; &copy
+      2009-%{current_year} Rovio Entertainment Ltd Alle rettigheter reservert. < br
+      / > planter vs. Zombies &#8482; &copy %{current_year} Electronic Arts Inc. Alle
+      rettigheter reservert. < br / > Gumballs fantastiske verden er varemerke og
+      &copy 2015 Cartoon Network.
     powered_by_aws: Drevet av Amazon Web Services
     trademark: "© Code.org, %{current_year}. Code.org®, CODE-logoen og Hour of Code
       (Kodetimen) ® er varemerker tilhørende Code.org."
@@ -419,7 +433,7 @@
     built_on_code_studio: Bygget i Code Studio
     make_my_own_app: Lag min egen app
     how_it_works: Slik virker det
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prøv en Time av Kode!
   reference_area:
     title: Trenger du hjelp?
     subtitle: Se disse videoene og tipsene
@@ -485,6 +499,15 @@
       current: Nivåer nå
       unused: Ubrukte nivåer
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassisk labyrint
       body: Prøv de grunnleggende konseptene i datavitenskap. Mange millioner har
@@ -543,11 +566,19 @@
     report_bug: Rapporter feil
     support: Få hjelp
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Feil svar
     wrong_body: Svaret du har angitt er ikke riktig.  Prøv på nytt!
     correct_title: Riktig
     correct_body: Det er riktig svar.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Tusen takk
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Tusen takk
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -568,6 +599,9 @@
     placeholder: Angi svaret her
     open_response_title: Takk
     open_response_body: Takk for ditt svar!
+  level_group:
+    correct_title: Tusen takk
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Er du sikker på at du vil starte på nytt?

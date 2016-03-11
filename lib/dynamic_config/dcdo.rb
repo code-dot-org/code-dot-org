@@ -51,6 +51,13 @@ class DCDOBase
     YAML.dump(@datastore_cache.all)
   end
 
+  # Adds a listener whose on_change() method will be invoked at least
+  # once whenever the configuration changes. The on_change() method
+  # will be invoked on an arbitrary thread and must not block.
+  def add_change_listener(listener)
+    @datastore_cache.add_change_listener(listener)
+  end
+
   # Factory method for creating DCDOBase objects
   # @returns [DCDOBase]
   def self.create

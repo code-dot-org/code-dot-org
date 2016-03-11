@@ -1093,107 +1093,107 @@ el:
         text: Αυτό το μάθημα καλείται Αλγόριθμοι Τάγκραμ. Το τάγκραμ είναι ένα παζλ με επτά κομμάτια που μπορούμε να ενώσουμε για να φτιάξουμε άλλα σχήματα. Θα χρησιμοποιήσετε έναν αλγόριθμο που θα εξηγεί στο συμπαίκτη σας πως να βάλει τα κομμάτια.
       2:
         image: notes/C4_unplugged_algorithms_2.png
-        text: An algorithm is just a of list steps that you can take to complete a task. We use them every day with things like shopping lists and recipes. If you keep an algorithm simple, there are lots of ways to interpret it and whoever performs that algorithm might not get exactly what you wanted. If you want to make sure that everyone ends up with the exact same thing, then your algorithm will need to be detailed and very specific.
+        text: Ένας αλγόριθμος είναι μια λίστα βημάτων που μπορείς να ακολουθήσεις για να ολοκληρώσεις μια εργασία. τους χρησιμοποιούμε κάθε μέρα με πράγματα όπως λίστες αγορών και συνταγές. Εάν διατηρείς έναν αλγόριθμο απλό, υπάρχουν πολλοί τρόποι για να τον ερμηνεύσεις και όποιος εκτελεί τον λόγω αλγόριθμο μπορεί να μην πάρει ακριβώς αυτό που θέλεις. Αν θέλεις να βεβαιωθείς ότι ο καθένας καταλήγει με ακριβώς το ίδιο πράγμα, τότε ο αλγόριθμός σας θα πρέπει να είναι λεπτομερής και πολύ συγκεκριμένος.
       3:
         image: notes/C4_unplugged_algorithms_3.png
-        text: "I'm using an algorithm today to complete a painting. I wanted to try doing a painting of some wolves but I'm not the most amazing painter. Luckily for people by me, there is paint by numbers. There are forty colors and it has little letters and numbers that tell you which color to paint each section. Paint by numbers tells me exactly what color to use and where."
+        text: Σήμερα χρησιμοποιώ εναν αλγόριθμο για να ολοκληρώσω μια ζωγραφική. Ηθελα να προσπαθήσω να κάνω μια ζωγραφια με λύκους αλλά δεν είμαι εκπληκτικός ζωγράφος. Ευτυχώς για ανθρώπους σαν εμένα, υπάρχει ζωγραφική με αριθμούς. Υπάρχουν σαράντα χρώματα και μικρά γράμματα και αριθμοί που σου λένε τι χρώμα να ζωγραφίσεις κάθε περιοχή. Η ζωγραφική με αριθμούς μου λέει ακριβώς τι χρώμα να χρησιμοποιήσω και πού.
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: "It's very specific so I'm able to follow directions and the painting will come out looking awesome. It's a great algorithm. If the instructions weren't specific enough, my wolves wouldn't look as good. When you really want something to turn out exactly the way that you planned it, it's best to be extremely precise."
+        text: Είναι πολύ ακριβές και έτσι μπορώ να ακολουθώ οδηγίες και η ζωγραφιά θα είναι φοβερή. Είναι ένας υπέροχος αλγόριθμος. Αν οι εντολές δεν ήταν αρκετά ακριβείς, οι λύκοι μου δεν θα φαίνονταν τόσο καλά. Οταν πραγματικά θέλεις κάτι να γίνει ακριβώς όπως το προγραμμάτισες, είναι καλύτερα να είναι εξαιρετικά ακριβής.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: "Each team, the person who's instructing that's the person who's holding the paper, has to figure out what their off symbol is going to be and what their on symbol is going to be. In binary, it's kind of like an alphabet with two letters. Like having A and B be your entire alphabet but you've got a 0 and a 1."
+        text: Κάθε ομάδα, το πρόσωπο που καθοδηγεί δηλαδή το πρόσωπο που κρατά το χαρτί, πρέπει να καταλάβει ποιό είναι το σύμβολο on και ποιό το off. Το δυαδικό είναι σαν ενα αλφάβητο με δύο γράμματα. Σαν το Α και το Β να είναι όλο το αλφάβητο αλλά έχεις 0 και 1.
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: "The most common way you use binary is in an if statement. It's a classic thing from programming. The program runs along and it says if something is true, then do this. Or it's not true and you do something else. What if you want to do something maybe a little more complicated. Instead an if statement, you want to work with something like an image or a sound in a computer."
+        text: 'Ο πιο συνηθισμένος τρόπος να χρησιμοποιήσετε το δυαδικό είναι μια εντολή "εαν". Είναι ένα κλασικό πράγμα για τον προγραμματιστή. Το πρόγραμμα που τρέχει και λέει: αν κάτι είναι αλήθεια, τότε κάνε αυτό. Ή αν δεν είναι αλήθεια τότε κάνε κάτι άλλο. Τι θα συμβεί αν θέλες να κάνεις κάτι ίσως λίγο πιο περίπλοκο. Instead an if statement, you want to work with something like an image or a sound in a computer.'
       3:
         image: notes/C4_unplugged_binary_3.png
-        text: "A computer only knows binary but an image, it's not binary, it's not ones and zeros so how do you do that? Here's an example: You have this beautiful picture. Now a picture is basically a form of information. All information can be encoded in binary one way or another, you just have to figure out how to do it."
+        text: 'Ένας υπολογιστής ξέρει μόνο δυαδικό σύστημα αλλά μια εικόνα, δεν είναι δυαδική, δεν είναι άσσοι και μηδενικά, οπότε πως το κάνεις αυτό; Εδώ είναι ένα παράδειγμα: έχετε αυτή την όμορφη εικόνα. Τώρα, μια εικόνα είναι βασικά μια μορφή ενημέρωσης. Όλες οι πληροφορίες μπορεί να κωδικοποιηθούν σε δυαδική μορφή με τον ένα ή τον άλλο τρόπο, απλά πρέπει να καταλάβεις πώς να το κάνεις.'
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: "You imagine that we're going to put a grid over this panda bear and for each square, we're going to decide whether that square is more black or more white. And then we're going to color it that way. Now each cell on the grid is either black or white and then the black squares we say those are zeros (binary digit) and the white squares are ones, the other binary digit. At the end, you're left with just a bunch of ones and zeros. That's how you represent this image in binary."
+        text: Φαντάζεσαι ότι θα τοποθετήσουμε ένα πλέγμα πάνω από αυτό το αρκουδάκι παντα και για κάθε τετράγωνο, θα αποφασίσουμε αν αυτό το τετράγωνο είναι πιο μαύρο ή πιο άσπρο. Και, στη συνέχεια, θα το χρωματίσουμε με αυτόν τον τρόπο. Τώρα κάθε κελί του πλέγματος είναι είτε μαύρο ή άσπρο και στη συνέχεια λέμε ότι τα μαύρα τετράγωνα, είναι μηδενικά (δυαδικό ψηφίο) και τα λευκά τετράγωνα είναι άσσοι, το άλλαο δυαδικό ψηφίο. Στο τέλος, σας μένει μια δέσμη μηδεν και ένα. Ετσι απεικονίζουμε σε δυαδική μορφή αυτην την εκόνα.
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
         text: "This lesson is called for loop fun. In this lesson, we'll use a number line to play a dice game. Each player will roll three times to assign a starting value, a stopping value, and our interval. During each turn, we circle our starting value, and every value that is the same number of steps forward as our interval value. We stop circling when we get to our stopping value. The person with the highest score wins!"
       2:
         image: notes/C4_unplugged_forloops_2.png
-        text: "For loops can come in handy a lot of places and if you were to become a meteorologist, you would use for loops all the time. Hi, I'm Becky. I work at EverPower Renewables as a wind meteorologist. I forecast wind speeds for the Columbia River Gorge area where the company owns wind farms."
+        text: 'Οι βρόγχοι "για" μπορεί να φανούν χρήσιμοι σε πολλά μέρη και εάν επρόκειτο να γίνεις μετεωρολόγος, θα χρησιμοποιούσατε "για" βρόχους όλη την ώρα. Γεια σου, είμαι η Becky. Δουλεύω στην EverPower ανανεώσιμων πηγών ενέργειας ως μετεωρολόγος ανέμων. Προβλέπω τις ταχύτητες ανέμων για το φαράγγι του ποταμού Κολούμπια όπου η εταιρεία έχει αιολικά πάρκα.'
       3:
         image: notes/C4_unplugged_forloops_3.png
-        text: "We're trying to understand how much wind is going to be there so that we know how much power is going to be outputted. We give that information to real time energy traders. They buy and sell power based on how much power we tell them is going to be there in order to make sure the power grid is balanced, your lights stay on, and that we maximize the amount of energy we get out of our farms."
+        text: Προσπαθούμε να κατανοήσουμε πόσο άνεμος φυσά εκεί, έτσι ώστε να γνωρίζουμε πόση ενέργεια πρόκειται να αποδοθεί. Δίνουμε αυτήν την πληροφορία σε πραγματικό χρόνο στους εμπόρους ενέργειας. Αγοράζουν και πωλούν ενέργεια με βάση πόση ενέργεια θα παραχθεί για να διασφαλίζεται ότι το δίκτυο ηλεκτρικής ενέργειας είναι ισορροπημένο, τα φώτα σας παραμένουν αναμένα, και ότι μεγιστοποιούμε την ενέργεια που παίρνουμε από τις φάρμες μας.
       4:
         image: notes/C4_unplugged_forloops_4.png
-        text: "We're at the national control center for EverPower Renewables here in Portland and this is where we have information coming in from all our farms across the country. Even the highest power computers today can't simulate the atmosphere everywhere. In computer forecasting models, we have what we call a grid. Each grid point is a latitude, longitude. We have to calculate the physics and try and figure out the wind speed, temperature,  pressure, that sort of thing."
+        text: Είμαστε στο Eθνικό Κέντρο Ελέγχου για τις Ανανεώσιμες Πηγές Ενέργειας EverPower εδώ στο Πόρτλαντ, και εδώ συγκεντρώνουμε πληροφορίες που έρχονται από όλες τις φάρμες μας σε ολόκληρη τη χώρα. Ακόμη και οι υπολογιστές με την μεγαλύτερη υπολογιστική δύναμη δεν μπορούν να προσομοιώσουν την ατμόσφαιρα παντού. Σε υπολογιστικά μοντέλα πρόγνωσης, έχουμε αυτό που λέμε ένα πλέγμα. Κάθε σημείο του πλέγματος είναι ένα γεωγραφικό πλάτος, γεωγραφικό μήκος. Πρέπει να υπολογίσουμε τις δυνάμεις της φυσικής και να προσπαθήσουμε να προσδιορίσουμε την ταχύτητα του ανέμου, την θερμοκρασία, την πίεση, τέτοιου είδους στοιχεία.
       5:
         image: notes/C4_unplugged_forloops_5.png
-        text: "Since these are fairly big grids and we're doing this in a lot of points we're looping over these things millions and millions of times. Everything I do I'll use for loops. Here for example is a for loop right there. When you're forecasting wind, there's so many different parameters that go into it it would be impossible for a human to sit down and do all those calculations. There's so many different aspects to what's going to be affecting what's happening to the wind that we need a computer model in order to forecast it."
+        text: 'Δεδομένου ότι αυτά είναι αρκετά μεγάλο πλέγματα και κάνουμε το ίδιο για πολλά σημεία επαναλαμβάνουμε το ίδιο εκατομμύρια και εκατομμύρια φορές. Για ότι κάνω θα χρησιμοποιήσω βρόγχους "για". Εδώ παραδείγματος χάριν είναι ένας βρόγχος "γιά". Όταν προβλέπεις άνεμο, είναι τόσο πολλές διαφορετικές παραμέτροι που συμμετέχουν που θα ήταν αδύνατο για έναν άνθρωπο να καθίσει και να κάνει όλους αυτούς τους υπολογισμούς. Υπάρχουν τόσοι πολλοί παράγοντεςπου επηρεάζουν το τι συμβαίνει στον αέρα ώστε χρειαζόμαστε ένα μοντέλο υπολογιστή προκειμένου να κάνουμε πρόβλεψη.'
     C4_unplugged_madlibs:
       1:
         image: notes/C4_unplugged_madlibs_1.png
-        text: "In this lesson, we'll be playing with some fill in the blank stories. You have a template that you can fill in to create similar stories that have very amusing differences."
+        text: Στο μάθημα αυτό, θα παίζουμε γεμίζοντας τα κενά σε ιστορίες. Έχεις ένα πρότυπο που μπορείς να συμπληρώσεις για να δημιουργήσεις παρόμοιες ιστορίες που έχουν πολύ διασκεδαστικές διαφορές.
       2:
         image: notes/C4_unplugged_madlibs_2.png
-        text: "In this lesson, we also learned how to make an abstracted template from two stories that have already been created. Abstraction is the art of removing differences and details so that you can see how one solution might work for many different problems. It's very helpful in computer science because it allows us to create functions that may be useful in several different situations."
+        text: 'Σε αυτό το μάθημα, μάθαμε επίσης πως να κάνουμε ένα αφαιρετικό πρότυπο από δύο ιστορίες που έχουν ήδη δημιουργηθεί. "Αφαιρετικότητα" είναι η τέχνη της αφαίρεσης διαφορών και λεπτομερειών ώστε να δεις πώς μια λύση θα μπορείε να λειτουργήσει για πολλά διαφορετικά προβλήματα. Είναι πολύ χρήσιμη στην επιστήμη των υπολογιστών επειδή μας επιτρέπει να δημιουργήσουμε λειτουργίες που μπορεί να είναι χρήσιμες σε διαφορετικές καταστάσεις.'
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: "This lesson is called songwriting with parameters. We're going to be writing some songs here. Sometimes the chorus is just a little bit different each time you sing it. Do you remember Old Macdonald Had a Farm? The chorus is slightly different for each animal. And on that farm, he had a cow, e-i-e-i-o. The small change in each chorus can be shown using something we call parameters."
+        text: 'Αυτό το μάθημα ονομάζεται σύνθεση τραγουδιού με παραμέτρους. Θα γράψουμε μερικά τραγούδια εδώ. Μερικές φορές η χορωδία είναι λίγο διαφορετική κάθε φορά που τραγουδάς. Θυμάσε το τραγούδι "ο γέρος Μακντόναλντ είχε μια φάρμα"; Η χορωδία είναι ελαφρώς διαφορετική για κάθε ζώο. Και σε αυτή τη φάρμα, είχε μια αγελάδα, ε-ι-ε-ι-ο. Η μικρή αλλαγή σε κάθε χορωδία μπορεί να υλοποιηθεί με κάτι που ονομάζουμε παραμέτρο.'
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: Sometimes a function needs a parameter. A parameter is an extra piece of information you can pass to a function to customize it for a special need. When you make ice cream sundaes with your friends, you are using a process similar to parameters in a computer program.
+        text: Μερικές φορές μια συνάρτηση χρειάζεται μια παράμετρο. Μια παράμετρος είναι ένα πρόσθετο κομμάτι πληροφορίας που μπορείς να περάσεις σε μια συνάρτηση για να την προσαρμόσεις σε μια ειδική ανάγκη. Όταν κάνεις συνθεση παγωτού με τους φίλους σου, χρησιμοποιείς μια διαδικασία παρόμοια με την χρήση παραμέτρων σε ένα πρόγραμμα υπολογιστή.
       3:
         image: notes/C4_unplugged_parameters_3.png
-        text: "The disk of vanilla ice cream might be the same for every sundae but when you ask your friends which two toppings they'd like, you could get lots of different combinations. Topping is the function name but each type of topping is a parameter. Functions and parameters work together to make great computer programs and great sundaes too."
+        text: 'Ο δίσκος παγωτό βανίλια μπορεί να είναι ίδιος για κάθε παγωτό αλλά όταν ρωτήσεις τους φίλους σου ποιές δύο γαρνιτούρες θα ήθελαν, θα πάρετε πολλούς διαφορετικούς συνδυασμούς. Το όνομα της συνάρτησης είναι "Topping" και κάθε είδος γαρνιτούρας είναι μια παράμετρος. Οι λειτουργίες και οι παραμέτροι συνεργάζονται για να δημιουργήσουν εξαιρετικά προγράμματα υπολογιστή και εξαιρετικά παγωτά επίσης.'
     C4_unplugged_variables:
       1:
         image: notes/C4_unplugged_variables_1.png
-        text: "This lesson is called variables in envelopes. We're going to learn how we can build sentences when we're still missing pieces of information. Most of us are already familiar with the idea of filling in a blank. We do it when we're putting our name on our homework. Sometimes there's more than one word that needs to be filled out and in that case, we give that blank a label so that we know which piece of information goes where."
+        text: Αυτό το μάθημα ονομάζεται μεταβλητές σε φακέλους. Θα μάθουμε πώς μπορούμε να οικοδομήσουμε προτάσεις, όταν λείπου κομμάτια πληροφορίας. Οι περισσότεροι από εμάς είναι ήδη εξοικειωμένοι με την ιδέα να καλύψουμε ένα κενό. Το κάνουμε όταν βάζουμε το όνομά σας στην εργασία μας. Μερικές φορές υπάρχουν περισσότερες από μία λέξεις που πρέπει να συμπληρωθούν και στην περίπτωση αυτή, δίνουμε σε αυτό το κενό μια ετικέτα ώστε να ξέρουμε ποιο κομμάτι πηγαίνει πού.
       2:
         image: notes/C4_unplugged_variables_2.png
-        text: Variables are placeholders for pieces of information that can change. By using a variable for the missing information, we can continue working on whatever we were doing and let someone else fill in the missing information later. In software, we use variables a lot. We use variables as placeholders for name, email address, and even username. That way we can let the program know where those details will appear after the user fills them in. We use variables all the time in our work.
+        text: Μεταβλητές είναι σύμβολα κράτησης θέσης για μια πληροφορία που μπορεί να αλλάξει. Χρησιμοποιώντας μια μεταβλητή για την πληροφορία που λείπει, μπορούμε α συνεχίσουμε να εργαζόμαστε εργάζεστε σε ότι κάνουμε και αφήνουμε κάποιον άλλο να συμπληρώσει την πληροφορία που λείπει, αργότερα. Στο λογισμικό, χρησιμοποιούμε πολύ μεταβλητές. Χρησιμοποιούμε μεταβλητές ως σύμβολα κράτησης θέσης για το όνομα, τη διεύθυνση ηλεκτρονικού ταχυδρομείου, και ακόμη και το όνομα χρήστη. Με αυτόν τον τρόπο αφήνετε το πρόγραμμα να ξέρει που θα εμφανίζονται οι πληροφορίες αφού τις συμπληρώσει ο χρήστης. Χρησιμοποιούμε μεταβλητές όλη την ώρα στο έργο μας.
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: "Any time you need to store a piece of information for later, we use a variable. Let's say we need to count the number of times the user has tweeted. Every time that user tweets, we'll add one to that number and every time the user deletes a tweet, we'll decrease that number by one. Anytime we need to know how many times that user has tweeted, we'll just look at that variable."
+        text: Οποτε χρειάζεται να αποθηκεύσεις μια πληροφορία για αργότερα, μπορείς να χρησιμοποιήσεις μια μεταβλητή. Ας υποθέσουμε ότι πρέπει να μετρήσεις τον αριθμό των φορών που ο χρήστης τιτίβισε. Κάθε φορά που ο χρήστης τιτιβίζει, θα προσθέτουμε ένα σε αυτον τον αριθμό, ενώ κάθε φορά που ο χρήστης διαγράφει ένα τιτίβισμα, θα αφαιρούμε ένα από αυτό τον αριθμό. Οποτε θέλουμε να ξέρουμε πόσες φορές ο χρήστης τιτίβισε, απλά θα βλέπουμε την μεταβλητή.
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
-        text: A variable is a container you can store a value in. When you use that variable in an algorithm, it opens up the container and looks at the value inside. This lets you write smarter algorithms that behave differently depending on the value stored in the variable.
+        text: Μια μεταβλητή είναι ένας περιέκτης που μπορείς να αποθηκεύσεις μια τιμή. Όταν χρησιμοποιείς αυτήν τη μεταβλητή σε έναν αλγόριθμο, ανοίγει τον περιέκτη και εξετάζει την τιμή στο εσωτερικό. Αυτό σου επιτρέπει να γράψεις πιο έξυπνους αλγόριθμους που συμπεριφέρονται διαφορετικά ανάλογα με την τιμή που είναι αποθηκευμένη στη μεταβλητή.
       2:
         image: notes/C4_variables_artist_2.png
-        text: "For example, if you wanted to write an algorithm to say Happy birthday, you're turning 10! to my little brother, that's great now but when I run it next year I'd want it to say, Happy birthday, you're turning 11! I could create a variable called age to store my brother's age and write my algorithm to say Happy birthday, you're turning 'age' instead. Because variable can change, every year I can update the variable 'age' to equal 'age' plus 1."
+        text: |-
+          Παραδείγματος χάριν, εάν θελήσεις να γράψεις έναν αλγόριθμο για να πεις "Χρόνια Πολλά, γίνεσαι 10!" στον μικρό αδελφό σου, τέλεια! Αλλά όταν τρέχεις το επόμενο έτος θα θέλεις να πεις, "Χρόνια Πολλά, γίνεσαι 11!". Θα μπορούσες να δημιουργήσεις μια μεταβλητή που ονομάζεται "ηλικία" για την αποθήκευση της ηλικίας του αδελφού σου και να γράψεις έναν αλγόριθμο για να πείς "Χρόνια Πολλά, γίνεσαι 'ηλικία'". Επειδή μπορεί να αλλάξει η μεταβλητή, κάθε χρόνο μπορείς να ενημερώσεις τη μεταβλητή 'ηλικία' να είναι ίη με 'ηλικία' συν 1.
       3:
         image: notes/C4_variables_artist_3.png
-        text: "In this puzzle, we're going to be using a variable that will set the length of the line our artist draws. Later on in our code, the move forward block will look at that length variable to see what value you've set it to."
+        text: Σε αυτό το παζλ, θα χρησιμοποιήσουμε μια μεταβλητή που θα ορίσει το μήκος της γραμμής που θα σχεδιάσει ο καλλιτέχνης. Αργότερα στον κώδικά μας, το μπλοκ κινήσου εμπρός θα κοιτά αυτήν την μεταβλητή μήκους για να δει τι τιμή της εχεις δώσει.
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
-        text: A variable is a container that you can store a value in. When you use that variable in an algorithm, it opens up the container and looks at the value inside. This lets you write smarter algorithms that behave differently depending on the value stored in the variable.
+        text: Μια μεταβλητή είναι ένας περιέκτης που μπορείς να αποθηκεύσεις μια τιμή. Όταν χρησιμοποιείς αυτήν τη μεταβλητή σε έναν αλγόριθμο, ανοίγει τον περιέκτη και εξετάζει την τιμή στο εσωτερικό. Αυτό σου επιτρέπει να γράψεις πιο έξυπνους αλγόριθμους που συμπεριφέρονται διαφορετικά ανάλογα με την τιμή που είναι αποθηκευμένη στη μεταβλητή.
       2:
         image: notes/C4_variables_playlab_2.png
-        text: "Now you're going to try playlab where you are given different games and you can change the values of variables like speed, height, score, in order to change the game. You won't have to change the algorithm of the game to change how it plays, just the variable."
+        text: Τώρα θα πάμε δοκιμάσουμε το playlab όπου σας δίνονται διαφορετικά παιχνίδια και μπορείτε να αλλάξετε τις τιμές των μεταβλητών όπως ταχύτητα, ύψος, βαθμολογία, προκειμένου να αλλάξει το παιχνίδι. Δεν θα πρέπει να αλλάξετε τον αλγόριθμο του παιχνιδιού για να αλλάξετε το πώς παίζει, απλά τη μεταβλητή.
       3:
         image: notes/C4_variables_playlab_3.png
-        text: In my work for Kindle and on X-ray for books, we apply variables in many different ways. One way that you can use a variable is to store page numbers of a book. A user can increase and decrease the size of the font on a page. Based on the font size, the number of pages in the book can change. We can adjust it by storing the number of pages in the variable.
+        text: Στη εργασία για το Kindle και για τις ακτίνες χ για βιβλία, εφαρμόζουμε μεταβλητές με πολλούς διαφορετικούς τρόπους. Ένας τρόπος που μπορείς να χρησιμοποιήσεις μια μεταβλητή είναι για να αποθήκευσεις τους αριθμούς σελίδων ενός βιβλίου. Ένας χρήστης να αυξήσετε και να μειώσετε το μέγεθος της γραμματοσειράς σε μια σελίδα. Με βάση το μέγεθος της γραμματοσειράς, ο αριθμός των σελίδω του βιβλίου μπορεί να αλλάξει. Μπορούμε να το ρυθμίσουμε αυτό, αποθηκεύοντας τον αριθμό των σελίδων στη μεταβλητή.
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
         text: Τώρα, θα μάθουμε κάτι το οποίο όλοι οι προγραμματιστές παιχνιδιών χρησιμοποιούν καθημερινά. Θα μιλήσουμε για τα γεγονότα. Ένα γεγονός λέει στο πρόγραμμά σου να ακούει πότε συμβαίνει κάτι. Όταν αυτό το γεγονός συμβεί, τότε εκτελεί μια ενέργεια. Κάποια παραδείγματα γεγονότων είναι η αναμονή για ένα κλικ του ποντικιού, ενός βέλους ή το άγγιγμα της οθόνης.
       2:
         image: notes/infinity_playlab_events_2.png
-        text: |-
-          Here, we're going to make Baymax move up to touch Hiro and move down to touch Rapunzel when the player uses the up/down arrow keys or the up/down buttons. We'll use the when up arrow block and attach the move actor up block to it, so when the player presses the up arrow key, everything attached to the "when up arrow" block is run. We'll do the same thing to make Baymax move down. Step by step your game is getting more interactive.
+        text: 'Εδώ, θα κάνουμε τον Baymax να κινηθεί προς τα πάνω μέχρι να αγγίξει τον Hiro και να μετακινηθεί κάτω για να αγγίξει την Ραπουνζέλ όταν ο παίκτης χρησιμοποιεί τα πάνω/κάτω βέλη ή τα κουμπιά πάνω/κάτω. Θα χρησιμοποιήσουμε το "οταν πάνω βέλος" και θα προσαρμόσουμε το μπλοκ "κίνησε τον ηθοποιό πάνω" έτσι όταν ο παίκτης πιέσει το επάνω βέλος, ό, τι ειναι συνδεδεμένο στο "όταν πάνω βέλος" θα εκτελεστεί. Θα κάνουμε το ίδιο πράγμα να κάνουμε τον Baymax να μετακινηθεί προς τα κάτω. Βήμα-βήμα το παιχνίδι σου θα γίνει πιο διαδραστικό.'
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
-        text: "So what grade are you in? Second. Tenth grade. First grade. I was in eighth grade when I learned to program. I got my first computer when I was in sixth grade. What gets me excited is being able to fix people's problems. You can express yourself, you can build things from an idea."
+        text: Έτσι ποια τάξη είσαι; Δευτέρα. Πρώτη Λυκείου. Πρώτη Δημοτικού. Ήμουν στην Δευτέρα Γυμνασίου, όταν έμαθα να προγραμματίζω. Πήρα το πρώτο υπολογιστή μου όταν ήμουν στην έκτη τάξη. Αυτό που με ενθουσιάζει είναι ότι μπορώ να λύσω τα προβλήματα των ανθρώπων. Μπορείς να εκφραστείς, μπορείς να χτίσεις πράγματα από μια ιδέα.
       2:
         image: notes/infinity_playlab_intro_2.png
-        text: "Computer science is the basis for a lot of the things that college students and professionals will do for the next twenty or thirty years. I like programming because I like helping people. I get the opportunity to build something that's gonna make people's lives easier. I think it's the closest thing we have to a superpower. Getting started is the most important part. I'm a beginner myself and I want you to learn with me."
+        text: Η επιστήμη των υπολογιστών είναι η βάση για πολλά από τα πράγματα που φοιτητές και επαγγελματίες θα κάνουν για τα επόμενα είκοσι ή τριάντα χρόνια. Μου αρέσει ο προγραμματισμός γιατί μου αρέσει να βοηθώ τους ανθρώπους. Αρπάζω την ευκαιρία να δημιουργήσω κάτι που θα διευκολύνει τη ζωή των ανθρώπων. Νομίζω ότι είναι το πιο κοντινό πράγμα που έχουμε σε μια υπερδύναμη. Το πιο σημαντικό μέρος είναι να αρχίσεις. Είμαι ένας αρχάριος και εγώ και θέλω να μάθετε μαζί μου.
       3:
         image: notes/infinity_playlab_intro_3.png
-        text: "I'm John Vechey, I'm one of the co-founders of PopCap Games. We make games like Plants vs. Zombies, Bejeweled, and Peggle. A lot about games isn't how perfect your code is, it's not how perfect your art is, it's about how does it feel and how much fun it is. You can only get that sense by trying it, by doing it, by learning and adapting and iterating your own skills of making games."
+        text: Είμαι ο John Vechey, είμαι ένας από τους συν-ιδρυτές της PopCap Games. Κάνουμε παιχνίδια όπως το Φυτά εναντίον Ζόμπι, Bejeweled και Peggle. Το κριτήριο επιτυχίας για τα παιχνίδια δεν είναι πόσο τέλειος είναι ο κώδικά σου, δεν είναι πόσο τέλεια είναι η τέχνη σου, είναι ή αίσθηση που έχει και πόσο διασκεδαστικό είναι. Μπορείς να νοιώσεις αυτή την αίσθηση μόνο αν το δοκιμάσεις, αν το παίξεις, μαθαίνοντας, προσαρμόζοντας και εξασκώντας την ικανότητά σου να κάνεις παιχνίδια.
       4:
         image: notes/infinity_playlab_intro_4.png
         text: Έχετε ένα αγαπημένο βιντεοπαιχνίδι; Λοιπόν, θα πάμε να κάνουμε ένα βήμα προς τη δημιουργία παιχνιδιών όπως αυτό χρησιμοποιώντας το Play Lab. Τα καλά παιχνίδια έχουν μια ιστορία και κάθε ιστορία έχει ηθοποιούς. Οι ηθοποιοί κάνουν τα πράγματα όπως το να μιλούν, να κινούνται, και αλληλεπιδρούν. Ίσως ακόμη και να μαζεύουν βαθμούς με βάση τους κανόνες του παιχνιδιού. Σήμερα εμείς θα μάθουμε πώς να κάνουμε όλα αυτά τα πράγματα, ένα προς ένα, με χαρακτήρες της Disney όπως οι Anna, Elsa, Hiro, Baymax και η Rapunzel. Θα φτιάξουμε ένα παιχνίδι μπορείτε να μοιράσετε και να παίξετε σε ένα κινητό.
@@ -1202,54 +1202,54 @@ el:
         text: Η οθόνη σας είναι χωρισμένη σε τρία μέρη. Αριστερά είναι ο χώρος παιχνιδιού όπου θα εκτελεστεί το πρόγραμμά σας. Οι οδηγίες για κάθε επίπεδο είναι γραμμένες ακριβώς από κάτω από την επιφάνεια. Αυτή η μεσαία περιοχή είναι η εργαλειοθήκη, και καθένα από αυτά τα μπλοκ είναι ένα κομμάτι κώδικα. Ο λευκός χώρος στα δεξιά καλείται χώρος εργασίας, και είναι εδώ το μέρος που θα φτιάξουμε το πρόγραμμά μας.
       6:
         image: notes/infinity_playlab_intro_6.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow outline, and then they'll snap together. In this first puzzle, Hiro is Actor 1 and Baymax is Actor 2. We need to move Hiro to get to Baymax by dragging the "move right" block out and linking it to the "when run" block. Once you have your blocks in place, hit the "Run" button to see what you've programmed.
+        text: 'Για να ξεκινήσεις, θα πρέπει να συνδέσεις τα μπλοκς σου με το πορτοκαλί μπλοκ "όταν εκτελείται". Μπορείς να συνδέσεις πολλά μπλοκς σύροντάς τα έως ότου δεις το κίτρινο περίγραμμα και, στη συνέχεια, αυτά θα ενωθούν. Σε αυτό το πρώτο παζλ, ο Hiro είναι ο ηθοποιός 1 και ο Baymax είναι οηθοποιός 2. Πρέπει να κινήσουμε τον Hiro να πάρει να Baymax σύροντας το μπλοκ "Μετακίνηση δεξιά" και συνδέοντάς το με το μπλοκ "κατά την εκτέλεση". Μόλις έχετε τα μπλοκς σας στην θέση τους, χτύπησε το κουμπί "Εκτέλεση" για να δείτε τι έχετε προγραμματίσει.'
       7:
         image: notes/infinity_playlab_intro_7.png
-        text: "Get started and by the end you'll be able to create your own game with these amazing actors that can interact, score points, throw microbots, cherries, saucepans, sparkles, and ice.. and vanish each other. It's all up to you!"
+        text: Ξεκίνησε και στο τέλος θα είσαι σε θέση να δημιουργήσεις το δικό σου παιχνίδι με αυτούς τους καταπληκτικούς ηθοποιούς που μπορεί να αλληλεπιδράσουν, να κερδίσουν πόντους, να ρίξουν microbots, κεράσια, κατσαρόλες, αστεράκια και πάγο.. και να εξαφανίσει ο ένας τον άλλο. Ολα είναι στο χέρι σου!
     infinity_playlab_repeat_forever:
       1:
         image: notes/infinity_playlab_repeat_forever_1.png
-        text: "Can you imagine if you had to repeat something forever and ever? Hopefully you'll never have to because computers are really good at repeating things. This is the repeat forever block. Anything inside this block will happen forever in the game."
+        text: 'Μπορείς να φανταστείς να έπρεπε να επαναλαμβάνεις κάτι για πάντα; Ας ελπίσουμε ότι ποτέ δεν θα χρειαστεί να επειδή υπολογιστές είναι πραγματικά καλοί στο να επαναλαμβάνω πράγματα. Αυτό είναι το μπλοκ "επανάληψη για πάντα". Όλα μέσα σε αυτό το μπλοκ θα συμβαίνουν για πάντα στο παιχνίδι.'
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
-        text: "So if we wanted an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block. In this next puzzle, our goal is to help Anna walk up and down continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game."
+        text: 'Έτσι αν θέλαμε ένας ηθοποιός να κάνει κάτι συνέχεια, χωρίς ο παίκτης να χρειάζεται να κάνει κάτι, θα βάζαμε αυτά τα τμήματα μέσα στο μπλοκ "επανάληψη για πάντα". Στο επόμενο παζλ, στόχος μας είναι να βοηθήσουμε την Άννα να περπατήσει πάνω και κάτω συνεχώς. Μαθαίνοντας πώς λειτουργούν οι εντολές επανάληψης, θα εξοικονομήσεις πολύ χρόνο αργότερα όταν δημιουργήσειςς το δικό σου παιχνίδι.'
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
-        text: "What do you want to be when you grow up Olivia? An astronaut. Do you happen to know what a computer programmer is? Yeah um no. Ummm wait what? I'm not really sure how to explain it computer programming is pretty simple. It's a set of instructions like a recipe, you have to follow them step-by-step to get the end result you want."
+        text: Τι θέλεις να γίνεις όταν μεγαλώσεις Ολίβια; Αστροναύτης. Μήπως τυχαίνει να ξέρεις τι είναι προγραμματιστής ηλεκτρονικών υπολογιστών; Ναι χμμμμ όχι. Χμμ τι περιμένεις; Δεν είμαι πραγματικά βέβαιος πώς να το εξηγήσω, προγραμματισμός υπολογιστών είναι αρκετά απλό. Είναι ένα σύνολο οδηγιών σαν μια συνταγή, που θα πρέπει να ακολουθείς βήμα-βήμα μέχρι να πάρεις το τελικό αποτέλεσμα που θέλεις.
       2:
         image: notes/tutorial_puzzle_challenge_2.png
-        text: "I can change the number of pixels, the length of the line, using this dropdown. How long was it again? You can see the instructions again by looking under the run button. Here I used the move forward block and I'm going to select 100 pixels. I can delete a block by dragging it into the toolbox or the trash can. Let's put it back."
+        text: 'Μπορώ να αλλάξω τον αριθμό των εικονοστοιχείων, το μήκος της γραμμής, χρησιμοποιώντας αυτή την αναπτυσσόμενη λίστα. Πόσο καιρός ήταν και πάλι; Μπορείτε να δείτε τις οδηγίες και πάλι με την εξέταση κάτω από το κουμπί Εκτέλεση. Εδώ χρησιμοποίησα το μπλοκ "κίνηση προς τα εμπρός" και θα διαλέξω 100 εικονοστοιχεία. Μπορώ να διαγράψω ένα μπλοκ, σύροντάς το στην εργαλειοθήκη ή να τον κάδο απορριμμάτων. Ας το βάλουμε πίσω.'
       3:
         image: notes/tutorial_puzzle_challenge_3.png
-        text: "Run the code by pressing run. Well that didn't work! I'll press reset and figure out what's wrong. You can try a puzzle as many times as you'd like and skip puzzles and come back to them. Just make sure to try your best and don't give up. Let's add another move forward. That still didn't work. I can place a block between other blocks."
+        text: 'Εκτελέσετε τον κώδικα, πιέζοντας εκτέλεση. Καλά αυτό δεν λειτούργησε! Θα πιέσω επαναφορά για να καταλάβω τι είναι λάθος. Μπορείς να δοκιμάσεις ένα παζλ όσες φορές θέλεις και παραλείψεις παζλ και θα επανέλθεις σε αυτά. Δώσε τον καλύτερο εαυτό σου και μην εγκαταλείψεις την προσπάθεια. Ας προσθέσουμε άλλο ένα "μετακίνηση προς τα εμπρός". Ακόμη δεν λειτουργεί. Μπορώ να τοποθετήσω ένα μπλοκ μεταξύ άλλων μπλοκς.'
       4:
         image: notes/tutorial_puzzle_challenge_4.png
-        text: "Let's take a turn block and place it in between the move forwards. Turn left 45 degrees. Let's run it again. Reset, run, awesome! Here's another puzzle. Sometimes you are given starter code to complete. Here I need to add the appropriate lengths and degrees."
+        text: 'Ας πάρουμε ένα μπλοκ "στρίψε" και ας το τοποθετήσουμε μεταξύ των "προχώρησε εμπρός". Στρίψε αριστερά 45 μοίρες. Ας το εκτελέσουμε πάλι. Επαναφορά, εκτέλεση, τέλεια! Να ένα άλλο παζλ. Καμμιά φορά μπορεί να σου δώσουν κώδικα να συμπληρώσεις. Εδω χρειάζεται να προσθέσω τα κατάλληλα μήκη και μοίρες.'
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: "You may sometimes accidentally trash the starter code. What do you do then? You can press clear puzzle and start all over again. I'm going to drag this number block into the different pixel areas. Select 100 for pixels, 45 for degrees and 100 for pixels again. Awesome! Here is the Code Studio bee. I need to move the bee to each flower and get nectar."
+        text: 'Μπορεί καμμιά φορά να διαγράψεις κατά λάθος τον αρχικό κώδικα. Τι μπορείτε να κάνετε τότε; Μπορείτε να πιέστε εκκαθάριση παζλ και να αρχίσετε ξανά. Θα σύρω αυτό το μπλοκ "αριθμός" σε διαφορετικές περιοχές εικονοστοιχείων. Επίλεξε 100 για εικονοστοιχεία, 45 για μοίρες και 100 για εικονοστοιχεία πάλι. Τρομερό! Εδώ είναι η μέλισσα του Στούντιο Κώδικα. Πρέπει να μετακινήσω τη μέλισσα σε κάθε λουλούδι και να πάρει το νέκταρ.'
       6:
         image: notes/tutorial_puzzle_challenge_6.png
-        text: "The first flower is three blocks away so I need three move forwards. 1, 2, 3. Then a get nectar, then another get nectar. Well that didn't work! I'll place another move forward between the get nectars and run it again. Yay, it works! You just learned how to use the Code Studio artist and bee puzzles. Good luck on the Code Studio puzzle challenge."
+        text: |-
+          Το πρώτο λουλούδι είναι τρία τετράγωνα μακριά έτσι χρειάζομαι τρία "κίνηση προς τα εμπρός". 1, 2, 3. Στη συνέχεια ένα "πάρε νέκταρ"', άλλο ένα "πάρε νέκταρ". Καλά αυτό δεν λειτούργησε! Θα τοποθετήσω άλλο ένα "κίνηση προς τα εμπρός" μεταξύ των "πάρε νέκταρ" και εκτέλεσαι το ξανά. Ουόου, λειτουργεί! Μόλις έμαθες πώς να χρησιμοποιείς το Στούντιο Κώδικα και το παζλ μέλισσα. Καλή τύχη στην πρόκληση του Στούντιο Κώδικα.
     unplug1:
       1:
         image: notes/unplug1_1.png
-        text: "What do you want to be when you grow up Olivia? Umm, an astronaut! Do you happen to know what a computer programmer is? Yeahh, umm, no. Umm, what what? I'm not really sure how to explain it. Computer programming is pretty simple. It's a set of instructions, like a recipe. You have to follow them step by step to get the end result you want."
+        text: Τι θέλεις να γίνεις όταν μεγαλώσεις Ολίβια; Αστροναύτης. Μήπως τυχαίνει να ξέρεις τι είναι προγραμματιστής ηλεκτρονικών υπολογιστών; Ναι χμμμμ όχι. Χμμ τι περιμένεις; Δεν είμαι πραγματικά βέβαιος πώς να το εξηγήσω, προγραμματισμός υπολογιστών είναι αρκετά απλό. Είναι ένα σύνολο οδηγιών σαν μια συνταγή, που θα πρέπει να ακολουθείς βήμα-βήμα μέχρι να πάρεις το τελικό αποτέλεσμα που θέλεις.
       2:
         image: notes/unplug1_2.png
-        text: "Computer science is a way to impact the world. It can be music videos, it can be games, detect whether or not someone is related to someone else. Find you know, people's friends. You can do all sorts of other crazy things that actually save lives. You do have to have a drive I think. It is to me like a paintbrush. I think great programming is not all that dissimilar from great art."
+        text: Η επιστήμη των υπολογιστών εχει αντίκτυπο στον κόσμο. Μπορεί να είναι μουσικά βίντεο, παιχνίδια, μπορεί να ανιχνεύσει αν κάποιος έχει σχέση με κάποιον άλλο ή όχι. Βρείτε φίλους αυτών που γνωρίζετε. Μπορείτε να κάνετε άλλα τρελά πράγματα που μπορεί να σώσουν ζωές. Πρέπει να έχετε μια μονάδα δίσκου, νομίζω. Είναι για μένα σαν ένα πινέλο. Νομίζω ότι ο εμπνευσμένος προγραμματισμός δεν διαφέρει σημαντικά από την μεγάλη τέχνη.
       3:
         image: notes/unplug1_3.png
-        text: When I finally learned a little bit of programming, that blank wall resolved into a bunch of doors and you open them and of course then you find behind them is another hallway filled with a bunch of doors. Programming is fun and easy. You can do anything your mind wants to do. Finally you start to open enough doors the light comes in. To me a finished program is like a structure filled with light. All the corners are illuminated. The number of people that you can touch and interact with is something the world has never seen before.
+        text: Όταν έμαθα επιτέλους λίγο προγραμματισμό, αυτός ο άσπρος τοίχος μετασχηματίστηκε σε ένα μάτσο πόρτες και τις ανοίγεις και πίσω είναι ένας άλλος διάδρομος με ενα νέο μάτσο πόρτες. Ο προγραμματισμός είναι διασκεδαστικός και εύκολος. Μπορείτε να κάνετε οτιδήποτε θέλει το μυαλό σας. Τελικά ανοίγετε αρκετές πόρτες και το φως μπαίνει μέσα. Για μένα ένα τελειωμένο πρόγραμμα είναι σαν μια οικοδομή γεμάτη με φως. Φωτίζονται όλες τις γωνίες. Ο αριθμός των ανθρώπων που μπορείτε να αγγίξετε και με τους οποίους μπορείτε να αλληλοεπιδράσετε είναι κάτι που ο κόσμος δεν έχει ξαναδεί.
       4:
         image: notes/unplug1_4.png
-        text: "Our first lesson in this series is all about what computer science is, what a computer scientist does and how you can be more responsible in your use of technology. It's a very important lesson but it is a little text-heavy. At the end, you get to make your very own customized encoding using your initials. It's a fun activity and it's very empowering because binary is one of those things that feels very technical but once you understand it, it's like you speak a secret language."
+        text: Το πρώτο μάθημα σε αυτή τη σειρά εξηγεί τι είναι η επιστήμη της πληροφορικής, τι κάνει ένας επιστήμονας πληροφορικής και πώς μπορείτε να είστε πιο υπεύθυνοι κατά τη χρήση της τεχνολογίας. Είναι ένα πολύ σημαντικό μάθημα, αλλά είναι ακόμη βασισμένο σε πολύ κείμενο. Στο τέλος, παίρνετε τον δικό σας προσαρμοσμένο κώδικα με τα αρχικά σας. Είναι μιά πολύ διασκεδαστική δραστηριότητα και σας ενδυναμώνει γιατί το δυαδικό είναι ενα από αυτά τα πράγματα που φαίνονται πολύ τεχνικά αλλά όταν τα καταλάβεις, είναι σαν να μιλάς μια μυστική γλώσσα.
     unplug2:
       1:
         image: notes/unplug2_1.png
-        text: The lesson on computational thinking is intended to teach you how to take a big difficult problem and break it down into several simpler problems. The goal of this lesson is to write a set of instructions that someone can follow to draw one of the monsters included in the lesson plan.
+        text: Το μάθημα για την υπολογιστική σκέψη έχει σκοπό να σας διδάξει πώς να πάρετε ένα μεγάλο και δύσκολο πρόβλημα και να το σπάσετε σε διάφορα απλούστερα προβλήματα. Ο στόχος αυτού του μαθήματος είναι να γράψετε ένα σύνολο οδηγιών που κάποιος μπορεί να ακολουθήσει για να σχεδιάσει ένα από τα τέρατα που περιλαμβάνεται στο πλάνο του μαθήματος.
       2:
         image: notes/unplug2_2.png
         text: 'Οι μαθητές θα χωριστούν σε ομάδες για να γράψουν εντολές και μετά θα τις ανταλλάξουν με κάποια άλλη ομάδα που θα πρέπει να σχεδιάσει το τέρας. Οι ομάδες θα γράψουν εντολές χρησιμοποιώντας τέσσερα βήματα υπολογιστικής σκέψης: αποσύνθεση, εντοπισμός σχεδίου, αφαίρεση και αλγόριθμοι.'
@@ -1265,85 +1265,85 @@ el:
         text: Στον προγραμματισμό με χαρτί διαγραμμάτων, εξηγούμε πως λειτουργεί ο προγραμματισμός προσπαθώντας να βοηθήσουμε ανθρώπους να ξαναφτιάξουν σχέδια χρησιμοποιώντας μόνο βέλη και μουτζούρες. Σε ένα άτομο δίνουμε ένα μικρό σχέδιο σε χαρτί διαγραμμάτων και πρέπει να το περάσουν χρησιμοποιώντας μόνο συγκεκριμένη βέλη και να δοκιμάζοντας να περιγράψει πως ξανάφτιαξε αυτό το σχέδιο.
       2:
         image: notes/unplug3_2.png
-        text: 'In this activity, the only symbols you can use are these: move one square forward, one square backward, move one square up, move one square down, change to next color, and fill in your square with color. Once we have that coded up, we can hand it off to another person who can read the code and try and recreate the picture.'
+        text: 'Σε αυτή τη δραστηριότητα, το μόνο σύμβολα που μπορείτε να χρησιμοποιήσετε είναι τα εξής: κινήσου ένα τετράγωνο προς τα εμπρός, ένα τετράγωνο προς τα πίσω, ένα τετράγωνο κάτω, άλλαξε στο επόμενο χρώμα και γέμισε το τετράγωνό σου με χρώμα. Μόλις γράψουμε αυτόν τον κώδικα, μπορούμε να τον δώσουμε σε ένα άλλο άτομο που μπορεί να διαβάσει τον κώδικα και να προσπαθήσει να αναδημιουργήσει την εικόνα.'
     unplug4:
       1:
         image: notes/unplug4_1.png
         text: Στον προγραμματισμό με χαρτί διαγραμμάτων, εξηγούμε πως λειτουργεί ο προγραμματισμός προσπαθώντας να βοηθήσουμε ανθρώπους να ξαναφτιάξουν σχέδια χρησιμοποιώντας μόνο βέλη και μουτζούρες. Σε ένα άτομο δίνουμε ένα μικρό σχέδιο σε χαρτί διαγραμμάτων και πρέπει να το περάσουν χρησιμοποιώντας μόνο συγκεκριμένη βέλη και να δοκιμάζοντας να περιγράψει πως ξανάφτιαξε αυτό το σχέδιο.
       2:
         image: notes/unplug4_2.png
-        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+        text: Στο δεύτερο μισό της δραστηριότητας, ζητήσαμε από τους μαθητές να μας πουν με πόσους διαφορετικούς τρόπους μπορουν να διπλώσουν ενα χαρτί για να δημιουργήσουν δεκαέξι ίδια τρίγωνα. Στη συνέχεια θα συζητηθεί πώς πολλαπλές λύσεις μπορεί να οδηγήσουν στο το ίδιο τελικό αποτέλεσμα και γιατί ορισμένες λύσεις είναι καλύτερες σε ορισμένες περιπτώσεις.
     unplug5:
       1:
         image: notes/unplug5_1.png
         text: Στον προγραμματισμό με χαρτί διαγραμμάτων, εξηγούμε πως λειτουργεί ο προγραμματισμός προσπαθώντας να βοηθήσουμε ανθρώπους να ξαναφτιάξουν σχέδια χρησιμοποιώντας μόνο βέλη και μουτζούρες. Σε ένα άτομο δίνουμε ένα μικρό σχέδιο σε χαρτί διαγραμμάτων και πρέπει να το περάσουν χρησιμοποιώντας μόνο συγκεκριμένη βέλη και να δοκιμάζοντας να περιγράψει πως ξανάφτιαξε αυτό το σχέδιο.
       2:
         image: notes/unplug5_2.png
-        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+        text: Στο δεύτερο μισό της δραστηριότητας, ζητήσαμε από τους μαθητές να μας πουν με πόσους διαφορετικούς τρόπους μπορουν να διπλώσουν ενα χαρτί για να δημιουργήσουν δεκαέξι ίδια τρίγωνα. Στη συνέχεια θα συζητηθεί πώς πολλαπλές λύσεις μπορεί να οδηγήσουν στο το ίδιο τελικό αποτέλεσμα και γιατί ορισμένες λύσεις είναι καλύτερες σε ορισμένες περιπτώσεις.
     unplug6:
       1:
         image: notes/unplug6_1.png
-        text: "This activity is called coding with cards and it's great for any age. Like you learned with the if statements in earlier lessons,  during Blockly, if statements have a piece about them you have to evaluate to find out if it's true or false. That's the conditional and it can be used in lots of different ways."
+        text: 'Η δραστηριότητα αυτή ονομάζεται κωδικοποίηση με κάρτες και είναι εξαιρετική για κάθε ηλικία. Όπως έμαθες με την δήλωση "εαν" σε προηγούμενα μαθήματα, κατά τη διάρκεια του Blockly, οι δηλώσεις "εάν" έχουν ένα κομμάτι που πρέπει να αξιολογήθεί άν είναι αλήθεια ή ψέμα. Αυτό είναι το υποθετικό και μπορεί να χρησιμοποιηθεί με πολλούς διαφορετικούς τρόπους.'
       2:
         image: notes/unplug6_2.png
-        text: We take advantage of that by creating programs on paper that you run using a random draw of playing cards. You might have an if statement that says something like if the card you draw is greater than 8, you get a point. Otherwise, your opponent gets a point. You can make it as simple or as complicated as you feel comfortable.
+        text: 'Μπορούμε να το εκμεταλλευτούμε δημιουργώντας προγράμματα σε χαρτί που εκτελούνται χρησιμοποιώντας ένα τυχαίο μοίρασμα τράπουλας. Μπορεί να έχετε μια δήλωση "εαν" που λέει κάτι σαν αν η κάρτα που τραβήξεις είναι μεγαλύτερη από 8, παίρνεται έναν πόντο. Διαφορετικά, ο αντίπαλός σας παίρνει έναν πόντο. Μπορείτε να το κάνετε τόσο απλό ή τόσο περίπλοκο όσο σας αρέσει.'
     unplug7:
       1:
         image: notes/unplug7_1.png
-        text: "You know how when you look up the lyrics for a song and they define the chorus at the very beginning and then for the rest of the song, they just refer you back to the chorus? That's how you call a function."
+        text: Ξέρετε πώς όταν κοιτάξετε τους στίχους ενός τραγουδιού που καθορίζουν το ρεφραιν στην αρχή και στη συνέχεια το υπόλοιπο του τραγουδιού, απλά σας παραπέμπουν πίσω στο ρεφραιν; Ετσι καλείτε μια συνάρτηση.
       2:
         image: notes/unplug7_2.png
-        text: "In this lesson, we define the chorus at the beginning of our song and then we sing through our song and go back and we notice that the class doesn't sing the word chorus, they automatically go up to the top where we define the chorus and sing through that. We use that as a great introduction to how to understand what a program is doing when it defines and calls a function."
+        text: Στο μάθημα αυτό, ορίζουμε την χορωδία στην αρχή του τραγουδιού μας και στη συνέχεια τραγουδάμε το τραγούδι μας και παρατηρούμε ότι η τάξη δεν τραγουδά την λέξη χορωδία, πηγαίνουν αυτόματα στο πάνω μέρος όπου ορίζουμε την χορωδία και τραγουδούμε. Αυτό το χρησιμοποιούμε σαν σπουδαία εισαγωγή για να καταλάβουμε τι κάνει ένα πρόγραμμα όταν καθορίζει και καλεί μια συνάρτηση.
       3:
         image: notes/unplug7_3.png
-        text: "We use familiar songs including Old Macdonald to talk about how a chorus is called over and over and how sometimes a chorus can change. When you have a song like Old Macdonald, where certain words change, that's a great place to introduce the idea of parameters. Passing certain words through so that you can send extra information to your function. Once we're sure everybody gets it, you can take your own familiar songs and break them up yourself. See if you can figure it out together."
+        text: Χρησιμοποιούμε γνωστά τραγούδια μεταξύ των οποίων το Ο Γέρος Macdonald να μιλήσουμε για το πώς καλείται ξανά και ξανά ένα ρεφραιν και πώς καμμιά φορά μπορεί να αλλάξει. Όταν έχετε ένα τραγούδι όπως ο Γέρος Macdonald, όπου αλλάζουν ορισμένες λέξεις, είναι ένα εξαιρετικό μέρος για να εισάγετε την ιδέα των παραμέτρων. Περνώντας συγκεκριμένες λέξεις μέσα, έτσι ώστε να μπορείτε να στείλετε επιπλέον πληροφορίες για την λειτουργία σας. Μόλις είμαστε σίγουροι ότι όλοι το κατάλαβαν, μπορείτε να πάρετε τα δικό σας γνωστά τραγούδια και να τα σπάσετε εσείε οι ίδιοι. Δείτε αν μπορείτε να το κάνετε αυτό όλοι μαζί.
     unplug8:
       1:
         image: notes/unplug8_1.png
-        text: Our lesson on abstraction uses the familiar concept of madlibs, where you basically insert a blank in a story that can be filled with lots of different words. We take that idea, challenge kids to come up with their own words for their own stories, and really explain the concept of abstraction.
+        text: Το μάθημα μας στην αφαίρεση χρησιμοποιεί την οικεία έννοια των madlibs, όπου ουσιαστικά εισάγετε ένα κενό σε μια ιστορία που μπορεί να συμπληρωθεί με πολλές διαφορετικές λέξεις. Παίρνουμε ότι ιδέα, και προκαλούμε τα παιδιά να βρου τις δικές τους λέξεις για τις δικές τους ιστορίες, και πραγματικά να εξηγήσει την έννοια της αφαίρεσης.
       2:
         image: notes/unplug8_2.png
-        text: "It's all about functions and how you can have a function, like in Old Macdonald, where you have a structure for your chorus but you have something little that changes and you abstract out that little thing that changes and you can fill it in with your own word every time through. But sometimes you have three words that change and so you fill those in with three parameters, that's still pretty helpful."
+        text: Είναι όλα σχετικά με τις λειτουργίες και πώς μπορείς να έχεις μια συνάρτηση, όπως στο Γέρος Macdonald, όπου έχεις μια δομή για χορωδία σας αλλά έχεις κάτι μικρό που αλλάζει και αφαιρείς αυτό το μικρό πράγμα που αλλάζει και μπορείτε να το γεμίσετε με τη δικό σας λέξη κάθε φορά. Αλλά μερικές φορές έχεις τρεις λέξεις που αλλάζουν και έτσι μπορείς να τις συμπληρώσεις με τρεις παραμέτρους, που είναι ακόμα πολύ χρήσιμο.
       3:
         image: notes/unplug8_3.png
-        text: "You can have one function that handles lots of different problems. Lots of times people will write separate functions for all those problems, not realizing there's only one little difference. If they could just find a way to handle that one little difference, they could just reuse one function over and over again, instead of having 14 different functions."
+        text: Μπορείτε να έχετε μία λειτουργία που χειρίζεται πολλά διαφορετικά προβλήματα. Πολλοί άνθρωποι θα γράψουν ξεχωριστά συναρτήσεις για όλα αυτά τα προβλήματα, χωρίς να συνειδητοποιήσουν ότι υπάρχει μόνο μία μικρή διαφορά. Εάν μπορούσαν να βρουν έναν τρόπο για να χειριστούν αυτή την μικρή διαφορά, θα μπορούσαν να ξαναχρησιμοποιήσουν μία λειτουργία ξανά και ξανά, αντί να έχουν 14 διαφορετικές λειτουργίες.
     unplug9:
       1:
         image: notes/unplug9_1.png
-        text: Relay programming is an extremely fun lesson that gets across way more than computer science. Sometimes everybody is getting a little bit antsy and you want to get them up on their feet. This is a great way to add some excitement to computer science.
+        text: Η σκυταλοδρομία προγραμματισμού είναι ένα εξαιρετικά διασκεδαστικό μάθημα που μεταδίδει πολύ περισσότερα απο επιστήμη υπολογιστών. Καμιά φορά όλοι είναι κάπως ανήσυχοι και θέλετε να τους ξεσηκώσετε. Είναι ένας καλός τρόπος να προσθέσετε λίγο ενθουσιασμό στην επιστήμη των υπολογιστών.
       2:
         image: notes/unplug9_2.png
-        text: You break everyone up into two groups where they stand in a line and run relay style. The first person in each group runs to the other side of the room where you have a graph paper drawing and a blank piece of paper waiting for them. They write down the first step to creating that image, run back to their line, tag the next player who goes back up to write the next step.
+        text: Χωρίζετε τα άτομα σε δύο ομάδες που στέκονται ο ένας πίσω απο τον άλλο και τρέχουν σαν να κάνουν σκυταλοδρομία. Το πρώτο άτομο της κάθε ομάδας τρέχει μέχρι την άλλη άκρη του δωματίου όπου τους περιμένει μία ζωγραφιά σε καρέ χαρτί και μιά λευκή κόλλα χαρτί. Γράφουν το πρώτο βήμα για τη δημιουργία της εικόνας, τρέχουν πίσω στη γραμμή της ομάδας τους και ο επόμενος παίκτης ξεκινάει να γράψει το επόμενο βήμα.
       3:
         image: notes/unplug9_3.png
-        text: "This is a great way to get across the idea of debugging, needing to proofread your own work, and needing to check the work of the people done before you. You'll quickly understand how important it is that you be careful in your coding when a whole team is depending on you."
+        text: Αυτό είναι ένας πολύ καλός τρόπος για να μεταδώσουμε την ιδέα του προσδιορισμού σφαλμάτων, που χρειάζεται να ελέγξετε την ορθότητα της δική σας εργασία, και να ελέγξετε την εργασία που οι άνθρποι έκαναν πριν από εσας. Γρήγορα θα καταλάβετε πόσο σημαντικό είναι να είσαι προσεκτικός στην κωδικοποίηση σας όταν μια ολόκληρη ομάδα εξαρτάται από εσάς.
     unplug10:
       1:
         image: notes/unplug10_1.png
-        text: "This activity explains in an easy-to-understand way how the internet works. We explain all the terminology you'll need in simple terms so that students can simulate transmitting messages, like an email."
+        text: Η δραστηριότητα αυτή εξηγεί με ένα εύκολο στην κατανόηση τρόπο πώς δουλεύει το διαδίκτυο. Εξηγούμε όλη την ορολογία που θα χρειαστείτε σε απλούς όρους, έτσι ώστε οι μαθητές να προσομοιώσου την αποστολή μηνυμάτων, όπως ένα μήνυμα ηλεκτρονικού ταχυδρομείου.
       2:
         image: notes/unplug10_2.png
-        text: "Students will transmit messages while pretending to be one of three transmission methods. Wireless internet, DSL or fiber optic. The students who represent wi-fi will have to wear the message they're transmitting on their head because wifi is the most likely to drop some information."
+        text: Οι μαθητές θα μεταδίδου μηνύματα ενώ προσποιούνται ότι είναι μία από τις τρεις μεθόδους μετάδοσης. Ασύρματο internet, DSL ή οπτική ινα. Οι μαθητές που προσποιούνται το wi-fi θα πρέπει να φορούν το μήνυμα που θα μεταδόσουν στο κεφάλι τους, διότι το wifi είναι το πιο πιθανό να απορίψει κάποιες πληροφορίες.
       3:
         image: notes/unplug10_3.png
-        text: "The students pretending to be DSL or cable will carry the message on the back of their hand, where they're slightly less likely to drop information. And the students representing fiber optic will get to carry them with both hands. This activity is a great way to understand something that many of us use every day."
+        text: Οι μαθητές που προσποιούνται ότι είναι το DSL ή καλωδιακό θα μεταφέρουν το μήνυμα στο πίσω μέρος του χεριού τους, όπου είναι ελαφρώς λιγότερο πιθανό να χαθούν πληροφορίες. Και οι μαθητές που προσποιούνται τις οπτικές ίνες θα μεταφέρουν τις πληροφορίες με τα δύο χέρια. Αυτή η δραστηριότητα είναι ένας πολύ καλός τρόπος για να καταλάβου οι μαθητές κάτι που πολλοί από εμάς χρησιμοποιούν κάθε μέρα.
     unplug11:
       1:
         image: notes/unplug11_1.png
-        text: "So now it's time to step back and take a birds eye view of everything you've done in these past nineteen lessons. This is a great time to call out to students that what they've just done is a huge achievement. They've learned more over these lessons than most adults know about computer science."
+        text: Έτσι, τώρα ήρθε η ώρα να κάνουμε ένα βήμα πίσω και να δουν σφαιρικά όλα όσα έχετε κάνει στα τελευταία δεκαεννέα μαθήματα. Αυτή είναι η κατάλληλη στιγμή να πείτε δυνατά στους μαθητές ότι έχουν κάνει είναι ένα τεράστιο επίτευγμα. Έχουν μάθει περισσότερα σε αυτά τα μαθήματα από ό, τι οι περισσότεροι ενήλικες γνωρίζουν για την επιστήμη των υπολογιστών.
       2:
         image: notes/unplug11_2.png
-        text: "Discuss as a class or in small groups about their favorite lessons. Once you take a look back at everything you've learned, this is where your students' creativity can shine. Split them into groups and have them create an unplugged lesson of their own. Assign each group a key concept, like functions or algorithms and have lots of craft materials on hand for them to use. Have each group present their new unplugged activity or even set aside another day to do a few of the student created activities."
+        text: Συζητήστε σαν τάξη ή σε μικρές ομάδες για τα αγαπημένα τους μαθήματα. Μόλις μπορέσετε να ρίξετε μια ματιά πίσω σε ό, τι έχετε μάθει, θα λάμψει η δημιουργικότητα των μαθητών σας. Χωρίστε τους σε ομάδες και αφήστε τους να δημιουργήσουν ένα αποσυνδεδεμένο μάθημα μόνοι τους. Αντιστοιχίστε σε κάθε ομάδα μια έννοια-κλειδί, όπως συναρτήσεις ή αλγορίθμους και έχετε διαθέσιμα για να χρησιμοποιήσουν πολλά υλικά χειροτεχνίας. Κάθε ομάδα να παρουσιάσει την νέα αποσυνδεδεμένη δραστηριότητα, ή ακόμη διαθέστε άλλη μία μέρα για να το εκτελέσετε μερικές από τις δραστηριότητες που δημιούργησαν οι σπουδαστές.
       3:
         image: notes/unplug11_3.png
-        text: "From everyone here at Code.org, we hope you've had a TON of fun during this course. And whether your dream is to create the best new app, use programming to help cure diseases, or you just want to be a stellar problem-solver, this course was the first step in achieving those dreams."
+        text: Από όλους εδώ στο Code.org, ελπίζουμε ότι καταδιασκεδάσατε με αυτό το μάθημα. Και είτε το όνειρό σας είναι να δημιουργήσετε την καλύτερη νέα εφαρμογή,να χρησιμοποιήστε προγραμματισμό για να βοηθήσετε τη θεραπεία ασθενειών, ή απλά θέλετε να λύνετε προβλήματα αστροφυσικής, το μάθημα αυτό ήταν το πρώτο βήμα για πραγματοποιήσετε αυτά τα όνειρα.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
         text: 'Γεια σας, είμαι η Kathleen Kennedy και είμαι η παραγωγός του Πολέμου των Άστρων, Η Δύναμη Ξυπνά. Σήμερα θα εργαστείτε με ένα από τα αστέρια μας, το BB-8. Το BB-8 είναι ένα σφαιρικό ανδροειδές. Ό,τι κάνει και όποια κίνηση κάνει ελέγχεται από πρόγραμμα υπολογιστή. Η επιστήμη των υπολογιστών επηρεάζει κάθε βιομηχανία, από το marketing μέχρι τους κλάδους υγείας και τον κινηματογράφο. Για την ακρίβεια, εκατοντάδες μηχανικοί υπολογιστών εργάστηκαν μαζί για να φτιάξουν μία ταινία όπως την "Η Δύναμη Ξυπνά".'
       2:
         image: notes/starwars_intro_2.JPG
-        text: 'Γεια σας, είμαι η Rachel Rose και είμαι μηχανικός R&D στην ILM και οδηγώ τις ομάδες κίνησης και πλασμάτων. Στην ταινία Η Δύναμη Ξυπνά, είμαι υπεύθυνη για να βοηθώ τους καλλιτέχνες να κατασκευάζουν ρουχισμό, που είναι μέρος του χαρακτήρα που κινείται και επιτρέπουν στο χαρακτήρα να δείχνει αληθοφανής σε έναν γαλαξία πολύ, πολύ μακρυά.'
+        text: 'Γεια σας, είμαι η Rachel Rose και είμαι μηχανικός R&D στην ILM και ηγούμαι της ομάδας ανάπτυξης κίνησης και πλασμάτων. Στην ταινία "Η Δύναμη Ξυπνά", είμαι υπεύθυνη για να βοηθώ τους καλλιτέχνες να κατασκευάζουν ρουχισμό, που είναι μέρος του χαρακτήρα που κινείται και επιτρέπουν στο χαρακτήρα να δείχνει αληθοφανής σε έναν γαλαξία πολύ, πολύ μακρυά.'
       3:
         image: notes/starwars_intro_3.JPG
         text: Στην επόμενη ώρα, θα φτιάξουμε το δικό μας παιχνίδι Πολέμου των Άστρων. Θα σας μάθουμε τις βασικές αρχές του προγραμματισμού. Συνήθως ο προγραμματισμός είναι μόνο κείμενο, αλλά θα χρησιμοποιήσουμε εδώ μπλοκ, ώστε να μπορούμε να τα σύρουμε και να τα εναποθέσουμε ώστε να γράψουμε προγράμματα. Στην πραγματικότητα θα δημιουργείτε κώδικα. Όταν δοκιμάσετε τα βασικά με τα μπλοκ, θα σας γυρίσουμε στην JavaScript, μια από τις πιο δημοφιλείς γλώσσες προγραμματισμού στο Internet.

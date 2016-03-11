@@ -6,17 +6,10 @@
   "user_id": 155,
   "properties": {
     "skin": "applab",
-    "code_functions": {
-      "createRecord": null,
-      "declareAssign_x": null,
-      "declareNoAssign_x": null,
-      "assign_x": null,
-      "console.log": null
-    },
     "edit_code": true,
     "embed": "false",
     "instructions": "Run the program. Verify the song object was added to the database. Note the callback function now displays the copy of the record sent back back by the database. (Click to see full instructions)",
-    "markdown_instructions": "# Messing around with data\r\n\r\n**The third parameter** of `createRecord` is a callback function.  **What does it do?**\r\n\r\n![](https://images.code.org/9a89cca8257b7dc807a1637efe121442-image-1449245629915.png)\r\n\r\n* Data commands **must be sent across the Internet to a remote server**.\r\n* The database follows a **protocol** in which it **responds to every data command with a message**. This message might be a piece of data you requested, or it could be an error message.\r\n* You might need to use the contents of this response in your program, but because of **delays caused by sending information back and forth across the Internet** you don't know when you will receive it.\r\n* Therefore, you create a **callback function that will be called by the system when the response comes back** (in other words when the database \"calls back\"). The parameter of the **callback function** contains the data being sent back.\r\n\r\nFor `createRecord` the database **responds by sending back a copy of the object that was stored**. The `record` parameter of the callback function contains that object.\r\n\r\n**Analogy**: When you made an event handler using `onEvent` you also specified a callback function.  That function got called **when the user triggered the specific event you were watching for**.  The callback function of a database command like `createRecord` gets triggered **when the database sends a message back**.  \r\n \r\n# Do This\r\n\r\n**Starter code is provided** that adds a song object to the database.\r\n\r\n* **Run the program**\r\n* **Look at the data viewer** to verify that the object you just stored is actually in the database (along with a few extra songs we added to start you out).\r\n* **Notice:** the callback function now displays the copy of the record that was returned by the database\r\n\r\n",
+    "markdown_instructions": "# Messing Around with Data\r\n\r\n**The third parameter** of `createRecord` is a callback function.  **What does it do?**\r\n\r\n![](https://images.code.org/9a89cca8257b7dc807a1637efe121442-image-1449245629915.png)\r\n\r\n* Data commands **must be sent across the Internet to a remote server**.\r\n* The database follows a **protocol** in which it **responds to every data command with a message**. This message might be a piece of data you requested, or it could be an error message.\r\n* You might need to use the contents of this response in your program, but because of **delays caused by sending information back and forth across the Internet** you don't know when you will receive it.\r\n* Therefore, you create a **callback function that will be called by the system when the response comes back** (in other words when the database \"calls back\"). The parameter of the **callback function** contains the data being sent back.\r\n\r\nFor `createRecord` the database **responds by sending back a copy of the object that was stored**. The `record` parameter of the callback function contains that object.\r\n\r\n**Analogy**: When you made an event handler using `onEvent`, you also specified a callback function.  That function got called **when the user triggered the specific event you were watching for**.  The callback function of a database command like `createRecord` gets triggered **when the database sends a message back**.  \r\n \r\n# Do This:\r\n\r\n**Starter code is provided** that adds a song object to the database.\r\n\r\n* **Run the program.**\r\n* **Look at the Data Viewer** to verify that the object you just stored is actually in the database (along with a few extra songs we added to start you out).\r\n* **Notice:** The callback function now displays the copy of the record that was returned by the database.\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -47,7 +40,8 @@
     "debugger_disabled": "false",
     "project_template_level_name": "U4 - Exploring Data Tools - Template",
     "slider_speed": "1.0"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

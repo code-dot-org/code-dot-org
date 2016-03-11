@@ -63,7 +63,7 @@ namespace :seed do
   end
 
   # detect changes to dsldefined level files
-  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi)
+  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi LevelGroup)
   DSLS_GLOB = DSL_TYPES.map{|x|Dir.glob("config/scripts/**/*.#{x.underscore}*")}.sort.flatten
   file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
     Rake::Task['seed:dsls'].invoke
@@ -157,7 +157,7 @@ namespace :seed do
   end
 
   desc "calculate most common unsuccessful solutions for the crowdsourced hints UI"
-  task :frequent_level_sources, [:freq_cutoff, :game_name] => :environment do |t, args|
+  task :frequent_level_sources, [:freq_cutoff, :game_name] => :environment do |_t, args|
     freq_cutoff = 1
     FrequentUnsuccessfulLevelSource.populate(freq_cutoff, args[:game_name])
   end
@@ -182,7 +182,7 @@ namespace :seed do
     end
   end
 
-  task :import_users, [:file] => :environment do |t, args|
+  task :import_users, [:file] => :environment do |_t, args|
     CSV.read(args[:file], { col_sep: "\t", headers: true }).each do |row|
       User.create!(
           provider: User::PROVIDER_MANUAL,
@@ -203,39 +203,39 @@ namespace :seed do
     end
   end
 
-  task :import_itunes, [:file] => :environment do |t, args|
+  task :import_itunes, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 1, "\t")
   end
 
-  task :import_dropbox, [:file] => :environment do |t, args|
+  task :import_dropbox, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 2, "\t")
   end
 
-  task :import_valve, [:file] => :environment do |t, args|
+  task :import_valve, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 3, "\t")
   end
 
-  task :import_ea_bejeweled, [:file] => :environment do |t, args|
+  task :import_ea_bejeweled, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 4, "\t")
   end
 
-  task :import_ea_fifa, [:file] => :environment do |t, args|
+  task :import_ea_fifa, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 5, "\t")
   end
 
-  task :import_ea_simcity, [:file] => :environment do |t, args|
+  task :import_ea_simcity, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 6, "\t")
   end
 
-  task :import_ea_pvz, [:file] => :environment do |t, args|
+  task :import_ea_pvz, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 7, "\t")
   end
 
-  task :import_skype, [:file] => :environment do |t, args|
+  task :import_skype, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 10, ",")
   end
 
-  task :import_donorschoose_750, [:file] => :environment do |t, args|
+  task :import_donorschoose_750, [:file] => :environment do |_t, args|
     Rails.logger.info "Importing teacher prize codes from: " + args[:file] + " for provider id 8"
     CSV.read(args[:file], { col_sep: ",", headers: true }).each do |row|
       if row['Gift Code'].present?
@@ -244,7 +244,7 @@ namespace :seed do
     end
   end
 
-  task :import_donorschoose_250, [:file] => :environment do |t, args|
+  task :import_donorschoose_250, [:file] => :environment do |_t, args|
     Rails.logger.info "Importing teacher bonus prize codes from: " + args[:file] + " for provider id 9"
     CSV.read(args[:file], { col_sep: ",", headers: true }).each do |row|
       if row['Gift Code'].present?

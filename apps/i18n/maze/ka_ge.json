@@ -18,6 +18,7 @@
   "fillTooltip": "ერთი ერთეული მიწის განლაგება",
   "finalLevel": "გილოცავთ! თქვენ ამოხსენით უკანასკნელი თავსატეხი.",
   "flowerEmptyError": "ყვავილს, რომელზეც ახლა ხართ, ნექტარი აღარ აქვს.",
+  "didNotCollectEverything": "დარწმუნდით, რომ არ ტოვებთ ნექტარსა ან თაფლს!",
   "get": "ამოღება",
   "heightParameter": "სიმაღლე",
   "holePresent": "აქ ორმოა",
@@ -81,6 +82,5 @@
   "whileTooltip": "გაიმეორეთ ჩაკეტილი მოქმედება უკანასკნელ წერტილზე მისვლამდე.",
   "word": "იპოვეთ სიტყვა",
   "yes": "დიახ",
-  "youSpelled": "თქვენ შეიყვანეთ",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "თქვენ შეიყვანეთ"
 }

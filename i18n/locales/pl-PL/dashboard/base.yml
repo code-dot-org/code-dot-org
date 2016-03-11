@@ -24,6 +24,7 @@ pl:
   hello: Witaj świecie
   welcome_back: 'Witaj z powrotem, %{name}'
   submit: Wyślij
+  unsubmit: Nieprzesłane
   add_teacher_form:
     code:
       label: 'Dodaj nauczyciela:'
@@ -223,7 +224,7 @@ pl:
       free_play:
         playlab: Utwórz aplikację
         artist: Narysuj cokolwiek
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Utwórz aplikację
     user:
       classroom: Domowa strona nauczyciela
@@ -321,6 +322,7 @@ pl:
     heading_hoc2014: '<h2>Godzina kodowania dla</h2><h1>Wszystkich grup wiekowych</h1>'
     heading_elementary: '<h2>20-godzinne kursy z</h2><h1>Podstaw informatyki (w każdym wieku)</h1>'
     heading_apps: '<h2>Zabawy dla</h2><h1>Wszystkich</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Nasz przyspieszony kurs dla</h2><h1>Wszystkich grup wiekowych</h1>'
     your_gallery: Galeria
     no_primary_course: Wypróbuj kurs w Code Studio
@@ -415,6 +417,12 @@ pl:
       current: Aktualne poziomy
       unused: Niewykorzystane poziomy
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klasyczny labirynt
       body: Wypróbuj podstawy informatyki. Miliony dały im już szansę.
@@ -460,11 +468,19 @@ pl:
     report_bug: Zgłoś błędy
     support: Uzyskaj pomoc
     support_url: //support.Code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Błędna odpowiedź
     wrong_body: Wprowadzona przez Ciebie odpowiedź nie jest poprawna. Spróbuj ponownie!
     correct_title: Poprawnie
     correct_body: To jest poprawna odpowiedź.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Dziękujemy
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Dziękujemy
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -484,6 +500,9 @@ pl:
     placeholder: Wprowadź swoją odpowiedź tutaj
     open_response_title: Dzięki
     open_response_body: Dzięki za odpowiedź!
+  level_group:
+    correct_title: Dziękujemy
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Czy na pewno chcesz zacząć od nowa?

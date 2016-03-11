@@ -1,4 +1,4 @@
-/* global Interpreter, CanvasPixelArray, ace */
+/* global Interpreter, CanvasPixelArray, ace, Uint8ClampedArray */
 
 var dropletUtils = require('./dropletUtils');
 var utils = require('./utils');
@@ -109,7 +109,7 @@ exports.strip = function(code) {
  * Extract the user's code as raw JavaScript.
  */
 exports.workspaceCode = function(blockly) {
-  var code = blockly.Generator.blockSpaceToCode('JavaScript');
+  var code = blockly.Generator.blockSpaceToCode('JavaScript', null, false);
   return exports.strip(code);
 };
 
@@ -627,19 +627,17 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
 
 // session is an instance of Ace editSession
 // Usage
-// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// var lengthArray = calculateCumulativeLength(editor.getSession());
 // Need to call this only if the document is updated after the last call.
-exports.aceCalculateCumulativeLength = function (session) {
-  var cumulativeLength = [];
-  var cnt = session.getLength();
-  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
-  cumulativeLength.push(cuml);
-  var text = session.getLines(0, cnt);
-  for (var i = 0; i < cnt; i++) {
-    cuml += text[i].length + nlLength;
-    cumulativeLength.push(cuml);
-  }
-  return cumulativeLength;
+exports.calculateCumulativeLength = function (code) {
+  var regex = /\n/g, result = [];
+  do {
+    result.push(regex.lastIndex);
+    regex.exec(code);
+  } while (regex.lastIndex !== 0);
+
+  result.push(code.length + 1);
+  return result;
 };
 
 // Fast binary search implementation

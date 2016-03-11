@@ -2,8 +2,7 @@ var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('lodash');
 var $ = require('jquery');
-require('react/addons');
-var ReactTestUtils = React.addons.TestUtils;
+var ReactTestUtils = require('react-addons-test-utils');
 
 // i'd like this test to not run through level tests, which has a lot of hacks,
 // but this is the easiest approach for now. hopefully at some point in the
@@ -136,11 +135,13 @@ module.exports = {
         var assetUrl = '//localhost:8001/apps/static/flappy_promo.png';
         var imageInput = $("#propertyRowContainer input").last()[0];
 
+        var buttonElement = $("#design_button1")[0];
+        var originalButtonWidth = buttonElement.style.width;
+        var originalButtonHeight = buttonElement.style.height;
+
         ReactTestUtils.Simulate.change(imageInput, {
           target: { value: assetUrl }
         });
-
-        var buttonElement = $("#design_button1")[0];
 
         // wait until image has loaded to do validation
         var img = new Image();
@@ -153,9 +154,15 @@ module.exports = {
           // add a completion on timeout since this is a freeplay level
           setTimeout(function () {
             assert.equal(buttonElement.style.backgroundImage, 'url(http:' + assetUrl + ')');
-            assert.equal(buttonElement.style.width, '200px');
-            assert.equal(buttonElement.style.height, '113px');
-            assert.equal(buttonElement.style.backgroundSize, '200px 113px');
+
+            // Validate that the button wasn't resized
+            assert.equal(buttonElement.style.width, originalButtonWidth);
+            assert.equal(buttonElement.style.height, originalButtonHeight);
+
+            // Validate that background image is centered and fit to the button size
+            assert.equal(buttonElement.style.backgroundSize, 'contain');
+            assert.equal(buttonElement.style.backgroundPosition, '50% 50%');
+            assert.equal(buttonElement.style.backgroundRepeat, 'no-repeat');
 
             Applab.onPuzzleComplete();
           }, 1);
@@ -903,6 +910,61 @@ module.exports = {
 
         selectElementAndValidate('button1');
         selectElementAndValidate('screen1');
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "new radio buttons have default group ids",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // Switch to design mode
+        $('#designModeButton').click();
+
+        // Add first radio button
+        testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
+        var radio1 = $("#design_radio_button1")[0];
+
+        // Validate that a default group id got generated and shown in properties tab
+        assert.equal(radio1.name, 'radio_group1', "default group id generated for new radio button");
+        assertPropertyRowValue(1, 'group id', 'radio_group1', assert);
+
+        // Add second radio button
+        testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
+        var radio2 = $('#design_radio_button2')[0];
+
+        // Validate that it has the same group id as the first radio button
+        assert.equal(radio2.name, radio1.name, "new radio button reused group id of existing radio button");
+        assertPropertyRowValue(1, 'group id', 'radio_group1', assert);
+
+        // Change the group id of radio button 2
+        radio2.name = "radio_group_changed";
+
+        // Add third radio button
+        testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
+        var radio3 = $('#design_radio_button3')[0];
+
+        // Validate that it has the same group id as the most recently created radio button, i.e. radio button 2
+        assert.equal(radio3.name, radio2.name, "new radio button reused updated group id of existing radio button");
+        assertPropertyRowValue(1, 'group id', 'radio_group_changed', assert);
+
+        // Add a new screen
+        testUtils.dragToVisualization('SCREEN', 10, 10);
+
+        // Add fourth radio button
+        testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
+        var radio4 = $('#design_radio_button4')[0];
+
+        // Validate that a new group id got generated, and not group id from the other screen
+        assert.equal(radio4.name, "radio_group2");
+        assertPropertyRowValue(1, 'group id', 'radio_group2', assert);
 
         Applab.onPuzzleComplete();
       },

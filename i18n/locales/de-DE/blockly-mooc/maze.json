@@ -18,6 +18,7 @@
   "fillTooltip":"Lege eine Einheit Schmutz auf den Boden",
   "finalLevel":"Glückwunsch! Du hast die letzte Aufgabe abgeschlossen.",
   "flowerEmptyError":"Die Blume auf der du bist, hat keinen Nektar mehr.",
+  "didNotCollectEverything":"Stelle sicher, dass Du keinen Nektar oder Honig übrig lässt!",
   "get":"Nehme",
   "heightParameter":"Höhe",
   "holePresent":"dort ist ein Loch",

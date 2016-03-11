@@ -28,6 +28,12 @@ Style/DotPosition:
 Style/ExtraSpacing:
   Enabled: false
 
+Style/IdenticalConditionalBranches:
+  Enabled: false
+
+Style/IfInsideElse:
+  Enabled: false
+
 Metrics/AbcSize:
   Enabled: false
 
@@ -37,9 +43,11 @@ Metrics/LineLength:
 Metrics/ModuleLength:
   Enabled: false
 
+Metrics/BlockNesting:
+  Enabled: false
+
 Style/Semicolon:
   AllowAsExpressionSeparator: true
 
 Style/NumericLiterals:
-  Enabled: true
   MinDigits: 7

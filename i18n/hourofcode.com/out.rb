@@ -80,7 +80,6 @@ locale_index = 0
 code_index = 1
 crowdincode_index = 2
 
-
 #########################################################################################
 ##                                                                                     ##
 ## rename folders and files from crowdin codes to our codes                            ##
@@ -109,8 +108,6 @@ languages.each_pair do |name, codes|
   end
 end
 
-
-
 #########################################################################################
 ##                                                                                     ##
 ## copy files from i18n to hoc.com                                                     ##
@@ -118,7 +115,7 @@ end
 #########################################################################################
 
 puts "Copying files from cdo/i18n to hoc.com/i18n..."
-languages.each_pair do |name, codes|
+languages.each_value do |codes|
   unless codes[locale_index] == "en-US"
     puts "Copied locale #{codes[code_index]}"
 
@@ -157,8 +154,6 @@ languages.each_pair do |name, codes|
     end
   end
 end
-
-
 
 #########################################################################################
 ##                                                                                     ##
@@ -239,8 +234,6 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |f
   puts file
   File.write(file, File.read(file).gsub(/\((%[^%]*%)\)/, "(<\\1>)"))
 end
-
-
 
 #########################################################################################
 ##                                                                                     ##

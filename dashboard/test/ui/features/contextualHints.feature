@@ -60,9 +60,9 @@ Scenario: Blocks render in contextual hints
   When I view the instructions and old hints
   And I wait to see a dialog titled "Puzzle 2 of 2"
 
-  Then I see jquery selector .authored-hints ul
+  Then I see jquery selector .authored-hints ol
   # the block renders when opening the instructions
-  And I see jquery selector .authored-hints ul .block-hint:eq(0) svg
+  And I see jquery selector .authored-hints ol .block-space:eq(0) svg
 
 Scenario: Contextual hints in level without Authored Hints
   Given I am on "http://learn.code.org/s/allthethings/stage/4/puzzle/5?noautoplay=true"
