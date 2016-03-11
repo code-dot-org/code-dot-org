@@ -25,10 +25,6 @@ CDO.max_property_writes_per_sec = REDUCED_RATE_LIMIT_FOR_TESTING
 
 require 'cdo/rack/attack'
 
-# Configure rack attack to use the fake Redis on localhost.
-Rack::Attack.cache.store = Rack::Attack::StoreProxy::RedisStoreProxy.new(
-    Redis.new(url: 'redis://localhost:6379'))
-
 class RackAttackTest < Minitest::Test
   include Rack::Test::Methods
   include SetupTest
@@ -38,7 +34,8 @@ class RackAttackTest < Minitest::Test
   PROPERTY_KEY = 'key'
   OTHER_KEY = 'other_key'
 
-  @@updater = RackAttackConfigUpdater.new.start
+  @@cache_store = Rack::Attack::StoreProxy::RedisStoreProxy.new(Redis.new(url: 'redis://localhost:6379'))
+  @@updater = RackAttackConfigUpdater.new.start(@@cache_store)
 
   def build_rack_mock_session
     # TODO(dave): chain middleware components like this in other middleware tests to reduce complexity.
