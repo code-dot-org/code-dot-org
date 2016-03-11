@@ -1661,7 +1661,7 @@ Applab.showRateLimitAlert = function () {
   }
   hasSeenRateLimitAlert = true;
 
-  var alert = <div>The app has been reading or writing to the database too frequently.  Please try again a little later.  Let the developer know if you see this problem again.</div>;
+  var alert = <div>{applabMsg.dataLimitAlert()}</div>;
   if (studioApp.share) {
     studioApp.displayPlayspaceAlert("error", alert);
   } else {
