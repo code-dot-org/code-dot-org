@@ -31,7 +31,7 @@ def main()
   params[:groups].count.times do
     groups << [].tap do |results|
       results << columns
-      while(results.count <= params[:size])
+      while (results.count <= params[:size])
         break unless line = lines.pop
         results << line
       end
