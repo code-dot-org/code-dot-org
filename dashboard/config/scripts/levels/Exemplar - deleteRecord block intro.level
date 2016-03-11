@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "deleteRecord(\"mytable\", {id:1}, function(){\r\n  console.log(\"Delete successful\"); \r\n});\r\n",
+    "start_blocks": "deleteRecord(\"mytable\", {id:1}, function(success){\r\n  console.log(\"Delete successful\"); \r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -37,9 +37,13 @@
     "submittable": "false",
     "data_tables": "{\r\n \"mytable\":\r\n [\r\n  {\r\n    \"id\": 1,\r\n    \"name\": \"Greg\",\r\n    \"age\": 16\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"name\": \"Karen\",\r\n    \"age\": 17\r\n  },\r\n  {\r\n    \"id\": 3,\r\n    \"name\": \"Crystal\",\r\n    \"age\": 16\r\n  },\r\n  {\r\n    \"id\": 4,\r\n    \"name\": \"Adrion\",\r\n    \"age\": 17\r\n  }\r\n]\r\n}",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

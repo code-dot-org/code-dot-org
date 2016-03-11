@@ -376,7 +376,6 @@ EquationSet.getEquationFromBlock = function (block) {
         }
         return new Equation(null, [], new ExpressionNode(name, values));
       }
-      break;
 
     case 'functional_definition':
       name = block.getTitleValue('NAME');

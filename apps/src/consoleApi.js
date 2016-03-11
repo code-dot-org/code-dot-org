@@ -1,7 +1,12 @@
-var codegen = require('../codegen');
+var codegen = require('./codegen');
 var vsprintf = require('sprintf-js').vsprintf;
 
 var consoleApi = module.exports;
+var logMethod = function () {};
+
+consoleApi.setLogMethod = function (newLogMethod) {
+  logMethod = newLogMethod;
+};
 
 consoleApi.log = function() {
   var nativeArgs = arguments;
@@ -19,5 +24,5 @@ consoleApi.log = function() {
       }
     }
   }
-  Applab.log(output);
+  logMethod(output);
 };

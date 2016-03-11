@@ -23,14 +23,17 @@ var Instructions = React.createClass({
     // These instructions may contain spans and images as determined by
     // StudioApp.substituteInstructionImages
     var body;
+    var bodyStyle = {
+      marginBottom: '35px'
+    };
     if (this.props.renderedMarkdown) {
       // Optionally give markdown dialog wide left margin so it looks more like a
       // non-markdown instructions dialog (useful if mixing markdown instructions
       // with non-markdown instructions in one tutorial).
-      var bodyStyle = (this.props.markdownClassicMargins) ? {
-        paddingTop: 0,
-        marginLeft: '90px'
-      } : {};
+      if (this.props.markdownClassicMargins) {
+        bodyStyle.paddingTop = 0;
+        bodyStyle.marginLeft = '90px';
+      }
 
       body = (<div 
         className='instructions-markdown'
@@ -38,15 +41,21 @@ var Instructions = React.createClass({
         dangerouslySetInnerHTML={{ __html: this.props.renderedMarkdown }}
       />);
     } else {
-      body = [<p key='dialog-title' className='dialog-title'>{ this.props.puzzleTitle }</p>];
+      bodyStyle.marginLeft = '80px';
 
-      if (this.props.instructions) {
-        body.push(<p key='instructions-1' dangerouslySetInnerHTML={{ __html: this.props.instructions }}/>);
-      }
+      var instructions = (this.props.instructions) ?
+        <p className='instructions' dangerouslySetInnerHTML={{ __html: this.props.instructions }}/> :
+        null;
 
-      if (this.props.instructions2) {
-        body.push(<p key='instructions-2' className='instructions2' dangerouslySetInnerHTML={{ __html: this.props.instructions2 }}/>);
-      }
+      var instructions2 = (this.props.instructions2) ?
+        <p className='instructions2' dangerouslySetInnerHTML={{ __html: this.props.instructions2 }}/> :
+        null;
+
+      body = (<div style={ bodyStyle }>
+        <p className='dialog-title'>{ this.props.puzzleTitle }</p>
+        {instructions}
+        {instructions2}
+      </div>);
     }
 
     var aniGif;
@@ -63,4 +72,5 @@ var Instructions = React.createClass({
     );
   }
 });
+
 module.exports = Instructions;

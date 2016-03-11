@@ -1,6 +1,5 @@
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
-var EvalText = require('./evalText');
 var EvalCircle = require('./evalCircle');
 var EvalTriangle = require('./evalTriangle');
 var EvalMulti = require('./evalMulti');

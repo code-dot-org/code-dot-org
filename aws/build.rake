@@ -102,12 +102,18 @@ BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
 BLOCKLY_CORE_PRODUCT_FILES = Dir.glob(blockly_core_dir('build-output', '**/*'))
 BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PRODUCT_FILES
 BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCKLY_CORE_SOURCE_FILES) do
-  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:blockly_core'
-  HipChat.log 'Committing updated <b>blockly core</b> files...', color: 'purple'
-  message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-apps'))}"
-  RakeUtils.system 'git', 'add', *BLOCKLY_CORE_PRODUCT_FILES
-  RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
-  RakeUtils.git_push
+  # only let staging build/commit blockly-core
+  if rack_env?(:staging)
+    apps_sentinel = apps_dir('/lib/blockly/sentinel')
+    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:blockly_core'
+    HipChat.log 'Committing updated <b>blockly core</b> files...', color: 'purple'
+    message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-apps'))}"
+    RakeUtils.system 'git', 'add', *BLOCKLY_CORE_PRODUCT_FILES
+    RakeUtils.system 'echo', "\"#{Time.new}\" >| #{apps_sentinel}"
+    RakeUtils.system 'git', 'add', apps_sentinel
+    RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
+    RakeUtils.git_push
+  end
 end
 
 APPS_TASK = build_task('apps', [BLOCKLY_CORE_TASK] + Dir.glob(apps_dir('**/*'))) do
@@ -126,6 +132,10 @@ APPS_TASK = build_task('apps', [BLOCKLY_CORE_TASK] + Dir.glob(apps_dir('**/*')))
   RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:apps'
   HipChat.log 'apps built'
+
+  HipChat.log 'testing apps..'
+  Dir.chdir(apps_dir) { RakeUtils.system 'grunt test' }
+  HipChat.log 'apps test finished'
 
   # upload to s3
   package = packager.upload_package_to_s3('/build/package')

@@ -1,6 +1,6 @@
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
-var consoleApi = require('./consoleApi');
+var consoleApi = require('../consoleApi');
 var showAssetManager = require('../assetManagement/show.js');
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 var ChartApi = require('./ChartApi');

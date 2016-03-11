@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Use a similar loop as the last puzzle, but work a turn into it.",
+    "instructions": "Such a busy bee!\r\n\r\nHelp bee collect all of the nectar and make all of the honey with the fewest blocks possible.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",
@@ -17,8 +17,26 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,0,0,0],[0,0,1,0,1,0,0,0],[0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,-1,0,0,0],[0,0,1,0,1,0,0,0],[0,0,-1,1,-1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "7"
-  }
+    "ideal": "7",
+    "markdown_instructions": "Such a busy bee!\r\n\r\nHelp Bee collect all of the nectar and make all of the honey with the fewest blocks possible.",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"You should end up with five blocks inside your loop.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -43,11 +61,46 @@
       </xml>
     </toolbox_blocks>
     <required_blocks>
-      <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_nectar"/>
-        <block type="maze_honey"/>
-      </xml>
+      <xml/>
     </required_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">3</title>
+        </block>
+      </xml>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_nectar">
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_honey">
+                              <next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnLeft</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

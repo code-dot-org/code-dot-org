@@ -180,14 +180,16 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
+  get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
+
   # one-off internal reports
   get '/admin/temp/diversity_survey', to: 'admin_reports#diversity_survey', as: 'diversity_survey'
-  get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
+
+  # HOC dashboards.
+  get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
+  get '/admin/hoc/event_signups', to: 'admin_hoc#event_signups', as: 'hoc_event_signups'
 
   # internal report dashboards
-  get '/admin/funometer', to: 'admin_reports#funometer', as: 'funometer'
-  get '/admin/funometer/script/:script_id', to: 'admin_reports#funometer_by_script', as: 'funometer_by_script'
-  get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_reports#funometer_by_script_level', as: 'funometer_by_script_level'
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
@@ -197,6 +199,12 @@ Dashboard::Application.routes.draw do
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
   get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
   get '/admin/debug', to: 'admin_reports#debug'
+
+  # Fun-O-Meter dashboards.
+  get '/admin/funometer', to: 'admin_funometer#funometer', as: 'funometer'
+  get '/admin/funometer/script/:script_id', to: 'admin_funometer#funometer_by_script', as: 'funometer_by_script'
+  get '/admin/funometer/stage/:stage_id', to: 'admin_funometer#funometer_by_stage', as: 'funometer_by_stage'
+  get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_funometer#funometer_by_script_level', as: 'funometer_by_script_level'
 
   # internal search tools
   get 'admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
