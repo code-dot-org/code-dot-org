@@ -34,6 +34,8 @@
     =t('nextPage')
 - else
   = render partial: 'levels/dialog', locals: {app: app, data: data}
+  %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
+    =t('unsubmit')
 
 :javascript
   #{render template: 'levels/multi.js', formats: [:js]}
@@ -44,7 +46,7 @@
   var fallbackResponse = #{@fallback_response.to_json};
   var callback = "#{@callback}";
   var app = "#{app}";
-  var level = 2; // #{@level.to_json}; // #{@level.level_num};
-  var lastAttempt = #{@last_attempt};
+  var level = appOptions.levelPosition;
+  var lastAttempt = #{@last_attempt || []};
 
   #{render template: 'levels/levelGroup.js', formats: [:js]}
