@@ -30,7 +30,7 @@ class CsvToSqlTable
 
     CSV.open(@path, 'rb') do |csv|
       table, columns = create_table(csv.shift)
-      while(values = csv.shift)
+      while (values = csv.shift)
         table.insert(hash_from_keys_and_values(columns, values).merge({id: at+=1}))
       end
     end
