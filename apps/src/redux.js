@@ -1,11 +1,5 @@
 /** @file Code.org configured store-creation method.
  *  @see http://redux.js.org/docs/api/createStore.html */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var redux = require('redux');
