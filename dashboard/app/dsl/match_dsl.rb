@@ -14,7 +14,7 @@ class MatchDSL < ContentDSL
   end
 
   def i18n_strings
-    strings = super [@name]
+    strings = super[@name]
     @hash[:questions].each do |question|
       text = question[:text]
       strings[text] = text
