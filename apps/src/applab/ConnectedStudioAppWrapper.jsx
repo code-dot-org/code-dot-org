@@ -4,7 +4,7 @@
 var connect = require('react-redux').connect;
 var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 
-module.exports = connect(function propsFromState(state) {
+module.exports = connect(function propsFromStore(state) {
   return {
     assetUrl: state.level.assetUrl,
     isEmbedView: state.level.isEmbedView,

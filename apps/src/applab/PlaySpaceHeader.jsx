@@ -83,7 +83,7 @@ var PlaySpaceHeader = React.createClass({
         !this.props.isEditingProject;
   }
 });
-module.exports = connect(function propsFromState(state) {
+module.exports = connect(function propsFromStore(state) {
   return {
     isDesignModeHidden: state.level.isDesignModeHidden,
     isShareView: state.level.isShareView,
