@@ -1,5 +1,6 @@
-var React = require('react/addons');
-var TestUtils = React.addons.TestUtils;
+var React = require('react');
+var ReactDOM = require('react-dom');
+var TestUtils = require('react-addons-test-utils');
 var assert = require('assert');
 var Pairing = require('../../src/js/components/pairing.jsx')(require('react'));
 var sinon = require('sinon');
@@ -10,7 +11,7 @@ describe('Pairing component', function() {
   var server;
 
   function render(ajaxUrl) {
-    component = React.render(React.createElement(Pairing, {source: ajaxUrl}), div);
+    component = ReactDOM.render(React.createElement(Pairing, {source: ajaxUrl}), div);
   }
 
   function numberOfStudents() {
@@ -68,7 +69,7 @@ describe('Pairing component', function() {
       teardownFakeAjax();
 
       if (div) {
-        React.unmountComponentAtNode(div);
+        ReactDOM.unmountComponentAtNode(div);
         component = null;
       }
     });
@@ -84,12 +85,12 @@ describe('Pairing component', function() {
     it('should change the section and render a list of students when a section with students is selected', function() {
       // choose first section
       TestUtils.Simulate.change(sectionSelect(), {target: {value: "1"}});
-      assert.equal("1", sectionSelect().props.value);
+      assert.equal("1", sectionSelect().value);
       assert.equal(2, numberOfStudents());
 
       // choose second section
       TestUtils.Simulate.change(sectionSelect(), {target: {value: "15"}});
-      assert.equal("15", sectionSelect().props.value);
+      assert.equal("15", sectionSelect().value);
       assert.equal(0, numberOfStudents());
     });
   });
@@ -114,7 +115,7 @@ describe('Pairing component', function() {
       teardownFakeAjax();
 
       if (div) {
-        React.unmountComponentAtNode(div);
+        ReactDOM.unmountComponentAtNode(div);
         component = null;
       }
     });
@@ -199,7 +200,7 @@ describe('Pairing component', function() {
       teardownFakeAjax();
 
       if (div) {
-        React.unmountComponentAtNode(div);
+        ReactDOM.unmountComponentAtNode(div);
         component = null;
       }
     });
