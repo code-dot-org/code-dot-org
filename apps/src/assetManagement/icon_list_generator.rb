@@ -5,7 +5,6 @@ require 'json'
 
 EXCLUDED_KEYWORDS = {
   alcohol: true,
-  bar: true,
   liquor: true,
   martini: true,
   # Duplicates
@@ -29,7 +28,9 @@ EXCLUDED_KEYWORDS = {
 
 EXCLUDED_ICONS = {
   beer: true,
-  bomb: true
+  bomb: true,
+  glass: true,
+  :'fighter-jet' => true,
 }
 
 data = YAML.load_file 'icons.yml'
