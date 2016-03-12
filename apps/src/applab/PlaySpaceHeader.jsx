@@ -85,9 +85,9 @@ var PlaySpaceHeader = React.createClass({
 });
 module.exports = connect(function propsFromState(state) {
   return {
-    isDesignModeHidden: state.isDesignModeHidden,
-    isShareView: state.isShareView,
-    isViewDataButtonHidden: state.isViewDataButtonHidden,
+    isDesignModeHidden: state.level.isDesignModeHidden,
+    isShareView: state.level.isShareView,
+    isViewDataButtonHidden: state.level.isViewDataButtonHidden,
     mode: state.mode
   };
 }, function propsFromDispatch(dispatch) {

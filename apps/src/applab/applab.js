@@ -694,7 +694,7 @@ Applab.init = function(config) {
     // should never be present on such levels, however some levels do
     // have levelHtml stored due to a previous bug. HTML set by levelbuilder
     // is stored in startHtml, not levelHtml.
-    if (Applab.reduxStore.getState().isDesignModeHidden) {
+    if (Applab.reduxStore.getState().level.isDesignModeHidden) {
       config.level.levelHtml = '';
     }
 
@@ -775,7 +775,7 @@ Applab.init = function(config) {
         editCode: level.editCode,
         blockCounterClass: 'block-counter-default',
         pinWorkspaceToBottom: true,
-        readonlyWorkspace: Applab.reduxStore.getState().isReadOnlyWorkspace
+        readonlyWorkspace: Applab.reduxStore.getState().level.isReadOnlyWorkspace
       }
     });
   }.bind(this);
@@ -804,7 +804,7 @@ Applab.init = function(config) {
       vizCol.className += " with_padding";
     }
 
-    if (Applab.reduxStore.getState().isEmbedView || config.hideSource) {
+    if (Applab.reduxStore.getState().level.isEmbedView || config.hideSource) {
       // no responsive styles active in embed or hideSource mode, so set sizes:
       viz.style.width = Applab.appWidth + 'px';
       viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';

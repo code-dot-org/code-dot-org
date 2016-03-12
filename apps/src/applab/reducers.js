@@ -9,40 +9,34 @@
 'use strict';
 
 var ActionType = require('./actions').ActionType;
+var combineReducers = require('redux').combineReducers;
 var constants = require('./constants');
 var ApplabMode = constants.ApplabMode;
 
-var initialState = {
+function currentScreenId(state, action) {
+  state = state || null;
+
+  switch (action.type) {
+    case ActionType.CHANGE_SCREEN:
+      return action.screenId;
+    default:
+      return state;
+  }
+}
+
+var levelInitialState = {
   assetUrl: function () {},
   isDesignModeHidden: undefined,
   isEmbedView: undefined,
   isReadOnlyWorkspace: undefined,
   isShareView: undefined,
-  isViewDataButtonHidden: undefined,
-  mode: ApplabMode.CODE,
-  currentScreenId: null
+  isViewDataButtonHidden: undefined
 };
 
-function rootReducer(state, action) {
-  state = state || initialState;
+function level(state, action) {
+  state = state || levelInitialState;
 
   switch (action.type) {
-    case ActionType.CHANGE_SCREEN:
-      if (state.currentScreenId === action.screenId) {
-        return state;
-      }
-      return $.extend({}, state, {
-        currentScreenId: action.screenId
-      });
-
-    case ActionType.CHANGE_MODE:
-      if (state.mode === action.mode) {
-        return state;
-      }
-      return $.extend({}, state, {
-        mode: action.mode
-      });
-
     case ActionType.SET_LEVEL_PROPS:
       var allowedKeys = [
         'assetUrl',
@@ -64,5 +58,22 @@ function rootReducer(state, action) {
       return state;
   }
 }
+
+function mode(state, action) {
+  state = state || ApplabMode.CODE;
+
+  switch (action.type) {
+    case ActionType.CHANGE_MODE:
+      return action.mode;
+    default:
+      return state;
+  }
+}
+
+var rootReducer = combineReducers({
+  currentScreenId: currentScreenId,
+  level: level,
+  mode: mode
+});
 
 module.exports = { rootReducer: rootReducer };

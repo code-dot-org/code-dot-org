@@ -12,8 +12,8 @@ var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
 
 module.exports = connect(function propsFromState(state) {
   return {
-    assetUrl: state.assetUrl,
-    isEmbedView: state.isEmbedView,
-    isShareView: state.isShareView
+    assetUrl: state.level.assetUrl,
+    isEmbedView: state.level.isEmbedView,
+    isShareView: state.level.isShareView
   };
 })(StudioAppWrapper);
