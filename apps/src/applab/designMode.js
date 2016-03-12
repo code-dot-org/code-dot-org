@@ -16,6 +16,7 @@ var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var gridUtils = require('./gridUtils');
 var logToCloud = require('../logToCloud');
+var icons = require('../assetManagement/icons');
 
 var currentlyEditedElement = null;
 var currentScreenId = null;
@@ -257,7 +258,7 @@ designMode.updateProperty = function(element, name, value) {
         ctx.font = '300px FontAwesome, serif';
         ctx.textBaseline = 'middle';
         ctx.textAlign = 'center';
-        var unicode = '0x' + value.replace(/^icon:/, '');
+        var unicode = '0x' + icons.unicode[value.replace(/^icon:/, '')];
         ctx.fillText(String.fromCharCode(unicode), 200, 200);
         element.src = canvas.toDataURL();
         return;

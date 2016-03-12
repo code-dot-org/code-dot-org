@@ -1,5 +1,5 @@
 var IconListEntry = require('./IconListEntry.jsx');
-var icons = require('./icons');
+var icons = require('./icons').aliases;
 var msg = require('../locale');
 
 /**
@@ -14,6 +14,7 @@ module.exports = React.createClass({
   getMatches: function (query) {
     var letters = query.split(''), results = {};
 
+    // Walk the prefix tree to find matches
     for (var i = 0, node = icons; i < letters.length; i++) {
       node = node[letters[i]];
       if (!node) {
@@ -22,15 +23,12 @@ module.exports = React.createClass({
       }
     }
 
-    // Construct results
+    // Iterate leaf nodes to construct the results
     function getResults(node, prefix) {
       if (node.$) {
-        for (var iconId in node.$) {
-          results[iconId] = {
-            unicode: node.$[iconId],
-            alt: prefix
-          };
-        }
+        node.$.forEach(function (iconId) {
+          results[iconId] = prefix;
+        });
       }
       for (var letter in node) {
         if (letter !== '$') {
@@ -62,12 +60,10 @@ module.exports = React.createClass({
     }
 
     var list = Object.keys(results).map(function (iconId) {
-      var result = results[iconId];
       return <IconListEntry
         assetChosen={this.props.assetChosen}
-        unicode={result.unicode}
         iconId={iconId}
-        altMatch={result.alt}
+        altMatch={results[iconId]}
         search={this.props.search}/>;
     }.bind(this));
 
