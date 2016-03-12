@@ -26,7 +26,7 @@ var RecordListener = module.exports = function () {
  * processing the last batch of data for that table.
  * @type {number}
  */
-var RECORD_INTERVAL = 5000; // 5 seconds
+var RECORD_INTERVAL = 3000; // 3 seconds
 
 var EventType = {
   CREATE: 'create',
