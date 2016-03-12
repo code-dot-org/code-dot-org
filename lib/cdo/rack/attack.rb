@@ -87,7 +87,8 @@ class RackAttackConfigUpdater
   # parse the comma-separated list of channel ids, and return them as a set
   # which we can use to quickly check whether a given channel id is present.
   def blacklist_set
-    channels = table_and_property_blacklist.split(',')
+    blacklist = table_and_property_blacklist
+    channels = blacklist.split(',') if blacklist
     Set.new(channels)
   end
 
