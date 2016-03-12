@@ -35,31 +35,35 @@ EXCLUDED_ICONS = {
 
 data = YAML.load_file 'icons.yml'
 icons = data['icons']
-@keywords = {}
+@aliases = {}
+@unicode = {}
 
-def add_keyword_entry(keyword, icon)
-  return if EXCLUDED_KEYWORDS[keyword.to_sym] || EXCLUDED_ICONS[icon['id'].to_sym]
+def add_keyword_entry(keyword, icon_id)
+  return if EXCLUDED_KEYWORDS[keyword.to_sym] || EXCLUDED_ICONS[icon_id.to_sym]
 
   keyword.split(/-|\s/).each do |token|
-    k = @keywords
+    k = @aliases
     token.split('').each do |letter|
       k = k[letter] ||= {}
     end
-    k['$'] ||= {}
-    k['$'][icon['id']] = icon['unicode']
+    k['$'] ||= []
+    k['$'] << icon_id
   end
 end
 
 icons.each do |icon|
-  add_keyword_entry icon['id'], icon
+  id = icon['id']
+  add_keyword_entry id, id
   if icon['filter']
-    icon['filter'].each{ |keyword| add_keyword_entry keyword, icon }
+    icon['filter'].each{ |keyword| add_keyword_entry keyword, id }
   end
   if icon['aliases']
-    icon['aliases'].each{ |keyword| add_keyword_entry keyword, icon }
+    icon['aliases'].each{ |keyword| add_keyword_entry keyword, id }
   end
+
+  @unicode[id] = icon['unicode']
 end
 
 File.open('icons.json', 'w') do |file|
-  file.write(@keywords.to_json)
+  file.write({aliases: @aliases, unicode: @unicode}.to_json)
 end
