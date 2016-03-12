@@ -84,6 +84,7 @@ class RackAttackTest < Minitest::Test
   end
 
   SUCCESSFUL = 200
+  FORBIDDEN = 403
   RATE_LIMITED = 429
 
   def test_table_read_limits_with_exponential_backoff_and_logging
@@ -143,6 +144,8 @@ class RackAttackTest < Minitest::Test
     # Now test that a dynamic update to the rate limit is enforced correctly.
     Timecop.freeze rounded_time_now + 60
     _test_table_dynamic_rate_limit_enforced
+    Timecop.freeze rounded_time_now + 60
+    _test_blacklist
   ensure
     Timecop.return
   end
@@ -166,6 +169,16 @@ class RackAttackTest < Minitest::Test
 
     # don't increment the index here because throttled requests don't affect the counts.
     assert_read_records 6, RATE_LIMITED
+  end
+
+  def _test_blacklist
+    blacklist = "foo,#{@channel_id},bar"
+    DCDO.set('table_and_property_blacklist', blacklist)
+    DCDO.update_cache_for_test  # Make sure the updated blacklist applies immediately.
+
+    assert_read_records 1, FORBIDDEN, 'requests from blacklisted apps are forbidden'
+
+    DCDO.set('table_and_property_blacklist', nil)
   end
 
   def test_table_write_limit_enforced
