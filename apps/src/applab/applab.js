@@ -775,10 +775,6 @@ Applab.init = function(config) {
         editCode: level.editCode,
         blockCounterClass: 'block-counter-default',
         pinWorkspaceToBottom: true,
-        // TODO (brent) - seems a little gross that we've made this part of a
-        // template shared across all apps
-        // disable designMode if we're readonly
-        hasDesignMode: !Applab.reduxStore.getState().isReadOnlyWorkspace,
         readonlyWorkspace: Applab.reduxStore.getState().isReadOnlyWorkspace
       }
     });
