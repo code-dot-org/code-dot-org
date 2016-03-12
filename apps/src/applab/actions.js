@@ -1,11 +1,5 @@
 /** @file Redux action-creators for App Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 /** @enum {string} */

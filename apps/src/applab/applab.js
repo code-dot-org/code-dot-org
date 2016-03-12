@@ -947,13 +947,11 @@ Applab.render = function () {
     onViewDataButton: Applab.onViewData,
     onScreenCreate: designMode.createScreen
   });
-  /* jshint ignore:start */
   ReactDOM.render(
     <Provider store={Applab.reduxStore}>
       <AppLabView {...nextProps} />
     </Provider>,
     Applab.reactMountPoint_);
-  /* jshint ignore:end */
 };
 
 /**
