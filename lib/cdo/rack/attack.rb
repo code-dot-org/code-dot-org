@@ -81,14 +81,14 @@ class RackAttackConfigUpdater
       end
     end
 
-    Rack::Attack.set_blacklist_map(blacklist_map)
+    Rack::Attack.set_blacklist_set(blacklist_set)
   end
 
-  # parse the comma-separated list of channel ids, and return them as a map
+  # parse the comma-separated list of channel ids, and return them as a set
   # which we can use to quickly check whether a given channel id is present.
-  def blacklist_map
+  def blacklist_set
     channels = table_and_property_blacklist.split(',')
-    Hash[channels.map {|channel| [channel, 1]}]
+    Set.new(channels)
   end
 
   # Returns the given key from DCDO, default to the CDO value if no DCDO
@@ -132,15 +132,15 @@ class Rack::Attack
     end
   end
 
-  @@channel_id_blacklist_map = {}
+  @@channel_id_blacklist_set = {}
 
-  def self.set_blacklist_map(blacklist)
-    @@channel_id_blacklist_map = blacklist
+  def self.set_blacklist_set(blacklist_set)
+    @@channel_id_blacklist_set = blacklist_set
   end
 
   blacklist('table_and_property_blacklist') do |req|
     channel_id = %r{^/v3/shared-(tables|properties)/([^/]+)}.match(req.path).try(:[], 2)
-    @@channel_id_blacklist_map[channel_id]
+    @@channel_id_blacklist_set.include?(channel_id)
   end
 
   ActiveSupport::Notifications.subscribe('rack.attack') do |_, _, _, _, req|
