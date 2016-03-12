@@ -1,19 +1,35 @@
 ---
 title: Computer Science Principles
 nav: educate_nav
+video_player: true
 ---
 
 # Computer Science Principles #
 
 ## <a name="whatis"></a>What is CS Principles?
-In fall 2016, the College Board will launch its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/S1vFrz4NETg" frameborder="0" allowfullscreen></iframe>
+[col-50]
+
+In fall 2016, the College Board will launch its newest AP&reg; course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
 
 For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.org/APCSP).
 
+[/col-50]
+
+[col-50]
+
+<div style="margin-left: 20px;">
+
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "S1vFrz4NETg", play_button: 'center' %>
+
+</div>
+
+[/col-50]
+
+<div style="clear: both;"></div>
+
 ## Code.org's CS Principles Curriculum
-Check back often as batches of lessons will be released on a rolling basis. The resources will be distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+Check back often as batches of lessons will be released on a rolling basis. The resources are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos).
 
 ### <a name="features"></a>Features
 
@@ -23,20 +39,38 @@ Check back often as batches of lessons will be released on a rolling basis. The 
 - Learn from a diverse cast of role models, from well-known tech celebrities to social innovators who are using CS to tackle society's problems
 - Engage all students in constructing their own understanding of computer science concepts through equitable teaching practices and inquiry-based instructional strategies
 - Prepare for the AP® CS Principles exam through a curriculum intentionally designed around the latest developments in the College Board framework, including built-in preparation for the performance tasks  
-- Use, share, and customize the resources, as they are distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+- Use, share, and customize the resources, as they are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos).
 
-[<button>See App Lab in action</button>](/educate/applab)
+[<button>See App Lab in action</button>](/educate/applab) &nbsp;&nbsp; [<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
 ### Watch a video from the [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
 Check back often.  The video library is growing every week!
 
-<iframe src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
+<div style="width: 300px; float: left; margin-right: 10px;">
 
-<iframe src="https://www.youtube.com/embed/By30SCp-Tsw" frameborder="0" allowfullscreen></iframe>
+	<%=view :display_video_thumbnail, id: "images_pixels", video_code: "15aqFQQVBWU", play_button: 'center' %>
 
-<iframe src="https://www.youtube.com/embed/ZhEf7e4kopM" frameborder="0" allowfullscreen></iframe>
+</div>
 
-<iframe src="https://www.youtube.com/embed/5o8CwafCxnU" frameborder="0" allowfullscreen></iframe>
+<div style="width: 300px; float: left; margin-right: 10px;">
+
+	<%=view :display_video_thumbnail, id: "digital_compression", video_code: "By30SCp-Tsw", play_button: 'center' %>
+
+</div>
+
+<div style="width: 300px; float: left; margin-right: 10px;">
+
+	<%=view :display_video_thumbnail, id: "the_internet", video_code: "ZhEf7e4kopM", play_button: 'center' %>
+
+</div>
+
+<div style="width: 300px; float: left; margin-right: 10px;">
+
+	<%=view :display_video_thumbnail, id: "ip_addresses", video_code: "5o8CwafCxnU", play_button: 'center' %>
+
+</div>
+
+<div style="clear: both;"></div>
 
 
 ## <a name="overview"></a>Overview

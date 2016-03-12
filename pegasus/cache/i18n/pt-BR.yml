@@ -90,7 +90,7 @@
   get_a_certificate_of_achievement: Obter um certificado de conclusão
   view_course: Ver curso
   view_unit: View unit
-  make_app: Make an app
+  make_app: Crie um aplicativo
   congrats_guest_speaker_title: Convide um orador para a sua sala de aula
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
@@ -975,7 +975,7 @@
     mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens
     de programação.
   applab_name: Laboratório de Aplicativo
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: A partir de 13 anos
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

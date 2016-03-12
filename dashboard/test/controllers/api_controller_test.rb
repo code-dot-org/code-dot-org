@@ -182,7 +182,6 @@ class ApiControllerTest < ActionController::TestCase
                  slogger.records)
   end
 
-
   test "should get user progress for stage for signed-out user" do
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
@@ -403,14 +402,11 @@ class ApiControllerTest < ActionController::TestCase
     assert_recognizes({controller: "api", action: "user_menu"},
                       {method: "get", path: "/api/user_menu"})
 
-
     assert_recognizes({controller: "api", action: "section_progress", section_id: '2'},
                       {method: "get", path: "/api/section_progress/2"})
 
-
     assert_recognizes({controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
                       {method: "get", path: "/api/student_progress/2/15"})
-
 
     assert_recognizes({controller: "api", action: "whatevvv"},
                       {method: "get", path: "/api/whatevvv"})

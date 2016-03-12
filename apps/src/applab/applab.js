@@ -43,8 +43,10 @@ var elementUtils = require('./designElements/elementUtils');
 var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
+var DialogButtons = require('../templates/DialogButtons.jsx');
 
 var applabConstants = require('./constants');
+var consoleApi = require('../consoleApi');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -80,8 +82,10 @@ Applab.log = function (object) {
     debuggerUi.log(object);
   }
 };
+consoleApi.setLogMethod(Applab.log);
 
-var errorHandler = require('./errorHandler');
+var errorHandler = require('../errorHandler');
+errorHandler.setLogMethod(Applab.log);
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 
@@ -115,6 +119,8 @@ var vizAppWidth = 400;
 // The default values for appWidth and appHeight (if not specified in the level)
 var defaultAppWidth = 400;
 var defaultAppHeight = 400;
+
+var hasSeenRateLimitAlert = false;
 
 function loadLevel() {
   Applab.hideDesignMode = level.hideDesignMode;
@@ -539,6 +545,24 @@ function markSeenDataAlert(channelId) {
   localStorage.setItem('dataAlerts', JSON.stringify(channelIds));
 }
 
+function onCloseShareWarnings(showStoreDataAlert) {
+  // we closed the dialog without hitting too_young
+  // Only want to ask about age once across apps
+  if (!Applab.user.isSignedIn) {
+    utils.trySetLocalStorage('is13Plus', 'true');
+  }
+  // Only want to ask about storing data once per app.
+  if (showStoreDataAlert) {
+    markSeenDataAlert(Applab.channelId);
+  }
+  window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+}
+
+function handleShareWarningsTooYoung() {
+  utils.trySetLocalStorage('is13Plus', 'false');
+  window.location.href = '/too_young';
+}
+
 /**
  * Starts the app after (potentially) Showing a modal warning about data sharing
  * (if appropriate) and determining user is old enough
@@ -551,26 +575,12 @@ Applab.startSharedAppAfterWarnings = function () {
 
   var modal = document.createElement('div');
   document.body.appendChild(modal);
-  return ReactDOM.render(React.createElement(ShareWarningsDialog, {
-    showStoreDataAlert: showStoreDataAlert,
-    is13Plus: is13Plus,
-    handleClose: function () {
-      // we closed the dialog without hitting too_young
-      // Only want to ask about age once across apps
-      if (!Applab.user.isSignedIn) {
-        utils.trySetLocalStorage('is13Plus', 'true');
-      }
-      // Only want to ask about storing data once per app.
-      if (showStoreDataAlert) {
-        markSeenDataAlert(Applab.channelId);
-      }
-      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
-    },
-    handleTooYoung: function () {
-      utils.trySetLocalStorage('is13Plus', 'false');
-      window.location.href = '/too_young';
-    }
-  }), modal);
+
+  return ReactDOM.render(<ShareWarningsDialog
+    showStoreDataAlert={showStoreDataAlert}
+    is13Plus={is13Plus}
+    handleClose={onCloseShareWarnings.bind(null, showStoreDataAlert)}
+    handleTooYoung={handleShareWarningsTooYoung}/>, modal);
 };
 
 /**
@@ -605,6 +615,7 @@ Applab.init = function(config) {
     isAdmin: (config.isAdmin === true),
     isSignedIn: config.isSignedIn
   };
+  Applab.isReadOnlyView = config.readonlyWorkspace;
 
   loadLevel();
 
@@ -678,6 +689,10 @@ Applab.init = function(config) {
     // Set designModeViz contents after it is created in configureDom()
     // and sized in drawDiv().
     Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
+
+    if (!!config.level.projectTemplateLevelName) {
+      studioApp.displayAlert('warning', <div>{commonMsg.projectWarning()}</div>);
+    }
 
     studioApp.alertIfAbusiveProject('#codeWorkspace');
 
@@ -1048,7 +1063,7 @@ Applab.renderVisualizationOverlay = function() {
   }
 
   // Enable crosshair cursor for divApplab and designModeViz
-  $(divApplab).toggleClass('withCrosshair', !Applab.isRunning());
+  $(divApplab).toggleClass('withCrosshair', Applab.isCrosshairAllowed());
   $(designModeViz).toggleClass('withCrosshair', true);
 
   if (!Applab.visualizationOverlay_) {
@@ -1060,8 +1075,9 @@ Applab.renderVisualizationOverlay = function() {
   var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
 
   Applab.visualizationOverlay_.render(visualizationOverlay, {
-    isApplabRunning: Applab.isRunning(),
-    scale: scaledWidth / unscaledWidth
+    isCrosshairAllowed: Applab.isCrosshairAllowed(),
+    scale: scaledWidth / unscaledWidth,
+    isInDesignMode: Applab.isInDesignMode()
   });
 };
 
@@ -1305,12 +1321,10 @@ Applab.showConfirmationDialog = function(config) {
       '<p>' + config.text + '</p>';
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('../templates/buttons.html.ejs')({
-    data: {
-      confirmText: commonMsg.dialogOK(),
-      cancelText: commonMsg.dialogCancel()
-    }
-  });
+  ReactDOM.render(React.createElement(DialogButtons, {
+    confirmText: commonMsg.dialogOK(),
+    cancelText: commonMsg.dialogCancel()
+  }), buttons);
   contentDiv.appendChild(buttons);
 
   var dialog = studioApp.createModalDialog({
@@ -1634,4 +1648,23 @@ Applab.getScreens = function() {
 // Wrap design mode function so that we can call from commands
 Applab.updateProperty = function (element, property, value) {
   return designMode.updateProperty(element, property, value);
+};
+
+Applab.isCrosshairAllowed = function () {
+  return !Applab.isReadOnlyView && !Applab.isRunning();
+};
+
+Applab.showRateLimitAlert = function () {
+  // only show the alert once per session
+  if (hasSeenRateLimitAlert) {
+    return false;
+  }
+  hasSeenRateLimitAlert = true;
+
+  var alert = <div>{applabMsg.dataLimitAlert()}</div>;
+  if (studioApp.share) {
+    studioApp.displayPlayspaceAlert("error", alert);
+  } else {
+    studioApp.displayWorkspaceAlert("error", alert);
+  }
 };

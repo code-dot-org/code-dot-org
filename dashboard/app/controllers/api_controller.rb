@@ -25,11 +25,15 @@ class ApiController < ApplicationController
       level_map = student.user_levels_by_level(@script)
       student_levels = @script.script_levels.map do |script_level|
         user_level = level_map[script_level.level_id]
-        {class: activity_css_class(user_level.try(:best_result)), title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
+        if user_level.try(:submitted)
+          levelClass = "submitted"
+        else
+          levelClass = activity_css_class(user_level.try(:best_result))
+        end
+        {class: levelClass, title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
       end
       {id: student.id, levels: student_levels}
     end
-
 
     data = {
             students: students,
@@ -110,7 +114,7 @@ class ApiController < ApplicationController
       end
       response[:disableSocialShare] = current_user.under_13?
       response[:disablePostMilestone] =
-          !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
+        !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
     end
 
     slog(tag: 'activity_start',

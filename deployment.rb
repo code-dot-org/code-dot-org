@@ -92,6 +92,10 @@ def load_configuration()
     'dynamo_properties_table'     => "#{rack_env}_properties",
     'dynamo_table_metadata_table'         => "#{rack_env}_table_metadata",
     'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
+    'max_table_reads_per_sec'     => 20,
+    'max_table_writes_per_sec'    => 40,
+    'max_property_reads_per_sec'  => 40,
+    'max_property_writes_per_sec' => 40,
     'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
@@ -130,7 +134,6 @@ def load_configuration()
     ENV['AWS_DEFAULT_REGION'] ||= config['aws_region']
   end
 end
-
 
 ####################################################################################################
 ##
@@ -279,7 +282,6 @@ class CDOImpl < OpenStruct
 end
 
 CDO ||= CDOImpl.new
-
 
 ####################################################################################################
 ##

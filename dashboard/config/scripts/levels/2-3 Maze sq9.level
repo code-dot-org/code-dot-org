@@ -69,5 +69,28 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="controls_repeat_simplified">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+            <block type="maze_moveForward"/>
+          </statement>
+          <next>
+            <block type="maze_turn">
+              <title name="DIR">turnRight</title>
+              <next>
+                <block type="controls_repeat_simplified">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

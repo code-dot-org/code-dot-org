@@ -28,7 +28,8 @@ class FeatureModeManager
           puzzle_rating: true,
           hint_view_request: true,
           postMilestone: true,
-          shareEnabled: true
+          shareEnabled: true,
+          slogging: true
         },
         gatekeeper_hoc_tutorial_settings: {
           postMilestone: true,
@@ -45,7 +46,8 @@ class FeatureModeManager
         puzzle_rating: false,
         hint_view_request: false,
         postMilestone: true,
-        shareEnabled: true
+        shareEnabled: true,
+        slogging: false
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: false,
@@ -62,7 +64,8 @@ class FeatureModeManager
         puzzle_rating: false,
         hint_view_request: false,
         postMilestone: false,
-        shareEnabled: false
+        shareEnabled: false,
+        slogging: false
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: false,

@@ -3,7 +3,7 @@ title: Find CS Principles near you
 nav: plc_csp_nav
 ---
 # Find the Computer Science Principles program near you
-We welcome teachers to sign up for the Computer Science Principles (CS Principles) professional learning program, an intensive program for high school educators who are interested in teaching the CS Principles course. This program is designed to prepare educators to provide high quality instruction, based on the CS Principles curriculum, tools and approach to students in their classrooms.
+We welcome teachers to sign up for the Computer Science Principles (CS Principles) professional learning program, an intensive program for high school educators who are interested in teaching the CS Principles course. This program is designed to prepare educators to provide high quality instruction, based on the [CS Principles curriculum](/educate/csp), tools and approach to students in their classrooms.
 
 
 ## Where is CS Principles offered?

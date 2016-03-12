@@ -148,7 +148,6 @@ module.exports = {
           default:
             return ElementType.TEXT_INPUT;
         }
-        break;
     }
     // Unknown elements are expected. Return null because we don't know type.
     if (allowUnknown) {
