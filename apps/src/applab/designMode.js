@@ -152,6 +152,18 @@ designMode.onPropertyChange = function(element, name, value) {
   designMode.editElementProperties(element);
 };
 
+function renderIcon(value) {
+  var canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 400;
+  var ctx = canvas.getContext('2d');
+  ctx.font = '300px FontAwesome, serif';
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'center';
+  var unicode = '0x' + icons.unicode[value.replace(/^icon:/, '')];
+  ctx.fillText(String.fromCharCode(unicode), 200, 200);
+  return canvas.toDataURL();
+}
+
 /**
  * After handling properties generically, give elementLibrary a chance
  * to do any element specific changes.
@@ -219,53 +231,60 @@ designMode.updateProperty = function(element, name, value) {
       break;
 
     case 'image':
-      var backgroundImage = new Image();
       var originalValue = element.getAttribute('data-canonical-image-url');
+      element.setAttribute('data-canonical-image-url', value);
+
+      var fitImage = function() {
+        // Fit the image into the button
+        element.style.backgroundSize = 'contain';
+        element.style.backgroundPosition = '50% 50%';
+        element.style.backgroundRepeat = 'no-repeat';
+
+        // Re-render properties
+        if (currentlyEditedElement === element) {
+          designMode.editElementProperties(element);
+        }
+      };
+
+      if (/^icon:/.test(value)) {
+        element.style.backgroundImage = 'url(' + renderIcon(value) + ')';
+        fitImage();
+        break;
+      }
+
+      var backgroundImage = new Image();
       backgroundImage.src = assetPrefix.fixPath(value);
       element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
-      element.setAttribute('data-canonical-image-url', value);
+
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
-        backgroundImage.onload = function() {
-          // Fit the image into the button
-          element.style.backgroundSize = 'contain';
-          element.style.backgroundPosition = '50% 50%';
-          element.style.backgroundRepeat = 'no-repeat';
-
-          // Re-render properties
-          if (currentlyEditedElement === element) {
-            designMode.editElementProperties(element);
-          }
-        };
+        backgroundImage.onload = fitImage;
       }
       break;
 
     case 'screen-image':
+      element.setAttribute('data-canonical-image-url', value);
+
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
-      element.style.backgroundImage = 'url(' + assetPrefix.fixPath(value) + ')';
-      element.setAttribute('data-canonical-image-url', value);
       element.style.backgroundSize = width + 'px ' + height + 'px';
+
+      var url = /^icon:/.test(value) ? renderIcon(value) : assetPrefix.fixPath(value);
+      element.style.backgroundImage = 'url(' + url + ')';
+
       break;
 
     case 'picture':
-      if (/^icon:/.test(value)) {
-        element.setAttribute('data-canonical-image-url', value);
-        var canvas = document.createElement('canvas');
-        canvas.width = canvas.height = 400;
-        var ctx = canvas.getContext('2d');
-        ctx.font = '300px FontAwesome, serif';
-        ctx.textBaseline = 'middle';
-        ctx.textAlign = 'center';
-        var unicode = '0x' + icons.unicode[value.replace(/^icon:/, '')];
-        ctx.fillText(String.fromCharCode(unicode), 200, 200);
-        element.src = canvas.toDataURL();
-        return;
-      }
       originalValue = element.getAttribute('data-canonical-image-url');
-      element.src = assetPrefix.fixPath(value);
       element.setAttribute('data-canonical-image-url', value);
+
+      if (/^icon:/.test(value)) {
+        element.src = renderIcon(value);
+        break;
+      }
+
+      element.src = assetPrefix.fixPath(value);
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
         var resizeElement = function (width, height) {
@@ -483,9 +502,10 @@ designMode.serializeToLevelHtml = function () {
     elementUtils.removeIdPrefix(this);
   });
 
-  // Remove the src="data:img/png..." from icon images
-  designModeVizClone.find('img[data-canonical-image-url^="icon:"]').each(function () {
+  // Remove the "data:img/png..." URI from icon images
+  designModeVizClone.find('[data-canonical-image-url^="icon:"]').each(function () {
     this.removeAttribute('src');
+    this.style.backgroundImage = '';
   });
 
   var serialization = designModeVizClone[0] ? designModeVizClone[0].outerHTML : '';
