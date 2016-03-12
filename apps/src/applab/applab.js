@@ -49,7 +49,7 @@ var createStore = require('../redux');
 var Provider = require('react-redux').Provider;
 var rootReducer = require('./reducers').rootReducer;
 var actions = require('./actions');
-var setLevelProps = actions.setLevelProps;
+var setInitialLevelProps = actions.setInitialLevelProps;
 var changeMode = actions.changeMode;
 
 var applabConstants = require('./constants');
@@ -883,7 +883,7 @@ Applab.init = function(config) {
   }.bind(this);
 
   // Push initial level properties into the Redux store
-  Applab.reduxStore.dispatch(setLevelProps({
+  Applab.reduxStore.dispatch(setInitialLevelProps({
     assetUrl: studioApp.assetUrl,
     isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
