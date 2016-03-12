@@ -421,6 +421,7 @@ it:
     applab:
       title: Laboratorio per le App
       body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
       audience: Ages 13+
       cta: Learn how
     hoc:
@@ -500,6 +501,9 @@ it:
     placeholder: Inserisci qui la tua risposta
     open_response_title: Grazie
     open_response_body: Grazie per la risposta!
+  level_group:
+    correct_title: Grazie!
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: Ok
     startover_title: Sei sicuro di voler ripristinare la situazione iniziale?

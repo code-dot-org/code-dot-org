@@ -12,7 +12,7 @@
     "skip_instructions_popup": "true",
     "start_direction": "1",
     "maze": "[[0,0,0,0,0,0,0,0],[4,1,1,1,1,1,1,0],[0,1,0,0,0,4,1,0],[0,1,0,0,0,0,1,0],[0,1,1,1,3,0,1,0],[0,0,0,4,0,0,1,0],[0,2,1,1,1,1,1,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "9",
+    "ideal": "13",
     "step_speed": "2",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -30,7 +30,8 @@
     "markdown_instructions": "Let's take this to another level! \r\n\r\nUse loops to get me to the sunflower with the fewest loops possible.",
     "maze_data": null
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -54,5 +55,47 @@
         </block>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

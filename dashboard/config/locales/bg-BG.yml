@@ -374,8 +374,8 @@
     heading_elementary: "<h2>20 часа курсове за</h2><h1>Въведение на компютърните
       науки (всички възрасти)</h1>"
     heading_apps: "<h2>Забавление за</h2><h1>Всеки</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Готов ли си за следващата стъпка?</h2> <h1>JavaScript инструменти
+      за гимназия</h1>"
     heading_legacy: "<h2>Нашият общ курс за</h2><h1>всички възрасти</h1>"
     your_gallery: "Галерия"
     no_primary_course: "Опитайте курс в студиото по кодиране"
@@ -506,11 +506,13 @@
   upsell:
     applab:
       title: "Лаборатория за приложения"
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: App Lab е програмна среда, в която създавате прости приложения. Създайте
+        дизайна на приложението си, програмирайте с блокове или JavaScript за да проработи,
+        а след това го споделете за секунди.
+      body_short: "Създайте дизайна на приложението си, програмирайте с блокове или
+        JavaScript за да проработи, а след това го споделете за секунди."
+      audience: "Възраст 13 +"
+      cta: "Научете как"
     hoc:
       title: "Класически лабиринт"
       body: "Опитайте основите на компютърните науки. Милиони направиха първите си
@@ -569,7 +571,7 @@
     report_bug: "Доклад за бъгове"
     support: "Получаване на помощ"
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: "Помощ и ресурси"
   multi:
     wrong_title: "Неправилен отговор"
     wrong_body: "Отговорът, който сте въвели не е правилен.  Моля опитайте отново!"
@@ -579,9 +581,9 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: "Благодаря"
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: "Благодаря Ви, че подадохте отговор."
     correct_title: "Благодаря"
-    correct_body: Thank you for submitting an answer.
+    correct_body: "Благодаря Ви, че подадохте отговор."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -603,6 +605,9 @@
     placeholder: "Въведете отговора си тук"
     open_response_title: "Благодаря"
     open_response_body: "Благодаря за вашия отговор!"
+  level_group:
+    correct_title: "Благодаря"
+    correct_body: "Благодаря Ви, че подадохте отговор"
   dialog:
     ok: OK
     startover_title: "Наистина ли искате да започнете отначало?"

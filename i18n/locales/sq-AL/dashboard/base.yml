@@ -422,6 +422,7 @@ sq:
     applab:
       title: Laboratori i Aplikacioneve
       body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
       audience: Ages 13+
       cta: Learn how
     hoc:
@@ -501,6 +502,9 @@ sq:
     placeholder: Shkruani përgjigjen tuaj këtu
     open_response_title: Faleminderit
     open_response_body: Faleminderit për përgjigjen!
+  level_group:
+    correct_title: Faleminderit
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: Në rregull
     startover_title: A jeni i sigurt që doni të filloni nga fillimi?

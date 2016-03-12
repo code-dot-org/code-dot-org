@@ -287,8 +287,8 @@
         Use while loops to collect all of the nectar
         from the flowers in this field.
       2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+        Assessment: Collect all of the nectar using
+        the fewest blocks possible.
       2-3 Bee Loops 1A_instruction: "Živio, jaz sem čebela. Mi pomagaš nabrati nektar
         od teh rožic? "
       2-3 Bee Loops 2_instruction: Uporabi zanko, da nabereš nektar in narediš med.
@@ -319,8 +319,8 @@
       2-3 Bee Loops Assessment 1_instruction: |
         Assessment - Use a while loop to collect
         all of the nectar from this flower.
-      2-3 Maze 1_instruction: "Can you help me to catch the naughty pig? Stack a\ncouple
-        of \"move forward\" blocks together and press \"Run\". \n"
+      2-3 Maze 1_instruction: "Can you help me catch the naughty pig? Stack a couple\nof
+        `move forward` blocks below the `when run` block and press \"Run\". \n"
       2-3 Maze 10_instruction: Pelji me k tej zeleni zlobi! (Pazi se TNTja)
       2-3 Maze 11_instruction: |
         Get me to the flower I'm hungry! How many times
@@ -347,7 +347,9 @@
       2-3 Maze 15_instruction: Uporabi dve zanki, da prideš do prašička in da uporabiš
         čim manj blokov.
       2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 16 before_instruction: Get me to the pig.
+      2-3 Maze 16 before_instruction: |
+        Can you figure out the fastest way to get
+        me to the pig?
       2-3 Maze 16_instruction: Pelji me do sončnice. Uporabi zanko!
       2-3 Maze 2_instruction: Ta prašiček kodra moje peruti. Pomagaj mi, da ga dobim!
       2-3 Maze 3_instruction: Najdi pot in vodi me do neumnega prašiča. Izogni se
@@ -362,12 +364,21 @@
       2-3 Maze Loops 1_instruction: Me lahko pelješ do prašička z uporabo 5 blokov?
       2-3 Maze Loops 17_instruction: Get me to the sunflower!
       2-3 Maze Loops 18_instruction: |-
-        Get me to the sunflower!\r
-        (Hint: You'll
-        need to use one "repeat" loop inside of another to pass this level.)
-      2-3 Maze Loops 19_instruction: Get me to the sunflower!
-      2-3 Maze Loops 20_instruction: Get me to the sunflower!
-      2-3 Maze Loops 21_instruction: Get me to the sunflower!
+        Get me to the sunflower using the fewest blocks
+        possible!  \r
+        \r
+        (Note: You'll need to use one `repeat` loop inside of
+        another to pass this level.)
+      2-3 Maze Loops 19_instruction: |-
+        Let's take this to another level! \r
+        Use
+        loops to get me to the sunflower with the fewest loops possible.
+      2-3 Maze Loops 20_instruction: |
+        Get me to the sunflower using the fewest number
+        of blocks possible!
+      2-3 Maze Loops 21_instruction: |
+        Get me to the sunflower using the fewest blocks
+        possible!
       2-3 Maze Loops Assessment 1_instruction: 'Pelji me do sončnice z uporabo 5 blokov! '
       2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
@@ -463,6 +474,11 @@
         Someone started the code, but then realized
         there must be a quicker way! Use a "for" block to replace the blocks and
         complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: |
         How can we count from 1 to 50? Edit the
         "for" block.
@@ -2896,6 +2912,20 @@
         \r
         .\r
         \r
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: |-
+        Figure out how to change this code so that Robin
+        chooses a number between 1 and 20.  \r
+        \r
+        When you're ready, press "Run"
+        and play until you guess Robin's number!
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -5253,11 +5283,11 @@
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

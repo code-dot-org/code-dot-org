@@ -356,7 +356,7 @@
             esant bet kurioje amžiaus grupėje."
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
-          Introduction to Computer Science: "Įvadas į kompiuterių mokslą"
+          Introduction to Computer Science: "Įvadas į informatiką"
           The Maze: Labirintas
           Computational Thinking: Skaičiuojamasis mąstymas
           Graph Paper Programming: Programavimas ant languoto popieriaus
@@ -1458,6 +1458,9 @@
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1573,6 +1576,7 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1638,16 +1642,16 @@
           Gumball Play Lab: Gumball Play Lab
         starwars:
           title: "Žvaigždžių Karai: programuojame Galaktiką"
-          description_short: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų
+          description_short: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų
             žaidimą tolimoje galaktikoje.
-          description: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą
+          description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą
             tolimoje galaktikoje.
           Hour of Code 2015: Programavimo valanda 2015
         starwarsblocks:
           title: "Žvaigždžių Karai: programuojame Galaktiką"
-          description_short: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų
+          description_short: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų
             žaidimą tolimoje galaktikoje.
-          description: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą
+          description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą
             tolimoje galaktikoje.
           Hour of Code 2015: Programavimo valanda 2015
         minecraft:
@@ -1712,6 +1716,7 @@
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4

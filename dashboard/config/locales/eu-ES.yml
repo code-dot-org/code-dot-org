@@ -509,6 +509,8 @@
       body: App Lab is a programming environment where you can make simple apps. Design
         an app, code with blocks or JavaScript to make it work, then share your app
         in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
       audience: Ages 13+
       cta: Learn how
     hoc:
@@ -603,6 +605,9 @@
     placeholder: Idatzi hemen zure erantzuna
     open_response_title: Eskerrik asko
     open_response_body: Eskerrik asko zure erantzunagatik!
+  level_group:
+    correct_title: Mila esker
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: Ongi
     startover_title: Ziur al zaude berriro hasi nahi duzula?

@@ -72,7 +72,7 @@ lt:
           WordSearch: 1 Etapas
     game:
       name:
-        Unplug1: Įvadas į kompiuterių mokslą
+        Unplug1: Įvadas į informatiką
         Maze: Labirintas
         Multi: Pasirinkti iš kelių variantų
         Unplug2: Skaičiuojamasis mąstymas
@@ -99,11 +99,11 @@ lt:
         Jigsaw: Dėlionės
         MazeStep: Labirintas Žingsnio režimu
         Wordsearch: Žodžių paieška
-        Webapp: Programėlių laboratorija
+        Webapp: App Lab
         ArtistEC: Menininkas
         TextMatch: Teksto Atitikmuo
         StudioEC: Laboratorija
-        Applab: Programėlių laboratorija
+        Applab: App Lab
         NetSim: Interneto simuliatorius
         Custom: Menininkas
         CustomStudio: Laboratorija
@@ -206,10 +206,10 @@ lt:
         turtle_3_4: Sugalvok, kaip panaudoti funkcijas „nubrėžk trikampį“ ir „nubrėžk kvadratą“ (bei keletą kitų blokelių), kad nupieštum namą aplink liūtą.
         turtle_3_5: |
           Sukurk komandą „namas“ ir panaudok ją, kad nupieštum namą aplink dvi kates. 
-          Sufleris: tiks blokelis „nauja komandą“, tik įrašyk norimą komandos pavadinimą.
+          Sufleris: sukurk naują komandą panaudodamas blokelį „daryk ką nors“ ir įrašyk norimą jos pavadinimą.
         turtle_3_6: 'Naudodamas pavyzdį, komandai „nubrėžk trikampį“  leisk gauti dydį „n“. Tada nupiešk du skirtingo dydžio trikampius. (Sufleris: kad komandai pridėtum informacijos laukus (parametrus), nuspausk ant žvaigždės)'
         turtle_3_7: Komandai „namas“ pridėk dydžio parametrą „n“ ir nupiešk didelį namą drambliui (jo kraštinės turi būti 150 pikselių)
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
+        turtle_3_8: Pakeisk komandą „namas“, kad atsidurčiau apatiniame dešiniajame kampe, nupiešęs namą. Šią pakeistą komandą panaudok ir nupiešk tris namus.
         turtle_3_9: Ar sugebėsi sukurti komandą „namas“ dar kartą? Pamėgink, o po to nupiešk iš eilės tris didėjančius namus.
         turtle_3_10: Jau daug visko išmokai! Dabar gali panaudoti šiuos blokelius, kad nupieštum tai, ką nori. Pamėgink nupiešti žvaigždę, spiralę ar gražią snaigę.
         maze_karel_debug_seq_1: Sveikas atvykęs į klaidų ieškojimą! Mano kodas neveikia teisingai. Ar surasi problemą ir ištaisysi ją, kad galėčiau paruošti lauką sodinimui?
@@ -250,7 +250,7 @@ lt:
         flappy_6: Patikrink, ar sugebėsi gauti tašką, pakeitęs paukščio suplasnojimo stiprumą.
         flappy_7: 'Toliau, pamėgink pakeisti sceną, prijungdamas atitinkamą komandą prie "kai paleista" bloko.'
         flappy_8: 'Išvaizdą galima nustatyti bet kuriuo momentu - nebūtinai, kai žaidimas prasideda. Pamėgink nustatyti atsitiktinį scenos foną, kai įvyksta tam tikri įvykiai, pavyzdžiui, kai yra pereinama per kliūtį.'
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
+        flappy_9: Paįvairinkime žaidimą. Kai atsitrenksi į kliūtį, geriau ne užbaik žaidimą, o panaikink visus surinktus taškus.
         flappy_11: Sukurk savo Flappy žaidimą. Gali pakeisti išvaizdą ir taisykles, netgi gravitaciją. Kai baigsi, nuspausk „Pasidalinti“, kad tavo draugai galėtų pažaisti tavo žaidimą savo telefonuose.
         flappy_k1_1: Žaisk Flappy
         flappy_k1_2: Pridėk reikiamą blokelį prie blokelio „kai nuspausta“, o tada nuspausk „Paleisti“. Spustelk pelės klavišą arba ekraną, kad Flappy skristų į tikslą.
@@ -285,7 +285,7 @@ lt:
         studio_c2_4: Ar gali parašyti programą, kuri priverčia šunį pajudėti iki katino, o katiną priverčia pasakyti „Labas“, kai šuo prie jo prieina?
         studio_c2_5: Ar gali sukurti programą, kad aštuonkojis pasakytų „Labas“, kai ant jo nuspaudi su pele?
         studio_c2_6: Ar gali parašyti programą, kad šis pingvinas judėtų spaudinėjant klaviatūros rodykles ir pataikytų į visus taikinius?
-        studio_c2_7: Blokelis „kartok amžinai“ leidžia kodui veikti nesustojant. Ar sugebėsi sudėti blokus taip, kad šis dinozauras judėtų aukštyn ir žemyn nesustodamas?
+        studio_c2_7: Blokelis „kartok visada“ leis vykdyti nurodytus veiksmus nesustojant. Ar mokėtum nurodyti dinozaurui pastoviai vaikščioti aukštyn-žemyn?
         studio_c2_8: Padaryk, kad pingvinas sakytų „Oi!“ ir sugrotų garsas „atsimušimas“, jeigu jis atsitrenkia į dinozaurą. Pingvinas turi būti valdomas klaviatūros rodyklėmis.
         studio_c2_9: Pridėk bloką, kad būtų gaunamas taškas, kai pingvinas pasiekia aštuonkojį. Pingvinas turi būti judinamas tol, kol bus gaunamas taškas.
         studio_c2_10: Pridėk blokelius, kurie, paleidus žaidimą, pakeistų foną ir pingvino greitį. Po to pajudink pingviną, kol gausi tašką.
@@ -303,13 +303,13 @@ lt:
         studio_c3_game_5: Pridėk bloką, kad būtų gaunamas taškas, kai pingvinas pasiekia aštuonkojį. Pingvinas turi būti judinamas tol, kol bus gaunamas taškas.
         studio_c3_game_6: Pridėk blokelius, kurie, paleidus žaidimą, pakeistų foną ir pingvino greitį. Po to pajudink pingviną, kol gausi tašką.
         studio_c3_game_7: Sukurk savo žaidimą. Kai baigsi, nuspausk „Baigti“ ir duok draugams išmėginti žaidimą savo telefonuose.
-        studio_playlab_1: 'Waddles wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Jasmine (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
+        studio_playlab_1: Pingvinas nori pasakyti „labas“ – ar padėsi jam?
+        studio_playlab_2: Urvinis berniukas (veikėjas 1) ir urvinė mergaitė (veikėjas 2) nori vienas kitam pasakyti „labas“. Ar galėtum jiems padėti, panaudodamas blokelį „sakyk“ du kartus?
+        studio_playlab_3: Ar gali padėti mergaitei tenisininkei pasiekti vėliavą?
+        studio_playlab_4: Ar gali padėti tenisininkui (veikėjas 1) nueiti iki tenisininkės (veikėjas 2) ir pagroti garsą, kai jis nueis?
+        studio_playlab_5: Ar gali padėti robotui pasakyti „sveiki, žemiečiai“, kai ant jo nuspausi? Nepamiršk ant jo paspausti, kai paleisi programą
         studio_playlab_6: Raganiukei reikia surinkti visus magiškus ugnies kamuolius. Ar gali jai padėti judėti, naudojant rodyklių mygtukus?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
+        studio_playlab_7: Blokelis „kartok visada“ leis vykdyti nurodytus veiksmus nesustojant. Ar gali sudėlioti blokelius taip, kad burtininkas nesustodamas judėtų kairėn ir dešinėn?
         studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
         studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Sukurk savo žaidimą. Kai baigsi, nuspausk „Baigti“ ir duok draugams išmėginti žaidimą savo telefonuose.
@@ -317,25 +317,24 @@ lt:
         studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
         studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
         studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
+        studio_iceage_repeat: Blokelis „kartok visada“ leis vykdyti nurodytus veiksmus nesustojant. Ar gali sudėti blokelius taip, kad senutė judėtų kairėn ir dešinėn nesustodama?
         studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
         studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
-        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
+        studio_iceage_sound_and_points: Tau yra duotas beveik visas kodas, kuris judina senutę kairėn ir dešinėn bei kodas, kuris judina Sidą ekrane. Ar gali užbaigti kodą ir prie blokelio „kai veikėjas liečia“ pridėti tinkamus blokelius taip, kad susidūrus senutei ir Sidui, būtų grojamas garsas ir gaunamas taškas?
         studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: |-
-          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_throw_hearts: Sidas nori, kad jo močiutė sužinotų, kad jis ją myli. Panaudok komandą „veikėjas meta“, kad Sidas (veikėjas 1) mestų širdeles į močiutę (veikėjas 2)! Nustatyk močiutės nuotaiką į laimingą, kai ją palies širdelė.
+        studio_iceage_free_play: Sukurk savo žaidimą arba istoriją! Kai baigsi, nuspausk „Baigti“ ir duok draugams išmėginti žaidimą savo telefonuose, planšetėse ar kompiuteriuose!
         studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
         studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the "actor say" block twice.'
         studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
         studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_repeat: Blokelis „kartok visada“ leis vykdyti nurodytus veiksmus nesustojant. Ar gali sudėti blokelius taip, kad Gumball judėtų kairėn ir dešinėn nesustodamas?
         studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
         studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
         studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
         studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_gumball_join_food_fight: Prisidėk prie maisto muštynių! Panaudok komandą „veikėjas meta dešinėn“, kad Banana Džo (veikėjas 1) mestų maistą į Antaną (veikėjas 2)! Nustatyk piktą Antano nuotaiką, kai į jį bus pataikoma.
+        studio_gumball_free_play: Sukurk savo žaidimą arba istoriją. Kai baigsi, nuspausk „Baigti“ ir duok draugams išmėginti žaidimą savo telefonuose, planšetėse ar kompiuteriuose!
         studio_full_sandbox: Sukurk savo žaidimą. Kai baigsi, nuspausk „Baigti“ ir duok draugams išmėginti žaidimą savo telefonuose.
         studio_k1_1: Ar galėtum padaryti, kad šis šuo pasakytų „Sveikas, pasauli“?
         studio_k1_2: Ar gali padaryti taip, kad šuo ką nors pasakytų, o po to ką nors pasakytų katinas?
@@ -353,7 +352,7 @@ lt:
         maze_wordsearch_k_15: 'Pajudink mane į vieną pusę, paskui - kitą, kad parašyčiau žodį "ABOVE"'
         maze_wordsearch_k_16: 'Pajudink mane į vieną pusę, paskui - kitą, kad parašyčiau žodį "BELOW"'
         maze_wordsearch_k_20: 'Pajudink mane į vieną pusę, paskui - kitą, kad parašyčiau žodį "STORY"'
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: Sukurk savo programėlę naudodamas blokelius įrankinėje.
         turtle_ec_1_2: 'O dabar nubrėžk kvadratą. Pastaba: naudok savo mėgstamą spalvą, kurią gali pasirinkti naujame blokelyje „pieštuko spalva“.'
         turtle_ec_1_10: 'Šaunu, išsprendei tiek daug užduočių! O dabar gali nupiešti, ką tik nori. Keletas idėjų: žmogeliukas, snaigė ar spiralė. Taip pat išmėgink naują bloką: „pieštuko storis“. Smagaus piešimo!'
         studio_ec_sandbox: Sukurk savo žaidimą. Kai baigsi, nuspausk „Baigti“ ir duok draugams išmėginti žaidimą savo telefonuose.
@@ -443,14 +442,14 @@ lt:
         C4_for_loops: Kartojimas
         C4_for_loops_bee: Kartojimas
         C4_for_loops_no_bee: Kartojimas
-        C4_math_artist: Programming the Artist with Math
+        C4_math_artist: Menininko programavimas su matematika
         C4_function_edit: Komandų redagavimas
         C4_function_create: Komandų kūrimas
         C4_function_parameters: Komandos su parametrais
         C4_conditionals: Sąlyginiai sakiniai
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_variables: Kintamieji vokuose
         C4_unplugged_forloops: Kartojimas
         C4_unplugged_parameters: Dainų rašymas su parametrais
         C4_unplugged_binary: Dvejetainis
@@ -527,9 +526,9 @@ lt:
         gumball_intro: 'Gumball Hour of Code - Introduction'
         gumball_events: 'Gumball Hour of Code - Events'
         gumball_repeat: 'Gumball Hour of Code - Repeat statements'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        iceage_intro: Ledynmečio programavimo valanda – Įvadas
+        iceage_events: Ledynmečio programavimo valanda – renginiai
+        iceage_repeat: Ledynmečio programavimo valanda – kartojimo sakiniai
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat blokeliu
@@ -544,21 +543,21 @@ lt:
         jigsaw_click: Nuspausk ant šio blokelio!
         move_elsa_forward: 'Prijunk blokelį „eik į priekį“  prie blokelio  „paleidus“'
         turn_elsa: Panaudok blokelį „pasisuk“, kad Elsa galėtų pasisukti. Skaičių, esantį šalia laipsnių, galima pakeisti
-        replace_questions: 'Use the drop-down to replace "???" with a number'
-        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
+        replace_questions: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
+        replace_questions_degree: Nuspausk rodyklę, kad pakeistum „???“ tinkamu laipsnių skaičiumi
         repeat_blocks: Naudok kartojimo blokelį – į jį reikia įdėti kitus blokelius
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
-        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
+        repeat_blocks_1: (1) Panaudok šį blokelį ir apgaubk juo pilkus blokelius
+        repeat_blocks_2: (2) Perkelk kartojimo blokelį čia ir įdėk į jį pilkus blokelius
         snowflake_dropdown: Panaudok šį išsiskleidžiantį sąrašą, kad sukurtum įvairesnių snaigių!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
+        degrees_per_side: Padalink skaičių 360 iš kraštinių skaičiaus ir gausi kiekvieno kampo dydį.
         set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
         set_length: 'Use this block to set "length" to the correct value.'
         which_equation: Which equation makes each side shorter for shapes with more sides?
-        get_nectar: 'Use the new "get nectar" block.'
+        get_nectar: Panaudok naują blokelį „gauk nektarą“.
         actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Click here to edit your function.
-        create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
+        edit_function: Spausk čia, kad paredaguotum funkciją.
+        create_function: Spausk čia, kad atvertum išskleistum komandas, o tada nuspausk mygtuką „Sukurti komandą“.
         house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
         edit_draw_square: Use this button to edit the function and add the loop.
         edit_get_nectar: Use this button to edit the function and change the direction the Bee will turn to get the nectar.
@@ -566,7 +565,7 @@ lt:
         length_parameter: 'Can you update this function so it uses the "length" parameter?'
         frozen_diamond_repeat: Use the repeat block to create this shape.
         frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
+        frozen_circle_function_with_parameter_circle: Panaudok blokelį „sukurk apskritimą“ ir pakeisk dydį.
         frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
         frozen_create_square: Attach more blocks here to create a square
         playlab_drag_say: 'Drag the "say" block here and type "hello"'
@@ -583,11 +582,11 @@ lt:
         place_counter_variable: Drag your counter variable inside this block
         function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
         change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
+        write_draw_square_function: Iš įrankinės nutempk blokelius čia, kurie nubrėš kvadratą
+        write_draw_triangle_function: Iš įrankinės nutempk blokelius čia, kurie nubrėš trikampį
         edit_add_parameter: Click edit to add a parameter in your function
         add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
+        fill_in_actor: Užpildyk ??? skaičiais, kurie atitinka kiekvieną veikėją (1, 2 ir 3)
         repeat: Put blocks inside the loop to repeat commands
         if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
         if_else_bee: |-

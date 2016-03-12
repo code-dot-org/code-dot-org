@@ -34,6 +34,7 @@ var constants = require('./constants');
 var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
 var puzzleRatingUtils = require('./puzzleRatingUtils');
+var DialogButtons = require('./templates/DialogButtons.jsx');
 
 /**
  * @typedef {Object} TestableBlock
@@ -416,20 +417,18 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
     tryAgainText = options.keepPlayingText;
   }
 
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      previousLevel:
-        !this.canContinueToNextLevel(options.feedbackType) &&
-        options.showPreviousButton,
-      tryAgain: tryAgainText,
-      continueText: options.continueText || (options.finalLevel ? msg.finish() : msg.continue()),
-      nextLevel: this.canContinueToNextLevel(options.feedbackType),
-      shouldPromptForHint: this.shouldPromptForHint(options.feedbackType),
-      isK1: options.isK1,
-      assetUrl: this.studioApp_.assetUrl,
-      freePlay: options.freePlay
-    }
-  });
+  ReactDOM.render(React.createElement(DialogButtons, {
+    previousLevel:
+      !this.canContinueToNextLevel(options.feedbackType) &&
+      options.showPreviousButton,
+    tryAgain: tryAgainText,
+    continueText: options.continueText || (options.finalLevel ? msg.finish() : msg.continue()),
+    nextLevel: this.canContinueToNextLevel(options.feedbackType),
+    shouldPromptForHint: this.shouldPromptForHint(options.feedbackType),
+    isK1: options.isK1,
+    assetUrl: this.studioApp_.assetUrl,
+    freePlay: options.freePlay
+  }), buttons);
 
   return buttons;
 };
@@ -502,7 +501,11 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
         }
         break;
       case TestResults.TOO_FEW_BLOCKS_FAIL:
-        message = options.level.tooFewBlocksMsg || msg.tooFewBlocksMsg();
+        // This should be replaced by the LEVEL_INCOMPLETE_FAIL case, but some
+        // levels still override tooFewBlocksMsg.
+        message = options.level.tooFewBlocksMsg ||
+            options.level.levelIncompleteError ||
+            msg.levelIncompleteError();
         break;
       case TestResults.LEVEL_INCOMPLETE_FAIL:
         message = options.level.levelIncompleteError ||
@@ -925,11 +928,9 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog, appStrings) {
   });
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      ok: true
-    }
-  });
+  ReactDOM.render(React.createElement(DialogButtons, {
+    ok: true
+  }), buttons);
   codeDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({
@@ -988,13 +989,11 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   }
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      confirmText: options.confirmText,
-      cancelText: options.cancelText,
-      cancelButtonClass: options.cancelButtonClass
-    }
-  });
+  ReactDOM.render(React.createElement(DialogButtons, {
+    confirmText: options.confirmText,
+    cancelText: options.cancelText,
+    cancelButtonClass: options.cancelButtonClass
+  }), buttons);
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({
@@ -1035,11 +1034,9 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      ok: true
-    }
-  });
+  ReactDOM.render(React.createElement(DialogButtons, {
+    ok: true
+  }), buttons);
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({

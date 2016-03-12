@@ -1,6 +1,6 @@
 {
   "actor":"speler",
-  "addCharacter":"voeg een",
+  "addCharacter":"toevoegen",
   "addCharacterTooltip":"Voeg een figuur toe aan de scene.",
   "addPoints10":"voeg 10 punten toe",
   "addPoints50":"voeg 50 punten toe",

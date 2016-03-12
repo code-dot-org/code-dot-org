@@ -99,7 +99,6 @@ class StorageApps
     0
   end
 
-
   def to_a()
     @table.where(storage_id: @storage_id).exclude(state: 'deleted').map do |i|
       channel_id = storage_encrypt_channel_id(i[:storage_id], i[:id])
