@@ -47,7 +47,7 @@ dependencies:
         pwd:
             dashboard
     # Run rake build (twice in case of intermittent test failures within rake build)
-    - for i in 1 2; do bundle exec rake bu [ ild && break; done
+    - for i in 1 2; do bundle exec rake build && break; done
 database:
   override:
     - 'echo "Skipping database phase (already ran)."'
