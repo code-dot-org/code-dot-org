@@ -36,7 +36,7 @@ var ActionType = module.exports.ActionType = {
  *
  * @returns {{type: ActionType, props: Object}}
  */
-module.exports.setLevelProps = function (props) {
+module.exports.setInitialLevelProps = function (props) {
   return {
     type: ActionType.SET_LEVEL_PROPS,
     props: props
