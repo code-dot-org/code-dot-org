@@ -50,9 +50,10 @@ var AppLabView = React.createClass({
           <ProtectedStatefulDiv renderContents={this.props.renderVisualizationColumn} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <ProtectedStatefulDiv
-            id="codeWorkspace"
-            renderContents={this.props.renderCodeWorkspace} />
+        <ProtectedStatefulDiv id="codeWorkspace">
+          <ProtectedStatefulDiv id="codeWorkspaceWrapper" renderContents={this.props.renderCodeWorkspace}/>
+          {!this.props.isReadOnlyWorkspace && <ProtectedStatefulDiv id="designWorkspace" style={{display: 'none'}} />}
+        </ProtectedStatefulDiv>
       </ConnectedStudioAppWrapper>
     );
   }
