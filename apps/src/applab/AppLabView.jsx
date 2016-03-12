@@ -52,7 +52,7 @@ var AppLabView = React.createClass({
     );
   }
 });
-module.exports = connect(function propsFromState(state) {
+module.exports = connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.level.isReadOnlyWorkspace
   };
