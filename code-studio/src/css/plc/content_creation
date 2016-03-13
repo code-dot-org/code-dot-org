@@ -1,0 +1,8 @@
+.outlinedSection {
+  border: 1px solid;
+  padding: 1em;
+}
+
+.newLink {
+  margin-top: 24px;
+}

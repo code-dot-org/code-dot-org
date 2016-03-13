@@ -1,14 +1,19 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+
 %p#notice= notice
 
 %p
   %strong Name:
   = @learning_module.name
 
-%p
-  %strong Task requirements
-  %ul
-    - @learning_module.plc_tasks.each do |task|
-      %li #{task.name}
+-[{tasks: @resource_tasks, name: 'Learning Resources'}, {tasks: @other_tasks, name: 'Tasks'}].each do |task_list|
+  .outlinedSection
+    %h4 #{task_list[:name]}
+    - task_list[:tasks].each do |task|
+      = link_to task.name, plc_task_path(task)
+      %br
+  %br
 
 = link_to 'Edit', edit_plc_learning_module_path(@learning_module)
 \|
