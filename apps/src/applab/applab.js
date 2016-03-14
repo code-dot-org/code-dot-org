@@ -135,6 +135,8 @@ var vizAppWidth = 400;
 var defaultAppWidth = 400;
 var defaultAppHeight = 400;
 
+var hasSeenRateLimitAlert = false;
+
 function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
@@ -701,6 +703,10 @@ Applab.init = function(config) {
     // Set designModeViz contents after it is created in configureDom()
     // and sized in drawDiv().
     Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
+
+    if (!!config.level.projectTemplateLevelName) {
+      studioApp.displayAlert('warning', <div>{commonMsg.projectWarning()}</div>);
+    }
 
     studioApp.alertIfAbusiveProject('#codeWorkspace');
 
@@ -1691,4 +1697,19 @@ Applab.updateProperty = function (element, property, value) {
 
 Applab.isCrosshairAllowed = function () {
   return !Applab.isReadOnlyView && !Applab.isRunning();
+};
+
+Applab.showRateLimitAlert = function () {
+  // only show the alert once per session
+  if (hasSeenRateLimitAlert) {
+    return false;
+  }
+  hasSeenRateLimitAlert = true;
+
+  var alert = <div>{applabMsg.dataLimitAlert()}</div>;
+  if (studioApp.share) {
+    studioApp.displayPlayspaceAlert("error", alert);
+  } else {
+    studioApp.displayWorkspaceAlert("error", alert);
+  }
 };

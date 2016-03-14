@@ -2,12 +2,6 @@
  * @overview a modal dialog showing the union of all router logs for the
  *           current shard.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var i18n = require('./locale');

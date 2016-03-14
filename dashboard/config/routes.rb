@@ -141,7 +141,6 @@ Dashboard::Application.routes.draw do
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
 
-
     # /s/xxx/level/yyy
     resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
 
@@ -216,8 +215,11 @@ Dashboard::Application.routes.draw do
   get '/admin/feature_mode', :to => 'feature_mode#show', as: 'feature_mode'
   post '/admin/feature_mode', :to => 'feature_mode#update', as: 'feature_mode_update'
 
-  get '/admin/assume_identity', to: 'reports#assume_identity_form', as: 'assume_identity_form'
-  post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
+  get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
+  post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
+  get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
+  post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
+
   get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
@@ -232,7 +234,6 @@ Dashboard::Application.routes.draw do
   get '/notes/:key', to: 'notes#index'
 
   resources :zendesk_session, only: [:index]
-
 
   post '/report_abuse', :to => 'report_abuse#report_abuse'
   get '/report_abuse', :to => 'report_abuse#report_abuse_form'

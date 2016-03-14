@@ -116,7 +116,7 @@ BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCK
   end
 end
 
-APPS_TASK = build_task('apps', [BLOCKLY_CORE_TASK] + Dir.glob(apps_dir('**/*'))) do
+task :apps_task do
   packager = S3Packaging.new('apps', apps_dir, dashboard_dir('public/apps-package'))
 
   updated_package = packager.update_from_s3
@@ -127,6 +127,8 @@ APPS_TASK = build_task('apps', [BLOCKLY_CORE_TASK] + Dir.glob(apps_dir('**/*')))
 
   # Test and staging are the only environments that should be uploading new packages
   raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
+
+  raise 'Wont build apps with staged changes' if RakeUtils.git_staged_changes?(apps_dir)
 
   HipChat.log 'Building apps...'
   RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
@@ -145,7 +147,7 @@ end
 #
 # Define the CODE STUDIO BUILD task.
 #
-CODE_STUDIO_TASK = build_task('code-studio', Dir.glob(code_studio_dir('**/*'))) do
+task :code_studio_task do
   packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
 
   updated_package = packager.update_from_s3
@@ -156,6 +158,8 @@ CODE_STUDIO_TASK = build_task('code-studio', Dir.glob(code_studio_dir('**/*'))) 
 
   # Test and staging are the only environments that should be uploading new packages
   raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
+
+  raise 'Wont build code-studio with staged changes' if RakeUtils.git_staged_changes?(code_studio_dir)
 
   HipChat.log 'Building code-studio...'
   RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
@@ -290,7 +294,7 @@ task :deploy do
   end
 end
 
-$websites = build_task('websites', [deploy_dir('rebuild'), APPS_TASK, CODE_STUDIO_TASK, :build_with_cloudfront, :deploy])
+$websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_CORE_TASK, :apps_task, :code_studio_task, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
 
 task :pegasus_unit_tests do
@@ -377,6 +381,6 @@ end
 # do the eyes and browserstack ui tests in parallel
 multitask ui_tests: [:eyes_ui_tests, :regular_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), APPS_TASK, CODE_STUDIO_TASK, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :ui_test_flakiness, :ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), BLOCKLY_CORE_TASK, :apps_task, :code_studio_task, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :ui_test_flakiness, :ui_tests])
 
 task 'test-websites' => [$websites_test]

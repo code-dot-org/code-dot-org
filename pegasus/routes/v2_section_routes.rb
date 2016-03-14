@@ -91,5 +91,4 @@ end
 
 get '/v2/sections/:id/login_cards' do |id|
 
-
 end
