@@ -3,7 +3,7 @@ title: Privacy Policy
 ---
 
 # Privacy Policy
-Date of Last Revision: August 3, 2015 
+Date of Last Revision: March 12, 2016
 
 ## About Code.org
 Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
@@ -196,7 +196,7 @@ In the event that Code.org is acquired by, combined or merged with another entit
 ## Our Approach to Data Security
 
 ### Website security is important to you, and to us
-To protect your privacy and security, we take reasonable steps to verify your identity before granting you account access or making corrections to your Personal Information.  Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. If you would like an SSL encrypted connection in or to encrypt the data that you input while using the Website, use the HTTPS protocol by visiting https://code.org/. 
+To protect your privacy and security, we take reasonable steps to verify your identity before granting you account access or making corrections to your Personal Information. 
 
 ### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
 Code.org uses certain physical, managerial, and technical safeguards designed to preserve the integrity and security of your Personal Information and other information we maintain in connection with the Website. We cannot, however, ensure or warrant the security of any or all of the Personal Information and other information you transmit to Code.org, and you do so at your own risk. Once we receive your transmission of information, Code.org makes commercially reasonable efforts to ensure the security of our systems. However, please note that this is not a guarantee that such Personal Information may not be accessed, disclosed, altered, or destroyed by breach of any of our physical, technical, or managerial safeguards.

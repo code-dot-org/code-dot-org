@@ -1,12 +1,6 @@
 /**
  * @overview Tween functions used to animate visualization elements.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var valueOr = require('../utils').valueOr;
