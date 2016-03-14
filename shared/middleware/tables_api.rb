@@ -8,9 +8,11 @@ require_relative './helpers/table_limits'
 
 class TablesApi < Sinatra::Base
 
+  DEFAULT_MAX_TABLE_ROWS = 5000
+
   # Maximum number of rows allowed in a table (either in initial import or
-  # after inserting rows.)
-  MAX_TABLE_ROWS = 5000
+  # after inserting rows.) Logically constant but can be modified in tests.
+  @@max_table_rows = DEFAULT_MAX_TABLE_ROWS
 
   @@redis = Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379')
 
@@ -103,7 +105,8 @@ class TablesApi < Sinatra::Base
     TableType.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
 
     limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
-    limits.decrement_row_count
+    count = limits.decrement_row_count
+    puts "Count after delete #{count}"
 
     no_content
   end
@@ -187,12 +190,13 @@ class TablesApi < Sinatra::Base
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
     limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
-    if limits.get_approximate_row_count >= MAX_TABLE_ROWS
-      halt 413, {}, "Too many rows, a table may have at most #{MAX_TABLE_ROWS} rows"
+    row_count = limits.get_approximate_row_count
+    if row_count >= @@max_table_rows
+      halt 413, {}, "Too many rows, a table may have at most #{@@max_table_rows} rows"
     end
+    limits.increment_row_count
 
     value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
-    limits.increment_row_count
 
     dont_cache
     content_type :json
@@ -253,7 +257,7 @@ class TablesApi < Sinatra::Base
     # this check fails on Win 8.1 Chrome 40
     #unsupported_media_type unless params[:import_file][:type]== 'text/csv'
 
-    max_records = MAX_TABLE_ROWS
+    max_records = @@max_table_rows
     table_url = "/v3/edit-csp-table/#{channel_id}/#{table_name}"
     back_link = "<a href='#{table_url}'>back</a>"
     table = TableType.new(channel_id, storage_id(endpoint), table_name)
@@ -300,6 +304,10 @@ class TablesApi < Sinatra::Base
     end
     table.ensure_metadata
 
+    # Set the approximate row count.
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits.set_approximate_row_count(records.length)
+
     redirect "#{table_url}"
   end
 
@@ -326,6 +334,9 @@ class TablesApi < Sinatra::Base
       table.delete(record['id'])
       table.insert(record, request.ip)
     end
+
+    # The approximate row count at this point may be an underestimate, which
+    # we are willing to allow.
 
     all_converted.to_json
   end
@@ -358,8 +369,19 @@ class TablesApi < Sinatra::Base
       table.delete_all()
       json_data[table_name].each do |record|
         table.insert(record, request.ip)
+        limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+        limits.set_approximate_row_count(json_data.keys.length)
       end
       table.ensure_metadata()
     end
+
+  end
+
+  def self.set_max_table_rows_for_test(max_table_rows)
+    @@max_table_rows = max_table_rows
+  end
+
+  def self.reset_max_table_rows_for_test
+    set_max_table_rows_for_test(DEFAULT_MAX_TABLE_ROWS)
   end
 end
