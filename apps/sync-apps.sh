@@ -47,9 +47,7 @@ done
 
 git add --all i18n
 git add --all ../i18n/locales/source
-if [ -n "$(git status --porcelain)" ]; then
+if [[ `git status --porcelain i18n` ]]; then
   git commit --message="Updated apps strings"
   git push
 fi
-
-exit 0
