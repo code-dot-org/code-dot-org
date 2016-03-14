@@ -281,8 +281,8 @@ Dashboard::Application.routes.draw do
   end
 
   namespace :plc do
-    resources :courses
-    resources :learning_modules
+    resources :courses, except: :index
+    resources :learning_modules, except: :index
     resources :tasks
     resources :user_course_enrollments
     resources :enrollment_task_assignments, only: [:index, :show, :destroy]
