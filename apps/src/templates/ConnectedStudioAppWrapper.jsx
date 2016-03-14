@@ -2,7 +2,7 @@
 'use strict';
 
 var connect = require('react-redux').connect;
-var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
+var StudioAppWrapper = require('./StudioAppWrapper.jsx');
 
 module.exports = connect(function propsFromStore(state) {
   return {
