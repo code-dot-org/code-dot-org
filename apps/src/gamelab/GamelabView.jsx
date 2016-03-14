@@ -2,6 +2,7 @@
 'use strict';
 
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
+var GameLabVisualizationHeader = require('./GameLabVisualizationHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
 
 /**
@@ -9,6 +10,7 @@ var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
  */
 var GamelabView = React.createClass({
   propTypes: {
+    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     renderCodeWorkspace: React.PropTypes.func.isRequired,
     renderVisualizationColumn: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
@@ -19,11 +21,21 @@ var GamelabView = React.createClass({
   },
 
   render: function () {
+    var leftColumnHeader;
+    if (!this.props.isReadOnlyWorkspace) {
+      leftColumnHeader = <GameLabVisualizationHeader
+          isEditingProject={this.props.isEditingProject}
+          screenIds={this.props.screenIds}
+          onViewDataButton={this.props.onViewDataButton}
+          onScreenCreate={this.props.onScreenCreate} />;
+    }
+
     return (
       <ConnectedStudioAppWrapper>
-        <ProtectedStatefulDiv
-            id="visualizationColumn"
-            renderContents={this.props.renderVisualizationColumn} />
+        <div id="visualizationColumn">
+          {leftColumnHeader}
+          <ProtectedStatefulDiv renderContents={this.props.renderVisualizationColumn} />
+        </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <ProtectedStatefulDiv id="codeWorkspace">
           <ProtectedStatefulDiv id="codeWorkspaceWrapper" renderContents={this.props.renderCodeWorkspace}/>

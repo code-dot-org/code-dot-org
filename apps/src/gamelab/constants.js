@@ -2,7 +2,7 @@
 'use strict';
 
 /** @enum {string} */
-module.exports.GamelabInterfaceMode = {
+module.exports.GameLabInterfaceMode = {
   CODE: 'CODE',
   ANIMATION: 'ANIMATION'
 };
