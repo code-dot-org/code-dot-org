@@ -23,6 +23,7 @@ class TableLimits
     @redis.set(@row_count_key, count)
   rescue IOError
     # Swallow IO errors since the count is best effort only.
+    0
   end
 
   # Increments the approximate number of rows in `table`.
@@ -30,6 +31,7 @@ class TableLimits
     @redis.incr(@row_count_key)
   rescue IOError
     # Swallow IO errors since the count is best effort only.
+    0
   end
 
   # Decrements the approximate number of rows in `table`.
@@ -43,5 +45,6 @@ class TableLimits
     count
   rescue IOError
     # Swallow IO errors since the count is best effort only.
+    0
   end
 end
