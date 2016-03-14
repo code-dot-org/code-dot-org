@@ -51,3 +51,5 @@ if [ -n "$(git status --porcelain)" ]; then
   git commit --message="Updated apps strings"
   git push
 fi
+
+exit 0
