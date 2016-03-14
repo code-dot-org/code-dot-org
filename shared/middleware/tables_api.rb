@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'csv'
+require 'redis'
 require_relative './helpers/table_coerce'
 require_relative './helpers/table_limits'
 
@@ -10,6 +11,8 @@ class TablesApi < Sinatra::Base
   # Maximum number of rows allowed in a table (either in initial import or
   # after inserting rows.)
   MAX_TABLE_ROWS = 5000
+
+  @@redis = Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379')
 
   helpers do
     [
@@ -34,7 +37,9 @@ class TablesApi < Sinatra::Base
     rows = TableType.new(channel_id, storage_id(endpoint), table_name).to_a
 
     # Remember the number of rows in the table since we now have an accurate estimate.
-    TableMetadata.set_approximate_row_count(endpoint, channel_id, table_name, rows.length)
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits.set_approximate_row_count(rows.length)
+
     rows.to_json
   end
 
@@ -158,7 +163,7 @@ class TablesApi < Sinatra::Base
     # Zero out the approximate row count just in case the user creates a new table
     # with the same name.
     limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
-    limits.set_approximate_row_count(endpoint, channel_id, table_name, 0)
+    limits.set_approximate_row_count(0)
 
     no_content
   end
@@ -181,14 +186,13 @@ class TablesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    halt 413, {}, "Updating 'id' is not allowed" if new_value.has_key? 'id'
-
-    if TableMetaData.get_approximate_row_count(endpoint, channel_id, table_name) >= MAX_TABLE_ROWS
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    if limits.get_approximate_row_count >= MAX_TABLE_ROWS
       halt 413, {}, "Too many rows, a table may have at most #{MAX_TABLE_ROWS} rows"
     end
 
     value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
-    TableMetadata.increment_row_count(endpoint, channel_id, table_name)
+    limits.increment_row_count
 
     dont_cache
     content_type :json

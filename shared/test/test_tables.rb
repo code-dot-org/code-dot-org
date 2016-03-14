@@ -1,5 +1,6 @@
 require_relative 'test_helper'
 require 'channels_api'
+require 'fakeredis'
 require 'tables_api'
 
 class TablesTest < Minitest::Test
