@@ -16,7 +16,7 @@ class TableLimits
   def get_approximate_row_count
     (@redis.get(@row_count_key) || 0).to_i
   rescue IOError
-    return -1
+    -1
   end
 
   def set_approximate_row_count(count)
