@@ -33,7 +33,7 @@ class PairingsControllerTest < ActionController::TestCase
     sign_in user = create(:user)
     section = create(:follower, student_user: user).section
     classmate = create(:follower, section: section).student_user
-    session[:pairings] = [classmate]
+    session[:pairings] = [classmate.id]
 
     xhr :get, :show
     assert_response :success
@@ -53,7 +53,7 @@ class PairingsControllerTest < ActionController::TestCase
     xhr :put, :update, pairings: [{id: classmate_1.id}, {id: classmate_2.id}]
 
     assert_response :success
-    assert_equal [classmate_1, classmate_2], session[:pairings]
+    assert_equal [classmate_1.id, classmate_2.id], session[:pairings]
   end
 
   test 'should not set pairings in session if they are not valid classmates' do
@@ -66,7 +66,7 @@ class PairingsControllerTest < ActionController::TestCase
 
     assert_response :success
     # the invalid user is silently rejected
-    assert_equal [classmate], session[:pairings]
+    assert_equal [classmate.id], session[:pairings]
   end
 
   test 'should remove pairings in session' do
