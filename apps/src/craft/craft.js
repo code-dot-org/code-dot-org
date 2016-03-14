@@ -1,9 +1,5 @@
 /* global trackEvent */
 
-/*jshint -W061 */
-// We use eval in our code, this allows it.
-// @see https://jslinterrors.com/eval-is-evil
-
 'use strict';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
