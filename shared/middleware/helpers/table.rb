@@ -33,40 +33,6 @@ class TableMetadata
 
     column_list.map { |x| x == old_name ? new_name : x }
   end
-
-  # Returns the approximate number of rows in table, or -1 if Redis unavailable.
-  # The underlying implementation uses Redis so the estimate may be an underestimate
-  # if the Redis instance restarts or is unavailable.
-  def self.get_approximate_row_count(endpoint, channel_id, table)
-    @@redis.get(row_count_key(endpoint, channel_id, table))
-  rescue
-    return -1
-  end
-
-  def self.set_approximate_row_count(endpoint, channel_id, table, count)
-    @@redis.set(row_count_key(endpoint, channel_id, table), count)
-  rescue
-    # Swallow errors since the count is best effort only.
-  end
-
-  # Increments the approximate number of rows in `table`.
-  def self.increment_row_count(endpoint, channel_id, table)
-    @@redis.incr row_count_key(endpoint, channel_id, table)
-  rescue
-    # Swallow errors since the count is best effort only.
-  end
-
-  # Decrements the approximate number of rows in `table`.
-  def self.decrement_row_count(endpoint, channel_id, table)
-    @@redis.decr row_count_key(endpoint, channel_id, table)
-  rescue
-    # Swallow errors since the count is best effort only.
-  end
-
-  # Returns a Redis key containing the row count for the given table
-  private def self.row_count_key(endpoint, channel_id, table)
-    "#{endpoint}.#{channel_id}.#{table}.approx_row_count"
-  end
 end
 
 # Converts an array of hashes into a csv string

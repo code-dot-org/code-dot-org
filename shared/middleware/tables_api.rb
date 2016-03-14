@@ -181,9 +181,9 @@ class TablesApi < Sinatra::Base
     if TableMetaData.get_approximate_row_count(endpoint, channel_id, table_name) >= MAX_TABLE_ROWS
       halt 413, {}, "Too many rows, a table may have at most #{MAX_TABLE_ROWS} rows"
     end
-    TableMetadata.increment_row_count(endpoint, channel_id, table_name)
 
     value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
+    TableMetadata.increment_row_count(endpoint, channel_id, table_name)
 
     dont_cache
     content_type :json
