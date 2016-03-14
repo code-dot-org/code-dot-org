@@ -61,7 +61,7 @@ class TablesTest < Minitest::Test
       assert_equal 413, @tables.last_response.status
     end
 
-    # Delete a record and make sure we can then add another record.
+    # Delete a record and make sure we can then add exactly one more record.
     delete_record(record_ids[0])
 
     create_record({'name' => 'now there is room'})
