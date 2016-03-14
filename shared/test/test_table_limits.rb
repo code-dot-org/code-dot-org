@@ -14,6 +14,10 @@ class TestTableLimits < Minitest::Test
     assert_equal 0, limits.get_approximate_row_count,
                  'Approx row count should default to zero'
 
+    limits.decrement_row_count
+    assert_equal 0, limits.get_approximate_row_count,
+                 'Approx row count should never go below zero'
+
     limits.increment_row_count
     assert_equal 1, limits.get_approximate_row_count
 
