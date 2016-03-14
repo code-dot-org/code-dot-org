@@ -1,6 +1,5 @@
 require_relative 'test_helper'
 require 'fake_redis'
-require 'redis'
 
 require_relative '../../shared/middleware/helpers/table_limits'
 

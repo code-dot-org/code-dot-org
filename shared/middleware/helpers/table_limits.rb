@@ -1,6 +1,6 @@
 # A class for maintaining approximate row counts for a table.
 # The implementation uses Redis to set, get, and atomically update the estimated
-# count. The count will become revert to zero if Redis crashes or becomes unavailable.
+# count. The count will revert to zero if Redis crashes or becomes unavailable.
 # However, if the caller can correct the count by calling set_approximate_row_count
 # when an approximate value is known (e.g. after a the client reads the full table).
 class TableLimits
