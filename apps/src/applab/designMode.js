@@ -24,7 +24,7 @@ var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
  * Subscribe to state changes on the store.
  * @param {!Store} store
  */
-designMode.subscribeToRedux = function (store) {
+designMode.setupReduxSubscribers = function (store) {
   var state = {};
   store.subscribe(function () {
     var lastState = state;
