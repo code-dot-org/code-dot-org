@@ -26,8 +26,7 @@ require('./components/small_footer.jsx');
 require('./components/progress/stage_progress.jsx');
 require('./components/progress/course_progress.jsx');
 require('./components/GridEditor.jsx');
-
-window.dashboard.Pairing = require('./components/pairing.jsx')(window.React);
+require('./components/pairing.jsx');
 require('./components/pairing_dialog.jsx');
 
 // Prevent callstack exceptions when opening multiple dialogs
