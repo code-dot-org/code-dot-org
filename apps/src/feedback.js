@@ -817,8 +817,7 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
     <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
   </CodeWritten>, showCodeDiv);
 
-  var showCodeDetails = showCodeDiv.querySelector('details.show-code');
-  $(showCodeDetails).details();
+  $(showCodeDiv).find('details').details();
 
   return showCodeDiv;
 };
