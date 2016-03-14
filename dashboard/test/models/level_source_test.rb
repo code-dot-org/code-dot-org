@@ -23,7 +23,7 @@ class LevelSourceTest < ActiveSupport::TestCase
     @selected_crowdsourced_message = 'selected crowdsourced hint'
 
     @experimental_crowdsourced_messages = ['experiment crowdsourced 1',
-                                            'experiment crowdsourced 2']
+                                           'experiment crowdsourced 2']
     setup_helper(@level_source.id,
                  LevelSourceHint::CROWDSOURCED,
                  @selected_crowdsourced_message,
