@@ -1,12 +1,6 @@
 /**
  * @overview Router log table UI component on the "Router" tab.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var markup = require('./NetSimRouterLogTable.html.ejs');

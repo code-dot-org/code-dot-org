@@ -2,11 +2,6 @@
  * @overview Wraps NetSim REST APIs for operations of "tables" and "shards."
  * @see net_sim_api.rb
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var NetSimApiError = require('./NetSimApiError');
