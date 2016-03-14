@@ -1,10 +1,4 @@
 /** @file Button that can be active or inactive, for use inside ToggleGroup */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 /* global $ */
 
 var styles = require('./PlaySpaceHeaderStyles');

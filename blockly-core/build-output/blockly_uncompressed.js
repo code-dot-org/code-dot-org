@@ -20286,6 +20286,9 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
     if(block.firstElementChild && block.firstElementChild.textContent === oldName) {
       block.firstElementChild.textContent = newName
     }
+  });
+  this.forEachParameterGetBlock(oldName, function(block) {
+    block.setTitleValue(newName, "VAR")
   })
 };
 Blockly.FunctionEditor.prototype.changeParameterTypeInFlyoutXML = function(name, newType) {
@@ -20307,6 +20310,9 @@ Blockly.FunctionEditor.prototype.removeParameter = function(nameToRemove) {
   keysToDelete.forEach(function(key) {
     this.orderedParamIDsToBlocks_.remove(key)
   }, this);
+  this.forEachParameterGetBlock(nameToRemove, function(block) {
+    block.dispose(true, false)
+  });
   this.refreshParamsEverywhere()
 };
 Blockly.FunctionEditor.prototype.refreshParamsEverywhere = function() {
@@ -20337,6 +20343,13 @@ Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
     }
   }, this);
   return{paramNames:paramNames, paramIDs:paramIDs, paramTypes:paramTypes}
+};
+Blockly.FunctionEditor.prototype.forEachParameterGetBlock = function(paramName, callback) {
+  this.functionDefinitionBlock.getDescendants().forEach(function(block) {
+    if(block.type == "parameters_get" && Blockly.Names.equals(paramName, block.getTitleValue("VAR"))) {
+      callback(block)
+    }
+  })
 };
 Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
@@ -25516,10 +25529,9 @@ Blockly.FieldParameter.dropdownChange = function(text) {
     }
   }else {
     if(text === Blockly.Msg.DELETE_PARAMETER) {
-      var result = window.confirm(Blockly.Msg.DELETE_PARAMETER_TITLE.replace("%1", oldVar));
-      if(result) {
+      Blockly.showSimpleDialog({bodyText:Blockly.Msg.DELETE_PARAMETER_TITLE.replace("%1", oldVar), cancelText:Blockly.Msg.DELETE, confirmText:Blockly.Msg.KEEP, onConfirm:null, onCancel:function() {
         Blockly.Variables.deleteVariable(oldVar, this.sourceBlock_.blockSpace)
-      }
+      }.bind(this), cancelButtonClass:"red-delete-button"})
     }
   }
   return null

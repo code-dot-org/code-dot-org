@@ -1,10 +1,4 @@
 /** @file Helper that generates sanitized, standardized event objects. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var keyEvent = require('./keyEvent');

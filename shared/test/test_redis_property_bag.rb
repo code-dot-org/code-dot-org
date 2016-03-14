@@ -110,7 +110,6 @@ class RedisPropertyBagTest < Minitest::Test
     bag.set('foo3', 'value3')
     assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
-
     # Make sure the bag contents are still intact
     assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
@@ -136,7 +135,6 @@ class RedisPropertyBagTest < Minitest::Test
 
     # Make sure the bag contents are still intact
     assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
-
 
     # Jump to just before expiration
     time_travel test_delay_seconds - 0.1

@@ -120,6 +120,8 @@ var vizAppWidth = 400;
 var defaultAppWidth = 400;
 var defaultAppHeight = 400;
 
+var hasSeenRateLimitAlert = false;
+
 function loadLevel() {
   Applab.hideDesignMode = level.hideDesignMode;
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
@@ -613,6 +615,7 @@ Applab.init = function(config) {
     isAdmin: (config.isAdmin === true),
     isSignedIn: config.isSignedIn
   };
+  Applab.isReadOnlyView = config.readonlyWorkspace;
 
   loadLevel();
 
@@ -686,6 +689,10 @@ Applab.init = function(config) {
     // Set designModeViz contents after it is created in configureDom()
     // and sized in drawDiv().
     Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
+
+    if (!!config.level.projectTemplateLevelName) {
+      studioApp.displayAlert('warning', <div>{commonMsg.projectWarning()}</div>);
+    }
 
     studioApp.alertIfAbusiveProject('#codeWorkspace');
 
@@ -1056,7 +1063,7 @@ Applab.renderVisualizationOverlay = function() {
   }
 
   // Enable crosshair cursor for divApplab and designModeViz
-  $(divApplab).toggleClass('withCrosshair', !Applab.isRunning());
+  $(divApplab).toggleClass('withCrosshair', Applab.isCrosshairAllowed());
   $(designModeViz).toggleClass('withCrosshair', true);
 
   if (!Applab.visualizationOverlay_) {
@@ -1068,7 +1075,7 @@ Applab.renderVisualizationOverlay = function() {
   var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
 
   Applab.visualizationOverlay_.render(visualizationOverlay, {
-    isApplabRunning: Applab.isRunning(),
+    isCrosshairAllowed: Applab.isCrosshairAllowed(),
     scale: scaledWidth / unscaledWidth,
     isInDesignMode: Applab.isInDesignMode()
   });
@@ -1641,4 +1648,23 @@ Applab.getScreens = function() {
 // Wrap design mode function so that we can call from commands
 Applab.updateProperty = function (element, property, value) {
   return designMode.updateProperty(element, property, value);
+};
+
+Applab.isCrosshairAllowed = function () {
+  return !Applab.isReadOnlyView && !Applab.isRunning();
+};
+
+Applab.showRateLimitAlert = function () {
+  // only show the alert once per session
+  if (hasSeenRateLimitAlert) {
+    return false;
+  }
+  hasSeenRateLimitAlert = true;
+
+  var alert = <div>{applabMsg.dataLimitAlert()}</div>;
+  if (studioApp.share) {
+    studioApp.displayPlayspaceAlert("error", alert);
+  } else {
+    studioApp.displayWorkspaceAlert("error", alert);
+  }
 };

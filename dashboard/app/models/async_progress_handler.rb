@@ -8,7 +8,7 @@ class AsyncProgressHandler
   # is not thread-safe.
   def AsyncProgressHandler.progress_queue
     Thread.current['progress_queue'] ||=
-        SQS::SQSQueue.new(Aws::SQS::Client.new, CDO.activity_queue_url)
+      SQS::SQSQueue.new(Aws::SQS::Client.new, CDO.activity_queue_url)
   end
 
   def handle(messages)

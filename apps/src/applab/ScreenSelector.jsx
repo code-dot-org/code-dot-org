@@ -1,10 +1,4 @@
 /** @file Dropdown for selecting design mode screens */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 /* global Applab */
 
 var constants = require('./constants');

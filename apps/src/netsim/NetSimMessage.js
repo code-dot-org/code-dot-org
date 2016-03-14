@@ -1,12 +1,6 @@
 /**
  * @overview Simulation entity for a message between two nodes.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var utils = require('../utils');

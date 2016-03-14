@@ -1,10 +1,4 @@
 /** @file Row of buttons for switching editor modes. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 var ToggleButton = require('./ToggleButton.jsx');
 
 var ToggleGroup = React.createClass({
