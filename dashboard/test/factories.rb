@@ -14,6 +14,10 @@ FactoryGirl.define do
     published false
   end
 
+  factory :plc_written_submission_task, parent: :plc_task, class: 'Plc::WrittenAssignmentTask' do
+    assignment_description nil
+  end
+
   factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
     resource_url nil
   end
@@ -31,6 +35,10 @@ FactoryGirl.define do
   factory :plc_evaluation_question, :class => 'Plc::EvaluationQuestion' do
     question "MyString"
     plc_course nil
+  end
+
+  factory :written_enrollment_task_assignment, parent: :plc_enrollment_task_assignment, class: 'Plc::WrittenEnrollmentTaskAssignment' do
+    submission nil
   end
 
   factory :plc_enrollment_task_assignment, :class => 'Plc::EnrollmentTaskAssignment' do
