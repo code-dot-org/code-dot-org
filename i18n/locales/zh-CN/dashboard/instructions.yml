@@ -212,6 +212,11 @@ zh:
       4-5 Artist For Loops 13_instruction: 这份代码没有使用计数循环，所以用了非常多的模块！用一个计数循环模块来完成这个螺旋。提示：最后一条线的长度是250像素。
       4-5 Artist For Loops 14_instruction: '有人开始写代码后，认识到应该有更快的办法！用一个“计数循环"模块来替代其它模块，并完成这个三角形螺旋。（提示：最后一行的长度是300像素）'
       4-5 Artist For Loops 15_instruction: '有人开始写代码后，认识到应该有更快的办法！用一个“计数循环"模块来替代其它模块，并完成这个六边形螺旋。（提示：最后一行的长度是200像素）'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: 我们怎么从1计数到50？编辑”计数循环“模块。
       4-5 Artist For Loops 4_instruction: 完成”计数循环“模块，从而能够从1数到10，并且每次数1.
       4-5 Artist For Loops 6_instruction: '试试画大小为50，60，70，80，和90的正方形。你可以使用五次"画一个正方形"的函数。'
@@ -1496,6 +1501,15 @@ zh:
       K-1 Maze Sequence Assessment 1_instruction: "让我们看看你学会了什么！\\r\n往一个方向移动，然后往另一个方向移动帮我到达那只猪！"
       K-1 Maze Sequence Assessment 2_instruction: 往一个方向移动，然后往另一个方向移动帮我到达那只猪。
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -3488,11 +3502,11 @@ zh:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

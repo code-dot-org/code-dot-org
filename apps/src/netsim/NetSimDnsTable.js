@@ -1,12 +1,6 @@
 /**
  * @overview UI table of local subnet, displaying hostname => address map.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var markup = require('./NetSimDnsTable.html.ejs');

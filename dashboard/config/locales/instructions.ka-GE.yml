@@ -310,17 +310,16 @@
         (მინიშნება: შექმენით ციკლი "გამეორება" ბლოკის გამოყენებით.)'
       2-3 Maze 12 (old)_instruction: "მიმიყვანეთ გოჭთან, ახლა უკვე გამეორების ბლოკის
         გამოყენებით!"
-      2-3 Maze 12_instruction: 'შეგიძლიათ ჩაანაცვლოთ ეს ხუთი ბლოკი მხოლოდ ორი ბლოკით?
-        (მინიშნება: ამ დონის გასავლელად შექმენით ციკლი "გამეორების" ბლოკის გამოყენებით.)'
+      2-3 Maze 12_instruction: 'შეგიძლიათ ჩაანაცვლოთ ხუთი ბლოკი მხოლოდ ორი ბლოკით?
+        (მინიშნება: შექმენით ციკლი "გამეორება" ბლოკის გამოყენებით.)'
       2-3 Maze 13 (old)_instruction: მიმიყვანეთ გოჭთან, ახლა "გაიმეორე სანამ" ბლოკით!
-      2-3 Maze 13_instruction: 'მიმიყვანეთ გოჭთან მხოლოდ ორი ბლოკით.\r (მინიშნება:
-        ამ დონის გასავლელად უნდა გამოიყენოთ ბლოკი "გამეორება")'
+      2-3 Maze 13_instruction: "მიმიყვანეთ გოჭთან მხოლოდ ორი ბლოკით."
       2-3 Maze 14 (old)_instruction: მიმიყვანეთ გოჭთან "გაიმეორე სანამ" ბლოკით!
       2-3 Maze 14_instruction: მიმიყვანეთ მზესუმზირასთან! (სადაა "გამეორების" ბლოკი,
         როცა გჭირდებათ?)
       2-3 Maze 15 (old)_instruction: მიმიყვანეთ გოჭთან "გაიმეორე სანამ" ბლოკით!
-      2-3 Maze 15_instruction: გამოიყენეთ ორი "გამეროების" ციკლი, რომ გოჭთან ნაკლები
-        ბლოკის გამოყენებით მიხვიდეთ.
+      2-3 Maze 15_instruction: "გამოიყენეთ ორი ციკლი, რომ გოჭთან ნაკლები ბლოკის გამოყენებით
+        მიხვიდეთ."
       2-3 Maze 16 (old)_instruction: მიმიყვანეთ გოჭთან "გაიმეორე სანამ" ბლოკით!
       2-3 Maze 16 before_instruction: "მიმიყვანეთ გოჭთან."
       2-3 Maze 16_instruction: "მიმიყვანეთ მზესუმზირასთან. მწკრივი ციკლში გაუშვით!"
@@ -419,6 +418,11 @@
         რომ უფრო სწრაფი გზა უნდა არსებობდეს! გამოიყენეთ "მიზნისთვის" ბლოკი სხვა ბლოკების
         ჩასანაცვლებლად და დაასრულეთ ექვსკუთხა სპირალი. (მინიშნება: უაკანასკნელი ხაზის
         სიგრძეა 200 პიქსელი.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: როგორ დავითვალოთ 1-დან 50-მდე? შეასწორეთ
         ბლოკი "მიზნისთვის".
       4-5 Artist For Loops 4_instruction: შეასწორეთ ბლოკი "მიზნისთვის" ისე, რომ 1-დან
@@ -1876,7 +1880,7 @@
         y პიქსელით - ზემოთ და ქვემოთ (გამოიყენეთ დადებითი და უარყოფითი რიცხვები)."
       Course 4 Variables Assessment_instruction: შეგიძლიათ შექმნათ ეს სურათი "გვერდები"
         ცვლადის გამოყენებით? თითოეული ხაზის სიგრძე უნდა იყოს 50 პიქსელი.
-      Course1BeePuzzle12_instruction: Get three nectars and then make two honey
+      Course1BeePuzzle12_instruction: "აიღეთ სამი ნექტარი და გააკეთეთ ორი თაფლი"
       Course1MazeAssessment1_instruction: |-
         This is a test!\r
         Move one way, then
@@ -2352,7 +2356,7 @@
         კი ციკლები გამოიყენეთ!"
       K-1 Bee Loops Assessment 2_instruction: "გამოიყენეთ ციკლები, რომ ნექტარი აიღოთ
         და თაფლი გააკეთოთ!"
-      K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
+      K-1 Bee Puzzle 12_instruction: "აიღეთ სამი ნექტარი და გააკეთეთ ორი თაფლი"
       K-1 Building a Foundation Assessment_instruction: "ააგეთ სამდონიანი პირამიდა.
         სხვა მითითება არაა, ამიტომ ითამაშეთ ნაწილებით, სანამ არ გამოგივა!"
       k-1 maze 1_instruction: "შეგიძლიათ დასავლეთით გადამაადგილოთ და გოჭთან მიმიყვანოთ?"
@@ -2414,7 +2418,7 @@
       K-1 Maze Loops 8_instruction: გამოიყენეთ "გამეორების" ციკლი და მიმიყვანეთ გოჭთან.
       K-1 Maze Loops 9_instruction: "მიმიყვანეთ გოჭთან!"
       K-1 Maze Loops Assessment 1_instruction: ნახეთ, რამდენი რამე ვისწავლეთ! გამოიყენეთ
-        "გამეორებითს" ციკლი და მიმიყვანეთ გოჭთან!
+        "გამეორების" ციკლი და მიმიყვანეთ გოჭთან!
       K-1 Maze Loops Assessment 2_instruction: გამოიყენეთ "გამეორების" ციკლები და
         მიმიყვანეთ გოჭთან!
       K-1 Maze Multi 14_instruction: "შეფასების დონე"
@@ -2434,6 +2438,20 @@
         \r
         .\r
         \r
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: |-
+        Figure out how to change this code so that Robin
+        chooses a number between 1 and 20.  \r
+        \r
+        When you're ready, press "Run"
+        and play until you guess Robin's number!
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -3044,15 +3062,11 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
-      Quantum Bee - Ryan_instruction: |
-        These clouds are bugging me! Some of the clouds
-        have flowers inside, and some don't. I should check each cloud, and only
-        get nectar from the flowers.
-      Quantum Bee_instruction: |
-        Purple flowers may have either 1 or 0 nectar, but
-        you don't know which one! Be careful not to collect nectar from a purple
-        flower if it doesn't have any. Check if the nectar is equal to 1 by using
-        the if block.
+      Quantum Bee - Ryan_instruction: "ეს ღრუბლები მაბნევს! ზოგში არის ყვავილი და
+        ზოგში არა. ყოველი ღრუბელი უნდა შევამოწმო, თაფლი კი მხოლოდ ყვავილებიდან მოვკრიბო."
+      Quantum Bee_instruction: იისფერ ყვავილებს აქვთ 1 ან 0 ნექტარი, მაგრამ თქვენ
+        არ იცით, რომელს რამდენი აქვს. ფრთხილად - არ მოკრიბოთ ნექტარი ისეთი ყვავილიდან,
+        რომელიც მას არ შეიცავს. "თუ" ბლოკით შეამოწმეთ, შეიცავს თუ არა ყვავილი ნექტარს.
       Ryan - 4-5 Bee Conditionals 2_instruction: "ფუტკარს ახლა მხოლოდ ნექტარი სურს.
         ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ
         არ მალავს. თუ მალავს, მაშინ შეგიძლიათ ნექტარის შეგროვება."
@@ -4707,11 +4721,11 @@
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

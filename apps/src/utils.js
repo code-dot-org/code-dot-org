@@ -1,10 +1,4 @@
 /* global define */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var savedAmd;
@@ -265,14 +259,14 @@ exports.isInfiniteRecursionError = function (err) {
   }
 
   // Firefox
-  /* jshint ignore:start */
+  /*eslint-disable */
   // Linter doesn't like our use of InternalError, even though we gate on its
   // existence.
   if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
       err.message === 'too much recursion') {
     return true;
   }
-  /* jshint ignore:end */
+  /*eslint-enable */
 
   // IE
   if (err instanceof Error &&
@@ -321,7 +315,7 @@ exports.browserSupportsCssMedia = function () {
     try {
       if (rules.length > 0) {
         // see if we can access media
-        var media = rules[0].media; // jshint ignore:line
+        var media = rules[0].media;
       }
     } catch (e) {
       return false;

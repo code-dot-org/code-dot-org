@@ -129,9 +129,12 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
 
     fq.push("experience_s:#{params['experience_s']}") unless params['experience_s'].nil_or_empty?
 
+    fl = "name_s,company_s,experience_s,location_flexibility_ss,volunteer_after_hoc_b,time_commitment_s,linkedin_s,facebook_s,description_s,allow_contact_b,location_p,id"
+
     {
       q: query,
       fq: fq,
+      fl: fl,
       facet: true,
       'facet.field'=>['location_flexibility_ss', 'experience_s'],
       rows: rows,

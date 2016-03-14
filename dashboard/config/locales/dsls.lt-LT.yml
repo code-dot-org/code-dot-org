@@ -323,7 +323,7 @@
           dešinėje
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Pradėk nuo kvadrato<br/>Padėk trikampį šalia kvadrato<br/>Padėk lygiagretainį
+        : Pradėk nuo kvadrato<br/>Padėk trikampį kvadratui iš dešinės<br/>Padėk lygiagretainį
           po kvadratu<br/>Padėk trikampį lygiagretainio dešinėje
       2-3 Algorithms Multi 2:
         "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
@@ -560,8 +560,8 @@
         Multiple Choice: Parink teisingą atsakymą
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
-        : What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
+        : Kurią didžiausią šios dainos dalį galėtum įvardinti kaip priedainį, kad
+          priedainis kartotųsi vienodai, kai kiekvieną kartą jis iškviečiamas?
       4-5 Suncatchers Multi 1:
         "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
@@ -868,7 +868,7 @@
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
         Driver and Helper: Vairuotojas ir Pagalbininkas
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Vienas
-          iš berniukų yra <b>vairuotojas</b>. Ir kitas <b>pagalbininkas</b>.
+          iš berniukų yra <b>vairuotojas</b>, o kitas – <b>pagalbininkas</b>.
         Which boy is the <large>helper</large>?: Kuris berniukas yra <large>pagalbininkas</large>?
       K-1 multi 5:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
@@ -876,7 +876,7 @@
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
         Driver and Helper: Vairuotojas ir Pagalbininkas
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Vienas
-          iš berniukų yra <b>vairuotojas</b>. Ir kitas <b>pagalbininkas</b>.
+          iš berniukų yra <b>vairuotojas</b>, o kitas – <b>pagalbininkas</b>.
         This time, which boy is the <large>driver</large>?: Kuris berniukas, šį kartą,
           yra <large>vairuotojas</large>?
       Multi Strings Images 1:

@@ -1,9 +1,3 @@
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 /* global describe, beforeEach, it */
 
@@ -62,8 +56,6 @@ describe("Packet.Encoder", function () {
   });
 
   describe("format validation", function () {
-    /* jshint unused: false */
-
     it("throws on construction if addressFormat in interpreted as zero-length " +
         "and an address field is present", function () {
       var packetCountBits = 4;
@@ -136,8 +128,6 @@ describe("Packet.Encoder", function () {
         "packetCount"
       ]);
     });
-
-    /* jshint unused: true */
   });
 
   describe("constructing binary from data", function () {

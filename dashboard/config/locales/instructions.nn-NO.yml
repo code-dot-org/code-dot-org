@@ -414,6 +414,11 @@
       4-5 Artist For Loops 15_instruction: 'Nokon starta koden, men såg at det måtte
         vere ein raskare måte! Bruk ein "for" blokk til å erstatte blokkane og fullfør
         den sekskanta spiralen. (Hint: lengda på den siste linja er 200 pikslar.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: Korleis kan vi telje frå 1 til 50? Endre
         "for" blokken.
       4-5 Artist For Loops 4_instruction: Fullfør "for" blokken slik at den tel frå
@@ -2430,6 +2435,20 @@
         \r
         .\r
         \r
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: |-
+        Figure out how to change this code so that Robin
+        chooses a number between 1 and 20.  \r
+        \r
+        When you're ready, press "Run"
+        and play until you guess Robin's number!
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -4704,11 +4723,11 @@
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

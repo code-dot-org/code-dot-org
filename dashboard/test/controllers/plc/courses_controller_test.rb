@@ -19,12 +19,15 @@ class Plc::CoursesControllerTest < ActionController::TestCase
   end
 
   test "should create plc_course" do
-    course_name = SecureRandom.hex
-    assert_difference('Plc::Course.count') do
-      post :create, plc_course: { plc_course: @course, name: course_name }
+    2.times do
+      @controller = Plc::CoursesController.new
+      course_name = SecureRandom.hex
+      assert_difference('Plc::Course.count') do
+        post :create, plc_course: { plc_course: @course, name: course_name }
+      end
+      assert_equal course_name, Plc::Course.find_by(name: course_name).name
+      assert_redirected_to plc_course_path(assigns(:course))
     end
-    assert_equal course_name, Plc::Course.find_by(name: course_name).name
-    assert_redirected_to plc_course_path(assigns(:course))
   end
 
   test "should show plc_course" do

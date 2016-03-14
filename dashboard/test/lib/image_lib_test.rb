@@ -66,7 +66,6 @@ class ImageLibTest < ActiveSupport::TestCase
     assert images_equal?(MiniMagick::Image.read(original_jpg), MiniMagick::Image.read(png))
   end
 
-
   private
 
   # Return true if image1 and image2 are identical as determined by
