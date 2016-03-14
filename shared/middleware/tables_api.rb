@@ -370,7 +370,7 @@ class TablesApi < Sinatra::Base
         table.insert(record, request.ip)
       end
       limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
-      limits.set_approximate_row_count(json_data.keys.length)
+      limits.set_approximate_row_count(json_data[table_name].length)
 
       table.ensure_metadata()
     end
