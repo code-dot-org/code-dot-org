@@ -23,12 +23,18 @@ class Plc::Task < ActiveRecord::Base
   include SerializedProperties
   include StiFactory
 
+  attr_readonly :type
+
   # Can be overridden by subclasses, otherwise they will default to something like Learning Resource Task
-  def titleized_task_type
-    self.class.name.demodulize.titleize
+  def self.titleized_task_type
+    self.name.demodulize.titleize
   end
 
-  def underscored_task_type
-    self.class.name.demodulize.underscore
+  def self.underscored_task_type
+    self.name.demodulize.underscore
+  end
+
+  def self.task_assignment_type
+    Plc::EnrollmentTaskAssignment
   end
 end

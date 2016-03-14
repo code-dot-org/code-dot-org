@@ -1,5 +1,3 @@
-/*jshint multistr: true */
-
 var msg = require('./locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
@@ -696,6 +694,7 @@ levels.c3_story_6 = {
   'toolbox':
     tb(blockOfType('studio_setSprite') +
        blockOfType('studio_setBackground') +
+       blockOfType('studio_whenSpriteClicked') +
        blockOfType('studio_whenSpriteCollided') +
        blockOfType('studio_repeatForever') +
        blockOfType('studio_showTitleScreen') +
@@ -704,8 +703,8 @@ levels.c3_story_6 = {
        blockOfType('studio_stop') +
        blockOfType('studio_wait') +
        blockOfType('studio_playSound') +
-       blockOfType('studio_changeScore') +
        blockOfType('studio_saySprite') +
+       blockOfType('studio_throw') +
        blockOfType('studio_setSpritePosition') +
        blockOfType('studio_setSpriteSpeed') +
        blockOfType('studio_setSpriteEmotion')),

@@ -1,12 +1,6 @@
 /**
  * @overview UI controller for the "Router" tab in the left column.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var markup = require('./NetSimRouterTab.html.ejs');

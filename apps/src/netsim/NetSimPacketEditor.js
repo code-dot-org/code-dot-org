@@ -3,12 +3,6 @@
  *           encodings at once and lives inside the send panel.
  * @see NetSimSendPanel for how this is used.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()

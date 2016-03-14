@@ -333,8 +333,10 @@ module.exports = function (grunt) {
 
   // Use command-line tools to run browserify (faster/more stable this way)
   var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc' +
+      ' -g [ browserify-global-shim ]' +
       ' --cachefile ' + outputDir + 'browserifyinc-cache.json' +
       ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
+      (envOptions.dev ? '' : ' -t [ envify --NODE_ENV production ]') +
       ' -d ' + allFilesSrc.join(' ') +
       (
           APPS.length > 1 ?
@@ -458,55 +460,6 @@ module.exports = function (grunt) {
     }
   };
 
-  config.jshint = {
-    options: {
-      browser: true,
-      curly: true,
-      esnext: true,
-      funcscope: true,
-      maxparams: 8,
-      maxstatements: 200,
-      mocha: true,
-      node: true,
-      nonew: true,
-      shadow: false,
-      undef: true,
-      globals: {
-        $: true,
-        jQuery: true,
-        React: true,
-        ReactDOM: true,
-        Blockly: true,
-        Phaser: true,
-        //TODO: Eliminate the globals below here. Could at least warn about them
-        // in their respective files
-        Studio: true,
-        Maze: true,
-        Turtle: true,
-        Bounce: true,
-        Eval: true,
-        Flappy: true,
-        Applab: true,
-        Calc: true,
-        Jigsaw: true
-      }
-    },
-    all: [
-      'Gruntfile.js',
-      'tasks/**/*.js',
-      'src/**/*.js*',
-      'test/**/*.js',
-      '!src/**/*.min.js*',
-      '!src/hammer.js',
-      '!src/lodash.js',
-      '!src/canvg/*.js',
-      '!src/calc/js-numbers/js-numbers.js',
-      '!src/ResizeSensor.js',
-      '!src/applab/colpick.js'
-    ],
-    some: [], // This gets dynamically populated in the register task
-  };
-
   config.strip_code = {
     options: {
       start_comment: 'start-test-block',
@@ -588,19 +541,6 @@ module.exports = function (grunt) {
     'watch'
   ]);
 
-  grunt.registerTask('jshint:files', function () {
-    var files;
-    if (grunt.option('files')) {
-      files = grunt.option('files').split(",");
-      grunt.config('jshint.some', files);
-    } else if (grunt.option('glob')) {
-      files = glob.sync(grunt.option('glob'));
-      console.log('files: ' + files.join('\n'));
-      grunt.config('jshint.some', files);
-    }
-    grunt.task.run('jshint:some');
-  });
-
   grunt.registerTask('mochaTest', [
     'newer:messages',
     'newer:copy:static',
@@ -608,7 +548,7 @@ module.exports = function (grunt) {
     'exec:mochaTest'
   ]);
 
-  grunt.registerTask('test', ['jshint:all', 'mochaTest']);
+  grunt.registerTask('test', ['mochaTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 

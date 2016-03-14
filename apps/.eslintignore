@@ -1,0 +1,10 @@
+src/**/*.min.js*
+src/hammer.js
+src/lodash.js
+src/canvg/*.js
+src/calc/js-numbers/js-numbers.js
+src/ResizeSensor.js
+
+lib
+build
+node_modules

@@ -50,8 +50,8 @@ no,no,no,no-NO,Norsk,Norwegian (Nynorsk),TRUE,no,Norwegian Nynorsk
 ps,ps,ps,ps-AF,پښتو,Pashto,FALSE,ps,Pashto
 fa-IR,fa,fa,fa-IR,فارسی,Persian,TRUE,fa,Persian
 pl,pl,pl,pl-PL,Polski,Polish,TRUE,pl,Polish
-pt-BR,pt,pt,pt-BR,Português (Brasil),Portuguese (Brazil),TRUE,pt-BR,Portuguese
-pt-PT,po,pt,pt-PT,Português (Portugal),Portuguese (Portugal),TRUE,pt,"Portuguese, Brazilian"
+pt-BR,pt,pt,pt-BR,Português (Brasil),Portuguese (Brazil),TRUE,pt-BR,"Portuguese, Brazilian"
+pt-PT,po,pt,pt-PT,Português (Portugal),Portuguese (Portugal),TRUE,pt,Portuguese
 ro,ro,ro,ro-RO,Română,Romanian,TRUE,ro,Romanian
 ru,ru,ru,ru-RU,Pусский,Russian,TRUE,ru,Russian
 sr,sr,sr,sr-SP,Cрпски,Serbian (Cyrillic),TRUE,sr,Serbian (Cyrillic)

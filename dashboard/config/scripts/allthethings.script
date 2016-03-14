@@ -113,3 +113,6 @@ level 'Test External Markdown'
 
 stage 'Studio'
 level 'Resizing Test'
+
+stage 'Long assessment'
+level 'Test longassessment levelgroup'
