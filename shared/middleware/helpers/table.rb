@@ -1,11 +1,11 @@
 require 'csv'
+require 'redis'
 require 'set'
 
 require_relative './sql_table'
 require_relative './dynamo_table'
 
 class TableMetadata
-  @@redis = Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379')
 
   def self.generate_column_list(records)
     return [] if records.nil?
