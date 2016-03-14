@@ -1,10 +1,4 @@
 /** @file Button that opens the data browser */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 /* global $ */
 
 var applabMsg = require('./locale');
