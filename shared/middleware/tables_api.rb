@@ -348,7 +348,7 @@ class TablesApi < Sinatra::Base
   #     'table_1': [{'name': 'trevor', 'age': 30}, ...],
   #     'table_2': [{'city': 'SF', 'people': 6}, ...],
   #   }
-  # Also creates metadata (if it doesn't alrelady exist) based on any existing
+  # Also creates metadata (if it doesn't already exist) based on any existing
   # data for each of the passed in tables.
   post %r{/v3/(shared|user)-tables/([^/]+)$} do |endpoint, channel_id|
     begin
@@ -368,9 +368,10 @@ class TablesApi < Sinatra::Base
       table.delete_all()
       json_data[table_name].each do |record|
         table.insert(record, request.ip)
-        limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
-        limits.set_approximate_row_count(json_data.keys.length)
       end
+      limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+      limits.set_approximate_row_count(json_data.keys.length)
+
       table.ensure_metadata()
     end
 
