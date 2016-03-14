@@ -118,7 +118,6 @@ VisualizationOverlay.prototype.onSvgMouseMove_ = function (event) {
 
   this.mousePos_.x = event.clientX;
   this.mousePos_.y = event.clientY;
-  this.mouseoverApplabControlId_ = this.getMouseoverApplabControlId_(event.target);
   var draggingElement = $(".ui-draggable-dragging");
   if (draggingElement.length) {
     // If we're dragging an element, use our util method to determine the right
@@ -128,6 +127,10 @@ VisualizationOverlay.prototype.onSvgMouseMove_ = function (event) {
     this.mousePos_.y = point.top;
   } else {
     this.mousePos_ = this.mousePos_.matrixTransform(this.screenSpaceToAppSpaceTransform_);
+  }
+
+  if (this.shouldShowCrosshair_()) {
+    this.mouseoverApplabControlId_ = this.getMouseoverApplabControlId_(event.target);
   }
 
   if (this.ownElement_.parentNode) {
