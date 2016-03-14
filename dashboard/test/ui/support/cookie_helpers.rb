@@ -8,7 +8,6 @@ module CookieHelpers
     end
   end
 
-
   def decrypt_cookie(cookies)
     return nil unless cookies
     session_cookie = cookies.find {|cookie| cookie[:name] == '_learn_session_test'}

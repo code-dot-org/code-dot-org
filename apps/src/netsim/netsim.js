@@ -2,12 +2,6 @@
  * @overview Internet Simulator app for Code.org.
  *           This file is the main entry point for the Internet Simulator.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
-*/
 /* global -Blockly */
 /* global sendReport */
 /* global confirm */

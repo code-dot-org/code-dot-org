@@ -224,5 +224,6 @@
   "watchVideo": "Mira el Video",
   "when": "cuando",
   "whenRun": "cuando se ejecuta",
-  "workspaceHeaderShort": "Espacio de trabajo: "
+  "workspaceHeaderShort": "Espacio de trabajo: ",
+  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project."
 }

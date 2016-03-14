@@ -1,10 +1,3 @@
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
-
 var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
@@ -159,9 +152,7 @@ JSInterpreter.prototype.parse = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
-    /* jshint nonew:false */
     new window.Interpreter(options.code, initFunc);
-    /* jshint nonew:true */
   }
   catch(err) {
     this.executionError = err;

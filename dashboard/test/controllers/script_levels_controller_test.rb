@@ -160,8 +160,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal '<div><label id="label1">expected html</label></div>', app_options[:level]['startHtml']
   end
 
-
-
   test 'project template level sets toolbox blocks' do
     template_level = create :level
     template_level.toolbox_blocks = '<xml><toolbox/></xml>'
@@ -274,13 +272,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to build_script_level_path(sl)
   end
 
-
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, script_id: Script.twenty_hour_script, chapter: '99999999999999999999999999'
     end
   end
-
 
   test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
@@ -795,7 +791,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [], assigns(:view_options)[:callouts]
   end
 
-
   test 'student cannot view solution' do
     sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('K-1 Artist1 1'))
 
@@ -883,7 +878,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal true, assigns(:view_options)[:post_milestone]
   end
 
-
   test "should not see examples if an unauthorized teacher is signed in" do
     CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')
 
@@ -896,7 +890,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select 'button', text: I18n.t('teacher.panel.example'), count: 0
   end
-
 
   test "should see examples if an authorized teacher is signed in" do
     CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')

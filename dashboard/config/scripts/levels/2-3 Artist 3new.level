@@ -69,9 +69,6 @@
             <block type="colour_random"/>
           </value>
         </block>
-        <block type="draw_turn_by_constant_dropdown"/>
-        <block type="draw_turn_by_constant_dropdown"/>
-        <block type="draw_turn_by_constant_dropdown"/>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
