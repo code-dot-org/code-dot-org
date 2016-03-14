@@ -6,6 +6,10 @@ require_relative './helpers/table_coerce'
 
 class TablesApi < Sinatra::Base
 
+  # Maximum number of rows allowed in a table (either in initial import or
+  # after inserting rows.)
+  MAX_TABLE_ROWS = 5000
+
   helpers do
     [
       'core.rb',
@@ -26,7 +30,11 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
-    TableType.new(channel_id, storage_id(endpoint), table_name).to_a.to_json
+    rows = TableType.new(channel_id, storage_id(endpoint), table_name).to_a
+
+    # Remember the number of rows in the table since we now have an accurate estimate.
+    TableMetadata.set_approximate_row_count(endpoint, channel_id, table_name, rows.length)
+    rows.to_json
   end
 
   #
@@ -87,6 +95,7 @@ class TablesApi < Sinatra::Base
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     dont_cache
     TableType.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
+    TableMetadata.decrement_row_count(endpoint, channel_id, table_name)
     no_content
   end
 
@@ -141,6 +150,11 @@ class TablesApi < Sinatra::Base
     dont_cache
     TableType.new(channel_id, storage_id(endpoint), table_name).delete_all
     #TODO - delete metadata
+
+    # Zero out the approximate row count just in case the user creates a new table
+    # with the same name.
+    TableMetadata.set_approximate_row_count(endpoint, channel_id, table_name, 0)
+
     no_content
   end
 
@@ -161,6 +175,13 @@ class TablesApi < Sinatra::Base
   post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
+
+    halt 413, {}, "Updating 'id' is not allowed" if new_value.has_key? 'id'
+
+    if TableMetaData.get_approximate_row_count(endpoint, channel_id, table_name) >= MAX_TABLE_ROWS
+      halt 413, {}, "Too many rows, a table may have at most #{MAX_TABLE_ROWS} rows"
+    end
+    TableMetadata.increment_row_count(endpoint, channel_id, table_name)
 
     value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
 
@@ -223,7 +244,7 @@ class TablesApi < Sinatra::Base
     # this check fails on Win 8.1 Chrome 40
     #unsupported_media_type unless params[:import_file][:type]== 'text/csv'
 
-    max_records = 5000
+    max_records = MAX_TABLE_ROWS
     table_url = "/v3/edit-csp-table/#{channel_id}/#{table_name}"
     back_link = "<a href='#{table_url}'>back</a>"
     table = TableType.new(channel_id, storage_id(endpoint), table_name)
