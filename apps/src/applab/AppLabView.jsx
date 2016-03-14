@@ -4,7 +4,7 @@
 var connect = require('react-redux').connect;
 var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
-var ConnectedStudioAppWrapper = require('./ConnectedStudioAppWrapper.jsx');
+var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
 
 /**
  * Top-level React wrapper for App Lab.

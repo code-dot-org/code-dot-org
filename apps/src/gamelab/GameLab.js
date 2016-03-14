@@ -19,11 +19,16 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var assetPrefix = require('../assetManagement/assetPrefix');
-var AppView = require('../templates/AppView.jsx');
 var gamelabCommands = require('./commands');
 var errorHandler = require('../errorHandler');
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
+
+var actions = require('./actions');
+var createStore = require('../redux');
+var gamelabReducer = require('./reducers').gamelabReducer;
+var GamelabView = require('./GamelabView.jsx');
+var Provider = require('react-redux').Provider;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -35,6 +40,13 @@ var GameLab = function () {
   this.level = null;
   this.tickIntervalId = 0;
   this.tickCount = 0;
+
+  /**
+   * Redux Store holding application state, transformable by actions.
+   * @private {Store}
+   * @see http://redux.js.org/docs/basics/Store.html
+   */
+  this.reduxStore_ = createStore(gamelabReducer);
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
@@ -171,14 +183,18 @@ GameLab.prototype.init = function (config) {
     });
   }.bind(this);
 
-  ReactDOM.render(React.createElement(AppView, {
+  this.reduxStore_.dispatch(actions.setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    renderCodeWorkspace: renderCodeWorkspace,
-    renderVisualizationColumn: renderVisualizationColumn,
-    onMount: onMount
-  }), document.getElementById(config.containerId));
+    isShareView: !!config.share
+  }));
+
+  ReactDOM.render(<Provider store={this.reduxStore_}>
+    <GamelabView
+      renderCodeWorkspace={renderCodeWorkspace}
+      renderVisualizationColumn={renderVisualizationColumn}
+      onMount={onMount} />
+  </Provider>, document.getElementById(config.containerId));
 };
 
 GameLab.prototype.loadAudio_ = function () {
