@@ -4,10 +4,10 @@
 
 var ActionType = require('./actions').ActionType;
 var combineReducers = require('redux').combineReducers;
-var GamelabInterfaceMode = require('./constants').GamelabInterfaceMode;
+var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 
 function interfaceMode(state, action) {
-  state = state || GamelabInterfaceMode.CODE;
+  state = state || GameLabInterfaceMode.CODE;
 
   switch (action.type) {
     case ActionType.CHANGE_INTERFACE_MODE:

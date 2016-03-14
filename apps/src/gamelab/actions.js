@@ -10,8 +10,8 @@ var ActionType = module.exports.ActionType = {
 
 /**
  * Change the interface mode between Code Mode and the Animation Tab
- * @param {!GamelabInterfaceMode} interfaceMode
- * @returns {{type: ActionType, interfaceMode: GamelabInterfaceMode}}
+ * @param {!GameLabInterfaceMode} interfaceMode
+ * @returns {{type: ActionType, interfaceMode: GameLabInterfaceMode}}
  */
 module.exports.changeInterfaceMode = function (interfaceMode) {
   return {
