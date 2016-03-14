@@ -1,6 +1,6 @@
 var msg = require('../../locale');
 
-var Code = React.createClass({
+var GeneratedCode = React.createClass({
   
   propTypes: {
     message: React.PropTypes.string.isRequired,
@@ -14,4 +14,4 @@ var Code = React.createClass({
     </div>);
   }
 });
-module.exports = Code;
+module.exports = GeneratedCode;

@@ -5,7 +5,6 @@ var CodeWritten = React.createClass({
   propTypes: {
     numLinesWritten: React.PropTypes.number.isRequired,
     totalNumLinesWritten: React.PropTypes.number.isRequired,
-    generatedCodeElement: React.PropTypes.element.isRequired
   },
 
   render: function () {
@@ -25,7 +24,7 @@ var CodeWritten = React.createClass({
       <summary role="button">
         <b>{msg.showGeneratedCode()}</b>
       </summary>
-      {this.props.generatedCodeElement}
+      {this.props.children}
     </details>);
 
     return (<div>
