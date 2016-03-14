@@ -22,8 +22,8 @@ class LevelSourceTest < ActiveSupport::TestCase
     # Set up crowdsourced hints.
     @selected_crowdsourced_message = 'selected crowdsourced hint'
 
-    @experimental_crowdsourced_messages = [ 'experiment crowdsourced 1',
-                                            'experiment crowdsourced 2' ]
+    @experimental_crowdsourced_messages = ['experiment crowdsourced 1',
+                                            'experiment crowdsourced 2']
     setup_helper(@level_source.id,
                  LevelSourceHint::CROWDSOURCED,
                  @selected_crowdsourced_message,
@@ -31,7 +31,7 @@ class LevelSourceTest < ActiveSupport::TestCase
 
     # Set up external (Stanford) hints.
     @selected_stanford_message = 'selected stanford hint'
-    @experimental_stanford_messages = ['stanford exp1', 'stanford exp2' ]
+    @experimental_stanford_messages = ['stanford exp1', 'stanford exp2']
     setup_helper(@level_source.id,
                  LevelSourceHint::STANFORD,
                  @selected_stanford_message,
