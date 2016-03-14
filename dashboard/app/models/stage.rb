@@ -75,29 +75,25 @@ class Stage < ActiveRecord::Base
         levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
     }
 
-    # Go through all levels.  If we find an assessment with a per_page value,
+    # Go through all levels.  If we find an assessment more than one page,
     # then it's a long assessment: we assume it's the final level in the
     # stage, and generate some placeholder levels for the subsequent pages
     # of the long assessment.  Each of those levels will have the same basic
     # URL as the first, but with ?page=1, ?page=2, etc.
 
-    levels = stage_data[:levels]
-
-    # We might append additional levels, so iterate over the original set.
-    levels[0..levels.length].each do |level|
-      if level[:kind] == "assessment"
-        level_info = Script.cache_find_level(level[:id])
-        if level_info[:properties]["per_page"]
-          extraLevelCount = level_info[:properties]["levels"].length / level_info[:properties]["per_page"].to_i - 1
-          (1..extraLevelCount).each do |pageIndex|
-            newLevel = level.deep_dup
-            newLevel[:url] << "/page/#{pageIndex + 1}"
-            newLevel[:position] = level[:position] + pageIndex
-            newLevel[:title] = level[:title] + pageIndex
-            levels << newLevel
-          end
-          level[:url] << "/page/1"
+    level = stage_data[:levels].last
+    if level[:kind] == "assessment"
+      level_info = Script.cache_find_level(level[:id])
+      if level_info[:properties]["pages"].length > 1
+        extraLevelCount = level_info[:properties]["pages"].length - 1
+        (1..extraLevelCount).each do |pageIndex|
+          newLevel = level.deep_dup
+          newLevel[:url] << "/page/#{pageIndex + 1}"
+          newLevel[:position] = level[:position] + pageIndex
+          newLevel[:title] = level[:position] + pageIndex
+          stage_data[:levels] << newLevel
         end
+        level[:url] << "/page/1"
       end
     end
 
