@@ -6,7 +6,7 @@
 var ActionType = module.exports.ActionType = {
   CHANGE_SCREEN: 'CHANGE_SCREEN',
   SET_LEVEL_PROPS: 'SET_LEVEL_PROPS',
-  CHANGE_MODE: 'CHANGE_MODE'
+  CHANGE_INTERFACE_MODE: 'CHANGE_INTERFACE_MODE'
 };
 
 /**
@@ -38,14 +38,14 @@ module.exports.setInitialLevelProps = function (props) {
 };
 
 /**
- * Change the view mode between Design Mode and Code Mode
- * @param {!ApplabMode} mode
- * @returns {{type: ActionType, mode: ApplabMode}}
+ * Change the interface mode between Design Mode and Code Mode
+ * @param {!ApplabInterfaceMode} interfaceMode
+ * @returns {{type: ActionType, interfaceMode: ApplabInterfaceMode}}
  */
-module.exports.changeMode = function (mode) {
+module.exports.changeInterfaceMode = function (interfaceMode) {
   return {
-    type: ActionType.CHANGE_MODE,
-    mode: mode
+    type: ActionType.CHANGE_INTERFACE_MODE,
+    interfaceMode: interfaceMode
   };
 };
 

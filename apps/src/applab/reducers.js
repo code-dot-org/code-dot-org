@@ -11,7 +11,7 @@
 var ActionType = require('./actions').ActionType;
 var combineReducers = require('redux').combineReducers;
 var constants = require('./constants');
-var ApplabMode = constants.ApplabMode;
+var ApplabInterfaceMode = constants.ApplabInterfaceMode;
 
 function currentScreenId(state, action) {
   state = state || null;
@@ -59,12 +59,12 @@ function level(state, action) {
   }
 }
 
-function mode(state, action) {
-  state = state || ApplabMode.CODE;
+function interfaceMode(state, action) {
+  state = state || ApplabInterfaceMode.CODE;
 
   switch (action.type) {
-    case ActionType.CHANGE_MODE:
-      return action.mode;
+    case ActionType.CHANGE_INTERFACE_MODE:
+      return action.interfaceMode;
     default:
       return state;
   }
@@ -73,7 +73,7 @@ function mode(state, action) {
 var rootReducer = combineReducers({
   currentScreenId: currentScreenId,
   level: level,
-  mode: mode
+  interfaceMode: interfaceMode
 });
 
 module.exports = { rootReducer: rootReducer };
