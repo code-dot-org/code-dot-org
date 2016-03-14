@@ -18,7 +18,7 @@ var logToCloud = require('../logToCloud');
 var actions = require('./actions');
 
 var currentlyEditedElement = null;
-var ApplabMode = applabConstants.ApplabMode;
+var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
 /**
  * Subscribe to state changes on the store.
@@ -34,8 +34,8 @@ designMode.subscribeToRedux = function (store) {
       onScreenChange(state.currentScreenId);
     }
 
-    if (state.mode !== lastState.mode) {
-      onModeChange(state.mode);
+    if (state.interfaceMode !== lastState.interfaceMode) {
+      onInterfaceModeChange(state.interfaceMode);
     }
   });
 };
@@ -556,11 +556,11 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
 };
 
 designMode.toggleDesignMode = function(enable) {
-  Applab.reduxStore.dispatch(actions.changeMode(enable ? ApplabMode.DESIGN : ApplabMode.CODE));
+  Applab.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 };
 
-function onModeChange(mode) {
-  var enable = (ApplabMode.DESIGN === mode);
+function onInterfaceModeChange(mode) {
+  var enable = (ApplabInterfaceMode.DESIGN === mode);
   var designWorkspace = document.getElementById('designWorkspace');
   if (!designWorkspace) {
     // Currently we don't run design mode in some circumstances (i.e. user is

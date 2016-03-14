@@ -50,14 +50,14 @@ var Provider = require('react-redux').Provider;
 var rootReducer = require('./reducers').rootReducer;
 var actions = require('./actions');
 var setInitialLevelProps = actions.setInitialLevelProps;
-var changeMode = actions.changeMode;
+var changeInterfaceMode = actions.changeInterfaceMode;
 
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
-var ApplabMode = applabConstants.ApplabMode;
+var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
 /**
  * Create a namespace for the application.
@@ -892,7 +892,7 @@ Applab.init = function(config) {
     isViewDataButtonHidden: !!config.level.hideViewDataButton
   }));
 
-  Applab.reduxStore.dispatch(changeMode(Applab.startInDesignMode() ? ApplabMode.DESIGN : ApplabMode.CODE));
+  Applab.reduxStore.dispatch(changeInterfaceMode(Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
   Applab.reactInitialProps_ = {
     renderCodeWorkspace: renderCodeWorkspace,
@@ -917,8 +917,8 @@ function subscribeToRedux(store) {
     var lastState = state;
     state = store.getState();
 
-    if (state.mode !== lastState.mode) {
-      onModeChange(state.mode);
+    if (state.interfaceMode !== lastState.interfaceMode) {
+      onInterfaceModeChange(state.interfaceMode);
     }
   });
 }
@@ -1317,12 +1317,12 @@ Applab.onViewData = function() {
 
 /**
  * Handle code/design mode change.
- * @param {ApplabMode} mode
+ * @param {ApplabInterfaceMode} mode
  */
-function onModeChange(mode) {
-  if (mode === ApplabMode.DESIGN) {
+function onInterfaceModeChange(mode) {
+  if (mode === ApplabInterfaceMode.DESIGN) {
     studioApp.resetButtonClick();
-  } else if (mode === ApplabMode.CODE) {
+  } else if (mode === ApplabInterfaceMode.CODE) {
     utils.fireResizeEvent();
     if (!Applab.isRunning()) {
       Applab.serializeAndSave();
