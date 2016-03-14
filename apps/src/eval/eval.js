@@ -22,7 +22,6 @@ var Eval = module.exports;
  * Create a namespace for the application.
  */
 var studioApp = require('../StudioApp').singleton;
-var Eval = module.exports;
 var commonMsg = require('../locale');
 var evalMsg = require('./locale');
 var skins = require('../skins');
@@ -144,6 +143,10 @@ Eval.init = function(config) {
     if (Blockly.contractEditor) {
       Blockly.contractEditor.registerTestHandler(getEvalExampleFailure);
       Blockly.contractEditor.registerTestResetHandler(resetExampleDisplay);
+    }
+
+    if (!!config.level.projectTemplateLevelName) {
+      studioApp.displayWorkspaceAlert('warning', <div>{commonMsg.projectWarning()}</div>);
     }
   };
 

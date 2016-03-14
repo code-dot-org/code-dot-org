@@ -55,6 +55,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'timecop'
   gem 'fake_sqs'
+  gem 'fakeredis', require: false
 
   # for ui testing
   gem 'cucumber'

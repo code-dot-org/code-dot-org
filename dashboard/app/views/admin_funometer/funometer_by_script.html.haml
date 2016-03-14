@@ -13,7 +13,7 @@
 
 = render 'funometer_percentages_by_day'
 
-.by_stage
+.by-stage
   %h3
     Percentages by Stage
   %table
@@ -24,7 +24,9 @@
     - @ratings_by_stage.each do |stage|
       %tr
         %td
-          %span= stage.stage_id
+          %span
+            = link_to funometer_by_stage_path(:stage_id => stage.stage_id) do
+              = stage.stage_id
         %td
           %span= stage.name
         %td

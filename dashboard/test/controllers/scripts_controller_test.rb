@@ -114,7 +114,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to '/s/hourofcode'
   end
 
-
   test "should get show if not signed in" do
     get :show, id: Script::FLAPPY_NAME
     assert_response :success

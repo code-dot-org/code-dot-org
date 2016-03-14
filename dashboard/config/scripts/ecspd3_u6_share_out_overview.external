@@ -1,0 +1,27 @@
+name 'ECSPD3-u6 share out overview'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+### Share Out and Submit > What’s Inside 
+ 
+#### What have we done so far? 
+By now you should have completed Stages 1-5, and accomplished the following learning objectives: 
+ 
+- Developed a deeper understanding of the core concepts covered in ECS Unit 6 
+- Experienced an activity from at least one lesson from Unit 6 OR investigated options for alternative activities to do in Unit 6
+- Considered how you will approach Unit 6
+- Connected with the Code.org ECS community for additional support throughout Unit 6 
+ 
+>#### What will we do now?  
+>- Share your Unit 6 challenge 
+- Submit a link to your forum post for review 
+- Check out the work other ECS teachers produced in their challenges 
+ 
+<br> 
+Take a moment to reflect on your learning. If you like, you can go back and review any stages and levels that you wish to spend more time on. When you’re ready, click “Continue” below to share your Unit 6 Challenge. 
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

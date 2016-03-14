@@ -45,10 +45,6 @@ Lint/RescueException:
 Lint/ShadowingOuterLocalVariable:
   Enabled: false
 
-# Offense count: 1
-Lint/UnderscorePrefixedVariableName:
-  Enabled: false
-
 # Offense count: 33
 # Cop supports --auto-correct.
 # Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
@@ -58,11 +54,6 @@ Lint/UnusedMethodArgument:
 # Offense count: 17
 # Cop supports --auto-correct.
 Performance/Casecmp:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Performance/RedundantBlockCall:
   Enabled: false
 
 # Offense count: 11
@@ -123,10 +114,6 @@ Style/CaseEquality:
 # Configuration parameters: IndentWhenRelativeTo, SupportedStyles, IndentOneStep, IndentationWidth.
 # SupportedStyles: case, end
 Style/CaseIndentation:
-  Enabled: false
-
-# Offense count: 1
-Style/ClassAndModuleCamelCase:
   Enabled: false
 
 # Offense count: 7
@@ -212,11 +199,6 @@ Style/EmptyElse:
 Style/EmptyLineBetweenDefs:
   Enabled: false
 
-# Offense count: 142
-# Cop supports --auto-correct.
-Style/EmptyLines:
-  Enabled: false
-
 # Offense count: 20
 # Cop supports --auto-correct.
 Style/EmptyLinesAroundAccessModifier:
@@ -280,12 +262,6 @@ Style/HashSyntax:
 Style/IndentArray:
   Enabled: false
 
-# Offense count: 11
-# Cop supports --auto-correct.
-# Configuration parameters: IndentationWidth.
-Style/IndentAssignment:
-  Enabled: false
-
 # Offense count: 168
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
@@ -324,11 +300,6 @@ Style/MethodDefParentheses:
 Style/MultilineBlockChain:
   Enabled: false
 
-# Offense count: 4
-# Cop supports --auto-correct.
-Style/MultilineBlockLayout:
-  Enabled: false
-
 # Offense count: 105
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
@@ -355,10 +326,6 @@ Style/MutableConstant:
 # Offense count: 26
 # Cop supports --auto-correct.
 Style/NegatedIf:
-  Enabled: false
-
-# Offense count: 5
-Style/NestedParenthesizedCalls:
   Enabled: false
 
 # Offense count: 18

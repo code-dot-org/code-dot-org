@@ -163,7 +163,7 @@ class ExperimentActivity < ActiveRecord::Base
       in_hint_experiment = true
       hash_value = hint_visibility_experiment_hash || ip_to_hash_value(options[:ip]) || 0
       response[:hint_request_placement] =
-          self.pick_mod_length(HINT_VISIBILITY_VALUES, hash_value)
+        self.pick_mod_length(HINT_VISIBILITY_VALUES, hash_value)
     end
 
     # If in an experiment, record values written to options.
