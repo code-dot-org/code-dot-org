@@ -27,7 +27,6 @@ class FollowersControllerTest < ActionController::TestCase
     assert !assigns(:user).persisted?
   end
 
-
   test "student_user_new without section code" do
     get :student_user_new
 
@@ -76,7 +75,6 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal [@laurel_student_1.student_user], @laurel_section_2.reload.students # added to new section
   end
 
-
   test "student user new with existing user with messed up email" do
     # use update_attribute to bypass validations
     @student.update_attribute(:email, '')
@@ -95,7 +93,6 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal @chris, follower.user
     assert_equal @chris_section, follower.section
   end
-
 
   test "student_user_new does not allow joining your own section" do
     sign_in @chris
@@ -129,7 +126,6 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal nil, assigns(:user).provider
     assert_equal User::TYPE_STUDENT, assigns(:user).user_type
   end
-
 
   test "student_register with age and email" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
@@ -218,7 +214,6 @@ class FollowersControllerTest < ActionController::TestCase
     assert_redirected_to '/'
     assert_equal "Sorry, you can't join your own section.", flash[:alert]
   end
-
 
   test "create with invalid section code gives error message" do
     sign_in @student

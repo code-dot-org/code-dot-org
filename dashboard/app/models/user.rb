@@ -289,6 +289,8 @@ class User < ActiveRecord::Base
   end
 
   def User.find_by_email_or_hashed_email(email)
+    return nil if email.blank?
+
     User.find_by_email(email.downcase) ||
       User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
   end
@@ -332,7 +334,6 @@ class User < ActiveRecord::Base
       nil
     end
   end
-
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin']
   def self.from_omniauth(auth, params)
@@ -590,7 +591,6 @@ SQL
     return nil if name.blank?
     return name.strip[0].upcase
   end
-
 
   # override the default devise password to support old and new style hashed passwords
   # based on Devise::Models::DatabaseAuthenticatable#valid_password?

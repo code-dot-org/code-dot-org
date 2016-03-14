@@ -210,7 +210,7 @@
   "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again.",
   "textVariable": "អត្ថ​បទ",
   "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
-  "tooFewBlocksMsg": "You are using all of the necessary types of blocks, but try using more  of these types of blocks to complete this puzzle.",
+  "tooFewBlocksMsg": "You are using all of the necessary types of blocks, but try using more of these types of blocks to complete this puzzle.",
   "tooManyBlocksMsg": "អ្នក​អាច​ដោះស្រាយ​ល្បែង​ប្រាជ្ញា​នេះ​ជាមួយ <x id='START_SPAN'/><x id='END_SPAN'/> ប្លុក។",
   "tooMuchWork": "អ្នក​ឲ្យ​ខ្ញុំ​ធ្វើ​ការងារ​ច្រើន​ណាស់! តើ​អ្នក​អាច​ឲ្យ​ធ្វើ​ឡើង​វិញ​តិច​ជាង​មុន​បាន​ទេ?",
   "toolboxHeader": "ប្លុក",
@@ -224,5 +224,6 @@
   "watchVideo": "មើល​វីដេអូ",
   "when": "នៅ​ពេល",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project."
 }
