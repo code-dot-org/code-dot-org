@@ -1,16 +1,15 @@
-require('./pairing.jsx');
-require('./dialog.jsx');
-
-window.dashboard = window.dashboard || {};
-
 /**
  * Pair Programming dialog
  */
-window.dashboard.PairingDialog = (function (React) {
-  var Dialog = window.dashboard.Dialog;
-  var Pairing = window.dashboard.Pairing;
 
-  return React.createClass({
+/* global React, dashboard */
+
+var Pairing = require('./pairing.jsx'); /* all the interesting stuff is here btw */
+var Dialog = require('./dialog.jsx');
+
+console.log(Pairing);
+
+var PairingDialog = React.createClass({
     getInitialState: function () {
       return { isOpen: false };
     },
@@ -30,5 +29,9 @@ window.dashboard.PairingDialog = (function (React) {
         </Dialog>
       );
     }
-  });
-})(React);
+});
+
+module.exports = PairingDialog;
+
+window.dashboard = window.dashboard || {};
+window.dashboard.PairingDialog = PairingDialog;

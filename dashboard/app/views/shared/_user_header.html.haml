@@ -50,7 +50,7 @@
     var props = {source: #{pairing_url.inspect}};
     props.i18n = window.dashboard.i18n;
     $('body').append('<div id="pairing"></div>');
-    var pairingDialog = React.render(
+    var pairingDialog = ReactDOM.render(
         React.createElement(window.dashboard.PairingDialog, props),
         document.getElementById('pairing'));
 
