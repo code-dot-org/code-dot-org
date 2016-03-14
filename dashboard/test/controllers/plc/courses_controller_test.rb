@@ -7,6 +7,12 @@ class Plc::CoursesControllerTest < ActionController::TestCase
     sign_in(@user)
   end
 
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:courses)
+  end
+
   test "should get new" do
     get :new
     assert_response :success
@@ -44,6 +50,6 @@ class Plc::CoursesControllerTest < ActionController::TestCase
       delete :destroy, id: @course
     end
 
-    assert_redirected_to plc_content_creator_show_courses_and_modules_path
+    assert_redirected_to plc_courses_path
   end
 end

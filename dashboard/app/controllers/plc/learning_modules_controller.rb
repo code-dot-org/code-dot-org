@@ -1,5 +1,9 @@
 class Plc::LearningModulesController < ApplicationController
   load_and_authorize_resource
+  # GET /plc/learning_modules
+  # GET /plc/learning_modules.json
+  def index
+  end
 
   # GET /plc/learning_modules/1
   # GET /plc/learning_modules/1.json
@@ -39,7 +43,7 @@ class Plc::LearningModulesController < ApplicationController
   # DELETE /plc/learning_modules/1.json
   def destroy
     @learning_module.destroy
-    redirect_to plc_content_creator_show_courses_and_modules_path
+    redirect_to action: :index
   end
 
   private
