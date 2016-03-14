@@ -328,10 +328,6 @@ Style/MutableConstant:
 Style/NegatedIf:
   Enabled: false
 
-# Offense count: 5
-Style/NestedParenthesizedCalls:
-  Enabled: false
-
 # Offense count: 18
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, MinBodyLength, SupportedStyles.
@@ -449,11 +445,6 @@ Style/SpaceBeforeFirstArg:
 # Configuration parameters: EnforcedStyle, SupportedStyles, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
 # SupportedStyles: space, no_space
 Style/SpaceInsideBlockBraces:
-  Enabled: false
-
-# Offense count: 14
-# Cop supports --auto-correct.
-Style/SpaceInsideBrackets:
   Enabled: false
 
 # Offense count: 1987

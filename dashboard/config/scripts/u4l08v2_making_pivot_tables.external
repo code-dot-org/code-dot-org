@@ -24,7 +24,7 @@ Here is what we're going for:
 # Your First Summary Table
 In most spreadsheet programs a Summary Table is called a **pivot table**.
 
-**Do This:** With the spreadsheet open in Google Sheets choose * **Data** -> **Pivot table...** *
+**Do This:** With the spreadsheet open in Google Sheets choose _**Data** -> **Pivot table...**_
 
 ![](https://images.code.org/385c4a2bd1e6f8b61d4b10c12a473bdf-image-1453471640227.gif)
 
@@ -58,7 +58,7 @@ The menu on the right side of the pivot table lets you choose what you want the 
 
 <hr>
   
-# Let's Change the Value -- Summarize by: COUNT
+# Let's Change the Value - Summarize by: COUNT
 Change *summarize by* from AVERAGE to COUNT. Now, instead of computing the average rating, this will **count the number of ratings for each movie**. 
 
 ![](https://images.code.org/4e3cceb21e2d54c500564a352abc4b0c-image-1453396358019.gif)

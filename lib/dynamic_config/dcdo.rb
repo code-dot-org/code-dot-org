@@ -58,6 +58,11 @@ class DCDOBase
     @datastore_cache.add_change_listener(listener)
   end
 
+  # Updates the cached configuration, for testing only.
+  def update_cache_for_test
+    @datastore_cache.update_cache
+  end
+
   # Factory method for creating DCDOBase objects
   # @returns [DCDOBase]
   def self.create

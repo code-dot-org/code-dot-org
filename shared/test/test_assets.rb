@@ -303,32 +303,24 @@ class AssetsTest < Minitest::Test
           post_file(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
           assert @assets.last_response.client_error?, "Error when file is larger than max file size."
 
-          assert NewRelic::Agent.metrics.length == 1, 'one custom metric recorded'
-          assert NewRelic::Agent.metrics[0].first == 'Custom/FilesApi/FileTooLarge_assets', 'FileTooLarge metric recorded'
-          assert NewRelic::Agent.metrics[0].last == 1, 'FileTooLarge metric value 1'
+          assert_assets_custom_metric 1, 'FileTooLarge'
 
           _, filetodelete1 = post_file(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
           assert @assets.last_response.successful?, "First small file upload is successful."
 
-          assert NewRelic::Agent.metrics.length == 1, 'still only one custom metric recorded'
+          assert_assets_custom_metric 1, 'FileTooLarge', 'still only one custom metric recorded'
 
           _, filetodelete2 = post_file(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
           assert @assets.last_response.successful?, "Second small file upload is successful."
 
-          assert NewRelic::Agent.metrics.length == 2, 'two custom metrics recorded'
-          assert NewRelic::Agent.metrics[1].first == 'Custom/FilesApi/QuotaCrossedHalfUsed_assets', 'QuotaCrossedHalfUsed metric recorded'
-          assert NewRelic::Agent.metrics[1].last == 1, 'QuotaCrossedHalfUsed metric value 1'
-          assert NewRelic::Agent.events.length == 1, 'one custom event recorded'
-          assert NewRelic::Agent.events[0].first == 'FilesApiQuotaCrossedHalfUsed', 'QuotaCrossedHalfUsed event recorded'
+          assert_assets_custom_metric 2, 'QuotaCrossedHalfUsed'
+          assert_assets_custom_event 1, 'QuotaCrossedHalfUsed'
 
           post_file(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
           assert @assets.last_response.client_error?, "Error when exceeding max app size."
 
-          assert NewRelic::Agent.metrics.length == 3, 'three custom metrics recorded'
-          assert NewRelic::Agent.metrics[2].first == 'Custom/FilesApi/QuotaExceeded_assets', 'QuotaExceeded metric recorded'
-          assert NewRelic::Agent.metrics[2].last == 1, 'QuotaExceeded metric value 1'
-          assert NewRelic::Agent.events.length == 2, 'two custom events recorded'
-          assert NewRelic::Agent.events[1].first == 'FilesApiQuotaExceeded', 'QuotaExceeded event recorded'
+          assert_assets_custom_metric 3, 'QuotaExceeded'
+          assert_assets_custom_event 2, 'QuotaExceeded'
 
           delete(@assets, channel_id, filetodelete1)
           delete(@assets, channel_id, filetodelete2)
@@ -453,5 +445,22 @@ class AssetsTest < Minitest::Test
     file, tmp_filename = create_uploaded_file(filename, contents, content_type)
     response = post(assets, channel_id, file)
     [response, tmp_filename]
+  end
+
+  def assert_assets_custom_metric(index, metric_type, length_msg = nil, expected_value = 1)
+    # Filter out metrics from other test cases.
+    metrics = NewRelic::Agent.get_metrics %r{^Custom/FilesApi}
+    length_msg ||= "custom metrics recorded: #{index}"
+    assert_equal index, metrics.length, length_msg
+    last_metric = metrics.last
+    assert_equal "Custom/FilesApi/#{metric_type}_assets", last_metric.first, "#{metric_type} metric recorded"
+    assert_equal expected_value, last_metric.last, "#{metric_type} metric value"
+  end
+
+  def assert_assets_custom_event(index, event_type)
+    # Filter out events from other test cases.
+    events = NewRelic::Agent.get_events %r{^FilesApi}
+    assert_equal index, events.length, "custom events recorded: #{index}"
+    assert_equal "FilesApi#{event_type}", events.last.first, "#{event_type} event recorded"
   end
 end

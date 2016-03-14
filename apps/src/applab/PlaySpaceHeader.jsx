@@ -1,10 +1,4 @@
 /** @file Row of controls above the visualization. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 
 var constants = require('./constants');
 var msg = require('../locale');
