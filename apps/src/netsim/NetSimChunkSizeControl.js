@@ -2,12 +2,6 @@
  * @overview UI slider used to change the local device's chunk size, which
  *           is used when interpreting binary to other formats.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var i18n = require('./locale');

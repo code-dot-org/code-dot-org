@@ -2,12 +2,6 @@
  * @overview Lobby table UI component.
  * @see NetSimLobby for usage.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var utils = require('../utils');

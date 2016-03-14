@@ -1,12 +1,6 @@
 /**
  * @overview Controller for creating growl-style Bootstrap alerts
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 /* global setTimeout */
 'use strict';
 

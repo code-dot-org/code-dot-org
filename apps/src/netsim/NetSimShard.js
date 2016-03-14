@@ -2,12 +2,6 @@
  * @overview Represents a collection of tables that map to a particular
  *           class section's simulation, isolated from other class sections.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var NetSimTable = require('./NetSimTable');
