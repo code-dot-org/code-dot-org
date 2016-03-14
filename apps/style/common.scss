@@ -1201,6 +1201,22 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
+.show-code {
+  summary {
+    font-size: 18px;
+    line-height: 20px;
+    color: #5b6770;
+    font-family: "Gotham 5r", sans-serif;
+    font-weight: normal;
+    outline: none;
+    padding: 5px;
+  }
+
+  .generated-code-container {
+    margin: -80px 25px 10px 25px;
+  }
+}
+
 .generated-code-container {
   margin-top: 10px;
   .generatedCodeMessage {
