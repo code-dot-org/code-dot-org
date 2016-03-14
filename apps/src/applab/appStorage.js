@@ -152,6 +152,18 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
 };
 
 /**
+ * Returns true if record matches the given search parameters, which are a map
+ * from key name to expected value.
+ */
+function matchesSearch(record, searchParams) {
+  var matches = true;
+  Object.keys(searchParams || {}).forEach(function(key) {
+    matches = matches && (record[key] == searchParams[key]);
+  });
+  return matches;
+}
+
+/**
  * Reads records which match the searchParams specified by the user,
  * and passes them to onSuccess.
  * @param {string} tableName The name of the table to read from.
@@ -165,14 +177,34 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
  */
 AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var table = getTable(Applab.channelId, tableName);
-  table.once("value", function(recordsRef) {
-    var records = recordsRef.val() || [];
-    console.log(records);
-    var recordArray = Object.keys(records).map(function(id) {
-      return records[id];
-    });
-    onSuccess(recordArray);
-  }, onError);
+  var searchKeys = searchParams ? Object.keys(searchParams) : [];
+
+  if (searchKeys.length == 1) {
+     // If there is only a single search parameter, use the firebase equalTo
+     // query to return only the records matching that parameter from the server.
+     var key = searchKeys[0];
+     table.orderByChild(key).equalTo(searchParams[key]).once('value', function(recordsRef) {
+       var recordMap = recordsRef.val() || {};
+       var records = Object.keys(recordMap).map(function(id) { return recordMap[id]; });
+       onSuccess(records);
+     }, onError);
+
+   } else {
+    // If there is more than one search parameters, Get all records in the table
+    // and filter them on the client.
+    table.once('value', function (recordsRef) {
+      var recordMap = recordsRef.val() || {};
+      var records = [];
+      // Collect all of the records matching the searchParams.
+      Object.keys(recordMap).forEach(function (id) {
+        var record = recordMap[id];
+        if (matchesSearch(record, searchParams)) {
+          records.push(record);
+        }
+      });
+      onSuccess(records);
+    }, onError);
+  }
 };
 
 /**
@@ -243,15 +275,15 @@ AppStorage.onRecordEvent = function(tableName, onRecord, onError) {
   // CONSIDER: Do we need to make sure a client doesn't hear about updates that it triggered?
 
   table.on('child_added', function(childSnapshot, prevChildKey) {
-    onRecord(childSnapshot, 'create');
+    onRecord(childSnapshot.val(), 'create');
   });
 
   table.on('value', function(dataSnapshot) {
-    onRecord(dataSnapshot, 'update');
+    onRecord(dataSnapshot.val(), 'update');
   });
 
   table.on('child_removed', function(oldChildSnapshot) {
-    onRecord({'id': oldChildSnapshot.id}, 'delete');
+    onRecord({'id': oldChildSnapshot.val().id}, 'delete');
   });
 };
 
