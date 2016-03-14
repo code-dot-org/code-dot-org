@@ -105,8 +105,7 @@ class TablesApi < Sinatra::Base
     TableType.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
 
     limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
-    count = limits.decrement_row_count
-    puts "Count after delete #{count}"
+    limits.decrement_row_count
 
     no_content
   end
