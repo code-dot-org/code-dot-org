@@ -1,12 +1,10 @@
 require 'csv'
-require 'redis'
 require 'set'
 
 require_relative './sql_table'
 require_relative './dynamo_table'
 
 class TableMetadata
-
   def self.generate_column_list(records)
     return [] if records.nil?
     # don't include 'id', since that's a reserved column that will always exist
