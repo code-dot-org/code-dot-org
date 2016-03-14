@@ -355,7 +355,6 @@ class TablesTest < Minitest::Test
   def create_record(record)
     @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     status = @tables.last_response.status
-    puts status
     raise "Failed request" unless status >= 200 && status < 400
     @tables.last_response.location.split('/').last
   end
