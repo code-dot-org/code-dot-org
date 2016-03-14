@@ -871,7 +871,7 @@ Applab.init = function(config) {
         }
       });
 
-      subscribeToRedux(Applab.reduxStore);
+      setupReduxSubscribers(Applab.reduxStore);
 
       designMode.addKeyboardHandlers();
 
@@ -915,8 +915,8 @@ Applab.init = function(config) {
  * Subscribe to state changes on the store.
  * @param {!Store} store
  */
-function subscribeToRedux(store) {
-  designMode.subscribeToRedux(store);
+function setupReduxSubscribers(store) {
+  designMode.setupReduxSubscribers(store);
 
   var state = {};
   store.subscribe(function () {
