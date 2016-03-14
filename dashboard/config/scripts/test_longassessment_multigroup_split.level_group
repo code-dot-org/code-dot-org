@@ -1,7 +1,16 @@
 name 'Test longassessment levelgroup split'
 submittable 'true'
-per_page '1'
 
+page 'First page'
 level 'K-1 Happy Maps Multi 1'
 level 'Multi Horizontal Scroll Test'
 level 'Choose 2 Test'
+
+page 'Second page'
+level 'K-1 Plant a Seed Multi 1'
+level 'K-1 Plant a Seed Multi 2'
+level  'K-1 Artist 1 Multi 1'
+
+page 'Third page'
+level 'K-1 Maze Loops Multi 1'
+level 'K-1 Maze Loops Multi 2'
