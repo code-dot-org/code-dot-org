@@ -236,7 +236,9 @@ designMode.updateProperty = function(element, name, value) {
     case 'fontSize':
       element.style.fontSize = appendPx(value);
       break;
-
+    case 'textAlign':
+      element.style.textAlign = value;
+      break;
     case 'image':
       var backgroundImage = new Image();
       var originalValue = element.getAttribute('data-canonical-image-url');
