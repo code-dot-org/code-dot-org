@@ -82,7 +82,6 @@ class Course
     lessons
   end
 
-
   def lesson_number(lesson_id)
     lesson_id.scan(/\d+/).last.to_s
   end

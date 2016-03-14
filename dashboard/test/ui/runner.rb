@@ -368,7 +368,6 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     scenario_info = ", #{scenario_info}" unless scenario_info.blank?
   end
 
-
   rerun_info = " with #{reruns} reruns" if reruns > 0
 
   if !parsed_output.nil? && scenario_count == 0 && succeeded
