@@ -35,15 +35,13 @@ Breakfast and lunch will be served.
 
 **April 9th Location**
 
-[Google<br/> 340 Main St<br/>
-Los Angeles, CA 90291](https://www.google.com/maps/place/Google+Venice,+340+Main+St,+Venice,+CA+90291/@33.9958697,-118.4788045,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2bacf16b3cbf5:0x31fc6f8820c621e)
+[9 Dots<br/>
+931 N Highland Avenue<br/>
+Los Angeles, CA, 90038](https://www.google.com/maps/place/9+Dots/@34.0880332,-118.3389293,15z/data=!4m2!3m1!1s0x0:0x2efadb41115b9452?sa=X&ved=0ahUKEwjzzZHGqrfLAhVB-mMKHa15B0kQ_BIIfjAO)
 
-The parking garage is located underground.  Please pull under the binoculars in front of the building on Main Street (yes we are the "binocular building"), push the button on the keypad to the left in front of the gate, and let Reception/Security know you are here to meet with Jen Barth for Code.org event.  They will buzz you in.<br/>
+The parking entrance is in the alleyway between Highland Ave and Citrus Ave. [See parking map here.](/images/9-dots-parking-map.png)
 
-Drive to the valet on level B (located 2nd floor down) and they will guide you to open parking spots in the structure or valet your car for you.  Take the elevator to the first floor and check-in with reception.  Jen Barth from Google will greet you there.  <Br/>
-
-Please feel free to call Jen's cell if you have any trouble getting here.<Br/>
-(646) 489-7459<br/>
+If the lot is full, there is plenty of street parking around the block. 
 
 
 
