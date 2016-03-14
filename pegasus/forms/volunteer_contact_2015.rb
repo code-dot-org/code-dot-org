@@ -44,15 +44,4 @@ class VolunteerContact2015
     end
     results
   end
-
-  def self.solr_query(params)
-    query = '*:*'
-
-    fq = ["kind_s:#{self.name}"]
-    {
-      q: query,
-      fq: fq,
-      rows: 100000,
-    }
-  end
 end

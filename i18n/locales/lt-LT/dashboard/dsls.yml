@@ -291,7 +291,7 @@ lt:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Pirmiausia padėk kvadratą<br/>Virš jo padėk lygiagretainį<br/>Lygiagretainio dešinėje padėk trikampį'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Pradėk nuo kvadrato<br/>Padėk trikampį virš kvadrato<br/>Padėk trikampį po kvadratu'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Pradėk nuo kvadrato<br/>Padėk trikampį po kvadratu<br/>Padėk lygiagretainį trikampio dešinėje'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Pradėk nuo kvadrato<br/>Padėk trikampį šalia kvadrato<br/>Padėk lygiagretainį po kvadratu<br/>Padėk trikampį lygiagretainio dešinėje'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Pradėk nuo kvadrato<br/>Padėk trikampį kvadratui iš dešinės<br/>Padėk lygiagretainį po kvadratu<br/>Padėk trikampį lygiagretainio dešinėje'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -479,7 +479,7 @@ lt:
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Parink teisingą atsakymą
-        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: Kurią didžiausią šios dainos dalį galėtum įvardinti kaip priedainį, kad priedainis kartotųsi vienodai, kai kiekvieną kartą jis iškviečiamas?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -744,14 +744,14 @@ lt:
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: Vairuotojas ir Pagalbininkas
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Vienas iš berniukų yra <b>vairuotojas</b>. Ir kitas <b>pagalbininkas</b>.'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Vienas iš berniukų yra <b>vairuotojas</b>, o kitas – <b>pagalbininkas</b>.'
         Which boy is the <large>helper</large>?: 'Kuris berniukas yra <large>pagalbininkas</large>?'
       K-1 multi 5:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: Vairuotojas ir Pagalbininkas
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Vienas iš berniukų yra <b>vairuotojas</b>. Ir kitas <b>pagalbininkas</b>.'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Vienas iš berniukų yra <b>vairuotojas</b>, o kitas – <b>pagalbininkas</b>.'
         This time, which boy is the <large>driver</large>?: 'Kuris berniukas, šį kartą, yra <large>vairuotojas</large>?'
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100

@@ -17,12 +17,6 @@
   %link{href: asset_path('css/droplet/droplet.min.css'), rel: 'stylesheet', type: 'text/css'}
   %link{href: asset_path('css/tooltipster/tooltipster.min.css'), rel: 'stylesheet', type: 'text/css'}
 
--# Applab style dependencies
-- if use_applab
-  -# Might be possible to not load this on share pages, but right now we get some
-  -# weird display issues when we do that. Good news is this is < 10kb
-  %link{href: asset_path('css/colpick.css'), rel: 'stylesheet', type: 'text/css'}
-
 -# Gamelab script dependencies
 - if use_gamelab
   %script{src: asset_path('js/p5play/p5.js')}

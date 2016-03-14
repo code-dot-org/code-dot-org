@@ -152,6 +152,10 @@ td.studentname {
   transition: width 2s;
 }
 
+.zoomed-out .studentbar {
+  font-size: 13px;
+}
+
 .zoomed-out .studentbar .level_link {
   min-width: 0;
   border-radius: 0;
@@ -185,6 +189,11 @@ td.studentname {
   &.not_tried {
     border: none;
     background-color: $level_not_tried;
+  }
+
+  &.submitted {
+    border: none;
+    background-color: $level_submitted;
   }
 
   &:hover,

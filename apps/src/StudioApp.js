@@ -19,6 +19,7 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/Instructions.jsx');
+var DialogButtons = require('./templates/DialogButtons.jsx');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
@@ -976,7 +977,13 @@ StudioApp.prototype.onReportComplete = function (response) {
 };
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
+  var isMarkdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+
   var instructionsDiv = document.createElement('div');
+  instructionsDiv.className = isMarkdownMode ?
+    'markdown-instructions-container' :
+    'instructions-container';
+
   var renderedMarkdown;
   var headerElement;
 
@@ -985,12 +992,9 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     puzzle_number: level.puzzle_number
   });
 
-  var markdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
-
-  if (markdownMode) {
+  if (isMarkdownMode) {
     var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
     renderedMarkdown = marked(markdownWithImages);
-    instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
     headerElement.innerHTML = puzzleTitle;
@@ -1019,17 +1023,14 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   // container just yet, because our React component could contain some
   // elements that don't want to be rendered until they are in the DOM
   var instructionsReactContainer = document.createElement('div');
-  instructionsReactContainer.className='instructions-container';
+  instructionsReactContainer.className='instructions-content';
   instructionsDiv.appendChild(instructionsReactContainer);
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      ok: true
-    }
-  });
-
   instructionsDiv.appendChild(buttons);
+  ReactDOM.render(React.createElement(DialogButtons, {
+    ok: true
+  }), buttons);
 
   // If there is an instructions block on the screen, we want the instructions dialog to
   // shrink down to that instructions block when it's dismissed.
@@ -1062,13 +1063,13 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
-    markdownMode: markdownMode,
+    markdownMode: isMarkdownMode,
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
     onHidden: hideFn,
     scrollContent: true,
-    scrollableSelector: ".instructions-container",
+    scrollableSelector: ".instructions-content",
     header: headerElement
   });
 
@@ -1771,10 +1772,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   // Ensure global ace variable is the same as window.ace
   // (important because they can be different in our test environment)
-
-  /* jshint ignore:start */
   ace = window.ace;
-  /* jshint ignore:end */
 
   var fullDropletPalette = dropletUtils.generateDropletPalette(
     config.level.codeFunctions, config.dropletConfig);
@@ -2344,31 +2342,72 @@ function rectFromElementBoundingBox(element) {
 }
 
 /**
- * Displays a small alert box inside DOM element at parentSelector.
- * @param {string} parentSelector
- * @param {object} props A set of React properties passed to the AbuseError
- *   component
+ * Displays a small alert box inside the workspace
+ * @param {string} type - Alert type (error or warning)
+ * @param {React.Component} alertContents
  */
-StudioApp.prototype.displayAlert = function (parentSelector, props) {
-  // Each parent is assumed to have at most a single alert. This assumption
-  // could be changed, but we would then want to clean up our DOM element on
-  // close
-  var parent = $(parentSelector);
-  var container = parent.children('.react-alert');
-  if (container.length === 0) {
-    container = $("<div class='react-alert'/>");
-    parent.append(container);
+StudioApp.prototype.displayWorkspaceAlert = function (type, alertContents) {
+  var container = this.displayAlert("#codeWorkspace", { type: type }, alertContents);
+
+  var toolbarWidth;
+  if (this.usingBlockly_) {
+    toolbarWidth = $(".blocklyToolboxDiv").width();
+  } else{
+    toolbarWidth = $(".droplet-palette-element").width() + $(".droplet-gutter").width();
   }
 
-  var reactProps = $.extend({}, {
-    className: 'alert-error',
-    onClose: function () {
-      React.unmountComponentAtNode(container[0]);
-    }
-  }, props);
+  $(container).css({
+    left: toolbarWidth,
+    top: $("#headers").height()
+  });
+};
 
-  var element = React.createElement(Alert, reactProps);
-  ReactDOM.render(element, container[0]);
+/**
+ * Displays a small aert box inside the playspace
+ * @param {string} type - Alert type (error or warning)
+ * @param {React.Component} alertContents
+ */
+StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
+  StudioApp.prototype.displayAlert("#visualization", {
+    type: type,
+    sideMargin: 20
+  }, alertContents);
+};
+
+/**
+ * Displays a small alert box inside DOM element at parentSelector. Parent is
+ * assumed to have at most a single alert (we'll either create a new one or
+ * replace the existing one).
+ * @param {object} props
+ * @param {string} object.type - Alert type (error or warning)
+ * @param {number} [object.sideMaring] - Optional param specifying margin on
+ *   either side of element
+ * @param {React.Component} alertContents
+ */
+StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
+  var parent = $(selector);
+  var container = parent.children('.react-alert');
+  if (container.length === 0) {
+    container = $("<div class='react-alert'/>").css({
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      top: 0,
+      zIndex: 1000
+    });
+    parent.append(container);
+  }
+  var renderElement = container[0];
+
+  var handleAlertClose = function () {
+    React.unmountComponentAtNode(renderElement);
+  };
+  ReactDOM.render(
+    <Alert onClose={handleAlertClose} type={props.type} sideMargin={props.sideMargin}>
+      {alertContents}
+    </Alert>, renderElement);
+
+  return renderElement;
 };
 
 /**
@@ -2378,19 +2417,11 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
  */
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
   if (window.dashboard && dashboard.project.exceedsAbuseThreshold()) {
-    this.displayAlert(parentSelector, {
-      body: React.createElement(dashboard.AbuseError, {
-        i18n: {
-          tos: window.dashboard.i18n.t('project.abuse.tos'),
-          contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
-        }
-      }),
-      style: {
-        top: 45,
-        left: 350,
-        right: 50
-      }
-    });
+    var i18n = {
+      tos: window.dashboard.i18n.t('project.abuse.tos'),
+      contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
+    };
+    this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
   }
 };
 

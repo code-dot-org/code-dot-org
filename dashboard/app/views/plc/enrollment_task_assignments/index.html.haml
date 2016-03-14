@@ -9,9 +9,9 @@
       %th
 
   %tbody
-    - @plc_enrollment_task_assignments.each do |plc_enrollment_task_assignment|
+    - @enrollment_task_assignments.each do |enrollment_task_assignment|
       %tr
-        %td= plc_enrollment_task_assignment.plc_enrollment_module_assignment.plc_user_course_enrollment.user.name
-        %td= plc_enrollment_task_assignment.plc_task.name
-        %td= plc_enrollment_task_assignment.plc_task.titleized_task_type
-        %td= link_to 'Show', plc_enrollment_task_assignment
+        %td= enrollment_task_assignment.plc_enrollment_module_assignment.plc_user_course_enrollment.user.name
+        %td= enrollment_task_assignment.plc_task.name
+        %td= enrollment_task_assignment.plc_task.class.titleized_task_type
+        %td= link_to 'Show', plc_enrollment_task_assignment_path(enrollment_task_assignment)

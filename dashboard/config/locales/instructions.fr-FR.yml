@@ -36,8 +36,8 @@
         le rectangle en 2 carrés égaux. Le rectangle fait 200 pixels de large et 100
         pixels de haut.
       2-3 Artist 9_instruction: Termine ce cerf-volant
-      2-3 Artist Assessment 1_instruction: "Évaluation : Finis de dessiner la dernière
-        dent qui fait 25 pixels de large et de haut."
+      2-3 Artist Assessment 1_instruction: "Évaluation : Termine la dernière dent,
+        de 25 pixels de large et 25 pixels de hauteur."
       2-3 Artist Debugging 1_instruction: Peux-tu faire en sorte que le haut du chapeau
         ait une longueur de 100 ?
       2-3 Artist Debugging 10_instruction: 'Le bouton de direction de ma manette de
@@ -466,6 +466,11 @@
         réalisé qu''il devait y avoir un moyen plus rapide! Utilise un bloc «Pour»
         pour remplacer les blocs et complète la spirale hexagonale (Indice: la longueur
         de la dernière ligne est 200 pixels.'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: Comment peut-on compter de 1 à 50? Édite
         le bloc «pour».
       4-5 Artist For Loops 4_instruction: Complète le bloc «pour» pour qu'il compte
@@ -2578,6 +2583,20 @@
         \r
         .\r
         \r
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: |-
+        Figure out how to change this code so that Robin
+        chooses a number between 1 and 20.  \r
+        \r
+        When you're ready, press "Run"
+        and play until you guess Robin's number!
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -4871,11 +4890,11 @@
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

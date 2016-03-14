@@ -1,10 +1,4 @@
 /** @file Actions that can be given to a playlab sprite to execute over a set time. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var utils = require('../utils');

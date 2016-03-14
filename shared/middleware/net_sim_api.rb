@@ -203,7 +203,7 @@ class NetSimApi < Sinatra::Base
   #
   post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
-    unsupported_media_type unless has_json_utf8_headers(request)
+    unsupported_media_type unless has_json_utf8_headers?(request)
 
     # Parse JSON
     begin
@@ -322,7 +322,7 @@ class NetSimApi < Sinatra::Base
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
-    unsupported_media_type unless has_json_utf8_headers(request)
+    unsupported_media_type unless has_json_utf8_headers?(request)
 
     begin
       table = get_table(shard_id, table_name)
@@ -390,7 +390,7 @@ class NetSimApi < Sinatra::Base
   #
   # @param [Request] request
   # @return [Boolean]
-  def has_json_utf8_headers(request)
+  def has_json_utf8_headers?(request)
     request.content_type.to_s.split(';').first == 'application/json' &&
         request.content_charset.to_s.downcase == 'utf-8'
   end

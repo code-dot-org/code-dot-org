@@ -412,6 +412,7 @@ en:
     applab:
       title: crwdns56124:0crwdne56124:0
       body: crwdns56125:0crwdne56125:0
+      body_short: crwdns56172:0crwdne56172:0
       audience: crwdns56126:0crwdne56126:0
       cta: crwdns56127:0crwdne56127:0
     hoc:
@@ -491,6 +492,9 @@ en:
     placeholder: crwdns22206:0crwdne22206:0
     open_response_title: crwdns37547:0crwdne37547:0
     open_response_body: crwdns37548:0crwdne37548:0
+  level_group:
+    correct_title: crwdns56173:0crwdne56173:0
+    correct_body: crwdns56174:0crwdne56174:0
   dialog:
     ok: crwdns5100:0crwdne5100:0
     startover_title: crwdns45297:0crwdne45297:0

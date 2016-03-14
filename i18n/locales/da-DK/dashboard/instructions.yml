@@ -199,7 +199,7 @@ da:
       2-3 Maze 7_instruction: Før mig til det grønne ondskab! (Men pas på TNT)
       2-3 Maze 8_instruction: Få mig hen til grisen!
       2-3 Maze 9_instruction: Før mig til det grønne ondskab! (Men pas på TNT)
-      2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
+      2-3 Maze Loops 1_instruction: Kan du får mig til grisen ved at bruge 5 blokke?
       2-3 Maze Loops 17_instruction: Få mig til solsikken!
       2-3 Maze Loops 18_instruction: Få mig til solsikken!
       2-3 Maze Loops 19_instruction: Få mig til solsikken!
@@ -248,6 +248,11 @@ da:
       4-5 Artist For Loops 13_instruction: 'Dette design startet uden en "for"-løkke og bruger alt for mange blokke!  Brug en "for" blok til at fuldføre spiralen.  Tip: den sidste linjelængde er 250 pixels.'
       4-5 Artist For Loops 14_instruction: 'Nogen startede koden, men indså så, at der må være en hurtigere måde! Brug en "for" blok til at erstatte blokkene og fuldfør den trekantede spiral. (Hint: den sidste linjelængden er 300 pixel.)'
       4-5 Artist For Loops 15_instruction: 'Nogen startede koden, men indså så, at der må være en hurtigere måde! Brug en "for" blok til at erstatte blokkene og fuldfør den sekskantede spiral. (Hint: den sidste linjelængden er 300 pixel.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: 'Hvordan kan vi tælle fra 1 til 50? Redigere "for" blokken.'
       4-5 Artist For Loops 4_instruction: 'Fuldfør "for"-blokken, så den tæller 1 ad gangen fra 1 til 10.'
       4-5 Artist For Loops 6_instruction: 'Tegn firkanter med sider på 50, 60, 70, 80 og 90 pixel. Du skal bruge funktionen "tegn en firkant" fem gange.'
@@ -977,13 +982,11 @@ da:
       Course 2 Bee Loops 3_instruction: Brug gentag-blokken til både at samle al nektaren og lave honning.
       Course 2 Bee Loops 3__instruction: Kan du bruge en løkke til at indsamle al nektaren?
       Course 2 Bee Loops 4_instruction: Hvad sker der hvis du gentager denne sekvens 3 gange? Glem ikke at lave honning til sidst!
-      Course 2 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
+      Course 2 Maze Loops 1_instruction: Kan du får mig til grisen ved at bruge 5 blokke?
       Course 4 2_instruction: |
         The bee only wants nectar right now. Remember, not
         all objects are flowers, so check to gather nectar only at flowers.
-      Course 4 Artist 1_instruction: |
-        Help me draw a box. (Each line is 200 pixels
-        long) 
+      Course 4 Artist 1_instruction: 'Hjælp mig med at tegne en kasse. (Hver linje er 200 pixels lang) '
       Course 4 Artist 10_instruction: "Click here to see the hints again!\\r\n\\r\nHere\nis the code for an interesting shape.  What happens when you repeat it multiple\ntimes, turning between each iteration?   Notice that the turns in this shape\nadd up to 420 degrees, which means that when your artist is done drawing,\nit will be facing a different direction than when you started.  That new direction\nis exactly 60 degrees to the right of where you began."
       Course 4 Artist 11_instruction: |
         Now for a challenge!  Here is a design that
@@ -2156,6 +2159,15 @@ da:
       K-1 Maze Sequence Assessment 1_instruction: "En lille test!\\r\nFlyt i en retning,\nså en anden, for at komme hen til grisen"
       K-1 Maze Sequence Assessment 2_instruction: "En lille test!\\r\nFlyt i en retning,\nså en anden, for at komme hen til grisen."
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -4332,11 +4344,11 @@ da:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)
