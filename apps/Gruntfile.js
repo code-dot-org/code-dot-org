@@ -333,6 +333,7 @@ module.exports = function (grunt) {
 
   // Use command-line tools to run browserify (faster/more stable this way)
   var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc' +
+      ' -g [ browserify-global-shim ]' +
       ' --cachefile ' + outputDir + 'browserifyinc-cache.json' +
       ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
       (envOptions.dev ? '' : ' -t [ envify --NODE_ENV production ]') +

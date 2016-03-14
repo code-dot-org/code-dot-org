@@ -22,8 +22,13 @@
     "transform": [
       "require-globify",
       "envify",
-      "browserify-shim"
+      "browserify-shim",
+      "browserify-global-shim"
     ]
+  },
+  "browserify-global-shim": {
+    "react": "React",
+    "react-dom": "ReactDOM"
   },
   "browserify-shim": {
     "blockly": {
@@ -35,6 +40,7 @@
     "Base64": "0.3.0",
     "babelify": "^6.3.0",
     "browserify": "10.2.4",
+    "browserify-global-shim": "^1.0.3",
     "browserify-incremental": "3.0.1",
     "browserify-shim": "3.8.10",
     "canvg": "gabelerner/canvg",
@@ -95,5 +101,8 @@
     "time-grunt": "^1.3.0",
     "uglify-js": "2.4.24",
     "which": "1.1.1"
+  },
+  "dependencies": {
+    "react-color": "^2.0.0"
   }
 }
