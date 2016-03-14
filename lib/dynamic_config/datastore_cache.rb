@@ -34,6 +34,7 @@ class DatastoreCache
       begin
         listener.on_change()
       rescue => exception
+        Rails.logger.warn("Error calling listener: #{exception.message}")
         Honeybadger.notify(exception)
       end
     end

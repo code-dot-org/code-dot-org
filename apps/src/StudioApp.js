@@ -1772,10 +1772,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   // Ensure global ace variable is the same as window.ace
   // (important because they can be different in our test environment)
-
-  /* jshint ignore:start */
   ace = window.ace;
-  /* jshint ignore:end */
 
   var fullDropletPalette = dropletUtils.generateDropletPalette(
     config.level.codeFunctions, config.dropletConfig);
@@ -2345,27 +2342,58 @@ function rectFromElementBoundingBox(element) {
 }
 
 /**
- * Displays a small alert box inside DOM element at parentSelector.
- * @param {React.Component} alertContents
+ * Displays a small alert box inside the workspace
  * @param {string} type - Alert type (error or warning)
+ * @param {React.Component} alertContents
  */
-StudioApp.prototype.displayAlert = function (type, alertContents) {
-  // Each parent is assumed to have at most a single alert. This assumption
-  // could be changed, but we would then want to clean up our DOM element on
-  // close
-  var parent = $("#codeWorkspace");
+StudioApp.prototype.displayWorkspaceAlert = function (type, alertContents) {
+  var container = this.displayAlert("#codeWorkspace", { type: type }, alertContents);
+
   var toolbarWidth;
   if (this.usingBlockly_) {
     toolbarWidth = $(".blocklyToolboxDiv").width();
   } else{
     toolbarWidth = $(".droplet-palette-element").width() + $(".droplet-gutter").width();
-   }
+  }
+
+  $(container).css({
+    left: toolbarWidth,
+    top: $("#headers").height()
+  });
+};
+
+/**
+ * Displays a small aert box inside the playspace
+ * @param {string} type - Alert type (error or warning)
+ * @param {React.Component} alertContents
+ */
+StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
+  StudioApp.prototype.displayAlert("#visualization", {
+    type: type,
+    sideMargin: 20
+  }, alertContents);
+};
+
+/**
+ * Displays a small alert box inside DOM element at parentSelector. Parent is
+ * assumed to have at most a single alert (we'll either create a new one or
+ * replace the existing one).
+ * @param {object} props
+ * @param {string} object.type - Alert type (error or warning)
+ * @param {number} [object.sideMaring] - Optional param specifying margin on
+ *   either side of element
+ * @param {React.Component} alertContents
+ */
+StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
+  var parent = $(selector);
   var container = parent.children('.react-alert');
   if (container.length === 0) {
     container = $("<div class='react-alert'/>").css({
       position: 'absolute',
-      left: toolbarWidth,
-      top: $("#headers").height()
+      left: 0,
+      right: 0,
+      top: 0,
+      zIndex: 1000
     });
     parent.append(container);
   }
@@ -2375,9 +2403,11 @@ StudioApp.prototype.displayAlert = function (type, alertContents) {
     React.unmountComponentAtNode(renderElement);
   };
   ReactDOM.render(
-    <Alert onClose={handleAlertClose} type={type}>
+    <Alert onClose={handleAlertClose} type={props.type} sideMargin={props.sideMargin}>
       {alertContents}
     </Alert>, renderElement);
+
+  return renderElement;
 };
 
 /**
@@ -2391,7 +2421,7 @@ StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
       tos: window.dashboard.i18n.t('project.abuse.tos'),
       contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
     };
-    this.displayAlert('error', <dashboard.AbuseError i18n={i18n}/>);
+    this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
   }
 };
 
