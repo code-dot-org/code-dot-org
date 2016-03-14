@@ -35,6 +35,9 @@ var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var DialogButtons = require('./templates/DialogButtons.jsx');
+var CodeWritten = require('./templates/feedback/CodeWritten.jsx');
+var ShowCode = require('./templates/feedback/ShowCode.jsx');
+var Code = require('./templates/feedback/Code.jsx');
 
 /**
  * @typedef {Object} TestableBlock
@@ -807,19 +810,18 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
       (options.response.total_lines !== numLinesWritten));
   var totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
 
-  showCodeDiv.innerHTML = require('./templates/showCode.html.ejs')({
-    numLinesWritten: numLinesWritten,
-    totalNumLinesWritten: totalNumLinesWritten
+  var generatedCodeElement = this.getGeneratedCodeComponent_({
+    generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
   });
 
-  var showCodeButton = showCodeDiv.querySelector('#show-code-button');
-  showCodeButton.addEventListener('click', _.bind(function () {
-    var generatedCodeElement = this.getGeneratedCodeElement_({
-      generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
-    });
-    showCodeDiv.appendChild(generatedCodeElement);
-    showCodeButton.style.display = 'none';
-  }, this));
+  ReactDOM.render(<CodeWritten
+    numLinesWritten = {numLinesWritten}
+    totalNumLinesWritten = {totalNumLinesWritten}
+    generatedCodeElement = {generatedCodeElement}
+  />, showCodeDiv);
+
+  var showCodeDetails = showCodeDiv.querySelector('details.show-code');
+  $(showCodeDetails).details();
 
   return showCodeDiv;
 };
@@ -864,14 +866,15 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
 };
 
 /**
- * Generates a "show code" div with a description of what code is.
+ * Generates a "show code" React component with a description of what
+ * code is.
  * @param {Object} [options] - optional
- * @param {string} [options.generatedCodeDescription] - optional description
- *        of code to put in place instead of the default
- * @returns {Element}
+ * @param {string} [options.generatedCodeDescription] - optional
+ *        description of code to put in place instead of the default
+ * @returns {React}
  * @private
  */
-FeedbackUtils.prototype.getGeneratedCodeElement_ = function(options) {
+FeedbackUtils.prototype.getGeneratedCodeComponent_ = function(options) {
   options = options || {};
 
   var codeInfoMsgParams = {
@@ -883,13 +886,7 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function(options) {
       options.generatedCodeDescription);
   var code = this.studioApp_.polishGeneratedCodeString(this.getGeneratedCodeString_());
 
-  var codeDiv = document.createElement('div');
-  codeDiv.innerHTML = require('./templates/code.html.ejs')({
-    message: infoMessage,
-    code: code
-  });
-
-  return codeDiv;
+  return (<Code message={infoMessage} code={code} />);
 };
 
 /**
@@ -919,24 +916,24 @@ FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParam
  *        to display instead of the usual show code description
  */
 FeedbackUtils.prototype.showGeneratedCode = function(Dialog, appStrings) {
-  var codeDiv = this.getGeneratedCodeElement_({
+  var codeDiv = document.createElement('div');
+
+  var generatedCodeComponent = this.getGeneratedCodeComponent_({
     generatedCodeDescription: appStrings && appStrings.generatedCodeDescription
   });
 
-  var buttons = document.createElement('div');
-  ReactDOM.render(React.createElement(DialogButtons, {
-    ok: true
-  }), buttons);
-  codeDiv.appendChild(buttons);
+  ReactDOM.render(<ShowCode
+    generatedCodeComponent={generatedCodeComponent}
+  />, codeDiv);
 
   var dialog = this.createModalDialog({
-      Dialog: Dialog,
-      contentDiv: codeDiv,
-      icon: this.studioApp_.icon,
-      defaultBtnSelector: '#ok-button'
-      });
+    Dialog: Dialog,
+    contentDiv: codeDiv,
+    icon: this.studioApp_.icon,
+    defaultBtnSelector: '#ok-button'
+  });
 
-  var okayButton = buttons.querySelector('#ok-button');
+  var okayButton = codeDiv.querySelector('#ok-button');
   if (okayButton) {
     dom.addClickTouchEvent(okayButton, function() {
       dialog.hide();
