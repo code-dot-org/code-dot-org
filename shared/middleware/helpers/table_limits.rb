@@ -34,7 +34,9 @@ class TableLimits
 
   # Decrements the approximate number of rows in `table`.
   def decrement_row_count
-    @redis.decr(@row_count_key)
+    count = @redis.decr(@row_count_key)
+    # Don't allow the count to become negative.
+    set_approximate_row_count(0) if count < 0
   rescue IOError
     # Swallow IO errors since the count is best effort only.
   end

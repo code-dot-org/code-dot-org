@@ -3,6 +3,7 @@ require 'cdo/db'
 require 'cdo/rack/request'
 require 'csv'
 require_relative './helpers/table_coerce'
+require_relative './helpers/table_limits'
 
 class TablesApi < Sinatra::Base
 
@@ -95,7 +96,10 @@ class TablesApi < Sinatra::Base
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     dont_cache
     TableType.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
-    TableMetadata.decrement_row_count(endpoint, channel_id, table_name)
+
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits.decrement_row_count
+
     no_content
   end
 
@@ -153,7 +157,8 @@ class TablesApi < Sinatra::Base
 
     # Zero out the approximate row count just in case the user creates a new table
     # with the same name.
-    TableMetadata.set_approximate_row_count(endpoint, channel_id, table_name, 0)
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits.set_approximate_row_count(endpoint, channel_id, table_name, 0)
 
     no_content
   end
