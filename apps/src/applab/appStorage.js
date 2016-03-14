@@ -2,7 +2,6 @@
 
 /* global Applab */
 
-var RecordListener = require('./RecordListener');
 var Firebase = require("firebase");
 
 /**
@@ -11,7 +10,6 @@ var Firebase = require("firebase");
 var AppStorage = module.exports;
 
 // HACKHACK: Need to make this configurable
-
 var BASE_DB_URL = 'https://radiant-fire-5518.firebaseio.com';
 
 var databaseCache = {};
@@ -168,7 +166,7 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
 AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var table = getTable(Applab.channelId, tableName);
   table.once("value", function(recordsRef) {
-    var records = recordsRef.val();
+    var records = recordsRef.val() || [];
     console.log(records);
     var recordArray = Object.keys(records).map(function(id) {
       return records[id];
@@ -212,7 +210,6 @@ AppStorage.updateRecord = function(tableName, record, onComplete, onError) {
  */
 AppStorage.deleteRecord = function(tableName, record, onComplete, onError) {
   var table = getTable(Applab.channelId, tableName);
-  var recordId = record.id;
   table.child(record.id).remove(function(error) {
     if (error) {
       onError(error);
@@ -221,8 +218,6 @@ AppStorage.deleteRecord = function(tableName, record, onComplete, onError) {
     }
   });
 };
-
-var recordListener = new RecordListener();
 
 /**
  * Listens to tableName for any changes to the data it contains, and calls
@@ -244,14 +239,24 @@ AppStorage.onRecordEvent = function(tableName, onRecord, onError) {
     return;
   }
 
-  if (!recordListener.setListener(tableName, onRecord)) {
-    onError('You are already listening for events on table "' + tableName + '". ' +
-      'only one event handler can be registered per table.');
-  }
+  var table = getTable(Applab.channelId, tableName);
+  // CONSIDER: Do we need to make sure a client doesn't hear about updates that it triggered?
+
+  table.on('child_added', function(childSnapshot, prevChildKey) {
+    onRecord(childSnapshot, 'create');
+  });
+
+  table.on('value', function(dataSnapshot) {
+    onRecord(dataSnapshot, 'update');
+  });
+
+  table.on('child_removed', function(oldChildSnapshot) {
+    onRecord({'id': oldChildSnapshot.id}, 'delete');
+  });
 };
 
 AppStorage.resetRecordListener = function () {
-  recordListener.reset();
+  getDatabase().off();
 };
 
 /**
@@ -298,6 +303,7 @@ AppStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onError)
   if (!jsonData || !jsonData.length) {
     return;
   }
+  // TODO: Test this; Implement overwrite.
   var tables = getDatabase(Applab.channelId).child('tables');
   var keyValues = getKeyValues(Applab.channelId);
   tables.set(jsonData, function(error) {
