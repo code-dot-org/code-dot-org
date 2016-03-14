@@ -76,29 +76,33 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">8</title>
-          <statement name="DO">
-            <block type="draw_colour" inline="true">
-              <value name="COLOUR">
-                <block type="colour_random"/>
-              </value>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE">45</title>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">8</title>
+              <statement name="DO">
+                <block type="draw_colour" inline="true">
+                  <value name="COLOUR">
+                    <block type="colour_random"/>
+                  </value>
                   <next>
-                    <block type="draw_move_by_constant">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">50</title>
+                    <block type="draw_turn_by_constant_dropdown">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE" config="45,60,90,120,180">45</title>
                       <next>
-                        <block type="draw_turn_by_constant">
-                          <title name="DIR">turnLeft</title>
-                          <title name="VALUE">90</title>
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">50</title>
                           <next>
-                            <block type="draw_move_by_constant">
-                              <title name="DIR">moveForward</title>
-                              <title name="VALUE">50</title>
+                            <block type="draw_turn_by_constant_dropdown">
+                              <title name="DIR">turnLeft</title>
+                              <title name="VALUE" config="45,60,90,120,180">90</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">50</title>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
@@ -106,9 +110,9 @@
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </solution_blocks>
