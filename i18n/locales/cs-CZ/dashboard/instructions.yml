@@ -235,6 +235,11 @@ cs:
       4-5 Artist For Loops 13_instruction: 'Tento návrh začal bez cyklu "pro" a bere až příliš mnoho bloků.  Použijte blok "for" k dokončení spirály.  Rada: Délka poslední linky je 250 pixelů.'
       4-5 Artist For Loops 14_instruction: 'Někdo začal kód, ale pak si uvědomil, že musí být rychlejší způsob! Použij blok "for" k nahrazení bloků a dokonči trojúhelníkovou spirálu. (Rada: Délka poslední linky je 300 pixelů.)'
       4-5 Artist For Loops 15_instruction: 'Někdo začal kód, ale pak si uvědomil, že musí být rychlejší způsob! Použij blok "for" k nahrazení bloků a dokonči šestihrannou spirálu. (Rada: Délka poslední linky je 200 pixelů.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: 'Jak můžeš počítat od 1 do 50? Uprav blok "for".'
       4-5 Artist For Loops 4_instruction: 'Dokonči blok "for" tak, aby počítal od 1 do 10 po 1.'
       4-5 Artist For Loops 6_instruction: 'Nakresli čtverce o stranách 50, 60, 70, 80 a 90 pixelů. Budeš potřebovat pětkrát použít funkci "nakreslit čtverec".'
@@ -1577,6 +1582,15 @@ cs:
       K-1 Maze Sequence Assessment 1_instruction: "Toto je test! \\r Táhni jedním způsobem, abys mne dostal k prasátku"
       K-1 Maze Sequence Assessment 2_instruction: "Toto je test! \\r Táhni jedním způsobem, abys mne dostal k prasátku."
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -3587,11 +3601,11 @@ cs:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

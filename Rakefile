@@ -34,7 +34,7 @@ namespace :lint do
     Dir.chdir(apps_dir) do
       HipChat.log 'Linting <b>apps</b> JavaScript...'
       # lint all js/jsx files in dashboardd/app/assets/javascript
-      RakeUtils.system 'grunt jshint:files --glob "../dashboard/app/**/*.js*(x)"'
+      RakeUtils.system './node_modules/.bin/eslint -c .eslintrc.js ../dashboard/app/ --ext .js,.jsx'
       # also do our standard apps lint
       RakeUtils.system 'npm run lint'
     end
@@ -234,9 +234,6 @@ namespace :build do
 end
 task :build => ['build:all']
 
-
-
-
 ##################################################################################################
 ##
 ##
@@ -286,7 +283,6 @@ def ensure_apps_package
   raise "No valid package found" unless package_found
 end
 
-
 namespace :install do
 
   # Create a symlink in the public directory that points at the appropriate blockly
@@ -308,7 +304,6 @@ namespace :install do
       RakeUtils.ln_s path, "#{git_path}/#{f}"
     end
   end
-
 
   task :apps do
     if local_environment?

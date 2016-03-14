@@ -231,6 +231,11 @@ ja:
       4-5 Artist For Loops 13_instruction: この設計は、for ループがないのでブロックをたくさん使っています！for ブロックを使ってスパイラルを完成させましょう。最後のラインの長さは 250 ピクセルです。
       4-5 Artist For Loops 14_instruction: '誰かがコードを書き始めたあとで、もっといい方法があることに途中で気づきました。ブロックを for ブロックに置き換えて、三角形のスパイラルを完成させましょう。（ヒント: 最後のラインの長さは 300 ピクセルです。）'
       4-5 Artist For Loops 15_instruction: '誰かがコードを書き始めたあとで、もっといい方法があることに途中で気づきました。ブロックを for ブロックに置き換えて、六角形のスパイラルを完成させましょう。（ヒント: 最後のラインの長さは 200 ピクセルです。）'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: どうやって 1 から 50 まで数えますか？for ブロックを使ってください。
       4-5 Artist For Loops 4_instruction: 1 から 10 まで、1 ずつ数えるように、for ブロックを完成させましょう。
       4-5 Artist For Loops 6_instruction: '1辺の長さが50、60、70、80、90の正方形をそれぞれ作ります。"正方形を描く" 関数を 5 回使ってください。'
@@ -1984,6 +1989,15 @@ ja:
         これはテストです！
         一つの方向に進み、次は違う方向に進んで、豚さんのところまで連れていってください。
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -4140,11 +4154,11 @@ ja:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

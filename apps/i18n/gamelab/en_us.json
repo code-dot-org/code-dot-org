@@ -18,6 +18,8 @@
   "dropletBlock_group.collide_signatureOverride": "[Group].collide(target)",
   "dropletBlock_group.displace_signatureOverride": "[Group].displace(target)",
   "dropletBlock_group.overlap_signatureOverride": "[Group].overlap(target)",
+  "dropletBlock_playSound_description": "Plays the MP3 sound file from the specified URL.",
+  "dropletBlock_playSound_param0_description": "The URL to a sound file. Can be an project asset name or external URL.",
   "dropletBlock_sprite.animation_signatureOverride": "[Sprite].animation",
   "dropletBlock_sprite.animation_description": "Returns the current animation.",
   "dropletBlock_sprite.height_signatureOverride": "[Sprite].height",

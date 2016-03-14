@@ -848,9 +848,9 @@
         "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
           700"
         Multiple Choice: "ვარიანტის არჩევა"
-        SET: "დაყენება"
-        SOUTH: "სამხრეთი"
-        SQUARE: "კვადრატი"
+        SET: SET
+        SOUTH: SOUTH
+        SQUARE: SQUARE
         Which word is spelled?: "რომელი სიტყვაა ჩაწერილი?"
       K-1 multi 4:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"

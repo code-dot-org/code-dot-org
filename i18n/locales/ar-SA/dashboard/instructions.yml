@@ -228,7 +228,9 @@ ar:
       2-3 Maze 7_instruction: ارشدني الى الشر الاخضر (تجنب من مادة تي ان تي)
       2-3 Maze 8_instruction: أوصلني الى الخنزير!
       2-3 Maze 9_instruction: ارشدني الى الشر الاخضر (تجنب من مادة تي ان تي)
-      2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
+      2-3 Maze Loops 1_instruction: |
+        Can you get me to the pig using 5 of the same
+        kind of blocks?
       2-3 Maze Loops 17_instruction: خذني إلى زهرة عباد الشمس!
       2-3 Maze Loops 18_instruction: خذني إلى زهرة عباد الشمس!
       2-3 Maze Loops 19_instruction: خذني إلى زهرة عباد الشمس!
@@ -283,6 +285,11 @@ ar:
       4-5 Artist For Loops 13_instruction: 'هذا التصميم بدأنا دون حلقة "لأجل"، وهو أخذ قطع كثيرة جداً!  استخدام كتلة "لأجل" لإكمال دوامة.  تلميح: طول السطر الأخير 250 بكسل.'
       4-5 Artist For Loops 14_instruction: 'شخص بدء تشغيل التعليمات البرمجية، ولكن أدرك بعد ذلك يجب أن يكون هناك طريقة أسرع! استخدام كتلة "لأجل" لاستبدال القطع وإكمال الدوامة الثلاثية. (تلميح: طول السطر الأخير 300 بكسل.)'
       4-5 Artist For Loops 15_instruction: 'شخص بدء تشغيل التعليمات البرمجية، ولكن أدرك بعد ذلك يجب أن يكون هناك طريقة أسرع! استخدام كتلة "لأجل" لاستبدال القطع وإكمال الدوامة الثلاثية. (تلميح: طول السطر الأخير 300 بكسل.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: 'كيف يمكن أن نحسب من 1 إلى 50؟ تحرير قطعة "لأجل".'
       4-5 Artist For Loops 4_instruction: 'إنجاز قطعة "لأجل" بحيث أنها تحسب من 1 إلى 10 من 1.'
       4-5 Artist For Loops 6_instruction: 'أرسم المربعات ذات الاوجه 50، 60، 70، 80 و 90 بكسل. سوف تحتاج إلى إستخدام دالة "أرسم مربع" خمس مرات.'
@@ -2175,12 +2182,10 @@ ar:
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
-      K-1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both the
-        jump and draw blocks
+      K-1 artist 1 level 10_instruction: رسم خط متقطع باستخدام كل من القفز ورسم الكتل
       K-1 artist 1 level 9_instruction: Draw this using three lines
-      K-1 Artist Loops 1_instruction: Draw this line by moving East 4 times.
-      K-1 Artist Loops 2_instruction: Now, draw the same line using a loop.
+      K-1 Artist Loops 1_instruction: رسم هذا الخط بالتنقل شرقا 4 مرات.
+      K-1 Artist Loops 2_instruction: والآن، رسم نفس الخط باستخدام حلقة.
       K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
       K-1 Artist Loops 4_instruction: |
         Could a loop help us draw the top of this
@@ -2360,6 +2365,15 @@ ar:
         Move one way, then another to
         get me to the pig.
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -4530,11 +4544,11 @@ ar:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

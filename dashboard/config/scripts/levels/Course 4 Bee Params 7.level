@@ -35,7 +35,8 @@
     "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nTry using your new function to collect all of this nectar.\r\n\r\n<br/>\r\n",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Do you see a pattern in how the number of nectar changes? \",\r\n  \"hint_id\": \"notice_pattern\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Notice that the nectar goes up in steps. What kind of block can you use to do the same thing many times while counting up?\",\r\n  \"hint_id\": \"count_with_for\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -298,29 +299,79 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
           <next>
-            <block type="variables_set" inline="false" deletable="false" movable="false">
+            <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">left</title>
               <value name="VALUE">
-                <block type="math_number" deletable="false" movable="false" editable="false">
+                <block type="math_number" uservisible="false">
                   <title name="NUM">0</title>
                 </block>
               </value>
               <next>
-                <block type="variables_set" inline="false" deletable="false" movable="false">
+                <block type="variables_set" inline="false" uservisible="false">
                   <title name="VAR">right</title>
                   <value name="VALUE">
-                    <block type="math_number" deletable="false" movable="false" editable="false">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">1</title>
                     </block>
                   </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_for" inline="true">
+              <title name="VAR">counter</title>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">25</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
                   <next>
                     <block type="maze_move">
                       <title name="DIR">moveForward</title>
                       <next>
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
+                        <block type="procedures_callnoreturn" inline="false">
+                          <mutation name="get many nectar">
+                            <arg name="direction"/>
+                            <arg name="nectars"/>
+                          </mutation>
+                          <value name="ARG0">
+                            <block type="variables_get">
+                              <title name="VAR">left</title>
+                            </block>
+                          </value>
+                          <value name="ARG1">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">ADD</title>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <title name="NUM">5</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
                           <next>
                             <block type="procedures_callnoreturn" inline="false">
                               <mutation name="get many nectar">
@@ -329,83 +380,14 @@
                               </mutation>
                               <value name="ARG0">
                                 <block type="variables_get">
-                                  <title name="VAR">left</title>
+                                  <title name="VAR">right</title>
                                 </block>
                               </value>
                               <value name="ARG1">
-                                <block type="math_number">
-                                  <title name="NUM">2</title>
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
                                 </block>
                               </value>
-                              <next>
-                                <block type="procedures_callnoreturn" inline="false">
-                                  <mutation name="get many nectar">
-                                    <arg name="direction"/>
-                                    <arg name="nectars"/>
-                                  </mutation>
-                                  <value name="ARG0">
-                                    <block type="variables_get">
-                                      <title name="VAR">right</title>
-                                    </block>
-                                  </value>
-                                  <value name="ARG1">
-                                    <block type="math_number">
-                                      <title name="NUM">1</title>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
-                                      <next>
-                                        <block type="maze_move">
-                                          <title name="DIR">moveForward</title>
-                                          <next>
-                                            <block type="procedures_callnoreturn" inline="false">
-                                              <mutation name="get many nectar">
-                                                <arg name="direction"/>
-                                                <arg name="nectars"/>
-                                              </mutation>
-                                              <value name="ARG0">
-                                                <block type="variables_get">
-                                                  <title name="VAR">left</title>
-                                                </block>
-                                              </value>
-                                              <value name="ARG1">
-                                                <block type="math_number">
-                                                  <title name="NUM">4</title>
-                                                </block>
-                                              </value>
-                                              <next>
-                                                <block type="maze_move">
-                                                  <title name="DIR">moveForward</title>
-                                                  <next>
-                                                    <block type="procedures_callnoreturn" inline="false">
-                                                      <mutation name="get many nectar">
-                                                        <arg name="direction"/>
-                                                        <arg name="nectars"/>
-                                                      </mutation>
-                                                      <value name="ARG0">
-                                                        <block type="variables_get">
-                                                          <title name="VAR">right</title>
-                                                        </block>
-                                                      </value>
-                                                      <value name="ARG1">
-                                                        <block type="math_number">
-                                                          <title name="NUM">3</title>
-                                                        </block>
-                                                      </value>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
                             </block>
                           </next>
                         </block>
@@ -413,7 +395,7 @@
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>

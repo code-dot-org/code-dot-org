@@ -215,6 +215,7 @@ bg:
       4-5 Artist For Loops 13_instruction: 'Този дизайн е започнат без цикъл "за" и е с твърде много блокове!  Използвайте блок "за", за да завършите спиралата.  Съвет: на последния ред дължината е 250 пиксела.'
       4-5 Artist For Loops 14_instruction: 'Някой е започнал кода, но след това е разбрал, че трябва да има по-бърз начин! Използвайте блок "за", за да замените блоковете и да завършите триъгълната спирала. (Съвет: в последния ред дължината е 300 пиксела.)'
       4-5 Artist For Loops 15_instruction: 'Някой започна кода, но след това разбрах, трябва да има бърз начин! Използвайте "за" блок да замени блокове и пълна шестоъгълни спирала. (Намек: дължината на последния ред е 200 пиксела.)'
+      4-5 Artist For Loops 2_instruction: 'Това е "за" блок. Вместо да въвеждате 1,2,3... 10, "за" блока може да повтаря блокове, които са вътре в него и да преброява числата за вас. Поставете 10 в раздела "до" на "за" блока.'
       4-5 Artist For Loops 3_instruction: 'Как може да преброим от 1 до 50? Редактирайте "за" блока.'
       4-5 Artist For Loops 4_instruction: 'Завършете "за" блока, така че той да брои от 1 до 10 през 1.'
       4-5 Artist For Loops 6_instruction: 'Начертайте квадрати със страни от 50, 60, 70, 80 и 90 пиксела. Трябва да използвате функцията "начертава квадрат" пет пъти.'
@@ -1417,6 +1418,15 @@ bg:
       K-1 Maze Sequence Assessment 1_instruction: "Така се тестват различни функции \"test!\\r\"\nПремести ме в една посока,\nпосле в друга, за да стигна до прасето"
       K-1 Maze Sequence Assessment 2_instruction: "Така се тестват различни функции \"test!\\r\"\nПремести ме в една посока,\nпосле в друга, за да стигна до прасето."
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -1876,11 +1886,7 @@ bg:
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
         get nectar from the flowers.
-      Quantum Bee_instruction: |
-        Purple flowers may have either 1 or 0 nectar, but
-        you don't know which one! Be careful not to collect nectar from a purple
-        flower if it doesn't have any. Check if the nectar is equal to 1 by using
-        the if block.
+      Quantum Bee_instruction: 'Лилавите цветя могат да имат 1 или 0 нектар, но не знаем кои имат и кои не! Бъдете внимателни и не събирайте от лилаво цвете, което няма нектар. Проверете дали нектара е равен на 1 с помощта на "ако" блок.'
       Ryan - 4-5 Bee Conditionals 2_instruction: Пчела иска нектар точно сега. Не всички обекти са цветя, така че проверете всеки ОБЛАК, за да се види дали отдолу се крие цвете. Ако е така, тогава можете да съберете нектар.
       Ryan - Bee Conditionals_instruction: Пчелата иска само нектар сега. Не всички обекти под облачетата са цветя, така че направете проверка и събирайте нектар само от цветята.
       Ryan Test Locked Blocks_instruction: |
@@ -3402,11 +3408,11 @@ bg:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

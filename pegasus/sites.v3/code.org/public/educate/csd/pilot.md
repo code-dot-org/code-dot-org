@@ -14,8 +14,8 @@ If we aren't able to accept you into the official pilot group, but you would sti
 
 _Before applying:_ Please read the full [Term Sheet](/educate/csd/pilot/terms) before applying to understand the full committment we're asking of pilot teachers. Also note that teachers in Code.org partner districts will be given priority for acceptance.
 
-## <a name="overview"></a>Apply Now
-Applications will be processed on a rolling-basis.
+## <a name="overview"></a>Apply Now through March 31st
+Applications will be processed on a rolling basis. The application period closes March 31st, 2016, so apply now if you are interested!
 
 
 <iframe src="https://docs.google.com/forms/d/1DBTpBGKCWTtbm7oU-gZSEuAxvO61h4pOqBK8PgRS04k/viewform?embedded=true" width="760" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>

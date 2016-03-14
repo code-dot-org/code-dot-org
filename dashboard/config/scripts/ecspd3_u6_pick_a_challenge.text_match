@@ -1,0 +1,37 @@
+name 'ECSPD3-u6 pick a challenge'
+css 'unplugged'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+### Unit 6 Challenge > What's your Challenge?  
+ 
+<br/> 
+#### Enter the lesson you selected for your challenge in the text box below. 
+ 
+##### From the curriculum
+
+- Day: 1 What is a robot / what makes a computer robotic?
+- Days: 2-3 Evaluate robot body designs and  algorithms that control robot behavior
+- Day: 4 Set up the Lego kit  
+- Day: 5 Build robot base
+- Day: 6-7 Introduce NXT brick features 
+- Day: 8-9 Introduce NXT software
+- Day: 10-13 Program robot using tutorials (using sensors for input) 
+- Day: 14 Describe RoboCup & RoboCupJunior  
+- Day: 15 Human robot tic-tac-toe 
+- Days: 16-18 Program dancing robot
+- Days 19-23 Program rescue robot
+- Days 24-33 Final projects and presentations
+
+##### Alternative Topics
+
+- Online simulations
+- Physical computing options
+- Projects and portfolios
+
+>Now that you've selected a challenge topic, **share what you plan to do** for your challenge.  <a href="http://forum.code.org/c/ecs/ecs-unit6" target=_blank>Head to the Forums >> </a> 
+ 
+<br>
+
+MARKDOWN

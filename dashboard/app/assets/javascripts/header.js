@@ -237,7 +237,6 @@ dashboard.header = (function () {
           textAlign: 'left'
         }))
     );
-    $(".header_level_container .progress_container").css("vertical-align", 'top');
 
     header.updateTimestamp();
   };

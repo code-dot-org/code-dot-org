@@ -213,6 +213,11 @@ sv:
       4-5 Artist For Loops 13_instruction: 'Denna konstruktion påbörjades utan en "räkna med"-slinga och använder alltför många block!  Använda ett "räkna med"-block för att slutföra spiralen. Tips: sista linjens längd är 250 pixlar.'
       4-5 Artist For Loops 14_instruction: 'Någon påbörjade koden, men insåg sedan att det måste finnas ett snabbare sätt! Använd ett "räkna med"-block för att ersätta blocken och slutför den triangulära spiralen. (Tips: sista radens längd är 300 pixlar.)'
       4-5 Artist For Loops 15_instruction: 'Någon påbörjade koden, men insåg sedan att det måste finnas ett snabbare sätt! Använd ett "räkna med"-block för att ersätta blocken och slutför den sexkantiga spiralen. (Tips: sista radens längd är 200 pixlar.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: 'Hur kan vi räkna från 1 till 50? Ändra "räkna med"-blocket.'
       4-5 Artist For Loops 4_instruction: 'Slutför "räkna med"-blocket så att det räknar från 1 till 10 med 1-steg.'
       4-5 Artist For Loops 6_instruction: 'Rita kvadrater med sidorna 50, 60, 70, 80 och 90 pixlar. Du måste använda funktionen "Rita en kvadrat" fem gånger.'
@@ -1520,6 +1525,15 @@ sv:
       K-1 Maze Sequence Assessment 1_instruction: "Detta är ett test! \\r flytta i en riktning, sedan en annan att få mig till grisen"
       K-1 Maze Sequence Assessment 2_instruction: "Detta är ett test! \\r flytta i en riktning, sedan i en annan att få mig till grisen."
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -3520,11 +3534,11 @@ sv:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)

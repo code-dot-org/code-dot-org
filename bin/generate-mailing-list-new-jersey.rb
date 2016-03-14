@@ -156,7 +156,6 @@ UNSUBSCRIBERS = {}.tap do |results|
 end
 puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
-
 TEACHERS = {}.tap do |results|
   (
   query_contacts(q: 'kind_s:"user" && role_s:"teacher" && create_ip_state_s:"New Jersey"') +

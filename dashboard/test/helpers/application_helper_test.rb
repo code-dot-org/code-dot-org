@@ -217,7 +217,6 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal 'http://code.org/images/logo.png', meta_image_url(level_source: create(:level_source_image).level_source)
   end
 
-
   private
   def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)

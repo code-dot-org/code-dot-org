@@ -4,11 +4,9 @@
 
 class ReportsController < ApplicationController
   before_filter :authenticate_user!, except: [:header_stats]
-
-  check_authorization except: [:header_stats, :students]
+  check_authorization except: [:header_stats]
 
   before_action :set_script
-  include LevelSourceHintsHelper
 
   def header_stats
     if params[:section_id].present?
@@ -29,29 +27,8 @@ class ReportsController < ApplicationController
     authorize! :read, current_user
   end
 
-  def assume_identity_form
-    authorize! :manage, :all
-  end
-
-  def assume_identity
-    authorize! :manage, :all
-
-    user = User.where(:id => params[:user_id]).first
-    user ||= User.where(:username => params[:user_id]).first
-    user ||= User.find_by_email_or_hashed_email params[:user_id]
-
-    if user
-      sign_in user, :bypass => true
-      redirect_to '/'
-    else
-      flash[:alert] = 'User not found'
-      render :assume_identity_form
-    end
-  end
-
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_script
     @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
   end

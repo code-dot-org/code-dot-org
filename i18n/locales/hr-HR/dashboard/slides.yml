@@ -482,21 +482,20 @@ hr:
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle and see what directions it needs to take.
+        text: U ovoj slagalici trebaš pticu dovesti do svinje. Pogledaj slagalicu i vidi u kojem smjeru ptica treba ići.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: |-
-          You need to drag the blocks over from the toolbox to the workspace. Make sure it's under the "when run" block and when you think you've got the right solution, then you can click "Run" and watch the bird go to the pig.
+        text: 'Odvuci blokove u Radnu površinu. Provjeri jesi li tvoj blok ispod bloka "Pri pokretanju" i kada misliš da si napravio točno rješenje klikni "Pokreni" i pogledaj kako ptica ide do svinje.'
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: Računala su posebno dobra u ponavljanju naredbi. Nama, ponavljanje iste naredbe iznova i iznova može biti stvarno dosadno. Ali računala mogu ponoviti istu stvar milijunima, čak i milijardama puta i nije im dosadno.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: Na primjer, ako želim svima na Facebooku poslati e-poruku za rođendan, trebalo mi gotovo cijelo stoljeće da stvarno napišem sve te poruke i pošaljem. No, sa samo nekoliko linija koda, sustav može poslati moju poruku svima na Facebooku i poželjeti im sve najbolje za rođendan.
       3:
         image: notes/C1_maze_loops_3.png
-        text: 'To get the bird to the pig in this level... rather than drag three North blocks on to the workspace, you will use the "repeat" block. Drag the "repeat" block on to the workspace and enter the number 3. Then drag the "move North" block into the "repeat" block and hit "Run" to see if you got it right. Congratulations, you got it!'
+        text: 'Umjesto da tri puta vučete blok "Sjever" u radnu površinu, na ovom nivou ćemo dovesti pticu do svinje koristeći blok "Ponovi". Odvuci blok "Ponovi" na radnu površinu, upiši broj 3. Onda odvuci blok "Sjever" unutar bloka "Ponovi" i klikni "Pokreni" za provjeru. Čestitam! Uspio si!'
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
@@ -510,11 +509,10 @@ hr:
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: |-
-          My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
+        text: 'Zovem se Jeremiah. Bok! Imam sedam godina. Obožavam se igrati na maminom računalu, ali uvijek prvo dobijem dozvolu za to. "Mama, mogu li ići na tvoje računalo? Naravno, dušo!"'
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: Volim mamino računalo jer mogu ići na internet. Internet je sličan našem susjedstvu. Možeš posjetiti zabavna mjesta, pričati s obitelji i prijateljima i naučiti puno novih stvari.
       3:
         image: notes/C1_going_places_safely_3.png
         text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
@@ -584,10 +582,10 @@ hr:
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: Računala su posebno dobra u ponavljanju naredbi. Nama, ponavljanje iste naredbe iznova i iznova može biti stvarno dosadno. Ali računala mogu ponoviti istu stvar milijunima, čak i milijardama puta i nije im dosadno.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: Na primjer, ako želim svima na Facebooku poslati e-poruku za rođendan, trebalo mi gotovo cijelo stoljeće da stvarno napišem sve te poruke i pošaljem. No, sa samo nekoliko linija koda, sustav može poslati moju poruku svima na Facebooku i poželjeti im sve najbolje za rođendan.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."

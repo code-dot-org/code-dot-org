@@ -416,6 +416,7 @@ zh:
     applab:
       title: 应用实验室
       body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
       audience: Ages 13+
       cta: Learn how
     hoc:
@@ -495,6 +496,9 @@ zh:
     placeholder: 在这里输入你的答案
     open_response_title: 感谢
     open_response_body: 感谢您的回复！
+  level_group:
+    correct_title: 谢谢你
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: 确定
     startover_title: 你确定要重新开始吗？

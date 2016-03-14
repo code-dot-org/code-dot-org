@@ -181,12 +181,12 @@
         course4:
           description_short: Os alunos do Curso 4 já deverão ter concluído os Cursos
             2 e 3.
-          description: O Curso 4 foi elaborado para os alunos que já concluíram os
-            Cursos 2 e 3. Os alunos mergulharão mais fundo nos tópicos da programação
-            apresentados nos cursos anteriores, para obter soluções flexíveis para
-            problemas mais complexos. Ao final deste curso, os alunos vão criar histórias
-            e jogos interativos que poderão ser compartilhados com qualquer pessoa.
-            Recomendado para alunos do 4º ao 8º ano.
+          description: O Curso 4 é projetado para estudantes que já fizeram os cursos
+            2 e 3. Os alunos irão resolver quebra-cabeças com uma complexidade maior,
+            na medida que aprendem a combinar vários conceitos em cada desafio. No
+            fim deste curso, os alunos criarão programas que os permitam utilizar
+            habilidades múltiplas, incluindo laços e funções com parâmetros. Recomendado
+            para idades entre 4 e 8 anos.
           'Artist: Variables': 'Artista: variáveis'
           'Bee: For Loops': 'Abelha: laços for'
           title: Curso 4
@@ -1498,6 +1498,9 @@
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1613,6 +1616,7 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Laboratório da Era do Gelo
           description_short: Crie uma história ou faça um jogo com o Laboratório da
@@ -1756,6 +1760,7 @@
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4
