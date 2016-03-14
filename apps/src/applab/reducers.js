@@ -1,11 +1,5 @@
 /** @file Redux reducer functions for App Lab.
  *  @see http://redux.js.org/docs/basics/Reducers.html */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var ActionType = require('./actions').ActionType;
