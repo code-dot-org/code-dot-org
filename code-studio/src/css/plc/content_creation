@@ -1,8 +1,8 @@
-.outlinedSection {
+.outlined_section {
   border: 1px solid;
   padding: 1em;
 }
 
-.newLink {
+.new_link {
   margin-top: 24px;
 }
