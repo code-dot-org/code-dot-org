@@ -36,8 +36,7 @@ var KeyCodes = constants.KeyCodes;
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var DialogButtons = require('./templates/DialogButtons.jsx');
 var CodeWritten = require('./templates/feedback/CodeWritten.jsx');
-var ShowCode = require('./templates/feedback/ShowCode.jsx');
-var Code = require('./templates/feedback/Code.jsx');
+var GeneratedCode = require('./templates/feedback/GeneratedCode.jsx');
 
 /**
  * @typedef {Object} TestableBlock
@@ -810,15 +809,13 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
       (options.response.total_lines !== numLinesWritten));
   var totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
 
-  var generatedCodeElement = this.getGeneratedCodeComponent_({
+  var generatedCodeProperties = this.getGeneratedCodeProperties_({
     generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
   });
 
-  ReactDOM.render(<CodeWritten
-    numLinesWritten = {numLinesWritten}
-    totalNumLinesWritten = {totalNumLinesWritten}
-    generatedCodeElement = {generatedCodeElement}
-  />, showCodeDiv);
+  ReactDOM.render(<CodeWritten numLinesWritten={numLinesWritten} totalNumLinesWritten={totalNumLinesWritten}>
+    <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
+  </CodeWritten>, showCodeDiv);
 
   var showCodeDetails = showCodeDiv.querySelector('details.show-code');
   $(showCodeDetails).details();
@@ -874,7 +871,7 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
  * @returns {React}
  * @private
  */
-FeedbackUtils.prototype.getGeneratedCodeComponent_ = function(options) {
+FeedbackUtils.prototype.getGeneratedCodeProperties_ = function(options) {
   options = options || {};
 
   var codeInfoMsgParams = {
@@ -882,11 +879,14 @@ FeedbackUtils.prototype.getGeneratedCodeComponent_ = function(options) {
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var infoMessage = this.getGeneratedCodeDescription(codeInfoMsgParams,
+  var message = this.getGeneratedCodeDescription(codeInfoMsgParams,
       options.generatedCodeDescription);
   var code = this.studioApp_.polishGeneratedCodeString(this.getGeneratedCodeString_());
 
-  return (<Code message={infoMessage} code={code} />);
+  return {
+    message: message,
+    code: code
+  };
 };
 
 /**
@@ -918,13 +918,14 @@ FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParam
 FeedbackUtils.prototype.showGeneratedCode = function(Dialog, appStrings) {
   var codeDiv = document.createElement('div');
 
-  var generatedCodeComponent = this.getGeneratedCodeComponent_({
+  var generatedCodeProperties = this.getGeneratedCodeProperties_({
     generatedCodeDescription: appStrings && appStrings.generatedCodeDescription
   });
 
-  ReactDOM.render(<ShowCode
-    generatedCodeComponent={generatedCodeComponent}
-  />, codeDiv);
+  ReactDOM.render(<div>
+    <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
+    <DialogButtons ok={true} />
+  </div>, codeDiv);
 
   var dialog = this.createModalDialog({
     Dialog: Dialog,
