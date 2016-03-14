@@ -278,7 +278,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 0, Activity.last.lines
   end
 
-
   test "logged in milestone does not allow unreasonably high lines of code" do
     expect_controller_logs_milestone_regexp(/9999999/)
 
@@ -506,7 +505,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = build_try_again_response(hint: hint.hint)
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
-
 
   test "logged in milestone with image not passing" do
     # do all the logging
@@ -945,7 +943,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
   end
-
 
   test 'sharing program with IO::EAGAINWaitReadable error slogs' do
     WebPurify.stubs(:find_potential_profanity).raises(IO::EAGAINWaitReadable)

@@ -199,11 +199,6 @@ Style/EmptyElse:
 Style/EmptyLineBetweenDefs:
   Enabled: false
 
-# Offense count: 142
-# Cop supports --auto-correct.
-Style/EmptyLines:
-  Enabled: false
-
 # Offense count: 20
 # Cop supports --auto-correct.
 Style/EmptyLinesAroundAccessModifier:
@@ -305,11 +300,6 @@ Style/MethodDefParentheses:
 Style/MultilineBlockChain:
   Enabled: false
 
-# Offense count: 4
-# Cop supports --auto-correct.
-Style/MultilineBlockLayout:
-  Enabled: false
-
 # Offense count: 105
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
@@ -336,10 +326,6 @@ Style/MutableConstant:
 # Offense count: 26
 # Cop supports --auto-correct.
 Style/NegatedIf:
-  Enabled: false
-
-# Offense count: 5
-Style/NestedParenthesizedCalls:
   Enabled: false
 
 # Offense count: 18
@@ -459,11 +445,6 @@ Style/SpaceBeforeFirstArg:
 # Configuration parameters: EnforcedStyle, SupportedStyles, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
 # SupportedStyles: space, no_space
 Style/SpaceInsideBlockBraces:
-  Enabled: false
-
-# Offense count: 14
-# Cop supports --auto-correct.
-Style/SpaceInsideBrackets:
   Enabled: false
 
 # Offense count: 1987

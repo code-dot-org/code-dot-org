@@ -70,7 +70,6 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert_equal 360, @dcdo.get('public_max_age', nil)
   end
 
-
   def test_allows
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, ['script'])
 

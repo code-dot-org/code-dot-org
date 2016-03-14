@@ -7,28 +7,39 @@ var colors = require('../sharedJsxStyles').colors;
 var Alert = React.createClass({
   propTypes: {
     children: React.PropTypes.element.isRequired,
-    onClose: React.PropTypes.func.isRequired
+    type: React.PropTypes.oneOf("error", "warning").isRequired,
+    onClose: React.PropTypes.func.isRequired,
+    sideMargin: React.PropTypes.number,
   },
 
   render: function () {
     var styles = {
       main: {
-        position: 'absolute',
+        position: 'relative',
         zIndex: 1000,
-        top: 45,
-        left: 350,
-        right: 50
+        marginTop: 20,
+        marginLeft: this.props.sideMargin || 50,
+        marginRight: this.props.sideMargin || 50
+      },
+      typeSpecific: {
+        error: {
+          borderColor: colors.bootstrap.errorBorder,
+          backgroundColor: colors.bootstrap.errorBackground,
+          color: colors.bootstrap.errorText
+        },
+        warning: {
+          borderColor: colors.bootstrap.warningBorder,
+          backgroundColor: colors.bootstrap.warningBackground,
+          color: 'black'
+        },
       },
       child: {
         // from bootstrap's alert
         padding: '8px 35px 8px 14px',
         marginBottom: 20,
         textShadoow: '0 1px 0 rgba(255, 255, 255, 0.5)',
-        border: '1px solid #fbeed5',
+        border: '1px solid',
         borderRadius: 4,
-        // from alert-error
-        backgroundColor: colors.bootstrap.errorBackground,
-        color: colors.bootstrap.errorText
       },
       closeButton: {
         margin: 0,
@@ -51,9 +62,11 @@ var Alert = React.createClass({
       }
     };
 
+    var childStyle = $.extend({}, styles.child, styles.typeSpecific[this.props.type]);
+
     return (
       <div style={styles.main}>
-        <div style={styles.child}>
+        <div style={childStyle}>
           <button style={styles.closeButton}>
             <span onClick={this.props.onClose}>&times;</span>
           </button>
