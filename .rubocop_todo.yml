@@ -451,11 +451,6 @@ Style/SpaceBeforeFirstArg:
 Style/SpaceInsideBlockBraces:
   Enabled: false
 
-# Offense count: 14
-# Cop supports --auto-correct.
-Style/SpaceInsideBrackets:
-  Enabled: false
-
 # Offense count: 1987
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
