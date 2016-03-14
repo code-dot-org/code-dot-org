@@ -33,4 +33,8 @@ class Plc::Task < ActiveRecord::Base
   def self.underscored_task_type
     self.name.demodulize.underscore
   end
+
+  def self.task_assignment_type
+    Plc::EnrollmentTaskAssignment
+  end
 end
