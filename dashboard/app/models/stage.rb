@@ -75,26 +75,13 @@ class Stage < ActiveRecord::Base
         levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
     }
 
-    # Go through all levels.  If we find an assessment more than one page,
-    # then it's a long assessment: we assume it's the final level in the
-    # stage, and generate some placeholder levels for the subsequent pages
-    # of the long assessment.  Each of those levels will have the same basic
-    # URL as the first, but with ?page=1, ?page=2, etc.
-
-    level = stage_data[:levels].last
-    if level[:kind] == "assessment"
-      level_info = Script.cache_find_level(level[:id])
-      if level_info[:properties]["pages"] && level_info[:properties]["pages"].length > 1
-        extraLevelCount = level_info[:properties]["pages"].length - 1
-        (1..extraLevelCount).each do |pageIndex|
-          newLevel = level.deep_dup
-          newLevel[:url] << "/page/#{pageIndex + 1}"
-          newLevel[:position] = level[:position] + pageIndex
-          newLevel[:title] = level[:position] + pageIndex
-          stage_data[:levels] << newLevel
-        end
-        level[:url] << "/page/1"
-      end
+    # The last level in a stage might be a multi-page assessment, in which
+    # case we'll receive extra puzzle pages to be added to the existing summary.
+    last_level_summary = stage_data[:levels].last
+    extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
+    unless extra_levels.empty?
+      stage_data[:levels] += extra_levels
+      last_level_summary[:url] << "/page/1"
     end
 
     if script.has_lesson_plan?
