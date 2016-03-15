@@ -15,8 +15,8 @@ var GameLabView = React.createClass({
     interfaceMode: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
-    renderCodeWorkspace: React.PropTypes.func.isRequired,
-    renderVisualizationColumn: React.PropTypes.func.isRequired,
+    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
+    generateVisualizationColumnHtml: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
 
@@ -45,11 +45,11 @@ var GameLabView = React.createClass({
       <div style={codeModeStyle}>
         <div id="visualizationColumn">
           {this.shouldShowHeader() && <GameLabVisualizationHeader/>}
-          <ProtectedStatefulDiv renderContents={this.props.renderVisualizationColumn} />
+          <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <ProtectedStatefulDiv id="codeWorkspace">
-          <ProtectedStatefulDiv id="codeWorkspaceWrapper" renderContents={this.props.renderCodeWorkspace}/>
+          <ProtectedStatefulDiv id="codeWorkspaceWrapper" contentFunction={this.props.generateCodeWorkspaceHtml}/>
         </ProtectedStatefulDiv>
       </div>
     );

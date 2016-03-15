@@ -138,7 +138,7 @@ GameLab.prototype.init = function (config) {
     showConsole: true
   });
 
-  var renderCodeWorkspace = function () {
+  var generateCodeWorkspaceHtmlFromEjs = function () {
     return codeWorkspaceEjs({
       assetUrl: this.studioApp_.assetUrl,
       data: {
@@ -154,7 +154,7 @@ GameLab.prototype.init = function (config) {
     });
   }.bind(this);
 
-  var renderVisualizationColumn = function () {
+  var generateVisualizationColumnHtmlFromEjs = function () {
     return visualizationColumnEjs({
       assetUrl: this.studioApp_.assetUrl,
       data: {
@@ -191,8 +191,8 @@ GameLab.prototype.init = function (config) {
 
   ReactDOM.render(<Provider store={this.reduxStore_}>
     <GameLabView
-      renderCodeWorkspace={renderCodeWorkspace}
-      renderVisualizationColumn={renderVisualizationColumn}
+      generateCodeWorkspaceHtml={generateCodeWorkspaceHtmlFromEjs}
+      generateVisualizationColumnHtml={generateVisualizationColumnHtmlFromEjs}
       onMount={onMount} />
   </Provider>, document.getElementById(config.containerId));
 };
