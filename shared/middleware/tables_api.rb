@@ -193,7 +193,7 @@ class TablesApi < Sinatra::Base
     limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
     row_count = limits.get_approximate_row_count
     if row_count >= @@max_table_rows
-      halt 413, {}, "Too many rows, a table may have at most #{@@max_table_rows} rows"
+      halt 403, {}, "Too many rows, a table may have at most #{@@max_table_rows} rows"
     end
     limits.increment_row_count
 
