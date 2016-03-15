@@ -4,7 +4,7 @@ var IconLibrary = require('./IconLibrary.jsx');
 /**
  * A component for managing hosted assets.
  */
-module.exports = React.createClass({
+var ImagePicker = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
     typeFilter: React.PropTypes.string,
@@ -69,3 +69,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = ImagePicker;
