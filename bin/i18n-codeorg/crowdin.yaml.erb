@@ -1,8 +1,7 @@
 ---
 project_identifier: codeorg
 api_key: <%= CDO.crowdin_codeorg_api_key %>
-base_url: https://api.crowdin.com
-base_path: '../locales'
+base_path: 'i18n/locales'
 
 files:
   - 
@@ -11,7 +10,7 @@ files:
     update_option: 'update_as_unapproved'
     ignore:
       - /source/hourofcode
-      
+      - /source/dashboard/dsls.yml
   - 
     source: '/source/**/*.json'
     translation: '/%language%/**/%original_file_name%'
@@ -21,4 +20,5 @@ files:
       - /source/blockly-mooc/applab.json
       - /source/blockly-mooc/calc.json
       - /source/blockly-mooc/eval.json
+      - /source/blockly-mooc/gamelab.json
       - /source/blockly-mooc/netsim.json
