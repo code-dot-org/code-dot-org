@@ -83,9 +83,9 @@ content-type: text/ng-template
           Import
         %span
 
-          %form#import-form{"ng-show" => "importing", "method" => "POST", "enctype" => "multipart/form-data", "accept" => ".csv", "action" => "{{'/v3/import-shared-tables/' + channelId + '/' + tableName}}"}
-            %input.btn.btn-danger{"type" => "submit", "value" => "Overwrite & Import"}
-            %input#select-file{"name" => "import_file", "type" => "file"}
+          %form#import-form{"ng-show" => "importing", "method" => "POST", "enctype" => "multipart/form-data", "action" => "{{'/v3/import-shared-tables/' + channelId + '/' + tableName}}"}
+            %input.btn.btn-danger{"type" => "submit", "value" => "Overwrite & Import", "ng-disabled" => "!fileSelected"}
+            %input#select-file{"name" => "import_file", "type" => "file", "accept" => ".csv", "onchange" => "angular.element(this).scope().selectedFile(this)"}
 
 
 
