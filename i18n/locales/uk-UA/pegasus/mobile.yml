@@ -619,6 +619,7 @@ uk-UA:
   dashboard_progress_completed_too_many_blocks: завершено, забагато блоків
   dashboard_progress_completed_perfect: виконано, ідеально
   dashboard_progress_furthest_level_attempted: останній відкритий рівень
+  dashboard_progress_submitted: submitted
   dashboard_stage: Етап
   dashboard_puzzle: Завдання
   dashboard_question: Питання

@@ -690,6 +690,7 @@
     completed_perfect: hoàn thành, hoàn hảo
     furthest_level_attempted: "đã cố gắng ở mức độ cao nhất"
     assessment: "đánh giá"
+    submitted: submitted
   studio:
     courses_working_on: Các khóa học bạn đang tiến hành
     completed_courses: Hoàn thành khóa học

@@ -577,6 +577,7 @@ zh-CN:
   dashboard_progress_completed_too_many_blocks: 完成，使用太多块
   dashboard_progress_completed_perfect: 完美完成
   dashboard_progress_furthest_level_attempted: 尝试过最远的关卡
+  dashboard_progress_submitted: submitted
   dashboard_stage: 阶段
   dashboard_puzzle: 关卡
   dashboard_question: 问题

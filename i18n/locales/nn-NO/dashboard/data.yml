@@ -1,112 +1,112 @@
-nn:
+"no":
   data:
     script:
       name:
         20-hour:
-          desc: 'Introduksjon til informatikk for barne- og ungdomstrinnet'
-          Unplug1: Steg 1
-          Maze: Steg 2
-          Unplug2: Steg 3
-          Unplug3: Steg 4
-          Artist: Steg 5
-          Unplug4: Steg 6
-          Artist2: Steg 7
-          Unplug5: Steg 8
-          Farmer: Steg 9
-          Unplug6: Steg 10
-          Artist3: Steg 11
-          Unplug7: Steg 12
-          Farmer2: Steg 13
-          Unplug8: Steg 14
-          Artist4: Steg 15
-          Unplug9: Steg 16
-          Farmer3: Steg 17
-          Unplug10: Steg 18
-          Artist5: Steg 19
-          Unplug11: Steg 20
+          desc: Introduksjon til Informatikk for barne-og ungdomsskolen
+          Unplug1: Trinn 1
+          Maze: Trinn 2
+          Unplug2: Trinn 3
+          Unplug3: Trinn 4
+          Artist: Trinn 5
+          Unplug4: Trinn 6
+          Artist2: Trinn 7
+          Unplug5: Trinn 8
+          Farmer: Trinn 9
+          Unplug6: Nivå 10
+          Artist3: Nivå 11
+          Unplug7: Nivå 12
+          Farmer2: Nivå 13
+          Unplug8: Nivå 14
+          Artist4: Nivå 15
+          Unplug9: Nivå 16
+          Farmer3: Nivå 17
+          Unplug10: Nivå 18
+          Artist5: Nivå 19
+          Unplug11: Nivå 20
         Hour of Code:
           desc: Kodetimen
-          Maze: Steg 1
+          Maze: Trinn 1
         Edit Code:
           desc: Rediger kode (beta)
-          MazeEC: Steg 1
+          MazeEC: Trinn 1
         2014 Levels:
           desc: Sprett (beta)
-          Bounce: Steg 1
+          Bounce: Trinn 1
         Builder Levels:
-          desc: Brukarane sine oppgåver (beta)
-          Custom: Steg 1
+          desc: Brukeropprettede oppgaver (beta)
+          Custom: Trinn 1
         Flappy Levels:
-          desc: Flaksefugl
-          Flappy: Steg 1
+          desc: Fuglen Flappy
+          Flappy: Trinn 1
         Jigsaw Levels:
-          desc: Puslespel (beta)
-          Jigsaw: Steg 1
+          desc: Puslespill (beta)
+          Jigsaw: Trinn 1
         Step Levels:
           desc: Labyrint (beta)
           MazeStep: Scenesteg
         edit-code:
           desc: Rediger kode (beta)
-          MazeEC: Steg 1
-          Applab: Steg 2
-          ArtistEC: Steg 3
-          StudioEC: Steg 4
+          MazeEC: Trinn 1
+          Applab: Trinn 2
+          ArtistEC: Trinn 3
+          StudioEC: Trinn 4
         events:
           desc: Sprett (beta)
-          Bounce: Steg 1
-          Studio: Steg 2
+          Bounce: Trinn 1
+          Studio: Trinn 2
         builder:
-          desc: Brukarane sine oppgåver (beta)
-          Custom: Steg 1
+          desc: Brukeropprettede oppgaver (beta)
+          Custom: Trinn 1
         flappy:
-          desc: Flaksefugl
-          Flappy: Steg 1
+          desc: Fuglen Flakse
+          Flappy: Trinn 1
         jigsaw:
-          desc: Puslespel (beta)
-          Jigsaw: Steg 1
+          desc: Puslespill (beta)
+          Jigsaw: Trinn 1
         step:
           desc: Labyrint (beta)
           MazeStep: Scenesteg
         wordsearch:
           desc: Stavekonkurranse (beta)
-          WordSearch: Steg 1
+          WordSearch: Trinn 1
     game:
       name:
         Unplug1: Introduksjon til informatikk
         Maze: Labyrinten
-        Multi: Fleirvalsprøver
-        Unplug2: Programmeringstenking
-        Unplug3: Programmering på millimeterpapir
-        Artist: Kunstnaren
+        Multi: Ting med flere valg
+        Unplug2: Programmeringstenkning
+        Unplug3: Millimeterpapirprogrammering
+        Artist: Kunstneren
         Unplug4: Algoritmer
-        Artist2: Kunstnaren 2
-        Unplug5: Funksjonar
+        Artist2: Kunstneren 2
+        Unplug5: Funksjoner
         Farmer: Bonden
         Unplug6: Betingelser
-        Artist3: Kunstnaren 3
+        Artist3: Kunstneren 3
         Unplug7: Låtskriving
         Farmer2: Bonden 2
         Unplug8: Abstraksjon
-        Artist4: Kunstnaren 4
-        Unplug9: Programmeringsstafett
+        Artist4: Kunstneren 4
+        Unplug9: Relé-programmering
         Farmer3: Bonden 3
         Unplug10: Internett
-        Artist5: Kunstnaren 5
+        Artist5: Kunstneren 5
         Unplug11: Oppsummering
         MazeEC: Labyrinten
-        Bounce: Sprett
-        Flappy: Flaksefugl
+        Bounce: sprett
+        Flappy: Fuglen Flakse
         Jigsaw: Puslespill
-        MazeStep: Labyrint steg for steg
-        Wordsearch: Ordsøk
+        MazeStep: Labyrint trinn modus
+        Wordsearch: Tekstsøk
         Webapp: App Lab
-        ArtistEC: Kunstnaren
+        ArtistEC: Kunstneren
         TextMatch: Teksttreff
-        StudioEC: Spel-lab
+        StudioEC: Spill-lab
         Applab: App Lab
-        NetSim: Internettsimulator
-        Custom: Kunstnar
-        CustomStudio: Spel-lab
+        NetSim: Internett Simulator
+        Custom: Kunstner
+        CustomStudio: Spill-lab
     trophy:
       name:
         Bronze: Bronse
@@ -115,150 +115,150 @@ nn:
     concept:
       description:
         sequence: Sekvens
-        if: Viss-blokk
-        if_else: Viss-elles blokk
-        loop_times: Gjenta-gonger-blokk
-        loop_until: Gjenta-til-blokk
-        loop_while: Medan-blokk
-        loop_for: Teljar-blokk
-        function: Funksjonar
-        parameters: Funksjonar med parameter
+        if: Hvis-blokk
+        if_else: Hvis-ellers blokk
+        loop_times: En blokk for å gjenta noe et antall ganger
+        loop_until: Gjenta inntil blokk
+        loop_while: Gjenta så lenge blokk
+        loop_for: Gjenta med Teller-blokk
+        function: Funksjoner
+        parameters: Funksjoner med parametre
     level:
       instructions:
-        maze_2_2: 'Kan du hjelpe meg med å fange den slemme grisen? Set saman et par «framover»-blokker og trykk på "Køyr" for å hjelpe meg å komme dit. '
-        maze_2_1: Denne grisen rufser til fjørene mine. Hjelp meg med å finne han!
-        maze_2_2_5: Følg stien og leid meg til den tåpelege grisen. Unngå TNT ellers vil fjørene mine fyke!
-        maze_2_3: Før meg til den grøne styggingen! (Sjå opp for dynamitt)
-        maze_2_4: Ver roleg og hjelp meg med å finne den slemme grisen. Ellers blir kanskje eg sinna!
-        maze_2_5: Det fins ein måte der eg kan kome til den dumme grisen med å bruke berre to blokker. Klarer du det?
-        maze_2_6: Prøv å få meg til bort til den grøne inntrengjaren med berre tre blokker.
-        maze_2_7: 'Hjelp meg med å bli kvitt den slemme grisen ved å bruke så få blokker som mogeleg. Prøv å bruke meir enn ei "gjenta"-blokk.'
-        maze_2_8: 'Når ei blokk er grå, så tyder det at du ikkje kan slette ho. Løys denne oppgåva med "gjenta"-blokken som blir gjentatt 3 gonger. Prøv å sette desse 3 blokkene i den grå "gjenta"-blokken: flytte, flytte, snu.'
-        maze_2_9: 'OK, prøv å bruke den nye "Gjenta-til"-blokka - ho vil gjenta til eg når den irriterande grisen.'
-        maze_2_10: 'Ok, ei siste øving - klarer du å løyse denne oppgava med berre 4 blokker?'
-        maze_2_11: Kjære person. Meg zombie. Meg sulten. Må... nå frem... til solsikke... Kan du få meg dit med berre 5 blokker?
-        maze_2_12: Ok, denne er lik, men er litt forskjelleg. Klarer du denne med berre 5 blokker?
-        maze_2_13: 'Bruk den nye "viss"-blokka til å la meg avgjere når eg skal snu. Tips: du treng berre ei blokk til, men lær deg korleis vi skriver den inn, slik at du kan bruke den sjølv neste gong.'
-        maze_2_14: 'Ok, denne er akkurat som den førre oppgåva, men du må huske korleis du brukte "viss"-blokka og "gjenta"-blokka saman.'
-        maze_2_15: 'Meg vil ha solsikke! Bruk ei "viss"-blokk til å få meg dit med så få blokker du kan.'
-        maze_2_16: 'Ok, la oss gjere det ein gong til - denne er ikkje så ulik, men pass deg for dei kjøttetande plantane!'
-        maze_2_17: '"viss-elles"-blokka sjekkar eit vilkår og utfører det eine ELLER det andre. For å få meg til solsikka, prøv å bruke denne blokka.'
-        maze_2_18: 'Ei siste øving med "viss-elles"-blokka. Klarer du å få det rett på første forsøk?'
-        maze_2_19: Klarer du å hjelpe meg gjennom ein kompleks labyrint ved å legge til berre 3 blokker? Viss du gjer det rett, så kan eg gå ein vilkårleg kronglete veg uansett kor lang den er.
-        turtle_1_1: Hei, eg er ein kunstnar. Du kan skrive kode som får meg til å teikne alt mulig rart. Bruk nokre blokker til å få meg til å teikne på dei grå linjene på bildet.
-        turtle_1_2: 'No kan du prøve å teikne ein firkant. PS! Vel favorittfargen din med "sett farge"-blokka.'
-        turtle_1_3: Lag ein firkant ved å bruke berre 3 blokker.
-        turtle_1_4: 'Tegn en trekant der kvar av sidene har ulik farge. Bruk "tilfeldig farge"-egenskapen som velg ein ny farge kvar gong. Tips: du må finne ut kor mykje du skal svinge ved å trykke på talet i "sving"-blokka.'
-        turtle_1_5: 'Som ei øving: Lag ein konvolutt ved å teikne ein trekant og ein firkant.'
-        turtle_1_6: 'Klarer du å teikne denne trekanten og firkanten? Tips: teikn trekanten først, finn ut kor mykje du skal snu før du teiknar firkanten.'
-        turtle_1_7: 'Ok, la oss gjere det litt vanskeligare: Sjå om du klarer å teikne desse grøne glasa. Firkantane er 100 punkt lange på kvar side, og det er 50 punkt mellom dei. Ikkje gløym at dei skal teiknast med grønt!'
-        turtle_1_8: 'Ok, prøv å finne ut kva som vil å skje hvis du køyrer denne koden (eller køyr den ved å trykke "Køyr"). Deretter, gjentar du dette heilt til bildet er ferdig. Fargane blir ulike kvar gong.'
-        turtle_1_9: Ser du kva for tal du må erstatte spørjeteiknet med for å teikne ein sirkel?
-        turtle_1_10: 'Du klarte det! No kan du teikne kva du vil. Her er nokre morosame idear: ein strekmann, snøfnugg eller ein spiral. Du kan også prøve den nye "set breidde"-blokka. Kos deg!'
-        turtle_4_1: 'Kan du teikne ein trekant (med kanter på 100 pikslar) med berre tre blokker? Hint: bruk ei "gjenta"-blokk.'
-        turtle_4_2: 'For å teikne desse trekantane, legg til ei "sving 90 grader til høyre"-blokk midt inne det programmet som alt ligg i arbeidsområdet.'
-        turtle_4_3: Ok, her er koden du skreiv for å teikne ein enkel trekant. Kan du legge til en gjenta-blokk og snubevegelse/ rotasjon-blokk for å lage ein vakker blomst?
-        turtle_4_4: 'Her er den same koden som frå forrige oppgåve, men den snur berre 36 grader etter å ha teikna kvar trekant. Kor mange gonger må dette bli gjentatt? (Hint: Etter rotasjon på 360 grader vil tekninga ha fullført ein heil runde)'
-        turtle_4_5: 'Her er den samme koden som frå forrige oppgåve, men den gjentar rotasjonen 36 gonger. Kor mange grader må kvar rotasjon vere? (Hint: Etter rotasjon på 360 grader vil tekninga ha fullført ei heil runde)'
-        turtle_4_6: Kan du teikne eit kvadrat med kanter på 20 pikslar ved hjelp av berre tre blokker?
-        turtle_4_7: 'Her er koden for å teikne kvadratet frå forrige oppgåve. Kan du gjenta koden slik at den teiknar 10 tilstøytande blokker, slik at dei ser ut som en stige? Hint: Du treng berre to blokker til.'
-        turtle_4_8: Her er løysinga til den forrige oppgåva. Kan du fullføre teikninga med berre to blokker?
-        turtle_4_9: Her er løysinga til den forrige oppgåva. Kor mange grader må du rotere for å fullføre tekninga? (Du må sannsynligvis gjette nokre gonger før du får det til)
-        turtle_4_10: Her er løysinga på forrige oppgåve. Kor mange gonger må du gjenta for å fullføre tekninga?
-        turtle_4_11: 'Prøv å forandre på verdiane i rotasjon- og gjenta-blokkene for å lage ulike mønster. Eller prøv å eksperimentere med resten av koden for å teikne det du sjølv vil!'
-        maze_karel_1_1: 'Hei, eg er ein bonde. Eg treng hjelp til å gjere åkeren min flat slik at den blir klar til planting. Flytt meg til jordhaugen og bruk "fjern"-blokka til å fjerne den.'
-        maze_karel_1_2: 'Flytt meg så til holet og fyll det med TO spader jord ved å bruke "fyll"-blokka.'
-        maze_karel_1_3: Flytt meg til haugen med jord, og fortell meg kor mange spadetak eg skal fjerne, med så få blokker som mulig.
-        maze_karel_1_4: 'Kan du hjelpe meg med å fjerne alle haugane med jord? Hint: Bruk ei gjenta-blokk dersom du kan!'
-        maze_karel_1_5: 'Hjelp meg å fylle alle desse hola med 5 spadetak med jord. Hint: Du kan sette en "gjenta"-blokk inni ei "så lenge"-blokk.'
-        maze_karel_1_6: 'Fjern alle jordhaugane ved å bruke så få blokker som mulig. Dei nye vala i nedtrekksmenyen til "så lenge"-blokka forteller meg om eg står på ein haug eller over eit hol.'
-        maze_karel_1_7: Wow, eg fann eit skikkelig djupt hol! Eg anar ikkje hvor mange spadetak med jord det rommar. Kan du lage eit program som fyller det heilt til bakken er flat?
-        maze_karel_1_8: Hjelp meg med å fylle holet ved enden av åkeren, ved å nytte så få blokker som mulig.
-        maze_karel_1_9: 'La meg fjerne alle desse haugane med jord. Prøv å bruke så få blokker som mulig. Tips: Prøv å bruke ei "så lenge"-blokk.'
-        maze_karel_1_10: 'Eg arbeider seint, så no er det mørkt ute og eg kan ikkje sjå kor store jordhaugane er. Eg har ikkje lenger alle mulighetene eg hadde før med "så lenge"-blokka. Flytt meg langs åkeren, og dersom eg støyter på ein jordhaug, fjern den.'
-        maze_karel_1_11: 'Det er framleis mørkt ute. Flytt meg langs åkeren. Dersom eg støyter på ein jordhaug, fjern den. Viss eg støyter på eit hol, fyll det! Tips: bruk nedtrekksmenyen på "viss"-blokka.'
-        turtle_2_1: 'Hei. Meg zombie artist. Meg elsker å teikne! Hjelpe meg med å teikne ein firkant med ein spesiell farge. Viktig informasjon: du har tilgang til de samme blokkene, men no er dei omorganiserte i kategoriar.'
-        turtle_2_2: 'Velkommen til å bruke funksjonar som let deg definerer nye blokker! Prøv den nye "teikne ein firkant" blokka, funnen i kategorien "Funksjonar" til å teikne ei liten 50 x 50 grøn firkant.'
-        turtle_2_3: 'Bruk "gjenta"-blokka (i kategorien "Løkker") til å teikne 3 kvadrat med størrelse 100, som står 120 grader på kvarandre. Og gjer dette i tre ulike, tilfeldige fargar.'
-        turtle_2_4: 'Nå skal vi gjere noko fansy. Endre koden slik at den teiknar 36 kvadrat, 100 punkt breide, som kvar står 10 grader frå kvarandre. Tips: du vil kanskje bruke glidestyringa for å få meg til å gå fortare.'
-        turtle_2_5: 'Teikn kvadrat med sider som er 50, 60, 70, 80 og 90 punkt. Du må bruke "teikn kvadrat"-funksjonen fem gongar.'
-        turtle_2_6: 'Ok, dette programmet vil bruke en teljar til å teikne dei samme kvadrata som sist. Du vil at kvadratet skal ha samme størrelse som telleren, så bruk "telja"-blokka. Tips: den finnes i kategorien Variablar.'
-        turtle_2_7: 'Her er eit program som teiknar ein spiral, men blokkene er deaktiverte slik at dei ikkje kan køyre. Lag eit nytt program som bruker ei "tell med"-blokk (i kategorien løkker) og ei "gjenta med teller"-blokk (i kategorien variablar) for å teikne den samme spiralen.'
-        turtle_2_7_5: 'Det finnes ein ny funksjon for "teikn en snømann" (i kategorien funksjonar). Teikn to snømenn, med høgde 250 og 100.'
-        turtle_2_8: 'Denne er litt vanskeleg. Bruk "teikn ein snømann"-funksjonen og den nye "hopp framover"-blokken (i kategorien handlingar). Teikn 3 snømenn i ulike fargar, 100 punkter frå kvarandre.'
-        turtle_2_9: 'Bruk ein "tell med"-løkke til å teikne ein familie av snømenn med høgdene 110, 100, 90, 80 og 70. Alle snømennene skal stå 60 punkter frå kvarandre.'
-        turtle_2_10: Her er litt kode som eksperimenterer med ulike spiralar. Kva skjer dersom du endrar på snu-størrelsen? Eller set en tilfeldig farge i løkka? Teikn det du vil!
-        maze_karel_2_1: 'Prøv å bruke blokker for å hjelpe meg med å fjerne alle haugane og fylle alle holene på bakken. Prøv å bruke løkker i staden for mange blokker. Tips: du kan sette ei løkke inne i ei anna løkke.'
-        maze_karel_2_2: 'Vi har definert vår eiga blokk "fyll 5", som nå fins i kategorien Funksjonar. Bruk den til å hjelpe meg med å fylle i dette holet.'
-        maze_karel_2_3: 'Bruk den nye "fyll 5" funksjonsblokka for å få meg til fylle alle hola. Du må hente ut "fyll 5"-blokka fra kategorien Funksjonar.'
-        maze_karel_2_4: Definer ein ny funksjon som fjernar 7 spadetak. Bruk den til å skrive eit program som hjelper meg med å fjerne alle haugane.
-        maze_karel_2_5: Lage ein ny funksjon som fjernar 6 spadetak frå ein haug, og bruk den til å hjelpe meg med å fjerne alle haugane.
-        maze_karel_2_6: 'Bruk to nye funksjonar, "Fyll 8" og "Fjern 8", for å hjelpe meg med å fjerne haugen og fylle holet.'
-        maze_karel_2_7: Det er ei ku på jordet mitt! Skriv ein ny funksjon som hjelper meg med å unngå kua og deretter fjerne haugen. Putt alle blokkene dine innanfor den nye funksjonen.
-        maze_karel_2_8: 'Bruk denne nye funksjonen, "unngå kua og fjern 1", for å hjelpe meg med å fjerne alle haugane.'
-        maze_karel_2_9: OK, er her ein funksjon som fjernar 4 ulike jordhaugar i ei rad. Prøv å legge denne funksjonen inne ei løkke, slik at du fjerner alle jordhaugane ved berre å bruke eit par nye blokker.
-        maze_karel_2_10: Flytt meg tvers over åkeren, og bruk desse to funksjonane til å hjelpe meg med å fjerne alle haugane og fylle igjen alle hola.
-        turtle_3_1: 'Denne oppgåva viser korleis "teikn eit kvadrat"- og "teikn ein sirkel"-funksjonene er definerte.  Å definere ein funksjon, betyr ikkje at den blir utført. Derfor må du hente frem "teikn eit kvadrat"-blokkea slik at den faktisk blir utført og teiknar eit kvadrat.'
-        turtle_3_2: 'Ved å nytte funksjonen "tegn eit kvadrat" som eksempel: lag ein "teikn ein trekant"-funksjon og bruk den.'
-        turtle_3_3: 'Teikn trekanta gjerder rundt kattane og eit firkanta gjerde rundt kua.  Tips: test programmet medan du arbeider.'
-        turtle_3_4: 'Sjå om du kan tenkje ut korleis du kan bruke "teikn ein firkant" og "teikn ein trekant" (og nokre andre blokker) til å teikne eit hus rundt løva.'
-        turtle_3_5: 'No skal du lage ein ny "teikne eit hus"-funksjon, og bruke den til å huse to kattar. Tips: lag ein ny funksjon med "gjer noko"-blokka, og skriv inn egen tekst for å gi blokka eit namn.'
-        turtle_3_6: 'Ved å bruke "teikn ein firkant" som eksempel: Legg til ein parameter "lengde" til "teikn ein trekant". Teikn så trekantar i ulike storleikar. (Hint: Klikk på stjerna for å legge til ein ny parameter til ein funksjon)'
-        turtle_3_7: 'Legg til ein parameter "lengde" til "teikn eit hus"-funksjonen, og bygg eit stort hus til elefanten (med sider som er 150 piksel lange)'
-        turtle_3_8: 'Endre "tegn eit hus" slik at eg endar opp i nedste høgre hjørne etter å ha tegna eit nytt hus. Bruk denne endra funksjonen til å tegne tre hus.'
-        turtle_3_9: 'Kan du gjenskape funksjonen "teikn eit hus" utan hjelp? Prøv det, og teikn så ei husrekkje.'
-        turtle_3_10: Du har lært mykje! Bruk det til å teikne det du vil. Prøv å teikn ei stjerne, eller ein spiral eller eit stilig snøfnugg.
-        maze_karel_debug_seq_1: Velkomen til feilsøkjing! Koden verkar ikkje rett. Kan du finne problemet og fikse det slik at eg kan få jordet flatt og klart for planting?
-        maze_karel_debug_seq_2: Kva er feil med dette programmet? Korleis kan du fikse det slik at eg kan få fjerna den haugen?
-        maze_karel_debug_repeat: Feilsøk dette programmet for meg slik at jordet mitt blir fint og flatt.
-        maze_karel_debug_while: Korleis vil du endre på dette programmet for å hjelpe meg med å fylle holet?
-        maze_karel_debug_if: Hjelp! Fiks dette programmet slik at jordet mitt blir heilt flatt.
-        maze_karel_debug_if_else: Finn feila i dette programmet slik at eg kan få fylt hola og fjerna haugane.
-        maze_karel_debug_function_1: Kva ville du endre i dette programmet for å hjelpe meg med å fjerne alle haugane?
-        maze_karel_debug_function_2: Kan du finne feila i dette programmet for meg slik at eg kan lage jordet mitt flatt?
-        maze_karel_debug_function_3: 'Endre på programmet slik at eg fjernar alle haugane på jordet mitt. '
-        turtle_5_1: Prøv å køyre dette programmet, og gjere endringer for å sjå kva som skjer. Kan du finne ut korleis det fungerer? (Eller fjerne det og erstatte det med noko heilt anna?)
-        turtle_5_2: Prøv å køyre dette programmet, og gjere endringer for å sjå kva som skjer. Kan du finne ut korleis det fungerer? (Eller fjerne det og erstatte det med noko heilt anna?)
-        turtle_5_3: Prøv å køyre dette programmet, og gjere endringer for å sjå kva som skjer. Kan du finne ut korleis det fungerer? (Eller fjerne det og erstatte det med noko heilt anna?)
-        turtle_5_4: Prøv å køyre dette programmet, og gjere endringer for å sjå kva som skjer. Kan du finne ut korleis det fungerer? (Eller fjerne det og erstatte det med noko heilt anna?)
-        turtle_5_5: Prøv å køyre dette programmet, og gjere endringer for å sjå kva som skjer. Kan du finne ut korleis det fungerer? (Eller fjerne det og erstatte det med noko heilt anna?)
-        turtle_5_6: Prøv å køyre dette programmet, og gjere endringer for å sjå kva som skjer. Kan du finne ut korleis det fungerer? (Eller fjerne det og erstatte det med noko heilt anna?)
-        maze_3_1: 'Eg må kome meg til den grisen! Skriv inn et par kall for å flytte meg ("move();")  så eg kan få tilbake egga mine.'
-        maze_3_2: Skriv eit program til meg så eg kan kome meg helt fram til grisen.
-        maze_3_3: Korleis kjem eg meg til grisen? Forsikre deg om at eg ikkje kjem borti boksen med TNT!
-        maze_3_4: Argh! Skriv eit program som får meg rundt sprengstoffet og heilt fram til grisen.
-        bounce_1: Fest ei blokk til «når venstre pil»-blokka og trykk «Køyr». Flytt rekkerten ved å bruke venstre pil for å nå målet.
-        bounce_2: 'Fest ei blokk til «når høgre pil»- og «når venstre pil»-blokkene. Flytt rekkerten for å nå begge måla.'
-        bounce_3: Prøv noko liknande med «når opp pil»-blokka. Flytt rekkerten til målet på toppen.
-        bounce_4: Denne gongen må du legge til fire blokker. Flytt rekkerten til alle fire måla for å fullføre denne oppgåva.
-        bounce_5: Me skal sende ein ball flygande ned mot rekkerten. Fest ei blokk til «når ein ball treffer rekkerten»-blokka for å vere sikker på at ballen når mål.
-        bounce_6: No er sluttmålet på toppen. Du må feste blokker til begge «når ein ball treffer»-blokkene for å løyse denne oppgåva.
-        bounce_7: Fest blokker til alle «når» blokkene. Sprett ballen heilt til den treff målet.
-        bounce_10: Det er no eit mål på toppen. Fest «skår eit poeng» og «skår motstanderen et poeng» blokkene til «når ein ball i mål» og «når ein ball bommar på rekkerten»-blokkene for å lage eit spel! Sjå kor mange poeng du greier å skåre før motstandaren din skårer to gonger!
-        bounce_11: 'Du kan no feste blokker til «når starta»-blokka. Du må feste den nye «send ny ball»- blokka på meir enn ein plass. I tillegg: prøv å endre scena eller farta på rekkerten og ballen og sjå kor mange poeng du kan skåre før motstandaren din har skåra to gonger.'
-        bounce_12: Opprett ditt eget Sprett-spel. Du kan endre alle bilda og reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet på sine telefonar.
-        Custom_builder: 'Dra blokker fra verktøykassa til arbeidsområdet for å tegne det du vil. Trykk "Køyr" når du er klar.'
-        flappy_1: 'Fest ei blokk til "når klikk"-blokka, og trykk "Køyr". Klikk eller trykk på skjermen for å flyge Flakse til målet.'
-        flappy_2: 'Vi har no lagt til bakken. Fest ei blokk til "når traff bakken"-blokka. Koden må "Avslutt spelet" når Flakse krasjar.'
-        flappy_3: 'Med "Når køyrt"-blokka kan du køyre kode når spelet startar.  Prøv å sette farta og flyge Flakse til målet!'
-        flappy_4: 'Flakse vil fly gjennom hindringar med mindre du skriv kode som får han til å kræsje. Fest ei blokk til "når treff ei hindring"-blokka. Koden må "AVSLUTTE SPEL" når Flakse kræsjar inn i det første settet av røyr.'
-        flappy_5: 'La oss legge til ei resultattavle og telle poeng når Flakse kjem seg forbi hinder. Legg til meir i blokka "når hinder passert" og få poeng når du flyg Flakse forbi det første settet med rør.'
-        flappy_6: Sjå om du framleis kan skåre etter at du har fått Flakse til å flakse meir eller mindre.
-        flappy_7: 'Prøv å endre scena ved å feste ei anna blokk til "når køyrt"-blokka.'
-        flappy_8: Du kan sette utsjånad når som helst, ikkje berre når spelet startar. Prøv å sette ei tilfeldig scene når andre hendingar skjer, for eksempel når du passerer eit hinder.
-        flappy_9: For å gjere det meir moro, prøv å sette poengsummen tilbake til 0 i staden for å avslutte spelet når du treff eit hinder.
-        flappy_11: Lag ditt eige Flakse-spel! Du kan endre alle bilda og alle reglane, til og med tyngdekrafta. Når du er ferdig, klikk Fullfør og du kan la venane dine prøve spelet på sine telefonar.
-        flappy_k1_1: Spel Flakse
-        flappy_k1_2: 'Fest ei blokk til "når klikk"-blokka, og trykk "Køyr". Klikk eller trykk på skjermen for å flyge Flakse til målet.'
-        flappy_k1_3: 'Vi har no lagt til bakken. Fest ei blokk til "når traff bakken"-blokka. Koden må "Avslutt spelet" når Flakse krasjar.'
-        flappy_k1_4: 'Med "Når køyrt"-blokka kan du køyre kode når spelet startar.  Prøv å sette farta og flyge Flakse til målet!'
-        flappy_k1_5: 'Flakse vil fly gjennom hindringar med mindre du skriv kode som får han til å kræsje. Fest ei blokk til "når treff ei hindring"-blokka. Koden må "AVSLUTTE SPEL" når Flakse kræsjar inn i det første settet av røyr.'
-        flappy_k1_6: 'La oss legge til ei resultattavle og telle poeng når Flakse kjem seg forbi hinder. Legg til meir i blokka "når hinder passert" og få poeng når du flyg Flakse forbi det første settet med rør.'
-        flappy_k1_7: Sjå om du kan skåre fleire poeng for å kome forbi eit hinder
-        flappy_k1_8: 'Prøv å endre scena ved å feste ei anna blokk til "når køyrt"-blokka.'
-        flappy_k1_9: 'Prøv å forandre spelaren ved å legge til ei "set spelaren"-blokk til "når køyrt"-blokka.'
-        jigsaw_1: Klikk på blokka
-        jigsaw_2: Dra blokka til målet
+        maze_2_2: 'Kan du hjelpe meg å fange den slemme grisen? Sett sammen et par «gå fremover» blokker og trykk "Kjør Program" for å hjelpe meg å komme dit. '
+        maze_2_1: Den grisen rufser til fjærene mine. Hjelp meg å finne han!
+        maze_2_2_5: Følg stien og led meg til den dumme grisen. Unngå dynamitten hvis du ikke vil at jeg skal forsvinne i en sky av fjær!
+        maze_2_3: Før meg til den grønne ondskapen! (Se opp for dynamitt)
+        maze_2_4: Hold deg i ro og hjelp meg med å finne den slemme grisen. Ellers blir jeg kanskje sinna!
+        maze_2_5: Det er mulig å komme seg til den dumme grisen ved å bare bruke to blokker. Klarer du det?
+        maze_2_6: Prøv å få meg til bort til den grønne inntrengeren med bare tre blokker.
+        maze_2_7: 'Hjelp meg å bli kvitt den slemme grisen med færrest mulig blokker. Prøv å bruke mer enn en "gjenta" blokk.'
+        maze_2_8: 'Når en blokk er grå, betyr det at du ikke kan slette den. Løs dette puslespillet med "gjenta" blokken som gjentas 3 ganger. Prøv å sette disse 3 blokkene i den grå "gjenta" blokken: flytte, flytte, snu.'
+        maze_2_9: 'OK, prøv å bruke den nye "Gjenta inntil" blokken - den vil gjentas inntil jeg når den irriterende grisen.'
+        maze_2_10: 'Ok, en siste øvelse - klarer du å løse denne oppgaven med bare 4 blokker?'
+        maze_2_11: Kjære person. Meg zombie. Meg sulten. Må... nå frem... til solsikke... Kan du få meg dit med bare 5 blokker?
+        maze_2_12: Ok, denne ligner, men er litt forskjellig. Klarer du denne med bare 5 blokker?
+        maze_2_13: 'Bruk den nye "hvis"-blokken til å la meg avgjøre når jeg skal svinge. Tips: du trenger bare en blokk til, men lær hvordan vi skriver den inn så du kan bruke den selv neste gang.'
+        maze_2_14: 'Ok, denne er som den forrige oppgaven, men du må huske hvordan du brukte "hvis"-blokken og "gjenta"-blokken sammen.'
+        maze_2_15: 'Meg vil ha solsikke! Bruk en "hvis"-blokk til å få meg dit med så få blokker som mulig.'
+        maze_2_16: 'Ok, la oss øve på den en gang til - denne er ikke så forskjellig, men pass deg for de kjøttetende plantene!'
+        maze_2_17: '"Hvis-ellers"-blokken sjekker en betingelse og utfører det ene ELLER det andre. For å få meg til solsikken, prøve å bruke denne blokken.'
+        maze_2_18: 'En siste øvelse med "hvis-ellers"-blokken. Klarer du å gjøre det riktig på første forsøk?'
+        maze_2_19: Klarer du å hjelpe meg igjennom en kompleks labyrint ved bare å legge til 3 blokker? Hvis du gjør det riktig så kan jeg gå en hvilkensomhelst krokete vei igjennom, uansett lengde.
+        turtle_1_1: Hei, jeg er en kunstner. Du kan skrive kode som får meg til å tegne alt mulig rart. Bruk noen blokker til å få meg til å tegne på de grå linjene på bildet.
+        turtle_1_2: 'Tegn nå en firkant. PS! Velg din favorittfarge med "sett farge"-blokken.'
+        turtle_1_3: Lag en firkant med bare 3 blokker.
+        turtle_1_4: 'Tegn en trekant hvor hver side har forskjellig farger. Bruk "tilfeldig farge"-egenskapen som velger en ny farge hver gang. Tips: du må finne ut hvor mye du skal svinge ved å trykke på nummeret i "sving"-blokken.'
+        turtle_1_5: Som en øvelse kan du nå lage en konvolutt ved å tegne en trekant og en firkant.
+        turtle_1_6: 'Klarer du å tegne denne trekanten og firkanten? Tips: tegn trekanten først og så finner du ut hvor mye du skal svinge før du tegner firkanten.'
+        turtle_1_7: 'Ok, la oss gjøre det litt vanskeligere - se om du klarer å tegne disse grønne glassene. Firkantene er 100 punkter lang på hver side, og det er 50 punkter mellom dem. Ikke glem at de skal tegnes med grønnfarge!'
+        turtle_1_8: 'Ok, prøv å se hva som kommer til å skje hvis du kjører denne koden (eller kjør den ved å trykke "Kjør"). Deretter, gjentar du dette helt til bildet er ferdig. Fargene blir forskjellig hver gang.'
+        turtle_1_9: Ser du hvilket tall du må erstatte spørsmålstegnet med for å tegne en sirkel?
+        turtle_1_10: 'Du klarte det! Nå kan du tegne hva du vil. Her er noen morsomme ideer: en strekmann, snøfnugg eller en spiral. Du kan også prøve den nye "sett bredde"-blokken. Kos deg!'
+        turtle_4_1: 'Kan du tegne en trekant (med kanter på 100 pixler) med bare tre blokker? Hint: bruk en "gjenta" blokk.'
+        turtle_4_2: 'Legg til en "sving 90 grader til høyre"-blokk et sted midt inne i programmet som ligger i arbeidsområdet for å tegne disse trekantene.'
+        turtle_4_3: Ok, her er koden du skrev for å tegne en enkel trekant. Kan du legge til en gjenta-blokk og snubevegelse/ rotasjon-blokk for å lage en vakker blomst?
+        turtle_4_4: 'Her er den samme koden som fra forrige oppgave, men den snur kun 36 grader etter å ha tegnet hvert triangel. Hvor mange ganger må denne gjentas? (Hint: Etter 360 graders rotering vil tegningen ha fullført en hel runde)'
+        turtle_4_5: 'Her er den samme koden som fra forrige oppgave, men den gjentar rotasjonen 36 ganger. Hvor mange grader må hver rotasjon være? (Hint: Etter 360 graders rotasjon vil tegningen ha fullført en hel runde)'
+        turtle_4_6: Kan du tegne et kvadrat med 20 piksler lange kanter ved hjelp av bare tre blokker?
+        turtle_4_7: 'Her er koden for å tegne kvadratet fra forrige oppgave. Kan du gjenta koden slik at den tegner ti (10) tilstøtende blokker, slik at de ser ut som en stige? Hint: Du trenger bare to blokker til.'
+        turtle_4_8: Her er løsningen til den forrige oppgaven. Kan du fullføre tegningen med bare to blokker?
+        turtle_4_9: Her er løsningen til den forrige oppgaven. Hvor mange grader må du rotere for å fullføre tegningen? (Du må sannsynligvis gjette noen ganger før du får det til)
+        turtle_4_10: Her er løsningen til forrige oppgave. Hvor mange ganger må du gjenta for å fullføre tegningen?
+        turtle_4_11: 'Prøv å forandre tallene i rotasjon- og gjenta-blokkene for å lage ulike mønster. Eller prøv å eksperimentere med resten av koden for å tegne det du selv vil!'
+        maze_karel_1_1: 'Hei, jeg er en bonde. Jeg trenger hjelp til å gjøre åkeren min flat slik at den er klar for planting. Flytt meg til jordhaugen og bruk "fjern"-blokken til å fjerne den.'
+        maze_karel_1_2: 'Flytt meg så til hullet og fyll det med TO spader jord ved å bruke "fyll"-blokken.'
+        maze_karel_1_3: Flytte meg til haugen med jord, og fortell meg hvor mange spadetak jeg skal fjerne, med så få blokker som mulig.
+        maze_karel_1_4: 'Kan du hjelpe meg med å fjerne alle haugene med jord? Hint: Bruk gjenta-blokk hvis du kan.'
+        maze_karel_1_5: 'Hjelp meg å fylle alle disse hullene med 5 spadetak med jord. Hint: Du kan sette en "gjenta" blokk inni en "så lenge" blokk.'
+        maze_karel_1_6: 'Fjern alle jordhaugene ved å bruke så få blokker som mulig. De nye innslagene i nedtrekksmenyen til "så lenge"-blokken forteller meg om jeg står på en haug eller over et hull.'
+        maze_karel_1_7: Wow, jeg en skikkelig dypt hull! Jeg aner ikke hvor mange spadetak med jord det rommer. Kan du lage et program som fyller det helt til bakken er flat?
+        maze_karel_1_8: Hjelp meg med å fylle hullet ved enden av åkeren, ved å benytte så få blokker som mulig.
+        maze_karel_1_9: 'La meg fjerne alle disse haugene med jord. Prøv å bruke så få blokker som mulig. Tips: Prøv å bruke en "så lenge"-blokk.'
+        maze_karel_1_10: 'Jeg jobber så sent at det er mørkt ute og jeg kan ikke se hvor store jordhaugene er. Nå har jeg ikke lenger alle mulighetene jeg hadde før med "så lenge"-blokken. Flytt meg langs åkeren, og hvis jeg støter på en jordhaug, fjern den.'
+        maze_karel_1_11: 'Det er fremdeles mørkt ute. Flytt meg langs åkeren. Hvis jeg støter på en jordhaug, fjern den. Hvis jeg støter på et hull, fyll det. Tips: bruk nedtrekksmenyen på "hvis"-blokken.'
+        turtle_2_1: 'Hei. Meg zombie artist. Meg elsker å tegne! Hjelpe meg med å tegne en firkant med en spesiell farge. Viktig informasjon: du har tilgang til de samme blokkene, men nå er de omorganisert i kategorier.'
+        turtle_2_2: 'Velkommen til bruk av funksjoner som lar deg definere dine egne blokker! Prøv den nye "tegn et kvadrat"-blokken, som du finner i "Funksjoner"-kategorien, til å tegne et lite kvadrat på 50x50.'
+        turtle_2_3: 'Bruk "gjenta"-blokken (i "Løkker" kategorien) til å tegne 3 kvadrater med størrelsen 100, som står 120 grader fra hverandre. Gjør dette i tre forskjellige, tilfeldige farger.'
+        turtle_2_4: 'Nå skal vi gjøre noe kult. Endre koden slik at den tegner 36 kvadrater, 100 punkter brede, som hver står 10 grader fra hverandre. Tips: du vil kanskje bruke glidebryteren til å få meg til å jobbe fortere.'
+        turtle_2_5: 'Tegn kvadrater med sider som er 50, 60, 70, 80 og 90 punkter lange. Du må bruke "tegn kvadrat"-funksjonen fem ganger.'
+        turtle_2_6: 'Ok, dette programmet vil bruke en teller til å tegne de samme kvadratene som sist. Du vil at kvadratet skal ha samme størrelse som telleren, så bruk "teller"-blokken. Tips: den finnes i kategorien Variabler.'
+        turtle_2_7: 'Her er et program som tegner en spiral, men blokkene er deaktivert slik at de ikke kan kjøre. Lag et nytt program som bruker en "tell med" blokk (i kategorien løkker) og en "gjenta med teller" blokk (i kategorien variabler) for å tegne den samme spiralen.'
+        turtle_2_7_5: 'Det finnes en ny funksjon for "tegn en snømann" (i kategorien funksjoner). Tegn to snømenn, med høyde 250 og 100.'
+        turtle_2_8: 'Denne er litt vanskelig. Bruk "tegn en snømann"-funksjonen og den nye "hopp fremover"-blokken (i kategorien handlinger). Tegn 3 snømenn i forskjellige farger, 100 punkter fra hverandre.'
+        turtle_2_9: 'Bruk en "tell med"-løkke til å tegne en snømannfamilie med høydene 110, 100, 90, 80 og 70. Alle snømennene skal stå 60 punkter fra hverandre.'
+        turtle_2_10: Her er litt kode som eksperimenterer med forskjellige spiraler. Hva skjer hvis du endrer på sving-mengden? Eller setter en tilfeldig farge inni løkken? Tegn hva du måtte ønske.
+        maze_karel_2_1: 'Prøv å bruke blokker for å hjelpe meg med å fjerne alle haugene og fylle alle hullene på bakken. Prøv å bruke løkker i stedet for mange blokker. Tips: du kan sette en løkke inne i en annen løkke.'
+        maze_karel_2_2: 'Vi har definert vår egen blokk "fyll 5", som nå finnes i kategorien Funksjoner. Bruk den til å hjelpe meg med å fylle dette hullet.'
+        maze_karel_2_3: 'Bruk den nye "fyll 5" funksjonsblokken for å la meg meg fylle alle hullene. Du må hente ut "fyll 5" blokken fra kategorien funksjoner.'
+        maze_karel_2_4: Definer en ny funksjon som fjerner 7 spadetak. Bruk den til å skrive et program som hjelper meg med å fjerne alle haugene.
+        maze_karel_2_5: Lage en ny funksjon som fjerner 6 spadetak fra en haug, og bruk den til å hjelpe meg med å fjerne alle haugene.
+        maze_karel_2_6: 'Bruk to nye funksjoner, "Fyll 8" og "Fjern 8", for å hjelpe meg med å fjerne haugen og fylle hullet.'
+        maze_karel_2_7: Det er en ku på jordet mitt! Skriv en ny funksjon som hjelper meg unngå kua og deretter fjerne haugen. Sett alle blokkene dine innenfor den nye funksjonen.
+        maze_karel_2_8: 'Bruk denne nye funksjonen, "unngå kua og fjern 1", for å hjelpe meg med å fjerne alle haugene.'
+        maze_karel_2_9: OK, er her en funksjon som fjerner 4 forskjellige jordhauger i en stabel. Prøv å legge denne funksjonen inne en løkke, slik at du fjerner alle jordhaugene ved bare å bruke et par nye blokker.
+        maze_karel_2_10: Flytt meg tvers over åkeren, og bruk disse to funksjonene for å hjelpe meg med å fjerne alle haugene og fylle igjen hullene.
+        turtle_3_1: 'Denne oppgaven viser hvordan "tegn et kvadrat" og "tegn en sirkel" funksjonene er definert.  Å definere en funksjon, betyr ikke at den blir utført. Derfor må du hente frem "tegn et kvadrat" blokken slik at den faktisk blir utført, og tegner et kvadrat.'
+        turtle_3_2: 'Ved å benytte funksjonen "tegn et kvadrat" som  eksempel: Opprett en "tegn en trekant" funksjon og bruk den.'
+        turtle_3_3: 'Tegn trekantete gjerder rundt kattene og et firkantet gjerde rundt kua.  Tips: test programmet underveis.'
+        turtle_3_4: 'Se om du kan finne ut hvordan du bruker "tegn en firkant" og "tegn en trekant" (og noen andre blokker) for å tegne et hus rundt dyret.'
+        turtle_3_5: 'Nå skal du lage en ny "tegne et hus" funksjon, og bruke den for å huse to katter. Tips: opprett en ny funksjon med "gjør noe" blokken, og skriv inn egen tekst for å navngi den.'
+        turtle_3_6: 'Ved å bruke "tegn en firkant" som et eksempel: Legg til parameter kalt "lengde" "tegne en trekant". Tegn deretter trekanter i forskjellige størrelser. (Hint: Klikk på stjernen for å legge til et nytt parameter til en funksjon)'
+        turtle_3_7: 'Legg til et parameter kalt "lengde" til "tegn et hus"-funksjonen, og bygg et stort hus for elefanten (med sider som er 150 piksler lange)'
+        turtle_3_8: 'Endre "tegne et hus" så jeg ender opp på nedre høyre hjørne etter et nytt hus. Bruk endrede funksjonen til å trekke tre hus.'
+        turtle_3_9: 'Kan du gjenskape funksjonen "tegn et hus" uten hjelp? Prøv det, og tegn deretter en rekke med hus.'
+        turtle_3_10: Du har lært mye! Bruk det for å tegne hva du vil. Prøv å tegn en stjerne, eller en spiral eller et fancy snøfnugg.
+        maze_karel_debug_seq_1: Velkommen til feilsøking! Koden virker ikke riktig. Kan du finne problemet og fikse det slik at jeg kan få gjort jordet jevnt og klar for planting?
+        maze_karel_debug_seq_2: Hva er galt med dette programmet? Hvordan kan du fikse det slik at jeg kan fjerne den haugen?
+        maze_karel_debug_repeat: Feilsøk dette programmet slik at jordet mitt kan bli flatt og fint.
+        maze_karel_debug_while: Hvordan vil du endre på dette programmet for å hjelpe meg med å fylle hullet?
+        maze_karel_debug_if: Hjelp! Fiks dette programmet slik at jordet mitt blir helt flatt.
+        maze_karel_debug_if_else: Finn feilene i dette programmet slik at jeg kan få fylt hullene og fjernet haugene.
+        maze_karel_debug_function_1: Hva ville du endret på dette programmet for å hjelpe meg med å fjerne alle haugene?
+        maze_karel_debug_function_2: Kan du finne feilene i dette programmet for meg slik at jeg kan gjøre jordet mitt flatt?
+        maze_karel_debug_function_3: 'Endre på programmet slik at jeg fjerner alle haugene på jordet mitt. '
+        turtle_5_1: Prøv å kjøre dette programmet, og gjør endringer for å se hva som skjer. Kan du finne ut hvordan det fungerer? (Eller fjerne det og erstatte det med noe helt annet)
+        turtle_5_2: Prøv å kjøre dette programmet, og gjør endringer for å se hva som skjer. Kan du finne ut hvordan det fungerer? (Eller fjerne det og erstatte det med noe helt annet)
+        turtle_5_3: Prøv å kjøre dette programmet, og gjør endringer for å se hva som skjer. Kan du finne ut hvordan det fungerer? (Eller fjerne det og erstatte det med noe helt annet)
+        turtle_5_4: Prøv å kjøre dette programmet, og gjør endringer for å se hva som skjer. Kan du finne ut hvordan det fungerer? (Eller fjerne det og erstatte det med noe helt annet)
+        turtle_5_5: Prøv å kjøre dette programmet, og gjør endringer for å se hva som skjer. Kan du finne ut hvordan det fungerer? (Eller fjerne det og erstatte det med noe helt annet)
+        turtle_5_6: Prøv å kjøre dette programmet, og gjør endringer for å se hva som skjer. Kan du finne ut hvordan det fungerer? (Eller fjerne det og erstatte det med noe helt annet)
+        maze_3_1: 'Jeg må komme meg til den grisen! Skriv inn et par kall for å bevege meg ("move();")  så jeg kan få tilbake eggene mine.'
+        maze_3_2: Skriv et program til meg så jeg kan komme meg helt frem til grisen.
+        maze_3_3: Hvordan skal jeg komme meg til grisen? Forsikre deg om at jeg ikke kommer borti boksen med TNT!
+        maze_3_4: Argh! Skriv meg et program for å komme meg rundt sprengstoffet og helt frem til grisen.
+        bounce_1: Fest en blokk til «Når pil venstre» blokken og trykk «Kjør». Flytt åren ved å bruke venstre pil for å nå målet.
+        bounce_2: Fest en blokk til «når pil høyre» og «når pil venstre» blokkene. Flytt åren for å nå begge målene.
+        bounce_3: Prøv noe lignende med «når opp pil» blokken. Flytt åren til målet på toppen.
+        bounce_4: Denne gangen trenger du å legge til fire blokker. Flytt åren til alle fire mål for å fullføre denne oppgaven.
+        bounce_5: Vi skal sende en ball flygende ned mot åren. Fest en blokk til «når en ball treffer åren» blokken for å være sikker på at ballen når mål.
+        bounce_6: Nå er sluttmålet på toppen. Du trenger å feste blokker til begge «når en ball treffer» blokkene for å løse denne oppgaven.
+        bounce_7: Fest blokker til alle «når» blokkene. Sprett ballen helt til den treffer sluttmålet.
+        bounce_10: Det er nå et mål på toppen. Fest «skår et poeng» og «skår motstanderen et poeng» blokkene til «når en ball i mål» og «når en ball bommer på åren» blokkene for å lage et spill. Se hvor mange poeng du greier å skåre før motstanderen din skårer to ganger.
+        bounce_11: Du kan nå feste blokker til «når kjørt» blokken. Du må feste den nye «fyr ny ball» blokken på mer enn en plass. Også, prøv å skifte scenen eller farten på kontrolleren og ballen og se hvor mange poeng du kan skåre før motstanderen din har skåret to ganger.
+        bounce_12: Opprett ditt eget Sprett spill. Du kan endre alle bilder og reglene. Når du er ferdig, klikk Fullfør for å la venner prøve spillet på sine telefoner.
+        Custom_builder: 'Dra blokker fra verktøykassen til arbeidsområdet for å tegne nivået du vil opprette. Trykk "Kjør" når du er klar.'
+        flappy_1: 'Fest en blokk til "når klikk"-blokken, og trykk "Kjør". Klikk eller trykk på skjermen for å fly Flappy til målet.'
+        flappy_2: 'Vi har nå lagt til en bakke.  Fest en blokk til "når traff bakken"-blokken. Koden må "Avslutte spillet" når Flappy krasjer.'
+        flappy_3: 'Med "Når kjørt"-blokken kan du kjøre kode når spillet starter.  Prøv å sette farten og flaks til målet.'
+        flappy_4: 'Flappy vil fly gjennom hindringer med mindre du skriver kode for å få ham til å krasje. Fest en blokk til "når treffer en hindring"-blokken. Koden må "Avslutte spillet" når Flappy krasjer inn i det første rørsettet.'
+        flappy_5: 'La oss legge til en resultattavle og telle poeng når Flappy kommer seg forbi hindringer. Utvid blokken "når passert hindring" og se at du får poeng når du flyr Flappy forbi de første rørene.'
+        flappy_6: Se om du fortsatt kan få poeng hvis Flappy flakser mer eller mindre.
+        flappy_7: 'Prøv å endre scenen ved å feste en annen blokk til "når den kjører"-blokken.'
+        flappy_8: Du kan angi visuelle effekter når som helst, ikke bare når spillet starter. Prøv å angi en tilfeldig scene når andre hendelser skjer, for eksempel når du passerer en hindring.
+        flappy_9: For å blande ting, når du treffer et hinder, i stedet for å avslutte spillet Prøv innstillingen score tilbake til 0.
+        flappy_11: Lag ditt eget Flappy-spill! Du kan endre alle bilder og alle regler, selv tyngdekraften. Når du er ferdig, klikk Fullfør og du kan la vennene dine prøve spillet på sine telefoner.
+        flappy_k1_1: Spill Flappy
+        flappy_k1_2: 'Fest en blokk til "når klikk"-blokken og trykk "Start". Klikk eller trykk på skjermen for å fly Flakse til målet.'
+        flappy_k1_3: 'Vi har nå lagt til en bakke.  Fest en blokk "når traff bakken"-blokken. Koden må "Avslutte spillet" når Flakse krasjer.'
+        flappy_k1_4: 'Med "Når startet"-blokken kan du koden som skal kjøre når spillet starter.  Prøv å sette farten og så flakse i vei til målet.'
+        flappy_k1_5: 'Flakse vil fly gjennom hindringer med mindre du skriver kode for å få han til å krasje. Feste en blokk "når truffet en hindring" blokken. Koden må "Avslutte spillet" når Flakse krasjer inn i det første settet av rør.'
+        flappy_k1_6: 'La oss legge til en resultattavle og telle poeng når Flakse kommer seg forbi hindringer. Legge til blokken "når hinder passert" se at du får poeng år du flyr Flakse forbi de første rørene.'
+        flappy_k1_7: Se hvis du kan score flere poeng for å klare og komme forbi et hinder
+        flappy_k1_8: 'Det neste du kan prøve er å endre scenen ved å feste en annen blokk til blokk "når kjørt"-blokken.'
+        flappy_k1_9: 'Prøv å endre spilleren ved å legge ved en "sett spilleren" blokk til "når kjørt"-blokken.'
+        jigsaw_1: Klikk blokken
+        jigsaw_2: Dra blokken til målet
         jigsaw_3: Ordne blokkene for å danne bildet
         jigsaw_4: Ordne blokkene for å danne bildet
         jigsaw_5: Ordne blokkene for å danne bildet
@@ -269,196 +269,196 @@ nn:
         jigsaw_10: Ordne blokkene for å danne bildet
         jigsaw_11: Ordne blokkene for å danne bildet
         jigsaw_12: Ordne blokkene for å danne bildet
-        jigsaw_13: Løys oppgåva!
-        mazestep_1: Labyrint steg forklaring her
-        mazestep_2: Labyrint steg forklaring her
-        mazestep_3: Labyrint steg forklaring her
-        mazestep_4: Labyrint steg forklaring her
-        mazestep_5: Labyrint steg forklaring her
-        studio_c2_1: Kan du få denne hunden til å seie «hallo verda»?
-        studio_c2_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
-        studio_c2_3: Kan du skrive eit program for å få denne hunden til å flytte seg til katten?
-        studio_c2_4: 'Kan du skrive eit program som gjer at hunden flyttar seg til katten og at katten seier "Hei" når hunden kjem?'
-        studio_c2_5: 'Kan du skrive eut program som får blekkspruten til å sei "Hei" når den blir klikka på?'
-        studio_c2_6: Kan du skrive eit program for å få denne pingvinen til røre seg omkring med opp / ned / venstre / høyre-tastane for å treffe alle måla?
-        studio_c2_7: '"Gjenta alltid"-blokka let deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte denne dinosauren opp og ned heile tida?'
-        studio_c2_8: 'Kan du få pingvinen til å seie "Au!" og spille ein "treff"-lyd viss han treff dinosauren og deretter flytte han med pilene for å få det til å skje?'
-        studio_c2_9: Kan du legge til ei blokk for å skåre eit poeng når pingvinen kjem borti blekkspruten, og deretter flytte han med pilene til du skårer?
-        studio_c2_10: Kan du legge til blokker for å forandre bakgrunnen og farta til pingvinen og deretter bevege han med pil-tastane til du skårer?
-        studio_c2_11: Lag din eiga historie. Når du er ferdig, klikker du Fullfør for å la vener prøve di historie på sine telefonar.
-        studio_c3_story_1: Kan du få denne hunden til å seie «hallo verda»?
-        studio_c3_story_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
-        studio_c3_story_3: Kan du skrive eit program for å få denne hunden til å flytte seg til katten?
-        studio_c3_story_4: 'Kan du skrive eit program som gjer at hunden flyttar seg til katten og at katten seier "Hei" når hunden kjem?'
-        studio_c3_story_5: Kan du legge til ei blokk for å gjere blekkspruten glad?
-        studio_c3_story_6: Lag din eiga historie. Når du er ferdig, klikker du Fullfør for å la vener prøve di historie på sine telefonar.
-        studio_c3_game_1: 'Kan du skrive eut program som får blekkspruten til å sei "Hei" når den blir klikka på?'
-        studio_c3_game_2: Kan du skrive eit program for å få denne pingvinen til røre seg omkring med opp / ned / venstre / høyre-tastane for å treffe alle måla?
-        studio_c3_game_3: '"Gjenta alltid"-blokka let deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte denne dinosauren opp og ned heile tida?'
-        studio_c3_game_4: 'Kan du få pingvinen til å seie "Au!" og spille ein "treff"-lyd viss han treff dinosauren og deretter flytte han med pilene for å få det til å skje?'
-        studio_c3_game_5: Kan du legge til ei blokk for å skåre eit poeng når pingvinen kjem borti blekkspruten, og deretter flytte han med pilene til du skårer?
-        studio_c3_game_6: Kan du legge til blokker for å forandre bakgrunnen og farta til pingvinen og deretter bevege han med pil-tastane til du skårer?
-        studio_c3_game_7: Lag ditt eige spel. Når du er ferdig, trykk Fullfør for å la venane dine prøve ditt spel på sine mobilar.
-        studio_playlab_1: 'Pingvinen vil si "hallo" - Kan du hjelpe han?'
-        studio_playlab_2: 'Holegut (spelar 1) og Holejente (spelar 2) vil sei "hallo" til kvarandre. Kan du hjelpe dei ved å bruke "sei"-blokka to gonger?'
-        studio_playlab_3: Kan du hjelpe Tennisjenta til flagget?
-        studio_playlab_4: Kan du hjelpe Tennisgut (spelar 1) å komme til Tennisjente (spelar 2) og spele ein lyd når han kjem dit?
-        studio_playlab_5: 'Kan du hjelpe Romrobot med å sei "vær helsa, jordbuarar" når han klikkast på? Ikkje gløym å klikke på han etter du har klikka Kjør'
-        studio_playlab_6: Kan du hjelpe Heksa med å flytte rundt ved hjelp av opp/ned/høgre/venstre-piltastane for å komme til dei magiske eldkulene?
-        studio_playlab_7: '"Gjenta for alltid"-blokka gjer at du kan køyre kode kontinuerlig. Kan du legge til blokker slik at Trollmannen flyttar til høgre og venstre mange gonger?'
-        studio_playlab_8: Kan du legge til ei blokk for å score eit poeng og ei blokk for å spele ein lyd når einhjørningen kjem borti trollmannen, og så flytte han rundt med pilene til du scorer?
-        studio_playlab_9: Sett bakgrunn for denne rominvasjonen og hjelp Romroboten å komme til romvesenet raskare ved å endre hastigheita hans. Flytt han med piltastane for å komme til Romroboten slik at han kan advare alle andre
-        studio_playlab_10: Lag ditt eige spel. Når du er ferdig, trykk Fullfør for å la venane dine prøve ditt spel på sine mobilar.
-        studio_iceage_hello1: 'Sid vil samle alle for eit nytt eventyr. Kan du hjelpe han med å seie "hallo" ved å dra "sei"-blokka inn i arbeidsområdet og skrive "hallo" inni den?'
-        studio_iceage_hello2: 'Sid (spelar 1) fann Manny (spelar 2) og vil invitere han på eit eventyr. Hjelpe dei å helse på kvarandre ved å bruke "skodespelar sei"-blokka to gonger.'
-        studio_iceage_move_to_flag: 'Scrat er på jakt etter eikenøtta! Hjelp ham å gå dei siste 200 pikslane ved å bruke "Flytt"-blokken.'
-        studio_iceage_move_to_actor: 'Diego (spelar 1) leitar etter Manny (spelar 2). Hjelp Diego i å komme ned til Manny ved å bruke 200 pikslar i "Flytt figur" blokken. Så, koble ein blokk til hendinga "når figur er borti" for å spele ein lyd når dei finn kvarandre.'
-        studio_iceage_repeat: 'Med "Gjenta for alltid" blokken kan du køyre kode kontinuerleg. Kan du koble blokkar til den for å hjelpe Bestemor i å få litt mosjon ved å flytte frå venstre til høgre fleire gonger?'
-        studio_iceage_click_hello: Kan du hjelpe Sid til å gjere eit siste rop etter vennene når du klikker? Ikkje gløym å klikke på han etter at du har trykt Køyr.
-        studio_iceage_move_events: 'Scrat leitar framleis etter eikenøtter. Hjelp han å løpe rundt ved å koble "flytt" blokka til kvar einaste av hendingane og endre retninga til virke med piltastane. Når du er ferdig, klikk Køyr og prøv å samle alle eikenøttene.'
-        studio_iceage_sound_and_points: 'Vi har lagt ved mesteparten av koden som får Granny til å bevege seg mot venstre og høgre, og koden som får Sid til flytte seg rundt om kring på skjermen. Kan du gjere ferdig koden og legge til blokker i "når spelar streifer"-hendinga slik at du både spelar ein lyd og scorer eit poeng når Sid og Granny kolliderer? Trykk Kjør for å spele spelet.'
-        studio_iceage_warn_ice_age: 'Alle treng å bevege seg raskare fordi ei istid kjem! Endre bakgrunnen til "isfjell" og sett Sid sin fart til rask, klikk Køyr og flytt han til Diego for å åtvare han.'
-        studio_iceage_throw_hearts: 'Sid vil at bestemora hans, Granny, skal vite at han er glad i ho. Bruk "spelar kastar"-kommandoen slik at Sid (spelar 1) kastar hjarte på Granny (spelar 2)! Endre Grannys humør til "glad" når ho blir truffe av hjarta.'
-        studio_iceage_free_play: Tid for å lage ditt eige spel eller historie! Når du er ferdig, klikk Fullfør for å la vennane dine prøve spelet ditt på telefoner, nettbrett eller datamaskinar!
-        studio_gumball_hello1: 'Anais vil gjerne ha nokre nye vener. Kan du hjelpe ho med å seie "Hallo" ved å dra "si"-blokka til arbeidsområdet og skrive "hallo" inni?'
-        studio_gumball_hello2: 'Darwin (spelar 1) og bror hans Gumball (spelar 2) er på veg til skulen. Bruk "spelar sei"-blokka to gonger for å hjelpe dei med å helse på kvarandre.'
-        studio_gumball_move_to_flag: 'Banana Joe held på å vinne dagens løp! Hjelp han å gå dei 200 siste pikslane ved å bruke "flytt"-blokka.'
-        studio_gumball_move_to_actor: 'Gumball (spelar 1) og Darwin (spelar 2) er for seine til utflukta! Hjelp Gumball å gå 200 pikslar ned til Darwin ved hjelp av "flytt spelar"-blokka. Deretter kobler du ei blokk til "når spelar berører"-hendinga for å spele ein lyd når dei finn kvarandre.'
-        studio_gumball_repeat: '"Gjenta alltid"-blokka gjer at du kan kjøre kode kontinuerleg. Kan du legge til fleire blokker slik at Gumball varmar opp til løpet sitt ved å flytte frå venstre til høgre mange gonger?'
-        studio_gumball_click_hello: 'Kan du hjelpe Anton rope ut starten på eit løp ved å sei "Klar, ferdig, gå!"? Klikk Anton når du klikkar Kjør for å teste programmet!'
-        studio_gumball_move_events: 'Darwin er med i en konkurranse om å samle flagg! Hjelp han å løpe rundt ved å feste "Flytt" blokken til kvar hending. Når du er ferdig, klikk Køyr og prøv å samle alle flagga.'
-        studio_gumball_sound_and_points: 'Vi har lagt ved mesteparten av koden som får Anton (spelar 2) til å bevege seg mot venstre og høgre, og koden som får Banana Joe (spelar 1) til flytte seg rundt om kring på skjermen. Kan du gjere ferdig koden og legge til blokker i "når spelar streifer"-hendinga slik at du både spelar ein lyd og scorer eit poeng når Banana Joe og anton kolliderer? Trykk Kjør for å spele spelet.'
-        studio_gumball_warn_food_fight: 'Darwin rømde nettopp frå matkrigen! Endre bakgrunnen til "karakterar" og sett Darwin sin fart til rask. Trykk Køyr og flytt han til Penny for å åtvare ho.'
-        studio_gumball_join_food_fight: 'Delta i matkrigen! Bruk kommandoen "spelar kaste element høgre" for at Banana Joe (spelar 1) skal kaste mat på Anton (spelar 2)! Sett humøret til Anton til "sint" når han blir treft.'
-        studio_gumball_free_play: Lag ditt eige spel eller historie. Når du er ferdig, klikk Fullfør for å la vennene dine prøve spelet på telefonen, nettbrettet eller datamaskinen!
-        studio_full_sandbox: Lag ditt eige spel. Når du er ferdig, trykk Fullfør for å la venane dine prøve ditt spel på sine mobilar.
-        studio_k1_1: Kan du få denne hunden til å seie «hallo verda»?
-        studio_k1_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
-        studio_k1_3: Kan du skrive eit program for å få denne hunden til å flytte seg til katten?
-        studio_k1_4: Få hunden til å flytte seg bort til katten og katten til å sei «hallo» når han kjem fram.
-        studio_k1_5: Kan du legge til ei blokk for å gjere blekkspruten glad?
-        studio_k1_6: Lag din eiga historie! Flytt katten og hunden rundt og få dei til å sei ting.
-        maze_wordsearch_k_1: Flytt meg for å stave ordet AUST
+        jigsaw_13: Løse puslespillet!
+        mazestep_1: Labyrint trinn beskrivelse her
+        mazestep_2: Labyrint trinn beskrivelse her
+        mazestep_3: Labyrint trinn beskrivelse her
+        mazestep_4: Labyrint trinn beskrivelse her
+        mazestep_5: Labyrint trinn beskrivelse her
+        studio_c2_1: 'Kan du få denne hunden til å si "Voff voff"?'
+        studio_c2_2: Kan du få hunden til å si noe og så katten til å si noe etterpå?
+        studio_c2_3: Kan du skrive et program for å få denne hunden flytte seg til katten?
+        studio_c2_4: 'Kan du skrive et program som gjør at hunden flytter til katten, og lar katten si "Hei" når hunden når ham?'
+        studio_c2_5: 'Kan du skrive et program som får en blekksprut til å si "Hei" når den klikkes?'
+        studio_c2_6: Kan du skrive et program for å få denne pingvinen til å gå rundt med opp / ned / venstre/høyre-tastene for å treffe alle målene?
+        studio_c2_7: '"Gjenta alltid" blokken tillater deg å kjøre kode kontinuerlig. Kan du legge til blokker for å flytte denne dinosauren opp og ned flere ganger?'
+        studio_c2_8: 'Kan du få pingvinen til å si "Au!", spille en "treff"-lyd hvis han går inn dinosauren og deretter flytte ham med pilene for å få det til å skje?'
+        studio_c2_9: Kan du legge til en blokk for å skåre et poeng når pingvinen kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
+        studio_c2_10: Kan du legge til blokker for å forandre bakgrunnen og hastigheten til pingvinen, og deretter bevege den med pil-tastene til du score?
+        studio_c2_11: Nå kan du lage din egen historie. Når du er ferdig, klikker du Fullfør for å la venner prøve din historie på sine telefoner.
+        studio_c3_story_1: 'Kan du få denne hunden til å si "Voff voff"?'
+        studio_c3_story_2: Klarer du få hunden til å si noe og så få katten til å si noe etterpå?
+        studio_c3_story_3: Kan du skrive et program for å få denne hunden flytte seg til katten?
+        studio_c3_story_4: 'Kan du skrive et program som gjør at hunden flytter til katten, og lar katten si "Hei" når hunden når ham?'
+        studio_c3_story_5: Kan du legge til en blokk som gjør blekksprutem lykkelig?
+        studio_c3_story_6: Nå kan du lage din egen historie. Når du er ferdig, klikker du Fullfør for å la venner prøve din historie på sine telefoner.
+        studio_c3_game_1: 'Kan du skrive et program som får en blekksprut til å si "Hei" når den klikkes?'
+        studio_c3_game_2: Kan du skrive et program for å få denne pingvinen til å gå rundt med opp / ned / venstre/høyre-tastene for å treffe alle målene?
+        studio_c3_game_3: '"Gjenta alltid" blokken tillater deg å kjøre kode kontinuerlig. Kan du legge til blokker for å flytte denne dinosauren opp og ned flere ganger?'
+        studio_c3_game_4: 'Kan du få pingvinen til å si "Au!", spille en "treff"-lyd hvis han går inn dinosauren og deretter flytte ham med pilene for å få det til å skje?'
+        studio_c3_game_5: Kan du legge til en blokk for å skåre et poeng når pingvinen kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
+        studio_c3_game_6: Kan du legge til blokker for å forandre bakgrunnen og hastigheten til pingvinen, og deretter bevege den med pil-tastene til du score?
+        studio_c3_game_7: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
+        studio_playlab_1: 'Pinvinen ønsker å si "hei" - kan du hjelpe ham?'
+        studio_playlab_2: 'Hulegutt (figur 1) og Hulejente (figur 2) ønsker å si "hei" til hverandre. Kan du hjelpe dem ved å bruke "si"-blokken to ganger?'
+        studio_playlab_3: Kan du hjelpe Tennisjenta med å få tak i flagget?
+        studio_playlab_4: Kan du hjelpe Tennisgutt (figur 1) med å få Tennisjente (figur 2) til å spille av en lyd når han kommer dit?
+        studio_playlab_5: 'Kan du hjelpe Rombot til å si "hilsner jordboere" når den blir klikket på? Ikke glem å klikke på den etter du trykker Kjør'
+        studio_playlab_6: Kan du hjelpe heksa med å flytte seg rundt ved å bruke piltastene opp/ned/høyre/venstre for å få tak i alle de magiske ildkulene?
+        studio_playlab_7: '"Gjenta alltid" blokken kan du bruke til å kjøre kode kontinuerlig. Kan du knytte sammen blokker for å hjelpe veiviseren flytte seg til høyre og venstre gjentatte ganger?'
+        studio_playlab_8: Kan du legge til en blokk for å få et poeng og en blokk for å spille av en lyd når enhjørningen løper på trollmannen, og så flytte han med pilene til du får et poeng?
+        studio_playlab_9: Sett bakgrunnen for denne invasjonen og hjelp Rombot å komme raskere frem til romvesnene ved å endre hastigheten hans. Flytt han dermed med piltastene for å komme til Romboten og advare alle andre
+        studio_playlab_10: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
+        studio_iceage_hello1: 'Sid ønsker å samle alle sammen til et nytt eventyr. Kan du hjelpe ham med å si "hei"? Dra "si"-brikken ut i arbeidsområdet og skrive inn ordet "hei" inni den?'
+        studio_iceage_hello2: 'Sid (figur 1) fant Manfred (figur 2) og har lyst til å invitere han med på eventyret. Hjelp dem med å hilse på hverandre ved å bruke "figur si"-brikken to ganger.'
+        studio_iceage_move_to_flag: 'Scrat leter etter eikenøtta si! Hjelp ham med å gå de siste 200 pikslene ved å bruke "flytt"-brikken.'
+        studio_iceage_move_to_actor: 'Diego (figur 1) leter etter Manfred (figur 2). Hjelp Diego med å gå 200 piksler ned til Manfred ved å bruke "flytt figur"-brikken. Så setter du på en "når figur berører"-hendelse for å spille av en lyd når de finner hverandre.'
+        studio_iceage_repeat: 'Brikken "gjenta alltid" tillater deg å kjøre kode om og om igjen. Kan du sette brikker på den slik at Granny flytter seg til venstre og til høyre igjen og igjen, for å få litt mosjon?'
+        studio_iceage_click_hello: Kan du hjelpe Sid med å rope noen siste hilsner til sine venner når han blir trykket på? Ikke glem å trykke på han etter du har trykket Kjør.
+        studio_iceage_move_events: 'Scrat leter fortsatt etter eikenøtter! Hjelp ham med å fare avsted ved å feste "flytt"-brikken på hver av hendelsene og endre retning når man trykker på piltastene. Når du er ferdig, trykk på Kjør og prøv å samle alle eikenøttene.'
+        studio_iceage_sound_and_points: 'Vi har gitt deg mesteparten av koden som får Granny til å bevege seg til venstre og høyre, i tillegg til koden for å flytte Sid rundt på skjermen. Kan du fullføre koden og legge til brikker på "når figur berører"-hendelsen slik at du spiller av en lyd og scorer et poeng når Sid og Granny går inn i hverandre? Trykk Kjør for å spille spillet.'
+        studio_iceage_warn_ice_age: 'Alle trenger å bevege seg raskere fordi en istid er på vei! Endre bakgrunnen til "isfjell" og sett Sids hastighet til rask. Trykk Kjør og flytt ham bort til Diego for å advare ham.'
+        studio_iceage_throw_hearts: 'Sid vil fortelle bestemoren sin, Granny, at han er glad i henne. Bruk "figur kast"-kommandoen for å få Sid (figur 1) til å kaste hjerter på Granny (figur 2)! Sett Grannys humør til glad når hun blir truffet av hjerter.'
+        studio_iceage_free_play: Nå er det tid for å lage ditt eget spill eller din egen historie! Når du er ferdig, trykk Fullfør for å la vennene dine prøve spillet på sine telefoner, nettbrett eller datamaskiner!
+        studio_gumball_hello1: 'Anais ønsker å få noen nye venner. Kan du hjelpe henne å si "hallo" ved å dra "si" blokken til arbeidsområdet og å skrive ordet "hallo" inne?'
+        studio_gumball_hello2: 'Darwin (figur 1) og hans bror Gumball (figur 2) er på vei til skolen.  Hjelp dem å hilse på hverandre ved hjelp av "figur si" blokken to ganger.'
+        studio_gumball_move_to_flag: 'Banan Joe er om å vinne et felt dag løp!  Hjelpe ham å gå de siste 200 pikslene ved hjelp av "Flytt"-blokk.'
+        studio_gumball_move_to_actor: 'Gumball (figur 1) og Darwin (figur 2) er sent ute til utflukten! Hjelp Gumball å gå 200 piksler ned til Darwin ved hjelp av "flytt figur"-blokk.  Så koble en blokk til hendelsen "når figur berører" for å spille en lyd når de finner hverandre.'
+        studio_gumball_repeat: 'Med "gjenta alltid" blokken kan du kjøre kode kontinuerlig.  Kan du knytte blokker for å hjelpe Gumball varme opp til løpet ved å flytte til venstre og høyre flere ganger?'
+        studio_gumball_click_hello: 'Kan du hjelpe Anton kunngjøre starten av et løp ved å si "Klar, ferdig, gå!"? For å teste programmet, ikke glem å klikke Anton når du klikker Kjør!'
+        studio_gumball_move_events: 'Darwin er i flagg samle konkurransen! Hjelpe ham løpe rundt ved å feste "Flytt" blokken til hver hendelse. Når du er ferdig, klikk Kjør, og prøv å samle alle flaggene.'
+        studio_gumball_sound_and_points: 'Vi har lagt ved mesteparten av koden som holder Anton (figur 2) i bevegelse til venstre og høyre, og koden for å flytte Banana Joe (figur 1) rundt på skjermen.  Kan du fullføre koden og legge blokker til hendelsen "når figur berører" å gjøre det slik at du både spiller av en lyd og scorer poeng når Banana Joe og Anton kolliderer?  Trykk Kjør spillet.'
+        studio_gumball_warn_food_fight: 'Darwin rømte nettopp fra en mat kamp! Endre bakgrunnen til "karakterer" og angi hastigheten til Darwin til rask. Trykk Kjør og flytte ham til Penny for å advare henne.'
+        studio_gumball_join_food_fight: 'Delta i mat kampen! Bruk kommandoen "figur kast element høyre" for at Banana Joe (figur 1) skal kaste mat på Anton (figur 2)! Angi humøret til Anton til sint når han blir truffet.'
+        studio_gumball_free_play: Lag ditt eget spill eller historie. Når du er ferdig, klikk Fullfør for å la venner prøve spillet på telefoner, tablets eller datamaskiner!
+        studio_full_sandbox: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
+        studio_k1_1: Kan du få denne hunden til å si «hallo verden»?
+        studio_k1_2: Kan du få hunden til å si noe og etterpå få katten til å si noe?
+        studio_k1_3: Kan du skrive et program for å få denne hunden flytte seg til katten?
+        studio_k1_4: Få hunden til å flytte seg bort til katten og katten til å si «hallo» når han kommer fram.
+        studio_k1_5: Kan du legge til en blokk for å gjøre blekkspruten glad?
+        studio_k1_6: Lag din egen historie! Flytt katten og hunden rundt, og få dem til å si ting.
+        maze_wordsearch_k_1: Flytt meg for å stave ordet ØST
         maze_wordsearch_k_2: Flytt meg for å stave ordet SØR
         maze_wordsearch_k_3: Flytt meg for å stave ordet VEST
         maze_wordsearch_k_4: Flytt meg for å stave ordet NORD
         maze_wordsearch_k_6: Flytt meg øst og så sør for å stave ordet HOPP
-        maze_wordsearch_k_9: Flytt meg ein veg, så ein annan veg for å stave ordet KODE
-        maze_wordsearch_k_13: Flytt meg ein veg, så ein annan for å stave ordet FEILSØKING
-        maze_wordsearch_k_15: Flytt meg ein veg, så ein annan for å stave ordet OVER
-        maze_wordsearch_k_16: Flytt meg en vei, så ein annan for å stave ordet UNDER
-        maze_wordsearch_k_20: Dette er en test! Flytt meg en veg, så en annan for å stave ordet HISTORIE
-        applab_ec_simple: "Lag app'en din ved å bruke brikkene i verktykassa."
-        turtle_ec_1_2: 'Teikn eit kvadrat. MERK: bruk din favorittfarge ved å velje den i den nye «pennFarge» blokka.'
-        turtle_ec_1_10: 'Du klarte det! No kan du teikne akkurat det du vil. Noen morosame idear: Ein strekmann, eit snøflak eller ein spiral. Prøv også den nye «pennStørrelse»-blokka. Ha det gøy!'
-        studio_ec_sandbox: Lag ditt eige spel. Når du er ferdig, trykk Fullfør for å la venane dine prøve ditt spel på sine mobilar.
+        maze_wordsearch_k_9: Flytt meg en vei, så en annen vei for å stave ordet KODE
+        maze_wordsearch_k_13: Flytt meg en vei, så en annen for å stave ordet FEILSØKING
+        maze_wordsearch_k_15: Flytt meg en vei, så en annen for å stave ordet OVER
+        maze_wordsearch_k_16: Flytt meg en vei, så en annen for å stave ordet UNDER
+        maze_wordsearch_k_20: Dette er en test! Flytt meg en vei, så en annen for å stave ordet HISTORIE
+        applab_ec_simple: Opprette app med blokker i verktøykassen.
+        turtle_ec_1_2: 'Nå, tegn et kvadrat. MERK: bruk din favorittfarge ved å velge den i den nye «pennFarge» blokken.'
+        turtle_ec_1_10: 'Du klarte det! Nå, tegn akkurat det du vil. Noen morsome ideer: En strekmann, et snøflak eller en spiral. Prøv også den nye «pennStørrelse» blokken. Ha det gøy!'
+        studio_ec_sandbox: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
     video:
       name:
-        maze_intro: Labyrint introduksjon
-        artist_intro: Kunstner introduksjon
-        farmer_intro: Bonde introduksjon
-        flappy_intro: Flakse introduksjon
-        loop_times: Ei blokk for å gjenta noko fleire gonger
+        maze_intro: Labyrint intro
+        artist_intro: Kunstner intro
+        farmer_intro: Bonde intro
+        flappy_intro: Introduksjon til Flappy
+        loop_times: En blokk for å gjenta noe et antall ganger
         loop_until: Gjenta inntil blokk
-        if: Viss-blokk
-        if_else: Viss/elles blokk
-        if_else_scrat: Viss/elles blokk
-        function: Funksjonar
-        loop_while: Medan-blokk
-        loop_for: Gjenta med teljar-blokk
-        parameters: Funksjonar med parameter
+        if: Hvis-blokk
+        if_else: Hvis/ellers blokk
+        if_else_scrat: Hvis/ellers blokk
+        function: Funksjoner
+        loop_while: Gjenta så lenge blokk
+        loop_for: Gjenta med Teller-blokk
+        parameters: Funksjoner med parametre
         hoc_wrapup: Slutt på Kodetimen
-        Unplug1: Kva er datavitskap?
-        Unplug2: Programmeringstenking
-        Unplug3: Programmering på millimeterpapir
+        Unplug1: Hva er CS?
+        Unplug2: Programmeringstenkning
+        Unplug3: Millimeterpapirprogrammering
         Unplug4: Algoritmer
-        Unplug5: Funksjonar
+        Unplug5: Funksjoner
         Unplug6: Betingelser
         Unplug7: Låtskriving
         Unplug8: Abstraksjon
-        Unplug9: Programmeringsstafett
+        Unplug9: Relé programmering
         Unplug10: Internett
         Unplug11: Oppsummering
-        C1_happy_maps_unplugged: Glade Kart
+        C1_happy_maps_unplugged: Glad Kart
         C1_moveitmoveit_unplugged: Flytt den, flytt den
-        C1_bigevent_unplugged: Den store hendinga
-        C1_getting_loopy: Me blir sløyfete
-        C1_pair_programming: Parprogrammering
-        C1_maze_intro_sequencing: Labyrint sekvensering introduksjon
+        C1_bigevent_unplugged: Den store begivenheten
+        C1_getting_loopy: Gå i spinn
+        C1_pair_programming: Par Programmering
+        C1_maze_intro_sequencing: Labyrint sekvensering Intro
         C1_maze_debugging: Labyrint feilsøking
-        C1_bee_level_intro: 'Bie nivå - introduksjon'
-        C1_artist_intro: Kunstner introduksjon
-        C1_spelling_bee_intro: Stavekonkurranse introduksjon
-        C1_zuck_repeat_loop: 'Labyrint: Sløyfer'
-        C1_bee_loops: Bier Løkker
-        C1_maze_loops: 'Labyrint: Sløyfer'
-        C1_playlab_storytelling: 'Spel-lab - lage ei historie'
-        C1_planting_seed: Plant eit frø
-        C1_building_foundation: Bygge eit fundament
-        C1_going_places_safely: Går stader trygt
-        C2_maze_intro: Labyrint introduksjon
-        C2_artist_intro: Kunstner introduksjon
-        C2_zuck_repeat_loop: 'Labyrint: Sløyfer'
-        C2_artist_loops: Kunstnar Løkker
-        C2_artist_debugging: Kunstnar Feilsøking
-        C2_bee_loops: Bier Løkker
-        C2_bee_debugging: Bier Feilsøking
-        C2_bee_conditionals: Bier Vilkår
-        C2_playlab_createstory: 'Spel-lab - lage ei historie'
-        C2_graph_paper: Programmering på millimeterpapir
+        C1_bee_level_intro: 'Bie nivå - Intro'
+        C1_artist_intro: Kunstner intro
+        C1_spelling_bee_intro: Stavekonkurranse Intro
+        C1_zuck_repeat_loop: Labyrint løkker
+        C1_bee_loops: Bie løkker
+        C1_maze_loops: Labyrint løkker
+        C1_playlab_storytelling: 'Spill Lab - lage en historie'
+        C1_planting_seed: Plante et frø
+        C1_building_foundation: Bygg ett grunnlag
+        C1_going_places_safely: Trygg reise
+        C2_maze_intro: Labyrint intro
+        C2_artist_intro: Kunstner intro
+        C2_zuck_repeat_loop: Labyrint løkker
+        C2_artist_loops: Kunstner løkker
+        C2_artist_debugging: Kunstner Feilsøking
+        C2_bee_loops: Bie løkker
+        C2_bee_debugging: Bie feilsøking
+        C2_bee_conditionals: Bie Betingelser
+        C2_playlab_createstory: 'Spill Lab - lage en historie'
+        C2_graph_paper: Millimeterpapirprogrammering
         C2_conditionals_with_cards: Betingelser
         C2_binary_bracelets: Binær armbånd
-        C2_relay_programming: Programmeringsstafett
-        C2_paper_airplanes: Papirfly
-        C2_digital_footprint: Dine digitale fotspor
-        C2_digital_footprint_v2: Dine digitale fotspor
-        C3_maze_level_4: 'Labyrint: Sløyfer'
-        C3_artist_intro: Kunstner introduksjon
-        C3_artist_functions: Kunstnar Funksjonar
-        C3_bee_functions: Bier Funksjonar
-        C3_bee_conditionals: Bier Vilkår
-        C3_maze_conditionals: Labyrint Vilkår
-        C3_artist_nested_loops: Løkker i løkke
-        C3_farmer_while: Medan-løkker
-        C3_bee_nested_loops: Løkker i løkke
-        C3_bee_debugging: Bier Feilsøking
-        C3_bounce: Sprett
-        C3_playlab_create_game: 'Spel lab - lag eit spel'
-        C3_computational_thinking: Programmeringstenking
-        C3_dice_race: Terning Kappløp
+        C2_relay_programming: Relé-programmering
+        C2_paper_airplanes: Papir fly
+        C2_digital_footprint: Dine digitale fotavtrykk
+        C2_digital_footprint_v2: Dine digitale fotavtrykk
+        C3_maze_level_4: Labyrint løkker
+        C3_artist_intro: Kunstner intro
+        C3_artist_functions: Kunstner funksjoner
+        C3_bee_functions: Bie funksjoner
+        C3_bee_conditionals: Bie Betingelser
+        C3_maze_conditionals: Labyrint Betingelser
+        C3_artist_nested_loops: Løkker i løkker
+        C3_farmer_while: Mens Løkker
+        C3_bee_nested_loops: Løkker i løkker
+        C3_bee_debugging: Bie feilsøking
+        C3_bounce: sprett
+        C3_playlab_create_game: Spill-Lab – lage et spill
+        C3_computational_thinking: Programmeringstenkning
+        C3_dice_race: Terningskappløp
         C3_internet: Internett
         C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Fungerande solfangarar
-        C3_songwriting_with_parameters: Låtskriving med parameter
+        C3_functional_suncatchers: Fungerende solfangere
+        C3_songwriting_with_parameters: Låtskriving med parametere
         C4_intro: Introduksjon
         C4_loops_zombie: Løkker
-        C4_bee_conditional: Bier Vilkår
-        C4_variables_artist: 'Variablar - Kunstnar'
-        C4_variables_playlab: 'Variablar - Spelelaboratorie'
+        C4_bee_conditional: Bie Betingelser
+        C4_variables_artist: 'Variabler - Kunstner'
+        C4_variables_playlab: Variabler – Spill-Lab
         C4_for_loops: For-løkker
         C4_for_loops_bee: For-løkker
         C4_for_loops_no_bee: For-løkker
-        C4_math_artist: Programmer Kunstnaren med Matte
-        C4_function_edit: Redigeringsfunksjonar
-        C4_function_create: Lag Funksjonar
-        C4_function_parameters: Funksjonar med parameter
+        C4_math_artist: Programmere Kunstneren med Matematikk
+        C4_function_edit: Redigere Funksjoner
+        C4_function_create: Lage Funksjoner
+        C4_function_parameters: Funksjoner med parametre
         C4_conditionals: Betingelser
-        C4_unplugged_algorithms: Algoritmer med Tangrammer
-        C4_unplugged_madlibs: Sprøtt Bibliotek
-        C4_unplugged_variables: Variablar i Konvoluttar
+        C4_unplugged_algorithms: Algoritmer med Tangram
+        C4_unplugged_madlibs: Sprø Bibliotek
+        C4_unplugged_variables: Variabler i konvolutter
         C4_unplugged_forloops: For-løkker
         C4_unplugged_parameters: Låtskriving med parametere
         C4_unplugged_binary: Binær
         frozen_intro: Kodetimen Intro
         frozen_loops: Introduksjon til løkker
-        frozen_functions: Introduksjon til Funksjonar
-        playlab_intro: Introduksjon til Spelelaboratoriet
-        playlab_events: Spelelaboratoriehendingar
-        playlab_repeat_forever: Spelelaboratoriet gjenta for alltid
-        tutorial_puzzle_challenge: Opplæring Oppgåve-utfordring
-        infinity_playlab_intro: Spele-Lab – Introduksjon
-        infinity_playlab_events: 'Spele-Lab - Hendingar'
-        infinity_playlab_repeat_forever: 'Spele-Lab - Gjenta for alltid'
+        frozen_functions: Introduksjon til funksjoner
+        playlab_intro: Introduksjon til Spill-Lab
+        playlab_events: Spill-Lab arrangement
+        playlab_repeat_forever: Spill-Lab Gjenta for alltid
+        tutorial_puzzle_challenge: Opplæring Puzzle utfordring
+        infinity_playlab_intro: Spill-Lab – introduksjon
+        infinity_playlab_events: Spill-Lab – hendelser
+        infinity_playlab_repeat_forever: Spill-Lab Gjenta for alltid
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
         csp_applab_processing_lists: Processing Lists with Loops
@@ -472,8 +472,8 @@ nn:
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
-        csp_applab_functions: Introduksjon til Funksjonar
-        csp_applab_functions_parameters: Funksjonar med parameter
+        csp_applab_functions: Introduksjon til funksjoner
+        csp_applab_functions_parameters: Funksjoner med parametre
         csp_applab_loops: Løkker
         csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Litt om pixler
@@ -507,99 +507,99 @@ nn:
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Skap ein galakse med kode - introduksjon'
-        starwars_typing: 'Star Wars: Skap ein galakse med kode - JavaScript'
-        starwars_events: 'Star Wars: Skap ein galakse med kode - Hendingar'
-        starwars_congrats: 'Star Wars: Skap ein galakse med kode - Gratulerer'
-        starwars_blocks_intro: 'Star Wars: Skap ein galakse med kode - introduksjon'
-        starwars_blocks_events: 'Star Wars: Skap ein galakse med kode - Hendingar'
-        starwars_blocks_congrats: 'Star Wars: Skap ein galakse med kode - Gratulerer'
+        starwars_intro: 'Star Wars: Skap en galakse med kode - introduksjon'
+        starwars_typing: 'Star Wars: Skap en galakse med kode - JavaScript'
+        starwars_events: 'Star Wars: Skap en galakse med kode - Hendelser'
+        starwars_congrats: 'Star Wars: Skap en galakse med kode - Gratulerer'
+        starwars_blocks_intro: 'Star Wars: Skap en galakse med kode - introduksjon'
+        starwars_blocks_events: 'Star Wars: Skap en galakse med kode - Hendelser'
+        starwars_blocks_congrats: 'Star Wars: Skap en galakse med kode - Gratulerer'
         mc_intro: 'Minecraft - introduksjon'
-        mc_repeat: 'Minecraft - gjenta'
-        mc_if_statements: 'Minecraft - Viss-setningar'
-        mc_congrats_share: 'Minecraft - Gratulera'
-        mc_congrats_no_share: 'Minecraft - Gratulera'
-        gumball_intro: 'Gumball Kodetimen - Introduksjon'
-        gumball_events: 'Gumball Kodetimen - hendingar'
-        gumball_repeat: 'Gumball Kodetimen - Repeter argument'
-        iceage_intro: 'Kodetimen Istid - Introduksjon'
-        iceage_events: 'Kodetimen Istid - Hendingar'
-        iceage_repeat: 'Kodetimen Istid - Gjenta-kommandoer'
+        mc_repeat: Minecraft – Gjenta
+        mc_if_statements: Minecraft – Hvis-kommandoer
+        mc_congrats_share: Minecraft – Gratulerer
+        mc_congrats_no_share: Minecraft – Gratulerer
+        gumball_intro: 'Gumball Hour of Code - introduksjon'
+        gumball_events: 'Gumball Hour of Code - hendelser'
+        gumball_repeat: 'Gumball Hour of Code - Repeter argument'
+        iceage_intro: 'Ice Age Hour of Code - Introduction'
+        iceage_events: 'Ice Age Hour of Code - Events'
+        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
-        drag_blocks: 'Dra ei "flytt"-blokk og fest den under den andre blokka'
-        run: 'Trykk "Køyr" for å prøve programmet'
-        watch_again: Klikk her for å sjå filmen igjen
-        gray_block_explanation: Blokker som er grå kan ikkje slettast. Kan du løyse oppgåva likevel?
-        show_code_explanation: Klikk her for å sjå koden for programmet du lagar
-        instructions_repeat_explanation: Instruksjonane for kvar oppgåve blir vist her
-        category_explanation: Du har alle dei same blokkene, men dei har no blitt ordna i kategoriar
-        set_sprite_image: 'Fest ei "Set avatar"-blokk til "når historia startar"-blokka for å aktivere spelaren for denne historien'
-        studio_say_text: 'Skriv inn det du vil at din spelar skal sei mellom "-teikna'
-        jigsaw_click: Klikk på denne blokka!
-        move_elsa_forward: Dra ei «Flytt framover»-blokk og fest den under «Når køyrt»-blokka for å få Elsa til å flytte framover
-        turn_elsa: Bruk «Snu»-blokken for å få Elsa til å snu. Tallet i nedtrekks-lista avgjer kor mykje Elsa snur seg
-        replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
-        replace_questions_degree: Bruk nedtrekkslista for å erstatte «???» med rett antal grader for å snu
-        repeat_blocks: Bruk «Gjenta»-blokka og legg den rundt blokkene i arbeidsområdet
-        repeat_blocks_1: (1) Bruk denne blokka og sett han rundt dei grå blokkene i arbeidsområdet
-        repeat_blocks_2: '(2) Flytt "Gjenta"-blokka hit og sett dei grå blokkene inni'
-        snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
-        degrees_per_side: Del 360 på antall sider for å finne kor mange grader kvar vinkel er.
-        set_sides: 'Bruk denne blokka til å sette antall "sider" som trengs for å gjere ferdig oppgåva.'
-        set_length: 'Bruk denne blokka for å sette "lengde" til rett verdi.'
-        which_equation: Kva for likning gjer kvar side kortare for former med fleire sider?
-        get_nectar: 'Bruk den nye "få nektar"-blokka.'
-        actions_category: 'Verktøyboksen har fått ny utsjånad! "Handling"-blokkene er her inne nå.'
-        draw_square_hint: 'Hint: bruk firkant-løkka du laga i den forrige oppgava.'
+        drag_blocks: 'Dra en "flytt" blokk og fest den under den andre blokken'
+        run: 'Trykk "Kjør" for å prøve programmet'
+        watch_again: Klikk her for å se filmen igjen
+        gray_block_explanation: Blokker som er grå kan ikke slettes. Kan du løse oppgaven likevel?
+        show_code_explanation: Klikk her for å se koden for programmet du lager
+        instructions_repeat_explanation: Instruksjonene for hver oppgave vises her
+        category_explanation: Du har alle de samme blokker, men de har nå blitt ordnet i kategorier
+        set_sprite_image: 'Fest en "angi figur til bilde"-blokk til "når historien starter"-blokken for å aktivere figuren for denne historien'
+        studio_say_text: 'Skriv inn hva du vil at din figur skal si mellom "-tegnene'
+        jigsaw_click: Klikk denne blokken!
+        move_elsa_forward: Dra en «Flytt Frammover» blokk og fest den under «Når Kjørt» blokk for å få Elsa til å flytte framover
+        turn_elsa: Bruk «Snu» blokken for å få Elsa til å snu. Tallet i rullegardinlisten bestemmer hvor mye Elsa snur seg
+        replace_questions: Bruk rullegardinlisten for å erstatte «???» med et tall
+        replace_questions_degree: Bruk rullegardinlisten for å erstatte «???» med det korrekte antall grader å snu
+        repeat_blocks: Bruk «Gjenta» blokken og legg den rundt blokkene i arbeidsområdet
+        repeat_blocks_1: (1) Bruk denne blokken og legg den rundt de grå blokkene i arbeidsområdet
+        repeat_blocks_2: '(2) Flytt "Gjenta"-blokken og plasser de grå blokkene inni'
+        snowflake_dropdown: Bruk dene rullegardinlisten for å lage forskjellige snøflak!
+        degrees_per_side: Del 360 på antall sider for å få størrelsen på hver vinkel i grader.
+        set_sides: 'Bruk denne blokken for å angi antall "sider" som er nødvendig for å løse oppgaven .'
+        set_length: 'Bruk denne blokken for å sette "lengde" til den riktige verdien.'
+        which_equation: Hvilken likning gjør hver side kortere for figurer med flere sider?
+        get_nectar: 'Bruk den nye "få nektar" blokken.'
+        actions_category: 'Verktøykassa fikk et nytt utseende! "Handlinger" blokkene er her nå.'
+        draw_square_hint: 'Tips: Bruk firkant løkken som du lagde i den forrige oppgaven.'
         edit_function: Klikk her for å redigere funksjonen.
-        create_function: 'Klikk her for å åpne "Funksjonar"-menyen og klikk deretter "Opprette ein funksjon"-knappen.'
-        house_hint: Det er greit dersom bildet ikkje ser ut som eit hus enno. Vi skal fikse det i den neste oppgåva.
-        edit_draw_square: Bruk denne knappen for å redigere funksjonen og leggje til løkka.
-        edit_get_nectar: Bruk denne knappen til å redigere funksjonen og endre retninga som bia skal snu for å få nektar.
-        logic_category: 'Åpne "Logikk" menyen for å finne "viss/elles"-blokka.'
-        length_parameter: 'Kan du oppdatere denne funksjonen slik at han brukar parameteret "lengde"?'
-        frozen_diamond_repeat: Bruk gjenta-blokka for å lage denne figuren.
-        frozen_circle_function_in_circle_turn: Ikkje gløym å snu når du har laga kvar sirkel.
-        frozen_circle_function_with_parameter_circle: 'Bruk "Lag ein sirkel"-blokka og endre størrelsen.'
-        frozen_snowflake_branch: 'Bruk "Lag ei snøfnugg-grein"-blokka'
-        frozen_create_square: Legg til fleire blokker her for å lage eit kvadrat
-        playlab_drag_say: 'Dra "si"-blokka hit og skriv "Hallo"'
-        playlab_use_twice: Bruk denne blokka to ganger og hugs å endre spelarnummer
-        playlab_move_girl: 'Bruk "flytt til høgre"-blokka til å flytte Tennisjenta'
-        playlab_play_sound: 'Legg til ein "spel lyd"-blokk her'
-        playlab_arrow_keys: Hugs å bruke desse til å flytte heksa etter å ha klikka på Kjør
-        playlab_add_move: 'Legg til "flytt"-blokker inne i gjenta-blokka'
+        create_function: 'Klikk her for å åpne"Funksjoner" menyen og klikk deretter "Opprette en funksjon" knappen.'
+        house_hint: Det er ok hvis bildet ikke ser ut som et hus ennå. Vi skal fikse det i den neste oppgaven.
+        edit_draw_square: Bruk denne knappen for å redigere funksjonen og legge til løkken.
+        edit_get_nectar: Bruk denne knappen til å redigere funksjonen og endre retningen som bien skal snu for å få nektar.
+        logic_category: 'Åpne "Logikk" menyen for å finne "hvis/ellers" blokken.'
+        length_parameter: 'Kan du oppdatere denne funksjonen slik at den bruker parameteret "lengde"?'
+        frozen_diamond_repeat: Bruk gjenta-blokken for å opprette denne figuren.
+        frozen_circle_function_in_circle_turn: Ikke glem å snu når du har opprettet hver sirkel.
+        frozen_circle_function_with_parameter_circle: 'Bruk "Lag en sirkel"-blokken og endre størrelsen.'
+        frozen_snowflake_branch: 'Bruk "Lag et snøfnugg-gren"-blokken'
+        frozen_create_square: Legg til flere blokker her for å lage en firkant
+        playlab_drag_say: 'Dra "si"-blokken hit og skriv "Hei"'
+        playlab_use_twice: Bruk denne blokken to ganger og husk å endre figur-nummeret
+        playlab_move_girl: 'Bruk blokken "flytt til høyre" for å flytte Tennisjenta'
+        playlab_play_sound: 'Legg til en "spill lyd"-blokk her'
+        playlab_arrow_keys: Husk å bruke disse for å flytte heksen etter du har klikket på Kjør
+        playlab_add_move: 'Legg til "flytt"-blokker i denne gjenta-blokken'
         playlab_add_score: Legg til poeng-blokker her
-        playlab_add_blocks: Legg til blokkene dine her
-        set_variable: Dra ei nummer-blokk hit for å sette variabelen
-        place_variable: Dra variabelen din inn i denne blokka
-        bee_for_loop: Dra hit det største nummeret av nektar som du ynsker at bia skal samle
-        place_counter_variable: Dra teller-variabelen din inn i denne blokka
-        function_editor_draw_square: 'Dette er funksjonsdefinisjonen din. Desse blokkene køyrer kvar gong du bruker "tegn eit kvadrat"-blokka'
-        change_here: Gjer endringa di her
-        write_draw_square_function: Dra blokkene frå verktøykassa inn hit for å teikne eit kvadrat
-        write_draw_triangle_function: Dra blokker frå verktøykassa inn her for å teike eit kvadrat
-        edit_add_parameter: Klikk Rediger for å legge til ein parameter i funksjonen din
-        add_and_drag_parameter: 'Skriv inn namnet på parameteren din her, klikk på "Legg til" og dra den etter det til funksjonsdefinisjonen din'
-        fill_in_actor: Erstatt ??? med tall som samsvarar med kvar spelar (1, 2 og 3)
-        repeat: Sett blokker inni løkka for å gjenta kommandoar
-        if_bee_nectar: 'Bruk "dersom"-blokka for å avgjere om bia skal få nektar'
-        if_else_bee: 'Bruk "dersom/ellers"-blokka slik at bia får nektar frå ein blomster og lagar honning dersom det ikkje er ein blomster'
-        repeat_full_circle: Angi kor mange gonger zombien må flytte for å lage ein full sirkel
-        place_length_variable: Dra lengdevariabelen hit for å erstatte spørsmålsteikna
-        arrows_move_actor: Bruk pilene til å flytte spelaren
-        right_arrow_fireball: Bruk pil-høyre til å skyte eldkuler
-        name_function: Skriv namnet på funksjonen din her
-        Infinity_move_right_runbutton: Legg til Flytt-blokk her
-        Infinity_move_directions_callout: Kva blokk vil få Baymax til å flytte opp når du trykker på pil opp?
-        Infinity_move_directions_callout_arrow: Bruk desse pilene til å styre
-        Infinity_move_collide_callout: Spel av ein lyd når denne hendinga skjer.
-        Infinity_repeat_callout: Plassér Flytt-blokker innanfor her
-        craft_run_button_callout: 'Trykk "Køyr" for å prøve programmet'
-        craft_drag_block_callout: 'Dra ein "moveForward();"-blokk og klikk den fast under den andre blokka'
-        craft_callout_preplaced: Vi har satt saman nokre blokker her for å hjelpe deg i gong
-        craft_inside_repeat: Gjenta handlingar ved å sette blokker inni her
-        craft_callout_preplaced_house: Denne koden startar bygginga av huset ditt. Kan du gjere han ferdig?
+        playlab_add_blocks: Legg til dine blokker her
+        set_variable: Dra en nummer-blokk hit for å angi variabelen
+        place_variable: Dra variabelen din inn i denne blokken
+        bee_for_loop: Dra det største nummeret av nektar som du ønsker at bien skal samle hit
+        place_counter_variable: Dra teller-variabelen din inn i denne blokken
+        function_editor_draw_square: 'Dette er din funksjonsdefinisjon. Disse blokkene kjører hver gang du bruker "tegn en firkant"-blokken'
+        change_here: Gjør din endring her
+        write_draw_square_function: Dra blokkene fra verktøykassen inn hit for å tegne en firkant
+        write_draw_triangle_function: Dra blokker fra verktøykassen inn her for å tegne en trekant
+        edit_add_parameter: Klikk Rediger for å legge til en parameter i funksjonen din
+        add_and_drag_parameter: Skriv inn navnet på parameteren din her, klikk på Legg til og dra den deretter til funksjonsdefinisjonen din
+        fill_in_actor: Erstatt ??? med tall som passer for hver figur (1, 2 og 3)
+        repeat: Sett blokker inni gjenta-løkken for å gjenta kommandoer
+        if_bee_nectar: 'Bruke "Hvis"-blokken for å avgjøre om bien skal få nektar'
+        if_else_bee: 'Bruk "if/else" blokken slik at bien får nektar fra en blomst og lager honning hvis det ikke er en blomst'
+        repeat_full_circle: Angi hvor mange ganger zombien må flytte for å lage en full sirkel
+        place_length_variable: Dra lengdevariabelen hit for å erstatte spørsmålstegnene
+        arrows_move_actor: Bruk pilene til å flytte figuren
+        right_arrow_fireball: Bruk pil-høyre til å skyte ildkuler
+        name_function: Skriv navnet på funksjonen din her
+        Infinity_move_right_runbutton: Legg til Flytt blokk her
+        Infinity_move_directions_callout: Hvilken blokk vil få Baymax til å flytte opp når du trykker på pil opp?
+        Infinity_move_directions_callout_arrow: Bruk disse pilene til å styre
+        Infinity_move_collide_callout: Spill en lyd når denne hendelsen inntreffer.
+        Infinity_repeat_callout: Plasser flytte blokker her
+        craft_run_button_callout: 'Trykk på "Kjør" for å prøve programme'
+        craft_drag_block_callout: 'Dra en "flytt fremover"-blokk og plasser den under den andre blokken'
+        craft_callout_preplaced: Vi har plassert noen blokker her slik at du kommer i gang
+        craft_inside_repeat: Gjenta handlinger ved å plassere blokker her
+        craft_callout_preplaced_house: Denne koden starter byggingen av huset ditt. Kan du fullføre det?
         craft_what_is_iron: Utvinn dette jernet!
-        craft_callout_moveforward: Denne koden sjekker om det er lava, kan du legge til ein kommando for å gå framover?
+        craft_callout_moveforward: Denne koden vil se etter lava. Kan du legge inn en kommando for å flytte fremover?

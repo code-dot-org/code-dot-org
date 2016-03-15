@@ -774,6 +774,7 @@
   dashboard_progress_completed_too_many_blocks: afsluttet, for mange blokke
   dashboard_progress_completed_perfect: Afsluttet, perfekt
   dashboard_progress_furthest_level_attempted: længst opnåede niveau
+  dashboard_progress_submitted: submitted
   dashboard_stage: trin
   dashboard_puzzle: Opgave
   dashboard_question: Spørgsmål

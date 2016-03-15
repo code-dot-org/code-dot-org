@@ -865,7 +865,7 @@ id:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -928,6 +928,7 @@ id:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Ilmu komputer dalam aljabar PD
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -1326,6 +1327,8 @@ id:
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1596,6 +1599,7 @@ id:
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
           description_short: Data Apps
@@ -1609,3 +1613,31 @@ id:
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Belajar pemrograman fungsional melalui aljabar
+          description: Belajar pemrograman fungsional melalui aljabar
+          "Calc: Evaluation Blocks": 'Calc: Blok Evaluasi'
+          "Eval: Strings and Images": 'Eval: String dan gambar'
+          "Unplugged: Contracts": 'Unplugged/tidak terpasang: kontrak'
+          "Eval: Writing Contracts": 'Eval: Menulis kontrak'
+          "Calc: Defining Variables": 'Calc: Mendefinisikan variabel'
+          "Eval: Defining Functions": 'Eval: Mendefinisikan fungsi'
+          "Unplugged: The Design Recipe": 'Unplugged/tidak terpasang: Resep desain'
+          "Play Lab: Defining Functions": 'Play Lab: Mendefinisikan fungsi'
+          "Eval: Functions": 'Eval: fungsi'
+        AlgebraB:
+          title: Ilmu Komputer dalam Aljabar
+          description_short: Belajar pemrograman fungsional melalui aljabar
+          description: Belajar pemrograman fungsional melalui aljabar
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged.tidak terpasang : Video Games dan Coordinate Planes'
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Mendefinisikan variabel (Big Game)'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animasi (Big Game)'
+          "Unplugged: Booleans": 'Unplugged/tidak terpasang: Boolean'
+          "Eval: Boolean Operators": 'Eval: Operator Boolean'
+          "Play Lab: Booleans": 'Play Lab: Boolean'
+          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged/tidak terpasang: Kondisional dan fungsi Piecewise'
+          "Eval: Conditionals": 'Eval: Kondisional'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged/tidak terpasang: pendeeteksi benturan dan Formula jarak'
+          "Play Lab: Collision Detection (Big Game)": 'Bermain Lab: Pendeteksi benturan (Big Game)'

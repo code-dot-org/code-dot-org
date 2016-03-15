@@ -979,6 +979,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "단계 2 온라인: 혼합된 여름 공부"
@@ -1441,6 +1442,8 @@
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1732,6 +1735,7 @@
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description_short: Data Apps
@@ -1748,3 +1752,32 @@
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Calc: Evaluation Blocks': "계산: 평가(결과 계산) 블럭"
+          'Eval: Strings and Images': "평가: 문자열(문장)과 이미지"
+          'Unplugged: Contracts': "언플러그드 : 제한 조건"
+          'Eval: Writing Contracts': "평가: 제한 조건 쓰기"
+          'Calc: Defining Variables': "계산: 변수 정의하기"
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': "언플러그드: 디자인 레시피"
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': "언플러그드: 비디오 게임과 좌표 평면"
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: 변수 정의하기 (빅 게임)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: 애니메이션 (빅 게임)'
+          'Unplugged: Booleans': "언플러그드: 참/거짓값"
+          'Eval: Boolean Operators': "평가: 참/거짓(논리) 연산자"
+          'Play Lab: Booleans': 'Play Lab: 불(참 또는 거짓 값)'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: 참/거짓값 (빅 게임)'
+          'Unplugged: Conditionals and Piecewise Functions': "언플러그드: 조건선택과 함수 조각"
+          'Eval: Conditionals': "평가: 조건/선택"
+          'Unplugged: Collision Detection and the Distance Formula': "언플러그드: 충돌 감지와
+            거리 계산식"
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: 충돌 감지 (빅 게임)'
