@@ -1,4 +1,3 @@
-/*jshint multistr: true */
 /* global $ */
 
 var tb = require('../block_utils').createToolbox;

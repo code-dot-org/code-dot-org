@@ -3,12 +3,6 @@
  *           which is used to transmit packets.
  * @see NetSimPacketEditor which is used extensively here.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var utils = require('../utils');

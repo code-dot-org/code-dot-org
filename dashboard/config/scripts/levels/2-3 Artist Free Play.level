@@ -69,13 +69,20 @@
             <block type="colour_random"/>
           </value>
         </block>
+        <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+            <block type="math_number_dropdown">
+              <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
+            </block>
+          </value>
+        </block>
         <block type="draw_width_inline">
           <title name="WIDTH">1</title>
         </block>
         <block type="draw_line_style_pattern">
           <title name="VALUE">DEFAULT</title>
         </block>
-        <block type="turtle_stamp">
+        <block type="sticker">
           <title name="VALUE">Elephant</title>
         </block>
       </xml>
