@@ -2,6 +2,7 @@
  *  @see http://redux.js.org/docs/basics/Reducers.html */
 'use strict';
 
+var _ = require('../lodash');
 var ActionType = require('./actions').ActionType;
 var combineReducers = require('redux').combineReducers;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
@@ -39,7 +40,7 @@ function level(state, action) {
               action.type + ' action.');
         }
       });
-      return $.extend({}, state, action.props);
+      return _.assign({}, state, action.props);
 
     default:
       return state;
