@@ -6,7 +6,7 @@
 
 = render partial: 'levels/common_audio'
 
-- page = params[:page] ? (params[:page].to_i - 1) : 0
+- page = params[:puzzle_page] ? (params[:puzzle_page].to_i - 1) : 0
 
 - data["pages"][page]["levels"].each_with_index do |level_name, index|
   - level = Level.find_by_name(level_name)
