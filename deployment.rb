@@ -135,7 +135,6 @@ def load_configuration()
   end
 end
 
-
 ####################################################################################################
 ##
 ## CDO - A singleton that contains our settings and integration helpers.
@@ -283,7 +282,6 @@ class CDOImpl < OpenStruct
 end
 
 CDO ||= CDOImpl.new
-
 
 ####################################################################################################
 ##

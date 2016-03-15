@@ -28,6 +28,7 @@ end
 
 if CDO.throttle_data_apis
   require 'cdo/rack/attack'
+  RackAttackConfigUpdater.new.start
   use Rack::Attack
 end
 

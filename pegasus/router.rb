@@ -269,7 +269,6 @@ class Documents < Sinatra::Base
       request.user_id
     end
 
-
     def document(path)
       content = IO.read(path)
       original_line_count = content.lines.count
@@ -290,6 +289,11 @@ class Documents < Sinatra::Base
         cache_for @header['max_age']
       else
         cache :document
+      end
+
+      if request.post? && !@header['allow_post']
+        response.headers['Allow'] = 'GET, HEAD'
+        error 405
       end
 
       response.headers['X-Pegasus-Version'] = '3'
