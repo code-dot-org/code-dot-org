@@ -1,4 +1,4 @@
-/** @file Top-level view for Gamelab */
+/** @file Top-level view for GameLab */
 'use strict';
 
 var connect = require('react-redux').connect;
@@ -8,7 +8,7 @@ var GameLabVisualizationHeader = require('./GameLabVisualizationHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
 
 /**
- * Top-level React wrapper for Gamelab
+ * Top-level React wrapper for GameLab
  */
 var GameLabView = React.createClass({
   propTypes: {
