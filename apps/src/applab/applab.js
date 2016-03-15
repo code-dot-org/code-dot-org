@@ -7,6 +7,8 @@
 /* global dashboard */
 
 'use strict';
+var JSZip = require('jszip');
+var saveAs = require('filesaver.js').saveAs;
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var applabMsg = require('./locale');
@@ -919,6 +921,40 @@ Applab.render = function () {
       <AppLabView {...nextProps} />
     </Provider>,
     Applab.reactMountPoint_);
+};
+
+Applab.exportApp = function() {
+  var code = studioApp.editor.getValue();
+  // TODO: find another way to get this element that doesn't rely on global element id.
+  var appElement = document.getElementById('divApplab').cloneNode(true);
+  appElement.style.display = 'block';
+  appElement.classList.remove('notRunning');
+  appElement.classList.remove('withCrosshair');
+  var htmlBody = appElement.outerHTML;
+  var origin = window.location.origin;
+  var html = `
+<html>
+  <head>
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="${origin}/assets/js/en_us/common_locale.js"></script>
+    <script src="${origin}/assets/js/en_us/applab_locale.js"></script>
+    <script src="${origin}/assets/js/applab-api.js"></script>
+    <link rel="stylesheet" href="${origin}/assets/css/applab.css">
+  </head>
+  <body>
+    ${htmlBody}
+    <script src="code.js"></script>
+  </body>
+</html>
+`;
+  var zip = new JSZip();
+  // TODO: find another way to get this info that doesn't rely on globals.
+  var appName = window.dashboard && window.dashboard.project.getCurrentName() || 'my-app';
+  zip.file(appName + "/index.html", html);
+  zip.file(appName + "/code.js", code);
+  var blob = zip.generate({type:"blob"});
+  saveAs(blob, appName + ".zip");
 };
 
 /**

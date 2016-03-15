@@ -115,6 +115,8 @@
   },
   "dependencies": {
     "query-string": "4.1.0",
+    "filesaver.js": "0.2.0",
+    "jszip": "2.5.0",
     "react-color": "^2.0.0"
   }
 }
