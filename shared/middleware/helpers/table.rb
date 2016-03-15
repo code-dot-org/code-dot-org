@@ -59,5 +59,5 @@ def table_to_csv(table_array, column_order: nil)
       csv << unique_columns.collect { |x| table_row[x] }
     end
   end
-  return csv_string
+  csv_string
 end

@@ -28,7 +28,7 @@ def get_cumulatives(stats)
     end
   end
 
-  return cumulatives
+  cumulatives
 end
 
 # Adds any keys in base_hash missing in other_hash to other_hash with value default_value.

@@ -79,7 +79,7 @@ class GatekeeperBase
   def get_rule_map(feature)
     json_map = @datastore_cache.get(feature)
     return json_map if !json_map.nil?
-    return {}
+    {}
   end
 
   # Generates the key for the where clause

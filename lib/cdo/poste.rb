@@ -23,7 +23,7 @@ module Poste
   end
 
   def self.decrypt_id(encrypted)
-    return decrypt(encrypted).to_i
+    decrypt(encrypted).to_i
   end
 
   def self.encrypt(plain)

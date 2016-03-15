@@ -589,7 +589,7 @@ SQL
 
   def initial
     return nil if name.blank?
-    return name.strip[0].upcase
+    name.strip[0].upcase
   end
 
   # override the default devise password to support old and new style hashed passwords
@@ -612,7 +612,7 @@ SQL
       return true
     end
 
-    return false
+    false
   end
 
   # Override how devise tries to find users by email to reset password
@@ -918,7 +918,7 @@ SQL
     return true if sections_as_student.empty?
 
     # if you log in only through picture passwords you can't edit your account
-    return !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
+    !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
   end
 
 end

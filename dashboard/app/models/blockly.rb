@@ -185,7 +185,7 @@ class Blockly < Level
 
   # What blocks should be embedded for the given block_xml. Default behavior is to change nothing.
   def blocks_to_embed(block_xml)
-    return block_xml
+    block_xml
   end
 
   # Return a Blockly-formatted 'appOptions' hash derived from the level contents

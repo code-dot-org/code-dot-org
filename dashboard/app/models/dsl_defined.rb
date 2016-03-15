@@ -114,7 +114,7 @@ class DSLDefined < Level
         # just return the encrypted text
       end
     end
-    return dsl_text
+    dsl_text
   end
 
   def dsl_text

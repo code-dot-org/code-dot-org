@@ -167,7 +167,7 @@ class SqlTable
   end
 
   def to_csv()
-    return table_to_csv(to_a, column_order: ['id'])
+    table_to_csv(to_a, column_order: ['id'])
   end
 
   def self.table_names(channel_id)

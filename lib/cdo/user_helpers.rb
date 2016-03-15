@@ -31,7 +31,7 @@ module UserHelpers
     # find the current maximum integer suffix and add 1. Not guaranteed to be the "next" as in not leave holes,
     # but is guaranteed to be (currently) unique
     suffix = similar_usernames.map{|n| n[prefix.length..-1]}.map(&:to_i).max + 1
-    return "#{prefix}#{suffix}"
+    "#{prefix}#{suffix}"
   end
 
   def self.random_donor

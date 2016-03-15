@@ -185,7 +185,7 @@ class GSheetToCsv
 
     HipChat.log "Downloaded <b>#{@gsheet_path}</b> (<b>#{File.size(@csv_path)}</b> btyes) from Google Drive."
 
-    return @csv_path
+    @csv_path
   end
 
 end
@@ -198,7 +198,7 @@ namespace :seed do
     return true if value == 'TRUE'
     return false if value == 'FALSE'
     return Date.strptime(value.to_s.strip, '%m/%d/%Y') if value.to_s.strip =~ /^\d{1,2}\/\d{1,2}\/\d{4}$/
-    return value
+    value
   end
 
   def import_csv_into_table(path, table)

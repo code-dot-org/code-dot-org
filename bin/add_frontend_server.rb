@@ -189,8 +189,8 @@ end
 def generate_instance_zone_and_name(ec2client, ssh_username, frontend_name = nil)
   instance_distribution = determine_frontend_instance_distribution
   determined_instance_zone, instance_count = instance_distribution.min_by{|_, v| v}
-  return determined_instance_zone, determine_unique_name_for_instance_zone(ssh_username, frontend_name,
-                                                                           determined_instance_zone, instance_count)
+  [determined_instance_zone, determine_unique_name_for_instance_zone(ssh_username, frontend_name,
+                                                                           determined_instance_zone, instance_count)]
 end
 
 # Generate and provision a new instance. This will call AWS, create the instance, name it, update the chef configuration

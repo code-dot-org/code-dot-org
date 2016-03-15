@@ -214,7 +214,7 @@ class ScriptLevelsController < ApplicationController
 
   # Don't try to generate the CSRF token for forms on this page because it's cached.
   def protect_against_forgery?
-    return false
+    false
   end
 
 end
