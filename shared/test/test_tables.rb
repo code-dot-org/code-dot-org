@@ -58,7 +58,7 @@ class TablesTest < Minitest::Test
     begin
       create_record({'name' => 'yet another record'})
     rescue
-      assert_equal 413, @tables.last_response.status
+      assert_equal 403, @tables.last_response.status
     end
 
     # Delete a record and make sure we can then add exactly one more record.
@@ -68,7 +68,7 @@ class TablesTest < Minitest::Test
     begin
       create_record({'name' => 'but only for one more'})
     rescue
-      assert_equal 413, @tables.last_response.status
+      assert_equal 403, @tables.last_response.status
     end
 
     delete_channel
