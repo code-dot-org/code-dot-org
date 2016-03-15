@@ -427,12 +427,6 @@ Style/SpaceBeforeBlockBraces:
 Style/SpaceBeforeComment:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: AllowForAlignment.
-Style/SpaceBeforeFirstArg:
-  Enabled: false
-
 # Offense count: 561
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
