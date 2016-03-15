@@ -474,7 +474,7 @@
   starwars_javascript_specs: "Μόνο Αγγλικά | Σύγχρονα προγράμματα περιήγησης | Ηλικίες
     11+"
   starwars_javascript_start_button: "Δοκίμασε τώρα"
-  starwars_blocks_title: "Πακέτα"
+  starwars_blocks_title: "Μπλοκς"
   starwars_blocks_description: "Χρησιμοποίησε πακέτα «σύρε και άφησε»."
   starwars_blocks_specs: "Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης, έξυπνα
     κινητά, ταμπλέτες | Ηλικίες 6-10"
@@ -484,7 +484,7 @@
   starwars_help_translate: "Βοήθησέ μας να μεταφράσουμε"
   starwars_platform_text: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
   mc_name: "Η Ώρα του Κώδικα με το Minecraft"
-  mc_longdescription: "Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον
+  mc_longdescription: "Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή την
     Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft."
   mc_shortdescription: "Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον
     Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft."
@@ -838,6 +838,7 @@
   dashboard_progress_completed_too_many_blocks: "ολοκληρώθηκε, πάρα πολλά μπλοκ"
   dashboard_progress_completed_perfect: "ολοκληρώθηκε, τέλειο"
   dashboard_progress_furthest_level_attempted: "τελευταίο επίπεδο επιχειρήθηκε"
+  dashboard_progress_submitted: submitted
   dashboard_stage: "Επίπεδο"
   dashboard_puzzle: "Παζλ"
   dashboard_question: "Ερώτηση"

@@ -657,6 +657,7 @@
   dashboard_progress_completed_too_many_blocks: "完成，但使用過多積木"
   dashboard_progress_completed_perfect: "完美完成"
   dashboard_progress_furthest_level_attempted: "嘗試到的最遠關卡"
+  dashboard_progress_submitted: submitted
   dashboard_stage: "階段"
   dashboard_puzzle: "關卡"
   dashboard_question: "問題 "
