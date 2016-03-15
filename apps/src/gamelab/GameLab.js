@@ -27,7 +27,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var actions = require('./actions');
 var createStore = require('../redux');
 var gamelabReducer = require('./reducers').gamelabReducer;
-var GamelabView = require('./GamelabView.jsx');
+var GameLabView = require('./GameLabView.jsx');
 var Provider = require('react-redux').Provider;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
@@ -190,7 +190,7 @@ GameLab.prototype.init = function (config) {
   }));
 
   ReactDOM.render(<Provider store={this.reduxStore_}>
-    <GamelabView
+    <GameLabView
       renderCodeWorkspace={renderCodeWorkspace}
       renderVisualizationColumn={renderVisualizationColumn}
       onMount={onMount} />

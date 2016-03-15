@@ -10,7 +10,7 @@ var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
 /**
  * Top-level React wrapper for Gamelab
  */
-var GamelabView = React.createClass({
+var GameLabView = React.createClass({
   propTypes: {
     interfaceMode: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
@@ -78,4 +78,4 @@ module.exports = connect(function propsFromStore(state) {
     isEmbedView: state.level.isEmbedView,
     isShareView: state.level.isShareView
   };
-})(GamelabView);
+})(GameLabView);
