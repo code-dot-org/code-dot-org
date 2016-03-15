@@ -601,6 +601,7 @@ ro-RO:
   dashboard_progress_completed_too_many_blocks: finalizat, prea multe blocuri
   dashboard_progress_completed_perfect: finalizat, perfect
   dashboard_progress_furthest_level_attempted: cel mai îndepărtat nivel încercat
+  dashboard_progress_submitted: submitted
   dashboard_stage: Etapă
   dashboard_puzzle: Puzzle
   dashboard_question: Întrebare

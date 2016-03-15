@@ -558,6 +558,7 @@ az:
     completed_perfect: tamamlanıb, əladır
     furthest_level_attempted: furthest level attempted
     assessment: qiymətləndirilir
+    submitted: submitted
   studio:
     courses_working_on: Üzərində işlədiyiniz kurslar
     completed_courses: Tamamlanmış kurslar

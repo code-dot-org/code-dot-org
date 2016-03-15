@@ -556,6 +556,7 @@ el:
     completed_perfect: ολοκληρώθηκε, τέλειο
     furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
     assessment: αξιολόγηση
+    submitted: submitted
   studio:
     courses_working_on: Μαθήματα τα οποία παρακολουθείτε
     completed_courses: Μαθήματα που ολοκληρώσατε

@@ -618,6 +618,7 @@ lv-LV:
   dashboard_progress_completed_too_many_blocks: Pabeigts, pārāk daudz bloki
   dashboard_progress_completed_perfect: pabeigts, ideāli
   dashboard_progress_furthest_level_attempted: tālākais līmenis mēģināts
+  dashboard_progress_submitted: submitted
   dashboard_stage: Posms
   dashboard_puzzle: Puzle
   dashboard_question: Question

@@ -1010,6 +1010,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Stüdyo
+          Long assessment: Long assessment
         algebraPD2b:
           title: Algebra PD'de Bilgisayar Bilimi
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
@@ -1473,6 +1474,8 @@
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1611,7 +1614,7 @@
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
-          description_short: Programming
+          description_short: Programlama
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1648,10 +1651,12 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: Gumball oyun Labaratuarı
+          description_short: Bir hikaye oluşturmak veya bir oyun yartmak için Gumball
+            Lab kullanın!
+          description: Bir hikaye oluşturmak veya bir oyun yartmak için Gumball Lab
+            kullanın!
+          Gumball Play Lab: Gumball oyun Labaratuarı
         starwars:
           title: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek'
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
@@ -1769,6 +1774,7 @@
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description_short: Data Apps
@@ -1785,3 +1791,36 @@
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+          description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+          'Calc: Evaluation Blocks': 'Calc: Değerlendirme Blokları'
+          'Eval: Strings and Images': 'Eval: Diziler ve Görüntüler'
+          'Unplugged: Contracts': 'Unplugged: Teknikler'
+          'Eval: Writing Contracts': 'Eval: Yazım Teknikleri'
+          'Calc: Defining Variables': 'Hesaplama: Değişkenleri Tanımlama'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Unplugged: Tasarım Tarifi'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Cebirde Bilgisayar Bilimi
+          description_short: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+          description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Oyunları
+            ve Koordinat Düzlemleri'
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Değişkenleri Tanımlama
+            (Büyük Oyun)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animasyon (Büyük Oyun)'
+          'Unplugged: Booleans': 'Unplugged: Boolean Değerleri'
+          'Eval: Boolean Operators': 'Eval: Boolean Operatörleri'
+          'Play Lab: Booleans': 'Play Lab: Boolean Değerleri'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Büyük Oyun)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Şartlar ve
+            Parçalı Fonksiyonlar'
+          'Eval: Conditionals': 'Eval: Şartlar'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Kaza
+            Algılama ve Mesafe Formülü'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Kaza Algılama (Büyük
+            Oyun)'
