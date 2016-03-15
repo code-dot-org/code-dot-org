@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Distribute downloaded translations from i18n/locales
+# back to blockly-core, apps, pegasus, and dashboard.
+
 set -e
 
 locales=$(ls i18n/locales | grep -v 'en-US' | grep -v 'source')
@@ -26,7 +29,7 @@ for locale in $locales; do
   done
 
 
-  ### Blockly Mooc
+  ### Apps
 
   orig_dir=apps/i18n
   loc_dir=i18n/locales/$locale/blockly-mooc

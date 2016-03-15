@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Pulls in all strings that need to be translated. Pulls source
+# files from blockly-core, apps, pegasus, and dashboard and
+# collects them to the single source folder i18n/locales/source.
+
 set -e
 
 function cp_in() {
@@ -32,7 +36,7 @@ for file in $(find $orig_dir -name '*.en.yml'); do
   cp_in $file $loc_dir${relname%.en.yml}.yml
 done
 
-### Blockly-Mooc
+### Apps
 
 orig_dir=apps/i18n
 loc_dir=i18n/locales/source/blockly-mooc

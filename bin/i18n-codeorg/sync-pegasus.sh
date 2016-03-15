@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Copies new pegasus strings from pegasus/cache/i18n/en-US.yml
+# to all locales in pegasus/cache/i18n.
+
 set -e
 
 function cp_in() {
