@@ -664,6 +664,7 @@
     completed_perfect: "виконано, ідеально"
     furthest_level_attempted: "останній відкритий рівень"
     assessment: "оцінювання"
+    submitted: submitted
   studio:
     courses_working_on: "Відкриті курси"
     completed_courses: "Завершені курси"

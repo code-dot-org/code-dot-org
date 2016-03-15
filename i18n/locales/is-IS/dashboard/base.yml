@@ -555,6 +555,7 @@ is:
     completed_perfect: lokið, fullkomið
     furthest_level_attempted: hæsti unninn áfangi
     assessment: mat
+    submitted: submitted
   studio:
     courses_working_on: Námskeið sem þú ert að fást við
     completed_courses: Námskeið sem þú hefur lokið

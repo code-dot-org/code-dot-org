@@ -69,7 +69,7 @@
   "dropletBlock_getTime_description": "Get the current time in milliseconds",
   "dropletBlock_greaterThanOperator_description": "Tests whether a number is greater than another number. Returns true if the value on the left-hand side of the expression is strictly greater than the value on the right-hand side of the expression",
   "dropletBlock_greaterThanOperator_signatureOverride": "Greater than operator",
-  "dropletBlock_greaterThanOrEqualOperator_description": "Tests whether a value is greater than or equal to another value. Returns true if the value on the left-hand side of the expression is greater than or equal to the value on the right-hand side of the expression.",
+  "dropletBlock_greaterThanOrEqualOperator_description": "\n",
   "dropletBlock_greaterThanOrEqualOperator_signatureOverride": "Greater than or equal operator",
   "dropletBlock_ifBlock_description": "Do something only if a condition is true",
   "dropletBlock_ifBlock_signatureOverride": "if statement",

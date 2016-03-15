@@ -5,6 +5,7 @@
 .dropbox
 .idea/
 **/.bundle
+crowdin.yaml
 /.gdrive_session
 /crontab
 /dashboard/public/blockly

@@ -1025,6 +1025,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Informatique en DP d'algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
@@ -1488,6 +1489,8 @@
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1787,6 +1790,7 @@
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description_short: Data Apps
@@ -1803,3 +1807,36 @@
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Apprendre la programmation fonctionnelle par l'algèbre
+          description: Apprendre la programmation fonctionnelle par l'algèbre
+          'Calc: Evaluation Blocks': 'Calc : Blocs d''évaluation'
+          'Eval: Strings and Images': 'Evaluation : Textes et des Images'
+          'Unplugged: Contracts': 'Activité débranchée : les contrats'
+          'Eval: Writing Contracts': 'Evaluation : Rédaction de contrats'
+          'Calc: Defining Variables': 'Calc : Définir les variables'
+          'Eval: Defining Functions': 'Eval : Définition de fonctions'
+          'Unplugged: The Design Recipe': 'Activité débranchée : les recettes de conception'
+          'Play Lab: Defining Functions': 'Labo : Définition de fonctions'
+          'Eval: Functions': 'Eval : fonctions'
+        AlgebraB:
+          title: Informatique en algèbre
+          description_short: Apprendre la programmation fonctionnelle par l'algèbre
+          description: Apprendre la programmation fonctionnelle par l'algèbre
+          'Unplugged: Video Games and Coordinate Planes': 'Activité débranchée : jeux
+            vidéo et les plans de coordonnées'
+          'Play Lab: Defining Variables (Big Game)': 'Labo : définir les variables
+            (grand jeu)'
+          'Play Lab: Animation (Big Game)': 'Labo : Animation (grand jeu)'
+          'Unplugged: Booleans': 'Activité débranchée : les booléens'
+          'Eval: Boolean Operators': 'Eval : Opérateurs Booléens'
+          'Play Lab: Booleans': 'Play Lab : Booléens'
+          'Play Lab: Boolean (Big Game)': 'Labo : les booléens (grand jeu)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Activité débranchée
+            : les conditions et fonctions par morceaux'
+          'Eval: Conditionals': 'Evaluation : instructions conditionnelles'
+          'Unplugged: Collision Detection and the Distance Formula': 'Activité débranchée
+            : la détection de collision et la formule de la distance'
+          'Play Lab: Collision Detection (Big Game)': 'Labo : détection de Collision
+            (grand jeu)'

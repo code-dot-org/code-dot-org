@@ -672,6 +672,7 @@
     completed_perfect: "аяқталды, тамаша"
     furthest_level_attempted: "жетілген ең жоғарғы деңгей"
     assessment: "баға"
+    submitted: submitted
   studio:
     courses_working_on: "Сіз жұмыс жасап жатқан курстар"
     completed_courses: "Аяқталған курстар"

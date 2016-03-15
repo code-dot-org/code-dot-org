@@ -605,6 +605,7 @@ nl-NL:
   dashboard_progress_completed_too_many_blocks: voltooid, teveel blokken
   dashboard_progress_completed_perfect: voltooid, perfect
   dashboard_progress_furthest_level_attempted: verste niveau geprobeerd
+  dashboard_progress_submitted: submitted
   dashboard_stage: niveau
   dashboard_puzzle: puzzel
   dashboard_question: Vraag

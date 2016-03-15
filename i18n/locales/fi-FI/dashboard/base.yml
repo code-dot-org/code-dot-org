@@ -564,6 +564,7 @@ fi:
     completed_perfect: valmis, täydellinen
     furthest_level_attempted: vaikein taso jota yritetty
     assessment: arviointi
+    submitted: submitted
   studio:
     courses_working_on: Kurssit, joita työstät
     completed_courses: Valmiit kurssit
