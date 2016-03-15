@@ -76,8 +76,7 @@ describe('createRecord callbacks', function () {
       }
     });
 
-    lastRequest.respond(403, { "Content-Type": "application/json" },
-      JSON.stringify(myRecord));
+    lastRequest.respond(403, {}, 'A table may have at most 1000 rows');
     assert(!hitSuccess);
     assert(hitError);
   });
@@ -94,8 +93,7 @@ describe('createRecord callbacks', function () {
     var applabLogger = sinon.spy(Applab.log);
     errorHandler.setLogMethod(applabLogger);
 
-    lastRequest.respond(403, { "Content-Type": "application/json" },
-      JSON.stringify(myRecord));
+    lastRequest.respond(403, {}, 'A table may have at most 1000 rows');
 
     assert(applabLogger.calledOnce, 'Applab.log was called');
   });
