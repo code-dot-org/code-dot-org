@@ -12,6 +12,9 @@
 %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
 %link{href: asset_path("css/#{app}.css"), rel: 'stylesheet', type: 'text/css'}
 
+-# Ensure Font Awesome is loaded for use in apps
+%span{style: 'font: 1px FontAwesome', id: 'fa-preload'} &nbsp;
+
 -# Droplet style dependencies (only when editor present)
 - if use_droplet && !hide_source
   %link{href: asset_path('css/droplet/droplet.min.css'), rel: 'stylesheet', type: 'text/css'}
