@@ -18,10 +18,9 @@ Here is how you can promote your school's new computer science program:
 
 [**YouTube**](http://www.youtube.com/watch?v=xgOYvG1WAbM) | [**Download**](https://)
 
-[/col-50]
+
 <div style="clear: both;"></div>
 
-[col-50]
 
 ### Sign up for AP Computer Science Principles
 
