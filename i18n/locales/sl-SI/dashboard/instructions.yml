@@ -264,7 +264,7 @@ sl:
       2-3 Maze 9_instruction: Pelji me k tej zeleni zlobi! (Pazi se TNTja)
       2-3 Maze Loops 1_instruction: Me lahko pelješ do prašička z uporabo 5 blokov?
       2-3 Maze Loops 17_instruction: Use what you learned to get me to the sunflower!
-      2-3 Maze Loops 18_instruction: "Get me to the sunflower using the fewest blocks\npossible!  \\r\n\\r\n(Note: You'll need to use one `repeat` loop inside of\nanother to pass this level.)"
+      2-3 Maze Loops 18_instruction: "Get me to the sunflower using the fewest blocks\npossible!  \\r\n\\r\nTry using one `repeat` loop inside of another to cut down\non the amount of code you need."
       2-3 Maze Loops 19_instruction: "Let's take this to another level! \\r\nUse\nloops to get me to the sunflower with the fewest loops possible."
       2-3 Maze Loops 20_instruction: |
         Get me to the sunflower using the fewest number
@@ -3498,7 +3498,7 @@ sl:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -4347,8 +4347,10 @@ sl:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

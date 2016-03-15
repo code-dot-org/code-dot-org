@@ -1017,6 +1017,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1480,6 +1481,8 @@
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1776,6 +1779,7 @@
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description_short: Data Apps
@@ -1792,3 +1796,36 @@
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: "یادگیری برنامه نویسی تابعی از طریق جبر"
+          description: "یادگیری برنامه نویسی تابعی از طریق جبر"
+          'Calc: Evaluation Blocks': "حساب: ارزیابی بلوکها"
+          'Eval: Strings and Images': "ارزیابی: رشته ها و تصاویر"
+          'Unplugged: Contracts': "بدون دستگاه: قراردادها"
+          'Eval: Writing Contracts': "ارزبابی: نوشتن قراردادها"
+          'Calc: Defining Variables': "حساب: تعریف متغیرها"
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': "بدون دستگاه: دستور العمل طرح"
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: "علوم کامپیوتر در جبر"
+          description_short: "یادگیری برنامه نویسی تابعی از طریق جبر"
+          description: "یادگیری برنامه نویسی تابعی از طریق جبر"
+          'Unplugged: Video Games and Coordinate Planes': "بدون دستگاه: بازی های ویدئویی
+            و هواپیمای مختصات"
+          'Play Lab: Defining Variables (Big Game)': "آزمایشگاه بازی: تعریف متغیرها
+            (بازی بزرگ)"
+          'Play Lab: Animation (Big Game)': "آزمایشگاه بازی: انیمیشن (بازی بزرگ)"
+          'Unplugged: Booleans': "بدون دستگاه: بولی ها"
+          'Eval: Boolean Operators': "ارزیابی: عملگرهای بولی"
+          'Play Lab: Booleans': "آزمایشگاه بازی: بولی"
+          'Play Lab: Boolean (Big Game)': "آزمایشگاه بازی: بولی (بازی بزرگ)"
+          'Unplugged: Conditionals and Piecewise Functions': "بدون دستگاه: شرطی ها
+            و توابع چند ضابطه ای"
+          'Eval: Conditionals': "ارزیابی: شرطی ها"
+          'Unplugged: Collision Detection and the Distance Formula': "بدون دستگاه:
+            تشخیص برخورد و فرمول فاصله"
+          'Play Lab: Collision Detection (Big Game)': "آزمایشگاه بازی: تشخیص برخورد
+            (بازی بزرگ)"

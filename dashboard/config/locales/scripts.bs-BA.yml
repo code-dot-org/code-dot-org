@@ -1010,6 +1010,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description: Predaji Funkcionalno Programiranje kroz Algebru
@@ -1473,6 +1474,8 @@
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1769,6 +1772,7 @@
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description_short: Data Apps
@@ -1785,3 +1789,36 @@
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Nauči Funkcionalno Programiranje kroz Algebru
+          description: Nauči Funkcionalno Programiranje kroz Algebru
+          'Calc: Evaluation Blocks': 'Račun: Procjena blokova'
+          'Eval: Strings and Images': 'Evaluacija: Veze i slike'
+          'Unplugged: Contracts': 'Izvanmređno: Ugovori'
+          'Eval: Writing Contracts': 'Evaluacija: Pisanje ugovora'
+          'Calc: Defining Variables': 'Calc: Definisanje Varijabli'
+          'Eval: Defining Functions': 'Eval: Definiranje Funkcija'
+          'Unplugged: The Design Recipe': 'Izvanmređno: Dizajn recept'
+          'Play Lab: Defining Functions': 'Laboratorij Igara: Definiranje Funkcija'
+          'Eval: Functions': 'Eval: Funkcije'
+        AlgebraB:
+          title: Računarstvo u Algebri
+          description_short: Nauči Funkcionalno Programiranje kroz Algebru
+          description: Nauči Funkcionalno Programiranje kroz Algebru
+          'Unplugged: Video Games and Coordinate Planes': 'Izvanmrežno: Video Igrice
+            i Koordinatne Ravni'
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Definisanje varijabli
+            (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animacija (Big Game)'
+          'Unplugged: Booleans': 'Izvanmrežno: Boolova algebra'
+          'Eval: Boolean Operators': 'Evaluacija: Logički operatori'
+          'Play Lab: Booleans': 'Play Lab: Logički'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Logički (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Uslovna i
+            izvedena funkcija'
+          'Eval: Conditionals': 'Evaluacija: Uslovi'
+          'Unplugged: Collision Detection and the Distance Formula': 'Izvanmrežno:
+            Detekcija sudara i udaljenost Formula'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Detekcije Kolizije
+            (Big Game)'

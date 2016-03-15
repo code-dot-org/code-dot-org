@@ -661,6 +661,7 @@
     completed_perfect: "تکمیل, کامل"
     furthest_level_attempted: "تلاش برای دسترسی به سطح دسترسی خارج از محدوده "
     assessment: "ارزیابی"
+    submitted: submitted
   studio:
     courses_working_on: "دوره های شما در حال کار بر روی"
     completed_courses: "دوره های تکمیل شده"

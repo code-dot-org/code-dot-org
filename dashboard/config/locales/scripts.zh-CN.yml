@@ -969,6 +969,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: "工作室"
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "第二阶段在线：混合的暑期学习"
@@ -1431,6 +1432,8 @@
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1722,6 +1725,7 @@
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description_short: Data Apps
@@ -1738,3 +1742,31 @@
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Calc: Evaluation Blocks': "计算器：赋值模块"
+          'Eval: Strings and Images': "赋值：字符串和图像"
+          'Unplugged: Contracts': "离线：契约"
+          'Eval: Writing Contracts': "赋值：契约"
+          'Calc: Defining Variables': "计算： 定义变量"
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': "离线：食谱设计"
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': "离线：视频游戏和坐标面"
+          'Play Lab: Defining Variables (Big Game)': "游戏实验室：定义变量（大游戏）"
+          'Play Lab: Animation (Big Game)': "游戏实验室：动画（大游戏）"
+          'Unplugged: Booleans': "离线：布尔值"
+          'Eval: Boolean Operators': "赋值：布尔操作符"
+          'Play Lab: Booleans': "游戏实验室： 布尔值"
+          'Play Lab: Boolean (Big Game)': "游戏实验室：布尔值（大游戏）"
+          'Unplugged: Conditionals and Piecewise Functions': "离线：条件和分段函数"
+          'Eval: Conditionals': "评价：条件"
+          'Unplugged: Collision Detection and the Distance Formula': "离线：碰撞检测和距离公式"
+          'Play Lab: Collision Detection (Big Game)': "游戏实验室：碰撞检测（大型游戏）"

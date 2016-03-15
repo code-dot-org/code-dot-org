@@ -593,6 +593,7 @@
     completed_perfect: "完成、完璧"
     furthest_level_attempted: "到達レベル"
     assessment: "評価"
+    submitted: submitted
   studio:
     courses_working_on: "試行中のコース"
     completed_courses: "完了したコース"

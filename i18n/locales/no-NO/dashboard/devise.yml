@@ -1,76 +1,76 @@
-"no":
+nn:
   devise:
     confirmations:
-      confirmed: E-postadressen din har blitt bekreftet.
-      send_instructions: Om noen få minutter vil du motta en e-post med instruksjoner om hvordan du bekrefter kontoen.
-      send_paranoid_instructions: Hvis din e-postadresse finnes i vår database, vil du om noen få minutter motta en e-post med instruksjoner om hvordan du bekrefter kontoen.
+      confirmed: E-postadressa di har blitt stadfesta.
+      send_instructions: Om nokre få minutt vil du motta ein e-post med instruksjonar om korleis du stadfestar kontoen din.
+      send_paranoid_instructions: Derso e-postadressa di fins i databasen vår, vil du om nokre få minutt motta ein e-post med instruksjonar om korleis du stadfestar kontoen.
     failure:
-      already_authenticated: Du allerede er logget på.
-      inactive: Kontoen din er ikke aktivert ennå.
+      already_authenticated: Du er alt pålogga.
+      inactive: Kontoen din er ikkje aktivert enno.
       invalid: Ugyldig epostadresse eller passord.
       invalid_token: Ugyldig godkjenningstoken.
-      locked: Kontoen er låst.
+      locked: Kontoen din er låst.
       not_found_in_database: Ugyldig epostadresse eller passord.
-      timeout: Økten utløpt, Logg på igjen for å fortsette.
-      unauthenticated: Du må logge på eller registrere deg før du fortsetter.
-      unconfirmed: Du må bekrefte kontoen før du fortsetter.
+      timeout: Økta er utløpt. Logg inn på nytt for å fortsette.
+      unauthenticated: Du må logge inn eller registrere deg før du held fram.
+      unconfirmed: Du må stadfesta kontoen før du kan halde fram.
     mailer:
       confirmation_instructions:
-        subject: Code.org instruksjoner for bekreftelse
+        subject: Code.org sine instruksjonar for stadfesting
       reset_password_instructions:
-        subject: Code.org instruksjoner for å tilbakestille passord
+        subject: Code.org sine instruksjonar for å tilbakestille passord
       unlock_instructions:
-        subject: Instruksjoner for å låse opp
+        subject: Instruksjonar for å låse opp
     omniauth_callbacks:
-      failure: 'Kunne ikke godkjenne deg fra %{kind} fordi "%{reason}".'
-      success: 'Godkjent fra %{kind} konto.'
+      failure: 'Kunne ikkje godkjenne deg frå %{kind} på grunn av "%{reason}".'
+      success: 'Godkjent frå %{kind} konto.'
     passwords:
-      no_token: Du får ikke tilgang til denne siden uten å komme via en passord-tilbakestilling e-post. Hvis du kommer via en passord-tilbakestilling e-post, kontroller at du brukte hele URL-adressen.
-      send_instructions: Om noen minutter vil du motta en e-post med instruksjoner om hvordan du tilbakestiller passordet.
-      send_paranoid_instructions: Hvis e-postadressen din finnes i vår database, vil du motta en gjenopprett passord-kobling om et par minutter.
-      updated: Passordet ble endret. Du er nå logget på.
-      updated_not_active: Passordet ditt er blitt endret.
+      no_token: Du får ikkje tilgang til denne sida utan å komme via ein epost for tilbakestilling av passord. Dersom du kjem via ein e-post for tilbakestilling av passord, kontroller at du brukte heile URLen som var oppgitt.
+      send_instructions: Om nokre få minutt vil du motta ein e-post med instruksjonar om korleis du tilbakestiller passordet.
+      send_paranoid_instructions: Hvis e-postadressa di finst i databasen vår, vil du innan nokre få minutt via e-post motta ein link for gjenoppretting av passord.
+      updated: Passordet blei endra. Du er nå innlogga.
+      updated_not_active: Passordet ditt har blitt endra.
     registrations:
-      destroyed: Ha det! Kontoen din ble avsluttet. Vi håper å se deg igjen snart.
-      signed_up: Velkommen! Du ble meldt på uten problemer.
-      signed_up_but_inactive: Du er blitt meldt på, men vi kunne ikke logge deg på da kontoen din ikke ennå er aktivert.
-      signed_up_but_locked: Du er meldt på, men vi kan ikke slippe deg inn da kontoen din er låst.
-      signed_up_but_unconfirmed: En melding med en bekreftelseslink er blitt sendt til din e-postadresse. Vennligst åpne linken for å aktivere kontoen din.
-      update_needs_confirmation: Du har oppdatert kontoen din, men vi må verifisere din nye e-postadresse. Vennligst sjekk e-posten din og klikk på linken for å bekrefte din nye e-postadresse.
+      destroyed: Ha det! Kontoen din blei avslutta. Vi håper å sjå deg att snart.
+      signed_up: Velkommen! Du er blitt registrert utan problem.
+      signed_up_but_inactive: Du er blitt registrert, men vi kunne ikkje logge deg på då kontoen din enno ikkje er aktivert.
+      signed_up_but_locked: Du er meldt på, men du kan ikkje logge på sidan kontoen din er låst.
+      signed_up_but_unconfirmed: En melding med ein link for stadfesting har blitt sendt til e-postadressa di. Vennligst åpne linken for å aktivere kontoen din.
+      update_needs_confirmation: Du har oppdatert kontoen din, men vi må verifisere den nye e-postadressa du. Sjekk e-posten din og klikk på linken for å stadfesta den nye e-postadressa.
       updated: Kontoen din er blitt oppdatert.
     sessions:
       signed_in: ""
-      signed_out: Logget ut.
+      signed_out: Logga av utan problem.
     unlocks:
-      send_instructions: Du vil motta en e-post om noen få minutter som beskriver hvordan du kan låse opp kontoen din igjen.
-      send_paranoid_instructions: Hvis kontoen din finnes så vil du om noen få minutter motta en e-post som forklarer deg hvordan du kan låse opp kontoen din.
-      unlocked: Kontoen din er blitt låst opp. Vennligst logg på for å fortsette.
+      send_instructions: Du vil om nokre få minutt motta ein e-post med instruksjonar om korleis du kan låse opp kontoen din igjen.
+      send_paranoid_instructions: Hvis kontoen din fins, så vil du om nokre få minutt motta ein e-post med instruksjonar om korleis du låser opp kontoen din.
+      unlocked: Kontoen din har blitt låst opp. Ver snill å logge på for å fortsette.
   errors:
     messages:
-      already_confirmed: 'var allerede bekreftet. Vennligst  prøv å logg på'
-      confirmation_period_expired: 'må være bekreftet innen %{period}, vennligst forespør en ny'
-      expired: har utgått, vennligst søk om en ny
-      not_found: ikke funnet
-      not_locked: var ikke låst
+      already_confirmed: var alt stadfesta. Vennligst prøv å logge på
+      confirmation_period_expired: 'må vere stadfesta innan %{period}, vennligst spør etter ein ny'
+      expired: har gått ut på dato. Ver snill og søk om ein ny
+      not_found: ikkje funne
+      not_locked: var ikkje låst
       not_saved:
-        one: '1 feil forhindret denne %{resource} fra å bli reddet:'
-        other: '%{count} feil forhindret denne %{resource} fra å bli reddet:'
+        one: '1 feil hindra denne %{resource} frå å bli lagra:'
+        other: '%{count} feil hindra denne %{resource} frå å bli lagra:'
     invitations:
-      send_instructions: 'En invitasjon e-post er sendt til %{email}.'
-      invitation_token_invalid: Invitasjonstegnet gitt er ikke gyldig!
-      updated: Passordet ble endret. Du er nå logget på.
-      no_invitations_remaining: Ingen gjenværende invitasjoner
-      invitation_removed: Din invitasjon ble fjernet.
+      send_instructions: 'Ein invitasjon er blitt send på e-post til %{email}.'
+      invitation_token_invalid: Invitasjonstokenet gitt er ikkje gyldig!
+      updated: Passordet er satt. Du er nå logga inn.
+      no_invitations_remaining: Ingen invitasjonar att
+      invitation_removed: Invitasjonen din vart fjerna.
       new:
         header: Send invitasjon
-        submit_button: Send en invitasjon
+        submit_button: Send ein invitasjon
       edit:
-        header: Angi ditt passord
-        submit_button: Angi passordet
+        header: Velg passord
+        submit_button: Velg passord
     mailer:
       invitation_instructions:
-        subject: Invitasjon instruksjoner
+        subject: Invitasjonsinstruksjonar
         hello: 'Hei %{email}'
-        someone_invited_you: 'Noen har invitert deg til %{url}, du kan godta det gjennom lenken nedenfor.'
+        someone_invited_you: 'Nokon har invitert deg til %{url}. Du kan godta det ved å trykke på lenkja nedanfor.'
         accept: Godta invitasjon
-        ignore: 'Hvis du ikke vil godta invitasjonen, vennligst se bort fra denne e-posten. <br /> Din konto vil ikke bli opprettet før du åpner lenken ovenfor og angir passordet ditt.'
+        ignore: 'Om du ikkje vil godta invitasjonen, kan du sjå vekk frå denne e-posten.<br />Kontoen din vil ikkje bli oppretta før du har trykt på lenkja over og valt eit passord.'
