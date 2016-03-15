@@ -39,7 +39,7 @@ function onErrorStatus(onError, commandName, status, detailedErrorMessage) {
     if (detailedErrorMessage && detailedErrorMessage.length < 256) {
       errorMessage = detailedErrorMessage;
     } else {
-      // Ohterwise display a generic description based on the HTTP status.
+      // Otherwise display a generic description based on the HTTP status.
       errorMessage = getStatusDescription(status);
     }
     onError('Error in ' + commandName + ': ' +  errorMessage);
