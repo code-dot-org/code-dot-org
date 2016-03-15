@@ -1,0 +1,56 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-03-14T22:03:50.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "noStroke": null,
+      "arc": null,
+      "ellipse": null,
+      "line": null,
+      "point": null,
+      "rect": null,
+      "triangle": null,
+      "text": null,
+      "textSize": null,
+      "background": null,
+      "randomNumber_min_max": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# MS Hackathon Week 1\r\n\r\nThe blocks you've been provided are those that a student in CS Discoveries would likely have available after one week of the class. They would have learned the coordinate plane, the basic drawing commands, the random number function, and how to use the draw loop. Notably they would not yet know how to use variables or functions, and sprites are also not yet available.\r\n\r\n# Do This\r\n\r\n* **Using only the tools provided to you, make something awesome!!**",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "instructions": "(Click to see full instructions)"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Gamelab>
