@@ -449,7 +449,7 @@ class Script < ActiveRecord::Base
       script_level.save! if script_level.changed?
       script_level
     end
-    script_stages.each_with_index do |stage|
+    script_stages.each do |stage|
       stage.script_levels = script_levels_by_stage[stage.id]
 
       # Go through all the script levels for this stage, except the last one,

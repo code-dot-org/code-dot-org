@@ -76,14 +76,14 @@ window.dashboard.progress = (function () {
     }
   };
 
-  progress.renderStageProgress = function (stageData, progressData, clientProgress, currentLevelId, page) {
+  progress.renderStageProgress = function (stageData, progressData, clientProgress, currentLevelId, puzzlePage) {
     var serverProgress = progressData.levels || {};
     var currentLevelIndex = null;
 
     // Determine currentLevelIndex from the URL's /puzzle/XX value.
     var parsedLevelIndex = window.location.pathname.match(/\/puzzle\/(\d+)/);
     if (parsedLevelIndex && parsedLevelIndex.length > 1) {
-      currentLevelIndex = parseInt(parsedLevelIndex[1] - 1);
+      currentLevelIndex = parseInt(parsedLevelIndex[1]) - 1;
     } else {
       return;
     }
@@ -111,8 +111,8 @@ window.dashboard.progress = (function () {
       };
     });
 
-    if (page !== -1) {
-      currentLevelIndex += page - 1;
+    if (puzzlePage !== -1) {
+      currentLevelIndex += puzzlePage - 1;
     }
 
     var mountPoint = document.createElement('div');

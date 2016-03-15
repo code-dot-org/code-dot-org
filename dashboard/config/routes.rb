@@ -151,8 +151,8 @@ Dashboard::Application.routes.draw do
     resources :stages, only: [], path: "/stage", format: false do
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
-          # /s/xxx/stage/yyy/puzzle/zzz/ppp
-          get 'page/:page', to: 'script_levels#show', as: 'page', format: false
+          # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
+          get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
         end
       end
     end

@@ -84,7 +84,7 @@ class Stage < ActiveRecord::Base
     level = stage_data[:levels].last
     if level[:kind] == "assessment"
       level_info = Script.cache_find_level(level[:id])
-      if level_info[:properties]["pages"].length > 1
+      if level_info[:properties]["pages"] && level_info[:properties]["pages"].length > 1
         extraLevelCount = level_info[:properties]["pages"].length - 1
         (1..extraLevelCount).each do |pageIndex|
           newLevel = level.deep_dup
