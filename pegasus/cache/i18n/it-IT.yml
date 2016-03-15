@@ -93,8 +93,8 @@
     un <a href="%{current_path}/next">corso di un partner</a>.
   get_a_certificate_of_achievement: Ottieni un certificato dei risultati ottenuti
   view_course: Visualizza il corso
-  view_unit: View unit
-  make_app: Make an app
+  view_unit: Guarda unità
+  make_app: Fai un'app
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
@@ -102,8 +102,8 @@
     of volunteers to contact local volunteers to visit your classroom, or search in
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
+  congrats_guest_speaker_cta: Trova un ospite parlante
+  congrats_third_party_title: Usa la tua nuova abilità con queste app e siti
   third_party_gradelevel_kto8: Classi K-8
   third_party_gradelevel_kto2: Classi K-2
   third_party_gradelevel_2to8: Classi 2-8
@@ -117,8 +117,8 @@
   third_party_price_varies: 'Prezzo: varie possibilità'
   third_party_price_free: 'Prezzo: gratuito'
   third_party_price_299: 'Prezzo: $ 2,99/per download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  third_party_price_individual: 'Prezzo individuale: Prova gratuita & $25/mese'
+  third_party_price_school: 'Prezzo della scuola: Progetti gratuiti & pro a $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
@@ -814,6 +814,7 @@
   dashboard_progress_completed_perfect: completato in modo perfetto
   dashboard_progress_furthest_level_attempted: esercizio più avanzato che è stato
     provato
+  dashboard_progress_submitted: submitted
   dashboard_stage: Lezione
   dashboard_puzzle: Esercizio
   dashboard_question: Domanda
@@ -980,7 +981,7 @@
   course4_name: Corso 4
   accelerated_name: Corso rapido
   cspunit3_name: CS Principles Unit 3
-  cspunit3_gradelevel: Grades 9-12
+  cspunit3_gradelevel: Classi 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
@@ -988,9 +989,9 @@
     programming languages and tools.
   applab_name: Laboratorio per le App
   applab_gradelevel: Ages 13+
-  applab_shortdescription_congrats: App Lab is a programming environment where you
-    can make simple apps. Design an app, code with blocks or JavaScript to make it
-    work, then share your app in seconds
+  applab_shortdescription_congrats: App Lab è un programma ambientale con cui puoi
+    fare semplici app. Fare il design, scrivere il codice con blocchi o JavaScript
+    per farla funzionare, quindi condividi la tua app in pochi secondi
   codeorg_gradelevel: Da 4 a 104 anni
   codeintl_gradelevel: Da 4 a 104 anni
   thinkersmithspanish_gradelevel: Por todos
