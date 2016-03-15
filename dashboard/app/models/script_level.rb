@@ -143,6 +143,27 @@ class ScriptLevel < ActiveRecord::Base
     summary
   end
 
+  # Given a script level summary for the last level in a stage, returns an
+  # array of additional levels if it is a multi-page assessment, or an empty
+  # array if not.
+  def self.summarize_extra_puzzle_pages(last_level_summary)
+    extra_levels = []
+    if last_level_summary[:kind] == "assessment"
+      level_info = Script.cache_find_level(last_level_summary[:id])
+      if level_info[:properties]["pages"] && level_info[:properties]["pages"].length > 1
+        extra_level_count = level_info[:properties]["pages"].length - 1
+        (1..extra_level_count).each do |page_index|
+          new_level = last_level_summary.deep_dup
+          new_level[:url] << "/page/#{page_index + 1}"
+          new_level[:position] = last_level_summary[:position] + page_index
+          new_level[:title] = last_level_summary[:position] + page_index
+          extra_levels << new_level
+        end
+      end
+    end
+    extra_levels
+  end
+
   def self.cache_find(id)
     Script.cache_find_script_level(id)
   end
