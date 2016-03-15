@@ -41,13 +41,13 @@ for file in $(find $orig_dir -name 'en_us.json'); do
     done
   fi
 
-ruby ../i18n/code.org/lib/copy-untranslated-apps.rb
+ruby ../i18n/code.org/copy-untranslated-apps.rb
 
 done
 
 git add --all i18n
 git add --all ../i18n/locales/source
-if [[ `git status --porcelain i18n` ]]; then
+if [ -n "$(git status --porcelain i18n)" ]; then
   git commit --message="Updated apps strings"
   git push
 fi

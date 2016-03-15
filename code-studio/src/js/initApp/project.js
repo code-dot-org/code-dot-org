@@ -657,6 +657,13 @@ function fetchSource(channelData, callback) {
   projects.setTitle(current.name);
   if (channelData.migratedToS3) {
     sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
+      if (err) {
+        console.warn('unable to fetch project source file', err);
+        data = {
+          source: '',
+          html: '',
+        };
+      }
       unpackSources(data);
       callback();
     });

@@ -8,6 +8,7 @@ var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
 var utils = require('../../utils');
 var elementUtils = require('./elementUtils');
+var EnumPropertyRow = require('./EnumPropertyRow.jsx');
 
 var TextAreaProperties = React.createClass({
   propTypes: {
@@ -72,6 +73,11 @@ var TextAreaProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
+        <EnumPropertyRow
+          desc={'text alignment'}
+          initialValue={element.style.textAlign || 'left'}
+          options={['left','right','center','justify']}
+          handleChange={this.props.handleChange.bind(this, 'textAlign')} />
         <BooleanPropertyRow
           desc={'read only'}
           initialValue={!element.isContentEditable}

@@ -23,6 +23,9 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
 
   after_update :check_course_completion
 
+  include SerializedProperties
+  include StiFactory
+
   def complete_assignment!
     update!(status: :completed)
   end

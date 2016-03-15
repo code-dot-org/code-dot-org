@@ -26,6 +26,7 @@ var PROP_INFO = {
   textColor: { friendlyName: 'text-color', internalName: 'textColor', type: 'string' },
   backgroundColor: { friendlyName: 'background-color', internalName: 'backgroundColor', type: 'string' },
   fontSize: { friendlyName: 'font-size', internalName: 'fontSize', type: 'number' },
+  textAlign: { friendlyName: 'text-align', internalName: 'textAlign', type: 'string' },
   hidden: { friendlyName: 'hidden', internalName: 'hidden', type: 'boolean' },
   text: { friendlyName: 'text', internalName: 'text', type: 'string' },
   placeholder: { friendlyName: 'placeholder', internalName: 'placeholder', type: 'string' },
@@ -58,6 +59,7 @@ PROP_NAMES[ElementType.BUTTON] = [
   'textColor',
   'backgroundColor',
   'fontSize',
+  'textAlign',
   'image',
   'hidden'
 ];
@@ -70,6 +72,7 @@ PROP_NAMES[ElementType.TEXT_INPUT] = [
   'textColor',
   'backgroundColor',
   'fontSize',
+  'textAlign',
   'hidden'
 ];
 PROP_NAMES[ElementType.LABEL] = [
@@ -81,6 +84,7 @@ PROP_NAMES[ElementType.LABEL] = [
   'textColor',
   'backgroundColor',
   'fontSize',
+  'textAlign',
   'hidden'
 ];
 PROP_NAMES[ElementType.DROPDOWN] = [
@@ -92,6 +96,7 @@ PROP_NAMES[ElementType.DROPDOWN] = [
   'textColor',
   'backgroundColor',
   'fontSize',
+  'textAlign',
   'hidden'
 ];
 PROP_NAMES[ElementType.RADIO_BUTTON] = [
@@ -138,6 +143,7 @@ PROP_NAMES[ElementType.TEXT_AREA] = [
   'textColor',
   'backgroundColor',
   'fontSize',
+  'textAlign',
   'readonly',
   'hidden'
 ];
