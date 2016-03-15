@@ -8,11 +8,20 @@ class Plc::LearningModulesController < ApplicationController
   # GET /plc/learning_modules/1
   # GET /plc/learning_modules/1.json
   def show
-    @resource_tasks, @other_tasks = @learning_module.plc_tasks.partition {|task| task.is_a? Plc::LearningResourceTask}
+    resource_tasks, other_tasks = @learning_module.plc_tasks.partition {|task| task.is_a? Plc::LearningResourceTask}
+    resource_tasks_grouping = {tasks: resource_tasks, name: 'Learning Resources', new_link_text: 'Add a resource',
+                               new_link_destination: plc_learning_module_path(@learning_module) + '/new_learning_resource_for_module'}
+
+    other_tasks_grouping = {tasks: other_tasks, name: 'Tasks', new_link_text: 'Add a task',
+                            new_link_destination: new_plc_task_path(plc_learning_module_id: @learning_module.id)}
+    @task_groupings = [resource_tasks_grouping, other_tasks_grouping]
   end
 
   # GET /plc/learning_modules/new
   def new
+  end
+
+  def new_learning_resource_for_module
   end
 
   # GET /plc/learning_modules/1/edit
