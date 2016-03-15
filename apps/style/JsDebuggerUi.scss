@@ -115,7 +115,8 @@ $debug-area-initial-height: 120px;
 }
 
 $debug-commands-column-width: 270px;
-$debug-watch-column-width: 150px;
+$debug-console-min-column-width: 130px;
+$debug-watch-max-column-width: 150px;
 $debug-header-border-width: 1px;
 
 #debug-commands-header {
@@ -129,7 +130,8 @@ $debug-header-border-width: 1px;
 }
 
 #debug-watch-header {
-  width: $debug-watch-column-width + $debug-header-border-width;
+  width: $debug-watch-max-column-width + $debug-header-border-width;
+  max-width: calc(100% - #{$debug-commands-column-width} - #{$debug-console-min-column-width} + #{$debug-header-border-width});
   float: right;
   border-left: $debug-header-border-width solid gray;
 }
@@ -150,8 +152,12 @@ $debug-header-border-width: 1px;
 }
 
 .debug-watch {
+  &.no-commands {
+    max-width: calc(100% - #{$debug-console-min-column-width});
+  }
   right: 0;
-  width: $debug-watch-column-width;
+  width: $debug-watch-max-column-width;
+  max-width: calc(100% - #{$debug-commands-column-width} - #{$debug-console-min-column-width});
   font-family: monospace;
   font-size: 12px;
 }
@@ -176,7 +182,8 @@ $debug-header-border-width: 1px;
     right: 0;
   }
   left: $debug-commands-column-width;
-  right: $debug-watch-column-width;
+  right: $debug-watch-max-column-width;
+  min-width: $debug-console-min-column-width
 }
 
 .debug-console * {
