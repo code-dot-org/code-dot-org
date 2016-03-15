@@ -88,6 +88,9 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-a", "--auto_retry", "Retry tests that fail once") do
     $options.auto_retry = true
   end
+  opts.on("--retry_count TimesToRetry", String, "Retry tests that fail a given # of times") do |times_to_retry|
+    $options.retry_count = times_to_retry.to_i
+  end
   opts.on("--magic_retry", "Magically retry tests based on how flaky they are") do
     $options.magic_retry = true
   end
@@ -290,7 +293,10 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   end
 
   def how_many_reruns?(test_run_string)
-    if $options.auto_retry
+    if $options.retry_count
+      puts "Retrying #{$options.retry_count} times"
+      return $options.retry_count
+    elsif $options.auto_retry
       return 1
     elsif $options.magic_retry
       # ask saucelabs how flaky the test is
