@@ -2,8 +2,10 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var TestUtils = require('react-addons-test-utils');
 var assert = require('assert');
-var Pairing = require('../../src/js/components/pairing.jsx')(require('react'));
 var sinon = require('sinon');
+
+window.React = React; // the below file wants React as a global
+var Pairing = require('../../src/js/components/pairing.jsx');
 
 describe('Pairing component', function() {
   var div;
