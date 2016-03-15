@@ -27,8 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Let's take this to another level! \r\n\r\nUse loops to get me to the sunflower with the fewest loops possible.",
-    "maze_data": null
+    "markdown_instructions": "Let's take this to another level! \r\n\r\nUse loops to get me to the sunflower with the fewest loops possible."
   },
   "published": true,
   "notes": ""

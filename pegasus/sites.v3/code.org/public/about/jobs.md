@@ -11,8 +11,7 @@ nav: about_nav
  	- [CS Curriculum Writer](#curric)
  	- [2016 Summer Curriculum Writing Cohort](#summercohort)
 - **Finance and Administration Team**
- 	- [Adminstrative Assistant](#admin)
- 	- [Finance and Accounting Manager](#finance)
+ 	- [Financial Analyst](#finance)
 - **Outreach Team**
  	- [District Manager - Mid Atlantic Region](#dcdm)
 - **Product and Marketing Team**
@@ -104,50 +103,11 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
 
 
-## <a name="admin"href="#admin">Administrative Assistant (Seattle, WA)</a>
+## <a name="finance"href="#finance">Financial Analyst (Seattle, WA)</a>
 
 **Job Summary:**
 
-Code.org is seeking an experienced Administrative Assistant to join our administrative team. This is a terrific opportunity for the right candidate, with a great deal of responsibility and visibility into the successful operation of an internationally ­recognized non­profit experiencing incredible growth. 
-
-High ­level responsibilities include: 
-
-- Managing a variety of administrative and logistical tasks and projects 
-- Increasing office productivity by overseeing smooth and efficient office administration
-- Supporting VP level staff
-
-**Duties and Responsibilities:**
-
-- Handle routine administrative tasks and oversee office administration; primary point of contact for meeting staff needs
-Manage Travel and Expense Accounts  
-- Coordinate travel and manage select Leadership Team individual calendars
-- Troubleshoot basic technology issues (printers, videoconferencing system)
-- Coordinate events (office, social, and corporate) and visitor logistics
-- Process incoming and outgoing office mail and packages
-- Order and maintain office supplies and equipment; order food/lunch
-- Other duties, as assigned 
-
- 
-**Skills and Qualifications:**
-
-We are looking for an energetic, positive, collaborative professional to join our small, nimble administrative team. You should be a tech-savvy self starter experienced in using tools to solve problems, with a willingness to take ownership and get-it-done attitude. Experience in a start up environment a plus. 
-
-
-The ideal candidate has the following qualifications:
-
-- Excellent written and verbal communications skills 
-- Strong attention to detail 
-- Experience learning and using modern tech tools
-- 1-2 years experience in administrative support, event planning, or office management preferred 
-- Bachelor’s degree preferred 
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="finance"href="#finance">Finance and Accounting Manager (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for an experienced Finance and Accounting Manager to oversee all aspects of accounting, regulatory and financial reporting, budget and forecast preparation, as well as development of internal control policies and procedures. 
+Code.org is looking for an experienced Financial Analyst to oversee all aspects of accounting, regulatory and financial reporting, budget and forecast preparation, as well as development of internal control policies and procedures. 
 
 Responsibilities of the position include:
 
@@ -164,7 +124,7 @@ Responsibilities of the position include:
 - Proactively identifying issues and areas for improvement with the close process and implementing process improvements 
 - Developing and documenting finance and accounting processes and policies to maintain and strengthen internal controls
 
-**Expereince and Qualifications:**
+**Skills and Qualifications:**
 
 The ideal candidate has at least a Bachelor’s degree in Business Administration, Accounting, or related field and possesses the following skills:
 
@@ -212,7 +172,7 @@ Manage implementation for all partner district/cities at K-12 grade levels
 
 Ability and willingness to travel up to 30% of the time is required.
 
-**Expereince and Qualifications:**
+**Skills and Qualifications:**
 
 The ideal candidate has at least a Bachelor’s degree, experience collaborating with the K-12 public school system, and possesses the following skills:
 
@@ -296,7 +256,7 @@ Areas of responsibility include:
 
 You will also need to be able to successfully communicate conceptual ideas, detailed design, and design rationale, both verbally and visually.
 
-**Experience and Qualifications:**
+**Skills and Qualifications:**
 
 The ideal candidate has strong, flexible visual design skills and experience in app and/or web design. We are looking for a self-starter who is passionate about improving education.  
 
