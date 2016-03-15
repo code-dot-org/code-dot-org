@@ -284,13 +284,19 @@ module.exports = function (grunt) {
           ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
           ' -o ' + allFilesDest[0]
       );
+  var applabAPIExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc' +
+      ' --cachefile ' + outputDir + 'applab-api-cache.json' +
+      ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
+      (envOptions.dev ? '' : ' -t [ envify --NODE_ENV production ]') +
+      ' -d build/js/applab/api-entry.js -o ' + outputDir + 'applab-api.js';
 
   var fastMochaTest = process.argv.indexOf('--fast') !== -1;
 
   config.exec = {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
     convertScssVars: './script/convert-scss-variables.js',
-    mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
+    mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : ''),
+    applabapi: 'echo "' + applabAPIExec + '" && ' + applabAPIExec,
   };
 
   var ext = envOptions.dev ? 'uncompressed' : 'compressed';
@@ -348,7 +354,7 @@ module.exports = function (grunt) {
   config.watch = {
     js: {
       files: ['src/**/*.{js,jsx}'],
-      tasks: ['newer:copy:src', 'exec:browserify', 'notify:browserify'],
+      tasks: ['newer:copy:src', 'exec:browserify', 'notify:browserify', 'exec:applabapi'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -470,6 +476,7 @@ module.exports = function (grunt) {
     'prebuild',
     'exec:browserify',
     'notify:browserify',
+    'exec:applabapi',
     // Skip minification in development environment.
     envOptions.dev ? 'noop' : ('concurrent:uglify'),
     'postbuild'

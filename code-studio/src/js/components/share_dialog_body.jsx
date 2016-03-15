@@ -92,6 +92,16 @@ var ShareDialogBody = React.createClass({
         appType={this.props.appType}/>;
     }
 
+    var exportButton = null;
+    if (this.props.appType === 'applab') {
+      // TODO: Can I not proliferate the use of global references to Applab somehow?
+      exportButton = (
+        <button className="btn btn-link" onClick={Applab.exportApp}>
+          Export project
+        </button>
+      );
+    }
+
     return (
       <div>
         {image}
@@ -127,6 +137,7 @@ var ShareDialogBody = React.createClass({
               <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
             </a>
           </div>
+          {exportButton}
           {sendToPhone}
         </div>
       </div>
