@@ -61,6 +61,7 @@ test:
     - ./test.sh:
         pwd:
             cookbooks
+    # Re-seed levels (some scripts become unavailable after unit tests run?)
     - bundle exec rake seed:all:
         pwd:
             dashboard

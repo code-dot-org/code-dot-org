@@ -132,23 +132,15 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#left_off', 0
   end
 
-  test 'logged in user sees resume info and progress for courses' do
-    Script.all.where("name IN (?)", ['hourofcode', 'artist', 'flappy', 'course1']).each do |script|
-      next if script.hidden? # only test public facing scripts
+  Script.all.where("name IN (?)", ['hourofcode', 'artist', 'flappy', 'course1']).each do |script|
+    next if script.hidden? # only test public facing scripts
+    test "logged in user sees resume info and progress for course #{script.name}" do
+      skip "Script does not exist with ID #{script.id}" unless Script.exists?(script.id)
       user = create(:user)
       UserScript.create!(user_id: user.id, script_id: script.id, started_at: Time.now)
-      puts script.id
-      puts Script.find(script.id)
-
       sign_in(user)
-      puts script.id
-      puts Script.find(script.id)
       get :index
-      puts script.id
-      puts Script.find(script.id)
       assert_response :success
-      puts script.id
-      puts Script.find(script.id)
 
       if script.name == 'hourofcode'
         url = "http://test.host/hoc"
