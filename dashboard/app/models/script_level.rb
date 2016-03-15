@@ -67,6 +67,16 @@ class ScriptLevel < ActiveRecord::Base
     stage.script_levels.to_a.last == self
   end
 
+  def long_assessment?
+    if self[:assessment]
+      level_info = Level.find(self[:level_id])
+      if level_info[:properties]["pages"] && level_info[:properties]["pages"].length > 1
+        return true
+      end
+    end
+    false
+  end
+
   def name
     I18n.t("data.script.name.#{script.name}.#{stage.name}")
   end

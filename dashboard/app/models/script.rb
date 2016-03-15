@@ -458,15 +458,9 @@ class Script < ActiveRecord::Base
       # has a pages property and more than one page in that array.)
       # This is because only the final level in a stage can be a multi-page
       # assessment.
-      stage.script_levels.each_with_index do |script_level, index|
-        if index != stage.script_levels.size - 1
-          if script_level[:assessment]
-            level_info = Level.find(script_level[:level_id])
-            if level_info[:properties]["pages"] && level_info[:properties]["pages"].length > 1
-              puts index
-              raise "Only the final level in a stage may be a multi-page assessment.  Script: #{script.name}"
-            end
-          end
+      stage.script_levels.each do |script_level|
+        if !script_level.end_of_stage? && script_level.long_assessment?
+          raise "Only the final level in a stage may be a multi-page assessment.  Script: #{script.name}"
         end
       end
     end

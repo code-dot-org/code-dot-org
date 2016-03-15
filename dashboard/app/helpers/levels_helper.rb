@@ -14,7 +14,7 @@ module LevelsHelper
     elsif (params[:puzzle_page])
       puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
     else
-      script_stage_script_level_path(script_level.script, script_level.stage, script_level)
+      script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     end
   end
 
