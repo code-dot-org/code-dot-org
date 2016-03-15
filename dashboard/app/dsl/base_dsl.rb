@@ -59,7 +59,7 @@ class BaseDSL
 
   def self.string(name)
     define_method(name) do |val|
-      instance_variable_set  "@#{name}", val
+      instance_variable_set "@#{name}", val
     end
   end
 
