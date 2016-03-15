@@ -1,4 +1,6 @@
 {
+  "foo": "foo",
+  "fooTooltip": "do foo",
   "dropletBlock_width_description": "The width of the drawing canvas.",
   "dropletBlock_height_description": "The height of the drawing canvas.",
   "dropletBlock_createSprite_description": "Creates a sprite at the initial specified position with the given placeholder dimensions.",
@@ -11,8 +13,8 @@
   "dropletBlock_anim.visible_signatureOverride": "[Animation].visible",
   "dropletBlock_attractionPoint_description": "Pushes the sprite toward a point. The force is added to the current velocity.",
   "dropletBlock_attractionPoint_param0_description": "Scalar speed to add.",
-  "dropletBlock_attractionPoint_param1_description":"Direction of x coordinate to push the sprite towards.",
-  "dropletBlock_attractionPoint_param2_description":"Direction of y coordinate to push the sprite towards.",
+  "dropletBlock_attractionPoint_param1_description": "Direction of x coordinate to push the sprite towards.",
+  "dropletBlock_attractionPoint_param2_description": "Direction of y coordinate to push the sprite towards.",
   "dropletBlock_group.remove_signatureOverride": "[Group].remove(sprite)",
   "dropletBlock_group.bounce_signatureOverride": "[Group].bounce(target)",
   "dropletBlock_group.collide_signatureOverride": "[Group].collide(target)",
