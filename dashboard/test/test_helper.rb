@@ -161,6 +161,20 @@ class ActiveSupport::TestCase
       assert_equal(before[i], e.call, error)
     end
   end
+
+  # Given two hashes, ensure that they have the same set of keys in both
+  # directions, collecting up errors so we can pretty-print them all in one go
+  # if any errors are found.
+  def assert_same_keys(a, b, a_name = 'A', b_name = 'B', message = nil)
+    errors = []
+    b.keys.each do |key|
+      errors.push("'#{key}' missing from #{a_name}") unless a.key? key
+    end
+    a.keys.each do |key|
+      errors.push("'#{key}' missing from #{b_name}") unless b.key? key
+    end
+    assert errors.empty?, "#{message}\n#{errors.join("\n")}"
+  end
 end
 
 # Helpers for all controller test cases
