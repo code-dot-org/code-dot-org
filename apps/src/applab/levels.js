@@ -37,7 +37,7 @@ levels.custom = {
    * leaves codeFunctions blank.
    * Applab.rb self.palette serves a similar function, intially providing
    * levelbuilders with the text for the default set of blocks.
-   * These two places shouldbe kept in sync
+   * These two places should be kept in sync
    */
   'codeFunctions': {
     // UI Controls
