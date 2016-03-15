@@ -15,6 +15,7 @@ source_dir=../i18n/locales/source/blockly-mooc
 mkdir -p $source_dir
 
 locales=$(ls ../i18n/locales | grep -v 'en-US' | grep -v 'source')
+untranslated_apps=( applab calc eval gamelab netsim )
 
 # Copy files from apps to i18n/locales/source
 for file in $(find $orig_dir -name 'en_us.json'); do
@@ -40,9 +41,14 @@ for file in $(find $orig_dir -name 'en_us.json'); do
       done
     done
   fi
+done
 
-ruby ../i18n/code.org/lib/copy-untranslated-apps.rb
-
+for locale in $locales; do
+  for app in "${untranslated_apps[@]}"
+  do
+    js_locale=$(echo $locale | tr '[:upper:]' '[:lower:]' | tr '-' '_')
+    cp $orig_dir/${app}/en_us.json $orig_dir/${app}/${js_locale}.json
+  done
 done
 
 git add --all i18n
