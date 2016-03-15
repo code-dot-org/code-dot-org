@@ -104,6 +104,8 @@ class TablesApi < Sinatra::Base
     dont_cache
     TableType.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
 
+    # Decrement the row count only after the delete succeeds, to avoid a spurious
+    # decrement if the record isn't present or in other failure cases.
     limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
     limits.decrement_row_count
 
