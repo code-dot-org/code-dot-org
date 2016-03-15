@@ -3,7 +3,7 @@ var actions = require('./actions');
 var msg = require('../locale');
 var connect = require('react-redux').connect;
 var constants = require('./constants');
-var ToggleGroup = require('../applab/ToggleGroup.jsx');
+var ToggleGroup = require('../templates/ToggleGroup.jsx');
 var GameLabInterfaceMode = constants.GameLabInterfaceMode;
 
 var GameLabVisualizationHeader = React.createClass({
