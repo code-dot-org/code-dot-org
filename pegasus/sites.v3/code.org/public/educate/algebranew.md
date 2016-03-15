@@ -28,7 +28,7 @@ The second 10 hour course builds on the skills students developed in Course A th
 <a name="start"><a/>
 ## How do I start teaching CS in Algebra?
 
-To prepare teachers for CS in Algebra, professional development program [here](/educate/professional-learning/cs-in-algebra).
+Our professional development program is focused on preparing teachers to implement Course A. The , professional development program [here](/educate/professional-learning/cs-in-algebra).
 
 ## Additional Support Documents
 [Teacher Manual](/curriculum/docs/algebra/teacher_manual.pdf)<br/>
