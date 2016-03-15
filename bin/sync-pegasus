@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+# Copies new pegasus strings from pegasus/cache/i18n/en-US.yml
+# to all locales in pegasus/cache/i18n.
+
+exec "bin/i18n-codeorg/sync-pegasus.sh"
