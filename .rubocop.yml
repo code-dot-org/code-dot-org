@@ -34,6 +34,9 @@ Style/IdenticalConditionalBranches:
 Style/IfInsideElse:
   Enabled: false
 
+Style/RedundantReturn:
+  Enabled: false
+
 Metrics/AbcSize:
   Enabled: false
 
