@@ -8,7 +8,7 @@ require_relative './helpers/table_limits'
 
 class TablesApi < Sinatra::Base
 
-  DEFAULT_MAX_TABLE_ROWS = 5000
+  DEFAULT_MAX_TABLE_ROWS = 1000
 
   # Maximum number of rows allowed in a table (either in initial import or
   # after inserting rows.) Logically constant but can be modified in tests.
