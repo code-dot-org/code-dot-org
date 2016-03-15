@@ -11,6 +11,7 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   if @original_browser.capabilities.browser_name == 'chrome'
     config[:viewport_size] = {width: 1024, height: 698}
   end
+  @browser.capabilities[:takes_screenshot] = true
   @browser = @eyes.open(config)
 end
 
