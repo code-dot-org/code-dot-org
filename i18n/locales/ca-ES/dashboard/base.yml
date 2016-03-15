@@ -24,6 +24,7 @@ ca:
   hello: Hola Món
   welcome_back: 'Benvingut de nou, %{name}'
   submit: Envia
+  unsubmit: Unsubmit
   add_teacher_form:
     code:
       label: 'Afegeix un mestre:'
@@ -227,7 +228,7 @@ ca:
       free_play:
         playlab: Fes un App
         artist: Dibuixa alguna cosa
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Fes un App
     user:
       classroom: "Pàgina d'inici de mestre"
@@ -327,6 +328,7 @@ ca:
     heading_hoc2014: "<h2>L'Hora de Codi per a</h2><h1>Totes les edats</h1>"
     heading_elementary: '<h2>Cursos de 20 hores per a</h2><h1>Principiants (totes les edats)</h1>'
     heading_apps: '<h2>Diversió per a</h2><h1>Tothom</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>El nostre curs general per a</h2><h1>Totes les edats</h1>'
     your_gallery: Galeria
     no_primary_course: Intenta un curs a Code Studio
@@ -422,6 +424,12 @@ ca:
       current: Nivells actuals
       unused: Nivells sense utilitzats
   upsell:
+    applab:
+      title: "Laboratori d'aplicacions"
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Classic Maze
       body: Provea els conceptes bàsics de la Informàtica. Milions li han donat una oportunitat.
@@ -467,11 +475,19 @@ ca:
     report_bug: "Informeu d'errors"
     support: Obtenir ajuda
     support_url: support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Resposta incorrecta
     wrong_body: 'La resposta que he introduït no és correcta.  Si us plau, intenta-ho de nou!'
     correct_title: Correcte
     correct_body: Aquesta és la resposta correcta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Gràcies
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Gràcies
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -491,6 +507,9 @@ ca:
     placeholder: Introdueix la teva resposta aquí
     open_response_title: Gràcies
     open_response_body: Gràcies per la resposta!
+  level_group:
+    correct_title: Gràcies
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Estàs segur que vols tornar a començar?

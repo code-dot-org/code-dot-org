@@ -3,14 +3,8 @@
  *
  * @see https://developers.google.com/chart/
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
-/* global google */
+/* global google, Promise */
 
 require("babelify/polyfill"); // required for Promises in IE / Phantom
 require('../utils');
@@ -149,7 +143,6 @@ GoogleChart.dataTableFromRowsAndColumns = function (rows, columns) {
   return GoogleChart.lib.visualization.arrayToDataTable([columns].concat(dataArray));
 };
 
-/* jshint unused: false */
 /**
  * Internal 'abstract' method that subclasses should use to implement the actual
  * rendering step.
@@ -162,7 +155,6 @@ GoogleChart.dataTableFromRowsAndColumns = function (rows, columns) {
 GoogleChart.prototype.render_ = function (dataTable, options) {
   return Promise.reject(new Error('Rendering unimplemented for chart type.'));
 };
-/* jshint unused: true */
 
 /**
  * Google Charts API Pie Chart

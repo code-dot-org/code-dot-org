@@ -26,6 +26,12 @@ if rack_env?(:development)
     HttpCache.config(rack_env)[:pegasus]
 end
 
+if CDO.throttle_data_apis
+  require 'cdo/rack/attack'
+  RackAttackConfigUpdater.new.start
+  use Rack::Attack
+end
+
 require 'files_api'
 use FilesApi
 

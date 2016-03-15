@@ -231,7 +231,7 @@ GameLabP5.prototype.resetExecution = function () {
   this.setupInProgress = false;
 
   window.p5.prototype.gamelabPreload = function () {
-    this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
+    this.p5decrementPreload = window.p5._getDecrementPreload.apply(this.p5, arguments);
   }.bind(this);
 };
 
@@ -239,8 +239,6 @@ GameLabP5.prototype.resetExecution = function () {
  * Instantiate a new p5 and start execution
  */
 GameLabP5.prototype.startExecution = function () {
-
-  /* jshint nonew:false */
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
 
@@ -264,9 +262,17 @@ GameLabP5.prototype.startExecution = function () {
         // if looping is off, so we bypass the time delay if that
         // is the case.
         var epsilon = 5;
-        if (!this.loop ||
+        if (!this._loop ||
             time_since_last >= target_time_between_frames - epsilon) {
+
+          //mandatory update values(matrixs and stack) for 3d
+          if(this._renderer.isP3D){
+            this._renderer._update();
+          }
+
           this._setProperty('frameCount', this.frameCount + 1);
+          this._updateMouseCoords();
+          this._updateTouchCoords();
           this.redraw();
         } else {
           this._drawEpilogue();
@@ -277,10 +283,6 @@ GameLabP5.prototype.startExecution = function () {
         /*
          * Copied code from p5 _draw()
          */
-        this._updatePAccelerations();
-        this._updatePRotations();
-        this._updatePMouseCoords();
-        this._updatePTouchCoords();
         this._frameRate = 1000.0/(this._thisFrameTime - this._lastFrameTime);
         this._lastFrameTime = this._thisFrameTime;
 
@@ -291,11 +293,6 @@ GameLabP5.prototype.startExecution = function () {
         /*
          * Copied code from p5 _draw()
          */
-
-        //mandatory update values(matrixs and stack) for 3d
-        if(this._renderer.isP3D){
-          this._renderer._update();
-        }
 
         // get notified the next time the browser gives us
         // an opportunity to draw.
@@ -315,6 +312,9 @@ GameLabP5.prototype.startExecution = function () {
         if (typeof context.preload === 'function') {
           for (var f in this._preloadMethods) {
             context[f] = this._preloadMethods[f][f];
+            if (context[f] && this) {
+              context[f] = context[f].bind(this);
+            }
           }
         }
 
@@ -394,7 +394,6 @@ GameLabP5.prototype.startExecution = function () {
 
     }.bind(this),
     'divGameLab');
-  /* jshint nonew:true */
 };
 
 /**

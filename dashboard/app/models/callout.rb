@@ -18,14 +18,14 @@ class Callout < ActiveRecord::Base
   belongs_to :script_level, inverse_of: :callouts
 
   CSV_HEADERS =
-  {
-      :element_id => 'element_id',
-      :localization_key => 'localization_key',
-      :script_id => 'script_id',
-      :level_num => 'level_num',
-      :game_name => 'game_name',
-      :qtip_config => 'qtip_config'
-  }
+    {
+        :element_id => 'element_id',
+        :localization_key => 'localization_key',
+        :script_id => 'script_id',
+        :level_num => 'level_num',
+        :game_name => 'game_name',
+        :qtip_config => 'qtip_config'
+    }
 
   # Use the zero byte as the quote character to allow importing double quotes
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts

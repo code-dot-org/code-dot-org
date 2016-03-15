@@ -24,6 +24,7 @@ zh:
   hello: 世界您好
   welcome_back: '歡迎回來，%{name}'
   submit: 送出
+  unsubmit: 不提交
   add_teacher_form:
     code:
       label: 增加一位老師：
@@ -225,7 +226,7 @@ zh:
       free_play:
         playlab: 製作一個App
         artist: 畫些什麼東西
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: 製作一個App
     user:
       classroom: 教師主頁
@@ -323,6 +324,7 @@ zh:
     heading_hoc2014: '<h2>一小時的程式設計課程</h2><h1>對所有年齡</h1>'
     heading_elementary: '<h2>20 小時課程</h2><h1>初學者(所有年齡)</h1>'
     heading_apps: '<h2>樂趣</h2><h1>每個人</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>我們的一般課程</h2>適合<h1>所有年齡</h1>'
     your_gallery: 相片圖庫
     no_primary_course: 試試在 Code Studio 參加一個課程
@@ -417,6 +419,12 @@ zh:
       current: 目前的關卡
       unused: 未使用的關卡
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: 經典迷宮
       body: 請試試數百萬人已經體驗過的電腦科學基礎課程。
@@ -462,11 +470,19 @@ zh:
     report_bug: 報告錯誤
     support: 請求幫助
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: 不正確的答案
     wrong_body: 你的答案不正確。請再試一次 ！
     correct_title: 正確
     correct_body: 這是正確的答案。
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: 謝謝
+    wrong_body: Thank you for submitting an answer.
+    correct_title: 謝謝
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -486,6 +502,9 @@ zh:
     placeholder: 在這裡輸入你的答案
     open_response_title: 謝謝
     open_response_body: 感謝您的回應！
+  level_group:
+    correct_title: 謝謝
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: 確定
     startover_title: 你確定要重新開始嗎？

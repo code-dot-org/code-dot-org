@@ -12,6 +12,7 @@ nav: about_nav
  	- [2016 Summer Curriculum Writing Cohort](#summercohort)
 - **Finance and Administration Team**
  	- [Adminstrative Assistant](#admin)
+ 	- [Finance and Accounting Manager](#finance)
 - **Outreach Team**
  	- [District Manager - Mid Atlantic Region](#dcdm)
 - **Product and Marketing Team**
@@ -141,6 +142,47 @@ The ideal candidate has the following qualifications:
 - Bachelor’s degree preferred 
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="finance"href="#finance">Finance and Accounting Manager (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is looking for an experienced Finance and Accounting Manager to oversee all aspects of accounting, regulatory and financial reporting, budget and forecast preparation, as well as development of internal control policies and procedures. 
+
+Responsibilities of the position include:
+
+- Monitoring all aspects of the company’s accounting and financial operations, ensuring quality control over financial transactions and reporting
+- Assisting in the preparation of the annual budget and periodic financial forecasts and performing variance analysis and trend reporting
+- Performing ad hoc analyses in the areas of cash flow, income planning, programmatic expenses, and metrics
+- Providing data modeling expertise to determine potential financial impact of organizational decisions
+- Supervising the month, quarter, and year-end close procedures, including review of journal entries, account reconciliations, and analysis of results
+- Analyzing complex account reconciliations for inventory, accruals, and allocations
+- Overseeing the preparation and distribution of timely internal financial statements
+- Preparing quarterly Board of Directors’ financial presentation
+- Supporting the external audit of the company’s financial statements, including preparation of audit schedules and responding to auditor questions and requests
+- Managing and complying with local, state, and federal government reporting requirements and tax filings
+- Proactively identifying issues and areas for improvement with the close process and implementing process improvements 
+- Developing and documenting finance and accounting processes and policies to maintain and strengthen internal controls
+
+**Expereince and Qualifications:**
+
+The ideal candidate has at least a Bachelor’s degree in Business Administration, Accounting, or related field and possesses the following skills:
+
+- 5+ years experience in a finance and/or accounting management role 
+- Strong knowledge of GAAP and financial reporting requirements as well as financial audits
+- Advanced experience in Quickbooks Online
+- Advanced or expert user of spreadsheets
+- Experience and aptitude for managing complex projects and reports 
+- Advanced analytical, organizational and problem solving skills
+- Be highly comfortable working in a fast-paced, ambiguous, informal work environment
+- Non-profit accounting experience a plus
+- CPA preferred
+
+Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure. Proficiency in working with Microsoft Office and Google Docs a must.
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
 
 ## <a name="dcdm"href="#dcdm"> District Manager - Mid Atlantic Region (Washington, D.C., or surrounding area)</a>
 **Job Summary:**

@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "Now draw the diamond 3 times in a loop.",
+    "instructions": "We are going to start you with some code (in grey) to make one diamond. \r\n\r\nLoop the grey code to create a fun pattern!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "ideal": "12",
     "slider_speed": "0.7",
     "embed": "false",
-    "markdown_instructions": "Now draw the diamond 3 times in a loop.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "We are going to start you with some code (in grey) to make one diamond. \r\n\r\nLoop the grey code to create a fun pattern!\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -30,48 +30,56 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"At the end of each diamond, the artist is already facing the right direction to start the next one.  \\n\\nBecause of this, we don't need to add an extra `turn left by` block before we start again.\",\r\n  \"hint_id\": \"2-3_Artist_Loops_New_13_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To make each diamond, the artist needs to:   \\n- move\\n- turn right 120 degrees\\n- move\\n- turn right 60 degrees  \\n\\nThen do it all again!\",\r\n  \"hint_id\": \"2-3_Artist_Loops_New_13_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": "Why did we do this with diamonds?  Triangles would have been more appropriate for this age/level."
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="draw_colour" inline="true" deletable="false" editable="false">
-          <value name="COLOUR">
-            <block type="colour_random" deletable="false" editable="false"/>
-          </value>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_turn_by_constant" deletable="false" editable="false">
-              <title name="DIR">turnLeft</title>
-              <title name="VALUE">60</title>
+            <block type="draw_colour" inline="true" id="draw-color" deletable="false">
+              <value name="COLOUR">
+                <block type="colour_random"/>
+              </value>
               <next>
-                <block type="draw_move_by_constant" deletable="false" editable="false">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
+                <block type="draw_turn_by_constant_dropdown" deletable="false">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE" config="45,60,90,120,180">60</title>
                   <next>
-                    <block type="draw_turn_by_constant" deletable="false" editable="false">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">120</title>
+                    <block type="draw_move_by_constant" deletable="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
                       <next>
-                        <block type="draw_move_by_constant" deletable="false" editable="false">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">100</title>
+                        <block type="draw_turn_by_constant_dropdown" deletable="false">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">120</title>
                           <next>
-                            <block type="draw_turn_by_constant" deletable="false" editable="false">
-                              <title name="DIR">turnRight</title>
-                              <title name="VALUE">60</title>
+                            <block type="draw_move_by_constant" deletable="false">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">100</title>
                               <next>
-                                <block type="draw_move_by_constant" deletable="false" editable="false">
-                                  <title name="DIR">moveForward</title>
-                                  <title name="VALUE">100</title>
+                                <block type="draw_turn_by_constant_dropdown" deletable="false">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE" config="45,60,90,120,180">60</title>
                                   <next>
-                                    <block type="draw_turn_by_constant" deletable="false" editable="false">
-                                      <title name="DIR">turnRight</title>
-                                      <title name="VALUE">120</title>
+                                    <block type="draw_move_by_constant" deletable="false">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">100</title>
                                       <next>
-                                        <block type="draw_move_by_constant" deletable="false" editable="false">
-                                          <title name="DIR">moveForward</title>
-                                          <title name="VALUE">100</title>
+                                        <block type="draw_turn_by_constant_dropdown" deletable="false">
+                                          <title name="DIR">turnRight</title>
+                                          <title name="VALUE" config="45,60,90,120,180">120</title>
+                                          <next>
+                                            <block type="draw_move_by_constant" deletable="false">
+                                              <title name="DIR">moveForward</title>
+                                              <title name="VALUE">100</title>
+                                            </block>
+                                          </next>
                                         </block>
                                       </next>
                                     </block>
@@ -126,13 +134,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
-        </block>
-      </xml>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="controls_repeat">

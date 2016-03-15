@@ -204,6 +204,7 @@ en:
       4-5 Artist For Loops 13_instruction: crwdns34079:0crwdne34079:0
       4-5 Artist For Loops 14_instruction: crwdns34080:0crwdne34080:0
       4-5 Artist For Loops 15_instruction: crwdns34081:0crwdne34081:0
+      4-5 Artist For Loops 2_instruction: crwdns56175:0crwdne56175:0
       4-5 Artist For Loops 3_instruction: crwdns34083:0crwdne34083:0
       4-5 Artist For Loops 4_instruction: crwdns34084:0crwdne34084:0
       4-5 Artist For Loops 6_instruction: crwdns34086:0crwdne34086:0
@@ -343,6 +344,7 @@ en:
       allthethings_template_backed1_instruction: crwdns51027:0crwdne51027:0
       allthethings_template_backed2_instruction: crwdns51028:0crwdne51028:0
       App Lab test_instruction: crwdns45301:0crwdne45301:0
+      Applab allthethings onRecordEvent_instruction: crwdns56135:0crwdne56135:0
       Applab test_instruction: crwdns49692:0crwdne49692:0
       AppLab_test02_instruction: crwdns43312:0crwdne43312:0
       Artist - Nested Loops 1_instruction: crwdns34181:0crwdne34181:0
@@ -920,6 +922,9 @@ en:
       K-1 Maze Sequence Assessment 1_instruction: crwdns38658:0crwdne38658:0
       K-1 Maze Sequence Assessment 2_instruction: crwdns38659:0crwdne38659:0
       kikiTesting_instruction: crwdns54266:0crwdne54266:0
+      love_spring_1_instruction: crwdns56176:0crwdne56176:0
+      love_spring_2_instruction: crwdns56177:0crwdne56177:0
+      love_spring_3_instruction: crwdns56178:0crwdne56178:0
       Luigi's Pizza 1_instruction: crwdns35170:0crwdne35170:0
       Luigi's Pizza 2 (copy 1)_instruction: crwdns35171:0crwdne35171:0
       Luigi's Pizza 2_instruction: crwdns35172:0crwdne35172:0
@@ -1643,6 +1648,7 @@ en:
       U4L15 Read Data 2_instruction: crwdns48406:0crwdne48406:0
       U4L15 Read Data 3_instruction: crwdns48407:0crwdne48407:0
       U4L15 Read Data 4_instruction: crwdns48408:0crwdne48408:0
+      U6 - Final Project - Project Level_instruction: crwdns56136:0crwdne56136:0
       U6 - updateRecord - Callback Success Parameter_instruction: crwdns56114:0crwdne56114:0
       U6 - updateRecord - Contacts - Edit event handler_instruction: crwdns56002:0crwdne56002:0
       U6 - updateRecord - Contacts - Edit UI_instruction: crwdns56003:0crwdne56003:0

@@ -5,6 +5,8 @@ require 'tables_api'
 class TablesTest < Minitest::Test
   include SetupTest
 
+  TableType = CDO.use_dynamo_tables ? DynamoTable : SqlTable
+
   def test_create_read_update_delete
     init_apis
 
@@ -51,12 +53,14 @@ class TablesTest < Minitest::Test
     populate_table(data1, true)
 
     @table_name = 'table1'
+    assert_equal ['name'], JSON.parse(read_metadata["column_list"])
     records = read_records
 
     assert_equal records.first['name'], 'trevor'
     assert_equal records.length, 2
 
     @table_name = 'table2'
+    assert_equal ['word'], JSON.parse(read_metadata["column_list"])
     records = read_records
 
     assert_equal records.first['word'], 'cow'
@@ -65,6 +69,7 @@ class TablesTest < Minitest::Test
     # Test overwrite off
     populate_table(data2, false)
     @table_name = 'table1'
+    assert_equal ['name'], JSON.parse(read_metadata["column_list"])
     records = read_records
 
     assert_equal records.first['name'], 'trevor'
@@ -74,10 +79,12 @@ class TablesTest < Minitest::Test
     populate_table(data2, true)
     @table_name = 'table1'
     records = read_records
+    assert_equal ['city'], JSON.parse(read_metadata["column_list"])
 
     assert_equal records.first['city'], 'SFO'
 
     @table_name = 'table2'
+    assert_equal ['state', 'country'], JSON.parse(read_metadata["column_list"])
     records = read_records
 
     assert_equal records.last['country'], 'USA'
@@ -90,11 +97,13 @@ class TablesTest < Minitest::Test
     create_channel
 
     # this record should not appear in the output
-    create_record('name' => 'eve', 'age' => 9)
+    create_record('name' => 'eve', 'age' => 9, 'original_column' => true)
+    assert read_metadata.nil?
 
     csv_filename = File.expand_path('../roster.csv', __FILE__)
     import(csv_filename)
 
+    assert_equal ['name', 'male', 'age'], JSON.parse(read_metadata["column_list"])
     records = read_records
     assert_equal 34, records.length
     assert_equal 'alice', records[0]['name']
@@ -131,14 +140,32 @@ class TablesTest < Minitest::Test
     delete_channel
   end
 
+  def test_add_column
+    init_apis
+    create_channel
+
+    add_column('one')
+    assert_equal ['one'], JSON.parse(read_metadata["column_list"])
+
+    add_column('two')
+    assert_equal ['one', 'two'], JSON.parse(read_metadata["column_list"])
+
+    delete_channel
+  end
+
   def test_delete_column
     init_apis
     create_channel
 
+    write_column_metadata([])
+
     create_record('name' => 'trevor', 'age' => 30)
     create_record('name' => 'mitra', 'age' => 29)
+    write_column_metadata(['name', 'age'])
+    assert_equal ['name', 'age'], JSON.parse(read_metadata["column_list"])
 
     delete_column('age')
+    assert_equal ['name'], JSON.parse(read_metadata["column_list"])
 
     records = read_records
     assert_nil records[0]['age']
@@ -158,6 +185,8 @@ class TablesTest < Minitest::Test
     assert_equal 2, records.length
 
     delete_table
+
+    assert read_metadata.nil?
 
     records = read_records
 
@@ -186,6 +215,83 @@ class TablesTest < Minitest::Test
 
     delete_channel
   end
+
+  def test_table_names
+    init_apis
+    create_channel
+
+    _, decrypted_channel_id = storage_decrypt_channel_id(@channel_id)
+
+    delete_table 'table1'
+    delete_table 'table2'
+    delete_table 'new_table'
+    assert_equal [], TableType.table_names(decrypted_channel_id)
+
+    data1 = {
+      'table1' => [{'name'=> 'trevor'}, {'name'=>'alex'}],
+      'table2' => [{'word'=> 'cow'}, {'word'=>'pig'}],
+    }
+
+    populate_table(data1, true)
+
+    assert_equal ['table1', 'table2'], TableType.table_names(decrypted_channel_id)
+
+    # Now add a data that has no records (but should have metadata)
+    populate_table({ 'new_table' => [] }, false)
+    assert_equal ['table1', 'table2', 'new_table'], TableType.table_names(decrypted_channel_id)
+
+    delete_channel
+  end
+
+  def test_metadata_generate_column_info
+    records = [
+      { "id" => 1, "col1" => 1, "col2" => 2 }
+    ]
+    expected = ["col1", "col2"]
+    assert_equal expected, TableMetadata.generate_column_list(records)
+
+    records = [
+      { "id" => 1, "col1" => 1, "col2" => 2 },
+      { "id" => 2, "col2" => 3, "col3" => 4 }
+    ]
+    expected = ["col1", "col2", "col3"]
+    assert_equal expected, TableMetadata.generate_column_list(records)
+
+    records = []
+    expected = []
+    assert_equal expected, TableMetadata.generate_column_list(records)
+  end
+
+  def test_metadata_remove_column
+    column_list = ["col1", "col2", "col3"]
+
+    assert_equal ["col1", "col2"], TableMetadata.remove_column(column_list, "col3")
+    assert_equal ["col1", "col3"], TableMetadata.remove_column(column_list, "col2")
+    assert_equal ["col2", "col3"], TableMetadata.remove_column(column_list, "col1")
+
+    assert_raises 'No such column' do
+      TableMetadata.remove_column(column_list, "col4")
+    end
+
+    assert_raises 'No such column' do
+      TableMetadata.remove_column([], "col4")
+    end
+  end
+
+  def test_metadata_add_column
+    column_list = ["col1", "col2"]
+
+    assert_equal ["col1", "col2", "col3"], TableMetadata.add_column(column_list, "col3")
+
+    assert_raises 'Column already exists' do
+      TableMetadata.add_column(column_list, "col1")
+    end
+
+    assert_raises 'Column already exists' do
+      TableMetadata.add_column(column_list, "col2")
+    end
+  end
+
   # Methods below this line are test utilities, not actual tests
   private
 
@@ -217,6 +323,18 @@ class TablesTest < Minitest::Test
     JSON.parse(@tables.last_response.body)
   end
 
+  def read_metadata
+    @tables.get "/v3/shared-tables/#{@channel_id}/#{@table_name}/metadata"
+    return nil if @tables.last_response.body.empty?
+    JSON.parse(@tables.last_response.body)
+  end
+
+  def write_column_metadata(column_list)
+    @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/metadata?column_list=#{column_list.to_json}"
+    return nil if @tables.last_response.body.empty?
+    JSON.parse(@tables.last_response.body)
+  end
+
   def update_record(id, record)
     @tables.put "/v3/shared-tables/#{@channel_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     JSON.parse(@tables.last_response.body)
@@ -243,8 +361,12 @@ class TablesTest < Minitest::Test
     @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/column/#{old}?new_name=#{new}"
   end
 
-  def delete_table
-    @tables.delete "/v3/shared-tables/#{@channel_id}/#{@table_name}"
+  def add_column(new)
+    @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/column?column_name=#{new}"
+  end
+
+  def delete_table(table_name = @table_name)
+    @tables.delete "/v3/shared-tables/#{@channel_id}/#{table_name}"
   end
 
   def populate_table(data, overwrite)

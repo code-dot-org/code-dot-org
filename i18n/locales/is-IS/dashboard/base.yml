@@ -24,6 +24,7 @@ is:
   hello: Halló heimur
   welcome_back: 'Velkomin/n aftur, %{name}'
   submit: Senda inn
+  unsubmit: Afturkalla innsendingu
   add_teacher_form:
     code:
       label: 'Bæta við kennara:'
@@ -222,7 +223,7 @@ is:
       free_play:
         playlab: Búa til forrit
         artist: Teikna eitthvað
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Búa til forrit
     user:
       classroom: Heimasíða kennara
@@ -320,6 +321,7 @@ is:
     heading_hoc2014: '<h2>Klukkustund kóðunar fyrir</h2><h1>alla aldurshópa</h1>'
     heading_elementary: '<h2>20 stunda námskeið í</h2><h1>Undirstöðuatriðum tölvunarfræði (fyrir alla aldurshópa)</h1>'
     heading_apps: '<h2>Skemmtun fyrir</h2><h1>alla</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Hraðnámskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>'
     your_gallery: Safn
     no_primary_course: Prófaðu námskeið í Kóðastúdíóinu
@@ -414,6 +416,12 @@ is:
       current: Núverandi áfangar
       unused: Ónotaðir áfangar
   upsell:
+    applab:
+      title: Appsmiðja
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Hefðbundið völundarhús
       body: Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.
@@ -459,11 +467,19 @@ is:
     report_bug: Tilkynna galla
     support: Fá hjálp
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Rangt svar
     wrong_body: Svarið sem þú gafst er ekki rétt. Vinsamlegast reyndu aftur!
     correct_title: Rétt
     correct_body: Þetta svar er rétt.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Takk fyrir
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Takk fyrir
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -483,6 +499,9 @@ is:
     placeholder: Skráðu svar þitt hér
     open_response_title: Þakkir
     open_response_body: Þökkum viðbrögð þín!
+  level_group:
+    correct_title: Takk fyrir
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: Í lagi
     startover_title: Ertu viss um að þú viljir byrja aftur?

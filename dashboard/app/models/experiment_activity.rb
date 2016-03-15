@@ -19,7 +19,7 @@ class ExperimentActivity < ActiveRecord::Base
   # Experiment types
   TYPE_FEEDBACK_DESIGN_WHITE = 'white_background'
   TYPE_FEEDBACK_DESIGN_YELLOW = 'yellow_background'
-  TYPES_FEEDBACK_DESIGN = [ TYPE_FEEDBACK_DESIGN_WHITE, TYPE_FEEDBACK_DESIGN_YELLOW ]
+  TYPES_FEEDBACK_DESIGN = [TYPE_FEEDBACK_DESIGN_WHITE, TYPE_FEEDBACK_DESIGN_YELLOW]
 
   def white_background?
     self.feedback_design == TYPE_FEEDBACK_DESIGN_WHITE
@@ -29,7 +29,7 @@ class ExperimentActivity < ActiveRecord::Base
     self.feedback_design == TYPE_FEEDBACK_DESIGN_YELLOW
   end
 
-  def self.is_experimenting_feedback_design?
+  def self.experimenting_feedback_design?
     @@is_experimenting_feedback_design
   end
 
@@ -64,7 +64,7 @@ class ExperimentActivity < ActiveRecord::Base
     val if val && val > 0
   end
 
-  def self.is_experimenting_feedback?(level_source)
+  def self.experimenting_feedback?(level_source)
     false
   end
 
@@ -83,7 +83,7 @@ class ExperimentActivity < ActiveRecord::Base
       'karel_1_11'  # http://learn.code.org/s/1/level/57 (level_id == 43 in prod)
   ]
 
-  def self.is_experimenting_hint_visibility?(level_source)
+  def self.experimenting_hint_visibility?(level_source)
     false
   end
 
@@ -146,7 +146,7 @@ class ExperimentActivity < ActiveRecord::Base
     # If we are doing the Stanford hint experiment, choose the hint from the appropriate source.
     if (stanford_experiment_hash ||
          (options[:enable_external_hints] &&
-             self.is_experimenting_feedback?(options[:level_source]) &&
+             self.experimenting_feedback?(options[:level_source]) &&
              options[:current_user])) &&
         specific_hint
       in_hint_experiment = true
@@ -159,11 +159,11 @@ class ExperimentActivity < ActiveRecord::Base
 
     # If we are doing the hint visibility experiment, set response[:hint_request_placement].
     if hint_visibility_experiment_hash ||
-        (self.is_experimenting_hint_visibility?(options[:level_source]) && options[:current_user])
+        (self.experimenting_hint_visibility?(options[:level_source]) && options[:current_user])
       in_hint_experiment = true
       hash_value = hint_visibility_experiment_hash || ip_to_hash_value(options[:ip]) || 0
       response[:hint_request_placement] =
-          self.pick_mod_length(HINT_VISIBILITY_VALUES, hash_value)
+        self.pick_mod_length(HINT_VISIBILITY_VALUES, hash_value)
     end
 
     # If in an experiment, record values written to options.

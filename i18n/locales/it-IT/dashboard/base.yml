@@ -24,6 +24,7 @@ it:
   hello: Ciao a tutti
   welcome_back: 'Bentornato, %{name}'
   submit: Invia
+  unsubmit: "Annulla l'invio"
   add_teacher_form:
     code:
       label: 'Aggiungi un insegnante:'
@@ -224,7 +225,7 @@ it:
       free_play:
         playlab: Costruisci una App
         artist: Disegna qualcosa
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Costruisci una App
     user:
       classroom: "Cruscotto di Controllo dell'insegnante"
@@ -322,6 +323,7 @@ it:
     heading_hoc2014: "<h2>L'Ora del Codice</h2><h1>per iniziare</h1> (a qualunque età)"
     heading_elementary: '<h2>Corsi di 20 ore</h2><h1>per approfondire</h1> (a qualunque età)'
     heading_apps: '<h2>Divertimento per</h2><h1>tutti</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Corso rapido</h2> per <h1>i più grandi</h1>'
     your_gallery: La tua collezione
     no_primary_course: Prova un corso presso Code Studio
@@ -416,6 +418,12 @@ it:
       current: Livelli correnti
       unused: LIvelli non usati
   upsell:
+    applab:
+      title: Laboratorio per le App
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Labirinto Classico
       body: "Impara i concetti base dell'informatica. Milioni di persone l'hanno già fatto."
@@ -461,11 +469,19 @@ it:
     report_bug: Segnala un errore
     support: Ottieni aiuto
     support_url: //programmailfuturo.it/aiuto
+    help_resources: Help and Resources
   multi:
     wrong_title: Risposta non corretta
     wrong_body: 'La risposta che hai scelto non è corretta.  Per favore riprova!'
     correct_title: Molto bene!
     correct_body: Questa è la risposta corretta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Grazie!
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Grazie!
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -485,6 +501,9 @@ it:
     placeholder: Inserisci qui la tua risposta
     open_response_title: Grazie
     open_response_body: Grazie per la risposta!
+  level_group:
+    correct_title: Grazie!
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: Ok
     startover_title: Sei sicuro di voler ripristinare la situazione iniziale?

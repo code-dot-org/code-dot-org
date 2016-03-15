@@ -7,14 +7,18 @@
       %th
       %th
       %th
+      %th
+      %th
 
   %tbody
     - @tasks.each do |plc_task|
       %tr
+        %td= plc_task.id
         %td= plc_task.name
-        %td= link_to 'Show', plc_task
+        %td= plc_task.class.titleized_task_type
+        %td= link_to 'Show', plc_task_path(plc_task)
         %td= link_to 'Edit', edit_plc_task_path(plc_task)
-        %td= link_to 'Destroy', plc_task, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Destroy', plc_task_path(plc_task), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

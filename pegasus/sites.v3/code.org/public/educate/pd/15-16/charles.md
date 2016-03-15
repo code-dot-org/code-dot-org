@@ -20,25 +20,25 @@ Teachers from Charles County, Maryland will attend PD in Charles County and conn
 
 **Save the Dates:**
 
-Quarter 1: Saturday, September 26, 2015
+Quarter 1: Saturday, September 26th, 2015
 
-Quarter 2: Saturday, December 5, 2015
+Quarter 2: Saturday, December 5th, 2015
 
-Quarter 3: Saturday, February 19th, 2016
+Quarter 3: Saturday, February 20th, 2016
 
-Quarter 4: Saturday, March 12, 2016
+Quarter 4: Saturday, April 9th, 2016
 
 8:30am - 3:30pm<br/>
 Breakfast and lunch will be served.
 
 
-**February 19th Location**
+**April 9th Location**
 
 
-[North Point High School
+[I/O Spaces
 <br/>
-Room 2322<br/>
-2500 Davis Rd<br/> Waldorf, MD 20603](https://www.google.com/maps/place/North+Point+High+School/@38.641421,-76.977075,15z/data=!4m2!3m1!1s0x0:0xe09e4df8de5e0883?sa=X&ved=0CG8Q_BIwCmoVChMIisaexqCYyQIVSjqICh2_Tw5f)
+8120 Fenton Street<br/>Suite 202<br/> 
+Silver Spring, MD 20910](https://goo.gl/maps/puTUhhZYrMA2)
 
 Free parking is available in front of the building, and  in the lot near the track.
 
@@ -130,36 +130,10 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the dates**
-
-Semester 1: Saturday, September 26, 2015 
-
-Semester 2: Saturday, February 27, 2016 
-
-8:00am - 4:00pm<br/>
-Breakfast and lunch will be served. 
-
-**Location**
-
-[North Point High School<br/>
-Room 2322<br/>
-2500 Davis Road<br/> 
-Waldorf, MD 20603](https://www.google.com/maps/place/North+Point+High+School/@38.641421,-76.977075,15z/data=!4m2!3m1!1s0x0:0xe09e4df8de5e0883?sa=X&ved=0CG8Q_BIwCmoVChMIisaexqCYyQIVSjqICh2_Tw5f)
-
-Free parking is available in front of the building, and also in the lot near the track.
-
-**What to bring to Phase 3 bi-yearly sessions:**
-
-Laptop and Charger
+In person workshop complete!<br/><br/>
+**Deadline for Online Coursework is June 30th.**<br/>
 <br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Phase 3 Part 3: Refection - This final online course will launch in early May on your Code Studio Teacher Dashboard. If you need support while finishing your work or teaching the course, check out the CS in Algebra forum [here](http://forum.code.org/c/cs-in-algebra).
 
 
 [**Back to the top**](#top)

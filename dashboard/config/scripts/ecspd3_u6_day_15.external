@@ -1,0 +1,34 @@
+name 'ECSPD3-u6 day 15'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Unit 6 Lessons > Day 15 
+ 
+#### Concepts Covered  
+Debug conditional statements for the Tic-Tac-Toe program, and RoboCupJunior Dance Challenge.
+ 
+#### Lesson Overview 
+This lesson builds on Day 14 and creating the Tic-Tac-Toe program.  Students need to test the program/instructions they wrote to make sure they debugged any errors.  Then they will get into teams and play against each other testing how successful their code is.  Have the winning team describe why their team won, what they learned, and how they might improve their programs. Explain what RoboCup and RoboCupJunior (RCJ) is and that the students will be participating in two robot projects based on the RoboCupJunior program. For this activity they will be programming a robot to dance.
+<br><br> 
+ 
+#### Lesson Resources 
+##### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=286" target=_blank>Lesson Plan Link>> </a>
+ 
+- <a href="http://rcj.robocup.org/videos.html" target=_blank>RoboCupJunior videos</a>
+- <a href="http://www.youtube.com/watch?v=25sZr3uWwU" target=_blank>Additional videos available through YouTube</a>
+
+>#### Hints from an ECS Teacher: 
+Before you get to this lesson become familiar with the Robocup project, the rules and tasks that the students are asked to complete.
+
+#### Things to keep in mind 
+Have students use their problem solving skills and storyboarding skills to have students program their robot to dance.
+
+<br>
+ 
+Click “Continue” below to learn about the next lesson.  
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

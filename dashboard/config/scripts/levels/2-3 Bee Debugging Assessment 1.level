@@ -6,18 +6,36 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Assessment:  These blocks are really bugging me. Fix the error(s) to collect all of the nectar and make all of the honey.",
+    "instructions": "Assessment:  Now it's time to show what you know!\r\n\r\nFix the error(s) to collect all of the nectar and make all of the honey.",
     "step_mode": "1",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "start_direction": "1",
     "nectar_goal": "5",
     "flower_type": "redWithNectar",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,1,0],[0,0,1,1,1,1,1,0],[0,0,2,1,1,1,1,0],[0,0,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,5,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "7"
-  }
+    "ideal": "7",
+    "markdown_instructions": "**Assessment:**  Now it's time to show what you know!\r\n\r\nFix the error(s) to collect all of the nectar and make all of the honey.",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "false",
+    "step_speed": "1"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -63,5 +81,36 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnLeft</title>
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">5</title>
+                          <statement name="DO">
+                            <block type="maze_nectar"/>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

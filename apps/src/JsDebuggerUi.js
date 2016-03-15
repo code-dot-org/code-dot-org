@@ -1,10 +1,4 @@
 /** @file Debugger controls and debug console used in our rich JavaScript IDEs */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var CommandHistory = require('./CommandHistory');
@@ -73,7 +67,7 @@ var JsDebuggerUi = module.exports = function (runApp) {
  * @param {!Object} options
  * @param {!boolean} options.showButtons - Whether to show the debug buttons
  * @param {!boolean} options.showConsole - Whether to show the debug console
- * @returns {string} of HTML markup to be embedded in page.html.ejs
+ * @returns {string} of HTML markup to be embedded in codeWorkspace.html.ejs
  */
 JsDebuggerUi.prototype.getMarkup = function (assetUrl, options) {
   return require('./JsDebuggerUi.html.ejs')({
@@ -295,10 +289,34 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
     }
   } else if (e.keyCode === KeyCodes.UP) {
     e.target.textContent = this.history_.goBack(input);
+    moveCaretToEndOfDiv(e.target);
+    e.preventDefault(); // Block default Home/End-like behavior in Chrome
   } else if (e.keyCode === KeyCodes.DOWN) {
     e.target.textContent = this.history_.goForward(input);
+    moveCaretToEndOfDiv(e.target);
+    e.preventDefault(); // Block default Home/End-like behavior in Chrome
   }
 };
+
+/**
+ * Set the cursor position to the end of the text content in a div element.
+ * @see http://stackoverflow.com/a/6249440/5000129
+ * @param {!HTMLDivElement} element
+ */
+function moveCaretToEndOfDiv(element) {
+  var range = document.createRange();
+  if (element.childNodes.length === 0) {
+    return;
+  }
+
+  range.setStart(element.lastChild, element.lastChild.nodeValue.length);
+  range.collapse(true);
+
+  // Change window selection to new range to set cursor position
+  var selection = window.getSelection();
+  selection.removeAllRanges();
+  selection.addRange(range);
+}
 
 /**
  * On mouseup over the console output, if the user hasn't just selected some

@@ -392,16 +392,16 @@ Then /^element "([^"]*)" is hidden$/ do |selector|
   visible.should eq false
 end
 
-def has_class(selector, class_name)
+def has_class?(selector, class_name)
   @browser.execute_script("return $(#{selector.dump}).hasClass('#{class_name}')")
 end
 
 Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, class_name|
-  has_class(selector, class_name).should eq true
+  has_class?(selector, class_name).should eq true
 end
 
 Then /^element "([^"]*)" (?:does not|doesn't) have class "([^"]*)"$/ do |selector, class_name|
-  has_class(selector, class_name).should eq false
+  has_class?(selector, class_name).should eq false
 end
 
 Then /^SVG element "([^"]*)" within element "([^"]*)" has class "([^"]*)"$/ do |selector, parent_selector, class_name|
@@ -410,16 +410,16 @@ Then /^SVG element "([^"]*)" within element "([^"]*)" has class "([^"]*)"$/ do |
   class_list.should include class_name
 end
 
-def is_disabled(selector)
+def disabled?(selector)
   @browser.execute_script("return $('#{selector}')[0].getAttribute('disabled') !== null || $('#{selector}').hasClass('disabled')")
 end
 
 Then /^element "([^"]*)" is (?:enabled|not disabled)$/ do |selector|
-  is_disabled(selector).should eq false
+  disabled?(selector).should eq false
 end
 
 Then /^element "([^"]*)" is disabled$/ do |selector|
-  is_disabled(selector).should eq true
+  disabled?(selector).should eq true
 end
 
 And /^output url$/ do

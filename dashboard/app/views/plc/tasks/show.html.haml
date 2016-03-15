@@ -1,5 +1,3 @@
-%p#notice= notice
-
 %p
   %strong Name:
   = @task.name
@@ -7,6 +5,10 @@
 %p
   %strong Associated module
   = @task.plc_learning_module.try(:name)
+
+-unless @task.type == :plc_task
+  %p
+    = render partial: 'plc/tasks/view/' + @task.class.underscored_task_type
 
 = link_to 'Edit', edit_plc_task_path(@task)
 \|

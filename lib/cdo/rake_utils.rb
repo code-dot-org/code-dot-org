@@ -123,8 +123,8 @@ module RakeUtils
     `git remote show origin 2>&1 | grep \"local out of date\" | grep \"#{git_branch}\" | wc -l`.strip.to_i > 0
   end
 
-  def self.git_staged_changes?
-    `git status --porcelain 2>/dev/null | egrep \"^(M|A|D)\" | wc -l`.strip.to_i > 0
+  def self.git_staged_changes?(path="")
+    `git status --porcelain #{path} 2>/dev/null | egrep \"^\s*(M|A|D)\" | wc -l`.strip.to_i > 0
   end
 
   # Gets a stable hash of the given directory's git-committed files.

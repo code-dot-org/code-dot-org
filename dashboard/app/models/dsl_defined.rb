@@ -15,6 +15,7 @@
 #  type                     :string(255)
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
@@ -135,7 +136,6 @@ class DSLDefined < Level
   def encrypted=(value)
     properties['encrypted'] = value
   end
-
 
   private
   def delete_level_file

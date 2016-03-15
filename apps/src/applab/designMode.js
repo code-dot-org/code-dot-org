@@ -3,23 +3,42 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var DesignWorkspace = require('./DesignWorkspace.jsx');
-var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var showAssetManager = require('../assetManagement/show');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
 var KeyCodes = require('../constants').KeyCodes;
-var constants = require('./constants');
-var applabCommands = require('./commands');
+var applabConstants = require('./constants');
 var designMode = module.exports;
 var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var gridUtils = require('./gridUtils');
 var logToCloud = require('../logToCloud');
+var actions = require('./actions');
 
 var currentlyEditedElement = null;
-var currentScreenId = null;
+var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
+
+/**
+ * Subscribe to state changes on the store.
+ * @param {!Store} store
+ */
+designMode.setupReduxSubscribers = function (store) {
+  var state = {};
+  store.subscribe(function () {
+    var lastState = state;
+    state = store.getState();
+
+    if (state.currentScreenId !== lastState.currentScreenId) {
+      onScreenChange(state.currentScreenId);
+    }
+
+    if (state.interfaceMode !== lastState.interfaceMode) {
+      onInterfaceModeChange(state.interfaceMode);
+    }
+  });
+};
 
 /**
  * If in design mode and program is not running, display Properties
@@ -108,7 +127,7 @@ designMode.editElementProperties = function(element) {
 designMode.resetPropertyTab = function() {
   var element = currentlyEditedElement || designMode.activeScreen();
   designMode.editElementProperties(element);
-  designMode.renderToggleRow();
+  Applab.render();
 };
 
 /**
@@ -197,22 +216,12 @@ designMode.updateProperty = function(element, name, value) {
       if (isDraggableContainer(element.parentNode)) {
         element.parentNode.style.width = newWidth;
       }
-
-      if (element.style.backgroundSize) {
-        element.style.backgroundSize = element.style.width + ' ' +
-          element.style.height;
-      }
       break;
     case 'style-height':
       var newHeight = appendPx(value);
       element.style.height = newHeight;
       if (isDraggableContainer(element.parentNode)) {
         element.parentNode.style.height = newHeight;
-      }
-
-      if (element.style.backgroundSize) {
-        element.style.backgroundSize = element.style.width + ' ' +
-          element.style.height;
       }
       break;
     case 'text':
@@ -227,7 +236,9 @@ designMode.updateProperty = function(element, name, value) {
     case 'fontSize':
       element.style.fontSize = appendPx(value);
       break;
-
+    case 'textAlign':
+      element.style.textAlign = value;
+      break;
     case 'image':
       var backgroundImage = new Image();
       var originalValue = element.getAttribute('data-canonical-image-url');
@@ -237,10 +248,11 @@ designMode.updateProperty = function(element, name, value) {
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
         backgroundImage.onload = function() {
-          element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
-            backgroundImage.naturalHeight + 'px';
-          element.style.width = backgroundImage.naturalWidth + 'px';
-          element.style.height = backgroundImage.naturalHeight + 'px';
+          // Fit the image into the button
+          element.style.backgroundSize = 'contain';
+          element.style.backgroundPosition = '50% 50%';
+          element.style.backgroundRepeat = 'no-repeat';
+
           // Re-render properties
           if (currentlyEditedElement === element) {
             designMode.editElementProperties(element);
@@ -355,7 +367,7 @@ designMode.updateProperty = function(element, name, value) {
 
         //Resort elements in the dropdown list
         var options = $('#screenSelector option');
-        var newScreenText = constants.NEW_SCREEN;
+        var newScreenText = applabConstants.NEW_SCREEN;
         var defaultScreenId = elementUtils.getId(element);
         options.sort(function (a, b) {
           if (a.text === defaultScreenId) {
@@ -401,7 +413,9 @@ designMode.onDeletePropertiesButton = function(element, event) {
   if (isScreen) {
     designMode.loadDefaultScreen();
   } else {
-    designMode.editElementProperties(elementUtils.getPrefixedElementById(currentScreenId));
+    designMode.editElementProperties(
+        elementUtils.getPrefixedElementById(
+            Applab.reduxStore.getState().currentScreenId));
   }
 };
 
@@ -544,6 +558,11 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
 };
 
 designMode.toggleDesignMode = function(enable) {
+  Applab.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+};
+
+function onInterfaceModeChange(mode) {
+  var enable = (ApplabInterfaceMode.DESIGN === mode);
   var designWorkspace = document.getElementById('designWorkspace');
   if (!designWorkspace) {
     // Currently we don't run design mode in some circumstances (i.e. user is
@@ -556,7 +575,7 @@ designMode.toggleDesignMode = function(enable) {
   codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
 
   Applab.toggleDivApplab(!enable);
-};
+}
 
 /**
  * When we make elements resizable, we wrap them in an outer div. Given an outer
@@ -809,15 +828,6 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configurePlaySpaceHeader = function () {
-  var designToggleRow = document.getElementById('designToggleRow');
-  if (!designToggleRow) {
-    return;
-  }
-
-  designMode.loadDefaultScreen();
-};
-
 /**
  * Create a new screen
  * @returns {string} The id of the newly created screen
@@ -830,50 +840,42 @@ designMode.createScreen = function () {
 };
 
 /**
- * Changes the active screen by toggling all screens to be non-visible, unless
- * they match the provided screenId. Also updates our dropdown to reflect the
- * change, and opens the element property editor for the new screen.
+ * Changes the active screen by triggering a 'CHANGE_SCREEN' action on the
+ * Redux store.  This change propagates across the app, updates the state of
+ * React-rendered components, and eventually calls onScreenChange, below.
+ * @param {!string} screenId
  */
 designMode.changeScreen = function (screenId) {
-  currentScreenId = screenId;
-  var screenIds = [];
+  Applab.reduxStore.dispatch(actions.changeScreen(screenId));
+};
+
+/**
+ * Responds to changing the active screen by toggling all screens to be
+ * non-visible, unless they match the provided screenId, and opens the element
+ * property editor for the new screen.
+ *
+ * This method is called in response to a change in the application state.  If
+ * you want to change the current screen, call designMode.changeScreen instead.
+ *
+ * @param {!string} screenId
+ */
+function onScreenChange(screenId) {
   elementUtils.getScreens().each(function () {
-    screenIds.push(elementUtils.getId(this));
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
-
-  designMode.renderToggleRow(screenIds);
-
   designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
-};
 
-designMode.getCurrentScreenId = function() {
-  return currentScreenId;
-};
+  // We still have to call render() to get an updated list of screens, in case
+  // we added or removed one.  Can probably stop doing this once the screens
+  // list is also in Redux and managed through actions.
+  Applab.render();
+}
 
-designMode.renderToggleRow = function (screenIds) {
-  screenIds = screenIds || elementUtils.getScreens().get().map(function (screen) {
+/** @returns {string[]} Array of all screen Ids in current app */
+designMode.getAllScreenIds = function () {
+  return elementUtils.getScreens().get().map(function (screen) {
     return elementUtils.getId(screen);
   });
-
-  var designToggleRow = document.getElementById('designToggleRow');
-  if (designToggleRow) {
-    React.render(
-      React.createElement(PlaySpaceHeader, {
-        hideToggle: Applab.hideDesignModeToggle(),
-        hideViewDataButton: Applab.hideViewDataButton(),
-        startInDesignMode: Applab.startInDesignMode(),
-        initialScreen: currentScreenId,
-        screenIds: screenIds,
-        onDesignModeButton: Applab.onDesignModeButton,
-        onCodeModeButton: Applab.onCodeModeButton,
-        onViewDataButton: Applab.onViewData,
-        onScreenChange: designMode.changeScreen,
-        onScreenCreate: designMode.createScreen
-      }),
-      designToggleRow
-    );
-  }
 };
 
 /**
@@ -913,7 +915,7 @@ designMode.renderDesignWorkspace = function(element) {
     handleManageAssets: showAssetManager,
     isDimmed: Applab.running
   };
-  React.render(React.createElement(DesignWorkspace, props), designWorkspace);
+  ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };
 
 /**

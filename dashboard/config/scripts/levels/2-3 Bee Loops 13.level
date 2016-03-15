@@ -6,10 +6,10 @@
   "user_id": 5,
   "properties": {
     "skin": "bee",
-    "instructions": "Assessment: Use the repeat block to collect all of the nectar.",
-    "step_mode": 1,
+    "instructions": "Assessment: Collect all of the nectar using the fewest blocks possible.",
+    "step_mode": "1",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "start_direction": "1",
     "nectar_goal": "10",
     "flower_type": "redWithNectar",
@@ -28,8 +28,14 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "fast_get_nectar_animation": "false",
+    "markdown_instructions": "**Assessment:** Collect all of the nectar using the fewest blocks possible."
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -48,12 +54,27 @@
         <block type="maze_honey"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <solution_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">5</title>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_nectar">
+                      <next>
+                        <block type="maze_nectar"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
         </block>
       </xml>
-    </required_blocks>
+    </solution_blocks>
   </blocks>
 </Karel>

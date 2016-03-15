@@ -32,7 +32,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to 'http://blahblah'
   end
 
-
   test "handle nonsense in return_to" do
     sign_in User.new # devise uses an empty user instead of nil? Hm
 

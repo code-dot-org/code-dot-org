@@ -89,8 +89,13 @@ def load_configuration()
     'use_dynamo_tables'           => [:staging, :adhoc, :test, :production].include?(rack_env),
     'use_dynamo_properties'       => [:staging, :adhoc, :test, :production].include?(rack_env),
     'dynamo_tables_table'         => "#{rack_env}_tables",
-    'dynamo_tables_index'         => "channel_id-table_name-index",
     'dynamo_properties_table'     => "#{rack_env}_properties",
+    'dynamo_table_metadata_table'         => "#{rack_env}_table_metadata",
+    'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
+    'max_table_reads_per_sec'     => 20,
+    'max_table_writes_per_sec'    => 40,
+    'max_property_reads_per_sec'  => 40,
+    'max_property_writes_per_sec' => 40,
     'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
@@ -129,7 +134,6 @@ def load_configuration()
     ENV['AWS_DEFAULT_REGION'] ||= config['aws_region']
   end
 end
-
 
 ####################################################################################################
 ##
@@ -194,7 +198,7 @@ class CDOImpl < OpenStruct
 
   def hosts_by_env(env)
     hosts = []
-    GlobalConfig['hosts'].each_pair do |key, i|
+    GlobalConfig['hosts'].each_pair do |_key, i|
       hosts << i if i['env'] == env.to_s
     end
     hosts
@@ -278,7 +282,6 @@ class CDOImpl < OpenStruct
 end
 
 CDO ||= CDOImpl.new
-
 
 ####################################################################################################
 ##

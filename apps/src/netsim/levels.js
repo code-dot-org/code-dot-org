@@ -1,4 +1,3 @@
-/*jshint multistr: true */
 /**
  * @overview Type documentation for a NetSim level configuration object,
  *           and default values for that object.

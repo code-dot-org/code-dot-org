@@ -313,14 +313,13 @@ tr:
           Biz buna programlamada döngü diyoruz. Döngü bir kodunuzun nasıl tekrardan tekrar ettiğidir. Bir sonraki puzzle için hedefiniz Anna' nın "Tekrar" bloğu ile bir kare oluşturmasına yardımcı olmaktır.
       3:
         image: notes/frozen2_3.jpg
-        text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
+        text: "'Yenile' bloğu, içine koyduğunuz her kod istediğiniz kadar sırasıyla tekrarlanır."
       4:
         image: notes/frozen2_4.jpg
         text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
       5:
         image: notes/frozen2_5.jpg
-        text: |-
-          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
+        text: 'Unutmayın, "Tekrar" bloğundaki herşey için sayıyı değiştirebilirsiniz ve bloğun içindekiler sayı kadar tekrar edecektir.'
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
@@ -336,7 +335,7 @@ tr:
         text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Bunu "bir kare oluşturun." adında bir fonksiyona tanımlayabilirsiniz '
       6:
         image: notes/frozen3_6.jpg
         text: Now you have a new block that you can use multiple times to create multiple squares.
@@ -1644,7 +1643,7 @@ tr:
         text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
       5:
         image: notes/gumball_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: Bu orta alan araç kutusu ve buradaki her blok bir kod parçasıdır.
       6:
         image: notes/gumball_intro_6.JPG
         text: Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada yaparsınız.
@@ -1664,7 +1663,7 @@ tr:
         text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
       2:
         image: notes/gumball_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+        text: Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı tuşu veya ekrana bir kere dokunma.
       3:
         image: notes/gumball_events_3.JPG
         text: |-
@@ -1681,7 +1680,7 @@ tr:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/gumball_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+        text: Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana kendi oyununu yaparken tonla zaman kazandıracak.
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
@@ -1697,7 +1696,7 @@ tr:
         text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
       5:
         image: notes/iceage_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: Bu orta alan araç kutusu ve buradaki her blok bir kod parçasıdır.
       6:
         image: notes/iceage_intro_6.JPG
         text: Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada yaparsınız.
@@ -1717,7 +1716,7 @@ tr:
         text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
       2:
         image: notes/iceage_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+        text: Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı tuşu veya ekrana bir kere dokunma.
       3:
         image: notes/iceage_events_3.JPG
         text: |-
@@ -1734,4 +1733,4 @@ tr:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/iceage_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+        text: Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana kendi oyununu yaparken tonla zaman kazandıracak.

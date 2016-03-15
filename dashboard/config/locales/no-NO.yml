@@ -25,6 +25,7 @@
   hello: Hei, verden
   welcome_back: Velkommen tilbake, %{name}
   submit: Send
+  unsubmit: Trekk tilbake
   add_teacher_form:
     code:
       label: 'Legg til en lærer:'
@@ -370,6 +371,8 @@
     heading_hoc2014: "<h2>Kodetimen for</h2><h1>Alle aldre</h1>"
     heading_elementary: "<h2>20-timers kurs for</h2><h1>Nybegynnere (alle aldre)</h1>"
     heading_apps: "<h2>Moro for</h2><h1>Alle</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>"
     your_gallery: Galleri
     no_primary_course: Prøv et kurs på Code Studio
@@ -496,6 +499,15 @@
       current: Nivåer nå
       unused: Ubrukte nivåer
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassisk labyrint
       body: Prøv de grunnleggende konseptene i datavitenskap. Mange millioner har
@@ -554,11 +566,19 @@
     report_bug: Rapporter feil
     support: Få hjelp
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Feil svar
     wrong_body: Svaret du har angitt er ikke riktig.  Prøv på nytt!
     correct_title: Riktig
     correct_body: Det er riktig svar.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Tusen takk
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Tusen takk
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -579,6 +599,9 @@
     placeholder: Angi svaret her
     open_response_title: Takk
     open_response_body: Takk for ditt svar!
+  level_group:
+    correct_title: Tusen takk
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Er du sikker på at du vil starte på nytt?

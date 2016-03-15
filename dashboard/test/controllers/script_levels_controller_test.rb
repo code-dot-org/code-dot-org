@@ -103,8 +103,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should not log an activity monitor start for netsim' do
     allthethings_script = Script.find_by_name('allthethings')
-    netsim_level = allthethings_script.levels.select { |level| level.game == Game.netsim }.first
-    netsim_script_level = allthethings_script.script_levels.select { |script_level| script_level.level_id == netsim_level.id }.first
+    netsim_level = allthethings_script.levels.find { |level| level.game == Game.netsim }
+    netsim_script_level = allthethings_script.script_levels.find { |script_level| script_level.level_id == netsim_level.id }
     get :show, script_id: allthethings_script, stage_id: netsim_script_level.stage.position, id: netsim_script_level.position
     assert_response :success
 
@@ -159,8 +159,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     app_options = assigns(:level).blockly_options
     assert_equal '<div><label id="label1">expected html</label></div>', app_options[:level]['startHtml']
   end
-
-
 
   test 'project template level sets toolbox blocks' do
     template_level = create :level
@@ -274,13 +272,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to build_script_level_path(sl)
   end
 
-
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, script_id: Script.twenty_hour_script, chapter: '99999999999999999999999999'
     end
   end
-
 
   test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
@@ -795,7 +791,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [], assigns(:view_options)[:callouts]
   end
 
-
   test 'student cannot view solution' do
     sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('K-1 Artist1 1'))
 
@@ -833,7 +828,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     level = create(:applab, submittable: true)
     script_level = create(:script_level, level: level)
     Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
-    ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::SUBMITTED_RESULT)
+    ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::FREE_PLAY_RESULT, submitted: true)
 
     get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level
     assert_response :success
@@ -883,7 +878,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal true, assigns(:view_options)[:post_milestone]
   end
 
-
   test "should not see examples if an unauthorized teacher is signed in" do
     CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')
 
@@ -896,7 +890,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select 'button', text: I18n.t('teacher.panel.example'), count: 0
   end
-
 
   test "should see examples if an authorized teacher is signed in" do
     CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')

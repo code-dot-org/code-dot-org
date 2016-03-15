@@ -2,8 +2,7 @@ var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('lodash');
 var $ = require('jquery');
-require('react/addons');
-var ReactTestUtils = React.addons.TestUtils;
+var ReactTestUtils = require('react-addons-test-utils');
 
 // i'd like this test to not run through level tests, which has a lot of hacks,
 // but this is the easiest approach for now. hopefully at some point in the
@@ -136,11 +135,13 @@ module.exports = {
         var assetUrl = '//localhost:8001/apps/static/flappy_promo.png';
         var imageInput = $("#propertyRowContainer input").last()[0];
 
+        var buttonElement = $("#design_button1")[0];
+        var originalButtonWidth = buttonElement.style.width;
+        var originalButtonHeight = buttonElement.style.height;
+
         ReactTestUtils.Simulate.change(imageInput, {
           target: { value: assetUrl }
         });
-
-        var buttonElement = $("#design_button1")[0];
 
         // wait until image has loaded to do validation
         var img = new Image();
@@ -153,9 +154,15 @@ module.exports = {
           // add a completion on timeout since this is a freeplay level
           setTimeout(function () {
             assert.equal(buttonElement.style.backgroundImage, 'url(http:' + assetUrl + ')');
-            assert.equal(buttonElement.style.width, '200px');
-            assert.equal(buttonElement.style.height, '113px');
-            assert.equal(buttonElement.style.backgroundSize, '200px 113px');
+
+            // Validate that the button wasn't resized
+            assert.equal(buttonElement.style.width, originalButtonWidth);
+            assert.equal(buttonElement.style.height, originalButtonHeight);
+
+            // Validate that background image is centered and fit to the button size
+            assert.equal(buttonElement.style.backgroundSize, 'contain');
+            assert.equal(buttonElement.style.backgroundPosition, '50% 50%');
+            assert.equal(buttonElement.style.backgroundRepeat, 'no-repeat');
 
             Applab.onPuzzleComplete();
           }, 1);

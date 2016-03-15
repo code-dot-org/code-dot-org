@@ -7,13 +7,13 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,4,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Get me to the pig using only two blocks.\r\n(Hint: You must use the \"repeat\" block to pass this level)",
+    "instructions": "Get me to the pig by adding only two blocks.\r\n(Note: You must use the magical `repeat` block to pass this level)",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "3",
-    "markdown_instructions": "Get me to the pig using only two blocks.  \r\n*Hint: You must use the `repeat` block to pass this level*",
+    "markdown_instructions": "Get me to the pig by adding only two blocks.  \r\n\r\n*(Note: You must use the magical `repeat` block to pass this level)*",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -27,7 +27,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -51,13 +52,19 @@
         </block>
       </xml>
     </required_blocks>
-    <recommended_blocks>
+    <solution_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">5</title>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+            </block>
+          </next>
         </block>
-        <block type="maze_moveForward"/>
       </xml>
-    </recommended_blocks>
+    </solution_blocks>
   </blocks>
 </Maze>

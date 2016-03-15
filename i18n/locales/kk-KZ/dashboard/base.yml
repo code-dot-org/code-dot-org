@@ -24,6 +24,7 @@ kk:
   hello: Сәлем, әлем
   welcome_back: 'Қайта оралуыңызбен, %{name}'
   submit: Жіберу
+  unsubmit: Жібермеу
   add_teacher_form:
     code:
       label: 'Мұғалімді қосу:'
@@ -222,7 +223,7 @@ kk:
       free_play:
         playlab: Қосымша бағдарлама жасау
         artist: Кез келген нәрсе салу
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Қосымша бағдарлама жасау
     user:
       classroom: Оқытушының жеке парақшасы
@@ -320,6 +321,7 @@ kk:
     heading_hoc2014: '<h2>Код Жазу Сағаты</h2><h1>Барлық жастағылар үшін</h1>'
     heading_elementary: '<h2>20 сағаттық курс</h2><h1>Информатика пәні негіздерінен (барлық жастағылар үшін)</h1>'
     heading_apps: '<h1>Барлығына</h1><h2>қызықты</h2>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Біздің жеделдетілген курстарымыз</h2><h1>Барлық жастағыларға арналған</h1>'
     your_gallery: Галерея
     no_primary_course: Код Студиясы курсын байқап көру
@@ -414,6 +416,12 @@ kk:
       current: Ағымдағы деңгей
       unused: Пайдаланылмаған деңгей
   upsell:
+    applab:
+      title: Қосымшалар Лабораториясы
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Классикалық лабиринт
       body: Информатика пәні негіздерін оқыңыз. Миллиондаған адам байқап көрді.
@@ -459,11 +467,19 @@ kk:
     report_bug: Қате туралы хабарлау
     support: Көмек Сұрау
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Дұрыс емес жауап
     wrong_body: Сіз еңгізген жауап дұрыс емес. Қайталап көріңіз!
     correct_title: Дұрыс
     correct_body: Бұл дұрыс жауап.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Рахмет
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Рахмет
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -483,6 +499,9 @@ kk:
     placeholder: Жауабыңызды мұнда еңгізіңіз
     open_response_title: Рахмет
     open_response_body: Жауап бергеніңіз үшін рахмет!
+  level_group:
+    correct_title: Рахмет
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Сіз басынан бастауға сенімдісіз бе?

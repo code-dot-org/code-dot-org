@@ -1,0 +1,47 @@
+name 'CSPPD3-u5 chapter 1 resources'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Explore PT Breakdown > Resources for the Explore PT
+
+#### Performance Task Documents
+
+* [AP Explore Performance Task Overview](https://drive.google.com/open?id=0B2UNlnU_5Vg4eWlNN1dKNnRCTG8)
+* Official rubric coming soon
+
+#### Role of the Teacher During Explore Task Completion 
+
+Here are the teacher guidelines for what types of things you can and cannot help students with. Consult the Teacher Implementation Guidelines from the College Board for the most up to date guidelines. Below is a draft copy of those guidelines: <br><br>
+
+**As the teacher, you specifically should:**<br><br>
+
+1. Assist in resolving technical problems that impede work, such as a failing workstation or difficulty with access to networks, or help with saving files or making movie files.
+2. Monitor progress and remind students of dates by which key milestones need to be achieved  and submitted. Suggest a timeframe for completing sections of the Performance Tasks.
+3. Provide opportunities, as needed, for students to consult with outside experts. Instruct students consultants should be cited as sources of information in their written responses to Explore 1g and/or Create 3f.
+4. Allow students’ interests to drive their choice of a computing innovation. Encourage creative choices, and give general guidance to help students focus their topics.
+
+**As the teacher, you are allowed to:**<br><br>
+
+1. Examine selected pieces of work to use for your own summative assessment, as long as you do not provide feedback.
+2. Clarify directions for a component of a performance task when it is clear students do not understand the directions.
+3. Remind students about submission requirements.
+4. Ask questions to help students better define their focus and choice of topics. 
+5. Remind students to cite references and provide assistance with proper citation procedures.
+
+**As the teacher, you may not:**<br><br>
+
+1. Assist students with either their specific choice of topics or the process of investigating those topics.
+2. Assign, provide, or distribute the topics students investigate or programs students develop.
+  * Write, revise, amend, or correct student work.
+  * Conduct or provide research/articles/evidence for students.
+3. Give students boilerplates (templates) for Performance Tasks.
+4. Allow students to submit practice performance tasks as actual Performance Tasks.
+5. Suggest answers to prompts or evaluate answers to prompts.
+
+
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

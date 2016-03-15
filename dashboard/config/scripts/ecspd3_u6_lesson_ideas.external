@@ -1,0 +1,61 @@
+name 'ECSPD3-u6 lesson ideas'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Alternative Ideas for Unit 6 >  Lesson Ideas with Other Robots 
+ 
+<br><br> 
+#### Concepts Covered  
+Robots or devices that we use with technology.  
+ 
+#### Overview 
+There are so many devices that could be considered robots and technology that works with robots that it is hard to name them all.
+
+On this page, you will find links to a variety of robots and devices.  Explore their uses and how you might use them your them in your classroom to help your students better understand human computer interaction, problem solving, and coding.
+ 
+- <a href="http://www.roboticstoday.com/" target=_blank>Link to Robotics Today >> </a> 
+- <a href="http://www.roboticstoday.com/robots/by-category/consumer/toyrobots" target=_blank>What are the latest robot toys and how cool are they?</a> 
+- <a href="http://www.roboticstoday.com/robots/by-category/industrial9" target=_blank>What's the latest news about Industrial Robotics?</a> 
+- <a href="http://www.roboticstoday.com/robots/by-category/research" target=_blank>How are robots being used for research?</a> 
+- <a href="http://www.roboticstoday.com/robots/by-category/consumer" target=_blank>Robots Can Play a Role in Daily life.</a> 
+- <a href="http://www.roboticstoday.com/robots/by-category/healthcare" target=_blank>Robots Designed to Help Take Care of People</a> 
+
+<br>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/alTF-g7oMFk?rel=0" frameborder="0" allowfullscreen></iframe>
+<br>
+##### Other Types of Robots
+- Ozobot: 
+	- <a href="https://www.youtube.com/watch?v=3-cWPzBiO8c" target=_blank>Ozobot Video</a>   
+	- <a href="http://portal.ozobot.com/lessons" target=_blank>Ozobot Lesson Plan</a>  
+- Dash n Dot:  
+	- <a href="https://www.youtube.com/watch?v=MLKyBXUfTHQ" target=_blank>Dash n Dot Video</a> 
+	- <a href="http://www.teaching.com.au/resources/static/main/PDF/DW001_Dash_&_Dot_Lesson_Plans.pdf" target=_blank>Dash n Dot Lesson Plans</a> 
+	- <a href="http://www.thedigitalscoop.com/the_digital_scoop/2015/01/dash-and-dot-robots-distance-and-speed-experiment.html" target=_blank>Dash n Dot Additional Lesson Plans</a>  
+- Finch Robots 
+	- <a href="https://www.youtube.com/watch?v=IqjpbcvUsow" target=_blank>Finch Video</a> 
+	- <a href="http://www.bing.com/videos/search?q=finch+robots&&view=detail&mid=CA0C21F130E9B072EEC4CA0C21F130E9B072EEC4&FORM=VRDGAR" target=_blank>Additional Finch Video</a> 
+	- <a href="http://www.finchrobot.com/assignments" target=_blank>Finch Lesson Plan</a> 
+	- <a href="https://docs.google.com/document/d/19gEZs7uV40mIc4WXVzsDp3ZVeliA6bil5CmXakAENzM/edit?pref=2&pli=1" target=_blank>Additional Finch Lesson Plan</a>
+- Hummingbird Kit
+	- <a href="http://www.hummingbirdkit.com/teaching/curricula" target=_blank>Hummingbird Lesson Plan</a>  
+- Sphero
+	- <a href="https://www.youtube.com/watch?v=-1Y2WfcCb4M" target=_blank>Sphero Video</a>  
+	- <a href="http://outreach.cs.ua.edu/spherly/" target=_blank>Sphero Lesson Plans<a/>  
+	- <a href="
+https://cs10kcommunity.org/sites/default/files/event/2016/02/spherorobotsminipbl.pdf
+" target=_blank>Sphero Lesson Plans<a/>  
+- Do it Yourself Robots
+	- <a href="http://nootrix.com/diy-tutos/weekend-projects/" target=_blank>Do It Yourself Robot Ideas</a>  
+
+>#### Hints from an ECS Teacher: 
+Whatever robot you are using, remember to have students use the problem solving problem to solve a task for the robot.  
+ 
+<br>
+ 
+Click “Continue” below to learn about the next lesson.  
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

@@ -69,7 +69,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal nil, user.gender
   end
 
-
   test "authorizing with unknown clever district admin account creates teacher" do
     auth = stub('auth',
                 uid: '1111',

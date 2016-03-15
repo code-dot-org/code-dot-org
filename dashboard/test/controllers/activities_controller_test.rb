@@ -28,7 +28,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     client_state.reset
     Gatekeeper.clear
 
+    # rubocop:disable Lint/Void
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
+    # rubocop:enable Lint/Void
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
 
     Geocoder.stubs(:find_potential_street_address).returns(nil) # don't actually call geocoder service
@@ -276,7 +278,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 0, Activity.last.lines
   end
 
-
   test "logged in milestone does not allow unreasonably high lines of code" do
     expect_controller_logs_milestone_regexp(/9999999/)
 
@@ -504,7 +505,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = build_try_again_response(hint: hint.hint)
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
-
 
   test "logged in milestone with image not passing" do
     # do all the logging
@@ -944,7 +944,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-
   test 'sharing program with IO::EAGAINWaitReadable error slogs' do
     WebPurify.stubs(:find_potential_profanity).raises(IO::EAGAINWaitReadable)
     # allow sharing when there's an error, slog so it's possible to look up and review later
@@ -1020,7 +1019,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone changes to next stage in default script' do
-    last_level_in_stage = @script_level.script.script_levels.select{|x|x.level.game.name == 'Artist'}.last
+    last_level_in_stage = @script_level.script.script_levels.reverse.find{|x|x.level.game.name == 'Artist'}
     post :milestone, @milestone_params.merge(script_level_id: last_level_in_stage.id)
     assert_response :success
     response = JSON.parse(@response.body)

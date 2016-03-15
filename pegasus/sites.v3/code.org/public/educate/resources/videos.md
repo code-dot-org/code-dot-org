@@ -1,15 +1,15 @@
 ---
-title: Video library
+title: Tools and videos
 nav: educate_nav
 video_player: true
 ---
 
 
-# Video Library
+# Video library
 
 We are building a growing library of educational videos available for re-use by educators worldwide, online or in classrooms. Our goal is to enable our efforts to be amplified beyond our own curriculum's reach. **Note:** see below for the licensing restrictions on use of these videos.
 
-## High school Computer Science Principles:
+## Computer Science Principles
 
 <div style="float:left; padding:10px; width:49%">
 
@@ -29,7 +29,17 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style="clear: both;"></div>
 
-## How the internet works:
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/bMrDHtGHFR4'} %>
+<% twitter = {:url=>'https://youtu.be/bMrDHtGHFR4', :related=>'codeorg', :text=>'Computer science in Data and Medicine @codeorg'} %>
+<%=view :display_video_thumbnail, id: "DATAMEDICINE", video_code: "bMrDHtGHFR4", caption: "Computer science in Data and Medicine", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/concept_bigdata_medicine.mp4"%>
+
+</div>
+
+<div style="clear: both;"></div>
+
+## How the internet works
 
 <div style="float:left; padding:10px; width:49%">
 
@@ -54,7 +64,6 @@ We are building a growing library of educational videos available for re-use by 
 <%=view :display_video_thumbnail, id: "PACKETS", video_code: "AYdF7b3nMto", caption: "THE INTERNET: Packets, Routing and Reliability", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/concept_internet_packets_reliability.mp4" %>
 
 </div>
-
 
 <div style="float:left; padding:10px; width:49%">
 
@@ -82,8 +91,7 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style="clear: both;"></div>
 
-
-## The basics of computer science:
+## The basics of computer science
 
 <div style="float:left; padding:10px; width:49%">
 
@@ -139,6 +147,16 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style='clear:both'></div>
 
+## Inspirational videos
+
+<div style="float:left; padding:10px">
+
+<%= view :inspirational_videos %>
+
+</div>
+
+<div style='clear:both'></div>
+
 ---
 
 Code.org’s library of videos may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS, (using the embedded video player provided, or download link IF provided) with attribution to Code.org (2) the videos are not incorporated into any mash-ups, (3) the videos are used for computer science education purposes, and (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge.
@@ -147,4 +165,40 @@ The celebrities and video "cast" members appearing in Code.org tutorial videos r
 
 ![image](/images/cc-logo.png)
 
+# Create apps in minutes with App Lab
 
+[col-50]
+
+<%= view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4" %>
+
+[/col-50]
+
+<div style="float:left; padding:20px; width:49%">
+
+App Lab is a JavaScript programming environment for students to make simple apps that live on the web.  Use this standalone tool in your classroom to supplement any CS course. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+
+<br>
+<br>
+<a href="/educate/applab"><button>Learn more</button></a>
+
+</div>
+
+<div style='clear:both'></div>
+
+# Find a guest speaker for your classroom
+ 
+<div style="float:left; padding:10px; width: 49%">
+
+<img src='/images/fill-350x230/guest-speaker-alice.jpg' style='border-radius: 5px;'>
+ 
+</div>
+
+<div style="float:left; padding: 5px; width: 49%">
+
+Connect what your students are learning to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
+
+<br>
+<br>
+<a href="/volunteer/local"><button>Find a guest speaker</button></a>
+
+</div>
