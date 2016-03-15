@@ -4,7 +4,7 @@ var msg = require('../locale');
 /**
  * A component for managing icons.
  */
-module.exports = React.createClass({
+var IconLibrary = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func.isRequired
   },
@@ -42,3 +42,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = IconLibrary;

@@ -3,7 +3,7 @@ var Icon = require('./Icon.jsx');
 /**
  * A list of icons, maybe filtered by a search query.
  */
-module.exports = React.createClass({
+var IconListEntry = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func.isRequired,
     iconId: React.PropTypes.string.isRequired,
@@ -56,3 +56,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = IconListEntry;

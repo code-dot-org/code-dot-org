@@ -21,7 +21,7 @@ function getErrorMessage(status) {
 /**
  * A component for managing hosted assets.
  */
-module.exports = React.createClass({
+var AssetManager = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
     typeFilter: React.PropTypes.string,
@@ -150,3 +150,4 @@ module.exports = React.createClass({
     return assetList;
   }
 });
+module.exports = AssetManager;

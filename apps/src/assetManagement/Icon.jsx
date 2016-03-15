@@ -1,7 +1,7 @@
 /**
  * A single icon.
  */
-module.exports = React.createClass({
+var Icon = React.createClass({
   propTypes: {
     iconId: React.PropTypes.string.isRequired
   },
@@ -18,3 +18,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = Icon;
