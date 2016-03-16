@@ -8,6 +8,7 @@ var IconListEntry = React.createClass({
     assetChosen: React.PropTypes.func.isRequired,
     iconId: React.PropTypes.string.isRequired,
     altMatch: React.PropTypes.string.isRequired,
+    query: React.PropTypes.instanceOf(RegExp).isRequired,
     search: React.PropTypes.string.isRequired
   },
 
@@ -25,18 +26,20 @@ var IconListEntry = React.createClass({
     var iconLabel, columnWidth;
 
     if (this.props.search) {
-      var query = new RegExp('(^|-)' + this.props.search), altMatchText;
-      if (!query.test(this.props.iconId)) {
+      var highlightedName = this.props.iconId, altMatchText;
+      if (!this.props.query.test(this.props.iconId)) {
         // We matched based on an alternate keyword, show that keyword next to the icon ID.
         altMatchText = <p style={{
           float: 'left',
           fontSize: '13px',
           color: '#999'
         }}>({this.highlightSearch(this.props.altMatch)})</p>;
+      } else {
+        highlightedName = this.highlightSearch(this.props.iconId);
       }
 
       iconLabel = <div>
-        <p style={{float: 'left', margin: '0 5px', fontSize: '13px', color: '#000'}}>{this.highlightSearch(this.props.iconId)}</p>
+        <p style={{float: 'left', margin: '0 5px', fontSize: '13px', color: '#000'}}>{highlightedName}</p>
         {altMatchText}
       </div>;
 

@@ -11,8 +11,8 @@ var IconList = React.createClass({
     search: React.PropTypes.string.isRequired
   },
 
-  getMatches: function () {
-    var query = new RegExp('(^|-)' + this.props.search), results = {};
+  getMatches: function (query) {
+    var results = {};
 
     Object.keys(icons).forEach(function (alias) {
       if (query.test(alias)) {
@@ -26,7 +26,12 @@ var IconList = React.createClass({
   },
 
   render: function () {
-    var results = this.getMatches();
+    var search = this.props.search;
+    if (search[0] !== '-') {
+      search = '(^|-)' + search;
+    }
+    var query = new RegExp(search);
+    var results = this.getMatches(query);
 
     var list = Object.keys(results).map(function (iconId) {
       return <IconListEntry
@@ -34,6 +39,7 @@ var IconList = React.createClass({
         assetChosen={this.props.assetChosen}
         iconId={iconId}
         altMatch={results[iconId]}
+        query={query}
         search={this.props.search}/>;
     }.bind(this));
 
