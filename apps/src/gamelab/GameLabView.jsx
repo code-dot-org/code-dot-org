@@ -1,6 +1,7 @@
 /** @file Top-level view for GameLab */
 'use strict';
 
+var AnimationTab = require('./AnimationTab.jsx');
 var connect = require('react-redux').connect;
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
@@ -56,16 +57,9 @@ var GameLabView = React.createClass({
   },
 
   renderAnimationMode: function () {
-    // Don't render animation mode when we're not in that mode (pure React!)
-    if (this.props.interfaceMode !== GameLabInterfaceMode.ANIMATION) {
-      return undefined;
-    }
-
-    return (
-      <div>
-        <GameLabVisualizationHeader/>
-      </div>
-    );
+    return this.props.interfaceMode === GameLabInterfaceMode.ANIMATION ?
+        <AnimationTab/> :
+        undefined;
   },
 
   shouldShowHeader: function () {
