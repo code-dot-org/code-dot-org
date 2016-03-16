@@ -9,6 +9,15 @@ var CodeWritten = React.createClass({
 
   render: function () {
     var lines, totalLines, showCode;
+    var styles = {
+      summary: {
+        fontSize: '18px',
+        lineHeight: '20px',
+        fontWeight: 'normal',
+        outline: 'none',
+        padding: '5px',
+      }
+    };
 
     lines = (<p id="num-lines-of-code" className="lines-of-code-message">
       {msg.numLinesOfCodeWritten({ numLines: this.props.numLinesWritten })}
@@ -21,7 +30,7 @@ var CodeWritten = React.createClass({
     }
 
     showCode = (<details className="show-code">
-      <summary role="button">
+      <summary role="button" style={styles.summary}>
         <b>{msg.showGeneratedCode()}</b>
       </summary>
       {this.props.children}

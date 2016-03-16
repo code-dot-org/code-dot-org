@@ -1203,13 +1203,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
 .show-code {
   summary {
-    font-size: 18px;
-    line-height: 20px;
-    color: #5b6770;
-    font-family: "Gotham 5r", sans-serif;
-    font-weight: normal;
-    outline: none;
-    padding: 5px;
+    color: $charcoal;
+    font-family: $gotham-bold;
   }
 
   .generated-code-container {
