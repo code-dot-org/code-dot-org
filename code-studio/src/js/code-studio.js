@@ -35,7 +35,6 @@ $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 var jquery = require('jquery-shim');
 window.dashboard = window.dashboard || {};
 window.dashboard.clientState = require('./clientState.js')(window.sessionStorage, jquery);
-window.dashboard.admin = require('./admin');
 window.dashboard.createCallouts = require('./callouts');
 
 // Wrap existing window onerror caller with a script error check.  If we have a

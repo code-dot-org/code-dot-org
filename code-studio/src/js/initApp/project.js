@@ -13,6 +13,8 @@ var assets = require('./clientApi').create('/v3/assets');
 var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
 
+var showProjectAdmin = require('../showProjectAdmin');
+
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
 
@@ -231,7 +233,7 @@ var projects = module.exports = {
    * here whether we're an admin, and depend on dashboard getting this right.
    */
   showAdmin: function() {
-    dashboard.admin.showProjectAdmin();
+    showProjectAdmin();
   },
 
   showMinimalProjectHeader: function() {
