@@ -8,6 +8,8 @@
 #  plc_task_id                         :integer
 #  created_at                          :datetime         not null
 #  updated_at                          :datetime         not null
+#  type                                :string(255)
+#  properties                          :text(65535)
 #
 # Indexes
 #
@@ -22,6 +24,9 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
   validates :plc_enrollment_module_assignment, presence: true
 
   after_update :check_course_completion
+
+  include SerializedProperties
+  include StiFactory
 
   def complete_assignment!
     update!(status: :completed)

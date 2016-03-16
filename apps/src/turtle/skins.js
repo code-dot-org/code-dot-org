@@ -44,9 +44,7 @@ exports.load = function (assetUrl, id) {
   // base skin properties here (can be overriden by CONFIG)
   skin.speedModifier = 1;
 
-  // stamps aren't actually used on production anywhere right now. if we were
-  // to want to use them, define the mapping from image to name here.
-  skin.stampValues = [
+  skin.stickerValues = [
     [skin.stickers.elephant, 'Elephant'],
     [skin.stickers.dragon, 'Dragon'],
     [skin.stickers.triceratops, 'Triceratops'],

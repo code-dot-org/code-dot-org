@@ -88,15 +88,14 @@
     Kurs 3
   congratulations_on_completing_course4: Herzlichen Glückwunsch zum Abschluss von
     Kurs 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_accelerated: "\\n"
   congrats_next_tutorials_title: Versuche diese Anleitungen als Nächstes
   congrats_next_tutorials_desc: Versuche diese kürzeren, 1-Stundenanleitungen oder
     versuche <a href="%{current_path}/next">Partneranleitung</a>.
   get_a_certificate_of_achievement: Erhalte eine Bescheinigung für das Geleistete
   view_course: Kurs anzeigen
-  view_unit: View unit
-  make_app: Make an app
+  view_unit: "\\n"
+  make_app: "\\n"
   congrats_guest_speaker_title: Einen Gastredner für Ihren Unterricht finden
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
@@ -789,6 +788,7 @@
   dashboard_progress_completed_too_many_blocks: abgeschlossen, zu viele Blöcke
   dashboard_progress_completed_perfect: Abgeschlossen, perfekt
   dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
+  dashboard_progress_submitted: submitted
   dashboard_stage: Bühne
   dashboard_puzzle: Aufgabe
   dashboard_question: Frage
