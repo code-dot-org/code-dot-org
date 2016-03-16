@@ -14,7 +14,7 @@
           = link_to t('nav.user.prizes'), my_prizes_url
         = link_to t('nav.user.logout'), destroy_user_session_url
 - else
-  = link_to new_user_session_url do
+  = link_to new_user_session_url, class: 'button-signin', id: 'signin_button'  do
     .header_button.header_user
       %span= t('nav.user.signin')
 
