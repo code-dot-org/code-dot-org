@@ -553,6 +553,7 @@ hr:
     completed_perfect: dovršeno, savršeno
     furthest_level_attempted: pokušaj posljednjeg nivoa
     assessment: procjena
+    submitted: submitted
   studio:
     courses_working_on: Tečajevi na kojima radite
     completed_courses: Završeni tečajevi

@@ -593,6 +593,7 @@ ja-JP:
   dashboard_progress_completed_too_many_blocks: 完成、ブロックが多すぎ
   dashboard_progress_completed_perfect: 完成、完璧
   dashboard_progress_furthest_level_attempted: 到達レベル
+  dashboard_progress_submitted: submitted
   dashboard_stage: ステージ
   dashboard_puzzle: パズル
   dashboard_question: Question

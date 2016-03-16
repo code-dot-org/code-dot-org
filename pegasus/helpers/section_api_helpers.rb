@@ -38,7 +38,7 @@ class DashboardStudent
   end
 
   def self.fetch_if_allowed(id_or_ids, dashboard_user_id)
-    if id_or_ids.kind_of?(Array)
+    if id_or_ids.is_a?(Array)
       # TODO this should actually send a where id in (,,,) type query
       return id_or_ids.map {|id| fetch_if_allowed(id, dashboard_user_id)}
     end

@@ -2,12 +2,6 @@
  * @overview Extended error type returned for failed interactions with NetSim
  * server API (net_sim_api.rb) that extracts and exposes additional error info.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 require('../utils'); // provide Function.prototype.inherits

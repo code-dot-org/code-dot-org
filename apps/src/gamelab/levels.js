@@ -1,5 +1,3 @@
-/*jshint multistr: true */
-
 var msg = require('./locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
@@ -217,7 +215,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "functionParams_n": null,
     "callMyFunction": null,
     "callMyFunction_n": null,
-    "return": null,
+    "return": null
   },
   startBlocks: [
     'function setup() {',

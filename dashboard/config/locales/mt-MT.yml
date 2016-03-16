@@ -671,6 +671,7 @@
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
     assessment: evalwazzjoni
+    submitted: submitted
   studio:
     courses_working_on: Courses you're working on
     completed_courses: Completed courses

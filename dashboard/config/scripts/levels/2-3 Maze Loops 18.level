@@ -27,8 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_18_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "maze_data": null
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_18_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
   "notes": ""

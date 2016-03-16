@@ -57,11 +57,11 @@ class MediaProxyController < ApplicationController
       media.content_type = Rack::Mime.mime_type(File.extname(path))
     end
 
-    if media.kind_of? Net::HTTPRedirection
+    if media.is_a? Net::HTTPRedirection
       # Follow up to five redirects.
       render_proxied_url(media['location'], redirect_limit - 1)
 
-    elsif !media.kind_of? Net::HTTPSuccess
+    elsif !media.is_a? Net::HTTPSuccess
       # Pass through failure codes.
       render_error_response media.code, "Failed request #{media.code}"
 

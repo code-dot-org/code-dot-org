@@ -607,6 +607,7 @@ hu-HU:
   dashboard_progress_completed_too_many_blocks: elkészült, túl sok a blokk
   dashboard_progress_completed_perfect: elkészült, tökéletes
   dashboard_progress_furthest_level_attempted: a legmagasabb szint megpróbálva
+  dashboard_progress_submitted: submitted
   dashboard_stage: szakasz
   dashboard_puzzle: Kirakós
   dashboard_question: Kérdés

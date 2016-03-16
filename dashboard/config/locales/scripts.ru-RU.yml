@@ -1017,6 +1017,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "Фаза 2 онлайн: Смешанная летняя учёба"
@@ -1481,6 +1482,8 @@
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1778,6 +1781,7 @@
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description_short: Data Apps
@@ -1794,3 +1798,37 @@
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: "Изучайте функциональное программирование используя алгебру"
+          description: "Изучайте функциональное программирование используя алгебру"
+          'Calc: Evaluation Blocks': "Калькулятор: Блоки оценивания"
+          'Eval: Strings and Images': "Оценка: строки и картинки"
+          'Unplugged: Contracts': "Урок без компьютера: контракты"
+          'Eval: Writing Contracts': "Оценка: написание контрактов"
+          'Calc: Defining Variables': "Калькулятор: определение переменных"
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': "Урок без компьютера: Создание рецепта"
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: "Информатика в алгебре"
+          description_short: "Изучайте функциональное программирование используя алгебру"
+          description: "Изучайте функциональное программирование используя алгебру"
+          'Unplugged: Video Games and Coordinate Planes': "Урок без компьютера: Видеоигры
+            и координатные плоскости"
+          'Play Lab: Defining Variables (Big Game)': "Лаборатория игр: определение
+            переменных (большая игра)"
+          'Play Lab: Animation (Big Game)': "Лаборатория игр: анимация (большая игра)"
+          'Unplugged: Booleans': "Урок без компьютера: Логические выражения"
+          'Eval: Boolean Operators': "Оценка: логические операторы"
+          'Play Lab: Booleans': "Лаборатория игр: логические выражения"
+          'Play Lab: Boolean (Big Game)': "Лаборатория игр: логические выражения (большая
+            игра)"
+          'Unplugged: Conditionals and Piecewise Functions': "Урок без компьютера:
+            Условные выражения и сложные функции"
+          'Eval: Conditionals': "Оценка: Условные выражения"
+          'Unplugged: Collision Detection and the Distance Formula': "Урок без компьютера:
+            Обнаружение столкновений и формула расстояния"
+          'Play Lab: Collision Detection (Big Game)': "Лаборатория игр: обнаружение
+            столкновений (большая игра)"

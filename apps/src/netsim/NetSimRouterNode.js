@@ -2,12 +2,6 @@
  * @overview Router node simulation entity.  Also contains logic for the
  *           auto-DNS system.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var utils = require('../utils');
