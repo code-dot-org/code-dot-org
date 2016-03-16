@@ -33,7 +33,7 @@ var IconList = React.createClass({
     var query = new RegExp(search);
     var results = this.getMatches(query);
 
-    var list = Object.keys(results).map(function (iconId) {
+    var iconEntries = Object.keys(results).map(function (iconId) {
       return <IconListEntry
         key={iconId}
         assetChosen={this.props.assetChosen}
@@ -43,17 +43,13 @@ var IconList = React.createClass({
         search={this.props.search}/>;
     }.bind(this));
 
-    if (list.length === 0) {
-      list = msg.noIconsFound();
-    }
-
     return (
       <div style={{
         height: '330px',
         overflowY: 'scroll',
         clear: 'both'
       }}>
-        {list}
+        {iconEntries.length > 0 ? iconEntries : msg.noIconsFound()}
       </div>
     );
   }
