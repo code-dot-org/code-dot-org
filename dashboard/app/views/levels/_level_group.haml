@@ -8,7 +8,8 @@
 
 - page = params[:puzzle_page] ? (params[:puzzle_page].to_i - 1) : 0
 
-- data["pages"][page]["levels"].each_with_index do |level_name, index|
+- page_levels = data["pages"][page]["levels"]
+- page_levels.each_with_index do |level_name, index|
   - level = Level.find_by_name(level_name)
   - if @last_attempt
     - last_attempt_entry = JSON.parse(@last_attempt).find{|item| item["level_id"]==level.id}
@@ -32,7 +33,7 @@
 
   #{render template: 'levels/levelGroup.js', formats: [:js]}
 
-  var levelCount = #{data["pages"][page].length};
+  var levelCount = #{page_levels.length};
   var page = #{page || -1};
 
   var fallbackResponse = #{@fallback_response.to_json};
