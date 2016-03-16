@@ -862,17 +862,27 @@ JSInterpreter.prototype.getValueFromScope = function (name) {
 };
 
 /**
- * Returns an interpreter object representing the member expression.
+ * Returns an interpreter object representing a specific node (parsed by acorn
+ * for the purpose of displaying a watch value).
+ * @private
  */
-JSInterpreter.prototype.getValueFromMemberExpression = function (expression) {
-  var object;
-  if (expression.object.type === 'MemberExpression') {
-    object = this.getValueFromMemberExpression(expression.object);
-  } else if (expression.object.type === 'Identifier') {
-    object = this.getValueFromScope(expression.object.name);
+JSInterpreter.prototype.getWatchValueFromNode_ = function (node) {
+  if (node.type === 'MemberExpression') {
+    return this.getValueFromMemberExpression_(node);
+  } else if (node.type === 'Identifier') {
+    return this.getValueFromScope(node.name);
   } else {
-    throw new Error("Unsupported expression object");
+    throw new Error("Invalid");
   }
+};
+
+/**
+ * Returns an interpreter object representing the member expression.
+ * @private
+ */
+JSInterpreter.prototype.getValueFromMemberExpression_ = function (expression) {
+  var object = this.getWatchValueFromNode_(expression.object);
+
   if (expression.property.type === 'Identifier') {
     return this.interpreter.getValue([object, expression.property.name]);
   } else if (expression.property.type === 'Literal') {
@@ -882,20 +892,17 @@ JSInterpreter.prototype.getValueFromMemberExpression = function (expression) {
 };
 
 /**
- * Evaluate watch variable based on current scope.
+ * Evaluate watch expression based on current scope.
  */
-JSInterpreter.prototype.evaluateWatchVariable = function (watchVar) {
+JSInterpreter.prototype.evaluateWatchExpression = function (watchExpression) {
   var value;
   try {
-    var ast = window.acorn.parse(watchVar);
+    var ast = window.acorn.parse(watchExpression);
     if (ast.type === 'Program' &&
         ast.body[0].type === 'ExpressionStatement') {
-      var expressionNode = ast.body[0].expression;
-      if (expressionNode.type === 'Identifier') {
-        value = this.getValueFromScope(expressionNode.name);
-      } else if (expressionNode.type === 'MemberExpression') {
-        value = this.getValueFromMemberExpression(expressionNode);
-      }
+      value = this.getWatchValueFromNode_(ast.body[0].expression);
+    } else {
+      throw new Error("Invalid");
     }
   } catch (err) {
     if (err instanceof Error) {

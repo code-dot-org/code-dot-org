@@ -23,7 +23,7 @@ var StepType = JSInterpreter.StepType;
 var MIN_DEBUG_AREA_HEIGHT = 120;
 /** @const {number} */
 var MAX_DEBUG_AREA_HEIGHT = 400;
-/** @const {number} */
+/** @const {number} (in milliseconds) */
 var WATCH_TIMER_PERIOD = 500;
 /** @const {string} */
 var WATCH_COMMAND_PREFIX = "$watch ";
@@ -59,10 +59,10 @@ var JsDebuggerUi = module.exports = function (runApp) {
   this.history_ = new CommandHistory();
 
   /**
-   * Collection of watch variables.
+   * Collection of watch expressions.
    * @private {object}
    */
-  this.watchVars_ = {};
+  this.watchExpressions_ = {};
 
   /**
    * Id for watch timer setInterval.
@@ -115,7 +115,8 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
   this.observer_.observe(jsInterpreter.onExecutionWarning,
       this.log.bind(this));
 
-  this.watchIntervalId_ = setInterval(this.onWatchTimer.bind(this), WATCH_TIMER_PERIOD);
+  this.watchIntervalId_ = setInterval(this.onWatchTimer_.bind(this),
+      WATCH_TIMER_PERIOD);
 
   this.updatePauseUiState();
   this.clearDebugOutput();
@@ -134,11 +135,9 @@ JsDebuggerUi.prototype.detach = function () {
 
   var debugWatchDiv = this.getElement_('#debug-watch');
   if (debugWatchDiv) {
-    while (debugWatchDiv.firstChild) {
-      debugWatchDiv.removeChild(debugWatchDiv.firstChild);
-    }
+    clearAllChildElements(debugWatchDiv);
   }
-  this.watchVars_ = {};
+  this.watchExpressions_ = {};
   clearInterval(this.watchIntervalId_);
   this.watchIntervalId_ = 0;
 
@@ -315,8 +314,8 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
     var jsInterpreter = this.jsInterpreter_;
     if (jsInterpreter) {
       if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
-        var watchVariable = input.substring(WATCH_COMMAND_PREFIX.length);
-        this.watchVars_[watchVariable] = {};
+        var watchExpression = input.substring(WATCH_COMMAND_PREFIX.length);
+        this.watchExpressions_[watchExpression] = {};
       } else {
         try {
           var result = jsInterpreter.evalInCurrentScope(input);
@@ -569,32 +568,33 @@ JsDebuggerUi.prototype.onStepOutButton = function() {
   }
 };
 
+function clearAllChildElements(element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+}
+
 /**
- * Refresh the watch variables.
+ * Refresh the watch expressions.
  * @private
  */
-JsDebuggerUi.prototype.onWatchTimer = function() {
+JsDebuggerUi.prototype.onWatchTimer_ = function() {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    var debugWatchDiv = this.getElement_('#debug-watch');
-    if (debugWatchDiv) {
-      while (debugWatchDiv.firstChild) {
-        debugWatchDiv.removeChild(debugWatchDiv.firstChild);
-      }
-    }
 
-    for (var watchVar in this.watchVars_) {
-      var currentValue = jsInterpreter.evaluateWatchVariable(watchVar);
-      if (this.watchVars_[watchVar].lastValue !== currentValue) {
+    for (var watchExpression in this.watchExpressions_) {
+      var currentValue = jsInterpreter.evaluateWatchExpression(watchExpression);
+      if (this.watchExpressions_[watchExpression].lastValue !== currentValue) {
         // Store new value
-        this.watchVars_[watchVar].lastValue = currentValue;
+        this.watchExpressions_[watchExpression].lastValue = currentValue;
       }
-      
+      var debugWatchDiv = this.getElement_('#debug-watch');
       if (debugWatchDiv) {
+        clearAllChildElements(debugWatchDiv);
         var watchItem = document.createElement('div');
         watchItem.className = 'debug-watch-item';
         watchItem.innerHTML = require('./JsDebuggerWatchItem.html.ejs')({
-          varName: watchVar,
+          varName: watchExpression,
           varValue: currentValue
         });
         debugWatchDiv.appendChild(watchItem);
