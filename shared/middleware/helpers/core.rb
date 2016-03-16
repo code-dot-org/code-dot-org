@@ -45,8 +45,9 @@ def not_found()
   halt(404, "Not found\n")
 end
 
-def too_large()
-  halt(413, "Payload too large\n")
+def too_large(msg = nil)
+  msg ||= "Payload too large\n"
+  halt(413, msg)
 end
 
 def unsupported_media_type()
