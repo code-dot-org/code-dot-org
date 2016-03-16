@@ -50,9 +50,9 @@ function outputError(warning, level, lineNum) {
   }
 }
 
-function handleError(opts, message) {
+function handleError(opts, message, status) {
   if (opts.onError) {
-    opts.onError.call(null, message);
+    opts.onError.call(null, message, status);
   } else {
     logMethod(message);
   }
