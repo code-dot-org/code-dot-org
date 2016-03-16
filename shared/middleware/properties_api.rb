@@ -5,6 +5,15 @@ require 'json'
 
 class PropertiesApi < Sinatra::Base
 
+  # DynamoDB charges 1 read capacity unit and at most 4 write capacity units for
+  # items sized 4K and under. Due to the other metadata we store, the
+  # largest observed property size (key.length + value.to_json.length) which stays under
+  # this limit was 4024 bytes.
+  DEFAULT_MAX_PROPERTY_SIZE = 4000
+
+  # Maximum allowable property size (key.length + value.to_json.length)
+  @@max_property_size = DEFAULT_MAX_PROPERTY_SIZE
+
   helpers do
     [
       'core.rb',
@@ -73,7 +82,10 @@ class PropertiesApi < Sinatra::Base
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
-    parsed_value = PropertyBag.parse_value(request.body.read)
+    body = request.body.read
+    property_size = name.length + body.length
+    property_too_large(property_size) if  property_size > @@max_property_size
+    parsed_value = PropertyBag.parse_value(body)
     value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
 
     too_large if value.is_a?(Hash) && value[:status] == 'TOO_LARGE'
@@ -81,6 +93,10 @@ class PropertiesApi < Sinatra::Base
     dont_cache
     content_type :json
     value.to_json
+  end
+
+  def property_too_large(property_size)
+    too_large("The key-value pair is too large (#{property_size} bytes). The maximum size is #{@@max_property_size} bytes.")
   end
 
   #
