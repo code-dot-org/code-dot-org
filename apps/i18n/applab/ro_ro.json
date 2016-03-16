@@ -1,5 +1,6 @@
 {
   "addEventHeader": "Click a link below to add a function to your code that will be called when the event is triggered.",
+  "aFakeString": "Brent adding a fake string again to test CI",
   "builtOnCodeStudio": "Built on Code Studio",
   "catActions": "Actions",
   "catControl": "Loops",
