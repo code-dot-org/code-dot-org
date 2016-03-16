@@ -17,11 +17,11 @@ class S3Packaging
   def initialize(package_name, source_location, target_location)
     throw "Missing argument" if package_name.nil? || source_location.nil? || target_location.nil?
     @client = Aws::S3::Client.new
-    regenerate_commit_hash
     @package_name = package_name
     @source_location = source_location
     @target_location = target_location
     @logger = Logger.new(STDOUT)
+    regenerate_commit_hash
   end
 
   def commit_hash
