@@ -133,15 +133,16 @@ Blockly.FieldVariable.prototype.dropdownChange = function(text) {
     var oldVar = this.getText();
     this.getParentEditor_().hideChaff();
     Blockly.FieldVariable.modalPromptName(Blockly.Msg.RENAME_VARIABLE_TITLE.replace('%1', oldVar),
-        Blockly.Msg.RENAME_VARIABLE, oldVar, function(text) {
+        Blockly.Msg.CONFIRM_RENAME_VARIABLE, oldVar, function(text) {
       Blockly.Variables.renameVariable(oldVar, text, this.sourceBlock_.blockSpace);
     }.bind(this));
     return null;
   } else if (text === Blockly.Msg.NEW_VARIABLE) {
     this.getParentEditor_().hideChaff();
     Blockly.FieldVariable.modalPromptName(Blockly.Msg.NEW_VARIABLE_TITLE,
-        Blockly.Msg.CREATE_VARIABLE, '', function(text) {
-      Blockly.Variables.renameVariable(text, text, this.sourceBlock_.blockSpace);
+        Blockly.Msg.CONFIRM_CREATE_VARIABLE, '', function(text) {
+          this.setText(text);
+      //Blockly.Variables.renameVariable(text, text, this.sourceBlock_.blockSpace);
     }.bind(this));
     return null;
   }
