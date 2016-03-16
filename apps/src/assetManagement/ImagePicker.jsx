@@ -25,29 +25,41 @@ var ImagePicker = React.createClass({
   },
 
   render: function () {
+    var isFileMode = this.state.mode === 'files';
+    var styles = {
+      root: {
+        margin: "0 0 0 -10px"
+      },
+      fileModeToggle: {
+        float: 'left',
+        margin: '0 20px 0 0',
+        fontFamily: isFileMode ? '"Gotham 5r"' : null,
+        color: isFileMode ? null : '#999',
+        fontSize: '16px',
+        cursor: 'pointer'
+      },
+      iconModeToggle: {
+        margin: '0',
+        fontSize: '16px',
+        fontFamily: isFileMode ? null : '"Gotham 5r"',
+        color: isFileMode ? '#999' : null,
+        cursor: 'pointer'
+      },
+      divider: {
+        borderColor: '#7665a0',
+        margin: '5px 0'
+      }
+    };
+
     var modeSwitch, title = this.props.assetChosen ?
       <p className="dialog-title">Choose Assets</p> :
       <p className="dialog-title">Manage Assets</p>;
 
     if (this.props.assetChosen) {
-      var isFileMode = this.state.mode === 'files';
       modeSwitch = <div>
-        <p onClick={this.setFileMode} style={{
-          float: 'left',
-          margin: '0 20px 0 0',
-          fontFamily: isFileMode ? '"Gotham 5r"' : null,
-          color: isFileMode ? null : '#999',
-          fontSize: '16px',
-          cursor: 'pointer'
-        }}>My Files</p>
-        <p onClick={this.setIconMode} style={{
-          margin: '0',
-          fontSize: '16px',
-          fontFamily: isFileMode ? null : '"Gotham 5r"',
-          color: isFileMode ? '#999' : null,
-          cursor: 'pointer'
-        }}>Icons</p>
-        <hr style={{borderColor: '#7665a0', margin: '5px 0'}}/>
+        <p onClick={this.setFileMode} style={styles.fileModeToggle}>My Files</p>
+        <p onClick={this.setIconMode} style={styles.iconModeToggle}>Icons</p>
+        <hr style={styles.divider}/>
       </div>;
     }
 
@@ -60,7 +72,7 @@ var ImagePicker = React.createClass({
       <IconLibrary assetChosen={this.props.assetChosen}/>;
 
     return (
-      <div className="modal-content" style={{margin: "0 0 0 -10px"}}>
+      <div className="modal-content" style={styles.root}>
         {title}
         {modeSwitch}
         {body}

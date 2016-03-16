@@ -26,6 +26,14 @@ var IconList = React.createClass({
   },
 
   render: function () {
+    var styles = {
+      root: {
+        height: '330px',
+        overflowY: 'scroll',
+        clear: 'both'
+      }
+    };
+
     var search = this.props.search;
     if (search[0] !== '-') {
       search = '(^|-)' + search;
@@ -44,11 +52,7 @@ var IconList = React.createClass({
     }.bind(this));
 
     return (
-      <div style={{
-        height: '330px',
-        overflowY: 'scroll',
-        clear: 'both'
-      }}>
+      <div style={styles.root}>
         {iconEntries.length > 0 ? iconEntries : msg.noIconsFound()}
       </div>
     );

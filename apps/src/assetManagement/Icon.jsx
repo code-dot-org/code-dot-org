@@ -7,14 +7,17 @@ var Icon = React.createClass({
   },
 
   render: function () {
-
-    return (
-      <i className={'fa fa-' + this.props.iconId} style={{
+    var styles = {
+      root: {
         float: 'left',
         fontSize: '24px',
         width: '32px',
         textAlign: 'center'
-      }}/>
+      }
+    };
+
+    return (
+      <i className={'fa fa-' + this.props.iconId} style={styles.root}/>
     );
   }
 });
