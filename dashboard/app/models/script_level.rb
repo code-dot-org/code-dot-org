@@ -68,9 +68,8 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def long_assessment?
-    if self[:assessment]
-      level_info = Level.find(self[:level_id])
-      if level_info[:properties]["pages"] && level_info[:properties]["pages"].length > 1
+    if assessment
+      if level.pages && level.pages.length > 1
         return true
       end
     end
