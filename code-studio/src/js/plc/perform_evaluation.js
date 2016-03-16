@@ -10,6 +10,6 @@ $(window).load(function () {
       }
     });
 
-    $('#answerTaskList').val(evaluationResponses);
+    $('#answerModuleList').val(evaluationResponses);
   });
 });
