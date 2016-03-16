@@ -80,43 +80,49 @@
   congratulations_volunteer: 'Xin chúc mừng: Bây giờ bạn đã cố gắng Hour of code,
     <a href="https://code.org/volunteer"> đăng ký tình nguyện trong một lớp học</a>
     và giúp học sinh tìm hiểu Hour of Code!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: Xin chúc mừng, bạn đã hoàn thành khóa học
+    1
+  congratulations_on_completing_course2: Xin chúc mừng, bạn đã hoàn thành khóa học
+    2
+  congratulations_on_completing_course3: Xin chúc mừng, bạn đã hoàn thành khóa học
+    3
+  congratulations_on_completing_course4: Xin chúc mừng, bạn đã hoàn thành khóa học
+    4
+  congratulations_on_completing_accelerated: Xin chúc mừng, bạn đã hoàn thành khóa
+    học tăng tốc
   congrats_next_tutorials_title: Thực hiện các hướng dẫn tiếp theo
   congrats_next_tutorials_desc: Hảy thữ những bài hướng dẫn ngắn hơn (dài khoảng 1
     tiếng), hoặc là thử <a href="%{current_path}/next"> đối tác hướng dẫn</a>.
   get_a_certificate_of_achievement: Lấy chứng nhận thành tích
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
+  view_course: Xem khóa học
+  view_unit: Xem đơn vị
+  make_app: Tạo một ứng dụng
+  congrats_guest_speaker_title: Tìm một người bạn cho lớp học của bạn
+  congrats_guest_speaker_desc: Bây giờ học sinh của bạn đã hoàn thành một khóa học
+    khoa học máy tính, xem xét việc kỷ niệm và kết nối nó với những điều họ có thể
+    xây dựng trong thế giới thực bằng cách mời nói chuyện đến lớp học của bạn. Bạn
+    có thể sử dụng bản đồ của chúng tôi tình nguyện viên để liên lạc với người tình
+    nguyện địa phương để truy cập vào lớp học của bạn, hoặc tìm kiếm trong bất cứ
+    thành phố nào để tìm sinh viên khoa học máy tính hoặc các chuyên gia kỹ thuật
+    đã sẵn sàng để truyền cảm hứng cho học sinh của bạn từ xa, qua video chat.
+  congrats_guest_speaker_cta: Tìm một người bạn
+  congrats_third_party_title: Sử dụng các kỹ năng mới với các ứng dụng và các trang
+    web
+  third_party_gradelevel_kto8: Lớp K-8
+  third_party_gradelevel_kto2: Lớp K-2
+  third_party_gradelevel_2to8: Lớp 2-8
+  third_party_gradelevel_4to12: Lớp 4-12
+  third_party_gradelevel_5to12: Lớp 5-12
+  third_party_gradelevel_6plus: Lớp 6 +
+  third_party_gradelevel_8plus: Lớp 8 +
+  third_party_platform_all: 'Hệ điều hành: Web, iPad & Android'
+  third_party_platform_mobile: 'Nền tảng: iPad & Android'
+  third_party_platform_web: 'Nền tảng: Web'
   third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  third_party_price_free: 'Giá: miễn phí'
+  third_party_price_299: 'Giá: $2.99/1 lượt tải về'
+  third_party_price_individual: 'Giá cá nhân: Thử nghiệm miễn phí & 25 $/ tháng'
+  third_party_price_school: 'Trường giá: Miễn phí kế hoạch & Pro tại $2500 +'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
@@ -784,6 +790,7 @@
   dashboard_progress_completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
   dashboard_progress_completed_perfect: hoàn thành, hoàn hảo
   dashboard_progress_furthest_level_attempted: "đã cố gắng ở mức độ cao nhất"
+  dashboard_progress_submitted: submitted
   dashboard_stage: giai đoạn
   dashboard_puzzle: Câu đố
   dashboard_question: Question

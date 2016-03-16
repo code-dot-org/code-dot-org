@@ -7,9 +7,6 @@
   "properties": {
     "skin": "applab",
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "start_blocks": "var song = {};\r\n// Change capitalization of \"title\" property\r\nsong.Title = \"Single Ladies\";\r\nsong.seconds = 199;\r\nsong.artist = \"Beyonce\";\r\ncreateRecord(\"mySongs\", song, function(record){\r\n  console.log(record);\r\n});",
     "is_k1": "false",

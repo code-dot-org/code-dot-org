@@ -17,13 +17,13 @@ class RackAttackConfigUpdater
   def start(cache_store = nil)
     Rack::Attack.cache.store = cache_store || default_redis_cache_store
     DCDO.add_change_listener(self)
-    update_limits
+    update_config
     self
   end
 
   # DCDO change handler to update the RackAttack configuration ,
   def on_change
-    update_limits
+    update_config
   end
 
   # Returns the allowed limits by time interval given a base max rate.
@@ -44,7 +44,7 @@ class RackAttackConfigUpdater
   end
 
   # Updates the RackAttack limits based on CDO defaults and DCDO overrides.
-  def update_limits
+  def update_config
     limits(max_table_reads_per_sec).each do |limit, period|
       Rack::Attack.throttle("shared-tables/reads/#{period}",
                             :limit => limit, :period => period.seconds) do |req|
@@ -80,6 +80,16 @@ class RackAttackConfigUpdater
         req.write? && %r{^/v3/shared-properties/([^/]+)/[^/]+$}.match(req.path).try(:[], 1)
       end
     end
+
+    Rack::Attack.set_blacklist_set(blacklist_set)
+  end
+
+  # parse the comma-separated list of channel ids, and return them as a set
+  # which we can use to quickly check whether a given channel id is present.
+  def blacklist_set
+    blacklist = table_and_property_blacklist
+    channels = blacklist.split(',') if blacklist
+    Set.new(channels)
   end
 
   # Returns the given key from DCDO, default to the CDO value if no DCDO
@@ -103,6 +113,10 @@ class RackAttackConfigUpdater
   def max_property_writes_per_sec
     get_dcdo_key_with_cdo_default('max_property_writes_per_sec')
   end
+
+  def table_and_property_blacklist
+    get_dcdo_key_with_cdo_default('table_and_property_blacklist')
+  end
 end
 
 # Override the path normalize and request.write? methods in Rack::Attack.
@@ -117,6 +131,17 @@ class Rack::Attack
     def write?
       put? || patch? || post? || delete?
     end
+  end
+
+  @@channel_id_blacklist_set = {}
+
+  def self.set_blacklist_set(blacklist_set)
+    @@channel_id_blacklist_set = blacklist_set
+  end
+
+  blacklist('table_and_property_blacklist') do |req|
+    channel_id = %r{^/v3/shared-(tables|properties)/([^/]+)}.match(req.path).try(:[], 2)
+    @@channel_id_blacklist_set.include?(channel_id)
   end
 
   ActiveSupport::Notifications.subscribe('rack.attack') do |_, _, _, _, req|

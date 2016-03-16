@@ -10,7 +10,7 @@
  */
 var ProtectedStatefulDiv = React.createClass({
   propTypes: {
-    renderContents: React.PropTypes.func
+    contentFunction: React.PropTypes.func
   },
 
   shouldComponentUpdate: function () {
@@ -18,8 +18,8 @@ var ProtectedStatefulDiv = React.createClass({
   },
 
   componentDidMount: function () {
-    if (typeof this.props.renderContents === 'function') {
-      this.refs.root.innerHTML = this.props.renderContents();
+    if (typeof this.props.contentFunction === 'function') {
+      this.refs.root.innerHTML = this.props.contentFunction();
     }
   },
 

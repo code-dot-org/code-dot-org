@@ -780,6 +780,7 @@
   dashboard_progress_completed_too_many_blocks: "Завершено, слишком много блоков"
   dashboard_progress_completed_perfect: "Завершено, отлично"
   dashboard_progress_furthest_level_attempted: "запрошен слишком высокий уровень"
+  dashboard_progress_submitted: submitted
   dashboard_stage: "Этап"
   dashboard_puzzle: "Головоломка"
   dashboard_question: "Вопрос"
