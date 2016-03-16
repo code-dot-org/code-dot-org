@@ -2,7 +2,7 @@
 /* global $ */
 
 var applabMsg = require('./locale');
-var styles = require('./PlaySpaceHeaderStyles');
+var styles = require('../templates/ToggleButtonStyles');
 
 /**
  * The button above the visualization that opens the data browser.
