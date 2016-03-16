@@ -12,9 +12,12 @@ EXCLUDED_KEYWORDS = {
 EXCLUDED_ICONS = {
   beer: true,
   bomb: true,
+  crosshairs: true,
   glass: true,
   :'fighter-jet' => true
 }
+
+EXCLUDED_CATEGORIES = ['Gender Icons']
 
 data = YAML.load_file 'icons.yml'
 icons = data['icons']
@@ -22,13 +25,15 @@ icons = data['icons']
 @unicode = {}
 
 def add_keyword_entry(keyword, icon_id)
-  return if EXCLUDED_KEYWORDS[keyword.to_sym] || EXCLUDED_ICONS[icon_id.to_sym]
+  return if EXCLUDED_KEYWORDS[keyword.to_sym]
 
   @aliases[keyword.to_sym] ||= []
   @aliases[keyword.to_sym] << icon_id
 end
 
 icons.each do |icon|
+  next if EXCLUDED_ICONS[icon['id'].to_sym] || !(EXCLUDED_CATEGORIES & icon['categories']).empty?
+
   id = icon['id']
   add_keyword_entry id, id
   if icon['filter']
