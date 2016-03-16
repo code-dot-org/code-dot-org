@@ -80,7 +80,7 @@
   "dropletBlock_lessThanOperator_description": "Compare two numbers",
   "dropletBlock_lessThanOperator_signatureOverride": "Less than operator",
   "dropletBlock_lessThanOrEqualOperator_description": "Tests whether a value is less than or equal to another value. Returns true if the value on the left-hand side of the expression is less than or equal to the value on the right-hand side of the expression.",
-  "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Less than or equal operator",
+  "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Meno o uguale dell'operatore",
   "dropletBlock_mathAbs_description": "Absolute value",
   "dropletBlock_mathAbs_param0": "x",
   "dropletBlock_mathAbs_param0_description": "An arbitrary number.",

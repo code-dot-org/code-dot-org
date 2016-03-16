@@ -591,6 +591,7 @@ es-ES:
   dashboard_progress_completed_too_many_blocks: completado, pero tiene demasiados bloques
   dashboard_progress_completed_perfect: completado, perfecto
   dashboard_progress_furthest_level_attempted: Nivel más alto intentado
+  dashboard_progress_submitted: submitted
   dashboard_stage: etapa
   dashboard_puzzle: Rompecabezas
   dashboard_question: Pregunta

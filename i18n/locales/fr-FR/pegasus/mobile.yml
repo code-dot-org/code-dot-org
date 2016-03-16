@@ -607,6 +607,7 @@ fr-FR:
   dashboard_progress_completed_too_many_blocks: terminé, trop de blocs
   dashboard_progress_completed_perfect: terminé, parfait
   dashboard_progress_furthest_level_attempted: le plus haut niveau tenté
+  dashboard_progress_submitted: submitted
   dashboard_stage: étape
   dashboard_puzzle: Puzzle
   dashboard_question: Question

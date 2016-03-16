@@ -8,6 +8,7 @@ class Plc::LearningModulesController < ApplicationController
   # GET /plc/learning_modules/1
   # GET /plc/learning_modules/1.json
   def show
+    @resource_tasks, @other_tasks = @learning_module.plc_tasks.partition {|task| task.is_a? Plc::LearningResourceTask}
   end
 
   # GET /plc/learning_modules/new

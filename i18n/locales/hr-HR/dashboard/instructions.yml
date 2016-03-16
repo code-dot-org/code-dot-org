@@ -137,82 +137,51 @@ hr:
         Hi! I'm a bee. Help me get nectar from
         the flower.
       2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar. Be careful not to collect nectar from a purple flower if it doesn't\nhave any.\\r\n"
-      2-3 Bee Conditionals 11_instruction: Collect nectar where flowers have nectar.
+      2-3 Bee Conditionals 11_instruction: "I wonder what's out there!\\r\n\\r\nHelp\nme fly around the yard and collect nectar only from the flowers that have\nsome. "
       2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
-      2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
-      2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Bee Conditionals 15_instruction: Collect nectar from all four flowers.
-      2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
-      2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
+        Help me find all of the nectar using
+        as few blocks as possible!
+      2-3 Bee Conditionals 13_instruction: "There's a lot happening here!\\r\n\\r\nUse\nwhat you've learned to collect all of the nectar and then make the honey."
+      2-3 Bee Conditionals 14_instruction: "Let's put everything together!\\r\n\\r\nUse\nwhat you've learned to help me collect nectar only from flowers that have\nit, using as few blocks as possible.  Don't forget to make honey at the end."
+      2-3 Bee Conditionals 15_instruction: "This stair step pattern should look familiar.  \\r\n\\r\nCan\nyou collect nectar only from the flowers that have some, using as few blocks\nas possible?"
+      2-3 Bee Conditionals 2_instruction: "I'm a hungry bee! \\r\nHelp me collect\nall of the nectar from the flowers using the fewest number of blocks."
+      2-3 Bee Conditionals 3_instruction: "Look at all of that nectar!\\r\n\\r\nHelp\nme collect the nectar and make the honey using as few blocks as you can.  "
       2-3 Bee Conditionals 4_instruction: |
         Help me collect all of the nectar from
         the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
+      2-3 Bee Conditionals 5_instruction: "Be careful not to collect nectar from\na purple flower if it doesn't have any. \\r\nYou must first check if the nectar\nis equal to 1 using the `if nectar` block."
       2-3 Bee Conditionals 6_instruction: |
         Check this flower with an "if" block
         to see if there is any nectar available.
       2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
+        Collect nectar from each flower only if
+        it has any.
       2-3 Bee Conditionals 8_instruction: |
         This field has red and purple flowers.
         Red flowers have a known nectar amount, but purple flower nectar is unknown.
         Collect all the nectar.
       2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
       2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all the
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.
+        Assessment: Collect all of
+        the nectar. Be careful not to try to collect nectar from a purple flower if
+        it doesn't have any.
       2-3 Bee Debugging 1_instruction: |
         These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar.
+      2-3 Bee Debugging 10_instruction: "This puzzle is making me loopy! \\r\nFix\nthe error(s) to collect all of the nectar and make all of the honey."
+      2-3 Bee Debugging 2_instruction: "Can you find the problem here?\\r\nFix the\nerror(s) to collect all of the nectar."
+      2-3 Bee Debugging 3_instruction: "Ooh, this one stings!\\r\n\\r\nFix the error(s)\nto collect all of the nectar."
       2-3 Bee Debugging 4_instruction: |
         These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar.
+      2-3 Bee Debugging 5_instruction: "That flower looks tasty! \\r\n\\r\nFix the\nerror(s) to collect all of the nectar.  You can now use both run and step."
+      2-3 Bee Debugging 6_instruction: "What a sweet challenge!\\r\n\\r\nFix the error(s)\nto collect all of the nectar."
       2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
+        Fix the error(s) to collect all of the nectar
+        and make all of the honey.
+      2-3 Bee Debugging 8_instruction: "So many beautiful flowers!\\r\n\\r\nFix the\nerror(s) to collect all of the nectar."
+      2-3 Bee Debugging 9_instruction: "\"Bee\" patient with this one!\\r\n\\r\nYou\nwill need to fix a couple of things in this program to collect all of the\nnectar and make all of the honey."
+      2-3 Bee Debugging Assessment 1_instruction: "Assessment:  Now it's time to\nshow what you know!\\r\n\\r\nFix the error(s) to collect all of the nectar and\nmake all of the honey."
       2-3 Bee Functions 1_instruction: |
         Functions are blocks of code that perform
         a task. Use the "get 2 nectar" function to collect the nectar from each
@@ -3592,7 +3561,7 @@ hr:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -4441,8 +4410,10 @@ hr:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

@@ -56,6 +56,23 @@ class HipchatTest < Minitest::Test
     assert_in_delta BACKOFF + (2 * BACKOFF), HipChat.total_backoff_for_test
   end
 
+  # Verify that we retry with exponential backoff on a HipChat failure.
+  def test_post_to_hipchat_with_net_timeout
+    stub_request(:post, 'http://api.hipchat.com/v1/rooms/message').
+        to_timeout.
+        to_return({body: 'OK'})
+
+    # This should not throw.
+    HipChat.post_to_hipchat('fake_room', 'my_message2')
+    HipChat.await_retries_for_test
+    assert_requested :post, 'http://api.hipchat.com/v1/rooms/message', times: 2 do |req|
+      req.body.match /message=my_message2/
+    end
+
+    assert_equal 1, HipChat.retries_for_test
+    assert_in_delta BACKOFF, HipChat.total_backoff_for_test
+  end
+
   # Verify that we give up if there are too many HipChat failures.
   def test_post_to_hipchat_with_repeated_failure
     stub_request(:post, 'http://api.hipchat.com/v1/rooms/message').to_return(

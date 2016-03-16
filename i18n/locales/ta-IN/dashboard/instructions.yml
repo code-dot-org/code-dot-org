@@ -40,46 +40,24 @@ ta:
         Assessment: Finish drawing the last tooth.
         It is 25 pixels wide and 25 pixels tall.
       2-3 Artist Debugging 1_instruction: |
-        Can you make this hat with a top length
-        of 100?
-      2-3 Artist Debugging 10_instruction: |
-        The direction pad on my game controller
-        is too narrow. Hint: Make it wider by 10 pixels
-      2-3 Artist Debugging 11_instruction: |
-        Help me finish my beautiful snowflake.
-        How many times do I need to "repeat" to finish it?
+        The width of the top of this hat should
+        be 100 pixels wide.  Can you fix it?
+      2-3 Artist Debugging 10_instruction: "The direction pad on my game controller\nis too narrow. \\r\n\\r\nCan you make it wider by 10 pixels?"
+      2-3 Artist Debugging 11_instruction: "My snowflake is falling apart!\\r\n\\r\nCan\nyou figure out what's going wrong?"
       2-3 Artist Debugging 12_instruction: |
         I'm supposed to add an ocean wave to
         this scene.  Can you help me?
-      2-3 Artist Debugging 2_instruction: |
-        The code for the three whiskers that you
-        see is wrong. Hint: each whisker should be 75 pixels long. Fix this code to
-        draw the whiskers.
-      2-3 Artist Debugging 3_instruction: |
-        My boat has a hole! Can you fix it by
-        changing the angle of the line? Hint: the last angle is off by 15 degrees.
+      2-3 Artist Debugging 2_instruction: "This code for the cat's whiskers is wrong.\n\\r\n\\r\nFix this code to draw whiskers that are all the same length."
+      2-3 Artist Debugging 3_instruction: "My boat has a hole! \\r\n\\r\nWhat do you\nneed to fix to make the ends meet?"
       2-3 Artist Debugging 4_instruction: |
         What is the image that we're trying to
         draw? Finish connecting the dots using the proper lines and angles.
-      2-3 Artist Debugging 5_instruction: |
-        The code for the leg and foot that you
-        see is wrong. Hint: The foot is too long, we may need to delete a step (pun
-        intended)
-      2-3 Artist Debugging 6_instruction: |
-        Looks like I'm sitting on a chair that’s
-        missing a leg. Edit blocks to draw the leg.
-      2-3 Artist Debugging 7_instruction: |
-        Looks like C in code is drawn backwards.
-        Can you make it look like a C?
-      2-3 Artist Debugging 8_instruction: |
-        My pinwheel is not finished. How many
-        times do I need to repeat to finish it?
-      2-3 Artist Debugging 9_instruction: |
-        The code for this stem is incorrect. Hint:
-        The angle is off by 60 degrees
-      2-3 Artist Debugging Assessment 1_instruction: |
-        This shape is too small. Can
-        you make it bigger? Hint: it should be 75 pixels longer on each side.
+      2-3 Artist Debugging 5_instruction: "The code that we have for the leg and\nfoot is wrong. \\r\n\\r\nCan you fix it?"
+      2-3 Artist Debugging 6_instruction: "Looks like I'm sitting on a chair that’s\nmissing a leg!\\r\n\\r\nEdit the code to draw the last leg."
+      2-3 Artist Debugging 7_instruction: "Looks like the C in code is drawn backwards!\\r\n\\r\nCan\nyou make it look like a C again?"
+      2-3 Artist Debugging 8_instruction: "My teacher says that I should finish what\nI start!\\r\n\\r\nHelp me finish my pinwheel. Can you figure out what's wrong?"
+      2-3 Artist Debugging 9_instruction: "Something is off!\\r\n\\r\nThe code for\nthis stem is incorrect. Can you figure out how to get the artist to trace\nthe stem correctly?"
+      2-3 Artist Debugging Assessment 1_instruction: "Assessment: Why does this square\nend up being 75 pixels too small on each side?  \\r\n\\r\nWhere does the code\ngo wrong?"
       2-3 Artist Free Play_instruction: "Free-play! Draw anything you'd like."
       2-3 Artist Functions 1_instruction: |
         Hello. Me zombie artist. Me love drawing!
@@ -229,82 +207,51 @@ ta:
         Hi! I'm a bee. Help me get nectar from
         the flower.
       2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar. Be careful not to collect nectar from a purple flower if it doesn't\nhave any.\\r\n"
-      2-3 Bee Conditionals 11_instruction: Collect nectar where flowers have nectar.
+      2-3 Bee Conditionals 11_instruction: "I wonder what's out there!\\r\n\\r\nHelp\nme fly around the yard and collect nectar only from the flowers that have\nsome. "
       2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
-      2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
-      2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Bee Conditionals 15_instruction: Collect nectar from all four flowers.
-      2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
-      2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
+        Help me find all of the nectar using
+        as few blocks as possible!
+      2-3 Bee Conditionals 13_instruction: "There's a lot happening here!\\r\n\\r\nUse\nwhat you've learned to collect all of the nectar and then make the honey."
+      2-3 Bee Conditionals 14_instruction: "Let's put everything together!\\r\n\\r\nUse\nwhat you've learned to help me collect nectar only from flowers that have\nit, using as few blocks as possible.  Don't forget to make honey at the end."
+      2-3 Bee Conditionals 15_instruction: "This stair step pattern should look familiar.  \\r\n\\r\nCan\nyou collect nectar only from the flowers that have some, using as few blocks\nas possible?"
+      2-3 Bee Conditionals 2_instruction: "I'm a hungry bee! \\r\nHelp me collect\nall of the nectar from the flowers using the fewest number of blocks."
+      2-3 Bee Conditionals 3_instruction: "Look at all of that nectar!\\r\n\\r\nHelp\nme collect the nectar and make the honey using as few blocks as you can.  "
       2-3 Bee Conditionals 4_instruction: |
         Help me collect all of the nectar from
         the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
+      2-3 Bee Conditionals 5_instruction: "Be careful not to collect nectar from\na purple flower if it doesn't have any. \\r\nYou must first check if the nectar\nis equal to 1 using the `if nectar` block."
       2-3 Bee Conditionals 6_instruction: |
         Check this flower with an "if" block
         to see if there is any nectar available.
       2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
+        Collect nectar from each flower only if
+        it has any.
       2-3 Bee Conditionals 8_instruction: |
         This field has red and purple flowers.
         Red flowers have a known nectar amount, but purple flower nectar is unknown.
         Collect all the nectar.
       2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
       2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all the
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.
+        Assessment: Collect all of
+        the nectar. Be careful not to try to collect nectar from a purple flower if
+        it doesn't have any.
       2-3 Bee Debugging 1_instruction: |
         These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar.
+      2-3 Bee Debugging 10_instruction: "This puzzle is making me loopy! \\r\nFix\nthe error(s) to collect all of the nectar and make all of the honey."
+      2-3 Bee Debugging 2_instruction: "Can you find the problem here?\\r\nFix the\nerror(s) to collect all of the nectar."
+      2-3 Bee Debugging 3_instruction: "Ooh, this one stings!\\r\n\\r\nFix the error(s)\nto collect all of the nectar."
       2-3 Bee Debugging 4_instruction: |
         These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar.
+      2-3 Bee Debugging 5_instruction: "That flower looks tasty! \\r\n\\r\nFix the\nerror(s) to collect all of the nectar.  You can now use both run and step."
+      2-3 Bee Debugging 6_instruction: "What a sweet challenge!\\r\n\\r\nFix the error(s)\nto collect all of the nectar."
       2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
+        Fix the error(s) to collect all of the nectar
+        and make all of the honey.
+      2-3 Bee Debugging 8_instruction: "So many beautiful flowers!\\r\n\\r\nFix the\nerror(s) to collect all of the nectar."
+      2-3 Bee Debugging 9_instruction: "\"Bee\" patient with this one!\\r\n\\r\nYou\nwill need to fix a couple of things in this program to collect all of the\nnectar and make all of the honey."
+      2-3 Bee Debugging Assessment 1_instruction: "Assessment:  Now it's time to\nshow what you know!\\r\n\\r\nFix the error(s) to collect all of the nectar and\nmake all of the honey."
       2-3 Bee Functions 1_instruction: |
         Functions are blocks of code that perform
         a task. Use the "get 2 nectar" function to collect the nectar from each
@@ -446,7 +393,7 @@ ta:
         Can you get me to the pig using 5 of the same
         kind of blocks?
       2-3 Maze Loops 17_instruction: Use what you learned to get me to the sunflower!
-      2-3 Maze Loops 18_instruction: "Get me to the sunflower using the fewest blocks\npossible!  \\r\n\\r\n(Note: You'll need to use one `repeat` loop inside of\nanother to pass this level.)"
+      2-3 Maze Loops 18_instruction: "Get me to the sunflower using the fewest blocks\npossible!  \\r\n\\r\nTry using one `repeat` loop inside of another to cut down\non the amount of code you need."
       2-3 Maze Loops 19_instruction: "Let's take this to another level! \\r\nUse\nloops to get me to the sunflower with the fewest loops possible."
       2-3 Maze Loops 20_instruction: |
         Get me to the sunflower using the fewest number
@@ -3764,7 +3711,7 @@ ta:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -4613,8 +4560,10 @@ ta:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

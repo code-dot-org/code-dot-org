@@ -646,6 +646,7 @@
     completed_perfect: dokončeno, perfektní
     furthest_level_attempted: pokus o další úroveň
     assessment: hodnocení
+    submitted: submitted
   studio:
     courses_working_on: Kurzy, na kterých právě pracuješ
     completed_courses: Dokončené kurzy

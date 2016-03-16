@@ -11,7 +11,7 @@
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",
-    "instructions": "Use the \"repeat\" block to get the zombie to the sunflower. (Avoid the chompers!)",
+    "instructions": "Get the zombie to the sunflower using as few blocks as you can.  \r\n(Avoid the chompers!)",
     "ideal": "15",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -25,8 +25,12 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "step_speed": "1",
+    "maze_data": null
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -46,7 +50,7 @@
     <recommended_blocks>
       <xml>
         <block type="controls_repeat">
-          <title name="TIMES">5</title>
+          <title name="TIMES">???</title>
         </block>
       </xml>
     </recommended_blocks>

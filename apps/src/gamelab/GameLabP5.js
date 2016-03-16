@@ -239,8 +239,6 @@ GameLabP5.prototype.resetExecution = function () {
  * Instantiate a new p5 and start execution
  */
 GameLabP5.prototype.startExecution = function () {
-
-  /* jshint nonew:false */
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
 
@@ -396,7 +394,6 @@ GameLabP5.prototype.startExecution = function () {
 
     }.bind(this),
     'divGameLab');
-  /* jshint nonew:true */
 };
 
 /**

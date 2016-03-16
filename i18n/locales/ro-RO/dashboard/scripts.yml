@@ -867,7 +867,7 @@ ro:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -930,6 +930,7 @@ ro:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Etapa 2 online: Studiu de vara mixt'
@@ -1328,6 +1329,8 @@ ro:
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1598,6 +1601,7 @@ ro:
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
           description_short: Data Apps
@@ -1611,3 +1615,31 @@ ro:
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Învață Programare Funcțională prin Algebră
+          description: Învață Programare Funcțională prin Algebră
+          "Calc: Evaluation Blocks": 'Calcul: Blocuri de evaluare'
+          "Eval: Strings and Images": 'Evaluare: Șiruri și imagini'
+          "Unplugged: Contracts": 'Fără calculator: Contracte'
+          "Eval: Writing Contracts": 'Evaluare: Scrierea de contracte'
+          "Calc: Defining Variables": 'Calcul: Definirea variabilelor'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Fără calculator: Rețeta pentru design'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+        AlgebraB:
+          title: Informatică în Algebră
+          description_short: Învață Programare Funcțională prin Algebră
+          description: Învață Programare Funcțională prin Algebră
+          "Unplugged: Video Games and Coordinate Planes": 'Fără calculator: Jocuri video și planuri de coordonate'
+          "Play Lab: Defining Variables (Big Game)": 'Laboratorul de joc: Definirea de variabile (jocul mare)'
+          "Play Lab: Animation (Big Game)": 'Laboratorul de joc: Animație (jocul mare)'
+          "Unplugged: Booleans": 'Fără calculator: booleene'
+          "Eval: Boolean Operators": 'Evaluare: Operatorii booleeni'
+          "Play Lab: Booleans": 'Laboratorul de joc: Booleene'
+          "Play Lab: Boolean (Big Game)": 'Laboratorul de joc: Boolean (jocul mare)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Fără calculator: Condiționale și funcții pe porțiuni'
+          "Eval: Conditionals": 'Evaluare: Condiționale'
+          "Unplugged: Collision Detection and the Distance Formula": 'Fără calculator: Detectarea de coliziuni și formula pentru distanță'
+          "Play Lab: Collision Detection (Big Game)": 'Laboratorul de joc: Detectarea de coliziuni (jocul mare)'

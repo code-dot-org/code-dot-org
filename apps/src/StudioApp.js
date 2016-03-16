@@ -1772,10 +1772,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   // Ensure global ace variable is the same as window.ace
   // (important because they can be different in our test environment)
-
-  /* jshint ignore:start */
   ace = window.ace;
-  /* jshint ignore:end */
 
   var fullDropletPalette = dropletUtils.generateDropletPalette(
     config.level.codeFunctions, config.dropletConfig);

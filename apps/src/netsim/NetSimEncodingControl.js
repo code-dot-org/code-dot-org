@@ -1,12 +1,6 @@
 /**
  * @overview UI controller for set of radio buttons used to select display encodings.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var markup = require('./NetSimEncodingControl.html.ejs');

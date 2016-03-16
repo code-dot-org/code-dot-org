@@ -585,6 +585,7 @@ lt-LT:
   dashboard_progress_completed_too_many_blocks: baigtas, panaudota per daug blokų
   dashboard_progress_completed_perfect: puikiai išspręsta
   dashboard_progress_furthest_level_attempted: išmėgintas aukščiausias lygis
+  dashboard_progress_submitted: submitted
   dashboard_stage: Etapas
   dashboard_puzzle: Galvosūkis
   dashboard_question: Klausimas
