@@ -1,3 +1,5 @@
+= javascript_include_tag 'js/levelbuilder'
+
 - if current_user && current_user.admin?
   = render layout: 'shared/admin' do
     %strong= @level.name
@@ -42,7 +44,7 @@
       = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
     .project_admin
 :javascript
-  #{render partial: 'shared/ajax_submit', formats: [:js],  locals: {form_selector: '.clone_level'}}
+  window.levelbuilder.ajaxSubmit('.clone_level');
   $('.clone_level').on('ajax:beforeSend', function (e, xhr) {
     var validation_error = $('#validation-error').detach();
     $(e.target).parent().append(validation_error);
