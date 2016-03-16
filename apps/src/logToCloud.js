@@ -17,8 +17,13 @@ module.exports = {
    * @param {string} actionName - Must be one of the keys from PageAction
    * @param {object} value - Object literal representing columns we want to
    *   add for this action
+   * @param {number} [sampleRate] - Optional sample rate. Default is 1.0
    */
-  addPageAction: function (actionName, value) {
+  addPageAction: function (actionName, value, sampleRate) {
+    if (sampleRate === undefined) {
+      sampleRate = 1.0;
+    }
+
     if (!window.newrelic) {
       return;
     }
@@ -30,6 +35,11 @@ module.exports = {
 
     if (typeof(value) !== "object") {
       console.log('Expected value to be an object');
+      return;
+    }
+
+    if (Math.random() > ERROR_LOG_RATE) {
+      // Ignore this instance
       return;
     }
 
