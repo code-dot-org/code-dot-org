@@ -61,6 +61,7 @@ var IconList = React.createClass({
 
     var list = Object.keys(results).map(function (iconId) {
       return <IconListEntry
+        key={iconId}
         assetChosen={this.props.assetChosen}
         iconId={iconId}
         altMatch={results[iconId]}
