@@ -603,6 +603,7 @@ fa-IR:
   dashboard_progress_completed_too_many_blocks: تکمیل شده ، با بلوک های زیادی
   dashboard_progress_completed_perfect: تکمیل, کامل
   dashboard_progress_furthest_level_attempted: 'تلاش برای دسترسی به سطح دسترسی خارج از محدوده '
+  dashboard_progress_submitted: submitted
   dashboard_stage: مرحله
   dashboard_puzzle: پازل
   dashboard_question: سوال

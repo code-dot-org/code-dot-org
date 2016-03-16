@@ -553,6 +553,7 @@ bs:
     completed_perfect: dovršeno, savršeno
     furthest_level_attempted: pokušaj posljednjeg nivoa
     assessment: procjena
+    submitted: submitted
   studio:
     courses_working_on: Kursevi na kojima radite
     completed_courses: Kompletirani kursevi

@@ -103,61 +103,39 @@ vi:
       2-3 Bee Conditionals 2_instruction: Xin chào, tôi là Ong! Hãy giúp tôi thu thập mật hoa từ những bông hoa. Sử dụng hàm Loop.
       2-3 Bee Conditionals 3_instruction: Giúp tôi thu thập tất cả mật hoa từ những bông hoa và làm mật ong. Sử dụng một vòng lặp.
       2-3 Bee Conditionals 4_instruction: Giúp tôi thu thập tất cả mật hoa từ những bông hoa và dùng chúng để làm mật ong.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
+      2-3 Bee Conditionals 5_instruction: "Be careful not to collect nectar from\na purple flower if it doesn't have any. \\r\nYou must first check if the nectar\nis equal to 1 using the `if nectar` block."
       2-3 Bee Conditionals 6_instruction: |
         Check this flower with an "if" block
         to see if there is any nectar available.
       2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
+        Collect nectar from each flower only if
+        it has any.
       2-3 Bee Conditionals 8_instruction: |
         This field has red and purple flowers.
         Red flowers have a known nectar amount, but purple flower nectar is unknown.
         Collect all the nectar.
       2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
       2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all the
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.
+        Assessment: Collect all of
+        the nectar. Be careful not to try to collect nectar from a purple flower if
+        it doesn't have any.
       2-3 Bee Debugging 1_instruction: |
         These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar.
+      2-3 Bee Debugging 10_instruction: "This puzzle is making me loopy! \\r\nFix\nthe error(s) to collect all of the nectar and make all of the honey."
+      2-3 Bee Debugging 2_instruction: "Can you find the problem here?\\r\nFix the\nerror(s) to collect all of the nectar."
+      2-3 Bee Debugging 3_instruction: "Ooh, this one stings!\\r\n\\r\nFix the error(s)\nto collect all of the nectar."
       2-3 Bee Debugging 4_instruction: |
         These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar.
+      2-3 Bee Debugging 5_instruction: "That flower looks tasty! \\r\n\\r\nFix the\nerror(s) to collect all of the nectar.  You can now use both run and step."
+      2-3 Bee Debugging 6_instruction: "What a sweet challenge!\\r\n\\r\nFix the error(s)\nto collect all of the nectar."
       2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
+        Fix the error(s) to collect all of the nectar
+        and make all of the honey.
+      2-3 Bee Debugging 8_instruction: "So many beautiful flowers!\\r\n\\r\nFix the\nerror(s) to collect all of the nectar."
+      2-3 Bee Debugging 9_instruction: "\"Bee\" patient with this one!\\r\n\\r\nYou\nwill need to fix a couple of things in this program to collect all of the\nnectar and make all of the honey."
+      2-3 Bee Debugging Assessment 1_instruction: "Assessment:  Now it's time to\nshow what you know!\\r\n\\r\nFix the error(s) to collect all of the nectar and\nmake all of the honey."
       2-3 Bee Functions 1_instruction: |
         Functions are blocks of code that perform
         a task. Use the "get 2 nectar" function to collect the nectar from each
@@ -299,7 +277,7 @@ vi:
         Can you get me to the pig using 5 of the same
         kind of blocks?
       2-3 Maze Loops 17_instruction: Use what you learned to get me to the sunflower!
-      2-3 Maze Loops 18_instruction: "Get me to the sunflower using the fewest blocks\npossible!  \\r\n\\r\n(Note: You'll need to use one `repeat` loop inside of\nanother to pass this level.)"
+      2-3 Maze Loops 18_instruction: "Get me to the sunflower using the fewest blocks\npossible!  \\r\n\\r\nTry using one `repeat` loop inside of another to cut down\non the amount of code you need."
       2-3 Maze Loops 19_instruction: "Let's take this to another level! \\r\nUse\nloops to get me to the sunflower with the fewest loops possible."
       2-3 Maze Loops 20_instruction: |
         Get me to the sunflower using the fewest number
@@ -3430,7 +3408,7 @@ vi:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -4279,8 +4257,10 @@ vi:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

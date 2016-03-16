@@ -773,6 +773,7 @@
   dashboard_progress_completed_too_many_blocks: dokončené, príliš veľa blokov
   dashboard_progress_completed_perfect: dokončené, super
   dashboard_progress_furthest_level_attempted: najvyššia dosiahnutá úroveň
+  dashboard_progress_submitted: submitted
   dashboard_stage: Etapa
   dashboard_puzzle: "Úloha"
   dashboard_question: Otázka

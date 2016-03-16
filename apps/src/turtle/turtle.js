@@ -103,7 +103,6 @@ var Artist = function () {
 
   // image icons and image paths for the 'set pattern block'
   this.lineStylePatternOptions = [];
-  this.stamps = [];
 
   // PID of animation task currently executing.
   this.pid = 0;
@@ -170,14 +169,14 @@ Artist.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
 
-  // Preload stamp images
-  this.stamps = [];
-  for (var i = 0; i < this.skin.stampValues.length; i++) {
-    var url = this.skin.stampValues[i][0];
-    var key = this.skin.stampValues[i][1];
+  // Preload sticker images
+  this.stickers = [];
+  for (var i = 0; i < this.skin.stickerValues.length; i++) {
+    var url = this.skin.stickerValues[i][0];
+    var key = this.skin.stickerValues[i][1];
     var img = new Image();
     img.src = url;
-    this.stamps[key] = img;
+    this.stickers[key] = img;
   }
 
   if (this.skin.id == "anna" || this.skin.id == "elsa") {
@@ -211,7 +210,7 @@ Artist.prototype.init = function(config) {
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
-  var renderCodeWorkspace = function () {
+  var generateCodeWorkspaceHtmlFromEjs = function () {
     return codeWorkspaceEjs({
       assetUrl: this.studioApp_.assetUrl,
       data: {
@@ -225,7 +224,7 @@ Artist.prototype.init = function(config) {
     });
   }.bind(this);
 
-  var renderVisualizationColumn = function () {
+  var generateVisualizationColumnHtmlFromEjs = function () {
     return visualizationColumnEjs({
       assetUrl: this.studioApp_.assetUrl,
       data: {
@@ -239,8 +238,8 @@ Artist.prototype.init = function(config) {
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
-    renderCodeWorkspace: renderCodeWorkspace,
-    renderVisualizationColumn: renderVisualizationColumn,
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: this.studioApp_.init.bind(this.studioApp_, config)
   }), document.getElementById(config.containerId));
 };
@@ -1059,8 +1058,8 @@ Artist.prototype.step = function(command, values, options) {
     case 'ST':  // Show Turtle
       this.visible = true;
       break;
-    case 'stamp':
-      var img = this.stamps[values[0]];
+    case 'sticker':
+      var img = this.stickers[values[0]];
 
       var dimensions = scaleToBoundingBox(MAX_STICKER_SIZE, img.width, img.height);
       var width = dimensions.width;

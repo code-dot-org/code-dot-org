@@ -9,7 +9,7 @@ video_player: true
 
 We are building a growing library of educational videos available for re-use by educators worldwide, online or in classrooms. Our goal is to enable our efforts to be amplified beyond our own curriculum's reach. **Note:** see below for the licensing restrictions on use of these videos.
 
-## High school Computer Science Principles
+## Computer Science Principles
 
 <div style="float:left; padding:10px; width:49%">
 

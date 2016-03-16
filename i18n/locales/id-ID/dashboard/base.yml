@@ -556,6 +556,7 @@ id:
     completed_perfect: selesai, sempurna
     furthest_level_attempted: tingkat terjauh yang dicoba
     assessment: penilaian
+    submitted: submitted
   studio:
     courses_working_on: Kursus yang sedang Anda kerjakan
     completed_courses: Kursus yang telah diselesaikan

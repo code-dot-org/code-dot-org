@@ -1,4 +1,4 @@
-"pt":
+"pt-BR":
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
@@ -384,8 +384,8 @@
     heading_elementary: "<h2>Cursos de 20 horas sobre</h2><h1>Fundamentos de Ciência
       da Computação (todas as idades)</h1>"
     heading_apps: "<h2>Diversão para</h2><h1>todos</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Pronto para o próximo passo?</h2> <h1>Ferramentas JavaScript
+      para o Ensino Médio</h1>"
     heading_legacy: "<h2>Nosso curso acelerado para</h2><h1>todas as idades</h1>"
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
@@ -583,7 +583,7 @@
     report_bug: Reportar erro
     support: Obter ajuda
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: Ajuda e recursos
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
@@ -684,6 +684,7 @@
     completed_perfect: concluído, perfeito
     furthest_level_attempted: tentativa para o nível mais avançado
     assessment: avaliação
+    submitted: enviado
   studio:
     courses_working_on: Cursos que você está fazendo
     completed_courses: Cursos concluídos

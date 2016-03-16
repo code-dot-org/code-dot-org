@@ -11,7 +11,7 @@ nav: about_nav
  	- [CS Curriculum Writer](#curric)
  	- [2016 Summer Curriculum Writing Cohort](#summercohort)
 - **Finance and Administration Team**
- 	- [Adminstrative Assistant](#admin)
+ 	- [Financial Analyst](#finance)
 - **Outreach Team**
  	- [District Manager - Mid Atlantic Region](#dcdm)
 - **Product and Marketing Team**
@@ -103,44 +103,46 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
 
 
-## <a name="admin"href="#admin">Administrative Assistant (Seattle, WA)</a>
+## <a name="finance"href="#finance">Financial Analyst (Seattle, WA)</a>
 
 **Job Summary:**
 
-Code.org is seeking an experienced Administrative Assistant to join our administrative team. This is a terrific opportunity for the right candidate, with a great deal of responsibility and visibility into the successful operation of an internationally ­recognized non­profit experiencing incredible growth. 
+Code.org is looking for an experienced Financial Analyst to oversee all aspects of accounting, regulatory and financial reporting, budget and forecast preparation, as well as development of internal control policies and procedures. 
 
-High ­level responsibilities include: 
+Responsibilities of the position include:
 
-- Managing a variety of administrative and logistical tasks and projects 
-- Increasing office productivity by overseeing smooth and efficient office administration
-- Supporting VP level staff
+- Monitoring all aspects of the company’s accounting and financial operations, ensuring quality control over financial transactions and reporting
+- Assisting in the preparation of the annual budget and periodic financial forecasts and performing variance analysis and trend reporting
+- Performing ad hoc analyses in the areas of cash flow, income planning, programmatic expenses, and metrics
+- Providing data modeling expertise to determine potential financial impact of organizational decisions
+- Supervising the month, quarter, and year-end close procedures, including review of journal entries, account reconciliations, and analysis of results
+- Analyzing complex account reconciliations for inventory, accruals, and allocations
+- Overseeing the preparation and distribution of timely internal financial statements
+- Preparing quarterly Board of Directors’ financial presentation
+- Supporting the external audit of the company’s financial statements, including preparation of audit schedules and responding to auditor questions and requests
+- Managing and complying with local, state, and federal government reporting requirements and tax filings
+- Proactively identifying issues and areas for improvement with the close process and implementing process improvements 
+- Developing and documenting finance and accounting processes and policies to maintain and strengthen internal controls
 
-**Duties and Responsibilities:**
-
-- Handle routine administrative tasks and oversee office administration; primary point of contact for meeting staff needs
-Manage Travel and Expense Accounts  
-- Coordinate travel and manage select Leadership Team individual calendars
-- Troubleshoot basic technology issues (printers, videoconferencing system)
-- Coordinate events (office, social, and corporate) and visitor logistics
-- Process incoming and outgoing office mail and packages
-- Order and maintain office supplies and equipment; order food/lunch
-- Other duties, as assigned 
-
- 
 **Skills and Qualifications:**
 
-We are looking for an energetic, positive, collaborative professional to join our small, nimble administrative team. You should be a tech-savvy self starter experienced in using tools to solve problems, with a willingness to take ownership and get-it-done attitude. Experience in a start up environment a plus. 
+The ideal candidate has at least a Bachelor’s degree in Business Administration, Accounting, or related field and possesses the following skills:
 
+- 5+ years experience in a finance and/or accounting management role 
+- Strong knowledge of GAAP and financial reporting requirements as well as financial audits
+- Advanced experience in Quickbooks Online
+- Advanced or expert user of spreadsheets
+- Experience and aptitude for managing complex projects and reports 
+- Advanced analytical, organizational and problem solving skills
+- Be highly comfortable working in a fast-paced, ambiguous, informal work environment
+- Non-profit accounting experience a plus
+- CPA preferred
 
-The ideal candidate has the following qualifications:
-
-- Excellent written and verbal communications skills 
-- Strong attention to detail 
-- Experience learning and using modern tech tools
-- 1-2 years experience in administrative support, event planning, or office management preferred 
-- Bachelor’s degree preferred 
+Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure. Proficiency in working with Microsoft Office and Google Docs a must.
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
 
 ## <a name="dcdm"href="#dcdm"> District Manager - Mid Atlantic Region (Washington, D.C., or surrounding area)</a>
 **Job Summary:**
@@ -170,7 +172,7 @@ Manage implementation for all partner district/cities at K-12 grade levels
 
 Ability and willingness to travel up to 30% of the time is required.
 
-**Expereince and Qualifications:**
+**Skills and Qualifications:**
 
 The ideal candidate has at least a Bachelor’s degree, experience collaborating with the K-12 public school system, and possesses the following skills:
 
@@ -254,7 +256,7 @@ Areas of responsibility include:
 
 You will also need to be able to successfully communicate conceptual ideas, detailed design, and design rationale, both verbally and visually.
 
-**Experience and Qualifications:**
+**Skills and Qualifications:**
 
 The ideal candidate has strong, flexible visual design skills and experience in app and/or web design. We are looking for a self-starter who is passionate about improving education.  
 

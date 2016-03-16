@@ -732,13 +732,14 @@
           indem man einige Tanzschritte in Schleifen setzt.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: We actually do use loops in our dancing. The dancers are wearing computers,
-          all in the same network. I might loop the lights through to the same dancers
-          over and over again. In the loop I might have an iteration where I'll say
-          you want to go loop through these six dancers over and over again and then
-          within the loop you want to increase the speed of the light. And that's
-          all created through loops. Loops are important in computer science because
-          they make our work shorter and easier.
+        text: Wir benutzen tatsächlich Schleifen in unserem Tanz. Die Tänzer tragen
+          Computer, welche alle im gleichen Netzwerk sind. Ich kann vielleicht die
+          Lichter mit einer Schleife immer wieder zum gleichen Tönzer bringen. In
+          der Schleife könnte ich eine Wiederhohlung haben wo ich sagen könnte, dass
+          die Schleife aller dieser sechs Tänzer immer wieder durchgelaufen wird und
+          dann in dieser Schleife kannst du die Geschwindigkeit des Lichts erhöhen.
+          Und das ist alles mit Schleifen gemacht. Schleifen sind wichtig in der Informatik
+          weil sie unsere Arbeit kürzer und einfacher machen.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
@@ -770,20 +771,23 @@
           ich einen Flick-Flack auf dem Strahl, aber falle immer wieder herunter.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: I walked through each part step by step and realized where my mistake
-          was. I wasn't putting my hands on the beam correctly. So I tried another
-          back handspring on the beam with my new hand position and I got it. I was
-          really glad I debugged my back handspring.
+        text: Ich bin durch jeden Teil Schritt für Schritt durchgegangen und habe
+          herausgefunden, wo mein Fehler war. Ich habe meine Hand nicht richtig auf
+          den Balken gehalten. Also habe ich erneut einen Flickflack auf dem Balken
+          mit meiner neuen Positionierung der Hand versucht. Ich wahr richtig froh,
+          dass ich die Fehler in meinen Flickflack beseitigt habe.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: To learn about debugging, we start with a set of blocks already on the
-          stage. You'll notice that these blocks won't get you to the goal. We need
-          to debug the solution and fix it. What went wrong? You'll notice that you
-          needed to keep going west one more block.
+        text: Um das Beseitigen von Fehlern, genannt "Debuggen", zu lernen, starten
+          wir mit einem Satz Blöcken welche schon hier sind. Du wirst merken, dass
+          diese Blöcke dich nicht zum Ziel bringen. Wir müssen die Fehler beseitigen
+          und es reparieren. Was lief falsch? Du wirst merken, dass du einen Block
+          weiter nach Westen gehen musst.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: Let's fix this by adding another west block and hitting run to see if
-          you got it right. Yay, you got it!
+        text: Lasst uns das reparieren, indem wir einen Block nach Westen hinzufügen
+          und auf "Ausführen" klicken um zu sehen, ob du es richtig gemacht hast.
+          Super, du hast es geschafft!
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
@@ -791,10 +795,10 @@
           Puzzle an und schaue, welche Richtung er nehmen muss.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: You need to drag the blocks over from the toolbox to the workspace.
-          Make sure it's under the "when run" block and when you think you've got
-          the right solution, then you can click "Run" and watch the bird go to the
-          pig.
+        text: Du musst diese Blöcke von der Toolbox in den Arbeitsbereich ziehen.
+          Stelle sicher, dass sie unter dem "beim Ausführen"-Block sind und wenn du
+          denkst, du hast die richtige Lösung, kannst du auf "Ausführen" drücken und
+          den Vogel dabei beobachten, wie er zum Schwein geht.
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
@@ -804,28 +808,29 @@
           gut durchführen ohne dabei zu ermüden.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: Zum Beispiel, wenn ich allen auf Facebook viel Glück zum Geburtstag
+          wünschen möchte, indem ich ihnen eine E-Mail sende, brauche ich mehr als
+          ein Jahrhundert um tatsächlich jedem einzelnen zu schreiben. Aber mit nur
+          ein paar Zeilen Code kann ich ein automatisches System haben, welches jedem
+          auf Facebook eine E-mail mit Glückwünschen schreibt.
       3:
         image: notes/C1_maze_loops_3.png
-        text: To get the bird to the pig in this level... rather than drag three North
-          blocks on to the workspace, you will use the "repeat" block. Drag the "repeat"
-          block on to the workspace and enter the number 3. Then drag the "move North"
-          block into the "repeat" block and hit "Run" to see if you got it right.
-          Congratulations, you got it!
+        text: Um den Vogel in diesem Level zum Schwein zu bringen... Anstatt drei
+          "nach-Norden"-Blöcke zum Arbeitsbereich zu ziehen wirst du den "Wiederholen"-Block
+          brauchen. Ziehe den "Wiederholen"-Block in den Arbeitsbereich und gib die
+          Nummer drei ein. Dann ziehe den "nach-Norden"-Block in den "Wiederholen"-Block
+          und klicke auf "Ausführen" um zu sehen, ob du es geschafft hast. Glückwunsch,
+          du hast es kapiert!
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
-        text: This lesson is called move it, move it. Together we're going to write
-          a program to get our friends from the starting with the compass rose to
-          the smiley face goal.
+        text: Diese Lektion nennt sich Bewegung, Bewegung. Zusammen werden wir ein
+          Programm schreiben um unsere Freunde vom Start aus mit dem Kompass zum Smiley
+          zu bringen.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: But the smiley is face down and only one person knows how to get there.
-          Let's get this program started.
+        text: Aber das Smiley ist mit dem Gesicht nach unten und nur eine Person weiss,
+          wie man dorthin gelangt. Lasst uns mit dem Programm anfangen.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
         text: A program is an algorithm that has been coded into something that can
@@ -978,11 +983,11 @@
           gut durchführen ohne dabei zu ermüden.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: Zum Beispiel, wenn ich allen auf Facebook viel Glück zum Geburtstag
+          wünschen möchte, indem ich ihnen eine E-Mail sende, brauche ich mehr als
+          ein Jahrhundert um tatsächlich jedem einzelnen zu schreiben. Aber mit nur
+          ein paar Zeilen Code kann ich ein automatisches System haben, welches jedem
+          auf Facebook eine E-mail mit Glückwünschen schreibt.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: In this example, your goal is going to be to move the bird to get the

@@ -89,7 +89,7 @@ fr:
         Récolte du nectar et produit du miel. Astuce : 
         que se passe-t-il si tu utilises la condition "si nectar" sur une fleur rouge ? Peux-tu compléter ceci avec une boucle ?
       2-3 Bee Conditionals 14_instruction: "Récolte le nectar et fais du miel. Veille à ne pas butiner de fleur violette si elle n'a pas de nectar."
-      2-3 Bee Conditionals 15_instruction: Récolte le nectar des quatre fleurs.
+      2-3 Bee Conditionals 15_instruction: Collecte le nectar des quatre fleurs.
       2-3 Bee Conditionals 2_instruction: Salut, je suis une abeille ! Aide moi à récolter tout le nectar des fleurs. Utilise une boucle.
       2-3 Bee Conditionals 3_instruction: Aide moi à récolter tout le nectar des fleurs et produire le miel. Utilise une boucle.
       2-3 Bee Conditionals 4_instruction: Aide moi à récolter tout le nectar des fleurs et produire tout le miel.
@@ -2395,7 +2395,7 @@ fr:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -3244,8 +3244,10 @@ fr:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

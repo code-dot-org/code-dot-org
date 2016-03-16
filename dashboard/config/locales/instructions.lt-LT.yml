@@ -96,9 +96,9 @@
         norime nupiešti daug sudėtingų objektų. Panaudok komandą „nupiešk gėlę“ ir
         užbaik piešinį. (Sufleris: tarp kiekvienos gėlės yra 100 pikselių atstumai)  '
       2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
+        Tau duotos keturios sudėtinės komandos.
+        Panaudok jas kaip tik nori ir gauk piešinius,
+        kuriuos galėsi parodyti savo draugams. Paspausk „Paleisti“, kad pamatytum pavyzdį.
       2-3 Artist Functions 2_instruction: Sudėtinės komandos (arba funkcijos) leidžia
         susikurti naujus blokelius pačiam! Aš sukūriau komandą ir pavadinau ją „nubrėžk
         kvadratą“. Ar gali nupiešti tuos pačius akinius naudodamas tą naują komandą?
@@ -108,9 +108,9 @@
         dabar yra 45 pikseliai.
       2-3 Artist Functions 4_instruction: Panaudok kartojimo blokelį ir nupiešk tris
         kvadratus.
-      2-3 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        two houses using two different parameters. (Hint: the first house is 100 pixels).
+      2-3 Artist Functions 7_instruction: 'Panaudok komandą „namas“, kad nupieštum
+        du namus su dviem skirtingais parametrais. (Sufleris: pirmojo namo dydis yra
+        100 pikselių).'
       2-3 Artist Functions 9_instruction: "Štai nauja komanda „nupiešk snaigę“. Paeksperimentuok
         su ja ir nupiešk gražų žieminį paveikslą. Čia ne galvosūkis, o kūrybinė užduotis.
         Pasismagink!"
@@ -229,36 +229,40 @@
         have any.\r
       2-3 Bee Conditionals 11_instruction: Rinkti nektarą, kur gėlės turi nektaro.
       2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
-      2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
-      2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
+        Help me find all of the nectar using
+        as few blocks as possible!
+      2-3 Bee Conditionals 13_instruction: |-
+        There's a lot happening here!\r
+        \r
+        Use
+        what you've learned to collect all of the nectar and then make the honey.
+      2-3 Bee Conditionals 14_instruction: |-
+        Let's put everything together!\r
+        \r
+        Use
+        what you've learned to help me collect nectar only from flowers that have
+        it, using as few blocks as possible.  Don't forget to make honey at the end.
       2-3 Bee Conditionals 15_instruction: Surink nektarą iš visų keturių gėlių.
-      2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
-      2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
+      2-3 Bee Conditionals 2_instruction: |-
+        I'm a hungry bee! \r
+        Help me collect
+        all of the nectar from the flowers using the fewest number of blocks.
+      2-3 Bee Conditionals 3_instruction: "Look at all of that nectar!\\r\n\\r\nHelp\nme
+        collect the nectar and make the honey using as few blocks as you can.  "
       2-3 Bee Conditionals 4_instruction: |
         Help me collect all of the nectar from
         the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
+      2-3 Bee Conditionals 5_instruction: |-
+        Be careful not to collect nectar from
+        a purple flower if it doesn't have any. \r
+        You must first check if the nectar
+        is equal to 1 using the `if nectar` block.
       2-3 Bee Conditionals 6_instruction: |
         Check this flower with an "if" block
         to see if there is any nectar available.
       2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
+        Collect nectar from each flower only if
+        it has any.
       2-3 Bee Conditionals 8_instruction: |
         This field has red and purple flowers.
         Red flowers have a known nectar amount, but purple flower nectar is unknown.
@@ -268,39 +272,53 @@
         Atsargiai, neimk nektaro iš violetinių gėlių, jei nektaro jos neturi.'
       2-3 Bee Debugging 1_instruction: |
         These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar.
+      2-3 Bee Debugging 10_instruction: |-
+        This puzzle is making me loopy! \r
+        Fix
+        the error(s) to collect all of the nectar and make all of the honey.
+      2-3 Bee Debugging 2_instruction: |-
+        Can you find the problem here?\r
+        Fix the
+        error(s) to collect all of the nectar.
+      2-3 Bee Debugging 3_instruction: |-
+        Ooh, this one stings!\r
+        \r
+        Fix the error(s)
+        to collect all of the nectar.
       2-3 Bee Debugging 4_instruction: |
         These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar.
+      2-3 Bee Debugging 5_instruction: |-
+        That flower looks tasty! \r
+        \r
+        Fix the
+        error(s) to collect all of the nectar.  You can now use both run and step.
+      2-3 Bee Debugging 6_instruction: |-
+        What a sweet challenge!\r
+        \r
+        Fix the error(s)
+        to collect all of the nectar.
       2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
+        Fix the error(s) to collect all of the nectar
+        and make all of the honey.
+      2-3 Bee Debugging 8_instruction: |-
+        So many beautiful flowers!\r
+        \r
+        Fix the
+        error(s) to collect all of the nectar.
+      2-3 Bee Debugging 9_instruction: |-
+        "Bee" patient with this one!\r
+        \r
+        You
+        will need to fix a couple of things in this program to collect all of the
+        nectar and make all of the honey.
+      2-3 Bee Debugging Assessment 1_instruction: |-
+        Assessment:  Now it's time to
+        show what you know!\r
+        \r
+        Fix the error(s) to collect all of the nectar and
+        make all of the honey.
       2-3 Bee Functions 1_instruction: Funkcijos yra kodo blokeliai kurie vykdo užduotį.
         Panaudok "paimk 2 nektarus" funkciją ir surink nektarą iš kiekvienos gėlės.
       2-3 Bee Functions 10_instruction: |
@@ -459,8 +477,8 @@
         Get me to the sunflower using the fewest blocks
         possible!  \r
         \r
-        (Note: You'll need to use one `repeat` loop inside of
-        another to pass this level.)
+        Try using one `repeat` loop inside of another to cut down
+        on the amount of code you need.
       2-3 Maze Loops 19_instruction: Nuvesk mane prie saulėgrąžų!
       2-3 Maze Loops 20_instruction: Nuvesk mane prie saulėgrąžų!
       2-3 Maze Loops 21_instruction: Nuvesk mane prie saulėgrąžų!
@@ -2748,13 +2766,11 @@
         Use a "repeat forever" block to make Anna move
         up and down 400 pixels.
       Infinity_say_instruction: Make Anna say "Hi there." by using the Say block.
-      Infinity_shoot_instruction: |
-        Baymax is "actor 2".  Make Baymax throw a rocket
-        at Hiro.
-      Infinity_shoot_directions_instruction: |
-        Hiro is "actor 3".  Make Hiro throw
-        a projectile to each of the four characters.  Wait one second between each
-        throw.
+      Infinity_shoot_instruction: Baymax yra veikėjas 2. Padaryk, kad Baymax mestų
+        raketą į Hiro.
+      Infinity_shoot_directions_instruction: Hiro yra veikėjas 3. Padaryk, kad Hiro
+        mestų sviedinį į kiekvieną iš keturių veikėjų. Tarp kiekvieno metimo padaryk
+        po sekundės pertrauką.
       Infinity_test_instruction: This is a test Infinity level.
       Infinity_touch_faster_instruction: Touch even more snowflakes!
       Infinity_touch_four_instruction: |
@@ -4030,7 +4046,7 @@
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -4924,8 +4940,10 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

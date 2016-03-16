@@ -773,6 +773,7 @@
   dashboard_progress_completed_too_many_blocks: tamamlanmadı, fazla blok var
   dashboard_progress_completed_perfect: tamamlandı, harika
   dashboard_progress_furthest_level_attempted: denenen en yüksek seviye
+  dashboard_progress_submitted: submitted
   dashboard_stage: kademe
   dashboard_puzzle: Bulmaca
   dashboard_question: Soru
