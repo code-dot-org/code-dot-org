@@ -31,7 +31,8 @@ module.exports = {
   "env": {
     "browser": true,
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "es6": true
   },
   "rules": {
     // 0 means disabled, 1 means warn, 2 means error
