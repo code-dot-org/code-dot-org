@@ -1,9 +1,11 @@
-// Shows the samplingMessage and completionTable DOM elements depending on the
-// parameters.
+/**
+ * Shows the samplingMessage and completionTable DOM elements depending on the
+ * parameters.
+ *
+ * @param {boolean}: isSampled - whether Google Analytics sampled.
+ * @param {boolean} startDatePresent - whether a start_date parameter was given.
+ */
 //
-// isSampled: A boolean indicating whether Google Analytics sampled.
-// startDatePresent: A boolean indicating whether a start_date parameter was
-//     given.
 function hideAndShowDomElements(isSampled, startDatePresent) {
   if (isSampled) {
     $('#samplingMessage').show();
@@ -13,8 +15,10 @@ function hideAndShowDomElements(isSampled, startDatePresent) {
   }
 }
 
-// Renders the Avg. Success Rate column, changing the background color depending
-// on the percentage.
+/**
+ * Renders the Avg. Success Rate column, changing the background color depending
+ * on the percentage.
+ */
 function successRateRenderer(
     instance, td, row, col, prop, value, cellProperties) {
   var conditions = [
@@ -39,8 +43,10 @@ function successRateRenderer(
   }
 }
 
-// Renders the Avg. Unique Success Rate column, changing the background color
-// depending on the percentage.
+/**
+ * Renders the Avg. Unique Success Rate column, changing the background color
+ * depending on the percentage.
+ */
 function uniqueSuccessRateRenderer(
     instance, td, row, col, prop, value, cellProperties) {
   var conditions = [
@@ -65,8 +71,10 @@ function uniqueSuccessRateRenderer(
   }
 }
 
-// Renders the Avg. Time on Page column, changing what percentage of the cell's
-// background is colored gray.
+/**
+ * Renders the Avg. Time on Page column, changing what percentage of the cell's
+ * background is colored gray.
+ */
 function timeOnSiteRenderer(
     instance, td, row, col, prop, value, cellProperties) {
   if(value) {
@@ -84,7 +92,9 @@ function timeOnSiteRenderer(
       + percent*100 + '%, white 0%)';
 }
 
-// Populates the completionTable DOM element.
+/**
+ * Populates the completionTable DOM element.
+ */
 function populateTable(headers, data) {
   $("#completionTable").handsontable({
     data: data,
