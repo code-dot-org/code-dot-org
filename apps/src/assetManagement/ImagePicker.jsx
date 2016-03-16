@@ -25,27 +25,26 @@ var ImagePicker = React.createClass({
   },
 
   render: function () {
-
     var modeSwitch, title = this.props.assetChosen ?
       <p className="dialog-title">Choose Assets</p> :
       <p className="dialog-title">Manage Assets</p>;
 
     if (this.props.assetChosen) {
-      var fileMode = this.state.mode === 'files';
+      var isFileMode = this.state.mode === 'files';
       modeSwitch = <div>
         <p onClick={this.setFileMode} style={{
           float: 'left',
           margin: '0 20px 0 0',
-          fontFamily: fileMode ? '"Gotham 5r"' : null,
-          color: fileMode ? null : '#999',
+          fontFamily: isFileMode ? '"Gotham 5r"' : null,
+          color: isFileMode ? null : '#999',
           fontSize: '16px',
           cursor: 'pointer'
         }}>My Files</p>
         <p onClick={this.setIconMode} style={{
           margin: '0',
           fontSize: '16px',
-          fontFamily: fileMode ? null : '"Gotham 5r"',
-          color: fileMode ? '#999' : null,
+          fontFamily: isFileMode ? null : '"Gotham 5r"',
+          color: isFileMode ? '#999' : null,
           cursor: 'pointer'
         }}>Icons</p>
         <hr style={{borderColor: '#7665a0', margin: '5px 0'}}/>
