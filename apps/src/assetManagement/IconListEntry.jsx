@@ -64,7 +64,7 @@ var IconListEntry = React.createClass({
     };
 
     return (
-      <div style={rootStyles} title={this.props.iconId} onClick={this.props.assetChosen.bind(null, 'icon:' + this.props.iconId)}>
+      <div style={rootStyles} title={this.props.iconId} onClick={this.props.assetChosen.bind(null, 'icon://fa-' + this.props.iconId)}>
         <Icon iconId={this.props.iconId}/>
         {iconLabel}
       </div>
