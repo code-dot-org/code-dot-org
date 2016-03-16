@@ -6,9 +6,6 @@ var ErrorLevel = {
   ERROR: 'ERROR'
 };
 
-// Rate at which we log errors to the cloud
-var ERROR_LOG_RATE = 1 / 20;
-
 /**
  * Method that will do appropriate console/debug logging for the current app.
  * No-op by default. Can be set by the app.
@@ -46,7 +43,7 @@ function outputError(warning, level, lineNum) {
   if (level === ErrorLevel.ERROR) {
     logToCloud.addPageAction(logToCloud.PageAction.UserJavaScriptError, {
       error: warning
-    }, ERROR_LOG_RATE);
+    }, 1 / 20);
   }
 }
 

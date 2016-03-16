@@ -1,7 +1,8 @@
 var PageAction = {
   DropletTransitionError: 'DropletTransitionError',
   SanitizedLevelHtml: 'SanitizedLevelHtml',
-  UserJavaScriptError: 'UserJavaScriptError'
+  UserJavaScriptError: 'UserJavaScriptError',
+  RunButtonClick: 'RunButtonClick'
 };
 
 var MAX_FIELD_LENGTH = 4095;
@@ -38,7 +39,7 @@ module.exports = {
       return;
     }
 
-    if (Math.random() > ERROR_LOG_RATE) {
+    if (Math.random() > sampleRate) {
       // Ignore this instance
       return;
     }
