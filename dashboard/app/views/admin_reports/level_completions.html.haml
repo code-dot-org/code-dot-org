@@ -30,7 +30,7 @@
   .htNumeric { font-family: monospace; }
 
 :javascript
-  var headers = eval(#{ headers.try(:to_json)});
-  var data = eval(#{ data.try(:to_json)});
+  var headers = #{ headers.try(:to_json)};
+  var data = #{ data.try(:to_json)};
   hideAndShowDomElements(#{ @is_sampled }, #{ params[:start_date].present? });
   populateTable(headers, data);
