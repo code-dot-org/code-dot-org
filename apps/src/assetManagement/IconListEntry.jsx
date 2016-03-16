@@ -25,7 +25,7 @@ var IconListEntry = React.createClass({
     var iconLabel, columnWidth;
 
     if (this.props.search) {
-      var query = new RegExp(this.props.search), altMatchText;
+      var query = new RegExp('(^|-)' + this.props.search), altMatchText;
       if (!query.test(this.props.iconId)) {
         // We matched based on an alternate keyword, show that keyword next to the icon ID.
         altMatchText = <p style={{
