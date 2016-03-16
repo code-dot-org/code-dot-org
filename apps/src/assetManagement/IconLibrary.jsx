@@ -20,22 +20,32 @@ var IconLibrary = React.createClass({
   },
 
   render: function () {
+    var styles = {
+      root: {
+        float: 'right',
+        position: 'relative',
+        margin: '10px 0'
+      },
+      input: {
+        width: '300px',
+        border: '1px solid #999',
+        borderRadius: '4px',
+        padding: '3px 7px'
+      },
+      icon: {
+        position: 'absolute',
+        right: '5px',
+        top: '5px',
+        fontSize: '16px',
+        color: '#999'
+      }
+    };
+
     return (
       <div>
-        <div style={{float: 'right', position: 'relative', margin: '10px 0'}}>
-          <input onChange={this.search} style={{
-            width: '300px',
-            border: '1px solid #999',
-            borderRadius: '4px',
-            padding: '3px 7px'
-          }} placeholder={msg.iconSearchPlaceholder()}/>
-          <i className="fa fa-search" style={{
-            position: 'absolute',
-            right: '5px',
-            top: '5px',
-            fontSize: '16px',
-            color: '#999'
-          }}/>
+        <div style={styles.root}>
+          <input onChange={this.search} style={styles.input} placeholder={msg.iconSearchPlaceholder()}/>
+          <i className="fa fa-search" style={styles.icon}/>
         </div>
         <IconList assetChosen={this.props.assetChosen} search={this.state.search}/>
       </div>
