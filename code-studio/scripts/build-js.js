@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /** @file Build script for JS assets in the code-studio package, which is loaded
     by dashboard (our "Code Studio" Rails app). */
+/* global Promise */
 'use strict';
 
 var _ = require('lodash');
