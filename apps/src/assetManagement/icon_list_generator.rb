@@ -1,7 +1,22 @@
-require 'yaml'
+#!/usr/bin/env ruby
+# Download icons.yml and export icons.js (used for lookup by keyword).
+
+require 'psych'
 require 'json'
 
-# Convert icons.yml into a JSON file that can be used for fast lookup by keyword.
+METADATA_URL = 'https://raw.githubusercontent.com/FortAwesome/Font-Awesome/adcbe8eddad1b3423c38489708f7ff2707afa94c/src/icons.yml'
+
+PREAMBLE = <<-JS
+/**
+ * This is an auto-generated file. Do not edit. Run `./icon_list_generator.rb`.
+ *
+ * List of Font Awesome icons to include in the IconLibrary, with keywords.
+ * Exported from https://github.com/FortAwesome/Font-Awesome/blob/master/src/icons.yml
+ * Licensed CC BY 3.0
+ *
+ * (Font Awesome by Dave Gandy - http://fontawesome.io/)
+ */
+JS
 
 EXCLUDED_KEYWORDS = {
   alcohol: true,
@@ -19,7 +34,9 @@ EXCLUDED_ICONS = {
 
 EXCLUDED_CATEGORIES = ['Gender Icons']
 
-data = YAML.load_file 'icons.yml'
+puts 'Downloading icon metadata file...'
+
+data = Psych.safe_load `curl #{METADATA_URL}`
 icons = data['icons']
 @aliases = {}
 @unicode = {}
@@ -46,6 +63,9 @@ icons.each do |icon|
   @unicode[id] = icon['unicode']
 end
 
-File.open('icons.json', 'w') do |file|
-  file.write({aliases: @aliases, unicode: @unicode}.to_json)
+File.open('icons.js', 'w') do |file|
+  output = {aliases: @aliases, unicode: @unicode}
+
+  file.write PREAMBLE
+  file.write "module.exports = #{output.to_json};\n"
 end
