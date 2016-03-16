@@ -69,7 +69,7 @@ class ScriptLevel < ActiveRecord::Base
 
   def long_assessment?
     if assessment
-      if level.pages && level.pages.length > 1
+      if level["pages"] && level["pages"].length > 1
         return true
       end
     end
