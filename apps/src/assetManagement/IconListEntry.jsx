@@ -17,7 +17,8 @@ var IconListEntry = React.createClass({
     if (offset === -1) {
       return str;
     }
-    var left = str.substr(0, offset), right = str.substr(offset + this.props.search.length);
+    var left = str.substr(0, offset);
+    var right = str.substr(offset + this.props.search.length);
     return <span>{left}<span style={{backgroundColor: '#ffc'}}>{this.props.search}</span>{right}</span>;
   },
 
@@ -36,10 +37,10 @@ var IconListEntry = React.createClass({
       }
     };
 
-    var iconLabel, columnWidth;
+    var iconLabel, columnWidth, altMatchText;
 
     if (this.props.search) {
-      var highlightedName = this.props.iconId, altMatchText;
+      var highlightedName = this.props.iconId;
       if (!this.props.query.test(this.props.iconId)) {
         // We matched based on an alternate keyword, show that keyword next to the icon ID.
         altMatchText = <p style={styles.altMatchText}>({this.highlightSearch(this.props.altMatch)})</p>;
