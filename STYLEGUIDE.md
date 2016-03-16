@@ -217,6 +217,98 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
     templates include a script tag which assigns app_options to
     a Javascript variable so that it as accessible from JS.
 
+### React
+* <a name="js-react-inline-styles"></a>
+Prefer single object for all styles vs. inlined style objects
+```
+// Bad
+var component = (
+  <div style={{color: 'red', display: 'block'}}>
+    <div style={{color: 'blue', fontSize: 10}>I'm a child</div>
+  </div>
+);
+
+// Good
+var styles = {
+  root: {
+    color: 'red',
+    display: 'block
+  },
+  child: {
+    color: 'blue',
+    fontSize: 10
+  }
+};
+...
+var component = (
+  <div style={styles.root}>
+    <div style={styles.child}>I'm a child</div>
+  </div>
+);
+```
+* <a name="js-react-pixel-numbers"></a>
+Prefer numbers vs strings for pixel values
+```
+// Bad
+var styles = {
+  root: {
+    width: '100px',
+    height: '100px'
+  }
+}'
+
+// Good
+var styles = {
+  root: {
+    width: 100,
+    height: 100
+  }
+};
+```
+* <a name="js-react-long-components"></a>
+Components with many attributes should have one per line, with 4 spaces of indentation. Child components should have 2 spaces of indentation.
+```
+// Bad
+var component = (
+  <MyComponent param1={1} param2={2} param3={3} param4={4} param5={5}>
+    <ChildComponent/>
+  </MyComponent>
+);
+
+// Good
+var component = (
+  <MyComponent
+      param1={1}
+      param2={2}
+      param3={3}
+      param4={4}
+      param5={5}>
+    <ChildComponent/>
+  </MyComponent>
+);
+```
+
+* <a name="js-react-aligned-tags"></a>
+align open and close tags
+```
+// Bad
+var component = (<MyComponent
+      foo="bar"
+      onClose={this.handleClose}>
+    <ChildComponent/>
+  </MyComponent>);
+
+// Good
+var component = (
+  <MyComponent
+      foo="bar"
+      onClose={this.handleClose}>
+    <ChildComponent/>
+  </MyComponent>
+);
+```
+
+
 ### In /apps
 
 Use lodash and jQuery libraries in `/apps`.
