@@ -1,5 +1,5 @@
 /**
- * This is an auto-generated file. Do not edit. Run `./icon_list_generator.rb`.
+ * This is an auto-generated file. Do not edit. Run `./icons_metadata_generator.rb` to regenerate.
  *
  * List of Font Awesome icons to include in the IconLibrary, with keywords.
  * Exported from https://github.com/FortAwesome/Font-Awesome/blob/master/src/icons.yml
