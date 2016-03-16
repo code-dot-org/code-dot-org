@@ -18,9 +18,9 @@ class LevelGroupDSL < BaseDSL
     {name: @name, properties: @hash}
   end
 
-  def page(name)
+  def page
     @levels = []
-    @hash[:pages] << {name: name, levels: @levels}
+    @hash[:pages] << {levels: @levels}
   end
 
   def level(name)
