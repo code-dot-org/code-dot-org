@@ -262,7 +262,7 @@ module.exports = function (grunt) {
           'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
           'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
           'last', 'clone', 'cloneDeep', 'isEqual', 'find', 'sortBy', 'throttle',
-          'uniq'
+          'uniq', 'assign'
         ]
       }
     }
