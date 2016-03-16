@@ -18,7 +18,6 @@ Scenario: Submit three pages.
   And I press "#multi_2 .answerbutton[index=1]" using jQuery
   And I press "#multi_2 .answerbutton[index=2]" using jQuery
   And I press "#multi_2 .answerbutton[index=0]" using jQuery
-  And I wait for 15 seconds
 
   And I press ".nextPageButton" using jQuery
   And I wait for 1 second
