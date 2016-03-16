@@ -1,3 +1,6 @@
+- content_for(:head) do
+  = javascript_include_tag 'js/levelbuilder'
+
 #validation-error.validation-error{style: 'background-color: yellow'}
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
@@ -39,7 +42,7 @@
     = f.submit 'Save and publish your completed work', {:id => 'publishLevel', :style => "background-color: #f0c14b"}
 #validation-error.validation-error{style: 'background-color: yellow'}
 :javascript
-  #{render partial: 'shared/ajax_submit', formats: [:js],  locals: {form_selector: @level.new_record? ? '#new_level' : '.edit_level'}}
+  window.levelbuilder.ajaxSubmit("#{@level.new_record? ? '#new_level' : '.edit_level'}");
   $(document).ready(function () {
     $('#saveProgress').click(function() {
       $('#level_published').val(false);
