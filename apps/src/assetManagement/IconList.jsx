@@ -11,53 +11,22 @@ var IconList = React.createClass({
     search: React.PropTypes.string.isRequired
   },
 
-  getMatches: function (query) {
-    var letters = query.split(''), results = {};
+  getMatches: function () {
+    var query = new RegExp('(^|-)' + this.props.search), results = {};
 
-    // Walk the prefix tree to find matches
-    for (var i = 0, node = icons; i < letters.length; i++) {
-      node = node[letters[i]];
-      if (!node) {
-        // No matches found
-        break;
-      }
-    }
-
-    // Iterate leaf nodes to construct the results
-    function getResults(node, prefix) {
-      if (node.$) {
-        node.$.forEach(function (iconId) {
-          results[iconId] = prefix;
+    Object.keys(icons).forEach(function (alias) {
+      if (query.test(alias)) {
+        icons[alias].forEach(function (match) {
+          results[match] = alias;
         });
       }
-      for (var letter in node) {
-        if (letter !== '$') {
-          getResults(node[letter], prefix + letter);
-        }
-      }
-    }
-
-    if (node) {
-      getResults(node, query);
-    }
+    });
 
     return results;
   },
 
   render: function () {
-    var tokens = this.props.search.split('-'),
-      query = this.props.search,
-      results = this.getMatches(tokens[0]);
-
-    if (tokens.length > 1) {
-      var filtered = {};
-      Object.keys(results).forEach(function (key) {
-        if (key.indexOf(query) > -1) {
-          filtered[key] = results[key];
-        }
-      });
-      results = filtered;
-    }
+    var results = this.getMatches();
 
     var list = Object.keys(results).map(function (iconId) {
       return <IconListEntry
