@@ -1,10 +1,3 @@
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
-
 var i18n = require('./locale');
 var dom = require('./dom');
 var utils = require('./utils');
@@ -186,6 +179,7 @@ DebugArea.prototype.slideShut = function () {
 DebugArea.prototype.setContentsVisible = function (isVisible) {
   this.rootDiv_.find('#debug-commands').toggle(isVisible);
   this.rootDiv_.find('#debug-console').toggle(isVisible);
+  this.rootDiv_.find('#debug-watch').toggle(isVisible);
 };
 
 DebugArea.prototype.setIconPointingDown = function (isPointingDown) {

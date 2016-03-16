@@ -87,6 +87,8 @@ class Applab < Blockly
         "dropdown": null,
         "getText": null,
         "setText": null,
+        "getNumber": null,
+        "setNumber": null,
         "checkbox": null,
         "radioButton": null,
         "getChecked": null,
@@ -138,6 +140,7 @@ class Applab < Blockly
         "updateRecord": null,
         "deleteRecord": null,
         "getUserId": null,
+        "drawChart": null,
         "drawChartFromRecords": null,
 
         // Turtle

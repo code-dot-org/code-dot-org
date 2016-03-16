@@ -1,9 +1,5 @@
 /* global trackEvent */
 
-/*jshint -W061 */
-// We use eval in our code, this allows it.
-// @see https://jslinterrors.com/eval-is-evil
-
 'use strict';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
@@ -241,7 +237,7 @@ Craft.init = function (config) {
       break;
   }
 
-  var renderCodeWorkspace = function () {
+  var generateCodeWorkspaceHtmlFromEjs = function () {
     return codeWorkspaceEjs({
       assetUrl: studioApp.assetUrl,
       data: {
@@ -253,7 +249,7 @@ Craft.init = function (config) {
     });
   };
 
-  var renderVisualizationColumn = function () {
+  var generateVisualizationColumnHtmlFromEjs = function () {
     return visualizationColumnEjs({
       assetUrl: studioApp.assetUrl,
       data: {
@@ -338,8 +334,8 @@ Craft.init = function (config) {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
-    renderCodeWorkspace: renderCodeWorkspace,
-    renderVisualizationColumn: renderVisualizationColumn,
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };

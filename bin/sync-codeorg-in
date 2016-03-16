@@ -1,0 +1,64 @@
+#!/usr/bin/env ruby
+
+# Pulls in all strings that need to be translated. Pulls source
+# files from blockly-core, apps, pegasus, and dashboard
+# as well as instructions for levelbuilder supported levels and
+# collects them to the single source folder i18n/locales/source.
+
+require File.expand_path('../../pegasus/src/env', __FILE__)
+require 'fileutils'
+require 'yaml'
+require 'tempfile'
+
+def pull_in_files_for_translation
+  localize_instructions
+  exec "bin/i18n-codeorg/in.sh"
+end
+
+def find_instruction(f)
+  pattern = /^\s*"instructions": (".*?"),?\n$/
+  f.each_line do |line|
+    matches = line.match pattern
+    if matches
+      return matches.captures.first
+    end
+  end
+  nil
+end
+
+def copy_instructions_to_yml(instructions)
+  File.open("dashboard/config/locales/instructions.en.yml", "w+") do |f|
+    f.write(({ "en" => { "data" => { "instructions" => instructions }}}).to_yaml)
+    File.write(f, File.read(f))
+  end
+end
+
+def reformat_quotes
+  temp_file = Tempfile.new("tempinstructions.yml")
+  File.open("dashboard/config/locales/instructions.en.yml", "r") do |f|
+    f.each_line { |line| temp_file.puts line.gsub("'\"", '"').gsub("\"'", '"').gsub("''", "'")}
+  end
+  temp_file.close
+  FileUtils.mv(temp_file.path, "dashboard/config/locales/instructions.en.yml")
+end
+
+# Pull in instructions for levelbuilder levels from .level files
+# and save them to instructions.en.yml to be translated
+def localize_instructions
+  level_instructions = Hash.new
+
+  Dir.glob("dashboard/config/scripts/levels/*.level").each do |file|
+    level = File.basename(file, ".*") + "_instruction"
+
+    File.open(file) do |f|
+      instruction = find_instruction(f)
+      if instruction
+        level_instructions[level] = instruction
+      end
+    end
+  end
+  copy_instructions_to_yml(level_instructions)
+  reformat_quotes
+end
+
+pull_in_files_for_translation

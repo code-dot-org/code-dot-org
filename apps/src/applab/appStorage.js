@@ -28,10 +28,21 @@ function getStatusDescription(status) {
  * @param {function} onError Function to call with error message.
  * @param {string} commandName App Lab command name to include in error message.
  * @param {number} status Http status code.
+ * @param {string?} detailedErrorMessage Optional detailed error message.
  */
-function onErrorStatus(onError, commandName, status) {
+function onErrorStatus(onError, commandName, status, detailedErrorMessage) {
   if (onError) {
-    onError('Error in ' + commandName + ': ' + getStatusDescription(status));
+    var errorMessage;
+    // If a detailed error message is provided and its not too long, display that to
+    // the user. (The long message heuristic is intended to prevent us from displaying
+    // e.g. stack traces from server errors.)
+    if (detailedErrorMessage && detailedErrorMessage.length < 256) {
+      errorMessage = detailedErrorMessage;
+    } else {
+      // Otherwise display a generic description based on the HTTP status.
+      errorMessage = getStatusDescription(status);
+    }
+    onError('Error in ' + commandName + ': ' +  errorMessage);
   }
   // HTTP 429 - Too many requests. We hit this when our data APis are throttled
   if (status === 429) {
@@ -64,7 +75,7 @@ var handleGetKeyValue = function(onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onErrorStatus(onError, 'getKeyValue', this.status);
+    onErrorStatus(onError, 'getKeyValue', this.status, this.responseText);
     return;
   }
   var value = JSON.parse(this.responseText);
@@ -93,7 +104,7 @@ var handleSetKeyValue = function(onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onErrorStatus(onError, 'setKeyValue', this.status);
+    onErrorStatus(onError, 'setKeyValue', this.status, this.responseText);
     return;
   }
   onSuccess();
@@ -123,7 +134,7 @@ var handleCreateRecord = function(onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onErrorStatus(onError, 'createRecord', this.status);
+    onErrorStatus(onError, 'createRecord', this.status, this.responseText);
     return;
   }
   var record = JSON.parse(this.responseText);
@@ -158,7 +169,7 @@ var handleReadRecords = function(searchParams, onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onErrorStatus(onError, 'readRecords', this.status);
+    onErrorStatus(onError, 'readRecords', this.status, this.responseText);
     return;
   }
   var records = JSON.parse(this.responseText);
@@ -205,7 +216,7 @@ var handleUpdateRecord = function(tableName, record, onComplete, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onErrorStatus(onError, 'updateRecord', this.status);
+    onErrorStatus(onError, 'updateRecord', this.status, this.responseText);
     return;
   }
   onComplete(record, true);
@@ -242,7 +253,7 @@ var handleDeleteRecord = function(tableName, record, onComplete, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onErrorStatus(onError, 'deleteRecord', this.status);
+    onErrorStatus(onError, 'deleteRecord', this.status, this.responseText);
     return;
   }
   onComplete(true);

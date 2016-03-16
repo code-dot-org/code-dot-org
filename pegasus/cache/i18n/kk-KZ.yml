@@ -771,6 +771,7 @@
   dashboard_progress_completed_too_many_blocks: "аяқталды, тым көп бөлімдер"
   dashboard_progress_completed_perfect: "аяқталды, тамаша"
   dashboard_progress_furthest_level_attempted: "жетілген ең жоғарғы деңгей"
+  dashboard_progress_submitted: submitted
   dashboard_stage: "Деңгей"
   dashboard_puzzle: "Басқатырғыш"
   dashboard_question: "Сұрақ"

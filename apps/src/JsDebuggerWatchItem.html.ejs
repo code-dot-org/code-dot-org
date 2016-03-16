@@ -1,0 +1,11 @@
+<% var i18n = require('./locale'); %>
+
+<span class="watch-variable"><%= varName %></span><span class="watch-separator">: </span>
+<% if (varValue instanceof Error) { -%>
+  <span class="watch-value watch-unavailable">
+    <%= i18n.debugWatchNotAvailable() %>
+<% } else { %>
+  <span class="watch-value">
+    <%= varValue %>
+<% } %>
+  </span>

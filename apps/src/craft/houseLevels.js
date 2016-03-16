@@ -1,4 +1,3 @@
-/*jshint multistr: true */
 /* global $ */
 
 var utils = require('../utils');
