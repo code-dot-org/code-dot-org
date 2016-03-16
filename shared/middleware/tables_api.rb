@@ -10,9 +10,18 @@ class TablesApi < Sinatra::Base
 
   DEFAULT_MAX_TABLE_ROWS = 1000
 
+  # DynamoDB charges 1 read capacity unit and at most 4 write capacity units for
+  # items sized 4K and under. Due to the other metadata we store, the
+  # largest observed record size (2 * table_name.length + record.to_json.length)
+  # which stays under this limit was 3992 bytes.
+  DEFAULT_MAX_RECORD_SIZE = 3950
+
   # Maximum number of rows allowed in a table (either in initial import or
   # after inserting rows.) Logically constant but can be modified in tests.
   @@max_table_rows = DEFAULT_MAX_TABLE_ROWS
+
+  # Maximum allowed size in bytes of an individual record.
+  @@max_record_size = DEFAULT_MAX_RECORD_SIZE
 
   @@redis = Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379')
 
@@ -181,6 +190,14 @@ class TablesApi < Sinatra::Base
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
+  def get_approximate_record_size(table_name, record_json)
+    2 * table_name.length + record_json.length
+  end
+
+  def record_too_large(record_size)
+    too_large "The record is too large (#{record_size} bytes). The maximum record size is #{@@max_record_size} bytes."
+  end
+
   #
   # POST /v3/(shared|user)-tables/<channel-id>/<table-name>
   #
@@ -197,7 +214,10 @@ class TablesApi < Sinatra::Base
     end
     limits.increment_row_count
 
-    value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
+    body = request.body.read
+    record_size = get_approximate_record_size(table_name, body)
+    record_too_large(record_size) if record_size > @@max_record_size
+    value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(body), request.ip)
 
     dont_cache
     content_type :json
@@ -214,7 +234,11 @@ class TablesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    new_value =  JSON.parse(request.body.read)
+    body = request.body.read
+    record_size = get_approximate_record_size(table_name, body)
+    record_too_large(record_size) if record_size > @@max_record_size
+
+    new_value =  JSON.parse(body)
 
     if new_value.has_key?('id') && new_value['id'].to_i != id.to_i
       halt 400, {}, "Updating 'id' is not allowed" if new_value.has_key? 'id'
