@@ -1,8 +1,8 @@
 /**
- * List of Font Awesome icons to include in the IconLibrary, with keywords.
+ * This is an auto-generated file. Do not edit. Run `./icon_list_generator.rb`.
  *
+ * List of Font Awesome icons to include in the IconLibrary, with keywords.
  * Exported from https://github.com/FortAwesome/Font-Awesome/blob/master/src/icons.yml
- * Ref: adcbe8eddad1b3423c38489708f7ff2707afa94c
  * Licensed CC BY 3.0
  *
  * (Font Awesome by Dave Gandy - http://fontawesome.io/)
