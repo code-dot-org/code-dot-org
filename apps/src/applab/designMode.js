@@ -18,6 +18,9 @@ var logToCloud = require('../logToCloud');
 var actions = require('./actions');
 var icons = require('../assetManagement/icons');
 
+var ICON_PREFIX = 'icon://';
+var ICON_PREFIX_REGEX = new RegExp('^' + ICON_PREFIX);
+
 var currentlyEditedElement = null;
 var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
@@ -184,7 +187,8 @@ function renderIconToString(value) {
   ctx.font = '300px FontAwesome, serif';
   ctx.textBaseline = 'middle';
   ctx.textAlign = 'center';
-  var unicode = '0x' + icons.unicode[value.replace(/^icon:/, '')];
+  var regex = new RegExp('^' + ICON_PREFIX + 'fa-');
+  var unicode = '0x' + icons.unicode[value.replace(regex, '')];
   ctx.fillText(String.fromCharCode(unicode), 200, 200);
   return canvas.toDataURL();
 }
@@ -273,7 +277,7 @@ designMode.updateProperty = function(element, name, value) {
         }
       };
 
-      if (/^icon:/.test(value)) {
+      if (ICON_PREFIX_REGEX.test(value)) {
         element.style.backgroundImage = 'url(' + renderIconToString(value) + ')';
         fitImage();
         break;
@@ -297,7 +301,7 @@ designMode.updateProperty = function(element, name, value) {
       var height = parseInt(element.style.height, 10);
       element.style.backgroundSize = width + 'px ' + height + 'px';
 
-      var url = /^icon:/.test(value) ? renderIconToString(value) : assetPrefix.fixPath(value);
+      var url = ICON_PREFIX_REGEX.test(value) ? renderIconToString(value) : assetPrefix.fixPath(value);
       element.style.backgroundImage = 'url(' + url + ')';
 
       break;
@@ -306,7 +310,7 @@ designMode.updateProperty = function(element, name, value) {
       originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
 
-      if (/^icon:/.test(value)) {
+      if (ICON_PREFIX_REGEX.test(value)) {
         element.src = renderIconToString(value);
         break;
       }
@@ -532,7 +536,7 @@ designMode.serializeToLevelHtml = function () {
   });
 
   // Remove the "data:img/png..." URI from icon images
-  designModeVizClone.find('[data-canonical-image-url^="icon:"]').each(function () {
+  designModeVizClone.find('[data-canonical-image-url^="' + ICON_PREFIX + '"]').each(function () {
     this.removeAttribute('src');
     this.style.backgroundImage = '';
   });
