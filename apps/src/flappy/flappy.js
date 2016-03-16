@@ -576,7 +576,7 @@ Flappy.init = function(config) {
     config.blockArrangement.flappy_whenClick.y = row2;
   }
 
-  var renderCodeWorkspace = function () {
+  var generateCodeWorkspaceHtmlFromEjs = function () {
     return codeWorkspaceEjs({
       assetUrl: studioApp.assetUrl,
       data: {
@@ -590,7 +590,7 @@ Flappy.init = function(config) {
     });
   };
 
-  var renderVisualizationColumn = function () {
+  var generateVisualizationColumnHtmlFromEjs = function () {
     return visualizationColumnEjs({
       assetUrl: studioApp.assetUrl,
       data: {
@@ -611,8 +611,8 @@ Flappy.init = function(config) {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
-    renderCodeWorkspace: renderCodeWorkspace,
-    renderVisualizationColumn: renderVisualizationColumn,
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };

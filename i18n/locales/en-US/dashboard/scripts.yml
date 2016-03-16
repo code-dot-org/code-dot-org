@@ -923,6 +923,7 @@ en:
           Multi2: crwdns41853:0crwdne41853:0
           Markdown Details: crwdns43376:0crwdne43376:0
           Studio: crwdns55916:0crwdne55916:0
+          Long assessment: crwdns56190:0crwdne56190:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
@@ -1309,6 +1310,8 @@ en:
           Getting Started: crwdns56179:0crwdne56179:0
           Unit 6 lessons: crwdns56180:0crwdne56180:0
           Alternative Ideas for Unit 6: crwdns56181:0crwdne56181:0
+          Unit 6 Challenge: crwdns56191:0crwdne56191:0
+          Share out and Submit: crwdns56192:0crwdne56192:0
         cspunit4draft:
           title: crwdns48501:0crwdne48501:0
           description_short: crwdns48502:0crwdne48502:0
@@ -1576,6 +1579,7 @@ en:
           Complete the Challlege: crwdns56147:0crwdne56147:0
           Share out and Submit: crwdns56148:0crwdne56148:0
           Complete the Challlenge: crwdns56149:0crwdne56149:0
+          Complete the Challenge: crwdns56193:0crwdne56193:0
         cspunit6:
           title: crwdns56150:0crwdne56150:0
           description_short: crwdns56151:0crwdne56151:0
@@ -1589,3 +1593,31 @@ en:
           Visualizing Data: crwdns56159:0crwdne56159:0
           Sample Apps: crwdns56160:0crwdne56160:0
           Final Project: crwdns56161:0crwdne56161:0
+        AlgebraA:
+          title: crwdns56194:0crwdne56194:0
+          description_short: crwdns56195:0crwdne56195:0
+          description: crwdns56196:0crwdne56196:0
+          "Calc: Evaluation Blocks": crwdns56197:0crwdne56197:0
+          "Eval: Strings and Images": crwdns56198:0crwdne56198:0
+          "Unplugged: Contracts": crwdns56199:0crwdne56199:0
+          "Eval: Writing Contracts": crwdns56200:0crwdne56200:0
+          "Calc: Defining Variables": crwdns56201:0crwdne56201:0
+          "Eval: Defining Functions": crwdns56202:0crwdne56202:0
+          "Unplugged: The Design Recipe": crwdns56203:0crwdne56203:0
+          "Play Lab: Defining Functions": crwdns56204:0crwdne56204:0
+          "Eval: Functions": crwdns56205:0crwdne56205:0
+        AlgebraB:
+          title: crwdns56206:0crwdne56206:0
+          description_short: crwdns56207:0crwdne56207:0
+          description: crwdns56208:0crwdne56208:0
+          "Unplugged: Video Games and Coordinate Planes": crwdns56209:0crwdne56209:0
+          "Play Lab: Defining Variables (Big Game)": crwdns56210:0crwdne56210:0
+          "Play Lab: Animation (Big Game)": crwdns56211:0crwdne56211:0
+          "Unplugged: Booleans": crwdns56212:0crwdne56212:0
+          "Eval: Boolean Operators": crwdns56213:0crwdne56213:0
+          "Play Lab: Booleans": crwdns56214:0crwdne56214:0
+          "Play Lab: Boolean (Big Game)": crwdns56215:0crwdne56215:0
+          "Unplugged: Conditionals and Piecewise Functions": crwdns56216:0crwdne56216:0
+          "Eval: Conditionals": crwdns56217:0crwdne56217:0
+          "Unplugged: Collision Detection and the Distance Formula": crwdns56218:0crwdne56218:0
+          "Play Lab: Collision Detection (Big Game)": crwdns56219:0crwdne56219:0

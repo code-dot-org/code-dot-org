@@ -663,6 +663,7 @@
     completed_perfect: Afsluttet, perfekt
     furthest_level_attempted: længst opnåede niveau
     assessment: vurdering
+    submitted: submitted
   studio:
     courses_working_on: Kurser du er i gang med
     completed_courses: Afsluttede kurser

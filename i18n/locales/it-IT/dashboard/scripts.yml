@@ -867,7 +867,7 @@ it:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -930,6 +930,7 @@ it:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -1328,6 +1329,8 @@ it:
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1598,6 +1601,7 @@ it:
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
           description_short: Data Apps
@@ -1611,3 +1615,31 @@ it:
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: "Impara la Programmazione Funzionale mediante l'Algebra"
+          description: "Impara la Programmazione Funzionale mediante l'Algebra"
+          "Calc: Evaluation Blocks": 'Calcolo: Blocchi di Valutazione'
+          "Eval: Strings and Images": 'Valutazione: Stringhe e Immagini'
+          "Unplugged: Contracts": 'Tradizionale &ndash; Contratti'
+          "Eval: Writing Contracts": 'Valutazione: Scrittura di Contratti'
+          "Calc: Defining Variables": 'Calcolo: Definizione di Variabili'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Tradizionale &ndash; La Ricetta della Progettazione'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+        AlgebraB:
+          title: Informatica in Algebra
+          description_short: "Impara la Programmazione Funzionale mediante l'Algebra"
+          description: "Impara la Programmazione Funzionale mediante l'Algebra"
+          "Unplugged: Video Games and Coordinate Planes": 'Tradizionale &ndash; Videogiochi e Piani Cartesiani'
+          "Play Lab: Defining Variables (Big Game)": 'Laboratorio: Definizione di Variabili (Big Game)'
+          "Play Lab: Animation (Big Game)": 'Laboratorio: Animazione (Big Game)'
+          "Unplugged: Booleans": 'Tradizionale &ndash; Valori Booleani'
+          "Eval: Boolean Operators": 'Valutazione: Operatori Booleani'
+          "Play Lab: Booleans": 'Laboratorio: Valori Booleani'
+          "Play Lab: Boolean (Big Game)": 'Laboratorio: Valori Booleani (Big Game)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Tradizionale &ndash; Istruzioni Condizionali e Funzioni a Tratti'
+          "Eval: Conditionals": 'Valutazione: Istruzioni Condizionali'
+          "Unplugged: Collision Detection and the Distance Formula": 'Tradizionale &ndash; Rilevamento delle Collisioni e Formula per la Distanza'
+          "Play Lab: Collision Detection (Big Game)": 'Laboratorio: Rilevamento delle Collisioni (Big Game)'

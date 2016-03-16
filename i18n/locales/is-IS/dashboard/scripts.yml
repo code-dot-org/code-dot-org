@@ -865,7 +865,7 @@ is:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -928,6 +928,7 @@ is:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Stúdíó
+          Long assessment: Long assessment
         algebraPD2b:
           title: 'Tölvunarfræði í algebru - fagmenntun'
           description: '2. áfangi á neti: Blandað sumarnám'
@@ -1326,6 +1327,8 @@ is:
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1596,6 +1599,7 @@ is:
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
           description_short: Data Apps
@@ -1609,3 +1613,31 @@ is:
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Læra fallmiðaða forritun í gegnum algebru
+          description: Læra fallmiðaða forritun í gegnum algebru
+          "Calc: Evaluation Blocks": 'Reikningur: Matskubbar'
+          "Eval: Strings and Images": 'Greining: Strengir og myndir'
+          "Unplugged: Contracts": 'Verkefni án tölvu: Samningar'
+          "Eval: Writing Contracts": 'Greining: Ritun samninga'
+          "Calc: Defining Variables": 'Reiknir: Skilgreining breytna'
+          "Eval: Defining Functions": 'Mat: Skilgreining falla'
+          "Unplugged: The Design Recipe": 'Verkefni án tölvu: Hönnunaruppskriftin'
+          "Play Lab: Defining Functions": 'Leikjasmiðjan: Skilgreining á föllum'
+          "Eval: Functions": 'Mat: Föll'
+        AlgebraB:
+          title: Tölvunarfræði í algebru
+          description_short: Læra fallmiðaða forritun í gegnum algebru
+          description: Læra fallmiðaða forritun í gegnum algebru
+          "Unplugged: Video Games and Coordinate Planes": 'Verkefni án tölvu: Tölvuleikir og hnitakerfi'
+          "Play Lab: Defining Variables (Big Game)": 'Leikjasmiðjan: Skilgreina breytur (Stórleikur)'
+          "Play Lab: Animation (Big Game)": 'Leikjasmiðjan: Hreyfing (Stórleikur)'
+          "Unplugged: Booleans": 'Verkefni án tölvu: Boolean gildi'
+          "Eval: Boolean Operators": 'Greining: Boolean virkjar'
+          "Play Lab: Booleans": 'Leikjasmiðjan: Boolean gildi'
+          "Play Lab: Boolean (Big Game)": 'Leikjasmiðjan: Boolean gildi (Stórleikur)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Verkefni án tölvu: Skilyrði og Piecewise föll'
+          "Eval: Conditionals": 'Greining: Skilyrði'
+          "Unplugged: Collision Detection and the Distance Formula": 'Verkefni án tölvu: Skynjun árekstra og fjarlægðarformúlan'
+          "Play Lab: Collision Detection (Big Game)": 'Leikjasmiðjan: Skynjun árekstra (Stórleikur)'

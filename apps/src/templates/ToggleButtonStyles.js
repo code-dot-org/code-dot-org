@@ -1,4 +1,4 @@
-/** @file Reusable styles for components used by PlaySpaceHeader. */
+/** @file Reusable styles for interface mode toggle buttons. */
 
 module.exports = {
   buttonStyle: {

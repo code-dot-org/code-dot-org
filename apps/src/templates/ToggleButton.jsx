@@ -1,7 +1,7 @@
 /** @file Button that can be active or inactive, for use inside ToggleGroup */
 /* global $ */
 
-var styles = require('./PlaySpaceHeaderStyles');
+var styles = require('./ToggleButtonStyles');
 
 var ToggleButton = React.createClass({
   propTypes: {
