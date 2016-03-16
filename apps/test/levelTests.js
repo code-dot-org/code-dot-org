@@ -16,6 +16,8 @@ var React = require('react');
 var sinon = require('sinon');
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
+require("@cdo/shared/details-polyfill/details-polyfill");
+require("@cdo/shared/details-polyfill/jquery.details");
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
