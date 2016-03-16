@@ -1027,6 +1027,7 @@ Applab.reset = function(first) {
   }
 
   // Reset configurable variables
+  Applab.message = null;
   delete Applab.activeCanvas;
   Applab.turtle = {};
   Applab.turtle.heading = 0;
@@ -1191,6 +1192,7 @@ var displayFeedback = function() {
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Applab.response && Applab.response.save_to_gallery_url,
+      message: Applab.message,
       appStrings: {
         reinfFeedbackMsg: applabMsg.reinfFeedbackMsg(),
         sharingText: applabMsg.shareGame()
@@ -1277,6 +1279,7 @@ Applab.execute = function() {
       // Create a new interpreter for this run
       Applab.JSInterpreter = new JSInterpreter({
         studioApp: studioApp,
+        logExecution: !!level.logConditions,
         shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
         maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK
       });
@@ -1297,6 +1300,9 @@ Applab.execute = function() {
         blockFilter: level.executePaletteApisOnly && level.codeFunctions,
         enableEvents: true
       });
+      // Maintain a reference here so we can still examine this after we
+      // discard the JSInterpreter instance during reset
+      Applab.currentExecutionLog = Applab.JSInterpreter.executionLog;
       if (!Applab.JSInterpreter.initialized()) {
         return;
       }
@@ -1398,6 +1404,68 @@ Applab.showConfirmationDialog = function(config) {
   dialog.show();
 };
 
+/**
+ * Get a testResult and message value based on an examination of the
+ * executionLog against the level's logConditions
+ *
+ * @returns {!Object}
+ */
+Applab.getResultsFromLog = function () {
+  var results = {
+    testResult: TestResults.ALL_PASS,
+  };
+  level.logConditions.forEach(function (condition, index) {
+    var testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
+    var exact;
+
+    /*
+     * 'exact' or 'inexact' match will search a sequence. 'exact' requires that
+     * no other entries appear within the pattern.
+     *
+     * @param {!Object} condition
+     * @param {string} [condition.matchType] 'exact', 'inexact'
+     * @param {number} [condition.minTimes] number of matches required
+     * @param {string[]} [condition.entries] function or statement names
+     * @param {string} [condition.message] message to display if condition fails
+     */
+    switch (condition.matchType) {
+      case 'exact':
+        exact = true;
+        // Fall through
+      case 'inexact':
+        var entryIndex = 0, matchedSequences = 0;
+        for (var i = 0; i < Applab.currentExecutionLog.length; i++) {
+          if (Applab.currentExecutionLog[i] === condition.entries[entryIndex]) {
+            entryIndex++;
+            if (entryIndex >= condition.entries.length) {
+              entryIndex = 0;
+              matchedSequences++;
+              if (matchedSequences >= condition.minTimes) {
+                testResult = TestResults.ALL_PASS;
+                break;
+              }
+            }
+          } else if (exact) {
+            // Start back at the beginning of the sequence if we didn't match
+            entryIndex = 0;
+          }
+        }
+        break;
+      default:
+        testResult = TestResults.ALL_PASS;
+        break;
+    }
+    // We want to remember the lowest test result value and message (100 is
+    // ALL_PASS, all other errors are lower numbers)
+    if (testResult < results.testResult) {
+      results.testResult = testResult;
+      results.message = condition.message;
+    }
+  });
+
+  return results;
+};
+
 Applab.onPuzzleSubmit = function() {
   Applab.showConfirmationDialog({
     title: commonMsg.submitYourProject(),
@@ -1445,6 +1513,10 @@ Applab.onPuzzleComplete = function(submit) {
     Applab.testResults = studioApp.getTestResults(levelComplete, {
         executionError: Applab.executionError
     });
+  } else if (level.logConditions) {
+    var results = Applab.getResultsFromLog();
+    Applab.testResults = results.testResult;
+    Applab.message = results.message;
   } else if (!submit) {
     Applab.testResults = TestResults.FREE_PLAY;
   }

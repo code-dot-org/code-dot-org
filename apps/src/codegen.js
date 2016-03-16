@@ -3,6 +3,15 @@
 var dropletUtils = require('./dropletUtils');
 var utils = require('./utils');
 
+/** @const {number} */
+exports.FOR_STATEMENT_MODE_INIT = 0;
+/** @const {number} */
+exports.FOR_STATEMENT_MODE_TEST = 1;
+/** @const {number} */
+exports.FOR_STATEMENT_MODE_BODY = 2;
+/** @const {number} */
+exports.FOR_STATEMENT_MODE_UPDATE = 3;
+
 /**
  * Evaluates a string of code parameterized with a dictionary.
  */
@@ -793,14 +802,19 @@ exports.selectCurrentCode = function (interpreter,
 
     if (node.type === 'ForStatement') {
       var mode = interpreter.stateStack[0].mode || 0, subNode;
-      if (mode === 0) {
-        subNode = node.init;
-      } else if (mode === 1) {
-        subNode = node.test;
-      } else if (mode === 2) {
-        subNode = node.body;
-      } else if (mode === 3) {
-        subNode = node.update;
+      switch (mode) {
+        case exports.FOR_STATEMENT_MODE_INIT:
+          subNode = node.init;
+          break;
+        case exports.FOR_STATEMENT_MODE_TEST:
+          subNode = node.test;
+          break;
+        case exports.FOR_STATEMENT_MODE_BODY:
+          subNode = node.body;
+          break;
+        case exports.FOR_STATEMENT_MODE_UPDATE:
+          subNode = node.update;
+          break;
       }
       node = subNode || node;
     }

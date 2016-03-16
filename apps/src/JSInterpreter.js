@@ -44,6 +44,8 @@ var JSInterpreter = module.exports = function (options) {
   this.executeLoopDepth = 0;
   this.callExpressionSeenAtDepth = [];
   this.stoppedAtBreakpointRows = [];
+  this.logExecution = options.logExecution;
+  this.executionLog = [];
 };
 
 /**
@@ -84,8 +86,20 @@ JSInterpreter.prototype.parse = function (options) {
     codegen.createNativeFunctionFromInterpreterFunction = function (intFunc) {
       return function () {
         if (self.initialized()) {
-          self.queueEvent(intFunc, arguments);
-          
+
+          // Convert arguments to array in fastest way possible and avoid
+          // "Bad value context for arguments variable" de-optimization
+          // http://jsperf.com/array-with-and-without-length/5
+          var args = new Array(arguments.length);
+          for (var i = 0; i < arguments.length; i++) {
+            args[i] = arguments[i];
+          }
+
+          self.eventQueue.push({
+            'fn': intFunc,
+            'arguments': args
+          });
+
           if (self.executeLoopDepth === 0) {
             // Execute the interpreter and if a return value is sent back from the
             // interpreter's event handler, pass that back in the native world
@@ -237,17 +251,6 @@ JSInterpreter.prototype.nativeSetCallbackRetVal = function (retVal) {
           "slider to its maximum value)");
     }
   }
-};
-
-/**
- * Queue an event to be fired in the interpreter. The nativeArgs are optional.
- * The function must be an interpreter function object (not native).
- */
-JSInterpreter.prototype.queueEvent = function (interpreterFunc, nativeArgs) {
-  this.eventQueue.push({
-    'fn': interpreterFunc,
-    'arguments': nativeArgs ? Array.prototype.slice.call(nativeArgs) : []
-  });
 };
 
 /**
@@ -488,6 +491,9 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     if (inUserCode && unwindingAfterStep) {
       this.replaceStoppedAtBreakpointRowForScope(currentScope, userCodeRow);
     }
+    if (this.logExecution) {
+      this.logStep_();
+    }
     this.executionError = safeStepInterpreter(this);
     if (!this.executionError && this.interpreter.stateStack.length) {
       var state = this.interpreter.stateStack[0], nodeType = state.node.type;
@@ -582,6 +588,97 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     this.selectCurrentCode();
   }
   this.executeLoopDepth--;
+};
+
+/**
+ * Checks to the see if the supplied node is from the user code range.
+ *
+ * @param {!Object} node supplied by acorn parse.
+ * @return {boolean} true if the node is in user code.
+ * @private
+ */
+JSInterpreter.prototype.isNodeInUserCode_ = function (node) {
+  if (typeof node.start === 'undefined' || typeof this.codeInfo === 'undefined') {
+    return false;
+  }
+  var start = node.start - this.codeInfo.userCodeStartOffset;
+
+  return start >= 0 && start < this.codeInfo.userCodeLength;
+};
+
+/**
+ * Convert MemberExpression node to a string
+ *
+ * @param {!Object} node supplied by acorn parse.
+ * @return {string} Name.
+ * @private
+ */
+JSInterpreter.getMemberExpressionName_ = function (node) {
+  var objectString;
+  switch (node.object.type) {
+    case "MemberExpression":
+      objectString = this.getMemberExpressionName_(node.object);
+      break;
+    case "Identifier":
+      objectString = node.object.name;
+      break;
+    default:
+      throw "Unexpected MemberExpression node object type: " + node.object.type;
+  }
+  var propString;
+  switch (node.property.type) {
+    case "Identifier":
+      propString = "." + node.property.name;
+      break;
+    case "Literal":
+      propString = "[" + node.property.value + "]";
+      break;
+    default:
+      throw "Unexpected MemberExpression node property type: " + node.object.type;
+  }
+  return objectString + propString;
+};
+
+/**
+ * If necessary, add information to the executionLog about the upcoming
+ * interpreter step operation.
+ *
+ * @private
+ */
+JSInterpreter.prototype.logStep_ = function () {
+  var state = this.interpreter.stateStack[0];
+  var node = state.node;
+
+  if (!this.isNodeInUserCode_(node)) {
+    return;
+  }
+
+  if ((node.type === "CallExpression" || node.type === "NewExpression") &&
+      !state.doneCallee_) {
+    switch (node.callee.type) {
+      case "Identifier":
+        this.executionLog.push(node.callee.name);
+        break;
+      case "MemberExpression":
+        this.executionLog.push(JSInterpreter.getMemberExpressionName_(node.callee));
+        break;
+      default:
+        throw "Unexpected callee node property type: " + node.object.type;
+    }
+  } else if (node.type === "ForStatement") {
+    var mode = state.mode || 0;
+    switch (mode) {
+      case codegen.FOR_STATEMENT_MODE_INIT:
+        this.executionLog.push("[forInit]");
+        break;
+      case codegen.FOR_STATEMENT_MODE_TEST:
+        this.executionLog.push("[forTest]");
+        break;
+      case codegen.FOR_STATEMENT_MODE_UPDATE:
+        this.executionLog.push("[forUpdate]");
+        break;
+    }
+  }
 };
 
 /**
