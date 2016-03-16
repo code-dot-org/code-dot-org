@@ -148,7 +148,7 @@ class ScriptLevel < ActiveRecord::Base
   def self.summarize_extra_puzzle_pages(last_level_summary)
     extra_levels = []
     level = Script.cache_find_level(last_level_summary[:id])
-    extra_level_count = level[:properties]["pages"].length - 1
+    extra_level_count = level.properties["pages"].length - 1
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
       new_level[:url] << "/page/#{page_index + 1}"
