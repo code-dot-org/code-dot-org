@@ -624,8 +624,14 @@ When(/^I sign out$/) do
 end
 
 When(/^I debug cookies$/) do
-  puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
-  debug_cookies(@browser.manage.all_cookies)
+  if @browser
+    if @browser.send(:bridge).browser == :MicrosoftEdge
+      puts "MicrosoftEdge cannot manage/delete cookies"
+    else
+      puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
+      debug_cookies(@browser.manage.all_cookies)
+    end
+  end
 end
 
 When(/^I debug focus$/) do

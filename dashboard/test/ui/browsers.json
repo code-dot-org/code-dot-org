@@ -4,26 +4,32 @@
   {
     "name": "ChromeLatestWin7",
     "browserName": "chrome",
-    "version": "",
+    "version": "latest",
     "platform": "Windows 7"
   },
   {
-    "name": "Chrome44XP",
+    "name": "ChromePreviousWin7",
     "browserName": "chrome",
-    "version": "44.0",
-    "platform": "Windows XP"
+    "version": "latest-1",
+    "platform": "Windows 7"
   },
   {
-    "name": "SafariYosemite",
+    "name": "SafariLatest",
+    "browserName": "Safari",
+    "platform": "OS X 10.11",
+    "version": "latest"
+  },
+  {
+    "name": "Safari8Yosemite",
     "browserName": "Safari",
     "platform": "OS X 10.10",
     "version": "8.0"
   },
   {
-    "name": "IE9Win7",
+    "name": "IELatestWin10",
     "browserName": "Internet Explorer",
-    "version": "9.0",
-    "platform": "Windows 7"
+    "version": "latest",
+    "platform": "Windows 10"
   },
   {
     "name": "IE10Win7",
@@ -32,22 +38,28 @@
     "platform": "Windows 7"
   },
   {
-    "name": "IE11Win10",
+    "name": "IE9Win7",
     "browserName": "Internet Explorer",
-    "version": "11.0",
+    "version": "9.0",
+    "platform": "Windows 7"
+  },
+  {
+    "name": "MSEdgeLatestWin10",
+    "browserName": "MicrosoftEdge",
+    "version": "latest",
     "platform": "Windows 10"
   },
   {
-    "name": "Firefox38Yosemite",
+    "name": "FirefoxLatestElCapitan",
     "browserName": "firefox",
-    "version": "38.0",
-    "platform": "OS X 10.10"
+    "version": "latest",
+    "platform": "OS X 10.11"
   },
   {
-    "name": "Firefox39Win7",
+    "name": "FirefoxPreviousWin10",
     "browserName": "firefox",
-    "version": "39.0",
-    "platform": "Windows 7"
+    "version": "latest-1",
+    "platform": "Windows 10"
   },
   {
     "name": "iPhone",
@@ -72,3 +84,18 @@
     "rotatable": true
   }
 ]
+
+// Top browsers as of Mar 15 2016:
+// Browser	Browser Version	Sessions
+// Chrome	48	3,596,078	42.86% (latest)
+// Internet Explorer	11	967,261	11.53% (latest)
+// Safari	9	717,540	8.55% (latest)
+// Chrome	47	318,167	3.79%
+// Firefox	44	261,763	3.12% (latest)
+// Safari	8	162,841	1.94%
+// Internet Explorer	10	113,396	1.35%
+// Safari (in-app)	(not set)	78,201	0.93%
+// Edge	13.10586	76,721	0.91%
+// Firefox	43	76,134	0.91%
+// Firefox	38	74,751	0.89%
+// Internet Explorer	9	64,654	0.77%

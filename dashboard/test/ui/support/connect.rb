@@ -91,15 +91,23 @@ Before do
 
   if slow_browser?
     browser ||= get_browser
-    p 'slow browser, using existing'
+    puts 'slow browser, using existing'
     @browser ||= browser
   else
-    p 'fast browser, getting a new one'
+    puts 'fast browser, getting a new one'
     @browser = get_browser
   end
-  @browser.manage.delete_all_cookies
 
-  debug_cookies(@browser.manage.all_cookies) if @browser
+  puts @browser.send(:bridge).browser
+
+  if @browser
+    if @browser.send(:bridge).browser == :MicrosoftEdge
+      puts "MicrosoftEdge cannot manage/delete cookies"
+    else
+      @browser.manage.delete_all_cookies
+      debug_cookies @browser.manage.all_cookies
+    end
+  end
 
   unless ENV['TEST_LOCAL'] == 'true'
     unless @sauce_session_id

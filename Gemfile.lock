@@ -436,9 +436,8 @@ GEM
       rdoc (~> 4.0, < 5.0)
     seamless_database_pool (1.0.14)
       activerecord (>= 3.0.20)
-    selenium-webdriver (2.45.0)
+    selenium-webdriver (2.53.0)
       childprocess (~> 0.5)
-      multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     sequel (4.10.0)
@@ -623,7 +622,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   seamless_database_pool
-  selenium-webdriver (~> 2.45.0)
+  selenium-webdriver (~> 2.53.0)
   sequel (~> 4.10.0)
   shotgun
   simplecov (~> 0.9)
