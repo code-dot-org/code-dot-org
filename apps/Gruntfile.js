@@ -338,7 +338,7 @@ module.exports = function (grunt) {
       ' -g [ browserify-global-shim ]' +
       ' --cachefile ' + outputDir + 'browserifyinc-cache.json' +
       ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
-      (envOptions.dev ? '' : ' -t [ loose-envify --NODE_ENV production ]') +
+      (envOptions.dev ? '' : ' -t loose-envify') +
       ' -d ' + allFilesSrc.join(' ') +
       (
           APPS.length > 1 ?
