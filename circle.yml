@@ -23,8 +23,6 @@ dependencies:
     - bundle install --without ''
     - 'echo "bundler_use_sudo: false" >> locals.yml'
     - 'echo "npm_use_sudo: false" >> locals.yml'
-    - 'echo "assets_s3_directory: assets_circle/$RANDOM" >> locals.yml'
-    - 'echo "sources_s3_directory: sources_circle/$RANDOM" >> locals.yml'
     - 'echo "properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY" >> locals.yml'
     - 'echo "saucelabs_username: $SAUCE_USERNAME" >> locals.yml'
     - 'echo "saucelabs_authkey: $SAUCE_ACCESS_KEY" >> locals.yml'
