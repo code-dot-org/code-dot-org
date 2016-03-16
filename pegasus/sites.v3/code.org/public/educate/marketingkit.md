@@ -6,37 +6,34 @@ nav: educate_nav
 
 Here is how you can promote your school's new computer science program:
 
-## 1) Show one of these videos at a school-wide assembly, or ask counselors to share with students. 
+## 1) Play these videos for students.
+Teachers, administrators, or counselors can inspire all students to take a computer science course by playing one of these videos at a school-wide assembly. 
 
 [col-50]
 ### Sign up for Computer Science (general)
-<div style="margin-left: 20px;">
 
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "xgOYvG1WAbM", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "signup", video_code: "xgOYvG1WAbM", play_button: 'center' %>
 
-</div>
+[**YouTube**](http://www.youtube.com/watch?v=xgOYvG1WAbM) | [**Download**](https://www.dropbox.com/s/pkj38135cqegu29/CS-high-school-pitch-GENERAL.mp4?dl=0)
 
-[**YouTube**](http://www.youtube.com/watch?v=xgOYvG1WAbM) | [**Download**](https://)
+[/col-50]
 
-
-<div style="clear: both;"></div>
+[col-50]
 
 
 ### Sign up for AP Computer Science Principles
 
-<div style="margin-left: 20px;">
-
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center' %>
 
-</div>
-
 [**YouTube**](http://www.youtube.com/watch?v=jQm0z894CG0) | 
-[**Download**](https://)
+[**Download**](https://www.dropbox.com/s/4olrpah7c2jo3gf/CSP_Students_v4.mp4?dl=0)
+
 [/col-50]
 
-<div style="clear: both;"></div>
+<p style="clear:both">&nbsp;</p>
 
 ## 2) Use [these resources] (/educate/resources/inspire) to help inspire students
+With these videos, posters, student and teacher testimonials, and other materials, you have the resources you'll need to recruit students in your school to take a computer science course. Find them at [code.org/educate/resources/inspire](/educate/resources/inspire). 
 
 ## 3) Print and send home one of these fliers:
 [CS in Algebra](/files/CSinAlgebra_one_pager.pdf)<br/>

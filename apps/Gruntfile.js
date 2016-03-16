@@ -262,7 +262,7 @@ module.exports = function (grunt) {
           'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
           'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
           'last', 'clone', 'cloneDeep', 'isEqual', 'find', 'sortBy', 'throttle',
-          'uniq'
+          'uniq', 'assign'
         ]
       }
     }
@@ -332,11 +332,13 @@ module.exports = function (grunt) {
   });
 
   // Use command-line tools to run browserify (faster/more stable this way)
-  var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc' +
+  var browserifyExec = 'mkdir -p build/browserified &&' +
+      (envOptions.dev ? '' : ' NODE_ENV=production') + // Necessary for production Redux
+      ' `npm bin`/browserifyinc' +
       ' -g [ browserify-global-shim ]' +
       ' --cachefile ' + outputDir + 'browserifyinc-cache.json' +
       ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
-      (envOptions.dev ? '' : ' -t [ envify --NODE_ENV production ]') +
+      (envOptions.dev ? '' : ' -t loose-envify') +
       ' -d ' + allFilesSrc.join(' ') +
       (
           APPS.length > 1 ?

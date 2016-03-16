@@ -211,6 +211,13 @@ GameLabP5.prototype.resetExecution = function () {
     window.p5.prototype.camera = new window.Camera(0, 0, 1);
     window.p5.prototype.camera.init = false;
 
+    window.p5.prototype.quadTree = new window.Quadtree({
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    }, 4);
+
     //keyboard input
     window.p5.prototype.registerMethod('pre', window.p5.prototype.readPresses);
 

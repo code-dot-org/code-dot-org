@@ -753,7 +753,7 @@ $height-to-width: 434 / 477;
     @include mc-x-close-button();
   }
 
-  .modal-content .lines-of-code-message {
+  .modal-content .lines-of-code-message, .show-code summary {
     color: $lighter_gray;
   }
 
@@ -761,6 +761,10 @@ $height-to-width: 434 / 477;
     margin-left: -100px;
     html[dir=rtl] & {
       margin-right: -100px;
+      margin-left: 0;
+    }
+
+    .generated-code-container {
       margin-left: 0;
     }
   }
