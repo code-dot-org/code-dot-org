@@ -67,8 +67,8 @@ class ScriptLevelsController < ApplicationController
     # In the case of the puzzle_page, send it through to be included in the
     # generation of the script level path.
     extra_params = {}
-    if (params["puzzle_page"])
-      extra_params[:puzzle_page] = params["puzzle_page"]
+    if (params[:puzzle_page])
+      extra_params[:puzzle_page] = params[:puzzle_page]
     end
 
     if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))

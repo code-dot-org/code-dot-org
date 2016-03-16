@@ -30,6 +30,8 @@
 :javascript
   #{render template: 'levels/multi.js', formats: [:js]}
 
+  #{render template: 'levels/levelGroup.js', formats: [:js]}
+
   var levelCount = #{data["pages"][page].length};
   var page = #{page || -1};
 
@@ -40,4 +42,14 @@
 
   var lastAttempt = #{@last_attempt || []};
 
-  #{render template: 'levels/levelGroup.js', formats: [:js]}
+  $(document).ready(function() {
+    initLevelGroup(
+      levelCount,
+      page,
+      fallbackResponse,
+      callback,
+      app,
+      level,
+      lastAttempt
+    );
+  });

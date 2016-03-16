@@ -1,62 +1,13 @@
-/* global levelCount, page, fallbackResponse, callback, app, level, lastAttempt, sendReport, appOptions, Dialog */
+/* global sendReport, appOptions, Dialog */
 
-window.getResult = function()
-{
-  // Construct an array of all the level results.
-  // When submitted it's something like this:
-  //
-  //   [{"level_id":1977,"result":"0"},{"level_id":2007,"result":"3"},{"level_id":1939,"result":"2,1"}]
-  //
-
-  // Add any new results to the existing lastAttempt results.
-  for (var i = 0; i < levelCount; i++)
-  {
-    var multiName = "multi_" + i;
-    var multiResult = window[multiName].getCurrentAnswer().toString();
-    var levelId = window[multiName].getLevelId();
-
-    // But before storing, if we had a previous result for the same level,
-    // remove that from the array, since we want to overwrite that previous
-    // answer.
-    for (var j = lastAttempt.length - 1; j >= 0; j--)
-    {
-      if (lastAttempt[j].level_id == levelId)
-      {
-        lastAttempt.splice(j, 1);
-      }
-    }
-
-    lastAttempt.push({level_id: levelId, result: multiResult});
-  }
-
-  var response = JSON.stringify(lastAttempt);
-
-
-  var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
-
-  var result;
-  var submitted;
-
-  if (window.appOptions.level.submittable || this.forceSubmittable)
-  {
-    result = true;
-    submitted = true;
-  }
-  else
-  {
-    result = true; // this.validateAnswers();
-    submitted = false;
-  }
-
-  return {
-    "response": response,
-    "result": true,
-    "errorType": null,
-    "submitted": submitted
-  };
-};
-
-$(document).ready(function() {
+function initLevelGroup(
+  levelCount,
+  page,
+  fallbackResponse,
+  callback,
+  app,
+  level,
+  lastAttempt) {
 
   // Are we read-only?  This can be because we're a teacher OR because an answer
   // has been previously submitted.
@@ -72,6 +23,62 @@ $(document).ready(function() {
       $('.unsubmitButton').show();
     }
   }
+
+  window.getResult = function()
+  {
+    // Construct an array of all the level results.
+    // When submitted it's something like this:
+    //
+    //   [{"level_id":1977,"result":"0"},{"level_id":2007,"result":"3"},{"level_id":1939,"result":"2,1"}]
+    //
+
+    // Add any new results to the existing lastAttempt results.
+    for (var i = 0; i < levelCount; i++)
+    {
+      var multiName = "multi_" + i;
+      var multiResult = window[multiName].getCurrentAnswer().toString();
+      var levelId = window[multiName].getLevelId();
+
+      // But before storing, if we had a previous result for the same level,
+      // remove that from the array, since we want to overwrite that previous
+      // answer.
+      for (var j = lastAttempt.length - 1; j >= 0; j--)
+      {
+        if (lastAttempt[j].level_id == levelId)
+        {
+          lastAttempt.splice(j, 1);
+        }
+      }
+
+      lastAttempt.push({level_id: levelId, result: multiResult});
+    }
+
+    var response = JSON.stringify(lastAttempt);
+
+
+    var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
+
+    var result;
+    var submitted;
+
+    if (window.appOptions.level.submittable || this.forceSubmittable)
+    {
+      result = true;
+      submitted = true;
+    }
+    else
+    {
+      result = true; // this.validateAnswers();
+      submitted = false;
+    }
+
+    return {
+      "response": response,
+      "result": true,
+      "errorType": null,
+      "submitted": submitted
+    };
+  };
 
   $(".nextPageButton").click($.proxy(function(event) {
 
@@ -135,4 +142,4 @@ $(document).ready(function() {
     });
   });
 
-});
+}

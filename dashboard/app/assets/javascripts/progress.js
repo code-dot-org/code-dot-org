@@ -80,15 +80,14 @@ window.dashboard.progress = (function () {
     var serverProgress = progressData.levels || {};
     var currentLevelIndex = null;
 
-    // Determine currentLevelIndex from the URL's /puzzle/XX value.
-    var parsedLevelIndex = window.location.pathname.match(/\/puzzle\/(\d+)/);
-    if (parsedLevelIndex && parsedLevelIndex.length > 1) {
-      currentLevelIndex = parseInt(parsedLevelIndex[1]) - 1;
-    } else {
-      return;
-    }
-
     var combinedProgress = stageData.levels.map(function(level, index) {
+      // Determine the current level index.
+      // However, because long assessments can have the same level appearing
+      // multiple times, just set this the first time it's determined.
+      if (level.id === currentLevelId && currentLevelIndex === null) {
+         currentLevelIndex = index;
+      }
+
       var status;
       if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
         status = "submitted";
@@ -111,7 +110,7 @@ window.dashboard.progress = (function () {
       };
     });
 
-    if (puzzlePage !== -1) {
+    if (currentLevelIndex !== null && puzzlePage !== -1) {
       currentLevelIndex += puzzlePage - 1;
     }
 
