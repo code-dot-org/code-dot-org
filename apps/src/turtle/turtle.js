@@ -210,7 +210,7 @@ Artist.prototype.init = function(config) {
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
-  var renderCodeWorkspace = function () {
+  var generateCodeWorkspaceHtmlFromEjs = function () {
     return codeWorkspaceEjs({
       assetUrl: this.studioApp_.assetUrl,
       data: {
@@ -224,7 +224,7 @@ Artist.prototype.init = function(config) {
     });
   }.bind(this);
 
-  var renderVisualizationColumn = function () {
+  var generateVisualizationColumnHtmlFromEjs = function () {
     return visualizationColumnEjs({
       assetUrl: this.studioApp_.assetUrl,
       data: {
@@ -238,8 +238,8 @@ Artist.prototype.init = function(config) {
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
-    renderCodeWorkspace: renderCodeWorkspace,
-    renderVisualizationColumn: renderVisualizationColumn,
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: this.studioApp_.init.bind(this.studioApp_, config)
   }), document.getElementById(config.containerId));
 };

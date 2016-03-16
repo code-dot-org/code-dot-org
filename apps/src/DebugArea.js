@@ -179,6 +179,7 @@ DebugArea.prototype.slideShut = function () {
 DebugArea.prototype.setContentsVisible = function (isVisible) {
   this.rootDiv_.find('#debug-commands').toggle(isVisible);
   this.rootDiv_.find('#debug-console').toggle(isVisible);
+  this.rootDiv_.find('#debug-watch').toggle(isVisible);
 };
 
 DebugArea.prototype.setIconPointingDown = function (isPointingDown) {

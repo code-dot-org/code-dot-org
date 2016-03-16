@@ -71,7 +71,11 @@ class HipChat
     end
 
     # Make the initial request synchronously.
-    succeeded = post_hipchat_form(room, message, options).is_a?(Net::HTTPSuccess)
+    begin
+      succeeded = post_hipchat_form(room, message, options).is_a?(Net::HTTPSuccess)
+    rescue  # Handle timeouts and other exceptions gracefully.
+      succeeded = false
+    end
     return if succeeded
 
     # If that failed, back off exponentially and retry, working
