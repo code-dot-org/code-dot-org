@@ -85,6 +85,7 @@ $debug-area-initial-height: 120px;
   .workspace-header-button {
     background-color: $lightest_purple;
     color: $charcoal;
+    margin-right: 6px;
 
     &:hover {
       background-color: $cyan;
@@ -114,18 +115,28 @@ $debug-area-initial-height: 120px;
 }
 
 $debug-commands-column-width: 270px;
+$debug-console-min-column-width: 130px;
+$debug-watch-max-column-width: 150px;
+$debug-header-border-width: 1px;
 
 #debug-commands-header {
   width: $debug-commands-column-width;
   float: left;
-  border-right: 1px solid gray;
+  border-right: $debug-header-border-width solid gray;
 
   .fa {
     margin: 0 0.25em;
   }
 }
 
-.debug-commands, .debug-console {
+#debug-watch-header {
+  width: $debug-watch-max-column-width + $debug-header-border-width;
+  max-width: calc(100% - #{$debug-commands-column-width} - #{$debug-console-min-column-width} + #{$debug-header-border-width});
+  float: right;
+  border-left: $debug-header-border-width solid gray;
+}
+
+.debug-commands, .debug-console, .debug-watch {
   display: block;
   background-color: $white;
   border: 1px solid #ddd;
@@ -140,12 +151,40 @@ $debug-commands-column-width: 270px;
   text-align: center;
 }
 
+.debug-watch {
+  &.no-commands {
+    max-width: calc(100% - #{$debug-console-min-column-width});
+  }
+  right: 0;
+  width: $debug-watch-max-column-width;
+  max-width: calc(100% - #{$debug-commands-column-width} - #{$debug-console-min-column-width});
+  font-family: monospace;
+  font-size: 12px;
+  overflow-y: scroll;
+}
+
+.debug-watch-item {
+  margin: 0 5px;
+  line-height: 14px;
+
+  .watch-variable, .watch-separator {
+    color: purple;
+  }
+  .watch-unavailable {
+    color: red;
+  }
+}
+
 .debug-console {
-  &.full {
+  &.no-commands {
     left: 0;
   }
+  &.no-watch {
+    right: 0;
+  }
   left: $debug-commands-column-width;
-  right: 0;
+  right: $debug-watch-max-column-width;
+  min-width: $debug-console-min-column-width
 }
 
 .debug-console * {

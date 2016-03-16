@@ -108,11 +108,15 @@ JSInterpreter.prototype.parse = function (options) {
     self.interpreter = interpreter;
     // Store globalScope on JSInterpreter
     self.globalScope = scope;
-    // Override Interpreter's get/set Property functions with JSInterpreter
+    // Override Interpreter's get/has/set Property functions with JSInterpreter
     interpreter.getProperty = self.getProperty.bind(
         self,
         interpreter,
         interpreter.getProperty);
+    interpreter.hasProperty = self.hasProperty.bind(
+        self,
+        interpreter,
+        interpreter.hasProperty);
     // Store this for later because we need to bypass our overriden function
     // in createGlobalProperty()
     self.baseSetProperty = interpreter.setProperty;
@@ -659,6 +663,36 @@ JSInterpreter.prototype.getProperty = function (
 };
 
 /**
+ * Wrapper to Interpreter's hasProperty (extended for custom marshaling)
+ *
+ * Does the named property exist on a data object.
+ * @param {!Object} interpeter Interpreter instance.
+ * @param {!Function} baseHasProperty Original hasProperty() implementation.
+ * @param {!Object} obj Data object.
+ * @param {*} name Name of property.
+ * @return {boolean} True if property exists.
+ */
+JSInterpreter.prototype.hasProperty = function (
+    interpreter,
+    baseHasProperty,
+    obj,
+    name) {
+  name = name.toString();
+  var nativeParent;
+  if (obj.isCustomMarshal ||
+      (obj === this.globalScope &&
+          (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
+    if (obj.isCustomMarshal) {
+      return name in obj.data;
+    } else {
+      return name in nativeParent;
+    }
+  } else {
+    return baseHasProperty.call(interpreter, obj, name);
+  }
+};
+
+/**
  * Wrapper to Interpreter's setProperty (extended for custom marshaling)
  *
  * Set a property value on a data object.
@@ -804,6 +838,74 @@ JSInterpreter.prototype.createGlobalProperty = function (name, value, parent) {
 };
 
 /**
+ * Slightly modified version of interpreter's getValueFromScope. Does not
+ * throw an exception that can be caught by the interpreted program.
+ */
+JSInterpreter.prototype.getValueFromScope = function (name) {
+  var scope = this.interpreter.getScope();
+  while (scope) {
+    if (this.interpreter.hasProperty(scope, name)) {
+      return this.interpreter.getProperty(scope, name);
+    }
+    scope = scope.parentScope;
+  }
+  throw new ReferenceError('Unknown identifier: ' + name);
+};
+
+/**
+ * Returns an interpreter object representing a specific node (parsed by acorn
+ * for the purpose of displaying a watch value).
+ * @private
+ */
+JSInterpreter.prototype.getWatchValueFromNode_ = function (node) {
+  if (node.type === 'MemberExpression') {
+    return this.getValueFromMemberExpression_(node);
+  } else if (node.type === 'Identifier') {
+    return this.getValueFromScope(node.name);
+  } else {
+    throw new Error("Invalid");
+  }
+};
+
+/**
+ * Returns an interpreter object representing the member expression.
+ * @private
+ */
+JSInterpreter.prototype.getValueFromMemberExpression_ = function (expression) {
+  var object = this.getWatchValueFromNode_(expression.object);
+
+  if (expression.property.type === 'Identifier') {
+    return this.interpreter.getValue([object, expression.property.name]);
+  } else if (expression.property.type === 'Literal') {
+    return this.interpreter.getValue(
+        [object, this.interpreter.createPrimitive(expression.property.value)]);
+  }
+};
+
+/**
+ * Evaluate watch expression based on current scope.
+ */
+JSInterpreter.prototype.evaluateWatchExpression = function (watchExpression) {
+  var value;
+  try {
+    var ast = window.acorn.parse(watchExpression);
+    if (ast.type === 'Program' &&
+        ast.body[0].type === 'ExpressionStatement') {
+      value = this.getWatchValueFromNode_(ast.body[0].expression);
+    } else {
+      throw new Error("Invalid");
+    }
+  } catch (err) {
+    if (err instanceof Error) {
+      return err;
+    } else {
+      return new Error(err);
+    }
+  }
+  return codegen.marshalInterpreterToNative(this.interpreter, value);
+};
+
+/**
  * Returns the interpreter function object corresponding to 'funcName' if a
  * function with that name is found in the interpreter's global scope.
  */
@@ -890,11 +992,15 @@ JSInterpreter.prototype.evalInCurrentScope = function (expression) {
     evalInterpreter[prop] = this.interpreter[prop];
   }, this);
 
-  // Patch getProperty and setProperty to enable custom marshalling
+  // Patch getProperty, hasProperty, and setProperty to enable custom marshalling
   evalInterpreter.getProperty = this.getProperty.bind(
       this,
       evalInterpreter,
       evalInterpreter.getProperty);
+  evalInterpreter.hasProperty = this.hasProperty.bind(
+      this,
+      evalInterpreter,
+      evalInterpreter.hasProperty);
   evalInterpreter.setProperty = this.setProperty.bind(
       this,
       evalInterpreter,

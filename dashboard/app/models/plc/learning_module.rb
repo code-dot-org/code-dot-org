@@ -9,7 +9,7 @@
 #
 
 class Plc::LearningModule < ActiveRecord::Base
-  #I don't like having to specify the foreign key here
   has_many :plc_tasks, class_name: '::Plc::Task', foreign_key: 'plc_learning_module_id', dependent: :destroy
   has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_learning_module_id', dependent: :destroy
+  has_many :plc_evaluation_answers, class_name: '::Plc::EvaluationAnswer', foreign_key: 'plc_learning_module_id', dependent: :destroy
 end
