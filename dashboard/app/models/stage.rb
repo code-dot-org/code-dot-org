@@ -77,11 +77,13 @@ class Stage < ActiveRecord::Base
 
     # The last level in a stage might be a multi-page assessment, in which
     # case we'll receive extra puzzle pages to be added to the existing summary.
-    last_level_summary = stage_data[:levels].last
-    extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
-    unless extra_levels.empty?
-      stage_data[:levels] += extra_levels
-      last_level_summary[:url] << "/page/1"
+    if script_levels.last.long_assessment?
+      last_level_summary = stage_data[:levels].last
+      extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
+      unless extra_levels.empty?
+        stage_data[:levels] += extra_levels
+        last_level_summary[:url] << "/page/1"
+      end
     end
 
     if script.has_lesson_plan?
