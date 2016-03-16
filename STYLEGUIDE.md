@@ -287,6 +287,28 @@ var component = (
   </MyComponent>
 );
 ```
+* <a name="jsx-child-elements-on-own-line"></a>
+Since JSX [removes newlines before rendering to HTML](http://andrewhfarmer.com/how-whitespace-works-in-jsx/)
+you can and should put child elements on their own line, instead of putting
+them on the same line to avoid extra spaces.
+
+```
+// good
+<Component
+    prop1="prop1"
+    prop2="prop2">
+  textContent
+</Component>
+
+
+// bad
+<Component
+    prop1="prop1"
+    prop2="prop2">textContent</Component>
+    
+// good - fine to put content on same line if the tag opens & closes on that line
+<Component>textContent</Component>
+```
 
 * <a name="js-react-aligned-tags"></a>
 align open and close tags
@@ -316,31 +338,6 @@ Use lodash and jQuery libraries in `/apps`.
 ### In /blockly-core
 
 Use Google Closure Tools in `/blockly-core`, especially for color conversion and keyboard identifiers. Prefer raw HTML over Closure Tools UI constructs for new code.
-
-## JSX
-
-* <a name="jsx-child-elements-on-own-line"></a>
-  Since JSX [removes newlines before rendering to HTML](http://andrewhfarmer.com/how-whitespace-works-in-jsx/)
-  you can and should put child elements on their own line, instead of putting
-  them on the same line to avoid extra spaces.
-  
-  ```
-  // good
-  <Component
-      prop1="prop1"
-      prop2="prop2">
-    textContent
-  </Component>
-  
-  
-  // bad
-  <Component
-      prop1="prop1"
-      prop2="prop2">textContent</Component>
-      
-  // good - fine to put content on same line if the tag opens & closes on that line
-  <Component>textContent</Component>
-  ```
 
 ## CSS
 
