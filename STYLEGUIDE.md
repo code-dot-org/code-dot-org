@@ -220,11 +220,11 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
 ### React
 * <a name="js-react-inline-styles"></a>
 Prefer single object for all styles vs. inlined style objects
-```
+```jsx
 // Bad
 var component = (
   <div style={{color: 'red', display: 'block'}}>
-    <div style={{color: 'blue', fontSize: 10}>I'm a child</div>
+    <div style={{color: 'blue', fontSize: 10}}>I'm a child</div>
   </div>
 );
 
@@ -248,7 +248,7 @@ var component = (
 ```
 * <a name="js-react-pixel-numbers"></a>
 Prefer numbers vs strings for pixel values
-```
+```jsx
 // Bad
 var styles = {
   root: {
@@ -267,7 +267,7 @@ var styles = {
 ```
 * <a name="js-react-long-components"></a>
 Components with many attributes should have one per line, with 4 spaces of indentation. Child components should have 2 spaces of indentation.
-```
+```jsx
 // Bad
 var component = (
   <MyComponent param1={1} param2={2} param3={3} param4={4} param5={5}>
@@ -290,7 +290,7 @@ var component = (
 
 * <a name="js-react-aligned-tags"></a>
 align open and close tags
-```
+```jsx
 // Bad
 var component = (<MyComponent
       foo="bar"
