@@ -228,14 +228,6 @@ var projects = module.exports = {
     }
   },
 
-  /**
-   * Updates the contents of the admin box for admins. We have no knowledge
-   * here whether we're an admin, and depend on dashboard getting this right.
-   */
-  showAdmin: function() {
-    showProjectAdmin();
-  },
-
   showMinimalProjectHeader: function() {
     if (this.shouldUpdateHeaders()) {
       dashboard.header.showMinimalProjectHeader();
@@ -330,7 +322,10 @@ var projects = module.exports = {
       $(".full_container").css({"padding":"0px"});
     }
 
-    this.showAdmin();
+
+    // Updates the contents of the admin box for admins. We have no knowledge
+    // here whether we're an admin, and depend on dashboard getting this right.
+    showProjectAdmin();
   },
   projectChanged: function() {
     hasProjectChanged = true;
