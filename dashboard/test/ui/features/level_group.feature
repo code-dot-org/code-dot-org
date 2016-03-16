@@ -8,6 +8,7 @@ Background:
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
 
+@no_circle
 Scenario: Submit three answers.
   When element "#multi_1 .multi-question" contains text "The standard QWERTY keyboard has"
 

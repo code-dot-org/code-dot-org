@@ -1,5 +1,6 @@
 Feature: Hour of Code and Frozen tutorial in Spanish and Portuguese
 
+@no_circle
 Scenario: HoC tutorial in Spanish
   Given I am on "http://learn.code.org/hoc/15/lang/es"
   And I rotate to landscape
@@ -34,6 +35,7 @@ Scenario: HoC tutorial in Portuguese
   Given I am on "http://learn.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
+@no_circle
 Scenario: Frozen tutorial in Portuguese
   Given I am on "http://learn.code.org/s/frozen/stage/1/puzzle/2/lang/pt-br"
   And I rotate to landscape
@@ -45,4 +47,3 @@ Scenario: Frozen tutorial in Portuguese
   Then element "#prompt" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
   Given I am on "http://learn.code.org/reset_session/lang/en"
   And I wait for 2 seconds
-  

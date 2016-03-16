@@ -79,6 +79,9 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
     $options.maximize = true
   end
+  opts.on("--circle", "Whether is CircleCI (skip failing Circle tests)") do
+    $options.is_circle = true
+  end
   opts.on("--html", "Use html reporter") do
     $options.html = true
   end
@@ -255,6 +258,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments += " -t #{$options.run_eyes_tests && browser['mobile'] ? '' : '~'}@eyes_mobile"
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
+  arguments += " -t ~@no_circle" if $options.is_circle
   arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
   arguments += " -t ~@no_ie9" if browser['browserName'] == 'Internet Explorer' && browser['version'] == '9.0'
   arguments += " -t ~@no_ie10" if browser['browserName'] == 'Internet Explorer' && browser['version'] == '10.0'

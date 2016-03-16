@@ -1,6 +1,7 @@
 @as_student
 Feature: Fun-O-Meter
 
+@no_circle
 Scenario: Rate a Puzzle
   Given I am on "http://learn.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
   And I rotate to landscape

@@ -12,6 +12,7 @@ Scenario: Loading the first level
   Then there's an image "video_thumbnails/2"
   Then there's an image "artist/small_static_avatar"
 
+@no_circle
 Scenario: Winning the first level
   And I drag block "2" to block "4"
   And I drag block "1" to block "5"
