@@ -14,8 +14,9 @@
           = link_to t('nav.user.prizes'), my_prizes_url
         = link_to t('nav.user.logout'), destroy_user_session_url
 - else
-  .header_button.header_user
-    = link_to(t('nav.user.signin'), new_user_session_url, class: 'button-signin', id: 'signin_button')
+  = link_to new_user_session_url, class: 'button-signin', id: 'signin_button'  do
+    .header_button.header_user
+      %span= t('nav.user.signin')
 
 :javascript
   function hideUserOptions() {
