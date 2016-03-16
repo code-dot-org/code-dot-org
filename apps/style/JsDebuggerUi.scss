@@ -160,6 +160,7 @@ $debug-header-border-width: 1px;
   max-width: calc(100% - #{$debug-commands-column-width} - #{$debug-console-min-column-width});
   font-family: monospace;
   font-size: 12px;
+  overflow-y: scroll;
 }
 
 .debug-watch-item {
