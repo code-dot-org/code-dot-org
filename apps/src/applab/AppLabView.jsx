@@ -4,7 +4,7 @@
 var connect = require('react-redux').connect;
 var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
-var ConnectedStudioAppWrapper = require('./ConnectedStudioAppWrapper.jsx');
+var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
 
 /**
  * Top-level React wrapper for App Lab.
@@ -18,8 +18,8 @@ var AppLabView = React.createClass({
     onViewDataButton: React.PropTypes.func.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
 
-    renderCodeWorkspace: React.PropTypes.func.isRequired,
-    renderVisualizationColumn: React.PropTypes.func.isRequired,
+    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
+    generateVisualizationColumnHtml: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
 
@@ -41,11 +41,11 @@ var AppLabView = React.createClass({
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
           {playSpaceHeader}
-          <ProtectedStatefulDiv renderContents={this.props.renderVisualizationColumn} />
+          <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <ProtectedStatefulDiv id="codeWorkspace">
-          <ProtectedStatefulDiv id="codeWorkspaceWrapper" renderContents={this.props.renderCodeWorkspace}/>
+          <ProtectedStatefulDiv id="codeWorkspaceWrapper" contentFunction={this.props.generateCodeWorkspaceHtml}/>
           {!this.props.isReadOnlyWorkspace && <ProtectedStatefulDiv id="designWorkspace" style={{display: 'none'}} />}
         </ProtectedStatefulDiv>
       </ConnectedStudioAppWrapper>
