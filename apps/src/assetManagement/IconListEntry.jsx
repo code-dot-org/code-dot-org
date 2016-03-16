@@ -17,7 +17,7 @@ var IconListEntry = React.createClass({
       return str;
     }
     var left = str.substr(0, offset), right = str.substr(offset + this.props.search.length);
-    return [left, <span style={{backgroundColor: '#ffc'}}>{this.props.search}</span>, right];
+    return <span>{left}<span style={{backgroundColor: '#ffc'}}>{this.props.search}</span>{right}</span>;
   },
 
   render: function () {
@@ -35,10 +35,10 @@ var IconListEntry = React.createClass({
         }}>({this.highlightSearch(this.props.altMatch)})</p>;
       }
 
-      iconLabel = [
-        <p style={{float: 'left', margin: '0 5px', fontSize: '13px', color: '#000'}}>{this.highlightSearch(this.props.iconId)}</p>,
-        altMatchText
-      ];
+      iconLabel = <div>
+        <p style={{float: 'left', margin: '0 5px', fontSize: '13px', color: '#000'}}>{this.highlightSearch(this.props.iconId)}</p>
+        {altMatchText}
+      </div>;
 
       columnWidth = '33%';
     }
