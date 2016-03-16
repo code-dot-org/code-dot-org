@@ -2,7 +2,7 @@
  * Shows the samplingMessage and completionTable DOM elements depending on the
  * parameters.
  *
- * @param {boolean}: isSampled - whether Google Analytics sampled.
+ * @param {boolean} isSampled - whether Google Analytics sampled.
  * @param {boolean} startDatePresent - whether a start_date parameter was given.
  */
 //
