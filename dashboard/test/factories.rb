@@ -29,7 +29,7 @@ FactoryGirl.define do
   factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
     answer "MyString"
     plc_evaluation_question nil
-    plc_task nil
+    plc_learning_module nil
   end
 
   factory :plc_evaluation_question, :class => 'Plc::EvaluationQuestion' do
