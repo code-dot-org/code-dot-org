@@ -152,7 +152,12 @@ designMode.onPropertyChange = function(element, name, value) {
   designMode.editElementProperties(element);
 };
 
-function renderIcon(value) {
+/**
+ * Create a data-URI with the image data of the given icon glyph.
+ * @param value
+ * @return {*|string}
+ */
+function renderIconToString(value) {
   var canvas = document.createElement('canvas');
   canvas.width = canvas.height = 400;
   var ctx = canvas.getContext('2d');
@@ -247,7 +252,7 @@ designMode.updateProperty = function(element, name, value) {
       };
 
       if (/^icon:/.test(value)) {
-        element.style.backgroundImage = 'url(' + renderIcon(value) + ')';
+        element.style.backgroundImage = 'url(' + renderIconToString(value) + ')';
         fitImage();
         break;
       }
@@ -270,7 +275,7 @@ designMode.updateProperty = function(element, name, value) {
       var height = parseInt(element.style.height, 10);
       element.style.backgroundSize = width + 'px ' + height + 'px';
 
-      var url = /^icon:/.test(value) ? renderIcon(value) : assetPrefix.fixPath(value);
+      var url = /^icon:/.test(value) ? renderIconToString(value) : assetPrefix.fixPath(value);
       element.style.backgroundImage = 'url(' + url + ')';
 
       break;
@@ -280,7 +285,7 @@ designMode.updateProperty = function(element, name, value) {
       element.setAttribute('data-canonical-image-url', value);
 
       if (/^icon:/.test(value)) {
-        element.src = renderIcon(value);
+        element.src = renderIconToString(value);
         break;
       }
 

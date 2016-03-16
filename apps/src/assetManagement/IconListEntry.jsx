@@ -22,7 +22,6 @@ var IconListEntry = React.createClass({
   },
 
   render: function () {
-
     var iconLabel, columnWidth;
 
     if (this.props.search) {
