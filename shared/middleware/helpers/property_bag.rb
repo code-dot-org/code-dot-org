@@ -103,6 +103,7 @@ class DynamoPropertyBag
   def get(name)
     item = db.get_item(
       table_name: CDO.dynamo_properties_table,
+      consistent_read: true,
       key: {'hash'=>@hash, 'name'=>name},
     ).item
 
