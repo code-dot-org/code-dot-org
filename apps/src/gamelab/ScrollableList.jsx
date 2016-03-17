@@ -9,6 +9,7 @@ var _ = require('../lodash');
  */
 var ScrollableList = React.createClass({
   propTypes: {
+    className: React.PropTypes.string,
     style: React.PropTypes.object
   },
 
@@ -18,8 +19,8 @@ var ScrollableList = React.createClass({
       overflowX: 'hidden',
       overflowY: 'scroll'
     }, this.props.style);
-    return <div style={rootStyle}>
-      {this.props.children}
+    return <div className={this.props.className} style={rootStyle}>
+      <div style={{margin: 10}}>{this.props.children}</div>
     </div>;
   }
 });
