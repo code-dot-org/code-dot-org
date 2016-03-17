@@ -339,7 +339,8 @@ class TablesApi < Sinatra::Base
   #
   # POST /v3/coerce-(shared|user)-tables/<channel-id>/<table-name>
   #
-  # Imports a csv form post into a table, erasing previous contents.
+  # Coerces the contents of a particular column to a particular type,
+  # ignoring values where it is unable to do so.
   #
   post %r{/v3/coerce-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     content_type :json
