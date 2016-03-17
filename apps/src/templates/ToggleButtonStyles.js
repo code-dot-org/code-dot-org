@@ -27,12 +27,12 @@ module.exports = {
   activeStyle: {
     backgroundColor: '#ffa000',
     color: '#fff',
-    boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3) inset'
+    boxShadow: '2px 2px 5px ' + color.shadow + ' inset'
   },
   inactiveStyle: {
     backgroundColor: '#fff',
     color: color.light_gray,
-    boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'
+    boxShadow: '0px 1px 5px ' + color.shadow
   },
   hiddenStyle: {
     display: 'none'
