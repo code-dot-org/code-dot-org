@@ -18,8 +18,8 @@ var logToCloud = require('../logToCloud');
 var actions = require('./actions');
 var icons = require('../assetManagement/icons');
 
-var ICON_PREFIX = 'icon://';
-var ICON_PREFIX_REGEX = new RegExp('^' + ICON_PREFIX);
+var ICON_PREFIX = applabConstants.ICON_PREFIX;
+var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
 
 var currentlyEditedElement = null;
 var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
