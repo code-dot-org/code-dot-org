@@ -20,7 +20,10 @@ class TablesApi < Sinatra::Base
   # after inserting rows.) Logically constant but can be modified in tests.
   @@max_table_rows = DEFAULT_MAX_TABLE_ROWS
 
-  # Maximum allowed size in bytes of an individual record.
+  # Maximum allowed size in bytes of an individual record. This is enforced when
+  # creating or updating a single record, or when importing or populating records
+  # in bulk. This is not enforced when adding or renaming columns, or when
+  # coercing a column to a new type.
   @@max_record_size = DEFAULT_MAX_RECORD_SIZE
 
   @@redis = Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379')
@@ -194,8 +197,9 @@ class TablesApi < Sinatra::Base
     2 * table_name.length + record_json.length
   end
 
-  def record_too_large(record_size)
-    too_large "The record is too large (#{record_size} bytes). The maximum record size is #{@@max_record_size} bytes."
+  def record_too_large(record_size, index = nil)
+    record_description = index ? "Record #{index + 1}" : 'The record'
+    too_large "#{record_description} is too large (#{record_size} bytes). The maximum record size is #{@@max_record_size} bytes."
   end
 
   #
@@ -324,7 +328,9 @@ class TablesApi < Sinatra::Base
     records = TableCoerce.coerce_columns_from_data(records, columns)
 
     # TODO: This should probably be a bulk insert
-    records.each do |record|
+    records.each_with_index do |record, i|
+      record_size = get_approximate_record_size(table_name, record.to_json)
+      record_too_large(record_size, i) if record_size > @@max_record_size
       table.insert(record, request.ip)
     end
     table.ensure_metadata
@@ -393,7 +399,9 @@ class TablesApi < Sinatra::Base
       end
 
       table.delete_all()
-      json_data[table_name].each do |record|
+      json_data[table_name].each_with_index do |record, i|
+        record_size = get_approximate_record_size(table_name, record.to_json)
+        record_too_large(record_size, i) if record_size > @@max_record_size
         table.insert(record, request.ip)
       end
       limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
