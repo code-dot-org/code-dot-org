@@ -41,7 +41,7 @@ var DeleteElementButton = React.createClass({
     };
 
     var redButtonStyle = $.extend({}, buttonStyle, {
-      backgroundColor: '#c00', // $red
+      backgroundColor: color.red,
       color: color.white
     });
 
