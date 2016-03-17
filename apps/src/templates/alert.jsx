@@ -53,7 +53,7 @@ var Alert = React.createClass({
         fontSize: 20,
         fontWeight: 'bold',
         lineHeight: '20px',
-        color: 'black',
+        color: color.black,
         textShadow: '0 1px 0 white',
         opacity: 0.2,
         position: 'relative',
