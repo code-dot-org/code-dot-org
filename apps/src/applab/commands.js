@@ -16,7 +16,8 @@ var errorHandler = require('../errorHandler');
 var ErrorLevel = errorHandler.ErrorLevel;
 var applabTurtle = require('./applabTurtle');
 var ChangeEventHandler = require('./ChangeEventHandler');
-var colors = require('../sharedJsxStyles').colors;
+var color = require('../color');
+var jsxColors = require('../sharedJsxStyles').colors;
 
 var OPTIONAL = true;
 
@@ -241,8 +242,8 @@ applabCommands.button = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
-  newButton.style.color = colors.white;
-  newButton.style.backgroundColor = colors.teal;
+  newButton.style.color = color.white;
+  newButton.style.backgroundColor = jsxColors.teal;
 
   return Boolean(newButton.appendChild(textNode) &&
     Applab.activeScreen().appendChild(newButton));
@@ -874,8 +875,8 @@ applabCommands.dropdown = function (opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
-  newSelect.style.color = colors.white;
-  newSelect.style.backgroundColor = colors.teal;
+  newSelect.style.color = color.white;
+  newSelect.style.backgroundColor = jsxColors.teal;
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
