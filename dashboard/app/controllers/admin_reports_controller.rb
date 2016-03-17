@@ -81,6 +81,7 @@ class AdminReportsController < ApplicationController
       @ethnicities.each_value do |count|
         @ethnic_count += count
       end
+      @foodstamps_count = @foodstamps_count.to_i
     end
   end
 
