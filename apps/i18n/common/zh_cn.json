@@ -225,5 +225,10 @@
   "when": "当",
   "whenRun": "当运行时",
   "workspaceHeaderShort": "工作区域",
+  "animationMode": "Animation",
+  "debugWatchHeader": "Watch",
+  "debugWatchNotAvailable": "<not available>",
+  "iconSearchPlaceholder": "Search for an icon...",
+  "noIconsFound": "No icons found",
   "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project."
 }
