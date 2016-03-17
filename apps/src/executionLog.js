@@ -9,6 +9,7 @@ var TestResults = require('./constants').TestResults;
  * @returns {!Object}
  */
 module.exports.getResultsFromLog = function (logConditions, executionLog) {
+  executionLog = executionLog || [];
   var results = {
     testResult: TestResults.ALL_PASS,
   };
