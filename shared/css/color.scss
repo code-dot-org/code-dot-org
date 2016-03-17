@@ -1,5 +1,9 @@
 // colors from https://www.dropbox.com/s/ycjiwt8vxlmv2ih/Code.org_stylesheet_v2_09.05.13.pdf
 
+// Please keep this file simple; it should only contain color definitions
+//   and aliases.  Variables defined in this file are exported to
+//   apps/src/color.js during the apps build process.
+
 $black: black;
 $dark_charcoal: #4d575f;
 $charcoal: #5b6770;
