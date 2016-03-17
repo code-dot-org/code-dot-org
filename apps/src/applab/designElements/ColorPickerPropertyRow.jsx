@@ -12,11 +12,26 @@ var ColorPickerPropertyRow = React.createClass({
   getInitialState: function () {
     return {
       value: this.props.initialValue,
-      displayColorPicker: false,
+      displayColorPicker: false
     };
   },
 
-  handleChangeInternal: function(event) {
+  componentDidMount: function () {
+    window.addEventListener('mousedown', this.handlePageClick);
+  },
+
+  componentWillUnmount: function () {
+    window.removeEventListener('mousedown', this.handlePageClick);
+  },
+
+  handlePageClick: function (e) {
+    var ref = this.refs.colorPicker;
+    if (ref && !ReactDOM.findDOMNode(ref).contains(e.target)) {
+      this.setState({displayColorPicker: false});
+    }
+  },
+
+  handleChangeInternal: function (event) {
     this.changeColor(event.target.value);
   },
 
@@ -34,23 +49,20 @@ var ColorPickerPropertyRow = React.createClass({
     this.setState({value: color});
   },
 
-  toggleColorPicker: function() {
+  toggleColorPicker: function () {
     this.setState({displayColorPicker: !this.state.displayColorPicker});
   },
 
-  render: function() {
+  render: function () {
     var buttonStyle = {
       backgroundColor: this.state.value,
       verticalAlign: 'top'
     };
     let colorPicker = this.state.displayColorPicker ? (
-      <div style={{position: 'absolute'}}>
-        <div style={{position: 'fixed', top: '0', right: '0', bottom: '0', left: '0'}}
-             onClick={this.toggleColorPicker}></div>
-        <ColorPicker type="sketch"
-                     color={this.state.value}
-                     onChangeComplete={this.handleColorChange}/>
-      </div>
+      <ColorPicker
+        ref="colorPicker"
+        color={this.state.value}
+        onChangeComplete={this.handleColorChange}/>
     ) : null;
     return (
       <div style={rowStyle.container}>
