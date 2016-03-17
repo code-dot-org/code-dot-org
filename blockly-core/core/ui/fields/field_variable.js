@@ -142,7 +142,8 @@ Blockly.FieldVariable.prototype.dropdownChange = function(text) {
     return null;
   } else if (text === Blockly.Msg.NEW_VARIABLE) {
     this.getParentEditor_().hideChaff();
-    Blockly.FieldVariable.modalPromptName(Blockly.Msg.NEW_VARIABLE_TITLE,
+    Blockly.FieldVariable.modalPromptName(
+        Blockly.Msg.NEW_VARIABLE_TITLE,
         Blockly.Msg.CONFIRM_CREATE_VARIABLE,
         '',
         function(text) {
