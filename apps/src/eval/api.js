@@ -1,3 +1,4 @@
+var color = require('../color');
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalCircle = require('./evalCircle');
@@ -22,7 +23,7 @@ exports.display = function (object) {
   }
 
   if (!object.draw) {
-    object = new EvalText(object.toString(), 12, 'black');
+    object = new EvalText(object.toString(), 12, color.black);
   }
   Eval.displayedObject = object;
 };

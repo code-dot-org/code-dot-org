@@ -25,7 +25,7 @@ var Lightbulb = React.createClass({
       fontWeight: 'bold',
       fontSize: '400px',
       fill: color.white,
-      stroke: 'black',
+      stroke: color.black,
       strokeWidth: '30px',
       fontFamily: 'Verdana, Geneva, sans-serif',
     };
