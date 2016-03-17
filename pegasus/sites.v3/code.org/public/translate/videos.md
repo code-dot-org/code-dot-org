@@ -8,11 +8,9 @@ Translations for video captions are done through Amara. To get started, choose a
 
 If they are not completed, go ahead and Add a New Language and complete translations. Then, click "Publish" to save your work and mark as complete. Finally, e-mail translations@code.org with the title, link to the video, and your language so that we can publish your translation to YouTube. Please check back in 48 hours to verify that your translation was uploaded correctly.
 
-## How to Use Amara
-
-<embed src="/files/amara.swf" width=800 height=550 />
-
-Watch the [demo video](/files/amara.swf) in full screen.
+## Top priority videos to finish first
+* [CS is Changing Everything](https://amara.org/en/videos/sve4MYv5Btdn/info/computer-science-is-changing-everything/)
+* [Computer Science Principles videos](#cspvideos)
 
 ## Star Wars: Building a Galaxy with Code
 * [Introduction](https://amara.org/en/videos/MAPGRpEu3h0k/info/star-wars-with-blockly-hour-of-code-introduction/)
@@ -39,7 +37,8 @@ Watch the [demo video](/files/amara.swf) in full screen.
 * [Saloni teaches if-else statements with Scrat](http://amara.org/en/videos/4vaO5wAciqSV/info/saloni-teaches-if-else-statements-with-scrat-the-squirrel-from-ice-age/)
 * [Wrap Up](http://amara.org/en/videos/ocU9lQ4CIZel/info/hour-of-code-wrap-up/)
 
-## Social
+## Promotional
+* [CS is Changing Everything](https://amara.org/en/videos/sve4MYv5Btdn/info/computer-science-is-changing-everything/)
 * [Change the World - Hour of Code 2015](https://amara.org/en/videos/yOXuiXs9lWrn/info/change-the-world-hour-of-code-2015/)
 * [The Hour of Code 2015](https://amara.org/en/videos/hlM6lmrQc6DR/info/hour-of-code-2015-worldwide/)
 * [What Most schools Don't Teach](http://amara.org/en/videos/ZuVc6mobngWz/info/what-most-schools-dont-teach/)
@@ -50,7 +49,8 @@ Watch the [demo video](/files/amara.swf) in full screen.
 * [President Obama calls on America](http://amara.org/en/videos/HuSjzut36AWC/info/president-obama-calls-on-every-american-to-learn-code/)
 * [Anybody can learn - 60 second teaser](http://amara.org/en/videos/eCMj3Krr59Ft/info/codeorg-60-second-teaser/)
 
-## Computer Science Principles 
+<a name="cspvideos"href="#cspvideos"></a>
+## Computer Science Principles
 * [Images, Pixels and RGB](https://amara.org/en/videos/AbDLi3dtmbyE/info/instagrams-kevin-systrom-explains-pixels-and-how-filters-work/)
 * [The Internet: Wires, Cables, & Wifi](https://amara.org/en/videos/YWhDLbCzu1K7/info/the-internet-wires-cables-wifi/)
 * [The Internet: IP Addresses and DNS](https://amara.org/en/videos/nY9IOAcrhpNX/info/the-internet-ip-addresses-and-dns/)
@@ -58,6 +58,7 @@ Watch the [demo video](/files/amara.swf) in full screen.
 * [The Internet: Encryption & Public Keys](https://amara.org/en/videos/aCTRoFJokQ2N/info/the-internet-encryption-public-keys/)
 * [The Internet: Cybersecurity & Crime](https://amara.org/en/videos/w0BLT5Syrkh5/info/the-internet-cybersecurity-crime/)
 * [The Internet: HTTP and HTML](https://amara.org/en/videos/uLymTycb5058/info/the-internet-http-and-html/)
+* [Data and Medicine](https://amara.org/en/videos/WS4q2uVDnNdi/info/data-and-medicine/)
 
 ## Disney Infinity Play Lab
 * [Introduction](http://amara.org/en/videos/SIhQst12ka1L/info/disney-infinity-play-lab-intro/)
@@ -109,3 +110,9 @@ Watch the [demo video](/files/amara.swf) in full screen.
 
 ## Course 3
 * [Crowdsourcing](https://www.amara.org/en/videos/vYAtklKB56Cd/info/uplugged-crowdsourcing/)
+
+## How to Use Amara
+
+<embed src="/files/amara.swf" width=800 height=550 />
+
+Watch the [demo video](/files/amara.swf) in full screen.
