@@ -992,6 +992,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   var textBox;
   if (options.prompt) {
     textBox = document.createElement('input');
+    textBox.className = "name-textbox";
     if (options.promptPrefill) {
       textBox.value = options.promptPrefill;
     }
