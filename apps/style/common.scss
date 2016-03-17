@@ -1059,7 +1059,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-#headers {
+#headers, .purple-header {
   height: $workspace-headers-height;
   background-color: $purple;
   overflow-y: hidden;
