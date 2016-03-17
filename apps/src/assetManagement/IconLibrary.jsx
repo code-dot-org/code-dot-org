@@ -44,10 +44,15 @@ var IconLibrary = React.createClass({
     return (
       <div>
         <div style={styles.root}>
-          <input onChange={this.search} style={styles.input} placeholder={msg.iconSearchPlaceholder()}/>
+          <input
+            onChange={this.search}
+            style={styles.input}
+            placeholder={msg.iconSearchPlaceholder()}/>
           <i className="fa fa-search" style={styles.icon}/>
         </div>
-        <IconList assetChosen={this.props.assetChosen} search={this.state.search}/>
+        <IconList
+          assetChosen={this.props.assetChosen}
+          search={this.state.search}/>
       </div>
     );
   }

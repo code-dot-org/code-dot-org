@@ -19,7 +19,13 @@ var IconListEntry = React.createClass({
     }
     var left = str.substr(0, offset);
     var right = str.substr(offset + this.props.search.length);
-    return <span>{left}<span style={{backgroundColor: '#ffc'}}>{this.props.search}</span>{right}</span>;
+    return (
+      <span>
+        {left}
+        <span style={{backgroundColor: '#ffc'}}>{this.props.search}</span>
+        {right}
+      </span>
+    );
   },
 
   render: function () {
@@ -40,10 +46,17 @@ var IconListEntry = React.createClass({
     var iconLabel, columnWidth, altMatchText;
 
     if (this.props.search) {
+      columnWidth = '33%';
+
       var highlightedName = this.props.iconId;
       if (!this.props.query.test(this.props.iconId)) {
-        // We matched based on an alternate keyword, show that keyword next to the icon ID.
-        altMatchText = <p style={styles.altMatchText}>({this.highlightSearch(this.props.altMatch)})</p>;
+        // We matched based on an alternate keyword, show that keyword in parens
+        // next to the icon ID.
+        altMatchText = (
+          <p style={styles.altMatchText}>
+            ({this.highlightSearch(this.props.altMatch)})
+          </p>
+        );
       } else {
         highlightedName = this.highlightSearch(this.props.iconId);
       }
@@ -52,8 +65,6 @@ var IconListEntry = React.createClass({
         <p style={styles.iconLabel}>{highlightedName}</p>
         {altMatchText}
       </div>;
-
-      columnWidth = '33%';
     }
 
     var rootStyles = {
@@ -63,8 +74,12 @@ var IconListEntry = React.createClass({
       cursor: 'pointer'
     };
 
+    var asset = 'icon://fa-' + this.props.iconId;
     return (
-      <div style={rootStyles} title={this.props.iconId} onClick={this.props.assetChosen.bind(null, 'icon://fa-' + this.props.iconId)}>
+      <div
+        style={rootStyles}
+        title={this.props.iconId}
+        onClick={this.props.assetChosen.bind(null, asset)}>
         <Icon iconId={this.props.iconId}/>
         {iconLabel}
       </div>

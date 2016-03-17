@@ -177,8 +177,8 @@ designMode.onPropertyChange = function(element, name, value) {
 
 /**
  * Create a data-URI with the image data of the given icon glyph.
- * @param value
- * @return {*|string}
+ * @param value {string} An icon identifier of the format "icon://fa-icon-name".
+ * @return {string}
  */
 function renderIconToString(value) {
   var canvas = document.createElement('canvas');
