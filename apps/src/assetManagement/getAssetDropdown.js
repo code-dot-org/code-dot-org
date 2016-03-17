@@ -1,6 +1,3 @@
-/* global Dialog, dashboard, Applab */
-// TODO (josh) - don't pass `Dialog` into `createModalDialog`.
-
 var assetListStore = require('./assetListStore');
 var showAssetManager = require('./show');
 var commonMsg = require('../locale');

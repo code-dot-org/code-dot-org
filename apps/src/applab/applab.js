@@ -1162,6 +1162,14 @@ Applab.runButtonClick = function() {
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
   }
+
+
+  if (studioApp.editor) {
+    logToCloud.addPageAction(logToCloud.PageAction.RunButtonClick, {
+      usingBlocks: studioApp.editor.currentlyUsingBlocks,
+      app: 'applab'
+    }, 1/100);
+  }
 };
 
 /**

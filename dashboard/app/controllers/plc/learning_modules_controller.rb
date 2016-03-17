@@ -1,18 +1,29 @@
 class Plc::LearningModulesController < ApplicationController
   load_and_authorize_resource
-  # GET /plc/learning_modules
-  # GET /plc/learning_modules.json
-  def index
-  end
 
   # GET /plc/learning_modules/1
   # GET /plc/learning_modules/1.json
   def show
-    @resource_tasks, @other_tasks = @learning_module.plc_tasks.partition {|task| task.is_a? Plc::LearningResourceTask}
+    resource_tasks, other_tasks = @learning_module.plc_tasks.partition {|task| task.is_a? Plc::LearningResourceTask}
+
+    @task_groupings = [{
+      tasks: resource_tasks,
+      name: 'Learning Resources',
+      new_link_text: 'Add a resource',
+      new_link_destination: new_learning_resource_for_module_path(@learning_module)
+    }, {
+      tasks: other_tasks,
+      name: 'Tasks',
+      new_link_text: 'Add a task',
+      new_link_destination: new_plc_task_path(plc_learning_module_id: @learning_module.id)
+    }]
   end
 
   # GET /plc/learning_modules/new
   def new
+  end
+
+  def new_learning_resource_for_module
   end
 
   # GET /plc/learning_modules/1/edit
@@ -43,7 +54,7 @@ class Plc::LearningModulesController < ApplicationController
   # DELETE /plc/learning_modules/1.json
   def destroy
     @learning_module.destroy
-    redirect_to action: :index
+    redirect_to plc_content_creator_show_courses_and_modules_path
   end
 
   private

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "We've renamed the \"draw a square\" function to \"draw a hexagon,\" but it still only draws squares! Can you modify the \"draw a hexagon\" function to draw a hexagon with 50 pixel sides, and draw the image by using the function?",
+    "instructions": "We've renamed the `draw a square` function to `draw a hexagon`, but it's still giving us squares! Can you modify the `draw a hexagon` function to draw a hexagon with 50 pixel sides? \r\n\r\nDraw the image using the new function!",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "ideal": "8",
     "slider_speed": "0.7",
     "embed": "false",
-    "markdown_instructions": "We've renamed the \"draw a square\" function to \"draw a hexagon,\" but it still only draws squares! Can you modify the \"draw a hexagon\" function to draw a hexagon with 50 pixel sides, and draw the image by using the function?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "We've renamed the `draw a square` function to `draw a hexagon`, but it's still giving us squares!  \r\n\r\nCan you modify the `draw a hexagon` function to draw a hexagon with 50 pixel sides? \r\n\r\nDraw the image using the new function!\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -30,23 +30,26 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat" deletable="false">
+            <block type="controls_repeat">
               <title name="TIMES">3</title>
               <statement name="DO">
-                <block type="procedures_callnoreturn" deletable="false">
+                <block type="procedures_callnoreturn">
                   <mutation name="draw a hexagon"/>
                   <next>
-                    <block type="draw_turn_by_constant_dropdown" deletable="false">
+                    <block type="draw_turn_by_constant">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE" config="45,60,90,120,180">120</title>
+                      <title name="VALUE">120</title>
                     </block>
                   </next>
                 </block>
@@ -58,16 +61,16 @@
           <mutation/>
           <title name="NAME">draw a hexagon</title>
           <statement name="STACK">
-            <block type="controls_repeat" deletable="false">
+            <block type="controls_repeat">
               <title name="TIMES">4</title>
               <statement name="DO">
-                <block type="draw_move_by_constant" deletable="false">
+                <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
                   <title name="VALUE">100</title>
                   <next>
-                    <block type="draw_turn_by_constant_dropdown" deletable="false">
+                    <block type="draw_turn_by_constant">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE" config="45,60,90,120,180">90</title>
+                      <title name="VALUE">90</title>
                     </block>
                   </next>
                 </block>
@@ -83,13 +86,13 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
@@ -116,36 +119,27 @@
       </xml>
     </toolbox_blocks>
     <required_blocks>
-      <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="draw a hexagon"/>
-        </block>
-      </xml>
+      <block type="procedures_callnoreturn">
+        <mutation name="draw a hexagon"/>
+      </block>
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="draw a hexagon"/>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_turn_by_constant">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE">120</title>
-              <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
                 <block type="procedures_callnoreturn">
                   <mutation name="draw a hexagon"/>
                   <next>
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnRight</title>
                       <title name="VALUE">120</title>
-                      <next>
-                        <block type="procedures_callnoreturn">
-                          <mutation name="draw a hexagon"/>
-                        </block>
-                      </next>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>

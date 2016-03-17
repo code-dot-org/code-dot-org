@@ -23,4 +23,4 @@
 - content_for :body_scripts do
   :javascript
     var percentagesByDay = #{@ratings_by_day.map{|row| [row[0], row[1].to_f]}.try(:to_json)};
-    drawChart(percentagesByDay);
+    window.dashboard.funometer.drawChart(percentagesByDay);

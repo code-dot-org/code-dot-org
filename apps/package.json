@@ -21,7 +21,6 @@
   "browserify": {
     "transform": [
       "require-globify",
-      "envify",
       "browserify-shim",
       "browserify-global-shim"
     ]
@@ -49,7 +48,6 @@
     "connect-livereload": "0.5.3",
     "ejs": "0.8.4",
     "ejsify": "1.0.0",
-    "envify": "^3.4.0",
     "es6-promise": "3.0.2",
     "eslint": "^2.3.0",
     "express": "4.11.2",
@@ -78,6 +76,7 @@
     "load-grunt-tasks": "2.0.0",
     "lodash": "2.4.2",
     "lodash-cli": "2.4.2",
+    "loose-envify": "^1.1.0",
     "messageformat": "0.2.2",
     "mkdirp": "0.5.1",
     "mochify": "2.9.0",
