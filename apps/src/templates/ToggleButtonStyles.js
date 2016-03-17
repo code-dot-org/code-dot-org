@@ -1,10 +1,12 @@
 /** @file Reusable styles for interface mode toggle buttons. */
 
+var color = require('../color');
+
 module.exports = {
   buttonStyle: {
     display: 'inline-block',
     verticalAlign: 'top',
-    border: '1px solid #949ca2',
+    border: '1px solid ' + color.light_gray,
     margin: '0 0 8px 0',
     padding: '2px 6px',
     fontSize: 14
@@ -29,7 +31,7 @@ module.exports = {
   },
   inactiveStyle: {
     backgroundColor: '#fff',
-    color: '#949ca2',
+    color: color.light_gray,
     boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'
   },
   hiddenStyle: {

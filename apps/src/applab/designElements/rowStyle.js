@@ -12,7 +12,7 @@ module.exports.input = {
   WebkitBorderRadius: 4,
   MozBorderRadius: 4,
   borderRadius: 4,
-  border: '1px solid #949CA2',
+  border: '1px solid ' + color.light_gray,
   verticalAlign: 'middle'
 };
 

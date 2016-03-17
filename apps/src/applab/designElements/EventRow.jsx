@@ -18,7 +18,7 @@ var EventRow = module.exports = React.createClass({
         fontSize: 15
       },
       desc: {
-        color: '#949ca2',
+        color: color.light_gray,
         fontStyle: 'italic'
       }
     };
