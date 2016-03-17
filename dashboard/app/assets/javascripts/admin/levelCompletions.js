@@ -86,6 +86,7 @@ function timeOnSiteRenderer(
     var seconds = val - minutes*60;
     value = ('0' + minutes).substr(-2) + ':' + ('0' + seconds).substr(-2);
     var percent = Math.min(1, val / 600);
+  }
   Handsontable.renderers.TextRenderer.apply(this, arguments);
   td.style['font-family'] = 'monospace';
   td.style['background'] = 'linear-gradient(90deg, silver '
