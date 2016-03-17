@@ -18,24 +18,23 @@ var ImageProperties = React.createClass({
     onDepthChange: React.PropTypes.func.isRequired
   },
 
+  handleIconColorChange: function (value) {
+    this.props.handleChange('icon-color', value);
+    this.props.handleChange('picture',
+      this.props.element.getAttribute('data-canonical-image-url'));
+  },
+
   render: function () {
     var element = this.props.element;
 
     var iconColorPicker;
     var canonicalImage = element.getAttribute('data-canonical-image-url');
     if (ICON_PREFIX_REGEX.test(canonicalImage)) {
-
-      var handleIconColorChange = function (value) {
-        this.props.handleChange('icon-color', value);
-        this.props.handleChange('picture',
-          element.getAttribute('data-canonical-image-url'));
-      }.bind(this);
-
       iconColorPicker = (
         <ColorPickerPropertyRow
           desc={'icon color'}
           initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
-          handleChange={handleIconColorChange} />
+          handleChange={this.handleIconColorChange} />
       );
     }
 
