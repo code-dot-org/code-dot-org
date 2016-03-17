@@ -33,7 +33,7 @@
             - else
               - puzzle_outer_class = 'puzzle_outer_level'
             %span{class: puzzle_outer_class}
-              - link = url_from_path("/s/#{script_summary[:name]}/stage/#{stage[:position]}/puzzle/#{level[:position]}")
+              - link = level[:url]
               - if current_user && current_user != user # viewing someone else's progress
                 - link += "?user_id=#{user.id}"
               - if @section

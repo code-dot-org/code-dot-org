@@ -451,7 +451,20 @@ class Script < ActiveRecord::Base
     end
     script_stages.each do |stage|
       stage.script_levels = script_levels_by_stage[stage.id]
+
+      # Go through all the script levels for this stage, except the last one,
+      # and raise an exception if any of them are a multi-page assessment.
+      # (That's when the script level is marked assessment, and the level itself
+      # has a pages property and more than one page in that array.)
+      # This is because only the final level in a stage can be a multi-page
+      # assessment.
+      stage.script_levels.each do |script_level|
+        if !script_level.end_of_stage? && script_level.long_assessment?
+          raise "Only the final level in a stage may be a multi-page assessment.  Script: #{script.name}"
+        end
+      end
     end
+
     script.stages = script_stages
     script.reload.stages
     script

@@ -76,13 +76,16 @@ window.dashboard.progress = (function () {
     }
   };
 
-  progress.renderStageProgress = function (stageData, progressData, clientProgress, currentLevelId) {
+  progress.renderStageProgress = function (stageData, progressData, clientProgress, currentLevelId, puzzlePage) {
     var serverProgress = progressData.levels || {};
     var currentLevelIndex = null;
 
     var combinedProgress = stageData.levels.map(function(level, index) {
-      if (level.id === currentLevelId) {
-        currentLevelIndex = index;
+      // Determine the current level index.
+      // However, because long assessments can have the same level appearing
+      // multiple times, just set this the first time it's determined.
+      if (level.id === currentLevelId && currentLevelIndex === null) {
+         currentLevelIndex = index;
       }
 
       var status;
@@ -95,6 +98,7 @@ window.dashboard.progress = (function () {
         // Merge server progress with local progress
         status = dashboard.progress.mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
       }
+
       var href = level.url + location.search;
 
       return {
@@ -105,6 +109,10 @@ window.dashboard.progress = (function () {
         id: level.id
       };
     });
+
+    if (currentLevelIndex !== null && puzzlePage !== -1) {
+      currentLevelIndex += puzzlePage - 1;
+    }
 
     var mountPoint = document.createElement('div');
     mountPoint.style.display = 'inline-block';
