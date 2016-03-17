@@ -9,7 +9,7 @@ var ZOrderRow = require('./ZOrderRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
 var EnumPropertyRow = require('./EnumPropertyRow.jsx');
-var colors = require('../../sharedJsxStyles').colors;
+var color = require('../../color');
 
 var elementUtils = require('./elementUtils');
 
@@ -146,8 +146,8 @@ module.exports = {
     element.style.height = '30px';
     element.style.width = '80px';
     element.style.fontSize = '14px';
-    element.style.color = colors.white;
-    element.style.backgroundColor = colors.teal;
+    element.style.color = color.white;
+    element.style.backgroundColor = color.applab_button_teal;
 
     return element;
   },
