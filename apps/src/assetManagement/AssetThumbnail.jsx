@@ -23,7 +23,7 @@ var assetIconStyle = {
   fontSize: '32px'
 };
 
-module.exports = React.createClass({
+var AssetThumbnail = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
     type: React.PropTypes.oneOf(['image', 'audio', 'video']).isRequired,
@@ -52,3 +52,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = AssetThumbnail;

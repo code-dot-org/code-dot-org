@@ -30,13 +30,7 @@ Milestone Complete!
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates:**
-
-Quarter 1: Saturday, October 3, 2015
-
-Quarter 2: Saturday, November 7, 2015
-
-Quarter 3: Saturday, January 23, 2016
+**Save the date:**
 
 Quarter 4: Saturday, April 23, 2016
 
@@ -44,9 +38,7 @@ Quarter 4: Saturday, April 23, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**January 23rd Location**
-
-*Please note this is a new building and room number.* 
+**April 23rd Location**
 
 [Orange County Department of Education<br/>
 Building D, Room 1003<br/>
@@ -77,7 +69,7 @@ Takeaways:<br/>
 • I am more comfortable with the material that I struggled with the first time teaching this
 course.<br/>
 • I understand how to make changes to the ECS curriculum in order to meet my local needs
-and fit into my context.))
+and fit into my context.
 
 **Save the Dates**
 
@@ -125,10 +117,7 @@ Milestone Complete!
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates:**
-
-Semester 1: Saturday, October 10, 2015 
-
+**Save the date:**
 
 Semester 2: Saturday, April 16, 2016
 
@@ -167,14 +156,9 @@ Milestone complete!
 Milestone Complete!
 
 
-
-
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-In person workshop complete!<br/><br/>
-**Deadline for Online Coursework is June 30th.**<br/>
-<br/>
-Phase 3 Part 3: Refection - This final online course will launch in early May on your Code Studio Teacher Dashboard. If you need support while finishing your work or teaching the course, check out the CS in Algebra forum [here](http://forum.code.org/c/cs-in-algebra).
+Milestone complete!
 
 
 [**Back to the top**](#top)
