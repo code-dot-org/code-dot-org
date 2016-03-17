@@ -13,6 +13,7 @@ var utils = require('./utils');
  * @param {function} [options.shouldRunAtMaxSpeed]
  * @param {number} [options.maxInterpreterStepsPerTick]
  * @param {Object} [options.customMarshalGlobalProperties]
+ * @param {boolean} [options.logExecution] if true, executionLog[] be populated
  */
 var JSInterpreter = module.exports = function (options) {
   this.studioApp = options.studioApp;
@@ -96,8 +97,8 @@ JSInterpreter.prototype.parse = function (options) {
           }
 
           self.eventQueue.push({
-            'fn': intFunc,
-            'arguments': args
+            fn: intFunc,
+            arguments: args
           });
 
           if (self.executeLoopDepth === 0) {
@@ -591,17 +592,17 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
 };
 
 /**
- * Checks to the see if the supplied node is from the user code range.
+ * Checks to the see if the character offset is from the user code range.
  *
- * @param {!Object} node supplied by acorn parse.
- * @return {boolean} true if the node is in user code.
+ * @param {number} offset index of a character from program
+ * @return {boolean} true if the character offset is in user code.
  * @private
  */
-JSInterpreter.prototype.isNodeInUserCode_ = function (node) {
-  if (typeof node.start === 'undefined' || typeof this.codeInfo === 'undefined') {
+JSInterpreter.prototype.isOffsetInUserCode_ = function (offset) {
+  if (typeof offset === 'undefined' || typeof this.codeInfo === 'undefined') {
     return false;
   }
-  var start = node.start - this.codeInfo.userCodeStartOffset;
+  var start = offset - this.codeInfo.userCodeStartOffset;
 
   return start >= 0 && start < this.codeInfo.userCodeLength;
 };
@@ -649,7 +650,7 @@ JSInterpreter.prototype.logStep_ = function () {
   var state = this.interpreter.stateStack[0];
   var node = state.node;
 
-  if (!this.isNodeInUserCode_(node)) {
+  if (!this.isOffsetInUserCode_(node.start)) {
     return;
   }
 
@@ -668,13 +669,13 @@ JSInterpreter.prototype.logStep_ = function () {
   } else if (node.type === "ForStatement") {
     var mode = state.mode || 0;
     switch (mode) {
-      case codegen.FOR_STATEMENT_MODE_INIT:
+      case codegen.ForStatementMode.INIT:
         this.executionLog.push("[forInit]");
         break;
-      case codegen.FOR_STATEMENT_MODE_TEST:
+      case codegen.ForStatementMode.TEST:
         this.executionLog.push("[forTest]");
         break;
-      case codegen.FOR_STATEMENT_MODE_UPDATE:
+      case codegen.ForStatementMode.UPDATE:
         this.executionLog.push("[forUpdate]");
         break;
     }
