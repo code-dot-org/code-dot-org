@@ -38,6 +38,7 @@ window.dashboard.clientState = require('./clientState.js')(window.sessionStorage
 window.dashboard.createCallouts = require('./callouts');
 window.dashboard.hashEmail = require('./hashEmail');
 window.dashboard.funometer = require('./funometerPercentagesByDay');
+window.dashboard.popupWindow = require('./popup-window');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.
