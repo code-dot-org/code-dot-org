@@ -15,10 +15,12 @@ var GameLabVisualizationHeader = React.createClass({
 
   render: function () {
     return (
-      <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
-        <button value={GameLabInterfaceMode.CODE}>{msg.codeMode()}</button>
-        <button value={GameLabInterfaceMode.ANIMATION}>{msg.animationMode()}</button>
-      </ToggleGroup>
+      <div className="workspace-header-height">
+        <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
+          <button value={GameLabInterfaceMode.CODE}>{msg.codeMode()}</button>
+          <button value={GameLabInterfaceMode.ANIMATION}>{msg.animationMode()}</button>
+        </ToggleGroup>
+      </div>
     );
   },
 

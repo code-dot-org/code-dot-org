@@ -982,6 +982,10 @@ $aniGifPreviewHeight: 60px;
   }
 }
 
+.workspace-header-height {
+  height: $workspace-headers-height;
+}
+
 .workspace-header {
   text-align: center;
   white-space: nowrap;
