@@ -967,45 +967,40 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, hideIcon,
 };
 
 /**
+ * @callback onConfirmCallback
+ */
+
+/**
+ * @callback onCancelCallback
+ * @param {string} [text] Textbox value if prompting, otherwise omitted
+ */
+
+/**
  * Shows a simple dialog that has a header, body, continue button, and cancel
  * button
  * @param {object} options Configurable options.
- * @param {string} headerText Text for header portion
- * @param {string} bodyText Text for body portion
- * @param {boolean} prompt Whether to prompt for a string value
- * @param {string} promptPrefill If prompting, textbox prefill value
- * @param {string} cancelText Text for cancel button
- * @param {string} confirmText Text for confirm button
- * @param {boolean} hideIcon Whether to hide the icon
- * @param {function} [onConfirm] Function to be called after clicking confirm
- * @param {function} [onCancel] Function to be called after clicking cancel
+ * @param {string} [options.headerText] Text for header portion
+ * @param {string} [options.bodyText] Text for body portion
+ * @param {boolean} [options.prompt=false] Whether to prompt for a string value
+ * @param {string} [options.promptPrefill] If prompting, textbox prefill value
+ * @param {string} options.cancelText Text for cancel button
+ * @param {string} options.confirmText Text for confirm button
+ * @param {boolean} [options.hideIcon=false] Whether to hide the icon
+ * @param {onConfirmCallback} [options.onConfirm] Function to be called after clicking confirm
+ * @param {onCancelCallback} [options.onCancel] Function to be called after clicking cancel
  */
 FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
-  var contentDiv = document.createElement('div');
-  contentDiv.innerHTML = '';
-  if (options.headerText) {
-    contentDiv.innerHTML += '<p class="dialog-title">' + options.headerText + '</p>';
-  }
-  if (options.bodyText) {
-    contentDiv.innerHTML += '<p>' + options.bodyText + '</p>';
-  }
-  var textBox;
-  if (options.prompt) {
-    textBox = document.createElement('input');
-    textBox.className = "name-textbox";
-    if (options.promptPrefill) {
-      textBox.value = options.promptPrefill;
-    }
-    contentDiv.appendChild(textBox);
-  }
-
-  var buttons = document.createElement('div');
-  ReactDOM.render(React.createElement(DialogButtons, {
-    confirmText: options.confirmText,
-    cancelText: options.cancelText,
-    cancelButtonClass: options.cancelButtonClass
-  }), buttons);
-  contentDiv.appendChild(buttons);
+  var contentDiv = ReactDOM.render(
+    <div>
+      {options.headerText && <p class="dialog-title">{options.headerText}</p>}
+      {options.bodyText && <p>{options.bodyText}</p>}
+      {options.prompt && <input value={options.promptPrefill} />}
+      <DialogButtons
+          confirmText={options.confirmText}
+          cancelText={options.cancelText}
+          cancelButtonClass={options.cancelButtonClass} />
+    </div>,
+    document.createElement('div'));
 
   var dialog = this.createModalDialog({
     Dialog: Dialog,
@@ -1014,11 +1009,12 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
     defaultBtnSelector: '#again-button'
   });
 
-  var cancelButton = buttons.querySelector('#again-button');
+  var cancelButton = contentDiv.querySelector('#again-button');
+  var textBox = contentDiv.querySelector('input');
   if (cancelButton) {
     dom.addClickTouchEvent(cancelButton, function() {
       if (options.onCancel) {
-        if (options.prompt) {
+        if (textBox) {
           options.onCancel(textBox.value);
         } else {
           options.onCancel();
@@ -1028,7 +1024,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
     });
   }
 
-  var confirmButton = buttons.querySelector('#confirm-button');
+  var confirmButton = contentDiv.querySelector('#confirm-button');
   if (confirmButton) {
     dom.addClickTouchEvent(confirmButton, function() {
       if (options.onConfirm) {
@@ -1041,6 +1037,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   dialog.show();
   if (textBox) {
     textBox.focus();
+    textBox.select();
   }
 };
 
