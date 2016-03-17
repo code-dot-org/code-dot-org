@@ -5,7 +5,8 @@ class LevelGroupDSL < BaseDSL
     @title = nil
     @description_short = nil
     @description = nil
-    @hash[:levels] = []
+    @hash[:pages] = []
+    @levels = []
   end
 
   integer :id
@@ -17,8 +18,17 @@ class LevelGroupDSL < BaseDSL
     {name: @name, properties: @hash}
   end
 
+  def page
+    @levels = []
+    @hash[:pages] << {levels: @levels}
+  end
+
   def level(name)
-    @hash[:levels] << name
+    @levels << name
+  end
+
+  def submittable(text)
+    @hash[:submittable] = text
   end
 
   def i18n_strings

@@ -112,7 +112,7 @@
   });
 
   $( "form#new_user" ).on("submit", function(e){
-    hashEmail({ email_selector: '#user_email',
-                hashed_email_selector: '#user_hashed_email',
-                age_selector: '#user_age'});
+    window.dashboard.hashEmail({ email_selector: '#user_email',
+      hashed_email_selector: '#user_hashed_email',
+      age_selector: '#user_age'});
   });

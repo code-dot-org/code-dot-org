@@ -35,6 +35,9 @@ $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 var jquery = require('jquery-shim');
 window.dashboard = window.dashboard || {};
 window.dashboard.clientState = require('./clientState.js')(window.sessionStorage, jquery);
+window.dashboard.createCallouts = require('./callouts');
+window.dashboard.hashEmail = require('./hashEmail');
+window.dashboard.funometer = require('./funometerPercentagesByDay');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.
