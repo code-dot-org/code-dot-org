@@ -2,7 +2,7 @@
 
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
-var progress = require('./progress');
+var progress = require('../progress');
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
