@@ -368,4 +368,3 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
 - Prefer double quotes for attributes.
 - Use dashes instead of underscores, camel casing, etc for separating words in IDs and classes.
 
-# }
