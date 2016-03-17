@@ -203,7 +203,7 @@ XML
   test '*_dropdown blocks match themselves' do
     toolbox_block = make_toolbox_node @controls_repeat_simplified_dropdown_xml
     solution_block = make_solution_node @controls_repeat_simplified_dropdown_xml
-    refute @level.blocks_match? toolbox_block, solution_block
+    assert @level.blocks_match? toolbox_block, solution_block
   end
 
   test '*_constant_dropdown blocks in the toolbox match *_constant blocks in the solution' do
