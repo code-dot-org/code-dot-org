@@ -77,7 +77,7 @@ var DesignProperties = React.createClass({
 
     var tabHeight = 35;
     var borderColor = color.lighter_gray;
-    var bgColor = '#e7e8ea';
+    var bgColor = color.lightest_gray;
 
     // Diagram of how tabs outlines are drawn. 'x' represents solid border.
     // '-' and '|' represent no border.
