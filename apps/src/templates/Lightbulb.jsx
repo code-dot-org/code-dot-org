@@ -1,3 +1,5 @@
+var color = require('../color');
+
 var Lightbulb = React.createClass({
   
   propTypes: {
@@ -22,7 +24,7 @@ var Lightbulb = React.createClass({
     return {
       fontWeight: 'bold',
       fontSize: '400px',
-      fill: 'white',
+      fill: color.white,
       stroke: 'black',
       strokeWidth: '30px',
       fontFamily: 'Verdana, Geneva, sans-serif',
