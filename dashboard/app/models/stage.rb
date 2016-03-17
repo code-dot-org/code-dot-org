@@ -75,6 +75,21 @@ class Stage < ActiveRecord::Base
         levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
     }
 
+    # Use to_a here so that we get access to the cached script_levels.
+    # Without it, script_levels.last goes back to the database.
+    last_script_level = script_levels.to_a.last
+
+    # The last level in a stage might be a multi-page assessment, in which
+    # case we'll receive extra puzzle pages to be added to the existing summary.
+    if last_script_level.long_assessment?
+      last_level_summary = stage_data[:levels].last
+      extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
+      unless extra_levels.empty?
+        stage_data[:levels] += extra_levels
+        last_level_summary[:url] << "/page/1"
+      end
+    end
+
     if script.has_lesson_plan?
       stage_data[:lesson_plan_html_url] = lesson_plan_html_url
       stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url

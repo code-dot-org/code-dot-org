@@ -67,6 +67,15 @@ class ScriptLevel < ActiveRecord::Base
     stage.script_levels.to_a.last == self
   end
 
+  def long_assessment?
+    if assessment
+      if level.properties["pages"] && level.properties["pages"].length > 1
+        return true
+      end
+    end
+    false
+  end
+
   def name
     I18n.t("data.script.name.#{script.name}.#{stage.name}")
   end
@@ -131,6 +140,23 @@ class ScriptLevel < ActiveRecord::Base
     end
 
     summary
+  end
+
+  # Given a script level summary for the last level in a stage that has already
+  # been determined to be a long assessment, returns an array of additional
+  # level summaries.
+  def self.summarize_extra_puzzle_pages(last_level_summary)
+    extra_levels = []
+    level = Script.cache_find_level(last_level_summary[:id])
+    extra_level_count = level.properties["pages"].length - 1
+    (1..extra_level_count).each do |page_index|
+      new_level = last_level_summary.deep_dup
+      new_level[:url] << "/page/#{page_index + 1}"
+      new_level[:position] = last_level_summary[:position] + page_index
+      new_level[:title] = last_level_summary[:position] + page_index
+      extra_levels << new_level
+    end
+    extra_levels
   end
 
   def self.cache_find(id)
