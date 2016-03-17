@@ -115,6 +115,18 @@ XML
 </block>
 XML
 
+    @controls_repeat_simplified_xml = <<XML
+<block type="controls_repeat">
+  <title name="TIMES">5</title>
+</block>
+XML
+
+    @controls_repeat_simplified_dropdown_xml = <<XML
+<block type="controls_repeat_dropdown">
+  <title name="TIMES" config="3-10">???</title>
+</block>
+XML
+
     @toolbox_doc = Nokogiri::XML '<xml></xml>'
     @solution_doc = Nokogiri::XML '<xml></xml>'
     @level = Artist.new
@@ -176,16 +188,22 @@ XML
     assert @level.blocks_match? toolbox_block, solution_block
   end
 
-  test '*_constant blocks in the toolbox match *_constant blocks in the solution' do
+  test '*_constant blocks match themselves' do
     toolbox_block = make_toolbox_node @draw_block_xml
     solution_block = make_solution_node @draw_block_xml
     assert @level.blocks_match? toolbox_block, solution_block
   end
 
-  test '*_constant_dropdown blocks in the toolbox match *_constant_dropdown blocks in the solution' do
+  test '*_constant_dropdown blocks match themselves' do
     toolbox_block = make_toolbox_node @draw_with_dropdown_xml
     solution_block = make_solution_node @draw_with_dropdown_xml
     assert @level.blocks_match? toolbox_block, solution_block
+  end
+
+  test '*_dropdown blocks match themselves' do
+    toolbox_block = make_toolbox_node @controls_repeat_simplified_dropdown_xml
+    solution_block = make_solution_node @controls_repeat_simplified_dropdown_xml
+    refute @level.blocks_match? toolbox_block, solution_block
   end
 
   test '*_constant_dropdown blocks in the toolbox match *_constant blocks in the solution' do
@@ -197,6 +215,18 @@ XML
   test '*_constant_dropdown blocks in the solution do not match *_constant blocks in the toolbox' do
     toolbox_block = make_toolbox_node @draw_block_xml
     solution_block = make_solution_node @draw_with_dropdown_xml
+    refute @level.blocks_match? toolbox_block, solution_block
+  end
+
+  test '*_dropdown blocks in the toolbox match corresponding non-dropdown blocks in the solution' do
+    toolbox_block = make_toolbox_node @controls_repeat_simplified_dropdown_xml
+    solution_block = make_solution_node @controls_repeat_simplified_xml
+    assert @level.blocks_match? toolbox_block, solution_block
+  end
+
+  test '*_dropdown blocks in the solution do not match corresponding non-dropdown blocks in toolbox' do
+    toolbox_block = make_toolbox_node @controls_repeat_simplified_xml
+    solution_block = make_solution_node @controls_repeat_simplified_dropdown_xml
     refute @level.blocks_match? toolbox_block, solution_block
   end
 
