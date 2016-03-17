@@ -7,7 +7,8 @@ var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
-var colors = require('../../sharedJsxStyles').colors;
+var color = require('../../color');
+var jsxColors = require('../../sharedJsxStyles').colors;
 var EnumPropertyRow = require('./EnumPropertyRow.jsx');
 
 var elementUtils = require('./elementUtils');
@@ -139,8 +140,8 @@ module.exports = {
     element.style.height = '30px';
     element.style.fontSize = '14px';
     element.style.margin = '0';
-    element.style.color = colors.white;
-    element.style.backgroundColor = colors.teal;
+    element.style.color = color.white;
+    element.style.backgroundColor = jsxColors.teal;
 
     var option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';

@@ -6,10 +6,6 @@
 
 module.exports = {
   colors: {
-    charcoal: '#5b6770',
-    green: '#b9bf15',
-    white: '#fff',
-    orange: '#ffa400',
     teal: '#1abc9c',
     // colors that are taken from bootstrap, and not necessarily part of our
     // core theme
