@@ -115,4 +115,5 @@ stage 'Studio'
 level 'Resizing Test'
 
 stage 'Long assessment'
-level 'Test longassessment levelgroup'
+assessment 'Test longassessment levelgroup'
+assessment 'Test longassessment levelgroup split'
