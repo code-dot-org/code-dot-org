@@ -218,10 +218,12 @@ class TablesApi < Sinatra::Base
     end
     limits.increment_row_count
 
-    body = request.body.read
-    record_size = get_approximate_record_size(table_name, body)
+    record = JSON.parse(request.body.read)
+    record.delete('id')
+
+    record_size = get_approximate_record_size(table_name, record.to_json)
     record_too_large(record_size) if record_size > @@max_record_size
-    value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(body), request.ip)
+    value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(record, request.ip)
 
     dont_cache
     content_type :json
@@ -238,16 +240,15 @@ class TablesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    body = request.body.read
-    record_size = get_approximate_record_size(table_name, body)
-    record_too_large(record_size) if record_size > @@max_record_size
-
-    new_value =  JSON.parse(body)
+    new_value = JSON.parse(request.body.read)
 
     if new_value.has_key?('id') && new_value['id'].to_i != id.to_i
       halt 400, {}, "Updating 'id' is not allowed" if new_value.has_key? 'id'
     end
     new_value.delete('id')
+
+    record_size = get_approximate_record_size(table_name, new_value.to_json)
+    record_too_large(record_size) if record_size > @@max_record_size
 
     value = TableType.new(channel_id, storage_id(endpoint), table_name).update(id.to_i, new_value, request.ip)
 
@@ -329,6 +330,7 @@ class TablesApi < Sinatra::Base
 
     # TODO: This should probably be a bulk insert
     records.each_with_index do |record, i|
+      record.delete('id')
       record_size = get_approximate_record_size(table_name, record.to_json)
       record_too_large(record_size, i) if record_size > @@max_record_size
       table.insert(record, request.ip)
