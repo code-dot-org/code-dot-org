@@ -1,8 +1,7 @@
-
 /**
- * A component for managing hosted assets.
+ * A file upload component.
  */
-module.exports = React.createClass({
+var AssetUploader = React.createClass({
   propTypes: {
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
@@ -67,3 +66,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = AssetUploader;

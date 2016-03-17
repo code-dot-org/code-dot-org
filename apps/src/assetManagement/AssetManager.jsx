@@ -21,7 +21,7 @@ function getErrorMessage(status) {
 /**
  * A component for managing hosted assets.
  */
-module.exports = React.createClass({
+var AssetManager = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
     typeFilter: React.PropTypes.string,
@@ -135,7 +135,7 @@ module.exports = React.createClass({
 
       assetList = (
         <div>
-          <div style={{maxHeight: '330px', overflowY: 'scroll', margin: '1em 0', paddingRight: '15px'}}>
+          <div style={{maxHeight: '330px', overflowY: 'scroll', margin: '1em 0'}}>
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
@@ -147,15 +147,7 @@ module.exports = React.createClass({
       );
     }
 
-    var title = this.props.assetChosen ?
-        <p className="dialog-title">Choose Assets</p> :
-        <p className="dialog-title">Manage Assets</p>;
-
-    return (
-      <div className="modal-content" style={{margin: 0}}>
-        {title}
-        {assetList}
-      </div>
-    );
+    return assetList;
   }
 });
+module.exports = AssetManager;
