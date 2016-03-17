@@ -1,6 +1,7 @@
 /* global $*/
 
 var applabMsg = require('./locale');
+var color = require('../color');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 
@@ -75,7 +76,7 @@ var DesignProperties = React.createClass({
     }
 
     var tabHeight = 35;
-    var borderColor = '#c6cacd';
+    var borderColor = color.lighter_gray;
     var bgColor = '#e7e8ea';
 
     // Diagram of how tabs outlines are drawn. 'x' represents solid border.
