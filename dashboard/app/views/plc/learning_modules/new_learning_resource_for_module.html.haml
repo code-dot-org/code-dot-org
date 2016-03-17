@@ -1,0 +1,37 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+
+%h3{style: 'margin-bottom: 24px;'}
+  Add a resource (Module: #{@learning_module.name})
+
+.new_resource_section{style: 'float: left; width: 33%'}
+  %p
+    = link_to 'New Script', new_plc_task_path(plc_learning_module_id: @learning_module.id, type: 'Plc::ScriptCompletionTask'), class: 'btn'
+  %p
+    Select Script if
+    %li
+      You want to create multiple screens that a learner will click through
+    %li
+      You will incorporate multiple puzzles or questions
+
+.new_resource_section{style: 'float: right; width: 33%'}
+  %p
+    = link_to 'New Link', new_plc_task_path(plc_learning_module_id: @learning_module.id, type: 'Plc::LearningResourceTask'), class: 'btn'
+  %p
+    Select Link if
+    %li
+      You want to point to a resource outside the Code.org website
+    %li
+      You want to point to a resource within Code.org but is some other type
+
+.new_resource_section{style: 'display: inline-block; width: 33%'}
+  %p
+    = link_to 'New Level', new_plc_task_path(plc_learning_module_id: @learning_module.id, type: 'Plc::LearningResourceTask'), class: 'btn'
+  %p
+    Select Level if
+    %li
+      You want to create a single page of content that users will view
+    %li
+      You want to embed a video
+
+

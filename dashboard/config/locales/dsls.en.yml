@@ -1580,6 +1580,7 @@ en:
     level_group:
       name:
         Test longassessment levelgroup: 
+        Test longassessment levelgroup split: 
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
