@@ -23,6 +23,11 @@ var ButtonProperties = React.createClass({
   render: function () {
     var element = this.props.element;
 
+    var handleIconColorChange = function (value) {
+      this.props.handleChange('icon-color', value);
+      this.props.handleChange('image', element.getAttribute('data-canonical-image-url'));
+    }.bind(this);
+
     return (
       <div id='propertyRowContainer'>
         <PropertyRow
@@ -76,6 +81,10 @@ var ButtonProperties = React.createClass({
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'image')} />
+        <ColorPickerPropertyRow
+          desc={'icon color'}
+          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
+          handleChange={handleIconColorChange} />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}

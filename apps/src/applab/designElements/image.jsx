@@ -1,7 +1,7 @@
 /* global $ */
 
-
 var PropertyRow = require('./PropertyRow.jsx');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
@@ -19,6 +19,11 @@ var ImageProperties = React.createClass({
 
   render: function () {
     var element = this.props.element;
+
+    var handleIconColorChange = function (value) {
+      this.props.handleChange('icon-color', value);
+      this.props.handleChange('picture', element.getAttribute('data-canonical-image-url'));
+    }.bind(this);
 
     return (
       <div id='propertyRowContainer'>
@@ -51,6 +56,10 @@ var ImageProperties = React.createClass({
           desc={'picture'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'picture')} />
+        <ColorPickerPropertyRow
+          desc={'icon color'}
+          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
+          handleChange={handleIconColorChange} />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}

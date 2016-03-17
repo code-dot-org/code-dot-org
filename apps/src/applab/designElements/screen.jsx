@@ -18,6 +18,11 @@ var ScreenProperties = React.createClass({
   render: function () {
     var element = this.props.element;
 
+    var handleIconColorChange = function (value) {
+      this.props.handleChange('icon-color', value);
+      this.props.handleChange('screen-image', element.getAttribute('data-canonical-image-url'));
+    }.bind(this);
+
     return (
       <div id='propertyRowContainer'>
         <PropertyRow
@@ -33,6 +38,10 @@ var ScreenProperties = React.createClass({
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')} />
+        <ColorPickerPropertyRow
+          desc={'icon color'}
+          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
+          handleChange={handleIconColorChange} />
         <DefaultScreenButtonPropertyRow
           screenId={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'is-default')}/>
