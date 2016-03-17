@@ -1,4 +1,5 @@
 var AssetManager = require('./AssetManager.jsx');
+var color = require('../color');
 var IconLibrary = require('./IconLibrary.jsx');
 
 /**
@@ -46,7 +47,7 @@ var ImagePicker = React.createClass({
         cursor: 'pointer'
       },
       divider: {
-        borderColor: '#7665a0',
+        borderColor: color.purple,
         margin: '5px 0'
       }
     };

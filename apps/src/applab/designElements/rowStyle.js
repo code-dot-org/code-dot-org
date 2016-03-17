@@ -1,3 +1,5 @@
+var color = require('../../color');
+
 module.exports.input = {
   display: 'inline-block',
   height: 20,
@@ -6,11 +8,11 @@ module.exports.input = {
   marginLeft: 0,
   fontSize: 14,
   lineHeight: '20px',
-  color: '#5b6770',
+  color: color.charcoal,
   WebkitBorderRadius: 4,
   MozBorderRadius: 4,
   borderRadius: 4,
-  border: '1px solid #949CA2',
+  border: '1px solid ' + color.light_gray,
   verticalAlign: 'middle'
 };
 
