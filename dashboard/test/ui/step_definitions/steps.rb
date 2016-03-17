@@ -62,7 +62,7 @@ When /^I reset the puzzle to the starting version$/ do
     And I wait until element "button:contains(Delete Progress)" is visible
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
-    Then I wait for 15 seconds
+    And I wait to see "#versions-header"
   }
 end
 
