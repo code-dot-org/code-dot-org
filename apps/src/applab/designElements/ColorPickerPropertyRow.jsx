@@ -25,6 +25,9 @@ var ColorPickerPropertyRow = React.createClass({
   },
 
   handlePageClick: function (e) {
+    if (e.target === ReactDOM.findDOMNode(this.refs.button)) {
+      return;
+    }
     var ref = this.refs.colorPicker;
     if (ref && !ReactDOM.findDOMNode(ref).contains(e.target)) {
       this.setState({displayColorPicker: false});
@@ -73,6 +76,7 @@ var ColorPickerPropertyRow = React.createClass({
             onChange={this.handleChangeInternal}
             style={rowStyle.input} />
           <button
+            ref="button"
             className={this.state.value === '' ? 'rainbow-gradient' : undefined}
             style={buttonStyle}
             onClick={this.toggleColorPicker}>
