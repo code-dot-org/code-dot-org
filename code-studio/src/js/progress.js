@@ -90,10 +90,10 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
       status = "submitted";
     } else if (dashboard.clientState.queryParams('user_id')) {
       // Show server progress only (the student's progress)
-      status = dashboard.progress.activityCssClass((serverProgress[level.id] || {}).result);
+      status = progress.activityCssClass((serverProgress[level.id] || {}).result);
     } else {
       // Merge server progress with local progress
-      status = dashboard.progress.mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
+      status = progress.mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
     }
 
     var href = level.url + location.search;
