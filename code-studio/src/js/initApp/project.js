@@ -13,6 +13,8 @@ var assets = require('./clientApi').create('/v3/assets');
 var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
 
+var showProjectAdmin = require('../showProjectAdmin');
+
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
 
@@ -226,14 +228,6 @@ var projects = module.exports = {
     }
   },
 
-  /**
-   * Updates the contents of the admin box for admins. We have no knowledge
-   * here whether we're an admin, and depend on dashboard getting this right.
-   */
-  showAdmin: function() {
-    dashboard.admin.showProjectAdmin();
-  },
-
   showMinimalProjectHeader: function() {
     if (this.shouldUpdateHeaders()) {
       dashboard.header.showMinimalProjectHeader();
@@ -328,7 +322,10 @@ var projects = module.exports = {
       $(".full_container").css({"padding":"0px"});
     }
 
-    this.showAdmin();
+
+    // Updates the contents of the admin box for admins. We have no knowledge
+    // here whether we're an admin, and depend on dashboard getting this right.
+    showProjectAdmin();
   },
   projectChanged: function() {
     hasProjectChanged = true;
