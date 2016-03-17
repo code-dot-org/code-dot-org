@@ -1,4 +1,4 @@
-# Style Guide {
+# Style Guide
 
 ## Prelude
 We try to maintain a consistent style for two reasons:
@@ -218,6 +218,7 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
     a Javascript variable so that it as accessible from JS.
 
 ### React
+Our default style if not mentioned here should be that mentioned in the AirBnb guide https://github.com/airbnb/javascript/tree/master/react (perhaps with the exception of closing tags on their own line).
 * <a name="js-react-inline-styles"></a>
 Prefer single object for all styles vs. inlined style objects
 ```jsx
