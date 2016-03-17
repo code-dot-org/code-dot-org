@@ -293,7 +293,7 @@ Dashboard::Application.routes.draw do
 
   get '/plc/content_creator/show_courses_and_modules', to: 'plc/content_creator#show_courses_and_modules'
 
-  get '/plc/learning_modules/:id/new_learning_resource_for_module', to: 'plc/learning_modules#new_learning_resource_for_module'
+  get '/plc/learning_modules/:id/new_learning_resource_for_module', to: 'plc/learning_modules#new_learning_resource_for_module', as: 'new_learning_resource_for_module'
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
