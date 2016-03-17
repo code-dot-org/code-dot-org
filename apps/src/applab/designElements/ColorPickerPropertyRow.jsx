@@ -1,6 +1,5 @@
 /* global ColorPicker */
 var rowStyle = require('./rowStyle');
-var colors = require('../../sharedJsxStyles').colors;
 var ColorPicker = require('react-color').default;
 
 var ColorPickerPropertyRow = React.createClass({

@@ -48,7 +48,9 @@ var AssetManager = React.createClass({
    */
   onAssetListReceived: function (xhr) {
     assetListStore.reset(JSON.parse(xhr.responseText));
-    this.setState({assets: assetListStore.list(this.props.typeFilter)});
+    if (this.isMounted()) {
+      this.setState({assets: assetListStore.list(this.props.typeFilter)});
+    }
   },
 
   /**
@@ -57,8 +59,11 @@ var AssetManager = React.createClass({
    * @param xhr
    */
   onAssetListFailure: function (xhr) {
-    this.setState({statusMessage: 'Error loading asset list: ' +
-      getErrorMessage(xhr.status)});
+    if (this.isMounted()) {
+      this.setState({
+        statusMessage: 'Error loading asset list: ' + getErrorMessage(xhr.status)
+      });
+    }
   },
 
   onUploadStart: function () {

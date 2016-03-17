@@ -1,5 +1,5 @@
 /* global $ */
-var colors = require('../sharedJsxStyles').colors;
+var color = require('../color');
 
 /**
  * Simple boot-strapped style alert.
@@ -23,14 +23,14 @@ var Alert = React.createClass({
       },
       typeSpecific: {
         error: {
-          borderColor: colors.bootstrap.errorBorder,
-          backgroundColor: colors.bootstrap.errorBackground,
-          color: colors.bootstrap.errorText
+          borderColor: color.bootstrap_error_border,
+          backgroundColor: color.bootstrap_error_background,
+          color: color.bootstrap_error_text
         },
         warning: {
-          borderColor: colors.bootstrap.warningBorder,
-          backgroundColor: colors.bootstrap.warningBackground,
-          color: 'black'
+          borderColor: color.bootstrap_warning_border,
+          backgroundColor: color.bootstrap_warning_background,
+          color: color.black
         },
       },
       child: {

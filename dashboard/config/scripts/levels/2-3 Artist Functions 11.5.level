@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Here's that same \"Draw a hexagon\" function. What happens if you only turn 60 degrees each time you loop?",
+    "instructions": "Here's that same `draw a hexagon` function. \r\n\r\nWhat happens if you turn 60 degrees in your main program each time you loop?",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "ideal": "10",
     "slider_speed": "0.7",
     "embed": "false",
-    "markdown_instructions": "Here's that same \"Draw a hexagon\" function. What happens if you only turn 60 degrees each time you loop?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Here's that same `draw a hexagon` function. \r\n\r\nWhat happens if you turn 60 degrees in your main program each time you loop?\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -30,8 +30,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -43,25 +46,25 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" deletable="false" editable="false">
+        <block type="procedures_defnoreturn" deletable="false" editable="false" y="200">
           <mutation/>
           <title name="NAME">draw a hexagon</title>
           <statement name="STACK">
-            <block type="controls_repeat" deletable="false" editable="false">
+            <block type="controls_repeat">
               <title name="TIMES">6</title>
               <statement name="DO">
-                <block type="draw_colour" inline="true" deletable="false" editable="false">
+                <block type="draw_colour" inline="true">
                   <value name="COLOUR">
-                    <block type="colour_random" deletable="false" editable="false"/>
+                    <block type="colour_random"/>
                   </value>
                   <next>
-                    <block type="draw_move_by_constant" deletable="false" editable="false">
+                    <block type="draw_move_by_constant">
                       <title name="DIR">moveForward</title>
                       <title name="VALUE">50</title>
                       <next>
-                        <block type="draw_turn_by_constant_dropdown" deletable="false" editable="false">
+                        <block type="draw_turn_by_constant">
                           <title name="DIR">turnRight</title>
-                          <title name="VALUE" config="45,60,90,120,180">60</title>
+                          <title name="VALUE">60</title>
                         </block>
                       </next>
                     </block>
@@ -79,13 +82,13 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
@@ -111,30 +114,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">6</title>
-        </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_turn_by_constant_dropdown">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE" config="45,60,90,120,180">60</title>
-              <next>
-                <block type="draw_turn_by_constant_dropdown">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE" config="45,60,90,120,180">60</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
         <block type="procedures_callnoreturn">
           <mutation name="draw a hexagon"/>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

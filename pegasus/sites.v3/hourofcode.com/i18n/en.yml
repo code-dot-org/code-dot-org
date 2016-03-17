@@ -320,7 +320,7 @@
   hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='%{codeorg_url}'>Check out the tutorials</a>."
   hoc_faq_last_year: "Try the tutorials"
   hoc_faq_when_is_hoc_q: 'When is the Hour of Code?'
-  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='http://csedweek.org'>Computer Science Education Week</a>. Computer Science Education Week was December 7-13, 2015, but you can host an Hour of Code all year round."
+  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='http://csedweek.org'>Computer Science Education Week</a>. Computer Science Education Week was December 7-13, 2015, and this year's will be December 5-11, but you can host an Hour of Code all year round."
   hoc_faq_why_cs_q: 'Why computer science?'
   hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats on <a href='%{codeorg_url}'>%{partner_url}</a>."
   hoc_faq_how_participate_q: 'How do I participate in the Hour of Code?'
