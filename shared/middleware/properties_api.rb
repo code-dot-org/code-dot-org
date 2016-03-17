@@ -142,4 +142,13 @@ class PropertiesApi < Sinatra::Base
   put %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |_endpoint, _channel_id, _name|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
+
+  def self.set_max_property_size_for_test(max_property_size)
+    @@max_property_size = max_property_size
+  end
+
+  def self.reset_max_property_size_for_test
+    set_max_property_size_for_test(DEFAULT_MAX_PROPERTY_SIZE)
+  end
+
 end
