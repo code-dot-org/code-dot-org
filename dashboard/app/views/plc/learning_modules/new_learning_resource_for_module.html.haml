@@ -6,7 +6,7 @@
 
 .new_resource_section{style: 'float: left; width: 33%'}
   %p
-    = link_to 'New Script', new_script_path, class: 'btn'
+    = link_to 'New Script', new_plc_task_path(plc_learning_module_id: @learning_module.id, type: 'Plc::ScriptCompletionTask'), class: 'btn'
   %p
     Select Script if
     %li
@@ -26,7 +26,7 @@
 
 .new_resource_section{style: 'display: inline-block; width: 33%'}
   %p
-    = link_to 'New Level', new_level_path, class: 'btn'
+    = link_to 'New Level', new_plc_task_path(plc_learning_module_id: @learning_module.id, type: 'Plc::LearningResourceTask'), class: 'btn'
   %p
     Select Level if
     %li
