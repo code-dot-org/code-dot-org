@@ -300,6 +300,8 @@ Dashboard::Application.routes.draw do
 
   get '/plc/learning_modules/:id/new_learning_resource_for_module', to: 'plc/learning_modules#new_learning_resource_for_module', as: 'new_learning_resource_for_module'
 
+  post 'plc/courses/:id/submit_new_questions_and_answers', to: 'plc/courses#submit_new_questions_and_answers'
+
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'

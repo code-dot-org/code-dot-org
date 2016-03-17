@@ -6,3 +6,31 @@
 .new_link {
   margin-top: 24px;
 }
+
+#evaluationTable {
+  width: 100%;
+
+  tbody {
+    border-bottom: solid grey 2px;
+
+    tr {
+      border-bottom: solid lightgrey 1px;
+    }
+
+    td {
+      padding: 5px;
+    }
+
+    input, select {
+      margin: auto;
+    }
+
+    .cloneableAnswerRow {
+      display: none
+    }
+
+    .cloneableQuestionRow {
+      display: none;
+    }
+  }
+}
