@@ -3,11 +3,10 @@
 var color = require('../color');
 var connect = require('react-redux').connect;
 
-var AnimationSequenceTile = React.createClass({
+var AnimationFrameTile = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
-    isSelected: React.PropTypes.bool,
-    sequenceName: React.PropTypes.string.isRequired
+    isSelected: React.PropTypes.bool
   },
 
   render: function () {
@@ -40,7 +39,6 @@ var AnimationSequenceTile = React.createClass({
       <div className="image-frame" style={imageFrameStyle}>
         <img src={this.props.assetUrl('media/common_images/draw-east.png')} style={imageStyle}/>
       </div>
-      <div className="sequence-name" style={sequenceNameStyle}>{this.props.sequenceName}</div>
     </div>;
   }
 });
@@ -48,4 +46,4 @@ module.exports = connect(function propsFromStore(state) {
   return {
     assetUrl: state.level.assetUrl
   };
-})(AnimationSequenceTile);
+})(AnimationFrameTile);

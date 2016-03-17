@@ -10,9 +10,6 @@ var ResizablePanes = require('./ResizablePanes.jsx');
  * Root of the animation editor interface mode for GameLab
  */
 var AnimationTab = React.createClass({
-  propTypes: {
-  },
-
   render: function () {
     var fillAbsoluteParentStyle = {
       position: 'absolute',
@@ -34,7 +31,7 @@ var AnimationTab = React.createClass({
         </div>
         <div id='editor-column'>
           <div className="purple-header workspace-header"><span>Workspace</span></div>
-          <div style={{flex: '1 0', backgroundColor: 'orange'}}>
+          <div style={{flex: '1 0', backgroundColor: 'white', textAlign: 'center', paddingTop:'48%'}}>
             TODO: Piskel editor goes here!
           </div>
         </div>
