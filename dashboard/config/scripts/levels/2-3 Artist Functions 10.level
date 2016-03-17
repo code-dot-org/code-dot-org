@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Here's two functions, one to draw a big gear and one to draw a small gear. Use them to draw the inside of a machine!",
+    "instructions": "Freeplay: Here are two functions, one to draw a big gear and one to draw a small gear. Use them to draw the inside of a machine!",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "slider_speed": "0.8",
     "min_workspace_height": "1500",
     "embed": "false",
-    "markdown_instructions": "Here's two functions, one to draw a big gear and one to draw a small gear. Use them to draw the inside of a machine!\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "**Freeplay:** Here are two functions, one to draw a big gear and one to draw a small gear.  \r\n\r\nUse them to draw the inside of a machine!\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -30,8 +30,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -48,7 +51,7 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" deletable="false" editable="false">
+        <block type="procedures_defnoreturn" deletable="false" editable="false" x="250">
           <mutation/>
           <title name="NAME">big gear</title>
           <statement name="STACK">
@@ -105,7 +108,7 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" deletable="false" editable="false">
+        <block type="procedures_defnoreturn" deletable="false" editable="false" x="250">
           <mutation/>
           <title name="NAME">small gear</title>
           <statement name="STACK">
@@ -170,13 +173,13 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
@@ -202,6 +205,22 @@
           <value name="COLOUR">
             <block type="colour_random"/>
           </value>
+        </block>
+        <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+            <block type="math_number_dropdown">
+              <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+        </block>
+        <block type="sticker">
+          <title name="VALUE">Elephant</title>
         </block>
       </xml>
     </toolbox_blocks>

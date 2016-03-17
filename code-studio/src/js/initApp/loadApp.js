@@ -2,6 +2,7 @@
 
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
+var progress = require('./progress');
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -57,7 +58,7 @@ module.exports = function (callback) {
       var clientProgress = dashboard.clientState.allLevelsProgress()[appOptions.scriptName] || {};
       Object.keys(serverProgress).forEach(function (levelId) {
         if (serverProgress[levelId] !== clientProgress[levelId]) {
-          var status = dashboard.progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
+          var status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
 
           // Clear the existing class and replace
           $('.level-' + levelId).attr('class', 'level_link ' + status);

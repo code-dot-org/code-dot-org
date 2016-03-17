@@ -1,6 +1,7 @@
--# Displays a graph and a table of Fun-O-Meter ratings, by day.
--# Expects an array of three column arrays [date, percentage, count] in the variable
--# @ratings_by_day.
+-#
+  Displays a graph and a table of Fun-O-Meter ratings, by day.
+  Expects an array of three column arrays [date, percentage, count] in the
+  variable @ratings_by_day.
 
 .by-day
   %h3
@@ -23,4 +24,4 @@
 - content_for :body_scripts do
   :javascript
     var percentagesByDay = #{@ratings_by_day.map{|row| [row[0], row[1].to_f]}.try(:to_json)};
-    drawChart(percentagesByDay);
+    window.dashboard.funometer.drawChart(percentagesByDay);
