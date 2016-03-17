@@ -293,8 +293,8 @@ class Artist < Blockly
 
   def blocks_match?(toolbox_block, solution_block)
     stripped_solution_block = strip_block(solution_block)
-    # Return true for either an exact match, or a *_constant block in the
-    # solution with the corresponding *_constant_dropdown block in the toolbox
+    # Return true for either an exact match, or a block in the solution with the
+    # corresponding *_dropdown block in the toolbox
     stripped_solution_block == strip_block(toolbox_block) ||
       stripped_solution_block == strip_toolbox_block(toolbox_block)
   end
