@@ -21,6 +21,7 @@ gem 'dalli' # memcached
 gem 'parallel'
 
 gem 'google-api-client'
+gem 'sprockets-derailleur' # Multi-cpu assets precompile
 
 gem 'crowdin-cli'
 
