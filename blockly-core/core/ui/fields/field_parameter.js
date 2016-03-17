@@ -72,8 +72,8 @@ Blockly.FieldParameter.dropdownChange = function(text) {
         Blockly.Msg.RENAME_PARAMETER_TITLE.replace('%1', oldVar),
         Blockly.Msg.CONFIRM_RENAME_VARIABLE,
         oldVar,
-        function(text) {
-          Blockly.Variables.renameVariable(oldVar, text, this.sourceBlock_.blockSpace);
+        function(newVar) {
+          Blockly.Variables.renameVariable(oldVar, newVar, this.sourceBlock_.blockSpace);
         }.bind(this));
   } else if (text === Blockly.Msg.DELETE_PARAMETER) {
     Blockly.showSimpleDialog({
