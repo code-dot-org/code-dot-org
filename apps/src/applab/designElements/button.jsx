@@ -10,6 +10,7 @@ var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
 var EnumPropertyRow = require('./EnumPropertyRow.jsx');
 var colors = require('../../sharedJsxStyles').colors;
+var ICON_PREFIX_REGEX = require('../constants').ICON_PREFIX_REGEX;
 
 var elementUtils = require('./elementUtils');
 
@@ -23,10 +24,23 @@ var ButtonProperties = React.createClass({
   render: function () {
     var element = this.props.element;
 
-    var handleIconColorChange = function (value) {
-      this.props.handleChange('icon-color', value);
-      this.props.handleChange('image', element.getAttribute('data-canonical-image-url'));
-    }.bind(this);
+    var iconColorPicker;
+    var canonicalImage = element.getAttribute('data-canonical-image-url');
+    if (ICON_PREFIX_REGEX.test(canonicalImage)) {
+
+      var handleIconColorChange = function (value) {
+        this.props.handleChange('icon-color', value);
+        this.props.handleChange('image',
+          element.getAttribute('data-canonical-image-url'));
+      }.bind(this);
+
+      iconColorPicker = (
+        <ColorPickerPropertyRow
+          desc={'icon color'}
+          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
+          handleChange={handleIconColorChange} />
+      );
+    }
 
     return (
       <div id='propertyRowContainer'>
@@ -81,10 +95,7 @@ var ButtonProperties = React.createClass({
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'image')} />
-        <ColorPickerPropertyRow
-          desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
-          handleChange={handleIconColorChange} />
+        {iconColorPicker}
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}

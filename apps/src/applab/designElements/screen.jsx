@@ -6,6 +6,7 @@ var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
 var DefaultScreenButtonPropertyRow = require('./DefaultScreenButtonPropertyRow.jsx');
+var ICON_PREFIX_REGEX = require('../constants').ICON_PREFIX_REGEX;
 
 var elementUtils = require('./elementUtils');
 
@@ -18,10 +19,23 @@ var ScreenProperties = React.createClass({
   render: function () {
     var element = this.props.element;
 
-    var handleIconColorChange = function (value) {
-      this.props.handleChange('icon-color', value);
-      this.props.handleChange('screen-image', element.getAttribute('data-canonical-image-url'));
-    }.bind(this);
+    var iconColorPicker;
+    var canonicalImage = element.getAttribute('data-canonical-image-url');
+    if (ICON_PREFIX_REGEX.test(canonicalImage)) {
+
+      var handleIconColorChange = function (value) {
+        this.props.handleChange('icon-color', value);
+        this.props.handleChange('screen-image',
+          element.getAttribute('data-canonical-image-url'));
+      }.bind(this);
+
+      iconColorPicker = (
+        <ColorPickerPropertyRow
+          desc={'icon color'}
+          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
+          handleChange={handleIconColorChange} />
+      );
+    }
 
     return (
       <div id='propertyRowContainer'>
@@ -38,10 +52,7 @@ var ScreenProperties = React.createClass({
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')} />
-        <ColorPickerPropertyRow
-          desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
-          handleChange={handleIconColorChange} />
+        {iconColorPicker}
         <DefaultScreenButtonPropertyRow
           screenId={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'is-default')}/>
