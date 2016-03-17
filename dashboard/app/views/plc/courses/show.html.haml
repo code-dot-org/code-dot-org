@@ -1,5 +1,67 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+  = javascript_include_tag 'js/plc'
+
+
+:javascript
+  var allModuleNames = #{options_for_plc_task_learning_modules}
+
 %p
   %strong Name: #{@course.name}
+
+%p
+  Evaluation Questions
+
+%p
+  %table#evaluationTable{ style: 'width: 100%' }
+    %th
+      Question
+    %th
+      Answer
+    %th
+      Associated Module
+    %th
+    - @course.plc_evaluation_questions.each do |question|
+      %tbody.question_section
+        %tr
+          %td
+            = question.question
+          %td
+          %td
+        - question.plc_evaluation_answers.each do |answer|
+          %tr
+            %td
+            %td
+              = answer.answer
+            %td
+              = answer.plc_learning_module.try(:name)
+        %tr.cloneableAnswerRow
+          %td
+          %td
+            = text_field_tag ''
+          %td
+            -# Whyyyyyyyy :-(
+            = select_tag options_for_select(options_for_plc_task_learning_modules.unshift(['', '']).unshift(['', '']))
+        %tr.new_answer_button_row{question_id: question.id}
+          %td
+          %td
+            = button_tag 'Add a new answer', class: 'btn new_answer', id: 'newAnswerForQuestion' + question.id.to_s, question_id: question.id
+          %td
+    %tr.cloneableQuestionRow
+      %td
+        = text_field_tag ''
+      %td
+      %td
+    %tr
+      %td
+        = button_tag 'Add a new question', class: 'btn new_question'
+      %td
+      %td
+
+=form_tag(action: 'submit_new_questions_and_answers') do
+  =hidden_field_tag 'newQuestionsList', '[]'
+  =hidden_field_tag 'newAnswersList', '[]'
+  =submit_tag 'Submit new questions and answers', id: 'submitNewQuestions', disabled: true
 
 = link_to 'Edit', edit_plc_course_path(@course)
 \|
