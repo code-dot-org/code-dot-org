@@ -283,7 +283,7 @@ AppStorage.onRecordEvent = function(tableName, onRecord, onError) {
   });
 
   table.on('child_removed', function(oldChildSnapshot) {
-    onRecord({'id': oldChildSnapshot.val().id}, 'delete');
+    onRecord(oldChildSnapshot.val(), 'delete');
   });
 };
 
