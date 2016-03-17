@@ -34,7 +34,8 @@ out.write([
 ].join('\n'));
 
 var rl = readline.createInterface({
-  input: fs.createReadStream(colorScssPath)
+  input: fs.createReadStream(colorScssPath),
+  terminal: false
 });
 
 var currentLine = 0;
