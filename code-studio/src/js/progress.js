@@ -1,8 +1,6 @@
-/* globals appOptions  */
+/* globals dashboard, appOptions  */
 
 var clientState = require('./clientState');
-var StageProgress = require('./components/progress/stage_progress.jsx');
-var CourseProgress = require('./components/progress/course_progress.jsx');
 
 var progress = module.exports;
 
@@ -118,7 +116,7 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
   var mountPoint = document.createElement('div');
   mountPoint.style.display = 'inline-block';
   $('.progress_container').replaceWith(mountPoint);
-  ReactDOM.render(React.createElement(StageProgress, {
+  ReactDOM.render(React.createElement(dashboard.StageProgress, {
     levels: combinedProgress,
     currentLevelIndex: currentLevelIndex
   }), mountPoint);
@@ -127,7 +125,7 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
 progress.renderCourseProgress = function (scriptData) {
   var mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
-  ReactDOM.render(React.createElement(CourseProgress, {
+  ReactDOM.render(React.createElement(dashboard.CourseProgress, {
     stages: scriptData.stages
   }), mountPoint);
   progress.populateProgress(scriptData.name);
