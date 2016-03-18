@@ -25,16 +25,7 @@ Teachers from Broward, Florida will attend PD in Broward. Please visit the [Brow
 
 All teachers from Boston, New York, and Montogomery County, MD will travel to the PD location to attend the workshop in-person. 
 
-**Save the dates:**
-
-Quarter 1: Saturday, October 17, 2015<br/>
-This workshop will be in New York.
-
-Quarter 2: Saturday, December 5, 2015<br/>
-This workshop will be in Montgomery County, Maryland.
-
-Quarter 3: Saturday, February 27, 2016<br/>
-This workshop will be in New York.
+**Save the date:**
 
 Quarter 4: Saturday, April 9, 2016<br/>
 This workshop will be in Montgomery County, Maryland.
@@ -44,12 +35,14 @@ This workshop will be in Montgomery County, Maryland.
 Breakfast and lunch will be served.
 
 
-**February 27th Location**
+**Location**
 
-[General Assembly <br/>
-Level 3 Concourse Room<br/>
-10 E 21st St<br/>
-New York, NY 10010](https://www.google.com/maps/place/General+Assembly+New+York/@40.739884,-73.990081,15z/data=!4m2!3m1!1s0x0:0x3884039b8867e84b)
+[I/O Spaces
+<br/>
+8120 Fenton Street<br/>Suite 202<br/> 
+Silver Spring, MD 20910](https://goo.gl/maps/puTUhhZYrMA2)
+
+Free parking is available in front of the building, and  in the lot near the track.
 
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -80,14 +73,7 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-**Save the dates:**<br/>
-
-<i>Due to low attendance, all attendees will now be in one group.</i><br/>
-Quarter 1: Saturday, October 3, 2015
- 
-Quarter 2: Saturday, November 14, 2015
-
-Quarter 3: Saturday, February 6, 2016
+**Save the date:**<br/>
 
 Quarter 4: Saturday, April 16, 2016
 
@@ -95,7 +81,7 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**April 16th Location**
+**Location**
 
 [Microsoft<br/>
 Music Box 5411<br/>
@@ -167,17 +153,12 @@ Milestone Complete!
 Milestone Complete!
 ### Phase 2: Blended Learning Institute (2 days in-person) ###
 
-
-
 Milestone Complete!
 
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
+
 Milestone Complete!
-<br/><br/>
-**Deadline for Online Coursework is June 30th.**<br/>
-<br/>
-If you need support while finishing your work or teaching the course, try asking your questions to your peers in the forums [here](http://forum.code.org/c/cs-in-science).
 
 
 [**Back to the top**](#top)

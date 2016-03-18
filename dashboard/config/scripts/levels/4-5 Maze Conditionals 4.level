@@ -6,14 +6,31 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "1",
     "maze": "[[0,0,0,4,0,0,0,0],[0,0,0,1,0,1,0,0],[0,0,2,1,1,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,1,4],[0,0,0,0,0,1,0,0],[0,3,1,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "5"
-  }
+    "ideal": "5",
+    "markdown_instructions": "Ok, solve this one just like the last puzzle, but you need to remember how you used the `if` and `repeat until` blocks together.",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "instructions": "Ok, solve this one just like the last puzzle, but you need to remember how you used the `if` and `repeat until` blocks together.",
+    "maze_data": null
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -37,10 +54,6 @@
     <required_blocks>
       <xml>
         <block type="maze_forever"/>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
         <block type="maze_if">
           <title name="DIR">isPathRight</title>
         </block>

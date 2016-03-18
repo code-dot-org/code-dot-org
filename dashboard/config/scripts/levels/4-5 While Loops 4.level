@@ -6,7 +6,6 @@
   "user_id": 6,
   "properties": {
     "skin": "farmer",
-    "instructions": "Wow, I found a really deep hole! I don't know how many shovelfuls of dirt it needs.  Can you write a program that fills it until the ground is even?  Hint:  Try using the while loop this time.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -26,8 +25,15 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "markdown_instructions": "Wow, look at that! \r\n\r\nI don't know how many shovelfuls of dirt this hole needs.  \r\nCan you write a program that keeps using the `fill` block until the ground is even?  ",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "fast_get_nectar_animation": "false",
+    "instructions": "Wow, look at that! \r\n\r\nI don't know how many shovelfuls of dirt this hole needs.  \r\nCan you write a program that keeps using the `fill` block until the ground is even?  "
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -49,14 +55,14 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_untilBlockedOrNotClear">
           <title name="DIR">holePresent</title>
         </block>
         <block type="maze_fill"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
