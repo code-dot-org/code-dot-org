@@ -1,6 +1,7 @@
 /* global Blockly, ace:true, droplet, marked, dashboard, addToHome */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
+var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
@@ -2313,7 +2314,7 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
     text.setAttribute('y', CANVAS_HEIGHT);
     text.setAttribute('font-weight', 'bold');
     rect = rectFromElementBoundingBox(text);
-    rect.setAttribute('fill', 'white');
+    rect.setAttribute('fill', color.white);
     svg.insertBefore(rect, text);
 
     // create y axis labels
@@ -2326,7 +2327,7 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
     text.setAttribute('dominant-baseline', 'central');
     text.setAttribute('font-weight', 'bold');
     rect = rectFromElementBoundingBox(text);
-    rect.setAttribute('fill', 'white');
+    rect.setAttribute('fill', color.white);
     svg.insertBefore(rect, text);
   }
 };
