@@ -1,5 +1,12 @@
 /* globals dashboard, trackEvent, Dialog, React, appOptions */
 
+var clientState = require('./clientState');
+var project = require('./initApp/project');
+var utils = require('./utils');
+var popupWindow = require('./popup-window');
+var ShareDialog = require('./components/share_dialog.jsx');
+var progress = require('./progress');
+
 /**
  * Dynamic header generation and event bindings for header actions.
  */
@@ -28,7 +35,7 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   stageData = stageData || {};
   progressData = progressData || {};
 
-  var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
+  var clientProgress = clientState.allLevelsProgress()[scriptName] || {};
 
   $('.header_text').first().text(stageData.title);
   if (stageData.finishLink) {
@@ -49,7 +56,7 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
     $('.header_popup .header_text').text(progressData.linesOfCodeText);
   }
 
-  dashboard.progress.renderStageProgress(stageData, progressData, clientProgress, currentLevelId, puzzlePage);
+  progress.renderStageProgress(stageData, progressData, clientProgress, currentLevelId, puzzlePage);
 
   $('.level_free_play').qtip({
     content: {
@@ -98,7 +105,7 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   });
   $('.header_popup_close').click(hideHeaderPopup);
 
-  $(window).resize(dashboard.utils.debounce(function () {
+  $(window).resize(utils.debounce(function () {
     if (isHeaderPopupVisible) {
       sizeHeaderPopupToViewport();
     }
@@ -129,8 +136,8 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
         data: {
           script_id: stageData.script_id,
           current_level_id: currentLevelId,
-          user_id: dashboard.clientState.queryParams('user_id'),
-          section_id: dashboard.clientState.queryParams('section_id')
+          user_id: clientState.queryParams('user_id'),
+          section_id: clientState.queryParams('section_id')
         }, success: function (result) {
           $('.header_popup_body').html(result);
           if (trophiesClicked) {
@@ -148,9 +155,9 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
 };
 
 function shareProject() {
-  dashboard.project.save(function () {
+  project.save(function () {
     var origin = location.protocol + '//' + location.host;
-    var shareUrl = origin + dashboard.project.getPathName();
+    var shareUrl = origin + project.getPathName();
     var encodedShareUrl = encodeURIComponent(shareUrl);
 
     var i18n = window.dashboard.i18n;
@@ -162,7 +169,7 @@ function shareProject() {
       document.body.appendChild(dialogDom);
     }
 
-    var dialog = React.createElement(dashboard.ShareDialog, {
+    var dialog = React.createElement(ShareDialog, {
       i18n: i18n,
       icon: appOptions.skin.staticAvatar,
       title: i18n.t('project.share_title'),
@@ -170,26 +177,26 @@ function shareProject() {
       shareUrl: shareUrl,
       encodedShareUrl: encodedShareUrl,
       closeText: i18n.t('project.close'),
-      isAbusive: dashboard.project.exceedsAbuseThreshold(),
+      isAbusive: project.exceedsAbuseThreshold(),
       abuseTos: i18n.t('project.abuse.tos'),
       abuseContact: i18n.t('project.abuse.contact_us'),
-      channelId: dashboard.project.getCurrentId(),
-      appType: dashboard.project.getStandaloneApp(),
-      onClickPopup: dashboard.popupWindow
+      channelId: project.getCurrentId(),
+      appType: project.getStandaloneApp(),
+      onClickPopup: popupWindow
     });
     ReactDOM.render(dialog, dialogDom);
   });
 }
 
 function remixProject() {
-  if (dashboard.project.getCurrentId()) {
-    dashboard.project.serverSideRemix();
+  if (project.getCurrentId()) {
+    project.serverSideRemix();
   } else {
     // We don't have an id. This implies we are either a legacy /c/ share page,
     // or we're on a blank project page that hasn't been saved for the first time
     // yet. In both cases, copy will create a new project for us.
-    var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
-    dashboard.project.copy(newName, function() {
+    var newName = "Remix: " + (project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
+    project.copy(newName, function() {
       $(".project_name").text(newName);
     });
   }
@@ -198,7 +205,7 @@ function remixProject() {
 // Minimal project header for viewing channel shares and legacy /c/ share pages.
 header.showMinimalProjectHeader = function () {
   var projectName = $('<div class="project_name_wrapper header_text">')
-      .append($('<div class="project_name header_text">').text(dashboard.project.getCurrentName()))
+      .append($('<div class="project_name header_text">').text(project.getCurrentName()))
       .append($('<div class="project_updated_at header_text">').text(dashboard.i18n.t('project.click_to_remix')));
 
   $('.project_info')
@@ -241,14 +248,14 @@ header.showHeaderForProjectBacked = function () {
 
 header.showProjectHeader = function () {
   function projectNameShow() {
-    $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.project.getCurrentName()));
+    $('.project_name').replaceWith($('<div class="project_name header_text">').text(project.getCurrentName()));
     header.updateTimestamp();
     $('.project_save').replaceWith($('<div class="project_edit header_button header_button_light">').text(dashboard.i18n.t('project.rename')));
   }
 
   function projectNameEdit() {
     $('.project_updated_at').hide();
-    $('.project_name').replaceWith($('<input type="text" class="project_name header_input" maxlength="100">').val(dashboard.project.getCurrentName()));
+    $('.project_name').replaceWith($('<input type="text" class="project_name header_input" maxlength="100">').val(project.getCurrentName()));
     $('.project_edit').replaceWith($('<div class="project_save header_button header_button_light">').text(dashboard.i18n.t('project.save')));
   }
 
@@ -285,7 +292,7 @@ header.showProjectHeader = function () {
       return;
     }
     $(this).attr('disabled', true);
-    dashboard.project.rename($('.project_name').val().trim().substr(0, 100), projectNameShow);
+    project.rename($('.project_name').val().trim().substr(0, 100), projectNameShow);
   });
 
   $('.project_share').click(shareProject);
@@ -320,8 +327,8 @@ header.showProjectHeader = function () {
     });
     dialog.show();
     $('#confirm-delete #continue-button').click(function () {
-      dashboard.project.delete(function () {
-        location.href = dashboard.project.appToProjectUrl();
+      project.delete(function () {
+        location.href = project.appToProjectUrl();
       });
     });
     $('#confirm-delete #again-button').click(function () {
@@ -329,7 +336,7 @@ header.showProjectHeader = function () {
     });
   });
 
-  $('.project_new').click(dashboard.project.createNew);
+  $('.project_new').click(project.createNew);
 
   $(document).on('click', '.project_list', function () {
     location.href = '/projects';
@@ -337,7 +344,7 @@ header.showProjectHeader = function () {
 };
 
 header.updateTimestamp = function () {
-  var timestamp = dashboard.project.getCurrentTimestamp();
+  var timestamp = project.getCurrentTimestamp();
   if (timestamp) {
     $('.project_updated_at').empty().append("Saved ")  // TODO i18n
         .append($('<span class="timestamp">').attr('title', timestamp)).show();
