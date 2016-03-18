@@ -192,10 +192,6 @@ class CDOImpl < OpenStruct
     site_url('code.org', path, scheme)
   end
 
-  def hoc_url(path = '', scheme = '')
-    site_url('hourofcode.com', path, scheme)
-  end
-
   def dir(*dirs)
     File.join(root_dir, *dirs)
   end
