@@ -34,7 +34,7 @@ Saturday, April 9, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**April 9th Location**
+**Location**
 
 [9 Dots<br/>
 931 N Highland Avenue<br/>
@@ -72,10 +72,7 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-
 Milestone Complete!
-
-
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -90,7 +87,7 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**April 16th Location**
+**Location**
 
 More information coming soon!
 
@@ -147,11 +144,7 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online)###
 
-
-
 Milestone Complete!
-
-
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
