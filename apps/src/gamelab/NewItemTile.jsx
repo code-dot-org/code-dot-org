@@ -1,9 +1,14 @@
+/** List item placeholder for adding a new item */
 'use strict';
 
 var color = require('../color');
 var TileButtons = require('./TileButtons.jsx');
 var TileThumbnail = require('./TileThumbnail.jsx');
 
+/**
+ * List item control (usable in sequences or frames lists) for adding
+ * a new item - displays as a plus sign in a dashed box.
+ */
 var NewItemTile = React.createClass({
   propTypes: {
     label: React.PropTypes.string.isRequired
@@ -13,9 +18,6 @@ var NewItemTile = React.createClass({
     var styles = {
       tile: {
         width: '100%',
-
-        // Use vertical padding because we flow vertically, but require
-        // children to use margins horizontally.
         paddingTop: 4,
         paddingBottom: 4,
         marginBottom: 4
@@ -52,16 +54,18 @@ var NewItemTile = React.createClass({
       }
     };
 
-    return <div style={styles.tile}>
-      <div style={styles.wrapper}>
-        <div style={styles.dottedBorder}>
-          <i className="fa fa-plus" style={styles.addButton}></i>
+    return (
+      <div style={styles.tile}>
+        <div style={styles.wrapper}>
+          <div style={styles.dottedBorder}>
+            <i className="fa fa-plus" style={styles.addButton}></i>
+          </div>
+        </div>
+        <div className="sequence-name" style={styles.sequenceName}>
+          {this.props.label}
         </div>
       </div>
-      <div className="sequence-name" style={styles.sequenceName}>
-        {this.props.label}
-      </div>
-    </div>;
+    );
   }
 });
 module.exports = NewItemTile;
