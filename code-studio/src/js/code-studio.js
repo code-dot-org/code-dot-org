@@ -32,9 +32,8 @@ require('./components/GridEditor.jsx');
 // http://stackoverflow.com/a/15856139/2506748
 $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 
-var jquery = require('jquery-shim');
 window.dashboard = window.dashboard || {};
-window.dashboard.clientState = require('./clientState.js')(window.sessionStorage, jquery);
+window.dashboard.clientState = require('./clientState.js');
 window.dashboard.createCallouts = require('./callouts');
 window.dashboard.hashEmail = require('./hashEmail');
 window.dashboard.funometer = require('./funometerPercentagesByDay');
