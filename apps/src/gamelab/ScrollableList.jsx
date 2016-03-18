@@ -20,7 +20,7 @@ var ScrollableList = React.createClass({
       overflowY: 'scroll'
     }, this.props.style);
     return <div className={this.props.className} style={rootStyle}>
-      <div style={{margin: 10}}>{this.props.children}</div>
+      <div style={{margin: 4}}>{this.props.children}</div>
     </div>;
   }
 });

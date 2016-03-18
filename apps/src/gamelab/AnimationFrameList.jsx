@@ -8,7 +8,7 @@ var AnimationFrameList = React.createClass({
     return <ScrollableList className="animation-frame-list">
       <AnimationFrameTile/>
       <AnimationFrameTile/>
-      <AnimationFrameTile/>
+      <AnimationFrameTile isSelected={true}/>
       <AnimationFrameTile/>
       <AnimationFrameTile/>
       <AnimationFrameTile/>
