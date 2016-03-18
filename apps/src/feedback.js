@@ -990,11 +990,16 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, hideIcon,
  * @param {onCancelCallback} [options.onCancel] Function to be called after clicking cancel
  */
 FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
+  var textBoxStyle = {
+    'margin-bottom': '10px'
+  };
   var contentDiv = ReactDOM.render(
     <div>
       {options.headerText && <p class="dialog-title">{options.headerText}</p>}
       {options.bodyText && <p>{options.bodyText}</p>}
-      {options.prompt && <input value={options.promptPrefill} />}
+      {options.prompt && <input
+          style={textBoxStyle}
+          value={options.promptPrefill} />}
       <DialogButtons
           confirmText={options.confirmText}
           cancelText={options.cancelText}
