@@ -1,7 +1,7 @@
 /** @file Top-level view for GameLab */
 'use strict';
 
-var AnimationTab = require('./AnimationTab.jsx');
+var AnimationTab = require('./AnimationTab/index.jsx');
 var connect = require('react-redux').connect;
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;

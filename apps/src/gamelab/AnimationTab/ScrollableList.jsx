@@ -1,7 +1,7 @@
 /** @file Vertical scrolling list */
 'use strict';
 
-var _ = require('../lodash');
+var _ = require('../../lodash');
 
 var staticStyles = {
   root: {

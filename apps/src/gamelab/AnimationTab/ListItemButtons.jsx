@@ -1,7 +1,7 @@
 /** @file controls below an animation thumbnail */
 'use strict';
 
-var color = require('../color');
+var color = require('../../color');
 
 var staticStyles = {
   root: {

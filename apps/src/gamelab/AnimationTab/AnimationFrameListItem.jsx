@@ -1,8 +1,8 @@
 /** @file Single list item representing an animation frame. */
 'use strict';
 
-var _ = require('../lodash');
-var color = require('../color');
+var _ = require('../../lodash');
+var color = require('../../color');
 var connect = require('react-redux').connect;
 var ListItemButtons = require('./ListItemButtons.jsx');
 var ListItemThumbnail = require('./ListItemThumbnail.jsx');

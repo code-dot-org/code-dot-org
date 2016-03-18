@@ -1,8 +1,8 @@
 /** Animation or Frame thumbnail */
 'use strict';
 
-var _ = require('../lodash');
-var color = require('../color');
+var _ = require('../../lodash');
+var color = require('../../color');
 
 var staticStyles = {
   root: {

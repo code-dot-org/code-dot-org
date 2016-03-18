@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var _ = require('../lodash');
+var _ = require('../../lodash');
 
 /**
  * Wraps its children to display them in a flexbox layout.

@@ -3,7 +3,7 @@
 
 var AnimationFrameList = require('./AnimationFrameList.jsx');
 var AnimationSequenceList = require('./AnimationSequenceList.jsx');
-var GameLabVisualizationHeader = require('./GameLabVisualizationHeader.jsx');
+var GameLabVisualizationHeader = require('../GameLabVisualizationHeader.jsx');
 var ResizablePanes = require('./ResizablePanes.jsx');
 
 var staticStyles = {
