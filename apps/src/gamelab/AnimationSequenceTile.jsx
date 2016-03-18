@@ -2,6 +2,7 @@
 
 var color = require('../color');
 var connect = require('react-redux').connect;
+var TileThumbnail = require('./TileThumbnail.jsx');
 
 var AnimationSequenceTile = React.createClass({
   propTypes: {
@@ -16,30 +17,23 @@ var AnimationSequenceTile = React.createClass({
 
       backgroundColor: this.props.isSelected ? color.purple : 'none',
       borderRadius: 10,
-      marginBottom: 10
-    };
-
-    var imageFrameStyle = {
-      position: 'relative',
-
-      backgroundColor: 'white',
-      border: 'solid 2px ' + color.purple,
-      borderRadius: 10,
-      margin: 2
-    };
-
-    var imageStyle = {
-      width: '100%'
+      // Use vertical padding because we flow vertically, but require
+      // children to use margins horizontally.
+      paddingTop: 4,
+      paddingBottom: 4,
+      marginBottom: 4
     };
 
     var sequenceNameStyle = {
-      textAlign: 'center'
+      textAlign: 'center',
+      userSelect: 'none'
     };
 
     return <div style={tileStyle}>
-      <div className="image-frame" style={imageFrameStyle}>
-        <img src={this.props.assetUrl('media/common_images/draw-east.png')} style={imageStyle}/>
-      </div>
+      <TileThumbnail
+          isSelected={this.props.isSelected}
+          src={this.props.assetUrl('media/common_images/draw-east.png')}
+      />
       <div className="sequence-name" style={sequenceNameStyle}>{this.props.sequenceName}</div>
     </div>;
   }
