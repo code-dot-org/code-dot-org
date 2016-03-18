@@ -1,7 +1,7 @@
 /** List item placeholder for adding a new item */
 'use strict';
 
-var color = require('../color');
+var color = require('../../color');
 
 var staticStyles = {
   tile: {
