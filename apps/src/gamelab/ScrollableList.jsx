@@ -14,14 +14,23 @@ var ScrollableList = React.createClass({
   },
 
   render: function () {
-    var rootStyle = _.assign({
-      flex: '1 0 0',
-      overflowX: 'hidden',
-      overflowY: 'scroll'
-    }, this.props.style);
-    return <div className={this.props.className} style={rootStyle}>
-      <div style={{margin: 4}}>{this.props.children}</div>
-    </div>;
+    var styles = {
+      root: _.assign({
+        flex: '1 0 0',
+        overflowX: 'hidden',
+        overflowY: 'scroll'
+      }, this.props.style),
+      margins: {
+        margin: 4
+      }
+    };
+    return (
+      <div className={this.props.className} style={styles.root}>
+        <div style={styles.margins}>
+          {this.props.children}
+        </div>
+      </div>
+    );
   }
 });
 module.exports = ScrollableList;
