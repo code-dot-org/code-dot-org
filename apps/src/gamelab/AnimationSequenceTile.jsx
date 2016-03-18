@@ -1,10 +1,45 @@
 /** A single list item representing an animation sequence. */
 'use strict';
 
+var _ = require('../lodash');
 var color = require('../color');
 var connect = require('react-redux').connect;
 var TileButtons = require('./TileButtons.jsx');
 var TileThumbnail = require('./TileThumbnail.jsx');
+
+var staticStyles = {
+  tile: {
+    width: '100%',
+
+    borderRadius: 10,
+
+    // Provide vertical padding because we flow vertically, but require
+    // children to use margins horizontally.
+    paddingTop: 4,
+    paddingBottom: 4,
+    marginBottom: 4
+  },
+  nameLabel: {
+    marginLeft: 4,
+    marginRight: 4,
+    marginTop: 4,
+    textAlign: 'center',
+    userSelect: 'none'
+  },
+  nameInputWrapper: {
+    marginLeft: 5,
+    marginRight: 5,
+    marginTop: 4
+  },
+  nameInput: {
+    width: '100%',
+    margin: 0,
+    padding: 0,
+    textAlign: 'center',
+    border: 'none',
+    borderRadius: 9
+  }
+};
 
 /**
  * A single list item representing an animation sequence.  Displays an
@@ -19,40 +54,11 @@ var AnimationSequenceTile = React.createClass({
   },
 
   render: function () {
-    var styles = {
+    var styles = _.merge({}, staticStyles, {
       tile: {
-        width: '100%',
-
-        backgroundColor: this.props.isSelected ? color.purple : 'none',
-        borderRadius: 10,
-
-        // Provide vertical padding because we flow vertically, but require
-        // children to use margins horizontally.
-        paddingTop: 4,
-        paddingBottom: 4,
-        marginBottom: 4
-      },
-      nameLabel: {
-        marginLeft: 4,
-        marginRight: 4,
-        marginTop: 4,
-        textAlign: 'center',
-        userSelect: 'none'
-      },
-      nameInputWrapper: {
-        marginLeft: 5,
-        marginRight: 5,
-        marginTop: 4
-      },
-      nameInput: {
-        width: '100%',
-        margin: 0,
-        padding: 0,
-        textAlign: 'center',
-        border: 'none',
-        borderRadius: 9
+        backgroundColor: this.props.isSelected ? color.purple : 'none'
       }
-    };
+    });
 
     var sequenceName;
     if (this.props.isSelected) {
