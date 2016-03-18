@@ -3,6 +3,7 @@
 
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
+var clientState = require('./clientState');
 
 window.createVideoWithFallback = function(parentElement, options, width, height) {
   upgradeInsecureOptions(options);
@@ -62,7 +63,7 @@ window.showVideoDialog = function(options, forceShowVideo) {
     options.onClose = function () {};
   }
 
-  if (dashboard.clientState.hasSeenVideo(options.key) && forceShowVideo === false) {
+  if (clientState.hasSeenVideo(options.key) && forceShowVideo === false) {
     // Anything we were going to do when the video closed, we ought to do
     // right now.
     options.onClose();
@@ -105,7 +106,7 @@ window.showVideoDialog = function(options, forceShowVideo) {
     // https://github.com/code-dot-org/code-dot-org/pull/5277#issue-116253168
     video.removeAttr('src');
     options.onClose();
-    dashboard.clientState.recordVideoSeen(options.key);
+    clientState.recordVideoSeen(options.key);
     // Raise an event that the dialog has been hidden, in case anything needs to
     // play/respond to it.
     var event = document.createEvent('Event');
