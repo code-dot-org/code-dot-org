@@ -1,4 +1,5 @@
 /* global $ */
+var color = require('../../color');
 var rowStyle = require('./rowStyle');
 var elementUtils = require('./elementUtils');
 var utils = require('../../utils');
@@ -93,7 +94,7 @@ var PropertyRow = React.createClass({
 
   render: function() {
     var idRowStyle = $.extend({}, rowStyle.container, rowStyle.maxWidth, {
-      backgroundColor: '#a69bc1',
+      backgroundColor: color.light_purple,
       paddingBottom: 10
     });
     var inputStyle = $.extend({}, rowStyle.input, {
