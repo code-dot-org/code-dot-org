@@ -2,6 +2,7 @@
 
 var color = require('../color');
 var connect = require('react-redux').connect;
+var TileButtons = require('./TileButtons.jsx');
 var TileThumbnail = require('./TileThumbnail.jsx');
 
 var AnimationFrameTile = React.createClass({
@@ -26,6 +27,7 @@ var AnimationFrameTile = React.createClass({
           isSelected={this.props.isSelected}
           src={this.props.assetUrl('media/common_images/draw-east.png')}
       />
+      {this.props.isSelected && <TileButtons/>}
     </div>;
   }
 });

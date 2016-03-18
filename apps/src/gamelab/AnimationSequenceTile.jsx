@@ -2,6 +2,7 @@
 
 var color = require('../color');
 var connect = require('react-redux').connect;
+var TileButtons = require('./TileButtons.jsx');
 var TileThumbnail = require('./TileThumbnail.jsx');
 
 var AnimationSequenceTile = React.createClass({
@@ -26,7 +27,7 @@ var AnimationSequenceTile = React.createClass({
 
     var sequenceName;
     if (this.props.isSelected) {
-      sequenceName = <div style={{marginLeft: 4, marginRight: 4, marginTop: 4}}>
+      sequenceName = <div style={{marginLeft: 5, marginRight: 5, marginTop: 4}}>
           <input type="text" style={{width: '100%', margin: 0, padding: 0, textAlign: 'center', border: 'none', borderRadius: 9}} value={this.props.sequenceName} />
         </div>;
     } else {
@@ -40,6 +41,7 @@ var AnimationSequenceTile = React.createClass({
           src={this.props.assetUrl('media/common_images/draw-east.png')}
       />
       {sequenceName}
+      {this.props.isSelected && <TileButtons/>}
     </div>;
   }
 });
