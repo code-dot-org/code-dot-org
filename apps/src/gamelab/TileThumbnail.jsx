@@ -24,7 +24,9 @@ var TileThumbnail = React.createClass({
     };
 
     return <div className="image-frame" style={frameStyle}>
-      <img src={this.props.src} style={imageStyle}/>
+      <div style={{position: 'relative', margin: 4}}>
+        <img src={this.props.src} style={{width: '100%'}}/>
+      </div>
     </div>;
   }
 });
