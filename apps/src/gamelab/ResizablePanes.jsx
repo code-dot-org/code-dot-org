@@ -34,11 +34,11 @@ var ResizablePanes = React.createClass({
     document.removeEventListener('mouseup', this.onMouseUp);
   },
 
-  onResizerMouseDown: function (index) {
+  onResizerMouseDown: function (event) {
     this.unFocus();
     this.setState({
       dragging: true,
-      index: index
+      index: parseInt(event.target.dataset.resizerIndex, 10)
     });
   },
 
@@ -83,42 +83,57 @@ var ResizablePanes = React.createClass({
     }
   },
 
-  render: function () {
+  getClonedChild: function (child, index) {
+    var overrideSize = this.state.overrideSizes[index];
+    var style = _.assign(
+        {flex: '1'},
+        child.props.style,
+        (typeof overrideSize !== 'undefined' ? {flex: '0 0 ' + overrideSize + 'px'} : undefined)
+    );
 
-    var computedChildren = [];
+    return React.cloneElement(child, {
+      ref: "pane-" + index,
+      key: "pane-" + index,
+      style: style
+    });
+  },
+
+  getResizer: function (index) {
+    return (
+      <div
+          key={"resizer-" + index}
+          data-resizer-index={index}
+          className="resizer"
+          onMouseDown={this.onResizerMouseDown} />
+    );
+  },
+
+  getChildren: function () {
     var childCount = React.Children.count(this.props.children);
+    var computedChildren = [];
     React.Children.forEach(this.props.children, function (child, index) {
-      var overrideSize = this.state.overrideSizes[index];
-      var paneStyle = _.assign(
-          {flex: '1'},
-          child.props.style,
-          (typeof overrideSize !== 'undefined' ? {flex: '0 0 ' + overrideSize + 'px'} : undefined));
-
-      computedChildren.push(React.cloneElement(child, {
-        ref: "pane-" + index,
-        key: "pane-" + index,
-        style: paneStyle
-      }));
-
-      // Unless this is the last pane, add a resizer that controls its size.
+      computedChildren.push(this.getClonedChild(child, index));
       if (index !== childCount - 1) {
-        computedChildren.push(
-            <div ref={"resizer-" + index}
-                 key={"resizer-" + index}
-                 className="resizer"
-                 onMouseDown={this.onResizerMouseDown.bind(this, index)}></div>);
+        computedChildren.push(this.getResizer(index));
       }
     }, this);
+    return computedChildren;
+  },
 
-    var rootStyle = _.assign({
-      display: 'flex',
-      flexDirection: 'row',
-      flexWrap: 'nowrap'
-    }, this.props.style);
+  render: function () {
+    var styles = {
+      root: _.assign({
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'nowrap'
+      }, this.props.style)
+    };
 
-    return <div className='resizable-panes' style={rootStyle}>
-      {computedChildren}
-    </div>;
+    return (
+      <div className='resizable-panes' style={styles.root}>
+        {this.getChildren()}
+      </div>
+    );
   }
 });
 module.exports = ResizablePanes;
