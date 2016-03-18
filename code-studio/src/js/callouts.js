@@ -1,4 +1,6 @@
-/* global dashboard, $ */
+/* global $ */
+
+var clientState = require('./clientState');
 
 /**
  * @fileoverview handles creation and updating of dashboard tooltips, aka callouts.
@@ -31,10 +33,10 @@ module.exports = function createCallouts(callouts) {
 
   if (document.URL.indexOf('show_callouts=1') === -1) {
     callouts = callouts.filter(function (element, index, array) {
-      if (dashboard.clientState.hasSeenCallout(element.id)) {
+      if (clientState.hasSeenCallout(element.id)) {
         return false;
       } else {
-        dashboard.clientState.recordCalloutSeen(element.id);
+        clientState.recordCalloutSeen(element.id);
         return true;
       }
     });
