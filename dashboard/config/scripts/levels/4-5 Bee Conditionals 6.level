@@ -6,16 +6,16 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "I am not sure how much nectar the purple flower has, but I know it has either 1, 2, or 3 nectar. Here an if-else block is combined with another if-else block to create an if, else-if, else block. Complete the solution to collect the unknown amount of nectar.",
+    "instructions": "I am not sure how much nectar this flower has, but I know it has either 1, 2, or 3 nectar. \r\n\r\nCombine the conditional blocks (`if` and/or `if/else`) to only get as much nectar as the flower has. \r\n\r\nRemember, the amount of nectar can change each time you run the puzzle!",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "2",
-    "flower_type": "redWithNectar",
+    "flower_type": "purpleNectarHidden",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,1,1,0,0],[0,0,0,1,2,1,0,0],[0,0,0,1,\"P\",1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "9",
+    "ideal": "5",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -30,40 +30,25 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":3},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]"
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":3},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "markdown_instructions": "I am not sure how much nectar this flower has, but I know it has either 1, 2, or 3 nectar. \r\n\r\nCombine the conditional blocks (`if` and/or `if/else`) to only get as much nectar as the flower has. \r\n\r\nRemember, the amount of nectar can change each time you run the puzzle!"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
-          <next>
-            <block type="maze_moveForward">
-              <next>
-                <block type="bee_ifelseNectarAmount">
-                  <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">==</title>
-                  <title name="ARG2">3</title>
-                  <statement name="DO">
-                    <block type="controls_repeat">
-                      <title name="TIMES">3</title>
-                      <statement name="DO">
-                        <block type="maze_nectar"/>
-                      </statement>
-                    </block>
-                  </statement>
-                  <statement name="ELSE">
-                    <block type="bee_ifelseNectarAmount">
-                      <title name="ARG1">nectarRemaining</title>
-                      <title name="OP">==</title>
-                      <title name="ARG2">2</title>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </next>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="maze_moveForward" y="250" x="100"/>
+        <block type="controls_repeat" y="100" x="15">
+          <title name="TIMES">3</title>
+        </block>
+        <block type="maze_nectar" y="175" x="150"/>
+        <block type="bee_ifNectarAmount" y="35" x="200">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>
         </block>
       </xml>
     </start_blocks>
@@ -81,29 +66,63 @@
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
-        <block type="bee_ifelseNectarAmount" inline="true">
+        <block type="bee_ifNectarAmount">
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">==</title>
-          <title name="ARG2">1</title>
+          <title name="ARG2">???</title>
+        </block>
+        <block type="bee_ifelseNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">==</title>
+          <title name="ARG2">???</title>
         </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="maze_moveForward"/>
-        <block type="bee_ifelseNectarAmount" inline="true">
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">==</title>
-          <title name="ARG2">3</title>
-        </block>
-        <block type="bee_ifelseNectarAmount" inline="true">
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">==</title>
-          <title name="ARG2">2</title>
-        </block>
-        <block type="maze_nectar"/>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="bee_ifNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">==</title>
+              <title name="ARG2">???</title>
+              <next>
+                <block type="bee_ifNectarAmount">
+                  <title name="ARG1">nectarRemaining</title>
+                  <title name="OP">&gt;</title>
+                  <title name="ARG2">???</title>
+                  <next>
+                    <block type="bee_ifNectarAmount">
+                      <title name="ARG1">nectarRemaining</title>
+                      <title name="OP">&lt;</title>
+                      <title name="ARG2">???</title>
+                      <next>
+                        <block type="bee_ifelseNectarAmount">
+                          <title name="ARG1">nectarRemaining</title>
+                          <title name="OP">==</title>
+                          <title name="ARG2">???</title>
+                          <next>
+                            <block type="bee_ifelseNectarAmount">
+                              <title name="ARG1">nectarRemaining</title>
+                              <title name="OP">&gt;</title>
+                              <title name="ARG2">???</title>
+                              <next>
+                                <block type="bee_ifelseNectarAmount">
+                                  <title name="ARG1">nectarRemaining</title>
+                                  <title name="OP">&lt;</title>
+                                  <title name="ARG2">???</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
       </xml>
     </recommended_blocks>
@@ -113,32 +132,14 @@
           <next>
             <block type="maze_moveForward">
               <next>
-                <block type="bee_ifelseNectarAmount">
-                  <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">==</title>
-                  <title name="ARG2">3</title>
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
                   <statement name="DO">
-                    <block type="controls_repeat">
-                      <title name="TIMES">3</title>
-                      <statement name="DO">
-                        <block type="maze_nectar"/>
-                      </statement>
-                    </block>
-                  </statement>
-                  <statement name="ELSE">
-                    <block type="bee_ifelseNectarAmount">
+                    <block type="bee_ifNectarAmount">
                       <title name="ARG1">nectarRemaining</title>
                       <title name="OP">==</title>
-                      <title name="ARG2">2</title>
+                      <title name="ARG2">3</title>
                       <statement name="DO">
-                        <block type="controls_repeat">
-                          <title name="TIMES">2</title>
-                          <statement name="DO">
-                            <block type="maze_nectar"/>
-                          </statement>
-                        </block>
-                      </statement>
-                      <statement name="ELSE">
                         <block type="maze_nectar"/>
                       </statement>
                     </block>

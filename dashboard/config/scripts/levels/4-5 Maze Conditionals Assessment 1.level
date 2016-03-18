@@ -6,15 +6,32 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Use a \"repeat until\" and an \"if-else\" block to get me to the sunflower in as few blocks as possible.",
+    "instructions": "**Assessment:** Use a `repeat until` and an `if/else` block to get me to the sunflower in as few blocks as possible.",
     "step_mode": "1",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "start_direction": "1",
     "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,1,0],[0,0,0,0,0,0,1,0],[0,0,0,1,3,0,1,0],[0,0,0,1,0,0,1,0],[0,4,1,1,0,4,1,0],[0,0,0,1,1,1,1,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "5",
-    "step_speed": "2"
-  }
+    "step_speed": "1",
+    "markdown_instructions": "**Assessment:** Use a `repeat until` and an `if/else` block to get me to the sunflower in as few blocks as possible.",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -32,18 +49,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="maze_forever"/>
-        <block type="maze_ifElse">
-          <title name="DIR">isPathForward</title>
-        </block>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-      </xml>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
