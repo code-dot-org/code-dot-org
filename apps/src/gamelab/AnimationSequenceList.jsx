@@ -2,7 +2,7 @@
 'use strict';
 
 var AnimationSequenceListItem = require('./AnimationSequenceListItem.jsx');
-var NewItemTile = require('./NewItemTile.jsx');
+var NewListItem = require('./NewListItem.jsx');
 var ScrollableList = require('./ScrollableList.jsx');
 
 /**
@@ -15,7 +15,7 @@ var AnimationSequenceList = React.createClass({
       <ScrollableList className="animation-sequence-list">
         <AnimationSequenceListItem sequenceName="sequence01" />
         <AnimationSequenceListItem sequenceName="sequence02" isSelected />
-        <NewItemTile label="new sequence" />
+        <NewListItem label="new sequence" />
       </ScrollableList>
     );
   }

@@ -2,7 +2,7 @@
 'use strict';
 
 var AnimationFrameListItem = require('./AnimationFrameListItem.jsx');
-var NewItemTile = require('./NewItemTile.jsx');
+var NewListItem = require('./NewListItem.jsx');
 var ScrollableList = require('./ScrollableList.jsx');
 
 /**
@@ -18,7 +18,7 @@ var AnimationFrameList = React.createClass({
         <AnimationFrameListItem index={3} isSelected />
         <AnimationFrameListItem index={4} />
         <AnimationFrameListItem index={151} />
-        <NewItemTile label="new frame" />
+        <NewListItem label="new frame" />
       </ScrollableList>
     );
   }

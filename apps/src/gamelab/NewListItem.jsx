@@ -48,7 +48,7 @@ var staticStyles = {
  * List item control (usable in sequences or frames lists) for adding
  * a new item - displays as a plus sign in a dashed box.
  */
-var NewItemTile = React.createClass({
+var NewListItem = React.createClass({
   propTypes: {
     label: React.PropTypes.string.isRequired
   },
@@ -68,4 +68,4 @@ var NewItemTile = React.createClass({
     );
   }
 });
-module.exports = NewItemTile;
+module.exports = NewListItem;
