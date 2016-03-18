@@ -1,7 +1,7 @@
 /** @file Vertical scrolling list of animation frames. */
 'use strict';
 
-var AnimationFrameTile = require('./AnimationFrameTile.jsx');
+var AnimationFrameListItem = require('./AnimationFrameListItem.jsx');
 var NewItemTile = require('./NewItemTile.jsx');
 var ScrollableList = require('./ScrollableList.jsx');
 
@@ -13,11 +13,11 @@ var AnimationFrameList = React.createClass({
   render: function () {
     return (
       <ScrollableList className="animation-frame-list">
-        <AnimationFrameTile index={1} />
-        <AnimationFrameTile index={2} />
-        <AnimationFrameTile index={3} isSelected />
-        <AnimationFrameTile index={4} />
-        <AnimationFrameTile index={151} />
+        <AnimationFrameListItem index={1} />
+        <AnimationFrameListItem index={2} />
+        <AnimationFrameListItem index={3} isSelected />
+        <AnimationFrameListItem index={4} />
+        <AnimationFrameListItem index={151} />
         <NewItemTile label="new frame" />
       </ScrollableList>
     );
