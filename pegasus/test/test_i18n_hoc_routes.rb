@@ -13,14 +13,12 @@ class I18nHocRoutesTest < Minitest::Test
     languages = DB[:cdo_languages].select(:unique_language_s).where(supported_hoc_b: 1)
     subpages = load_hoc_subpages
 
-    languages.each do |prop|
+    languages.collect { |x| x[:unique_language_s]}.each do |lang|
       # Tests the homepage
-      assert_successful_get("/us/#{prop[:unique_language_s]}")
+      assert_successful_get("/us/#{lang}")
 
       # Tests all other hoc subpages
-      subpages.each do |path|
-        assert_successful_get("/us/#{prop[:unique_language_s]}/#{path}")
-      end
+      subpages.each { |path| assert_successful_get("/us/#{lang}/#{path}") }
     end
   end
 
