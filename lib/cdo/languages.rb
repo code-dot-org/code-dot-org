@@ -16,8 +16,4 @@ class Languages
     @@table.select(:locale_s)
   end
 
-  def self.get_unique_hoc_lang_codes()
-    @@table.select(:unique_language_s)
-  end
-
 end
