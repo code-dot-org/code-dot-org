@@ -3,7 +3,6 @@
 
 var color = require('../color');
 var TileButtons = require('./TileButtons.jsx');
-var TileThumbnail = require('./TileThumbnail.jsx');
 
 var staticStyles = {
   tile: {

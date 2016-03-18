@@ -43,7 +43,7 @@ var staticStyles = {
 /**
  * Animation or Frame thumbnail.
  */
-var TileThumbnail = React.createClass({
+var ListItemThumbnail = React.createClass({
   propTypes: {
     index: React.PropTypes.number,
     isSelected: React.PropTypes.bool,
@@ -79,4 +79,4 @@ var TileThumbnail = React.createClass({
     );
   }
 });
-module.exports = TileThumbnail;
+module.exports = ListItemThumbnail;

@@ -5,7 +5,7 @@ var _ = require('../lodash');
 var color = require('../color');
 var connect = require('react-redux').connect;
 var TileButtons = require('./TileButtons.jsx');
-var TileThumbnail = require('./TileThumbnail.jsx');
+var ListItemThumbnail = require('./ListItemThumbnail.jsx');
 
 var staticStyles = {
   tile: {
@@ -74,7 +74,7 @@ var AnimationSequenceListItem = React.createClass({
 
     return (
       <div style={styles.tile}>
-        <TileThumbnail
+        <ListItemThumbnail
             isSelected={this.props.isSelected}
             src={this.props.assetUrl('media/common_images/draw-east.png')} />
         {sequenceName}
