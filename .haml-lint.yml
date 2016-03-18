@@ -20,9 +20,6 @@ linters:
   ImplicitDiv:
     enabled: false
 
-  LeadingCommentSpace:
-    enabled: false
-
   LineLength:
     enabled: false
 
