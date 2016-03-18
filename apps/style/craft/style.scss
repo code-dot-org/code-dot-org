@@ -1,5 +1,6 @@
 $root: '/blockly/media/craft/'; //TODO: Parameterize for asset pipeline
 
+@import 'color';
 @import '../common';
 @import 'font';
 
@@ -303,7 +304,7 @@ $height-to-width: 434 / 477;
   #select-character-text {
     line-height: 50px;
     font-size: 22px;
-    color: #e7e8ea;
+    color: $lightest_gray;
   }
 
   .minecraft-character {
@@ -432,7 +433,7 @@ $height-to-width: 434 / 477;
   #select-house-text {
     line-height: 50px;
     font-size: 22px;
-    color: #e7e8ea;
+    color: $lightest_gray;
   }
 
 

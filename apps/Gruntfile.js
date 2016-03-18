@@ -350,6 +350,7 @@ module.exports = function (grunt) {
 
   config.exec = {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
+    buildColorJs: './script/build-color-js.js',
     mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
   };
 
@@ -512,6 +513,7 @@ module.exports = function (grunt) {
     'checkDropletSize',
     'pseudoloc',
     'newer:messages',
+    'exec:buildColorJs',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
@@ -545,6 +547,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('mochaTest', [
     'newer:messages',
+    'exec:buildColorJs',
     'newer:copy:static',
     'newer:concat',
     'exec:mochaTest'

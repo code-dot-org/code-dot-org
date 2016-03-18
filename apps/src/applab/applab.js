@@ -44,6 +44,7 @@ var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
 var DialogButtons = require('../templates/DialogButtons.jsx');
+var executionLog = require('../executionLog');
 
 var createStore = require('../redux');
 var Provider = require('react-redux').Provider;
@@ -1027,6 +1028,7 @@ Applab.reset = function(first) {
   }
 
   // Reset configurable variables
+  Applab.message = null;
   delete Applab.activeCanvas;
   Applab.turtle = {};
   Applab.turtle.heading = 0;
@@ -1191,6 +1193,7 @@ var displayFeedback = function() {
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Applab.response && Applab.response.save_to_gallery_url,
+      message: Applab.message,
       appStrings: {
         reinfFeedbackMsg: applabMsg.reinfFeedbackMsg(),
         sharingText: applabMsg.shareGame()
@@ -1277,6 +1280,7 @@ Applab.execute = function() {
       // Create a new interpreter for this run
       Applab.JSInterpreter = new JSInterpreter({
         studioApp: studioApp,
+        logExecution: !!level.logConditions,
         shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
         maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK
       });
@@ -1297,6 +1301,9 @@ Applab.execute = function() {
         blockFilter: level.executePaletteApisOnly && level.codeFunctions,
         enableEvents: true
       });
+      // Maintain a reference here so we can still examine this after we
+      // discard the JSInterpreter instance during reset
+      Applab.currentExecutionLog = Applab.JSInterpreter.executionLog;
       if (!Applab.JSInterpreter.initialized()) {
         return;
       }
@@ -1445,6 +1452,11 @@ Applab.onPuzzleComplete = function(submit) {
     Applab.testResults = studioApp.getTestResults(levelComplete, {
         executionError: Applab.executionError
     });
+  } else if (level.logConditions) {
+    var results = executionLog.getResultsFromLog(level.logConditions,
+        Applab.currentExecutionLog);
+    Applab.testResults = results.testResult;
+    Applab.message = results.message;
   } else if (!submit) {
     Applab.testResults = TestResults.FREE_PLAY;
   }

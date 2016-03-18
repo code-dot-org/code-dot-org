@@ -1,3 +1,4 @@
+var color = require('../../color');
 var rowStyle = require('./rowStyle');
 
 var ZOrderRow = React.createClass({
@@ -30,7 +31,7 @@ var ZOrderRow = React.createClass({
       height: 42,
       marginLeft: 0,
       marginRight: 10,
-      backgroundColor: '#0094ca' // $cyan
+      backgroundColor: color.cyan
     };
 
     var squareButtonDisabled = {
