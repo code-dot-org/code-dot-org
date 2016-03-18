@@ -24,17 +24,22 @@ var AnimationSequenceTile = React.createClass({
       marginBottom: 4
     };
 
-    var sequenceNameStyle = {
-      textAlign: 'center',
-      userSelect: 'none'
-    };
+    var sequenceName;
+    if (this.props.isSelected) {
+      sequenceName = <div style={{marginLeft: 4, marginRight: 4, marginTop: 4}}>
+          <input type="text" style={{width: '100%', margin: 0, padding: 0, textAlign: 'center', border: 'none', borderRadius: 9}} value={this.props.sequenceName} />
+        </div>;
+    } else {
+      sequenceName = <div className="sequence-name" style={{marginLeft: 4, marginRight: 4, marginTop: 4, textAlign: 'center', userSelect: 'none'}}>{this.props.sequenceName}</div>;
+    }
+
 
     return <div style={tileStyle}>
       <TileThumbnail
           isSelected={this.props.isSelected}
           src={this.props.assetUrl('media/common_images/draw-east.png')}
       />
-      <div className="sequence-name" style={sequenceNameStyle}>{this.props.sequenceName}</div>
+      {sequenceName}
     </div>;
   }
 });
