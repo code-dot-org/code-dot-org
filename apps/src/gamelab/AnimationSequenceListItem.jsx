@@ -46,7 +46,7 @@ var staticStyles = {
  * animated thumbnail of the sequence, along with the sequence name and
  * (if currently selected) controls for deleting or duplicating the sequence.
  */
-var AnimationSequenceTile = React.createClass({
+var AnimationSequenceListItem = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
     isSelected: React.PropTypes.bool,
@@ -87,4 +87,4 @@ module.exports = connect(function propsFromStore(state) {
   return {
     assetUrl: state.level.assetUrl
   };
-})(AnimationSequenceTile);
+})(AnimationSequenceListItem);
