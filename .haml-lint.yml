@@ -11,9 +11,6 @@ linters:
   ConsecutiveSilentScripts:
     enabled: false
 
-  FinalNewline:
-    enabled: false
-
   HtmlAttributes:
     enabled: false
 
