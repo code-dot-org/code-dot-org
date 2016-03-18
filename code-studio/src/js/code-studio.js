@@ -38,6 +38,7 @@ window.dashboard.funometer = require('./funometerPercentagesByDay');
 window.dashboard.popupWindow = require('./popup-window');
 window.dashboard.progress = require('./progress');
 window.dashboard.reporting = require('./reporting');
+window.dashboard.utils = require('./utils');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.
