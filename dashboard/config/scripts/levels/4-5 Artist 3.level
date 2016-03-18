@@ -83,20 +83,6 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_turn_by_constant_dropdown">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE" config="45,60,90,120,180">90</title>
-              <next>
-                <block type="draw_turn_by_constant_dropdown">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE" config="45,60,90,120,180">90</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
       </xml>
     </recommended_blocks>
     <solution_blocks>

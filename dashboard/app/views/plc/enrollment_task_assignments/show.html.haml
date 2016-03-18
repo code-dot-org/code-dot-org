@@ -10,4 +10,4 @@
     Here is the subpage for actually completing the task with type #{@task.class.titleized_task_type}
   = render partial: 'plc/enrollment_task_assignments/complete/' + @task.class.underscored_task_type
 
-= link_to 'Back', plc_enrollment_task_assignments_path
+= link_to 'Back', plc_user_course_enrollment_path(@enrollment_task_assignment.plc_enrollment_module_assignment.plc_user_course_enrollment)

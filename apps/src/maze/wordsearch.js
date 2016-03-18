@@ -1,3 +1,4 @@
+var color = require('../color');
 var utils = require('../utils');
 var _ = utils.getLodash();
 var cellId = require('./mazeUtils').cellId;
@@ -160,7 +161,7 @@ WordSearch.prototype.resetTiles = function () {
  */
 WordSearch.prototype.updateTileHighlight_ = function (row, col, highlighted) {
   var backColor = (row + col) % 2 === 0 ? '#dae3f3' : '#ffffff';
-  var textColor = highlighted ? 'white' : 'black';
+  var textColor = highlighted ? color.white : color.black;
   if (highlighted) {
     backColor = '#00b050';
   }

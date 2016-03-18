@@ -256,6 +256,33 @@ function test_functionEditor_renameParam() {
   goog.dom.removeNode(container);
 }
 
+function test_functionEditor_useSimpleDialogForParamRenaming() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+  initializeFunctionEditor(PROCEDURE_WITH_PARAM);
+  openFunctionEditor('procedure with param 1');
+  var dialogCreated = false;
+  setCustomSimpleDialog(function(config) {
+    dialogCreated = true;
+    config.onCancel('new_x');
+  });
+
+  Blockly.fireTestClickSequence(
+      document.querySelector('.blocklyUndraggable .blocklyArrow'));
+  var renameOption = document.querySelectorAll('.goog-menuitem-content')[0];
+  assertEquals('Rename parameter...', renameOption.textContent);
+  Blockly.fireTestClickSequence(renameOption);
+
+  assert(dialogCreated);
+  var paramsUsed = getParametersUsedInFunctionEditor();
+  assertContains('Renamed to new_x', 'new_x', paramsUsed);
+  assertContains('Does not change other parameter', 'y', paramsUsed);
+  assertNotContains('No more old parameter', 'x', paramsUsed);
+
+  resetCustomSimpleDialog();
+  cleanupFunctionEditor();
+  goog.dom.removeNode(container);
+}
+
 function test_functionEditor_deleteParam() {
   var container = Blockly.Test.initializeBlockSpaceEditor();
   initializeFunctionEditor(PROCEDURE_WITH_PARAM);
