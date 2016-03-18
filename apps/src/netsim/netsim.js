@@ -3,7 +3,7 @@
  *           This file is the main entry point for the Internet Simulator.
  */
 /* global -Blockly */
-/* global sendReport */
+/* global dashboard */
 /* global confirm */
 'use strict';
 
@@ -1291,7 +1291,7 @@ NetSim.prototype.completeLevelAndContinue = function () {
   // Avoid multiple simultaneous submissions.
   $('.submitButton').attr('disabled', true);
 
-  sendReport({
+  window.dashboard.reporting.sendReport({
     fallbackResponse: this.reportingInfo_.fallback_response,
     callback: this.reportingInfo_.callback,
     app: 'netsim',

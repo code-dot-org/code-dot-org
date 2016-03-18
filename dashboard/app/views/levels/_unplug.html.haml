@@ -57,7 +57,7 @@
     }
 
     finishedButton.addClass("disabled");
-    sendReport({
+    window.dashboard.reporting.sendReport({
       fallbackResponse: '#{@fallback_response.to_json}',
       callback: '#{@callback}',
       app: 'unplug',
@@ -66,6 +66,7 @@
       pass: true,
       testResult: 100,
       onComplete: function() {
+        var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
         if (lastServerResponse.videoInfo) {
           showVideoDialog(lastServerResponse.videoInfo);
           finishedButton.removeClass("disabled");
