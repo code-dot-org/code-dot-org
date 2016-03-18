@@ -8,6 +8,7 @@ var TileThumbnail = require('./TileThumbnail.jsx');
 var AnimationFrameTile = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
+    index: React.PropTypes.number,
     isSelected: React.PropTypes.bool
   },
 
@@ -24,6 +25,7 @@ var AnimationFrameTile = React.createClass({
 
     return <div style={tileStyle}>
       <TileThumbnail
+          index={this.props.index}
           isSelected={this.props.isSelected}
           src={this.props.assetUrl('media/common_images/draw-east.png')}
       />
