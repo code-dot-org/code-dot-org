@@ -25,15 +25,6 @@ var GameLabView = React.createClass({
     this.props.onMount();
   },
 
-  render: function () {
-    return (
-      <ConnectedStudioAppWrapper>
-        {this.renderCodeMode()}
-        {this.renderAnimationMode()}
-      </ConnectedStudioAppWrapper>
-    );
-  },
-
   renderCodeMode: function () {
     // Code mode contains protected (non-React) content.  We have to always
     // render it, so when we're not in code mode use CSS to hide it.
@@ -45,12 +36,14 @@ var GameLabView = React.createClass({
     return (
       <div style={codeModeStyle}>
         <div id="visualizationColumn">
-          {this.shouldShowHeader() && <GameLabVisualizationHeader/>}
+          {this.shouldShowHeader() && <GameLabVisualizationHeader />}
           <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <ProtectedStatefulDiv id="codeWorkspace">
-          <ProtectedStatefulDiv id="codeWorkspaceWrapper" contentFunction={this.props.generateCodeWorkspaceHtml}/>
+          <ProtectedStatefulDiv
+              id="codeWorkspaceWrapper"
+              contentFunction={this.props.generateCodeWorkspaceHtml} />
         </ProtectedStatefulDiv>
       </div>
     );
@@ -58,12 +51,21 @@ var GameLabView = React.createClass({
 
   renderAnimationMode: function () {
     return this.props.interfaceMode === GameLabInterfaceMode.ANIMATION ?
-        <AnimationTab/> :
+        <AnimationTab /> :
         undefined;
   },
 
   shouldShowHeader: function () {
     return !(this.props.isEmbedView || this.props.isShareView);
+  },
+
+  render: function () {
+    return (
+      <ConnectedStudioAppWrapper>
+        {this.renderCodeMode()}
+        {this.renderAnimationMode()}
+      </ConnectedStudioAppWrapper>
+    );
   }
 });
 module.exports = connect(function propsFromStore(state) {
