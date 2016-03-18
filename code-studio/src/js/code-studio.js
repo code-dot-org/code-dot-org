@@ -12,6 +12,8 @@
 // Shim window.console to be safe in IE
 require('./consoleShim')(window);
 
+var Sounds = require('./Sounds');
+
 require('./videos');
 
 window.React = require('react');
