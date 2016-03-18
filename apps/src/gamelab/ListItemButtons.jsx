@@ -20,7 +20,7 @@ var staticStyles = {
 /**
  * The delete and duplicate controls beneath an animation or frame thumbnail.
  */
-var TileButtons = function () {
+var ListItemButtons = function () {
   return (
     <div style={staticStyles.root}>
       <i className="fa fa-trash-o" style={staticStyles.trash} />
@@ -28,4 +28,4 @@ var TileButtons = function () {
     </div>
   );
 };
-module.exports = TileButtons;
+module.exports = ListItemButtons;

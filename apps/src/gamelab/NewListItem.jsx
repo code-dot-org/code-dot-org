@@ -2,7 +2,6 @@
 'use strict';
 
 var color = require('../color');
-var TileButtons = require('./TileButtons.jsx');
 
 var staticStyles = {
   tile: {
