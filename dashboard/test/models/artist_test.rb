@@ -115,6 +115,18 @@ XML
 </block>
 XML
 
+    @controls_repeat_simplified_xml = <<XML
+<block type="controls_repeat">
+  <title name="TIMES">5</title>
+</block>
+XML
+
+    @controls_repeat_simplified_dropdown_xml = <<XML
+<block type="controls_repeat_dropdown">
+  <title name="TIMES" config="3-10">???</title>
+</block>
+XML
+
     @toolbox_doc = Nokogiri::XML '<xml></xml>'
     @solution_doc = Nokogiri::XML '<xml></xml>'
     @level = Artist.new
@@ -140,62 +152,82 @@ XML
     assert_equal occurrances, blocks.length
   end
 
-  def assert_blocks_match(toolbox_block, solution_block)
-    assert_equal @level.strip_toolbox_block(toolbox_block),
-      @level.strip_solution_block(solution_block)
-  end
-
-  def assert_blocks_dont_match(toolbox_block, solution_block)
-    assert_not_equal @level.strip_toolbox_block(toolbox_block),
-      @level.strip_solution_block(solution_block)
-  end
-
   test 'identical blocks match' do
     toolbox_block = make_toolbox_node @draw_block_xml
     solution_block = make_solution_node @draw_block_xml
-    assert_blocks_match toolbox_block, solution_block
+    assert @level.blocks_match? toolbox_block, solution_block
   end
 
   test 'blocks with different IDs match' do
     toolbox_block = make_toolbox_node @draw_block_with_id_foo_xml
     solution_block = make_solution_node @draw_block_with_id_bar_xml
-    assert_blocks_match toolbox_block, solution_block
+    assert @level.blocks_match? toolbox_block, solution_block
   end
 
   test 'blocks with different inline attribute match' do
     toolbox_block = make_toolbox_node @draw_block_xml
     solution_block = make_solution_node @draw_block_with_inline_xml
-    assert_blocks_match toolbox_block, solution_block
+    assert @level.blocks_match? toolbox_block, solution_block
   end
 
   test 'blocks with different next nodes match' do
     toolbox_block = make_toolbox_node @draw_block_xml
     solution_block = make_solution_node @draw_block_with_next_xml
-    assert_blocks_match toolbox_block, solution_block
+    assert @level.blocks_match? toolbox_block, solution_block
   end
 
   test 'blocks called with different values match' do
     toolbox_block = make_toolbox_node @draw_50_block_xml
     solution_block = make_solution_node @draw_100_block_xml
-    assert_blocks_match toolbox_block, solution_block
+    assert @level.blocks_match? toolbox_block, solution_block
   end
 
   test 'math_value blocks with different values match' do
     toolbox_block = make_toolbox_node @value_50_block_xml
     solution_block = make_solution_node @value_100_block_xml
-    assert_blocks_match toolbox_block, solution_block
+    assert @level.blocks_match? toolbox_block, solution_block
+  end
+
+  test '*_constant blocks match themselves' do
+    toolbox_block = make_toolbox_node @draw_block_xml
+    solution_block = make_solution_node @draw_block_xml
+    assert @level.blocks_match? toolbox_block, solution_block
+  end
+
+  test '*_constant_dropdown blocks match themselves' do
+    toolbox_block = make_toolbox_node @draw_with_dropdown_xml
+    solution_block = make_solution_node @draw_with_dropdown_xml
+    assert @level.blocks_match? toolbox_block, solution_block
+  end
+
+  test '*_dropdown blocks match themselves' do
+    toolbox_block = make_toolbox_node @controls_repeat_simplified_dropdown_xml
+    solution_block = make_solution_node @controls_repeat_simplified_dropdown_xml
+    assert @level.blocks_match? toolbox_block, solution_block
   end
 
   test '*_constant_dropdown blocks in the toolbox match *_constant blocks in the solution' do
     toolbox_block = make_toolbox_node @draw_with_dropdown_xml
     solution_block = make_solution_node @draw_block_xml
-    assert_blocks_match toolbox_block, solution_block
+    assert @level.blocks_match? toolbox_block, solution_block
   end
 
   test '*_constant_dropdown blocks in the solution do not match *_constant blocks in the toolbox' do
     toolbox_block = make_toolbox_node @draw_block_xml
     solution_block = make_solution_node @draw_with_dropdown_xml
-    assert_blocks_dont_match toolbox_block, solution_block
+    refute @level.blocks_match? toolbox_block, solution_block
+  end
+
+  test '*_dropdown blocks in the toolbox match corresponding non-dropdown blocks in the solution' do
+    toolbox_block = make_toolbox_node @controls_repeat_simplified_dropdown_xml
+    solution_block = make_solution_node @controls_repeat_simplified_xml
+    assert @level.blocks_match? toolbox_block, solution_block
+  end
+
+  test '*_dropdown blocks in the solution do not match corresponding non-dropdown blocks in toolbox' do
+    toolbox_block = make_toolbox_node @controls_repeat_simplified_xml
+    solution_block = make_solution_node @controls_repeat_simplified_dropdown_xml
+    refute @level.blocks_match? toolbox_block, solution_block
   end
 
   test 'add missing block' do

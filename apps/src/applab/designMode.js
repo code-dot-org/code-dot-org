@@ -18,8 +18,8 @@ var logToCloud = require('../logToCloud');
 var actions = require('./actions');
 var icons = require('../assetManagement/icons');
 
-var ICON_PREFIX = 'icon://';
-var ICON_PREFIX_REGEX = new RegExp('^' + ICON_PREFIX);
+var ICON_PREFIX = applabConstants.ICON_PREFIX;
+var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
 
 var currentlyEditedElement = null;
 var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
@@ -178,15 +178,17 @@ designMode.onPropertyChange = function(element, name, value) {
 /**
  * Create a data-URI with the image data of the given icon glyph.
  * @param value {string} An icon identifier of the format "icon://fa-icon-name".
+ * @param element {Element}
  * @return {string}
  */
-function renderIconToString(value) {
+function renderIconToString(value, element) {
   var canvas = document.createElement('canvas');
   canvas.width = canvas.height = 400;
   var ctx = canvas.getContext('2d');
   ctx.font = '300px FontAwesome, serif';
   ctx.textBaseline = 'middle';
   ctx.textAlign = 'center';
+  ctx.fillStyle = element.getAttribute('data-icon-color');
   var regex = new RegExp('^' + ICON_PREFIX + 'fa-');
   var unicode = '0x' + icons.unicode[value.replace(regex, '')];
   ctx.fillText(String.fromCharCode(unicode), 200, 200);
@@ -261,6 +263,9 @@ designMode.updateProperty = function(element, name, value) {
     case 'textAlign':
       element.style.textAlign = value;
       break;
+    case 'icon-color':
+      element.setAttribute('data-icon-color', value);
+      break;
     case 'image':
       var originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
@@ -278,7 +283,7 @@ designMode.updateProperty = function(element, name, value) {
       };
 
       if (ICON_PREFIX_REGEX.test(value)) {
-        element.style.backgroundImage = 'url(' + renderIconToString(value) + ')';
+        element.style.backgroundImage = 'url(' + renderIconToString(value, element) + ')';
         fitImage();
         break;
       }
@@ -301,7 +306,7 @@ designMode.updateProperty = function(element, name, value) {
       var height = parseInt(element.style.height, 10);
       element.style.backgroundSize = width + 'px ' + height + 'px';
 
-      var url = ICON_PREFIX_REGEX.test(value) ? renderIconToString(value) : assetPrefix.fixPath(value);
+      var url = ICON_PREFIX_REGEX.test(value) ? renderIconToString(value, element) : assetPrefix.fixPath(value);
       element.style.backgroundImage = 'url(' + url + ')';
 
       break;
@@ -311,7 +316,7 @@ designMode.updateProperty = function(element, name, value) {
       element.setAttribute('data-canonical-image-url', value);
 
       if (ICON_PREFIX_REGEX.test(value)) {
-        element.src = renderIconToString(value);
+        element.src = renderIconToString(value, element);
         break;
       }
 

@@ -1254,7 +1254,7 @@ Blockly.Blocks.parameters_get = {init:function() {
   this.setOutput(!0);
   this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)
 }, renameVar:function(a, b) {
-  Blockly.functionEditor && (Blockly.functionEditor.renameParameter(a, b), Blockly.functionEditor.refreshParamsEverywhere())
+  Blockly.functionEditor && Blockly.functionEditor.isOpen() && (Blockly.functionEditor.renameParameter(a, b), Blockly.functionEditor.refreshParamsEverywhere())
 }, removeVar:Blockly.Blocks.variables_get.removeVar};
 Blockly.Blocks.functionalProcedures = {};
 Blockly.Blocks.functional_definition = {shouldHideIfInMainBlockSpace:function() {
