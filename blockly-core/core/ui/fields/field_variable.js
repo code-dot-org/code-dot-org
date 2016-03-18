@@ -132,21 +132,26 @@ Blockly.FieldVariable.prototype.dropdownChange = function(text) {
   if (text === Blockly.Msg.RENAME_VARIABLE) {
     var oldVar = this.getText();
     this.getParentEditor_().hideChaff();
-    text = Blockly.FieldVariable.promptName(Blockly.Msg.RENAME_VARIABLE_TITLE.replace('%1', oldVar),
-                      oldVar);
-    if (text) {
-      Blockly.Variables.renameVariable(oldVar, text, this.sourceBlock_.blockSpace);
-    }
+    Blockly.FieldVariable.modalPromptName(
+        Blockly.Msg.RENAME_VARIABLE_TITLE.replace('%1', oldVar),
+        Blockly.Msg.CONFIRM_RENAME_VARIABLE,
+        oldVar,
+        function(newVar) {
+          Blockly.Variables.renameVariable(oldVar, newVar, this.sourceBlock_.blockSpace);
+        }.bind(this));
     return null;
   } else if (text === Blockly.Msg.NEW_VARIABLE) {
     this.getParentEditor_().hideChaff();
-    text = Blockly.FieldVariable.promptName(Blockly.Msg.NEW_VARIABLE_TITLE, '');
-    // Since variables are case-insensitive, ensure that if the new variable
-    // matches with an existing variable, the new case prevails throughout.
-    if (text) {
-      Blockly.Variables.renameVariable(text, text, this.sourceBlock_.blockSpace);
-      return text;
-    }
+    Blockly.FieldVariable.modalPromptName(
+        Blockly.Msg.NEW_VARIABLE_TITLE,
+        Blockly.Msg.CONFIRM_CREATE_VARIABLE,
+        '',
+        function(newVar) {
+          this.setText(newVar);
+          // Since variables are case-insensitive, ensure that if the new variable
+          // matches with an existing variable, the new case prevails throughout.
+          Blockly.Variables.renameVariable(newVar, newVar, this.sourceBlock_.blockSpace);
+        }.bind(this));
     return null;
   }
   return undefined;
@@ -155,17 +160,22 @@ Blockly.FieldVariable.prototype.dropdownChange = function(text) {
 /**
  * Prompt the user for a variable name and perform some whitespace cleanup
  * @param {string} promptText description text for window prompt
+ * @param {string} confirmButtonLabel Label of confirm button, e.g. "Rename"
  * @param {string} defaultText default input text for window prompt
- * @returns {?string} the provided variable name, with extra whitespace removed
+ * @param {Function} callback with parameter (text) of new name
  */
-Blockly.FieldVariable.promptName = function(promptText, defaultText) {
-  var newVar = window.prompt(promptText, defaultText);
-  if (!newVar) {
-    return newVar;
-  }
-
-  return Blockly.FieldVariable.removeExtraWhitespace(newVar);
-};
+Blockly.FieldVariable.modalPromptName =
+    function(promptText, confirmButtonLabel, defaultText, callback) {
+  Blockly.showSimpleDialog({
+    bodyText: promptText,
+    prompt: true,
+    promptPrefill: defaultText,
+    cancelText: confirmButtonLabel,
+    confirmText: Blockly.Msg.CANCEL,
+    onConfirm: null,
+    onCancel: callback
+  });
+}
 
 Blockly.FieldVariable.removeExtraWhitespace = function(inputString) {
   var multipleWhitespaceCharactersRegex = /[\s\xa0]+/g;

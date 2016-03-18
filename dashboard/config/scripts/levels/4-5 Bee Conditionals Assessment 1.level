@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "bee",
-    "instructions": "Assessment: This code is wrong. Complete the \"get nectar or make honey\" function, then call it to collect all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.",
+    "instructions": "**Assessment:** This cloud is either hiding a flower with one nectar or a honeycomb that needs one honey.  \r\n\r\nComplete the `get nectar or make honey` function, then call it to collect the nectar or honey. \r\n",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -15,8 +15,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,1,2,\"P\",1,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,3,-1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "honey_goal": "1",
-    "ideal": "14",
+    "ideal": "8",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -30,58 +29,20 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "fast_get_nectar_animation": "false",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":3},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]"
+    "fast_get_nectar_animation": "true",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "markdown_instructions": "**Assessment:** This cloud is either hiding a flower with one nectar or a honeycomb that needs one honey.  \r\n\r\nComplete the `get nectar or make honey` function, then call it to collect the nectar or honey. \r\n"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
-          <next>
-            <block type="controls_repeat">
-              <title name="TIMES">2</title>
-              <statement name="DO">
-                <block type="maze_moveForward">
-                  <next>
-                    <block type="procedures_callnoreturn">
-                      <mutation name="get nectar or make honey"/>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
         <block type="procedures_defnoreturn" deletable="false" editable="false">
           <mutation/>
           <title name="NAME">get nectar or make honey</title>
-          <statement name="STACK">
-            <block type="bee_ifElseFlower">
-              <title name="LOC">atHoneycomb</title>
-              <statement name="DO">
-                <block type="maze_honey"/>
-              </statement>
-              <statement name="ELSE">
-                <block type="bee_ifelseNectarAmount">
-                  <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">==</title>
-                  <title name="ARG2">3</title>
-                  <statement name="DO">
-                    <block type="maze_nectar"/>
-                  </statement>
-                  <statement name="ELSE">
-                    <block type="bee_ifelseNectarAmount">
-                      <title name="ARG1">nectarRemaining</title>
-                      <title name="OP">==</title>
-                      <title name="ARG2">2</title>
-                    </block>
-                  </statement>
-                </block>
-              </statement>
-            </block>
-          </statement>
         </block>
       </xml>
     </start_blocks>
@@ -102,57 +63,19 @@
         <block type="bee_ifElseFlower">
           <title name="LOC">atFlower</title>
         </block>
-        <block type="bee_ifelseNectarAmount" inline="true">
+        <block type="bee_ifelseNectarAmount">
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">==</title>
           <title name="ARG2">1</title>
+        </block>
+        <block type="bee_ifFlower">
+          <title name="LOC">atFlower</title>
         </block>
         <block type="procedures_callnoreturn">
           <mutation name="get nectar or make honey"/>
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_nectar"/>
-        <block type="maze_honey"/>
-        <block type="procedures_callnoreturn">
-          <mutation name="get nectar or make honey"/>
-        </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="bee_ifElseFlower">
-              <title name="LOC">atFlower</title>
-              <next>
-                <block type="bee_ifElseFlower">
-                  <title name="LOC">atHoneycomb</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="bee_ifelseNectarAmount">
-              <title name="ARG1">nectarRemaining</title>
-              <title name="OP">==</title>
-              <title name="ARG2">3</title>
-              <next>
-                <block type="bee_ifelseNectarAmount">
-                  <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">==</title>
-                  <title name="ARG2">1</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
-        </block>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
@@ -181,37 +104,7 @@
                 <block type="maze_honey"/>
               </statement>
               <statement name="ELSE">
-                <block type="bee_ifelseNectarAmount">
-                  <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">==</title>
-                  <title name="ARG2">3</title>
-                  <statement name="DO">
-                    <block type="controls_repeat">
-                      <title name="TIMES">3</title>
-                      <statement name="DO">
-                        <block type="maze_nectar"/>
-                      </statement>
-                    </block>
-                  </statement>
-                  <statement name="ELSE">
-                    <block type="bee_ifelseNectarAmount">
-                      <title name="ARG1">nectarRemaining</title>
-                      <title name="OP">==</title>
-                      <title name="ARG2">2</title>
-                      <statement name="DO">
-                        <block type="controls_repeat">
-                          <title name="TIMES">2</title>
-                          <statement name="DO">
-                            <block type="maze_nectar"/>
-                          </statement>
-                        </block>
-                      </statement>
-                      <statement name="ELSE">
-                        <block type="maze_nectar"/>
-                      </statement>
-                    </block>
-                  </statement>
-                </block>
+                <block type="maze_nectar"/>
               </statement>
             </block>
           </statement>

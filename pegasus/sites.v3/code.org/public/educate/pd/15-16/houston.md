@@ -28,13 +28,7 @@ Milestone Complete!
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates:**
-
-Quarter 1: Saturday, October 10, 2015
-
-Quarter 2: Saturday, December 12, 2015
-
-Quarter 3: Saturday, February 27, 2016
+**Save the date:**
 
 Quarter 4: Saturday, April 9, 2016
 
@@ -72,19 +66,17 @@ Takeaways:<br/>
 • I am more comfortable with the material that I struggled with the first time teaching this
 course.<br/>
 • I understand how to make changes to the ECS curriculum in order to meet my local needs
-and fit into my context.))
+and fit into my context.
 
 **Save the Dates**
 
-Monday, July 11th - Wednesday, July 13th
-<br />
-8:30am - 3:30pm
-<br />
-Breakfast and lunch will be served.
+TBD
+
+*More information coming soon*
 
 **Location**
 
-More Details Coming Soon!
+*More information coming soon*
 
 **What do I bring to my Phase 4 Workshop?**
 
@@ -108,10 +100,7 @@ Water Bottle
 Milestone Complete!
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-
 Milestone Complete!
-
-
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
@@ -137,43 +126,11 @@ Phase 3 Part 3: Refection - This final online course will launch in early May on
 Milestone Complete!
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)  ###
 
-
 Milestone Complete!
-
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the dates:**
-
-Semester 1: Saturday, October 10, 2015 
-
-Semester 2: Saturday, February 27, 2016 
-
-8:00am - 4:00pm<br/>
-Breakfast and lunch will be served. 
-
-**Location**
-
-[Ryan Professional Development Center<br/>
-Building A<br/>
-Room PL9<br/>
-4001 Hardy Street<br/>
-Houston, TX 77009](https://www.google.com/maps/place/Houston+Independent+School+District/@29.7965147,-95.3534077,19z/data=!4m7!1m4!3m3!1s0x8640b8e008405e8f:0x898b37886b4ad089!2s4001+Hardy+St,+Houston,+TX+77009!3b1!3m1!1s0x0000000000000000:0x887b49612ae7419a)
-
-**What to bring to Phase 3 bi-yearly sessions:**
-
-Laptop and Charger
-<br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
-
-[**Back to the top**](#top)
+Milestone Complete!
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

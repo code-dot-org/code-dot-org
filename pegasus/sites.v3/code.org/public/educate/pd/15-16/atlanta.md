@@ -31,13 +31,7 @@ Milestone Complete!
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates**
-
-Quarter 1: Saturday, September 12, 2015
-
-Quarter 2: Saturday, December 12, 2015
-
-Quarter 3: Saturday, March 5, 2016
+**Save the date**
 
 Quarter 4: Saturday, April 23, 2016
 
@@ -107,18 +101,11 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online)###
 
-
 Milestone Complete!
-
-
-
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) 
 
-In person workshop complete!<br/><br/>
-**Deadline for Online Coursework is June 30th.**<br/>
-<br/>
-Phase 3 Part 3: Refection - This final online course will launch in early May on your Code Studio Teacher Dashboard. If you need support while finishing your work or teaching the course, check out the CS in Algebra forum [here](http://forum.code.org/c/cs-in-algebra).
+Milestone Complete!
 
 
 [**Back to the top**](#top)

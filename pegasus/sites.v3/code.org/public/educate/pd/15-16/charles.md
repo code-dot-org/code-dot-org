@@ -18,13 +18,7 @@ nav: pd2_nav
 
 Teachers from Charles County, Maryland will attend PD in Charles County and connect the to Broward CSP workshop virtually. 
 
-**Save the Dates:**
-
-Quarter 1: Saturday, September 26th, 2015
-
-Quarter 2: Saturday, December 5th, 2015
-
-Quarter 3: Saturday, February 20th, 2016
+**Save the Date:**
 
 Quarter 4: Saturday, April 9th, 2016
 
@@ -32,8 +26,7 @@ Quarter 4: Saturday, April 9th, 2016
 Breakfast and lunch will be served.
 
 
-**April 9th Location**
-
+**Location**
 
 [I/O Spaces
 <br/>
@@ -86,16 +79,14 @@ Milestone Complete!
 Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates**
-
-Semester 1: Tuesday, November 10, 2015 
+**Save the date**
 
 Semester 2: Monday, April 25, 2016 
 
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served.
 
-**April 25th Location**
+**Location**
 
 [Davis Middle School<br/> 
 Room M106<br/>
@@ -130,10 +121,7 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-In person workshop complete!<br/><br/>
-**Deadline for Online Coursework is June 30th.**<br/>
-<br/>
-Phase 3 Part 3: Refection - This final online course will launch in early May on your Code Studio Teacher Dashboard. If you need support while finishing your work or teaching the course, check out the CS in Algebra forum [here](http://forum.code.org/c/cs-in-algebra).
+Milestone Complete!
 
 
 [**Back to the top**](#top)

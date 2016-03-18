@@ -1,5 +1,7 @@
 /* globals dashboard, appOptions  */
 
+var clientState = require('./clientState');
+
 var progress = module.exports;
 
 /**
@@ -29,12 +31,12 @@ progress.activityCssClass = function (result) {
  * @return {string} The result css class.
  */
 progress.mergedActivityCssClass = function (a, b) {
-  return progress.activityCssClass(dashboard.clientState.mergeActivityResult(a, b));
+  return progress.activityCssClass(clientState.mergeActivityResult(a, b));
 };
 
 progress.populateProgress = function (scriptName) {
   // Render the progress the client knows about (from sessionStorage)
-  var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
+  var clientProgress = clientState.allLevelsProgress()[scriptName] || {};
   Object.keys(clientProgress).forEach(function (levelId) {
     $('.level-' + levelId).addClass(progress.activityCssClass(clientProgress[levelId]));
   });
@@ -62,7 +64,7 @@ progress.populateProgress = function (scriptName) {
         $('.level-' + levelId).attr('class', 'level_link ' + status);
 
         // Write down new progress in sessionStorage
-        dashboard.clientState.trackProgress(null, null, serverProgress[levelId].result, scriptName, levelId);
+        clientState.trackProgress(null, null, serverProgress[levelId].result, scriptName, levelId);
       }
     });
   });
@@ -88,7 +90,7 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
     var status;
     if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
       status = "submitted";
-    } else if (dashboard.clientState.queryParams('user_id')) {
+    } else if (clientState.queryParams('user_id')) {
       // Show server progress only (the student's progress)
       status = progress.activityCssClass((serverProgress[level.id] || {}).result);
     } else {
