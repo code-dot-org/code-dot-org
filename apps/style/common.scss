@@ -776,7 +776,6 @@ input[type="radio"] {
 
   $red: #FF3014;
   $dark-red: #7F150A;
-  $blue: #0094CA;
   $dark-blue: #00647F;
   $gray: #333333;
   $dark-gray: #4D4D4D;
@@ -820,7 +819,7 @@ input[type="radio"] {
         fill: $dark-gray;
       }
       &.enabled {
-        fill: $blue;
+        fill: $cyan;
       }
       &.enabled:hover {
         fill: $dark-blue;

@@ -14,7 +14,7 @@ APP_ROOT=<%= @app_root %>
 PID=<%= @pid_file %>
 CMD="cd $APP_ROOT; LANG=en_US.UTF-8 bundle exec unicorn -D -c <%= @src_file %> -E <%= @env %>"
 AS_USER=<%= @user %>
-<%= @bundle_env ? @bundle_env.map{|k,v|"#{k}=#{v}"}.join("\n") : '' %>
+<%= @bundle_env ? @bundle_env.map{|k,v|"export #{k}=#{v}"}.join("\n") : '' %>
 action="$1"
 set -u
 

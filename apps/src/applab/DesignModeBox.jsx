@@ -1,5 +1,6 @@
 /* global $ */
 
+var color = require('../color');
 var DesignToolbox = require('./DesignToolbox.jsx');
 var DesignProperties = require('./designProperties.jsx');
 
@@ -24,7 +25,7 @@ module.exports = React.createClass({
         width: '100%',
         top: 30,
         bottom: 0,
-        backgroundColor: 'white',
+        backgroundColor: color.white,
         boxSizing: 'border-box',
         borderLeft: '1px solid gray',
         borderRight: '1px solid gray',
