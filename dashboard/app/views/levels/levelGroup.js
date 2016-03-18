@@ -1,4 +1,4 @@
-/* global sendReport, appOptions, Dialog */
+/* global appOptions, Dialog */
 
 function initLevelGroup(
   levelCount,
@@ -91,7 +91,7 @@ function initLevelGroup(
     var errorType = results.errorType;
     var submitted = appOptions.submitted;
 
-    sendReport({
+    window.dashboard.reporting.sendReport({
       program: response,
       fallbackResponse: fallbackResponse,
       callback: callback,
