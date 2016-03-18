@@ -421,4 +421,12 @@ class TablesApi < Sinatra::Base
   def self.reset_max_table_rows_for_test
     set_max_table_rows_for_test(DEFAULT_MAX_TABLE_ROWS)
   end
+
+  def self.set_max_record_size_for_test(max_record_size)
+    @@max_record_size = max_record_size
+  end
+
+  def self.reset_max_record_size_for_test
+    set_max_record_size_for_test(DEFAULT_MAX_RECORD_SIZE)
+  end
 end
