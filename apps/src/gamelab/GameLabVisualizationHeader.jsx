@@ -17,10 +17,6 @@ var GameLabVisualizationHeader = React.createClass({
     onInterfaceModeChange: React.PropTypes.func.isRequired
   },
 
-  shouldHideToggle: function () {
-    return this.props.isShareView;
-  },
-
   render: function () {
     return (
       <div className="workspace-header-height">
