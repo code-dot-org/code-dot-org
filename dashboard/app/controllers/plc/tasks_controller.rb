@@ -13,6 +13,8 @@ class Plc::TasksController < ApplicationController
 
   # GET /plc/tasks/new
   def new
+    @task.plc_learning_module_id = params[:plc_learning_module_id]
+    @task.type = params[:type]
   end
 
   # GET /plc/tasks/1/edit

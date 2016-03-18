@@ -776,7 +776,6 @@ input[type="radio"] {
 
   $red: #FF3014;
   $dark-red: #7F150A;
-  $blue: #0094CA;
   $dark-blue: #00647F;
   $gray: #333333;
   $dark-gray: #4D4D4D;
@@ -820,7 +819,7 @@ input[type="radio"] {
         fill: $dark-gray;
       }
       &.enabled {
-        fill: $blue;
+        fill: $cyan;
       }
       &.enabled:hover {
         fill: $dark-blue;
@@ -1198,6 +1197,17 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     .goog-menuitem-highlight, .goog-menuitem-hover {
       margin: -4px -4px 0 0 !important
     }
+  }
+}
+
+.show-code {
+  summary {
+    color: $charcoal;
+    font-family: $gotham-bold;
+  }
+
+  .generated-code-container {
+    margin: 25px 10px 25px -80px;
   }
 }
 

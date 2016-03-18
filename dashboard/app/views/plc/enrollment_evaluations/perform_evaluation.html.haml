@@ -12,8 +12,8 @@
     - answers = question.plc_evaluation_answers
     - answers.each do |answer|
       %p
-        %input.radio{type: "radio", name: question.id, value: answer.plc_task_id, checked: answer == answers.first}
-          #{answer.answer} (corresponds with #{answer.plc_task.try(:name)})
-  = hidden_field_tag('answerTaskList')
+        %input.radio{type: "radio", name: question.id, value: answer.plc_learning_module_id, checked: answer == answers.first}
+          #{answer.answer} (corresponds with #{answer.plc_learning_module.try(:name)})
+  = hidden_field_tag('answerModuleList')
   = submit_tag('Submit evaluation', id: 'submitEvaluation')
 

@@ -14,7 +14,7 @@ class ClassSubmission
 
     # School fields
     result[:school_name_s] = required stripped data[:school_name_s]
-    result[:school_address_s] = result[:class_format_s] =~ /^online_/ ? nil_if_empty(stripped data[:school_address_s]) : required(stripped data[:school_address_s])
+    result[:school_address_s] = result[:class_format_s] =~ /^online_/ ? nil_if_empty(stripped(data[:school_address_s])) : required(stripped(data[:school_address_s]))
     result[:school_website_s] = required stripped data[:school_website_s]
     result[:school_level_ss] = required downcased stripped data[:school_level_ss]
     result[:school_gender_s] = required enum(data[:school_gender_s].to_s.strip.downcase, ['both', 'girls', 'boys'])

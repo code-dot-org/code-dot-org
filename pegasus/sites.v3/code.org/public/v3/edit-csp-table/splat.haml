@@ -84,6 +84,7 @@ angular: recordsApp
     $scope.tableName = "#{table_name}";
     $scope.channelId = "#{channel_id}";
     $scope.importing = false;
+    $scope.fileSelected = false;
     $scope.reverse = true;
 
     // Attempt to get metadata. The first time through, if we don't have any
@@ -102,6 +103,12 @@ angular: recordsApp
       }).catch($scope.genericError);;
     }
     getMetadata(true);
+
+    $scope.selectedFile = function() {
+      $scope.$apply(function () {
+        $scope.fileSelected = true;
+      });
+    }
 
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");

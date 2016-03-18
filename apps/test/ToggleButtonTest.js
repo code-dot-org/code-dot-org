@@ -8,7 +8,7 @@ var ReactTestUtils = require('react-addons-test-utils');
 window.$ = require('jquery');
 
 describe('ToggleButton', function () {
-  var ToggleButton = require('@cdo/apps/applab/ToggleButton.jsx');
+  var ToggleButton = require('@cdo/apps/templates/ToggleButton.jsx');
   var renderer;
 
   beforeEach(function () {

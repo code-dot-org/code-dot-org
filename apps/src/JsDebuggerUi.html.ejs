@@ -11,8 +11,13 @@
       <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>
       <span class="header-text"><%= i18n.debugCommandsHeaderWhenOpen() %></span>
     </div>
-    <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>
     <% } %>
+    <% if (debugWatch) { %>
+    <div id="debug-watch-header" class="workspace-header">
+      <span class="header-text"><%= i18n.debugWatchHeader() %></span>
+    </div>
+    <% } %>
+    <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>
     <div id="slider-cell" style="margin-left: <%= debugButtons ? 0 : 40 %>px">
       <svg id="speed-slider"
            xmlns="http://www.w3.org/2000/svg"
@@ -64,12 +69,16 @@
   </div>
   <% } %>
   <% if (debugConsole) { %>
-  <div id="debug-console" class="debug-console <%= debugButtons ? '' : 'full' %>">
+  <div id="debug-console" class="debug-console <%= debugButtons ? '' : 'no-commands' %> <%= debugWatch ? '' : 'no-watch' %>">
     <div id="debug-output" class="debug-output"></div>
     <span class="debug-input-prompt">
       &gt;
     </span>
     <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>
+  </div>
+  <% } %>
+  <% if (debugWatch) { %>
+  <div id="debug-watch" class="debug-watch <%= debugButtons ? '' : 'no-commands' %>">
   </div>
   <% } %>
 </div>

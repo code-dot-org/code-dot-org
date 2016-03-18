@@ -89,7 +89,7 @@
     experimente um <a href="%{current_path}/next">tutorial dos parceiros</a>.
   get_a_certificate_of_achievement: Obter um certificado de conclusão
   view_course: Ver curso
-  view_unit: View unit
+  view_unit: Ver unidade
   make_app: Crie um aplicativo
   congrats_guest_speaker_title: Convide um orador para a sua sala de aula
   congrats_guest_speaker_desc: Now that your students have finished a computer science
@@ -800,6 +800,7 @@
   dashboard_progress_completed_too_many_blocks: concluído, muitos blocos
   dashboard_progress_completed_perfect: concluído, perfeito
   dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
+  dashboard_progress_submitted: enviado
   dashboard_stage: Fase
   dashboard_puzzle: Desafio
   dashboard_question: Pergunta

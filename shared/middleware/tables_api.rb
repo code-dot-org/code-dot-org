@@ -2,9 +2,19 @@ require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'csv'
+require 'redis'
 require_relative './helpers/table_coerce'
+require_relative './helpers/table_limits'
 
 class TablesApi < Sinatra::Base
+
+  DEFAULT_MAX_TABLE_ROWS = 1000
+
+  # Maximum number of rows allowed in a table (either in initial import or
+  # after inserting rows.) Logically constant but can be modified in tests.
+  @@max_table_rows = DEFAULT_MAX_TABLE_ROWS
+
+  @@redis = Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379')
 
   helpers do
     [
@@ -26,7 +36,13 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
-    TableType.new(channel_id, storage_id(endpoint), table_name).to_a.to_json
+    rows = TableType.new(channel_id, storage_id(endpoint), table_name).to_a
+
+    # Remember the number of rows in the table since we now have an accurate estimate.
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits.set_approximate_row_count(rows.length)
+
+    rows.to_json
   end
 
   #
@@ -87,6 +103,12 @@ class TablesApi < Sinatra::Base
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     dont_cache
     TableType.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
+
+    # Decrement the row count only after the delete succeeds, to avoid a spurious
+    # decrement if the record isn't present or in other failure cases.
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits.decrement_row_count
+
     no_content
   end
 
@@ -141,6 +163,12 @@ class TablesApi < Sinatra::Base
     dont_cache
     TableType.new(channel_id, storage_id(endpoint), table_name).delete_all
     #TODO - delete metadata
+
+    # Zero out the approximate row count just in case the user creates a new table
+    # with the same name.
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits.set_approximate_row_count(0)
+
     no_content
   end
 
@@ -161,6 +189,13 @@ class TablesApi < Sinatra::Base
   post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
+
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    row_count = limits.get_approximate_row_count
+    if row_count >= @@max_table_rows
+      halt 403, {}, "Too many rows, a table may have at most #{@@max_table_rows} rows"
+    end
+    limits.increment_row_count
 
     value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
 
@@ -223,7 +258,7 @@ class TablesApi < Sinatra::Base
     # this check fails on Win 8.1 Chrome 40
     #unsupported_media_type unless params[:import_file][:type]== 'text/csv'
 
-    max_records = 5000
+    max_records = @@max_table_rows
     table_url = "/v3/edit-csp-table/#{channel_id}/#{table_name}"
     back_link = "<a href='#{table_url}'>back</a>"
     table = TableType.new(channel_id, storage_id(endpoint), table_name)
@@ -270,6 +305,10 @@ class TablesApi < Sinatra::Base
     end
     table.ensure_metadata
 
+    # Set the approximate row count.
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits.set_approximate_row_count(records.length)
+
     redirect "#{table_url}"
   end
 
@@ -297,6 +336,9 @@ class TablesApi < Sinatra::Base
       table.insert(record, request.ip)
     end
 
+    # The approximate row count at this point may be an underestimate, which
+    # we are willing to allow.
+
     all_converted.to_json
   end
 
@@ -308,7 +350,7 @@ class TablesApi < Sinatra::Base
   #     'table_1': [{'name': 'trevor', 'age': 30}, ...],
   #     'table_2': [{'city': 'SF', 'people': 6}, ...],
   #   }
-  # Also creates metadata (if it doesn't alrelady exist) based on any existing
+  # Also creates metadata (if it doesn't already exist) based on any existing
   # data for each of the passed in tables.
   post %r{/v3/(shared|user)-tables/([^/]+)$} do |endpoint, channel_id|
     begin
@@ -329,7 +371,19 @@ class TablesApi < Sinatra::Base
       json_data[table_name].each do |record|
         table.insert(record, request.ip)
       end
+      limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+      limits.set_approximate_row_count(json_data[table_name].length)
+
       table.ensure_metadata()
     end
+
+  end
+
+  def self.set_max_table_rows_for_test(max_table_rows)
+    @@max_table_rows = max_table_rows
+  end
+
+  def self.reset_max_table_rows_for_test
+    set_max_table_rows_for_test(DEFAULT_MAX_TABLE_ROWS)
   end
 end

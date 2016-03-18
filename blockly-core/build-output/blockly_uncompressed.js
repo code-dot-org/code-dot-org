@@ -23293,6 +23293,7 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(isVariable) {
   this.ensureCreated_();
   var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:this.definitionBlockType}));
   tempFunctionDefinitionBlock.updateOutputType(Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE);
+  tempFunctionDefinitionBlock.userCreated = true;
   if(isVariable) {
     tempFunctionDefinitionBlock.convertToVariable()
   }else {
@@ -25529,10 +25530,9 @@ Blockly.FieldParameter.dropdownChange = function(text) {
     }
   }else {
     if(text === Blockly.Msg.DELETE_PARAMETER) {
-      var result = window.confirm(Blockly.Msg.DELETE_PARAMETER_TITLE.replace("%1", oldVar));
-      if(result) {
+      Blockly.showSimpleDialog({bodyText:Blockly.Msg.DELETE_PARAMETER_TITLE.replace("%1", oldVar), cancelText:Blockly.Msg.DELETE, confirmText:Blockly.Msg.KEEP, onConfirm:null, onCancel:function() {
         Blockly.Variables.deleteVariable(oldVar, this.sourceBlock_.blockSpace)
-      }
+      }.bind(this), cancelButtonClass:"red-delete-button"})
     }
   }
   return null

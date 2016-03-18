@@ -1,5 +1,3 @@
-/*jshint multistr: true */
-
 var msg = require('./locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');

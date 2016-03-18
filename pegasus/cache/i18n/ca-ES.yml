@@ -782,6 +782,7 @@
   dashboard_progress_completed_too_many_blocks: completat, massa blocs
   dashboard_progress_completed_perfect: completat, perfecte
   dashboard_progress_furthest_level_attempted: nivell més alt intentat
+  dashboard_progress_submitted: submitted
   dashboard_stage: etapa
   dashboard_puzzle: Puzzle
   dashboard_question: Question
