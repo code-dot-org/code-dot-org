@@ -8,9 +8,6 @@ linters:
   ClassesBeforeIds:
     enabled: false
 
-  ConsecutiveComments:
-    enabled: false
-
   ConsecutiveSilentScripts:
     enabled: false
 

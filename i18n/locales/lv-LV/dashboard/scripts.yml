@@ -865,7 +865,7 @@ lv:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -928,6 +928,7 @@ lv:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1326,6 +1327,8 @@ lv:
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1596,6 +1599,7 @@ lv:
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
           description_short: Data Apps
@@ -1609,3 +1613,31 @@ lv:
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          "Calc: Evaluation Blocks": 'Kalkulators: Novērtēšanas bloki'
+          "Eval: Strings and Images": 'Vērtēšana: simbolu virkne un attēli'
+          "Unplugged: Contracts": 'Atvienots: līgumi'
+          "Eval: Writing Contracts": 'Vērtēšana: Rakstiski līgumi'
+          "Calc: Defining Variables": 'Kalkulātors: mainīgo definēšana'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Atvienots: Dizaina recepte'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Atvienots: Videospēles un koordinātu plaksnes'
+          "Play Lab: Defining Variables (Big Game)": 'Spēlu laboratorija: mainīgo definēšana (liela spēle)'
+          "Play Lab: Animation (Big Game)": 'Spēlu laboratorija: animācija (liela spēle)'
+          "Unplugged: Booleans": 'Atvienots: Būls'
+          "Eval: Boolean Operators": 'Vērtēšana: būla operatori'
+          "Play Lab: Booleans": 'Spēles laboratorija: Būls'
+          "Play Lab: Boolean (Big Game)": 'Spēļu laboratorija: būla operatori (liela spēle)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Atvienots: nosacījumi un hibrīdfunkcijas'
+          "Eval: Conditionals": 'Vērtēšana: nosacījumi'
+          "Unplugged: Collision Detection and the Distance Formula": 'Atvienots: Sadursmes atklāšana un distances formula'
+          "Play Lab: Collision Detection (Big Game)": 'Spēlu laboratorija: sadursmes noteikšana (liela spēle)'

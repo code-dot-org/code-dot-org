@@ -2,12 +2,6 @@
  * @overview Internet Simulator app for Code.org.
  *           This file is the main entry point for the Internet Simulator.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
-*/
 /* global -Blockly */
 /* global sendReport */
 /* global confirm */
@@ -224,7 +218,7 @@ NetSim.prototype.init = function(config) {
    */
   this.reportingInfo_ = config.report;
 
-  var renderCodeApp = function () {
+  var generateCodeAppHtmlFromEjs = function () {
     return page({
       data: {
         visualization: '',
@@ -261,7 +255,7 @@ NetSim.prototype.init = function(config) {
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
-    renderCodeApp: renderCodeApp,
+    generateCodeAppHtml: generateCodeAppHtmlFromEjs,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };

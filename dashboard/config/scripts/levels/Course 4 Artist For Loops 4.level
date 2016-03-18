@@ -33,7 +33,9 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false"
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -162,17 +164,6 @@
         </category>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
-        </block>
-      </xml>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

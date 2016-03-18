@@ -659,6 +659,7 @@
     completed_perfect: tehtud, suurepärane
     furthest_level_attempted: kõige viimane tase proovitud
     assessment: hinnang
+    submitted: submitted
   studio:
     courses_working_on: Kursused, millega töötate
     completed_courses: Lõpetatud kursused

@@ -778,6 +778,7 @@
   dashboard_progress_completed_too_many_blocks: zakończona, zbyt wiele bloków
   dashboard_progress_completed_perfect: zakończona, doskonale
   dashboard_progress_furthest_level_attempted: próbowano najdalszy poziom
+  dashboard_progress_submitted: submitted
   dashboard_stage: Etap
   dashboard_puzzle: "Łamigłówka"
   dashboard_question: Pytanie

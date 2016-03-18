@@ -35,6 +35,8 @@ var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var DialogButtons = require('./templates/DialogButtons.jsx');
+var CodeWritten = require('./templates/feedback/CodeWritten.jsx');
+var GeneratedCode = require('./templates/feedback/GeneratedCode.jsx');
 
 /**
  * @typedef {Object} TestableBlock
@@ -811,19 +813,21 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
       (options.response.total_lines !== numLinesWritten));
   var totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
 
-  showCodeDiv.innerHTML = require('./templates/showCode.html.ejs')({
-    numLinesWritten: numLinesWritten,
-    totalNumLinesWritten: totalNumLinesWritten
+  var generatedCodeProperties = this.getGeneratedCodeProperties_({
+    generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
   });
 
-  var showCodeButton = showCodeDiv.querySelector('#show-code-button');
-  showCodeButton.addEventListener('click', _.bind(function () {
-    var generatedCodeElement = this.getGeneratedCodeElement_({
-      generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
-    });
-    showCodeDiv.appendChild(generatedCodeElement);
-    showCodeButton.style.display = 'none';
-  }, this));
+  ReactDOM.render(<CodeWritten numLinesWritten={numLinesWritten} totalNumLinesWritten={totalNumLinesWritten}>
+    <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
+  </CodeWritten>, showCodeDiv);
+
+  // If the jQuery details polyfill is available, use it on the
+  // newly-created details element. If the details polyfill is not
+  // available - either because it failed to load or was removed - then
+  // the browser-specified details functionality will be applied.
+  if ($.fn.details) {
+    $(showCodeDiv).find('details').details();
+  }
 
   return showCodeDiv;
 };
@@ -868,14 +872,15 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
 };
 
 /**
- * Generates a "show code" div with a description of what code is.
+ * Generates a "show code" React component with a description of what
+ * code is.
  * @param {Object} [options] - optional
- * @param {string} [options.generatedCodeDescription] - optional description
- *        of code to put in place instead of the default
- * @returns {Element}
+ * @param {string} [options.generatedCodeDescription] - optional
+ *        description of code to put in place instead of the default
+ * @returns {React}
  * @private
  */
-FeedbackUtils.prototype.getGeneratedCodeElement_ = function(options) {
+FeedbackUtils.prototype.getGeneratedCodeProperties_ = function(options) {
   options = options || {};
 
   var codeInfoMsgParams = {
@@ -883,17 +888,14 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function(options) {
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var infoMessage = this.getGeneratedCodeDescription(codeInfoMsgParams,
+  var message = this.getGeneratedCodeDescription(codeInfoMsgParams,
       options.generatedCodeDescription);
   var code = this.studioApp_.polishGeneratedCodeString(this.getGeneratedCodeString_());
 
-  var codeDiv = document.createElement('div');
-  codeDiv.innerHTML = require('./templates/code.html.ejs')({
-    message: infoMessage,
+  return {
+    message: message,
     code: code
-  });
-
-  return codeDiv;
+  };
 };
 
 /**
@@ -923,24 +925,25 @@ FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParam
  *        to display instead of the usual show code description
  */
 FeedbackUtils.prototype.showGeneratedCode = function(Dialog, appStrings) {
-  var codeDiv = this.getGeneratedCodeElement_({
+  var codeDiv = document.createElement('div');
+
+  var generatedCodeProperties = this.getGeneratedCodeProperties_({
     generatedCodeDescription: appStrings && appStrings.generatedCodeDescription
   });
 
-  var buttons = document.createElement('div');
-  ReactDOM.render(React.createElement(DialogButtons, {
-    ok: true
-  }), buttons);
-  codeDiv.appendChild(buttons);
+  ReactDOM.render(<div>
+    <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
+    <DialogButtons ok={true} />
+  </div>, codeDiv);
 
   var dialog = this.createModalDialog({
-      Dialog: Dialog,
-      contentDiv: codeDiv,
-      icon: this.studioApp_.icon,
-      defaultBtnSelector: '#ok-button'
-      });
+    Dialog: Dialog,
+    contentDiv: codeDiv,
+    icon: this.studioApp_.icon,
+    defaultBtnSelector: '#ok-button'
+  });
 
-  var okayButton = buttons.querySelector('#ok-button');
+  var okayButton = codeDiv.querySelector('#ok-button');
   if (okayButton) {
     dom.addClickTouchEvent(okayButton, function() {
       dialog.hide();

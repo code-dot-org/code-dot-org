@@ -760,6 +760,7 @@
   dashboard_progress_completed_too_many_blocks: lõpetatud, liiga palju plokke
   dashboard_progress_completed_perfect: tehtud, suurepärane
   dashboard_progress_furthest_level_attempted: kõige viimane tase proovitud
+  dashboard_progress_submitted: submitted
   dashboard_stage: Tase
   dashboard_puzzle: Mõistatus
   dashboard_question: Küsimus

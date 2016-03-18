@@ -1,4 +1,4 @@
-"pt":
+"pt-BR":
   data:
     script:
       name:
@@ -1038,6 +1038,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Estúdio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -1501,6 +1502,8 @@
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1801,6 +1804,7 @@
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description_short: Data Apps
@@ -1817,3 +1821,36 @@
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Aprenda programação funcional com álgebra
+          description: Aprenda programação funcional com álgebra
+          'Calc: Evaluation Blocks': 'Calc: Blocos de cálculo'
+          'Eval: Strings and Images': 'Eval: Strings e imagens'
+          'Unplugged: Contracts': 'Offline: contratos'
+          'Eval: Writing Contracts': 'Eval: Escrever contratos'
+          'Calc: Defining Variables': 'Cálculo: definir variáveis'
+          'Eval: Defining Functions': 'Eval: definição de funções'
+          'Unplugged: The Design Recipe': 'Offline: a receita de design'
+          'Play Lab: Defining Functions': 'Laboratório: definição de funções'
+          'Eval: Functions': 'Eval: Funções'
+        AlgebraB:
+          title: Ciência da computação em álgebra
+          description_short: Aprenda programação funcional com álgebra
+          description: Aprenda programação funcional com álgebra
+          'Unplugged: Video Games and Coordinate Planes': 'Offline: video games e
+            planos de coordenadas'
+          'Play Lab: Defining Variables (Big Game)': 'Laboratório: Definição de variáveis
+            (O Grande Jogo)'
+          'Play Lab: Animation (Big Game)': 'Laboratório: Animação (O Grande Jogo)'
+          'Unplugged: Booleans': 'Offline: booleanos'
+          'Eval: Boolean Operators': 'Eval: Operadores booleanos'
+          'Play Lab: Booleans': 'Laboratório: booleanos'
+          'Play Lab: Boolean (Big Game)': 'Laboratório: Booleano (O Grande Jogo)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Offline: condicionais
+            e funções definidas por partes'
+          'Eval: Conditionals': 'Eval: Condicionais'
+          'Unplugged: Collision Detection and the Distance Formula': 'Offline: detecção
+            de colisão e fórmula da distância'
+          'Play Lab: Collision Detection (Big Game)': 'Laboratório: Detecção de colisão
+            (O Grande Jogo)'

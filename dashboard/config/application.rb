@@ -40,6 +40,10 @@ module Dashboard
 
     if CDO.throttle_data_apis
       require 'cdo/rack/attack'
+
+      # Start dynamic RackAttack configuration updates.
+      RackAttackConfigUpdater.new.start
+
       config.middleware.insert_after VarnishEnvironment, Rack::Attack
     end
 

@@ -661,6 +661,7 @@
     completed_perfect: dokončené, super
     furthest_level_attempted: najvyššia dosiahnutá úroveň
     assessment: ocenenie
+    submitted: submitted
   studio:
     courses_working_on: Kurzy na ktorých pracujete
     completed_courses: Absolvované kurzy

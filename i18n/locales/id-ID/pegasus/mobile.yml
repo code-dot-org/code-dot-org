@@ -606,6 +606,7 @@ id-ID:
   dashboard_progress_completed_too_many_blocks: selesai, terlalu banyak blok
   dashboard_progress_completed_perfect: selesai, sempurna
   dashboard_progress_furthest_level_attempted: tingkat terjauh yang dicoba
+  dashboard_progress_submitted: submitted
   dashboard_stage: Tahap
   dashboard_puzzle: Teka-teki
   dashboard_question: Pertanyaan

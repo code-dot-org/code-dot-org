@@ -616,6 +616,7 @@ ta-IN:
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_submitted: submitted
   dashboard_stage: மேடை
   dashboard_puzzle: புதிர்
   dashboard_question: Question

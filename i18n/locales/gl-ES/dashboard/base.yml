@@ -556,6 +556,7 @@ gl:
     completed_perfect: concluído, perfecto
     furthest_level_attempted: tentativa para o nivel máis avanzado
     assessment: avaliación
+    submitted: submitted
   studio:
     courses_working_on: Cursos que vostede está a facer
     completed_courses: Cursos concluídos

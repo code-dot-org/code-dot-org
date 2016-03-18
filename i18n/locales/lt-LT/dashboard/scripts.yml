@@ -865,7 +865,7 @@ lt:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -928,6 +928,7 @@ lt:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Informatika algebroje
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -1326,6 +1327,8 @@ lt:
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1596,6 +1599,7 @@ lt:
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
           description_short: Data Apps
@@ -1609,3 +1613,31 @@ lt:
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: Išmokite programuoti funkcijas panaudojant algebrą
+          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
+          "Eval: Strings and Images": 'Eval: Strings and Images'
+          "Unplugged: Contracts": 'Unplugged: Contracts'
+          "Eval: Writing Contracts": 'Eval: Writing Contracts'
+          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Play Lab: Defining Functions": 'Žaidimų laboratorija: komandų apibrėžimas'
+          "Eval: Functions": 'Eval: Functions'
+        AlgebraB:
+          title: Informatika algebroje
+          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: Išmokite programuoti funkcijas panaudojant algebrą
+          "Unplugged: Video Games and Coordinate Planes": 'Papildoma pamokėlė: kompiuteriniai žaidimai ir koordinačių plokštuma'
+          "Play Lab: Defining Variables (Big Game)": 'Žaidimų laboratorija: kintamųjų apibrėžimas (Didysis žaidimas)'
+          "Play Lab: Animation (Big Game)": 'Žaidimų laboratorija: animacijos (Didysis žaidimas)'
+          "Unplugged: Booleans": 'Unplugged: Booleans'
+          "Eval: Boolean Operators": 'Eval: Boolean Operators'
+          "Play Lab: Booleans": 'Žaidimų laboratorija: loginės reikšmės'
+          "Play Lab: Boolean (Big Game)": 'Žaidimų laboratorija: Logika (Big Game)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Collision Detection and the Distance Formula": 'Papildoma pamokėlė: susidūrimo aptikimas ir atstumo formulė'
+          "Play Lab: Collision Detection (Big Game)": 'Žaidimų laboratorija: Susidūrimo nustatymas (Big Game)'

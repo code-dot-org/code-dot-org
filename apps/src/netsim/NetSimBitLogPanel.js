@@ -5,12 +5,6 @@
  * @see INetSimLogPanel for the interface implemented here.
  * @see NetSimLogPanel for the component used in packet-sending mode.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()

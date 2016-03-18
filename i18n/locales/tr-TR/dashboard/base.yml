@@ -557,6 +557,7 @@ tr:
     completed_perfect: tamamlandı, harika
     furthest_level_attempted: denenen en yüksek seviye
     assessment: değerlendirme
+    submitted: submitted
   studio:
     courses_working_on: Üzerinde çalışmakta olduğunuz dersler
     completed_courses: Tamamladığınız dersler

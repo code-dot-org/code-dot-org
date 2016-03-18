@@ -40,8 +40,8 @@
         dente, largo 25 pixel e alto 25 pixel.'
       2-3 Artist Debugging 1_instruction: Riesci a disegnare questo cappello facendo
         in modo che la sua parte superiore sia lunga 100 pixel?
-      2-3 Artist Debugging 10_instruction: 'Il tastierino direzionale del controller
-        del mio gioco è troppo stretto. Suggerimento: allargalo di 10 pixel'
+      2-3 Artist Debugging 10_instruction: 'L''area di controllo della direzione sul
+        mio controller di gioco è troppo stretta. Suggerimento: allargala di 10 pixel'
       2-3 Artist Debugging 11_instruction: |
         Aiutami a completare il mio bellissimo fiocco di neve.
         Quante volte devo eseguire il blocco "ripeti" per completarlo?
@@ -57,7 +57,7 @@
         disegnare? Finisci di unire i punti utilizzando le giuste linee ed angoli.
       2-3 Artist Debugging 5_instruction: 'Il codice che disegna la gamba e il piede
         è sbagliato. Suggerimento: Il piede è troppo lungo, potrebbe essere necessario
-        eliminare un blocco'
+        eliminare un blocco.'
       2-3 Artist Debugging 6_instruction: Sembra che mi sia seduto su una sedia a
         cui manca una gamba. Modifica i blocchi per disegnare la gamba mancante.
       2-3 Artist Debugging 7_instruction: Questo codice disegna la C al contrario
@@ -3785,7 +3785,7 @@
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -4679,8 +4679,10 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

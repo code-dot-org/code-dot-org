@@ -639,6 +639,7 @@
     completed_perfect: "הושלם, מושלם"
     furthest_level_attempted: "רמת הרחוקה ניסיון"
     assessment: "הערכה"
+    submitted: submitted
   studio:
     courses_working_on: Courses you're working on
     completed_courses: "קורסים שהושלמו"

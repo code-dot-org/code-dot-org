@@ -595,6 +595,7 @@ eu-ES:
   dashboard_progress_completed_too_many_blocks: burutua, baina bloke gehiegi daude
   dashboard_progress_completed_perfect: burutua, bikain
   dashboard_progress_furthest_level_attempted: saiatutako maila altuena
+  dashboard_progress_submitted: submitted
   dashboard_stage: Maila
   dashboard_puzzle: Ariketa
   dashboard_question: Galdera

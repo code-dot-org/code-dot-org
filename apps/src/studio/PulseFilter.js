@@ -1,10 +1,4 @@
 /** @file Increases the brightness of the image up to pure white and back. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 require('../utils');

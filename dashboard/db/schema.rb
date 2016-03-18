@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160301213220) do
+ActiveRecord::Schema.define(version: 20160315195700) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -308,8 +308,10 @@ ActiveRecord::Schema.define(version: 20160301213220) do
     t.string   "status",                              limit: 255
     t.integer  "plc_enrollment_module_assignment_id", limit: 4
     t.integer  "plc_task_id",                         limit: 4
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.string   "type",                                limit: 255
+    t.text     "properties",                          limit: 65535
   end
 
   add_index "plc_enrollment_task_assignments", ["plc_enrollment_module_assignment_id"], name: "task_assignment_module_assignment_index", using: :btree
@@ -318,13 +320,13 @@ ActiveRecord::Schema.define(version: 20160301213220) do
   create_table "plc_evaluation_answers", force: :cascade do |t|
     t.string   "answer",                     limit: 255
     t.integer  "plc_evaluation_question_id", limit: 4
-    t.integer  "plc_task_id",                limit: 4
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
+    t.integer  "plc_learning_module_id",     limit: 4
   end
 
   add_index "plc_evaluation_answers", ["plc_evaluation_question_id"], name: "index_plc_evaluation_answers_on_plc_evaluation_question_id", using: :btree
-  add_index "plc_evaluation_answers", ["plc_task_id"], name: "index_plc_evaluation_answers_on_plc_task_id", using: :btree
+  add_index "plc_evaluation_answers", ["plc_learning_module_id"], name: "index_plc_evaluation_answers_on_plc_learning_module_id", using: :btree
 
   create_table "plc_evaluation_questions", force: :cascade do |t|
     t.string   "question",      limit: 255

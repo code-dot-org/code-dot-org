@@ -37,7 +37,7 @@
     submit: "Додај савет"
   appname: Code.org
   stage: "фаза"
-  stage_number: "Стаза%{number}"
+  stage_number: "Стаза %{number}"
   puzzle: "Пузла"
   trophies: "трофеји"
   courses: "курсеви"
@@ -46,7 +46,7 @@
   more: "ВИШЕ"
   less: "МАЊЕ"
   beta: "пробна верзија"
-  try_hoc: "Испробајте Hour of Code.Кликните овде >> "
+  try_hoc: "Испробајте Hour of Code. Кликните овде >> "
   try_k8intro: "Пробај наш К-8 курс Увод у рачунарство (15-25 часова)"
   k8intro: "К-8 курс Увод у рачунарство (15-25 часова)"
   already_started: "Већ почели? Наставите овде >>"
@@ -72,8 +72,8 @@
   signup_form:
     student_count: "%{count} ученика се већ пријавило."
     teacher_count: "%{count} наставника се већ пријавило."
-    overview_student: Пријавите се да би сте пратили свој прогрес.Ваш имејл се примарно
-      користи да би се улоговали и да би вратили лозинку.За више информација, погледајте<a
+    overview_student: Пријавите се да би сте пратили свој напредак. Ваш имејл се примарно
+      користи да би се улоговали и да би вратили лозинку. За више информација, погледајте<a
       href="http://code.org/privacy">Правила приватности</a>.
     overview_teacher: "Научи информатику у својој учионици тако што ћеш се пријавити.<p/>Моћи
       ћеш да додаш ученика и да пратиш њихово напредовање."
@@ -176,12 +176,12 @@
     donorschoose_register: "Региструјте се као наставник на DonorsChoose.org"
     donorschoose_project: "Постави пројекат"
     donorschoose_how_to: "Како да користите вашу шифру"
-    success: "Ваша је награда успешно откуплјена, погледајте код испод."
-    error: "Ваша награда није могла бити откуплјена, молимо покушајте поновно."
+    success: "Ваша је награда успешно откупљена, погледајте код испод."
+    error: "Ваша награда није могла бити откупљена, молимо покушајте поновно."
     error_us_only: "Понуда награде важи само за кориснике Уједињених држава (САД)."
     error_not_earned: "Нисте још освојили ову награду."
     error_already_redeemed: "Ваша награда већ је откупљена."
-    no_prizes_available: "Извињавамо се, тенутно немамо доступних награда."
+    no_prizes_available: "Извињавамо се, тренутно немамо доступних награда."
     teacher_info_required: "Награде за учитеље захтевају информације о имену школе
       и адреси:"
     teacher_email_required: "Награде за учитеље захтевају потврђену имејл адресу:"
@@ -208,7 +208,7 @@
       choose: "Изабери награду:"
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: "Заслужили сте награду! (само за студенте САД-а)"
-      not_earned_title: "Заврши туторијал и освоји награде(само за ученике из УН)"
+      not_earned_title: "Заврши туторијал и освоји награде(само за ученике из САД-а)"
       not_earned: "Научи све научне принципе рачунарства, сакупи све %{num_trophies}
         трофеје, и заради праве награде. Можеш да бираш између 10ГБ бесплатног простора
         на Дропбоксу, $10 Скајп кредита и бесплатно преузимање игара. Напомена: понуда
@@ -248,9 +248,9 @@
     edit_model: "Уреди %{model}"
     update: "Ажурирај"
     destroy: "Уништи"
-    back: "Побратак"
+    back: "Назад"
     confirm: "Јесте ли сигурни?"
-    created: "%{model} је успешно направлјен."
+    created: "%{model} је успешно направљен."
     updated: "%{model} је успешно ажуриран."
     destroyed: "%{model} was successfully deleted."
     access_denied: "Немаш приступ овом %{model}."
@@ -268,14 +268,14 @@
       district_dashboard: District Dashboard
       label: "Здраво %{username}"
       stats: "Мој напредак"
-      settings: "Мој рачун"
+      settings: "Мој налог"
       prizes: "Награде"
       logout: "Одјави се"
       signin: "Пријави се"
       signup: "Региструј се"
       already_registered: "Већ си регистрован?"
     popup:
-      progress_for_user: "Напредак%{name}"
+      progress_for_user: "Напредак %{name}"
       progress: "Напредак"
       lines: "Укупно линија кода: %{lines}"
       close: "ЗАТВОРИ"
@@ -524,7 +524,7 @@
       title: Star Wars
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: "Креирај приче и игре са Дизнијевим ликовима у Играоници."
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
@@ -563,9 +563,9 @@
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: Hvala
+    wrong_title: "Хвала"
     wrong_body: Thank you for submitting an answer.
-    correct_title: Hvala
+    correct_title: "Хвала"
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
@@ -589,7 +589,7 @@
     open_response_title: Thanks
     open_response_body: Thanks for your response!
   level_group:
-    correct_title: Hvala
+    correct_title: "Хвала"
     correct_body: Thank you for submitting an answer
   dialog:
     ok: "У реду"
@@ -654,6 +654,7 @@
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
     assessment: assessment
+    submitted: submitted
   studio:
     courses_working_on: Courses you're working on
     completed_courses: Completed courses

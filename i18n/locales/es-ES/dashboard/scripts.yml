@@ -865,7 +865,7 @@ es:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -928,6 +928,7 @@ es:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar programación funcional a través de álgebra
@@ -1326,6 +1327,8 @@ es:
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1596,6 +1599,7 @@ es:
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
           description_short: Data Apps
@@ -1609,3 +1613,31 @@ es:
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Aprender programación funcional a través del álgebra
+          description: Aprender programación funcional a través del álgebra
+          "Calc: Evaluation Blocks": 'Calc: Bloques de evaluación'
+          "Eval: Strings and Images": 'Eval: Cadenas e imágenes'
+          "Unplugged: Contracts": 'Desconectado: contratos'
+          "Eval: Writing Contracts": 'Eval: Redacción de contratos'
+          "Calc: Defining Variables": 'Calc: Definiendo Variables'
+          "Eval: Defining Functions": 'Eval: Definición de funciones'
+          "Unplugged: The Design Recipe": 'Desconectado: La receta de diseño'
+          "Play Lab: Defining Functions": 'Laboratorio de juego: Definición de funciones'
+          "Eval: Functions": 'Evaluación: funciones'
+        AlgebraB:
+          title: Ciencias de la computación en álgebra
+          description_short: Aprender programación funcional a través del álgebra
+          description: Aprender programación funcional a través del álgebra
+          "Unplugged: Video Games and Coordinate Planes": 'Desconectado: videojuegos y planos de coordenadas'
+          "Play Lab: Defining Variables (Big Game)": 'Laboratorio de juegos: Definición de Variables (Big Game)'
+          "Play Lab: Animation (Big Game)": 'Laboratorio de juegos: Animación (Big Game)'
+          "Unplugged: Booleans": 'Desconectado: Booleanos'
+          "Eval: Boolean Operators": 'Eval: Operadores booleanos'
+          "Play Lab: Booleans": 'Laboratorio de juegos: valores booleanos'
+          "Play Lab: Boolean (Big Game)": 'Laboratorio de juegos: Booleano (Big Game)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Desconectado: Condicionales y funciones por partes'
+          "Eval: Conditionals": 'Eval: condicionales'
+          "Unplugged: Collision Detection and the Distance Formula": 'Desconectado: Detección de colisiones y la fórmula de distancia'
+          "Play Lab: Collision Detection (Big Game)": 'Laboratorio de juegos: Detección de colisiones (Big Game)'

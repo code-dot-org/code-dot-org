@@ -560,6 +560,7 @@ sv:
     completed_perfect: Avklarad perfekt
     furthest_level_attempted: försökt nå bortersta nivån
     assessment: Test
+    submitted: submitted
   studio:
     courses_working_on: Kurser du påbörjat
     completed_courses: Avslutade kurser

@@ -1,8 +1,6 @@
-%p#notice= notice
-
 %p
   %strong Name: #{@course.name}
 
 = link_to 'Edit', edit_plc_course_path(@course)
 \|
-= link_to 'Back', plc_courses_path
+= link_to 'Back', plc_content_creator_show_courses_and_modules_path

@@ -1,12 +1,13 @@
 /* global $ */
 
-
 var PropertyRow = require('./PropertyRow.jsx');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
+var ICON_PREFIX_REGEX = require('../constants').ICON_PREFIX_REGEX;
 
 var elementUtils = require('./elementUtils');
 
@@ -17,8 +18,25 @@ var ImageProperties = React.createClass({
     onDepthChange: React.PropTypes.func.isRequired
   },
 
+  handleIconColorChange: function (value) {
+    this.props.handleChange('icon-color', value);
+    this.props.handleChange('picture',
+      this.props.element.getAttribute('data-canonical-image-url'));
+  },
+
   render: function () {
     var element = this.props.element;
+
+    var iconColorPicker;
+    var canonicalImage = element.getAttribute('data-canonical-image-url');
+    if (ICON_PREFIX_REGEX.test(canonicalImage)) {
+      iconColorPicker = (
+        <ColorPickerPropertyRow
+          desc={'icon color'}
+          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
+          handleChange={this.handleIconColorChange} />
+      );
+    }
 
     return (
       <div id='propertyRowContainer'>
@@ -51,6 +69,7 @@ var ImageProperties = React.createClass({
           desc={'picture'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'picture')} />
+        {iconColorPicker}
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}

@@ -231,11 +231,7 @@ ja:
       4-5 Artist For Loops 13_instruction: この設計は、for ループがないのでブロックをたくさん使っています！for ブロックを使ってスパイラルを完成させましょう。最後のラインの長さは 250 ピクセルです。
       4-5 Artist For Loops 14_instruction: '誰かがコードを書き始めたあとで、もっといい方法があることに途中で気づきました。ブロックを for ブロックに置き換えて、三角形のスパイラルを完成させましょう。（ヒント: 最後のラインの長さは 300 ピクセルです。）'
       4-5 Artist For Loops 15_instruction: '誰かがコードを書き始めたあとで、もっといい方法があることに途中で気づきました。ブロックを for ブロックに置き換えて、六角形のスパイラルを完成させましょう。（ヒント: 最後のラインの長さは 200 ピクセルです。）'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: これは for ブロックです。1,2,3…10と入力する代わりに、ブロックの中で実行を繰り返し、回数を数えてくれるのが for ブロックです。for ブロックの中の to の部分に、10と入力します。
       4-5 Artist For Loops 3_instruction: どうやって 1 から 50 まで数えますか？for ブロックを使ってください。
       4-5 Artist For Loops 4_instruction: 1 から 10 まで、1 ずつ数えるように、for ブロックを完成させましょう。
       4-5 Artist For Loops 6_instruction: '1辺の長さが50、60、70、80、90の正方形をそれぞれ作ります。"正方形を描く" 関数を 5 回使ってください。'
@@ -2934,7 +2930,7 @@ ja:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -3783,8 +3779,10 @@ ja:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

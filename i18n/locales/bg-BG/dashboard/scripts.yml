@@ -865,7 +865,7 @@ bg:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -928,6 +928,7 @@ bg:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Студио
+          Long assessment: Long assessment
         algebraPD2b:
           title: Компютърни науки в алгебрата
           description: 'Фаза 2 онлайн: Смесено лятно учене'
@@ -1326,6 +1327,8 @@ bg:
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1596,6 +1599,7 @@ bg:
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
           description_short: Data Apps
@@ -1609,3 +1613,31 @@ bg:
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Научете функционално програмиране чрез алгебра
+          description: Научете функционално програмиране чрез алгебра
+          "Calc: Evaluation Blocks": 'Калколиране: Оценка блокове'
+          "Eval: Strings and Images": 'Оценка: Низове и изображения'
+          "Unplugged: Contracts": 'Ънплъгд: договори'
+          "Eval: Writing Contracts": 'Оценка: Писане на договори'
+          "Calc: Defining Variables": 'Изчисление: Определяне на променливите'
+          "Eval: Defining Functions": 'Оценка: Дефиниране на функции'
+          "Unplugged: The Design Recipe": 'Ънплъгд: Напиши рецепта'
+          "Play Lab: Defining Functions": 'Театрална лаборатория: Дефиниране на функции'
+          "Eval: Functions": 'Оценка: функции'
+        AlgebraB:
+          title: Компютърни науки в алгебрата
+          description_short: Научете функционално програмиране чрез алгебра
+          description: Научете функционално програмиране чрез алгебра
+          "Unplugged: Video Games and Coordinate Planes": 'Ънплъгд: видео игрите и координатните системи'
+          "Play Lab: Defining Variables (Big Game)": 'Игрална лаборатория: Дефиниране на променливи (голямата игра)'
+          "Play Lab: Animation (Big Game)": 'Игрална лаборатория: Анимация (голямата игра)'
+          "Unplugged: Booleans": 'Ънплъгд: Booleans'
+          "Eval: Boolean Operators": 'Оценка: Булеви оператори'
+          "Play Lab: Booleans": 'Театрална лаборатория: Booleans'
+          "Play Lab: Boolean (Big Game)": 'Игрална лаборатория: Boolean(голямата игра)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Ънплъгд: Условия и Piecewise функции'
+          "Eval: Conditionals": 'Оценка: Условия'
+          "Unplugged: Collision Detection and the Distance Formula": 'Ънплъгд: Collision Detection и формула за разстояние'
+          "Play Lab: Collision Detection (Big Game)": 'Игрална лаборатория: Collision Detection (голямата игра)'

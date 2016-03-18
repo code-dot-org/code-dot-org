@@ -696,6 +696,7 @@
     completed_perfect: completato in modo perfetto
     furthest_level_attempted: esercizio più avanzato che è stato provato
     assessment: verifica
+    submitted: submitted
   studio:
     courses_working_on: Corsi su cui stai lavorando
     completed_courses: Corsi completati

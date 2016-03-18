@@ -553,6 +553,7 @@ bg:
     completed_perfect: завършено, перфектно
     furthest_level_attempted: последното пробвано ниво
     assessment: Оценка
+    submitted: submitted
   studio:
     courses_working_on: Курсове, върху които работите
     completed_courses: Завършени курсове

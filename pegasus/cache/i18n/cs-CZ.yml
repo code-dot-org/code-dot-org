@@ -768,6 +768,7 @@
   dashboard_progress_completed_too_many_blocks: dokončeno, až příliš mnoho bloků
   dashboard_progress_completed_perfect: dokončeno, perfektní
   dashboard_progress_furthest_level_attempted: pokus o další úroveň
+  dashboard_progress_submitted: submitted
   dashboard_stage: Fáze
   dashboard_puzzle: Hádanka
   dashboard_question: Dotaz

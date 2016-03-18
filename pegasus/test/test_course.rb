@@ -32,7 +32,7 @@ class CourseTest < Minitest::Test
 
     it 'should get all lessons' do
       assert_equal(18, @course.get_lessons.count)
-      assert(@course.get_lessons.first.is_a? Lesson)
+      assert(@course.get_lessons.first.is_a?(Lesson))
     end
 
     describe 'with unit numbers' do
@@ -65,7 +65,7 @@ class CourseTest < Minitest::Test
 
       it 'should get all lessons' do
         assert(!@course_with_units.get_lessons.empty?)
-        assert(@course_with_units.get_lessons.first.is_a? Lesson)
+        assert(@course_with_units.get_lessons.first.is_a?(Lesson))
       end
     end
   end

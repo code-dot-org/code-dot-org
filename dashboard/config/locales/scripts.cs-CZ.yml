@@ -1007,6 +1007,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fáze 2 Online: Promíchané letní studium'
@@ -1469,6 +1470,8 @@
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1765,6 +1768,7 @@
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description_short: Data Apps
@@ -1781,3 +1785,36 @@
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Calc: Evaluation Blocks': 'Calc: bloky vyhodnocení'
+          'Eval: Strings and Images': 'Eval: Řetězce a obrázky'
+          'Unplugged: Contracts': 'Nezapojené: kontrakty'
+          'Eval: Writing Contracts': 'Eval: psaní kontraktů'
+          'Calc: Defining Variables': 'Calc: Definice proměnných'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Nezapojené: Návrhový předpis'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Nezapojené: Video hry a
+            souřadnicových roviny'
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Definující proměnné
+            (Velká hra)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animace (Velká hra)'
+          'Unplugged: Booleans': 'Nezapojené: logické hodnoty'
+          'Eval: Boolean Operators': 'Eval: Logické operátory'
+          'Play Lab: Booleans': 'Play Lab: logické hodnoty'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Logická hodnota (Velká hra)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Nezapojené: Podmínky
+            a funkce po částech'
+          'Eval: Conditionals': 'Eval: podmínky'
+          'Unplugged: Collision Detection and the Distance Formula': 'Nezapojené:
+            Detekce kolizí a vzorec vzdálenosti'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Detekce kolizí (Velká
+            hra)'

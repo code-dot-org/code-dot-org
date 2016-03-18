@@ -1,5 +1,3 @@
-/*jshint -W086 */
-
 var DirtDrawer = require('./dirtDrawer');
 require('../utils');
 

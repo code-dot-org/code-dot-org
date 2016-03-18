@@ -563,6 +563,7 @@ ca:
     completed_perfect: completat, perfecte
     furthest_level_attempted: nivell més alt intentat
     assessment: avaluació
+    submitted: submitted
   studio:
     courses_working_on: Cursos en els que estàs treballant
     completed_courses: Cursos completats

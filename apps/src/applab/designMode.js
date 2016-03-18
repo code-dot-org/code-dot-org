@@ -9,16 +9,40 @@ var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
 var KeyCodes = require('../constants').KeyCodes;
-var constants = require('./constants');
-var applabCommands = require('./commands');
+var applabConstants = require('./constants');
 var designMode = module.exports;
 var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var gridUtils = require('./gridUtils');
 var logToCloud = require('../logToCloud');
+var actions = require('./actions');
+var icons = require('../assetManagement/icons');
+
+var ICON_PREFIX = applabConstants.ICON_PREFIX;
+var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
 
 var currentlyEditedElement = null;
-var currentScreenId = null;
+var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
+
+/**
+ * Subscribe to state changes on the store.
+ * @param {!Store} store
+ */
+designMode.setupReduxSubscribers = function (store) {
+  var state = {};
+  store.subscribe(function () {
+    var lastState = state;
+    state = store.getState();
+
+    if (state.currentScreenId !== lastState.currentScreenId) {
+      onScreenChange(state.currentScreenId);
+    }
+
+    if (state.interfaceMode !== lastState.interfaceMode) {
+      onInterfaceModeChange(state.interfaceMode);
+    }
+  });
+};
 
 /**
  * If in design mode and program is not running, display Properties
@@ -152,6 +176,26 @@ designMode.onPropertyChange = function(element, name, value) {
 };
 
 /**
+ * Create a data-URI with the image data of the given icon glyph.
+ * @param value {string} An icon identifier of the format "icon://fa-icon-name".
+ * @param element {Element}
+ * @return {string}
+ */
+function renderIconToString(value, element) {
+  var canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 400;
+  var ctx = canvas.getContext('2d');
+  ctx.font = '300px FontAwesome, serif';
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'center';
+  ctx.fillStyle = element.getAttribute('data-icon-color');
+  var regex = new RegExp('^' + ICON_PREFIX + 'fa-');
+  var unicode = '0x' + icons.unicode[value.replace(regex, '')];
+  ctx.fillText(String.fromCharCode(unicode), 200, 200);
+  return canvas.toDataURL();
+}
+
+/**
  * After handling properties generically, give elementLibrary a chance
  * to do any element specific changes.
  * @param element
@@ -216,42 +260,67 @@ designMode.updateProperty = function(element, name, value) {
     case 'fontSize':
       element.style.fontSize = appendPx(value);
       break;
-
+    case 'textAlign':
+      element.style.textAlign = value;
+      break;
+    case 'icon-color':
+      element.setAttribute('data-icon-color', value);
+      break;
     case 'image':
-      var backgroundImage = new Image();
       var originalValue = element.getAttribute('data-canonical-image-url');
+      element.setAttribute('data-canonical-image-url', value);
+
+      var fitImage = function() {
+        // Fit the image into the button
+        element.style.backgroundSize = 'contain';
+        element.style.backgroundPosition = '50% 50%';
+        element.style.backgroundRepeat = 'no-repeat';
+
+        // Re-render properties
+        if (currentlyEditedElement === element) {
+          designMode.editElementProperties(element);
+        }
+      };
+
+      if (ICON_PREFIX_REGEX.test(value)) {
+        element.style.backgroundImage = 'url(' + renderIconToString(value, element) + ')';
+        fitImage();
+        break;
+      }
+
+      var backgroundImage = new Image();
       backgroundImage.src = assetPrefix.fixPath(value);
       element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
-      element.setAttribute('data-canonical-image-url', value);
+
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
-        backgroundImage.onload = function() {
-          // Fit the image into the button
-          element.style.backgroundSize = 'contain';
-          element.style.backgroundPosition = '50% 50%';
-          element.style.backgroundRepeat = 'no-repeat';
-
-          // Re-render properties
-          if (currentlyEditedElement === element) {
-            designMode.editElementProperties(element);
-          }
-        };
+        backgroundImage.onload = fitImage;
       }
       break;
 
     case 'screen-image':
+      element.setAttribute('data-canonical-image-url', value);
+
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
-      element.style.backgroundImage = 'url(' + assetPrefix.fixPath(value) + ')';
-      element.setAttribute('data-canonical-image-url', value);
       element.style.backgroundSize = width + 'px ' + height + 'px';
+
+      var url = ICON_PREFIX_REGEX.test(value) ? renderIconToString(value, element) : assetPrefix.fixPath(value);
+      element.style.backgroundImage = 'url(' + url + ')';
+
       break;
 
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
-      element.src = assetPrefix.fixPath(value);
       element.setAttribute('data-canonical-image-url', value);
+
+      if (ICON_PREFIX_REGEX.test(value)) {
+        element.src = renderIconToString(value, element);
+        break;
+      }
+
+      element.src = assetPrefix.fixPath(value);
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
         var resizeElement = function (width, height) {
@@ -345,7 +414,7 @@ designMode.updateProperty = function(element, name, value) {
 
         //Resort elements in the dropdown list
         var options = $('#screenSelector option');
-        var newScreenText = constants.NEW_SCREEN;
+        var newScreenText = applabConstants.NEW_SCREEN;
         var defaultScreenId = elementUtils.getId(element);
         options.sort(function (a, b) {
           if (a.text === defaultScreenId) {
@@ -391,7 +460,9 @@ designMode.onDeletePropertiesButton = function(element, event) {
   if (isScreen) {
     designMode.loadDefaultScreen();
   } else {
-    designMode.editElementProperties(elementUtils.getPrefixedElementById(currentScreenId));
+    designMode.editElementProperties(
+        elementUtils.getPrefixedElementById(
+            Applab.reduxStore.getState().currentScreenId));
   }
 };
 
@@ -469,6 +540,12 @@ designMode.serializeToLevelHtml = function () {
     elementUtils.removeIdPrefix(this);
   });
 
+  // Remove the "data:img/png..." URI from icon images
+  designModeVizClone.find('[data-canonical-image-url^="' + ICON_PREFIX + '"]').each(function () {
+    this.removeAttribute('src');
+    this.style.backgroundImage = '';
+  });
+
   var serialization = designModeVizClone[0] ? designModeVizClone[0].outerHTML : '';
   if (madeUndraggable) {
     makeDraggable(designModeViz.children().children());
@@ -534,6 +611,11 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
 };
 
 designMode.toggleDesignMode = function(enable) {
+  Applab.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+};
+
+function onInterfaceModeChange(mode) {
+  var enable = (ApplabInterfaceMode.DESIGN === mode);
   var designWorkspace = document.getElementById('designWorkspace');
   if (!designWorkspace) {
     // Currently we don't run design mode in some circumstances (i.e. user is
@@ -546,7 +628,7 @@ designMode.toggleDesignMode = function(enable) {
   codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
 
   Applab.toggleDivApplab(!enable);
-};
+}
 
 /**
  * When we make elements resizable, we wrap them in an outer div. Given an outer
@@ -811,25 +893,36 @@ designMode.createScreen = function () {
 };
 
 /**
- * Changes the active screen by toggling all screens to be non-visible, unless
- * they match the provided screenId. Also updates our dropdown to reflect the
- * change, and opens the element property editor for the new screen.
+ * Changes the active screen by triggering a 'CHANGE_SCREEN' action on the
+ * Redux store.  This change propagates across the app, updates the state of
+ * React-rendered components, and eventually calls onScreenChange, below.
+ * @param {!string} screenId
  */
 designMode.changeScreen = function (screenId) {
-  currentScreenId = screenId;
+  Applab.reduxStore.dispatch(actions.changeScreen(screenId));
+};
+
+/**
+ * Responds to changing the active screen by toggling all screens to be
+ * non-visible, unless they match the provided screenId, and opens the element
+ * property editor for the new screen.
+ *
+ * This method is called in response to a change in the application state.  If
+ * you want to change the current screen, call designMode.changeScreen instead.
+ *
+ * @param {!string} screenId
+ */
+function onScreenChange(screenId) {
   elementUtils.getScreens().each(function () {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
-
-  Applab.render();
-
   designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
-};
 
-/** @returns {string} Id of active/visible screen */
-designMode.getCurrentScreenId = function() {
-  return currentScreenId;
-};
+  // We still have to call render() to get an updated list of screens, in case
+  // we added or removed one.  Can probably stop doing this once the screens
+  // list is also in Redux and managed through actions.
+  Applab.render();
+}
 
 /** @returns {string[]} Array of all screen Ids in current app */
 designMode.getAllScreenIds = function () {

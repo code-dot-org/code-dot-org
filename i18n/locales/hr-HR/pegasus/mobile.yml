@@ -603,6 +603,7 @@ hr-HR:
   dashboard_progress_completed_too_many_blocks: dovršeno, previše blokova
   dashboard_progress_completed_perfect: dovršeno, savršeno
   dashboard_progress_furthest_level_attempted: pokušaj posljednjeg nivoa
+  dashboard_progress_submitted: submitted
   dashboard_stage: Nivo
   dashboard_puzzle: Zadatak
   dashboard_question: Pitanje

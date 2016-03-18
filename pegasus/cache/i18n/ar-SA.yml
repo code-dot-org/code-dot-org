@@ -82,8 +82,8 @@
     جرب <a href="%{current_path}/next"> دروس شركائنا</a>.
   get_a_certificate_of_achievement: "أحصل على شهادة الانجاز"
   view_course: "عرض الدرس"
-  view_unit: View unit
-  make_app: Make an app
+  view_unit: "وحدة العرض"
+  make_app: "أنشِئْ تطبيقًا"
   congrats_guest_speaker_title: "اعثور على المتحدث الضيف لفصلك"
   congrats_guest_speaker_desc: "والآن بعد أن الطلاب أنهوا دورة علوم الكمبيوتر ، والنظر
     في الاحتفال و توصيله إلى الأشياء التي يمكن أن نبني في العالم الحقيقي من خلال دعوة
@@ -96,15 +96,15 @@
   third_party_gradelevel_kto8: "الصفوف من الروضة -8"
   third_party_gradelevel_kto2: "الصفوف من الروضة -٢"
   third_party_gradelevel_2to8: "الصفوف 2-8"
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
+  third_party_gradelevel_4to12: "الصفوف 4-12"
+  third_party_gradelevel_5to12: "الصفوف 5-12"
+  third_party_gradelevel_6plus: "الصفوف 6+"
+  third_party_gradelevel_8plus: "الصفوف 8+"
+  third_party_platform_all: "البرنامج: شبكة الإنترنت، آي باد ونظام الأندرويد"
+  third_party_platform_mobile: "البرنامج: آي باد ونظام الأندرويد"
+  third_party_platform_web: "البرنامج: شبكة الإنترنت"
+  third_party_price_varies: "السعر: تختلف البرامج"
+  third_party_price_free: "السعر: مجانًا"
   third_party_price_299: 'Price: $2.99/download'
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
@@ -745,6 +745,7 @@
     جداً"
   dashboard_progress_completed_perfect: "مكتمل, ممتاز"
   dashboard_progress_furthest_level_attempted: "المستوى الأبعد الذي تمت محاولته"
+  dashboard_progress_submitted: "تم تقديمه"
   dashboard_stage: "المرحلة"
   dashboard_puzzle: "لغز"
   dashboard_question: "سؤال"
@@ -917,7 +918,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: "مختبر التطبيق"
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: "أعمارهم 13 +"
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

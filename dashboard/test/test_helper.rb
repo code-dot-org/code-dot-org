@@ -161,6 +161,15 @@ class ActiveSupport::TestCase
       assert_equal(before[i], e.call, error)
     end
   end
+
+  # Given two hashes, ensure that they have the same set of keys in both
+  # directions, collecting up errors so we can pretty-print them all in one go
+  # if any errors are found.
+  def assert_same_keys(a, b, a_name = 'A', b_name = 'B', message = "Keys don't match")
+    assert_equal a.keys, b.keys, %(#{message}
+  Found in #{a_name} but not #{b_name}: #{(a.keys - b.keys).join(', ')}
+  Found in #{b_name} but not #{a_name}: #{(b.keys - a.keys).join(', ')})
+  end
 end
 
 # Helpers for all controller test cases
