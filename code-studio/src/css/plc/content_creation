@@ -25,12 +25,8 @@
       margin: auto;
     }
 
-    .cloneableAnswerRow {
+    .cloneableAnswerRow, .cloneableQuestionRow {
       display: none
-    }
-
-    .cloneableQuestionRow {
-      display: none;
     }
   }
 }

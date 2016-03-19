@@ -3,30 +3,29 @@
 $(window).load(function () {
   $('#evaluationTable .new_question').click(function (event) {
     var bottomRow = event.target.parentElement.parentElement;
-    var clonedRow = $('#evaluationTable .cloneableQuestionRow')[0].cloneNode(true);
-    clonedRow.className = 'new_question_row';
-    $(clonedRow).find('input')[0].className = 'new_question_name';
-
-    $(clonedRow).insertBefore(bottomRow);
-
-    $('#evaluationTable input').last().keyup(handleNewQuestionName);
+    var clonedRow = $('#evaluationTable .cloneableQuestionRow').clone(true);
+    clonedRow.removeClass('cloneableQuestionRow');
+    clonedRow.addClass('new_question_row');
+    var newQuestionInput = clonedRow.find('input');
+    newQuestionInput.addClass('new_question_name');
+    newQuestionInput.keyup(handleNewQuestionName);
+    clonedRow.insertBefore(bottomRow);
   });
 
   $('#evaluationTable .new_answer').click(function (event) {
-    var clonedRow = $(event.target.parentElement.parentElement.parentElement).find('.cloneableAnswerRow')[0].cloneNode(true);
-    clonedRow.className = 'new_answer_row';
-    clonedRow.setAttribute('question_id', event.target.getAttribute('question_id'));
-
-    $(clonedRow).insertBefore(event.target.parentElement.parentElement);
-
-    $(clonedRow).find('input').keyup(handleNewAnswer);
-    $(clonedRow).find('select').change(handleNewAnswer);
+    var clonedRow = $(event.target.parentElement.parentElement.parentElement).find('.cloneableAnswerRow').clone(true);
+    clonedRow.removeClass('cloneableAnswerRow');
+    clonedRow.addClass('new_answer_row');
+    clonedRow.attr('question_id', event.target.getAttribute('question_id'));
+    clonedRow.find('input').keyup(handleNewAnswer);
+    clonedRow.find('select').change(handleNewAnswer);
+    clonedRow.insertBefore(event.target.parentElement.parentElement);
   });
 
   function handleNewQuestionName() {
     $('#newQuestionsList').val(JSON.stringify($('.new_question_row .new_question_name').map(function() { return $(this).val(); }).get()));
 
-    //Need to find a better way to see if nothing has been edited
+    //Future work item is to do better validation on submitted questions. Will come along with deletion
     $('#submitNewQuestions').prop("disabled", false);
   }
 
