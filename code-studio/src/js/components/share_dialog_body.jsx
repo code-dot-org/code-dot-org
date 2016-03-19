@@ -29,7 +29,8 @@ var ShareDialogBody = React.createClass({
     appType: React.PropTypes.string.isRequired,
 
     onClickPopup: React.PropTypes.func.isRequired,
-    onClickClose: React.PropTypes.func.isRequired
+    onClickClose: React.PropTypes.func.isRequired,
+    onClickExport: React.PropTypes.func.isRequired,
   },
 
   getInitialState: function () {
@@ -92,11 +93,10 @@ var ShareDialogBody = React.createClass({
         appType={this.props.appType}/>;
     }
 
-    var exportButton = null;
+    var exportButton;
     if (this.props.appType === 'applab') {
-      // TODO: Can I not proliferate the use of global references to Applab somehow?
       exportButton = (
-        <button className="btn btn-link" onClick={Applab.exportApp}>
+        <button className="btn btn-link" onClick={this.props.onClickExport}>
           Export project
         </button>
       );

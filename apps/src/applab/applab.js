@@ -22,6 +22,7 @@ var AppLabView = require('./AppLabView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var exportProjectEjs = require('../templates/exportProject.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -931,23 +932,8 @@ Applab.exportApp = function() {
   appElement.classList.remove('notRunning');
   appElement.classList.remove('withCrosshair');
   var htmlBody = appElement.outerHTML;
-  var origin = window.location.origin;
-  var html = `
-<html>
-  <head>
-    <title>My App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="${origin}/assets/js/en_us/common_locale.js"></script>
-    <script src="${origin}/assets/js/en_us/applab_locale.js"></script>
-    <script src="${origin}/assets/js/applab-api.js"></script>
-    <link rel="stylesheet" href="${origin}/assets/css/applab.css">
-  </head>
-  <body>
-    ${htmlBody}
-    <script src="code.js"></script>
-  </body>
-</html>
-`;
+  var html = exportProjectEjs({htmlBody: appElement.outerHTML});
+
   var zip = new JSZip();
   // TODO: find another way to get this info that doesn't rely on globals.
   var appName = window.dashboard && window.dashboard.project.getCurrentName() || 'my-app';

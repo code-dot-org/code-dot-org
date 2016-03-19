@@ -1,4 +1,4 @@
-// entry point for api that get's exposed.
+// entry point for api that gets exposed.
 
 // third party dependencies that are provided as globals in code-studio but
 // which need to be explicitly required here.
