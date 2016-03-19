@@ -19,6 +19,7 @@ var ShareDialog = React.createClass({
     channelId: React.PropTypes.string.isRequired,
     appType: React.PropTypes.string.isRequired,
     onClickPopup: React.PropTypes.func.isRequired,
+    onClickExport: React.PropTypes.func.isRequired,
   },
 
   getInitialState: function () {
@@ -51,6 +52,7 @@ var ShareDialog = React.createClass({
           appType={this.props.appType}
           onClickPopup={this.props.onClickPopup}
           onClickClose={this.close}
+          onClickExport={this.props.onClickExport}
           />
       </Dialog>
     );

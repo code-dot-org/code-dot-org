@@ -23,8 +23,7 @@
   "browserify": {
     "transform": [
       "require-globify",
-      "browserify-shim",
-      "browserify-global-shim"
+      "browserify-shim"
     ]
   },
   "browserify-global-shim": {
