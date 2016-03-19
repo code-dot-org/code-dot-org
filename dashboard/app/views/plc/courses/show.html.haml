@@ -40,8 +40,7 @@
           %td
             = text_field_tag ''
           %td
-            -# Whyyyyyyyy :-(
-            = select_tag options_for_select(options_for_plc_task_learning_modules.unshift(['', '']).unshift(['', '']))
+            = select_tag '', options_for_select(options_for_plc_task_learning_modules), include_blank: ''
         %tr.new_answer_button_row{question_id: question.id}
           %td
           %td
