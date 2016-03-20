@@ -279,19 +279,69 @@ module.exports = {
       runBeforeClick: function (assert) {
         $("#designModeButton").click();
         testUtils.dragToVisualization('BUTTON', 10, 20);
+
+        var buttonElement = document.getElementById('design_button1');
+        var $designModeViz = $('#designModeViz');
+
+        // test initial position of button
         assertPropertyRowValue(0, 'id', 'button1', assert);
         assertPropertyRowValue(2, 'width (px)', 80, assert);
         assertPropertyRowValue(3, 'height (px)', 30, assert);
         assertPropertyRowValue(4, 'x position (px)', 10, assert);
         assertPropertyRowValue(5, 'y position (px)', 20, assert);
+        
+        // test dragging within visualization
+        // test button dragged 20 pixels in X direction
+        //dragElement(buttonElement, 20, 0);
+        //assertPropertyRowValue(4, 'x position (px)', 30, assert);
+        //assertPropertyRowValue(5, 'y position (px)', 20, assert);
 
-        dragElement(document.getElementById('design_button1'), 20, 0);
-        assertPropertyRowValue(4, 'x position (px)', 30, assert);
-        assertPropertyRowValue(5, 'y position (px)', 20, assert);
+        // test button dragged 20 pixels in Y direction
+        //dragElement(buttonElement, 0, 20);
+        //assertPropertyRowValue(4, 'x position (px)', 30, assert);
+        //assertPropertyRowValue(5, 'y position (px)', 40, assert);
 
-        dragElement(document.getElementById('design_button1'), 0, 20);
-        assertPropertyRowValue(4, 'x position (px)', 30, assert);
-        assertPropertyRowValue(5, 'y position (px)', 40, assert);
+        // drag new button element to visualization, start at 0, 0
+        //testUtils.dragToVisualization('BUTTON', 0, 0);
+        //var $buttonElement = $('#design_button2');
+        //buttonElement = document.getElementById('design_button2');
+       
+        // test snapping to right side, drag near edge, less than half element width over edge
+        // button should snap to canvas width minus button width
+        //var rightSnapBoundary = $designModeViz.width() - ($buttonElement.width() / 2);
+        //dragElement(buttonElement, rightSnapBoundary, 0);
+        //assertPropertyRowValue(4, 'x position (px)', $designModeViz.width() - $buttonElement.width(), assert);
+        //assertPropertyRowValue(5, 'y position (px)', 0, assert);
+
+        // drag 5 more pixels to force element over edge, should be semi-transparent
+        // don't fire mouseup event because it will delete the element
+        //dragElement(buttonElement, 5, 0, false);
+        //assert.equal($buttonElement.css('opacity'), 0.3);
+
+        // drag 5 more pixels, mouseup should delete the button
+        //dragElement(buttonElement, 5, 0);
+        //assert.equal($designModeViz.find('#design_button2').length, 0);
+
+        // drag new button element to visualization, start at 0, 0
+        //testUtils.dragToVisualization('BUTTON', 0, 0);
+        //var $buttonElement = $('#design_button3');
+        //buttonElement = document.getElementById('design_button3');
+
+        // test snapping to bottom, drag near edge, less than half element height over edge
+        // button shoudl snap to canvas height minus button height
+        //var bottomSnapBoundary = $designModeViz.height() - ($buttonElement.height() / 2);
+        //dragElement(buttonElement, 0, bottomSnapBoundary);
+        //assertPropertyRowValue(4, 'x position (px)', 0, assert);
+        //assertPropertyRowValue(5, 'y position (px)', $designModeViz.height() - $buttonElement.height(), assert);
+
+        // drag 5 more pixels to force element over edge, should be semi-transparent
+        // don't fire mouseup event because it will delete the element
+        //dragElement(buttonElement, 0, 5, false);
+        //assert.equal($buttonElement.css('opacity'), 0.3);
+
+        // drag 5 more pixels, mouseup should delete the button
+        //dragElement(buttonElement, 0, 5);
+        //assert.equal($designModeViz.find('#design_button3').length, 0);
 
         Applab.onPuzzleComplete();
       },

@@ -721,42 +721,99 @@ function makeDraggable (jqueryElements) {
         highlightElement(elm[0]);
       }
     }).draggable({
-      cancel: false,  // allow buttons and inputs to be dragged
+      cancel: false,   // allow buttons and inputs to be dragged
+      appendTo: 'body',// draggable can break free of design mode container
+      helper: 'clone', // clone original ui component
+      zIndex: 2,       // put dragged item in front of design mode container
       drag: function (event, ui) {
-        // draggables are not compatible with CSS transform-scale,
-        // so adjust the position in various ways here.
-
+        // containment
+        var container = $('#designModeViz');
+        var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
+        var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
+ 
         // dragging
         var scale = getVisualizationScale();
+        var newLeft = ui.helper.offset().left / scale;
+        var newTop = (ui.helper.offset().top / scale) - container.offset().top;
+ 
+         // snap top-left corner to nearest location in the grid
+        newLeft = gridUtils.snapToGridSize(newLeft);
+        newTop = gridUtils.snapToGridSize(newTop);
+ 
+        // check if scaled left of UI component midpoint is past the total width of the design mode container
+        var sideDeleteBoundary = container.outerWidth(true) - (ui.helper.outerWidth(true) / 2);
+        var verticalDeleteBoundary = maxTop;
+        var verticalMidpoint = newTop - (ui.helper.outerHeight(true) / 2);
+        var opacity = newLeft > sideDeleteBoundary || verticalMidpoint > verticalDeleteBoundary ? 0.3 : 1;
+ 
+        // hide original element, will be redrawn when clone is dropped
+        elm.css('visibility', 'hidden');
+ 
+        // set opacity for cloned element
+        ui.helper.css({
+          'opacity': opacity
+        });
+
+        designMode.renderDesignWorkspace(elm[0]);
+      },
+      start: function (event, ui) {
+        highlightElement(elm[0]);
+        ui.helper.addClass('draggingParent');
+       },
+      stop: function(event, ui) {
+        // re-render original element when drag stops
+        elm.css('visibility', '');
+
+        // get outer boundaries of design mode 
+        var container = $('#designModeViz');
+
+        // get left and top of dragging element
+        var scale = getVisualizationScale();
         var newLeft  = ui.position.left / scale;
-        var newTop = ui.position.top / scale;
+        var newTop = (ui.position.top - container.offset().top) / scale;
 
         // snap top-left corner to nearest location in the grid
         newLeft = gridUtils.snapToGridSize(newLeft);
         newTop = gridUtils.snapToGridSize(newTop);
 
-        // containment
-        var container = $('#designModeViz');
-        var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
-        var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
-        newLeft = Math.min(newLeft, maxLeft);
-        newLeft = Math.max(newLeft, 0);
-        newTop = Math.min(newTop, maxTop);
-        newTop = Math.max(newTop, 0);
+        var sideDeleteBoundary = container.outerWidth(true) - (ui.helper.outerWidth(true) / 2);
+        var sideSnapBoundary = container.outerWidth(true) - ui.helper.outerWidth(true);
+        var bottomDeleteBoundary = container.outerHeight(true) - (ui.helper.outerHeight(true) / 2);
+        var bottomSnapBoundary = container.outerHeight(true) - ui.helper.outerHeight(true);
+        var deleted = false;
 
-        ui.position.left = newLeft;
-        ui.position.top = newTop;
+        if (newLeft > sideDeleteBoundary || newTop - (ui.helper.outerHeight(true) / 2) > bottomDeleteBoundary) {
+          // delete UI component if it is past the delete boundary
+          designMode.onDeletePropertiesButton(elm[0], event);
+          deleted = true;
+        } else if (newLeft > sideSnapBoundary || newTop > bottomSnapBoundary) {
+          // snap to design mode div side or bottom
+          if (newLeft > sideSnapBoundary) {
+            // snap to side
+            newLeft = container.outerWidth() - ui.helper.outerWidth(true);
+          }
+          if (newTop > bottomSnapBoundary) {
+            // snap to bottom
+            newTop = container.outerHeight(true) - elm.outerHeight(true);
+          }
+          $(this).css({
+            "top": newTop,
+            "left": newLeft
+          });
+        } else {
+          $(this).css({
+            "top": (ui.helper.offset().top - container.offset().top) / scale,
+            "left": ui.helper.offset().left / scale
+          });
+        }
 
-        elm.css({
-          top: newTop,
-          left: newLeft
-        });
-
-        designMode.renderDesignWorkspace(elm[0]);
-      },
-      start: function () {
-        highlightElement(elm[0]);
-      },
+        var point = gridUtils.scaledDropPoint($(this));
+        
+        if (!deleted) {
+          designMode.onPropertyChange(elm[0], 'top', point.top);
+          designMode.onPropertyChange(elm[0], 'left', point.left);
+        }
+      }
     }).css({
       position: 'absolute',
       lineHeight: '0px'
