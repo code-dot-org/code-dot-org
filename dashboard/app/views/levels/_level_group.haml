@@ -16,7 +16,11 @@
     - last_attempt = last_attempt_entry["result"] if last_attempt_entry
   - else
     - last_attempt = ""
-  = render partial: 'levels/single_multi', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
+  - level_class = level.class.to_s.underscore
+  - if level_class == "multi"
+    = render partial: 'levels/single_multi', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
+  - elsif level_class = "text_match"
+    = render partial: 'levels/single_text_match', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
 
 = render partial: 'levels/common_audio'
 
@@ -28,8 +32,10 @@
   %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
     =t('unsubmit')
 
+
 :javascript
   #{render template: 'levels/multi.js', formats: [:js]}
+  #{render template: 'levels/textMatch.js', formats: [:js]}
 
   #{render template: 'levels/levelGroup.js', formats: [:js]}
 
