@@ -935,11 +935,15 @@ Applab.render = function () {
 function extractCSSFromHTML(el) {
   var css = [];
 
+  // We need to prefix all of our selectors with divApplab to overcome the
+  // precendence of css defined in applab.css
+  var selectorPrefix = '#divApplab ';
+
   var baseEls = {};
   for (var elementType in elementLibrary.ElementType) {
     var baseEl = elementLibrary.createElement(elementType, 0, 0, true);
     baseEls[elementType] = baseEl;
-    var selector = baseEl.tagName.toLowerCase();
+    var selector = selectorPrefix + baseEl.tagName.toLowerCase();
     if (baseEl.classList.length > 0) {
       selector += '.' + baseEl.classList[0];
     }
@@ -969,7 +973,7 @@ function extractCSSFromHTML(el) {
         }
         child.removeAttribute('style');
         if (styleDiff.length > 0) {
-          css.push('#' + child.id + ' {');
+          css.push(selectorPrefix + '#' + child.id + ' {');
           css = css.concat(styleDiff);
           css.push('}');
           css.push('');
@@ -988,6 +992,7 @@ Applab.exportApp = function() {
   holder.innerHTML = designMode.serializeToLevelHtml();
   var appElement = holder.children[0];
   appElement.id = 'divApplab';
+  appElement.style.display = 'block';
   appElement.classList.remove('notRunning');
   appElement.classList.remove('withCrosshair');
 
