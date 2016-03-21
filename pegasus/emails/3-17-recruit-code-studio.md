@@ -11,7 +11,7 @@ We offer one-day workshops for K-5 educators to help you get started. If you’r
 
 ### [Reserve a spot at a workshop near you near you](https://code.org/professional-development-workshops)
 
-[![image](https://code.org/images/k5teacherquotes.png)](https://code.org/k5)
+[![image](https://staging.code.org/images/fit-300/k5teacherquotesrevised.png)](https://code.org/k5)
 
 </center>
 

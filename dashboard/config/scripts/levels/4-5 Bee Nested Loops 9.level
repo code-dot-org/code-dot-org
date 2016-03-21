@@ -61,18 +61,10 @@
         <block type="controls_repeat">
           <title name="TIMES">3</title>
         </block>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
-        <block type="bee_whileNectarAmount" inline="true">
+        <block type="bee_whileNectarAmount">
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>
-        </block>
-        <block type="maze_nectar"/>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
         </block>
       </xml>
     </recommended_blocks>
