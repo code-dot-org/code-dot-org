@@ -176,6 +176,20 @@ class User < ActiveRecord::Base
     user
   end
 
+  # Try to find a user matching the given key, which can be any of the following:
+  # - A user id (which must consist of digits only)
+  # - An email address (which must include @)
+  # - A user name
+  def User.find_by_email_or_username_or_id(key)
+    user = User.where(id: key).first if key =~ /^[0-9]+$/
+    puts "user1=#{user}"
+    user ||= User.find_by_email_or_hashed_email(key) if key =~ /@/
+    puts "user2=#{user}"
+    user ||= User.where(username: key).first
+    puts "user3=#{user}"
+    user
+  end
+
   def User.find_or_create_district_contact(params, invited_by_user)
     find_or_create_teacher(params, invited_by_user, UserPermission::DISTRICT_CONTACT)
   end
