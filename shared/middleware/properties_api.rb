@@ -86,7 +86,7 @@ class PropertiesApi < Sinatra::Base
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
     body = request.body.read
     property_size = name.length + body.length
-    property_too_large(property_size) if  property_size > max_property_size
+    property_too_large(property_size) if property_size > max_property_size
     parsed_value = PropertyBag.parse_value(body)
     value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
 
