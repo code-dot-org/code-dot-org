@@ -934,13 +934,29 @@ Applab.exportApp = function() {
   var htmlBody = appElement.outerHTML;
   var html = exportProjectEjs({htmlBody: appElement.outerHTML});
 
-  var zip = new JSZip();
-  // TODO: find another way to get this info that doesn't rely on globals.
-  var appName = window.dashboard && window.dashboard.project.getCurrentName() || 'my-app';
-  zip.file(appName + "/index.html", html);
-  zip.file(appName + "/code.js", code);
-  var blob = zip.generate({type:"blob"});
-  saveAs(blob, appName + ".zip");
+  return $.when(
+    $.ajax('/assets/js/en_us/common_locale.js', {dataType: 'text'}),
+    $.ajax('/assets/js/en_us/applab_locale.js', {dataType: 'text'}),
+    $.ajax('/assets/js/applab-api.js', {dataType: 'text'}),
+    $.ajax('/assets/css/applab.css', {dataType: 'text'})
+  ).then(
+    function(commonLocale, applabLocale, applabApi, applabCSS) {
+      var zip = new JSZip();
+      // TODO: find another way to get this info that doesn't rely on globals.
+      var appName = window.dashboard && window.dashboard.project.getCurrentName() || 'my-app';
+      zip.file(appName + "/applab.js", commonLocale[0] + applabLocale[0] + applabApi[0]);
+      zip.file(appName + "/applab.css", applabCSS[0]);
+      zip.file(appName + "/index.html", html);
+      zip.file(appName + "/code.js", code);
+      var blob = zip.generate({type:"blob"});
+      saveAs(blob, appName + ".zip");
+    },
+    function() {
+      logToCloud.addPageAction(logToCloud.PageAction.staticResourceFetchError, {
+        app: 'applab'
+      }, 1/100);
+    }
+  );
 };
 
 /**
