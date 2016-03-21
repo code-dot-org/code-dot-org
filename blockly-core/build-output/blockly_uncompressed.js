@@ -19093,7 +19093,7 @@ Blockly.Variables.renameVariable = function(oldName, newName, blockSpace) {
       func.call(blocks[x], oldName, newName)
     }
   }
-  if(Blockly.modalBlockSpace) {
+  if(Blockly.functionEditor && Blockly.functionEditor.isOpen()) {
     Blockly.functionEditor.renameParameter(oldName, newName);
     Blockly.functionEditor.refreshParamsEverywhere()
   }
@@ -19106,7 +19106,7 @@ Blockly.Variables.deleteVariable = function(nameToRemove, blockSpace) {
       func.call(blocks[x], nameToRemove)
     }
   }
-  if(Blockly.modalBlockSpace) {
+  if(Blockly.functionEditor && Blockly.functionEditor.isOpen()) {
     Blockly.functionEditor.removeParameter(nameToRemove);
     Blockly.functionEditor.refreshParamsEverywhere()
   }
@@ -19261,30 +19261,24 @@ Blockly.FieldVariable.prototype.dropdownChange = function(text) {
   if(text === Blockly.Msg.RENAME_VARIABLE) {
     var oldVar = this.getText();
     this.getParentEditor_().hideChaff();
-    text = Blockly.FieldVariable.promptName(Blockly.Msg.RENAME_VARIABLE_TITLE.replace("%1", oldVar), oldVar);
-    if(text) {
-      Blockly.Variables.renameVariable(oldVar, text, this.sourceBlock_.blockSpace)
-    }
+    Blockly.FieldVariable.modalPromptName(Blockly.Msg.RENAME_VARIABLE_TITLE.replace("%1", oldVar), Blockly.Msg.CONFIRM_RENAME_VARIABLE, oldVar, function(newVar) {
+      Blockly.Variables.renameVariable(oldVar, newVar, this.sourceBlock_.blockSpace)
+    }.bind(this));
     return null
   }else {
     if(text === Blockly.Msg.NEW_VARIABLE) {
       this.getParentEditor_().hideChaff();
-      text = Blockly.FieldVariable.promptName(Blockly.Msg.NEW_VARIABLE_TITLE, "");
-      if(text) {
-        Blockly.Variables.renameVariable(text, text, this.sourceBlock_.blockSpace);
-        return text
-      }
+      Blockly.FieldVariable.modalPromptName(Blockly.Msg.NEW_VARIABLE_TITLE, Blockly.Msg.CONFIRM_CREATE_VARIABLE, "", function(newVar) {
+        this.setText(newVar);
+        Blockly.Variables.renameVariable(newVar, newVar, this.sourceBlock_.blockSpace)
+      }.bind(this));
       return null
     }
   }
   return undefined
 };
-Blockly.FieldVariable.promptName = function(promptText, defaultText) {
-  var newVar = window.prompt(promptText, defaultText);
-  if(!newVar) {
-    return newVar
-  }
-  return Blockly.FieldVariable.removeExtraWhitespace(newVar)
+Blockly.FieldVariable.modalPromptName = function(promptText, confirmButtonLabel, defaultText, callback) {
+  Blockly.showSimpleDialog({bodyText:promptText, prompt:true, promptPrefill:defaultText, cancelText:confirmButtonLabel, confirmText:Blockly.Msg.CANCEL, onConfirm:null, onCancel:callback})
 };
 Blockly.FieldVariable.removeExtraWhitespace = function(inputString) {
   var multipleWhitespaceCharactersRegex = /[\s\xa0]+/g;
@@ -20345,6 +20339,9 @@ Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
   return{paramNames:paramNames, paramIDs:paramIDs, paramTypes:paramTypes}
 };
 Blockly.FunctionEditor.prototype.forEachParameterGetBlock = function(paramName, callback) {
+  if(!this.functionDefinitionBlock) {
+    return
+  }
   this.functionDefinitionBlock.getDescendants().forEach(function(block) {
     if(block.type == "parameters_get" && Blockly.Names.equals(paramName, block.getTitleValue("VAR"))) {
       callback(block)
@@ -25524,10 +25521,9 @@ Blockly.FieldParameter.dropdownChange = function(text) {
   var oldVar = this.getText();
   if(text === Blockly.Msg.RENAME_PARAMETER) {
     this.getParentEditor_().hideChaff();
-    text = Blockly.FieldVariable.promptName(Blockly.Msg.RENAME_PARAMETER_TITLE.replace("%1", oldVar), oldVar);
-    if(text) {
-      Blockly.Variables.renameVariable(oldVar, text, this.sourceBlock_.blockSpace)
-    }
+    Blockly.FieldVariable.modalPromptName(Blockly.Msg.RENAME_PARAMETER_TITLE.replace("%1", oldVar), Blockly.Msg.CONFIRM_RENAME_VARIABLE, oldVar, function(newVar) {
+      Blockly.Variables.renameVariable(oldVar, newVar, this.sourceBlock_.blockSpace)
+    }.bind(this))
   }else {
     if(text === Blockly.Msg.DELETE_PARAMETER) {
       Blockly.showSimpleDialog({bodyText:Blockly.Msg.DELETE_PARAMETER_TITLE.replace("%1", oldVar), cancelText:Blockly.Msg.DELETE, confirmText:Blockly.Msg.KEEP, onConfirm:null, onCancel:function() {

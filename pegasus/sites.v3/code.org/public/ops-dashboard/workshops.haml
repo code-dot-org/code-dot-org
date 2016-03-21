@@ -61,9 +61,10 @@ theme: none
     %td
       %span
         {{program_types[workshop.program_type].short_name}}
-    -#%td
-    -#  %span
-    -#    {{cohortNamecohort.id)}}
+    -#
+      %td
+        %span
+          {{cohortNamecohort.id)}}
     %td
       %ul{style:'margin:0'}
         %li{'ng-repeat' => 'cohort in workshop.cohorts | orderBy:"start"'}

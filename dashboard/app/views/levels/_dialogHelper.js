@@ -1,4 +1,4 @@
-/* globals appOptions, lastServerResponse, Dialog, getResult, CDOSounds, sendReport, showVideoDialog */
+/* globals appOptions, Dialog, getResult, CDOSounds, showVideoDialog, dashboard */
 
 /*
  * This file contains general logic for displaying modal dialogs and handling
@@ -19,6 +19,7 @@ window.dashboard.dialog = (function () {
   });
 
   function dialogHidden() {
+    var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
     if (dialogType === "success" && lastServerResponse.nextRedirect) {
       window.location.href = lastServerResponse.nextRedirect;
     }
@@ -142,7 +143,7 @@ window.dashboard.dialog = (function () {
       }
     }
 
-    sendReport({
+    window.dashboard.reporting.sendReport({
       program: response,
       fallbackResponse: appOptions.dialog.fallbackResponse,
       callback: appOptions.dialog.callback,
@@ -153,13 +154,13 @@ window.dashboard.dialog = (function () {
       testResult: testResult,
       submitted: submitted,
       onComplete: function () {
+        var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
         var willRedirect = !!lastServerResponse.nextRedirect;
         if (onComplete) {
           onComplete(willRedirect);
         }
 
-        if (lastServerResponse.videoInfo)
-        {
+        if (lastServerResponse.videoInfo) {
           showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
