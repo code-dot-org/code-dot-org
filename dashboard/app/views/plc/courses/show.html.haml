@@ -2,10 +2,6 @@
   = stylesheet_link_tag 'css/levelbuilder', media: 'all'
   = javascript_include_tag 'js/plc'
 
-
-:javascript
-  var allModuleNames = #{options_for_plc_task_learning_modules}
-
 %p
   %strong Name: #{@course.name}
 
@@ -13,7 +9,7 @@
   Evaluation Questions
 
 %p
-  %table#evaluationTable{ style: 'width: 100%' }
+  %table#evaluationTable
     %th
       Question
     %th
