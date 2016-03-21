@@ -438,11 +438,11 @@
           tekrarlanır."
       4:
         image: notes/frozen2_4.jpg
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
+        text: Bir kare çizmek için "ilerle" ve "Sağa dön" bloklarını 4 kez kullanabilirsiniz.
+          Ama daha kolay şekilde yapmak için bilgisayara "İlerle" ve "Sağa doğru 90
+          derece dön ü bir kere söyleyip aynı komutları 4 defa tekrarlamasını söyleyebilirsiniz.
+          Bunu yapmak için "İlerle" ve "Sağa dön" bloklarını "Tekrarla?? kez tekrarla"
+          bir bloğu içinde koymak gerekir.
       5:
         image: notes/frozen2_5.jpg
         text: Unutmayın, "Tekrar" bloğundaki herşey için sayıyı değiştirebilirsiniz
@@ -454,79 +454,74 @@
           üniversitemde kodlama ile uğraşıyorum.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
+        text: Bilgisayar Biliminde en önemli kavramlarından biri yeni komut tanımlamadır.
+          Çoğu programlama dillerin yalnızca yaklaşık 100 komutu vardır. Ve gerçekten,
+          işin sırrı bu yapı taşları komutların yanı sıra kendi yeni komutlarını tanımlamadır.
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: Bilgisayara bir eylemi nasıl yapacağını komutlar kullanarak öğrettin
+          vede bu eyleme kolay hatırlanır bir isim verin. Bu isim daha sonra kolayca
+          aynı eylemi gerçekleştirmek için kullanılabilir. Bu şekilde kendi komutunu
+          tanımlamaya "fonksiyon" denir.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: Merhaba ben Jess, bloklarla programlama yaparken fonksiyonları kullanarak
+          aynı eylemi birçok kere yapabilirsiniz. Örneğin kare yapan bir fonksiyon
+          yazdınız.
       5:
         image: notes/frozen3_5.jpg
         text: 'Bunu "bir kare oluşturun." adında bir fonksiyona tanımlayabilirsiniz '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: "Şimdi kare yapma işlemini birçok kere yapabileceğiniz yeni bir blok
+          oluşturdunuz."
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Basit şekiller çok daha karmaşık desenleri oluşturmak için kullanılabilir.
+          Sonraki Bulmacada, çember yapmak için yazdığınız fonksiyon size farklı boyutlarda
+          çemberler çizmeniz için kullanabilirsiniz. Elsanın karda karmaşık ve güzel
+          desenler oluşturması için bu fonksiyonu için kullanabilirsiniz?
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
+        text: Play Lab'ı kullanarak oyunlar yapacağız. İyi oyunların hikayesi vardır
+          ve her hikayenin de aktörleri vardır. Cadı, uzaylı, hayvan gibi aktörler
+          yaratıp onların ilerlemesini ve birbiri ile iletişime geçmelerini sağlayacağız.
+          Bu öğreticinin sonunda sıfırdan bir oyun yaratıp arkadaşlarımızla paylaşacağız.
       2:
         image: notes/playlab_intro_2.png
         text: Ekran 3 ana bölüme ayrılmıştır. Sol taraf programınızın çalıştırılacağı
           oyun alanıdır. Her düzey için talimatlar aşağıda yazılmıştır.
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: |
+          Ortadaki alan araç kutusu alanıdır. Bu alandaki her bir blok bir parça koda karşılık gelir.
+          Sağdaki boş alan çalışma alanıdır. Bu alanda kod yazacaksınız.
       4:
         image: notes/playlab_intro_4.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
+        text: Kendi ekleyeceğiniz blokları "Çalıştığı zaman" bloğuna bağlamak gerekir.
+          Blokları sürükleyip sarı çizgi çıkana kadar birbirine yaklaştırarak bağlayabilirsiniz.
       5:
         image: notes/playlab_intro_5.png
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
+        text: Bu ilk bulmacada bizim oyuncu bir penguen ve biz ona "Merhaba!" dedirtmek
+          istiyoruz. Bunun içim Söyle bloğunu çekerek "Çalıştığı Zaman" bloğuna birleştireceğiz.
+          sonra Söyle bloğuna "Merhaba." yazacağız. Ayrıca Sağa hareket, sola hareket
+          bloklarını kullanarak pengueni hareket ettirebilirsiniz. Blokları yerleştirdikten
+          sonra Çalıştır düğmesine basınız.
       6:
         image: notes/playlab_intro_6.png
-        text: Get started and by the end, you'll be able to create your own game with
-          all kinds of players that can interact, turn happy or sad, score points,
-          or throw fireballs, or even vanish each other. It's all up to you and the
-          game you want to make.
+        text: Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular
+          iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, ateş topu
+          atabilir ve hatta birbirini yok edebilir. Bunların hepsi senin elinde istediğin
+          gibi oyununu yapabilirsin.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: Now, we're going to learn about something that all game programmers
-          use everyday. They're called events. An event tells your program to listen
-          for when something happens. When that thing happens, it performs an action.
+        text: Şimdi oyun programcılarının her zaman kullandığı "Olay" kavramını öğreneceğiz.
+          Olay  bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: Olay;  fare tıklama, yön tuşuna basma yada ekrana tıklama gibi aktivitelerdir.
       3:
         image: notes/playlab_events_3.png
         text: Here, we're going to make the space bot greet the earthlings when a

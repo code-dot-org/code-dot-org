@@ -98,7 +98,7 @@ Blockly.Variables.renameVariable = function(oldName, newName, blockSpace) {
     }
   }
 
-  if (Blockly.modalBlockSpace) {
+  if (Blockly.functionEditor && Blockly.functionEditor.isOpen()) {
     Blockly.functionEditor.renameParameter(oldName, newName);
     Blockly.functionEditor.refreshParamsEverywhere();
   }
@@ -120,7 +120,7 @@ Blockly.Variables.deleteVariable = function(nameToRemove, blockSpace) {
     }
   }
   // Notify the modal workspace to remove the parameter from its flyout
-  if (Blockly.modalBlockSpace) {
+  if (Blockly.functionEditor && Blockly.functionEditor.isOpen()) {
     Blockly.functionEditor.removeParameter(nameToRemove);
     Blockly.functionEditor.refreshParamsEverywhere();
   }

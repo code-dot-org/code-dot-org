@@ -1,6 +1,6 @@
 %h1 Editing plc_task
 
-= render 'form'
+= render partial: 'plc/tasks/edit/' + @task.class.underscored_task_type
 
 = link_to 'Show', plc_task_path(@task)
 \|

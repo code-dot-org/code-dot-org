@@ -37,9 +37,10 @@
 
 var lscache = require('lscache');
 
-module.exports = function () {
+var $ = require('jquery-shim');
+var sessionStorage = window.sessionStorage;
 
-var clientState = {};
+var clientState = module.exports = {};
 
 /**
  * Max number of minutes before client state expires, current 10 years.
@@ -393,6 +394,15 @@ function createKey(scriptName, levelId, prefix) {
   return (prefix ? prefix + '_' : '') + scriptName + '_' + levelId;
 }
 
-return clientState;
-
-};
+/**
+ * Don't throw storage errors in Safari private browsing mode.
+ */
+function safelySetItem(key, value) {
+  try {
+    sessionStorage.setItem(key, value);
+  } catch (e) {
+    if (e.name !== "QuotaExceededError") {
+      throw e;
+    }
+  }
+}

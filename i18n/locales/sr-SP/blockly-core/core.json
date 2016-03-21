@@ -312,7 +312,7 @@
   "RENAME_PARAMETER":"Преименуј параметар...",
   "RENAME_PARAMETER_TITLE":"Преименуј све '%1' параметре у:",
   "RENAME_VARIABLE":"Преименуј промењиву,,,",
-  "RENAME_VARIABLE_TITLE":"Преименовати све '%1' варијабле у:",
+  "RENAME_VARIABLE_TITLE":"Преименуј све '%1' промењиве у:",
   "TEXT_APPEND_APPENDTEXT":"додај текст",
   "TEXT_APPEND_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Text#Text_modification",
   "TEXT_APPEND_TO":"на",

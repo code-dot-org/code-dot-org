@@ -1,11 +1,14 @@
 // TODO (brent) - way too many globals
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, showVideoDialog, ga, digestManifest*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
 var loadApp = require('./loadApp');
 var project = require('./project');
 var userAgentParser = require('./userAgentParser');
+var clientState = require('../clientState');
+var createCallouts = require('../callouts');
+var reporting = require('../reporting');
 
 window.apps = {
   // Loads the dependencies for the current app based on values in `appOptions`.
@@ -32,7 +35,7 @@ window.apps = {
       cdoSounds: CDOSounds,
       position: {blockYCoordinateInterval: 25},
       onInitialize: function() {
-        dashboard.createCallouts(this.level.callouts || this.callouts);
+        createCallouts(this.level.callouts || this.callouts);
         if (userAgentParser.isChrome34()) {
           chrome34Fix.fixup();
         }
@@ -59,7 +62,7 @@ window.apps = {
           // timestamp initially (it will be updated with a timestamp from the server
           // if we get a response.
           lastSavedProgram = decodeURIComponent(report.program);
-          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
+          clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
         }
         report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
@@ -71,18 +74,19 @@ window.apps = {
           timing.stopTiming('Puzzle', script_path, '');
         }
         trackEvent('Activity', 'Lines of Code', script_path, report.lines);
-        sendReport(report);
+        reporting.sendReport(report);
       },
       onComplete: function (response) {
         if (!appOptions.channel) {
           // Update the cache timestamp with the (more accurate) value from the server.
-          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
+          clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
         }
       },
       onResetPressed: function() {
-        cancelReport();
+        reporting.cancelReport();
       },
       onContinue: function() {
+        var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.videoInfo) {
           showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.nextRedirect) {
@@ -90,6 +94,7 @@ window.apps = {
         }
       },
       backToPreviousLevel: function() {
+        var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.previousLevelRedirect) {
           window.location.href = lastServerResponse.previousLevelRedirect;
         }

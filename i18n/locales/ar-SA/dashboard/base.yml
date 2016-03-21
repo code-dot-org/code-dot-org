@@ -322,7 +322,7 @@ ar:
     heading_hoc2014: '<h2>ساعة من البرمجة </h2><h1>لجميع الأعمار</h1>'
     heading_elementary: '<h2>دورات 20 ساعة</h2> <h1>أساسيات علوم الكمبيوتر (جميع الإعمار)</h1>'
     heading_apps: '<h2>المتعة</h2><h1>للجميع</h1>'
-    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
+    heading_tools: '<h2>جاهزة للخطوة التالية؟</h2> <h1>أدوات جافا سكريبت للمدرسة الثانوية</h1>'
     heading_legacy: '<h2>الدورات المعجلةـ</h2><h1>جميع الأعمار</h1>'
     your_gallery: معرض
     no_primary_course: 'جرب الدورة تدريبية في "كود استوديو"'
@@ -419,10 +419,10 @@ ar:
   upsell:
     applab:
       title: مختبر التطبيق
-      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: مختبر التطبيق هي بيئة برمجة حيث يمكنك جعل تطبيقات بسيطة. تصميم تطبيق، التعليمات البرمجية مع كتل أو JavaScript تجعلها تعمل، ثم قم بشاركة التطبيق الخاص بك في ثوان.
+      body_short: تصميم تطبيق، التعليمات البرمجية مع كتل أو JavaScript لتعمل، ثم قُم بمشاركة التطبيق الخاص بك في ثوان.
+      audience: أعمارهم 13 +
+      cta: تعلم كيف
     hoc:
       title: المتاهة الكلاسيكية
       body: جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك.
@@ -468,7 +468,7 @@ ar:
     report_bug: الإبلاغ عن خلل
     support: للحصول على المساعدة
     support_url: support.code.org
-    help_resources: Help and Resources
+    help_resources: المساعدة والموارد
   multi:
     wrong_title: الإجابة غير صحيحة
     wrong_body: 'أن الإجابة التي قمت بإدخالها غير صحيحة.  الرجاء المحاولة مرة أخرى!'
@@ -478,9 +478,9 @@ ar:
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: شكراً
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: شكرا لك على تقديم إجابة.
     correct_title: شكراً
-    correct_body: Thank you for submitting an answer.
+    correct_body: شكرا لك على تقديم إجابة.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -502,7 +502,7 @@ ar:
     open_response_body: شكرا لردكم!
   level_group:
     correct_title: شكراً
-    correct_body: Thank you for submitting an answer
+    correct_body: شكرا لك على تقديم إجابة
   dialog:
     ok: موافق
     startover_title: هل أنت متأكد من أنك تريد البدء من جديد؟
@@ -556,6 +556,7 @@ ar:
     completed_perfect: مكتمل, ممتاز
     furthest_level_attempted: المستوى الأبعد الذي تمت محاولته
     assessment: تقييم
+    submitted: تم تقديمه
   studio:
     courses_working_on: الدورات التدريبية التي تعمل عليها
     completed_courses: الدورات المكتملة

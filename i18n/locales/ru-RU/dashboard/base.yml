@@ -550,6 +550,7 @@ ru:
     completed_perfect: Завершено, отлично
     furthest_level_attempted: запрошен слишком высокий уровень
     assessment: оценка
+    submitted: submitted
   studio:
     courses_working_on: Курсы, в процессе изучения
     completed_courses: Завершенные курсы

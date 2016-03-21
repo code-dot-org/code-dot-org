@@ -4,7 +4,7 @@
 
 var assert = require('assert');
 require('jquery.cookie');
-var state = require('../../src/js/clientState')();
+var state = require('../../src/js/clientState');
 var chai = require('chai');
 
 chai.should();

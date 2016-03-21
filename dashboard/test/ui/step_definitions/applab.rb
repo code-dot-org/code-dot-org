@@ -263,3 +263,11 @@ def get_scale_script
     };
   }
 end
+
+And /^I save the project$/ do
+  script = %Q{
+    Applab.serializeAndSave();
+  }
+
+  @browser.execute_script(script)
+end

@@ -1,18 +1,32 @@
 
+---
+title: Communications
+nav: plp_playbook_nav
+---
 
-## Communications Playbook
+#Communications Playbook
+
+## Teacher Workshop Communications
+
+What Code.org sends automatically 
+
+- Generic workshop reminders
+- Exit surveys from Code.org
+- Code.org Monthly Newsletter
+Exemplar email communications (from Maddie’s existing communications from 15-16)
+
+What PLP should & can send (Carly can write) 
+- One off communications
+- Workshop reminder with extra details
+- Community meetup invitations
 
 
 
-### [Teacher Workshop Communications (Work In Progress)](#teacher)
 
-- 14 Day workshop reminder<br/>
-- 3 Day workshop reminder<br/>
-- Exit Survey<br/>
+Logo zipfile
 
-### [Facilitator Communications](#facilitator)
 
-### [Counselor and Administrator Communications](#c-a-comms)
+## Facilitator Communications
 
 
 

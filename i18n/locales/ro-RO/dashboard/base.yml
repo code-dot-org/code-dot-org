@@ -555,6 +555,7 @@ ro:
     completed_perfect: finalizat, perfect
     furthest_level_attempted: cel mai îndepărtat nivel încercat
     assessment: evaluare
+    submitted: submitted
   studio:
     courses_working_on: Cursurile pe care le studiezi
     completed_courses: Cursuri terminate

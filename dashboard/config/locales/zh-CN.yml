@@ -584,6 +584,7 @@
     completed_perfect: "完美完成"
     furthest_level_attempted: "尝试过最远的关卡"
     assessment: "评估"
+    submitted: submitted
   studio:
     courses_working_on: "您正在进行的课程"
     completed_courses: "已完成的课程"

@@ -1,13 +1,8 @@
 /** @file Runs a specular spotlight across the image from top-left to bottom-right. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 require('../utils');
+var color = require('../color');
 var SVG_NS = require('../constants').SVG_NS;
 var ImageFilter = require('./ImageFilter');
 
@@ -57,7 +52,7 @@ ShineFilter.prototype.createFilterSteps_ = function () {
   var specularResult = this.id_ + '-specular';
   feSpecularLighting.setAttribute('in', blurResult);
   feSpecularLighting.setAttribute('specularExponent', 60);
-  feSpecularLighting.setAttribute('lighting-color', 'white');
+  feSpecularLighting.setAttribute('lighting-color', color.white);
   feSpecularLighting.setAttribute('result', specularResult);
 
   this.fePointLight_ = document.createElementNS(SVG_NS, 'fePointLight');

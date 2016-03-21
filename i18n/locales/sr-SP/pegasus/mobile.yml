@@ -20,8 +20,8 @@ sr-SP:
   submit: Пошаљи
   twentyhours_heading: Пробајте наш курс Увод у Компјутерску науку
   twentyhours_text: Завршили сте свој први Сат програмирања?Научите више основа компјутерске науке и концепта програмирања у овом курсу који следи.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Свако дете заслужује шансу
+  og_description: Сваки ученик у свакој школи треба да има прилику да учи рачунарске науке.
   hoc2014_heading: 'Придружите се<a href="http://hourofcode.com">Сату програмирања </a><br/>8.-14 .децембар,2014<br/>'
   hoc2014_students: Студенти
   hoc2014_try: Пробајте
@@ -66,7 +66,7 @@ sr-SP:
   congrats_next_tutorials_title: Probaj ovaj tutorijal
   congrats_next_tutorials_desc: 'Isprobaj ovae kratake, jednočasovne tutorijale ili isprobaj <a href="%{current_path}/next">partnerski tutorijali</a>.'
   get_a_certificate_of_achievement: Узмите сертификат о достигнућу
-  view_course: View course
+  view_course: Види курс
   view_unit: View unit
   make_app: Make an app
   congrats_guest_speaker_title: Find a guest speaker for your classroom
@@ -376,7 +376,7 @@ sr-SP:
     Ледено доба - Ускоро
     
   playlab_iceage_title_live: Ледено доба
-  starwars_subtitle: Изгради Галаксију Са Кодом
+  starwars_subtitle: Изгради галаксију кôдом
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Користи повуци-испусти блокове и JavaScript.
   starwars_javascript_specs: Samo na engleskom | Moderni pretraživači | Uzrasta 11 +
@@ -617,6 +617,7 @@ sr-SP:
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_submitted: submitted
   dashboard_stage: фаза
   dashboard_puzzle: Пузла
   dashboard_question: Питање
@@ -698,7 +699,7 @@ sr-SP:
   older_systems_subheading: 'Ово би требало радити на старим веб читачима. Да приступите свим туторијалима, инсталирајте <a href="http://browsehappy.com/" target="_blank">модеран веб читач.</a>'
   mobile_devices: Туторијали за мобилне уређаје
   frozen_name: Програмирај са Аном и Елзом
-  starwars_name: 'Ratovi Zvezda: Izgradi Galaksije sa Kôdom'
+  starwars_name: 'Ратови Звезда: Изгради галаксије кôдом'
   codeorg_name: Classic Maze
   codeintl_name: Classic Maze
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -718,7 +719,7 @@ sr-SP:
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
-  codeavengers_name: Направи игрицу са JavaScript-ом
+  codeavengers_name: Направи игрицу JavaScript-ом
   processing_name: Цртање програмрињем
   robomind_name: Програмирајте виртуелног робота
   groklearning_name: Докторка Елиза, виртуелни саговорник
@@ -737,9 +738,9 @@ sr-SP:
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Лист, камен, маказе
   hourofcode_name: Classic Maze
-  playlab_name: Play Lab
+  playlab_name: Играоница
   infinity_name: Infinity Play Lab
-  artist_name: Artist
+  artist_name: Уметник
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
   csfirst_name: CS First
@@ -747,9 +748,9 @@ sr-SP:
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
-  course1_name: Course 1
-  course2_name: Course 2
-  course3_name: Course 3
+  course1_name: Курс 1
+  course2_name: Курс 2
+  course3_name: Курс 3
   course4_name: Course 4
   accelerated_name: Accelerated Course
   cspunit3_name: CS Principles Unit 3
@@ -808,11 +809,11 @@ sr-SP:
   codesters_gradelevel: Годишта 12.-14.
   texasinstruments_gradelevel: Узраста 13.-16.
   teacherled_gradelevel: Узраста 5+
-  course1_gradelevel: Ages 4-6
+  course1_gradelevel: Узраст од 4 до 6 година
   course2_gradelevel: Ages 6-18
-  course3_gradelevel: Ages 8-18
-  course4_gradelevel: Ages 10-18
-  accelerated_gradelevel: Ages 10-18
+  course3_gradelevel: За године од 8 до 18
+  course4_gradelevel: Узраст од 10 до 18 година
+  accelerated_gradelevel: Узраст од 10 до 18 година
   codeorg_platformtext: Модерни претраживачи, паметни телефони, таблети
   codeintl_platformtext: Модерни претраживачи, паметни телефони, таблети
   thinkersmithspanish_platformtext: Није укључен
@@ -901,9 +902,9 @@ sr-SP:
   hourofcode_shortdescription: Научи програмирањ са Марком Цукербергом и Љутим Птицама!
   frozen_shortdescription: Хајде да искористимо програмирање да би се придружили Ани и Елзи у истраживању магије и лепоте леда.
   starwars_shortdescription: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
+  playlab_shortdescription: Направи причу или игру у Играоници!
+  infinity_shortdescription: Креирај приче и игре са Дизнијевим ликовима у Играоници.
+  artist_shortdescription: Цртај слике са уметником!
   monsterocding_shortdescription: Шаренолика програмска авантура за децу.
   allcancode_shortdescription: Имресивна игра Марко са видљивим програмским језиком.
   csfirst_shortdescription: Анимирај причу са два морска карактера. Направи свој стил!

@@ -20,7 +20,7 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 <div style="margin-left: 20px;">
 
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "S1vFrz4NETg", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center' %>
 
 </div>
 

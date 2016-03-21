@@ -88,7 +88,6 @@ class QueueProcessorManager
 
     start_time = Time.now.to_i
 
-
     last_changed = false
     old_metrics_json = ""
     loop do

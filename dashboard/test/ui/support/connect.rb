@@ -84,7 +84,6 @@ def get_browser
   end
 end
 
-
 browser = nil
 
 Before do

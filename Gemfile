@@ -16,12 +16,14 @@ gem 'seamless_database_pool'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'redis', '~> 3.1.0'
-gem 'fakeredis'
 gem 'google_drive', '~> 1.0.0'
 gem 'dalli' # memcached
 gem 'parallel'
 
 gem 'google-api-client'
+gem 'sprockets-derailleur' # Multi-cpu assets precompile
+
+gem 'crowdin-cli'
 
 group :development do
   gem 'annotate', '~> 2.6.6'
@@ -56,10 +58,11 @@ group :development, :test do
   gem 'sqlite3'
   gem 'timecop'
   gem 'fake_sqs'
+  gem 'fakeredis', require: false
 
   # for ui testing
   gem 'cucumber'
-  gem 'selenium-webdriver', '~> 2.41.0'
+  gem 'selenium-webdriver', '~> 2.45.0'
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
@@ -68,7 +71,7 @@ group :development, :test do
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'minitest-around'
-  gem 'eyes_selenium', '~> 2.5.0'
+  gem 'eyes_selenium', '~> 2.27.0'
 end
 
 group :doc do

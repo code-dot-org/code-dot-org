@@ -555,6 +555,7 @@ pt:
     completed_perfect: concluído, perfeito
     furthest_level_attempted: tentativa para o nível mais avançado
     assessment: avaliação
+    submitted: submitted
   studio:
     courses_working_on: Cursos que estás a frequentar
     completed_courses: Cursos concluídos

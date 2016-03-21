@@ -36,8 +36,8 @@
       2-3 Artist 9_instruction: Finalizează acest zmeu
       2-3 Artist Assessment 1_instruction: 'Evaluare: Termină de desenat ultimul dinte,
         25 de pixeli în lățime și 25 de pixeli în înălțime.'
-      2-3 Artist Debugging 1_instruction: Poți face această pălărie cu o lungime până
-        la vârf de 100?
+      2-3 Artist Debugging 1_instruction: Poți face această pălărie până la vârf de
+        100 lungime?
       2-3 Artist Debugging 10_instruction: 'Butonul de direcţie de pe comanda mea
         de joc este prea îngust. Sugestie: Faceți-l mai lat cu 10 pixeli'
       2-3 Artist Debugging 11_instruction: Ajută-mă să termin frumosul meu fulg de
@@ -3576,7 +3576,7 @@
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -4470,8 +4470,10 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

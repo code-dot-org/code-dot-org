@@ -27,7 +27,6 @@ class UserLevel < ActiveRecord::Base
   belongs_to :level
   belongs_to :script
 
-
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
   scope :attempted, -> { where.not(best_result: nil) }

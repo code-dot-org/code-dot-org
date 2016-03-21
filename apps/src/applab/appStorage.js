@@ -24,14 +24,29 @@ function getStatusDescription(status) {
 }
 
 /**
- * Calls onError with a message generated from commandName and status.
- * @param {function} onError Function to call with error message.
+ * Calls onError with a message generated from commandName and status and the status code
+ * @param {function(string, number)} onError Function to call with error message and http status.
  * @param {string} commandName App Lab command name to include in error message.
  * @param {number} status Http status code.
+ * @param {string?} detailedErrorMessage Optional detailed error message.
  */
-function onErrorStatus(onError, commandName, status) {
+function onErrorStatus(onError, commandName, status, detailedErrorMessage) {
   if (onError) {
-    onError('Error in ' + commandName + ': ' + getStatusDescription(status));
+    var errorMessage;
+    // If a detailed error message is provided and its not too long, display that to
+    // the user. (The long message heuristic is intended to prevent us from displaying
+    // e.g. stack traces from server errors.)
+    if (detailedErrorMessage && detailedErrorMessage.length < 256) {
+      errorMessage = detailedErrorMessage;
+    } else {
+      // Otherwise display a generic description based on the HTTP status.
+      errorMessage = getStatusDescription(status);
+    }
+    onError('Error in ' + commandName + ': http status ' + status + ' - ' + errorMessage, status);
+  }
+  // HTTP 429 - Too many requests. We hit this when our data APis are throttled
+  if (status === 429) {
+    Applab.showRateLimitAlert();
   }
 }
 
@@ -40,7 +55,7 @@ function onErrorStatus(onError, commandName, status) {
  * @param {string} key The name of the key.
  * @param {function(Object)} onSuccess Function to call on success with the
        value retrieved from storage.
- * @param {function(string)} onError Function to call on error with error msg.
+ * @param {function(string, number)} onError Function to call on error with error msg and http status.
  */
 AppStorage.getKeyValue = function(key, onSuccess, onError) {
   var req = new XMLHttpRequest();
@@ -60,7 +75,7 @@ var handleGetKeyValue = function(onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onErrorStatus(onError, 'getKeyValue', this.status);
+    onErrorStatus(onError, 'getKeyValue', this.status, this.responseText);
     return;
   }
   var value = JSON.parse(this.responseText);
@@ -72,7 +87,8 @@ var handleGetKeyValue = function(onSuccess, onError) {
  * @param {string} key The name of the key.
  * @param {Object} value The value to associate with the key.
  * @param {function()} onSuccess Function to call on success.
- * @param {function(string)} onError Function to call on error with error msg.
+ * @param {function(string, number)} onError Function to call on error with error msg and
+ *    http status.
  */
 AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
   var req = new XMLHttpRequest();
@@ -89,7 +105,7 @@ var handleSetKeyValue = function(onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onErrorStatus(onError, 'setKeyValue', this.status);
+    onErrorStatus(onError, 'setKeyValue', this.status, this.responseText);
     return;
   }
   onSuccess();
@@ -101,8 +117,8 @@ var handleSetKeyValue = function(onSuccess, onError) {
  * @param {Object} record Object containing other properties to store
  *     on the record.
  * @param {function(Object)} onSuccess Function to call with the new record.
- * @param {function(string)} onError Function to call with an error message
- *    in case of failure.
+ * @param {function(string, number)} onError Function to call with an error message
+ *    and http status in case of failure.
  */
 AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
   var req = new XMLHttpRequest();
@@ -119,7 +135,7 @@ var handleCreateRecord = function(onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onErrorStatus(onError, 'createRecord', this.status);
+    onErrorStatus(onError, 'createRecord', this.status, this.responseText);
     return;
   }
   var record = JSON.parse(this.responseText);
@@ -135,8 +151,8 @@ var handleCreateRecord = function(onSuccess, onError) {
  *     whose contents match all criteria will be returned.
  * @param {function(Array)} onSuccess Function to call with an array of record
        objects.
- * @param {function(string)} onError Function to call with an error message
- *     in case of failure.
+ * @param {function(string, number)} onError Function to call with an error message
+ *     and http status in case of failure.
  */
 AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var req = new XMLHttpRequest();
@@ -154,7 +170,7 @@ var handleReadRecords = function(searchParams, onSuccess, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onErrorStatus(onError, 'readRecords', this.status);
+    onErrorStatus(onError, 'readRecords', this.status, this.responseText);
     return;
   }
   var records = JSON.parse(this.responseText);
@@ -177,8 +193,8 @@ var handleReadRecords = function(searchParams, onSuccess, onError) {
  *     on the record.
  * @param {function(Object, boolean)} onComplete Function to call on success,
  *     or if the record id is not found.
- * @param {function(string)} onError Function to call with an error message
- *     in case of other types of failures.
+ * @param {function(string, number)} onError Function to call with an error message
+ *     and http status in case of other types of failures.
  */
 AppStorage.updateRecord = function(tableName, record, onComplete, onError) {
   var recordId = record.id;
@@ -201,7 +217,7 @@ var handleUpdateRecord = function(tableName, record, onComplete, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onErrorStatus(onError, 'updateRecord', this.status);
+    onErrorStatus(onError, 'updateRecord', this.status, this.responseText);
     return;
   }
   onComplete(record, true);
@@ -214,8 +230,8 @@ var handleUpdateRecord = function(tableName, record, onComplete, onError) {
  * @param {Object} record Object whose other properties are ignored.
  * @param {function(boolean)} onComplete Function to call on success, or if the
  *     record id is not found.
- * @param {function(string)} onError Function to call with an error message
- *     in case of other types of failures.
+ * @param {function(string, number)} onError Function to call with an error message
+ *     and http status in case of other types of failures.
  */
 AppStorage.deleteRecord = function(tableName, record, onComplete, onError) {
   var recordId = record.id;
@@ -238,7 +254,7 @@ var handleDeleteRecord = function(tableName, record, onComplete, onError) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onErrorStatus(onError, 'deleteRecord', this.status);
+    onErrorStatus(onError, 'deleteRecord', this.status, this.responseText);
     return;
   }
   onComplete(true);
@@ -255,20 +271,21 @@ var recordListener = new RecordListener();
  * @param {string} tableName Table to listen to.
  * @param {function(Object, RecordListener.EventType)} onRecord Callback to call when
  * a change occurs with the record object (described above) and event type.
- * @param {function(string)} onError Callback to call with an error to show to the user.
+ * @param {function(string, number)} onError Callback to call with an error to show to the user and
+ *   http status code.
  */
 AppStorage.onRecordEvent = function(tableName, onRecord, onError) {
   if (!onError || typeof onError !== 'function') {
     throw new Error('onError is a required parameter to AppStorage.onRecordEvent');
   }
   if (!tableName) {
-    onError('Error listening for record events: missing required parameter "tableName"');
+    onError('Error listening for record events: missing required parameter "tableName"', 400);
     return;
   }
 
   if (!recordListener.setListener(tableName, onRecord)) {
     onError('You are already listening for events on table "' + tableName + '". ' +
-      'only one event handler can be registered per table.');
+      'only one event handler can be registered per table.', 400);
   }
 };
 
@@ -285,8 +302,8 @@ AppStorage.resetRecordListener = function () {
  *   }
  * @param {bool} overwrite Whether to overwrite a table if it already exists.
  * @param {function()} onSuccess Function to call on success.
- * @param {function(string)} onError Function to call with an error message
- *    in case of failure.
+ * @param {function(string, number)} onError Function to call with an error message
+ *    and http status in case of failure.
  */
 AppStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
@@ -311,7 +328,7 @@ var handlePopulateTable = function (onSuccess, onError) {
 
   if (this.status != 200) {
     if (onError) {
-      onError('error populating tables: unexpected http status ' + this.status);
+      onError('error populating tables: unexpected http status ' + this.status, this.status);
     }
     return;
   }
@@ -329,8 +346,8 @@ var handlePopulateTable = function (onSuccess, onError) {
  *   }
  * @param {bool} overwrite Whether to overwrite a table if it already exists.
  * @param {function()} onSuccess Function to call on success.
- * @param {function(string)} onError Function to call with an error message
- *    in case of failure.
+ * @param {function(string, number)} onError Function to call with an error message
+ *    and http status in case of failure.
  */
 AppStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
@@ -357,7 +374,7 @@ var handlePopulateKeyValue = function (onSuccess, onError) {
 
   if (this.status != 200) {
     if (onError) {
-      onError('error populating kv: unexpected http status ' + this.status);
+      onError('error populating kv: unexpected http status ' + this.status, this.status);
     }
     return;
   }

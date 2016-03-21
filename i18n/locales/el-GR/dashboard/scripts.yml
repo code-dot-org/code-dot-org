@@ -866,7 +866,7 @@ el:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -929,6 +929,7 @@ el:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
@@ -1327,6 +1328,8 @@ el:
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1515,7 +1518,7 @@ el:
         mc:
           title: Η Ώρα του Κώδικα με το Minecraft
           description_short: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα
-          description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή τον Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
+          description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή την Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
           Hour of Code 2015: Ώρα του Κώδικα 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1597,6 +1600,7 @@ el:
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
           description_short: Data Apps
@@ -1610,3 +1614,31 @@ el:
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
+          description: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
+          "Calc: Evaluation Blocks": 'Εκτιμητής: Μπλοκ Αξιολόγησης'
+          "Eval: Strings and Images": 'Εκτιμητής: Κείμενα και Εικόνες'
+          "Unplugged: Contracts": 'Εκτός Σύνδεσης: Συμβόλαια'
+          "Eval: Writing Contracts": 'Εκτιμητής: Σύνταξη Συμβολαίων'
+          "Calc: Defining Variables": 'Υπολογιστήρας: Ορισμός Μεταβλητών'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Εκτός Σύνδεσης: Συνταγή Σχεδιασμού'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+        AlgebraB:
+          title: Η Επιστήμη των υπολογιστών στην Άλγεβρα
+          description_short: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
+          description: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
+          "Unplugged: Video Games and Coordinate Planes": 'Εκτός Σύνδεσης: Βιντεοπαιχνίδια και Συντονισμένα Αεροπλάνα'
+          "Play Lab: Defining Variables (Big Game)": 'Εργαστήριο Παιχνιδιού: Ορισμός Μεταβλητών (Μεγάλο Παιχνίδι)'
+          "Play Lab: Animation (Big Game)": 'Εργαστήριο Παιχνιδιού: Κινούμενα Σχέδια (Μεγάλο Παιχνίδι)'
+          "Unplugged: Booleans": 'Εκτός Σύνδεσης: Δυαδικοί'
+          "Eval: Boolean Operators": 'Εκτιμητής: Δυαδικοί Τελεστές'
+          "Play Lab: Booleans": 'Εργαστήριο Παιχνιδιού: Δυαδικοί'
+          "Play Lab: Boolean (Big Game)": 'Εργαστήριο Παιχνιδιού: Δυαδικοί (Μεγάλο Παιχνίδι)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Εκτός Σύνδεσης: Συνθήκες και Συναρτήσεις Piecewise'
+          "Eval: Conditionals": 'Εκτιμητής: Συνθήκες'
+          "Unplugged: Collision Detection and the Distance Formula": 'Εκτός Σύνδεσης: Ανίχνευση Σύγκρουσης και Τύπος Απόστασης'
+          "Play Lab: Collision Detection (Big Game)": 'Εργαστήριο Παιχνιδιού: Ανίχνευση Σύγκρουσης (Μεγάλο Παιχνίδι)'

@@ -26,7 +26,7 @@ dashboard.header = (function () {
    *   }>
    * }}
    */
-  header.build = function (stageData, progressData, currentLevelId, scriptName) {
+  header.build = function (stageData, progressData, currentLevelId, scriptName, puzzlePage) {
     stageData = stageData || {};
     progressData = progressData || {};
 
@@ -51,7 +51,7 @@ dashboard.header = (function () {
       $('.header_popup .header_text').text(progressData.linesOfCodeText);
     }
 
-    dashboard.progress.renderStageProgress(stageData, progressData, clientProgress, currentLevelId);
+    dashboard.progress.renderStageProgress(stageData, progressData, clientProgress, currentLevelId, puzzlePage);
 
     $('.level_free_play').qtip({
       content: {
@@ -237,7 +237,6 @@ dashboard.header = (function () {
           textAlign: 'left'
         }))
     );
-    $(".header_level_container .progress_container").css("vertical-align", 'top');
 
     header.updateTimestamp();
   };

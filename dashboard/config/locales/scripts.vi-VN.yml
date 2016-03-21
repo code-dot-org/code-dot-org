@@ -1030,6 +1030,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
@@ -1495,6 +1496,8 @@
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1791,6 +1794,7 @@
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description_short: Data Apps
@@ -1807,3 +1811,38 @@
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Calc: Evaluation Blocks': 'Calc: các khối đánh giá'
+          'Eval: Strings and Images': 'Eval: các xâu và các ảnh'
+          'Unplugged: Contracts': 'Unplugged: Hợp đồng'
+          'Eval: Writing Contracts': 'Eval: các hợp đồng văn bản'
+          'Calc: Defining Variables': 'Calc: xác định các biến'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Unplugged: Các bước thiết kế'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Trò chơi điện
+            tử và trục tọa độ'
+          'Play Lab: Defining Variables (Big Game)': 'Phòng thí nghiệm trò chơi: Biến
+            xác định (Trò chơi lớn)'
+          'Play Lab: Animation (Big Game)': 'Phòng thí nghiệm giải trí: Hoạt hình
+            (trò chơi lớn)'
+          'Unplugged: Booleans': 'Unplugged: Các toán tử'
+          'Eval: Boolean Operators': 'Eval: toán Boolean'
+          'Play Lab: Booleans': 'Phòng thí nghiệm trò chơi: Các toán tử'
+          'Play Lab: Boolean (Big Game)': 'Phòng thí nghiệm trò chơi: Các toán tử
+            (Trò chơi lớn)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Điều kiện
+            và đường chức năng'
+          'Eval: Conditionals': 'Eval: các điều kiện'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Phát
+            hiện sự va chạm và Công thức khoảng cách'
+          'Play Lab: Collision Detection (Big Game)': 'Phòng thí nghiệm trò chơi:
+            Phát hiện va chạm (Trò chơi lớn)'

@@ -62,7 +62,7 @@ When /^I reset the puzzle to the starting version$/ do
     And I wait until element "button:contains(Delete Progress)" is visible
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
-    Then I wait for 15 seconds
+    And I wait until element "#showVersionsMobile" is not visible
   }
 end
 
@@ -77,6 +77,10 @@ end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
+end
+
+When /^I wait until element "([^"]*)" is not visible$/ do |selector|
+  wait_with_timeout.until { @browser.execute_script("return !$(#{selector.dump}).is(':visible')") }
 end
 
 # Required for inspecting elements within an iframe

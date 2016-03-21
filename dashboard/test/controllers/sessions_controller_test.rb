@@ -24,7 +24,6 @@ class SessionsControllerTest < ActionController::TestCase
     assert_redirected_to update_login_url(redirect: '//test.code.org/teacher-dashboard')
   end
 
-
   test "students go to learn. homepage after signing in" do
     student = create(:student)
 
@@ -152,7 +151,6 @@ class SessionsControllerTest < ActionController::TestCase
 
     assert_nil @response.cookies["remember_user_token"]
   end
-
 
   test "persistent cookie set if remember me is checked" do
     teacher = create(:teacher)

@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "deleteRecord(\"mySongs\", {id:9}, function(){\r\n  console.log(\"Delete successful\"); \r\n});\r\n",
+    "start_blocks": "deleteRecord(\"mySongs\", {id:9}, function(success) {\r\n  if (success) {\r\n    console.log(\"Record deleted successfully.\");\r\n  }\r\n  else {\r\n    console.log(\"Could not delete record.\");\r\n  }\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -39,7 +39,8 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

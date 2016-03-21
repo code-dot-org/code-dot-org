@@ -34,7 +34,6 @@ class UserLevelsControllerTest < ActionController::TestCase
     assert_not user_level.submitted?
   end
 
-
   test "teacher cannot unsubmit random user level" do
     follower = create :follower
     teacher = follower.user

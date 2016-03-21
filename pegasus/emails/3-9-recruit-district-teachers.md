@@ -3,20 +3,23 @@ from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: "Learn to teach computer science - register this week"
 ---
 
-TEST REGION teacher, 
+REGION NAME teacher, 
 
-Due to demand, we added a limited number of spots to our professional learning program for computer science. Apply by **March 31** to secure your spot. 
+Due to demand, we added a limited number of spots to our Professional Learning Program for computer science. Apply by **March 31** to secure your spot. 
 
 **97% of workshop attendees ranked our program as the best professional development ever**
 
-### Bring a full year course to your high school: 
+### Bring a full-year course to your high school: 
 
-You can participate and begin teaching computer science — absolutely no prior experience is required to teach our courses, CS Principles and Exploring Computer Science. For CS Principles, you'll get an all-expenses-paid trip to our program kickoff, TeacherCon (in Salt Lake City, Atlanta, or Chicago) and ongoing support throughout the school year. Exploring Computer Science workshops will be held locally in your region. 
+You can participate and begin teaching computer science — absolutely no prior experience is required to teach our courses, CS Principles and Exploring Computer Science. 
 
-CS Principles: [Sign up for the professional learning program](https://code.org/educate/professional-learning/cs-principles)
-Exploring Computer Science: [Sign up for the professional learning program](https://code.org/educate/professional-learning/exploring-cs)
+For teachers participating in the CS Principles Professional Learning Program, you'll get an all-expenses-paid trip to our program kickoff, TeacherCon (in Salt Lake City, Atlanta, or Chicago), and ongoing support throughout the school year. Exploring Computer Science teachers will attend workshops held locally in your region. 
 
-<<insert video image link to https://code.org/educate/professional-learning/cs-principles
+**CS Principles:** [Sign up for the professional learning program](https://code.org/educate/professional-learning/cs-principles)
+
+**Exploring Computer Science:** [Sign up for the professional learning program](https://code.org/educate/professional-learning/exploring-cs)
+
+[![Sign up by March 31](https://staging.code.org/images/fit-300/CSPthumbnail.png)](https://code.org/educate/professional-learning/cs-principles)
 
 *"This is my 18th year of teaching and CSP is the best curriculum I have ever implemented."*
 
@@ -24,7 +27,7 @@ Exploring Computer Science: [Sign up for the professional learning program](http
 
 ### Know someone nearby in a non-partner district? 
 
-Code.org will open the Professional Learning Programs to teachers from non-partner districts if space is available. Add your name to the [CSP waitlist](https://form.jotform.com/53365196731157) or [ECS waitlist](https://form.jotform.com/60337734068155) or [use the curriculum that's free for all to use](http://code.org/educate).
+*Code.org will open the Professional Learning Programs to teachers from non-partner districts if space is available. Add your name to the [CSP waitlist](https://form.jotform.com/53365196731157) or [ECS waitlist](https://form.jotform.com/60337734068155) or [use the curriculum that's free for all to use](http://code.org/educate).*
 
 ### More K-12 options
 

@@ -865,7 +865,7 @@ da:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -928,6 +928,7 @@ da:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: Blandet Sommerkursus'
@@ -1326,6 +1327,8 @@ da:
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1596,6 +1599,7 @@ da:
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
           description_short: Data Apps
@@ -1609,3 +1613,31 @@ da:
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Lære funktionel programmering gennem Algebra
+          description: Lære funktionel programmering gennem Algebra
+          "Calc: Evaluation Blocks": 'Calc: Evaluering blokke'
+          "Eval: Strings and Images": 'Eval: Strings og Images'
+          "Unplugged: Contracts": 'Unplugged: kontrakter'
+          "Eval: Writing Contracts": 'Eval: Skrive kontrakter'
+          "Calc: Defining Variables": 'Calc: Definere variabler'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Unplugged: Design opskrift'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+        AlgebraB:
+          title: Datalogi i Algebra
+          description_short: Lære funktionel programmering gennem Algebra
+          description: Lære funktionel programmering gennem Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games og Coordinate Planes'
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Definere variabler (Big Game)'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
+          "Unplugged: Booleans": 'Unplugged: Booleans'
+          "Eval: Boolean Operators": 'Eval: Boolean Operators'
+          "Play Lab: Booleans": 'Play Lab: Boolske operatorer'
+          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals og stykvise funktioner'
+          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision detection og the Distance Formula'
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'

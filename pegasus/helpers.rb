@@ -65,7 +65,7 @@ def not_found!()
 end
 
 def only_for(site)
-  if site.kind_of?(Array)
+  if site.is_a?(Array)
     pass unless site.include?(request.site)
   else
     pass unless request.site == site

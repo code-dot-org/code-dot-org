@@ -610,6 +610,7 @@ is-IS:
   dashboard_progress_completed_too_many_blocks: lokið, of margir kubbar
   dashboard_progress_completed_perfect: lokið, fullkomið
   dashboard_progress_furthest_level_attempted: hæsti unninn áfangi
+  dashboard_progress_submitted: submitted
   dashboard_stage: Áfangi
   dashboard_puzzle: Þraut
   dashboard_question: Spurning

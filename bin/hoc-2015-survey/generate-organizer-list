@@ -13,7 +13,6 @@ DB.fetch(query) do |row|
 end
 puts "#{no_posters.count} organizers requested a poster and didn't get one."
 
-
 query = <<EOS
 kind_s:HocSignup2015
 EOS

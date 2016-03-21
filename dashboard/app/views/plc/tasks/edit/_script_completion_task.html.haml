@@ -1,0 +1,8 @@
+=form_for(@task, url: plc_task_path(@task)) do |f|
+  .field
+    = render partial: 'plc/tasks/edit/common_editable', locals: {f: f}
+    = f.label :script_id
+    = f.text_field :script_id
+
+  .actions
+    = f.submit 'Save'

@@ -35,7 +35,6 @@ class ApiController < ApplicationController
       {id: student.id, levels: student_levels}
     end
 
-
     data = {
             students: students,
             script: {

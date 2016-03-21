@@ -2,8 +2,8 @@
 
 set -e
 
-locales_dir=../../blockly-core/i18n/locales
-core_dir=../../blockly-core
+locales_dir=blockly-core/i18n/locales
+core_dir=blockly-core
 
 locales=$(ls $locales_dir)
 

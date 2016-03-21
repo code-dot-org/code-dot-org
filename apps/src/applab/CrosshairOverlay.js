@@ -1,10 +1,4 @@
 /** @file Creates and controls a coordinates crosshair on the app visualization. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var constants = require('../constants');

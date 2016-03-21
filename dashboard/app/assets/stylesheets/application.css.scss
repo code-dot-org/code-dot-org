@@ -1860,6 +1860,7 @@ $modal-no-icon-gap: 22px;
     font-size: 24px;
     color: $purple;
   }
+
   .congrats {
     font-size: 27px;
     line-height: 30px;
@@ -2127,6 +2128,7 @@ button.notext {
 
 @mixin rounded-border {
   border: 2px solid $light_gray;
+  box-sizing: border-box;
   border-radius: 25px;
 }
 

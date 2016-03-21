@@ -80,7 +80,6 @@ locale_index = 0
 code_index = 1
 crowdincode_index = 2
 
-
 #########################################################################################
 ##                                                                                     ##
 ## rename folders and files from crowdin codes to our codes                            ##
@@ -108,8 +107,6 @@ languages.each_pair do |name, codes|
     puts "Fixed special locale #{codes[crowdincode_index]} to #{codes[code_index]}"
   end
 end
-
-
 
 #########################################################################################
 ##                                                                                     ##
@@ -157,8 +154,6 @@ languages.each_value do |codes|
     end
   end
 end
-
-
 
 #########################################################################################
 ##                                                                                     ##
@@ -239,8 +234,6 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |f
   puts file
   File.write(file, File.read(file).gsub(/\((%[^%]*%)\)/, "(<\\1>)"))
 end
-
-
 
 #########################################################################################
 ##                                                                                     ##

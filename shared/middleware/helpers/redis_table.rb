@@ -73,7 +73,6 @@ class RedisTable
     to_a_from_min_id(nil)
   end
 
-
   # Fetch the rows multiple tables all at once.
   # The parameters are a shard_id and and a table map. The keys of the map
   # are the table names to fetch and the values are the starting id to fetch, or

@@ -1,13 +1,8 @@
 /** @file Filter that adds a white glowing outline to an image. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 require('../utils');
+var color = require('../color');
 var SVG_NS = require('../constants').SVG_NS;
 var ImageFilter = require('./ImageFilter');
 
@@ -46,7 +41,7 @@ GlowFilter.prototype.createFilterSteps_ = function () {
 
   var feFloodWhite = document.createElementNS(SVG_NS, 'feFlood');
   var feFloodWhiteResult = this.id_ + '-flood-white';
-  feFloodWhite.setAttribute('flood-color', 'white');
+  feFloodWhite.setAttribute('flood-color', color.white);
   feFloodWhite.setAttribute('result', feFloodWhiteResult);
 
   var feMorphology = document.createElementNS(SVG_NS, 'feMorphology');

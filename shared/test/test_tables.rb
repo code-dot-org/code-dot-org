@@ -1,11 +1,16 @@
 require_relative 'test_helper'
 require 'channels_api'
+require 'fakeredis'
 require 'tables_api'
 
 class TablesTest < Minitest::Test
   include SetupTest
 
   TableType = CDO.use_dynamo_tables ? DynamoTable : SqlTable
+
+  def teardown
+    TablesApi.reset_max_table_rows_for_test
+  end
 
   def test_create_read_update_delete
     init_apis
@@ -31,6 +36,40 @@ class TablesTest < Minitest::Test
 
     delete_record(record_id)
     assert_nil read_records.first
+
+    delete_channel
+  end
+
+  def test_table_row_limits
+    init_apis
+
+    create_channel
+
+    max_rows = 10
+    TablesApi.set_max_table_rows_for_test(max_rows)
+
+    # Make sure that we can create up to max_rows without error
+    record_ids = []
+    (1..max_rows).each do |i|
+      record_ids << create_record({'name' => "test#{i}", 'age' => 7, 'male' => false})
+    end
+
+    # Make sure we get an error if we attempt to exceed the row limit.
+    begin
+      create_record({'name' => 'yet another record'})
+    rescue
+      assert_equal 403, @tables.last_response.status
+    end
+
+    # Delete a record and make sure we can then add exactly one more record.
+    delete_record(record_ids[0])
+
+    create_record({'name' => 'now there is room'})
+    begin
+      create_record({'name' => 'but only for one more'})
+    rescue
+      assert_equal 403, @tables.last_response.status
+    end
 
     delete_channel
   end
@@ -315,6 +354,8 @@ class TablesTest < Minitest::Test
 
   def create_record(record)
     @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    status = @tables.last_response.status
+    raise "Failed request" unless status >= 200 && status < 400
     @tables.last_response.location.split('/').last
   end
 

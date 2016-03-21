@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+# Downloads all translations from Crowdin Code.org
+# project to i18n/locales.
+# https://crowdin.com/project/codeorg
+
+require File.expand_path('../../pegasus/src/env', __FILE__)
+require 'cdo/languages'
+require 'fileutils'
+
+# Download translated files from Code.org project
+def download_files_from_crowdin
+  exec "crowdin-cli download"
+  rename_from_crowdin_name_to_locale
+end
+
+# Files downloaded from Crowdin are organized by language name,
+# rename folders to be organized by locale
+def rename_from_crowdin_name_to_locale
+  Languages.get_crowdin_name_and_locale.each do |prop|
+    if File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
+      FileUtils.cp_r "i18n/locales/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
+      FileUtils.rm_r "i18n/locales/#{prop[:crowdin_name_s]}"
+    end
+  end
+end
+
+download_files_from_crowdin

@@ -19,13 +19,13 @@
         dashboard.clientState.setCurrentUserKey('#{current_user.id}');
       }
 - else
-  .header_button.header_user
-    = link_to(t('nav.user.signin'), new_user_session_url, class: 'button-signin', id: 'signin_button')
-  - #  This partial can be returned in an API call so it's possible for it to be on non-dashboard pages.
-  :javascript
-    if (typeof dashboard !== 'undefined') {
-      dashboard.clientState.setAnonymousUser();
-    }
+  = link_to new_user_session_url, class: 'button-signin', id: 'signin_button'  do
+    .header_button.header_user
+      %span= t('nav.user.signin')
+    :javascript
+      if (typeof dashboard !== 'undefined') {
+        dashboard.clientState.setAnonymousUser();
+      }
 
 :javascript
   function hideUserOptions() {

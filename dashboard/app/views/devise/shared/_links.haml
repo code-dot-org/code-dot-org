@@ -12,10 +12,11 @@
   = link_to t('auth.forgot_password'), new_password_path(resource_name)
   %br/
   %br/
--#- if devise_mapping.confirmable? && controller_name != 'confirmations'
--#  = link_to t('auth.need_confirmation'), new_confirmation_path(resource_name)
--#  %br/
--#  %br/
+-#
+  - if devise_mapping.confirmable? && controller_name != 'confirmations'
+  = link_to t('auth.need_confirmation'), new_confirmation_path(resource_name)
+  %br/
+  %br/
 - if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
   = link_to t('auth.need_unlock'), new_unlock_path(resource_name)
   %br/

@@ -17,6 +17,7 @@ Sign up below to receive monthly email updates on the progress of Code.org’s C
 - [September 2015](http://us6.campaign-archive2.com/?u=cabadc8d10a257f2cd70c583e&id=af1584b353&e=dd2cbbaf3e)
 - [October 2015](http://us6.campaign-archive2.com/?u=cabadc8d10a257f2cd70c583e&id=f193a1f80f&e=dd2cbbaf3e)
 - [November 2015](http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=a59a55d047&e=dd2cbbaf3e)
+- [January/February 2016](http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=7d46524a2c&e=dd2cbbaf3e)
 
 ## Sign-up information
 <!-- Begin MailChimp Signup Form -->

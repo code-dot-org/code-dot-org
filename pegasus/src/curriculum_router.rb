@@ -165,7 +165,7 @@ class HttpDocument
   end
 
   def resolve_template(site,view)
-    File.find_first_existing(
+    FileUtility.find_first_existing(
       String.multiply_concat([
         sites_dir("#{site}/views/#{view}"),
         sites_dir("all/views/#{view}"),

@@ -282,7 +282,6 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   instance_provisioning_info.private_dns = private_dns_name
   instance_provisioning_info.public_dns = public_dns_name
 
-
   OUTPUT_MUTEX.synchronize {
     print "\nCreated instance #{instance_id} with name #{instance_provisioning_info.name}\n"
     print "Private dns name: #{private_dns_name}\n\n"
@@ -355,7 +354,6 @@ OptionParser.new do |opts|
   opts.on('-n', '--name NAME', 'Name for newly added frontend instance') do |name|
     @options['name'] = name
   end
-
 
   opts.on('-p', '--name-prefix PREFIX', 'Prefix for frontend names') do |prefix|
     @options['prefix'] = prefix

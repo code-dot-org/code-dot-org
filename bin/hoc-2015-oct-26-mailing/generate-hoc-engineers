@@ -9,7 +9,6 @@ volunteers = query_subscribed_contacts(q: volunteer_query)
 puts "#{volunteers.count} hoc-engineers-volunteers"
 export_contacts_to_csv volunteers, "hoc-engineers-volunteers.csv"
 
-
 engineer_query = <<EOS
 kind_s:HelpUs2013 || kind_s:VolunteerEngineerSubmission || (kind_s: Petition && role_s: "engineer")
 EOS

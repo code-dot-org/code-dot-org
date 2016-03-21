@@ -11,7 +11,6 @@ query_subscribed_contacts(q: "kind_s:VolunteerEngineerSubmission")
 # HelpUs2013
 query_subscribed_contacts(q: "kind_s:HelpUs2013")
 
-
 ## Teachers
 # BringToSchool2013
 query_subscribed_contacts(q: "kind_s:BringToSchool2013 && role_s:teacher")
@@ -24,7 +23,6 @@ query_subscribed_contacts(q: "kind_s:HocSignup2014")
 
 # Code studio teachers
 query_subscribed_contacts(q: "kind_s:user && role_s:teacher")
-
 
 include_mailchimp_engineers ALL
 puts "#{ALL.count} including mailchimp engineers"

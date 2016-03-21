@@ -607,6 +607,7 @@ sl-SI:
   dashboard_progress_completed_too_many_blocks: dokončano, imate preveč blokov
   dashboard_progress_completed_perfect: dokončano, odlično
   dashboard_progress_furthest_level_attempted: poskusili ste najvišji nivo
+  dashboard_progress_submitted: submitted
   dashboard_stage: Stopnja
   dashboard_puzzle: Uganka
   dashboard_question: Vprašanje

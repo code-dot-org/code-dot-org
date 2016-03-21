@@ -116,21 +116,10 @@ Style/CaseEquality:
 Style/CaseIndentation:
   Enabled: false
 
-# Offense count: 1
-Style/ClassAndModuleCamelCase:
-  Enabled: false
-
 # Offense count: 7
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: nested, compact
 Style/ClassAndModuleChildren:
-  Enabled: false
-
-# Offense count: 5
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: is_a?, kind_of?
-Style/ClassCheck:
   Enabled: false
 
 # Offense count: 58
@@ -203,11 +192,6 @@ Style/EmptyElse:
 Style/EmptyLineBetweenDefs:
   Enabled: false
 
-# Offense count: 142
-# Cop supports --auto-correct.
-Style/EmptyLines:
-  Enabled: false
-
 # Offense count: 20
 # Cop supports --auto-correct.
 Style/EmptyLinesAroundAccessModifier:
@@ -271,12 +255,6 @@ Style/HashSyntax:
 Style/IndentArray:
   Enabled: false
 
-# Offense count: 11
-# Cop supports --auto-correct.
-# Configuration parameters: IndentationWidth.
-Style/IndentAssignment:
-  Enabled: false
-
 # Offense count: 168
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
@@ -315,11 +293,6 @@ Style/MethodDefParentheses:
 Style/MultilineBlockChain:
   Enabled: false
 
-# Offense count: 4
-# Cop supports --auto-correct.
-Style/MultilineBlockLayout:
-  Enabled: false
-
 # Offense count: 105
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
@@ -346,10 +319,6 @@ Style/MutableConstant:
 # Offense count: 26
 # Cop supports --auto-correct.
 Style/NegatedIf:
-  Enabled: false
-
-# Offense count: 5
-Style/NestedParenthesizedCalls:
   Enabled: false
 
 # Offense count: 18
@@ -458,22 +427,11 @@ Style/SpaceBeforeBlockBraces:
 Style/SpaceBeforeComment:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: AllowForAlignment.
-Style/SpaceBeforeFirstArg:
-  Enabled: false
-
 # Offense count: 561
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
 # SupportedStyles: space, no_space
 Style/SpaceInsideBlockBraces:
-  Enabled: false
-
-# Offense count: 14
-# Cop supports --auto-correct.
-Style/SpaceInsideBrackets:
   Enabled: false
 
 # Offense count: 1987

@@ -1014,6 +1014,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "Кезең 2 Онлайн: Араласқан Жазғы зерттеулер"
@@ -1485,6 +1486,8 @@
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1784,6 +1787,7 @@
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description_short: Data Apps
@@ -1800,3 +1804,38 @@
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Calc: Evaluation Blocks': "Есептеу: Бағалау блоктары"
+          'Eval: Strings and Images': 'Eval: Жолдар және Суреттер'
+          'Unplugged: Contracts': "Компьютерсіз: Келісімшарттар"
+          'Eval: Writing Contracts': 'Eval: Келісімшарттарды жазу'
+          'Calc: Defining Variables': "Есептеу: Айнымалыларды анықтау"
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Kомпьютерсіз: Құрастырушы Кеңес'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Kомпьютерсіз: Видео Ойындар
+            және Кеңістіктегі координаталар'
+          'Play Lab: Defining Variables (Big Game)': "Ойындар Лабораториясы: Айнымалыларды
+            анықтау (Үлкен Ойын)"
+          'Play Lab: Animation (Big Game)': "Ойындар Лабораториясы: Анимация (Үлкен
+            Ойын)"
+          'Unplugged: Booleans': "Компьютерсіз: Бульдік тип"
+          'Eval: Boolean Operators': 'Eval: Бульдік Оператор'
+          'Play Lab: Booleans': "Ойындар Лабораториясы: Бульдік тип"
+          'Play Lab: Boolean (Big Game)': "Ойындар Лабораториясы: Бульдік тип (Үлкен
+            Ойын)"
+          'Unplugged: Conditionals and Piecewise Functions': 'Kомпьютерсіз: Шарттар
+            және Бөлшекті Функциялар'
+          'Eval: Conditionals': 'Eval: Шарттар'
+          'Unplugged: Collision Detection and the Distance Formula': "Компьютерсіз:
+            Қақтығыстарды анықтау және Арақашықтық Формуласы"
+          'Play Lab: Collision Detection (Big Game)': "Ойындар Лабораториясы: Қақтығыстарды
+            анықтау (Үлкен Ойын)"
