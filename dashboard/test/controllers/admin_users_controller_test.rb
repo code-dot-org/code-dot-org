@@ -8,6 +8,8 @@ class AdminUsersControllerTest < ActionController::TestCase
 
     @unconfirmed = create(:teacher, username: 'unconfirmed', confirmed_at: nil, email: 'unconfirmed@email.xx')
     @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
+    @tricky_email = "#{@not_admin.id}bogus@email.xx"
+    @tricky_user = create(:teacher, username: 'notadmin', email: @tricky_email)
   end
 
   generate_admin_only_tests_for :assume_identity_form
@@ -49,6 +51,15 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_redirected_to '/'
 
     assert_equal user.id, session['warden.user.user.key'].first.first
+  end
+
+  test "should assume_identity correctly even if email prefix is a user id" do
+    sign_in @admin
+
+    post :assume_identity, {user_id:  @tricky_email}
+    assert_redirected_to '/'
+
+    assert_equal @tricky_user.id, session['warden.user.user.key'].first.first
   end
 
   test "should assume_identity error if not found" do

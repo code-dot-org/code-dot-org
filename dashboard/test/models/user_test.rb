@@ -316,6 +316,16 @@ class UserTest < ActiveSupport::TestCase
     # this used to raise a mysql error, now we sanitize it into a nonsense string
   end
 
+  test "find by email or username or id" do
+    user = create :user, email: 'foo@example.com'
+    assert_equal user, User.find_by_email_or_username_or_id(user.email)
+    assert_equal user, User.find_by_email_or_username_or_id(user.username)
+    assert_equal user, User.find_by_email_or_username_or_id(user.id)
+
+    assert_equal nil, User.find_by_email_or_username_or_id(user.id + 'student@example.com'),
+                 'should not do bogus matches against email address beginning with numeric id'
+  end
+
   test "creating manual provider user without username generates username" do
     user = User.create(@good_data.merge({provider: User::PROVIDER_MANUAL}))
     assert_equal 'tester', user.username

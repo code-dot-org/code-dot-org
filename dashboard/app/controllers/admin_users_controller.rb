@@ -6,10 +6,7 @@ class AdminUsersController < ApplicationController
   end
 
   def assume_identity
-    user = User.where(id: params[:user_id]).first
-    user ||= User.where(username: params[:user_id]).first
-    user ||= User.find_by_email_or_hashed_email(params[:user_id])
-
+    user = User.find_by_email_or_username_or_id(params[:user_id])
     if user
       sign_in user, :bypass => true
       redirect_to '/'
