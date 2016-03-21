@@ -182,11 +182,8 @@ class User < ActiveRecord::Base
   # - A user name
   def User.find_by_email_or_username_or_id(key)
     user = User.where(id: key).first if key =~ /^[0-9]+$/
-    puts "user1=#{user}"
     user ||= User.find_by_email_or_hashed_email(key) if key =~ /@/
-    puts "user2=#{user}"
     user ||= User.where(username: key).first
-    puts "user3=#{user}"
     user
   end
 
