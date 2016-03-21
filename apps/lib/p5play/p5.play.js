@@ -107,13 +107,6 @@ function createPInstBinder(pInst) {
   };
 }
 
-// These are p5 constants that we'd like easy access to.
-var RGB = p5.prototype.RGB;
-var CENTER = p5.prototype.CENTER;
-var LEFT = p5.prototype.LEFT;
-var BOTTOM = p5.prototype.BOTTOM;
-var PI = p5.prototype.PI;
-
 // These are utility p5 functions that don't depend on p5 instance state in
 // order to work properly, so we'll go ahead and make them easy to
 // access without needing to bind them to a p5 instance.
@@ -764,6 +757,12 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
   var quadTree = pInst.quadTree;
   var camera = pInst.camera;
+
+  // These are p5 constants that we'd like easy access to.
+  var RGB = p5.prototype.RGB;
+  var CENTER = p5.prototype.CENTER;
+  var LEFT = p5.prototype.LEFT;
+  var BOTTOM = p5.prototype.BOTTOM;
 
   /**
   * The sprite's position of the sprite as a vector (x,y).
@@ -2797,6 +2796,9 @@ function CircleCollider(pInst, _center, _radius, _offset) {
 
   var createVector = pInstBind('createVector');
 
+  // These are p5 constants that we'd like easy access to.
+  var CENTER = p5.prototype.CENTER;
+
   this.center = _center;
   this.radius = _radius;
   this.originalRadius = _radius;
@@ -2872,11 +2874,18 @@ function CircleCollider(pInst, _center, _radius, _offset) {
 
 }
 
+defineLazyP5Property('CircleCollider', boundConstructorFactory(CircleCollider));
+
+
 //axis aligned bounding box - extents are the half sizes - used internally
 function AABB(pInst, _center, _extents, _offset) {
   var pInstBind = createPInstBinder(pInst);
 
   var createVector = pInstBind('createVector');
+
+  // These are p5 constants that we'd like easy access to.
+  var CENTER = p5.prototype.CENTER;
+  var PI = p5.prototype.PI;
 
   this.center = _center;
   this.extents = _extents;
@@ -3119,6 +3128,7 @@ function AABB(pInst, _center, _extents, _offset) {
 
 }//end AABB
 
+defineLazyP5Property('AABB', boundConstructorFactory(AABB));
 
 
 /**
@@ -3167,6 +3177,9 @@ function AABB(pInst, _center, _extents, _offset) {
 
 function Animation(pInst) {
   arguments = Array.prototype.slice.call(arguments, 1);
+
+  // These are p5 constants that we'd like easy access to.
+  var CENTER = p5.prototype.CENTER;
 
   /**
   * Array of frames (p5.Image)
