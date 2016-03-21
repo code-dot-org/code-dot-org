@@ -800,7 +800,7 @@ SQL
 
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level, new_result, submitted)
+  def track_level_progress_async(script_level, new_result, submitted, pairings)
     level_id = script_level.level_id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(user_id: self.id,
@@ -813,7 +813,8 @@ SQL
                 'level_id' => level_id,
                 'script_id' => script_id,
                 'new_result' => new_result,
-                'submitted' => submitted}
+                'submitted' => submitted,
+                'pairing_user_ids' => pairings ? pairings.map(&:id) : nil}
     if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
       User.progress_queue.enqueue(async_op.to_json)
     else
@@ -825,8 +826,9 @@ SQL
   end
 
   # The synchronous handler for the track_level_progress helper.
-  def User.track_level_progress_sync(user_id, level_id, script_id, new_result, submitted)
+  def User.track_level_progress_sync(user_id, level_id, script_id, new_result, submitted, pairing_user_ids = nil)
     new_level_completed = false
+    user_level = nil
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.where(user_id: user_id,
                                    level_id: level_id,
@@ -842,9 +844,21 @@ SQL
       user_level.save!
     end
 
-    if new_level_completed && script_id
+    if pairing_user_ids
+      pairing_user_ids.each do |navigator_user_id|
+        navigator_user_level = User.track_level_progress_sync(navigator_user_id, level_id, script_id, new_result, submitted)
+        retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+          PairedUserLevel.find_or_create_by(navigator_user_level_id: navigator_user_level,
+                                            driver_user_id: user_level)
+        end
+      end
+    end
+
+    if new_level_completed && script_id # todo do this as a callback
       User.track_script_progress(user_id, script_id)
     end
+
+    user_level
   end
 
   def User.handle_async_op(op)

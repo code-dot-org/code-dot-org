@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UserTest < ActiveSupport::TestCase
+class UserLevelTest < ActiveSupport::TestCase
   setup do
     @user = create(:user)
     @level = create(:level)
@@ -93,5 +93,23 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, UserLevel.attempted.count
     assert_equal 1, UserLevel.passing.count
     assert_equal 1, UserLevel.perfect.count
+  end
+
+  test "driver and navigator user levels" do
+    student1 = create :student
+    student2 = create :student
+
+    level = create :level
+    script  = create :script
+    driver = create :user_level, user: student1, level: level, script: script
+    navigator = create :user_level, user: student2, level: level, script: script
+
+    driver.navigator_user_levels << navigator
+
+    driver.reload
+    navigator.reload
+
+    assert_equal [navigator], driver.navigator_user_levels
+    assert_equal [driver], navigator.driver_user_levels
   end
 end
