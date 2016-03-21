@@ -1,4 +1,10 @@
 FactoryGirl.define do
+
+  factory :paired_user_level do
+    driver_user_level {user_level}
+    navigator_user_level {user_level}
+  end
+
   factory :level_group do
     game_id 1
     name "MyString"
