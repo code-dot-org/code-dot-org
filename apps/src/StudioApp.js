@@ -2401,7 +2401,7 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
   var renderElement = container[0];
 
   var handleAlertClose = function () {
-    React.unmountComponentAtNode(renderElement);
+    ReactDOM.unmountComponentAtNode(renderElement);
   };
   ReactDOM.render(
     <Alert onClose={handleAlertClose} type={props.type} sideMargin={props.sideMargin}>
