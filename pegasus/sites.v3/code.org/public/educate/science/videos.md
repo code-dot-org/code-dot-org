@@ -106,7 +106,7 @@ The videos introduce teachers to the curriculum materials and tools, agent-based
   <h3>Introduction to StarLogo Nova</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/QrXe-nCV1xM?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
-    <a href="https://www.dropbox.com/s/h6634d3ukpups3y/MS-SCI-PD-Intro-to-Starlogo-Nova-9-2015.mp4">
+    <a href="https://www.dropbox.com/s/ehnnc2a3ftyelds/MS-SCI-PD-Intro-to-Starlogo-Nova-9-2015.mp4">
       Download the video
     </a>
   </p>
