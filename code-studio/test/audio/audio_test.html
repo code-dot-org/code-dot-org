@@ -1,22 +1,27 @@
-!!! 5
-%html{dir: locale_dir}
-  %head
-    = javascript_include_tag 'soundEffects'
-    :javascript
+<!DOCTYPE html>
+<html dir='ltr'>
+  <head>
+    <script>
+      // fake module for sounds
+      window.module = {};
+    </script>
+    <script src="/src/js/Sounds.js"></script>
+    <script>
+      var Sounds = module.exports;
       var sounds = new Sounds();
       sounds.register({
         id: 'intro',
-        ogg: '/blockly/media/skins/craft/music/vignette4-intro.ogg',
-        mp3: '/blockly/media/skins/craft/music/vignette4-intro.mp3'
+        ogg: 'assets/vignette4-intro.ogg',
+        mp3: 'assets/vignette4-intro.mp3'
       });
 
       sounds.register({
         id: 'success',
-        ogg: '/blockly/media/skins/jigsaw/win.ogg',
-        mp3: '/blockly/media/skins/jigsaw/win.mp3'
+        ogg: 'assets/win.ogg',
+        mp3: 'assets/win.mp3'
       });
-
-    :css
+    </script>
+    <style>
       body {
         text-align: center;
         background-color: black;
@@ -30,13 +35,15 @@
       #status {
         color: white;
       }
-
-  %body
-    %input{id:'play-now', type:'button', value: 'Play Now'}
-    %input{id:'play-later', type:'button', value: 'Play Later'}
-    %div{id: 'status'}
+    </style>
+  </head>
+  <body>
+    <input id='play-now' type='button' value='Play Now'>
+    <input id='play-later' type='button' value='Play Later'>
+    <div id='status'>
       Nothing played yet
-    :javascript
+    </div>
+    <script>
       var s = document.getElementById('status');
 
       setTimeout(function () {
@@ -58,3 +65,6 @@
           s.innerHTML = (new Date().getTime()) + ' Starting to play music';
         }, 2000);
       });
+    </script>
+  </body>
+</html>
