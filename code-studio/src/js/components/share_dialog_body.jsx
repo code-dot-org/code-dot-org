@@ -96,9 +96,9 @@ var ShareDialogBody = React.createClass({
     var exportButton;
     if (this.props.appType === 'applab') {
       exportButton = (
-        <button className="btn btn-link" onClick={this.props.onClickExport}>
+        <a className="export-button" onClick={this.props.onClickExport}>
           Export project
-        </button>
+        </a>
       );
     }
 
