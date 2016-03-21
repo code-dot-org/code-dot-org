@@ -89,7 +89,7 @@ social:
       =I18n.t :studiobar_title
     #body.mobile-pad-left64
       - studiobar_items = [ {id: "elementary", url: CDO.studio_url}, {id: "frozen", url: CDO.studio_url('/s/frozen/reset')}, {id: "teacher", url: "/educate/k5"}]
-      - # Temporarily disable shop by adding the "false &&" below
+      -# Temporarily disable shop by adding the "false &&" below
       - if false && request.language == "en"
         - studiobar_items << {id: "shop", url: "/shop"}
       - else
