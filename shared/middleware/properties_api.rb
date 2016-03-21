@@ -12,7 +12,9 @@ class PropertiesApi < Sinatra::Base
   DEFAULT_MAX_PROPERTY_SIZE = 4000
 
   # Maximum allowable property size (key.length + value.to_json.length)
-  @@max_property_size = DEFAULT_MAX_PROPERTY_SIZE
+  def self.max_property_size
+    DEFAULT_MAX_PROPERTY_SIZE
+  end
 
   helpers do
     [
@@ -84,7 +86,7 @@ class PropertiesApi < Sinatra::Base
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
     body = request.body.read
     property_size = name.length + body.length
-    property_too_large(property_size) if  property_size > @@max_property_size
+    property_too_large(property_size) if  property_size > PropertiesApi::max_property_size
     parsed_value = PropertyBag.parse_value(body)
     value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
 
@@ -96,7 +98,7 @@ class PropertiesApi < Sinatra::Base
   end
 
   def property_too_large(property_size)
-    too_large("The key-value pair is too large (#{property_size} bytes). The maximum size is #{@@max_property_size} bytes.")
+    too_large("The key-value pair is too large (#{property_size} bytes). The maximum size is #{PropertiesApi::max_property_size} bytes.")
   end
 
   #
@@ -142,13 +144,4 @@ class PropertiesApi < Sinatra::Base
   put %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |_endpoint, _channel_id, _name|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
-
-  def self.set_max_property_size_for_test(max_property_size)
-    @@max_property_size = max_property_size
-  end
-
-  def self.reset_max_property_size_for_test
-    set_max_property_size_for_test(DEFAULT_MAX_PROPERTY_SIZE)
-  end
-
 end
