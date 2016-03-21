@@ -12,7 +12,7 @@ class PropertiesApi < Sinatra::Base
   DEFAULT_MAX_PROPERTY_SIZE = 4000
 
   # Maximum allowable property size (key.length + value.to_json.length)
-  def self.max_property_size
+  def max_property_size
     DEFAULT_MAX_PROPERTY_SIZE
   end
 
@@ -86,7 +86,7 @@ class PropertiesApi < Sinatra::Base
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
     body = request.body.read
     property_size = name.length + body.length
-    property_too_large(property_size) if  property_size > PropertiesApi::max_property_size
+    property_too_large(property_size) if  property_size > max_property_size
     parsed_value = PropertyBag.parse_value(body)
     value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
 
@@ -98,7 +98,7 @@ class PropertiesApi < Sinatra::Base
   end
 
   def property_too_large(property_size)
-    too_large("The key-value pair is too large (#{property_size} bytes). The maximum size is #{PropertiesApi::max_property_size} bytes.")
+    too_large("The key-value pair is too large (#{property_size} bytes). The maximum size is #{max_property_size} bytes.")
   end
 
   #

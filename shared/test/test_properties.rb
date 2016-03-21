@@ -1,3 +1,4 @@
+require 'mocha/mini_test'
 require_relative 'test_helper'
 require 'channels_api'
 require 'properties_api'
@@ -87,24 +88,25 @@ class PropertiesTest < Minitest::Test
   end
 
   def test_size_limit
-    PropertiesApi.stub(:max_property_size, 20) do
-      key_length_10 = 'ABCDEFGHIJ'
-      value_json_length_10 = '"abcdefgh"'
-      value_json_length_11 = '"abcdefghi"'
+    PropertiesApi.any_instance.stubs(:max_property_size).returns(20)
+    key_length_10 = 'ABCDEFGHIJ'
+    value_json_length_10 = '"abcdefgh"'
+    value_json_length_11 = '"abcdefghi"'
 
-      assert_equal(10, key_length_10.length)
-      assert_equal(10, value_json_length_10.length)
-      assert_equal(11, value_json_length_11.length)
+    assert_equal(10, key_length_10.length)
+    assert_equal(10, value_json_length_10.length)
+    assert_equal(11, value_json_length_11.length)
 
-      set_key_value(key_length_10, value_json_length_10)
-      assert @properties.last_response.successful?, 'max-size property returns 200 OK'
+    set_key_value(key_length_10, value_json_length_10)
+    assert @properties.last_response.successful?, 'max-size property returns 200 OK'
 
-      set_key_value(key_length_10, value_json_length_11)
-      assert_equal 413, @properties.last_response.status, 'oversize property returns 413 Too Large'
+    set_key_value(key_length_10, value_json_length_11)
+    assert_equal 413, @properties.last_response.status, 'oversize property returns 413 Too Large'
 
-      actual_value_json = get_key_value(key_length_10)
-      assert_equal value_json_length_10, actual_value_json, 'oversized property is not written to storage'
-    end
+    actual_value_json = get_key_value(key_length_10)
+    assert_equal value_json_length_10, actual_value_json, 'oversized property is not written to storage'
+
+    PropertiesApi.any_instance.unstub(:max_property_size)
   end
 
   # Methods below this line are test utilities, not actual tests
