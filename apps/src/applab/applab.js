@@ -23,6 +23,7 @@ var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var exportProjectEjs = require('../templates/exportProject.html.ejs');
+var exportProjectReadmeEjs = require('../templates/exportProjectReadme.md.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -924,6 +925,13 @@ Applab.render = function () {
     Applab.reactMountPoint_);
 };
 
+/**
+ * Extracts a CSS file from the given HTML dom node by traversing each node and
+ * looking at the style attributes. We use the element library to determine
+ * which styles are common among each element and split those out into more
+ * generic selectors. This function also removes all the style attributes from
+ * the elements.
+ */
 function extractCSSFromHTML(el) {
   var css = [];
 
@@ -983,9 +991,12 @@ Applab.exportApp = function() {
   appElement.classList.remove('notRunning');
   appElement.classList.remove('withCrosshair');
 
+  // TODO: find another way to get this info that doesn't rely on globals.
+  var appName = window.dashboard && window.dashboard.project.getCurrentName() || 'my-app';
   var htmlBody = appElement.outerHTML;
   var css = extractCSSFromHTML(appElement);
   var html = exportProjectEjs({htmlBody: appElement.outerHTML});
+  var readme = exportProjectReadmeEjs({appName: appName});
 
   return $.when(
     $.ajax('/assets/js/en_us/common_locale.js', {dataType: 'text'}),
@@ -995,13 +1006,12 @@ Applab.exportApp = function() {
   ).then(
     function(commonLocale, applabLocale, applabApi, applabCSS) {
       var zip = new JSZip();
-      // TODO: find another way to get this info that doesn't rely on globals.
-      var appName = window.dashboard && window.dashboard.project.getCurrentName() || 'my-app';
       zip.file(appName + "/applab.js", commonLocale[0] + applabLocale[0] + applabApi[0]);
       zip.file(appName + "/applab.css", applabCSS[0]);
       zip.file(appName + "/index.html", html);
       zip.file(appName + "/style.css", css);
       zip.file(appName + "/code.js", code);
+      zip.file(appName + "/README.md", readme);
       var blob = zip.generate({type:"blob"});
       saveAs(blob, appName + ".zip");
     },
