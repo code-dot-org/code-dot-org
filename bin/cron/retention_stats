@@ -34,11 +34,11 @@ def main()
     stage_level_counts[script_id_stage_id.second] = Array.new(level_count + 1, 0)
   end
 
-  # Find the user_scripts where dropoff happened, e.g., those users with progress on a script -28 to
-  # -14 days ago but not -14 to 0 days ago. Note that we intentionally keep user_scripts pairs where
+  # Find the user_scripts where dropoff happened, e.g., those users with progress on a script -56 to
+  # -42 days ago but not -42 to 0 days ago. Note that we intentionally keep user_scripts pairs where
   # the script was completed.
   drop_off = UserScript.
-    where(last_progress_at: (Time.now - 4 * ONE_WEEK)..(Time.now - 2 * ONE_WEEK))
+    where(last_progress_at: (Time.now - 8 * ONE_WEEK)..(Time.now - 6 * ONE_WEEK))
   drop_off_with_levels = drop_off.
     joins('INNER JOIN user_levels ON user_levels.user_id = user_scripts.user_id AND user_levels.script_id = user_scripts.script_id')
   drop_off_with_levels_and_stages = drop_off_with_levels.

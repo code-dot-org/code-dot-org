@@ -1,0 +1,95 @@
+#!/usr/bin/env ruby
+require_relative '../../../pegasus/src/env'
+require 'cdo/solr'
+require src_dir 'database'
+
+SOLR = Solr::Server.new(host: CDO.solr_server)
+
+def export_contacts_to_csv(contacts, path)
+  columns = nil
+
+  CSV.open(path, 'wb') do |results|
+    contacts.values.each do |contact|
+      unless columns
+        columns = contact.keys
+        results << columns
+      end
+      results << columns.map{|column| contact[column]}
+    end
+  end
+end
+
+def query_contacts(params)
+  fields = params[:fields] if params[:fields]
+
+  [].tap do |results|
+    SOLR.query(params.merge(rows: 10000)).each do |i|
+      i = yield(i) if block_given?
+      results << {email: i['email_s'].downcase.strip, name: i['name_s'], international: i['international'], organizer: i['organizer']}.merge(i.slice(*fields)) if i
+    end
+  end
+end
+
+def query_contacts_with_location(params)
+  raise "there must be a query" if params[:q].nil?
+
+  params = params.dup
+  params[:q] += ' && ' + location_query if location_query
+  params[:fq] = location_filter_query
+
+  query_contacts(params)
+end
+
+UNSUBSCRIBERS = {}.tap do |results|
+  DB[:contacts].where('unsubscribed_at IS NOT NULL').each do |i|
+    email = i[:email].downcase.strip
+    results[email] = true
+  end
+end
+puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
+
+all = {}
+
+ORGANIZERS_2014 = {}.tap do |results|
+  query_contacts(q: 'kind_s:"HocSignup2014"') do |raw|
+    raw['international'] = (!!raw['location_country_s'] && raw['location_country_s'].to_s.downcase != 'united states').to_s
+    raw['organizer'] = 'true'
+    raw
+  end.each do |processed|
+    email = processed[:email].downcase.strip
+    results[email] = processed unless UNSUBSCRIBERS[email] || all[email] # don't override duplicates
+  end
+end
+puts "#{ORGANIZERS_2014.count} 2014 organizers loaded."
+
+all.merge! ORGANIZERS_2014
+
+ORGANIZERS_2013 = {}.tap do |results|
+  query_contacts(q: 'kind_s:"CSEdWeekEvent2013"') do |raw|
+    raw['international'] = (!!raw['country_s'] && raw['country_s'].downcase != 'united states').to_s
+    raw['organizer'] = 'true'
+    raw
+  end.each do |processed|
+    email = processed[:email].downcase.strip
+    results[email] = processed unless UNSUBSCRIBERS[email] || all[email] # don't override duplicates
+  end
+end
+puts "#{ORGANIZERS_2013.count} 2013 organizers loaded."
+
+all.merge! ORGANIZERS_2013
+
+TEACHERS = {}.tap do |results|
+  query_contacts(q: 'kind_s:"user" && role_s:"teacher"') do |raw|
+    raw['international'] = (!!raw['create_ip_country_s'] && raw['create_ip_country_s'].downcase != 'united states').to_s
+    raw['organizer'] = 'false'
+    raw
+  end.each do |processed|
+    email = processed[:email].downcase.strip
+    results[email] = processed unless UNSUBSCRIBERS[email] || all[email] # don't override duplicates
+  end
+end
+puts "#{TEACHERS.count} teachers loaded."
+
+all.merge! TEACHERS
+p all.count
+export_contacts_to_csv all, "hoc-2015-general.csv"
