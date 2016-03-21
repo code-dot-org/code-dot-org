@@ -924,14 +924,67 @@ Applab.render = function () {
     Applab.reactMountPoint_);
 };
 
+function extractCSSFromHTML(el) {
+  var css = [];
+
+  var baseEls = {};
+  for (var elementType in elementLibrary.ElementType) {
+    var baseEl = elementLibrary.createElement(elementType, 0, 0, true);
+    baseEls[elementType] = baseEl;
+    var selector = baseEl.tagName.toLowerCase();
+    if (baseEl.classList.length > 0) {
+      selector += '.' + baseEl.classList[0];
+    }
+    if (baseEl.tagName.toLowerCase() === 'input') {
+      selector += '[type=' + (baseEl.getAttribute('type') || 'text') + ']';
+    }
+    css.push(selector + ' {');
+    for (var k = 0; k < baseEl.style.length; k++) {
+      var key = baseEl.style[k];
+      css.push('  ' + key + ': ' + baseEl.style[key] + ';');
+    }
+    css.push('}');
+    css.push('');
+  }
+
+  function traverse(root) {
+    for (var i = 0; i < root.children.length; i++) {
+      var child = root.children[i];
+      var elementType = elementLibrary.getElementType(child, true);
+      if (elementType) {
+        var styleDiff = [];
+        for (var k = 0; k < child.style.length; k++) {
+          var key = child.style[k];
+          if (child.style[key] !== baseEls[elementType].style[key]) {
+            styleDiff.push('  ' + key + ': ' + child.style[key] + ';');
+          }
+        }
+        child.removeAttribute('style');
+        if (styleDiff.length > 0) {
+          css.push('#' + child.id + ' {');
+          css = css.concat(styleDiff);
+          css.push('}');
+          css.push('');
+        }
+      }
+      traverse(child);
+    }
+  }
+  traverse(el);
+  return css.join('\n');
+}
+
 Applab.exportApp = function() {
   var code = studioApp.editor.getValue();
-  // TODO: find another way to get this element that doesn't rely on global element id.
-  var appElement = document.getElementById('divApplab').cloneNode(true);
-  appElement.style.display = 'block';
+  var holder = document.createElement('div');
+  holder.innerHTML = designMode.serializeToLevelHtml();
+  var appElement = holder.children[0];
+  appElement.id = 'divApplab';
   appElement.classList.remove('notRunning');
   appElement.classList.remove('withCrosshair');
+
   var htmlBody = appElement.outerHTML;
+  var css = extractCSSFromHTML(appElement);
   var html = exportProjectEjs({htmlBody: appElement.outerHTML});
 
   return $.when(
@@ -947,6 +1000,7 @@ Applab.exportApp = function() {
       zip.file(appName + "/applab.js", commonLocale[0] + applabLocale[0] + applabApi[0]);
       zip.file(appName + "/applab.css", applabCSS[0]);
       zip.file(appName + "/index.html", html);
+      zip.file(appName + "/style.css", css);
       zip.file(appName + "/code.js", code);
       var blob = zip.generate({type:"blob"});
       saveAs(blob, appName + ".zip");
