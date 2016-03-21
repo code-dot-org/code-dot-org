@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-require File.expand_path('../../pegasus/src/env', __FILE__)
-require src_dir 'database'
-require pegasus_dir 'helpers/professional_development_workshop_helpers'
-require 'cdo/csv'
-require 'cdo/activity_constants'
-
-puts CSV.generate_from_dataset(generate_professional_development_workshop_teachers_report)
