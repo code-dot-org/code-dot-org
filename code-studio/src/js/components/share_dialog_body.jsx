@@ -35,13 +35,28 @@ var ShareDialogBody = React.createClass({
 
   getInitialState: function () {
     return {
-      showSendToPhone: false
+      showSendToPhone: false,
+      exporting: false,
+      exportError: null,
     };
   },
 
   showSendToPhone: function (event) {
     this.setState({showSendToPhone: true });
     event.preventDefault();
+  },
+
+  clickExport: function() {
+    this.setState({exporting: true});
+    this.props.onClickExport().then(
+      this.setState.bind(this, {exporting: false}),
+      function() {
+        this.setState({
+          exporting: false,
+          exportError: 'Failed to export project. Please try again later.'
+        });
+      }.bind(this)
+    );
   },
 
   render: function () {
@@ -95,10 +110,21 @@ var ShareDialogBody = React.createClass({
 
     var exportButton;
     if (this.props.appType === 'applab') {
+      var spinner = this.state.exporting ? <i className="fa fa-spinner fa-spin"></i> : null;
+      // TODO: Make this use a nice UI component from somewhere.
+      var alert = this.state.exportError ? (
+        <div className="alert fade in">
+          {this.state.exportError}
+        </div>
+      ) : null;
       exportButton = (
-        <a className="export-button" onClick={this.props.onClickExport}>
-          Export project
-        </a>
+        <div>
+          <a className="export-button" onClick={this.clickExport}>
+            {spinner}
+            Export project
+          </a>
+          {alert}
+        </div>
       );
     }
 
