@@ -22,7 +22,7 @@ window.apps = {
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
     }
-    dashboard.project = project;
+    window.dashboard.project = project;
 
     timing.startTiming('Puzzle', script_path, '');
 
@@ -42,7 +42,7 @@ window.apps = {
         if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
           $('#clear-puzzle-header').hide();
           // Only show Version History button if the user owns this project
-          if (dashboard.project.isOwner()) {
+          if (project.isOwner()) {
             $('#versions-header').show();
           }
         }
@@ -161,7 +161,7 @@ window.apps = {
       throw new Error('Assume existence of window.dashboard');
     }
 
-    dashboard.project = project;
+    window.dashboard.project = project;
   },
 
   // Define blockly/droplet-specific callbacks for projects to access
