@@ -372,6 +372,7 @@ module LevelsHelper
         :thank_you => URI.escape(I18n.t('footer.thank_you')),
         :help_from_html => I18n.t('footer.help_from_html'),
         :art_from_html => URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+        :code_from_html => URI.escape(I18n.t('footer.code_from_html')),
         :powered_by_aws => I18n.t('footer.powered_by_aws'),
         :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
     }

@@ -16,6 +16,8 @@
           %br/
           = sanitize(t('footer.art_from_html_old', current_year: Time.now.year), tags: %w(a br), attributes: %w(href))
           %br/
+          = sanitize(t('footer.code_from_html'), tags: %w(a br), attributes: %w(href))
+          %br/
           = sanitize(t('footer.powered_by_aws'), tags: %w(a br), attributes: %w(href))
 
       .span3{style: 'text-align: right;' + (full_width ? 'width: 140px; margin-left: 0px' : '')}
