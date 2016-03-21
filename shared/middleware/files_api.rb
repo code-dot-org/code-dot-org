@@ -58,7 +58,7 @@ class FilesApi < Sinatra::Base
   end
 
   def quota_crossed_half_used?(app_size, body_length)
-    app_size < max_app_size / 2 && app_size + body_length >= max_app_size / 2
+    (app_size < max_app_size / 2) && (app_size + body_length >= max_app_size / 2)
   end
 
   def quota_crossed_half_used(quota_type, encrypted_channel_id)
