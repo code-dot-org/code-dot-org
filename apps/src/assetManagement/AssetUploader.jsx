@@ -1,8 +1,7 @@
-
 /**
- * A component for managing hosted assets.
+ * A file upload component.
  */
-module.exports = React.createClass({
+var AssetUploader = React.createClass({
   propTypes: {
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
@@ -14,7 +13,7 @@ module.exports = React.createClass({
   componentDidMount: function () {
     var props = this.props;
 
-    $(React.findDOMNode(this.refs.uploader)).fileupload({
+    $(this.refs.uploader).fileupload({
       dataType: 'json',
       url: '/v3/assets/' + props.channelId + '/',
       // prevent fileupload from replacing the input DOM element, which
@@ -34,7 +33,7 @@ module.exports = React.createClass({
   },
 
   componentWillUnmount: function () {
-    $(React.findDOMNode(this.refs.uploader)).fileupload('destroy');
+    $(this.refs.uploader).fileupload('destroy');
   },
 
   /**
@@ -42,8 +41,7 @@ module.exports = React.createClass({
    * Forward clicks on the button to the hidden file input.
    */
   fileUploadClicked: function () {
-    var uploader = React.findDOMNode(this.refs.uploader);
-    uploader.click();
+    this.refs.uploader.click();
   },
 
   render: function () {
@@ -68,3 +66,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = AssetUploader;

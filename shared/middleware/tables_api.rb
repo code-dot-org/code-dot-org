@@ -2,8 +2,19 @@ require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'csv'
+require 'redis'
+require_relative './helpers/table_coerce'
+require_relative './helpers/table_limits'
 
 class TablesApi < Sinatra::Base
+
+  DEFAULT_MAX_TABLE_ROWS = 1000
+
+  # Maximum number of rows allowed in a table (either in initial import or
+  # after inserting rows.) Logically constant but can be modified in tests.
+  @@max_table_rows = DEFAULT_MAX_TABLE_ROWS
+
+  @@redis = Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379')
 
   helpers do
     [
@@ -15,7 +26,7 @@ class TablesApi < Sinatra::Base
     end
   end
 
-  TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+  TableType = CDO.use_dynamo_tables ? DynamoTable : SqlTable
 
   #
   # GET /v3/(shared|user)-tables/<channel-id>/<table-name>
@@ -25,7 +36,52 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
-    TableType.new(channel_id, storage_id(endpoint), table_name).to_a.to_json
+    rows = TableType.new(channel_id, storage_id(endpoint), table_name).to_a
+
+    # Remember the number of rows in the table since we now have an accurate estimate.
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits.set_approximate_row_count(rows.length)
+
+    rows.to_json
+  end
+
+  #
+  # GET /v3/(shared|user)-tables/<channel-id>/<table-name>/metadata
+  #
+  # Returns the metdata for the given table
+  #
+  get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/metadata$} do |endpoint, channel_id, table_name|
+    dont_cache
+    content_type :json
+    table_metadata = TableType.new(channel_id, storage_id(endpoint), table_name).metadata
+
+    no_content if table_metadata.nil?
+    table_metadata.to_json
+  end
+
+  #
+  # post /v3/(shared|user)-tables/<channel-id>/<table-name>/metadata
+  #
+  # Sets the metdata for the given table
+  #
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/metadata$} do |endpoint, channel_id, table_name|
+    dont_cache
+    content_type :json
+
+    table = TableType.new(channel_id, storage_id(endpoint), table_name)
+
+    # create metadata from records if we don't have any
+    table.ensure_metadata
+    existing_columns = JSON.parse(table.metadata['column_list'])
+
+    column_list = request.GET['column_list']
+    unless column_list.nil?
+      # filter out existing columns, as some may have been created during our ensure_metadata step
+      new_columns = JSON.parse(column_list).reject{ |col| existing_columns.include?(col) }
+      table.add_columns(new_columns)
+    end
+
+    table.metadata.to_json
   end
 
   #
@@ -47,6 +103,12 @@ class TablesApi < Sinatra::Base
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     dont_cache
     TableType.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
+
+    # Decrement the row count only after the delete succeeds, to avoid a spurious
+    # decrement if the record isn't present or in other failure cases.
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits.decrement_row_count
+
     no_content
   end
 
@@ -78,6 +140,20 @@ class TablesApi < Sinatra::Base
     no_content
   end
 
+  # POST /v3/(shared|user)-tables/<channel-id>/<table-name>/column?column_name=foo
+  #
+  # Adds a new column
+  #
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/column} do |endpoint, channel_id, table_name|
+    dont_cache
+    column_name = request.GET['column_name']
+    if column_name.empty?
+      halt 400, {}, "New column name cannot be empty"
+    end
+    TableType.new(channel_id, storage_id(endpoint), table_name).add_columns([column_name])
+    no_content
+  end
+
   #
   # DELETE /v3/(shared|user)-tables/<channel-id>/<table-name>
   #
@@ -86,6 +162,13 @@ class TablesApi < Sinatra::Base
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
     dont_cache
     TableType.new(channel_id, storage_id(endpoint), table_name).delete_all
+    #TODO - delete metadata
+
+    # Zero out the approximate row count just in case the user creates a new table
+    # with the same name.
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits.set_approximate_row_count(0)
+
     no_content
   end
 
@@ -94,7 +177,7 @@ class TablesApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)/delete$} do |endpoint, channel_id, table_name, id|
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)/delete$} do |_endpoint, _channel_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
@@ -106,6 +189,13 @@ class TablesApi < Sinatra::Base
   post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
+
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    row_count = limits.get_approximate_row_count
+    if row_count >= @@max_table_rows
+      halt 403, {}, "Too many rows, a table may have at most #{@@max_table_rows} rows"
+    end
+    limits.increment_row_count
 
     value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
 
@@ -126,7 +216,7 @@ class TablesApi < Sinatra::Base
 
     new_value =  JSON.parse(request.body.read)
 
-    if new_value.has_key? 'id' and new_value['id'].to_i != id.to_i
+    if new_value.has_key?('id') && new_value['id'].to_i != id.to_i
       halt 400, {}, "Updating 'id' is not allowed" if new_value.has_key? 'id'
     end
     new_value.delete('id')
@@ -138,11 +228,11 @@ class TablesApi < Sinatra::Base
     value.to_json
   end
 
-  patch %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
+  patch %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |_endpoint, _channel_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
-  put %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
+  put %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |_endpoint, _channel_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
@@ -168,7 +258,7 @@ class TablesApi < Sinatra::Base
     # this check fails on Win 8.1 Chrome 40
     #unsupported_media_type unless params[:import_file][:type]== 'text/csv'
 
-    max_records = 5000
+    max_records = @@max_table_rows
     table_url = "/v3/edit-csp-table/#{channel_id}/#{table_name}"
     back_link = "<a href='#{table_url}'>back</a>"
     table = TableType.new(channel_id, storage_id(endpoint), table_name)
@@ -207,12 +297,49 @@ class TablesApi < Sinatra::Base
       halt 500
     end
 
+    records = TableCoerce.coerce_columns_from_data(records, columns)
+
     # TODO: This should probably be a bulk insert
     records.each do |record|
       table.insert(record, request.ip)
     end
+    table.ensure_metadata
+
+    # Set the approximate row count.
+    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits.set_approximate_row_count(records.length)
 
     redirect "#{table_url}"
+  end
+
+  #
+  # POST /v3/coerce-(shared|user)-tables/<channel-id>/<table-name>
+  #
+  # Imports a csv form post into a table, erasing previous contents.
+  #
+  post %r{/v3/coerce-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
+    content_type :json
+
+    table = TableType.new(channel_id, storage_id(endpoint), table_name)
+
+    column = request.GET['column_name']
+    type = request.GET['type']
+
+    return 400 unless ['string', 'boolean', 'number'].include?(type)
+
+    current_records = table.to_a
+    new_records, all_converted = TableCoerce.coerce_column(current_records, column, type.to_sym)
+
+    # TODO: This should probably be a bulk operation
+    new_records.each do |record|
+      table.delete(record['id'])
+      table.insert(record, request.ip)
+    end
+
+    # The approximate row count at this point may be an underestimate, which
+    # we are willing to allow.
+
+    all_converted.to_json
   end
 
   #
@@ -223,7 +350,8 @@ class TablesApi < Sinatra::Base
   #     'table_1': [{'name': 'trevor', 'age': 30}, ...],
   #     'table_2': [{'city': 'SF', 'people': 6}, ...],
   #   }
-  #
+  # Also creates metadata (if it doesn't already exist) based on any existing
+  # data for each of the passed in tables.
   post %r{/v3/(shared|user)-tables/([^/]+)$} do |endpoint, channel_id|
     begin
       json_data = JSON.parse(request.body.read)
@@ -235,7 +363,7 @@ class TablesApi < Sinatra::Base
     overwrite = request.GET['overwrite'] == '1'
     json_data.keys.each do |table_name|
       table = TableType.new(channel_id, storage_id(endpoint), table_name)
-      if table.exists? and !overwrite
+      if table.exists? && !overwrite
         next
       end
 
@@ -243,6 +371,19 @@ class TablesApi < Sinatra::Base
       json_data[table_name].each do |record|
         table.insert(record, request.ip)
       end
+      limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+      limits.set_approximate_row_count(json_data[table_name].length)
+
+      table.ensure_metadata()
     end
+
+  end
+
+  def self.set_max_table_rows_for_test(max_table_rows)
+    @@max_table_rows = max_table_rows
+  end
+
+  def self.reset_max_table_rows_for_test
+    set_max_table_rows_for_test(DEFAULT_MAX_TABLE_ROWS)
   end
 end

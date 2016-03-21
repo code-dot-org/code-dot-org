@@ -1,25 +1,22 @@
-name 'ECS Phase 3 Welcome'
+name 'ECS Phase 3 Welcome' 
 css 'unplugged'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
-
-## Getting Started > Welcome!
-
-
-Congratulations on completing your Exploring Computer Science professional development experience this summer. We hope your back-to-school transition has been an easy one, and that you’re eager to get started applying your learning of ECS in your classes.
-
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Getting Started > Welcome! 
+<br>
+Welcome back to your Exploring Computer Science version 5 online professional development! 
 <br><br>
->As you are aware, throughout the 2015-16 school year, you will participate in on-going academic year support. This support will be provided to you through a blended model:
-
->- Four face-to-face professional development sessions throughout the school year, in your region. These sessions are held on specific dates in your region. [You can find the dates for your region’s trainings here](https://code.org/educate/pd/15-16).
->- five self-paced online PD courses, which provide real-time support to you as you deliver content from the ECS Version 5 curriculum.
-<br><br>
-
-Click “Continue” below to begin this online PD course for ECS Version 5.
-
-<br/>
-
+As you are aware, throughout the 2015-16 school year, you will participate in on-going academic year support. This support will be provided to you through a blended model: 
+<br><br>  
+>- Four face-to-face professional development sessions throughout the school year, in your region. These sessions are held on specific dates in your region. [You can find the dates for your region’s trainings here](https://code.org/educate/pd/15-16). 
+>- Five self-paced online PD courses, which provide real-time support to you as you deliver content from the ECS Version 5 curriculum. 
+ 
+Click “Continue” below to begin the online PD course for ECS Version 5 Unit 6: Robotics. 
+ 
+<br/> 
+ 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 MARKDOWN

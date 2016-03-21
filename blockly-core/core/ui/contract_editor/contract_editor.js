@@ -150,7 +150,6 @@ Blockly.ContractEditor.GRID_LINE_COLOR = '#5b6770'; // dark gray
 
 Blockly.ContractEditor.prototype.definitionBlockType = 'functional_definition';
 Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get';
-Blockly.ContractEditor.prototype.hasDeleteButton = true;
 
 Blockly.ContractEditor.prototype.create_ = function() {
   Blockly.ContractEditor.superClass_.create_.call(this);
@@ -496,6 +495,7 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(isVariable) {
   var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
   tempFunctionDefinitionBlock.updateOutputType(Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE);
+  tempFunctionDefinitionBlock.userCreated = true;
 
   if (isVariable) {
     tempFunctionDefinitionBlock.convertToVariable();

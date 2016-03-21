@@ -42,12 +42,12 @@ module LocaleHelper
   def accepted_locales
     header = request.env.fetch('HTTP_X_VARNISH_ACCEPT_LANGUAGE', '')
     begin
-      header.split(',').map { |entry|
+      locale_codes = header.split(',').map do |entry|
         locale, weight = entry.split(';')
         weight = (weight || 'q=1').split('=')[1].to_f
         [locale, weight]
-      }.sort_by { |_, weight| -weight
-      }.map { |locale, _| locale.strip }
+      end
+      locale_codes.sort_by { |_, weight| -weight }.map { |locale, _| locale.strip }
     rescue
       Logger.warn "Error parsing Accept-Language header: #{header}"
       []

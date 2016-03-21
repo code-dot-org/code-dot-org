@@ -7,6 +7,11 @@ nav: educate_nav
 
 Sign up below to receive monthly email updates on the progress of Code.org’s Computer Science Discoveries project. These mails are intended to be shared with members of the Computer Science education community who are interested in peeking under the hood as we actively work to develop the curriculum and tools for the course. As a part of these monthly updates, we will include the latest information on what lessons are drafted and available on the website to try out in your classroom. You'll be able to unsubscribe at any time from the emails.
 
+## Previous updates
+
+- [February 2016](http://us6.campaign-archive2.com/?u=cabadc8d10a257f2cd70c583e&id=1fe50039ac&e=)
+- [March 2016] (http://us6.campaign-archive2.com/?u=cabadc8d10a257f2cd70c583e&id=772a834d87&e=852a10621c)
+
 ## Sign-up information
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">

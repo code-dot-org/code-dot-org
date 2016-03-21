@@ -581,184 +581,169 @@
           ponavljanje iste aktivnosti više puta.
       2:
         image: notes/C1_bee_loops_2.png
-        text: In this level, we want the bee to collect three nectars from the flower.
-          Instead of using three "get nectar" blocks, you're going to use the repeat
-          block to get nectar three times. Hit "Run" and see if you got it right.
-          Nice!
+        text: Na ovom nivou želimo da pčela skupi tri nektra s cvijeća. Umjesto da
+          koristiš tri bloka "Pokupi nektar", koristi blok "Ponovi". Klikni "Pokreni"
+          i pogledaj što će se dogoditi. Lijepo!
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: This lesson is called the big event. It's all about how we can control
-          our programs and actually change the way a program runs on the fly using
-          events, like the push of a button or the click of a mouse.
+        text: Ova lekcija se zove "Veliki događaj". Razgovarat ćemo kako možemo kontrolirati
+          naše programe i promijeniti način na koji program radi pomoću pritiska tipke
+          ili klikom miša.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: For this lesson, you'll be controlled with a paper remote control. It's
-          just like a real-live video game.
+        text: U ovoj lekciji kontrolirat će vas pomoću papirnatog daljinskog upravljača.
+          Kao da smo u stvarnoj video igrici.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: An event is an action  that causes something to happen. It's like when
-          you click the button on a mouse and a webpage loads. That's an event. When
-          you touch your screen on a tablet to scroll, that's an event also. Events
-          are a great way of letting the user direct your program whenever they need
-          or want to.
+        text: '"Događaj" je naredba pomoću koje se nešto dogodi. Kao kada klikneš
+          mišem i otvori se web stranica. To je "Događaj". Kada dotakneš zaslon na
+          tabletu kako bi pomaknuo sliku to je isto "Događaj". "Događaji" su odlični
+          kako bi korisnici upravljali tvojim programom kad god žele ili je to potrebno.'
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: Things happen that we all respond to. We feel hungry and we go to the
-          fridge. We hear the mailman come and he puts our mail in the mailbox  and
-          then we go get our mail. Those are just like the events of pushing a button
-          or moving a joystick. They are something that happens that triggers us to
-          do something.
+        text: Postoje događaji na koje svi reagiramo. Kada smo gladni, odemo do frižidera.
+          Kada čujemo poštara kako dolazi i ostavlja poštu u sandučiću, izađemo i
+          pokupimo poštu. To su događaji kao pritisak tipke ili pomicanje joystick-a.
+          To je nešto što se dogodi i potakne nas da učinimo nešto.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: In video games, there's an event called "Update" and it happens 30 or
-          60 times a second. For videogame programmers that's almost more important
-          as an event than the buttons or the joystick.
+        text: U video igricama postoji događaj koji se zove "Osvježavanje" i odvija
+          se 30 do 60 puta u sekundi. Za porogramere video igrica to je skoro pa važnije
+          od događaja koje zadamo tipkom ili joystickom.
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: The main event we're watching for is that "Update" tick happening. And
-          then we check the joystick in the tick. So we say, "Oh, has somebody pushed
-          the button this frame? Yes or no?" Without events, the player couldn't move,
-          you couldn't jump, you wouldn't be able to control what's going on. The
-          videogame wouldn't be able to animate anything.
+        text: 'Glavni događaj koji gledamo je što se dogodi pri svakom osvježavanju.
+          Provjeravamo što se dogodilo s joystickom u svakom osvježenju. Pa kažemo:
+          "Oh, je li netko pritisnuo tipku u ovom okviru? Da ili ne?". Bez događaja,
+          igrač se ne bi mogao kretati, skočiti, ne bi mogao kontrolirati što se događa.
+          Video igrama ne bismo mogli oživjeti stvari.'
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: In sand sculpture you've got to know that failure is part of the program.
-          But if you're persist, it's just going to get nothing but better and more
-          exciting for you.Persistence is the name of the game. Stay with it, you'll
-          love it.
+        text: U izradi skulptura od pijeska, neuspjeh je dio rada. Ali ako ste uporni,
+          skulptura će postajati sve bolja i bolja i vama će biti uzbudljivije. Naziv
+          igre je "Upornost". Ne odustajte, svidjet će vam se.
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: This lesson is called building a foundation. In this lesson, we'll work
-          on a task that is meant to be really difficult. You will figure out how
-          to make a structure at least as tall as one of these cups and it's got to
-          be strong enough to hold the weight of a book.
+        text: Naziv lekcije je "Izrada temelja". U ovoj lekciji zadatak neće biti
+          jednostavan. Morate osmisliti strukturu visoku najmanje kao ova čaša i mora
+          biti dovoljno čvrsta da drži ovu knjigu.
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: There might be times that our creation doesn't work out. There might
-          be times that we get frusrated and want to give up. There might be a lot
-          of those moments. But if we keep on trying, give it our best shot over and
-          over again, then we're sure to get it before long.
+        text: Biti će trenutaka kada nae djelo neće uspjeti. Bit će trenutaka kada
+          ćemo se odjećati bespomoćno i htjeti odustati. Takvih trenutaka može biti
+          mnogo. Ali ako nastavimo pokušavati i damo najbolje od sebe svaki put, uspjeh
+          će sigurno doći.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: Persistence is all about hanging in there when you really want to give
-          up. If you want to create something new and different, there's going to
-          be a lot of failures along the way.
+        text: Upornost je ne odustati kada to stvarno želimo. Ako želite nešto stvoriti,
+          nešto novo i drugačije, puno puta ćete se naći na krivom putu.
       5:
         image: notes/C1_building_foundation_5.jpg
-        text: The trick to persistence is choosing to keep on going and learn from
-          your failures instead of quitting because you're frustrated. Frustration
-          actually just means there's something wonderful around the corner. So don't
-          quit before you get to it. Wooo!
+        text: Kako biste bili uporni morate nastaviti raditi i učiti iz svojih grešaka,
+          umjesto da odustanete i osjećate se bespomoćno. Ako ste bespomoćni to smao
+          znači da je nešto odlično iza ugla. Zato, nemojte odustati prije nego stignete
+          do cilja. Wooo!
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work,
-          there is something we use in both dances and in programming lightsuits.
-          And that is loops! Loops are repeating an action over and over.
+        text: Bok, moje ime je Miral Kotb i osmislila sam Iluminate. U mom poslu,
+          jednu stvar koristimo i u plesu i u programiranju svjetlećih odijela. A
+          to je petlja. Petlje ponavljaju neku naredbu iznova.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: When you repeat something multiple times, like my actions to keep the
-          hula hoop spinning, I'm performing a loop of that action. This is a loop.
-          This is a loop. And this is a loop.
+        text: Kada nešto ponavljamo više puta, kako moje pokrete kako bi se hula hop
+          vrtio, koristimo petlju. Ovo je petlja. Ovo je petlja. I ovo je petlja.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: Today we're going to have a dance party. We'll act out loops with a
-          new dance. The Iteration. We're going to learn about loops using a dance.
-          You will learn a couple of easy steps and repeat them over and over to complete
-          the dance.
+        text: Danas ćemo imati plesnu zabavu. Koristit ćemo petlje u novom plesu.
+          Ponavljanje. Učit ćemo o petljama uz ples. Naučit ćemo nekoliko jednostavnih
+          koraka i ponavljati ih ponovo i ponovo kako bismo dovršili ples. (koreografiju).
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands
-          behind your head. Put your hands on your waist. Lift your left hand up.
-          Lift your right hand up. Pretty simple, right? You will discover that you
-          can shorten the directions by putting some dance steps in loops.
+        text: Evo koraka koje trebate naučiti. Pljesnite rukama. Stavite ruke iza
+          glave. Stavite ruke na bokove. Podignite lijevu ruku. Podignite desnu ruku.
+          Jednostavno, zar ne? Otkrijmo kako skratiti upute stavljajući plesne korake
+          u petlje.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: We actually do use loops in our dancing. The dancers are wearing computers,
-          all in the same network. I might loop the lights through to the same dancers
-          over and over again. In the loop I might have an iteration where I'll say
-          you want to go loop through these six dancers over and over again and then
-          within the loop you want to increase the speed of the light. And that's
-          all created through loops. Loops are important in computer science because
-          they make our work shorter and easier.
+        text: Mi doista koristimo petlje u našem plesu. Plesači su odjeveni u računala,
+          povezana u mrežu. Koristim petlju u osvjetljavanju istih plesača iznova
+          i iznova. Mogu koristiti petlju u ponavljanju ovih šest plesača i unutar
+          petlje povećavati brzinu svjetla. Sve je to napravljeno pomoću petlji. Petlje
+          su važne u programiranju jer skraćuju naš posao i čine ga jednostavnijim.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: This lesson is called Happy Maps. Today we're gonna help our furry little
-          friend Flurb get to her fruit.
+        text: Ova lekcija se zove "Sretna mapa". Danas ćemo pomoći našim prijateljima
+          Flurb doći do voća.
       2:
         image: notes/C1_happy_maps_unplugged_2.png
-        text: Make your Flurb go to your fruit. To do this you'll need to figure out
-          which way the Flurb needs to go and direct her with arrows. In order for
-          the Flurb to get to the apple, what direction does the Flurb have to go?
-          Line to make it go up.
+        text: Pomozi Flurbu da dođe do voća. Da biste to učinili morat ćete shvatiti
+          kojim putem Flurb treba ići i dati mu upute pomoću strelica. Kako bi Flurb
+          došao do jabuke, kojim putem treba ići? Linija kako bi se ići. Treba ići
+          prema gore.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: Kako bi došao do cilja, zaokruži smjer u kojem treba ići.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: Create your algorithm by gluing arrows next to the map that you're trying
-          to solve. The second one it's the same but it's going down.
+        text: Napravite svoj algoritam lijepeći strjelice pored mape koju rješavate.
+          Druga je ista, ali ide prema dolje.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: It's like programming with paper. And that's it!
+        text: To je kao programiranje s papirom. I to je to!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: Debugging is finding and fixing problems. There are lots of ways to
-          debug problems. One of the easiest is to move step by step until where you
-          find where something goes wrong. Here I'm trying to do a back handspring
-          on the beam but I keep falling off.
+        text: Otkrivanje grešaka je traženje i otklanjanje problema. Postoji puno
+          načina za otkrivanje grešaka. Najlakše je ići korak po korak dok ne pronađemo
+          gdje je pogreška. Ovdje pokušavam napraviti premet unatrag na gredi, ali
+          stalno padam.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: I walked through each part step by step and realized where my mistake
-          was. I wasn't putting my hands on the beam correctly. So I tried another
-          back handspring on the beam with my new hand position and I got it. I was
-          really glad I debugged my back handspring.
+        text: Prošla sam svaki dio premeta i shvatila gdje sam griješila. Nisam pravilno
+          stavljala ruke na gredu. Pokušala sam ponoviti premet unatrag s novim položajem
+          ruku i uspjela sam. Jako sam sretna jer sam otkrila grešku u premetu unatrag.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: To learn about debugging, we start with a set of blocks already on the
-          stage. You'll notice that these blocks won't get you to the goal. We need
-          to debug the solution and fix it. What went wrong? You'll notice that you
-          needed to keep going west one more block.
+        text: Kako bismo naučili otkloniti greške, već imamo zadane blokove. Primjetit
+          ćete kako vas blokovi neće dovesti do cilja. Moramo otkloniti grešku i popraviti
+          je. Gdje je pošlo krivo? Uočite kako je potrebno upotrijebiti još jedan
+          "Zapad" blok.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: Let's fix this by adding another west block and hitting run to see if
-          you got it right. Yay, you got it!
+        text: Popravimo ovo dodajući još jedan blok "Zapad" (W). Kliknimo "Pokreni"
+          da provjerimo jesmo li uspjeli. Jee, uspjeli smo!
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle
-          and see what directions it needs to take.
+        text: U ovoj slagalici trebaš pticu dovesti do svinje. Pogledaj slagalicu
+          i vidi u kojem smjeru ptica treba ići.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: You need to drag the blocks over from the toolbox to the workspace.
-          Make sure it's under the "when run" block and when you think you've got
-          the right solution, then you can click "Run" and watch the bird go to the
-          pig.
+        text: Odvuci blokove u Radnu površinu. Provjeri jesi li tvoj blok ispod bloka
+          "Pri pokretanju" i kada misliš da si napravio točno rješenje klikni "Pokreni"
+          i pogledaj kako ptica ide do svinje.
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: Računala su posebno dobra u ponavljanju naredbi. Nama, ponavljanje iste
+          naredbe iznova i iznova može biti stvarno dosadno. Ali računala mogu ponoviti
+          istu stvar milijunima, čak i milijardama puta i nije im dosadno.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: Na primjer, ako želim svima na Facebooku poslati e-poruku za rođendan,
+          trebalo mi gotovo cijelo stoljeće da stvarno napišem sve te poruke i pošaljem.
+          No, sa samo nekoliko linija koda, sustav može poslati moju poruku svima
+          na Facebooku i poželjeti im sve najbolje za rođendan.
       3:
         image: notes/C1_maze_loops_3.png
-        text: To get the bird to the pig in this level... rather than drag three North
-          blocks on to the workspace, you will use the "repeat" block. Drag the "repeat"
-          block on to the workspace and enter the number 3. Then drag the "move North"
-          block into the "repeat" block and hit "Run" to see if you got it right.
-          Congratulations, you got it!
+        text: Umjesto da tri puta vučete blok "Sjever" u radnu površinu, na ovom nivou
+          ćemo dovesti pticu do svinje koristeći blok "Ponovi". Odvuci blok "Ponovi"
+          na radnu površinu, upiši broj 3. Onda odvuci blok "Sjever" unutar bloka
+          "Ponovi" i klikni "Pokreni" za provjeru. Čestitam! Uspio si!
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
@@ -779,14 +764,14 @@
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: My name is Jeremiah. Hi! I am seven years old. I love playing on my
-          mom's computer but I always get permission first. "Mom, can I go on the
-          computer? Sure honey!"
+        text: Zovem se Jeremiah. Bok! Imam sedam godina. Obožavam se igrati na maminom
+          računalu, ali uvijek prvo dobijem dozvolu za to. "Mama, mogu li ići na tvoje
+          računalo? Naravno, dušo!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: I love my mom's computer because I can go on the internet. The internet
-          is kind of like your neighborhood. You can visit cool places, you can talk
-          to family and friends and you can learn lots of new things.
+        text: Volim mamino računalo jer mogu ići na internet. Internet je sličan našem
+          susjedstvu. Možeš posjetiti zabavna mjesta, pričati s obitelji i prijateljima
+          i naučiti puno novih stvari.
       3:
         image: notes/C1_going_places_safely_3.png
         text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
@@ -914,17 +899,15 @@
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: Računala su posebno dobra u ponavljanju naredbi. Nama, ponavljanje iste
+          naredbe iznova i iznova može biti stvarno dosadno. Ali računala mogu ponoviti
+          istu stvar milijunima, čak i milijardama puta i nije im dosadno.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: Na primjer, ako želim svima na Facebooku poslati e-poruku za rođendan,
+          trebalo mi gotovo cijelo stoljeće da stvarno napišem sve te poruke i pošaljem.
+          No, sa samo nekoliko linija koda, sustav može poslati moju poruku svima
+          na Facebooku i poželjeti im sve najbolje za rođendan.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: In this example, your goal is going to be to move the bird to get the

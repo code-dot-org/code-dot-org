@@ -9,7 +9,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,-1,1,-1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "bee",
-    "instructions": "Use a loop to collect the nectar and make the honey.",
+    "instructions": "Collect all the nectar and make all of the honey using the fewest blocks possible.",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -27,8 +27,15 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
-  }
+    "definition_collapse": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You should end up with four blocks inside your loop.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -51,11 +58,36 @@
         <block type="maze_honey"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
+      <block type="controls_repeat">
+        <title name="TIMES">???</title>
+      </block>
+    </recommended_blocks>
+    <solution_blocks>
       <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_nectar"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_nectar">
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_honey"/>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
       </xml>
-    </required_blocks>
+    </solution_blocks>
   </blocks>
 </Karel>

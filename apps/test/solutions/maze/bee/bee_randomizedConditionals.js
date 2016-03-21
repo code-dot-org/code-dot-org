@@ -4,36 +4,16 @@ var blockUtils = require('@cdo/apps/block_utils');
 
 // Bee level in which we have one of each randomized conditional
 var levelDef = {
-  'map': [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 1, 1, 1, 1, 1, 1, 0],
-    [0, 2, 1, 1, 1, 1, 1, 0],
-    [0, 1, 1, 1, 1, 1, 1, 0],
-    [0, 1, 1, 1, 1, 1, 1, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-  ],
   'startDirection': 1, // Direction.EAST,
-  'initialDirt': [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 1, 1, 1, 1, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-  ],
-  'rawDirt': [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 1, 1, 1, 1, 1, 1, 0],
-    [0, 2, "+1C", "-1C", "1C", "1Cany", 1, 0],
-    [0, 1, 1, 1, 1, 1, 1, 0],
-    [0, 1, 1, 1, 1, 1, 1, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
+  'serializedMaze': [
+    [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+    [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+    [{"tileType":0},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":0}],
+    [{"tileType":0},{"tileType":2},{"tileType":1,"featureType":2,"value":1,"cloudType":1,"range":1},{"tileType":1,"featureType":2,"value":1,"cloudType":2,"range":1},{"tileType":1,"featureType":2,"value":1,"cloudType":3,"range":1},{"tileType":1,"featureType":1,"value":1,"cloudType":4,"range":1},{"tileType":1},{"tileType":0}],
+    [{"tileType":0},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":0}],
+    [{"tileType":0},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":0}],
+    [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+    [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}]
   ],
   flowerType: 'redWithNectar'
 };

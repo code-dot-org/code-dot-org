@@ -1,3 +1,4 @@
+var color = require('../color');
 var ShareWarnings = require('./ShareWarnings.jsx');
 
 /**
@@ -53,7 +54,7 @@ var SharingWarningsDialog = module.exports = React.createClass({
       overlay: {
         position: 'fixed',
         opacity: 0.8,
-        backgroundColor: 'black',
+        backgroundColor: color.black,
         top: 0,
         left: 0,
         bottom: 0,

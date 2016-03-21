@@ -248,7 +248,7 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_id(script_level_id)
-    self.script_levels.select { |sl| sl.id == script_level_id.to_i }.first
+    self.script_levels.find { |sl| sl.id == script_level_id.to_i }
   end
 
   def get_script_level_by_stage_and_position(stage_position, puzzle_position)
@@ -260,7 +260,7 @@ class Script < ActiveRecord::Base
 
   def get_script_level_by_chapter(chapter)
     chapter = chapter.to_i
-    return nil if chapter < 1 || chapter > self.script_levels.to_a.count
+    return nil if chapter < 1 || chapter > self.script_levels.to_a.size
     self.script_levels[chapter - 1] # order is by chapter
   end
 
@@ -302,6 +302,10 @@ class Script < ActiveRecord::Base
 
   def k5_course?
     %w(course1 course2 course3 course4).include? self.name
+  end
+
+  def csf?
+    k5_course? || twenty_hour?
   end
 
   def show_report_bug_link?
@@ -429,10 +433,8 @@ class Script < ActiveRecord::Base
             name: stage_name,
             script: script
           )
-        script_level_attributes.merge!(
-          stage_id: stage.id,
-          position: (script_level_position[stage.id] += 1)
-        )
+        script_level_attributes[:stage_id] = stage.id
+        script_level_attributes[:position] = (script_level_position[stage.id] += 1)
         script_level.reload
         script_level.assign_attributes(script_level_attributes)
         script_level.save! if script_level.changed?
@@ -449,7 +451,20 @@ class Script < ActiveRecord::Base
     end
     script_stages.each do |stage|
       stage.script_levels = script_levels_by_stage[stage.id]
+
+      # Go through all the script levels for this stage, except the last one,
+      # and raise an exception if any of them are a multi-page assessment.
+      # (That's when the script level is marked assessment, and the level itself
+      # has a pages property and more than one page in that array.)
+      # This is because only the final level in a stage can be a multi-page
+      # assessment.
+      stage.script_levels.each do |script_level|
+        if !script_level.end_of_stage? && script_level.long_assessment?
+          raise "Only the final level in a stage may be a multi-page assessment.  Script: #{script.name}"
+        end
+      end
     end
+
     script.stages = script_stages
     script.reload.stages
     script
@@ -518,6 +533,15 @@ class Script < ActiveRecord::Base
       CDO.code_org_url '/api/hour/finish'
     else
       CDO.code_org_url "/api/hour/finish/#{name}"
+    end
+  end
+
+  def csf_finish_url
+    if (name == Script::TWENTY_HOUR_NAME)
+      # Rename from 20-hour to public facing Accelerated
+      CDO.code_org_url "/congrats/#{Script::ACCELERATED_NAME}"
+    else
+      CDO.code_org_url "/congrats/#{name}"
     end
   end
 

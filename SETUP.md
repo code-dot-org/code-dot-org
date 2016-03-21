@@ -42,7 +42,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Ubuntu 14.04
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk libsqlite3-dev phantomjs`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk libsqlite3-dev phantomjs build-essential`
   * **Hit enter and select default options for any configuration popups**
 1. Upgrade npm to 2.0. If `npm -v` says less than 2.0 then
   * `sudo add-apt-repository ppa:chris-lea/node.js  `
@@ -62,11 +62,15 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     - C. `rvm`. A few folks have had more luck with rvm vs rbenv on linux.
         1. Install rvm from https://rvm.io/
         1. `rvm install 2.2.3`
+        1. `rvm use 2.2.3 --default`
 1. Install Node.js 0.12.4 and npm 2.10.1
-  1. Option A - nodesource repository
+  1. Option A - nvm
+    1. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
+    1. `nvm install 0.12.4`
+  1. Option B - nodesource repository
     1. `curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -`
     1. `sudo apt-get install -y nodejs`
-  1. Option B - Manual install
+  1. Option C - Manual install
     1. [Nodejs.org](https://nodejs.org/download/)
 1. Check that you have the correct versions of everything:
   1. open a new Terminal window  

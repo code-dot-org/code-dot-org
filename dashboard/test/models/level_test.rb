@@ -37,39 +37,6 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal({'maze' => [[0, 1], [1, 2]].to_json}, maze)
   end
 
-  test "parses karel data" do
-    def validate_karel_val(input, maze, initial_dirt, roundtrip=true)
-      # create a 1x1 matrix and validate results
-      json = [[input]].to_json
-      parsed = Karel.parse_maze(json)
-      assert_equal(maze, JSON.parse(parsed['maze'])[0][0])
-      assert_equal(initial_dirt, JSON.parse(parsed['initial_dirt'])[0][0])
-      assert_equal(input, JSON.parse(parsed['raw_dirt'])[0][0])
-
-      # some of our values won't roundtrip, because they get converted to ints
-      # but not back to strings
-      if roundtrip
-        unparsed = Karel.unparse_maze(parsed)
-        assert_equal(json, unparsed.to_json)
-      end
-    end
-
-    # rubocop:disable Style/SpaceInsideParens
-    validate_karel_val(     0,   0,   0)
-    validate_karel_val(     1,   1,   0)
-    validate_karel_val( '-10',   1, -10)
-    validate_karel_val(     2,   2,   0)
-    validate_karel_val(  '+5',   1,   5)
-    validate_karel_val(  '-5',   1,  -5)
-    validate_karel_val( '+4P', 'P',   4)
-    validate_karel_val('-4FC','FC',  -4)
-    validate_karel_val( '+3R', 'R',   3)
-    validate_karel_val(   '0',   0,   0, false)
-    validate_karel_val(  '00',   0,   0, false)
-    validate_karel_val(  '01',   1,   0, false)
-    # rubocop:enable Style/SpaceInsideParens
-  end
-
   test "cannot create two custom levels with same name" do
     assert_no_difference('Level.count') do
       level2 = Level.create(@custom_maze_data)
@@ -190,7 +157,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'update custom level from file' do
-    level = LevelLoader.load_custom_level(LevelLoader.level_file_path 'K-1 Bee 2')
+    level = LevelLoader.load_custom_level(LevelLoader.level_file_path('K-1 Bee 2'))
     assert_equal 'bee', level.skin
     assert_equal '[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,-1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]',
       level.properties['initial_dirt']
@@ -404,7 +371,6 @@ EOS
     assert_equal(level3, Level.cache_find(level3.id))
   end
 
-
   test 'where we want to calculate ideal level source' do
     match_level = Match.create(name: 'a match level')
     level_with_ideal_level_source_already = Artist.create(name: 'an artist level with a solution', solution_blocks: '<xml></xml>')
@@ -430,7 +396,6 @@ EOS
   test 'calculate_ideal_level_source_id sets ideal_level_source_id to best solution' do
     level = Maze.create(name: 'maze level with level sources')
     assert_equal nil, level.ideal_level_source_id
-
 
     right = create(:level_source, level: level, data: "<xml><right/></xml>")
     6.times do

@@ -1,5 +1,4 @@
 var testUtils = require('../../util/testUtils');
-var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 var studioApp = require('@cdo/apps/StudioApp').singleton;

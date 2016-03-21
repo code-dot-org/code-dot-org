@@ -9,8 +9,8 @@ var SQUARE_SIZE = 50;
 
 var SVG_NS = require('../constants').SVG_NS;
 
-var DirtDrawer = module.exports = function (dirtMap, dirtAsset) {
-  this.dirtMap_ = dirtMap;
+var DirtDrawer = module.exports = function (map, dirtAsset) {
+  this.map_ = map;
 
   this.dirtImageInfo_ = {
     href: dirtAsset,
@@ -23,7 +23,7 @@ var DirtDrawer = module.exports = function (dirtMap, dirtAsset) {
  * current value
  */
 DirtDrawer.prototype.updateItemImage = function (row, col, running) {
-  var val = this.dirtMap_[row][col];
+  var val = this.map_.getValue(row, col);
   this.updateImageWithIndex_('dirt', row, col, this.dirtImageInfo_,
     spriteIndexForDirt(val));
 };

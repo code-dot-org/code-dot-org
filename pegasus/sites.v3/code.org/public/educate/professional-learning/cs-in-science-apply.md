@@ -16,7 +16,7 @@ The CS in Science professional learning program is open to teachers in partner d
 
 ## Teach in a partner district?
 
-You can apply to the Professional Learning Program for CS in Science if you are a teacher from districts or regions that have partnerships with Code.org, shown in the map above.
+You can apply to the Professional Learning Program for CS in Science if you are a teacher from districts or regions that have partnerships with Code.org, shown in the map above.  If you do not see your district on the application click on your district's pin on the map to find the appropriate form.
 
 [<button>Apply now</button>](/educate/professional-learning/cs-in-science-application)
 

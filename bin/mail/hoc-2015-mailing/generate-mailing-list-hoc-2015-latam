@@ -97,7 +97,6 @@ QUERY = HOC_SIGNUP_QUERY + " || " + CSEDWEEK_QUERY
 
 puts QUERY
 
-
 TEACHERS = {}.tap do |results|
   query_contacts(q: QUERY).each do |i|
     email = i[:email].downcase.strip

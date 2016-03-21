@@ -43,24 +43,25 @@ class MediaProxyController < ApplicationController
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
     path = (url.path.empty?) ? '/' : url.path
+    query = url.query || ''
 
     # Limit how long we're willing to wait.
     http.open_timeout = 3
     http.read_timeout = 3
 
     # Get the media.
-    media = http.request_get(path)
+    media = http.request_get(path + '?' + query)
 
     # generate content-type from file name if we weren't given one
     if media.content_type.nil?
       media.content_type = Rack::Mime.mime_type(File.extname(path))
     end
 
-    if media.kind_of? Net::HTTPRedirection
+    if media.is_a? Net::HTTPRedirection
       # Follow up to five redirects.
       render_proxied_url(media['location'], redirect_limit - 1)
 
-    elsif !media.kind_of? Net::HTTPSuccess
+    elsif !media.is_a? Net::HTTPSuccess
       # Pass through failure codes.
       render_error_response media.code, "Failed request #{media.code}"
 

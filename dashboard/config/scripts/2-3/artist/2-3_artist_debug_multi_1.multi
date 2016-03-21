@@ -1,12 +1,12 @@
 name '2-3 artist debug multi 1' 
-title 'Artist Debugging Multiple Choice One'
+title 'Artist Debugging Multiple Choice 1'
 #description 'Image of the run space with bad blocks.'
 
 content1 '/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700'
 #content2 '/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q2.png, 700'
 content2 ''
 
-question "Why won't this circle go all the way around?"
+question "What would you need to fix to make this a finished circle?"
 
 height '160'
 

@@ -44,7 +44,6 @@ UNSUBSCRIBERS = {}.tap do |results|
 end
 puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
-
 TEACHERS = {}.tap do |results|
   (
   query_contacts(q: 'kind_s:"Petition" && create_ip_country_s:"United States"', fq: '-role_s:"student" && -role_s:"educator" && -role_s:"district_admin" && -role_s:"principal" && -role_s:"superintendent" && -role_s:"teacher"') +

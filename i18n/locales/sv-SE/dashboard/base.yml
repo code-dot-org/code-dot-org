@@ -26,12 +26,12 @@ sv:
   hello: Hej världen
   welcome_back: 'Välkommen tillbaka, %{name}'
   submit: Skicka in
+  unsubmit: Ångra Inlämnad
   add_teacher_form:
     code:
       label: 'Lägg till lärare:'
       placeholder: Avsnitt kod (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Var snäll och skriv in koden som du har fått av din lärare. Det är en 6 bokstäver lång kod som "ABCDEF".'
     submit: Lägg till lärare
   add_hint_form:
     placeholder: Skriv in ditt tips här
@@ -131,7 +131,7 @@ sv:
       
       %{link}
       
-      Kurserna är roliga, visuellt engagerande, och lär ut grundläggande koncepten inom datavetenskap med en enkel, guidad, spel-liknande upplevelse. Lär dig att programmera från Bill Gates, Mark Zuckerberg, Angry Birds, och Plants vs Zombies! :)
+      Kurserna är roliga och visuellt engagerande, och lär ut de grundläggande koncepten inom datavetenskap med en enkel, guidad, spel-liknande upplevelse. Lär dig att programmera med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs Zombies! :)
       
       %{name}
   follower:
@@ -155,12 +155,12 @@ sv:
         subject: 'Code.org anmälan: %{teacher_name} är inte längre associerat som din lärare.'
   reports:
     error:
-      access_denied: Du har inte tillgång till denna personens uppgifter
+      access_denied: Du har inte tillgång till denna persons uppgifter
   redeem_prizes:
     title: 'Lös in priser: %{name}'
     provider: 'Leverantör:'
     code: 'Kod:'
-    redeem_header: 'Att lösa in:'
+    redeem_header: 'För att lösa in:'
     donorschoose_register: Registrera dig som lärare på DonorsChoose.org
     donorschoose_project: Skicka ett projekt
     donorschoose_how_to: Hur du ska använda din kod
@@ -228,11 +228,11 @@ sv:
       free_play:
         playlab: Skapa en App
         artist: Rita något
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Skapa en App
     user:
       classroom: Lärare hemsida
-      district_dashboard: Distrikt Dashboard
+      district_dashboard: Distriktets kontrollpanel
       label: 'Hej %{username}'
       stats: Mina framsteg
       settings: Mitt konto
@@ -242,7 +242,7 @@ sv:
       signup: Registrera dig
       already_registered: Redan registrerad?
     popup:
-      progress_for_user: "%{name}'s framsteg"
+      progress_for_user: '%{name}s framsteg'
       progress: Dina framsteg
       lines: 'Totalt antal rader kod: %{lines}'
       close: STÄNG
@@ -326,6 +326,7 @@ sv:
     heading_hoc2014: '<h2>Timmen med kod för</h2><h1>Alla åldrar</h1>'
     heading_elementary: '<h2>20 timmars kurser för</h2><h1>Nybörjare (alla åldrar)</h1>'
     heading_apps: '<h2>Kul för</h2><h1>Alla</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>'
     your_gallery: Galleri
     no_primary_course: Prova en kurs på Code Studio
@@ -343,7 +344,7 @@ sv:
     student: Student
     teacher: Lärare
   footer:
-    thank_you: 'Vi tackar våra <a href="https://code.org/about/donors"> givare</a>, <a href="https://code.org/about/partners"> partners</a>, vårt <a href="https://code.org/about/team"> utökade team</a>, vårt video team och våra <a href="https://code.org/about/advisors"> utbildningsrådgivare</a> för deras stöd i att skapa Code Studio.'
+    thank_you: 'Vi tackar våra <a href="https://code.org/about/donors">givare</a>, <a href="https://code.org/about/partners">partners</a>, vårt <a href="https://code.org/about/team">utökade team</a>, vårt videoteam och våra <a href="https://code.org/about/advisors">utbildningsrådgivare</a> för deras stöd med att skapa Code Studio.'
     help_from_html: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte till med att skapa denna övning.
     help_from_html_old: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte till med att skapa detta material.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
@@ -400,7 +401,7 @@ sv:
   share_code:
     title: "Klicka på 'Kör' för att testa mitt program"
     bounce_og_title: Kolla in mitt Studsa Spel
-    flappy_og_title: Kolla in mitt Flappy Spel
+    flappy_og_title: Kolla in mitt Flappy-spel
     studio_og_title: Kolla in min Play Lab App
     check_out_what_i_made: Kolla vad jag gjorde
     og_description: Jag skrev koden själv med Code.org
@@ -420,11 +421,17 @@ sv:
       current: Nuvarande nivåer
       unused: Oanvända nivåer
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassisk labyrint
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
     flappy:
-      title: Flappy kod
+      title: Flappy-kod
       body: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!
     20-hour:
       title: Snabbkurs
@@ -465,11 +472,19 @@ sv:
     report_bug: Rapportera bugg
     support: Få hjälp
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Felaktigt svar
     wrong_body: 'Svaret du angett är inte korrekt.  Försök igen!'
     correct_title: Rätt
     correct_body: Det är det rätta svaret.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Tack
+    correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
@@ -489,6 +504,9 @@ sv:
     placeholder: Skriv in ditt svar här
     open_response_title: Tack
     open_response_body: Tack för ditt svar!
+  level_group:
+    correct_title: Tack
+    correct_body: Thank you for submitting an answer
   dialog:
     ok: Ok
     startover_title: Är du säker på att du vill börja om?
@@ -518,7 +536,7 @@ sv:
           title: Byggare
           description: ""
         flappy:
-          title: Flappy kod
+          title: Flappy-kod
           description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!
         jigsaw:
           title: Pussel
@@ -542,6 +560,7 @@ sv:
     completed_perfect: Avklarad perfekt
     furthest_level_attempted: försökt nå bortersta nivån
     assessment: Test
+    submitted: submitted
   studio:
     courses_working_on: Kurser du påbörjat
     completed_courses: Avslutade kurser

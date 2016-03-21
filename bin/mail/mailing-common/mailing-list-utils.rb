@@ -79,7 +79,6 @@ def query_subscribed_contacts(params)
   end
 end
 
-
 # Params:
 #   file: csv file path to read
 #   email: email column name
@@ -176,7 +175,6 @@ def generate(name)
 
   deduped_csv
 end
-
 
 def query_all_emails_at_domain(domain)
   puts "Emails at #{domain}"

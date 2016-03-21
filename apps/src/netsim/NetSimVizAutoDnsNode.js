@@ -1,12 +1,6 @@
 /**
  * @overview Visualization auto-dns node.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 require('../utils');

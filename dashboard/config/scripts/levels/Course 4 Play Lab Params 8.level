@@ -43,9 +43,9 @@
     "markdown_instructions": "Use a `when actor touches` block to send Dog back to the top-left ONLY if Dog touches any of the other actors.",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "min_workspace_height": "1200",
-    "maze_data": null
-  }
+    "min_workspace_height": "1200"
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -202,7 +202,7 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <arg name="actor"/>
             <arg name="speed"/>

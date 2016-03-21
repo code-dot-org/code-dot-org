@@ -25,7 +25,7 @@
   "calloutPutCommandsHereRunStart": "Pon aquí los comandos a ejecutar cuando se inicia el programa",
   "calloutBlocklyPlaceGoUpHere": "Coloca un bloque de \"subir\" aquí para subir",
   "calloutClickEvents": "Da click en el encabezado de eventos para ver los bloques de funciones de eventos.",
-  "calloutUseArrowButtons": "Mantén pulsado en tu teclado esos botones o las flechas de dirección para activar los eventos de movimiento",
+  "calloutUseArrowButtons": "Mantén pulsado esos botones o las flechas de dirección en tu teclado para activar los eventos de movimiento",
   "calloutUseArrowButtonsAutoSteer": "Hemos escondido el código que escribiste, pero todavía puedes utilizar las teclas de flecha para moverte",
   "calloutMoveRightRunButton": "Agrega un segundo comando mueveAlaDerecha a tu código. Luego da clic aquí para ejecutarlo",
   "calloutBlocklyMoveRightRunButton": "Agrega un segundo comando \"mueveAlaDerecha\" a tu código. Luego da clic aquí para ejecutarlo",

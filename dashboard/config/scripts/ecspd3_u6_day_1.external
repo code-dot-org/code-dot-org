@@ -1,0 +1,35 @@
+name 'ECSPD3-u6 day 1'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Unit 6 Lessons > Day 1 
+ 
+#### Concepts Covered  
+What is a robot, criteria that make an item a robot.
+ 
+#### Lesson Overview 
+This unit starts by students brainstorming what they think of when they hear ”robot,” then they identify common features of robots.  There is also an extension activity to research Isaac Asimov’s Three Laws of Robotics.  This activity is similar to the what’s a computer activity in Unit 1.  It is a great way to connect back to that activity and talk about how the curriculum spirals, and take students on a journey of seeing how far they’ve come throughout the year.
+<br>
+#### Lesson Resources 
+##### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=266" target=_blank>Lesson Plan Link>> </a>
+ 
+- <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=269" target=_blank>What is a Robot?</a>
+- <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=271" target=_blank>Are We Robots?</a>
+- <a href="http://www.pbslearningmedia.org/resource/eng06.sci.engin.design.kismet/kismet-the-social-robot/" target=_blank>Kismet Video</a>
+- <a href="http://en.wikipedia.org/wiki/Three_Laws_of_Robotics" target=_blank>Asimov's Three Laws of Robotics</a>
+
+ >#### Hints from an ECS Teacher: 
+Think back to Unit 1 when students explored what a computer is.  This activity is very similar but with discovering what is a robot.  What worked for you when you taught that lesson or what would you change now that you get the opportunity to do something similar?
+ 
+#### Things to keep in mind 
+Consider what real world connections you can use to help your students relate to robotics.  Think of movies that you've seen robots in, jobs that utilize robots, and how robots are changing society? 
+
+- <a href="http://www.pbslearningmedia.org/resource/vtl07.la.ws.research.intelrobot/the-intelligent-robot/" target=_blank>The Intelligent Robot Video</a>
+
+Click “Continue” below to learn about the next lesson.  
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

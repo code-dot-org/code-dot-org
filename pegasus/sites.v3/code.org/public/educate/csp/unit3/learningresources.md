@@ -120,8 +120,7 @@ The following table is intended to outline the main programming topics for Unit 
       <td style="border:1px solid #999999;">
         <ul>
           <li><a href="https://code.org/applab/docs/forLoop_i_0_4" target="_blank">App Lab Docs: for loop</a></li>
-          <li><a href="https://code.org/applab/docs/randomNumber_max" target="_blank">App Lab Docs: randomNumber(max)</a></li>
-          <li><a href="https://code.org/applab/docs/randomNumber_min_max" target="_blank">App Lab Docs: randomNumber(min, max)</a></li>
+          <li><a href="https://code.org/applab/docs/randomNumber" target="_blank">App Lab Docs: randomNumber(min, max)</a></li>
           <li><a href="http://www.w3schools.com/js/js_loop_for.asp" target="_blank">W3Schools: JS For Loop</a></li>
         </ul>
       </td>

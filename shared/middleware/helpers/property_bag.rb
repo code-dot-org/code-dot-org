@@ -41,7 +41,15 @@ class PropertyBag
 
     update_count = items.where(name: name).update(row)
     if update_count == 0
-      row[:id] = @table.insert(row)
+      begin
+        row[:id] = @table.insert(row)
+      rescue Sequel::DatabaseError => e
+        if e.message.start_with?("Mysql2::Error: Data too long for column")
+          return { status: 'TOO_LARGE' }
+        else
+          raise e
+        end
+      end
     end
 
     JSON.load(row[:value])
@@ -114,6 +122,12 @@ class DynamoPropertyBag
       },
     )
     value
+  rescue Aws::DynamoDB::Errors::ValidationException => e
+    if e.message == 'Item size has exceeded the maximum allowed size'
+      { status: 'TOO_LARGE' }
+    else
+      raise e
+    end
   end
 
   def to_hash()

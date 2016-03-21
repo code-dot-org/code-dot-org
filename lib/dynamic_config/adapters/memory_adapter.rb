@@ -21,7 +21,7 @@ class MemoryAdapter
 
   def all
     ret = {}
-    @hash.each do |k, v|
+    @hash.each_key do |k|
       ret[k] = get(k)
     end
     ret

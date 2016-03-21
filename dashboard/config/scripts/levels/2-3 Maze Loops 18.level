@@ -6,14 +6,14 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Get me to the sunflower!\r\n(Hint: You'll need to use one \"repeat\" loop inside of another to pass this level.)",
+    "instructions": "Get me to the sunflower using the fewest blocks possible!  \r\n\r\nTry using one `repeat` loop inside of another to cut down on the amount of code you need.",
     "step_mode": "1",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "start_direction": "2",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,3,4,1,2,0,0],[0,0,1,0,0,1,0,0],[0,0,1,0,0,1,0,0],[0,0,1,1,1,1,0,0],[0,0,1,4,4,1,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "6",
-    "markdown_instructions": "Get me to the sunflower!  \r\n*Hint: You'll need to use one `repeat` loop inside of another to pass this level.*",
+    "ideal": "5",
+    "markdown_instructions": "Get me to the sunflower using the fewest blocks possible!  \r\n\r\nTry using one `repeat` loop inside of another to cut down on the amount of code you need.",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -26,8 +26,11 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_18_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -44,22 +47,36 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
-      </xml>
-    </required_blocks>
     <recommended_blocks>
       <xml>
         <block type="controls_repeat">
           <title name="TIMES">3</title>
         </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

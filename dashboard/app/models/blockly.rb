@@ -15,6 +15,7 @@
 #  type                     :string(255)
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
@@ -30,6 +31,7 @@ class Blockly < Level
     toolbox_blocks
     required_blocks
     recommended_blocks
+    solution_blocks
     ani_gif_url
     is_k1
     skip_instructions_popup
@@ -62,13 +64,15 @@ class Blockly < Level
     lock_zero_param_functions
   )
 
+  before_save :update_ideal_level_source
+
   before_validation {
     self.scrollbars = nil if scrollbars == 'nil'
   }
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
-    %w(start_blocks toolbox_blocks required_blocks recommended_blocks)
+    %w(start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
   end
 
   def to_xml(options={})
@@ -80,7 +84,7 @@ class Blockly < Level
         end
       end
     end
-    self.class.pretty_print(xml_node.to_xml)
+    self.class.pretty_print_xml(xml_node.to_xml)
   end
 
   def load_level_xml(xml_node)
@@ -117,7 +121,7 @@ class Blockly < Level
 
   def pretty_block(block_name)
     xml_string = self.send("#{block_name}_blocks")
-    self.class.pretty_print(xml_string)
+    self.class.pretty_print_xml(xml_string)
   end
 
   def self.count_xml_blocks(xml_string)
@@ -238,22 +242,11 @@ class Blockly < Level
       level_prop['scale'] = {'stepSpeed' => level_prop['stepSpeed']} if level_prop['stepSpeed'].present?
 
       # Blockly requires these fields to be objects not strings
-      %w(map initialDirt rawDirt goal softButtons inputOutputTable).
+      %w(map initialDirt serializedMaze goal softButtons inputOutputTable).
           concat(NetSim.json_object_attrs).
           concat(Craft.json_object_attrs).
           each do |x|
         level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
-      end
-
-      # some older levels will not have 'rawDirt' in the saved params;
-      # in this case, we can infer its value from their map and
-      # initialDirt values
-      if level.is_a? Karel
-        unless level_prop['rawDirt']
-          map = level_prop['map']
-          initial_dirt = level_prop['initialDirt']
-          level_prop['rawDirt'] = Karel.generate_raw_dirt(map, initial_dirt)
-        end
       end
 
       # Blockly expects fn_successCondition and fn_failureCondition to be inside a 'goals' object

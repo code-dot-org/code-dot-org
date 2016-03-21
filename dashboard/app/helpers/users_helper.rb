@@ -78,11 +78,13 @@ module UsersHelper
       user_data[:levels] = {}
       script_levels.each do |sl|
         result = level_info(user, sl, uls)
-        completion_status = activity_css_class result
+        submitted = level_submitted(user, sl, uls)
+        completion_status = submitted ? "submitted" : (activity_css_class result)
         if completion_status != 'not_tried'
           user_data[:levels][sl.level_id] = {
               status: completion_status,
-              result: result
+              result: result,
+              submitted: submitted
           }
         end
       end
@@ -95,7 +97,7 @@ module UsersHelper
     summary = summarize_user_progress(script, user)
     script.stages.map do |stage|
       levels = stage.script_levels.map(&:level)
-      completed = levels.select{|l|sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}.count
+      completed = levels.count{|l| sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}
       completed.to_f / levels.count
     end
   end
@@ -103,7 +105,7 @@ module UsersHelper
   def percent_complete_total(script, user = current_user)
     summary = summarize_user_progress(script, user)
     levels = script.script_levels.map(&:level)
-    completed = levels.select { |l| sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}.count
+    completed = levels.count{|l| sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}
     completed.to_f / levels.count
   end
 
@@ -116,4 +118,13 @@ module UsersHelper
       0
     end
   end
+
+  def level_submitted(user, script_level, user_levels)
+    if user
+      user_levels[script_level.level_id].try(:submitted) || false
+    else
+      false
+    end
+  end
+
 end

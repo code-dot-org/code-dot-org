@@ -5,7 +5,7 @@ subject: "Bring computer science into your Las Vegas classroom"
 
 Las Vegas educator,
 
-Code.org has partnered with districts in Las Vegas to bring computer science to your students, at all K-12 levels.
+Code.org has partnered with districts around Las Vegas to bring computer science to your students, at all K-12 levels.
 
 You *don’t* need any prior exposure to computer science to participate. If you’re curious about technology and want the skills to teach computer science to your students, you’ll get everything you need with high-quality professional learning — at no cost to you or your school. 
 

@@ -30,8 +30,10 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "never_autoplay_video": "false"
-  }
+    "never_autoplay_video": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Course_4_Artist_Vars_8_a\",\r\n  \"callout_text\": \"Need more space?  Pull this bar over to make the coding area wider.\",\r\n  \"element_id\": \"#visualizationResizeBar\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": -75\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>

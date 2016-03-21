@@ -18,6 +18,7 @@
   "fillTooltip":"place 1 unit of dirt",
   "finalLevel":"Congratulations! You have solved the final puzzle.",
   "flowerEmptyError":"The flower you're on has no more nectar.",
+  "didNotCollectEverything":"Make sure you don't leave any nectar or honey behind!",
   "get":"ստանալ",
   "heightParameter":"height",
   "holePresent":"there is a hole",

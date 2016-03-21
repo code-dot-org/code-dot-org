@@ -22,6 +22,8 @@ class UserScript < ActiveRecord::Base
   belongs_to :user
   belongs_to :script
 
+  after_update :check_plc_task_assignment_updating
+
   def script
     Script.get_from_cache(script_id)
   end
@@ -35,5 +37,11 @@ class UserScript < ActiveRecord::Base
   def empty?
     # a user script is empty if there is no progress
     started_at.nil? && completed_at.nil? && assigned_at.nil? && last_progress_at.nil?
+  end
+
+  def check_plc_task_assignment_updating
+    if self.completed_at && self.script.pd
+      Plc::ScriptCompletionTask.check_for_script_completion(self)
+    end
   end
 end

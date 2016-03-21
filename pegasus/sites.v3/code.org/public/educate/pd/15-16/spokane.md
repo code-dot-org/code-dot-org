@@ -23,13 +23,7 @@ Teachers from Seattle, Denver and Utah will travel to Spokane for PD and virtual
 Teachers from San Francisco will travel to Los Angeles for PD and can find more details about their workshop on the [LAUSD page](/educate/pd/15-16/lausd).
 
 
-**Save the dates:**
-
-Quarter 1: Saturday, October 3, 2015
-
-Quarter 2: Saturday, November 21, 2015
-
-Quarter 3: Saturday, January 30, 2016
+**Save the date:**
 
 Quarter 4: Saturday, April 16, 2016
 

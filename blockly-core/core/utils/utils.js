@@ -744,25 +744,9 @@ Blockly.svgRectToRect = function (svgRect) {
 
 
 /**
- * Callback which displays a simple dialog.
- * @callback SimpleDialogFunction
- * @param {DialogOptions} dialogOptions
- */
-
-/**
- * Options for showing a simple dialog.
- * @typedef {Object} DialogOptions
- * @property {string} headerText
- * @property {string} bodyText
- * @property {string} cancelText
- * @property {string} confirmText
- * @property {function} onConfirm
- * @property {function} onCancel
- * @property {string} cancelButtonClass
- */
-
-/**
- * @param {DialogOptions} dialogOptions simple dialog options
+ * @param {Object} dialogOptions simple dialog options
+ * @see FeedbackUtils.prototype.showSimpleDialog in cdo/apps/src/feedback.js
+ *     for options
  */
 Blockly.showSimpleDialog = function (dialogOptions) {
   if (Blockly.customSimpleDialog) {

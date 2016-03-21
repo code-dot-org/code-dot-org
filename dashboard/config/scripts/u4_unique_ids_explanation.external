@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 
 Let's take a brief moment to explain **record IDs**.
 
-In the data viewer you may have noticed that each record in the table has an ID (the property is lowercase `id`) -- it's the first column in the table.  
+In the Data Viewer you may have noticed that each record in the table has an ID (the property is lowercase `id`) -- it's the first column in the table.  
 
 **1. In databases, record IDs are unique.**
 
@@ -16,7 +16,7 @@ In the data viewer you may have noticed that each record in the table has an ID 
  * That ID will not be used by any other record
  * The IDs are created and managed by the database - you can't change them
 
-**2. A record's ID is the only way to reliably identify it in the database**
+**2. A record's ID is the only way to reliably identify it in the database.**
 
  * Even if your database stored 100 copies of the name "Bob", each would have a unique ID.
  
@@ -25,7 +25,7 @@ IDs are essential for a database to function properly.  This is why you cannot e
 
 <img src="https://images.code.org/352bbbd91c14aa8a4a37fcc309f29d93-image-1449782149871.gif">
 
-**3. A record's ID is included with the object when you get it back from the database**
+**3. A record's ID is included with the object when you get it back from the database.**
 
  * The code below reads records from the database and displays the first object returned - you can see that the ID of the record is included as part of the object.
  

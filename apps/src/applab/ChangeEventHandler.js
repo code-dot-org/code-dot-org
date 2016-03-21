@@ -35,16 +35,22 @@ ChangeEventHandler.prototype.onFocus = function () {
   this.initialValue_ = this.getValue();
 };
 
-ChangeEventHandler.prototype.onEnter = function () {
+/**
+ * @param {!Event} event
+ */
+ChangeEventHandler.prototype.onEnter = function (event) {
   if (this.getValue() !== this.initialValue_) {
     this.initialValue_ = this.getValue();
-    this.callback_();
+    this.callback_(event);
   }
 };
 
-ChangeEventHandler.prototype.onBlur = function () {
+/**
+ * @param {!Event} event
+ */
+ChangeEventHandler.prototype.onBlur = function (event) {
   if (this.getValue() !== this.initialValue_) {
-    this.callback_();
+    this.callback_(event);
   }
 };
 
@@ -80,7 +86,7 @@ ChangeEventHandler.addChangeEventHandler = function(element, callback) {
   if (elementType === elementLibrary.ElementType.TEXT_INPUT) {
     element.addEventListener("keydown", function(event) {
       if (event.keyCode === KeyCodes.ENTER) {
-        this.onEnter();
+        this.onEnter(event);
       }
     }.bind(handler));
   }

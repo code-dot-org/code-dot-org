@@ -1,4 +1,4 @@
-# Style Guide {
+# Style Guide
 
 ## Prelude
 We try to maintain a consistent style for two reasons:
@@ -151,6 +151,52 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
   myObject.doSomething()
       .doSomethingElse();
   ```
+  
+* <a name="js-module-exports"></a>
+  We have a few different patterns for how we export things in our JS files currently. There's not necessarily
+  an expectation that we'll go fix these all, but new code should try to follow these patterns.
+  <sup>[[link](#js-module-exports)]</sup>
+  ```javascript
+  // good
+  module.exports.foo = function foo() { }
+  // elsewhere
+  foo();
+  
+  // okay, unless you're calling this method locally
+  module.exports.foo = function () {
+  }
+  // elsewhere - bad
+  module.exports.foo();
+  
+  // good
+  var Foo = module.exports = function () {
+  };
+  Foo.prototype.bar = function () {
+  }
+  
+  // good
+  // React is a bit of a special case, in that var Foo = module.exports = React.createClass({
+  // results in React devtools thinking our component is named exports instead of Foo. As such,
+  // we prefer a slightly different pattern in this context.
+  var Foo = React.createClass({
+  ...
+  });
+  module.exports = Foo;
+  
+  
+  // bad
+  module.exports = {
+    foo: function () {
+    }
+  }
+  
+  // bad
+  function foo() {
+  }
+  module.exports = {
+    foo: foo
+  }
+  ```
 
 * <a name="js-avoid-inlinejs"></a>
   Avoid inline Javacript in HAML and ERB views. Inline Javascript is
@@ -170,6 +216,121 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
     with Javascript code should be put in `app_options`. Our
     templates include a script tag which assigns app_options to
     a Javascript variable so that it as accessible from JS.
+
+### React
+Our default style if not mentioned here should be that mentioned in the AirBnb guide https://github.com/airbnb/javascript/tree/master/react (perhaps with the exception of closing tags on their own line).
+* <a name="js-react-inline-styles"></a>
+Prefer single object for all styles vs. inlined style objects
+```jsx
+// Bad
+var component = (
+  <div style={{color: 'red', display: 'block'}}>
+    <div style={{color: 'blue', fontSize: 10}}>I'm a child</div>
+  </div>
+);
+
+// Good
+var styles = {
+  root: {
+    color: 'red',
+    display: 'block
+  },
+  child: {
+    color: 'blue',
+    fontSize: 10
+  }
+};
+...
+var component = (
+  <div style={styles.root}>
+    <div style={styles.child}>I'm a child</div>
+  </div>
+);
+```
+* <a name="js-react-pixel-numbers"></a>
+Prefer numbers vs strings for pixel values
+```jsx
+// Bad
+var styles = {
+  root: {
+    width: '100px',
+    height: '100px'
+  }
+}'
+
+// Good
+var styles = {
+  root: {
+    width: 100,
+    height: 100
+  }
+};
+```
+* <a name="js-react-long-components"></a>
+Components with many attributes should have one per line, with 4 spaces of indentation. Child components should have 2 spaces of indentation.
+```jsx
+// Bad
+var component = (
+  <MyComponent param1={1} param2={2} param3={3} param4={4} param5={5}>
+    <ChildComponent/>
+  </MyComponent>
+);
+
+// Good
+var component = (
+  <MyComponent
+      param1={1}
+      param2={2}
+      param3={3}
+      param4={4}
+      param5={5}>
+    <ChildComponent/>
+  </MyComponent>
+);
+```
+* <a name="jsx-child-elements-on-own-line"></a>
+Since JSX [removes newlines before rendering to HTML](http://andrewhfarmer.com/how-whitespace-works-in-jsx/)
+you can and should put child elements on their own line, instead of putting
+them on the same line to avoid extra spaces.
+
+```
+// good
+<Component
+    prop1="prop1"
+    prop2="prop2">
+  textContent
+</Component>
+
+
+// bad
+<Component
+    prop1="prop1"
+    prop2="prop2">textContent</Component>
+    
+// good - fine to put content on same line if the tag opens & closes on that line
+<Component>textContent</Component>
+```
+
+* <a name="js-react-aligned-tags"></a>
+align open and close tags
+```jsx
+// Bad
+var component = (<MyComponent
+      foo="bar"
+      onClose={this.handleClose}>
+    <ChildComponent/>
+  </MyComponent>);
+
+// Good
+var component = (
+  <MyComponent
+      foo="bar"
+      onClose={this.handleClose}>
+    <ChildComponent/>
+  </MyComponent>
+);
+```
+
 
 ### In /apps
 
@@ -207,4 +368,3 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
 - Prefer double quotes for attributes.
 - Use dashes instead of underscores, camel casing, etc for separating words in IDs and classes.
 
-# }

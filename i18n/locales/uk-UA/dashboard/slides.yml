@@ -605,13 +605,13 @@ uk:
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: "Ви навіть не буде кваліфікуватися в перегонах, якщо ви не маєте людей, які є експертами в галузі комп'ютерних наук із-за кількості даних зібраних пошуковими системами і необхідності мати людей, які можуть писати програми, щоб з'ясувати, як ти продовжуєш розуміти, як побудувати продуктивності."
       2:
         image: notes/C2_artist_intro_2.png
         text: У цьому завданні ви будете художником, який малює фігури за допомогою олівця. Коли художник крокує позаду нього ведется лінія.
       3:
         image: notes/C2_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: "Щоб переміститися на полотні, ви будете використовувати перемістити вперед блок. Тут перемістити вперед блок говорить рухатися вперед на 100 пікселів. Коли ми запустимо, що відбудеться? Художник рухається вперед на певну величину, і ця величина буде 100 пікселів. Пікселі це дуже маленькі квадрати на екрані комп'ютера."
       4:
         image: notes/C2_artist_intro_4.png
         text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
@@ -647,7 +647,7 @@ uk:
         text: This lesson is called conditionals with cards. Every day you make decisions based on what you see and hear.
       2:
         image: notes/C2_conditionals_with_cards_2.png
-        text: "I want to walk to the park but first I have to decide whether I should bring an umbrella or not. So I look out the window. If it's cloudy, I'm going to take my umbrella. Else, I'll take some sunglasses. I think I'd better take the umbrella. What I see and hear determines what I take to the park."
+        text: я хочу прогулятися у парку, але спершу я повинен вирішити чи потрібно мені брати парасолю. Тож, я подивився у вікно. Якщо на вулиці хмарно, то я візьму парасолю. Якщо ж ні, то візьму сонце захисні окуляри. Думаю краще взяти парасолю. Те, що я бачу та чую визнатає що саме я візьму у парк.
       3:
         image: notes/C2_conditionals_with_cards_3.png
         text: |-
@@ -708,13 +708,13 @@ uk:
           This lesson is called "Graph Paper Programming" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows.
       2:
         image: notes/C2_graph_paper_2.png
-        text: "An algorithm is a list of instructions for completing a task. We'll follow this set of instructions to make the bowl. Algorithms are really helpful when you need someone else to understand how to do something."
+        text: Алгоритм це список інструкцій для виконання завдання. Ми будемо слідувати даному набору інструкцій, щоб зробити чашу. Алгоритми, дійсно корисні, коли ви потребуєте ще когось, щоб зрозуміти, як щось зробити.
       3:
         image: notes/C2_graph_paper_3.png
         text: "If you're writing an algorithm for a computer, you have to break it down to little tiny steps. So finish this row and go to the next, then the next one, and you'll be done."
       4:
         image: notes/C2_graph_paper_4.png
-        text: I use algorithms in my work. If I write down all of the steps I can recreate that same piece again, or I can teach someone else to do it. Put the glass in the kiln, fuse it together, follow the rest of the instructions to make the bowl. Algorithms give you a road map for getting something done.
+        text: "Я використовую алгоритми у моїй роботі. Якщо я записую всі кроки то можу відтворити цей же шматок знову, або я можу навчити когось зробити це. Покладіть скло в печі, з'єднайте його разом, виконуйте подальші вказівки щоб зробити чашу. Алгоритми дають вам дорожню карту для виконання чого небудь."
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
@@ -807,13 +807,13 @@ uk:
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: "Ви навіть не буде кваліфікуватися в перегонах, якщо ви не маєте людей, які є експертами в галузі комп'ютерних наук із-за кількості даних зібраних пошуковими системами і необхідності мати людей, які можуть писати програми, щоб з'ясувати, як ти продовжуєш розуміти, як побудувати продуктивності."
       2:
         image: notes/C3_artist_intro_2.png
         text: У цьому завданні ви будете художником, який малює фігури за допомогою олівця. Коли художник крокує позаду нього ведется лінія.
       3:
         image: notes/C3_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: "Щоб переміститися на полотні, ви будете використовувати перемістити вперед блок. Тут перемістити вперед блок говорить рухатися вперед на 100 пікселів. Коли ми запустимо, що відбудеться? Художник рухається вперед на певну величину, і ця величина буде 100 пікселів. Пікселі це дуже маленькі квадрати на екрані комп'ютера."
       4:
         image: notes/C3_artist_intro_4.png
         text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.

@@ -10,7 +10,6 @@ query_subscribed_contacts(q: "kind_s:VolunteerEngineerSubmission")
 # HelpUs2013
 query_subscribed_contacts(q: "kind_s:HelpUs2013")
 
-
 general_contacts = ALL
 
 include_mailchimp_engineers general_contacts

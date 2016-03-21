@@ -87,13 +87,11 @@ module Ops
       assert_equal existing_email, under_13_user.email
     end
 
-
     test 'district contact can drop teachers in their district from a cohort' do
       sign_in @district.contact
 
       @cohort.teachers << create(:teacher)
       @cohort.save!
-
 
       assert_difference '@cohort.teachers.count', -1 do
         assert_difference '@cohort.deleted_teachers.count', 1 do
@@ -355,7 +353,6 @@ module Ops
       assert_equal old_districts, @cohort.reload.districts
     end
 
-
     test 'updating Cohort with existing district updates count' do
       sign_in @admin
 
@@ -438,7 +435,6 @@ id,email,ops_first_name,ops_last_name,district_name,ops_school,ops_gender
 EOS
       assert_equal expected_response, @response.body
     end
-
 
     test 'update cohort info' do
       sign_in @admin

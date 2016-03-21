@@ -1,8 +1,9 @@
 'use strict';
-/* global dashboard, Dialog, YT */
+/* global dashboard, Dialog, YT, YTConfig */
 
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
+var clientState = require('./clientState');
 
 window.createVideoWithFallback = function(parentElement, options, width, height) {
   upgradeInsecureOptions(options);
@@ -19,12 +20,22 @@ function onVideoEnded() {
   $('.video-modal').trigger("ended");
 }
 
+var currentVideoOptions;
 function onYouTubeIframeAPIReady() {
   // requires there be an iframe#video present on the page
-  var player = new YT.Player('video');
-  player.addEventListener('onStateChange', function (state) {
-    if (state.data === YT.PlayerState.ENDED) {
-      onVideoEnded();
+  var player = new YT.Player('video', {
+    events: {
+      'onStateChange': function (state) {
+        if (state.data === YT.PlayerState.ENDED) {
+          onVideoEnded();
+        }
+      },
+      'onError': function (error) {
+        if (currentVideoOptions) {
+          var size = error.target.f.getBoundingClientRect();
+          addFallbackVideoPlayer(currentVideoOptions, size.width, size.height);
+        }
+      }
     }
   });
 }
@@ -52,7 +63,7 @@ window.showVideoDialog = function(options, forceShowVideo) {
     options.onClose = function () {};
   }
 
-  if (dashboard.clientState.hasSeenVideo(options.key) && forceShowVideo === false) {
+  if (clientState.hasSeenVideo(options.key) && forceShowVideo === false) {
     // Anything we were going to do when the video closed, we ought to do
     // right now.
     options.onClose();
@@ -95,7 +106,7 @@ window.showVideoDialog = function(options, forceShowVideo) {
     // https://github.com/code-dot-org/code-dot-org/pull/5277#issue-116253168
     video.removeAttr('src');
     options.onClose();
-    dashboard.clientState.recordVideoSeen(options.key);
+    clientState.recordVideoSeen(options.key);
     // Raise an event that the dialog has been hidden, in case anything needs to
     // play/respond to it.
     var event = document.createEvent('Event');
@@ -164,6 +175,7 @@ window.showVideoDialog = function(options, forceShowVideo) {
 
   notesDiv.height(divHeight);
 
+  currentVideoOptions = options;
   if (window.YT && window.YT.loaded) {
     onYouTubeIframeAPIReady();
   } else {

@@ -49,20 +49,24 @@ Feature: App Lab Scenarios
     And I drag a TEXT_AREA into the app
     And I switch to code mode
     And I switch to text mode
-    And I append text to droplet "onEvent('text_input1', 'change', function(event) {console.log('text_input1: ' + getText('text_input1'));});"
-    And I append text to droplet "onEvent('text_area1', 'change', function(event) {console.log('text_area1: ' + getText('text_area1'));});"
+    And I append text to droplet "onEvent('text_input1', 'change', function(event) {\n"
+    And I append text to droplet "  console.log(event.targetId + ': ' + getText('text_input1'));\n"
+    And I append text to droplet "});\n\n"
+    And I append text to droplet "onEvent('text_area1', 'change', function(event) {\n"
+    And I append text to droplet "  console.log(event.targetId + ': ' + getText('text_area1'));\n"
+    And I append text to droplet "});"
 
     # in text input, blur produces a change event
     When I press "runButton"
     And I wait until element "#divApplab > .screen > div#text_area1" is visible
     And I press keys "123" for element "#text_input1"
-    And I focus selector "#screen1"
+    And I blur selector "#text_input1"
     Then element "#debug-output" has escaped text "text_input1: 123"
 
     # in a text input, enter produces a change event but then blur does not
     When I press keys "456\n" for element "#text_input1"
     Then element "#debug-output" has escaped text "text_input1: 123\ntext_input1: 123456"
-    And I focus selector "#screen1"
+    And I blur selector "#text_input1"
     Then element "#debug-output" has escaped text "text_input1: 123\ntext_input1: 123456"
 
     # in a text area, blur produces a change event. sending keystrokes (especially 'enter')
@@ -73,7 +77,7 @@ Feature: App Lab Scenarios
     And I wait until element "#divApplab > .screen > div#text_area1" is visible
     And I focus selector "#text_area1"
     And I set selector "#text_area1" text to "abc"
-    And I focus selector "#screen1"
+    And I blur selector "#text_area1"
     Then element "#debug-output" has text "text_area1: abc"
 
   @no_safari

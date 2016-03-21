@@ -11,49 +11,47 @@ var utils = require('@cdo/apps/utils');
 
 describe("BeeCell", function () {
   var cellEquals = function (left, right) {
-    assert.equal(left.prefix_, right.prefix_);
+    assert.equal(left.tileType_, right.tileType_);
+    assert.equal(left.featureType_, right.featureType_);
     assert.equal(left.originalValue_, right.originalValue_);
-    assert.equal(left.currentValue_, right.currentValue_);
-    assert.equal(left.color_, right.color_);
-    assert.equal(left.clouded_, right.clouded_);
+    assert.equal(left.cloudType_, right.cloudType_);
+    assert.equal(left.flowerColor_, right.flowerColor_);
+    assert.equal(left.range_, right.range_);
   };
 
-  it("can parse all valid levelbuilder strings", function () {
-    var validate = function (string, expected) {
-      var cell = BeeCell.parse(string);
+  it("can parse all formerly-valid map values", function () {
+    var validate = function (map, dirt, expected) {
+      var cell = BeeCell.parseFromOldValues(map, dirt);
       cellEquals(cell, expected);
     };
 
-    validate("0", new BeeCell(0));
-    validate("1", new BeeCell(1));
-    validate("2", new BeeCell(2));
-    validate("+1", new BeeCell(1, undefined, '+'));
-    validate("+1R", new BeeCell(1, undefined, '+', 'R'));
-    validate("+1P", new BeeCell(1, undefined, '+', 'P'));
-    validate("-1", new BeeCell(1, undefined, '-'));
-    validate("+1FC", new BeeCell(1, 'FC', '+'));
-    validate("-1FC", new BeeCell(1, 'FC', '-'));
-    validate("+1C", new BeeCell(1, 'C', '+'));
-    validate("-1C", new BeeCell(1, 'C', '-'));
-    validate("1C", new BeeCell(1, 'C'));
-    validate("1Cany", new BeeCell(1, 'Cany'));
+    validate(0, 0, new BeeCell(0));
+    validate(1, 0, new BeeCell(1));
+    validate(2, 0, new BeeCell(2));
+    validate(1, 1, new BeeCell(1, BeeCell.FeatureType.FLOWER, 1));
+    validate("P", 1, new BeeCell(1, BeeCell.FeatureType.FLOWER, 1, undefined, BeeCell.FlowerColor.PURPLE));
+    validate("R", 1, new BeeCell(1, BeeCell.FeatureType.FLOWER, 1, undefined, BeeCell.FlowerColor.RED));
+    validate(1, -1, new BeeCell(1, BeeCell.FeatureType.HIVE, 1));
+    validate("FC", 1, new BeeCell(1, BeeCell.FeatureType.FLOWER, 1, BeeCell.CloudType.STATIC));
+    validate("FC", -1, new BeeCell(1, BeeCell.FeatureType.HIVE, 1, BeeCell.CloudType.STATIC));
   });
 
   it("generates all possible grid assets", function () {
-    var validate = function (string, expected) {
-      var assets = BeeCell.parse(string).getPossibleGridAssets();
+    var validate = function (original, expected) {
+      var assets = original.getPossibleGridAssets();
+      assert.equal(assets.length, expected.length);
       assets.forEach(function (asset, i) {
-        var cell = BeeCell.parse(expected[i]);
-        cellEquals(asset, cell);
+        cellEquals(asset, expected[i]);
       });
     };
 
-    validate("0", ["0"]);
-    validate("+1", ["+1"]);
-    validate("+1FC", ["+1FC"]);
-    validate("+1C", ["+1FC", "0FC"]);
-    validate("-1C", ["-1FC", "0FC"]);
-    validate("1C", ["+1FC", "-1FC"]);
-    validate("1Cany", ["+1FC", "-1FC", "0FC"]);
+    validate(new BeeCell(0), [new BeeCell(0)]);
+    validate(new BeeCell(1), [new BeeCell(1)]);
+    validate(new BeeCell(1, 1, 1), [new BeeCell(1, 1, 1)]);
+    validate(new BeeCell(1, 1, 1, 0), [new BeeCell(1, 1, 1, 0)]);
+    validate(new BeeCell(1, 2, 1, 1), [new BeeCell(1, 1, 1, 0), new BeeCell(1, 0, 1, 0)]);
+    validate(new BeeCell(1, 2, 1, 2), [new BeeCell(1, 1, 1, 0), new BeeCell(1, undefined, undefined, 0)]);
+    validate(new BeeCell(1, 2, 1, 3), [new BeeCell(1, 0, 1, 0), new BeeCell(1, undefined, undefined, 0)]);
+    validate(new BeeCell(1, 2, 1, 4), [new BeeCell(1, 1, 1, 0), new BeeCell(1, 0, 1, 0), new BeeCell(1, undefined, undefined, 0)]);
   });
 });

@@ -1,0 +1,33 @@
+name 'ECSPD3-u6 do the challenge'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+### Unit 6 Challenge > Do the Challenge
+<br/> 
+It's time to go read the lesson plan and complete the activities related to your lesson!  
+<br><br> 
+#### Planning to follow Unit 6? 
+>-  **Read through** the lesson plan you selected in the previous stage 
+-  **Do the activities from the lesson**. Save any artifacts (videos, pictures, posters, etc)  
+- While you review the lesson plan and do the activity, make sure to **jot down your thoughts** about:  
+    - ahha! moments during the activity 
+    - what was difficult about this activity? 
+    - what did you enjoy about this lesson? 
+    - what additional resources might be useful for teaching this lesson?  
+-  **Create your own** Extension Activity or Assessment Question that could be used with this lesson.
+- Develop a short **write-up** explaining to another teacher how to use your Extension or Assessment item. 
+
+#### Not planning to follow Unit 6? 
+>- Check out the resources we've linked outlining alternate ideas for Unit 6.
+- Come up with some ideas for what you will do with your own final lesson. **Jot down your thoughts** about: 
+ - How your alternate final unit will wrap up and extend units 1 - 4. 
+ - How you plan to structure your final unit (details on what types of activities students will do, what skills they will build, etc). 
+ - Overview of and links to resources and materials you plan use in your final unit. 
+ 
+When you're finished reading your lesson plan and completing the levels, come back and hit 'Continue'! 
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

@@ -35,6 +35,14 @@ class PropertiesTest < Minitest::Test
     assert @properties.last_response.not_found?
   end
 
+  def test_set_too_large
+    key = '_testKey'
+    value_string = ("a" * 500000).to_json
+
+    set_key_value(key, value_string)
+    assert_equal 413, @properties.last_response.status
+  end
+
   def test_auth
     set_key_value('k', 'v'.to_json)
     assert JSON.parse(list(@properties, @channel_id)).length == 1, "Owner can list all properties."

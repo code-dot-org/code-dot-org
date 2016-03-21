@@ -6,8 +6,8 @@
   "user_id": 5,
   "properties": {
     "skin": "bee",
-    "instructions": "Now use the new repeat block to collect all of the nectar and make all of the honey.",
-    "step_mode": 1,
+    "instructions": "Now use the `repeat` block to collect all of the nectar and make all of the honey.",
+    "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "2",
@@ -28,8 +28,15 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "markdown_instructions": "Now use the `repeat` block to collect all of the nectar and make all of the honey.",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will need two different `repeat` loops, one after the other.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_3B_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "fast_get_nectar_animation": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -50,7 +57,40 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-</xml>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+      </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="maze_nectar"/>
+                  </statement>
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">4</title>
+                          <statement name="DO">
+                            <block type="maze_honey"/>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

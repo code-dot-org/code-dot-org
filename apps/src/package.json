@@ -1,7 +1,7 @@
 {
   "name": "@cdo/apps",
   "version": "0.0.1",
-  "description": "Code Studio module package, used to reference src files from tests",
+  "description": "Code Studio module package, used to reference src files from tests and code-studio",
   "private": true,
   "browserify": {
     "transform": [

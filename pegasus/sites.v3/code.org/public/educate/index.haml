@@ -9,7 +9,7 @@ title: Educator Overview
 
 #educate-curriculum-grid
   - DB[:cdo_educate].where(section_s:'curriculum').each do |item|
-    = view :educate2_box, item: item, color: "#59b9dc"
+    = view :educate_box, item: item, color: "#59b9dc"
 
 %div{style: "clear:both"}
 
@@ -17,4 +17,4 @@ title: Educator Overview
 
 #educate-resources-grid
   - DB[:cdo_educate].where(section_s:'resources').each do |item|
-    = view :educate2_box, item: item, color: "#a69bc1"
+    = view :educate_box, item: item, color: "#a69bc1"

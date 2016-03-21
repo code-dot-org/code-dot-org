@@ -83,7 +83,7 @@ class CsvToSqlTable
   def column_name_to_schema(name)
     i = name.rindex('_')
 
-    if name.ends_with?('!') or name.ends_with?('*')
+    if name.ends_with?('!') || name.ends_with?('*')
       type_flag = name[-1..-1]
       name = name[0..-2]
     end
@@ -209,7 +209,7 @@ namespace :seed do
     auto_id = db.columns.include?(:id)
 
     count = 0
-    CSV.foreach(path, headers: true) do |data|
+    CSV.foreach(path, headers: true, encoding: 'utf-8') do |data|
       record = {}
       db.columns.each{|column| record[column] = csv_smart_value(data[column.to_s])}
 

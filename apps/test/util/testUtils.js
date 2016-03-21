@@ -1,8 +1,10 @@
 var chai = require('chai');
-require("babelify/polyfill"); // required for Promises in IE / Phantom
+var chaiSubset = require('chai-subset');
+chai.use(chaiSubset);
 chai.config.includeStack = true;
 var assert = chai.assert;
 exports.assert = assert;
+var tickWrapper = require('./tickWrapper');
 
 require('require-globify');
 
@@ -119,17 +121,7 @@ exports.runOnStudioTick = function (tick, fn) {
  * Generic function allowing us to hook into onTick. Only tested for Studio/Applab
  */
 exports.runOnAppTick = function (app, tick, fn) {
-  if (!app) {
-    throw new Error('not supported outside of studio/applab');
-  }
-  var ran = false;
-  app.onTick = _.wrap(app.onTick, function (originalOnTick) {
-    if (app.tickCount === tick && !ran) {
-      ran = true;
-      fn();
-    }
-    originalOnTick();
-  });
+  tickWrapper.runOnAppTick(app, tick, fn);
 };
 
 /**
@@ -150,20 +142,7 @@ exports.runOnAppTick = function (app, tick, fn) {
  *   });
  */
 exports.tickAppUntil = function (app, predicate) {
-  if (!app || !app.onTick) {
-    throw new Error('Supplied app (' + app + ') does not have an onTick method');
-  }
-
-  var resolved = false;
-  return new Promise(function (resolve) {
-    app.onTick = _.wrap(app.onTick, function (originalOnTick) {
-      if (!resolved && predicate()) {
-        resolve();
-        resolved = true;
-      }
-      originalOnTick();
-    });
-  });
+  return tickWrapper.tickAppUntil(app, predicate);
 };
 
 /**

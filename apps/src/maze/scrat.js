@@ -25,14 +25,14 @@ var TILE_SHAPES = {
 };
 
 // Returns true if the tile at x,y is either a water tile or out of bounds
-function isWaterOrOutOfBounds (x, y) {
-  return Maze.map[y] === undefined || Maze.map[y][x] === undefined ||
-    Maze.map[y][x] === SquareType.WALL;
+function isWaterOrOutOfBounds (col, row) {
+  return Maze.map.getTile(row, col) === SquareType.WALL ||
+      Maze.map.getTile(row, col) === undefined;
 }
 
 // Returns true if the tile at x,y is a water tile that is in bounds.
-function isWater (x, y) {
-  return Maze.map[y] !== undefined && Maze.map[y][x] === SquareType.WALL;
+function isWater (col, row) {
+  return Maze.map.getTile(row, col) === SquareType.WALL;
 }
 
 /**
@@ -43,8 +43,8 @@ module.exports.drawMapTiles = function (svg) {
 
   // first figure out where we want to put the island
   var possibleIslandLocations = [];
-  for (row = 0; row < Maze.ROWS; row++) {
-    for (col = 0; col < Maze.COLS; col++) {
+  for (row = 0; row < Maze.map.ROWS; row++) {
+    for (col = 0; col < Maze.map.COLS; col++) {
       if (!isWater(col, row) || !isWater(col + 1, row) ||
         !isWater(col, row + 1) || !isWater(col + 1, row + 1)) {
         continue;
@@ -63,8 +63,8 @@ module.exports.drawMapTiles = function (svg) {
 
   var tileId = 0;
   var tile;
-  for (row = 0; row < Maze.ROWS; row++) {
-    for (col = 0; col < Maze.COLS; col++) {
+  for (row = 0; row < Maze.map.ROWS; row++) {
+    for (col = 0; col < Maze.map.COLS; col++) {
       if (!isWaterOrOutOfBounds(col, row)) {
         tile = 'ice';
       } else {

@@ -59,7 +59,6 @@ teachers_csv = generate('petition-teachers')
 puts "splitting #{teachers_csv}"
 puts `./split #{teachers_csv} 3 3 3 3`
 
-
 # Engineers:
 # kind_s:VolunteerEngineerSubmission
 # kind_s:HelpUs2013
@@ -73,7 +72,6 @@ generate('engineers')
 general_csv = generate('general')
 puts "splitting #{general_csv}"
 puts `./split #{general_csv} 3 3 3 3`
-
 
 # from the old script
 

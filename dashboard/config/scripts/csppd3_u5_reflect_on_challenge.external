@@ -1,0 +1,26 @@
+name 'CSPPD3-u5 reflect on challenge'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Complete the Challenge  > Pause and Reflect
+
+<br/>
+#### Reflect on the Performance Task
+
+**NOTE:** You should have already spent time on your selected performance task, and created your artifacts. 
+<br><br>
+
+>#### Prepare Responses to the Following
+>- realizations about the nature of the performance tasks that you will take with you into teaching this course next year
+- what was difficult about this activity?
+- what did you enjoy about this lesson?
+
+##### In the next Stage you will have space to visit the forum and share your artifacts and thoughts about the lesson.
+<br>
+When you're finished, come back and click 'Continue' 
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

@@ -62,10 +62,7 @@ exports.TestResults = {
   EDIT_BLOCKS: 70, // The user is creating/editing a new level.
 
   // The level was solved in the ideal manner.
-  ALL_PASS: 100,
-
-  // submitted for grading
-  SUBMITTED: 1000
+  ALL_PASS: 100
 };
 
 exports.BeeTerminationValue = {
@@ -79,7 +76,8 @@ exports.BeeTerminationValue = {
   UNCHECKED_CLOUD: 5,    // Finished puzzle, but didn't check every clouded item
   UNCHECKED_PURPLE: 6,   // Finished puzzle, but didn't check every purple flower
   INSUFFICIENT_NECTAR: 7,// Didn't collect all nectar by finish
-  INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
+  INSUFFICIENT_HONEY: 8, // Didn't make all honey by finish
+  DID_NOT_COLLECT_EVERYTHING: 9 // For quantum levels, didn't try to collect all available honey/nectar
 };
 
 exports.KeyCodes = {

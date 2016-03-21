@@ -4,23 +4,29 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 4: Lesson 13 - Privacy Abandoned
+## Unit 4: Lesson 13 - The Cost of Free
 
 # Background
-<div style="width: 200px; text-align: center; float: right; margin-left: 50px">
-
-<a href="https://images.code.org/125edbb0a9dadff13afb4bb032c695ec-image-1454087982407.19.15 AM.png" target="_blank"><img src="https://images.code.org/125edbb0a9dadff13afb4bb032c695ec-image-1454087982407.19.15 AM.png" style="width: 250px; float: right"></a><br><em>Click to enlarge.</em></div>
-Our personal information can be stolen from the organizations we entrust it to, posing threats to our security and privacy. Even more frequently, however, we willingly give up our personal information in exchange for the conveniences that we receive in exchange. As increasingly complex systems to collect, analyze, and monetize our personal information are put into place, we must re-evaluate just what privacy means and how it can be protected in the 21st century.
+Why is so much of the stuff you use online free? Who is paying for it? Many people are unaware of how information about them is being collected and tracked by the technology they use every day. Often, you "pay" for it with your data. The maker of an app can use data they collect from you to make money, and provide you with a service or app for free. This carries some risks to your personal privacy and security. Most companies make great efforts to balance the tradeoffs between providing you with a useful service and protecting your privacy, but the issues can be tricky and raise confounding ethical dilemmas.
 
 # Lesson
 
-* Examine a privacy policy of a sample app
-* Video - Hot on Your Trail
-* Research the privacy policy of a popular website or app
+* Video - The Future of Big Data
+* What do you know about data collected about you every day?
+* Reading: Wall Street Journal: Users Get as Much as They Give
+* Read a real data privacy policy
 
 # Resources
 
+* Video: <a href="http://www.fwthinking.com/video/clips/future-big-data-video/">The Future of Big Data</a>
+
+* Article: **Wall Street Journal: Users Get as Much as They Give** 
+ * <a href="https://docs.google.com/document/d/1IM0rBFF1CP4icPU6pmPrXXStYWwQ1gURtvFoJsbFV1A">[Anotated Version]</a>
+ * <a href="http://www.wsj.com/articles/SB10001424052748703748904575411530096840958">[Original version WSJ.com]</a>
+ 
 * Activity Guide: <a href='https://docs.google.com/document/d/1K_v_0Qup_864h4c2p3WKwbhlvFCdobbekmff05caPI0/edit?usp=sharing' target="_blank">Privacy Policies</a>
+
+* *Free Flashlight App* permissions screen <a href="https://images.code.org/125edbb0a9dadff13afb4bb032c695ec-image-1454087982407.19.15 AM.png" target="_blank">[Click to view image]</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

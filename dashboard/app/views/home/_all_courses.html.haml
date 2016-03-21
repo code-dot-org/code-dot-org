@@ -20,6 +20,11 @@
   = render partial: 'shared/course_wide_block', locals: { id: Script::TWENTY_HOUR_NAME, showState: show_state, view: "small" }
 %br/
 .row
+  .span12.twolineheader!= t('home.heading_tools')
+.row
+  = render partial: 'shared/course_wide_block', locals: { id: "applab" }
+%br/
+.row
   .span12.twolineheader!= t('home.heading_hoc2014')
 .row
   = render partial: 'shared/course_tall_block', locals: { id: first_tutorial, showState: show_state }

@@ -1,6 +1,7 @@
 @as_student
 @dashboard_db_access
 @no_mobile
+@no_safari
 Feature: Pixelation levels
   Scenario: Pixelation version 2 in black and white with no sliders
     Given I am on "http://studio.code.org/s/allthethings/stage/17/puzzle/1?noautoplay=true"

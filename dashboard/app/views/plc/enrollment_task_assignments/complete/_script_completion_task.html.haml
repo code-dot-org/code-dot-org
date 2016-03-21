@@ -1,0 +1,9 @@
+Hello, this is a script you have to complete.
+
+- script = @task.script_id ? Script.find(@task.script_id) : nil
+- if @task.script
+  %p
+    Go do this script, make sure you are signed in:
+    = link_to @task.script.name, @task.script
+- else
+  %p But there is no script assigned here right now.

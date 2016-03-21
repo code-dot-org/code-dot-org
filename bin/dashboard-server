@@ -3,19 +3,26 @@ require_relative '../deployment'
 
 def main()
   rerun = "rerun -p '**/*.{rb,ru,yml}' -d'#{deploy_dir('lib')},#{deploy_dir('shared/middleware')},#{pegasus_dir}' --" if CDO.dashboard_enable_pegasus
+  pids = []
 
   unless CDO.use_my_code_studio
     # Note: This will report "code-studio-watcher Launch Failed" because it expects something
     # that continues to run.
-    pid = spawn("rerun -d #{code_studio_dir}/src --background -n code-studio-watcher rake update_package:code_studio")
+    pids.push spawn("rerun -d #{code_studio_dir}/src --background -n code-studio-watcher rake update_package:code_studio")
+  end
+
+  unless CDO.use_my_apps
+    # Note: This will report "apps-watcher Launch Failed" because it expects something
+    # that continues to run.
+    pids.push spawn("rerun -d #{apps_dir}/src --background -n apps-watcher rake update_package:apps")
   end
 
   Dir.chdir(dashboard_dir) do
     system "RAILS_ENV=#{CDO.rack_env} bundle exec #{rerun} rackup -o #{CDO.dashboard_host} -p #{CDO.dashboard_port}"
   end
 
-  unless pid.nil?
-    puts "Detaching code-studio-watcher #{pid}"
+  pids.each do |pid|
+    puts "Detaching watcher #{pid}"
     Process.detach(pid)
   end
 end

@@ -71,7 +71,7 @@ STR
       }
     )
     Aws.config[:cloudfront][:stub_responses][:list_distributions] =
-      distribution_list [ distribution_summary ]
+      distribution_list [distribution_summary]
     assert_output (<<STR) { AWS::CloudFront.create_or_update }
 pegasus distribution updated!
 dashboard distribution updated!

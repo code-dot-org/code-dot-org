@@ -34,6 +34,9 @@ var constants = require('./constants');
 var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
 var puzzleRatingUtils = require('./puzzleRatingUtils');
+var DialogButtons = require('./templates/DialogButtons.jsx');
+var CodeWritten = require('./templates/feedback/CodeWritten.jsx');
+var GeneratedCode = require('./templates/feedback/GeneratedCode.jsx');
 
 /**
  * @typedef {Object} TestableBlock
@@ -416,20 +419,18 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
     tryAgainText = options.keepPlayingText;
   }
 
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      previousLevel:
-        !this.canContinueToNextLevel(options.feedbackType) &&
-        options.showPreviousButton,
-      tryAgain: tryAgainText,
-      continueText: options.continueText || (options.finalLevel ? msg.finish() : msg.continue()),
-      nextLevel: this.canContinueToNextLevel(options.feedbackType),
-      shouldPromptForHint: this.shouldPromptForHint(options.feedbackType),
-      isK1: options.isK1,
-      assetUrl: this.studioApp_.assetUrl,
-      freePlay: options.freePlay
-    }
-  });
+  ReactDOM.render(React.createElement(DialogButtons, {
+    previousLevel:
+      !this.canContinueToNextLevel(options.feedbackType) &&
+      options.showPreviousButton,
+    tryAgain: tryAgainText,
+    continueText: options.continueText || (options.finalLevel ? msg.finish() : msg.continue()),
+    nextLevel: this.canContinueToNextLevel(options.feedbackType),
+    shouldPromptForHint: this.shouldPromptForHint(options.feedbackType),
+    isK1: options.isK1,
+    assetUrl: this.studioApp_.assetUrl,
+    freePlay: options.freePlay
+  }), buttons);
 
   return buttons;
 };
@@ -502,7 +503,11 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
         }
         break;
       case TestResults.TOO_FEW_BLOCKS_FAIL:
-        message = options.level.tooFewBlocksMsg || msg.tooFewBlocksMsg();
+        // This should be replaced by the LEVEL_INCOMPLETE_FAIL case, but some
+        // levels still override tooFewBlocksMsg.
+        message = options.level.tooFewBlocksMsg ||
+            options.level.levelIncompleteError ||
+            msg.levelIncompleteError();
         break;
       case TestResults.LEVEL_INCOMPLETE_FAIL:
         message = options.level.levelIncompleteError ||
@@ -808,19 +813,21 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
       (options.response.total_lines !== numLinesWritten));
   var totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
 
-  showCodeDiv.innerHTML = require('./templates/showCode.html.ejs')({
-    numLinesWritten: numLinesWritten,
-    totalNumLinesWritten: totalNumLinesWritten
+  var generatedCodeProperties = this.getGeneratedCodeProperties_({
+    generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
   });
 
-  var showCodeButton = showCodeDiv.querySelector('#show-code-button');
-  showCodeButton.addEventListener('click', _.bind(function () {
-    var generatedCodeElement = this.getGeneratedCodeElement_({
-      generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
-    });
-    showCodeDiv.appendChild(generatedCodeElement);
-    showCodeButton.style.display = 'none';
-  }, this));
+  ReactDOM.render(<CodeWritten numLinesWritten={numLinesWritten} totalNumLinesWritten={totalNumLinesWritten}>
+    <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
+  </CodeWritten>, showCodeDiv);
+
+  // If the jQuery details polyfill is available, use it on the
+  // newly-created details element. If the details polyfill is not
+  // available - either because it failed to load or was removed - then
+  // the browser-specified details functionality will be applied.
+  if ($.fn.details) {
+    $(showCodeDiv).find('details').details();
+  }
 
   return showCodeDiv;
 };
@@ -865,14 +872,15 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
 };
 
 /**
- * Generates a "show code" div with a description of what code is.
+ * Generates a "show code" React component with a description of what
+ * code is.
  * @param {Object} [options] - optional
- * @param {string} [options.generatedCodeDescription] - optional description
- *        of code to put in place instead of the default
- * @returns {Element}
+ * @param {string} [options.generatedCodeDescription] - optional
+ *        description of code to put in place instead of the default
+ * @returns {React}
  * @private
  */
-FeedbackUtils.prototype.getGeneratedCodeElement_ = function(options) {
+FeedbackUtils.prototype.getGeneratedCodeProperties_ = function(options) {
   options = options || {};
 
   var codeInfoMsgParams = {
@@ -880,17 +888,14 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function(options) {
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var infoMessage = this.getGeneratedCodeDescription(codeInfoMsgParams,
+  var message = this.getGeneratedCodeDescription(codeInfoMsgParams,
       options.generatedCodeDescription);
   var code = this.studioApp_.polishGeneratedCodeString(this.getGeneratedCodeString_());
 
-  var codeDiv = document.createElement('div');
-  codeDiv.innerHTML = require('./templates/code.html.ejs')({
-    message: infoMessage,
+  return {
+    message: message,
     code: code
-  });
-
-  return codeDiv;
+  };
 };
 
 /**
@@ -920,26 +925,25 @@ FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParam
  *        to display instead of the usual show code description
  */
 FeedbackUtils.prototype.showGeneratedCode = function(Dialog, appStrings) {
-  var codeDiv = this.getGeneratedCodeElement_({
+  var codeDiv = document.createElement('div');
+
+  var generatedCodeProperties = this.getGeneratedCodeProperties_({
     generatedCodeDescription: appStrings && appStrings.generatedCodeDescription
   });
 
-  var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      ok: true
-    }
-  });
-  codeDiv.appendChild(buttons);
+  ReactDOM.render(<div>
+    <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
+    <DialogButtons ok={true} />
+  </div>, codeDiv);
 
   var dialog = this.createModalDialog({
-      Dialog: Dialog,
-      contentDiv: codeDiv,
-      icon: this.studioApp_.icon,
-      defaultBtnSelector: '#ok-button'
-      });
+    Dialog: Dialog,
+    contentDiv: codeDiv,
+    icon: this.studioApp_.icon,
+    defaultBtnSelector: '#ok-button'
+  });
 
-  var okayButton = buttons.querySelector('#ok-button');
+  var okayButton = codeDiv.querySelector('#ok-button');
   if (okayButton) {
     dom.addClickTouchEvent(okayButton, function() {
       dialog.hide();
@@ -966,36 +970,45 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, hideIcon,
 };
 
 /**
+ * @callback onConfirmCallback
+ */
+
+/**
+ * @callback onCancelCallback
+ * @param {string} [text] Textbox value if prompting, otherwise omitted
+ */
+
+/**
  * Shows a simple dialog that has a header, body, continue button, and cancel
  * button
  * @param {object} options Configurable options.
- * @param {string} headerText Text for header portion
- * @param {string} bodyText Text for body portion
- * @param {string} cancelText Text for cancel button
- * @param {string} confirmText Text for confirm button
- * @param {boolean} hideIcon Whether to hide the icon
- * @param {function} [onConfirm] Function to be called after clicking confirm
- * @param {function} [onCancel] Function to be called after clicking cancel
+ * @param {string} [options.headerText] Text for header portion
+ * @param {string} [options.bodyText] Text for body portion
+ * @param {boolean} [options.prompt=false] Whether to prompt for a string value
+ * @param {string} [options.promptPrefill] If prompting, textbox prefill value
+ * @param {string} options.cancelText Text for cancel button
+ * @param {string} options.confirmText Text for confirm button
+ * @param {boolean} [options.hideIcon=false] Whether to hide the icon
+ * @param {onConfirmCallback} [options.onConfirm] Function to be called after clicking confirm
+ * @param {onCancelCallback} [options.onCancel] Function to be called after clicking cancel
  */
 FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
-  var contentDiv = document.createElement('div');
-  contentDiv.innerHTML = '';
-  if (options.headerText) {
-    contentDiv.innerHTML += '<p class="dialog-title">' + options.headerText + '</p>';
-  }
-  if (options.bodyText) {
-    contentDiv.innerHTML += '<p>' + options.bodyText + '</p>';
-  }
-
-  var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      confirmText: options.confirmText,
-      cancelText: options.cancelText,
-      cancelButtonClass: options.cancelButtonClass
-    }
-  });
-  contentDiv.appendChild(buttons);
+  var textBoxStyle = {
+    'margin-bottom': '10px'
+  };
+  var contentDiv = ReactDOM.render(
+    <div>
+      {options.headerText && <p class="dialog-title">{options.headerText}</p>}
+      {options.bodyText && <p>{options.bodyText}</p>}
+      {options.prompt && <input
+          style={textBoxStyle}
+          value={options.promptPrefill} />}
+      <DialogButtons
+          confirmText={options.confirmText}
+          cancelText={options.cancelText}
+          cancelButtonClass={options.cancelButtonClass} />
+    </div>,
+    document.createElement('div'));
 
   var dialog = this.createModalDialog({
     Dialog: Dialog,
@@ -1004,17 +1017,22 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
     defaultBtnSelector: '#again-button'
   });
 
-  var cancelButton = buttons.querySelector('#again-button');
+  var cancelButton = contentDiv.querySelector('#again-button');
+  var textBox = contentDiv.querySelector('input');
   if (cancelButton) {
     dom.addClickTouchEvent(cancelButton, function() {
       if (options.onCancel) {
-        options.onCancel();
+        if (textBox) {
+          options.onCancel(textBox.value);
+        } else {
+          options.onCancel();
+        }
       }
       dialog.hide();
     });
   }
 
-  var confirmButton = buttons.querySelector('#confirm-button');
+  var confirmButton = contentDiv.querySelector('#confirm-button');
   if (confirmButton) {
     dom.addClickTouchEvent(confirmButton, function() {
       if (options.onConfirm) {
@@ -1025,6 +1043,10 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   }
 
   dialog.show();
+  if (textBox) {
+    textBox.focus();
+    textBox.select();
+  }
 };
 
 /**
@@ -1035,11 +1057,9 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      ok: true
-    }
-  });
+  ReactDOM.render(React.createElement(DialogButtons, {
+    ok: true
+  }), buttons);
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({

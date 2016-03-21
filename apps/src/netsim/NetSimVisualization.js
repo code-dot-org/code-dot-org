@@ -1,12 +1,6 @@
 /**
  * @overview Top-level controller for the network visualization.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var utils = require('../utils');
