@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../../pegasus/src/env'
+require_relative '../../../pegasus/src/env'
 require 'cdo/solr'
 require src_dir 'database'
 
@@ -30,6 +30,16 @@ def query_contacts(params)
   end
 end
 
+def query_contacts_with_location(params)
+  raise "there must be a query" if params[:q].nil?
+
+  params = params.dup
+  params[:q] += ' && ' + location_query if location_query
+  params[:fq] = location_filter_query
+
+  query_contacts(params)
+end
+
 UNSUBSCRIBERS = {}.tap do |results|
   DB[:contacts].where('unsubscribed_at IS NOT NULL').each do |i|
     email = i[:email].downcase.strip
@@ -38,12 +48,14 @@ UNSUBSCRIBERS = {}.tap do |results|
 end
 puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
-EVERYBODY = {}.tap do |results|
-  query_contacts(q: '-email_s:""').each do |i|
+TEACHERS = {}.tap do |results|
+  (
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Brazil"')
+  ).each do |i|
     email = i[:email].downcase.strip
     results[email] = i unless UNSUBSCRIBERS[email]
   end
 end
-puts "#{EVERYBODY.count} recipients loaded."
+puts "#{TEACHERS.count} teachers loaded."
 
-export_contacts_to_csv EVERYBODY, 'everybody.csv'
+export_contacts_to_csv TEACHERS, "brazil-teachers.csv"

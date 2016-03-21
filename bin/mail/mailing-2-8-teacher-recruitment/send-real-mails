@@ -12,7 +12,7 @@ end
 teacher_csv = "Teachers_#{region_name}.csv"
 raise "Missing teacher csv #{teacher_csv}" unless File.exist? teacher_csv
 
-template_file = File.join('../../pegasus/emails', "#{template_name}.md")
+template_file = File.join('../../../pegasus/emails', "#{template_name}.md")
 raise "Missing email template #{template_file}" unless File.exist? template_file
 
 count = `wc -l < '#{teacher_csv}'`.strip.to_i - 1 # -1 to account for the header

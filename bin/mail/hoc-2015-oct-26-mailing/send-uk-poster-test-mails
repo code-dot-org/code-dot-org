@@ -1,3 +1,3 @@
 #!/bin/sh
 
-./send-to-mailing-list 10-26-hoc-uk-posters mailing-common/test-params-international.csv
+./send-to-mailing-list 10-26-hoc-uk-posters common/test-params-international.csv

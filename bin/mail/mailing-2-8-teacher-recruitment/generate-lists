@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../mailing-common/mailing-list-utils'
+require_relative '../common/mailing-list-utils'
 require 'set'
 
 # Exported from https://docs.google.com/spreadsheets/d/1T_cd7CDlOuuLe_hObSzNX7BbN7PwU_EzEpjuIHuwoNM

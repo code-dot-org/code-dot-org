@@ -1,10 +1,13 @@
 #!/usr/bin/env ruby
-require_relative '../../pegasus/src/env'
+require_relative '../../../pegasus/src/env'
 require 'cdo/solr'
 require src_dir 'database'
 
-raise "Usage: $0 'solr query'" unless ARGV.length == 1
-solr_query = ARGV[0]
+# Generates a list of teachers based on these filters:
+# Petition parents, software engineers, none of the above - US ONLY
+# Volunteer engineer list - US ONLY
+# HocSignup2014- US ONLY
+# CSEdWeekEvent2013- US ONLY
 
 SOLR = Solr::Server.new(host: CDO.solr_server)
 
@@ -23,11 +26,10 @@ def export_contacts_to_csv(contacts, path)
 end
 
 def query_contacts(params)
-  fields = []
   fields = params[:fields] if params[:fields]
 
   [].tap do |results|
-    SOLR.query(params.merge(rows: 10000, fl: ['email_s', 'name_s'] + fields)).each do |i|
+    SOLR.query(params.merge(rows: 10000)).each do |i|
       i = yield(i) if block_given?
       results << {email: i['email_s'].downcase.strip, name: i['name_s']}.merge(i.slice(*fields)) if i
     end
@@ -42,12 +44,17 @@ UNSUBSCRIBERS = {}.tap do |results|
 end
 puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
-recipients = {}.tap do |results|
-  query_contacts(q: solr_query).each do |i|
+TEACHERS = {}.tap do |results|
+  (
+  query_contacts(q: 'kind_s:"Petition" && create_ip_country_s:"United States"', fq: '-role_s:"student" && -role_s:"educator" && -role_s:"district_admin" && -role_s:"principal" && -role_s:"superintendent" && -role_s:"teacher"') +
+      query_contacts(q: 'kind_s:"VolunteerEngineerSubmission" && create_ip_country_s:"United States"') +
+      query_contacts(q: 'kind_s:"HocSignup2014" && create_ip_country_s:"United States"') +
+      query_contacts(q: 'kind_s:"CSEdWeekEvent2013" && create_ip_country_s:"United States"')
+  ).each do |i|
     email = i[:email].downcase.strip
     results[email] = i unless UNSUBSCRIBERS[email]
   end
 end
-puts "#{recipients.count} recipients > mailing-list.csv"
+puts "#{TEACHERS.count} teachers loaded."
 
-export_contacts_to_csv recipients, 'mailing-list.csv'
+export_contacts_to_csv TEACHERS, "us-teachers.csv"
