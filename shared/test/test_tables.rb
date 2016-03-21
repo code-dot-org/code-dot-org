@@ -8,11 +8,6 @@ class TablesTest < Minitest::Test
 
   TableType = CDO.use_dynamo_tables ? DynamoTable : SqlTable
 
-  def teardown
-    TablesApi.reset_max_table_rows_for_test
-    TablesApi.reset_max_record_size_for_test
-  end
-
   def test_create_read_update_delete
     init_apis
 
@@ -47,32 +42,32 @@ class TablesTest < Minitest::Test
     create_channel
 
     max_rows = 10
-    TablesApi.set_max_table_rows_for_test(max_rows)
+    TablesApi.stub(:max_table_rows, max_rows) do
+      # Make sure that we can create up to max_rows without error
+      record_ids = []
+      (1..max_rows).each do |i|
+        record_ids << create_record({'name' => "test#{i}", 'age' => 7, 'male' => false})
+      end
 
-    # Make sure that we can create up to max_rows without error
-    record_ids = []
-    (1..max_rows).each do |i|
-      record_ids << create_record({'name' => "test#{i}", 'age' => 7, 'male' => false})
+      # Make sure we get an error if we attempt to exceed the row limit.
+      begin
+        create_record({'name' => 'yet another record'})
+      rescue
+        assert_equal 403, @tables.last_response.status
+      end
+
+      # Delete a record and make sure we can then add exactly one more record.
+      delete_record(record_ids[0])
+
+      create_record({'name' => 'now there is room'})
+      begin
+        create_record({'name' => 'but only for one more'})
+      rescue
+        assert_equal 403, @tables.last_response.status
+      end
+
+      delete_channel
     end
-
-    # Make sure we get an error if we attempt to exceed the row limit.
-    begin
-      create_record({'name' => 'yet another record'})
-    rescue
-      assert_equal 403, @tables.last_response.status
-    end
-
-    # Delete a record and make sure we can then add exactly one more record.
-    delete_record(record_ids[0])
-
-    create_record({'name' => 'now there is room'})
-    begin
-      create_record({'name' => 'but only for one more'})
-    rescue
-      assert_equal 403, @tables.last_response.status
-    end
-
-    delete_channel
   end
 
   def test_record_size_limit
@@ -89,24 +84,24 @@ class TablesTest < Minitest::Test
     max_record_size = 2 * @table_name.length + record.to_json.length
     assert_equal 36, max_record_size, 'a change in the max record size could break existing apps'
 
-    TablesApi.set_max_record_size_for_test(max_record_size)
+    TablesApi.stub(:max_record_size, max_record_size) do
+      id = create_record(record).to_i
+      create_record(record2, 413)
 
-    id = create_record(record).to_i
-    create_record(record2, 413)
+      actual_created_record = read_records.find do |record|
+        record['id'] == id
+      end
+      assert_equal id, actual_created_record['id'], 'actual created record has correct id'
 
-    actual_created_record = read_records.find do |record|
-      record['id'] == id
+      update_record(id, actual_created_record)
+      assert @tables.last_response.successful?, 'max-size created record can be updated with the same value'
+
+      actual_created_record[column_name] += 'x'
+      update_record(id, actual_created_record)
+      assert_equal 413, @tables.last_response.status, 'oversize record cannot be updated'
+
+      delete_channel
     end
-    assert_equal id, actual_created_record['id'], 'actual created record has correct id'
-
-    update_record(id, actual_created_record)
-    assert @tables.last_response.successful?, 'max-size created record can be updated with the same value'
-
-    actual_created_record[column_name] += 'x'
-    update_record(id, actual_created_record)
-    assert_equal 413, @tables.last_response.status, 'oversize record cannot be updated'
-
-    delete_channel
   end
 
   def test_populate

@@ -18,13 +18,17 @@ class TablesApi < Sinatra::Base
 
   # Maximum number of rows allowed in a table (either in initial import or
   # after inserting rows.) Logically constant but can be modified in tests.
-  @@max_table_rows = DEFAULT_MAX_TABLE_ROWS
+  def self.max_table_rows
+    DEFAULT_MAX_TABLE_ROWS
+  end
 
   # Maximum allowed size in bytes of an individual record. This is enforced when
   # creating or updating a single record, or when importing or populating records
   # in bulk. This is not enforced when adding or renaming columns, or when
   # coercing a column to a new type.
-  @@max_record_size = DEFAULT_MAX_RECORD_SIZE
+  def self.max_record_size
+    DEFAULT_MAX_RECORD_SIZE
+  end
 
   @@redis = Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379')
 
@@ -199,7 +203,7 @@ class TablesApi < Sinatra::Base
 
   def record_too_large(record_size, index = nil)
     record_description = index ? "Record #{index + 1}" : 'The record'
-    too_large "#{record_description} is too large (#{record_size} bytes). The maximum record size is #{@@max_record_size} bytes."
+    too_large "#{record_description} is too large (#{record_size} bytes). The maximum record size is #{TablesApi::max_record_size} bytes."
   end
 
   #
@@ -213,8 +217,8 @@ class TablesApi < Sinatra::Base
 
     limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
     row_count = limits.get_approximate_row_count
-    if row_count >= @@max_table_rows
-      halt 403, {}, "Too many rows, a table may have at most #{@@max_table_rows} rows"
+    if row_count >= TablesApi::max_table_rows
+      halt 403, {}, "Too many rows, a table may have at most #{TablesApi::max_table_rows} rows"
     end
     limits.increment_row_count
 
@@ -222,7 +226,7 @@ class TablesApi < Sinatra::Base
     record.delete('id')
 
     record_size = get_approximate_record_size(table_name, record.to_json)
-    record_too_large(record_size) if record_size > @@max_record_size
+    record_too_large(record_size) if record_size > TablesApi::max_record_size
     value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(record, request.ip)
 
     dont_cache
@@ -248,7 +252,7 @@ class TablesApi < Sinatra::Base
     new_value.delete('id')
 
     record_size = get_approximate_record_size(table_name, new_value.to_json)
-    record_too_large(record_size) if record_size > @@max_record_size
+    record_too_large(record_size) if record_size > TablesApi::max_record_size
 
     value = TableType.new(channel_id, storage_id(endpoint), table_name).update(id.to_i, new_value, request.ip)
 
@@ -287,7 +291,7 @@ class TablesApi < Sinatra::Base
     # this check fails on Win 8.1 Chrome 40
     #unsupported_media_type unless params[:import_file][:type]== 'text/csv'
 
-    max_records = @@max_table_rows
+    max_records = TablesApi::max_table_rows
     table_url = "/v3/edit-csp-table/#{channel_id}/#{table_name}"
     back_link = "<a href='#{table_url}'>back</a>"
     table = TableType.new(channel_id, storage_id(endpoint), table_name)
@@ -332,7 +336,7 @@ class TablesApi < Sinatra::Base
     records.each_with_index do |record, i|
       record.delete('id')
       record_size = get_approximate_record_size(table_name, record.to_json)
-      record_too_large(record_size, i) if record_size > @@max_record_size
+      record_too_large(record_size, i) if record_size > TablesApi::max_record_size
       table.insert(record, request.ip)
     end
     table.ensure_metadata
@@ -403,7 +407,7 @@ class TablesApi < Sinatra::Base
       table.delete_all()
       json_data[table_name].each_with_index do |record, i|
         record_size = get_approximate_record_size(table_name, record.to_json)
-        record_too_large(record_size, i) if record_size > @@max_record_size
+        record_too_large(record_size, i) if record_size > TablesApi::max_record_size
         table.insert(record, request.ip)
       end
       limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
@@ -412,21 +416,5 @@ class TablesApi < Sinatra::Base
       table.ensure_metadata()
     end
 
-  end
-
-  def self.set_max_table_rows_for_test(max_table_rows)
-    @@max_table_rows = max_table_rows
-  end
-
-  def self.reset_max_table_rows_for_test
-    set_max_table_rows_for_test(DEFAULT_MAX_TABLE_ROWS)
-  end
-
-  def self.set_max_record_size_for_test(max_record_size)
-    @@max_record_size = max_record_size
-  end
-
-  def self.reset_max_record_size_for_test
-    set_max_record_size_for_test(DEFAULT_MAX_RECORD_SIZE)
   end
 end
