@@ -56,13 +56,14 @@ When /^I reset the puzzle to the starting version$/ do
   steps %q{
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
+    And I see "#showVersionsModal"
     And I close the dialog
     And I wait for 3 seconds
     Then I click selector "#versions-header"
     And I wait until element "button:contains(Delete Progress)" is visible
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
-    And I wait for 20 seconds
+    And I wait until element "#showVersionsModal" is not visible
   }
 end
 
@@ -77,6 +78,12 @@ end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
+end
+
+When /^I wait until element "([^"]*)" is not visible$/ do |selector|
+  # In cases of page refresh / redirect, sometimes a poorly-timed execute_script fails with 'Can't find variable: $'
+  # Rescue false to make sure a valid page is loaded and the selector is not visible.
+  wait_with_timeout.until { @browser.execute_script("return !$(#{selector.dump}).is(':visible')") rescue false }
 end
 
 # Required for inspecting elements within an iframe
