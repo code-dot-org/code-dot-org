@@ -88,7 +88,10 @@ class Applab < Blockly
   end
 
   def update_json_fields
-    return update_palette && parse_json_property_field('log_conditions')
+    palette_result = update_palette
+    log_conditions_result = parse_json_property_field('log_conditions')
+
+    return palette_result && log_conditions_result
   end
 
   def self.palette
