@@ -1,3 +1,4 @@
+require 'mocha/mini_test'
 require_relative 'test_helper'
 require 'channels_api'
 require 'fakeredis'
@@ -7,10 +8,6 @@ class TablesTest < Minitest::Test
   include SetupTest
 
   TableType = CDO.use_dynamo_tables ? DynamoTable : SqlTable
-
-  def teardown
-    TablesApi.reset_max_table_rows_for_test
-  end
 
   def test_create_read_update_delete
     init_apis
@@ -46,8 +43,7 @@ class TablesTest < Minitest::Test
     create_channel
 
     max_rows = 10
-    TablesApi.set_max_table_rows_for_test(max_rows)
-
+    TablesApi.any_instance.stubs(:max_table_rows).returns(max_rows)
     # Make sure that we can create up to max_rows without error
     record_ids = []
     (1..max_rows).each do |i|
@@ -72,6 +68,41 @@ class TablesTest < Minitest::Test
     end
 
     delete_channel
+    TablesApi.any_instance.unstub(:max_table_rows)
+  end
+
+  def test_record_size_limit
+    init_apis
+    create_channel
+
+    @table_name = 'mytable'
+    column_name = 'mycolumn'
+    column_value = 'myvalue'
+    column_value2 = 'myvalue2'
+    record = {column_name => column_value}
+    record2 = {column_name => column_value2}
+
+    max_record_size = 2 * @table_name.length + record.to_json.length
+    assert_equal 36, max_record_size, 'a change in the max record size could break existing apps'
+
+    TablesApi.any_instance.stubs(:max_record_size).returns(max_record_size)
+    id = create_record(record).to_i
+    create_record(record2, 413)
+
+    actual_created_record = read_records.find do |record|
+      record['id'] == id
+    end
+    assert_equal id, actual_created_record['id'], 'actual created record has correct id'
+
+    update_record(id, actual_created_record)
+    assert @tables.last_response.successful?, 'max-size created record can be updated with the same value'
+
+    actual_created_record[column_name] += 'x'
+    update_record(id, actual_created_record)
+    assert_equal 413, @tables.last_response.status, 'oversize record cannot be updated'
+
+    delete_channel
+    TablesApi.any_instance.unstub(:max_record_size)
   end
 
   def test_populate
@@ -352,11 +383,12 @@ class TablesTest < Minitest::Test
     assert @channels.last_response.successful?
   end
 
-  def create_record(record)
+  def create_record(record, expected_status = nil)
     @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    expected_status ||= 301
     status = @tables.last_response.status
-    raise "Failed request" unless status >= 200 && status < 400
-    @tables.last_response.location.split('/').last
+    raise "Failed request with status #{status}" unless status == expected_status
+    @tables.last_response.location.split('/').last if status == 301
   end
 
   def read_records
@@ -378,7 +410,7 @@ class TablesTest < Minitest::Test
 
   def update_record(id, record)
     @tables.put "/v3/shared-tables/#{@channel_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    JSON.parse(@tables.last_response.body)
+    JSON.parse(@tables.last_response.body) if @tables.last_response.successful?
   end
 
   def delete_record(id)
