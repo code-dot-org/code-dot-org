@@ -21,6 +21,7 @@ social:
   "twitter:player": "https://youtube.com/v/Ofze6CWUCx8"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
+video_player: true
 ---
 - if request.site == 'csedweek.org'
   %div
@@ -44,7 +45,7 @@ social:
 
   #top
     #video.col-63.desktop-pad-right
-      = view :index_video
+      = view :display_video_thumbnail, id: "cs_is_everything", video_code: "xJqSu1IbcHg", play_button: 'center', download_path: "//videos.code.org/social/cs-is-everything.mp4"
 
     #start.col-36
       %div.desktop-feature{:style=>'height: 25px;'}
@@ -67,7 +68,7 @@ social:
         %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
           =I18n.t :homepage_action_text_volunteers
 
-    -download_filename = 'hourofcode-2015-thankyou.mp4'
+    -download_filename = 'cs-is-everything.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
       = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://videos.code.org/social/#{download_filename}"
 
