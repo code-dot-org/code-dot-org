@@ -1,0 +1,9 @@
+.module_progress_grouping {
+  .not_started {
+    background-color: rgba(255, 128, 128, .25)
+  }
+
+  .completed {
+    background-color: rgba(128, 255, 128, .25);
+  }
+}

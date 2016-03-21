@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir='ltr'>
+  <head>
+    <script>
+      // fake module for sounds
+      window.module = {};
+    </script>
+    <script src="/src/js/Sounds.js"></script>
+    <script>
+      var Sounds = module.exports;
+      var sounds = new Sounds();
+      sounds.register({
+        id: 'intro',
+        ogg: 'assets/vignette4-intro.ogg',
+        mp3: 'assets/vignette4-intro.mp3'
+      });
+
+      sounds.register({
+        id: 'success',
+        ogg: 'assets/win.ogg',
+        mp3: 'assets/win.mp3'
+      });
+    </script>
+    <style>
+      body {
+        text-align: center;
+        background-color: black;
+      }
+      input {
+        padding: 1em;
+        margin: 0.5em;
+        margin-top: 200px;
+        font-size: 24px;
+      }
+      #status {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <input id='play-now' type='button' value='Play Now'>
+    <input id='play-later' type='button' value='Play Later'>
+    <div id='status'>
+      Nothing played yet
+    </div>
+    <script>
+      var s = document.getElementById('status');
+
+      setTimeout(function () {
+          sounds.whenAudioUnlocked(function () {
+            sounds.play('intro');
+            s.innerHTML = (new Date().getTime()) + ' Starting to autoplay music';
+          });
+        }, 200);
+
+      document.getElementById('play-now').addEventListener('click', function (e) {
+        sounds.play('success');
+        s.innerHTML = (new Date().getTime()) + ' Starting to play sfx';
+      });
+
+      document.getElementById('play-later').addEventListener('click', function (e) {
+        s.innerHTML = (new Date().getTime()) + ' Scheduled music 2s from now...';
+        setTimeout(function () {
+          sounds.play('intro');
+          s.innerHTML = (new Date().getTime()) + ' Starting to play music';
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>

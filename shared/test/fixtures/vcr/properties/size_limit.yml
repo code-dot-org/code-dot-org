@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_properties","Item":{"hash":{"S":"1:"},"name":{"S":"ABCDEFGHIJ"},"updated_at":{"S":"2016-03-18T15:30:32-05:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"\"abcdefgh\""}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.PutItem
+      Content-Length:
+      - '191'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 18 Mar 2016 20:30:33 GMT
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - Q06V3CBR5OT2SAK3I4QG6R60EBVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '2745614147'
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Fri, 18 Mar 2016 20:30:33 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_properties","ConsistentRead":true,"Key":{"hash":{"S":"1:"},"name":{"S":"ABCDEFGHIJ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.GetItem
+      Content-Length:
+      - '105'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 18 Mar 2016 20:30:33 GMT
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '161'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - BVEK5UBT4M6SQ0VMPS4NFP3ADFVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3336741202'
+    body:
+      encoding: UTF-8
+      string: '{"Item":{"hash":{"S":"1:"},"value":{"S":"\"abcdefgh\""},"updated_ip":{"S":"127.0.0.1"},"name":{"S":"ABCDEFGHIJ"},"updated_at":{"S":"2016-03-18T15:30:32-05:00"}}}'
+    http_version: 
+  recorded_at: Fri, 18 Mar 2016 20:30:33 GMT
+recorded_with: VCR 3.0.0
