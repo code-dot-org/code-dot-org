@@ -273,13 +273,14 @@ module.exports = function (grunt) {
    * Generates a command line string to execute browserify with the specified options.
    * Available options are:
    *
-   *   {bool} globalShim - boolean for whether or not to turn on
-   *                       the browserify-global-shim transform
-   *   {string} cacheFile - file name where the browserify cache should be stored
-   *   {string[]} srcFiles - list of src files to pass to browserify
-   *   {string[]} destFiles - list of destination file paths to pass to browserify
-   *   {bool} factorBundle - whether or not to use the factor-bundle plugin to
-   *                         extract common code into a separate file.
+   * @param {!Object} options
+   * @param {boolean} [options.globalShim] - boolean for whether or not to turn on
+   *        the browserify-global-shim transform
+   * @param {!string} options.cacheFile - file name where the browserify cache should be stored
+   * @param {!string[]} options.srcFiles - list of src files to pass to browserify
+   * @param {!string[]} options.destFiles - list of destination file paths to pass to browserify
+   * @param {boolean} [options.factorBundle] - whether or not to use the factor-bundle plugin to
+   *        extract common code into a separate file.
    */
   function getBrowserifyCommand(options) {
     // Use command-line tools to run browserify (faster/more stable this way)
