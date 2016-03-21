@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '../../pegasus/src/env'
+require_relative '../../../pegasus/src/env'
 require_relative 'mailing-list-utils'
 
 QUERY = <<EOS

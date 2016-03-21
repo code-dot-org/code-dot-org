@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../../pegasus/src/env'
+require_relative '../../../pegasus/src/env'
 require 'cdo/solr'
 require src_dir 'database'
 
