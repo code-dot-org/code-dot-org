@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# ubuntu@production-console:~/production/bin/hoc-2015-dec-6-mailing$ wc -l all-deduped.csv
+# ubuntu@production-console:~/production/bin/mail/hoc-2015-dec-6-mailing$ wc -l all-deduped.csv
 #  1670830 all-deduped.csv
 
 ./send-to-mailing-list --start       0 --limit 100000 12-07-hoc-general hoc-2015-dec-6-mailing/all-deduped.csv

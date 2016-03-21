@@ -1,5 +1,5 @@
 #!/bin/sh
-# ubuntu@production-console:~/production/bin/hoc-2015-nov-9-mailing$ wc -l teachers-deduped.csv
+# ubuntu@production-console:~/production/bin/mail/hoc-2015-nov-9-mailing$ wc -l teachers-deduped.csv
 # 275332 teachers-deduped.csv
 # 275,332
 

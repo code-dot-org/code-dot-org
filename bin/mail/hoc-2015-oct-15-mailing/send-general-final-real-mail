@@ -1,5 +1,5 @@
 #!/bin/sh
-# ubuntu@production-daemon:~/production/bin$ wc hoc-2015-oct-15-mailing/general-deduped-remainder.csv
+# ubuntu@production-daemon:~/production/bin/mail$ wc hoc-2015-oct-15-mailing/general-deduped-remainder.csv
 # 1114587  1816488 44190414 hoc-2015-oct-15-mailing/general-deduped-remainder.csv
 # 1,114,587
 ./send-to-mailing-list --start       0 --limit 100000 10-19-hoc-general-final hoc-2015-oct-15-mailing/general-deduped-remainder.csv

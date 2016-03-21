@@ -1,5 +1,5 @@
 #!/bin/sh
-# ubuntu@production-console:~/production/bin/hoc-2015-nov-9-mailing$ wc -l general-deduped-remainder.csv
+# ubuntu@production-console:~/production/bin/mail/hoc-2015-nov-9-mailing$ wc -l general-deduped-remainder.csv
 # 1261412 general-deduped-remainder.csv
 # 1,261,412
 
