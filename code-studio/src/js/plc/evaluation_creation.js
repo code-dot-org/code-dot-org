@@ -23,7 +23,9 @@ $(window).load(function () {
   });
 
   function handleNewQuestionName() {
-    $('#newQuestionsList').val(JSON.stringify($('.new_question_row .new_question_name').map(function() { return $(this).val(); }).get()));
+    $('#newQuestionsList').val(JSON.stringify($('.new_question_row .new_question_name').map(function() {
+      return $(this).val();
+    }).get()));
 
     //Future work item is to do better validation on submitted questions. Will come along with deletion
     $('#submitNewQuestions').prop("disabled", false);
@@ -37,11 +39,12 @@ $(window).load(function () {
       var answerText = $(element).find('input').val();
       var associatedModule = $(element).find('select').val();
 
-      if(newAnswerData[questionId]) {
-        newAnswerData[questionId].push({'answer': answerText, 'learningModuleId': associatedModule});
-      } else {
-        newAnswerData[questionId] = [{'answer': answerText, 'learningModuleId': associatedModule}];
-      }
+      newAnswerData[questionId] = newAnswerData[questionId] || [];
+
+      newAnswerData[questionId].push({
+        answer: answerText,
+        learningModuleId: associatedModule
+      });
     });
 
     $('#newAnswersList').val(JSON.stringify(newAnswerData));
