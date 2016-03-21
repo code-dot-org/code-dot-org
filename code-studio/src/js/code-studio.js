@@ -24,8 +24,6 @@ require('./components/report_abuse_form.jsx');
 require('./components/send_to_phone.jsx');
 require('./components/share_dialog.jsx');
 require('./components/small_footer.jsx');
-require('./components/progress/stage_progress.jsx');
-require('./components/progress/course_progress.jsx');
 require('./components/GridEditor.jsx');
 
 // Prevent callstack exceptions when opening multiple dialogs
@@ -39,6 +37,7 @@ window.dashboard.hashEmail = require('./hashEmail');
 window.dashboard.funometer = require('./funometerPercentagesByDay');
 window.dashboard.popupWindow = require('./popup-window');
 window.dashboard.progress = require('./progress');
+window.dashboard.reporting = require('./reporting');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.
