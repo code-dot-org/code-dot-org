@@ -1,11 +1,9 @@
 ---
 from: 'Hadi Partovi <hadi_partovi@code.org>'
-subject: "Learn to teach computer science - register this week"
----
+subject: "Learn to teach computer science — register this week"
+--- 
 
-REGION NAME teacher, 
-
-Due to demand, we added a limited number of spots to our Professional Learning Program for computer science. Apply by **March 31** to secure your spot. 
+Due to high demand, we've added a limited number of spots to our Professional Learning Program for computer science, and want to invite you to participate. Apply by **March 31** to secure your spot. 
 
 **97% of workshop attendees ranked our program as the best professional development ever**
 
@@ -19,14 +17,17 @@ For teachers participating in the CS Principles Professional Learning Program, y
 
 **Exploring Computer Science:** [Sign up for the professional learning program](https://code.org/educate/professional-learning/exploring-cs)
 
-[![Sign up by March 31](https://staging.code.org/images/fit-300/CSPthumbnail.png)](https://code.org/educate/professional-learning/cs-principles)
+<center>
+
+[![Sign up by March 31](https://code.org/images/fit-300/CSPthumbnail.png)](https://code.org/educate/professional-learning/cs-principles)
 
 *"This is my 18th year of teaching and CSP is the best curriculum I have ever implemented."*
 
 *"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."*
 
-### Know someone nearby in a non-partner district? 
+</center>
 
+**Know someone nearby in a non-partner district?**<br />
 *Code.org will open the Professional Learning Programs to teachers from non-partner districts if space is available. Add your name to the [CSP waitlist](https://form.jotform.com/53365196731157) or [ECS waitlist](https://form.jotform.com/60337734068155) or [use the curriculum that's free for all to use](http://code.org/educate).*
 
 ### More K-12 options
