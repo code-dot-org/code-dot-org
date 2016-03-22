@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'mocha/mini_test'
 require_relative 'test_helper'
 
@@ -352,6 +353,15 @@ class AssetsTest < Minitest::Test
 
     get @assets, channel, filename, '', 'HTTP_IF_MODIFIED_SINCE' => v2_last_modified
     assert_equal 304, @assets.last_response.status
+  end
+
+
+  def test_invalid_mime_type_returns_unsupported_media_type
+    channel = create_channel(@channels)
+
+    get @assets, channel, 'filewithinvalidmimetype.asdasdas%25dasdasd'
+
+    assert_equal 415, @assets.last_response.status # 415 = Unsupported media type
   end
 
   # Methods below this line are test utilities, not actual tests
