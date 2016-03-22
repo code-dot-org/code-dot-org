@@ -48,6 +48,12 @@ When /^I close the dialog$/ do
   }
 end
 
+When /^I close the React alert$/ do
+  steps %q{
+    When I press the first ".react-alert button" element
+  }
+end
+
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
   wait_with_timeout.until { @browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';") }
 end

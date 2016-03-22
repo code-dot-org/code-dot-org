@@ -7,6 +7,7 @@ Feature: Big Game Versions
     And I rotate to landscape
     Then I wait to see a dialog titled "Puzzle 6 of 11"
     And I close the dialog
+    And I close the React alert
     And element "#runButton" is visible
 
   @no_mobile
