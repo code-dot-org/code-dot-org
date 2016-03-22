@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'mocha/mini_test'
 require_relative 'test_helper'
 
