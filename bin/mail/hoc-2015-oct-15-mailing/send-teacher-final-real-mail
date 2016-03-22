@@ -1,0 +1,4 @@
+#!/bin/sh
+# ubuntu@production-daemon:~/production/bin/mail$ wc hoc-2015-oct-15-mailing/petition-teachers-deduped-remainder.csv
+#  68584  122932 2796081 hoc-2015-oct-15-mailing/petition-teachers-deduped-remainder.csv
+./send-to-mailing-list --start       0 --limit 100000 10-19-hoc-teachers-final hoc-2015-oct-15-mailing/petition-teachers-deduped-remainder.csv

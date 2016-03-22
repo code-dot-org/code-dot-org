@@ -8,11 +8,12 @@
 
 = form_tag(action: 'submit_evaluation') do
   - @questions.each do |question|
-    %p #{question.question}
+    %p{style: 'margin-top: 20px'}
+      #{question.question}
     - answers = question.plc_evaluation_answers
     - answers.each do |answer|
       %p
-        %input.radio{type: "radio", name: question.id, value: answer.plc_learning_module_id, checked: answer == answers.first}
+        %input.radio{type: "radio", name: question.id, value: answer.plc_learning_module_id, checked: answer == answers.first, style: 'margin-left: 20px'}
           #{answer.answer} (corresponds with #{answer.plc_learning_module.try(:name)})
   = hidden_field_tag('answerModuleList')
   = submit_tag('Submit evaluation', id: 'submitEvaluation')

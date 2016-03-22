@@ -48,6 +48,12 @@ When /^I close the dialog$/ do
   }
 end
 
+When /^I close the React alert$/ do
+  steps %q{
+    When I press the first ".react-alert button" element
+  }
+end
+
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
   wait_with_timeout.until { @browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';") }
 end
@@ -63,7 +69,7 @@ When /^I reset the puzzle to the starting version$/ do
     And I wait until element "button:contains(Delete Progress)" is visible
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
-    And I wait until element "#showVersionsModal" is not visible
+    And I wait until element "#showVersionsModal" is gone
   }
 end
 
@@ -80,10 +86,9 @@ When /^I wait until element "([^"]*)" is visible$/ do |selector|
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
 end
 
-When /^I wait until element "([^"]*)" is not visible$/ do |selector|
-  # In cases of page refresh / redirect, sometimes a poorly-timed execute_script fails with 'Can't find variable: $'
-  # Rescue false to make sure a valid page is loaded and the selector is not visible.
-  wait_with_timeout.until { @browser.execute_script("return !$(#{selector.dump}).is(':visible')") rescue false }
+Then /^I wait until element "([.#])([^"]*)" is gone$/ do |selector_symbol, name|
+  selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
+  wait_with_timeout.until { @browser.find_elements(selection_criteria).empty? }
 end
 
 # Required for inspecting elements within an iframe

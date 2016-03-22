@@ -7,7 +7,7 @@ var color = require('../color');
 var Alert = React.createClass({
   propTypes: {
     children: React.PropTypes.element.isRequired,
-    type: React.PropTypes.oneOf("error", "warning").isRequired,
+    type: React.PropTypes.oneOf(["error", "warning"]).isRequired,
     onClose: React.PropTypes.func.isRequired,
     sideMargin: React.PropTypes.number,
   },
