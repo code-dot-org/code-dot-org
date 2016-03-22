@@ -23,9 +23,6 @@ linters:
   RuboCop:
     enabled: false
 
-  RubyComments:
-    enabled: false
-
   SpaceBeforeScript:
     enabled: false
 
