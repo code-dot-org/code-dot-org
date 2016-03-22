@@ -9,7 +9,6 @@
 #  updated_at             :datetime         not null
 #  type                   :string(255)      default("Plc::Task"), not null
 #  properties             :text(65535)
-#  icon                   :string(255)
 #
 # Indexes
 #

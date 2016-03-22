@@ -18,7 +18,7 @@ $(window).load(function () {
 ReactDOM.render(React.createElement(IconLibrary, {
   alignment: 'left',
   assetChosen: function (name) {
-    var iconClass = name.substring('icon://'.length);
+    var iconClass = name;
     $('#plc_learning_resource_task_icon').val(iconClass);
     $('#iconDiv').toggle();
     $('#previewIcon').removeClass().addClass('fa ' + iconClass);

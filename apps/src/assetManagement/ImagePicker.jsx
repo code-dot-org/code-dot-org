@@ -1,6 +1,7 @@
 var AssetManager = require('./AssetManager.jsx');
 var color = require('../color');
 var IconLibrary = window.dashboard.IconLibrary;
+var ICON_PREFIX = require('../applab/constants').ICON_PREFIX;
 
 /**
  * A component for managing hosted assets.
@@ -15,6 +16,10 @@ var ImagePicker = React.createClass({
 
   getInitialState: function () {
     return {mode: 'files'};
+  },
+
+  getAssetNameWithPrefix: function (icon) {
+    this.props.assetChosen(ICON_PREFIX + icon);
   },
 
   setIconMode: function () {
@@ -70,7 +75,7 @@ var ImagePicker = React.createClass({
         typeFilter={this.props.typeFilter}
         channelId={this.props.channelId}
         uploadsEnabled={this.props.uploadsEnabled}/> :
-      <IconLibrary assetChosen={this.props.assetChosen}/>;
+      <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;
 
     return (
       <div className="modal-content" style={styles.root}>
