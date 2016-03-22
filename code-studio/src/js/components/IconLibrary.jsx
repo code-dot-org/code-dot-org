@@ -1,11 +1,11 @@
 var IconList = require('./IconList.jsx');
-var msg = require('../locale');
 
 /**
  * A component for managing icons.
  */
 var IconLibrary = React.createClass({
   propTypes: {
+    alignment: React.PropTypes.string,
     assetChosen: React.PropTypes.func.isRequired
   },
 
@@ -22,7 +22,7 @@ var IconLibrary = React.createClass({
   render: function () {
     var styles = {
       root: {
-        float: 'right',
+        float: this.props.alignment,
         position: 'relative',
         margin: '10px 0'
       },
@@ -47,7 +47,7 @@ var IconLibrary = React.createClass({
           <input
             onChange={this.search}
             style={styles.input}
-            placeholder={msg.iconSearchPlaceholder()}/>
+            placeholder={window.dashboard.i18n.t('components.icon_library.search_placeholder')}/>
           <i className="fa fa-search" style={styles.icon}/>
         </div>
         <IconList
@@ -58,3 +58,6 @@ var IconLibrary = React.createClass({
   }
 });
 module.exports = IconLibrary;
+
+window.dashboard = window.dashboard || {};
+window.dashboard.IconLibrary = IconLibrary;

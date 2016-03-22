@@ -1,6 +1,6 @@
 var AssetManager = require('./AssetManager.jsx');
 var color = require('../color');
-var IconLibrary = require('./IconLibrary.jsx');
+var IconLibrary = window.dashboard.IconLibrary;
 
 /**
  * A component for managing hosted assets.
