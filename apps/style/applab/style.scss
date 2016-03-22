@@ -47,6 +47,9 @@ div#visualizationResizeBar {
   div#codeWorkspace {
     left: $width;
   }
+  div#topInstructions {
+    left: $width;
+  }
   html[dir='rtl'] div#codeWorkspace {
     right: $width;
   }
@@ -81,6 +84,9 @@ div#visualizationResizeBar {
     max-width: $width;
   }
   div#codeWorkspace {
+    left: $width;
+  }
+  div#topInstructions {
     left: $width;
   }
   html[dir='rtl'] div#codeWorkspace {
@@ -119,6 +125,9 @@ div#visualizationResizeBar {
   div#codeWorkspace {
     left: $width;
   }
+  div#topInstructions {
+    left: $width;
+  }
   html[dir='rtl'] div#codeWorkspace {
     right: $width;
   }
@@ -155,6 +164,9 @@ div#visualizationResizeBar {
   div#codeWorkspace {
     left: $width;
   }
+  div#topInstructions {
+    left: $width;
+  }
   html[dir='rtl'] div#codeWorkspace {
     right: $width;
   }
@@ -189,6 +201,9 @@ div#visualizationResizeBar {
     max-width: $width;
   }
   div#codeWorkspace {
+    left: $width;
+  }
+  div#topInstructions {
     left: $width;
   }
   html[dir='rtl'] div#codeWorkspace {

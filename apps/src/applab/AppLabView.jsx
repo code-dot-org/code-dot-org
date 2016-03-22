@@ -5,6 +5,7 @@ var connect = require('react-redux').connect;
 var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
+var TopInstructions = require('../templates/TopInstructions.jsx');
 
 var styles = {
   // same as #codeWorkspace + #codeWorkspace.pin_bottom from common.scss, with
@@ -12,7 +13,7 @@ var styles = {
   // deal with
   codeWorkspace: {
     position: 'absolute',
-    top: 0,
+    top: 30,
     right: 0,
     bottom: 0,
     marginLeft: 15,
@@ -64,6 +65,7 @@ var AppLabView = React.createClass({
           <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
+        <TopInstructions/>
         <ProtectedStatefulDiv id="codeWorkspace" style={styles.codeWorkspace} className="applab">
           <ProtectedStatefulDiv id="codeWorkspaceWrapper" contentFunction={this.props.generateCodeWorkspaceHtml}/>
           {!this.props.isReadOnlyWorkspace && <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden} />}
