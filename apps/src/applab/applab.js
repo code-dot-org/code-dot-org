@@ -706,7 +706,7 @@ Applab.init = function(config) {
     Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
 
     if (!!config.level.projectTemplateLevelName) {
-      studioApp.displayAlert('warning', <div>{commonMsg.projectWarning()}</div>);
+      studioApp.displayWorkspaceAlert('warning', <div>{commonMsg.projectWarning()}</div>);
     }
 
     studioApp.alertIfAbusiveProject('#codeWorkspace');

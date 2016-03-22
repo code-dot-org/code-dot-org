@@ -176,7 +176,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var previousLevelButton = feedback.querySelector('#back-button');
   var continueButton = feedback.querySelector('#continue-button');
 
-  var onlyContinue = continueButton && !againButton && !previousLevelButton;
+  var hasNeitherBackButton = !againButton && !previousLevelButton;
+  var onlyContinue = continueButton && (hasNeitherBackButton || options.defaultToContinue);
 
   // get the topmost missing recommended block, if it exists, to be
   // added to the queue of contextual hints. If the user views the block

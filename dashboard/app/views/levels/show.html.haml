@@ -23,10 +23,10 @@
   #title
     - if @level.properties['instructions'].present?
       %h4{style: 'margin-left: auto; margin-right: auto; max-width: 800px;'}!= @level.properties['instructions']
-  - # Pass special parameters to Blockly partial for embedded level type.
+  -# Pass special parameters to Blockly partial for embedded level type.
   = render partial: 'levels/blockly'
 - elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget)
-  %script{src: asset_path('js/initApp.js')}
+  %script{src: asset_path('js/initApp/initApp.js')}
   :javascript
     var appOptions = #{app_options.to_json};
     dashboard.createCallouts(appOptions.callouts);
@@ -44,7 +44,8 @@
 
 = render partial: 'levels/admin'
 
-- # HACKHACK: The respond_to? test below is to workaround a bug where  a server instance
-- # will sometimes fail to define that method.
+-#
+  HACK: The respond_to? test below is to workaround a bug where a server
+  instance will sometimes fail to define that method.
 - if @script && current_user.try(:teacher?) && (!@script.respond_to?('pd?') || !@script.pd?)
   = render partial: 'levels/teacher'

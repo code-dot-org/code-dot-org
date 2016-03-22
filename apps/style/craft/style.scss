@@ -889,6 +889,10 @@ $height-to-width: 434 / 477;
   }
 }
 
+.ieVersion9 #open-workspace {
+  background-color: $very-dark-gray;
+}
+
 .cdo-qtips .qtip-tip {
   background: url("#{$root}Sliced_Parts/Callout_Tail.png") no-repeat center center;
   width: 66px !important;
