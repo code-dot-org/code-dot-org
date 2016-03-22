@@ -6,6 +6,25 @@ var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
 
+var styles = {
+  // same as #codeWorkspace + #codeWorkspace.pin_bottom from common.scss, with
+  // the exception fo left: 400, which we let media queries from applab/styles.scss
+  // deal with
+  codeWorkspace: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    marginLeft: 15,
+    border: 'none',
+    borderTop: '1px solid #ddd',
+    overflow: 'hidden'
+  },
+  hidden: {
+    display: 'none'
+  }
+};
+
 /**
  * Top-level React wrapper for App Lab.
  */
@@ -37,6 +56,7 @@ var AppLabView = React.createClass({
           onScreenCreate={this.props.onScreenCreate} />;
     }
 
+    // TODO - changing id of codeWorkspace to codeWorkspaceApplab will break callouts and some UI tests
     return (
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
@@ -44,9 +64,9 @@ var AppLabView = React.createClass({
           <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <ProtectedStatefulDiv id="codeWorkspace">
+        <ProtectedStatefulDiv id="codeWorkspace" style={styles.codeWorkspace} className="applab">
           <ProtectedStatefulDiv id="codeWorkspaceWrapper" contentFunction={this.props.generateCodeWorkspaceHtml}/>
-          {!this.props.isReadOnlyWorkspace && <ProtectedStatefulDiv id="designWorkspace" style={{display: 'none'}} />}
+          {!this.props.isReadOnlyWorkspace && <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden} />}
         </ProtectedStatefulDiv>
       </ConnectedStudioAppWrapper>
     );

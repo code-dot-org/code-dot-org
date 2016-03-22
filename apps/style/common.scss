@@ -318,7 +318,7 @@ html[dir='rtl'] #codeWorkspace {
   margin-left: 0px;
 }
 
-#codeWorkspace {
+#codeWorkspace:not(.applab) {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -329,7 +329,7 @@ html[dir='rtl'] #codeWorkspace {
   overflow: hidden;
 }
 
-#codeWorkspace.pin_bottom {
+#codeWorkspace:not(.applab).pin_bottom {
   border: none;
   border-top: 1px solid #ddd;
 }
