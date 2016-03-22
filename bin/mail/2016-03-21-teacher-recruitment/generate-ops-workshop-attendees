@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+require 'cdo/geocoder'
+
+# Teachers who attended Ops workshops, minus NYC
+
+teacher_query = <<eos
+  SELECT DISTINCT users.email, users.name, users.current_sign_in_ip FROM users
+    JOIN workshop_attendance ON (users.id = workshop_attendance.teacher_id)
+    JOIN segments ON (segments.id = workshop_attendance.segment_id)
+    JOIN workshops ON (workshops.id = segments.workshop_id)
+    WHERE workshops.location NOT LIKE '%NY%'
+eos
+
+results = {}
+DASHBOARD_DB.fetch(teacher_query).each do |teacher|
+  # skip teachers in NYC
+  next unless teacher[:current_sign_in_ip]
+  location = Geocoder.search(teacher[:current_sign_in_ip]).first
+  next if location && (location.city == 'New York' && location.state == 'New York')
+
+  email = teacher[:email]
+  results[email] = {email: email, name: teacher[:name]} unless results[email]
+end
+
+export_contacts_to_csv results, 'ops-workshop-attendees.csv'

@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+
+attendees = query_subscribed_contacts(q: "kind_s:ProfessionalDevelopmentWorkshopSignup")
+
+export_contacts_to_csv attendees, "k5-workshop-attendees.csv"
