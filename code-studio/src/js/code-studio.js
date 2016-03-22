@@ -28,10 +28,7 @@ require('./components/send_to_phone.jsx');
 require('./components/share_dialog.jsx');
 require('./components/small_footer.jsx');
 require('./components/GridEditor.jsx');
-require('./components/Icon.jsx');
 require('./components/IconLibrary.jsx');
-require('./components/IconList.jsx');
-require('./components/IconListEntry.jsx');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748

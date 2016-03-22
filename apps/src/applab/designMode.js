@@ -16,7 +16,6 @@ var utils = require('../utils');
 var gridUtils = require('./gridUtils');
 var logToCloud = require('../logToCloud');
 var actions = require('./actions');
-var icons = require('../assetManagement/icons');
 
 var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
@@ -190,7 +189,7 @@ function renderIconToString(value, element) {
   ctx.textAlign = 'center';
   ctx.fillStyle = element.getAttribute('data-icon-color');
   var regex = new RegExp('^' + ICON_PREFIX + 'fa-');
-  var unicode = '0x' + icons.unicode[value.replace(regex, '')];
+  var unicode = '0x' + window.dashboard.iconsUnicode[value.replace(regex, '')];
   ctx.fillText(String.fromCharCode(unicode), 200, 200);
   return canvas.toDataURL();
 }

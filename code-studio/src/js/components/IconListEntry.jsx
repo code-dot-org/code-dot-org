@@ -74,7 +74,8 @@ var IconListEntry = React.createClass({
       cursor: 'pointer'
     };
 
-    var asset = 'icon://fa-' + this.props.iconId;
+    var asset = 'fa-' + this.props.iconId;
+
     return (
       <div
         style={rootStyles}

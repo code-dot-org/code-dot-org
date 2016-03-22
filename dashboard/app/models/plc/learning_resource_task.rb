@@ -9,7 +9,6 @@
 #  updated_at             :datetime         not null
 #  type                   :string(255)      default("Plc::Task"), not null
 #  properties             :text(65535)
-#  icon                   :string(255)
 #
 # Indexes
 #
@@ -17,5 +16,5 @@
 #
 
 class Plc::LearningResourceTask < Plc::Task
-  serialized_attrs %w(resource_url)
+  serialized_attrs %w(resource_url icon)
 end
