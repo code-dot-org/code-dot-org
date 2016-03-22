@@ -14,7 +14,10 @@ EXCLUDED_EMAILS = Set.new
 REGIONS = {}
 
 def query_with_location(base_query, city, state)
-  query = "(#{base_query}) && ((location_state_s:\"#{state}\" && location_city_s:\"#{city}\") || (create_ip_state_s:\"#{state}\" && create_ip_city_s:\"#{city}\"))"
+  query = "(#{base_query}) &&
+    ((location_state_s:\"#{state}\" && location_city_s:\"#{city}\") ||
+    (create_ip_state_s:\"#{state}\" && create_ip_city_s:\"#{city}\"))"
+
   results = query_subscribed_contacts(q: query)
 
   puts "#{results.length} results"
