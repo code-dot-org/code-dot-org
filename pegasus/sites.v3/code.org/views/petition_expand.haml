@@ -65,7 +65,7 @@
             = I18n.t :homepage_signpetition_dropdown
           -else
             = I18n.t :hoc2014_support
-        - # Temp: English only until we have translations.
+        -# Temp: English only until we have translations.
         - if request.language == "en"
           %span{:style=>"font-size: 14px; line-height:20px; font-weight:400; margin-left: 20px; margin-top:10px"}=I18n.t(:petition_join_others).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)
 
