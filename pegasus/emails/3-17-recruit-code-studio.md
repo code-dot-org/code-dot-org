@@ -3,9 +3,9 @@ from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: "A special opportunity for elementary school teachers"
 ---
 
-You joined as a teacher on Code.org’s learning platform, [Code Studio](https://studio.code.org/), but you’re not teaching a course.
+You joined as a teacher on Code.org’s learning platform, Code Studio. Take the next step to add computer science to your classroom once a week and let your students explore the limitless bounds of computing. [Our free elementary school curriculum](https://code.org/educate/curriculum/elementary-school) blends online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all.
 
-We offer one-day workshops for K-5 educators to help you get started. If you’re curious about technology and want the skills to teach your students more about building it, I want to invite you to participate. **All costs are covered by Code.org**.
+We offer [free one-day workshops](https://code.org/professional-development-workshops) for K-5 educators to help you get started. If you’re curious about technology and want the skills to teach your students more about building it, I want to invite you to participate. **All costs are covered by Code.org**.
 
 <center>
 
@@ -40,7 +40,7 @@ Hadi Partovi<br />
 Founder, Code.org
 <br />
 
-P.S. Don’t see a workshop in your area? Let us know [where to expand](https://docs.google.com/a/code.org/forms/d/1QoWzKV5n2Fxx-W90LmmMWxY7qndMo1IE0QWZcxY9OTI/viewform). 
+P.S. Don’t see a workshop in your area? Get started with [free online professional learning](https://code.org/educate/professional-development-online). 
 
 <hr>
 

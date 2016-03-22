@@ -7,14 +7,16 @@ You were one of the first teachers to participate in Code.org professional devel
 
 **With your help**, we can prepare even more students for 21st-century futures, starting with our youngest learners. 
 
-## Help us spread the word
-Any K-12 teacher can learn how bring computer science to their students with our [professional learning programs](https://code.org/educate), at no cost. If you’re having a good experience, please ask one teacher you know (at your school or in your district) to join our programs.
+## Help us spread the word - enrollment open now
+Any K-12 teacher can learn how to bring computer science to their students with our [professional learning programs](https://code.org/educate), at no cost. If you’re having a good experience, please ask one teacher you know (at your school or in your district) to join our programs. (If you aren't having a good experience, please reply with feedback. I can't respond to every note, but we'll read it and we'll use your feedback to improve the program.)
 
-- Ask a **high school teacher** to teach an inclusive, intro computer science course
-- Ask a **middle school teacher** to incorporate computer science activities into any math or science class
-- Ask an **elementary school teacher** to attend a local workshop to use our short, fun courses (use [this sample email](https://code.org/educate/professional-learning/cs-fundamentals-resources#teacherstoteachers)) 
+Encourage another teacher to sign up now to reserve a space. First round enrollment for next year's Professional Learning Program is open through the end of March. 
 
-[Learn more](https://code.org/educate)
+- Ask a **high school teacher** to teach an inclusive [intro computer science course](http://code.org/highschool)
+- Ask a **middle school teacher** to incorporate computer science activities into [any math or science class](http://code.org/middleschool)
+- Ask an **elementary school teacher** to [attend a local workshop](https://code.org/professional-development-workshops) to use our short, fun courses (use [this sample email](https://code.org/educate/professional-learning/cs-fundamentals-resources#teacherstoteachers)) 
+
+[Learn more about all the opportunities for teachers.](https://code.org/educate)
 
 <br/>
 Hadi Partovi<br />
