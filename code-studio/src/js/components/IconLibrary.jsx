@@ -22,7 +22,7 @@ var IconLibrary = React.createClass({
   render: function () {
     var styles = {
       root: {
-        float: this.props.alignment,
+        float: this.props.alignment || 'right',
         position: 'relative',
         margin: '10px 0'
       },
