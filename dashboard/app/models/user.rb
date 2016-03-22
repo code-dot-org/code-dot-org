@@ -848,8 +848,8 @@ SQL
       pairing_user_ids.each do |navigator_user_id|
         navigator_user_level = User.track_level_progress_sync(navigator_user_id, level_id, script_id, new_result, submitted)
         retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-          PairedUserLevel.find_or_create_by(navigator_user_level_id: navigator_user_level,
-                                            driver_user_id: user_level)
+          PairedUserLevel.find_or_create_by(navigator_user_level_id: navigator_user_level.id,
+                                            driver_user_level_id: user_level.id)
         end
       end
     end
@@ -865,7 +865,7 @@ SQL
     raise 'Model must be User' if op['model'] != 'User'
     case op['action']
       when 'track_level_progress'
-        User.track_level_progress_sync(op['user_id'], op['level_id'], op['script_id'], op['new_result'], op['submitted'])
+        User.track_level_progress_sync(op['user_id'], op['level_id'], op['script_id'], op['new_result'], op['submitted'], op['pairing_user_ids'])
       else
         raise "Unknown action in #{op}"
     end
