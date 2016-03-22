@@ -87,3 +87,6 @@ var IconListEntry = React.createClass({
   }
 });
 module.exports = IconListEntry;
+
+window.dashboard = window.dashboard || {};
+window.dashboard.IconListEntry = IconListEntry;

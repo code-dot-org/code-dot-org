@@ -1,6 +1,5 @@
 var IconListEntry = require('./IconListEntry.jsx');
 var icons = require('./icons').aliases;
-var msg = require('../locale');
 
 /**
  * A component for managing icons.
@@ -53,9 +52,12 @@ var IconList = React.createClass({
 
     return (
       <div style={styles.root}>
-        {iconEntries.length > 0 ? iconEntries : msg.noIconsFound()}
+        {iconEntries.length > 0 ? iconEntries : window.dashboard.i18n.t('components.icon_library.no_icons_found')}
       </div>
     );
   }
 });
 module.exports = IconList;
+
+window.dashboard = window.dashboard || {};
+window.dashboard.IconList = IconList;
