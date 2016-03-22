@@ -108,7 +108,6 @@ class ScriptLevel < ActiveRecord::Base
       kind = 'puzzle'
     end
 
-    puts build_script_level_url(self)
     summary = {
         id: level.id,
         position: position,
