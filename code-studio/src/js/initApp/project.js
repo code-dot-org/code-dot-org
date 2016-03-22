@@ -14,6 +14,7 @@ var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
+var header = require('../header');
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -224,19 +225,19 @@ var projects = module.exports = {
 
   showProjectHeader: function() {
     if (this.shouldUpdateHeaders()) {
-      dashboard.header.showProjectHeader();
+      header.showProjectHeader();
     }
   },
 
   showMinimalProjectHeader: function() {
     if (this.shouldUpdateHeaders()) {
-      dashboard.header.showMinimalProjectHeader();
+      header.showMinimalProjectHeader();
     }
   },
 
   showHeaderForProjectBacked: function() {
     if (this.shouldUpdateHeaders()) {
-      dashboard.header.showHeaderForProjectBacked();
+      header.showHeaderForProjectBacked();
     }
   },
   setName: function(newName) {
@@ -451,7 +452,7 @@ var projects = module.exports = {
         location.href = this.getPathName('edit');
       }
     }
-    dashboard.header.updateTimestamp();
+    header.updateTimestamp();
   },
   /**
    * Autosave the code if things have changed
