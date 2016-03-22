@@ -94,8 +94,8 @@ GameLab.prototype.log = function (object) {
  */
 GameLab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
-  this.studioApp_.reset = _.bind(this.reset, this);
-  this.studioApp_.runButtonClick = _.bind(this.runButtonClick, this);
+  this.studioApp_.reset = this.reset.bind(this);
+  this.studioApp_.runButtonClick = this.runButtonClick.bind(this);
 
   this.studioApp_.setCheckForEmptyBlocks(true);
 };
@@ -342,7 +342,7 @@ GameLab.prototype.execute = function() {
   }
 
   // Set to 1ms interval, but note that browser minimums are actually 5-16ms:
-  this.tickIntervalId = window.setInterval(_.bind(this.onTick, this), 1);
+  this.tickIntervalId = window.setInterval(this.onTick.bind(this), 1);
 };
 
 GameLab.prototype.initInterpreter = function () {
@@ -621,7 +621,7 @@ GameLab.prototype.checkAnswer = function() {
     result: levelComplete,
     testResult: this.testResults,
     program: encodeURIComponent(program),
-    onComplete: _.bind(this.onReportComplete, this),
+    onComplete: this.onReportComplete.bind(this),
     // save_to_gallery: level.impressive
   };
 
