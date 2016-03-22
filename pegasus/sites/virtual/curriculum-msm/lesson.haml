@@ -16,7 +16,7 @@ title: Unit
     -basename = File.basename(file, extension)
     - if extension == ".md" || extension == ".haml" || extension == ".html"
       - if extension == ".html"
-        - # Special case MSM hack to show a friendlier name
+        -# Special case MSM hack to show a friendlier name
         %a{:href=>"/curriculum/msm/#{unit_lesson}/#{file}"}= "Lesson"
       - else
         %a{:href=>"/curriculum/msm/#{unit_lesson}/#{basename}"}= basename

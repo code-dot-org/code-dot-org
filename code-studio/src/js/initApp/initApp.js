@@ -1,5 +1,5 @@
 // TODO (brent) - way too many globals
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, showVideoDialog, ga, digestManifest*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
@@ -8,6 +8,10 @@ var project = require('./project');
 var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 var createCallouts = require('../callouts');
+var reporting = require('../reporting');
+
+window.dashboard = window.dashboard || {};
+window.dashboard.project = project;
 
 window.apps = {
   // Loads the dependencies for the current app based on values in `appOptions`.
@@ -21,8 +25,6 @@ window.apps = {
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
     }
-    dashboard.project = project;
-
     timing.startTiming('Puzzle', script_path, '');
 
     var lastSavedProgram;
@@ -41,7 +43,7 @@ window.apps = {
         if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
           $('#clear-puzzle-header').hide();
           // Only show Version History button if the user owns this project
-          if (dashboard.project.isOwner()) {
+          if (project.isOwner()) {
             $('#versions-header').show();
           }
         }
@@ -73,7 +75,7 @@ window.apps = {
           timing.stopTiming('Puzzle', script_path, '');
         }
         trackEvent('Activity', 'Lines of Code', script_path, report.lines);
-        sendReport(report);
+        reporting.sendReport(report);
       },
       onComplete: function (response) {
         if (!appOptions.channel) {
@@ -82,9 +84,10 @@ window.apps = {
         }
       },
       onResetPressed: function() {
-        cancelReport();
+        reporting.cancelReport();
       },
       onContinue: function() {
+        var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.videoInfo) {
           showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.nextRedirect) {
@@ -92,6 +95,7 @@ window.apps = {
         }
       },
       backToPreviousLevel: function() {
+        var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.previousLevelRedirect) {
           window.location.href = lastServerResponse.previousLevelRedirect;
         }
@@ -157,8 +161,6 @@ window.apps = {
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
     }
-
-    dashboard.project = project;
   },
 
   // Define blockly/droplet-specific callbacks for projects to access
@@ -189,7 +191,7 @@ window.apps = {
 
   // Initialize the Blockly or Droplet app.
   init: function () {
-    dashboard.project.init(window.apps.sourceHandler);
+    project.init(window.apps.sourceHandler);
     window[appOptions.app + 'Main'](appOptions);
   }
 };
