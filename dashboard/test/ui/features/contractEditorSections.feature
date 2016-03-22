@@ -7,6 +7,7 @@ Background:
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 4 of 4"
   And I close the dialog
+  And I close the React alert
   Then element "#runButton" is visible
   And I open the blockly category with ID "7"
   And I press the SVG text "Create a Function"
