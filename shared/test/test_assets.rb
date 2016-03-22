@@ -268,68 +268,69 @@ class AssetsTest < Minitest::Test
   end
 
   def test_assets_quota
-    FilesApi.stub(:max_file_size, 5) do
-      FilesApi.stub(:max_app_size, 10) do
-        channel_id = create_channel(@channels)
+    FilesApi.any_instance.stubs(:max_file_size).returns(5)
+    FilesApi.any_instance.stubs(:max_app_size).returns(10)
+    channel_id = create_channel(@channels)
 
-        post_file(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
-        assert @assets.last_response.client_error?, "Error when file is larger than max file size."
+    post_file(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
+    assert @assets.last_response.client_error?, "Error when file is larger than max file size."
 
-        _, added_filename1 = post_file(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
-        assert @assets.last_response.successful?, "First small file upload is successful."
+    _, added_filename1 = post_file(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
+    assert @assets.last_response.successful?, "First small file upload is successful."
 
-        _, added_filename2 = post_file(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
-        assert @assets.last_response.successful?, "Second small file upload is successful."
+    _, added_filename2 = post_file(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
+    assert @assets.last_response.successful?, "Second small file upload is successful."
 
-        post_file(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
-        assert @assets.last_response.client_error?, "Error when exceeding max app size."
+    post_file(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
+    assert @assets.last_response.client_error?, "Error when exceeding max app size."
 
-        delete(@assets, channel_id, added_filename1)
-        delete(@assets, channel_id, added_filename2)
+    delete(@assets, channel_id, added_filename1)
+    delete(@assets, channel_id, added_filename2)
 
-        assert (JSON.parse(list(@assets, channel_id)).empty?), "No unexpected assets were written to storage."
+    assert (JSON.parse(list(@assets, channel_id)).empty?), "No unexpected assets were written to storage."
 
-        delete_channel(@channels, channel_id)
-      end
-    end
+    delete_channel(@channels, channel_id)
+    FilesApi.any_instance.unstub(:max_file_size)
+    FilesApi.any_instance.unstub(:max_app_size)
   end
 
   def test_assets_quota_newrelic_logging
-    FilesApi.stub(:max_file_size, 5) do
-      FilesApi.stub(:max_app_size, 10) do
-        CDO.stub(:newrelic_logging, true) do
-          channel_id = create_channel(@channels)
+    FilesApi.any_instance.stubs(:max_file_size).returns(5)
+    FilesApi.any_instance.stubs(:max_app_size).returns(10)
+    CDO.stub(:newrelic_logging, true) do
+      channel_id = create_channel(@channels)
 
-          post_file(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
-          assert @assets.last_response.client_error?, "Error when file is larger than max file size."
+      post_file(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
+      assert @assets.last_response.client_error?, "Error when file is larger than max file size."
 
-          assert_assets_custom_metric 1, 'FileTooLarge'
+      assert_assets_custom_metric 1, 'FileTooLarge'
 
-          _, filetodelete1 = post_file(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
-          assert @assets.last_response.successful?, "First small file upload is successful."
+      _, filetodelete1 = post_file(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
+      assert @assets.last_response.successful?, "First small file upload is successful."
 
-          assert_assets_custom_metric 1, 'FileTooLarge', 'still only one custom metric recorded'
+      assert_assets_custom_metric 1, 'FileTooLarge', 'still only one custom metric recorded'
 
-          _, filetodelete2 = post_file(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
-          assert @assets.last_response.successful?, "Second small file upload is successful."
+      _, filetodelete2 = post_file(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
+      assert @assets.last_response.successful?, "Second small file upload is successful."
 
-          assert_assets_custom_metric 2, 'QuotaCrossedHalfUsed'
-          assert_assets_custom_event 1, 'QuotaCrossedHalfUsed'
+      assert_assets_custom_metric 2, 'QuotaCrossedHalfUsed'
+      assert_assets_custom_event 1, 'QuotaCrossedHalfUsed'
 
-          post_file(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
-          assert @assets.last_response.client_error?, "Error when exceeding max app size."
+      post_file(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
+      assert @assets.last_response.client_error?, "Error when exceeding max app size."
 
-          assert_assets_custom_metric 3, 'QuotaExceeded'
-          assert_assets_custom_event 2, 'QuotaExceeded'
+      assert_assets_custom_metric 3, 'QuotaExceeded'
+      assert_assets_custom_event 2, 'QuotaExceeded'
 
-          delete(@assets, channel_id, filetodelete1)
-          delete(@assets, channel_id, filetodelete2)
+      delete(@assets, channel_id, filetodelete1)
+      delete(@assets, channel_id, filetodelete2)
 
-          assert (JSON.parse(list(@assets, channel_id)).empty?), "No unexpected assets were written to storage."
-          delete_channel(@channels, channel_id)
-        end
-      end
+      assert (JSON.parse(list(@assets, channel_id)).empty?), "No unexpected assets were written to storage."
+      delete_channel(@channels, channel_id)
     end
+    FilesApi.any_instance.unstub(:max_file_size)
+    FilesApi.any_instance.unstub(:max_app_size)
+
   end
 
   def test_asset_last_modified
