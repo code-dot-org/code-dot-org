@@ -355,7 +355,6 @@ class AssetsTest < Minitest::Test
     assert_equal 304, @assets.last_response.status
   end
 
-
   def test_invalid_mime_type_returns_unsupported_media_type
     channel = create_channel(@channels)
 
