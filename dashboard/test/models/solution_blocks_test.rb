@@ -3,8 +3,6 @@ require 'test_helper'
 class SolutionBlocksTest < ActiveSupport::TestCase
   setup do
     @empty_toolbox_xml = <<XML
-<xml>
-</xml>
 XML
     @toolbox_with_category_xml = <<XML
 <xml>
