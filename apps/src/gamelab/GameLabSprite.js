@@ -23,8 +23,15 @@ module.exports.injectJSInterpreter = function (jsi) {
  * Copied code from p5play from Sprite() with targeted modifications that
  * use the additional state parameter
  */
-module.exports.AABBops = function(type, target, callback) {
+module.exports.AABBops = function(p5Inst, type, target, callback) {
 
+  var abs = p5.prototype.abs;
+  var round = p5.prototype.round;
+  var quadTree = p5Inst.quadTree;
+  var createVector = p5Inst.createVector;
+  var AABB = p5Inst.AABB;
+  var Sprite = p5Inst.Sprite;
+  var CircleCollider = p5Inst.CircleCollider;
   var state = jsInterpreter.getCurrentState();
   if (state.__subState) {
     // If we're being called by another stateful function that hung a __subState
@@ -127,6 +134,10 @@ module.exports.AABBops = function(type, target, callback) {
               abs(this.position.x -this.previousPosition.x) + this.collider.extents.x,
               abs(this.position.y -this.previousPosition.y) + this.collider.extents.y);
 
+            /*
+             * NOTE: this param not needed on AABB() call as we're calling
+             * through the bound constructor, which prepends the first arg.
+             */
             var bbox = new AABB(c, e, this.collider.offset);
 
             //bbox.draw();
@@ -168,9 +179,7 @@ module.exports.AABBops = function(type, target, callback) {
 
           }
 
-          if(displacement.x == 0 &&  displacement.y == 0 )
-            result = false;
-          else
+          if(displacement.x !== 0 || displacement.y !== 0 )
           {
 
             if(!this.immovable)
@@ -262,9 +271,7 @@ module.exports.AABBops = function(type, target, callback) {
             displacement = this.collider.collide(other.collider);
 
 
-          if(displacement.x == 0 &&  displacement.y == 0 )
-            result = false;
-          else
+          if(displacement.x !== 0 || displacement.y !== 0 )
           {
             other.position.sub(displacement);
 

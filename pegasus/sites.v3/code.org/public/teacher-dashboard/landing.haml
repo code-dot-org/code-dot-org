@@ -132,10 +132,11 @@ content-type: text/ng-template
     = I18n.t('dashboard_landing_more_tutorials_desc')
     %br/
 
-  -#.debug
-    %h2 DEBUG
-    %pre
-      {{student | json}}
+  -#
+    .debug
+      %h2 DEBUG
+      %pre
+        {{student | json}}
 
 :css
   .tile {

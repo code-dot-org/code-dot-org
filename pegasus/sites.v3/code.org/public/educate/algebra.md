@@ -34,7 +34,7 @@ We provide a blended professional development program that prepares teachers to 
 
 ## I taught CS in Algebra in 2015-2016, how is this different?
 
-None of the lessons from the original version of CS in Algebra has been removed, but in response to teacher feedback we have restructued the course to make it easier to integrate just the Evaluation Blocks and Design Recipe elements into your class. Course A and Course B together make up the same original 20 lessons, but if you would like to use the original materials they are still available [here](//code.org/curriculum/algebra)
+None of the lessons from the original version of CS in Algebra have been removed, but in response to teacher feedback we have restructued the course to make it easier to integrate just the Evaluation Blocks and Design Recipe elements into your class. Course A and Course B together make up the same original 20 lessons, but if you would like to use the original materials they are still available [here](//code.org/curriculum/algebra)
 
 <h2>Videos</h2>
 

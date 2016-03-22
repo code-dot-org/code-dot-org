@@ -8,9 +8,12 @@
  */
 'use strict';
 /* global Sounds */
+var _ = require('lodash');
 
 // Shim window.console to be safe in IE
 require('./consoleShim')(window);
+
+var Sounds = require('./Sounds');
 
 require('./videos');
 
@@ -37,6 +40,11 @@ window.dashboard.hashEmail = require('./hashEmail');
 window.dashboard.funometer = require('./funometerPercentagesByDay');
 window.dashboard.popupWindow = require('./popup-window');
 window.dashboard.progress = require('./progress');
+window.dashboard.reporting = require('./reporting');
+window.dashboard.utils ={
+  debounce: _.debounce
+};
+window.dashboard.header = require('./header');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.
