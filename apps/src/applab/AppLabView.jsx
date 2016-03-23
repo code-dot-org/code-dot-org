@@ -1,11 +1,13 @@
 /** @file Top-level view for App Lab */
 'use strict';
 
+var _ = require('lodash');
 var connect = require('react-redux').connect;
 var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
 var TopInstructions = require('../templates/TopInstructions.jsx');
+var HeightResizer = require('../templates/HeightResizer.jsx');
 
 var styles = {
   // same as #codeWorkspace + #codeWorkspace.pin_bottom from common.scss, with
@@ -13,16 +15,21 @@ var styles = {
   // deal with
   codeWorkspace: {
     position: 'absolute',
-    top: 30,
     right: 0,
     bottom: 0,
     marginLeft: 15,
     border: 'none',
     borderTop: '1px solid #ddd',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    zIndex: 0
   },
   hidden: {
     display: 'none'
+  },
+  resizer: {
+    position: 'absolute',
+    height: 13, // TODO $resize-bar-width from style-constants
+    right: 0
   }
 };
 
@@ -57,6 +64,16 @@ var AppLabView = React.createClass({
           onScreenCreate={this.props.onScreenCreate} />;
     }
 
+    var instructionHeight = 100;
+
+    var codeWorkspaceStyle = _.assign({}, styles.codeWorkspace, {
+      top: instructionHeight + styles.resizer.height
+    });
+
+    var resizerStyle = _.assign({}, styles.resizer, {
+      top: instructionHeight
+    });
+
     // TODO - changing id of codeWorkspace to codeWorkspaceApplab will break callouts and some UI tests
     return (
       <ConnectedStudioAppWrapper>
@@ -65,8 +82,9 @@ var AppLabView = React.createClass({
           <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <TopInstructions/>
-        <ProtectedStatefulDiv id="codeWorkspace" style={styles.codeWorkspace} className="applab">
+        <TopInstructions height={instructionHeight}/>
+        <HeightResizer style={resizerStyle}/>
+        <ProtectedStatefulDiv id="codeWorkspace" style={codeWorkspaceStyle} className="applab workspace-right">
           <ProtectedStatefulDiv id="codeWorkspaceWrapper" contentFunction={this.props.generateCodeWorkspaceHtml}/>
           {!this.props.isReadOnlyWorkspace && <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden} />}
         </ProtectedStatefulDiv>
