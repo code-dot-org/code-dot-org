@@ -17,9 +17,6 @@
     .span3#trynow
       = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
       %p.lightgreytext
-        - if @script.feedback_url
-          = link_to t('landing.feedback'), @script.feedback_url
-          %br/
         = link_to t('landing.support'), t('landing.support_url')
         %br/
 

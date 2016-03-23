@@ -793,7 +793,7 @@
   dashboard_progress_completed_too_many_blocks: selesai, terlalu banyak blok
   dashboard_progress_completed_perfect: selesai, sempurna
   dashboard_progress_furthest_level_attempted: tingkat terjauh yang dicoba
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: terkirim
   dashboard_stage: Tahap
   dashboard_puzzle: Teka-teki
   dashboard_question: Pertanyaan
@@ -969,7 +969,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: Laboratorium Aplikasi
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Usia 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

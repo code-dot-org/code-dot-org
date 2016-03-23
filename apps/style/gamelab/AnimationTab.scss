@@ -1,0 +1,32 @@
+@import "color";
+
+#sequences-column, #frames-column, #editor-column {
+  display: flex;
+  flex-direction: column;
+}
+
+#sequences-column {
+  min-width: 150px;
+  max-width: 300px;
+}
+
+#frames-column {
+  min-width: 150px;
+  max-width: 300px;
+  border: solid thin $light_purple;
+  border-right: none;
+}
+
+#editor-column {
+  border: solid thin $light_purple;
+}
+
+.animation-sequence-list {
+  border: solid thin $light_purple;
+  border-right: none;
+  background-color: $white;
+}
+
+.animation-frame-list {
+  background-color: $white;
+}
