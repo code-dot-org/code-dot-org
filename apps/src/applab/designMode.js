@@ -189,7 +189,7 @@ function renderIconToString(value, element) {
   ctx.textAlign = 'center';
   ctx.fillStyle = element.getAttribute('data-icon-color');
   var regex = new RegExp('^' + ICON_PREFIX + 'fa-');
-  var unicode = '0x' + window.dashboard.iconsUnicode[value.replace(regex, '')];
+  var unicode = '0x' + dashboard.iconsUnicode[value.replace(regex, '')];
   ctx.fillText(String.fromCharCode(unicode), 200, 200);
   return canvas.toDataURL();
 }
