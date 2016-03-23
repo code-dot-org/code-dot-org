@@ -1,0 +1,21 @@
+%h1 Listing plc_user_course_enrollments
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+      %th
+
+  %tbody
+    - @user_course_enrollments.each do |user_course_enrollment|
+      %tr
+        %td= user_course_enrollment.user.try(:email)
+        %td= user_course_enrollment.plc_course.try(:name)
+        %td= link_to 'Show', user_course_enrollment
+        %td= link_to 'Destroy', user_course_enrollment, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New User course enrollment', new_plc_user_course_enrollment_path

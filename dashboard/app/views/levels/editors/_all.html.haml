@@ -4,6 +4,13 @@
   = javascript_include_tag 'js/levelbuilder'
   = javascript_include_tag 'jquery.handsontable.full'
 
+- unless @level.is_a? DSLDefined
+  .field
+    = f.label 'notes'
+    %p
+      Notes for yourself or other Levelbuilders. Viewable here and here alone.
+    = f.text_area :notes, rows: 6, class: "input-block-level"
+
 .field
   = f.label 'concepts'
   %p

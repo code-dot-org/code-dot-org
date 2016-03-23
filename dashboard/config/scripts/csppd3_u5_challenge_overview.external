@@ -1,0 +1,20 @@
+name 'CSPPD3-u5 challenge overview'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Challenge Overview > What’s Inside
+
+<br/>
+#### What’s in the Challenge Overview? 
+
+>- Explanation of the process - what is a challenge? 
+- List of challenges to choose from
+- Space to pick a challenge
+
+Click “Continue” below to learn morea bout the Unit 5 Challenges! 
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

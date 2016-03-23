@@ -39,5 +39,4 @@ class ZendeskSessionControllerTest < ActionController::TestCase
     assert_redirected_to "/users/sign_in"
   end
 
-
 end

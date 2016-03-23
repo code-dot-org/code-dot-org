@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
   before_filter :authenticate_user!, only: :gallery_activities
 
-
   # Don't require an authenticity token on set_locale because we post to that
   # action from publicly cached page without a valid token. The worst case impact
   # is that an attacker could change a user's language if they fooled them into
@@ -45,10 +44,6 @@ class HomeController < ApplicationController
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
     end
     render partial: 'home/gallery_content'
-  end
-
-  def audio_test
-    render 'audio_test', layout: false, formats: [:html]
   end
 
   def certificate_link_test

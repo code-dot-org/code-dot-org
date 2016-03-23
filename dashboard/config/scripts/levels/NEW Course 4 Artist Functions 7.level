@@ -31,8 +31,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "examples_required": "false"
-  }
+    "examples_required": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -44,7 +46,7 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <description>Draws a square that is 200 pixels in size.</description>
           </mutation>

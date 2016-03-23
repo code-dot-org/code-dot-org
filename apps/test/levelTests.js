@@ -15,8 +15,15 @@ var $ = require('jquery');
 var React = require('react');
 var sinon = require('sinon');
 require('jquery-ui');
+var tickWrapper = require('./util/tickWrapper');
+
+var wrappedEventListener = require('./util/wrappedEventListener');
+var testCollectionUtils = require('./util/testCollectionUtils');
 
 window.React = React;
+
+var testUtils = require('./util/testUtils');
+testUtils.setupLocales();
 
 // Anatomy of a level test collection. The example itself is uncommented so
 // that you get the benefits of editor syntax highlighting
@@ -62,12 +69,6 @@ var example = {
     }
   ]
 };
-
-var testUtils = require('./util/testUtils');
-testUtils.setupLocales();
-
-var wrappedEventListener = require('./util/wrappedEventListener');
-var testCollectionUtils = require('./util/testCollectionUtils');
 
 // One day this might be the sort of thing we share with initApp.js
 function loadSource(src) {
@@ -180,6 +181,8 @@ describe('Level tests', function() {
       window.Studio.customLogic = null;
       window.Studio.interpreter = null;
     }
+
+    tickWrapper.reset();
   });
 });
 

@@ -47,17 +47,30 @@ angular: recordsApp
   services.factory('tablesService', ['$resource',
     function($resource) {
       var Table = $resource("#{api_base_url}", {}, {
-        'deleteColumn': {
+        deleteColumn: {
           method:'DELETE',
           url: "#{api_base_url}/column/:column_name"
         },
-        'renameColumn': {
+        renameColumn: {
           method:'POST',
           url: "#{api_base_url}/column/:column_name"
+        },
+        addColumn: {
+          method: 'POST',
+          url: "#{api_base_url}/column"
+        },
+        getMetadata: {
+          method: 'GET',
+          url: "#{api_base_url}/metadata"
+        },
+        setMetadata: {
+          method: 'POST',
+          url: "#{api_base_url}/metadata"
         }
       }, {});
       return Table;
     }]);
+
   // CONTROLLERS
 
   var controllers = angular.module('recordsApp.controllers', []).
@@ -71,10 +84,31 @@ angular: recordsApp
     $scope.tableName = "#{table_name}";
     $scope.channelId = "#{channel_id}";
     $scope.importing = false;
+    $scope.fileSelected = false;
     $scope.reverse = true;
-    $scope.records.$promise.then(function(records) {
-      $scope.columns = getColumns(records);
-    }).catch($scope.genericError);
+
+    // Attempt to get metadata. The first time through, if we don't have any
+    // we will tell the serve to create some.
+    function getMetadata(createIfNeeded) {
+      $scope.tableMetadata = tablesService.getMetadata();
+      $scope.tableMetadata.$promise.then(function (metadata) {
+        if (metadata && metadata.column_list) {
+          var columnInfo = JSON.parse(metadata.column_list);
+          rationalizeColumnsAndRecords(columnInfo);
+        } else if (createIfNeeded) {
+          tablesService.setMetadata().$promise.then(function () {
+            getMetadata(false);
+          });
+        }
+      }).catch($scope.genericError);;
+    }
+    getMetadata(true);
+
+    $scope.selectedFile = function() {
+      $scope.$apply(function () {
+        $scope.fileSelected = true;
+      });
+    }
 
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
@@ -83,8 +117,13 @@ angular: recordsApp
       window.location.href = '/v3/export-shared-tables/' + $scope.channelId + '/' + $scope.tableName;
     }
     $scope.addColumn = function() {
-      if ($scope.newColumnName == '') return;
-      $scope.columns.push(makeColumn($scope.newColumnName));
+      if ($scope.newColumnName === '') {
+        return;
+      }
+      if (!columnExists($scope.newColumnName)) {
+        new tablesService().$addColumn({column_name: $scope.newColumnName});
+        $scope.columns.push(makeColumn($scope.newColumnName));
+      }
       $scope.newColumnName = '';
     }
 
@@ -112,7 +151,7 @@ angular: recordsApp
 
     $scope.deleteTable = function () {
       if (confirm("Are you sure you want to delete '" + $scope.tableName + "'?")) {
-        var ts = new tablesService().$remove(function () {
+        new tablesService().$remove(function () {
           window.location.href = "/v3/edit-csp-app/#{channel_id}";
         });
         $scope.deletingTable = true;
@@ -140,6 +179,12 @@ angular: recordsApp
       }
     }
     $scope.renameColumn = function (column) {
+      if (columnExists(column.name)) {
+        // If we're trying to rename to an existing column, ignore the change
+        column.name = column.id;
+        column.editing = false;
+        return;
+      }
       if (column.id != column.name) {
         new tablesService().$renameColumn({column_name: column.id, new_name: column.name});
         for (var i= 0; i < $scope.records.length; i += 1) {
@@ -173,6 +218,38 @@ angular: recordsApp
       return val;
     }
 
+    function columnExists(columnName) {
+      return $scope.columns.some(function (col) {
+        return col.id === columnName;
+      });
+    }
+
+    /**
+     * Give metadata about a set of columns, go through our records and see
+     * if there are any missing columns. If there are, post to the server
+     * to update our metadata
+     */
+    function rationalizeColumnsAndRecords(columnInfo) {
+      // make sure we've loaded our records
+      $scope.records.$promise.then(function (records) {
+        var newColumns = [];
+        records.forEach(function (record) {
+          Object.keys(record).forEach(function (key) {
+            if (key === 'id' || key === '$$hashKey') {
+              return;
+            }
+            if (columnInfo.indexOf(key) === -1) {
+              columnInfo.push(key);
+              newColumns.push(key);
+            }
+          });
+        });
+        if (newColumns.length !== 0) {
+          new tablesService().$setMetadata({ column_list: JSON.stringify(newColumns) });
+        }
+        $scope.columns = columnInfo.map(makeColumn);
+      });
+    }
   }]);
   function makeColumn(name) {
     /*
@@ -187,19 +264,4 @@ angular: recordsApp
       name: name,
       editing: false,
     }
-  }
-  function getColumns(records) {
-    var columns = [];
-    var column_names = [];
-    for (var i = 0; i < records.length; i++) {
-      var props = Object.keys(records[i]);
-      for (var j = 0; j < props.length; j++) {
-        var prop = props[j];
-        if (prop != 'id' && column_names.indexOf(prop) == -1) {
-          column_names.push(prop);
-          columns.push(makeColumn(prop));
-        }
-      }
-    }
-    return columns;
   }

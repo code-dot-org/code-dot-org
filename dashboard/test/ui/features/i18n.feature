@@ -16,7 +16,7 @@ Scenario: Frozen tutorial in Spanish
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 2 de 20"
   Then element ".modal-content p:nth-child(2)" has "es" text from key "data.instructions.frozen perpendicular_instruction"
-  And I press "x-close"
+  And I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "es" text from key "data.instructions.frozen perpendicular_instruction"
@@ -39,7 +39,7 @@ Scenario: Frozen tutorial in Portuguese
   And I rotate to landscape
   Then I wait to see a dialog titled "Desafio 2 de 20"
   Then element ".modal-content p:nth-child(2)" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
-  And I press "x-close"
+  And I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"

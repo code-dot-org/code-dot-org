@@ -85,7 +85,7 @@
       var serializedMaze = eval(#{@level.properties['serialized_maze'].try(:to_json)});
 
       var renderGridEditor = function () {
-        React.render(React.createElement(dashboard.GridEditor, {
+        ReactDOM.render(React.createElement(dashboard.GridEditor, {
           maze: maze,
           initialDirt: initialDirt,
           serializedMaze: serializedMaze,

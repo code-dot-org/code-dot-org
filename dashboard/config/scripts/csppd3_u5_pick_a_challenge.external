@@ -1,0 +1,21 @@
+name 'CSPPD3-u5 pick a challenge'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Challenge Overview > What's your Challenge? 
+
+#### Select one of the challenges below to complete.
+
+- **Challenge 1: Explore PT - make a visualization**
+- **Challenge 2: Create PT - make a PDF and writeup**
+- **Challenge 3: Create PT - make a video**
+
+>Now that you've selected a lesson, head to the forum and **share which lesson you plan to complete** for your challenge. 
+<br><br>
+<a href="http://forum.code.org/t/unit-5-challenge-selection/3624" target=_blank>forum >> </a>
+
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a> 
+
+MARKDOWN

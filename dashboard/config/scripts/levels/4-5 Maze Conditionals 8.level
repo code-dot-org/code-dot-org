@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "The \"if/else\" block checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.",
+    "instructions": "The `if/else` block checks a condition, and then does one thing OR another. \r\n\r\nUse this new block to get me to the sunflower.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -26,8 +26,12 @@
     "disable_examples": "false",
     "video_key": "C3_bee_conditionals",
     "examples_required": "false",
-    "maze_data": null
-  }
+    "markdown_instructions": "The `if/else` block checks a condition, and then does one thing OR another. \r\n\r\nUse this new block to get me to the sunflower.",
+    "never_autoplay_video": "false",
+    "step_speed": "1"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -62,15 +66,33 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="maze_forever"/>
         <block type="maze_ifElse">
           <title name="DIR">isPathForward</title>
         </block>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_forever">
+              <statement name="DO">
+                <block type="maze_ifElse">
+                  <title name="DIR">isPathForward</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

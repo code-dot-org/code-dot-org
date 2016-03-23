@@ -23,13 +23,7 @@ Milestone Complete!
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the Dates**
-
-Quarter 1: Saturday, September 19, 2015
-
-Quarter 2: Saturday, November 21, 2015
-
-Quarter 3: Saturday, January 30, 2016
+**Save the Date**
 
 Quarter 4: Saturday, April 2, 2016 
 

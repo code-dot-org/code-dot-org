@@ -1,0 +1,32 @@
+name 'CSPPD3-u5 share out overview'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Share Out and Submit > What’s Inside
+
+<br/>
+
+#### What have we done so far?
+By now you should have completed Stages 1-6, and accomplished the following learning objectives:
+
+- Developed a deeper understanding of the CSP Performance Tasks
+- Tried your hand at one piece of a Performance Task
+- Considered the implications of the Performance Tasks on your class
+- Connected with the Code.org CSP community for additional support throughout Unit 5
+
+#### What will we do now? 
+
+>- Share your task artifact and your feedback and thoughts on the task in the forums 
+- Submit a link to your forum post for review
+- Check out the work other Piloters produced in their Challenges
+
+<br>
+Take a moment to reflect on your learning. If you like, you can go back and review any stages and levels that you wish to spend more time on. When you’re ready, click “Continue” below to share your Unit 5 Challenge.
+<br>
+
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

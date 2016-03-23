@@ -112,6 +112,18 @@ class HttpCache
             cookies: whitelisted_cookies
           },
           {
+            # Pass through the user agent to the /api/user_progress and
+            # /milestone actions so the activity monitor can track script
+            # completion by user agent. These responses are never cached so this
+            # won't hurt cachability.
+            path: %w(
+              /api/user_progress/*
+              /milestone/*
+            ),
+            headers: LANGUAGE_HEADER + ['User-Agent'],
+            cookies: whitelisted_cookies
+          },
+          {
             path: CACHED_SCRIPTS_MAP.values,
             headers: LANGUAGE_HEADER,
             cookies: LANGUAGE_COOKIES

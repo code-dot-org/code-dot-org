@@ -98,7 +98,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal ['Email has already been taken'], user.errors.full_messages
   end
 
-
   test "cannot create young user with duplicate email" do
     # actually create a user
     User.create!(@good_data_young)
@@ -133,7 +132,6 @@ class UserTest < ActiveSupport::TestCase
       end
     end
   end
-
 
   test "cannot create a user with age that's not a number" do
     assert_no_difference('User.count') do
@@ -175,7 +173,6 @@ class UserTest < ActiveSupport::TestCase
       assert_equal 9, user.age
     end
   end
-
 
   test "can save a user with age" do
     user = create :user, age: 10
@@ -231,7 +228,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-
   test "cannot create self-managed user without email or hashed email" do
     assert_no_difference('User.count') do
       User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
@@ -250,7 +246,6 @@ class UserTest < ActiveSupport::TestCase
     user.user_type = 'teacher'
     assert !user.save
   end
-
 
   test "cannot make an account without email an admin" do
     user = User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
@@ -292,7 +287,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'Laurel', create(:user, :name => 'Laurel').short_name # just one name
     assert_equal 'some', create(:user, :name => '  some whitespace in front  ').short_name # whitespace in front
   end
-
 
   test "initial" do
     assert_equal 'L', create(:user, :name => 'Laurel Fan').initial # first name last name
@@ -407,7 +401,6 @@ class UserTest < ActiveSupport::TestCase
     assert !user.email.present?
     assert user.hashed_email.present?
   end
-
 
   test 'users over 13 have plaintext email and hashed email' do
     user = create :user, birthday: Date.new(1990, 10, 4), email: 'will_be_hashed@email.xx'
@@ -812,7 +805,6 @@ class UserTest < ActiveSupport::TestCase
     assert !user.needs_to_backfill_user_scripts?
   end
 
-
   test 'update_with_password does not require current password for users without passwords' do
     student = create(:student)
     student.update_attribute(:encrypted_password, '')
@@ -830,7 +822,6 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal "JADENDUMPLING", student.name
   end
-
 
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
@@ -856,7 +847,6 @@ class UserTest < ActiveSupport::TestCase
 
     create(:user, name: 'Same Name')
   end
-
 
   test 'generate username' do
     def create_user_with_username(username)
@@ -943,7 +933,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [follow], student.followeds
 
     other_user = create :student
-
 
     assert !student.student_of?(student)
     assert !student.student_of?(other_user)

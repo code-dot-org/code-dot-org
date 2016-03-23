@@ -28,8 +28,6 @@ Scenario: Resizing Sprites
   And the 15th sprite image has height "100"
 
   When I press "runButton"
-  And I wait to see "#again-button"
   And I press "again-button"
-
   Then the 0th sprite image has height "50"
   And the 15th sprite image has height "150"

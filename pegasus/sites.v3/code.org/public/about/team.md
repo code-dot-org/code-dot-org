@@ -4,6 +4,8 @@ nav: about_nav
 ---
 # Full Team
 
+<img src="/images/fit-970/2016-team-photo.jpg" width="630px;" style="margin-left: 15px;">
+
 <%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'team'), :columns=>3 %>
 
 <a id="extended"></a>

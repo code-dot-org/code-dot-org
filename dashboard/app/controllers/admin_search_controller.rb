@@ -44,7 +44,6 @@ class AdminSearchController < ApplicationController
       # outer join.
       @teachers = @teachers.joins(:followers).group('followers.user_id')
 
-
       # Prune the set of fields to those that will be displayed.
       @teacher_limit = 500
       @headers = ['ID', 'Name', 'Email', 'Address', 'Num Students']
@@ -52,8 +51,10 @@ class AdminSearchController < ApplicationController
 
       # Remove newlines from the full_address field, replacing them with spaces.
       @teachers.each do |teacher|
-        teacher[3].gsub!("\r", ' ')
-        teacher[3].gsub!("\n", ' ')
+        if teacher[3].present?
+          teacher[3].gsub!("\r", ' ')
+          teacher[3].gsub!("\n", ' ')
+        end
       end
     end
   end

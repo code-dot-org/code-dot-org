@@ -1,0 +1,37 @@
+// Style rules associated with the device rotation overlay
+
+#rotateContainer {
+  position: fixed;
+  z-index: 10001;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  #rotateText {
+    position: relative;
+    top: 50%;
+    left: -50%;
+    margin-left: 50px;
+    margin-right: -50px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 26px;
+    line-height: 26px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+
+@media screen and (orientation: portrait) and (max-device-width: 900px) {
+    display: block;
+  }
+}

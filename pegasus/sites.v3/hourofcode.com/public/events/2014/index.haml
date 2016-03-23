@@ -14,13 +14,13 @@ nav: events_nav
 -events.each do |event|
   -country_code = event['location_country_code_s'].to_s
   -by_country[country_code] = [] unless by_country.has_key?(country_code)
-  -by_country[country_code] << event
+  -by_country[country_code] << nil
   -country_names[country_code] = event['location_country_s'].to_s unless country_names.has_key?(country_code)
 
   -if country_code == 'US'
     -state_code = event['location_state_code_s'].to_s
     -by_state[state_code] = [] unless by_state.has_key?(state_code)
-    -by_state[state_code] << event
+    -by_state[state_code] << nil
     -state_names[state_code] = event['location_state_s'].to_s unless state_names.has_key?(state_code)
 
 %h1= hoc_s(:events_all_old_title).gsub(/\@year/, "2014")

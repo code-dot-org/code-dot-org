@@ -82,7 +82,7 @@ The reason why we recommended that you read `=` as “gets” is really to avoid
 
 To state what should be obvious by this point: `=` is for assigning a value to a variable and `==` is for checking or testing to see what a value is.  You can probably imagine the number of mistakes that beginners might make here.
 
-**TIP:** if you continue to read code "aloud" in your head using "gets" and "equal-equal" it might help you discover bugs in your code or avoid them in the first place.  For example, here is an arbitrary peice of code:
+**TIP:** if you continue to read code "aloud" in your head using "gets" and "equal-equal" it might help you discover bugs in your code or avoid them in the first place.  For example, here is an arbitrary piece of code:
 
 | code | read as |
 |:---|---|

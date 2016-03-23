@@ -1,20 +1,7 @@
 /* global Blockly, ace:true, droplet, marked, dashboard, addToHome */
 
-/**
- * For the most part, we depend on dashboard providing us with React as a global.
- * However, there is at least one context in which this won't be true - when we
- * show feedback blocks in their own iframe. In that case, load React from
- * our module.
- * This approach has a couple of drawbacks
- * (1) ability for dashboard React and apps React versions to get out of sync
- * (2) if we end up in other cases where React isn't provided to us as a global
- *     we probably won't notice, which may not be intended behavior
- */
-if (!window.React) {
-  window.React = require('react');
-}
-
 var aceMode = require('./acemode/mode-javascript_codeorg');
+var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
@@ -33,6 +20,7 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/Instructions.jsx');
+var DialogButtons = require('./templates/DialogButtons.jsx');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
@@ -368,14 +356,6 @@ StudioApp.prototype.init = function(config) {
     }, this));
   }
 
-  // The share and embed pages do not show the rotateContainer.
-  if (this.share || config.embed) {
-    var rotateContainer = document.getElementById('rotateContainer');
-    if (rotateContainer) {
-      rotateContainer.style.display = 'none';
-    }
-  }
-
   // In embed mode, the display scales down when the width of the
   // visualizationColumn goes below the min width
   if(config.embed && config.centerEmbedded) {
@@ -521,7 +501,7 @@ StudioApp.prototype.init = function(config) {
         defaultBtnSelector: 'again-button',
         id: 'showVersionsModal'
       });
-      React.render(React.createElement(VersionHistory, {
+      ReactDOM.render(React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
       }), codeDiv);
 
@@ -755,10 +735,11 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
         link: "https://code.org/privacy",
         newWindow: true
       }
-    ]
+    ],
+    phoneFooter: true
   };
 
-  React.render(React.createElement(window.dashboard.SmallFooter, reactProps),
+  ReactDOM.render(React.createElement(window.dashboard.SmallFooter, reactProps),
     footerDiv);
 };
 
@@ -1000,7 +981,13 @@ StudioApp.prototype.onReportComplete = function (response) {
 };
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
+  var isMarkdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+
   var instructionsDiv = document.createElement('div');
+  instructionsDiv.className = isMarkdownMode ?
+    'markdown-instructions-container' :
+    'instructions-container';
+
   var renderedMarkdown;
   var headerElement;
 
@@ -1009,12 +996,9 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     puzzle_number: level.puzzle_number
   });
 
-  var markdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
-
-  if (markdownMode) {
+  if (isMarkdownMode) {
     var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
     renderedMarkdown = marked(markdownWithImages);
-    instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
     headerElement.innerHTML = puzzleTitle;
@@ -1043,17 +1027,14 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   // container just yet, because our React component could contain some
   // elements that don't want to be rendered until they are in the DOM
   var instructionsReactContainer = document.createElement('div');
-  instructionsReactContainer.className='instructions-container';
+  instructionsReactContainer.className='instructions-content';
   instructionsDiv.appendChild(instructionsReactContainer);
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      ok: true
-    }
-  });
-
   instructionsDiv.appendChild(buttons);
+  ReactDOM.render(React.createElement(DialogButtons, {
+    ok: true
+  }), buttons);
 
   // If there is an instructions block on the screen, we want the instructions dialog to
   // shrink down to that instructions block when it's dismissed.
@@ -1086,20 +1067,20 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
-    markdownMode: markdownMode,
+    markdownMode: isMarkdownMode,
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
     onHidden: hideFn,
     scrollContent: true,
-    scrollableSelector: ".instructions-container",
+    scrollableSelector: ".instructions-content",
     header: headerElement
   });
 
   // Now that our elements are guaranteed to be in the DOM, we can
   // render in our react components
   $(this.instructionsDialog.div).on('show.bs.modal', function () {
-    React.render(instructionsContent, instructionsReactContainer);
+    ReactDOM.render(instructionsContent, instructionsReactContainer);
   });
 
   if (autoClose) {
@@ -1166,14 +1147,14 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
-  var designToggleRow = document.getElementById('designToggleRow');
+  var playSpaceHeader = document.getElementById('playSpaceHeader');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
-  if (designToggleRow) {
-    top += $(designToggleRow).outerHeight(true);
+  if (playSpaceHeader) {
+    top += $(playSpaceHeader).outerHeight(true);
   }
 
   if (visualization) {
@@ -1454,6 +1435,7 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
 * {string} level The ID of the current level.
 * {number} result An indicator of the success of the code.
 * {number} testResult More specific data on success or failure of code.
+* {boolean} submitted Whether the (submittable) level is being submitted.
 * {string} program The user program, which will get URL-encoded.
 * {function} onComplete Function to be called upon completion.
 */
@@ -1646,7 +1628,6 @@ StudioApp.prototype.runButtonClickWrapper = function (callback) {
  */
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
-  container.innerHTML = config.html;
   if (!this.enableShowCode) {
     document.getElementById('show-code-header').style.display = 'none';
   }
@@ -1752,7 +1733,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
         var div = document.createElement('div');
         document.body.appendChild(div);
-        React.render(React.createElement(WireframeSendToPhone, {
+        ReactDOM.render(React.createElement(WireframeSendToPhone, {
           channelId: dashboard.project.getCurrentId(),
           appType: dashboard.project.getStandaloneApp()
         }), div);
@@ -1795,10 +1776,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   // Ensure global ace variable is the same as window.ace
   // (important because they can be different in our test environment)
-
-  /* jshint ignore:start */
   ace = window.ace;
-  /* jshint ignore:end */
 
   var fullDropletPalette = dropletUtils.generateDropletPalette(
     config.level.codeFunctions, config.dropletConfig);
@@ -1819,7 +1797,39 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // Init and define our custom ace mode:
   aceMode.defineForAce(config.dropletConfig, config.unusedConfig, this.editor);
   // Now set the editor to that mode:
-  this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
+  var aceEditor = this.editor.aceEditor;
+  aceEditor.session.setMode('ace/mode/javascript_codeorg');
+
+  // Extend the command list on the ace Autocomplete object to include the period:
+  var Autocomplete = window.ace.require("ace/autocomplete").Autocomplete;
+  Autocomplete.prototype.commands['.'] = function(editor) {
+    // First, insert the period and update the completions:
+    editor.insert(".");
+    editor.completer.updateCompletions(true);
+    var filtered = editor.completer.completions &&
+        editor.completer.completions.filtered;
+    for (var i = 0; i < (filtered && filtered.length); i++) {
+      // If we have any exact maches in our filtered completions that include
+      // this period, allow the completer to stay active:
+      if (filtered[i].exactMatch) {
+        return;
+      }
+    }
+    // Otherwise, detach the completer:
+    editor.completer.detach();
+  };
+
+  var langTools = window.ace.require("ace/ext/language_tools");
+
+  // We don't want to include the textCompleter. langTools doesn't give us a way
+  // to remove base completers (note: it does in newer versions of ace), so
+  // we set aceEditor.completers manually
+  aceEditor.completers = [langTools.snippetCompleter, langTools.keyWordCompleter];
+  // make setCompleters fail so that attempts to use it result in clear failure
+  // instead of just silently not working
+  langTools.setCompleters = function () {
+    throw new Error('setCompleters disabled. set aceEditor.completers directly');
+  };
 
   // Add an ace completer for the API functions exposed for this level
   if (config.dropletConfig) {
@@ -1827,8 +1837,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     if (config.level.autocompletePaletteApisOnly) {
        functionsFilter = config.level.codeFunctions;
     }
-    var langTools = window.ace.require("ace/ext/language_tools");
-    langTools.addCompleter(
+
+    aceEditor.completers.push(
       dropletUtils.generateAceApiCompleter(functionsFilter, config.dropletConfig));
   }
 
@@ -2307,7 +2317,7 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
     text.setAttribute('y', CANVAS_HEIGHT);
     text.setAttribute('font-weight', 'bold');
     rect = rectFromElementBoundingBox(text);
-    rect.setAttribute('fill', 'white');
+    rect.setAttribute('fill', color.white);
     svg.insertBefore(rect, text);
 
     // create y axis labels
@@ -2320,7 +2330,7 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
     text.setAttribute('dominant-baseline', 'central');
     text.setAttribute('font-weight', 'bold');
     rect = rectFromElementBoundingBox(text);
-    rect.setAttribute('fill', 'white');
+    rect.setAttribute('fill', color.white);
     svg.insertBefore(rect, text);
   }
 };
@@ -2336,31 +2346,72 @@ function rectFromElementBoundingBox(element) {
 }
 
 /**
- * Displays a small alert box inside DOM element at parentSelector.
- * @param {string} parentSelector
- * @param {object} props A set of React properties passed to the AbuseError
- *   component
+ * Displays a small alert box inside the workspace
+ * @param {string} type - Alert type (error or warning)
+ * @param {React.Component} alertContents
  */
-StudioApp.prototype.displayAlert = function (parentSelector, props) {
-  // Each parent is assumed to have at most a single alert. This assumption
-  // could be changed, but we would then want to clean up our DOM element on
-  // close
-  var parent = $(parentSelector);
-  var container = parent.children('.react-alert');
-  if (container.length === 0) {
-    container = $("<div class='react-alert'/>");
-    parent.append(container);
+StudioApp.prototype.displayWorkspaceAlert = function (type, alertContents) {
+  var container = this.displayAlert("#codeWorkspace", { type: type }, alertContents);
+
+  var toolbarWidth;
+  if (this.usingBlockly_) {
+    toolbarWidth = $(".blocklyToolboxDiv").width();
+  } else{
+    toolbarWidth = $(".droplet-palette-element").width() + $(".droplet-gutter").width();
   }
 
-  var reactProps = $.extend({}, {
-    className: 'alert-error',
-    onClose: function () {
-      React.unmountComponentAtNode(container[0]);
-    }
-  }, props);
+  $(container).css({
+    left: toolbarWidth,
+    top: $("#headers").height()
+  });
+};
 
-  var element = React.createElement(Alert, reactProps);
-  React.render(element, container[0]);
+/**
+ * Displays a small aert box inside the playspace
+ * @param {string} type - Alert type (error or warning)
+ * @param {React.Component} alertContents
+ */
+StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
+  StudioApp.prototype.displayAlert("#visualization", {
+    type: type,
+    sideMargin: 20
+  }, alertContents);
+};
+
+/**
+ * Displays a small alert box inside DOM element at parentSelector. Parent is
+ * assumed to have at most a single alert (we'll either create a new one or
+ * replace the existing one).
+ * @param {object} props
+ * @param {string} object.type - Alert type (error or warning)
+ * @param {number} [object.sideMaring] - Optional param specifying margin on
+ *   either side of element
+ * @param {React.Component} alertContents
+ */
+StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
+  var parent = $(selector);
+  var container = parent.children('.react-alert');
+  if (container.length === 0) {
+    container = $("<div class='react-alert'/>").css({
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      top: 0,
+      zIndex: 1000
+    });
+    parent.append(container);
+  }
+  var renderElement = container[0];
+
+  var handleAlertClose = function () {
+    ReactDOM.unmountComponentAtNode(renderElement);
+  };
+  ReactDOM.render(
+    <Alert onClose={handleAlertClose} type={props.type} sideMargin={props.sideMargin}>
+      {alertContents}
+    </Alert>, renderElement);
+
+  return renderElement;
 };
 
 /**
@@ -2370,19 +2421,11 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
  */
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
   if (window.dashboard && dashboard.project.exceedsAbuseThreshold()) {
-    this.displayAlert(parentSelector, {
-      body: React.createElement(dashboard.AbuseError, {
-        i18n: {
-          tos: window.dashboard.i18n.t('project.abuse.tos'),
-          contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
-        }
-      }),
-      style: {
-        top: 45,
-        left: 350,
-        right: 50
-      }
-    });
+    var i18n = {
+      tos: window.dashboard.i18n.t('project.abuse.tos'),
+      contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
+    };
+    this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
   }
 };
 
@@ -2392,6 +2435,9 @@ StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
  * @returns {boolean} True if we detect an instance of this.
  */
 StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
+  if (this.editCode) {
+    return false;
+  }
   return Blockly.mainBlockSpace.getAllUsedBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
 };
 

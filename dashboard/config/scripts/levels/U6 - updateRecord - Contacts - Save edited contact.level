@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Event handler for saveContactBtn.\r\n\r\nCall updateRecord",
+    "markdown_instructions": "# Saving an Updated Contact in the Database\r\n\r\nThe last step for your Contacts App is to save the updated information from the user in the database. You can accomplish this by using `updateRecord`.\r\n\r\n# Do This:\r\n\r\n* **Add an event handler for the “Update Contact” button.** In the event handler:\r\n\t* Create a new object called `objToUpdate` and set it to a copy of the current contact.\r\n\t* Call `updateRecord`, and make sure to set the first and second parameters.\r\n\t* In the callback function for `updateRecord`, call `refreshLocalData` to update your local copy of the database.\r\n* **Run your program** and verify that when you edit the information for a contact, the changes are reflected when you return to the \"View Contacts\" screen.\r\n\r\n<details><summary><strong>Your code should look similar to this.</strong> (click to expand)</summary>![](https://images.code.org/8f1c01a434934ee3bfdc4941f657b4dc-image-1455924274767.png)</details><br>\r\n\r\n**Congratulations!** You now have a fully-functioning Contacts App!\r\n\r\nYou can use this same pattern of **create, read, update, and delete** commands (a.k.a. “**CRUD** commands”) to store permanent data in many different types of apps.\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -38,9 +38,11 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "instructions": "(Click to see full instructions)"
+    "instructions": "Use updateRecord to store the user's edits in the database. (Click to see full instructions)",
+    "encrypted_examples": "RMwL1AABGXVmmw/vxXgR/+zgUosXeYw0VcO6Z6Xj0KuvwNDKC54ipReSE7L+\nN9gR\n"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

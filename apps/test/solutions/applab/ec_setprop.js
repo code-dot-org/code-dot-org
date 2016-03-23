@@ -504,6 +504,28 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
+    },
+
+    {
+      description: "setProperty autocomplete",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#show-code-header").click();
+        assert.equal($(".ace_autocomplete").is(":visible"), false,
+          'no autocomplete to start');
+
+        testUtils.typeAceText('setProperty(');
+        assert.equal($(".ace_autocomplete").is(":visible"), true,
+          'we have autocomplete options after typing');
+        assert.equal($(".ace_autocomplete .ace_content").text(), '"screen1"');
+
+        testUtils.typeAceText('"screen1",');
+        assert.equal($(".ace_autocomplete .ace_content").text(), '"background-color""image"',
+          'autocompletes filtered list of properties');
+
+      }
+
     }
   ]
 };

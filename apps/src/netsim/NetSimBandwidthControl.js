@@ -1,12 +1,6 @@
 /**
  * @overview UI Slider control used for changing simulated router bandwidth.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 // Utils required only for Function.prototype.inherits()

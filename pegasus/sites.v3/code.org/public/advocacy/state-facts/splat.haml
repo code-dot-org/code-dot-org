@@ -69,7 +69,7 @@ theme: pdf
             computer science graduate
           - else
             computer science graduates
-        in 2013;
+        in 2014;
         - if state_info[:percent_female_cs_grad_i] == 0
           %b none
         - else
@@ -125,7 +125,7 @@ theme: pdf
           = surround "(", "% of" do
             = state_info[:percent_schools_ap_cs_i]
           = state_info[:state_code_s]
-          schools with AP programs) offered the AP Computer Science course in 2013-2014.
+          schools with AP programs) offered the AP Computer Science course in 2014-2015.
         - else
           No schools in
           = state_info[:state_code_s]
@@ -243,7 +243,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            have rigorous computer science standards. Computer science has often been confused with broader technology education in schools. States should adopt discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. The Computer Science Teachers Association has model K-12 CS standards.
+            have rigorous computer science standards publicly available across K-12. Computer science has often been confused with broader technology education in schools. States could strengthen their computer science programs by publicly adopting discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. The Computer Science Teachers Association has model K-12 CS standards.
         - elsif state_info[:cs_standards_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -261,7 +261,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            provide funding for rigorous computer science professional development and course support. States should provide professional development resources by creating matching fund opportunities to bring computer science to school districts.
+            provide dedicated funding for rigorous computer science professional development and course support. Although funds may be available via broader programs, the state can strengthen its computer science programs by creating specific opportunities to bring computer science to school districts, such as matching fund programs.
         - elsif state_info[:pd_funding_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -333,7 +333,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            require that all secondary schools offer computer science. States should adopt policies that require schools to offer a computer science course based on rigorous standards, with appropriate implementation timelines and allowing for remote and/or in-person courses.
+            require that all secondary schools offer computer science. The state can support the expansion of computer science courses by adopting policies that require schools to offer a computer science course based on rigorous standards, with appropriate implementation timelines and allowing for remote and/or in-person courses.
         - elsif state_info[:require_hs_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -378,7 +378,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            allow computer science to count as a mathematics or science admission requirement at institutions of higher education.  Admission policies that do not include rigorous computer science courses as meeting the mathematics or science entrance requirements discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
+            allow computer science to count as a mathematics or science admission requirement at institutions of higher education. Admission policies that do not include rigorous computer science courses as meeting the mathematics or science entrance requirements discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
         - elsif state_info[:higher_ed_entrance_s] == 'Other'
           %div
             %i.fa.fa-square-o

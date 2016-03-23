@@ -38,7 +38,7 @@ class DashboardStudent
   end
 
   def self.fetch_if_allowed(id_or_ids, dashboard_user_id)
-    if id_or_ids.kind_of?(Array)
+    if id_or_ids.is_a?(Array)
       # TODO this should actually send a where id in (,,,) type query
       return id_or_ids.map {|id| fetch_if_allowed(id, dashboard_user_id)}
     end
@@ -352,11 +352,13 @@ class DashboardSection
       distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(deleted_at: nil).
-      map{|row| row.merge({
-        location: "/v2/users/#{row[:id]}",
-        age: DashboardStudent::birthday_to_age(row[:birthday]),
-        completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
-      })}
+      map do |row|
+        row.merge({
+          location: "/v2/users/#{row[:id]}",
+          age: DashboardStudent::birthday_to_age(row[:birthday]),
+          completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
+        })
+      end
   end
 
   def teacher?(user_id)

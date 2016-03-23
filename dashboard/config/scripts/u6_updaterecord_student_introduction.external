@@ -2,24 +2,21 @@ name 'U6 - updateRecord - Student Introduction'
 title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
+css 'unplugged'
 markdown <<MARKDOWN
-## Unit 4: Lesson 04 - Updating Records
+## Unit 4: Lesson 05 - Updating Records
 
 # Background
 
-words
+In this lesson you will learn to use the `updateRecord` command to programmatically update records in a database. With this command, you can build apps that allow users to edit records stored in a database.
 
 # Vocabulary
-* **words:**
+* `updateRecord` - the App Lab command for updating database in a database. You specify the name of the table, and the new version of the record you'd like to update.
 
 # Lesson
 
-* words.
-
-
-# Resources
-
-* Video: <a href="https://google.com" target="_blank"> Tutorial - JavaScript Objects</a>
+* Update records in a database by using an ID and `updateRecord`.
+* Improve the Contacts App by adding the ability to update contacts.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

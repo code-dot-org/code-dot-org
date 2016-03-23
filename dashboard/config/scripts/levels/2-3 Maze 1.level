@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,4,0,0,0,0,0],[0,0,2,1,3,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Can you help me to catch the naughty pig? Stack a couple of \"move forward\" blocks together and press \"Run\". ",
+    "instructions": "Can you help me catch the naughty pig? Stack a couple of `move forward` blocks below the `when run` block and press \"Run\". ",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -26,8 +26,11 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.\",\r\n  \"hint_id\": \"2-3_Maze_1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "Can you help me catch the naughty pig? \r\n\r\nStack a couple of `move forward` blocks below the `when run` block and press \"Run\". "
+  },
+  "published": true
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -46,5 +49,18 @@
         <block type="maze_moveForward"/>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_moveForward"/>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

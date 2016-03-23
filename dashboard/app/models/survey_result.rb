@@ -21,7 +21,7 @@ class SurveyResult < ActiveRecord::Base
   ETHNICITIES["asian"] = "Asian"
   ETHNICITIES["black"] = "Black or African American"
   ETHNICITIES["hispanic"] = "Hispanic or Latino"
-  ETHNICITIES["native"] = "Native Hawaiian or Other Pacific Islander "
+  ETHNICITIES["native"] = "Native Hawaiian or Other Pacific Islander"
   ETHNICITIES["white"] = "White"
   ETHNICITIES["other"] = "Other"
   ETHNICITIES.freeze

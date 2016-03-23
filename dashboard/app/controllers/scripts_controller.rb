@@ -70,8 +70,6 @@ class ScriptsController < ApplicationController
     end
   end
 
-  private
-
   def rake
     @errors = []
     begin

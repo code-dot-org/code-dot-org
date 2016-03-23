@@ -1,7 +1,6 @@
-/* global Dialog, dashboard, Applab */
-// TODO (josh) - don't pass `Dialog` into `createModalDialog`.
+/* global dashboard */
 
-var AssetManager = require('./AssetManager.jsx');
+var ImagePicker = require('./ImagePicker.jsx');
 var studioApp = require('../StudioApp').singleton;
 
 /**
@@ -19,7 +18,7 @@ module.exports = function(assetChosen, typeFilter) {
     defaultBtnSelector: 'again-button',
     id: 'manageAssetsModal'
   });
-  React.render(React.createElement(AssetManager, {
+  ReactDOM.render(React.createElement(ImagePicker, {
     typeFilter: typeFilter,
     channelId: dashboard.project.getCurrentId(),
     uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),

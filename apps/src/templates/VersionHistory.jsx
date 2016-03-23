@@ -5,7 +5,7 @@ var sourcesApi = require('../clientApi').sources;
 /**
  * A component for viewing project version history.
  */
-module.exports = React.createClass({
+var VersionHistory = React.createClass({
   propTypes: {
     handleClearPuzzle: React.PropTypes.func.isRequired
   },
@@ -101,6 +101,7 @@ module.exports = React.createClass({
     } else {
       var rows = this.state.versions.map(function (version) {
         return <VersionRow
+          key={version.versionId}
           lastModified={new Date(version.lastModified)}
           isLatest={version.isLatest}
           onChoose={this.onChooseVersion.bind(this, version.versionId)} />;
@@ -138,3 +139,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = VersionHistory;

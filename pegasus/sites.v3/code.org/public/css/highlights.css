@@ -1,0 +1,83 @@
+.highlights-content {
+  width: 100%;
+}
+
+.highlight-item {
+  width: 300px;
+  height: 330px;
+  overflow: hidden;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: left;
+  position: relative;
+}
+
+.highlight-img {
+  border-radius: 5px 5px 0px 0px;
+  background-size: cover;
+  background-position: 50%;
+  width: 300px;
+  height: 300px;
+  background-color: #f0f0f0;
+  border-top: solid 1px #c6cacd;
+  border-left: solid 1px #c6cacd;
+  border-right: solid 1px #c6cacd;
+}
+
+.highlight-caption {
+  border-radius: 5px 5px 0px 0px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  line-height: 20px;
+  top: 0px;
+  left: 0px;
+  height: 300px;
+  width: 300px;
+  display: none;
+}
+
+.learnmore-link {
+  color: white;
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+.caption-headline {
+  color: white;
+  padding: 10px 15px 0px 15px;
+  text-transform: uppercase;
+}
+
+.highlight-description {
+  padding: 5px 15px;
+}
+
+.learn-button {
+  width: 100%;
+  background-color: #7665a0;
+  height: 30px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 3px;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: white;
+}
+
+@media only screen and (max-width: 960px) {
+  .highlight-caption {
+    display: inline;
+    width: 300px;
+    background-color: transparent;
+  }
+
+  .caption-headline {
+    display: none;
+  }
+
+  .highlight-description {
+    display: none;
+  }
+}
