@@ -179,7 +179,7 @@
     title: 'Redeem Prizes: %{name}'
     provider: "প্রদানকারী:"
     code: "কোড:"
-    redeem_header: 'To redeem:'
+    redeem_header: "মুক্ত করতেঃ"
     donorschoose_register: "শিক্ষক হিসেবে DonorsChoose.org-এ নিবন্ধন করুন"
     donorschoose_project: "একটি প্রকল্প পোস্ট করুন"
     donorschoose_how_to: "কিভাবে আপনার কোড ব্যবহার করতে হবে"
@@ -426,7 +426,7 @@
     secure: "নিরাপদ সংস্করণ"
     report_abuse: Report Abuse
     built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
+    make_my_own_app: "আমার নিজের অ্যাপ তৈরি করুন"
     how_it_works: "এটি কিভাবে কাজ করে"
     try_hour_of_code: Try an Hour of Code!
   reference_area:
@@ -462,10 +462,10 @@
   slow_loading: This is taking longer than usual...
   try_reloading: Try reloading the page
   next_stage: Finished! Continue to next stage
-  download_pdf: Open Lesson Plan
+  download_pdf: "উন্মুক্ত পাঠ পরিকল্পনা"
   lesson_plan: "পাঠ পরিকল্পনা"
   view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  pdf_download: PDF ডাউনলোড করুন
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
   not_started: The student has not attempted this level.
@@ -503,7 +503,7 @@
       body_short: Design an app, code with blocks or JavaScript to make it work, then
         share your app in seconds.
       audience: "বয়সের ১৩+"
-      cta: Learn how
+      cta: "শিখুন কিভাবে"
     hoc:
       title: "এক ঘন্টার কোড"
       body: Try the basics of computer science. Millions have given it a shot.
@@ -532,7 +532,7 @@
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
-      title: Minecraft
+      title: "মাইনক্র্যাফট"
       body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Students drew these with code!
@@ -575,6 +575,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "আপনাকে ধন্যবাদ"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "আপনাকে ধন্যবাদ"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "আপনাকে ধন্যবাদ"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "আপনাকে ধন্যবাদ"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Incorrect solution
     wrong_body: The solution you've entered is not correct.  Please try again!
@@ -594,9 +604,6 @@
     placeholder: Enter your answer here
     open_response_title: "ধন্যবাদ"
     open_response_body: Thanks for your response!
-  level_group:
-    correct_title: "আপনাকে ধন্যবাদ"
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: "ঠিক আছে"
     startover_title: "তুমি কি সব আবার আগের থেকে শুরু করতে চাও?"
@@ -654,13 +661,13 @@
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: "শুরু হয়নি"
+    in_progress: "অগ্রসর হচ্ছে"
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
     assessment: "মূল্যায়ন"
-    submitted: submitted
+    submitted: "দাখিল"
   studio:
     courses_working_on: Courses you're working on
     completed_courses: Completed courses

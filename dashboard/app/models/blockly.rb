@@ -24,6 +24,8 @@
 
 require 'nokogiri'
 class Blockly < Level
+  include SolutionBlocks
+
   serialized_attrs %w(
     level_url
     skin

@@ -156,7 +156,7 @@ nl:
           description_short: Ga met Anna en Elsa mee op hun speurtocht naar de magie en schoonheid van ijs door middel van programma-code.
         course4:
           description_short: Leerlingen die les 4 starten moeten eerst lessen 2 en 3 doorlopen hebben.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: "Cursus 4 is bedoeld voor leerlingen die Cursus 2 en 3 hebben afgerond. Door verschillende concepten te combineren bij het oplossen van de problemen leren de leerlingen om te gaan met moeilijkere opdrachten. Tegen de tijd dat deze Cursus is afgerond kunnen leerlingen programma's schrijven die verschillende vaardigheden vragen, waaronder for loops en functies met parameters. Geschikt voor groep 6 t/m klas 2."
           "Artist: Variables": 'Artiest: variabelen'
           "Bee: For Loops": 'Bij : For-lussen'
           title: Les 4
@@ -1462,7 +1462,7 @@ nl:
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
-          description_short: Programming
+          description_short: Programmeren
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           While Loop Basics: While Loop Basics
           While Loops_ Counting Flips: While Loops_ Counting Flips
@@ -1641,3 +1641,8 @@ nl:
           "Eval: Conditionals": 'Eval: Conditionals'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Botsingdetectie en de afstand formule'
           "Play Lab: Collision Detection (Big Game)": 'Speel Lab: Botsingdetectie (Groot Spel)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

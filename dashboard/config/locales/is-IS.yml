@@ -379,7 +379,7 @@
     heading_elementary: "<h2>20 stunda námskeið í</h2><h1>Undirstöðuatriðum tölvunarfræði
       (fyrir alla aldurshópa)</h1>"
     heading_apps: "<h2>Skemmtun fyrir</h2><h1>alla</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+    heading_tools: "<h2>Viltu fara í næsta áfanga?</h2><h1>JavaScript Tools for High
       School</h1>"
     heading_legacy: "<h2>Hraðnámskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>"
     your_gallery: Safn
@@ -508,13 +508,13 @@
   upsell:
     applab:
       title: Appsmiðja
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: App Lab smiðjan er forritunarumhverfi þar sem þú getur búið til einföld
+        öpp. Hannaðu app og forritaðu það með kubbum eða JavaScript svo það virki.
+        Deildu því svo með öðrum.
+      body_short: Hannaðu app og forritaðu það með kubbum eða JavaScript svo það virki.
+        Deildu því svo með öðrum.
+      audience: Aldur 13+
+      cta: Læra hvernig
     hoc:
       title: Hefðbundið völundarhús
       body: Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.
@@ -571,7 +571,7 @@
     report_bug: Tilkynna galla
     support: Fá hjálp
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: Hjálp og tilföng
   multi:
     wrong_title: Rangt svar
     wrong_body: Svarið sem þú gafst er ekki rétt. Vinsamlegast reyndu aftur!
@@ -581,11 +581,21 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Takk fyrir
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Takk fyrir að senda inn svar.
     correct_title: Takk fyrir
-    correct_body: Thank you for submitting an answer.
+    correct_body: Takk fyrir að senda inn svar.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Takk fyrir
+    wrong_body: Takk fyrir að senda inn svar
+    correct_title: Takk fyrir
+    correct_body: Takk fyrir að senda inn svar
+  level_group-submittable:
+    wrong_title: Takk fyrir
+    wrong_body: Takk fyrir að senda inn svar
+    correct_title: Takk fyrir
+    correct_body: Takk fyrir að senda inn svar
   match:
     wrong_title: "Ófullnægjandi lausn"
     wrong_body: Lausnin sem þú gafst er ekki fullnægjandi. Vinsamlegast reyndu aftur!
@@ -605,9 +615,6 @@
     placeholder: Skráðu svar þitt hér
     open_response_title: "Þakkir"
     open_response_body: "Þökkum viðbrögð þín!"
-  level_group:
-    correct_title: Takk fyrir
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: "Í lagi"
     startover_title: Ertu viss um að þú viljir byrja aftur?
@@ -671,7 +678,7 @@
     completed_perfect: lokið, fullkomið
     furthest_level_attempted: hæsti unninn áfangi
     assessment: mat
-    submitted: submitted
+    submitted: sent inn
   studio:
     courses_working_on: Námskeið sem þú ert að fást við
     completed_courses: Námskeið sem þú hefur lokið

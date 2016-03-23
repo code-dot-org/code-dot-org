@@ -1641,3 +1641,8 @@ gl:
           "Eval: Conditionals": 'Eval: condicionais'
           "Unplugged: Collision Detection and the Distance Formula": 'Desconectado: Detección de colisións e a fórmula de distancia'
           "Play Lab: Collision Detection (Big Game)": 'Laboratorio de xogos: Detección de colisións (Big Game)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

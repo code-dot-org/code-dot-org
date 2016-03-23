@@ -565,6 +565,16 @@
     correct_body: "شكرا لك على تقديم إجابة."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "شكراً"
+    wrong_body: "شكرا لك على تقديم إجابة"
+    correct_title: "شكراً"
+    correct_body: "شكرا لك على تقديم إجابة"
+  level_group-submittable:
+    wrong_title: "شكراً"
+    wrong_body: "شكرا لك على تقديم إجابة"
+    correct_title: "شكراً"
+    correct_body: "شكرا لك على تقديم إجابة"
   match:
     wrong_title: "الحل غير صحيح"
     wrong_body: "الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!"
@@ -583,9 +593,6 @@
     placeholder: "ادخل إجابتك هنا "
     open_response_title: "شكرا،"
     open_response_body: "شكرا لردكم!"
-  level_group:
-    correct_title: "شكراً"
-    correct_body: "شكرا لك على تقديم إجابة"
   dialog:
     ok: "موافق"
     startover_title: "هل أنت متأكد من أنك تريد البدء من جديد؟"

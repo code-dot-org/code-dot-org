@@ -161,7 +161,7 @@ ga:
           "Bee: For Loops": 'Bee: For Loops'
           title: Course 4
           "Algorithms: Tangrams": 'Algorithms: Tangrams'
-          Variables: Variables
+          Variables: Athróga
           "Play Lab: Variables": 'Play Lab: Variables'
           "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
@@ -207,7 +207,7 @@ ga:
           title: Usability Testing
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
-          Variables: Variables
+          Variables: Athróga
           For Loops: For Loops
           Binary: Binary
         potus:
@@ -648,7 +648,7 @@ ga:
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: Variables
+          Variables: Athróga
           Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
           Multi-screen App: Multi-screen App
           Variables Conceptorial Fodder: Variables Conceptorial Fodder
@@ -1641,3 +1641,8 @@ ga:
           "Eval: Conditionals": 'Eval: Conditionals'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

@@ -701,9 +701,6 @@
       4-5 Maze Assessment 1_instruction: 'Evaluare: Du-te la floarea-soarelui.'
       4-5 Maze Conditionals 1_instruction: Utilizează blocul "repetă până când" pentru
         a-l duce pe zombie la floarea-soarelui.
-      4-5 Maze Conditionals 10_instruction: Poți adăuga doar 3 blocuri pentru a mă
-        ajuta să rezolv un labirint mai complex? Dacă o faci corect, eu pot străbate
-        orice cale curbată indiferent de lungime/durată.
       4-5 Maze Conditionals 2_instruction: Utilizează blocul "repetă până când" pentru
         a-l duce pe zombie la floarea-soarelui.
       4-5 Maze Conditionals 3_instruction: 'Folosește blocul "dacă" pentru a mă lăsa
@@ -1989,6 +1986,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2592,6 +2593,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

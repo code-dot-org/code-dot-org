@@ -560,6 +560,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Paldies
+    wrong_body: Thank you for submitting answers.
+    correct_title: Paldies
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Paldies
+    wrong_body: Thank you for submitting answers.
+    correct_title: Paldies
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Nepareizs risinājums
     wrong_body: Ievadītais risinājums nav pareizs. Lūdzu mēģini vēl!
@@ -579,9 +589,6 @@
     placeholder: Ievadi savu atbildi šeit
     open_response_title: Thanks
     open_response_body: Thanks for your response!
-  level_group:
-    correct_title: Paldies
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: Labi
     startover_title: Vai esat pārliecināts, ka vēlaties sākt no jauna?

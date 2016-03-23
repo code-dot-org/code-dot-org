@@ -478,6 +478,16 @@ hu:
     correct_body: Köszönjük hogy elküldtél egy választ.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Köszönöm
+    wrong_body: Thank you for submitting answers.
+    correct_title: Köszönöm
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Köszönöm
+    wrong_body: Thank you for submitting answers.
+    correct_title: Köszönöm
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Helytelen megoldás
     wrong_body: 'A megadott megoldás nem megfelelő.  Próbáld újra.'
@@ -495,9 +505,6 @@ hu:
     placeholder: Itt add meg a válaszod
     open_response_title: Köszönjük
     open_response_body: Köszönjük a választ!
-  level_group:
-    correct_title: Köszönöm
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Biztosan újra szeretnéd kezdeni?
