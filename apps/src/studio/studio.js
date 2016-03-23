@@ -1906,7 +1906,6 @@ Studio.init = function(config) {
 
   config.afterClearPuzzle = function() {
     studioApp.resetButtonClick();
-    annotationList.clearRuntimeAnnotations();
   };
 
   // Since we allow "show code" for some blockly levels with move blocks,
@@ -2896,15 +2895,10 @@ Studio.execute = function() {
   }
 
   studioApp.reset(false);
+  studioApp.clearAndAttachRuntimeAnnotations();
 
   if (level.editCode) {
     var codeWhenRun = studioApp.getCode();
-    if (!studioApp.hideSource) {
-      // Our ace worker also calls attachToSession, but it won't run on IE9:
-      var session = studioApp.editor.aceEditor.getSession();
-      annotationList.attachToSession(session, studioApp.editor);
-      annotationList.clearRuntimeAnnotations();
-    }
     Studio.JSInterpreter = new JSInterpreter({
       studioApp: studioApp
     });

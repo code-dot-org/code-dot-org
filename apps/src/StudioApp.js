@@ -25,6 +25,7 @@ var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
+var annotationList = require('./acemode/annotationList');
 var copyrightStrings;
 
 /**
@@ -636,6 +637,8 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     // Remove this line once that bug is fixed and our Droplet lib is updated.
     this.editor.getValue();
     this.editor.setValue(resetValue);
+
+    annotationList.clearRuntimeAnnotations();
   }
   if (config.afterClearPuzzle) {
     config.afterClearPuzzle();
@@ -1470,6 +1473,23 @@ StudioApp.prototype.report = function(options) {
     } else {
       onAttemptCallback();
     }
+  }
+};
+
+/**
+ * Set up the runtime annotation system as appropriate. Typically called
+ * during an app's execute() immediately after calling reset().
+ */
+StudioApp.prototype.clearAndAttachRuntimeAnnotations = function () {
+  if (this.editCode && !this.hideSource) {
+    // Our ace worker also calls attachToSession, but it won't run on IE9:
+    var session = this.editor.aceEditor.getSession();
+    annotationList.attachToSession(session, this.editor);
+    annotationList.clearRuntimeAnnotations();
+    this.editor.aceEditor.session.on("change", function () {
+      // clear any runtime annotations whenever a change is made
+      annotationList.clearRuntimeAnnotations();
+    });
   }
 };
 
