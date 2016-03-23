@@ -482,6 +482,16 @@ uk:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Дякую
+    wrong_body: Thank you for submitting answers.
+    correct_title: Дякую
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Дякую
+    wrong_body: Thank you for submitting answers.
+    correct_title: Дякую
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Неправильне рішення
     wrong_body: 'Подане рішення не є правильним.  Будь ласка, спробуйте ще раз!'
@@ -499,9 +509,6 @@ uk:
     placeholder: Введіть свою відповідь тут
     open_response_title: Дякуємо
     open_response_body: Дякуємо за вашу відповідь!
-  level_group:
-    correct_title: Дякую
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: Гаразд
     startover_title: Ви впевнені, що хочете почати все спочатку?

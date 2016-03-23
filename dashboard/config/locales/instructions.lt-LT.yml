@@ -156,9 +156,12 @@
         left turn of 30 degrees to the code from the last puzzle and loop it 24 times.
       2-3 Artist Loops New 12_instruction: |
         Draw a diamond with sides of 100 pixels.
-      2-3 Artist Loops New 13_instruction: |
-        Loop the code from the last puzzle to
-        create this fun pattern!
+      2-3 Artist Loops New 13_instruction: |-
+        We are going to start you with some code
+        (in grey) to make one diamond. \r
+        \r
+        Loop the grey code to create a fun
+        pattern!
       2-3 Artist Loops New 14_instruction: |
         Play around with the code for the diamond
         and see what other patterns you can make. Try changing how many degrees you
@@ -169,17 +172,15 @@
         but this time, we have to use loops to pass it.  Can you put a `repeat` around
         the starter code to finish the robot head?
       2-3 Artist Loops New 9_instruction: |
-        Draw a simple V where both sides are 50
-        pixels to complete the arrow.
+        Draw a simple V (where both sides are
+        50 pixels) to complete the arrow.
       2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
       2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
       2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
       2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
-      2-3 Artist Nested Loops 1_instruction: |-
-        You've used loops to draw shapes before,
-        but did you know you can put a loop inside another loop?\r
-        Loop this whole
-        block of code 3 times to draw the pattern.
+      2-3 Artist Nested Loops 1_instruction: |
+        Put a `repeat` block around this whole
+        stack of code to draw the pattern.
       2-3 Artist Nested Loops 10_instruction: |
         Loop this code 12 times to complete
         the pattern.
@@ -189,36 +190,54 @@
       2-3 Artist Nested Loops 12_instruction: |
         Loop this code 12 times to complete
         the curls.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
+      2-3 Artist Nested Loops 2_instruction: |-
+        Now loop the triangle 6 times. \r
+        \r
+        After
         each triangle, you'll need to turn 60 degrees before drawing the next.
-      2-3 Artist Nested Loops 3_instruction: |
+      2-3 Artist Nested Loops 3_instruction: |-
         You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
-      2-3 Artist Nested Loops 4_instruction: |
+        times to draw this pattern. \r
+        \r
+        Divide the number of degrees in a circle
+        (360) by the number of shapes you're drawing (12) to figure out how far to
+        turn after each shape.
+      2-3 Artist Nested Loops 4_instruction: |-
         Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
-      2-3 Artist Nested Loops 5_instruction: |
-        Fill in this building's windows with
-        a nested loop. The windows are 20 pixels long and 20 pixels apart.
-      2-3 Artist Nested Loops 6_instruction: |
+        a flower!\r
+        \r
+        Note: We'll use the same angle to loop 12 diamonds as we
+        did for 12 triangles.  \r
+        How much do you need to turn after each shape?
+      2-3 Artist Nested Loops 5_instruction: |-
+        Fill in this building's windows using
+        a nested loop. \r
+        \r
+        The windows are 20 pixels long and 20 pixels apart.
+      2-3 Artist Nested Loops 6_instruction: |-
         This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
-      2-3 Artist Nested Loops 7_instruction: |
+        up its tail.\r
+        Each spike is 30 pixels long. Loop the triangle 8 times, but
+        make sure to jump forward after each one!
+      2-3 Artist Nested Loops 7_instruction: |-
         Loop this triangle 10 times to draw
-        the sun. You'll need to move and turn after each triangle. You can figure
-        out how much to turn by dividing the number of degrees in a circle by the
-        number of shapes that make it up.
-      2-3 Artist Nested Loops 8_instruction: |
+        the sun. \r
+        \r
+        You'll need to move and turn after each triangle. \r
+        \r
+        You
+        can figure out how much to turn by dividing the number of degrees in a circle
+        by the number of triangles that make it up.
+      2-3 Artist Nested Loops 8_instruction: |-
         Now let's add some grass to our picture.
+        \r
+        \r
         Each tuft of grass is 50 pixels apart.
-      2-3 Artist Nested Loops 9_instruction: |
+      2-3 Artist Nested Loops 9_instruction: |-
         We'll finish this picture by adding
-        a flower. Loop the diamond 12 times to draw your flower.
+        our flower. \r
+        \r
+        Loop the diamond 12 times to draw the flower.
       2-3 Artist Nested Loops Free Play_instruction: Nupiešk ką nors įdomaus, naudodamas
         kartojimą kartojime.
       2-3 Bee Conditionals 1_instruction: Labas! Aš esu bitė. Padėk man surinkti nektarą
@@ -321,17 +340,23 @@
         make all of the honey.
       2-3 Bee Functions 1_instruction: Funkcijos yra kodo blokeliai kurie vykdo užduotį.
         Panaudok "paimk 2 nektarus" funkciją ir surink nektarą iš kiekvienos gėlės.
-      2-3 Bee Functions 10_instruction: |
-        Purple flowers may have either 1 or 0 nectar.  Create
-        a function that collects nectar only from purple flowers that have nectar.
-      2-3 Bee Functions 2_instruction: |
+      2-3 Bee Functions 10_instruction: |-
+        Purple flowers change between either 1 or
+        0 nectar each time you run the puzzle.   \r
+        \r
+        Create a function that collects
+        nectar only from purple flowers that have nectar.
+      2-3 Bee Functions 2_instruction: |-
         Functions are blocks of code that perform
-        a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
-        use a loop to get an ideal block count, too.
+        a task.  \r
+        \r
+        Use the `get 5` function to get 5 nectars at a time.
       2-3 Bee Functions 3_instruction: Surink visą nektarą iš kiekvienos gėlės.
-      2-3 Bee Functions 4_instruction: |
-        The "move and get nectar" function turns
-        the bee, collects nectar, and then returns the bee to where it started. Use
+      2-3 Bee Functions 4_instruction: |-
+        The `move and get nectar` function turns
+        the bee, collects nectar, and then returns the bee to where it started.  \r
+        \r
+        Use
         the function to collect all of the nectar.
       2-3 Bee Functions 5_instruction: |
         There is now more nectar at the flowers.
@@ -352,11 +377,11 @@
         path, gets nectar, makes honey, and then returns the bee to the top of the
         path.
       2-3 Bee Functions Assessment 1_instruction: |
-        Assessment: Use the function given
+        Assessment: Use the given function
         to collect nectar from each flower.
       2-3 Bee Functions Assessment 2_instruction: |
         Assessment: Create a function
-        to make 3 honey at a time.
+        to move forward and make 3 honey, then return the bee to where it started.
       2-3 Bee Loops 1_instruction: |-
         Those flowers look tasty!\r
         \r
@@ -409,18 +434,23 @@
         collect all of the nectar and make all of the honey?
       2-3 Bee Loops 7_instruction: |
         What a beautiful field of flowers!   Help the
-        bee visit each one using the smallest number of blocks possible.
-      2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
+        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
+      2-3 Bee Loops 8_instruction: |-
+        These purple flowers have different amount of
+        nectar each time you run the puzzle. \r
+        \r
+        Use the `while nectar` loop to
+        collect all of the nectar. \r
+        \r
+        This loop will run as long as the condition
+        is true, in this case `nectar > 0`.
       2-3 Bee Loops 9_instruction: |
         The while loop can perform the same action as
         an if statement in a loop. Add a while loop to this code to perform the same
         task.
       2-3 Bee Loops Assessment 1_instruction: |
-        Assessment - Use a while loop to collect
-        all of the nectar from this flower.
+        Assessment: Use a `while` loop to
+        collect all of the nectar from these flowers.
       2-3 Maze 1_instruction: "Can you help me catch the naughty pig? Stack a couple\nof
         `move forward` blocks below the `when run` block and press \"Run\". \n"
       2-3 Maze 10_instruction: Nuvesk mane pas tą žalią daiktą! (Saugokis TNT)
@@ -740,10 +770,14 @@
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: |
-        More clouds! Not all clouds cover flowers,
-        so check underneath every cloud to see if it is hiding a flower before you
-        get nectar. Remember: clouds don't always hide the same thing!
+      4-5 Bee Conditionals 2_instruction: |-
+        More clouds! \r
+        \r
+        Check underneath
+        every cloud to see if it is hiding a flower before you get nectar.  \r
+        \r
+        Remember:
+        Not all clouds hide the same thing!
       4-5 Bee Conditionals 3_instruction: |
         Now I just want to make honey. Some of
         these clouds might have honeycombs under them. Be sure to check each cloud!
@@ -755,44 +789,64 @@
         Sometimes this cloud covers a flower,
         and sometimes it covers a honeycomb! Use the if/else block to collect nectar
         if it is a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 5_instruction: |
-        There might be a flower or a honeycomb
-        under those clouds. Use the if/else block to collect nectar if there is a
-        flower, else to make honey (because there is a honeycomb).
+      4-5 Bee Conditionals 5_instruction: |-
+        There will be either a flower or a honeycomb
+        under each of those clouds!\r
+        \r
+        Use the `if/else` block to collect nectar
+        if there is a flower.\r
+        Otherwise, make honey (because there is a honeycomb).
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: |
-        I am not sure how much nectar the purple
-        flower has, but I know it has either 1, 2, or 3 nectar. Here an if-else block
-        is combined with another if-else block to create an if, else-if, else block.
-        Complete the solution to collect the unknown amount of nectar.
-      4-5 Bee Conditionals 7_instruction: |
-        Remember that purple flowers can have
-        3, 2, or 1 nectar. Complete the "check purple flower" function and use it
-        to collect all of the nectar at the flowers.
-      4-5 Bee Conditionals 8_instruction: |
-        Write inside the function "check flower
-        make honey". Your function should check if the purple flower has 3, 2, or
-        1 nectar and get all of the nectar. Then, move forward and make honey.
+      4-5 Bee Conditionals 6_instruction: |-
+        I am not sure how much nectar this flower
+        has, but I know it has either 1, 2, or 3 nectar. \r
+        \r
+        Combine the conditional
+        blocks (`if` and/or `if/else`) to only get as much nectar as the flower has.
+        \r
+        \r
+        Remember, the amount of nectar can change each time you run the puzzle!
+      4-5 Bee Conditionals 7_instruction: |-
+        These flowers can have 3, 2, or 1 nectar.
+        \r
+        \r
+        Complete the `check purple flower` function and use it to collect
+        all of the nectar at the flowers.
+      4-5 Bee Conditionals 8_instruction: |-
+        Write the function for `check flower make
+        honey`. \r
+        \r
+        Your function should check if the purple flower has 3, 2,
+        or 1 nectar and get all of the nectar. \r
+        Then, move forward and make honey.
       4-5 Bee Conditionals Assessment 1_instruction: |
-        Assessment: This code is wrong.
-        Complete the "get nectar or make honey" function, then call it to collect
-        all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
-      4-5 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Can you
-        fix them?
+        **Assessment:** This cloud
+        is either hiding a flower with one nectar or a honeycomb that needs one honey.  \r
+        \r
+        Complete
+        the `get nectar or make honey` function, then call it to collect the nectar
+        or honey. \r
+      4-5 Bee Debugging 1_instruction: |-
+        These blocks are really bugging me. \r
+        \r
+        Can
+        you fix them?
       4-5 Bee Debugging 10_instruction: Find the errors and fix them.
       4-5 Bee Debugging 11_instruction: Does this count correctly?
       4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
       4-5 Bee Debugging 3_instruction: Find the errors and fix them.
       4-5 Bee Debugging 4_instruction: These blocks don't work. What's the pattern?
       4-5 Bee Debugging 5_instruction: Something isn't right here...
-      4-5 Bee Debugging 6_instruction: |
-        The purple flower has an unknown amount of
-        nectar. Fix the blocks to get all of the nectar from the flower.
+      4-5 Bee Debugging 6_instruction: |-
+        The purple flower has a differet amount of
+        nectar each time you run the puzzle. \r
+        \r
+        Fix the blocks to get all of
+        the nectar from the flower each time.
       4-5 Bee Debugging 7_instruction: The function is missing something...
       4-5 Bee Debugging 8_instruction: |
         This function is fine, but it isn't used
@@ -806,7 +860,7 @@
         Collect all of the nectar by putting the
         starter code into a nested loop.
       4-5 Bee Nested Loops 4_instruction: "Collect all of the nectar from each flower\nand
-        make honey at each honeycomb. Use a nested loop. \n"
+        make honey at the honeycomb. \\r\n\\r\nUse a nested loop. "
       4-5 Bee Nested Loops 5_instruction: |
         Collect all of the nectar by creating
         a nested loop.
@@ -854,37 +908,47 @@
         Can you solve this puzzle using the fewest
         number of blocks possible?
       4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 7_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 8_instruction: |
-        Use the "repeat" block to get the zombie to the
-        sunflower. (Avoid the chompers!)
-      4-5 Maze 9_instruction: Create a loop with the "repeat until" block.
+        Get me to the sunflower using the fewest number of
+        blocks possible!
+      4-5 Maze 7_instruction: |
+        Get the zombie to the sunflower quickly!  Can you
+        solve the puzzle in fewer than 11 blocks?
+      4-5 Maze 8_instruction: |-
+        Get the zombie to the sunflower using as few blocks
+        as you can.  \r
+        (Avoid the chompers!)
+      4-5 Maze 9_instruction: |-
+        Now we have a new block called `repeat until`.  \r
+        This
+        will let us keep looping commands until the zombie gets the sunflower.  \r
+        \r
+        Use
+        the new `repeat until` block to solve this puzzle in as few commands as possible.
       4-5 Maze Assessment 1_instruction: 'Iššūkis: nueik pas saulėgrąžą.'
       4-5 Maze Conditionals 1_instruction: |
-        Use the repeat until block to get the
+        Use the `repeat until` block to get the
         zombie to the sunflower.
-      4-5 Maze Conditionals 10_instruction: Ar gali pridėti tik 3 blokelius, kad galėčiau
-        pereiti per šį labirintą? Jei užduotį išspręsi teisingai, aš galėsiu eiti
-        vingiuotu keliu, kad ir koks ilgas jis bebūtų.
       4-5 Maze Conditionals 2_instruction: |
-        Use the repeat until block to get the
+        Use the `repeat until` block to get the
         zombie to the sunflower.
       4-5 Maze Conditionals 3_instruction: |
-        Use the "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
+        Use the `if` block to help me decide
+        when to turn. \r
       4-5 Maze Conditionals 4_instruction: |
-        Ok, this is just like the last puzzle,
-        but you need to remember how you used the "if" block and the "repeat"
-        block together.
-      4-5 Maze Conditionals 5_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 6_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
+        Ok, solve this one just like the last
+        puzzle, but you need to remember how you used the `if` and `repeat until`
+        blocks together.
+      4-5 Maze Conditionals 5_instruction: |-
+        "Me want sunflower!"  \r
+        \r
+        Use an
+        `if` statement to get the zombie to the sunflower with the fewest number of
+        blocks.
+      4-5 Maze Conditionals 6_instruction: |-
+        "Eat sunflower!"\r
+        \r
+        Use an `if`
+        statement to get the zombie to the sunflower with the fewest number of blocks.
       4-5 Maze Conditionals 7_instruction: Pamėginkime dar kartą – užduotis labai
         panaši, bet šį kartą saugokis piktų gėlių!
       4-5 Maze Conditionals 8_instruction: Blokelis „jei-kitu atveju“ tikrina sąlygą,
@@ -893,8 +957,9 @@
       4-5 Maze Conditionals 9_instruction: Pamėgink dar kartą panaudoti blokelį „jei-kitu
         atveju“. Ar sugebėsi išspręsti užduotį iš pirmo karto?
       4-5 Maze Conditionals Assessment 1_instruction: |
-        Use a "repeat until" and
-        an "if-else" block to get me to the sunflower in as few blocks as possible.
+        **Assessment:** Use a `repeat
+        until` and an `if/else` block to get me to the sunflower in as few blocks
+        as possible.
       4-5 Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -909,38 +974,43 @@
         Can you draw these 36 triangles using a nested
         loop?
       4-5 Nested Loops 2_instruction: "Now nest this loop inside another loop to\ndraw
-        10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
-        a 360 degree rotation.  \n"
-      4-5 Nested Loops 3_instruction: |
+        10 triangles.  This is called a \"nested\" loop.  \n"
+      4-5 Nested Loops 3_instruction: |-
         Create a sun by nesting the starter code in
-        another loop. This is called a nested loop.\r
+        another loop.\r
+        \r
+        To get this cool design with a hollow center, you'll
+        need to jump forward by the length of the triangle before turning.
       4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
       4-5 Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the triangle
         code?
-      4-5 Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      4-5 Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 6?)
+      4-5 Nested Loops 7_instruction: |-
+        Loop this design 10 times. \r
+        \r
+        How much
+        do you have to turn each time you loop?
+      4-5 Nested Loops 8_instruction: "Loop this shape 6 times. \\r\n\\r\nHow much\ndo
+        you have to turn each time you loop? "
       4-5 Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
       4-5 Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete the
-        design.
+        Assessment: Use a nested loop to
+        complete the design.
       4-5 While Loops 1_instruction: |
         Move me to the hole and fill it with two shovelfuls
-        of dirt, using the "fill" block.
+        of dirt, using the `fill` block.
       4-5 While Loops 2_instruction: |
         Move me to the pile of dirt and remove it with
-        5 shovel scoops, using the 'remove' block.
-      4-5 While Loops 3_instruction: |
-        Move me to the pile and remove all of it, then
-        move to the hole and fill it completely.  Hint:  Use as few blocks as possible.
-      4-5 While Loops 4_instruction: |
-        Wow, I found a really deep hole! I don't know
-        how many shovelfuls of dirt it needs.  Can you write a program that fills
-        it until the ground is even?  Hint:  Try using the while loop this time.
+        5 shovel scoops, using the `remove 1` block.
+      4-5 While Loops 3_instruction: |-
+        Use as few blocks as possible to complete this
+        puzzle!  \r
+        \r
+        Move me to the pile and remove all the dirt, then move to
+        the hole and fill it completely.
+      4-5 While Loops 4_instruction: "Wow, look at that! \\r\n\\r\nI don't know how\nmany
+        shovelfuls of dirt this hole needs.  \\r\nCan you write a program that\nkeeps
+        using the `fill` block until the ground is even?  "
       4-5 While Loops 5_instruction: |
         Wow, now there are two deep holes! Can you
         write a program that fills them both until the ground is even?
@@ -2400,6 +2470,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2998,6 +3072,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

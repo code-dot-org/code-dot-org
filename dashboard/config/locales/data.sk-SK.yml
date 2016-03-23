@@ -643,7 +643,7 @@
         Unplug11: Zhrnutie
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
+        C1_bigevent_unplugged: Veľká udalosť
         C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
@@ -656,8 +656,8 @@
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
-        C1_building_foundation: Building a Foundation
-        C1_going_places_safely: Going Places Safely
+        C1_building_foundation: Stavanie základov
+        C1_going_places_safely: Bezpečné premiestňovanie
         C2_maze_intro: Maze Intro
         C2_artist_intro: Artist Intro
         C2_zuck_repeat_loop: Maze Loops

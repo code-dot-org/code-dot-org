@@ -419,11 +419,9 @@
       4-5 Artist For Loops 15_instruction: 'Það er til betri lausn til að ljúka þessum
         kóða! Notaðu "frá" kubb í stað þessara kubba og ljúktu við sexhyrningaspíralinn.
         (Vísbending: Lengd síðustu línunnar er 200 dílar.)'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: Þetta er "frá" kubbur. Í stað þess að skrifa
+        1,2,3... 10, getum við látið "frá" kubb telja, og um leið endurtaka  kubbana
+        innan í sér. Settu töluna 10 í "til" hluta kubbsins.
       4-5 Artist For Loops 3_instruction: Hvernig getum við talið frá 1 til 50? Breyttu
         "frá" kubbnum.
       4-5 Artist For Loops 4_instruction: Ljúktu við "frá" kubbinn svo að hann telji
@@ -642,9 +640,6 @@
       4-5 Maze Assessment 1_instruction: 'Mat: Náðu til sólblómsins.'
       4-5 Maze Conditionals 1_instruction: Notaðu "endurtaka þar til" kubb til að
         koma uppvakningnum til sólblómsins.
-      4-5 Maze Conditionals 10_instruction: Getur þú bætt við bara 3 kubbum svo ég
-        geti ratað í flóknara völundarhúsi? Ef þú gerir það rétt, get ég ratað slóðir
-        sem beygja sama hversu langar þær eru.
       4-5 Maze Conditionals 2_instruction: Notaðu "endurtaka þar til" kubb til að
         koma uppvakningnum til sólblómsins.
       4-5 Maze Conditionals 3_instruction: 'Notaðu "ef" kubbinn til að láta mig ákveða
@@ -1749,6 +1744,10 @@
       Course1MazeAssessment2_instruction: |-
         Þetta er próf!\r
         Færðu mig í eina átt, svo í aðra, til að ég nái svíninu.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2271,6 +2270,8 @@
         eru venjulega ekki í boði? Við skulum rukka 10.000 kr. fyrir sérpöntuð álegg.
       Luigi's Pizza 4_instruction: 'Frjáls æfing: Hvernig væri hægt að gera kostnaðarfall
         Luigi enn gagnlegra?'
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: Allar breytur og föll byrja hér sem innantómir
         stúfar. Hver þraut mun fást við að skilgreina nokkra í einu og þannig smám
         saman auka við virknina.
@@ -2819,11 +2820,9 @@
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
         get nectar from the flowers.
-      Quantum Bee_instruction: |
-        Purple flowers may have either 1 or 0 nectar, but
-        you don't know which one! Be careful not to collect nectar from a purple
-        flower if it doesn't have any. Check if the nectar is equal to 1 by using
-        the if block.
+      Quantum Bee_instruction: Fjólublá blóm geta haft annað hvort 1 eða 0 af blómasafa,
+        en þú veist ekki hvort! Gættu þess að safna ekki blómasafa ef blóm hefur ekki
+        safa. Athugaðu hvort safinn sé 1 með því að nota ef kubbinn.
       Ryan - 4-5 Bee Conditionals 2_instruction: "Þessa stundina vill býflugan bara
         blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT
         SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa."

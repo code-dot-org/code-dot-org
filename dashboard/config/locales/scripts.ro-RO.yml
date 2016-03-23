@@ -1831,3 +1831,8 @@
             Detectarea de coliziuni și formula pentru distanță'
           'Play Lab: Collision Detection (Big Game)': 'Laboratorul de joc: Detectarea
             de coliziuni (jocul mare)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

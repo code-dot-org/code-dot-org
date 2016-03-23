@@ -4,14 +4,14 @@ nav: plc_algebra_nav
 ---
 # CS in Algebra Professional Learning Program
 
-The Code.org Computer Science in Algebra (CS in Algebra) Professional Learning Program is an intensive professional learning program for middle school educators who are interested in teaching Code.org’s CS in Algebra course. This program is designed to prepare educators to provide high quality instruction, based on the CS in Algebra curriculum, tools and approach to students in their classrooms. 
+The Code.org Computer Science in Algebra (CS in Algebra) Professional Learning Program is an intensive professional learning program for middle school educators who are interested in teaching Code.org’s CS in Algebra course. This program is designed to prepare educators to provide high quality instruction, based on the [CS in Algebra curriculum](/educate/algebra), tools and approach to students in their classrooms. 
 
 ## What does a Code.org CS in Algebra Educator do?
 If accepted into the Code.org CS in Algebra Professional Learning Program, you will:
 
 - Join a nationwide community of educators working to change the face of CS education 
 - Participate in in-person and online professional development
-- Plan and deliver the CS in Algebra curriculum to your students, and reflect on your experiences 
+- Plan and deliver the [CS in Algebra curriculum](/educate/algebra) to your students, and reflect on your experiences 
  
  
 ## <a name="components"></a>How does it work?
@@ -27,22 +27,20 @@ The Code.org CS in Algebra professional development program is designed to help 
 <br/>
 	- 2 hours online, self-paced
 <br/>
-- **Phase 2: Summer Blended Study**
+- **Phase 2: Summer Study**
 <br/>
 	- 2 days (14 hours) in person
-<br/>
-	- 8 hours online, self-paced
 <br/>
 - **Phase 3: Blended Academic Year Development**
 <br/>
-	- 2 days (14 hours) in person
+	- 2 hours online, self-paced
 <br/>
-	- 10 hours online, self-paced
+	- 1 day (7 hours) in person
 
 
 ## <a name="participate"></a>Who can Participate?
  
-Any middle school math teacher who's district is partnered with Code.org.
+Any middle school math teacher who's district is partnered with Code.org and interested in teaching Code.org's [CS in Algebra course](/educate/algebra).
 
 ## <a name="locations"></a>Where is the program offered?
 

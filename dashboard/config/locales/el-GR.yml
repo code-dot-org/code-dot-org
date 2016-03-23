@@ -605,6 +605,16 @@
     correct_body: "Ευχαριστούμε για την υποβολή της απάντησης."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "Ευχαριστούμε"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Ευχαριστούμε"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "Ευχαριστούμε"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Ευχαριστούμε"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: "Λανθασμένη λύση"
     wrong_body: "Η λύση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
@@ -626,9 +636,6 @@
     placeholder: "Εισάγετε την απάντησή σας εδώ"
     open_response_title: "Ευχαριστούμε"
     open_response_body: "Ευχαριστούμε για την απάντησή σου!"
-  level_group:
-    correct_title: "Ευχαριστούμε"
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OΚ
     startover_title: "Είστε βέβαιος ότι θέλετε να ξεκινήσετε από την αρχή;"

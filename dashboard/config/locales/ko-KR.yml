@@ -524,6 +524,16 @@
     correct_body: "답변 주셔서 감사 합니다."
     toofew_title: "답변이 너무 적습니다."
     toofew_body: "제출하기 전에 두 개의 답변을 선택하세요."
+  level_group:
+    wrong_title: "고마워"
+    wrong_body: "답변 주셔서 감사 합니다."
+    correct_title: "고마워"
+    correct_body: "답변 주셔서 감사 합니다."
+  level_group-submittable:
+    wrong_title: "고마워"
+    wrong_body: "답변 주셔서 감사 합니다."
+    correct_title: "고마워"
+    correct_body: "답변 주셔서 감사 합니다."
   match:
     wrong_title: "정답이 아닌 답안"
     wrong_body: "정답이 아닙니다. 다시 시도해 보세요."
@@ -541,9 +551,6 @@
     placeholder: "이름을 입력하세요."
     open_response_title: "감사합니다,"
     open_response_body: "답변해 주셔서 감사합니다!"
-  level_group:
-    correct_title: "고마워"
-    correct_body: "답변 주셔서 감사 합니다."
   dialog:
     ok: "확인"
     startover_title: "정말 다시 시작하겠습니까?"
