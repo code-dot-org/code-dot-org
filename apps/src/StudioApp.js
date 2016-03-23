@@ -977,6 +977,26 @@ StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 };
 
+StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level,
+    renderedMarkdown, showHints) {
+
+  var authoredHints;
+  if (showHints) {
+    authoredHints = this.authoredHintsController_.getHintsDisplay();
+  }
+
+  return (
+    <Instructions
+      puzzleTitle={puzzleTitle}
+      instructions={this.substituteInstructionImages(level.instructions)}
+      instructions2={this.substituteInstructionImages(level.instructions2)}
+      renderedMarkdown={renderedMarkdown}
+      markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
+      aniGifURL={level.aniGifURL}
+      authoredHints={authoredHints}/>
+  );
+};
+
 StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   var isMarkdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
 
@@ -1004,21 +1024,8 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     }
   }
 
-  var authoredHints;
-  if (showHints) {
-    authoredHints = this.authoredHintsController_.getHintsDisplay();
-  }
-
-  var instructionsContent = (
-    <Instructions
-      puzzleTitle={puzzleTitle}
-      instructions={this.substituteInstructionImages(level.instructions)}
-      instructions2={this.substituteInstructionImages(level.instructions2)}
-      renderedMarkdown={renderedMarkdown}
-      markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
-      aniGifURL={level.aniGifURL}
-      authoredHints={authoredHints}/>
-  );
+  var instructionsContent = this.getInstructionsContent_(puzzleTitle, level,
+    renderedMarkdown, showHints);
 
   // Create a div to eventually hold this content, and add it to the
   // overall container. We don't want to render directly into the
