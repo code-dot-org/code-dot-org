@@ -1009,15 +1009,16 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     authoredHints = this.authoredHintsController_.getHintsDisplay();
   }
 
-  var instructionsContent = React.createElement(Instructions, {
-    puzzleTitle: puzzleTitle,
-    instructions: this.substituteInstructionImages(level.instructions),
-    instructions2: this.substituteInstructionImages(level.instructions2),
-    renderedMarkdown: renderedMarkdown,
-    markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
-    aniGifURL: level.aniGifURL,
-    authoredHints: authoredHints
-  });
+  var instructionsContent = (
+    <Instructions
+      puzzleTitle={puzzleTitle}
+      instructions={this.substituteInstructionImages(level.instructions)}
+      instructions2={this.substituteInstructionImages(level.instructions2)}
+      renderedMarkdown={renderedMarkdown}
+      markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
+      aniGifURL={level.aniGifURL}
+      authoredHints={authoredHints}/>
+  );
 
   // Create a div to eventually hold this content, and add it to the
   // overall container. We don't want to render directly into the
@@ -1029,9 +1030,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
 
   var buttons = document.createElement('div');
   instructionsDiv.appendChild(buttons);
-  ReactDOM.render(React.createElement(DialogButtons, {
-    ok: true
-  }), buttons);
+  ReactDOM.render(<DialogButtons ok={true}/>, buttons);
 
   // If there is an instructions block on the screen, we want the instructions dialog to
   // shrink down to that instructions block when it's dismissed.
