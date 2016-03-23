@@ -6,19 +6,7 @@ This .md file should only contain information which is specific to Code.org engi
 ## To update levelbuilder to match test:
 
 1. On GitHub, open a pull request from `test` into `levelbuilder`, link: [levelbuilder...test](https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...test?expand=1)
-  1. Or in your local repository:
-    - `git checkout levelbuilder`
-    - `git pull origin levelbuilder` To make sure you're up-to-date.
-    - `git pull origin test` To fetch and merge `test` directly into `levelbuilder`.
-    - You'll likely get "both modified" merge conflicts in `dashboard/public/apps-package/*`, `blockly-core/build_output/blockly_compressed.js` and `blockly-core/build_output/blockly_uncompressed.js`. We don't need test's copies of these build products - they're out of date and about to be rebuilt anyway, so do:
-      1. `git checkout --ours blockly-core/build_output/blockly_compressed.js blockly-core/build_output/blockly_uncompressed.js`
-      1. `git add blockly-core/build_output/blockly_compressed.js blockly-core/build_output/blockly_uncompressed.js`
-      1. `git checkout --ours dashboard/public/apps-package`
-      1. `git add dashboard/public/apps-package`
-      1. Fix remaining merge conficts, if any.
-      1. `git commit`
-    - `git push`
-1. Wait for levelbuilder to deploy.
+1. Click the "Merge pull request" button and watch the "levelbuilder" room in Hipchat to make sure the build succeeds. If anything breaks, see the "Did it break section" below.
 
 ## To commit changes from levelbuilder into staging:
 
