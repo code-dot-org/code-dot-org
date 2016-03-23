@@ -477,8 +477,10 @@ GameLab.prototype.onP5Setup = function () {
     if (this.eventHandlers.setup) {
       this.setupInProgress = true;
       this.eventHandlers.setup.apply(null);
+      this.completeSetupIfSetupComplete();
+    } else {
+      this.gameLabP5.afterSetupComplete();
     }
-    this.completeSetupIfSetupComplete();
   }
 };
 
