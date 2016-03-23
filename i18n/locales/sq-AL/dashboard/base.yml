@@ -485,6 +485,16 @@ sq:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Faleminderit
+    wrong_body: Thank you for submitting answers.
+    correct_title: Faleminderit
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Faleminderit
+    wrong_body: Thank you for submitting answers.
+    correct_title: Faleminderit
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Zgjidhje e pasaktë
     wrong_body: Zgjidhja që keni futur është e pasktë. Ju lutem provojeni përsëri!
@@ -502,9 +512,6 @@ sq:
     placeholder: Shkruani përgjigjen tuaj këtu
     open_response_title: Faleminderit
     open_response_body: Faleminderit për përgjigjen!
-  level_group:
-    correct_title: Faleminderit
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: Në rregull
     startover_title: A jeni i sigurt që doni të filloni nga fillimi?

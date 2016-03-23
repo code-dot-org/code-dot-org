@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# 20983 contacts
+../send-to-mailing-list 3-17-recruit-k5 ./k5-workshop-attendees-deduped.csv

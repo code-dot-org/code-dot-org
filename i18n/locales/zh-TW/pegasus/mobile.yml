@@ -577,7 +577,7 @@ zh-TW:
   dashboard_progress_completed_too_many_blocks: 完成，但使用過多積木
   dashboard_progress_completed_perfect: 完美完成
   dashboard_progress_furthest_level_attempted: 嘗試到的最遠關卡
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: 已提交
   dashboard_stage: 階段
   dashboard_puzzle: 關卡
   dashboard_question: '問題 '
@@ -719,7 +719,7 @@ zh-TW:
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   applab_name: App Lab
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: 13歲以上
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: 適合年齡自 4 至104歲
   codeintl_gradelevel: 適合年齡自 4 至104歲

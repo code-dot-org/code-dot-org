@@ -1641,3 +1641,8 @@ fa:
           "Eval: Conditionals": 'ارزیابی: شرطی ها'
           "Unplugged: Collision Detection and the Distance Formula": 'بدون دستگاه: تشخیص برخورد و فرمول فاصله'
           "Play Lab: Collision Detection (Big Game)": 'آزمایشگاه بازی: تشخیص برخورد (بازی بزرگ)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

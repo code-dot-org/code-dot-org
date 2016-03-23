@@ -681,9 +681,6 @@
       4-5 Maze Assessment 1_instruction: 'Test: Ga naar de zonnebloem.'
       4-5 Maze Conditionals 1_instruction: Gebruik het herhaal tot blok om de zombie
         bij de zonnebloem te brengen.
-      4-5 Maze Conditionals 10_instruction: Kun je slechts 3 blokken toevoegen om
-        me te helpen een ingewikkelder doolhof op te lossen? Als je het goed doet
-        kan ik elk kronkelig pad lopen, ongeacht de lengte.
       4-5 Maze Conditionals 2_instruction: Gebruik het herhaal tot blok om de zombie
         bij de zonnebloem te brengen.
       4-5 Maze Conditionals 3_instruction: 'Gebruik het "als" blok om me te laten
@@ -1937,6 +1934,10 @@
         op, daarna een andere kant, om me bij het varken te krijgen
       Course1MazeAssessment2_instruction: Dit is een test!\r Beweeg me eerst één kant
         op, daarna een andere kant, om me bij het varken te krijgen.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2553,6 +2554,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

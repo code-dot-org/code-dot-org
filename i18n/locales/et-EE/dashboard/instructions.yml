@@ -328,7 +328,6 @@ et:
       4-5 Maze 9_instruction: Loo tsükkel plokiga „korda kuni“.
       4-5 Maze Assessment 1_instruction: 'Ülesanne: Mine päevalilleni.'
       4-5 Maze Conditionals 1_instruction: Kasuta plokki „korda kuni“, et aidata zombi päevalille juurde.
-      4-5 Maze Conditionals 10_instruction: Kas oskad lisada 3 plokki, et aidata mul lahendada veel keerulisem labürint? Kui sa teed seda õigesti, saan ma läbida erinevaid kurvilisi radu, ükskõik kui pikad need on.
       4-5 Maze Conditionals 2_instruction: Kasuta plokki „korda kuni“, et aidata zombi päevalille juurde.
       4-5 Maze Conditionals 3_instruction: 'Kasuta uut „kui“ plokki, et lasta mul otsustada, millal keerama peab. Vihje: sa vajad ainult ühte lisaplokki, aga õpi, kuidas me selle sätime, nii et oskaksid seda järgmine kord ise teha.'
       4-5 Maze Conditionals 4_instruction: Hea küll, see on nagu viimane mõistatus, aga sa pead meelde tuletama, kuidas sa kasutasid „kui“ plokki ja „korda“ plokki koos.
@@ -1086,6 +1085,10 @@ et:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1534,6 +1537,8 @@ et:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
