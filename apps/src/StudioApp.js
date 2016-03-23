@@ -977,8 +977,22 @@ StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 };
 
-StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level,
-    renderedMarkdown, showHints) {
+/**
+ * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
+ *   have markdown instructions
+ * @param {object} level
+ * @param {boolean} showHints
+ * @returns {React.element}
+ */
+StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
+  var isMarkdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+
+  var renderedMarkdown;
+
+  if (isMarkdownMode) {
+    var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
+    renderedMarkdown = marked(markdownWithImages);
+  }
 
   var authoredHints;
   if (showHints) {
@@ -997,6 +1011,11 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level,
   );
 };
 
+/**
+ * @param {object} level
+ * @param {boolean} autoClose - closes instructions after 32s if true
+ * @param {boolean} showHints
+ */
 StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   var isMarkdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
 
@@ -1005,7 +1024,6 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     'markdown-instructions-container' :
     'instructions-container';
 
-  var renderedMarkdown;
   var headerElement;
 
   var puzzleTitle = msg.puzzleTitle({
@@ -1014,8 +1032,6 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   });
 
   if (isMarkdownMode) {
-    var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
-    renderedMarkdown = marked(markdownWithImages);
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
     headerElement.innerHTML = puzzleTitle;
@@ -1025,7 +1041,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   }
 
   var instructionsContent = this.getInstructionsContent_(puzzleTitle, level,
-    renderedMarkdown, showHints);
+    showHints);
 
   // Create a div to eventually hold this content, and add it to the
   // overall container. We don't want to render directly into the
@@ -1103,7 +1119,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
 
   this.instructionsDialog.show({hideOptions: hideOptions});
 
-  if (renderedMarkdown) {
+  if (isMarkdownMode) {
     // process <details> tags with polyfill jQuery plugin
     $('details').details();
   }
