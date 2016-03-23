@@ -30,3 +30,12 @@
     }
   }
 }
+
+#toggleIconLibrary {
+  margin-left: 20px;
+}
+
+#previewIcon {
+  font-size: 24px;
+  vertical-align: middle;
+}

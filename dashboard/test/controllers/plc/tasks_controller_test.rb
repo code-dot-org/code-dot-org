@@ -20,7 +20,7 @@ class Plc::TasksControllerTest < ActionController::TestCase
 
   test 'should create new tasks for all task types' do
     [
-        [Plc::LearningResourceTask, {resource_url: 'Some url'}],
+        [Plc::LearningResourceTask, {resource_url: 'Some url', icon: 'Some icon class'}],
         [Plc::ScriptCompletionTask, {script_id: '1'}],
         [Plc::WrittenAssignmentTask, {assignment_description: 'Tell me how you really feel'}]
 
