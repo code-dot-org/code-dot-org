@@ -124,6 +124,7 @@ class GSheetToCsv
   def initialize(path)
     @gsheet_path, settings_yml = IO.read(path).strip.split("\n", 2)
     settings = YAML.load(settings_yml.to_s) || {}
+    @include_columns = settings['include_columns'] || []
     @exclude_columns = settings['exclude_columns'] || []
     @csv_path = File.join(File.dirname(path), File.basename(path, File.extname(path)) + '.csv')
     @file = nil
@@ -166,14 +167,20 @@ class GSheetToCsv
       puts "Error on file: #{@gsheet_path}, #{e}"
       throw e
     end
-    if @exclude_columns.empty?
+    if @include_columns.empty? && @exclude_columns.empty?
       IO.write(@csv_path, buf)
     else
       CSV.open(@csv_path, 'wb') do |csv|
         columns = nil
         CSV.parse(buf, headers: true) do |row|
           unless columns
-            columns = row.headers - @exclude_columns
+            # Determine the set of columns to be output.
+            columns = row.headers
+            if !@include_columns.empty?
+              columns = columns & @include_columns
+            end
+            columns = columns - @exclude_columns
+            # Output the columns.
             csv << columns
           end
           csv << columns.map{|i| row[i]}
