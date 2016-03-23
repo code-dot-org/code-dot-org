@@ -2,7 +2,8 @@
 require_relative '../mailing-common/mailing-list-utils'
 require 'set'
 
-# Inactive Code Studio teacher accounts (not teaching a course, or haven't added students)	US only
+# Inactive Code Studio teacher accounts  US only
+# - not teaching a course, haven't added students, or no students logged in
 
 US_TEACHERS = Set.new
 SOLR_PARAMS = {
@@ -20,8 +21,10 @@ query = <<eos
   SELECT DISTINCT users.email, users.name FROM users
     LEFT JOIN sections ON (sections.user_id = users.id)
     LEFT JOIN followers ON (followers.section_id = sections.id)
+    LEFT JOIN users AS signed_in_students ON (students.id = followers.student_user_id
+      AND students.current_sign_in_at IS NOT NULL)
     WHERE users.user_type = 'teacher'
-      AND (sections.id IS NULL OR followers.id IS NULL)
+      AND (sections.id IS NULL OR followers.id IS NULL OR signed_in_students.id IS NULL)
 eos
 
 results = {}
