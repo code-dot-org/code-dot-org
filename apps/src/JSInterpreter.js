@@ -20,6 +20,7 @@ var JSInterpreter = module.exports = function (options) {
   this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return true; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
   this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
+  this.customMarshalBlockedProperties = options.customMarshalBlockedProperties || [];
 
   // Publicly-exposed events that anyone with access to the JSInterpreter can
   // observe and respond to.
@@ -743,6 +744,9 @@ JSInterpreter.prototype.getProperty = function (
       (obj === this.globalScope &&
           (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
     var value;
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseGetProperty.call(interpreter, obj, name);
+    }
     if (obj.isCustomMarshal) {
       value = obj.data[name];
     } else {
@@ -780,7 +784,9 @@ JSInterpreter.prototype.hasProperty = function (
   if (obj.isCustomMarshal ||
       (obj === this.globalScope &&
           (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
-    if (obj.isCustomMarshal) {
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseHasProperty.call(interpreter, obj, name);
+    } else if (obj.isCustomMarshal) {
       return name in obj.data;
     } else {
       return name in nativeParent;
@@ -813,9 +819,17 @@ JSInterpreter.prototype.setProperty = function(
   name = name.toString();
   var nativeParent;
   if (obj.isCustomMarshal) {
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseSetProperty.call(
+          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    }
     obj.data[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else if (obj === this.globalScope &&
       (!!(nativeParent = this.customMarshalGlobalProperties[name]))) {
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseSetProperty.call(
+          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    }
     nativeParent[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else {
     return baseSetProperty.call(

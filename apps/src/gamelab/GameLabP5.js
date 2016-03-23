@@ -88,6 +88,41 @@ GameLabP5.prototype.init = function (options) {
      * through the bound constructor, which prepends the first arg.
      */
     var s = new this.Sprite(x, y, width, height);
+
+    s.setFrame = function (frame) {
+      if (s.animation) {
+        s.animation.setFrame(frame);
+      }
+    };
+
+    s.nextFrame = function () {
+      if (s.animation) {
+        s.animation.nextFrame();
+      }
+    };
+
+    s.previousFrame = function () {
+      if (s.animation) {
+        s.animation.previousFrame();
+      }
+    };
+
+    s.play = function () {
+      if (s.animation) {
+        s.animation.play();
+      }
+    };
+
+    s.pause = function () {
+      if (s.animation) {
+        s.animation.stop();
+      }
+    };
+
+    s.didFrameChange = function () {
+      return s.animation ? s.animation.frameChanged : false;
+    };
+
     s.AABBops = gameLabSprite.AABBops.bind(s, this);
     s.depth = this.allSprites.maxDepth()+1;
     this.allSprites.add(s);
@@ -373,6 +408,12 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
     pRotationY: this.p5,
     pRotationZ: this.p5
   };
+};
+
+GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
+  return [
+    '_userNode'
+  ];
 };
 
 GameLabP5.prototype.getCustomMarshalObjectList = function () {
