@@ -482,6 +482,16 @@ nn:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Takk
+    wrong_body: Thank you for submitting answers.
+    correct_title: Takk
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Takk
+    wrong_body: Thank you for submitting answers.
+    correct_title: Takk
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Feil løysing
     wrong_body: 'Løysinga du har gitt er ikkje rett.  Prøv på nytt!'
@@ -499,9 +509,6 @@ nn:
     placeholder: Gi svaret ditt her
     open_response_title: Takk
     open_response_body: Takk for svaret!
-  level_group:
-    correct_title: Takk
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Er du sikker på at du vil starte på nytt?

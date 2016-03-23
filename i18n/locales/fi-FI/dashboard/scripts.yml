@@ -1641,3 +1641,8 @@ fi:
           "Eval: Conditionals": 'Eval: ehtolausekkeet'
           "Unplugged: Collision Detection and the Distance Formula": 'Tietokoneeton tekeminen: törmäyksen havaitseminen ja etäisyyskaava'
           "Play Lab: Collision Detection (Big Game)": 'Pelilabra: Törmäyksen tunnistaminen (Iso Peli)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

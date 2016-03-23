@@ -658,7 +658,7 @@ it:
       4:
         image: notes/C2_artist_intro_4.png
         text: |-
-          L'altro blocco che c'è in questo esercizio dice "gira a destra di 90 gradi". Quando usi questo blocco "gira a destra" l'artista ruota a destra. Puoi fare dei tentativi per capire di quanto far girare l'artista. Questo disegno rappresenta una rotazione a sinistra di 90 gradi.
+          Gli altri due blocchi in questo esercizio dicono "gira a destra di 90 gradi" e "gira a sinistra di 90 gradi". Quando usi il blocco "gira a destra" l'artista ruota a destra. Puoi fare dei tentativi per capire di quanto far girare l'artista. L'angolo è misurato rispetto al percorso davanti all'artista. In questo disegno la linea verso l'alto è ciò che disegna l'artista andando avanti dopo aver fatto una rotazione a sinistra di 90 gradi al termine della linea orizzontale.
       5:
         image: notes/C2_artist_intro_5.png
         text: E questo disegno rappresenta una rotazione a sinistra di 120 gradi. Ricorda, puoi modificare il numero dei pixel e dei gradi cliccando sui triangolini con la punta verso il basso accanto a loro. Divertiti a disegnare con il tuo artista!
@@ -822,10 +822,10 @@ it:
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
-        text: "Today we're going to do relay programming. It's all about programming under pressure and debugging the mistakes that sometimes happen when you work really quickly or in teams. We'll use graph paper programming to simulate coding, and use relay races to simulate having a deadline."
+        text: Oggi si svolgerà una staffetta di programmazione. Si tratta di programmare sotto pressione e correggere gli errori che talvolta vengono commessi quando lavori davvero velocemente o in team. Useremo la carta millimetrata per simulare il codice e faremo una staffetta per simulare le scadenze.
       2:
         image: notes/C2_relay_programming_2.png
-        text: "In relay programming, teams will be racing to finish a graph paper program. You have to check your teammate's work, or debug it, fix it if there's a mistake, add your arrow, and run back and tag your teammate."
+        text: Nella programmazione a staffetta, le squadre gareggeranno a chi finisce il programma per primo. Dovrai controllare il lavoro dei tuoi compagni e debuggarlo, correggere gli errori se presenti; aggiungi la tua freccia e torna indietro a taggare il tuo compagno.
       3:
         image: notes/C2_relay_programming_3.png
         text: "I programmatori usano moltissimo il debug per trovare e correggere eventuali errori nei loro algoritmi o codici. Esistono diversi metodi per rintracciare gli errori. Uno dei più semplici è quello di controllare l'algoritmo passaggio dopo passaggio fino a trovare il problema, e risolverlo."
@@ -872,7 +872,7 @@ it:
       4:
         image: notes/C3_artist_intro_4.png
         text: |-
-          L'altro blocco che c'è in questo esercizio dice "gira a destra di 90 gradi". Quando usi questo blocco "gira a destra" l'artista ruota a destra. Puoi fare dei tentativi per capire di quanto far girare l'artista. Questo disegno rappresenta una rotazione a sinistra di 90 gradi.
+          Gli altri due blocchi in questo esercizio dicono "gira a destra di 90 gradi" e "gira a sinistra di 90 gradi". Quando usi il blocco "gira a destra" l'artista ruota a destra. Puoi fare dei tentativi per capire di quanto far girare l'artista. L'angolo è misurato rispetto al percorso davanti all'artista. In questo disegno la linea verso l'alto è ciò che disegna l'artista andando avanti dopo aver fatto una rotazione a sinistra di 90 gradi al termine della linea orizzontale.
       5:
         image: notes/C3_artist_intro_5.png
         text: E questo disegno rappresenta una rotazione a sinistra di 120 gradi. Ricorda, puoi modificare il numero dei pixel e dei gradi cliccando sui triangolini con la punta verso il basso accanto a loro. Divertiti a disegnare con il tuo artista!

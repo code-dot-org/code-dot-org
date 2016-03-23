@@ -128,7 +128,7 @@ pt:
         maze_2_2: 'Consegues ajudar-me a apanhar o porquinho? Empilha alguns blocos "segue em frente" e depois clica em "Executar" para me ajudares a chegar até ele. '
         maze_2_1: Este porco está a enervar-me. Ajuda-me a encontrá-lo!
         maze_2_2_5: Traça o caminho e leva-me até ao porquinho tonto. Não choques com as dinamites, se não ficas sem penas!
-        maze_2_3: Leve-me até a maldade verde! (Cuidado com a dinamite)
+        maze_2_3: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
         maze_2_4: Fique calmo e ajude-me a encontrar o porco mau. Senão eu vou ficar zangado!
         maze_2_5: Há uma maneira de chegar ao porco bobalhão usando apenas 2 blocos. Você consegue descobrir como?
         maze_2_6: Tente me levar até o intruso verde usando apenas três blocos.
@@ -531,7 +531,7 @@ pt:
         iceage_repeat: 'Hora do Código com A Era do Gelo - Instruções de repetição'
     callout:
       text:
-        drag_blocks: 'Arraste um bloco "avance" e o encaixe embaixo do outro bloco'
+        drag_blocks: 'Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco'
         run: 'Clica em "Executar" para experimentares o teu programa'
         watch_again: Clica aqui para voltares a ver o vídeo
         gray_block_explanation: Os blocos cinza não podem ser excluídos. Você consegue resolver o desafio assim mesmo?
@@ -541,7 +541,7 @@ pt:
         set_sprite_image: 'Anexe um bloco "defina personagem à imagem" ao bloco "quando a história começa" para definir um personagem para essa história'
         studio_say_text: Digite, dentro das aspas, o que você quer que seu personagem diga
         jigsaw_click: Clique nesse bloco!
-        move_elsa_forward: 'Arraste um bloco "Avance" e encaixe-o sob o bloco "Quando o jogo começa" para que Elsa avance'
+        move_elsa_forward: 'Arrasta o bloco "mover para a frente" e encaixa-o debaixo do bloco "quando executar" para que a Elsa avance'
         turn_elsa: 'Use o bloco "Vire" para que Elsa vire. O número no menu suspenso determina o quanto Elsa vai virar'
         replace_questions: 'Use o menu suspenso para substituir "???" por um número'
         replace_questions_degree: 'Use o menu suspenso para substituir "???" pelo grau correto para virar'
@@ -582,8 +582,8 @@ pt:
         place_counter_variable: Arraste sua variável contador para dentro deste bloco
         function_editor_draw_square: 'Esta é sua definição de função. Esses blocos são executados sempre que você usar o bloco "desenhe um quadrado"'
         change_here: Faça sua alteração aqui
-        write_draw_square_function: Arraste os blocos da caixa de ferramentas que desenham um quadrado aqui
-        write_draw_triangle_function: Arraste os blocos da caixa de ferramentas que desenham um triângulo aqui
+        write_draw_square_function: Arrasta para aqui os blocos da caixa de ferramentas que desenham um quadrado
+        write_draw_triangle_function: Arrasta para aqui os blocos da caixa de ferramentas que desenham um triângulo
         edit_add_parameter: Clique em editar para adicionar um parâmetro em sua função
         add_and_drag_parameter: Escreva o nome do seu parâmetro aqui, clique em adicionar e, em seguida, arraste-o para sua definição de função
         fill_in_actor: Substitua ??? pelos números que correspondem a cada ator (1, 2 e 3)

@@ -643,9 +643,6 @@
       4-5 Maze Assessment 1_instruction: "Ülesanne: Mine päevalilleni."
       4-5 Maze Conditionals 1_instruction: Kasuta plokki „korda kuni“, et aidata zombi
         päevalille juurde.
-      4-5 Maze Conditionals 10_instruction: Kas oskad lisada 3 plokki, et aidata mul
-        lahendada veel keerulisem labürint? Kui sa teed seda õigesti, saan ma läbida
-        erinevaid kurvilisi radu, ükskõik kui pikad need on.
       4-5 Maze Conditionals 2_instruction: Kasuta plokki „korda kuni“, et aidata zombi
         päevalille juurde.
       4-5 Maze Conditionals 3_instruction: 'Kasuta uut „kui“ plokki, et lasta mul
@@ -1892,6 +1889,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2480,6 +2481,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

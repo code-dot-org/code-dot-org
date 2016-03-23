@@ -484,6 +484,16 @@ tr:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Teşekkür ederiz
+    wrong_body: Thank you for submitting answers.
+    correct_title: Teşekkür ederiz
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Teşekkür ederiz
+    wrong_body: Thank you for submitting answers.
+    correct_title: Teşekkür ederiz
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Yanlış çözüm
     wrong_body: 'Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!'
@@ -501,9 +511,6 @@ tr:
     placeholder: Cevabınızı buraya girin
     open_response_title: teşekkürler
     open_response_body: cevabınız için teşekkürler!
-  level_group:
-    correct_title: Teşekkür ederiz
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: TAMAM
     startover_title: Baştan başlamak istediğinizden emin misiniz?

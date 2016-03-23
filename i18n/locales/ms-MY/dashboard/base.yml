@@ -476,6 +476,16 @@ ms:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting answers.
+    correct_title: Thank you
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting answers.
+    correct_title: Thank you
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Penyelesaian salah
     wrong_body: 'Penyelesaian yang anda masukkan tidak betul.  Sila cuba lagi!'
@@ -493,9 +503,6 @@ ms:
     placeholder: Enter your answer here
     open_response_title: Thanks
     open_response_body: Thanks for your response!
-  level_group:
-    correct_title: Thank you
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Adakah anda pasti anda ingin bermula?

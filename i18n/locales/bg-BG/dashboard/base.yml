@@ -480,6 +480,16 @@ bg:
     correct_body: Благодаря Ви, че подадохте отговор.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Благодаря
+    wrong_body: Благодаря Ви, че подадохте отговор
+    correct_title: Благодаря
+    correct_body: Благодаря Ви, че подадохте отговор
+  level_group-submittable:
+    wrong_title: Благодаря
+    wrong_body: Благодаря Ви, че подадохте отговор
+    correct_title: Благодаря
+    correct_body: Благодаря Ви, че подадохте отговор
   match:
     wrong_title: Неправилно решение
     wrong_body: 'Решението, което сте въвели не е правилно.  Моля опитайте отново!'
@@ -497,9 +507,6 @@ bg:
     placeholder: Въведете отговора си тук
     open_response_title: Благодаря
     open_response_body: Благодаря за вашия отговор!
-  level_group:
-    correct_title: Благодаря
-    correct_body: Благодаря Ви, че подадохте отговор
   dialog:
     ok: OK
     startover_title: Наистина ли искате да започнете отначало?

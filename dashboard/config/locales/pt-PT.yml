@@ -19,11 +19,11 @@
         locale: Idioma
         age: Idade
         gender: Género
-        edit_header: Edita os detalhes da conta
+        edit_header: Edita os detalhes da tua conta
         error:
           future: não pode estar no futuro
   hello: Olá mundo
-  welcome_back: Olá outra vez, %{name}
+  welcome_back: Olá mais uma vez, %{name}
   submit: OK
   unsubmit: Remover submissão
   add_teacher_form:
@@ -42,14 +42,14 @@
   puzzle: Desafio
   trophies: Troféus
   courses: Cursos
-  unplugged_activity: Atividade off-line
+  unplugged_activity: Atividade offline
   of: de
   more: MAIS
   less: MENOS
   beta: beta
   try_hoc: 'Experimenta a Hora de Código >> '
-  try_k8intro: Experimente o nosso curso de Introdução às Ciências da Computação para
-    o Ensino Básico (15-25 horas)
+  try_k8intro: Experimenta o nosso curso de introdução à Ciência da Computação para
+    o Ensino Básico (15 a 25 horas)
   k8intro: Curso de Introdução às Ciências da Computação para Ensino Básico (15-25
     horas)
   already_started: 'Já começaste? Retoma >> '
@@ -61,7 +61,7 @@
     sign_in_with: Iniciar sessão com o %{provider}
     signed_in: Sessão iniciada!
     signed_out: Acabaste de terminar sessão no <a href="%{url}">Code.org</a>.
-    sign_out_of: Usaste o %{provider} para iniciares sessão. <a href="%{url}">Clica
+    sign_out_of: Usaste o %{provider} para iniciar sessão. <a href="%{url}">Clica
       aqui</a> para terminares sessão no %{provider}.
     already_signedup: Já criaste uma conta?
     notyet_signedup: Ainda não criaste uma conta?
@@ -104,25 +104,26 @@
     valid_password: Palavra-passe válida!
     invalid_password: A palavra-passe tem de ter, pelo menos, 6 caracteres
     mismatch_password: As duas palavras-passe que digitaste não correspondem
-    student_terms: Concordo com os<a href='http://code.org/tos'>Termos de utilização</a>
+    student_terms: Concordo com os <a href='http://code.org/tos'>Termos de utilização</a>
       do Code.org. Se tiver menos de 13 anos, declaro, ao submeter este formulário,
       que tenho autorização dos meus pais para usar os serviços do Code.org.<br/>No
-      caso dos alunos com menos de 13 anos, os respetivos endereços de e-mail são
-      registados de forma a que não possamos entrar em contacto com eles.
-    teacher_terms: Concordo com os<a href='http://code.org/tos'>Termos de utilização</a>
+      caso dos alunos com menos de 13 anos, os respetivos endereços de e-mail não
+      são registados, o que nos impede de entrar em contacto com eles.
+    teacher_terms: Concordo com os <a href='http://code.org/tos'>Termos de utilização</a>
       do Code.org.
     additional_information: Precisamos de mais informações para continuarmos o processo
       de criação da conta.
   signin_form:
-    title: Já tem conta? Inicie a sessão
+    title: Já tens uma conta? Inicia sessão
     login: E-mail ou utilizador
     password: Palavra-passe
     remember: Manter sessão iniciada
     submit: Iniciar sessão
   signin:
-    try_heading: Queres programar sem criares uma conta?
-    try_hoc: Primeiro, experimente a Hora de Código
-    try_20hours: Experimente introdução de 20 horas às Ciências da Computação
+    try_heading: Queres programar sem teres de criar uma conta?
+    try_hoc: Primeiro, experimenta a Hora de Código
+    try_20hours: Experimenta o nosso curso de introdução à Ciência da Computação (20
+      horas)
   signinsection:
     welcome: "%{section_name} dá-te as boas-vindas"
     name: Escolha o nome de utilizador
@@ -255,9 +256,9 @@
     show: Mostrar
     edit: Editar
     edit_model: Editar %{model}
-    update: Actualizar
+    update: Atualizar
     destroy: Eliminar
-    back: Voltar
+    back: Anterior
     confirm: Tens a certeza?
     created: "% {modelo} foi criado com êxito."
     updated: "% {modelo} foi actualizado com sucesso."
@@ -268,10 +269,10 @@
       finished_hoc: Terminei a minha Hora de Código
       sign_in_to_save: Inicia sessão para guardares o teu progresso
       free_play:
-        playlab: Desenvolver uma aplicação
-        artist: Desenhe alguma coisa
+        playlab: Desenvolver uma aplicação Play Lab
+        artist: Desenhar alguma coisa
         calculate: Calculate Something
-        applab: Desenvolver uma aplicação
+        applab: Desenvolver uma aplicação App Lab
     user:
       classroom: Página inicial do Professor
       district_dashboard: Painel do distrito
@@ -286,7 +287,7 @@
     popup:
       progress_for_user: progresso de %{name}'s
       progress: O teu progresso
-      lines: 'Total de linhas de código: % {linhas}'
+      lines: 'Total de linhas de código: %{lines}'
       close: FECHAR
       mastery: Conceitos
       puzzle_map: Etapas
@@ -512,7 +513,7 @@
       cta: Learn how
     hoc:
       title: Labirinto clássico
-      body: Experimente as noções básicas de ciência da computação. Milhões de pessoas
+      body: Explora as noções básicas da Ciência da Computação. Milhões de pessoas
         já experimentaram.
     flappy:
       title: Flappy Bird
@@ -523,7 +524,7 @@
       body: Este curso de 20 horas apresenta o informática de núcleo e conceitos de
         programação. O curso é projetado para uso em salas de aula para os graus K-8,
         mas é divertido de aprender em todos os tempos.
-      body_short: Aprenda os fundamentos da ciência da computação em uma versão acelerada
+      body_short: Aprende as bases da Ciência da Computação com a versão acelerada
         dos cursos 2 a 4.
     hoc2014:
       try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão
@@ -586,6 +587,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Obrigado
+    wrong_body: Thank you for submitting answers.
+    correct_title: Obrigado
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Obrigado
+    wrong_body: Thank you for submitting answers.
+    correct_title: Obrigado
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Solução incorreta
     wrong_body: Sua solução não está correta. Tente novamente!
@@ -605,9 +616,6 @@
     placeholder: Insira sua resposta aqui
     open_response_title: Obrigado
     open_response_body: Obrigado por responderes!
-  level_group:
-    correct_title: Obrigado
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Tens a certeza de que pretendes recomeçar?
@@ -668,8 +676,8 @@
   progress:
     not_started: por iniciar
     in_progress: em progresso
-    completed_too_many_blocks: concluído, muitos blocos
-    completed_perfect: concluído, perfeito
+    completed_too_many_blocks: concluído, mas com muitos blocos
+    completed_perfect: concluído, na perfeição
     furthest_level_attempted: tentativa para o nível mais avançado
     assessment: avaliação
     submitted: submitted
