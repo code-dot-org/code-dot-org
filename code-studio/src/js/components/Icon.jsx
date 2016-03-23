@@ -22,3 +22,6 @@ var Icon = React.createClass({
   }
 });
 module.exports = Icon;
+
+window.dashboard = window.dashboard || {};
+window.dashboard.Icon = Icon;

@@ -123,6 +123,10 @@ GameLab.prototype.init = function (config) {
     onDraw: this.onP5Draw.bind(this)
   });
 
+  config.afterClearPuzzle = function() {
+    this.studioApp_.resetButtonClick();
+  }.bind(this);
+
   config.dropletConfig = dropletConfig;
   config.appMsg = msg;
 
@@ -318,6 +322,7 @@ GameLab.prototype.evalCode = function(code) {
 GameLab.prototype.execute = function() {
   // Reset all state.
   this.studioApp_.reset();
+  this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (this.studioApp_.isUsingBlockly() &&
       (this.studioApp_.hasExtraTopBlocks() ||

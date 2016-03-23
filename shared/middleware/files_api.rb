@@ -128,6 +128,7 @@ class FilesApi < Sinatra::Base
 
     type = File.extname(filename)
     not_found if type.empty?
+    unsupported_media_type unless allowed_file_type?(endpoint, type)
     content_type type
 
     result = get_bucket_impl(endpoint).new.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])

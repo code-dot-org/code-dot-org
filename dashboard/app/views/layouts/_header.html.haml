@@ -22,10 +22,7 @@
   - if show_bug_links
     - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
     #betainfo
-      - if script_level && script.show_report_bug_link? && script.feedback_url
-        = link_to t('landing.feedback'), script.feedback_url, target: '_blank'
-        |
-      - elsif level && level.try(:is_project_level) && level.game == Game.applab
+      - if level && level.try(:is_project_level) && level.game == Game.applab
         = link_to t('landing.help_resources'), CDO.code_org_url('/educate/applab'), target: '_blank'
         |
       = link_to t('landing.report_bug'), report_url, target: '_blank'

@@ -1,10 +1,8 @@
 require 'test_helper'
 
-class ArtistTest < ActiveSupport::TestCase
+class SolutionBlocksTest < ActiveSupport::TestCase
   setup do
     @empty_toolbox_xml = <<XML
-<xml>
-</xml>
 XML
     @toolbox_with_category_xml = <<XML
 <xml>
@@ -129,11 +127,11 @@ XML
 
     @toolbox_doc = Nokogiri::XML '<xml></xml>'
     @solution_doc = Nokogiri::XML '<xml></xml>'
-    @level = Artist.new
+    @level = Blockly.new
   end
 
   def make_level(toolbox_xml, solution_xml)
-    level = Artist.new
+    level = Blockly.new
     level.properties['toolbox_blocks'] = toolbox_xml
     level.properties['solution_blocks'] = solution_xml
     level
