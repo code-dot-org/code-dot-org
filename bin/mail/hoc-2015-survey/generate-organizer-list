@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+require 'set'
+
+query = <<EOS
+SELECT email, name from forms WHERE kind='HocSignup2015' AND created_at > '2015-11-10 23:59:59' AND data LIKE '%"send_posters_flag_b":"1"%' AND processed_data LIKE '%"location_country_code_s":"US"%'
+EOS
+
+no_posters = Set.new
+DB.fetch(query) do |row|
+  email = row[:email].downcase.strip
+  no_posters.add email
+end
+puts "#{no_posters.count} organizers requested a poster and didn't get one."
+
+query = <<EOS
+kind_s:HocSignup2015
+EOS
+
+results = query_subscribed_contacts(q: query)
+results.each_value do |contact|
+  contact[:domestic] = (contact[:international] == 'false')
+  contact[:no_posters] = no_posters.include? contact[:email]
+end
+
+puts "#{results.count} organizers"
+export_contacts_to_csv results, "organizers.csv"

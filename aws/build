@@ -40,14 +40,20 @@ def main()
 
     HipChat.log "https://github.com/code-dot-org/code-dot-org/commit/#{`git rev-parse HEAD`}", message_format: 'text', color: 'purple'
 
+    # Ensure updated Gemfile.lock dependencies are installed.
+    RakeUtils.bundle_install
+
     # Run `sudo chef-client` to ensure that the deploy respect updates to the Chef config
     # (e.g. the cdo-servers attribute describing which servers to deploy).
-    RakeUtils.system 'sudo', 'chef-client'
+    Dir.chdir(aws_dir) do
+      # Ensure the chef cookbooks are up to date.
+      RakeUtils.rake '--rakefile', 'build.rake', 'chef_update'
+      RakeUtils.system 'sudo', 'chef-client'
+    end
 
     status = 1
     Dir.chdir(aws_dir) do
-      RakeUtils.bundle_install
-      status = RakeUtils.system_ 'rake', '--rakefile', 'build.rake', *ARGV
+      status = RakeUtils.rake '--rakefile', 'build.rake', *ARGV
     end
 
     FileUtils.rm 'build-started' if File.file?('build-started')

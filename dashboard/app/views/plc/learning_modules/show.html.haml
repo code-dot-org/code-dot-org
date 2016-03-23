@@ -1,0 +1,19 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+
+%p
+  %strong Name:
+  = @learning_module.name
+
+-@task_groupings.each do |task_grouping|
+  .outlined_section
+    %h4 #{task_grouping[:name]}
+    - task_grouping[:tasks].each do |task|
+      = link_to task.name, plc_task_path(task)
+      %br
+    = link_to task_grouping[:new_link_text], task_grouping[:new_link_destination], class: 'btn new_link'
+  %br
+
+= link_to 'Edit', edit_plc_learning_module_path(@learning_module)
+\|
+= link_to 'Back', plc_content_creator_show_courses_and_modules_path

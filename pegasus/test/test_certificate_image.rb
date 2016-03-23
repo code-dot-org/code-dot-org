@@ -49,6 +49,18 @@ class CertificateImageTest < Minitest::Test
     assert_image blank_named_certificate_image, 1754, 1240, 'PNG'
     twenty_hour_certificate_image = create_course_certificate_image('Robot Tester', '20-hour')
     assert_image twenty_hour_certificate_image, 1754, 1240, 'JPEG'
+
+    # Entered name "à Test Namé" on /congrats/course1
+    # JS btoa(JSON.stringified(config)) becomes:
+    #   "eyJuYW1lIjoi4CBUZXN0IE5hbekiLCJjb3Vyc2UiOiJDb3Vyc2UgMSJ9"
+    # Ruby JSON.parse(Base64.urlsafe_decode64(encoded_config) becomes:
+    #   { name: "à Test Namé", course: "Course 1"}
+    #   ^ but the name is encoded in ISO-8859-1. This used to throw when gsub
+    #     would get called on the string with a regex. Now we call
+    #     force_8859_to_utf8 on the string, and the chars now render OK.
+    iso_8859_name = 'An ISO-8859 Tester \xE0' # Includes an à in ISO-8859-1
+    twenty_hour_certificate_image = create_course_certificate_image(iso_8859_name, '20-hour')
+    assert_image twenty_hour_certificate_image, 1754, 1240, 'JPEG'
   end
 
   private

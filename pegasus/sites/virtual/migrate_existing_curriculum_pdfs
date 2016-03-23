@@ -7,8 +7,8 @@ require 'rubygems'
 require_relative '../../src/env'
 
 generated_pdf_templates =
-    Dir.glob(Pathname(pegasus_dir('sites/virtual/**/*.md'))) +
-    Dir.glob(Pathname(pegasus_dir('sites/virtual/**/*.collate')))
+  Dir.glob(Pathname(pegasus_dir('sites/virtual/**/*.md'))) +
+  Dir.glob(Pathname(pegasus_dir('sites/virtual/**/*.collate')))
 
 puts "Found #{generated_pdf_templates.length} templates"
 

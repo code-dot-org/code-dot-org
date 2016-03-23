@@ -6,13 +6,13 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "The code for this stem is incorrect. Hint: The angle is off by 60 degrees",
+    "instructions": "Something is off!\r\n\r\nThe code for this stem is wrong. Can you figure out how to get the artist to trace the stem the right way?",
     "x": "100",
     "y": "400",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "8",
+    "ideal": "7",
     "slider_speed": "0.4",
     "free_play": "false",
     "embed": "false",
@@ -28,11 +28,14 @@
     "definition_collapse": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "The code for this stem is incorrect. Hint: The angle is off by 60 degrees\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Something is off!\r\n\r\nThe code for this stem is wrong. Can you figure out how to get the artist to trace the stem the right way?\r\n\r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "examples_required": "false",
     "disable_examples": "false",
-    "never_autoplay_video": "false"
-  }
+    "never_autoplay_video": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The artist needs to turn 60 degrees farther left before starting to draw!\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_9_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n  {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"You don't need to add another block to get the full turn, just add 60 degrees to the `turn left` block that's already there!\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_9_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -109,33 +112,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-            <block type="colour_picker">
-              <title name="COLOUR">#228b22</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
-        </block>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">200</title>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">40</title>
-        </block>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">80</title>
-        </block>
-      </xml>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

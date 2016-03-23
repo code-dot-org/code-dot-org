@@ -5,37 +5,73 @@ theme: responsive
 
 # Volunteer Guide
 
-Thank you for volunteering to inspire students about computer science. Here are some steps you can take in preparation for volunteering.
+Thank you for your interest in volunteering to inspire students about computer science. Here are some steps you can take in preparation for volunteering.
 
-## How to prepare before you volunteer
+## 1. Sign up to volunteer
+Sign up at [code.org/volunteer](/volunteer). The more information you provide, the more likely a teacher will contact you. It's also helpful if you:
 
-1. Spend 30 minutes trying at least one [Hour of Code tutorial](/learn) to familiarize yourself with the material
-1. If you're visiting a school, complete any background checks or required paperwork
-1. [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students during your visit
-1. Prepare a personal story about how you became passionate about computer science
+* Add your company and use your company email. Your email address will never be shared.
+* Select the checkbox to "I’m interested in volunteering year-round" if you want to volunteer throughout the year, outside of the Hour of Code. If you do not select this checkbox, you will only be displayed on the map during September-December for the Hour of Code.
+* All professionals are welcome to volunteer! We want students to learn about all career paths in tech. Please provide a short description at the bottom of the form about your connection to computer science and careers in tech.
 
-## How to coordinate with a teacher in your area
+## 2. Connect with a teacher and confirm
+Teachers will search for volunteers through our [volunteer map](/volunteer/local). When you get an email from a teacher, reply to the email and share the following information:
 
-1. Complete the sign up form at code.org/volunteer. The more information you provide, the more likely a teacher will contact you from the volunteer map.
-1. When contacted by a teacher, reply to the email and share the following information:
-	* Your name/company/job description 
-	* Days and times you are available to volunteer
-  * Why you chose to volunteer to inspire students
-1. Ask if there is any paperwork you need to fill out before volunteering
-1. Haven’t been contacted by a teacher yet? Search for local schools and call the principal/teacher/front office and ask how you can help.
-1. It is your responsibility to work with the teacher to find a day/time to volunteer and to complete all necessary school paperwork. Code.org does not have capacity to handle these requests. 
-1. Before arriving at the school, you should:
-  * Complete all school forms, including a background check, necessary for outside volunteers
-  * Confirm with your teacher the day and time you will be at the school
-  * Establish clear expectations with the teacher how you will support their classroom’s Hour of Code. Emphasize your role as an inspirational mentor, not just technical help for the classroom.
+* Your name/company/job description 
+* Days and times you are available to volunteer
+* Why you chose to volunteer to inspire students
+* Ask if there is any paperwork you need to fill out before volunteering
 
-## What to do during your classroom visit, step-by-step
-1. Sign into the school and greet the teacher. Confirm the agreed schedule for the day and discuss any talking points.
-1. Spend 5 minutes talking about computer science.
-1. Introduce yourself: who you are and what you do
-1. Choose [one inspirational video](/inspire) and show it to the entire classroom together. Answer any questions from students.
-1. Share a short story about how you got interested in computer science. What or who inspired you? What do you love most about your job? Keep it short! ;) The point is to let the kids do the coding, leave time for more questions at the end. Share how computer science has broad, worldwide impact.
-1. Let the students dive into the tutorials. Walk around the classroom answering any questions and guiding them through tough puzzles. Try not to give students the solution outright, instead try asking them questions so they can answer themselves what went wrong.
-1. Encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.
-1. At the completion of their Hour of Code, hand out your company swag (stickers are awesome) and answer any remaining questions.
-1. Also important to mention that if you do take pictures/videos during the event -- especially with students -- that you get teacher/parent permission if you would like to post your stories on social media.
+## 3. How to prepare before you volunteer
+
+* Listen to a pre-recorded Volunteer Training webinar
+  * [Recorded sessopm #1](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0)
+  * [Recorded session #2](https://youtu.be/0gLsb0xrb_4)
+* If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](/learn)
+* If you're visiting a school, complete any background checks or required paperwork
+* [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students
+* Prepare a personal story about how you became passionate about computer science
+* Connect with the teacher to discuss what you plan to speak about during your session
+
+## 4. What to expect while volunteering
+
+* Please confirm with teachers and/or parents if you would like to share pictures and/or videos of the class and/or students on social media
+* Join the conversation on FB, Twitter, Instagram, Tumblr with #Hourofcode
+
+### Sample virtual visit agenda
+
+1. Virtual guest speaker sessions usually lasts 20-30 minutes, while in-person visit can be closer to 1 hour or more
+1. Prep talking points before joining Skype call
+1. Join Skype call at time you discussed with teacher
+1. Arrange and test screensharing before call if you will be sharing a short presentation or the Hour of Code web page or videos
+1. Spend 5-10 minutes talking to the class about computer science and/or careers in tech. Be creative! Below are talking points to get you started:
+1. Leave room for Q&A at end so students can ask you questions (10 mins)
+
+### Sample classroom visit agenda
+
+1. Introduce yourself - who you are, where do you work, and what you do?
+1. Icebreaker - share a story and/or ask students questions:
+  * Share a story about how tech affects everyone
+  * Ask students questions about what jobs they are interested in, what their favorite technology is, and how they think it is built?
+  * Share a day in the life at your company
+  * What do you love most about your job?
+  * How many of them use apps on their phones vs. how many are creating apps?
+1. Play the [Hour of Code video](https://www.youtube.com/watch?v=2DxWIxec6yo) if there is a projector in the classroom.
+1. Share more about your job
+  * What or who inspired you?
+  * Did you have a mentor?
+1. Answer student questions
+1. Encourage students to try an [Hour of Code tutorial](/learn)
+1. Thank everyone and share inspirational parting words
+
+## FAQ
+
+### I haven't been contacted by a teacher yet. How can I still volunteer?
+Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+
+### How long do classroom visits last for?
+A virtual classroom visit is 20-30 minutes
+
+### What age group is the Hour of Code tutorial appropriate for?
+Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
+

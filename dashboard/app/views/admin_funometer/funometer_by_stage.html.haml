@@ -1,0 +1,16 @@
+- content_for :head do
+  %script{src:'https://www.google.com/jsapi'}
+
+%h1
+  Fun-O-Meter Stats
+
+%h2
+  Stage: #{@stage_name}
+
+%h3
+  Overall Percentage:
+  = number_to_percentage(@overall_percentage, precision: 2)
+
+= render 'funometer_percentages_by_day'
+
+= render 'funometer_levels'

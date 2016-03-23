@@ -39,9 +39,9 @@ module TableCoerce
     return columns.map do |col|
       if records.empty?
         :string
-      elsif !records.any? { |record| !TableCoerce.is_boolean?(record[col]) }
+      elsif !records.any? { |record| !TableCoerce.boolean?(record[col]) }
         :boolean
-      elsif !records.any? { |record| !TableCoerce.is_number?(record[col]) }
+      elsif !records.any? { |record| !TableCoerce.number?(record[col]) }
         :number
       else
         :string
@@ -57,11 +57,11 @@ module TableCoerce
     records.map do |record|
       val = record[column_name]
       if type == :boolean
-        convertable = TableCoerce.is_boolean?(val)
+        convertable = TableCoerce.boolean?(val)
         val = TableCoerce.to_boolean(val) if convertable
         all_converted = false unless convertable
       elsif type == :number
-        convertable = TableCoerce.is_number?(val)
+        convertable = TableCoerce.number?(val)
         val = TableCoerce.to_number(val) if convertable
         all_converted = false unless convertable
       elsif type == :string
@@ -74,7 +74,7 @@ module TableCoerce
   end
 
   # @param val [String|Boolean|Number]
-  def TableCoerce.is_boolean?(val)
+  def TableCoerce.boolean?(val)
     return true if val == true || val == false
     return false unless val.is_a?(String)
     return !TRUE.match(val).nil? || !FALSE.match(val).nil?
@@ -90,7 +90,7 @@ module TableCoerce
   end
 
   # @param val [String|Boolean|Number]
-  def TableCoerce.is_number?(val)
+  def TableCoerce.number?(val)
     return true if val.is_a?(Numeric)
     return false unless val.is_a?(String)
     # TODO - doesnt work on things like 1,234

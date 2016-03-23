@@ -12,8 +12,24 @@
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "6"
-  }
+    "ideal": "6",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try using a `repeat` loop anytime you need to `move forward` more than two steps.\",\r\n  \"hint_id\": \"4-5_Maze_5_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n   {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You can use more than one `repeat` loop in a puzzle.\",\r\n  \"hint_id\": \"4-5_Maze_5_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -35,10 +51,6 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
         <block type="controls_repeat">
           <title name="TIMES">4</title>
         </block>
@@ -47,5 +59,32 @@
         </block>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">5</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

@@ -28,7 +28,7 @@ el:
           desc: Η Ώρα του Κώδικα
           Maze: Στάδιο 1
         Edit Code:
-          desc: Επεξεργαστείτε τον κώδικα (beta)
+          desc: Επεξεργασία κώδικα (beta)
           MazeEC: Στάδιο 1
         2014 Levels:
           desc: Αναπήδηση (beta)
@@ -46,7 +46,7 @@ el:
           desc: Λαβύρινθος (beta)
           MazeStep: Βήμα Σταδίου
         edit-code:
-          desc: Επεξεργαστείτε τον κώδικα (beta)
+          desc: Επεξεργασία κώδικα (beta)
           MazeEC: Στάδιο 1
           Applab: Στάδιο 2
           ArtistEC: Στάδιο 3
@@ -527,9 +527,9 @@ el:
         gumball_intro: 'Τσιχλόμπαλα Ώρα του Κώδικα - Εισαγωγή'
         gumball_events: 'Τσιχλόμπαλα Ώρα του Κώδικα - Γεγονότα'
         gumball_repeat: 'Τσιχλόμπαλα Ώρα του Κώδικα - Δηλώσεις επανάληψης'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        iceage_intro: 'Ωρα του Κώδικα, Εποχή των Παγετώνων - Εισαγωγή'
+        iceage_events: 'Ωρα του Κώδικα, Εποχή των Παγετώνων - Γεγονότα'
+        iceage_repeat: 'Ωρα του Κώδικα, Εποχή των Παγετώνων - Εντολές επανάληψης'
     callout:
       text:
         drag_blocks: |-

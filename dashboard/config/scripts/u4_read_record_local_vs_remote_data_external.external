@@ -7,9 +7,9 @@ markdown <<MARKDOWN
 
 You just successfully read data from a database back into your app. This is very useful, but you'll now need to think about a new set of problems.
 
-**Problem: Your app has both a "local" and remote copy of the data**. Currently you have a remote copy of your data in your database and a "local" copy of it stored in your app in a variable called `contacts`. Even if all of your data is in your database, you will still need to keep some data in your app so that you can actually display it to the user. When you make changes to your data (for example when you add or remove a contact from your app), **how do we ensure that our local and remote data still agree?**
+**Problem: Your app has both a "local" and remote copy of the data**. Currently you have a remote copy of your data in your database and a "local" copy of it stored in your app in a variable called `contacts`. Even if all of your data is in your database, you will still need to keep some data in your app so that you can actually display it to the user. When you make changes to your data (for example when you add or remove a contact from your app), **how do you ensure that your local and remote data still agree?**
 
-**Solution: Never make changes directly in local data**. When you add or remove data make the changes in your database first and then **refresh your local copy of the data by reading from the database**.
+**Solution: Never make changes directly in local data**. When you add or remove data, make the changes in your database first, and then **refresh your local copy of the data by reading from the database**.
 
 We will be **implementing this pattern in the next several exercises**.
 

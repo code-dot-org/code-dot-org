@@ -7,7 +7,8 @@ var _ = require('lodash');
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
   initializeCodeMirror: require('./initializeCodeMirror'),
-  jsonEditor: require('./jsonEditor')
+  jsonEditor: require('./jsonEditor'),
+  ajaxSubmit: require('./ajaxSubmit')
 });
 
 // TODO: Remove when global `CodeMirror` is no longer required.

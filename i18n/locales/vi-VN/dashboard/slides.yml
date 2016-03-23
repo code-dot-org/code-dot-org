@@ -226,14 +226,14 @@ vi:
         text: 'In this example, our "counter" loop says "count with counter from 50 to 90 by 10" and inside it, we have our "draw a square" block. Drag the "counter" block from the "Variables" section into the "length" spot.'
       4:
         image: notes/stage11_4.jpg
-        text: "This means our artist is going to draw a square that has 50 pixel length sides, then it will add 10 to that and draw a square with 60 pixel length sides. Then it will keep adding 10 and drawing squares until it reaches 90. So we'll have squares of 50, 60, 70, 80, and 90."
+        text: Có nghĩa là họa sĩ của chúng ta sẽ đi vẽ một hình vuông có cạnh dài là 50 pixel, sau đó thêm 10 vào để vẽ thêm một hình vuông có cạch dài 60 pixel. Cứ như thế, mỗi lần vẽ tăng lên 10 cho đến khi đạt 90. Như vậy, chúng ta sẽ có các hình vuông có cạnh dài 50, 60, 70, 80, và 90 pixel.
     parameters:
       1:
         image: notes/stage15_1.jpg
         text: Hi, tôi là Janete, và tôi là một kỹ sư tại Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: What if we want to draw a bunch of triangles and have their lengths be different sizes?
+        text: Sẽ như thế nào nếu như chúng ta muốn vẽ thật nhiều hình tam giác có độ dài khác nhau?
       3:
         image: notes/stage15_3.jpg
         text: We could write all that code out by hand or we can use a function with parameters.

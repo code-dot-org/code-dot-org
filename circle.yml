@@ -3,6 +3,7 @@ machine:
     version: 2.2.3
   environment:
     RAILS_ENV: test
+    SPROCKETS_DERAILLEUR_WORKER_COUNT: 2 # CircleCI build VMs have a memory limit of 4G
   services:
     - docker
 dependencies:
@@ -13,7 +14,7 @@ dependencies:
     - sudo apt-get install libicu-dev
     - bundle install
     - "printf \"bundler_use_sudo: false\n\" > locals.yml"
-    - rake install:pegasus
+    - bundle exec rake install:pegasus
     - npm install:
         pwd:
             apps

@@ -1,13 +1,6 @@
 /**
  * @overview Wrapped pub/sub service client APIs (like Pusher)
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
-
- maxlen: 120
- */
 /* global Pusher */
 'use strict';
 
@@ -59,8 +52,6 @@ PubSubService.create = function (pubSubConfig) {
  * @constructor
  * @implements PubSubService
  */
-// Disable "unused variable" errors for null implementation declarations
-/* jshint unused:false */
 PubSubService.NullService = function () { };
 
 /**
@@ -77,9 +68,6 @@ PubSubService.NullService.prototype.subscribe = function (channelID) {
  * @param {string} channelID
  */
 PubSubService.NullService.prototype.unsubscribe = function (channelID) { };
-
-// Re-enable "unused variable" error
-/* jshint unused:true */
 
 /**
  * Wrapped Pusher.com API.

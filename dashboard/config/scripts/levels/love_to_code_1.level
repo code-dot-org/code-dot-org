@@ -39,8 +39,7 @@
       "downButton",
       "upButton"
     ],
-    "first_sprite_index": "0",
-    "maze_data": null
+    "first_sprite_index": "0"
   },
   "published": true
 }]]></config>

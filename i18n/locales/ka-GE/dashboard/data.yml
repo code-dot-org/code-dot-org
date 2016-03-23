@@ -99,14 +99,14 @@ ka:
         Jigsaw: ფაზლი
         MazeStep: ლაბირინთი ნაბიჯ-ნაბიჯ
         Wordsearch: ძებნა სიტვის მიხედვით
-        Webapp: აპლიკაციების ლაბორატორია
+        Webapp: App Lab
         ArtistEC: მხატვარი
         TextMatch: ტექსტების შედარება
-        StudioEC: თამაშების ლაბორატორია
-        Applab: აპლიკაციების ლაბორატორია
+        StudioEC: თამაშების ლაბი
+        Applab: App Lab
         NetSim: ინტერნეტ-სიმულატორი
         Custom: მხატვარი
-        CustomStudio: თამაშების ლაბორატორია
+        CustomStudio: თამაშების ლაბი
     trophy:
       name:
         Bronze: ბრინჯაო

@@ -2,7 +2,7 @@ title 'CSP Unit 5 - Performance Tasks'
 description 'This unit covers the preparation and completion of the Explore and Create Performance Tasks.'
 description_short 'Performance Tasks'
 login_required 'true'
-hidden 'true'
+hidden 'false'
 
 #1
 stage 'Explore PT Prep'

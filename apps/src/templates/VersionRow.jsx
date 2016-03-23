@@ -4,7 +4,7 @@
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
  */
-module.exports = React.createClass({
+var VersionRow = React.createClass({
   propTypes: {
     lastModified: React.PropTypes.instanceOf(Date),
     isLatest: React.PropTypes.bool,
@@ -46,3 +46,4 @@ module.exports = React.createClass({
     $('.versionTimestamp').timeago();
   }
 });
+module.exports = VersionRow;

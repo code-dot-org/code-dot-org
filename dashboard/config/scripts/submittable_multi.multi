@@ -1,0 +1,12 @@
+name 'Submittable Multi'
+title 'Submittable Multiple choice'
+description ''
+question 'What is your favorite color?'
+submittable 'true'
+
+wrong 'blue'
+wrong 'green'
+wrong 'teal'
+wrong 'yellow'
+right 'real orange of course'
+wrong 'red'

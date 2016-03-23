@@ -65,8 +65,8 @@ var Cell = React.createClass({
 var Grid = React.createClass({
   propTypes: {
     cells: React.PropTypes.arrayOf(React.PropTypes.arrayOf(React.PropTypes.object)).isRequired,
-    selectedRow: React.PropTypes.number.isRequired,
-    selectedCol: React.PropTypes.number.isRequired,
+    selectedRow: React.PropTypes.number,
+    selectedCol: React.PropTypes.number,
     skin: React.PropTypes.string.isRequired,
     onSelectionChange: React.PropTypes.func.isRequired
   },
@@ -77,6 +77,7 @@ var Grid = React.createClass({
         var selected = this.props.selectedRow === x && this.props.selectedCol === y;
 
         return (<Cell
+          key={'cell-' + x + '-' + y}
           cell={cell}
           row={x}
           col={y}
@@ -86,7 +87,7 @@ var Grid = React.createClass({
         />);
       }, this);
 
-      return (<tr>
+      return (<tr key={'row-' + x}>
         {tableDatas}
       </tr>);
     }, this);

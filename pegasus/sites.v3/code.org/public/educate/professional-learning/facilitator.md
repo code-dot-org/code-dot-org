@@ -13,7 +13,7 @@ The ideal facilitator is an enthusiastic supporter of computer science education
 
 Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver high-quality professional development on Code.org's curriculum.
 
-Accepted participants will attend an all expense paid trip to Code.org's Facilitator Summit May 20-22, 2016 in Nashville, TN. During the Summit, Code.org will provide instruction to prepare facilitators to deliver professional development to teachers on the Code.org curriculum. **Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.** Please see individual program details for more information.
+Accepted participants will attend an all expense paid trip to Code.org's Facilitator Summit May 20-22, 2016 in New Orleans, LA. During the Summit, Code.org will provide instruction to prepare facilitators to deliver professional development to teachers on the Code.org curriculum. **Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.** Please see individual program details for more information.
 
 The Summit is designed to be a fabulous experience to welcome you to the extended Code.org family.
 

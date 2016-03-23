@@ -14,7 +14,7 @@
     "maze": "[[0,0,0,0,0,0,1,1],[0,0,0,0,0,0,1,1],[0,0,0,0,0,0,0,0],[0,1,1,1,0,0,0,0],[0,1,2,1,0,0,0,0],[0,1,1,1,0,1,1,1],[0,0,0,0,0,1,1,1],[0,0,0,0,0,1,1,1]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,-2,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Move me to the hole and fill it with two shovelfuls of dirt, using the \"fill\" block.",
+    "instructions": "Move me to the hole and fill it with two shovelfuls of dirt, using the `fill` block.",
     "ideal": "4",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -26,8 +26,15 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "markdown_instructions": "Move me to the hole and fill it with two shovelfuls of dirt, using the `fill` block.",
+    "never_autoplay_video": "false",
+    "step_speed": "2",
+    "examples_required": "false",
+    "fast_get_nectar_animation": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -46,12 +53,25 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
+      <block type="maze_fill"/>
+    </recommended_blocks>
+    <solution_blocks>
       <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_fill"/>
-        <block type="maze_fill"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_fill">
+                  <next>
+                    <block type="maze_fill"/>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
       </xml>
-    </required_blocks>
+    </solution_blocks>
   </blocks>
 </Karel>

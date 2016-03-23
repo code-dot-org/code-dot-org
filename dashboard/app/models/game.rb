@@ -47,6 +47,7 @@ class Game < ActiveRecord::Base
   CALC = 'calc'
   EVAL = 'eval'
   TEXT_COMPRESSION = 'text_compression'
+  LEVEL_GROUP = 'level_group'
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
@@ -102,6 +103,10 @@ class Game < ActiveRecord::Base
 
   def self.frequency_analysis
     @@game_frequency_analysis ||= find_by_name("FrequencyAnalysis")
+  end
+
+  def self.multi
+    @@game_multi ||= find_by_name("Multi")
   end
 
   def unplugged?
@@ -201,6 +206,7 @@ class Game < ActiveRecord::Base
         Vigenere:vigenere
         Craft:craft
         Gamelab:gamelab
+        LevelGroup:level_group
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

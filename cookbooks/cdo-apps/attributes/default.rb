@@ -12,5 +12,5 @@ default['cdo-apps'] = {
       'en' => 'English',
     },
   },
-
+  'nginx_enabled' => true
 }

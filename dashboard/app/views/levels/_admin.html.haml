@@ -1,3 +1,6 @@
+- content_for(:head) do
+  = javascript_include_tag 'js/levelbuilder'
+
 - if current_user && current_user.admin?
   = render layout: 'shared/admin' do
     %strong= @level.name
@@ -9,8 +12,7 @@
           = link_to 'edit', edit_level_path(@level)
           - if @level.is_a? Blockly
             %ul
-              - if @level.is_a? Artist or @level.is_a? Calc or @level.is_a? Eval
-                %li= link_to 'solution', level_edit_blocks_path(@level, :solution_blocks)
+              %li= link_to 'solution', level_edit_blocks_path(@level, :solution_blocks)
               %li= link_to 'toolbox', level_edit_blocks_path(@level, :toolbox_blocks)
               %li= link_to "start (#{Blockly.count_xml_blocks(@level.start_blocks)})", level_edit_blocks_path(@level, :start_blocks)
               %li= link_to "required (#{Blockly.count_xml_blocks(@level.required_blocks)})", level_edit_blocks_path(@level, :required_blocks)
@@ -43,7 +45,7 @@
       = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
     .project_admin
 :javascript
-  #{render partial: 'shared/ajax_submit', formats: [:js],  locals: {form_selector: '.clone_level'}}
+  window.levelbuilder.ajaxSubmit('.clone_level');
   $('.clone_level').on('ajax:beforeSend', function (e, xhr) {
     var validation_error = $('#validation-error').detach();
     $(e.target).parent().append(validation_error);

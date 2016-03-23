@@ -2,24 +2,26 @@ name 'U6 - ImportExport - Student Introduction'
 title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
+css 'unplugged'
 markdown <<MARKDOWN
 ## Unit 4: Lesson 06 - Importing and Exporting Data
 
 # Background
 
-words
+In App Lab, you can use the "Remix" button to make your own copy of an app, which you can then add to and improve. The one caveat of remixing is that none of the data from the original app's database gets transferred over to your new copy. This means that, if you want to make an exact copy of an existing app, you'll need to export the data from the old database and import it into the new database.
+
+In this lesson, you will learn to use the import and export tools in App Lab.
 
 # Vocabulary
-* **words:**
+* **Import** - load in data from a CSV file into a table in a database.
+* **Export** - create a downloadable CSV file from the existing data in a table from a database.
 
 # Lesson
 
-* words.
+* Examine how remixing apps affects the data stored.
+* Import data from a CSV file into a database.
+* Export data from an existing database to a downloadable CSV file.
 
-
-# Resources
-
-* Video: <a href="https://google.com" target="_blank"> Tutorial - JavaScript Objects</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

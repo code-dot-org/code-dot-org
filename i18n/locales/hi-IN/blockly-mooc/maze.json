@@ -18,6 +18,7 @@
   "fillTooltip":"place 1 unit of dirt",
   "finalLevel":"बधाइयाँ! आपने अंतिम पहेली हल कर दी है।",
   "flowerEmptyError":"The flower you're on has no more nectar.",
+  "didNotCollectEverything":"Make sure you don't leave any nectar or honey behind!",
   "get":"पाना",
   "heightParameter":"ऊँचाई",
   "holePresent":"वहाँ एक छेद है",

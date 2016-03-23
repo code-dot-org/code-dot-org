@@ -116,7 +116,6 @@ def geocode_zip_code(code)
   "#{zip_code[:latitude_f]},#{zip_code[:longitude_f]}"
 end
 
-
 require 'securerandom'
 require 'json'
 

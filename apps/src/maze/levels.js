@@ -612,7 +612,7 @@ for (var levelId in karelLevels) {
 }
 
 // Merge in Wordsearch levels.
-for (var levelId in wordsearchLevels) {
+for (levelId in wordsearchLevels) {
   module.exports['wordsearch_' + levelId] = wordsearchLevels[levelId];
 }
 

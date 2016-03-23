@@ -3,7 +3,7 @@ require File.expand_path('../router', __FILE__)
 require 'rack/ssl-enforcer'
 use Rack::SslEnforcer,
   # Add HSTS header to all HTTPS responses in all environments.
-  hsts: { expires: 31536000, subdomains: false },
+  hsts: { expires: 31_536_000, subdomains: false },
   # HTTPS redirect is handled at the HTTP-cache layer (CloudFront/Varnish).
   # The only exception is in :development, where no HTTP-cache layer is present.
   only_environments: 'development',
@@ -24,6 +24,12 @@ if rack_env?(:development)
 
   use Rack::Whitelist::Upstream,
     HttpCache.config(rack_env)[:pegasus]
+end
+
+if CDO.throttle_data_apis
+  require 'cdo/rack/attack'
+  RackAttackConfigUpdater.new.start
+  use Rack::Attack
 end
 
 require 'files_api'

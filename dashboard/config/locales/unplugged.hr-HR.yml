@@ -4,26 +4,27 @@
       Unplug1:
         title: Uvod u Informatiku
         desc: Ova lekcija će predstaviti koncept računalne znanosti i objasniti što
-          radi računalni znanstvenik. Studenti će također dobiti mogućnost da se osjećaju
-          kao jedan. Na kraju lekcije, svaki student će dobiti podsjetnik svega što
-          je naučio/la. Možda nećete htjeti naučiti djecu neke od kompliciranijih
-          riječi koje dolaze uz lekcije, ali puno je produktivnije upoznati ih s takvim
-          riječima na jednostavan i zabavan način, nego u nekim drugim, težim situacijama.
+          radi računalni znanstvenik. Studenti će također dobiti mogućnost biti u
+          ulozi računalnog znanstvenika. Do kraja lekcije, svaki student dobit će
+          podsjetnik svega što je naučio/la. Možda nećete htjeti naučiti djecu neke
+          od kompliciranijih riječi koje dolaze uz lekcije, no upoznanje s takvim
+          riječima na jednostavan i zabavan način je pno produktivnije  nego čekanje
+          pogodnije situacije.
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
         title: Razmišljati poput računala
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: Pomoću papira i markera studenti će naučiti četiri koraka u razmišljanj
+          kao računalo.. Nakon kratkog uvoda, studenti bi trebali podijeliti u grupe
+          gdje će stvoritiupute za ostale studente kako bi nacrtali određeno čudovište
+          (iz unaprjed izabranog kataloga s čludovištima). Cijeli zadatak mora se
+          raščlaniti, zatim će timovi analizirati sva čudovišta u katalogu, njihove
+          uzorke, uočiti različite detalje čudovišta te na kraju iskoristiti te informacije
+          za stvaranje algoritama (upute) crtanja koji će koristiit kako bi drugi
+          tim nacrtao to određeno čudovište. Timovi će zatim zamijeniti algoritame
+          s drugima i nacrtati čudovište koje taj algoritam opisuje. Prikazuje li
+          crtež čudovište koje je tim koji je napisao algoritem odabrao?
         pdfs:
         - unplug2
         video: Unplug2

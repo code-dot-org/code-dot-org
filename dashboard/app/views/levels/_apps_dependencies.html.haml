@@ -1,5 +1,6 @@
--# Expected locals: app, use_blockly, use_droplet, use_netsim, use_applab, hide_source, static_asset_base_path
--# Provide default values for some of these
+-#
+  Expected locals: app, use_blockly, use_droplet, use_netsim, use_applab, hide_source, static_asset_base_path
+  Provide default values for some of these
 - use_blockly ||= false
 - use_droplet ||= false
 - use_netsim ||= false
@@ -12,16 +13,13 @@
 %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
 %link{href: asset_path("css/#{app}.css"), rel: 'stylesheet', type: 'text/css'}
 
+-# Ensure Font Awesome is loaded for use in apps
+%span{style: 'font: 1px FontAwesome', id: 'fa-preload'} &nbsp;
+
 -# Droplet style dependencies (only when editor present)
 - if use_droplet && !hide_source
   %link{href: asset_path('css/droplet/droplet.min.css'), rel: 'stylesheet', type: 'text/css'}
   %link{href: asset_path('css/tooltipster/tooltipster.min.css'), rel: 'stylesheet', type: 'text/css'}
-
--# Applab style dependencies
-- if use_applab
-  -# Might be possible to not load this on share pages, but right now we get some
-  -# weird display issues when we do that. Good news is this is < 10kb
-  %link{href: asset_path('css/colpick.css'), rel: 'stylesheet', type: 'text/css'}
 
 -# Gamelab script dependencies
 - if use_gamelab
@@ -52,7 +50,7 @@
 
 -# Common script dependencies
 %script{src: asset_path('js/marked/marked.js')}
-%script{src: asset_path('js/initApp.js')}
+%script{src: asset_path('js/initApp/initApp.js')}
 %script{src: minifiable_asset_path('js/common.js')}
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: asset_path("js/#{js_locale}/#{app}_locale.js")}

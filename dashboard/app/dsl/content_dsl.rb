@@ -6,6 +6,7 @@ class ContentDSL < BaseDSL
   end
   def title(text) @hash[:title] = text end
   def type(text) @hash[:type] = text end
+  def submittable(text) @hash[:submittable] = text end
 
   # legacy
   def description(text) @hash[:content1] = text end

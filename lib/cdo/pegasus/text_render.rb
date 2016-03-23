@@ -25,7 +25,7 @@ module TextRender
 
       search_extnames = ['.png','.jpeg','.jpg','.gif']
 
-      path = File.find_first_existing(String.multiply_concat(search_bases, search_extnames))
+      path = FileUtility.find_first_existing(String.multiply_concat(search_bases, search_extnames))
       return nil if path.nil?
 
       "/images/fit-320/avatars/#{File.basename(path)}"
@@ -41,7 +41,7 @@ module TextRender
 
       search_extnames = ['.haml', '.html', '.md', '.txt']
 
-      path = File.find_first_existing(String.multiply_concat(search_bases,search_extnames))
+      path = FileUtility.find_first_existing(String.multiply_concat(search_bases,search_extnames))
       return "Partial not found: '#{uri}'" if path.nil?
 
       TextRender.file(path, locals)
@@ -118,6 +118,16 @@ module TextRender
           "<div #{attribute}='#{value}'>"
         end
         full_document
+      end
+
+      def preprocess(full_document)
+        wrap_details_tags_in_divs(full_document)
+      end
+
+      def wrap_details_tags_in_divs(full_document)
+        full_document.
+            gsub(/<details>/, "\n<div><details>").
+            gsub(/<\/details>/, "</details></div>\n")
       end
     end
 

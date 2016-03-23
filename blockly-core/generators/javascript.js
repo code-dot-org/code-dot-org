@@ -198,11 +198,13 @@ Blockly.JavaScript.translateVarName = function(name) {
  * Calls any statements following this block.
  * @param {!Blockly.Block} block The current block.
  * @param {string} code The JavaScript code created for this block.
+ * @param {boolean} opt_showHidden Whether or not to show non-user visible
+ *     blocks, defaults to true.
  * @return {string} JavaScript code with comments and subsequent blocks added.
  * @this {Blockly.CodeGenerator}
  * @private
  */
-Blockly.JavaScript.scrub_ = function(block, code) {
+Blockly.JavaScript.scrub_ = function(block, code, opt_showHidden) {
   if (code === null) {
     // Block has handled code generation itself.
     return '';
@@ -230,6 +232,6 @@ Blockly.JavaScript.scrub_ = function(block, code) {
     }
   }
   var nextBlock = block.nextConnection && block.nextConnection.targetBlock();
-  var nextCode = this.blockToCode(nextBlock);
+  var nextCode = this.blockToCode(nextBlock, opt_showHidden);
   return commentCode + code + nextCode;
 };

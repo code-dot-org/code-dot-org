@@ -16,7 +16,6 @@ module WorkshopConstants
   PHASE_3D = 'Phase 3D'
   PHASE_4 = 'Phase 4'
 
-
   PROGRAM_TYPES = {
     1 => {id: 1, short_name: CS_IN_S, long_name: 'Computer Science in Science'},
     2 => {id: 2, short_name: CS_IN_A, long_name: 'Computer Science in Algebra'},

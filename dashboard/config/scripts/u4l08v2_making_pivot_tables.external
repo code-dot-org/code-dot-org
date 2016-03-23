@@ -24,7 +24,7 @@ Here is what we're going for:
 # Your First Summary Table
 In most spreadsheet programs a Summary Table is called a **pivot table**.
 
-**Do This:** With the spreadsheet open in Google Sheets choose **Data** -> **Pivot Table...**
+**Do This:** With the spreadsheet open in Google Sheets choose _**Data** -> **Pivot table...**_
 
 ![](https://images.code.org/385c4a2bd1e6f8b61d4b10c12a473bdf-image-1453471640227.gif)
 
@@ -42,23 +42,23 @@ The menu on the right side of the pivot table lets you choose what you want the 
 
 ![](https://images.code.org/e98f12034c463945e9d8d0b09951047c-image-1453394952054.gif)
 
-*Setting the Rows to "movie", Values to "rating", and Summarize By to AVERAGE*
+*Setting the Rows to "movie," Values to "rating," and Summarize By to AVERAGE*
 
 # What Happened? Computation!
 **The power of the pivot table** is that it allows you to compute things you could *never* do by just filtering and sorting.  The pivot table is doing a lot of computing behind the scenes for you - which is great - but you should understand what's really happening so you can make your own choices in the future.  Here's a synopsis:
 
 * **Rows** - Group By: movie
 	* **Rows act like the major categories or groupings for which you want to calculate values.**   
-    * **The Computation:** When you set the rows to be "movie", the software finds all of the unique movie titles in the raw data set and puts one on each row.  This is called **aggregation** which is a fancy word that means grouping or clustering.  
+    * **The Computation:** When you set the rows to be "movie," the software finds all of the unique movie titles in the raw dataset and puts one on each row.  This is called **aggregation**, which is a fancy word that means grouping or clustering.  
     
     
-* **Values** - Display: rating summarized by: AVERAGE
+* **Values** - Display: rating; Summarize by: AVERAGE
 	* **Values** lets you specify the **computation that should happen for each row.**
-    * **The Computation:** We're interested in the average rating for each movie, so for *Values* we choose *rating*, summarized by: *AVERAGE*. 
+    * **The Computation:** We're interested in the average rating for each movie, so for *Values* we choose *rating*, Summarize by: *AVERAGE*. 
 
 <hr>
   
-# Let's Change the Value -- Summarize by: COUNT
+# Let's Change the Value - Summarize by: COUNT
 Change *summarize by* from AVERAGE to COUNT. Now, instead of computing the average rating, this will **count the number of ratings for each movie**. 
 
 ![](https://images.code.org/4e3cceb21e2d54c500564a352abc4b0c-image-1453396358019.gif)
@@ -77,18 +77,18 @@ Let's show **both the average rating *and* the count** side-by-side in the table
 
 <hr>
 
-# That's it for the Basics of Pivot Tables!
+# That's It for the Basics of Pivot Tables!
 There's not much more to it than that. Once you get the hang of pivot tables they can be a very powerful tool for manipulating data. There are more advanced things you can do with a pivot table if you like, but you know enough now that you can probably just play around with the other settings and see what happens.
 
 **Key Ideas**:
 
- * **Summary tables (pivot tables) are a form of visualizing data**. Yes, it's a table, but by aggregating and summarizing information from a large data set, **summary tables allow you to see things in the data** you might otherwise not.
+ * **Summary tables (pivot tables) provide a way to visualize data**. Yes, it's a table, but by aggregating and summarizing information from a large data set, **summary tables allow you to see things in the data** you might otherwise not see.
     
- * **Summary tables allow you to manipulate and create new data** Even for our simple movies example here, the raw data didn't contain the average rating for every movie, or count how many ratings there were, we had to compute it, and the pivot table let us do that quickly and easily.
+ * **Summary tables allow you to manipulate and create new data**. Even for our simple movies example here, the raw data didn't contain the average rating for every movie, or count how many ratings there were. We had to compute it, and the pivot table let us do that quickly and easily.
     
  * **A summary table helps you look at your data in new ways.** Think: how could data be grouped? What could be calculated? Once you know how to make a summary table you can begin to look at raw data and ask questions that you know might be possible to answer.  
  
- * **A summary table can be a first step toward a good visualization** Often it's difficult to make a meaningful chart or graphic out of raw data.  You often want to **summarize it first, then chart it!** 
+ * **A summary table can be a first step toward a good visualization.** Often it's difficult to make a meaningful chart or graphic out of raw data.  You often want to **summarize it first, then chart it!** 
 
 
 Click continue to see an example...
