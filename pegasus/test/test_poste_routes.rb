@@ -5,7 +5,6 @@ require_relative 'fixtures/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
 
 class PosteRoutesTest < Minitest::Test
-
   describe 'Poste Routes' do
     before do
       FakeDashboard::use_fake_database
@@ -46,7 +45,5 @@ class PosteRoutesTest < Minitest::Test
     def with_role(role)
       Documents.any_instance.stubs(:dashboard_user_id).returns(role.nil? ? nil : role[:id])
     end
-
   end
-
 end
