@@ -79,7 +79,18 @@ GameLabP5.prototype.init = function (options) {
     this.pop();
   };
 
-  // Override p5.createSprite so we can replace the AABBops() function
+  // Disable fullScreen() method:
+  window.p5.prototype.fullScreen = function (val) {
+    return false;
+  };
+
+  // Add new p5 methods:
+  window.p5.prototype.didMouseMove = function () {
+    return this.pmouseX !== this.mouseX || this.pmouseY !== this.mouseY;
+  };
+
+  // Override p5.createSprite so we can replace the AABBops() function and add
+  // some new methods that are animation shortcuts
   window.p5.prototype.createSprite = function(x, y, width, height) {
     /*
      * Copied code from p5play from createSprite()
@@ -412,7 +423,13 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
 
 GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
   return [
-    '_userNode'
+    '_userNode',
+    '_elements',
+    '_curElement',
+    'elt',
+    'canvas',
+    'parent',
+    'p5'
   ];
 };
 
@@ -446,17 +463,20 @@ GameLabP5.prototype.getCustomMarshalObjectList = function () {
     { instance: window.p5.Font },
     { instance: window.p5.Table },
     { instance: window.p5.TableRow },
-    { instance: window.p5.Element },
   ];
 };
 
 GameLabP5.prototype.getGlobalPropertyList = function () {
 
   var propList = {};
+  var blockedProps = this.getCustomMarshalBlockedProperties();
 
-  // Include every property on the p5 instance in the global property list:
+  // Include every property on the p5 instance in the global property list
+  // except those on the custom marshal blocked list:
   for (var prop in this.p5) {
-    propList[prop] = [ this.p5[prop], this.p5 ];
+    if (-1 === blockedProps.indexOf(prop)) {
+      propList[prop] = [ this.p5[prop], this.p5 ];
+    }
   }
 
   // And also create a 'p5' object in the global namespace:

@@ -197,6 +197,7 @@ draw() - USEFUL?
 */
 
   // Input
+  {func: 'didMouseMove', category: 'Input', type: 'value' },
   {func: 'keyIsPressed', category: 'Input', type: 'property', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/keyIsPressed" },
   {func: 'key', category: 'Input', type: 'property', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/key" },
   {func: 'keyCode', category: 'Input', type: 'property', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/keyCode" },
@@ -211,12 +212,15 @@ draw() - USEFUL?
   {func: 'pmouseX', category: 'Input', type: 'property', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/pmouseX" },
   {func: 'pmouseY', category: 'Input', type: 'property', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/pmouseY" },
   {func: 'mouseButton', category: 'Input', type: 'property', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/mouseButton" },
+  {func: 'mouseDown', paletteParams: ['button'], params: ["LEFT"], category: 'Input', type: 'value' },
   {func: 'mouseIsPressed', category: 'Input', type: 'property', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/mouseIsPressed" },
   {func: 'mouseMoved', block: 'function mouseMoved() {}', expansion: 'function mouseMoved() {\n  __;\n}', category: 'Input', customDocURL: "http://p5js.org/reference/#/p5/mouseMoved" },
   {func: 'mouseDragged', block: 'function mouseDragged() {}', expansion: 'function mouseDragged() {\n  __;\n}', category: 'Input', customDocURL: "http://p5js.org/reference/#/p5/mouseDragged" },
   {func: 'mousePressed', block: 'function mousePressed() {}', expansion: 'function mousePressed() {\n  __;\n}', category: 'Input', customDocURL: "http://p5js.org/reference/#/p5/mousePressed" },
   {func: 'mouseReleased', block: 'function mouseReleased() {}', expansion: 'function mouseReleased() {\n  __;\n}', category: 'Input', customDocURL: "http://p5js.org/reference/#/p5/mouseReleased" },
   {func: 'mouseClicked', block: 'function mouseClicked() {}', expansion: 'function mouseClicked() {\n  __;\n}', category: 'Input', customDocURL: "http://p5js.org/reference/#/p5/mouseClicked" },
+  {func: 'mouseWentDown', paletteParams: ['button'], params: ["LEFT"], category: 'Input', type: 'value' },
+  {func: 'mouseWentUp', paletteParams: ['button'], params: ["LEFT"], category: 'Input', type: 'value' },
   {func: 'mouseWheel', block: 'function mouseWheel() {}', expansion: 'function mouseWheel() {\n  __;\n}', category: 'Input', customDocURL: "http://p5js.org/reference/#/p5/mouseWheel" },
 
   // Math
