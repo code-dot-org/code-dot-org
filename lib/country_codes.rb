@@ -248,7 +248,5 @@ COUNTRY_CODE_TO_COUNTRY_NAME = {
 # Returns the name of the country whose two character country code is code.
 # If code is not a valid two character country code, returns code.
 def country_name_from_code(code)
-  country_name = COUNTRY_CODE_TO_COUNTRY_NAME[code.to_s.strip.upcase]
-  return code unless country_name
-  return country_name
+  return COUNTRY_CODE_TO_COUNTRY_NAME[code.to_s.strip.upcase] || code
 end
