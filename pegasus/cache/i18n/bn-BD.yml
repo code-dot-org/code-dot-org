@@ -765,13 +765,13 @@
   dashboard_login_picture: "ছবি"
   dashboard_login_none: "ই-মেইল"
   dashboard_new_password: "নতুন পাসওয়ার্ড"
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: "শুরু হয়নি"
+  dashboard_progress_in_progress: "অগ্রসর হচ্ছে"
   dashboard_progress_not_completed: "সম্পন্ন নয়"
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: "দাখিল"
   dashboard_stage: "ধাপ"
   dashboard_puzzle: "ধাঁধা"
   dashboard_question: "প্রশ্ন"

@@ -482,6 +482,16 @@ sk:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Ďakujeme
+    wrong_body: Thank you for submitting answers.
+    correct_title: Ďakujeme
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Ďakujeme
+    wrong_body: Thank you for submitting answers.
+    correct_title: Ďakujeme
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Nesprávne riešenie
     wrong_body: 'Zadané riešenie nie je správne.  Prosím skúste to znova!'
@@ -499,9 +509,6 @@ sk:
     placeholder: Zadajte vašu odpoveď
     open_response_title: Vďaka
     open_response_body: Ďakujeme za Vašu reakciu!
-  level_group:
-    correct_title: Ďakujeme
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: ok
     startover_title: Naozaj chceš začať odznova?

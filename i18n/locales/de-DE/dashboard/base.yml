@@ -485,6 +485,16 @@ de:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Vielen Dank
+    wrong_body: Thank you for submitting answers.
+    correct_title: Vielen Dank
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Vielen Dank
+    wrong_body: Thank you for submitting answers.
+    correct_title: Vielen Dank
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Falsche Lösung
     wrong_body: Die Lösung, die du eingegeben hast, ist nicht korrekt. Bitte versuche es erneut!
@@ -502,9 +512,6 @@ de:
     placeholder: Gebe hier deine Antwort ein
     open_response_title: Danke
     open_response_body: Danke für deine Antwort!
-  level_group:
-    correct_title: Vielen Dank
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Bist du dir sicher das du neu anfangen möchtest?

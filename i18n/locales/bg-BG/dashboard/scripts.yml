@@ -1641,3 +1641,8 @@ bg:
           "Eval: Conditionals": 'Оценка: Условия'
           "Unplugged: Collision Detection and the Distance Formula": 'Ънплъгд: Collision Detection и формула за разстояние'
           "Play Lab: Collision Detection (Big Game)": 'Игрална лаборатория: Collision Detection (голямата игра)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

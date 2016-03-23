@@ -156,7 +156,7 @@ is:
           description_short: Notum kóða til að fylgja Önnu og Elsu er þær kanna töfra og fegurð íss.
         course4:
           description_short: Nemendur sem taka Námskeið 4 ættu að hafa lokið námskeiðum 2 og 3 áður.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: 'Námskeið 4 er ætlað nemendum sem hafa lokið námskeiðum 2 og 3. Nemendur læra að fást við þrautir sem verða æ flóknari en læra um leið að samnýta ýmiss hugtök við lausn þrautanna. Í lok námskeiðsins munu nemendur hafa búið til forrit sem sýna margvíslega færni þeirra svo sem notkun "frá" lykkja og falla með stikum. Hentar 4 - 8 bekk.'
           "Artist: Variables": 'Listamaður: Breytur'
           "Bee: For Loops": 'Býfluga: Frá lykkjur'
           title: Námskeið 4
@@ -1462,7 +1462,7 @@ is:
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
-          description_short: Programming
+          description_short: Forritun
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           While Loop Basics: While Loop Basics
           While Loops_ Counting Flips: While Loops_ Counting Flips
@@ -1641,3 +1641,8 @@ is:
           "Eval: Conditionals": 'Greining: Skilyrði'
           "Unplugged: Collision Detection and the Distance Formula": 'Verkefni án tölvu: Skynjun árekstra og fjarlægðarformúlan'
           "Play Lab: Collision Detection (Big Game)": 'Leikjasmiðjan: Skynjun árekstra (Stórleikur)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab
