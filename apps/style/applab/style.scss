@@ -466,7 +466,8 @@ div#visualizationResizeBar {
   background: linear-gradient(to bottom right, red, orange, yellow, green, blue); /* Standard syntax */
 }
 
-.TopInstructions_showHideButton {
+// TODO - figure out final name of this
+.CollapserIcon_showHideButton {
   &:hover {
     cursor: pointer;
     color: white;

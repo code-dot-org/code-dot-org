@@ -4,6 +4,7 @@ var _ = require('lodash');
 var color = require('../../color');
 
 var Instructions = require('./Instructions.jsx');
+var CollapserIcon = require('./CollapserIcon.jsx');
 
 var styles = {
   main: {
@@ -11,15 +12,6 @@ var styles = {
     marginLeft: 15,
     right: 0,
     // left handled by media queries for .workspace-right
-  },
-  showHideButton: {
-    position: 'absolute',
-    top: 0,
-    left: 8,
-    margin: 0,
-    lineHeight: '30px',
-    fontSize: 18
-    // TODO - hover
   },
   header: {
     height: 30,
@@ -53,8 +45,7 @@ var TopInstructions = React.createClass({
 
     return (
       <div style={mainStyle} className="workspace-right">
-        <i style={styles.showHideButton}
-            className="fa fa-chevron-circle-down TopInstructions_showHideButton"/>
+        <CollapserIcon/>
         <div style={styles.header}>
           Instructions: Puzzle 1 of 1 {/* TODO */}
         </div>
