@@ -17,19 +17,18 @@ var styles = {
 
 var CollapserIcon = React.createClass({
   propTypes: {
-
-  },
-
-  handleClick: function () {
-    console.log('click');
+    onClick: React.PropTypes.func.isRequired,
+    collapsed: React.PropTypes.bool.isRequired
   },
 
   render: function () {
+    var iconClass = this.props.collapsed ? 'fa-chevron-circle-up' :
+      'fa-chevron-circle-down';
 
     return (
       <i style={styles.showHideButton}
-          onClick={this.handleClick}
-          className="fa fa-chevron-circle-down CollapserIcon_showHideButton"/>
+          onClick={this.props.onClick}
+          className={iconClass + " fa CollapserIcon_showHideButton"}/>
     );
 
   }
