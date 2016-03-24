@@ -50,7 +50,7 @@ end
 
 When /^I close the React alert$/ do
   steps %q{
-    When I click selector ".react-alert button span"
+    When I click selector ".react-alert button"
   }
 end
 
