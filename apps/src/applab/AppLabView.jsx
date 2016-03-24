@@ -14,6 +14,13 @@ var HeightResizer = require('../templates/instructions/HeightResizer.jsx');
 var HEADER_HEIGHT = 30;
 
 var styles = {
+  codeWorkspaceContainer: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0, // overriden in component
+    bottom: 0
+  },
   // same as #codeWorkspace + #codeWorkspace.pin_bottom from common.scss, with
   // the exception fo left: 400, which we let media queries from applab/styles.scss
   // deal with
@@ -21,6 +28,7 @@ var styles = {
     position: 'absolute',
     right: 0,
     bottom: 0,
+    top: 0,
     marginLeft: 15,
     border: 'none',
     borderTop: '1px solid #ddd',
@@ -78,12 +86,16 @@ var AppLabView = React.createClass({
 
     // TODO - have this change as we drag grippy
     // TODO - grippy should be hidden with collapse?
-    var codeWorkspaceStyle = _.assign({}, styles.codeWorkspace, {
-      top: instructionsHeight + styles.resizer.height
+    // var codeWorkspaceStyle = _.assign({}, styles.codeWorkspace, {
+    //   top: instructionsHeight + styles.resizer.height
+    // });
+    var codeWorkspaceContainerStyle = _.assign({}, styles.codeWorkspaceContainer, {
+      top: instructionsHeight + (this.props.instructionsCollapsed ? 0 : styles.resizer.height)
     });
 
     var resizerStyle = _.assign({}, styles.resizer, {
-      top: instructionsHeight
+      top: instructionsHeight,
+      display: this.props.instructionsCollapsed ? 'none' : undefined
     });
 
     // TODO - changing id of codeWorkspace to codeWorkspaceApplab will break callouts and some UI tests
@@ -103,16 +115,18 @@ var AppLabView = React.createClass({
             collapsed={this.props.instructionsCollapsed}
             onToggleCollapsed={this.props.toggleInstructionsCollapsed}/>
         <HeightResizer style={resizerStyle}/>
-        <ProtectedStatefulDiv
-            id="codeWorkspace"
-            style={codeWorkspaceStyle}
-            className="applab workspace-right">
+        <div style={codeWorkspaceContainerStyle}>
           <ProtectedStatefulDiv
-              id="codeWorkspaceWrapper"
-              contentFunction={this.props.generateCodeWorkspaceHtml}/>
-          {!this.props.isReadOnlyWorkspace &&
-            <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden} />}
-        </ProtectedStatefulDiv>
+              id="codeWorkspace"
+              style={styles.codeWorkspace}
+              className="applab workspace-right">
+            <ProtectedStatefulDiv
+                id="codeWorkspaceWrapper"
+                contentFunction={this.props.generateCodeWorkspaceHtml}/>
+            {!this.props.isReadOnlyWorkspace &&
+              <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden} />}
+          </ProtectedStatefulDiv>
+        </div>
       </ConnectedStudioAppWrapper>
     );
   }
