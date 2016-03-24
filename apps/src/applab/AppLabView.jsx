@@ -64,7 +64,8 @@ var AppLabView = React.createClass({
           onScreenCreate={this.props.onScreenCreate} />;
     }
 
-    var instructionHeight = 100;
+    // TODO - have this change as we drag grippy
+    var instructionHeight = 200;
 
     var codeWorkspaceStyle = _.assign({}, styles.codeWorkspace, {
       top: instructionHeight + styles.resizer.height
@@ -75,18 +76,29 @@ var AppLabView = React.createClass({
     });
 
     // TODO - changing id of codeWorkspace to codeWorkspaceApplab will break callouts and some UI tests
+    // TODO - could group rightSide into single component?
     return (
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
           {playSpaceHeader}
           <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
-        <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <TopInstructions height={instructionHeight}/>
+        <ProtectedStatefulDiv
+            id="visualizationResizeBar"
+            className="fa fa-ellipsis-v" />
+        <TopInstructions
+            height={instructionHeight}
+            markdown={this.props.instructionsMarkdown}/>
         <HeightResizer style={resizerStyle}/>
-        <ProtectedStatefulDiv id="codeWorkspace" style={codeWorkspaceStyle} className="applab workspace-right">
-          <ProtectedStatefulDiv id="codeWorkspaceWrapper" contentFunction={this.props.generateCodeWorkspaceHtml}/>
-          {!this.props.isReadOnlyWorkspace && <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden} />}
+        <ProtectedStatefulDiv
+            id="codeWorkspace"
+            style={codeWorkspaceStyle}
+            className="applab workspace-right">
+          <ProtectedStatefulDiv
+              id="codeWorkspaceWrapper"
+              contentFunction={this.props.generateCodeWorkspaceHtml}/>
+          {!this.props.isReadOnlyWorkspace &&
+            <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden} />}
         </ProtectedStatefulDiv>
       </ConnectedStudioAppWrapper>
     );
@@ -94,6 +106,7 @@ var AppLabView = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
-    isReadOnlyWorkspace: state.level.isReadOnlyWorkspace
+    isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
+    instructionsMarkdown: state.level.instructionsMarkdown
   };
 })(AppLabView);

@@ -406,11 +406,13 @@ StudioApp.prototype.init = function(config) {
   var promptDiv = document.getElementById('prompt');
   var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
-    var instructionsHtml = this.substituteInstructionImages(config.level.instructions);
+    var instructionsHtml = this.substituteInstructionImages(
+      config.level.instructions, this.skin.instructions2ImageSubstitutions);
     $(promptDiv).html(instructionsHtml);
   }
   if (config.level.instructions2) {
-    var instructions2Html = this.substituteInstructionImages(config.level.instructions2);
+    var instructions2Html = this.substituteInstructionImages(
+      config.level.instructions2, this.skin.instructions2ImageSubstitutions);
     $(prompt2Div).html(instructions2Html);
     $(prompt2Div).show();
   }
@@ -586,10 +588,15 @@ StudioApp.prototype.scaleLegacyShare = function() {
   applyTransformScale(vizContainer, 'scale(' + scale + ')');
 };
 
-StudioApp.prototype.substituteInstructionImages = function(htmlText) {
+/**
+ * @param {string} htmlText
+ * @param {Object.<string, string>} [substitutions] Dictionary strings (keys) to
+ *   replacement values.
+ */
+StudioApp.prototype.substituteInstructionImages = function(htmlText, substitutions) {
   if (htmlText) {
-    for (var prop in this.skin.instructions2ImageSubstitutions) {
-      var value = this.skin.instructions2ImageSubstitutions[prop];
+    for (var prop in substitutions) {
+      var value = substitutions[prop];
       var substitutionHtml = '<span class="instructionsImageContainer"><img src="' + value + '" class="instructionsImage"/></span>';
       var re = new RegExp('\\[' + prop + '\\]', 'g');
       htmlText = htmlText.replace(re, substitutionHtml);
@@ -988,6 +995,11 @@ StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 };
 
+StudioApp.prototype.isMarkdownMode = function (level) {
+  return window.marked && level.markdownInstructions &&
+    this.localeIsEnglish();
+};
+
 /**
  * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
  *   have markdown instructions
@@ -996,12 +1008,11 @@ StudioApp.prototype.onReportComplete = function (response) {
  * @returns {React.element}
  */
 StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
-  var isMarkdownMode = window.marked && level.markdownInstructions && this.localeIsEnglish();
-
   var renderedMarkdown;
 
-  if (isMarkdownMode) {
-    var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
+  if (this.isMarkdownMode(level)) {
+    var markdownWithImages = this.substituteInstructionImages(
+      level.markdownInstructions, this.skin.instructions2ImageSubstitutions);
     renderedMarkdown = marked(markdownWithImages);
   }
 
@@ -1013,8 +1024,10 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
   return (
     <Instructions
       puzzleTitle={puzzleTitle}
-      instructions={this.substituteInstructionImages(level.instructions)}
-      instructions2={this.substituteInstructionImages(level.instructions2)}
+      instructions={this.substituteInstructionImages(level.instructions,
+        this.skin.instructions2ImageSubstitutions)}
+      instructions2={this.substituteInstructionImages(level.instructions2,
+        this.skin.instructions2ImageSubstitutions)}
       renderedMarkdown={renderedMarkdown}
       markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
       aniGifURL={level.aniGifURL}
@@ -1028,7 +1041,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
  * @param {boolean} showHints
  */
 StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
-  var isMarkdownMode = window.marked && level.markdownInstructions && this.localeIsEnglish();
+  var isMarkdownMode = this.isMarkdownMode(level);
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
