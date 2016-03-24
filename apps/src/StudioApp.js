@@ -358,10 +358,10 @@ StudioApp.prototype.init = function(config) {
     this.winIcon = config.skin[config.level.instructionsIcon];
   }
 
-  if (config.showInstructionsWrapper) {
+  if (!config.noInstructionDialog && config.showInstructionsWrapper) {
     config.showInstructionsWrapper(_.bind(function () {
       var shouldAutoClose = !!config.level.aniGifURL;
-      this.showInstructions_(config.level, shouldAutoClose, false);
+      this.showInstructionsDialog_(config.level, shouldAutoClose, false);
     }, this));
   }
 
@@ -417,7 +417,7 @@ StudioApp.prototype.init = function(config) {
     $(prompt2Div).show();
   }
 
-  if (this.hasInstructionsToShow(config)) {
+  if (!config.noInstructionDialog && this.hasInstructionsToShow(config)) {
     var promptIcon = document.getElementById('prompt-icon');
     if (this.smallIcon) {
       promptIcon.src = this.smallIcon;
@@ -427,7 +427,7 @@ StudioApp.prototype.init = function(config) {
     var bubble = document.getElementById('bubble');
 
     this.authoredHintsController_.display(promptIcon, bubble, function () {
-      this.showInstructions_(config.level, false, true);
+      this.showInstructionsDialog_(config.level, false, true);
     }.bind(this));
   }
 
@@ -1040,7 +1040,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
  * @param {boolean} autoClose - closes instructions after 32s if true
  * @param {boolean} showHints
  */
-StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
+StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose, showHints) {
   var isMarkdownMode = this.isMarkdownMode(level);
 
   var instructionsDiv = document.createElement('div');
@@ -1669,7 +1669,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
-  this.showInstructions = this.showInstructions_.bind(this, config.level, false);
+  this.showInstructions = this.showInstructionsDialog_.bind(this, config.level, false);
   this.polishCodeHook = config.polishCodeHook;
 };
 
