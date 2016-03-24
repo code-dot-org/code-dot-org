@@ -364,6 +364,29 @@ namespace :update_package do
 
 end
 
+namespace :adhoc do
+  task :environment do
+    CDO.chef_local_mode = true
+    ENV['RAILS_ENV'] = ENV['RACK_ENV'] = CDO.rack_env = 'adhoc'
+    require 'cdo/aws/cloud_formation'
+  end
+  namespace :start do
+    task default: :environment do
+      AWS::CloudFormation.create_or_update
+    end
+    task cdn: :environment do
+      AWS::CloudFormation.create_or_update(true)
+    end
+  end
+  task start: ['start:default']
+  task stop: :environment do
+    AWS::CloudFormation.delete
+  end
+  task validate: :environment do
+    AWS::CloudFormation.validate
+  end
+end
+
 task :default do
   puts 'List of valid commands:'
   system 'rake -P'
