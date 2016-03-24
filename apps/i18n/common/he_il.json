@@ -1,5 +1,6 @@
 {
   "and": "ו",
+  "animationMode": "Animation",
   "backToPreviousLevel": "חזרה לשלב הקודם",
   "blocklyMessage": "בלוקלי",
   "blocks": "בלוקים",
@@ -26,6 +27,8 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
+  "debugWatchHeader": "Watch",
+  "debugWatchNotAvailable": "<not available>",
   "defaultTwitterText": "בדוק מה הכנתי",
   "designMode": "איפיון",
   "dialogCancel": "בטל",
@@ -150,6 +153,7 @@
   "hintSelectInstructions": "הוראות ורמזים ישנים",
   "hintSelectNewHint": "קבל רמז חדש",
   "hintTitle": "רמז:",
+  "iconSearchPlaceholder": "Search for an icon...",
   "ignore": "התעלם",
   "infinity": "אינסוף",
   "jump": "קפוץ",
@@ -165,6 +169,7 @@
   "nextPuzzle": "פאזל הבא",
   "nextStage": "מזל טוב! השלמת {stageName}.",
   "nextStageTrophies": " הכבוד! השלמת את שלב {stageName} וזכית ב-{numTrophies, plural, one {פרס}  other {# פרסים}}.",
+  "noIconsFound": "No icons found",
   "numBlocksNeeded": "כל הכבוד! השלמת את חידה {puzzleNumber}. (עם זאת, יכולת להשתמש רק ב {numBlocks, plural, one {1 בלוק} other {# בלוקים}}.)",
   "numLinesOfCodeWritten": "כתבת {numLines, plural, one {שורת} other {# שורות}} קוד!",
   "openWorkspace": "איך זה עובד",
@@ -172,6 +177,7 @@
   "pause": "Break",
   "play": "הפעל",
   "print": "הדפס",
+  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
   "puzzleTitle": "חידה {puzzle_number} מ- {stage_total}",
   "readonlyWorkspaceHeader": "הצג רק: ",
   "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
@@ -210,7 +216,6 @@
   "syntaxErrorMsg": "התוכנה שלך מכילה שגיאת הקלדה. אנא הסר את שורה מספר {lineNumber} ונסה שנית.",
   "textVariable": "טקסט",
   "toggleBlocksErrorMsg": "עליך לתקן שגיאה בתוכנית שלך, לפני שהיא תוכל להיות מוצגת בצורת בלוקים.",
-  "tooFewBlocksMsg": "אתה משתמש בכל סוגי הבלוקים הנחוצים, אך נסה להשתמש ביותר בלוקים מסוגים אלו כדי להשלים את הפאזל.",
   "tooManyBlocksMsg": "ניתן לפתור את החידה הזאת עם  <x id='START_SPAN'/><x id='END_SPAN'/>  בלוקים.",
   "tooMuchWork": "גרמת לי להרבה עבודה! האם אתה יכול לנסות לחזור פחות פעמים?",
   "toolboxHeader": "בלוקים",
@@ -224,6 +229,5 @@
   "watchVideo": "צפה בסרטון",
   "when": "מתי",
   "whenRun": "התחל ריצה",
-  "workspaceHeaderShort": "סביבת העבודה: ",
-  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project."
+  "workspaceHeaderShort": "סביבת העבודה: "
 }

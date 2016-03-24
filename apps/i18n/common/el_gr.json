@@ -1,5 +1,6 @@
 {
   "and": "και",
+  "animationMode": "Animation",
   "backToPreviousLevel": "Πίσω στο προηγούμενο επίπεδο",
   "blocklyMessage": "Blockly",
   "blocks": "μπλοκ",
@@ -26,6 +27,8 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
+  "debugWatchHeader": "Watch",
+  "debugWatchNotAvailable": "<not available>",
   "defaultTwitterText": "Δείτε τι έκανα",
   "designMode": "Σχεδίαση",
   "dialogCancel": "Άκυρο",
@@ -150,6 +153,7 @@
   "hintSelectInstructions": "Οδηγίες και παλιές υποδείξεις",
   "hintSelectNewHint": "Επέλεξε μία νέα υπόδειξη",
   "hintTitle": "Υπόδειξη:",
+  "iconSearchPlaceholder": "Search for an icon...",
   "ignore": "Αγνόησε",
   "infinity": "Άπειρο",
   "jump": "πήδα",
@@ -165,6 +169,7 @@
   "nextPuzzle": "Επόμενος γρίφος",
   "nextStage": "Συγχαρητήρια! Ολοκληρώσατε το {stageName}.",
   "nextStageTrophies": "Συγχαρητήρια! Ολοκλήρωσες  το στάδιο {stageName} και κέρδισες {numTrophies, plural, one {a trophy} other {# τράπαια}}.",
+  "noIconsFound": "No icons found",
   "numBlocksNeeded": "Συγχαρητήρια! Τελείωσες το πάζλ {puzzleNumber}. (Όμως, θα μπορούσες να βάλεις μόνο   {numBlocks, plural, one {1 μπλοκ} other {# μπλοκ}}.)",
   "numLinesOfCodeWritten": "Μόλις έγραψες {numLines, plural, one {1 γραμμή} other {# γραμμές}} κώδικα!",
   "openWorkspace": "Πώς λειτουργεί",
@@ -172,6 +177,7 @@
   "pause": "Break",
   "play": "παίξε",
   "print": "Εκτύπωσε",
+  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
   "puzzleTitle": "Παζλ {puzzle_number} από {stage_total}",
   "readonlyWorkspaceHeader": "Μόνο για προβολή: ",
   "recommendedBlockContextualHintTitle": "Δοκιμάστε να χρησιμοποιήσετε ένα μπλοκ σαν αυτό για να λύσετε τον γρίφο.",
@@ -210,7 +216,6 @@
   "syntaxErrorMsg": "Το πρόγραμμα σας περιέχει ένα συντακτικό λάθος. Παρακαλούμε αφαιρέστε τη γραμμή {lineNumber} και προσπαθήστε ξανά.",
   "textVariable": "κείμενο",
   "toggleBlocksErrorMsg": "Πρέπει να διορθώσετε ένα σφάλμα στο πρόγραμμά σας πριν μπορεί να παρουσιασθεί ως μπλοκ.",
-  "tooFewBlocksMsg": "Χρησιμοποιείς όλα τα αναγκαία είδη μπλοκ, αλλά δοκίμασε να χρησιμοποιήσεις περισσότερα απο τα μπλοκ αυτών των ειδών για να ολοκληρώσεις το παζλ.",
   "tooManyBlocksMsg": "Αυτό το παζλ μπορεί να λυθεί με  <x id='START_SPAN'/><x id='END_SPAN'/> μπλοκ.",
   "tooMuchWork": "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς με λιγότερες επαναλήψεις;",
   "toolboxHeader": "μπλοκ",
@@ -224,6 +229,5 @@
   "watchVideo": "Δείτε το βίντεο",
   "when": "όταν",
   "whenRun": "όταν εκτελείται",
-  "workspaceHeaderShort": "Χώρος εργασίας: ",
-  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project."
+  "workspaceHeaderShort": "Χώρος εργασίας: "
 }

@@ -33,6 +33,8 @@ module Dashboard
 
       config.middleware.insert_after Rack::Cache, Rack::Whitelist::Upstream,
         HttpCache.config(rack_env)[:dashboard]
+
+      Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
     end
 
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment

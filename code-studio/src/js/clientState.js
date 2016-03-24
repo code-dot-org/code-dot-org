@@ -4,9 +4,10 @@
  */
 'use strict';
 
-module.exports = function (sessionStorage, $) {
+var $ = require('jquery-shim');
+var sessionStorage = window.sessionStorage;
 
-var clientState = {};
+var clientState = module.exports = {};
 
 /**
  * Number of days before client state cookie expires.
@@ -283,7 +284,3 @@ function safelySetItem(key, value) {
     }
   }
 }
-
-return clientState;
-
-};

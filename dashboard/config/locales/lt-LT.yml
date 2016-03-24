@@ -561,6 +561,16 @@
     correct_body: Ačiū už atsakymą.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Ačiū
+    wrong_body: Ačiū už atsakymą
+    correct_title: Ačiū
+    correct_body: Ačiū už atsakymą
+  level_group-submittable:
+    wrong_title: Ačiū
+    wrong_body: Ačiū už atsakymą
+    correct_title: Ačiū
+    correct_body: Ačiū už atsakymą
   match:
     wrong_title: Neteisingas sprendimas
     wrong_body: Sprendimas, kurį įvedei, nėra teisingas. Pamėgink dar kartą!
@@ -580,9 +590,6 @@
     placeholder: "Įveskite savo atsakymą čia"
     open_response_title: Ačiū
     open_response_body: Ačiū už atsakymą!
-  level_group:
-    correct_title: Ačiū
-    correct_body: Ačiū už atsakymą
   dialog:
     ok: gerai
     startover_title: Ar tikrai norite pradėti iš naujo?
@@ -645,6 +652,7 @@
     completed_perfect: puikiai išspręsta
     furthest_level_attempted: išmėgintas aukščiausias lygis
     assessment: vertinimas
+    submitted: submitted
   studio:
     courses_working_on: Kursai, kuriuose dalyvaujate
     completed_courses: Užbaigti kursai

@@ -329,7 +329,6 @@ bs:
       4-5 Maze 9_instruction: 'Napravi petlju sa "ponavljaj dok" blokom.'
       4-5 Maze Assessment 1_instruction: 'Procjena: Dođi do suncokreta.'
       4-5 Maze Conditionals 1_instruction: 'Upotrijebi "ponavljaj dok" blok da bi doveo/la zombija do suncokreta.'
-      4-5 Maze Conditionals 10_instruction: 'Možeš li dodati samo 3 bloka da mi pomogneš da riješim složeniji labirint? Ako to dobro odradiš, mogu  pratiti bilo kakvu krivudavu putanju bez obzira na njenu dužinu.'
       4-5 Maze Conditionals 2_instruction: 'Upotrijebi "ponavljaj dok" blok da bi doveo/la zombija do suncokreta.'
       4-5 Maze Conditionals 3_instruction: 'Upotrijebi "ako" blok da bi odredio kada trebam skrenuti. Savjet: trebaš samo još jedan blok, ali nauči kako da ga postaviš tako da to možeš odraditi samostalno slijedeći put.'
       4-5 Maze Conditionals 4_instruction: 'Ok, ovo je isto kao i posljednji zadatak, ali se moraš sjetiti kako si koristio/la "ako" i "ponavljaj" blokove zajedno.'
@@ -1029,6 +1028,10 @@ bs:
       Course1BeePuzzle12_instruction: Sakupi tri nektara i onda napravi dva meda
       Course1MazeAssessment1_instruction: "Ovo je test!\\r\nKreći se u jednom smjeru, a zatim u drugom da bi me doveo/la do svinje"
       Course1MazeAssessment2_instruction: "Ovo je test!\\r\nKreći se u jednom smjeru, a zatim u drugom da bi me doveo/la do svinje."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1372,6 +1375,8 @@ bs:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: Sve varijable i funkcije su trenutno prazne. Svaki nivo predstavlja napredak i definisanje funkcija, što će povećati funkcionalnost.
       MSM Big Game Vars 1 (copy 1)_instruction: U alatnoj traci za Varijable ćeš vidjeti nekoliko varijabli koje definišu kako će karakteri u tvojoj igrici izgledati, kako će se kretati i kakvu će imati interakciju sa drugim likovima
       MSM Big Game Vars 1_instruction: U alatnoj traci za Varijable ćeš vidjeti nekoliko varijabli koje definišu kako će karakteri u tvojoj igrici izgledati, kako će se kretati i kakvu će imati interakciju sa drugim likovima
@@ -2172,7 +2177,7 @@ bs:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -3021,8 +3026,10 @@ bs:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

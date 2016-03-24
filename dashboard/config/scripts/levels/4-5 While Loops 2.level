@@ -14,7 +14,7 @@
     "maze": "[[1,1,1,0,0,0,0,0],[1,1,1,0,0,0,0,0],[1,1,1,0,1,1,1,0],[0,0,0,0,1,2,1,0],[0,0,0,0,1,1,1,0],[0,0,0,0,0,0,0,0],[1,1,0,0,0,0,0,0],[1,1,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,5,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Move me to the pile of dirt and remove it with 5 shovel scoops, using the 'remove' block.",
+    "instructions": "Move me to the pile of dirt and remove it with 5 shovel scoops, using the `remove 1` block.",
     "ideal": "4",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -26,8 +26,15 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "markdown_instructions": "Move me to the pile of dirt and remove it with 5 shovel scoops, using the `remove 1` block.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "fast_get_nectar_animation": "false",
+    "step_speed": "1"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -46,14 +53,14 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat">
           <title name="TIMES">5</title>
         </block>
         <block type="maze_dig"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

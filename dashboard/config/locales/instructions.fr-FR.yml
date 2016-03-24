@@ -76,9 +76,9 @@
       2-3 Artist Functions 10_instruction: 'Voici deux fonctions : une pour dessiner
         une grande roue et l''autre pour dessiner un petit engrenage. Utilise-les
         pour dessiner l''intérieur d''une machine !'
-      2-3 Artist Functions 11.5_instruction: Voici encore la même fonction « dessiner
-        un hexagone ». Que se passe-t-il si tu tournes seulement de 60 degrés à chaque
-        fois que tu exécutes la boucle ?
+      2-3 Artist Functions 11.5_instruction: Voici cette même fonction « dessiner
+        un hexagone ». Que se passe-t-il si tu mets seulement 60 degrés à chaque fois
+        que tu boucles ?
       2-3 Artist Functions 11_instruction: Nous avons renommé la fonction « dessiner
         un carré » en « dessiner un hexagone », mais elle dessine encore des carrés !
         Peux-tu modifier la fonction « dessiner un hexagone » pour dessiner un hexagone
@@ -203,7 +203,7 @@
         une fleur rouge ? Peux-tu compléter ceci avec une boucle ?\n"
       2-3 Bee Conditionals 14_instruction: Récolte le nectar et fais du miel. Veille
         à ne pas butiner de fleur violette si elle n'a pas de nectar.
-      2-3 Bee Conditionals 15_instruction: Récolte le nectar des quatre fleurs.
+      2-3 Bee Conditionals 15_instruction: Collecte le nectar des quatre fleurs.
       2-3 Bee Conditionals 2_instruction: Salut, je suis une abeille ! Aide moi à
         récolter tout le nectar des fleurs. Utilise une boucle.
       2-3 Bee Conditionals 3_instruction: Aide moi à récolter tout le nectar des fleurs
@@ -716,9 +716,6 @@
       4-5 Maze Assessment 1_instruction: "Évaluation: rejoins le tournesol."
       4-5 Maze Conditionals 1_instruction: Utilise le bloc "répéter jusqu'à" pour
         amener le zombie au tournesol.
-      4-5 Maze Conditionals 10_instruction: Peux-tu ajouter seulement 3 blocs pour
-        m'aider à traverser un labyrinthe plus complexe? Si tu réussis, je pourrai
-        marcher le long de n'importe quel chemin sinueux, peu importe sa longueur.
       4-5 Maze Conditionals 2_instruction: Utilise le bloc "répéter jusqu'à" pour
         amener le zombie au tournesol.
       4-5 Maze Conditionals 3_instruction: 'Utilise le bloc "si" pour me faire décider
@@ -2004,6 +2001,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2627,6 +2628,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3607,7 +3610,7 @@
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -4501,8 +4504,10 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

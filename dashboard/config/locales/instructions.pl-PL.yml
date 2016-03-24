@@ -219,7 +219,7 @@
       2-3 Bee Debugging 5_instruction: Te bloki naprawdę bugging mnie. Napraw błędy,
         aby zebrać cały nektar i zrobić miód. Możesz teraz użyć "Uruchom" i "Krok".
       2-3 Bee Debugging 6_instruction: Te bloki naprawdę zaczynają mnie już męczyć.
-        Napraw błędy, aby zebrać cały nektar.
+        Napraw błędy, aby zebrać cały nektar i zrobić miód.
       2-3 Bee Debugging 7_instruction: Te bloki naprawdę bugging mnie. Napraw błędy,
         aby zebrać cały nektar i zrobić miód.
       2-3 Bee Debugging 8_instruction: Te bloki naprawdę bugging mnie. Napraw błędy,
@@ -435,11 +435,9 @@
         sobie, że musi istnieć szybszy sposób! Użyj bloku "dla", by zastąpić inne
         bloki i ukończyć sześciokątną spiralę. Wskazówka: Długość ostatniej linii
         wynosi 200 pikseli.'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: To jest blok "dla". Zamiast wypisywać 1,
+        2, 3,..., 10, blok "dla" służy do powtarzania bloków w nim zawartych, może
+        także zliczać liczby. Umieść liczbę 10 w sekcji "do" w bloku "dla".
       4-5 Artist For Loops 3_instruction: Jak możemy liczyć od 1 do 50? Zmodyfikuj
         blok "dla".
       4-5 Artist For Loops 4_instruction: Uzupełnij blok "dla" tak, że liczy on od
@@ -676,9 +674,6 @@
       4-5 Maze Assessment 1_instruction: 'Sprawdzian: Dostać się do słonecznika.'
       4-5 Maze Conditionals 1_instruction: Użyj bloku "powtarzaj aż", by doprowadzić
         zombie do słonecznika.
-      4-5 Maze Conditionals 10_instruction: Czy możesz dodać tylko 3 bloki, aby pomóc
-        mi przejść bardziej skomplikowany labirynt? Jeśli znajdziesz prawidłowe rozwiązanie,
-        to pokonam każdą krętą drogę bez względu na jej długość.
       4-5 Maze Conditionals 2_instruction: Użyj bloku "powtarzaj aż", by doprowadzić
         zombie do słonecznika.
       4-5 Maze Conditionals 3_instruction: 'Użyj bloku "jeśli", abym mógł decydować,
@@ -1943,6 +1938,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2549,6 +2548,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3144,11 +3145,9 @@
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
         get nectar from the flowers.
-      Quantum Bee_instruction: |
-        Purple flowers may have either 1 or 0 nectar, but
-        you don't know which one! Be careful not to collect nectar from a purple
-        flower if it doesn't have any. Check if the nectar is equal to 1 by using
-        the if block.
+      Quantum Bee_instruction: Fioletowe kwiaty mogą mieć 1 lub 0 nektaru, ale nie
+        wiesz który. Uważaj, by nie zbierać nektaru z fioletowego kwiatka, jeśli go
+        nie ma. Sprawdzaj, czy nektar jest równy 1 przy użyciu bloku "jeśli".
       Ryan - 4-5 Bee Conditionals 2_instruction: Pszczółka chce teraz tylko nektaru.
         Nie wszystkie obiekty są kwiatami, więc sprawdź pod KAŻDĄ CHMURKĄ, czy ukrywa
         kwiatek. Jeśli tak, to wtedy możesz zebrać nektar.
@@ -3522,7 +3521,7 @@
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -4416,8 +4415,10 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

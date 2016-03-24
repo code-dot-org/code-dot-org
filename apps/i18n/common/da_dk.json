@@ -1,5 +1,6 @@
 {
   "and": "og",
+  "animationMode": "Animation",
   "backToPreviousLevel": "Tilbage til forrige niveau",
   "blocklyMessage": "Blockly",
   "blocks": "blokke",
@@ -26,6 +27,8 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
+  "debugWatchHeader": "Watch",
+  "debugWatchNotAvailable": "<not available>",
   "defaultTwitterText": "Se hvad jeg har lavet",
   "designMode": "Design",
   "dialogCancel": "Annuller",
@@ -150,6 +153,7 @@
   "hintSelectInstructions": "Instruktioner og gamle tips",
   "hintSelectNewHint": "Få et nyt tip",
   "hintTitle": "Tip:",
+  "iconSearchPlaceholder": "Search for an icon...",
   "ignore": "Ignorer",
   "infinity": "Uendelig",
   "jump": "hop",
@@ -165,6 +169,7 @@
   "nextPuzzle": "Næste puslespil",
   "nextStage": "Tillykke! Du gennemførte {stageName}.",
   "nextStageTrophies": "Tillykke! Du gennemførte {stageName} og vandt {numTrophies, plural, one {a trophy} other {# trophies}}.",
+  "noIconsFound": "No icons found",
   "numBlocksNeeded": "Tillykke! Du har løst opgave {puzzleNumber}. (Men du kunne have løst den med {numBlocks, plural, one {1 blok} other {# blokke}}.)",
   "numLinesOfCodeWritten": "Du har lige skrevet {numLines, plural, one {1 linje} other {# linjer}} kode!",
   "openWorkspace": "Sådan fungerer det",
@@ -172,6 +177,7 @@
   "pause": "Break",
   "play": "afspil",
   "print": "Udskriv",
+  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
   "puzzleTitle": "Opgave {puzzle_number} af {stage_total}",
   "readonlyWorkspaceHeader": "Se kun: ",
   "recommendedBlockContextualHintTitle": "Prøv at bruge en blok som denne til at løse gåden.",
@@ -210,7 +216,6 @@
   "syntaxErrorMsg": "Dit program indeholder en fejl. Fjern linje {lineNumber} og prøv igen.",
   "textVariable": "tekst",
   "toggleBlocksErrorMsg": "Du skal rette en fejl i dit program, før det kan blive vist som blokke.",
-  "tooFewBlocksMsg": "Du bruger alle de nødvendige typer af blokke, men prøv at bruge flere af disse typer blokke til at fuldføre dette puslespil.",
   "tooManyBlocksMsg": "Denne opgave kan løses med <x id='START_SPAN'/><x id='END_SPAN'/> blokke.",
   "tooMuchWork": "Du fik mig til at gøre en masse arbejde! Kunne du prøve at gentage færre gange?",
   "toolboxHeader": "Blokke",
@@ -224,6 +229,5 @@
   "watchVideo": "Se videoen",
   "when": "når",
   "whenRun": "når programmet kører",
-  "workspaceHeaderShort": "Arbejdsområde: ",
-  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project."
+  "workspaceHeaderShort": "Arbejdsområde: "
 }

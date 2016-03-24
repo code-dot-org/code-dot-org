@@ -64,7 +64,8 @@
       2-3 Artist Debugging 9_instruction: "Код для стебля неправильный. Подсказка:
         ваш угол отклонён на 60 градусов"
       2-3 Artist Debugging Assessment 1_instruction: "Фигура слишком маленькая. Можете
-        сделать её побольше? Подсказка: длина каждой стороны должна быть 75 пикселей."
+        сделать её побольше? Подсказка: длина каждой стороны должна быть увеличена
+        на 75 пикселей."
       2-3 Artist Free Play_instruction: "Свободная игра! Рисуйте всё что вам хочется."
       2-3 Artist Functions 1_instruction: "Здравствуйте. Я художник-зомби. Я люблю
         рисовать! Помогите мне нарисовать квадратные очки. Подсказка: мост между стеклами
@@ -679,9 +680,6 @@
       4-5 Maze Assessment 1_instruction: "Подсказка: Доберись к подсолнечнику."
       4-5 Maze Conditionals 1_instruction: Используй блок "Повторять до" чтобы доставить
         зомби к подсолнечнику.
-      4-5 Maze Conditionals 10_instruction: "Можешь добавить всего 3 блока чтобы помочь
-        мне пройти более сложный лабиринт? Если сделаешь все правильно, я смогу ходить
-        по любой извилистой дороге любой длины."
       4-5 Maze Conditionals 2_instruction: Используй блок "Повторять до" чтобы доставить
         зомби к подсолнечнику.
       4-5 Maze Conditionals 3_instruction: 'Используй блок "Если" чтобы я решил когда
@@ -1947,6 +1945,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2550,6 +2552,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3515,7 +3519,7 @@
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -4409,8 +4413,10 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

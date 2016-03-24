@@ -660,9 +660,6 @@
       4-5 Maze Assessment 1_instruction: "Értékelés: juss el a napraforgóhoz!"
       4-5 Maze Conditionals 1_instruction: Használd az "ismételd amíg" blokkot, hogy
         elvezesd a zombit a napraforgóhoz.
-      4-5 Maze Conditionals 10_instruction: Tudsz segíteni kijutni ebből az összetett
-        útvesztőből mindössze 3 blokk hozzáadásával? Ha jól csinálod, akkor bármilyen
-        kacskaringós utat be tudok járni annak hosszától függetlenül.
       4-5 Maze Conditionals 2_instruction: Használd az "ismételd amíg" blokkot, hogy
         elvezesd a zombit a napraforgóhoz.
       4-5 Maze Conditionals 3_instruction: 'Használd a "ha" blokkot, annak eldöntésére,
@@ -2101,6 +2098,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2711,6 +2712,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3729,7 +3732,7 @@
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -4623,8 +4626,10 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

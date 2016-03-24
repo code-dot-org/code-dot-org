@@ -134,7 +134,7 @@
       email: Email-adres
       submit: Stuur me uitleg over wachtwoord resetten
     change_form:
-      title: Verander je wachtwoord
+      title: Wijzig je wachtwoord
       new_password: Nieuw wachtwoord
       confirm_password: Bevestig je nieuwe wachtwoord
       submit: Wijzig mijn wachtwoord
@@ -593,6 +593,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Bedankt
+    wrong_body: Thank you for submitting answers.
+    correct_title: Bedankt
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Bedankt
+    wrong_body: Thank you for submitting answers.
+    correct_title: Bedankt
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Onjuist antwoord
     wrong_body: De oplossing die je hebt ingevoerd is niet juist.  Probeer het opnieuw!
@@ -612,9 +622,6 @@
     placeholder: Voer uw antwoord hier in
     open_response_title: Bedankt
     open_response_body: Bedankt voor uw reactie!
-  level_group:
-    correct_title: Bedankt
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Weet je zeker dat je opnieuw wilt beginnen?
@@ -678,6 +685,7 @@
     completed_perfect: voltooid, perfect
     furthest_level_attempted: verste niveau geprobeerd
     assessment: beoordeling
+    submitted: submitted
   studio:
     courses_working_on: Cursussen die u bezig bent
     completed_courses: Voltooide cursussen

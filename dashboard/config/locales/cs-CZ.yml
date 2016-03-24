@@ -562,6 +562,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Děkuji
+    wrong_body: Thank you for submitting answers.
+    correct_title: Děkuji
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Děkuji
+    wrong_body: Thank you for submitting answers.
+    correct_title: Děkuji
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Nesprávné řešení
     wrong_body: "Řešení, které jste zadali, není správné.  Opakujte akci!"
@@ -581,9 +591,6 @@
     placeholder: Zadejte svou odpověď zde
     open_response_title: Děkujeme
     open_response_body: Děkujeme za odpověď!
-  level_group:
-    correct_title: Děkuji
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Jste si jisti, že chcete začít znovu?
@@ -646,6 +653,7 @@
     completed_perfect: dokončeno, perfektní
     furthest_level_attempted: pokus o další úroveň
     assessment: hodnocení
+    submitted: submitted
   studio:
     courses_working_on: Kurzy, na kterých právě pracuješ
     completed_courses: Dokončené kurzy

@@ -328,8 +328,7 @@
     heading_hoc2014: "<h2>一小時的程式設計課程</h2><h1>對所有年齡</h1>"
     heading_elementary: "<h2>20 小時課程</h2><h1>初學者(所有年齡)</h1>"
     heading_apps: "<h2>樂趣</h2><h1>每個人</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>為下一步的準備好了嗎？</h2><h1>高中的 JavaScript 工具</h1>"
     heading_legacy: "<h2>我們的一般課程</h2>適合<h1>所有年齡</h1>"
     your_gallery: "相片圖庫"
     no_primary_course: "試試在 Code Studio 參加一個課程"
@@ -443,13 +442,10 @@
   upsell:
     applab:
       title: App Lab
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: "應用程序實驗室是一個可以讓你簡單在編寫應用程式的程式設計環境。設計應用程式，代碼塊或 JavaScript 使它運作，然後在幾秒鐘內分享您的應用程式。"
+      body_short: "設計應用程式，編寫代碼塊或 JavaScript 使它運作，然後在幾秒鐘內分享您的應用程式。"
+      audience: 13歲以上
+      cta: "學習怎樣做"
     hoc:
       title: "經典迷宮"
       body: "請試試數百萬人已經體驗過的電腦科學基礎課程。"
@@ -495,7 +491,7 @@
     report_bug: "報告錯誤"
     support: "請求幫助"
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: "説明和資源"
   multi:
     wrong_title: "不正確的答案"
     wrong_body: "你的答案不正確。請再試一次 ！"
@@ -505,11 +501,21 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: "謝謝"
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: "感謝您提交的答案。"
     correct_title: "謝謝"
-    correct_body: Thank you for submitting an answer.
+    correct_body: "感謝您提交的答案。"
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "謝謝"
+    wrong_body: "感謝您提交的答案"
+    correct_title: "謝謝"
+    correct_body: "感謝您提交的答案"
+  level_group-submittable:
+    wrong_title: "謝謝"
+    wrong_body: "感謝您提交的答案"
+    correct_title: "謝謝"
+    correct_body: "感謝您提交的答案"
   match:
     wrong_title: "不正確的解決方案"
     wrong_body: "您的解決方案不正確。請再試一次 ！"
@@ -527,9 +533,6 @@
     placeholder: "在這裡輸入你的答案"
     open_response_title: "謝謝"
     open_response_body: "感謝您的回應！"
-  level_group:
-    correct_title: "謝謝"
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: "確定"
     startover_title: "你確定要重新開始嗎？"
@@ -584,6 +587,7 @@
     completed_perfect: "完美完成"
     furthest_level_attempted: "嘗試到的最遠關卡"
     assessment: "習題"
+    submitted: "已提交"
   studio:
     courses_working_on: "您正在進行的課程"
     completed_courses: "已完成的課程"

@@ -1,5 +1,6 @@
 {
   "and": "in",
+  "animationMode": "Animation",
   "backToPreviousLevel": "Nazaj na prejšnjo raven",
   "blocklyMessage": "Blockly",
   "blocks": "bloki",
@@ -26,6 +27,8 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
+  "debugWatchHeader": "Watch",
+  "debugWatchNotAvailable": "<not available>",
   "defaultTwitterText": "Poglej, kaj sem naredil",
   "designMode": "Oblikovanje",
   "dialogCancel": "Prekliči",
@@ -150,6 +153,7 @@
   "hintSelectInstructions": "Instructions and old hints",
   "hintSelectNewHint": "Pridobi nov namig",
   "hintTitle": "Namig:",
+  "iconSearchPlaceholder": "Search for an icon...",
   "ignore": "Prezri",
   "infinity": "Neskončnost",
   "jump": "skoči",
@@ -165,6 +169,7 @@
   "nextPuzzle": "Naslednja uganka",
   "nextStage": "Čestitke! Dokončal/a si {stageName}.",
   "nextStageTrophies": "Čestitke! Zaključil/a si stopnjo {stageName} in osvojil/a {numTrophies, plural, one {lovoriko} other {# lovorik}}.",
+  "noIconsFound": "No icons found",
   "numBlocksNeeded": "Čestitke! Zaključil/a si uganko {puzzleNumber}. (Vendar bi lahko uporabil samo  {numBlocks, plural, one {1 blok} other {# blokov}}.)",
   "numLinesOfCodeWritten": "Ravnokar si napisal/a {numLines, plural, one {1 vrstico} other {# vrstic}} kode!",
   "openWorkspace": "Kako deluje",
@@ -172,6 +177,7 @@
   "pause": "Break",
   "play": "igraj",
   "print": "Natisni",
+  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
   "puzzleTitle": "Uganka {puzzle_number} od {stage_total}",
   "readonlyWorkspaceHeader": "Prikaži samo: ",
   "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
@@ -210,7 +216,6 @@
   "syntaxErrorMsg": "Vaš program vsebuje slovnične napake. Prosimo odstranite vrstico {lineNumber} in poskusite znova.",
   "textVariable": "besedilo",
   "toggleBlocksErrorMsg": "Da bo program prikazan kot bloki, moraš odpraviti napako v njem.",
-  "tooFewBlocksMsg": "Uporabil/a si prave tipe blokov, a potrebuješ jih še več za rešitev te uganke.",
   "tooManyBlocksMsg": "Ta uganka je lahko rešena z <x id='START_SPAN'/><x id='END_SPAN'/> bloki.",
   "tooMuchWork": "Si me pa utrudil/a! Bi se lahko poskusil/a manjkrat ponavljati?",
   "toolboxHeader": "Bloki",
@@ -224,6 +229,5 @@
   "watchVideo": "Glej video",
   "when": "ko",
   "whenRun": "ob zagonu",
-  "workspaceHeaderShort": "Delovni prostor: ",
-  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project."
+  "workspaceHeaderShort": "Delovni prostor: "
 }

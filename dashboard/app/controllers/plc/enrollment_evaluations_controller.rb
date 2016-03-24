@@ -8,10 +8,10 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
 
   def submit_evaluation
     authorize! :read, Plc::Course
-    question_responses = params[:answerTaskList].split(',')
+    question_responses = params[:answerModuleList].split(',')
     user_professional_learning_course_enrollment = Plc::UserCourseEnrollment.find(params[:enrollment_id])
 
-    modules_to_enroll_in = Plc::Task.where(id: question_responses).map(&:plc_learning_module)
+    modules_to_enroll_in = Plc::LearningModule.where(id: question_responses)
 
     user_professional_learning_course_enrollment.enroll_user_in_course_with_learning_modules(modules_to_enroll_in)
     redirect_to controller: :user_course_enrollments, action: :show, id: params[:enrollment_id]

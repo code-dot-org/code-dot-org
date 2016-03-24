@@ -80,18 +80,17 @@
     getur þú <a href="https://code.org/volunteer">boðið fram liðveislu í skólastofu</a>
     og hjálpað nemendum að læra Klukkustund kóðunar!'
   congratulations_on_completing_course1: Til hamingju með að ljúka námskeiði 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course2: Til hamingju með að ljúka námskeiði 2
+  congratulations_on_completing_course3: Til hamingju með að ljúka námskeiði 3
+  congratulations_on_completing_course4: Til hamingju með að ljúka námskeiði 4
+  congratulations_on_completing_accelerated: Til hamingju með að ljúka hraðnámskeiðinu
   congrats_next_tutorials_title: Prófaðu þetta kennsluefni næst
   congrats_next_tutorials_desc: Prófaðu þessar styttri 1 klst. kennslustundir eða
     <a href="%{current_path}/next">kennsluefni hjá samstarfsaðila</a>.
   get_a_certificate_of_achievement: Fáðu viðurkenningarskjal
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
+  view_course: Skoða námskeið
+  view_unit: Skoða einingu
+  make_app: Búa til app
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
@@ -783,6 +782,7 @@
   dashboard_progress_completed_too_many_blocks: lokið, of margir kubbar
   dashboard_progress_completed_perfect: lokið, fullkomið
   dashboard_progress_furthest_level_attempted: hæsti unninn áfangi
+  dashboard_progress_submitted: sent inn
   dashboard_stage: "Áfangi"
   dashboard_puzzle: "Þraut"
   dashboard_question: Spurning
@@ -953,7 +953,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: Appsmiðja
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Aldur 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

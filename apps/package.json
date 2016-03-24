@@ -21,8 +21,13 @@
   "browserify": {
     "transform": [
       "require-globify",
-      "browserify-shim"
+      "browserify-shim",
+      "browserify-global-shim"
     ]
+  },
+  "browserify-global-shim": {
+    "react": "React",
+    "react-dom": "ReactDOM"
   },
   "browserify-shim": {
     "blockly": {
@@ -34,6 +39,7 @@
     "Base64": "0.3.0",
     "babelify": "^6.3.0",
     "browserify": "10.2.4",
+    "browserify-global-shim": "^1.0.3",
     "browserify-incremental": "3.0.1",
     "browserify-shim": "3.8.10",
     "canvg": "gabelerner/canvg",
@@ -70,6 +76,7 @@
     "load-grunt-tasks": "2.0.0",
     "lodash": "2.4.2",
     "lodash-cli": "2.4.2",
+    "loose-envify": "^1.1.0",
     "messageformat": "0.2.2",
     "mkdirp": "0.5.1",
     "mochify": "2.9.0",
@@ -80,6 +87,9 @@
     "react": "0.14.7",
     "react-addons-test-utils": "0.14.7",
     "react-dom": "0.14.7",
+    "react-redux": "^4.4.0",
+    "redux": "^3.3.1",
+    "redux-logger": "^2.6.1",
     "require-globify": "1.2.1",
     "rgbcolor": "0.0.4",
     "sanitize-html": "^1.11.3",
@@ -90,5 +100,8 @@
     "time-grunt": "^1.3.0",
     "uglify-js": "2.4.24",
     "which": "1.1.1"
+  },
+  "dependencies": {
+    "react-color": "^2.0.0"
   }
 }

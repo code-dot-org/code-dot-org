@@ -381,7 +381,7 @@ ga-IE:
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: English only | Modern browsers | Ages 11+
   starwars_javascript_start_button: Triail é anois
-  starwars_blocks_title: Blocks
+  starwars_blocks_title: Blocanna
   starwars_blocks_description: Use drag-drop blocks.
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
   starwars_blocks_start_button: Triail é anois
@@ -421,7 +421,7 @@ ga-IE:
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook profile
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: Description
+  volunteer_engineer_submission_field_description: Cur Síos
   volunteer_engineer_submission_field_description_desc: Describe your computer science experience or technical background and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
   volunteer_engineer_submission_header_private: Information kept private and never shared
@@ -505,7 +505,7 @@ ga-IE:
   dashboard_action_edit: Edit
   dashboard_action_save: Save
   dashboard_action_save_all: Save all
-  dashboard_action_cancel: Cancel
+  dashboard_action_cancel: Cealaigh
   dashboard_action_delete: Delete
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
@@ -617,6 +617,7 @@ ga-IE:
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_submitted: submitted
   dashboard_stage: Stage
   dashboard_puzzle: Puzzle
   dashboard_question: Question

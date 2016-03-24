@@ -482,6 +482,16 @@ kk:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Рахмет
+    wrong_body: Thank you for submitting answers.
+    correct_title: Рахмет
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Рахмет
+    wrong_body: Thank you for submitting answers.
+    correct_title: Рахмет
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Дұрыс емес шешім
     wrong_body: Сіз еңгізген жауап дұрыс емес. Қайталап көріңіз!
@@ -499,9 +509,6 @@ kk:
     placeholder: Жауабыңызды мұнда еңгізіңіз
     open_response_title: Рахмет
     open_response_body: Жауап бергеніңіз үшін рахмет!
-  level_group:
-    correct_title: Рахмет
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Сіз басынан бастауға сенімдісіз бе?
@@ -555,6 +562,7 @@ kk:
     completed_perfect: аяқталды, тамаша
     furthest_level_attempted: жетілген ең жоғарғы деңгей
     assessment: баға
+    submitted: submitted
   studio:
     courses_working_on: Сіз жұмыс жасап жатқан курстар
     completed_courses: Аяқталған курстар

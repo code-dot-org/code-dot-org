@@ -789,6 +789,7 @@
   dashboard_progress_completed_too_many_blocks: "завършено, но с повече блокове"
   dashboard_progress_completed_perfect: "завършено, перфектно"
   dashboard_progress_furthest_level_attempted: "последното пробвано ниво"
+  dashboard_progress_submitted: submitted
   dashboard_stage: "Етап"
   dashboard_puzzle: "Пъзел"
   dashboard_question: "Въпрос"

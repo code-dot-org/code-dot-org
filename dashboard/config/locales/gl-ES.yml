@@ -591,6 +591,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Graciñas
+    wrong_body: Thank you for submitting answers.
+    correct_title: Graciñas
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Graciñas
+    wrong_body: Thank you for submitting answers.
+    correct_title: Graciñas
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Solución incorrecta
     wrong_body: A súa solución non é correcta. Tente novamente!
@@ -610,9 +620,6 @@
     placeholder: Insira a súa resposta aquí
     open_response_title: Graciñas
     open_response_body: Graciñas por responderes!
-  level_group:
-    correct_title: Graciñas
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Estás seguro de que queres empezar de novo?
@@ -676,6 +683,7 @@
     completed_perfect: concluído, perfecto
     furthest_level_attempted: tentativa para o nivel máis avanzado
     assessment: avaliación
+    submitted: submitted
   studio:
     courses_working_on: Cursos que vostede está a facer
     completed_courses: Cursos concluídos

@@ -482,6 +482,16 @@ vi:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Cảm ơn bạn
+    wrong_body: Thank you for submitting answers.
+    correct_title: Cảm ơn bạn
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Cảm ơn bạn
+    wrong_body: Thank you for submitting answers.
+    correct_title: Cảm ơn bạn
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Cách giải chưa chính xác
     wrong_body: Cách giải bạn đã nhập chưa chính xác. Xin vui lòng thử lại!
@@ -499,9 +509,6 @@ vi:
     placeholder: Nhập câu trả lời của bạn ở đây
     open_response_title: Xin cảm ơn
     open_response_body: Cảm ơn câu trả lời của bạn!
-  level_group:
-    correct_title: Cảm ơn bạn
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: Đồng ý
     startover_title: Bạn có chắc bạn muốn bắt đầu lại?
@@ -555,6 +562,7 @@ vi:
     completed_perfect: hoàn thành, hoàn hảo
     furthest_level_attempted: đã cố gắng ở mức độ cao nhất
     assessment: đánh giá
+    submitted: submitted
   studio:
     courses_working_on: Các khóa học bạn đang tiến hành
     completed_courses: Hoàn thành khóa học

@@ -574,6 +574,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "धन्यवाद"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "धन्यवाद"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "धन्यवाद"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "धन्यवाद"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: "गलत समाधान"
     wrong_body: The solution you've entered is not correct.  Please try again!
@@ -593,9 +603,6 @@
     placeholder: "अपना उत्तर यहाँ दर्ज करें"
     open_response_title: "धन्यवाद"
     open_response_body: Thanks for your response!
-  level_group:
-    correct_title: "धन्यवाद"
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: "ठीक है"
     startover_title: Aapko यकीन है कि आप prarambh se शुरू करना चाहते हैं?
@@ -659,6 +666,7 @@
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
     assessment: assessment
+    submitted: submitted
   studio:
     courses_working_on: Courses you're working on
     completed_courses: Completed courses

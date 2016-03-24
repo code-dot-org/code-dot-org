@@ -67,7 +67,7 @@ pt-BR:
   congrats_next_tutorials_desc: 'Experimente esses tutoriais menores, de 1 hora, ou experimente um <a href="%{current_path}/next">tutorial dos parceiros</a>.'
   get_a_certificate_of_achievement: Obter um certificado de conclusão
   view_course: Ver curso
-  view_unit: View unit
+  view_unit: Ver unidade
   make_app: Crie um aplicativo
   congrats_guest_speaker_title: Convide um orador para a sua sala de aula
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
@@ -615,6 +615,7 @@ pt-BR:
   dashboard_progress_completed_too_many_blocks: concluído, muitos blocos
   dashboard_progress_completed_perfect: concluído, perfeito
   dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
+  dashboard_progress_submitted: enviado
   dashboard_stage: Fase
   dashboard_puzzle: Desafio
   dashboard_question: Pergunta

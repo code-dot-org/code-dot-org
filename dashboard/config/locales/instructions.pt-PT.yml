@@ -1,4 +1,4 @@
-"pt-PT":
+"pt":
   data:
     instructions:
       2-3 Artist 1 new_instruction: Oi, eu sou um artista. Você pode escrever códigos
@@ -47,8 +47,8 @@
       2-3 Artist Debugging 10_instruction: |
         O controlador de direção do controle do meu jogo
         é muito estreito. Dica: faça-o 10 pixels mais largo
-      2-3 Artist Debugging 11_instruction: Ajuda-me a terminar o meu lindo floco de
-        neve. Quantas vezes preciso fazer "repetir" para conseguir acabar?
+      2-3 Artist Debugging 11_instruction: Ajude-me a terminar meu lindo floco de
+        neve. Quantas vezes preciso "repetir" para terminá-lo?
       2-3 Artist Debugging 12_instruction: Eu devo adicionar uma onda do mar nessa
         cena. Você pode me ajudar?
       2-3 Artist Debugging 2_instruction: 'O código para os três bigodes que você
@@ -864,10 +864,6 @@
       4-5 Maze Conditionals 1_instruction: |
         Use o bloco repita até para levar o
         zumbi até o girassol.
-      4-5 Maze Conditionals 10_instruction: |
-        Você pode adicionar apenas 3 blocos para me ajudar
-        a resolver um labirinto mais complexo? Se você fizer isso corretamente, eu poderei andar por qualquer caminho cheio de curvas,
-        não importa o comprimento.
       4-5 Maze Conditionals 2_instruction: |
         Use o bloco repita até para levar o
         zumbi até o girassol.
@@ -2370,6 +2366,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -3040,6 +3040,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -4093,7 +4095,7 @@
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -4987,8 +4989,10 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

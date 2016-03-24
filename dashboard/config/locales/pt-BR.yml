@@ -1,4 +1,4 @@
-"pt":
+"pt-BR":
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
@@ -269,10 +269,10 @@
       finished_hoc: Terminei minha Hora do Código
       sign_in_to_save: Entre para salvar o progresso
       free_play:
-        playlab: Crie um aplicativo
+        playlab: Crie um aplicativo Play Lab
         artist: Desenhe alguma coisa
         calculate: Calculate Something
-        applab: Crie um aplicativo
+        applab: Crie um aplicativo Play Lab
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -384,8 +384,8 @@
     heading_elementary: "<h2>Cursos de 20 horas sobre</h2><h1>Fundamentos de Ciência
       da Computação (todas as idades)</h1>"
     heading_apps: "<h2>Diversão para</h2><h1>todos</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Pronto para o próximo passo?</h2> <h1>Ferramentas JavaScript
+      para o Ensino Médio</h1>"
     heading_legacy: "<h2>Nosso curso acelerado para</h2><h1>todas as idades</h1>"
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
@@ -515,13 +515,13 @@
   upsell:
     applab:
       title: Laboratório de Aplicativo
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
+      body: App Lab é um ambiente de programação onde você pode fazer simples aplicativos.
+        Projetar uma aplicação, codificar com blocos ou JavaScript para fazê-los funcionar,
+        compartilhar seu aplicativo em minutos.
+      body_short: Projetar uma aplicação, codificar com blocks ou JavaScript para
+        fazê-lo funcionar, e compartilhar seu aplicativo em segundos.
       audience: A partir de 13 anos
-      cta: Learn how
+      cta: Aprenda como
     hoc:
       title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas
@@ -583,7 +583,7 @@
     report_bug: Reportar erro
     support: Obter ajuda
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: Ajuda e recursos
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
@@ -593,11 +593,21 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Obrigado
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Obrigado por enviar uma resposta.
     correct_title: Obrigado
-    correct_body: Thank you for submitting an answer.
+    correct_body: Obrigado por enviar uma resposta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Obrigado
+    wrong_body: Obrigado por enviar uma resposta
+    correct_title: Obrigado
+    correct_body: Obrigado por enviar uma resposta
+  level_group-submittable:
+    wrong_title: Obrigado
+    wrong_body: Obrigado por enviar uma resposta
+    correct_title: Obrigado
+    correct_body: Obrigado por enviar uma resposta
   match:
     wrong_title: Solução incorreta
     wrong_body: Sua solução não está correta. Tente novamente!
@@ -617,9 +627,6 @@
     placeholder: Insira sua resposta aqui
     open_response_title: Obrigado
     open_response_body: Obrigado pela sua resposta!
-  level_group:
-    correct_title: Obrigado
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Tem certeza de que deseja começar do início?
@@ -684,6 +691,7 @@
     completed_perfect: concluído, perfeito
     furthest_level_attempted: tentativa para o nível mais avançado
     assessment: avaliação
+    submitted: enviado
   studio:
     courses_working_on: Cursos que você está fazendo
     completed_courses: Cursos concluídos

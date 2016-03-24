@@ -1,15 +1,24 @@
+require 'mocha/mini_test'
 require_relative 'test_helper'
 require 'channels_api'
+require 'fakeredis'
 require 'tables_api'
 
 class TablesTest < Minitest::Test
+  include Rack::Test::Methods
   include SetupTest
 
   TableType = CDO.use_dynamo_tables ? DynamoTable : SqlTable
 
-  def test_create_read_update_delete
-    init_apis
+  def build_rack_mock_session
+    @session = Rack::MockSession.new(ChannelsApi.new(TablesApi), "studio.code.org")
+  end
 
+  def setup
+    @table_name = '_testTable'
+  end
+
+  def test_create_read_update_delete
     create_channel
 
     assert_nil read_records.first
@@ -35,8 +44,72 @@ class TablesTest < Minitest::Test
     delete_channel
   end
 
+  def test_table_row_limits
+    create_channel
+
+    max_rows = 10
+    TablesApi.any_instance.stubs(:max_table_rows).returns(max_rows)
+    # Make sure that we can create up to max_rows without error
+    record_ids = []
+    (1..max_rows).each do |i|
+      record_ids << create_record({'name' => "test#{i}", 'age' => 7, 'male' => false})
+    end
+
+    # Make sure we get an error if we attempt to exceed the row limit.
+    begin
+      create_record({'name' => 'yet another record'})
+    rescue
+      assert_equal 403, last_response.status
+    end
+
+    # Delete a record and make sure we can then add exactly one more record.
+    delete_record(record_ids[0])
+
+    create_record({'name' => 'now there is room'})
+    begin
+      create_record({'name' => 'but only for one more'})
+    rescue
+      assert_equal 403, last_response.status
+    end
+
+    delete_channel
+    TablesApi.any_instance.unstub(:max_table_rows)
+  end
+
+  def test_record_size_limit
+    create_channel
+
+    @table_name = 'mytable'
+    column_name = 'mycolumn'
+    column_value = 'myvalue'
+    column_value2 = 'myvalue2'
+    record = {column_name => column_value}
+    record2 = {column_name => column_value2}
+
+    max_record_size = 2 * @table_name.length + record.to_json.length
+    assert_equal 36, max_record_size, 'a change in the max record size could break existing apps'
+
+    TablesApi.any_instance.stubs(:max_record_size).returns(max_record_size)
+    id = create_record(record).to_i
+    create_record(record2, 413)
+
+    actual_created_record = read_records.find do |record|
+      record['id'] == id
+    end
+    assert_equal id, actual_created_record['id'], 'actual created record has correct id'
+
+    update_record(id, actual_created_record)
+    assert last_response.successful?, 'max-size created record can be updated with the same value'
+
+    actual_created_record[column_name] += 'x'
+    update_record(id, actual_created_record)
+    assert_equal 413, last_response.status, 'oversize record cannot be updated'
+
+    delete_channel
+    TablesApi.any_instance.unstub(:max_record_size)
+  end
+
   def test_populate
-    init_apis
     create_channel
 
     data1 = {
@@ -93,7 +166,6 @@ class TablesTest < Minitest::Test
   end
 
   def test_import
-    init_apis
     create_channel
 
     # this record should not appear in the output
@@ -125,7 +197,6 @@ class TablesTest < Minitest::Test
   end
 
   def test_rename_column
-    init_apis
     create_channel
 
     create_record('name' => 'trevor', 'age' => 30)
@@ -141,7 +212,6 @@ class TablesTest < Minitest::Test
   end
 
   def test_add_column
-    init_apis
     create_channel
 
     add_column('one')
@@ -154,7 +224,6 @@ class TablesTest < Minitest::Test
   end
 
   def test_delete_column
-    init_apis
     create_channel
 
     write_column_metadata([])
@@ -175,7 +244,6 @@ class TablesTest < Minitest::Test
   end
 
   def test_delete
-    init_apis
     create_channel
 
     create_record('name' => 'trevor', 'age' => 30)
@@ -195,7 +263,6 @@ class TablesTest < Minitest::Test
   end
 
   def test_export
-    init_apis
     create_channel
 
     csv_filename = File.expand_path('../roster.csv', __FILE__)
@@ -217,7 +284,6 @@ class TablesTest < Minitest::Test
   end
 
   def test_table_names
-    init_apis
     create_channel
 
     _, decrypted_channel_id = storage_decrypt_channel_id(@channel_id)
@@ -295,84 +361,80 @@ class TablesTest < Minitest::Test
   # Methods below this line are test utilities, not actual tests
   private
 
-  def init_apis
-    # The Tables API does not need to share a cookie jar with the Channels API.
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
-    @tables = Rack::Test::Session.new(Rack::MockSession.new(TablesApi, "studio.code.org"))
-    @table_name = '_testTable'
-  end
-
   def create_channel
-    @channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    @channel_id = @channels.last_response.location.split('/').last
+    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    @channel_id = last_response.location.split('/').last
     delete_table
   end
 
   def delete_channel
-    @channels.delete "/v3/channels/#{@channel_id}"
-    assert @channels.last_response.successful?
+    delete "/v3/channels/#{@channel_id}"
+    assert last_response.successful?
   end
 
-  def create_record(record)
-    @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    @tables.last_response.location.split('/').last
+  def create_record(record, expected_status = nil)
+    post "/v3/shared-tables/#{@channel_id}/#{@table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    expected_status ||= 301
+    status = last_response.status
+    raise "Failed request with status #{status}" unless status == expected_status
+    last_response.location.split('/').last if status == 301
   end
 
   def read_records
-    @tables.get "/v3/shared-tables/#{@channel_id}/#{@table_name}"
-    JSON.parse(@tables.last_response.body)
+    get "/v3/shared-tables/#{@channel_id}/#{@table_name}"
+    JSON.parse(last_response.body)
   end
 
   def read_metadata
-    @tables.get "/v3/shared-tables/#{@channel_id}/#{@table_name}/metadata"
-    return nil if @tables.last_response.body.empty?
-    JSON.parse(@tables.last_response.body)
+    get "/v3/shared-tables/#{@channel_id}/#{@table_name}/metadata"
+    return nil if last_response.body.empty?
+    JSON.parse(last_response.body)
   end
 
   def write_column_metadata(column_list)
-    @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/metadata?column_list=#{column_list.to_json}"
-    return nil if @tables.last_response.body.empty?
-    JSON.parse(@tables.last_response.body)
+    post "/v3/shared-tables/#{@channel_id}/#{@table_name}/metadata?column_list=#{column_list.to_json}"
+    return nil if last_response.body.empty?
+    JSON.parse(last_response.body)
   end
 
   def update_record(id, record)
-    @tables.put "/v3/shared-tables/#{@channel_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    JSON.parse(@tables.last_response.body)
+    put "/v3/shared-tables/#{@channel_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    JSON.parse(last_response.body) if last_response.successful?
   end
 
   def delete_record(id)
-    @tables.delete "/v3/shared-tables/#{@channel_id}/#{@table_name}/#{id}"
+    delete "/v3/shared-tables/#{@channel_id}/#{@table_name}/#{id}"
   end
 
   def import(csv_filename)
     import_file = Rack::Test::UploadedFile.new csv_filename, "text/csv"
-    @tables.post "/v3/import-shared-tables/#{@channel_id}/#{@table_name}", "import_file" => import_file
+    post "/v3/import-shared-tables/#{@channel_id}/#{@table_name}", "import_file" => import_file
   end
 
   def export()
-    @tables.get "/v3/export-shared-tables/#{@channel_id}/#{@table_name}"
+    get "/v3/export-shared-tables/#{@channel_id}/#{@table_name}"
   end
 
   def delete_column(column)
-    @tables.delete "/v3/shared-tables/#{@channel_id}/#{@table_name}/column/#{column}"
+    delete "/v3/shared-tables/#{@channel_id}/#{@table_name}/column/#{column}"
   end
 
   def rename_column(old, new)
-    @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/column/#{old}?new_name=#{new}"
+    post "/v3/shared-tables/#{@channel_id}/#{@table_name}/column/#{old}?new_name=#{new}"
   end
 
   def add_column(new)
-    @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/column?column_name=#{new}"
+    post "/v3/shared-tables/#{@channel_id}/#{@table_name}/column?column_name=#{new}"
   end
 
   def delete_table(table_name = @table_name)
-    @tables.delete "/v3/shared-tables/#{@channel_id}/#{table_name}"
+    delete "/v3/shared-tables/#{@channel_id}/#{table_name}"
   end
 
   def populate_table(data, overwrite)
     url = "/v3/shared-tables/#{@channel_id}"
     url += "?overwrite=1" if overwrite
-    @tables.post url, JSON.generate(data), 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    post url, JSON.generate(data), 'CONTENT_TYPE' => 'application/json;charset=utf-8'
   end
 
 end

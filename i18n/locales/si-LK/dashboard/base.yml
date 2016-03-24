@@ -484,6 +484,16 @@ si:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: ස්තුතියි ඔබට
+    wrong_body: Thank you for submitting answers.
+    correct_title: ස්තුතියි ඔබට
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: ස්තුතියි ඔබට
+    wrong_body: Thank you for submitting answers.
+    correct_title: ස්තුතියි ඔබට
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: විසඳුම වැරදියි
     wrong_body: ඔබ විසින් ඇතුල් කරන ලද විසඳුම නිවැරදි නැත. කරුණාකර නැවත උත්සාහ කරන්න!
@@ -501,9 +511,6 @@ si:
     placeholder: ඔබගේ පිළිතුර මෙතනට ඇතුල් කරන්න
     open_response_title: ස්තූතියි
     open_response_body: ඔබගේ ප්‍රතිචාරය සඳහා ස්තූතියි!
-  level_group:
-    correct_title: ස්තුතියි ඔබට
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: හරි
     startover_title: මුල සිට පටන් ගැනීම ඔබ තහවුරු කරනවද?
@@ -557,6 +564,7 @@ si:
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
     assessment: assessment
+    submitted: submitted
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses

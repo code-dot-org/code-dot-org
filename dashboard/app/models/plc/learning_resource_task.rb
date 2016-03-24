@@ -16,5 +16,5 @@
 #
 
 class Plc::LearningResourceTask < Plc::Task
-  serialized_attrs %w(resource_url)
+  serialized_attrs %w(resource_url icon)
 end

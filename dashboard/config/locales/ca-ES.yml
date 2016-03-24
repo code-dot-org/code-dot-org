@@ -588,6 +588,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Gràcies
+    wrong_body: Thank you for submitting answers.
+    correct_title: Gràcies
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Gràcies
+    wrong_body: Thank you for submitting answers.
+    correct_title: Gràcies
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Solució incorrecta
     wrong_body: La solució que has introduït no és correcta.  Si us plau, intenta-ho
@@ -608,9 +618,6 @@
     placeholder: Introdueix la teva resposta aquí
     open_response_title: Gràcies
     open_response_body: Gràcies per la resposta!
-  level_group:
-    correct_title: Gràcies
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Estàs segur que vols tornar a començar?
@@ -674,6 +681,7 @@
     completed_perfect: completat, perfecte
     furthest_level_attempted: nivell més alt intentat
     assessment: avaluació
+    submitted: submitted
   studio:
     courses_working_on: Cursos en els que estàs treballant
     completed_courses: Cursos completats

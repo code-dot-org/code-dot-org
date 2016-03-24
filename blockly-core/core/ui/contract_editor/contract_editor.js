@@ -495,6 +495,7 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(isVariable) {
   var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
   tempFunctionDefinitionBlock.updateOutputType(Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE);
+  tempFunctionDefinitionBlock.userCreated = true;
 
   if (isVariable) {
     tempFunctionDefinitionBlock.convertToVariable();

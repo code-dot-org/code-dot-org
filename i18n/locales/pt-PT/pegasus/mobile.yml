@@ -18,7 +18,7 @@ pt-PT:
   email: E-mail
   zipcode: Código postal ou país
   submit: OK
-  twentyhours_heading: Experimente nosso Curso de Introdução à Ciência da Computação
+  twentyhours_heading: Experimenta o nosso curso de introdução à Ciência da Computação
   twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência da computação e seus conceitos nesse curso.
   og_title: Todos os alunos merecem uma oportunidade
   og_description: Todos os alunos de todas as escolas merecem a oportunidade de ter uma disciplina de informática.
@@ -68,7 +68,7 @@ pt-PT:
   get_a_certificate_of_achievement: Obtem um certificado de realização
   view_course: View course
   view_unit: View unit
-  make_app: Make an app
+  make_app: Desenvolver uma aplicação
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
@@ -211,7 +211,7 @@ pt-PT:
   studiobar_hoc_title: A Hora de Código
   studiobar_hoc_body: Aprende a programar com o Angry Birds
   studiobar_flappy_title: Flappy Bird
-  studiobar_flappy_body: Cria e partilha a tua própria versão do jogo “Flappy Bird”
+  studiobar_flappy_body: Cria e partilha a tua própria versão do jogo “Flappy Bird”.
   studiobar_teacher_title: Salas de aula únicas
   studiobar_teacher_body: Se for Professor, pode usar o Code Studio na sala de aula
   studiobar_frozen_title: Hora de Código
@@ -312,13 +312,13 @@ pt-PT:
   homepage_slot_text_link_hocserved: '# já experimentaram'
   homepage_solot_text_link_volunteer: Seja voluntário na Hora do Código
   homepage_slot_text_title_students: Alunos
-  homepage_slot_text_blurb_students: Explora todos os nossos tutoriais.
+  homepage_slot_text_blurb_students: Explora todos os nossos tutoriais para aprenderes a programar.
   homepage_slot_text_blurb_students_courses: Explora os nossos cursos
   homepage_slot_text_link_codestudio: Experimenta o Code Studio
   homepage_slot_text_link_local: Encontra uma turma à tua volta
   homepage_slot_text_link_othercourses: Outros cursos online
   homepage_slot_text_title_educators: Professores
-  homepage_slot_text_blurb_educators: Ensine os seus alunos.
+  homepage_slot_text_blurb_educators: Os professores podem ensinar os alunos a programar na sala de aula.
   homepage_slot_text_link_elementary: Elementary school
   homepage_slot_text_link_middle: 2.º ou 3.º Ciclos do Ensino Básico
   homepage_slot_text_link_high: Ensino secundário
@@ -615,9 +615,10 @@ pt-PT:
   dashboard_progress_not_started: por iniciar
   dashboard_progress_in_progress: em progresso
   dashboard_progress_not_completed: por concluir
-  dashboard_progress_completed_too_many_blocks: concluído, muitos blocos
-  dashboard_progress_completed_perfect: concluído, perfeito
+  dashboard_progress_completed_too_many_blocks: concluído, mas com muitos blocos
+  dashboard_progress_completed_perfect: concluído, na perfeição
   dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
+  dashboard_progress_submitted: submitted
   dashboard_stage: Etapa
   dashboard_puzzle: Desafio
   dashboard_question: Pergunta

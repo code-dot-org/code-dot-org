@@ -487,6 +487,16 @@ sv:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tack
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tack
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Fel lösning
     wrong_body: 'Din lösning är inte rätt.  Försök pånytt!'
@@ -504,9 +514,6 @@ sv:
     placeholder: Skriv in ditt svar här
     open_response_title: Tack
     open_response_body: Tack för ditt svar!
-  level_group:
-    correct_title: Tack
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: Ok
     startover_title: Är du säker på att du vill börja om?
@@ -560,6 +567,7 @@ sv:
     completed_perfect: Avklarad perfekt
     furthest_level_attempted: försökt nå bortersta nivån
     assessment: Test
+    submitted: submitted
   studio:
     courses_working_on: Kurser du påbörjat
     completed_courses: Avslutade kurser

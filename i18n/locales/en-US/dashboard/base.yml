@@ -475,6 +475,16 @@ en:
     correct_body: crwdns56132:0crwdne56132:0
     toofew_title: crwdns56133:0crwdne56133:0
     toofew_body: crwdns56134:0crwdne56134:0
+  level_group:
+    wrong_title: crwdns56221:0crwdne56221:0
+    wrong_body: crwdns56222:0crwdne56222:0
+    correct_title: crwdns56173:0crwdne56173:0
+    correct_body: crwdns56174:0crwdne56174:0
+  level_group-submittable:
+    wrong_title: crwdns56223:0crwdne56223:0
+    wrong_body: crwdns56224:0crwdne56224:0
+    correct_title: crwdns56225:0crwdne56225:0
+    correct_body: crwdns56226:0crwdne56226:0
   match:
     wrong_title: crwdns5098:0crwdne5098:0
     wrong_body: crwdns5099:0crwdne5099:0
@@ -492,9 +502,6 @@ en:
     placeholder: crwdns22206:0crwdne22206:0
     open_response_title: crwdns37547:0crwdne37547:0
     open_response_body: crwdns37548:0crwdne37548:0
-  level_group:
-    correct_title: crwdns56173:0crwdne56173:0
-    correct_body: crwdns56174:0crwdne56174:0
   dialog:
     ok: crwdns5100:0crwdne5100:0
     startover_title: crwdns45297:0crwdne45297:0
@@ -548,6 +555,7 @@ en:
     completed_perfect: crwdns22209:0crwdne22209:0
     furthest_level_attempted: crwdns22210:0crwdne22210:0
     assessment: crwdns35034:0crwdne35034:0
+    submitted: crwdns56189:0crwdne56189:0
   studio:
     courses_working_on: crwdns25902:0crwdne25902:0
     completed_courses: crwdns25903:0crwdne25903:0

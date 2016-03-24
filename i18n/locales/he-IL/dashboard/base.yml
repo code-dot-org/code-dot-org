@@ -491,6 +491,16 @@ he:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: תודה רבה
+    wrong_body: Thank you for submitting answers.
+    correct_title: תודה רבה
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: תודה רבה
+    wrong_body: Thank you for submitting answers.
+    correct_title: תודה רבה
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: פתרון לא נכון
     wrong_body: הפתרון שענית אינו נכון.נא נסה שנית!
@@ -508,9 +518,6 @@ he:
     placeholder: הכנס את התשובה שלך כאן
     open_response_title: תודה
     open_response_body: תודה על תגובתך!
-  level_group:
-    correct_title: תודה רבה
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: אישור
     startover_title: האם אתה בטוח שאתה רוצה להתחיל מחדש?
@@ -564,6 +571,7 @@ he:
     completed_perfect: הושלם, מושלם
     furthest_level_attempted: רמת הרחוקה ניסיון
     assessment: הערכה
+    submitted: submitted
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: קורסים שהושלמו

@@ -483,6 +483,16 @@ sl:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Hvala
+    wrong_body: Thank you for submitting answers.
+    correct_title: Hvala
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Hvala
+    wrong_body: Thank you for submitting answers.
+    correct_title: Hvala
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Nepravilna rešitev
     wrong_body: 'Rešitev, ki si jo vnesel, ni pravilna.  Prosim, poskusi znova!'
@@ -500,9 +510,6 @@ sl:
     placeholder: Vnesite vaš odgovor tukaj
     open_response_title: Hvala
     open_response_body: Hvala za vaš odgovor!
-  level_group:
-    correct_title: Hvala
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: Vredu
     startover_title: Si prepričan, da želiš začeti znova?
@@ -556,6 +563,7 @@ sl:
     completed_perfect: dokončano, odlično
     furthest_level_attempted: poskusili ste najvišji nivo
     assessment: ocenjevanje
+    submitted: submitted
   studio:
     courses_working_on: Tečaji, ki jih še nisi dokončal/a
     completed_courses: Tečaji, ki si jih dokončal/a

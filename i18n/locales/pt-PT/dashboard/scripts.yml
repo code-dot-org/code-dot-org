@@ -43,7 +43,7 @@ pt:
           "Studio: Create a Story": 'Laboratório do Jogo: Criar uma História'
           "Artist: Loops": 'Artista: Ciclos'
           description_audience: Dos 4 aos 6 anos
-          description_short: Começar com o Curso 1, para os leitores principiantes.
+          description_short: O curso 1 é destinado às crianças que estão a aprender a ler.
         course2:
           The Maze: O Labirinto
           Suzi: Suzi
@@ -82,7 +82,7 @@ pt:
           "Maze: Sequence2": 'Labirinto: Sequência 2'
           "Artist: Nested Loops": 'Artista: Laços Aninhados'
           description_audience: Dos 6 aos 18 anos
-          description_short: O Curso 2 é destinado aos alunos que já sabem ler.
+          description_short: O curso 2 é destinado aos alunos que já sabem ler.
         course3:
           The Maze: O Labirinto
           "Studio: Create a Story": 'Laboratório do Jogo: Criar uma História'
@@ -133,7 +133,7 @@ pt:
           "Artist: Patterns": 'Artista: Padrões'
           Songwriting: Composição
           description_audience: Dos 8 aos 18 anos
-          description_short: O Curso 3 é uma continuação do Curso 2.
+          description_short: O curso 3 é a continuação do curso 2.
         playlab:
           title: Laboratório
           description: Crie uma história ou um jogo no Laboratório!
@@ -155,7 +155,7 @@ pt:
           Artist: Artista
           description_short: Use a programação para explorar a mágica e a beleza do gelo com Anna e Elsa.
         course4:
-          description_short: Os alunos do Curso 4 já deverão ter concluído os Cursos 2 e 3.
+          description_short: O curso 4 é destinado aos alunos que já concluíram os cursos 2 e 3.
           description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
           "Artist: Variables": 'Artista: variáveis'
           "Bee: For Loops": 'Abelha: laços for'
@@ -188,8 +188,8 @@ pt:
           Extreme Challenge - Comprehensive: 'Desafio extremo - abrangente'
         Course4pre:
           title: Pré-requisitos do curso 4
-          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
-          description: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
+          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os cursos 2 e 3.
+          description: Uma breve revisão dos conceitos para os alunos que não fizeram os cursos 2 e 3.
           Course 4 Prerequisite: Pré-requisitos do curso 4
           "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
@@ -416,8 +416,8 @@ pt:
           Puzzles: Puzzles
         course4pre:
           title: Pré-requisitos do curso 4
-          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
-          description: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
+          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os cursos 2 e 3.
+          description: Uma breve revisão dos conceitos para os alunos que não fizeram os cursos 2 e 3.
           Course 4 Prerequisite: Pré-requisitos do curso 4
           "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
@@ -865,7 +865,7 @@ pt:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -928,6 +928,7 @@ pt:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: combinado de estudos de verão'
@@ -1326,6 +1327,8 @@ pt:
           Getting Started: Getting Started
           Unit 6 lessons: Unit 6 lessons
           Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1596,6 +1599,7 @@ pt:
           Complete the Challlege: Complete the Challlege
           Share out and Submit: Share out and Submit
           Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
         cspunit6:
           title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
           description_short: Data Apps
@@ -1609,3 +1613,36 @@ pt:
           Visualizing Data: Visualizing Data
           Sample Apps: Sample Apps
           Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          "Calc: Evaluation Blocks": 'Calc: Blocos de cálculo'
+          "Eval: Strings and Images": 'Eval: Strings e imagens'
+          "Unplugged: Contracts": 'Offline: contratos'
+          "Eval: Writing Contracts": 'Eval: Escrever contratos'
+          "Calc: Defining Variables": 'Cálculo: definir variáveis'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Offline: a receita de design'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Offline: video games e planos de coordenadas'
+          "Play Lab: Defining Variables (Big Game)": 'Laboratório: Definição de variáveis (O Grande Jogo)'
+          "Play Lab: Animation (Big Game)": 'Laboratório: Animação (O Grande Jogo)'
+          "Unplugged: Booleans": 'Offline: booleanos'
+          "Eval: Boolean Operators": 'Eval: Operadores booleanos'
+          "Play Lab: Booleans": 'Laboratório: booleanos'
+          "Play Lab: Boolean (Big Game)": 'Laboratório: Booleano (O Grande Jogo)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Offline: condicionais e funções definidas por partes'
+          "Eval: Conditionals": 'Eval: Condicionais'
+          "Unplugged: Collision Detection and the Distance Formula": 'Offline: deteção de colisão e fórmula da distância'
+          "Play Lab: Collision Detection (Big Game)": 'Laboratório: Deteção de colisão (O Grande Jogo)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

@@ -356,7 +356,6 @@ el:
       4-5 Maze 9_instruction: 'Δημιούργησε ενα βρόγχο με το μπλοκ "επανάλαβε μέχρι".'
       4-5 Maze Assessment 1_instruction: 'Αξιολόγηση: Πήγαινε στον ηλίανθο.'
       4-5 Maze Conditionals 1_instruction: 'Χρησιμοποίησε το μπλοκ "Επανάλαβε μέχρι" για να οδηγηθεί το Ζόμπι στον Ηλίανθο.'
-      4-5 Maze Conditionals 10_instruction: Μπορείς να προσθέσεις ακριβώς 3 μπλοκς για να με βοηθήσεις να λύσω εναν ποιό πρίπλοκο λαβύρινθο? Αν το κάνεις σωστα, θα μπορώ να περπατήσω κάθε καμπύλο μονοπάτι, οποιουδήποτε μήκους.
       4-5 Maze Conditionals 2_instruction: 'Χρησιμοποίησε το μπλοκ "Επανάλαβε μέχρι" για να οδηγηθεί το Ζόμπι στον Ηλίανθο.'
       4-5 Maze Conditionals 3_instruction: 'Χρησιμοποίησε το μπλοκ "εαν" ωστε να μπορώ να αποφασίζω πότε να στρίψω. Υπόδειξη: χρειάζεσαι μόνο ενα μπλοκ, αλλά μάθε πως το υλοποιούμε ώστε την επόμενη φορά να το κάνεις μόνος σου.'
       4-5 Maze Conditionals 4_instruction: 'Ωραία, αυτό είναι ακριβώς όπως το τελευταίο παζλ, αλλά πρέπει να θυμάσαι πως χρησιμοποίησες μαζί τα μπλοκ "εαν" και "επανάλαβε".'
@@ -1138,6 +1137,10 @@ el:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1590,6 +1593,8 @@ el:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -1830,7 +1835,7 @@ el:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: |
-        Το να πηγαίνεις προς ένα Αναρριχητικό Φυτό είναι κακή ιδέα.
+        Το να πηγαίνεις προς ένα creeper (κριπερ) είναι κακή ιδέα.
         Προχώρησε προσεκτικά τριγύρω τους για να φτάσεις στην ασφάλεια του σπιτιού σου.
       Overworld Chop Tree_instruction: |
         Το ξύλο είναι πολύ σημαντικός πόρος. Πολλά πράγματα
@@ -2385,7 +2390,7 @@ el:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -3234,8 +3239,10 @@ el:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

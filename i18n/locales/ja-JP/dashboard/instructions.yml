@@ -231,11 +231,7 @@ ja:
       4-5 Artist For Loops 13_instruction: この設計は、for ループがないのでブロックをたくさん使っています！for ブロックを使ってスパイラルを完成させましょう。最後のラインの長さは 250 ピクセルです。
       4-5 Artist For Loops 14_instruction: '誰かがコードを書き始めたあとで、もっといい方法があることに途中で気づきました。ブロックを for ブロックに置き換えて、三角形のスパイラルを完成させましょう。（ヒント: 最後のラインの長さは 300 ピクセルです。）'
       4-5 Artist For Loops 15_instruction: '誰かがコードを書き始めたあとで、もっといい方法があることに途中で気づきました。ブロックを for ブロックに置き換えて、六角形のスパイラルを完成させましょう。（ヒント: 最後のラインの長さは 200 ピクセルです。）'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: これは for ブロックです。1,2,3…10と入力する代わりに、ブロックの中で実行を繰り返し、回数を数えてくれるのが for ブロックです。for ブロックの中の to の部分に、10と入力します。
       4-5 Artist For Loops 3_instruction: どうやって 1 から 50 まで数えますか？for ブロックを使ってください。
       4-5 Artist For Loops 4_instruction: 1 から 10 まで、1 ずつ数えるように、for ブロックを完成させましょう。
       4-5 Artist For Loops 6_instruction: '1辺の長さが50、60、70、80、90の正方形をそれぞれ作ります。"正方形を描く" 関数を 5 回使ってください。'
@@ -364,7 +360,6 @@ ja:
       4-5 Maze 9_instruction: 「までを繰り返します」ブロックを使ってループを作ってください。
       4-5 Maze Assessment 1_instruction: 課題：ヒマワリまで辿り着く。
       4-5 Maze Conditionals 1_instruction: 「までを繰り返します」ブロックを使ってゾンビをヒマワリまで連れて行く。
-      4-5 Maze Conditionals 10_instruction: ３つのブロックのみを加えてもっと複雑な迷路を解き明かすのを手伝ってくれますか？ちゃんと出来たら、どんなに曲がった道でも、どんな長さの道でも歩けるようになります。
       4-5 Maze Conditionals 2_instruction: 「までを繰り返します」ブロックを使ってゾンビをヒマワリまで連れて行く。
       4-5 Maze Conditionals 3_instruction: 「もし」ブロックを使って、いつ曲がるかを決めてください。ヒント：あともう１つのブロックが必要です、どう設定しているかを学べば、次はひとりでできるようになります。
       4-5 Maze Conditionals 4_instruction: 'Ok。さっきのパズルと同じです、でもどうやって"もし"ブロックと"繰り返し"ブロックを一緒に使ったかをもう一度思い出してみましょう。'
@@ -1565,6 +1560,10 @@ ja:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -2028,6 +2027,8 @@ ja:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2934,7 +2935,7 @@ ja:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -3783,8 +3784,10 @@ ja:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

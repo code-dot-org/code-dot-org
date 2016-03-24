@@ -574,6 +574,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "متشکرم"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "متشکرم"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "متشکرم"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "متشکرم"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: "راه‌حل نادرست"
     wrong_body: "راه‌حلی که شما وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!"
@@ -593,9 +603,6 @@
     placeholder: "پاسخ خود را اینجا وارد کنید"
     open_response_title: "متشکرم"
     open_response_body: "برای پاسختان سپاسگزارم!"
-  level_group:
-    correct_title: "متشکرم"
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: Ok
     startover_title: "آیا مطمئنی که می خواهی دوباره شروع کنی؟"
@@ -661,6 +668,7 @@
     completed_perfect: "تکمیل, کامل"
     furthest_level_attempted: "تلاش برای دسترسی به سطح دسترسی خارج از محدوده "
     assessment: "ارزیابی"
+    submitted: submitted
   studio:
     courses_working_on: "دوره های شما در حال کار بر روی"
     completed_courses: "دوره های تکمیل شده"

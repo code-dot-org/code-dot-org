@@ -379,8 +379,7 @@
     heading_elementary: "<h2>20-godzinne kursy z</h2><h1>Podstaw informatyki (w każdym
       wieku)</h1>"
     heading_apps: "<h2>Zabawy dla</h2><h1>Wszystkich</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Gotowy na następny krok?</h2><h1>JavaScript dla Szkół Średnich</h1>"
     heading_legacy: "<h2>Nasz przyspieszony kurs dla</h2><h1>Wszystkich grup wiekowych</h1>"
     your_gallery: Galeria
     no_primary_course: Wypróbuj kurs w Code Studio
@@ -511,13 +510,13 @@
   upsell:
     applab:
       title: App Lab
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: App Lab jest środowiskiem programistycznym, gdzie można tworzyć proste
+        aplikacje. Zaprojektuj aplikację, koduj za pomocą bloków albo JavaScript aby
+        to zadziałało, następnie udostępnij twoją aplikację w kilka sekund.
+      body_short: Zaprojektuj aplikację, koduj za pomocą bloków albo JavaScript aby
+        to zadziałało, następnie udostępnij twoją aplikację w kilka sekund.
+      audience: Wiek 13+
+      cta: Dowiedz się, jak
     hoc:
       title: Klasyczny labirynt
       body: Wypróbuj podstawy informatyki. Miliony dały im już szansę.
@@ -591,6 +590,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Dziękujemy
+    wrong_body: Thank you for submitting answers.
+    correct_title: Dziękujemy
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Dziękujemy
+    wrong_body: Thank you for submitting answers.
+    correct_title: Dziękujemy
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Niepoprawne rozwiązanie
     wrong_body: Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!
@@ -610,9 +619,6 @@
     placeholder: Wprowadź swoją odpowiedź tutaj
     open_response_title: Dzięki
     open_response_body: Dzięki za odpowiedź!
-  level_group:
-    correct_title: Dziękujemy
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Czy na pewno chcesz zacząć od nowa?
@@ -678,6 +684,7 @@
     completed_perfect: zakończona, doskonale
     furthest_level_attempted: próbowano najdalszy poziom
     assessment: ocena/ewaluacja
+    submitted: submitted
   studio:
     courses_working_on: Kursy, w których bierzesz udział
     completed_courses: Ukończone kursy

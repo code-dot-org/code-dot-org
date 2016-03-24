@@ -333,7 +333,6 @@ sv:
       4-5 Maze 9_instruction: 'Skapa en slinga med blocket "upprepa tills".'
       4-5 Maze Assessment 1_instruction: 'Uppgift: Ta dig till solrosen.'
       4-5 Maze Conditionals 1_instruction: 'Använd blocket "upprepa tills" för att ta zombien till solrosen.'
-      4-5 Maze Conditionals 10_instruction: Kan du lägga till endast 3 block för att hjälpa mig klara en svårare labyrint? Om du gör det rätt, kan jag ta mig fram vilken snirklig väg som helst oavsett hur lång den är.
       4-5 Maze Conditionals 2_instruction: 'Använd blocket "upprepa tills" för att ta zombien till solrosen.'
       4-5 Maze Conditionals 3_instruction: 'Använd "om"-blocket för att låta mig välja när jag ska svänga. Tips: du behöver bara ett block till, men lär dig hur man gör det så att du kan göra det själv nästa gång.'
       4-5 Maze Conditionals 4_instruction: 'Ok, det här är precis som förra pusslet, men du behöver kunna använda "om"-blocket och "upprepa"-blocket tillsammans.'
@@ -1116,6 +1115,10 @@ sv:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1564,6 +1567,8 @@ sv:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2314,7 +2319,7 @@ sv:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -3163,8 +3168,10 @@ sv:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

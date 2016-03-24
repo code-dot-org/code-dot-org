@@ -1,5 +1,6 @@
 {
   "and": "және",
+  "animationMode": "Animation",
   "backToPreviousLevel": "Алдыңғы деңгейге қайта оралу",
   "blocklyMessage": "Блокты",
   "blocks": "блоктар",
@@ -26,6 +27,8 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
+  "debugWatchHeader": "Watch",
+  "debugWatchNotAvailable": "<not available>",
   "defaultTwitterText": "Жазған кодымды тексеру",
   "designMode": "Дизайн",
   "dialogCancel": "Болдырмау",
@@ -150,6 +153,7 @@
   "hintSelectInstructions": "Нұсқаулықтар және ескі кеңестер",
   "hintSelectNewHint": "Жаңа кеңестерді алу",
   "hintTitle": "Кеңес:",
+  "iconSearchPlaceholder": "Search for an icon...",
   "ignore": "Ескермеу",
   "infinity": "Шексіздік",
   "jump": "секіру",
@@ -165,6 +169,7 @@
   "nextPuzzle": "Келесі бас қатырғыщ",
   "nextStage": "Құттықтаймыз!  Сіз {stageName} аяқтадыңыз.",
   "nextStageTrophies": "Құттықтаймыз! Сіз {stageName} аяқтадыңыз және {numTrophies, plural, one {a trophy} other {# trophies}} ұтып алдыңыз.",
+  "noIconsFound": "No icons found",
   "numBlocksNeeded": "Құттықтаймыз! Сіз {puzzleNumber} бас қатырғышты аяқтадыңыз. (Әйтседе сіз тек қана {numBlocks, plural, one {1 block} other {# blocks}} қолдануыңызға болар еді.)",
   "numLinesOfCodeWritten": "Сіз қазір ғана кодтың {numLines, plural, one {1 line} other {# lines}} жаздыңыз!",
   "openWorkspace": "Бұл қалай жұмыс жасайды",
@@ -172,6 +177,7 @@
   "pause": "Break",
   "play": "ойнау",
   "print": "Шығару",
+  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
   "puzzleTitle": " {stage_total}-тің {puzzle_number} бас қатырғышы ",
   "readonlyWorkspaceHeader": "Тек қана көру: ",
   "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
@@ -210,7 +216,6 @@
   "syntaxErrorMsg": "Сіздің бағдарламанызда қате бар. {lineNumber} қатарын өшіріңіз және қайтадан байқап көріңіз.",
   "textVariable": "мәтін",
   "toggleBlocksErrorMsg": "Сіз өз бағдарламаңыздағы қателікті ол блок күйінде көрсетілгенге дейін түзетуіңіз қажет.",
-  "tooFewBlocksMsg": "Сіз блоктардың барлық қажет типтерін қолданудасыз, бұл бас қатрығышты шешу үшін осы блок типтерін көбірек қолданып көріңіз.",
   "tooManyBlocksMsg": "Бұл бас қатрығыш <x id='START_SPAN'/><x id='END_SPAN'/> блогының көмегімен шығаруға болады.",
   "tooMuchWork": "Сіз мені көп жұмыс жасауға мәжбүрлеп отырсыз. Сіз аз рет қайталап көріңіз",
   "toolboxHeader": "Блоктар",
@@ -224,6 +229,5 @@
   "watchVideo": "Бейнематериалды көру",
   "when": "кезде",
   "whenRun": "қосу кезінде",
-  "workspaceHeaderShort": "Жұмыс аумағы: ",
-  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project."
+  "workspaceHeaderShort": "Жұмыс аумағы: "
 }

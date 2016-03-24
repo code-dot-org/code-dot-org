@@ -1,5 +1,6 @@
 {
   "and": "i",
+  "animationMode": "Animation",
   "backToPreviousLevel": "Torna al nivell anterior",
   "blocklyMessage": "Blockly",
   "blocks": "blocs",
@@ -26,6 +27,8 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
+  "debugWatchHeader": "Watch",
+  "debugWatchNotAvailable": "<not available>",
   "defaultTwitterText": "Comprova el que he fet",
   "designMode": "ModeDiseny",
   "dialogCancel": "Cancel·lar",
@@ -150,6 +153,7 @@
   "hintSelectInstructions": "Instructions and old hints",
   "hintSelectNewHint": "Obtenir una nova pista",
   "hintTitle": "Consell:",
+  "iconSearchPlaceholder": "Search for an icon...",
   "ignore": "Ignorar",
   "infinity": "Infinit",
   "jump": "salt",
@@ -165,6 +169,7 @@
   "nextPuzzle": "Següent puzzle",
   "nextStage": "Enhorabona! Heu completat {stageName}.",
   "nextStageTrophies": "Enhorabona! Has acabat {stageName} i has guanyat {numTrophies, plural, un {a trophy} other {# trophies}}.",
+  "noIconsFound": "No icons found",
   "numBlocksNeeded": "Enhorabona! Has acabat el Puzzle {puzzleNumber}. (Tot i que podries haver utilitzat un {numBlocks, plural, one {1 bloc} other {# blocs}}.)",
   "numLinesOfCodeWritten": "Has escrit {numLines, plural, one {1 línia} other {# línies}} de codi!",
   "openWorkspace": "Com funciona",
@@ -172,6 +177,7 @@
   "pause": "Break",
   "play": "reprodueix",
   "print": "Imprimeix",
+  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
   "puzzleTitle": "Puzzle {puzzle_number} de {stage_total}",
   "readonlyWorkspaceHeader": "Veure només: ",
   "recommendedBlockContextualHintTitle": "Intenta utilitzar un bloc com aquest per a resoldre el trencaclosques.",
@@ -210,7 +216,6 @@
   "syntaxErrorMsg": "El seu programa conté un error tipogràfic. Tregui la línia {lineNumber} i torneu-ho a provar.",
   "textVariable": "text",
   "toggleBlocksErrorMsg": "Cal corregir un error en el programa abans que pugui mostrar-se com blocs.",
-  "tooFewBlocksMsg": "Estàs utilitzant tots els tipus de blocs necessaris, però prova d'utilitzar més d'aquest altre tipus per a completar el puzzle.",
   "tooManyBlocksMsg": "Aquest puzzle pot ser resolt amb <x id='START_SPAN'/><x id='END_SPAN'/> blocs.",
   "tooMuchWork": "Em fas fer molta feina! Podries intentar repetir menys vegades?",
   "toolboxHeader": "Blocs",
@@ -224,6 +229,5 @@
   "watchVideo": "Mira el vídeo",
   "when": "quan",
   "whenRun": "quan s'executa",
-  "workspaceHeaderShort": "Zona de treball: ",
-  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project."
+  "workspaceHeaderShort": "Zona de treball: "
 }

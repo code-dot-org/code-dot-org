@@ -23,7 +23,7 @@
 #
 
 class Applab < Blockly
-  before_save :update_palette
+  before_save :update_json_fields
   before_save :fix_examples
 
   serialized_attrs %w(
@@ -40,6 +40,7 @@ class Applab < Blockly
     start_html
     encrypted_examples
     submittable
+    log_conditions
     data_tables
     data_properties
     hide_view_data_button
@@ -76,6 +77,23 @@ class Applab < Blockly
     return false
   end
 
+  def parse_json_property_field(property_field)
+    value = self.properties[property_field]
+    if value.present? && value.is_a?(String)
+      self.properties[property_field] = JSON.parse value
+    end
+  rescue JSON::ParserError => e
+    errors.add(property_field, "#{e.class.name}: #{e.message}")
+    return false
+  end
+
+  def update_json_fields
+    palette_result = update_palette
+    log_conditions_result = parse_json_property_field('log_conditions')
+
+    return palette_result && log_conditions_result
+  end
+
   def self.palette
     <<-JSON.strip_heredoc.chomp
       {
@@ -87,6 +105,8 @@ class Applab < Blockly
         "dropdown": null,
         "getText": null,
         "setText": null,
+        "getNumber": null,
+        "setNumber": null,
         "checkbox": null,
         "radioButton": null,
         "getChecked": null,
@@ -138,6 +158,7 @@ class Applab < Blockly
         "updateRecord": null,
         "deleteRecord": null,
         "getUserId": null,
+        "drawChart": null,
         "drawChartFromRecords": null,
 
         // Turtle
