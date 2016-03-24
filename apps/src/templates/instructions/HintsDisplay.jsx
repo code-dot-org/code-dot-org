@@ -1,4 +1,4 @@
-var msg = require('../locale');
+var msg = require('../../locale');
 var Hint = require('./Hint.jsx');
 var Lightbulb = require('./Lightbulb.jsx');
 
