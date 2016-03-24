@@ -1,5 +1,5 @@
 var _ = require('lodash');
-var color = require('../color');
+var color = require('../../color');
 
 var HeightResizer = React.createClass({
 

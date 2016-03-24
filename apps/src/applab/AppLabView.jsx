@@ -6,8 +6,8 @@ var connect = require('react-redux').connect;
 var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
-var TopInstructions = require('../templates/TopInstructions.jsx');
-var HeightResizer = require('../templates/HeightResizer.jsx');
+var TopInstructions = require('../templates/instructions/TopInstructions.jsx');
+var HeightResizer = require('../templates/instructions/HeightResizer.jsx');
 
 var styles = {
   // same as #codeWorkspace + #codeWorkspace.pin_bottom from common.scss, with
