@@ -555,7 +555,7 @@ designMode.serializeToLevelHtml = function () {
 
 
 function getUnsafeHtmlReporter(sanitizationTarget) {
-  function reportUnsafeHtml(sanitizationTarget, removed, unsafe, safe) {
+  return function (removed, unsafe, safe) {
     var msg = "The following lines of HTML were modified or removed:\n" + removed +
       "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe + "\ntarget: " + sanitizationTarget;
     console.log(msg);
@@ -565,9 +565,7 @@ function getUnsafeHtmlReporter(sanitizationTarget) {
       safeHtml: safe,
       sanitizationTarget: sanitizationTarget
     });
-  }
-
-  return reportUnsafeHtml.bind(this, sanitizationTarget);
+  };
 }
 
 /**
