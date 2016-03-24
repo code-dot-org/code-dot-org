@@ -1,4 +1,4 @@
-var msg = require('../../locale');
+var msg = require('../locale');
 var Lightbulb = require('./Lightbulb.jsx');
 
 var DialogButtons = React.createClass({
