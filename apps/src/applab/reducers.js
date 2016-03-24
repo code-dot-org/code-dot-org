@@ -67,7 +67,8 @@ function interfaceMode(state, action) {
 }
 
 var instructionsInitialState = {
-  collapsed: false
+  collapsed: false,
+  height: 300
 };
 
 function instructions(state, action) {
