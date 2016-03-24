@@ -465,3 +465,10 @@ div#visualizationResizeBar {
   background: -moz-linear-gradient(to bottom right, red, orange, yellow, green, blue); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, red, orange, yellow, green, blue); /* Standard syntax */
 }
+
+.TopInstructions_showHideButton {
+  &:hover {
+    cursor: pointer;
+    color: white;
+  }
+}
