@@ -12,6 +12,15 @@ var styles = {
     right: 0,
     // left handled by media queries for .workspace-right
   },
+  showHideButton: {
+    position: 'absolute',
+    top: 0,
+    left: 8,
+    margin: 0,
+    lineHeight: '30px',
+    fontSize: 18
+    // TODO - hover
+  },
   header: {
     height: 30,
     lineHeight: '30px',
@@ -44,7 +53,9 @@ var TopInstructions = React.createClass({
 
     return (
       <div style={mainStyle} className="workspace-right">
-        <div id="instructionsHeader" style={styles.header}>
+        <i style={styles.showHideButton}
+            className="fa fa-chevron-circle-down TopInstructions_showHideButton"/>
+        <div style={styles.header}>
           Instructions: Puzzle 1 of 1 {/* TODO */}
         </div>
         <div style={bodyStyle}>
