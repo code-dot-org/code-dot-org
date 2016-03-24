@@ -1,4 +1,4 @@
-var color = require('../../color');
+var color = require('../color');
 
 var Lightbulb = React.createClass({
 
