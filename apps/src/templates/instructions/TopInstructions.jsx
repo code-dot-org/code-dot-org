@@ -22,7 +22,9 @@ var styles = {
   },
   body: {
     backgroundColor: 'white',
-    overflowY: 'scroll'
+    overflowY: 'scroll',
+    paddingLeft: 10,
+    paddingRight: 10
   }
 };
 
@@ -30,6 +32,17 @@ var TopInstructions = React.createClass({
   propTypes: {
     height: React.PropTypes.number.isRequired,
     markdown: React.PropTypes.string.isRequired
+  },
+
+  getInitialState() {
+    // TODO - move into redux?
+    return {
+      collapsed: false
+    };
+  },
+
+  toggleCollapse: function () {
+    this.setState({collapsed: !this.state.collapsed});
   },
 
   render: function () {
@@ -40,12 +53,13 @@ var TopInstructions = React.createClass({
     });
 
     var bodyStyle = _.assign({}, styles.body, {
-      height: this.props.height - styles.header.height
+      height: this.props.height - styles.header.height,
+      display: this.state.collapsed ? 'none' : undefined
     });
 
     return (
       <div style={mainStyle} className="workspace-right">
-        <CollapserIcon/>
+        <CollapserIcon collapsed={this.state.collapsed} onClick={this.toggleCollapse}/>
         <div style={styles.header}>
           Instructions: Puzzle 1 of 1 {/* TODO */}
         </div>
