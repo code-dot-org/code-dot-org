@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+# Deploys or updates an adhoc instance on AWS, based off the current branch.
+# Creates or updates the AWS CloudFormation stack, returning on completion.
+# Requires AWS credentials to be provided in the environment.
+
+require_relative '../deployment'
+require 'cdo/aws/cloud_formation'
+
+CDO.chef_local_mode = true
+
+# Update local-mode cookbooks for this branch
+AWS::CloudFormation.create_or_update
