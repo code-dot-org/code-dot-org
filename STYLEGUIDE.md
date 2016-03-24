@@ -353,6 +353,7 @@ var component = (
   </MyComponent>
 );
 ```
+* something about i18n
 
 
 ### In /apps
