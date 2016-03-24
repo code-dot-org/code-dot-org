@@ -38,7 +38,8 @@ function level(state, action) {
         'isEmbedView',
         'isReadOnlyWorkspace',
         'isShareView',
-        'isViewDataButtonHidden'
+        'isViewDataButtonHidden',
+        'instructionsMarkdown'
       ];
       Object.keys(action.props).forEach(function (key) {
         if (-1 === allowedKeys.indexOf(key)) {

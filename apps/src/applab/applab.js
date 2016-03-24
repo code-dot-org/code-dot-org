@@ -4,8 +4,7 @@
  * Copyright 2014-2015 Code.org
  *
  */
-/* global Dialog */
-/* global dashboard */
+/* global Dialog, dashboard, marked */
 
 'use strict';
 var studioApp = require('../StudioApp').singleton;
@@ -894,7 +893,9 @@ Applab.init = function(config) {
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
-    isViewDataButtonHidden: !!config.level.hideViewDataButton
+    isViewDataButtonHidden: !!config.level.hideViewDataButton,
+    // TODO - needs a skin before it can do this
+    instructionsMarkdown: getMarkdownInstructions(config.level)
   }));
 
   Applab.reduxStore.dispatch(changeInterfaceMode(Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
@@ -909,6 +910,16 @@ Applab.init = function(config) {
 
   Applab.render();
 };
+
+// TODO - this likely belongs elsewhere
+function getMarkdownInstructions(level) {
+  if (!studioApp.isMarkdownMode(level)) {
+    return level.markdownInstructions;
+  }
+
+  return marked(studioApp.substituteInstructionImages(
+    level.markdownInstructions, {}));
+}
 
 /**
  * Subscribe to state changes on the store.

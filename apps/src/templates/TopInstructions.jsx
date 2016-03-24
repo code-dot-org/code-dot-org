@@ -20,13 +20,15 @@ var styles = {
     textAlign: 'center'
   },
   body: {
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    overflowY: 'scroll'
   }
 };
 
 var TopInstructions = React.createClass({
   propTypes: {
-    height: React.PropTypes.number.isRequired
+    height: React.PropTypes.number.isRequired,
+    markdown: React.PropTypes.string.isRequired
   },
 
   render: function () {
@@ -46,11 +48,11 @@ var TopInstructions = React.createClass({
           Instructions: Puzzle 1 of 1 {/* TODO */}
         </div>
         <div style={bodyStyle}>
-          These are the markup instructions here
+          <Instructions renderedMarkdown={this.props.markdown}/>
         </div>
-        <Instructions/>
       </div>
     );
+
   }
 });
 module.exports = TopInstructions;
