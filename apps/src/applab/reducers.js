@@ -2,6 +2,7 @@
  *  @see http://redux.js.org/docs/basics/Reducers.html */
 'use strict';
 
+var _ = require('lodash');
 var ActionType = require('./actions').ActionType;
 var combineReducers = require('redux').combineReducers;
 var constants = require('./constants');
@@ -65,10 +66,27 @@ function interfaceMode(state, action) {
   }
 }
 
+var instructionsInitialState = {
+  collapsed: false
+};
+
+function instructions(state, action) {
+  state = state || instructionsInitialState;
+
+  if (action.type === ActionType.TOGGLE_INSTRUCTIONS_COLLAPSED) {
+    return _.assign({}, state, {
+      collapsed: !state.collapsed
+    });
+  }
+
+  return state;
+}
+
 var rootReducer = combineReducers({
   currentScreenId: currentScreenId,
   level: level,
-  interfaceMode: interfaceMode
+  interfaceMode: interfaceMode,
+  instructions: instructions
 });
 
 module.exports = { rootReducer: rootReducer };

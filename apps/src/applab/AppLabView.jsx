@@ -3,6 +3,7 @@
 
 var _ = require('lodash');
 var connect = require('react-redux').connect;
+var actions = require('./actions');
 var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
@@ -40,6 +41,8 @@ var AppLabView = React.createClass({
   propTypes: {
     isEditingProject: React.PropTypes.bool.isRequired,
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
+    instructionsMarkdown: React.PropTypes.string.isRequired,
+    instructionsCollapsed: React.PropTypes.bool.isRequired,
 
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     onViewDataButton: React.PropTypes.func.isRequired,
@@ -88,7 +91,9 @@ var AppLabView = React.createClass({
             className="fa fa-ellipsis-v" />
         <TopInstructions
             height={instructionHeight}
-            markdown={this.props.instructionsMarkdown}/>
+            markdown={this.props.instructionsMarkdown}
+            collapsed={this.props.instructionsCollapsed}
+            onToggleCollapsed={this.props.toggleInstructionsCollapsed}/>
         <HeightResizer style={resizerStyle}/>
         <ProtectedStatefulDiv
             id="codeWorkspace"
@@ -107,6 +112,14 @@ var AppLabView = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
-    instructionsMarkdown: state.level.instructionsMarkdown
+    instructionsMarkdown: state.level.instructionsMarkdown,
+    instructionsCollapsed: state.instructions.collapsed
   };
-})(AppLabView);
+}, function propsFromDispatch(dispatch) {
+  return {
+    toggleInstructionsCollapsed: function () {
+      dispatch(actions.toggleInstructionsCollapsed());
+    }
+  };
+}
+)(AppLabView);
