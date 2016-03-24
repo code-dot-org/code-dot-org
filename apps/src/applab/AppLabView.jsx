@@ -10,6 +10,9 @@ var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.
 var TopInstructions = require('../templates/instructions/TopInstructions.jsx');
 var HeightResizer = require('../templates/instructions/HeightResizer.jsx');
 
+// TODO - share with top instructions?
+var HEADER_HEIGHT = 30;
+
 var styles = {
   // same as #codeWorkspace + #codeWorkspace.pin_bottom from common.scss, with
   // the exception fo left: 400, which we let media queries from applab/styles.scss
@@ -43,6 +46,7 @@ var AppLabView = React.createClass({
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     instructionsMarkdown: React.PropTypes.string.isRequired,
     instructionsCollapsed: React.PropTypes.bool.isRequired,
+    instructionsHeight: React.PropTypes.number.isRequired,
 
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     onViewDataButton: React.PropTypes.func.isRequired,
@@ -67,15 +71,19 @@ var AppLabView = React.createClass({
           onScreenCreate={this.props.onScreenCreate} />;
     }
 
-    // TODO - have this change as we drag grippy
-    var instructionHeight = 200;
+    var instructionsHeight = this.props.instructionsHeight;
+    if (this.props.instructionsCollapsed) {
+      instructionsHeight = HEADER_HEIGHT;
+    }
 
+    // TODO - have this change as we drag grippy
+    // TODO - grippy should be hidden with collapse?
     var codeWorkspaceStyle = _.assign({}, styles.codeWorkspace, {
-      top: instructionHeight + styles.resizer.height
+      top: instructionsHeight + styles.resizer.height
     });
 
     var resizerStyle = _.assign({}, styles.resizer, {
-      top: instructionHeight
+      top: instructionsHeight
     });
 
     // TODO - changing id of codeWorkspace to codeWorkspaceApplab will break callouts and some UI tests
@@ -90,7 +98,7 @@ var AppLabView = React.createClass({
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
         <TopInstructions
-            height={instructionHeight}
+            height={instructionsHeight}
             markdown={this.props.instructionsMarkdown}
             collapsed={this.props.instructionsCollapsed}
             onToggleCollapsed={this.props.toggleInstructionsCollapsed}/>
@@ -113,7 +121,8 @@ module.exports = connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
     instructionsMarkdown: state.level.instructionsMarkdown,
-    instructionsCollapsed: state.instructions.collapsed
+    instructionsCollapsed: state.instructions.collapsed,
+    instructionsHeight: state.instructions.height
   };
 }, function propsFromDispatch(dispatch) {
   return {
