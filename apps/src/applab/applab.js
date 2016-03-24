@@ -763,6 +763,8 @@ Applab.init = function(config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
 
+  config.noInstructionDialog = true;
+
   // Applab.initMinimal();
 
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
