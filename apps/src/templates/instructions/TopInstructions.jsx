@@ -1,7 +1,7 @@
 'use strict';
 
 var _ = require('lodash');
-var color = require('../color');
+var color = require('../../color');
 
 var Instructions = require('./Instructions.jsx');
 
