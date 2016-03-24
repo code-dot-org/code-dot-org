@@ -1,7 +1,7 @@
-var color = require('../color');
+var color = require('../../color');
 
 var Lightbulb = React.createClass({
-  
+
   propTypes: {
     shouldAnimate: React.PropTypes.bool,
     count: React.PropTypes.number,

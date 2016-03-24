@@ -9,7 +9,7 @@ var HintSelect = require('./templates/HintSelect.jsx');
 var HintsDisplay = require('./templates/HintsDisplay.jsx');
 var HintDialogContent = require('./templates/HintDialogContent.jsx');
 var authoredHintUtils = require('./authoredHintUtils');
-var Lightbulb = require('./templates/Lightbulb.jsx');
+var Lightbulb = require('./templates/instructions/Lightbulb.jsx');
 
 var AuthoredHints = function (studioApp) {
   this.studioApp_ = studioApp;
