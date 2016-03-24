@@ -334,7 +334,11 @@ GameLab.prototype.execute = function() {
 
   this.gameLabP5.startExecution();
 
-  if (!this.level.editCode) {
+  if (this.level.editCode) {
+    if (!this.JSInterpreter || !this.JSInterpreter.initialized()) {
+      return;
+    }
+  } else {
     this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
     this.evalCode(this.code);
   }
@@ -358,7 +362,8 @@ GameLab.prototype.initInterpreter = function () {
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,
     maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-    customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties()
+    customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
+    customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties()
   });
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
@@ -472,8 +477,10 @@ GameLab.prototype.onP5Setup = function () {
     if (this.eventHandlers.setup) {
       this.setupInProgress = true;
       this.eventHandlers.setup.apply(null);
+      this.completeSetupIfSetupComplete();
+    } else {
+      this.gameLabP5.afterSetupComplete();
     }
-    this.completeSetupIfSetupComplete();
   }
 };
 
