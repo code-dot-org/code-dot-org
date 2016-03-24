@@ -6,7 +6,8 @@
 var ActionType = module.exports.ActionType = {
   CHANGE_SCREEN: 'CHANGE_SCREEN',
   SET_LEVEL_PROPS: 'SET_LEVEL_PROPS',
-  CHANGE_INTERFACE_MODE: 'CHANGE_INTERFACE_MODE'
+  CHANGE_INTERFACE_MODE: 'CHANGE_INTERFACE_MODE',
+  TOGGLE_INSTRUCTIONS_COLLAPSED: 'TOGGLE_INSTRUCTIONS_COLLAPSED'
 };
 
 /**
@@ -60,5 +61,14 @@ module.exports.changeScreen = function (screenId) {
   return {
     type: ActionType.CHANGE_SCREEN,
     screenId: screenId
+  };
+};
+
+/**
+ * Toggles whether instructions are currently collapsed.
+ */
+module.exports.toggleInstructionsCollapsed = function () {
+  return {
+    type: ActionType.TOGGLE_INSTRUCTIONS_COLLAPSED
   };
 };
