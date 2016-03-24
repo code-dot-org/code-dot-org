@@ -1,0 +1,13 @@
+%p This is a writing task
+
+= form_for(@enrollment_task_assignment, url: plc_enrollment_task_assignment_path(@enrollment_task_assignment)) do |f|
+  %p
+    %strong Assignment description:
+    %p
+      = simple_format(@enrollment_task_assignment.plc_task.assignment_description)
+  %p
+    = f.label :writing
+    = f.text_area :submission, rows: 10, style: 'width: 100%'
+
+  .actions
+    = f.submit 'Submit'

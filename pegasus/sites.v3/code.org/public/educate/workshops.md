@@ -42,7 +42,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, June 6 - Friday, June 10<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -63,7 +63,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -100,7 +100,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, June 20 - Friday, June 24<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -117,7 +117,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -144,7 +144,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, July 11 - Friday, July 15<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -161,7 +161,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -188,7 +188,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, August 8 - Friday, August 12<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -205,7 +205,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -241,7 +241,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, June 13 - Friday, June 17<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -257,7 +257,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -284,7 +284,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, June 27 - Friday, July 1<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -301,7 +301,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -342,7 +342,7 @@ Group 2:<br/>
 Monday, August 8 - Friday, August 12<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -359,7 +359,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -482,7 +482,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, June 27 - Friday, July 1<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -500,7 +500,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -532,7 +532,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, July 18 - Friday, July 22<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -549,7 +549,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -585,7 +585,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, July 25 - Friday, July 29<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -602,7 +602,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -628,7 +628,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, July 25 - Friday, July 29<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -645,7 +645,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 

@@ -1,6 +1,7 @@
 /* global Blockly, ace:true, droplet, marked, dashboard, addToHome */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
+var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
@@ -24,6 +25,7 @@ var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
+var annotationList = require('./acemode/annotationList');
 var copyrightStrings;
 
 /**
@@ -635,6 +637,8 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     // Remove this line once that bug is fixed and our Droplet lib is updated.
     this.editor.getValue();
     this.editor.setValue(resetValue);
+
+    annotationList.clearRuntimeAnnotations();
   }
   if (config.afterClearPuzzle) {
     config.afterClearPuzzle();
@@ -976,6 +980,45 @@ StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 };
 
+/**
+ * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
+ *   have markdown instructions
+ * @param {object} level
+ * @param {boolean} showHints
+ * @returns {React.element}
+ */
+StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
+  var isMarkdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+
+  var renderedMarkdown;
+
+  if (isMarkdownMode) {
+    var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
+    renderedMarkdown = marked(markdownWithImages);
+  }
+
+  var authoredHints;
+  if (showHints) {
+    authoredHints = this.authoredHintsController_.getHintsDisplay();
+  }
+
+  return (
+    <Instructions
+      puzzleTitle={puzzleTitle}
+      instructions={this.substituteInstructionImages(level.instructions)}
+      instructions2={this.substituteInstructionImages(level.instructions2)}
+      renderedMarkdown={renderedMarkdown}
+      markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
+      aniGifURL={level.aniGifURL}
+      authoredHints={authoredHints}/>
+  );
+};
+
+/**
+ * @param {object} level
+ * @param {boolean} autoClose - closes instructions after 32s if true
+ * @param {boolean} showHints
+ */
 StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   var isMarkdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
 
@@ -984,7 +1027,6 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     'markdown-instructions-container' :
     'instructions-container';
 
-  var renderedMarkdown;
   var headerElement;
 
   var puzzleTitle = msg.puzzleTitle({
@@ -993,8 +1035,6 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   });
 
   if (isMarkdownMode) {
-    var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
-    renderedMarkdown = marked(markdownWithImages);
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
     headerElement.innerHTML = puzzleTitle;
@@ -1003,20 +1043,8 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     }
   }
 
-  var authoredHints;
-  if (showHints) {
-    authoredHints = this.authoredHintsController_.getHintsDisplay();
-  }
-
-  var instructionsContent = React.createElement(Instructions, {
-    puzzleTitle: puzzleTitle,
-    instructions: this.substituteInstructionImages(level.instructions),
-    instructions2: this.substituteInstructionImages(level.instructions2),
-    renderedMarkdown: renderedMarkdown,
-    markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
-    aniGifURL: level.aniGifURL,
-    authoredHints: authoredHints
-  });
+  var instructionsContent = this.getInstructionsContent_(puzzleTitle, level,
+    showHints);
 
   // Create a div to eventually hold this content, and add it to the
   // overall container. We don't want to render directly into the
@@ -1028,9 +1056,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
 
   var buttons = document.createElement('div');
   instructionsDiv.appendChild(buttons);
-  ReactDOM.render(React.createElement(DialogButtons, {
-    ok: true
-  }), buttons);
+  ReactDOM.render(<DialogButtons ok={true}/>, buttons);
 
   // If there is an instructions block on the screen, we want the instructions dialog to
   // shrink down to that instructions block when it's dismissed.
@@ -1096,7 +1122,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
 
   this.instructionsDialog.show({hideOptions: hideOptions});
 
-  if (renderedMarkdown) {
+  if (isMarkdownMode) {
     // process <details> tags with polyfill jQuery plugin
     $('details').details();
   }
@@ -1469,6 +1495,23 @@ StudioApp.prototype.report = function(options) {
     } else {
       onAttemptCallback();
     }
+  }
+};
+
+/**
+ * Set up the runtime annotation system as appropriate. Typically called
+ * during an app's execute() immediately after calling reset().
+ */
+StudioApp.prototype.clearAndAttachRuntimeAnnotations = function () {
+  if (this.editCode && !this.hideSource) {
+    // Our ace worker also calls attachToSession, but it won't run on IE9:
+    var session = this.editor.aceEditor.getSession();
+    annotationList.attachToSession(session, this.editor);
+    annotationList.clearRuntimeAnnotations();
+    this.editor.aceEditor.session.on("change", function () {
+      // clear any runtime annotations whenever a change is made
+      annotationList.clearRuntimeAnnotations();
+    });
   }
 };
 
@@ -2313,7 +2356,7 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
     text.setAttribute('y', CANVAS_HEIGHT);
     text.setAttribute('font-weight', 'bold');
     rect = rectFromElementBoundingBox(text);
-    rect.setAttribute('fill', 'white');
+    rect.setAttribute('fill', color.white);
     svg.insertBefore(rect, text);
 
     // create y axis labels
@@ -2326,7 +2369,7 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
     text.setAttribute('dominant-baseline', 'central');
     text.setAttribute('font-weight', 'bold');
     rect = rectFromElementBoundingBox(text);
-    rect.setAttribute('fill', 'white');
+    rect.setAttribute('fill', color.white);
     svg.insertBefore(rect, text);
   }
 };
@@ -2400,7 +2443,7 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
   var renderElement = container[0];
 
   var handleAlertClose = function () {
-    React.unmountComponentAtNode(renderElement);
+    ReactDOM.unmountComponentAtNode(renderElement);
   };
   ReactDOM.render(
     <Alert onClose={handleAlertClose} type={props.type} sideMargin={props.sideMargin}>

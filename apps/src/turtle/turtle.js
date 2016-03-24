@@ -26,6 +26,7 @@
  */
 'use strict';
 
+var color = require('../color');
 var commonMsg = require('../locale');
 var turtleMsg = require('./locale');
 var levels = require('./levels');
@@ -210,7 +211,7 @@ Artist.prototype.init = function(config) {
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
-  var renderCodeWorkspace = function () {
+  var generateCodeWorkspaceHtmlFromEjs = function () {
     return codeWorkspaceEjs({
       assetUrl: this.studioApp_.assetUrl,
       data: {
@@ -224,7 +225,7 @@ Artist.prototype.init = function(config) {
     });
   }.bind(this);
 
-  var renderVisualizationColumn = function () {
+  var generateVisualizationColumnHtmlFromEjs = function () {
     return visualizationColumnEjs({
       assetUrl: this.studioApp_.assetUrl,
       data: {
@@ -238,8 +239,8 @@ Artist.prototype.init = function(config) {
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
-    renderCodeWorkspace: renderCodeWorkspace,
-    renderVisualizationColumn: renderVisualizationColumn,
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: this.studioApp_.init.bind(this.studioApp_, config)
   }), document.getElementById(config.containerId));
 };
@@ -653,7 +654,7 @@ Artist.prototype.display = function() {
   // FF on linux retains drawing of previous location of artist unless we clear
   // the canvas first.
   var style = this.ctxDisplay.fillStyle;
-  this.ctxDisplay.fillStyle = 'white';
+  this.ctxDisplay.fillStyle = color.white;
   this.ctxDisplay.clearRect(0, 0, this.ctxDisplay.canvas.width,
     this.ctxDisplay.canvas.width);
   this.ctxDisplay.fillStyle = style;

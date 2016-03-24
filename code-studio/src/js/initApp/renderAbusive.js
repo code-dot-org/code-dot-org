@@ -1,6 +1,7 @@
 /* global dashboard, React, ReactDOM */
 
 var AbuseExclamation = require('../components/abuse_exclamation.jsx');
+var showProjectAdmin = require('../showProjectAdmin');
 
 /**
  * Renders our AbuseExclamation component, and potentially updates admin box
@@ -17,5 +18,5 @@ module.exports = function () {
   }), document.getElementById('codeApp'));
 
   // update admin box (if it exists) with abuse info
-  dashboard.admin.showProjectAdmin();
+  showProjectAdmin();
 };

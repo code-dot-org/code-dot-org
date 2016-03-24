@@ -4,7 +4,6 @@ src/lodash.js
 src/canvg/*.js
 src/calc/js-numbers/js-numbers.js
 src/ResizeSensor.js
-src/applab/colpick.js
 
 lib
 build

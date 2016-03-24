@@ -19,11 +19,16 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var assetPrefix = require('../assetManagement/assetPrefix');
-var AppView = require('../templates/AppView.jsx');
 var gamelabCommands = require('./commands');
 var errorHandler = require('../errorHandler');
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
+
+var actions = require('./actions');
+var createStore = require('../redux');
+var gamelabReducer = require('./reducers').gamelabReducer;
+var GameLabView = require('./GameLabView.jsx');
+var Provider = require('react-redux').Provider;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -35,6 +40,13 @@ var GameLab = function () {
   this.level = null;
   this.tickIntervalId = 0;
   this.tickCount = 0;
+
+  /**
+   * Redux Store holding application state, transformable by actions.
+   * @private {Store}
+   * @see http://redux.js.org/docs/basics/Store.html
+   */
+  this.reduxStore_ = createStore(gamelabReducer);
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
@@ -82,8 +94,8 @@ GameLab.prototype.log = function (object) {
  */
 GameLab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
-  this.studioApp_.reset = _.bind(this.reset, this);
-  this.studioApp_.runButtonClick = _.bind(this.runButtonClick, this);
+  this.studioApp_.reset = this.reset.bind(this);
+  this.studioApp_.runButtonClick = this.runButtonClick.bind(this);
 
   this.studioApp_.setCheckForEmptyBlocks(true);
 };
@@ -111,6 +123,10 @@ GameLab.prototype.init = function (config) {
     onDraw: this.onP5Draw.bind(this)
   });
 
+  config.afterClearPuzzle = function() {
+    this.studioApp_.resetButtonClick();
+  }.bind(this);
+
   config.dropletConfig = dropletConfig;
   config.appMsg = msg;
 
@@ -123,10 +139,11 @@ GameLab.prototype.init = function (config) {
   });
   var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
     showButtons: true,
-    showConsole: true
+    showConsole: true,
+    showWatch: true,
   });
 
-  var renderCodeWorkspace = function () {
+  var generateCodeWorkspaceHtmlFromEjs = function () {
     return codeWorkspaceEjs({
       assetUrl: this.studioApp_.assetUrl,
       data: {
@@ -142,7 +159,7 @@ GameLab.prototype.init = function (config) {
     });
   }.bind(this);
 
-  var renderVisualizationColumn = function () {
+  var generateVisualizationColumnHtmlFromEjs = function () {
     return visualizationColumnEjs({
       assetUrl: this.studioApp_.assetUrl,
       data: {
@@ -171,14 +188,18 @@ GameLab.prototype.init = function (config) {
     });
   }.bind(this);
 
-  ReactDOM.render(React.createElement(AppView, {
+  this.reduxStore_.dispatch(actions.setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    renderCodeWorkspace: renderCodeWorkspace,
-    renderVisualizationColumn: renderVisualizationColumn,
-    onMount: onMount
-  }), document.getElementById(config.containerId));
+    isShareView: !!config.share
+  }));
+
+  ReactDOM.render(<Provider store={this.reduxStore_}>
+    <GameLabView
+      generateCodeWorkspaceHtml={generateCodeWorkspaceHtmlFromEjs}
+      generateVisualizationColumnHtml={generateVisualizationColumnHtmlFromEjs}
+      onMount={onMount} />
+  </Provider>, document.getElementById(config.containerId));
 };
 
 GameLab.prototype.loadAudio_ = function () {
@@ -301,6 +322,7 @@ GameLab.prototype.evalCode = function(code) {
 GameLab.prototype.execute = function() {
   // Reset all state.
   this.studioApp_.reset();
+  this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (this.studioApp_.isUsingBlockly() &&
       (this.studioApp_.hasExtraTopBlocks() ||
@@ -312,7 +334,11 @@ GameLab.prototype.execute = function() {
 
   this.gameLabP5.startExecution();
 
-  if (!this.level.editCode) {
+  if (this.level.editCode) {
+    if (!this.JSInterpreter || !this.JSInterpreter.initialized()) {
+      return;
+    }
+  } else {
     this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
     this.evalCode(this.code);
   }
@@ -325,7 +351,7 @@ GameLab.prototype.execute = function() {
   }
 
   // Set to 1ms interval, but note that browser minimums are actually 5-16ms:
-  this.tickIntervalId = window.setInterval(_.bind(this.onTick, this), 1);
+  this.tickIntervalId = window.setInterval(this.onTick.bind(this), 1);
 };
 
 GameLab.prototype.initInterpreter = function () {
@@ -336,7 +362,8 @@ GameLab.prototype.initInterpreter = function () {
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,
     maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-    customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties()
+    customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
+    customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties()
   });
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
@@ -450,8 +477,10 @@ GameLab.prototype.onP5Setup = function () {
     if (this.eventHandlers.setup) {
       this.setupInProgress = true;
       this.eventHandlers.setup.apply(null);
+      this.completeSetupIfSetupComplete();
+    } else {
+      this.gameLabP5.afterSetupComplete();
     }
-    this.completeSetupIfSetupComplete();
   }
 };
 
@@ -604,7 +633,7 @@ GameLab.prototype.checkAnswer = function() {
     result: levelComplete,
     testResult: this.testResults,
     program: encodeURIComponent(program),
-    onComplete: _.bind(this.onReportComplete, this),
+    onComplete: this.onReportComplete.bind(this),
     // save_to_gallery: level.impressive
   };
 

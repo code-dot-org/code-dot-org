@@ -1,5 +1,9 @@
 // colors from https://www.dropbox.com/s/ycjiwt8vxlmv2ih/Code.org_stylesheet_v2_09.05.13.pdf
 
+// Please keep this file simple; it should only contain color definitions
+//   and aliases.  Variables defined in this file are exported to
+//   apps/src/color.js during the apps build process.
+
 $black: black;
 $dark_charcoal: #4d575f;
 $charcoal: #5b6770;
@@ -9,6 +13,7 @@ $lightest_gray: #e7e8ea;
 $white: white;
 
 $teal: #00adbc;
+$applab_button_teal: #1abc9c;
 $light_teal: #59cad3;
 $lightish_teal: #80d6de;
 $lighter_teal: #a6e3e8;
@@ -63,3 +68,11 @@ $link_color: #0596CE;
 
 // shadow
 $shadow: rgba(0, 0, 0, 0.3);
+
+// colors that are taken from bootstrap, and not necessarily part of our core theme
+$bootstrap_error_background: #f2dede;
+$bootstrap_error_text: #b94a48;
+$bootstrap_error_border: #ebccd1;
+$bootstrap_warning_background: #fcf8e3;
+$bootstrap_warning_text: #c09853;
+$bootstrap_warning_border: #faebcc;

@@ -1,7 +1,9 @@
 /** @file Dropdown for selecting design mode screens */
 /* global Applab */
 
+var color = require('../color');
 var constants = require('./constants');
+var connect = require('react-redux').connect;
 var elementUtils = require('./designElements/elementUtils');
 
 /**
@@ -12,7 +14,7 @@ var elementUtils = require('./designElements/elementUtils');
 var ScreenSelector = React.createClass({
   propTypes: {
     screenIds: React.PropTypes.array.isRequired,
-    activeScreenId: React.PropTypes.string,
+    currentScreenId: React.PropTypes.string,
     onChange: React.PropTypes.func.isRequired
   },
 
@@ -23,11 +25,11 @@ var ScreenSelector = React.createClass({
       width: '100%',
       height: 28,
       marginBottom: 6,
-      borderColor: '#949ca2'
+      borderColor: color.light_gray
     };
 
     var options = this.props.screenIds.map(function (item) {
-      return <option key={item}>{item}</option>;
+      return <option key={item} value={item}>{item}</option>;
     });
 
     var defaultScreenId = elementUtils.getScreens().first().attr('id') || '';
@@ -46,7 +48,7 @@ var ScreenSelector = React.createClass({
       <select
           id="screenSelector"
           style={dropdownStyle}
-          value={this.props.activeScreenId}
+          value={this.props.currentScreenId}
           onChange={this.props.onChange}
           disabled={Applab.isRunning()}>
         {options}
@@ -56,3 +58,8 @@ var ScreenSelector = React.createClass({
   }
 });
 module.exports = ScreenSelector;
+module.exports = connect(function propsFromStore(state) {
+  return {
+    currentScreenId: state.currentScreenId
+  };
+})(ScreenSelector);

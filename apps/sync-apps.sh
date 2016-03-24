@@ -36,18 +36,18 @@ for file in $(find $orig_dir -name 'en_us.json'); do
       # Copy files from i18n/locales to apps
       for file in $(find $loc_dir -name $app'.json'); do
         relname=${file#$loc_dir}
-        ruby ../i18n/code.org/lib/merge-all-locales.rb "json" $en_dir$relname $file $orig_dir${relname%.json}/${js_locale}.json
+        ruby ../bin/i18n-codeorg/lib/merge-all-locales.rb "json" $en_dir$relname $file $orig_dir${relname%.json}/${js_locale}.json
       done
     done
   fi
 
-ruby ../i18n/code.org/lib/copy-untranslated-apps.rb
+ruby ../i18n/code.org/copy-untranslated-apps.rb
 
 done
 
 git add --all i18n
 git add --all ../i18n/locales/source
-if [[ `git status --porcelain i18n` ]]; then
+if [ -n "$(git status --porcelain i18n)" ]; then
   git commit --message="Updated apps strings"
   git push
 fi

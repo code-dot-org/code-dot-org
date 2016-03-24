@@ -121,12 +121,12 @@ task :apps_task do
 
   updated_package = packager.update_from_s3
   if updated_package
-    HipChat.log "Downloaded package from S3: #{packager.commit_hash}"
+    HipChat.log "Downloaded apps package from S3: #{packager.commit_hash}"
     next # no need to do anything if we already got a package from s3
   end
 
   # Test and staging are the only environments that should be uploading new packages
-  raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
+  raise 'No valid apps package found' unless rack_env?(:staging) || rack_env?(:test)
 
   raise 'Wont build apps with staged changes' if RakeUtils.git_staged_changes?(apps_dir)
 
@@ -141,6 +141,7 @@ task :apps_task do
 
   # upload to s3
   package = packager.upload_package_to_s3('/build/package')
+  HipChat.log "Uploaded apps package to S3: #{packager.commit_hash}"
   packager.decompress_package(package)
 end
 
@@ -152,12 +153,12 @@ task :code_studio_task do
 
   updated_package = packager.update_from_s3
   if updated_package
-    HipChat.log "Downloaded package from S3: #{packager.commit_hash}"
+    HipChat.log "Downloaded code-studio package from S3: #{packager.commit_hash}"
     next # no need to do anything if we already got a package from s3
   end
 
   # Test and staging are the only environments that should be uploading new packages
-  raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
+  raise 'No valid code-studio package found' unless rack_env?(:staging) || rack_env?(:test)
 
   raise 'Wont build code-studio with staged changes' if RakeUtils.git_staged_changes?(code_studio_dir)
 
@@ -168,6 +169,7 @@ task :code_studio_task do
 
   # upload to s3
   package = packager.upload_package_to_s3('/build')
+  HipChat.log "Uploaded code-studio package to S3: #{packager.commit_hash}"
   packager.decompress_package(package)
 end
 
@@ -342,38 +344,34 @@ file UI_TEST_SYMLINK do
 end
 
 task :regular_ui_tests => [UI_TEST_SYMLINK] do
-  Dir.chdir(dashboard_dir) do
-    Dir.chdir('test/ui') do
-      HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--magic_retry', '--html', '--fail_fast'
-      if failed_browser_count == 0
-        message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
-        HipChat.log message
-        HipChat.developers message, color: 'green'
-      else
-        message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
-        HipChat.log message, color: 'red'
-        HipChat.developers message, color: 'red', notify: 1
-      end
+  Dir.chdir(dashboard_dir('test/ui')) do
+    HipChat.log 'Running <b>dashboard</b> UI tests...'
+    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--magic_retry', '--html', '--fail_fast'
+    if failed_browser_count == 0
+      message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
+      HipChat.log message
+      HipChat.developers message, color: 'green'
+    else
+      message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+      HipChat.log message, color: 'red'
+      HipChat.developers message, color: 'red', notify: 1
     end
   end
 end
 
 task :eyes_ui_tests => [UI_TEST_SYMLINK] do
-  Dir.chdir(dashboard_dir) do
-    Dir.chdir('test/ui') do
-      HipChat.log 'Running <b>dashboard</b> UI visual tests...'
-      eyes_features = `grep -lr '@eyes' features`.split("\n")
-      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
-      if failed_browser_count == 0
-        message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
-        HipChat.log message
-        HipChat.developers message, color: 'green'
-      else
-        message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
-        HipChat.log message, color: 'red'
-        HipChat.developers message, color: 'red', notify: 1
-      end
+  Dir.chdir(dashboard_dir('test/ui')) do
+    HipChat.log 'Running <b>dashboard</b> UI visual tests...'
+    eyes_features = `grep -lr '@eyes' features`.split("\n")
+    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
+    if failed_browser_count == 0
+      message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+      HipChat.log message
+      HipChat.developers message, color: 'green'
+    else
+      message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+      HipChat.log message, color: 'red'
+      HipChat.developers message, color: 'red', notify: 1
     end
   end
 end

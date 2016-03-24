@@ -64,7 +64,14 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    if request.path != (canonical_path = build_script_level_path(@script_level))
+    # In the case of the puzzle_page, send it through to be included in the
+    # generation of the script level path.
+    extra_params = {}
+    if (params[:puzzle_page])
+      extra_params[:puzzle_page] = params[:puzzle_page]
+    end
+
+    if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
       return

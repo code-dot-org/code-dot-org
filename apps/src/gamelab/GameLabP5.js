@@ -38,32 +38,6 @@ GameLabP5.prototype.init = function (options) {
   this.onSetup = options.onSetup;
   this.onDraw = options.onDraw;
 
-  window.p5.prototype.setupGlobalMode = function () {
-    /*
-     * Copied code from p5 for no-sketch Global mode
-     */
-    var p5 = window.p5;
-
-    this._isGlobal = true;
-    // Loop through methods on the prototype and attach them to the window
-    for (var p in p5.prototype) {
-      if(typeof p5.prototype[p] === 'function') {
-        var ev = p.substring(2);
-        if (!this._events.hasOwnProperty(ev)) {
-          window[p] = p5.prototype[p].bind(this);
-        }
-      } else {
-        window[p] = p5.prototype[p];
-      }
-    }
-    // Attach its properties to the window
-    for (var p2 in this) {
-      if (this.hasOwnProperty(p2)) {
-        window[p2] = this[p2];
-      }
-    }
-  };
-
   // Override p5.loadImage so we can modify the URL path param
   if (!GameLabP5.baseP5loadImage) {
     GameLabP5.baseP5loadImage = window.p5.prototype.loadImage;
@@ -105,26 +79,75 @@ GameLabP5.prototype.init = function (options) {
     this.pop();
   };
 
-  // Override p5.createSprite so we can replace the AABBops() function
+  // Disable fullScreen() method:
+  window.p5.prototype.fullScreen = function (val) {
+    return false;
+  };
+
+  // Add new p5 methods:
+  window.p5.prototype.didMouseMove = function () {
+    return this.pmouseX !== this.mouseX || this.pmouseY !== this.mouseY;
+  };
+
+  // Override p5.createSprite so we can replace the AABBops() function and add
+  // some new methods that are animation shortcuts
   window.p5.prototype.createSprite = function(x, y, width, height) {
     /*
      * Copied code from p5play from createSprite()
+     *
+     * NOTE: this param not needed on this.Sprite() call as we're calling
+     * through the bound constructor, which prepends the first arg.
      */
-    var s = new window.Sprite(x, y, width, height);
-    s.AABBops = gameLabSprite.AABBops;
-    s.depth = window.allSprites.maxDepth()+1;
-    window.allSprites.add(s);
+    var s = new this.Sprite(x, y, width, height);
+
+    s.setFrame = function (frame) {
+      if (s.animation) {
+        s.animation.setFrame(frame);
+      }
+    };
+
+    s.nextFrame = function () {
+      if (s.animation) {
+        s.animation.nextFrame();
+      }
+    };
+
+    s.previousFrame = function () {
+      if (s.animation) {
+        s.animation.previousFrame();
+      }
+    };
+
+    s.play = function () {
+      if (s.animation) {
+        s.animation.play();
+      }
+    };
+
+    s.pause = function () {
+      if (s.animation) {
+        s.animation.stop();
+      }
+    };
+
+    s.didFrameChange = function () {
+      return s.animation ? s.animation.frameChanged : false;
+    };
+
+    s.AABBops = gameLabSprite.AABBops.bind(s, this);
+    s.depth = this.allSprites.maxDepth()+1;
+    this.allSprites.add(s);
     return s;
   };
 
-  // Override window.Group so we can override the methods that take callback
+  // Override p5.Group so we can override the methods that take callback
   // parameters
-  var baseGroupConstructor = window.Group;
-  window.Group = function () {
+  var baseGroupConstructor = window.p5.prototype.Group;
+  window.p5.prototype.Group = function () {
     var array = baseGroupConstructor();
 
     /*
-     * Create new helper called callAABBopsForAll() which can be called as a
+     * Create new helper called _groupCollideGameLab() which can be called as a
      * stateful nativeFunc by the interpreter. This enables the native method to
      * be called multiple times so that it can go asynchronous every time it
      * (or any native function that it calls, such as AABBops) wants to execute
@@ -136,11 +159,23 @@ GameLabP5.prototype.init = function (options) {
      * it should set state.doneExec to false. When the function is complete and
      * no longer wants to be called in a loop by the interpreter, it should set
      * state.doneExec to true and return a value.
+     *
+     * Collide each member of group against the target using the given collision
+     * type.  Return true if any collision occurred.
+     * Internal use
+     *
+     * @private
+     * @method _groupCollideGameLab
+     * @param {!string} type one of 'overlap', 'collide', 'displace', 'bounce'
+     * @param {Object} target Group or Sprite
+     * @param {Function} [callback] on collision.
+     * @return {boolean} True if any collision/overlap occurred
      */
-    array.callAABBopsForAll = function(type, target, callback) {
+    function _groupCollideGameLab(type, target, callback) {
       var state = options.gameLab.JSInterpreter.getCurrentState();
       if (!state.__i) {
         state.__i = 0;
+        state.__didCollide = false;
       }
       if (state.__i < this.size()) {
         if (!state.__subState) {
@@ -148,39 +183,33 @@ GameLabP5.prototype.init = function (options) {
           // off of state, so it can use that instead to track its state:
           state.__subState = { doneExec: true };
         }
-        this.get(state.__i).AABBops(type, target, callback);
+        var resultAABBops = this.get(state.__i).AABBops(type, target, callback);
         if (state.__subState.doneExec) {
-          // Note: ignoring return value from each AABBops() call
+          state.__didCollide = resultAABBops || state.__didCollide;
           delete state.__subState;
           state.__i++;
         }
         state.doneExec = false;
       } else {
         state.doneExec = true;
+        return state.__didCollide;
       }
-    };
+    }
 
-    // Replace these four methods that take callback parameters to use the new
-    // callAABBopsForAll() helper:
+    // Replace these four methods that take callback parameters to use the
+    // replaced _groupCollideGameLab() function:
 
-    array.overlap = function(target, callback) {
-      this.callAABBopsForAll("overlap", target, callback);
-    };
-
-    array.collide = function(target, callback) {
-      this.callAABBopsForAll("collide", target, callback);
-    };
-
-    array.displace = function(target, callback) {
-      this.callAABBopsForAll("displace", target, callback);
-    };
-
-    array.bounce = function(target, callback) {
-      this.callAABBopsForAll("bounce", target, callback);
-    };
+    array.overlap = _groupCollideGameLab.bind(array, 'overlap');
+    array.collide = _groupCollideGameLab.bind(array, 'collide');
+    array.displace = _groupCollideGameLab.bind(array, 'displace');
+    array.bounce = _groupCollideGameLab.bind(array, 'bounce');
 
     return array;
   };
+
+  window.p5.prototype.gamelabPreload = function () {
+    this.p5decrementPreload = window.p5._getDecrementPreload.apply(this.p5, arguments);
+  }.bind(this);
 
 };
 
@@ -193,46 +222,11 @@ GameLabP5.prototype.resetExecution = function () {
     this.p5.remove();
     this.p5 = null;
     this.p5decrementPreload = null;
-
-    /*
-     * Copied code from various p5/p5play init code
-     */
-
-    // Clear registered methods on the prototype:
-    for (var member in window.p5.prototype._registeredMethods) {
-      delete window.p5.prototype._registeredMethods[member];
-    }
-    window.p5.prototype._registeredMethods = { pre: [], post: [], remove: [] };
-    delete window.p5.prototype._registeredPreloadMethods.gamelabPreload;
-
-    window.p5.prototype.allSprites = new window.Group();
-    window.p5.prototype.spriteUpdate = true;
-
-    window.p5.prototype.camera = new window.Camera(0, 0, 1);
-    window.p5.prototype.camera.init = false;
-
-    //keyboard input
-    window.p5.prototype.registerMethod('pre', window.p5.prototype.readPresses);
-
-    //automatic sprite update
-    window.p5.prototype.registerMethod('pre', window.p5.prototype.updateSprites);
-
-    //quadtree update
-    window.p5.prototype.registerMethod('post', window.updateTree);
-
-    //camera push and pop
-    window.p5.prototype.registerMethod('pre', window.cameraPush);
-    window.p5.prototype.registerMethod('post', window.cameraPop);
-
   }
 
   // Important to reset these after this.p5 has been removed above
   this.drawInProgress = false;
   this.setupInProgress = false;
-
-  window.p5.prototype.gamelabPreload = function () {
-    this.p5decrementPreload = window.p5._getDecrementPreload.apply(this.p5, arguments);
-  }.bind(this);
 };
 
 /**
@@ -349,46 +343,20 @@ GameLabP5.prototype.startExecution = function () {
 
       }.bind(p5obj);
 
-      // Do this after we're done monkeying with the p5obj instance methods:
-      p5obj.setupGlobalMode();
+      p5obj.preload = function () {
 
-      window.preload = function () {
         // Call our gamelabPreload() to force _start/_setup to wait.
-        window.gamelabPreload();
-
-        /*
-         * p5 "preload methods" were modified before this preload function was
-         * called and substituted with wrapped version that increment a preload
-         * count and will later decrement a preload count upon async load
-         * completion. Since p5 is running in global mode, it only wrapped the
-         * methods on the window object. We need to place the wrapped methods on
-         * the p5 object as well before we marshal to the interpreter
-         */
-        for (var method in this.p5._preloadMethods) {
-          this.p5[method] = window[method];
-        }
-
+        p5obj.gamelabPreload();
         this.onPreload();
-
       }.bind(this);
-      window.setup = function () {
-        /*
-         * p5 "preload methods" have now been restored and the wrapped version
-         * are no longer in use. Since p5 is running in global mode, it only
-         * restored the methods on the window object. We need to restore the
-         * methods on the p5 object to match
-         */
-        for (var method in this.p5._preloadMethods) {
-          this.p5[method] = window[method];
-        }
+
+      p5obj.setup = function () {
 
         p5obj.createCanvas(400, 400);
-
         this.onSetup();
-
       }.bind(this);
 
-      window.draw = this.onDraw.bind(this);
+      p5obj.draw = this.onDraw.bind(this);
 
       this.onExecutionStarting();
 
@@ -453,10 +421,22 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
   };
 };
 
+GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
+  return [
+    '_userNode',
+    '_elements',
+    '_curElement',
+    'elt',
+    'canvas',
+    'parent',
+    'p5'
+  ];
+};
+
 GameLabP5.prototype.getCustomMarshalObjectList = function () {
   return [
     {
-      instance: window.Sprite,
+      instance: this.p5.Sprite,
       methodOpts: {
         nativeCallsBackInterpreter: true
       }
@@ -473,8 +453,8 @@ GameLabP5.prototype.getCustomMarshalObjectList = function () {
       }
     },
     { instance: window.p5 },
-    { instance: window.Camera },
-    { instance: window.Animation },
+    { instance: this.p5.Camera },
+    { instance: this.p5.Animation },
     { instance: window.p5.Vector },
     { instance: window.p5.Color },
     { instance: window.p5.Image },
@@ -483,20 +463,22 @@ GameLabP5.prototype.getCustomMarshalObjectList = function () {
     { instance: window.p5.Font },
     { instance: window.p5.Table },
     { instance: window.p5.TableRow },
-    { instance: window.p5.Element },
   ];
 };
 
 GameLabP5.prototype.getGlobalPropertyList = function () {
 
   var propList = {};
+  var blockedProps = this.getCustomMarshalBlockedProperties();
 
-  // Include every property on the p5 instance in the global property list:
+  // Include every property on the p5 instance in the global property list
+  // except those on the custom marshal blocked list:
   for (var prop in this.p5) {
-    propList[prop] = [ this.p5[prop], this.p5 ];
+    if (-1 === blockedProps.indexOf(prop)) {
+      propList[prop] = [ this.p5[prop], this.p5 ];
+    }
   }
-  // And the Group constructor from p5play:
-  propList.Group = [ window.Group, window ];
+
   // And also create a 'p5' object in the global namespace:
   propList.p5 = [ { Vector: window.p5.Vector }, window ];
 

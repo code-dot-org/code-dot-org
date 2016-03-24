@@ -27,8 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "step_speed": "1",
-    "maze_data": null
+    "step_speed": "1"
   },
   "published": true,
   "notes": ""

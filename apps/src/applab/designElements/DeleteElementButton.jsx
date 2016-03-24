@@ -1,5 +1,5 @@
 /* global $ */
-var rowStyle = require('./rowStyle');
+var color = require('../../color');
 
 /**
  * A delete button that will also ask for confirmation when shouldConfirm is
@@ -41,8 +41,8 @@ var DeleteElementButton = React.createClass({
     };
 
     var redButtonStyle = $.extend({}, buttonStyle, {
-      backgroundColor: '#c00', // $red
-      color: 'white'
+      backgroundColor: color.red,
+      color: color.white
     });
 
     var confirm;

@@ -1,10 +1,5 @@
 .wrapper
-  -if header['theme'] == 'responsive_wide'
-    #desktop-header.desktop-feature
-      -#= view :header
-    #mobile-header.mobile-headers.mobile-feature
-      -#= view :mobile_header_responsive
-  -else
+  -unless header['theme'] == 'responsive_wide'
     = view :header
 
   -containerClass = "container_fullwidth"

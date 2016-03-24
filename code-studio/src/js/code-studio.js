@@ -8,14 +8,18 @@
  */
 'use strict';
 /* global Sounds */
+var _ = require('lodash');
 
 // Shim window.console to be safe in IE
 require('./consoleShim')(window);
+
+var Sounds = require('./Sounds');
 
 require('./videos');
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
+
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.
 require('./components/abuse_error.jsx');
@@ -23,9 +27,8 @@ require('./components/report_abuse_form.jsx');
 require('./components/send_to_phone.jsx');
 require('./components/share_dialog.jsx');
 require('./components/small_footer.jsx');
-require('./components/progress/stage_progress.jsx');
-require('./components/progress/course_progress.jsx');
 require('./components/GridEditor.jsx');
+require('./components/IconLibrary.jsx');
 require('./components/pairing.jsx');
 require('./components/pairing_dialog.jsx');
 
@@ -33,9 +36,18 @@ require('./components/pairing_dialog.jsx');
 // http://stackoverflow.com/a/15856139/2506748
 $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 
-var jquery = require('jquery-shim');
 window.dashboard = window.dashboard || {};
-window.dashboard.clientState = require('./clientState.js')(window.sessionStorage, jquery);
+window.dashboard.clientState = require('./clientState.js');
+window.dashboard.createCallouts = require('./callouts');
+window.dashboard.hashEmail = require('./hashEmail');
+window.dashboard.funometer = require('./funometerPercentagesByDay');
+window.dashboard.popupWindow = require('./popup-window');
+window.dashboard.progress = require('./progress');
+window.dashboard.reporting = require('./reporting');
+window.dashboard.utils ={
+  debounce: _.debounce
+};
+window.dashboard.header = require('./header');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.

@@ -1,4 +1,5 @@
 /* global $ */
+var color = require('../../color');
 var rowStyle = require('./rowStyle');
 
 var EventRow = module.exports = React.createClass({
@@ -12,12 +13,12 @@ var EventRow = module.exports = React.createClass({
     var style = {
       container: $.extend({}, rowStyle.container, rowStyle.maxWidth),
       name: {
-        color: '#4d575f',
+        color: color.dark_charcoal,
         fontWeight: 'bold',
         fontSize: 15
       },
       desc: {
-        color: '#949ca2',
+        color: color.light_gray,
         fontStyle: 'italic'
       }
     };

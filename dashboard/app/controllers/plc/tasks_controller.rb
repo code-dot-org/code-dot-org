@@ -13,6 +13,8 @@ class Plc::TasksController < ApplicationController
 
   # GET /plc/tasks/new
   def new
+    @task.plc_learning_module_id = params[:plc_learning_module_id]
+    @task.type = params[:type]
   end
 
   # GET /plc/tasks/1/edit
@@ -53,7 +55,7 @@ class Plc::TasksController < ApplicationController
   def task_params
     #Rails forms use the full name of the class including the module they are in, so we'll do the same
     if params[:plc_learning_resource_task]
-      params.require(:plc_learning_resource_task).permit(:name, :plc_learning_module_id, :type, :resource_url)
+      params.require(:plc_learning_resource_task).permit(:name, :plc_learning_module_id, :type, :resource_url, :icon)
     elsif params[:plc_script_completion_task]
       params.require(:plc_script_completion_task).permit(:name, :plc_learning_module_id, :type, :script_id)
     elsif params[:plc_written_assignment_task]

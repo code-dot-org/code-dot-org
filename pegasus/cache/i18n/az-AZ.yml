@@ -767,6 +767,7 @@
   dashboard_progress_completed_too_many_blocks: tamamlanıb, artıq bloklar var
   dashboard_progress_completed_perfect: tamamlanıb, əladır
   dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_submitted: submitted
   dashboard_stage: mərhələ
   dashboard_puzzle: Tapmaca
   dashboard_question: Question

@@ -237,7 +237,7 @@ Craft.init = function (config) {
       break;
   }
 
-  var renderCodeWorkspace = function () {
+  var generateCodeWorkspaceHtmlFromEjs = function () {
     return codeWorkspaceEjs({
       assetUrl: studioApp.assetUrl,
       data: {
@@ -249,7 +249,7 @@ Craft.init = function (config) {
     });
   };
 
-  var renderVisualizationColumn = function () {
+  var generateVisualizationColumnHtmlFromEjs = function () {
     return visualizationColumnEjs({
       assetUrl: studioApp.assetUrl,
       data: {
@@ -334,8 +334,8 @@ Craft.init = function (config) {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
-    renderCodeWorkspace: renderCodeWorkspace,
-    renderVisualizationColumn: renderVisualizationColumn,
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };
@@ -749,6 +749,7 @@ Craft.reportResult = function (success) {
         feedbackType: testResultType,
         response: response,
         level: Craft.initialConfig.level,
+        defaultToContinue: Craft.shouldDefaultToContinue(testResultType),
         appStrings: {
           reinfFeedbackMsg: craftMsg.reinfFeedbackMsg(),
           nextLevelMsg: craftMsg.nextLevelMsg({
@@ -762,6 +763,18 @@ Craft.reportResult = function (success) {
       });
     }
   });
+};
+
+/**
+ * Whether pressing "x" or pressing the backdrop of the "level completed" dialog
+ * should default to auto-advancing to the next level.
+ * @param {string} testResultType TestResults type of this level completion
+ * @returns {boolean} whether to continue
+ */
+Craft.shouldDefaultToContinue = function(testResultType) {
+  var isFreePlay = testResultType === TestResults.FREE_PLAY;
+  var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+  return isSuccess && !isFreePlay;
 };
 
 Craft.replayTextForResult = function (testResultType) {

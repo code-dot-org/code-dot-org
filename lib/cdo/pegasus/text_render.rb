@@ -119,6 +119,16 @@ module TextRender
         end
         full_document
       end
+
+      def preprocess(full_document)
+        wrap_details_tags_in_divs(full_document)
+      end
+
+      def wrap_details_tags_in_divs(full_document)
+        full_document.
+            gsub(/<details>/, "\n<div><details>").
+            gsub(/<\/details>/, "</details></div>\n")
+      end
     end
 
     def initialize(template)
