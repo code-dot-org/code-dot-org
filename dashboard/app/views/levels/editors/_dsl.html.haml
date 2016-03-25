@@ -27,7 +27,7 @@
 .script_text
   = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
 
-- if [ContractMatch, Match, Multi, TextMatch, External].include? @level.class
+- if [ContractMatch, Match, Multi, TextMatch, External, LevelGroup].include? @level.class
 
   .markdown
     %p Edit Markdown:
