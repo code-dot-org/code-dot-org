@@ -19,12 +19,12 @@
   - level_class = level.class.to_s.underscore
 
   - if level_class == "multi"
-    - # For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
+    -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
     - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
       - level.properties['answers'].each { |answer| answer['correct'] = false }
     = render partial: 'levels/single_multi', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
   - elsif level_class = "text_match"
-    - # For students (or teachers doing PD), clear out all answers.
+    -# For students (or teachers doing PD), clear out all answers.
     - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
       - level.properties['answers'] = nil
     = render partial: 'levels/single_text_match', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
