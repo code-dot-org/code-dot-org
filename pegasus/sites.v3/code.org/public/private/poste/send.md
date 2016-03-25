@@ -26,7 +26,7 @@
     <tr>
       <th></th>
       <td>
-      	<%= csrf_tag %>
+        <%= csrf_tag %>
         <input type="submit"/>
       </td>
   <table>
