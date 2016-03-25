@@ -491,6 +491,16 @@ fi:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Kiitos
+    wrong_body: Thank you for submitting answers.
+    correct_title: Kiitos
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Kiitos
+    wrong_body: Thank you for submitting answers.
+    correct_title: Kiitos
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Väärä vastaus
     wrong_body: Antamasi ratkaisu ei ole oikea. Yritä uudestaan!
@@ -508,9 +518,6 @@ fi:
     placeholder: Kirjoita vastauksesi tähän
     open_response_title: Kiitos
     open_response_body: Kiitos vastauksestasi!
-  level_group:
-    correct_title: Kiitos
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Oletko varma, että haluat aloittaa alusta?

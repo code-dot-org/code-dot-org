@@ -9,7 +9,8 @@ var ZOrderRow = require('./ZOrderRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
 var EnumPropertyRow = require('./EnumPropertyRow.jsx');
-var colors = require('../../sharedJsxStyles').colors;
+var color = require('../../color');
+var ICON_PREFIX_REGEX = require('../constants').ICON_PREFIX_REGEX;
 
 var elementUtils = require('./elementUtils');
 
@@ -20,8 +21,25 @@ var ButtonProperties = React.createClass({
     onDepthChange: React.PropTypes.func.isRequired
   },
 
+  handleIconColorChange: function (value) {
+    this.props.handleChange('icon-color', value);
+    this.props.handleChange('image',
+      this.props.element.getAttribute('data-canonical-image-url'));
+  },
+
   render: function () {
     var element = this.props.element;
+
+    var iconColorPicker;
+    var canonicalImage = element.getAttribute('data-canonical-image-url');
+    if (ICON_PREFIX_REGEX.test(canonicalImage)) {
+      iconColorPicker = (
+        <ColorPickerPropertyRow
+          desc={'icon color'}
+          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
+          handleChange={this.handleIconColorChange} />
+      );
+    }
 
     return (
       <div id='propertyRowContainer'>
@@ -76,6 +94,7 @@ var ButtonProperties = React.createClass({
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'image')} />
+        {iconColorPicker}
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
@@ -146,8 +165,8 @@ module.exports = {
     element.style.height = '30px';
     element.style.width = '80px';
     element.style.fontSize = '14px';
-    element.style.color = colors.white;
-    element.style.backgroundColor = colors.teal;
+    element.style.color = color.white;
+    element.style.backgroundColor = color.applab_button_teal;
 
     return element;
   },

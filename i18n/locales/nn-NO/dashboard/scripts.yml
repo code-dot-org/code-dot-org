@@ -1641,3 +1641,8 @@
           "Eval: Conditionals": 'Evaluering: Betingelser'
           "Unplugged: Collision Detection and the Distance Formula": 'Frakoblet: Oppdage kollisjoner og formel for avstand'
           "Play Lab: Collision Detection (Big Game)": 'Spill-Lab: Oppdage kollisjoner (Stort spill)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

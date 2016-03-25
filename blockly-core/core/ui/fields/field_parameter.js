@@ -68,11 +68,13 @@ Blockly.FieldParameter.dropdownChange = function(text) {
   var oldVar = this.getText();
   if (text === Blockly.Msg.RENAME_PARAMETER) {
     this.getParentEditor_().hideChaff();
-    text = Blockly.FieldVariable.promptName(Blockly.Msg.RENAME_PARAMETER_TITLE.replace('%1', oldVar),
-      oldVar);
-    if (text) {
-      Blockly.Variables.renameVariable(oldVar, text, this.sourceBlock_.blockSpace);
-    }
+    Blockly.FieldVariable.modalPromptName(
+        Blockly.Msg.RENAME_PARAMETER_TITLE.replace('%1', oldVar),
+        Blockly.Msg.CONFIRM_RENAME_VARIABLE,
+        oldVar,
+        function(newVar) {
+          Blockly.Variables.renameVariable(oldVar, newVar, this.sourceBlock_.blockSpace);
+        }.bind(this));
   } else if (text === Blockly.Msg.DELETE_PARAMETER) {
     Blockly.showSimpleDialog({
       bodyText: Blockly.Msg.DELETE_PARAMETER_TITLE.replace('%1', oldVar),

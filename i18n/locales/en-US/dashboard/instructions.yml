@@ -305,7 +305,6 @@ en:
       4-5 Maze 9_instruction: crwdns31265:0crwdne31265:0
       4-5 Maze Assessment 1_instruction: crwdns30538:0crwdne30538:0
       4-5 Maze Conditionals 1_instruction: crwdns34160:0crwdne34160:0
-      4-5 Maze Conditionals 10_instruction: crwdns34161:0crwdne34161:0
       4-5 Maze Conditionals 2_instruction: crwdns34162:0crwdne34162:0
       4-5 Maze Conditionals 3_instruction: crwdns34163:0crwdne34163:0
       4-5 Maze Conditionals 4_instruction: crwdns34164:0crwdne34164:0
@@ -703,6 +702,10 @@ en:
       Course1BeePuzzle12_instruction: crwdns30855:0crwdne30855:0
       Course1MazeAssessment1_instruction: crwdns34446:0crwdne34446:0
       Course1MazeAssessment2_instruction: crwdns34447:0crwdne34447:0
+      CSD Hackathon Pt 1_instruction: crwdns56227:0crwdne56227:0
+      CSD Hackathon Pt 2_instruction: crwdns56228:0crwdne56228:0
+      CSD Hackathon Week 1_instruction: crwdns56229:0crwdne56229:0
+      CSD Hackathon Week 2_instruction: crwdns56230:0crwdne56230:0
       CSP Data Unit - Counting Multiple Things_instruction: crwdns49703:0crwdne49703:0
       CSP Data Unit -Counting Records - Easy Way_instruction: crwdns49704:0crwdne49704:0
       CSP Data Unit -Counting Records - Hard Way_instruction: crwdns49705:0crwdne49705:0
@@ -931,6 +934,8 @@ en:
       Luigi's Pizza 3 (copy 1)_instruction: crwdns35173:0crwdne35173:0
       Luigi's Pizza 3_instruction: crwdns35684:0crwdne35684:0
       Luigi's Pizza 4_instruction: crwdns36011:0crwdne36011:0
+      Middle School Hackathon Pt 1_instruction: crwdns56231:0crwdne56231:0
+      Middle School Hackathon Pt 2_instruction: crwdns56232:0crwdne56232:0
       MSM Big Game Empty_instruction: crwdns35004:0crwdne35004:0
       MSM Big Game Vars 1 (copy 1)_instruction: crwdns35005:0crwdne35005:0
       MSM Big Game Vars 1_instruction: crwdns34577:0crwdne34577:0

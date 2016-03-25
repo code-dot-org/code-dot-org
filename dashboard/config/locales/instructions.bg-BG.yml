@@ -680,9 +680,6 @@
       4-5 Maze Assessment 1_instruction: "Оценяване: Стигни до слънчогледа."
       4-5 Maze Conditionals 1_instruction: "Използвайте блока за повторение, за да
         заведете зомбито до слънчогледа."
-      4-5 Maze Conditionals 10_instruction: "Можеш ли да добавиш само 3 блока, за
-        да ми помогнеш да разгадая един по-сложен лабиринт? Ако го направиш правилно,
-        аз ще мога да вървя по всяка крива пътека, независимо колко е дълга."
       4-5 Maze Conditionals 2_instruction: "Използвайте блока за повторение, за да
         заведете зомбито до слънчогледа."
       4-5 Maze Conditionals 3_instruction: 'Използвай "Ако" блок, за да ми позволиш
@@ -1925,6 +1922,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2537,6 +2538,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

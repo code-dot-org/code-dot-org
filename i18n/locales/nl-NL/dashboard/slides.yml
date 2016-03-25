@@ -677,7 +677,7 @@ nl:
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Heb je ooit gehoord van het debuggen van een programma? Met debuggen kun je uitvinden wat er niet werkt aan je programma. Bij het debuggen identificeer en herstel je de fouten.
       2:
         image: notes/C2_bee_debugging_2.png
         text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
@@ -758,7 +758,7 @@ nl:
         text: This lesson is called Real Life Algorithms. Algorithms describe things that people do everyday. Cookie recipes and directions for building a birdhouse are both everyday algorithms.
       2:
         image: notes/C2_paper_airplanes_2.png
-        text: "Today we're gonna make, create, and test an algorithm for a paper airplane. But first, we need to break this big project into easy to follow small steps. For making a paper airplane, we need to decide what steps to take and in what order to take them."
+        text: Vandaag maken en testen we een algoritme voor een papieren vliegtuigje. Voordat we daaraan beginnen, moeten we dit grote project verdelen in kleinere makkelijk te volgen stapjes. Daarbij moeten we bedenken welke stappen er zijn en in welke volgorde ze gedaan moeten worden.
       3:
         image: notes/C2_paper_airplanes_3.png
         text: "You'll create your algorithm by first cutting apart the pictures. Next, you'll select the 6 pictures that show the steps needed to make a paper airplane and arrange those pictures in the correct order. After you have everything in order, you will trade algorithms with another student team to test out the algorithm to see if the algorithm works. A well designed algorithm is super important to making the best paper airplane."
@@ -782,7 +782,7 @@ nl:
         text: "In relay programming, teams will be racing to finish a graph paper program. You have to check your teammate's work, or debug it, fix it if there's a mistake, add your arrow, and run back and tag your teammate."
       3:
         image: notes/C2_relay_programming_3.png
-        text: Programmers use debugging a lot to find and fix problems in their algorithms or code. There are lots of ways to debug problems. One of the easiest is to move step by step until you find where something goes wrong, then fix it.
+        text: Programmeurs gebruiken debuggen veel om problemen in hun algoritme of code te vinden en op te lossen. Er zijn veel manieren om problemen te debuggen. Een van de makkelijkste manieren is om stap voor stap door de code te gaan totdat je de plek vindt waar iets fout gaat en daarna het probleem op te lossen.
       4:
         image: notes/C2_relay_programming_4.png
         text: "Here, I'm trying to do a back handspring, but I keep falling off. I walk through each part, step by step, and realize where my mistake was. My coach showed me I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position, and I stuck it! I was really glad I debugged my back  handspring. We figured it out! Debugging is finding and fixing problems. Nice, good job!"
@@ -792,7 +792,7 @@ nl:
         text: "One thing that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots of times in a row. But a computer can do the same thing millions or even billions of times, and not get bored and be able to carry that out really well."
       2:
         image: notes/C2_zuck_repeat_loop_2.png
-        text: "So for example if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than a century to actually write out all of those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday. So that's what loops are, and why they're valuable, and something that computers can do very well."
+        text: Dus het duurt bijvoorbeeld erg lang om alle e-mails te schrijven als ik iedereen op Facebook een fijne verjaardag wil wensen door ze een email te sturen. Echter kan ik met een paar regels code een systeem maken dat naar iedereen op Facebook een e-mail stuurt om ze een fijne verjaardag te wensen. Dit is dus wat loops zijn, en waarom ze waardevol zijn, iets wat computers erg goed kunnen.
       3:
         image: notes/C2_zuck_repeat_loop_3.png
         text: |-
@@ -847,7 +847,7 @@ nl:
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Heb je ooit gehoord van het debuggen van een programma? Met debuggen kun je uitvinden wat er niet werkt aan je programma. Bij het debuggen identificeer en herstel je de fouten.
       2:
         image: notes/C3_debugging_bee_2.png
         text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."

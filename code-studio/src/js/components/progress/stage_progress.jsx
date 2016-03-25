@@ -58,6 +58,3 @@ var StageProgress = React.createClass({
   }
 });
 module.exports = StageProgress;
-
-window.dashboard = window.dashboard || {};
-window.dashboard.StageProgress = StageProgress;

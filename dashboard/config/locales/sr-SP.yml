@@ -50,7 +50,7 @@
   try_k8intro: "Пробај наш К-8 курс Увод у рачунарство (15-25 часова)"
   k8intro: "К-8 курс Увод у рачунарство (15-25 часова)"
   already_started: "Већ почели? Наставите овде >>"
-  demos: 'Admin: All Demos'
+  demos: "Администратор: Сви демои"
   continue: "Настави"
   prize: "награда"
   more_info: "Више информација"
@@ -209,9 +209,9 @@
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: "Заслужили сте награду! (само за студенте САД-а)"
       not_earned_title: "Заврши туторијал и освоји награде(само за ученике из САД-а)"
-      not_earned: "Научи све научне принципе рачунарства, сакупи све %{num_trophies}
-        трофеје, и заради праве награде. Можеш да бираш између 10ГБ бесплатног простора
-        на Дропбоксу, $10 Скајп кредита и бесплатно преузимање игара. Напомена: понуда
+      not_earned: "Научи све принципе информатике, сакупи %{num_trophies} трофеја,
+        и заради праве награде. Можеш да бираш између 10ГБ бесплатног простора на
+        Дропбоксу, $10 Скајп кредита и бесплатно преузимање игара. Напомена: понуда
         важи само за УН ученике и док трају залихе."
       teacher:
         earned: 15 or more students collected all %{num_trophies} trophies. You have
@@ -569,6 +569,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "Хвала"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Хвала"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "Хвала"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Хвала"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Incorrect solution
     wrong_body: The solution you've entered is not correct.  Please try again!
@@ -588,9 +598,6 @@
     placeholder: Enter your answer here
     open_response_title: Thanks
     open_response_body: Thanks for your response!
-  level_group:
-    correct_title: "Хвала"
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: "У реду"
     startover_title: Da li ste sigurni da želite da počnete ponovo?

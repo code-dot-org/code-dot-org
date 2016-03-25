@@ -1,6 +1,7 @@
 /* global React, dashboard */
 
 var STAGE_PROGRESS_TYPE = require('./stage_progress_type');
+var StageProgress = require('./stage_progress.jsx');
 
 /**
  * Stage progress component used in level header and course overview.
@@ -26,7 +27,7 @@ var CourseProgress = React.createClass({
               </a>
             </div>
           </div>
-          <window.dashboard.StageProgress levels={stage.levels} largeDots={true} />
+          <StageProgress levels={stage.levels} largeDots={true} />
         </div>
       );
     });
@@ -39,6 +40,3 @@ var CourseProgress = React.createClass({
   }
 });
 module.exports = CourseProgress;
-
-window.dashboard = window.dashboard || {};
-window.dashboard.CourseProgress = CourseProgress;

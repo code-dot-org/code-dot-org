@@ -1,6 +1,7 @@
 /** @file Dropdown for selecting design mode screens */
 /* global Applab */
 
+var color = require('../color');
 var constants = require('./constants');
 var connect = require('react-redux').connect;
 var elementUtils = require('./designElements/elementUtils');
@@ -24,7 +25,7 @@ var ScreenSelector = React.createClass({
       width: '100%',
       height: 28,
       marginBottom: 6,
-      borderColor: '#949ca2'
+      borderColor: color.light_gray
     };
 
     var options = this.props.screenIds.map(function (item) {
