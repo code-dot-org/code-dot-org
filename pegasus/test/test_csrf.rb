@@ -39,7 +39,6 @@ class CsrfTest < Minitest::Test
                     {'rack.session' => fake_session})
     assert_equal 200, response.status
   end
-
 end
 
 # A fake dashboard user helper which always claims to be an admin.
