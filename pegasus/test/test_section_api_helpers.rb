@@ -4,9 +4,8 @@ require_relative '../src/env'
 require 'mocha/mini_test'
 require 'sequel'
 require_relative '../helpers/section_api_helpers'
-require_relative '../../lib/cdo/section_helpers'
 
-# 'section_api_helpers.rb' gets implicitly included
+# 'section_api_helpers.rb' gets included by section_api_helpers
 
 def remove_dates(string)
   string.gsub(/'[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}'/, 'DATE')
