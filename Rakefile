@@ -101,9 +101,8 @@ namespace :build do
       end
 
       HipChat.log 'Building <b>apps</b>...'
-      env_vars = CDO.localize_apps ? 'MOOC_LOCALIZE=1' : ''
       npm_target = rack_env?(:development) ? 'build' : 'build:dist'
-      RakeUtils.system "#{env_vars} npm run #{npm_target}"
+      RakeUtils.system "npm run #{npm_target}"
     end
   end
 
