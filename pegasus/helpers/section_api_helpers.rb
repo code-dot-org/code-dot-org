@@ -1,6 +1,7 @@
 require 'cdo/user_helpers'
 require 'cdo/script_constants'
 require_relative '../helper_modules/dashboard'
+require 'cdo/section_helpers'
 
 # TODO -- change the APIs below to check logged in user instead of passing in a user id
 class DashboardStudent
@@ -202,14 +203,6 @@ class DashboardSection
     valid_courses[course_id.to_i]
   end
 
-  def self.random_letter
-    (SecureRandom.random_number(26) + 10).to_s(36).upcase
-  end
-
-  def self.random_code
-    6.times.map{random_letter}.join('')
-  end
-
   def self.create(params)
     return nil unless params[:user] && params[:user][:user_type] == 'teacher'
 
@@ -236,7 +229,7 @@ class DashboardSection
         login_type: params[:login_type],
         grade: params[:grade],
         script_id: params[:script_id],
-        code: random_code,
+        code: SectionHelpers::random_code,
         created_at: created_at,
         updated_at: created_at,
       })
