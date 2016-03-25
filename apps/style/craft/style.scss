@@ -1,5 +1,6 @@
 $root: '/blockly/media/craft/'; //TODO: Parameterize for asset pipeline
 
+@import 'color';
 @import '../common';
 @import 'font';
 
@@ -303,7 +304,7 @@ $height-to-width: 434 / 477;
   #select-character-text {
     line-height: 50px;
     font-size: 22px;
-    color: #e7e8ea;
+    color: $lightest_gray;
   }
 
   .minecraft-character {
@@ -432,7 +433,7 @@ $height-to-width: 434 / 477;
   #select-house-text {
     line-height: 50px;
     font-size: 22px;
-    color: #e7e8ea;
+    color: $lightest_gray;
   }
 
 
@@ -721,7 +722,7 @@ $height-to-width: 434 / 477;
   width: 100%;
 }
 
-.dash_modal {
+.minecraft .dash_modal {
   top: 80px;
   margin-left: -340px;
 
@@ -886,6 +887,10 @@ $height-to-width: 434 / 477;
     width: 50px;
     height: 50px;
   }
+}
+
+.ieVersion9 #open-workspace {
+  background-color: $very-dark-gray;
 }
 
 .cdo-qtips .qtip-tip {

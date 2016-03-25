@@ -25,8 +25,10 @@
 -contact_phone_s ||= nil
 -email_s ||= nil
 -form ||= nil
--#When editing you'll have form and the members of form.data as globals.
--#So email_s will be directly available and the same as form.data['email_s']
+
+-#
+  When editing you'll have form and the members of form.data as globals.
+  So email_s will be directly available and the same as form.data['email_s']
 
 %h1=(mode == 'review') ? 'Review Class Submission' : 'Submit Your Class'
 %form#submit-school-form{role: "form", onsubmit: "return submitSchoolFormSubmit()"}

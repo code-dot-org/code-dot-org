@@ -1,4 +1,4 @@
-var colors = require('../sharedJsxStyles').colors;
+var color = require('../color');
 var AgeDropdown = require('./AgeDropdown.jsx');
 
 var commonMsg = require('../locale');
@@ -53,9 +53,9 @@ var SharingWarnings = module.exports = React.createClass({
         marginLeft: 0
       },
       ok: {
-        backgroundColor: colors.orange,
-        border: '1px solid ' + colors.orange,
-        color: colors.white,
+        backgroundColor: color.orange,
+        border: '1px solid ' + color.orange,
+        color: color.white,
         float: 'right'
       }
     };

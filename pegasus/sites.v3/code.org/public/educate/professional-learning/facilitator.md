@@ -5,6 +5,8 @@ nav: educate_nav
 
 # Become a Code.org Facilitator
 
+**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 22nd. We will update everyone of their acceptance status by April 22nd.**
+
 Code.org is looking to partner with individuals interested in developing facilitation capacity in computer science education to deliver high-quality professional development to teachers to teach computer science in a format that's fun and accessible.
 
 The ideal facilitator is an enthusiastic supporter of computer science education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through past teaching experience. Experience mentoring teachers and managing/hosting professional development workshops a plus. <br/>

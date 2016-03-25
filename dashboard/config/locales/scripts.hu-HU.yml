@@ -1837,3 +1837,8 @@
             feladatok: Ütközés észlelése és a távolság képlete'
           'Play Lab: Collision Detection (Big Game)': 'Játéklabor: az ütközés észlelése
             (A Nagy Játék)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Loop this design 6 times. How much do you have to turn each time you loop? (Hint: What is 360 divided by 6?)",
+    "instructions": "Loop this shape 6 times. \r\n\r\nHow much do you have to turn each time you loop? ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -29,9 +29,13 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Loop this design 6 times. How much do you have to turn each time you loop? (Hint: What is 360 divided by 6?)\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
-    "examples_required": "false"
-  }
+    "markdown_instructions": "Loop this shape 6 times. \r\n\r\nHow much do you have to turn each time you loop? \r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"You will be looping this shape 6 times over 360 degrees.\\n\\n**360 / 6 = ?**\",\r\n  \"hint_id\": \"4-5_Nested_Loops_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -89,13 +93,13 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
@@ -119,22 +123,7 @@
       </xml>
     </toolbox_blocks>
     <required_blocks>
-      <xml>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_turn_by_constant_dropdown">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE" config="45,60,90,120,180">60</title>
-              <next>
-                <block type="draw_turn_by_constant_dropdown">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE" config="45,60,90,120,180">60</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-      </xml>
+      <xml/>
     </required_blocks>
     <solution_blocks>
       <xml>

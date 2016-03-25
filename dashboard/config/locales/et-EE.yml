@@ -575,6 +575,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting answers.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting answers.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Vale lahendus
     wrong_body: Sinu poolt sisestatud lahendus ei ole õige. Palun proovi uuesti!
@@ -594,9 +604,6 @@
     placeholder: Sisesta siia oma vastus
     open_response_title: Tänud
     open_response_body: Täname vastuse eest!
-  level_group:
-    correct_title: Aitäh
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: Olgu
     startover_title: Oled sa kindel et tahad uuesti alustada?

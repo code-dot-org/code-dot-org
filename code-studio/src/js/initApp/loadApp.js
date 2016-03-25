@@ -2,6 +2,8 @@
 
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
+var progress = require('../progress');
+var clientState = require('../clientState');
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -23,15 +25,15 @@ module.exports = function (callback) {
       lastAttemptLoaded = true;
 
       // Load the locally-cached last attempt (if one exists)
-      appOptions.level.lastAttempt = dashboard.clientState.sourceForLevel(
+      appOptions.level.lastAttempt = clientState.sourceForLevel(
           appOptions.scriptName, appOptions.serverLevelId);
 
       callback();
     }
   };
 
-  var isViewingSolution = (dashboard.clientState.queryParams('solution') === 'true');
-  var isViewingStudentAnswer = !!dashboard.clientState.queryParams('user_id');
+  var isViewingSolution = (clientState.queryParams('solution') === 'true');
+  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
 
   if (appOptions.share && !window.navigator.standalone && userAgentParser.isSafari()) {
     window.addEventListener("load", function() {
@@ -54,16 +56,16 @@ module.exports = function (callback) {
 
       // Merge progress from server (loaded via AJAX)
       var serverProgress = data.progress || {};
-      var clientProgress = dashboard.clientState.allLevelsProgress()[appOptions.scriptName] || {};
+      var clientProgress = clientState.allLevelsProgress()[appOptions.scriptName] || {};
       Object.keys(serverProgress).forEach(function (levelId) {
         if (serverProgress[levelId] !== clientProgress[levelId]) {
-          var status = dashboard.progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
+          var status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
 
           // Clear the existing class and replace
           $('.level-' + levelId).attr('class', 'level_link ' + status);
 
           // Write down new progress in sessionStorage
-          dashboard.clientState.trackProgress(null, null, serverProgress[levelId], appOptions.scriptName, levelId);
+          clientState.trackProgress(null, null, serverProgress[levelId], appOptions.scriptName, levelId);
         }
       });
 
@@ -74,7 +76,7 @@ module.exports = function (callback) {
           var timestamp = data.lastAttempt.timestamp;
           var source = data.lastAttempt.source;
 
-          var cachedProgram = dashboard.clientState.sourceForLevel(
+          var cachedProgram = clientState.sourceForLevel(
               appOptions.scriptName, appOptions.serverLevelId, timestamp);
           if (cachedProgram !== undefined) {
             // Client version is newer
@@ -84,7 +86,7 @@ module.exports = function (callback) {
             appOptions.level.lastAttempt = source;
 
             // Write down the lastAttempt from server in sessionStorage
-            dashboard.clientState.writeSourceForLevel(appOptions.scriptName,
+            clientState.writeSourceForLevel(appOptions.scriptName,
                 appOptions.serverLevelId, timestamp, source);
           }
           callback();

@@ -485,6 +485,16 @@ az:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Təşəkkür
+    wrong_body: Thank you for submitting answers.
+    correct_title: Təşəkkür
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Təşəkkür
+    wrong_body: Thank you for submitting answers.
+    correct_title: Təşəkkür
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Yanlış həll
     wrong_body: Daxil etdiyiniz həll yanlışdır. Lütfən, bir daha cəhd edin!
@@ -502,9 +512,6 @@ az:
     placeholder: Cavabınızı buraya daxil edin
     open_response_title: Thanks
     open_response_body: Thanks for your response!
-  level_group:
-    correct_title: Təşəkkür
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: Oldu
     startover_title: Yenidən başlamaq istədiyinizə əminsiniz?

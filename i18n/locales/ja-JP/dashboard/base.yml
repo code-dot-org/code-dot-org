@@ -484,6 +484,16 @@ ja:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: ありがとうございます
+    wrong_body: Thank you for submitting answers.
+    correct_title: ありがとうございます
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: ありがとうございます
+    wrong_body: Thank you for submitting answers.
+    correct_title: ありがとうございます
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: うまく解決できていません。
     wrong_body: うまく解決できていません。もう一度やってみてください。
@@ -501,9 +511,6 @@ ja:
     placeholder: ここに答えを入力
     open_response_title: ありがとう
     open_response_body: ご回答ありがとうございます。
-  level_group:
-    correct_title: ありがとうございます
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: 本当に最初からやり直してもよいですか？

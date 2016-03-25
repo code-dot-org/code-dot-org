@@ -1,0 +1,3 @@
+#!/bin/sh
+
+../send-to-mailing-list 3-17-recruit-6-12 ../mailing-common/test-params-us.csv

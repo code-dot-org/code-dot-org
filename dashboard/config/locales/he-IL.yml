@@ -555,6 +555,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "תודה רבה"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "תודה רבה"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "תודה רבה"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "תודה רבה"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: "פתרון לא נכון"
     wrong_body: "הפתרון שענית אינו נכון.נא נסה שנית!"
@@ -574,9 +584,6 @@
     placeholder: "הכנס את התשובה שלך כאן"
     open_response_title: "תודה"
     open_response_body: "תודה על תגובתך!"
-  level_group:
-    correct_title: "תודה רבה"
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: "אישור"
     startover_title: "האם אתה בטוח שאתה רוצה להתחיל מחדש?"
