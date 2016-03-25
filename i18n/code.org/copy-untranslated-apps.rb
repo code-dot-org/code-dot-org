@@ -46,6 +46,7 @@ locales = {
   'Maltese' => 'mt-MT',
   'Marathi' => 'mr-IN',
   'Nepali' => 'ne-NP',
+  'Northern Sami' => 'se',
   'Norwegian' => 'no-NO',
   'Norwegian Nynorsk' => 'nn-NO',
   'Pashto' => 'ps-AF',
