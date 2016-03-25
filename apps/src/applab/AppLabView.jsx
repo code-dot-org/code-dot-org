@@ -21,7 +21,7 @@ var AppLabView = React.createClass({
   propTypes: {
     isEditingProject: React.PropTypes.bool.isRequired,
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
-    instructionsMarkdown: React.PropTypes.string.isRequired,
+    instructionsMarkdown: React.PropTypes.string,
     instructionsCollapsed: React.PropTypes.bool.isRequired,
     instructionsHeight: React.PropTypes.number.isRequired,
 
