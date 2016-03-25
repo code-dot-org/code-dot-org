@@ -47,6 +47,7 @@ en:
   welcome_back: "Welcome back, %{name}"
   submit: Submit
   unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Add a teacher:'
