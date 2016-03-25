@@ -167,6 +167,7 @@ class ApplicationController < ActionController::Base
 
     # logged in users can:
     if current_user
+      response[:user_id] = current_user.id
       # save solved levels to a gallery (subject to
       # additional logic in the blockly code because blockly owns
       # which levels are worth saving)
