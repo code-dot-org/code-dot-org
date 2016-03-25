@@ -58,3 +58,4 @@ You’re receiving this email because you signed the petition on [Code.org](http
 
 ![](<%= tracking_pixel %>)
 
+7

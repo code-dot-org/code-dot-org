@@ -20,7 +20,7 @@
   "incrementPlayerScoreTooltip": "Añadir uno a la puntuación actual del jugador.",
   "isWall": "¿Es esto una pared?",
   "isWallTooltip": "Devuelve verdadero si hay un muro aqui",
-  "launchBall": "lanzar pelota nueva",
+  "launchBall": "lanza una nueva pelota",
   "launchBallTooltip": "Lanza una pelota en el juego.",
   "makeYourOwn": "Crea tu Propio Juego de Rebotar",
   "moveDown": "Bajar",

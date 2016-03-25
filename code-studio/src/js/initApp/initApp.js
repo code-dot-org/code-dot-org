@@ -10,6 +10,9 @@ var clientState = require('../clientState');
 var createCallouts = require('../callouts');
 var reporting = require('../reporting');
 
+window.dashboard = window.dashboard || {};
+window.dashboard.project = project;
+
 window.apps = {
   // Loads the dependencies for the current app based on values in `appOptions`.
   // This function takes a callback which is called once dependencies are ready.
@@ -22,8 +25,6 @@ window.apps = {
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
     }
-    dashboard.project = project;
-
     timing.startTiming('Puzzle', script_path, '');
 
     var lastSavedProgram;
@@ -42,7 +43,7 @@ window.apps = {
         if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
           $('#clear-puzzle-header').hide();
           // Only show Version History button if the user owns this project
-          if (dashboard.project.isOwner()) {
+          if (project.isOwner()) {
             $('#versions-header').show();
           }
         }
@@ -160,8 +161,6 @@ window.apps = {
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
     }
-
-    dashboard.project = project;
   },
 
   // Define blockly/droplet-specific callbacks for projects to access
@@ -192,7 +191,7 @@ window.apps = {
 
   // Initialize the Blockly or Droplet app.
   init: function () {
-    dashboard.project.init(window.apps.sourceHandler);
+    project.init(window.apps.sourceHandler);
     window[appOptions.app + 'Main'](appOptions);
   }
 };

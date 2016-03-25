@@ -51,7 +51,7 @@ ga:
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'Already started? Resume here >> '
   demos: 'Admin: All Demos'
-  continue: Continue
+  continue: Ar aghaidh
   prize: prize
   more_info: More info
   auth:
@@ -478,12 +478,22 @@ ga:
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: Thank you
+    wrong_title: Go raibh maith agat
     wrong_body: Thank you for submitting an answer.
-    correct_title: Thank you
+    correct_title: Go raibh maith agat
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Go raibh maith agat
+    wrong_body: Thank you for submitting answers.
+    correct_title: Go raibh maith agat
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Go raibh maith agat
+    wrong_body: Thank you for submitting answers.
+    correct_title: Go raibh maith agat
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Incorrect solution
     wrong_body: "The solution you've entered is not correct.  Please try again!"
@@ -501,15 +511,12 @@ ga:
     placeholder: Enter your answer here
     open_response_title: Thanks
     open_response_body: Thanks for your response!
-  level_group:
-    correct_title: Thank you
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
-    startover_title: Are you sure you want to start over?
+    startover_title: An bhfuil tú cinnte gur mhaith leat tosú arís?
     startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
-    startover_ok: Start Over
-    startover_cancel: Cancel
+    startover_ok: Tosaigh Arís
+    startover_cancel: Cealaigh
   time:
     hour: 1 hour
     day: day
@@ -585,9 +592,9 @@ ga:
     really_delete: Delete?
     delete_yes: 'Yes'
     delete_no: 'No'
-    saved: Saved
+    saved: Sábháilte
     not_saved: Not saved
-    cancel: Cancel
+    cancel: Cealaigh
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects

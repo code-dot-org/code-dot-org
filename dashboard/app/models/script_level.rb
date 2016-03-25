@@ -113,7 +113,7 @@ class ScriptLevel < ActiveRecord::Base
         position: position,
         kind: kind,
         title: level_display_text,
-        url: build_script_level_path(self)
+        url: build_script_level_url(self)
     }
 
     # Add a previous pointer if it's not the obvious (level-1)

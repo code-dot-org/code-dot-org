@@ -3,25 +3,28 @@ from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: "Teach beyond one hour. Use our free curriculum."
 ---
 
-**If you enjoyed the Hour of Code in December, keep going beyond one hour.**
+**If you enjoyed the Hour of Code in December, keep going beyond one hour!**
 
-Try our 20-hour courses that students love. They all combine self-paced, online lessons with “unplugged” classroom activities. 
+Try our 20-hour courses that students love. The courses are [translated into 16 languages](https://support.code.org/hc/en-us/articles/203428757-Are-Code-Studio-courses-available-in-non-English-languages-) and they all combine self-paced, online lessons with “unplugged” classroom activities. 
 
 Code.org's online platform [Code Studio](https://studio.code.org/) enables students to learn the basic concepts of computer science as early as kindergarten. Teachers can track student progress and access lesson plans online. 
 
-[![image](https://code.org/images/fit-500/email/code-studio.png)](https://studio.code.org/)
+<% if international == 'false' %>
+We offer [free one-day workshops](https://code.org/professional-development-workshops) for K-5 educators to help you get started. All costs are covered by Code.org. Find a local workshop. For middle school and high school courses, ask your school about partnering with us. [Learn more](https://code.org/professional-development-workshops).
+<% end %>
+
+[![image](https://code.org/images/fit-600/email/code-studio.png)](https://studio.code.org/)
+
+Get started with [free online professional learning](https://code.org/educate/professional-development-online) for our 20-hour courses.
 
 [Explore all Code Studio courses](https://studio.code.org/)
-
-<% if country == 'us' %>
-We offer one-day workshops for K-5 educators to help you get started. All costs are covered by Code.org. Find a local workshop. For middle school and high school courses, ask your school about partnering with us. Learn more.
-<% else %>
-
 
 <br/>
 Hadi Partovi<br />
 Founder, Code.org
 <br />
+
+**Don't see your language?** [Help us translate.](https://code.org/translate)
 
 <hr>
 

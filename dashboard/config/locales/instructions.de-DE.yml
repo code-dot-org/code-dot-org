@@ -722,9 +722,6 @@
       4-5 Maze Assessment 1_instruction: 'Aufgabe: Erreiche die Sonnenblume.'
       4-5 Maze Conditionals 1_instruction: Benutze den "Wiederholen"-Baustein um den
         Zombie zur Sonnenblume zu bringen.
-      4-5 Maze Conditionals 10_instruction: Kannst du einfach drei Bausteine hinzufügen
-        und so einen komplizierteres Labyrinth bewältigen? Wenn du es richtig machst,
-        kann ich jeden gekrümmten Weg gehen, unabhängig von seiner Länge.
       4-5 Maze Conditionals 2_instruction: Benutze den "Wiederholen"-Baustein um den
         Zombie zur Sonnenblume zu bringen.
       4-5 Maze Conditionals 3_instruction: 'Benutze den "wenn"-Baustein, damit ich
@@ -2025,6 +2022,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2645,6 +2646,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

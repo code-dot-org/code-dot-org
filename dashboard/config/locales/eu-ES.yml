@@ -586,6 +586,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Soluzio okerra
     wrong_body: Soluzioa ez da zuzena. Saiatu berriro!
@@ -605,9 +615,6 @@
     placeholder: Idatzi hemen zure erantzuna
     open_response_title: Eskerrik asko
     open_response_body: Eskerrik asko zure erantzunagatik!
-  level_group:
-    correct_title: Mila esker
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: Ongi
     startover_title: Ziur al zaude berriro hasi nahi duzula?

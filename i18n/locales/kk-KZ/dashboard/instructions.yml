@@ -412,7 +412,6 @@ kk:
       4-5 Maze 9_instruction: Мені доңызға апар! Дейін қайтала блогымен цикл қолдан.
       4-5 Maze Assessment 1_instruction: 'Бағалау: күнбағысға жет.'
       4-5 Maze Conditionals 1_instruction: Дейін қайтала блогымен күнбағысқа жет.
-      4-5 Maze Conditionals 10_instruction: Күрделі лабиринтты шеші үшін 3 блок қоса аласын ба? Егер дұрыс істесен, мен айналмалы жолды өте аламын.
       4-5 Maze Conditionals 2_instruction: Дейін қайтала блогымен күнбағысқа жет.
       4-5 Maze Conditionals 3_instruction: '"Егер" блогын қолданып қашан бұрылатынын айт. Кеңес: саған тағы бір блок қажет, бірақ біз келесі жолы оны қалай орнатқанымызды еске түсір.'
       4-5 Maze Conditionals 4_instruction: Бұл соңғы тапсырма, бірақ сен «егер» және «қайталау» блогын бірге қалай қолдану керегін еске түсүруін тиіс.
@@ -1186,6 +1185,10 @@ kk:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1634,6 +1637,8 @@ kk:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

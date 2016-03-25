@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+
+/* global Promise */
+
 /** @file Build script for JS assets in the code-studio package, which is loaded
     by dashboard (our "Code Studio" Rails app). */
 'use strict';
@@ -34,23 +37,11 @@ Promise.all([
       'levelbuilder_dsl.js',
       'levelbuilder_studio.js',
       'levels/contract_match.jsx',
-      'levels/widget.js'
+      'levels/widget.js',
+      'initApp/initApp.js'
     ],
     commonFile: 'code-studio-common',
     shouldFactor: true
-  })),
-
-  // For now, build initApp (formerly the 'shared' package) as its own
-  // build step, skipping factor-bundle.  Eventually since this and
-  // code-studio-common can be included on the same page, we may want to try
-  // factoring out common modules to optimize download size.
-  // @see _apps_dependencies.html.haml
-  build_commands.bundle(_.extend({}, defaultOptions, {
-    srcPath: './src/js/initApp/',
-    filenames: [
-      'initApp.js'
-    ],
-    commonFile: 'initApp'
   })),
 
   // Build embedVideo.js in its own step (skipping factor-bundle) so that
@@ -78,7 +69,9 @@ Promise.all([
   // Have a bundle for plc stuff - no sense in expanding this to everything yet
   build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
-      'plc/perform_evaluation.js'
+      'plc/perform_evaluation.js',
+      'plc/evaluation_creation.js',
+      'plc/task_creation.js'
     ],
     commonFile: 'plc'
   }))

@@ -7,7 +7,7 @@ var color = require('../color');
 var Alert = React.createClass({
   propTypes: {
     children: React.PropTypes.element.isRequired,
-    type: React.PropTypes.oneOf("error", "warning").isRequired,
+    type: React.PropTypes.oneOf(["error", "warning"]).isRequired,
     onClose: React.PropTypes.func.isRequired,
     sideMargin: React.PropTypes.number,
   },
@@ -67,8 +67,8 @@ var Alert = React.createClass({
     return (
       <div style={styles.main}>
         <div style={childStyle}>
-          <button style={styles.closeButton}>
-            <span onClick={this.props.onClose}>&times;</span>
+          <button style={styles.closeButton} onClick={this.props.onClose}>
+            <span>&times;</span>
           </button>
           {this.props.children}
         </div>

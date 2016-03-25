@@ -344,38 +344,34 @@ file UI_TEST_SYMLINK do
 end
 
 task :regular_ui_tests => [UI_TEST_SYMLINK] do
-  Dir.chdir(dashboard_dir) do
-    Dir.chdir('test/ui') do
-      HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--magic_retry', '--html', '--fail_fast'
-      if failed_browser_count == 0
-        message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
-        HipChat.log message
-        HipChat.developers message, color: 'green'
-      else
-        message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
-        HipChat.log message, color: 'red'
-        HipChat.developers message, color: 'red', notify: 1
-      end
+  Dir.chdir(dashboard_dir('test/ui')) do
+    HipChat.log 'Running <b>dashboard</b> UI tests...'
+    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--magic_retry', '--html', '--fail_fast'
+    if failed_browser_count == 0
+      message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
+      HipChat.log message
+      HipChat.developers message, color: 'green'
+    else
+      message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+      HipChat.log message, color: 'red'
+      HipChat.developers message, color: 'red', notify: 1
     end
   end
 end
 
 task :eyes_ui_tests => [UI_TEST_SYMLINK] do
-  Dir.chdir(dashboard_dir) do
-    Dir.chdir('test/ui') do
-      HipChat.log 'Running <b>dashboard</b> UI visual tests...'
-      eyes_features = `grep -lr '@eyes' features`.split("\n")
-      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
-      if failed_browser_count == 0
-        message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
-        HipChat.log message
-        HipChat.developers message, color: 'green'
-      else
-        message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
-        HipChat.log message, color: 'red'
-        HipChat.developers message, color: 'red', notify: 1
-      end
+  Dir.chdir(dashboard_dir('test/ui')) do
+    HipChat.log 'Running <b>dashboard</b> UI visual tests...'
+    eyes_features = `grep -lr '@eyes' features`.split("\n")
+    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
+    if failed_browser_count == 0
+      message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+      HipChat.log message
+      HipChat.developers message, color: 'green'
+    else
+      message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+      HipChat.log message, color: 'red'
+      HipChat.developers message, color: 'red', notify: 1
     end
   end
 end

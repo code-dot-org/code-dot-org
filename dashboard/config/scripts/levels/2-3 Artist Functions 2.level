@@ -108,11 +108,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <block type="procedures_callnoreturn">
-        <mutation name="draw a square"/>
-      </block>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

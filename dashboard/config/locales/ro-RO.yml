@@ -587,6 +587,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Mulţumesc
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mulţumesc
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Mulţumesc
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mulţumesc
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Soluţie incorectă
     wrong_body: Soluţia introdusă nu este corectă.  Te rugăm să încerci din nou!
@@ -606,9 +616,6 @@
     placeholder: Completează răspunsul tău aici
     open_response_title: Mulţumim
     open_response_body: "Îți mulţumim pentru răspuns!"
-  level_group:
-    correct_title: Mulţumesc
-    correct_body: Thank you for submitting an answer
   dialog:
     ok: OK
     startover_title: Ești sigur că dorești să reîncepi?
