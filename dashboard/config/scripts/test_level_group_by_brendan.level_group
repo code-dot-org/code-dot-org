@@ -1,0 +1,18 @@
+name 'Test level group by Brendan'
+submittable 'true'
+
+page
+level 'K-1 Happy Maps Multi 1'
+level 'Multi Horizontal Scroll Test'
+level 'Choose 2 Test'
+
+page
+level 'K-1 Plant a Seed Multi 1'
+level 'K-1 Plant a Seed Multi 2'
+level 'K-1 Artist 1 Multi 1'
+level 'PDK5 Strategies O'
+level 'Blocks to Bools 3'
+
+page
+level 'K-1 Maze Loops Multi 1'
+level 'K-1 Maze Loops Multi 2'
