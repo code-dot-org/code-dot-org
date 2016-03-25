@@ -16,7 +16,18 @@
     - last_attempt = last_attempt_entry["result"] if last_attempt_entry
   - else
     - last_attempt = ""
-  = render partial: 'levels/single_multi', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
+  - level_class = level.class.to_s.underscore
+
+  - if level_class == "multi"
+    -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
+    - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
+      - level.properties['answers'].each { |answer| answer['correct'] = false }
+    = render partial: 'levels/single_multi', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
+  - elsif level_class = "text_match"
+    -# For students (or teachers doing PD), clear out all answers.
+    - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
+      - level.properties['answers'] = nil
+    = render partial: 'levels/single_text_match', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
 
 = render partial: 'levels/common_audio'
 
@@ -28,8 +39,10 @@
   %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
     =t('unsubmit')
 
+
 :javascript
   #{render template: 'levels/multi.js', formats: [:js]}
+  #{render template: 'levels/textMatch.js', formats: [:js]}
 
   #{render template: 'levels/levelGroup.js', formats: [:js]}
 

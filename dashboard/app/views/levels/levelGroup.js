@@ -35,9 +35,9 @@ function initLevelGroup(
     // Add any new results to the existing lastAttempt results.
     for (var i = 0; i < levelCount; i++)
     {
-      var multiName = "multi_" + i;
-      var multiResult = window[multiName].getCurrentAnswer().toString();
-      var levelId = window[multiName].getLevelId();
+      var levelName = "level_" + i;
+      var levelResult = window[levelName].getCurrentAnswer().toString();
+      var levelId = window[levelName].getLevelId();
 
       // But before storing, if we had a previous result for the same level,
       // remove that from the array, since we want to overwrite that previous
@@ -50,7 +50,7 @@ function initLevelGroup(
         }
       }
 
-      lastAttempt.push({level_id: levelId, result: multiResult});
+      lastAttempt.push({level_id: levelId, result: levelResult});
     }
 
     var response = JSON.stringify(lastAttempt);
@@ -108,7 +108,7 @@ function initLevelGroup(
     });
   }, this));
 
-  // Unsubmit button should only be available when this is a standalone Multi.
+  // Unsubmit button should only be available when this is a standalone level.
   $('.unsubmitButton').click(function() {
 
     var dialog = new Dialog({
@@ -116,7 +116,7 @@ function initLevelGroup(
         '<div class="modal-content no-modal-icon">' +
           '<p class="dialog-title">Unsubmit answer</p>' +
           '<p class="dialog-body">' +
-          'This will unsubmit your last answer.' +
+          'This will unsubmit your previous answers.' +
           '</p>' +
           '<button id="continue-button">Okay</button>' +
           '<button id="cancel-button">Cancel</button>' +

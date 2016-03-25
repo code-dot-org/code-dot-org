@@ -531,6 +531,8 @@ en:
     placeholder: "Enter your answer here"
     open_response_title: "Thanks"
     open_response_body: "Thanks for your response!"
+    correct_title: "Correct"
+    correct_body: "That is the correct answer."
   dialog:
     ok: "OK"
     startover_title: "Are you sure you want to start over?"
