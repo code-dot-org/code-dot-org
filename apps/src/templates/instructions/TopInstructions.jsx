@@ -7,6 +7,7 @@ var Instructions = require('./Instructions.jsx');
 var CollapserIcon = require('./CollapserIcon.jsx');
 var HeightResizer = require('./HeightResizer.jsx');
 
+var HEADER_HEIGHT = 30;
 var RESIZER_HEIGHT = 13; // TODO $resize-bar-width from style-constants
 
 var styles = {
@@ -17,7 +18,7 @@ var styles = {
     // left handled by media queries for .workspace-right
   },
   header: {
-    height: 30,
+    height: HEADER_HEIGHT,
     lineHeight: '30px',
     fontFamily: '"Gotham 4r"',
     backgroundColor: color.lighter_purple,
@@ -42,7 +43,21 @@ var TopInstructions = React.createClass({
     height: React.PropTypes.number.isRequired,
     markdown: React.PropTypes.string.isRequired,
     collapsed: React.PropTypes.bool.isRequired,
-    onToggleCollapsed: React.PropTypes.func.isRequired
+    onToggleCollapsed: React.PropTypes.func.isRequired,
+    onChangeHeight: React.PropTypes.func.isRequired,
+  },
+
+  onHeightResize: function (delta) {
+    var minHeight = HEADER_HEIGHT + RESIZER_HEIGHT;
+    var currentHeight = this.props.height;
+    // TODO - make this number less arbitrary?
+    var maxHeight = 600;
+
+    var newHeight = Math.max(minHeight, currentHeight + delta);
+    newHeight = Math.min(newHeight, maxHeight);
+
+    this.props.onChangeHeight(newHeight);
+    return newHeight - currentHeight;
   },
 
   render: function () {
@@ -76,7 +91,9 @@ var TopInstructions = React.createClass({
           <div style={bodyStyle}>
             <Instructions renderedMarkdown={this.props.markdown}/>
           </div>
-          <HeightResizer style={resizerStyle}/>
+          <HeightResizer
+            style={resizerStyle}
+            onResize={this.onHeightResize}/>
         </div>
       </div>
     );
