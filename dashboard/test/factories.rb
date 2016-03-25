@@ -1,4 +1,17 @@
 FactoryGirl.define do
+  factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
+    plc_user_course_enrollment nil
+    plc_course_unit nil
+    status "MyString"
+  end
+
+  factory :plc_course_unit, :class => 'Plc::CourseUnit' do
+    plc_course nil
+    unit_name "MyString"
+    unit_description "MyString"
+    unit_order 1
+  end
+
   factory :level_group do
     game_id 1
     name "MyString"
@@ -34,7 +47,7 @@ FactoryGirl.define do
 
   factory :plc_evaluation_question, :class => 'Plc::EvaluationQuestion' do
     question "MyString"
-    plc_course nil
+    plc_course_unit nil
   end
 
   factory :written_enrollment_task_assignment, parent: :plc_enrollment_task_assignment, class: 'Plc::WrittenEnrollmentTaskAssignment' do
