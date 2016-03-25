@@ -1,8 +1,18 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
-require_relative '../../../deployment'
-require 'cdo/hip_chat'
-require 'cdo/rake_utils'
+# require_relative '../../../deployment'
+
+ROOT = File.expand_path('../../../..', __FILE__)
+
+$:.unshift "#{ROOT}/lib"
+$:.unshift "#{ROOT}/shared/middleware"
+
+# Set up gems listed in the Gemfile.
+ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
+require 'bundler'
+require 'bundler/setup'
+
+# require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
 
 require 'json'
@@ -11,6 +21,7 @@ require 'optparse'
 require 'ostruct'
 require 'colorize'
 require 'open3'
+require 'parallel'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
@@ -29,6 +40,18 @@ $options.maximize = nil
 $options.auto_retry = false
 $options.magic_retry = false
 $options.parallel_limit = 1
+
+class HipChat
+  def self.log(*messages)
+    puts messages.join(' ')
+  end
+end
+
+class Object
+  def blank?
+    respond_to?(:empty?) ? !!empty? : !self
+  end
+end
 
 # start supporting some basic command line filtering of which browsers we run against
 opt_parser = OptionParser.new do |opts|
@@ -182,12 +205,12 @@ end
 # Kind of hacky way to determine if we have access to the database
 # (for example, to create users) on the domain/environment that we are
 # testing.
-require File.expand_path('../../../config/environment.rb', __FILE__)
+# require File.expand_path('../../../config/environment.rb', __FILE__)
 
-if Rails.env.development?
+if ENV['RAILS_ENV'] != 'development'
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /(localhost|ngrok)/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /(localhost|ngrok)/
-elsif Rails.env.test?
+elsif ENV['RAILS_ENV'] != 'test'
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /test/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
@@ -203,7 +226,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   browser_name = browser['name'] || 'UnknownBrowser'
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 
-  if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
+  if $options.pegasus_domain =~ /test/ && ENV['RAILS_ENV'] != 'development' && RakeUtils.git_updates_available?
     message = "Killing <b>dashboard</b> UI tests (changes detected)"
     HipChat.log message, color: 'yellow'
     raise Parallel::Kill
@@ -257,7 +280,6 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
   arguments += " -t ~@no_firefox" if browser['browserName'] == 'firefox'
   arguments += " -t ~@skip"
-  arguments += " -t ~@webpurify" unless CDO.webpurify_key
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
   arguments += " -t ~@dashboard_db_access" unless $options.dashboard_db_access
   arguments += " -S" # strict mode, so that we fail on undefined steps
@@ -389,7 +411,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
     message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"
     HipChat.log message, color: 'red'
-    HipChat.developers short_message, color: 'red' if Rails.env.test?
+    HipChat.developers short_message, color: 'red' if ENV['RAILS_ENV'] == 'test'
   end
   result_string =
     if scenario_count == 0

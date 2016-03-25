@@ -1,7 +1,7 @@
-require File.expand_path('../../../../config/environment.rb', __FILE__)
+# require File.expand_path('../../../../config/environment.rb', __FILE__)
 
-DEFAULT_WAIT_TIMEOUT = 2.minutes
-SHORT_WAIT_TIMEOUT = 30.seconds
+DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
+SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 
 def wait_with_timeout(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout)
@@ -585,15 +585,32 @@ Given(/^I am a (student|teacher)$/) do |user_type|
   }
 end
 
-And(/^I create a (student|teacher) named "([^"]*)"$/) do |user_type, name|
-  @users ||= {}
-  @users[name] = User.find_or_create_by!(email: "user#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
-    user.name = name
-    user.password = name + "password" # hack
-    user.user_type = user_type
-    user.age = user_type == 'student' ? 16 : 21
-    user.confirmed_at = Time.now
-  end
+And(/^I create a student named "([^"]*)"$/) do |name|
+  email = "user#{Time.now.to_i}_#{rand(1000)}@testing.xx"
+  password = name + "password" # hack
+
+  steps %Q{
+    Given I am on "https://learn.code.org/users/sign_up"
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I type "16" into "#user_age"
+    And I click selector "input[type=submit][value='Sign up']"
+  }
+end
+
+And(/^I create a teacher named "([^"]*)"$/) do |name|
+  email = "user#{Time.now.to_i}_#{rand(1000)}@testing.xx"
+  password = name + "password" # hack
+  steps %Q{
+    Given I am on "https://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher"
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I click selector "input[type=submit][value='Sign up']"
+  }
 end
 
 And(/I fill in username and password for "([^"]*)"$/) do |name|
