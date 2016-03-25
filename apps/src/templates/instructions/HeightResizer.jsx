@@ -1,10 +1,39 @@
+/**
+ * HeightResizer
+ * A draggable, horizontal toolbar. As it is dragged, it calls back to onResize
+ * which handles any movement.
+ */
+
 var _ = require('lodash');
 var color = require('../../color');
 
-var HeightResizer = React.createClass({
+var RESIZER_HEIGHT = 13; // TODO $resize-bar-width from style-constants
 
+var styles = {
+  main: {
+    position: 'absolute',
+    height: RESIZER_HEIGHT,
+    left: 0,
+    right: 0
+  },
+  ellipsis: {
+    width: '100%',
+    color: color.lighter_gray,
+    fontSize: 24,
+    textAlign: 'center',
+    cursor: 'ns-resize',
+    whiteSpace: 'nowrap',
+    lineHeight: RESIZER_HEIGHT + 'px'
+  }
+};
+
+var HeightResizer = React.createClass({
   propTypes: {
-    style: React.PropTypes.object,
+    position: React.PropTypes.number.isRequired,
+    /**
+     * @param {number} delta - amount we're trying to resize by
+     * @returns {number} delta - amount we've actually resized
+     */
     onResize: React.PropTypes.func.isRequired
   },
 
@@ -30,7 +59,6 @@ var HeightResizer = React.createClass({
     event.stopPropagation();
     event.preventDefault();
 
-    // TODO
     this.setState({ dragging: true, dragStart: event.pageY });
   },
 
@@ -58,22 +86,16 @@ var HeightResizer = React.createClass({
   },
 
   render: function () {
-    var style = {
-      width: '100%',
-      color: color.lighter_gray,
-      fontSize: 24,
-      textAlign: 'center',
-      cursor: 'ns-resize',
-      whiteSpace: 'nowrap',
-      lineHeight: this.props.style.height + 'px'
-    };
+    var mainStyle = _.assign({}, styles.main, {
+      top: this.props.position
+    });
 
     return (
-      <div style={this.props.style}
+      <div style={mainStyle}
           onMouseDown={this.onMouseDown}
           onMouseUp={this.onMouseUp}
           onMouseMove={this.onMouseMove}>
-        <div style={style} className="fa fa-ellipsis-h"/>
+        <div style={styles.ellipsis} className="fa fa-ellipsis-h"/>
       </div>
     );
   }
