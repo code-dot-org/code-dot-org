@@ -1,7 +1,27 @@
 'use strict';
 
+var _ = require('lodash');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
 var StudioAppWrapper = require('./StudioAppWrapper.jsx');
+
+var styles = {
+  codeWorkspace: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    left: 400,
+    bottom: 0,
+    marginLeft: 15,
+    border: '1px solid #ddd',
+    overflow: 'hidden',
+  },
+  codeWorkspaceRTL: {
+    right: 400,
+    left: 0,
+    marginRight: 15,
+    marginLeft: 0
+  }
+};
 
 /**
  * Top-level React wrapper for our standard blockly apps.
@@ -21,6 +41,10 @@ var AppView = React.createClass({
   },
 
   render: function () {
+    var isRTL = !!document.querySelector('html[dir="rtl"]');
+
+    var codeWorkspaceStyle = _.assign({}, styles.codeWorkspace,
+      isRTL && styles.codeWorkspaceRTL);
     return (
       <StudioAppWrapper
           assetUrl={this.props.assetUrl}
@@ -30,7 +54,7 @@ var AppView = React.createClass({
             id="visualizationColumn"
             contentFunction={this.props.generateVisualizationColumnHtml} />
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <ProtectedStatefulDiv id="codeWorkspace" className="workspace-right">
+        <ProtectedStatefulDiv style={codeWorkspaceStyle} id="codeWorkspace" className="workspace-right">
           <ProtectedStatefulDiv id="codeWorkspaceWrapper" contentFunction={this.props.generateCodeWorkspaceHtml}/>
         </ProtectedStatefulDiv>
       </StudioAppWrapper>

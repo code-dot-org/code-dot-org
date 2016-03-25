@@ -1,12 +1,32 @@
 /** @file Top-level view for GameLab */
 'use strict';
 
+var _ = require('lodash');
 var AnimationTab = require('./AnimationTab/index.jsx');
 var connect = require('react-redux').connect;
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var GameLabVisualizationHeader = require('./GameLabVisualizationHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
+
+var styles = {
+  codeWorkspace: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    left: 400,
+    bottom: 0,
+    marginLeft: 15,
+    border: '1px solid #ddd',
+    overflow: 'hidden',
+  },
+  codeWorkspaceRTL: {
+    right: 400,
+    left: 0,
+    marginRight: 15,
+    marginLeft: 0
+  }
+};
 
 /**
  * Top-level React wrapper for GameLab
@@ -26,6 +46,11 @@ var GameLabView = React.createClass({
   },
 
   renderCodeMode: function () {
+    var isRTL = !!document.querySelector('html[dir="rtl"]');
+
+    var codeWorkspaceStyle = _.assign({}, styles.codeWorkspace,
+      isRTL && styles.codeWorkspaceRTL);
+
     // Code mode contains protected (non-React) content.  We have to always
     // render it, so when we're not in code mode use CSS to hide it.
     var codeModeStyle = {};
@@ -40,7 +65,7 @@ var GameLabView = React.createClass({
           <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <ProtectedStatefulDiv id="codeWorkspace" className="workspace-right">
+        <ProtectedStatefulDiv style={codeWorkspaceStyle} id="codeWorkspace" className="workspace-right">
           <ProtectedStatefulDiv
               id="codeWorkspaceWrapper"
               contentFunction={this.props.generateCodeWorkspaceHtml} />

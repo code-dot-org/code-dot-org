@@ -311,25 +311,7 @@ button.arrow:disabled {
   border: 1px solid #ddd;
 }
 
-html[dir='rtl'] #codeWorkspace {
-  right: 400px;
-  left: 0px;
-  margin-right: 15px;
-  margin-left: 0px;
-}
-
-#codeWorkspace:not(.applab) {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  left: 400px;
-  bottom: 0;
-  margin-left: 15px;
-  border: 1px solid #ddd;
-  overflow: hidden;
-}
-
-#codeWorkspace:not(.applab).pin_bottom {
+#codeWorkspace.pin_bottom {
   border: none;
   border-top: 1px solid #ddd;
 }
