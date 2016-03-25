@@ -1,6 +1,6 @@
 ---
 <%
-  require 'lib/country_codes'
+  require 'country_codes'
   splat = request.splat_path_info[1..-1].split("/")
   country_code = splat.first
   country = country_name_from_code(country_code)
@@ -13,7 +13,7 @@ title: <%= hoc_s(:events_all_title) %> - <%= state ? state : country %>
 layout: wide
 nav: events_nav
 ---
--require 'lib/country_codes'
+-require 'country_codes'
 -SOLR = Solr::Server.new(host:CDO.solr_server)
 -events = []
 -splat = request.splat_path_info[1..-1].split("/")
