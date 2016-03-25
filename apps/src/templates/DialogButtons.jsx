@@ -101,4 +101,3 @@ var DialogButtons = React.createClass({
 });
 
 module.exports = DialogButtons;
-
