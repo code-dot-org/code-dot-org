@@ -12,6 +12,8 @@ directory run_unicorn do
   # Ensure directory is created before app-services are (re)loaded.
   %w(dashboard pegasus).each do |app|
     subscribes :create, "service[#{app}]", :before
+    # App service may be initially loaded within Rake-build resource.
+    subscribes :create, "execute[build-#{app}]", :before
   end
 end
 
@@ -47,7 +49,7 @@ template '/etc/nginx/nginx.conf' do
   variables ssl_key: cert.key_path,
     ssl_cert: cert.chain_combined_path,
     run_dir: run_unicorn
-  notifies :reload, 'service[nginx]', :delayed
+  notifies :reload, 'service[nginx]', :immediately
 end
 
 service 'nginx' do

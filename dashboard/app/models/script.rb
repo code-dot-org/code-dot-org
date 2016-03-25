@@ -264,16 +264,6 @@ class Script < ActiveRecord::Base
     self.script_levels[chapter - 1] # order is by chapter
   end
 
-  def feedback_url
-    feedback_url_keys = {
-      course1: 'RJH5D5F',
-      course2: 'H8JLN38',
-      course3: '6T8NZY5',
-    }
-    feedback_url_key = feedback_url_keys[self.name.to_sym]
-    "https://www.surveymonkey.com/s/#{feedback_url_key}" if feedback_url_key
-  end
-
   def beta?
     Script.beta? name
   end
@@ -411,6 +401,10 @@ class Script < ActiveRecord::Base
 
       unless level
         raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
+      end
+
+      if level.game && level.game == Game.gamelab && !script.hidden && !script.admin_required
+        raise 'Gamelab levels can only be added to a script that requires admin (temporarily)'
       end
 
       if level.game && (level.game == Game.applab || level.game == Game.gamelab) && !script.hidden && !script.login_required

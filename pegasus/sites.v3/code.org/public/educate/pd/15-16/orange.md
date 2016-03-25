@@ -38,7 +38,7 @@ Quarter 4: Saturday, April 23, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**April 23rd Location**
+**Location**
 
 [Orange County Department of Education<br/>
 Building D, Room 1003<br/>
@@ -68,8 +68,7 @@ Takeaways:<br/>
 • I look forward to teaching the course again based on my reflection of the past year.<br/>
 • I am more comfortable with the material that I struggled with the first time teaching this
 course.<br/>
-• I understand how to make changes to the ECS curriculum in order to meet my local needs
-and fit into my context.
+• I understand how to make changes to the ECS curriculum in order to meet my local needs and fit into my context.
 
 **Save the Dates**
 

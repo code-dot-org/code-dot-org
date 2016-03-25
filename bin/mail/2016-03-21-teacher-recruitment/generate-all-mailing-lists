@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+
+# Teachers who attended Ops workshops, minus NYC
+generate('ops-workshop-attendees')
+
+# Teachers in all regions from February email, minus NYC and Chicago
+generate('district-teachers')
+
+# Teachers who attended K-5 workshops
+generate('k5-workshop-attendees')
+
+# Inactive Code Studio teacher accounts
+# (not teaching a course, or haven't added students)
+generate('inactive-teachers')
+
+# Hour of Code 2015 organizers
+generate('hoc2015-organizers')

@@ -12,9 +12,3 @@
           =value[:title_s]
       %p{:style=>'font-size: 13px;line-height: 18px;'}
         =value[:quote_t]
-
--#links{:style=>'clear:both;'}
-  = view :share_buttons, facebook:facebook, twitter:twitter)
-  .all-quotes-link
-    %a{:href=>'http://code.org/quotes'}
-      =@config[:all_quotes]

@@ -14,11 +14,11 @@ DEPENDENCIES
 
 GRAPH
   apt (2.9.2)
-  cdo-nginx (0.0.3)
+  cdo-nginx (0.0.7)
     apt (>= 0.0.0)
     ssl_certificate (>= 0.0.0)
   cdo-ruby (0.2.0)
-  cdo-varnish (0.3.7)
+  cdo-varnish (0.3.8)
     apt (>= 0.0.0)
   nginx_test (0.1.1)
     cdo-nginx (>= 0.0.0)
