@@ -47,7 +47,8 @@ div#visualizationResizeBar {
   div.workspace-right {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  // TODO - should be works-space-right?
+  html[dir='rtl'] div.workspace-right {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -83,7 +84,7 @@ div#visualizationResizeBar {
   div.workspace-right {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.workspace-right {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -119,7 +120,7 @@ div#visualizationResizeBar {
   div.workspace-right {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.workspace-right {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -155,7 +156,7 @@ div#visualizationResizeBar {
   div.workspace-right {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.workspace-right {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -191,7 +192,7 @@ div#visualizationResizeBar {
   div.workspace-right {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.workspace-right {
     right: $width;
   }
   div#visualizationResizeBar {

@@ -304,7 +304,7 @@ function adjustAppSizeStyles(container) {
               childRules[k].style.cssText = "max-width: " +
                   (Applab.appWidth * scale + 2) + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#codeWorkspace") {
+            } else if (childRules[k].selectorText === "div.workspace-right") {
               // set the left for the codeWorkspace
               childRules[k].style.cssText = "left: " +
                   Applab.appWidth * scale + "px;";
@@ -315,7 +315,7 @@ function adjustAppSizeStyles(container) {
                   Applab.appWidth * scale + "px; line-height: " +
               Applab.footerlessAppHeight * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
+            } else if (childRules[k].selectorText === "html[dir='rtl'] div.workspace-right") {
               // set the right for the codeWorkspace (RTL mode)
               childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
@@ -707,7 +707,7 @@ Applab.init = function(config) {
       studioApp.displayWorkspaceAlert('warning', <div>{commonMsg.projectWarning()}</div>);
     }
 
-    studioApp.alertIfAbusiveProject('#codeWorkspace');
+    studioApp.alertIfAbusiveProject('#');
 
     // IE9 doesnt support the way we handle responsiveness. Instead, explicitly
     // resize our visualization (user can still resize with grippy)
