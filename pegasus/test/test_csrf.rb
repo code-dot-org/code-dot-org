@@ -32,11 +32,11 @@ class CsrfTest < Minitest::Test
     # Set a fake CSR token in the environment and verify a post with that
     # token succeeds.
     fake_csrf_token = 'fake_token'
-    env 'rack.session',
-    params_with_csrf_token = params.merge(_csrf: fake_csrf_token)
+    fake_session = {Rack::Csrf.key => fake_csrf_token}
+    params_with_token = params.merge(_csrf: fake_csrf_token)
     response = post('/v2/poste/send-message',
-                    params_with_csrf_token,
-                    {'rack.session' => {Rack::Csrf.key => fake_csrf_token}})
+                    params_with_token,
+                    {'rack.session' => fake_session})
     assert_equal 200, response.status
   end
 
