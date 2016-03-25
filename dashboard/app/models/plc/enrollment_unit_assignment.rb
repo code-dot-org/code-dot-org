@@ -1,3 +1,4 @@
+# Plc::EnrollmentUnitAssignment represents a user's enrollment in a specific course unit
 # == Schema Information
 #
 # Table name: plc_enrollment_unit_assignments

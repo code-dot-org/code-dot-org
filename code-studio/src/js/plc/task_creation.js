@@ -14,7 +14,7 @@ $(window).load(function () {
   });
 });
 
-// TODO: Don't use one monolothic js file
+// TODO: Don't use one monolithic js file
 if ($('#iconLibraryContainerDiv').length) {
   ReactDOM.render(React.createElement(IconLibrary, {
     alignment: 'left',

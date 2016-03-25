@@ -57,10 +57,8 @@ class Plc::CourseUnitsControllerTest < ActionController::TestCase
 
   test "should create evaluation answers" do
     post :submit_new_questions_and_answers, id: @course_unit, newQuestionsList: [].to_s,
-         newAnswersList: "{\"#{@question.id}\":[\
-                     {\"answer\": \"Answer 1\", \"learningModuleId\": \"#{@module1.id}\"},\
-                     {\"answer\": \"Answer 2\", \"learningModuleId\": \"#{@module2.id}\"}\
-                  ]}"
+         newAnswersList: %Q{{"#{@question.id}": [{"answer": "Answer1", "learningModuleId": "#{@module1.id}"},
+                                                 {"answer": "Answer2", "learningModuleId": "#{@module2.id}"}]}}
 
     assert_redirected_to plc_course_unit_path(assigns(:course_unit))
 

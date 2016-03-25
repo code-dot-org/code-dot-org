@@ -54,7 +54,9 @@ class Plc::CourseUnitsController < ApplicationController
 
     JSON.parse(new_answers_params).each do |question_id, answer_list|
       answer_list.each do |answer_properties|
-        Plc::EvaluationAnswer.create(plc_evaluation_question_id: question_id, answer: answer_properties['answer'], plc_learning_module_id: answer_properties['learningModuleId'] == '' ? nil : answer_properties['learningModuleId'])
+        Plc::EvaluationAnswer.create(plc_evaluation_question_id: question_id,
+                                     answer: answer_properties['answer'],
+                                     plc_learning_module_id: answer_properties['learningModuleId'] == '' ? nil : answer_properties['learningModuleId'])
       end
     end
     redirect_to @course_unit
