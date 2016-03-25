@@ -80,6 +80,6 @@ module.exports.toggleInstructionsCollapsed = function () {
 module.exports.setInstructionsHeight = function (height) {
   return {
     type: ActionType.SET_INSTRUCTIONS_HEIGHT,
-    height:height
+    height: height
   };
 };

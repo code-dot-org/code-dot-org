@@ -75,7 +75,8 @@ var AppLabView = React.createClass({
             height={instructionsHeight}
             markdown={this.props.instructionsMarkdown}
             collapsed={this.props.instructionsCollapsed}
-            onToggleCollapsed={this.props.toggleInstructionsCollapsed}/>
+            onToggleCollapsed={this.props.toggleInstructionsCollapsed}
+            onChangeHeight={this.props.setInstructionsHeight}/>
         <CodeWorkspaceContainer
             topMargin={instructionsHeight}
             generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
