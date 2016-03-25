@@ -202,6 +202,14 @@ class DashboardSection
     valid_courses[course_id.to_i]
   end
 
+  def self.random_letter
+    (SecureRandom.random_number(26) + 10).to_s(36).upcase
+  end
+
+  def self.random_code
+    6.times.map{random_letter}.join('')
+  end
+
   def self.create(params)
     return nil unless params[:user] && params[:user][:user_type] == 'teacher'
 
@@ -228,7 +236,7 @@ class DashboardSection
         login_type: params[:login_type],
         grade: params[:grade],
         script_id: params[:script_id],
-        code: SectionHelpers::random_code,
+        code: random_code,
         created_at: created_at,
         updated_at: created_at,
       })
