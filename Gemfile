@@ -71,7 +71,7 @@ group :development, :test do
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'minitest-around'
-  gem 'eyes_selenium', '~> 2.27.0'
+  gem 'eyes_selenium', '~> 2.28.0'
 end
 
 group :doc do

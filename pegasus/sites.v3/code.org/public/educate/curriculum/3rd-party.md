@@ -63,6 +63,8 @@ U.S. Federal law recently recognized [computer science as part of the "well roun
 
 Your school or district may be able to use Title I or Title II funds, and other department grant programs to apply towards offering CS courses. [More info](http://innovation.ed.gov/2015/12/07/a-new-chapter-for-computer-science-education/).
 
+The National Science Foundation (NSF) has several existing funding opportunities to support CS for All initiatives. The NSF outlined invitations for proposals in a [Dear Colleague Letter](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057) issued in March 2016. If you are an organization focused on the learning of computer science and computational thinking for all students, consider [submitting a proposal](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057). 
+
 
 ## More resources &mdash; for classrooms, afterschool clubs or learning online 
 
