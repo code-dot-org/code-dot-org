@@ -53,15 +53,15 @@ var AppLabView = React.createClass({
       instructionsHeight = HEADER_HEIGHT;
     }
 
-    // TODO - have this change as we drag grippy
     var codeWorkspaceContainerStyle = {
       top: instructionsHeight
     };
 
 
+    // TODO - there are a small set of levels that have instructions but not markdownInstructions
+    //   (that are also used in scripts). should convert these to have markdown instructions
     // TODO - changing id of codeWorkspace to codeWorkspaceApplab will break callouts and some UI tests
     // TODO - could group rightSide into single component?
-    // TODO - instructions dont properly size when dragging visualization resizer
     return (
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">

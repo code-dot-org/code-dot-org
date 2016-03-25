@@ -358,7 +358,7 @@ StudioApp.prototype.init = function(config) {
     this.winIcon = config.skin[config.level.instructionsIcon];
   }
 
-  if (!config.noInstructionDialog && config.showInstructionsWrapper) {
+  if (!config.showInstructionsInTopPane && config.showInstructionsWrapper) {
     config.showInstructionsWrapper(_.bind(function () {
       var shouldAutoClose = !!config.level.aniGifURL;
       this.showInstructionsDialog_(config.level, shouldAutoClose, false);
@@ -403,42 +403,45 @@ StudioApp.prototype.init = function(config) {
     config.loadAudio();
   }
 
-  var promptDiv = document.getElementById('prompt');
-  var prompt2Div = document.getElementById('prompt2');
-  if (config.level.instructions) {
-    var instructionsHtml = this.substituteInstructionImages(
-      config.level.instructions, this.skin.instructions2ImageSubstitutions);
-    $(promptDiv).html(instructionsHtml);
-  }
-  if (config.level.instructions2) {
-    var instructions2Html = this.substituteInstructionImages(
-      config.level.instructions2, this.skin.instructions2ImageSubstitutions);
-    $(prompt2Div).html(instructions2Html);
-    $(prompt2Div).show();
-  }
-
-  if (!config.noInstructionDialog && this.hasInstructionsToShow(config)) {
-    var promptIcon = document.getElementById('prompt-icon');
-    if (this.smallIcon) {
-      promptIcon.src = this.smallIcon;
-      $('#prompt-icon-cell').show();
+  // TODO - separate method?
+  if (!config.showInstructionsInTopPane) {
+    var promptDiv = document.getElementById('prompt');
+    var prompt2Div = document.getElementById('prompt2');
+    if (config.level.instructions) {
+      var instructionsHtml = this.substituteInstructionImages(
+        config.level.instructions, this.skin.instructions2ImageSubstitutions);
+      $(promptDiv).html(instructionsHtml);
+    }
+    if (config.level.instructions2) {
+      var instructions2Html = this.substituteInstructionImages(
+        config.level.instructions2, this.skin.instructions2ImageSubstitutions);
+      $(prompt2Div).html(instructions2Html);
+      $(prompt2Div).show();
     }
 
-    var bubble = document.getElementById('bubble');
+    if (this.hasInstructionsToShow(config)) {
+      var promptIcon = document.getElementById('prompt-icon');
+      if (this.smallIcon) {
+        promptIcon.src = this.smallIcon;
+        $('#prompt-icon-cell').show();
+      }
 
-    this.authoredHintsController_.display(promptIcon, bubble, function () {
-      this.showInstructionsDialog_(config.level, false, true);
-    }.bind(this));
-  }
+      var bubble = document.getElementById('bubble');
 
-  var aniGifPreview = document.getElementById('ani-gif-preview');
-  if (config.level.aniGifURL) {
-    aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-    var promptTable = document.getElementById('prompt-table');
-    promptTable.className += " with-ani-gif";
-  } else {
-    var wrapper = document.getElementById('ani-gif-preview-wrapper');
-    wrapper.style.display = 'none';
+      this.authoredHintsController_.display(promptIcon, bubble, function () {
+        this.showInstructionsDialog_(config.level, false, true);
+      }.bind(this));
+    }
+
+    var aniGifPreview = document.getElementById('ani-gif-preview');
+    if (config.level.aniGifURL) {
+      aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
+      var promptTable = document.getElementById('prompt-table');
+      promptTable.className += " with-ani-gif";
+    } else {
+      var wrapper = document.getElementById('ani-gif-preview-wrapper');
+      wrapper.style.display = 'none';
+    }
   }
 
   if (this.editCode) {
