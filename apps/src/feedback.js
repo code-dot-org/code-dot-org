@@ -158,6 +158,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var finalLevel = (options.response &&
     (options.response.message === "no more levels"));
 
+  var userId = (options.response && options.response.user_id);
+
   feedback.appendChild(
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
@@ -167,7 +169,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
       freePlay: options.level.freePlay,
-      finalLevel: finalLevel
+      finalLevel: finalLevel,
+      userId: userId
     })
   );
 
@@ -428,6 +431,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
     continueText: options.continueText || (options.finalLevel ? msg.finish() : msg.continue()),
     nextLevel: this.canContinueToNextLevel(options.feedbackType),
     shouldPromptForHint: this.shouldPromptForHint(options.feedbackType),
+    userId: options.userId,
     isK1: options.isK1,
     assetUrl: this.studioApp_.assetUrl,
     freePlay: options.freePlay
