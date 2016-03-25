@@ -30,7 +30,7 @@ var AppView = React.createClass({
             id="visualizationColumn"
             contentFunction={this.props.generateVisualizationColumnHtml} />
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <ProtectedStatefulDiv id="codeWorkspace">
+        <ProtectedStatefulDiv id="codeWorkspace" className="workspace-right">
           <ProtectedStatefulDiv id="codeWorkspaceWrapper" contentFunction={this.props.generateCodeWorkspaceHtml}/>
         </ProtectedStatefulDiv>
       </StudioAppWrapper>
