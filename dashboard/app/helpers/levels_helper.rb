@@ -399,7 +399,7 @@ module LevelsHelper
     end
   end
 
-  def string_or_image(prefix, text)
+  def string_or_image(prefix, text, source_level = nil)
     return unless text
     path, width = text.split(',')
     if %w(.jpg .png .gif).include? File.extname(path)
@@ -430,12 +430,13 @@ module LevelsHelper
           style: 'border: none;'
         }), {class: 'aspect-ratio'})
     else
-      data_t(prefix + '.' + @level.name, text)
+      level_name = source_level ? source_level.name : @level.name
+      data_t(prefix + '.' + level_name, text)
     end
   end
 
-  def multi_t(text)
-    string_or_image('multi', text)
+  def multi_t(level, text)
+    string_or_image('multi', text, level)
   end
 
   def match_t(text)

@@ -18,7 +18,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     post :assume_identity, {user_id: @not_admin.id}
     assert_redirected_to '/'
 
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first
+    assert_signed_in_as @not_admin
   end
 
   test "should assume_identity by username" do
@@ -27,7 +27,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     post :assume_identity, {user_id: @not_admin.username}
     assert_redirected_to '/'
 
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first
+    assert_signed_in_as @not_admin
   end
 
   test "should assume_identity by email" do
@@ -36,7 +36,19 @@ class AdminUsersControllerTest < ActionController::TestCase
     post :assume_identity, {user_id: @not_admin.email}
     assert_redirected_to '/'
 
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first
+    assert_signed_in_as @not_admin
+  end
+
+  test "should assume_identity by email not id if email starts with a number" do
+    user_with_id = create(:teacher)
+    user_with_number_email = create(:teacher, email: "#{user_with_id.id}teacher@email.xx")
+
+    sign_in @admin
+
+    post :assume_identity, {user_id: user_with_number_email.email}
+    assert_redirected_to '/'
+
+    assert_signed_in_as user_with_number_email # not user_with_id
   end
 
   test "should assume_identity by hashed email" do
@@ -48,7 +60,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     post :assume_identity, {user_id:  email}
     assert_redirected_to '/'
 
-    assert_equal user.id, session['warden.user.user.key'].first.first
+    assert_signed_in_as user
   end
 
   test "should assume_identity error if not found" do

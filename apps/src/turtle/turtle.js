@@ -26,6 +26,7 @@
  */
 'use strict';
 
+var color = require('../color');
 var commonMsg = require('../locale');
 var turtleMsg = require('./locale');
 var levels = require('./levels');
@@ -653,7 +654,7 @@ Artist.prototype.display = function() {
   // FF on linux retains drawing of previous location of artist unless we clear
   // the canvas first.
   var style = this.ctxDisplay.fillStyle;
-  this.ctxDisplay.fillStyle = 'white';
+  this.ctxDisplay.fillStyle = color.white;
   this.ctxDisplay.clearRect(0, 0, this.ctxDisplay.canvas.width,
     this.ctxDisplay.canvas.width);
   this.ctxDisplay.fillStyle = style;
