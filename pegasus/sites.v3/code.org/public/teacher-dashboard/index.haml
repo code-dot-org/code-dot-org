@@ -677,23 +677,10 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         $scope.assessmentsLoaded = true;
         $scope.findStages();
 
-        $scope.assessmentsParsed = [];
-
         $.each($scope.assessments, function(index, assessment) {
 
           assessment.multi_correct_percent = assessment.multi_correct / assessment.multi_count * 100;
           assessment.status = assessment.submitted ? "Submitted" : "In progress";
-
-          /*
-          var responseParsed = JSON.parse(response.response);
-          response.responseParsed = responseParsed;
-
-          response.parsed = "";
-          $.each(responseParsed, function(index, answer) {
-            response.parsed += answer["result"];
-            response.parsed += " ";
-          });
-          */
 
           // Each LevelGroup's result has a list of the results for the levels in that order.
           // Because angular's nested iterators are kind of funky when trying to generate a table,
@@ -705,8 +692,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
               question: index + 1,
               student: assessment.student,
               studentResult: level_result.student_result,
-              correct: level_result.correct,
-              //response: response.responseParsed[index]
+              correct: level_result.correct
             };
             $scope.levels.push(levelResult);
           });

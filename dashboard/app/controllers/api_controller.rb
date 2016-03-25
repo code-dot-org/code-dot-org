@@ -1,3 +1,5 @@
+require 'json'
+
 class ApiController < ApplicationController
   layout false
   include LevelsHelper
@@ -146,6 +148,105 @@ class ApiController < ApplicationController
           question: script_level.level.properties['title'],
           response: response,
           url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+        }
+      end.compact
+    end.flatten
+
+    render json: data
+  end
+
+  def section_assessments
+    load_section
+    load_script
+
+    level_group_script_levels = @script.script_levels.includes(:level).where('levels.type' => LevelGroup)
+
+    data = @section.students.map do |student|
+      student_hash = {id: student.id, name: student.name}
+
+      level_group_script_levels.map do |script_level|
+        next unless script_level.long_assessment?
+
+        last_attempt = student.last_attempt(script_level.level)
+        response = last_attempt.try(:level_source).try(:data)
+
+        next unless response
+
+        user_level = UserLevel.where(user_id: student.id, level: script_level.level, script: @script).first
+        puts user_level.to_json
+
+        # Summarize some key data.
+        multi_count = 0
+        multi_count_correct = 0
+
+        # And construct a listing of all the individual levels and their results.
+        level_results = []
+
+        next unless properties = script_level.level[:properties]
+
+        # Go through each page of the long assessment's LevelGroup.
+        properties["pages"].each do |page|
+          # Go through each level of the page.
+          page["levels"].each do |page_level_name|
+            level = Level.find_by_name(page_level_name)
+
+            # And work with the response to the individual level inside the LevelGroup.
+            response_parsed = JSON.parse(response)
+            level_response = response_parsed.select{|r| r["level_id"] == level.id}
+
+            if level_response
+              # For each level inside the LevelGroup, we determine the resut,
+              # both content in :student_result and result value in :correct.
+              # This array is returned for each LevelGroup, and its order matches
+              # that of the LevelGroup as it's declared.
+              level_result = {}
+
+              level_class = level.class.to_s.underscore
+
+              if level_class == "text_match"
+                student_result = level_response.first["result"]
+                level_result[:student_result] = student_result
+                level_result[:correct] = 'Free response'
+              elsif level_class == "multi"
+                # Generate a string like "1" or "0,1" which contains indexes of all
+                # the correct answers.  We use variable name _index so that the linter
+                # ignores the fact that it's not explicitly used.
+                answer_indexes = level["properties"]["answers"].each_with_index.select {|a, _index| a["correct"] == true}.map(&:last).join(",")
+                student_result = level_response.first["result"].split(",").sort.join(",")
+                multi_count += 1
+                level_result[:student_result] = student_result
+                if student_result == "-1"
+                  level_result[:student_result] = ""
+                  level_result[:correct] = 'Unsubmitted'
+                elsif student_result == answer_indexes
+                  multi_count_correct += 1
+                  level_result[:correct] = "Correct"
+                else
+                  level_result[:correct] = 'Incorrect'
+
+                end
+              end
+
+              level_results << level_result
+            end
+          end
+        end
+
+        submitted = user_level.try(:submitted)
+
+        timestamp = user_level[:updated_at].to_formatted_s
+
+        {
+          student: student_hash,
+          stage: script_level.stage.localized_title,
+          puzzle: script_level.position,
+          question: script_level.level.properties['title'],
+          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
+          multi_correct: multi_count_correct,
+          multi_count: multi_count,
+          submitted: submitted,
+          timestamp: timestamp,
+          level_results: level_results
         }
       end.compact
     end.flatten
