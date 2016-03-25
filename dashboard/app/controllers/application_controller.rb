@@ -167,7 +167,13 @@ class ApplicationController < ActionController::Base
 
     # logged in users can:
     if current_user
-      response[:user_id] = current_user.id
+      # participate in A/B testing
+      # as of March 25, 2016, the text of the block hint button is being
+      # A/B tested. See @cdo/apps/src/templates/DialogButtons.jsx.
+      if Gatekeeper.allows('ab_testing', default: true)
+        response[:user_id] = current_user.id
+      end
+
       # save solved levels to a gallery (subject to
       # additional logic in the blockly code because blockly owns
       # which levels are worth saving)
