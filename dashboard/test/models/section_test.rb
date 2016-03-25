@@ -13,9 +13,8 @@ class SectionTest < ActiveSupport::TestCase
 
     assert_not_equal s1.code, s2.code
 
-    letters_without_vowels_regex = /^[A-Z&&[^AEIOU]]{6}$/
-    assert_match letters_without_vowels_regex, s1.code
-    assert_match letters_without_vowels_regex, s2.code
+    assert s1.code =~ /^[A-Z]{6}$/
+    assert s2.code =~ /^[A-Z]{6}$/
 
     # now do it again
     srand 1
@@ -23,7 +22,7 @@ class SectionTest < ActiveSupport::TestCase
     assert_not_equal s1.code, s3.code
     assert_not_equal s2.code, s3.code
 
-    assert_match letters_without_vowels_regex, s3.code
+    assert s3.code =~ /^[A-Z]{6}$/
   end
 
   test "user must be teacher" do
