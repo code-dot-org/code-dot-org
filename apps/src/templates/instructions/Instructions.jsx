@@ -35,7 +35,7 @@ var Instructions = React.createClass({
         bodyStyle.marginLeft = '90px';
       }
 
-      body = (<div 
+      body = (<div
         className='instructions-markdown'
         style={ bodyStyle }
         dangerouslySetInnerHTML={{ __html: this.props.renderedMarkdown }}

@@ -67,8 +67,8 @@ var Alert = React.createClass({
     return (
       <div style={styles.main}>
         <div style={childStyle}>
-          <button style={styles.closeButton}>
-            <span onClick={this.props.onClose}>&times;</span>
+          <button style={styles.closeButton} onClick={this.props.onClose}>
+            <span>&times;</span>
           </button>
           {this.props.children}
         </div>
