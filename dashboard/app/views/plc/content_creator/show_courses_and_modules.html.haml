@@ -8,6 +8,9 @@
   -@courses.each do |course|
     = link_to course.name, course
     %br
+    - course.plc_course_units.each do |course_unit|
+      %li
+        = link_to course_unit.unit_name, course_unit
   .new_link
     = link_to 'Add new course', new_plc_course_path, class: 'btn'
 
