@@ -7,8 +7,10 @@ var Instructions = require('./Instructions.jsx');
 var CollapserIcon = require('./CollapserIcon.jsx');
 var HeightResizer = require('./HeightResizer.jsx');
 
+// TODO These numbers are defined in style-constants.scss. Do the same sort
+// of thing we did with colors
 var HEADER_HEIGHT = 30;
-var RESIZER_HEIGHT = 13; // TODO $resize-bar-width from style-constants
+var RESIZER_HEIGHT = 13;
 
 var styles = {
   main: {
@@ -29,12 +31,6 @@ var styles = {
     overflowY: 'scroll',
     paddingLeft: 10,
     paddingRight: 10
-  },
-  resizer: {
-    position: 'absolute',
-    height: RESIZER_HEIGHT,
-    left: 0,
-    right: 0
   }
 };
 
@@ -75,10 +71,6 @@ var TopInstructions = React.createClass({
       display: this.props.collapsed ? 'none' : undefined
     };
 
-    var resizerStyle = _.assign({}, styles.resizer, {
-      top: mainStyle.height
-    });
-
     return (
       <div style={mainStyle} className="workspace-right">
         <CollapserIcon
@@ -92,7 +84,7 @@ var TopInstructions = React.createClass({
             <Instructions renderedMarkdown={this.props.markdown}/>
           </div>
           <HeightResizer
-            style={resizerStyle}
+            position={mainStyle.height}
             onResize={this.onHeightResize}/>
         </div>
       </div>
