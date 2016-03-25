@@ -8,21 +8,11 @@ var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
 var TopInstructions = require('../templates/instructions/TopInstructions.jsx');
-var HeightResizer = require('../templates/instructions/HeightResizer.jsx');
 var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer.jsx');
 var utils = require('../utils');
 
 // TODO - share with top instructions?
 var HEADER_HEIGHT = 30;
-
-var styles = {
-
-  resizer: {
-    position: 'absolute',
-    height: 13, // TODO $resize-bar-width from style-constants
-    right: 0
-  }
-};
 
 /**
  * Top-level React wrapper for App Lab.
@@ -64,17 +54,14 @@ var AppLabView = React.createClass({
     }
 
     // TODO - have this change as we drag grippy
-    var codeWorkspaceContainerStyle = _.assign({}, styles.codeWorkspaceContainer, {
-      top: instructionsHeight + (this.props.instructionsCollapsed ? 0 : styles.resizer.height)
-    });
+    var codeWorkspaceContainerStyle = {
+      top: instructionsHeight
+    };
 
-    var resizerStyle = _.assign({}, styles.resizer, {
-      top: instructionsHeight,
-      display: this.props.instructionsCollapsed ? 'none' : undefined
-    });
 
     // TODO - changing id of codeWorkspace to codeWorkspaceApplab will break callouts and some UI tests
     // TODO - could group rightSide into single component?
+    // TODO - instructions dont properly size when dragging visualization resizer
     return (
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
@@ -89,10 +76,8 @@ var AppLabView = React.createClass({
             markdown={this.props.instructionsMarkdown}
             collapsed={this.props.instructionsCollapsed}
             onToggleCollapsed={this.props.toggleInstructionsCollapsed}/>
-        <HeightResizer style={resizerStyle}/>
         <CodeWorkspaceContainer
-            topMargin={instructionsHeight +
-              (this.props.instructionsCollapsed ? 0 : styles.resizer.height)}
+            topMargin={instructionsHeight}
             generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
             onSizeChange={utils.fireResizeEvent}/>
       </ConnectedStudioAppWrapper>
@@ -110,6 +95,9 @@ module.exports = connect(function propsFromStore(state) {
   return {
     toggleInstructionsCollapsed: function () {
       dispatch(actions.toggleInstructionsCollapsed());
+    },
+    setInstructionsHeight: function (height) {
+      dispatch(actions.setInstructionsHeight(height));
     }
   };
 }

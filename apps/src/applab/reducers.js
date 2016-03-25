@@ -68,6 +68,7 @@ function interfaceMode(state, action) {
 
 var instructionsInitialState = {
   collapsed: false,
+  // represents the uncollapsed height
   height: 300
 };
 
@@ -77,6 +78,12 @@ function instructions(state, action) {
   if (action.type === ActionType.TOGGLE_INSTRUCTIONS_COLLAPSED) {
     return _.assign({}, state, {
       collapsed: !state.collapsed
+    });
+  }
+
+  if (action.type === ActionType.SET_INSTRUCTIONS_HEIGHT) {
+    return _.assign({}, state, {
+      height: action.height
     });
   }
 

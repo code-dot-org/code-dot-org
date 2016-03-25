@@ -19,7 +19,7 @@ var HeightResizer = React.createClass({
     };
 
     return (
-      <div style={this.props.style} className="workspace-right">
+      <div style={this.props.style}>
         <div style={style} className="fa fa-ellipsis-h"/>
       </div>
     );
