@@ -763,7 +763,7 @@ Applab.init = function(config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
 
-  config.noInstructionDialog = true;
+  config.showInstructionsInTopPane = true;
 
   // Applab.initMinimal();
 
