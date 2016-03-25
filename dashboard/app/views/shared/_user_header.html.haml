@@ -22,10 +22,10 @@
   = link_to new_user_session_url, class: 'button-signin', id: 'signin_button'  do
     .header_button.header_user
       %span= t('nav.user.signin')
-    :javascript
-      if (typeof dashboard !== 'undefined') {
-        dashboard.clientState.setAnonymousUser();
-      }
+  :javascript
+    if (typeof dashboard !== 'undefined') {
+      dashboard.clientState.setAnonymousUser();
+    }
 
 :javascript
   function hideUserOptions() {
