@@ -59,10 +59,12 @@ FactoryGirl.define do
     plc_enrollment_module_assignment nil
     plc_task nil
   end
+
   factory :plc_enrollment_module_assignment, :class => 'Plc::EnrollmentModuleAssignment' do
-    plc_user_course_enrollment nil
+    plc_enrollment_unit_assignment nil
     plc_learning_module nil
   end
+
   factory :plc_user_course_enrollment, :class => 'Plc::UserCourseEnrollment' do
     status "MyString"
     plc_course nil
