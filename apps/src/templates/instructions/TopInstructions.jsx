@@ -12,6 +12,10 @@ var HeightResizer = require('./HeightResizer.jsx');
 var HEADER_HEIGHT = 30;
 var RESIZER_HEIGHT = 13;
 
+// TODO - may want to be smarter about these values
+var INITIAL_HEIGHT = 300;
+var MAX_HEIGHT = 600;
+
 var styles = {
   main: {
     position: 'absolute',
@@ -37,7 +41,7 @@ var styles = {
 var TopInstructions = React.createClass({
   propTypes: {
     height: React.PropTypes.number.isRequired,
-    markdown: React.PropTypes.string.isRequired,
+    markdown: React.PropTypes.string,
     collapsed: React.PropTypes.bool.isRequired,
     onToggleCollapsed: React.PropTypes.func.isRequired,
     onChangeHeight: React.PropTypes.func.isRequired,
@@ -46,17 +50,24 @@ var TopInstructions = React.createClass({
   onHeightResize: function (delta) {
     var minHeight = HEADER_HEIGHT + RESIZER_HEIGHT;
     var currentHeight = this.props.height;
-    // TODO - make this number less arbitrary?
-    var maxHeight = 600;
 
     var newHeight = Math.max(minHeight, currentHeight + delta);
-    newHeight = Math.min(newHeight, maxHeight);
+    newHeight = Math.min(newHeight, MAX_HEIGHT);
 
     this.props.onChangeHeight(newHeight);
     return newHeight - currentHeight;
   },
 
+  componentWillMount: function () {
+    if (this.props.markdown) {
+      this.props.onChangeHeight(INITIAL_HEIGHT);
+    }
+  },
+
   render: function () {
+    if (!this.props.markdown) {
+      return <div/>;
+    }
     var id = this.props.id;
 
     var mainStyle = _.assign({}, styles.main, {

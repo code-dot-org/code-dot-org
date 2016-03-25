@@ -69,7 +69,7 @@ function interfaceMode(state, action) {
 var instructionsInitialState = {
   collapsed: false,
   // represents the uncollapsed height
-  height: 300
+  height: 0
 };
 
 function instructions(state, action) {
