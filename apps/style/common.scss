@@ -989,7 +989,7 @@ $aniGifPreviewHeight: 60px;
 .workspace-header {
   text-align: center;
   white-space: nowrap;
-  // overflow-x: hidden;
+  overflow-x: hidden;
   height: $workspace-headers-height;
   color: white;
   .workspace-header-clickable:hover {
