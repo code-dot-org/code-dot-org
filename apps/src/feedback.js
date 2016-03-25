@@ -1393,9 +1393,9 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
     if (e.keyCode == KeyCodes.ENTER || e.keyCode == KeyCodes.SPACE) {
       // Simulate a 'click':
       var event = new MouseEvent('click', {
-        'view': window,
-        'bubbles': true,
-        'cancelable': true
+        view: window,
+        bubbles: true,
+        cancelable: true
       });
       btn.dispatchEvent(event);
 
