@@ -327,6 +327,12 @@
   native: "Русский"
   webfonts: false
 
+"se": "se-FI"
+"se-FI":
+  english: "Northern Sami"
+  native: "Davvisámegiella"
+  debug: true
+
 "si": "si-LK"
 "si-LK":
   english: "Sinhalese"
