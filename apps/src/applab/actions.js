@@ -7,7 +7,8 @@ var ActionType = module.exports.ActionType = {
   CHANGE_SCREEN: 'CHANGE_SCREEN',
   SET_LEVEL_PROPS: 'SET_LEVEL_PROPS',
   CHANGE_INTERFACE_MODE: 'CHANGE_INTERFACE_MODE',
-  TOGGLE_INSTRUCTIONS_COLLAPSED: 'TOGGLE_INSTRUCTIONS_COLLAPSED'
+  TOGGLE_INSTRUCTIONS_COLLAPSED: 'TOGGLE_INSTRUCTIONS_COLLAPSED',
+  SET_INSTRUCTIONS_HEIGHT: 'SET_INSTRUCTIONS_HEIGHT'
 };
 
 /**
@@ -70,5 +71,15 @@ module.exports.changeScreen = function (screenId) {
 module.exports.toggleInstructionsCollapsed = function () {
   return {
     type: ActionType.TOGGLE_INSTRUCTIONS_COLLAPSED
+  };
+};
+
+/**
+ * Set the height of the instructions panel
+ */
+module.exports.setInstructionsHeight = function (height) {
+  return {
+    type: ActionType.SET_INSTRUCTIONS_HEIGHT,
+    height:height
   };
 };

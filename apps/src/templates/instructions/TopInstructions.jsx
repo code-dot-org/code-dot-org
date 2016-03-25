@@ -5,6 +5,9 @@ var color = require('../../color');
 
 var Instructions = require('./Instructions.jsx');
 var CollapserIcon = require('./CollapserIcon.jsx');
+var HeightResizer = require('./HeightResizer.jsx');
+
+var RESIZER_HEIGHT = 13; // TODO $resize-bar-width from style-constants
 
 var styles = {
   main: {
@@ -25,6 +28,12 @@ var styles = {
     overflowY: 'scroll',
     paddingLeft: 10,
     paddingRight: 10
+  },
+  resizer: {
+    position: 'absolute',
+    height: RESIZER_HEIGHT,
+    left: 0,
+    right: 0
   }
 };
 
@@ -40,12 +49,19 @@ var TopInstructions = React.createClass({
     var id = this.props.id;
 
     var mainStyle = _.assign({}, styles.main, {
-      height: this.props.height
+      height: this.props.height - RESIZER_HEIGHT
     });
 
     var bodyStyle = _.assign({}, styles.body, {
-      height: this.props.height - styles.header.height,
+      height: mainStyle.height - styles.header.height,
+    });
+
+    var collapseStyle = {
       display: this.props.collapsed ? 'none' : undefined
+    };
+
+    var resizerStyle = _.assign({}, styles.resizer, {
+      top: mainStyle.height
     });
 
     return (
@@ -56,8 +72,11 @@ var TopInstructions = React.createClass({
         <div style={styles.header}>
           Instructions: Puzzle 1 of 1 {/* TODO */}
         </div>
-        <div style={bodyStyle}>
-          <Instructions renderedMarkdown={this.props.markdown}/>
+        <div style={collapseStyle}>
+          <div style={bodyStyle}>
+            <Instructions renderedMarkdown={this.props.markdown}/>
+          </div>
+          <HeightResizer style={resizerStyle}/>
         </div>
       </div>
     );
