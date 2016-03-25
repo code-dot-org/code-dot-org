@@ -8,12 +8,12 @@
       <th>Message template</th>
       <td><input name="template" type="text"/></td>
     </tr>
-    
+
     <tr>
       <th>Recipients</th>
       <td><textarea name="recipients"></textarea></td>
     </tr>
-    
+
     <tr>
       <th>Recipients CSV</th>
       <td><input type="file" name="recipients_file" /></td>
@@ -22,9 +22,12 @@
       <th>Parameters<br/>(optional, JSON formatted)</th>
       <td><textarea name="params"></textarea></td>
     </tr>
-    
+
     <tr>
       <th></th>
-      <td><input type="submit"/></td>
+      <td>
+        <%= csrf_tag %>
+        <input type="submit"/>
+      </td>
   <table>
 </form>
