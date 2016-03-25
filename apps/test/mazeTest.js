@@ -9,11 +9,15 @@ var studioApp = require('@cdo/apps/StudioApp').singleton;
 
 describe("Maze", function () {
   var dirtMap = [
-    [
-      {"tileType":1},
-      {"tileType":1,"value":1},
-      {"tileType":1,"value":-1}
-    ],
+    [{
+      "tileType": 1
+    }, {
+      "tileType": 1,
+      "value": 1
+    }, {
+      "tileType": 1,
+      "value": -1
+    }],
   ];
 
   describe("scheduleDirtChange", function () {
