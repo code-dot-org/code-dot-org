@@ -1,34 +1,31 @@
 /**
- * A non-protected div that wraps our ProtectedStatefulDiv codeWorkspace. Causes
- * resize events to fire when receiving new props
+ * A non-protected div that wraps our ProtectedStatefulDiv codeWorkspace, allowing
+ * us to position it vertically. Causes resize events to fire when receiving new props
  */
 
 var _ = require('lodash');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
-// TODO - as an action instead?
 var utils = require('../utils');
 
 var styles = {
   main: {
     position: 'absolute',
-    left: 0,
+    // left gets set externally :(
+    // top is set in render
     right: 0,
-    top: 0, // overriden in component
-    bottom: 0
+    bottom: 0,
+    marginLeft: 15, // margin gives space for vertical resizer
   },
 
   hidden: {
     display: 'none'
   },
-  // same as #codeWorkspace + #codeWorkspace.pin_bottom from common.scss, with
-  // the exception fo left: 400, which we let media queries from applab/styles.scss
-  // deal with
   codeWorkspace: {
     position: 'absolute',
+    left: 0,
     right: 0,
     bottom: 0,
     top: 0,
-    marginLeft: 15,
     border: 'none',
     borderTop: '1px solid #ddd',
     overflow: 'hidden',
@@ -55,11 +52,11 @@ var CodeWorkspaceContainer = React.createClass({
     });
 
     return (
-      <div style={mainStyle}>
+      <div style={mainStyle} className="workspace-right">
         <ProtectedStatefulDiv
             id="codeWorkspace"
             style={styles.codeWorkspace}
-            className="applab workspace-right">
+            className="applab">
           <ProtectedStatefulDiv
               id="codeWorkspaceWrapper"
               contentFunction={this.props.generateCodeWorkspaceHtml}/>
