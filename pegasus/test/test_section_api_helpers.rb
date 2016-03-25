@@ -5,7 +5,7 @@ require 'mocha/mini_test'
 require 'sequel'
 require_relative '../helpers/section_api_helpers'
 
-# 'section_api_helpers.rb' gets included by section_api_helpers
+# 'section_helpers.rb' gets included by section_api_helpers
 
 def remove_dates(string)
   string.gsub(/'[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}'/, 'DATE')
