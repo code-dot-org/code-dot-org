@@ -1,6 +1,7 @@
 require 'cdo/user_helpers'
 require 'cdo/script_constants'
 require_relative '../helper_modules/dashboard'
+require 'cdo/section_helpers'
 
 # TODO -- change the APIs below to check logged in user instead of passing in a user id
 class DashboardStudent
