@@ -17,9 +17,14 @@
   - else
     - last_attempt = ""
   - level_class = level.class.to_s.underscore
+
   - if level_class == "multi"
+    - # Mark all answers incorrect, so we don't give anything away.
+    - level.properties['answers'].each { |answer| answer['correct'] = false }
     = render partial: 'levels/single_multi', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
   - elsif level_class = "text_match"
+    - # Clear out all answers.
+    - level.properties['answers'] = nil
     = render partial: 'levels/single_text_match', locals: {page: page, index: index, standalone: false, level: level, last_attempt: last_attempt }
 
 = render partial: 'levels/common_audio'
