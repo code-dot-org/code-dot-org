@@ -11,16 +11,17 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     #I used the dialogue from Monty Python because it's actually a decent example of an evaluation quiz that isn't
     #the same for everyone. Not all users taking an examination will answer the exact same questions.
     @course = create(:plc_course)
+    @course_unit = create(:plc_course_unit, plc_course: @course)
     @module1 = create(:plc_learning_module, name: 'Getting thrown off cliffs')
     @module2 = create(:plc_learning_module, name: 'Advanced Ornithology')
     @module3 = create(:plc_learning_module, name: 'Answering questions honestly')
     @module4 = create(:plc_learning_module, name: 'Admitting ignorance')
 
-    @question1 = create(:plc_evaluation_question, question: 'What is your name', plc_course: @course)
-    @question2 = create(:plc_evaluation_question, question: 'What is your quest', plc_course: @course)
-    @question3 = create(:plc_evaluation_question, question: 'What is your favorite color?', plc_course: @course)
-    @question4 = create(:plc_evaluation_question, question: 'What is the capital of Assyria?', plc_course: @course)
-    @question5 = create(:plc_evaluation_question, question: 'What is the airspeed velocity of an unladen swallow', plc_course: @course)
+    @question1 = create(:plc_evaluation_question, question: 'What is your name', plc_course_unit: @course_unit)
+    @question2 = create(:plc_evaluation_question, question: 'What is your quest', plc_course_unit: @course_unit)
+    @question3 = create(:plc_evaluation_question, question: 'What is your favorite color?', plc_course_unit: @course_unit)
+    @question4 = create(:plc_evaluation_question, question: 'What is the capital of Assyria?', plc_course_unit: @course_unit)
+    @question5 = create(:plc_evaluation_question, question: 'What is the airspeed velocity of an unladen swallow', plc_course_unit: @course_unit)
 
     @answer1_1 = create(:plc_evaluation_answer, answer: 'Sir Lancelot', plc_evaluation_question: @question1, plc_learning_module: @module3)
     @answer1_2 = create(:plc_evaluation_answer, answer: 'Sir Robin', plc_evaluation_question: @question1, plc_learning_module: @module3)
@@ -45,11 +46,12 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     @user = create :admin
     sign_in(@user)
 
-    @plc_enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @course)
+    @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @course)
+    @unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: @enrollment, plc_course_unit: @course_unit)
   end
 
   test "perform_evaluation retrieves all questions and answers" do
-    get :perform_evaluation, enrollment_id: @plc_enrollment.id
+    get :perform_evaluation, unit_assignment_id: @unit_assignment.id
     questions = assigns(:questions)
 
     assert_equal 5, questions.count, 'There should be five questions'
@@ -88,8 +90,8 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
 
   private
   def do_expected_answers_yield_expected_module_enrollments(answers, expected_module_enrollments)
-    post :submit_evaluation, enrollment_id: @plc_enrollment.id, answerModuleList: answers
-    @plc_enrollment.reload
-    assert_equal expected_module_enrollments.map(&:id).sort, @plc_enrollment.plc_module_assignments.map(&:plc_learning_module_id).sort
+    post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answerModuleList: answers
+    @unit_assignment.reload
+    assert_equal expected_module_enrollments.map(&:id).sort, @enrollment.plc_module_assignments.all.map(&:plc_learning_module_id).sort
   end
 end

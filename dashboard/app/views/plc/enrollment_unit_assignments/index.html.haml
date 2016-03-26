@@ -1,0 +1,25 @@
+%h1 Listing plc_enrollment_unit_assignments
+
+%table
+  %thead
+    %tr
+      %th Plc user course enrollment
+      %th Plc course unit
+      %th Status
+      %th
+      %th
+      %th
+
+  %tbody
+    - @plc_enrollment_unit_assignments.each do |plc_enrollment_unit_assignment|
+      %tr
+        %td= plc_enrollment_unit_assignment.plc_user_course_enrollment
+        %td= plc_enrollment_unit_assignment.plc_course_unit
+        %td= plc_enrollment_unit_assignment.status
+        %td= link_to 'Show', plc_enrollment_unit_assignment
+        %td= link_to 'Edit', edit_plc_enrollment_unit_assignment_path(plc_enrollment_unit_assignment)
+        %td= link_to 'Destroy', plc_enrollment_unit_assignment, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Enrollment unit assignment', new_plc_enrollment_unit_assignment_path
