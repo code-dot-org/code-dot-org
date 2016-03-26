@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325004717) do
+ActiveRecord::Schema.define(version: 20160326070943) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -718,8 +718,5 @@ ActiveRecord::Schema.define(version: 20160325004717) do
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "plc_course_units", "plc_courses"
-  add_foreign_key "plc_enrollment_unit_assignments", "plc_course_units"
-  add_foreign_key "plc_enrollment_unit_assignments", "plc_user_course_enrollments"
   add_foreign_key "survey_results", "users"
 end
