@@ -24,4 +24,12 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
 
   validates :user, presence: true
   validates :plc_course, presence: true
+
+  after_create :create_enrollment_unit_assignments
+
+  def create_enrollment_unit_assignments
+    plc_course.plc_course_units.each do |course_unit|
+      Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: self, plc_course_unit: course_unit)
+    end
+  end
 end
