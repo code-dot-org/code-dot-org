@@ -1,5 +1,7 @@
 class CreatePlcEnrollmentUnitAssignments < ActiveRecord::Migration
   def change
+    Plc::UserCourseEnrollment.destroy_all
+
     create_table :plc_enrollment_unit_assignments do |t|
       t.references :plc_user_course_enrollment, index: {name: 'enrollment_unit_assignment_course_enrollment_index'}, foreign_key: true
       t.references :plc_course_unit, index: {name: 'enrollment_unit_assignment_course_unit_index'}, foreign_key: true
@@ -7,8 +9,6 @@ class CreatePlcEnrollmentUnitAssignments < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-
-    Plc::UserCourseEnrollment.destroy_all
 
     rename_column :plc_enrollment_module_assignments, :plc_user_course_enrollment_id, :plc_enrollment_unit_assignment_id
   end
