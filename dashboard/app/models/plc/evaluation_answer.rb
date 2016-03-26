@@ -5,9 +5,9 @@
 #  id                         :integer          not null, primary key
 #  answer                     :string(255)
 #  plc_evaluation_question_id :integer
-#  plc_task_id                :integer
 #  created_at                 :datetime         not null
 #  updated_at                 :datetime         not null
+#  plc_learning_module_id     :integer
 #
 # Indexes
 #
