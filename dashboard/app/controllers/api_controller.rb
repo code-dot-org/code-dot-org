@@ -1,5 +1,3 @@
-require 'json'
-
 class ApiController < ApplicationController
   layout false
   include LevelsHelper
@@ -206,7 +204,7 @@ class ApiController < ApplicationController
               if level_class == "text_match"
                 student_result = level_response.first["result"]
                 level_result[:student_result] = student_result
-                level_result[:correct] = 'Free response'
+                level_result[:correct] = 'free_response'
               elsif level_class == "multi"
                 # Generate a string like "1" or "0,1" which contains indexes of all
                 # the correct answers.  We use variable name _index so that the linter
@@ -217,12 +215,12 @@ class ApiController < ApplicationController
                 level_result[:student_result] = student_result
                 if student_result == "-1"
                   level_result[:student_result] = ""
-                  level_result[:correct] = 'Unsubmitted'
+                  level_result[:correct] = 'unsubmitted'
                 elsif student_result == answer_indexes
                   multi_count_correct += 1
-                  level_result[:correct] = "Correct"
+                  level_result[:correct] = "correct"
                 else
-                  level_result[:correct] = 'Incorrect'
+                  level_result[:correct] = 'incorrect'
 
                 end
               end

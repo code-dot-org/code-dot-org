@@ -659,6 +659,13 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.course_list = #{DashboardSection::valid_courses.to_json};
 
+    $scope.correctness_list = {
+      free_response: '#{I18n.t('dashboard_correctness_free_response')}',
+      unsubmitted:   '#{I18n.t('dashboard_correctness_unsubmitted')}',
+      correct:       '#{I18n.t('dashboard_correctness_correct')}',
+      incorrect:     '#{I18n.t('dashboard_correctness_incorrect')}'
+    };
+
     // wait until we have both the students and the student progress
     $q.all([$scope.section.$promise, $scope.assessments.$promise]).then(function(){
       $scope.assessmentsLoaded = true;
