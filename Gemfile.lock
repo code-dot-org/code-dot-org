@@ -146,7 +146,7 @@ GEM
     eventmachine (1.0.7)
     execjs (2.5.2)
     extlib (0.9.16)
-    eyes_selenium (2.27.0)
+    eyes_selenium (2.28.0)
       faraday
       oily_png (>= 1.2)
       oj
@@ -354,6 +354,8 @@ GEM
     rack-ssl-enforcer (0.2.9)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack_csrf (2.5.0)
+      rack (>= 1.1.0)
     rails (4.2.6)
       actionmailer (= 4.2.6)
       actionpack (= 4.2.6)
@@ -558,7 +560,7 @@ DEPENDENCIES
   devise
   devise_invitable (~> 1.5.2)
   execjs
-  eyes_selenium (~> 2.27.0)
+  eyes_selenium (~> 2.28.0)
   factory_girl_rails
   fake_sqs
   fakeredis
@@ -611,6 +613,7 @@ DEPENDENCIES
   rack-contrib (~> 1.1)
   rack-mini-profiler
   rack-ssl-enforcer
+  rack_csrf
   rails (~> 4.2.6)
   redcarpet (~> 3.3.4)
   redis (~> 3.1.0)
