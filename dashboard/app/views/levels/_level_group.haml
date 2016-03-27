@@ -33,7 +33,7 @@
 
 - if page < data["pages"].length - 1
   %a.btn.btn-large.btn-primary.nextPageButton
-    =t('nextPage')
+    =t('next_page')
 - else
   = render partial: 'levels/dialog', locals: {app: app, data: data}
   %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
