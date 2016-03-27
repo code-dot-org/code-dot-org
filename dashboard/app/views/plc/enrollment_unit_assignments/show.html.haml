@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Plc user course enrollment:
+  = @plc_enrollment_unit_assignment.plc_user_course_enrollment
+%p
+  %b Plc course unit:
+  = @plc_enrollment_unit_assignment.plc_course_unit
+%p
+  %b Status:
+  = @plc_enrollment_unit_assignment.status
+
+= link_to 'Edit', edit_plc_enrollment_unit_assignment_path(@plc_enrollment_unit_assignment)
+\|
+= link_to 'Back', plc_enrollment_unit_assignments_path
