@@ -80,32 +80,42 @@ function initLevelGroup(
     };
   };
 
+  function nextPage() {
+    var newLocation = window.location.href.replace("/page/" + (page+1), "/page/" + (page+2));
+    window.location.href = newLocation;
+  }
+
   $(".nextPageButton").click($.proxy(function(event) {
 
-    // Submit what we have, and when that's done, go to the next page of the
-    // long assessment.
+    // Are we read-only?  This can be because we're a teacher OR because an answer
+    // has been previously submitted.
+    if (window.appOptions.readonlyWorkspace) {
+      nextPage();
+    } else {
+      // Submit what we have, and when that's done, go to the next page of the
+      // long assessment.
 
-    var results = window.getResult();
-    var response = results.response;
-    var result = results.result;
-    var errorType = results.errorType;
-    var submitted = appOptions.submitted;
+      var results = window.getResult();
+      var response = results.response;
+      var result = results.result;
+      var errorType = results.errorType;
+      var submitted = appOptions.submitted;
 
-    window.dashboard.reporting.sendReport({
-      program: response,
-      fallbackResponse: fallbackResponse,
-      callback: callback,
-      app: app,
-      level: level,
-      result: result,
-      pass: result,
-      testResult: result ? 100 : 0,
-      submitted: submitted,
-      onComplete: function () {
-        var newLocation = window.location.href.replace("/page/" + (page+1), "/page/" + (page+2));
-        window.location.href = newLocation;
-      }
-    });
+      window.dashboard.reporting.sendReport({
+        program: response,
+        fallbackResponse: fallbackResponse,
+        callback: callback,
+        app: app,
+        level: level,
+        result: result,
+        pass: result,
+        testResult: result ? 100 : 0,
+        submitted: submitted,
+        onComplete: function () {
+          nextPage();
+        }
+      });
+    }
   }, this));
 
   // Unsubmit button should only be available when this is a standalone level.
