@@ -39,8 +39,8 @@ content-type: text/ng-template
             %option{value: ""} All
         %button.btn.btn-white{'ng-csv' => assessments_filtered,
                 filename: "assessments.csv",
-                'csv-header' => "['Name', 'Stage', 'Puzzle', 'Multi correct', 'Multi count', 'Multi percent correct', 'Response']",
-                'csv-column-order' => "['student.name', 'stage', 'puzzle', 'multi_correct', 'multi_count', 'multi_correct_percent', 'response']",
+                'csv-header' => "['Name', 'Stage', 'Puzzle', 'Status', 'Multi correct', 'Multi count', 'Multi correct percent', 'Submission timestamp']",
+                'csv-column-order' => "['student.name', 'stage', 'puzzle', 'status' , 'multi_correct', 'multi_count', 'multi_correct_percent', 'timestamp']",
                 style: 'float: right'}
           %i.fa.fa-download
           Download CSV
@@ -53,15 +53,15 @@ content-type: text/ng-template
       %th.manage-th
         %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_puzzle')
       %th.manage-th
-        %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_status')
+        %a{href: "", "ng-click" => "order = 'status'"}= I18n.t('dashboard_status')
       %th.manage-th
-        %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_multi_correct')
+        %a{href: "", "ng-click" => "order = 'multi_correct'"}= I18n.t('dashboard_multi_correct')
       %th.manage-th
-        %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_multi_count')
+        %a{href: "", "ng-click" => "order = 'multi_count'"}= I18n.t('dashboard_multi_count')
       %th.manage-th
-        %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_multi_correct_percent')
+        %a{href: "", "ng-click" => "order = 'multi_correct_percent'"}= I18n.t('dashboard_multi_correct_percent')
       %th.manage-th
-        %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_multi_submission_timestamp')
+        %a{href: "", "ng-click" => "order = 'submission_timestamp'"}= I18n.t('dashboard_submission_timestamp')
 
     %tr{"ng-repeat" => "assessment in #{assessments_filtered}", "ng-form" => "form"}
       %td
@@ -106,7 +106,7 @@ content-type: text/ng-template
         %button.btn.btn-white{'ng-csv' => levels_filtered,
                 filename: "assessment_levels.csv",
                 'csv-header' => "['Name', 'Stage', 'Puzzle', 'Question', 'Response', 'Correctness']",
-                'csv-column-order' => "['student.name', 'stage', 'puzzle', 'question', 'response', 'correctness']",
+                'csv-column-order' => "['student.name', 'stage', 'puzzle', 'question', 'studentResult', 'correct']",
                 style: 'float: right'}
           %i.fa.fa-download
           Download CSV
