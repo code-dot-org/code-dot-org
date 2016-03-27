@@ -35,7 +35,8 @@ class Ability
         Plc::Course,
         Plc::LearningModule,
         Plc::Task,
-        Plc::UserCourseEnrollment
+        Plc::UserCourseEnrollment,
+        Plc::CourseUnit
       ]
     end
 

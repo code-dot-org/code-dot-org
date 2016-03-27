@@ -53,6 +53,7 @@ pt-BR,pt,pt,pt-BR,Português (Brasil),Portuguese (Brazil),TRUE,TRUE,pt-BR,"Portu
 pt-PT,po,pt,pt-PT,Português (Portugal),Portuguese (Portugal),TRUE,TRUE,pt,Portuguese
 ro,ro,ro,ro-RO,Română,Romanian,TRUE,TRUE,ro,Romanian
 ru,ru,ru,ru-RU,Pусский,Russian,TRUE,TRUE,ru,Russian
+se,se,se,se-FI,Davvisámegiella,Northern Sami,FALSE,FALSE,se,Northern Sami
 si,si,si,si-LK,සිංහල,Sinhala,FALSE,FALSE,si-LK,Sinhala
 sk,sk,sk,sk-SK,Slovenčina,Slovak,FALSE,FALSE,sk,Slovak
 sl,sl,sl,sl-SI,Slovenščina,Slovenian,TRUE,TRUE,sl,Slovenian
