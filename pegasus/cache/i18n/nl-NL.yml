@@ -95,32 +95,34 @@
     een <a href="%{current_path}/next">opdracht van een partner</a>.
   get_a_certificate_of_achievement: Ontvang een certificaat van verworvenheid
   view_course: Toon cursus
-  view_unit: View unit
+  view_unit: Weergave component
   make_app: Maak een App
   congrats_guest_speaker_title: Vind een gastspreker voor je klas
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_desc: Nu dat uw studenten een computercursus voltooid hebben,
+    wilt u misschien nadenken over het te vieren en het te connecteren met zaken die
+    ze in de echte wereld kunnen bouwen door een gastspreker uit te nodigen in uw
+    klas. U kan onze map met vrijwilligers gebruiken om lokale vrijwilligers te contacteren
+    om uw klas te bezoeken, of zoek in elke stad om computer wetenschap studenten
+    of technische proffesionals te vinden die klaar zijn om uw klas te inspireren
+    van op afstand, via video chat.
   congrats_guest_speaker_cta: Vind een gastspreker
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
+  congrats_third_party_title: Gebruik uw nieuwe vaardigheden met deze apps en websites
+  third_party_gradelevel_kto8: Rang K-8
+  third_party_gradelevel_kto2: Rang K-2
+  third_party_gradelevel_2to8: Rang 2-8
+  third_party_gradelevel_4to12: Rang 4-12
+  third_party_gradelevel_5to12: Rang 5-12
+  third_party_gradelevel_6plus: Rang 6+
+  third_party_gradelevel_8plus: Rang 8+
   third_party_platform_all: 'Platform: Internet, iPad & Android'
   third_party_platform_mobile: 'Platform: iPad & Android'
   third_party_platform_web: 'Platform: Internet'
-  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_varies: 'Prijs: variabel'
   third_party_price_free: 'Prijs: Gratis'
   third_party_price_299: 'Prijs: $2.99 per download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  third_party_price_individual: 'Individuele prijs: gratis demo & $25/maand (=+/-
+    €22,41)'
+  third_party_price_school: 'School prijs: gratis plannen &Pro voor $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
@@ -670,6 +672,7 @@
   dashboard_navigation_all_sections: Leerlingaccounts en vooruitgang
   dashboard_navigation_view_progress: bekijk de vooruitgang
   dashboard_navigation_view_text_responses: Bekijk de tekstuele reacties
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Leerlingen Toevoegen
   dashboard_navigation_manage_students: Beheer Leerlingen
   dashboard_navigation_lesson_plans_resources: Lesplan en middelen
@@ -792,6 +795,16 @@
   dashboard_puzzle: puzzel
   dashboard_question: Vraag
   dashboard_response: Antwoord
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Juist
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Ongelooflijke statistieken voor de ''Hour of Code'' van
     vorig jaar. In één week alleen al:'
   stats_hoc_2013_image_alt: Statistieken van de 'Hour of Code' van 2013

@@ -657,6 +657,7 @@
   dashboard_navigation_all_sections: "Študentski računi in napredek"
   dashboard_navigation_view_progress: Prikaz napredka
   dashboard_navigation_view_text_responses: Ogled besedilnih odgovorov
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Dodaj učence
   dashboard_navigation_manage_students: Upravljaj z učenci
   dashboard_navigation_lesson_plans_resources: Učni načrti in viri
@@ -774,6 +775,16 @@
   dashboard_puzzle: Uganka
   dashboard_question: Vprašanje
   dashboard_response: Odgovor
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Pravilno
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Neverjetne statistike iz lanskoletne Ure za kodo. Samo
     v enem tednu:'
   stats_hoc_2013_image_alt: Statistika Ure za kodo 2013
