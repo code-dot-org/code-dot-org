@@ -324,6 +324,7 @@ applabCommands.moveForward = function (opts) {
   if (typeof opts.distance !== 'undefined') {
     distance = opts.distance;
   }
+  console.log('moveForward: ' + Applab.turtle.x + ' ' + Applab.turtle.y);
   newOpts.x = Applab.turtle.x +
     distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
   newOpts.y = Applab.turtle.y -
