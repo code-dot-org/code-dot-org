@@ -1,6 +1,7 @@
 class CreatePlcEnrollmentUnitAssignments < ActiveRecord::Migration
   def change
-    Plc::UserCourseEnrollment.destroy_all
+    Plc::UserCourseEnrollment.delete_all
+    Plc::EnrollmentModuleAssignment.destroy_all
 
     create_table :plc_enrollment_unit_assignments do |t|
       t.references :plc_user_course_enrollment, index: {name: 'enrollment_unit_assignment_course_enrollment_index'}, foreign_key: true
