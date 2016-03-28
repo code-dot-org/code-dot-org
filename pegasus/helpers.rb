@@ -1,4 +1,5 @@
 require 'cdo/aws/s3'
+require 'rack/csrf'
 require_relative '../shared/middleware/helpers/storage_id'
 
 def avatar_image(name,width=320,square_photo=false)
@@ -78,6 +79,14 @@ end
 
 def unsupported_media_type!()
   halt(415, "Unsupported Media Type\n")
+end
+
+def csrf_token
+  Rack::Csrf.csrf_token(env)
+end
+
+def csrf_tag
+  Rack::Csrf.csrf_tag(env)
 end
 
 Dir.glob(pegasus_dir('helpers/*.rb')).sort.each{|path| load path}

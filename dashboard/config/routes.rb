@@ -291,16 +291,18 @@ Dashboard::Application.routes.draw do
     resources :tasks
     resources :user_course_enrollments
     resources :enrollment_task_assignments
+    resources :course_units
+    resources :enrollment_user_assignments
   end
 
-  get '/plc/enrollment_evaluations/:enrollment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
-  post '/plc/enrollment_evaluations/:enrollment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
+  get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
+  post '/plc/enrollment_evaluations/:unit_assignment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
 
   get '/plc/content_creator/show_courses_and_modules', to: 'plc/content_creator#show_courses_and_modules'
 
   get '/plc/learning_modules/:id/new_learning_resource_for_module', to: 'plc/learning_modules#new_learning_resource_for_module', as: 'new_learning_resource_for_module'
 
-  post 'plc/courses/:id/submit_new_questions_and_answers', to: 'plc/courses#submit_new_questions_and_answers'
+  post 'plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
