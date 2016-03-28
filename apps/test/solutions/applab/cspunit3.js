@@ -180,6 +180,11 @@ module.exports = {
               expectedPixels.push([x, y]);
             }
           }
+
+          for (var i = 0; i < expectedPixels.length; i++) {
+            console.log(pixels[i] + '\t' + expectedPixels[i]);
+          }
+
           assert.deepEqual(pixels, expectedPixels);
 
           Applab.onPuzzleComplete();
