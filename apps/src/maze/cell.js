@@ -43,7 +43,7 @@ Cell.prototype.getTile = function () {
  * @return {boolean}
  */
 Cell.prototype.isDirt = function () {
-  return this.originalValue_ !== undefined;
+  return this.currentValue_ !== undefined;
 };
 
 /**

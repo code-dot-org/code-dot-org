@@ -489,9 +489,7 @@ Maze.drawTile = function (svg, tileSheetLocation, row, col, tileId) {
  */
 function resetDirtImages(running) {
   Maze.map.forEachCell(function (cell, row, col) {
-    if (cell.isDirt()) {
-      Maze.gridItemDrawer.updateItemImage(row, col, running);
-    }
+    Maze.gridItemDrawer.updateItemImage(row, col, running);
   });
 }
 
@@ -1750,7 +1748,11 @@ Maze.displayPegman = function(x, y, frame) {
 var scheduleDirtChange = function(options) {
   var col = Maze.pegmanX;
   var row = Maze.pegmanY;
-  Maze.map.setValue(row, col, Maze.map.getValue(row, col) + options.amount);
+
+  // cells that started as "flat" will be undefined
+  var previousValue = Maze.map.getValue(row, col) || 0;
+
+  Maze.map.setValue(row, col, previousValue + options.amount);
   Maze.gridItemDrawer.updateItemImage(row, col, true);
   studioApp.playAudio(options.sound);
 };
