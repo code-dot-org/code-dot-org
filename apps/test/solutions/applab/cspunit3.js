@@ -117,6 +117,9 @@ module.exports = {
         var moveForward = 0;
         var turnLeft = 1;
 
+        Applab.turtle.x = 100;
+        Applab.turtle.y = 100;
+
         var nextIndex = 0;
         function appendToolboxBlock(blockIndex) {
           dragToolboxBlock(blockIndex, nextIndex++);
