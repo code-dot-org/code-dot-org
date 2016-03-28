@@ -189,7 +189,14 @@ module AWS
                 http_port: 80, # required
                 https_port: 443, # required
                 origin_protocol_policy: 'match-viewer', # required, accepts http-only, match-viewer
+                origin_ssl_protocols: {
+                  quantity: 2,
+                  items: %w(SSLv3 TLSv1)
+                }
               },
+              custom_headers: {
+                quantity: 0
+              }
             },
           ],
         },
@@ -345,6 +352,7 @@ module AWS
         smooth_streaming: false,
         default_ttl: 0,
         max_ttl: 31_536_000, # =1 year
+        compress: false,
       }
       behavior[:path_pattern] = path if path
       behavior
