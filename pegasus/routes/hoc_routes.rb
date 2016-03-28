@@ -57,7 +57,7 @@ get '/api/hour/certificate/:filename' do |filename|
   pass unless row = DB[:hoc_activity].where(session: session).first
 
   width = width.to_i
-  width = 0 unless(width > 0 && width < 1754)
+  width = 0 unless (width > 0 && width < 1754)
 
   begin
     image = create_course_certificate_image(row[:name].to_s.strip, row[:tutorial])
