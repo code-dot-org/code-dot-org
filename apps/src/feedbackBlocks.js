@@ -4,7 +4,7 @@ var parseXmlElement = require('./xml').parseElement;
 var TestResults = constants.TestResults;
 
 // TODO (br-pair): can we not pass in the studioApp
-var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommendedBlocks, studioApp) {
+var FeedbackBlocks = function (options, missingRequiredBlocks, missingRecommendedBlocks, studioApp) {
   // Check whether blocks are embedded in the hint returned from dashboard.
   // See below comment for format.
   var embeddedBlocks = options.response && options.response.hint &&
@@ -26,10 +26,10 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
     if (!parts) {
       return;
     }
-    options.response.hint = parts[1].trim();  // Remove blocks from hint.
+    options.response.hint = parts[1].trim(); // Remove blocks from hint.
     try {
       blocksToDisplay = JSON.parse(parts[2]);
-    } catch(err) {
+    } catch (err) {
       // The blocks could not be parsed.  Ignore them.
       return;
     }
@@ -80,7 +80,7 @@ FeedbackBlocks.prototype.show = function () {
   }
 };
 
-FeedbackBlocks.prototype.hide = function() {
+FeedbackBlocks.prototype.hide = function () {
   this.div.style.visibility = 'hidden';
   this.div.style.height = '0px';
 };
@@ -90,9 +90,9 @@ FeedbackBlocks.prototype.hide = function() {
  * @param {Array} blocks An array of blocks to display (with optional args).
  * @return {string} The generated string of XML.
  */
-FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
+FeedbackBlocks.prototype.generateXMLForBlocks_ = function (blocks) {
   var blockXMLStrings = ['<xml>'];
-  var blockX = 10;  // Prevent left output plugs from being cut off.
+  var blockX = 10; // Prevent left output plugs from being cut off.
   var blockY = 0;
   var blockXPadding = 200;
   var blockYPadding = 120;
@@ -105,13 +105,13 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
       continue;
     }
     blockXMLStrings.push('<block', ' type="', block.type, '" x="',
-                        blockX.toString(), '" y="', blockY, '">');
+        blockX.toString(), '" y="', blockY, '">');
     if (block.titles) {
       var titleNames = Object.keys(block.titles);
       for (k = 0; k < titleNames.length; k++) {
         name = titleNames[k];
         blockXMLStrings.push('<title name="', name, '">',
-                            block.titles[name], '</title>');
+            block.titles[name], '</title>');
       }
     }
     if (block.values) {
@@ -119,7 +119,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
       for (k = 0; k < valueNames.length; k++) {
         name = valueNames[k];
         blockXMLStrings.push('<value name="', name, '">',
-                            block.values[name], '</value>');
+            block.values[name], '</value>');
       }
     }
     if (block.extra) {
