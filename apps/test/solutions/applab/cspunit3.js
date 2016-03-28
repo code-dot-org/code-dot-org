@@ -123,7 +123,6 @@ module.exports = {
         }
 
         appendToolboxBlock(moveForward);
-        assert.equal(Applab.getCode(), 'moveForward();\n');
         appendToolboxBlock(turnLeft);
         appendToolboxBlock(turnLeft);
         appendToolboxBlock(turnLeft);
@@ -181,11 +180,11 @@ module.exports = {
             }
           }
 
-          for (var i = 0; i < expectedPixels.length; i++) {
-            console.log(pixels[i] + '\t' + expectedPixels[i]);
-          }
-          console.log('Applab.appHeight: ' + Applab.appHeight);
-          console.log('Applab.appWidth: ' + Applab.appWidth);
+          // for (var i = 0; i < expectedPixels.length; i++) {
+          //   console.log(pixels[i] + '\t' + expectedPixels[i]);
+          // }
+          // console.log('Applab.appHeight: ' + Applab.appHeight);
+          // console.log('Applab.appWidth: ' + Applab.appWidth);
 
           assert.deepEqual(pixels, expectedPixels);
 
