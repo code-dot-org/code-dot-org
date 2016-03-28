@@ -179,7 +179,6 @@ Examples:
   | http://learn.code.org/s/allthethings/stage/3/puzzle/6?noautoplay=true | auto open function editor |
   | http://learn.code.org/s/algebra/stage/10/puzzle/6?noautoplay=true     | auto open contract editor |
   | http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true      | auto open variable editor |
-  | http://learn.code.org/s/algebra/stage/5/puzzle/2?noautoplay=true      | embedded blocks |
 
 @dashboard_db_access
 Scenario Outline: Logged in simple page view without instructions dialog
@@ -199,6 +198,7 @@ Examples:
   | http://code.org/                                                  | code.org homepage          |
   | http://studio.code.org/                                           | logged in studio homepage  |
   | http://studio.code.org/s/allthethings                             | logged in script progress  |
+  | https://studio.code.org/s/allthethings/stage/13/puzzle/3?noautoplay=true | embedded blocks     |
 
 Scenario Outline: Logged out simple page view without instructions dialog
   Given I am on "http://learn.code.org/"
