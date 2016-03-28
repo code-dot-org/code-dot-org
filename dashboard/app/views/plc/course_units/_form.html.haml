@@ -1,0 +1,22 @@
+= form_for @course_unit do |f|
+  - if @course_unit.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@course_unit.errors.count, "error")} prohibited this course unit from being saved:"
+      %ul
+        - @course_unit.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :plc_course
+    = f.select :plc_course_id, options_for_select(options_for_user_enrollment_courses, @course_unit.plc_course_id || params[:plc_course_id])
+  .field
+    = f.label :unit_name
+    = f.text_field :unit_name
+  .field
+    = f.label :unit_description
+    = f.text_area :unit_description
+  .field
+    = f.label :unit_order
+    = f.number_field :unit_order
+  .actions
+    = f.submit 'Save'

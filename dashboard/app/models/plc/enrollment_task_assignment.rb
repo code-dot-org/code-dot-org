@@ -33,6 +33,6 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
   end
 
   def check_course_completion
-    plc_enrollment_module_assignment.plc_user_course_enrollment.check_for_course_completion
+    plc_enrollment_module_assignment.plc_enrollment_unit_assignment.check_for_unit_completion
   end
 end
