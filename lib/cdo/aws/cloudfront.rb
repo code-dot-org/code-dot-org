@@ -235,6 +235,7 @@ module AWS
             quantity: 0 # required
           },
         },
+        web_acl_id: ''
       }.tap do |cf|
         cf[:caller_reference] = reference || Digest::MD5.hexdigest(Marshal.dump(config)) # required
       end
