@@ -1,11 +1,7 @@
-.multi{id: "multi_#{index}"}
+- data = level.properties
+- app = 'multi'
 
-  - data = level.properties
-  - app = 'multi'
-
-  -# setting this so that multi_t works
-  - @level = level
-
+.multi{id: "level_#{index}"}
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_blank ? nil : 'question'}
 
@@ -17,7 +13,7 @@
         }
 
     %span
-      %h4.multi-question!= multi_t(data['questions'][0]['text']) if data['questions']
+      %h4.multi-question!= multi_t(level, data['questions'][0]['text']) if data['questions']
 
     %br/
     %br/
@@ -56,7 +52,7 @@
             .item-mark{id: "cross_#{i}", style: 'display: none;'}
               .fa{class: cross_class}
             .item-label
-              %label{style: "height: #{height}"}!= multi_t(answer['text'])
+              %label{style: "height: #{height}"}!= multi_t(level, answer['text'])
 
       .clear
 
@@ -64,7 +60,7 @@
         = render partial: 'levels/dialog', locals: {app: app, data: data}
 
   .clear
-  = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class}
+  = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: level}
   = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
 
   %br/
@@ -73,12 +69,11 @@
 
   .clear
 
-
 :javascript
 
   $(document).ready(function() {
-    window["multi_#{index}"] = new Multi(
-      "multi_#{index}",
+    window["level_#{index}"] = new Multi(
+      "level_#{index}",
       #{level.id},
       #{standalone},
       "#{data['type']}" == "multi2" ? 2 : 1,

@@ -7,7 +7,7 @@ Scenario: Save Artist Project
   And I wait to see "#runButton"
   And element "#runButton" is visible
   And element ".project_updated_at" contains text "Saved"
-  Then I open the topmost blockly category "Color"
+  Then I open the topmost blockly category "Brushes"
   And I drag block matching selector "#draw-color" to block matching selector "#when_run"
   Then I click selector ".project_share"
   And I wait to see "#x-close"
