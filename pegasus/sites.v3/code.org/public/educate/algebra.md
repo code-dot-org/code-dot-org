@@ -24,7 +24,7 @@ Both CS in Algebra courses are aligned to Common Core Standards for Mathematics,
 <a name="start"><a/>
 ## How do I start teaching CS in Algebra?
 
-We provide a blended professional development program that prepares teachers to implement Course A. Read more about the professional development program [here](/educate/professional-learning/cs-in-algebra).
+We provide a Professional Learning Program that prepares teachers to implement Course A. Read more about the program [here](/educate/professional-learning/cs-in-algebra).
 
 ## I taught CS in Algebra in 2015-2016, how is this different?
 

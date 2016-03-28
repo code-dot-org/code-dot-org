@@ -25,6 +25,9 @@ gem 'sprockets-derailleur' # Multi-cpu assets precompile
 
 gem 'crowdin-cli'
 
+# CSRF protection for Sinatra.
+gem 'rack_csrf'
+
 group :development do
   gem 'annotate', '~> 2.6.6'
   gem 'rack-mini-profiler'
@@ -71,7 +74,7 @@ group :development, :test do
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'minitest-around'
-  gem 'eyes_selenium', '~> 2.27.0'
+  gem 'eyes_selenium', '~> 2.28.0'
 end
 
 group :doc do
