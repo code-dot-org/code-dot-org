@@ -15,8 +15,9 @@
     %span
       %h4.multi-question!= multi_t(level, data['questions'][0]['text']) if data['questions']
 
-    %br/
-    %br/
+    - unless data['layout'] == "tight"
+      %br/
+      %br/
 
     - if standalone && !data['options'].try(:[], 'hide_submit')
       .buttons
@@ -44,7 +45,8 @@
       %form#voteform{onsubmit: 'return false;'}
         - data['answers'].each_with_index do |answer, i|
           - correct = answer['correct']
-          %span.answerbutton.btn{style: "height: #{height}", correct: "#{correct}", index: "#{i}"}
+          - answer_class = data['layout'] == "tight" ? "answerbutton answerbutton-tight" : "answerbutton answerbutton-default btn"
+          %span{class: answer_class, style: "height: #{height}", correct: "#{correct}", index: "#{i}"}
             .item-mark{id: "unchecked_#{i}"}
               .fa{class: unchecked_class}
             .item-mark{id: "checked_#{i}", style: 'display: none;'}
