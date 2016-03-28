@@ -476,6 +476,7 @@ $default-modal-width: 640px;
     .modal-image {
       margin-top: -100px;
       float: left;
+      position: relative;
     }
   }
 }
@@ -1977,7 +1978,8 @@ $modal-no-icon-gap: 22px;
 .modal-image {
   width: $modal-image-width;
   height: auto;
-  margin-top: -60px;
+  margin-top: -75px;
+  position: absolute;
   html[dir=rtl] & {
     float: right;
     -webkit-transform: scaleX(-1);
@@ -1997,7 +1999,7 @@ $modal-no-icon-gap: 22px;
 .modal-content.markdown-instructions-container {
   margin-left: $modal-no-icon-gap;
   margin-right: $modal-no-icon-gap;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   margin-bottom: 15px;
   float: left;
   padding: 0 0 15px;
@@ -2007,7 +2009,7 @@ $modal-no-icon-gap: 22px;
 }
 
 .modal-content.instructions-container {
-  margin: 0 10px 20px 20px;
+  margin: 15px 10px 20px 20px;
 
   button {
     margin: 0;
@@ -2029,6 +2031,7 @@ $modal-no-icon-gap: 22px;
 
 .markdown-level-header-text {
   margin-left: $modal-image-width + $modal-image-margin-gap;
+  margin-top: 15px;
   font-weight: normal;
   line-height: 27px;
   font-size: 24px;
