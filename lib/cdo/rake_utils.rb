@@ -119,7 +119,7 @@ module RakeUtils
   def self.ln_s(source, target)
     current = File.symlink?(target) ? File.readlink(target) : nil
     unless source == current
-      system 'rm', '-f', target if (current || File.file?(target))
+      system 'rm', '-f', target if(current || File.file?(target))
       system 'ln', '-s', source, target
     end
   end
@@ -158,7 +158,7 @@ module RakeUtils
   def self.sudo_ln_s(source, target)
     current = File.symlink?(target) ? File.readlink(target) : nil
     unless source == current
-      sudo 'rm', '-f', target if (current || File.file?(target))
+      sudo 'rm', '-f', target if(current || File.file?(target))
       sudo 'ln', '-s', source, target
     end
   end
