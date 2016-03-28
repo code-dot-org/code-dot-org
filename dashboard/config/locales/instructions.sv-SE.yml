@@ -3078,6 +3078,12 @@
       Ryan - Bee Conditionals_instruction: Biet vill bara ha nektar just nu. Alla
         objekt är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer
         en blomma. Om det är en blomma så kan du samla nektar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Här är en funktion som kallas "patrol."
         Redigera den för att flytta Katt 400 pixlar upp och sedan ner 400 pixlar.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse

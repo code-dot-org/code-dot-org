@@ -21,7 +21,7 @@ sq-AL:
   twentyhours_heading: Provojeni kursin tonë për Hyrje në Shkencat Kompjuterike
   twentyhours_text: E përfunduat orën tuaj të parë te kodimit? Tani mësoni më shumë për Shkencen Kompjuterike dhe konceptet e programimit në kursin në vazhdim.
   og_title: Çdo fëmijë meriton mundësinë
-  og_description: Çdo nxënës në çdo shkollë meriton mundësinë të mësojë shkencën kompjuterike.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Bashkohuni në <a href="http://hourofcode.com"> Orën e Kodimit</a><br/>8-14 Dhjetor, 2014<br/>'
   hoc2014_students: Studentët
   hoc2014_try: Provoje
@@ -179,7 +179,7 @@ sq-AL:
   learn_next_level: Provo një kurs tjetër nga Code Studio
   learn_online: Provo kurse të tjera online
   learn_classes: Gjej klasa lokale
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Unë sapo mbarova #OrënPërKodim - provoje! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -515,6 +515,7 @@ sq-AL:
   dashboard_navigation_all_sections: Llogaritë dhe Ecuritë e Studentëve
   dashboard_navigation_view_progress: Shiko Ecurinë
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Shto Studentë
   dashboard_navigation_manage_students: Menaxho Studentët
   dashboard_navigation_lesson_plans_resources: Planet Mësimore dhe Burimet
@@ -613,6 +614,16 @@ sq-AL:
   dashboard_puzzle: Enigmë
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: E saktë
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Statistika mahnitëse nga Ora e Kodimit e vitit të kaluar. Në vetëm një javë:'
   stats_hoc_2013_image_alt: Statistikat nga Ora e Kodimit 2013
   dashboard_teacher: Mësues

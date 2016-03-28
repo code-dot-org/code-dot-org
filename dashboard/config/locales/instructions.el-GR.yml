@@ -3334,6 +3334,12 @@
       Ryan - Bee Conditionals_instruction: "Η μέλισσα θέλει μόνο νέκταρ αυτή τη στιγμή.
         Δεν είναι όλα τα αντικείμενα λουλούδια, έτσι κάνε έλεγχο κάτω από κάθε ΣΎΝΝΕΦΟ,
         να δεις αν κρύβεται ένα λουλούδι. Αν ναι, τότε μπορείς να συγκεντρώσεις νέκταρ."
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: "Εδώ είναι μια συνάρτηση που ονομάζεται
         «περιπολία». Επεξεργάσου την ώστε να μετακινεί τη γάτα επάνω 400 εικονοστοιχεία
         και στη συνέχεια, κάτω 400 εικονοστοιχεία."

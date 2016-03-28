@@ -2214,6 +2214,12 @@
       Quantum Bee_instruction: "紫色的花里可能会有一个花蜜，但也可能没有花蜜，而且你不知道哪些花有花蜜！请注意不要从没有花蜜的紫花里收集花蜜。你可以用“如果”模块来检查（花朵里的）花蜜是否等于1。"
       Ryan - 4-5 Bee Conditionals 2_instruction: "蜜蜂现在只想要花蜜。不是所有的目标都是花，所以检查每朵云下面是不是藏着花。如果是的话，再采集花蜜。"
       Ryan - Bee Conditionals_instruction: "蜜蜂现在只想要花蜜。不是所有的目标都是花，所以检查每朵云下面是不是藏着花。如果是的话，再采集花蜜。"
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: "这里有个函数叫做“巡逻”。编辑它来让猫向上移动400像素，再向下移动400像素。"
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse
         an \"if\" statement to program your game to call the \"level_up\"\nfunction

@@ -21,7 +21,7 @@ zh-CN:
   twentyhours_heading: 看看我们对计算机科学课程的简介
   twentyhours_text: 完成您的第一个编程一小时了吗？在此后续课程中更深入的了解计算机科学和编程的概念。
   og_title: 每个孩子都应该有机会
-  og_description: 每个学校的每个学生都应该有机会学习计算机科学
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: '加入<a href="http://hourofcode.com">编程一小时</a><br/>2014年12月8至14日<br/>'
   hoc2014_students: 学生
   hoc2014_try: 体验一下
@@ -179,7 +179,7 @@ zh-CN:
   learn_next_level: 继续到下一级别
   learn_online: 请尝试其他在线课程
   learn_classes: 查找本地的课程
-  hoc_is_here: '在过去的计算机科学教育周，参与#HourOfCode的学生已达 5000 万。 https://youtu.be/Ofze6CWUCx8。'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: '我刚刚完成了 #HourOfCode —— 大家也来看看吧！@codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -484,6 +484,7 @@ zh-CN:
   dashboard_navigation_all_sections: 学生账户和进度
   dashboard_navigation_view_progress: 查看进度
   dashboard_navigation_view_text_responses: 查看文字回应
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: 添加学生
   dashboard_navigation_manage_students: 管理学生
   dashboard_navigation_lesson_plans_resources: 课程计划及资源
@@ -582,6 +583,16 @@ zh-CN:
   dashboard_puzzle: 关卡
   dashboard_question: 问题
   dashboard_response: 回答
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: 正确。
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 在去年的编程一小时活动中的惊人数据。在一周之内：
   stats_hoc_2013_image_alt: 2013年编程一小时统计数据
   dashboard_teacher: 老师

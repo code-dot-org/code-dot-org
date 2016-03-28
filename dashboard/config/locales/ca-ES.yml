@@ -26,6 +26,7 @@
   welcome_back: Benvingut de nou, %{name}
   submit: Envia
   unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Afegeix un mestre:'
@@ -568,7 +569,6 @@
       comentaris i es fan millores.
     prerelease_hoc2014: Aquest tutorial està en <span class='betatext'> beta</span>.  És
       subjecte a revisió a mida que es reben comentaris i es fan millores.
-    feedback: Digues la teva
     report_bug: Informeu d'errors
     support: Obtenir ajuda
     support_url: support.code.org
@@ -618,6 +618,8 @@
     placeholder: Introdueix la teva resposta aquí
     open_response_title: Gràcies
     open_response_body: Gràcies per la resposta!
+    correct_title: Correcte
+    correct_body: Aquesta és la resposta correcta.
   dialog:
     ok: OK
     startover_title: Estàs segur que vols tornar a començar?
@@ -751,3 +753,7 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

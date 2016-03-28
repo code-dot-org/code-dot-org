@@ -2016,6 +2016,12 @@ eu:
         the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu.
       Ryan - Bee Conditionals_instruction: Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen den ikusteko. Horrela bada, nektarra bildu dezakezu.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Hemen "patruila" izeneko funtzioa dago. 
         Aldatu katua 400 pixel gora mugitzeko eta gero 400 pixel behera.

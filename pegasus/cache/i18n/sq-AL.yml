@@ -658,6 +658,7 @@
   dashboard_navigation_all_sections: Llogaritë dhe Ecuritë e Studentëve
   dashboard_navigation_view_progress: Shiko Ecurinë
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Shto Studentë
   dashboard_navigation_manage_students: Menaxho Studentët
   dashboard_navigation_lesson_plans_resources: Planet Mësimore dhe Burimet
@@ -786,6 +787,16 @@
   dashboard_puzzle: Enigmë
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: E saktë
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Statistika mahnitëse nga Ora e Kodimit e vitit të kaluar.
     Në vetëm një javë:'
   stats_hoc_2013_image_alt: Statistikat nga Ora e Kodimit 2013

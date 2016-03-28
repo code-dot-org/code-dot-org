@@ -21,7 +21,7 @@ et-EE:
   twentyhours_heading: Proovige meie arvutiteaduse sissejuhatavat kursust
   twentyhours_text: Lõpetasid oma esimese KoodiTunni? Õpi rohkem informaatika ja programmeerimise mõistete kohta selle järgneva kursuse abil.
   og_title: Iga laps väärib võimalust
-  og_description: Iga õpilane mistahes koolis väärib võimalust õppida infotehnoloogiat.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Liitu <a href="http://hourofcode.com">KoodiTunniga</a><br/>8-14 detsembril, 2014<br/>'
   hoc2014_students: Õpilased
   hoc2014_try: Proovi seda
@@ -179,7 +179,7 @@ et-EE:
   learn_next_level: Proovi mõnda muud Code Studio kursust
   learn_online: Proovi ka teisi veebikursusi
   learn_classes: Leia kohalikud kursused
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Ma läbisin just #HourOfCode - tšekka seda! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -484,6 +484,7 @@ et-EE:
   dashboard_navigation_all_sections: Õpilaste kontod ja edenemine
   dashboard_navigation_view_progress: Vaata edenemist
   dashboard_navigation_view_text_responses: Vaata teksti vastuseid
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Lisa õpilasi
   dashboard_navigation_manage_students: Õpilaste haldamine
   dashboard_navigation_lesson_plans_resources: Tunnikavad ja ressursid
@@ -582,6 +583,16 @@ et-EE:
   dashboard_puzzle: Mõistatus
   dashboard_question: Küsimus
   dashboard_response: Vastus
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Õige
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Eelmise aasta KoodiTunni uskumatud tulemused. Ainult ühe nädala jooksul:'
   stats_hoc_2013_image_alt: 2013. aasta TunniKoodi tulemused
   dashboard_teacher: Õpetaja

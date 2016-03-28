@@ -26,6 +26,7 @@
   welcome_back: Ongi etorria berriro, %{name}
   submit: Bidali
   unsubmit: Bidalketa ezeztatu
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Irakaslea gehitu:'
@@ -567,7 +568,6 @@
       hobekuntzak egingo direla.
     prerelease_hoc2014: Tutorial hau <span class='betatext'>beta</span> bertsioa da.
       Iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo dira.
-    feedback: Bidali iruzkina
     report_bug: Akatsa jakinarazi
     support: Lortu laguntza
     support_url: "//support.code.org"
@@ -615,6 +615,8 @@
     placeholder: Idatzi hemen zure erantzuna
     open_response_title: Eskerrik asko
     open_response_body: Eskerrik asko zure erantzunagatik!
+    correct_title: Zuzena
+    correct_body: Erantzun zuzena.
   dialog:
     ok: Ongi
     startover_title: Ziur al zaude berriro hasi nahi duzula?
@@ -748,3 +750,7 @@
         acknowledge: Informazio hau bidaliz, %{link_start_privacy}Pibatutasun Politika%{link_end}
           eta %{link_start_tos}Zerbitzuaren Baldintzak%{link_end} adierazitako terminoetan
           erabiliko dela onartzen duzu
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

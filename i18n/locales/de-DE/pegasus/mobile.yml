@@ -21,7 +21,7 @@ de-DE:
   twentyhours_heading: 'Teste unseren "Einführung in die Informatik"-Kurs'
   twentyhours_text: 'Du hast deine erste "Hour of Code" beendet? Erlerne weitere Informatik- und Programmierkonzepte in diesem Folgekurs.'
   og_title: Jedes Kind verdient eine Gelegenheit
-  og_description: In jeder Schule sollten die Schüler die Gelegenheit haben Informatik zu lernen.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Nimm an der <a href="http://hourofcode.com">Hour of Code</a> <br/>8.-14. Dezember 2014  teil<br/>'
   hoc2014_students: Schüler
   hoc2014_try: Versuche es
@@ -179,7 +179,7 @@ de-DE:
   learn_next_level: Weiter zum nächsten Kurs
   learn_online: Versuche andere Kurse online
   learn_classes: Finde Kurse in deiner Nähe.
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Ich habe gerade die #HourOfCode gemacht - Finde mehr heraus! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -509,6 +509,7 @@ de-DE:
   dashboard_navigation_all_sections: Schülerkonten und Fortschritt
   dashboard_navigation_view_progress: Fortschritt ansehen
   dashboard_navigation_view_text_responses: Textantworten anzeigen
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Schüler hinzufügen
   dashboard_navigation_manage_students: Schüler verwalten
   dashboard_navigation_lesson_plans_resources: Unterrichtspläne und Material
@@ -607,6 +608,16 @@ de-DE:
   dashboard_puzzle: Aufgabe
   dashboard_question: Frage
   dashboard_response: Antwort
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Richtig
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Fantastische Ergebnisse der Hour of Code aus dem Vorjahr. Allein in einer Woche:'
   stats_hoc_2013_image_alt: Ergebnisse der Hour of Code 2013
   dashboard_teacher: Lehrer

@@ -668,6 +668,7 @@
   dashboard_navigation_all_sections: Schülerkonten und Fortschritt
   dashboard_navigation_view_progress: Fortschritt ansehen
   dashboard_navigation_view_text_responses: Textantworten anzeigen
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Schüler hinzufügen
   dashboard_navigation_manage_students: Schüler verwalten
   dashboard_navigation_lesson_plans_resources: Unterrichtspläne und Material
@@ -793,6 +794,16 @@
   dashboard_puzzle: Aufgabe
   dashboard_question: Frage
   dashboard_response: Antwort
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Richtig
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Fantastische Ergebnisse der Hour of Code aus dem Vorjahr.
     Allein in einer Woche:'
   stats_hoc_2013_image_alt: Ergebnisse der Hour of Code 2013

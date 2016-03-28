@@ -21,7 +21,7 @@ ja-JP:
   twentyhours_heading: コンピュータサイエンスコースを紹介する
   twentyhours_text: 初めてのHour of Codeを修了しましたか？フォローアップコースでコンピュータサイエンスやプログラミング概念をさらに学びましょう。
   og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: '<a href="http://hourofcode.com">Hour of Code</a> に挑戦しよう <br/> 2014年12月8日から14 日まで<br/>'
   hoc2014_students: 生徒の皆さん
   hoc2014_try: 挑戦してみる
@@ -181,7 +181,7 @@ ja-JP:
   learn_next_level: 次のレベルへ進む
   learn_online: 他のオンラインのコースを試してください
   learn_classes: 近くのクラスを見つける
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: '私は #HourOfCode に挑戦しました。あなたもやってみて！ @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -500,6 +500,7 @@ ja-JP:
   dashboard_navigation_all_sections: 生徒用アカウントと進捗状況
   dashboard_navigation_view_progress: 進行状況の表示
   dashboard_navigation_view_text_responses: 表示テキストの回答
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: 生徒を追加
   dashboard_navigation_manage_students: 生徒の管理
   dashboard_navigation_lesson_plans_resources: レッスンプランと資料
@@ -598,6 +599,16 @@ ja-JP:
   dashboard_puzzle: パズル
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: 正解
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 昨年のHour of Codeによる、ほんの一週間での素晴らしい成果：
   stats_hoc_2013_image_alt: 2013年の Hour of Codeの成果
   dashboard_teacher: 先生

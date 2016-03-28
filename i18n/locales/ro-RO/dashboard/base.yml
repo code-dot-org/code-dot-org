@@ -25,6 +25,7 @@ ro:
   welcome_back: 'Bine ai revenit, %{name}'
   submit: Trimite
   unsubmit: Retrage
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Adaugă un profesor:'
@@ -463,7 +464,6 @@ ro:
   landing:
     prerelease: "Acest curs este în <span class='betatext'>versiune beta</span>. Asta înseamnă că aceasta nu este versiunea finală a cursului şi el poate fi revizuit în momentul în care se primește feedback şi se fac îmbunătățiri."
     prerelease_hoc2014: "Acest tutorial este în <span class='betatext'> versiune beta</span>.  Acesta face obiectul revizuirii pe măsură ce se primește feedback şi sunt făcute îmbunătăţiri."
-    feedback: Trimite feedback
     report_bug: Raporteazã eroare
     support: Obţine ajutor
     support_url: //support.code.org
@@ -509,6 +509,8 @@ ro:
     placeholder: Completează răspunsul tău aici
     open_response_title: Mulţumim
     open_response_body: Îți mulţumim pentru răspuns!
+    correct_title: Corect
+    correct_body: Acela este răspunsul corect.
   dialog:
     ok: OK
     startover_title: Ești sigur că dorești să reîncepi?
@@ -619,3 +621,7 @@ ro:
           other: Alte
         detail: Vă rugăm să oferiți cât mai multe detalii posibil cu privire la conţinutul pe care îl raportați.
         acknowledge: 'Prin trimiterea acestor informaţii, sunteţi de acord că acesta vor fi gestionate în conformitate cu termenii %{link_start_privacy}Politicii de confidențialitate%{link_end} și %{link_start_tos}Termenii și condițiile de utilizare a serviciilor%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found
