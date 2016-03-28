@@ -170,19 +170,19 @@ class ApiControllerTest < ActionController::TestCase
     expected_response =
       [
        {"student"=>{"id"=>@student_1.id, "name"=>@student_1.name},
-         "stage"=>"translation missing: en-us.data.script.name.bogus_script_1.title",
-         "puzzle"=>1,
-         "question"=>"Long assessment 1",
-         "url"=>"http://test.host/s/bogus_script_1/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
-         "multi_correct"=>1,
-         "multi_count"=>3,
-         "submitted"=>true,
-         "timestamp"=>updated_at.utc.to_s,
-         "level_results"=>[
-           {"student_result"=>"This is a free response", "correct"=>"free_response"},
-           {"student_result"=>"0", "correct"=>"correct"},
-           {"student_result"=>"1", "correct"=>"incorrect"},
-           {"student_result"=>"", "correct"=>"unsubmitted"}]
+        "stage"=>"translation missing: en-us.data.script.name.#{script.name}.title",
+        "puzzle"=>1,
+        "question"=>"Long assessment 1",
+        "url"=>"http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+        "multi_correct"=>1,
+        "multi_count"=>3,
+        "submitted"=>true,
+        "timestamp"=>updated_at.utc.to_s,
+        "level_results"=>[
+          {"student_result"=>"This is a free response", "correct"=>"free_response"},
+          {"student_result"=>"0", "correct"=>"correct"},
+          {"student_result"=>"1", "correct"=>"incorrect"},
+          {"student_result"=>"", "correct"=>"unsubmitted"}]
         }
       ]
     assert_equal expected_response, JSON.parse(@response.body)
