@@ -657,6 +657,7 @@
   dashboard_navigation_all_sections: Student Accounts and Progress
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -774,6 +775,16 @@
   dashboard_puzzle: Loghba
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Korrett
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

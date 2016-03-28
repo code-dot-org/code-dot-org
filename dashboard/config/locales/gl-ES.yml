@@ -26,6 +26,7 @@
   welcome_back: Ola outra vez, %{name}
   submit: Enviar
   unsubmit: Cancelar envío
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Agrega un profesor:'
@@ -572,7 +573,6 @@
       segundo imos recibindo comentarios e se fan melloras.
     prerelease_hoc2014: Este titorial está na versión <span class='betatext'>beta</span>.
       Está suxeito a revisións segundo imos recibindo comentarios e se fan melloras.
-    feedback: Enviar comentarios
     report_bug: Comunicar erro
     support: Obter axuda
     support_url: "//support.code.org"
@@ -620,6 +620,8 @@
     placeholder: Insira a súa resposta aquí
     open_response_title: Graciñas
     open_response_body: Graciñas por responderes!
+    correct_title: Certo
+    correct_body: A túa resposta é correcta.
   dialog:
     ok: OK
     startover_title: Estás seguro de que queres empezar de novo?
@@ -754,3 +756,7 @@
         acknowledge: Ao enviar esta información, acepta que esta será tratada de acordo
           cos termos da nosa %{link_start_privacy}Política de Privacidade%{link_end}
           e dos %{link_start_tos}Termos de Utilización%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

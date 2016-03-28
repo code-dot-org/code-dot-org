@@ -1995,6 +1995,12 @@ ru:
       Quantum Bee_instruction: 'Фиолетовые цветки могут иметь 1 нектар, либо 0, но Вы не знаете, какой именно! Будьте осторожны, не собирайте нектар с фиолетовых цветков, у которых его нет. Проверьте, равен ли нектар 1, используя блок "Если".'
       Ryan - 4-5 Bee Conditionals 2_instruction: Пчелка хочет нектара прямо сейчас. Не все объекты являются цветами, так что необходимо проверить КАЖДОЕ ОБЛАКО, чтобы узнать скрывает ли он цветок. И если это так, то вы получите долгожданный нектар.
       Ryan - Bee Conditionals_instruction: Пчела хочет собирать только нектар. Помни, что не все объекты являются цветами, поэтому сначала проверяй каждую тучку, чтобы увидеть, скрывает ли она цветок. Если так, то можно собирать нектар.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: 'Эта функция называется "патрулировать." Измените её так, чтобы переместить кота на 400 пикселей вверх, а потом на 400 пикселей вниз.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |

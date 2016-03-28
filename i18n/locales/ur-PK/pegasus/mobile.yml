@@ -21,7 +21,7 @@ ur-PK:
   twentyhours_heading: ہمارے کمپیوٹر سائنس کے تعارفی کورسز کر کے دیکھیے
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course.
   og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
   hoc2014_students: Students
   hoc2014_try: Try it
@@ -179,7 +179,7 @@ ur-PK:
   learn_next_level: Code Studio کا ایک اور کورس آزمائیں
   learn_online: دیگر آن لائن کورسز آزمائیں
   learn_classes: علاقائی کلاسوں کو تلاش کریں
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'میں نے کیا #HourOfCode -اسے جانچیں! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -508,6 +508,7 @@ ur-PK:
   dashboard_navigation_all_sections: Student Accounts and Progress
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -606,6 +607,16 @@ ur-PK:
   dashboard_puzzle: پزل(Puzzle)
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Correct
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: کوڈ کی گھڑی کے شماریات 2013
   dashboard_teacher: Teacher

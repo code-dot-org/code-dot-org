@@ -25,6 +25,7 @@ nl:
   welcome_back: 'Welkom terug, %{name}'
   submit: Insturen
   unsubmit: Intrekken
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Voeg een leraar toe:'
@@ -464,7 +465,6 @@ nl:
   landing:
     prerelease: "Deze cursus is in <span class='betatext'>beta</span>. Dat betekent dat het nog niet de uiteindelijke versie van de cursus is, en nog zal worden aangepast wanneer we feedback krijgen en verbeteringen doorvoeren."
     prerelease_hoc2014: "Deze handleiding is in <span class='betatext'>beta</span>. Deze handleiding wordt bijgewerkt afhankelijk van ontvangen feedback en er worden verbeteringen aan aangebracht."
-    feedback: Geef Feedback
     report_bug: Meld Bug
     support: Help
     support_url: //support.code.org
@@ -510,6 +510,8 @@ nl:
     placeholder: Voer uw antwoord hier in
     open_response_title: Bedankt
     open_response_body: Bedankt voor uw reactie!
+    correct_title: Juist
+    correct_body: Dat is het juiste antwoord.
   dialog:
     ok: OK
     startover_title: Weet je zeker dat je opnieuw wilt beginnen?
@@ -620,3 +622,7 @@ nl:
           other: Anders
         detail: Geef zo veel mogelijk details met betrekking tot de inhoud waarvan je melding maakt.
         acknowledge: 'Door het indienen van deze informatie, erkent u dat het zal worden behandeld in overeenstemming met de voorwaarden van de %{link_start_privacy}Privacy Policy%{link_end} en de %{link_start_tos}Terms van Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

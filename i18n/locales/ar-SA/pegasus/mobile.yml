@@ -21,7 +21,7 @@ ar-SA:
   twentyhours_heading: 'جرب  لدينا دورة العلوم مقدمة إلى الكمبيوتر'
   twentyhours_text: 'أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب ومفاهيم البرمجة الأساسية في الدورة التالية.'
   og_title: كل طفل يستحق فرصة
-  og_description: كل طالب في المدرسة يستحق الفرصة لدراسة علوم الحاسوب.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/> 8-14 كانون الأول/ديسمبر، عام 2014 <br/>'
   hoc2014_students: الطلاب
   hoc2014_try: جربها
@@ -181,7 +181,7 @@ ar-SA:
   learn_next_level: إستمر إلى المستوى التالي
   learn_online: جرب دورات أخرى على الإنترنت
   learn_classes: ابحث عن الفئات المحلية
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'انا عملت هاش تاك #ساعة_من_البرمجة - تحقق من ذلك! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -486,6 +486,7 @@ ar-SA:
   dashboard_navigation_all_sections: حسابات و سير الطلاب
   dashboard_navigation_view_progress: عرض عملية التقدم
   dashboard_navigation_view_text_responses: اظهار الردود النصيّة
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: إضافة طلاب
   dashboard_navigation_manage_students: إدارة الطلاب
   dashboard_navigation_lesson_plans_resources: خطط الدرس والموارد
@@ -584,6 +585,16 @@ ar-SA:
   dashboard_puzzle: لغز
   dashboard_question: سؤال
   dashboard_response: رد
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: صحيح
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'إحصائيات لا تصدق عن حدث "ساعة من الكود "  للسنة الماضية. في أسبوع واحد فقط:'
   stats_hoc_2013_image_alt: إحصائيات سنة 2013 لساعة من البرمجة
   dashboard_teacher: المدرس

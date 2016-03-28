@@ -21,7 +21,7 @@ ko-KR:
   twentyhours_heading: 컴퓨터과학(정보과학) 과정을 시도해 보세요.
   twentyhours_text: Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍 기초개념들을 학습해 보세요.
   og_title: 모든 아이들에게 기회가 주어져야 합니다.
-  og_description: 모든 학교의 모든 학생들은 컴퓨터과학(정보과학) 을 배울 수 있어야 합니다.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: '<a href="http://hourofcode.com">Hour of Code</a><br/>를 해보세요. December 8 - 14, 2014<br/>'
   hoc2014_students: 학생들
   hoc2014_try: 해보기
@@ -179,7 +179,7 @@ ko-KR:
   learn_next_level: 다음 단계 계속하기
   learn_online: 다른 온라인 과정 해보기
   learn_classes: 학교 수업
-  hoc_is_here: '지난번 Computer Science Education 주간 동안에, #HourOfCode 행사에 5000만 명의 학생들이 참여했습니다. https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: '@codeorg 에서  #HourOfCode 를 완료했습니다'
   just_did_course1: '과정1을 완료했습니다. - @codeorg 를 살펴보세요!'
   just_did_course2: '과정2를 완료했습니다. - @codeorg 를 살펴보세요!'
@@ -484,6 +484,7 @@ ko-KR:
   dashboard_navigation_all_sections: 학생 계정 및 진도
   dashboard_navigation_view_progress: 진도 보기
   dashboard_navigation_view_text_responses: 텍스트 응답 보기
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: 학생 추가
   dashboard_navigation_manage_students: 학생 관리
   dashboard_navigation_lesson_plans_resources: 수업 계획 및 자료
@@ -582,6 +583,16 @@ ko-KR:
   dashboard_puzzle: 퍼즐
   dashboard_question: 질문
   dashboard_response: 응답
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: 정답
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: '지난 Hour of Code 이후의 폭발적 통계수치. 지난 1주일:'
   stats_hoc_2013_image_alt: 203 Hour of Code 이후 통계수치
   dashboard_teacher: 선생님

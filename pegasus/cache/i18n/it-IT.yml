@@ -696,6 +696,7 @@
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
   dashboard_navigation_view_progress: Controlla i progressi
   dashboard_navigation_view_text_responses: Visualizza il testo delle risposte
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -826,6 +827,16 @@
   dashboard_puzzle: Esercizio
   dashboard_question: Domanda
   dashboard_response: Risposta
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Molto bene!
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'incredibili statistiche dell''Ora del Codice dello scorso
     anno. In una settimana soltanto:'
   stats_hoc_2013_image_alt: Statistiche dell'Ora del Codice per il 2013

@@ -28,7 +28,7 @@ pt:
           title: Curso 1
           Artist 2: Artista 2
           Happy Maps: Mapas felizes
-          Move it, Move it: Criando caminhos
+          Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Algoritmos da Vida Real: Plante uma Semente'
           Building a Foundation: Criar uma base
           Getting Loopy: Repetindo
@@ -156,7 +156,7 @@ pt:
           description_short: Use a programação para explorar a mágica e a beleza do gelo com Anna e Elsa.
         course4:
           description_short: O curso 4 é destinado aos alunos que já concluíram os cursos 2 e 3.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: Curso 4 foi projetado para estudantes que concluíram os Cursos 2 e 3. Os alunos aprenderão a resolver quebra-cabeças com maior complexidade e combinar vários conceitos, enquanto resolvem cada desafio. Após concluírem este curso, os alunos terão criado programas que mostram habilidades múltiplas, incluindo ciclos e funções com parâmetros. Recomendado para alunos do 4° ao 8° ano.
           "Artist: Variables": 'Artista: variáveis'
           "Bee: For Loops": 'Abelha: laços for'
           title: Curso 4
@@ -181,7 +181,7 @@ pt:
           Farmer Binary: 'Fazendeira: binário'
           Maze and Bee: Labirinto e abelha
           Artist Binary: 'Artista: binário'
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           Super Challenge - Variables: 'Super desafio - variáveis'
           Super Challenge - For Loops: 'Super desafio - For Loops'
           Super Challenge - Functions and Parameters: 'Super desafio - funções e parâmetros'
@@ -323,7 +323,7 @@ pt:
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: Curso de introdução acelerada ao CS
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           description: Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.
           description_short: Este curso de 20 horas aborda os conceitos fundamentais de ciência da computação e programação nos cursos de 2 a 4.
           Introduction to Computer Science: Introdução à Ciência Computacional
@@ -360,7 +360,7 @@ pt:
           title: Eventos
           description: Eventos
           description_short: Eventos
-          Bounce: Pingue-pongue
+          Bounce: Bounce
           Studio: Studio
           Calc: Calc
           Eval: Eval
@@ -370,10 +370,10 @@ pt:
           description_short: Escreva seu próprio jogo no estilo Flappy Bird em menos de 10 minutos!
           Flappy Code: Flappy Bird
         jigsaw:
-          title: Quebra-cabeça
+          title: Quebra-cabeças
           description: Experimente nosso tutorial sobre quebra-cabeça
           description_short: Experimente nosso tutorial sobre quebra-cabeça
-          Jigsaw: Quebra-cabeça
+          Jigsaw: Quebra-cabeças
         step:
           title: Avançar
           description: Etapa do tutorial
@@ -900,14 +900,14 @@ pt:
           Big Game - Collision Detection: 'Big Game - Collision Detection'
           Free Play: Atividade livre
         allthethings:
-          Jigsaw: Quebra-cabeça
+          Jigsaw: Quebra-cabeças
           Maze: Labirinto
           Artist: Artista
           Bee: Abelha
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy Bird
-          Bounce: Pingue-pongue
+          Bounce: Bounce
           Multi: Multi
           Match: Match
           TextMatch: TextMatch
@@ -1169,7 +1169,7 @@ pt:
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
           Happy Maps: Mapas felizes
-          Move it, Move it: Criando caminhos
+          Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Algoritmos da Vida Real: Plante uma Semente'
           Graph Paper Programming: Programação em Papel Quadriculado
           Building a Foundation: Criar uma base
@@ -1430,12 +1430,12 @@ pt:
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016

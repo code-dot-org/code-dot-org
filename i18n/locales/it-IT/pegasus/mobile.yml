@@ -23,7 +23,7 @@ it-IT:
   twentyhours_heading: "Prova la nostra introduzione all'Informatica"
   twentyhours_text: "Hai terminato la tua prima Ora del Codice? Impara un altro po' di concetti di informatica e di programmazione in quest'altro corso."
   og_title: "Ogni bambino merita un'opportunità"
-  og_description: "Ogni alunno in ogni scuola merita l'opportunità di studiare informatica."
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Iscriviti alla <a href="http://hourofcode.com/it">Ora del Codice</a> <br/>8-14 dicembre 2014 <br/>'
   hoc2014_students: Studenti
   hoc2014_try: Prova
@@ -184,7 +184,7 @@ it-IT:
   learn_next_level: Prova un altro corso di Code Studio
   learn_online: Prova altri corsi on-line
   learn_classes: Trova le scuole locali
-  hoc_is_here: "Questa è l'ultima settimana di informatica, l'Ora del Codice (#HourOfCode) ha raggiunto i 50 milioni di studenti.  https://youtu.be/Ofze6CWUCx8."
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Ho appena completato la mia prima Ora del Codice #HourOfCode - provala! @codeorg @programmafuturo'
   just_did_course1: 'Ho appena finito il corso 1 - verificalo su @codeorg'
   just_did_course2: 'Ho appena finito il corso 2 - verificalo su @codeorg'
@@ -528,6 +528,7 @@ it-IT:
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
   dashboard_navigation_view_progress: Controlla i progressi
   dashboard_navigation_view_text_responses: Visualizza il testo delle risposte
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -626,6 +627,16 @@ it-IT:
   dashboard_puzzle: Esercizio
   dashboard_question: Domanda
   dashboard_response: Risposta
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Molto bene!
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "incredibili statistiche dell'Ora del Codice dello scorso anno. In una settimana soltanto:"
   stats_hoc_2013_image_alt: "Statistiche dell'Ora del Codice per il 2013"
   dashboard_teacher: Insegnante

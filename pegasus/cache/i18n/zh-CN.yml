@@ -538,6 +538,7 @@
   dashboard_navigation_all_sections: "学生账户和进度"
   dashboard_navigation_view_progress: "查看进度"
   dashboard_navigation_view_text_responses: "查看文字回应"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "添加学生"
   dashboard_navigation_manage_students: "管理学生"
   dashboard_navigation_lesson_plans_resources: "课程计划及资源"
@@ -640,6 +641,16 @@
   dashboard_puzzle: "关卡"
   dashboard_question: "问题"
   dashboard_response: "回答"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "正确。"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "在去年的编程一小时活动中的惊人数据。在一周之内："
   stats_hoc_2013_image_alt: 2013年编程一小时统计数据
   dashboard_teacher: "老师"

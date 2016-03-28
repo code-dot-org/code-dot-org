@@ -21,7 +21,7 @@ hu-HU:
   twentyhours_heading: Próbáld ki a Bevezetés a számítástechnikába tanfolyamunkat
   twentyhours_text: Végeztél az első tanfolyammal? Tudj meg többet a számítástechnikáról és a programozási koncepciókról a következő tanfolyamon.
   og_title: Minden gyermek megérdemli lehetőséget
-  og_description: Minden diák minden iskolában megérdemli a lehetőséget, hogy tanulhasson számítástechnikát.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Csatlakozz a <a href="http://hourofcode.com"> Kódolás Órájához</a><br/>2014. December 8-14.<br/>'
   hoc2014_students: Tanuló
   hoc2014_try: Próbáld ki
@@ -179,7 +179,7 @@ hu-HU:
   learn_next_level: Tovább a következő szintre
   learn_online: 'Megpróbáljon ki  más online tanfolyamokat'
   learn_classes: Találjon helyi osztályokat
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -514,6 +514,7 @@ hu-HU:
   dashboard_navigation_all_sections: Diákok fiókja és haladása
   dashboard_navigation_view_progress: Fejlődés megtekintése
   dashboard_navigation_view_text_responses: Szöveges válaszok megtekintése
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Diákok hozzáadása
   dashboard_navigation_manage_students: Diákok kezelése
   dashboard_navigation_lesson_plans_resources: Óravázlatok és erőforrások
@@ -612,6 +613,16 @@ hu-HU:
   dashboard_puzzle: Kirakós
   dashboard_question: Kérdés
   dashboard_response: Válasz
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Helyes
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Szédületes statisztika a tavalyi Kódolás Órája programról. Egyetlen hét alatt:'
   stats_hoc_2013_image_alt: Statisztika a 2013-as Kódolás Órája programról
   dashboard_teacher: Tanár

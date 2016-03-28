@@ -3,7 +3,7 @@ az:
     unplugged:
       Unplug1:
         title: İnformatikaya giriş
-        desc: 'Bu dərs Kompüter Elmləri haqda ilkin anlayışı təqdim edərək onun əslində nə etdiyini izah edəcək. Bu, həmçinin tələbələrə kompüter bilicisinin hansı rola malik olduğunu təsəvvür etməyə də şans yaradacaq. Çalışmalar və tapşırıqlar bitənə qədər, hər bir tələbəyə nə öyrəndiyinə dair qısa məzmunlu xatirlatmalar ediləcək. Dərslərlə birbaşa əlaqəli olan lüğət sözlərinin tədrisini etməməyin tərəfdarı ola  bilərsiniz, amma daha yüksək nailiyyətləri gözləməkdənsə, həmin sözləri daha əyləncəli yolla təqdim etmək daha məhsuldar və faydalı hesab olunur.'
+        desc: 'Bu dərs Informatika haqda ilkin anlayışı təqdim edərək onun əslində nə etdiyini izah edəcək. Bu, həmçinin tələbələrə kompüter bilicisinin hansı rola malik olduğunu təsəvvür etməyə də şans yaradacaq. Çalışmalar və tapşırıqlar bitənə qədər, hər bir tələbəyə nə öyrəndiyinə dair qısa məzmunlu xatirlatmalar ediləcək. Dərslərlə birbaşa əlaqəli olan lüğət sözlərinin tədrisini etməməyin tərəfdarı ola  bilərsiniz, amma daha yüksək nailiyyətləri gözləməkdənsə, həmin sözləri daha əyləncəli yolla təqdim etmək daha məhsuldar və faydalı hesab olunur.'
         pdfs:
           - unplug1
         video: Unplug1
