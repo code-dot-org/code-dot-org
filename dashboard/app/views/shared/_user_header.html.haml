@@ -8,7 +8,7 @@
         - if current_user.teacher?
           = link_to t('nav.user.classroom'), teacher_dashboard_url
         - if current_user.can_pair?
-          = link_to '#', {id: 'pairing_link'} do
+          = link_to '#', {id: 'pairing_link', style: 'display: none'} do
             %i.fa.fa-users
             = t('nav.user.pair_programming')
         = link_to t('nav.user.stats'), root_url
@@ -46,18 +46,21 @@
     }
   });
 
-  // pair programming dialog
-  $(document).ready(function () {
-    var props = {source: #{pairing_url.inspect}};
-    props.i18n = window.dashboard.i18n;
-    $('body').append('<div id="pairing"></div>');
-    var pairingDialog = ReactDOM.render(
-        React.createElement(window.dashboard.PairingDialog, props),
-        document.getElementById('pairing'));
+  if (typeof dashboard !== 'undefined') {  // only display pair programming if in dashboard
+    // pair programming dialog
+    $(document).ready(function () {
+      var props = {source: #{pairing_url.inspect}};
+      props.i18n = window.dashboard.i18n;
+      $('body').append('<div id="pairing"></div>');
+      var pairingDialog = ReactDOM.render(
+          React.createElement(window.dashboard.PairingDialog, props),
+          document.getElementById('pairing'));
 
-    $('#pairing_link').click(function () {
-      pairingDialog.open();
-      hideUserOptions();
-      return false;
+      $('#pairing_link').click(function () {
+        pairingDialog.open();
+        hideUserOptions();
+        return false;
+      });
+      $('#pairing_link').show();
     });
-  });
+  }
