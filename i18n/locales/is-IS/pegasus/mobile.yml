@@ -21,7 +21,7 @@ is-IS:
   twentyhours_heading: Prófaðu námskeiðið okkar Inngangur að tölvunarfræði
   twentyhours_text: Búin(n) að ljúka fyrstu Klukkustund kóðunar? Fylgdu eftir með því að læra fleiri mikilvæg hugtök í tölvunarfræði og forritun á þessu námskeiði.
   og_title: Hvert barn á skilið tækifæri
-  og_description: Sérhver nemandi í sérhverjum skóla ætti að fá tækifæri til að læra tölvunarfræði.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Vertu með í <a href="http://hourofcode.com">Klukkustund kóðunar</a><br/>8. - 14. desember 2014<br/>'
   hoc2014_students: Nemendur
   hoc2014_try: Prófið hana
@@ -181,7 +181,7 @@ is-IS:
   learn_next_level: Prófa annað námskeið í Kóðastúdíóinu
   learn_online: Prófa önnur námskeið á netinu
   learn_classes: Finna námskeið nálægt þér
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Ég var að klára #HourOfCode - kíktu á það! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -517,6 +517,7 @@ is-IS:
   dashboard_navigation_all_sections: Reikningar og árangur nemenda
   dashboard_navigation_view_progress: Skoða framvindu
   dashboard_navigation_view_text_responses: Skoða textasvör
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Bæta við nemendum
   dashboard_navigation_manage_students: Umsjón nemenda
   dashboard_navigation_lesson_plans_resources: Kennsluáætlanir og tilföng
@@ -615,6 +616,16 @@ is-IS:
   dashboard_puzzle: Þraut
   dashboard_question: Spurning
   dashboard_response: Svar
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Rétt
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Ótrúlegar tölur frá síðasta ári um Klukkustund kóðunar. Á aðeins einni viku:'
   stats_hoc_2013_image_alt: Um Klukkustund kóðunar árið 2013
   dashboard_teacher: Kennari

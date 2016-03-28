@@ -21,7 +21,7 @@ zh-TW:
   twentyhours_heading: 試試看我們的資訊科學課程簡介
   twentyhours_text: 完成您的第一個小時的程式設計課程了嗎？在此後續課程中你可以瞭解更多資訊科學和程式設計的核心觀念。
   og_title: 每個孩子都應該得到機會
-  og_description: 每個學校的每個學生都應有機會學習電腦科學。
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: '加入<a href="http://hourofcode.com">一小時的程式設計課程</a> <br/>，2014 年 12 月 8 日至 14 日 <br/>'
   hoc2014_students: 學生
   hoc2014_try: 試一試
@@ -179,7 +179,7 @@ zh-TW:
   learn_next_level: 繼續到下一級別
   learn_online: 嘗試其他線上課程
   learn_classes: 尋找當地的教室
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: '我已經完成了 #HourOfCode - 快來看看吧！ @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -484,6 +484,7 @@ zh-TW:
   dashboard_navigation_all_sections: 學生帳戶及學習進度
   dashboard_navigation_view_progress: 查看進度
   dashboard_navigation_view_text_responses: 觀看文字回應
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: 新增學生
   dashboard_navigation_manage_students: 管理學生們
   dashboard_navigation_lesson_plans_resources: 教案和資源
@@ -582,6 +583,16 @@ zh-TW:
   dashboard_puzzle: 關卡
   dashboard_question: '問題 '
   dashboard_response: 回應
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: 正確
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 去年的一小時程式設計有令人難以置信的統計資料。在一個禮拜內：
   stats_hoc_2013_image_alt: 統計來自2013的Hour of Code
   dashboard_teacher: 教師

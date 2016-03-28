@@ -3210,6 +3210,12 @@
         Albina vrea doar nectar acum.
         Nu toate obiectele sunt flori, așa că verifică FIECARE NOR pentru a vedea
         dacă ascunde o floare. Dacă da, atunci poți aduna nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Aici este o funcţie numită "patrol."
         Editeaz-o pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli.

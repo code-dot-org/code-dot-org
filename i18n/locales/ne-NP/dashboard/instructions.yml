@@ -41,7 +41,7 @@ ne:
         It is 25 pixels wide and 25 pixels tall.
       2-3 Artist Debugging 1_instruction: |
         The width of the top of this hat should
-        be 100 pixels wide.  Can you fix it?
+        be 50 pixels wide.  Can you fix it?
       2-3 Artist Debugging 10_instruction: "The direction pad on my game controller\nis too narrow. \\r\n\\r\nCan you make it wider by 10 pixels?"
       2-3 Artist Debugging 11_instruction: "My snowflake is falling apart!\\r\n\\r\nCan\nyou figure out what's going wrong?"
       2-3 Artist Debugging 12_instruction: |
@@ -653,7 +653,7 @@ ne:
       4-5 Bee Debugging 3_instruction: Find the errors and fix them.
       4-5 Bee Debugging 4_instruction: "These blocks don't work. What's the pattern?"
       4-5 Bee Debugging 5_instruction: "Something isn't right here..."
-      4-5 Bee Debugging 6_instruction: "The purple flower has a differet amount of\nnectar each time you run the puzzle. \\r\n\\r\nFix the blocks to get all of\nthe nectar from the flower each time."
+      4-5 Bee Debugging 6_instruction: "The purple flower has a different amount\nof nectar each time you run the puzzle. \\r\n\\r\nFix the blocks to get all\nof the nectar from the flower each time."
       4-5 Bee Debugging 7_instruction: The function is missing something...
       4-5 Bee Debugging 8_instruction: |
         This function is fine, but it isn't used
@@ -3265,6 +3265,12 @@ ne:
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
         is hiding a flower. If it is, then you can gather nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.

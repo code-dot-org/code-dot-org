@@ -2084,6 +2084,12 @@ el:
       Quantum Bee_instruction: 'Τα μωβ λουλούδια μπορεί να έχουν είτε 1 ή 0 νέκταρ, αλλά δεν γνωρίζεις ποιο! Πρόσεξε να μην συλλέξεις νέκταρ από ένα μωβ λουλούδι, αν δεν έχει καθόλου. Ελεγξε αν το νέκταρ είναι ίσο με 1 χρησιμοποιώντας το μπλοκ "αν".'
       Ryan - 4-5 Bee Conditionals 2_instruction: Η μέλισσα θέλει μόνο νέκταρ αυτή τη στιγμή. Δεν είναι όλα τα αντικείμενα λουλούδια, έτσι κάντε έλεγχο κάτω από κάθε ΣΎΝΝΕΦΟ, να δει αν κρύβεται ένα λουλούδι. Αν είναι, τότε μπορείτε να συγκεντρώσετε νέκταρ.
       Ryan - Bee Conditionals_instruction: Η μέλισσα θέλει μόνο νέκταρ αυτή τη στιγμή. Δεν είναι όλα τα αντικείμενα λουλούδια, έτσι κάνε έλεγχο κάτω από κάθε ΣΎΝΝΕΦΟ, να δεις αν κρύβεται ένα λουλούδι. Αν ναι, τότε μπορείς να συγκεντρώσεις νέκταρ.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Εδώ είναι μια συνάρτηση που ονομάζεται «περιπολία». Επεξεργάσου την ώστε να μετακινεί τη γάτα επάνω 400 εικονοστοιχεία και στη συνέχεια, κάτω 400 εικονοστοιχεία.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |

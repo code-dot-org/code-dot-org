@@ -656,6 +656,7 @@
   dashboard_navigation_all_sections: Konta i postępy ucznia
   dashboard_navigation_view_progress: Przejrzy postępy
   dashboard_navigation_view_text_responses: Wyświetl tekstowe odpowiedzi
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Dodaj uczniów
   dashboard_navigation_manage_students: Zarządzaj uczniami
   dashboard_navigation_lesson_plans_resources: Plany lekcji i zasoby
@@ -778,11 +779,21 @@
   dashboard_progress_completed_too_many_blocks: zakończona, zbyt wiele bloków
   dashboard_progress_completed_perfect: zakończona, doskonale
   dashboard_progress_furthest_level_attempted: próbowano najdalszy poziom
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: Wysłano
   dashboard_stage: Etap
   dashboard_puzzle: "Łamigłówka"
   dashboard_question: Pytanie
   dashboard_response: Odpowiedź
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Poprawnie
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Nieprawdopodobne statystyki z ubiegłorocznej Godziny Kodowania.
     W ciągu zaledwie jednego tygodnia:'
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013

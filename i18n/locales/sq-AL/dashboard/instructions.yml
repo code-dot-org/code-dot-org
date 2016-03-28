@@ -2786,6 +2786,12 @@ sq:
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
         is hiding a flower. If it is, then you can gather nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Këtu është një funksion që quhet "patrol".
         Ndryshoje atë që të lëvizësh macen 400 piksela lart dhe 400 piksela posht.
