@@ -23,7 +23,10 @@ var DialogButtons = React.createClass({
     // "get a hint" workflow. Anonymous users and users with even IDs
     // should get the text "See hint", whereas users with odd IDs should
     // see "Get a block".
-    // Test initiated March 25, 2016
+    // Test initiated March 28, 2016
+    // TODO elijah - stop the experiment and pick one string or the
+    // other after a sufficient amount of data has been collected and
+    // looked at.
     return (this.props.userId % 2 === 1) ? msg.showBlock() : msg.hintRequest();
   },
 

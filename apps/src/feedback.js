@@ -158,7 +158,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var finalLevel = (options.response &&
     (options.response.message === "no more levels"));
 
-  var userId = (options.response && options.response.user_id);
+  var userId = options.response && options.response.user_id;
 
   feedback.appendChild(
     this.getFeedbackButtons_({
