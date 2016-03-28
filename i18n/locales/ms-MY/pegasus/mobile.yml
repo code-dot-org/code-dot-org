@@ -21,7 +21,7 @@ ms-MY:
   twentyhours_heading: Cuba Pengenalan kepada Kursus Sains Komputer kami
   twentyhours_text: 'Selesai Satu Jam Kod pertama anda?  Belajar lebih banyak asas sains komputer dan programming dalam kursus sambungan berikut.'
   og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Sertai <a href="http://hourofcode.com">1 Jam Pengaturcaraan</a> <br/> 8-14 Disember, 2014 <br/>'
   hoc2014_students: Students
   hoc2014_try: Selamat mencuba
@@ -179,7 +179,7 @@ ms-MY:
   learn_next_level: Teruskan ke tahap seterusnya
   learn_online: Cuba kursus-kursus lain secara online
   learn_classes: cari kelas tempatan
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Saya baru buat #SatuJamKod - Jom tengok! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -523,6 +523,7 @@ ms-MY:
   dashboard_navigation_all_sections: Akaun pelajar dan kemajuan
   dashboard_navigation_view_progress: Papar kemajuan
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Tambah Pelajar
   dashboard_navigation_manage_students: Mengurus Pelajar
   dashboard_navigation_lesson_plans_resources: Rancangan Pengajaran dan Sumber
@@ -621,6 +622,16 @@ ms-MY:
   dashboard_puzzle: Teka-teki
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Betul
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Guru

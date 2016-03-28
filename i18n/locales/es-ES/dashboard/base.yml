@@ -25,6 +25,7 @@ es:
   welcome_back: 'Bienvenido, %{name}'
   submit: Enviar
   unsubmit: NO enviado
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Agregar un maestro:'
@@ -463,7 +464,6 @@ es:
   landing:
     prerelease: "Este curso está en fase <span class='betatext'>beta</span>. Esto significa que no es la versión final del curso y está sujeta a revisión conforme recibimos comentarios y hacemos mejoras."
     prerelease_hoc2014: "Este tutorial está en <span class='betatext'> beta</span>.  Es objeto de revisión a medida que se reciben comentarios y se hacen mejoras."
-    feedback: Envía comentarios
     report_bug: Informar sobre un error
     support: Obtener ayuda
     support_url: //support.code.org
@@ -509,6 +509,8 @@ es:
     placeholder: Escribe aquí tu respuesta
     open_response_title: Gracias
     open_response_body: Gracias por tu respuesta!
+    correct_title: Correcto
+    correct_body: Esa respuesta es la correcta.
   dialog:
     ok: OK
     startover_title: ¿Seguro que quieres empezar de nuevo?
@@ -619,3 +621,7 @@ es:
           other: Otros
         detail: Por favor, proporcione tantos detalles como sea posible sobre el contenido que está informando.
         acknowledge: 'Al enviar esta información, usted reconoce que se tratarán de un acuerdo con los términos de %{link_start_privacy}Privacy Policy%{link_end}%y de%{link_start_tos}Terminos de Servicio%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

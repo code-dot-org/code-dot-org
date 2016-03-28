@@ -278,7 +278,7 @@
           description: Use Play Lab to create a story or game starring Disney Infinity
             characters.
           Play Lab: Play Lab
-          Infinity: Infinity
+          Infinity: "Éigríoch"
         algebrademo:
           title: Algebra Demo
           description_short: A handful of puzzles to demonstrate the environment and
@@ -412,10 +412,10 @@
           description_short: Try our Jigsaw tutorial
           Jigsaw: Jigsaw
         step:
-          title: Step
+          title: Céim
           description: ''
           description_short: Step tutorial
-          Step: Step
+          Step: Céim
         Hour of Code:
           title: Hour of Code 2013
           description: ''

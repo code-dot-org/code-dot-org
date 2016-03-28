@@ -2248,6 +2248,12 @@ es:
       Quantum Bee_instruction: '¡ Las flores moradas pueden tener un tipo de néctar de 1 ó 0, pero tu no sabes cuál !. Ten cuidado de no recolectar el néctar de una flor morada sin  néctar. Revisa si el valor del néctar es igual a 1 usando el bloque “if”. '
       Ryan - 4-5 Bee Conditionals 2_instruction: La abeja sólo quiere néctar ahora. No todo los objetos son flores, así que compruebe debajo de cada nube para ver si está ocultando una flor. Si es así, puede recolectar néctar.
       Ryan - Bee Conditionals_instruction: La abeja sólo quiere néctar ahora. No todos los objetos son flores, así que mira debajo de TODAS LAS NUBES para verlo si esta escondiendo una flor. Si es así, puedes coger néctar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: 'Aquí hay una función denominada "patrulla". Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400 píxeles.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |

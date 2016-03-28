@@ -21,7 +21,7 @@ fa-IR:
   twentyhours_heading: دوره‌ی مقدماتی علوم کامپیوتر ما را شروع کنید
   twentyhours_text: اولین ساعت کدنویسی را به پایان رساندید؟ علوم کامپیوتر و مفاهیم برنامه نویسی را در درس بعدی، بیشتر یاد بگیرید.
   og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'به <a href="http://hourofcode.com">ساعتِ کدنویسی</a> بپیوندید <br/>از 8 تا 14 دسامبر  2014<br/>'
   hoc2014_students: دانش آموزان
   hoc2014_try: آن را امتحان کنید
@@ -179,7 +179,7 @@ fa-IR:
   learn_next_level: به مرحله بعدی برو
   learn_online: درس های آنلاین دیگری را امتحان کن
   learn_classes: پیدا کردن کلاس های محلی
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'من HourOfCode# رو تموم کردم - امتحانش کنید! codeorg@'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -510,6 +510,7 @@ fa-IR:
   dashboard_navigation_all_sections: حساب کاربری دانش‌ آموزان و پیشرفت آنها
   dashboard_navigation_view_progress: نمایش پیشرفت
   dashboard_navigation_view_text_responses: مشاهده متن پاسخ
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: افزودن دانش آموز
   dashboard_navigation_manage_students: مدیریت دانش آموزان
   dashboard_navigation_lesson_plans_resources: برنامه‌ها و منابع درس
@@ -608,6 +609,16 @@ fa-IR:
   dashboard_puzzle: پازل
   dashboard_question: سوال
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: صحیح است
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'آمار باور نکردنی از سال گذشته ساعت کدنويسي. تنها در یک هفته:'
   stats_hoc_2013_image_alt: وضعیت کد نویسی در سال 2013
   dashboard_teacher: دبیر

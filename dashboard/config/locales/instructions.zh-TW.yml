@@ -1020,13 +1020,9 @@
         or the hints?  Click here!\r
         \r
         Otherwise, make a design all your own!
-      Course 4 Artist 13_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can design anything you want!
+      Course 4 Artist 13_instruction: "還在玩嗎？這裡有一張你可以設計任何東西的空白畫布！"
       Course 4 Artist 2_instruction: "你可以用迴圈包住這段程式碼，來繪製外層灰色的正方形嗎？"
-      Course 4 Artist 20_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can create whatever you want!
+      Course 4 Artist 20_instruction: "還在玩嗎？這裡有一張你可以創造任何東西的空白畫布！"
       Course 4 Artist 3_instruction: 好，現在試著搞清楚如果你執行這段程式碼會發生什麼事(或直接按"執行"試試看)。然後重複它夠多次來完成繪圖。
       Course 4 Artist 4_instruction: |
         How many degrees are in a circle?  Fill in
@@ -1084,10 +1080,8 @@
       Course 4 Artist Binary 6_instruction: |
         What is the shortest binary string that
         you can repeat to draw this image?
-      Course 4 Artist Binary 7_instruction: Finish this drawing.
-      Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a blank
-        canvas for you to draw on.  Have fun!
+      Course 4 Artist Binary 7_instruction: "完成這幅畫。"
+      Course 4 Artist Binary Free Play 2_instruction: "自由發揮：這裡有一張你可以畫上任何東西的空白畫布。 玩得愉快！"
       Course 4 Artist Binary Free Play 2a_instruction: |-
         Here's a higher resolution
         canvas to draw on - 16 pixels by 16 pixels!\r
@@ -1095,9 +1089,7 @@
         See what happens when we
         start to get creative with the bits?
       Course 4 Artist Binary Free Play 2b_instruction: "按一下此處查看提示。"
-      Course 4 Artist Binary Free Play_instruction: |
-        Free Play: Draw whatever you
-        like with binary!
+      Course 4 Artist Binary Free Play_instruction: "自由發揮：用二進為劃出任何你喜歡的東西！"
       Course 4 Artist Binary pre1_instruction: |-
         Binary is a way of representing information
         using only two options.  Here, we're going to use the options "off" (represented
@@ -3075,6 +3067,12 @@
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
         is hiding a flower. If it is, then you can gather nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.

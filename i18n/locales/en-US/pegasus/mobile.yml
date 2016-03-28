@@ -21,7 +21,7 @@ en-US:
   twentyhours_heading: crwdns4529:0crwdne4529:0
   twentyhours_text: crwdns4530:0crwdne4530:0
   og_title: crwdns55865:0crwdne55865:0
-  og_description: crwdns55866:0crwdne55866:0
+  og_description: crwdns56254:0crwdne56254:0
   hoc2014_heading: crwdns20155:0crwdne20155:0
   hoc2014_students: crwdns20156:0crwdne20156:0
   hoc2014_try: crwdns20157:0crwdne20157:0
@@ -179,7 +179,7 @@ en-US:
   learn_next_level: crwdns4684:0crwdne4684:0
   learn_online: crwdns4685:0crwdne4685:0
   learn_classes: crwdns3857:0crwdne3857:0
-  hoc_is_here: crwdns55997:0crwdne55997:0
+  hoc_is_here: crwdns56255:0crwdne56255:0
   just_did_hoc: crwdns3942:0crwdne3942:0
   just_did_course1: crwdns56080:0crwdne56080:0
   just_did_course2: crwdns56081:0crwdne56081:0
@@ -483,6 +483,7 @@ en-US:
   dashboard_navigation_all_sections: crwdns22277:0crwdne22277:0
   dashboard_navigation_view_progress: crwdns7797:0crwdne7797:0
   dashboard_navigation_view_text_responses: crwdns50087:0crwdne50087:0
+  dashboard_navigation_view_assessments: crwdns56256:0crwdne56256:0
   dashboard_navigation_add_students: crwdns7798:0crwdne7798:0
   dashboard_navigation_manage_students: crwdns7799:0crwdne7799:0
   dashboard_navigation_lesson_plans_resources: crwdns22278:0crwdne22278:0
@@ -581,6 +582,16 @@ en-US:
   dashboard_puzzle: crwdns50089:0crwdne50089:0
   dashboard_question: crwdns50090:0crwdne50090:0
   dashboard_response: crwdns50091:0crwdne50091:0
+  dashboard_correctness: crwdns56257:0crwdne56257:0
+  dashboard_correctness_free_response: crwdns56258:0crwdne56258:0
+  dashboard_correctness_unsubmitted: crwdns56259:0crwdne56259:0
+  dashboard_correctness_correct: crwdns56260:0crwdne56260:0
+  dashboard_correctness_incorrect: crwdns56261:0crwdne56261:0
+  dashboard_status: crwdns56262:0crwdne56262:0
+  dashboard_multi_correct: crwdns56263:0crwdne56263:0
+  dashboard_multi_count: crwdns56264:0crwdne56264:0
+  dashboard_multi_correct_percent: crwdns56265:0crwdne56265:0
+  dashboard_submission_timestamp: crwdns56266:0crwdne56266:0
   stats_hoc_2013_heading: crwdns18198:0crwdne18198:0
   stats_hoc_2013_image_alt: crwdns18199:0crwdne18199:0
   dashboard_teacher: crwdns20754:0crwdne20754:0

@@ -25,6 +25,7 @@ bs:
   welcome_back: 'Dobrodošao/la natrag, %{name}'
   submit: Potvrdi
   unsubmit: Poništi objavu
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Dodaj učitelja:'
@@ -461,7 +462,6 @@ bs:
   landing:
     prerelease: "Ovaj kurs je u <span class='betatext'> beta fazi</span>. To znači da ovo nije konačna verzija kursa, te da podliježe izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima."
     prerelease_hoc2014: "Ovaj tutorial je u <span class='betatext'> beta fazi</span>.  Podliježe izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima."
-    feedback: Slanje povratnih informacija
     report_bug: Prijavi Grešku
     support: Potraži Pomoći
     support_url: //support.code.org
@@ -507,6 +507,8 @@ bs:
     placeholder: Ovdje unesite vaš odgovor
     open_response_title: Hvala
     open_response_body: Hvala na vašem odgovoru!
+    correct_title: Ispravno
+    correct_body: To je tačan odgovor.
   dialog:
     ok: U redu
     startover_title: Jesi li siguran/na da želiš početi iznova?
@@ -617,3 +619,7 @@ bs:
           other: Ostalo
         detail: Molimo da date što više detalja u vezi sadržaja koji prijavljujete.
         acknowledge: 'Slanjem ove informacije, vi prihvaćate uvjete date u %{link_start_privacy}Pravilima Privatnosti%{link_end} i %{link_start_tos}Uvjetima Korištenja%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

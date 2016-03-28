@@ -3079,6 +3079,12 @@
       Ryan - Bee Conditionals_instruction: Bien ønsker bare nektar akkurat nå. Ikke
         alle objekter er blomster, så sjekk under HVER SKY til å se om det skjuler
         seg en blomst. Hvis det er, så du kan samle nektar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Her er en funksjon kalt "patruljer". Endre
         den slik at Katt beveger seg opp 400 piksler og så ned 400 piksler.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse

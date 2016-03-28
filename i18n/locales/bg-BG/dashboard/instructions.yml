@@ -1894,6 +1894,12 @@ bg:
       Quantum Bee_instruction: 'Лилавите цветя могат да имат 1 или 0 нектар, но не знаем кои имат и кои не! Бъдете внимателни и не събирайте от лилаво цвете, което няма нектар. Проверете дали нектара е равен на 1 с помощта на "ако" блок.'
       Ryan - 4-5 Bee Conditionals 2_instruction: Пчела иска нектар точно сега. Не всички обекти са цветя, така че проверете всеки ОБЛАК, за да се види дали отдолу се крие цвете. Ако е така, тогава можете да съберете нектар.
       Ryan - Bee Conditionals_instruction: Пчелата иска само нектар сега. Не всички обекти под облачетата са цветя, така че направете проверка и събирайте нектар само от цветята.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Тази функция се нарича "патрул". 
         Редактирайте я, за да преместите котката с 400 пиксела нагоре или надолу.

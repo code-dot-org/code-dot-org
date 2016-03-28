@@ -25,6 +25,7 @@ mt:
   welcome_back: 'Merħba lura, %{name}'
   submit: Submit
   unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Żid Għalliem:'
@@ -460,7 +461,6 @@ mt:
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
     report_bug: Report Bug
     support: Ikseb l-Għajnuna
     support_url: //support.code.org
@@ -506,6 +506,8 @@ mt:
     placeholder: Enter your answer here
     open_response_title: Grazzi
     open_response_body: Thanks for your response!
+    correct_title: Korrett
+    correct_body: Dik hi t-tweġiba t-tajba.
   dialog:
     ok: OK
     startover_title: Are you sure you want to start over?
@@ -616,3 +618,7 @@ mt:
           other: Other
         detail: Please provide as much detail as possible regarding the content you are reporting.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found
