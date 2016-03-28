@@ -1,5 +1,4 @@
 FactoryGirl.define do
-
   factory :paired_user_level do
     driver_user_level {user_level}
     navigator_user_level {user_level}
@@ -387,5 +386,114 @@ FactoryGirl.define do
     teacher {create :teacher}
 
     status 'present'
+  end
+
+  factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
+    plc_user_course_enrollment nil
+    plc_course_unit nil
+    status "MyString"
+  end
+
+  factory :plc_course_unit, :class => 'Plc::CourseUnit' do
+    plc_course nil
+    unit_name "MyString"
+    unit_description "MyString"
+    unit_order 1
+  end
+
+  factory :plc_written_submission_task, parent: :plc_task, class: 'Plc::WrittenAssignmentTask' do
+    assignment_description nil
+  end
+
+  factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
+    resource_url nil
+  end
+
+  factory :plc_script_completion_task, parent: :plc_task, class: 'Plc::ScriptCompletionTask' do
+    script_id nil
+  end
+
+  factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
+    answer "MyString"
+    plc_evaluation_question nil
+    plc_learning_module nil
+  end
+
+  factory :plc_evaluation_question, :class => 'Plc::EvaluationQuestion' do
+    question "MyString"
+    plc_course_unit nil
+  end
+
+  factory :written_enrollment_task_assignment, parent: :plc_enrollment_task_assignment, class: 'Plc::WrittenEnrollmentTaskAssignment' do
+    submission nil
+  end
+
+  factory :plc_enrollment_task_assignment, :class => 'Plc::EnrollmentTaskAssignment' do
+    status "MyString"
+    plc_enrollment_module_assignment nil
+    plc_task nil
+  end
+
+  factory :plc_enrollment_module_assignment, :class => 'Plc::EnrollmentModuleAssignment' do
+    plc_enrollment_unit_assignment nil
+    plc_learning_module nil
+  end
+
+  factory :plc_user_course_enrollment, :class => 'Plc::UserCourseEnrollment' do
+    status "MyString"
+    plc_course nil
+    user nil
+  end
+
+  factory :plc_task, :class => 'Plc::Task' do
+    name "MyString"
+    plc_learning_module nil
+  end
+
+  factory :plc_learning_module, :class => 'Plc::LearningModule' do
+    name "MyString"
+  end
+  factory :plc_course, :class => 'Plc::Course' do
+    name "MyString"
+  end
+
+  factory :user_professional_learning_course_enrollment do
+    user nil
+    professional_learning_course nil
+  end
+
+  factory :professional_learning_course do
+    name "Some course"
+  end
+
+  factory :professional_learning_module do
+    name "Some module"
+    learning_module_type "Some learning module type"
+  end
+
+  factory :professional_learning_task do
+    name "Some task"
+    professional_learning_module nil
+  end
+
+  factory :level_group do
+    game_id 1
+    name "MyString"
+    created_at "2016-02-19 20:19:50"
+    updated_at "2016-02-19 20:19:50"
+    level_num "MyString"
+    ideal_level_source_id 1
+    solution_level_source_id 1
+    user_id 1
+    properties "MyText"
+    type ""
+    md5 "MyString"
+    published false
+  end
+
+  factory :survey_result do
+    user { create :teacher }
+    properties {{survey2016_ethnicity_asian: "1"}}
+    properties {{survey2016_foodstamps: "3"}}
   end
 end

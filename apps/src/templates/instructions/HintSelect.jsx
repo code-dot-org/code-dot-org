@@ -1,4 +1,4 @@
-var msg = require('../locale');
+var msg = require('../../locale');
 
 var HintSelect = React.createClass({
   propTypes: {
