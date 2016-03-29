@@ -7,8 +7,8 @@
   "properties": {
     "skin": "artist",
     "instructions": "Free Play: Try making some drawings of your own using \"for loops\". We've added a few useful variables for you as well.",
-    "x": "55",
-    "y": "275",
+    "x": "200",
+    "y": "200",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -30,7 +30,9 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "never_autoplay_video": "false"
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -109,30 +111,16 @@
           </block>
         </category>
         <category name="Brushes">
-          <block type="draw_width" inline="false">
-            <value name="WIDTH">
-              <block type="math_number">
-                <title name="NUM">1</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour" inline="true" id="draw-color">
             <value name="COLOUR">
               <block type="colour_picker">
-                <title name="COLOUR">#0000cd</title>
+                <title name="COLOUR">#ff0000</title>
               </block>
             </value>
           </block>
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour" inline="true" id="draw-color">
             <value name="COLOUR">
               <block type="colour_random"/>
-            </value>
-          </block>
-          <block type="alpha" inline="true" id="alpha">
-            <value name="VALUE">
-              <block type="math_number_dropdown">
-                <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
-              </block>
             </value>
           </block>
           <block type="draw_colour" inline="true" id="draw-color">
@@ -155,6 +143,26 @@
                 </value>
               </block>
             </value>
+          </block>
+          <block type="alpha" inline="true">
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_width" inline="false">
+            <value name="WIDTH">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_line_style_pattern">
+            <title name="VALUE">DEFAULT</title>
+          </block>
+          <block type="sticker">
+            <title name="VALUE">Elephant</title>
           </block>
         </category>
         <category name="Variables ">

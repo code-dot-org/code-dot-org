@@ -31,7 +31,6 @@ var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 // var Hammer = utils.getHammer();
 var apiTimeoutList = require('../timeoutList');
-var annotationList = require('../acemode/annotationList');
 var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
@@ -734,7 +733,6 @@ Applab.init = function(config) {
     AppStorage.populateTable(level.dataTables, true); // overwrite = true
     AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
     studioApp.resetButtonClick();
-    annotationList.clearRuntimeAnnotations();
   };
 
   // arrangeStartBlocks(config);
@@ -1243,6 +1241,7 @@ Applab.execute = function() {
   var i;
 
   studioApp.reset(false);
+  studioApp.clearAndAttachRuntimeAnnotations();
   studioApp.attempts++;
 
   // Set event handlers and start the onTick timer
@@ -1250,16 +1249,6 @@ Applab.execute = function() {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = studioApp.getCode();
-    if (!studioApp.hideSource) {
-      // Our ace worker also calls attachToSession, but it won't run on IE9:
-      var session = studioApp.editor.aceEditor.getSession();
-      annotationList.attachToSession(session, studioApp.editor);
-      annotationList.clearRuntimeAnnotations();
-      studioApp.editor.aceEditor.session.on("change", function () {
-        // clear any runtime annotations whenever a change is made
-        annotationList.clearRuntimeAnnotations();
-      });
-    }
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)

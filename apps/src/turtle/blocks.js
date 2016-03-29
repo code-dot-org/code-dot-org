@@ -942,11 +942,19 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.sticker = blockly.Blocks.turtle_stamp = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      this.setHSV(184, 1.00, 0.74);
       var dropdown;
       var input = this.appendDummyInput();
       input.appendTitle(msg.drawSticker());
-      dropdown = new blockly.FieldImageDropdown(skin.stickerValues, 60, 50);
+
+      // Generates a list of pairs of the form [[url, name]]
+      var values = [];
+      for (var name in skin.stickers) {
+        var url = skin.stickers[name];
+        values.push([url, name]);
+      }
+
+      dropdown = new blockly.FieldImageDropdown(values, 40, 40);
 
       input.appendTitle(dropdown, 'VALUE');
 

@@ -1,0 +1,80 @@
+#!/bin/bash -x
+# UserData bootstrap script for CloudFormation stack instances.
+
+# Modify cloud-init to re-run bootstrap script every time instance restarts.
+# Ref: http://stackoverflow.com/a/10455027
+sed -i 's/scripts-user$/\[scripts-user, always\]/' /etc/cloud/cloud.cfg
+
+# Bootstrap prerequisites
+apt-get update
+apt-get -y install python-pip jq curl
+test "$(pip show awscli)" || pip install awscli
+
+function getmeta() {
+    curl -s http://169.254.169.254/latest/meta-data/$1
+}
+
+# Update hostname based on instance metadata.
+INSTANCE_ID=$(getmeta instance-id)
+IPV4=$(getmeta local-ipv4)
+hostname=<%=rack_env%>-${INSTANCE_ID}
+echo ${hostname} > /etc/hostname
+echo -e "$IPV4\t$hostname" >> /etc/hosts
+hostname ${hostname}
+
+STACK=<%=stack_name%>
+CHEF_VERSION=12.7.2
+RUN_LIST='recipe[cdo-apps]'
+BRANCH=<%=branch%>
+SUBDOMAIN=<%=subdomain%>
+S3_BUCKET=<%=s3_bucket%>
+REGION=<%=region%>
+
+# Fetch acmesmith-provisioned SSL certificate and key from S3
+aws configure set s3.signature_version s3v4
+S3_PATH=s3://${S3_BUCKET}/ssl/certs/${SUBDOMAIN}
+CURRENT=${S3_PATH}/$(aws s3 cp ${S3_PATH}/current -)
+CERT=$(aws s3 cp ${CURRENT}/cert.pem -)
+CHAIN=$(aws s3 cp ${CURRENT}/chain.pem -)
+KEY=$(aws s3 cp ${CURRENT}/key.pem -)
+
+FIRST_BOOT=/etc/chef/first-boot.json
+mkdir -p $(dirname ${FIRST_BOOT})
+jq "." <<JSON > ${FIRST_BOOT}
+{
+  "cdo-nginx": {
+    "ssl_cert": {
+      "content": "${CERT}"
+    },
+    "ssl_chain": {
+      "content": "${CHAIN}"
+    },
+    "ssl_key": {
+      "content": "${KEY}"
+    }
+  },
+  "cdo-secrets": {
+    "override_dashboard": "dashboard-<%=subdomain%>",
+    "override_pegasus": "<%=subdomain%>"
+  },
+  "omnibus_updater": {
+    "version": "${CHEF_VERSION}"
+  },
+  "cdo-repository": {
+    "branch": "${BRANCH}",
+    "sync": true
+  },
+  "run_list": ["${RUN_LIST}"]
+}
+JSON
+
+sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap.sh - | sudo bash -s -- <%=local_mode ? '-z' : ''%> -b ${BRANCH} -r \"${RUN_LIST}\""
+[ $? -eq 0 ] && STATUS=SUCCESS || STATUS=FAILURE
+
+aws cloudformation signal-resource \
+  --unique-id ${INSTANCE_ID} \
+  --stack-name ${STACK} \
+  --logical-resource-id WebServer \
+  --status ${STATUS} \
+  --region ${REGION} \
+  || true
