@@ -142,6 +142,11 @@ module.exports = {
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 10, function () {
+          console.log('code: ');
+          console.log('------');
+          console.log(Applab.getCode());
+          console.log('------');
+
           var imageData = document.getElementById('turtleCanvas')
             .getContext('2d').getImageData(0, 0, 400, 400);
 
