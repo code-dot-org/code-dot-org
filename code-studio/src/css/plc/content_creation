@@ -1,8 +1,3 @@
-.outlined_section {
-  border: 1px solid;
-  padding: 1em;
-}
-
 .new_link {
   margin-top: 24px;
 }
