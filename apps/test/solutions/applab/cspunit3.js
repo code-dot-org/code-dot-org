@@ -61,7 +61,7 @@ var levelDefinition = {
 
 /**
  * Simulates dragging the nth block in the toolbox into the canvas at line
- * targetIndex (assumes all blocks are size 30).
+ * targetIndex (assumes all blocks are size 27).
  * @param {number} blockIndex Nth block in toolbox
  * @param {number} targetIndex Nth line in target
  */
@@ -69,12 +69,12 @@ function dragToolboxBlock(blockIndex, targetIndex) {
   var start = {
     x: $(".droplet-palette-canvas").eq(0).offset().left + 10,
     y: $(".droplet-palette-canvas").eq(0).offset().top + 10 +
-      blockIndex * 30
+      blockIndex * 27
   };
   var end = {
     x: $(".droplet-main-canvas").eq(0).offset().left,
     y: $(".droplet-main-canvas").eq(0).offset().top +
-      targetIndex * 30
+      targetIndex * 27
   };
 
   var mousedown = testUtils.createMouseEvent('mousedown', start.x, start.y);
@@ -120,6 +120,8 @@ module.exports = {
         Applab.turtle.x = 100;
         Applab.turtle.y = 100;
         console.log('set turtle pos');
+        console.log($('.droplet-hover-div').eq(0).offset());
+        console.log($('.droplet-hover-div').eq(1).offset());
 
         var nextIndex = 0;
         function appendToolboxBlock(blockIndex) {
@@ -128,7 +130,7 @@ module.exports = {
 
         // original results in just 2x moveForward
 
-        // appendToolboxBlock(moveForward);
+        appendToolboxBlock(moveForward);
         appendToolboxBlock(turnLeft);
         appendToolboxBlock(turnLeft);
         appendToolboxBlock(turnLeft);
