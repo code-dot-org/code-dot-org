@@ -25,6 +25,7 @@ el:
   welcome_back: 'Καλώς ήρθες, %{name}'
   submit: Υποβολή
   unsubmit: Ανακλήθηκε
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Προσθέστε ένα δάσκαλο:'
@@ -464,7 +465,6 @@ el:
   landing:
     prerelease: "Αυτό το μάθημα είναι σε έκδοση <span class='betatext'>βήτα (beta)</span>. Αυτό σημαίνει πως δεν είναι η τελική έκδοση του μαθήματος και υπόκειται σε αναθεώρηση καθώς λαμβάνεται ανατροφοδότηση και γίνονται βελτιώσεις."
     prerelease_hoc2014: "Αυτές οι οδηγίες είναι σε έκδοση <span class='betatext'>βήτα (beta)</span>. Αυτό σημαίνει ότι υπόκεινται σε αναθεώρηση καθώς λαμβάνεται ανατροφοδότηση και γίνονται βελτιώσεις."
-    feedback: Αφήστε αξιολόγηση
     report_bug: Αναφορά σφάλματος
     support: Λάβετε βοήθεια
     support_url: //support.code.org
@@ -483,6 +483,16 @@ el:
     correct_body: Ευχαριστούμε για την υποβολή της απάντησης.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Ευχαριστούμε
+    wrong_body: Thank you for submitting answers.
+    correct_title: Ευχαριστούμε
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Ευχαριστούμε
+    wrong_body: Thank you for submitting answers.
+    correct_title: Ευχαριστούμε
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Λανθασμένη λύση
     wrong_body: 'Η λύση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε ξανά!'
@@ -500,9 +510,8 @@ el:
     placeholder: Εισάγετε την απάντησή σας εδώ
     open_response_title: Ευχαριστούμε
     open_response_body: Ευχαριστούμε για την απάντησή σου!
-  level_group:
-    correct_title: Ευχαριστούμε
-    correct_body: Thank you for submitting an answer
+    correct_title: Σωστό
+    correct_body: Αυτή είναι η σωστή απάντηση.
   dialog:
     ok: OΚ
     startover_title: Είστε βέβαιος ότι θέλετε να ξεκινήσετε από την αρχή;
@@ -613,3 +622,7 @@ el:
           other: Άλλα
         detail: Καλείσθε να παράσχετε τόσο λεπτομερώς όσο το δυνατόν σχετικά με το περιεχόμενο που πρόκειται να αναφέρετε.
         acknowledge: 'Υποβάλλοντας αυτές τις πληροφορίες, αναγνωρίζετε ότι θα τη μεταχειριστούμε σύμφωνα με τους όρους της Policy%{link_end} το %{link_start_privacy}Privacy και το %{link_start_tos}Terms του Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

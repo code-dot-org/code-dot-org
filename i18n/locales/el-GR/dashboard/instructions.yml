@@ -356,7 +356,6 @@ el:
       4-5 Maze 9_instruction: 'Δημιούργησε ενα βρόγχο με το μπλοκ "επανάλαβε μέχρι".'
       4-5 Maze Assessment 1_instruction: 'Αξιολόγηση: Πήγαινε στον ηλίανθο.'
       4-5 Maze Conditionals 1_instruction: 'Χρησιμοποίησε το μπλοκ "Επανάλαβε μέχρι" για να οδηγηθεί το Ζόμπι στον Ηλίανθο.'
-      4-5 Maze Conditionals 10_instruction: Μπορείς να προσθέσεις ακριβώς 3 μπλοκς για να με βοηθήσεις να λύσω εναν ποιό πρίπλοκο λαβύρινθο? Αν το κάνεις σωστα, θα μπορώ να περπατήσω κάθε καμπύλο μονοπάτι, οποιουδήποτε μήκους.
       4-5 Maze Conditionals 2_instruction: 'Χρησιμοποίησε το μπλοκ "Επανάλαβε μέχρι" για να οδηγηθεί το Ζόμπι στον Ηλίανθο.'
       4-5 Maze Conditionals 3_instruction: 'Χρησιμοποίησε το μπλοκ "εαν" ωστε να μπορώ να αποφασίζω πότε να στρίψω. Υπόδειξη: χρειάζεσαι μόνο ενα μπλοκ, αλλά μάθε πως το υλοποιούμε ώστε την επόμενη φορά να το κάνεις μόνος σου.'
       4-5 Maze Conditionals 4_instruction: 'Ωραία, αυτό είναι ακριβώς όπως το τελευταίο παζλ, αλλά πρέπει να θυμάσαι πως χρησιμοποίησες μαζί τα μπλοκ "εαν" και "επανάλαβε".'
@@ -1138,6 +1137,10 @@ el:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1590,6 +1593,8 @@ el:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2079,6 +2084,12 @@ el:
       Quantum Bee_instruction: 'Τα μωβ λουλούδια μπορεί να έχουν είτε 1 ή 0 νέκταρ, αλλά δεν γνωρίζεις ποιο! Πρόσεξε να μην συλλέξεις νέκταρ από ένα μωβ λουλούδι, αν δεν έχει καθόλου. Ελεγξε αν το νέκταρ είναι ίσο με 1 χρησιμοποιώντας το μπλοκ "αν".'
       Ryan - 4-5 Bee Conditionals 2_instruction: Η μέλισσα θέλει μόνο νέκταρ αυτή τη στιγμή. Δεν είναι όλα τα αντικείμενα λουλούδια, έτσι κάντε έλεγχο κάτω από κάθε ΣΎΝΝΕΦΟ, να δει αν κρύβεται ένα λουλούδι. Αν είναι, τότε μπορείτε να συγκεντρώσετε νέκταρ.
       Ryan - Bee Conditionals_instruction: Η μέλισσα θέλει μόνο νέκταρ αυτή τη στιγμή. Δεν είναι όλα τα αντικείμενα λουλούδια, έτσι κάνε έλεγχο κάτω από κάθε ΣΎΝΝΕΦΟ, να δεις αν κρύβεται ένα λουλούδι. Αν ναι, τότε μπορείς να συγκεντρώσεις νέκταρ.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Εδώ είναι μια συνάρτηση που ονομάζεται «περιπολία». Επεξεργάσου την ώστε να μετακινεί τη γάτα επάνω 400 εικονοστοιχεία και στη συνέχεια, κάτω 400 εικονοστοιχεία.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |

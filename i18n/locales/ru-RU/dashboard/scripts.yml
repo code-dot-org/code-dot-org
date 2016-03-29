@@ -1641,3 +1641,8 @@ ru:
           "Eval: Conditionals": 'Оценка: Условные выражения'
           "Unplugged: Collision Detection and the Distance Formula": 'Урок без компьютера: Обнаружение столкновений и формула расстояния'
           "Play Lab: Collision Detection (Big Game)": 'Лаборатория игр: обнаружение столкновений (большая игра)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

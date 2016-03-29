@@ -70,7 +70,8 @@ Promise.all([
   build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
       'plc/perform_evaluation.js',
-      'plc/evaluation_creation.js'
+      'plc/evaluation_creation.js',
+      'plc/task_creation.js'
     ],
     commonFile: 'plc'
   }))

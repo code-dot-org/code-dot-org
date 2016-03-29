@@ -25,6 +25,7 @@ et:
   welcome_back: 'Tere tulemast tagasi, %{name}'
   submit: Esita
   unsubmit: Võta vastus tagasi
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Lisa õpetaja:'
@@ -456,7 +457,6 @@ et:
   landing:
     prerelease: "See kursus on <span class='betatext'> beeta</span>.  See tähendab, et see ei ole  lõplik versioon ja  tuleb läbi vaadata, kui saadakse tagasisidet ja parandused on tehtud."
     prerelease_hoc2014: "See õpetus on <span class='betatext'> Beta</span>.  Tuleb läbi vaadata, kui on saabunud tagasiside ja parandused on tehtud."
-    feedback: Anna tagasisidet
     report_bug: Raporteeri veast
     support: Abi saamine
     support_url: //support.code.org
@@ -475,6 +475,16 @@ et:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting answers.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting answers.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Vale lahendus
     wrong_body: Sinu poolt sisestatud lahendus ei ole õige. Palun proovi uuesti!
@@ -492,9 +502,8 @@ et:
     placeholder: Sisesta siia oma vastus
     open_response_title: Tänud
     open_response_body: Täname vastuse eest!
-  level_group:
-    correct_title: Aitäh
-    correct_body: Thank you for submitting an answer
+    correct_title: Õige
+    correct_body: See on õige vastus.
   dialog:
     ok: Olgu
     startover_title: Oled sa kindel et tahad uuesti alustada?
@@ -605,3 +614,7 @@ et:
           other: Muu
         detail: Palun kirjeldage võimalikult detailselt teksti, mida raporteerite.
         acknowledge: 'Selle informatsiooni esitamisel nõustute, et seda käsitletakse vastavalt %{link_start_privacy} privaatsuse tingimustele %{link_end}ja %{link_start_tos} kasutajatingimustele %{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

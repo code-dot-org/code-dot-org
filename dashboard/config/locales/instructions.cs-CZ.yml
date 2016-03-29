@@ -631,9 +631,6 @@
       4-5 Maze Assessment 1_instruction: 'Zhodnocení: Dostaň se ke slunečnici.'
       4-5 Maze Conditionals 1_instruction: Použij bloku opakování až do dostat zombie
         ke slunečnici.
-      4-5 Maze Conditionals 10_instruction: Dokážeš přidat jen 3 bloky a vyřešit složitější
-        bludiště? Pokud to uděláš správně, mohu jít všemi křivolakými cestami bez
-        ohledu na délku.
       4-5 Maze Conditionals 2_instruction: Použij bloku opakování až do dostat zombie
         ke slunečnici.
       4-5 Maze Conditionals 3_instruction: 'Použij blok "if" abych se rozhodoval,
@@ -1857,6 +1854,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2455,6 +2456,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3045,6 +3048,12 @@
       Ryan - Bee Conditionals_instruction: Včela chce právě teď jen nektar. Ne všechny
         objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjistětei, jestli se skrývá
         květ. Pokud ano, můžeš získat nektar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Zde je funkce nazvaná "hlídka." Uprav ji
         k přesunutí Kočky 400 pixelů a pak dolů 400 pixelů.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse

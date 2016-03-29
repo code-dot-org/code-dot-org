@@ -3,6 +3,8 @@ title: CS in Algebra Facilitator Program
 nav: educate_nav
 ---
 # Become a Computer Science in Algebra Facilitator
+**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 22nd. We will update everyone of their acceptance status by April 22nd.**
+
 Code.org is looking to partner with experienced middle school computer science educators to deliver multiple in-person workshops to local middle school teachers teaching our [CS in Algebra curriculum](https://code.org/curriculum/algebra) (powered by Bootstrap). 
 
 The ideal CS in Algebra Facilitator is an enthusiastic supporter of computer science education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the [CS in Algebra curriculum](https://code.org/curriculum/algebra) (powered by Bootstrap), preferably through past teaching experience. Experience mentoring teachers and managing/hosting professional development workshops a plus. **Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.**

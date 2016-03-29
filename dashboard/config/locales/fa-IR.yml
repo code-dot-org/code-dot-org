@@ -25,6 +25,7 @@
   welcome_back: "%{name}، خوش آمدید"
   submit: "ارسال کنید"
   unsubmit: "ثبت نشده"
+  next_page: Next page
   add_teacher_form:
     code:
       label: "افزودن یک معلم:"
@@ -555,7 +556,6 @@
       نبوده بر مبنای بازخورد دریافت شده مورد تجدید نظر واقع شده و بهتر می گردد."
     prerelease_hoc2014: "این آموزش <span class='betatext'> در مرحله بتا</span> است.
       \ بر اساس بازخورد دریافت شده مورد بهینه سازی قرار گرفته."
-    feedback: "دادن بازخورد"
     report_bug: "گزارش اشکال"
     support: "کمک گرفتن"
     support_url: support.code.org
@@ -574,6 +574,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "متشکرم"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "متشکرم"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "متشکرم"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "متشکرم"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: "راه‌حل نادرست"
     wrong_body: "راه‌حلی که شما وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!"
@@ -593,9 +603,8 @@
     placeholder: "پاسخ خود را اینجا وارد کنید"
     open_response_title: "متشکرم"
     open_response_body: "برای پاسختان سپاسگزارم!"
-  level_group:
-    correct_title: "متشکرم"
-    correct_body: Thank you for submitting an answer
+    correct_title: "صحیح است"
+    correct_body: "این پاسخ صحیح است"
   dialog:
     ok: Ok
     startover_title: "آیا مطمئنی که می خواهی دوباره شروع کنی؟"
@@ -731,3 +740,7 @@
         acknowledge: "با ارسال این اطلاعات، شما می پذیرید که مطابق با سیاست %{link_start_privacy}
           حفظ حریم شخصی %{link_end} و %{link_start_tos} شرایط سرویس %{link_end} با
           موضوع برخورد می شود."
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

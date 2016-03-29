@@ -76,9 +76,9 @@
       2-3 Artist Functions 10_instruction: 'Voici deux fonctions : une pour dessiner
         une grande roue et l''autre pour dessiner un petit engrenage. Utilise-les
         pour dessiner l''intérieur d''une machine !'
-      2-3 Artist Functions 11.5_instruction: Voici encore la même fonction « dessiner
-        un hexagone ». Que se passe-t-il si tu tournes seulement de 60 degrés à chaque
-        fois que tu exécutes la boucle ?
+      2-3 Artist Functions 11.5_instruction: Voici cette même fonction « dessiner
+        un hexagone ». Que se passe-t-il si tu mets seulement 60 degrés à chaque fois
+        que tu boucles ?
       2-3 Artist Functions 11_instruction: Nous avons renommé la fonction « dessiner
         un carré » en « dessiner un hexagone », mais elle dessine encore des carrés !
         Peux-tu modifier la fonction « dessiner un hexagone » pour dessiner un hexagone
@@ -716,9 +716,6 @@
       4-5 Maze Assessment 1_instruction: "Évaluation: rejoins le tournesol."
       4-5 Maze Conditionals 1_instruction: Utilise le bloc "répéter jusqu'à" pour
         amener le zombie au tournesol.
-      4-5 Maze Conditionals 10_instruction: Peux-tu ajouter seulement 3 blocs pour
-        m'aider à traverser un labyrinthe plus complexe? Si tu réussis, je pourrai
-        marcher le long de n'importe quel chemin sinueux, peu importe sa longueur.
       4-5 Maze Conditionals 2_instruction: Utilise le bloc "répéter jusqu'à" pour
         amener le zombie au tournesol.
       4-5 Maze Conditionals 3_instruction: 'Utilise le bloc "si" pour me faire décider
@@ -2004,6 +2001,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2627,6 +2628,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3239,6 +3242,12 @@
       Ryan - Bee Conditionals_instruction: L'abeille veut seulement du nectar maintenant.
         Tous les objets ne sont pas des fleurs, donc vérifie sous chaque nuage pour
         voir si une fleur s'y cache. Si c'est le cas, alors tu peux récolter son nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Voilà une fonction appelée "patrouille".
         Edite-la pour déplacer le chat de 400 pixels vers le haut puis 400 pixels vers le bas.

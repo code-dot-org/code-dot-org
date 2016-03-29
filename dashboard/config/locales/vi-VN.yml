@@ -25,6 +25,7 @@
   welcome_back: Chào mừng trở lại, %{name}
   submit: Chấp nhận
   unsubmit: Ngưng gửi
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Thêm một giáo viên:'
@@ -583,7 +584,6 @@
     prerelease_hoc2014: Lớp học này là  <span class='betatext'>phiên bản beta</span>.
       Nó có thể được sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các
       cải tiến.
-    feedback: Gửi ý kiến phản hồi
     report_bug: Báo cáo lỗi
     support: Nhận trợ giúp
     support_url: "//support.code.org"
@@ -602,6 +602,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Cảm ơn bạn
+    wrong_body: Thank you for submitting answers.
+    correct_title: Cảm ơn bạn
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Cảm ơn bạn
+    wrong_body: Thank you for submitting answers.
+    correct_title: Cảm ơn bạn
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Cách giải chưa chính xác
     wrong_body: Cách giải bạn đã nhập chưa chính xác. Xin vui lòng thử lại!
@@ -622,9 +632,8 @@
     placeholder: Nhập câu trả lời của bạn ở đây
     open_response_title: Xin cảm ơn
     open_response_body: Cảm ơn câu trả lời của bạn!
-  level_group:
-    correct_title: Cảm ơn bạn
-    correct_body: Thank you for submitting an answer
+    correct_title: Chính xác
+    correct_body: "Đó là câu trả lời chính xác."
   dialog:
     ok: "Đồng ý"
     startover_title: Bạn có chắc bạn muốn bắt đầu lại?
@@ -764,3 +773,7 @@
         acknowledge: Bằng việc gửi thông tin này, bạn xác nhận nó sẽ bị xử lý theo
           quy định của các điều khoản của %{link_start_privacy}Privacy Policy%{link_end}
           và %{link_start_tos}Terms Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

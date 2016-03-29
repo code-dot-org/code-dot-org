@@ -424,11 +424,9 @@
       4-5 Artist For Loops 15_instruction: 'Birisi koda başladı ama daha sonra anladı
         ki bunun daha kolay bir yolu olmalı! Altıgen sarmal yapmak için "for" bloğunu
         kullanın.(İpucu: son satır uzunluğu 200 pixeldir.)'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: Bu bir "tekrarla" bloğu. 1,2,3... 10 yazmak
+        yerine, "tekrarla" bloğu içine 10 yazarak döngüyü aynı işlemi yapmasını sağlayabilirsin.
+        Döngü içine 10 yazınız.
       4-5 Artist For Loops 3_instruction: 1'den 50'ye kadar nasıl sayabiliriz? "For"
         bloğunu düzenleyin.
       4-5 Artist For Loops 4_instruction: '"İçin" bloğunu 1''den 10''a kadar sayacak
@@ -511,34 +509,26 @@
       4-5 Artist Patterns 2_instruction: Eğer kare döngünüzü bir başka döngünün içerisine
         yerleştirirseniz, biz buna iç içe döngü diyoruz. 15 karenin yan yana hizalandığından
         emin olmak için dış döngüye ne eklemen gerekir?
-      4-5 Artist Patterns 3_instruction: |
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
+      4-5 Artist Patterns 3_instruction: "Şimdi bir düzey daha derin gidelim! Biz
+        bütün bu kod bloğunu bir döngü içine koyun fakat artist tekrar başa dönsün.
+        Hangi kod bloklarını en dıştaki döngü sonunda yerleştirmeliyim?"
       4-5 Artist Patterns 4_instruction: Bu elmasın 50 piksel kenarları ve 120 ve
         60 derece açıları vardır. Döngü kullanarak çiziniz.
       4-5 Artist Patterns 5.5_instruction: Bu elması tam çizmek için kaç kere tekrar
         etmen gerekiyor?
-      4-5 Artist Patterns 5_instruction: |
-        Let's repeat that to make a row of 6 diamonds.
-        Notice that we changed our diamond code to repeat 3 times instead of 2 - why
-        do you think that is?
+      4-5 Artist Patterns 5_instruction: Döngü ile 6 elmas çizin.  elmas kodunu değiştirerek
+        3 kere tekrarlayacağımıza 2 defa tekrarladık. Sizce neden?
       4-5 Artist Patterns 6_instruction: Elmas çizmek için kaç defa tekrarlamak gerekiyor?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
+      4-5 Artist Patterns 7_instruction: Şimdi bir önceki bulmacayı değiştirerek bu
+        karmaşık deseni oluşturalım. Elmasların nasıl kesiştiğine dikkat edelim. "geriye
+        atla" bloğunu 100 yerine 50 piksel yap. Şimdi artist ikinci ileri atla bloğunda
+        ne kadar ilerlemeli?
       4-5 Artist Patterns 8_instruction: Bu altıgeni 40 piksellik kenarlar ile 60
         derecelik dönüşler kullanarak çizebilir misin.
-      4-5 Artist Patterns 9.5_instruction: |
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times to draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
+      4-5 Artist Patterns 9.5_instruction: "Şimdi döngü kullanarak iki altıgen çizelim.
+        İkinci satırın sağa doğru kayık olduğuna dikkat et."
+      4-5 Artist Patterns 9_instruction: "Şimdi kodu 3 kez tekrarla ve bütün satırı
+        çiz. İpucu: her bir altıgen en sağ noktadan en sol noktaya 80 piksel genişliğindedir."
       4-5 Artist Patterns Free Play_instruction: Eğlence zamanı - kendi kendine desen
         yapmayı dene!
       4-5 Bee Conditionals - FC Test_instruction: Arı sadece nektar istiyor. Bütün
@@ -652,9 +642,6 @@
       4-5 Maze Assessment 1_instruction: 'Değerlendirme: Ayçiçeğine ulaş.'
       4-5 Maze Conditionals 1_instruction: Zombi ayçiçeğine ulaşana kadar tekrarla
         bloğunu kullan.
-      4-5 Maze Conditionals 10_instruction: Daha karmaşık bir labireti sadece 3 blok
-        ekleyerek çözmeme yardımcı olur musun? Eğer doğru yaptıysan, bu kıvrımlı yolda
-        uzunluğu ne olursa olsun yürüyebilirim.
       4-5 Maze Conditionals 2_instruction: Zombi ayçiçeğine ulaşana kadar tekrarla
         bloğunu kullan.
       4-5 Maze Conditionals 3_instruction: "Eğer bloğunu kullanarak ne zaman döneceğime
@@ -677,16 +664,14 @@
         kullanarak beni ayçiçeğine ulaştır.
       4-5 Nested Loops 1_instruction: 'Bu üçgenleri çizmek için kodu tamamlayın. İlki
         sizin için yapıldı. İpucu: 3 üçgeni toplam 360 derece dönerek yapılır.'
-      4-5 Nested Loops 10_instruction: |
-        Draw the last row of stars on this flag by
-        looping the provided blocks. The stars are 50 pixels apart, but remember that
-        the stars themselves are 30 pixels wide.
+      4-5 Nested Loops 10_instruction: Bayrak üzerindeki en son yıldız satırını çizin.
+        Yıldızlar 50 piksel aralıklı. Yıldızların kendisi 30 piksel genişlikte.
       4-5 Nested Loops 11_instruction: "İç içe döngü kullanarak 10 kareyi tamamlayın.
         Her bir kare 30 pikseldir."
       4-5 Nested Loops 12_instruction: "İç içe döngü ile 36 tane üçken çizebilir misin?"
-      4-5 Nested Loops 2_instruction: "Now nest this loop inside another loop to\ndraw
-        10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
-        a 360 degree rotation.  \n"
+      4-5 Nested Loops 2_instruction: 'Bu döngüyü başka bir döngü içine koyarak 10
+        üçgen çizin. Buna iç içe döngü denir. İpucu: 10 üçgenin dönüşü toplam 360
+        derece olmaktadır.  '
       4-5 Nested Loops 3_instruction: |
         Güneşi yaratmak için mevcut kodu başka bir döngü içine koyabilir misin? Buna iç içe döngü denir
       4-5 Nested Loops 5_instruction: Bir yel değirmeni oluşturmak için döngü kullan.
@@ -703,29 +688,22 @@
         deliği iki kürek dolusu toprak ile doldur.
       4-5 While Loops 2_instruction: Beni toprak yığınına ulaştır ve "kaldır" bloğu
         ile 5 kürek toprak at.
-      4-5 While Loops 3_instruction: |
-        Move me to the pile and remove all of it, then
-        move to the hole and fill it completely.  Hint:  Use as few blocks as possible.
-      4-5 While Loops 4_instruction: |
-        Wow, I found a really deep hole! I don't know
-        how many shovelfuls of dirt it needs.  Can you write a program that fills
-        it until the ground is even?  Hint:  Try using the while loop this time.
-      4-5 While Loops 5_instruction: |
-        Wow, now there are two deep holes! Can you
-        write a program that fills them both until the ground is even?
-      4-5 While Loops 6_instruction: |
-        Wow, now there is a large pile of dirt! Can
-        you write a program that removes all of it so the ground is even?
-      4-5 While Loops 7_instruction: |
-        Wow, now there are three piles of dirt! Can
-        you write a program that removes each of them until the ground is even?
-      4-5 While Loops 8_instruction: |2
-         There is a really deep hole and a really large
-        pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both.
-      4-5 While Loops Assessment 1_instruction: |
-        There are a lot of holes and piles.  Help
-        me to fill and remove them to make the ground flat.
+      4-5 While Loops 3_instruction: 'Beni yığına taşı ve tamamını temizle, sonra
+        çukura götürüp çukuru doldur. İpucu: en az sayıda blok kullanın.'
+      4-5 While Loops 4_instruction: 'Wow, çok derin bir çukur buldum! Kaç kürek dolusu
+        toprağa ihtiyacı olur bilmiyorum. Dolana kadar onu dolduracak bir program
+        yazabilir misin? İpucu: Tekrarla döngüsü kullanın.'
+      4-5 While Loops 5_instruction: Vay iki derin çukur var. Her iki çukuru da doldurabilir
+        misin?
+      4-5 While Loops 6_instruction: Vay canına, işte büyük bir toprak yığını! Hepsini
+        kaldıran bir program yazabilir miyim?
+      4-5 While Loops 7_instruction: Vay canına, işte büyük bir toprak yığını! Hepsini
+        kaldıran bir program yazabilir miyim?
+      4-5 While Loops 8_instruction: " Gerçekten derin bir çukur ve  büyük bir yığın
+        \ toprak var.  Ne kadar toprağı taşımak gerekiyor  İpucu:  Her ikisi içinde
+        tekrarla döngüsü kullanın."
+      4-5 While Loops Assessment 1_instruction: Birçok çukur ve toprak var. Yardım
+        ederek çukurları doldurmamı ve toprağı temizlememi sağla.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -2058,6 +2036,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2654,6 +2636,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3305,6 +3289,12 @@
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
         is hiding a flower. If it is, then you can gather nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.

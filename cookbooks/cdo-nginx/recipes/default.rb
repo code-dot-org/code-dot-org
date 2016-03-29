@@ -39,6 +39,7 @@ cert = ssl_certificate 'cdo-nginx' do
     chain_source 'attribute'
     source 'attribute'
   end
+  notifies :reload, 'service[nginx]'
 end
 
 template '/etc/nginx/nginx.conf' do

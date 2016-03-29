@@ -1826,3 +1826,8 @@
             atklāšana un distances formula'
           'Play Lab: Collision Detection (Big Game)': 'Spēlu laboratorija: sadursmes
             noteikšana (liela spēle)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

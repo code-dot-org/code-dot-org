@@ -702,8 +702,8 @@
         Collect all of the nectar from these flowers
         by nesting a while loop inside a repeat.
       4-5 Bee Nested Loops Assessment 1_instruction: |
-        Assessment - Collect all of
-        the nectar and make all the honey by using loops.
+        **Assessment:** Collect all
+        of the nectar and make all of the honey using loops.
       4-5 Bee Nested Loops Rows_instruction: |
         Gather nectar from the rows of flowers!
         Use a nested loop.
@@ -737,51 +737,68 @@
         Can you solve this puzzle using the fewest
         number of blocks possible?
       4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 7_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 8_instruction: |
-        Use the "repeat" block to get the zombie to the
-        sunflower. (Avoid the chompers!)
-      4-5 Maze 9_instruction: Create a loop with the "repeat until" block.
-      4-5 Maze Assessment 1_instruction: 'Assessment: Get to the sunflower.'
+        Get me to the sunflower using the fewest number of
+        blocks possible!
+      4-5 Maze 7_instruction: |
+        Get the zombie to the sunflower quickly!  Can you
+        solve the puzzle in fewer than 11 blocks?
+      4-5 Maze 8_instruction: |-
+        Get the zombie to the sunflower using as few blocks
+        as you can.  \r
+        (Avoid the chompers!)
+      4-5 Maze 9_instruction: |-
+        Now we have a new block called `repeat until`.  \r
+        This
+        will let us keep looping commands until the zombie gets the sunflower.  \r
+        \r
+        Use
+        the new `repeat until` block to solve this puzzle in as few commands as possible.
+      4-5 Maze Assessment 1_instruction: |
+        Assessment: Get to the sunflower using
+        as few blocks as possible.
       4-5 Maze Conditionals 1_instruction: |
-        Use the repeat until block to get the
+        Use the `repeat until` block to get the
         zombie to the sunflower.
-      4-5 Maze Conditionals 10_instruction: |
-        Can you add just 3 blocks to help me
-        solve a more complex maze? If you do it right, I can walk any curvy path no
-        matter the length.
       4-5 Maze Conditionals 2_instruction: |
-        Use the repeat until block to get the
+        Use the `repeat until` block to get the
         zombie to the sunflower.
       4-5 Maze Conditionals 3_instruction: |
-        Use the "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
+        Use the `if` block to help me decide
+        when to turn. \r
       4-5 Maze Conditionals 4_instruction: |
-        Ok, this is just like the last puzzle,
-        but you need to remember how you used the "if" block and the "repeat"
-        block together.
-      4-5 Maze Conditionals 5_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 6_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
+        Ok, solve this one just like the last
+        puzzle, but you need to remember how you used the `if` and `repeat until`
+        blocks together.
+      4-5 Maze Conditionals 5_instruction: |-
+        "Me want sunflower!"  \r
+        \r
+        Use an
+        `if` statement to get the zombie to the sunflower with the fewest number of
+        blocks.
+      4-5 Maze Conditionals 6_instruction: |-
+        "Eat sunflower!"\r
+        \r
+        Use an `if`
+        statement to get the zombie to the sunflower with the fewest number of blocks.
       4-5 Maze Conditionals 7_instruction: |
-        Ok, let's do that again for practice
-        - this isn't very different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_instruction: |
-        The "if/else" block checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
-      4-5 Maze Conditionals 9_instruction: |
-        One more practice of the "if-else"
-        block, can you get it right on your first try?
+        The solution to this puzzle isn't very
+        different, but watch out for the chompers!
+      4-5 Maze Conditionals 8_instruction: |-
+        The `if/else` block checks a condition,
+        and then does one thing OR another. \r
+        \r
+        Use this new block to get me to
+        the sunflower.
+      4-5 Maze Conditionals 9_instruction: |-
+        One more practice puzzle with the `if/else`
+        block!\r
+        \r
+        Trace it with your finger to see if you can figure it out on
+        your first try.
       4-5 Maze Conditionals Assessment 1_instruction: |
-        Use a "repeat until" and
-        an "if-else" block to get me to the sunflower in as few blocks as possible.
+        **Assessment:** Use a `repeat
+        until` and an `if/else` block to get me to the sunflower in as few blocks
+        as possible.
       4-5 Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -796,38 +813,43 @@
         Can you draw these 36 triangles using a nested
         loop?
       4-5 Nested Loops 2_instruction: "Now nest this loop inside another loop to\ndraw
-        10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
-        a 360 degree rotation.  \n"
-      4-5 Nested Loops 3_instruction: |
+        10 triangles.  This is called a \"nested\" loop.  \n"
+      4-5 Nested Loops 3_instruction: |-
         Create a sun by nesting the starter code in
-        another loop. This is called a nested loop.\r
+        another loop.\r
+        \r
+        To get this cool design with a hollow center, you'll
+        need to jump forward by the length of the triangle before turning.
       4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
       4-5 Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the triangle
         code?
-      4-5 Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      4-5 Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 6?)
+      4-5 Nested Loops 7_instruction: |-
+        Loop this design 10 times. \r
+        \r
+        How much
+        do you have to turn each time you loop?
+      4-5 Nested Loops 8_instruction: "Loop this shape 6 times. \\r\n\\r\nHow much\ndo
+        you have to turn each time you loop? "
       4-5 Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
       4-5 Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete the
-        design.
+        Assessment: Use a nested loop to
+        complete the design.
       4-5 While Loops 1_instruction: |
         Move me to the hole and fill it with two shovelfuls
-        of dirt, using the "fill" block.
+        of dirt, using the `fill` block.
       4-5 While Loops 2_instruction: |
         Move me to the pile of dirt and remove it with
-        5 shovel scoops, using the 'remove' block.
-      4-5 While Loops 3_instruction: |
-        Move me to the pile and remove all of it, then
-        move to the hole and fill it completely.  Hint:  Use as few blocks as possible.
-      4-5 While Loops 4_instruction: |
-        Wow, I found a really deep hole! I don't know
-        how many shovelfuls of dirt it needs.  Can you write a program that fills
-        it until the ground is even?  Hint:  Try using the while loop this time.
+        5 shovel scoops, using the `remove 1` block.
+      4-5 While Loops 3_instruction: |-
+        Use as few blocks as possible to complete this
+        puzzle!  \r
+        \r
+        Move me to the pile and remove all the dirt, then move to
+        the hole and fill it completely.
+      4-5 While Loops 4_instruction: "Wow, look at that! \\r\n\\r\nI don't know how\nmany
+        shovelfuls of dirt this hole needs.  \\r\nCan you write a program that\nkeeps
+        using the `fill` block until the ground is even?  "
       4-5 While Loops 5_instruction: |
         Wow, now there are two deep holes! Can you
         write a program that fills them both until the ground is even?
@@ -2288,6 +2310,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2945,6 +2971,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3616,6 +3644,12 @@
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
         is hiding a flower. If it is, then you can gather nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.

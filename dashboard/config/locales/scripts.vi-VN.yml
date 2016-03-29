@@ -1846,3 +1846,8 @@
             hiện sự va chạm và Công thức khoảng cách'
           'Play Lab: Collision Detection (Big Game)': 'Phòng thí nghiệm trò chơi:
             Phát hiện va chạm (Trò chơi lớn)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

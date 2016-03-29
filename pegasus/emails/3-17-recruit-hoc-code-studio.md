@@ -9,9 +9,13 @@ Try our 20-hour courses that students love. The courses are [translated into 16 
 
 Code.org's online platform [Code Studio](https://studio.code.org/) enables students to learn the basic concepts of computer science as early as kindergarten. Teachers can track student progress and access lesson plans online. 
 
-Get started with [free online professional learning](https://code.org/educate/professional-development-online) for our 20-hour courses.
+<% if international == 'false' %>
+We offer [free one-day workshops](https://code.org/professional-development-workshops) for K-5 educators to help you get started. All costs are covered by Code.org. Find a local workshop. For middle school and high school courses, ask your school about partnering with us. [Learn more](https://code.org/professional-development-workshops).
+<% end %>
 
 [![image](https://code.org/images/fit-600/email/code-studio.png)](https://studio.code.org/)
+
+Get started with [free online professional learning](https://code.org/educate/professional-development-online) for our 20-hour courses.
 
 [Explore all Code Studio courses](https://studio.code.org/)
 

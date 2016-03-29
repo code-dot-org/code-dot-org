@@ -6,35 +6,36 @@ nav: educate_nav
 # Computer Science in Algebra
 ### Powered by Bootstrap, Preferred Provider for Professional Development
 
-Code.org has partnered with [Bootstrap](http://www.BootstrapWorld.org) to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The two ten hour courses focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
+Code.org has partnered with [Bootstrap](http://www.BootstrapWorld.org) to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The two ten hour courses focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org's CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
 
 ## The Two Courses
 
+<img style="float: right; margin-left: 10px; width: 200px" src="algebra/img/csina.png"/>
+
 ### CS in Algebra Course A
-The first 10 hour course provides students with the fundamental skills and knowledge to begin using computer programming as a tool to learn about and develop Algebraic functions. Students will be introduced to a graphical programming language designed for Algebra instruction, through which they will gain a deeper understanding of the order of operations, create images with algebraic expressions, and learn a teachnique for creating functions called the Design Recipe. By the end of Course A students will have the tools necessary to turn word problems from their own Algebra class into functions that can be used as mini apps.
+The first 10 hour course provides students with the fundamental skills and knowledge to begin using computer programming as a tool to learn about and develop algebraic functions. Students will be introduced to a graphical programming language designed for Algebra instruction, through which they will gain a deeper understanding of the order of operations, create images with algebraic expressions, and learn a technique for creating functions called the Design Recipe. By the end of Course A students will have the tools necessary to turn word problems from their own Algebra class into functions that can be used as mini apps.
 
 ### CS in Algebra Course B
-For classes that wish to go further, the second 10 hour course builds on the skills students developed in Course A through the development of a simple video game. Students will explore more advanced topics such as booleans, conditionals, and collision detection with the Pythagorean Theorem, using these concepts to build small component functions that will eventually drive the logic in their culminating game.
+For classes that wish to go further, the second 10 hour course builds on the skills students developed in Course A through the development of a simple video game. Students will explore more advanced topics such as booleans, conditionals, and collision detection with the Pythagorean Theorem, using these concepts to build supporting functions that will eventually drive the logic in their culminating game.
 
-Bothe CS in Algebra courese are aligned to Common Core Standards for Mathematics, making it possible to integrate our curriculum into the classroom smoothly. CS in Algebra is also a model implementation of Common Core Standards for Mathematical Practice, offering explicit pedagogical recommendation across all eight practice standards. Our curriculum also satisfies several of the CSTA (Computer Science Teacher's Association) standards across levels 1 (grades K-6) and 2 (grades 6-9). For more information, you can view our [complete standards alignment](/curriculum/docs/algebra/standards).
-
-
+## Aligned to Standards
+Both CS in Algebra courses are aligned to Common Core Standards for Mathematics, making it possible to integrate our curriculum into the classroom smoothly. CS in Algebra is also a model implementation of Common Core Standards for Mathematical Practice, offering explicit pedagogical recommendation across all eight practice standards. Our curriculum also satisfies several of the CSTA (Computer Science Teacher's Association) standards across levels 1 (grades K-6) and 2 (grades 6-9). For more information, you can view our [complete standards alignment](/curriculum/docs/algebra/standards).
 
 <a name="start"><a/>
 ## How do I start teaching CS in Algebra?
 
-We provide a blended professional development program that prepares teachers to implement Course A. Read more about the professional development program [here](/educate/professional-learning/cs-in-algebra).
+We provide a Professional Learning Program that prepares teachers to implement Course A. Read more about the program [here](/educate/professional-learning/cs-in-algebra).
 
-## Additional Support Documents
+## I taught CS in Algebra in 2015-2016, how is this different?
+
+None of the lessons from the original version of CS in Algebra have been removed, but in response to teacher feedback we have restructued the course to make it easier to integrate just the Evaluation Blocks and Design Recipe elements into your class. Course A and Course B together make up the same original 20 lessons, but if you would like to use the original materials they are still available [here](//code.org/curriculum/algebra)
+
+### Additional Support Documents
 [Teacher Manual](/curriculum/docs/algebra/teacher_manual.pdf)<br/>
 [Student Workbook](/curriculum/docs/algebra/student_workbook.pdf)<br/>
 [Course Overview](/curriculum/docs/algebra/overview)<br/>
 [Course Framework](/curriculum/docs/algebra/framework)<br/>
 [Standards Alignment](/curriculum/docs/algebra/standards)
-
-## I taught CS in Algebra in 2015-2016, how is this different?
-
-None of the lessons from the original version of CS in Algebra have been removed, but in response to teacher feedback we have restructued the course to make it easier to integrate just the Evaluation Blocks and Design Recipe elements into your class. Course A and Course B together make up the same original 20 lessons, but if you would like to use the original materials they are still available [here](//code.org/curriculum/algebra)
 
 <h2>Videos</h2>
 

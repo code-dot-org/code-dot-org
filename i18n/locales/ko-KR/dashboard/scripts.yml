@@ -1641,3 +1641,8 @@ ko:
           "Eval: Conditionals": '평가: 조건/선택'
           "Unplugged: Collision Detection and the Distance Formula": '언플러그드: 충돌 감지와 거리 계산식'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: 충돌 감지 (빅 게임)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

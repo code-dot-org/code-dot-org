@@ -1,6 +1,6 @@
 ---
 transport:
-  name: ssh_tgz
+  name: sftp
 driver:
   name: docker
   use_sudo: false

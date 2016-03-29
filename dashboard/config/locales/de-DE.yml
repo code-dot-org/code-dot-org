@@ -26,6 +26,7 @@
   welcome_back: Willkommen zurück, %{name}
   submit: Absenden
   unsubmit: Zurücknehmen
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Lehrer hinzufügen:'
@@ -577,7 +578,6 @@
       Änderungen, da Feedback empfangen wird und Verbesserungen vorgenommen werden.
     prerelease_hoc2014: Die Einführung liegt als <span class='betatext'>Testversion</span>
       vor. Es wird gemäß den Rückmeldungen überarbeitet und verbessert.
-    feedback: Feedback geben
     report_bug: Fehler melden
     support: Hilfe erhalten
     support_url: "//support.code.org"
@@ -597,6 +597,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Vielen Dank
+    wrong_body: Thank you for submitting answers.
+    correct_title: Vielen Dank
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Vielen Dank
+    wrong_body: Thank you for submitting answers.
+    correct_title: Vielen Dank
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Falsche Lösung
     wrong_body: Die Lösung, die du eingegeben hast, ist nicht korrekt. Bitte versuche
@@ -617,9 +627,8 @@
     placeholder: Gebe hier deine Antwort ein
     open_response_title: Danke
     open_response_body: Danke für deine Antwort!
-  level_group:
-    correct_title: Vielen Dank
-    correct_body: Thank you for submitting an answer
+    correct_title: Richtig
+    correct_body: Das ist die richtige Antwort.
   dialog:
     ok: OK
     startover_title: Bist du dir sicher das du neu anfangen möchtest?
@@ -756,3 +765,7 @@
           gemäß den Bedingungen der %{link_start_privacy}Datenschutzerklärung%{link_end}
           und die %{link_start_tos}allgemeinen Geschäftsbedingungen%{link_end} behandelt
           werden
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: Keine Symbole gefunden

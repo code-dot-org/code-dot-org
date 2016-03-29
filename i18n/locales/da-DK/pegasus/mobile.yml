@@ -21,7 +21,7 @@ da-DK:
   twentyhours_heading: Prøv vores intro til programmeringskursus
   twentyhours_text: 'Færdig med din første Hour of Code? Lær flere centrale datalogi- og programmeringbegreber i dette opfølgende kursus.'
   og_title: Ethvert barn fortjener muligheder
-  og_description: Alle elev i alle skoler fortjener muligheden for at studere computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Vær med i <a href="http://hourofcode.com">Hour of Code</a> <br/>8. - 14. December 2014 <br/>'
   hoc2014_students: Elever
   hoc2014_try: Prøv det
@@ -179,7 +179,7 @@ da-DK:
   learn_next_level: Fortsæt til det næste niveau
   learn_online: Prøv andre online kurser
   learn_classes: Find lokale klasser
-  hoc_is_here: 'Denne sidste Computer videnskab uddannelse uge, #HourOfCode har nået 50 millioner studerende.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Jeg har lige taget en #HourOfCode - tjek det ud! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -510,6 +510,7 @@ da-DK:
   dashboard_navigation_all_sections: Elevernes konti og fremskridt
   dashboard_navigation_view_progress: Se fremskridt
   dashboard_navigation_view_text_responses: Vis tekstsvar
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Tilføj elever
   dashboard_navigation_manage_students: Administrer elever
   dashboard_navigation_lesson_plans_resources: Lektionsplaner og ressourcer
@@ -608,6 +609,16 @@ da-DK:
   dashboard_puzzle: Opgave
   dashboard_question: Spørgsmål
   dashboard_response: Svar
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Rigtigt
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Utrolige statistikker fra sidste års "Hour of Code". I en uge alene:'
   stats_hoc_2013_image_alt: 'Statistik fra 2013 "Hour of Code"'
   dashboard_teacher: Lærer

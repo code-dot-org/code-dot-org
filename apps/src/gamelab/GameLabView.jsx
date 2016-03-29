@@ -1,6 +1,7 @@
 /** @file Top-level view for GameLab */
 'use strict';
 
+var AnimationTab = require('./AnimationTab/index.jsx');
 var connect = require('react-redux').connect;
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
@@ -24,15 +25,6 @@ var GameLabView = React.createClass({
     this.props.onMount();
   },
 
-  render: function () {
-    return (
-      <ConnectedStudioAppWrapper>
-        {this.renderCodeMode()}
-        {this.renderAnimationMode()}
-      </ConnectedStudioAppWrapper>
-    );
-  },
-
   renderCodeMode: function () {
     // Code mode contains protected (non-React) content.  We have to always
     // render it, so when we're not in code mode use CSS to hide it.
@@ -44,32 +36,36 @@ var GameLabView = React.createClass({
     return (
       <div style={codeModeStyle}>
         <div id="visualizationColumn">
-          {this.shouldShowHeader() && <GameLabVisualizationHeader/>}
+          {this.shouldShowHeader() && <GameLabVisualizationHeader />}
           <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <ProtectedStatefulDiv id="codeWorkspace">
-          <ProtectedStatefulDiv id="codeWorkspaceWrapper" contentFunction={this.props.generateCodeWorkspaceHtml}/>
+          <ProtectedStatefulDiv
+              id="codeWorkspaceWrapper"
+              contentFunction={this.props.generateCodeWorkspaceHtml} />
         </ProtectedStatefulDiv>
       </div>
     );
   },
 
   renderAnimationMode: function () {
-    // Don't render animation mode when we're not in that mode (pure React!)
-    if (this.props.interfaceMode !== GameLabInterfaceMode.ANIMATION) {
-      return undefined;
-    }
-
-    return (
-      <div>
-        <GameLabVisualizationHeader/>
-      </div>
-    );
+    return this.props.interfaceMode === GameLabInterfaceMode.ANIMATION ?
+        <AnimationTab /> :
+        undefined;
   },
 
   shouldShowHeader: function () {
     return !(this.props.isEmbedView || this.props.isShareView);
+  },
+
+  render: function () {
+    return (
+      <ConnectedStudioAppWrapper>
+        {this.renderCodeMode()}
+        {this.renderAnimationMode()}
+      </ConnectedStudioAppWrapper>
+    );
   }
 });
 module.exports = connect(function propsFromStore(state) {
