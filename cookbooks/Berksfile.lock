@@ -7,6 +7,8 @@ DEPENDENCIES
     path: cdo-authorized-keys
   cdo-awscli
     path: cdo-awscli
+  cdo-freegeoip
+    path: cdo-freegeoip
   cdo-github-access
     path: cdo-github-access
   cdo-home-ubuntu
@@ -75,6 +77,8 @@ GRAPH
     sudo-user (>= 0.0.0)
   cdo-authorized-keys (0.1.2)
   cdo-awscli (0.1.1)
+  cdo-freegeoip (0.1.0)
+    freegeoip (>= 0.0.0)
   cdo-github-access (0.1.4)
   cdo-home-ubuntu (0.1.2)
   cdo-java-7 (0.1.1)
@@ -110,6 +114,7 @@ GRAPH
     compat_resource (>= 0.0.0)
   compat_resource (12.9.1)
   cron (1.7.4)
+  freegeoip (1.0.1)
   homebrew (2.0.5)
     build-essential (>= 2.1.2)
   ixgbevf (0.1.2)

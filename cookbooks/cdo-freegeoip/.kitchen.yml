@@ -1,0 +1,16 @@
+---
+transport:
+  name: sftp
+driver:
+  name: docker
+  use_sudo: false
+  privileged: true
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 12.7.2
+platforms:
+  - name: ubuntu-14.04
+suites:
+  - name: default
+    run_list:
+      - recipe[cdo-freegeoip]
