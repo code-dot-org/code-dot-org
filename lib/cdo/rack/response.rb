@@ -3,7 +3,9 @@ module Rack
   class Response
     # From Rack 2.0 alpha: rack/rack#957
     def has_header?(key);   headers.key? key;   end
+
     def get_header(key);    headers[key];       end
+
     def set_header(key, v); headers[key] = v;   end
 
     def add_header(key, v)
