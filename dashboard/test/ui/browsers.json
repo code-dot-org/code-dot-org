@@ -4,7 +4,7 @@
   {
     "name": "ChromeLatestWin7",
     "browserName": "chrome",
-    "version": "",
+    "version": "latest",
     "platform": "Windows 7"
   },
   {
@@ -38,15 +38,15 @@
     "platform": "Windows 10"
   },
   {
-    "name": "Firefox38Yosemite",
+    "name": "FirefoxLatest-2Yosemite",
     "browserName": "firefox",
-    "version": "38.0",
+    "version": "latest-2",
     "platform": "OS X 10.10"
   },
   {
-    "name": "Firefox39Win7",
+    "name": "FirefoxLatestWin7",
     "browserName": "firefox",
-    "version": "39.0",
+    "version": "latest",
     "platform": "Windows 7"
   },
   {

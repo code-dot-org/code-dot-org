@@ -26,6 +26,7 @@
   welcome_back: "Üdv újra, %{name}"
   submit: Elküldés
   unsubmit: Visszavon
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
@@ -565,7 +566,6 @@
     prerelease_hoc2014: Ez a tananyag <span class='betatext'> béta állapotban van</span>.
       A visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés
       várható.
-    feedback: Visszajelzés küldése
     report_bug: Hiba bejelentése
     support: Segítség kérés
     support_url: "//support.code.org"
@@ -584,6 +584,16 @@
     correct_body: Köszönjük hogy elküldtél egy választ.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Köszönöm
+    wrong_body: Thank you for submitting answers.
+    correct_title: Köszönöm
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Köszönöm
+    wrong_body: Thank you for submitting answers.
+    correct_title: Köszönöm
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Helytelen megoldás
     wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
@@ -603,9 +613,8 @@
     placeholder: Itt add meg a válaszod
     open_response_title: Köszönjük
     open_response_body: Köszönjük a választ!
-  level_group:
-    correct_title: Köszönöm
-    correct_body: Thank you for submitting an answer
+    correct_title: Helyes
+    correct_body: Ez a helyes válasz.
   dialog:
     ok: OK
     startover_title: Biztosan újra szeretnéd kezdeni?
@@ -741,3 +750,7 @@
         acknowledge: Az alábbi információk megadásával tudomásul veszed, hogy azokat
           az %{link_start_privacy}Adatvédelmi szabályzatnak%{link_end} és a %{link_start_tos}Felhasználói
           szabályoknak%{link_end} megfelelően kezeljük
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

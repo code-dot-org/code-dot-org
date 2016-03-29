@@ -403,7 +403,6 @@
       4-5 Maze 9_instruction: "「までを繰り返します」ブロックを使ってループを作ってください。"
       4-5 Maze Assessment 1_instruction: "課題：ヒマワリまで辿り着く。"
       4-5 Maze Conditionals 1_instruction: "「までを繰り返します」ブロックを使ってゾンビをヒマワリまで連れて行く。"
-      4-5 Maze Conditionals 10_instruction: "３つのブロックのみを加えてもっと複雑な迷路を解き明かすのを手伝ってくれますか？ちゃんと出来たら、どんなに曲がった道でも、どんな長さの道でも歩けるようになります。"
       4-5 Maze Conditionals 2_instruction: "「までを繰り返します」ブロックを使ってゾンビをヒマワリまで連れて行く。"
       4-5 Maze Conditionals 3_instruction: "「もし」ブロックを使って、いつ曲がるかを決めてください。ヒント：あともう１つのブロックが必要です、どう設定しているかを学べば、次はひとりでできるようになります。"
       4-5 Maze Conditionals 4_instruction: Ok。さっきのパズルと同じです、でもどうやって"もし"ブロックと"繰り返し"ブロックを一緒に使ったかをもう一度思い出してみましょう。
@@ -1809,6 +1808,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2329,6 +2332,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2964,6 +2969,12 @@
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
         is hiding a flower. If it is, then you can gather nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.

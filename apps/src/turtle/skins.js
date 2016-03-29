@@ -39,37 +39,49 @@ exports.load = function (assetUrl, id) {
     }
   };
 
+  /**
+   * Generates a mapping of sticker names to the urls of their images.
+   *
+   * @return the mapping of names to urls
+   */
+  var stickers = function() {
+
+    // Playlab characters
+    var playlab = ['Alien'   , 'Bat'     , 'Bird'     , 'Cat'       , 'Caveboy'   ,
+                   'Cavegirl', 'Dinosaur', 'Dog'      , 'Dragon'    , 'Ghost'     ,
+                   'Knight'  , 'Monster' , 'Ninja'    , 'Octopus'   , 'Penguin'   ,
+                   'Pirate'  , 'Princess', 'Robot'    , 'Soccerboy' , 'Soccergirl',
+                   'Spacebot', 'Squirrel', 'Tennisboy', 'Tennisgirl', 'Unicorn'   ,
+                   'Witch'   , 'Wizard'  , 'Zombie'   ];
+
+    // Miscellaneous stickers
+    var misc = ['Beaver', 'Bunny'      , 'Chicken', 'Elephant', 'Giraffe',
+                'Goat'  , 'Grasshopper', 'Hippo'  , 'Lion'    , 'Llama'  ,
+                'Monkey', 'Moose'      , 'Mouse'  , 'Owl'     , 'Peacock',
+                'Rocket', 'Triceratops', 'Turtle' , 'Zebra'   ];
+
+    var mapping = {};
+
+    var i, name;
+    for (i = 0; i < playlab.length; i++) {
+      name = playlab[i];
+      mapping[name] =  assetUrl('media/skins/studio/' + name.toLowerCase() + '_thumb.png');
+    }
+
+    for (i = 0; i < misc.length; i++) {
+      name = misc[i];
+      mapping[name] = assetUrl('media/common_images/stickers/' + name.toLowerCase() + '.png');
+    }
+
+    return mapping;
+  };
+
+  skin.stickers = stickers();
+
   var config = CONFIGS[skin.id];
 
   // base skin properties here (can be overriden by CONFIG)
   skin.speedModifier = 1;
-
-  skin.stickerValues = [
-    [skin.stickers.elephant, 'Elephant'],
-    [skin.stickers.dragon, 'Dragon'],
-    [skin.stickers.triceratops, 'Triceratops'],
-    [skin.stickers.monkey, 'Monkey'],
-    [skin.stickers.cat, 'Cat'],
-    [skin.stickers.turtle, 'Turtle'],
-    [skin.stickers.goat, 'Goat'],
-    [skin.stickers.zebra, 'Zebra'],
-    [skin.stickers.hippo, 'Hippo'],
-    [skin.stickers.bunny, 'Bunny'],
-    [skin.stickers.peacock, 'Peacock'],
-    [skin.stickers.llama, 'Llama'],
-    [skin.stickers.giraffe, 'Giraffe'],
-    [skin.stickers.mouse, 'Mouse'],
-    [skin.stickers.beaver, 'Beaver'],
-    [skin.stickers.bat, 'Bat'],
-    [skin.stickers.grasshopper, 'Grasshopper'],
-    [skin.stickers.chicken, 'Chicken'],
-    [skin.stickers.moose, 'Moose'],
-    [skin.stickers.owl, 'Owl'],
-    [skin.stickers.penguin, 'Penguin'],
-    [skin.stickers.lion, 'Lion'],
-    [skin.stickers.robot, 'Robot'],
-    [skin.stickers.rocket, 'Rocket'],
-  ];
 
   // Get properties from config
   var isAsset = /\.\S{3}$/; // ends in dot followed by three non-whitespace chars

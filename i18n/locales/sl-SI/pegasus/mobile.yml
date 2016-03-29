@@ -21,7 +21,7 @@ sl-SI:
   twentyhours_heading: Poskusite naš tečaj Uvod v Računalništvo
   twentyhours_text: Ste končali prvo Uro za kodo? Preberite več računalništvu in konceptih programiranja v tem spremljanjem tečaju.
   og_title: Vsak otrok si zasluži priložnost
-  og_description: Vsak učenec v vsaki šoli si zasluži priložnost, da se uči računalništva.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Pridružite se <a href="http://hourofcode.com"> Uri za kodo</a> <br/> 8. do 14. decembra, 2014 <br/>'
   hoc2014_students: Učenci
   hoc2014_try: Preizkusite
@@ -179,7 +179,7 @@ sl-SI:
   learn_next_level: Nadaljujte na naslednjo stopnjo
   learn_online: Poskusite druge spletne tečaje
   learn_classes: Poišči lokalne tečaje
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Pravkar sem končal #UraZaKodo! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -514,6 +514,7 @@ sl-SI:
   dashboard_navigation_all_sections: Študentski računi in napredek
   dashboard_navigation_view_progress: Prikaz napredka
   dashboard_navigation_view_text_responses: Ogled besedilnih odgovorov
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Dodaj učence
   dashboard_navigation_manage_students: Upravljaj z učenci
   dashboard_navigation_lesson_plans_resources: Učni načrti in viri
@@ -612,6 +613,16 @@ sl-SI:
   dashboard_puzzle: Uganka
   dashboard_question: Vprašanje
   dashboard_response: Odgovor
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Pravilno
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Neverjetne statistike iz lanskoletne Ure za kodo. Samo v enem tednu:'
   stats_hoc_2013_image_alt: Statistika Ure za kodo 2013
   dashboard_teacher: Učitelj/ica

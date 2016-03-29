@@ -1,14 +1,4 @@
-.text-match
-  - data = @level.properties
-  - app = 'text_match'
-
-  .mainblock
-    = render partial: 'levels/content', locals: {app: app, data: data}
-    - height = data['height'] || '80'
-    %textarea.response{placeholder: data['placeholder'] ? string_or_image(app, data['placeholder']) : t(app + '.placeholder'), style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}
-    = render partial: 'levels/dialog', locals: {app: app, data: data}
-    = render partial: 'levels/teacher_markdown', locals: {data: data}
-  .clear
+= render partial: 'levels/single_text_match', locals: {index: 0, standalone: true, level: @level, last_attempt: @last_attempt }
 
 = render partial: 'levels/common_audio'
 

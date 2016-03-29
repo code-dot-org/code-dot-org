@@ -85,8 +85,8 @@
         75 პიქსელითაა დაშორებული.
       2-3 Artist Functions 3_instruction: "ჩაასწორეთ ფუნქცია ისე, რომ დახატოს კვადრატი
         გვერდით 115 და დახატეთ უფრო დიდი სათვალე. კვადრატები ახლა 45 პიქსელითაა დაშორებული."
-      2-3 Artist Functions 4_instruction: ამ სამი კვადრატის დასახატად გამოიყენეთ ბლოკი
-        "გამეორება".
+      2-3 Artist Functions 4_instruction: "ახლა კი, ჩასვით ფუნქცია ციკლში ამ სამი
+        კვადრატის დასახატად."
       2-3 Artist Functions 7_instruction: 'გამოიყენეთ ფუნქცია "დახატე სახლი" და დახატეთ
         ორი სახლი განსხვავებული პარამეტრებით. (მინიშნება: პირველი სახლი 100 პიქსელია).'
       2-3 Artist Functions 9_instruction: "ეს არის ფიფქის ფუნქცია. ითამაშეთ ამ ფუნქციით
@@ -187,11 +187,12 @@
       2-3 Bee Conditionals 15_instruction: "კიბის ეს ფორმა ნაცნობი უნდა იყოს.\\r\\r
         შეგიძლიათ მოკრიბოთ ნექტარი მისი შემცველი ყვავილებიდან ბლოკების მინიმალური
         რაოდენობის გამოყენებით?"
-      2-3 Bee Conditionals 2_instruction: "ჰეი, მე მშიერი ფუთკარი ვარ! \\r დამეხმარეთ
-        - ყველა ყვავილის ნექტარი უნდა მოვკრიბო ბლოკების მინიმალური რაოდენობის გამოყენებით."
-      2-3 Bee Conditionals 3_instruction: "შეხედეთ, რამდენია!\\r\\rდამეხმარეთ, მოვკრიბო
-        ნექტარი მთლიანად და დავამზადო თაფლი ბლოკების მინიმალური რაოდენობის გამოყენებით.
-        \ "
+      2-3 Bee Conditionals 2_instruction: |-
+        ჰეი, მე მშიერი ფუტკარი ვარ! \r
+        დამეხმარეთ - ყველა ყვავილის ნექტარი უნდა მოვკრიბო ბლოკების მინიმალური რაოდენობის გამოყენებით.
+      2-3 Bee Conditionals 3_instruction: "შეხედეთ, რამდენია!\\r\n\\r\nდამეხმარეთ,
+        მოვკრიბო ნექტარი მთლიანად და დავამზადო თაფლი ბლოკების მინიმალური რაოდენობის
+        გამოყენებით.  "
       2-3 Bee Conditionals 4_instruction: "დამეხმარეთ - ყველა ყვავილის ნექტარი უნდა
         მოვკრიბო და მერე თაფლი გავაკეთო."
       2-3 Bee Conditionals 5_instruction: ფრთხილად - არ მოკრიბოთ ნექტარი ისეთი ყვავილისგან,
@@ -590,7 +591,8 @@
         დაასრულეთ "აიღე ნექტარი ან გააკეთეთ თაფლი" ფუნქცია, შემდეგ კი გამოიძახეთ მთელი
         ნექტარისა და თაფლის შესაგროვებლად. გახსოვდეთ, რომ იასამნისფერ ყვავილში არის
         3, 2 ან 1 ნექტარი.'
-      4-5 Bee Debugging 1_instruction: "ეს ბლოკები ძალიან მაწუხებს. შეგიძლიათ გაასაწოროთ?"
+      4-5 Bee Debugging 1_instruction: "ეს ბლოკები ძალიან მაწუხებს.\\r\\r შეგიძლიათ,
+        გაასწოროთ?"
       4-5 Bee Debugging 10_instruction: "იპოვეთ და გაასწორეთ შეცდომები."
       4-5 Bee Debugging 11_instruction: "ეს სწორად ითვლის?"
       4-5 Bee Debugging 2_instruction: "დაეხმარეთ ფუტკარს ნექტრის შეგროვებასა და თაფლის
@@ -656,17 +658,14 @@
       4-5 Maze 8_instruction: "გამოიყენეთ გამეორების ბლოკი, რომ მიიყვანოთ ზომბი მზესუმზირამდე.
         (მოერიდეთ მტაცებლებს!)"
       4-5 Maze 9_instruction: შექმენით ციკლით, რომელშიც "გაიმეორე სანამ" ბლოკი იქნება.
-      4-5 Maze Assessment 1_instruction: "შეჯამება: მიდით მზესუმზირამდე."
+      4-5 Maze Assessment 1_instruction: "შეჯამება: მიდით მზესუმზირამდე ბლოკების მინიმალური
+        რაოდენობის გამოყენებით."
       4-5 Maze Conditionals 1_instruction: გამოიყენეთ "გაიმეორე სანამ" ბლოკი, რათა
         მიიყვანოთ ზომბი მზესუმზირამდე.
-      4-5 Maze Conditionals 10_instruction: "შეგიძლიათ დაამატოთ მხოლოდ 3 ბლოკი, რათა
-        დამეხმაროთ უფრო რთული ლაბირინთიდან გამოსვლაში? თუ ყველაფერს სწორად გააკეთებთ,
-        ნებისმიერ მრუდ გზას გავივლი მიუხედავად სიგრძისა."
       4-5 Maze Conditionals 2_instruction: გამოიყენეთ "გაიმეორე სანამ" ბლოკი, რათა
         მიიყვანოთ ზომბი მზესუმზირამდე.
-      4-5 Maze Conditionals 3_instruction: 'გამოიყენეთ "თუ" ბლოკი, რათა გადამაწყვეტინოთ
-        როდის შევბრუნდე. მინიშნება: გჭირდებათ მხოლოდ ერთი დამატებითი ბლოკი, მაგრამ
-        დაიმახსოვრეთ, როგორ ჩავსვით ის, რომ მოამვალში თქვენ თვითონ გააკეთოთ.'
+      4-5 Maze Conditionals 3_instruction: |
+        გამოიყენეთ "თუ" ბლოკი, რათა გადამაწყვეტინოთ როდის მოვბრუნდე. \r
       4-5 Maze Conditionals 4_instruction: ეს წინა თავსატეხივითაა, მაგრამ დაგჭირდებათ
         იმის გახსენება, თუ როგორ გამოიყენება "თუ" ბლოკი და "გამეორების" ბლოკი ერთად.
       4-5 Maze Conditionals 5_instruction: მე მინდა მზესუმზირა! გამოიყენეთ "თუ" ბლოკი,
@@ -709,8 +708,8 @@
         მოგიწევთ მობრუნება ყოველი ციკლის შემდეგ? (მინიშნება: რამდენია 360 გაყოფილი
         6-ზე?)"
       4-5 Nested Loops 9_instruction: "დახატეთ კბილები ალიგატორის პირში!"
-      4-5 Nested Loops Assessment 1_instruction: "გამოიყენეთ ჩასმული ციკლი დიზაინის
-        დასამთავრებლად."
+      4-5 Nested Loops Assessment 1_instruction: "შეფასება: გამოიყენეთ ჩასმული ციკლი
+        დიზაინის დასამთავრებლად."
       4-5 While Loops 1_instruction: მიმიყვანეთ ორმოსთან და "გავსება" ბლოკის გამოყენებით
         გაავსეთ ორი ნიჩაბი მიწით.
       4-5 While Loops 2_instruction: მიმიყვანეთ მიწის გროვასთან და "მოშორება" ბლოკით
@@ -1262,14 +1261,14 @@
       Course 4 Artist 20_instruction: "ისევ თამაშობთ?  ეს არის ცარიელი ტილო, რომელზეც
         შეგიძლიათ შექმნათ რაც მოგესურვებათ!"
       Course 4 Artist 3_instruction: ეცადეთ გაარკვიოთ, რა მოხდება თუ ამ კოდს გაუშვებთ
-        (ან დააწვები "გაშვებას" მის შესამოწმებლად). შემდეგ, გაიმეორეთ კოდი იმდენჯერ,
+        (ან დააწვებით "გაშვებას" მის შესამოწმებლად). შემდეგ, გაიმეორეთ კოდი იმდენჯერ,
         რამდენიც საჭიროა ნახატის დასასრულებლად.
       Course 4 Artist 4_instruction: "რამდენი გრადუსია წრეში?  შეავსეთ გამეორების
         ბლოკი ამ რიცხვით და შექმენით ფერადი წრე."
       Course 4 Artist 5_instruction: "დახატეთ დიზაინის მეორე ნახევარი ისე, რომ ის
-        სიმეტრიული გახდეს. სამკუთხედები ტოგვერდაა და გვერდის სიგრძე 50 პიქსელია. მინიშნება:
-        შესაძლოა დაგჭირდეთ ამ კოდის რამდენჯერმე გაშვება, სანამ მიხვდებით, რომელი ბლოკებია
-        საჭირო."
+        სიმეტრიული გახდეს. სამკუთხედები ტოლგვერდაა და გვერდის სიგრძე 50 პიქსელია.
+        მინიშნება: შესაძლოა დაგჭირდეთ ამ კოდის რამდენჯერმე გაშვება, სანამ მიხვდებით,
+        რომელი ბლოკებია საჭირო."
       Course 4 Artist 6_instruction: "დაასრულეთ კოდი ამ სამკუთხედების დასახატად. მინიშნება:
         სამი სამკუთხედია და 360 გრადუსიანი მობრუნება...რამდენჯერ მოთავსდება 360-ში
         3?"
@@ -1898,6 +1897,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2491,6 +2494,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3083,6 +3088,12 @@
         ფუტკარს ახლა მხოლოდ ნექტარი სურს.
         ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ არ მალავს.
         თუ მალავს, მაშინ შეგიძლიათ ნექტარის შეგროვება.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: ამ ფუნქციას ეწოდება "პატრული". ჩაასწორეთ
         ის ისე, რომ გადაიყვანოთ კატა 400 პიქსელით ზემოთ და შემდეგ 400 პიქსელით ქვემოთ.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse

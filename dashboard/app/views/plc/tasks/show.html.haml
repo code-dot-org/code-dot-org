@@ -1,3 +1,6 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+
 %p
   %strong Name:
   = @task.name
@@ -12,4 +15,4 @@
 
 = link_to 'Edit', edit_plc_task_path(@task)
 \|
-= link_to 'Back', plc_tasks_path
+= link_to 'Back to Learning Module', plc_learning_module_path(@task.plc_learning_module)

@@ -15,8 +15,8 @@
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "start_direction": "90",
-    "x": "150",
-    "y": "250",
+    "x": "200",
+    "y": "200",
     "free_play": "true",
     "impressive": "false",
     "disable_sharing": "false",
@@ -32,7 +32,9 @@
     "examples_required": "false",
     "disable_examples": "false",
     "never_autoplay_video": "false"
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -159,30 +161,16 @@
           </block>
         </category>
         <category name="Brushes">
-          <block type="draw_width" inline="false">
-            <value name="WIDTH">
-              <block type="math_number">
-                <title name="NUM">1</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour" inline="true" id="draw-color">
             <value name="COLOUR">
               <block type="colour_picker">
                 <title name="COLOUR">#ff0000</title>
               </block>
             </value>
           </block>
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour" inline="true" id="draw-color">
             <value name="COLOUR">
               <block type="colour_random"/>
-            </value>
-          </block>
-          <block type="alpha" inline="true" id="alpha">
-            <value name="VALUE">
-              <block type="math_number_dropdown">
-                <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
-              </block>
             </value>
           </block>
           <block type="draw_colour" inline="true" id="draw-color">
@@ -205,6 +193,26 @@
                 </value>
               </block>
             </value>
+          </block>
+          <block type="alpha" inline="true">
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_width" inline="false">
+            <value name="WIDTH">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_line_style_pattern">
+            <title name="VALUE">DEFAULT</title>
+          </block>
+          <block type="sticker">
+            <title name="VALUE">Elephant</title>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">

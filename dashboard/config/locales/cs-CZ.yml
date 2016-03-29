@@ -25,6 +25,7 @@
   welcome_back: Vítej zpět, %{name}
   submit: Odeslat
   unsubmit: Neodesláno
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Přidat učitele:'
@@ -543,7 +544,6 @@
       že to není finální verze kurzu a je předmětem úprav podle zpětné vazby a vylepšeních.
     prerelease_hoc2014: Tento výukový kurz je v <span class='betatext'> beta verzi</span>.  To
       je předmětem uprav po obdržení zpětné vazby a vylepšeních.
-    feedback: Poskytnout zpětnou vazbu
     report_bug: Nahlásit chybu
     support: Získat pomoc
     support_url: "//support.code.org"
@@ -562,6 +562,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Děkuji
+    wrong_body: Thank you for submitting answers.
+    correct_title: Děkuji
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Děkuji
+    wrong_body: Thank you for submitting answers.
+    correct_title: Děkuji
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Nesprávné řešení
     wrong_body: "Řešení, které jste zadali, není správné.  Opakujte akci!"
@@ -581,9 +591,8 @@
     placeholder: Zadejte svou odpověď zde
     open_response_title: Děkujeme
     open_response_body: Děkujeme za odpověď!
-  level_group:
-    correct_title: Děkuji
-    correct_body: Thank you for submitting an answer
+    correct_title: Správně
+    correct_body: To je správná odpověď.
   dialog:
     ok: OK
     startover_title: Jste si jisti, že chcete začít znovu?
@@ -713,3 +722,7 @@
         acknowledge: Poskytnutím těchto informací potvrzujete, že bude zpracována
           v souladu s podmínkami %{link_start_privacy}zásad ochrany osobních údajů%{link_end}
           a %{link_start_tos}podmínek služeb%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

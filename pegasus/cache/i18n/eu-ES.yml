@@ -658,6 +658,7 @@
   dashboard_navigation_all_sections: Ikasleen kontuak eta aurrerapena
   dashboard_navigation_view_progress: Aurrerapena Ikusi
   dashboard_navigation_view_text_responses: Ikusi textu erantzunak
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Ikasleak Gehitu
   dashboard_navigation_manage_students: Ikasleak Kudeatu
   dashboard_navigation_lesson_plans_resources: Ikasgaien Plangintza eta Baliabideak
@@ -782,6 +783,16 @@
   dashboard_puzzle: Ariketa
   dashboard_question: Galdera
   dashboard_response: Erantzuna
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Zuzena
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Aurreko urteko "Hour of Code" ekitaldiko estatistika harrigarriak.
     Astebetean bakarrik:'
   stats_hoc_2013_image_alt: 2013ko Kodearen Orduaren estatistikak

@@ -21,7 +21,7 @@ ro-RO:
   twentyhours_heading: Încearcă Cursul nostru de Introducere în Informatică
   twentyhours_text: Ai terminat prima ta Oră de Cod? Învață mai multe despre informatica de bază și conceptele programării în cadrul cursului următor.
   og_title: Fiecare copil merită o portunitate
-  og_description: Fiecare student în fiecare școală merită o șansă de a studia informatica.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Alătură-te <a href="http://hourofcode.com"> Orei de cod</a> <br/> 8-14 decembrie, 2014 <br/>'
   hoc2014_students: Elevi
   hoc2014_try: Încearcă
@@ -179,7 +179,7 @@ ro-RO:
   learn_next_level: Incearca un alt curs in Studio-ul Code
   learn_online: Încearcă alte cursuri online
   learn_classes: Găsește clase local
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Tocmai am făcut #OraDeCod - Hai să vezi despre ce e vorba! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -508,6 +508,7 @@ ro-RO:
   dashboard_navigation_all_sections: Conturile elevilor şi progresul lor
   dashboard_navigation_view_progress: Vedeți progresele
   dashboard_navigation_view_text_responses: Vizualizare text raspunsuri
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Adaugă elevi
   dashboard_navigation_manage_students: Gestionează elevi
   dashboard_navigation_lesson_plans_resources: Planuri de lecţie şi resurse
@@ -606,6 +607,16 @@ ro-RO:
   dashboard_puzzle: Puzzle
   dashboard_question: Întrebare
   dashboard_response: Răspuns
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Corect
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Statistici incredibile de la Ora de Cod de anul trecut. Într-o singură săptămână:'
   stats_hoc_2013_image_alt: Statistici de la Ora de Cod din 2013
   dashboard_teacher: Profesor

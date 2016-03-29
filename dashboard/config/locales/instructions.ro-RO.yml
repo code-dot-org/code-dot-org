@@ -701,9 +701,6 @@
       4-5 Maze Assessment 1_instruction: 'Evaluare: Du-te la floarea-soarelui.'
       4-5 Maze Conditionals 1_instruction: Utilizează blocul "repetă până când" pentru
         a-l duce pe zombie la floarea-soarelui.
-      4-5 Maze Conditionals 10_instruction: Poți adăuga doar 3 blocuri pentru a mă
-        ajuta să rezolv un labirint mai complex? Dacă o faci corect, eu pot străbate
-        orice cale curbată indiferent de lungime/durată.
       4-5 Maze Conditionals 2_instruction: Utilizează blocul "repetă până când" pentru
         a-l duce pe zombie la floarea-soarelui.
       4-5 Maze Conditionals 3_instruction: 'Folosește blocul "dacă" pentru a mă lăsa
@@ -1989,6 +1986,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2592,6 +2593,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3207,6 +3210,12 @@
         Albina vrea doar nectar acum.
         Nu toate obiectele sunt flori, așa că verifică FIECARE NOR pentru a vedea
         dacă ascunde o floare. Dacă da, atunci poți aduna nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Aici este o funcţie numită "patrol."
         Editeaz-o pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli.

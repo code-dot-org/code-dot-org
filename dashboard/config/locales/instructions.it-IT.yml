@@ -739,9 +739,6 @@
         arrivare al girasole.
       4-5 Maze Conditionals 1_instruction: Usa il blocco "ripeti fino a che" per far
         arrivare lo zombie fino al girasole.
-      4-5 Maze Conditionals 10_instruction: Riesci ad aggiungere solo 3 blocchi per
-        farmi uscire da un labirinto più complesso? Se lo fai correttamente, riuscirò
-        a camminare lungo un percorso tortuoso di qualsiasi lunghezza.
       4-5 Maze Conditionals 2_instruction: Usa il blocco "ripeti fino a che" per far
         arrivare lo zombie fino al girasole.
       4-5 Maze Conditionals 3_instruction: 'Usa il blocco "se c''è strada" per decidere
@@ -2128,6 +2125,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2753,6 +2754,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3412,6 +3415,12 @@
       Ryan - Bee Conditionals_instruction: |
         L'ape ora desidera solo il nettare.
         Non tutti gli oggetti sono fiori, controlla sotto OGNI NUVOLA per vedere se si nasconde dietro a un fiore. Se si nasconde puoi raccogliere il nettare.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: In questo esercizio c'è una funzione chiamata
         "pattuglia" (patrol) in cui devi inserire il codice che serve per far muovere
         il gatto prima in su e poi in giù di 400 pixel.
@@ -3498,10 +3507,16 @@
       Standalone_Artist_1_instruction: Benvenuto all'Artista! Prima di tutto, cerchiamo
         di disegnare un semplice quadrato utilizzando il blocco "gira a destra" e
         il blocco "vai avanti". Ogni lato è lungo 100 pixel.
-      Standalone_Artist_2_instruction: Disegna questo rombo che ha gli angoli da 120
-        e 60 gradi e i lati lunghi 150 pixel.
-      Standalone_Artist_3_instruction: Come fai a disegnare questo esagono che ha
-        i lati lunghi 100 pixel e gli angoli da 60 gradi?
+      Standalone_Artist_2_instruction: 'Disegna questo rombo che ha i lati lunghi
+        150 pixel.<br><br><b>Attenzione</b>: un rombo ha gli angoli di 60 e 120 gradi,
+        ma i gradi dell’istruzione “gira” sono misurati rispetto al percorso davanti
+        all’Artista. Vedi anche le spiegazioni del video del <a href="https://studio.code.org/s/course2/stage/4/puzzle/1">primo
+        esercizio dell''Artista nel Corso 2</a>.'
+      Standalone_Artist_3_instruction: 'Come fai a disegnare questo esagono che ha
+        i lati lunghi 100 pixel? <br><br><b>Attenzione</b>: un esagono ha gli angoli
+        di 120 gradi, ma i gradi dell’istruzione “gira” sono misurati rispetto al
+        percorso davanti all’Artista. Vedi anche le spiegazioni del video del <a href="https://studio.code.org/s/course2/stage/4/puzzle/1">primo
+        esercizio dell''Artista nel Corso 2</a>.'
       Standalone_Artist_4_instruction: Adesso c'è il nuovo blocco "ripeti 6 volte".
         Questo blocco di ripetizione, detto anche "ciclo", ripete 6 volte quello che
         si trova al suo interno. Cosa succede se si ripete 6 volte il codice in grigio

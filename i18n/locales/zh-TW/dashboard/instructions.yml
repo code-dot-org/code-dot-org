@@ -439,7 +439,6 @@ zh:
       4-5 Maze 9_instruction: '使用 "重覆...直到" 程式積木來建立迴圈。'
       4-5 Maze Assessment 1_instruction: '評量 : 取得向日葵'
       4-5 Maze Conditionals 1_instruction: '使用"repeat until"的方塊來讓殭屍到向日葵那。'
-      4-5 Maze Conditionals 10_instruction: 你可以只多加3個程式積木來幫我解決更複雜的迷宮嗎? 如果你的方法正確，不管多長的彎曲路徑我都能走。
       4-5 Maze Conditionals 2_instruction: '使用"repeat until"的方塊來讓殭屍到向日葵那。'
       4-5 Maze Conditionals 3_instruction: '使用"如果"程式積木來讓我決定什麼時候要轉彎。提示: 你只需要再多加一個程式積木就好了，但請學習我們是如何使用"如果"程式積木，這樣下次你就可以自己做了。'
       4-5 Maze Conditionals 4_instruction: '好的，這和上一題很像，但是你需要記得如何同時用"如果"和"重複"程式積木。'
@@ -993,13 +992,9 @@ zh:
         to recreate it?  Feel free to use trial and error. You are not expected to
         get it perfect the first time.  Want to see more hints?  Click here!
       Course 4 Artist 12_instruction: "Want a second peek at the inspiration design\nor the hints?  Click here!\\r\n\\r\nOtherwise, make a design all your own!"
-      Course 4 Artist 13_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can design anything you want!
+      Course 4 Artist 13_instruction: 還在玩嗎？這裡有一張你可以設計任何東西的空白畫布！
       Course 4 Artist 2_instruction: 你可以用迴圈包住這段程式碼，來繪製外層灰色的正方形嗎？
-      Course 4 Artist 20_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can create whatever you want!
+      Course 4 Artist 20_instruction: 還在玩嗎？這裡有一張你可以創造任何東西的空白畫布！
       Course 4 Artist 3_instruction: '好，現在試著搞清楚如果你執行這段程式碼會發生什麼事(或直接按"執行"試試看)。然後重複它夠多次來完成繪圖。'
       Course 4 Artist 4_instruction: |
         How many degrees are in a circle?  Fill in
@@ -1037,15 +1032,11 @@ zh:
       Course 4 Artist Binary 6_instruction: |
         What is the shortest binary string that
         you can repeat to draw this image?
-      Course 4 Artist Binary 7_instruction: Finish this drawing.
-      Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a blank
-        canvas for you to draw on.  Have fun!
+      Course 4 Artist Binary 7_instruction: 完成這幅畫。
+      Course 4 Artist Binary Free Play 2_instruction: 自由發揮：這裡有一張你可以畫上任何東西的空白畫布。 玩得愉快！
       Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\\r\n\\r\nSee what happens when we\nstart to get creative with the bits?"
       Course 4 Artist Binary Free Play 2b_instruction: 按一下此處查看提示。
-      Course 4 Artist Binary Free Play_instruction: |
-        Free Play: Draw whatever you
-        like with binary!
+      Course 4 Artist Binary Free Play_instruction: 自由發揮：用二進為劃出任何你喜歡的東西！
       Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \\r\n\\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
       Course 4 Artist Binary ryan_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \\r\n\\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
       Course 4 Artist For  Functions 10_instruction: |
@@ -1677,6 +1668,10 @@ zh:
       Course1BeePuzzle12_instruction: 讓我採3次花蜜來製作2次蜂蜜
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -2143,6 +2138,8 @@ zh:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2734,6 +2731,12 @@ zh:
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
         is hiding a flower. If it is, then you can gather nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.

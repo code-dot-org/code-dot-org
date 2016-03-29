@@ -26,6 +26,7 @@
   welcome_back: Vitajte späť, %{name}
   submit: Odoslať
   unsubmit: Neodoslať
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Pridať učiteľa:'
@@ -557,7 +558,6 @@
       a vylepšení, ktoré sú vykonané.
     prerelease_hoc2014: Tento tutoriál je v <span class='betatext'> beta verzii</span>
       a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané.
-    feedback: Poskytnúť spätnú väzbu
     report_bug: Nahlásiť chybu
     support: Získať pomoc
     support_url: support.code.org
@@ -576,6 +576,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "Ďakujeme"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Ďakujeme"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "Ďakujeme"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Ďakujeme"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Nesprávne riešenie
     wrong_body: Zadané riešenie nie je správne.  Prosím skúste to znova!
@@ -595,9 +605,8 @@
     placeholder: Zadajte vašu odpoveď
     open_response_title: Vďaka
     open_response_body: "Ďakujeme za Vašu reakciu!"
-  level_group:
-    correct_title: "Ďakujeme"
-    correct_body: Thank you for submitting an answer
+    correct_title: Správne
+    correct_body: To je správna odpoveď.
   dialog:
     ok: ok
     startover_title: Naozaj chceš začať odznova?
@@ -729,3 +738,7 @@
         acknowledge: Odoslaním týchto informácií, beriete na vedomie, sa bude zaobchádzať
           v súlade s podmienkami %{link_start_privacy}Ochrana súkromia%{link_end}
           a %{link_start_tos}Podmienky používania%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

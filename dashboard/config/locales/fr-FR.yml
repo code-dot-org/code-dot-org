@@ -26,6 +26,7 @@
   welcome_back: Bienvenue, %{name}
   submit: Envoyer
   unsubmit: Ne plus soumettre le travail
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Ajouter un enseignant :'
@@ -585,7 +586,6 @@
     prerelease_hoc2014: Ce tutoriel est en <span class='betatext'> version bêta</span>.  Il
       est susceptible d'être modifié en fonction des commentaires reçus qui apporteront
       des améliorations.
-    feedback: Envoyer un commentaire
     report_bug: Signaler un bogue
     support: Obtenir de l'aide
     support_url: "//support.code.org"
@@ -604,6 +604,16 @@
     correct_body: Merci d'avoir soumis une réponse.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Merci
+    wrong_body: Thank you for submitting answers.
+    correct_title: Merci
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Merci
+    wrong_body: Thank you for submitting answers.
+    correct_title: Merci
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Solution incorrecte
     wrong_body: La solution que tu as entrée est incorrecte. Essaie encore !
@@ -623,9 +633,8 @@
     placeholder: Entrez votre réponse ici
     open_response_title: Merci
     open_response_body: Merci pour ta réponse !
-  level_group:
-    correct_title: Merci
-    correct_body: Thank you for submitting an answer
+    correct_title: Correct
+    correct_body: C'est la bonne réponse.
   dialog:
     ok: OK
     startover_title: Es-tu certain(e) de vouloir recommencer ?
@@ -765,3 +774,7 @@
         acknowledge: En soumettant ces informations, vous reconnaissez qu'elles sont
           traitée selon les termes de la %{link_start_privacy}Politique de Confidentialité%{link_end}
           et des %{link_start_tos}Conditions Générales d'Utilisation%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Cherche pour un icon...
+      no_icons_found: Pas d'icone trouvée
