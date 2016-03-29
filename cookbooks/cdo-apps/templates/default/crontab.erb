@@ -57,6 +57,7 @@ if node['cdo-apps']['daemon']
     cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs'), notify:'dev+crontab@code.org'
     cronjob at:'*/2 * * * *', do:dashboard_dir('bin','build_scripts'), notify:'dev+crontab@code.org'
     cronjob at:'*/5 * * * *', do:deploy_dir('bin','fetch-external-resources'), notify:'dev+crontab@code.org'
+    cronjob at: '30 9 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
   end
 
   if node.chef_environment == 'production' # production daemon
@@ -77,7 +78,6 @@ if node['cdo-apps']['daemon']
   cronjob at:'40 4 * * *', do:deploy_dir('bin', 'cron', 'funometer')
   cronjob at: '30 6 * * *', do:deploy_dir('bin', 'cron', 'admin_progress')
   cronjob at: '10 7 * * *', do:deploy_dir('bin', 'cron', 'retention_stats')
-  cronjob at: '30 9 * * *', do:deploy_dir('bin', 'cron', 'update_dotd') 
 end
 
 # cronjobs that run on all instances in all environments go here:
