@@ -23,6 +23,7 @@ module RakeUtils
   def self.start_service(id)
     sudo 'service', id.to_s, 'start' if OS.linux? && CDO.chef_managed
   end
+
   def self.stop_service(id)
     sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
   end

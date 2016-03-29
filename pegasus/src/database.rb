@@ -51,21 +51,27 @@ end
 def no_credit_count
   DB[:cdo_state_promote].where(cs_counts_t: 'No').count
 end
+
 def credit_count
   DB[:cdo_state_promote].where(cs_counts_t: 'Yes').count
 end
+
 def jobs_nationwide
   DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_jobs_i]
 end
+
 def grads_nationwide
   DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_graduates_i]
 end
+
 def us_state_from_code(code)
   DB[:geography_us_states].where(code_s: code.to_s.strip.upcase).first
 end
+
 def us_state_code?(code)
   !us_state_from_code(code).nil?
 end
+
 def us_state_name_from_code(code)
   state = us_state_from_code(code)
   return code unless state
@@ -75,6 +81,7 @@ end
 def zip_code_from_code(code)
   DB[:geography_us_zip_codes].where(code_s: code.to_s.strip).first
 end
+
 def zip_code?(code)
   !zip_code_from_code(code).nil?
 end
