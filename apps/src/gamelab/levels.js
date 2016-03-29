@@ -128,6 +128,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "mouseDown": null,
     "mouseWentDown": null,
     "mouseWentUp": null,
+    "mousePressed": null,
     "mouseX": null,
     "mouseY": null,
 
