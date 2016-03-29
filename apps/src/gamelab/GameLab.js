@@ -653,7 +653,7 @@ GameLab.prototype.displayFeedback_ = function() {
     saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: msg.reinfFeedbackMsg(),
-      sharingText: msg.shareDrawing()
+      sharingText: msg.shareGame()
     }
   });
 };

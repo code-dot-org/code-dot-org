@@ -138,6 +138,9 @@ GameLabP5.prototype.init = function (options) {
 
     if (typeof rotation === 'undefined') {
       rotation = -(Math.PI / 2);
+      if (0 === sides % 2) {
+        rotation += Math.PI / sides;
+      }
     } else if (this._angleMode === this.DEGREES) {
       rotation = this.radians(rotation);
     }
@@ -250,6 +253,20 @@ GameLabP5.prototype.init = function (options) {
     s.frameDidChange = function () {
       return s.animation ? s.animation.frameChanged : false;
     };
+
+    Object.defineProperty(s, 'frameDelay', {
+      enumerable: true,
+      get: function () {
+        if (s.animation) {
+          return s.animation.frameDelay;
+        }
+      },
+      set: function (value) {
+        if (s.animation) {
+          s.animation.frameDelay = value;
+        }
+      }
+    });
 
     Object.defineProperty(s, 'x', {
       enumerable: true,
@@ -517,6 +534,27 @@ GameLabP5.prototype.startExecution = function () {
         p5obj.camera.isActive = function () {
           return p5obj.camera.active;
         };
+
+        // Create new camera.x and camera.y properties to alias camera.position:
+        Object.defineProperty(p5obj.camera, 'x', {
+          enumerable: true,
+          get: function () {
+            return p5obj.camera.position.x;
+          },
+          set: function (value) {
+            p5obj.camera.position.x = value;
+          }
+        });
+
+        Object.defineProperty(p5obj.camera, 'y', {
+          enumerable: true,
+          get: function () {
+            return p5obj.camera.position.y;
+          },
+          set: function (value) {
+            p5obj.camera.position.y = value;
+          }
+        });
 
         // Call our gamelabPreload() to force _start/_setup to wait.
         p5obj.gamelabPreload();
