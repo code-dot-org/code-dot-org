@@ -763,6 +763,7 @@ Applab.init = function(config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
 
+  // TODO - send to redux store?
   config.showInstructionsInTopPane = true;
 
   // Applab.initMinimal();

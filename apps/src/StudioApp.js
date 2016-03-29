@@ -358,8 +358,11 @@ StudioApp.prototype.init = function(config) {
     this.winIcon = config.skin[config.level.instructionsIcon];
   }
 
-  if (!config.showInstructionsInTopPane && config.showInstructionsWrapper) {
+  if (config.showInstructionsWrapper) {
     config.showInstructionsWrapper(_.bind(function () {
+      if (config.showInstructionsInTopPane) {
+        return;
+      }
       var shouldAutoClose = !!config.level.aniGifURL;
       this.showInstructionsDialog_(config.level, shouldAutoClose, false);
     }, this));
@@ -403,45 +406,8 @@ StudioApp.prototype.init = function(config) {
     config.loadAudio();
   }
 
-  // TODO - separate method?
   if (!config.showInstructionsInTopPane) {
-    var promptDiv = document.getElementById('prompt');
-    var prompt2Div = document.getElementById('prompt2');
-    if (config.level.instructions) {
-      var instructionsHtml = this.substituteInstructionImages(
-        config.level.instructions, this.skin.instructions2ImageSubstitutions);
-      $(promptDiv).html(instructionsHtml);
-    }
-    if (config.level.instructions2) {
-      var instructions2Html = this.substituteInstructionImages(
-        config.level.instructions2, this.skin.instructions2ImageSubstitutions);
-      $(prompt2Div).html(instructions2Html);
-      $(prompt2Div).show();
-    }
-
-    if (this.hasInstructionsToShow(config)) {
-      var promptIcon = document.getElementById('prompt-icon');
-      if (this.smallIcon) {
-        promptIcon.src = this.smallIcon;
-        $('#prompt-icon-cell').show();
-      }
-
-      var bubble = document.getElementById('bubble');
-
-      this.authoredHintsController_.display(promptIcon, bubble, function () {
-        this.showInstructionsDialog_(config.level, false, true);
-      }.bind(this));
-    }
-
-    var aniGifPreview = document.getElementById('ani-gif-preview');
-    if (config.level.aniGifURL) {
-      aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-      var promptTable = document.getElementById('prompt-table');
-      promptTable.className += " with-ani-gif";
-    } else {
-      var wrapper = document.getElementById('ani-gif-preview-wrapper');
-      wrapper.style.display = 'none';
-    }
+    this.configureAndShowInstructions_(config);
   }
 
   if (this.editCode) {
@@ -541,6 +507,49 @@ StudioApp.prototype.init = function(config) {
 
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
+  }
+};
+
+/**
+ * Sets html for prompts below playspace, anigif, and shows instructions dialog
+ */
+StudioApp.prototype.configureAndShowInstructions_ = function (config) {
+  var promptDiv = document.getElementById('prompt');
+  var prompt2Div = document.getElementById('prompt2');
+  if (config.level.instructions) {
+    var instructionsHtml = this.substituteInstructionImages(
+      config.level.instructions, this.skin.instructions2ImageSubstitutions);
+    $(promptDiv).html(instructionsHtml);
+  }
+  if (config.level.instructions2) {
+    var instructions2Html = this.substituteInstructionImages(
+      config.level.instructions2, this.skin.instructions2ImageSubstitutions);
+    $(prompt2Div).html(instructions2Html);
+    $(prompt2Div).show();
+  }
+
+  if (this.hasInstructionsToShow(config)) {
+    var promptIcon = document.getElementById('prompt-icon');
+    if (this.smallIcon) {
+      promptIcon.src = this.smallIcon;
+      $('#prompt-icon-cell').show();
+    }
+
+    var bubble = document.getElementById('bubble');
+
+    this.authoredHintsController_.display(promptIcon, bubble, function () {
+      this.showInstructionsDialog_(config.level, false, true);
+    }.bind(this));
+  }
+
+  var aniGifPreview = document.getElementById('ani-gif-preview');
+  if (config.level.aniGifURL) {
+    aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
+    var promptTable = document.getElementById('prompt-table');
+    promptTable.className += " with-ani-gif";
+  } else {
+    var wrapper = document.getElementById('ani-gif-preview-wrapper');
+    wrapper.style.display = 'none';
   }
 };
 
