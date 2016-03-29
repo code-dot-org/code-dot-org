@@ -1,7 +1,7 @@
 class Plc::ContentCreatorController < ApplicationController
-  before_filter :require_levelbuilder_mode
-
   def show_courses_and_modules
+    authorize! :read, Plc::Course
+
     @courses = Plc::Course.all
     @learning_modules = Plc::LearningModule.all
   end
