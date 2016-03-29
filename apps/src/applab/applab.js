@@ -50,6 +50,7 @@ var rootReducer = require('./reducers').rootReducer;
 var actions = require('./actions');
 var setInitialLevelProps = actions.setInitialLevelProps;
 var changeInterfaceMode = actions.changeInterfaceMode;
+var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
@@ -763,8 +764,10 @@ Applab.init = function(config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
 
-  // TODO - send to redux store?
-  config.showInstructionsInTopPane = true;
+  // Provide a way for us to have top pane instructions disabled by default, but
+  // able to turn them on.
+  // TODO - should they also be on by default for admin?
+  config.showInstructionsInTopPane = !!localStorage.getItem('showInstructionsInTopPane');
 
   // Applab.initMinimal();
 
@@ -901,7 +904,12 @@ Applab.init = function(config) {
     instructionsMarkdown: getMarkdownInstructions(config.level)
   }));
 
-  Applab.reduxStore.dispatch(changeInterfaceMode(Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+  // TODO - danger here (and with other config), is we now have the potential
+  // for two opinions - one on the config object, and another in the redux store
+  Applab.reduxStore.dispatch(setInstructionsInTopPane(config.showInstructionsInTopPane));
+
+  Applab.reduxStore.dispatch(changeInterfaceMode(
+    Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
   Applab.reactInitialProps_ = {
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,

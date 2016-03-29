@@ -8,7 +8,8 @@ var ActionType = module.exports.ActionType = {
   SET_LEVEL_PROPS: 'SET_LEVEL_PROPS',
   CHANGE_INTERFACE_MODE: 'CHANGE_INTERFACE_MODE',
   TOGGLE_INSTRUCTIONS_COLLAPSED: 'TOGGLE_INSTRUCTIONS_COLLAPSED',
-  SET_INSTRUCTIONS_HEIGHT: 'SET_INSTRUCTIONS_HEIGHT'
+  SET_INSTRUCTIONS_HEIGHT: 'SET_INSTRUCTIONS_HEIGHT',
+  SET_INSTRUCTIONS_IN_TOP_PANE: 'SET_INSTRUCTIONS_IN_TOP_PANE'
 };
 
 /**
@@ -81,5 +82,17 @@ module.exports.setInstructionsHeight = function (height) {
   return {
     type: ActionType.SET_INSTRUCTIONS_HEIGHT,
     height: height
+  };
+};
+
+/**
+ * Set whether instructions are shown in the top pane or in a dialog at the
+ * beginning
+ * @param {boolean} inTopPane
+ */
+module.exports.setInstructionsInTopPane = function (inTopPane) {
+  return {
+    type: ActionType.SET_INSTRUCTIONS_IN_TOP_PANE,
+    inTopPane: inTopPane
   };
 };

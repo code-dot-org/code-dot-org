@@ -69,11 +69,21 @@ function interfaceMode(state, action) {
 var instructionsInitialState = {
   collapsed: false,
   // represents the uncollapsed height
-  height: 0
+  height: 0,
+  inTopPane: false
 };
 
 function instructions(state, action) {
   state = state || instructionsInitialState;
+
+  // TODO - we'll want to think about how to handle state that is common across
+  // apps. For example, this (and eventually all of instructions) belongs in
+  // a studioApps related store.
+  if (action.type === ActionType.SET_INSTRUCTIONS_IN_TOP_PANE) {
+    return _.assign({}, state, {
+      inTopPane: action.inTopPane
+    });
+  }
 
   if (action.type === ActionType.TOGGLE_INSTRUCTIONS_COLLAPSED) {
     return _.assign({}, state, {

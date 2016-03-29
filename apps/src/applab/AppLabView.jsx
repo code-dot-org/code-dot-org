@@ -53,6 +53,10 @@ var AppLabView = React.createClass({
       instructionsHeight = HEADER_HEIGHT;
     }
 
+    if (!this.props.instructionsInTopPane) {
+      instructionsHeight = 0;
+    }
+
     var codeWorkspaceContainerStyle = {
       top: instructionsHeight
     };
@@ -88,9 +92,11 @@ var AppLabView = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
+    instructionsInTopPane: state.instructions.inTopPane,
     instructionsMarkdown: state.level.instructionsMarkdown,
-    instructionsCollapsed: state.instructions.collapsed,
-    instructionsHeight: state.instructions.height
+    // TODO - how do i actually feel about using inTopPane here?
+    instructionsCollapsed: state.instructions.collapsed || !state.instructions.inTopPane,
+    instructionsHeight: state.instructions.height,
   };
 }, function propsFromDispatch(dispatch) {
   return {
