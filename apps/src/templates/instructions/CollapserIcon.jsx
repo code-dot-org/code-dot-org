@@ -15,6 +15,9 @@ var styles = {
   },
 };
 
+/**
+ * Simple icon that either points up or down, and supports onClick
+ */
 var CollapserIcon = React.createClass({
   propTypes: {
     onClick: React.PropTypes.func.isRequired,
@@ -30,7 +33,6 @@ var CollapserIcon = React.createClass({
           onClick={this.props.onClick}
           className={iconClass + " fa CollapserIcon_showHideButton"}/>
     );
-
   }
 });
 module.exports = CollapserIcon;

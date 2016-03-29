@@ -1007,10 +1007,30 @@ StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 };
 
+/**
+ * Given a level definition, do we want to show instructions in markdown form.
+ * @param {object} level
+ * @returns {boolean}
+ */
 StudioApp.prototype.isMarkdownMode = function (level) {
   return window.marked && level.markdownInstructions &&
     this.localeIsEnglish();
 };
+
+/**
+ * @param {object} level
+ * @returns {string} Level's markdown instructions, with the markdown processed
+ *   into a string if in markdownMode
+ */
+StudioApp.prototype.getMarkdownInstructions = function (level) {
+  if (!this.isMarkdownMode(level)) {
+    return level.markdownInstructions;
+  }
+
+  return marked(this.substituteInstructionImages(
+    level.markdownInstructions, {}));
+};
+
 
 /**
  * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
