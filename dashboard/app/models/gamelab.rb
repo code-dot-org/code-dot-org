@@ -161,6 +161,7 @@ class Gamelab < Blockly
         "mouseDown": null,
         "mouseWentDown": null,
         "mouseWentUp": null,
+        "mousePressed": null,
         "mouseX": null,
         "mouseY": null,
 

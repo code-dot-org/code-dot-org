@@ -114,6 +114,8 @@ describe('Level tests', function() {
     .then(function () { return loadSource('http://localhost:8001/apps/lib/droplet/droplet-full.js'); })
     .then(function () { return loadSource('http://localhost:8001/apps/lib/tooltipster/jquery.tooltipster.js'); })
     .then(function () { return loadSource('http://localhost:8001/apps/lib/phaser/phaser.js'); })
+    .then(function () { return loadSource('http://localhost:8001/apps/lib/p5play/p5.js'); })
+    .then(function () { return loadSource('http://localhost:8001/apps/lib/p5play/p5.play.js'); })
     .then(function () {
       assert(window.droplet, 'droplet in global namespace');
       done();

@@ -234,6 +234,7 @@ draw() - USEFUL?
   {func: 'mouseWentDown', paletteParams: ['button'], params: ["LEFT"], category: 'Input', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-mouseWentDown" },
   {func: 'mouseWentUp', paletteParams: ['button'], params: ["LEFT"], category: 'Input', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-mouseWentUp" },
   {func: 'mouseWheel', block: 'function mouseWheel() {}', expansion: 'function mouseWheel() {\n  __;\n}', category: 'Input', customDocURL: "http://p5js.org/reference/#/p5/mouseWheel" },
+  {func: 'mousePressed', paletteParams: ['sprite'], params: ["sprite"], category: 'Input', type: 'value' },
 
   // Math
   {func: 'sin', category: 'Math', paletteParams: ['angle'], params: ["0"], type: 'value' },

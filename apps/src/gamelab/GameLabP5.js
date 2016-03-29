@@ -1,6 +1,7 @@
 'use strict';
 var gameLabSprite = require('./GameLabSprite');
 var assetPrefix = require('../assetManagement/assetPrefix');
+var GameLabGame = require('./GameLabGame');
 
 /**
  * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
@@ -8,6 +9,7 @@ var assetPrefix = require('../assetManagement/assetPrefix');
  */
 var GameLabP5 = function () {
   this.p5 = null;
+  this.gameLabGame = null;
   this.p5decrementPreload = null;
   this.p5eventNames = [
     'mouseMoved', 'mouseDragged', 'mousePressed', 'mouseReleased',
@@ -87,6 +89,10 @@ GameLabP5.prototype.init = function (options) {
   // Add new p5 methods:
   window.p5.prototype.didMouseMove = function () {
     return this.pmouseX !== this.mouseX || this.pmouseY !== this.mouseY;
+  };
+
+  window.p5.prototype.mousePressed = function (sprite) {
+    return sprite && sprite.mouseIsPressed;
   };
 
   var styleEmpty = 'rgba(0,0,0,0)';
@@ -383,6 +389,7 @@ GameLabP5.prototype.resetExecution = function () {
     this.p5.remove();
     this.p5 = null;
     this.p5decrementPreload = null;
+    this.gameLabGame = null;
   }
 
   // Important to reset these after this.p5 has been removed above
@@ -396,6 +403,7 @@ GameLabP5.prototype.resetExecution = function () {
 GameLabP5.prototype.startExecution = function () {
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
+      this.gameLabGame = new GameLabGame(p5obj);
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
 
@@ -600,6 +608,7 @@ GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
 
 GameLabP5.prototype.getCustomMarshalObjectList = function () {
   return [
+    { instance: GameLabGame },
     {
       instance: this.p5.Sprite,
       methodOpts: {
@@ -644,8 +653,11 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
     }
   }
 
-  // And also create a 'p5' object in the global namespace:
+  // Create a 'p5' object in the global namespace:
   propList.p5 = [ { Vector: window.p5.Vector }, window ];
+
+  // Create a 'Game' object in the global namespace:
+  propList.Game = [ this.gameLabGame, this ];
 
   return propList;
 };
