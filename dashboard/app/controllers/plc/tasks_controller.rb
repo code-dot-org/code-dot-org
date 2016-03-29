@@ -1,11 +1,6 @@
 class Plc::TasksController < ApplicationController
   load_and_authorize_resource
 
-  # GET /plc/tasks
-  # GET /plc/tasks.json
-  def index
-  end
-
   # GET /plc/tasks/1
   # GET /plc/tasks/1.json
   def show
@@ -46,8 +41,9 @@ class Plc::TasksController < ApplicationController
   # DELETE /plc/tasks/1
   # DELETE /plc/tasks/1.json
   def destroy
+    learning_module = @task.plc_learning_module
     @task.destroy
-    redirect_to action: :index
+    redirect_to plc_learning_module_path(learning_module)
   end
 
   private
