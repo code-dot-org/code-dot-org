@@ -339,7 +339,7 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
       submitted: submit,
       program: encodeURIComponent(program),
       image: this.encodedFeedbackImage,
-      onComplete: (submit ? this.onSubmitComplete : this.onReportComplete)
+      onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
     });
 
     if (this.studioApp_.isUsingBlockly()) {

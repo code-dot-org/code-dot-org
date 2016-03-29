@@ -87,11 +87,11 @@ GameLabP5.prototype.init = function (options) {
   };
 
   // Add new p5 methods:
-  window.p5.prototype.didMouseMove = function () {
+  window.p5.prototype.mouseDidMove = function () {
     return this.pmouseX !== this.mouseX || this.pmouseY !== this.mouseY;
   };
 
-  window.p5.prototype.mousePressed = function (sprite) {
+  window.p5.prototype.mousePressedOver = function (sprite) {
     return sprite && sprite.mouseIsPressed;
   };
 
@@ -247,7 +247,7 @@ GameLabP5.prototype.init = function (options) {
       }
     };
 
-    s.didFrameChange = function () {
+    s.frameDidChange = function () {
       return s.animation ? s.animation.frameChanged : false;
     };
 
