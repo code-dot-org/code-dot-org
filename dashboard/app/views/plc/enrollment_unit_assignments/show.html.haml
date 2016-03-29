@@ -1,15 +1,30 @@
-%p#notice= notice
+- content_for(:head) do
+  = stylesheet_link_tag 'css/plc', media: 'all'
 
+%h2
+  = @enrollment_unit_assignment.plc_course_unit.unit_name
+%br
 %p
-  %b Plc user course enrollment:
-  = @plc_enrollment_unit_assignment.plc_user_course_enrollment
-%p
-  %b Plc course unit:
-  = @plc_enrollment_unit_assignment.plc_course_unit
-%p
-  %b Status:
-  = @plc_enrollment_unit_assignment.status
+  = link_to 'Back to my learning plan', @enrollment_unit_assignment.plc_user_course_enrollment
 
-= link_to 'Edit', edit_plc_enrollment_unit_assignment_path(@plc_enrollment_unit_assignment)
-\|
-= link_to 'Back', plc_enrollment_unit_assignments_path
+%h4
+  Get Badged
+
+.module_assignments
+  - @enrollment_unit_assignment.plc_module_assignments.each do |module_assignment|
+    .outlined_section.module_task_view
+      %p
+        = module_assignment.plc_learning_module.name
+      - module_assignment.plc_task_assignments.each do |task_assignment|
+        - icon_class, icon_style = task_assignment.get_icon_and_style
+        %i{class: 'fa ' + icon_class.to_s, style: icon_style}
+        = link_to task_assignment.plc_task.name, plc_enrollment_task_assignment_path(task_assignment)
+        %br
+
+.all_possible_resources
+  %h4
+    All learning resources
+  - @enrollment_unit_assignment.plc_course_unit.plc_evaluation_questions.map(&:plc_evaluation_answers).flatten.map(&:plc_learning_module).uniq.delete_if{|x| x.nil?}.map(&:plc_tasks).flatten.select!{|x| x.class == Plc::LearningResourceTask}.each do |x|
+    %i{class: 'fa ' + (x.icon.nil? ? 'fa-book' : x.icon)}
+    = x.name
+    %br
