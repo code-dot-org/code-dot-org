@@ -21,7 +21,7 @@ pl-PL:
   twentyhours_heading: Wypróbuj nasz kurs Wstęp do informatyki
   twentyhours_text: Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych pojęć informatycznych i dotyczących programowania w tym kursie, który następuje.
   og_title: Każde dziecko zasługuje na szansę
-  og_description: Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się informatyki.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Dołącz do <a href="http://hourofcode.com"> Godziny Kodowania (Hour of Code)</a> <br/> 8-14 grudnia 2014 r. <br/>'
   hoc2014_students: Uczniowie
   hoc2014_try: Wypróbuj
@@ -182,7 +182,7 @@ pl-PL:
   learn_next_level: Wypróbuj inny kurs w Code Studio
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
   just_did_course1: 'Właśnie skończyłem Kurs 1 - sprawdź to! @codeorg'
   just_did_course2: 'Właśnie skończyłem Kurs 2 - sprawdź to! @codeorg'
@@ -512,6 +512,7 @@ pl-PL:
   dashboard_navigation_all_sections: Konta i postępy ucznia
   dashboard_navigation_view_progress: Przejrzy postępy
   dashboard_navigation_view_text_responses: Wyświetl tekstowe odpowiedzi
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Dodaj uczniów
   dashboard_navigation_manage_students: Zarządzaj uczniami
   dashboard_navigation_lesson_plans_resources: Plany lekcji i zasoby
@@ -605,11 +606,21 @@ pl-PL:
   dashboard_progress_completed_too_many_blocks: zakończona, zbyt wiele bloków
   dashboard_progress_completed_perfect: zakończona, doskonale
   dashboard_progress_furthest_level_attempted: próbowano najdalszy poziom
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: Wysłano
   dashboard_stage: Etap
   dashboard_puzzle: Łamigłówka
   dashboard_question: Pytanie
   dashboard_response: Odpowiedź
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Poprawnie
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Nieprawdopodobne statystyki z ubiegłorocznej Godziny Kodowania. W ciągu zaledwie jednego tygodnia:'
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
   dashboard_teacher: Nauczyciel

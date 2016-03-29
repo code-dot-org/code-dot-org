@@ -55,7 +55,7 @@ npm run build
 
 * `npm run build` builds a 'debug' version with more readable javascript
 * `npm run build -- --app=maze` builds a 'debug' version of only the maze app
-* `npm run build:dist` builds a minified version suitable for production 
+* `npm run build:dist` builds a minified version suitable for production
 * `npm run clean` will clean the build directory
 
 See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
@@ -96,14 +96,6 @@ To have grunt rebuild on changes but not run an express server, you can use the 
 
 ```
 MOOC_DEV=1 grunt build watch
-```
-
-##### Build a single foreign language
-
-To have grunt build a single foreign language, use the MOOC_LOCALE parameter. This will build en_us, en_loc, and the specified locale
-
-```
-MOOC_LOCALE=ar_sa grunt build
 ```
 
 #### Running tests
@@ -155,12 +147,7 @@ mocha test/ObserverTest.js
 It's especially important to test your changes with localization when modifying layouts. We support
 right-to-left languages and have some special layout tweaks embedded in the CSS to support that.
 
-Running a full localization build can take several minutes. Since localization re-builds javascript files for many languages, the default build target locales are `en_us` and `en_ploc` (pseudolocalized). To build
-all available locales, specify `MOOC_LOCALIZE=1` in your environment when running a task:
-
-```bash
-MOOC_LOCALIZE=1 grunt rebuild
-```
+Running a full localization build can take several minutes. Since localization re-builds javascript files for many languages, the default build target locales are `en_us` and `en_ploc` (pseudolocalized).
 
 Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem.  See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
 

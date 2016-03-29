@@ -1,6 +1,6 @@
 {
   "and": "و",
-  "animationMode": "Animation",
+  "animationMode": "الرسوم المتحركة",
   "backToPreviousLevel": "العودة إلى المستوى السابق",
   "blocklyMessage": "بلوكلي",
   "blocks": "مربعات برمجية",
@@ -27,8 +27,8 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
-  "debugWatchHeader": "Watch",
-  "debugWatchNotAvailable": "<not available>",
+  "debugWatchHeader": "شاهد",
+  "debugWatchNotAvailable": "<غير متوفر>",
   "defaultTwitterText": "انظر ما الذي صنعته",
   "designMode": "تصميم",
   "dialogCancel": "إلغاء",

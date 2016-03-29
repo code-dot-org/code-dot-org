@@ -25,6 +25,7 @@ ka:
   welcome_back: 'კარგია, რომ დაბრუნდით, %{name}'
   submit: გაგზავნა
   unsubmit: ჩაბარების გაუქმება
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'მასწავლებლის დამატება:'
@@ -463,7 +464,6 @@ ka:
   landing:
     prerelease: "ეს არის კურსის <span class='betatext'>ბეტა-ვერსია</span>. ანუ, ეს არ არის საბოლოო ვარიანტი, კურსი გაუმჯობესდება მიღებული უკუკავშირის საფუძველზე."
     prerelease_hoc2014: "ეს არის ტუტორიალის <span class='betatext'>ბეტა-ვერსია</span>. რაც იმას ნიშნავს, რომ ჩვენ მას გავაუმჯობესებთ მიღებული უკუკავშირის საფუძველზე."
-    feedback: უკუკავშირი
     report_bug: შეცდომის შესახებ შეტყობინება
     support: დახმარება მჭირდება
     support_url: //support.code.org
@@ -509,6 +509,8 @@ ka:
     placeholder: შეიყვანეთ პასუხი აქ
     open_response_title: მადლობა
     open_response_body: მადლობა პასუხისთვის!
+    correct_title: სწორია
+    correct_body: ეს პასუხი სწორია.
   dialog:
     ok: OK
     startover_title: დარწმუნებული ხართ, რომ ხელახლა დაწყება გსურთ?
@@ -619,3 +621,7 @@ ka:
           other: სხვა
         detail: თუ შეიძლება შეგვატყობინეთ რაც შეიძლება მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით.
         acknowledge: 'ამ ინფორმაციის გამოგზავნისას თქვენ აცნობიერებთ, რომ ის დამუშავდება %{link_start_privacy}კონფიდენციალურობის პოლიტიკისა%{link_end} და %{link_start_tos}სერვისის პირობების%{link_end} თანახმად'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

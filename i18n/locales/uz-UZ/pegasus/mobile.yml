@@ -22,7 +22,7 @@ uz-UZ:
   twentyhours_heading: Informatika kursiga kirish darsini sinab ko‘ring
   twentyhours_text: Ilk Dasturlash soatini tugatdingizmi? Quyidagi kurslar orqali informatika va dasturlash asoslarini o‘rganing.
   og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: '8-14 dekabr 2014-yilda o‘tkaziladigan <a href="http://hourofcode.com">Dasturlash soatiga</a><br/> qo‘shiling<br/>'
   hoc2014_students: Students
   hoc2014_try: Sinab ko‘ring
@@ -180,7 +180,7 @@ uz-UZ:
   learn_next_level: Boshqa Dasturlash studiyasi kursini sinab ko‘ring
   learn_online: Boshqa kurslarni onlayn tarzda sinab ko‘ring
   learn_classes: Mahalliy darslar toping
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: "Men #HourOfCode'ni o‘tdim - siz ham sinab ko‘ring! @codeorg"
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -524,6 +524,7 @@ uz-UZ:
   dashboard_navigation_all_sections: Student Accounts and Progress
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: O‘quvchilarni qo‘shing
   dashboard_navigation_manage_students: O‘quvchilarni boshqarish
   dashboard_navigation_lesson_plans_resources: Dars rejasi va materiallari
@@ -622,6 +623,16 @@ uz-UZ:
   dashboard_puzzle: Jumboq
   dashboard_question: Savol
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: To‘g‘ri
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: "O'qituvchi"

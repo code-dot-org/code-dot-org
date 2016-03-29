@@ -21,7 +21,7 @@ bs-BA:
   twentyhours_heading: Probaj naš uvod u Kurs računarskih nauka
   twentyhours_text: Završio si prvi Hour of Code? Nauci još o računarskim naukama i programskim konceptima u sledećem kursu.
   og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Pridruži se<a href="http://hourofcode.com">Satu Kodiranja</a><br/>Decembar 8 - 14, 2014<br/>'
   hoc2014_students: Učenici
   hoc2014_try: Isprobaj
@@ -179,7 +179,7 @@ bs-BA:
   learn_next_level: Pređi na sljedeći nivo
   learn_online: Isprobaj druge online kurseve
   learn_classes: Pronađi lokalne nastave
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Upravo sam završio #HourOfCode - provjeri! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -508,6 +508,7 @@ bs-BA:
   dashboard_navigation_all_sections: Računi i Napredak Studenata
   dashboard_navigation_view_progress: Prikaži napredak
   dashboard_navigation_view_text_responses: Pregledaj Tekstualne Odgovore
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Dodaj Učenike
   dashboard_navigation_manage_students: Rukovodi Učenike
   dashboard_navigation_lesson_plans_resources: Nastavni Planovi i Resursi
@@ -606,6 +607,16 @@ bs-BA:
   dashboard_puzzle: Zadatak
   dashboard_question: Pitanje
   dashboard_response: Odgovor
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Ispravno
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Nevjerojatna statistika prošlogodišnjeg Sata Kodiranja. U samo jednoj sedmici:'
   stats_hoc_2013_image_alt: Statistika Sata Kodiranja 2013
   dashboard_teacher: Učitelj

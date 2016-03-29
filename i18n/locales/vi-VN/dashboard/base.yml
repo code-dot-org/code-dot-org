@@ -25,6 +25,7 @@ vi:
   welcome_back: 'Chào mừng trở lại, %{name}'
   submit: Chấp nhận
   unsubmit: Ngưng gửi
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Thêm một giáo viên:'
@@ -463,7 +464,6 @@ vi:
   landing:
     prerelease: "Khóa học này là <span class='betatext'> phiên bản beta</span>.  Điều này có nghĩa là nó không phải là phiên bản cuối cùng của khóa học, và có thể sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các cải tiến."
     prerelease_hoc2014: "Lớp học này là  <span class='betatext'>phiên bản beta</span>. Nó có thể được sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các cải tiến."
-    feedback: Gửi ý kiến phản hồi
     report_bug: Báo cáo lỗi
     support: Nhận trợ giúp
     support_url: //support.code.org
@@ -509,6 +509,8 @@ vi:
     placeholder: Nhập câu trả lời của bạn ở đây
     open_response_title: Xin cảm ơn
     open_response_body: Cảm ơn câu trả lời của bạn!
+    correct_title: Chính xác
+    correct_body: Đó là câu trả lời chính xác.
   dialog:
     ok: Đồng ý
     startover_title: Bạn có chắc bạn muốn bắt đầu lại?
@@ -619,3 +621,7 @@ vi:
           other: Khác
         detail: Xin vui lòng cung cấp càng nhiều chi tiết nếu có thể liên quan đến nội dung bạn đang báo cáo.
         acknowledge: 'Bằng việc gửi thông tin này, bạn xác nhận nó sẽ bị xử lý theo quy định của các điều khoản của %{link_start_privacy}Privacy Policy%{link_end} và %{link_start_tos}Terms Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

@@ -1,6 +1,6 @@
 {
   "and": "i",
-  "animationMode": "Animation",
+  "animationMode": "Animacja",
   "backToPreviousLevel": "Wróć do poprzedniego poziomu",
   "blocklyMessage": "Blockly",
   "blocks": "bloki",
@@ -28,7 +28,7 @@
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
   "debugWatchHeader": "Watch",
-  "debugWatchNotAvailable": "<not available>",
+  "debugWatchNotAvailable": "Niedostępne.",
   "defaultTwitterText": "Sprawdź, co zrobiłem",
   "designMode": "Projekt",
   "dialogCancel": "Anuluj",

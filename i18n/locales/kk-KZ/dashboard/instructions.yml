@@ -2092,6 +2092,12 @@ kk:
         the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: Араға шәрін керек. Мұндағы барлық объектілер гүл емес, сондықтан әр бұлтты тексер. Егер гүлді тапсан, одан шәрін жина.
       Ryan - Bee Conditionals_instruction: Араға шәрін керек. Мұндағы барлық объектілер гүл емес, сондықтан әр бұлтты тексер. Егер гүлді тапсан, одан шәрін жина.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: 'Міне "күзет" деген функция. Мысық 400 пиксель жоғары және 400 пиксель төмен жүргендей етіп осы функцияны енгіз.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |

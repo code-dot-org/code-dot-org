@@ -25,6 +25,7 @@ hu:
   welcome_back: 'Üdv újra, %{name}'
   submit: Elküldés
   unsubmit: Visszavon
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
@@ -459,7 +460,6 @@ hu:
   landing:
     prerelease: "Ez a tananyag <span class='betatext'> béta állapotban van</span>.  Ez azt jelenti, hogy ez nem a tananyag végleges változata, és a visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés várható."
     prerelease_hoc2014: "Ez a tananyag <span class='betatext'> béta állapotban van</span>. A visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés várható."
-    feedback: Visszajelzés küldése
     report_bug: Hiba bejelentése
     support: Segítség kérés
     support_url: //support.code.org
@@ -505,6 +505,8 @@ hu:
     placeholder: Itt add meg a válaszod
     open_response_title: Köszönjük
     open_response_body: Köszönjük a választ!
+    correct_title: Helyes
+    correct_body: Ez a helyes válasz.
   dialog:
     ok: OK
     startover_title: Biztosan újra szeretnéd kezdeni?
@@ -615,3 +617,7 @@ hu:
           other: Egyéb
         detail: Kérjük, adj meg a lehető legtöbb részletet a jelenteni kívánt tartalommal kapcsolatban!
         acknowledge: 'Az alábbi információk megadásával tudomásul veszed, hogy azokat az %{link_start_privacy}Adatvédelmi szabályzatnak%{link_end} és a %{link_start_tos}Felhasználói szabályoknak%{link_end} megfelelően kezeljük'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

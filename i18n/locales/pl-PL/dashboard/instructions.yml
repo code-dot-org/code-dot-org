@@ -1978,6 +1978,12 @@ pl:
       Quantum Bee_instruction: 'Fioletowe kwiaty mogą mieć 1 lub 0 nektaru, ale nie wiesz który. Uważaj, by nie zbierać nektaru z fioletowego kwiatka, jeśli go nie ma. Sprawdzaj, czy nektar jest równy 1 przy użyciu bloku "jeśli".'
       Ryan - 4-5 Bee Conditionals 2_instruction: Pszczółka chce teraz tylko nektaru. Nie wszystkie obiekty są kwiatami, więc sprawdź pod KAŻDĄ CHMURKĄ, czy ukrywa kwiatek. Jeśli tak, to wtedy możesz zebrać nektar.
       Ryan - Bee Conditionals_instruction: Pszczółka chce teraz tylko nektaru. Nie wszystkie obiekty są kwiatami, więc sprawdź pod KAŻDĄ CHMURKĄ, czy ukrywa kwiatek. Jeśli tak, to wtedy możesz zebrać nektar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: 'Mamy tu funkcję "patrol" (patrol). Zmień ją tak, by Kot przeszedł 400 pikseli w górę, po czym 400 pikseli w dół.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |

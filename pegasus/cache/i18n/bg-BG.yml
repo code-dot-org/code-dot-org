@@ -668,6 +668,7 @@
   dashboard_navigation_all_sections: "Ученически акаунти и прогрес"
   dashboard_navigation_view_progress: "Преглед на напредъка"
   dashboard_navigation_view_text_responses: "Изглед на текстовите отговори"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "Добавяне на ученици"
   dashboard_navigation_manage_students: "Управление на ученици"
   dashboard_navigation_lesson_plans_resources: "Учебни планове и ресурси"
@@ -794,6 +795,16 @@
   dashboard_puzzle: "Пъзел"
   dashboard_question: "Въпрос"
   dashboard_response: "Отговор"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "Правилно"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Невероятната статистика от миналата година за Часът на
     кодирането. Само за една седмица"
   stats_hoc_2013_image_alt: "Статистика Часът на кодирането от 2013"

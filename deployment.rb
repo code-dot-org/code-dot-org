@@ -150,6 +150,10 @@ class CDOImpl < OpenStruct
   end
 
   def canonical_hostname(domain)
+    # Allow hostname overrides
+    return CDO.override_dashboard if CDO.override_dashboard && domain == 'studio.code.org'
+    return CDO.override_pegasus if CDO.override_pegasus && domain == 'code.org'
+
     return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
     return domain if rack_env?(:production)
 
