@@ -678,6 +678,7 @@
   dashboard_navigation_all_sections: Comptes et progression de l'élève
   dashboard_navigation_view_progress: Voir la progression
   dashboard_navigation_view_text_responses: Afficher les réponses écrites
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Ajouter des élèves
   dashboard_navigation_manage_students: Gérer les élèves
   dashboard_navigation_lesson_plans_resources: Plans de cours et ressources
@@ -804,6 +805,16 @@
   dashboard_puzzle: Puzzle
   dashboard_question: Question
   dashboard_response: Réponse
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Correct
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Les statistiques incroyables de l''Heure de Code de l''année
     dernière. En une seule semaine :'
   stats_hoc_2013_image_alt: Statistiques de l'Heure de Code en 2013

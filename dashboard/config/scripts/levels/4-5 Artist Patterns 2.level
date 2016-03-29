@@ -12,12 +12,12 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "If you place your square loop inside another loop, we call that a nested loop. What do you need to add to your outer loop to make sure all 15 squares line up next to each other?",
+    "instructions": "If you place your square loop inside another loop, we call that a nested loop. What do you need to add as an outer loop to make sure all 15 squares line up next to each other?",
     "slider_speed": ".8",
     "ideal": "6",
     "disable_param_editing": "true",
     "embed": "false",
-    "markdown_instructions": "If you place your square loop inside another loop, we call that a nested loop. What do you need to add to your outer loop to make sure all 15 squares line up next to each other?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "If you place your square loop inside another loop, we call that a nested loop. \r\n\r\nWhat do you need to add as an outer loop to make sure all 15 squares line up next to each other?\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -30,8 +30,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Notice that since the squares are 20 pixels long, you'll need to jump 20 pixels before you start your next square.\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -76,7 +80,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
@@ -86,7 +90,7 @@
           <title name="TIMES">15</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

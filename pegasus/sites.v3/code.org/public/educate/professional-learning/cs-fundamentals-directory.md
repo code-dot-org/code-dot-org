@@ -618,14 +618,6 @@ bowens@pd.code.org
 [/col-33]
 
 [col-33]
-### Karen Putman
-Chicago, IL
-
-putman@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Faik Tanriseven
 Des Plaines, IL
 
