@@ -710,6 +710,7 @@
   dashboard_navigation_all_sections: "Λογαριασμοί μαθητών και Πρόοδος"
   dashboard_navigation_view_progress: "Προβολή προόδου"
   dashboard_navigation_view_text_responses: "Προβολή Αποκρίσεων Κειμένου"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "Προσθήκη μαθητών"
   dashboard_navigation_manage_students: "Διαχείριση μαθητών"
   dashboard_navigation_lesson_plans_resources: "Σχέδια μαθήματος και Πόροι"
@@ -843,6 +844,16 @@
   dashboard_puzzle: "Παζλ"
   dashboard_question: "Ερώτηση"
   dashboard_response: "Απάντηση"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "Σωστό"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Απίστευτα στατιστικά από την περσινή ώρα του κώδικα. Σε
     μία εβδομάδα μόνο:"
   stats_hoc_2013_image_alt: "Στατιστικά στοιχεία από την ώρα του κώδικα του 2013"
