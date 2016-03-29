@@ -1,0 +1,204 @@
+<%
+require 'cdo/aws/cloudfront'
+%>
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: Standalone Code.org application on a single EC2 instance<%=cdn_enabled ? ' over CloudFront CDN' : ''%>.
+Resources:
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/24
+      EnableDnsHostnames: true
+  SubnetA:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: {Ref: VPC}
+      CidrBlock: 10.0.0.0/26
+      AvailabilityZone: '<%=availability_zone%>'
+      MapPublicIpOnLaunch: true
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+  Internet:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId: {Ref: VPC}
+      InternetGatewayId: {Ref: InternetGateway}
+  PublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: {Ref: VPC}
+  PublicRoute:
+    Type: AWS::EC2::Route
+    DependsOn: Internet
+    Properties:
+      RouteTableId: {Ref: PublicRouteTable}
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: {Ref: InternetGateway}
+  SubnetRouteAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: {Ref: PublicRouteTable}
+      SubnetId: {Ref: SubnetA}
+  WebServerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable HTTP[S] + SSH access
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: <%=ssh_ip%>
+      VpcId: {Ref: VPC}
+  WebServer:
+    Type: AWS::EC2::Instance
+    DependsOn: Internet
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT60M
+    Properties:
+      ImageId: <%=image_id%>
+      SecurityGroupIds: [Ref: WebServerSecurityGroup]
+      SubnetId: {Ref: SubnetA}
+      InstanceType: <%=instance_type%>
+      IamInstanceProfile: {Ref: RootInstanceProfile}
+      KeyName: <%=ssh_key_name%>
+      Tags: [{Key: Name, Value: <%=stack_name%>}]
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: 64
+            VolumeType: gp2
+      UserData:
+        Fn::Base64: <%=file.call('bootstrap.sh.erb')%>
+  WebServerEIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      InstanceId: {Ref: WebServer}
+      Domain: vpc
+  RootRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal: {Service: [ec2.amazonaws.com]}
+            Action: ['sts:AssumeRole']
+      Path: '/'
+      Policies:
+        - PolicyName: instance
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: ['s3:GetObject']
+                Resource: 'arn:aws:s3:::<%=s3_bucket%>/*'
+              - Effect: Allow
+                Action: ['cloudformation:SignalResource']
+                Resource: '*'
+  RootInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: '/'
+      Roles: [Ref: RootRole]
+<%
+  %w(Dashboard Pegasus).each do |app|
+    app_domain = "#{app == 'Pegasus' ? '' : (app.downcase + '-')}#{subdomain}";
+%>
+  <%=app%>DNS:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneName: <%=domain%>.
+      RecordSets:
+        - Name: "<%=app_domain%>"
+          Type: A
+<%  if cdn_enabled%>
+          AliasTarget:
+            DNSName: {'Fn::GetAtt': [<%=app%>CDN, DomainName]}
+            HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
+  <%=app%>CDN:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig: <%=AWS::CloudFront.config_cloudformation(app.downcase.to_sym, "origin-#{subdomain}", [app_domain])%>
+  # TODO remove once CloudFormation adds support for CloudFront ACM.
+  <%=app%>CDNProperties:
+    Type: Custom::CloudFrontProperties
+    DependsOn: <%=app%>CDN
+    Properties:
+      DistributionId: {Ref: <%=app%>CDN}
+      OldViewerCertificate:
+        CloudFrontDefaultCertificate: true
+        MinimumProtocolVersion: TLSv1
+      ViewerCertificate:
+        ACMCertificateArn: <%=certificate_arn%>
+        MinimumProtocolVersion: TLSv1
+        SSLSupportMethod: sni-only
+      OldProtocols:
+        Quantity: 2
+        Items: [SSLv3, TLSv1]
+      Protocols:
+        Quantity: 2
+        Items: [TLSv1.2, TLSv1.1]
+      ServiceToken: {'Fn::GetAtt': [CloudFrontProperties, Arn]}
+<%  else%>
+          TTL: 60
+          ResourceRecords: [Ref: WebServerEIP]
+<%  end%>
+<%end %>
+<%  if cdn_enabled%>
+  OriginDNS:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneName: <%=domain%>.
+      RecordSets:
+        - Name: "origin-<%=subdomain%>"
+          Type: A
+          TTL: 60
+          ResourceRecords: [Ref: WebServerEIP]
+  # TODO remove once CloudFormation adds support for CloudFront ACM.
+  CloudFrontProperties:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        ZipFile: <%=file.call('cloudfrontProperties.js')%>
+      Handler: index.handler
+      Runtime: nodejs
+      Timeout: 300
+      Role: {'Fn::GetAtt': [CloudFrontPropertiesRole, Arn]}
+  # TODO remove once CloudFormation adds support for CloudFront ACM.
+  CloudFrontPropertiesRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: ['sts:AssumeRole']
+            Effect: Allow
+            Principal: {Service: [lambda.amazonaws.com]}
+      Path: '/'
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Statement:
+              - Action: ['cloudFront:GetDistributionConfig', 'cloudFront:UpdateDistribution']
+                Resource: ['*']
+                Effect: Allow
+              - Action: ['logs:CreateLogGroup', 'logs:CreateLogStream', 'logs:PutLogEvents']
+                Resource: 'arn:aws:logs:*:*:*'
+                Effect: Allow
+<%end %>
+Outputs:
+<%
+  %w(Dashboard Pegasus).each do |app|
+    app_domain = "#{app == 'Pegasus' ? '' : (app.downcase + '-')}#{subdomain}";
+%>
+  <%=app%>URL:
+    Value: "https://<%=app_domain%>"
+    Description: <%=app%> URL
+<% end%>
