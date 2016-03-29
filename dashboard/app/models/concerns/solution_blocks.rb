@@ -54,6 +54,7 @@ module SolutionBlocks
       # Solution block does not appear in the toolbox, add it
       toolboxified_block = create_toolbox_block block
       if toolbox.xpath('//category').empty?
+        toolbox.root = Nokogiri::XML::Node.new('xml', toolbox) if toolbox.root.nil?
         toolbox.root.add_child toolboxified_block
       else
         category = toolbox.xpath('//category[@name=\'NEW BLOCKS\']').first ||

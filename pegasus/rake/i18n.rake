@@ -19,6 +19,7 @@ def format_enus_yml_with_quotes(line)
 
   return line
 end
+
 def hash_to_yml_with_quoted_values(hash, yml_path)
   buffer = StringIO.new(hash.to_yaml(line_width: -1))
 

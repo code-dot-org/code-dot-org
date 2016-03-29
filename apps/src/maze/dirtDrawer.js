@@ -23,7 +23,7 @@ var DirtDrawer = module.exports = function (map, dirtAsset) {
  * current value
  */
 DirtDrawer.prototype.updateItemImage = function (row, col, running) {
-  var val = this.map_.getValue(row, col);
+  var val = this.map_.getValue(row, col) || 0;
   this.updateImageWithIndex_('dirt', row, col, this.dirtImageInfo_,
     spriteIndexForDirt(val));
 };

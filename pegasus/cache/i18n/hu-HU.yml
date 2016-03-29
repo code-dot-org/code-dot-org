@@ -660,6 +660,7 @@
   dashboard_navigation_all_sections: Diákok fiókja és haladása
   dashboard_navigation_view_progress: Fejlődés megtekintése
   dashboard_navigation_view_text_responses: Szöveges válaszok megtekintése
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Diákok hozzáadása
   dashboard_navigation_manage_students: Diákok kezelése
   dashboard_navigation_lesson_plans_resources: "Óravázlatok és erőforrások"
@@ -782,6 +783,16 @@
   dashboard_puzzle: Kirakós
   dashboard_question: Kérdés
   dashboard_response: Válasz
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Helyes
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Szédületes statisztika a tavalyi Kódolás Órája programról.
     Egyetlen hét alatt:'
   stats_hoc_2013_image_alt: Statisztika a 2013-as Kódolás Órája programról

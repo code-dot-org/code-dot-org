@@ -19,6 +19,8 @@
 #  index_sections_on_user_id  (user_id)
 #
 
+require 'cdo/section_helpers'
+
 class Section < ActiveRecord::Base
   belongs_to :user
 
@@ -42,7 +44,7 @@ class Section < ActiveRecord::Base
 
   before_create :assign_code
   def assign_code
-    self.code = random_code
+    self.code = unused_random_code
   end
 
   def students_attributes=(params)
@@ -73,14 +75,10 @@ class Section < ActiveRecord::Base
   end
 
   private
-  CHARS = ("A".."Z").to_a - %w(A E I O U)
-  def random_text(len)
-    len.times.to_a.collect{ CHARS.sample }.join
-  end
 
-  def random_code
+  def unused_random_code
     loop do
-      code = random_text(6)
+      code = SectionHelpers::random_code
       return code unless Section.exists?(code: code)
     end
   end

@@ -220,7 +220,7 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
 ### React
 Our default style if not mentioned here should be that mentioned in the AirBnb guide https://github.com/airbnb/javascript/tree/master/react (perhaps with the exception of closing tags on their own line).
 * <a name="js-react-inline-styles"></a>
-Prefer single object for all styles vs. inlined style objects
+Prefer single object for all styles vs. inlined style objects.  Define static styles outside the component, and only dynamic styles in the render method.
 ```jsx
 // Bad
 var component = (
@@ -246,6 +246,29 @@ var component = (
     <div style={styles.child}>I'm a child</div>
   </div>
 );
+
+// Example of defining static and dynamic styles separately
+var staticStyles = {
+  root: {
+    display: 'block'
+  },
+  child: {
+    color: 'blue',
+    fontSize: 10
+  }
+};
+var Component = function (props) {
+  var styles = _.merge({}, staticStyles, {
+    root: {
+      color: this.props.color
+    }
+  });
+  return (
+    <div style={styles.root}>
+      <div style={styles.child}>I'm a child</div>
+    </div>
+  );
+};
 ```
 * <a name="js-react-pixel-numbers"></a>
 Prefer numbers vs strings for pixel values

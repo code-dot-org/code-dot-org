@@ -23,6 +23,7 @@ class TestCloudFront < Minitest::Test
       }
     }
   end
+
   def teardown
     Aws.config[:stub_responses] = @old_stub_responses
   end

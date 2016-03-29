@@ -47,6 +47,7 @@ en:
   welcome_back: "Welcome back, %{name}"
   submit: Submit
   unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Add a teacher:'
@@ -531,6 +532,8 @@ en:
     placeholder: "Enter your answer here"
     open_response_title: "Thanks"
     open_response_body: "Thanks for your response!"
+    correct_title: "Correct"
+    correct_body: "That is the correct answer."
   dialog:
     ok: "OK"
     startover_title: "Are you sure you want to start over?"
@@ -641,3 +644,7 @@ en:
           other: 'Other'
         detail: 'Please provide as much detail as possible regarding the content you are reporting.'
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: 'Search for an icon...'
+      no_icons_found: 'No icons found'

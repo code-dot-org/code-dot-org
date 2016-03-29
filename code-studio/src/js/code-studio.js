@@ -14,6 +14,7 @@ var _ = require('lodash');
 require('./consoleShim')(window);
 
 var Sounds = require('./Sounds');
+var activateReferenceAreaOnLoad = require('./reference_area');
 
 require('./videos');
 
@@ -28,6 +29,7 @@ require('./components/send_to_phone.jsx');
 require('./components/share_dialog.jsx');
 require('./components/small_footer.jsx');
 require('./components/GridEditor.jsx');
+require('./components/IconLibrary.jsx');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
@@ -70,5 +72,7 @@ $(document).keydown(function(e) {
 setTimeout(function() {
   $('#codeApp .slow_load').show();
 }, 10000);
+
+activateReferenceAreaOnLoad();
 
 window.CDOSounds = new Sounds();
