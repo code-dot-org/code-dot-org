@@ -172,6 +172,10 @@ module AWS
     def self.config(app, reference = nil)
       behaviors, cloudfront, config = get_app_config(app, method(:cache_behavior))
       ssl_cert = cloudfront[:ssl_cert]
+      # Lookup IAM Certificate ID from server certificate name
+      server_certificate_id = ssl_cert && Aws::IAM::Client.new.
+        get_server_certificate(server_certificate_name: ssl_cert).
+        server_certificate.server_certificate_metadata.server_certificate_id
       {
         aliases: {
           quantity: cloudfront[:aliases].length, # required
@@ -226,10 +230,9 @@ module AWS
         price_class: 'PriceClass_All', # accepts PriceClass_100, PriceClass_200, PriceClass_All
         enabled: true, # required
         viewer_certificate: ssl_cert ? {
-          # Lookup IAM Certificate ID from server certificate name
-          iam_certificate_id: Aws::IAM::Client.new.
-            get_server_certificate(server_certificate_name: ssl_cert).
-            server_certificate.server_certificate_metadata.server_certificate_id,
+          certificate: server_certificate_id,
+          iam_certificate_id: server_certificate_id,
+          certificate_source: 'iam',
           ssl_support_method: 'vip', # accepts sni-only, vip
           minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1
         } : {
