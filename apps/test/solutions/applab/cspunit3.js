@@ -119,6 +119,7 @@ module.exports = {
 
         Applab.turtle.x = 100;
         Applab.turtle.y = 100;
+        console.log('set turtle pos');
 
         var nextIndex = 0;
         function appendToolboxBlock(blockIndex) {

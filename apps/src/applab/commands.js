@@ -362,6 +362,7 @@ applabCommands.turnLeft = function (opts) {
   if (typeof opts.degrees !== 'undefined') {
     degrees = -opts.degrees;
   }
+  console.log('turnLeft: ' + Applab.turtle.x + ' ' + Applab.turtle.y + ' ' + Applab.turtle.heading);
   applabCommands.turnRight({'degrees': degrees });
 };
 
