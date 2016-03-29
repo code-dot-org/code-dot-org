@@ -13,10 +13,10 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".6",
     "free_play": "false",
-    "instructions": "Let's repeat that to make a row of 6 diamonds. Notice that we changed our diamond code to repeat 3 times instead of 2 - why do you think that is?",
+    "instructions": "Repeat this code to make a row of 6 diamonds. \r\n\r\nNotice that we changed our diamond code to repeat 3 times instead of 2 - why do you think that is?\r\n",
     "ideal": "8",
     "embed": "false",
-    "markdown_instructions": "Let's repeat that to make a row of 6 diamonds. Notice that we changed our diamond code to repeat 3 times instead of 2 - why do you think that is?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Repeat this code to make a row of 6 diamonds. \r\n\r\nNotice that we changed our diamond code to repeat 3 times instead of 2 - why do you think that is?\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -30,8 +30,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "never_autoplay_video": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Now, when the artist finished each diamond, he's facing the opposite direction from where he needs to be to start the next one.  \\n\\nHow many degrees does he need to be turned to set himself straight?\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -88,7 +92,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="pick_one">
           <statement name="PICK">
@@ -108,7 +112,7 @@
           <title name="TIMES">6</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
