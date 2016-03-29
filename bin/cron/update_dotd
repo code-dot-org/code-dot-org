@@ -5,10 +5,10 @@ require_relative '../../deployment'
 
 slack_token = CDO.slack_token
 pagerduty_token = CDO.pagerduty_token
-developers_channel_id = CDO.developers_channel_id
+channel_id = CDO.developers_channel_id
 
 # Get current developers room topic
-channel_info = open("https://slack.com/api/channels.info?token=#{slack_token}&channel=#{developers_channel_id}").read
+channel_info = open("https://slack.com/api/channels.info?token=#{slack_token}&channel=#{channel_id}").read
 current_topic = JSON.parse(channel_info)["channel"]["topic"]["value"]
 
 # Get DOTD on call from Pager Duty
