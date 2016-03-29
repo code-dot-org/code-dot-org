@@ -3,6 +3,7 @@ window.ReactDOM = require('react-dom');
 var ReactTestUtils = require('react-addons-test-utils');
 
 var testUtils = require('./util/testUtils');
+testUtils.setupLocales();
 var assert = testUtils.assert;
 
 var DialogButtons = require('@cdo/apps/templates/DialogButtons.jsx');
