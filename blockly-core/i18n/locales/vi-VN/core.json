@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED": "màu đỏ",
   "COLOUR_RGB_TITLE": "tô màu với",
   "COLOUR_RGB_TOOLTIP": "Tạo một màu với lượng màu đỏ, xanh lá cây, xanh da trời được chỉ định. Tất cả các giá trị phải nằm trong khoảng từ 0 tới 100.",
-  "CONFIRM_CREATE_VARIABLE": "Create",
+  "CONFIRM_CREATE_VARIABLE": "Tạo ra",
   "CONFIRM_DELETE_FUNCTION_MESSAGE": "Cảnh báo! Bạn có muốn xóa đi %1 không?",
   "CONFIRM_RENAME_VARIABLE": "Đổi tên",
   "CONTRACT_EDITOR_HEADER": "Công thức Thiết kế",

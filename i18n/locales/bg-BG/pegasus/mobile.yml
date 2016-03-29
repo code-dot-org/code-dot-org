@@ -21,7 +21,7 @@ bg-BG:
   twentyhours_heading: Опитайте нашите въвеждащи курсове по компютърни науки
   twentyhours_text: Завършихте ли първия Час на кодиране? Научете повече за основните понятия в компютърните науки и програмиране в този следващ курс.
   og_title: Всяко дете заслужава възможност
-  og_description: Всеки ученик във всяко училище заслужава възможност да учи компютърни науки.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Присъединете се към <a href="http://hourofcode.com"> Часът на кодирането</a> <br/>на 8-14 декември 2014 г. <br/>'
   hoc2014_students: Ученици
   hoc2014_try: Опитайте го
@@ -179,7 +179,7 @@ bg-BG:
   learn_next_level: Опитайте друг курс от Студиото по кодиране
   learn_online: Опитайте други курсове онлайн
   learn_classes: Намерете местни класове
-  hoc_is_here: 'През миналата седмица на компютърните науки в образованието, #HourOfCode е достигнал до 50 милиона ученици.  Https://Youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Преди малко завърших #HourOfCode - вижте го! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -484,6 +484,7 @@ bg-BG:
   dashboard_navigation_all_sections: Ученически акаунти и прогрес
   dashboard_navigation_view_progress: Преглед на напредъка
   dashboard_navigation_view_text_responses: Изглед на текстовите отговори
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Добавяне на ученици
   dashboard_navigation_manage_students: Управление на ученици
   dashboard_navigation_lesson_plans_resources: Учебни планове и ресурси
@@ -582,6 +583,16 @@ bg-BG:
   dashboard_puzzle: Пъзел
   dashboard_question: Въпрос
   dashboard_response: Отговор
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Правилно
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: Невероятната статистика от миналата година за Часът на кодирането. Само за една седмица
   stats_hoc_2013_image_alt: Статистика Часът на кодирането от 2013
   dashboard_teacher: Учител

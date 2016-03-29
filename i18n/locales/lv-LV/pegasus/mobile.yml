@@ -21,7 +21,7 @@ lv-LV:
   twentyhours_heading: Izmēģiniet mūsu datorzinību kursa ievadu
   twentyhours_text: 'Pabeidzi savu pirmo "Programmēšanas stundu"? Apgūsti pamatzināšanas datorzinībās un programmēšanas pamatlietas nākamajos kursos.'
   og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Pievienojies  <a href="http://hourofcode.com">"Programmēšanas stundai" </a><br/>2014. gada 8. - 14. decembrī<br/>'
   hoc2014_students: Skolēni
   hoc2014_try: Izmēģini
@@ -181,7 +181,7 @@ lv-LV:
   learn_next_level: Turpināt nākamo līmeni
   learn_online: Izmēģiniet citus kursus tiešsaistē
   learn_classes: Atrast vietējās klases
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Es tikko izpildīju #Programmēšanas_stundu - pārbaudi! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -525,6 +525,7 @@ lv-LV:
   dashboard_navigation_all_sections: Skolēnu konti un progress
   dashboard_navigation_view_progress: Apskatīt sekmes
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Pievienot skolēnus
   dashboard_navigation_manage_students: Pārvaldīt skolēnus
   dashboard_navigation_lesson_plans_resources: Stundu plāni un resursi
@@ -623,6 +624,16 @@ lv-LV:
   dashboard_puzzle: Puzle
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Pareizi
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Neticama statistika no pagāšā gada "Programmēšanas Stundas". Nieka nedēļā:'
   stats_hoc_2013_image_alt: 'Statistika no 2013 "Programmēšanas stunda"'
   dashboard_teacher: Skolotāja

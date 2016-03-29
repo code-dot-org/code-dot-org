@@ -658,6 +658,7 @@
   dashboard_navigation_all_sections: "শিক্ষার্থীদের অ্যাকাউন্ট এবং আগ্রগতি"
   dashboard_navigation_view_progress: "আগ্রগতি দেখুন"
   dashboard_navigation_view_text_responses: "লিখিত জবাব দেখুন"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: " শিক্ষার্থীদের যুক্ত করন"
   dashboard_navigation_manage_students: " শিক্ষার্থীদের পরিচালনা করন"
   dashboard_navigation_lesson_plans_resources: "পাঠ পরিকাল্পনা এবং তথ্য"
@@ -776,6 +777,16 @@
   dashboard_puzzle: "ধাঁধা"
   dashboard_question: "প্রশ্ন"
   dashboard_response: "জবাব"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "সঠিক"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "গত বছরের এক ঘন্টার কোড থেকে আসা অবিশ্বাস্য পরিসংখ্যান।
     শুধু এক সপ্তাহেঃ"
   stats_hoc_2013_image_alt: 2013 থেকে ঘন্টা কোড এর stats

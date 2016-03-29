@@ -26,6 +26,7 @@
   welcome_back: Bienvenido, %{name}
   submit: Enviar
   unsubmit: No enviar
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Agregar un maestro:'
@@ -580,7 +581,6 @@
       comentarios y hacemos mejoras.
     prerelease_hoc2014: Este tutorial está en <span class='betatext'> beta</span>.  Es
       objeto de revisión a medida que se reciben comentarios y se hacen mejoras.
-    feedback: Envía comentarios
     report_bug: Informar sobre un error
     support: Obtener ayuda
     support_url: "//support.code.org"
@@ -628,6 +628,8 @@
     placeholder: Escribe aquí tu respuesta
     open_response_title: Gracias
     open_response_body: Gracias por tu respuesta!
+    correct_title: Correcto
+    correct_body: Esa respuesta es la correcta.
   dialog:
     ok: Aceptar
     startover_title: "¿Seguro que quieres empezar de nuevo?"
@@ -764,3 +766,7 @@
         acknowledge: Al enviar esta información usted sabe que se tratará de acuerdocon
           los terminos de la %{link_start_privacy} politica de privacidad %{link_end}
           y de los %{link_start_tos}terminos de servicio %{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

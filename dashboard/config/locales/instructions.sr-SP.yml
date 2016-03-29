@@ -283,23 +283,19 @@
       2-3 Artist Nested Loops Free Play_instruction: |
         Free play, draw something cool
         with nested loops.
-      2-3 Bee Conditionals 1_instruction: |
-        Hi! I'm a bee. Help me get nectar from
-        the flower.
+      2-3 Bee Conditionals 1_instruction: "Здраво! Ја сам пчела. Помози ми да покупим
+        нектар са цветова."
       2-3 Bee Conditionals 10_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.\r
-      2-3 Bee Conditionals 11_instruction: "I wonder what's out there!\\r\n\\r\nHelp\nme
-        fly around the yard and collect nectar only from the flowers that have\nsome. "
-      2-3 Bee Conditionals 12_instruction: |
-        Help me find all of the nectar using
-        as few blocks as possible!
+        У љубичастим цветовима може да буде нектара а можда и су празни.
+        Пази да не узмеш нектар са цвета ако је празан.\r
+      2-3 Bee Conditionals 11_instruction: "Баш ме занима шта има тамо!\\r\n\\r\nПомози
+        ми да пролетим пољем и сакупим нектар са цветова који га имају. "
+      2-3 Bee Conditionals 12_instruction: "Помози ми да покупим сав нектар са цветова
+        коришћењем што је могуће мање блокова!"
       2-3 Bee Conditionals 13_instruction: |-
-        There's a lot happening here!\r
+        Овде се свашта дешава!\r
         \r
-        Use
-        what you've learned to collect all of the nectar and then make the honey.
+        Искористите шта сте научили да сакупите сав нектар а онда да направите мед.
       2-3 Bee Conditionals 14_instruction: |-
         Let's put everything together!\r
         \r
@@ -313,9 +309,8 @@
         you collect nectar only from the flowers that have some, using as few blocks
         as possible?
       2-3 Bee Conditionals 2_instruction: |-
-        I'm a hungry bee! \r
-        Help me collect
-        all of the nectar from the flowers using the fewest number of blocks.
+        Ја сам гладна пчела! \r
+        Помози ми да сакупим сав нектар са цветова са што је могуће мање блокова.
       2-3 Bee Conditionals 3_instruction: "Look at all of that nectar!\\r\n\\r\nHelp\nme
         collect the nectar and make the honey using as few blocks as you can.  "
       2-3 Bee Conditionals 4_instruction: |
@@ -329,18 +324,15 @@
       2-3 Bee Conditionals 6_instruction: |
         Check this flower with an "if" block
         to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower only if
-        it has any.
+      2-3 Bee Conditionals 7_instruction: "Покупи нектар са сваког цвета само ако
+        није празан."
       2-3 Bee Conditionals 8_instruction: |
         This field has red and purple flowers.
         Red flowers have a known nectar amount, but purple flower nectar is unknown.
         Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
-      2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all of
-        the nectar. Be careful not to try to collect nectar from a purple flower if
-        it doesn't have any.
+      2-3 Bee Conditionals 9_instruction: "Покупи сав нектар са цвећа."
+      2-3 Bee Conditionals Assessment 1_instruction: "Задатак: Покупи сав нектар.
+        Пази да не покупиш нектар са љубичастих цветова који су празни."
       2-3 Bee Debugging 1_instruction: |
         These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar.
@@ -405,7 +397,7 @@
         a task.  \r
         \r
         Use the `get 5` function to get 5 nectars at a time.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
+      2-3 Bee Functions 3_instruction: "Покупи сав нектар са цвећа."
       2-3 Bee Functions 4_instruction: |-
         The `move and get nectar` function turns
         the bee, collects nectar, and then returns the bee to where it started.  \r
@@ -441,9 +433,8 @@
         \r
         Collect nectar
         from each of the flowers using the fewest blocks possible.
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
+      2-3 Bee Loops 10_instruction: "Можеш ли ставиш петљу за понављање у две друге
+        петље да покупиш сав нектар?"
       2-3 Bee Loops 11_instruction: |
         Use while loops to collect all of the nectar
         from the flowers in this field.
@@ -925,11 +916,11 @@
       4-5 Bee Debugging 4_instruction: These blocks don't work. What's the pattern?
       4-5 Bee Debugging 5_instruction: Something isn't right here...
       4-5 Bee Debugging 6_instruction: |-
-        The purple flower has a differet amount of
-        nectar each time you run the puzzle. \r
+        The purple flower has a different amount
+        of nectar each time you run the puzzle. \r
         \r
-        Fix the blocks to get all of
-        the nectar from the flower each time.
+        Fix the blocks to get all
+        of the nectar from the flower each time.
       4-5 Bee Debugging 7_instruction: The function is missing something...
       4-5 Bee Debugging 8_instruction: |
         This function is fine, but it isn't used
@@ -2999,27 +2990,34 @@
       K-1 Bee 1_instruction: |
         Move me to the flower, get the nectar, then move me
         to the honeycomb, and make honey
-      K-1 Bee 10_instruction: Get four nectar and then make two honey!
+      K-1 Bee 10_instruction: "Узми четири нектара са цвета и направи две порције
+        меда!"
       K-1 Bee 11.5_instruction: Get four nectar to make four honey!
       K-1 Bee 11_instruction: Get three nectar and then make one honey
-      K-1 Bee 12_instruction: Get three nectar and then make two honey!
+      K-1 Bee 12_instruction: "Узми три нектара са цвета и онда направи две порције
+        меда!"
       K-1 Bee 13_instruction: Get three nectar and then make one honey!
       K-1 Bee 14_instruction: |
         Get me to the nectar, pick it up, get me to the honey,
         and make honey
-      K-1 Bee 15_instruction: Get two nectar to make two honey!
+      K-1 Bee 15_instruction: "Узми два нектара са цвета да направиш две порције меда!"
       K-1 Bee 2_instruction: |
         Move me to the flower, get the nectar, then move me
         to the honeycomb, and make honey
       K-1 Bee 3_instruction: |
         Move me to the flower, get the nectar, then move me
         to the honeycomb, and make honey
-      K-1 Bee 4_instruction: Get two nectar and then make two honey!
+      K-1 Bee 4_instruction: "Узми четири нектара са цвета и онда направи две порције
+        меда!"
       K-1 Bee 5_instruction: Get three nectar and then make three honey!
-      K-1 Bee 6_instruction: Get two nectar and then make two honey!
-      K-1 Bee 7_instruction: Get three nectar and then make two honey!
-      K-1 Bee 8_instruction: Get two nectar and then make two honey!
-      K-1 Bee 9_instruction: Get two nectar and then make two honey!
+      K-1 Bee 6_instruction: "Узми четири нектара са цвета и онда направи две порције
+        меда!"
+      K-1 Bee 7_instruction: "Узми три нектара са цвета и онда направи две порције
+        меда!"
+      K-1 Bee 8_instruction: "Узми четири нектара са цвета и онда направи две порције
+        меда!"
+      K-1 Bee 9_instruction: "Узми четири нектара са цвета и онда направи две порције
+        меда!"
       K-1 Bee Assessment 1_instruction: Get nectar to make honey!
       K-1 Bee Assessment 2_instruction: Get nectar to make honey!
       K-1 Bee Loops 1_instruction: Get the nectar to make honey!
@@ -3507,10 +3505,9 @@
       NEW Course 4 Bee For Loops 3_instruction: "Ah, the \"for loop\" makes this\nmuch
         easier! All the code you need is here, take a look at how it is put together\nthen
         click \"Run\" to see how it works. \n"
-      NEW Course 4 Bee For Loops 4 4_instruction: |
-        Now we need to move forward "counter"
-        times, then get nectar "counter" times.  Can you use two "repeat" loops
-        to solve this challenge?
+      NEW Course 4 Bee For Loops 4 4_instruction: Сада треба да идемо напред "неколико"
+        пута, а онда да узмемо нектар "неколико" пута. Можеш ли да употребиш две наредбе
+        понављања да решиш овај проблем?
       NEW Course 4 Bee For Loops 4_instruction: "Replace the ??? in the \"for loop\"\nwith
         the largest amount of nectar the bee has to collect. \n"
       NEW Course 4 Bee For Loops 5 5_instruction: |
@@ -3848,6 +3845,12 @@
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
         is hiding a flower. If it is, then you can gather nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.

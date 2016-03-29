@@ -21,7 +21,7 @@ sk-SK:
   twentyhours_heading: Skúste náš úvod do kurzu Počítačovej vedy
   twentyhours_text: 'Hotový s prvou Hodinou programovania? Nauč sa viac o základoch počítačovej vedy a programovacích konceptoch  v nasledujúcom kurze.'
   og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Pridajte sa k <a href="http://hourofcode.com">Hodine Programovania</a> <br/> 8. až 14. Decembra 2014 <br/>'
   hoc2014_students: Študenti
   hoc2014_try: Skúste to
@@ -179,7 +179,7 @@ sk-SK:
   learn_next_level: Pokračovať na ďalšiu úroveň
   learn_online: Skúste iné online kurzy
   learn_classes: Nájsť miestne triedy
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Prave som spravil #HourOfCode - Pozri sa na to! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -519,6 +519,7 @@ sk-SK:
   dashboard_navigation_all_sections: Študentské účty a pokrok
   dashboard_navigation_view_progress: Zobraziť pokrok
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Pridať Študentov
   dashboard_navigation_manage_students: Správa Študentov
   dashboard_navigation_lesson_plans_resources: Plány hodín a Materiály
@@ -617,6 +618,16 @@ sk-SK:
   dashboard_puzzle: Úloha
   dashboard_question: Otázka
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Správne
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Neuveriteľná štatistika z minuloročnej Hodiny Kódu. Behom jediného týždňa:'
   stats_hoc_2013_image_alt: Štatistika z Hodiny Kódu 2013
   dashboard_teacher: Učiteľ

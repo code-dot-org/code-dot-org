@@ -26,6 +26,7 @@
   welcome_back: Selamat datang kembali, %{name}
   submit: Kirim
   unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Tambahkan seorang guru:'
@@ -575,7 +576,6 @@
       dibuat.
     prerelease_hoc2014: Pedoman ini adalah dalam <span class='betatext'>versi beta</span>.
       Pedoman ini dapat direvisi seiring diterimanya masukan dan dibuatnya perbaikan.
-    feedback: Berikan usulan
     report_bug: Laporkan kesalahan
     support: Dapatkan bantuan
     support_url: "//support.code.org"
@@ -623,6 +623,8 @@
     placeholder: Masukkan jawaban Anda di sini
     open_response_title: Terima kasih
     open_response_body: Terima kasih atas responmu!
+    correct_title: Benar
+    correct_body: Itu jawaban yang benar.
   dialog:
     ok: Oke!
     startover_title: Kamu yakin ingin memulainya dari awal?
@@ -759,3 +761,7 @@
         acknowledge: Dengan mengirimkan informasi ini, Anda mengakui ini akan di tangani
           sesuai dengan syarat %{link_start_privacy} kebijakan privasi%{link_end}dan%{link_start_tos}Syarat
           Layanantautan%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

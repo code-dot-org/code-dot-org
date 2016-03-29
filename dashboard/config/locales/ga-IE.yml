@@ -26,6 +26,7 @@
   welcome_back: Welcome back, %{name}
   submit: Submit
   unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Add a teacher:'
@@ -189,8 +190,8 @@
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Please Confirm
-      'no': 'No'
-      'yes': 'Yes'
+      'no': Níl
+      'yes': Tá
       msg: Are you sure you want to claim the %{prize_name} prize?
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
@@ -361,7 +362,7 @@
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
       $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
-    trynow: Triail é anois
+    trynow: Bain triail as anois
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: This 20-hour course introduces core computer science and programming
       concepts. The course is designed for use in classrooms for grades K-8, but it
@@ -552,7 +553,6 @@
       is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
-    feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
     support_url: "//support.code.org"
@@ -600,6 +600,8 @@
     placeholder: Enter your answer here
     open_response_title: Thanks
     open_response_body: Thanks for your response!
+    correct_title: Correct
+    correct_body: That is the correct answer.
   dialog:
     ok: OK
     startover_title: An bhfuil tú cinnte gur mhaith leat tosú arís?
@@ -639,7 +641,7 @@
           title: Jigsaw
           description: ''
         step:
-          title: Step
+          title: Céim
           description: ''
         sample_level_builder:
           title: Sample Level Builder
@@ -678,7 +680,7 @@
     delete: Delete
     exit: Return to Course
     my_projects: My Projects
-    share: Share
+    share: Comhroinn
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     close: Close
@@ -691,8 +693,8 @@
       on your projects at any time.
     need_help: Need help getting started?
     really_delete: Delete?
-    delete_yes: 'Yes'
-    delete_no: 'No'
+    delete_yes: Tá
+    delete_no: Níl
     saved: Sábháilte
     not_saved: Not saved
     cancel: Cealaigh
@@ -733,3 +735,7 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Lorg deilbhín...
+      no_icons_found: Níor aimsíodh aon deilbhíní

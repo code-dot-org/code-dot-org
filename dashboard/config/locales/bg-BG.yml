@@ -26,6 +26,7 @@
   welcome_back: "Добре дошли отново, %{name}"
   submit: "Изпрати"
   unsubmit: "Не е добавено"
+  next_page: Next page
   add_teacher_form:
     code:
       label: "Добавете учител:"
@@ -567,7 +568,6 @@
       че не е окончателната версия на курса и е предмет на преразглеждане и подобрения."
     prerelease_hoc2014: "Този урок е в <span class='betatext'> бета версия</span>.
       \ Това означава, че е предмет на преразглеждане и подобрения."
-    feedback: "Дайте обратна връзка"
     report_bug: "Доклад за бъгове"
     support: "Получаване на помощ"
     support_url: "//support.code.org"
@@ -615,6 +615,8 @@
     placeholder: "Въведете отговора си тук"
     open_response_title: "Благодаря"
     open_response_body: "Благодаря за вашия отговор!"
+    correct_title: "Правилно"
+    correct_body: "Това е верният отговор."
   dialog:
     ok: OK
     startover_title: "Наистина ли искате да започнете отначало?"
@@ -755,3 +757,7 @@
         acknowledge: "С подаването на тази информация, Вие се съгласявате, че тя ще
           бъде третирана съобразно условията на %{link_start_privacy}Privacy Policy%{link_end}
           и %{link_start_tos}Terms на Service%{link_end}"
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found
