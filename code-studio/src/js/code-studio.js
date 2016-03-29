@@ -14,6 +14,7 @@ var _ = require('lodash');
 require('./consoleShim')(window);
 
 var Sounds = require('./Sounds');
+var activateReferenceAreaOnLoad = require('./reference_area');
 
 require('./videos');
 
@@ -71,5 +72,7 @@ $(document).keydown(function(e) {
 setTimeout(function() {
   $('#codeApp .slow_load').show();
 }, 10000);
+
+activateReferenceAreaOnLoad();
 
 window.CDOSounds = new Sounds();
