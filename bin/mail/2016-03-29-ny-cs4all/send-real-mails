@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# 74639 contacts
+../send-to-mailing-list  3-25-nyc-cs4all-esp.md ./teachers.csv
