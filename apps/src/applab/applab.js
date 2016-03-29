@@ -708,7 +708,7 @@ Applab.init = function(config) {
       studioApp.displayWorkspaceAlert('warning', <div>{commonMsg.projectWarning()}</div>);
     }
 
-    studioApp.alertIfAbusiveProject('#');
+    studioApp.alertIfAbusiveProject('#codeWorkspace');
 
     // IE9 doesnt support the way we handle responsiveness. Instead, explicitly
     // resize our visualization (user can still resize with grippy)
@@ -900,8 +900,7 @@ Applab.init = function(config) {
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
-    // TODO - needs a skin before it can do this
-    instructionsMarkdown: getMarkdownInstructions(config.level)
+    instructionsMarkdown: studioApp.getMarkdownInstructions(config.level)
   }));
 
   // TODO - danger here (and with other config), is we now have the potential
@@ -921,16 +920,6 @@ Applab.init = function(config) {
 
   Applab.render();
 };
-
-// TODO - this likely belongs elsewhere
-function getMarkdownInstructions(level) {
-  if (!studioApp.isMarkdownMode(level)) {
-    return level.markdownInstructions;
-  }
-
-  return marked(studioApp.substituteInstructionImages(
-    level.markdownInstructions, {}));
-}
 
 /**
  * Subscribe to state changes on the store.

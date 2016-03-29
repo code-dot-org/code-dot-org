@@ -6,6 +6,7 @@ var color = require('../../color');
 var Instructions = require('./Instructions.jsx');
 var CollapserIcon = require('./CollapserIcon.jsx');
 var HeightResizer = require('./HeightResizer.jsx');
+var constants = require('../../constants');
 
 // TODO These numbers are defined in style-constants.scss. Do the same sort
 // of thing we did with colors

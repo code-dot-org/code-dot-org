@@ -11,7 +11,8 @@ var TopInstructions = require('../templates/instructions/TopInstructions.jsx');
 var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer.jsx');
 var utils = require('../utils');
 
-// TODO - share with top instructions?
+// TODO These numbers are defined in style-constants.scss. Do the same sort
+// of thing we did with colors
 var HEADER_HEIGHT = 30;
 
 /**
@@ -65,7 +66,6 @@ var AppLabView = React.createClass({
     // TODO - there are a small set of levels that have instructions but not markdownInstructions
     //   (that are also used in scripts). should convert these to have markdown instructions
     // TODO - changing id of codeWorkspace to codeWorkspaceApplab will break callouts and some UI tests
-    // TODO - could group rightSide into single component?
     return (
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
