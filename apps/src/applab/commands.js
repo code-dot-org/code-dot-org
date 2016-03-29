@@ -884,7 +884,7 @@ applabCommands.getAttribute = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   var attribute = String(opts.attribute);
-  return divApplab.contains(element) ? element.getAttribute(attribute) : false;
+  return divApplab.contains(element) ? String(element[attribute]) : false;
 };
 
 // Whitelist of HTML Element attributes which can be modified, to
