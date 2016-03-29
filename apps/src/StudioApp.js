@@ -43,6 +43,12 @@ var ENGLISH_LOCALE = 'en_us';
  */
 var MAX_PHONE_WIDTH = 500;
 
+/**
+ * Object representing everything in window.appOptions (often passed around as
+ * config)
+ * @typedef {Object} AppOptionsConfig
+ */
+
 var StudioApp = function () {
   this.feedback_ = new FeedbackUtils(this);
   this.authoredHintsController_ = new AuthoredHints(this);
@@ -229,6 +235,9 @@ StudioApp.prototype.configure = function (options) {
   this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 };
 
+/**
+ * @param {AppOptionsConfig}
+ */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
   return !!(config.level.instructions || config.level.aniGifURL);
 };
@@ -243,6 +252,7 @@ StudioApp.prototype.localeIsEnglish = function () {
 
 /**
  * Common startup tasks for all apps. Happens after configure.
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.init = function(config) {
   if (!config) {
@@ -359,13 +369,13 @@ StudioApp.prototype.init = function(config) {
   }
 
   if (config.showInstructionsWrapper) {
-    config.showInstructionsWrapper(_.bind(function () {
+    config.showInstructionsWrapper(function () {
       if (config.showInstructionsInTopPane) {
         return;
       }
       var shouldAutoClose = !!config.level.aniGifURL;
       this.showInstructionsDialog_(config.level, shouldAutoClose, false);
-    }, this));
+    }.bind(this));
   }
 
   // In embed mode, the display scales down when the width of the
@@ -512,6 +522,7 @@ StudioApp.prototype.init = function(config) {
 
 /**
  * Sets html for prompts below playspace, anigif, and shows instructions dialog
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.configureAndShowInstructions_ = function (config) {
   var promptDiv = document.getElementById('prompt');
@@ -639,7 +650,7 @@ StudioApp.prototype.setIconsFromSkin = function (skin) {
 /**
  * Reset the puzzle back to its initial state.
  * Search aliases: "Start Over", startOver
- * @param {Object} config - same config object passed to studioApp.init().
+ * @param {AppOptionsConfig}- same config object passed to studioApp.init().
  */
 StudioApp.prototype.handleClearPuzzle = function (config) {
   if (this.isUsingBlockly()) {
@@ -1654,7 +1665,7 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
 };
 
 /**
- *
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.setConfigValues_ = function (config) {
   this.share = config.share;
@@ -1717,6 +1728,7 @@ StudioApp.prototype.runButtonClickWrapper = function (callback) {
 /**
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
@@ -1854,8 +1866,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   }
 };
 
-StudioApp.prototype.handleEditCode_ = function (config) {
 
+StudioApp.prototype.handleEditCode_ = function (config) {
   if (this.hideSource) {
     // In hide source mode, just call afterInject and exit immediately
     if (config.afterInject) {
@@ -2086,6 +2098,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
 
 /**
  * Show the configured starting function definition.
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.openFunctionDefinition_ = function(config) {
   if (Blockly.contractEditor) {
@@ -2104,7 +2117,7 @@ StudioApp.prototype.openFunctionDefinition_ = function(config) {
 };
 
 /**
- *
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // Allow empty blocks if editing blocks.
