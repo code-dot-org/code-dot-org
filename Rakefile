@@ -116,6 +116,7 @@ namespace :build do
       RakeUtils.system 'npm run build:dist'
     end
   end
+  task :'code-studio' => :code_studio
 
   task :stop_varnish do
     Dir.chdir(aws_dir) do
