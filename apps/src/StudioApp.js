@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, droplet, marked, dashboard, addToHome */
+/* global Blockly, ace:true, droplet, dashboard, addToHome */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var color = require('./color');
@@ -26,6 +26,7 @@ var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
 var annotationList = require('./acemode/annotationList');
+var processMarkup = require('marked');
 var copyrightStrings;
 
 /**
@@ -1024,8 +1025,7 @@ StudioApp.prototype.onReportComplete = function (response) {
  * @returns {boolean}
  */
 StudioApp.prototype.isMarkdownMode = function (level) {
-  return window.marked && level.markdownInstructions &&
-    this.localeIsEnglish();
+  return level.markdownInstructions && this.localeIsEnglish();
 };
 
 /**
@@ -1041,7 +1041,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
   if (this.isMarkdownMode(level)) {
     var markdownWithImages = this.substituteInstructionImages(
       level.markdownInstructions, this.skin.instructions2ImageSubstitutions);
-    renderedMarkdown = marked(markdownWithImages);
+    renderedMarkdown = processMarkup(markdownWithImages);
   }
 
   var authoredHints;
