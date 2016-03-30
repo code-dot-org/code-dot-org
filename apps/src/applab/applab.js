@@ -901,13 +901,10 @@ Applab.init = function(config) {
     isShareView: !!config.share,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
     instructionsMarkdown: config.level.markdownInstructions,
+    instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: config.level.puzzle_number,
-    stageTotal: config.level.stage_total
+    stageTotal: config.level.stage_total,
   }));
-
-  // TODO - danger here (and with other config), is we now have the potential
-  // for two opinions - one on the config object, and another in the redux store
-  Applab.reduxStore.dispatch(setInstructionsInTopPane(config.showInstructionsInTopPane));
 
   Applab.reduxStore.dispatch(changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
