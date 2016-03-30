@@ -3,6 +3,12 @@
 var _ = require('lodash');
 var color = require('../../color');
 
+// TODO - better handle packages like marked (perhaps using browserify-shim).
+// I'd also like to have a centralized place across all of our mochaTests where
+// we initialize all globals we depend on dashboard/code-studio for (jquery,
+// react, marked, etc.).
+var processMarkup = window.marked || function (str) { return str; };
+
 var Instructions = require('./Instructions.jsx');
 var CollapserIcon = require('./CollapserIcon.jsx');
 var HeightResizer = require('./HeightResizer.jsx');
@@ -93,7 +99,7 @@ var TopInstructions = React.createClass({
         </div>
         <div style={collapseStyle}>
           <div style={bodyStyle}>
-            <Instructions renderedMarkdown={this.props.markdown}/>
+            <Instructions renderedMarkdown={processMarkup(this.props.markdown)}/>
           </div>
           <HeightResizer
             position={mainStyle.height}

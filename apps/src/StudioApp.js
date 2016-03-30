@@ -1029,21 +1029,6 @@ StudioApp.prototype.isMarkdownMode = function (level) {
 };
 
 /**
- * @param {object} level
- * @returns {string} Level's markdown instructions, with the markdown processed
- *   into a string if in markdownMode
- */
-StudioApp.prototype.getMarkdownInstructions = function (level) {
-  if (!this.isMarkdownMode(level)) {
-    return level.markdownInstructions;
-  }
-
-  return marked(this.substituteInstructionImages(
-    level.markdownInstructions, {}));
-};
-
-
-/**
  * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
  *   have markdown instructions
  * @param {object} level
