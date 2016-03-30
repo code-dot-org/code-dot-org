@@ -39,4 +39,16 @@ level 'level 4'
 ruby
   end
 
+  # Returns a flattened array of all the Levels in this LevelGroup, in order.
+  def levels
+    level_names = []
+    properties["pages"].each do |page|
+      page["levels"].each do |page_level_name|
+        level_names << page_level_name
+      end
+    end
+
+    Level.where(name: level_names)
+  end
+
 end

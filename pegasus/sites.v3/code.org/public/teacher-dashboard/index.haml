@@ -48,6 +48,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionProgressController', tab: 'progress'});
     $routeProvider.when('/sections/:id/responses',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionResponsesController', tab: 'responses'});
+    $routeProvider.when('/sections/:id/assessments',
+        {templateUrl: '/teacher-dashboard/section', controller: 'SectionAssessmentsController', tab: 'assessments'});
     $routeProvider.when('/sections/:id/:tab',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionDetailController'});
     $routeProvider.when('/sections/:sectionid/student/:studentid',
@@ -111,6 +113,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'},
          responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
+         assessments: {method:'GET', url:'/dashboardapi/section_assessments/:id', isArray: true},
       });
     }]).config(['$httpProvider', function($httpProvider) {
       // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -613,6 +616,108 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.findStages = function() {
       $scope.stages = $.map($scope.responses, function(row) {
+        return row.stage;
+      }).filter(function(item, i, array) { // uniquify
+        return array.indexOf(item) == i;
+      });
+    }
+  }]);
+
+
+  app.controller('SectionAssessmentsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
+                                             function($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
+    $scope.section = sectionsService.get({id: $routeParams.id});
+    $scope.sections = sectionsService.query();
+    $scope.tab = 'assessments';
+
+    $scope.assessments = sectionsService.assessments({id: $routeParams.id});
+    // error handling
+    $scope.genericError = function(result) {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
+    $scope.section.$promise.catch($scope.genericError);
+    $scope.sections.$promise.catch($scope.genericError);
+    $scope.assessments.$promise.catch($scope.genericError);
+
+    // fill in the course dropdown with the section's default course
+    $scope.section.$promise.then(
+      function(section) {
+        $scope.course_id = section.course.id;
+      }
+    );
+
+    // the ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(
+      function( sections ){
+        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+      }
+    );
+
+    $scope.assessmentsLoaded = false;
+    $scope.stages = [];
+
+    $scope.course_list = #{DashboardSection::valid_courses.to_json};
+
+    $scope.correctness_list = {
+      free_response: '#{I18n.t('dashboard_correctness_free_response')}',
+      unsubmitted:   '#{I18n.t('dashboard_correctness_unsubmitted')}',
+      correct:       '#{I18n.t('dashboard_correctness_correct')}',
+      incorrect:     '#{I18n.t('dashboard_correctness_incorrect')}'
+    };
+
+    $scope.submission_list = {
+      submitted:   '#{I18n.t('dashboard_submission_submitted')}',
+      in_progress: '#{I18n.t('dashboard_submission_in_progress')}',
+    };
+
+    // wait until we have both the students and the student progress
+    $q.all([$scope.section.$promise, $scope.assessments.$promise]).then(function(){
+      $scope.assessmentsLoaded = true;
+      $scope.findStages();
+    });
+
+    $scope.changeScript = function(scriptId) {
+      $scope.assessmentsLoaded = false;
+      $scope.stages = [];
+
+      $scope.assessments = sectionsService.assessments({id: $routeParams.id, script_id: scriptId});
+
+      $scope.levels = [];
+
+      $scope.assessments.$promise.then(function(){
+        $scope.assessmentsLoaded = true;
+        $scope.findStages();
+
+        $.each($scope.assessments, function(index, assessment) {
+
+          if (assessment.multi_count === 0) {
+            assessment.multi_correct_percent = 0;
+          } else {
+            assessment.multi_correct_percent = assessment.multi_correct / assessment.multi_count * 100;
+          }
+          assessment.status = assessment.submitted ? "submitted" : "in_progress";
+
+          // Each LevelGroup's result has a list of the results for the levels in that order.
+          // Because angular's nested iterators are kind of funky when trying to generate a table,
+          // let's just generate a flat list of the level results to go into $scope.
+          $.each(assessment.level_results, function(index, level_result) {
+            var levelResult = {
+              stage: assessment.stage,
+              puzzle: assessment.puzzle,
+              question: index + 1,
+              student: assessment.student,
+              studentResult: level_result.student_result,
+              correct: level_result.correct
+            };
+            $scope.levels.push(levelResult);
+          });
+        });
+      });
+    };
+
+    $scope.findStages = function() {
+      $scope.stages = $.map($scope.assessments, function(row) {
         return row.stage;
       }).filter(function(item, i, array) { // uniquify
         return array.indexOf(item) == i;
