@@ -974,15 +974,6 @@ Maze.onReportComplete = function(response) {
 };
 
 /**
- * Helper class, passthrough to level-specific hasMultiplePossibleGrids
- * call
- * @return {boolean}
- */
-Maze.hasMultiplePossibleGrids = function () {
-  return Maze.bee && Maze.bee.hasMultiplePossibleGrids();
-};
-
-/**
  * Perform some basic initialization/resetting operations before
  * execution. This function should be idempotent, as it can be called
  * during execution when running multiple trials.
@@ -1032,15 +1023,18 @@ Maze.execute = function(stepMode) {
     var runCode = !level.edit_blocks;
 
     if (runCode) {
-      if (Maze.hasMultiplePossibleGrids()) {
+      if (Maze.map.hasMultiplePossibleGrids()) {
         // If this level is a Bee level with multiple possible grids, we
         // need to run against all grids and sort them into successes
         // and failures
         var successes = [];
         var failures = [];
 
-        Maze.bee.staticGrids.forEach(function(grid, i) {
-          Maze.bee.useGridWithId(i);
+        Maze.map.staticGrids.forEach(function(grid, i) {
+          Maze.map.useGridWithId(i);
+          if (Maze.bee) {
+            Maze.bee.reset();
+          }
 
           // Run trial
           codegen.evalWith(code, {
@@ -1058,7 +1052,7 @@ Maze.execute = function(stepMode) {
           }
 
           // Reset for next trial
-          Maze.gridItemDrawer.resetClouded();
+          Maze.gridItemDrawer.reset();
           Maze.prepareForExecution();
           studioApp.reset(false);
         });
@@ -1069,7 +1063,10 @@ Maze.execute = function(stepMode) {
         // "real" state of the map. If all grids are successful,
         // randomly select any one of them.
         var i = (failures.length > 0) ? _.sample(failures) : _.sample(successes);
-        Maze.bee.useGridWithId(i);
+        Maze.map.useGridWithId(i);
+        if (Maze.bee) {
+          Maze.bee.reset();
+        }
       }
 
       codegen.evalWith(code, {
