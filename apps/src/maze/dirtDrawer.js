@@ -69,7 +69,7 @@ DirtDrawer.prototype.updateImageWithIndex_ = function (prefix, row, col, imageIn
   }
 };
 
-function createImage (prefix, row, col, imageInfo) {
+function createImage(prefix, row, col, imageInfo) {
   var pegmanElement = document.getElementsByClassName('pegman-location')[0];
   var svg = document.getElementById('svgMaze');
 
@@ -102,12 +102,12 @@ function createImage (prefix, row, col, imageInfo) {
  * Given a dirt value, returns the index of the sprite to use in our spritesheet.
  * Returns -1 if we want to display no sprite.
  */
- function spriteIndexForDirt (val) {
+function spriteIndexForDirt(val) {
   var spriteIndex;
 
   if (val === 0) {
     spriteIndex = -1;
-  } else if(val < -DIRT_MAX) {
+  } else if (val < -DIRT_MAX) {
     spriteIndex = 0;
   } else if (val < 0) {
     spriteIndex = DIRT_MAX + val + 1;
