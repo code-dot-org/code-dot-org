@@ -27,7 +27,10 @@
   },
   "browserify-global-shim": {
     "react": "React",
-    "react-dom": "ReactDOM"
+    "react-dom": "ReactDOM",
+    "johnny-five": "JohnnyFive",
+    "playground-io": "PlaygroundIO",
+    "chrome-serialport": "ChromeSerialport"
   },
   "browserify-shim": {
     "blockly": {
