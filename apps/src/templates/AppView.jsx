@@ -9,7 +9,7 @@ var styles = {
     position: 'absolute',
     top: 0,
     right: 0,
-    left: 400,
+    // left is controlled by media queries
     bottom: 0,
     marginLeft: 15,
     border: '1px solid #ddd',
