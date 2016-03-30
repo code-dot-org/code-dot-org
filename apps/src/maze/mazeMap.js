@@ -90,14 +90,14 @@ MazeMap.cloneGrid = function (grid) {
  * @return {Cell[][][]} grids
  */
 MazeMap.getAllStaticGrids = function (variableGrid) {
-  var grids = [ variableGrid ];
+  var grids = [variableGrid];
   variableGrid.forEach(function (row, x) {
     row.forEach(function (cell, y) {
       if (cell.isVariable()) {
         var possibleAssets = cell.getPossibleGridAssets();
         var newGrids = [];
-        possibleAssets.forEach(function(asset) {
-          grids.forEach(function(grid) {
+        possibleAssets.forEach(function (asset) {
+          grids.forEach(function (grid) {
             var newMap = MazeMap.cloneGrid(grid);
             newMap[x][y] = asset;
             newGrids.push(newMap);

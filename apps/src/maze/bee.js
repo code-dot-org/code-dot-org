@@ -368,7 +368,10 @@ Bee.prototype.gotNectarAt = function (row, col) {
     this.setValue(row, col, this.getValue(row, col) - 1);
   }
 
-  this.nectars_.push({row: row, col: col});
+  this.nectars_.push({
+    row: row,
+    col: col
+  });
 };
 
 // API
