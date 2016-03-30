@@ -123,6 +123,11 @@ FactoryGirl.define do
     game {Game.applab}
   end
 
+  factory :makerlab, :parent => Level, :class => Applab do
+    game {Game.applab}
+    properties{{makerlab_enabled: true}}
+  end
+
   factory :multi, :parent => Level, :class => Applab do
     game {Game.multi}
   end
