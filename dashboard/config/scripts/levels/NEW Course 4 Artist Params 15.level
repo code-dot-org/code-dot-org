@@ -15,8 +15,8 @@
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "start_direction": "90",
-    "x": "200",
-    "y": "200",
+    "x": "150",
+    "y": "250",
     "free_play": "true",
     "impressive": "false",
     "embed": "false",
@@ -589,6 +589,7 @@
             <title name="VAR">i</title>
           </block>
         </category>
+        <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
