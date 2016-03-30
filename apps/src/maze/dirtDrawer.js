@@ -18,12 +18,17 @@ var DirtDrawer = module.exports = function (map, dirtAsset) {
   };
 };
 
+DirtDrawer.prototype.reset = function () {};
+
 /**
  * Update the image at the given row,col by determining the spriteIndex for the
  * current value
  */
 DirtDrawer.prototype.updateItemImage = function (row, col, running) {
   var val = this.map_.getValue(row, col) || 0;
+  if (this.map_.isVariable(row, col) && !running) {
+    val = (val < 0) ? -11 : 11;
+  }
   this.updateImageWithIndex_('dirt', row, col, this.dirtImageInfo_,
     spriteIndexForDirt(val));
 };

@@ -34,13 +34,17 @@ function BeeItemDrawer(map, skin, bee) {
 BeeItemDrawer.inherits(DirtDrawer);
 module.exports = BeeItemDrawer;
 
+BeeItemDrawer.prototype.reset = function () {
+  this.resetClouded();
+};
+
 /**
  * Resets our tracking of clouded/revealed squares. Used on
  * initialization and also to reset the drawer between randomized
  * conditionals runs.
  */
 BeeItemDrawer.prototype.resetClouded = function () {
-  this.clouded_ = this.bee_.currentStaticGrid.map(function (row) {
+  this.clouded_ = this.map_.currentStaticGrid.map(function (row) {
     return [];
   });
 };
