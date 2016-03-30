@@ -440,7 +440,9 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-TBD
+Google Conference Center
+320 N Morgan St
+Chicago, IL 60607
 
 *More information coming soon*<br/>
 
