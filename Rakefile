@@ -83,6 +83,7 @@ namespace :build do
       RakeUtils.system './deploy.sh'
     end
   end
+  task :'blockly-core' => :blockly_core
 
   task :core_and_apps_dev do
     Dir.chdir(apps_dir) do
