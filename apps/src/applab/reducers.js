@@ -2,7 +2,7 @@
  *  @see http://redux.js.org/docs/basics/Reducers.html */
 'use strict';
 
-var _ = require('lodash');
+var _ = require('../lodash');
 var ActionType = require('./actions').ActionType;
 var combineReducers = require('redux').combineReducers;
 var constants = require('./constants');
