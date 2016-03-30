@@ -4,23 +4,8 @@ var MazeMap = function (grid) {
   this.ROWS = this.grid_.length;
   this.COLS = this.grid_[0].length;
 
-  // Initialize the map grid
-  //
-  // "serializedMaze" is the new way of storing maps; it's a JSON array
-  // containing complex map data.
-  //
-  // "map" plus optionally "levelDirt" is the old way of storing maps;
-  // they are each arrays of a combination of strings and ints with
-  // their own complex syntax. This way is deprecated for new levels,
-  // and only exists for backwards compatibility for not-yet-updated
-  // levels.
-  //
-  // Either way, we turn what we have into a grid of BeeCells, any one
-  // of which may represent a number of possible "static" cells. We then
-  // turn that variable grid of BeeCells into a set of static grids.
   this.staticGrids = MazeMap.getAllStaticGrids(this.grid_);
 
-  this.currentStaticGridId = 0;
   this.currentStaticGrid = this.staticGrids[0];
 };
 module.exports = MazeMap;
@@ -57,9 +42,15 @@ MazeMap.prototype.setValue = function (x, y, val) {
   }
 };
 
-MazeMap.prototype.isVariable = function (x, y) {
+/**
+ * Some functionality - most notably Bee's shouldCheckCloud and
+ * shouldCheckPurple logic - need to be able to make decisions based on
+ * details about the original (variable) cell at a coordinate.
+ * @returns {Cell}
+ */
+MazeMap.prototype.getVariableCell = function (x, y) {
   if (this.grid_[x] && this.grid_[x][y]) {
-    return this.grid_[x][y].isVariable();
+    return this.grid_[x][y];
   }
 };
 
@@ -69,20 +60,19 @@ MazeMap.prototype.isVariable = function (x, y) {
  * @param {Number} id
  */
 MazeMap.prototype.useGridWithId = function (id) {
-  this.currentStaticGridId = id;
   this.currentStaticGrid = this.staticGrids[id];
   this.resetDirt();
 };
 
 
 MazeMap.prototype.clone = function () {
-  MazeMap.clone(this.grid_);
+  MazeMap.cloneGrid(this.grid_);
 };
 
 /**
- * Clones the given grid of BeeCells by calling BeeCell.clone
- * @param {BeeCell[][]} grid
- * @return {BeeCell[][]} grid
+ * Clones the given grid of Cells by calling Cell.clone
+ * @param {Cell[][]} grid
+ * @return {Cell[][]} grid
  */
 MazeMap.cloneGrid = function (grid) {
   return grid.map(function (row) {
@@ -93,11 +83,11 @@ MazeMap.cloneGrid = function (grid) {
 };
 
 /**
- * Given a single grid of BeeCells, some of which may be "variable"
- * cells, return a list of grids of non-variable BeeCells representing
+ * Given a single grid of Cells, some of which may be "variable"
+ * cells, return a list of grids of non-variable Cells representing
  * all possible variable combinations.
- * @param {BeeCell[][]} variableGrid
- * @return {BeeCell[][][]} grids
+ * @param {Cell[][]} variableGrid
+ * @return {Cell[][][]} grids
  */
 MazeMap.getAllStaticGrids = function (variableGrid) {
   var grids = [ variableGrid ];

@@ -82,8 +82,10 @@ Maze.scale = {
 
 var loadLevel = function () {
   // Load maps.
+  //
   // "serializedMaze" is the new way of storing maps; it's a JSON array
   // containing complex map data.
+  //
   // "map" plus optionally "levelDirt" is the old way of storing maps;
   // they are each arrays of a combination of strings and ints with
   // their own complex syntax. This way is deprecated for new levels,
