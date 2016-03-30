@@ -348,7 +348,10 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-TBD
+[DePaul University<br/> 
+CDM Room 924<br/>
+243 S. Wabash Ave<br/> 
+Chicago, IL 60604](https://goo.gl/maps/bR98ad2SfVk)
 
 *More information coming soon*<br/>
 
@@ -440,11 +443,11 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-Google Conference Center
-320 N Morgan St
-Chicago, IL 60607
+[Google Conference Center<br/>
+320 N Morgan St<br/>
+Chicago, IL 60607](https://goo.gl/maps/YbVvZGgSzbz)
 
-*More information coming soon*<br/>
+*Parking and transportation information coming soon*<br/>
 
 
 **What do I bring to my workshop?**<br/>

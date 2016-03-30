@@ -15,7 +15,7 @@ var Grid = require('./Grid.jsx');
 
 var CellJSON = React.createClass({
   propTypes: {
-    serialization: React.PropTypes.arrayOf(React.PropTypes.arrayOf(React.PropTypes.object)),
+    serialization: React.PropTypes.object.isRequired,
     onChange: React.PropTypes.func.isRequired
   },
 
