@@ -33,13 +33,15 @@ var events = {
  * /projects/applab
  * /projects/playlab/1U53pYpR8szDgtrGIG5lIg
  * /projects/artist/VyVO-bQaGQ-Cyb7DbpabNQ/edit
+ * /projects/applab/t9kia6Xt0TSGXMQoQgYkeg/view/bzs_PfEqSjuP2d5gLzwGGnYHLz13UTsS
  */
 var PathPart = {
   START: 0,
   PROJECTS: 1,
   APP: 2,
   CHANNEL_ID: 3,
-  ACTION: 4
+  ACTION: 4,
+  VERSION: 5
 };
 
 /**
@@ -698,7 +700,7 @@ function executeCallback(callback, data) {
  * is the current project (if any) editable by the logged in user (if any)?
  */
 function isEditable() {
-  return (current && current.isOwner && !current.frozen);
+  return current && current.isOwner && !current.frozen && !parsePath().version;
 }
 
 /**
@@ -778,6 +780,7 @@ function parsePath() {
   return {
     appName: tokens[PathPart.APP],
     channelId: tokens[PathPart.CHANNEL_ID],
-    action: tokens[PathPart.ACTION]
+    action: tokens[PathPart.ACTION],
+    version: tokens[PathPart.VERSION]
   };
 }
