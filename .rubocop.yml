@@ -17,6 +17,9 @@ AllCops:
 Style/BarePercentLiterals:
   Enabled: false
 
+Style/ClosingParenthesisIndentation:
+  Enabled: false
+
 # Require trailing dots for method chaining in ruby
 # example:
 # MyObject.
