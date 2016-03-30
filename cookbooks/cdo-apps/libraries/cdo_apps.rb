@@ -104,4 +104,28 @@ module CdoApps
       notifies :restart, "service[#{app_name}]", :immediately
     end
   end
+
+  def setup_build(package)
+    include_recipe 'cdo-nodejs'
+    user = node[:user]
+    home = node[:home]
+    root = File.join home, node.chef_environment
+
+    utf8 = 'en_US.UTF-8'
+    env = {
+      'LC_ALL' => utf8,
+      'LANGUAGE' => utf8,
+      'LANG' => utf8,
+      'RAILS_ENV' => node.chef_environment
+    }
+    execute "build:#{package}" do
+      command "bundle exec rake build:#{package}"
+      cwd root
+      environment env.merge(node['cdo-apps']['bundle_env'])
+      user user
+      group user
+      not_if { File.directory? "#{root}/#{package}/node_modules"}
+      action :run
+    end
+  end
 end
