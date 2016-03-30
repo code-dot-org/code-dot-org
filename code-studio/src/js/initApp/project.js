@@ -747,7 +747,6 @@ function redirectFromHashUrl() {
     return false;
   }
 
-  var pathInfo = parsePath();
   location.href = newUrl;
   return true;
 }
@@ -765,18 +764,20 @@ function parsePath() {
     pathname += location.hash.replace('#', '/');
   }
 
-  if (pathname.split('/')[PathPart.PROJECTS] !== 'p' &&
-      pathname.split('/')[PathPart.PROJECTS] !== 'projects') {
+  var tokens = pathname.split('/');
+
+  if (tokens[PathPart.PROJECTS] !== 'p' &&
+    tokens[PathPart.PROJECTS] !== 'projects') {
     return {
       appName: null,
       channelId: null,
-      action: null,
+      action: null
     };
   }
 
   return {
-    appName: pathname.split('/')[PathPart.APP],
-    channelId: pathname.split('/')[PathPart.CHANNEL_ID],
-    action: pathname.split('/')[PathPart.ACTION]
+    appName: tokens[PathPart.APP],
+    channelId: tokens[PathPart.CHANNEL_ID],
+    action: tokens[PathPart.ACTION]
   };
 }
