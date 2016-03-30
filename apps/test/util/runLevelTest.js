@@ -102,6 +102,7 @@ function ಠ_ಠ() {
   require('@cdo/apps/calc/main');
   require('@cdo/apps/bounce/main');
   require('@cdo/apps/applab/main');
+  require('@cdo/apps/gamelab/main');
   require('@cdo/apps/craft/main');
 }
 
