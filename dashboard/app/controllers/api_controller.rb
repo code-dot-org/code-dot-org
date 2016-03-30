@@ -153,6 +153,10 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  # For each student, return an array of each long-assessment LevelGroup in progress or submitted.
+  # Each such array contains an array of individual level results, matching the order of the LevelGroup's
+  # levels.  For each level, the student's answer content is in :student_result, and its correctness
+  # is in :correct.
   def section_assessments
     load_section
     load_script
@@ -181,47 +185,34 @@ class ApiController < ApplicationController
         # And construct a listing of all the individual levels and their results.
         level_results = []
 
-        next unless properties = script_level.level.properties
+        script_level.level.levels.each do |level|
+          level_response = response_parsed.find{|r| r["level_id"] == level.id}
 
-        # Go through each page of the long assessment's LevelGroup.
-        properties["pages"].each do |page|
-          # Go through each level of the page.
-          page["levels"].each do |page_level_name|
-            level = Level.find_by_name(page_level_name)
+          if level_response
+            level_result = {}
 
-            # And work with the response to the individual level inside the LevelGroup.
-            level_response = response_parsed.select{|r| r["level_id"] == level.id}
-
-            if !level_response.empty?
-              # For each level inside the LevelGroup, we determine the result,
-              # both content in :student_result and result value in :correct.
-              # This array is returned for each LevelGroup, and its order matches
-              # that of the LevelGroup as it's declared.
-              level_result = {}
-
-              case level
-              when TextMatch
-                student_result = level_response.first["result"]
-                level_result[:student_result] = student_result
-                level_result[:correct] = "free_response"
-              when Multi
-                answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
-                student_result = level_response.first["result"].split(",").sort.join(",")
-                multi_count += 1
-                level_result[:student_result] = student_result
-                if student_result == "-1"
-                  level_result[:student_result] = ""
-                  level_result[:correct] = "unsubmitted"
-                elsif student_result == answer_indexes
-                  multi_count_correct += 1
-                  level_result[:correct] = "correct"
-                else
-                  level_result[:correct] = "incorrect"
-                end
+            case level
+            when TextMatch
+              student_result = level_response["result"]
+              level_result[:student_result] = student_result
+              level_result[:correct] = "free_response"
+            when Multi
+              answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
+              student_result = level_response["result"].split(",").sort.join(",")
+              multi_count += 1
+              level_result[:student_result] = student_result
+              if student_result == "-1"
+                level_result[:student_result] = ""
+                level_result[:correct] = "unsubmitted"
+              elsif student_result == answer_indexes
+                multi_count_correct += 1
+                level_result[:correct] = "correct"
+              else
+                level_result[:correct] = "incorrect"
               end
-
-              level_results << level_result
             end
+
+            level_results << level_result
           end
         end
 
