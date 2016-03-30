@@ -28,7 +28,7 @@ var styles = {
     position: 'absolute',
     marginLeft: 15,
     right: 0,
-    // left handled by media queries for .workspace-right
+    // left handled by media queries for .editor-column
   },
   header: {
     height: HEADER_HEIGHT,
@@ -90,7 +90,7 @@ var TopInstructions = React.createClass({
     };
 
     return (
-      <div style={mainStyle} className="workspace-right">
+      <div style={mainStyle} className="editor-column">
         <CollapserIcon
             collapsed={this.props.collapsed}
             onClick={this.props.onToggleCollapsed}/>

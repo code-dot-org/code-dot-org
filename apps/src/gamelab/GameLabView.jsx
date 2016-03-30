@@ -65,7 +65,7 @@ var GameLabView = React.createClass({
           <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <ProtectedStatefulDiv style={codeWorkspaceStyle} id="codeWorkspace" className="workspace-right">
+        <ProtectedStatefulDiv style={codeWorkspaceStyle} id="codeWorkspace" className="editor-column">
           <ProtectedStatefulDiv
               id="codeWorkspaceWrapper"
               contentFunction={this.props.generateCodeWorkspaceHtml} />
