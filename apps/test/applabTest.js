@@ -1,20 +1,13 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales('applab');
-
-var $ = require('jquery');
-var React = require('react');
-window.$ = $;
-window.jQuery = window.$;
-window.React = React;
+testUtils.setExternalGlobals();
 
 // used in design mode
 window.Applab = {
   appWidth: 320,
   appHeight: 480
 };
-
-window.dashboard = window.dashboard || {};
 
 var Applab = require('@cdo/apps/applab/applab');
 var RecordListener = require('@cdo/apps/applab/RecordListener');
@@ -326,8 +319,6 @@ describe('startSharedAppAfterWarnings', function () {
       originalState[item] = Applab[item];
     });
     originalState.dashboard = window.dashboard;
-
-    window.dashboard = window.dashboard || {};
 
     Applab.user = {};
     Applab.channelId = 'current_channel';
