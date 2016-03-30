@@ -115,7 +115,7 @@ def include_mailchimp_engineers(results)
     name: 'Name',
     country_code: 'CC',
     country_code_us: 'US'
-  )
+             )
 end
 
 def include_indiegogo_donors(results)
@@ -136,7 +136,7 @@ def include_indiegogo_donors(results)
     country_code: 'Shipping Country',
     country_code_us: 'United States',
     skip_emails: ['majordonors@code.org']
-  )
+             )
 end
 
 ALL_FILES = []

@@ -187,7 +187,7 @@ class LevelSourceHintsController < ApplicationController
                             hint: params[:hint_content],
                             status: LevelSourceHint::STATUS_NEW,
                             source: LevelSourceHint::CROWDSOURCED
-      ).first_or_create
+                           ).first_or_create
     # Update the times this hint has been proposed
     level_source_hint.times_proposed = (level_source_hint.times_proposed || 0) + 1
     # Record the user_id entering the hint

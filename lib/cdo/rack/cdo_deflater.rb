@@ -16,7 +16,7 @@ module Rack
             text/plain
             text/xml
           )
-        ))
+      ))
     end
   end
 end

@@ -111,7 +111,7 @@ def complete_tutorial(tutorial={})
         finished_at: DateTime.now,
         finished_ip: request.ip},
         weight: weight
-      )
+                              )
     end
     destination = "http://#{row[:referer]}/congrats?i=#{row[:session]}"
     destination += "&co=#{row[:company]}" unless row[:company].blank?

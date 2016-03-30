@@ -51,7 +51,7 @@ class TestMilestoneParser < Minitest::Test
                                  {key: 'hosts/folder_3/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
                                  {key: 'hosts/folder_3/dashboard/milestone.log.gz', size: 20, etag: 'y'},
                              ]},
-    )
+                             )
     @cache = JSON.parse(IO.read(CACHE_FILE))
   end
 
@@ -73,7 +73,7 @@ class TestMilestoneParser < Minitest::Test
   def test_etag_modified_md5_match
     @s3_client.stub_responses(:get_object,
                              {body: `cat #{MILESTONE_LOG} | head -c #{MilestoneParser::COMPARE_BYTE_LENGTH}`},
-    )
+                             )
     cache = @cache.dup.tap do |x|
       x[x.keys[0]]['length'] = 1050
       x[x.keys[0]]['etag'] = 'y'

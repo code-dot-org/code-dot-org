@@ -65,12 +65,12 @@ STR
       :caller_reference,
       :default_root_object,
       :logging)
-    ).merge(
+           ).merge(
       aliases: {
         quantity: 3,
         items: [CDO.pegasus_hostname, CDO.dashboard_hostname, CDO.hourofcode_hostname]
       }
-    )
+           )
     Aws.config[:cloudfront][:stub_responses][:list_distributions] =
       distribution_list [distribution_summary]
     assert_output (<<STR) { AWS::CloudFront.create_or_update }
