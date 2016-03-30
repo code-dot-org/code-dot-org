@@ -269,11 +269,11 @@ function drawMap() {
         obsIcon.setAttributeNS(
           'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacleIdle);
         obsIcon.setAttribute('x',
-          Maze.SQUARE_SIZE * (x + 0.5) -
-          obsIcon.getAttribute('width') / 2);
+                             Maze.SQUARE_SIZE * (x + 0.5) -
+                             obsIcon.getAttribute('width') / 2);
         obsIcon.setAttribute('y',
-          Maze.SQUARE_SIZE * (y + 0.9) -
-          obsIcon.getAttribute('height'));
+                             Maze.SQUARE_SIZE * (y + 0.9) -
+                             obsIcon.getAttribute('height'));
         svg.appendChild(obsIcon);
       }
       ++obsId;
@@ -361,7 +361,7 @@ function drawMap() {
 // Returns true if the tile at x,y is either a wall or out of bounds
 function isWallOrOutOfBounds(col, row) {
   return Maze.map.getTile(row, col) === SquareType.WALL ||
-    Maze.map.getTile(row, col) === undefined;
+      Maze.map.getTile(row, col) === undefined;
 }
 
 // Return a value of '0' if the specified square is wall or out of bounds '1'
@@ -1378,7 +1378,7 @@ function animatedMove (direction, timeForMove) {
  * Schedule a movement animating using a spritesheet.
  */
 Maze.scheduleSheetedMovement = function (start, delta, numFrames, timePerFrame,
-  idStr, direction, hidePegman) {
+    idStr, direction, hidePegman) {
   var pegmanIcon = document.getElementById('pegman');
   utils.range(0, numFrames - 1).forEach(function (frame) {
     timeoutList.setTimeout(function () {
