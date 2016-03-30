@@ -40,7 +40,9 @@ function level(state, action) {
         'isReadOnlyWorkspace',
         'isShareView',
         'isViewDataButtonHidden',
-        'instructionsMarkdown'
+        'instructionsMarkdown',
+        'puzzleNumber',
+        'stageTotal'
       ];
       Object.keys(action.props).forEach(function (key) {
         if (-1 === allowedKeys.indexOf(key)) {
