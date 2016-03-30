@@ -25,6 +25,9 @@ Style/BarePercentLiterals:
 Style/DotPosition:
   EnforcedStyle: trailing
 
+Style/EmptyLineBewteenDefs:
+  AllowAdjacentOneLineDefs: true 
+
 Style/ExtraSpacing:
   Enabled: false
 
