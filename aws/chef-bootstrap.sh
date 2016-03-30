@@ -62,6 +62,7 @@ exec >> >(tee -i ${LOG})
 exec 2>&1
 
 CHEF_CLIENT=/opt/chef/bin/chef-client
+CHEF_REPO_PATH=/var/chef
 # Ensure correct version of Chef is installed.
 if [ "$(${CHEF_CLIENT} -v)" != "Chef: ${CHEF_VERSION}" ]; then
   curl -L https://omnitruck.chef.io/install.sh | bash -s -- -v ${CHEF_VERSION}
@@ -75,7 +76,7 @@ CLIENT_RB=/etc/chef/client.rb
 cat <<RUBY > ${CLIENT_RB}
 node_name '${NODE_NAME}'
 environment '${ENVIRONMENT}'
-chef_repo_path '/var/chef'
+chef_repo_path '${CHEF_REPO_PATH}'
 if '${LOCAL_MODE}' == '1'
   local_mode true
 else
@@ -107,13 +108,13 @@ if [ -f /etc/chef/client.pem ] ; then
 fi
 
 if [ "${LOCAL_MODE}" = "1" ]; then
-  mkdir -p /var/chef/{cookbooks,environments}
+  mkdir -p ${CHEF_REPO_PATH}/{cookbooks,environments}
   # Install branch-specific Chef cookbooks from s3.
   REPO_COOKBOOK_URL=s3://${S3_BUCKET}/chef/${BRANCH}.tar.gz
-  aws s3 cp ${REPO_COOKBOOK_URL} - | tar xz -C /var/chef
+  aws s3 cp ${REPO_COOKBOOK_URL} - | tar xz -C ${CHEF_REPO_PATH}
 
   # Boilerplate `adhoc` environment for local Chef.
-cat <<JSON > /var/chef/environments/adhoc.json
+cat <<JSON > ${CHEF_REPO_PATH}/environments/adhoc.json
 {
   "name": "adhoc",
   "description": "Adhoc Chef environment",
