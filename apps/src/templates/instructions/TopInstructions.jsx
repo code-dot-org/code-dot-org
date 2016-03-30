@@ -1,6 +1,6 @@
 'use strict';
 
-var _ = require('lodash');
+var _ = require('../../lodash');
 var color = require('../../color');
 
 // TODO - better handle packages like marked (perhaps using browserify-shim).

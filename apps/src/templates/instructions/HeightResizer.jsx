@@ -4,7 +4,7 @@
  * which handles any movement.
  */
 
-var _ = require('lodash');
+var _ = require('../../lodash');
 var color = require('../../color');
 
 var RESIZER_HEIGHT = 13; // TODO $resize-bar-width from style-constants

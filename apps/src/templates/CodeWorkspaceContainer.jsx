@@ -3,7 +3,7 @@
  * us to position it vertically. Causes resize events to fire when receiving new props
  */
 
-var _ = require('lodash');
+var _ = require('../lodash');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
 var utils = require('../utils');
 

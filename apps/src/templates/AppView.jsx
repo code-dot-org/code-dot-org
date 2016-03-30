@@ -1,6 +1,6 @@
 'use strict';
 
-var _ = require('lodash');
+var _ = require('../lodash');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
 var StudioAppWrapper = require('./StudioAppWrapper.jsx');
 

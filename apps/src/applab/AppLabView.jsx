@@ -1,7 +1,7 @@
 /** @file Top-level view for App Lab */
 'use strict';
 
-var _ = require('lodash');
+var _ = require('../lodash');
 var connect = require('react-redux').connect;
 var actions = require('./actions');
 var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
