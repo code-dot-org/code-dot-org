@@ -7,7 +7,7 @@ var color = require('../../color');
 // I'd also like to have a centralized place across all of our mochaTests where
 // we initialize all globals we depend on dashboard/code-studio for (jquery,
 // react, marked, etc.).
-var processMarkup = window.marked || function (str) { return str; };
+var processMarkup = window.marked;
 
 var Instructions = require('./Instructions.jsx');
 var CollapserIcon = require('./CollapserIcon.jsx');
