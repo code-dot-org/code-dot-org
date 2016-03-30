@@ -26,9 +26,13 @@ DirtDrawer.prototype.reset = function () {};
  */
 DirtDrawer.prototype.updateItemImage = function (row, col, running) {
   var val = this.map_.getValue(row, col) || 0;
-  if (this.map_.isVariable(row, col) && !running) {
+
+  // If the cell is a variable cell and we are not currently running,
+  // draw it as either a max-height pile or a max-depth pit.
+  if (this.map_.getVariableCell(row, col).isVariable() && !running) {
     val = (val < 0) ? -11 : 11;
   }
+
   this.updateImageWithIndex_('dirt', row, col, this.dirtImageInfo_,
     spriteIndexForDirt(val));
 };
