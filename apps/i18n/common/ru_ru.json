@@ -1,6 +1,6 @@
 {
   "and": "и",
-  "animationMode": "Animation",
+  "animationMode": "Анимация",
   "backToPreviousLevel": "Вернуться на предыдущий уровень",
   "blocklyMessage": "Блокли",
   "blocks": "блоки",
@@ -27,8 +27,8 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
-  "debugWatchHeader": "Watch",
-  "debugWatchNotAvailable": "<not available>",
+  "debugWatchHeader": "Наблюдать",
+  "debugWatchNotAvailable": "недоступно",
   "defaultTwitterText": "Оцените, что я сделал",
   "designMode": "Дизайн",
   "dialogCancel": "Отмена",
@@ -153,7 +153,7 @@
   "hintSelectInstructions": "Инструкции и старые подсказки",
   "hintSelectNewHint": "Получить новую подсказку",
   "hintTitle": "Подсказка:",
-  "iconSearchPlaceholder": "Search for an icon...",
+  "iconSearchPlaceholder": "Искать значок...",
   "ignore": "Игнорировать",
   "infinity": "Бесконечность",
   "jump": "прыгнуть",
@@ -169,7 +169,7 @@
   "nextPuzzle": "Следующая головоломка",
   "nextStage": "Поздравляем! Вы закончили {stageName}.",
   "nextStageTrophies": "Поздравляем! Вы выполнили {stageName} и выиграли {numTrophies, plural, one {a trophy} other {# trophies}}.",
-  "noIconsFound": "No icons found",
+  "noIconsFound": "Значёк не найден",
   "numBlocksNeeded": "Поздравляю! Ты завершил головоломку {puzzleNumber}. (Однако, можно было обойтись всего  {numBlocks, plural, one {1 блоком} other {# блоками}}.)",
   "numLinesOfCodeWritten": "Ты только что написал {numLines, plural, one  {1 строку} other {# строки}} кода!",
   "openWorkspace": "Как это работает",
@@ -229,5 +229,6 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "При запуске",
-  "workspaceHeaderShort": "Место сбора блоков: "
+  "workspaceHeaderShort": "Место сбора блоков: ",
+  "showBlock": "Get a block"
 }

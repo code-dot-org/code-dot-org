@@ -27,8 +27,8 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
-  "debugWatchHeader": "Watch",
-  "debugWatchNotAvailable": "<not available>",
+  "debugWatchHeader": "Regarder",
+  "debugWatchNotAvailable": "<pas disponible>",
   "defaultTwitterText": "Découvre ce que j'ai fait",
   "designMode": "Conception",
   "dialogCancel": "Annuler",
@@ -153,7 +153,7 @@
   "hintSelectInstructions": "Instructions et anciens indices",
   "hintSelectNewHint": "Obtenir un nouvel indice",
   "hintTitle": "Indice :",
-  "iconSearchPlaceholder": "Search for an icon...",
+  "iconSearchPlaceholder": "Cherche pour un icon...",
   "ignore": "Ignorer",
   "infinity": "Infini",
   "jump": "sauter",
@@ -169,7 +169,7 @@
   "nextPuzzle": "Puzzle suivant",
   "nextStage": "Félicitations ! Tu as terminé {stageName}.",
   "nextStageTrophies": "Félicitations ! Tu as terminé {stageName} et gagné {numTrophies, plural, one {un trophée} other {# trophées}}.",
-  "noIconsFound": "No icons found",
+  "noIconsFound": "Pas d'icone trouvée",
   "numBlocksNeeded": "Félicitations ! Tu as terminé le Puzzle {puzzleNumber}. (Toutefois, tu aurais pu utiliser seulement {numBlocks, plural, one {1 bloc} other {# blocs}}.)",
   "numLinesOfCodeWritten": "Tu viens d'écrire {numLines, plural, one {1 ligne} other {# lignes}} de code !",
   "openWorkspace": "Comment ça marche",
@@ -229,5 +229,6 @@
   "watchVideo": "Voir la vidéo",
   "when": "quand",
   "whenRun": "quand l'exécution commence",
-  "workspaceHeaderShort": "Espace de travail :"
+  "workspaceHeaderShort": "Espace de travail :",
+  "showBlock": "Get a block"
 }

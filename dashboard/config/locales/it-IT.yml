@@ -26,6 +26,7 @@
   welcome_back: Bentornato, %{name}
   submit: Invia
   unsubmit: Annulla l'invio
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Aggiungi un insegnante:'
@@ -590,7 +591,6 @@
       osservazioni e vengono fatti miglioramenti.
     prerelease_hoc2014: Questo corso è in <span class='betatext'>versione provvisoria</span>.
       È soggetto a revisione man mano che arrivano osservazioni in modo da migliorarlo.
-    feedback: Dicci che ne pensi
     report_bug: Segnala un errore
     support: Ottieni aiuto
     support_url: "//programmailfuturo.it/aiuto"
@@ -638,6 +638,8 @@
     placeholder: Inserisci qui la tua risposta
     open_response_title: Grazie
     open_response_body: Grazie per la risposta!
+    correct_title: Molto bene!
+    correct_body: Questa è la risposta corretta.
   dialog:
     ok: Ok
     startover_title: Sei sicuro di voler ripristinare la situazione iniziale?
@@ -775,3 +777,7 @@
         acknowledge: Inviando queste informazioni, l'utente riconosce che sarà gestita
           in conformità con i termini della %{link_start_privacy}Politica della privacy%{link_end}
           e i %{link_start_tos}Termini del servizio%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

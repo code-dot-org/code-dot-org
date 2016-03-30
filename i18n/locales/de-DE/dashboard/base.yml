@@ -25,6 +25,7 @@ de:
   welcome_back: 'Willkommen zurück, %{name}'
   submit: Absenden
   unsubmit: Zurücknehmen
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Lehrer hinzufügen:'
@@ -466,7 +467,6 @@ de:
   landing:
     prerelease: "Dieser Kurs ist als <span class='betatext'> Beta</span> eingestuft.  Das bedeutet, dies ist nicht die endgültige Fassung des Kurses und er unterliegt Änderungen, da Feedback empfangen wird und Verbesserungen vorgenommen werden."
     prerelease_hoc2014: "Die Einführung liegt als <span class='betatext'>Testversion</span> vor. Es wird gemäß den Rückmeldungen überarbeitet und verbessert."
-    feedback: Feedback geben
     report_bug: Fehler melden
     support: Hilfe erhalten
     support_url: //support.code.org
@@ -512,6 +512,8 @@ de:
     placeholder: Gebe hier deine Antwort ein
     open_response_title: Danke
     open_response_body: Danke für deine Antwort!
+    correct_title: Richtig
+    correct_body: Das ist die richtige Antwort.
   dialog:
     ok: OK
     startover_title: Bist du dir sicher das du neu anfangen möchtest?
@@ -623,3 +625,7 @@ de:
           other: Andere
         detail: Bitte geben Sie so viele Details wie möglich über den Inhalt, den Sie melden möchten.
         acknowledge: 'Durch die Übermittlung dieser Daten, akzeptieren Sie, dass diese gemäß den Bedingungen der %{link_start_privacy}Datenschutzerklärung%{link_end} und die %{link_start_tos}allgemeinen Geschäftsbedingungen%{link_end} behandelt werden'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: Keine Symbole gefunden

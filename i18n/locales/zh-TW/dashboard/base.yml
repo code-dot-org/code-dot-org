@@ -25,6 +25,7 @@ zh:
   welcome_back: '歡迎回來，%{name}'
   submit: 送出
   unsubmit: 不提交
+  next_page: Next page
   add_teacher_form:
     code:
       label: 增加一位老師：
@@ -466,7 +467,6 @@ zh:
   landing:
     prerelease: "本課程還在 <span class='betatext'>beta</span>階段。這表示它不是本課程的最後版本，它會依據收到的回饋，作出修訂與改善。"
     prerelease_hoc2014: "本教程還在 <span class='betatext'>beta</span>階段。它會依據收到的回饋，作出修訂與改善。"
-    feedback: 提供意見
     report_bug: 報告錯誤
     support: 請求幫助
     support_url: //support.code.org
@@ -512,6 +512,8 @@ zh:
     placeholder: 在這裡輸入你的答案
     open_response_title: 謝謝
     open_response_body: 感謝您的回應！
+    correct_title: 正確
+    correct_body: 這是正確的答案。
   dialog:
     ok: 確定
     startover_title: 你確定要重新開始嗎？
@@ -622,3 +624,7 @@ zh:
           other: 其他
         detail: 依據您所回報的內容，請盡可能提供更詳盡的細節。
         acknowledge: '送出這些資訊，代表你已經了解它將依照 %{link_start_privacy}隱私權政策%{link_end} 以及 %{link_start_tos}服務條款%{link_end}進行處理及保管。'
+  components:
+    icon_library:
+      search_placeholder_text: 搜索圖示...
+      no_icons_found: 沒有圖示

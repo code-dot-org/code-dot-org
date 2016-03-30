@@ -14,6 +14,6 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
     modules_to_enroll_in = Plc::LearningModule.where(id: question_responses)
 
     user_professional_learning_course_enrollment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
-    redirect_to controller: :enrollment_user_assignments, action: :show, id: params[:unit_assignment_id]
+    redirect_to controller: :user_course_enrollments, action: :show, id: user_professional_learning_course_enrollment.plc_user_course_enrollment.id
   end
 end

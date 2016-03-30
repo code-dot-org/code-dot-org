@@ -21,7 +21,7 @@ fi-FI:
   twentyhours_heading: Kokeile kurssiamme Johdanto tietojenkäsittelytieteeseen
   twentyhours_text: Ensimmäinen Koodaustunti tehtynä? Opi lisää tietojenkäsittelytieteestä ja ohjelmoinnin käsitteistä tällä jatkokurssilla.
   og_title: Jokainen lapsi ansaitsee mahdollisuuden
-  og_description: Jokainen oppilas jokaisessa koulussa ansaitsee mahdollisuuden opiskella tietotekniikkaa.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Tule mukaan <a href="http://hourofcode.com">Koodaustuntiin</a><br/>8.–14. joulukuuta 2014<br/>'
   hoc2014_students: Oppilaat
   hoc2014_try: Kokeile
@@ -179,7 +179,7 @@ fi-FI:
   learn_next_level: Jatka seuraavalle tasolle
   learn_online: Kokeile muita kursseja verkossa
   learn_classes: Etsi paikallisia oppitunteja
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Suoritin juuri #Koodaustunti - tsekkaa tämä! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -510,6 +510,7 @@ fi-FI:
   dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_view_progress: Tarkastele etenemistä
   dashboard_navigation_view_text_responses: Näytä tekstin vastaukset
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Lisää oppilaita
   dashboard_navigation_manage_students: Hallinnoi oppilaita
   dashboard_navigation_lesson_plans_resources: Tuntisuunnitelmat ja resurssit
@@ -608,6 +609,16 @@ fi-FI:
   dashboard_puzzle: Tehtävä
   dashboard_question: Kysymys
   dashboard_response: Vastaus
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Oikein
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Uskomattomia tilastoja viime vuoden Koodaustunnista. Vain yhdessä viikossa:'
   stats_hoc_2013_image_alt: Tilastoja vuoden 2013 Koodaustunnista
   dashboard_teacher: Opettaja

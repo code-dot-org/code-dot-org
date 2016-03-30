@@ -229,5 +229,6 @@
   "watchVideo": "Mira el vídeo",
   "when": "quan",
   "whenRun": "quan s'executa",
-  "workspaceHeaderShort": "Zona de treball: "
+  "workspaceHeaderShort": "Zona de treball: ",
+  "showBlock": "Get a block"
 }

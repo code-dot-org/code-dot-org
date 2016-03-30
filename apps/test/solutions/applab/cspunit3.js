@@ -61,20 +61,24 @@ var levelDefinition = {
 
 /**
  * Simulates dragging the nth block in the toolbox into the canvas at line
- * targetIndex (assumes all blocks are size 30).
+ * targetIndex (assumes all blocks are size 32).
  * @param {number} blockIndex Nth block in toolbox
  * @param {number} targetIndex Nth line in target
  */
 function dragToolboxBlock(blockIndex, targetIndex) {
+  // NOTE: 32 is a bit of a magic number (approximately distance between toolbox
+  // blocks). For some reason, this number seems to be slightly different on
+  // dev machine vs. circle-ci, so if one starts using this elsewhere it may
+  // be finicky
   var start = {
     x: $(".droplet-palette-canvas").eq(0).offset().left + 10,
     y: $(".droplet-palette-canvas").eq(0).offset().top + 10 +
-      blockIndex * 30
+      blockIndex * 32
   };
   var end = {
     x: $(".droplet-main-canvas").eq(0).offset().left,
     y: $(".droplet-main-canvas").eq(0).offset().top +
-      targetIndex * 30
+      targetIndex * 32
   };
 
   var mousedown = testUtils.createMouseEvent('mousedown', start.x, start.y);
@@ -139,6 +143,24 @@ module.exports = {
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 10, function () {
+          var expectedCode = '' +
+            'moveForward();\n' +
+            'turnLeft();\n' +
+            'turnLeft();\n' +
+            'turnLeft();\n' +
+            'moveForward();\n' +
+            'turnLeft();\n' +
+            'turnLeft();\n' +
+            'turnLeft();\n' +
+            'moveForward();\n' +
+            'turnLeft();\n' +
+            'turnLeft();\n' +
+            'turnLeft();\n' +
+            'moveForward();\n';
+
+          var actualCode = Applab.getCode();
+          assert.equal(actualCode, expectedCode);
+
           var imageData = document.getElementById('turtleCanvas')
             .getContext('2d').getImageData(0, 0, 400, 400);
 

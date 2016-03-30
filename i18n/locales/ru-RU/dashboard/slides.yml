@@ -706,8 +706,7 @@ ru:
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: |-
-          This lesson is called "Graph Paper Programming" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows.
+        text: Этот урок называется «Программирование на Миллиметровке» (бумага с координатной сеткой), и это все об алгоритмах. Сегодня мы будем учиться как писать программы, которые показывают друг другу как воссоздать простые черно-белые изображения, используя только нарисованные стрелки.
       2:
         image: notes/C2_graph_paper_2.png
         text: Алгоритм — список инструкции для завершения задачи. Мы будем следовать этому набору инструкций, чтобы сделать чашу. Алгоритмы действительно полезны, когда нужно, чтобы кто-то еще понял, как что-то сделать.

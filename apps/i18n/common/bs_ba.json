@@ -229,5 +229,6 @@
   "watchVideo": "Pogledaj Video",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Radni prostor: "
+  "workspaceHeaderShort": "Radni prostor: ",
+  "showBlock": "Get a block"
 }

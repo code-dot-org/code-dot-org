@@ -21,7 +21,7 @@ ta-IN:
   twentyhours_heading: நமது முதற் கணிப்பொறி அறிவியல் பயிற்சியை செய்ய முயற்சிக்கவும்
   twentyhours_text: உங்கள் முதல் மணி, குறியீடு பூர்த்தி? மேலும் முக்கிய கணினி அறிவியல் மற்றும் நிரலாக்க கருத்துக்கள் அறிய இந்த படாத்தை பின்பற்றுங்கள்.
   og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'சேருங்கள்<a href="http://hourofcode.com"> மணி குறியீடை</a><br/> டிசம்பர் 8-14, 2014 <br/>'
   hoc2014_students: Students
   hoc2014_try: இதை முயற்சிக்கவும்
@@ -179,7 +179,7 @@ ta-IN:
   learn_next_level: Try another Code Studio course
   learn_online: Try other courses online
   learn_classes: உள்ளூர் வகுப்புகளை கண்டுபிடி
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -523,6 +523,7 @@ ta-IN:
   dashboard_navigation_all_sections: Student Accounts and Progress
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -621,6 +622,16 @@ ta-IN:
   dashboard_puzzle: புதிர்
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Correct
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Teacher
