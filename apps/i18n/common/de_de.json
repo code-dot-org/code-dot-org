@@ -229,5 +229,6 @@
   "watchVideo": "Video anschauen",
   "when": "wenn",
   "whenRun": "beim Ausführen",
-  "workspaceHeaderShort": "Arbeitsbereich: "
+  "workspaceHeaderShort": "Arbeitsbereich: ",
+  "showBlock": "Get a block"
 }

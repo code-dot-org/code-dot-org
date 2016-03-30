@@ -20,4 +20,18 @@
 class Plc::WrittenEnrollmentTaskAssignment < Plc::EnrollmentTaskAssignment
   #Things like other peer reviews will go here
   serialized_attrs %w(submission)
+
+  def get_icon_and_style
+    case status
+      when 'not_started'
+        return 'fa-circle-o', 'color: black'
+      when 'in_progress'
+        return 'fa-adjust', 'color: goldenrod'
+      when 'review_rejected'
+        return 'fa-exclamation-circle', 'color: red'
+      when 'complete'
+        return 'fa-check-circle', 'color: green'
+    end
+  end
+
 end
