@@ -12,10 +12,10 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "If you copy that loop and turn left instead of right, what happens? Can you repeat that to draw this wave?",
+    "instructions": "If you create another loop like this one, but turn left instead of right, what happens? \r\n\r\nCan you repeat all of that to draw this wave?",
     "ideal": "8",
     "embed": "false",
-    "markdown_instructions": "If you copy that loop and turn left instead of right, what happens? Can you repeat that to draw this wave?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "If you create another loop like this one, but turn left instead of right, what happens? \r\n\r\nCan you repeat all of that to draw this wave?\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -29,8 +29,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -75,21 +78,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat">
           <title name="TIMES">4</title>
         </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">3</title>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">3</title>
-        </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

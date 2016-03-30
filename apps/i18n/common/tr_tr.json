@@ -229,5 +229,6 @@
   "watchVideo": "Videoyu İzle",
   "when": "Ne zaman",
   "whenRun": "Çalıştığı zaman",
-  "workspaceHeaderShort": "Çalışma alanı: "
+  "workspaceHeaderShort": "Çalışma alanı: ",
+  "showBlock": "Get a block"
 }

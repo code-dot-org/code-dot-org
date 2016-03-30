@@ -15,6 +15,19 @@ var DialogButtons = React.createClass({
     previousLevel: React.PropTypes.bool,
     shouldPromptForHint: React.PropTypes.bool,
     tryAgain: React.PropTypes.string,
+    userId: React.PropTypes.number
+  },
+
+  getButtonMessage: function () {
+    // Used for A/B testing on the effects of the word "hint" in the
+    // "get a hint" workflow. Anonymous users and users with even IDs
+    // should get the text "See hint", whereas users with odd IDs should
+    // see "Get a block".
+    // Test initiated March 28, 2016
+    // TODO elijah - stop the experiment and pick one string or the
+    // other after a sufficient amount of data has been collected and
+    // looked at.
+    return (this.props.userId % 2 === 1) ? msg.showBlock() : msg.hintRequest();
   },
 
   render: function () {
@@ -68,7 +81,7 @@ var DialogButtons = React.createClass({
         if (this.props.shouldPromptForHint) {
           hintButton = (<button id="hint-request-button" className="lightbulb-button">
             <Lightbulb size={32} style={style.lightbulb}/>
-            {msg.hintRequest()}
+            {this.getButtonMessage()}
           </button>);
         }
         againButton = (<button id="again-button" className="launch">
