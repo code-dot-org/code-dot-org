@@ -292,7 +292,7 @@ Dashboard::Application.routes.draw do
     resources :user_course_enrollments
     resources :enrollment_task_assignments
     resources :course_units
-    resources :enrollment_user_assignments
+    resources :enrollment_unit_assignments
   end
 
   get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
