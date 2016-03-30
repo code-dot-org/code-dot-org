@@ -3,7 +3,7 @@
 var _ = require('../../lodash');
 var color = require('../../color');
 
-var processMarkup = require('marked');
+var procesMarkdown = require('marked');
 
 var Instructions = require('./Instructions.jsx');
 var CollapserIcon = require('./CollapserIcon.jsx');
@@ -95,7 +95,7 @@ var TopInstructions = React.createClass({
         </div>
         <div style={collapseStyle}>
           <div style={bodyStyle}>
-            <Instructions renderedMarkdown={processMarkup(this.props.markdown)}/>
+            <Instructions renderedMarkdown={procesMarkdown(this.props.markdown)}/>
           </div>
           <HeightResizer
             position={mainStyle.height}
