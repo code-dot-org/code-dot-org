@@ -265,7 +265,7 @@ Bee.prototype.isCloudable = function (row, col) {
  * 'requiring' checks through their quantum nature.
  */
 Bee.prototype.shouldCheckCloud = function (row, col) {
-  return this.maze_.map.grid_[row][col].isStaticCloud();
+  return this.maze_.map.getVariableCell(row, col).isStaticCloud();
 };
 
 /**
@@ -275,7 +275,7 @@ Bee.prototype.shouldCheckCloud = function (row, col) {
  * through their quantum nature.
  */
 Bee.prototype.shouldCheckPurple = function (row, col) {
-  return this.isPurpleFlower(row, col) && !this.maze_.map.grid_[row][col].isVariableRange();
+  return this.isPurpleFlower(row, col) && !this.maze_.map.getVariableCell(row, col).isVariableRange();
 };
 
 /**
