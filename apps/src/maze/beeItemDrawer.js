@@ -34,6 +34,11 @@ function BeeItemDrawer(map, skin, bee) {
 BeeItemDrawer.inherits(DirtDrawer);
 module.exports = BeeItemDrawer;
 
+/**
+ * Generic reset function, shared by DirtDrawer so that we can call
+ * Maze.gridItemDrawer.reset() blindly.
+ * @override
+ */
 BeeItemDrawer.prototype.reset = function () {
   this.resetClouded();
 };
