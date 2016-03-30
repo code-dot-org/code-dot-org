@@ -17,7 +17,8 @@ BRANCH=<%=branch%>
 SUBDOMAIN=<%=subdomain%>
 S3_BUCKET=<%=s3_bucket%>
 REGION=<%=region%>
-NODE_NAME=<%=rack_env%>-$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+NODE_NAME=<%=rack_env%>-${INSTANCE_ID}
 
 # Fetch acmesmith-provisioned SSL certificate and key from S3
 aws configure set s3.signature_version s3v4
