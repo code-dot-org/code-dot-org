@@ -1,7 +1,7 @@
 /**
  * This file manages logic for the dropdown used in our setProperty block
  */
-var _ = require('lodash');
+var _ = require('../lodash');
 var library = require('./designElements/library');
 var ElementType = library.ElementType;
 

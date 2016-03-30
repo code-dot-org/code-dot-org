@@ -2,7 +2,6 @@ def get_state_name_from_abbr(abbr)
   STATE_ABBR_HASH[abbr.to_sym]
 end
 
-# Adapted from http://snipplr.com/view/35407/ruby-state-abbreviations/
 STATE_ABBR_HASH = {
   AL: 'Alabama',
   AK: 'Alaska',
@@ -53,5 +52,5 @@ STATE_ABBR_HASH = {
   WA: 'Washington',
   WV: 'West Virginia',
   WI: 'Wisconsin',
-  WY: 'Wyoming'
+  WY: 'Wyoming',
 }
