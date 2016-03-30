@@ -70,7 +70,7 @@ def load_configuration()
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
-    'partners'                    => %w(al ar br eu italia ro sg uk za),
+    'partners'                    => %w(ar br italia ro sg uk za),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",

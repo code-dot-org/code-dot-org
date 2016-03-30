@@ -12,10 +12,8 @@ class Tutorials
     return @contents.find {|row| row[:code] == code}[:url] if @table == :beyond_tutorials
 
     api_domain = domain.gsub('csedweek.org','code.org')
-    api_domain = api_domain.gsub('al.code.org','code.org')
     api_domain = api_domain.gsub('ar.code.org','code.org')
     api_domain = api_domain.gsub('br.code.org','code.org')
-    api_domain = api_domain.gsub('eu.code.org','code.org')
     api_domain = api_domain.gsub('ro.code.org','code.org')
     api_domain = api_domain.gsub('sg.code.org','code.org')
     api_domain = api_domain.gsub('uk.code.org','code.org')
