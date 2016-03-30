@@ -32,7 +32,7 @@ function level(state, action) {
   state = state || levelInitialState;
 
   switch (action.type) {
-    case ActionType.SET_LEVEL_PROPS:
+    case ActionType.SET_INITIAL_LEVEL_PROPS:
       var allowedKeys = [
         'assetUrl',
         'isDesignModeHidden',
@@ -40,7 +40,10 @@ function level(state, action) {
         'isReadOnlyWorkspace',
         'isShareView',
         'isViewDataButtonHidden',
-        'instructionsMarkdown'
+        'instructionsMarkdown',
+        'instructionsInTopPane',
+        'puzzleNumber',
+        'stageTotal'
       ];
       Object.keys(action.props).forEach(function (key) {
         if (-1 === allowedKeys.indexOf(key)) {
