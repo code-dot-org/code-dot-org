@@ -75,6 +75,7 @@ CLIENT_RB=/etc/chef/client.rb
 cat <<RUBY > ${CLIENT_RB}
 node_name '${NODE_NAME}'
 environment '${ENVIRONMENT}'
+chef_repo_path '/var/chef'
 if '${LOCAL_MODE}' == '1'
   local_mode true
 else
