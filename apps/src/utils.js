@@ -1,8 +1,6 @@
 /* global define, $ */
 'use strict';
 
-var msg = require('./locale');
-
 var savedAmd;
 
 // Do some hackery to make it so that lodash doesn't think it's being loaded
@@ -385,6 +383,9 @@ exports.escapeText = function (text) {
 };
 
 exports.showUnusedBlockQtip = function (targetElement) {
+  // TODO elijah figure out why blockly build is failing when this is
+  // included at the top of the page where it should be
+  var msg = require('./locale');
   $(targetElement).qtip({
     content: {
       text: '<h4>' + msg.unattachedBlockTipTitle() +'</h4><p>' + msg.unattachedBlockTipBody() + '</p>',
