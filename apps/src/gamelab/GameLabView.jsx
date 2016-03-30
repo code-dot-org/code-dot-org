@@ -13,7 +13,7 @@ var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
  */
 var GameLabView = React.createClass({
   propTypes: {
-    interfaceMode: React.PropTypes.string.isRequired,
+    interfaceMode: React.PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
