@@ -32,7 +32,7 @@ function level(state, action) {
   state = state || levelInitialState;
 
   switch (action.type) {
-    case ActionType.SET_LEVEL_PROPS:
+    case ActionType.SET_INITIAL_LEVEL_PROPS:
       var allowedKeys = [
         'assetUrl',
         'isDesignModeHidden',
