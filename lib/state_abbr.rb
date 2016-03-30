@@ -1,5 +1,12 @@
+# Returns abbr as an uppercase symbol.
+def get_uppercase_symbol(abbr)
+  return abbr.to_s.upcase.to_sym
+end
+
+# Returns the state name associated with the state abbreviation abbr.
+# abbr: A two character (uppercase or lowercase) symbol or string.
 def get_state_name_from_abbr(abbr)
-  STATE_ABBR_HASH[abbr.to_sym]
+  return STATE_ABBR_HASH[get_uppercase_symbol(abbr)]
 end
 
 STATE_ABBR_HASH = {
