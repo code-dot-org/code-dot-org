@@ -18,7 +18,7 @@ dotd_email = JSON.parse(on_call)["users"].first["email"]
 # Match Pager Duty email to Slack mention name
 mention_name = "DNE"
 users_list = open("https://slack.com/api/users.list?token=#{slack_token}").read
-JSON.parse(users_list)["members"].each { |member| mention_name = member["name"] if dotd_email.eql? member["profile"]["email"] }
+JSON.parse(users_list)["members"].each { |member| mention_name = member["name"] if dotd_email == member["profile"]["email"] }
 
 # Set the new developers room topic
 new_topic = current_topic.gsub(/[^\s]* is DotD|^(?!.* is DotD)/, "@#{mention_name} is DotD")
