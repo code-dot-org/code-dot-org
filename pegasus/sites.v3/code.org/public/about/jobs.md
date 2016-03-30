@@ -194,7 +194,6 @@ Candidates must be extremely detail-oriented, possess exceptional written and in
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-Senior Backend Engineer / Infrastructure Engineer](#backend)
 
 ## <a name="backend" href="#backend">Senior Backend Engineer / Infrastructure Lead (Seattle, WA)</a>
 

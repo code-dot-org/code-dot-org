@@ -34,33 +34,33 @@ Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](https://
   <thead>
     <tr>
       <th></th>
-      <th width="45%">Code.org CS in Algebra</th>
-      <th width="45%">Bootstrap</th>
+      <th width="45%"><strong>Code.org CS in Algebra</strong></th>
+      <th width="45%"><strong>Bootstrap</strong></th>
     </tr>
   </thead>
   <tbody valign="top">
     <tr>
-      <td>**Programming Language**</td>
+      <td><strong>Programming Language</strong></td>
       <td>Block-based<br/><img src="algebra/img/blocks.png" style="width: auto; max-width: 250px"/></td>
       <td>Text-based<br/><img src="algebra/img/text.png" style="width: auto; max-width: 250px"/></td>
     </tr>
     <tr>
-      <td>**Instructional Scaffolding**</td>
+      <td><strong>Instructional Scaffolding**</td>
       <td>Puzzle based scaffolding for all programming lessons combined with pseudocode-based pencil and paper activities.</td>
       <td>Pencil and paper workbook activities using the same text language students will use online.</td>
     </tr>
     <tr>
-      <td>Activity Focus</td>
+      <td><strong>Activity Focus</strong></td>
       <td>Combination of structured puzzles and open-ended problems</td>
       <td>Completing open-ended problems</td>
     </tr>
     <tr>
-      <td>Requires a Computer</td>
-      <td>Programming puzzles require a computer. Unplugged lessons are entirely offline, and some programming activities include complimentary workbook pages.</td>
+      <td><strong>Requires a Computer</strong></td>
+      <td>Programming puzzles require a computer. Unplugged lessons are entirely offline, and some programming activities include complementary workbook pages.</td>
       <td>All Bootstrap activities are scaffolded by a workbook page, which can be done without a computer.</td>
     </tr>
     <tr>
-      <td>Supporting Tools</td>
+      <td><strong>Supporting Tools</strong></td>
       <td>Student account creation and management
         <br>Class progress monitor
         <br>Solution viewer</td>
@@ -68,7 +68,7 @@ Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](https://
         <br>Solution viewer</td>
     </tr>
     <tr>
-      <td>Supplemental Materials</td>
+      <td><strong>Supplemental Materials</strong></td>
       <td>Lesson slide decks
         <br>Challenge activities
         <br>Rubrics
@@ -83,7 +83,7 @@ Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](https://
         <br>Supplemental lessons</td>
     </tr>
     <tr>
-      <td>Pathway for Continuing Students</td>
+      <td><strong>Pathway for Continuing Students</strong></td>
       <td>CS in Algebra Course B
         <br>Bootstrap:1</td>
       <td>Bootstrap:2
@@ -91,18 +91,18 @@ Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](https://
         <br>How to Design Programs</td>
     </tr>
     <tr>
-      <td>Evaluation and Publication</td>
+      <td><strong>Evaluation and Publication</strong></td>
       <td>Undergoing independent evaluation</td>
       <td>Independently evaluated with <a href="http://cs.brown.edu/%7Esk/Publications/Papers/Published/sfkf-trans-word-prob-comp-alg-bs/">published transfer results</a>
       </td>
     </tr>
     <tr>
-      <td>Professional Development</td>
+      <td><strong>Professional Development</strong></td>
       <td>In person <a href="/educate/professional-learning/cs-in-algebra">workshops with supplemental online professional development</a> covering Course A only</td>
       <td>In person <a href="http://www.bootstrapworld.org/workshops/">workshops</a> covering the entire course</td>
     </tr>
     <tr>
-      <td>Curriculum Progression</td>
+      <td><strong>Curriculum Progression</strong></td>
       <td>
         <strong>Course A</strong> 
         <br>Order of Operations and Circles of Evaluation
