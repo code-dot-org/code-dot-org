@@ -24,7 +24,7 @@
 .all_possible_resources
   %h4
     All learning resources
-  - @enrollment_unit_assignment.plc_course_unit.plc_evaluation_questions.map(&:plc_evaluation_answers).flatten.map(&:plc_learning_module).uniq.delete_if{|x| x.nil?}.map(&:plc_tasks).flatten.select!{|x| x.class == Plc::LearningResourceTask}.each do |x|
-    %i{class: 'fa ' + (x.icon.nil? ? 'fa-book' : x.icon)}
-    = x.name
+  - @enrollment_unit_assignment.plc_course_unit.get_all_possible_learning_resources.each do |learning_resource|
+    %i{class: 'fa ' + (learning_resource.icon.nil? ? 'fa-book' : learning_resource.icon)}
+    = learning_resource.name
     %br
