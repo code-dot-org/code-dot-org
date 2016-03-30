@@ -33,7 +33,7 @@ var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs'
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
-var _ = require('lodash');
+var _ = require('../lodash');
 var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
