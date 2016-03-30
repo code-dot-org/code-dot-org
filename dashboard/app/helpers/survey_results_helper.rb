@@ -1,5 +1,7 @@
 module SurveyResultsHelper
   def show_survey?
+    # rubocop:disable Lint/UnreachableCode
+
     # Disabled for all users on 2016-03-30 after being shown for thirty days.
     return false
 
@@ -36,5 +38,7 @@ module SurveyResultsHelper
 
     # There is no reason not to show the survey, so show the survey.
     return true
+
+    # rubocop:enable Lint/UnreachableCode
   end
 end
