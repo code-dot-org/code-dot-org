@@ -35,4 +35,18 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
   def check_course_completion
     plc_enrollment_module_assignment.plc_enrollment_unit_assignment.check_for_unit_completion
   end
+
+  def get_icon_and_style
+    return plc_task.try(:icon), '' if plc_task.try(:icon)
+
+    case status
+      # Need to move these statuses to some constant eventually - will address with next checkin
+      when 'not_started'
+        return 'fa-circle-o', ''
+      when 'in_progress'
+        return 'fa-adjust', 'color: darkgoldenrod'
+      when 'completed'
+        return 'fa-check-circle', 'color: green'
+    end
+  end
 end

@@ -66,34 +66,6 @@ exports.load = function(assetUrl, id) {
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
     failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')],
-
-    // Stickers
-    stickers: {
-      elephant: assetUrl('media/common_images/stickers/elephant.png'),
-      dragon: assetUrl('media/common_images/stickers/dragon.png'),
-      triceratops: assetUrl('media/common_images/stickers/triceratops.png'),
-      monkey: assetUrl('media/common_images/stickers/monkey.png'),
-      cat: assetUrl('media/common_images/stickers/cat.png'),
-      turtle: assetUrl('media/common_images/stickers/turtle.png'),
-      goat: assetUrl('media/common_images/stickers/goat.png'),
-      zebra: assetUrl('media/common_images/stickers/zebra.png'),
-      hippo: assetUrl('media/common_images/stickers/hippo.png'),
-      bunny: assetUrl('media/common_images/stickers/bunny.png'),
-      peacock: assetUrl('media/common_images/stickers/peacock.png'),
-      llama: assetUrl('media/common_images/stickers/llama.png'),
-      giraffe: assetUrl('media/common_images/stickers/giraffe.png'),
-      mouse: assetUrl('media/common_images/stickers/mouse.png'),
-      beaver: assetUrl('media/common_images/stickers/beaver.png'),
-      bat: assetUrl('media/common_images/stickers/bat.png'),
-      grasshopper: assetUrl('media/common_images/stickers/grasshopper.png'),
-      chicken: assetUrl('media/common_images/stickers/chicken.png'),
-      moose: assetUrl('media/common_images/stickers/moose.png'),
-      owl: assetUrl('media/common_images/stickers/owl.png'),
-      penguin: assetUrl('media/common_images/stickers/penguin.png'),
-      lion: assetUrl('media/common_images/stickers/lion.png'),
-      robot: assetUrl('media/common_images/stickers/robot.png'),
-      rocket: assetUrl('media/common_images/stickers/rocket.png'),
-    }
   };
 
   return skin;
