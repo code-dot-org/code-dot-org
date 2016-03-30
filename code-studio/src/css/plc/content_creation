@@ -18,6 +18,7 @@
 
     input, select {
       margin: auto;
+      width: 90%;
     }
 
     .cloneableAnswerRow, .cloneableQuestionRow {
