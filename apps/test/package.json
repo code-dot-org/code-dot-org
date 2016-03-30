@@ -12,6 +12,7 @@
   "browserify-shim": {
     "blockly": {
       "exports": "Blockly"
-    }
+    },
+    "marked": "global:marked"
   }
 }
