@@ -34,7 +34,7 @@ Promise.all([
     filenames: [
       'code-studio.js',
       'levelbuilder.js',
-      'levelbuilder_dsl.js',
+      'levelbuilder_markdown.js',
       'levelbuilder_studio.js',
       'levels/contract_match.jsx',
       'levels/widget.js',
