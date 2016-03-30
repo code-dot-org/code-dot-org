@@ -94,7 +94,10 @@
       },
       {
         "entries": [
-          "turnAround, turnLeft, turnLeft, moveForward"
+          "turnAround",
+          "turnLeft",
+          "turnLeft",
+          "moveForward"
         ],
         "matchType": "exact",
         "minTimes": 1,
