@@ -52,7 +52,7 @@ var CodeWorkspaceContainer = React.createClass({
     });
 
     return (
-      <div style={mainStyle} className="workspace-right">
+      <div style={mainStyle} className="editor-column">
         <ProtectedStatefulDiv
             id="codeWorkspace"
             style={styles.codeWorkspace}

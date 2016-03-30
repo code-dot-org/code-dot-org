@@ -44,11 +44,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div.workspace-right {
+  div.editor-column {
     left: $width;
   }
-  // TODO - should be works-space-right?
-  html[dir='rtl'] div.workspace-right {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -81,10 +80,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div.workspace-right {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div.workspace-right {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -117,10 +116,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div.workspace-right {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div.workspace-right {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -153,10 +152,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div.workspace-right {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div.workspace-right {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -189,10 +188,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div.workspace-right {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div.workspace-right {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
