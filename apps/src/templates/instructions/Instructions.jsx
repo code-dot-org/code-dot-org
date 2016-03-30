@@ -29,6 +29,7 @@ var Instructions = React.createClass({
         <MarkdownInstructions
           renderedMarkdown={this.props.renderedMarkdown}
           markdownClassicMargins={this.props.markdownClassicMargins}
+          inTopPane={this.props.inTopPane}
           aniGifURL={this.props.aniGifURL}
           authoredHints={this.props.authoredHints}
         />
