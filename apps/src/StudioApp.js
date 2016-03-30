@@ -234,6 +234,14 @@ StudioApp.prototype.hasInstructionsToShow = function (config) {
 };
 
 /**
+ * Some functionality - most notably markdown instructions - is only
+ * supported when running in English. This helper exposes that check.
+ */
+StudioApp.prototype.localeIsEnglish = function () {
+  return this.LOCALE === ENGLISH_LOCALE;
+};
+
+/**
  * Common startup tasks for all apps. Happens after configure.
  */
 StudioApp.prototype.init = function(config) {
@@ -988,7 +996,7 @@ StudioApp.prototype.onReportComplete = function (response) {
  * @returns {React.element}
  */
 StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
-  var isMarkdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+  var isMarkdownMode = window.marked && level.markdownInstructions && this.localeIsEnglish();
 
   var renderedMarkdown;
 
@@ -1020,7 +1028,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
  * @param {boolean} showHints
  */
 StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
-  var isMarkdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+  var isMarkdownMode = window.marked && level.markdownInstructions && this.localeIsEnglish();
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?

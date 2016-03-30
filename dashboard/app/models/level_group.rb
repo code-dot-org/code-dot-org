@@ -27,11 +27,28 @@ class LevelGroup < DSLDefined
   def dsl_default
     <<ruby
 name 'unique level name here'
-title 'title'
-description 'description here'
+submittable 'true'
+
+page
 level 'level1'
 level 'level2'
+
+page
+level 'level 3'
+level 'level 4'
 ruby
+  end
+
+  # Returns a flattened array of all the Levels in this LevelGroup, in order.
+  def levels
+    level_names = []
+    properties["pages"].each do |page|
+      page["levels"].each do |page_level_name|
+        level_names << page_level_name
+      end
+    end
+
+    Level.where(name: level_names)
   end
 
 end

@@ -292,7 +292,7 @@ Dashboard::Application.routes.draw do
     resources :user_course_enrollments
     resources :enrollment_task_assignments
     resources :course_units
-    resources :enrollment_user_assignments
+    resources :enrollment_unit_assignments
   end
 
   get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
@@ -306,6 +306,7 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
+  get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
 
