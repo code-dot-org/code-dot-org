@@ -89,6 +89,8 @@ var AppLabView = React.createClass({
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
         <TopInstructions
+            puzzleNumber={this.props.puzzleNumber}
+            stageTotal={this.props.stageTotal}
             height={topPaneHeight}
             markdown={this.props.instructionsMarkdown}
             collapsed={this.props.instructionsCollapsed}
@@ -110,6 +112,8 @@ module.exports = connect(function propsFromStore(state) {
     // TODO - how do i actually feel about using inTopPane here?
     instructionsCollapsed: state.instructions.collapsed || !state.instructions.inTopPane,
     instructionsHeight: state.instructions.height,
+    puzzleNumber: state.level.puzzleNumber,
+    stageTotal: state.level.stageTotal
   };
 }, function propsFromDispatch(dispatch) {
   return {

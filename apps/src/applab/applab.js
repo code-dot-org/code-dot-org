@@ -900,7 +900,9 @@ Applab.init = function(config) {
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
-    instructionsMarkdown: config.level.markdownInstructions
+    instructionsMarkdown: config.level.markdownInstructions,
+    puzzleNumber: config.level.puzzle_number,
+    stageTotal: config.level.stage_total
   }));
 
   // TODO - danger here (and with other config), is we now have the potential

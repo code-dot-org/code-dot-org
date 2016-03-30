@@ -13,6 +13,7 @@ var Instructions = require('./Instructions.jsx');
 var CollapserIcon = require('./CollapserIcon.jsx');
 var HeightResizer = require('./HeightResizer.jsx');
 var constants = require('../../constants');
+var msg = require('../../locale');
 
 // TODO These numbers are defined in style-constants.scss. Do the same sort
 // of thing we did with colors
@@ -47,6 +48,8 @@ var styles = {
 
 var TopInstructions = React.createClass({
   propTypes: {
+    puzzleNumber: React.PropTypes.number.isRequired,
+    stageTotal: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
     markdown: React.PropTypes.string,
     collapsed: React.PropTypes.bool.isRequired,
@@ -95,7 +98,10 @@ var TopInstructions = React.createClass({
             collapsed={this.props.collapsed}
             onClick={this.props.onToggleCollapsed}/>
         <div style={styles.header}>
-          Instructions: Puzzle 1 of 1 {/* TODO */}
+          {msg.puzzleTitle({
+            stage_total: this.props.stageTotal,
+            puzzle_number: this.props.puzzleNumber
+          })}
         </div>
         <div style={collapseStyle}>
           <div style={bodyStyle}>
