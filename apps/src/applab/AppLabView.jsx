@@ -39,6 +39,27 @@ var AppLabView = React.createClass({
     this.props.onMount();
   },
 
+  /**
+   * @returns {number} How much vertical space is consumed by the TopInstructions
+   */
+  topPaneHeight: function () {
+    // instructionsHeight represents the height of the TopInstructions if displayed
+    // and not collapsed
+    var height = this.props.instructionsHeight;
+
+    // If collapsed, we only use display instructions header
+    if (this.props.instructionsCollapsed) {
+      height = HEADER_HEIGHT;
+    }
+
+    // Or we may not display the instructions pane at all
+    if (!this.props.instructionsInTopPane) {
+      height = 0;
+    }
+
+    return height;
+  },
+
   render: function () {
     var playSpaceHeader;
     if (!this.props.isReadOnlyWorkspace) {
@@ -49,17 +70,9 @@ var AppLabView = React.createClass({
           onScreenCreate={this.props.onScreenCreate} />;
     }
 
-    var instructionsHeight = this.props.instructionsHeight;
-    if (this.props.instructionsCollapsed) {
-      instructionsHeight = HEADER_HEIGHT;
-    }
-
-    if (!this.props.instructionsInTopPane) {
-      instructionsHeight = 0;
-    }
-
+    var topPaneHeight = this.topPaneHeight();
     var codeWorkspaceContainerStyle = {
-      top: instructionsHeight
+      top: topPaneHeight
     };
 
 
@@ -76,13 +89,13 @@ var AppLabView = React.createClass({
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
         <TopInstructions
-            height={instructionsHeight}
+            height={topPaneHeight}
             markdown={this.props.instructionsMarkdown}
             collapsed={this.props.instructionsCollapsed}
             onToggleCollapsed={this.props.toggleInstructionsCollapsed}
             onChangeHeight={this.props.setInstructionsHeight}/>
         <CodeWorkspaceContainer
-            topMargin={instructionsHeight}
+            topMargin={topPaneHeight}
             generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
             onSizeChange={utils.fireResizeEvent}/>
       </ConnectedStudioAppWrapper>
