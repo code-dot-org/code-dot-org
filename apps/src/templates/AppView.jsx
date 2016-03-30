@@ -9,14 +9,14 @@ var styles = {
     position: 'absolute',
     top: 0,
     right: 0,
-    // left is controlled by media queries
+    // left is controlled by CSS rules
     bottom: 0,
     marginLeft: 15,
     border: '1px solid #ddd',
     overflow: 'hidden',
   },
   codeWorkspaceRTL: {
-    right: 400,
+    // right is controlled by CSS rules
     left: 0,
     marginRight: 15,
     marginLeft: 0

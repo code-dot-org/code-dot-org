@@ -311,6 +311,14 @@ button.arrow:disabled {
   border: 1px solid #ddd;
 }
 
+html[dir='rtl'] #codeWorkspace:not(.applab) {
+   right: 400px;
+}
+
+#codeWorkspace:not(.applab) {
+  left: 400px
+}
+
 #codeWorkspace.pin_bottom {
   border: none;
   border-top: 1px solid #ddd;
@@ -435,7 +443,17 @@ button.arrow:disabled {
   #codeWorkspace {
     left: $width;
   }
+  // Even though this is already defined above, define it again using the
+  // ":not(.applab)" selector. If we dont do this, then the rule for
+  // #codeWorkspace:not(.applab) defined outside of the media query will always
+  // take precedence as it's more specific, and we wont resize
+  #codeWorkspace:not(.applab) {
+    left: $width;
+  }
   html[dir='rtl'] #codeWorkspace {
+    right: $width;
+  }
+  html[dir='rtl'] #codeWorkspace:not(.applab) {
     right: $width;
   }
   html[dir='rtl'] body.readonly #codeWorkspace {
