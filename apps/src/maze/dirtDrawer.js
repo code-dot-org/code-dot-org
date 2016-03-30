@@ -18,6 +18,12 @@ var DirtDrawer = module.exports = function (map, dirtAsset) {
   };
 };
 
+
+/**
+ * Intentional noop function; BeeItemDrawer needs to be able to reset
+ * between runs, so we implement a shared reset function so that we can
+ * call Maze.gridItemDrawer.reset() blindly. Overridden by BeeItemDrawer
+ */
 DirtDrawer.prototype.reset = function () {};
 
 /**
