@@ -1,0 +1,20 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+  disable_upstart: false
+  image: ubuntu-upstart:14.04
+  run_command: /sbin/init
+transport:
+  name: sftp
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 12.7.2
+platforms:
+  - name: ubuntu-14.04
+    run_list:
+      - recipe[apt]
+suites:
+  - name: default
+    run_list:
+      - recipe[cdo-confluence]
