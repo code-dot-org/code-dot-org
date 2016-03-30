@@ -41,6 +41,7 @@ function level(state, action) {
         'isShareView',
         'isViewDataButtonHidden',
         'instructionsMarkdown',
+        'instructionsInTopPane',
         'puzzleNumber',
         'stageTotal'
       ];

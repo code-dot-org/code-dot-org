@@ -107,10 +107,9 @@ var AppLabView = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
-    instructionsInTopPane: state.instructions.inTopPane,
+    instructionsInTopPane: state.level.instructionsInTopPane,
     instructionsMarkdown: state.level.instructionsMarkdown,
-    // TODO - how do i actually feel about using inTopPane here?
-    instructionsCollapsed: state.instructions.collapsed || !state.instructions.inTopPane,
+    instructionsCollapsed: state.instructions.collapsed || !state.level.instructionsInTopPane,
     instructionsHeight: state.instructions.height,
     puzzleNumber: state.level.puzzleNumber,
     stageTotal: state.level.stageTotal
