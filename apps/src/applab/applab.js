@@ -4,7 +4,7 @@
  * Copyright 2014-2015 Code.org
  *
  */
-/* global Dialog, dashboard, marked */
+/* global Dialog, dashboard */
 
 'use strict';
 var studioApp = require('../StudioApp').singleton;
