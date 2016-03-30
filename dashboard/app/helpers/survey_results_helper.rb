@@ -1,5 +1,8 @@
 module SurveyResultsHelper
   def show_survey?
+    # Disabled for all users on 2016-03-30 after being shown for thirty days.
+    return false
+
     # Reasons we would not show the survey.
     if !current_user
       return false
@@ -17,9 +20,9 @@ module SurveyResultsHelper
       return false
     end
 
-    # For testing purposes, we show the survey in non-production environments
-    # regardless of account age or request location.
-    if !Rails.env.production?
+    # For testing purposes, special case the logic in non-production
+    # environments.
+    if !Rails.env.production? && request.location.try(:country_code) == 'RD'
       return true
     end
 
