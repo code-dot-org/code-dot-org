@@ -285,6 +285,11 @@ Dashboard::Application.routes.draw do
     concerns :ops_routes
   end
 
+  get '/plc/content_creator/show_courses_and_modules', to: 'plc/content_creator#show_courses_and_modules'
+  ['courses', 'learning_modules', 'tasks', 'course_units', 'evaluation_questions'].each do |object|
+    get '/plc/' + object, to: redirect('plc/content_creator/show_courses_and_modules')
+  end
+
   namespace :plc do
     resources :courses
     resources :learning_modules
@@ -298,8 +303,6 @@ Dashboard::Application.routes.draw do
 
   get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
   post '/plc/enrollment_evaluations/:unit_assignment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
-
-  get '/plc/content_creator/show_courses_and_modules', to: 'plc/content_creator#show_courses_and_modules'
 
   get '/plc/learning_modules/:id/new_learning_resource_for_module', to: 'plc/learning_modules#new_learning_resource_for_module', as: 'new_learning_resource_for_module'
 
