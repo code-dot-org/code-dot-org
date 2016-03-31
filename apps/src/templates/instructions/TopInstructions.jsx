@@ -12,8 +12,8 @@ var HeightResizer = require('./HeightResizer.jsx');
 var constants = require('../../constants');
 var msg = require('../../locale');
 
-var HEADER_HEIGHT = styleConstants.workspace_headers_height;
-var RESIZER_HEIGHT = styleConstants.resize_bar_width;
+var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
+var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 // TODO - may want to be smarter about these values
 var INITIAL_HEIGHT = 300;

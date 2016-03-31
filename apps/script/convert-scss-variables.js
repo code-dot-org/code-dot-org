@@ -58,13 +58,6 @@ function convertScssToJs(scssPath, jsPath) {
           ' ^'
           ].join('\n'));
     }
-    if (/-/.test(variableName)) {
-      throw new Error([
-        'Variable: ' + variableName + ' has a dash in it.',
-        'JS does not support variables with dashes.',
-        'Recommend you change the scss variable to uses underscore.'
-      ]);
-    }
 
     var isNumber = false;
     if (/px$/.test(variableValue)) {
@@ -78,7 +71,7 @@ function convertScssToJs(scssPath, jsPath) {
       variableValue = '"' + variableValue + '"';
     }
 
-    out.write('  ' + variableName + ': ' + variableValue + ',\n');
+    out.write('  "' + variableName + '": ' + variableValue + ',\n');
   });
   rl.on('close', function () {
     out.write('};\n');

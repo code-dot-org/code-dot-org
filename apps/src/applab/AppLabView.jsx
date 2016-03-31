@@ -12,7 +12,7 @@ var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer.jsx');
 var utils = require('../utils');
 var styleConstants = require('../styleConstants');
 
-var HEADER_HEIGHT = styleConstants.workspace_headers_height;
+var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 
 /**
  * Top-level React wrapper for App Lab.
