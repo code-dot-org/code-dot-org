@@ -1,0 +1,10 @@
+name 'PS U3 Q1-8'
+wrong 'drawStar;'
+right 'drawStar();'
+wrong 'function drawStar(){ <br>&nbsp;&nbsp;&nbsp;&nbsp; for(var i = 0; i &lt 5; i++){ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moveForward(100); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnLeft(36);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>} '
+wrong 'function drawStar;'
+wrong 'function drawStar()'
+markdown <<MARKDOWN
+Which of the following will _**call**_ the function drawStar?
+
+MARKDOWN
