@@ -872,6 +872,7 @@ StudioApp.prototype.inject = function(div, options) {
     rtl: this.isRtl(),
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
+    showUnused: true,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_,
         this.Dialog)
   };

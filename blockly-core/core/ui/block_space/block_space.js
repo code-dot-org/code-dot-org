@@ -398,7 +398,7 @@ Blockly.BlockSpace.prototype.addTopBlock = function(block) {
  * @return {boolean}
  */
 Blockly.BlockSpace.prototype.isTopBlock = function (block) {
-  return this.topBlocks_.includes(block);
+  return this.topBlocks_.indexOf(block) > -1;
 };
 
 /**

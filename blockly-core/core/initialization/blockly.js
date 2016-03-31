@@ -182,6 +182,13 @@ Blockly.selected = null;
 Blockly.readOnly = false;
 
 /**
+ * Whether or not 'unused' blocks (non-top-blocks without a parent)
+ * should be rendered differently.
+ * @const
+ */
+Blockly.showUnused = false;
+
+/**
  * Currently highlighted connection (during a drag).
  * @type {Blockly.Connection}
  * @private
@@ -224,6 +231,7 @@ Blockly.BUMP_DELAY = 250;
  * @const
  */
 Blockly.COLLAPSE_CHARS = 30;
+
 
 /**
  * The main blockSpace (defined by inject.js).
