@@ -91,8 +91,37 @@ GameLabP5.prototype.init = function (options) {
     return this.pmouseX !== this.mouseX || this.pmouseY !== this.mouseY;
   };
 
+  window.p5.prototype.mouseIsOver = function (sprite) {
+    if (!sprite) {
+      return false;
+    }
+
+    if (!sprite.collider) {
+      sprite.setDefaultCollider();
+    }
+
+    var mousePosition;
+    if (this.camera.active) {
+      mousePosition = this.createVector(this.camera.mouseX, this.camera.mouseY);
+    }
+    else {
+      mousePosition = this.createVector(this.mouseX, this.mouseY);
+    }
+
+    if (sprite.collider instanceof this.CircleCollider) {
+      return window.p5.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
+    } else if (sprite.collider instanceof this.AABB) {
+      return mousePosition.x > sprite.collider.left()
+          && mousePosition.y > sprite.collider.top()
+          && mousePosition.x < sprite.collider.right()
+          && mousePosition.y < sprite.collider.bottom();
+    }
+
+    return false;
+  };
+
   window.p5.prototype.mousePressedOver = function (sprite) {
-    return sprite && sprite.mouseIsPressed;
+    return this.mouseIsPressed && this.mouseIsOver(sprite);
   };
 
   var styleEmpty = 'rgba(0,0,0,0)';
@@ -219,6 +248,7 @@ GameLabP5.prototype.init = function (options) {
      * through the bound constructor, which prepends the first arg.
      */
     var s = new this.Sprite(x, y, width, height);
+    var p5Inst = this;
 
     s.setFrame = function (frame) {
       if (s.animation) {
@@ -252,6 +282,14 @@ GameLabP5.prototype.init = function (options) {
 
     s.frameDidChange = function () {
       return s.animation ? s.animation.frameChanged : false;
+    };
+
+    s.setColor = function (colorString) {
+      s.shapeColor = colorString;
+    };
+
+    s.setColorRGB = function () {
+      s.shapeColor = p5Inst.color.apply(p5Inst, arguments);
     };
 
     Object.defineProperty(s, 'frameDelay', {
@@ -318,6 +356,7 @@ GameLabP5.prototype.init = function (options) {
       }
     });
 
+    s.shapeColor = this.color(127, 127, 127);
     s.AABBops = gameLabSprite.AABBops.bind(s, this);
     s.depth = this.allSprites.maxDepth()+1;
     this.allSprites.add(s);
@@ -562,8 +601,9 @@ GameLabP5.prototype.startExecution = function () {
       }.bind(this);
 
       p5obj.setup = function () {
-
         p5obj.createCanvas(400, 400);
+        p5obj.fill(p5obj.color(127, 127, 127));
+
         this.onSetup();
       }.bind(this);
 
