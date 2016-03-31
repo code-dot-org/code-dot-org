@@ -288,7 +288,7 @@ module.exports = function (grunt) {
 
   config.exec = {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
-    buildColorJs: './script/convert-scss-variables.js',
+    convertScssVars: './script/convert-scss-variables.js',
     mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
   };
 
@@ -451,7 +451,7 @@ module.exports = function (grunt) {
     'checkDropletSize',
     'pseudoloc',
     'newer:messages',
-    'exec:buildColorJs',
+    'exec:convertScssVars',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
@@ -485,7 +485,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('mochaTest', [
     'newer:messages',
-    'exec:buildColorJs',
+    'exec:convertScssVars',
     'newer:copy:static',
     'newer:concat',
     'exec:mochaTest'

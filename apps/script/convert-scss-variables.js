@@ -8,14 +8,14 @@ var fs = require('fs');
 var path = require('path');
 var readline = require('readline');
 
-// Regular expression to capture a color definition from SCSS
+// Regular expression to capture a variable definition from SCSS
 var variableRe = /\$([\w-]+)\s*:\s*([^;]+);/;
 var cachedVariables = {};
 
-// In color.scss some color definitions reference previous
-// color definitions.  Since we're reading them in order,
+// In color.scss some variable definitions reference previous
+// variable definitions.  Since we're reading them in order,
 // we can recursively resolve these referential defintions
-// until we land on an actual color.
+// until we land on an actual variable.
 function resolveVariable(value) {
   var originalValue = value;
   while (/^\$/.test(value)) {
@@ -28,9 +28,9 @@ function convertScssToJs(scssPath, jsPath) {
   // Generate <foo>.js while reading <foo>.scss line-by-line
   var out = fs.createWriteStream(jsPath);
   out.write([
-    '// color.js',
+    '// ' + jsPath,
     '// GENERATED FILE: DO NOT MODIFY DIRECTLY',
-    '// This generated file exports all colors defined in ' + scssPath,
+    '// This generated file exports all variables defined in ' + scssPath,
     '// for use in JavaScript. The generator script is convert-scss-variables.js',
     'module.exports = {\n'
   ].join('\n'));
@@ -52,7 +52,7 @@ function convertScssToJs(scssPath, jsPath) {
     var variableValue = resolveVariable(match[2]);
     if (typeof variableValue === 'undefined') {
       throw new Error([
-          'Unable to resolve color ' + variableName,
+          'Unable to resolve variable ' + variableName,
           scssPath + ':' + currentLine,
           line,
           ' ^'
