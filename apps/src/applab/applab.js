@@ -164,6 +164,8 @@ function loadLevel() {
   }
 
   if (Applab.makerlabEnabled) {
+    // Only actually require() this module when Makerlab enabled.
+    // Depends on Makerlab dependencies which are not included in
     var BoardController = require('../makerlab/BoardController');
     Applab.makerlabController = new BoardController();
   }
@@ -1328,7 +1330,7 @@ Applab.execute = function() {
   if (Applab.makerlabController) {
     Applab.makerlabController.ensureBoard(
         function (e) {
-          console.log("Error connecting to board.", e)
+          console.log("Error connecting to board.", e);
         },
         function () {
           Applab.beginVisualizationRun();

@@ -29,7 +29,7 @@ BoardController.prototype.ensureBoard = function (onError, onComplete) {
     }
 
     connect(onError, function (board) {
-      this.prewiredComponents = initializeComponents();
+      this.prewiredComponents = initializeCircuitPlaygroundComponents();
       this.board_ = board;
       onComplete();
     }.bind(this));
@@ -77,7 +77,7 @@ function connectToBoard(portId, onComplete, onConnectError) {
   var io = new PlaygroundIO({port: serialPort});
   var board = new five.Board({io: io, repl: false});
   board.once('ready', function () {
-    onComplete(board)
+    onComplete(board);
   });
   board.once('error', onConnectError);
 }
@@ -105,7 +105,12 @@ function deviceOnPortAppearsUsable(port) {
   return port.comName.match(/usbmodem/);
 }
 
-function initializeComponents() {
+/**
+ * Initializes a set of Johnny-Five components for the currently connected
+ * Circuit Playground board.
+ * @returns {Object.<String, Object>} board components
+ */
+function initializeCircuitPlaygroundComponents() {
   return {
     pixels: Array.from({length: 10}, function (_, index) {
       return new five.Led.RGB({
