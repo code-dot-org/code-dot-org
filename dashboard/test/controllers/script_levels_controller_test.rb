@@ -702,7 +702,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '#codeApp', 0
   end
 
-  test 'includes makerlab script when makerlab level' do
+  test 'includes makerlab javascript dependencies when makerlab level' do
     sign_in @admin
 
     level = create :makerlab
@@ -710,10 +710,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
 
-    assert_select 'script[src=?]', '/assets/js/makerlab.js'
+    assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab')
   end
 
-  test 'excludes makerlab script when applab level' do
+  test 'excludes makerlab javascript dependencies when applab level' do
     sign_in @admin
 
     level = create :applab
@@ -721,7 +721,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
 
-    assert_select 'script[src=?]', '/assets/js/makerlab.js', false
+    assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab'), false
   end
 
   test 'shows expanded teacher panel when student is chosen' do
