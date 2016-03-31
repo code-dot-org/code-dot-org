@@ -11,7 +11,7 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   test 'Enrolling user in a task creates unit enrollments' do
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
 
-    #enrollment.reload
     assert_equal [@course_unit1, @course_unit2], enrollment.plc_unit_assignments.map(&:plc_course_unit)
+    assert_equal [Plc::EnrollmentUnitAssignment::START_BLOCKED], enrollment.plc_unit_assignments.map(&:status).uniq
   end
 end

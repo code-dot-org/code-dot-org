@@ -280,7 +280,6 @@ class ApiControllerTest < ActionController::TestCase
     get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
     assert_response :success
     body = JSON.parse(response.body)
-    puts body
     assert_equal({}, body)
     assert_equal([{
                       application: :dashboard,

@@ -23,7 +23,7 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
 
   validates :plc_enrollment_module_assignment, presence: true
 
-  after_update :check_course_completion
+  after_update :check_unit_completion
 
   include SerializedProperties
   include StiFactory
@@ -32,7 +32,7 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
     update!(status: :completed)
   end
 
-  def check_course_completion
+  def check_unit_completion
     plc_enrollment_module_assignment.plc_enrollment_unit_assignment.check_for_unit_completion
   end
 
