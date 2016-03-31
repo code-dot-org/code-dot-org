@@ -9,7 +9,7 @@ var path = require('path');
 var readline = require('readline');
 
 // Regular expression to capture a color definition from SCSS
-var variableRe = /\$(\w+)\s*:\s*([^;]+);/;
+var variableRe = /\$([\w-]+)\s*:\s*([^;]+);/;
 var cachedVariables = {};
 
 // In color.scss some color definitions reference previous
@@ -30,8 +30,8 @@ function convertScssToJs(scssPath, jsPath) {
   out.write([
     '// color.js',
     '// GENERATED FILE: DO NOT MODIFY DIRECTLY',
-    '// This generated file exports all colors defined in color.scss',
-    '// for use in JavaScript. The generator script is build-color-js.js',
+    '// This generated file exports all colors defined in ' + scssPath,
+    '// for use in JavaScript. The generator script is convert-scss-variables.js',
     'module.exports = {\n'
   ].join('\n'));
 
@@ -58,9 +58,21 @@ function convertScssToJs(scssPath, jsPath) {
           ' ^'
           ].join('\n'));
     }
+    // JS doesn't play as nicely with with dashes, so replace with underscores
+    variableName = variableName.replace(/-/g, '_');
+    var isNumber = false;
+    if (/px$/.test(variableValue)) {
+      variableValue = parseFloat(variableValue);
+      isNumber = true;
+    }
     cachedVariables[variableName] = variableValue;
 
-    out.write('  ' + variableName + ': "' + variableValue + '",\n');
+    // Put quotes around non-numbers
+    if (!isNumber) {
+      variableValue = '"' + variableValue + '"';
+    }
+
+    out.write('  ' + variableName + ': ' + variableValue + ',\n');
   });
   rl.on('close', function () {
     out.write('};\n');
@@ -69,3 +81,4 @@ function convertScssToJs(scssPath, jsPath) {
 }
 
 convertScssToJs(path.resolve('../shared/css/color.scss'), path.resolve('./src/color.js'));
+convertScssToJs(path.resolve('../shared/css/style-constants.scss'), path.resolve('./src/styleConstants.js'));
