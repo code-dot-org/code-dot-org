@@ -35,4 +35,50 @@ end while last_evaluated_key
 puts "tables: #{hash_map.keys.length}"
 puts "channels: #{channel_map.keys.length}"
 puts "rows: #{rows}"
+puts "consumed_capacity: #{consumed_capacity}"
+
+consumed_capacity = 0
+
+def get_item_size(item)
+  item['value'].length + 2 * (item['table_name'].length) + 130
+end
+
+puts "table_id,channel_id,table_rows,table_size,(table_data_length),(table_name_length)"
+
+hash_map.keys.each_with_index do |hash, table_id|
+  last_evaluated_key = nil
+  channel_id, table_name, _ = hash.split(':')
+  table_rows = 0
+  table_size = 0
+  value_size = 0
+  begin
+    response = db.query(
+        table_name: CDO.dynamo_tables_table,
+        exclusive_start_key: last_evaluated_key,
+        return_consumed_capacity: 'TOTAL',
+        key_conditions: {
+            "hash" => {
+                attribute_value_list: [hash],
+                comparison_operator: "EQ",
+            },
+        },
+
+    )
+    consumed_capacity += response.consumed_capacity.capacity_units
+    page = response.first
+
+    page[:items].each do |item|
+      channel_map[item['channel_id']] = 1
+      hash_map[item['hash']] = 1
+      table_rows += 1
+      table_size += get_item_size(item)
+      value_size += item['value'].length
+    end
+
+    last_evaluated_key = page[:last_evaluated_key]
+  end while last_evaluated_key
+
+  puts "#{table_id},#{channel_id},#{table_rows},#{table_size},#{value_size},#{table_name.length}"
+end
+
 puts "consumed_capacity #{consumed_capacity}"
