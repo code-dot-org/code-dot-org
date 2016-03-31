@@ -299,11 +299,11 @@ button.arrow:disabled {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: $workspace-headers-height;
+  top: $workspace_headers_height;
   bottom: 0px;
   font-size: 14px;
   overflow: hidden;
-  min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+  min-height: calc(50% - #{($workspace_headers_height / 2) + 1}) !important;
   direction: ltr;
 }
 
@@ -983,21 +983,21 @@ $aniGifPreviewHeight: 60px;
 }
 
 .workspace-header-height {
-  height: $workspace-headers-height;
+  height: $workspace_headers_height;
 }
 
 .workspace-header {
   text-align: center;
   white-space: nowrap;
   overflow-x: hidden;
-  height: $workspace-headers-height;
+  height: $workspace_headers_height;
   color: white;
   .workspace-header-clickable:hover {
     cursor: pointer;
     color: $yellow;
   }
   span {
-    line-height: $workspace-headers-height;
+    line-height: $workspace_headers_height;
   }
   .fa {
     font-size: 18px;
@@ -1005,7 +1005,7 @@ $aniGifPreviewHeight: 60px;
 }
 
 $workspace-header-button-height: 24px;
-$workspace-header-button-margin: ($workspace-headers-height - $workspace-header-button-height) / 2;
+$workspace-header-button-margin: ($workspace_headers_height - $workspace-header-button-height) / 2;
 .workspace-header-button {
   cursor: pointer;
   float: right;
@@ -1046,7 +1046,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 }
 
 #design-headers {
-  height: $workspace-headers-height;
+  height: $workspace_headers_height;
   background-color: $purple;
   overflow-y: hidden;
   -webkit-user-select: none;
@@ -1064,7 +1064,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 }
 
 #headers, .purple-header {
-  height: $workspace-headers-height;
+  height: $workspace_headers_height;
   background-color: $purple;
   overflow-y: hidden;
   -webkit-user-select: none;
@@ -1076,7 +1076,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     position: absolute;
     top: 0;
     left: 8px;
-    line-height: $workspace-headers-height;
+    line-height: $workspace_headers_height;
     color: $lighter_purple;
   }
 

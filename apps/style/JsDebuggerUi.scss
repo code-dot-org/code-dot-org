@@ -5,8 +5,8 @@
 
 #debugResizeBar {
   width: 100%;
-  height: $resize-bar-width;
-  line-height: $resize-bar-width;
+  height: $resize_bar_width;
+  line-height: $resize_bar_width;
   color: $lighter_gray;
   font-size: 24px;
   text-align: center;
@@ -57,7 +57,7 @@ $debug-area-initial-height: 120px;
   height: $debug-area-initial-height;
   left: 0;
   right: 0;
-  max-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+  max-height: calc(50% - #{($workspace_headers_height / 2) + 1}) !important;
 }
 
 // Make sure the workspace default lines up with the debug area default
@@ -67,15 +67,15 @@ $debug-area-initial-height: 120px;
 
 #debug-area-header {
   position: absolute;
-  top: $resize-bar-width;
-  height: $workspace-headers-height;
+  top: $resize_bar_width;
+  height: $workspace_headers_height;
   left: 0;
   right: 0;
   background-color: $lighter_purple;
   text-align: center;
 
   & > span {
-    line-height: $workspace-headers-height;
+    line-height: $workspace_headers_height;
   }
 
   & > span, .workspace-header {
@@ -104,7 +104,7 @@ $debug-area-initial-height: 120px;
     top: 0;
     left: 8px;
     margin: 0;
-    line-height: $workspace-headers-height;
+    line-height: $workspace_headers_height;
     font-size: 18px;
 
     &:hover {
@@ -141,7 +141,7 @@ $debug-header-border-width: 1px;
   background-color: $white;
   border: 1px solid #ddd;
   position: absolute;
-  top: $resize-bar-width + $workspace-headers-height;
+  top: $resize_bar_width + $workspace_headers_height;
   bottom: 0;
 }
 

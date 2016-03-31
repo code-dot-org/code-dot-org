@@ -58,8 +58,14 @@ function convertScssToJs(scssPath, jsPath) {
           ' ^'
           ].join('\n'));
     }
-    // JS doesn't play as nicely with with dashes, so replace with underscores
-    variableName = variableName.replace(/-/g, '_');
+    if (/-/.test(variableName)) {
+      throw new Error([
+        'Variable: ' + variableName + ' has a dash in it.',
+        'JS does not support variables with dashes.',
+        'Recommend you change the scss variable to uses underscore.'
+      ]);
+    }
+
     var isNumber = false;
     if (/px$/.test(variableValue)) {
       variableValue = parseFloat(variableValue);
