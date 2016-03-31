@@ -74,13 +74,7 @@ namespace :build do
   end
 
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
-  task :dashboard do
-    make_apps_symlink
-    make_code_studio_symlink
-    # Make sure we have an up to date package for apps and code studio
-    ensure_apps_package
-    ensure_code_studio_package
-
+  task dashboard: :package do
     Dir.chdir(dashboard_dir) do
       HipChat.log 'Stopping <b>dashboard</b>...'
       RakeUtils.stop_service CDO.dashboard_unicorn_name unless rack_env?(:development)

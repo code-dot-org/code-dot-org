@@ -3,7 +3,7 @@ namespace :install do
   # Create a symlink in the public directory that points at the appropriate apps
   # code (either the static apps or the built version, depending on CDO.use_my_apps).
   task :apps_symlink do
-    make_apps_symlink
+    make_symlink('apps')
   end
 
   desc 'Install Git hooks.'
@@ -29,8 +29,8 @@ namespace :install do
 
   task :code_studio do
     if local_environment?
-      make_code_studio_symlink
-      ensure_code_studio_package
+      make_symlink('code_studio')
+      update_package('code_studio')
       install_npm
     end
   end
