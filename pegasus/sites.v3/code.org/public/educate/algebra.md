@@ -45,7 +45,7 @@ Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](https://
       <td>Text-based<br/><img src="algebra/img/text.png" style="width: auto; max-width: 250px"/></td>
     </tr>
     <tr>
-      <td><strong>Instructional Scaffolding**</td>
+      <td><strong>Instructional Scaffolding</td>
       <td>Puzzle based scaffolding for all programming lessons combined with pseudocode-based pencil and paper activities.</td>
       <td>Pencil and paper workbook activities using the same text language students will use online.</td>
     </tr>
