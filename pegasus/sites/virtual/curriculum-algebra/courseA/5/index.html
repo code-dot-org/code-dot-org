@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this activity, students will learn to define variables that can be used to reference values and expressions. Once defined, their variables can be used repeatedly throughout a program as substitutes for the original values or expressions.">
+    <title>Defining Variables and Substitution</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+
+    
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+
+    
+
+    
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.8.3.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+    
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body">
+
+
+    <div id="admin_edit">
+    
+    <button type="button" class="togglesay btn btn-success">Don't tell me what to say!</button>
+    <button type="button" class="togglesay btn btn-danger" style="display:none;">Help, what should I say?</button>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><span class="h2">Unit</span><span class="h1">1</span></div>
+
+    <div class="lessons">
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/curriculum/algebra/courseA/1" data-pdf-link="#unit1lesson1">
+        1
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/curriculum/algebra/courseA/2" data-pdf-link="#unit1lesson2">
+        2
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/curriculum/algebra/courseA/3" data-pdf-link="#unit1lesson3">
+        3
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/curriculum/algebra/courseA/4" data-pdf-link="#unit1lesson4">
+        4
+    </a>
+    </div>
+    
+        
+            <div class="lesson current">
+        
+    <a href="/curriculum/algebra/courseA/5" data-pdf-link="#unit1lesson5">
+        5
+    </a>
+    </div>
+    
+        
+            <div class="lesson unfinished">
+        
+    <a href="/curriculum/algebra/courseA/6" data-pdf-link="#unit1lesson6">
+        6
+    </a>
+    </div>
+    
+        
+            <div class="lesson unfinished">
+        
+    <a href="/curriculum/algebra/courseA/7" data-pdf-link="#unit1lesson7">
+        7
+    </a>
+    </div>
+    
+        
+            <div class="lesson unfinished">
+        
+    <a href="/curriculum/algebra/courseA/8" data-pdf-link="#unit1lesson8">
+        8
+    </a>
+    </div>
+    
+        
+            <div class="lesson unfinished">
+        
+    <a href="/curriculum/algebra/courseA/9" data-pdf-link="#unit1lesson9">
+        9
+    </a>
+    </div>
+    
+</div>
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+
+    <div class="together" id="unit1lesson5">
+        
+            <h1>Lesson 5: Defining Variables and Substitution</h1>
+        
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this activity, students will learn to define variables that can be used to reference values and expressions. Once defined, their variables can be used repeatedly throughout a program as substitutes for the original values or expressions.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>As stated earlier, the programming paradigm that students are learning in this course is called <a href="https://en.wikipedia.org/wiki/Functional_programming" target="_blank">functional programming</a>, and it varies in several ways from programming paradigms that students may have seen elsewhere. One of the core tenants of functional programing is the concept of <a href="https://en.wikipedia.org/wiki/Immutable_object" target="_blank">immutability</a>. Immutable objects may not change state once they have been created, which allows variables to functional as we would expect them to in Algebra.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocdefining-variables-and-substitution">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Defining Variables and Substitution</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+                <h2>Anchor Standard</h2>
+                
+                    
+                    
+                        <h3>Common Core Math Standards</h3>
+                        <ul>
+                            
+                                <li><strong>6.EE.4</strong> - Identify when two expressions are equivalent (i.e., when the two expressions name the same number regardless of which value is substituted into them). For example, the expressions y + y + y and 3y are equivalent because they name the same number regardless of which number y stands for.</li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Define variables by giving them a name and assigning them a value or expression.</li>
+                    
+                        <li>Use variables within Evaluation Blocks.</li>
+                    
+                        <li>Describe a situation where using variables as substitutions for values or expressions is more efficient.</li>
+                    
+                </ul>
+            
+
+            
+
+            
+
+            
+                <h2>Vocabulary</h2>
+                <ul>
+                    
+                        <li><strong>Define</strong> - Associate a descriptive name with a value.</li>
+                    
+                        <li><strong>Variable</strong> - A reference to a value or expression that can be used repeatedly throughout a program.</li>
+                    
+                </ul>
+            
+
+        </div>
+    </div>
+
+    <div id="defining-variables-and-substitutioncontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <h3 id="introduction">Introduction</h3>
+<p><img alt="red triangle" src="https://code.org/curriculum/docs/algebra/tri50SolidRed.png" style="float: right; max-width: 50%;">
+Suppose we want to make an image with fifty identical, solid red triangles. To do so you’d have to create this Evaluation Block fifty times!</p>
+<p>Even worse, if you decided you wanted fifty blue triangles instead, you’d have to go through and change each and every block. There must be a better way!</p>
+<p>We can store that red triangle Evaluation Block in a Variable, let’s call it “red-triangle.” That name “red-triangle” now becomes a shortcut for the blocks inside the variable, and we can use that shortcut over and over in our program. If we decide that we want that red triangle to be 100 pixels instead of 50, we only need to change it in the variable definition.</p>
+<div class="admonition tip">
+<p class="admonition-title">Lesson Tip</p>
+<p>If students have used variables in other programming languages, it’s essential to note that in functional programming, as in math, variables are considered <strong>immutable</strong> - meaning the value can’t be changed during the execution of a program. Think about it this way: saying <code>x = 50</code>, and then <code>x = x + 1</code> might make sense in Javascript, but it’s impossible in Algebra.</p>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Defining Variables and Substitution</h2>
+                    <h3 id="online-puzzles">Online Puzzles</h3>
+<p>In this stage you’ll use variables to reference a variety of values and expressions. Head to <a href="http://studio.code.org/s/algebra/stage/6/puzzle/1" target="_blank">CS in Algebra stage 6</a> in Code Studio to get started programming.</p>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>Common Core Math Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CED</strong> - Creating Equations</summary>
+                    <ul>
+                        
+                            <li><strong>A.CED.1</strong> - Create equations and inequalities in one variable and use them to solve problems. Include equations arising from linear and quadratic functions, and simple rational and exponential functions.</li>
+                        
+                            <li><strong>A.CED.2</strong> - Create equations in two or more variables to represent relationships between quantities; graph equations on coordinate axes with labels and scales.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>EE</strong> - Expressions And Equations</summary>
+                    <ul>
+                        
+                            <li><strong>6.EE.4</strong> - Identify when two expressions are equivalent (i.e., when the two expressions name the same number regardless of which value is substituted into them). For example, the expressions y + y + y and 3y are equivalent because they name the same number regardless of which number y stands for.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>IF</strong> - Interpreting Functions</summary>
+                    <ul>
+                        
+                            <li><strong>F.IF.1</strong> - Understand that a function from one set (called the domain) to another set (called the range) assigns to each element of the domain exactly one element of the range. If f is a function and x is an element of its domain, then f(x) denotes the output of f corresponding to the input x. The graph of f is the graph of the equation y = f(x).</li>
+                        
+                            <li><strong>F.IF.2</strong> - Use function notation, evaluate functions for inputs in their domains, and interpret statements that use function notation in terms of a context.</li>
+                        
+                            <li><strong>F.IF.3</strong> - Recognize that sequences are functions, sometimes defined recursively, whose domain is a subset of the integers. For example, the Fibonacci sequence is defined recursively by f(0) = f(1) = 1, f(n+1) = f(n) + f(n-1) for n ≥ 1.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>LE</strong> - Linear, Quadratic, And Exponential Models★</summary>
+                    <ul>
+                        
+                            <li><strong>F.LE.1</strong> - Distinguish between situations that can be modeled with linear functions and with exponential functions.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>MP</strong> - Math Practices</summary>
+                    <ul>
+                        
+                            <li><strong>MP.1</strong> - Mathematically proficient students start by explaining to themselves the meaning of a problem and looking for entry points to its solution. They analyze givens, constraints, relationships, and goals. They make conjectures about the form and meaning of the solution and plan a solution pathway rather than simply jumping into a solution attempt. They consider analogous problems, and try special cases and simpler forms of the original problem in order to gain insight into its solution. They monitor and evaluate their progress and change course if necessary. Older students might, depending on the context of the problem, transform algebraic expressions or change the viewing window on their graphing calculator to get the information they need. Mathematically proficient students can explain correspondences between equations, verbal descriptions, tables, and graphs or draw diagrams of important features and relationships, graph data, and search for regularity or trends. Younger students might rely on using concrete objects or pictures to help conceptualize and solve a problem. Mathematically proficient students check their answers to problems using a different method, and they continually ask themselves, &quot;Does this make sense?&quot; They can understand the approaches of others to solving complex problems and identify correspondences between different approaches.</li>
+                        
+                            <li><strong>MP.2</strong> - Mathematically proficient students make sense of quantities and their relationships in problem situations. They bring two complementary abilities to bear on problems involving quantitative relationships: the ability to decontextualize—to abstract a given situation and represent it symbolically and manipulate the representing symbols as if they have a life of their own, without necessarily attending to their referents—and the ability to contextualize, to pause as needed during the manipulation process in order to probe into the referents for the symbols involved. Quantitative reasoning entails habits of creating a coherent representation of the problem at hand; considering the units involved; attending to the meaning of quantities, not just how to compute them; and knowing and flexibly using different properties of operations and objects.</li>
+                        
+                            <li><strong>MP.3</strong> - Mathematically proficient students understand and use stated assumptions, definitions, and previously established results in constructing arguments. They make conjectures and build a logical progression of statements to explore the truth of their conjectures. They are able to analyze situations by breaking them into cases, and can recognize and use counterexamples. They justify their conclusions, communicate them to others, and respond to the arguments of others. They reason inductively about data, making plausible arguments that take into account the context from which the data arose. Mathematically proficient students are also able to compare the effectiveness of two plausible arguments, distinguish correct logic or reasoning from that which is flawed, and—if there is a flaw in an argument—explain what it is. Elementary students can construct arguments using concrete referents such as objects, drawings, diagrams, and actions. Such arguments can make sense and be correct, even though they are not generalized or made formal until later grades. Later, students learn to determine domains to which an argument applies. Students at all grades can listen or read the arguments of others, decide whether they make sense, and ask useful questions to clarify or improve the arguments.</li>
+                        
+                            <li><strong>MP.4</strong> - Mathematically proficient students can apply the mathematics they know to solve problems arising in everyday life, society, and the workplace. In early grades, this might be as simple as writing an addition equation to describe a situation. In middle grades, a student might apply proportional reasoning to plan a school event or analyze a problem in the community. By high school, a student might use geometry to solve a design problem or use a function to describe how one quantity of interest depends on another. Mathematically proficient students who can apply what they know are comfortable making assumptions and approximations to simplify a complicated situation, realizing that these may need revision later. They are able to identify important quantities in a practical situation and map their relationships using such tools as diagrams, two-way tables, graphs, flowcharts and formulas. They can analyze those relationships mathematically to draw conclusions. They routinely interpret their mathematical results in the context of the situation and reflect on whether the results make sense, possibly improving the model if it has not served its purpose.</li>
+                        
+                            <li><strong>MP.5</strong> - Mathematically proficient students consider the available tools when solving a mathematical problem. These tools might include pencil and paper, concrete models, a ruler, a protractor, a calculator, a spreadsheet, a computer algebra system, a statistical package, or dynamic geometry software. Proficient students are sufficiently familiar with tools appropriate for their grade or course to make sound decisions about when each of these tools might be helpful, recognizing both the insight to be gained and their limitations. For example, mathematically proficient high school students analyze graphs of functions and solutions generated using a graphing calculator. They detect possible errors by strategically using estimation and other mathematical knowledge. When making mathematical models, they know that technology can enable them to visualize the results of varying assumptions, explore consequences, and compare predictions with data. Mathematically proficient students at various grade levels are able to identify relevant external mathematical resources, such as digital content located on a website, and use them to pose or solve problems. They are able to use technological tools to explore and deepen their understanding of concepts.</li>
+                        
+                            <li><strong>MP.6</strong> - Mathematically proficient students try to communicate precisely to others. They try to use clear definitions in discussion with others and in their own reasoning. They state the meaning of the symbols they choose, including using the equal sign consistently and appropriately. They are careful about specifying units of measure, and labeling axes to clarify the correspondence with quantities in a problem. They calculate accurately and efficiently, express numerical answers with a degree of precision appropriate for the problem context. In the elementary grades, students give carefully formulated explanations to each other. By the time they reach high school they have learned to examine claims and make explicit use of definitions.</li>
+                        
+                            <li><strong>MP.7</strong> - Mathematically proficient students look closely to discern a pattern or structure. Young students, for example, might notice that three and seven more is the same amount as seven and three more, or they may sort a collection of shapes according to how many sides the shapes have. Later, students will see 7 × 8 equals the well remembered 7 × 5 + 7 × 3, in preparation for learning about the distributive property. In the expression x2 + 9x + 14, older students can see the 14 as 2 × 7 and the 9 as 2 + 7. They recognize the significance of an existing line in a geometric figure and can use the strategy of drawing an auxiliary line for solving problems. They also can step back for an overview and shift perspective. They can see complicated things, such as some algebraic expressions, as single objects or as being composed of several objects. For example, they can see 5 - 3(x - y)2 as 5 minus a positive number times a square and use that to realize that its value cannot be more than 5 for any real numbers x and y.</li>
+                        
+                            <li><strong>MP.8</strong> - Mathematically proficient students notice if calculations are repeated, and look both for general methods and for shortcuts. Upper elementary students might notice when dividing 25 by 11 that they are repeating the same calculations over and over again, and conclude they have a repeating decimal. By paying attention to the calculation of slope as they repeatedly check whether points are on the line through (1, 2) with slope 3, middle school students might abstract the equation (y - 2)/(x - 1) = 3. Noticing the regularity in the way terms cancel when expanding (x - 1)(x + 1), (x - 1)(x2 + x + 1), and (x - 1)(x3 + x2 + x + 1) might lead them to the general formula for the sum of a geometric series. As they work to solve a problem, mathematically proficient students maintain oversight of the process, while attending to the details. They continually evaluate the reasonableness of their intermediate results.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>OA</strong> - Operations And Algebraic Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>5.OA.1</strong> - Use parentheses, brackets, or braces in numerical expressions, and evaluate expressions with these symbols.</li>
+                        
+                            <li><strong>5.OA.2</strong> - Write simple expressions that record calculations with numbers, and interpret numerical expressions without evaluating them. For example, express the calculation “add 8 and 7, then multiply by 2” as 2 × (8 + 7). Recognize that 3 × (18932 + 921) is three times as large as 18932 + 921, without having to calculate the indicated sum or product.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>Q</strong> - Quantities</summary>
+                    <ul>
+                        
+                            <li><strong>N.Q.1</strong> - Use units as a way to understand problems and to guide the solution of multi-step problems; choose and interpret units consistently in formulas; choose and interpret the scale and the origin in graphs and data displays.</li>
+                        
+                            <li><strong>N.Q.2</strong> - Define appropriate quantities for the purpose of descriptive modeling.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>SSE</strong> - Seeing Structure In Expressions</summary>
+                    <ul>
+                        
+                            <li><strong>A.SSE.1</strong> - Interpret expressions that represent a quantity in terms of its context.</li>
+                        
+                            <li><strong>A.SSE.2</strong> - Use the structure of an expression to identify ways to rewrite it. For example, see x4 – y4 as (x2)2 – (y2)2, thus recognizing it as a difference of squares that can be factored as (x2 – y2)(x2 + y2).</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+
+    <script type="text/javascript">
+        $('#tocdefining-variables-and-substitution').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#defining-variables-and-substitutioncontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'defining-variables-and-substitution', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+        $(function(){
+            $('.togglesay').live('click', function() {
+                $('.say').slideToggle();
+                $('.togglesay').toggle();
+            });
+        });
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            //$('<input type="checkbox" class="todo" name="' + (count++) + '"/>').prependTo(".prep ul li");
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+            // read the current/previous setting
+            $("input.todo").each(function() {
+                var mycookie = $.cookie($(this).attr('name'));
+                if (mycookie && mycookie == "true") {
+                    $(this).prop('checked', mycookie);
+                }
+            });
+            $("input.todo").change(function() {
+                $.cookie($(this).attr("name"), $(this).prop('checked'), {
+                    path: '/',
+                    expires: 365
+                });
+            });
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+    <!--<script type="text/javascript">
+        jQuery(function ($) {
+            $('body').annotator();
+        });
+    </script>-->
+
+    <!--<script type="text/javascript">
+        $(function() {
+            // Add conditional classname based on support
+            $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+            // Emulate <details> where necessary and enable open/close event handlers
+            $('details').details();
+            // Bind some example event handlers
+            $('details').on({
+                'open.details': function() {
+                    console.log('opened');
+                },
+                'close.details': function() {
+                    console.log('closed');
+                }
+            });
+        });
+    </script>-->
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+<!--<script async defer src="https://factlink.com/lib/dist/factlink_loader.min.js"></script>-->
+</body>
+</html>
