@@ -10,7 +10,7 @@ var styles = {
     top: 0,
     left: 8,
     margin: 0,
-    lineHeight: styleConstants.workspace_headers_height + 'px',
+    lineHeight: styleConstants['workspace-headers-height'] + 'px',
     fontSize: 18,
     // get hover behavior from CollapserIcon_showHideButton
   },

@@ -19,11 +19,11 @@ div#visualization.with_padding {
 }
 
 div#visualizationResizeBar {
-  top: $workspace_headers_height;
+  top: $workspace-headers-height;
 }
 
 #playSpaceHeader > div {
-  height: $workspace_headers_height;
+  height: $workspace-headers-height;
 }
 
 /* Shrink the visualization area on small displays. */
@@ -325,7 +325,7 @@ div#visualizationResizeBar {
 
 #visualizationResizeBar {
   margin-left: 2px;
-  width: $resize_bar_width;
+  width: $resize-bar-width;
 }
 
 #runButton, #resetButton {
