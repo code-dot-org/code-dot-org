@@ -23,11 +23,6 @@ class ProjectsController < ApplicationController
       admin_required: true,
       login_required: true
     },
-    makerlab: {
-      name: 'New Maker Lab Project',
-      admin_required: true,
-      login_required: true
-    },
     algebra_game: {
       name: 'New Algebra Project'
     },
