@@ -62,6 +62,7 @@ exec >> >(tee -i ${LOG})
 exec 2>&1
 
 CHEF_CLIENT=/opt/chef/bin/chef-client
+CHEF_REPO_PATH=/var/chef
 # Ensure correct version of Chef is installed.
 if [ "$(${CHEF_CLIENT} -v)" != "Chef: ${CHEF_VERSION}" ]; then
   curl -L https://omnitruck.chef.io/install.sh | bash -s -- -v ${CHEF_VERSION}
@@ -73,11 +74,12 @@ ${CHEF_CLIENT} -v
 mkdir -p /etc/chef
 CLIENT_RB=/etc/chef/client.rb
 cat <<RUBY > ${CLIENT_RB}
-log_level :info
-ssl_verify_mode :verify_peer
 node_name '${NODE_NAME}'
 environment '${ENVIRONMENT}'
-unless '${LOCAL_MODE}' == '1'
+chef_repo_path '${CHEF_REPO_PATH}'
+if '${LOCAL_MODE}' == '1'
+  local_mode true
+else
   validation_client_name   'code-dot-org-validator'
   chef_server_url          'https://api.chef.io/organizations/code-dot-org'
 end
@@ -106,13 +108,13 @@ if [ -f /etc/chef/client.pem ] ; then
 fi
 
 if [ "${LOCAL_MODE}" = "1" ]; then
-  mkdir -p /opt/chef-zero/{cookbooks,environments}
+  mkdir -p ${CHEF_REPO_PATH}/{cookbooks,environments}
   # Install branch-specific Chef cookbooks from s3.
   REPO_COOKBOOK_URL=s3://${S3_BUCKET}/chef/${BRANCH}.tar.gz
-  aws s3 cp ${REPO_COOKBOOK_URL} - | tar xz -C /opt/chef-zero
+  aws s3 cp ${REPO_COOKBOOK_URL} - | tar xz -C ${CHEF_REPO_PATH}
 
   # Boilerplate `adhoc` environment for local Chef.
-cat <<JSON > /opt/chef-zero/environments/adhoc.json
+cat <<JSON > ${CHEF_REPO_PATH}/environments/adhoc.json
 {
   "name": "adhoc",
   "description": "Adhoc Chef environment",
@@ -123,12 +125,11 @@ cat <<JSON > /opt/chef-zero/environments/adhoc.json
   "override_attributes": {}
 }
 JSON
-  # Run chef-client in local mode.
-  cd /opt/chef-zero
-  ${CHEF_CLIENT} -z -c ${CLIENT_RB} -j ${FIRST_BOOT}
+
 else
   # Copy validation pem.
   aws s3 cp s3://${S3_BUCKET}/chef/validation.pem /etc/chef/validation.pem
-  # Run chef-client.
-  ${CHEF_CLIENT} -c ${CLIENT_RB} -j ${FIRST_BOOT}
 fi
+
+# Run chef-client.
+${CHEF_CLIENT} -c ${CLIENT_RB} -j ${FIRST_BOOT}

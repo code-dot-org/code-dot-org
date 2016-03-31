@@ -35,7 +35,8 @@
     },
     "johnny-five": "global:JohnnyFive",
     "playground-io": "global:PlaygroundIO",
-    "chrome-serialport": "global:ChromeSerialport"
+    "chrome-serialport": "global:ChromeSerialport",
+    "marked": "global:marked"
   },
   "devDependencies": {
     "@cdo/apps": "file:src",

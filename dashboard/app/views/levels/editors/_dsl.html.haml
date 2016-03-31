@@ -1,5 +1,3 @@
-- content_for(:head) do
-  = javascript_include_tag 'js/levelbuilder_dsl'
 :scss
   $cyan: #0094ca;
   $light_cyan: #59b9dc;
@@ -28,6 +26,9 @@
   = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
 
 - if [ContractMatch, Match, Multi, TextMatch, External].include? @level.class
+
+  - content_for(:head) do
+    = javascript_include_tag 'js/levelbuilder_markdown'
 
   .markdown
     %p Edit Markdown:

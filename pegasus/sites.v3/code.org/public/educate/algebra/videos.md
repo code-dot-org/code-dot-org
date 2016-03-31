@@ -11,9 +11,6 @@ These videos were created as part of the CS in Algebra professional development 
 
 The videos introduce teachers to the curriculum materials and tools,  data modeling and coordinates planes, multiple representations of functions, using design recipes to solve problems, and more concepts vital in game design.
 
-
-## <a name="videos"/>Videos
-
 <h2><a name="videos"></a>Videos</h2>
 
 <div style="float:left; padding:10px; width:50%">

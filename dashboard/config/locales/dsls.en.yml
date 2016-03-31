@@ -2739,6 +2739,12 @@ en:
         Line 4: Line 4
         Line 5: Line 5
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers
+      Choose 2 Test tight:
+        Line 2: Line 2
+        Line 3: Line 3
+        Line 4: Line 4
+        Line 5: Line 5
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers
       Circle to code:
         "(+ (* (- 8 6) 4) 5) ": "(+ (* (- 8 6) 4) 5) "
         "(+ 5 (* (- 6 8) 4))": "(+ 5 (* (- 6 8) 4))"
@@ -3022,6 +3028,22 @@ en:
         g(y) = y + 3: g(y) = y + 3
         y: y
       Multi Horizontal Scroll Test:
+        12 bits: 12 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        7 bits: 7 bits
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        ? |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
+        : |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
+      Multi Horizontal Scroll Test tight:
         12 bits: 12 bits
         3 bits: 3 bits
         4 bits: 4 bits
