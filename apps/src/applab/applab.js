@@ -4,8 +4,7 @@
  * Copyright 2014-2015 Code.org
  *
  */
-/* global Dialog */
-/* global dashboard */
+/* global Dialog, dashboard */
 
 'use strict';
 var studioApp = require('../StudioApp').singleton;
@@ -51,6 +50,7 @@ var rootReducer = require('./reducers').rootReducer;
 var actions = require('./actions');
 var setInitialLevelProps = actions.setInitialLevelProps;
 var changeInterfaceMode = actions.changeInterfaceMode;
+var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
@@ -305,7 +305,7 @@ function adjustAppSizeStyles(container) {
               childRules[k].style.cssText = "max-width: " +
                   (Applab.appWidth * scale + 2) + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#codeWorkspace") {
+            } else if (childRules[k].selectorText === "div.workspace-right") {
               // set the left for the codeWorkspace
               childRules[k].style.cssText = "left: " +
                   Applab.appWidth * scale + "px;";
@@ -316,7 +316,7 @@ function adjustAppSizeStyles(container) {
                   Applab.appWidth * scale + "px; line-height: " +
               Applab.footerlessAppHeight * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
+            } else if (childRules[k].selectorText === "html[dir='rtl'] div.workspace-right") {
               // set the right for the codeWorkspace (RTL mode)
               childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
@@ -764,6 +764,11 @@ Applab.init = function(config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
 
+  // Provide a way for us to have top pane instructions disabled by default, but
+  // able to turn them on.
+  // TODO - should they also be on by default for admin?
+  config.showInstructionsInTopPane = !!localStorage.getItem('showInstructionsInTopPane');
+
   // Applab.initMinimal();
 
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
@@ -894,10 +899,15 @@ Applab.init = function(config) {
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
-    isViewDataButtonHidden: !!config.level.hideViewDataButton
+    isViewDataButtonHidden: !!config.level.hideViewDataButton,
+    instructionsMarkdown: config.level.markdownInstructions,
+    instructionsInTopPane: config.showInstructionsInTopPane,
+    puzzleNumber: config.level.puzzle_number,
+    stageTotal: config.level.stage_total,
   }));
 
-  Applab.reduxStore.dispatch(changeInterfaceMode(Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+  Applab.reduxStore.dispatch(changeInterfaceMode(
+    Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
   Applab.reactInitialProps_ = {
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,

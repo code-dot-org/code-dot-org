@@ -172,6 +172,7 @@ class RedisTable
   def self.table_from_row_key(key)
     key.split('_')[0]
   end
+
   def table_from_row_key(key)
     self.class.table_from_row_key(key)
   end
@@ -182,6 +183,7 @@ class RedisTable
   def self.id_from_row_key(key)
     key.split('_')[1].to_i
   end
+
   def id_from_row_key(key)
     self.class.id_from_row_key(key)
   end
@@ -210,6 +212,7 @@ class RedisTable
   def self.make_row(value)
     value.nil? ? nil : JSON.parse(value)
   end
+
   def make_row(value)
     self.class.make_row(value)
   end
@@ -238,6 +241,7 @@ class RedisTable
   def self.internal_key?(k)
     k.end_with?(ROW_ID_SUFFIX)
   end
+
   def internal_key?(k)
     self.class.internal_key?(k)
   end

@@ -1,0 +1,52 @@
+---
+title: The Hour of Code
+tagline: ''
+theme: responsive
+responsivePadMobile: yes
+social:
+  'og:title' : 'Every child deserves opportunity'
+  'og:description' : "For every student and classroom: learn how fun coding is in just one hour during the Hour of Code"
+  'og:image' : "http://<%=request.host%>/images/code-video-thumbnail.jpg"
+  "og:image:width": 1705
+  "og:image:height": 949
+  "og:url": "http://tr.code.org"
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+
+#top{:style=>"margin-top: 40px;"}
+  #video.col-63.desktop-pad-right
+    = view :hocvideo, id:"r990CWYtx_o"
+
+  #start.col-36{:style=>'text-align:center;'}
+    %h2{:style=>"font-size: 40px; margin: 0;"}
+      Try an
+    %h1{:style=>"font-size: 50px; margin: 0;"}
+      Hour of Code
+    %h2{:style=>"font-size: 35px; line-height: 30px; margin-top: 0;"}<
+      =format_integer_with_commas(fetch_hoc_metrics['started'].to_i).to_s 
+      served
+    %h2
+      Anybody can learn.
+    %a{:href=>'/learn', :style=>"text-decoration: none;"}
+      %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;margin-top: 10px;"}
+        Start
+    %h4
+      Beyond an Hour of Code
+    %br
+
+%div{:style=>'clear:both'}
+
+%br The Hour of Code has received overwhelming feedback from students, teachers, and parents.
+%ul
+  %li "I saw fireworks go off over students' heads, not lightbulbs." - Teacher
+  %li "Best educational product I’ve ever come across" - Parent/entrepreneur
+  %li "I have NEVER, EVER seen my students so excited about learning" - Teacher
+  %li "One of the two best things that happened in 2013" - 2nd grader
+  %li "And then I knew that this was like a once in a lifetime chance to learn this" - 5th grader
+  %li "Now i’m trying to tell other schools to teach code because it really was an amazing experience”"- 5th grader
+
+.desktop-feature
+  %h2 Leaders and trendsetters agree more students should learn computer science

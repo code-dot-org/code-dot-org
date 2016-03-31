@@ -4,11 +4,12 @@ layout: none
 template: none
 theme: none
 ---
+-require 'state_abbr'
 -state = File.basename(request.path_info)
 -raise Sinatra::NotFound unless state.downcase == state
 -unless state == 'thanks'
   -state.upcase!
-  -raise Sinatra::NotFound unless us_state_code?(state)
+  -raise Sinatra::NotFound unless us_state_with_dc_abbr?(state)
 
 #promote-page
   -if state.nil_or_empty?

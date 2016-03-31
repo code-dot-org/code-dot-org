@@ -76,7 +76,13 @@ Breakfast and lunch will be served.
 
 **Location**
 
-More Details Coming Soon!
+[Gwinnett County Public Schools<br/>
+Building 200<br/>
+Brookwood Room<br/>
+437 Old Peachtree Road<br/>
+Suwanee, GA 30024](https://goo.gl/maps/8WFmGDWmSg72)
+
+Parking is free and available in front of the building.
 
 **What do I bring to my Phase 4 Workshop?**
 

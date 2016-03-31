@@ -229,5 +229,6 @@
   "watchVideo": "Bekijk de video",
   "when": "wanneer",
   "whenRun": "als gestart",
-  "workspaceHeaderShort": "Werkplaats: "
+  "workspaceHeaderShort": "Werkplaats: ",
+  "showBlock": "Get a block"
 }

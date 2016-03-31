@@ -229,5 +229,6 @@
   "watchVideo": "شاهد الفيديو",
   "when": "عندما",
   "whenRun": "عند التشغيل",
-  "workspaceHeaderShort": "مساحة العمل: "
+  "workspaceHeaderShort": "مساحة العمل: ",
+  "showBlock": "Get a block"
 }

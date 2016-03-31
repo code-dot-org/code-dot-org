@@ -94,6 +94,16 @@ module.exports = function (app) {
         blocks: require('@cdo/apps/applab/blocks')
       };
     };
+  } else if (app == 'gamelab') {
+    appCache[app] = function() {
+      return {
+        skins: require('@cdo/apps/gamelab/skins'),
+        levels: {
+          levels: require('@cdo/apps/gamelab/levels')
+        },
+        blocks: require('@cdo/apps/gamelab/blocks')
+      };
+    };
   }
   if(appCache[app]) {
     return appCache[app];

@@ -1,0 +1,21 @@
+{
+  "base":"i18n.code.org",
+  "google_analytics_id":"UA-37745279-1",
+  "us_site": "Code.org (US Site)",
+  "about_nav": {
+    "About Us": "/about",
+    "Resources": "/about/resources",
+    "Partners": "/about/partners"
+  },
+  "header_links": {
+    "HOME": "/",
+    "TUTORIALS": "/learn",
+    "RESOURCES": "/about/resources"
+  },
+  "footer_links": {
+    "Tutorials": "/learn",
+    "About": "/about",
+    "Resources": "/about/resources",
+    "Partners": "/about/partners"
+  }
+}

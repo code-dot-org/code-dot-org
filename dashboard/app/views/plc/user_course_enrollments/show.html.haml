@@ -5,7 +5,8 @@
 
 - @user_course_enrollment.plc_unit_assignments.each do |enrollment_user_assignment|
   .outlined_section.module_progress_grouping
-    %h4 #{enrollment_user_assignment.plc_course_unit.unit_name}
+    %h4
+      = link_to enrollment_user_assignment.plc_course_unit.unit_name, enrollment_user_assignment
     - if enrollment_user_assignment.plc_module_assignments.length == 0
       %p
         = link_to 'Click here to take the evaluation quiz for this unit', perform_evaluation_path(enrollment_user_assignment)
