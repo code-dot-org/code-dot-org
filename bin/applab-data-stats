@@ -94,7 +94,7 @@ def get_user_from_storage_id(storage_id)
   }
 end
 
-puts "table_id,channel_id,table_rows,table_size,table_data_length,table_name_length,app_state,app_abuse_score,app_from_script_level,user_id,user_is_admin,user_type,user_in_section"
+puts "table_id,table_rows,table_size,table_data_length,table_name_length,app_id,app_state,app_abuse_score,app_from_script_level,user_id,user_is_admin,user_type,user_in_section"
 
 hash_map.keys.each_with_index do |hash, table_id|
   last_evaluated_key = nil
@@ -138,7 +138,7 @@ hash_map.keys.each_with_index do |hash, table_id|
   end while last_evaluated_key
 
   $stderr.print '.'
-  puts "#{table_id},#{channel_id},#{table_rows},#{table_size},#{value_size},#{table_name.length},#{channel[:state]},#{channel[:abuse_score]},#{channel[:origin]},#{user[:id]},#{user[:is_admin]},#{user[:user_type]},#{user[:is_section_member]}"
+  puts "#{table_id},#{table_rows},#{table_size},#{value_size},#{table_name.length},#{channel_id},#{channel[:state]},#{channel[:abuse_score]},#{channel[:origin]},#{user[:id]},#{user[:is_admin]},#{user[:user_type]},#{user[:is_section_member]}"
 end
 
 $stderr.puts "\n2nd pass consumed_capacity #{consumed_capacity}"
