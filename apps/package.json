@@ -32,7 +32,8 @@
   "browserify-shim": {
     "blockly": {
       "exports": "Blockly"
-    }
+    },
+    "marked": "global:marked"
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
