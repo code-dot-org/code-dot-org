@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
 require 'aws-sdk'
-
 require_relative '../deployment'
-#require_relative '../shared/middleware/helpers/storage_id'
+require 'cdo/db'
+require_relative '../shared/middleware/helpers/storage_id'
 
 db = Aws::DynamoDB::Client.new
 
@@ -32,22 +32,80 @@ begin
   last_evaluated_key = page[:last_evaluated_key]
 end while last_evaluated_key
 
-puts "tables: #{hash_map.keys.length}"
-puts "channels: #{channel_map.keys.length}"
-puts "rows: #{rows}"
-puts "consumed_capacity: #{consumed_capacity}"
+$stderr.puts "tables: #{hash_map.keys.length}"
+$stderr.puts "channels: #{channel_map.keys.length}"
+$stderr.puts "rows: #{rows}"
+$stderr.puts "1st pass consumed_capacity: #{consumed_capacity}"
 
 consumed_capacity = 0
 
 def get_item_size(item)
-  item['value'].length + 2 * (item['table_name'].length) + 130
+  puts "bogus item #{item}" unless item['table_name']
+  table_name_length = item['table_name'] ? item['table_name'].length : 0
+  item['value'].length + 2 * table_name_length + 130
 end
 
-puts "table_id,channel_id,table_rows,table_size,(table_data_length),(table_name_length)"
+$channel_map = {}
+def get_channel(channel_id)
+  return $channel_map[channel_id] if $channel_map[channel_id]
+
+  channel = PEGASUS_DB[:storage_apps].where(id: channel_id).first
+  return ($channel_map[channel_id] = {state: 'missing'}) unless channel
+
+  origin = get_channel_origin(channel)
+
+  $channel_map[channel_id] = {
+    owner_storage_id: channel[:storage_id],
+    state: channel[:state],
+    abuse_score: channel[:abuse_score],
+    origin: origin
+  }
+end
+
+$applab_project_level_id = DASHBOARD_DB[:levels].where(name: 'New App Lab Project').first[:id]
+def get_channel_origin(channel)
+  return 'invalid-channel' unless channel
+  channel_id = channel[:id]
+  owner_storage_id = channel[:storage_id]
+  encrypted_channel_id = storage_encrypt_channel_id(owner_storage_id, channel_id)
+  channel_token = DASHBOARD_DB[:channel_tokens].where(channel: encrypted_channel_id).first
+  return 'project' unless channel_token
+  channel_token[:level_id] == $applab_project_level_id ? 'applab-project' : 'script'
+end
+
+$user_map = {}
+def get_user_from_storage_id(storage_id)
+  return $user_map[storage_id] if $user_map[storage_id]
+
+  user_storage_id = PEGASUS_DB[:user_storage_ids].where(id: storage_id).first
+  return ($user_map[storage_id] = {}) unless user_storage_id
+  user_id = user_storage_id[:user_id]
+  return ($user_map[storage_id] = {}) unless user_id
+
+  user = DASHBOARD_DB[:users].where(id: user_id).first
+  return ($user_map[storage_id] = {id: user_id}) unless user
+
+  is_section_member = !DASHBOARD_DB[:followers][student_user_id: user_id].nil?
+  $user_map[storage_id] = {
+    id: user_id,
+    is_admin: user[:admin],
+    user_type: user[:user_type],
+    is_section_member: is_section_member
+  }
+end
+
+puts "table_id,channel_id,table_rows,table_size,table_data_length,table_name_length,app_state,app_abuse_score,app_from_script_level,user_id,user_is_admin,user_type,user_in_section"
 
 hash_map.keys.each_with_index do |hash, table_id|
   last_evaluated_key = nil
   channel_id, table_name, _ = hash.split(':')
+
+  # ignore old netsim data
+  next if channel_id == '42'
+
+  channel = get_channel(channel_id)
+  #puts "channel info #{channel}"
+  user = get_user_from_storage_id(channel[:owner_storage_id])
   table_rows = 0
   table_size = 0
   value_size = 0
@@ -56,6 +114,7 @@ hash_map.keys.each_with_index do |hash, table_id|
         table_name: CDO.dynamo_tables_table,
         exclusive_start_key: last_evaluated_key,
         return_consumed_capacity: 'TOTAL',
+        attributes_to_get: ['channel_id', 'hash', 'table_name', 'value'],
         key_conditions: {
             "hash" => {
                 attribute_value_list: [hash],
@@ -78,7 +137,8 @@ hash_map.keys.each_with_index do |hash, table_id|
     last_evaluated_key = page[:last_evaluated_key]
   end while last_evaluated_key
 
-  puts "#{table_id},#{channel_id},#{table_rows},#{table_size},#{value_size},#{table_name.length}"
+  $stderr.print '.'
+  puts "#{table_id},#{channel_id},#{table_rows},#{table_size},#{value_size},#{table_name.length},#{channel[:state]},#{channel[:abuse_score]},#{channel[:origin]},#{user[:id]},#{user[:is_admin]},#{user[:user_type]},#{user[:is_section_member]}"
 end
 
-puts "consumed_capacity #{consumed_capacity}"
+$stderr.puts "\n2nd pass consumed_capacity #{consumed_capacity}"
