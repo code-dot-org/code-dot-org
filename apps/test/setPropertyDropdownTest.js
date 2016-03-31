@@ -1,9 +1,8 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 
-window.React = require('react');
-window.jQuery = require('jquery');
 testUtils.setupLocales();
+testUtils.setExternalGlobals();
 
 var setPropertyDropdown = require('@cdo/apps/applab/setPropertyDropdown');
 

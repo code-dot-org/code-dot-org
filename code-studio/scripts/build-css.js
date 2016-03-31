@@ -20,7 +20,8 @@ var BUILD_PATH = './build/css/';
 /** @const {string[]} */
 var FILES = [
   'levelbuilder.scss',
-  'leveltype_widget.scss'
+  'leveltype_widget.scss',
+  'plc.scss'
 ];
 
 /**
