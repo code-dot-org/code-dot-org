@@ -55,6 +55,8 @@ var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
 
+var BoardController = require('../makerlab/BoardController');
+
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
@@ -164,9 +166,6 @@ function loadLevel() {
   }
 
   if (Applab.makerlabEnabled) {
-    // Only actually require() this module when Makerlab enabled.
-    // Depends on Makerlab dependencies which are not included in
-    var BoardController = require('../makerlab/BoardController');
     Applab.makerlabController = new BoardController();
   }
 }
