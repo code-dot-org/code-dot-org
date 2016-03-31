@@ -23,14 +23,14 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_enrollment_unit_assignment_id', dependent: :destroy
   has_many :plc_task_assignments, through: :plc_module_assignments, class_name: '::Plc::EnrollmentTaskAssignment', dependent: :destroy
 
-  START_BLOCKED = 'start_blocked'
-  PENDING_EVALUATION = 'pending_evaluation'
-  IN_PROGRESS = 'in_progress'
-  COMPLETED = 'completed'
+  UNIT_STATUS_STATES = [
+    START_BLOCKED = 'start_blocked',
+    PENDING_EVALUATION = 'pending_evaluation',
+    IN_PROGRESS = 'in_progress',
+    COMPLETED = 'completed'
+  ]
 
-  unit_status_states = [START_BLOCKED, PENDING_EVALUATION, IN_PROGRESS, COMPLETED]
-
-  validates :status, inclusion: {in: unit_status_states}
+  validates :status, inclusion: {in: UNIT_STATUS_STATES}
 
   def enroll_user_in_unit_with_learning_modules(learning_modules)
     transaction do
