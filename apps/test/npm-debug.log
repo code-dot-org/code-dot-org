@@ -1,0 +1,28 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/Chris/.nvm/versions/node/v0.12.4/bin/node',
+1 verbose cli   '/Users/Chris/.nvm/versions/node/v0.12.4/bin/npm',
+1 verbose cli   'test',
+1 verbose cli   '--',
+1 verbose cli   '--grep=Gamelab empty freeplay solution' ]
+2 info using npm@2.10.1
+3 info using node@v0.12.4
+4 verbose stack Error: Invalid name: "@cdo/apps/test"
+4 verbose stack     at ensureValidName (/Users/Chris/.nvm/versions/node/v0.12.4/lib/node_modules/npm/node_modules/normalize-package-data/lib/fixer.js:323:15)
+4 verbose stack     at Object.module.exports.fixNameField (/Users/Chris/.nvm/versions/node/v0.12.4/lib/node_modules/npm/node_modules/normalize-package-data/lib/fixer.js:206:5)
+4 verbose stack     at /Users/Chris/.nvm/versions/node/v0.12.4/lib/node_modules/npm/node_modules/normalize-package-data/lib/normalize.js:30:38
+4 verbose stack     at Array.forEach (native)
+4 verbose stack     at normalize (/Users/Chris/.nvm/versions/node/v0.12.4/lib/node_modules/npm/node_modules/normalize-package-data/lib/normalize.js:29:15)
+4 verbose stack     at final (/Users/Chris/.nvm/versions/node/v0.12.4/lib/node_modules/npm/node_modules/read-package-json/read-json.js:338:5)
+4 verbose stack     at then (/Users/Chris/.nvm/versions/node/v0.12.4/lib/node_modules/npm/node_modules/read-package-json/read-json.js:113:5)
+4 verbose stack     at /Users/Chris/.nvm/versions/node/v0.12.4/lib/node_modules/npm/node_modules/read-package-json/read-json.js:284:20
+4 verbose stack     at evalmachine.<anonymous>:263:20
+4 verbose stack     at OpenReq.Req.done (/Users/Chris/.nvm/versions/node/v0.12.4/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:141:5)
+5 verbose cwd /Users/Chris/Code/code-dot-org/apps/test
+6 error Darwin 15.3.0
+7 error argv "/Users/Chris/.nvm/versions/node/v0.12.4/bin/node" "/Users/Chris/.nvm/versions/node/v0.12.4/bin/npm" "test" "--" "--grep=Gamelab empty freeplay solution"
+8 error node v0.12.4
+9 error npm  v2.10.1
+10 error Invalid name: "@cdo/apps/test"
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]
