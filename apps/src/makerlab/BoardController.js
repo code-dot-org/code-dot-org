@@ -1,15 +1,13 @@
 var five = require('johnny-five');
 var ChromeSerialPort = require('chrome-serialport');
-var SerialPort = ChromeSerialPort.SerialPort;
-var list = ChromeSerialPort.list;
-var isInstalled = ChromeSerialPort.isInstalled;
 var PlaygroundIO = require('playground-io');
 
 /** @const {string} */
 var CHROME_APP_ID = 'himpmjbkjeenflliphlaaeggkkanoglo';
-ChromeSerialPort.extensionId = CHROME_APP_ID;
 
 var BoardController = module.exports = function () {
+  ChromeSerialPort.extensionId = CHROME_APP_ID;
+
   /** @private {five.Board} */
   this.board_ = null;
 
@@ -17,21 +15,27 @@ var BoardController = module.exports = function () {
 };
 
 BoardController.prototype.ensureBoard = function (onError, onComplete) {
-  isInstalled(function (error) {
+  ChromeSerialPort.isInstalled(function (error) {
     if (error) {
       onError(error);
       return;
     }
 
-    if (this.board_) {
+    // Temporary test: blink LED on successful initialization.
+    var blinkAndComplete = function () {
+      this.prewiredComponents.led.blink();
       onComplete();
+    }.bind(this);
+
+    if (this.board_) {
+      blinkAndComplete();
       return;
     }
 
     connect(onError, function (board) {
       this.prewiredComponents = initializeCircuitPlaygroundComponents();
       this.board_ = board;
-      onComplete();
+      blinkAndComplete();
     }.bind(this));
   }.bind(this));
 };
@@ -71,7 +75,7 @@ function connect(onConnectError, onComplete) {
 }
 
 function connectToBoard(portId, onComplete, onConnectError) {
-  var serialPort = new SerialPort(portId, {
+  var serialPort = new ChromeSerialPort.SerialPort(portId, {
     baudrate: 57600
   }, true);
   var io = new PlaygroundIO({port: serialPort});
@@ -83,7 +87,7 @@ function connectToBoard(portId, onComplete, onConnectError) {
 }
 
 function getDevicePort(onError, onComplete) {
-  list(function (e, list) {
+  ChromeSerialPort.list(function (e, list) {
     if (e) {
       onError(e);
       return;

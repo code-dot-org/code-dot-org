@@ -1334,8 +1334,6 @@ Applab.execute = function() {
         },
         function () {
           Applab.beginVisualizationRun();
-          // Temporary test: blink LED on successful initialization.
-          Applab.makerlabController.prewiredComponents.led.blink();
         });
   } else {
     Applab.beginVisualizationRun();
