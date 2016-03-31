@@ -23,6 +23,15 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_enrollment_unit_assignment_id', dependent: :destroy
   has_many :plc_task_assignments, through: :plc_module_assignments, class_name: '::Plc::EnrollmentTaskAssignment', dependent: :destroy
 
+  START_BLOCKED = 'start_blocked'
+  PENDING_EVALUATION = 'pending_evaluation'
+  IN_PROGRESS = 'in_progress'
+  COMPLETED = 'completed'
+
+  unit_status_states = [START_BLOCKED, PENDING_EVALUATION, IN_PROGRESS, COMPLETED]
+
+  validates :status, inclusion: {in: unit_status_states}
+
   def enroll_user_in_unit_with_learning_modules(learning_modules)
     transaction do
       plc_module_assignments.destroy_all
@@ -36,13 +45,15 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
 
         end
       end
-      self.update(status: :in_progress)
+      self.update(status: IN_PROGRESS)
     end
   end
 
   def check_for_unit_completion
-    if !plc_task_assignments.exists?(['status != ?', 'completed'])
-      update!(status: :completed)
+    if !plc_task_assignments.joins(:plc_task).
+        where.not('plc_tasks.type': Plc::LearningResourceTask.name).
+        exists?(['status != ?', 'completed'])
+      update!(status: COMPLETED)
     end
   end
 end

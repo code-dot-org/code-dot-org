@@ -14,7 +14,8 @@ class Plc::EnrollmentTaskAssignmentTest < ActiveSupport::TestCase
 
   test 'Completing tasks does not mark module / course complete until all are complete' do
     enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: @user, plc_course: @course)
-    unit_enrollment = Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: enrollment, plc_course_unit: @course_unit)
+    unit_enrollment = Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: enrollment, plc_course_unit: @course_unit,
+                                                           status: Plc::EnrollmentUnitAssignment::START_BLOCKED)
     unit_enrollment.enroll_user_in_unit_with_learning_modules([@learning_module1, @learning_module2])
     task_assignments = enrollment.plc_task_assignments
 
@@ -24,16 +25,16 @@ class Plc::EnrollmentTaskAssignmentTest < ActiveSupport::TestCase
     task_assignments.first.complete_assignment!
     assert_equal 'completed', task_assignments.first.status
     unit_enrollment.reload
-    assert_not_equal 'completed ', unit_enrollment.status
+    assert_equal Plc::EnrollmentUnitAssignment::IN_PROGRESS, unit_enrollment.status
 
     task_assignments.second.complete_assignment!
     assert_equal 'completed', task_assignments.second.status
     unit_enrollment.reload
-    assert_not_equal 'completed', unit_enrollment.status
+    assert_equal Plc::EnrollmentUnitAssignment::IN_PROGRESS, unit_enrollment.status
 
     task_assignments.third.complete_assignment!
     assert_equal 'completed', task_assignments.third.status
     unit_enrollment.reload
-    assert_equal 'completed', unit_enrollment.status
+    assert_equal Plc::EnrollmentUnitAssignment::COMPLETED, unit_enrollment.status
   end
 end
