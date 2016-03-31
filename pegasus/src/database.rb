@@ -67,10 +67,6 @@ def us_state_from_code(code)
   DB[:geography_us_states].where(code_s: code.to_s.strip.upcase).first
 end
 
-def us_state_code?(code)
-  !us_state_from_code(code).nil?
-end
-
 def us_state_name_from_code(code)
   state = us_state_from_code(code)
   return code unless state
