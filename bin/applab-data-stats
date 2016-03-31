@@ -40,7 +40,7 @@ $stderr.puts "1st pass consumed_capacity: #{consumed_capacity}"
 consumed_capacity = 0
 
 def get_item_size(item)
-  puts "bogus item #{item}" unless item['table_name']
+  $stderr.puts "bogus item #{item}" unless item['table_name']
   table_name_length = item['table_name'] ? item['table_name'].length : 0
   item['value'].length + 2 * table_name_length + 130
 end
