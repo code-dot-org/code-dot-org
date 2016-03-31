@@ -2,7 +2,7 @@ var tiles = require('./tiles');
 var SquareType = tiles.SquareType;
 
 var Cell = function (tileType, value, range) {
-  
+
   /**
    * @type {Number}
    */
