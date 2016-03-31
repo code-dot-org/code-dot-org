@@ -13,7 +13,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 [col-25]
 
-# Diversity across 8M students in our courses
+# Diversity across 10M students in our courses
 
 [/col-25]
 
@@ -50,7 +50,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
-| Improve diversity in CS | In our online courses, <%= stats['percent_female'] %>% of  students are girls and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity). |
+| Improve diversity in CS | In our online courses, <%= stats['percent_female'] %>% of  students are girls and 45% are black or Hispanic. In our high school classrooms, 37% are girls, and 56% African American or Hispanic. |
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female) |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |

@@ -35,7 +35,7 @@ Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to develo
 
 <img src="<%= CDO.code_org_url("/images/testimonials/fit-750/cs-in-algebra-testimonial.png") %>">
 
-[<button>Learn more about curriculum</button>](/curriculum/algebra) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-algebra)
+[<button>Learn more about curriculum</button>](/educate/algebra) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-algebra)
 
 # Computer Science Fundamentals - Accelerated
 
