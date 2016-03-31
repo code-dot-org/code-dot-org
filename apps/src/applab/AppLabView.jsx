@@ -10,10 +10,9 @@ var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.
 var TopInstructions = require('../templates/instructions/TopInstructions.jsx');
 var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer.jsx');
 var utils = require('../utils');
+var styleConstants = require('../styleConstants');
 
-// TODO These numbers are defined in style-constants.scss. Do the same sort
-// of thing we did with colors
-var HEADER_HEIGHT = 30;
+var HEADER_HEIGHT = styleConstants.workspace_headers_height;
 
 /**
  * Top-level React wrapper for App Lab.
