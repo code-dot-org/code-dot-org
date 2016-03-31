@@ -1,0 +1,7 @@
+name 'PS U3 Q1-4'
+question 'Which of the following is NOT true about functions in programming?'
+wrong 'Functions are reusable programming abstractions.'
+wrong 'Functions help reduce the complexity of writing and maintaining programs.'
+right 'Functions cannot make calls to other functions within the same program.'
+wrong 'Functions help break a problem into logical chunks.'
+wrong 'Once defined, a function can be called many times from different parts of a program.'
