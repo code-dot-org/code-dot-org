@@ -24,26 +24,32 @@ var Instructions = React.createClass({
     // Otherwise, render the title and up to two sets of instructions.
     // These instructions may contain spans and images as determined by
     // StudioApp.substituteInstructionImages
+    var instructions;
     if (this.props.renderedMarkdown) {
-      return (
+      instructions = (
         <MarkdownInstructions
           renderedMarkdown={this.props.renderedMarkdown}
           markdownClassicMargins={this.props.markdownClassicMargins}
           inTopPane={this.props.inTopPane}
-          aniGifURL={this.props.aniGifURL}
-          authoredHints={this.props.authoredHints}
+        />
+      );
+    } else {
+      instructions = (
+        <NonMarkdownInstructions
+          puzzleTitle={this.props.puzzleTitle}
+          instructions={this.props.instructions}
+          instructions2={this.props.instructions2}
         />
       );
     }
-
     return (
-      <NonMarkdownInstructions
-        puzzleTitle={this.props.puzzleTitle}
-        instructions={this.props.instructions}
-        instructions2={this.props.instructions2}
-        aniGifURL={this.props.aniGifURL}
-        authoredHints={this.props.authoredHints}
-      />
+      <div>
+        {instructions}
+        {this.props.aniGifURL &&
+          <img className="aniGif example-image" src={ this.props.aniGifURL }/>
+        }
+        {this.props.authoredHints}
+      </div>
     );
   }
 });

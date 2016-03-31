@@ -22,9 +22,7 @@ var MarkdownInstructions = React.createClass({
   propTypes: {
     renderedMarkdown: React.PropTypes.string.isRequired,
     markdownClassicMargins: React.PropTypes.bool,
-    inTopPane: React.PropTypes.bool,
-    aniGifURL: React.PropTypes.string,
-    authoredHints: React.PropTypes.element
+    inTopPane: React.PropTypes.bool
   },
 
   render: function () {
@@ -41,10 +39,6 @@ var MarkdownInstructions = React.createClass({
           className='instructions-markdown'
           style={style}
           dangerouslySetInnerHTML={{ __html: this.props.renderedMarkdown }}/>
-        {this.props.aniGifURL &&
-          <img className="aniGif example-image" src={ this.props.aniGifURL }/>
-        }
-        {this.props.authoredHints}
       </div>
     );
   }
