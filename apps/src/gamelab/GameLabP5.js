@@ -358,7 +358,6 @@ GameLabP5.prototype.init = function (options) {
 
     s.shapeColor = this.color(127, 127, 127);
     s.AABBops = gameLabSprite.AABBops.bind(s, this);
-    s.isTouching = gameLabSprite.isTouching.bind(s, this);
     s.depth = this.allSprites.maxDepth()+1;
     this.allSprites.add(s);
     return s;
@@ -427,22 +426,6 @@ GameLabP5.prototype.init = function (options) {
     array.collide = _groupCollideGameLab.bind(array, 'collide');
     array.displace = _groupCollideGameLab.bind(array, 'displace');
     array.bounce = _groupCollideGameLab.bind(array, 'bounce');
-
-    /**
-     * Test each member of group against the target using the isTouching sprite
-     * method.  Return true if any touching occurred.
-     *
-     * @method isTouching
-     * @param {Object} target Group or Sprite
-     * @return {boolean} True if any touching occurred
-     */
-    array.isTouching = function (target) {
-      var didTouch = false;
-      for (var i = 0; i < this.size(); i++) {
-        didTouch = this.get(i).isTouching(target) || didTouch;
-      }
-      return didTouch;
-    };
 
     return array;
   };
