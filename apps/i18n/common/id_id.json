@@ -229,5 +229,6 @@
   "watchVideo": "Tonton Videonya",
   "when": "ketika",
   "whenRun": "ketika dijalankan",
-  "workspaceHeaderShort": "Area kerja: "
+  "workspaceHeaderShort": "Area kerja: ",
+  "showBlock": "Get a block"
 }

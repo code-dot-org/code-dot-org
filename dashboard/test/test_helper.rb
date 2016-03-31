@@ -306,9 +306,11 @@ end
 # Mock StorageApps to generate random tokens
 class StorageApps
   def initialize(_); end
+
   def create(_, _)
     SecureRandom.base64 18
   end
+
   def most_recent(_)
     create(nil, nil)
   end

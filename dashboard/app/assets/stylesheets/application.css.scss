@@ -1832,13 +1832,18 @@ $information-desktop: "only screen and (min-width: 1024px)";
       font-size: 15px;
     }
   }
-  .answerbutton {
+  .answerbutton-default {
     margin-top: 15px;
     margin-right: 15px;
     padding-left: 10px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+  .answerbutton-tight {
+    display: block;
+    clear: both;
+    padding-left: 10px;
   }
 }
 
