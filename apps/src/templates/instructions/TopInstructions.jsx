@@ -87,9 +87,6 @@ var TopInstructions = React.createClass({
       display: this.props.collapsed ? 'none' : undefined
     };
 
-    // TODO - could use MarkdownInstructions once I've gotten rid of the few
-    // instances in applab where we dont use markdown
-
     return (
       <div style={mainStyle} className="editor-column">
         <CollapserIcon
