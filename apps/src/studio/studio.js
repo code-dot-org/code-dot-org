@@ -2395,7 +2395,7 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
     studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
 
     var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
-    var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [ exampleBlock ]);
+    var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [exampleBlock]);
     if (exampleCode) {
       var resultBoolean = codegen.evalWith(defCode + '; return' + exampleCode, {
         StudioApp: studioApp,
@@ -2540,7 +2540,7 @@ var registerHandlers =
          matchParam1Val === titleVal1) &&
         (!nameParam2 ||
          matchParam2Val === titleVal2)) {
-      var code = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
+      var code = Blockly.Generator.blocksToCode('JavaScript', [block]);
       if (code) {
         var func = codegen.functionFromCode(code, {
                                             StudioApp: studioApp,
@@ -3544,7 +3544,7 @@ Studio.animateClouds = function() {
 Studio.getCloudLocation = function(cloudIndex) {
   // How many milliseconds to move one pixel.  Higher values mean slower clouds,
   // and making them different causes the clouds to animate out of sync.
-  var intervals = [ 50, 60 ];
+  var intervals = [50, 60];
 
   // How many pixels a cloud moves before it loops.  This value is big enough to
   // make a cloud move entirely aross the game area, looping when completely

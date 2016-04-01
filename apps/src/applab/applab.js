@@ -227,7 +227,7 @@ function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
 function adjustAppSizeStyles(container) {
   var vizScale = 1;
   // We assume these are listed in this order:
-  var defaultScaleFactors = [ 1.0, 0.875, 0.75, 0.625, 0.5 ];
+  var defaultScaleFactors = [1.0, 0.875, 0.75, 0.625, 0.5];
   var scaleFactors = defaultScaleFactors.slice(0);
   if (vizAppWidth !== Applab.appWidth) {
     vizScale = vizAppWidth / Applab.appWidth;
@@ -247,7 +247,7 @@ function adjustAppSizeStyles(container) {
   // (4) there is no 5th height rule in the array because the 5th rule in the
   // stylesheet has no minimum specified. It just uses the max-height from the
   // 4th item in the array.
-  var defaultHeightRules = [ 600, 550, 500, 450 ];
+  var defaultHeightRules = [600, 550, 500, 450];
   var newHeightRules = defaultHeightRules.slice(0);
   for (var z = 0; z < newHeightRules.length; z++) {
     newHeightRules[z] += container.offsetTop +
@@ -1271,7 +1271,7 @@ Applab.execute = function() {
     for (var x = 0; blocks[x]; x++) {
       var block = blocks[x];
       if (block.type === 'when_run') {
-        codeWhenRun = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
+        codeWhenRun = Blockly.Generator.blocksToCode('JavaScript', [block]);
         break;
       }
     }

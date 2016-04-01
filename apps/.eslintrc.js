@@ -34,6 +34,7 @@ module.exports = {
     "mocha": true
   },
   "rules": {
+    "array-bracket-spacing": ["error", "never"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "comma-dangle": "off",
     "curly": "error",
