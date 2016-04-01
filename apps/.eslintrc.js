@@ -52,6 +52,10 @@ module.exports = {
     "no-unused-vars": "off",
     "no-with": "error",
     "object-curly-spacing": ["error", "never"],
-    "semi": "error"
+    "semi": "error",
+
+    // Things we should technically enable to comply with google style guide
+    //https://google.github.io/styleguide/javascriptguide.xml?showone=Parentheses#Parentheses
+    "no-extra-parens": "off"
   }
 };
