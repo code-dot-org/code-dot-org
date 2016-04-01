@@ -39,6 +39,7 @@ module.exports = {
     "comma-dangle": "off",
     "comma-spacing": "error",
     "curly": "error",
+    "dot-location": ["error", "property"],
     "key-spacing": "error",
     "no-array-constructor": "error",
     "no-console": "off",
