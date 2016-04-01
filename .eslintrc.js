@@ -9,6 +9,13 @@ module.exports = {
     "node": true,
     "mocha": true
   },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
   "globals": {
     "$": true,
     "jQuery": true,
