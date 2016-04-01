@@ -3,7 +3,7 @@ module UsersHelper
 
   # Summarize a user and his or progress progress within a certain script.
   # Example return value:
-  # { "linesOfCode": 34, "linesOfCodeText": "Total lines of code: 34", "disableSocialShare": true,
+  # { "user_id": 1, "linesOfCode": 34, "linesOfCodeText": "Total lines of code: 34", "disableSocialShare": true,
   #   "levels": {"135": {"status": "perfect", "result": 100}}}
   def summarize_user_progress(script, user = current_user, exclude_level_progress = false)
     user_data = {}
@@ -34,10 +34,12 @@ module UsersHelper
   # Merge the user summary into the specified result hash.
   private def merge_user_summary(user_data, user)
     if user
+      user_data[:user_id] = user.id
       user_data[:disableSocialShare] = true if user.under_13?
       user_data[:isTeacher] = true if user.teacher?
       user_data[:linesOfCode] = user.total_lines
     else
+      user_data[:user_id] = nil
       user_data[:linesOfCode] = client_state.lines
     end
     user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])

@@ -1,0 +1,10 @@
+- if current_user
+  :javascript
+    dashboard.clientState.setCurrentUserKey('#{current_user.id}');
+- else
+  :javascript
+    dashboard.clientState.setAnonymousUser();
+:javascript
+  document.location = '#{@redirect}'
+
+%meta{'http-equiv' => 'refresh', :content => "5; url=#{@redirect}"}

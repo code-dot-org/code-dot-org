@@ -36,15 +36,33 @@ progress.mergedActivityCssClass = function (a, b) {
   return progress.activityCssClass(clientState.mergeActivityResult(a, b));
 };
 
-progress.populateProgress = function (scriptName) {
+progress.populateClientProgress = function(scriptName) {
   // Render the progress the client knows about (from sessionStorage)
-  var clientProgress = clientState.allLevelsProgress()[scriptName] || {};
+  var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
   Object.keys(clientProgress).forEach(function (levelId) {
     $('.level-' + levelId).addClass(progress.activityCssClass(clientProgress[levelId]));
   });
+  return clientProgress;
+};
+
+progress.populateProgress = function (scriptName) {
+
+  var userKeyAlreadySet = dashboard.clientState.isUserKeySet();
+  var clientProgress;
+  if (userKeyAlreadySet) {
+    clientProgress = progress.populateClientProgress(scriptName);
+  }
 
   $.ajax('/api/user_progress/' + scriptName).done(function (data) {
     data = data || {};
+    if (data.user_id) {
+      dashboard.clientState.setCurrentUserKey(data.user_id);
+    } else {
+      dashboard.clientState.setAnonymousUser();
+    }
+    if (!userKeyAlreadySet) {
+      clientProgress = progress.populateClientProgress(scriptName);
+    }
 
     // Show lesson plan links if teacher
     if (data.isTeacher) {
@@ -57,16 +75,16 @@ progress.populateProgress = function (scriptName) {
       // Only the server can speak to whether a level is submitted.  If it is,
       // we show the submitted styling.
       if (serverProgress[levelId].submitted) {
-        // Clear the existing class and replace
-        $('.level-' + levelId).attr('class', 'level_link submitted');
+	// Clear the existing class and replace
+	$('.level-' + levelId).attr('class', 'level_link submitted');
       } else if (serverProgress[levelId].result !== clientProgress[levelId]) {
-        var status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
+	var status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
 
-        // Clear the existing class and replace
-        $('.level-' + levelId).attr('class', 'level_link ' + status);
+	// Clear the existing class and replace
+	$('.level-' + levelId).attr('class', 'level_link ' + status);
 
-        // Write down new progress in sessionStorage
-        clientState.trackProgress(null, null, serverProgress[levelId].result, scriptName, levelId);
+	// Write down new progress in sessionStorage
+	dashboard.clientState.trackProgress(null, null, serverProgress[levelId].result, scriptName, levelId);
       }
     });
   });

@@ -21,7 +21,7 @@ class SessionsControllerTest < ActionController::TestCase
     post :create, user: {login: '', hashed_email: teacher.hashed_email, password: teacher.password}
 
     assert_signed_in_as teacher
-    assert_redirected_to '//test.code.org/teacher-dashboard'
+    assert_redirected_to update_login_url(redirect: '//test.code.org/teacher-dashboard')
   end
 
   test "students go to learn. homepage after signing in" do
@@ -30,7 +30,7 @@ class SessionsControllerTest < ActionController::TestCase
     post :create, user: {login: '', hashed_email: student.hashed_email, password: student.password}
 
     assert_signed_in_as student
-    assert_redirected_to '/'
+    assert_redirected_to update_login_url(redirect: '/')
   end
 
   test "sign in page saves return to url in session" do
@@ -47,7 +47,7 @@ class SessionsControllerTest < ActionController::TestCase
     post :create, user: {login: '', hashed_email: teacher.hashed_email, password: teacher.password}
 
     assert_signed_in_as teacher
-    assert_redirected_to return_to
+    assert_redirected_to update_login_url(redirect: return_to)
   end
 
   test 'signing in as user with username' do
@@ -59,7 +59,7 @@ class SessionsControllerTest < ActionController::TestCase
     post :create, user: {login: user.username, hashed_email: '', password: user.password}
 
     assert_signed_in_as user
-    assert_redirected_to '/'
+    assert_redirected_to update_login_url(redirect: '/')
   end
 
   test 'signing in as younger user with hashed email' do
@@ -71,7 +71,7 @@ class SessionsControllerTest < ActionController::TestCase
     post :create, user: {login: '', hashed_email: user.hashed_email, password: user.password}
 
     assert_signed_in_as user
-    assert_redirected_to '/'
+    assert_redirected_to update_login_url(redirect: '/')
   end
 
   test "users go to code.org after logging out" do
@@ -80,13 +80,13 @@ class SessionsControllerTest < ActionController::TestCase
 
     delete :destroy
 
-    assert_redirected_to 'http://test.code.org'
+    assert_redirected_to update_login_url(redirect: 'http://test.code.org')
   end
 
   test "if you're not signed in you can still sign out" do
     delete :destroy
 
-    assert_redirected_to 'http://test.code.org'
+    assert_redirected_to update_login_url(redirect: 'http://test.code.org')
   end
 
   test "facebook users go to oauth sign out page after logging out" do
@@ -95,7 +95,7 @@ class SessionsControllerTest < ActionController::TestCase
 
     delete :destroy
 
-    assert_redirected_to '/oauth_sign_out/facebook'
+    assert_redirected_to update_login_url(redirect: '/oauth_sign_out/facebook')
   end
 
   test "google account users go to oauth sign out page after logging out" do
@@ -104,7 +104,7 @@ class SessionsControllerTest < ActionController::TestCase
 
     delete :destroy
 
-    assert_redirected_to '/oauth_sign_out/google_oauth2'
+    assert_redirected_to update_login_url(redirect: '/oauth_sign_out/google_oauth2')
   end
 
   test "microsoft account users go to oauth sign out page after logging out" do
@@ -113,7 +113,7 @@ class SessionsControllerTest < ActionController::TestCase
 
     delete :destroy
 
-    assert_redirected_to '/oauth_sign_out/windowslive'
+    assert_redirected_to update_login_url(redirect: '/oauth_sign_out/windowslive')
   end
 
   test "oauth sign out page for facebook" do
