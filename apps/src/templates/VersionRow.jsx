@@ -1,5 +1,6 @@
 /* globals $ */
 
+var msg = require('../locale');
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
@@ -22,11 +23,9 @@ var VersionRow = React.createClass({
   render: function () {
     var button;
     if (this.props.isLatest) {
-      button = <button className="btn-default" disabled="disabled" style={{cursor: "default"}}>Current Version</button>;
+      button = <button className="btn-default" disabled="disabled" style={{cursor: "default"}}>{msg.currentVersion()}</button>;
     } else {
-      button = <button className="btn-info" onClick={this.props.onChoose}>
-        Restore this Version
-      </button>;
+      button = <button className="btn-info" onClick={this.props.onChoose}>{msg.viewThisVersion()}</button>;
     }
 
     return (
