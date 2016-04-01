@@ -1,3 +1,8 @@
+/**
+ * @file Serial connection and board component initialization logic for Makerlab
+ */
+/* global Promise */
+
 var five = require('johnny-five');
 var ChromeSerialPort = require('chrome-serialport');
 var PlaygroundIO = require('playground-io');
@@ -43,8 +48,8 @@ BoardController.prototype.ensureBoardConnected = function () {
       connect()
           .then(function (board) {
             this.board_ = board;
+            resolve();
           }.bind(this))
-          .then(resolve)
           .catch(reject);
     }.bind(this));
   }.bind(this));
