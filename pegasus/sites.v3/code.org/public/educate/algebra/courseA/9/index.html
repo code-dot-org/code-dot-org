@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="Using the Design Recipe, students will work through a series of word problems about calculating the height of a rocket after a given number of seconds from launch. The functions they write will be used to animate the rocket launch.">
+    <title>Rocket Height</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+
+    
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+
+    
+
+    
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.8.3.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+    
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body">
+
+
+    <div id="admin_edit">
+    
+
+
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><span class="h2">Unit</span><span class="h1">1</span></div>
+
+    <div class="lessons">
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseA/1" data-pdf-link="#unit1lesson1">
+        1
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseA/2" data-pdf-link="#unit1lesson2">
+        2
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseA/3" data-pdf-link="#unit1lesson3">
+        3
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseA/4" data-pdf-link="#unit1lesson4">
+        4
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseA/5" data-pdf-link="#unit1lesson5">
+        5
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseA/6" data-pdf-link="#unit1lesson6">
+        6
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseA/7" data-pdf-link="#unit1lesson7">
+        7
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseA/8" data-pdf-link="#unit1lesson8">
+        8
+    </a>
+    </div>
+    
+        
+            <div class="lesson current">
+        
+    <a href="/educate/algebra/courseA/9" data-pdf-link="#unit1lesson9">
+        9
+    </a>
+    </div>
+    
+</div>
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+
+    <div class="together" id="unit1lesson9">
+        
+            <h1>Lesson 9: Rocket Height</h1>
+        
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>Using the Design Recipe, students will work through a series of word problems about calculating the height of a rocket after a given number of seconds from launch. The functions they write will be used to animate the rocket launch.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>The Design Recipe process for writing functions introduces students to some best practices in software design that most don’t learn until college or later. By writing examples (or test cases, as they are often called in industry) before writing the body of the function students are following a practice called test-driven development. In TDD software developers write failing test cases before adding a new features, and then works on their code until the test cases pass. This ensures that developers stay focused on writing code that does what they set out to do while also putting in place automated testing that ensures the program continues working as expected while more features are added.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocrocket-height">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Extension Activities</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+                <h2>Anchor Standard</h2>
+                
+                    
+                    
+                        <h3>Common Core Math Standards</h3>
+                        <ul>
+                            
+                                <li><strong>F.LE.1</strong> - Distinguish between situations that can be modeled with linear functions and with exponential functions.</li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Design functions to solve word problems.</li>
+                    
+                        <li>Use the Design Recipe to write contracts, test cases, and function definitions.</li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://code.org/curriculum/docs/algebra/worksheets/rocket_height.pdf' target='_blank' class='print_link'>Rocket-Height Design Recipe</a> - Worksheet
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="rocket-heightcontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <h3 id="introduction">Introduction</h3>
+<p>Functions are a key part of animation in computer programs. A function that draws a static picture of a bat, for example, can place the bat at a different location based on the input. When that input changes slightly based on time or user-interaction, the bat will appear to move. This is similar to the way that flip-book animations work, in which each page draws a static image that has changed by a small amount. When the pages are displayed quickly, the images appear to change smoothly.</p>
+<p><img alt="bat spritesheet" src="https://code.org/curriculum/docs/algebra/bat_spritesheet.png" style="width: 100%;"></p>
+<p>Putting these images together, we arrive at an animation of the bat turning around.</p>
+<p><img alt="bat animated" src="https://code.org/curriculum/docs/algebra/bat_animated_fast.gif" style="margin: 0 auto;"></p>
+<p>In the online puzzles, students will see a function box which has no parameter inputs, which represents the function as a Type of data. This allows you to pass your function into the <code>start</code> function, where it can be used to control the rocket animation. By passing the <code>rocket-height</code> function into the engine we can call it repeatedly with new numbers as each second ticks by instead of running it with a specific value. The periodic execution creates the flip-book effect.  As each second passes, the <code>rocket-height</code> function is executed again, the new location is calculated, and the rocket is re-drawn in its new location.  This drawing and re-drawing in different locations gives the appearance of motion.</p>
+<div class="admonition tip">
+<p class="admonition-title">Lesson Tip</p>
+<p>After creating simple linear movement, students will be asked to write functions to animate simple acceleration. Students will be given an input/output table from which to write their new function. You may want to work through these problems as a whole class, so that students can see how you might analyze an input/output table in order understand the relationship between input and output values.</p>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <h3 id="online-puzzles">Online Puzzles</h3>
+<p>In this stage you’ll write functions that manipulate images to create animations. Head to <a href="http://studio.code.org/s/algebra/stage/10/puzzle/1" target="_blank">CS in Algebra stage 10</a> in Code Studio to get started programming.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extension Activities</h2>
+                    <h3 id="non-linear-animation">Non-linear Animation</h3>
+<p>The final puzzle of this stage is a Free Play puzzle that will allow you and your students to experiment with other variations on the rocket-height formula. One activity that students find particularly interesting (and often challenging) is to write functions that produce non-linear acceleration. If your students are familiar with quadratics then you can call this out as such, but even younger students who haven’t yet seen quadratics can enjoy this extension challenge.</p>
+<p>Place the following input/output tables on the board and see if students can come up with functions that will produce the appropriate animation.</p>
+<div class="left" style="margin-right: 30px;">
+
+<h4>Challenge 1</h4>
+
+<div id="input-table">
+  <table>
+    <tbody><tr>
+      <th>Input</th>
+      <th>Output</th>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>10</td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>40</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>90</td>
+    </tr>
+
+    <tr>
+      <td>4</td>
+      <td>160</td>
+    </tr>
+
+  </tbody></table>
+</div>
+
+</div>
+
+<div class="left">
+
+<h4>Challenge 2</h4>
+
+<div id="input-table">
+  <table>
+    <tbody><tr>
+      <th>Input</th>
+      <th>Output</th>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>15</td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>45</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>95</td>
+    </tr>
+
+    <tr>
+      <td>4</td>
+      <td>165</td>
+    </tr>
+
+  </tbody></table>
+</div>
+
+</div>
+
+<div class="clear"></div>
+
+<p>Once students have figured out the provided Input Output tables, encourage them to come up with non-linear animation functions of their own.</p>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>Common Core Math Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>BF</strong> - Building Functions</summary>
+                    <ul>
+                        
+                            <li><strong>F.BF.1</strong> - Write a function that describes a relationship between two quantities.</li>
+                        
+                            <li><strong>F.BF.2</strong> - Write arithmetic and geometric sequences both recursively and with an explicit formula, use them to model situations, and translate between the two forms.★</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CED</strong> - Creating Equations</summary>
+                    <ul>
+                        
+                            <li><strong>A.CED.1</strong> - Create equations and inequalities in one variable and use them to solve problems. Include equations arising from linear and quadratic functions, and simple rational and exponential functions.</li>
+                        
+                            <li><strong>A.CED.2</strong> - Create equations in two or more variables to represent relationships between quantities; graph equations on coordinate axes with labels and scales.</li>
+                        
+                            <li><strong>A.CED.3</strong> - Represent constraints by equations or inequalities, and by systems of equations and/or inequalities, and interpret solutions as viable or non- viable options in a modeling context. For example, represent inequalities describing nutritional and cost constraints on combinations of different foods.</li>
+                        
+                            <li><strong>A.CED.4</strong> - Rearrange formulas to highlight a quantity of interest, using the same reasoning as in solving equations. For example, rearrange Ohm’s law V = IR to highlight resistance R.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>EE</strong> - Expressions And Equations</summary>
+                    <ul>
+                        
+                            <li><strong>6.EE.9</strong> - Use variables to represent two quantities in a real-world problem that change in relationship to one another; write an equation to express one quantity, thought of as the dependent variable, in terms of the other quantity, thought of as the independent variable. Analyze the relationship between the dependent and independent variables using graphs and tables, and relate these to the equation. For example, in a problem involving motion at constant speed, list and graph ordered pairs of distances and times, and write the equation d = 65t to represent the relationship between distance and time.</li>
+                        
+                            <li><strong>7.EE.4</strong> - Use variables to represent quantities in a real-world or mathematical problem, and construct simple equations and inequalities to solve problems by reasoning about the quantities.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>IF</strong> - Interpreting Functions</summary>
+                    <ul>
+                        
+                            <li><strong>F.IF.1</strong> - Understand that a function from one set (called the domain) to another set (called the range) assigns to each element of the domain exactly one element of the range. If f is a function and x is an element of its domain, then f(x) denotes the output of f corresponding to the input x. The graph of f is the graph of the equation y = f(x).</li>
+                        
+                            <li><strong>F.IF.2</strong> - Use function notation, evaluate functions for inputs in their domains, and interpret statements that use function notation in terms of a context.</li>
+                        
+                            <li><strong>F.IF.3</strong> - Recognize that sequences are functions, sometimes defined recursively, whose domain is a subset of the integers. For example, the Fibonacci sequence is defined recursively by f(0) = f(1) = 1, f(n+1) = f(n) + f(n-1) for n ≥ 1.</li>
+                        
+                            <li><strong>F.IF.4</strong> - For a function that models a relationship between two quantities, interpret key features of graphs and tables in terms of the quantities, and sketch graphs showing key features given a verbal description of the relationship. Key features include: intercepts; intervals where the function is increasing, decreasing, positive, or negative; relative maximums and minimums; symmetries; end behavior; and periodicity.★</li>
+                        
+                            <li><strong>F.IF.5</strong> - Relate the domain of a function to its graph and, where applicable, to the quantitative relationship it describes. For example, if the function h(n) gives the number of person-hours it takes to assemble n engines in a factory, then the positive integers would be an appropriate domain for the function.★</li>
+                        
+                            <li><strong>F.IF.6</strong> - Calculate and interpret the average rate of change of a function (presented symbolically or as a table) over a specified interval. Estimate the rate of change from a graph.★</li>
+                        
+                            <li><strong>F.IF.7</strong> - Graph functions expressed symbolically and show key features of the graph, by hand in simple cases and using technology for more complicated cases.★</li>
+                        
+                            <li><strong>F.IF.9</strong> - Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions). For example, given a graph of one quadratic function and an algebraic expression for another, say which has the larger maximum.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>LE</strong> - Linear, Quadratic, And Exponential Models★</summary>
+                    <ul>
+                        
+                            <li><strong>F.LE.1</strong> - Distinguish between situations that can be modeled with linear functions and with exponential functions.</li>
+                        
+                            <li><strong>F.LE.2</strong> - Construct linear and exponential functions, including arithmetic and geometric sequences, given a graph, a description of a relationship, or two input-output pairs (include reading these from a table).</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>MP</strong> - Math Practices</summary>
+                    <ul>
+                        
+                            <li><strong>MP.1</strong> - Mathematically proficient students start by explaining to themselves the meaning of a problem and looking for entry points to its solution. They analyze givens, constraints, relationships, and goals. They make conjectures about the form and meaning of the solution and plan a solution pathway rather than simply jumping into a solution attempt. They consider analogous problems, and try special cases and simpler forms of the original problem in order to gain insight into its solution. They monitor and evaluate their progress and change course if necessary. Older students might, depending on the context of the problem, transform algebraic expressions or change the viewing window on their graphing calculator to get the information they need. Mathematically proficient students can explain correspondences between equations, verbal descriptions, tables, and graphs or draw diagrams of important features and relationships, graph data, and search for regularity or trends. Younger students might rely on using concrete objects or pictures to help conceptualize and solve a problem. Mathematically proficient students check their answers to problems using a different method, and they continually ask themselves, &quot;Does this make sense?&quot; They can understand the approaches of others to solving complex problems and identify correspondences between different approaches.</li>
+                        
+                            <li><strong>MP.2</strong> - Mathematically proficient students make sense of quantities and their relationships in problem situations. They bring two complementary abilities to bear on problems involving quantitative relationships: the ability to decontextualize—to abstract a given situation and represent it symbolically and manipulate the representing symbols as if they have a life of their own, without necessarily attending to their referents—and the ability to contextualize, to pause as needed during the manipulation process in order to probe into the referents for the symbols involved. Quantitative reasoning entails habits of creating a coherent representation of the problem at hand; considering the units involved; attending to the meaning of quantities, not just how to compute them; and knowing and flexibly using different properties of operations and objects.</li>
+                        
+                            <li><strong>MP.3</strong> - Mathematically proficient students understand and use stated assumptions, definitions, and previously established results in constructing arguments. They make conjectures and build a logical progression of statements to explore the truth of their conjectures. They are able to analyze situations by breaking them into cases, and can recognize and use counterexamples. They justify their conclusions, communicate them to others, and respond to the arguments of others. They reason inductively about data, making plausible arguments that take into account the context from which the data arose. Mathematically proficient students are also able to compare the effectiveness of two plausible arguments, distinguish correct logic or reasoning from that which is flawed, and—if there is a flaw in an argument—explain what it is. Elementary students can construct arguments using concrete referents such as objects, drawings, diagrams, and actions. Such arguments can make sense and be correct, even though they are not generalized or made formal until later grades. Later, students learn to determine domains to which an argument applies. Students at all grades can listen or read the arguments of others, decide whether they make sense, and ask useful questions to clarify or improve the arguments.</li>
+                        
+                            <li><strong>MP.4</strong> - Mathematically proficient students can apply the mathematics they know to solve problems arising in everyday life, society, and the workplace. In early grades, this might be as simple as writing an addition equation to describe a situation. In middle grades, a student might apply proportional reasoning to plan a school event or analyze a problem in the community. By high school, a student might use geometry to solve a design problem or use a function to describe how one quantity of interest depends on another. Mathematically proficient students who can apply what they know are comfortable making assumptions and approximations to simplify a complicated situation, realizing that these may need revision later. They are able to identify important quantities in a practical situation and map their relationships using such tools as diagrams, two-way tables, graphs, flowcharts and formulas. They can analyze those relationships mathematically to draw conclusions. They routinely interpret their mathematical results in the context of the situation and reflect on whether the results make sense, possibly improving the model if it has not served its purpose.</li>
+                        
+                            <li><strong>MP.5</strong> - Mathematically proficient students consider the available tools when solving a mathematical problem. These tools might include pencil and paper, concrete models, a ruler, a protractor, a calculator, a spreadsheet, a computer algebra system, a statistical package, or dynamic geometry software. Proficient students are sufficiently familiar with tools appropriate for their grade or course to make sound decisions about when each of these tools might be helpful, recognizing both the insight to be gained and their limitations. For example, mathematically proficient high school students analyze graphs of functions and solutions generated using a graphing calculator. They detect possible errors by strategically using estimation and other mathematical knowledge. When making mathematical models, they know that technology can enable them to visualize the results of varying assumptions, explore consequences, and compare predictions with data. Mathematically proficient students at various grade levels are able to identify relevant external mathematical resources, such as digital content located on a website, and use them to pose or solve problems. They are able to use technological tools to explore and deepen their understanding of concepts.</li>
+                        
+                            <li><strong>MP.6</strong> - Mathematically proficient students try to communicate precisely to others. They try to use clear definitions in discussion with others and in their own reasoning. They state the meaning of the symbols they choose, including using the equal sign consistently and appropriately. They are careful about specifying units of measure, and labeling axes to clarify the correspondence with quantities in a problem. They calculate accurately and efficiently, express numerical answers with a degree of precision appropriate for the problem context. In the elementary grades, students give carefully formulated explanations to each other. By the time they reach high school they have learned to examine claims and make explicit use of definitions.</li>
+                        
+                            <li><strong>MP.7</strong> - Mathematically proficient students look closely to discern a pattern or structure. Young students, for example, might notice that three and seven more is the same amount as seven and three more, or they may sort a collection of shapes according to how many sides the shapes have. Later, students will see 7 × 8 equals the well remembered 7 × 5 + 7 × 3, in preparation for learning about the distributive property. In the expression x2 + 9x + 14, older students can see the 14 as 2 × 7 and the 9 as 2 + 7. They recognize the significance of an existing line in a geometric figure and can use the strategy of drawing an auxiliary line for solving problems. They also can step back for an overview and shift perspective. They can see complicated things, such as some algebraic expressions, as single objects or as being composed of several objects. For example, they can see 5 - 3(x - y)2 as 5 minus a positive number times a square and use that to realize that its value cannot be more than 5 for any real numbers x and y.</li>
+                        
+                            <li><strong>MP.8</strong> - Mathematically proficient students notice if calculations are repeated, and look both for general methods and for shortcuts. Upper elementary students might notice when dividing 25 by 11 that they are repeating the same calculations over and over again, and conclude they have a repeating decimal. By paying attention to the calculation of slope as they repeatedly check whether points are on the line through (1, 2) with slope 3, middle school students might abstract the equation (y - 2)/(x - 1) = 3. Noticing the regularity in the way terms cancel when expanding (x - 1)(x + 1), (x - 1)(x2 + x + 1), and (x - 1)(x3 + x2 + x + 1) might lead them to the general formula for the sum of a geometric series. As they work to solve a problem, mathematically proficient students maintain oversight of the process, while attending to the details. They continually evaluate the reasonableness of their intermediate results.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>NS</strong> - The Number System</summary>
+                    <ul>
+                        
+                            <li><strong>6.NS.8</strong> - Solve real-world and mathematical problems by graphing points in all four quadrants of the coordinate plane. Include use of coordinates and absolute value to find distances between points with the same first coordinate or the same second coordinate.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>OA</strong> - Operations And Algebraic Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>5.OA.1</strong> - Use parentheses, brackets, or braces in numerical expressions, and evaluate expressions with these symbols.</li>
+                        
+                            <li><strong>5.OA.2</strong> - Write simple expressions that record calculations with numbers, and interpret numerical expressions without evaluating them. For example, express the calculation “add 8 and 7, then multiply by 2” as 2 × (8 + 7). Recognize that 3 × (18932 + 921) is three times as large as 18932 + 921, without having to calculate the indicated sum or product.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>Q</strong> - Quantities</summary>
+                    <ul>
+                        
+                            <li><strong>N.Q.1</strong> - Use units as a way to understand problems and to guide the solution of multi-step problems; choose and interpret units consistently in formulas; choose and interpret the scale and the origin in graphs and data displays.</li>
+                        
+                            <li><strong>N.Q.2</strong> - Define appropriate quantities for the purpose of descriptive modeling.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+
+    <script type="text/javascript">
+        $('#tocrocket-height').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#rocket-heightcontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'rocket-height', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+        $(function(){
+            $('.togglesay').live('click', function() {
+                $('.say').slideToggle();
+                $('.togglesay').toggle();
+            });
+        });
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            //$('<input type="checkbox" class="todo" name="' + (count++) + '"/>').prependTo(".prep ul li");
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+            // read the current/previous setting
+            $("input.todo").each(function() {
+                var mycookie = $.cookie($(this).attr('name'));
+                if (mycookie && mycookie == "true") {
+                    $(this).prop('checked', mycookie);
+                }
+            });
+            $("input.todo").change(function() {
+                $.cookie($(this).attr("name"), $(this).prop('checked'), {
+                    path: '/',
+                    expires: 365
+                });
+            });
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+    <!--<script type="text/javascript">
+        jQuery(function ($) {
+            $('body').annotator();
+        });
+    </script>-->
+
+    <!--<script type="text/javascript">
+        $(function() {
+            // Add conditional classname based on support
+            $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+            // Emulate <details> where necessary and enable open/close event handlers
+            $('details').details();
+            // Bind some example event handlers
+            $('details').on({
+                'open.details': function() {
+                    console.log('opened');
+                },
+                'close.details': function() {
+                    console.log('closed');
+                }
+            });
+        });
+    </script>-->
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"> </a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+<!--<script async defer src="https://factlink.com/lib/dist/factlink_loader.min.js"></script>-->
+</body>
+</html>

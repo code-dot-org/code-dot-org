@@ -2,7 +2,7 @@
  * Copyright (c) 2016 Anthony Bau.
  * MIT License.
  *
- * Date: 2016-03-08
+ * Date: 2016-03-29
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -4527,6 +4527,7 @@ function base64DetectIncompleteChar(buffer) {
     'sgmldeclaration',
     'doctype',
     'comment',
+    'opentagstart',
     'attribute',
     'opentag',
     'closetag',
@@ -5203,6 +5204,7 @@ function base64DetectIncompleteChar(buffer) {
       tag.ns = parent.ns
     }
     parser.attribList.length = 0
+    emitNode(parser, 'onopentagstart', tag)
   }
 
   function qname (name, attribute) {
@@ -5487,6 +5489,9 @@ function base64DetectIncompleteChar(buffer) {
     }
     if (chunk === null) {
       return end(parser)
+    }
+    if (typeof chunk === 'object') {
+      chunk = chunk.toString()
     }
     var i = 0
     var c = ''
@@ -6630,7 +6635,6 @@ Editor.prototype.redrawHighlights = function() {
     });
     this.maskFloatingPaths(this.draggingBlock.getDocument());
   }
-  this.redrawCursors();
   return this.redrawLassoHighlight();
 };
 
@@ -7394,7 +7398,7 @@ hook('mousemove', 1, function(point, event, state) {
   }
 });
 
-Editor.prototype.getClosestDroppableBlock = function(mainPoint) {
+Editor.prototype.getClosestDroppableBlock = function(mainPoint, isDebugMode) {
   var best, min, testPoints;
   best = null;
   min = Infinity;
@@ -7409,7 +7413,7 @@ Editor.prototype.getClosestDroppableBlock = function(mainPoint) {
   }, (function(_this) {
     return function(point) {
       var distance;
-      if (!((point.acceptLevel === helper.DISCOURAGE) && !event.shiftKey)) {
+      if (!((point.acceptLevel === helper.DISCOURAGE) && !isDebugMode)) {
         distance = mainPoint.from(point);
         distance.y *= 2;
         distance = distance.magnitude();
@@ -7423,13 +7427,13 @@ Editor.prototype.getClosestDroppableBlock = function(mainPoint) {
   return best;
 };
 
-Editor.prototype.getClosestDroppableBlockFromPosition = function(position) {
+Editor.prototype.getClosestDroppableBlockFromPosition = function(position, isDebugMode) {
   var mainPoint;
   if (!this.currentlyUsingBlocks) {
     return null;
   }
   mainPoint = this.trackerPointToMain(position);
-  return this.getClosestDroppableBlock(mainPoint);
+  return this.getClosestDroppableBlock(mainPoint, isDebugMode);
 };
 
 Editor.prototype.getAcceptLevel = function(drag, drop) {
@@ -7458,7 +7462,7 @@ hook('mousemove', 0, function(point, event, state) {
   if (this.draggingBlock != null) {
     position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
     if (this.draggingBlock.expansion) {
-      expansionText = this.draggingBlock.expansion(this.getClosestDroppableBlockFromPosition(position));
+      expansionText = this.draggingBlock.expansion(this.getClosestDroppableBlockFromPosition(position, event.shiftKey));
       if (expansionText !== this.draggingBlock.lastExpansionText) {
         newBlock = parseBlock(this.mode, expansionText);
         newBlock.lastExpansionText = expansionText;
@@ -7499,7 +7503,7 @@ hook('mousemove', 0, function(point, event, state) {
         this.dragReplacing = true;
       } else {
         this.dragReplacing = false;
-        dropBlock = this.getClosestDroppableBlock(mainPoint);
+        dropBlock = this.getClosestDroppableBlock(mainPoint, event.shiftKey);
       }
       if (dropBlock !== this.lastHighlight) {
         this.redrawHighlights();
@@ -7722,8 +7726,7 @@ hook('mouseup', 0, function(point, event, state) {
     this.draggingOffset = null;
     this.lastHighlight = null;
     this.clearDrag();
-    this.redrawMain();
-    return this.redrawHighlights();
+    return this.redrawMain();
   }
 });
 
@@ -8562,7 +8565,7 @@ Editor.prototype.resizeLassoCanvas = function() {
 
 Editor.prototype.clearLassoSelection = function() {
   this.lassoSelection = null;
-  return this.redrawMain();
+  return this.redrawHighlights();
 };
 
 hook('mousedown', 0, function(point, event, state) {
@@ -8705,7 +8708,7 @@ hook('mouseup', 0, function(point, event, state) {
     }
     this.lassoSelectAnchor = null;
     this.clearLassoSelectCanvas();
-    this.redrawMain();
+    this.redrawHighlights();
   }
   return this.lassoSelectionDocument = null;
 });
@@ -8785,7 +8788,6 @@ Editor.prototype.setCursor = function(destination, validate, direction) {
   this.correctCursor();
   this.redrawMain();
   this.highlightFlashShow();
-  this.redrawHighlights();
   if (this.cursorAtSocket()) {
     if (((ref1 = this.getCursor()) != null ? ref1.id : void 0) in this.extraMarks) {
       delete this.extraMarks[typeof focus !== "undefined" && focus !== null ? focus.id : void 0];

@@ -76,6 +76,9 @@ var GameLab = function () {
 
   consoleApi.setLogMethod(this.log.bind(this));
   errorHandler.setLogMethod(this.log.bind(this));
+
+  /** Expose for testing **/
+  window.__mostRecentGameLabInstance = this;
 };
 
 module.exports = GameLab;
@@ -282,6 +285,99 @@ GameLab.prototype.reset = function (ignore) {
   this.executionError = null;
 };
 
+GameLab.prototype.onPuzzleComplete = function (submit) {
+  if (this.executionError) {
+    this.result = this.studioApp_.ResultType.ERROR;
+  } else {
+    // In most cases, submit all results as success
+    this.result = this.studioApp_.ResultType.SUCCESS;
+  }
+
+  // If we know they succeeded, mark levelComplete true
+  var levelComplete = (this.result === this.studioApp_.ResultType.SUCCESS);
+
+  if (this.executionError) {
+    this.testResults = this.studioApp_.getTestResults(levelComplete, {
+        executionError: this.executionError
+    });
+  } else if (!submit) {
+    this.testResults = this.studioApp_.TestResults.FREE_PLAY;
+  }
+
+  // Stop everything on screen
+  this.reset();
+
+  if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
+    this.studioApp_.playAudio('win');
+  } else {
+    this.studioApp_.playAudio('failure');
+  }
+
+  var program;
+
+  if (this.level.editCode) {
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = this.studioApp_.getCode();
+  } else {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
+
+  this.waitingForReport = true;
+
+  var sendReport = function() {
+    this.studioApp_.report({
+      app: 'gamelab',
+      level: this.level.id,
+      result: levelComplete,
+      testResult: this.testResults,
+      submitted: submit,
+      program: encodeURIComponent(program),
+      image: this.encodedFeedbackImage,
+      onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
+    });
+
+    if (this.studioApp_.isUsingBlockly()) {
+      // reenable toolbox
+      Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+    }
+  }.bind(this);
+
+  var divGameLab = document.getElementById('divGameLab');
+  if (!divGameLab || typeof divGameLab.toDataURL === 'undefined') { // don't try it if function is not defined
+    sendReport();
+  } else {
+    divGameLab.toDataURL("image/png", {
+      callback: function(pngDataUrl) {
+        this.feedbackImage = pngDataUrl;
+        this.encodedFeedbackImage = encodeURIComponent(this.feedbackImage.split(',')[1]);
+
+        sendReport();
+      }.bind(this)
+    });
+  }
+};
+
+GameLab.prototype.onSubmitComplete = function (response) {
+  window.location.href = response.redirect;
+};
+
+/**
+ * Function to be called when the service report call is complete
+ * @param {object} JSON response (if available)
+ */
+GameLab.prototype.onReportComplete = function (response) {
+  this.response = response;
+  this.waitingForReport = false;
+  this.studioApp_.onReportComplete(response);
+  this.displayFeedback_();
+};
+
 /**
  * Click the run button.  Start the program.
  */
@@ -320,6 +416,11 @@ GameLab.prototype.evalCode = function(code) {
  * Execute the user's code.  Heaven help us...
  */
 GameLab.prototype.execute = function() {
+  this.result = this.studioApp_.ResultType.UNSET;
+  this.testResults = this.studioApp_.TestResults.NO_TESTS_RUN;
+  this.waitingForReport = false;
+  this.response = null;
+
   // Reset all state.
   this.studioApp_.reset();
   this.studioApp_.clearAndAttachRuntimeAnnotations();
@@ -328,7 +429,7 @@ GameLab.prototype.execute = function() {
       (this.studioApp_.hasExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())) {
     // immediately check answer, which will fail and report top level blocks
-    this.checkAnswer();
+    this.onPuzzleComplete();
     return;
   }
 
@@ -530,17 +631,6 @@ GameLab.prototype.executeCmd = function (id, name, opts) {
 };
 
 /**
- * Handle the tasks to be done after the user program is finished.
- */
-GameLab.prototype.finishExecution_ = function () {
-  // document.getElementById('spinner').style.visibility = 'hidden';
-  if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.highlightBlock(null);
-  }
-  this.checkAnswer();
-};
-
-/**
  * App specific displayFeedback function that calls into
  * this.studioApp_.displayFeedback when appropriate
  */
@@ -563,86 +653,7 @@ GameLab.prototype.displayFeedback_ = function() {
     saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: msg.reinfFeedbackMsg(),
-      sharingText: msg.shareDrawing()
+      sharingText: msg.shareGame()
     }
   });
-};
-
-/**
- * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
- */
-GameLab.prototype.onReportComplete = function(response) {
-  this.response = response;
-  // Disable the run button until onReportComplete is called.
-  var runButton = document.getElementById('runButton');
-  runButton.disabled = false;
-  this.displayFeedback_();
-};
-
-/**
- * Verify if the answer is correct.
- * If so, move on to next level.
- */
-GameLab.prototype.checkAnswer = function() {
-  var level = this.level;
-
-  // Test whether the current level is a free play level, or the level has
-  // been completed
-  var levelComplete = level.freePlay && (!level.editCode || !this.executionError);
-  this.testResults = this.studioApp_.getTestResults(levelComplete);
-
-  var program;
-  if (this.studioApp_.isUsingBlockly()) {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = Blockly.Xml.domToText(xml);
-  }
-
-  // Make sure we don't reuse an old message, since not all paths set one.
-  this.message = undefined;
-
-  if (level.editCode) {
-    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
-    // identical versions of the code on the service, we could do either of these:
-
-    // do an acorn.parse and then use escodegen to generate back a "clean" version
-    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
-
-    program = this.studioApp_.editor.getValue();
-  }
-
-  // If the current level is a free play, always return the free play
-  // result type
-  if (level.freePlay) {
-    this.testResults = this.studioApp_.TestResults.FREE_PLAY;
-  }
-
-  // Play sound
-  this.studioApp_.stopLoopingAudio('start');
-  if (this.testResults === this.studioApp_.TestResults.FREE_PLAY ||
-      this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
-    this.studioApp_.playAudio('win');
-  } else {
-    this.studioApp_.playAudio('failure');
-  }
-
-  var reportData = {
-    app: 'gamelab',
-    level: level.id,
-    builder: level.builder,
-    result: levelComplete,
-    testResult: this.testResults,
-    program: encodeURIComponent(program),
-    onComplete: this.onReportComplete.bind(this),
-    // save_to_gallery: level.impressive
-  };
-
-  this.studioApp_.report(reportData);
-
-  if (this.studioApp_.isUsingBlockly()) {
-    // reenable toolbox
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-  }
-
-  // The call to displayFeedback() will happen later in onReportComplete()
 };

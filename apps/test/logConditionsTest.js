@@ -95,4 +95,24 @@ describe('logConditions: getResultsFromLog', function () {
     assert.deepEqual(results, { testResult: TestResults.LEVEL_INCOMPLETE_FAIL, message: 'test-10' });
   });
 
+  it ('returns ALL_PASS with two item inexact logCondition not exceeding maxTimes', function () {
+    var results = executionLog.getResultsFromLog(
+        [
+          { entries: ['function1', 'function2'], matchType: 'inexact', maxTimes: 2, message: 'test-11' },
+        ],
+        ['function1', 'other', 'function2', 'function1', 'function2']);
+
+    assert.equal(results.testResult, TestResults.ALL_PASS);
+  });
+
+  it ('returns failure and message with two item inexact logCondition exceeding maxTimes', function () {
+    var results = executionLog.getResultsFromLog(
+        [
+          { entries: ['function1', 'function2'], matchType: 'inexact', maxTimes: 2, message: 'test-12' },
+        ],
+        ['function1', 'other', 'function2', 'function1', 'function2', 'other', 'function1', 'function2']);
+
+    assert.deepEqual(results, { testResult: TestResults.LEVEL_INCOMPLETE_FAIL, message: 'test-12' });
+  });
+
 });

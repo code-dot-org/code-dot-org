@@ -28,20 +28,110 @@ We provide a Professional Learning Program that prepares teachers to implement C
 
 ## What's the difference between CS in Algebra and Bootstrap?
 
-Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](https://www.bootstrapworld.org). The primary goal of our modification was to merge Bootstrap’s content and pedagogy with our block-based language, online learning system, and scaffolding teaching paradigm. Additionally we have divided the original content from Bootstrap into two separate courses to simplify implementation for teachers who are concerned that they don’t have enough time for the full 20 hours. Depending on the needs of your school or classroom, each curriculum offers a different mix of pedagogy, content and curricular design:
+Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](https://www.bootstrapworld.org). The primary goal of our modification was to merge Bootstrap’s content and pedagogy with our block-based language, online learning system, and scaffolding teaching paradigm. Additionally we have divided the original content from Bootstrap into two separate courses to simplify implementation for teachers who are concerned that they don’t have enough time for the full 20 hours. And, starting in 2016-2017, Code.org's in person professional development will focus on Course A. For schools that want to invest more in CS, Bootstrap offers a deeper curriculum that gives classrooms the flexibility of going beyond 20 hours and a longer in person professional development workshop covering 20 hours of material.  Depending on the needs of your school or classroom, each curriculum offers a different mix of pedagogy, content and curricular design:
 
-|                                 | Code.org CS in Algebra                                                                                                                                                                                                                                                                                                                                                                                    | Bootstrap                                                                                                                                                                                                                                                                                                                                                                   |
-|---------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Programming Language            | Block-based                                                                                                                                                                                                                                                                                                                                                                                               | Text-based                                                                                                                                                                                                                                                                                                                                                                  |
-| Instructional Scaffolding       | Puzzle based scaffolding for all programming lessons combined with pseudocode-based pencil and paper activities.                                                                                                                                                                                                                                                                                          | Pencil and paper workbook activities using the same text language students will use online.                                                                                                                                                                                                                                                                                 |
-| Activity Focus                  | Combination of structured puzzles and open-ended problems                                                                                                                                                                                                                                                                                                                                                 | Completing open-ended problems                                                                                                                                                                                                                                                                                                                                              |
-| Requires a Computer             | Programming puzzles require a computer. Unplugged lessons are entirely offline, and some programming activities include complimentary workbook pages.                                                                                                                                                                                                                                                     | All Bootstrap activities are scaffolded by a workbook page, which can be done without a computer.                                                                                                                                                                                                                                                                           |
-| Supporting Tools                | Student account creation and management<br/>Class progress monitor<br/>Solution viewer                                                                                                                                                                                                                                                                                                                            | Google login<br/>Solution viewer                                                                                                                                                                                                                                                                                                                                                |
-| Supplemental Materials          | Lesson slide decks<br/>Challenge activities<br/>Rubrics<br/>Student and teacher facing videos                                                                                                                                                                                                                                                                                                                         | Lesson slide decks<br/>Challenge activities<br/>Rubrics<br/>Homework assignments<br/>Warmup Activities<br/>Exit slips<br/>Assessments<br/>Supplemental lessons                                                                                                                                                                                                                                          |
-| Pathway for Continuing Students | CS in Algebra Course B<br/>Bootstrap:1                                                                                                                                                                                                                                                                                                                                                                        | Bootstrap:2<br/>Picturing Programs<br/>How to Design Programs                                                                                                                                                                                                                                                                                                                       |
-| Evaluation and Publication      | Undergoing independent evaluation                                                                                                                                                                                                                                                                                                                                                                         | Independently evaluated with [published transfer results](http://cs.brown.edu/~sk/Publications/Papers/Published/sfkf-trans-word-prob-comp-alg-bs/)                                                                                                                                                                                                                                                                                                                     |
-| Professional Development        | In person [workshops with supplemental online professional development](/educate/professional-learning/cs-in-algebra) covering Course A only                                                                                                                                                                                                                                                                                                                                                 | In person [workshops](http://www.bootstrapworld.org/workshops/) covering the entire course                                                                                                                                                                                                                                                                                                               |
-| Curriculum Progression          | **Course A** <br/>Order of Operations and Circles of Evaluation<br/>Data types (Numbers, Strings, and Images)<br/>Variables<br/>Contracts - Domain and Range<br/>Defining linear functions<br/>The Design Recipe<br/><br/> **Course B**<br/>Video Games and Coordinate Planes<br/>Functions to Animate<br/>Booleans and Boundary Detection<br/>Conditionals and Piecewise Functions<br/>Collision Detection and the Pythagorean Theorem | Video Games and Coordinate Planes<br/>Order of Operations and Circles of Evaluation<br/>Data types (Numbers, Strings, and Images)<br/>Variables<br/>Contracts - Domain and Range<br/>Defining linear functions<br/>The Design Recipe<br/>Functions to animate<br/>Booleans and Boundary Detection<br/>Conditionals and Piecewise Functions<br/>Collision Detection and the Pythagorean Theorem |
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th width="45%"><strong>Code.org CS in Algebra</strong></th>
+      <th width="45%"><strong>Bootstrap</strong></th>
+    </tr>
+  </thead>
+  <tbody valign="top">
+    <tr>
+      <td><strong>Programming Language</strong></td>
+      <td>Block-based<br/><img src="algebra/img/blocks.png" style="width: auto; max-width: 250px"/></td>
+      <td>Text-based<br/><img src="algebra/img/text.png" style="width: auto; max-width: 250px"/></td>
+    </tr>
+    <tr>
+      <td><strong>Instructional Scaffolding</td>
+      <td>Puzzle based scaffolding for all programming lessons combined with pseudocode-based pencil and paper activities.</td>
+      <td>Pencil and paper workbook activities using the same text language students will use online.</td>
+    </tr>
+    <tr>
+      <td><strong>Activity Focus</strong></td>
+      <td>Combination of structured puzzles and open-ended problems</td>
+      <td>Completing open-ended problems</td>
+    </tr>
+    <tr>
+      <td><strong>Requires a Computer</strong></td>
+      <td>Programming puzzles require a computer. Unplugged lessons are entirely offline, and some programming activities include complementary workbook pages.</td>
+      <td>All Bootstrap activities are scaffolded by a workbook page, which can be done without a computer.</td>
+    </tr>
+    <tr>
+      <td><strong>Supporting Tools</strong></td>
+      <td>Student account creation and management
+        <br>Class progress monitor
+        <br>Solution viewer</td>
+      <td>Google login
+        <br>Solution viewer</td>
+    </tr>
+    <tr>
+      <td><strong>Supplemental Materials</strong></td>
+      <td>Lesson slide decks
+        <br>Challenge activities
+        <br>Rubrics
+        <br>Student and teacher facing videos</td>
+      <td>Lesson slide decks
+        <br>Challenge activities
+        <br>Rubrics
+        <br>Homework assignments
+        <br>Warmup Activities
+        <br>Exit slips
+        <br>Assessments
+        <br>Supplemental lessons</td>
+    </tr>
+    <tr>
+      <td><strong>Pathway for Continuing Students</strong></td>
+      <td>CS in Algebra Course B
+        <br>Bootstrap:1</td>
+      <td>Bootstrap:2
+        <br>Picturing Programs
+        <br>How to Design Programs</td>
+    </tr>
+    <tr>
+      <td><strong>Evaluation and Publication</strong></td>
+      <td>Undergoing independent evaluation</td>
+      <td>Independently evaluated with <a href="http://cs.brown.edu/%7Esk/Publications/Papers/Published/sfkf-trans-word-prob-comp-alg-bs/">published transfer results</a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Professional Development</strong></td>
+      <td>In person <a href="/educate/professional-learning/cs-in-algebra">workshops with supplemental online professional development</a> covering Course A only</td>
+      <td>In person <a href="http://www.bootstrapworld.org/workshops/">workshops</a> covering the entire course</td>
+    </tr>
+    <tr>
+      <td><strong>Curriculum Progression</strong></td>
+      <td>
+        <strong>Course A</strong> 
+        <br>Order of Operations and Circles of Evaluation
+        <br>Data types (Numbers, Strings, and Images)
+        <br>Variables
+        <br>Contracts - Domain and Range
+        <br>Defining linear functions
+        <br>The Design Recipe
+        <br>
+        <br> <strong>Course B</strong>
+        <br>Video Games and Coordinate Planes
+        <br>Functions to Animate
+        <br>Booleans and Boundary Detection
+        <br>Conditionals and Piecewise Functions
+        <br>Collision Detection and the Pythagorean Theorem</td>
+      <td>Video Games and Coordinate Planes
+        <br>Order of Operations and Circles of Evaluation
+        <br>Data types (Numbers, Strings, and Images)
+        <br>Variables
+        <br>Contracts - Domain and Range
+        <br>Defining linear functions
+        <br>The Design Recipe
+        <br>Functions to animate
+        <br>Booleans and Boundary Detection
+        <br>Conditionals and Piecewise Functions
+        <br>Collision Detection and the Pythagorean Theorem</td>
+    </tr>
+  </tbody>
+</table>
 
 ## I taught CS in Algebra in 2015-2016, how is this different?
 

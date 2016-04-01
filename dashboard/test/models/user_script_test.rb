@@ -85,7 +85,8 @@ class UserScriptTest < ActiveSupport::TestCase
     task2 = create(:plc_script_completion_task, plc_learning_module: learning_module, script_id: @script.id + 50, name: 'script 2')
 
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: course)
-    unit_enrollment = Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: enrollment, plc_course_unit: course_unit)
+    unit_enrollment = Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: enrollment, plc_course_unit: course_unit,
+                                                           status: Plc::EnrollmentUnitAssignment::START_BLOCKED)
     unit_enrollment.enroll_user_in_unit_with_learning_modules([learning_module])
 
     #First should be completed, second should not
