@@ -282,47 +282,47 @@ describe("NetSimRouterNode", function () {
     var routerFromRow;
 
     it("routerNumber", function () {
-      routerFromRow = makeLocalRouter({ routerNumber: 42 });
+      routerFromRow = makeLocalRouter({routerNumber: 42});
       assert.equal(42, routerFromRow.routerNumber);
     });
 
     it("creationTime", function () {
-      routerFromRow = makeLocalRouter({ creationTime: 42 });
+      routerFromRow = makeLocalRouter({creationTime: 42});
       assert.closeTo(routerFromRow.creationTime, 42, 10);
     });
 
     it("dnsMode", function () {
-      routerFromRow = makeLocalRouter({ dnsMode: DnsMode.AUTOMATIC });
+      routerFromRow = makeLocalRouter({dnsMode: DnsMode.AUTOMATIC});
       assert.equal(DnsMode.AUTOMATIC, routerFromRow.dnsMode);
     });
 
     it("dnsNodeID", function () {
-      routerFromRow = makeLocalRouter({ dnsNodeID: 42 });
+      routerFromRow = makeLocalRouter({dnsNodeID: 42});
       assert.equal(42, routerFromRow.dnsNodeID);
     });
 
     it("bandwidth", function () {
-      routerFromRow = makeLocalRouter({ bandwidth: 1024 });
+      routerFromRow = makeLocalRouter({bandwidth: 1024});
       assert.equal(1024, routerFromRow.bandwidth);
 
       // Special case: Bandwidth should be able to serialize in Infinity
       // from the string 'Infinity' in the database.
-      routerFromRow = makeLocalRouter({ bandwidth: 'Infinity' });
+      routerFromRow = makeLocalRouter({bandwidth: 'Infinity'});
       assert.equal(Infinity, routerFromRow.bandwidth);
     });
 
     it("memory", function () {
-      routerFromRow = makeLocalRouter({ memory: 1024 });
+      routerFromRow = makeLocalRouter({memory: 1024});
       assert.equal(1024, routerFromRow.memory);
 
       // Special case: Memory should be able to serialize in Infinity
       // from the string 'Infinity' in the database.
-      routerFromRow = makeLocalRouter({ memory: 'Infinity' });
+      routerFromRow = makeLocalRouter({memory: 'Infinity'});
       assert.equal(Infinity, routerFromRow.memory);
     });
 
     it("randomDropChance", function () {
-      routerFromRow = makeLocalRouter({ randomDropChance: 0.1 });
+      routerFromRow = makeLocalRouter({randomDropChance: 0.1});
       assert.equal(0.1, routerFromRow.randomDropChance);
     });
   });
@@ -791,7 +791,7 @@ describe("NetSimRouterNode", function () {
     var assertLoopbackWorks = function (forClient) {
       // Construct a message with a timestamp payload, to ensure calls to
       // this method don't conflict with one another.
-      var headers = encoder.makeBinaryHeaders({ toAddress: forClient.getAddress()});
+      var headers = encoder.makeBinaryHeaders({toAddress: forClient.getAddress()});
       var payload = encoder.concatenateBinary(headers, new Date().getTime().toString(2));
       forClient.sendMessage(payload, function () {});
       time = tickUntilLogsStabilize(forClient, time);

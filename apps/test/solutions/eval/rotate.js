@@ -4,12 +4,12 @@ var blockUtils = require('@cdo/apps/block_utils');
 
 var solutionXml = blockUtils.mathBlockXml('rotate', {
   'IMAGE': blockUtils.mathBlockXml('functional_rectangle', {
-    'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } ),
-    'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 100 } ),
-    'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-    'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' })
+    'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} ),
+    'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 100} ),
+    'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'} ),
+    'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'})
   }),
-  'DEGREES': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 45 } )
+  'DEGREES': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 45} )
 });
 
 module.exports = {

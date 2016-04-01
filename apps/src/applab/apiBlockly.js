@@ -10,58 +10,58 @@ exports.container = function (blockId, elementId, html) {
   return Applab.executeCmd(blockId,
                           'container',
                           {'elementId': elementId,
-                           'html': html });
+                           'html': html});
 };
 
 exports.write = function (blockId, html) {
   return Applab.executeCmd(blockId,
                           'write',
-                          {'html': html });
+                          {'html': html});
 };
 
 exports.innerHTML = function (blockId, elementId, html) {
   return Applab.executeCmd(blockId,
                           'innerHTML',
                           {'elementId': elementId,
-                           'html': html });
+                           'html': html});
 };
 
 exports.deleteElement = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'deleteElement',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.showElement = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'showElement',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.hideElement = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'hideElement',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.setScreen = function (blockId, screenId) {
   return Applab.executeCmd(blockId,
                           'setScreen',
-                          {'screenId': screenId });
+                          {'screenId': screenId});
 };
 
 exports.button = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
                           'button',
                           {'elementId': elementId,
-                           'text': text });
+                           'text': text});
 };
 
 exports.image = function (blockId, elementId, src) {
   return Applab.executeCmd(blockId,
                           'image',
                           {'elementId': elementId,
-                           'src': src });
+                           'src': src});
 };
 
 exports.setPosition = function (blockId, elementId, left, top, width, height) {
@@ -71,7 +71,7 @@ exports.setPosition = function (blockId, elementId, left, top, width, height) {
                            'left': left,
                            'top': top,
                            'width': width,
-                           'height': height });
+                           'height': height});
 };
 
 exports.setSize = function (blockId, elementId, width, height) {
@@ -79,20 +79,20 @@ exports.setSize = function (blockId, elementId, width, height) {
                           'setSize',
                           {'elementId': elementId,
                            'width': width,
-                           'height': height });
+                           'height': height});
 };
 
 
 exports.getXPosition = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'getXPosition',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.getYPosition = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'getYPosition',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.createCanvas = function (blockId, elementId, width, height) {
@@ -100,13 +100,13 @@ exports.createCanvas = function (blockId, elementId, width, height) {
                           'createCanvas',
                           {'elementId': elementId,
                            'width': width,
-                           'height': height });
+                           'height': height});
 };
 
 exports.setActiveCanvas = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'setActiveCanvas',
-                          {'elementId': elementId  });
+                          {'elementId': elementId});
 };
 
 exports.line = function (blockId, x1, y1, x2, y2) {
@@ -115,7 +115,7 @@ exports.line = function (blockId, x1, y1, x2, y2) {
                           {'x1': x1,
                            'y1': y1,
                            'x2': x2,
-                           'y2': y2 });
+                           'y2': y2});
 };
 
 exports.circle = function (blockId, x, y, radius) {
@@ -123,7 +123,7 @@ exports.circle = function (blockId, x, y, radius) {
                           'circle',
                           {'x': x,
                            'y': y,
-                           'radius': radius });
+                           'radius': radius});
 };
 
 exports.rect = function (blockId, x, y, width, height) {
@@ -132,25 +132,25 @@ exports.rect = function (blockId, x, y, width, height) {
                           {'x': x,
                            'y': y,
                            'width': width,
-                           'height': height });
+                           'height': height});
 };
 
 exports.setStrokeWidth = function (blockId, width) {
   return Applab.executeCmd(blockId,
                           'setStrokeWidth',
-                          {'width': width });
+                          {'width': width});
 };
 
 exports.setStrokeColor = function (blockId, color) {
   return Applab.executeCmd(blockId,
                           'setStrokeColor',
-                          {'color': color });
+                          {'color': color});
 };
 
 exports.setFillColor = function (blockId, color) {
   return Applab.executeCmd(blockId,
                           'setFillColor',
-                          {'color': color });
+                          {'color': color});
 };
 
 exports.clearCanvas = function (blockId) {
@@ -164,7 +164,7 @@ exports.drawImage = function (blockId, imageId, x, y, width, height) {
                            'x': x,
                            'y': y,
                            'width': width,
-                           'height': height });
+                           'height': height});
 };
 
 exports.getImageData = function (blockId, x, y, width, height) {
@@ -173,7 +173,7 @@ exports.getImageData = function (blockId, x, y, width, height) {
                           {'x': x,
                            'y': y,
                            'width': width,
-                           'height': height });
+                           'height': height});
 };
 
 exports.putImageData = function (blockId, imageData, x, y) {
@@ -181,14 +181,14 @@ exports.putImageData = function (blockId, imageData, x, y) {
                           'putImageData',
                           {'imageData': imageData,
                            'x': x,
-                           'y': y });
+                           'y': y});
 };
 
 exports.textInput = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
                           'textInput',
                           {'elementId': elementId,
-                           'text': text });
+                           'text': text});
 };
 
 exports.textLabel = function (blockId, elementId, text, forId) {
@@ -196,14 +196,14 @@ exports.textLabel = function (blockId, elementId, text, forId) {
                           'textLabel',
                           {'elementId': elementId,
                            'text': text,
-                           'forId': forId });
+                           'forId': forId});
 };
 
 exports.checkbox = function (blockId, elementId, checked) {
   return Applab.executeCmd(blockId,
                           'checkbox',
                           {'elementId': elementId,
-                           'checked': checked });
+                           'checked': checked});
 };
 
 exports.radioButton = function (blockId, elementId, checked, name) {
@@ -211,20 +211,20 @@ exports.radioButton = function (blockId, elementId, checked, name) {
                           'radioButton',
                           {'elementId': elementId,
                            'checked': checked,
-                           'name': name });
+                           'name': name});
 };
 
 exports.getChecked = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'getChecked',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.setChecked = function (blockId, elementId, checked) {
   return Applab.executeCmd(blockId,
                           'setChecked',
                           {'elementId': elementId,
-                           'checked': checked });
+                           'checked': checked});
 };
 
 exports.dropdown = function (blockId, elementId) {
@@ -232,7 +232,7 @@ exports.dropdown = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'dropdown',
                           {'elementId': elementId,
-                           'optionsArray': optionsArray });
+                           'optionsArray': optionsArray});
 };
 
 exports.getAttribute = function(blockId, elementId, attribute) {
@@ -253,61 +253,61 @@ exports.setAttribute = function(blockId, elementId, attribute, value) {
 exports.getText = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'getText',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.setText = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
                           'setText',
                           {'elementId': elementId,
-                           'text': text });
+                           'text': text});
 };
 
 exports.getNumber = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'getNumber',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.setNumber = function (blockId, elementId, number) {
   return Applab.executeCmd(blockId,
                           'setNumber',
                           {'elementId': elementId,
-                           'number': number });
+                           'number': number});
 };
 
 exports.getImageURL = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'getImageURL',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.setImageURL = function (blockId, elementId, src) {
   return Applab.executeCmd(blockId,
                           'setImageURL',
                           {'elementId': elementId,
-                           'src': src });
+                           'src': src});
 };
 
 exports.imageUploadButton = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
                            'imageUploadButton',
                            {'elementId': elementId,
-                            'text': text });
+                            'text': text});
 };
 
 exports.setParent = function (blockId, elementId, parentId) {
   return Applab.executeCmd(blockId,
                           'setParent',
                           {'elementId': elementId,
-                           'parentId': parentId });
+                           'parentId': parentId});
 };
 
 exports.setStyle = function (blockId, elementId, style) {
   return Applab.executeCmd(blockId,
                            'setStyle',
                            {'elementId': elementId,
-                           'style': style });
+                           'style': style});
 };
 
 exports.onEvent = function (blockId, elementId, eventName, func) {
@@ -324,33 +324,33 @@ exports.startWebRequest = function (blockId, url, func) {
   return Applab.executeCmd(blockId,
                           'startWebRequest',
                           {'url': url,
-                           'func': func });
+                           'func': func});
 };
 
 exports.setTimeout = function (blockId, func, milliseconds) {
   return Applab.executeCmd(blockId,
                           'setTimeout',
                           {'func': func,
-                           'milliseconds': milliseconds });
+                           'milliseconds': milliseconds});
 };
 
 exports.clearTimeout = function (blockId, timeoutId) {
   return Applab.executeCmd(blockId,
                            'clearTimeout',
-                           {'timeoutId': timeoutId });
+                           {'timeoutId': timeoutId});
 };
 
 exports.setInterval = function (blockId, func, milliseconds) {
   return Applab.executeCmd(blockId,
                           'setInterval',
                           {'func': func,
-                           'milliseconds': milliseconds });
+                           'milliseconds': milliseconds});
 };
 
 exports.clearInterval = function (blockId, intervalId) {
   return Applab.executeCmd(blockId,
                            'clearInterval',
-                           {'intervalId': intervalId });
+                           {'intervalId': intervalId});
 };
 
 exports.playSound = function (blockId, url) {
@@ -428,65 +428,65 @@ exports.getUserId = function (blockId) {
 exports.moveForward = function (blockId, distance) {
   return Applab.executeCmd(blockId,
                           'moveForward',
-                          {'distance': distance });
+                          {'distance': distance});
 };
 
 exports.moveBackward = function (blockId, distance) {
   return Applab.executeCmd(blockId,
                           'moveBackward',
-                          {'distance': distance });
+                          {'distance': distance});
 };
 
 exports.move = function (blockId, x, y) {
   return Applab.executeCmd(blockId,
                           'move',
                           {'x': x,
-                           'y': y });
+                           'y': y});
 };
 
 exports.moveTo = function (blockId, x, y) {
   return Applab.executeCmd(blockId,
                           'moveTo',
                           {'x': x,
-                           'y': y });
+                           'y': y});
 };
 
 exports.turnRight = function (blockId, degrees) {
   return Applab.executeCmd(blockId,
                           'turnRight',
-                          {'degrees': degrees });
+                          {'degrees': degrees});
 };
 
 exports.turnLeft = function (blockId, degrees) {
   return Applab.executeCmd(blockId,
                           'turnLeft',
-                          {'degrees': degrees });
+                          {'degrees': degrees});
 };
 
 exports.turnTo = function (blockId, direction) {
   return Applab.executeCmd(blockId,
                            'turnTo',
-                           {'direction': direction });
+                           {'direction': direction});
 };
 
 exports.arcRight = function (blockId, degrees, radius) {
   return Applab.executeCmd(blockId,
                            'arcRight',
                            {'degrees': degrees,
-                            'radius': radius });
+                            'radius': radius});
 };
 
 exports.arcLeft = function (blockId, degrees, radius) {
   return Applab.executeCmd(blockId,
                            'arcLeft',
                            {'degrees': degrees,
-                            'radius': radius });
+                            'radius': radius});
 };
 
 exports.dot = function (blockId, radius) {
   return Applab.executeCmd(blockId,
                            'dot',
-                           {'radius': radius });
+                           {'radius': radius});
 };
 
 exports.getX = function (blockId) {
@@ -526,13 +526,13 @@ exports.speed = function (blockId, percent) {
 exports.penWidth = function (blockId, width) {
   return Applab.executeCmd(blockId,
                           'penWidth',
-                          {'width': width });
+                          {'width': width});
 };
 
 exports.penColor = function (blockId, color) {
   return Applab.executeCmd(blockId,
                           'penColor',
-                          {'color': color });
+                          {'color': color});
 };
 
 exports.penRGB = function (blockId, r, g, b, a) {
@@ -541,7 +541,7 @@ exports.penRGB = function (blockId, r, g, b, a) {
                           {'r': r,
                            'g': g,
                            'b': b,
-                           'a': a });
+                           'a': a});
 };
 
 exports.insertItem = function (blockId, array, index, item) {
@@ -549,21 +549,21 @@ exports.insertItem = function (blockId, array, index, item) {
                           'insertItem',
                           {'array': array,
                            'index': index,
-                           'item': item });
+                           'item': item});
 };
 
 exports.appendItem = function (blockId, array, item) {
   return Applab.executeCmd(blockId,
                           'appendItem',
                           {'array': array,
-                           'item': item });
+                           'item': item});
 };
 
 exports.removeItem = function (blockId, array, index) {
   return Applab.executeCmd(blockId,
                           'removeItem',
                           {'array': array,
-                           'index': index });
+                           'index': index});
 };
 
 exports.drawChart = function (chartId, chartType, chartData, options, callback) {
@@ -573,7 +573,7 @@ exports.drawChart = function (chartId, chartType, chartData, options, callback) 
                            'chartType': chartType,
                            'chartData': chartData,
                            'options': options,
-                           'callback': callback });
+                           'callback': callback});
 };
 
 exports.drawChartFromRecords = function (chartId, chartType, tableName, columns, options, callback) {
@@ -584,5 +584,5 @@ exports.drawChartFromRecords = function (chartId, chartType, tableName, columns,
                            'tableName': tableName,
                            'columns': columns,
                            'options': options,
-                           'callback': callback });
+                           'callback': callback});
 };

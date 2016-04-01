@@ -4,11 +4,11 @@ var blockUtils = require('@cdo/apps/block_utils');
 
 var solutionXml = blockUtils.mathBlockXml('scale', {
   'IMAGE': blockUtils.mathBlockXml('functional_square', {
-    'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } ),
-    'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-    'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' })
+    'SIZE': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} ),
+    'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'} ),
+    'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'solid'})
   }),
-  'FACTOR': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 2 } )
+  'FACTOR': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 2} )
 });
 
 module.exports = {
@@ -60,11 +60,11 @@ module.exports = {
       xml: '<xml>' +
         blockUtils.mathBlockXml('scale', {
           'IMAGE': blockUtils.mathBlockXml('functional_square', {
-            'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 25 } ),
-            'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-            'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' })
+            'SIZE': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 25} ),
+            'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'} ),
+            'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'solid'})
           }),
-          'FACTOR': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 4 } )
+          'FACTOR': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 4} )
         }) +
       '</xml>'
     },
@@ -75,9 +75,9 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       xml: '<xml>' + blockUtils.mathBlockXml('functional_square', {
-        'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 100 } ),
-        'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-        'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' })
+        'SIZE': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 100} ),
+        'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'} ),
+        'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'solid'})
       }) +
       '</xml>'
     }

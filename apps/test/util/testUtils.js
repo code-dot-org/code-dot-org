@@ -57,7 +57,7 @@ exports.setupLocale = setupLocale;
 function setupLocales() {
   // make sure Blockly is loaded
   require('./frame')();
-  require('../../build/package/js/en_us/*_locale*.js', { mode: 'expand'});
+  require('../../build/package/js/en_us/*_locale*.js', {mode: 'expand'});
   assert(window.blockly.applab_locale);
 }
 
@@ -273,7 +273,7 @@ exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
     for (var prop in e) {
       evt[prop] = e[prop];
     }
-    evt.button = { 0:1, 1:4, 2:2 }[evt.button] || evt.button;
+    evt.button = {0:1, 1:4, 2:2}[evt.button] || evt.button;
   }
   return evt;
 };

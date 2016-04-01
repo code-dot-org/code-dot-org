@@ -33,13 +33,13 @@ describe("NetSimLogPanel", function () {
   });
 
   it("can be configured to be closed on creation", function () {
-    panel = new NetSimLogPanel(rootDiv, { isMinimized: true });
+    panel = new NetSimLogPanel(rootDiv, {isMinimized: true});
     assert.isTrue(panel.isMinimized());
   });
 
   it("renders body on construction", function () {
     var initialHtml = rootDiv.html();
-    panel = new NetSimLogPanel(rootDiv, { isMinimized: true });
+    panel = new NetSimLogPanel(rootDiv, {isMinimized: true});
     var newHtml = rootDiv.html();
     assert.notEqual(initialHtml, newHtml);
     assert(newHtml.length > initialHtml.length);

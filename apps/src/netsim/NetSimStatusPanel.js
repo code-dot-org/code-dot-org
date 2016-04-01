@@ -63,7 +63,7 @@ NetSimStatusPanel.prototype.render = function (data) {
 
   // Add a button to the panel header
   this.addButton(
-      i18n.disconnectButton({ caret: '<i class="fa fa-caret-left"></i>' }),
+      i18n.disconnectButton({caret: '<i class="fa fa-caret-left"></i>'}),
       this.disconnectCallback_);
 
   // Button that takes you to the next level.

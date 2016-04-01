@@ -282,7 +282,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         if (evaluation.err) {
           if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
               utils.isInfiniteRecursionError(evaluation.err)) {
-            return { err: evaluation.err };
+            return {err: evaluation.err};
           }
           continue;
         }
@@ -297,7 +297,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         evaluation = equation.expression.evaluate(mapping);
         if (evaluation.err) {
           if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
-            return { err: evaluation.err };
+            return {err: evaluation.err};
           }
         } else {
           // we have a variable that hasn't yet been mapped and can be

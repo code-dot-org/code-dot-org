@@ -20,12 +20,12 @@ var CodeWritten = React.createClass({
     };
 
     lines = (<p id="num-lines-of-code" className="lines-of-code-message">
-      {msg.numLinesOfCodeWritten({ numLines: this.props.numLinesWritten })}
+      {msg.numLinesOfCodeWritten({numLines: this.props.numLinesWritten})}
     </p>);
 
     if (this.props.totalNumLinesWritten !== 0) {
       totalLines = (<p id="total-num-lines-of-code" className="lines-of-code-message">
-        {msg.totalNumLinesOfCodeWritten({ numLines: this.props.totalNumLinesWritten })}
+        {msg.totalNumLinesOfCodeWritten({numLines: this.props.totalNumLinesWritten})}
       </p>);
     }
 

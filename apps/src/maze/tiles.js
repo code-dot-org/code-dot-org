@@ -30,8 +30,8 @@ Tiles.SquareType = {
   STARTANDFINISH: 5
 };
 
-Tiles.TurnDirection = { LEFT: -1, RIGHT: 1};
-Tiles.MoveDirection = { FORWARD: 0, RIGHT: 1, BACKWARD: 2, LEFT: 3};
+Tiles.TurnDirection = {LEFT: -1, RIGHT: 1};
+Tiles.MoveDirection = {FORWARD: 0, RIGHT: 1, BACKWARD: 2, LEFT: 3};
 
 Tiles.directionToDxDy = function(direction) {
   switch (direction) {

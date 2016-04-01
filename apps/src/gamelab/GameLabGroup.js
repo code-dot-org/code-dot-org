@@ -42,7 +42,7 @@ module.exports.Group = function (baseConstructor) {
       if (!state.__subState) {
         // Before we call AABBops (another stateful function), hang a __subState
         // off of state, so it can use that instead to track its state:
-        state.__subState = { doneExec: true };
+        state.__subState = {doneExec: true};
       }
       var resultAABBops = this.get(state.__i).AABBops(type, target, callback);
       if (state.__subState.doneExec) {

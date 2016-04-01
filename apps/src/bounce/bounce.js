@@ -731,7 +731,7 @@ Bounce.init = function(config) {
           Bounce.paddleFinish_[Bounce.paddleFinishCount] = {x: x, y: y};
           Bounce.paddleFinishCount++;
         } else if (Bounce.map[y][x] & SquareType.BALLSTART) {
-          Bounce.ballStart_[Bounce.ballCount] = { x: x, y: y};
+          Bounce.ballStart_[Bounce.ballCount] = {x: x, y: y};
           Bounce.ballCount++;
         } else if (Bounce.map[y][x] & SquareType.PADDLESTART) {
           Bounce.paddleStart_ = {x: x, y: y};
@@ -750,13 +750,13 @@ Bounce.init = function(config) {
 
   // Block placement default (used as fallback in the share levels)
   config.blockArrangement = {
-    'when_run': { x: 20, y: 20},
-    'bounce_whenLeft': { x: 20, y: 220},
-    'bounce_whenRight': { x: 180, y: 220},
-    'bounce_whenPaddleCollided': { x: 20, y: 310},
-    'bounce_whenWallCollided': { x: 20, y: 410},
-    'bounce_whenBallInGoal': { x: 20, y: 510},
-    'bounce_whenBallMissesPaddle': { x: 20, y: 630}
+    'when_run': {x: 20, y: 20},
+    'bounce_whenLeft': {x: 20, y: 220},
+    'bounce_whenRight': {x: 180, y: 220},
+    'bounce_whenPaddleCollided': {x: 20, y: 310},
+    'bounce_whenWallCollided': {x: 20, y: 410},
+    'bounce_whenBallInGoal': {x: 20, y: 510},
+    'bounce_whenBallMissesPaddle': {x: 20, y: 630}
   };
 
   config.twitter = twitterOptions;
@@ -851,7 +851,7 @@ Bounce.moveBallOffscreen = function(i) {
  */
 Bounce.playSoundAndResetBall = function(i) {
   //console.log("playSoundAndResetBall called for ball " + i);
-  Bounce.resetBall(i, { randomPosition: true } );
+  Bounce.resetBall(i, {randomPosition: true} );
   studioApp.playAudio('ballstart');
 };
 
@@ -1091,7 +1091,7 @@ Bounce.execute = function() {
   var whenWallCollidedFunc = codegen.functionFromCode(
                                      codeWallCollided, {
                                       StudioApp: studioApp,
-                                      Bounce: api } );
+                                      Bounce: api} );
 
   var codeBallInGoal = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
@@ -1099,7 +1099,7 @@ Bounce.execute = function() {
   var whenBallInGoalFunc = codegen.functionFromCode(
                                      codeBallInGoal, {
                                       StudioApp: studioApp,
-                                      Bounce: api } );
+                                      Bounce: api} );
 
   var codeBallMissesPaddle = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
@@ -1107,7 +1107,7 @@ Bounce.execute = function() {
   var whenBallMissesPaddleFunc = codegen.functionFromCode(
                                      codeBallMissesPaddle, {
                                       StudioApp: studioApp,
-                                      Bounce: api } );
+                                      Bounce: api} );
 
   var codePaddleCollided = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
@@ -1115,7 +1115,7 @@ Bounce.execute = function() {
   var whenPaddleCollidedFunc = codegen.functionFromCode(
                                      codePaddleCollided, {
                                       StudioApp: studioApp,
-                                      Bounce: api } );
+                                      Bounce: api} );
 
   var codeLeft = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
@@ -1123,7 +1123,7 @@ Bounce.execute = function() {
   var whenLeftFunc = codegen.functionFromCode(
                                      codeLeft, {
                                       StudioApp: studioApp,
-                                      Bounce: api } );
+                                      Bounce: api} );
 
   var codeRight = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
@@ -1131,7 +1131,7 @@ Bounce.execute = function() {
   var whenRightFunc = codegen.functionFromCode(
                                      codeRight, {
                                       StudioApp: studioApp,
-                                      Bounce: api } );
+                                      Bounce: api} );
 
   var codeUp = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
@@ -1139,7 +1139,7 @@ Bounce.execute = function() {
   var whenUpFunc = codegen.functionFromCode(
                                      codeUp, {
                                       StudioApp: studioApp,
-                                      Bounce: api } );
+                                      Bounce: api} );
 
   var codeDown = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
@@ -1147,7 +1147,7 @@ Bounce.execute = function() {
   var whenDownFunc = codegen.functionFromCode(
                                      codeDown, {
                                       StudioApp: studioApp,
-                                      Bounce: api } );
+                                      Bounce: api} );
 
   var codeGameStarts = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
@@ -1155,7 +1155,7 @@ Bounce.execute = function() {
   var whenGameStartsFunc = codegen.functionFromCode(
                                      codeGameStarts, {
                                       StudioApp: studioApp,
-                                      Bounce: api } );
+                                      Bounce: api} );
 
   studioApp.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
 

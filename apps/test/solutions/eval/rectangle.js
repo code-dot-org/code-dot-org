@@ -7,10 +7,10 @@ module.exports = {
   skinId: 'eval',
   levelDefinition: {
     solutionBlocks: blockUtils.mathBlockXml('functional_rectangle', {
-      'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } ),
-      'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 100 } ),
-      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' })
+      'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} ),
+      'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 100} ),
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'} ),
+      'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'})
     }),
     requiredBlocks: '',
     freePlay: false
@@ -45,10 +45,10 @@ module.exports = {
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('functional_rectangle', {
-          'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } ),
-          'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 100 } ),
-          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-          'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' })
+          'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} ),
+          'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 100} ),
+          'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'} ),
+          'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'})
         }) +
       '</xml>'
     },
@@ -60,10 +60,10 @@ module.exports = {
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('functional_rectangle', {
-          'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } ),
-          'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 100 } ),
-          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-          'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'badstyle' })
+          'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} ),
+          'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 100} ),
+          'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'} ),
+          'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'badstyle'})
         }) +
       '</xml>'
     },
@@ -75,10 +75,10 @@ module.exports = {
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('functional_rectangle', {
-          'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } ),
-          'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 100 } ),
-          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'badcolor' } ),
-          'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' })
+          'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} ),
+          'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 100} ),
+          'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'badcolor'} ),
+          'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'})
         }) +
       '</xml>'
     }

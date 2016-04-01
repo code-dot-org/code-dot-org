@@ -59,14 +59,14 @@ var HeightResizer = React.createClass({
     event.stopPropagation();
     event.preventDefault();
 
-    this.setState({ dragging: true, dragStart: event.pageY });
+    this.setState({dragging: true, dragStart: event.pageY});
   },
 
   onMouseUp: function (event) {
     event.stopPropagation();
     event.preventDefault();
 
-    this.setState({ dragging: false });
+    this.setState({dragging: false});
   },
 
   onMouseMove: function (event) {
@@ -82,7 +82,7 @@ var HeightResizer = React.createClass({
     // onResize can choose to limit how much we actually move, and will report
     // back the value
     var actualDelta = this.props.onResize(delta);
-    this.setState({ dragStart: this.state.dragStart + actualDelta });
+    this.setState({dragStart: this.state.dragStart + actualDelta});
   },
 
   render: function () {

@@ -564,7 +564,7 @@ describe("getMissingBlocks_ tests", function () {
       };
     }
 
-    var blockInstallOptions = { skin: skinForTests, isK1: false };
+    var blockInstallOptions = {skin: skinForTests, isK1: false};
     var blocksCommon = require('@cdo/apps/blocksCommon');
     blocksCommon.install(Blockly, blockInstallOptions);
     var blocks = require('@cdo/apps/' + testCollection.app + '/blocks');

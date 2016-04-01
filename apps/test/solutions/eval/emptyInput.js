@@ -8,8 +8,8 @@ module.exports = {
   skinId: 'eval',
   levelDefinition: {
     solutionBlocks: blockUtils.mathBlockXml('functional_greater_than', {
-      ARG1: blockUtils.mathBlockXml('functional_math_number', null, { NUM: 2 }),
-      ARG2: blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1 })
+      ARG1: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 2}),
+      ARG2: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 1})
     }, null),
     requiredBlocks: '',
     freePlay: false
@@ -40,7 +40,7 @@ module.exports = {
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('functional_greater_than', {
-          ARG1: blockUtils.mathBlockXml('functional_math_number', null, { NUM: 2 })
+          ARG1: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 2})
           // missing ARG2
         }, null) +
       '</xml>'

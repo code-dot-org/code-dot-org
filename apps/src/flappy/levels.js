@@ -468,19 +468,19 @@ module.exports.k1_1 = {
 };
 
 // flap to goal
-module.exports.k1_2 = utils.extend(module.exports['1'], { 'isK1': true});
+module.exports.k1_2 = utils.extend(module.exports['1'], {'isK1': true});
 
 // hit ground
-module.exports.k1_3 = utils.extend(module.exports['2'], { 'isK1': true});
+module.exports.k1_3 = utils.extend(module.exports['2'], {'isK1': true});
 
 // set speed
-module.exports.k1_4 = utils.extend(module.exports['3'], { 'isK1': true});
+module.exports.k1_4 = utils.extend(module.exports['3'], {'isK1': true});
 
 // crash into obstacle
-module.exports.k1_5 = utils.extend(module.exports['4'], { 'isK1': true});
+module.exports.k1_5 = utils.extend(module.exports['4'], {'isK1': true});
 
 // pass through obstacle, score a point
-module.exports.k1_6 = utils.extend(module.exports['5'], { 'isK1': true});
+module.exports.k1_6 = utils.extend(module.exports['5'], {'isK1': true});
 
 // score multiple points for each pass
 module.exports.k1_7 = {

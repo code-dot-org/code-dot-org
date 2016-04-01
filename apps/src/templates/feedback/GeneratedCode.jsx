@@ -10,7 +10,7 @@ var GeneratedCode = React.createClass({
   render: function () {
     return (<div className="generated-code-container">
       <p className="generatedCodeMessage" dangerouslySetInnerHTML={{__html: this.props.message}} />
-      <pre className="generatedCode" dangerouslySetInnerHTML={{ __html: this.props.code }} />
+      <pre className="generatedCode" dangerouslySetInnerHTML={{__html: this.props.code}} />
     </div>);
   }
 });

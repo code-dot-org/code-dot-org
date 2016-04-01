@@ -337,7 +337,7 @@ applabCommands.moveBackward = function (opts) {
   if (typeof opts.distance !== 'undefined') {
     distance = -opts.distance;
   }
-  applabCommands.moveForward({'distance': distance });
+  applabCommands.moveForward({'distance': distance});
 };
 
 applabCommands.turnRight = function (opts) {
@@ -361,13 +361,13 @@ applabCommands.turnLeft = function (opts) {
   if (typeof opts.degrees !== 'undefined') {
     degrees = -opts.degrees;
   }
-  applabCommands.turnRight({'degrees': degrees });
+  applabCommands.turnRight({'degrees': degrees});
 };
 
 applabCommands.turnTo = function (opts) {
   apiValidateType(opts, 'turnTo', 'angle', opts.direction, 'number');
   var degrees = opts.direction - Applab.turtle.heading;
-  applabCommands.turnRight({'degrees': degrees });
+  applabCommands.turnRight({'degrees': degrees});
 };
 
 // Turn along an arc with a specified radius (by default, turn clockwise, so

@@ -110,4 +110,4 @@ var rootReducer = combineReducers({
   instructions: instructions
 });
 
-module.exports = { rootReducer: rootReducer };
+module.exports = {rootReducer: rootReducer};

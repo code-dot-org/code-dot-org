@@ -498,10 +498,10 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function (options) {
     // Otherwise, the message will depend on the test result.
     switch (options.feedbackType) {
       case TestResults.RUNTIME_ERROR_FAIL:
-        message = msg.runtimeErrorMsg({ lineNumber: options.executionError.lineNumber });
+        message = msg.runtimeErrorMsg({lineNumber: options.executionError.lineNumber});
         break;
       case TestResults.SYNTAX_ERROR_FAIL:
-        message = msg.syntaxErrorMsg({ lineNumber: options.executionError.lineNumber });
+        message = msg.syntaxErrorMsg({lineNumber: options.executionError.lineNumber});
         break;
       case TestResults.EMPTY_BLOCK_FAIL:
         message = options.level.emptyBlocksErrorMsg ||

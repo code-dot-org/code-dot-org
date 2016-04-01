@@ -192,7 +192,7 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     }
 
     if (type === ValueType.NUMBER) {
-      return { result: this.value_ };
+      return {result: this.value_};
     }
 
     if (type !== ValueType.ARITHMETIC && type !== ValueType.EXPONENTIAL) {
@@ -216,7 +216,7 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
         default:
           throw new Error('Unknown operator: ' + this.value_);
       }
-      return { result: ensureJsnum(val) };
+      return {result: ensureJsnum(val)};
     }
 
     var right = this.children_[1].evaluate(globalMapping, localMapping);
@@ -250,11 +250,11 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     // When calling jsnums methods, they will sometimes return a jsnumber and
     // sometimes a native JavaScript number. We want to make sure to convert
     // to a jsnumber before we return.
-    return { result: ensureJsnum(val) };
+    return {result: ensureJsnum(val)};
   } catch (err) {
     error = err;
   }
-  return { err: error };
+  return {err: error};
 };
 
 /**

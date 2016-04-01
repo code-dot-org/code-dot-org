@@ -107,7 +107,7 @@ module.exports.scheduleDance = function (victoryDance, timeAlloted, skin) {
   var timePerFrame = timeAlloted / numFrames;
   var start = {x: Maze.pegmanX, y: Maze.pegmanY};
 
-  Maze.scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
+  Maze.scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0},
     numFrames, timePerFrame, 'celebrate', Direction.NORTH, true);
 
   studioApp.playAudio('win');

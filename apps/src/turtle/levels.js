@@ -876,7 +876,7 @@ levels.ec_1_3 = utils.extend(levels['1_3'], {
     'moveForward': null,
     'turnRight': null,
     'penColour': null,
-    'forLoop_i_0_4': { 'category': 'Artist' },
+    'forLoop_i_0_4': {'category': 'Artist'},
   },
   'startBlocks': "for (var i = 0; i < 4; i++) {\n  __\n}\n",
 });
@@ -886,7 +886,7 @@ levels.ec_1_4 = utils.extend(levels['1_4'], {
     'moveForward': null,
     'turnRight': null,
     'penColour': null,
-    'forLoop_i_0_4': { 'category': 'Artist' },
+    'forLoop_i_0_4': {'category': 'Artist'},
   },
   'startBlocks': "for (var i = 0; i < 3; i++) {\n  penColour('#ff0000');\n}\n",
 });
@@ -897,7 +897,7 @@ levels.ec_1_10 = utils.extend(levels['1_10'], {
     'turnRight': null,
     'penColour': null,
     'penWidth': null,
-    'forLoop_i_0_4': { 'category': 'Artist' },
+    'forLoop_i_0_4': {'category': 'Artist'},
   },
   'startBlocks': "moveForward(100);\n",
 });

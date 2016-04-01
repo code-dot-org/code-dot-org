@@ -1214,7 +1214,7 @@ function handleActorCollisionsWithCollidableList (
           next.y,
           spriteCollidableCollisionDistance(spriteIndex, collidable, true))) {
       if (collidable.startCollision(spriteIndex)) {
-        Studio.currentEventParams = { eventObject: collidable };
+        Studio.currentEventParams = {eventObject: collidable};
         // Allow cmdQueue extension (pass true) since this handler
         // may be called for multiple collidables before executing the queue
         // below
@@ -1419,7 +1419,7 @@ function checkForCollisions() {
  */
 function createItemEdgeCollisionHandler (item) {
   return function (edgeClass) {
-    Studio.currentEventParams = { eventObject: item };
+    Studio.currentEventParams = {eventObject: item};
     // Allow cmdQueue extension (pass true) since this handler
     // may be called for multiple items before executing the queue
     // below
@@ -1456,7 +1456,7 @@ function checkForItemCollisions () {
 
     if (level.wallMapCollisions) {
       if (Studio.willCollidableTouchWall(item, next.x, next.y)) {
-        Studio.currentEventParams = { eventObject: item };
+        Studio.currentEventParams = {eventObject: item};
         // Allow cmdQueue extension (pass true) since this handler
         // may be called for multiple items before executing the queue
         // below
@@ -2545,7 +2545,7 @@ var registerHandlers =
         var func = codegen.functionFromCode(code, {
                                             StudioApp: studioApp,
                                             Studio: api,
-                                            Globals: Studio.Globals } );
+                                            Globals: Studio.Globals} );
         var eventName = eventNameBase;
         if (nameParam1) {
           eventName += '-' + matchParam1Val;
@@ -2805,7 +2805,7 @@ function outputError(warning, level, lineNum) {
 
 function handleExecutionError(err, lineNumber) {
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
-  Studio.executionError = { err: err, lineNumber: lineNumber };
+  Studio.executionError = {err: err, lineNumber: lineNumber};
 
   // Call onPuzzleComplete() if syntax error or any time we're not on a freeplay level:
   if (err instanceof SyntaxError) {
@@ -2889,7 +2889,7 @@ Studio.execute = function() {
   }
 
   if (utils.valueOr(level.playStartSound, true)) {
-    Studio.playSound({ soundName: 'start' });
+    Studio.playSound({soundName: 'start'});
   }
 
   studioApp.reset(false);
@@ -2963,13 +2963,13 @@ Studio.onPuzzleComplete = function() {
     // If the current level is a free play, always return the free play
     // result type
     Studio.testResults = level.freePlay ? TestResults.FREE_PLAY :
-      studioApp.getTestResults(levelComplete, { executionError: Studio.executionError });
+      studioApp.getTestResults(levelComplete, {executionError: Studio.executionError});
   }
 
   if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
-    Studio.playSound({ soundName: 'win' });
+    Studio.playSound({soundName: 'win'});
   } else {
-    Studio.playSound({ soundName: 'failure' });
+    Studio.playSound({soundName: 'failure'});
   }
 
   var program;
@@ -3568,7 +3568,7 @@ Studio.getCloudLocation = function(cloudIndex) {
     y = x + Studio.MAZE_HEIGHT/2;
   }
 
-  return { x: x, y: y };
+  return {x: x, y: y};
 };
 
 
@@ -3934,7 +3934,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
     spritesCounterclockwise: classProperties.spritesCounterclockwise,
-    renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
+    renderOffset: utils.valueOr(classProperties.renderOffset, {x: 0, y: 0}),
     renderScale: utils.valueOr(classProperties.scale, 1),
     animationFrameDuration: classProperties.animationFrameDuration
   };
@@ -5428,7 +5428,7 @@ Studio.allGoalsVisited = function() {
       // overridden by the skin)
       if (playSound &&
           (finishedGoals !== Studio.spriteGoals_.length || skin.playFinalGoalSound)) {
-        Studio.playSound({ soundName: 'flag' });
+        Studio.playSound({soundName: 'flag'});
       }
 
       if (skin.goalSuccess) {

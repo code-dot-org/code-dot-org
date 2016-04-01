@@ -616,7 +616,7 @@ GameLab.prototype.completeRedrawIfDrawComplete = function () {
 
 GameLab.prototype.handleExecutionError = function (err, lineNumber) {
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
-  this.executionError = { err: err, lineNumber: lineNumber };
+  this.executionError = {err: err, lineNumber: lineNumber};
   this.haltExecution_();
   // TODO: Call onPuzzleComplete?
 };

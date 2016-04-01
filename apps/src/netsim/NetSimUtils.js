@@ -153,10 +153,10 @@ exports.forEachEnumValue = function (enumObj, func) {
  * @readonly
  */
 var NUMBER_SERIALIZATION_RULES = [
-  { jsVal: Infinity, jsonVal: 'Infinity' },
-  { jsVal: -Infinity, jsonVal: '-Infinity' },
-  { jsVal: NaN, jsonVal: 'NaN' },
-  { jsVal: undefined, jsonVal: 'undefined' }
+  {jsVal: Infinity, jsonVal: 'Infinity'},
+  {jsVal: -Infinity, jsonVal: '-Infinity'},
+  {jsVal: NaN, jsonVal: 'NaN'},
+  {jsVal: undefined, jsonVal: 'undefined'}
 ];
 
 /**
@@ -300,25 +300,25 @@ exports.bitsToLocalizedRoundedBytesize = function (bits) {
 
   var gbytes = Math.floor(bits / NetSimConstants.BITS_PER_GIGABYTE);
   if (gbytes > 0) {
-    return i18n.x_GBytes({ x: gbytes });
+    return i18n.x_GBytes({x: gbytes});
   }
 
   var mbytes = Math.floor(bits / NetSimConstants.BITS_PER_MEGABYTE);
   if (mbytes > 0) {
-    return i18n.x_MBytes({ x: mbytes });
+    return i18n.x_MBytes({x: mbytes});
   }
 
   var kbytes = Math.floor(bits / NetSimConstants.BITS_PER_KILOBYTE);
   if (kbytes > 0) {
-    return i18n.x_KBytes({ x: kbytes });
+    return i18n.x_KBytes({x: kbytes});
   }
 
   var bytes = Math.floor(bits / NetSimConstants.BITS_PER_BYTE);
   if (bytes > 0) {
-    return i18n.x_Bytes({ x: bytes });
+    return i18n.x_Bytes({x: bytes});
   }
 
-  return i18n.x_bits({ x: bits });
+  return i18n.x_bits({x: bits});
 };
 
 /**
@@ -334,21 +334,21 @@ exports.bitrateToLocalizedRoundedBitrate = function (bitsPerSecond) {
 
   var gbps = Math.floor(bitsPerSecond / NetSimConstants.BITS_PER_GIGABIT);
   if (gbps > 0) {
-    return i18n.x_Gbps({ x: gbps });
+    return i18n.x_Gbps({x: gbps});
   }
 
   var mbps = Math.floor(bitsPerSecond / NetSimConstants.BITS_PER_MEGABIT);
   if (mbps > 0) {
-    return i18n.x_Mbps({ x: mbps });
+    return i18n.x_Mbps({x: mbps});
   }
 
   var kbps = Math.floor(bitsPerSecond / NetSimConstants.BITS_PER_KILOBIT);
   if (kbps > 0) {
-    return i18n.x_Kbps({ x: kbps });
+    return i18n.x_Kbps({x: kbps});
   }
 
   var bps = Math.floor(bitsPerSecond * 100) / 100;
-  return i18n.x_bps({ x: bps });
+  return i18n.x_bps({x: bps});
 };
 
 exports.zeroPadLeft = function (string, desiredWidth) {
@@ -368,7 +368,7 @@ exports.zeroPadRight = function (string, desiredWidth) {
  */
 exports.makeContinueButton = function (onPanel) {
   onPanel.addButton(
-      i18n.continueButton({ caret: '<i class="fa fa-caret-right"></i>' }),
+      i18n.continueButton({caret: '<i class="fa fa-caret-right"></i>'}),
       function (jQueryEvent) {
         if (!$(jQueryEvent.target).is(':disabled')) {
           NetSimGlobals.completeLevelAndContinue();

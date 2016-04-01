@@ -42,9 +42,9 @@ NetSimPulseRateControl.inherits(NetSimSlider.DecimalPrecisionSlider);
 NetSimPulseRateControl.prototype.valueToLabel = function (val) {
   var rounded = Math.floor(val * 100) / 100;
   if (rounded === 1) {
-    return i18n.xSecondPerPulse({ x: rounded });
+    return i18n.xSecondPerPulse({x: rounded});
   }
-  return i18n.xSecondsPerPulse({ x: rounded });
+  return i18n.xSecondsPerPulse({x: rounded});
 };
 
 /**

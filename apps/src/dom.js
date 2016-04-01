@@ -31,7 +31,7 @@ var addEvent = function(element, eventName, handler) {
 
   var bindEvent = function (type, eventName, handler) {
     element.addEventListener(eventName, handler, false);
-    boundEvents[type] = { name: eventName, handler: handler };
+    boundEvents[type] = {name: eventName, handler: handler};
   };
 
   var unbindEvent = function (type) {

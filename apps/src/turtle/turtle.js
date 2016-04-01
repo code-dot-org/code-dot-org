@@ -65,24 +65,24 @@ var JOINT_SEGMENT_LENGTH = 50;
  * along with whether it should be drawn before or after the turtle sprite itself.
  */
 var ELSA_DECORATION_DETAILS = [
-  { x: 15, when: "after" },
-  { x: 26, when: "after" },
-  { x: 37, when: "after" },
-  { x: 46, when: "after" },
-  { x: 60, when: "after" },
-  { x: 65, when: "after" },
-  { x: 66, when: "after" },
-  { x: 64, when: "after" },
-  { x: 62, when: "before" },
-  { x: 55, when: "before" },
-  { x: 48, when: "before" },
-  { x: 33, when: "before" },
-  { x: 31, when: "before" },
-  { x: 22, when: "before" },
-  { x: 17, when: "before" },
-  { x: 12, when: "before" },
-  { x:  8, when: "after" },
-  { x: 10, when: "after" }
+  {x: 15, when: "after"},
+  {x: 26, when: "after"},
+  {x: 37, when: "after"},
+  {x: 46, when: "after"},
+  {x: 60, when: "after"},
+  {x: 65, when: "after"},
+  {x: 66, when: "after"},
+  {x: 64, when: "after"},
+  {x: 62, when: "before"},
+  {x: 55, when: "before"},
+  {x: 48, when: "before"},
+  {x: 33, when: "before"},
+  {x: 31, when: "before"},
+  {x: 22, when: "before"},
+  {x: 17, when: "before"},
+  {x: 12, when: "before"},
+  {x:  8, when: "after"},
+  {x: 10, when: "after"}
 ];
 
 /**
@@ -750,7 +750,7 @@ Artist.prototype.initInterpreter = function () {
 Artist.prototype.handleExecutionError = function (err, lineNumber) {
   this.consoleLogger_.log(err);
 
-  this.executionError = { err: err, lineNumber: lineNumber };
+  this.executionError = {err: err, lineNumber: lineNumber};
 
   if (err instanceof SyntaxError) {
     this.testResults = this.studioApp_.TestResults.SYNTAX_ERROR_FAIL;
@@ -960,7 +960,7 @@ Artist.prototype.calculateSmoothAnimate = function(options, distance) {
 
   this.stepDistanceCovered = stepDistanceCovered;
 
-  return { tupleDone: tupleDone, distance: distance };
+  return {tupleDone: tupleDone, distance: distance};
 };
 
 /**

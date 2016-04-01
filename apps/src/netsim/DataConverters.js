@@ -403,7 +403,7 @@ exports.binaryToBase64 = function (binaryString) {
   var paddedBinaryString = NetSimUtils.zeroPadRight(binaryString, byteLen);
   var payload = window.btoa(exports.binaryToAscii(paddedBinaryString, 8));
 
-  return { string: payload, len: binaryString.length };
+  return {string: payload, len: binaryString.length};
 
 };
 

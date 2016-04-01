@@ -578,7 +578,7 @@ exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, g
         obj,
         globalObjects[globalObj],
         null,
-        { maxDepth: 2 });
+        {maxDepth: 2});
   }
   populateGlobalFunctions(
       interpreter,

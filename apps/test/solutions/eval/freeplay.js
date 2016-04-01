@@ -30,7 +30,7 @@ module.exports = {
         var display = blockUtils.mathBlockXml('functional_display',
           {
             'ARG1': blockUtils.functionalCallXml('foo', argList, [
-              blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1 } )
+              blockUtils.mathBlockXml('functional_math_number', null, {NUM: 1} )
               ])
           }
         );
@@ -58,7 +58,7 @@ module.exports = {
         var display = blockUtils.mathBlockXml('functional_display',
           {
             'ARG1': blockUtils.functionalCallXml('foo', argList, [
-              blockUtils.mathBlockXml('functional_math_number', null, { NUM: 5 } )
+              blockUtils.mathBlockXml('functional_math_number', null, {NUM: 5} )
               ])
           }
         );
@@ -66,13 +66,13 @@ module.exports = {
         var condBlock = blockUtils.mathBlockXml('functional_cond', {
           'COND0': blockUtils.mathBlockXml('functional_number_equals', {
             'ARG1': blockUtils.calcBlockGetVar('x'),
-            'ARG2': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1 })
+            'ARG2': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 1})
           }),
-          'VALUE0': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1 }),
+          'VALUE0': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 1}),
           'DEFAULT': blockUtils.functionalCallXml('foo', argList, [
             blockUtils.mathBlockXml('functional_minus', {
               'ARG1': blockUtils.calcBlockGetVar('x'),
-              'ARG2': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1 })
+              'ARG2': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 1})
             })
           ])
         });

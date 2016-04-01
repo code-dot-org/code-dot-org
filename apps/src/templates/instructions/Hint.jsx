@@ -11,8 +11,8 @@ var Hint = React.createClass({
     if (this.props.hint.block) {
       hintBlock = (<ReadOnlyBlockSpace block={this.props.hint.block} />);
     }
-    return (<li style={{ marginBottom: '12px' }}>
-      <div dangerouslySetInnerHTML={{ __html : this.props.hint.content }} />
+    return (<li style={{marginBottom: '12px'}}>
+      <div dangerouslySetInnerHTML={{__html : this.props.hint.content}} />
       {hintBlock}
     </li>);
   },

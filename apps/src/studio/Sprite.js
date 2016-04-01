@@ -24,7 +24,7 @@ var Sprite = function (options) {
    * late as possible.
    * @type {{x: number, y: number}}
    */
-  this.renderOffset = options.renderOffset || { x: 0, y: 0 };
+  this.renderOffset = options.renderOffset || {x: 0, y: 0};
 
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED;
   this.setNormalFrameDuration(options.animationFrameDuration);
@@ -40,7 +40,7 @@ var Sprite = function (options) {
 
   this.useLegacyIdleEmotionAnimations = false;
 
-  this.lastDrawPosition = { x: 0, y: 0 };
+  this.lastDrawPosition = {x: 0, y: 0};
 };
 Sprite.inherits(Collidable);
 module.exports = Sprite;
@@ -224,13 +224,13 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
         // frame 0.
         this.legacyAnimation_.createSpecialAnimation('direction',
             turnIndex,
-            [{ type: 'legacyEmotionRow', index: row, frame: 0 }]);
+            [{type: 'legacyEmotionRow', index: row, frame: 0}]);
         turnIndex++;
       }
       for (;turnIndex < 8; turnIndex++, frameIndex++) {
         this.legacyAnimation_.createSpecialAnimation('direction',
             turnIndex,
-            [{ type: 'legacyEmotionRow',
+            [{type: 'legacyEmotionRow',
                 index: row,
                 frame: this.frameCounts.normal + frameIndex
             }]);

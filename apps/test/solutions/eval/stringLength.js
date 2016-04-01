@@ -30,7 +30,7 @@ module.exports = {
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('string_length', {
-          'STR': blockUtils.mathBlockXml('functional_string', null, { 'VAL': 'coder' }),
+          'STR': blockUtils.mathBlockXml('functional_string', null, {'VAL': 'coder'}),
         }) +
       '</xml>'
     }

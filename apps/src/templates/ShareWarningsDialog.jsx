@@ -13,7 +13,7 @@ var SharingWarningsDialog = module.exports = React.createClass({
   },
 
   getInitialState: function() {
-    return { modalIsOpen: !this.props.is13Plus || this.props.showStoreDataAlert };
+    return {modalIsOpen: !this.props.is13Plus || this.props.showStoreDataAlert};
   },
 
   componentDidMount: function () {

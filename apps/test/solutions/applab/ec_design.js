@@ -140,7 +140,7 @@ module.exports = {
         var originalButtonHeight = buttonElement.style.height;
 
         ReactTestUtils.Simulate.change(imageInput, {
-          target: { value: assetUrl }
+          target: {value: assetUrl}
         });
 
         // wait until image has loaded to do validation
@@ -487,7 +487,7 @@ module.exports = {
 
         textArea = $('#propertyRowContainer textarea').first()[0];
         ReactTestUtils.Simulate.change(textArea,
-          { target: { value: 'Text 1' } });
+          {target: {value: 'Text 1'}});
 
         assert.equal($('#propertyRowContainer textarea').first().val(), 'Text 1', 'Text should be written');
         assert.equal($('#designModeViz .textArea').length, 1, 'element should exist');
@@ -495,13 +495,13 @@ module.exports = {
         assert.equal($('#designModeViz .textArea').first().prop('innerHTML'), 'Text 1', 'should have one line of text');
 
         ReactTestUtils.Simulate.change(textArea,
-          { target: { value: 'Text1\nText2\nText3'}});
+          {target: {value: 'Text1\nText2\nText3'}});
 
         assert.equal($('#designModeViz .textArea').first().prop('innerHTML'),
           'Text1<div>Text2</div><div>Text3</div>');
 
         ReactTestUtils.Simulate.change(textArea,
-          { target: { value: 'Text1\n\nText2' } });
+          {target: {value: 'Text1\n\nText2'}});
 
         assert.equal($('#designModeViz .textArea').first().prop('innerHTML'),
           'Text1<div><br></div><div>Text2</div>');
@@ -519,7 +519,7 @@ module.exports = {
         assertPropertyRowValue(0, 'id', 'text_area1', assert);
         assert.equal($('#propertyRowContainer textarea').first().val(), 'Text1\n\nText2', 'Text should be written');
         ReactTestUtils.Simulate.change(textArea,
-          { target: { value: 'I said hey-hey-hey-hey\n\What\'s going on?' } });
+          {target: {value: 'I said hey-hey-hey-hey\n\What\'s going on?'}});
         assert.equal($('#designModeViz .textArea').first().prop('innerHTML'),
           'I said hey-hey-hey-hey<div>What\'s going on?</div>');
 
@@ -689,7 +689,7 @@ module.exports = {
         assert(!/1x1.gif$/.test(designImage.src), 'src became 1x1.gif');
         assert.equal(designImage.getAttribute('data-canonical-image-url'), 'flappy_promo.png');
 
-        ReactTestUtils.Simulate.change(input, { target: { value: '' } });
+        ReactTestUtils.Simulate.change(input, {target: {value: ''}});
         assert.equal(input.value, '');
 
         assert(/1x1.gif$/.test(designImage.src), 'src became 1x1.gif');
@@ -803,23 +803,23 @@ module.exports = {
 
         // Renaming to 'button' succeeds.
         var idInput = $("#propertyRowContainer input")[0];
-        ReactTestUtils.Simulate.change(idInput, { target: { value: 'button' } });
+        ReactTestUtils.Simulate.change(idInput, {target: {value: 'button'}});
         assert.equal(targetButton.id, "design_button", "target button has id 'design_button'");
         assert(!idInput.style.backgroundColor, "id input 'button' has no background color");
 
         // Renaming to button3 succeeds.
-        ReactTestUtils.Simulate.change(idInput, { target: { value: 'button3' } });
+        ReactTestUtils.Simulate.change(idInput, {target: {value: 'button3'}});
         assert.equal(targetButton.id, "design_button3", "target button has id 'design_button3'");
         assert(!idInput.style.backgroundColor, "id input 'button3' has no background color");
 
         // Renaming to button2 succeeds, even though button2 exists inside divApplab.
         assert($('#divApplab #button2'), "button2 still appears inside divApplab");
-        ReactTestUtils.Simulate.change(idInput, { target: { value: 'button2' } });
+        ReactTestUtils.Simulate.change(idInput, {target: {value: 'button2'}});
         assert.equal(targetButton.id, "design_button2", "target button has id 'design_button2'");
         assert(!idInput.style.backgroundColor, "id input 'button2' has no background color");
 
         // Renaming to duplicate id 'button1' fails.
-        ReactTestUtils.Simulate.change(idInput, { target: { value: 'button1' } });
+        ReactTestUtils.Simulate.change(idInput, {target: {value: 'button1'}});
         assert.equal(targetButton.id, 'design_button2', "target button still has id 'design_button2'");
         assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "duplicate id input 'button1' has light red background color");
 
@@ -829,32 +829,32 @@ module.exports = {
         assert(!idInput.style.backgroundColor, "id input has no background color after losing focus");
 
         // Renaming to button4 succeeds.
-        ReactTestUtils.Simulate.change(idInput, { target: { value: 'button4' } });
+        ReactTestUtils.Simulate.change(idInput, {target: {value: 'button4'}});
         assert.equal(targetButton.id, "design_button4", "target button has id 'design_button4'");
         assert(!idInput.style.backgroundColor, "id input 'button4' has no background color");
 
         // Renaming to divApplab fails.
-        ReactTestUtils.Simulate.change(idInput, { target: { value: 'divApplab' } });
+        ReactTestUtils.Simulate.change(idInput, {target: {value: 'divApplab'}});
         assert.equal(targetButton.id, "design_button4", "target button still has id 'design_button4'");
         assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "invalid id input 'divApplab' has light red background color");
 
         // Renaming to button5 succeeds.
-        ReactTestUtils.Simulate.change(idInput, { target: { value: 'button5' } });
+        ReactTestUtils.Simulate.change(idInput, {target: {value: 'button5'}});
         assert.equal(targetButton.id, "design_button5", "target button has id 'design_button4'");
         assert(!idInput.style.backgroundColor, "id input 'button5' has no background color");
 
         // Renaming to runButton fails.
-        ReactTestUtils.Simulate.change(idInput, { target: { value: 'runButton' } });
+        ReactTestUtils.Simulate.change(idInput, {target: {value: 'runButton'}});
         assert.equal(targetButton.id, "design_button5", "target button still has id 'design_button5, not runButton'");
         assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "invalid id input 'runButton' has light red background color");
 
         // Renaming to something with the 'design_' prefix fails.
-        ReactTestUtils.Simulate.change(idInput, { target: { value: 'design_button' } });
+        ReactTestUtils.Simulate.change(idInput, {target: {value: 'design_button'}});
         assert.equal(targetButton.id, "design_button5", "target button still has id 'design_button5, not design_button'");
         assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "invalid id input 'design_button' has light red background color");
 
         // Renaming to a blacklisted element id fails.
-        ReactTestUtils.Simulate.change(idInput, { target: { value: 'submitButton' } });
+        ReactTestUtils.Simulate.change(idInput, {target: {value: 'submitButton'}});
         assert.equal(targetButton.id, "design_button5", "target button still has id 'design_button5, not submitButton'");
         assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "invalid id input 'submitButton' has light red background color");
 
@@ -869,7 +869,7 @@ module.exports = {
 
         // Renaming to duplicate id 'screen1' fails.
         idInput = $("#propertyRowContainer input")[0];
-        ReactTestUtils.Simulate.change(idInput, { target: { value: 'screen1' } });
+        ReactTestUtils.Simulate.change(idInput, {target: {value: 'screen1'}});
         assert.equal(targetScreen.id, "design_screen2", "target screen still has id 'design_screen2'");
         assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "duplicate id input 'screen1' has light red background color");
 

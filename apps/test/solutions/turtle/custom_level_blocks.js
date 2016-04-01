@@ -27,7 +27,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', { TYPE: 'fractal' })
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'fractal'})
     },
 
     {
@@ -45,7 +45,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', { TYPE: 'flower' })
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'flower'})
     },
 
     {
@@ -64,7 +64,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', { TYPE: 'spiral' })
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'spiral'})
     },
 
     {
@@ -83,7 +83,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', { TYPE: 'line' })
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'line'})
     },
 
     {
@@ -102,7 +102,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', { TYPE: 'parallelogram' })
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'parallelogram'})
     },
 
     {
@@ -120,7 +120,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', { TYPE: 'square' })
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'square'})
     },
 
     {

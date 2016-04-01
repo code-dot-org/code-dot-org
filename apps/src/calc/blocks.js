@@ -48,7 +48,7 @@ function installCompute(blockly, generator, gensym) {
     helpUrl: '',
     init: function() {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.evaluate(), blockly.BlockValueType.NONE, [
-        { name: 'ARG1', type: blockly.BlockValueType.NUMBER }
+        {name: 'ARG1', type: blockly.BlockValueType.NUMBER}
       ]);
     }
   };

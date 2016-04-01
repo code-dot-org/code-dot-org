@@ -14,7 +14,7 @@ applabTurtle.getTurtleContext = function () {
 
   if (!canvas) {
     // If there is not yet a turtleCanvas, create it:
-    applabCommands.createCanvas({ 'elementId': 'turtleCanvas', 'turtleCanvas': true });
+    applabCommands.createCanvas({'elementId': 'turtleCanvas', 'turtleCanvas': true});
     canvas = document.getElementById('turtleCanvas');
 
     // And create the turtle (defaults to visible):

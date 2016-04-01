@@ -4,58 +4,58 @@ exports.container = function (elementId, html) {
   return Applab.executeCmd(null,
                           'container',
                           {'elementId': elementId,
-                           'html': html });
+                           'html': html});
 };
 
 exports.write = function (html) {
   return Applab.executeCmd(null,
                           'write',
-                          {'html': html });
+                          {'html': html});
 };
 
 exports.innerHTML = function (elementId, html) {
   return Applab.executeCmd(null,
                           'innerHTML',
                           {'elementId': elementId,
-                           'html': html });
+                           'html': html});
 };
 
 exports.deleteElement = function (elementId) {
   return Applab.executeCmd(null,
                           'deleteElement',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.showElement = function (elementId) {
   return Applab.executeCmd(null,
                           'showElement',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.hideElement = function (elementId) {
   return Applab.executeCmd(null,
                           'hideElement',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.setScreen = function (screenId) {
   return Applab.executeCmd(null,
                           'setScreen',
-                          {'screenId': screenId });
+                          {'screenId': screenId});
 };
 
 exports.button = function (elementId, text) {
   return Applab.executeCmd(null,
                           'button',
                           {'elementId': elementId,
-                           'text': text });
+                           'text': text});
 };
 
 exports.image = function (elementId, src) {
   return Applab.executeCmd(null,
                           'image',
                           {'elementId': elementId,
-                           'src': src });
+                           'src': src});
 };
 
 exports.setPosition = function (elementId, left, top, width, height) {
@@ -65,7 +65,7 @@ exports.setPosition = function (elementId, left, top, width, height) {
                            'left': left,
                            'top': top,
                            'width': width,
-                           'height': height });
+                           'height': height});
 };
 
 exports.setSize = function (elementId, width, height) {
@@ -73,7 +73,7 @@ exports.setSize = function (elementId, width, height) {
                           'setSize',
                           {'elementId': elementId,
                            'width': width,
-                           'height': height });
+                           'height': height});
 };
 
 exports.setProperty = function (elementId, property, value) {
@@ -81,20 +81,20 @@ exports.setProperty = function (elementId, property, value) {
                           'setProperty',
                           {'elementId': elementId,
                            'property': property,
-                           'value': value });
+                           'value': value});
 };
 
 
 exports.getXPosition = function (elementId) {
   return Applab.executeCmd(null,
                           'getXPosition',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.getYPosition = function (elementId) {
   return Applab.executeCmd(null,
                           'getYPosition',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.createCanvas = function (elementId, width, height) {
@@ -102,13 +102,13 @@ exports.createCanvas = function (elementId, width, height) {
                           'createCanvas',
                           {'elementId': elementId,
                            'width': width,
-                           'height': height });
+                           'height': height});
 };
 
 exports.setActiveCanvas = function (elementId) {
   return Applab.executeCmd(null,
                           'setActiveCanvas',
-                          {'elementId': elementId  });
+                          {'elementId': elementId});
 };
 
 exports.line = function (x1, y1, x2, y2) {
@@ -117,7 +117,7 @@ exports.line = function (x1, y1, x2, y2) {
                           {'x1': x1,
                            'y1': y1,
                            'x2': x2,
-                           'y2': y2 });
+                           'y2': y2});
 };
 
 exports.circle = function (x, y, radius) {
@@ -125,7 +125,7 @@ exports.circle = function (x, y, radius) {
                           'circle',
                           {'x': x,
                            'y': y,
-                           'radius': radius });
+                           'radius': radius});
 };
 
 exports.rect = function (x, y, width, height) {
@@ -134,25 +134,25 @@ exports.rect = function (x, y, width, height) {
                           {'x': x,
                            'y': y,
                            'width': width,
-                           'height': height });
+                           'height': height});
 };
 
 exports.setStrokeWidth = function (width) {
   return Applab.executeCmd(null,
                           'setStrokeWidth',
-                          {'width': width });
+                          {'width': width});
 };
 
 exports.setStrokeColor = function (color) {
   return Applab.executeCmd(null,
                           'setStrokeColor',
-                          {'color': color });
+                          {'color': color});
 };
 
 exports.setFillColor = function (color) {
   return Applab.executeCmd(null,
                           'setFillColor',
-                          {'color': color });
+                          {'color': color});
 };
 
 exports.clearCanvas = function () {
@@ -166,7 +166,7 @@ exports.drawImage = function (imageId, x, y, width, height) {
                            'x': x,
                            'y': y,
                            'width': width,
-                           'height': height });
+                           'height': height});
 };
 
 exports.drawImageURL = function (url, x, y, width, height, callback) {
@@ -194,7 +194,7 @@ exports.getImageData = function (x, y, width, height) {
                           {'x': x,
                            'y': y,
                            'width': width,
-                           'height': height });
+                           'height': height});
 };
 
 exports.putImageData = function (imageData, x, y) {
@@ -202,14 +202,14 @@ exports.putImageData = function (imageData, x, y) {
                           'putImageData',
                           {'imageData': imageData,
                            'x': x,
-                           'y': y });
+                           'y': y});
 };
 
 exports.textInput = function (elementId, text) {
   return Applab.executeCmd(null,
                           'textInput',
                           {'elementId': elementId,
-                           'text': text });
+                           'text': text});
 };
 
 exports.textLabel = function (elementId, text, forId) {
@@ -217,14 +217,14 @@ exports.textLabel = function (elementId, text, forId) {
                           'textLabel',
                           {'elementId': elementId,
                            'text': text,
-                           'forId': forId });
+                           'forId': forId});
 };
 
 exports.checkbox = function (elementId, checked) {
   return Applab.executeCmd(null,
                           'checkbox',
                           {'elementId': elementId,
-                           'checked': checked });
+                           'checked': checked});
 };
 
 exports.radioButton = function (elementId, checked, name) {
@@ -232,20 +232,20 @@ exports.radioButton = function (elementId, checked, name) {
                           'radioButton',
                           {'elementId': elementId,
                            'checked': checked,
-                           'name': name });
+                           'name': name});
 };
 
 exports.getChecked = function (elementId) {
   return Applab.executeCmd(null,
                           'getChecked',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.setChecked = function (elementId, checked) {
   return Applab.executeCmd(null,
                           'setChecked',
                           {'elementId': elementId,
-                           'checked': checked });
+                           'checked': checked});
 };
 
 exports.dropdown = function (elementId) {
@@ -253,7 +253,7 @@ exports.dropdown = function (elementId) {
   return Applab.executeCmd(null,
                           'dropdown',
                           {'elementId': elementId,
-                           'optionsArray': optionsArray });
+                           'optionsArray': optionsArray});
 };
 
 exports.getAttribute = function(elementId, attribute) {
@@ -274,61 +274,61 @@ exports.setAttribute = function(elementId, attribute, value) {
 exports.getText = function (elementId) {
   return Applab.executeCmd(null,
                           'getText',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.setText = function (elementId, text) {
   return Applab.executeCmd(null,
                           'setText',
                           {'elementId': elementId,
-                           'text': text });
+                           'text': text});
 };
 
 exports.getNumber = function (elementId) {
   return Applab.executeCmd(null,
                           'getNumber',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.setNumber = function (elementId, number) {
   return Applab.executeCmd(null,
                           'setNumber',
                           {'elementId': elementId,
-                           'number': number });
+                           'number': number});
 };
 
 exports.getImageURL = function (elementId) {
   return Applab.executeCmd(null,
                           'getImageURL',
-                          {'elementId': elementId });
+                          {'elementId': elementId});
 };
 
 exports.setImageURL = function (elementId, src) {
   return Applab.executeCmd(null,
                           'setImageURL',
                           {'elementId': elementId,
-                           'src': src });
+                           'src': src});
 };
 
 exports.imageUploadButton = function (elementId, text) {
   return Applab.executeCmd(null,
                            'imageUploadButton',
                            {'elementId': elementId,
-                            'text': text });
+                            'text': text});
 };
 
 exports.setParent = function (elementId, parentId) {
   return Applab.executeCmd(null,
                           'setParent',
                           {'elementId': elementId,
-                           'parentId': parentId });
+                           'parentId': parentId});
 };
 
 exports.setStyle = function (elementId, style) {
   return Applab.executeCmd(null,
                            'setStyle',
                            {'elementId': elementId,
-                           'style': style });
+                           'style': style});
 };
 
 exports.onEvent = function (elementId, eventName, func) {
@@ -345,33 +345,33 @@ exports.startWebRequest = function (url, func) {
   return Applab.executeCmd(null,
                           'startWebRequest',
                           {'url': url,
-                           'func': func });
+                           'func': func});
 };
 
 exports.setTimeout = function (func, milliseconds) {
   return Applab.executeCmd(null,
                           'setTimeout',
                           {'func': func,
-                           'milliseconds': milliseconds });
+                           'milliseconds': milliseconds});
 };
 
 exports.clearTimeout = function (timeoutId) {
   return Applab.executeCmd(null,
                            'clearTimeout',
-                           {'timeoutId': timeoutId });
+                           {'timeoutId': timeoutId});
 };
 
 exports.setInterval = function (func, milliseconds) {
   return Applab.executeCmd(null,
                           'setInterval',
                           {'func': func,
-                           'milliseconds': milliseconds });
+                           'milliseconds': milliseconds});
 };
 
 exports.clearInterval = function (intervalId) {
   return Applab.executeCmd(null,
                            'clearInterval',
-                           {'intervalId': intervalId });
+                           {'intervalId': intervalId});
 };
 
 exports.playSound = function (url) {
@@ -464,65 +464,65 @@ exports.getUserId = function () {
 exports.moveForward = function (distance) {
   return Applab.executeCmd(null,
                           'moveForward',
-                          {'distance': distance });
+                          {'distance': distance});
 };
 
 exports.moveBackward = function (distance) {
   return Applab.executeCmd(null,
                           'moveBackward',
-                          {'distance': distance });
+                          {'distance': distance});
 };
 
 exports.move = function (x, y) {
   return Applab.executeCmd(null,
                           'move',
                           {'x': x,
-                           'y': y });
+                           'y': y});
 };
 
 exports.moveTo = function (x, y) {
   return Applab.executeCmd(null,
                           'moveTo',
                           {'x': x,
-                           'y': y });
+                           'y': y});
 };
 
 exports.turnRight = function (degrees) {
   return Applab.executeCmd(null,
                           'turnRight',
-                          {'degrees': degrees });
+                          {'degrees': degrees});
 };
 
 exports.turnLeft = function (degrees) {
   return Applab.executeCmd(null,
                           'turnLeft',
-                          {'degrees': degrees });
+                          {'degrees': degrees});
 };
 
 exports.turnTo = function (direction) {
   return Applab.executeCmd(null,
                            'turnTo',
-                           {'direction': direction });
+                           {'direction': direction});
 };
 
 exports.arcRight = function (degrees, radius) {
   return Applab.executeCmd(null,
                            'arcRight',
                            {'degrees': degrees,
-                            'radius': radius });
+                            'radius': radius});
 };
 
 exports.arcLeft = function (degrees, radius) {
   return Applab.executeCmd(null,
                            'arcLeft',
                            {'degrees': degrees,
-                            'radius': radius });
+                            'radius': radius});
 };
 
 exports.dot = function (radius) {
   return Applab.executeCmd(null,
                            'dot',
-                           {'radius': radius });
+                           {'radius': radius});
 };
 
 exports.getX = function () {
@@ -562,13 +562,13 @@ exports.speed = function (percent) {
 exports.penWidth = function (width) {
   return Applab.executeCmd(null,
                           'penWidth',
-                          {'width': width });
+                          {'width': width});
 };
 
 exports.penColor = function (color) {
   return Applab.executeCmd(null,
                           'penColor',
-                          {'color': color });
+                          {'color': color});
 };
 
 exports.penRGB = function (r, g, b, a) {
@@ -577,7 +577,7 @@ exports.penRGB = function (r, g, b, a) {
                           {'r': r,
                            'g': g,
                            'b': b,
-                           'a': a });
+                           'a': a});
 };
 
 exports.insertItem = function (array, index, item) {
@@ -585,21 +585,21 @@ exports.insertItem = function (array, index, item) {
                           'insertItem',
                           {'array': array,
                            'index': index,
-                           'item': item });
+                           'item': item});
 };
 
 exports.appendItem = function (array, item) {
   return Applab.executeCmd(null,
                           'appendItem',
                           {'array': array,
-                           'item': item });
+                           'item': item});
 };
 
 exports.removeItem = function (array, index) {
   return Applab.executeCmd(null,
                           'removeItem',
                           {'array': array,
-                           'index': index });
+                           'index': index});
 };
 
 exports.drawChart = function (chartId, chartType, chartData, options, callback) {
@@ -609,7 +609,7 @@ exports.drawChart = function (chartId, chartType, chartData, options, callback) 
                            'chartType': chartType,
                            'chartData': chartData,
                            'options': options,
-                           'callback': callback });
+                           'callback': callback});
 };
 
 exports.drawChartFromRecords = function (chartId, chartType, tableName, columns, options, callback) {
@@ -620,5 +620,5 @@ exports.drawChartFromRecords = function (chartId, chartType, tableName, columns,
                            'tableName': tableName,
                            'columns': columns,
                            'options': options,
-                           'callback': callback });
+                           'callback': callback});
 };

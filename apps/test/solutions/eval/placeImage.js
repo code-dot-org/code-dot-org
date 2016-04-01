@@ -4,12 +4,12 @@ var blockUtils = require('@cdo/apps/block_utils');
 
 var solutionXml = blockUtils.mathBlockXml('place_image', {
   'IMAGE': blockUtils.mathBlockXml('functional_circle', {
-    'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-    'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' }),
-    'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
+    'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'} ),
+    'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'}),
+    'SIZE': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} )
   }),
-  'X': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 25 } ),
-  'Y': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
+  'X': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 25} ),
+  'Y': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} )
 });
 
 module.exports = {

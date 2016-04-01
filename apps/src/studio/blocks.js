@@ -849,7 +849,7 @@ exports.install = function(blockly, blockInstallOptions) {
         studioValue: Direction.NORTH.toString(),
         tooltip: msg.moveUpTooltip()
       },
-      South: { letter: commonMsg.directionSouthLetter(),
+      South: {letter: commonMsg.directionSouthLetter(),
         image: skin.downArrow,
         studioValue: Direction.SOUTH.toString(),
         tooltip: msg.moveDownTooltip()
@@ -1993,7 +1993,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_wait = initWaitBlock({});
-  blockly.Blocks.studio_waitParams = initWaitBlock({ 'params': true });
+  blockly.Blocks.studio_waitParams = initWaitBlock({'params': true});
 
   generator.studio_wait = function() {
     return generateSetterCode({
@@ -2107,7 +2107,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NONE]);
 
       var options = {
-        fixedSize: { height: 35 }
+        fixedSize: {height: 35}
       };
 
       this.appendDummyInput()
@@ -2315,7 +2315,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       // todo = localize
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'keydown?', blockly.BlockValueType.BOOLEAN, [
-        { name: 'ARG1', type: 'Number' }
+        {name: 'ARG1', type: 'Number'}
       ]);
     }
   };

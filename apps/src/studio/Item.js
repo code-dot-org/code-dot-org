@@ -33,7 +33,7 @@ var Item = function (options) {
    * late as possible.
    * @type {{x: number, y: number}}
    */
-  this.renderOffset = options.renderOffset || { x: 0, y: 0 };
+  this.renderOffset = options.renderOffset || {x: 0, y: 0};
 
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
   this.normalSpeed = options.normalSpeed || constants.DEFAULT_ITEM_SPEED;

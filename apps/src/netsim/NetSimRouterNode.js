@@ -319,7 +319,7 @@ NetSimRouterNode.create = function (shard, onComplete) {
     }
   });
 
-  var entity = new NetSimRouterNode(shard, { routerNumber: nextRouterNumber });
+  var entity = new NetSimRouterNode(shard, {routerNumber: nextRouterNumber});
   entity.getTable().create(entity.buildRow(), function (err, row) {
     if (err) {
       onComplete(err, null);

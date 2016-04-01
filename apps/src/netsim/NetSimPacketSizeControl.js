@@ -35,7 +35,7 @@ NetSimPacketSizeControl.inherits(NetSimSlider);
  * @returns {string}
  */
 NetSimPacketSizeControl.prototype.getPacketSizeText = function (packetSize) {
-  return i18n.numBitsPerPacket({ numBits: packetSize });
+  return i18n.numBitsPerPacket({numBits: packetSize});
 };
 
 /**

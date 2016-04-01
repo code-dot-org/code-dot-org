@@ -35,7 +35,7 @@ describe('createRecord callbacks', function () {
     var hitSuccess = false;
     var hitError = false;
 
-    var myRecord = { name: 'Alice' };
+    var myRecord = {name: 'Alice'};
     applabCommands.createRecord({
       table: 'mytable',
       record: myRecord,
@@ -47,7 +47,7 @@ describe('createRecord callbacks', function () {
       }
     });
 
-    lastRequest.respond(200, { "Content-Type": "application/json" },
+    lastRequest.respond(200, {"Content-Type": "application/json"},
       JSON.stringify(myRecord));
     assert(hitSuccess);
     assert(!hitError);
@@ -57,7 +57,7 @@ describe('createRecord callbacks', function () {
     var hitSuccess = false;
     var hitError = false;
 
-    var myRecord = { name: 'Alice' };
+    var myRecord = {name: 'Alice'};
     applabCommands.createRecord({
       table: 'mytable',
       record: myRecord,
@@ -75,7 +75,7 @@ describe('createRecord callbacks', function () {
   });
 
   it('logs an error on 403 if no onError provided', function () {
-    var myRecord = { name: 'Alice' };
+    var myRecord = {name: 'Alice'};
     applabCommands.createRecord({
       table: 'mytable',
       record: myRecord,

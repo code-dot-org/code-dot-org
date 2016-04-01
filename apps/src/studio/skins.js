@@ -416,9 +416,9 @@ function loadInfinity(skin, assetUrl) {
   ];
 
   skin.specialProjectileProperties = {
-    'projectile_cherry': { frames: 13 },
-    'projectile_ice': { frames: 12 },
-    'projectile_duck': { frames: 12 }
+    'projectile_cherry': {frames: 13},
+    'projectile_ice': {frames: 12},
+    'projectile_duck': {frames: 12}
   };
 
   // TODO: proper item class names
@@ -434,9 +434,9 @@ function loadInfinity(skin, assetUrl) {
   ];
 
   skin.specialItemProperties = {
-    'item_cherry': { frames: 13 },
-    'item_ice': { frames: 12 },
-    'item_duck': { frames: 12 }
+    'item_cherry': {frames: 13},
+    'item_ice': {frames: 12},
+    'item_duck': {frames: 12}
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -634,13 +634,13 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'pufferpig':       { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -15}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
-    'stormtrooper':    { frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: { x: 0, y: -15}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
-    'tauntaun':        { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y:  20}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'mynock':          { frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: { x: 0, y: -20}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'probot':          { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -10}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'mousedroid':      { frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: { x: 0, y: -20}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'rebelpilot':      { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -20}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'pufferpig':       {frames: 12, width: 100, height: 100, scale: 1,   renderOffset: {x: 0, y: -15}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true},
+    'stormtrooper':    {frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: {x: 0, y: -15}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true},
+    'tauntaun':        {frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: {x: 0, y:  20}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true},
+    'mynock':          {frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: {x: 0, y: -20}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true},
+    'probot':          {frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: {x: 0, y: -10}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true},
+    'mousedroid':      {frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: {x: 0, y: -20}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true},
+    'rebelpilot':      {frames: 13, width: 100, height: 100, scale: 1,   renderOffset: {x: 0, y: -20}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true},
   };
 
   skin.customObstacleZones = {endor : {}, hoth: {}, starship: {}};
@@ -667,82 +667,82 @@ function loadHoc2015(skin, assetUrl) {
     generateGridObstacleZones();
 
   skin.customObstacleZones.endor.blobs = [
-    { minX: 346, maxX: 413, minY: 261, maxY: 344 },
-    { minX: 318, maxX: 404, minY: 342, maxY: 397 },
-    { minX: 308, maxX: 348, minY: 72, maxY: 110 },
-    { minX: 264, maxX: 348, minY: 112, maxY: 197 },
-    { minX: 96, maxX: 149, minY: 289, maxY: 349 },
-    { minX: 96, maxX: 199, minY: 238, maxY: 288 },
-    { minX: 83, maxX: 125, minY: 125, maxY: 147 },
-    { minX: 58, maxX: 99, minY: 72, maxY: 91 },
-    { minX: 57, maxX: 149, minY: 92, maxY: 123 }];
+    {minX: 346, maxX: 413, minY: 261, maxY: 344},
+    {minX: 318, maxX: 404, minY: 342, maxY: 397},
+    {minX: 308, maxX: 348, minY: 72, maxY: 110},
+    {minX: 264, maxX: 348, minY: 112, maxY: 197},
+    {minX: 96, maxX: 149, minY: 289, maxY: 349},
+    {minX: 96, maxX: 199, minY: 238, maxY: 288},
+    {minX: 83, maxX: 125, minY: 125, maxY: 147},
+    {minX: 58, maxX: 99, minY: 72, maxY: 91},
+    {minX: 57, maxX: 149, minY: 92, maxY: 123}];
 
   skin.customObstacleZones.endor.horizontal = [
-    { minX: 51, maxX: 299, minY: 269, maxY: 293 },
-    { minX: 150, maxX: 348, minY: 168, maxY: 189 },
-    { minX: 53, maxX: 97, minY: 159, maxY: 199 },
-    { minX: 50, maxX: 198, minY: 71, maxY: 94 },
-    { minX: 255, maxX: 345, minY: 71, maxY: 94 }];
+    {minX: 51, maxX: 299, minY: 269, maxY: 293},
+    {minX: 150, maxX: 348, minY: 168, maxY: 189},
+    {minX: 53, maxX: 97, minY: 159, maxY: 199},
+    {minX: 50, maxX: 198, minY: 71, maxY: 94},
+    {minX: 255, maxX: 345, minY: 71, maxY: 94}];
 
   skin.customObstacleZones.endor.circle = [
-    { minX: 251, maxX: 317, minY: 332, maxY: 348 },
-    { minX: 83, maxX: 198, minY: 332, maxY: 348 },
-    { minX: 250, maxX: 317, minY: 77, maxY: 93 },
-    { minX: 313, maxX: 337, minY: 77, maxY: 348 },
-    { minX: 163, maxX: 236, minY: 202, maxY: 244 },
-    { minX: 83, maxX: 200, minY: 77, maxY: 93 },
-    { minX: 62, maxX: 85, minY: 77, maxY: 348 }];
+    {minX: 251, maxX: 317, minY: 332, maxY: 348},
+    {minX: 83, maxX: 198, minY: 332, maxY: 348},
+    {minX: 250, maxX: 317, minY: 77, maxY: 93},
+    {minX: 313, maxX: 337, minY: 77, maxY: 348},
+    {minX: 163, maxX: 236, minY: 202, maxY: 244},
+    {minX: 83, maxX: 200, minY: 77, maxY: 93},
+    {minX: 62, maxX: 85, minY: 77, maxY: 348}];
 
   skin.customObstacleZones.hoth.blobs = [
-    { minX: 100, maxX: 142, minY: 283, maxY: 342 },
-    { minX: 100, maxX: 187, minY: 226, maxY: 281 },
-    { minX: 356, maxX: 394, minY: 264, maxY: 311 },
-    { minX: 311, maxX: 393, minY: 313, maxY: 388 },
-    { minX: 310, maxX: 344, minY: 61, maxY: 106 },
-    { minX: 258, maxX: 344, minY: 108, maxY: 192 },
-    { minX: 117, maxX: 146, minY: 120, maxY: 132 },
-    { minX: 57, maxX: 117, minY: 70, maxY: 132 }];
+    {minX: 100, maxX: 142, minY: 283, maxY: 342},
+    {minX: 100, maxX: 187, minY: 226, maxY: 281},
+    {minX: 356, maxX: 394, minY: 264, maxY: 311},
+    {minX: 311, maxX: 393, minY: 313, maxY: 388},
+    {minX: 310, maxX: 344, minY: 61, maxY: 106},
+    {minX: 258, maxX: 344, minY: 108, maxY: 192},
+    {minX: 117, maxX: 146, minY: 120, maxY: 132},
+    {minX: 57, maxX: 117, minY: 70, maxY: 132}];
 
   skin.customObstacleZones.hoth.horizontal = [
-    { minX: 54, maxX: 299, minY: 268, maxY: 294 },
-    { minX: 150, maxX: 350, minY: 171, maxY: 198 },
-    { minX: 53, maxX: 99, minY: 171, maxY: 198 },
-    { minX: 252, maxX: 350, minY: 66, maxY: 92 },
-    { minX: 54, maxX: 195, minY: 66, maxY: 92 }];
+    {minX: 54, maxX: 299, minY: 268, maxY: 294},
+    {minX: 150, maxX: 350, minY: 171, maxY: 198},
+    {minX: 53, maxX: 99, minY: 171, maxY: 198},
+    {minX: 252, maxX: 350, minY: 66, maxY: 92},
+    {minX: 54, maxX: 195, minY: 66, maxY: 92}];
 
   skin.customObstacleZones.hoth.circle = [
-    { minX: 250, maxX: 298, minY: 312, maxY: 342 },
-    { minX: 300, maxX: 346, minY: 65, maxY: 342 },
-    { minX: 252, maxX: 302, minY: 65, maxY: 100 },
-    { minX: 99, maxX: 192, minY: 311, maxY: 342 },
-    { minX: 101, maxX: 196, minY: 65, maxY: 91 },
-    { minX: 50, maxX: 100, minY: 65, maxY: 342 },
-    { minX: 163, maxX: 242, minY: 188, maxY: 238 }];
+    {minX: 250, maxX: 298, minY: 312, maxY: 342},
+    {minX: 300, maxX: 346, minY: 65, maxY: 342},
+    {minX: 252, maxX: 302, minY: 65, maxY: 100},
+    {minX: 99, maxX: 192, minY: 311, maxY: 342},
+    {minX: 101, maxX: 196, minY: 65, maxY: 91},
+    {minX: 50, maxX: 100, minY: 65, maxY: 342},
+    {minX: 163, maxX: 242, minY: 188, maxY: 238}];
 
   skin.customObstacleZones.starship.blobs = [
-    { minX: 301, maxX: 344, minY: 58, maxY: 120 },
-    { minX: 353, maxX: 405, minY: 260, maxY: 308 },
-    { minX: 306, maxX: 405, minY: 310, maxY: 393 },
-    { minX: 101, maxX: 144, minY: 300, maxY: 350 },
-    { minX: 101, maxX: 197, minY: 208, maxY: 299 },
-    { minX: 261, maxX: 344, minY: 120, maxY: 192 },
-    { minX: 55, maxX: 133, minY: 77, maxY: 141 }];
+    {minX: 301, maxX: 344, minY: 58, maxY: 120},
+    {minX: 353, maxX: 405, minY: 260, maxY: 308},
+    {minX: 306, maxX: 405, minY: 310, maxY: 393},
+    {minX: 101, maxX: 144, minY: 300, maxY: 350},
+    {minX: 101, maxX: 197, minY: 208, maxY: 299},
+    {minX: 261, maxX: 344, minY: 120, maxY: 192},
+    {minX: 55, maxX: 133, minY: 77, maxY: 141}];
 
   skin.customObstacleZones.starship.horizontal = [
-    { minX: 52, maxX: 298, minY: 267, maxY: 300 },
-    { minX: 151, maxX: 351, minY: 167, maxY: 198 },
-    { minX: 49, maxX: 99, minY: 165, maxY: 201 },
-    { minX: 51, maxX: 199, minY: 66, maxY: 102 },
-    { minX: 251, maxX: 351, minY: 68, maxY: 104 }];
+    {minX: 52, maxX: 298, minY: 267, maxY: 300},
+    {minX: 151, maxX: 351, minY: 167, maxY: 198},
+    {minX: 49, maxX: 99, minY: 165, maxY: 201},
+    {minX: 51, maxX: 199, minY: 66, maxY: 102},
+    {minX: 251, maxX: 351, minY: 68, maxY: 104}];
 
   skin.customObstacleZones.starship.circle = [
-    { minX: 251, maxX: 316, minY: 315, maxY: 351 },
-    { minX: 153, maxX: 242, minY: 165, maxY: 251 },
-    { minX: 252, maxX: 314, minY: 66, maxY: 100 },
-    { minX: 310, maxX: 339, minY: 66, maxY: 351 },
-    { minX: 80, maxX: 200, minY: 316, maxY: 351 },
-    { minX: 82, maxX: 200, minY: 66, maxY: 100 },
-    { minX: 63, maxX: 86, minY: 66, maxY: 351 }];
+    {minX: 251, maxX: 316, minY: 315, maxY: 351},
+    {minX: 153, maxX: 242, minY: 165, maxY: 251},
+    {minX: 252, maxX: 314, minY: 66, maxY: 100},
+    {minX: 310, maxX: 339, minY: 66, maxY: 351},
+    {minX: 80, maxX: 200, minY: 316, maxY: 351},
+    {minX: 82, maxX: 200, minY: 66, maxY: 100},
+    {minX: 63, maxX: 86, minY: 66, maxY: 351}];
 
   skin.explosion = skin.assetUrl('vanish.png');
   skin.explosionFrames = 17;
@@ -826,12 +826,12 @@ function loadHoc2015(skin, assetUrl) {
   });
 
   skin['r2-d2'].movementAudio = [
-    { begin: 'r2-d2_move1_start', loop: 'r2-d2_move1_loop', end: 'r2-d2_move1_end', volume: 2.2 },
-    { begin: 'r2-d2_move2_start', loop: 'r2-d2_move2_loop', end: 'r2-d2_move2_end', volume: 2.2 },
-    { begin: 'r2-d2_move3_start', loop: 'r2-d2_move3_loop', end: 'r2-d2_move3_end', volume: 2.2 }
+    {begin: 'r2-d2_move1_start', loop: 'r2-d2_move1_loop', end: 'r2-d2_move1_end', volume: 2.2},
+    {begin: 'r2-d2_move2_start', loop: 'r2-d2_move2_loop', end: 'r2-d2_move2_end', volume: 2.2},
+    {begin: 'r2-d2_move3_start', loop: 'r2-d2_move3_loop', end: 'r2-d2_move3_end', volume: 2.2}
   ];
   skin['c-3po'].movementAudio = [
-    { loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.6 }
+    {loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.6}
   ];
 
   skin.preventProjectileLoop = function (className) {
@@ -888,7 +888,7 @@ function loadHoc2015(skin, assetUrl) {
   // overlap each other a little.  Define a bounding rectangle for the source
   // tiles that get this treatment.
 
-  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+  skin.enlargeWallTiles = {minCol: 0, maxCol: 3, minRow: 3, maxRow: 5};
 
   // Since we don't have jumbo tiles for our "Hoth" background, in the case
   // of the two maps that use jumbo pieces ("circle" and "horizontal") we
@@ -1204,7 +1204,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'hazard': { frames: 13, animationFrameDuration: 6, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+    'hazard': {frames: 13, animationFrameDuration: 6, width: 100, height: 100, scale: 1.3, renderOffset: {x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true}
   };
 
   // Spritesheet for animated goal.
@@ -1288,10 +1288,10 @@ function loadHoc2015x(skin, assetUrl) {
     };
   });
   skin['bb-8'].movementAudio = [
-    { begin: 'move1', volume: 0.3 },
-    { begin: 'move2', volume: 0.3 },
-    { begin: 'move3', volume: 0.3 },
-    { begin: 'move4', volume: 0.3 }
+    {begin: 'move1', volume: 0.3},
+    {begin: 'move2', volume: 0.3},
+    {begin: 'move3', volume: 0.3},
+    {begin: 'move4', volume: 0.3}
   ];
 
   skin.preventProjectileLoop = function (className) {
@@ -1317,7 +1317,7 @@ function loadHoc2015x(skin, assetUrl) {
   // overlap each other a little.  Define a bounding rectangle for the source
   // tiles that get this treatment.
 
-  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+  skin.enlargeWallTiles = {minCol: 0, maxCol: 3, minRow: 3, maxRow: 5};
 
   // Sounds.
   skin.sounds = ['move1', 'move2', 'move3', 'move4'];
@@ -1369,21 +1369,21 @@ function loadHoc2015x(skin, assetUrl) {
  * @const {MusicTrackDefinition[]}
  */
 var HOC2015_MUSIC_METADATA = [
-  { name: 'song1', volume: 0.5 },
-  { name: 'song2', volume: 0.5 },
-  { name: 'song3', volume: 0.5 },
-  { name: 'song4', volume: 0.4 },
-  { name: 'song5', volume: 0.4 },
-  { name: 'song6', volume: 0.5 },
-  { name: 'song7', volume: 0.4 },
-  { name: 'song8', volume: 0.4 },
-  { name: 'song9', volume: 0.4 },
-  { name: 'song10', volume: 0.5 },
-  { name: 'song11', volume: 0.45 },
-  { name: 'song12', volume: 0.4 },
-  { name: 'song13', volume: 0.4 },
-  { name: 'song14', volume: 0.5 },
-  { name: 'song15', volume: 0.55 }
+  {name: 'song1', volume: 0.5},
+  {name: 'song2', volume: 0.5},
+  {name: 'song3', volume: 0.5},
+  {name: 'song4', volume: 0.4},
+  {name: 'song5', volume: 0.4},
+  {name: 'song6', volume: 0.5},
+  {name: 'song7', volume: 0.4},
+  {name: 'song8', volume: 0.4},
+  {name: 'song9', volume: 0.4},
+  {name: 'song10', volume: 0.5},
+  {name: 'song11', volume: 0.45},
+  {name: 'song12', volume: 0.4},
+  {name: 'song13', volume: 0.4},
+  {name: 'song14', volume: 0.5},
+  {name: 'song15', volume: 0.55}
 ];
 
 function loadStudio(skin, assetUrl) {

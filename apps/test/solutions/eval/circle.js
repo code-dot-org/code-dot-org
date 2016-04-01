@@ -7,9 +7,9 @@ module.exports = {
   skinId: 'eval',
   levelDefinition: {
     solutionBlocks: blockUtils.mathBlockXml('functional_circle', {
-      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' }),
-      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'} ),
+      'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'}),
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} )
     }),
     requiredBlocks: '',
     freePlay: false
@@ -44,9 +44,9 @@ module.exports = {
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('functional_circle', {
-          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-          'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' }),
-          'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
+          'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'} ),
+          'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'}),
+          'SIZE': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} )
         }) +
       '</xml>'
     },
@@ -58,9 +58,9 @@ module.exports = {
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('functional_circle', {
-          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-          'STYLE': blockUtils.mathBlockXml('functional_style', null, { VAL: 'outline' }),
-          'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
+          'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'} ),
+          'STYLE': blockUtils.mathBlockXml('functional_style', null, {VAL: 'outline'}),
+          'SIZE': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} )
         }) +
       '</xml>'
     },
@@ -73,11 +73,11 @@ module.exports = {
       xml: '<xml>' +
         blockUtils.mathBlockXml('rotate', {
           'IMAGE': blockUtils.mathBlockXml('functional_circle', {
-            'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-            'STYLE': blockUtils.mathBlockXml('functional_style', null, { VAL: 'outline' }),
-            'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
+            'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'} ),
+            'STYLE': blockUtils.mathBlockXml('functional_style', null, {VAL: 'outline'}),
+            'SIZE': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} )
           }),
-          'DEGREES': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 15 } )
+          'DEGREES': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 15} )
         }) +
       '</xml>'
     },
@@ -89,9 +89,9 @@ module.exports = {
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('functional_circle', {
-          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'blue' } ),
-          'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' }),
-          'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
+          'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'blue'} ),
+          'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'}),
+          'SIZE': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50} )
         }) +
       '</xml>'
     }
