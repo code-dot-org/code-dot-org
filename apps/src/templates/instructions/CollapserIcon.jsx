@@ -36,7 +36,7 @@ var CollapserIcon = React.createClass({
     return (
       <i style={styles.showHideButton}
           onClick={this.props.onClick}
-          className={iconClass + " fa CollapserIcon_showHideButton"}/>
+          className={iconClass + " fa"}/>
     );
   }
 });
