@@ -47,7 +47,7 @@ exports.easeOutElastic = function (t, b, c, d) {
   } else {
     s = p/(2*Math.PI) * Math.asin (c/a);
   }
-  return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+  return a*Math.pow(2, -10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
 };
 
 /**

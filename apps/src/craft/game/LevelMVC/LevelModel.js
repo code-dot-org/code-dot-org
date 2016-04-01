@@ -13,16 +13,16 @@ export default class LevelModel {
     this.player = {};
 
     this.railMap = 
-      ["","","","","","","","","","",
-      "","","","","","","","","","",
-      "","","","railsUnpoweredVertical","","","","","","",
-      "","","","railsUnpoweredVertical","","","","","","",
-      "","","","railsUnpoweredVertical","","","","","","",
-      "","","","railsUnpoweredVertical","","","","","","",
-      "","","","railsUnpoweredVertical","","","","","","",
-      "","","","railsBottomLeft","railsHorizontal","railsHorizontal","railsHorizontal","railsHorizontal","railsHorizontal","railsHorizontal",
-      "","","","","","","","","","",
-      "","","","","","","","","",""];
+      ["", "", "", "", "", "", "", "", "", "",
+      "", "", "", "", "", "", "", "", "", "",
+      "", "", "", "railsUnpoweredVertical", "", "", "", "", "", "",
+      "", "", "", "railsUnpoweredVertical", "", "", "", "", "", "",
+      "", "", "", "railsUnpoweredVertical", "", "", "", "", "", "",
+      "", "", "", "railsUnpoweredVertical", "", "", "", "", "", "",
+      "", "", "", "railsUnpoweredVertical", "", "", "", "", "", "",
+      "", "", "", "railsBottomLeft", "railsHorizontal", "railsHorizontal", "railsHorizontal", "railsHorizontal", "railsHorizontal", "railsHorizontal",
+      "", "", "", "", "", "", "", "", "", "",
+      "", "", "", "", "", "", "", "", "", ""];
 
     this.initialLevelData = Object.create(levelData);
 
@@ -173,10 +173,10 @@ export default class LevelModel {
     var tnt = [];
     for(var x = 0; x < this.planeWidth; ++x) {
       for(var y = 0; y < this.planeHeight; ++y) {
-        var index = this.coordinatesToIndex([x,y]);
+        var index = this.coordinatesToIndex([x, y]);
         var block = this.actionPlane[index];
         if(block.blockType === "tnt") {
-          tnt.push([x,y]);
+          tnt.push([x, y]);
         }
       }
     }
@@ -187,10 +187,10 @@ export default class LevelModel {
     var unpoweredRails = [];
     for(var x = 0; x < this.planeWidth; ++x) {
       for(var y = 0; y < this.planeHeight; ++y) {
-        var index = this.coordinatesToIndex([x,y]);
+        var index = this.coordinatesToIndex([x, y]);
         var block = this.actionPlane[index];
-        if(block.blockType.substring(0,7) == "railsUn") {
-          unpoweredRails.push([x,y], "railsPowered" + this.actionPlane[index].blockType.substring(14));
+        if(block.blockType.substring(0, 7) == "railsUn") {
+          unpoweredRails.push([x, y], "railsPowered" + this.actionPlane[index].blockType.substring(14));
         }
       }
     }
@@ -416,21 +416,21 @@ export default class LevelModel {
 
   getMinecartTrack() {
     var track = [];
-    track.push(["down", [3,2], FacingDirection.Down, 300]);
-    track.push(["down", [3,3], FacingDirection.Down, 300]);
-    track.push(["down", [3,4], FacingDirection.Down, 300]);
-    track.push(["down", [3,5], FacingDirection.Down, 300]);
-    track.push(["down", [3,6], FacingDirection.Down, 300]);
-    track.push(["down", [3,7], FacingDirection.Down, 300]);
-    track.push(["turn_left", [3,7], FacingDirection.Right, 400]);
-    track.push(["right", [4,7], FacingDirection.Right, 400]);
-    track.push(["right", [5,7], FacingDirection.Right, 400]);
-    track.push(["right", [6,7], FacingDirection.Right, 400]);
-    track.push(["right", [7,7], FacingDirection.Right, 400]);
-    track.push(["right", [8,7], FacingDirection.Right, 400]);
-    track.push(["right", [9,7], FacingDirection.Right, 400]);
-    track.push(["right", [10,7], FacingDirection.Right, 400]);
-    track.push(["right", [11,7], FacingDirection.Right, 400]);
+    track.push(["down", [3, 2], FacingDirection.Down, 300]);
+    track.push(["down", [3, 3], FacingDirection.Down, 300]);
+    track.push(["down", [3, 4], FacingDirection.Down, 300]);
+    track.push(["down", [3, 5], FacingDirection.Down, 300]);
+    track.push(["down", [3, 6], FacingDirection.Down, 300]);
+    track.push(["down", [3, 7], FacingDirection.Down, 300]);
+    track.push(["turn_left", [3, 7], FacingDirection.Right, 400]);
+    track.push(["right", [4, 7], FacingDirection.Right, 400]);
+    track.push(["right", [5, 7], FacingDirection.Right, 400]);
+    track.push(["right", [6, 7], FacingDirection.Right, 400]);
+    track.push(["right", [7, 7], FacingDirection.Right, 400]);
+    track.push(["right", [8, 7], FacingDirection.Right, 400]);
+    track.push(["right", [9, 7], FacingDirection.Right, 400]);
+    track.push(["right", [10, 7], FacingDirection.Right, 400]);
+    track.push(["right", [11, 7], FacingDirection.Right, 400]);
     return track;
 }
 
@@ -719,7 +719,7 @@ export default class LevelModel {
       //right
       if(angle >= 327.5 || angle <= 32.5) {
         rightQuad = true;
-        this.pushIfHigherPrecedence(index, {x: x, y: y, type: "FogOfWar_Right" , precedence: 1});
+        this.pushIfHigherPrecedence(index, {x: x, y: y, type: "FogOfWar_Right", precedence: 1});
       }//bot
       if(angle > 237.5 && angle <= 302.5) {
         botQuad = true;
@@ -785,9 +785,9 @@ export default class LevelModel {
     var emissives = [];
     for (var y = 0; y < this.planeHeight; ++y) {
       for (var x = 0; x < this.planeWidth; ++x) {
-        var index = this.coordinatesToIndex([x,y]);
+        var index = this.coordinatesToIndex([x, y]);
         if(!this.actionPlane[index].isEmpty && this.actionPlane[index].isEmissive || this.groundPlane[index].isEmissive && this.actionPlane[index].isEmpty ) {
-          emissives.push([x,y]);
+          emissives.push([x, y]);
         }
       }
     }
@@ -816,7 +816,7 @@ export default class LevelModel {
           }
 
           //we want unique copies so we use a map.
-          blocksTouchedByEmissives[yIndex.toString() + xIndex.toString()] = [xIndex,yIndex];
+          blocksTouchedByEmissives[yIndex.toString() + xIndex.toString()] = [xIndex, yIndex];
         }
       }
     }

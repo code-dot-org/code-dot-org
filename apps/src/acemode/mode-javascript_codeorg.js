@@ -4,7 +4,7 @@ var annotationList = require('./annotationList');
 
 exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
   // define ourselves for ace, so that it knows where to get us
-  ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net","ace/ext/searchbox"], function(acerequire, exports, module) {
+  ace.define("ace/mode/javascript_codeorg", ["require", "exports", "module", "ace/lib/oop", "ace/mode/javascript", "ace/mode/javascript_highlight_rules", "ace/worker/worker_client", "ace/mode/matching_brace_outdent", "ace/mode/behaviour/cstyle", "ace/mode/folding/cstyle", "ace/config", "ace/lib/net", "ace/ext/searchbox"], function(acerequire, exports, module) {
 
     var oop = acerequire("ace/lib/oop");
     var JavaScriptMode = acerequire("ace/mode/javascript").Mode;

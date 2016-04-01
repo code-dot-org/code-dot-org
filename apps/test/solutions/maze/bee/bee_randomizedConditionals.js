@@ -6,14 +6,14 @@ var blockUtils = require('@cdo/apps/block_utils');
 var levelDef = {
   'startDirection': 1, // Direction.EAST,
   'serializedMaze': [
-    [{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0}],
-    [{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0}],
-    [{"tileType": 0},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 0}],
-    [{"tileType": 0},{"tileType": 2},{"tileType": 1,"featureType": 2,"value": 1,"cloudType": 1,"range": 1},{"tileType": 1,"featureType": 2,"value": 1,"cloudType": 2,"range": 1},{"tileType": 1,"featureType": 2,"value": 1,"cloudType": 3,"range": 1},{"tileType": 1,"featureType": 1,"value": 1,"cloudType": 4,"range": 1},{"tileType": 1},{"tileType": 0}],
-    [{"tileType": 0},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 0}],
-    [{"tileType": 0},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 0}],
-    [{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0}],
-    [{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0}]
+    [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
+    [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
+    [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
+    [{"tileType": 0}, {"tileType": 2}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 1, "range": 1}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 2, "range": 1}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 3, "range": 1}, {"tileType": 1, "featureType": 1, "value": 1, "cloudType": 4, "range": 1}, {"tileType": 1}, {"tileType": 0}],
+    [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
+    [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
+    [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
+    [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}]
   ],
   flowerType: 'redWithNectar'
 };

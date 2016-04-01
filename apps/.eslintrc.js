@@ -37,6 +37,7 @@ module.exports = {
     "array-bracket-spacing": ["error", "never"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "comma-dangle": "off",
+    "comma-spacing": "error",
     "curly": "error",
     "key-spacing": "error",
     "no-array-constructor": "error",

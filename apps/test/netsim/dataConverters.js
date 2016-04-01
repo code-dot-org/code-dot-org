@@ -799,7 +799,7 @@ describe("DataConverters", function () {
         '000000000',
         '111111111'
       ].map(binaryToBase64);
-      var i,j;
+      var i, j;
 
       for (i=0; i < base64Values.length; i+=1) {
         for (j=i+1; j < base64Values.length; j+=1) {

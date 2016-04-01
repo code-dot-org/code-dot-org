@@ -330,7 +330,7 @@ export default class LevelView {
     tween.start();
   }
 
-  playDestroyTntAnimation(position, facing, isOnBlock, tntArray , newShadingPlaneData, completionHandler) {
+  playDestroyTntAnimation(position, facing, isOnBlock, tntArray, newShadingPlaneData, completionHandler) {
     var block,
         lastAnimation;
     if (tntArray.length === 0) {
@@ -410,7 +410,7 @@ export default class LevelView {
 
     //if we loop the sfx that might be better?
     this.audioPlayer.play("minecart");
-    this.playPlayerAnimation("mineCart",position, facing, false);
+    this.playPlayerAnimation("mineCart", position, facing, false);
     tween = this.addResettableTween(this.playerSprite).to({
       x: (-18 + 40 * nextPosition[0]),
       y: (-32 + 40 * nextPosition[1]),
@@ -438,8 +438,8 @@ export default class LevelView {
     this.i = 0;
 
     //start at 3,2
-    this.setPlayerPosition(3,2, isOnBlock);
-    position = [3,2];
+    this.setPlayerPosition(3, 2, isOnBlock);
+    position = [3, 2];
 
     animation = this.playLevelEndAnimation(position, facing, isOnBlock, completionHandler, false);
 
@@ -458,7 +458,7 @@ export default class LevelView {
       facing = this.track[this.i][2];
 
       //turn
-      if(arraydirection.substring(0,4) === "turn") {
+      if(arraydirection.substring(0, 4) === "turn") {
         direction = arraydirection.substring(5);
         this.playMinecartTurnAnimation(position, facing, isOnBlock, completionHandler, direction).onComplete.add(() => {
           this.playMinecartMoveForwardAnimation(position, facing, isOnBlock, completionHandler, nextPosition, speed).onComplete.add(() => {
@@ -630,8 +630,8 @@ export default class LevelView {
       tween = this.addResettableTween(this.playerSprite).to({
         x: [-18 + 40 * oldPosition[0], -18 + 40 * (oldPosition[0] + newPosVec[0]), -18 + 40 * position[0]],
         y: [-32 + 40 * oldPosition[1], -32 + 40 * (oldPosition[1] + newPosVec[1]) - 50, -32 + 40 * position[1]]
-      }, 300, Phaser.Easing.Linear.None).interpolation((v,k) => {
-        return Phaser.Math.bezierInterpolation(v,k);
+      }, 300, Phaser.Easing.Linear.None).interpolation((v, k) => {
+        return Phaser.Math.bezierInterpolation(v, k);
       });
 
       tween.onComplete.add(() => {
@@ -654,8 +654,8 @@ export default class LevelView {
     var tween = this.addResettableTween(this.playerSprite).to({
       x: [-18 + 40 * position[0], -18 + 40 * position[0], -18 + 40 * position[0]],
       y: [-32 + 40 * position[1], -32 + 40 * position[1] - 50, -32 + 40 * position[1]]
-    }, 300, Phaser.Easing.Linear.None).interpolation((v,k) => {
-      return Phaser.Math.bezierInterpolation(v,k);
+    }, 300, Phaser.Easing.Linear.None).interpolation((v, k) => {
+      return Phaser.Math.bezierInterpolation(v, k);
     });
     tween.onComplete.addOnce(() => {
       this.audioPlayer.play("fall");
@@ -1368,7 +1368,7 @@ export default class LevelView {
     });
     frameList = this.generateFramesWithEndDelay("Player_", 72, 71, "Player_071", 3, 5);
     frameList.push("Player_072");
-    this.playerSprite.animations.add('lookRight_right',frameList, idleFrameRate, false).onComplete.add(()=> {
+    this.playerSprite.animations.add('lookRight_right', frameList, idleFrameRate, false).onComplete.add(()=> {
       this.playScaledSpeed(this.playerSprite.animations, "idlePause_right");
     });
     frameList = this.generateFramesWithEndDelay("Player_", 270, 269, "Player_269", 3, 5);
@@ -1764,7 +1764,7 @@ export default class LevelView {
         }
 
         sprite.animations.add("used", frameList, 15, true);
-        this.playAnimationWithOffset(sprite,"idle",17, 199);
+        this.playAnimationWithOffset(sprite, "idle", 17, 199);
         break;
 
       case "creeper":
@@ -1976,10 +1976,10 @@ export default class LevelView {
         sprite = plane.create(xOffset + 40 * x, yOffset + plane.yOffset + 40 * y, atlas, frame);
         frameList = Phaser.Animation.generateFrameNames("TNTexplosion", 0, 8, "", 0);
         sprite.animations.add("explode", frameList, 7, false).onComplete.add(() => {
-          this.playExplosionCloudAnimation([x,y]);
+          this.playExplosionCloudAnimation([x, y]);
           sprite.kill();
           this.toDestroy.push(sprite);
-          this.actionPlaneBlocks[this.coordinatesToIndex([x,y])] = null;
+          this.actionPlaneBlocks[this.coordinatesToIndex([x, y])] = null;
         });
         break;
 

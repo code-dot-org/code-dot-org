@@ -443,7 +443,7 @@ describe("ExpressionNode", function () {
     node = new ExpressionNode(2);
     assert.equal(node.getDeepestOperation(), null);
 
-    node = new ExpressionNode("+", [1,2]);
+    node = new ExpressionNode("+", [1, 2]);
     assert.equal(node.getDeepestOperation(), node);
 
     // both children have same depth
@@ -1048,7 +1048,7 @@ describe("ExpressionNode", function () {
 
   describe('isDivZero', function () {
     it('returns false when not a div zero', function () {
-      var node = new ExpressionNode('/', [3,3]);
+      var node = new ExpressionNode('/', [3, 3]);
       assert(node.isDivZero() === false);
     });
 

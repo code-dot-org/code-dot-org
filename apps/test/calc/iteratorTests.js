@@ -8,7 +8,7 @@ var InputIterator = require('@cdo/apps/calc/inputIterator');
 
 describe('InputIterator', function () {
   it('works for a single param', function () {
-    var values = [1,5,10];
+    var values = [1, 5, 10];
     var numParams = 1;
     var iterator = new InputIterator(values, numParams);
 
@@ -25,7 +25,7 @@ describe('InputIterator', function () {
   });
 
   it('works for two params', function () {
-    var values = [1,3,5];
+    var values = [1, 3, 5];
     var numParams = 2;
     var iterator = new InputIterator(values, numParams);
 

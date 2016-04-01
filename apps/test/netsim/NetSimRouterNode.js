@@ -1529,7 +1529,7 @@ describe("NetSimRouterNode", function () {
         routerA.tick({time: 0});
       });
 
-      it("can round-trip to auto-DNS service and back",function () {
+      it("can round-trip to auto-DNS service and back", function () {
         sendToAutoDns(clientA, '');
 
         // No routing has occurred yet; our original message is still in the table.

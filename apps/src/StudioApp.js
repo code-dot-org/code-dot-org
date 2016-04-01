@@ -1123,7 +1123,7 @@ StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose, showHin
     if ($(endTargetSelector).length) {
       $(endTargetSelector).css({"background-color": "rgba(255,255,255,1)"})
         .delay(500)
-        .animate({"background-color": "rgba(0,0,0,0)"},1000);
+        .animate({"background-color": "rgba(0,0,0,0)"}, 1000);
     }
     // Set focus to ace editor when instructions close:
     if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {

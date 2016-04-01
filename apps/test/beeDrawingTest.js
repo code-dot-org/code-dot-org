@@ -118,12 +118,12 @@ describe("beeItemDrawer", function () {
       [2,   0,   0, true, false,  '', null],
       [1,   1,   1, true, false, '1', 'redFlower'],
       [1,   2,   2, true, false, '2', 'redFlower'],
-      [1,  11,  11, true, false,'11', 'redFlower'],
+      [1,  11,  11, true, false, '11', 'redFlower'],
       [1,  98,  98, true, false, '0', 'redFlower'], // 98 -> 0
       [1,  99,  99, true, false,  '', 'redFlower'], // 99 -> unlimited
       [1,  -1,  -1, true, false, '1', 'honey'],
       [1,  -2,  -2, true, false, '2', 'honey'],
-      [1, -11, -11, true, false,'11', 'honey'],
+      [1, -11, -11, true, false, '11', 'honey'],
       [1, -98, -98, true, false, '0', 'honey'],
       [1, -99, -99, true, false,  '', 'honey'],
       // red with default red - behaves same as map = 1
@@ -136,12 +136,12 @@ describe("beeItemDrawer", function () {
       [2,   0,   0, false, false,  '', null],
       [1,   1,   1, false, false, '1', 'redFlower'],
       [1,   2,   2, false, false, '2', 'redFlower'],
-      [1,  11,  11, false, false,'11', 'redFlower'],
+      [1,  11,  11, false, false, '11', 'redFlower'],
       [1,  98,  98, false, false, '0', 'redFlower'], // 98 -> 0
       [1,  99,  99, false, false,  '', 'redFlower'], // 99 -> unlimited
       [1,  -1,  -1, false, false, '1', 'honey'],
       [1,  -2,  -2, false, false, '2', 'honey'],
-      [1, -11, -11, false, false,'11', 'honey'],
+      [1, -11, -11, false, false, '11', 'honey'],
       [1, -98, -98, false, false, '0', 'honey'],
       [1, -99, -99, false, false,  '', 'honey'],
       ['R',  1,   1, false, false, '1', 'redFlower'],
@@ -163,12 +163,12 @@ describe("beeItemDrawer", function () {
       [2,   0,   0, true, false,  '', null],
       [1,   1,   1, true, false, '1', 'purpleFlower'],
       [1,   2,   2, true, false, '2', 'purpleFlower'],
-      [1,  11,  11, true, false,'11', 'purpleFlower'],
+      [1,  11,  11, true, false, '11', 'purpleFlower'],
       [1,  98,  98, true, false, '0', 'purpleFlower'], // 98 -> 0
       [1,  99,  99, true, false,  '', 'purpleFlower'], // 99 -> unlimited
       [1,  -1,  -1, true, false, '1', 'honey'],
       [1,  -2,  -2, true, false, '2', 'honey'],
-      [1, -11, -11, true, false,'11', 'honey'],
+      [1, -11, -11, true, false, '11', 'honey'],
       [1, -98, -98, true, false, '0', 'honey'],
       [1, -99, -99, true, false,  '', 'honey'],
       // red with default purple - visible whether or not running
@@ -186,7 +186,7 @@ describe("beeItemDrawer", function () {
       [1,  99,  99, false, false, '?', 'purpleFlower'],
       [1,  -1,  -1, false, false, '1', 'honey'],
       [1,  -2,  -2, false, false, '2', 'honey'],
-      [1, -11, -11, false, false,'11', 'honey'],
+      [1, -11, -11, false, false, '11', 'honey'],
       [1, -98, -98, false, false, '0', 'honey'],
       [1, -99, -99, false, false,  '', 'honey'],
       // red with default purple - visible whether or not running

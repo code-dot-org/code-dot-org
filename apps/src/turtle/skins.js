@@ -47,18 +47,18 @@ exports.load = function (assetUrl, id) {
   var stickers = function() {
 
     // Playlab characters
-    var playlab = ['Alien'   , 'Bat'     , 'Bird'     , 'Cat'       , 'Caveboy'   ,
-                   'Cavegirl', 'Dinosaur', 'Dog'      , 'Dragon'    , 'Ghost'     ,
-                   'Knight'  , 'Monster' , 'Ninja'    , 'Octopus'   , 'Penguin'   ,
-                   'Pirate'  , 'Princess', 'Robot'    , 'Soccerboy' , 'Soccergirl',
-                   'Spacebot', 'Squirrel', 'Tennisboy', 'Tennisgirl', 'Unicorn'   ,
-                   'Witch'   , 'Wizard'  , 'Zombie'];
+    var playlab = ['Alien', 'Bat', 'Bird', 'Cat', 'Caveboy',
+                   'Cavegirl', 'Dinosaur', 'Dog', 'Dragon', 'Ghost',
+                   'Knight', 'Monster', 'Ninja', 'Octopus', 'Penguin',
+                   'Pirate', 'Princess', 'Robot', 'Soccerboy', 'Soccergirl',
+                   'Spacebot', 'Squirrel', 'Tennisboy', 'Tennisgirl', 'Unicorn',
+                   'Witch', 'Wizard', 'Zombie'];
 
     // Miscellaneous stickers
-    var misc = ['Beaver', 'Bunny'      , 'Chicken', 'Elephant', 'Giraffe',
-                'Goat'  , 'Grasshopper', 'Hippo'  , 'Lion'    , 'Llama'  ,
-                'Monkey', 'Moose'      , 'Mouse'  , 'Owl'     , 'Peacock',
-                'Rocket', 'Triceratops', 'Turtle' , 'Zebra'];
+    var misc = ['Beaver', 'Bunny', 'Chicken', 'Elephant', 'Giraffe',
+                'Goat', 'Grasshopper', 'Hippo', 'Lion', 'Llama',
+                'Monkey', 'Moose', 'Mouse', 'Owl', 'Peacock',
+                'Rocket', 'Triceratops', 'Turtle', 'Zebra'];
 
     var mapping = {};
 

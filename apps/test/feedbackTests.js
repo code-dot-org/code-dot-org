@@ -303,7 +303,7 @@ describe("getMissingBlocks_ tests", function () {
 
     // Convert a function to a string and remove whitespace
     function functionText(f) {
-      return f.toString().replace(/\s/gm,"");
+      return f.toString().replace(/\s/gm, "");
     }
 
     function validateKey (key) {

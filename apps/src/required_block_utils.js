@@ -299,7 +299,7 @@ exports.blockTitlesMatch = function(blockA, blockB) {
   var blockATitles = blockA.getTitles();
   var blockBTitles = blockB.getTitles();
 
-  var nameCompare = function(a,b) { return a.name < b.name; };
+  var nameCompare = function(a, b) { return a.name < b.name; };
   blockATitles.sort(nameCompare);
   blockBTitles.sort(nameCompare);
 

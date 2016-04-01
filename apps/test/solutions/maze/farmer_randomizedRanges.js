@@ -6,14 +6,14 @@ var blockUtils = require('@cdo/apps/block_utils');
 var levelDef = {
   'startDirection': 2, // Direction.SOUTH,
   'serializedMaze': [
-    [{"tileType": 1},{"tileType": 1},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 1},{"tileType": 1}],
-    [{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 1}],
-    [{"tileType": 0},{"tileType": 1},{"tileType": 2},{"tileType": 1},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0}],
-    [{"tileType": 0},{"tileType": 0},{"tileType": 1},{"tileType": 1,"value": -5,"range": -6},{"tileType": 1},{"tileType": 0},{"tileType": 0},{"tileType": 0}],
-    [{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 0},{"tileType": 0}],
-    [{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 1},{"tileType": 1},{"tileType": 1},{"tileType": 0}],
-    [{"tileType": 1},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 1},{"tileType": 1},{"tileType": 1}],
-    [{"tileType": 1},{"tileType": 1},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 0},{"tileType": 1},{"tileType": 1}]
+    [{"tileType": 1}, {"tileType": 1}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 1}, {"tileType": 1}],
+    [{"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 1}],
+    [{"tileType": 0}, {"tileType": 1}, {"tileType": 2}, {"tileType": 1}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
+    [{"tileType": 0}, {"tileType": 0}, {"tileType": 1}, {"tileType": 1, "value": -5, "range": -6}, {"tileType": 1}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
+    [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}, {"tileType": 0}],
+    [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
+    [{"tileType": 1}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}],
+    [{"tileType": 1}, {"tileType": 1}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 1}, {"tileType": 1}]
   ],
 };
 

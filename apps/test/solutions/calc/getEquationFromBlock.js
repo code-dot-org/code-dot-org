@@ -194,7 +194,7 @@ module.exports = {
           '</block>';
         validateGeneratedEquation(assert,
           functional_definition_two_args,
-          new Equation('f', ['x','y'], new ExpressionNode('+', ['x', 'y']))
+          new Equation('f', ['x', 'y'], new ExpressionNode('+', ['x', 'y']))
         );
 
         // functional_parameters_get

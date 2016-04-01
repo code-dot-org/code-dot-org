@@ -402,7 +402,7 @@ function renderFooterInSharedGame() {
     });
   }
 
-  ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
+  ReactDOM.render(React.createElement(window.dashboard.SmallFooter, {
     i18nDropdown: '',
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,

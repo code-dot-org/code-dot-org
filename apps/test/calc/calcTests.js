@@ -18,8 +18,8 @@ describe('evaluateResults_/evaluateFunction_', function () {
     // f(x, y) = x + y
     // f(2, 2)
     var targetSet = new EquationSet();
-    targetSet.addEquation_(new Equation('f', ['x','y'], new ExpressionNode('+', ['x', 'y'])));
-    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [1,2])));
+    targetSet.addEquation_(new Equation('f', ['x', 'y'], new ExpressionNode('+', ['x', 'y'])));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [1, 2])));
 
 
     // f(x) = x + x

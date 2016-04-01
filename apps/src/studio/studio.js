@@ -199,7 +199,7 @@ function loadLevel() {
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
-  Studio.protagonistSpriteIndex = utils.valueOr(level.protagonistSpriteIndex,level.protaganistSpriteIndex);
+  Studio.protagonistSpriteIndex = utils.valueOr(level.protagonistSpriteIndex, level.protaganistSpriteIndex);
 
   switch (level.customGameType) {
     case 'Big Game':
@@ -4621,7 +4621,7 @@ Studio.movementAudioOff = function () {
   moveAudioState = false;
 };
 
-var p = function (x,y) {
+var p = function (x, y) {
   return x + " " + y + " ";
 };
 
@@ -4643,27 +4643,27 @@ http://www.remy-mellet.com/blog/179-draw-rectangle-with-123-or-4-rounded-corner/
 */
 
 var createSpeechBubblePath = function (x, y, w, h, r, onTop, onRight) {
-  var strPath = "M"+p(x+r,y); //A
+  var strPath = "M"+p(x+r, y); //A
   if (!onTop) {
     if (onRight) {
-      strPath+="L"+p(x+r-TIP_X_SHIFT,y-TIP_HEIGHT)+"L"+p(x+r+TIP_WIDTH,y);
+      strPath+="L"+p(x+r-TIP_X_SHIFT, y-TIP_HEIGHT)+"L"+p(x+r+TIP_WIDTH, y);
     } else {
-      strPath+="L"+p(x+w-r-TIP_WIDTH,y)+"L"+p(x+w-TIP_X_SHIFT,y-TIP_HEIGHT);
+      strPath+="L"+p(x+w-r-TIP_WIDTH, y)+"L"+p(x+w-TIP_X_SHIFT, y-TIP_HEIGHT);
     }
   }
-  strPath+="L"+p(x+w-r,y);
-  strPath+="Q"+p(x+w,y)+p(x+w,y+r); //B
-  strPath+="L"+p(x+w,y+h-r)+"Q"+p(x+w,y+h)+p(x+w-r,y+h); //C
+  strPath+="L"+p(x+w-r, y);
+  strPath+="Q"+p(x+w, y)+p(x+w, y+r); //B
+  strPath+="L"+p(x+w, y+h-r)+"Q"+p(x+w, y+h)+p(x+w-r, y+h); //C
   if (onTop) {
     if (onRight) {
-      strPath+="L"+p(x+r+TIP_WIDTH,y+h)+"L"+p(x+r-TIP_X_SHIFT,y+h+TIP_HEIGHT);
+      strPath+="L"+p(x+r+TIP_WIDTH, y+h)+"L"+p(x+r-TIP_X_SHIFT, y+h+TIP_HEIGHT);
     } else {
-      strPath+="L"+p(x+w-TIP_X_SHIFT,y+h+TIP_HEIGHT)+"L"+p(x+w-r-TIP_WIDTH,y+h);
+      strPath+="L"+p(x+w-TIP_X_SHIFT, y+h+TIP_HEIGHT)+"L"+p(x+w-r-TIP_WIDTH, y+h);
     }
   }
-  strPath+="L"+p(x+r,y+h);
-  strPath+="Q"+p(x,y+h)+p(x,y+h-r); //D
-  strPath+="L"+p(x,y+r)+"Q"+p(x,y)+p(x+r,y); //A
+  strPath+="L"+p(x+r, y+h);
+  strPath+="Q"+p(x, y+h)+p(x, y+h-r); //D
+  strPath+="L"+p(x, y+r)+"Q"+p(x, y)+p(x+r, y); //A
   strPath+="Z";
   return strPath;
 };
