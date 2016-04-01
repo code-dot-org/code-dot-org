@@ -27,6 +27,8 @@ module.exports = {
     "curly": "error",
     "no-console": "off",
     "no-empty": "off",
+    "no-extra-boolean-cast": "off",
+    "no-regex-spaces": "off",
     "no-undef": "error",
     "no-unused-vars": "off",
     "semi": "error"
