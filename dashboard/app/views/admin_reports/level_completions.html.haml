@@ -1,7 +1,6 @@
 - content_for(:head) do
   = stylesheet_link_tag    'jquery.handsontable.full', media: 'all'
   = javascript_include_tag 'jquery.handsontable.full'
-  = javascript_include_tag 'admin/levelCompletions'
 
 %h1 Level Completions
 
@@ -32,5 +31,6 @@
 :javascript
   var headers = #{ headers.try(:to_json)};
   var data = #{ data.try(:to_json)};
-  hideAndShowDomElements(#{ @is_sampled }, #{ params[:start_date].present? });
-  populateTable(headers, data);
+  window.dashboard.levelCompletions.hideAndShowDomElements(
+      #{ @is_sampled }, #{ params[:start_date].present? });
+  window.dashboard.levelCompletions.populateTable(headers, data);
