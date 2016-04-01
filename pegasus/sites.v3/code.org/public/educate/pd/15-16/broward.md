@@ -109,7 +109,7 @@ Breakfast and lunch will be served.
 
 [NOVA Southeastern University<br/>
 Carl Desantis Building<br/>
-Room TBD<br/>
+Room 1052<br/>
 3301 College Ave<br/>
 Fort Lauderdale, FL 33314](https://www.google.com/maps/place/Nova+Southeastern+University/@26.0802004,-80.2520141,14z/data=!4m2!3m1!1s0x0:0xa8e3f75c01d290b6)
 
