@@ -1,5 +1,6 @@
 'use strict';
 
+var Radium = require('radium');
 var _ = require('../../lodash');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
@@ -12,7 +13,10 @@ var styles = {
     margin: 0,
     lineHeight: styleConstants['workspace-headers-height'] + 'px',
     fontSize: 18,
-    // get hover behavior from CollapserIcon_showHideButton
+    ':hover': {
+      cursor: 'pointer',
+      color: color.white
+    }
   },
 };
 
@@ -36,4 +40,4 @@ var CollapserIcon = React.createClass({
     );
   }
 });
-module.exports = CollapserIcon;
+module.exports = Radium(CollapserIcon);
