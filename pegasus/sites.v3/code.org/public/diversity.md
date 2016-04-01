@@ -37,10 +37,10 @@ Across all the [video tutorials](/educate/videos) we produce, we've recruited a 
 
 The results speak for themselves:
 
-|Code.org program | Scale (students) | % female | % students of color <br/>(Black, Hispanic, Pacific Islander, Native American)|
+|Code.org program | Scale (students) | % Female | % Underrepresented minorities <br/>(Black, Hispanic, Pacific Islander, Native American)|
 |------------ | ------------- | ------------ | ------------|
 |Hour of Code | Tens of millions | 49% | 38.7% (U.S.)|
-|CS Fundamentals for K-8  | Millions | 43% | 49% (U.S.)|
+|CS Fundamentals for K-8  | Millions | 43% | 48% (U.S.)|
 |Exploring CS - high school intro class | Tens of thousands | 37% (U.S.) | 56% (U.S.)|
 |CS Principles - high school AP class | Thousands | 30% (U.S.) | 57% (U.S.)|
 
