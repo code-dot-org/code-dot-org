@@ -10,6 +10,12 @@ module.exports = {
     "mocha": true
   },
   "rules": {
-    "curly": "error"
+    "comma-dangle": "off",
+    "curly": "error",
+    "no-console": "off",
+    "no-empty": "off",
+    "no-undef": "error",
+    "no-unused-vars": "off",
+    "semi": "error"
   }
 };
