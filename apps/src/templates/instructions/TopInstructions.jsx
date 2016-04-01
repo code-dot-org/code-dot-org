@@ -90,9 +90,9 @@ var TopInstructions = React.createClass({
       bottom: 0
     });
 
-    var collapseStyle = _.assign({
+    var collapseStyle = {
       display: this.props.collapsed ? 'none' : undefined
-    });
+    };
 
     return (
       <div style={mainStyle} className="editor-column">
