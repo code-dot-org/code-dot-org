@@ -26,12 +26,10 @@ var MarkdownInstructions = function (props) {
   }
 
   return (
-    <div>
-      <div
-        className='instructions-markdown'
-        style={style}
-        dangerouslySetInnerHTML={{ __html: props.renderedMarkdown }}/>
-    </div>
+    <div
+      className='instructions-markdown'
+      style={style}
+      dangerouslySetInnerHTML={{ __html: props.renderedMarkdown }}/>
   );
 };
 
