@@ -892,7 +892,7 @@ Artist.prototype.animate = function () {
   if (this.level.editCode &&
       this.JSInterpreter &&
       this.JSInterpreter.initialized()) {
-      
+
     var programDone = false;
     var completedTuple = false;
 

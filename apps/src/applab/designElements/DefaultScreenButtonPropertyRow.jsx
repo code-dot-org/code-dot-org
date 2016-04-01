@@ -22,7 +22,7 @@ var DefaultScreenButtonPropertyRow = React.createClass({
       backgroundColor: '#0aa',
       color: color.white
     });
-    
+
     return (
       <div style={{marginLeft: 15}}>
         <button

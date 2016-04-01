@@ -136,7 +136,7 @@ describe("NetSimTable", function () {
         }, TypeError);
       });
     });
-    
+
     describe("minimumDelayBeforeRefresh", function () {
       it("accepts `undefined`", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {

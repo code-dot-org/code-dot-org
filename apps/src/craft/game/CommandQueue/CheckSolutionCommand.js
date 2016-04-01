@@ -17,7 +17,7 @@ export default class CheckSolutionCommand extends BaseCommand {
     tick() {
         // do stuff
     }
-    
+
     begin() {
         super.begin();
         if (this.GameController.DEBUG) {

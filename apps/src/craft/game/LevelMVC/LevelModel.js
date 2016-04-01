@@ -12,7 +12,7 @@ export default class LevelModel {
 
     this.player = {};
 
-    this.railMap = 
+    this.railMap =
       ["", "", "", "", "", "", "", "", "", "",
       "", "", "", "", "", "", "", "", "", "",
       "", "", "", "railsUnpoweredVertical", "", "", "", "", "", "",
@@ -220,7 +220,7 @@ export default class LevelModel {
         break;
     }
 
-    return [cx, cy];    
+    return [cx, cy];
   }
 
   isForwardBlockOfType(blockType) {
@@ -286,7 +286,7 @@ export default class LevelModel {
   houseGroundToFloorHelper(position, woolType, arrayCheck) {
     var checkActionBlock,
         checkGroundBlock,
-        posAbove, 
+        posAbove,
         posBelow,
         posRight,
         posLeft,
@@ -306,7 +306,7 @@ export default class LevelModel {
 
     posRight =  [0, position[1] + 1, position[2]];
     posRight[0] = this.yToIndex(posRight[2]) + posRight[1];
-    
+
     posLeft =  [0, position[1] - 1, position[2]];
     posRight[0] = this.yToIndex(posRight[2]) + posRight[1];
 
@@ -595,7 +595,7 @@ export default class LevelModel {
     let blockPosition = position;
     let blockIndex = this.yToIndex(blockPosition[1]) + blockPosition[0];
     let [x, y] = [blockPosition[0], blockPosition[1]];
-    
+
     if (this.inBounds(x, y)) {
       block = this.actionPlane[blockIndex];
       if (block !== null) {
@@ -618,7 +618,7 @@ export default class LevelModel {
     let blockForwardPosition = this.getMoveForwardPosition();
     let blockIndex = this.yToIndex(blockForwardPosition[1]) + blockForwardPosition[0];
     let [x, y] = [blockForwardPosition[0], blockForwardPosition[1]];
-    
+
     if (this.inBounds(x, y)) {
       block = this.actionPlane[blockIndex];
       if (block !== null) {
@@ -810,7 +810,7 @@ export default class LevelModel {
           }
 
           //Ignore the indexes directly around us.
-          //Theyre taken care of on the FOW first pass 
+          //Theyre taken care of on the FOW first pass
           if ( (yIndex >= y - 1 && yIndex <= y + 1) && (xIndex >= x - 1 && xIndex <= x + 1) ) {
             continue;
           }
@@ -837,7 +837,7 @@ export default class LevelModel {
           continue;
         }
 
-        //Ignore the indexes directly around us. 
+        //Ignore the indexes directly around us.
         if ( (yIndex >= y - 1 && yIndex <= y + 1) && (xIndex >= x - 1 && xIndex <= x + 1) ) {
           continue;
         }
@@ -878,7 +878,7 @@ export default class LevelModel {
       for (y = 0; y < this.planeHeight; ++y) {
         for (x = 0; x < this.planeWidth; ++x) {
           let blockIndex = this.yToIndex(y) + x;
-          
+
           if (this.groundPlane[blockIndex].isEmissive && this.actionPlane[blockIndex].isEmpty ||
             (!this.actionPlane[blockIndex].isEmpty && this.actionPlane[blockIndex].isEmissive)) {
             this.clearFowAround(x, y);
@@ -922,7 +922,7 @@ export default class LevelModel {
 
       hasLeft = false;
       hasRight = false;
-      
+
       if (this.actionPlane[index].isEmpty || this.actionPlane[index].isTransparent) {
         if (y === 0) {
           this.shadingPlane.push({x: x, y: y, type: 'AOeffect_Bottom'});
@@ -963,7 +963,7 @@ export default class LevelModel {
           // needs a bottom side AO shadow
           this.shadingPlane.push({x: x, y: y, type: 'AOeffect_Bottom'});
         } else if (y > 0) {
-          if (x < this.planeWidth - 1 && 
+          if (x < this.planeWidth - 1 &&
               !this.actionPlane[this.yToIndex(y - 1) + x + 1].getIsEmptyOrEntity() &&
               this.actionPlane[this.yToIndex(y) + x + 1].getIsEmptyOrEntity()) {
             // needs a bottom left side AO shadow
@@ -977,7 +977,7 @@ export default class LevelModel {
         }
 
         if (y < this.planeHeight - 1) {
-          if (x < this.planeWidth - 1 && 
+          if (x < this.planeWidth - 1 &&
               !this.actionPlane[this.yToIndex(y + 1) + x + 1].getIsEmptyOrEntity() &&
               this.actionPlane[this.yToIndex(y) + x + 1].getIsEmptyOrEntity()) {
             // needs a bottom left side AO shadow
