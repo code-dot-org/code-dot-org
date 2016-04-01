@@ -43,6 +43,8 @@ var styles = {
 
 var TopInstructions = React.createClass({
   propTypes: {
+    // If true,
+    isEmbedView: React.PropTypes.bool.isRequired,
     puzzleNumber: React.PropTypes.number.isRequired,
     stageTotal: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
@@ -75,23 +77,30 @@ var TopInstructions = React.createClass({
     }
     var id = this.props.id;
 
+    var fullHeightIfEmbed = this.props.isEmbedView ? {
+      height: '100%'
+    } : {};
+
     var mainStyle = _.assign({}, styles.main, {
-      height: this.props.height - RESIZER_HEIGHT
-    });
+      height: this.props.height - RESIZER_HEIGHT,
+      // Visualization is hard-coded on embed levels. Do the same for instructions position
+      left: this.props.isEmbedView ? 340 : undefined
+    }, fullHeightIfEmbed);
 
     var bodyStyle = _.assign({}, styles.body, {
-      height: mainStyle.height - styles.header.height,
-    });
+      height: mainStyle.height - styles.header.height
+    }, fullHeightIfEmbed);
 
-    var collapseStyle = {
+    var collapseStyle = _.assign({
       display: this.props.collapsed ? 'none' : undefined
-    };
+    }, fullHeightIfEmbed);
 
     return (
       <div style={mainStyle} className="editor-column">
-        <CollapserIcon
+        {!this.props.isEmbedView && <CollapserIcon
             collapsed={this.props.collapsed}
             onClick={this.props.onToggleCollapsed}/>
+        }
         <div style={styles.header}>
           {msg.puzzleTitle({
             stage_total: this.props.stageTotal,
@@ -105,9 +114,10 @@ var TopInstructions = React.createClass({
               inTopPane
               />
           </div>
-          <HeightResizer
+          {!this.props.isEmbedView && <HeightResizer
             position={mainStyle.height}
             onResize={this.onHeightResize}/>
+          }
         </div>
       </div>
     );
