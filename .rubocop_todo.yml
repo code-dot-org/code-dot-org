@@ -131,11 +131,6 @@ Style/ClassMethods:
 Style/ClassVars:
   Enabled: false
 
-# Offense count: 15
-# Cop supports --auto-correct.
-Style/ClosingParenthesisIndentation:
-  Enabled: false
-
 # Offense count: 36
 # Cop supports --auto-correct.
 # Configuration parameters: PreferredMethods.

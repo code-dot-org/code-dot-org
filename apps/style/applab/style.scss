@@ -44,10 +44,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div#codeWorkspace {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -80,10 +80,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div#codeWorkspace {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -116,10 +116,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div#codeWorkspace {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -152,10 +152,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div#codeWorkspace {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -188,10 +188,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div#codeWorkspace {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -464,4 +464,9 @@ div#visualizationResizeBar {
   background: -o-linear-gradient(to bottom right, red, orange, yellow, green, blue); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(to bottom right, red, orange, yellow, green, blue); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, red, orange, yellow, green, blue); /* Standard syntax */
+}
+
+.CollapserIcon_showHideButton:hover {
+  cursor: pointer;
+  color: white;
 }
