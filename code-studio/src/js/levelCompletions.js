@@ -7,15 +7,14 @@
  * @param {boolean} isSampled - whether Google Analytics sampled.
  * @param {boolean} startDatePresent - whether a start_date parameter was given.
  */
-//
-function hideAndShowDomElements(isSampled, startDatePresent) {
+exports.hideAndShowDomElements = function(isSampled, startDatePresent) {
   if (isSampled) {
     $('#samplingMessage').show();
   }
   if (startDatePresent) {
     $('#completionTable').show();
   }
-}
+};
 
 /**
  * Renders the Avg. Success Rate column, changing the background color depending
@@ -96,7 +95,7 @@ function timeOnSiteRenderer(
 /**
  * Populates the completionTable DOM element.
  */
-function populateTable(headers, data) {
+exports.populateTable = function(headers, data) {
   $("#completionTable").handsontable({
     data: data,
     startRows: 10,
@@ -160,4 +159,4 @@ function populateTable(headers, data) {
       return {};
     }
   });
-}
+};
