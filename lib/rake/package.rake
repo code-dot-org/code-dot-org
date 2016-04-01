@@ -21,7 +21,7 @@ namespace :package do
 
         package_dash = package.gsub('_', '-')
         # never download if we build our own
-        return if CDO["use_my_#{package}"]
+        next if CDO["use_my_#{package}"]
 
         packager = S3Packaging.new(package_dash, method("#{package}_dir").call, dashboard_dir("public/#{package_dash}-package"))
         package_found = packager.update_from_s3
