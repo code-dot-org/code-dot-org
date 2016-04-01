@@ -235,14 +235,14 @@ exports.dropdown = function (blockId, elementId) {
                            'optionsArray': optionsArray});
 };
 
-exports.getAttribute = function(blockId, elementId, attribute) {
+exports.getAttribute = function (blockId, elementId, attribute) {
   return Applab.executeCmd(blockId,
                            'getAttribute',
                            {elementId: elementId,
                             attribute: attribute});
 };
 
-exports.setAttribute = function(blockId, elementId, attribute, value) {
+exports.setAttribute = function (blockId, elementId, attribute, value) {
   return Applab.executeCmd(blockId,
                            'setAttribute',
                            {elementId: elementId,
@@ -359,7 +359,7 @@ exports.playSound = function (blockId, url) {
                           {'url': url});
 };
 
-exports.getKeyValue = function(blockId, key, onSuccess, onError) {
+exports.getKeyValue = function (blockId, key, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                            'getKeyValue',
                            {'key': key,
@@ -367,7 +367,7 @@ exports.getKeyValue = function(blockId, key, onSuccess, onError) {
                             'onError': onError});
 };
 
-exports.setKeyValue = function(blockId, key, value, onSuccess, onError) {
+exports.setKeyValue = function (blockId, key, value, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                            'setKeyValue',
                            {'key': key,

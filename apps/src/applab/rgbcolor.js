@@ -10,7 +10,7 @@
  // cleanup jshint errors (cpirich)
  // add rgba support (davidsbailey)
  
-module.exports = function(color_string) {
+module.exports = function (color_string) {
     this.ok = false;
 
     // strip any leading #

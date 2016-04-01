@@ -25,13 +25,13 @@ var TILE_SHAPES = {
 };
 
 // Returns true if the tile at x,y is either a water tile or out of bounds
-function isWaterOrOutOfBounds (col, row) {
+function isWaterOrOutOfBounds(col, row) {
   return Maze.map.getTile(row, col) === SquareType.WALL ||
       Maze.map.getTile(row, col) === undefined;
 }
 
 // Returns true if the tile at x,y is a water tile that is in bounds.
-function isWater (col, row) {
+function isWater(col, row) {
   return Maze.map.getTile(row, col) === SquareType.WALL;
 }
 

@@ -85,7 +85,7 @@ describe("NetSimVisualization", function () {
   };
 
   var getVizNodeByEntityID_ = function (_type, id) {
-    return this.filter(function(element){
+    return this.filter(function (element){
       return element instanceof NetSimVizNode &&
           element.getCorrespondingEntityId &&
           element.getCorrespondingEntityId() === id;

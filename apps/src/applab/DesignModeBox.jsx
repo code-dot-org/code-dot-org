@@ -18,7 +18,7 @@ module.exports = React.createClass({
     isDimmed: React.PropTypes.bool.isRequired
   },
 
-  render: function() {
+  render: function () {
     var styles = {
       container: {
         position: 'absolute',

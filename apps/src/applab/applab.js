@@ -497,7 +497,7 @@ Applab.setLevelHtml = function (html) {
   designMode.serializeToLevelHtml();
 };
 
-Applab.onTick = function() {
+Applab.onTick = function () {
   if (!Applab.running) {
     return;
   }
@@ -526,7 +526,7 @@ Applab.executeNativeJS = function () {
  * Initialize Blockly and Applab for read-only (blocks feedback).
  * Called on iframe load for read-only.
  */
-Applab.initReadonly = function(config) {
+Applab.initReadonly = function (config) {
   // Do some minimal level loading so that
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
@@ -600,7 +600,7 @@ Applab.startSharedAppAfterWarnings = function () {
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
-Applab.init = function(config) {
+Applab.init = function (config) {
   // Gross, but necessary for tests, until we can instantiate AppLab and make
   // this a member variable: Reset this thing until we're ready to create it!
   jsInterpreterLogger = null;
@@ -674,11 +674,11 @@ Applab.init = function(config) {
     });
   }
 
-  config.loadAudio = function() {
+  config.loadAudio = function () {
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
-  config.afterInject = function() {
+  config.afterInject = function () {
     if (studioApp.isUsingBlockly()) {
       /**
        * The richness of block colours, regardless of the hue.
@@ -721,13 +721,13 @@ Applab.init = function(config) {
     }
   };
 
-  config.afterEditorReady = function() {
+  config.afterEditorReady = function () {
     if (breakpointsEnabled) {
       studioApp.enableBreakpoints();
     }
   };
 
-  config.afterClearPuzzle = function() {
+  config.afterClearPuzzle = function () {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
     AppStorage.populateTable(level.dataTables, true); // overwrite = true
@@ -1005,7 +1005,7 @@ Applab.isRunning = function () {
  * Toggle whether divApplab or designModeViz is visible.
  * @param isVisible whether divApplab should be visible.
  */
-Applab.toggleDivApplab = function(isVisible) {
+Applab.toggleDivApplab = function (isVisible) {
   if (isVisible) {
     $('#divApplab').show();
     $('#designModeViz').hide();
@@ -1019,7 +1019,7 @@ Applab.toggleDivApplab = function(isVisible) {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Applab.reset = function(first) {
+Applab.reset = function (first) {
   var i;
   Applab.clearEventHandlersKillTickLoop();
 
@@ -1098,7 +1098,7 @@ Applab.reset = function(first) {
  * Manually re-render visualization SVG overlay.
  * Should call whenever its state/props would change.
  */
-Applab.renderVisualizationOverlay = function() {
+Applab.renderVisualizationOverlay = function () {
   var divApplab = document.getElementById('divApplab');
   var designModeViz = document.getElementById('designModeViz');
   var visualizationOverlay = document.getElementById('visualizationOverlay');
@@ -1150,7 +1150,7 @@ Applab.serializeAndSave = function (callback) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Applab.runButtonClick = function() {
+Applab.runButtonClick = function () {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -1185,7 +1185,7 @@ Applab.runButtonClick = function() {
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
  */
-var displayFeedback = function() {
+var displayFeedback = function () {
   if (!Applab.waitingForReport) {
     studioApp.displayFeedback({
       app: 'applab', //XXX
@@ -1209,7 +1209,7 @@ var displayFeedback = function() {
   }
 };
 
-Applab.onSubmitComplete = function(response) {
+Applab.onSubmitComplete = function (response) {
   window.location.href = response.redirect;
 };
 
@@ -1217,7 +1217,7 @@ Applab.onSubmitComplete = function(response) {
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
  */
-Applab.onReportComplete = function(response) {
+Applab.onReportComplete = function (response) {
   Applab.response = response;
   Applab.waitingForReport = false;
   studioApp.onReportComplete(response);
@@ -1245,7 +1245,7 @@ var defineProcedures = function (blockType) {
 /**
  * Execute the app
  */
-Applab.execute = function() {
+Applab.execute = function () {
   Applab.result = ResultType.UNSET;
   Applab.testResults = TestResults.NO_TESTS_RUN;
   Applab.waitingForReport = false;
@@ -1282,7 +1282,7 @@ Applab.execute = function() {
       Applab.JSInterpreter = new JSInterpreter({
         studioApp: studioApp,
         logExecution: !!level.logConditions,
-        shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
+        shouldRunAtMaxSpeed: function () { return getCurrentTickLength() === 0; },
         maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK
       });
 
@@ -1331,7 +1331,7 @@ Applab.execute = function() {
 Applab.feedbackImage = '';
 Applab.encodedFeedbackImage = '';
 
-Applab.onViewData = function() {
+Applab.onViewData = function () {
   window.open(
     '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + Applab.channelId,
     '_blank');
@@ -1365,7 +1365,7 @@ function onInterfaceModeChange(mode) {
  * @param {string} [filterSelector] Optional selector to filter for.
  */
 
-Applab.showConfirmationDialog = function(config) {
+Applab.showConfirmationDialog = function (config) {
   config.text = config.text || "";
   config.title = config.title || "";
 
@@ -1388,14 +1388,14 @@ Applab.showConfirmationDialog = function(config) {
 
   var cancelButton = buttons.querySelector('#again-button');
   if (cancelButton) {
-    dom.addClickTouchEvent(cancelButton, function() {
+    dom.addClickTouchEvent(cancelButton, function () {
       dialog.hide();
     });
   }
 
   var confirmButton = buttons.querySelector('#confirm-button');
   if (confirmButton) {
-    dom.addClickTouchEvent(confirmButton, function() {
+    dom.addClickTouchEvent(confirmButton, function () {
       if (config.onConfirm) {
         config.onConfirm();
       }
@@ -1406,39 +1406,39 @@ Applab.showConfirmationDialog = function(config) {
   dialog.show();
 };
 
-Applab.onPuzzleSubmit = function() {
+Applab.onPuzzleSubmit = function () {
   Applab.showConfirmationDialog({
     title: commonMsg.submitYourProject(),
     text: commonMsg.submitYourProjectConfirm(),
-    onConfirm: function() {
+    onConfirm: function () {
       Applab.onPuzzleComplete(true);
     }
   });
 };
 
-Applab.unsubmit = function() {
+Applab.unsubmit = function () {
   $.post(level.unsubmitUrl,
          {"_method": 'PUT', user_level: {submitted: false}},
-         function( data ) {
+         function ( data ) {
            location.reload();
          });
 };
 
-Applab.onPuzzleUnsubmit = function() {
+Applab.onPuzzleUnsubmit = function () {
   Applab.showConfirmationDialog({
     title: commonMsg.unsubmitYourProject(),
     text: commonMsg.unsubmitYourProjectConfirm(),
-    onConfirm: function() {
+    onConfirm: function () {
       Applab.unsubmit();
     }
   });
 };
 
-Applab.onPuzzleFinish = function() {
+Applab.onPuzzleFinish = function () {
   Applab.onPuzzleComplete(false); // complete without submitting
 };
 
-Applab.onPuzzleComplete = function(submit) {
+Applab.onPuzzleComplete = function (submit) {
   if (Applab.executionError) {
     Applab.result = ResultType.ERROR;
   } else {
@@ -1488,7 +1488,7 @@ Applab.onPuzzleComplete = function(submit) {
 
   Applab.waitingForReport = true;
 
-  var sendReport = function() {
+  var sendReport = function () {
     studioApp.report({
       app: 'applab',
       level: level.id,
@@ -1506,7 +1506,7 @@ Applab.onPuzzleComplete = function(submit) {
     sendReport();
   } else {
     divApplab.toDataURL("image/png", {
-      callback: function(pngDataUrl) {
+      callback: function (pngDataUrl) {
         Applab.feedbackImage = pngDataUrl;
         Applab.encodedFeedbackImage = encodeURIComponent(Applab.feedbackImage.split(',')[1]);
 
@@ -1567,7 +1567,7 @@ Studio.wait = function (opts) {
 };
 */
 
-Applab.timedOut = function() {
+Applab.timedOut = function () {
   return Applab.tickCount > Applab.timeoutFailureTick;
 };
 
@@ -1684,7 +1684,7 @@ Applab.activeScreen = function () {
  * Changes the active screen by toggling all screens in divApplab to be non-visible,
  * unless they match the provided screenId. Also focuses the screen.
  */
-Applab.changeScreen = function(screenId) {
+Applab.changeScreen = function (screenId) {
   Applab.getScreens().each(function () {
     $(this).toggle(this.id === screenId);
     if ((this.id === screenId)) {
@@ -1702,12 +1702,12 @@ Applab.changeScreen = function(screenId) {
   }
 };
 
-Applab.loadDefaultScreen = function() {
+Applab.loadDefaultScreen = function () {
   var defaultScreenId = Applab.getScreens().first().attr('id');
   Applab.changeScreen(defaultScreenId);
 };
 
-Applab.getScreens = function() {
+Applab.getScreens = function () {
   return $('#divApplab > .screen');
 };
 

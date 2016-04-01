@@ -7,7 +7,7 @@ var msg = require('./locale');
 
 var ARITHMETIC_TITLE_FONT_SIZE = 25;
 
-exports.install = function(blockly, generator, gensym) {
+exports.install = function (blockly, generator, gensym) {
   installPlus(blockly, generator, gensym);
   installMinus(blockly, generator, gensym);
   installTimes(blockly, generator, gensym);
@@ -32,7 +32,7 @@ function installPlus(blockly, generator, gensym) {
   blockly.Blocks.functional_plus = {
 
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '+', blockly.BlockValueType.NUMBER, [
         {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
         {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
@@ -42,7 +42,7 @@ function installPlus(blockly, generator, gensym) {
     }
   };
 
-  generator.functional_plus = function() {
+  generator.functional_plus = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
     return "(" + arg1 + " + " + arg2 + ")";
@@ -52,7 +52,7 @@ function installPlus(blockly, generator, gensym) {
 function installMinus(blockly, generator, gensym) {
   blockly.Blocks.functional_minus = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '-', blockly.BlockValueType.NUMBER, [
         {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
         {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
@@ -60,7 +60,7 @@ function installMinus(blockly, generator, gensym) {
     }
   };
 
-  generator.functional_minus = function() {
+  generator.functional_minus = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
     return "(" + arg1 + " - " + arg2 + ")";
@@ -70,7 +70,7 @@ function installMinus(blockly, generator, gensym) {
 function installTimes(blockly, generator, gensym) {
   blockly.Blocks.functional_times = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '*', blockly.BlockValueType.NUMBER, [
         {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
         {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
@@ -78,7 +78,7 @@ function installTimes(blockly, generator, gensym) {
     }
   };
 
-  generator.functional_times = function() {
+  generator.functional_times = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
     return "(" + arg1 + " * " + arg2 + ")";
@@ -88,7 +88,7 @@ function installTimes(blockly, generator, gensym) {
 function installDividedBy(blockly, generator, gensym) {
   blockly.Blocks.functional_dividedby = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '/', blockly.BlockValueType.NUMBER, [
         {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
         {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
@@ -96,7 +96,7 @@ function installDividedBy(blockly, generator, gensym) {
     }
   };
 
-  generator.functional_dividedby = function() {
+  generator.functional_dividedby = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
     return "(" + arg1 + " / " + arg2 + ")";
@@ -108,7 +108,7 @@ function installDividedBy(blockly, generator, gensym) {
 function installGreaterThan(blockly, generator, gensym) {
   blockly.Blocks.functional_greater_than = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '>', blockly.BlockValueType.BOOLEAN, [
         {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
         {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
@@ -116,7 +116,7 @@ function installGreaterThan(blockly, generator, gensym) {
     }
   };
 
-  generator.functional_greater_than = function() {
+  generator.functional_greater_than = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
     return '(' + arg1 + " > " + arg2 + ')';
@@ -126,7 +126,7 @@ function installGreaterThan(blockly, generator, gensym) {
 function installLessThan(blockly, generator, gensym) {
   blockly.Blocks.functional_less_than = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '<', blockly.BlockValueType.BOOLEAN, [
         {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
         {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
@@ -134,7 +134,7 @@ function installLessThan(blockly, generator, gensym) {
     }
   };
 
-  generator.functional_less_than = function() {
+  generator.functional_less_than = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
     return '(' + arg1 + " < " + arg2 + ')';
@@ -144,7 +144,7 @@ function installLessThan(blockly, generator, gensym) {
 function installNumberEquals(blockly, generator, gensym) {
   blockly.Blocks.functional_number_equals = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '=', blockly.BlockValueType.BOOLEAN, [
         {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
         {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
@@ -152,7 +152,7 @@ function installNumberEquals(blockly, generator, gensym) {
     }
   };
 
-  generator.functional_number_equals = function() {
+  generator.functional_number_equals = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
     return '(' + arg1 + " == " + arg2 + ')';
@@ -162,7 +162,7 @@ function installNumberEquals(blockly, generator, gensym) {
 function installStringEquals(blockly, generator, gensym) {
   blockly.Blocks.functional_string_equals = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.stringEquals(), blockly.BlockValueType.BOOLEAN, [
         {name: 'ARG1', type: blockly.BlockValueType.STRING},
         {name: 'ARG2', type: blockly.BlockValueType.STRING}
@@ -170,7 +170,7 @@ function installStringEquals(blockly, generator, gensym) {
     }
   };
 
-  generator.functional_string_equals = function() {
+  generator.functional_string_equals = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || '';
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || '';
     return '(' + arg1 + " == " + arg2 + ')';
@@ -182,7 +182,7 @@ function installStringEquals(blockly, generator, gensym) {
 function installLogicalAnd(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_and = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'and', blockly.BlockValueType.BOOLEAN, [
         {name: 'ARG1', type: blockly.BlockValueType.BOOLEAN},
         {name: 'ARG2', type: blockly.BlockValueType.BOOLEAN}
@@ -190,7 +190,7 @@ function installLogicalAnd(blockly, generator, gensym) {
     }
   };
 
-  generator.functional_logical_and = function() {
+  generator.functional_logical_and = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
     return '(' + arg1 + " && " + arg2 + ')';
@@ -200,7 +200,7 @@ function installLogicalAnd(blockly, generator, gensym) {
 function installLogicalOr(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_or = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'or', blockly.BlockValueType.BOOLEAN, [
         {name: 'ARG1', type: blockly.BlockValueType.BOOLEAN},
         {name: 'ARG2', type: blockly.BlockValueType.BOOLEAN}
@@ -208,7 +208,7 @@ function installLogicalOr(blockly, generator, gensym) {
     }
   };
 
-  generator.functional_logical_or = function() {
+  generator.functional_logical_or = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
     return '(' + arg1 + " || " + arg2 + ')';
@@ -218,14 +218,14 @@ function installLogicalOr(blockly, generator, gensym) {
 function installLogicalNot(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_not = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'not', blockly.BlockValueType.BOOLEAN, [
         {name: 'ARG1', type: blockly.BlockValueType.BOOLEAN}
       ]);
     }
   };
 
-  generator.functional_logical_not = function() {
+  generator.functional_logical_not = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     return '!(' + arg1 + ')';
   };
@@ -234,7 +234,7 @@ function installLogicalNot(blockly, generator, gensym) {
 function installBoolean(blockly, generator, gensym) {
   blockly.Blocks.functional_boolean = {
     // Boolean value.
-    init: function() {
+    init: function () {
       this.setFunctional(true, {
         headerHeight: 0,
         rowBuffer: 3
@@ -252,7 +252,7 @@ function installBoolean(blockly, generator, gensym) {
         [msg.booleanTrue(), 'true'],
         [msg.booleanFalse(), 'false']];
 
-  generator.functional_boolean = function() {
+  generator.functional_boolean = function () {
     return this.getTitleValue('VAL');
   };
 }
@@ -260,7 +260,7 @@ function installBoolean(blockly, generator, gensym) {
 function installMathNumber(blockly, generator, gensym) {
   blockly.Blocks.functional_math_number = {
     // Numeric value.
-    init: function() {
+    init: function () {
       this.setFunctional(true, {
         headerHeight: 0,
         rowBuffer: 3
@@ -274,13 +274,13 @@ function installMathNumber(blockly, generator, gensym) {
     }
   };
 
-  generator.functional_math_number = function() {
+  generator.functional_math_number = function () {
     return this.getTitleValue('NUM');
   };
 
   blockly.Blocks.functional_math_number_dropdown = {
     // Numeric value.
-    init: function() {
+    init: function () {
       this.setFunctional(true, {
         headerHeight: 0,
         rowBuffer: 3
@@ -298,7 +298,7 @@ function installMathNumber(blockly, generator, gensym) {
 
 function installString(blockly, generator) {
   blockly.Blocks.functional_string = {
-    init: function() {
+    init: function () {
       this.setFunctional(true, {
         headerHeight: 0,
         rowBuffer: 3
@@ -313,7 +313,7 @@ function installString(blockly, generator) {
     }
   };
 
-  generator.functional_string = function() {
+  generator.functional_string = function () {
     return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
   };
 }
@@ -321,14 +321,14 @@ function installString(blockly, generator) {
 function installSqrt(blockly, generator) {
   blockly.Blocks.functional_sqrt = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqrt', 'Number', [
         {name: 'ARG1', type: 'Number'}
       ]);
     }
   };
 
-  generator.functional_sqrt = function() {
+  generator.functional_sqrt = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     return 'Math.sqrt(' + arg1 + ')';
   };
@@ -337,7 +337,7 @@ function installSqrt(blockly, generator) {
 function installPow(blockly, generator) {
   blockly.Blocks.functional_pow = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'pow', 'Number', [
         {name: 'ARG1', type: 'Number'},
         {name: 'ARG2', type: 'Number'}
@@ -345,7 +345,7 @@ function installPow(blockly, generator) {
     }
   };
 
-  generator.functional_pow = function() {
+  generator.functional_pow = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
     return 'Math.pow(' + arg1 + ', ' + arg2 + ')';
@@ -355,14 +355,14 @@ function installPow(blockly, generator) {
 function installSquared(blockly, generator) {
   blockly.Blocks.functional_squared = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqr', 'Number', [
         {name: 'ARG1', type: 'Number'}
       ]);
     }
   };
 
-  generator.functional_squared = function() {
+  generator.functional_squared = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     return arg1 + ' * ' + arg1;
   };
@@ -397,7 +397,7 @@ function installCondForType(blockly, generator, type) {
 
   blockly.Blocks[blockName] = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.pairs_ = [];
       this.setFunctional(true, {
         headerHeight: 30
@@ -496,7 +496,7 @@ function installCondForType(blockly, generator, type) {
     /**
      * Serialize pairs so that we can deserialize with the same ids
      */
-    mutationToDom: function() {
+    mutationToDom: function () {
       if (this.pairs_.length <= 1) {
         return null;
       }
@@ -545,7 +545,7 @@ function installCondForType(blockly, generator, type) {
    *   else { return default; }
    * }()
    */
-  generator[blockName] = function() {
+  generator[blockName] = function () {
     var cond, value, defaultValue;
     var code = '(function () {\n  ';
     for (var i = 0; i < this.pairs_.length; i++) {

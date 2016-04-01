@@ -44,7 +44,7 @@ exports.load = function (assetUrl, id) {
    *
    * @return the mapping of names to urls
    */
-  var stickers = function() {
+  var stickers = function () {
 
     // Playlab characters
     var playlab = ['Alien', 'Bat', 'Bird', 'Cat', 'Caveboy',

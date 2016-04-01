@@ -334,7 +334,7 @@ Sprite.prototype.startFade = function (fadeTime) {
 /**
  * Remove our element/clipPath/animator
  */
-Sprite.prototype.removeElement = function() {
+Sprite.prototype.removeElement = function () {
   if (this.animation_) {
     this.animation_.removeElement();
   }
@@ -357,7 +357,7 @@ Sprite.prototype.getAnimationFrameDuration = function () {
 /**
  * Returns true if the item is currently fading away.
  */
-Sprite.prototype.isFading = function() {
+Sprite.prototype.isFading = function () {
   return !!this.startFadeTime;
 };
 
@@ -365,7 +365,7 @@ Sprite.prototype.isFading = function() {
  * Returns true if the item has finished fading away.  The caller will usually
  * then call removeElement to destroy this item's assets.
  */
-Sprite.prototype.hasCompletedFade = function() {
+Sprite.prototype.hasCompletedFade = function () {
   var currentTime = new Date().getTime();
 
   return this.startFadeTime && currentTime > this.startFadeTime + this.fadeTime;

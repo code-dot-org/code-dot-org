@@ -17,7 +17,7 @@ var utils = require('./utils');
  */
 var JSInterpreter = module.exports = function (options) {
   this.studioApp = options.studioApp;
-  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return true; };
+  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function () { return true; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
   this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
   this.customMarshalBlockedProperties = options.customMarshalBlockedProperties || [];
@@ -173,7 +173,7 @@ JSInterpreter.prototype.parse = function (options) {
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
     new window.Interpreter(options.code, initFunc);
-  } catch(err) {
+  } catch (err) {
     this.executionError = err;
     this.handleError();
   }
@@ -807,7 +807,7 @@ JSInterpreter.prototype.hasProperty = function (
  * @param {boolean} opt_fixed Unchangeable property if true.
  * @param {boolean} opt_nonenum Non-enumerable property if true.
  */
-JSInterpreter.prototype.setProperty = function(
+JSInterpreter.prototype.setProperty = function (
     interpreter,
     baseSetProperty,
     obj,

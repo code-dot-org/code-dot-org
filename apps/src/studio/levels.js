@@ -374,7 +374,7 @@ levels.k1_3 = utils.extend(levels.dog_move_cat,  {
   'isK1': true,
   'requiredBlocks': [
     [{
-      test: function(block) {
+      test: function (block) {
         return block.type == 'studio_moveEastDistance';
       },
       type: 'studio_moveEastDistance'}]
@@ -470,13 +470,13 @@ levels.k1_4 = utils.extend(levels.dog_move_cat_hello,  {
   'isK1': true,
   'requiredBlocks': [
     [{
-      test: function(block) {
+      test: function (block) {
         return block.type == 'studio_moveEastDistance';
       },
       type: 'studio_moveEastDistance',
     }],
     [{
-      test: function(block) {
+      test: function (block) {
         // Make sure they have the right block, and have changed the default
         // text
         return block.type == 'studio_saySprite' &&

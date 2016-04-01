@@ -20,9 +20,10 @@ var tickWrapper = require('./util/tickWrapper');
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
 
+window.React = React;
+
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales();
-testUtils.setExternalGlobals();
 
 // Anatomy of a level test collection. The example itself is uncommented so
 // that you get the benefits of editor syntax highlighting
@@ -78,13 +79,30 @@ function loadSource(src) {
   return deferred;
 }
 
-describe('Level tests', function() {
+describe('Level tests', function () {
   var studioApp;
   var originalRender;
   var clock, tickInterval;
 
-  before(function(done) {
+  before(function (done) {
     this.timeout(15000);
+
+    window.jQuery = $;
+    window.$ = $;
+    window.dashboard = $.extend(window.dashboard, {
+      i18n: {
+        t: function (selector) { return selector; }
+      },
+      // Right now we're just faking some of our dashboard project interactions.
+      // If this becomes insufficient, we might be able to require the project.js
+      // file from shared here.
+      project: {
+        clearHtml: function () {},
+        exceedsAbuseThreshold: function () { return false; },
+        getCurrentId: function () { return 'fake_id'; },
+        isEditing: function () { return true; }
+      }
+    });
 
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
@@ -171,7 +189,7 @@ describe('Level tests', function() {
 });
 
 // Loads a test collection at path and runs all the tests specified in it.
-function runTestCollection (item) {
+function runTestCollection(item) {
   var runLevelTest = require('./util/runLevelTest');
   // Append back the .js so that we can distinguish 2_1.js from 2_10.js when grepping
   var path = item.path + '.js';

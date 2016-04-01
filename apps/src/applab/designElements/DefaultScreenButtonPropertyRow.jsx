@@ -3,7 +3,7 @@ var rowStyle = require('./rowStyle');
 var elementUtils = require('./elementUtils');
 
 var DefaultScreenButtonPropertyRow = React.createClass({
-  handleMakeDefault: function(event) {
+  handleMakeDefault: function (event) {
     this.props.handleChange(true);
   },
 

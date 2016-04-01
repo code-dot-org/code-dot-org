@@ -35,12 +35,15 @@ module.exports = {
   },
   "rules": {
     "array-bracket-spacing": ["error", "never"],
-    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "brace-style": ["error", "1tbs", {
+      "allowSingleLine": true
+    }],
     "comma-dangle": "off",
     "comma-spacing": "error",
     "curly": "error",
     "dot-location": ["error", "property"],
     "key-spacing": "error",
+    "keyword-spacing": "error",
     "no-array-constructor": "error",
     "no-console": "off",
     "no-empty": "off",
@@ -53,6 +56,10 @@ module.exports = {
     "no-with": "error",
     "object-curly-spacing": ["error", "never"],
     "semi": "error",
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never"
+    }],
 
     // Things we should technically enable to comply with google style guide
     //https://google.github.io/styleguide/javascriptguide.xml?showone=Parentheses#Parentheses

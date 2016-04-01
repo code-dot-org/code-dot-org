@@ -15,7 +15,7 @@ function removedHtml(before, after) {
     afterLinesMap[afterLines[i]] = true;
   }
 
-  var removedLines = beforeLines.filter(function(line) {
+  var removedLines = beforeLines.filter(function (line) {
     return !afterLinesMap[line];
   });
 
@@ -43,7 +43,7 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
   // for why this works. This hack is necessary in order to warn when
   // attributes containing disallowed URL schemes are removed.
   var allSchemes = [];
-  allSchemes.indexOf = function() {
+  allSchemes.indexOf = function () {
     return 0;
   };
 
@@ -104,7 +104,7 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
     }),
     allowedSchemes: sanitize.defaults.allowedSchemes.concat(['data']),
     transformTags: {
-      '*': function(tagName, attribs) {
+      '*': function (tagName, attribs) {
         if (rejectExistingIds && attribs.id && !isIdAvailable(attribs.id)) {
           warnings.push('element id is already in use: ' + attribs.id);
           delete attribs.id;

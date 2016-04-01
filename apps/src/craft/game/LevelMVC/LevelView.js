@@ -339,7 +339,7 @@ export default class LevelView {
     }
 
     this.audioPlayer.play("fuse");
-    for(var tnt in tntArray) {
+    for (var tnt in tntArray) {
         block = this.actionPlaneBlocks[this.coordinatesToIndex(tntArray[tnt])];
         lastAnimation = this.playScaledSpeed(block.animations, "explode");
     }
@@ -423,7 +423,7 @@ export default class LevelView {
 
 
   activateUnpoweredRails(unpoweredRails) {
-    for(var railIndex = 0; railIndex < unpoweredRails.length; railIndex += 2) {
+    for (var railIndex = 0; railIndex < unpoweredRails.length; railIndex += 2) {
       var rail = unpoweredRails[railIndex + 1];
       var position = unpoweredRails[railIndex];
       this.createActionPlaneBlock(position, rail);
@@ -450,7 +450,7 @@ export default class LevelView {
   }
 
   playTrack(position, facing, isOnBlock, completionHandler, minecartTrack) {
-    if(this.i < this.track.length) {
+    if (this.i < this.track.length) {
       var direction,
           arraydirection = this.track[this.i][0],
           nextPosition = this.track[this.i][1],
@@ -458,7 +458,7 @@ export default class LevelView {
       facing = this.track[this.i][2];
 
       //turn
-      if(arraydirection.substring(0, 4) === "turn") {
+      if (arraydirection.substring(0, 4) === "turn") {
         direction = arraydirection.substring(5);
         this.playMinecartTurnAnimation(position, facing, isOnBlock, completionHandler, direction).onComplete.add(() => {
           this.playMinecartMoveForwardAnimation(position, facing, isOnBlock, completionHandler, nextPosition, speed).onComplete.add(() => {
@@ -473,7 +473,7 @@ export default class LevelView {
       }
       this.i++;
     } else {
-      this.playSuccessAnimation(position, facing, isOnBlock, function(){});
+      this.playSuccessAnimation(position, facing, isOnBlock, function (){});
       completionHandler();
     }
   }
@@ -514,7 +514,7 @@ export default class LevelView {
       var yCoord;
       var sprite;
 
-      for(var i = 0; i < createFloor.length; ++i) {
+      for (var i = 0; i < createFloor.length; ++i) {
         xCoord = createFloor[i][1];
         yCoord = createFloor[i][2];
         /*this.groundPlane[this.coordinatesToIndex([xCoord,yCoord])].kill();*/
@@ -549,7 +549,7 @@ export default class LevelView {
       this.setPlayerPosition(position[0], position[1], isOnBlock);
       tweenWToC.start();
     });
-    if(playSuccessAnimation) {
+    if (playSuccessAnimation) {
       tweenWToC.onComplete.add(() => {
         this.playSuccessAnimation(position, facing, isOnBlock, completionHandler);
       });
@@ -578,17 +578,17 @@ export default class LevelView {
 
   playBlockSound(groundType) {
     var oreString = groundType.substring(0, 3);
-    if(groundType === "stone" || groundType === "cobblestone" || groundType === "bedrock" ||
+    if (groundType === "stone" || groundType === "cobblestone" || groundType === "bedrock" ||
         oreString === "ore" || groundType === "bricks") {
       this.audioPlayer.play("stepStone");
-    } else if(groundType === "grass" || groundType === "dirt" || groundType === "dirtCoarse" ||
+    } else if (groundType === "grass" || groundType === "dirt" || groundType === "dirtCoarse" ||
         groundType == "wool_orange" || groundType == "wool") {
       this.audioPlayer.play("stepGrass");
-    } else if(groundType === "gravel") {
+    } else if (groundType === "gravel") {
       this.audioPlayer.play("stepGravel");
-    } else if(groundType === "farmlandWet") {
+    } else if (groundType === "farmlandWet") {
       this.audioPlayer.play("stepFarmland");
-    } else{
+    } else {
       this.audioPlayer.play("stepWood");
     }
   }
@@ -613,7 +613,7 @@ export default class LevelView {
     newPosVec = [position[0] - oldPosition[0], position[1] - oldPosition[1]];
 
     //change offset for moving on top of blocks
-    if(isOnBlock) {
+    if (isOnBlock) {
       yOffset -= 22;
     }
 
@@ -691,7 +691,7 @@ export default class LevelView {
 
       jumpAnimName = "jumpUp" + direction;
 
-      if(blockTypeAtPosition !== "") {
+      if (blockTypeAtPosition !== "") {
         this.playExplosionAnimation(position, facing, position, blockTypeAtPosition, (()=>{}), false);
       }
 
@@ -921,13 +921,13 @@ export default class LevelView {
       explodeAnim.kill();
       this.toDestroy.push(explodeAnim);
 
-      if(placeBlock) {
+      if (placeBlock) {
         this.playPlayerAnimation("idle", playerPosition, facing, false);
         this.playItemDropAnimation(playerPosition, facing, destroyPosition, blockType, completionHandler);
       }
     });
     this.playScaledSpeed(explodeAnim.animations, "explode");
-    if(!placeBlock) {
+    if (!placeBlock) {
       completionHandler();
     }
   }
@@ -1170,7 +1170,7 @@ export default class LevelView {
     facingName = this.getDirectionName(facing);
     rand = Math.trunc(Math.random() * 4) + 1;
 
-    switch(rand) {
+    switch (rand) {
       case 1:
       animationName = "idle";
       break;
@@ -1590,7 +1590,7 @@ export default class LevelView {
   playRandomSheepAnimation(sprite) {
     var rand = Math.trunc(Math.random() * 20 + 1);
 
-    switch(rand) {
+    switch (rand) {
       case 1:
       case 2:
       case 3:
@@ -1636,7 +1636,7 @@ export default class LevelView {
   playRandomCreeperAnimation(sprite) {
     var rand = Math.trunc(this.yToIndex(Math.random()) + 1);
 
-    switch(rand) {
+    switch (rand) {
       case 1:
       case 2:
       case 3:
@@ -1892,15 +1892,15 @@ export default class LevelView {
         yOffset = this.blocks[blockType][3];
         sprite = plane.create(xOffset + 40 * x, yOffset + plane.yOffset + 40 * y, atlas, frame);
         frameList = Phaser.Animation.generateFrameNames("LavaPop", 1, 7, "", 2);
-        for(i = 0; i < 4; ++i) {
+        for (i = 0; i < 4; ++i) {
           frameList.push("LavaPop07");
         }
         frameList = frameList.concat(Phaser.Animation.generateFrameNames("LavaPop", 8, 13, "", 2));
-        for(i = 0; i < 3; ++i) {
+        for (i = 0; i < 3; ++i) {
           frameList.push("LavaPop13");
         }
         frameList = frameList.concat(Phaser.Animation.generateFrameNames("LavaPop", 14, 30, "", 2));
-        for(i = 0; i < 8; ++i) {
+        for (i = 0; i < 8; ++i) {
           frameList.push("LavaPop01");
         }
         sprite.animations.add("idle", frameList, 5, true);
@@ -1952,7 +1952,7 @@ export default class LevelView {
 
         frameList = [];
         var animationFrames = Phaser.Animation.generateFrameNames("Door", 0, 3, "", 1);
-        for(var j = 0; j < 5; ++j) {
+        for (var j = 0; j < 5; ++j) {
           frameList.push("Door0");
         }
         frameList = frameList.concat(animationFrames);
@@ -1961,7 +1961,7 @@ export default class LevelView {
         animation.enableUpdate = true;
         //play when the door starts opening
         animation.onUpdate.add(() => {
-          if(animation.frame === 1) {
+          if (animation.frame === 1) {
             this.audioPlayer.play("doorOpen");
           }
         });

@@ -35,7 +35,7 @@ var dom = require('./dom');
  *     called when the slider is moved.  The current value is passed.
  * @constructor
  */
-var Slider = function(x, y, width, svgParent, opt_changeFunc) {
+var Slider = function (x, y, width, svgParent, opt_changeFunc) {
   this.KNOB_Y_ = y - 12;
   this.KNOB_MIN_X_ = x + 8;
   this.KNOB_MAX_X_ = x + width - 8;
@@ -75,10 +75,10 @@ var Slider = function(x, y, width, svgParent, opt_changeFunc) {
 
   // Bind the events to this slider.
   var thisSlider = this;
-  dom.addMouseDownTouchEvent(this.knob_, function(e) {
+  dom.addMouseDownTouchEvent(this.knob_, function (e) {
     return thisSlider.knobMouseDown_(e);
   });
-  dom.addMouseDownTouchEvent(this.track_, function(e) {
+  dom.addMouseDownTouchEvent(this.track_, function (e) {
     return thisSlider.trackMouseDown_(e);
   });
   dom.addMouseUpTouchEvent(this.SVG_, Slider.knobMouseUp_);
@@ -98,7 +98,7 @@ Slider.startKnobX_ = 0;
  * @param {!Event} e Mouse-down event.
  * @private
  */
-Slider.prototype.knobMouseDown_ = function(e) {
+Slider.prototype.knobMouseDown_ = function (e) {
   this.beginDrag_(this.mouseToSvg_(e));
 
   // Stop browser from attempting to drag the knob.
@@ -112,7 +112,7 @@ Slider.prototype.knobMouseDown_ = function(e) {
  * @param {!Event} e Mouse-down event.
  * @private
  */
-Slider.prototype.trackMouseDown_ = function(e) {
+Slider.prototype.trackMouseDown_ = function (e) {
   var mouseSVGPosition = this.mouseToSvg_(e);
   this.snapToPosition_(mouseSVGPosition.x);
   this.beginDrag_(mouseSVGPosition);
@@ -127,7 +127,7 @@ Slider.prototype.trackMouseDown_ = function(e) {
  * @param {!Object} mouseStartSVG Mouse start position in SVG space
  * @private
  */
-Slider.prototype.beginDrag_ = function(startMouseSVG) {
+Slider.prototype.beginDrag_ = function (startMouseSVG) {
   Slider.activeSlider_ = this;
   Slider.startMouseX_ = startMouseSVG.x;
   Slider.startKnobX_ = 0;
@@ -145,7 +145,7 @@ Slider.prototype.beginDrag_ = function(startMouseSVG) {
  * @param {number} xPosition SVG x-coordinate
  * @private
  */
-Slider.prototype.snapToPosition_ = function(xPosition) {
+Slider.prototype.snapToPosition_ = function (xPosition) {
   var x = Math.min(Math.max(xPosition, 
         this.KNOB_MIN_X_), this.KNOB_MAX_X_);
   this.knob_.setAttribute('transform',
@@ -163,7 +163,7 @@ Slider.prototype.snapToPosition_ = function(xPosition) {
  * @param {Event} e Mouse-up event.
  * @private
  */
-Slider.knobMouseUp_ = function(e) {
+Slider.knobMouseUp_ = function (e) {
   Slider.activeSlider_ = null;
 };
 
@@ -172,7 +172,7 @@ Slider.knobMouseUp_ = function(e) {
  * @param {Event} e Mouse-up event.
  * @private
  */
-Slider.mouseOver_ = function(e) {
+Slider.mouseOver_ = function (e) {
   if (!Slider.activeSlider_) {
     return;
   }
@@ -190,7 +190,7 @@ Slider.mouseOver_ = function(e) {
  * @param {!Event} e Mouse-move event.
  * @private
  */
-Slider.knobMouseMove_ = function(e) {
+Slider.knobMouseMove_ = function (e) {
   var thisSlider = Slider.activeSlider_;
   if (!thisSlider) {
     return;
@@ -204,7 +204,7 @@ Slider.knobMouseMove_ = function(e) {
  * Returns the slider's value (0.0 - 1.0).
  * @return {number} Current value.
  */
-Slider.prototype.getValue = function() {
+Slider.prototype.getValue = function () {
   return this.value_;
 };
 
@@ -212,7 +212,7 @@ Slider.prototype.getValue = function() {
  * Sets the slider's value (0.0 - 1.0).
  * @param {number} value New value.
  */
-Slider.prototype.setValue = function(value) {
+Slider.prototype.setValue = function (value) {
   this.value_ = Math.min(Math.max(value, 0), 1);
   var x = this.KNOB_MIN_X_ +
       (this.KNOB_MAX_X_ - this.KNOB_MIN_X_) * this.value_;
@@ -226,7 +226,7 @@ Slider.prototype.setValue = function(value) {
  * @return {!Object} Object with x and y properties in SVG coordinates.
  * @private
  */
-Slider.prototype.mouseToSvg_ = function(e) {
+Slider.prototype.mouseToSvg_ = function (e) {
   var svgPoint = this.SVG_.createSVGPoint();
   // Most browsers provide clientX/Y. iOS only provides pageX/Y.
   // Android Chrome only provides coordinates within e.changedTouches.
@@ -255,7 +255,7 @@ Slider.prototype.mouseToSvg_ = function(e) {
  * @param {!Function} func Function to call when event is triggered.
  * @private
  */
-Slider.bindEvent_ = function(element, name, func) {
+Slider.bindEvent_ = function (element, name, func) {
   element.addEventListener(name, func, false);
 };
 

@@ -70,7 +70,7 @@ var stepSpeed;
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
 
-var getTile = function(map, x, y) {
+var getTile = function (map, x, y) {
   if (map && map[y]) {
     return map[y][x];
   }
@@ -87,7 +87,7 @@ var twitterOptions = {
   hashtag: "BounceCode"
 };
 
-var loadLevel = function() {
+var loadLevel = function () {
   // Load maps.
   Bounce.map = level.map;
   Bounce.timeoutFailureTick = level.timeoutFailureTick || Infinity;
@@ -124,7 +124,7 @@ var loadLevel = function() {
 };
 
 
-var initWallMap = function() {
+var initWallMap = function () {
   Bounce.wallMap = new Array(Bounce.ROWS);
   for (var y = 0; y < Bounce.ROWS; y++) {
     Bounce.wallMap[y] = new Array(Bounce.COLS);
@@ -163,7 +163,7 @@ var GOAL_TILE_SHAPES = {
 
 // Return a value of '0' if the specified square is not a wall, '1' for
 // a wall, 'X' for out of bounds
-var wallNormalize = function(x, y) {
+var wallNormalize = function (x, y) {
   return ((Bounce.map[y] === undefined) ||
           (Bounce.map[y][x] === undefined)) ? 'X' :
             (Bounce.map[y][x] & SquareType.WALL) ? '1' : '0';
@@ -171,7 +171,7 @@ var wallNormalize = function(x, y) {
 
 // Return a value of '0' if the specified square is not a wall, '1' for
 // a wall, 'X' for out of bounds
-var goalNormalize = function(x, y) {
+var goalNormalize = function (x, y) {
   return ((Bounce.map[y] === undefined) ||
           (Bounce.map[y][x] === undefined)) ? 'X' :
             (Bounce.map[y][x] & SquareType.GOAL) ? '1' : '0';
@@ -210,7 +210,7 @@ Bounce.deleteBallElements = function (i) {
   ballIcon.parentNode.removeChild(ballIcon);
 };
 
-var drawMap = function() {
+var drawMap = function () {
   var svg = document.getElementById('svgBounce');
   var i, x, y, k, tile;
 
@@ -414,16 +414,16 @@ var drawMap = function() {
   }
 };
 
-Bounce.calcDistance = function(xDist, yDist) {
+Bounce.calcDistance = function (xDist, yDist) {
   return Math.sqrt(xDist * xDist + yDist * yDist);
 };
 
-var essentiallyEqual = function(float1, float2, opt_variance) {
+var essentiallyEqual = function (float1, float2, opt_variance) {
   var variance = opt_variance || 0.01;
   return (Math.abs(float1 - float2) < variance);
 };
 
-Bounce.isBallOutOfBounds = function(i) {
+Bounce.isBallOutOfBounds = function (i) {
   if (Bounce.ballX[i] < 0) {
     return true;
   }
@@ -444,8 +444,8 @@ Bounce.isBallOutOfBounds = function(i) {
  * @param func Function : The function to execute
  * @param data Object or Array : The data to pass to the function. If the function is also passed arguments, the data is appended to the arguments list. If the data is an Array, each item is appended as a new argument.
  */
-var delegate = function(scope, func, data) {
-  return function() {
+var delegate = function (scope, func, data) {
+  return function () {
     var args = Array.prototype.slice.apply(arguments).concat(data);
     func.apply(scope, args);
   };
@@ -467,7 +467,7 @@ Bounce.callUserGeneratedCode = function (fn) {
 };
 
 
-Bounce.onTick = function() {
+Bounce.onTick = function () {
   Bounce.tickCount++;
 
   if (Bounce.tickCount === 1) {
@@ -614,7 +614,7 @@ Bounce.onTick = function() {
   }
 };
 
-Bounce.onSvgDrag = function(e) {
+Bounce.onSvgDrag = function (e) {
   if (Bounce.intervalId) {
     Bounce.gesturesObserved[e.gesture.direction] =
       Math.round(e.gesture.distance / DRAG_DISTANCE_TO_MOVE_RATIO);
@@ -622,7 +622,7 @@ Bounce.onSvgDrag = function(e) {
   }
 };
 
-Bounce.onKey = function(e) {
+Bounce.onKey = function (e) {
   // Store the most recent event type per-key
   Bounce.keyState[e.keyCode] = e.type;
 
@@ -633,18 +633,18 @@ Bounce.onKey = function(e) {
   }
 };
 
-Bounce.onArrowButtonDown = function(e, idBtn) {
+Bounce.onArrowButtonDown = function (e, idBtn) {
   // Store the most recent event type per-button
   Bounce.btnState[idBtn] = ButtonState.DOWN;
   e.preventDefault();  // Stop normal events so we see mouseup later.
 };
 
-Bounce.onArrowButtonUp = function(e, idBtn) {
+Bounce.onArrowButtonUp = function (e, idBtn) {
   // Store the most recent event type per-button
   Bounce.btnState[idBtn] = ButtonState.UP;
 };
 
-Bounce.onMouseUp = function(e) {
+Bounce.onMouseUp = function (e) {
   // Reset btnState on mouse up
   Bounce.btnState = {};
 };
@@ -652,7 +652,7 @@ Bounce.onMouseUp = function(e) {
 /**
  * Initialize Blockly and the Bounce app.  Called on page load.
  */
-Bounce.init = function(config) {
+Bounce.init = function (config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
@@ -665,7 +665,7 @@ Bounce.init = function(config) {
   window.addEventListener("keydown", Bounce.onKey, false);
   window.addEventListener("keyup", Bounce.onKey, false);
 
-  config.loadAudio = function() {
+  config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
     studioApp.loadAudio(skin.ballStartSound, 'ballstart');
@@ -685,7 +685,7 @@ Bounce.init = function(config) {
     studioApp.loadAudio(skin.hitSound, 'hit');
   };
 
-  config.afterInject = function() {
+  config.afterInject = function () {
     // Connect up arrow button event handlers
     for (var btn in ArrowIds) {
       dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
@@ -815,7 +815,7 @@ Bounce.init = function(config) {
 /**
  * Clear the event handlers and stop the onTick timer.
  */
-Bounce.clearEventHandlersKillTickLoop = function() {
+Bounce.clearEventHandlersKillTickLoop = function () {
   Bounce.whenWallCollided = null;
   Bounce.whenBallInGoal = null;
   Bounce.whenBallMissesPaddle = null;
@@ -837,7 +837,7 @@ Bounce.clearEventHandlersKillTickLoop = function() {
  * Move ball to a safe place off of the screen.
  * @param {int} i Index of ball to be moved.
  */
-Bounce.moveBallOffscreen = function(i) {
+Bounce.moveBallOffscreen = function (i) {
   Bounce.ballX[i] = 100;
   Bounce.ballY[i] = 100;
   Bounce.ballDir[i] = 0;
@@ -849,7 +849,7 @@ Bounce.moveBallOffscreen = function(i) {
  * Play a start sound and reset the ball at index i and redraw it.
  * @param {int} i Index of ball to be reset.
  */
-Bounce.playSoundAndResetBall = function(i) {
+Bounce.playSoundAndResetBall = function (i) {
   //console.log("playSoundAndResetBall called for ball " + i);
   Bounce.resetBall(i, {randomPosition: true} );
   studioApp.playAudio('ballstart');
@@ -859,7 +859,7 @@ Bounce.playSoundAndResetBall = function(i) {
  * Launch the ball from index i from a start position and launch it.
  * @param {int} i Index of ball to be launched.
  */
-Bounce.launchBall = function(i) {
+Bounce.launchBall = function (i) {
   Bounce.ballFlags[i] |= Bounce.BallFlags.LAUNCHING;
   timeoutList.setTimeout(delegate(this, Bounce.playSoundAndResetBall, i), 3000);
 };
@@ -869,7 +869,7 @@ Bounce.launchBall = function(i) {
  * @param {int} i Index of ball to be reset.
  * @param {options} randomPosition: random start
  */
-Bounce.resetBall = function(i, options) {
+Bounce.resetBall = function (i, options) {
   //console.log("resetBall called for ball " + i);
   var randStart = options.randomPosition ||
                   typeof Bounce.ballStart_[i] == 'undefined';
@@ -890,7 +890,7 @@ Bounce.resetBall = function(i, options) {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Bounce.reset = function(first) {
+Bounce.reset = function (first) {
   var i;
   Bounce.clearEventHandlersKillTickLoop();
 
@@ -1014,7 +1014,7 @@ Bounce.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Bounce.runButtonClick = function() {
+Bounce.runButtonClick = function () {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -1041,7 +1041,7 @@ Bounce.runButtonClick = function() {
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
  */
-var displayFeedback = function() {
+var displayFeedback = function () {
   if (!Bounce.waitingForReport) {
     studioApp.displayFeedback({
       app: 'bounce', //XXX
@@ -1063,7 +1063,7 @@ var displayFeedback = function() {
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
  */
-Bounce.onReportComplete = function(response) {
+Bounce.onReportComplete = function (response) {
   Bounce.response = response;
   Bounce.waitingForReport = false;
   studioApp.onReportComplete(response);
@@ -1073,7 +1073,7 @@ Bounce.onReportComplete = function(response) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-Bounce.execute = function() {
+Bounce.execute = function () {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'bounce_whenRun');
   Bounce.result = ResultType.UNSET;
   Bounce.testResults = TestResults.NO_TESTS_RUN;
@@ -1175,7 +1175,7 @@ Bounce.execute = function() {
   Bounce.intervalId = window.setInterval(Bounce.onTick, Bounce.scale.stepSpeed);
 };
 
-Bounce.onPuzzleComplete = function() {
+Bounce.onPuzzleComplete = function () {
   if (level.freePlay) {
     Bounce.result = ResultType.SUCCESS;
   }
@@ -1226,7 +1226,7 @@ Bounce.onPuzzleComplete = function() {
 /**
  * Set the tiles to be transparent gradually.
  */
-Bounce.setTileTransparent = function() {
+Bounce.setTileTransparent = function () {
   var tileId = 0;
   for (var y = 0; y < Bounce.ROWS; y++) {
     for (var x = 0; x < Bounce.COLS; x++) {
@@ -1250,7 +1250,7 @@ Bounce.setTileTransparent = function() {
  * @param {number} x Horizontal grid (or fraction thereof).
  * @param {number} y Vertical grid (or fraction thereof).
  */
-Bounce.displayBall = function(i, x, y) {
+Bounce.displayBall = function (i, x, y) {
   var ballIcon = document.getElementById('ball' + i);
   ballIcon.setAttribute('x',
                         x * Bounce.SQUARE_SIZE);
@@ -1267,7 +1267,7 @@ Bounce.displayBall = function(i, x, y) {
  * @param {number} x Horizontal grid (or fraction thereof).
  * @param {number} y Vertical grid (or fraction thereof).
  */
-Bounce.displayPaddle = function(x, y) {
+Bounce.displayPaddle = function (x, y) {
   var paddleIcon = document.getElementById('paddle');
   paddleIcon.setAttribute('x',
                           x * Bounce.SQUARE_SIZE);
@@ -1279,7 +1279,7 @@ Bounce.displayPaddle = function(x, y) {
   paddleClipRect.setAttribute('y', paddleIcon.getAttribute('y'));
 };
 
-Bounce.displayScore = function() {
+Bounce.displayScore = function () {
   var score = document.getElementById('score');
   score.textContent = bounceMsg.scoreText({
     playerScore: Bounce.playerScore,
@@ -1354,11 +1354,11 @@ Bounce.setPaddle = function (value) {
     skinTheme(value).paddle);
 };
 
-Bounce.timedOut = function() {
+Bounce.timedOut = function () {
   return Bounce.tickCount > Bounce.timeoutFailureTick;
 };
 
-Bounce.allFinishesComplete = function() {
+Bounce.allFinishesComplete = function () {
   var i;
   if (Bounce.paddleFinish_) {
     var finished, playSound;

@@ -306,7 +306,7 @@ describe("getMissingBlocks_ tests", function () {
       return f.toString().replace(/\s/gm, "");
     }
 
-    function validateKey (key) {
+    function validateKey(key) {
       assert.equal(typeof(block[key]), typeof(expectedBlock[key]),
         "members are of same type");
       if (typeof(block[key]) === "function") {

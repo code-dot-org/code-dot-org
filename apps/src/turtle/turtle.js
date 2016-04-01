@@ -162,7 +162,7 @@ Artist.prototype.injectStudioApp = function (studioApp) {
 /**
  * Initialize Blockly and the turtle.  Called on page load.
  */
-Artist.prototype.init = function(config) {
+Artist.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("Artist requires a StudioApp");
   }
@@ -287,7 +287,7 @@ Artist.prototype.afterInject_ = function (config) {
   if (this.studioApp_.isUsingBlockly() && (this.skin.id === "anna" || this.skin.id === "elsa")) {
     // Override colour_random to only generate random colors from within our frozen
     // palette
-    Blockly.JavaScript.colour_random = function() {
+    Blockly.JavaScript.colour_random = function () {
       // Generate a random colour.
       if (!Blockly.JavaScript.definitions_.colour_random) {
         var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
@@ -327,7 +327,7 @@ Artist.prototype.afterInject_ = function (config) {
   imageContainer.style.display='none';
   document.body.appendChild(imageContainer);
 
-  for( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
+  for ( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
     var pattern = this.skin.lineStylePatternOptions[i][1];
     if (this.skin[pattern]) {
       var img = new Image();
@@ -344,7 +344,7 @@ Artist.prototype.afterInject_ = function (config) {
 /**
  * On startup draw the expected answer and save it to the answer canvas.
  */
-Artist.prototype.drawAnswer = function() {
+Artist.prototype.drawAnswer = function () {
   if (this.level.solutionBlocks) {
     this.drawBlocksOnCanvas(this.level.solutionBlocks, this.ctxAnswer);
   } else {
@@ -356,7 +356,7 @@ Artist.prototype.drawAnswer = function() {
  * Given a set of commands and a canvas, draws the commands onto the canvas
  * composited over the scratch canvas.
  */
-Artist.prototype.drawLogOnCanvas = function(log, canvas) {
+Artist.prototype.drawLogOnCanvas = function (log, canvas) {
   this.studioApp_.reset();
   while (log.length) {
     var tuple = log.shift();
@@ -371,7 +371,7 @@ Artist.prototype.drawLogOnCanvas = function(log, canvas) {
 /**
  * Evaluates blocks or code, and draws onto given canvas.
  */
-Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
+Artist.prototype.drawBlocksOnCanvas = function (blocksOrCode, canvas) {
   var code;
   if (this.studioApp_.isUsingBlockly()) {
     var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
@@ -391,7 +391,7 @@ Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
  * Draws the results of block evaluation (stored on api.log) onto the given
  * canvas.
  */
-Artist.prototype.drawCurrentBlocksOnCanvas = function(canvas) {
+Artist.prototype.drawCurrentBlocksOnCanvas = function (canvas) {
   this.drawLogOnCanvas(this.api.log, canvas);
 };
 
@@ -402,9 +402,9 @@ Artist.prototype.drawCurrentBlocksOnCanvas = function(canvas) {
  * @param {!Array} position An x-y pair.
  * @param {number} optional scale at which image is drawn
  */
-Artist.prototype.placeImage = function(filename, position, scale) {
+Artist.prototype.placeImage = function (filename, position, scale) {
   var img = new Image();
-  img.onload = _.bind(function() {
+  img.onload = _.bind(function () {
     if (img.width !== 0) {
       if (scale) {
         this.ctxImages.drawImage(img, position[0], position[1], img.width,
@@ -426,7 +426,7 @@ Artist.prototype.placeImage = function(filename, position, scale) {
 /**
  * Draw the images for this page and level onto this.ctxImages.
  */
-Artist.prototype.drawImages = function() {
+Artist.prototype.drawImages = function () {
   if (!this.level.images) {
     return;
   }
@@ -442,7 +442,7 @@ Artist.prototype.drawImages = function() {
 /**
  * Initial the turtle image on load.
  */
-Artist.prototype.loadTurtle = function() {
+Artist.prototype.loadTurtle = function () {
   this.avatarImage.onload = _.bind(this.display, this);
 
   this.avatarImage.src = this.skin.avatar;
@@ -460,7 +460,7 @@ Artist.prototype.loadTurtle = function() {
 /**
  * Initial the turtle animation deocration on load.
  */
-Artist.prototype.loadDecorationAnimation = function() {
+Artist.prototype.loadDecorationAnimation = function () {
   if (this.skin.id == "elsa") {
     this.decorationAnimationImage.src = this.skin.decorationAnimation;
     this.decorationAnimationImage.height = this.decorationAnimationHeight;
@@ -474,7 +474,7 @@ var turtleFrame = 0;
 /**
  * Draw the turtle image based on this.x, this.y, and this.heading.
  */
-Artist.prototype.drawTurtle = function() {
+Artist.prototype.drawTurtle = function () {
   var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(this.heading * this.numberAvatarHeadings / 360);
@@ -530,7 +530,7 @@ Artist.prototype.drawTurtle = function() {
   * the sprite is drawn.  For some angles it should be drawn before, and for some after.
   */
 
-Artist.prototype.drawDecorationAnimation = function(when) {
+Artist.prototype.drawDecorationAnimation = function (when) {
   if (this.skin.id == "elsa") {
     var frameIndex = (turtleFrame + 10) % this.skin.decorationAnimationNumFrames;
 
@@ -647,7 +647,7 @@ Artist.prototype.reset = function (ignore) {
 /**
  * Copy the scratch canvas to the display canvas. Add a turtle marker.
  */
-Artist.prototype.display = function() {
+Artist.prototype.display = function () {
   // FF on linux retains drawing of previous location of artist unless we clear
   // the canvas first.
   var style = this.ctxDisplay.fillStyle;
@@ -703,7 +703,7 @@ Artist.prototype.runButtonClick = function () {
   this.execute();
 };
 
-Artist.prototype.evalCode = function(code) {
+Artist.prototype.evalCode = function (code) {
   try {
     codegen.evalWith(code, {
       Turtle: this.api
@@ -762,7 +762,7 @@ Artist.prototype.handleExecutionError = function (err, lineNumber) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-Artist.prototype.execute = function() {
+Artist.prototype.execute = function () {
   this.api.log = [];
 
   // Reset the graphic.
@@ -876,7 +876,7 @@ Artist.prototype.finishExecution_ = function () {
 /**
  * Iterate through the recorded path and animate the turtle's actions.
  */
-Artist.prototype.animate = function() {
+Artist.prototype.animate = function () {
 
   // All tasks should be complete now.  Clean up the PID list.
   this.pid = 0;
@@ -924,7 +924,7 @@ Artist.prototype.animate = function() {
   this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
 };
 
-Artist.prototype.calculateSmoothAnimate = function(options, distance) {
+Artist.prototype.calculateSmoothAnimate = function (options, distance) {
   var tupleDone = true;
   var stepDistanceCovered = this.stepDistanceCovered;
 
@@ -970,7 +970,7 @@ Artist.prototype.calculateSmoothAnimate = function(options, distance) {
  * @param {number} fraction How much of this step's distance do we draw?
  * @param {object} single option for now: smoothAnimate (true/false)
  */
-Artist.prototype.step = function(command, values, options) {
+Artist.prototype.step = function (command, values, options) {
   var tupleDone = true;
   var result;
   var distance;
@@ -1326,7 +1326,7 @@ Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
  * App specific displayFeedback function that calls into
  * this.studioApp_.displayFeedback when appropriate
  */
-Artist.prototype.displayFeedback_ = function() {
+Artist.prototype.displayFeedback_ = function () {
   var feedbackImageCanvas;
   if (this.skin.id == "anna" || this.skin.id == "elsa") {
     // For frozen skins, show background and characters along with drawing
@@ -1362,7 +1362,7 @@ Artist.prototype.displayFeedback_ = function() {
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
  */
-Artist.prototype.onReportComplete = function(response) {
+Artist.prototype.onReportComplete = function (response) {
   this.response = response;
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
@@ -1374,7 +1374,7 @@ Artist.prototype.onReportComplete = function(response) {
 // This removes lengths from the text version of the XML of programs.
 // It is used to determine if the user program and model solution are
 // identical except for lengths.
-var removeK1Lengths = function(s) {
+var removeK1Lengths = function (s) {
   return s.replace(removeK1Lengths.regex, '">');
 };
 
@@ -1384,7 +1384,7 @@ removeK1Lengths.regex = /_length"><title name="length">.*?<\/title>/;
  * Verify if the answer is correct.
  * If so, move on to next level.
  */
-Artist.prototype.checkAnswer = function() {
+Artist.prototype.checkAnswer = function () {
   // Compare the Alpha (opacity) byte of each pixel in the user's image and
   // the sample answer image.
   var userImage =
@@ -1509,7 +1509,7 @@ Artist.prototype.checkAnswer = function() {
   // The call to displayFeedback() will happen later in onReportComplete()
 };
 
-Artist.prototype.getFeedbackImage_ = function() {
+Artist.prototype.getFeedbackImage_ = function () {
   var feedbackImageCanvas;
   if (this.skin.id == "anna" || this.skin.id == "elsa") {
     feedbackImageCanvas = this.ctxDisplay;

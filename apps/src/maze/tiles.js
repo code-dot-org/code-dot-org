@@ -33,7 +33,7 @@ Tiles.SquareType = {
 Tiles.TurnDirection = {LEFT: -1, RIGHT: 1};
 Tiles.MoveDirection = {FORWARD: 0, RIGHT: 1, BACKWARD: 2, LEFT: 3};
 
-Tiles.directionToDxDy = function(direction) {
+Tiles.directionToDxDy = function (direction) {
   switch (direction) {
     case Tiles.Direction.NORTH:
       return {dx: 0, dy: -1};
@@ -47,7 +47,7 @@ Tiles.directionToDxDy = function(direction) {
   throw new Error('Invalid direction value' + direction);
 };
 
-Tiles.directionToFrame = function(direction4) {
+Tiles.directionToFrame = function (direction4) {
   return utils.mod(direction4 * 4, 16);
 };
 
@@ -56,6 +56,6 @@ Tiles.directionToFrame = function(direction4) {
  * @param {number} d Potentially out-of-bounds direction value.
  * @return {number} Legal direction value.
  */
-Tiles.constrainDirection4 = function(d) {
+Tiles.constrainDirection4 = function (d) {
   return utils.mod(d, 4);
 };

@@ -957,7 +957,7 @@ function loadHoc2015(skin, assetUrl) {
   // of the two maps that use jumbo pieces ("circle" and "horizontal") we
   // return a special version of the map that just uses regular tile pieces.
 
-  skin.getMap = function(background, map) {
+  skin.getMap = function (background, map) {
     if (background == "hoth" && (map == "circle" || map == "horizontal")) {
       return map + "_nonjumbo";
     } else {
@@ -1634,7 +1634,7 @@ function loadStudio(skin, assetUrl) {
 }
 
 
-exports.load = function(assetUrl, id) {
+exports.load = function (assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
 
   // NOTE: all class names should be unique.  eventhandler naming won't work

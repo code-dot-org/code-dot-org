@@ -256,14 +256,14 @@ exports.dropdown = function (elementId) {
                            'optionsArray': optionsArray});
 };
 
-exports.getAttribute = function(elementId, attribute) {
+exports.getAttribute = function (elementId, attribute) {
   return Applab.executeCmd(null,
                            'getAttribute',
                            {elementId: elementId,
                             attribute: attribute});
 };
 
-exports.setAttribute = function(elementId, attribute, value) {
+exports.setAttribute = function (elementId, attribute, value) {
   return Applab.executeCmd(null,
                            'setAttribute',
                            {elementId: elementId,
@@ -380,7 +380,7 @@ exports.playSound = function (url) {
                           {'url': url});
 };
 
-exports.getKeyValue = function(key, onSuccess, onError) {
+exports.getKeyValue = function (key, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'getKeyValue',
                            {'key': key,
@@ -388,14 +388,14 @@ exports.getKeyValue = function(key, onSuccess, onError) {
                             'onError': onError});
 };
 
-exports.getKeyValueSync = function(key, callback) {
+exports.getKeyValueSync = function (key, callback) {
   return Applab.executeCmd(null,
                            'getKeyValueSync',
                            {'key': key,
                             'callback': callback});
 };
 
-exports.setKeyValue = function(key, value, onSuccess, onError) {
+exports.setKeyValue = function (key, value, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'setKeyValue',
                            {'key': key,
@@ -404,7 +404,7 @@ exports.setKeyValue = function(key, value, onSuccess, onError) {
                             'onError': onError});
 };
 
-exports.setKeyValueSync = function(key, value, callback) {
+exports.setKeyValueSync = function (key, value, callback) {
   return Applab.executeCmd(null,
                            'setKeyValueSync',
                            {'key': key,
