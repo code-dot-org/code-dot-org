@@ -23,6 +23,7 @@ var styles = {
   main: {
     position: 'absolute',
     marginLeft: 15,
+    top: 0,
     right: 0,
     // left handled by media queries for .editor-column
   },
@@ -37,7 +38,10 @@ var styles = {
     backgroundColor: 'white',
     overflowY: 'scroll',
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0
   }
 };
 
@@ -77,23 +81,18 @@ var TopInstructions = React.createClass({
     }
     var id = this.props.id;
 
-    var fullHeightIfEmbed = this.props.isEmbedView ? {
-      height: '100%'
-    } : {};
-
     var mainStyle = _.assign({}, styles.main, {
       height: this.props.height - RESIZER_HEIGHT,
       // Visualization is hard-coded on embed levels. Do the same for instructions position
       left: this.props.isEmbedView ? 340 : undefined
-    }, fullHeightIfEmbed);
-
-    var bodyStyle = _.assign({}, styles.body, {
-      height: mainStyle.height - styles.header.height
-    }, fullHeightIfEmbed);
+    }, this.props.isEmbedView && {
+      height: undefined,
+      bottom: 0
+    });
 
     var collapseStyle = _.assign({
       display: this.props.collapsed ? 'none' : undefined
-    }, fullHeightIfEmbed);
+    });
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -108,7 +107,7 @@ var TopInstructions = React.createClass({
           })}
         </div>
         <div style={collapseStyle}>
-          <div style={bodyStyle}>
+          <div style={styles.body}>
             <Instructions
               renderedMarkdown={processMarkdown(this.props.markdown)}
               inTopPane
@@ -121,7 +120,6 @@ var TopInstructions = React.createClass({
         </div>
       </div>
     );
-
   }
 });
 module.exports = TopInstructions;
