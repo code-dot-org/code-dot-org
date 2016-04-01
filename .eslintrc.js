@@ -9,6 +9,12 @@ module.exports = {
     "node": true,
     "mocha": true
   },
+  "globals": {
+    "$": true,
+    "jQuery": true,
+    "React": true,
+    "ReactDOM": true
+  },
   "rules": {
     "comma-dangle": "off",
     "curly": "error",
