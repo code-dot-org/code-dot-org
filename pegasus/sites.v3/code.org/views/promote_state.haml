@@ -1,3 +1,4 @@
+-require 'state_abbr'
 -data = DB[:cdo_state_promote].where(state_code_s:state).first
 -pass if data.nil?
 -statename = get_us_state_from_abbr(state)
