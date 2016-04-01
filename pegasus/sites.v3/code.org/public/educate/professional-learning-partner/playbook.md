@@ -4,7 +4,7 @@ title: Professional Learning Partner Virtual Playbook
 
 <link type="text/css" rel="stylesheet" href="/css/educate.css" />
 
-<%= view :educate_box, item: {title_s: 'Communications', description_t: "Coming Soon!"} %>
+<%= view :educate_box, item: {title_s: 'Branding and Communications', description_t: "Coming Soon!"} %>
 
 <%= view :educate_box, item: {title_s: 'Community Building', description_t: "Coming Soon!"} %>
 
@@ -18,6 +18,6 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Teacher Support', description_t: "These resources will help you provide support to the teachers enrolled in the Professional Learning Program", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/teacher-support"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Workshop Dashboard', description_t: "Coming soon!", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/dashboard"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Workshop Dashboard', description_t: "Coming soon!"} %>
 
 <%= view :educate_box, item: {title_s: 'Workshop Planning', description_t: "A guide to everything you'll need to take care of to make sure your summer workshops are a success", url_s: CDO.code_org_url('/educate/professional-learning-partner/playbook/workshop-planning'), button_s: "Learn more"} %>
