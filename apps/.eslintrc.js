@@ -42,6 +42,7 @@ module.exports = {
     "comma-spacing": "error",
     "curly": "error",
     "dot-location": ["error", "property"],
+    "eol-last": "error",
     "key-spacing": "error",
     "keyword-spacing": "error",
     "no-array-constructor": "error",
