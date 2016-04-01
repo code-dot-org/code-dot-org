@@ -105,7 +105,7 @@ We're looking to assemble a summer writing cohort from June 27 - Aug 19, 2016 to
 
 <h4> Pilot the curriculum in your classroom </h4>
 
-If you're in one of Code.org's partner districts and are teaching a CS or technology class in Spring 2017, consider applying to be a pilot teacher! We're looking for a small but dedicated group of teachers to give our team ongoing feedback on the curriculum and tools. Applications will be accepted on a rolling basis through the beginning of the summer.
+If you're in one of Code.org's partner districts and are teaching a CS or technology class in Spring 2017, consider applying to be a pilot teacher! We're looking for a small but dedicated group of teachers to give our team ongoing feedback on the curriculum and tools. Applications will be accepted on a rolling basis through April 2016.
 
 <br><br>
 

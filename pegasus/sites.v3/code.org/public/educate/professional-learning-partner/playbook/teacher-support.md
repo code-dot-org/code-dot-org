@@ -10,43 +10,62 @@ title: Teacher Support
 
 ## Quick Links
 
-- [Code.org Forums](http://forums.code.org)<br/>
-	- These forums are program specific and are a great way for teachers to help each other with questions about their online coursework and workshops.
-- [Code.org FAQ](/educate/pd/15-16/faq)<br/>
-	- Our Workshop FAQ has a lot fo helpful information for teachers about online coursework and program questions. Feel free to use it when helping your teachers! 
-- [Online coursework support](#online)<br/>
-- [Helping your teachers start teaching](#teaching)<br/>
+- [Examples for Online Support](#examples)<br/>
+- [Professional learning program support](#support)<br/>
 - [Technology in the classroom](#technology)<br/>
 - [Privacy policy](#privacy)
 
-
 ________________
-<a id="csp"></a>
-<br/>
-<br/>
-
 <a id="online"></a>
-### **Online Coursework Support**
+<br/>
+<br/>
 
-You should have each online coursework assignment in your Code Studio account. If you are having trouble accessing your account, see the video below on how to log in at [studio.code.org](studio.code.org).
 
-(MAKE SCREEN CAST OF HOW TO LOG IN)
+### **Examples for Online Support**
+
+[Code.org Forums](http://forum.code.org/)<br/>
+These forums are program specific and are a great way for teachers to help each other with questions about their online coursework and workshops. We recommend giving your teachers a space to help each other answer questions, and collaborate.<br/>
+
+[Code.org FAQ](/educate/pd/15-16/faq)<br/>
+This FAQ from previous workshops should not be used to answer your teacher's questions, but can provide you with a great example of how to set up your own FAQ for your teachers' specific needs. 
 
 [**Back to the top**](#top)
 <br/>
-
 
 ________________
-<a id="teaching"></a>
+<a id="support"></a>
 <br/>
 <br/>
 
-### **Helping your teachers start teaching**
 
-Carly needs help writing this one....
+### **Professional Learning at Code.org**
+
+#### About the Programs ####
+**Curriculum Overviews** provide additional information about the course to teachers who might be interested in enrolling in our program.
+
+CS in Algebra - More details coming soon!<br/>
+[CS in Science](https://www.dropbox.com/s/w26x522k8gs4p1e/Code.orgCSinScience_1_pager_030716.pdf?dl=0) <br/>
+[Exploring CS](https://www.dropbox.com/s/qijdf4pu4etrvn2/Code.org%20ECS_1-pager_030216_v5.pdf?dl=0)<br/>
+[CS Princples](https://www.dropbox.com/s/ujpfi18rcfycpll/Code.orgCSP_1-pager_03082016.pdf?dl=0)
+
+
+**Program Overviews** provide a deeper look at the details of our professional learning offerings for teachers, and is used for outlining the structure and flow of the program the teacher is enrolling in.
+
+CS in Algebra - Coming Soon!  
+[Cs in Science](https://www.dropbox.com/s/7qxe09uxxmsumtx/2016_welcome_CSinScience_031816_v3.pdf?dl=0)<br/>
+[Exploring CS](https://www.dropbox.com/s/na6um5intbw4c8w/2016_welcome_ECS_031816_v5.pdf?dl=0)<br/>
+[CS Princples](https://www.dropbox.com/s/pl3uzvc1dripydc/2016_CSP%20welcome_031816_v3.pdf?dl=0)<br/>
+
+#### Online Modules ####
+Online course modules will be assinged to you through [Code Studio](https://studio.code.org). Need help logging in or checking if you've completed a module? See our videos below.
+
+Logging Into Code Studio - Video Coming Soon!
+
+Checking your progress in Code Stuido - Video Coming Soon
 
 [**Back to the top**](#top)
 <br/>
+
 
 ________________
 <a id="technology"></a>
