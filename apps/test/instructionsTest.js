@@ -5,6 +5,7 @@ testUtils.setExternalGlobals();
 var ReactTestUtils = require('react-addons-test-utils');
 
 var MarkdownInstructions = require('@cdo/apps/templates/instructions/MarkdownInstructions.jsx');
+var NonMarkdownInstructions = require('@cdo/apps/templates/instructions/NonMarkdownInstructions.jsx');
 
 function shallowRender(element) {
   var renderer = ReactTestUtils.createRenderer();
@@ -53,5 +54,38 @@ describe('MarkdownInstructions', function () {
     var element = dom.children[0];
     assert.equal(element.style.paddingTop, '0px');
     assert.equal(element.style.marginLeft, '90px');
+  });
+});
+
+describe('NonMarkdownInstructions', function () {
+  it('can have just instructions', function () {
+    var dom = ReactTestUtils.renderIntoDocument(
+      <div>
+        <NonMarkdownInstructions
+          puzzleTitle="title"
+          instructions="instructions"/>
+      </div>
+    );
+    var element = dom.children[0];
+    assert.equal(element.children.length, 2);
+    assert.equal(element.children[0].textContent, "title");
+    assert.equal(element.children[1].textContent, "instructions");
+
+  });
+
+  it('can have both instructions and instructions2', function () {
+    var dom = ReactTestUtils.renderIntoDocument(
+      <div>
+        <NonMarkdownInstructions
+          puzzleTitle="title"
+          instructions="instructions"
+          instructions2="instructions2"/>
+      </div>
+    );
+    var element = dom.children[0];
+    assert.equal(element.children.length, 3);
+    assert.equal(element.children[0].textContent, "title");
+    assert.equal(element.children[1].textContent, "instructions");
+    assert.equal(element.children[2].textContent, "instructions2");
   });
 });
