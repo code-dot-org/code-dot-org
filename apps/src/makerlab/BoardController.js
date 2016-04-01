@@ -123,9 +123,9 @@ function connectToBoard(portId) {
 
 function getDevicePort() {
   return new Promise(function (resolve, reject) {
-    ChromeSerialPort.list(function (e, list) {
-      if (e) {
-        reject(e);
+    ChromeSerialPort.list(function (error, list) {
+      if (error) {
+        reject(error);
         return;
       }
 
