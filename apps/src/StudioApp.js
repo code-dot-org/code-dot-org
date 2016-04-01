@@ -26,7 +26,7 @@ var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
 var annotationList = require('./acemode/annotationList');
-var procesMarkdown = require('marked');
+var processMarkdown = require('marked');
 var copyrightStrings;
 
 /**
@@ -1041,7 +1041,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
   if (this.isMarkdownMode(level)) {
     var markdownWithImages = this.substituteInstructionImages(
       level.markdownInstructions, this.skin.instructions2ImageSubstitutions);
-    renderedMarkdown = procesMarkdown(markdownWithImages);
+    renderedMarkdown = processMarkdown(markdownWithImages);
   }
 
   var authoredHints;
