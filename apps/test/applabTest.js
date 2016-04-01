@@ -174,7 +174,7 @@ describe('getText/setText commands', function () {
 
       it('does add leading newline for leading empty div', function () {
         element.innerHTML = '<div><br></div><div>text</div><div>with</div><div>leading empty div</div>';
-        assert.equal(getInnerText(element), '\n\ntext\nwith\nleading empty div');
+        assert.equal(getInnerText(element), '\ntext\nwith\nleading empty div');
       });
 
       it('Unescapes < and >', function () {
@@ -259,6 +259,10 @@ describe('getText/setText commands', function () {
 
       it('preserves empty newlines', function () {
         roundTripTest('text\n\nwith\n\n\nempty newlines');
+      });
+
+      it('preserves single leading newline', function () {
+        roundTripTest('\ntext after newline');
       });
 
       it('preserves leading and trailing newlines', function () {
