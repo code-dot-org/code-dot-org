@@ -1,3 +1,133 @@
+var jsInterpreter;
+
+module.exports.injectJSInterpreter = function (jsi) {
+  jsInterpreter = jsi;
+};
+
+module.exports.createSprite = function (x, y, width, height) {
+  /*
+   * Copied code from p5play from createSprite()
+   *
+   * NOTE: this param not needed on this.Sprite() call as we're calling
+   * through the bound constructor, which prepends the first arg.
+   */
+  var s = new this.Sprite(x, y, width, height);
+  var p5Inst = this;
+
+  s.setFrame = function (frame) {
+    if (s.animation) {
+      s.animation.setFrame(frame);
+    }
+  };
+
+  s.nextFrame = function () {
+    if (s.animation) {
+      s.animation.nextFrame();
+    }
+  };
+
+  s.previousFrame = function () {
+    if (s.animation) {
+      s.animation.previousFrame();
+    }
+  };
+
+  s.play = function () {
+    if (s.animation) {
+      s.animation.play();
+    }
+  };
+
+  s.pause = function () {
+    if (s.animation) {
+      s.animation.stop();
+    }
+  };
+
+  s.frameDidChange = function () {
+    return s.animation ? s.animation.frameChanged : false;
+  };
+
+  s.setColor = function (colorString) {
+    s.shapeColor = colorString;
+  };
+
+  s.setColorRGB = function () {
+    s.shapeColor = p5Inst.color.apply(p5Inst, arguments);
+  };
+
+  Object.defineProperty(s, 'frameDelay', {
+    enumerable: true,
+    get: function () {
+      if (s.animation) {
+        return s.animation.frameDelay;
+      }
+    },
+    set: function (value) {
+      if (s.animation) {
+        s.animation.frameDelay = value;
+      }
+    }
+  });
+
+  Object.defineProperty(s, 'x', {
+    enumerable: true,
+    get: function () {
+      return s.position.x;
+    },
+    set: function (value) {
+      s.position.x = value;
+    }
+  });
+
+  Object.defineProperty(s, 'y', {
+    enumerable: true,
+    get: function () {
+      return s.position.y;
+    },
+    set: function (value) {
+      s.position.y = value;
+    }
+  });
+
+  Object.defineProperty(s, 'velocityX', {
+    enumerable: true,
+    get: function () {
+      return s.velocity.x;
+    },
+    set: function (value) {
+      s.velocity.x = value;
+    }
+  });
+
+  Object.defineProperty(s, 'velocityY', {
+    enumerable: true,
+    get: function () {
+      return s.velocity.y;
+    },
+    set: function (value) {
+      s.velocity.y = value;
+    }
+  });
+
+  Object.defineProperty(s, 'lifetime', {
+    enumerable: true,
+    get: function () {
+      return s.life;
+    },
+    set: function (value) {
+      s.life = value;
+    }
+  });
+
+  s.shapeColor = this.color(127, 127, 127);
+  s.AABBops = AABBops.bind(s, this);
+  s.isTouching = isTouching.bind(s, this);
+  s.depth = this.allSprites.maxDepth()+1;
+  this.allSprites.add(s);
+  return s;
+};
+
 /* eslint-disable */
 /*
  * Override Sprite.AABBops so it can be called as a stateful nativeFunc by the
@@ -13,17 +143,11 @@
  * to true and return a value.
  */
 
-var jsInterpreter;
-
-module.exports.injectJSInterpreter = function (jsi) {
-  jsInterpreter = jsi;
-};
-
 /*
  * Copied code from p5play from Sprite() with targeted modifications that
  * use the additional state parameter
  */
-module.exports.AABBops = function(p5Inst, type, target, callback) {
+var AABBops = function (p5Inst, type, target, callback) {
 
   // These 3 are utility p5 functions that don't depend on p5 instance state in
   // order to work properly, so we'll go ahead and make them easy to
@@ -314,7 +438,7 @@ module.exports.AABBops = function(p5Inst, type, target, callback) {
  * @method
  */
 
-module.exports.isTouching = function(p5Inst, target) {
+var isTouching = function (p5Inst, target) {
 
   /*
    * This code is a subset of the original AABBops method. It needs to be kept in
@@ -460,4 +584,6 @@ module.exports.isTouching = function(p5Inst, target) {
 
   return result;
 };
+
+/* eslint-enable */
 
