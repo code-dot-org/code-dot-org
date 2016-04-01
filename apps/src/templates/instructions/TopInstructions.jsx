@@ -82,12 +82,12 @@ var TopInstructions = React.createClass({
     var id = this.props.id;
 
     var mainStyle = _.assign({}, styles.main, {
-      height: this.props.height - RESIZER_HEIGHT,
-      // Visualization is hard-coded on embed levels. Do the same for instructions position
-      left: this.props.isEmbedView ? 340 : undefined
+      height: this.props.height - RESIZER_HEIGHT
     }, this.props.isEmbedView && {
       height: undefined,
-      bottom: 0
+      bottom: 0,
+      // Visualization is hard-coded on embed levels. Do the same for instructions position
+      left: 340
     });
 
     var collapseStyle = {
