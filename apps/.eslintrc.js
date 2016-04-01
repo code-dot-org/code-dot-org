@@ -1,9 +1,5 @@
 module.exports = {
   "parserOptions": {
-    // Ideally we would only support ES6 in craft until we've said we're going
-    // to support it everywhere. However, maintaining two separate lint configs
-    // seems like more of a pain than we want.
-    "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
