@@ -17,6 +17,8 @@ namespace :package do
     namespace package do
       desc "Update #{package} static asset package."
       task 'update' do
+        require 'cdo/aws/s3_packaging'
+
         package_dash = package.gsub('_', '-')
         # never download if we build our own
         return if CDO["use_my_#{package}"]

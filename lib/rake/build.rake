@@ -1,3 +1,7 @@
+require_relative '../../deployment'
+require 'cdo/hip_chat'
+require 'cdo/rake_utils'
+
 namespace :build do
 
   desc 'Runs Chef Client to configure the OS environment.'

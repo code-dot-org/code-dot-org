@@ -1,3 +1,6 @@
+require_relative '../../deployment'
+require 'cdo/rake_utils'
+
 namespace :install do
 
   # Create a symlink in the public directory that points at the appropriate apps
@@ -22,22 +25,22 @@ namespace :install do
   end
 
   task :apps do
-    if local_environment?
-      install_npm
+    if RakeUtils.local_environment?
+      RakeUtils.install_npm
     end
   end
 
   task :code_studio do
-    if local_environment?
+    if RakeUtils.local_environment?
       make_symlink('code_studio')
       update_package('code_studio')
-      install_npm
+      RakeUtils.install_npm
     end
   end
 
   desc 'Install Dashboard rubygems and setup database.'
   task :dashboard do
-    if local_environment?
+    if RakeUtils.local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
@@ -48,7 +51,7 @@ namespace :install do
 
   desc 'Install Pegasus rubygems and setup database.'
   task :pegasus do
-    if local_environment?
+    if RakeUtils.local_environment?
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
         RakeUtils.rake 'pegasus:setup_db'

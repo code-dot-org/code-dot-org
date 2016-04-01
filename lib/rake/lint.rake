@@ -1,3 +1,7 @@
+require_relative '../../deployment'
+require 'cdo/hip_chat'
+require 'cdo/rake_utils'
+
 namespace :lint do
   desc 'Lints Ruby code with rubocop.'
   task :ruby do
