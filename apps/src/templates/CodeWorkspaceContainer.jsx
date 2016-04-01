@@ -10,7 +10,7 @@ var utils = require('../utils');
 var styles = {
   main: {
     position: 'absolute',
-    // left gets set externally :(
+    // left gets set externally
     // top is set in render
     right: 0,
     bottom: 0,
