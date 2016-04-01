@@ -2,6 +2,7 @@
 
 var _ = require('../../lodash');
 var color = require('../../color');
+var styleConstants = require('../../styleConstants');
 
 var procesMarkdown = require('marked');
 
@@ -11,10 +12,8 @@ var HeightResizer = require('./HeightResizer.jsx');
 var constants = require('../../constants');
 var msg = require('../../locale');
 
-// TODO These numbers are defined in style-constants.scss. Do the same sort
-// of thing we did with colors
-var HEADER_HEIGHT = 30;
-var RESIZER_HEIGHT = 13;
+var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
+var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 // TODO - may want to be smarter about these values
 var INITIAL_HEIGHT = 300;
@@ -29,7 +28,7 @@ var styles = {
   },
   header: {
     height: HEADER_HEIGHT,
-    lineHeight: '30px',
+    lineHeight: HEADER_HEIGHT + 'px',
     fontFamily: '"Gotham 4r"',
     backgroundColor: color.lighter_purple,
     textAlign: 'center'
