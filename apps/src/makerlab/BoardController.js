@@ -1,6 +1,7 @@
 var five = require('johnny-five');
 var ChromeSerialPort = require('chrome-serialport');
 var PlaygroundIO = require('playground-io');
+require("babelify/polyfill"); // required for Promises in IE / Phantom
 
 /** @const {string} */
 var CHROME_APP_ID = 'himpmjbkjeenflliphlaaeggkkanoglo';
@@ -14,26 +15,32 @@ var BoardController = module.exports = function () {
   this.prewiredComponents = null;
 };
 
+BoardController.prototype.connectAndInitialize = function (codegen, interpreter) {
+  return this.ensureBoardConnected()
+        .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter));
+};
+
 /**
  * Connects to board if not already connected.
- * @param {Function} onError - called with string error message if failure
- * @param {Function} onComplete - called on success
  */
-BoardController.prototype.ensureBoardConnected = function (onError, onComplete) {
-  ChromeSerialPort.isInstalled(function (error) {
-    if (error) {
-      onError(error);
-      return;
-    }
+BoardController.prototype.ensureBoardConnected = function () {
+  return new Promise(function (resolve, reject) {
+    ChromeSerialPort.isInstalled(function (error) {
+      if (error) {
+        reject(error);
+        return;
+      }
 
-    if (this.board_) {
-      onComplete();
-      return;
-    }
+      if (this.board_) {
+        resolve();
+        return;
+      }
 
-    connect(onError, function (board) {
-      this.board_ = board;
-      onComplete();
+      connect()
+          .then(function (board) {
+            this.board_ = board;
+          }.bind(this))
+          .then(resolve);
     }.bind(this));
   }.bind(this));
 };
@@ -86,41 +93,43 @@ BoardController.prototype.reset = function () {
   });
 };
 
-function connect(onConnectError, onComplete) {
-  getDevicePort(onConnectError, function (portId) {
-    connectToBoard(portId, onComplete, onConnectError);
-  });
+function connect() {
+  return getDevicePort().then(connectToBoard);
 }
 
-function connectToBoard(portId, onComplete, onConnectError) {
-  var serialPort = new ChromeSerialPort.SerialPort(portId, {
-    baudrate: 57600
-  }, true);
-  var io = new PlaygroundIO({port: serialPort});
-  var board = new five.Board({io: io, repl: false});
-  board.once('ready', function () {
-    onComplete(board);
-  });
-  board.once('error', onConnectError);
-}
-
-function getDevicePort(onError, onComplete) {
-  ChromeSerialPort.list(function (e, list) {
-    if (e) {
-      onError(e);
-      return;
-    }
-
-    var prewiredBoards = list.filter(function (port) {
-      return deviceOnPortAppearsUsable(port);
+function connectToBoard(portId) {
+  return new Promise(function (resolve, reject) {
+    var serialPort = new ChromeSerialPort.SerialPort(portId, {
+      baudrate: 57600
+    }, true);
+    var io = new PlaygroundIO({port: serialPort});
+    var board = new five.Board({io: io, repl: false});
+    board.once('ready', function () {
+      resolve(board);
     });
+    board.once('error', reject);
+  }.bind(this));
+}
 
-    if (prewiredBoards.length > 0) {
-      onComplete(prewiredBoards[0].comName);
-    } else {
-      onError('Could not get device port.');
-    }
-  });
+function getDevicePort() {
+  return new Promise(function (resolve, reject) {
+    ChromeSerialPort.list(function (e, list) {
+      if (e) {
+        reject(e);
+        return;
+      }
+
+      var prewiredBoards = list.filter(function (port) {
+        return deviceOnPortAppearsUsable(port);
+      });
+
+      if (prewiredBoards.length > 0) {
+        resolve(prewiredBoards[0].comName);
+      } else {
+        reject('Could not get device port.');
+      }
+    });
+  }.bind(this));
 }
 
 function deviceOnPortAppearsUsable(port) {

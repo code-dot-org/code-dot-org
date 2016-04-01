@@ -1327,14 +1327,9 @@ Applab.execute = function() {
   }
 
   if (Applab.makerlabController) {
-    Applab.makerlabController.ensureBoardConnected(
-        function (e) {
-          console.log("Error connecting to board.", e);
-        },
-        function () {
-          Applab.makerlabController.installComponentsOnInterpreter(codegen, Applab.JSInterpreter);
-          Applab.beginVisualizationRun();
-        });
+    Applab.makerlabController
+        .connectAndInitialize(codegen, Applab.JSInterpreter)
+        .then(Applab.beginVisualizationRun);
   } else {
     Applab.beginVisualizationRun();
   }
