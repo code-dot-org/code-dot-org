@@ -1513,7 +1513,7 @@ levels.gumball_join_food_fight = {
     ),
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>',
-  'progressConditions' : [
+  'progressConditions': [
     {required: {'setEmotion': true, 'throwProjectile': true},
       result: {success: true}},
     {required: {'timedOut': true}, result: {success: false}}
@@ -1656,7 +1656,7 @@ levels.k1_block_test = utils.extend(levels['99'], {
 
 // you can get here via http://learn.code.org/2014/11, which is semi-hidden
 levels.full_sandbox =  {
-  'scrollbars' : true,
+  'scrollbars': true,
   'requiredBlocks': [
   ],
   'scale': {
@@ -1944,7 +1944,7 @@ levels.js_hoc2015_move_right = {
       }
     }
   ],
-  'progressConditions' : [
+  'progressConditions': [
     {required: {'allGoalsVisited': true},
       result: {success: true, message: msg.successHasAllGoals()}},
     {required: {'timedOut': true, 'allGoalsVisited': false},
@@ -1993,7 +1993,7 @@ levels.js_hoc2015_move_right_down = {
   'goalOverride': {
     'goalImage': 'goal2'
   },
-  'progressConditions' : [
+  'progressConditions': [
     {required: {'allGoalsVisited': true},
       result: {success: true, message: msg.successHasAllGoals()}},
     {required: {'timedOut': true, 'allGoalsVisited': false},
@@ -2042,7 +2042,7 @@ levels.js_hoc2015_move_backtrack = {
   'goalOverride': {
     'goalImage': 'goal1'
   },
-  'progressConditions' : [
+  'progressConditions': [
     {required: {'touchedHazardsAtOrAbove': 1},
       result: {success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true}},
     {required: {'allGoalsVisited': true},
@@ -2095,7 +2095,7 @@ levels.js_hoc2015_move_diagonal = {
   'goalOverride': {
     'goalImage': 'goal1'
   },
-  'progressConditions' : [
+  'progressConditions': [
     {required: {'touchedHazardsAtOrAbove': 1},
       result: {success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true}},
     {required: {'allGoalsVisited': true},
@@ -2167,7 +2167,7 @@ levels.js_hoc2015_move_around = {
   'goalOverride': {
     'goalImage': 'goal2'
   },
-  'progressConditions' : [
+  'progressConditions': [
     {required: {'touchedHazardsAtOrAbove': 1},
       result: {success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true}},
     {required: {'allGoalsVisited': true},
@@ -2219,7 +2219,7 @@ levels.js_hoc2015_move_finale = {
   'goalOverride': {
     'goalImage': 'goal2'
   },
-  'progressConditions' : [
+  'progressConditions': [
     {required: {'touchedHazardsAtOrAbove': 1},
       result: {success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true}},
     {required: {'allGoalsVisited': true},
@@ -2299,7 +2299,7 @@ levels.js_hoc2015_event_two_items = {
     'goalAnimation': 'animatedGoal',
     'goalRenderOffsetX': 0
   },
-  'progressConditions' : [
+  'progressConditions': [
     {required: {'allGoalsVisited': true},
       result: {success: true, message: msg.successCharacter1()}},
     {required: {'timedOut': true},
@@ -2400,7 +2400,7 @@ levels.js_hoc2015_event_four_items = {
     'goalAnimation': 'animatedGoal'
   },
 
-  'progressConditions' : [
+  'progressConditions': [
     {required: {'allGoalsVisited': true},
       result: {success: true, message: msg.successCharacter1()}},
     {required: {'timedOut': true},
@@ -2479,7 +2479,7 @@ levels.js_hoc2015_score =
     // returns null  The progressConditions will take care of completion.
     successCondition: function () { return false; }
   },
-  'progressConditions' : [
+  'progressConditions': [
     // complete success
     {required: {'allGoalsVisited': true, 'currentPointsAtOrAbove': 900},
       result: {success: true, message: msg.successCharacter1()}},
@@ -2609,7 +2609,7 @@ levels.js_hoc2015_win_lose = {
     }
   ],
 
-  'progressConditions' : [
+  'progressConditions': [
     // Got all items, not enough points
     {required: {'gotAllItems': true, 'currentPointsBelow': 200},
       result: {message: msg.failedWinLoseScore(), blocklyMessage: msg.failedWinLoseScoreBlockly()}},
@@ -2711,7 +2711,7 @@ levels.js_hoc2015_add_characters = {
       'element_id': '.droplet-gutter-line:nth-of-type(3)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
-        'content' : {
+        'content': {
           'text': msg.calloutPutCommandsHereRunStart(),
         },
         'hide': {
@@ -2724,7 +2724,7 @@ levels.js_hoc2015_add_characters = {
       }
     }
   ],
-  'progressConditions' : [
+  'progressConditions': [
     {required: {'createdSpecificItemsBelow': {className: "pufferpig", count: 3}},
       result: {
         success: false,
@@ -2807,7 +2807,7 @@ levels.js_hoc2015_chain_characters = {
   'autoArrowSteer': true,
   'timeoutFailureTick': 1800, // 60 seconds
   'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
-  'progressConditions' : [
+  'progressConditions': [
     {required: {'collectedSpecificItemsAtOrAbove': {className: "mynock", count: 8}},
       result: {success: true, message: msg.successCharacter1()}},
     {required: {'timedOut': true, collectedSpecificItemsAtOrAbove: {className: "mynock", count: 5}},
@@ -2826,7 +2826,7 @@ levels.js_hoc2015_chain_characters = {
       'element_id': '.droplet-gutter-line:nth-of-type(9)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
-        'content' : {
+        'content': {
           'text': msg.calloutPlaceTwoWhenTauntaun(),
         },
         'hide': {
@@ -2894,7 +2894,7 @@ levels.js_hoc2015_multiply_characters = {
   'autoArrowSteer': true,
   'timeoutFailureTick': 2250, // 75 seconds
   'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
-  'progressConditions' : [
+  'progressConditions': [
     {required: {'collectedItemsAtOrAbove': 20},
       result: {success: true, message: msg.successCharacter1()}},
     {required: {
@@ -2918,7 +2918,7 @@ levels.js_hoc2015_multiply_characters = {
       'element_id': '#droplet_palette_block_whenGetMouseDroid',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
-        'content' : {
+        'content': {
           'text': msg.calloutPlaceTwo(),
         },
         'hide': {
@@ -3016,7 +3016,7 @@ levels.js_hoc2015_change_setting = {
       'id': 'playlab:js_hoc2015_change_setting:setMap',
       'element_id': '#droplet_palette_block_setDroid',
       'qtip_config': {
-        'content' : {
+        'content': {
           'text': msg.calloutSetDroidAndSpeed(),
         },
         'position': {
@@ -3026,7 +3026,7 @@ levels.js_hoc2015_change_setting = {
       }
     }
   ],
-  'progressConditions' : [
+  'progressConditions': [
     // Collected all the items and set the right properties?  Success.
     {required: {'setSprite': true, 'setDroidSpeed': true, 'collectedItemsAtOrAbove': 3},
       result: {success: true, message: msg.successGenericCharacter()}},
@@ -3179,7 +3179,7 @@ levels.js_hoc2015_event_free = {
       'id': 'playlab:js_hoc2015_event_free:clickCategory',
       'element_id': '.droplet-palette-group-header.green',
       'qtip_config': {
-        'content' : {
+        'content': {
           'text': msg.calloutClickEvents(),
         },
         'position': {
@@ -3193,7 +3193,7 @@ levels.js_hoc2015_event_free = {
       'element_id': '#finishButton',
       'on': 'finishButtonShown',
       'qtip_config': {
-        'content' : {
+        'content': {
           'text': msg.calloutFinishButton(),
         },
         'position': {

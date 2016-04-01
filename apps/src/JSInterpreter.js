@@ -208,10 +208,10 @@ JSInterpreter.prototype.deinitialize = function () {
 };
 
 JSInterpreter.StepType = {
-  RUN:  0,
-  IN:   1,
+  RUN: 0,
+  IN: 1,
   OVER: 2,
-  OUT:  3,
+  OUT: 3
 };
 
 /**

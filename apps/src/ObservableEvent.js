@@ -21,7 +21,7 @@ var ObservableEvent = module.exports = function () {
  * @returns {Object} key - used to unregister from observable
  */
 ObservableEvent.prototype.register = function (onNotify) {
-  var key = {toCall:onNotify};
+  var key = {toCall: onNotify};
   Object.freeze(key);
   this.observerList_.push(key);
   return key;

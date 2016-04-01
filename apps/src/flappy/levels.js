@@ -69,7 +69,7 @@ module.exports = {
     'score': false,
     'freePlay': false,
     'goal': {
-      startX  : 100,
+      startX: 100,
       startY: 0,
       successCondition: function () {
         return (Flappy.avatarY  <= 40);

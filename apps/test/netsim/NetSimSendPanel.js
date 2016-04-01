@@ -88,14 +88,14 @@ describe("NetSimSendPanel", function () {
     it("sends all packets on 'Send' button click", function () {
       panel.packets_[0].setPacketBinary('1000');
       panel.getBody().find('#send-button').click();
-      panel.tick({time:0});
+      panel.tick({time: 0});
       assert.equal('', panel.packets_[0].getPacketBinary());
     });
 
     it("sends all packets on pressing enter", function () {
       panel.packets_[0].setPacketBinary('1000');
       simulateEnterKeyPress(rootDiv.find('textarea.message'));
-      panel.tick({time:0});
+      panel.tick({time: 0});
       assert.equal('', panel.packets_[0].getPacketBinary());
     });
   });

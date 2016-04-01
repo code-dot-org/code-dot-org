@@ -161,7 +161,7 @@ standardConfig.categories = {
   },
   // create blank category in case level builders want to move all blocks here
   // (which will cause the palette header to disappear)
-  '' : {'blocks': []},
+  '': {'blocks': []},
 };
 
 /**

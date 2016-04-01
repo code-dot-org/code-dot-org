@@ -97,7 +97,7 @@ module.exports = {
   },
   10: {
     appSpecificFailError: i18n.level10FailureMessage(),
-    tooFewBlocksMsg:  i18n.level10FailureMessage(),
+    tooFewBlocksMsg: i18n.level10FailureMessage(),
     songs: [
       'vignette4-intro',
       'vignette3',

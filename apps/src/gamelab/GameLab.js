@@ -153,10 +153,10 @@ GameLab.prototype.init = function (config) {
       data: {
         localeDirection: this.studioApp_.localeDirection(),
         extraControlRows: extraControlRows,
-        blockUsed : undefined,
-        idealBlockNumber : undefined,
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
         editCode: this.level.editCode,
-        blockCounterClass : 'block-counter-default',
+        blockCounterClass: 'block-counter-default',
         pinWorkspaceToBottom: true,
         readonlyWorkspace: config.readonlyWorkspace
       }

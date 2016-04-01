@@ -67,9 +67,9 @@ NetSimClientNode.prototype.getStatus = function () {
   }
 
   if (mutualConnection) {
-    return i18n.connectedToNodeName({nodeName:remoteNodeName});
+    return i18n.connectedToNodeName({nodeName: remoteNodeName});
   }
-  return i18n.connectingToNodeName({nodeName:remoteNodeName});
+  return i18n.connectingToNodeName({nodeName: remoteNodeName});
 };
 
 /** @inheritdoc */

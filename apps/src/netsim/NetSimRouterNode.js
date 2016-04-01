@@ -1791,7 +1791,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
   }
 
   responseHeaders = {
-    fromAddress:this.getAutoDnsAddress(),
+    fromAddress: this.getAutoDnsAddress(),
     toAddress: fromAddress,
     packetIndex: 1,
     packetCount: 1

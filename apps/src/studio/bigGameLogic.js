@@ -77,11 +77,11 @@ BigGameLogic.prototype.onTick = function () {
   if (playerSprite.visible && dangerSprite.visible &&
       this.collide(playerSprite.x, playerSprite.y,
                    dangerSprite.x, dangerSprite.y)) {
-    this.studio_.vanishActor({spriteIndex:this.playerSpriteIndex});
+    this.studio_.vanishActor({spriteIndex: this.playerSpriteIndex});
     setTimeout((function ()  {
       this.studio_.setSprite({
         spriteIndex: this.playerSpriteIndex,
-        value:"visible"
+        value: "visible"
       });
     }).bind(this), 20 * 40 + 50); // 40ms for each of 20 frames, plus some buffer
     this.studio_.playerScore -= 20;
@@ -102,11 +102,11 @@ BigGameLogic.prototype.onTick = function () {
   if (this.studio_.playerScore <= 0) {
     var score = document.getElementById('score');
     score.setAttribute('visibility', 'hidden');
-    this.studio_.showTitleScreen({title:'Game Over', text:'Click Reset to Play Again'});
+    this.studio_.showTitleScreen({title: 'Game Over', text: 'Click Reset to Play Again'});
     for (var i = 0; i < this.studio_.spriteCount; i++) {
       this.studio_.setSprite({
         spriteIndex: i,
-        value:"hidden"
+        value: "hidden"
       });
     }
     this.finished = true;
@@ -159,7 +159,7 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
     // sprite has returned to screen, make it visible again
     this.studio_.setSprite({
       spriteIndex: this.studio_.sprite.indexOf(sprite),
-      value:"visible"
+      value: "visible"
     });
   }
 };
@@ -201,7 +201,7 @@ BigGameLogic.prototype.resetSprite_ = function (sprite) {
   sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
   this.studio_.setSprite({
     spriteIndex: this.studio_.sprite.indexOf(sprite),
-    value:"hidden"
+    value: "hidden"
   });
 };
 

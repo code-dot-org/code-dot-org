@@ -229,7 +229,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    showExamplesLink : this.showExamplesLink,
+    showExamplesLink: this.showExamplesLink,
     currentParameterIndex: currentParameterIndex
   });
 };

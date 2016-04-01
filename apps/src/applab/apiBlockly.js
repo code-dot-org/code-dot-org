@@ -362,7 +362,7 @@ exports.playSound = function (blockId, url) {
 exports.getKeyValue = function(blockId, key, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                            'getKeyValue',
-                           {'key':key,
+                           {'key': key,
                             'onSuccess': onSuccess,
                             'onError': onError});
 };
@@ -370,7 +370,7 @@ exports.getKeyValue = function(blockId, key, onSuccess, onError) {
 exports.setKeyValue = function(blockId, key, value, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                            'setKeyValue',
-                           {'key':key,
+                           {'key': key,
                             'value': value,
                             'onSuccess': onSuccess,
                             'onError': onError});

@@ -121,46 +121,46 @@ exports.frameDirTableWalkingWithIdleCounterclockwise = frameDirTableWalkingWithI
  * Given a direction, returns the unit vector for it.
  */
 var UNIT_VECTOR = {};
-UNIT_VECTOR[Dir.NONE] =  {x: 0, y: 0};
-UNIT_VECTOR[Dir.NORTH] = {x: 0, y:-1};
-UNIT_VECTOR[Dir.EAST]  = {x: 1, y: 0};
+UNIT_VECTOR[Dir.NONE] = {x: 0, y: 0};
+UNIT_VECTOR[Dir.NORTH] = {x: 0, y: -1};
+UNIT_VECTOR[Dir.EAST] = {x: 1, y: 0};
 UNIT_VECTOR[Dir.SOUTH] = {x: 0, y: 1};
-UNIT_VECTOR[Dir.WEST]  = {x:-1, y: 0};
-UNIT_VECTOR[Dir.NORTHEAST] = {x: 1, y:-1};
+UNIT_VECTOR[Dir.WEST] = {x: -1, y: 0};
+UNIT_VECTOR[Dir.NORTHEAST] = {x: 1, y: -1};
 UNIT_VECTOR[Dir.SOUTHEAST] = {x: 1, y: 1};
-UNIT_VECTOR[Dir.SOUTHWEST] = {x:-1, y: 1};
-UNIT_VECTOR[Dir.NORTHWEST] = {x:-1, y:-1};
+UNIT_VECTOR[Dir.SOUTHWEST] = {x: -1, y: 1};
+UNIT_VECTOR[Dir.NORTHWEST] = {x: -1, y: -1};
 exports.Direction.getUnitVector = function (dir) {
   return UNIT_VECTOR[dir];
 };
 
 
 exports.Position = {
-  OUTTOPOUTLEFT:    1,
-  OUTTOPLEFT:       2,
-  OUTTOPCENTER:     3,
-  OUTTOPRIGHT:      4,
-  OUTTOPOUTRIGHT:   5,
-  TOPOUTLEFT:       6,
-  TOPLEFT:          7,
-  TOPCENTER:        8,
-  TOPRIGHT:         9,
-  TOPOUTRIGHT:      10,
-  MIDDLEOUTLEFT:    11,
-  MIDDLELEFT:       12,
-  MIDDLECENTER:     13,
-  MIDDLERIGHT:      14,
-  MIDDLEOUTRIGHT:   15,
-  BOTTOMOUTLEFT:    16,
-  BOTTOMLEFT:       17,
-  BOTTOMCENTER:     18,
-  BOTTOMRIGHT:      19,
-  BOTTOMOUTRIGHT:   20,
+  OUTTOPOUTLEFT: 1,
+  OUTTOPLEFT: 2,
+  OUTTOPCENTER: 3,
+  OUTTOPRIGHT: 4,
+  OUTTOPOUTRIGHT: 5,
+  TOPOUTLEFT: 6,
+  TOPLEFT: 7,
+  TOPCENTER: 8,
+  TOPRIGHT: 9,
+  TOPOUTRIGHT: 10,
+  MIDDLEOUTLEFT: 11,
+  MIDDLELEFT: 12,
+  MIDDLECENTER: 13,
+  MIDDLERIGHT: 14,
+  MIDDLEOUTRIGHT: 15,
+  BOTTOMOUTLEFT: 16,
+  BOTTOMLEFT: 17,
+  BOTTOMCENTER: 18,
+  BOTTOMRIGHT: 19,
+  BOTTOMOUTRIGHT: 20,
   OUTBOTTOMOUTLEFT: 21,
-  OUTBOTTOMLEFT:    22,
-  OUTBOTTOMCENTER:  23,
-  OUTBOTTOMRIGHT:   24,
-  OUTBOTTOMOUTRIGHT:25
+  OUTBOTTOMLEFT: 22,
+  OUTBOTTOMCENTER: 23,
+  OUTBOTTOMRIGHT: 24,
+  OUTBOTTOMOUTRIGHT: 25
 };
 
 //
@@ -296,12 +296,12 @@ exports.DEFAULT_ITEM_ANIMATION_FRAME_DURATION = 1.5;
  * @enum {number}
  */
 exports.SquareType = {
-  OPEN:         0,
+  OPEN: 0,
   SPRITEFINISH: 1,
-  NOT_USED_2:   2,
-  WALL:         4,  // random wall tile
-  NOT_USED_8:   8,
-  SPRITESTART:  16,
+  NOT_USED_2: 2,
+  WALL: 4,  // random wall tile
+  NOT_USED_8: 8,
+  SPRITESTART: 16,
   ITEM_CLASS_0: 32, // Must stay in sync with SquareItemClassShift below
   ITEM_CLASS_1: 64,
   ITEM_CLASS_2: 128,
@@ -310,7 +310,7 @@ exports.SquareType = {
   ITEM_CLASS_5: 1024,
   ITEM_CLASS_6: 2048,
   ITEM_CLASS_7: 4096,
-  NOT_USED_8K:  8192,
+  NOT_USED_8K: 8192,
   NOT_USED_16K: 16384,
   NOT_USED_32K: 32768
   // Walls specifically retrieved from an 16x16 grid are stored in bits 16-27.

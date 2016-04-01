@@ -743,7 +743,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
         var submitButton = sharingDiv.querySelector('#phone-submit');
         submitButton.disabled = true;
         phone.mask('(000) 000-0000', {
-            onComplete:function(){
+            onComplete: function(){
               if (!submitted) {
                 submitButton.disabled = false;
               }

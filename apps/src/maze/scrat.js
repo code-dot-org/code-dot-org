@@ -5,12 +5,12 @@ var _ = utils.getLodash();
 var studioApp = require('../StudioApp').singleton;
 
 var TILE_SHAPES = {
-  'log':             [0, 0],
-  'lily1':           [1, 0],
-  'land1':           [2, 0],
-  'island_start':    [0, 1],
+  'log': [0, 0],
+  'lily1': [1, 0],
+  'land1': [2, 0],
+  'island_start': [0, 1],
   'island_topRight': [1, 1],
-  'island_botLeft':  [0, 2],
+  'island_botLeft': [0, 2],
   'island_botRight': [1, 2],
   'water': [4, 0],
 

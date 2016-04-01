@@ -100,7 +100,7 @@ export default class LevelView {
       "leavesOak": ["leavesOak", "Leaves0", -100, 0],
       "leavesSpruce": ["leavesSpruce", "Leaves0", -76, 60],
 
-      "watering" : ["blocks", "Water_0", -13, 0],
+      "watering": ["blocks", "Water_0", -13, 0],
       "cropWheat": ["blocks", "Wheat0", -13, 0],
       "torch": ["torch", "Torch0", -13, 0],
 
@@ -113,17 +113,17 @@ export default class LevelView {
 
       "door": ["door", "", -12, -15],
 
-      "railsBottomLeft":         ["blocks", "Rails_BottomLeft", -13, 0],
-      "railsBottomRight":        ["blocks", "Rails_BottomRight", -13, 0],
-      "railsHorizontal":         ["blocks", "Rails_Horizontal", -13, 0],
-      "railsTopLeft":            ["blocks", "Rails_TopLeft", -13, 0],
-      "railsTopRight":           ["blocks", "Rails_TopRight", -13, 0],
-      "railsUnpoweredHorizontal":["blocks", "Rails_UnpoweredHorizontal", -13, 0],
-      "railsUnpoweredVertical":  ["blocks", "Rails_UnpoweredVertical", -13, 0],
-      "railsVertical":           ["blocks", "Rails_Vertical", -13, -0],
-      "railsPoweredHorizontal":  ["blocks", "Rails_PoweredHorizontal", -13, 0],
-      "railsPoweredVertical":    ["blocks", "Rails_PoweredVertical", -13, 0],
-      "railsRedstoneTorch":      ["blocks", "Rails_RedstoneTorch", -12, 9],
+      "railsBottomLeft": ["blocks", "Rails_BottomLeft", -13, 0],
+      "railsBottomRight": ["blocks", "Rails_BottomRight", -13, 0],
+      "railsHorizontal": ["blocks", "Rails_Horizontal", -13, 0],
+      "railsTopLeft": ["blocks", "Rails_TopLeft", -13, 0],
+      "railsTopRight": ["blocks", "Rails_TopRight", -13, 0],
+      "railsUnpoweredHorizontal": ["blocks", "Rails_UnpoweredHorizontal", -13, 0],
+      "railsUnpoweredVertical": ["blocks", "Rails_UnpoweredVertical", -13, 0],
+      "railsVertical": ["blocks", "Rails_Vertical", -13, -0],
+      "railsPoweredHorizontal": ["blocks", "Rails_PoweredHorizontal", -13, 0],
+      "railsPoweredVertical": ["blocks", "Rails_PoweredVertical", -13, 0],
+      "railsRedstoneTorch": ["blocks", "Rails_RedstoneTorch", -12, 9],
     };
 
     this.actionPlaneBlocks = [];

@@ -81,7 +81,7 @@ var ELSA_DECORATION_DETAILS = [
   {x: 22, when: "before"},
   {x: 17, when: "before"},
   {x: 12, when: "before"},
-  {x:  8, when: "after"},
+  {x: 8, when: "after"},
   {x: 10, when: "after"}
 ];
 
@@ -214,10 +214,10 @@ Artist.prototype.init = function(config) {
       assetUrl: this.studioApp_.assetUrl,
       data: {
         localeDirection: this.studioApp_.localeDirection(),
-        blockUsed : undefined,
-        idealBlockNumber : undefined,
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
         editCode: this.level.editCode,
-        blockCounterClass : 'block-counter-default',
+        blockCounterClass: 'block-counter-default',
         readonlyWorkspace: config.readonlyWorkspace
       }
     });
@@ -783,7 +783,7 @@ Artist.prototype.execute = function() {
   }
 
   // api.log now contains a transcript of all the user's actions.
-  this.studioApp_.playAudio('start', {loop : true});
+  this.studioApp_.playAudio('start', {loop: true});
   // animate the transcript.
 
   this.pid = window.setTimeout(_.bind(this.animate, this), 100);

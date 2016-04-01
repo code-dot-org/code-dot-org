@@ -383,7 +383,7 @@ exports.playSound = function (url) {
 exports.getKeyValue = function(key, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'getKeyValue',
-                           {'key':key,
+                           {'key': key,
                             'onSuccess': onSuccess,
                             'onError': onError});
 };
@@ -391,14 +391,14 @@ exports.getKeyValue = function(key, onSuccess, onError) {
 exports.getKeyValueSync = function(key, callback) {
   return Applab.executeCmd(null,
                            'getKeyValueSync',
-                           {'key':key,
+                           {'key': key,
                             'callback': callback});
 };
 
 exports.setKeyValue = function(key, value, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'setKeyValue',
-                           {'key':key,
+                           {'key': key,
                             'value': value,
                             'onSuccess': onSuccess,
                             'onError': onError});
@@ -407,7 +407,7 @@ exports.setKeyValue = function(key, value, onSuccess, onError) {
 exports.setKeyValueSync = function(key, value, callback) {
   return Applab.executeCmd(null,
                            'setKeyValueSync',
-                           {'key':key,
+                           {'key': key,
                             'value': value,
                             'callback': callback});
 };

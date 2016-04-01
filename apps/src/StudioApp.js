@@ -1121,9 +1121,9 @@ StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose, showHin
   var hideFn = _.bind(function() {
     // Momentarily flash the instruction block white then back to regular.
     if ($(endTargetSelector).length) {
-      $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
+      $(endTargetSelector).css({"background-color": "rgba(255,255,255,1)"})
         .delay(500)
-        .animate({"background-color":"rgba(0,0,0,0)"},1000);
+        .animate({"background-color": "rgba(0,0,0,0)"},1000);
     }
     // Set focus to ace editor when instructions close:
     if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
@@ -1749,7 +1749,7 @@ StudioApp.prototype.configureDom = function (config) {
       // Modify the arrangement of toolbox blocks so categories align left
       if (config.level.edit_blocks == "toolbox_blocks") {
         this.blockYCoordinateInterval = 80;
-        config.blockArrangement = {category : {x: 20}};
+        config.blockArrangement = {category: {x: 20}};
       }
       // Enable param & var editing in levelbuilder, regardless of level setting
       config.level.disableParamEditing = false;

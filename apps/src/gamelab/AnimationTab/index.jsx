@@ -24,7 +24,7 @@ var staticStyles = {
     flex: '1 0',
     backgroundColor: 'white',
     textAlign: 'center',
-    paddingTop:'48%'
+    paddingTop: '48%'
   }
 };
 

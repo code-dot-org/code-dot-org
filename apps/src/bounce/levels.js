@@ -192,7 +192,7 @@ module.exports = {
       'leftButton',
       'rightButton'
     ],
-    'failOnBallExit' : true,
+    'failOnBallExit': true,
     'map': [
       [1, 1, 1, 1, 1, 1, 1, 1],
       [1, 0, 0, 0, 0,32, 0, 1],
@@ -300,7 +300,7 @@ module.exports = {
         return (Bounce.opponentScore >= 2);
       }
     },
-    'respawnBalls' : true,
+    'respawnBalls': true,
     'map': [
       [1, 1, 2, 2, 2, 2, 1, 1],
       [1, 0, 0, 0, 0, 0, 0, 1],

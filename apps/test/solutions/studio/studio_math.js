@@ -30,7 +30,7 @@ module.exports = {
       timeout: 15000,
       description: "rocket_height = (2 + 4) / 2",
       // make sprite visible, have them say something
-      xml:  '' +
+      xml: '' +
         '<block type="functional_definition" inline="false">' +
         '  <mutation>' +
         '    <arg name="seconds" type="Number"></arg>' +
@@ -84,7 +84,7 @@ module.exports = {
     {
       description: "empty start",
       // make sprite visible, have them say something
-      xml:  '' +
+      xml: '' +
         '<block type="functional_start_setValue" inline="false" deletable="false" movable="false" editable="false">' +
         '</block>',
       customValidator: function (assert) {
@@ -101,7 +101,7 @@ module.exports = {
     {
       description: "empty input inside variable",
       // make sprite visible, have them say something
-      xml:  '' +
+      xml: '' +
         '<block type="functional_definition" inline="false" editable="false">' +
         '  <mutation>' +
         '    <outputtype>Number</outputtype>' +
@@ -161,7 +161,7 @@ module.exports = {
     {
       description: "empty block inside function",
       // make sprite visible, have them say something
-      xml:  '' +
+      xml: '' +
         '<block type="functional_definition" inline="false">' +
         '  <mutation>' +
         '    <arg name="seconds" type="Number"></arg>' +

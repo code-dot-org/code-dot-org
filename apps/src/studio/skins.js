@@ -634,16 +634,79 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'pufferpig':       {frames: 12, width: 100, height: 100, scale: 1,   renderOffset: {x: 0, y: -15}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true},
-    'stormtrooper':    {frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: {x: 0, y: -15}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true},
-    'tauntaun':        {frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: {x: 0, y:  20}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true},
-    'mynock':          {frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: {x: 0, y: -20}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true},
-    'probot':          {frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: {x: 0, y: -10}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true},
-    'mousedroid':      {frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: {x: 0, y: -20}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true},
-    'rebelpilot':      {frames: 13, width: 100, height: 100, scale: 1,   renderOffset: {x: 0, y: -20}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true},
+    'pufferpig': {
+      frames: 12,
+      width: 100,
+      height: 100,
+      scale: 1,
+      renderOffset: {x: 0, y: -15},
+      activity: 'roam',
+      speed: constants.SpriteSpeed.VERY_SLOW,
+      spritesCounterclockwise: true
+    },
+    'stormtrooper': {
+      frames: 12,
+      width: 100,
+      height: 100,
+      scale: 1.1,
+      renderOffset: {x: 0, y: -15},
+      activity: 'chase',
+      speed: constants.SpriteSpeed.VERY_SLOW,
+      spritesCounterclockwise: true
+    },
+    'tauntaun': {
+      frames: 15,
+      width: 100,
+      height: 100,
+      scale: 1.6,
+      renderOffset: {x: 0, y: 20},
+      activity: 'roam',
+      speed: constants.SpriteSpeed.SLOW,
+      spritesCounterclockwise: true
+    },
+    'mynock': {
+      frames: 8,
+      width: 100,
+      height: 100,
+      scale: 0.9,
+      renderOffset: {x: 0, y: -20},
+      activity: 'roam',
+      speed: constants.SpriteSpeed.SLOW,
+      spritesCounterclockwise: true
+    },
+    'probot': {
+      frames: 12,
+      width: 100,
+      height: 100,
+      scale: 1.2,
+      renderOffset: {x: 0, y: -10},
+      activity: 'chase',
+      speed: constants.SpriteSpeed.LITTLE_SLOW,
+      spritesCounterclockwise: true
+    },
+    'mousedroid': {
+      frames: 1,
+      width: 100,
+      height: 100,
+      scale: 0.5,
+      renderOffset: {x: 0, y: -20},
+      activity: 'flee',
+      speed: constants.SpriteSpeed.LITTLE_SLOW,
+      spritesCounterclockwise: true
+    },
+    'rebelpilot': {
+      frames: 13,
+      width: 100,
+      height: 100,
+      scale: 1,
+      renderOffset: {x: 0, y: -20},
+      activity: 'flee',
+      speed: constants.SpriteSpeed.SLOW,
+      spritesCounterclockwise: true
+    }
   };
 
-  skin.customObstacleZones = {endor : {}, hoth: {}, starship: {}};
+  skin.customObstacleZones = {endor: {}, hoth: {}, starship: {}};
 
   function generateGridObstacleZones() {
     var zones = [];

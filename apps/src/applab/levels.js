@@ -206,7 +206,7 @@ levels.ec_simple = utils.extend(levels.custom, {
 */
 
 levels.full_sandbox =  {
-  'scrollbars' : true,
+  'scrollbars': true,
   'requiredBlocks': [
   ],
   'scale': {

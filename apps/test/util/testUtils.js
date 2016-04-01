@@ -273,7 +273,7 @@ exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
     for (var prop in e) {
       evt[prop] = e[prop];
     }
-    evt.button = {0:1, 1:4, 2:2}[evt.button] || evt.button;
+    evt.button = {0: 1, 1: 4, 2: 2}[evt.button] || evt.button;
   }
   return evt;
 };

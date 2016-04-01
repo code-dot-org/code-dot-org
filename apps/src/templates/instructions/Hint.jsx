@@ -12,7 +12,7 @@ var Hint = React.createClass({
       hintBlock = (<ReadOnlyBlockSpace block={this.props.hint.block} />);
     }
     return (<li style={{marginBottom: '12px'}}>
-      <div dangerouslySetInnerHTML={{__html : this.props.hint.content}} />
+      <div dangerouslySetInnerHTML={{__html: this.props.hint.content}} />
       {hintBlock}
     </li>);
   },
