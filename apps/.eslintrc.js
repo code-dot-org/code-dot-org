@@ -42,7 +42,6 @@ module.exports = {
     "no-empty": 0,
     "semi": 2,
     "no-console": 0,
-    "no-extra-boolean-cast": 0,
-    "no-regex-spaces": 0
+    "no-extra-boolean-cast": 0
   }
 };
