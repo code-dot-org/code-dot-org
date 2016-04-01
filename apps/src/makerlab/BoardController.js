@@ -17,7 +17,7 @@ var BoardController = module.exports = function () {
 
 BoardController.prototype.connectAndInitialize = function (codegen, interpreter) {
   return this.ensureBoardConnected()
-        .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter));
+      .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter));
 };
 
 /**
