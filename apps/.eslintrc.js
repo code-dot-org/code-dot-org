@@ -34,6 +34,7 @@ module.exports = {
     "mocha": true
   },
   "rules": {
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "curly": "error",
     "no-undef": "error",
     "no-unused-vars": "off",

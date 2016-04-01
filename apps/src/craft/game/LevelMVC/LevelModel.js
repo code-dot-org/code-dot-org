@@ -277,16 +277,13 @@ export default class LevelModel {
     if ((!blockType && (this.actionPlane[this.coordinatesToIndex(position)].blockType !== ""))|| this.isBlockOfType(position, blockType)) {
       objectArray.push([true, position]);
       return true;
-    }
-    else
-    {
+    } else {
       objectArray.push([false, null]);
       return false;
     }
   }
 
-  houseGroundToFloorHelper(position, woolType, arrayCheck)
-  {
+  houseGroundToFloorHelper(position, woolType, arrayCheck) {
     var checkActionBlock,
         checkGroundBlock,
         posAbove, 
@@ -297,8 +294,7 @@ export default class LevelModel {
         array = arrayCheck;
         let index = this.yToIndex(position[2]) + position[1];
 
-        if(index === 44)
-        {
+        if(index === 44) {
           index = 44;
         }
 
@@ -325,8 +321,7 @@ export default class LevelModel {
 
     if(checkActionBlock.blockType !== "") {
       return {};
-    }
-    else if(array.length > 0 && checkIndex === -1) {
+    } else if(array.length > 0 && checkIndex === -1) {
         return {};
     }
     array.push(position);
@@ -755,26 +750,21 @@ export default class LevelModel {
       this.pushIfHigherPrecedence(index, { x: x, y: y, type: "FogOfWar_Bottom", precedence: 1});
     }
 
-    //fully lit
     if( (botRightQuad && topLeftQuad) || (botLeftQuad && topRightQuad) || leftQuad && rightQuad || topQuad && botQuad || (rightQuad && botQuad && topLeftQuad) ||
         (botQuad && topRightQuad && topLeftQuad) || (topQuad && botRightQuad && botLeftQuad) || (leftQuad && topRightQuad && botRightQuad) || (leftQuad && botQuad && topRightQuad)) {
+      //fully lit
       this.fowPlane[index] = "";
-    }
-
-    //darkend botleft corner
-    else if( (botQuad && leftQuad) || (botQuad && topLeftQuad) || (leftQuad && botRightQuad) ){
+    } else if( (botQuad && leftQuad) || (botQuad && topLeftQuad) || (leftQuad && botRightQuad) ){
+      // darkend botleft corner
       this.pushIfHigherPrecedence(index, { x: x, y: y, type: "FogOfWar_Bottom_Left", precedence: 2});
-    }
-    //darkend botRight corner
-    else if((botQuad && rightQuad) || (botQuad && topRightQuad) || (rightQuad && botLeftQuad)) {
+    } else if((botQuad && rightQuad) || (botQuad && topRightQuad) || (rightQuad && botLeftQuad)) {
+      // darkend botRight corner
       this.pushIfHigherPrecedence(index, { x: x, y: y, type: "FogOfWar_Bottom_Right", precedence: 2});
-    }
-    //darkend topRight corner
-    else if((topQuad && rightQuad) || (topQuad && botRightQuad) || (rightQuad && topLeftQuad)) {
+    } else if((topQuad && rightQuad) || (topQuad && botRightQuad) || (rightQuad && topLeftQuad)) {
+      // darkend topRight corner
       this.pushIfHigherPrecedence(index, { x: x, y: y, type: "FogOfWar_Top_Right", precedence: 2});
-    }
-    //darkend topLeft corner
-    else if((topQuad && leftQuad) || (topQuad && botLeftQuad) || (leftQuad && topRightQuad)){
+    } else if((topQuad && leftQuad) || (topQuad && botLeftQuad) || (leftQuad && topRightQuad)){
+      // darkend topLeft corner
       this.pushIfHigherPrecedence(index, { x: x, y: y, type: "FogOfWar_Top_Left", precedence: 2});
     }
   }
@@ -807,8 +797,7 @@ export default class LevelModel {
   findBlocksAffectedByEmissives(emissives) {
     var blocksTouchedByEmissives = {};
     //find emissives that are close enough to light us.
-    for(var torch in emissives)
-    {
+    for(var torch in emissives) {
       var currentTorch = emissives[torch];
       let y = currentTorch[1];
       let x = currentTorch[0];

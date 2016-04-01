@@ -259,8 +259,7 @@ var drawMap = function() {
         left = WALL_TILE_SHAPES[tile][0];
         top = WALL_TILE_SHAPES[tile][1];
         image = skin.tiles;
-      }
-      else {
+      } else {
         // Compute the tile index.
         tile = goalNormalize(x, y) +
             goalNormalize(x, y - 1) +  // North.
@@ -445,10 +444,8 @@ Bounce.isBallOutOfBounds = function(i) {
  * @param func Function : The function to execute
  * @param data Object or Array : The data to pass to the function. If the function is also passed arguments, the data is appended to the arguments list. If the data is an Array, each item is appended as a new argument.
  */
-var delegate = function(scope, func, data)
-{
-  return function()
-  {
+var delegate = function(scope, func, data) {
+  return function() {
     var args = Array.prototype.slice.apply(arguments).concat(data);
     func.apply(scope, args);
   };
@@ -1319,8 +1316,7 @@ Bounce.setBackground = function (value) {
       // Draw the tile.
       if (WALL_TILE_SHAPES[tile]) {
         image = skinTheme(value).tiles;
-      }
-      else {
+      } else {
         // Compute the tile index.
         tile = goalNormalize(x, y) +
             goalNormalize(x, y - 1) +  // North.
