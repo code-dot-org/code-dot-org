@@ -34,9 +34,9 @@ namespace :package do
           RakeUtils.ln_s target, dashboard_dir('public', PACKAGES[package][:symlink_name])
         end
       end
-      desc "Update #{package} package and create Dashboard symlink."
-      task package: %w(update symlink)
     end
+    desc "Update #{package} package and create Dashboard symlink."
+    task(package => %w(update symlink))
   end
 end
 desc "Update all packages (#{PACKAGES.keys.join(', ')})."
