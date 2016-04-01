@@ -18,6 +18,7 @@ var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
+var gameLabGroup = require('./GameLabGroup');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var gamelabCommands = require('./commands');
 var errorHandler = require('../errorHandler');
@@ -480,6 +481,7 @@ GameLab.prototype.initInterpreter = function () {
   }
 
   gameLabSprite.injectJSInterpreter(this.JSInterpreter);
+  gameLabGroup.injectJSInterpreter(this.JSInterpreter);
 
   this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
     var func = this.JSInterpreter.findGlobalFunction(eventName);
