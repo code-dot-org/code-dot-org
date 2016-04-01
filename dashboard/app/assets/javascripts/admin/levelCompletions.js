@@ -7,7 +7,6 @@
  * @param {boolean} isSampled - whether Google Analytics sampled.
  * @param {boolean} startDatePresent - whether a start_date parameter was given.
  */
-//
 function hideAndShowDomElements(isSampled, startDatePresent) {
   if (isSampled) {
     $('#samplingMessage').show();
