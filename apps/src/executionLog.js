@@ -1,4 +1,5 @@
 var TestResults = require('./constants').TestResults;
+var utils = require('./utils');
 
 /**
  * Get a testResult and message value based on an examination of the
@@ -30,9 +31,7 @@ module.exports.getResultsFromLog = function (logConditions, executionLog) {
      */
 
     condition.minTimes = condition.minTimes || 0;
-    if (typeof condition.maxTimes === 'undefined') {
-      condition.maxTimes = Infinity;
-    }
+    condition.maxTimes = utils.valueOr(condition.maxTimes, Infinity);
 
     switch (condition.matchType) {
       case 'exact':
