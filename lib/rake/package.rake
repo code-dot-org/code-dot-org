@@ -19,7 +19,7 @@ namespace :package do
       task 'update' do
         require 'cdo/aws/s3_packaging'
 
-        package_dash = package.gsub('_', '-')
+        package_dash = package.to_s.gsub('_', '-')
         # never download if we build our own
         next if CDO["use_my_#{package}"]
 
@@ -36,8 +36,8 @@ namespace :package do
       end
     end
     desc "Update #{package} package and create Dashboard symlink."
-    task(package => %w(update symlink))
+    task(package => %w(update symlink).map{|x|"package:#{package}:#{x}"})
   end
 end
 desc "Update all packages (#{PACKAGES.keys.join(', ')})."
-task package: PACKAGES.keys
+task package: PACKAGES.keys.map{|x|"package:#{x}"}
