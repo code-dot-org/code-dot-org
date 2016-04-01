@@ -1327,11 +1327,12 @@ Applab.execute = function() {
   }
 
   if (Applab.makerlabController) {
-    Applab.makerlabController.ensureBoard(
+    Applab.makerlabController.ensureBoardConnected(
         function (e) {
           console.log("Error connecting to board.", e);
         },
         function () {
+          Applab.makerlabController.installComponentsOnInterpreter(codegen, Applab.JSInterpreter);
           Applab.beginVisualizationRun();
         });
   } else {

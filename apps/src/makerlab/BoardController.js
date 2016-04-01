@@ -14,29 +14,47 @@ var BoardController = module.exports = function () {
   this.prewiredComponents = null;
 };
 
-BoardController.prototype.ensureBoard = function (onError, onComplete) {
+/**
+ * Connects to board if not already connected.
+ * @param {Function} onError - called with string error message if failure
+ * @param {Function} onComplete - called on success
+ */
+BoardController.prototype.ensureBoardConnected = function (onError, onComplete) {
   ChromeSerialPort.isInstalled(function (error) {
     if (error) {
       onError(error);
       return;
     }
 
-    // Temporary test: blink LED on successful initialization.
-    var blinkAndComplete = function () {
-      this.prewiredComponents.led.blink();
-      onComplete();
-    }.bind(this);
-
     if (this.board_) {
-      blinkAndComplete();
+      onComplete();
       return;
     }
 
     connect(onError, function (board) {
-      this.prewiredComponents = initializeCircuitPlaygroundComponents();
       this.board_ = board;
-      blinkAndComplete();
+      onComplete();
     }.bind(this));
+  }.bind(this));
+};
+
+BoardController.prototype.installComponentsOnInterpreter = function (codegen, jsInterpreter) {
+  this.prewiredComponents = this.prewiredComponents ||
+      initializeCircuitPlaygroundComponents();
+
+  codegen.customMarshalObjectList = [
+    {instance: five.Led},
+    {instance: five.Led.RGB},
+    {instance: five.Button},
+    {instance: five.Switch},
+    {instance: five.Piezo},
+    {instance: five.Thermometer},
+    {instance: five.Sensor},
+    {instance: five.Gyro}
+  ];
+
+  Object.keys(this.prewiredComponents).forEach(function (key) {
+    jsInterpreter.createGlobalProperty(key, this.prewiredComponents[key]);
   }.bind(this));
 };
 
