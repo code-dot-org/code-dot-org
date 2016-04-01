@@ -23,7 +23,7 @@ end
 # Returns whether the abbreviation is a state (including Washington DC)
 # abbreviation.
 def us_state_with_dc_abbr?(abbr)
-  return !get_state_name_with_dc_from_abbr(abbr).nil?
+  return !get_us_state_with_dc_from_abbr(abbr).nil?
 end
 
 STATE_ABBR_HASH = {
