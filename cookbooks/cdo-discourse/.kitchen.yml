@@ -1,7 +1,11 @@
 ---
-# Uses the ec2 driver by default through symlink in .kitchen.local.yml
 transport:
   name: sftp
+driver:
+  name: docker
+  use_sudo: false
+  volume:
+    - /var/run/docker.sock:/var/run/docker.sock # Reuse host docker service within docker container
 provisioner:
   name: chef_zero
   require_chef_omnibus: 12.7.2
