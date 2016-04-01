@@ -7,8 +7,7 @@
  * @param {boolean} isSampled - whether Google Analytics sampled.
  * @param {boolean} startDatePresent - whether a start_date parameter was given.
  */
-module.exports.hideAndShowDomElements = function hideAndShowDomElements(
-    isSampled, startDatePresent) {
+exports.hideAndShowDomElements = function(isSampled, startDatePresent) {
   if (isSampled) {
     $('#samplingMessage').show();
   }
@@ -96,7 +95,7 @@ function timeOnSiteRenderer(
 /**
  * Populates the completionTable DOM element.
  */
-module.exports.populateTable = function populateTable(headers, data) {
+exports.populateTable = function(headers, data) {
   $("#completionTable").handsontable({
     data: data,
     startRows: 10,
