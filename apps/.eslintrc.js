@@ -43,6 +43,7 @@ module.exports = {
     "no-eval": "error",
     "no-extra-boolean-cast": "off",
     "no-implicit-globals": "error",
+    "no-new-object": "error",
     "no-undef": "error",
     "no-unused-vars": "off",
     "no-with": "error",
