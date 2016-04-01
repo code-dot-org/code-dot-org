@@ -35,14 +35,15 @@ module.exports = {
   },
   "rules": {
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "comma-dangle": "off",
     "curly": "error",
+    "no-console": "off",
+    "no-empty": "off",
+    "no-eval": "error",
+    "no-extra-boolean-cast": "off",
+    "no-implicit-globals": "error",
     "no-undef": "error",
     "no-unused-vars": "off",
-    "comma-dangle": "off",
-    "no-empty": "off",
-    "no-implicit-globals": "error",
-    "semi": "error",
-    "no-console": "off",
-    "no-extra-boolean-cast": "off"
+    "semi": "error"
   }
 };
