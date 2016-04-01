@@ -1,11 +1,4 @@
 module.exports = {
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true,
-      "modules": true
-    },
-  },
   "globals": {
     "Blockly": true,
     "Phaser": true,
