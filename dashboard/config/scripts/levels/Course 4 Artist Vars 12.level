@@ -23,7 +23,7 @@
     "callout_json": "[\r\n  {\"localization_key\":\"set_length\",\"callout_text\":\"Use this block to set \\\"length\\\" to the correct value.\",\"element_id\":\"[block-id='14']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "ideal": "21",
     "disable_sharing": "false",
-    "markdown_instructions": "Let's set the `sides` variable to 5. The more sides we add to this algorithm, the bigger this whole pattern gets! \r\n\r\n<br/>\r\nNotice that there is another variable called `length`. We can now use that wherever we have a `move forward` block. Set the `length` variable to 75 for this shape.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Let's set the `sides` variable to 5. The more sides we add to this algorithm, the bigger this whole pattern gets! \r\n\r\n<br/>\r\nNotice that there is another variable called `length`. \r\nWe can now use that variable wherever we have a `move forward` block. \r\n\r\nSet the `length` variable to 75 for this shape.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -34,14 +34,15 @@
     "examples_required": "false",
     "never_autoplay_video": "false"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="variables_set" inline="false" deletable="false">
               <title name="VAR">sides</title>
               <next>
                 <block type="variables_set" inline="false">
@@ -178,15 +179,8 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
-        <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-            <block type="variables_get">
-              <title name="VAR">???</title>
-            </block>
-          </value>
-        </block>
         <block type="pick_one">
           <statement name="PICK">
             <block type="draw_turn" inline="true">
@@ -229,8 +223,15 @@
             </block>
           </statement>
         </block>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="variables_get">
+              <title name="VAR">???</title>
+            </block>
+          </value>
+        </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
