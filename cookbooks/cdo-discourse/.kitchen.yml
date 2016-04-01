@@ -13,6 +13,9 @@ platforms:
   - name: ubuntu-14.04
     run_list:
       - recipe[apt]
+    attributes:
+      cdo-discourse:
+        port: 8080
 suites:
   - name: default
     run_list:

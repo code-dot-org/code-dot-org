@@ -13,6 +13,13 @@ def cmd(exec, match)
   end
 end
 
+# Run a command within the docker container.
+# necessary because the docker host may be located outside of the test-kitchen container.
+def docker_cmd(exec, match)
+  exec = "sudo /bin/bash -c 'docker exec $(docker ps -q --filter \\'name=app\\') #{exec}'"
+  cmd(exec, match)
+end
+
 file_exist '/var/discourse/launcher'
-cmd 'curl localhost -H "Host: forum.code.org"', 'Discourse'
-cmd 'curl localhost -H "Host: discourse.code.org"', 'Discourse'
+docker_cmd 'curl localhost -H "Host: forum.code.org"', 'Discourse'
+docker_cmd 'curl localhost -H "Host: discourse.code.org"', 'Discourse'

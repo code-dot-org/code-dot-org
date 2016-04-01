@@ -1,3 +1,4 @@
 default['cdo-discourse'] = {
-  akismet_api_key: nil
+  akismet_api_key: nil,
+  port: 80
 }
