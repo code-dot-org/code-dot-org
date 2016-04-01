@@ -59,7 +59,7 @@ CSV.foreach(REGION_LIST_FILE, headers: true) do |row|
   next if SKIP_REGIONS.include? region_name
 
   state_abbrev = row['State']
-  state = get_state_name_from_abbr state_abbrev
+  state = get_us_state_from_abbr state_abbrev
   city = row['City']
 
   puts "Querying teachers in #{region_name}: #{city}, #{state}"
