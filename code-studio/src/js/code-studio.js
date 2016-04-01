@@ -20,6 +20,7 @@ require('./videos');
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
+window.Radium = require('radium');
 
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.

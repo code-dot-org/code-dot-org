@@ -11,6 +11,7 @@
     ]
   },
   "browserify-shim": {
-    "marked": "global:marked"
+    "marked": "global:marked",
+    "radium": "global:Radium"
   }
 }
