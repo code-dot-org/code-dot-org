@@ -60,8 +60,9 @@ module.exports.blocks = [
   {func: 'background', category: 'Game Lab', paletteParams: ['color'], params: ["'white'"], customDocURL: "http://p5js.org/reference/#/p5/background" },
   {func: 'allSprites', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#prop-allSprites" },
   {func: 'Game.allSprites', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'width', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/width" },
-  {func: 'height', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/height" },
+  /* disabled since we aren't suggesting these global properties be used - commenting these out prevents droplet from turning 'width' and 'height' into blocks when referenced as locals or parameters */
+  //  {func: 'width', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/width" },
+  //  {func: 'height', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/height" },
   {func: 'Game.width', category: 'Game Lab', type: 'readonlyproperty' },
   {func: 'Game.height', category: 'Game Lab', type: 'readonlyproperty' },
   {func: 'camera', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html" },
@@ -82,7 +83,7 @@ module.exports.blocks = [
   // Sprites
   {func: 'createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-createSprite" },
   {func: 'var sprite = createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], noAutocomplete: true, docFunc: 'createSprite', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-createSprite" },
-  {func: 'setSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setSpeed', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-setSpeed" },
+  {func: 'setSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "PI / 2"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setSpeed', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-setSpeed" },
   {func: 'getAnimationLabel', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getAnimationLabel', type: 'value', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-getAnimationLabel" },
   {func: 'getDirection', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getDirection', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-getDirection" },
   {func: 'getFrame', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getFrame', type: 'value' },
@@ -91,7 +92,7 @@ module.exports.blocks = [
   {func: 'remove', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.remove', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-remove" },
   {func: 'addAnimation', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label','animation'], params: ['"anim1"', "anim"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addAnimation', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-addAnimation" },
   {func: 'addImage', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label','image'], params: ['"img1"', "img"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addImage', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-addImage" },
-  {func: 'addSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addSpeed', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-addSpeed" },
+  {func: 'addSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "PI / 2"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addSpeed', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-addSpeed" },
   {func: 'addToGroup', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['group'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.addToGroup', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-addToGroup" },
   {func: 'bounce', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.bounce', type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-bounce" },
   {func: 'collide', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.collide', type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-collide" },
@@ -151,7 +152,6 @@ module.exports.blocks = [
 /* TODO: decide whether to expose these Sprite properties:
 camera
 collider - USEFUL? (marshal AABB and CircleCollider)
-debug
 groups
 mouseActive
 mouseIsOver
@@ -163,8 +163,6 @@ originalWidth
 /* TODO: decide whether to expose these Sprite methods:
 addImage(labelimg) - 1 param version: (sets label to "normal" automatically)
 draw() - OVERRIDE and/or USEFUL?
-mirrorX(dir) - USEFUL?
-mirrorY(dir) - USEFUL?
 overlapPixel(pointXpointY) - USEFUL?
 overlapPoint(pointXpointY) - USEFUL?
 update() - USEFUL?
@@ -199,8 +197,10 @@ getWidth()
 */
 
   // Groups
-  {func: 'Group', category: 'Groups', type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html" },
-  {func: 'var group = new Group', category: 'Groups', type: 'either', docFunc: 'Group', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html" },
+  {func: 'createGroup', category: 'Groups', type: 'either' },
+  {func: 'var group = createGroup', category: 'Groups', noAutocomplete: true, docFunc: 'createGroup' },
+  {func: 'Group', category: 'Groups', type: 'either', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html" },
+  {func: 'var group = new Group', category: 'Groups', type: 'either', docFunc: 'Group', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html" },
   {func: 'add', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], tipPrefix: groupMethodPrefix, modeOptionName: '*.add', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-add" },
   {func: 'group.remove', category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], modeOptionName: 'group_remove', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-remove" }, /* avoid sprite.remove conflict */
   {func: 'clear', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.clear', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-clear" },
@@ -212,9 +212,32 @@ getWidth()
   {func: 'group.overlap', category: 'Groups', paletteParams: ['target'], params: ["sprite"], modeOptionName: 'group_overlap', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-overlap" }, /* avoid sprite.overlap conflict */
   {func: 'maxDepth', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.maxDepth', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-maxDepth" },
   {func: 'minDepth', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.minDepth', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-minDepth" },
-
+  {func: 'setColorEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['color'], params: ['"blue"'], tipPrefix: groupMethodPrefix, modeOptionName: '*.setColorEach' },
+  {func: 'setColorRGBEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['r', 'g', 'b'], params: ["0", "127", "255"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setColorRGBEach' },
+  {func: 'setColliderEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['type','x','y','w','h'], params: ['"rectangle"', "0", "0", "20", "20"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setColliderEach' },
+  {func: 'setDepthEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['depth'], params: ["1"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setDepthEach' },
+  {func: 'setHeightEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['height'], params: ["50"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setHeightEach' },
+  {func: 'setLifetimeEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['lifetime'], params: ["5"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setLifetimeEach' },
+  {func: 'setMirrorXEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['dir'], params: ["-1"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setMirrorXEach' },
+  {func: 'setMirrorYEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['dir'], params: ["-1"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setMirrorYEach' },
+  {func: 'setRotateToDirectionEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['bool'], params: ["true"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setRotateToDirectionEach' },
+  {func: 'setRotationEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['angle'], params: ["PI / 2"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setRotationEach' },
+  {func: 'setRotationSpeedEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['speed'], params: ["5"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setRotationSpeedEach' },
+  {func: 'setScaleEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['scale'], params: ["5"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setScaleEach' },
+  {func: 'setSpeedEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['speed','angle'], params: ["1", "PI / 2"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setSpeedEach' },
+  {func: 'setVelocityEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['x','y'], params: ["1", "1"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setVelocityEach' },
+  {func: 'setVelocityXEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['velocityX'], params: ["3"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setVelocityXEach' },
+  {func: 'setVelocityYEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['velocityY'], params: ["3"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setVelocityYEach' },
+  {func: 'setVisibleEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['bool'], params: ["false"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setVisibleEach' },
+  {func: 'setWidthEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['width'], params: ["50"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setWidthEach' },
 /* TODO: decide whether to expose these Group methods:
 draw() - USEFUL?
+Other possible functions:
+setAnimationEach(label)
+moveXEach(distance)
+moveYEach(distance)
+destroyEach()
+pointToEach(x, y)
 */
 
   // Input
