@@ -1,3 +1,5 @@
+// This config only defines globals available especially
+// in apps.  See the root .eslintrc.js for linting rules.
 module.exports = {
   "globals": {
     "Blockly": true,
@@ -11,10 +13,5 @@ module.exports = {
     "Applab": true,
     "Calc": true,
     "Jigsaw": true
-  },
-  "rules": {
-    // 0 means disabled, 1 means warn, 2 means error
-    "no-extra-boolean-cast": 0,
-    "no-regex-spaces": 0
   }
 };
