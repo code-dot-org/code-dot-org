@@ -16,6 +16,7 @@ FactoryGirl.define do
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 03, 14)
+      admin false
       factory :facilitator do
         name 'Facilitator Person'
         after(:create) do |facilitator|
@@ -32,6 +33,7 @@ FactoryGirl.define do
 
     factory :student do
       user_type User::TYPE_STUDENT
+      admin false
     end
 
     factory :young_student do
