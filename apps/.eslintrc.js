@@ -34,14 +34,14 @@ module.exports = {
     "mocha": true
   },
   "rules": {
-    // 0 means disabled, 1 means warn, 2 means error
-    "curly": 2,
-    "no-undef": 2,
-    "no-unused-vars": 0,
-    "comma-dangle": 0,
-    "no-empty": 0,
-    "semi": 2,
-    "no-console": 0,
-    "no-extra-boolean-cast": 0
+    "curly": "error",
+    "no-undef": "error",
+    "no-unused-vars": "off",
+    "comma-dangle": "off",
+    "no-empty": "off",
+    "no-implicit-globals": "error",
+    "semi": "error",
+    "no-console": "off",
+    "no-extra-boolean-cast": "off"
   }
 };
