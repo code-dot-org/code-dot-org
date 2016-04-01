@@ -16,7 +16,7 @@ end
 # Run a command within the docker container.
 # necessary because the docker host may be located outside of the test-kitchen container.
 def docker_cmd(exec, match)
-  exec = "sudo /bin/bash -c 'docker exec $(docker ps -q --filter \\'name=app\\') #{exec}'"
+  exec = "sudo /bin/bash -c 'docker exec $(docker ps -q --filter \'name=app\') #{exec}'"
   cmd(exec, match)
 end
 
