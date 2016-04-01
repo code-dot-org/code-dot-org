@@ -42,6 +42,7 @@ Basement level classroom<br/>
 318 Blackwell Street<br/>
 Durham, NC 27701](https://www.google.com/maps/place/318+Blackwell+St,+Durham,+NC+27701/@35.993246,-78.9066525,17z/data=!3m1!4b1!4m2!3m1!1s0x89ace46cc0e5f9dd:0x3df231f8fbd83002)
 
+Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop!
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -70,7 +71,10 @@ Breakfast and lunch will be served.
 
 **Location**
 
-More Details Coming Soon!
+[American Underground<br/>
+318 Blackwell Street<br/>
+Durham, NC 27701](https://goo.gl/maps/CC8S4XVKGYo)
+
 
 **What do I bring to Phase 4 PD?**
 
