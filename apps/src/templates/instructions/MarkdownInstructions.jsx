@@ -17,31 +17,28 @@ var styles = {
   }
 };
 
-var MarkdownInstructions = React.createClass({
-
-  propTypes: {
-    renderedMarkdown: React.PropTypes.string.isRequired,
-    markdownClassicMargins: React.PropTypes.bool,
-    inTopPane: React.PropTypes.bool
-  },
-
-  render: function () {
-    var style = styles.standard;
-    if (this.props.inTopPane) {
-      style = styles.inTopPane;
-    } else if (this.props.mardownClassicMargins) {
-      style = styles.classic;
-    }
-
-    return (
-      <div>
-        <div
-          className='instructions-markdown'
-          style={style}
-          dangerouslySetInnerHTML={{ __html: this.props.renderedMarkdown }}/>
-      </div>
-    );
+var MarkdownInstructions = function (props) {
+  var style = styles.standard;
+  if (props.inTopPane) {
+    style = styles.inTopPane;
+  } else if (props.markdownClassicMargins) {
+    style = styles.classic;
   }
-});
+
+  return (
+    <div>
+      <div
+        className='instructions-markdown'
+        style={style}
+        dangerouslySetInnerHTML={{ __html: props.renderedMarkdown }}/>
+    </div>
+  );
+};
+
+MarkdownInstructions.propTypes = {
+  renderedMarkdown: React.PropTypes.string.isRequired,
+  markdownClassicMargins: React.PropTypes.bool,
+  inTopPane: React.PropTypes.bool
+};
 
 module.exports = MarkdownInstructions;

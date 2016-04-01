@@ -1,4 +1,4 @@
-var procesMarkdown = require('marked');
+var processMarkdown = require('marked');
 var parseXmlElement = require('./xml').parseElement;
 var msg = require('./locale');
 
@@ -237,7 +237,7 @@ authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
     var xmlBlock = parseXmlElement(block.blockDisplayXML);
     var blockType = xmlBlock.firstChild.getAttribute("type");
     return {
-      content: procesMarkdown(msg.recommendedBlockContextualHintTitle()),
+      content: processMarkdown(msg.recommendedBlockContextualHintTitle()),
       block: xmlBlock,
       hintId: "recommended_block_" + blockType,
       hintClass: 'recommended',
@@ -262,7 +262,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
   }
   return hints.map(function (hint) {
     return {
-      content: procesMarkdown(hint.hint_markdown),
+      content: processMarkdown(hint.hint_markdown),
       hintId: hint.hint_id,
       hintClass: hint.hint_class,
       hintType: hint.hint_type,

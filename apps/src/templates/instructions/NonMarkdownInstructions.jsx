@@ -5,29 +5,26 @@ var styles = {
   }
 };
 
-var NonMarkdownInstructions = React.createClass({
-
-  propTypes: {
-    puzzleTitle: React.PropTypes.string,
-    instructions: React.PropTypes.string,
-    instructions2: React.PropTypes.string
-  },
-
-  render: function () {
-    return (
-      <div>
-        <div style={styles.main}>
-          <p className='dialog-title'>{ this.props.puzzleTitle }</p>
-          {this.props.instructions &&
-            <p className='instructions' dangerouslySetInnerHTML={{ __html: this.props.instructions }}/>
-          }
-          {this.props.instructions2 &&
-            <p className='instructions2' dangerouslySetInnerHTML={{ __html: this.props.instructions2 }}/>
-          }
-        </div>
+var NonMarkdownInstructions = function (props) {
+  return (
+    <div>
+      <div style={styles.main}>
+        <p className='dialog-title'>{props.puzzleTitle}</p>
+        {props.instructions &&
+          <p className='instructions' dangerouslySetInnerHTML={{ __html: props.instructions }}/>
+        }
+        {props.instructions2 &&
+          <p className='instructions2' dangerouslySetInnerHTML={{ __html: props.instructions2 }}/>
+        }
       </div>
-    );
-  }
-});
+    </div>
+  );
+};
+
+NonMarkdownInstructions.propTypes = {
+  puzzleTitle: React.PropTypes.string,
+  instructions: React.PropTypes.string,
+  instructions2: React.PropTypes.string
+};
 
 module.exports = NonMarkdownInstructions;
