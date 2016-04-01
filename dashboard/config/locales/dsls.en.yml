@@ -3205,32 +3205,21 @@ en:
       PS U3 Q1-1:
         Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
-        Question: Question
         Statements about programming languages: Statements about programming languages
         The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
         There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
-        description here: description here
-        right answer: right answer
-        wrong answer: wrong answer
       PS U3 Q1-2:
-        <img src="https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png" />: <img src="https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png" />
-        <img src="https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png" height="200px">: <img src="https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png" height="200px">
-        <img src="https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png">: <img src="https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png">
         Robots in a grid of square Part 1: Robots in a grid of square Part 1
         https://images.code.org/3e341ed57ac366663807df24b2a7e329-image-1459376286013.png: https://images.code.org/3e341ed57ac366663807df24b2a7e329-image-1459376286013.png
         https://images.code.org/841ec4583e3d9f0b41d1b51b496ef94b-image-1459376320683.png: https://images.code.org/841ec4583e3d9f0b41d1b51b496ef94b-image-1459376320683.png
         https://images.code.org/c59d71ecac547d755d63a3f8fca56843-image-1459376262204.png: https://images.code.org/c59d71ecac547d755d63a3f8fca56843-image-1459376262204.png
         https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png: https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png
         https://images.code.org/d658fb7f959603138c39ed5f7666fd63-image-1459376301845.png: https://images.code.org/d658fb7f959603138c39ed5f7666fd63-image-1459376301845.png
-        right answer: right answer
-        wrong: wrong
       PS U3 Q1-3:
         Line 3 and Line 4: Line 3 and Line 4
         Line 5, 6, 7, 8 and 9: Line 5, 6, 7, 8 and 9
         Line 8 and Line 9: Line 8 and Line 9
         Line 9: Line 9
-        right answer: right answer
-        wrong answer: wrong answer
       PS U3 Q1-4:
         Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
         Functions cannot make calls to other functions within the same program.: Functions cannot make calls to other functions within the same program.
@@ -3256,15 +3245,10 @@ en:
         drawStar();: drawStar();
         drawStar;: drawStar;
         function drawStar(): function drawStar()
-        'function drawStar() { <br> for ': 'function drawStar() { <br> for '
-        ? "function drawStar(){\n    \t   for(var i = 0; i < 5; i++){\n\t     moveForward(100);\n\t     turnLeft(36);\n    \t   }\n  \t} "
-        : "function drawStar(){\n    \t   for(var i = 0; i < 5; i++){\n\t     moveForward(100);\n\t     turnLeft(36);\n    \t   }\n  \t} "
-        'function drawStar(){ <br> for(var i = 0; i < 5; i++){ <br> moveForward(100); <br> turnLeft(36);<br>}<br>} ': 'function drawStar(){ <br> for(var i = 0; i < 5; i++){ <br> moveForward(100); <br> turnLeft(36);<br>}<br>} '
         ? 'function drawStar(){ <br>&nbsp;&nbsp;&nbsp;&nbsp; for(var i = 0; i &lt 5; i++){ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moveForward(100); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnLeft(36);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>} '
         : 'function drawStar(){ <br>&nbsp;&nbsp;&nbsp;&nbsp; for(var i = 0; i &lt 5; i++){ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moveForward(100); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnLeft(36);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>} '
         function drawStar;: function drawStar;
       PS U3 Q1-9:
-        Hello: Hello
         Parameters allow for more flexible, generalized behaviors in functions.: Parameters allow for more flexible, generalized behaviors in functions.
         Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve
         Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
