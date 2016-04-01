@@ -23,9 +23,9 @@ var BoardController = module.exports = function () {
 BoardController.prototype.connectAndInitialize = function (codegen, interpreter) {
   return this.ensureBoardConnected()
       .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter))
-      .catch(function (reason) {
+      .catch(function (error) {
         console.log("Board initialization failed:");
-        console.log(reason);
+        console.log(error);
       });
 };
 
