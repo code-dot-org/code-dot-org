@@ -29,8 +29,13 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "honey_goal": "5"
-  }
+    "honey_goal": "5",
+    "never_autoplay_video": "false",
+    "step_speed": "1",
+    "fast_get_nectar_animation": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -54,19 +59,50 @@
     </required_blocks>
     <recommended_blocks>
       <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
-        <block type="maze_nectar"/>
-        <block type="maze_honey"/>
         <block type="controls_repeat">
           <title name="TIMES">5</title>
         </block>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_nectar">
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
+                              <next>
+                                <block type="maze_moveForward"/>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_honey"/>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

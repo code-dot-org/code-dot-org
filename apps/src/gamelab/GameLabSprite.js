@@ -25,13 +25,20 @@ module.exports.injectJSInterpreter = function (jsi) {
  */
 module.exports.AABBops = function(p5Inst, type, target, callback) {
 
+  // These 3 are utility p5 functions that don't depend on p5 instance state in
+  // order to work properly, so we'll go ahead and make them easy to
+  // access without needing to bind them to a p5 instance.
   var abs = p5.prototype.abs;
   var round = p5.prototype.round;
   var quadTree = p5Inst.quadTree;
-  var createVector = p5Inst.createVector;
-  var AABB = p5Inst.AABB;
+
+  var createVector = p5Inst.createVector.bind(p5Inst);
+  var AABB = p5Inst.AABB.bind(p5Inst);
+
+  // These 2 are not bound as they are used for instanceof checks:
   var Sprite = p5Inst.Sprite;
   var CircleCollider = p5Inst.CircleCollider;
+
   var state = jsInterpreter.getCurrentState();
   if (state.__subState) {
     // If we're being called by another stateful function that hung a __subState
@@ -300,3 +307,157 @@ module.exports.AABBops = function(p5Inst, type, target, callback) {
 
   return result;
 };
+
+/**
+ * Returns whether or not this sprite will bounce or collide with another sprite
+ * or group. Modifies the sprite's touching property object.
+ * @method
+ */
+
+module.exports.isTouching = function(p5Inst, target) {
+
+  /*
+   * This code is a subset of the original AABBops method. It needs to be kept in
+   * sync with p5play's method, much like our stateful async version of AABBops
+   * above.
+   */
+
+  // These 3 are utility p5 functions that don't depend on p5 instance state in
+  // order to work properly, so we'll go ahead and make them easy to
+  // access without needing to bind them to a p5 instance.
+  var abs = p5.prototype.abs;
+  var round = p5.prototype.round;
+  var quadTree = p5Inst.quadTree;
+
+  var createVector = p5Inst.createVector.bind(p5Inst);
+  var AABB = p5Inst.AABB.bind(p5Inst);
+
+  // These 2 are not bound as they are used for instanceof checks:
+  var Sprite = p5Inst.Sprite;
+  var CircleCollider = p5Inst.CircleCollider;
+
+  this.touching.left = false;
+  this.touching.right = false;
+  this.touching.top = false;
+  this.touching.bottom = false;
+
+  var result = false;
+
+  //if single sprite turn into array anyway
+  var others = [];
+
+  if(target instanceof Sprite)
+    others.push(target);
+  else if(target instanceof Array)
+  {
+    if(quadTree != undefined && quadTree.active)
+      others = quadTree.retrieveFromGroup( this, target);
+
+    if(others.length == 0)
+      others = target;
+
+  }
+  else
+    throw("Error: isTouching can only be checked between sprites or groups");
+
+    for(var i=0; i<others.length; i++)
+      if(this != others[i] && !this.removed) //you can check collisions within the same group but not on itself
+      {
+        var other = others[i];
+
+        if(this.collider == undefined)
+          this.setDefaultCollider();
+
+        if(other.collider == undefined)
+          other.setDefaultCollider();
+
+        if(this.collider != undefined && other.collider != undefined)
+        {
+          var displacement = createVector(0,0);
+
+          //if the sum of the speed is more than the collider i may
+          //have a tunnelling problem
+          var tunnelX = abs(this.velocity.x-other.velocity.x) >= other.collider.extents.x/2 && round(this.deltaX - this.velocity.x) == 0;
+
+          var tunnelY = abs(this.velocity.y-other.velocity.y) >=  other.collider.size().y/2  && round(this.deltaY - this.velocity.y) == 0;
+
+
+          if(tunnelX || tunnelY)
+          {
+            //instead of using the colliders I use the bounding box
+            //around the previous position and current position
+            //this is regardless of the collider type
+
+            //the center is the average of the coll centers
+            var c = createVector(
+                                 (this.position.x+this.previousPosition.x)/2,
+                                 (this.position.y+this.previousPosition.y)/2);
+
+            //the extents are the distance between the coll centers
+            //plus the extents of both
+            var e = createVector(
+                                 abs(this.position.x -this.previousPosition.x) + this.collider.extents.x,
+                                 abs(this.position.y -this.previousPosition.y) + this.collider.extents.y);
+
+            var bbox = new AABB(pInst, c, e, this.collider.offset);
+
+            //bbox.draw();
+
+            if(bbox.overlap(other.collider))
+            {
+              if(tunnelX) {
+
+                //entering from the right
+                if(this.velocity.x < 0)
+                  displacement.x = other.collider.right() - this.collider.left() + 1;
+                else if(this.velocity.x > 0 )
+                  displacement.x = other.collider.left() - this.collider.right() -1;
+              }
+
+              if(tunnelY) {
+                //from top
+                if(this.velocity.y > 0)
+                  displacement.y = other.collider.top() - this.collider.bottom() - 1;
+                else if(this.velocity.y < 0 )
+                  displacement.y = other.collider.bottom() - this.collider.top() + 1;
+
+              }
+
+            }//end overlap
+
+          }
+          else //non tunnel overlap
+          {
+
+            //if the other is a circle I calculate the displacement from here
+            //and reverse it
+            if(this.collider instanceof CircleCollider)
+            {
+              displacement = other.collider.collide(this.collider).mult(-1);
+            }
+            else
+              displacement = this.collider.collide(other.collider);
+
+          }
+
+          if(displacement.x !== 0 || displacement.y !== 0)
+          {
+
+            if(displacement.x > 0)
+              this.touching.left = true;
+            if(displacement.x < 0)
+              this.touching.right = true;
+            if(displacement.y < 0)
+              this.touching.bottom = true;
+            if(displacement.y > 0)
+              this.touching.top = true;
+
+            result = true;
+          }
+
+        }//end collider exists
+      }//end this != others[i] && !this.removed
+
+  return result;
+};
+

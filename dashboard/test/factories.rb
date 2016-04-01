@@ -123,6 +123,11 @@ FactoryGirl.define do
     game {Game.applab}
   end
 
+  factory :makerlab, :parent => Level, :class => Applab do
+    game {Game.applab}
+    properties{{makerlab_enabled: true}}
+  end
+
   factory :multi, :parent => Level, :class => Applab do
     game {create(:game, app: "multi")}
     properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
@@ -297,7 +302,7 @@ FactoryGirl.define do
   factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
     plc_user_course_enrollment nil
     plc_course_unit nil
-    status "MyString"
+    status Plc::EnrollmentUnitAssignment::START_BLOCKED
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do
