@@ -11,10 +11,6 @@ module.exports = {
     },
   },
   "globals": {
-    "$": true,
-    "jQuery": true,
-    "React": true,
-    "ReactDOM": true,
     "Blockly": true,
     "Phaser": true,
     "Studio": true,
