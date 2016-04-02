@@ -32,6 +32,7 @@ module.exports = {
     "no-implicit-globals": "error",
     "no-undef": "error",
     "no-unused-vars": "off",
+    "no-with": "error",
     "semi": "error"
   }
 };
