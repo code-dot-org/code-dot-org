@@ -138,9 +138,8 @@ window.apps = {
       for (var i in node) {
         if (/^fn_/.test(i)) {
           try {
-            /* jshint ignore:start */
+            // eslint-disable-next-line no-eval
             node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
-            /* jshint ignore:end */
           } catch (e) {
           }
         } else {
