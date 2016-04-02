@@ -5,12 +5,12 @@ var _ = utils.getLodash();
 var studioApp = require('../StudioApp').singleton;
 
 var TILE_SHAPES = {
-  'log':             [0, 0],
-  'lily1':           [1, 0],
-  'land1':           [2, 0],
-  'island_start':    [0, 1],
+  'log': [0, 0],
+  'lily1': [1, 0],
+  'land1': [2, 0],
+  'island_start': [0, 1],
   'island_topRight': [1, 1],
-  'island_botLeft':  [0, 2],
+  'island_botLeft': [0, 2],
   'island_botRight': [1, 2],
   'water': [4, 0],
 
@@ -25,13 +25,13 @@ var TILE_SHAPES = {
 };
 
 // Returns true if the tile at x,y is either a water tile or out of bounds
-function isWaterOrOutOfBounds (col, row) {
+function isWaterOrOutOfBounds(col, row) {
   return Maze.map.getTile(row, col) === SquareType.WALL ||
       Maze.map.getTile(row, col) === undefined;
 }
 
 // Returns true if the tile at x,y is a water tile that is in bounds.
-function isWater (col, row) {
+function isWater(col, row) {
   return Maze.map.getTile(row, col) === SquareType.WALL;
 }
 
@@ -107,7 +107,7 @@ module.exports.scheduleDance = function (victoryDance, timeAlloted, skin) {
   var timePerFrame = timeAlloted / numFrames;
   var start = {x: Maze.pegmanX, y: Maze.pegmanY};
 
-  Maze.scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
+  Maze.scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0},
     numFrames, timePerFrame, 'celebrate', Direction.NORTH, true);
 
   studioApp.playAudio('win');

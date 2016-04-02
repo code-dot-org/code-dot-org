@@ -46,7 +46,7 @@ exports.randomNumber = function (min, max) {
   return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
 };
 
-exports.getTime = function() {
+exports.getTime = function () {
   return (new Date()).getTime();
 };
 
@@ -67,21 +67,21 @@ exports.promptNum = function (text) {
  * @type {DropletBlock[]}
  */
 exports.dropletGlobalConfigBlocks = [
-  {func: 'getTime', parent: exports, category: 'Control', type: 'value' },
-  {func: 'randomNumber', parent: exports, category: 'Math', type: 'value' },
-  {func: 'prompt', parent: window, category: 'Variables', type: 'value' },
-  {func: 'promptNum', parent: exports, category: 'Variables', type: 'value' }
+  {func: 'getTime', parent: exports, category: 'Control', type: 'value'},
+  {func: 'randomNumber', parent: exports, category: 'Math', type: 'value'},
+  {func: 'prompt', parent: window, category: 'Variables', type: 'value'},
+  {func: 'promptNum', parent: exports, category: 'Variables', type: 'value'}
 ];
 
 /**
  * @type {DropletBlock[]}
  */
 exports.dropletBuiltinConfigBlocks = [
-  {func: 'Math.round', category: 'Math', type: 'value', docFunc: 'mathRound' },
-  {func: 'Math.abs', category: 'Math', type: 'value', docFunc: 'mathAbs' },
-  {func: 'Math.max', category: 'Math', type: 'value', docFunc: 'mathMax' },
-  {func: 'Math.min', category: 'Math', type: 'value', docFunc: 'mathMin' },
-  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom' }
+  {func: 'Math.round', category: 'Math', type: 'value', docFunc: 'mathRound'},
+  {func: 'Math.abs', category: 'Math', type: 'value', docFunc: 'mathAbs'},
+  {func: 'Math.max', category: 'Math', type: 'value', docFunc: 'mathMax'},
+  {func: 'Math.min', category: 'Math', type: 'value', docFunc: 'mathMin'},
+  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom'}
 ];
 
 /**
@@ -91,51 +91,51 @@ var standardConfig = {};
 
 standardConfig.blocks = [
   // Control
-  {func: 'forLoop_i_0_4', block: 'for (var i = 0; i < 4; i++) {\n  __;\n}', category: 'Control' },
-  {func: 'whileBlock', block: 'while (__) {\n  __;\n}', category: 'Control' },
-  {func: 'ifBlock', block: 'if (__) {\n  __;\n}', category: 'Control' },
-  {func: 'ifElseBlock', block: 'if (__) {\n  __;\n} else {\n  __;\n}', category: 'Control' },
-  {func: 'getTime', block: 'getTime()', category: 'Control', type: 'value' },
+  {func: 'forLoop_i_0_4', block: 'for (var i = 0; i < 4; i++) {\n  __;\n}', category: 'Control'},
+  {func: 'whileBlock', block: 'while (__) {\n  __;\n}', category: 'Control'},
+  {func: 'ifBlock', block: 'if (__) {\n  __;\n}', category: 'Control'},
+  {func: 'ifElseBlock', block: 'if (__) {\n  __;\n} else {\n  __;\n}', category: 'Control'},
+  {func: 'getTime', block: 'getTime()', category: 'Control', type: 'value'},
 
   // Math
-  {func: 'addOperator', block: '__ + __', category: 'Math' },
-  {func: 'subtractOperator', block: '__ - __', category: 'Math' },
-  {func: 'multiplyOperator', block: '__ * __', category: 'Math' },
-  {func: 'divideOperator', block: '__ / __', category: 'Math' },
-  {func: 'equalityOperator', block: '__ == __', category: 'Math' },
-  {func: 'inequalityOperator', block: '__ != __', category: 'Math' },
-  {func: 'greaterThanOperator', block: '__ > __', category: 'Math' },
-  {func: 'greaterThanOrEqualOperator', block: '__ >= __', category: 'Math' },
-  {func: 'lessThanOperator', block: '__ < __', category: 'Math' },
-  {func: 'lessThanOrEqualOperator', block: '__ <= __', category: 'Math' },
-  {func: 'andOperator', block: '__ && __', category: 'Math' },
-  {func: 'orOperator', block: '__ || __', category: 'Math' },
-  {func: 'notOperator', block: '!__', category: 'Math' },
+  {func: 'addOperator', block: '__ + __', category: 'Math'},
+  {func: 'subtractOperator', block: '__ - __', category: 'Math'},
+  {func: 'multiplyOperator', block: '__ * __', category: 'Math'},
+  {func: 'divideOperator', block: '__ / __', category: 'Math'},
+  {func: 'equalityOperator', block: '__ == __', category: 'Math'},
+  {func: 'inequalityOperator', block: '__ != __', category: 'Math'},
+  {func: 'greaterThanOperator', block: '__ > __', category: 'Math'},
+  {func: 'greaterThanOrEqualOperator', block: '__ >= __', category: 'Math'},
+  {func: 'lessThanOperator', block: '__ < __', category: 'Math'},
+  {func: 'lessThanOrEqualOperator', block: '__ <= __', category: 'Math'},
+  {func: 'andOperator', block: '__ && __', category: 'Math'},
+  {func: 'orOperator', block: '__ || __', category: 'Math'},
+  {func: 'notOperator', block: '!__', category: 'Math'},
   // randomNumber_max has been deprecated
   // {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
   // Note: We use randomNumber as our base docFunc here so that we get the benefits of param descriptions
   {func: 'randomNumber_min_max', block: 'randomNumber(__, __)', category: 'Math', docFunc: 'randomNumber'},
-  {func: 'mathRound', block: 'Math.round(__)', category: 'Math' },
-  {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
-  {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
-  {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
-  {func: 'mathRandom', block: 'Math.random()', category: 'Math' },
+  {func: 'mathRound', block: 'Math.round(__)', category: 'Math'},
+  {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math'},
+  {func: 'mathMax', block: 'Math.max(__)', category: 'Math'},
+  {func: 'mathMin', block: 'Math.min(__)', category: 'Math'},
+  {func: 'mathRandom', block: 'Math.random()', category: 'Math'},
 
   // Variables
-  {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
-  {func: 'declareNoAssign_x', block: 'var x;', category: 'Variables' },
-  {func: 'assign_x', block: 'x = __;', category: 'Variables' },
-  {func: 'declareAssign_x_array_1_4', block: 'var x = [1, 2, 3, 4];', category: 'Variables' },
-  {func: 'declareAssign_x_prompt', block: 'var x = prompt("Enter a value");', category: 'Variables' },
-  {func: 'declareAssign_x_promptNum', block: 'var x = promptNum("Enter a value");', category: 'Variables' },
+  {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables'},
+  {func: 'declareNoAssign_x', block: 'var x;', category: 'Variables'},
+  {func: 'assign_x', block: 'x = __;', category: 'Variables'},
+  {func: 'declareAssign_x_array_1_4', block: 'var x = [1, 2, 3, 4];', category: 'Variables'},
+  {func: 'declareAssign_x_prompt', block: 'var x = prompt("Enter a value");', category: 'Variables'},
+  {func: 'declareAssign_x_promptNum', block: 'var x = promptNum("Enter a value");', category: 'Variables'},
 
   // Functions
-  {func: 'functionParams_none', block: 'function myFunction() {\n  __;\n}', category: 'Functions' },
-  {func: 'functionParams_n', block: 'function myFunction(n) {\n  __;\n}', category: 'Functions' },
-  {func: 'callMyFunction', block: 'myFunction()', category: 'Functions' },
-  {func: 'callMyFunction_n', block: 'myFunction(n)', category: 'Functions' },
-  {func: 'return', block: 'return __;', category: 'Functions' },
-  {func: 'comment', block: '// Comment', category: 'Functions' }
+  {func: 'functionParams_none', block: 'function myFunction() {\n  __;\n}', category: 'Functions'},
+  {func: 'functionParams_n', block: 'function myFunction(n) {\n  __;\n}', category: 'Functions'},
+  {func: 'callMyFunction', block: 'myFunction()', category: 'Functions'},
+  {func: 'callMyFunction_n', block: 'myFunction(n)', category: 'Functions'},
+  {func: 'return', block: 'return __;', category: 'Functions'},
+  {func: 'comment', block: '// Comment', category: 'Functions'}
 ];
 
 standardConfig.categories = {
@@ -161,7 +161,7 @@ standardConfig.categories = {
   },
   // create blank category in case level builders want to move all blocks here
   // (which will cause the palette header to disappear)
-  '' : { 'blocks': [] },
+  '': {'blocks': []},
 };
 
 /**
@@ -273,7 +273,7 @@ function buildFunctionPrototype(prefix, params) {
 }
 
 // Generate a read-write property expansion function:
-function generatePropertyExpansion (propname) {
+function generatePropertyExpansion(propname) {
   return function (block) {
     if (!block || block.type === 'socket') {
       return propname;
@@ -296,7 +296,7 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
       codeFunctions,
       dropletConfig,
       standardConfig,
-      { paletteOnly: true, ignoreDocFunc: true }
+      {paletteOnly: true, ignoreDocFunc: true}
   );
 
   for (var i = 0; i < mergedFunctions.length; i++) {
@@ -397,7 +397,7 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
         // Update the value to skip over the '*.' or '?.' at the beginning:
         newApi.value = newApi.value.substring(2);
         methodsAndProperties.push(newApi);
-        
+
       } else {
         // Populate this in the "normal" apis collection:
         apis.push(newApi);
@@ -428,7 +428,7 @@ function populateCompleterFromPredefValues(apis, predefValues) {
  * @param {Object} pos Ace editor position
  * @return {boolean} true if position is at the start of a method or property
  */
-function isPositionAfterDot (session, pos) {
+function isPositionAfterDot(session, pos) {
   var acUtil = window.ace.require("ace/autocomplete/util");
   var line = session.getLine(pos.row);
   var identifier = acUtil.retrievePrecedingIdentifier(line, pos.column);
@@ -460,7 +460,7 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   opts.autocompleteFunctionsWithParens = dropletConfig.autocompleteFunctionsWithParens;
 
   if (functionFilter) {
-    var mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, { paletteOnly: true });
+    var mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, {paletteOnly: true});
     populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, mergedBlocks);
   } else {
     populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, exports.dropletGlobalConfigBlocks);
@@ -470,7 +470,7 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   }
 
   return {
-    getCompletions: function(editor, session, pos, prefix, callback) {
+    getCompletions: function (editor, session, pos, prefix, callback) {
       if (prefix.length === 0) {
         callback(null, []);
         return;
@@ -537,28 +537,28 @@ exports.generateDropletModeOptions = function (config) {
     functions: {
     },
     categories: {
-      arithmetic: { color: COLOR_ORANGE },
-      logic: { color: COLOR_ORANGE },
-      conditionals: { color: COLOR_BLUE },
+      arithmetic: {color: COLOR_ORANGE},
+      logic: {color: COLOR_ORANGE},
+      conditionals: {color: COLOR_BLUE},
       loops: {
         color: COLOR_BLUE,
         beginner: config.level.beginnerMode || false
       },
-      functions: { color: COLOR_GREEN },
-      returns: { color: COLOR_GREEN },
-      comments: { color: COLOR_WHITE },
-      containers: { color: COLOR_PURPLE },
-      value: { color: COLOR_PURPLE },
-      command: { color: COLOR_GREEN },
-      assignments: { color: COLOR_PURPLE }
+      functions: {color: COLOR_GREEN},
+      returns: {color: COLOR_GREEN},
+      comments: {color: COLOR_WHITE},
+      containers: {color: COLOR_PURPLE},
+      value: {color: COLOR_PURPLE},
+      command: {color: COLOR_GREEN},
+      assignments: {color: COLOR_PURPLE}
       // errors: { },
     },
     lockZeroParamFunctions: config.level.lockZeroParamFunctions
   };
 
   $.extend(modeOptions.functions,
-    getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks }),
-    getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks }),
+    getModeOptionFunctionsFromConfig({blocks: exports.dropletGlobalConfigBlocks}),
+    getModeOptionFunctionsFromConfig({blocks: exports.dropletBuiltinConfigBlocks}),
     getModeOptionFunctionsFromConfig(config.dropletConfig)
   );
 
@@ -582,7 +582,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, p
         codeFunctions,
         dropletConfig,
         null,
-        { paletteOnly: paletteOnly }
+        {paletteOnly: paletteOnly}
     );
   }
   return exports.dropletGlobalConfigBlocks

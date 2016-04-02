@@ -87,8 +87,8 @@ describe("Observer", function () {
   });
 
   it("respects binding `this` to the function passed into register", function () {
-    var clientA = { log: "" };
-    var clientB = { log: "" };
+    var clientA = {log: ""};
+    var clientB = {log: ""};
     var funcUsesThis = function () {
       this.log += "Z";
       this.that = this;

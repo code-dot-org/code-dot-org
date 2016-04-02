@@ -52,4 +52,4 @@ var gamelabReducer = combineReducers({
   level: level
 });
 
-module.exports = { gamelabReducer: gamelabReducer };
+module.exports = {gamelabReducer: gamelabReducer};

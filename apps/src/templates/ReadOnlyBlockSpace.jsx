@@ -18,7 +18,7 @@ var ReadOnlyBlockSpace = React.createClass({
   },
 
   render: function () {
-    return (<div className="block-space" ref="container" style={{ maxHeight: '100px' }}/>);
+    return (<div className="block-space" ref="container" style={{maxHeight: '100px'}}/>);
   }
 });
 

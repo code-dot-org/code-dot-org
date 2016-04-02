@@ -1,14 +1,14 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   'use strict';
 
   var path = require('path');
 
-  var pseudolocString = function(string) {
+  var pseudolocString = function (string) {
     //TODO: Something smarter.
     return '!!-' + string + '-!!';
   };
 
-  grunt.registerMultiTask('pseudoloc', 'Pseudolocalize Messages', function() {
+  grunt.registerMultiTask('pseudoloc', 'Pseudolocalize Messages', function () {
 
     var srcBase = this.data.srcBase;
     var srcLocale = this.data.srcLocale;
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     var pattern = srcBase + '/**/' + srcLocale + '.json';
     var files = grunt.file.expandMapping(pattern, destBase, {
       expand: true,
-      rename: function(destBase, matchedPath) {
+      rename: function (destBase, matchedPath) {
         var destPath = matchedPath.substring(srcBase.length);
         var filename = destPath.replace(srcLocale, pseudoLocale);
         return path.join(destBase, filename);
@@ -27,9 +27,9 @@ module.exports = function(grunt) {
     });
 
     // Pseudolocalize each string from the source locale.
-    files.forEach(function(file) {
+    files.forEach(function (file) {
       var messages = grunt.file.readJSON(file.src[0]);
-      Object.keys(messages).forEach(function(id) {
+      Object.keys(messages).forEach(function (id) {
         messages[id] = pseudolocString(messages[id]);
       });
       grunt.file.write(file.dest, JSON.stringify(messages, null, 2));

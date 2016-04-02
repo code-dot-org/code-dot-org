@@ -69,7 +69,7 @@ var ResizablePanes = React.createClass({
 
   onMouseUp() {
     if (this.state.dragging) {
-      this.setState({ dragging: false });
+      this.setState({dragging: false});
     }
   },
 

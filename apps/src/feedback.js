@@ -71,7 +71,7 @@ var GeneratedCode = require('./templates/feedback/GeneratedCode.jsx');
  * @param {number} maxRecommendedBlocksToFlag The number of recommended blocks to
  *   give hints about at any one time.  Set this to Infinity to show all.
  */
-FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
+FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     maxRequiredBlocksToFlag, recommendedBlocks, maxRecommendedBlocksToFlag) {
 
   options.level = options.level || {};
@@ -345,7 +345,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
     dom.addClickTouchEvent(saveToGalleryButton, function () {
       $.post(options.response.save_to_gallery_url,
-             function() { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
+             function () { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
     });
   }
 
@@ -498,10 +498,10 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function (options) {
     // Otherwise, the message will depend on the test result.
     switch (options.feedbackType) {
       case TestResults.RUNTIME_ERROR_FAIL:
-        message = msg.runtimeErrorMsg({ lineNumber: options.executionError.lineNumber });
+        message = msg.runtimeErrorMsg({lineNumber: options.executionError.lineNumber});
         break;
       case TestResults.SYNTAX_ERROR_FAIL:
-        message = msg.syntaxErrorMsg({ lineNumber: options.executionError.lineNumber });
+        message = msg.syntaxErrorMsg({lineNumber: options.executionError.lineNumber});
         break;
       case TestResults.EMPTY_BLOCK_FAIL:
         message = options.level.emptyBlocksErrorMsg ||
@@ -743,7 +743,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
         var submitButton = sharingDiv.querySelector('#phone-submit');
         submitButton.disabled = true;
         phone.mask('(000) 000-0000', {
-            onComplete:function(){
+            onComplete: function (){
               if (!submitted) {
                 submitButton.disabled = false;
               }
@@ -1294,7 +1294,7 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
  * @param {Object} options
  * @return {number} The appropriate property of TestResults.
  */
-FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
+FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks,
     recommendedBlocks, shouldCheckForEmptyBlocks, options) {
   options = options || {};
   if (this.studioApp_.editCode) {

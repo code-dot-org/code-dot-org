@@ -417,7 +417,7 @@ module.exports = function (grunt) {
     content: {options: {message: 'Content build completed.'}},
     ejs: {options: {message: 'EJS build completed.'}},
     messages: {options: {message: 'i18n messages build completed.'}},
-    vendor_js: { options: {message: 'Blockly concat & vendor JS copy done.'}}
+    vendor_js: {options: {message: 'Blockly concat & vendor JS copy done.'}}
   };
 
   grunt.initConfig(config);

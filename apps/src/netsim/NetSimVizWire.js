@@ -93,7 +93,7 @@ var NetSimVizWire = module.exports = function (localNode, remoteNode) {
    * @type {{x:number, y:number}}
    * @private
    */
-  this.wireCenter_ = { x: 0, y: 0 };
+  this.wireCenter_ = {x: 0, y: 0};
 
   /**
    * Enabled encoding types.

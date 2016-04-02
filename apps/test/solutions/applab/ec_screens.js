@@ -119,7 +119,7 @@ module.exports = {
 
         // Change to screen1 using dropdown
         ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
-          { target: { value: 'screen1' } });
+          {target: {value: 'screen1'}});
 
         validatePropertyRow(0, 'id', 'screen1', assert);
         validateElementSelect(['screen1'], assert);
@@ -197,7 +197,7 @@ module.exports = {
         // Change name
         var inputId = $('#design-properties input').first();
         ReactTestUtils.Simulate.change(inputId[0],
-          { target: { value: 'renamed_screen' } });
+          {target: {value: 'renamed_screen'}});
         assert(document.getElementById('design_renamed_screen'));
 
         // Still can't delete
@@ -490,7 +490,7 @@ module.exports = {
         var imageInput = $("#design-properties input").eq(2)[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
-          target: { value: assetUrl }
+          target: {value: assetUrl}
         });
 
         var screenElement = document.getElementById('design_screen1');
@@ -532,7 +532,7 @@ module.exports = {
 
         // New screen via dropdown
         ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
-          { target: { value: 'New screen...' } });
+          {target: {value: 'New screen...'}});
 
         assert.equal($("#designModeViz").children().length, 3, 'has three screen divs');
         assert.equal($("#screenSelector").children().length, 4);
@@ -585,7 +585,7 @@ module.exports = {
 
         // New screen via dropdown
         ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
-          { target: { value: 'New screen...' } });
+          {target: {value: 'New screen...'}});
 
         assert.equal($("#designModeViz").children().length, 4, 'has four screen divs');
         assert.equal($("#screenSelector").children().length, 5);

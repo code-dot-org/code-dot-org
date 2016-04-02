@@ -99,17 +99,17 @@ describe("NetSimSlider", function () {
   describe("bad configurations", function () {
     it("throws when initialized with noninteger step values", function () {
       assert.throws(function () {
-        slider = new NetSimSlider(null, { step: 0.1 });
+        slider = new NetSimSlider(null, {step: 0.1});
       }, Error);
 
       assert.throws(function () {
-        slider = new NetSimSlider(null, { step: 5.1 });
+        slider = new NetSimSlider(null, {step: 5.1});
       }, Error);
     });
 
     it("throws when initialized with a zero step value", function () {
       assert.throws(function () {
-        slider = new NetSimSlider(null, { step: 0 });
+        slider = new NetSimSlider(null, {step: 0});
       }, Error);
     });
   });
@@ -123,22 +123,22 @@ describe("NetSimSlider.DecimalPrecisionSlider", function () {
   };
 
   it("has default precision of 2 decimal places", function () {
-    slider = new NetSimSlider.DecimalPrecisionSlider(null, { step: 0.1 });
-    slider = new NetSimSlider.DecimalPrecisionSlider(null, { step: 0.01 });
+    slider = new NetSimSlider.DecimalPrecisionSlider(null, {step: 0.1});
+    slider = new NetSimSlider.DecimalPrecisionSlider(null, {step: 0.01});
     assert.throws(function () {
-      slider = new NetSimSlider.DecimalPrecisionSlider(null, { step: 0.001 });
+      slider = new NetSimSlider.DecimalPrecisionSlider(null, {step: 0.001});
     }, Error);
   });
 
   it("can be constructed with greater precision", function () {
-    slider = new NetSimSlider.DecimalPrecisionSlider(null, { precision: 3, step: 0.001 });
+    slider = new NetSimSlider.DecimalPrecisionSlider(null, {precision: 3, step: 0.001});
     assert.throws(function () {
-      slider = new NetSimSlider.DecimalPrecisionSlider(null, { precision: 3, step: 0.0001 });
+      slider = new NetSimSlider.DecimalPrecisionSlider(null, {precision: 3, step: 0.0001});
     }, Error);
   });
 
   it("value round-trip is identity within slider range", function () {
-    slider = new NetSimSlider.DecimalPrecisionSlider(null, { min: 0.1, max: 1.0, step: 0.1 });
+    slider = new NetSimSlider.DecimalPrecisionSlider(null, {min: 0.1, max: 1.0, step: 0.1});
 
     assert.equal(0.1, roundTrip(0.1));
     assert.equal(0.2, roundTrip(0.2));
@@ -148,7 +148,7 @@ describe("NetSimSlider.DecimalPrecisionSlider", function () {
   });
 
   it("clamps values to default range", function () {
-    slider = new NetSimSlider.DecimalPrecisionSlider(null, { min: 0.1, max: 1.0, step: 0.1 });
+    slider = new NetSimSlider.DecimalPrecisionSlider(null, {min: 0.1, max: 1.0, step: 0.1});
 
     assert.equal(0.1, roundTrip(0.09));
     assert.equal(0.1, roundTrip(0));

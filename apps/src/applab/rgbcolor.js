@@ -9,17 +9,16 @@
  // channels declared as local variable to avoid conflicts (cpirich)
  // cleanup jshint errors (cpirich)
  // add rgba support (davidsbailey)
- 
-module.exports = function(color_string)
-{
+
+module.exports = function (color_string) {
     this.ok = false;
 
     // strip any leading #
     if (color_string.charAt(0) == '#') { // remove # if any
-        color_string = color_string.substr(1,6);
+        color_string = color_string.substr(1, 6);
     }
 
-    color_string = color_string.replace(/ /g,'');
+    color_string = color_string.replace(/ /g, '');
     color_string = color_string.toLowerCase();
 
     // before getting into regexps, try simple matches
@@ -81,8 +80,8 @@ module.exports = function(color_string)
         greenyellow: 'adff2f',
         honeydew: 'f0fff0',
         hotpink: 'ff69b4',
-        indianred : 'cd5c5c',
-        indigo : '4b0082',
+        indianred: 'cd5c5c',
+        indigo: '4b0082',
         ivory: 'fffff0',
         khaki: 'f0e68c',
         lavender: 'e6e6fa',

@@ -71,7 +71,7 @@ exec(command, function (err, stdout, stderr) {
     grep: grep,
     debug: process.env.mocha_debug,
     invert: process.env.mocha_invert,
-    reporter : 'spec',
+    reporter: 'spec',
     timeout: 14000,
     phantomjs: which('phantomjs'),
     transform: 'ejsify',

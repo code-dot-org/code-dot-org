@@ -118,7 +118,7 @@ DebugArea.prototype.slideOpen = function () {
   // to the correct effect.
   this.rootDiv_.animate({
     height: this.lastOpenHeight_
-  },{
+  }, {
     complete: function () {
       this.setIconPointingDown(true);
     }.bind(this)
@@ -127,7 +127,7 @@ DebugArea.prototype.slideOpen = function () {
   // Animate the bottom of the workspace at the same time
   this.codeTextbox_.animate({
     bottom: this.lastOpenHeight_
-  },{
+  }, {
     step: utils.fireResizeEvent
   });
 
@@ -150,7 +150,7 @@ DebugArea.prototype.slideShut = function () {
   // to the correct effect.
   this.rootDiv_.animate({
     height: closedHeight
-  },{
+  }, {
     complete: function () {
       this.setContentsVisible(false);
       this.setIconPointingDown(false);
@@ -160,7 +160,7 @@ DebugArea.prototype.slideShut = function () {
   // Animate the bottom of the workspace at the same time
   this.codeTextbox_.animate({
     bottom: closedHeight
-  },{
+  }, {
     step: utils.fireResizeEvent,
     complete: utils.fireResizeEvent
   });
@@ -169,7 +169,7 @@ DebugArea.prototype.slideShut = function () {
   var clearButton = this.rootDiv_.find('#clear-console-header');
   clearButton.animate({
     opacity: 0.0
-  },{
+  }, {
     complete: function () {
       clearButton.css('visibility', 'hidden');
     }

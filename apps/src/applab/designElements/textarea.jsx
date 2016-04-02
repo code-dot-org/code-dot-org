@@ -76,7 +76,7 @@ var TextAreaProperties = React.createClass({
         <EnumPropertyRow
           desc={'text alignment'}
           initialValue={element.style.textAlign || 'left'}
-          options={['left','right','center','justify']}
+          options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')} />
         <BooleanPropertyRow
           desc={'read only'}
@@ -105,7 +105,7 @@ var TextAreaEvents = React.createClass({
     handleChange: React.PropTypes.func.isRequired
   },
 
-  getChangeEventCode: function() {
+  getChangeEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
@@ -114,7 +114,7 @@ var TextAreaEvents = React.createClass({
     return code;
   },
 
-  insertChange: function() {
+  insertChange: function () {
     this.props.onInsertEvent(this.getChangeEventCode());
   },
 
@@ -144,7 +144,7 @@ module.exports = {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
 
-  create: function() {
+  create: function () {
     var element = document.createElement('div');
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';

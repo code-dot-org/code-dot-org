@@ -34,15 +34,37 @@ module.exports = {
     "mocha": true
   },
   "rules": {
-    // 0 means disabled, 1 means warn, 2 means error
-    "curly": 2,
-    "no-undef": 2,
-    "no-unused-vars": 0,
-    "comma-dangle": 0,
-    "no-empty": 0,
-    "semi": 2,
-    "no-console": 0,
-    "no-extra-boolean-cast": 0,
-    "no-regex-spaces": 0
+    "array-bracket-spacing": ["error", "never"],
+    "brace-style": ["error", "1tbs", {
+      "allowSingleLine": true
+    }],
+    "comma-dangle": "off",
+    "comma-spacing": "error",
+    "curly": "error",
+    "dot-location": ["error", "property"],
+    "eol-last": "error",
+    "key-spacing": "error",
+    "keyword-spacing": "error",
+    "no-array-constructor": "error",
+    "no-console": "off",
+    "no-empty": "off",
+    "no-eval": "error",
+    "no-extra-boolean-cast": "off",
+    "no-implicit-globals": "error",
+    "no-new-object": "error",
+    "no-trailing-spaces": "error",
+    "no-undef": "error",
+    "no-unused-vars": "off",
+    "no-with": "error",
+    "object-curly-spacing": ["error", "never"],
+    "semi": "error",
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never"
+    }],
+
+    // Things we should technically enable to comply with google style guide
+    //https://google.github.io/styleguide/javascriptguide.xml?showone=Parentheses#Parentheses
+    "no-extra-parens": "off"
   }
 };

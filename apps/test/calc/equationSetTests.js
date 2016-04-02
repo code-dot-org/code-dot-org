@@ -281,7 +281,7 @@ describe('EquationSet', function () {
       ]);
 
       var set = new EquationSet();
-      set.addEquation_(new Equation('f', ['x','y'], fnExpression));
+      set.addEquation_(new Equation('f', ['x', 'y'], fnExpression));
       set.addEquation_(new Equation(null, [], computeExpression));
 
       var evaluation = set.evaluate();

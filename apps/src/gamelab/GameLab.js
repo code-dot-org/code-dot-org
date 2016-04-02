@@ -127,7 +127,7 @@ GameLab.prototype.init = function (config) {
     onDraw: this.onP5Draw.bind(this)
   });
 
-  config.afterClearPuzzle = function() {
+  config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -153,10 +153,10 @@ GameLab.prototype.init = function (config) {
       data: {
         localeDirection: this.studioApp_.localeDirection(),
         extraControlRows: extraControlRows,
-        blockUsed : undefined,
-        idealBlockNumber : undefined,
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
         editCode: this.level.editCode,
-        blockCounterClass : 'block-counter-default',
+        blockCounterClass: 'block-counter-default',
         pinWorkspaceToBottom: true,
         readonlyWorkspace: config.readonlyWorkspace
       }
@@ -269,7 +269,7 @@ GameLab.prototype.reset = function (ignore) {
   */
 
   this.gameLabP5.resetExecution();
-  
+
   // Import to reset these after this.gameLabP5 has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;
@@ -331,7 +331,7 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
 
   this.waitingForReport = true;
 
-  var sendReport = function() {
+  var sendReport = function () {
     this.studioApp_.report({
       app: 'gamelab',
       level: this.level.id,
@@ -354,7 +354,7 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
     sendReport();
   } else {
     divGameLab.toDataURL("image/png", {
-      callback: function(pngDataUrl) {
+      callback: function (pngDataUrl) {
         this.feedbackImage = pngDataUrl;
         this.encodedFeedbackImage = encodeURIComponent(this.feedbackImage.split(',')[1]);
 
@@ -392,7 +392,7 @@ GameLab.prototype.runButtonClick = function () {
   this.execute();
 };
 
-GameLab.prototype.evalCode = function(code) {
+GameLab.prototype.evalCode = function (code) {
   try {
     codegen.evalWith(code, {
       GameLab: this.api
@@ -416,7 +416,7 @@ GameLab.prototype.evalCode = function(code) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-GameLab.prototype.execute = function() {
+GameLab.prototype.execute = function () {
   this.result = this.studioApp_.ResultType.UNSET;
   this.testResults = this.studioApp_.TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
@@ -616,7 +616,7 @@ GameLab.prototype.completeRedrawIfDrawComplete = function () {
 
 GameLab.prototype.handleExecutionError = function (err, lineNumber) {
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
-  this.executionError = { err: err, lineNumber: lineNumber };
+  this.executionError = {err: err, lineNumber: lineNumber};
   this.haltExecution_();
   // TODO: Call onPuzzleComplete?
 };
@@ -636,7 +636,7 @@ GameLab.prototype.executeCmd = function (id, name, opts) {
  * App specific displayFeedback function that calls into
  * this.studioApp_.displayFeedback when appropriate
  */
-GameLab.prototype.displayFeedback_ = function() {
+GameLab.prototype.displayFeedback_ = function () {
   var level = this.level;
 
   this.studioApp_.displayFeedback({

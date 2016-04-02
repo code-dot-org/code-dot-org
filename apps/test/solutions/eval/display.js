@@ -6,7 +6,7 @@ module.exports = {
   app: "eval",
   skinId: 'eval',
   levelDefinition: {
-    solutionBlocks: blockUtils.mathBlockXml('functional_string', null, { VAL: '1234' } ),
+    solutionBlocks: blockUtils.mathBlockXml('functional_string', null, {VAL: '1234'} ),
     requiredBlocks: '',
     freePlay: false
   },
@@ -27,7 +27,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       xml: '<xml>' +
-        blockUtils.mathBlockXml('functional_string', null, { VAL: '1234' } ) +
+        blockUtils.mathBlockXml('functional_string', null, {VAL: '1234'} ) +
       '</xml>'
     },
     {
@@ -37,7 +37,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       xml: '<xml>' +
-        blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1234 } ) +
+        blockUtils.mathBlockXml('functional_math_number', null, {NUM: 1234} ) +
       '</xml>'
     },
     {
@@ -48,9 +48,9 @@ module.exports = {
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('functional_text', {
-          'TEXT': blockUtils.mathBlockXml('functional_string', null, { VAL: '1234'} ),
-          'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 10 }),
-          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } )
+          'TEXT': blockUtils.mathBlockXml('functional_string', null, {VAL: '1234'} ),
+          'SIZE': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 10}),
+          'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'black'} )
         }) +
       '</xml>'
     }

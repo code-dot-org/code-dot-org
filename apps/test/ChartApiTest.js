@@ -219,7 +219,7 @@ describe("ChartApi", function () {
     });
 
     it ("rejects if no columns array provided and one column found in data", function (testDone) {
-      fakeAppStorage.fakeRecords = [{ id: 14 }];
+      fakeAppStorage.fakeRecords = [{id: 14}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable')
           .then(ensureDone(testDone, function () {
             assertRejects(/Only found 1 columns in table "fakeTable": "id". Charts require at least 2 columns/);
@@ -227,7 +227,7 @@ describe("ChartApi", function () {
     });
 
     it ("warns and infers columns if no columns array provided and two columns found in data", function (testDone) {
-      fakeAppStorage.fakeRecords = [{ id: 14, col1: 'xyzzy' }];
+      fakeAppStorage.fakeRecords = [{id: 14, col1: 'xyzzy'}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable')
           .then(ensureDone(testDone, function () {
             assertWarns(chartApi, /Not enough columns specified/);
@@ -236,7 +236,7 @@ describe("ChartApi", function () {
     });
 
     it ("when inferring columns, prints list of all possible columns", function (testDone) {
-      fakeAppStorage.fakeRecords = [{ id: 14, col1: 'xyzzy', col2: 'xyzzy', col3: 'xyzzy' }];
+      fakeAppStorage.fakeRecords = [{id: 14, col1: 'xyzzy', col2: 'xyzzy', col3: 'xyzzy'}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable')
           .then(ensureDone(testDone, function () {
             assertWarns(chartApi, /Not enough columns specified/);
@@ -246,7 +246,7 @@ describe("ChartApi", function () {
     });
 
     it ("rejects if zero columns provided and less than two columns in data", function (testDone) {
-      fakeAppStorage.fakeRecords = [{ col1: 'xyzzy' }];
+      fakeAppStorage.fakeRecords = [{col1: 'xyzzy'}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable', [])
           .then(ensureDone(testDone, function () {
             assertRejects(/Only found 1 columns in table "fakeTable": "col1". Charts require at least 2 columns./);
@@ -254,7 +254,7 @@ describe("ChartApi", function () {
     });
 
     it ("infers/warns if zero columns provided and two or more columns in data", function (testDone) {
-      fakeAppStorage.fakeRecords = [{ col1: 'xyzzy', col2: 'gzip' }];
+      fakeAppStorage.fakeRecords = [{col1: 'xyzzy', col2: 'gzip'}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable', [])
           .then(ensureDone(testDone, function () {
             assertWarns(chartApi, /Not enough columns specified/);
@@ -264,7 +264,7 @@ describe("ChartApi", function () {
     });
 
     it ("rejects if only one column provided and less than two columns in data", function (testDone) {
-      fakeAppStorage.fakeRecords = [{ col1: 'xyzzy' }];
+      fakeAppStorage.fakeRecords = [{col1: 'xyzzy'}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable', ['column1'])
           .then(ensureDone(testDone, function () {
             assertRejects(/Only found 1 columns in table "fakeTable": "col1". Charts require at least 2 columns./);
@@ -272,7 +272,7 @@ describe("ChartApi", function () {
     });
 
     it ("infers/warns if only one column provided and two or more columns in data", function (testDone) {
-      fakeAppStorage.fakeRecords = [{ col1: 'xyzzy', col2: 'gzip' }];
+      fakeAppStorage.fakeRecords = [{col1: 'xyzzy', col2: 'gzip'}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable', ['column1'])
           .then(ensureDone(testDone, function () {
             assertWarns(chartApi, /Not enough columns specified/);
@@ -289,7 +289,7 @@ describe("ChartApi", function () {
     });
 
     it ("does not warn about empty dataset when given data", function (testDone) {
-      fakeAppStorage.fakeRecords = [{column1: 'Duke', column2: 'Earl' }];
+      fakeAppStorage.fakeRecords = [{column1: 'Duke', column2: 'Earl'}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable', ['column1', 'column2'])
           .then(ensureDone(testDone, function () {
             assertNotWarns(chartApi, /No data\./);
@@ -297,7 +297,7 @@ describe("ChartApi", function () {
     });
 
     it ("warns about empty column", function (testDone) {
-      fakeAppStorage.fakeRecords = [{column1: 'Duke' }];
+      fakeAppStorage.fakeRecords = [{column1: 'Duke'}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable', ['column1', 'column2'])
           .then(ensureDone(testDone, function () {
             assertWarns(chartApi, /No data found for column/);
@@ -305,7 +305,7 @@ describe("ChartApi", function () {
     });
 
     it ("does not warn about empty column if all columns have data", function (testDone) {
-      fakeAppStorage.fakeRecords = [{column1: 'Duke', column2: 'Earl' }];
+      fakeAppStorage.fakeRecords = [{column1: 'Duke', column2: 'Earl'}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable', ['column1', 'column2'])
           .then(ensureDone(testDone, function () {
             assertNotWarns(chartApi, /No data found for column/);

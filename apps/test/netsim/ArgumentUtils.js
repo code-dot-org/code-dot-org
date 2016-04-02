@@ -68,7 +68,7 @@ describe("ArgumentUtils", function () {
     });
 
     it("retains members of original options object", function () {
-      var originalOptions = { a: 1, b: 2, c: 3 };
+      var originalOptions = {a: 1, b: 2, c: 3};
       var options = ArgumentUtils.extendOptionsObject(originalOptions);
       for (var key in originalOptions) {
         assert(options.hasOwnProperty(key));
@@ -77,7 +77,7 @@ describe("ArgumentUtils", function () {
     });
 
     it("adds get method to returned object, not original object", function () {
-      var originalOptions = { a: 1, b: 2, c: 3 };
+      var originalOptions = {a: 1, b: 2, c: 3};
       var options = ArgumentUtils.extendOptionsObject(originalOptions);
 
       assert.property(options, 'get');
@@ -93,7 +93,7 @@ describe("ArgumentUtils", function () {
 
     it("throws Error if extending would overwrite existing 'get' property", function () {
       assert.throws(function () {
-        var originalOptions = { get: 1 };
+        var originalOptions = {get: 1};
         ArgumentUtils.extendOptionsObject(originalOptions);
       }, Error);
     });
@@ -102,7 +102,7 @@ describe("ArgumentUtils", function () {
       var originalOptions, options;
 
       beforeEach(function () {
-        originalOptions = { a: 1, b: 2, c: 3 };
+        originalOptions = {a: 1, b: 2, c: 3};
         options = ArgumentUtils.extendOptionsObject(originalOptions);
       });
 

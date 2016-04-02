@@ -74,28 +74,28 @@ describe('applab: getIdDropdown filtering modes', function () {
 
   it('produces all IDs when no filter is given', function () {
     assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot), [
-      { "display": '"chart9"', "text": '"chart9"' },
-      { "display": '"image1"', "text": '"image1"' },
-      { "display": '"screen1"', "text": '"screen1"' }
+      {"display": '"chart9"', "text": '"chart9"'},
+      {"display": '"image1"', "text": '"image1"'},
+      {"display": '"screen1"', "text": '"screen1"'}
     ]);
   });
 
   it('can filter on tag type', function () {
     assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, 'div'), [
-      { "display": '"chart9"', "text": '"chart9"' },
-      { "display": '"screen1"', "text": '"screen1"' }
+      {"display": '"chart9"', "text": '"chart9"'},
+      {"display": '"screen1"', "text": '"screen1"'}
     ]);
     assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, 'img'), [
-      { "display": '"image1"', "text": '"image1"' }
+      {"display": '"image1"', "text": '"image1"'}
     ]);
   });
 
   it('can filter on class', function () {
     assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart'), [
-      { "display": '"chart9"', "text": '"chart9"' }
+      {"display": '"chart9"', "text": '"chart9"'}
     ]);
     assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.screen'), [
-      { "display": '"screen1"', "text": '"screen1"' }
+      {"display": '"screen1"', "text": '"screen1"'}
     ]);
   });
 
@@ -103,10 +103,10 @@ describe('applab: getIdDropdown filtering modes', function () {
     // Make sure searching for elements with class ".chart" does not also pick
     // up elements with class ".chart-friend"
     assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart'), [
-      { "display": '"chart9"', "text": '"chart9"' }
+      {"display": '"chart9"', "text": '"chart9"'}
     ]);
     assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart-friend'), [
-      { "display": '"image1"', "text": '"image1"' }
+      {"display": '"image1"', "text": '"image1"'}
     ]);
   });
 });
@@ -337,20 +337,20 @@ describe('startSharedAppAfterWarnings', function () {
 
   describe('is13plus', function () {
     it('is true if user is signed in', function () {
-      Applab.user = { isSignedIn: true };
+      Applab.user = {isSignedIn: true};
       var component = Applab.startSharedAppAfterWarnings();
       assert.equal(component.props.is13Plus, true);
     });
 
     it('is true if user is not signed in but has local storage set', function () {
-      Applab.user = { isSignedIn: false };
+      Applab.user = {isSignedIn: false};
       localStorage.setItem('is13Plus', 'true');
       var component = Applab.startSharedAppAfterWarnings();
       assert.equal(component.props.is13Plus, true);
     });
 
     it('is false if user is not signed in and has no local storage set', function () {
-      Applab.user = { isSignedIn: false };
+      Applab.user = {isSignedIn: false};
       var component = Applab.startSharedAppAfterWarnings();
       assert.equal(component.props.is13Plus, false);
     });
@@ -404,12 +404,12 @@ describe('startSharedAppAfterWarnings', function () {
   });
 });
 
-describe('RecordListener', function() {
-  describe('TableHandler', function() {
+describe('RecordListener', function () {
+  describe('TableHandler', function () {
     var TableHandler = RecordListener.__TestInterface.TableHandler;
     var records, oldIdToJsonMap, newIdToJsonMap, events, callback;
 
-    beforeEach (function() {
+    beforeEach (function () {
       records = [];
       oldIdToJsonMap = {};
       newIdToJsonMap = {};
@@ -436,7 +436,7 @@ describe('RecordListener', function() {
       newIdToJsonMap[record.id] = JSON.stringify(record);
     }
 
-    it('reports "create" events', function() {
+    it('reports "create" events', function () {
       var alice = createRecord(1, 'Alice', 7);
       addNewRecord(alice);
 
@@ -450,7 +450,7 @@ describe('RecordListener', function() {
       assert.equal(actualEventType, 'create', 'Event has correct type');
     });
 
-    it('reports "update" events', function() {
+    it('reports "update" events', function () {
       var alice = createRecord(1, 'Alice', 7);
       var bob = createRecord(1, 'Bob', 8);
       addOldRecord(alice);
@@ -466,7 +466,7 @@ describe('RecordListener', function() {
       assert.equal(actualEventType, 'update', 'Event has correct type');
     });
 
-    it('reports "delete" events', function() {
+    it('reports "delete" events', function () {
       var bob = createRecord(1, 'Bob', 8);
       addOldRecord(bob);
 
@@ -480,7 +480,7 @@ describe('RecordListener', function() {
       assert.equal(actualEventType, 'delete', 'Event has correct type');
     });
 
-    it('reports multiple events', function() {
+    it('reports multiple events', function () {
       var alice = createRecord(1, 'Alice', 7);
       var bob = createRecord(2, 'Bob', 8);
       var charlie = createRecord(3, 'Charlie', 9);

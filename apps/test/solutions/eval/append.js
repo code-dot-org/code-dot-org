@@ -30,8 +30,8 @@ module.exports = {
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('string_append', {
-          'FIRST': blockUtils.mathBlockXml('functional_string', null, { 'VAL': 'one' }),
-          'SECOND': blockUtils.mathBlockXml('functional_string', null, { 'VAL': 'two' }),
+          'FIRST': blockUtils.mathBlockXml('functional_string', null, {'VAL': 'one'}),
+          'SECOND': blockUtils.mathBlockXml('functional_string', null, {'VAL': 'two'}),
         }) +
       '</xml>'
     }

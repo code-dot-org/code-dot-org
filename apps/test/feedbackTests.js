@@ -303,10 +303,10 @@ describe("getMissingBlocks_ tests", function () {
 
     // Convert a function to a string and remove whitespace
     function functionText(f) {
-      return f.toString().replace(/\s/gm,"");
+      return f.toString().replace(/\s/gm, "");
     }
 
-    function validateKey (key) {
+    function validateKey(key) {
       assert.equal(typeof(block[key]), typeof(expectedBlock[key]),
         "members are of same type");
       if (typeof(block[key]) === "function") {
@@ -564,7 +564,7 @@ describe("getMissingBlocks_ tests", function () {
       };
     }
 
-    var blockInstallOptions = { skin: skinForTests, isK1: false };
+    var blockInstallOptions = {skin: skinForTests, isK1: false};
     var blocksCommon = require('@cdo/apps/blocksCommon');
     blocksCommon.install(Blockly, blockInstallOptions);
     var blocks = require('@cdo/apps/' + testCollection.app + '/blocks');

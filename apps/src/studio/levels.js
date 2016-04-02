@@ -91,19 +91,19 @@ function moveRequiredBlock(options) {
 }
 
 function moveNorthRequiredBlock() {
-  return moveRequiredBlock({ dir: '1' });
+  return moveRequiredBlock({dir: '1'});
 }
 
 function moveSouthRequiredBlock() {
-  return moveRequiredBlock({ dir: '4' });
+  return moveRequiredBlock({dir: '4'});
 }
 
 function moveEastRequiredBlock() {
-  return moveRequiredBlock({ dir: '2' });
+  return moveRequiredBlock({dir: '2'});
 }
 
 function moveWestRequiredBlock() {
-  return moveRequiredBlock({ dir: '8' });
+  return moveRequiredBlock({dir: '8'});
 }
 
 /**
@@ -201,7 +201,7 @@ levels.dog_hello = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 16,0, 0, 0, 0],
+    [0, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -272,7 +272,7 @@ levels.dog_and_cat_hello =  {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0,16, 0, 0,16, 0, 0],
+    [0, 0, 16, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -319,11 +319,11 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   ],
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0, 0, 0, 0],
+    [0, 16, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
@@ -352,7 +352,7 @@ levels.dog_move_cat =  {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0,16, 0, 0, 16, 0, 0],
+    [0, 0, 16, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -374,7 +374,7 @@ levels.k1_3 = utils.extend(levels.dog_move_cat,  {
   'isK1': true,
   'requiredBlocks': [
     [{
-      test: function(block) {
+      test: function (block) {
         return block.type == 'studio_moveEastDistance';
       },
       type: 'studio_moveEastDistance'}]
@@ -390,7 +390,7 @@ levels.playlab_3 = {
     [{
       test: 'moveDistance',
       type: 'studio_moveDistance',
-      titles: { DIR: '2', DISTANCE: '200'}
+      titles: {DIR: '2', DISTANCE: '200'}
     }]
   ],
   timeoutFailureTick: null,
@@ -414,7 +414,7 @@ levels.playlab_3 = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0, 1, 0, 0],
+    [0, 16, 0, 0, 0, 1, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ]
@@ -447,7 +447,7 @@ levels.dog_move_cat_hello =  {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0,16, 0, 0,16, 0, 0],
+    [0, 0, 16, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -470,13 +470,13 @@ levels.k1_4 = utils.extend(levels.dog_move_cat_hello,  {
   'isK1': true,
   'requiredBlocks': [
     [{
-      test: function(block) {
+      test: function (block) {
         return block.type == 'studio_moveEastDistance';
       },
       type: 'studio_moveEastDistance',
     }],
     [{
-      test: function(block) {
+      test: function (block) {
         // Make sure they have the right block, and have changed the default
         // text
         return block.type == 'studio_saySprite' &&
@@ -507,12 +507,12 @@ levels.playlab_4 = {
     [{
       test: 'moveDistance',
       type: 'studio_moveDistance',
-      titles: { DIR: '4', DISTANCE: '200'}
+      titles: {DIR: '4', DISTANCE: '200'}
     }],
     [{
       test: 'playSound',
       type: 'studio_playSound',
-      titles: { SOUND: 'goal1'}
+      titles: {SOUND: 'goal1'}
     }]
   ],
   // timeout when we've hit 100 OR we had only when run commands and finished them
@@ -536,11 +536,11 @@ levels.playlab_4 = {
     '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="120"></block>',
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0,16, 0, 0, 0, 0],
+    [0, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0,16, 0, 0, 0, 0],
+    [0, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
@@ -570,7 +570,7 @@ levels.click_hello =  {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 16,0, 0, 0, 0],
+    [0, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -640,7 +640,7 @@ levels.octopus_happy =  {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 16,0, 0, 0, 0],
+    [0, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -682,13 +682,13 @@ levels.c3_story_6 = {
   'spritesHiddenToStart': true,
   'freePlay': true,
   'map': [
-    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 16, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 16, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 16, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   'toolbox':
@@ -732,7 +732,7 @@ levels.move_penguin =  {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [1, 0, 0, 0, 0, 1, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0,16, 0, 0, 0, 0, 0],
+    [0, 0, 16, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 1, 0, 0, 0, 0, 1, 0],
@@ -770,7 +770,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     [1, 0, 0, 0, 0, 0, 1, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 16,0, 0, 0, 0],
+    [0, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [1, 0, 0, 0, 0, 0, 1, 0],
@@ -817,7 +817,7 @@ levels.dino_up_and_down =  {
     [0, 0, 0, 0, 1, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [16,0, 0, 0,16, 0, 0, 0],
+    [16, 0, 0, 0, 16, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 1, 0, 0, 0],
@@ -922,7 +922,7 @@ levels.iceage_repeat = utils.extend(levels.playlab_7, {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 16,0, 0, 0, 0, 0, 0],
+    [0, 16, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
@@ -937,7 +937,7 @@ levels.gumball_repeat = utils.extend(levels.playlab_7, {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 16,0, 0, 0, 0, 0, 0],
+    [0, 16, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
@@ -967,7 +967,7 @@ levels.penguin_ouch =  {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [16,0, 0, 0,16, 0, 0, 0],
+    [16, 0, 0, 0, 16, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -1039,7 +1039,7 @@ levels.penguin_touch_octopus = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [16,0, 0, 0,16, 0,16, 0],
+    [16, 0, 0, 0, 16, 0, 16, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -1117,7 +1117,7 @@ levels.playlab_8 = {
   ],
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0,16, 0, 0, 0, 0],
+    [0, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -1144,22 +1144,22 @@ levels.playlab_8 = {
     '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20"></block>' +
     '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
       '<statement name="DO">' +
-        blockUtils.blockWithNext('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400},
-          blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400})
+        blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 2, DISTANCE: 400},
+          blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 8, DISTANCE: 400})
         ) +
       '</statement>' +
     '</block>' +
     '<block type="studio_whenLeft" deletable="false" x="20" y="300"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
+      blockOfType('studio_move', {SPRITE: 0, DIR: 8}) +
     '</next></block>' +
     '<block type="studio_whenRight" deletable="false" x="20" y="400"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
+      blockOfType('studio_move', {SPRITE: 0, DIR: 2}) +
     '</next></block>' +
     '<block type="studio_whenUp" deletable="false" x="20" y="500"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
+      blockOfType('studio_move', {SPRITE: 0, DIR: 1}) +
     '</next></block>' +
     '<block type="studio_whenDown" deletable="false" x="20" y="600"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
+      blockOfType('studio_move', {SPRITE: 0, DIR: 4}) +
     '</next></block>'
 
 };
@@ -1199,7 +1199,7 @@ levels.change_background_and_speed =  {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [16,0, 0, 0,16, 0,16, 0],
+    [16, 0, 0, 0, 16, 0, 16, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -1300,7 +1300,7 @@ levels.playlab_9 = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [16,0, 0, 0, 0, 0,16, 0],
+    [16, 0, 0, 0, 0, 0, 16, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -1497,7 +1497,7 @@ levels.gumball_join_food_fight = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [16,0, 0, 0, 0, 16,0, 0],
+    [16, 0, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -1513,10 +1513,10 @@ levels.gumball_join_food_fight = {
     ),
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>',
-  'progressConditions' : [
-    { required: { 'setEmotion': true, 'throwProjectile': true},
-      result: { success: true} },
-    { required: { 'timedOut': true}, result: {success: false}}
+  'progressConditions': [
+    {required: {'setEmotion': true, 'throwProjectile': true},
+      result: {success: true}},
+    {required: {'timedOut': true}, result: {success: false}}
   ]
 };
 
@@ -1546,13 +1546,13 @@ levels.sandbox =  {
   'spritesHiddenToStart': true,
   'freePlay': true,
   'map': [
-    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 16, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 16, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 16, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   'toolbox':
@@ -1609,14 +1609,14 @@ levels.k1_6 = {
   'spritesHiddenToStart': true,
   'freePlay': true,
   'map': [
-    [16, 0,16, 0,16, 0,16, 0],
-    [ 0,16, 0,16, 0,16, 0, 0],
-    [16, 0,16, 0,16, 0,16, 0],
-    [ 0,16, 0,16, 0,16, 0, 0],
-    [16, 0,16, 0,16, 0,16, 0],
-    [ 0,16, 0,16, 0,16, 0, 0],
-    [16,16,16,16,16,16,16, 0],
-    [ 0, 0, 0, 0, 0, 0, 0, 0]
+    [16, 0, 16, 0, 16, 0, 16, 0],
+    [0, 16, 0, 16, 0, 16, 0, 0],
+    [16, 0, 16, 0, 16, 0, 16, 0],
+    [0, 16, 0, 16, 0, 16, 0, 0],
+    [16, 0, 16, 0, 16, 0, 16, 0],
+    [0, 16, 0, 16, 0, 16, 0, 0],
+    [16, 16, 16, 16, 16, 16, 16, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   'isK1': true,
   softButtons: [],
@@ -1656,7 +1656,7 @@ levels.k1_block_test = utils.extend(levels['99'], {
 
 // you can get here via http://learn.code.org/2014/11, which is semi-hidden
 levels.full_sandbox =  {
-  'scrollbars' : true,
+  'scrollbars': true,
   'requiredBlocks': [
   ],
   'scale': {
@@ -1675,13 +1675,13 @@ levels.full_sandbox =  {
   'spritesHiddenToStart': true,
   'freePlay': true,
   'map': [
-    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 16, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 16, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 16, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   'toolbox':
@@ -1817,29 +1817,29 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
   'map': [
-    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 16, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 16, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 16, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   'codeFunctions': {
     // Play Lab
-    "setSprite": { 'category': 'Play Lab', noAutocomplete: false },
-    "setBackground": { 'category': 'Play Lab'  },
-    "move": { 'category': 'Play Lab', noAutocomplete: false  },
-    "playSound": { 'category': 'Play Lab' },
-    "changeScore": { 'category': 'Play Lab', noAutocomplete: false },
-    "setSpritePosition": { 'category': 'Play Lab', noAutocomplete: false  },
-    "setSpriteSpeed": { 'category': 'Play Lab', noAutocomplete: false  },
-    "setSpriteEmotion": { 'category': 'Play Lab', noAutocomplete: false  },
-    "setSpriteSize": { 'category': 'Play Lab', noAutocomplete: false  },
-    "throwProjectile": { 'category': 'Play Lab', noAutocomplete: false  },
-    "vanish": { 'category': 'Play Lab', noAutocomplete: false  },
-    "onEvent": { 'category': 'Play Lab', noAutocomplete: false  },
+    "setSprite": {'category': 'Play Lab', noAutocomplete: false},
+    "setBackground": {'category': 'Play Lab'},
+    "move": {'category': 'Play Lab', noAutocomplete: false},
+    "playSound": {'category': 'Play Lab'},
+    "changeScore": {'category': 'Play Lab', noAutocomplete: false},
+    "setSpritePosition": {'category': 'Play Lab', noAutocomplete: false},
+    "setSpriteSpeed": {'category': 'Play Lab', noAutocomplete: false},
+    "setSpriteEmotion": {'category': 'Play Lab', noAutocomplete: false},
+    "setSpriteSize": {'category': 'Play Lab', noAutocomplete: false},
+    "throwProjectile": {'category': 'Play Lab', noAutocomplete: false},
+    "vanish": {'category': 'Play Lab', noAutocomplete: false},
+    "onEvent": {'category': 'Play Lab', noAutocomplete: false},
 
     // Control
     "forLoop_i_0_4": null,
@@ -1888,7 +1888,7 @@ levels.js_hoc2015_move_right = {
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
   'background': 'main',
-  'music': [ 'song1' ],
+  'music': ['song1'],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1944,11 +1944,11 @@ levels.js_hoc2015_move_right = {
       }
     }
   ],
-  'progressConditions' : [
-    { required: { 'allGoalsVisited': true },
-      result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false },
-      result: { success: false, message: msg.failedHasAllGoals() } }
+  'progressConditions': [
+    {required: {'allGoalsVisited': true},
+      result: {success: true, message: msg.successHasAllGoals()}},
+    {required: {'timedOut': true, 'allGoalsVisited': false},
+      result: {success: false, message: msg.failedHasAllGoals()}}
   ]
 };
 
@@ -1958,7 +1958,7 @@ levels.js_hoc2015_move_right_down = {
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
   'background': 'main',
-  'music': [ 'song2' ],
+  'music': ['song2'],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1993,11 +1993,11 @@ levels.js_hoc2015_move_right_down = {
   'goalOverride': {
     'goalImage': 'goal2'
   },
-  'progressConditions' : [
-    { required: { 'allGoalsVisited': true },
-      result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false },
-      result: { success: false, message: msg.failedHasAllGoals() } }
+  'progressConditions': [
+    {required: {'allGoalsVisited': true},
+      result: {success: true, message: msg.successHasAllGoals()}},
+    {required: {'timedOut': true, 'allGoalsVisited': false},
+      result: {success: false, message: msg.failedHasAllGoals()}}
   ]
 };
 
@@ -2007,7 +2007,7 @@ levels.js_hoc2015_move_backtrack = {
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
   'background': 'main',
-  'music': [ 'song3' ],
+  'music': ['song3'],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -2042,13 +2042,13 @@ levels.js_hoc2015_move_backtrack = {
   'goalOverride': {
     'goalImage': 'goal1'
   },
-  'progressConditions' : [
-    { required: { 'touchedHazardsAtOrAbove': 1 },
-      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
-    { required: { 'allGoalsVisited': true },
-      result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false },
-      result: { success: false, message: msg.failedHasAllGoals() } }
+  'progressConditions': [
+    {required: {'touchedHazardsAtOrAbove': 1},
+      result: {success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true}},
+    {required: {'allGoalsVisited': true},
+      result: {success: true, message: msg.successHasAllGoals()}},
+    {required: {'timedOut': true, 'allGoalsVisited': false},
+      result: {success: false, message: msg.failedHasAllGoals()}}
   ]
 };
 
@@ -2059,7 +2059,7 @@ levels.js_hoc2015_move_diagonal = {
   executePaletteApisOnly: true,
   'textModeAtStart': true,
   'background': 'main',
-  'music': [ 'song4' ],
+  'music': ['song4'],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -2095,13 +2095,13 @@ levels.js_hoc2015_move_diagonal = {
   'goalOverride': {
     'goalImage': 'goal1'
   },
-  'progressConditions' : [
-    { required: { 'touchedHazardsAtOrAbove': 1 },
-      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
-    { required: { 'allGoalsVisited': true },
-      result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false },
-      result: { success: false, message: msg.failedHasAllGoals() } }
+  'progressConditions': [
+    {required: {'touchedHazardsAtOrAbove': 1},
+      result: {success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true}},
+    {required: {'allGoalsVisited': true},
+      result: {success: true, message: msg.successHasAllGoals()}},
+    {required: {'timedOut': true, 'allGoalsVisited': false},
+      result: {success: false, message: msg.failedHasAllGoals()}}
   ],
   "callouts": [
     {
@@ -2131,7 +2131,7 @@ levels.js_hoc2015_move_around = {
   executePaletteApisOnly: true,
   'textModeAtStart': true,
   'background': 'main',
-  'music': [ 'song9' ],
+  'music': ['song9'],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -2167,13 +2167,13 @@ levels.js_hoc2015_move_around = {
   'goalOverride': {
     'goalImage': 'goal2'
   },
-  'progressConditions' : [
-    { required: { 'touchedHazardsAtOrAbove': 1 },
-      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
-    { required: { 'allGoalsVisited': true },
-      result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false },
-      result: { success: false, message: msg.failedHasAllGoals() } }
+  'progressConditions': [
+    {required: {'touchedHazardsAtOrAbove': 1},
+      result: {success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true}},
+    {required: {'allGoalsVisited': true},
+      result: {success: true, message: msg.successHasAllGoals()}},
+    {required: {'timedOut': true, 'allGoalsVisited': false},
+      result: {success: false, message: msg.failedHasAllGoals()}}
   ]
 };
 
@@ -2183,7 +2183,7 @@ levels.js_hoc2015_move_finale = {
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
   'background': 'main',
-  'music': [ 'song8' ],
+  'music': ['song8'],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -2219,13 +2219,13 @@ levels.js_hoc2015_move_finale = {
   'goalOverride': {
     'goalImage': 'goal2'
   },
-  'progressConditions' : [
-    { required: { 'touchedHazardsAtOrAbove': 1 },
-      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
-    { required: { 'allGoalsVisited': true },
-      result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false },
-      result: { success: false, message: msg.failedHasAllGoals() } }
+  'progressConditions': [
+    {required: {'touchedHazardsAtOrAbove': 1},
+      result: {success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true}},
+    {required: {'allGoalsVisited': true},
+      result: {success: true, message: msg.successHasAllGoals()}},
+    {required: {'timedOut': true, 'allGoalsVisited': false},
+      result: {success: false, message: msg.failedHasAllGoals()}}
   ],
   "callouts": [
     {
@@ -2257,7 +2257,7 @@ levels.js_hoc2015_event_two_items = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'hoth',
-  'music': [ 'song7' ],
+  'music': ['song7'],
   'wallMap': 'blank',
   'softButtons': ['downButton', 'upButton'],
   'codeFunctions': {
@@ -2299,10 +2299,10 @@ levels.js_hoc2015_event_two_items = {
     'goalAnimation': 'animatedGoal',
     'goalRenderOffsetX': 0
   },
-  'progressConditions' : [
-    { required: { 'allGoalsVisited': true },
-      result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true },
+  'progressConditions': [
+    {required: {'allGoalsVisited': true},
+      result: {success: true, message: msg.successCharacter1()}},
+    {required: {'timedOut': true},
       result: {
         success: false,
         message: msg.failedTwoItemsTimeout(),
@@ -2355,7 +2355,7 @@ levels.js_hoc2015_event_four_items = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'hoth',
-  'music': [ 'song5' ],
+  'music': ['song5'],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2400,10 +2400,10 @@ levels.js_hoc2015_event_four_items = {
     'goalAnimation': 'animatedGoal'
   },
 
-  'progressConditions' : [
-    { required: { 'allGoalsVisited': true },
-      result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true },
+  'progressConditions': [
+    {required: {'allGoalsVisited': true},
+      result: {success: true, message: msg.successCharacter1()}},
+    {required: {'timedOut': true},
       result: {
         success: false,
         message: msg.failedFourItemsTimeout(),
@@ -2422,7 +2422,7 @@ levels.js_hoc2015_score =
   preventUserDefinedFunctions: true,
   'editCode': true,
   'background': 'hoth',
-  'music': [ 'song6' ],
+  'music': ['song6'],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
@@ -2430,7 +2430,7 @@ levels.js_hoc2015_score =
   },
   'codeFunctions': {
     'playSound': null,
-    'addPoints': { params: ["100"] },
+    'addPoints': {params: ["100"]},
 
     'whenGetRebelPilot': null
   },
@@ -2479,17 +2479,17 @@ levels.js_hoc2015_score =
     // returns null  The progressConditions will take care of completion.
     successCondition: function () { return false; }
   },
-  'progressConditions' : [
+  'progressConditions': [
     // complete success
-    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 900 },
-      result: { success: true, message: msg.successCharacter1() } },
+    {required: {'allGoalsVisited': true, 'currentPointsAtOrAbove': 900},
+      result: {success: true, message: msg.successCharacter1()}},
 
     // timed out: not enough goals
-    { required: { 'timedOut': true, 'allGoalsVisited': false },
-      result: { success: false, message: msg.failedScoreTimeout() } },
+    {required: {'timedOut': true, 'allGoalsVisited': false},
+      result: {success: false, message: msg.failedScoreTimeout()}},
 
     // got all the goals, but not enough points
-    { required: { 'allGoalsVisited': true },
+    {required: {'allGoalsVisited': true},
       result: {
         success: false,
         message: msg.failedScoreScore(),
@@ -2545,13 +2545,13 @@ levels.js_hoc2015_win_lose = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'endor',
-  'music': [ 'song9' ],
+  'music': ['song9'],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
     'playSound': null,
-    'addPoints': { params: ["100"] },
-    'removePoints': { params: ["100"] },
+    'addPoints': {params: ["100"]},
+    'removePoints': {params: ["100"]},
     'whenGetRebelPilot': null,
     'whenGetStormtrooper': null,
     'whenGetMynock': null,
@@ -2609,17 +2609,17 @@ levels.js_hoc2015_win_lose = {
     }
   ],
 
-  'progressConditions' : [
+  'progressConditions': [
     // Got all items, not enough points
-    { required: { 'gotAllItems': true, 'currentPointsBelow': 200},
-      result: { message: msg.failedWinLoseScore(), blocklyMessage: msg.failedWinLoseScoreBlockly() } },
+    {required: {'gotAllItems': true, 'currentPointsBelow': 200},
+      result: {message: msg.failedWinLoseScore(), blocklyMessage: msg.failedWinLoseScoreBlockly()}},
 
     // Timed out: not enough items, not enough points
-    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 },
-      result: { success: false, message: msg.failedWinLoseTimeout() } },
+    {required: {'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200},
+      result: {success: false, message: msg.failedWinLoseTimeout()}},
 
     // Timed out: enough items, not enough points
-    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 },
+    {required: {'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200},
       result: {
         success: false,
         message: msg.failedWinLoseScore(),
@@ -2628,7 +2628,7 @@ levels.js_hoc2015_win_lose = {
     },
 
     // Timed out: not enough items, enough points
-    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 },
+    {required: {'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200},
       result: {
         success: false,
         message: msg.failedWinLoseGoals(),
@@ -2637,8 +2637,8 @@ levels.js_hoc2015_win_lose = {
     },
 
     // Success: enough items, enough points
-    { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 },
-      result: { success: true, message: msg.successCharacter1() } }
+    {required: {'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200},
+      result: {success: true, message: msg.successCharacter1()}}
   ]
 };
 
@@ -2649,13 +2649,13 @@ levels.js_hoc2015_add_characters = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'endor',
-  'music': [ 'song11' ],
+  'music': ['song11'],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': { params: ['"PufferPig"'] },
-    'addPoints': { params: ["1000"] },
-    'removePoints': { params: ["1000"] },
+    'addCharacter': {params: ['"PufferPig"']},
+    'addPoints': {params: ["1000"]},
+    'removePoints': {params: ["1000"]},
     'playSound': null,
 
     'whenGetPufferPig': null,
@@ -2711,7 +2711,7 @@ levels.js_hoc2015_add_characters = {
       'element_id': '.droplet-gutter-line:nth-of-type(3)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
-        'content' : {
+        'content': {
           'text': msg.calloutPutCommandsHereRunStart(),
         },
         'hide': {
@@ -2724,17 +2724,17 @@ levels.js_hoc2015_add_characters = {
       }
     }
   ],
-  'progressConditions' : [
-    { required: { 'createdSpecificItemsBelow': { className: "pufferpig", count: 3 } },
+  'progressConditions': [
+    {required: {'createdSpecificItemsBelow': {className: "pufferpig", count: 3}},
       result: {
         success: false,
         message: msg.failedAddCharactersTimeout(),
         blocklyMessage: msg.failedAddCharactersTimeoutBlockly()
       }
     },
-    { required: { 'collectedSpecificItemsAtOrAbove': { className: "pufferpig", count: 3 } },
-      result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true },
+    {required: {'collectedSpecificItemsAtOrAbove': {className: "pufferpig", count: 3}},
+      result: {success: true, message: msg.successCharacter1()}},
+    {required: {'timedOut': true},
       result: {
         success: false,
         message: msg.failedAddCharactersTimeout(),
@@ -2750,11 +2750,11 @@ levels.js_hoc2015_chain_characters = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'starship',
-  'music': [ 'song13' ],
+  'music': ['song13'],
   'wallMap': 'horizontal',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': { params: ['"Mynock"'] },
+    'addCharacter': {params: ['"Mynock"']},
     'addPoints': null,
     'removePoints': null,
     'playSound': null,
@@ -2807,18 +2807,18 @@ levels.js_hoc2015_chain_characters = {
   'autoArrowSteer': true,
   'timeoutFailureTick': 1800, // 60 seconds
   'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
-  'progressConditions' : [
-    { required: { 'collectedSpecificItemsAtOrAbove': { className: "mynock", count: 8 } },
-      result: { success: true, message: msg.successCharacter1() } },
-    { required: {'timedOut': true, collectedSpecificItemsAtOrAbove: { className: "mynock", count: 5 } },
-      result: { success: false, canPass: true, message: msg.failedChainCharactersTimeoutGotSome() } },
-    { required: {
-        'collectedSpecificItemsAtOrAbove': { className: "tauntaun", count: 4 },
-        'createdSpecificItemsBelow': { className: "mynock", count: 5 }
+  'progressConditions': [
+    {required: {'collectedSpecificItemsAtOrAbove': {className: "mynock", count: 8}},
+      result: {success: true, message: msg.successCharacter1()}},
+    {required: {'timedOut': true, collectedSpecificItemsAtOrAbove: {className: "mynock", count: 5}},
+      result: {success: false, canPass: true, message: msg.failedChainCharactersTimeoutGotSome()}},
+    {required: {
+        'collectedSpecificItemsAtOrAbove': {className: "tauntaun", count: 4},
+        'createdSpecificItemsBelow': {className: "mynock", count: 5}
       },
-      result: { success: false, message: msg.failedChainCharactersTimeout() } },
-    { required: { 'timedOut': true },
-      result: { success: false, message: msg.failedChainCharactersTimeout() } },
+      result: {success: false, message: msg.failedChainCharactersTimeout()}},
+    {required: {'timedOut': true},
+      result: {success: false, message: msg.failedChainCharactersTimeout()}},
   ],
   'callouts': [
     {
@@ -2826,7 +2826,7 @@ levels.js_hoc2015_chain_characters = {
       'element_id': '.droplet-gutter-line:nth-of-type(9)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
-        'content' : {
+        'content': {
           'text': msg.calloutPlaceTwoWhenTauntaun(),
         },
         'hide': {
@@ -2851,11 +2851,11 @@ levels.js_hoc2015_multiply_characters = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'starship',
-  'music': [ 'song12' ],
+  'music': ['song12'],
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': { params: ['"MouseDroid"'] },
+    'addCharacter': {params: ['"MouseDroid"']},
     'playSound': null,
     'addPoints': null,
     'removePoints': null,
@@ -2894,17 +2894,17 @@ levels.js_hoc2015_multiply_characters = {
   'autoArrowSteer': true,
   'timeoutFailureTick': 2250, // 75 seconds
   'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
-  'progressConditions' : [
-    { required: { 'collectedItemsAtOrAbove': 20 },
-      result: { success: true, message: msg.successCharacter1() } },
-    { required: {
-        'collectedSpecificItemsAtOrAbove': { className: "mousedroid", count: 1 },
-        'createdSpecificItemsBelow': { className: "mousedroid", count: 2 }
+  'progressConditions': [
+    {required: {'collectedItemsAtOrAbove': 20},
+      result: {success: true, message: msg.successCharacter1()}},
+    {required: {
+        'collectedSpecificItemsAtOrAbove': {className: "mousedroid", count: 1},
+        'createdSpecificItemsBelow': {className: "mousedroid", count: 2}
       },
-      result: { success: false, message: msg.failedMultiplyCharactersTimeout() } },
-    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2},
-      result: { success: false, canPass: true, message: msg.failedMultiplyCharactersTimeoutGotSome() } },
-    { required: { 'timedOut': true },
+      result: {success: false, message: msg.failedMultiplyCharactersTimeout()}},
+    {required: {'timedOut': true, 'collectedItemsAtOrAbove': 2},
+      result: {success: false, canPass: true, message: msg.failedMultiplyCharactersTimeoutGotSome()}},
+    {required: {'timedOut': true},
       result: {
         success: false,
         message: msg.failedMultiplyCharactersTimeout(),
@@ -2918,7 +2918,7 @@ levels.js_hoc2015_multiply_characters = {
       'element_id': '#droplet_palette_block_whenGetMouseDroid',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
-        'content' : {
+        'content': {
           'text': msg.calloutPlaceTwo(),
         },
         'hide': {
@@ -2939,11 +2939,11 @@ levels.js_hoc2015_change_setting = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'starship',
-  'music': [ 'song14' ],
+  'music': ['song14'],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'setDroid': { params: ['"C-3PO"'] },
+    'setDroid': {params: ['"C-3PO"']},
     'setBackground': null,
     'setDroidSpeed': null,
     'setMap': null,
@@ -3016,7 +3016,7 @@ levels.js_hoc2015_change_setting = {
       'id': 'playlab:js_hoc2015_change_setting:setMap',
       'element_id': '#droplet_palette_block_setDroid',
       'qtip_config': {
-        'content' : {
+        'content': {
           'text': msg.calloutSetDroidAndSpeed(),
         },
         'position': {
@@ -3026,16 +3026,16 @@ levels.js_hoc2015_change_setting = {
       }
     }
   ],
-  'progressConditions' : [
+  'progressConditions': [
     // Collected all the items and set the right properties?  Success.
-    { required: { 'setSprite': true, 'setDroidSpeed': true, 'collectedItemsAtOrAbove': 3 },
-      result: { success: true, message: msg.successGenericCharacter() } },
+    {required: {'setSprite': true, 'setDroidSpeed': true, 'collectedItemsAtOrAbove': 3},
+      result: {success: true, message: msg.successGenericCharacter()}},
     // If all items are collected, but either property not set?  Immediate failure.
-    { required: { 'collectedItemsAtOrAbove': 3 },
-      result: { success: false, message: msg.failedChangeSettingSettings() } },
+    {required: {'collectedItemsAtOrAbove': 3},
+      result: {success: false, message: msg.failedChangeSettingSettings()}},
     // Timed out and obviously collected not enough items.
-    { required: { 'timedOut': true },
-      result: { success: false, message: msg.failedChangeSettingTimeout() } }
+    {required: {'timedOut': true},
+      result: {success: false, message: msg.failedChangeSettingTimeout()}}
   ]
 };
 
@@ -3095,51 +3095,51 @@ levels.js_hoc2015_event_free = {
   'editCode': true,
   'freePlay': true,
   'background': 'endor',
-  'music': [ 'song15' ],
+  'music': ['song15'],
   'wallMap': 'blank',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'setDroid': { 'category': 'Commands' },
-    'setBackground': { 'category': 'Commands' },
-    'setDroidSpeed': { 'category': 'Commands' },
-    'setMap': { 'category': 'Commands' },
-    'playSound': { 'category': 'Commands' },
-    'addCharacter': { 'category': 'Commands' },
-    'moveSlow': { 'category': 'Commands' },
-    'moveNormal': { 'category': 'Commands' },
-    'moveFast': { 'category': 'Commands' },
-    'addPoints': { 'category': 'Commands' },
-    'removePoints': { 'category': 'Commands' },
-    'endGame': { 'category': 'Commands' },
+    'setDroid': {'category': 'Commands'},
+    'setBackground': {'category': 'Commands'},
+    'setDroidSpeed': {'category': 'Commands'},
+    'setMap': {'category': 'Commands'},
+    'playSound': {'category': 'Commands'},
+    'addCharacter': {'category': 'Commands'},
+    'moveSlow': {'category': 'Commands'},
+    'moveNormal': {'category': 'Commands'},
+    'moveFast': {'category': 'Commands'},
+    'addPoints': {'category': 'Commands'},
+    'removePoints': {'category': 'Commands'},
+    'endGame': {'category': 'Commands'},
 
-    'goRight': { 'category': 'Commands' },
-    'goLeft': { 'category': 'Commands' },
-    'goUp': { 'category': 'Commands' },
-    'goDown': { 'category': 'Commands' },
+    'goRight': {'category': 'Commands'},
+    'goLeft': {'category': 'Commands'},
+    'goUp': {'category': 'Commands'},
+    'goDown': {'category': 'Commands'},
 
-    'whenLeft': { 'category': 'Events' },
-    'whenRight': { 'category': 'Events' },
-    'whenUp': { 'category': 'Events' },
-    'whenDown': { 'category': 'Events' },
+    'whenLeft': {'category': 'Events'},
+    'whenRight': {'category': 'Events'},
+    'whenUp': {'category': 'Events'},
+    'whenDown': {'category': 'Events'},
 
-    'whenTouchObstacle': { 'category': 'Events' },
-    'whenGetStormtrooper': { 'category': 'Events' },
-    'whenGetRebelPilot': { 'category': 'Events' },
-    'whenGetPufferPig': { 'category': 'Events' },
-    'whenGetMynock': { 'category': 'Events' },
-    'whenGetMouseDroid': { 'category': 'Events' },
-    'whenGetTauntaun': { 'category': 'Events' },
-    'whenGetProbot': { 'category': 'Events' },
-    'whenGetCharacter': { 'category': 'Events' },
+    'whenTouchObstacle': {'category': 'Events'},
+    'whenGetStormtrooper': {'category': 'Events'},
+    'whenGetRebelPilot': {'category': 'Events'},
+    'whenGetPufferPig': {'category': 'Events'},
+    'whenGetMynock': {'category': 'Events'},
+    'whenGetMouseDroid': {'category': 'Events'},
+    'whenGetTauntaun': {'category': 'Events'},
+    'whenGetProbot': {'category': 'Events'},
+    'whenGetCharacter': {'category': 'Events'},
 
-    'whenGetAllStormtroopers': { 'category': 'Events' },
-    'whenGetAllRebelPilots': { 'category': 'Events' },
-    'whenGetAllPufferPigs': { 'category': 'Events' },
-    'whenGetAllMynocks': { 'category': 'Events' },
-    'whenGetAllMouseDroids': { 'category': 'Events' },
-    'whenGetAllTauntauns': { 'category': 'Events' },
-    'whenGetAllProbots': { 'category': 'Events' },
-    'whenGetAllCharacters': { 'category': 'Events' }
+    'whenGetAllStormtroopers': {'category': 'Events'},
+    'whenGetAllRebelPilots': {'category': 'Events'},
+    'whenGetAllPufferPigs': {'category': 'Events'},
+    'whenGetAllMynocks': {'category': 'Events'},
+    'whenGetAllMouseDroids': {'category': 'Events'},
+    'whenGetAllTauntauns': {'category': 'Events'},
+    'whenGetAllProbots': {'category': 'Events'},
+    'whenGetAllCharacters': {'category': 'Events'}
   },
   'startBlocks': [
     'setBackground("Endor");',
@@ -3168,7 +3168,7 @@ levels.js_hoc2015_event_free = {
   'tapSvgToRunAndReset': true,
   'delayCompletion': 2000,
   'floatingScore': true,
-  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 16, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': msg.hoc2015_event_free_instructions(),
   'instructions2': msg.hoc2015_event_free_instructions2(),
@@ -3179,7 +3179,7 @@ levels.js_hoc2015_event_free = {
       'id': 'playlab:js_hoc2015_event_free:clickCategory',
       'element_id': '.droplet-palette-group-header.green',
       'qtip_config': {
-        'content' : {
+        'content': {
           'text': msg.calloutClickEvents(),
         },
         'position': {
@@ -3193,7 +3193,7 @@ levels.js_hoc2015_event_free = {
       'element_id': '#finishButton',
       'on': 'finishButtonShown',
       'qtip_config': {
-        'content' : {
+        'content': {
           'text': msg.calloutFinishButton(),
         },
         'position': {

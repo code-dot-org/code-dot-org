@@ -29,7 +29,7 @@ var MarkdownInstructions = function (props) {
     <div
       className='instructions-markdown'
       style={style}
-      dangerouslySetInnerHTML={{ __html: props.renderedMarkdown }}/>
+      dangerouslySetInnerHTML={{__html: props.renderedMarkdown}}/>
   );
 };
 

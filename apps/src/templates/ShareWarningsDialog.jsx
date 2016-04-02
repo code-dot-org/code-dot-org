@@ -12,8 +12,8 @@ var SharingWarningsDialog = module.exports = React.createClass({
     handleTooYoung: React.PropTypes.func.isRequired
   },
 
-  getInitialState: function() {
-    return { modalIsOpen: !this.props.is13Plus || this.props.showStoreDataAlert };
+  getInitialState: function () {
+    return {modalIsOpen: !this.props.is13Plus || this.props.showStoreDataAlert};
   },
 
   componentDidMount: function () {
@@ -24,7 +24,7 @@ var SharingWarningsDialog = module.exports = React.createClass({
     }
   },
 
-  handleClose: function() {
+  handleClose: function () {
     this.setState({modalIsOpen: false});
     this.props.handleClose();
   },

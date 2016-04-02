@@ -7,9 +7,9 @@ var blockUtils = require('../block_utils');
 module.exports = {
   'eval1': {
     solutionBlocks: blockUtils.mathBlockXml('functional_star', {
-      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'green' } ),
-      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
-      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 200 } )
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'green'} ),
+      'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'solid'}),
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 200} )
     }),
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
@@ -47,9 +47,9 @@ module.exports = {
       blockUtils.blockOfType('functional_boolean')
     ),
     startBlocks: blockUtils.mathBlockXml('functional_star', {
-      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
-      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
-      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 200 } )
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, {VAL: 'black'} ),
+      'STYLE': blockUtils.mathBlockXml('functional_string', null, {VAL: 'solid'}),
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, {NUM: 200} )
     }),
     requiredBlocks: '',
     freePlay: false

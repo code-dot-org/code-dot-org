@@ -290,7 +290,7 @@ NetSimSendPanel.prototype.removePacket_ = function (packet) {
   // Remove from DOM
   var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   packet.getRoot()
-      .slideUp('fast', function() {
+      .slideUp('fast', function () {
         $(this).remove();
         updateLayout();
       });
@@ -348,7 +348,7 @@ NetSimSendPanel.prototype.onContentChange_ = function () {
       nextBit = binaryToAB(nextBit);
     }
 
-    this.getSetWireButton().text(i18n.setWireToValue({ value: nextBit }));
+    this.getSetWireButton().text(i18n.setWireToValue({value: nextBit}));
     this.conditionallyToggleSetWireButton();
   }
 };
@@ -393,7 +393,7 @@ NetSimSendPanel.prototype.onAddPacketButtonPress_ = function (jQueryEvent) {
 
   // Scroll to end of packet area
   var scrollingArea = this.getBody().find('.send-panel-packets');
-  scrollingArea.animate({ scrollTop: scrollingArea[0].scrollHeight }, 'fast');
+  scrollingArea.animate({scrollTop: scrollingArea[0].scrollHeight}, 'fast');
 };
 
 /**

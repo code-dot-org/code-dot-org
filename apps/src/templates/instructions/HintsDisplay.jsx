@@ -44,7 +44,7 @@ var HintsDisplay = React.createClass({
     if (hintsToShow && hintsToShow.length) {
       seenHints = (<div>
         <h1>
-          <Lightbulb size={32} style={{ margin: "-9px 9px -9px -5px" }}/>
+          <Lightbulb size={32} style={{margin: "-9px 9px -9px -5px"}}/>
           { this.props.hintReviewTitle }
         </h1>
         <ol>
@@ -59,7 +59,7 @@ var HintsDisplay = React.createClass({
     if (!this.state.showNextUnseenHint && this.props.unseenHints && this.props.unseenHints.length) {
       viewHintButton = (
         <button id="hint-button" onClick={ this.viewHint } className="lightbulb-button">
-          <Lightbulb size={32} style={{ margin: "-9px 0px -9px -5px" }}/>
+          <Lightbulb size={32} style={{margin: "-9px 0px -9px -5px"}}/>
           {msg.hintSelectNewHint()}
         </button>
       );

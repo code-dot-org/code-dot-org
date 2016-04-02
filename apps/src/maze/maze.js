@@ -745,7 +745,7 @@ var createPegmanAnimation = function (options) {
   * direction required which direction the pegman is facing at.
   * animationRow which row of the sprite sheet the pegman animation needs
   */
-var updatePegmanAnimation = function(options) {
+var updatePegmanAnimation = function (options) {
   var rect = document.getElementById(options.idStr + 'PegmanClipRect');
   rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
   rect.setAttribute('y', getPegmanYForRow(options.row));
@@ -1286,7 +1286,7 @@ Maze.scheduleAnimations = function (singleStep) {
  * @param {boolean} spotlightBlocks Whether or not we should highlight entire blocks
  * @param {integer} timePerStep How much time we have allocated before the next step
  */
-function animateAction (action, spotlightBlocks, timePerStep) {
+function animateAction(action, spotlightBlocks, timePerStep) {
   if (action.blockId) {
     studioApp.highlight(String(action.blockId), spotlightBlocks);
   }
@@ -1341,7 +1341,7 @@ function animateAction (action, spotlightBlocks, timePerStep) {
           scheduleDance(true, timePerStep);
           break;
         default:
-          timeoutList.setTimeout(function() {
+          timeoutList.setTimeout(function () {
             studioApp.playAudio('failure');
           }, stepSpeed);
           break;
@@ -1365,7 +1365,7 @@ function animateAction (action, spotlightBlocks, timePerStep) {
   }
 }
 
-function animatedMove (direction, timeForMove) {
+function animatedMove(direction, timeForMove) {
   var positionChange = tiles.directionToDxDy(direction);
   var newX = Maze.pegmanX + positionChange.dx;
   var newY = Maze.pegmanY + positionChange.dy;
@@ -1617,7 +1617,7 @@ Maze.scheduleFail = function (forward) {
     obsIcon.setAttributeNS(
         'http://www.w3.org/1999/xlink', 'xlink:href',
         skin.obstacleAnimation);
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX + deltaX / 2,
                          Maze.pegmanY + deltaY / 2,
                          frame);

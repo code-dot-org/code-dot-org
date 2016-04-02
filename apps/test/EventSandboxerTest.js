@@ -436,14 +436,14 @@ describe('EventSandboxer', function () {
       var originalEvent = {
         type: eventType
       };
-      originalEvent[srcProperty] = { id: randomIdA };
+      originalEvent[srcProperty] = {id: randomIdA};
       var polyfilledEvent = sandboxer.sandboxEvent(originalEvent);
       assert.property(polyfilledEvent, destProperty + 'Id');
       assert.equal(polyfilledEvent[destProperty + 'Id'], randomIdA);
 
       // If both properties are present, assert that the destination property
       // keeps its own value.
-      originalEvent[destProperty] = { id: randomIdB };
+      originalEvent[destProperty] = {id: randomIdB};
       var nonPolyfilledEvent = sandboxer.sandboxEvent(originalEvent);
       assert.property(nonPolyfilledEvent, destProperty + 'Id');
       assert.equal(nonPolyfilledEvent[destProperty + 'Id'], randomIdB);
@@ -462,8 +462,8 @@ describe('EventSandboxer', function () {
       // source properties.
       var toId = 'id of ' + toProperty;
       var fromId = 'id of ' + fromProperty;
-      originalEvent[toProperty] = { id: toId };
-      originalEvent[fromProperty] = { id: fromId };
+      originalEvent[toProperty] = {id: toId};
+      originalEvent[fromProperty] = {id: fromId};
       var polyfilledEvent = sandboxer.sandboxEvent(originalEvent);
       assert.property(polyfilledEvent, 'toElementId');
       assert.equal(polyfilledEvent.toElementId, toId, 'toElementId gets value from ' + toProperty);
@@ -474,8 +474,8 @@ describe('EventSandboxer', function () {
       // keeps their own values.
       var providedToId = 'id of toElement';
       var providedFromId = 'id of fromElement';
-      originalEvent.toElement = { id: providedToId };
-      originalEvent.fromElement = { id: providedFromId };
+      originalEvent.toElement = {id: providedToId};
+      originalEvent.fromElement = {id: providedFromId};
       var nonPolyfilledEvent = sandboxer.sandboxEvent(originalEvent);
       assert.property(nonPolyfilledEvent, 'toElementId');
       assert.equal(nonPolyfilledEvent.toElementId, providedToId, 'toElementId keeps its value');

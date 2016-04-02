@@ -122,23 +122,23 @@ describe("NetSimUtils", function () {
       assert.deepEqual(['toAddress'],
           scrubHeaderSpecForBackwardsCompatibility(
               [
-                {'key':'toAddress', 'bits':4}
+                {'key': 'toAddress', 'bits': 4}
               ]));
 
       assert.deepEqual(['toAddress', 'fromAddress'],
           scrubHeaderSpecForBackwardsCompatibility(
               [
-                {'key':'toAddress', 'bits':4},
-                {'key':'fromAddress', 'bits':4}
+                {'key': 'toAddress', 'bits': 4},
+                {'key': 'fromAddress', 'bits': 4}
               ]));
 
       assert.deepEqual(['toAddress', 'fromAddress', 'packetCount', 'packetIndex'],
           scrubHeaderSpecForBackwardsCompatibility(
               [
-                {'key':'toAddress', 'bits':4},
-                {'key':'fromAddress', 'bits':4},
-                {'key':'packetCount', 'bits':4},
-                {'key':'packetIndex', 'bits':4}
+                {'key': 'toAddress', 'bits': 4},
+                {'key': 'fromAddress', 'bits': 4},
+                {'key': 'packetCount', 'bits': 4},
+                {'key': 'packetIndex', 'bits': 4}
               ]));
     });
   });

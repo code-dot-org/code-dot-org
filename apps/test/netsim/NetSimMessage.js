@@ -49,7 +49,7 @@ describe("NetSimMessage", function () {
   describe("isValid static check", function () {
     it("is minimally valid with a payload", function () {
       assert.isFalse(NetSimMessage.isValid({}));
-      assert.isTrue(NetSimMessage.isValid({ payload: '' }));
+      assert.isTrue(NetSimMessage.isValid({payload: ''}));
     });
 
     it("passes given a default-constructed NetSimMessage", function () {
@@ -88,7 +88,7 @@ describe("NetSimMessage", function () {
         assert.strictEqual(rows.length, 0, "Table is empty");
       });
 
-      NetSimMessage.send(testShard, { payload: '' }, function () {});
+      NetSimMessage.send(testShard, {payload: ''}, function () {});
 
       messageTable.refresh(function (err, rows) {
         assert.strictEqual(rows.length, 1, "Table has one row");
@@ -130,7 +130,7 @@ describe("NetSimMessage", function () {
     });
 
     it("Returns no error to its callback when successful", function () {
-      NetSimMessage.send(testShard, { payload: '' }, function (err) {
+      NetSimMessage.send(testShard, {payload: ''}, function (err) {
         assert.isNull(err, "Error is null on success");
       });
     });

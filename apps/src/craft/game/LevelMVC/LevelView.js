@@ -100,7 +100,7 @@ export default class LevelView {
       "leavesOak": ["leavesOak", "Leaves0", -100, 0],
       "leavesSpruce": ["leavesSpruce", "Leaves0", -76, 60],
 
-      "watering" : ["blocks", "Water_0", -13, 0],
+      "watering": ["blocks", "Water_0", -13, 0],
       "cropWheat": ["blocks", "Wheat0", -13, 0],
       "torch": ["torch", "Torch0", -13, 0],
 
@@ -113,17 +113,17 @@ export default class LevelView {
 
       "door": ["door", "", -12, -15],
 
-      "railsBottomLeft":         ["blocks", "Rails_BottomLeft", -13, 0],
-      "railsBottomRight":        ["blocks", "Rails_BottomRight", -13, 0],
-      "railsHorizontal":         ["blocks", "Rails_Horizontal", -13, 0],
-      "railsTopLeft":            ["blocks", "Rails_TopLeft", -13, 0],
-      "railsTopRight":           ["blocks", "Rails_TopRight", -13, 0],
-      "railsUnpoweredHorizontal":["blocks", "Rails_UnpoweredHorizontal", -13, 0],
-      "railsUnpoweredVertical":  ["blocks", "Rails_UnpoweredVertical", -13, 0],
-      "railsVertical":           ["blocks", "Rails_Vertical", -13, -0],
-      "railsPoweredHorizontal":  ["blocks", "Rails_PoweredHorizontal", -13, 0],
-      "railsPoweredVertical":    ["blocks", "Rails_PoweredVertical", -13, 0],
-      "railsRedstoneTorch":      ["blocks", "Rails_RedstoneTorch", -12, 9],
+      "railsBottomLeft": ["blocks", "Rails_BottomLeft", -13, 0],
+      "railsBottomRight": ["blocks", "Rails_BottomRight", -13, 0],
+      "railsHorizontal": ["blocks", "Rails_Horizontal", -13, 0],
+      "railsTopLeft": ["blocks", "Rails_TopLeft", -13, 0],
+      "railsTopRight": ["blocks", "Rails_TopRight", -13, 0],
+      "railsUnpoweredHorizontal": ["blocks", "Rails_UnpoweredHorizontal", -13, 0],
+      "railsUnpoweredVertical": ["blocks", "Rails_UnpoweredVertical", -13, 0],
+      "railsVertical": ["blocks", "Rails_Vertical", -13, -0],
+      "railsPoweredHorizontal": ["blocks", "Rails_PoweredHorizontal", -13, 0],
+      "railsPoweredVertical": ["blocks", "Rails_PoweredVertical", -13, 0],
+      "railsRedstoneTorch": ["blocks", "Rails_RedstoneTorch", -12, 9],
     };
 
     this.actionPlaneBlocks = [];
@@ -330,7 +330,7 @@ export default class LevelView {
     tween.start();
   }
 
-  playDestroyTntAnimation(position, facing, isOnBlock, tntArray , newShadingPlaneData, completionHandler) {
+  playDestroyTntAnimation(position, facing, isOnBlock, tntArray, newShadingPlaneData, completionHandler) {
     var block,
         lastAnimation;
     if (tntArray.length === 0) {
@@ -339,7 +339,7 @@ export default class LevelView {
     }
 
     this.audioPlayer.play("fuse");
-    for(var tnt in tntArray) {
+    for (var tnt in tntArray) {
         block = this.actionPlaneBlocks[this.coordinatesToIndex(tntArray[tnt])];
         lastAnimation = this.playScaledSpeed(block.animations, "explode");
     }
@@ -410,7 +410,7 @@ export default class LevelView {
 
     //if we loop the sfx that might be better?
     this.audioPlayer.play("minecart");
-    this.playPlayerAnimation("mineCart",position, facing, false);
+    this.playPlayerAnimation("mineCart", position, facing, false);
     tween = this.addResettableTween(this.playerSprite).to({
       x: (-18 + 40 * nextPosition[0]),
       y: (-32 + 40 * nextPosition[1]),
@@ -423,7 +423,7 @@ export default class LevelView {
 
 
   activateUnpoweredRails(unpoweredRails) {
-    for(var railIndex = 0; railIndex < unpoweredRails.length; railIndex += 2) {
+    for (var railIndex = 0; railIndex < unpoweredRails.length; railIndex += 2) {
       var rail = unpoweredRails[railIndex + 1];
       var position = unpoweredRails[railIndex];
       this.createActionPlaneBlock(position, rail);
@@ -432,15 +432,14 @@ export default class LevelView {
 
 
 
-  playMinecartAnimation(position, facing, isOnBlock, completionHandler, minecartTrack, unpoweredRails)
-  {
+  playMinecartAnimation(position, facing, isOnBlock, completionHandler, minecartTrack, unpoweredRails) {
     var animation;
     this.track = minecartTrack;
     this.i = 0;
 
     //start at 3,2
-    this.setPlayerPosition(3,2, isOnBlock);
-    position = [3,2];
+    this.setPlayerPosition(3, 2, isOnBlock);
+    position = [3, 2];
 
     animation = this.playLevelEndAnimation(position, facing, isOnBlock, completionHandler, false);
 
@@ -450,9 +449,8 @@ export default class LevelView {
     });
   }
 
-  playTrack(position, facing, isOnBlock, completionHandler, minecartTrack)
-  {
-    if(this.i < this.track.length) {
+  playTrack(position, facing, isOnBlock, completionHandler, minecartTrack) {
+    if (this.i < this.track.length) {
       var direction,
           arraydirection = this.track[this.i][0],
           nextPosition = this.track[this.i][1],
@@ -460,7 +458,7 @@ export default class LevelView {
       facing = this.track[this.i][2];
 
       //turn
-      if(arraydirection.substring(0,4) === "turn") {
+      if (arraydirection.substring(0, 4) === "turn") {
         direction = arraydirection.substring(5);
         this.playMinecartTurnAnimation(position, facing, isOnBlock, completionHandler, direction).onComplete.add(() => {
           this.playMinecartMoveForwardAnimation(position, facing, isOnBlock, completionHandler, nextPosition, speed).onComplete.add(() => {
@@ -468,17 +466,14 @@ export default class LevelView {
             this.playTrack(position, facing, isOnBlock, completionHandler, minecartTrack);
           });
         });
-      }
-      else {
+      } else {
         this.playMinecartMoveForwardAnimation(position, facing, isOnBlock, completionHandler, nextPosition, speed).onComplete.add(() => {
           this.playTrack(position, facing, isOnBlock, completionHandler, minecartTrack);
         });
       }
       this.i++;
-    }
-    else
-    {
-      this.playSuccessAnimation(position, facing, isOnBlock, function(){});
+    } else {
+      this.playSuccessAnimation(position, facing, isOnBlock, function (){});
       completionHandler();
     }
   }
@@ -519,7 +514,7 @@ export default class LevelView {
       var yCoord;
       var sprite;
 
-      for(var i = 0; i < createFloor.length; ++i) {
+      for (var i = 0; i < createFloor.length; ++i) {
         xCoord = createFloor[i][1];
         yCoord = createFloor[i][2];
         /*this.groundPlane[this.coordinatesToIndex([xCoord,yCoord])].kill();*/
@@ -554,8 +549,7 @@ export default class LevelView {
       this.setPlayerPosition(position[0], position[1], isOnBlock);
       tweenWToC.start();
     });
-    if(playSuccessAnimation)
-    {
+    if (playSuccessAnimation) {
       tweenWToC.onComplete.add(() => {
         this.playSuccessAnimation(position, facing, isOnBlock, completionHandler);
       });
@@ -584,21 +578,17 @@ export default class LevelView {
 
   playBlockSound(groundType) {
     var oreString = groundType.substring(0, 3);
-    if(groundType === "stone" || groundType === "cobblestone" || groundType === "bedrock" ||
+    if (groundType === "stone" || groundType === "cobblestone" || groundType === "bedrock" ||
         oreString === "ore" || groundType === "bricks") {
       this.audioPlayer.play("stepStone");
-    }
-    else if(groundType === "grass" || groundType === "dirt" || groundType === "dirtCoarse" ||
+    } else if (groundType === "grass" || groundType === "dirt" || groundType === "dirtCoarse" ||
         groundType == "wool_orange" || groundType == "wool") {
       this.audioPlayer.play("stepGrass");
-    }
-    else if(groundType === "gravel") {
+    } else if (groundType === "gravel") {
       this.audioPlayer.play("stepGravel");
-    }
-    else if(groundType === "farmlandWet") {
+    } else if (groundType === "farmlandWet") {
       this.audioPlayer.play("stepFarmland");
-    }
-    else{
+    } else {
       this.audioPlayer.play("stepWood");
     }
   }
@@ -623,7 +613,7 @@ export default class LevelView {
     newPosVec = [position[0] - oldPosition[0], position[1] - oldPosition[1]];
 
     //change offset for moving on top of blocks
-    if(isOnBlock) {
+    if (isOnBlock) {
       yOffset -= 22;
     }
 
@@ -640,8 +630,8 @@ export default class LevelView {
       tween = this.addResettableTween(this.playerSprite).to({
         x: [-18 + 40 * oldPosition[0], -18 + 40 * (oldPosition[0] + newPosVec[0]), -18 + 40 * position[0]],
         y: [-32 + 40 * oldPosition[1], -32 + 40 * (oldPosition[1] + newPosVec[1]) - 50, -32 + 40 * position[1]]
-      }, 300, Phaser.Easing.Linear.None).interpolation((v,k) => {
-        return Phaser.Math.bezierInterpolation(v,k);
+      }, 300, Phaser.Easing.Linear.None).interpolation((v, k) => {
+        return Phaser.Math.bezierInterpolation(v, k);
       });
 
       tween.onComplete.add(() => {
@@ -664,8 +654,8 @@ export default class LevelView {
     var tween = this.addResettableTween(this.playerSprite).to({
       x: [-18 + 40 * position[0], -18 + 40 * position[0], -18 + 40 * position[0]],
       y: [-32 + 40 * position[1], -32 + 40 * position[1] - 50, -32 + 40 * position[1]]
-    }, 300, Phaser.Easing.Linear.None).interpolation((v,k) => {
-      return Phaser.Math.bezierInterpolation(v,k);
+    }, 300, Phaser.Easing.Linear.None).interpolation((v, k) => {
+      return Phaser.Math.bezierInterpolation(v, k);
     });
     tween.onComplete.addOnce(() => {
       this.audioPlayer.play("fall");
@@ -701,7 +691,7 @@ export default class LevelView {
 
       jumpAnimName = "jumpUp" + direction;
 
-      if(blockTypeAtPosition !== "") {
+      if (blockTypeAtPosition !== "") {
         this.playExplosionAnimation(position, facing, position, blockTypeAtPosition, (()=>{}), false);
       }
 
@@ -816,8 +806,7 @@ export default class LevelView {
 
     let destroyOverlay = this.actionPlane.create(-12 + 40 * destroyPosition[0], -22 + 40 * destroyPosition[1], "destroyOverlay", "destroy1");
     destroyOverlay.sortOrder = this.yToIndex(destroyPosition[1]) + 2;
-    this.onAnimationEnd(destroyOverlay.animations.add("destroy", Phaser.Animation.generateFrameNames("destroy", 1, 12, "", 0), 30, false), () =>
-    {
+    this.onAnimationEnd(destroyOverlay.animations.add("destroy", Phaser.Animation.generateFrameNames("destroy", 1, 12, "", 0), 30, false), () => {
       this.actionPlaneBlocks[blockIndex] = null;
 
       if (blockToDestroy.hasOwnProperty("onBlockDestroy")) {
@@ -928,20 +917,17 @@ export default class LevelView {
     }
 
     explodeAnim.sortOrder = this.yToIndex(destroyPosition[1]) + 2;
-    this.onAnimationEnd(explodeAnim.animations.add("explode", Phaser.Animation.generateFrameNames("BlockBreakParticle", 0, 7, "", 0), 30, false), () =>
-    {
+    this.onAnimationEnd(explodeAnim.animations.add("explode", Phaser.Animation.generateFrameNames("BlockBreakParticle", 0, 7, "", 0), 30, false), () => {
       explodeAnim.kill();
       this.toDestroy.push(explodeAnim);
 
-      if(placeBlock)
-      {
+      if (placeBlock) {
         this.playPlayerAnimation("idle", playerPosition, facing, false);
         this.playItemDropAnimation(playerPosition, facing, destroyPosition, blockType, completionHandler);
       }
     });
     this.playScaledSpeed(explodeAnim.animations, "explode");
-    if(!placeBlock)
-    {
+    if (!placeBlock) {
       completionHandler();
     }
   }
@@ -1184,8 +1170,7 @@ export default class LevelView {
     facingName = this.getDirectionName(facing);
     rand = Math.trunc(Math.random() * 4) + 1;
 
-    switch(rand)
-    {
+    switch (rand) {
       case 1:
       animationName = "idle";
       break;
@@ -1383,7 +1368,7 @@ export default class LevelView {
     });
     frameList = this.generateFramesWithEndDelay("Player_", 72, 71, "Player_071", 3, 5);
     frameList.push("Player_072");
-    this.playerSprite.animations.add('lookRight_right',frameList, idleFrameRate, false).onComplete.add(()=> {
+    this.playerSprite.animations.add('lookRight_right', frameList, idleFrameRate, false).onComplete.add(()=> {
       this.playScaledSpeed(this.playerSprite.animations, "idlePause_right");
     });
     frameList = this.generateFramesWithEndDelay("Player_", 270, 269, "Player_269", 3, 5);
@@ -1605,7 +1590,7 @@ export default class LevelView {
   playRandomSheepAnimation(sprite) {
     var rand = Math.trunc(Math.random() * 20 + 1);
 
-    switch(rand) {
+    switch (rand) {
       case 1:
       case 2:
       case 3:
@@ -1651,7 +1636,7 @@ export default class LevelView {
   playRandomCreeperAnimation(sprite) {
     var rand = Math.trunc(this.yToIndex(Math.random()) + 1);
 
-    switch(rand) {
+    switch (rand) {
       case 1:
       case 2:
       case 3:
@@ -1779,7 +1764,7 @@ export default class LevelView {
         }
 
         sprite.animations.add("used", frameList, 15, true);
-        this.playAnimationWithOffset(sprite,"idle",17, 199);
+        this.playAnimationWithOffset(sprite, "idle", 17, 199);
         break;
 
       case "creeper":
@@ -1907,15 +1892,15 @@ export default class LevelView {
         yOffset = this.blocks[blockType][3];
         sprite = plane.create(xOffset + 40 * x, yOffset + plane.yOffset + 40 * y, atlas, frame);
         frameList = Phaser.Animation.generateFrameNames("LavaPop", 1, 7, "", 2);
-        for(i = 0; i < 4; ++i) {
+        for (i = 0; i < 4; ++i) {
           frameList.push("LavaPop07");
         }
         frameList = frameList.concat(Phaser.Animation.generateFrameNames("LavaPop", 8, 13, "", 2));
-        for(i = 0; i < 3; ++i) {
+        for (i = 0; i < 3; ++i) {
           frameList.push("LavaPop13");
         }
         frameList = frameList.concat(Phaser.Animation.generateFrameNames("LavaPop", 14, 30, "", 2));
-        for(i = 0; i < 8; ++i) {
+        for (i = 0; i < 8; ++i) {
           frameList.push("LavaPop01");
         }
         sprite.animations.add("idle", frameList, 5, true);
@@ -1967,8 +1952,7 @@ export default class LevelView {
 
         frameList = [];
         var animationFrames = Phaser.Animation.generateFrameNames("Door", 0, 3, "", 1);
-        for(var j = 0; j < 5; ++j)
-        {
+        for (var j = 0; j < 5; ++j) {
           frameList.push("Door0");
         }
         frameList = frameList.concat(animationFrames);
@@ -1977,7 +1961,7 @@ export default class LevelView {
         animation.enableUpdate = true;
         //play when the door starts opening
         animation.onUpdate.add(() => {
-          if(animation.frame === 1) {
+          if (animation.frame === 1) {
             this.audioPlayer.play("doorOpen");
           }
         });
@@ -1992,10 +1976,10 @@ export default class LevelView {
         sprite = plane.create(xOffset + 40 * x, yOffset + plane.yOffset + 40 * y, atlas, frame);
         frameList = Phaser.Animation.generateFrameNames("TNTexplosion", 0, 8, "", 0);
         sprite.animations.add("explode", frameList, 7, false).onComplete.add(() => {
-          this.playExplosionCloudAnimation([x,y]);
+          this.playExplosionCloudAnimation([x, y]);
           sprite.kill();
           this.toDestroy.push(sprite);
-          this.actionPlaneBlocks[this.coordinatesToIndex([x,y])] = null;
+          this.actionPlaneBlocks[this.coordinatesToIndex([x, y])] = null;
         });
         break;
 

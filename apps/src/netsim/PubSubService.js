@@ -81,7 +81,7 @@ PubSubService.PusherService = function (applicationKey) {
    * @type {Pusher}
    * @private
    */
-  this.api_ = new Pusher(applicationKey, { encrypted: true });
+  this.api_ = new Pusher(applicationKey, {encrypted: true});
 };
 
 /**

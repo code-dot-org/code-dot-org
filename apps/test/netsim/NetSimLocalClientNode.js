@@ -167,7 +167,7 @@ describe("NetSimLocalClientNode", function () {
       var err = true;
       var result = true;
       testLocalNode.connectToNode(testRemoteNode, function () {});
-      testLocalNode.sendMessage('10100110101', function (e,r) {
+      testLocalNode.sendMessage('10100110101', function (e, r) {
         err = e;
         result = r;
       });
