@@ -42,8 +42,7 @@ exports.install = function(blockly, blockInstallOptions) {
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
 
-  if (skin.id == "anna" || skin.id == "elsa")
-  {
+  if (skin.id == "anna" || skin.id == "elsa") {
     // Create a smaller palette.
     blockly.FieldColour.COLOURS = [
       Colours.FROZEN1, Colours.FROZEN2, Colours.FROZEN3,
