@@ -25,11 +25,13 @@ module.exports = {
   "rules": {
     "comma-dangle": "off",
     "curly": "error",
+    "no-array-constructor": "error",
     "no-console": "off",
     "no-empty": "off",
     "no-eval": "error",
     "no-extra-boolean-cast": "off",
     "no-implicit-globals": "error",
+    "no-new-object": "error",
     "no-undef": "error",
     "no-unused-vars": "off",
     "no-with": "error",
