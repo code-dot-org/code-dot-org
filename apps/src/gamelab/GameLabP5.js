@@ -548,15 +548,15 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   // except those on the custom marshal blocked list:
   for (var prop in this.p5) {
     if (-1 === blockedProps.indexOf(prop)) {
-      propList[prop] = [ this.p5[prop], this.p5 ];
+      propList[prop] = [this.p5[prop], this.p5];
     }
   }
 
   // Create a 'p5' object in the global namespace:
-  propList.p5 = [ { Vector: window.p5.Vector }, window ];
+  propList.p5 = [{ Vector: window.p5.Vector }, window];
 
   // Create a 'Game' object in the global namespace:
-  propList.Game = [ this.gameLabGame, this ];
+  propList.Game = [this.gameLabGame, this];
 
   return propList;
 };

@@ -1320,7 +1320,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
 
   // Sounds.
-  skin.sounds = [ 'move1', 'move2', 'move3', 'move4' ];
+  skin.sounds = ['move1', 'move2', 'move3', 'move4'];
 
   skin.soundChoices = [
     ];
@@ -1440,7 +1440,7 @@ function loadStudio(skin, assetUrl) {
     background: skin.assetUrl('background_grid.png'),
   };
 
-  skin.avatarList = [ "dog", "cat", "penguin", "dinosaur", "octopus", "witch",
+  skin.avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus", "witch",
     "bat", "bird", "dragon", "squirrel", "wizard", "alien", "ghost", "monster",
     "robot", "unicorn", "zombie", "knight", "ninja", "pirate", "caveboy",
     "cavegirl", "princess", "spacebot", "soccergirl", "soccerboy", "tennisgirl",
@@ -1624,7 +1624,7 @@ exports.load = function(assetUrl, id) {
   skin.goalSuccess = skin.assetUrl('goal_success.png');
 
   // Sounds
-  skin.builtinSounds = [ 'start', 'win', 'failure', 'flag' ];
+  skin.builtinSounds = ['start', 'win', 'failure', 'flag'];
   skin.sounds = [
     'rubber', 'crunch', 'goal1', 'goal2', 'wood', 'retro', 'slap', 'hit',
     'winpoint', 'winpoint2', 'losepoint', 'losepoint2'
