@@ -28,6 +28,7 @@ module.exports = {
     "no-console": "off",
     "no-empty": "off",
     "no-extra-boolean-cast": "off",
+    "no-implicit-globals": "error",
     "no-undef": "error",
     "no-unused-vars": "off",
     "semi": "error"
