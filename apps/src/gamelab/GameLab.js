@@ -269,7 +269,7 @@ GameLab.prototype.reset = function (ignore) {
   */
 
   this.gameLabP5.resetExecution();
-  
+
   // Import to reset these after this.gameLabP5 has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;

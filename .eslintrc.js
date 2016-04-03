@@ -25,6 +25,7 @@ module.exports = {
   "rules": {
     "comma-dangle": "off",
     "curly": "error",
+    "eol-last": "error",
     "no-array-constructor": "error",
     "no-console": "off",
     "no-empty": "off",
@@ -32,6 +33,7 @@ module.exports = {
     "no-extra-boolean-cast": "off",
     "no-implicit-globals": "error",
     "no-new-object": "error",
+    "no-trailing-spaces": "error",
     "no-undef": "error",
     "no-unused-vars": "off",
     "no-with": "error",
