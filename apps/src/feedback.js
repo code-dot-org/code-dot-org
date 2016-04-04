@@ -158,13 +158,6 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var finalLevel = (options.response &&
     (options.response.message === "no more levels"));
 
-  var userId;
-  var isABTestingHintText = this.studioApp_.localeIsEnglish() &&
-      options.response && options.response.user_id;
-  if (isABTestingHintText) {
-    userId = options.response.user_id;
-  }
-
   feedback.appendChild(
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
@@ -174,8 +167,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
       freePlay: options.level.freePlay,
-      finalLevel: finalLevel,
-      userId: userId
+      finalLevel: finalLevel
     })
   );
 
@@ -261,7 +253,12 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
           return requestMatchesFeedback;
         });
 
-    if (alreadySeen) {
+    var isABTestingHintButton;
+    if (options.response && options.response.abtests) {
+      isABTestingHintButton = options.response.abtests.hint_button;
+    }
+
+    if (alreadySeen || isABTestingHintButton) {
       // Remove "Show hint" button.  Making it invisible isn't enough,
       // because it will still take up space.
       hintRequestButton.parentNode.removeChild(hintRequestButton);
