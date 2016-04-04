@@ -1,48 +1,48 @@
 module BrowserHelpers
-  def element_has_text(selector, expectedText)
-    expectedText.gsub!('\"', '"')
+  def element_has_text(selector, expected_text)
+    expected_text.gsub!('\"', '"')
     text = @browser.execute_script("return $(\"#{selector}\").text();")
-    text.should eq expectedText
+    text.should eq expected_text
   end
 
-  def element_has_html(selector, expectedHtml)
-    expectedHtml.gsub!('\"', '"')
+  def element_has_html(selector, expected_html)
+    expected_html.gsub!('\"', '"')
     text = @browser.execute_script("return $(\"#{selector}\").html();")
-    text.should eq expectedHtml
+    text.should eq expected_html
   end
 
-  def element_has_i18n_text(selector, language, locKey)
-    locKey.gsub!('\"', '"')
+  def element_has_i18n_text(selector, language, loc_key)
+    loc_key.gsub!('\"', '"')
     text = @browser.execute_script("return $(\"#{selector}\").text();")
-    text.should eq I18n.t locKey, locale: language
+    text.should eq I18n.t loc_key, locale: language
   end
 
-  def element_contains_text(selector, expectedText)
-    expectedText.gsub!('\"', '"')
+  def element_contains_text(selector, expected_text)
+    expected_text.gsub!('\"', '"')
     text = @browser.execute_script("return $(\"#{selector}\").text();")
-    text.strip.should include expectedText
+    text.strip.should include expected_text
   end
 
-  def element_value_is(selector, expectedValue)
+  def element_value_is(selector, expected_value)
     value = @browser.execute_script("return $(\"#{selector}\").val();")
-    value.strip.should eq expectedValue
+    value.strip.should eq expected_value
   end
 
-  def element_has_id(selector, expectedId)
+  def element_has_id(selector, expected_id)
     id = @browser.execute_script("return $(\"#{selector}\")[0].id;")
-    id.should eq expectedId
+    id.should eq expected_id
   end
 
-  def element_has_attribute(selector, attribute, expectedText)
-    expectedText.gsub!('\"', '"')
+  def element_has_attribute(selector, attribute, expected_text)
+    expected_text.gsub!('\"', '"')
     text = @browser.execute_script("return $(\"#{selector}\").attr(\"#{attribute}\");")
-    text.should eq expectedText
+    text.should eq expected_text
   end
 
-  def generate_generic_drag_code(fromSelector, toSelector, target_dx, target_dy)
-    "var drag_dx = $(\"#{toSelector}\").position().left - $(\"#{fromSelector}\").position().left;" +
-        "var drag_dy = $(\"#{toSelector}\").position().top  - $(\"#{fromSelector}\").position().top;" +
-        "$(\"#{fromSelector}\").simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
+  def generate_generic_drag_code(from_selector, to_selector, target_dx, target_dy)
+    "var drag_dx = $(\"#{to_selector}\").position().left - $(\"#{from_selector}\").position().left;" +
+        "var drag_dy = $(\"#{to_selector}\").position().top  - $(\"#{from_selector}\").position().top;" +
+        "$(\"#{from_selector}\").simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 
   def wait

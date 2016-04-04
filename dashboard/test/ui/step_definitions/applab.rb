@@ -101,8 +101,8 @@ When /^I navigate to the shared version of my project$/ do
   }
 end
 
-Then(/^the palette has (\d+) blocks$/) do |numBlocks|
-  @browser.execute_script("return $('.droplet-palette-scroller-stuffing > .droplet-hover-div').length").should eq numBlocks.to_i
+Then(/^the palette has (\d+) blocks$/) do |num_blocks|
+  @browser.execute_script("return $('.droplet-palette-scroller-stuffing > .droplet-hover-div').length").should eq num_blocks.to_i
 end
 
 Then(/^the droplet code is "([^"]*)"$/) do |code|
