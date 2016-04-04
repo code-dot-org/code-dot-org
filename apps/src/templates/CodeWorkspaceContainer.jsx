@@ -50,10 +50,7 @@ var styles = {
 var CodeWorkspaceContainer = React.createClass({
   propTypes: {
     topMargin: React.PropTypes.number.isRequired,
-<<<<<<< HEAD
     hidden: React.PropTypes.bool,
-=======
->>>>>>> noviz and rtl as props. some rtl tests
     isRtl: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
@@ -72,12 +69,8 @@ var CodeWorkspaceContainer = React.createClass({
     },
       this.props.noVisualization && styles.noVisualization,
       this.props.isRtl && styles.mainRtl,
-<<<<<<< HEAD
       this.props.noVisualization && this.props.isRtl && styles.noVisualizationRtl,
       this.props.hidden && styles.hidden
-=======
-      this.props.noVisualization && this.props.isRtl && styles.noVisualizationRtl
->>>>>>> noviz and rtl as props. some rtl tests
     ];
 
     return (

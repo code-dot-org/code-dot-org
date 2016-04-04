@@ -4,6 +4,7 @@ var _ = require('../lodash');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
 var StudioAppWrapper = require('./StudioAppWrapper.jsx');
 var CodeWorkspaceContainer = require('./CodeWorkspaceContainer.jsx');
+var Radium = require('radium');
 
 /**
  * Top-level React wrapper for our standard blockly apps.
@@ -26,26 +27,26 @@ var AppView = React.createClass({
   },
 
   render: function () {
-    var isRTL = !!document.querySelector('html[dir="rtl"]');
-
     return (
-      <StudioAppWrapper
-          assetUrl={this.props.assetUrl}
-          isEmbedView={this.props.isEmbedView}
-          isShareView={this.props.isShareView}>
-        <div id="visualizationColumn">
-          <ProtectedStatefulDiv
-            contentFunction={this.props.generateVisualizationColumnHtml} />
-        </div>
-        <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <CodeWorkspaceContainer
-            topMargin={0}
-            hidden={this.props.hideSource}
-            noVisualization={this.props.noVisualization}
-            isRtl={this.props.isRtl}
-            generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
-      </StudioAppWrapper>
+      <Radium.StyleRoot>
+        <StudioAppWrapper
+            assetUrl={this.props.assetUrl}
+            isEmbedView={this.props.isEmbedView}
+            isShareView={this.props.isShareView}>
+          <div id="visualizationColumn">
+            <ProtectedStatefulDiv
+              contentFunction={this.props.generateVisualizationColumnHtml} />
+          </div>
+          <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
+          <CodeWorkspaceContainer
+              topMargin={0}
+              hidden={this.props.hideSource}
+              noVisualization={this.props.noVisualization}
+              isRtl={this.props.isRtl}
+              generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
+        </StudioAppWrapper>
+      </Radium.StyleRoot>
     );
   }
 });
-module.exports = AppView;
+module.exports = Radium(AppView);

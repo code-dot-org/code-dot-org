@@ -311,13 +311,13 @@ button.arrow:disabled {
   border: 1px solid #ddd;
 }
 
-html[dir='rtl'] .editor-column {
-   right: $visualization-width;
-}
-
-.editor-column {
-  left: $visualization-width;
-}
+// html[dir='rtl'] .editor-column {
+//    right: $visualization-width;
+// }
+//
+// .editor-column {
+//   left: $visualization-width;
+// }
 
 #codeWorkspace.pin_bottom {
   border: none;
@@ -445,9 +445,9 @@ html[dir='rtl'] div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  .editor-column {
-    left: $width;
-  }
+  // .editor-column {
+  //   left: $width;
+  // }
   html[dir='rtl'] .editor-column {
     right: $width;
   }
