@@ -18,7 +18,7 @@ var styles = {
     bottom: 0,
     marginLeft: 15, // margin gives space for vertical resizer
   },
-  mainRTL: {
+  mainRtl: {
     right: undefined,
     left: 0,
     marginRight: 15
@@ -38,8 +38,12 @@ var styles = {
     zIndex: 0
   },
   noVisualization: {
+    // Overrides left set in css
     left: 0,
     marginLeft: 0
+  },
+  noVisualizationRtl: {
+    right: 0
   }
 };
 
@@ -47,6 +51,8 @@ var CodeWorkspaceContainer = React.createClass({
   propTypes: {
     topMargin: React.PropTypes.number.isRequired,
     hidden: React.PropTypes.bool,
+    isRtl: React.PropTypes.bool.isRequired,
+    noVisualization: React.PropTypes.bool.isRequired,
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
     onSizeChange: React.PropTypes.func
   },
@@ -58,17 +64,12 @@ var CodeWorkspaceContainer = React.createClass({
   },
 
   render: function () {
-    // TODO - These probably better belong as props (and possibly in the redux
-    // store), but I'd like to get the quick and dirty fix in ASAP as RTL is
-    // currently broken
-    var noViz = window.appOptions && appOptions.app === 'jigsaw';
-    var rtl = document.querySelector('html').getAttribute('dir') === 'rtl';
-
     var mainStyle = [styles.main, {
       top: this.props.topMargin
     },
-      noViz && styles.noVisualization,
-      rtl && styles.mainRTL,
+      this.props.noVisualization && styles.noVisualization,
+      this.props.isRtl && styles.mainRtl,
+      this.props.noVisualization && this.props.isRtl && styles.noVisualizationRtl,
       this.props.hidden && styles.hidden
     ];
 

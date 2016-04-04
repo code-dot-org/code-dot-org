@@ -648,6 +648,8 @@ Maze.init = function (config) {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    noVisualization: false,
+    isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
     generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: studioApp.init.bind(studioApp, config)
