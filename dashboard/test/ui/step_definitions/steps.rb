@@ -331,7 +331,7 @@ end
 
 Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   # Add more unescaping rules here as needed.
-  expectedText.gsub!(/\\n/, "\n")
+  expected_text.gsub!(/\\n/, "\n")
   element_has_text(selector, expected_text)
 end
 
