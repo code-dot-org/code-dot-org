@@ -132,8 +132,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.draw_turn_by_constant_restricted.VALUE =
-      [30, 45, 60, 90, 120, 135, 150, 180].
-      map(function(t) {return [String(t), String(t)];});
+      [30, 45, 60, 90, 120, 135, 150, 180]
+      .map(function(t) {return [String(t), String(t)];});
 
   generator.draw_turn_by_constant_restricted = function() {
     // Generate JavaScript for turning either left or right from among a fixed
@@ -216,8 +216,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.draw_turn_inline_restricted.VALUE =
-      [30, 45, 60, 90, 120, 135, 150, 180].
-      map(function(t) {return [String(t), String(t)];});
+      [30, 45, 60, 90, 120, 135, 150, 180]
+      .map(function(t) {return [String(t), String(t)];});
 
   generator.draw_turn_inline_restricted = function() {
     // Generate JavaScript for turning either left or right from among a fixed
