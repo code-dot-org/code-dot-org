@@ -27,6 +27,15 @@
                 - else
                   %span.puzzle-number
                     = @script_level.position
+              - if @user_level.driver_user_levels.present? || @user_level.navigator_user_levels.present?
+                #worked_with
+                  %h4= t('teacher.panel.worked_with')
+                  - @user_level.driver_user_levels.each do |driver_user_level|
+                    = link_to driver_user_level.user.name, build_script_level_path(@script_level, user_id: driver_user_level.user_id, section_id: @section.id)
+                    (Driver)
+                  - @user_level.navigator_user_levels.each do |navigator_user_level|
+                    = navigator_user_level.user.name
+                    (Navigator)
               - if @user_level.submitted?
                 #submitted
                   %div= t('teacher.panel.submitted_on')
