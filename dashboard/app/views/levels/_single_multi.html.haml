@@ -16,7 +16,6 @@
     .number
       = "#{number}. "
 
-  -# Standalone levels use levels/content to show a heading
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class}
 
   - if data['questions']
@@ -32,8 +31,6 @@
         .btn {
           display: table;
         }
-
-
 
     %br/
     - unless use_tight_layout
@@ -94,15 +91,17 @@
 
   .clear
 
-:javascript
+-# Don't operate if we're a LevelGroup with a /level/ URL.
+- unless !standalone && @script_level.nil?
+  :javascript
 
-  $(document).ready(function() {
-    window["level_#{index}"] = new Multi(
-      "level_#{index}",
-      #{level.id},
-      #{standalone},
-      "#{data['type']}" == "multi2" ? 2 : 1,
-      #{data['answers'].map {|answer| answer['correct']}},
-      #{last_attempt.to_json}
-      );
-    });
+    $(document).ready(function() {
+      window["level_#{index}"] = new Multi(
+        "level_#{index}",
+        #{level.id},
+        #{standalone},
+        "#{data['type']}" == "multi2" ? 2 : 1,
+        #{data['answers'].map {|answer| answer['correct']}},
+        #{last_attempt.to_json}
+        );
+      });
