@@ -655,14 +655,20 @@ JSInterpreter.prototype.logStep_ = function () {
     return;
   }
 
+  // Log call and new expressions just before we step into a function (after the
+  // last argument has been processed). (NOTE: as a result, a single stateful
+  // async function call may appear multiple times in the log)
   if ((node.type === "CallExpression" || node.type === "NewExpression") &&
-      !state.doneCallee_) {
+      state.doneCallee_ &&
+      !state.doneExec &&
+      !node.arguments[state.n_ || 0]) {
     switch (node.callee.type) {
       case "Identifier":
-        this.executionLog.push(node.callee.name);
+        this.executionLog.push(node.callee.name + ':' + node.arguments.length);
         break;
       case "MemberExpression":
-        this.executionLog.push(JSInterpreter.getMemberExpressionName_(node.callee));
+        this.executionLog.push(JSInterpreter.getMemberExpressionName_(node.callee) +
+            ':' + node.arguments.length);
         break;
       default:
         throw "Unexpected callee node property type: " + node.object.type;
