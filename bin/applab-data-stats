@@ -1,5 +1,15 @@
 #!/usr/bin/env ruby
 
+#
+# USAGE: bin/applab-data-stats > output.csv
+#
+# This file is useful to generate per-table stats so that we can see how our data
+# APIs are being used, filtering out admins, deleted channels, etc and breaking down
+# by teachers vs students, and students in sections vs not in sections. This data can
+# help with choosing what rate limts and data size limits we should impose as well
+# as for estimating our future data storage and transfer costs.
+#
+
 require 'aws-sdk'
 require_relative '../deployment'
 require 'cdo/db'
@@ -8,7 +18,11 @@ require_relative '../shared/middleware/helpers/storage_id'
 db = Aws::DynamoDB::Client.new
 
 last_evaluated_key = nil
+# Map containing all values in the 'hash' column of the "#{rack_env}_tables"
+# table in DynamoDB.
 hash_map = {}
+# Map containing all values in the 'channel_id' column of the "#{rack_env}_tables"
+# table in DynamoDB.
 channel_map = {}
 rows = 0
 consumed_capacity = 0
@@ -32,6 +46,10 @@ begin
   last_evaluated_key = page[:last_evaluated_key]
 end while last_evaluated_key
 
+# We log things to STDERR so that we can capture only the CSV output
+# when we redirect the output to a CSV file. The cleaner approach would
+# be to take an output filename as input and log these messages to STDOUT.
+
 $stderr.puts "tables: #{hash_map.keys.length}"
 $stderr.puts "channels: #{channel_map.keys.length}"
 $stderr.puts "rows: #{rows}"
@@ -45,16 +63,17 @@ def get_item_size(item)
   item['value'].length + 2 * table_name_length + 130
 end
 
-$channel_map = {}
+# memoize channel metadata computed by querying pegasus and dashboard dbs.
+$channel_info_map = {}
 def get_channel(channel_id)
-  return $channel_map[channel_id] if $channel_map[channel_id]
+  return $channel_info_map[channel_id] if $channel_info_map[channel_id]
 
   channel = PEGASUS_DB[:storage_apps].where(id: channel_id).first
-  return ($channel_map[channel_id] = {state: 'missing'}) unless channel
+  return ($channel_info_map[channel_id] = {state: 'missing'}) unless channel
 
   origin = get_channel_origin(channel)
 
-  $channel_map[channel_id] = {
+  $channel_info_map[channel_id] = {
     owner_storage_id: channel[:storage_id],
     state: channel[:state],
     abuse_score: channel[:abuse_score],
