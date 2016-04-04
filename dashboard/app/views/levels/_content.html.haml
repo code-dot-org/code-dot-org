@@ -2,12 +2,16 @@
 / Set 'data' and 'app' to use this partial.
 - app, data, content_class = %i(app data content_class).map{ |x| local_assigns[x] }
 
-%h2!= string_or_image(app, data['title']) unless app == 'external'
+- unless data['title'].blank?
+  %h2!= string_or_image(app, data['title']) unless app == 'external'
 %div.content-level{class: (content_class unless content_class.blank?)}
   - unless app == 'external'
-    %p.content1!= string_or_image(app, data['content1']) unless data['content1'].blank?
-    %p.content2!= string_or_image(app, data['content2']) unless data['content2'].blank?
-    %p.content3!= string_or_image(app, data['content3']) unless data['content3'].blank?
+    - unless data['content1'].blank?
+      %p.content.content1!= string_or_image(app, data['content1'])
+    - unless data['content2'].blank?
+      %p.content.content2!= string_or_image(app, data['content2'])
+    - unless data['content3'].blank?
+      %p.content.content3!= string_or_image(app, data['content3'])
   / Markdown support using the 'markdown' property.
   - if data['markdown'].present?
     #markdown
