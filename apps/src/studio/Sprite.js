@@ -224,16 +224,16 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
         // frame 0.
         this.legacyAnimation_.createSpecialAnimation('direction',
             turnIndex,
-            [ { type: 'legacyEmotionRow', index: row, frame: 0 } ]);
+            [{ type: 'legacyEmotionRow', index: row, frame: 0 }]);
         turnIndex++;
       }
       for (;turnIndex < 8; turnIndex++, frameIndex++) {
         this.legacyAnimation_.createSpecialAnimation('direction',
             turnIndex,
-            [ { type: 'legacyEmotionRow',
+            [{ type: 'legacyEmotionRow',
                 index: row,
                 frame: this.frameCounts.normal + frameIndex
-            } ]);
+            }]);
       }
     }
   }
