@@ -55,6 +55,8 @@ var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
 
+var BoardController = require('../makerlab/BoardController');
+
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
@@ -143,6 +145,7 @@ function loadLevel() {
   Applab.softButtons_ = level.softButtons || {};
   Applab.appWidth = level.appWidth || defaultAppWidth;
   Applab.appHeight = level.appHeight || defaultAppHeight;
+  Applab.makerlabEnabled = level.makerlabEnabled;
   // In share mode we need to reserve some number of pixels for our in-app
   // footer. We do that by making the play space slightly smaller elsewhere.
   // Applab.appHeight represents the height of the entire app (footer + other)
@@ -160,6 +163,10 @@ function loadLevel() {
   // Override scalars.
   for (var key in level.scale) {
     Applab.scale[key] = level.scale[key];
+  }
+
+  if (Applab.makerlabEnabled) {
+    Applab.makerlabController = new BoardController();
   }
 }
 
@@ -1064,6 +1071,10 @@ Applab.reset = function(first) {
     designMode.resetPropertyTab();
   }
 
+  if (Applab.makerlabController) {
+    Applab.makerlabController.reset();
+  }
+
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
   }
@@ -1317,6 +1328,16 @@ Applab.execute = function() {
     }
   }
 
+  if (Applab.makerlabController) {
+    Applab.makerlabController
+        .connectAndInitialize(codegen, Applab.JSInterpreter)
+        .then(Applab.beginVisualizationRun);
+  } else {
+    Applab.beginVisualizationRun();
+  }
+};
+
+Applab.beginVisualizationRun = function() {
   // Set focus on the default screen so key events can be handled
   // right from the start without requiring the user to adjust focus.
   Applab.loadDefaultScreen();
