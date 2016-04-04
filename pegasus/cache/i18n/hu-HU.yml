@@ -143,14 +143,14 @@
     or on Android or iOS devices. Students play the initial set of “Basic” levels
     in Lightbot. They will learn how to tell a computer what to do with a series of
     basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_lightbot_btn_curriculum: Töltse le a Lightbot tananyagot
+  third_party_lightbot_btn_site: Látogasson el a Lightbot honlapjára
+  third_party_khan_desc: Megtudhatja hogyan lehet képeket, animációkat és játékokat
+    készíteni JavaScript és ProcessingJS segítségével, vagy hogy hogyan tud weblapokat
+    létrehozni HTML és CSS segítségével. Ossza meg az elkészült alkotásait, és fedezze
+    fel másokét, egyszóval tanuljunk egymástól!
+  third_party_khan_btn_learn: Tanulj programozni a Khan Akadémián
+  third_party_khan_btn_forum: Khan Akadémia Programozás Fórum
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
     apps for Android devices. Newcomers to App Inventor can have their first app up
@@ -169,17 +169,17 @@
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
     native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
+  third_party_codecademy_btn_curriculum: Codecademy tananyag letöltése
   third_party_codecademy_btn_site: Visit Codecademy
   third_party_organization: Organization
   third_party_curriculum: Tanterv
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_pricing: "Árazás"
+  third_party_cost_free: Diákoknak és tanároknak ingyenes
+  third_party_cost_5permonth: osztályonként 5$ / hó
+  third_party_cost_299: 2,99$/Letöltés
+  third_party_cost_free_399: Ingyenesen kipróbálható, 399$/tanterem
+  third_party_cost_free_2: Ingyenesen kipróbálható, 2$/tanuló
+  third_party_cost_free_10: Ingyenesen kipróbálható, 9,99$/hó
   third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
@@ -245,16 +245,15 @@
   learn_next_level: Tovább a következő szintre
   learn_online: Megpróbáljon ki  más online tanfolyamokat
   learn_classes: Találjon helyi osztályokat
-  hoc_is_here: 'Elérkezett a #HourOfCode - nézd meg! @codeorg'
+  hoc_is_here: Tanuljon meg programozni. És minden megváltozik. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: "Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg"
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
   just_did_course3: I just finished Course 3 - check it out! @codeorg
   just_did_course4: I just finished Course 4 - check it out! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
-  twitter_teach_cs: Miért nem tanítanak több iskolában programozást? Van megoldásunk.
-    http://youtu.be/nKIu9yen5nc. Látogasd meg a http://code.org/ honlapot, hogy többet
-    megtudj róla.
+  twitter_teach_cs: 10-ből 9 ember szerint már az általános iskolában el kellene kezdeni
+    az informatika tanítását. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Ismerd meg a Kódolás Óráját
   beyond_hoc: Az első órán túl
   what_gender: Milyen nemű vagy?
@@ -363,8 +362,8 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Tudj meg többet
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20.000 tanárt készítettünk fel, akik ma már informatikát
+    oktatnak a jövő nemzedéknek.
   homepage_banner_20k_teachers_link: Tudj meg többet
   homepage_slot_text_title_hoc: A kódolás órája
   homepage_slot_text_blurb_hoc: Bárki megtanulhatja. Kezdd el ma
@@ -380,7 +379,7 @@
   homepage_slot_text_link_othercourses: További online tanfolyamok
   homepage_slot_text_title_educators: Oktatók
   homepage_slot_text_blurb_educators: Tanítsd a diákjaidat
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: "Általános iskola"
   homepage_slot_text_link_middle: "Általános iskola felső tagozat"
   homepage_slot_text_link_high: Középiskola
   homepage_slot_text_link_k5: Tanfolyamok alsó tagozatosoknak
@@ -778,7 +777,7 @@
   dashboard_progress_completed_too_many_blocks: elkészült, túl sok a blokk
   dashboard_progress_completed_perfect: elkészült, tökéletes
   dashboard_progress_furthest_level_attempted: a legmagasabb szint megpróbálva
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: elküldve
   dashboard_stage: szakasz
   dashboard_puzzle: Kirakós
   dashboard_question: Kérdés
@@ -788,6 +787,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Helyes
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
