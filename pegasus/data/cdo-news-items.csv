@@ -13,14 +13,14 @@ heading_s,short_heading_s,image_url_s,link_text_s,url_s,date_s,publication_s,tag
 ,,,,,,,,
 ,,,,,,,,
 ,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
+Idaho funds $2M expansion of computer science in K-12 schools!,,,,http://blog.code.org/post/141573755948/idaho-funds-expansion-of-computer-science,3/23/2016,Code.org,csnews,all
+9 new California districts partner with Code.org,,,,http://blog.code.org/post/141092843808/9-california-partners,3/15/2016,Code.org,announce,code.org
+Virginia is adding computer science to every K-12 school,,,,http://blog.code.org/post/140706453533/virginia-is-adding-computer-science-to-every-k-12,3/8/2016,Code.org,csnews,all
+Rhode Island announces a plan to teach every student computer science,,,,http://blog.code.org/post/140641272123/rhode-island-announces-a-plan-to-teach-every,3/7/2016,Code.org,csnews,all
+Computer science is now a high school graduation requirement in Chicago,,,,http://techcrunch.com/2016/02/24/computer-science-is-now-a-high-school-graduation-requirement-in-chicagos-public-school-district/,2/24/2016,TechCrunch,csnews,all
+Governors form new partnership to expand computer science education,,,,http://blog.code.org/post/139741779673/governors-form-new-partnership-to-expand-computer,2/21/2016,Code.org,csnews,all
+Teaching Bronx students the language of computers,,,,http://www.nytimes.com/2016/02/22/nyregion/teaching-bronx-students-the-language-of-computers.html,2/19/2016,New York Times,csnews,all
+Re/code Decode interview: Code.org CEO Hadi Partovi,,,,http://recode.net/2016/02/15/code-org-ceo-hadi-partovi-says-young-people-should-study-computer-science-even-if-they-wont-become-programmers/,2/15/2016,Re/code,news,code.org
 Republican and Democratic governors urge every state to support K-12 computer science,,,,http://www.usnews.com/opinion/knowledge-bank/articles/2016-02-11/arkansas-and-washington-lead-efforts-to-expand-computer-science-education,2/11/2016,US News & World Report,csnews,all
 Arkansas Gov: All high schools should teach computer science,,,,http://time.com/4203277/computer-science-education/,2/1/2016,TIME,csnews,all
 The White House announces plans to bring computer science to every student,,,,http://blog.code.org/post/138335868703/the-white-house-announces-plans-to-bring-computer,1/30/2016,Code.org,announce,code.org
@@ -92,7 +92,7 @@ Announcing an Hour of Code with Anna and Elsa from Disney’s “Frozen”,,,,ht
 "Press:Here, Hour of Code",,,,http://www.pressheretv.com/hour-of-code/,11/14/2014,NBC Bay Area,news,all
 "A mystery Hour of Code in Washington, DC",,,,http://codeorg.tumblr.com/post/102312733238/dc,11/11/2014,Code.org,announce,all
 Code.org breaks Indiegogo fundraising record as it reaches halfway point,,,,http://www.fastcompany.com/3038067/codeorg-breaks-indiegogo-fundraising-record-as-it-reaches-halfway-point,11/4/2014,Fast Company,news,code.org
-Mark Zuckerberg And John Doerr Donate $1M To Expand The Hour Of Code Campaign,,,,http://techcrunch.com/2014/10/29/mark-zuckerberg-and-john-doerr-donate-1m-to-expand-the-hour-of-code-campaign/,10/29/2014,Tech Crunch,news,code.org
+Mark Zuckerberg And John Doerr Donate $1M To Expand The Hour Of Code Campaign,,,,http://techcrunch.com/2014/10/29/mark-zuckerberg-and-john-doerr-donate-1m-to-expand-the-hour-of-code-campaign/,10/29/2014,TechCrunch,news,code.org
 Celebrities & role-models will welcome classrooms to the Hour of Code,,,,http://codeorg.tumblr.com/post/101690517168/video-chats,11/3/2014,Code.org,announce,all
 29 Companies Join Forces for the Hour of Code,,,,http://youtu.be/DHaRStXZqSk,10/14/2014,Fox Business Network,news,code.org
 Nobel Peace Prize Winner Malala Yousafzai Urges Girls To Participate In Code.org’s Hour Of Code,,,,http://techcrunch.com/2014/10/13/nobel-peace-prize-winner-malala-yousafzai-urges-girls-to-participate-in-code-orgs-hour-of-code/,10/13/2014,Tech Crunch,news,all
@@ -103,7 +103,7 @@ Computer science not just a game for San Francisco schools,,,,http://www.sfgate.
 How we solve the tech industry’s gender gap,,,,http://recode.net/2014/10/01/how-we-solve-the-tech-industrys-gender-gap/,10/1/2014,Re/Code,news,all
 Sweeping nationwide change: 14 states in 15 months change policies to support computer science,,,,http://codeorg.tumblr.com/post/98827213703/makecscount,9/30/2014,Code.org,announce,code.org
 Code.org’s team diversity: putting our money where our mouth is,,,,http://codeorg.tumblr.com/post/98703117328/code-orgs-team-diversity-putting-our-money-where-our,9/28/2014,Code.org,news,code.org
-"Salesforce Pours $6M Into SF Schools, Computer Science Education",,,,http://techcrunch.com/2014/09/12/salesforce-education/,9/12/2014,Tech Crunch,news,all
+"Salesforce Pours $6M Into SF Schools, Computer Science Education",,,,http://techcrunch.com/2014/09/12/salesforce-education/,9/12/2014,TechCrunch,news,all
 Computer Science logs record-breaking enrollment at Harvard,,,,http://www.thecrimson.com/article/2014/9/11/cs50-breaks-enrollment-records/,9/11/2014,Harvard Crimson,csnews,all
 Code.org launches Code Studio - a new online learning platform,,,,http://codeorg.tumblr.com/post/97219291088/announcing-code-studio,9/11/2014,Code.org,announce,code.org
 Washington DC-area schools get new computer science offerings with Code.org,,,,http://www.washingtonpost.com/local/education/eleven-montgomery-high-schools-get-new-computer-science-offerings/2014/08/14/3f9f7ec0-1c26-11e4-ab7b-696c295ddfd1_story.html,8/14/2014,Washington Post,news,all
@@ -149,7 +149,7 @@ Successful ‘Hour of Code’ prompts effort to change school policies,,,,http:/
 Code.org's incredible first year,,,,http://codeorg.tumblr.com/post/73414288834/2013update,1/15/2014,Code.org,announce,all
 The real reason there aren't more women in tech,,,,http://codeorg.tumblr.com/post/71933359496/women,1/2/2014,Code.org,news,code.org
 Preview of writing code for future,,,,http://www.bostonglobe.com/metro/regionals/west/2013/12/29/more-schools-try-crack-code-computer-programming/6E7r6lhgwDL6ugGVKWe7xO/story.html,12/29/2013,Boston Globe,news,all
-"2 Weeks And 600M+ Lines Of Code Later, 20M Students Have Learned An “Hour Of Code”",,,,http://techcrunch.com/2013/12/26/code-org-2-weeks-and-600m-lines-of-code-later-20m-students-have-learned-an-hour-of-code/,12/26/2013,Tech Crunch,news,all
+"2 Weeks And 600M+ Lines Of Code Later, 20M Students Have Learned An “Hour Of Code”",,,,http://techcrunch.com/2013/12/26/code-org-2-weeks-and-600m-lines-of-code-later-20m-students-have-learned-an-hour-of-code/,12/26/2013,TechCrunch,news,all
 "15 million students learned to program this week, thanks to the Hour of Code",,,,http://allthingsd.com/20131213/15-million-students-learned-to-program-this-week-thanks-to-hour-of-code/,12/16/2013,All Things D,news,all
 "Students wrote 500,000,000 lines of code in a single week ",,,,http://venturebeat.com/2013/12/16/code-org-students-wrote-500000000-lines-of-code-in-a-single-week/,12/16/2013,VentureBeat,news,all
 "Bill Gates, Jack Dorsey, Susan Wojcicki and Gabe Newell live chat with students nationwide",,,,http://codeorg.tumblr.com/post/69917684658/chats,12/13/2013,Code.org,news,code.org
@@ -184,8 +184,8 @@ Forget foreign languages and music. Teach our kids to code.,,,,http://www.wired.
 How Code.org is promoting an agenda of diversity & equality in the tech world,,,,http://venturebeat.com/2013/02/27/how-code-org-is-promoting-an-agenda-of-diversity-equality-in-the-tech-world/#qvO4TWRXu8d2bZuS.99,3/12/2013,VentureBeat,news,code.org
 Code.org has launched a meaningful attempt at education reform. Let’s hope the star-power helps,,,,http://pando.com/2013/02/26/code-org-has-launched-a-meaningful-attempt-at-education-reform-lets-hope-the-star-power-helps/,3/7/2013,PandoDaily,news,code.org
 Code.org Launches To Help Make Computer Programming Accessible To Everyone,,,,http://techcrunch.com/2013/01/22/code-org-launches-to-help-make-computer-programming-accessible-to-everyone/,2/28/2013,Tech Crunch,news,code.org
-"Code.org partners with ACM, grows team",,,,http://code.org/news/teamgrowth,2/27/2013,Code.org,announce,code.org
+"Code.org partners with ACM, grows team",,,,http://code.org/news/teamgrowth,7/31/2013,Code.org,announce,code.org
 Nonprofit teaches kids to write computer code,,,,http://www.today.com/video/today/52630136,2/27/2013,TODAY Show,news,code.org
 Hadi and Ali Partovi (Code.org's twin co-founders) AMA on Reddit,,,,http://www.reddit.com/r/IAmA/comments/19eqzm/iam_hadi_partovi_cofounder_of_codeorg_here_with/,2/26/2013,Reddit,news,code.org
-"Code.Org Short Film With Bill Gates, Mark Zuckerberg, will.i.am, and Chris Bosh Gets Over 12 Million Views, Tops YouTube List",,,,http://code.org/news/12-million-youtube-views,2/26/2013,Code.org,announce,code.org
-"Bill Gates, Mark Zuckerberg, will.i.am, and Chris Bosh Star in Short Film by Code.org",,,,http://code.org/news/short-film,1/22/2013,Code.org,announce,code.org
+"Code.Org Short Film With Bill Gates, Mark Zuckerberg, will.i.am, and Chris Bosh Gets Over 12 Million Views, Tops YouTube List",,,,http://code.org/news/12-million-youtube-views,3/12/2013,Code.org,announce,code.org
+"Bill Gates, Mark Zuckerberg, will.i.am, and Chris Bosh Star in Short Film by Code.org",,,,http://code.org/news/short-film,2/26/2013,Code.org,announce,code.org

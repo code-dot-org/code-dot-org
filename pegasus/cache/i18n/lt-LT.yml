@@ -87,7 +87,9 @@
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: Gauti pasiekimo sertifikatą
-  view_course: View course
+  view_course: Peržiūrėti kursą
+  view_unit: View unit
+  make_app: Make an app
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
@@ -96,11 +98,7 @@
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -108,13 +106,14 @@
   third_party_gradelevel_5to12: Grades 5-12
   third_party_gradelevel_6plus: Grades 6+
   third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
+  third_party_platform_all: 'Platforma: Internetas, iPad ir Android'
+  third_party_platform_mobile: 'Platforma: iPad ir Android'
+  third_party_platform_web: 'Platforma: internetas'
   third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
+  third_party_price_free: 'Kaina: nemokamai'
   third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
@@ -164,7 +163,6 @@
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -180,6 +178,7 @@
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -370,6 +369,9 @@
   homepage_slot_text_link_othercourses: Kiti internetiniai kursai
   homepage_slot_text_title_educators: Pedagogai
   homepage_slot_text_blurb_educators: Mokykite savo mokinius
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Vidurinė mokykla
+  homepage_slot_text_link_high: Gimnazija
   homepage_slot_text_link_k5: Kursai darželinukams
   homepage_slot_text_link_fullcurriculum: Peržiūrėkite pilną mokymo programą
   homepage_slot_text_link_pd: Profesinis tobulinimasis
@@ -645,6 +647,7 @@
   dashboard_navigation_all_sections: Mokinių paskyros ir pažanga
   dashboard_navigation_view_progress: Peržiūrėti pažangą
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Pridėti mokinius
   dashboard_navigation_manage_students: Tvarkyti ir pridėti mokinius
   dashboard_navigation_lesson_plans_resources: Pamokų planai ir ištekliai
@@ -756,10 +759,21 @@
   dashboard_progress_completed_too_many_blocks: baigtas, panaudota per daug blokų
   dashboard_progress_completed_perfect: puikiai išspręsta
   dashboard_progress_furthest_level_attempted: išmėgintas aukščiausias lygis
+  dashboard_progress_submitted: submitted
   dashboard_stage: Etapas
   dashboard_puzzle: Galvosūkis
   dashboard_question: Klausimas
   dashboard_response: Atsakymas
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Teisingai
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Neįtikėtini praėjusių metų „Programavimo valandos“ rezultatai.
     Per vieną savaitę:'
   stats_hoc_2013_image_alt: "„Programavimo valandos“ statistika nuo 2013 metų"
@@ -901,7 +915,7 @@
   projguts_name: "„Akmuo, popierius, žirklės“"
   hourofcode_name: Klasikinis labirintas
   playlab_name: Laboratorija
-  infinity_name: "Žaidimų laboratorija Infinity"
+  infinity_name: "Žaidimų laboratorija „Infinity“"
   artist_name: Menininkas
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Paleisti Marko!
@@ -915,6 +929,18 @@
   course3_name: Kursas 3
   course4_name: Kursas 4
   accelerated_name: Pagreitintas kursas
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
+    of computer programming, which unlocks the ability to make rich, interactive apps.
+    This course uses JavaScript as the programming language, and App Lab as the programming
+    environment to build apps, but the concepts learned in these lessons span all
+    programming languages and tools.
+  applab_name: Programėlių laboratorija
+  applab_gradelevel: Amžius 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you
+    can make simple apps. Design an app, code with blocks or JavaScript to make it
+    work, then share your app in seconds
   codeorg_gradelevel: Amžius 4-104
   codeintl_gradelevel: Amžius 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -1072,7 +1098,7 @@
   hourofcode_shortdescription: Išmokite koduoti su Marku Zuckerbergu ir Angry Birds!
   frozen_shortdescription: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo
     grožį ir magiją.
-  starwars_shortdescription: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų
+  starwars_shortdescription: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų
     žaidimą tolimoje galaktikoje.
   playlab_shortdescription: Sukurk istoriją arba žaidimą!
   infinity_shortdescription: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje
@@ -1235,7 +1261,7 @@
   frozen_longdescription: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo
     grožį ir magiją. Čiuožinėdami pačiūžomis, piešime snaigių raštus. Savo kūriniais
     galėsite pasidalinti su draugais!
-  starwars_longdescription: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų
+  starwars_longdescription: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų
     žaidimą tolimoje galaktikoje.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
@@ -1599,4 +1625,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "žaisti"
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

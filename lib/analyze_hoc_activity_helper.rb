@@ -2,6 +2,7 @@
 #
 # Helper methods for the analyze_hoc_activity cron job.
 #
+require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'cdo/properties'
 
@@ -94,7 +95,6 @@ end
 def add_hashes(h1, h2)
   unsorted = {}
   (h1.keys + h2.keys).uniq.each { |key| unsorted[key] = h1[key].to_i + h2[key].to_i }
-  unsorted
 
   sorted = {}
   unsorted.keys.sort { |a,b| unsorted[b] <=> unsorted[a] }.each { |i| sorted[i] = unsorted[i] }

@@ -101,8 +101,8 @@ When /^I navigate to the shared version of my project$/ do
   }
 end
 
-Then(/^the palette has (\d+) blocks$/) do |numBlocks|
-  @browser.execute_script("return $('.droplet-palette-scroller-stuffing > .droplet-hover-div').length").should eq numBlocks.to_i
+Then(/^the palette has (\d+) blocks$/) do |num_blocks|
+  @browser.execute_script("return $('.droplet-palette-scroller-stuffing > .droplet-hover-div').length").should eq num_blocks.to_i
 end
 
 Then(/^the droplet code is "([^"]*)"$/) do |code|
@@ -158,7 +158,67 @@ And /^I delete the current design mode element$/ do
 end
 
 And /^I drag the grippy by ([-|\d]+) pixels$/ do |delta|
-  script = %Q{
+  script = get_mouse_event_creator_script
+
+  script += %Q{
+    var element = $("#visualizationResizeBar");
+    var start = {
+      x: element.offset().left,
+      y: element.offset().top
+    };
+    var end = {
+      x: start.x + #{delta},
+      y: start.y
+    }
+    var mousedown = createMouseEvent('mousedown', start.x, start.y);
+    var drag = createMouseEvent('mousemove', end.x, end.y);
+    var mouseup = createMouseEvent('mouseup', end.x, end.y);
+
+    element[0].dispatchEvent(mousedown);
+    element[0].dispatchEvent(drag);
+    element[0].dispatchEvent(mouseup);
+  }
+
+  @browser.execute_script(script)
+end
+
+And /^I hover over element with id "([^"]*)"$/ do |element_id|
+  script = get_mouse_event_creator_script
+  script += get_scale_script
+
+  script += %Q{
+    var element = $("#" + "#{element_id}");
+    var scale = getScale(element[0]);
+    var x = element.offset().left + (5 * scale);
+    var y = element.offset().top + (5 * scale);
+
+    var mousemove = createMouseEvent('mousemove', x, y);
+
+    element[0].dispatchEvent(mousemove);
+  }
+
+  @browser.execute_script(script)
+end
+
+And /^I hover over the screen at xpos ([\d]+) and ypos ([\d]+)$/ do |xpos, ypos|
+  script = get_mouse_event_creator_script
+  script += get_scale_script
+
+  script += %Q{
+    var visualization = $("#visualizationOverlay");
+    var scale = getScale(visualization[0]);
+    var x = visualization.offset().left + (#{xpos} * scale);
+    var y = visualization.offset().top + (#{ypos} * scale);
+    var mousemove = createMouseEvent('mousemove', x, y);
+
+    visualization[0].dispatchEvent(mousemove);
+  }
+
+  @browser.execute_script(script)
+end
+
+def get_mouse_event_creator_script
+  return %Q{
     function createMouseEvent(type, clientX, clientY) {
       var evt;
       var e = {
@@ -193,23 +253,20 @@ And /^I drag the grippy by ([-|\d]+) pixels$/ do |delta|
       }
       return evt;
     };
+  }
+end
 
-    var element = $("#visualizationResizeBar");
-    var start = {
-      x: element.offset().left,
-      y: element.offset().top
+def get_scale_script
+  return %Q{
+    function getScale(element) {
+      return element.getBoundingClientRect().width / element.offsetWidth;
     };
-    var end = {
-      x: start.x + #{delta},
-      y: start.y
-    }
-    var mousedown = createMouseEvent('mousedown', start.x, start.y);
-    var drag = createMouseEvent('mousemove', end.x, end.y);
-    var mouseup = createMouseEvent('mouseup', end.x, end.y);
+  }
+end
 
-    element[0].dispatchEvent(mousedown);
-    element[0].dispatchEvent(drag);
-    element[0].dispatchEvent(mouseup);
+And /^I save the project$/ do
+  script = %Q{
+    Applab.serializeAndSave();
   }
 
   @browser.execute_script(script)

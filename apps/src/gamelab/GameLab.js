@@ -6,7 +6,9 @@ var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
 var apiJavascript = require('./apiJavascript');
-var page = require('../templates/page.html.ejs');
+var consoleApi = require('../consoleApi');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
@@ -15,7 +17,19 @@ var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
+var gameLabSprite = require('./GameLabSprite');
+var gameLabGroup = require('./GameLabGroup');
 var assetPrefix = require('../assetManagement/assetPrefix');
+var gamelabCommands = require('./commands');
+var errorHandler = require('../errorHandler');
+var outputError = errorHandler.outputError;
+var ErrorLevel = errorHandler.ErrorLevel;
+
+var actions = require('./actions');
+var createStore = require('../redux');
+var gamelabReducer = require('./reducers').gamelabReducer;
+var GameLabView = require('./GameLabView.jsx');
+var Provider = require('react-redux').Provider;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -27,6 +41,13 @@ var GameLab = function () {
   this.level = null;
   this.tickIntervalId = 0;
   this.tickCount = 0;
+
+  /**
+   * Redux Store holding application state, transformable by actions.
+   * @private {Store}
+   * @see http://redux.js.org/docs/basics/Store.html
+   */
+  this.reduxStore_ = createStore(gamelabReducer);
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
@@ -53,17 +74,32 @@ var GameLab = function () {
   this.apiJS.injectGameLab(this);
 
   dropletConfig.injectGameLab(this);
+
+  consoleApi.setLogMethod(this.log.bind(this));
+  errorHandler.setLogMethod(this.log.bind(this));
+
+  /** Expose for testing **/
+  window.__mostRecentGameLabInstance = this;
 };
 
 module.exports = GameLab;
+
+/**
+ * Forward a log message to both logger objects.
+ * @param {?} object
+ */
+GameLab.prototype.log = function (object) {
+  this.consoleLogger_.log(object);
+  this.debugger_.log(object);
+};
 
 /**
  * Inject the studioApp singleton.
  */
 GameLab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
-  this.studioApp_.reset = _.bind(this.reset, this);
-  this.studioApp_.runButtonClick = _.bind(this.runButtonClick, this);
+  this.studioApp_.reset = this.reset.bind(this);
+  this.studioApp_.runButtonClick = this.runButtonClick.bind(this);
 
   this.studioApp_.setCheckForEmptyBlocks(true);
 };
@@ -84,11 +120,16 @@ GameLab.prototype.init = function (config) {
   config.usesAssets = true;
 
   this.gameLabP5.init({
+    gameLab: this,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
     onPreload: this.onP5Preload.bind(this),
     onSetup: this.onP5Setup.bind(this),
     onDraw: this.onP5Draw.bind(this)
   });
+
+  config.afterClearPuzzle = function() {
+    this.studioApp_.resetButtonClick();
+  }.bind(this);
 
   config.dropletConfig = dropletConfig;
   config.appMsg = msg;
@@ -102,38 +143,67 @@ GameLab.prototype.init = function (config) {
   });
   var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
     showButtons: true,
-    showConsole: true
+    showConsole: true,
+    showWatch: true,
   });
 
-  config.html = page({
+  var generateCodeWorkspaceHtmlFromEjs = function () {
+    return codeWorkspaceEjs({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        localeDirection: this.studioApp_.localeDirection(),
+        extraControlRows: extraControlRows,
+        blockUsed : undefined,
+        idealBlockNumber : undefined,
+        editCode: this.level.editCode,
+        blockCounterClass : 'block-counter-default',
+        pinWorkspaceToBottom: true,
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  var generateVisualizationColumnHtmlFromEjs = function () {
+    return visualizationColumnEjs({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: firstControlsRow,
+        extraControlRows: extraControlRows,
+        pinWorkspaceToBottom: true,
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  var onMount = function () {
+    config.loadAudio = this.loadAudio_.bind(this);
+    config.afterInject = this.afterInject_.bind(this, config);
+    config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
+
+    // Store p5specialFunctions in the unusedConfig array so we don't give warnings
+    // about these functions not being called:
+    config.unusedConfig = this.gameLabP5.p5specialFunctions;
+
+    this.studioApp_.init(config);
+
+    this.debugger_.initializeAfterDomCreated({
+      defaultStepSpeed: 1
+    });
+  }.bind(this);
+
+  this.reduxStore_.dispatch(actions.setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
-    data: {
-      visualization: require('./visualization.html.ejs')(),
-      localeDirection: this.studioApp_.localeDirection(),
-      controls: firstControlsRow,
-      extraControlRows: extraControlRows,
-      blockUsed : undefined,
-      idealBlockNumber : undefined,
-      editCode: this.level.editCode,
-      blockCounterClass : 'block-counter-default',
-      pinWorkspaceToBottom: true,
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share
+  }));
 
-  config.loadAudio = this.loadAudio_.bind(this);
-  config.afterInject = this.afterInject_.bind(this, config);
-  config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
-
-  // Store p5specialFunctions in the unusedConfig array so we don't give warnings
-  // about these functions not being called:
-  config.unusedConfig = this.p5specialFunctions;
-
-  this.studioApp_.init(config);
-
-  this.debugger_.initializeAfterDomCreated({
-    defaultStepSpeed: 1
-  });
+  ReactDOM.render(<Provider store={this.reduxStore_}>
+    <GameLabView
+      generateCodeWorkspaceHtml={generateCodeWorkspaceHtmlFromEjs}
+      generateVisualizationColumnHtml={generateVisualizationColumnHtmlFromEjs}
+      onMount={onMount} />
+  </Provider>, document.getElementById(config.containerId));
 };
 
 GameLab.prototype.loadAudio_ = function () {
@@ -174,17 +244,22 @@ GameLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
   }
 };
 
+GameLab.prototype.haltExecution_ = function () {
+  this.eventHandlers = {};
+  if (this.tickIntervalId !== 0) {
+    window.clearInterval(this.tickIntervalId);
+  }
+  this.tickIntervalId = 0;
+  this.tickCount = 0;
+};
+
 /**
  * Reset GameLab to its initial state.
  * @param {boolean} ignore Required by the API but ignored by this
  *     implementation.
  */
 GameLab.prototype.reset = function (ignore) {
-
-  this.eventHandlers = {};
-  window.clearInterval(this.tickIntervalId);
-  this.tickIntervalId = 0;
-  this.tickCount = 0;
+  this.haltExecution_();
 
   /*
   var divGameLab = document.getElementById('divGameLab');
@@ -194,7 +269,7 @@ GameLab.prototype.reset = function (ignore) {
   */
 
   this.gameLabP5.resetExecution();
-  
+
   // Import to reset these after this.gameLabP5 has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;
@@ -209,6 +284,99 @@ GameLab.prototype.reset = function (ignore) {
     this.JSInterpreter = null;
   }
   this.executionError = null;
+};
+
+GameLab.prototype.onPuzzleComplete = function (submit) {
+  if (this.executionError) {
+    this.result = this.studioApp_.ResultType.ERROR;
+  } else {
+    // In most cases, submit all results as success
+    this.result = this.studioApp_.ResultType.SUCCESS;
+  }
+
+  // If we know they succeeded, mark levelComplete true
+  var levelComplete = (this.result === this.studioApp_.ResultType.SUCCESS);
+
+  if (this.executionError) {
+    this.testResults = this.studioApp_.getTestResults(levelComplete, {
+        executionError: this.executionError
+    });
+  } else if (!submit) {
+    this.testResults = this.studioApp_.TestResults.FREE_PLAY;
+  }
+
+  // Stop everything on screen
+  this.reset();
+
+  if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
+    this.studioApp_.playAudio('win');
+  } else {
+    this.studioApp_.playAudio('failure');
+  }
+
+  var program;
+
+  if (this.level.editCode) {
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = this.studioApp_.getCode();
+  } else {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
+
+  this.waitingForReport = true;
+
+  var sendReport = function() {
+    this.studioApp_.report({
+      app: 'gamelab',
+      level: this.level.id,
+      result: levelComplete,
+      testResult: this.testResults,
+      submitted: submit,
+      program: encodeURIComponent(program),
+      image: this.encodedFeedbackImage,
+      onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
+    });
+
+    if (this.studioApp_.isUsingBlockly()) {
+      // reenable toolbox
+      Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+    }
+  }.bind(this);
+
+  var divGameLab = document.getElementById('divGameLab');
+  if (!divGameLab || typeof divGameLab.toDataURL === 'undefined') { // don't try it if function is not defined
+    sendReport();
+  } else {
+    divGameLab.toDataURL("image/png", {
+      callback: function(pngDataUrl) {
+        this.feedbackImage = pngDataUrl;
+        this.encodedFeedbackImage = encodeURIComponent(this.feedbackImage.split(',')[1]);
+
+        sendReport();
+      }.bind(this)
+    });
+  }
+};
+
+GameLab.prototype.onSubmitComplete = function (response) {
+  window.location.href = response.redirect;
+};
+
+/**
+ * Function to be called when the service report call is complete
+ * @param {object} JSON response (if available)
+ */
+GameLab.prototype.onReportComplete = function (response) {
+  this.response = response;
+  this.waitingForReport = false;
+  this.studioApp_.onReportComplete(response);
+  this.displayFeedback_();
 };
 
 /**
@@ -249,20 +417,30 @@ GameLab.prototype.evalCode = function(code) {
  * Execute the user's code.  Heaven help us...
  */
 GameLab.prototype.execute = function() {
+  this.result = this.studioApp_.ResultType.UNSET;
+  this.testResults = this.studioApp_.TestResults.NO_TESTS_RUN;
+  this.waitingForReport = false;
+  this.response = null;
+
   // Reset all state.
   this.studioApp_.reset();
+  this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (this.studioApp_.isUsingBlockly() &&
       (this.studioApp_.hasExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())) {
     // immediately check answer, which will fail and report top level blocks
-    this.checkAnswer();
+    this.onPuzzleComplete();
     return;
   }
 
   this.gameLabP5.startExecution();
 
-  if (!this.level.editCode) {
+  if (this.level.editCode) {
+    if (!this.JSInterpreter || !this.JSInterpreter.initialized()) {
+      return;
+    }
+  } else {
     this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
     this.evalCode(this.code);
   }
@@ -275,7 +453,7 @@ GameLab.prototype.execute = function() {
   }
 
   // Set to 1ms interval, but note that browser minimums are actually 5-16ms:
-  this.tickIntervalId = window.setInterval(_.bind(this.onTick, this), 1);
+  this.tickIntervalId = window.setInterval(this.onTick.bind(this), 1);
 };
 
 GameLab.prototype.initInterpreter = function () {
@@ -286,7 +464,8 @@ GameLab.prototype.initInterpreter = function () {
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,
     maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-    customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties()
+    customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
+    customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties()
   });
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
@@ -301,6 +480,9 @@ GameLab.prototype.initInterpreter = function () {
     return;
   }
 
+  gameLabSprite.injectJSInterpreter(this.JSInterpreter);
+  gameLabGroup.injectJSInterpreter(this.JSInterpreter);
+
   this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
     var func = this.JSInterpreter.findGlobalFunction(eventName);
     if (func) {
@@ -310,8 +492,6 @@ GameLab.prototype.initInterpreter = function () {
   }, this);
 
   codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
-  codegen.customMarshalModifiedObjectList =
-      this.gameLabP5.getCustomMarshalModifiedObjectList();
 
   var propList = this.gameLabP5.getGlobalPropertyList();
   for (var prop in propList) {
@@ -400,8 +580,10 @@ GameLab.prototype.onP5Setup = function () {
     if (this.eventHandlers.setup) {
       this.setupInProgress = true;
       this.eventHandlers.setup.apply(null);
+      this.completeSetupIfSetupComplete();
+    } else {
+      this.gameLabP5.afterSetupComplete();
     }
-    this.completeSetupIfSetupComplete();
   }
 };
 
@@ -433,41 +615,21 @@ GameLab.prototype.completeRedrawIfDrawComplete = function () {
 };
 
 GameLab.prototype.handleExecutionError = function (err, lineNumber) {
-/*
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
-  Studio.executionError = { err: err, lineNumber: lineNumber };
-
-  // Call onPuzzleComplete() if syntax error or any time we're not on a freeplay level:
-  if (err instanceof SyntaxError) {
-    // Mark preExecutionFailure and testResults immediately so that an error
-    // message always appears, even on freeplay:
-    Studio.preExecutionFailure = true;
-    Studio.testResults = TestResults.SYNTAX_ERROR_FAIL;
-    Studio.onPuzzleComplete();
-  } else if (!level.freePlay) {
-    Studio.onPuzzleComplete();
-  }
-*/
-  this.consoleLogger_.log(err);
-  throw err;
+  this.executionError = { err: err, lineNumber: lineNumber };
+  this.haltExecution_();
+  // TODO: Call onPuzzleComplete?
 };
 
 /**
  * Executes an API command.
  */
 GameLab.prototype.executeCmd = function (id, name, opts) {
-  console.log("GameLab executeCmd " + name);
-};
-
-/**
- * Handle the tasks to be done after the user program is finished.
- */
-GameLab.prototype.finishExecution_ = function () {
-  // document.getElementById('spinner').style.visibility = 'hidden';
-  if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.highlightBlock(null);
+  var retVal = false;
+  if (gamelabCommands[name] instanceof Function) {
+    retVal = gamelabCommands[name](opts);
   }
-  this.checkAnswer();
+  return retVal;
 };
 
 /**
@@ -493,86 +655,7 @@ GameLab.prototype.displayFeedback_ = function() {
     saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: msg.reinfFeedbackMsg(),
-      sharingText: msg.shareDrawing()
+      sharingText: msg.shareGame()
     }
   });
-};
-
-/**
- * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
- */
-GameLab.prototype.onReportComplete = function(response) {
-  this.response = response;
-  // Disable the run button until onReportComplete is called.
-  var runButton = document.getElementById('runButton');
-  runButton.disabled = false;
-  this.displayFeedback_();
-};
-
-/**
- * Verify if the answer is correct.
- * If so, move on to next level.
- */
-GameLab.prototype.checkAnswer = function() {
-  var level = this.level;
-
-  // Test whether the current level is a free play level, or the level has
-  // been completed
-  var levelComplete = level.freePlay && (!level.editCode || !this.executionError);
-  this.testResults = this.studioApp_.getTestResults(levelComplete);
-
-  var program;
-  if (this.studioApp_.isUsingBlockly()) {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = Blockly.Xml.domToText(xml);
-  }
-
-  // Make sure we don't reuse an old message, since not all paths set one.
-  this.message = undefined;
-
-  if (level.editCode) {
-    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
-    // identical versions of the code on the service, we could do either of these:
-
-    // do an acorn.parse and then use escodegen to generate back a "clean" version
-    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
-
-    program = this.studioApp_.editor.getValue();
-  }
-
-  // If the current level is a free play, always return the free play
-  // result type
-  if (level.freePlay) {
-    this.testResults = this.studioApp_.TestResults.FREE_PLAY;
-  }
-
-  // Play sound
-  this.studioApp_.stopLoopingAudio('start');
-  if (this.testResults === this.studioApp_.TestResults.FREE_PLAY ||
-      this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
-    this.studioApp_.playAudio('win');
-  } else {
-    this.studioApp_.playAudio('failure');
-  }
-
-  var reportData = {
-    app: 'gamelab',
-    level: level.id,
-    builder: level.builder,
-    result: levelComplete,
-    testResult: this.testResults,
-    program: encodeURIComponent(program),
-    onComplete: _.bind(this.onReportComplete, this),
-    // save_to_gallery: level.impressive
-  };
-
-  this.studioApp_.report(reportData);
-
-  if (this.studioApp_.isUsingBlockly()) {
-    // reenable toolbox
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-  }
-
-  // The call to displayFeedback() will happen later in onReportComplete()
 };

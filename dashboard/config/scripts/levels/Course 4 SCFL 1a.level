@@ -29,7 +29,8 @@
     "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\n**For Loops Super Challenge:** Can you get Skrat to his acorn using as few blocks as possible?\r\n\r\n<h4 class=\"hint\">\r\n<details>\r\n<summary><b>Hints</b></summary>\r\n\t<br/><br/>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #1</b></summary>\r\n    \t<br/>\r\n    \tYou may have to travel farther overall to use the smallest number of blocks.\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n\t<h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #2</b></summary>\r\n    \t<br/>\r\n        Take a look at this option for movement:  \r\n    \t<img src=\"https://images.code.org/5db9411b354ed2bb16e9bee37874888b-image-1446163368982.02.22.png\" width=\"350px\"/>\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #3</b></summary>\r\n    \t<br/>\r\n        A `for loop` will help you execute the same pattern, but with a changing number of steps.  Notice that the number of steps needed decreases from 7 to 5 by 1.\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Solution</b></summary>\r\n    \t<br/>\r\n    \t<br/>\r\n    \t<img src=\"https://images.code.org/4f28b5d86bfc302b7037857a4d943e00-image-1446163548662.26.12.png\" width=\"450px\"/>\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n</details>\r\n</h4>\r\n",
     "instructions": "Can you get Skrat to his acorn using as few blocks as possible?"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -82,5 +83,82 @@
         </block>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_for" inline="true">
+              <title name="VAR">counter</title>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">7</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                      <next>
+                        <block type="controls_repeat_ext" inline="true">
+                          <value name="TIMES">
+                            <block type="variables_get">
+                              <title name="VAR">counter</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="maze_moveForward"/>
+                          </statement>
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
+                              <next>
+                                <block type="controls_repeat_ext" inline="true">
+                                  <value name="TIMES">
+                                    <block type="math_number">
+                                      <title name="NUM">2</title>
+                                    </block>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="maze_moveForward"/>
+                                  </statement>
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

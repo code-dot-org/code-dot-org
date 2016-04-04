@@ -7,13 +7,31 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,1,1,1,1,1,0,0],[0,1,0,4,0,1,0,0],[0,1,0,1,1,1,0,0],[0,3,0,0,0,1,0,0],[0,0,0,0,0,1,2,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "pvz",
-    "instructions": "Dear person. Me zombie. Must... get... to sunflower.",
+    "instructions": "Get the zombie to the sunflower quickly!  Can you solve the puzzle in fewer than 11 blocks?",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
-    "ideal": "11"
-  }
+    "skip_instructions_popup": "false",
+    "ideal": "11",
+    "markdown_instructions": "Get the zombie to the sunflower quickly!  \r\n\r\nCan you solve the puzzle in fewer than 11 blocks?",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"**Want to get your code as small as it can be?** \\n\\nLook for patterns in your blocks. Do you see something that repeats?  Try putting a loop around it instead!\",\r\n  \"hint_id\": \"4-5_Maze_7_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false",
+    "step_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -30,18 +48,61 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml/>
-    </required_blocks>
     <recommended_blocks>
       <xml>
         <block type="controls_repeat">
-          <title name="TIMES">4</title>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
+          <title name="TIMES">???</title>
         </block>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                          <next>
+                            <block type="controls_repeat">
+                              <title name="TIMES">4</title>
+                              <statement name="DO">
+                                <block type="maze_moveForward"/>
+                              </statement>
+                              <next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <next>
+                                    <block type="controls_repeat">
+                                      <title name="TIMES">3</title>
+                                      <statement name="DO">
+                                        <block type="maze_moveForward"/>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

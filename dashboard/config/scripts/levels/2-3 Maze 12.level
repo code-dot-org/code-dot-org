@@ -7,14 +7,14 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,3,0],[0,0,0,4,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Can you replace these five blocks with only two blocks? (Hint: You need to create a loop using a \"repeat\" block to pass this level.)",
+    "instructions": "Can you get to the pig by creating a loop that uses only one `move forward` block inside of a `repeat`?",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "3",
     "video_key": "C2_zuck_repeat_loop",
-    "markdown_instructions": "Can you replace these five blocks with only two blocks?   \r\n*Hint: You need to create a loop using a `repeat` block to pass this level.*",
+    "markdown_instructions": "Suddenly, a magical block appears!  With the `repeat` block, you can loop code over and over.\r\n\r\nCan you get to the pig by creating a loop that uses only one `move forward` block inside of a `repeat`?",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -28,7 +28,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -74,12 +75,21 @@
       </xml>
     </required_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">5</title>
-        </block>
-        <block type="maze_moveForward"/>
-      </xml>
+      <xml/>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

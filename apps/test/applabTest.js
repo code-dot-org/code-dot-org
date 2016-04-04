@@ -1,12 +1,7 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales('applab');
-
-var $ = require('jquery');
-var React = require('react');
-window.$ = $;
-window.jQuery = window.$;
-window.React = React;
+testUtils.setExternalGlobals();
 
 // used in design mode
 window.Applab = {
@@ -14,9 +9,8 @@ window.Applab = {
   appHeight: 480
 };
 
-window.dashboard = window.dashboard || {};
-
 var Applab = require('@cdo/apps/applab/applab');
+var RecordListener = require('@cdo/apps/applab/RecordListener');
 var designMode = require('@cdo/apps/applab/designMode');
 var applabCommands = require('@cdo/apps/applab/commands');
 var constants = require('@cdo/apps/applab/constants');
@@ -56,7 +50,7 @@ describe('applab: designMode.addScreenIfNecessary', function () {
     var html =
       '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" tabindex="1" style="width: 320px; height: 480px;">' +
         '<div class="screen" id="screen1" style="display: block; height: 480px; width: 320px; left: 0px; top: 0px; position: relative;">' +
-          '<button id="button1" class="" style="padding: 0px; margin: 0px; height: 40px; width: 80px; font-size: 14px; color: rgb(0, 0, 0); position: absolute; left: 120px; top: 75px; background-color: rgb(238, 238, 238);">Button</button>' +
+          '<button id="button1" style="padding: 0px; margin: 0px; height: 40px; width: 80px; font-size: 14px; color: rgb(0, 0, 0); position: absolute; left: 120px; top: 75px; background-color: rgb(238, 238, 238);">Button</button>' +
         '</div>' +
       '</div>';
 
@@ -173,7 +167,7 @@ describe('getText/setText commands', function () {
 
       it('does add leading newline for leading empty div', function () {
         element.innerHTML = '<div><br></div><div>text</div><div>with</div><div>leading empty div</div>';
-        assert.equal(getInnerText(element), '\n\ntext\nwith\nleading empty div');
+        assert.equal(getInnerText(element), '\ntext\nwith\nleading empty div');
       });
 
       it('Unescapes < and >', function () {
@@ -260,6 +254,10 @@ describe('getText/setText commands', function () {
         roundTripTest('text\n\nwith\n\n\nempty newlines');
       });
 
+      it('preserves single leading newline', function () {
+        roundTripTest('\ntext after newline');
+      });
+
       it('preserves leading and trailing newlines', function () {
         roundTripTest('\n\n\ntext between newlines\n\n');
       });
@@ -325,8 +323,6 @@ describe('startSharedAppAfterWarnings', function () {
       originalState[item] = Applab[item];
     });
     originalState.dashboard = window.dashboard;
-
-    window.dashboard = window.dashboard || {};
 
     Applab.user = {};
     Applab.channelId = 'current_channel';
@@ -409,5 +405,108 @@ describe('startSharedAppAfterWarnings', function () {
     component.props.handleClose();
     assert.strictEqual(localStorage.getItem('dataAlerts'),
       JSON.stringify(['other_channel', 'current_channel']));
+  });
+});
+
+describe('RecordListener', function() {
+  describe('TableHandler', function() {
+    var TableHandler = RecordListener.__TestInterface.TableHandler;
+    var records, oldIdToJsonMap, newIdToJsonMap, events, callback;
+
+    beforeEach (function() {
+      records = [];
+      oldIdToJsonMap = {};
+      newIdToJsonMap = {};
+      events = [];
+      callback = createSpyCallback(events);
+    });
+
+    function createSpyCallback(events) {
+      return function (record, eventType) {
+        events.push([record, eventType]);
+      };
+    }
+
+    function createRecord(id, name, age) {
+      return {id: id, name: name, age: age};
+    }
+
+    function addOldRecord(record) {
+      oldIdToJsonMap[record.id] = JSON.stringify(record);
+    }
+
+    function addNewRecord(record) {
+      records.push(record);
+      newIdToJsonMap[record.id] = JSON.stringify(record);
+    }
+
+    it('reports "create" events', function() {
+      var alice = createRecord(1, 'Alice', 7);
+      addNewRecord(alice);
+
+      TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
+
+      assert.equal(events.length, 1, 'One event is reported');
+      var actualRecord = events[0][0];
+      var actualEventType = events[0][1];
+      assert.equal(JSON.stringify(actualRecord), JSON.stringify(alice),
+        'Reported record has correct contents');
+      assert.equal(actualEventType, 'create', 'Event has correct type');
+    });
+
+    it('reports "update" events', function() {
+      var alice = createRecord(1, 'Alice', 7);
+      var bob = createRecord(1, 'Bob', 8);
+      addOldRecord(alice);
+      addNewRecord(bob);
+
+      TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
+
+      assert.equal(events.length, 1, 'One event is reported');
+      var actualRecord = events[0][0];
+      var actualEventType = events[0][1];
+      assert.equal(JSON.stringify(actualRecord), JSON.stringify(bob),
+        'Reported record has correct contents');
+      assert.equal(actualEventType, 'update', 'Event has correct type');
+    });
+
+    it('reports "delete" events', function() {
+      var bob = createRecord(1, 'Bob', 8);
+      addOldRecord(bob);
+
+      TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
+
+      assert.equal(events.length, 1, 'One event is reported');
+      var actualRecord = events[0][0];
+      var actualEventType = events[0][1];
+      assert.equal(JSON.stringify(actualRecord), JSON.stringify({id: bob.id}),
+        'Reported record has correct contents');
+      assert.equal(actualEventType, 'delete', 'Event has correct type');
+    });
+
+    it('reports multiple events', function() {
+      var alice = createRecord(1, 'Alice', 7);
+      var bob = createRecord(2, 'Bob', 8);
+      var charlie = createRecord(3, 'Charlie', 9);
+      var eve = createRecord(2, 'Eve', 11);
+
+      // create charlie, update bob to eve, delete alice
+
+      addOldRecord(alice);
+      addOldRecord(bob);
+      addNewRecord(eve);
+      addNewRecord(charlie);
+
+      TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
+
+      var expectedEvents = [
+        [eve, 'update'],
+        [charlie, 'create'],
+        [{id: alice.id}, 'delete']
+      ];
+
+      assert.equal(JSON.stringify(events), JSON.stringify(expectedEvents),
+        'Create, update and delete events were reported');
+    });
   });
 });

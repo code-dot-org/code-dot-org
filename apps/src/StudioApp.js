@@ -1,20 +1,7 @@
-/* global Blockly, ace:true, droplet, marked, dashboard, addToHome */
-
-/**
- * For the most part, we depend on dashboard providing us with React as a global.
- * However, there is at least one context in which this won't be true - when we
- * show feedback blocks in their own iframe. In that case, load React from
- * our module.
- * This approach has a couple of drawbacks
- * (1) ability for dashboard React and apps React versions to get out of sync
- * (2) if we end up in other cases where React isn't provided to us as a global
- *     we probably won't notice, which may not be intended behavior
- */
-if (!window.React) {
-  window.React = require('react');
-}
+/* global Blockly, ace:true, droplet, dashboard, addToHome */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
+var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
@@ -32,11 +19,14 @@ var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
-var Instructions = require('./templates/Instructions.jsx');
+var Instructions = require('./templates/instructions/Instructions.jsx');
+var DialogButtons = require('./templates/DialogButtons.jsx');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
+var annotationList = require('./acemode/annotationList');
+var processMarkdown = require('marked');
 var copyrightStrings;
 
 /**
@@ -53,6 +43,12 @@ var ENGLISH_LOCALE = 'en_us';
  * Treat mobile devices with screen.width less than the value below as phones.
  */
 var MAX_PHONE_WIDTH = 500;
+
+/**
+ * Object representing everything in window.appOptions (often passed around as
+ * config)
+ * @typedef {Object} AppOptionsConfig
+ */
 
 var StudioApp = function () {
   this.feedback_ = new FeedbackUtils(this);
@@ -240,12 +236,24 @@ StudioApp.prototype.configure = function (options) {
   this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 };
 
+/**
+ * @param {AppOptionsConfig}
+ */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
   return !!(config.level.instructions || config.level.aniGifURL);
 };
 
 /**
+ * Some functionality - most notably markdown instructions - is only
+ * supported when running in English. This helper exposes that check.
+ */
+StudioApp.prototype.localeIsEnglish = function () {
+  return this.LOCALE === ENGLISH_LOCALE;
+};
+
+/**
  * Common startup tasks for all apps. Happens after configure.
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.init = function(config) {
   if (!config) {
@@ -362,18 +370,13 @@ StudioApp.prototype.init = function(config) {
   }
 
   if (config.showInstructionsWrapper) {
-    config.showInstructionsWrapper(_.bind(function () {
+    config.showInstructionsWrapper(function () {
+      if (config.showInstructionsInTopPane) {
+        return;
+      }
       var shouldAutoClose = !!config.level.aniGifURL;
-      this.showInstructions_(config.level, shouldAutoClose, false);
-    }, this));
-  }
-
-  // The share and embed pages do not show the rotateContainer.
-  if (this.share || config.embed) {
-    var rotateContainer = document.getElementById('rotateContainer');
-    if (rotateContainer) {
-      rotateContainer.style.display = 'none';
-    }
+      this.showInstructionsDialog_(config.level, shouldAutoClose, false);
+    }.bind(this));
   }
 
   // In embed mode, the display scales down when the width of the
@@ -414,40 +417,8 @@ StudioApp.prototype.init = function(config) {
     config.loadAudio();
   }
 
-  var promptDiv = document.getElementById('prompt');
-  var prompt2Div = document.getElementById('prompt2');
-  if (config.level.instructions) {
-    var instructionsHtml = this.substituteInstructionImages(config.level.instructions);
-    $(promptDiv).html(instructionsHtml);
-  }
-  if (config.level.instructions2) {
-    var instructions2Html = this.substituteInstructionImages(config.level.instructions2);
-    $(prompt2Div).html(instructions2Html);
-    $(prompt2Div).show();
-  }
-
-  if (this.hasInstructionsToShow(config)) {
-    var promptIcon = document.getElementById('prompt-icon');
-    if (this.smallIcon) {
-      promptIcon.src = this.smallIcon;
-      $('#prompt-icon-cell').show();
-    }
-
-    var bubble = document.getElementById('bubble');
-
-    this.authoredHintsController_.display(promptIcon, bubble, function () {
-      this.showInstructions_(config.level, false, true);
-    }.bind(this));
-  }
-
-  var aniGifPreview = document.getElementById('ani-gif-preview');
-  if (config.level.aniGifURL) {
-    aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-    var promptTable = document.getElementById('prompt-table');
-    promptTable.className += " with-ani-gif";
-  } else {
-    var wrapper = document.getElementById('ani-gif-preview-wrapper');
-    wrapper.style.display = 'none';
+  if (!config.showInstructionsInTopPane) {
+    this.configureAndShowInstructions_(config);
   }
 
   if (this.editCode) {
@@ -518,7 +489,7 @@ StudioApp.prototype.init = function(config) {
         defaultBtnSelector: 'again-button',
         id: 'showVersionsModal'
       });
-      React.render(React.createElement(VersionHistory, {
+      ReactDOM.render(React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
       }), codeDiv);
 
@@ -547,6 +518,50 @@ StudioApp.prototype.init = function(config) {
 
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
+  }
+};
+
+/**
+ * Sets html for prompts below playspace, anigif, and shows instructions dialog
+ * @param {AppOptionsConfig}
+ */
+StudioApp.prototype.configureAndShowInstructions_ = function (config) {
+  var promptDiv = document.getElementById('prompt');
+  var prompt2Div = document.getElementById('prompt2');
+  if (config.level.instructions) {
+    var instructionsHtml = this.substituteInstructionImages(
+      config.level.instructions, this.skin.instructions2ImageSubstitutions);
+    $(promptDiv).html(instructionsHtml);
+  }
+  if (config.level.instructions2) {
+    var instructions2Html = this.substituteInstructionImages(
+      config.level.instructions2, this.skin.instructions2ImageSubstitutions);
+    $(prompt2Div).html(instructions2Html);
+    $(prompt2Div).show();
+  }
+
+  if (this.hasInstructionsToShow(config)) {
+    var promptIcon = document.getElementById('prompt-icon');
+    if (this.smallIcon) {
+      promptIcon.src = this.smallIcon;
+      $('#prompt-icon-cell').show();
+    }
+
+    var bubble = document.getElementById('bubble');
+
+    this.authoredHintsController_.display(promptIcon, bubble, function () {
+      this.showInstructionsDialog_(config.level, false, true);
+    }.bind(this));
+  }
+
+  var aniGifPreview = document.getElementById('ani-gif-preview');
+  if (config.level.aniGifURL) {
+    aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
+    var promptTable = document.getElementById('prompt-table');
+    promptTable.className += " with-ani-gif";
+  } else {
+    var wrapper = document.getElementById('ani-gif-preview-wrapper');
+    wrapper.style.display = 'none';
   }
 };
 
@@ -597,10 +612,15 @@ StudioApp.prototype.scaleLegacyShare = function() {
   applyTransformScale(vizContainer, 'scale(' + scale + ')');
 };
 
-StudioApp.prototype.substituteInstructionImages = function(htmlText) {
+/**
+ * @param {string} htmlText
+ * @param {Object.<string, string>} [substitutions] Dictionary strings (keys) to
+ *   replacement values.
+ */
+StudioApp.prototype.substituteInstructionImages = function(htmlText, substitutions) {
   if (htmlText) {
-    for (var prop in this.skin.instructions2ImageSubstitutions) {
-      var value = this.skin.instructions2ImageSubstitutions[prop];
+    for (var prop in substitutions) {
+      var value = substitutions[prop];
       var substitutionHtml = '<span class="instructionsImageContainer"><img src="' + value + '" class="instructionsImage"/></span>';
       var re = new RegExp('\\[' + prop + '\\]', 'g');
       htmlText = htmlText.replace(re, substitutionHtml);
@@ -631,7 +651,7 @@ StudioApp.prototype.setIconsFromSkin = function (skin) {
 /**
  * Reset the puzzle back to its initial state.
  * Search aliases: "Start Over", startOver
- * @param {Object} config - same config object passed to studioApp.init().
+ * @param {AppOptionsConfig}- same config object passed to studioApp.init().
  */
 StudioApp.prototype.handleClearPuzzle = function (config) {
   if (this.isUsingBlockly()) {
@@ -656,6 +676,8 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     // Remove this line once that bug is fixed and our Droplet lib is updated.
     this.editor.getValue();
     this.editor.setValue(resetValue);
+
+    annotationList.clearRuntimeAnnotations();
   }
   if (config.afterClearPuzzle) {
     config.afterClearPuzzle();
@@ -752,10 +774,11 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
         link: "https://code.org/privacy",
         newWindow: true
       }
-    ]
+    ],
+    phoneFooter: true
   };
 
-  React.render(React.createElement(window.dashboard.SmallFooter, reactProps),
+  ReactDOM.render(React.createElement(window.dashboard.SmallFooter, reactProps),
     footerDiv);
 };
 
@@ -996,9 +1019,63 @@ StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 };
 
-StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
-  var instructionsDiv = document.createElement('div');
+/**
+ * Given a level definition, do we want to show instructions in markdown form.
+ * @param {object} level
+ * @returns {boolean}
+ */
+StudioApp.prototype.isMarkdownMode = function (level) {
+  return level.markdownInstructions && this.localeIsEnglish();
+};
+
+/**
+ * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
+ *   have markdown instructions
+ * @param {object} level
+ * @param {boolean} showHints
+ * @returns {React.element}
+ */
+StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
   var renderedMarkdown;
+
+  if (this.isMarkdownMode(level)) {
+    var markdownWithImages = this.substituteInstructionImages(
+      level.markdownInstructions, this.skin.instructions2ImageSubstitutions);
+    renderedMarkdown = processMarkdown(markdownWithImages);
+  }
+
+  var authoredHints;
+  if (showHints) {
+    authoredHints = this.authoredHintsController_.getHintsDisplay();
+  }
+
+  return (
+    <Instructions
+      puzzleTitle={puzzleTitle}
+      instructions={this.substituteInstructionImages(level.instructions,
+        this.skin.instructions2ImageSubstitutions)}
+      instructions2={this.substituteInstructionImages(level.instructions2,
+        this.skin.instructions2ImageSubstitutions)}
+      renderedMarkdown={renderedMarkdown}
+      markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
+      aniGifURL={level.aniGifURL}
+      authoredHints={authoredHints}/>
+  );
+};
+
+/**
+ * @param {object} level
+ * @param {boolean} autoClose - closes instructions after 32s if true
+ * @param {boolean} showHints
+ */
+StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose, showHints) {
+  var isMarkdownMode = this.isMarkdownMode(level);
+
+  var instructionsDiv = document.createElement('div');
+  instructionsDiv.className = isMarkdownMode ?
+    'markdown-instructions-container' :
+    'instructions-container';
+
   var headerElement;
 
   var puzzleTitle = msg.puzzleTitle({
@@ -1006,12 +1083,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     puzzle_number: level.puzzle_number
   });
 
-  var markdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
-
-  if (markdownMode) {
-    var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
-    renderedMarkdown = marked(markdownWithImages);
-    instructionsDiv.className += ' markdown-instructions-container';
+  if (isMarkdownMode) {
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
     headerElement.innerHTML = puzzleTitle;
@@ -1020,37 +1092,20 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     }
   }
 
-  var authoredHints;
-  if (showHints) {
-    authoredHints = this.authoredHintsController_.getHintsDisplay();
-  }
-
-  var instructionsContent = React.createElement(Instructions, {
-    puzzleTitle: puzzleTitle,
-    instructions: this.substituteInstructionImages(level.instructions),
-    instructions2: this.substituteInstructionImages(level.instructions2),
-    renderedMarkdown: renderedMarkdown,
-    markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
-    aniGifURL: level.aniGifURL,
-    authoredHints: authoredHints
-  });
+  var instructionsContent = this.getInstructionsContent_(puzzleTitle, level,
+    showHints);
 
   // Create a div to eventually hold this content, and add it to the
   // overall container. We don't want to render directly into the
   // container just yet, because our React component could contain some
   // elements that don't want to be rendered until they are in the DOM
   var instructionsReactContainer = document.createElement('div');
-  instructionsReactContainer.className='instructions-container';
+  instructionsReactContainer.className='instructions-content';
   instructionsDiv.appendChild(instructionsReactContainer);
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html.ejs')({
-    data: {
-      ok: true
-    }
-  });
-
   instructionsDiv.appendChild(buttons);
+  ReactDOM.render(<DialogButtons ok={true}/>, buttons);
 
   // If there is an instructions block on the screen, we want the instructions dialog to
   // shrink down to that instructions block when it's dismissed.
@@ -1083,20 +1138,20 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
-    markdownMode: markdownMode,
+    markdownMode: isMarkdownMode,
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
     onHidden: hideFn,
     scrollContent: true,
-    scrollableSelector: ".instructions-container",
+    scrollableSelector: ".instructions-content",
     header: headerElement
   });
 
   // Now that our elements are guaranteed to be in the DOM, we can
   // render in our react components
   $(this.instructionsDialog.div).on('show.bs.modal', function () {
-    React.render(instructionsContent, instructionsReactContainer);
+    ReactDOM.render(instructionsContent, instructionsReactContainer);
   });
 
   if (autoClose) {
@@ -1116,7 +1171,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
 
   this.instructionsDialog.show({hideOptions: hideOptions});
 
-  if (renderedMarkdown) {
+  if (isMarkdownMode) {
     // process <details> tags with polyfill jQuery plugin
     $('details').details();
   }
@@ -1163,14 +1218,14 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
-  var designToggleRow = document.getElementById('designToggleRow');
+  var playSpaceHeader = document.getElementById('playSpaceHeader');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
-  if (designToggleRow) {
-    top += $(designToggleRow).outerHeight(true);
+  if (playSpaceHeader) {
+    top += $(playSpaceHeader).outerHeight(true);
   }
 
   if (visualization) {
@@ -1263,7 +1318,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
  * Resize the visualization to the given width
  */
 StudioApp.prototype.resizeVisualization = function (width) {
-  var codeWorkspace = document.getElementById('codeWorkspace');
+  var editorColumn = $(".editor-column");
   var visualization = document.getElementById('visualization');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -1278,10 +1333,10 @@ StudioApp.prototype.resizeVisualization = function (width) {
 
   if (this.isRtl()) {
     visualizationResizeBar.style.right = newVizWidthString;
-    codeWorkspace.style.right = newVizWidthString;
+    editorColumn.css('right', newVizWidthString);
   } else {
     visualizationResizeBar.style.left = newVizWidthString;
-    codeWorkspace.style.left = newVizWidthString;
+    editorColumn.css('left', newVizWidthString);
   }
   visualizationResizeBar.style.lineHeight = newVizHeightString;
   // Add extra width to visualizationColumn if visualization has a border:
@@ -1451,6 +1506,7 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
 * {string} level The ID of the current level.
 * {number} result An indicator of the success of the code.
 * {number} testResult More specific data on success or failure of code.
+* {boolean} submitted Whether the (submittable) level is being submitted.
 * {string} program The user program, which will get URL-encoded.
 * {function} onComplete Function to be called upon completion.
 */
@@ -1488,6 +1544,23 @@ StudioApp.prototype.report = function(options) {
     } else {
       onAttemptCallback();
     }
+  }
+};
+
+/**
+ * Set up the runtime annotation system as appropriate. Typically called
+ * during an app's execute() immediately after calling reset().
+ */
+StudioApp.prototype.clearAndAttachRuntimeAnnotations = function () {
+  if (this.editCode && !this.hideSource) {
+    // Our ace worker also calls attachToSession, but it won't run on IE9:
+    var session = this.editor.aceEditor.getSession();
+    annotationList.attachToSession(session, this.editor);
+    annotationList.clearRuntimeAnnotations();
+    this.editor.aceEditor.session.on("change", function () {
+      // clear any runtime annotations whenever a change is made
+      annotationList.clearRuntimeAnnotations();
+    });
   }
 };
 
@@ -1577,7 +1650,7 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
 };
 
 /**
- *
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.setConfigValues_ = function (config) {
   this.share = config.share;
@@ -1624,7 +1697,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
-  this.showInstructions = this.showInstructions_.bind(this, config.level, false);
+  this.showInstructions = this.showInstructionsDialog_.bind(this, config.level, false);
   this.polishCodeHook = config.polishCodeHook;
 };
 
@@ -1640,10 +1713,10 @@ StudioApp.prototype.runButtonClickWrapper = function (callback) {
 /**
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
-  container.innerHTML = config.html;
   if (!this.enableShowCode) {
     document.getElementById('show-code-header').style.display = 'none';
   }
@@ -1749,7 +1822,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
         var div = document.createElement('div');
         document.body.appendChild(div);
-        React.render(React.createElement(WireframeSendToPhone, {
+        ReactDOM.render(React.createElement(WireframeSendToPhone, {
           channelId: dashboard.project.getCurrentId(),
           appType: dashboard.project.getStandaloneApp()
         }), div);
@@ -1778,8 +1851,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   }
 };
 
-StudioApp.prototype.handleEditCode_ = function (config) {
 
+StudioApp.prototype.handleEditCode_ = function (config) {
   if (this.hideSource) {
     // In hide source mode, just call afterInject and exit immediately
     if (config.afterInject) {
@@ -1792,10 +1865,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   // Ensure global ace variable is the same as window.ace
   // (important because they can be different in our test environment)
-
-  /* jshint ignore:start */
   ace = window.ace;
-  /* jshint ignore:end */
 
   var fullDropletPalette = dropletUtils.generateDropletPalette(
     config.level.codeFunctions, config.dropletConfig);
@@ -1816,7 +1886,39 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // Init and define our custom ace mode:
   aceMode.defineForAce(config.dropletConfig, config.unusedConfig, this.editor);
   // Now set the editor to that mode:
-  this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
+  var aceEditor = this.editor.aceEditor;
+  aceEditor.session.setMode('ace/mode/javascript_codeorg');
+
+  // Extend the command list on the ace Autocomplete object to include the period:
+  var Autocomplete = window.ace.require("ace/autocomplete").Autocomplete;
+  Autocomplete.prototype.commands['.'] = function(editor) {
+    // First, insert the period and update the completions:
+    editor.insert(".");
+    editor.completer.updateCompletions(true);
+    var filtered = editor.completer.completions &&
+        editor.completer.completions.filtered;
+    for (var i = 0; i < (filtered && filtered.length); i++) {
+      // If we have any exact maches in our filtered completions that include
+      // this period, allow the completer to stay active:
+      if (filtered[i].exactMatch) {
+        return;
+      }
+    }
+    // Otherwise, detach the completer:
+    editor.completer.detach();
+  };
+
+  var langTools = window.ace.require("ace/ext/language_tools");
+
+  // We don't want to include the textCompleter. langTools doesn't give us a way
+  // to remove base completers (note: it does in newer versions of ace), so
+  // we set aceEditor.completers manually
+  aceEditor.completers = [langTools.snippetCompleter, langTools.keyWordCompleter];
+  // make setCompleters fail so that attempts to use it result in clear failure
+  // instead of just silently not working
+  langTools.setCompleters = function () {
+    throw new Error('setCompleters disabled. set aceEditor.completers directly');
+  };
 
   // Add an ace completer for the API functions exposed for this level
   if (config.dropletConfig) {
@@ -1824,8 +1926,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     if (config.level.autocompletePaletteApisOnly) {
        functionsFilter = config.level.codeFunctions;
     }
-    var langTools = window.ace.require("ace/ext/language_tools");
-    langTools.addCompleter(
+
+    aceEditor.completers.push(
       dropletUtils.generateAceApiCompleter(functionsFilter, config.dropletConfig));
   }
 
@@ -1981,6 +2083,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
 
 /**
  * Show the configured starting function definition.
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.openFunctionDefinition_ = function(config) {
   if (Blockly.contractEditor) {
@@ -1999,7 +2102,7 @@ StudioApp.prototype.openFunctionDefinition_ = function(config) {
 };
 
 /**
- *
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // Allow empty blocks if editing blocks.
@@ -2304,7 +2407,7 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
     text.setAttribute('y', CANVAS_HEIGHT);
     text.setAttribute('font-weight', 'bold');
     rect = rectFromElementBoundingBox(text);
-    rect.setAttribute('fill', 'white');
+    rect.setAttribute('fill', color.white);
     svg.insertBefore(rect, text);
 
     // create y axis labels
@@ -2317,7 +2420,7 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
     text.setAttribute('dominant-baseline', 'central');
     text.setAttribute('font-weight', 'bold');
     rect = rectFromElementBoundingBox(text);
-    rect.setAttribute('fill', 'white');
+    rect.setAttribute('fill', color.white);
     svg.insertBefore(rect, text);
   }
 };
@@ -2333,31 +2436,72 @@ function rectFromElementBoundingBox(element) {
 }
 
 /**
- * Displays a small alert box inside DOM element at parentSelector.
- * @param {string} parentSelector
- * @param {object} props A set of React properties passed to the AbuseError
- *   component
+ * Displays a small alert box inside the workspace
+ * @param {string} type - Alert type (error or warning)
+ * @param {React.Component} alertContents
  */
-StudioApp.prototype.displayAlert = function (parentSelector, props) {
-  // Each parent is assumed to have at most a single alert. This assumption
-  // could be changed, but we would then want to clean up our DOM element on
-  // close
-  var parent = $(parentSelector);
-  var container = parent.children('.react-alert');
-  if (container.length === 0) {
-    container = $("<div class='react-alert'/>");
-    parent.append(container);
+StudioApp.prototype.displayWorkspaceAlert = function (type, alertContents) {
+  var container = this.displayAlert("#codeWorkspace", { type: type }, alertContents);
+
+  var toolbarWidth;
+  if (this.usingBlockly_) {
+    toolbarWidth = $(".blocklyToolboxDiv").width();
+  } else{
+    toolbarWidth = $(".droplet-palette-element").width() + $(".droplet-gutter").width();
   }
 
-  var reactProps = $.extend({}, {
-    className: 'alert-error',
-    onClose: function () {
-      React.unmountComponentAtNode(container[0]);
-    }
-  }, props);
+  $(container).css({
+    left: toolbarWidth,
+    top: $("#headers").height()
+  });
+};
 
-  var element = React.createElement(Alert, reactProps);
-  React.render(element, container[0]);
+/**
+ * Displays a small aert box inside the playspace
+ * @param {string} type - Alert type (error or warning)
+ * @param {React.Component} alertContents
+ */
+StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
+  StudioApp.prototype.displayAlert("#visualization", {
+    type: type,
+    sideMargin: 20
+  }, alertContents);
+};
+
+/**
+ * Displays a small alert box inside DOM element at parentSelector. Parent is
+ * assumed to have at most a single alert (we'll either create a new one or
+ * replace the existing one).
+ * @param {object} props
+ * @param {string} object.type - Alert type (error or warning)
+ * @param {number} [object.sideMaring] - Optional param specifying margin on
+ *   either side of element
+ * @param {React.Component} alertContents
+ */
+StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
+  var parent = $(selector);
+  var container = parent.children('.react-alert');
+  if (container.length === 0) {
+    container = $("<div class='react-alert'/>").css({
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      top: 0,
+      zIndex: 1000
+    });
+    parent.append(container);
+  }
+  var renderElement = container[0];
+
+  var handleAlertClose = function () {
+    ReactDOM.unmountComponentAtNode(renderElement);
+  };
+  ReactDOM.render(
+    <Alert onClose={handleAlertClose} type={props.type} sideMargin={props.sideMargin}>
+      {alertContents}
+    </Alert>, renderElement);
+
+  return renderElement;
 };
 
 /**
@@ -2367,19 +2511,11 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
  */
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
   if (window.dashboard && dashboard.project.exceedsAbuseThreshold()) {
-    this.displayAlert(parentSelector, {
-      body: React.createElement(dashboard.AbuseError, {
-        i18n: {
-          tos: window.dashboard.i18n.t('project.abuse.tos'),
-          contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
-        }
-      }),
-      style: {
-        top: 45,
-        left: 350,
-        right: 50
-      }
-    });
+    var i18n = {
+      tos: window.dashboard.i18n.t('project.abuse.tos'),
+      contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
+    };
+    this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
   }
 };
 
@@ -2389,6 +2525,9 @@ StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
  * @returns {boolean} True if we detect an instance of this.
  */
 StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
+  if (this.editCode) {
+    return false;
+  }
   return Blockly.mainBlockSpace.getAllBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
 };
 

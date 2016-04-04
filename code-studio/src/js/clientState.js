@@ -4,9 +4,10 @@
  */
 'use strict';
 
-module.exports = function (sessionStorage, $) {
+var $ = require('jquery-shim');
+var sessionStorage = window.sessionStorage;
 
-var clientState = {};
+var clientState = module.exports = {};
 
 /**
  * Number of days before client state cookie expires.
@@ -32,7 +33,7 @@ clientState.reset = function() {
 };
 
 /**
- * Get the URL querystring params
+ * Gets the URL querystring params.
  * @param name {string=} Optionally pull a specific param.
  * @return {object|string} Hash of params, or param string if `name` is specified.
  */
@@ -283,7 +284,3 @@ function safelySetItem(key, value) {
     }
   }
 }
-
-return clientState;
-
-};

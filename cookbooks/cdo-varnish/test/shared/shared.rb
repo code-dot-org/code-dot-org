@@ -106,7 +106,7 @@ module Cdo
       # Send an HTTP request through the current proxy-cache configuration.
       # The proxy-cache configuration is CloudFront+Varnish or Varnish-only.
       def proxy_request(url, headers={}, cookies={}, method='GET')
-        headers.merge!(host: @proxy_host)
+        headers[:host] = @proxy_host
         headers.merge!('X-Forwarded-Proto' => 'https'){|_, v1, _|v1}
         _request("#{@proxy_address}#{url}", headers, cookies, method)
       end
@@ -148,6 +148,7 @@ module Cdo
       def assert_miss(response)
         assert_cache response, false
       end
+
       def assert_hit(response)
         assert_cache response, true
       end

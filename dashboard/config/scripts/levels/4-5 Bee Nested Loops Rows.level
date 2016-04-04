@@ -11,13 +11,31 @@
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "start_direction": "1",
-    "nectar_goal": "14",
-    "flower_type": "redWithNectar",
+    "flower_type": "purpleNectarHidden",
     "maze": "[[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,\"P\",\"P\",\"P\",\"P\",\"P\",\"P\",1],[1,2,\"P\",\"P\",\"P\",\"P\",\"P\",\"P\"],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,4,2,1,98,98,1,0],[0,0,98,1,98,2,98,3],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "9"
-  }
+    "ideal": "9",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "true",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":2,\"flowerColor\":1,\"range\":2},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":3,\"flowerColor\":1,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":4},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":2,\"flowerColor\":1,\"range\":2},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Try treating this puzzle like a long rectangle where the bee needs to move forward, then turn left several times to complete the path.\",\r\n  \"hint_id\": \"4-5_Bee_Nested_Loops_Rows_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "step_speed": "1"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -41,19 +59,61 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
-        <block type="maze_moveForward"/>
         <block type="controls_repeat">
           <title name="TIMES">6</title>
         </block>
-        <block type="bee_whileNectarAmount" inline="true">
+        <block type="bee_whileNectarAmount">
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>
         </block>
-        <block type="maze_nectar"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">6</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="bee_whileNectarAmount">
+                          <title name="ARG1">nectarRemaining</title>
+                          <title name="OP">&gt;</title>
+                          <title name="ARG2">0</title>
+                          <statement name="DO">
+                            <block type="maze_nectar"/>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

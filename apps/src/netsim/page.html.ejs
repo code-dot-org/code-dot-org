@@ -1,13 +1,3 @@
-<%
-  var msg = require('../locale');
-%>
-
-<div id="rotateContainer" style="background-image: url(<%= assetUrl('media/turnphone_horizontal.png') %>)">
-  <div id="rotateText">
-    <p><%= msg.rotateText() %><br><%= msg.orientationLock() %></p>
-  </div>
-</div>
-
 <% var instructions = function() { -%>
   <div id="bubble" class="clearfix">
     <table id="prompt-table">
@@ -68,5 +58,3 @@
     <% instructions(); %>
   </div>
 </div>
-
-<div class="clear"></div>

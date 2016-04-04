@@ -1,0 +1,22 @@
+source 'https://supermarket.chef.io'
+
+metadata
+%w(
+  repository
+  github-access
+  secrets
+  postfix
+  varnish
+  mysql
+  ruby
+  nginx
+  nodejs
+  java-7
+).map{|x|"cdo-#{x}"}.
+  push('sudo-user').
+  each do |dep|
+  cookbook dep, path: "../#{dep}"
+end
+
+# See https://github.com/hw-cookbooks/omnibus_updater/pull/105 for details on this branch.
+cookbook 'omnibus_updater', github: 'wjordan/omnibus_updater', branch: 'mixlib-install'

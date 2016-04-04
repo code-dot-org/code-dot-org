@@ -1,0 +1,8 @@
+%h1 New plc_task
+
+= render 'form'
+
+- if @task.plc_learning_module
+  = link_to 'Back to Learning Module', plc_learning_module_path(@task.plc_learning_module)
+- else
+  = link_to 'Back to Content Creation', plc_content_creator_show_courses_and_modules_path

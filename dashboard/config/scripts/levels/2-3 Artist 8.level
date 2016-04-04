@@ -15,7 +15,6 @@
     "images": "[{\"filename\":\"lion.svg\",\"position\":[95,150]},{\"filename\":\"cow.svg\",\"position\":[185,150]}]",
     "scrollbars": "false",
     "free_play": "false",
-    "ideal": "12",
     "slider_speed": "0.4",
     "embed": "false",
     "disable_param_editing": "true",
@@ -23,7 +22,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "markdown_instructions": "Complete the rooms for each of the animals by splitting the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide and 100 pixels tall.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Time to build a barn!\r\n\r\nMake the rooms for each animal by splitting the barn into 2 equal-sized squares. \r\n\r\nHint: The rectangle is 200 pixels wide and 100 pixels tall.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -33,8 +32,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "disable_sharing": "false",
-    "never_autoplay_video": "false"
-  }
+    "never_autoplay_video": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you cut 200 in half, how many pixels wide does each square need to be?\",\r\n  \"hint_id\": \"2-3_Artist_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -73,16 +75,7 @@
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-        </block>
-      </xml>
+      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>
@@ -90,59 +83,47 @@
           <next>
             <block type="draw_move_by_constant">
               <title name="DIR">moveForward</title>
-              <title name="VALUE">100</title>
+              <title name="VALUE">200</title>
               <next>
-                <block type="draw_turn_by_constant">
+                <block type="draw_turn_by_constant_dropdown">
                   <title name="DIR">turnLeft</title>
-                  <title name="VALUE">90</title>
+                  <title name="VALUE" config="45,60,90,120,180">90</title>
                   <next>
                     <block type="draw_move_by_constant">
                       <title name="DIR">moveForward</title>
                       <title name="VALUE">100</title>
                       <next>
-                        <block type="draw_turn_by_constant">
+                        <block type="draw_turn_by_constant_dropdown">
                           <title name="DIR">turnLeft</title>
-                          <title name="VALUE">90</title>
+                          <title name="VALUE" config="45,60,90,120,180">90</title>
                           <next>
                             <block type="draw_move_by_constant">
                               <title name="DIR">moveForward</title>
-                              <title name="VALUE">100</title>
+                              <title name="VALUE">200</title>
                               <next>
-                                <block type="draw_turn_by_constant">
+                                <block type="draw_turn_by_constant_dropdown">
                                   <title name="DIR">turnLeft</title>
-                                  <title name="VALUE">90</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
                                   <next>
                                     <block type="draw_move_by_constant">
                                       <title name="DIR">moveForward</title>
                                       <title name="VALUE">100</title>
                                       <next>
-                                        <block type="draw_turn_by_constant">
+                                        <block type="draw_turn_by_constant_dropdown">
                                           <title name="DIR">turnLeft</title>
-                                          <title name="VALUE">90</title>
+                                          <title name="VALUE" config="45,60,90,120,180">90</title>
                                           <next>
-                                            <block type="draw_move_by_constant">
-                                              <title name="DIR">moveForward</title>
-                                              <title name="VALUE">200</title>
+                                            <block type="jump_by_constant">
+                                              <title name="DIR">jumpForward</title>
+                                              <title name="VALUE">100</title>
                                               <next>
-                                                <block type="draw_turn_by_constant">
+                                                <block type="draw_turn_by_constant_dropdown">
                                                   <title name="DIR">turnLeft</title>
-                                                  <title name="VALUE">90</title>
+                                                  <title name="VALUE" config="45,60,90,120,180">90</title>
                                                   <next>
                                                     <block type="draw_move_by_constant">
                                                       <title name="DIR">moveForward</title>
                                                       <title name="VALUE">100</title>
-                                                      <next>
-                                                        <block type="draw_turn_by_constant">
-                                                          <title name="DIR">turnLeft</title>
-                                                          <title name="VALUE">90</title>
-                                                          <next>
-                                                            <block type="draw_move_by_constant">
-                                                            <title name="DIR">moveForward</title>
-                                                            <title name="VALUE">100</title>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
                                                     </block>
                                                   </next>
                                                 </block>

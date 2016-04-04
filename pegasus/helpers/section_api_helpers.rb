@@ -1,6 +1,7 @@
 require 'cdo/user_helpers'
 require 'cdo/script_constants'
 require_relative '../helper_modules/dashboard'
+require 'cdo/section_helpers'
 
 # TODO -- change the APIs below to check logged in user instead of passing in a user id
 class DashboardStudent
@@ -38,7 +39,7 @@ class DashboardStudent
   end
 
   def self.fetch_if_allowed(id_or_ids, dashboard_user_id)
-    if id_or_ids.kind_of?(Array)
+    if id_or_ids.is_a?(Array)
       # TODO this should actually send a where id in (,,,) type query
       return id_or_ids.map {|id| fetch_if_allowed(id, dashboard_user_id)}
     end
@@ -202,14 +203,6 @@ class DashboardSection
     valid_courses[course_id.to_i]
   end
 
-  def self.random_letter
-    (SecureRandom.random_number(26) + 10).to_s(36).upcase
-  end
-
-  def self.random_code
-    6.times.map{random_letter}.join('')
-  end
-
   def self.create(params)
     return nil unless params[:user] && params[:user][:user_type] == 'teacher'
 
@@ -236,7 +229,7 @@ class DashboardSection
         login_type: params[:login_type],
         grade: params[:grade],
         script_id: params[:script_id],
-        code: random_code,
+        code: SectionHelpers::random_code,
         created_at: created_at,
         updated_at: created_at,
       })
@@ -352,11 +345,13 @@ class DashboardSection
       distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(deleted_at: nil).
-      map{|row| row.merge({
-        location: "/v2/users/#{row[:id]}",
-        age: DashboardStudent::birthday_to_age(row[:birthday]),
-        completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
-      })}
+      map do |row|
+        row.merge({
+          location: "/v2/users/#{row[:id]}",
+          age: DashboardStudent::birthday_to_age(row[:birthday]),
+          completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
+        })
+      end
   end
 
   def teacher?(user_id)

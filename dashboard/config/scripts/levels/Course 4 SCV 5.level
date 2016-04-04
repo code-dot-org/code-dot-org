@@ -82,5 +82,125 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="variables_set" inline="false">
+              <title name="VAR">honey</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" inline="false">
+                  <title name="VAR">nectar</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">5</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext" inline="true">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext" inline="true">
+                          <value name="TIMES">
+                            <block type="variables_get">
+                              <title name="VAR">nectar</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="maze_moveForward"/>
+                          </statement>
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnRight</title>
+                              <next>
+                                <block type="controls_repeat_ext" inline="true">
+                                  <value name="TIMES">
+                                    <block type="variables_get">
+                                      <title name="VAR">nectar</title>
+                                    </block>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="maze_nectar"/>
+                                  </statement>
+                                  <next>
+                                    <block type="maze_moveForward">
+                                      <next>
+                                        <block type="controls_repeat_ext" inline="true">
+                                          <value name="TIMES">
+                                            <block type="variables_get">
+                                              <title name="VAR">honey</title>
+                                            </block>
+                                          </value>
+                                          <statement name="DO">
+                                            <block type="maze_honey"/>
+                                          </statement>
+                                          <next>
+                                            <block type="variables_set" inline="false">
+                                              <title name="VAR">honey</title>
+                                              <value name="VALUE">
+                                                <block type="math_arithmetic" inline="true">
+                                                  <title name="OP">ADD</title>
+                                                  <value name="A">
+                                                    <block type="variables_get">
+                                                      <title name="VAR">honey</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="math_number">
+                                                      <title name="NUM">1</title>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="variables_set" inline="false">
+                                                  <title name="VAR">nectar</title>
+                                                  <value name="VALUE">
+                                                    <block type="math_arithmetic" inline="true">
+                                                      <title name="OP">MINUS</title>
+                                                      <value name="A">
+                                                        <block type="variables_get">
+                                                          <title name="VAR">nectar</title>
+                                                        </block>
+                                                      </value>
+                                                      <value name="B">
+                                                        <block type="math_number">
+                                                          <title name="NUM">2</title>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

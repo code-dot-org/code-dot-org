@@ -29,7 +29,7 @@ end
 def json_bad_request(details = nil)
   content_type :json
   body = { error: 'Bad Request' }
-  body.merge!(details: details) unless details.nil?
+  body[:details] = details unless details.nil?
   halt(400, body.to_json)
 end
 
@@ -45,8 +45,8 @@ def not_found()
   halt(404, "Not found\n")
 end
 
-def too_large()
-  halt(413, "Payload too large\n")
+def too_large(msg = "Payload too large\n")
+  halt(413, msg)
 end
 
 def unsupported_media_type()

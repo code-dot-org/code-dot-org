@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Add event handler for editContactButton click.\r\n\r\nPre-populate UI elements with current contact info.",
+    "markdown_instructions": "# Event Handlers for “Edit” and “Go Back” Buttons\r\n\r\nNow that you have all the UI elements you need, it’s time to set up the event handlers. In this level, you’ll write the event handlers for the **“Edit” button** and the **new “Go Back” button**. (You’ll write the event handler for “Update Contact” in the next level.)\r\n\r\n# Do This:\r\n\r\n* **Add an event handler for the “Go Back” button** on the screen for editing contacts. In the event handler:\r\n\t* Set the screen to `viewContactsScreen`.\r\n* **Add an event handler for the “Edit” button.** In the event handler:\r\n\t* Use `setText` to populate each of the text inputs with the appropriate information from the current contact (which you can access using `contacts[currentIndex]`).\r\n\t* Set the screen to `editContactsScreen`.\r\n* **Add an event handler to update the preview image** on the “Edit” screen when the user changes the image URL.\r\n\t* This event handler should be analogous to the one you wrote for `editURLinput`.\r\n* If you haven’t already, **move the `setScreen` line from your “Save Contact” button event handler into `showCurrentContact`.** This way, when you delete a contact and reload your local copy of `contacts`, your app will redirect to the “View Contacts” screen.\r\n* **Run your program** and verify that the “Edit,” “Go Back,” and “Delete” buttons all work and that your preview image updates when you change the URL text.\r\n\r\n\r\n<details><summary><strong>Your code should look similar to this.</strong> (click to expand)</summary>\r\n![](https://images.code.org/74b697567fae902cad13d7df9e695b2b-image-1455921921229.png)\r\n</details>\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -38,9 +38,11 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "instructions": "(Click to see full instructions)"
+    "instructions": "Write event handlers for the Edit Contacts UI elements. (Click to see full instructions)",
+    "encrypted_examples": "bKdCr0WquxvAhm3a92Hfs+GiO0lfLyYgJkWCo9r+OTubw13UdP77RW99UGmy\nbl8x\n"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

@@ -79,8 +79,7 @@ DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = functio
     this.showParamDropdownIfNeeded_(editor, currentParameterInfo);
   }
 
-  this.updateParameterTooltip_(editor, currentParameterInfo.funcName,
-      currentParameterInfo.currentParameterIndex);
+  this.updateParameterTooltip_(editor, currentParameterInfo);
 };
 
 /**
@@ -95,7 +94,8 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
     this.dropletTooltipManager.dropletConfig,
     this.dropletTooltipManager.codeFunctions,
     this.autocompletePaletteApisOnly).forEach(function (block) {
-      if (block.func !== paramInfo.funcName || !block.dropdown) {
+      if (!block.dropdown ||
+          (block.func !== paramInfo.funcName && block.func !== paramInfo.fullFuncName)) {
         // Not the right block or no dropdown specified
         return;
       }
@@ -110,7 +110,7 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
         return;
       }
       if (typeof block.dropdown[paramInfo.currentParameterIndex] === 'function') {
-        dropdownList = block.dropdown[paramInfo.currentParameterIndex]();
+        dropdownList = block.dropdown[paramInfo.currentParameterIndex](editor);
       } else {
         dropdownList = block.dropdown[paramInfo.currentParameterIndex];
       }
@@ -159,26 +159,35 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
   }
 };
 
-DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = function (aceEditor, functionName, currentParameterIndex) {
-  if (!this.tooltipConfig.tooltipsEnabled || !this.dropletTooltipManager.getDocFor(functionName)) {
+DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = function (aceEditor, paramInfo) {
+  if (!this.tooltipConfig.tooltipsEnabled) {
     return;
   }
-  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
+
+  var docFunc;
+  if (this.dropletTooltipManager.getDocFor(paramInfo.funcName)) {
+    docFunc = paramInfo.funcName;
+  } else if (this.dropletTooltipManager.getDocFor(paramInfo.fullFuncName)) {
+    docFunc = paramInfo.fullFuncName;
+  } else {
+    return;
+  }
+  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(docFunc);
 
   var hasTooltipParams = tooltipInfo.parameterInfos.length > 0;
-  if ((hasTooltipParams && currentParameterIndex >= tooltipInfo.parameterInfos.length)) {
+  if ((hasTooltipParams && paramInfo.currentParameterIndex >= tooltipInfo.parameterInfos.length)) {
     return;
   }
 
   var cursorTooltip = this.getCursorTooltip_();
 
-  cursorTooltip.tooltipster('content', this.getTooltipHTML(tooltipInfo, currentParameterIndex));
+  cursorTooltip.tooltipster('content', this.getTooltipHTML(tooltipInfo, paramInfo.currentParameterIndex));
   cursorTooltip.tooltipster('show');
 
   if (this.showExamplesLink) {
     var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
     dom.addClickTouchEvent(seeExamplesLink, function (event) {
-      this.dropletTooltipManager.showDocFor(functionName);
+      this.dropletTooltipManager.showDocFor(docFunc);
       event.stopPropagation();
     }.bind(this));
   }
@@ -187,7 +196,7 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
     return;
   }
 
-  var chooseAsset = tooltipInfo.parameterInfos[currentParameterIndex].assetTooltip;
+  var chooseAsset = tooltipInfo.parameterInfos[paramInfo.currentParameterIndex].assetTooltip;
   if (chooseAsset) {
     var chooseAssetLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-choose-link > a')[0];
     dom.addClickTouchEvent(chooseAssetLink, function(event) {
@@ -215,6 +224,8 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
   return DropletFunctionTooltipMarkup({
     funcName: tooltipInfo.functionName,
     functionName: tooltipInfo.functionName,
+    isProperty: tooltipInfo.isProperty,
+    tipPrefix: tooltipInfo.tipPrefix,
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,

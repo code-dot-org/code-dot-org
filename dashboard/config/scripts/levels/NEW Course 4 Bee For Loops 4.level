@@ -31,11 +31,94 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "step_speed": "1"
-  }
+    "step_speed": "1",
+    "never_autoplay_video": "false",
+    "fast_get_nectar_animation": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_for" inline="true" deletable="false">
+              <title name="VAR">counter</title>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number" id="bee_for_loop_qtip">
+                  <title name="NUM">???</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="maze_move" deletable="false">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="controls_repeat_ext" inline="true" deletable="false">
+                      <value name="TIMES">
+                        <block type="variables_get">
+                          <title name="VAR">counter</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="maze_nectar" deletable="false"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="math_number">
+          <title name="NUM">5</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">7</title>
+            </block>
+          </value>
+          <value name="BY">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="variables_get">
+              <title name="VAR">counter</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </recommended_blocks>
+    <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
@@ -48,7 +131,7 @@
               </value>
               <value name="TO">
                 <block type="math_number" id="bee_for_loop_qtip">
-                  <title name="NUM">???</title>
+                  <title name="NUM">7</title>
                 </block>
               </value>
               <value name="BY">
@@ -77,46 +160,6 @@
           </next>
         </block>
       </xml>
-    </start_blocks>
-    <toolbox_blocks>
-      <xml>
-        <block type="math_number">
-          <title name="NUM">5</title>
-        </block>
-      </xml>
-    </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-            <block type="math_number">
-              <title name="NUM">1</title>
-            </block>
-          </value>
-          <value name="TO">
-            <block type="math_number">
-              <title name="NUM">7</title>
-            </block>
-          </value>
-          <value name="BY">
-            <block type="math_number">
-              <title name="NUM">1</title>
-            </block>
-          </value>
-        </block>
-        <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-            <block type="variables_get">
-              <title name="VAR">counter</title>
-            </block>
-          </value>
-        </block>
-        <block type="maze_move">
-          <title name="DIR">moveForward</title>
-        </block>
-        <block type="maze_nectar"/>
-      </xml>
-    </required_blocks>
+    </solution_blocks>
   </blocks>
 </Karel>

@@ -6,22 +6,35 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Assessment: Collect all the nectar. Be careful not to collect nectar from a purple flower if it doesn't have any.",
+    "instructions": "Assessment: Collect all of the nectar. Be careful not to try to collect nectar from a purple flower if it doesn't have any.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",
-    "nectar_goal": "5",
     "flower_type": "redWithNectar",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,1,1,1,1,1,1,0],[0,2,1,\"P\",\"P\",\"P\",1,0],[0,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,98,1,98,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "ideal": "9",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
-  }
+    "use_contract_editor": "false",
+    "never_autoplay_video": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "false",
+    "markdown_instructions": "**Assessment:** Collect all of the nectar.  \r\nBe careful not to try to collect nectar from a purple flower if it doesn't have any.",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":4,\"flowerColor\":0,\"range\":4},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -45,27 +58,46 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <solution_blocks>
       <xml>
-        <block type="maze_moveForward"/>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="bee_ifNectarAmount">
-              <title name="ARG1">nectarRemaining</title>
-              <title name="OP">==</title>
-              <title name="ARG2">1</title>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
               <next>
-                <block type="bee_ifNectarAmount">
-                  <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">&gt;</title>
-                  <title name="ARG2">0</title>
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="bee_ifNectarAmount">
+                          <title name="ARG1">nectarRemaining</title>
+                          <title name="OP">==</title>
+                          <title name="ARG2">1</title>
+                          <statement name="DO">
+                            <block type="maze_nectar"/>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">4</title>
+                          <statement name="DO">
+                            <block type="maze_nectar"/>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
-          </statement>
+          </next>
         </block>
-        <block type="maze_nectar"/>
       </xml>
-    </required_blocks>
+    </solution_blocks>
   </blocks>
 </Karel>

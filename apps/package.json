@@ -8,12 +8,12 @@
     "npm": "^2.9.1"
   },
   "scripts": {
-    "lint": "grunt jshint",
-    "test": "grunt test",
+    "lint": "eslint . --ext .js,.jsx",
+    "test": "npm run lint && grunt test",
     "clean": "grunt clean",
     "build": "MOOC_DEV=1 grunt build",
     "build:dist": "MOOC_DEV=0 grunt clean build",
-    "start": "grunt dev"
+    "start": "MOOC_DEV=1 grunt dev"
   },
   "browser": {
     "blockly": "./build/package/js/blockly.js"
@@ -21,28 +21,41 @@
   "browserify": {
     "transform": [
       "require-globify",
-      "browserify-shim"
+      "browserify-shim",
+      "browserify-global-shim"
     ]
+  },
+  "browserify-global-shim": {
+    "react": "React",
+    "react-dom": "ReactDOM"
   },
   "browserify-shim": {
     "blockly": {
       "exports": "Blockly"
-    }
+    },
+    "johnny-five": "global:JohnnyFive",
+    "playground-io": "global:PlaygroundIO",
+    "chrome-serialport": "global:ChromeSerialport",
+    "marked": "global:marked",
+    "radium": "global:Radium"
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
     "Base64": "0.3.0",
     "babelify": "^6.3.0",
     "browserify": "10.2.4",
+    "browserify-global-shim": "^1.0.3",
     "browserify-incremental": "3.0.1",
     "browserify-shim": "3.8.10",
     "canvg": "gabelerner/canvg",
     "chai": "1.10.0",
     "chai-subset": "1.2.0",
+    "chrome-serialport": "bcjordan/chrome-serialport#2",
     "connect-livereload": "0.5.3",
     "ejs": "0.8.4",
     "ejsify": "1.0.0",
     "es6-promise": "3.0.2",
+    "eslint": "^2.3.0",
     "express": "4.11.2",
     "factor-bundle": "2.3.3",
     "glob": "5.0.14",
@@ -56,19 +69,21 @@
     "grunt-contrib-watch": "0.6.1",
     "grunt-exec": "0.4.6",
     "grunt-express": "1.4.1",
-    "grunt-jsxhint": "0.6.0",
     "grunt-lodash": "0.3.0",
     "grunt-newer": "1.1.1",
     "grunt-notify": "0.4.1",
+    "grunt-open": "^0.2.3",
     "grunt-sass": "1.0.0",
     "grunt-strip-code": "0.1.2",
     "http-proxy": "1.11.1",
+    "johnny-five": "bcjordan/johnny-five#with-firmata-fix",
     "jquery": "2.1.4",
     "jquery-ui": "1.10.5",
     "linklocal": "2.5.2",
     "load-grunt-tasks": "2.0.0",
     "lodash": "2.4.2",
     "lodash-cli": "2.4.2",
+    "loose-envify": "^1.1.0",
     "messageformat": "0.2.2",
     "mkdirp": "0.5.1",
     "mochify": "2.9.0",
@@ -76,8 +91,14 @@
     "node-sass": "1.2.2",
     "npm-which": "2.0.0",
     "phantomjs-prebuilt": "^2.1.3",
-    "react": "0.13.3",
-    "react-tools": "0.13.3",
+    "playground-io": "bcjordan/playground-io#more-components",
+    "radium": "^0.17.1",
+    "react": "0.14.7",
+    "react-addons-test-utils": "0.14.7",
+    "react-dom": "0.14.7",
+    "react-redux": "^4.4.0",
+    "redux": "^3.3.1",
+    "redux-logger": "^2.6.1",
     "require-globify": "1.2.1",
     "rgbcolor": "0.0.4",
     "sanitize-html": "^1.11.3",
@@ -87,7 +108,9 @@
     "stackblur": "^1.0.0",
     "time-grunt": "^1.3.0",
     "uglify-js": "2.4.24",
-    "watchify": "3.2.3",
     "which": "1.1.1"
+  },
+  "dependencies": {
+    "react-color": "^2.0.0"
   }
 }

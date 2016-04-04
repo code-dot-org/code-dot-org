@@ -104,5 +104,56 @@
     <required_blocks>
       <xml/>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward" deletable="false" editable="false">
+              <next>
+                <block type="maze_moveForward" deletable="false" editable="false">
+                  <next>
+                    <block type="procedures_callnoreturn" deletable="false" editable="false">
+                      <mutation name="move and get 4"/>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">move and get 4</title>
+          <statement name="STACK">
+            <block type="maze_turn">
+              <title name="DIR">turnRight</title>
+              <next>
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_nectar"/>
+                      </statement>
+                      <next>
+                        <block type="maze_move">
+                          <title name="DIR">moveBackward</title>
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

@@ -6,8 +6,8 @@
   "user_id": 5,
   "properties": {
     "skin": "birds",
-    "instructions": "Can you get me to the pig using 5 blocks?",
-    "step_mode": 1,
+    "instructions": "Can you get me to the pig using 5 of the same kind of blocks?",
+    "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "1",
@@ -23,8 +23,37 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
+  },
+  "published": true
 }]]></config>
-  <blocks/>
+  <blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_moveForward"/>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
 </Maze>

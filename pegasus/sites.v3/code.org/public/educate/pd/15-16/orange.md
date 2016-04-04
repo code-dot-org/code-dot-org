@@ -30,13 +30,7 @@ Milestone Complete!
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates:**
-
-Quarter 1: Saturday, October 3, 2015
-
-Quarter 2: Saturday, November 7, 2015
-
-Quarter 3: Saturday, January 23, 2016
+**Save the date:**
 
 Quarter 4: Saturday, April 23, 2016
 
@@ -44,12 +38,10 @@ Quarter 4: Saturday, April 23, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**January 23rd Location**
-
-*Please note this is a new building and room number.* 
+**Location**
 
 [Orange County Department of Education<br/>
-Building D, Room 1003<br/>
+Building D, Room 1001<br/>
 200 Kalmus Dr<br/>
 Costa Mesa, CA 92626](https://www.google.com/maps/place/Orange+County+Department+of+Education/@33.6729962,-117.8832766,17z/data=!4m7!1m4!3m3!1s0x80dcdf02d89983eb:0xade5c39a8aba012d!2s200+Kalmus+Dr,+Costa+Mesa,+CA+92626!3b1!3m1!1s0x0000000000000000:0x4d5cc9efa1e6739a)
 
@@ -76,8 +68,7 @@ Takeaways:<br/>
 • I look forward to teaching the course again based on my reflection of the past year.<br/>
 • I am more comfortable with the material that I struggled with the first time teaching this
 course.<br/>
-• I understand how to make changes to the ECS curriculum in order to meet my local needs
-and fit into my context.))
+• I understand how to make changes to the ECS curriculum in order to meet my local needs and fit into my context.
 
 **Save the Dates**
 
@@ -125,10 +116,7 @@ Milestone Complete!
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates:**
-
-Semester 1: Saturday, October 10, 2015 
-
+**Save the date:**
 
 Semester 2: Saturday, April 16, 2016
 
@@ -167,41 +155,9 @@ Milestone complete!
 Milestone Complete!
 
 
-
-
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the dates:**
-
-Semester 1: Saturday, October 17, 2015 in Orange County.
-
-
-Semester 2: Saturday, February 20, 2016 in Los Angeles.
-
-
-8:00am - 4:00pm
-<br/>
-Breakfast and lunch will be served.
-
-**February 20th Location**
-
-[Columbia Memorial Space Center<br/> 
-12400 Columbia Way<br/> 
-Downey, CA 90242](https://www.google.com/maps/place/Columbia+Memorial+Space+Center/@33.9198421,-118.1335994,15z/data=!4m2!3m1!1s0x0:0xd6cb5baba4c4a1d2)
-
-**What to bring to Phase 3 quarterly sessions:**
-
-Laptop and Charger
-<br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Milestone complete!
 
 
 [**Back to the top**](#top)

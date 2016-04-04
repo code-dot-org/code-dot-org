@@ -24,6 +24,6 @@ class UserLevelsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_level_params
-    params.require(:user_level).permit(:best_result)
+    params.require(:user_level).permit(:best_result, :submitted)
   end
 end

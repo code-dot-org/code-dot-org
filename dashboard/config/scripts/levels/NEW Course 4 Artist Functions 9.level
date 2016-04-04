@@ -32,7 +32,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "never_autoplay_video": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -49,7 +50,7 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation/>
           <title name="NAME">draw a square</title>
           <statement name="STACK">
@@ -82,7 +83,7 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation/>
           <title name="NAME">draw a triangle</title>
           <statement name="STACK">

@@ -1,47 +1,72 @@
-code_s!,four_letter_code_s,name_s,english_name_s
-ar,ar-SA,العربية,Arabic
-az,az-AZ,Azərbaycan dili,Azerbaijani
-bg,bg-BG,български,Bulgarian
-bs,bs-BA,Bosanski,Bosnian
-ca,ca-ES,Català,Catalan
-cs,cs-CZ,Čeština,Czech
-da,da-DK,Dansk,Danish
-de,de-DE,Deutsch,German
-el,el-GR,Ελληνικά,Greek
-en,en-US,English,English
-es,es-ES,Español,Spanish
-et,et-EE,Eesti,Estonian
-eu,eu-ES,Euskara,Basque
-fa,fa-IR,فارسی,Persian
-fi,fi-FI,Suomi,Finnish
-fr,fr-FR,Français,French
-gl,gl-ES,Galego,Galician
-he,he-IL,עברית,Hebrew
-hr,hr-HR,Hrvatski,Croatian
-hu,hu-HU,Magyar,Hungarian
-id,id-ID,Bahasa Indonesia,Indonesian
-is,is-IS,Íslenska,Icelandic
-it,it-IT,Italiano,Italian
-ja,ja-JP,日本語,Japanese
-ka,ka-GE,ქართული,Georgian
-kk,kk-KZ,Қазақша,Kazakh
-ko,ko-KR,한국어,Korean
-lt,lt-LT,Lietuvių,Lithuanian
-lv,lv-LV,Latviešu,Latvian
-nl,nl-NL,Nederlands,Dutch
-nn,nn-NO,Nynorsk,Norwegian
-no,no-NO,Norsk,Norwegian (Nynorsk)
-pl,pl-PL,Polski,Polish
-pt-br,pt-BR,Português (Brasil),Portuguese (Brazil)
-pt-pt,pt-PT,Português (Portugal),Portuguese (Portugal)
-ro,ro-RO,Română,Romanian
-ru,ru-RU,Pусский,Russian
-sl,sl-SI,Slovenščina,Slovenian
-sq,sq-AL,Shqip,Albanian
-sr,sr-SP,Cрпски,Serbian
-sv,sv-SE,Svenska,Swedish
-tr,tr-TR,Türkçe,Turkish
-uk,uk-UA,Українська,Ukrainian
-vi,vi-VN,Tiếng Việt,Vietnamese
-zh-cn,zh-CN,简体字,Chinese (Simplified)
-zh-tw,zh-TW,繁體字,Chinese (Traditional)
+code_s!,unique_language_s,language_s,locale_s,native_name_s,english_name_s,supported_codeorg_b,supported_hoc_b,crowdin_code_s,crowdin_name_s
+ar,ar,ar,ar-SA,العربية,Arabic,TRUE,TRUE,ar,Arabic
+az,az,az,az-AZ,Azərbaycan dili,Azerbaijani,TRUE,TRUE,az,Azerbaijani
+bg,bg,bg,bg-BG,български,Bulgarian,TRUE,TRUE,bg,Bulgarian
+bn,bn,bn,bn-BD,বাংলা,Bengali,FALSE,FALSE,bn,Bengali
+bs,bs,bs,bs-BA,Bosanski,Bosnian,TRUE,FALSE,bs,Bosnian
+ca,ca,ca,ca-ES,Català,Catalan,TRUE,TRUE,ca,Catalan
+cs,cs,cs,cs-CZ,Čeština,Czech,TRUE,TRUE,cs,Czech
+da,da,da,da-DK,Dansk,Danish,TRUE,TRUE,da,Danish
+de,de,de,de-DE,Deutsch,German,TRUE,TRUE,de,German
+el,el,el,el-GR,Ελληνικά,Greek,TRUE,TRUE,el,Greek
+en-GB,gb,en,en-GB,Engish (UK),Engish (UK),FALSE,TRUE,en-GB,"English, United Kingdom"
+en,en,en,en-US,English,English,TRUE,TRUE,en,English
+es,es,es,es-ES,Español,Spanish,TRUE,TRUE,es-ES,Spanish
+es-MX,la,es,es-MX,Español (México),Spnish (Mexico),FALSE,TRUE,es-MX,"Spanish, Mexico"
+et,et,et,et-EE,Eesti,Estonian,TRUE,FALSE,et,Estonian
+eu,eu,eu,eu-ES,Euskara,Basque,TRUE,FALSE,eu,Basque
+fa-AF,af,fa,fa-AF,دريلو,Dari,FALSE,TRUE,fa-AF,Dari
+fa-IR,fa,fa,fa-IR,فارسی,Persian,TRUE,TRUE,fa,Persian
+fi,fi,fi,fi-FI,Suomi,Finnish,TRUE,FALSE,fi,Finnish
+fil,ph,fil,fil-PH,Pilipino,Filipino,FALSE,FALSE,fil,Filipino
+fr,fr,fr,fr-FR,Français,French,TRUE,TRUE,fr,French
+ga,ga,ga,ga-IE,Gaeilge,Irish,FALSE,FALSE,ga-IE,Irish
+gl,gl,gl,gl-ES,Galego,Galician,TRUE,FALSE,gl,Galician
+he,he,he,he-IL,עברית,Hebrew,TRUE,FALSE,he,Hebrew
+hi,hi,hi,hi-IN,हिन्दी,Hindi,FALSE,TRUE,hi,Hindi
+hr,hr,hr,hr-HR,Hrvatski,Croatian,TRUE,TRUE,hr,Croatian
+hu,hu,hu,hu-HU,Magyar,Hungarian,TRUE,TRUE,hu,Hungarian
+hy,hy,hy,hy-AM,Հայերեն,Armenian,FALSE,FALSE,hy-AM,Armenian
+id,id,id,id-ID,Bahasa Indonesia,Indonesian,TRUE,TRUE,id,Indonesian
+is,is,is,is-IS,Íslenska,Icelandic,TRUE,FALSE,is,Icelandic
+it,it,it,it-IT,Italiano,Italian,TRUE,TRUE,it,Italian
+ja,ja,ja,ja-JP,日本語,Japanese,TRUE,TRUE,ja,Japanese
+ka,ka,ka,ka-GE,ქართული,Georgian,TRUE,FALSE,ka,Georgian
+kk,kk,kk,kk-KZ,Қазақша,Kazakh,TRUE,FALSE,kk,Kazakh
+km,km,km,km-KH,ភាសាខ្មែរ,Khmer,FALSE,FALSE,km,Khmer
+ko,ko,ko,ko-KR,한국어,Korean,TRUE,TRUE,ko,Korean
+ku,ku,ku,ku-IQ,Kurdí,Kurdish,FALSE,FALSE,ku,Kurdish
+lt,lt,lt,lt-LT,Lietuvių,Lithuanian,TRUE,FALSE,lt,Lithuanian
+lv,lv,lv,lv-LV,Latviešu,Latvian,TRUE,TRUE,lv,Latvian
+mi,mi,mi,mi-NZ,Māori,Maori,FALSE,FALSE,mi,Maori
+mk,mk,mk,mk-MK,Mакедонски,Macedonian (FYROM),FALSE,FALSE,mk,Macedonian (FYROM)
+mr,mr,mr,mr-IN,मराठी,Marathi,FALSE,FALSE,mr,Marathi
+ms,ms,ms,ms-MY,بهاس ملايو,Malay,FALSE,TRUE,ms,Malay
+mt,mt,mt,mt-MT,Malti,Maltese,FALSE,FALSE,mt,Maltese
+ne,ne,ne,ne-NP,नेपाली,Nepali,FALSE,TRUE,ne-NP,Nepali
+nl,nl,nl,nl-NL,Nederlands,Dutch,TRUE,TRUE,nl,Dutch
+nn,nn,nn,nn-NO,Nynorsk,Norwegian,TRUE,FALSE,nn-NO,Norwegian
+no,no,no,no-NO,Norsk,Norwegian (Nynorsk),TRUE,TRUE,no,Norwegian Nynorsk
+pl,pl,pl,pl-PL,Polski,Polish,TRUE,TRUE,pl,Polish
+ps,ps,ps,ps-AF,پښتو,Pashto,FALSE,FALSE,ps,Pashto
+pt-BR,pt,pt,pt-BR,Português (Brasil),Portuguese (Brazil),TRUE,TRUE,pt-BR,"Portuguese, Brazilian"
+pt-PT,po,pt,pt-PT,Português (Portugal),Portuguese (Portugal),TRUE,TRUE,pt,Portuguese
+ro,ro,ro,ro-RO,Română,Romanian,TRUE,TRUE,ro,Romanian
+ru,ru,ru,ru-RU,Pусский,Russian,TRUE,TRUE,ru,Russian
+se,se,se,se-FI,Davvisámegiella,Northern Sami,FALSE,FALSE,se,Northern Sami
+si,si,si,si-LK,සිංහල,Sinhala,FALSE,FALSE,si-LK,Sinhala
+sk,sk,sk,sk-SK,Slovenčina,Slovak,FALSE,FALSE,sk,Slovak
+sl,sl,sl,sl-SI,Slovenščina,Slovenian,TRUE,TRUE,sl,Slovenian
+sq,sq,sq,sq-AL,Shqip,Albanian,TRUE,TRUE,sq,Albanian
+sr,sr,sr,sr-SP,Cрпски,Serbian (Cyrillic),TRUE,FALSE,sr,Serbian (Cyrillic)
+sv,sv,sv,sv-SE,Svenska,Swedish,TRUE,FALSE,sv-SE,Swedish
+ta,ta,ta,ta-IN,தமிழ்,Tamil,FALSE,FALSE,ta,Tamil
+th,th,th,th-TH,ไทย,Thai,FALSE,FALSE,th,Thai
+tr,tr,tr,tr-TR,Türkçe,Turkish,TRUE,TRUE,tr,Turkish
+uk,uk,uk,uk-UA,Українська,Ukrainian,TRUE,TRUE,uk,Ukrainian
+ur,ur,ur,ur-PK,اردو,Urdu (Pakistan),FALSE,TRUE,ur-PK,Urdu (Pakistan)
+uz,uz,uz,uz-UZ,Oʻzbekcha,Uzbek,FALSE,FALSE,uz,Uzbek
+vi,vi,vi,vi-VN,Tiếng Việt,Vietnamese,TRUE,TRUE,vi,Vietnamese
+zh-CN,cn,zh,zh-CN,简体字,Chinese (Simplified),TRUE,TRUE,zh-CN,Chinese Simplified
+zh-TW,zh,zh,zh-TW,繁體字,Chinese (Traditional),TRUE,TRUE,zh-TW,Chinese Traditional
+zu,zu,zu,zu-ZA,isiZulu,Zulu,FALSE,FALSE,zu,Zulu

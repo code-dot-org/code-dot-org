@@ -1,0 +1,19 @@
+name 'ECSPD3-u6 alt lesson overview'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Alternative Ideas for Unit 6 > What's inside?  
+ 
+##### We are currently on stage 4  of this module. Here you will explore:  
+ 
+- Lesson ideas if you have other robots  
+- Links to online simulations using robot and tangibles
+- Ideas for culminating projects, portfolios, etc 
+<br> 
+
+Click “Continue” below to get started learning more about alternate ideas for Unit 6!  
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a> 
+MARKDOWN

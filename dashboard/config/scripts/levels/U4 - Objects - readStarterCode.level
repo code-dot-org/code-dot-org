@@ -39,10 +39,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Familiarize yourself with the starter code and UI elements provided. (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ]
+    "instructions": "Familiarize yourself with the starter code and UI elements provided. (Click to see full instructions)"
   },
   "published": true
 }]]></config>

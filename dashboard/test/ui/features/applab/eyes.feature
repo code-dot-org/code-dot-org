@@ -25,8 +25,7 @@ Scenario: App Lab UI elements from initial code and html
   # this level displays each ui element by generating it dynamically as well as
   # displaying design-mode-created elements.
   And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?noautoplay=true"
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I wait to see "#runButton"
   And element "#runButton" is visible
   Then I see no difference for "design mode elements in code mode"
@@ -105,7 +104,43 @@ Scenario: Applab embedded level
   When I open my eyes to test "Applab embedded level"
   And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "embedded level"
+  Then I close my eyes
+
+Scenario: Applab Instructions in Top Pane
+  When I open my eyes to test "Applab Instructions in top pane"
+  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
+  And execute JavaScript expression "window.localStorage.setItem('showInstructionsInTopPane', true)"
+  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
+  And I wait to see "#runButton"
+  And I see no difference for "top instructions enabled on standard level"
+  Then I click selector ".fa-chevron-circle-down"
+  And I see no difference for "top instructions collapsed"
+  Then I click selector ".fa-chevron-circle-up"
+  And I see no difference for "top instructions uncollapsed"
+  Then I click selector "#hide-toolbox-icon"
+  And I see no difference for "toolbox collapsed"
+
+  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/10"
+  And I wait to see "#runButton"
+  And I see no difference for "top instructions enabled on instructionless level"
+
+  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
+  And I wait to see "#runButton"
+  And I see no difference for "top instructions enabled on embed level"
+
+  Then execute JavaScript expression "window.localStorage.removeItem('showInstructionsInTopPane')"
+
+  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
+  And I wait to see "#runButton"
+  And I see no difference for "top instructions disabled on standard level"
+
+  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/10"
+  And I wait to see "#runButton"
+  And I see no difference for "top instructions disabled on instructionless level"
+
+  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
+  And I wait to see "#runButton"
+  And I see no difference for "top instructions disabled on embed level"
   Then I close my eyes

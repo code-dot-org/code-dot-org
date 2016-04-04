@@ -5,6 +5,7 @@
 .dropbox
 .idea/
 **/.bundle
+crowdin.yaml
 /.gdrive_session
 /crontab
 /dashboard/public/blockly
@@ -32,7 +33,10 @@
 /apps/build
 /apps/node_modules/
 /apps/npm-debug.log
+/apps/src/color.js
+/apps/src/styleConstants.js
 *_temp.json
 /.ruby-version
 /levelbuilder_ci_last_run
 /levelbuilder_ci_lock
+/coverage

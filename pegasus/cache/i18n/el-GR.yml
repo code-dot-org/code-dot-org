@@ -81,121 +81,145 @@
   congratulations_volunteer: 'Συγχαρητήρια: Τώρα που έχετε δοκιμάσει την Ώρα του Κώδικα,
     <a href="https://code.org/volunteer">εγγραφείτε για να εργαστείτε εθελοντικά σε
     μια τάξη</a> και να βοηθήσετε μαθητές να διδαχθούν μια Ώρα Κώδικα!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: "Συγχαρητήρια για την ολοκλήρωση του Μαθήματος
+    1"
+  congratulations_on_completing_course2: "Συγχαρητήρια για την ολοκλήρωση του Μαθήματος
+    2"
+  congratulations_on_completing_course3: "Συγχαρητήρια για την ολοκλήρωση του Μαθήματος
+    3"
+  congratulations_on_completing_course4: "Συγχαρητήρια για την ολοκλήρωση του Μαθήματος
+    4"
+  congratulations_on_completing_accelerated: "Συγχαρητήρια για την ολοκλήρωση του
+    Εντατικού Μαθήματος"
   congrats_next_tutorials_title: "Δοκιμάστε στη συνέχεια αυτά τα σεμινάρια"
   congrats_next_tutorials_desc: Δοκιμάστε αυτά τα μικρότερα, σεμινάρια 1 ώρας ή δοκιμάστε
     ένα <a href="%{current_path}/next">σεμινάριο συνεργάτη</a>.
   get_a_certificate_of_achievement: "Πάρε πιστοποιητικό για το επίτευγμα"
-  view_course: View course
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
-    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
-    or on Android or iOS devices. Students play the initial set of “Basic” levels
-    in Lightbot. They will learn how to tell a computer what to do with a series of
-    basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
-    short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  view_course: "Προβολή μαθήματος"
+  view_unit: "Προβολή ενότητας"
+  make_app: "Δημιούργησε μια εφαρμογή"
+  congrats_guest_speaker_title: "Βρείτε έναν προσκεκλημένο ομιλητή για την τάξη σου"
+  congrats_guest_speaker_desc: "Τώρα που οι μαθητές σου έχουν τελειώσει μια σειρά
+    μαθημάτων της επιστήμης υπολογιστών, γιορτάστε το και συνδέστε την γνώση που απέκτησαν
+    με εφαρμογή στην καθημερινή ζωή, καλώντας έναν ομιλητή στην τάξη σου. Μπορείς
+    να χρησιμοποιήσεις τον χάρτη εθελοντών για να επικοινωνήσεις με τους τοπικούς
+    εθελοντές να επισκεφθού την τάξη σου ή πραγματοποίησε αναζήτηση σε κάθε πόλη για
+    να βρείς φοιτητές επιστήμης υπολογιστών ή επαγγελματίες τεχνικούς που είναι έτοιμοι
+    να εμπνεύσουν τους μαθητές σου από απόσταση, μέσω βίντεο chat."
+  congrats_guest_speaker_cta: "Βρείτε έναν προσκεκλημένο ομιλητή"
+  congrats_third_party_title: "Χρησιμοποίησε τις νέες δεξιότητές σου σε αυτές τις
+    εφαρμογές και τους ιστότοπους"
+  third_party_gradelevel_kto8: "Τάξεις Νηπιαγωγείο - Β΄ Γυμνασίου"
+  third_party_gradelevel_kto2: "Τάξεις Νηπιαγωγείο - Β΄ Δημοτικού"
+  third_party_gradelevel_2to8: "Τάξεις Β' Δημοτικού - Β΄Γυμνασίου"
+  third_party_gradelevel_4to12: "Τάξεις Δ΄ Δημοτικού - Γ΄Λυκείου"
+  third_party_gradelevel_5to12: "Τάξεις Ε΄ Δημοτικού - Γ΄ Λυκείου"
+  third_party_gradelevel_6plus: "Τάξεις Στ' Δημοτικού +"
+  third_party_gradelevel_8plus: "Τάξεις Β' Γυμνασίου +"
+  third_party_platform_all: "Πλατφόρμα: Web, iPad & Android"
+  third_party_platform_mobile: "Πλατφόρμα: iPad & Android"
+  third_party_platform_web: "Πλατφόρμα: Web"
+  third_party_price_varies: "Τιμή: Τα πλάνα μεταβάλλονται"
+  third_party_price_free: "Τιμή: δωρεάν"
+  third_party_price_299: "Τιμή: $2.99/λήψη"
+  third_party_price_individual: "Ατομική τιμή: Δωρεάν δοκιμή & 25 $/μήνα"
+  third_party_price_school: "Σχολική τιμή: Σχέδια δωρεάν & Επαγγελματικά στα $2500
+    +"
+  third_party_tynker_desc: "Η δημιουργική υπολογιστική πλατφόρμα Tynker βοηθά τα παιδιά
+    να αναπτύξουν αλγοριθμική σκέψη και γνώσεις προγραμματισμού με ένα διασκεδαστικό,
+    έξυπνο και ευφάνταστο τρόπο. Μια καινοτόμος οπτική γλώσσα προγραμματισμού, διαδραστικά
+    κατευθυνόμενη από μαθήματα και δραστηριότητες προγραμματισμού που βασίζεται στο
+    παιχνίδι παρέχει μια εύκολη εισαγωγή στον προγραμματισμό, και χειραφέτηση των
+    παιδιών να καινοτομούν και να δημιουργούν."
+  third_party_tynker_btn_curriculum: "Δοκιμάστε το πρόγραμμα σπουδών του Tynker για
+    Πρόωρους Αναγνώστες"
+  third_party_tynker_btn_site: "Επισκεφτείτε το Tynker"
+  third_party_scratchjr_desc: "Η Scratch Jr. είναι μια εισαγωγική γλώσσα προγραμματισμού
+    που επιτρέπει σε μικρά παιδιά (ηλικίες 5-7) να δημιουργήσου τις δικές τους διαδραστικές
+    ιστορίες και παιχνίδια. Τα παιδιά ενώνουν μπλοκ προγραμματισμού για να κάνει τους
+    χαρακτήρες να μετακινηθούν, να κάνουν άλματα, να χορέψουν, και να τραγουδήσουν.
+    Τα παιδιά μπορεί να τροποποιήσουν τους χαρακτήρες στον επεξεργαστή χρώματος, να
+    προσθέσουν τις δικές τους φωνές και ήχους, ακόμη και να τοποθετήσουν φωτογραφίες
+    του εαυτού τους - έπειτα να χρησιμοποιήσουν το μπλοκ προγραμματισμού για να ζωντανέψουν
+    οι χαρακτήρες."
+  third_party_scratchjr_btn_curriculum: "Λήψη Προγράμματος Σπουδών Scratch Jr"
+  third_party_scratchjr_btn_site: "Επισκεφθείτε το Scratch Jr."
+  third_party_scratch_desc: "Με το Scratch, μπορείς να προγραμματίσεις τις δικές σου
+    διαδραστικές ιστορίες, παιχνίδια, κινούμενα σχέδια και να μοιραστείς τις δημιουργίες
+    σου στην διαδικτυακή σου κοινότητα. Το Scratch βοηθά τα νέα παιδιά να μάθου να
+    σκέφτονται δημιουργικά, να επιχειρηματολογούν συστηματικά και να συνεργάζονται
+    - σημαντικές ικανότητες για την ζωή στον 21ο αιώνα."
+  third_party_scratch_btn_curriculum: "Κατεβάστε το Πρόγραμμα Σπουδών Scratch"
+  third_party_scratch_btn_forum: "Εκπαιδευτικό Φόρουμ Scratch"
+  third_party_scratch_btn_site: "Επισκεφθείτε το Scratch"
+  third_party_lightbot_desc: Στο Lightbot, οι μαθητές πρέπει να προγραμματίσουν ένα
+    ρομπότ με εντολές για να λύσουν παζλς. Οι μαθητές μπορεί να παίξουν το παιχνίδι
+    στο πρόγραμμα περιήγησης (απαιτείται Flash Player), ή σε συσκευές Android ή iOS.
+    Οι μαθητές παίζουν τα αρχικά "Βασικά" επίπεδα στο Lightbot. Θα μάθουν πώς να πουν
+    σε έναν υπολογιστή τι να κάνει με μια σειρά από βασικές εντολές και να καταλάβουν
+    την λογική με την οποία γράφονται τα προγράμματα ηλεκτρονικών υπολογιστών.
+  third_party_lightbot_btn_curriculum: "Κατεβάστε το Πρόγραμμα Εκπαίδευσης Lightbot"
+  third_party_lightbot_btn_site: "Επισκεφτείτε το Lightbot"
+  third_party_khan_desc: "Μάθε πώς μπορείς να προγραμματίσεις σχέδια, κινούμενα σχέδια
+    και παιχνίδια χρησιμοποιώντας JavaScript & ProcessingJS, ή μάθε πώς να δημιουργήσεις
+    ιστοσελίδες με HTML & CSS. Μπορείς να μοιραστείς ό, τι δημιουργείς, να δείς τι
+    έχουν δημιουργήσει οι και να μάθετε ο ένας από τον άλλο!"
+  third_party_khan_btn_learn: "Μάθε CS με Khan Academy"
+  third_party_khan_btn_forum: Khan Academy CS φόρουμ
+  third_party_appinv_desc: "Το εργαλείο προγραμματισμού MIT App είναι βασισμένο στον
+    προγραμματισμό με μπλοκ που επιτρέπει σε όλους, ακόμα και τους αρχάριους, να ξεκινήσουν
+    τον προγραμματισμό και την δημιουργία λειτουργικών εφαρμογών για συσκευές Android.
+    Οι νεοεισερχόμενοι στο App Inventor μπορεί να έχουν την πρώτη τους εφαρμογή έτοιμη
+    να τρέχει σε μια ώρα ή λιγότερο, και να προγραμματίσουν τις πιο σύνθετες εφαρμογές
+    σε σημαντικά λιγότερο χρόνο από ότι με πιό παραδοσιακές γλώσσες προγραμματισμού
+    βασισμένες σε χρήση κειμένου."
+  third_party_appinv_btn_curriculum: "Κατεβάστε το Πρόγραμμα Εκπαίδευσης App Inventor
+    2"
+  third_party_appinv_btn_forum: "Φόρουμ App Inventor 2"
+  third_party_appinv_btn_site: "Επισκεφθείτε το App Inventor 2"
+  third_party_codehs_desc: "Το CodeHS εισάγει τα δομικά στοιχεία του προγραμματισμού
+    με το σύντομα βίντεο, ο παραδείγματα κώδικα και πολλές ασκήσεις που κάνει την
+    κωδικοποίηση διασκεδαστική και προσιτή για αρχάριους. Με το CodeHS, μπορείς να
+    πάρεις τη βοήθεια που χρειάζεται κάθε νέος προγραμματιστής να λύσει τα προβλήματα
+    και να συνεχίσει να μαθαίνει. Οι καθηγητες μας είναι παντού!"
+  third_party_codehs_btn_try: "Δοκίμασε την εισαγωγή CodeHS στην Επιστήμη των Υπολογιστών"
+  third_party_codecademy_desc: "Επανεξετάζουμε την εκπαίδευση συνολικά. Το διαδίκτυο
+    έχει αναθεωρήσει σχεδόν τα πάντα - το εμπόριο, την κοινωνική δικτύωση, την υγειονομική
+    περίθαλψη, και πολλά άλλα. Οικοδομούμε την εκπαίδευση που χρειάζεται ο κόσμος
+    - η πρώτη πραγματικά διαδικτυακή εκπαίδευση."
+  third_party_codecademy_btn_curriculum: "Κατεβάστε το Πρόγραμμα Εκπαίδευσης Codecademy"
+  third_party_codecademy_btn_site: "Επισκεφθείτε την Codecademy"
+  third_party_organization: "Οργάνωση"
   third_party_curriculum: "Πρόγραμμα σπουδών"
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_pricing: "Τιμολόγηση"
+  third_party_cost_free: "Δωρεάν"
+  third_party_cost_5permonth: "$5/ μήνα ανά τάξη"
+  third_party_cost_299: "$2.99/λήψη"
+  third_party_cost_free_399: "Δωρεάν δοκιμή, $399/τάξη"
+  third_party_cost_free_2: "Δωρεάν δοκιμή, $2/μαθητή"
+  third_party_cost_free_10: "Δωρεαν δοκιμή, $9.99/μήνα"
+  third_party_desc_5_4to8: "Περίπου 10-12 μαθήματα, προσανατολισμένα για Δ' Δημοτικού
+    έως Γ' Γυμνασίου"
+  third_party_desc_10to12_kto3: "Περίπου 10-12 μαθήματα, προσανατολισμένα για τάξεις
+    Νηπαιγωγείου έως 5η Δημοτικού"
+  third_party_desc_11_kto5: "Περίπου 10-12 μαθήματα, προσανατολισμένα για τάξεις Νηπαιγωγείου
+    έως 5η Δημοτικού"
+  third_party_desc_10to12_kto5: "Περίπου 10-12 μαθήματα, προσανατολισμένα για τάξεις
+    Νηπαιγωγείου έως 5η Δημοτικού"
+  third_party_desc_40_4to8: "Περισσότερα από 40 μαθήματα, προσανατολισμένα για τάξεις
+    από 4η Δημοτικού έως 3η Γυμνασίου"
+  third_party_desc_dozens_kto8: "Δεκάδες μαθήματα για όλους τους βαθμούς προσανατολισμένα
+    για τάξεις Νηπαιγωγείου έως 3η Γυμνασίου"
+  third_party_desc_10to15_3to12: "Μεταξύ 10 & 15 μαθήματα, προσανατολισμένα από 3η
+    Δημοτικού έως 3η Λυκείου"
+  third_party_desc_25to40_3to12: "Από 25-40 μαθήματα, προσανατολισμένα από 3η Δημοτικού
+    έως 3η Λυκείου"
+  third_party_desc_20_2to8: "Περίπου 20 μαθήματα, προσανατολισμένα για τις τάξεις
+    Β' Δημοτικού με Γ' Γυμνασίου"
+  third_party_desc_7to22_5to12: "Μεταξύ 7 & 22 μαθήματα, προσανατολισμένα από Ε΄ Δημοτικού
+    έως Γ' Λυκείου"
+  third_party_desc_20_4to12: "Περισσότερα από 20 μαθήματα, προσανατολισμένα για τάξεις
+    από Δ΄ Δημοτικού έως Γ΄ Λυκείου"
   enter_valid_age: "Παρακαλώ επιλέξτε μια έγκυρη ηλικία"
   enter_valid_email: "Παρακαλώ δώσε μια έγκυρη διεύθυνση email"
   get_a_certificate_message: "Θα σας στείλουμε ένα πιστοποιητικό και πληροφορίες σχετικά
@@ -253,16 +277,16 @@
   hoc_is_here: "Η τελευταία Εβδομάδα Εκπαίδευσης στην Επιστήμη των Υπολογιστών έχει
     φτασει τα 50 εκατομμύρια μαθητές.  https://youtu.be/Ofze6CWUCx8."
   just_did_hoc: "Μόλις ολοκλήρωσα την Ώρα του Κώδικα (#HourOfCode) - ελέγξτε το! @codeorg"
-  just_did_course1: I just finished Course 1 - check it out! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
+  just_did_course1: "Μόλις τελειώσα το Μάθημα 1 - Ελεγξέ το! @codeorg"
+  just_did_course2: "Μόλις τελειώσα το Μάθημα 2 - Ελεγξέ το! @codeorg"
+  just_did_course3: "Μόλις τελειώσα το Μάθημα 3 - Ελεγξέ το! @codeorg"
+  just_did_course4: "Μόλις τελείωσα το Μάθημα 4 - Ελεγξέ το! @codeorg"
+  just_did_accelerated: "Μόλις τελείωσα το Εντατικό Μάθημα - έλεγξέ το! @codeorg"
   twitter_teach_cs: 9 στους 10 ανθρώπους συμφωνούν ότι τα σχολεία πρέπει να διδάσκουν
     την επιστήμη των ηλεκτρονικών υπολογιστών. http://youtu.be/nKIu9yen5nc. Επισκεφθείτε
     https://code.org/.
   learn_hoc: "Μάθε μία Ώρα του Κώδικα"
-  beyond_hoc: "Πέρα από Μία Ώρα"
+  beyond_hoc: "Πάνω από Μία Ώρα"
   what_gender: "Ποιο είναι το φύλο σου;"
   girl: "Κορίτσι"
   boy: "Αγόρι"
@@ -277,13 +301,14 @@
     έχουν γράψει %{lines} γραμμές κώδικα."
   start_hoc: "Ξεκινήστε την Ώρα του Κώδικα τώρα"
   contact_form_topic_press: "Τύπος / Μέσα (συνέντευξη ή ομιλία)"
-  stats_nina: '"Κάθε μέρα το αποτέλεσμα ήταν το ίδιο&mdash; 100% προσύλωση." - Nina
-    Nichols Peery, Teacher'
-  stats_student: '"Ήξερα πως ήταν <b>μια ευκαιρία ζωής." - Mariana Alzate, Ε'' τάξη'
-  stats_michael: '"Δεν έχω <b>ξαναδεί του μαθητές μου</b> τόσο ενθουσιασμένους για
-    την μάθηση" - Michael Clark, Δάσκαλος'
+  stats_nina: '"Κάθε μέρα είχαμε τα ίδια αποτελέσματα &mdash; 100% συμμετοχή" - Nina
+    Nichols Peery, Εκπαιδευτικός'
+  stats_student: '"Ήξερα πως ήταν <b>μια μοναδική ευκαιρία ζωής." - Mariana Alzate,
+    Ε'' τάξη'
+  stats_michael: '"Δεν έχω <b>ποτέ, μα ποτέ</b> δει τους μαθητές μου τόσο ενθουσιώδεις
+    για μάθηση" - Michael Clark, Δάσκαλος'
   studiobar_title: "Εξερευνήστε το <a href='http://studio.code.org'>Στούντιο Κώδικα</a>"
-  studiobar_title_nolink: "Εξερευνήστε το Studio κώδικα"
+  studiobar_title_nolink: "Εξερευνήστε το Code Studio"
   studiobar_elementary_title: "Βασικά μαθήματα"
   studiobar_elementary_body: "Τα τρία νέα μαθήματά μας για K &#8209; 5"
   studiobar_hoc_title: "Η Ώρα του Κώδικα"
@@ -294,14 +319,14 @@
   studiobar_teacher_body: "Παρουσιάστε το Στούντιο Κώδικα (Code Studio) στην τάξη
     σας"
   studiobar_frozen_title: "Ώρα του Κώδικα"
-  studiobar_frozen_body: "Δημιουργήστε μια χειμερινή χώρα των θαυμάτων με Άννα και
-    Έλσα"
+  studiobar_frozen_body: "Δημιουργήστε μια χειμερινή χώρα των θαυμάτων με την Άννα
+    και την Έλσα"
   studiobar_donate_title: "Κάντε μια δωρεά"
   studiobar_donate_body: "Ένα παιδί μαθαίνει για κάθε δολάριο που δίνετε"
   studiobar_shop_title: "Ηλεκτρονικό Κατάστημα"
   studiobar_shop_body: "Σπάστε τα στερεότυπα. Φορέστε  το λογότυπο μας με υπερηφάνεια."
-  homepage_hero_text_malala: "&ldquo;Προκαλώ κορίτσια σε κάθε χώρα να μάθουν μία ώρα
-    του κώδικα&rdquo; Malala, νικητής του Νόμπελ ειρήνης"
+  homepage_hero_text_malala: "&ldquo;Προκαλώ τα κορίτσια σε κάθε χώρα να μάθουν μία
+    ώρα του κώδικα&rdquo; Malala, νικητής του Νόμπελ ειρήνης"
   homepage_hero_text_susan: "&ldquo;Αν μπορείτε να αλλάξετε την τεχνολογία, μπορείτε
     να αλλάξετε τον κόσμο. &rdquo;Susan, Διευθύνων Σύμβουλος του YouTube"
   homepage_hero_text_fistbump: " Μην παίζετε απλά με το τηλέφωνό σας, προγραμματίστε
@@ -379,6 +404,9 @@
   homepage_slot_text_link_othercourses: "Άλλα online μαθήματα"
   homepage_slot_text_title_educators: "Εκπαιδευτικοί"
   homepage_slot_text_blurb_educators: "Διδάξτε τους μαθητές σας"
+  homepage_slot_text_link_elementary: "Δημοτικό σχολείο"
+  homepage_slot_text_link_middle: "Γυμνάσιο"
+  homepage_slot_text_link_high: "Λύκειο"
   homepage_slot_text_link_k5: "Μαθήματα για τη βαθμίδα Κ-5"
   homepage_slot_text_link_fullcurriculum: "Δείτε το πλήρες πρόγραμμα σπουδών μας"
   homepage_slot_text_link_pd: "Επαγγελματική εξέλιξη"
@@ -406,8 +434,8 @@
   class_submission_in_school_daily_programming_course: "Καθημερινό μάθημα προγραμματισμού"
   class_submission_in_school_ap_computer_science: "Προχωρημένα θέματα Επιστήμης των
     Υπολογιστών"
-  class_submission_in_school_full_university_cs_curriculum: "Πλήρες Πανεπιστήμιο CS
-    βιογραφικό"
+  class_submission_in_school_full_university_cs_curriculum: "Πλήρες Πρόγραμμα Εκπαίδευσης
+    CS"
   class_submission_in_school_robotics_club: "Ομάδα Ρομποτικής"
   class_submission_in_school_programming_integrated_in_other_classes: "Ο προγραμματισμός
     ενσωματωμένος σε άλλα μαθήματα (μαθηματικά, φυσική, κλπ)"
@@ -440,23 +468,23 @@
   playlab_gumball_title: "Τσιχλόμπαλα"
   playlab_iceage_title: "Εποχή των Παγετώνων - Έρχεται σύντομα"
   playlab_iceage_title_live: "Εποχή των Παγετώνων"
-  starwars_subtitle: "Χτίζοντας έναν Γαλαξία Με Κώδικα"
+  starwars_subtitle: "Κατασκευάζοντας έναν Γαλαξία Με Κώδικα"
   starwars_javascript_title: Javascript
-  starwars_javascript_description: "Χρησιμοποιήστε μπλοκ με «σύρε και άφησε» και Javascript."
+  starwars_javascript_description: "Χρησιμοποιήσε πακέτα «σύρε και άφησε» και Javascript."
   starwars_javascript_specs: "Μόνο Αγγλικά | Σύγχρονα προγράμματα περιήγησης | Ηλικίες
     11+"
-  starwars_javascript_start_button: "Δοκιμάστε τώρα"
-  starwars_blocks_title: "μπλοκ"
-  starwars_blocks_description: "Χρησιμοποιήστε μπλοκ με «σύρε και άφησε»."
+  starwars_javascript_start_button: "Δοκίμασε τώρα"
+  starwars_blocks_title: "Μπλοκς"
+  starwars_blocks_description: "Χρησιμοποίησε πακέτα «σύρε και άφησε»."
   starwars_blocks_specs: "Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης, έξυπνα
-    κινητά, tablets | Ηλικίες 6-10"
+    κινητά, ταμπλέτες | Ηλικίες 6-10"
   starwars_blocks_start_button: "Δοκιμάστε τώρα"
-  starwars_watch_videos: "Πριν ξεκινήσετε, δείτε ένα βίντεο παρακίνησης"
-  starwars_speak_languages: "Μιλάτε άλλη γλώσσα;"
-  starwars_help_translate: "Βοηθήστε μας να μεταφράσουμε"
+  starwars_watch_videos: "Πριν ξεκινήσεις, δες ένα βίντεο παρακίνησης"
+  starwars_speak_languages: "Μιλάς άλλη γλώσσα;"
+  starwars_help_translate: "Βοήθησέ μας να μεταφράσουμε"
   starwars_platform_text: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
   mc_name: "Η Ώρα του Κώδικα με το Minecraft"
-  mc_longdescription: "Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον
+  mc_longdescription: "Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή την
     Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft."
   mc_shortdescription: "Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον
     Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft."
@@ -546,7 +574,7 @@
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 ώρα την εβδομάδα
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ώρες την εβδομάδα
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 ώρες την εβδομάδα
-  volunteer_engineer_submission_commitment_now_and_then: "Κάθε λίγο και λιγάκι"
+  volunteer_engineer_submission_commitment_now_and_then: "Πότε πότε"
   volunteer_engineer_submission_commitment_annually: 2 - 3 φορές το χρόνο
   volunteer_engineer_submission_commitment_monthly: "Μια-δυο ώρες το μήνα"
   volunteer_engineer_submission_commitment_weekly: "Μια-δυο ώρες την εβδομάδα"
@@ -561,7 +589,8 @@
     τεχνολογίας"
   volunteer_engineer_submission_experience_university_student_or_researcher: "Οι τωρινοί
     φοιτητές (ή ερευνητές)"
-  volunteer_engineer_submission_experience_software_professional: "Επαγγελματικό λογισμικό"
+  volunteer_engineer_submission_experience_software_professional: "Μηχανικός λογισμικού
+    η εξειδικευμένος τεχνικός"
   volunteer_engineer_submission_distance_8: 5 μίλια
   volunteer_engineer_submission_distance_16: 10 μίλια
   volunteer_engineer_submission_distance_24: 15 μίλια
@@ -667,8 +696,8 @@
   dashboard_action_delete_yes: "Ναι"
   dashboard_action_delete_no: "Όχι"
   dashboard_action_confirm: "Διαγραφή;"
-  dashboard_action_remove: "Διαγραφή"
-  dashboard_action_remove_confirm: "Διαγραφή?"
+  dashboard_action_remove: "Κατάργηση"
+  dashboard_action_remove_confirm: "Κατάργηση;"
   dashboard_action_done: "Ολοκληρώθηκε"
   dashboard_action_required: "απαιτείται"
   dashboard_navigation_home_page: "Αρχική Σελίδα Εκπαιδευτή"
@@ -681,6 +710,7 @@
   dashboard_navigation_all_sections: "Λογαριασμοί μαθητών και Πρόοδος"
   dashboard_navigation_view_progress: "Προβολή προόδου"
   dashboard_navigation_view_text_responses: "Προβολή Αποκρίσεων Κειμένου"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "Προσθήκη μαθητών"
   dashboard_navigation_manage_students: "Διαχείριση μαθητών"
   dashboard_navigation_lesson_plans_resources: "Σχέδια μαθήματος και Πόροι"
@@ -773,24 +803,26 @@
   dashboard_curriculum_middle_title: "Πόροι Επιμορφωτή για το Γυμνάσιο"
   dashboard_curriculum_high_title: "Πόροι Επιμορφωτή για το Λύκειο"
   dashboard_lesson_plans: "Σχέδια μαθήματος"
-  dashboard_view_all_lesson_plans: "Δείτε όλα τα πλάνα μαθημάτων"
+  dashboard_view_all_lesson_plans: "Κατεβάστε το πλήρες πρόγραμμα σπουδών για τα μαθήματα
+    1-3"
   dashboard_course1: "Μάθημα 1:"
   dashboard_course2: "Μάθημα 2:"
   dashboard_course3: "Μάθημα 3:"
   dashboard_course4: "Μάθημα 4 (beta): "
   dashboard_curriculum: "Πρόγραμμα σπουδών"
-  dashboard_curriculum_overview: "Επισκόπηση προγράμματος σπουδών K-5"
+  dashboard_curriculum_overview: "Επισκόπηση Πρόγραμμα Εκπαίδευσης Νηπιαγωγείο έως
+    Ε΄ Δημοτικού"
   dashboard_overview: "Επισκόπηση"
   dashboard_sequence: "Ακολουθία"
   dashboard_framework: "Πλαίσιο"
   dashboard_standards: "Πρότυπα"
   dashboard_implementation_guide: "Οδηγός εφαρμογής"
   dashboard_glossary: "Γλωσσάρι"
-  dashboard_classroom_strategies: "Στρατηγικές για την τάξη για τους εκπαιδευτικούς"
-  dashboard_debugging: "Αποσφαλμάτωση:"
-  dashboard_puzzle_solving: "Λύση-γρίφων:"
+  dashboard_classroom_strategies: "Στρατηγικές τάξης για τους εκπαιδευτικούς"
+  dashboard_debugging: "Εντοπισμός σφαλμάτων:"
+  dashboard_puzzle_solving: "Επίλυση παζλ:"
   dashboard_student_worksheet: "φύλλο εργασίας μαθητή"
-  dashboard_teacher_worksheet: "φύλλο εργασία; καθηγητή"
+  dashboard_teacher_worksheet: "φύλλο εργασίας καθηγητή"
   dashboard_curriculum_csina: "Η Επιστήμη των Υπολογιστών στην Άλγεβρα:"
   dashboard_curriculum_csins: "Η Επιστήμη των Υπολογιστών στην Επιστήμη:"
   dashboard_curriculum_csp: 'AP® Αρχές της Επιστήμης Υπολογιστών:'
@@ -807,10 +839,21 @@
   dashboard_progress_completed_too_many_blocks: "ολοκληρώθηκε, πάρα πολλά μπλοκ"
   dashboard_progress_completed_perfect: "ολοκληρώθηκε, τέλειο"
   dashboard_progress_furthest_level_attempted: "τελευταίο επίπεδο επιχειρήθηκε"
+  dashboard_progress_submitted: submitted
   dashboard_stage: "Επίπεδο"
   dashboard_puzzle: "Παζλ"
   dashboard_question: "Ερώτηση"
   dashboard_response: "Απάντηση"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "Σωστό"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Απίστευτα στατιστικά από την περσινή ώρα του κώδικα. Σε
     μία εβδομάδα μόνο:"
   stats_hoc_2013_image_alt: "Στατιστικά στοιχεία από την ώρα του κώδικα του 2013"
@@ -836,11 +879,12 @@
   dashboard_faq_k5: "Συχνές ερωτήσεις για το επίπεδο πρωτοβάθμιας εκπαίδευσης (K-5)"
   dashboard_announcements: "Ανακοινώσεις"
   dashboard_announce_view_all: "Προβολή όλων"
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>Η προθεσμία λήγει αυτή την Παρασκευή και εξακολουθούμε
+    να έχουμε μερικές ελεύθερες θέσεις για καθηγητές δευτεροβάθμιας εκπαίδευσης στις
+    συνεργαζόμενες συνοικίες.</b> Εγγραφείτε τώρα για να γίνετε μέλος στο ιδιαίτερα
+    αξιολογημένο πρόγραμμα επαγγελματικής μάθησης και να μάθετε να διδάξετε τις αρχές
+    της επιστήμης υπολογιστών AP. Ως τμήμα του προγράμματος μπορείτε να πάρετε δωρεάν
+    ταξίδι στο TeacherCon αυτό το καλοκαίρι και συνεχή υποστήριξη για όλο το χρόνο."
   dashboard_announce_button_text: "Μάθετε περισσότερα"
   dashboard_announce_hoc: "<b>15 Οκτωβρίου 2015</b> - Η Ώρα του Κώδικα πλησιάζει &mdash;
     κάθε συμμετέχον διοργανωτής θα λάβει μια κάρτα δώρου για το Amazon.com ή το Microsoft's
@@ -923,9 +967,9 @@
     ένα <a href="http://browsehappy.com/" target="_blank"> σύγχρονο Φυλλομετρητή.</a>
   mobile_devices: "Μαθήματα για κινητές συσκευές"
   frozen_name: "Γράψτε Κώδικα με την Άννα και την Έλσα"
-  starwars_name: "Πόλεμος των Άστρων: Χτίζοντας έναν Γαλαξία με Κώδικα"
-  codeorg_name: "Γράψε το πρώτο σου πρόγραμμα για υπολογιστή"
-  codeintl_name: "Γράψε το πρώτο σου πρόγραμμα για υπολογιστή"
+  starwars_name: "Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα"
+  codeorg_name: "Κλασικός λαβύρινθος"
+  codeintl_name: "Κλασικός λαβύρινθος"
   thinkersmithspanish_name: "Οι ρομποτικοί μου φίλοι"
   khan_name: "Μια εισαγωγή στην JavaScript"
   khanes_name: "Μια εισαγωγή στην JavaScript"
@@ -961,7 +1005,7 @@
   thinkersmith2_name: "Δυαδικές φούσκες"
   kodableunplugged_name: fuzzFamily φρενίτιδα
   projguts_name: "Πέτρα, Ψαλίδια, Χαρτί"
-  hourofcode_name: "Γράψε το πρώτο σου πρόγραμμα για υπολογιστή"
+  hourofcode_name: "Κλασικός λαβύρινθος"
   playlab_name: "Εργαστήριο Παιχνιδιού"
   infinity_name: "αιώνιο εργαστήρι παιχνιδιού"
   artist_name: "Καλλιτέχνης"
@@ -977,6 +1021,19 @@
   course3_name: "Μάθημα 3"
   course4_name: "Μάθημα 4"
   accelerated_name: "Επιταχυνόμενη πορεία μάθησης"
+  cspunit3_name: "Αρχές CS - Ενότητα 3"
+  cspunit3_gradelevel: "Τάξεις Γ΄ Γυμνασίου - Γ΄ Λυκείου"
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
+    of computer programming, which unlocks the ability to make rich, interactive apps.
+    This course uses JavaScript as the programming language, and App Lab as the programming
+    environment to build apps, but the concepts learned in these lessons span all
+    programming languages and tools.
+  applab_name: "Εργαστήριο εφαρμογών"
+  applab_gradelevel: "Ηλικίες 13+"
+  applab_shortdescription_congrats: "Το App Lab (Εργαστήριο εφαρμογών) είναι ένα περιβάλλον
+    προγραμματισμού όπου μπορείς να φτιάξεις απλές εφαρμογές (apps). Σχεδίασε μια
+    εφαρμογή (app), γράψε κώδικα ή JavaScript με πακέτα για να την κάνεις να δουλέψει
+    και μετά μοιράσου την εφαρμογή σου σε δευτερόλεπτα"
   codeorg_gradelevel: "Ηλικίες 4-104"
   codeintl_gradelevel: "Ηλικίες 4-104"
   thinkersmithspanish_gradelevel: "Για όλους"
@@ -1083,7 +1140,7 @@
   csfirst_platformtext: "Σύγρονα Προγράμματα περιήγησης"
   boxisland_platformtext: Android, iOS
   codesters_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: "Αριθμομηχανές ΤΙ"
   teacherled_platformtext: "Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet"
   codeorg_shortdescription: "Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg και τα
     Θυμωμένα Πουλιά!"
@@ -1168,18 +1225,20 @@
     Plus calculator."
   teacherled_shortdescription: "Εμπνεύστου για να σχεδιάσεις την δική σου εκδήλωση
     για τη 'Ωρα του Κώδικα με τα πιο κάτω σχέδια μαθήματος."
-  course2_shortdescription_congrats: For students with basic reading skills, this
-    course builds on Course 1. Students will create programs to solve problems and
-    develop interactive games or stories they can share. Recommended for grades 2-5.
-  course3_shortdescription_congrats: Ready for the next level? Students will delve
-    deeper into programming topics introduced in previous courses to find flexible
-    solutions to more complex problems. By the end of this course, students create
-    interactive stories and games they can share with anyone. Recommended for grades
-    4-5.
-  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
-    into programming topics introduced in previous courses to find flexible solutions
-    to more complex problems. By the end of this course, students create interactive
-    stories and games they can share with anyone. Recommended for grades 4-8.
+  course2_shortdescription_congrats: "Για τους μαθητές με βασική δεξιότητα ανάγνωσης,
+    αυτό το μάθημα βασίζεται στο Μάθημα 1. Οι μαθητές θα δημιουργήσουν προγράμματα
+    για να λύσουν προβλήματα και να δημιουργήσουν διαδραστικά παιχνίδια ή ιστορίες
+    που μπορούν να μοιραστούν. Συνιστάται για τάξεις Β' Δημοτικού έως Ε' Δημοτικού."
+  course3_shortdescription_congrats: "Ετοιμος για το επόμενο επίπεδο; Οι μαθητές θα
+    εμβαθύνουν σε θέματα προγραμματισμού που εσήχθησαν σε προηγούμενα μαθήματα και
+    να βρούν ευέλικτες λύσεις σε πιό σύνθετα προβλήματα. Με το τέλος αυτού του Μαθήματος
+    οι μαθητές δημιουργούν διαδραστικές ιστορίες και παιχνίδια που μπορούν να μοιραστούν
+    με οποιονδήποτε. Συνιστάται για τάξεις Δ' Δημοτικού έως Ε' Δημοτικού."
+  course4_shortdescription_congrats: "Ετοιμος για το επόμενο επίπεδο; Οι μαθητές θα
+    εμβαθύνουν σε θέματα προγραμματισμού που εσήχθησαν σε προηγούμενα μαθήματα και
+    θα βρούν ευέλικτες λύσεις σε πιό σύνθετα προβλήματα. Με το τέλος αυτού του Μαθήματος
+    οι μαθητές δημιουργούν διαδραστικές ιστορίες και παιχνίδια που μπορούν να μοιραστούν
+    με οποιονδήποτε. Συνιστάται για τάξεις Δ' Δημοτικού έως Ε' Δημοτικού."
   codeorg_longdescription: "Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
     με προγραμματισμό drag and drop. Αυτό είναι ένα παιγνιώδες, αυτοκαθοδηγούμενο
     μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα
@@ -1348,19 +1407,21 @@
     Lab! Κάνε ζώα, πειρατές, ζόμπι, νίτζα και πολλούς περισσότερους χαρακτήρες να
     κουνηθούν, να βγάλουν ήχους, να συγκεντρώσουν πόντους, ακόμη και να ρίξουν μπάλες
     φωτιάς!"
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
+  monstercoding_longdescription: "Το Mystery Island Coding Quest από την Monster Coding
+    προσφέρει μιά διασκεδαστική αυτο-καθοδηγούμενη περιπέτεια που διδάσκει αρκετές
+    βασικές έννοιες προγραμματισμού στα παιδιά. Κάθε δραστηριότητα με βάση τα χτίζεται
+    πάνω στην προηγούμενη δραστηριότητα, παρουσιάζοντας στα παιδιά τις λειτουργίες,
+    δυαδικές τιμές, βρόχους, εντολές εαν/αλλοιώς και συστοιχίες, χρησιμοποιώντας πολύχρωμα
+    κινούμενα γραφικά, και ακουστικές οδηγίες."
+  allcancode_longdescription: "Οι μαθητές παίζουν ένα παιχνίδι περιπέτειας με βάση
+    μια πρωτότυπη ιστορία. Καθογηγούν τον Marco - τον κύριος χαρακτήρα - μέσα από
+    κάθε επίπεδο, δίνοντας του βήμα-βήμα οδηγίες με τη μορφή οπτικής γλώσσας προγραμματισμού
+    που χρησιμοποιείται από την Ωρα του Κώδικα. Εισάγονται στο να δημιουργούν αλληλουχία
+    εντολών, βρόγχους επανάληψης και συνθήκες χωρίς καν να το αντιληφθούν."
+  csfirst_longdescription: "Δημιούρησε μια ιστορία για δύο χαρακτήρες στη θάλασσα.
+    Δημιούργησε την κίνηση του νερού, προσάρμωσε το τοπίο για να προσθέσεις τη δική
+    σας ατμόσφαιρα. Χρησιμοποίησε κώδικα για να διηγηθείς την ιστορία που θέλεις να
+    πεις!"
   boxisland_longdescription: "Κάντε ενα ταξίδι στο νησί Box και βοηθήστε τον Hiro
     να μαζέψει όλα τα ρολόγια που είναι σκορπισμένα τριγύρω! Σε αυτό το εισαγωγικό
     μάθημα θα μάθεις τα βασικά των αλγορίθμων, ακολουθιών, βρόγχων και υποθετικών
@@ -1371,16 +1432,17 @@
     κάθε μέρα από Εταιρείες  - η γραφική εργαλειοθήκη "σύρε και άφησε" κάνει την εκμάθηση
     εύκολη! Προσπάθησε να δημιουργήσεις ενα παιχνίδι μπασκετ, να χορογραφήσεις εναν
     χορό ή να να σχεδιάσεις μια κάρτα με κινούμενες εικόνες! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
+  texasinstruments_longdescription: "Οι δραστηριότητες 10 Λεπτά Κώδικα μπορεί να χρησιμοποιηθούν
+    στην τάξη, για να προκαλέσει το ενδιαφέρον των μαθητών στην κωδικοποίηση με την
+    τεχνολογία TI που μεταφέρουν στα σακίδιά τους καθημερινά.  Μάθετ τα βασικά της
+    κωδικοποίησης χρησιμοποιώντας τα Tj-84 &#8482; Επίσης ξεκίνησε να προγραμματίζεις
+    σε 10 λεπτά-δεν απαιτείται εμπειρία!  "
+  teacherled_longdescription: "Τώρα που δεκάδες χιλιάδες εκπαιδευτικοί δοκίμασαν την
+    Ωρα του Κώδικα, πολλές τάξεις είναι έτοιμες για πιο δημιουργική, λιγότερο ομοιόμορφες
+    δραστηριότητες που διδάσκουν τα βασικά της επιστήμης των υπολογιστών. Για να βοηθήσει
+    τους εκπαιδευτικούς να βρουν έμπνευση, συλλέξαμε και επιμεληθήκαμε μία ώρα μάθημα
+    καθοδηγούμενο από το δάσκαλο και σχέδια δρστηριότητας για διάφορα γνωστικά αντικείμενα
+    για τους βετεράνους στην Ωρα του Κώδικα."
   codeorg_beyond_name: "Εισαγωγή στους υπολογιστές (τάξεις K-8)"
   khan_beyond_name: "Μάθετε προγραμματισμό υπολογιστών"
   tynker_beyond_name: "Μάθετε προγραμματισμό στο σπίτι"
@@ -1752,4 +1814,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "παίξε"
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

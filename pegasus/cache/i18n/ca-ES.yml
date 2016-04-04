@@ -29,9 +29,8 @@
   twentyhours_heading: Prova el nostre curs d'introducció a la programació
   twentyhours_text: Heu acabat la primera Hora del Codi? Apreneu més informàtica i
     programació en el curs següent.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Cada nen mereix oportunitat
+  og_description: Cada alumne de cada escola mereix l'oportunitat d'estudiar informàtica.
   hoc2014_heading: Uniu-vos a<a href="http://hourofcode.com">Hora del Codi</a><br/>Desembre
     8 - 14, 2014<br/>
   hoc2014_students: Alumnes
@@ -48,7 +47,7 @@
   csedweek_map_search_reset: Reiniciar
   csedweek_map_legend_title: Llegenda
   csedweek_map_legend_event: Event de l'Hora del Codi
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_cs_tech_jam: Esdeveniment especial
   cded_sign_up: Inscriure's
   cded_try_it: Proveu-ho
   twentyhours_trynow: Intenteu-ho ara
@@ -79,66 +78,66 @@
   congratulations_volunteer: 'Felicitacions: ara que has provat l''Hora del Codi,
     <a href="https://code.org/volunteer"> registra''t com a voluntari en una aula</a>
     i ajuda els alumnes a aprendre una Hora del Codi!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: Enhorabona per completar el curs 1
+  congratulations_on_completing_course2: Enhorabona per completar el curs 2
+  congratulations_on_completing_course3: Enhorabona per completar el curs 3
+  congratulations_on_completing_course4: Enhorabona per completar el curs 4
+  congratulations_on_completing_accelerated: Enhorabona per completar el curs accelerat
   congrats_next_tutorials_title: Prova els següents tutorials
-  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
-    tutorial</a>.
+  congrats_next_tutorials_desc: Proveu aquestes classes més curtes, de 1 hora, o proveu
+    una <a href="%{current_path}/next"> classe de soci</a>.
   get_a_certificate_of_achievement: Aconseguiu el certificat d'assoliment
-  view_course: View course
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  view_course: Veure el curs
+  view_unit: View unit
+  make_app: Make an app
+  congrats_guest_speaker_title: Trobar un orador convidat per a l'aula
+  congrats_guest_speaker_desc: Ara que els estudiants han acabat un curs d'informàtica,
+    considereu el fet de celebrar-ho i de connectar-ho a coses que ells puguin construir
+    en el món real, convidant un orador a l'aula. Podeu utilitzar el nostre mapa de
+    voluntaris per contactar-ne de locals per visitar l'aula, o buscar en qualsevol
+    ciutat estudiants o professionals que estiguin disposats a inspirar els estudiants
+    remotament, amb xats de vídeo.
+  congrats_guest_speaker_cta: Trobar un orador convidat
+  congrats_third_party_title: Use your new skills with these apps and websites
+  third_party_gradelevel_kto8: Qualificacions K-8
+  third_party_gradelevel_kto2: Qualificacions K-2
+  third_party_gradelevel_2to8: Qualificacions 2-8
+  third_party_gradelevel_4to12: Qualificacions 4-12
+  third_party_gradelevel_5to12: Qualificacions 5-12
+  third_party_gradelevel_6plus: Qualificacions 6 +
+  third_party_gradelevel_8plus: Qualificacions 8+
+  third_party_platform_all: 'Plataforma: Web, iPad i Android'
+  third_party_platform_mobile: 'Plataforma: iPad i Android'
+  third_party_platform_web: 'Plataforma: Web'
+  third_party_price_varies: 'Preu: variable'
+  third_party_price_free: 'Preu: gratuït'
+  third_party_price_299: 'Preu: $2.99/descàrrega'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  third_party_tynker_desc: La plataforma de computació creatiu de Tynker ajuda els
+    nens a desenvolupar pensament computacional i coneixements de programació d'una
+    manera divertida, intuïtiva i imaginativa. El nostre innovador llenguatge de programació
+    visual, cursos interactius i jocs basat en la programació proporcionen una fàcil
+    introducció a la programació i capaciten els nens per innovar i crear.
+  third_party_tynker_btn_curriculum: Prova el currículum de Tynker per a primers lectors
+  third_party_tynker_btn_site: Visita Tynker
+  third_party_scratchjr_desc: Scratch Jr. és un llenguatge de programació introductori
+    que permet als nens petits (edats 5-7) crear les seves pròpies històries interactives
+    i jocs. Els nens ajunten junts blocs de programació gràfics per fer que els personatges
+    es moguin, saltin, ballin i cantin. Els nens poden modificar personatges a l'editor,
+    afegir les seves pròpies veus i sons, i fins i tot inserir fotos de ells mateixos.
+    Aleshores poden utilitzar els blocs de programació per fer que els seus personatges
+    prenguin vida.
+  third_party_scratchjr_btn_curriculum: Descarregar currículum Scratch Jr
+  third_party_scratchjr_btn_site: Visita Scratch Jr.
+  third_party_scratch_desc: Amb Scratch, pots programar històries interactives, jocs
+    i animacions i compartir les seves creacions amb d'altres a la comunitat en línia.
+    Scratch ajuda als joves a aprendre i a pensar creativament, a raonar sistemàticament
+    i a treballar de manera col·laborativa — les habilitats essencials per a la vida
+    del segle XXI.
+  third_party_scratch_btn_curriculum: Descarregar currículum de Scratch
+  third_party_scratch_btn_forum: Fòrum per educadors de Scratch
+  third_party_scratch_btn_site: Visita Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
     or on Android or iOS devices. Students play the initial set of “Basic” levels
@@ -166,7 +165,6 @@
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -182,6 +180,7 @@
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -376,6 +375,9 @@
   homepage_slot_text_link_othercourses: Altres cursos online
   homepage_slot_text_title_educators: Educadors
   homepage_slot_text_blurb_educators: Ensenya als teus estudiants
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: ESO
+  homepage_slot_text_link_high: Batxillerat
   homepage_slot_text_link_k5: Cursos per als graus K-5
   homepage_slot_text_link_fullcurriculum: Mira el nostre programa complet
   homepage_slot_text_link_pd: Desenvolupament professional
@@ -660,6 +662,7 @@
   dashboard_navigation_all_sections: Comptes i progrés dels alumnes
   dashboard_navigation_view_progress: Veure el progrés
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Afegeix estudiants
   dashboard_navigation_manage_students: Gestiona els alumnes
   dashboard_navigation_lesson_plans_resources: Plans docents i recursos
@@ -780,10 +783,21 @@
   dashboard_progress_completed_too_many_blocks: completat, massa blocs
   dashboard_progress_completed_perfect: completat, perfecte
   dashboard_progress_furthest_level_attempted: nivell més alt intentat
+  dashboard_progress_submitted: submitted
   dashboard_stage: etapa
   dashboard_puzzle: Puzzle
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Correcte
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Increïbles estadístiques d''Hora de Codi de l''any passat.
     En només una setmana:'
   stats_hoc_2013_image_alt: Estadístiques de 2013 d'Hora de Codi
@@ -941,6 +955,18 @@
   course3_name: Curs 3
   course4_name: Curs 4
   accelerated_name: Curs Accelerat
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
+    of computer programming, which unlocks the ability to make rich, interactive apps.
+    This course uses JavaScript as the programming language, and App Lab as the programming
+    environment to build apps, but the concepts learned in these lessons span all
+    programming languages and tools.
+  applab_name: Laboratori d'aplicacions
+  applab_gradelevel: Ages 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you
+    can make simple apps. Design an app, code with blocks or JavaScript to make it
+    work, then share your app in seconds
   codeorg_gradelevel: Edat 4-104
   codeintl_gradelevel: Edat 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -1664,4 +1690,3 @@
   infinity_shortcode: inf
   playlab_shortcode: reprodueix
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

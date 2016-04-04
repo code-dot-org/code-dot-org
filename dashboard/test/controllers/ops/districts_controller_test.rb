@@ -87,7 +87,6 @@ module Ops
       assert_equal dc, district.contact
     end
 
-
     test 'read district info' do
       assert_routing({ path: "#{API}/districts/1", method: :get }, { controller: 'ops/districts', action: 'show', id: '1' })
 
@@ -128,7 +127,6 @@ module Ops
       # old district contact is no longer a district contact
       assert !old_district_contact.district_contact?
     end
-
 
     test 'assigning district contact to district upgrades existing user' do
       old_district_contact = @district.contact

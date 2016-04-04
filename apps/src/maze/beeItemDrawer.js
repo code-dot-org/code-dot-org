@@ -1,5 +1,3 @@
-/*jshint -W086 */
-
 var DirtDrawer = require('./dirtDrawer');
 require('../utils');
 
@@ -37,12 +35,21 @@ BeeItemDrawer.inherits(DirtDrawer);
 module.exports = BeeItemDrawer;
 
 /**
+ * Generic reset function, shared by DirtDrawer so that we can call
+ * Maze.gridItemDrawer.reset() blindly.
+ * @override
+ */
+BeeItemDrawer.prototype.reset = function () {
+  this.resetClouded();
+};
+
+/**
  * Resets our tracking of clouded/revealed squares. Used on
  * initialization and also to reset the drawer between randomized
  * conditionals runs.
  */
 BeeItemDrawer.prototype.resetClouded = function () {
-  this.clouded_ = this.bee_.currentStaticGrid.map(function (row) {
+  this.clouded_ = this.map_.currentStaticGrid.map(function (row) {
     return [];
   });
 };

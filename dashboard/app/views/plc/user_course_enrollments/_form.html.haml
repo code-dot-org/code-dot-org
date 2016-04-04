@@ -1,0 +1,16 @@
+= form_tag(action: 'create') do
+  - if @user_course_enrollment.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@user_course_enrollment.errors.count, "error")} prohibited this plc_user_course_enrollment from being saved:"
+      %ul
+        - @user_course_enrollment.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = label_tag :user_email_address
+    = text_field_tag :user_email
+    = label_tag :course
+    = select_tag :plc_course_id, options_for_select(options_for_user_enrollment_courses)
+
+  .actions
+    = submit_tag('Enroll in class', id: 'submitEnrollment')

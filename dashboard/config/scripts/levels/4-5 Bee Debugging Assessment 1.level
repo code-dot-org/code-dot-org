@@ -17,8 +17,26 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[2,1,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,3,-3,3,-3,3,-3,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "8"
-  }
+    "ideal": "8",
+    "markdown_instructions": "**Assessment:** Fix the code.",
+    "never_autoplay_video": "false",
+    "step_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "true"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -60,15 +78,40 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <solution_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_nectar"/>
+                      </statement>
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="controls_repeat">
+                              <title name="TIMES">3</title>
+                              <statement name="DO">
+                                <block type="maze_honey"/>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
         </block>
-        <block type="maze_moveForward"/>
-        <block type="maze_nectar"/>
-        <block type="maze_honey"/>
       </xml>
-    </required_blocks>
+    </solution_blocks>
   </blocks>
 </Karel>

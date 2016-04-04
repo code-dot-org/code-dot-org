@@ -1,0 +1,66 @@
+#!/usr/bin/env ruby
+
+# Distribute downloaded translations from i18n/locales
+# back to blockly-core, apps, pegasus, and dashboard.
+
+require File.expand_path('../../pegasus/src/env', __FILE__)
+require 'cdo/languages'
+require 'fileutils'
+
+def push_out_translated_files
+  rename_from_crowdin_name_to_locale
+  exec "bin/i18n-codeorg/out.sh"
+  copy_untranslated_apps
+  cleanup_portuguese_codes
+  rebuild_blockly_js_files
+end
+
+# Files downloaded from Crowdin are organized by language name,
+# rename folders to be organized by locale
+def rename_from_crowdin_name_to_locale
+  Languages.get_crowdin_name_and_locale.each do |prop|
+    if File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
+      FileUtils.cp_r "i18n/locales/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
+      FileUtils.rm_r "i18n/locales/#{prop[:crowdin_name_s]}"
+    end
+  end
+end
+
+# For untranslated apps, copy English file for all locales
+def copy_untranslated_apps
+  untranslated_apps = ['applab', 'calc', 'eval', 'gamelab', 'netsim']
+
+  Languages.get_locale.each do |prop|
+    if prop[:locale_s] != 'en-US'
+      untranslated_apps.each do |app|
+        app_locale = prop[:locale_s].gsub('-', '_').downcase!
+        FileUtils.cp_r "apps/i18n/#{app}/en_us.json", "apps/i18n/#{app}/#{app_locale}.json"
+      end
+    end
+  end
+end
+
+def cleanup_portuguese_codes
+  dashboard_categories = ['data', 'devise', 'dsls', 'instructions', 'scripts', 'slides', 'unplugged']
+
+  # Fix portuguese codes
+  file = "dashboard/config/locales/pt-BR.yml"
+  File.write(file, File.read(file).gsub(/"pt-BR":/, '"pt":'))
+  file = "dashboard/config/locales/pt-PT.yml"
+  File.write(file, File.read(file).gsub(/"pt":/, '"pt-PT":'))
+
+  dashboard_categories.each do |dashboard|
+    file = "dashboard/config/locales/#{dashboard}.pt-BR.yml"
+    File.write(file, File.read(file).gsub(/"pt-BR":/, '"pt":'))
+
+    file = "dashboard/config/locales/#{dashboard}.pt-PT.yml"
+    File.write(file, File.read(file).gsub(/"pt":/, '"pt-PT":'))
+  end
+end
+
+def rebuild_blockly_js_files
+  exec "blockly-core/i18n/codeorg-messages.sh"
+  FileUtils.cp_r 'blockly-core/msg/js/.', 'apps/lib/blockly/'
+end
+
+push_out_translated_files

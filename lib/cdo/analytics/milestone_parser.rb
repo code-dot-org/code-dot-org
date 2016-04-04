@@ -14,7 +14,7 @@ require 'fileutils'
 
 class MilestoneParser
   # Ignore milestone logs in these host paths
-  IGNORE_HOSTS = %w(console daemon production-daemon staging test levelbuilder-staging levelbuilder-development development react)
+  IGNORE_HOSTS = %w(console daemon production-daemon staging test levelbuilder-staging levelbuilder-development development react adhoc)
 
   MILESTONE_CACHE = pegasus_dir('cache', 'milestone-cache.json')
   MILESTONE_CACHE_V2 = pegasus_dir('cache', 'milestone-cache_v2.json')
@@ -93,7 +93,7 @@ class MilestoneParser
           partial_count = cached['count']
           cached_length = cached['length']
           fetch_bytes = (length - cached_length)
-          fetch_params.merge!(range: "bytes=#{cached_length}-")
+          fetch_params[:range] = "bytes=#{cached_length}-"
           debug "Starting content match, downloading remaining #{fetch_bytes} bytes.."
         end
       end
@@ -111,7 +111,8 @@ class MilestoneParser
     response = {'count' => count, 'etag' => etag}
     unless ext == '.gz'
       md5 ||= Digest::MD5.hexdigest `cat #{path} | head -c #{COMPARE_BYTE_LENGTH}`
-      response.merge!('length' => length, 'md5' => md5)
+      response['length'] = length
+      response['md5'] = md5
     end
     FileUtils.rm path
     debug "Count: #{count}"

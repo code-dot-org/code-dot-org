@@ -11,7 +11,7 @@
         "params": [
           "\"mytable\"",
           "{id:1}",
-          "function(){\n  console.log(\"Delete successful\"); \n}"
+          "function(success){\n  console.log(\"Delete successful\"); \n}"
         ],
         "paletteParams": [
           "table",
@@ -52,9 +52,12 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "data_tables": "{\r\n  \"mytable\":[\r\n  {\r\n    \"name\": \"Greg\",\r\n    \"age\": \"16\",\r\n    \"id\": 1\r\n  },\r\n  {\r\n    \"name\": \"Karen\",\r\n    \"age\": \"17\",\r\n    \"id\": 2\r\n  },\r\n  {\r\n    \"name\": \"Crystal\",\r\n    \"age\": \"16\",\r\n    \"id\": 3\r\n  },\r\n   {\r\n    \"name\": \"Adrion\",\r\n    \"age\": \"17\",\r\n    \"id\": 4\r\n  }  \r\n]}",
-    "markdown_instructions": "# Deleting Records with Code\r\n\r\nYou can delete a record \"by hand\" in the Data Viewer by clicking the <img src=\"https://images.code.org/b45cebe6d06d8c2d45a233bd3c472a62-image-1449850229074.png\" style=\"width: 50px\"> button.\r\n\r\nTo delete a record with code you use the `deleteRecord` command.  It works similarly to the other data tools in that it has 3 parameters:\r\n\r\n * The **name of the table** you want to delete from\r\n * The **object** you want to delete\r\n * A **callback** function\r\n\r\n`deleteRecord` is **different from the other data commands** in one critical way. The object you send to the database ***only* needs to contain the id of the record** you want to delete.  \r\n \r\n\r\n# Do This\r\n\r\n**Your database already includes a table called \"mytable\"**\r\n\r\n * Go to the Data Viewer and **look at the data in \"mytable\"**\r\n * **Drag out** the `deleteRecord` block\r\n \t* It includes **default code**to delete the record with id:1 in 'mytable'\r\n * Run the code and **confirm that the record with id:1 (\"Greg\") is deleted from the database**.\r\n\r\n![](https://images.code.org/553a0e020ffe52f26cec31b47306790c-image-1449853866304.gif)",
-    "instructions": "Use the deleteRecord command with default values. Verify the record was deleted. (Click for full instructions)."
-  }
+    "markdown_instructions": "# Deleting Records with Code\r\n\r\nYou can delete a record \"by hand\" in the Data Viewer by clicking the <img src=\"https://images.code.org/b45cebe6d06d8c2d45a233bd3c472a62-image-1449850229074.png\" style=\"width: 50px\"> button.\r\n\r\nTo delete a record with code you use the `deleteRecord` command.  It works similarly to the other data tools in that it has 3 parameters:\r\n\r\n * The **name of the table** you want to delete from.\r\n * The **object** you want to delete.\r\n * A **callback** function.\r\n\r\n`deleteRecord` is **different from the other data commands** in one critical way. The object you send to the database ***only* needs to contain the id of the record** you want to delete.  \r\n \r\n\r\n# Do This:\r\n\r\n**Your database already includes a table called \"mytable\"**\r\n\r\n * Go to the Data Viewer and **look at the data in \"mytable\"**.\r\n * **Drag out** the `deleteRecord` block.\r\n \t* It includes **default code** to delete the record with id:1 in \"mytable\".\r\n * Run the code and **confirm that the record with id:1 (\"Greg\") is deleted from the database**.\r\n\r\n![](https://images.code.org/f1168e1793f646575f26d86e66ddcae4-image-1457470120824.gif)",
+    "instructions": "Use the deleteRecord command with default values. Verify the record was deleted. (Click for full instructions).",
+    "encrypted_examples": "6++gyJLlPSKtKcXiQYkMr2OE6vo56Zfue+79LrBXiKIeURpqwMVe/uI2oMm1\nv3Ke\n"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

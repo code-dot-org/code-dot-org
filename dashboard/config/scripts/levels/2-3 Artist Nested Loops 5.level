@@ -14,7 +14,7 @@
     "ideal": "6",
     "slider_speed": ".8",
     "free_play": "false",
-    "instructions": "Fill in this building's windows with a nested loop. The windows are 20 pixels long and 20 pixels apart.",
+    "instructions": "Fill in this building's windows using a nested loop. \r\n\r\nThe windows are 20 pixels long and 20 pixels apart.",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -29,9 +29,13 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Fill in this building's windows with a nested loop. The windows are 20 pixels long and 20 pixels apart.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
-    "examples_required": "false"
-  }
+    "markdown_instructions": "Fill in this building's windows using a nested loop. \r\n\r\nThe windows are 20 pixels long and 20 pixels apart.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false",
+    "never_autoplay_video": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Try using the `jump forward` block to get from the top of one square to the place where you will start the next. \\n\\nIf your squares are 20 pixels tall and they are 20 pixels apart, how far do you need to jump?\",\r\n  \"hint_id\": \"2-3_Artist_Nested_Loops_5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -92,7 +96,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat">
           <title name="TIMES">8</title>
@@ -102,7 +106,7 @@
           <title name="VALUE">40</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

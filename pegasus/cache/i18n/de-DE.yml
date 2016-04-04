@@ -80,30 +80,31 @@
   congratulations_volunteer: 'Glückwunsch: Da du Hour of Code probiert hast, <a href="https://code.org/volunteer">melde
     dich nun an um ein Klasse zu unterstützen</a> und hilf Schülern beim Lernen einer
     Hour of Code!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: Herzlichen Glückwunsch zum Abschluss von
+    Kurs 1
+  congratulations_on_completing_course2: Herzlichen Glückwunsch zum Abschluss von
+    Kurs 2
+  congratulations_on_completing_course3: Herzlichen Glückwunsch zum Abschluss von
+    Kurs 3
+  congratulations_on_completing_course4: Herzlichen Glückwunsch zum Abschluss von
+    Kurs 4
+  congratulations_on_completing_accelerated: "\\n"
   congrats_next_tutorials_title: Versuche diese Anleitungen als Nächstes
   congrats_next_tutorials_desc: Versuche diese kürzeren, 1-Stundenanleitungen oder
     versuche <a href="%{current_path}/next">Partneranleitung</a>.
   get_a_certificate_of_achievement: Erhalte eine Bescheinigung für das Geleistete
-  view_course: View course
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  view_course: Kurs anzeigen
+  view_unit: "\\n"
+  make_app: "\\n"
+  congrats_guest_speaker_title: Einen Gastredner für Ihren Unterricht finden
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
     real world by inviting a guest speaker to your classroom. You can use our map
     of volunteers to contact local volunteers to visit your classroom, or search in
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_guest_speaker_cta: Finde einen Gastsprecher
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -111,13 +112,14 @@
   third_party_gradelevel_5to12: Grades 5-12
   third_party_gradelevel_6plus: Grades 6+
   third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
+  third_party_platform_all: 'Plattform: Web, iPad & Android'
+  third_party_platform_mobile: 'Plattform: iPad & Android'
+  third_party_platform_web: 'Plattform: Web'
   third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_price_free: 'Preis: kostenlos'
+  third_party_price_299: 'Preis: $2,99/Download'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
@@ -139,20 +141,20 @@
     work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Download Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratch_btn_site: Besuche Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
     or on Android or iOS devices. Students play the initial set of “Basic” levels
     in Lightbot. They will learn how to tell a computer what to do with a series of
     basic commands and gain the general process by which computer programs are written.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_lightbot_btn_site: Besuche Lightbot
   third_party_khan_desc: Learn how to program drawings, animations, and games using
     JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
     can share whatever you create, explore what others have created and learn from
     each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_khan_btn_learn: Lerne Informatik mit Khan Acadamy
+  third_party_khan_btn_forum: Khan Academy Informatik-Forum
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
     apps for Android devices. Newcomers to App Inventor can have their first app up
@@ -160,14 +162,13 @@
     less time than with more traditional, text-based languages.
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
   third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_appinv_btn_site: Besuche App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
     fun and accessible for beginners. With CodeHS, you can get the help that every
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -183,6 +184,7 @@
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -378,6 +380,9 @@
   homepage_slot_text_link_othercourses: Andere Onlinekurse
   homepage_slot_text_title_educators: Lehrer
   homepage_slot_text_blurb_educators: Unterrichte deine Schüler
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Mittelstufe
+  homepage_slot_text_link_high: Oberstufe
   homepage_slot_text_link_k5: Kurse für die Grundschule
   homepage_slot_text_link_fullcurriculum: Schau dir unseren gesamten Lehrplan an
   homepage_slot_text_link_pd: Professionelle Entwicklung
@@ -663,6 +668,7 @@
   dashboard_navigation_all_sections: Schülerkonten und Fortschritt
   dashboard_navigation_view_progress: Fortschritt ansehen
   dashboard_navigation_view_text_responses: Textantworten anzeigen
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Schüler hinzufügen
   dashboard_navigation_manage_students: Schüler verwalten
   dashboard_navigation_lesson_plans_resources: Unterrichtspläne und Material
@@ -783,10 +789,21 @@
   dashboard_progress_completed_too_many_blocks: abgeschlossen, zu viele Blöcke
   dashboard_progress_completed_perfect: Abgeschlossen, perfekt
   dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
+  dashboard_progress_submitted: submitted
   dashboard_stage: Bühne
   dashboard_puzzle: Aufgabe
   dashboard_question: Frage
   dashboard_response: Antwort
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Richtig
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Fantastische Ergebnisse der Hour of Code aus dem Vorjahr.
     Allein in einer Woche:'
   stats_hoc_2013_image_alt: Ergebnisse der Hour of Code 2013
@@ -950,6 +967,18 @@
   course3_name: Kurs 3
   course4_name: Kurs 4
   accelerated_name: Beschleunigter Kurs
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
+    of computer programming, which unlocks the ability to make rich, interactive apps.
+    This course uses JavaScript as the programming language, and App Lab as the programming
+    environment to build apps, but the concepts learned in these lessons span all
+    programming languages and tools.
+  applab_name: App-Labor
+  applab_gradelevel: Ages 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you
+    can make simple apps. Design an app, code with blocks or JavaScript to make it
+    work, then share your app in seconds
   codeorg_gradelevel: Im Alter von 4-104
   codeintl_gradelevel: Im Alter von 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -1661,4 +1690,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

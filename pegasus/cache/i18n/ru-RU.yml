@@ -79,78 +79,78 @@
   congratulations_volunteer: 'Поздравляем: теперь, после того, как вы попробовали
     "Час программирования", <a href="https://code.org/volunteer"> зарегистрируйте
     на сайте желающих из класса</a> и помогайте ученикам в изучении "Часа программирования"!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: "Поздравляем вас с завершением курса 1"
+  congratulations_on_completing_course2: "Поздравляем вас с завершением курса 2"
+  congratulations_on_completing_course3: "Поздравляем вас с завершением курса 3"
+  congratulations_on_completing_course4: "Поздравляем вас с завершением курса 4"
+  congratulations_on_completing_accelerated: "Поздравляем с прохождением ускоренного
+    курса"
   congrats_next_tutorials_title: "Теперь попробуйте эти руководства"
   congrats_next_tutorials_desc: Попробуйте эти короткие, одночасовые уроки, или попробуйте<a
     href="%{current_path}/next">партнерский урок</a>.
   get_a_certificate_of_achievement: "Получить сертификат о результате"
-  view_course: View course
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
-  third_party_gradelevel_kto8: Grades K-8
+  view_course: "Посмотреть курс"
+  view_unit: View unit
+  make_app: "Создать приложение"
+  congrats_guest_speaker_title: "Найти приглашенного оратора для аудитории"
+  congrats_guest_speaker_desc: "Теперь, когда ваши ученики прошли курс компьютерной
+    науки, подумайте над тем, чтобы отметить это событие и ознакомить их с тем, как
+    применить все изученное в реальном мире, пригласив в класс гостя-докладчика. Вы
+    можете воспользоваться нашим списком волонтеров, готовых прийти к вам на занятие
+    или найти студентов или технических специалистов, работающих в этой сфере, из
+    любого города, которые готовы вдохновить учеников удаленно при помощи видеочата."
+  congrats_guest_speaker_cta: "Найти приглашенного оратора"
+  congrats_third_party_title: "Используйте свои новые навыки с этих приложений и веб-сайтов"
+  third_party_gradelevel_kto8: "Ученики 1-8 классов"
   third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_gradelevel_2to8: 2-8 классы
+  third_party_gradelevel_4to12: 4-12 классы
+  third_party_gradelevel_5to12: 5-12 классы
+  third_party_gradelevel_6plus: "Класс 6 и выше"
+  third_party_gradelevel_8plus: "Класс 8 и выше"
+  third_party_platform_all: "Платформы: Web, iPad и Android"
+  third_party_platform_mobile: "Платформы: iPad и Android"
+  third_party_platform_web: "Платформа: Web"
+  third_party_price_varies: "Цена: Планы варьируются"
+  third_party_price_free: "Цена: Бесплатно"
+  third_party_price_299: "Цена: $2.99"
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: "Тариф для школ: Бесплатные планы и планы Pro за $2500+"
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
     and game-based programming activities provide an easy introduction to programming,
     and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_tynker_btn_curriculum: "Попробовать Tynker, учебную программу для начинающих
+    читателей"
+  third_party_tynker_btn_site: "Посетить Tynker"
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
     move, jump, dance, and sing. Children can modify characters in the paint editor,
     add their own voices and sounds, even insert photos of themselves - then use the
     programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratchjr_btn_curriculum: "Скачать Scratch Учебный план"
+  third_party_scratchjr_btn_site: "Посетить Scratch."
+  third_party_scratch_desc: "С использованием Scratch вы сможете программировать собственные
+    интерактивные истории, игры и анимации, а также делиться своим творчеством с другими
+    людьми в Интернете. Scratch помогает молодежи учиться мыслить креативно, систематически
+    размышлять и работать в команде, что является основными навыки жизни в Xxi веке."
+  third_party_scratch_btn_curriculum: "Скачать Scratch Учебный План"
+  third_party_scratch_btn_forum: Scratch Педагогический Форум
+  third_party_scratch_btn_site: "Посетить Scratch"
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
     or on Android or iOS devices. Students play the initial set of “Basic” levels
     in Lightbot. They will learn how to tell a computer what to do with a series of
     basic commands and gain the general process by which computer programs are written.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_lightbot_btn_site: "Посетить Lightbot"
+  third_party_khan_desc: "Узнайте, как программировать рисунки, анимацию и игры с
+    сипользованием JavaScript и ProcessingJS, или научитесь создавать веб-страницы
+    с помощью HTML и CSS. Вы также сможете поделиться своим творчеством, увидеть работы
+    других и учиться друг у друга!"
+  third_party_khan_btn_learn: "Учите компьютерную науку вместе с Khan Academy"
   third_party_khan_btn_forum: Khan Academy CS Forum
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
@@ -166,22 +166,22 @@
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
     native education.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_site: "Посетите Codecademy"
+  third_party_organization: "Организация"
   third_party_curriculum: "Учебная программа"
-  third_party_pricing: Pricing
+  third_party_pricing: "Цена"
   third_party_cost_free: Free
   third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
+  third_party_cost_299: "скачать за 2,99$"
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: "Около 5 уроков для 4-8 классов"
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -250,11 +250,15 @@
   learn_classes: "Найти организации в которых обучают программированию"
   hoc_is_here: "#HourOfCode уже здесь - посмотрите! @codeorg"
   just_did_hoc: "Я только что закончил #HourOfCode - посмотрите! @codeorg"
-  just_did_course1: I just finished Course 1 - check it out! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
+  just_did_course1: "Я только что закончил проходить Курс 1 - смотри результаты на
+    @codeorg"
+  just_did_course2: "Я только что закончил проходить Курс 2 - смотри результаты на
+    codeorg"
   just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
+  just_did_course4: "Я только что закончил проходить Курс 4 - смотри результаты на
+    @codeorg"
+  just_did_accelerated: "Я только что закончил ускоренный курс - смотри результаты
+    на @codeorg"
   twitter_teach_cs: 9 из 10 людей согласны,в школах должны преподавать компьютерную
     науку. http://youtu.be/nKIu9yen5nc. Посетите https://code.org/.
   learn_hoc: "Учитесь программировать с Часом Кода"
@@ -371,6 +375,9 @@
   homepage_slot_text_link_othercourses: "Другие онлайн курсы"
   homepage_slot_text_title_educators: "Преподаватели"
   homepage_slot_text_blurb_educators: "Научите Ваших учеников"
+  homepage_slot_text_link_elementary: "Начальная школа"
+  homepage_slot_text_link_middle: "Средняя школа"
+  homepage_slot_text_link_high: "Старшие классы"
   homepage_slot_text_link_k5: "Курсы для детей"
   homepage_slot_text_link_fullcurriculum: "Посмотрите наш полный курс обучения"
   homepage_slot_text_link_pd: "Профессиональная разработка"
@@ -655,6 +662,7 @@
   dashboard_navigation_all_sections: "Учетные записи и прогресс студента"
   dashboard_navigation_view_progress: "Просмотр хода выполнения"
   dashboard_navigation_view_text_responses: "Просмотр текстовых ответов"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "Добавить Учеников"
   dashboard_navigation_manage_students: "Управление Учениками"
   dashboard_navigation_lesson_plans_resources: "Планы уроков и ресурсы"
@@ -773,10 +781,21 @@
   dashboard_progress_completed_too_many_blocks: "Завершено, слишком много блоков"
   dashboard_progress_completed_perfect: "Завершено, отлично"
   dashboard_progress_furthest_level_attempted: "запрошен слишком высокий уровень"
+  dashboard_progress_submitted: submitted
   dashboard_stage: "Этап"
   dashboard_puzzle: "Головоломка"
   dashboard_question: "Вопрос"
   dashboard_response: "Ответ"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "Верно"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Невероятная статистика с прошлогоднего Часа Кода. Всего
     за одну неделю:"
   stats_hoc_2013_image_alt: "Статистика с Часа Кода 2013 года"
@@ -936,6 +955,18 @@
   course3_name: "Курс 3"
   course4_name: "Курс 4"
   accelerated_name: "Ускоренный курс"
+  cspunit3_name: "Принципы компьютерной науки. Глава 3"
+  cspunit3_gradelevel: 9-12 классы
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
+    of computer programming, which unlocks the ability to make rich, interactive apps.
+    This course uses JavaScript as the programming language, and App Lab as the programming
+    environment to build apps, but the concepts learned in these lessons span all
+    programming languages and tools.
+  applab_name: "Лаборатория Программ"
+  applab_gradelevel: "Для возрастов 13+"
+  applab_shortdescription_congrats: App Lab является средой программирования, в которой
+    можно создавать простые приложения. Создавай дизайн , пиши код с помощью блоков
+    или JavaScript и смотри, как оно работает, а затем моментально поделись этим приложением
   codeorg_gradelevel: "Возраст 4-104"
   codeintl_gradelevel: "Возраст 4-104"
   thinkersmithspanish_gradelevel: Por todos
@@ -1118,14 +1149,15 @@
     графического калькулятора TI-84&#8482; Plus."
   teacherled_shortdescription: "Будьте вдохновлены дизайном собственного Час Кода
     события с этими планами уроков."
-  course2_shortdescription_congrats: For students with basic reading skills, this
-    course builds on Course 1. Students will create programs to solve problems and
-    develop interactive games or stories they can share. Recommended for grades 2-5.
-  course3_shortdescription_congrats: Ready for the next level? Students will delve
-    deeper into programming topics introduced in previous courses to find flexible
-    solutions to more complex problems. By the end of this course, students create
-    interactive stories and games they can share with anyone. Recommended for grades
-    4-5.
+  course2_shortdescription_congrats: "Для учеников, имеющих базовые навыки чтения,
+    начинать обучение рекомендуется с курса 1. Ученики смогут создавать программы
+    для решения задач и разрабатывать интерактивные игры или истории, которыми они
+    могут поделиться. Рекомендуется для учеников 2-5 классов."
+  course3_shortdescription_congrats: "Готовы перейти на новый уровень? Ученики будут
+    более углубленно изучать темы,  с которыми они познакомились на предыдущем курсе,
+    осваивая решение более сложных задач. К концу курса ученики смогут создавать интерактивные
+    истории и игры, которыми они смогут поделиться с другими. Рекомендовано для учеников
+    4-5 классов."
   course4_shortdescription_congrats: Ready to go further? Students will delve deeper
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
@@ -1658,4 +1690,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "играть"
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

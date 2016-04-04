@@ -1,13 +1,11 @@
-- languages = { 'Albanian' => 'sq', 'Arabic' => 'ar', 'Armenian' => 'hy-AM', 'Azerbaijani' => 'az', 'Basque' => 'eu', 'Bengali' => 'bn', 'Bosnian' => 'bs', 'Bulgarian' => 'bg', 'Catalan' => 'ca', 'Chinese Simplified' => 'zh-CN', 'Chinese Traditional' => 'zh-TW', 'Croatian' => 'hr', 'Czech' => 'cs', 'Danish' => 'da', 'Dari' => 'fa-AF', 'Dutch' => 'nl', 'English (UK)' => 'en-GB', 'Estonian' => 'et', 'Filipino' => 'fil', 'Finnish' => 'fi', 'French' => 'fr', 'Galician' => 'gl', 'Georgian' => 'ka', 'German' => 'de', 'Greek' => 'el', 'Hebrew' => 'he', 'Hindi' => 'hi', 'Hungarian' => 'hu', 'Icelandic' => 'is', 'Indonesian' => 'id', 'Irish (Gaelic)' => 'ga-IE', 'Italian' => 'it', 'Japanese' => 'ja', 'Kazakh' => 'kk', 'Khmer' => 'km', 'Korean' => 'ko', 'Kurdish' => 'ku', 'Latvian' => 'lv', 'Lithuanian' => 'lt', 'Maori' => 'mi', 'Macedonian (FYROM)' => 'mk', 'Malay' => 'ms', 'Maltese' => 'mt', 'Marathi' => 'mr', 'Nepali' => 'ne-NP', 'Norwegian' => 'no', 'Norwegian Nynorsk' => 'nn-NO', 'Pashto' => 'ps', 'Persian' => 'fa', 'Polish' => 'pl', 'Portuguese' => 'pt-PT', 'Portuguese, Brazilian' => 'pt-BR', 'Romanian' => 'ro', 'Russian' => 'ru', 'Serbian (Cyrillic)' => 'sr', 'Sinhalese' => 'si-LK', 'Slovak' => 'sk', 'Slovenian' => 'sl', 'Spanish' => 'es-ES', 'Spanish, Mexico' => 'es-MX', 'Swedish' => 'sv-SE', 'Tamil' => 'ta', 'Thai' => 'th', 'Turkish' => 'tr', 'Ukrainian' => 'uk', 'Urdu (Pakistan)' => 'ur-PK', 'Uzbek' => 'uz', 'Vietnamese' => 'vi', 'Zulu' => 'zu'}
-
 #language{:style=>'width: 780px; padding: 0; margin: 0;'}
-  - languages.each_slice(6) do |group|
+  - Languages.get_crowdin_languages.each_slice(6) do |group|
     .language_row{:style=>'width: 780px; padding: 0; margin: 0;'}
-      - group.each do |name, code|
+      - group.each do |properties|
         .language_column{:style=>'width: 130px; height: 130px; float: left; display: table;'}
           %div
-            - project_url = "http://crowdin.com/project/codeorg/#{code}"
-            - image_url = "/images/flags/#{code}.png"
+            - project_url = "http://crowdin.com/project/codeorg/#{properties[:crowdin_code_s]}"
+            - image_url = "/images/flags/#{properties[:crowdin_code_s]}.png"
             %a{:href=>project_url, :style=>'display: table-cell; text-decoration: none;'}
               %img{:src=>image_url, :style=>'max-width: 130px; max-height: 130px;'}
-              %br{:style=>'clear: both;'}= name
+              %br{:style=>'clear: both;'}= properties[:crowdin_name_s]

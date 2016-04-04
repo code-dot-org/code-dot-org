@@ -11,17 +11,7 @@ nav: about_nav
 
 Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science should be part of core curriculum, alongside other courses such as biology, chemistry or algebra.
 
-[col-25]
-
-# Diversity across 8M students in our courses
-
-[/col-25]
-
-[col-75]
-
-![image](/images/infographics/fit-500/diversity-courses.png)
-
-[/col-75]
+![image](/images/infographics/fit-800/diversity-courses.png)
 
 Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Read  about [our efforts to increase diversity in computer science](/diversity).
 
@@ -50,15 +40,15 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
-| Improve diversity in CS | In our online courses, <%= stats['percent_female'] %>% of  students are girls and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity). |
+| Improve diversity in CS | In our online courses, 45% of students are girls and 45% are black or Hispanic. In our high school classrooms, 37% are girls, and 56% African American or Hispanic. |
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female) |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
-| Prep new CS teachers | We've prepared 24,000 new teachers to teach CS across grades K-12. Learn about our [professional development programs](/educate/professional-development).|
+| Prep new CS teachers | We've prepared 25,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).|
 | Change school district curriculum | We've partnered with [100 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
 | Set up policies to support CS | Policy changed in [17 states](/action) including CA, NY, FL, IL, OH.|
 | Go global | Our courses are available in 45+ languages, used in all 180+ countries. |
-
+<center><font size="1">Source: Code Studio Activity and <a href="https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub">surveys of participating educators</a></font></center>
 <br/>
 <br/>
 
@@ -68,7 +58,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 <br/>
 
 ## More information, history, and philosophy
-Code.org launched in 2013 with a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
+In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
 
 To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes.
 

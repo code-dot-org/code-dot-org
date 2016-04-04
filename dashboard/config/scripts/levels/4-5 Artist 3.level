@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "This rectangular flower bed has a perimeter of 600. The long side has a length of 200. Draw the rectangle.",
+    "instructions": "This rectangular flower bed has a perimeter of 600. The long side has a length of 200. Draw the rectangle using as few blocks as possible.",
     "x": "100",
     "y": "250",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "ideal": "6",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "This rectangular flower bed has a perimeter of 600. The long side has a length of 200. Draw the rectangle.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "This rectangular flower bed has a perimeter of 600.  \r\nThe long side has a length of 200. \r\n\r\nDraw the rectangle using as few blocks as possible.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -30,8 +30,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If the flower bed is 600 pixels around and two of the sides are 200 pixels long, here is how to figure out what the short sides add up to:\\n\\n**600 - 200 - 200 = 200**\\n\\nThat means both short sides add up to 200 pixels.\\n\\n**What is 200 / 2?**\",\r\n  \"hint_id\": \"4-5_Artist_3_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you can't see where the `repeat` loop goes right away, try coding out the whole solution and look for a pattern.\",\r\n  \"hint_id\": \"4-5_Artist_3_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -40,13 +44,13 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
@@ -69,7 +73,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
@@ -79,35 +83,18 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_turn_by_constant_dropdown">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE" config="45,60,90,120,180">90</title>
-              <next>
-                <block type="draw_turn_by_constant_dropdown">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE" config="45,60,90,120,180">90</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">200</title>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_turn_by_constant">
-              <title name="DIR">turnLeft</title>
-              <title name="VALUE">90</title>
-              <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
                 <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
+                  <title name="VALUE">200</title>
                   <next>
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnLeft</title>
@@ -115,17 +102,11 @@
                       <next>
                         <block type="draw_move_by_constant">
                           <title name="DIR">moveForward</title>
-                          <title name="VALUE">200</title>
+                          <title name="VALUE">100</title>
                           <next>
                             <block type="draw_turn_by_constant">
                               <title name="DIR">turnLeft</title>
                               <title name="VALUE">90</title>
-                              <next>
-                                <block type="draw_move_by_constant">
-                                  <title name="DIR">moveForward</title>
-                                  <title name="VALUE">100</title>
-                                </block>
-                              </next>
                             </block>
                           </next>
                         </block>
@@ -133,7 +114,7 @@
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>

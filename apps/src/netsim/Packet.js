@@ -1,12 +1,6 @@
 /**
  * @overview Utility class for encoding and decoding simulated packets.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var NetSimUtils = require('./NetSimUtils');

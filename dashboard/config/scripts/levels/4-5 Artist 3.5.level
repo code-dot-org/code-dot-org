@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Ok, try to figure out what happens if you run this code (or press \"Run\" to try it). Then, repeat the code enough times to complete the drawing. The colors will (most likely) be different every time.",
+    "instructions": "Try to figure out what happens if you run this code (or just press \"Run\" and try it). Next, repeat the code enough times to complete the drawing!",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "free_play": "false",
     "ideal": "7",
     "embed": "false",
-    "markdown_instructions": "Ok, try to figure out what happens if you run this code (or press \"Run\" to try it). Then, repeat the code enough times to complete the drawing. The colors will (most likely) be different every time.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Try to figure out what happens if you run this code (or just press \"Run\" and try it). \r\n\r\nNext, repeat the code enough times to complete the drawing!\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -32,7 +32,9 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false"
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>

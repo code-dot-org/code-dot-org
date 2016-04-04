@@ -144,7 +144,6 @@ Dashboard::Application.routes.draw do
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
 
-
     # /s/xxx/level/yyy
     resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
 
@@ -153,7 +152,12 @@ Dashboard::Application.routes.draw do
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", format: false do
-      resources :script_levels, only: [:show], path: "/puzzle", format: false
+      resources :script_levels, only: [:show], path: "/puzzle", format: false do
+        member do
+          # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
+          get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+        end
+      end
     end
   end
 
@@ -183,21 +187,31 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
+  get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
+
   # one-off internal reports
-  get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
+  get '/admin/temp/diversity_survey', to: 'admin_reports#diversity_survey', as: 'diversity_survey'
+
+  # HOC dashboards.
+  get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
+  get '/admin/hoc/event_signups', to: 'admin_hoc#event_signups', as: 'hoc_event_signups'
 
   # internal report dashboards
-  get '/admin/concepts', to: 'admin_reports#admin_concepts', as: 'admin_concepts'
-  get '/admin/funometer', to: 'admin_reports#funometer', as: 'funometer'
-  get '/admin/funometer/script/:script_id', to: 'admin_reports#funometer_by_script', as: 'funometer_by_script'
-  get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_reports#funometer_by_script_level', as: 'funometer_by_script_level'
-  get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'admin_reports#level_completions', as: 'level_completions'
+  get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
+  get '/admin/retention', to: 'admin_reports#retention', as: 'retention'
+  get '/admin/retention/stages', to: 'admin_reports#retention_stages', as: 'retention_stages'
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
   get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
   get '/admin/debug', to: 'admin_reports#debug'
+
+  # Fun-O-Meter dashboards.
+  get '/admin/funometer', to: 'admin_funometer#funometer', as: 'funometer'
+  get '/admin/funometer/script/:script_id', to: 'admin_funometer#funometer_by_script', as: 'funometer_by_script'
+  get '/admin/funometer/stage/:stage_id', to: 'admin_funometer#funometer_by_stage', as: 'funometer_by_stage'
+  get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_funometer#funometer_by_script_level', as: 'funometer_by_script_level'
 
   # internal search tools
   get 'admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
@@ -209,8 +223,11 @@ Dashboard::Application.routes.draw do
   get '/admin/feature_mode', :to => 'feature_mode#show', as: 'feature_mode'
   post '/admin/feature_mode', :to => 'feature_mode#update', as: 'feature_mode_update'
 
-  get '/admin/assume_identity', to: 'reports#assume_identity_form', as: 'assume_identity_form'
-  post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
+  get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
+  post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
+  get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
+  post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
+
   get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
@@ -226,11 +243,10 @@ Dashboard::Application.routes.draw do
 
   resources :zendesk_session, only: [:index]
 
-
   post '/report_abuse', :to => 'report_abuse#report_abuse'
   get '/report_abuse', :to => 'report_abuse#report_abuse_form'
 
-  get '/too_young', :to => redirect { |p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
+  get '/too_young', :to => redirect { |_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
@@ -272,8 +288,32 @@ Dashboard::Application.routes.draw do
     concerns :ops_routes
   end
 
+  get '/plc/content_creator/show_courses_and_modules', to: 'plc/content_creator#show_courses_and_modules'
+  ['courses', 'learning_modules', 'tasks', 'course_units', 'evaluation_questions'].each do |object|
+    get '/plc/' + object, to: redirect('plc/content_creator/show_courses_and_modules')
+  end
+
+  namespace :plc do
+    resources :courses
+    resources :learning_modules
+    resources :tasks
+    resources :user_course_enrollments
+    resources :enrollment_task_assignments
+    resources :course_units
+    resources :enrollment_unit_assignments
+    resources :evaluation_questions
+  end
+
+  get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
+  post '/plc/enrollment_evaluations/:unit_assignment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
+
+  get '/plc/learning_modules/:id/new_learning_resource_for_module', to: 'plc/learning_modules#new_learning_resource_for_module', as: 'new_learning_resource_for_module'
+
+  post 'plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
+
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
+  get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
 

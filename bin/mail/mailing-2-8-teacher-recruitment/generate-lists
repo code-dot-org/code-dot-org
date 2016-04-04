@@ -1,0 +1,112 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+require 'set'
+
+# Exported from https://docs.google.com/spreadsheets/d/1T_cd7CDlOuuLe_hObSzNX7BbN7PwU_EzEpjuIHuwoNM
+REGION_LIST_FILE = 'Code.org Partners with Regions - Sheet1.csv'
+
+# https://www.dropbox.com/s/upxdp1yam0jd9lf/1.2.2016.csv?dl=0
+CURRENT_TEACHERS_FILE = 'current-teachers.csv'
+EXCLUDED_EMAILS = Set.new
+REGIONS = {}
+
+def query_with_location(base_query, city, state)
+  query = "(#{base_query}) && ((location_state_s:\"#{state}\" && location_city_s:\"#{city}\") || (create_ip_state_s:\"#{state}\" && create_ip_city_s:\"#{city}\"))"
+  results = query_subscribed_contacts(q: query)
+
+  puts "#{results.length} results"
+  results
+end
+
+def query_teachers_with_location(city, state)
+  base_query =
+    # BringToSchool2013
+    '(kind_s:BringToSchool2013 && role_s:teacher) || ' +
+
+    # Petition teachers
+    '(kind_s:Petition && role_s:educator) || ' +
+
+    # Past 2013 organizers
+    '(kind_s:CSEdWeekEvent2013 && role_s:teacher) || ' +
+
+    # Past 2014 organizers
+    'kind_s:HocSignup2014 || ' +
+
+    # HOC 2015 organizers
+    'kind_s:HocSignup2015 || ' +
+
+    # Code studio teachers
+    '(kind_s:user && role_s:teacher)'
+
+  query_with_location(base_query, city, state)
+end
+
+# Load current teachers, so they can be excluded from the email lists
+CSV.foreach(CURRENT_TEACHERS_FILE, headers: true) do |row|
+  EXCLUDED_EMAILS.add row['teacher_email']
+end
+
+# This csv file lists school districts one per row grouped by region.
+# Every row has: City, State, Region
+# The first row of a new region also has:
+#   email file in markdown - Name of the email template in pegasus/emails. If it says 'no email' or starts with 'pending', skip that region.
+#   SENT - skip the region if this is anything but empty
+CSV.foreach(REGION_LIST_FILE, headers: true) do |row|
+  region_name = row['Region']
+  region = REGIONS[region_name]
+  unless region
+    next unless row['SENT'].to_s.empty?
+    template_name = row['email file in markdown']
+    next if template_name.to_s.empty? || template_name == 'no email' || template_name.start_with?('pending')
+
+    region = REGIONS[region_name] = {
+      locations: [],
+      template_name: template_name
+    }
+  end
+
+  state_abbrev = row['State']
+  state = get_us_state_from_abbr state_abbrev
+  raise "Unrecognized state abbreviation #{state_abbrev}" unless state
+  city = row['City']
+  district = row['Partner/District']
+  location = region[:locations].find {|r| r[:state] == state && r[:city] == city}
+  unless location
+    location = {state: state, city: city, districts: []}
+    region[:locations] << location
+  end
+  location[:districts] << district
+end
+
+puts "Processing #{REGIONS.length} regions:"
+REGIONS.each do |region_name, region|
+  region_results = {}
+  puts "#{region_name} (#{region[:template_name]})"
+  region[:locations].each do |entry|
+    puts "  #{entry[:city]}, #{entry[:state]}: #{entry[:districts]}"
+    region_results.merge! query_teachers_with_location(entry[:city], entry[:state])
+  end
+  initial_count = region_results.length
+  region_results.reject! {|email,_| EXCLUDED_EMAILS.include? email}
+  final_count = region_results.length
+
+  region[:counts] = {final: final_count, excluded: initial_count - final_count}
+  puts "\n#{region_name}: #{initial_count} total results, #{final_count} after exclusion.\n\n"
+  export_contacts_to_csv region_results, "Teachers_#{region_name}.csv"
+end
+
+# Report
+puts "#{REGIONS.count} regions:"
+total_count = 0
+excluded_count = 0
+File.open('send-commands.txt', 'w') do |command_file|
+  REGIONS.each do |region_name, region|
+    total_count += region[:counts][:final]
+    excluded_count += region[:counts][:excluded]
+    puts "  #{region_name}: #{region[:counts][:final]}, after excluding #{region[:counts][:excluded]}"
+    command_file.puts "Region: #{region_name}:"
+    command_file.puts "send-test-mails '#{region[:template_name]}'\nsend-real-mails '#{region[:template_name]}' '#{region_name}'\n\n"
+  end
+end
+puts "Total #{total_count} teachers, after excluding #{excluded_count}"
+puts 'See send-commands.txt for commands to send the mails.'

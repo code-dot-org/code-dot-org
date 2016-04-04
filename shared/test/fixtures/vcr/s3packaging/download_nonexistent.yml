@@ -17,14 +17,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 04 Feb 2016 22:55:50 GMT
+      - Tue, 15 Mar 2016 22:11:35 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>446A085FC1A3CD03</RequestId><HostId>XQ4qMVr4iDZ56/YX9XSrs10J1mR7n8VaryprkWEZnFDhOdd6nbW+NJK7enPBM7v0+f188XcaK1g=</HostId></Error>
+        <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>5E081C55BA30CA4A</RequestId><HostId>Vyqr/w+xsxSW7ENkFAP9GjdeIAtBThGsMqxEtNaNfv+Il7jITGxt4EDWRNbkK6pzqyXxh1JEwHc=</HostId></Error>
     http_version: 
-  recorded_at: Thu, 04 Feb 2016 22:55:50 GMT
+  recorded_at: Tue, 15 Mar 2016 22:11:35 GMT
 recorded_with: VCR 3.0.0

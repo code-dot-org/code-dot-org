@@ -100,7 +100,7 @@ puzzleRatingUtils.cachePuzzleRating = function (container, options) {
 
 /**
  * POST the cached ratings to the given URL and clear the cache
- * @param {string} url 
+ * @param {string} url
  */
 puzzleRatingUtils.submitCachedPuzzleRatings = function (url) {
   var ratings = puzzleRatingUtils.getPuzzleRatings_();

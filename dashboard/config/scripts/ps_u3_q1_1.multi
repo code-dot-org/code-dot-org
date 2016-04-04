@@ -1,0 +1,10 @@
+name 'PS U3 Q1-1'
+title 'Statements about programming languages'
+right 'Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.'
+right 'Compared to the number of words in a natural language, the number of defined words in a programming language is very small.'
+wrong 'The number of defined words in a programming language is about the same as the number of words in a natural language.'
+wrong 'There are typically many possible ways to interpret an instruction written in a programming language.'
+
+markdown <<MARKDOWN
+Programming languages have some similarities and differences to the “natural” language you use in everyday speech.  Select the two **true** statements about programming languages:
+MARKDOWN

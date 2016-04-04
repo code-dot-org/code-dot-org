@@ -27,101 +27,9 @@ var Bee = function (maze, studioApp, config) {
   // at each location, tracks whether user checked to see if it was a flower or
   // honeycomb using an if block
   this.userChecks_ = [];
-
-  // Initialize the map grid
-  //
-  // "serializedMaze" is the new way of storing maps; it's a JSON array
-  // containing complex map data.
-  //
-  // "map" plus optionally "levelDirt" is the old way of storing maps;
-  // they are each arrays of a combination of strings and ints with
-  // their own complex syntax. This way is deprecated for new levels,
-  // and only exists for backwards compatibility for not-yet-updated
-  // levels.
-  //
-  // Either way, we turn what we have into a grid of BeeCells, any one
-  // of which may represent a number of possible "static" cells. We then
-  // turn that variable grid of BeeCells into a set of static grids.
-  this.variableGrid = undefined;
-  if (config.level.serializedMaze) {
-    this.variableGrid = config.level.serializedMaze.map(function (row) {
-      return row.map(BeeCell.deserialize);
-    });
-  } else {
-    this.variableGrid = config.level.map.map(function (row, x) {
-      return row.map(function (mapCell, y) {
-        var initialDirtCell = config.level.initialDirt[x][y];
-        return BeeCell.parseFromOldValues(mapCell, initialDirtCell);
-      });
-    });
-  }
-  this.staticGrids = Bee.getAllStaticGrids(this.variableGrid);
-
-  this.currentStaticGridId = 0;
-  this.currentStaticGrid = this.staticGrids[0];
 };
 
 module.exports = Bee;
-
-/**
- * Clones the given grid of BeeCells by calling BeeCell.clone
- * @param {BeeCell[][]} grid
- * @return {BeeCell[][]} grid
- */
-Bee.cloneGrid = function (grid) {
-  return grid.map(function (row) {
-    return row.map(function (cell) {
-      return cell.clone();
-    });
-  });
-};
-
-/**
- * Given a single grid of BeeCells, some of which may be "variable"
- * cells, return a list of grids of non-variable BeeCells representing
- * all possible variable combinations.
- * @param {BeeCell[][]} variableGrid
- * @return {BeeCell[][][]} grids
- */
-Bee.getAllStaticGrids = function (variableGrid) {
-  var grids = [ variableGrid ];
-  variableGrid.forEach(function (row, x) {
-    row.forEach(function (cell, y) {
-      if (cell.isVariableCloud() || cell.isVariableRange()) {
-        var possibleAssets = cell.getPossibleGridAssets();
-        var newGrids = [];
-        possibleAssets.forEach(function(asset) {
-          grids.forEach(function(grid) {
-            var newMap = Bee.cloneGrid(grid);
-            newMap[x][y] = asset;
-            newGrids.push(newMap);
-          });
-        });
-        grids = newGrids;
-      }
-    });
-  });
-  return grids;
-};
-
-/**
- * @return {boolean}
- */
-Bee.prototype.hasMultiplePossibleGrids = function () {
-  return this.staticGrids.length > 1;
-};
-
-/**
- * Simple passthrough that calls resetCurrntValue for every BeeCell in
- * this.currentStaticGrid
- */
-Bee.prototype.resetCurrentValues = function () {
-  this.currentStaticGrid.forEach(function (row) {
-    row.forEach(function (cell) {
-      cell.resetCurrentValue();
-    });
-  });
-};
 
 /**
  * Resets current state, for easy reexecution of tests
@@ -130,9 +38,9 @@ Bee.prototype.reset = function () {
   this.honey_ = 0;
   // list of the locations we've grabbed nectar from
   this.nectars_ = [];
-  for (var i = 0; i < this.currentStaticGrid.length; i++) {
+  for (var i = 0; i < this.maze_.map.currentStaticGrid.length; i++) {
     this.userChecks_[i] = [];
-    for (var j = 0; j < this.currentStaticGrid[i].length; j++) {
+    for (var j = 0; j < this.maze_.map.currentStaticGrid[i].length; j++) {
       this.userChecks_[i][j] = {
         checkedForFlower: false,
         checkedForHive: false,
@@ -144,19 +52,7 @@ Bee.prototype.reset = function () {
     this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
     this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
   }
-  this.resetCurrentValues();
-};
-
-/**
- * Assigns this.currentStaticGrid to the appropriate grid and resets all
- * current values
- * @param {Number} id
- */
-Bee.prototype.useGridWithId = function (id) {
-  this.currentStaticGridId = id;
-  this.currentStaticGrid = this.staticGrids[id];
-  this.resetCurrentValues();
-  this.reset();
+  this.maze_.map.resetDirt();
 };
 
 /**
@@ -165,7 +61,7 @@ Bee.prototype.useGridWithId = function (id) {
  * @returns {Number} val
  */
 Bee.prototype.getValue = function (row, col) {
-  return this.currentStaticGrid[row][col].getCurrentValue();
+  return this.maze_.map.currentStaticGrid[row][col].getCurrentValue();
 };
 
 /**
@@ -174,7 +70,7 @@ Bee.prototype.getValue = function (row, col) {
  * @param {Number} val
  */
 Bee.prototype.setValue = function (row, col, val) {
-  this.currentStaticGrid[row][col].setCurrentValue(val);
+  this.maze_.map.currentStaticGrid[row][col].setCurrentValue(val);
 };
 
 /**
@@ -204,11 +100,11 @@ Bee.prototype.finished = function () {
 Bee.prototype.collectedEverything = function () {
   // quantum maps implicity require "collect everything", non-quantum
   // maps don't really care
-  if (!this.hasMultiplePossibleGrids()) {
+  if (!this.maze_.map.hasMultiplePossibleGrids()) {
     return true;
   }
 
-  var missedSomething = this.currentStaticGrid.some(function (row) {
+  var missedSomething = this.maze_.map.currentStaticGrid.some(function (row) {
     return row.some(function (cell) {
       return cell.isDirt() && cell.getCurrentValue() > 0;
     });
@@ -248,8 +144,8 @@ Bee.prototype.onExecutionFinish = function () {
  * Did we check every flower/honey that was covered by a cloud?
  */
 Bee.prototype.checkedAllClouded = function () {
-  for (var row = 0; row < this.currentStaticGrid.length; row++) {
-    for (var col = 0; col < this.currentStaticGrid[row].length; col++) {
+  for (var row = 0; row < this.maze_.map.currentStaticGrid.length; row++) {
+    for (var col = 0; col < this.maze_.map.currentStaticGrid[row].length; col++) {
       if (this.shouldCheckCloud(row, col) && !this.checkedCloud(row, col)) {
         return false;
       }
@@ -262,9 +158,9 @@ Bee.prototype.checkedAllClouded = function () {
  * Did we check every purple flower
  */
 Bee.prototype.checkedAllPurple = function () {
-  for (var row = 0; row < this.currentStaticGrid.length; row++) {
-    for (var col = 0; col < this.currentStaticGrid[row].length; col++) {
-      if (this.isPurpleFlower(row, col) && !this.userChecks_[row][col].checkedForNectar) {
+  for (var row = 0; row < this.maze_.map.currentStaticGrid.length; row++) {
+    for (var col = 0; col < this.maze_.map.currentStaticGrid[row].length; col++) {
+      if (this.shouldCheckPurple(row, col) && !this.userChecks_[row][col].checkedForNectar) {
         return false;
       }
     }
@@ -340,7 +236,7 @@ Bee.prototype.isHive = function (row, col, userCheck) {
   if (userCheck) {
     this.userChecks_[row][col].checkedForHive = true;
   }
-  var cell = this.currentStaticGrid[row][col];
+  var cell = this.maze_.map.currentStaticGrid[row][col];
   return cell.isHive();
 };
 
@@ -352,7 +248,7 @@ Bee.prototype.isFlower = function (row, col, userCheck) {
   if (userCheck) {
     this.userChecks_[row][col].checkedForFlower = true;
   }
-  var cell = this.currentStaticGrid[row][col];
+  var cell = this.maze_.map.currentStaticGrid[row][col];
   return cell.isFlower();
 };
 
@@ -360,7 +256,7 @@ Bee.prototype.isFlower = function (row, col, userCheck) {
  * Returns true if cell should be clovered by a cloud while running
  */
 Bee.prototype.isCloudable = function (row, col) {
-  return this.currentStaticGrid[row][col].isStaticCloud();
+  return this.maze_.map.currentStaticGrid[row][col].isStaticCloud();
 };
 
 /**
@@ -369,7 +265,17 @@ Bee.prototype.isCloudable = function (row, col) {
  * 'requiring' checks through their quantum nature.
  */
 Bee.prototype.shouldCheckCloud = function (row, col) {
-  return this.variableGrid[row][col].isStaticCloud();
+  return this.maze_.map.getVariableCell(row, col).isStaticCloud();
+};
+
+/**
+ * Likewise, the only flowers we care about checking are flowers that
+ * were defined as purple flowers without a variable range in the
+ * original grid; variable range flowers will handle 'requiring' checks
+ * through their quantum nature.
+ */
+Bee.prototype.shouldCheckPurple = function (row, col) {
+  return this.isPurpleFlower(row, col) && !this.maze_.map.getVariableCell(row, col).isVariableRange();
 };
 
 /**
@@ -391,9 +297,9 @@ Bee.prototype.isRedFlower = function (row, col) {
   // Otherwise, if the flower has been overridden to be purple, return
   // false. If neither of those are true, then the flower is whatever
   // the default flower color is.
-  if (this.currentStaticGrid[row][col].isRedFlower()) {
+  if (this.maze_.map.currentStaticGrid[row][col].isRedFlower()) {
     return true;
-  } else if (this.currentStaticGrid[row][col].isPurpleFlower()) {
+  } else if (this.maze_.map.currentStaticGrid[row][col].isPurpleFlower()) {
     return false;
   } else {
     return this.defaultFlowerColor_ === 'red';
@@ -462,7 +368,10 @@ Bee.prototype.gotNectarAt = function (row, col) {
     this.setValue(row, col, this.getValue(row, col) - 1);
   }
 
-  this.nectars_.push({row: row, col: col});
+  this.nectars_.push({
+    row: row,
+    col: col
+  });
 };
 
 // API

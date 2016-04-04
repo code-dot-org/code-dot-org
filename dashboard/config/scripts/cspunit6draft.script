@@ -54,6 +54,7 @@ level 'U4 - Read Record - Local vs Remote Data External'
 level 'U4 - ReadRecords - Contacts App 2'
 level 'U4 - ReadRecords - Contacts App 3'
 
+
 #4
 stage 'Deleting Records'
 level 'U6 - deleteRecord - Student Introduction'
@@ -96,4 +97,11 @@ level 'U4 - Charts - drawChartFromRecords Options 2'
 stage 'Sample Apps'
 level 'U6 - Sample Apps - Student Introduction'
 level 'U6 - Sample Apps - User Login'
+level 'U6 - Sample Apps - Class Survey'
+level 'U6 - Sample Apps - Clicker Game'
 level 'U6 - Sample Apps - Flashcards'
+
+#9
+stage 'Final Project'
+level 'U6 - Final Project - Student Introduction'
+level 'U6 - Final Project - Project Level'

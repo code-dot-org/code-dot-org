@@ -1,4 +1,9 @@
-- url = CDO.studio_url("/s/#{id}")
+- if id == "applab"
+  - url = CDO.code_org_url("/educate/#{id}")
+  - cta = I18n.t(:make_app)
+- else
+  - url = CDO.studio_url("/s/#{id}")
+  - cta = I18n.t(:view_course)
 - title = I18n.t("#{id}_name")
 - body = I18n.t("#{id}_shortdescription_congrats")
 - img_src =  CDO.code_org_url("/shared/images/courses/fit-200/logo_#{id}.jpg")
@@ -10,5 +15,5 @@
       %h3= title
       %h4= I18n.t("#{id}_gradelevel")
       .smalltext= body
-    %button{style: "margin-left: 10px; margin-top: 10px;"}= I18n.t(:view_course)
+    %button{style: "margin-left: 10px; margin-top: 10px;"}= cta
 .clear

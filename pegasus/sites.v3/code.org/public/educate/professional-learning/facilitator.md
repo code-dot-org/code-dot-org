@@ -5,6 +5,8 @@ nav: educate_nav
 
 # Become a Code.org Facilitator
 
+**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 22nd. We will update everyone of their acceptance status by April 22nd.**
+
 Code.org is looking to partner with individuals interested in developing facilitation capacity in computer science education to deliver high-quality professional development to teachers to teach computer science in a format that's fun and accessible.
 
 The ideal facilitator is an enthusiastic supporter of computer science education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through past teaching experience. Experience mentoring teachers and managing/hosting professional development workshops a plus. <br/>
@@ -13,7 +15,7 @@ The ideal facilitator is an enthusiastic supporter of computer science education
 
 Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver high-quality professional development on Code.org's curriculum.
 
-Accepted participants will attend an all expense paid trip to Code.org's Facilitator Summit May 20-22, 2016 in Nashville, TN. During the Summit, Code.org will provide instruction to prepare facilitators to deliver professional development to teachers on the Code.org curriculum. **Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.** Please see individual program details for more information.
+Accepted participants will attend an all expense paid trip to Code.org's Facilitator Summit May 20-22, 2016 in New Orleans, LA. During the Summit, Code.org will provide instruction to prepare facilitators to deliver professional development to teachers on the Code.org curriculum. **Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.** Please see individual program details for more information.
 
 The Summit is designed to be a fabulous experience to welcome you to the extended Code.org family.
 

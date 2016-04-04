@@ -33,7 +33,7 @@
     "callout_json": "[]",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "<h5><b>\r\nIn our game, how should we score points? \r\n</b></h5> \r\n<br/>\r\n\r\n1. Add 1 to your `points` variable each time Dog hits Cat with a heart.  <br/>    <br/> \r\n2. Use the `when actor 2 touches anything` event to trigger an update to your score. You can increment your variable by setting `points = points + 1.`  <br/>   <br/> \r\n3. Get your score up to 10 (going one at a time!) to pass the level.\r\n\r\n<br/><br/>\r\n<h4>\r\n**Note:** Use the right arrow to shoot hearts!\r\n</h4>",
+    "markdown_instructions": "<h5><b>\r\nIn our game, how should we score points? \r\n</b></h5> \r\n<br/>\r\n\r\n1. Add 1 to your `points` variable each time Dog hits Cat with a heart.  <br/>    <br/> \r\n2. Use the `when actor 2 touches anything` event to trigger an update to your score. You can increment your variable by setting `points = points + 1.`  <br/>   <br/> \r\n3. Get your score up to 10 to pass the level.\r\n\r\n<br/><br/>\r\n<h4>\r\n**Note:** Use the right arrow to shoot hearts!\r\n</h4>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -43,8 +43,11 @@
     "disable_examples": "false",
     "min_workspace_height": "700",
     "examples_required": "false",
+    "never_autoplay_video": "false",
     "maze_data": null
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -134,7 +137,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="variables_set" inline="false">
           <title name="VAR">points</title>
@@ -163,6 +166,6 @@
           </value>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Studio>

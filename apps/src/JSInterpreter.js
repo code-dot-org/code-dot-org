@@ -1,10 +1,3 @@
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
-
 var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
@@ -20,12 +13,14 @@ var utils = require('./utils');
  * @param {function} [options.shouldRunAtMaxSpeed]
  * @param {number} [options.maxInterpreterStepsPerTick]
  * @param {Object} [options.customMarshalGlobalProperties]
+ * @param {boolean} [options.logExecution] if true, executionLog[] be populated
  */
 var JSInterpreter = module.exports = function (options) {
   this.studioApp = options.studioApp;
   this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return true; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
   this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
+  this.customMarshalBlockedProperties = options.customMarshalBlockedProperties || [];
 
   // Publicly-exposed events that anyone with access to the JSInterpreter can
   // observe and respond to.
@@ -45,11 +40,14 @@ var JSInterpreter = module.exports = function (options) {
   this.paused = false;
   this.yieldExecution = false;
   this.startedHandlingEvents = false;
+  this.executionError = null;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
   this.executeLoopDepth = 0;
   this.callExpressionSeenAtDepth = [];
   this.stoppedAtBreakpointRows = [];
+  this.logExecution = options.logExecution;
+  this.executionLog = [];
 };
 
 /**
@@ -70,11 +68,12 @@ var JSInterpreter = module.exports = function (options) {
  */
 JSInterpreter.prototype.parse = function (options) {
   if (!this.studioApp.hideSource) {
-    this.codeInfo = {};
-    this.codeInfo.userCodeStartOffset = 0;
-    this.codeInfo.userCodeLength = options.code.length;
+    this.calculateCodeInfo(options.code);
+
     var session = this.studioApp.editor.aceEditor.getSession();
-    this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+    this.isBreakpointRow = codegen.isAceBreakpointRow.bind(null, session);
+  } else {
+    this.isBreakpointRow = function () { return false; };
   }
 
   var self = this;
@@ -89,8 +88,20 @@ JSInterpreter.prototype.parse = function (options) {
     codegen.createNativeFunctionFromInterpreterFunction = function (intFunc) {
       return function () {
         if (self.initialized()) {
-          self.queueEvent(intFunc, arguments);
-          
+
+          // Convert arguments to array in fastest way possible and avoid
+          // "Bad value context for arguments variable" de-optimization
+          // http://jsperf.com/array-with-and-without-length/5
+          var args = new Array(arguments.length);
+          for (var i = 0; i < arguments.length; i++) {
+            args[i] = arguments[i];
+          }
+
+          self.eventQueue.push({
+            fn: intFunc,
+            arguments: args
+          });
+
           if (self.executeLoopDepth === 0) {
             // Execute the interpreter and if a return value is sent back from the
             // interpreter's event handler, pass that back in the native world
@@ -113,11 +124,15 @@ JSInterpreter.prototype.parse = function (options) {
     self.interpreter = interpreter;
     // Store globalScope on JSInterpreter
     self.globalScope = scope;
-    // Override Interpreter's get/set Property functions with JSInterpreter
+    // Override Interpreter's get/has/set Property functions with JSInterpreter
     interpreter.getProperty = self.getProperty.bind(
         self,
         interpreter,
         interpreter.getProperty);
+    interpreter.hasProperty = self.hasProperty.bind(
+        self,
+        interpreter,
+        interpreter.hasProperty);
     // Store this for later because we need to bypass our overriden function
     // in createGlobalProperty()
     self.baseSetProperty = interpreter.setProperty;
@@ -157,14 +172,23 @@ JSInterpreter.prototype.parse = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
-    /* jshint nonew:false */
     new window.Interpreter(options.code, initFunc);
-    /* jshint nonew:true */
-  }
-  catch(err) {
-    this.handleError(err);
+  } catch(err) {
+    this.executionError = err;
+    this.handleError();
   }
 
+};
+
+/**
+ * Init `this.codeInfo` with cumulative length info (used to locate breakpoints).
+ * @param code
+ */
+JSInterpreter.prototype.calculateCodeInfo = function (code) {
+  this.codeInfo = {};
+  this.codeInfo.userCodeStartOffset = 0;
+  this.codeInfo.userCodeLength = code.length;
+  this.codeInfo.cumulativeLength = codegen.calculateCumulativeLength(code);
 };
 
 /**
@@ -228,17 +252,6 @@ JSInterpreter.prototype.nativeSetCallbackRetVal = function (retVal) {
           "slider to its maximum value)");
     }
   }
-};
-
-/**
- * Queue an event to be fired in the interpreter. The nativeArgs are optional.
- * The function must be an interpreter function object (not native).
- */
-JSInterpreter.prototype.queueEvent = function (interpreterFunc, nativeArgs) {
-  this.eventQueue.push({
-    'fn': interpreterFunc,
-    'arguments': nativeArgs ? Array.prototype.slice.call(nativeArgs) : []
-  });
 };
 
 /**
@@ -331,6 +344,17 @@ JSInterpreter.prototype.removeStoppedAtBreakpointRowForScope = function (scope) 
 };
 
 /**
+ * Determines if the program is done executing.
+ *
+ * @return {boolean} true if program is complete (or an error has occurred).
+ */
+JSInterpreter.prototype.isProgramDone = function () {
+  return this.executionError ||
+      !this.interpreter ||
+      !this.interpreter.stateStack.length;
+};
+
+/**
  * Nodes that are visited between expressions, signifying the previous
  * expression is done.
  */
@@ -385,10 +409,6 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
   var unwindingAfterStep = false;
   var inUserCode;
   var userCodeRow;
-  var session;
-  if (!this.studioApp.hideSource) {
-    session = this.studioApp.editor.aceEditor.getSession();
-  }
 
   // In each tick, we will step the interpreter multiple times in a tight
   // loop as long as we are interpreting code that the user can't see
@@ -398,12 +418,21 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
        stepsThisTick++) {
     // Check this every time because the speed is allowed to change...
     atMaxSpeed = this.shouldRunAtMaxSpeed();
-    // NOTE: when running with no source visible or at max speed, we
-    // call a simple function to just get the line number, otherwise we call a
-    // function that also selects the code:
-    var selectCodeFunc = (this.studioApp.hideSource || (atMaxSpeed && !this.paused)) ?
-            this.getUserCodeLine :
-            this.selectCurrentCode;
+    // NOTE:
+    // (1) When running with no source visible AND at max speed, always set
+    //   `userCodeRow` to -1. We'll never hit a breakpoint or need to add delay.
+    // (2) When running with no source visible OR at max speed, call a simple
+    //   function to just get the line number. Need to check `inUserCode` to
+    //   maybe stop at a breakpoint, or add a `speed(n)` delay.
+    // (3) Otherwise call a function that also highlights the code.
+    var selectCodeFunc;
+    if (this.studioApp.hideSource && atMaxSpeed) {
+      selectCodeFunc = function () { return -1; };
+    } else if (this.studioApp.hideSource || atMaxSpeed) {
+      selectCodeFunc = this.getUserCodeLine;
+    } else {
+      selectCodeFunc = this.selectCurrentCode;
+    }
     var currentScope = this.interpreter.getScope();
 
     if ((reachedBreak && !unwindingAfterStep) ||
@@ -434,7 +463,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     //       we have already stopped from the last step/breakpoint
     if (inUserCode && !unwindingAfterStep && !this.atInterstitialNode &&
         (atInitialBreakpoint ||
-         (codegen.isAceBreakpointRow(session, userCodeRow) &&
+         (this.isBreakpointRow(userCodeRow) &&
           !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)))) {
       // Yes, arrived at a new breakpoint:
       if (this.paused) {
@@ -463,8 +492,11 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     if (inUserCode && unwindingAfterStep) {
       this.replaceStoppedAtBreakpointRowForScope(currentScope, userCodeRow);
     }
-    var err = safeStepInterpreter(this);
-    if (!err) {
+    if (this.logExecution) {
+      this.logStep_();
+    }
+    this.executionError = safeStepInterpreter(this);
+    if (!this.executionError && this.interpreter.stateStack.length) {
       var state = this.interpreter.stateStack[0], nodeType = state.node.type;
       this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
       if (inUserCode) {
@@ -544,7 +576,9 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         }
       }
     } else {
-      this.handleError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      if (this.executionError) {
+        this.handleError(inUserCode ? (userCodeRow + 1) : undefined);
+      }
       this.executeLoopDepth--;
       return;
     }
@@ -558,20 +592,114 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
 };
 
 /**
+ * Checks to the see if the character offset is from the user code range.
+ *
+ * @param {number} offset index of a character from program
+ * @return {boolean} true if the character offset is in user code.
+ * @private
+ */
+JSInterpreter.prototype.isOffsetInUserCode_ = function (offset) {
+  if (typeof offset === 'undefined' || typeof this.codeInfo === 'undefined') {
+    return false;
+  }
+  var start = offset - this.codeInfo.userCodeStartOffset;
+
+  return start >= 0 && start < this.codeInfo.userCodeLength;
+};
+
+/**
+ * Convert MemberExpression node to a string
+ *
+ * @param {!Object} node supplied by acorn parse.
+ * @return {string} Name.
+ * @private
+ */
+JSInterpreter.getMemberExpressionName_ = function (node) {
+  var objectString;
+  switch (node.object.type) {
+    case "MemberExpression":
+      objectString = this.getMemberExpressionName_(node.object);
+      break;
+    case "Identifier":
+      objectString = node.object.name;
+      break;
+    default:
+      throw "Unexpected MemberExpression node object type: " + node.object.type;
+  }
+  var propString;
+  switch (node.property.type) {
+    case "Identifier":
+      propString = "." + node.property.name;
+      break;
+    case "Literal":
+      propString = "[" + node.property.value + "]";
+      break;
+    default:
+      throw "Unexpected MemberExpression node property type: " + node.object.type;
+  }
+  return objectString + propString;
+};
+
+/**
+ * If necessary, add information to the executionLog about the upcoming
+ * interpreter step operation.
+ *
+ * @private
+ */
+JSInterpreter.prototype.logStep_ = function () {
+  var state = this.interpreter.stateStack[0];
+  var node = state.node;
+
+  if (!this.isOffsetInUserCode_(node.start)) {
+    return;
+  }
+
+  if ((node.type === "CallExpression" || node.type === "NewExpression") &&
+      !state.doneCallee_) {
+    switch (node.callee.type) {
+      case "Identifier":
+        this.executionLog.push(node.callee.name);
+        break;
+      case "MemberExpression":
+        this.executionLog.push(JSInterpreter.getMemberExpressionName_(node.callee));
+        break;
+      default:
+        throw "Unexpected callee node property type: " + node.object.type;
+    }
+  } else if (node.type === "ForStatement") {
+    var mode = state.mode || 0;
+    switch (mode) {
+      case codegen.ForStatementMode.INIT:
+        this.executionLog.push("[forInit]");
+        break;
+      case codegen.ForStatementMode.TEST:
+        this.executionLog.push("[forTest]");
+        break;
+      case codegen.ForStatementMode.UPDATE:
+        this.executionLog.push("[forUpdate]");
+        break;
+    }
+  }
+};
+
+/**
  * Helper that wraps some error preprocessing before we notify observers that
- * an execution error has occurred.
- * @param {!Error} err
+ * an execution error has occurred. Operates on the current error that is
+ * already saved as this.executionError
+ *
  * @param {number} [lineNumber]
  */
-JSInterpreter.prototype.handleError = function (err, lineNumber) {
-  if (!lineNumber && err instanceof SyntaxError) {
+JSInterpreter.prototype.handleError = function (lineNumber) {
+  if (!lineNumber && this.executionError instanceof SyntaxError) {
     // syntax errors came before execution (during parsing), so we need
     // to determine the proper line number by looking at the exception
-    lineNumber = err.loc.line;
+    lineNumber = this.executionError.loc.line;
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
-    codegen.selectEditorRowColError(this.studioApp.editor, lineNumber - 1,
-        err.loc.column);
+    codegen.selectEditorRowColError(
+        this.studioApp.editor,
+        lineNumber - 1,
+        this.executionError.loc.column);
   }
 
   // Select code that just executed:
@@ -581,7 +709,7 @@ JSInterpreter.prototype.handleError = function (err, lineNumber) {
     lineNumber = 1 + this.getNearestUserCodeLine();
   }
 
-  this.onExecutionError.notifyObservers(err, lineNumber);
+  this.onExecutionError.notifyObservers(this.executionError, lineNumber);
 };
 
 /**
@@ -615,6 +743,9 @@ JSInterpreter.prototype.getProperty = function (
       (obj === this.globalScope &&
           (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
     var value;
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseGetProperty.call(interpreter, obj, name);
+    }
     if (obj.isCustomMarshal) {
       value = obj.data[name];
     } else {
@@ -629,6 +760,38 @@ JSInterpreter.prototype.getProperty = function (
     }
   } else {
     return baseGetProperty.call(interpreter, obj, name);
+  }
+};
+
+/**
+ * Wrapper to Interpreter's hasProperty (extended for custom marshaling)
+ *
+ * Does the named property exist on a data object.
+ * @param {!Object} interpeter Interpreter instance.
+ * @param {!Function} baseHasProperty Original hasProperty() implementation.
+ * @param {!Object} obj Data object.
+ * @param {*} name Name of property.
+ * @return {boolean} True if property exists.
+ */
+JSInterpreter.prototype.hasProperty = function (
+    interpreter,
+    baseHasProperty,
+    obj,
+    name) {
+  name = name.toString();
+  var nativeParent;
+  if (obj.isCustomMarshal ||
+      (obj === this.globalScope &&
+          (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseHasProperty.call(interpreter, obj, name);
+    } else if (obj.isCustomMarshal) {
+      return name in obj.data;
+    } else {
+      return name in nativeParent;
+    }
+  } else {
+    return baseHasProperty.call(interpreter, obj, name);
   }
 };
 
@@ -655,9 +818,17 @@ JSInterpreter.prototype.setProperty = function(
   name = name.toString();
   var nativeParent;
   if (obj.isCustomMarshal) {
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseSetProperty.call(
+          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    }
     obj.data[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else if (obj === this.globalScope &&
       (!!(nativeParent = this.customMarshalGlobalProperties[name]))) {
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseSetProperty.call(
+          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    }
     nativeParent[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else {
     return baseSetProperty.call(
@@ -690,9 +861,6 @@ JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
  * of the userCode area, the return value is -1
  */
 JSInterpreter.prototype.getUserCodeLine = function () {
-  if (this.studioApp.hideSource) {
-    return -1;
-  }
   var userCodeRow = -1;
   if (this.interpreter.stateStack[0]) {
     var node = this.interpreter.stateStack[0].node;
@@ -781,6 +949,74 @@ JSInterpreter.prototype.createGlobalProperty = function (name, value, parent) {
 };
 
 /**
+ * Slightly modified version of interpreter's getValueFromScope. Does not
+ * throw an exception that can be caught by the interpreted program.
+ */
+JSInterpreter.prototype.getValueFromScope = function (name) {
+  var scope = this.interpreter.getScope();
+  while (scope) {
+    if (this.interpreter.hasProperty(scope, name)) {
+      return this.interpreter.getProperty(scope, name);
+    }
+    scope = scope.parentScope;
+  }
+  throw new ReferenceError('Unknown identifier: ' + name);
+};
+
+/**
+ * Returns an interpreter object representing a specific node (parsed by acorn
+ * for the purpose of displaying a watch value).
+ * @private
+ */
+JSInterpreter.prototype.getWatchValueFromNode_ = function (node) {
+  if (node.type === 'MemberExpression') {
+    return this.getValueFromMemberExpression_(node);
+  } else if (node.type === 'Identifier') {
+    return this.getValueFromScope(node.name);
+  } else {
+    throw new Error("Invalid");
+  }
+};
+
+/**
+ * Returns an interpreter object representing the member expression.
+ * @private
+ */
+JSInterpreter.prototype.getValueFromMemberExpression_ = function (expression) {
+  var object = this.getWatchValueFromNode_(expression.object);
+
+  if (expression.property.type === 'Identifier') {
+    return this.interpreter.getValue([object, expression.property.name]);
+  } else if (expression.property.type === 'Literal') {
+    return this.interpreter.getValue(
+        [object, this.interpreter.createPrimitive(expression.property.value)]);
+  }
+};
+
+/**
+ * Evaluate watch expression based on current scope.
+ */
+JSInterpreter.prototype.evaluateWatchExpression = function (watchExpression) {
+  var value;
+  try {
+    var ast = window.acorn.parse(watchExpression);
+    if (ast.type === 'Program' &&
+        ast.body[0].type === 'ExpressionStatement') {
+      value = this.getWatchValueFromNode_(ast.body[0].expression);
+    } else {
+      throw new Error("Invalid");
+    }
+  } catch (err) {
+    if (err instanceof Error) {
+      return err;
+    } else {
+      return new Error(err);
+    }
+  }
+  return codegen.marshalInterpreterToNative(this.interpreter, value);
+};
+
+/**
  * Returns the interpreter function object corresponding to 'funcName' if a
  * function with that name is found in the interpreter's global scope.
  */
@@ -834,6 +1070,13 @@ JSInterpreter.prototype.getLocalFunctionNames = function (scope) {
 };
 
 /**
+ * Returns the current interpreter state object.
+ */
+JSInterpreter.prototype.getCurrentState = function () {
+  return this.interpreter && this.interpreter.stateStack[0];
+};
+
+/**
  * Evaluate an expression in the interpreter's current scope, and return the
  * value of the evaluated expression.
  * @param {!string} expression
@@ -860,11 +1103,15 @@ JSInterpreter.prototype.evalInCurrentScope = function (expression) {
     evalInterpreter[prop] = this.interpreter[prop];
   }, this);
 
-  // Patch getProperty and setProperty to enable custom marshalling
+  // Patch getProperty, hasProperty, and setProperty to enable custom marshalling
   evalInterpreter.getProperty = this.getProperty.bind(
       this,
       evalInterpreter,
       evalInterpreter.getProperty);
+  evalInterpreter.hasProperty = this.hasProperty.bind(
+      this,
+      evalInterpreter,
+      evalInterpreter.hasProperty);
   evalInterpreter.setProperty = this.setProperty.bind(
       this,
       evalInterpreter,

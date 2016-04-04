@@ -36,9 +36,9 @@
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
     "never_autoplay_video": "false",
-    "examples_required": "false",
-    "maze_data": null
-  }
+    "examples_required": "false"
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -50,7 +50,7 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <description>Move a sprite up an down</description>
           </mutation>

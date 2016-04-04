@@ -1,0 +1,14 @@
+id_s,category_title_s,caption_s,code_s,download_path_s,studio_stage_s
+app_lab_deep_dive,Deep dive into App Lab,Walk through the creation of a personalized survey app from start to finish. It uses user interface elements and a lightweight database to keep track of results.,4DntNOOYmpo,//videos.code.org/2015/csp/AppLabDemo.mp4,
+turtle,Procedural abstraction and top-down design,Program a turtle to move around the screen and draw anything from basic shapes to complex designs.,i2KHYUhtOlM,//videos.code.org/2015/csp/applab/turtle.mp4,/s/cspunit3/stage/2/puzzle/1
+functions,,Learn how to define and call functions so you can easily reuse code more efficiently.,yPWQfa4CHbw,//videos.code.org/2015/csp/applab/functions.mp4,/s/cspunit3/stage/3/puzzle/1
+functions_params,Documentation and simple loops,Create functions with parameters to make functions that are more flexible and can be used to solve different kinds of problems.,k7Ji1E97-V0,//videos.code.org/2015/csp/applab/functions_parameters.mp4,/s/cspunit3/stage/6/puzzle/1
+loops,,Learn how to use loops to repeat code and simplify your app.,G8hfAk4PfOM,//videos.code.org/2015/csp/applab/loops.mp4,/s/cspunit3/stage/7/puzzle/1
+design_mode,Event-driven programming and apps,"Start using design mode to create a user interface for your app where users can click buttons, select from dropdowns, and even use a slider.",-EoTeD4mSNU,//videos.code.org/2015/csp/applab/design.mp4,/s/cspunit3/stage/12/puzzle/1
+variables_1,Variables and strings,An introduction to variables that can be used throughout your code.,G41G_PEWFjE,//videos.code.org/2015/csp/applab/variables_1.mp4,/s/cspunit3/stage/14/puzzle/1
+variables_1,,Learn how to use different kinds of variables to make your apps more complex.,ijjVDBPwA1o,//videos.code.org/2015/csp/applab/variables_2.mp4,/s/cspunit3/stage/15/puzzle/1
+conditionals_1,Conditionals and boolean logic,Use boolean expressions to make decisions in your app logic.,y3rCKJNOwpA,//videos.code.org/2015/csp/applab/conditionals_1.mp4,/s/cspunit3/stage/18/puzzle/1
+conditionals_2,,Create conditions with if/else statements to make your app more unique.,UDi7xgIIW8E,//videos.code.org/2015/csp/applab/conditionals_2.mp4,/s/cspunit3/stage/18/puzzle/1
+conditionals_3,,Add more complex logic like AND and OR to give users more choices in your apps.,kyFdniI-ZZs,//videos.code.org/2015/csp/applab/conditionals_3.mp4,/s/cspunit3/stage/20/puzzle/1
+intro_lists,Loops and arrays,Organize your information by using a list in your app.,KFy7u3Rhozs,//videos.code.org/2015/csp/applab/lists_intro_full.mp4,/s/cspunit3/stage/24/puzzle/1
+processing_lists,Processing arrays of data,Create charts with your data by processing a list.,RQ6GJt9f2vg,//videos.code.org/2015/csp/applab/processing_lists.mp4,/s/cspunit3/stage/26/puzzle/1

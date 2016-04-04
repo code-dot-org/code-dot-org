@@ -85,7 +85,12 @@
       var serializedMaze = eval(#{@level.properties['serialized_maze'].try(:to_json)});
 
       var renderGridEditor = function () {
-        React.render(React.createElement(dashboard.GridEditor, {
+        var container = document.getElementById('gridEditor');
+        // Fully replace any existing node; otherwise, React tries to be
+        // clever with our initialState and some things don't get properly
+        // updated
+        ReactDOM.unmountComponentAtNode(container)
+        ReactDOM.render(React.createElement(dashboard.GridEditor, {
           maze: maze,
           initialDirt: initialDirt,
           serializedMaze: serializedMaze,
@@ -93,7 +98,7 @@
           onUpdate: function (serializedData) {
             $('#level_maze_data').val(JSON.stringify(serializedData));
           }
-        }), document.getElementById('gridEditor'));
+        }), container);
       };
 
       $("select[name='level[skin]']").on('change', renderGridEditor);

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Assessment: Create a function to make 3 honey at a time.",
+    "instructions": "Assessment: Create a function to move forward and make 3 honey, then return the bee to where it started.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -16,15 +16,33 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,1,0],[0,1,0,0,1,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,-3,0,0,-3,0,-3,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "15"
-  }
+    "ideal": "15",
+    "markdown_instructions": "**Assessment:** Create a function to move forward and make 3 honey, then return the bee to where it started.",
+    "never_autoplay_video": "false",
+    "step_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "true"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" deletable="false" editable="false">
+        <block type="procedures_defnoreturn" deletable="false" editable="false" y="250">
           <mutation/>
-          <title name="NAME">make 3</title>
+          <title name="NAME">move and get 3</title>
         </block>
       </xml>
     </start_blocks>
@@ -45,16 +63,82 @@
           <title name="TIMES">???</title>
         </block>
         <block type="procedures_callnoreturn">
-          <mutation name="make 3"/>
+          <mutation name="move and get 3"/>
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <solution_blocks>
       <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="make 3"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="move and get 3"/>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="procedures_callnoreturn">
+                      <mutation name="move and get 3"/>
+                      <next>
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="move and get 3"/>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">move and get 3</title>
+          <statement name="STACK">
+            <block type="maze_turn">
+              <title name="DIR">turnRight</title>
+              <next>
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_honey"/>
+                      </statement>
+                      <next>
+                        <block type="maze_move">
+                          <title name="DIR">moveBackward</title>
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
       </xml>
-    </required_blocks>
+    </solution_blocks>
   </blocks>
 </Karel>

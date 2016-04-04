@@ -90,6 +90,8 @@
     tutorial</a>.
   get_a_certificate_of_achievement: Iegūsti sasniegumus apliecinošu sertefikātu
   view_course: View course
+  view_unit: View unit
+  make_app: Make an app
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
@@ -98,11 +100,7 @@
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -116,7 +114,8 @@
   third_party_price_varies: 'Price: Plans vary'
   third_party_price_free: 'Price: Free'
   third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
@@ -166,7 +165,6 @@
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -182,6 +180,7 @@
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -393,6 +392,9 @@
   homepage_slot_text_link_othercourses: Citi tiešsaistes kursi
   homepage_slot_text_title_educators: Pedagogi
   homepage_slot_text_blurb_educators: Apmāciet savus skolēnus
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Pamatskola
+  homepage_slot_text_link_high: Vidusskola
   homepage_slot_text_link_k5: Kursi 5. klasei
   homepage_slot_text_link_fullcurriculum: Apskati visu mācību programmu
   homepage_slot_text_link_pd: Profesionālā pilnveide
@@ -674,6 +676,7 @@
   dashboard_navigation_all_sections: Skolēnu konti un progress
   dashboard_navigation_view_progress: Apskatīt sekmes
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Pievienot skolēnus
   dashboard_navigation_manage_students: Pārvaldīt skolēnus
   dashboard_navigation_lesson_plans_resources: Stundu plāni un resursi
@@ -787,10 +790,21 @@
   dashboard_progress_completed_too_many_blocks: Pabeigts, pārāk daudz bloki
   dashboard_progress_completed_perfect: pabeigts, ideāli
   dashboard_progress_furthest_level_attempted: tālākais līmenis mēģināts
+  dashboard_progress_submitted: submitted
   dashboard_stage: Posms
   dashboard_puzzle: Puzle
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Pareizi
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Neticama statistika no pagāšā gada "Programmēšanas Stundas".
     Nieka nedēļā:'
   stats_hoc_2013_image_alt: Statistika no 2013 "Programmēšanas stunda"
@@ -947,6 +961,18 @@
   course3_name: Kurss 3
   course4_name: Kurss 4
   accelerated_name: Accelerated Course
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
+    of computer programming, which unlocks the ability to make rich, interactive apps.
+    This course uses JavaScript as the programming language, and App Lab as the programming
+    environment to build apps, but the concepts learned in these lessons span all
+    programming languages and tools.
+  applab_name: Aplikāciju laborotorija
+  applab_gradelevel: Ages 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you
+    can make simple apps. Design an app, code with blocks or JavaScript to make it
+    work, then share your app in seconds
   codeorg_gradelevel: Vecums no 4-104
   codeintl_gradelevel: Vecums no 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -1620,4 +1646,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spēlēt
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

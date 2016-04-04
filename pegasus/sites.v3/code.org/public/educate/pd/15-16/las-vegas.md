@@ -23,13 +23,7 @@ Milestone Complete!
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the Dates**
-
-Quarter 1: Saturday, September 19, 2015
-
-Quarter 2: Saturday, November 21, 2015
-
-Quarter 3: Saturday, January 30, 2016
+**Save the Date**
 
 Quarter 4: Saturday, April 2, 2016 
 
@@ -45,7 +39,7 @@ Collaboration Station - 3rd Floor<br/>
 6795 S Edmond St<br/>
 Las Vegas, NV 89118](https://www.google.com/maps/place/The+Innevation+Center/@36.066623,-115.2136283,15z/data=!4m2!3m1!1s0x0:0x4f1c35e8f68b2e74)
 
-Free parking is located in front of the building. Please park in Visitor Parking.
+Parking is free in front of the building, please park in Visitor Parking. Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop!
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -64,12 +58,6 @@ Water
 Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
 will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
 
-Takeaways:<br/>
-• I look forward to teaching the course again based on my reflection of the past year.<br/>
-• I am more comfortable with the material that I struggled with the first time teaching this
-course.<br/>
-• I understand how to make changes to the ECS curriculum in order to meet my local needs
-and fit into my context.))
 
 **Save the Dates**
 
@@ -81,7 +69,13 @@ Breakfast and lunch will be served.
 
 **Location**
 
-More Details Coming Soon!
+[Instructional Design and Professional Learning Division<br/>
+Room: TBD<br/>
+3950 South Pecos-Mcleod<br/> 
+Las Vegas, NV 89121<br/>](https://goo.gl/maps/ZevyChXU3fC2)
+
+Parking is free and available in front of the building.
+
 
 **What do I bring to Phase 4 PD?**
 

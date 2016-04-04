@@ -1,0 +1,25 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+
+%h1 Professional Learning Content
+
+.outlined_section
+  %h4 Courses
+  -@courses.each do |course|
+    = link_to course.name, course
+    %br
+    - course.plc_course_units.each do |course_unit|
+      %li
+        = link_to course_unit.unit_name, course_unit
+  .new_link
+    = link_to 'Add new course', new_plc_course_path, class: 'btn'
+
+%br
+
+.outlined_section
+  %h4 Learning Modules
+  -@learning_modules.each do |learning_module|
+    = link_to learning_module.name, learning_module
+    %br
+  .new_link
+    = link_to 'Add new learning module', new_plc_learning_module_path, class: 'btn'

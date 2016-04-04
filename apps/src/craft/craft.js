@@ -1,9 +1,5 @@
 /* global trackEvent */
 
-/*jshint -W061 */
-// We use eval in our code, this allows it.
-// @see https://jslinterrors.com/eval-is-evil
-
 'use strict';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
@@ -16,6 +12,9 @@ var dom = require('../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../MusicController');
+var AppView = require('../templates/AppView.jsx');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -238,86 +237,107 @@ Craft.init = function (config) {
       break;
   }
 
-  studioApp.init($.extend({}, config, {
-    forceInsertTopBlock: 'when_run',
-    html: require('../templates/page.html.ejs')({
+  var generateCodeWorkspaceHtmlFromEjs = function () {
+    return codeWorkspaceEjs({
       assetUrl: studioApp.assetUrl,
       data: {
         localeDirection: studioApp.localeDirection(),
-        visualization: require('./visualization.html.ejs')(),
-        controls: require('./controls.html.ejs')({
-          assetUrl: studioApp.assetUrl,
-          shareable: config.level.shareable
-        }),
         editCode: config.level.editCode,
         blockCounterClass: 'block-counter-default',
         readonlyWorkspace: config.readonlyWorkspace
       }
-    }),
-    appStrings: {
-      generatedCodeDescription: craftMsg.generatedCodeDescription(),
-    },
-    loadAudio: function () {
-    },
-    afterInject: function () {
-      var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
-      Craft.gameController = new GameController({
-        Phaser: window.Phaser,
-        containerId: 'phaser-game',
-        assetRoot: Craft.skin.assetUrl(''),
-        audioPlayer: {
-          register: studioApp.registerAudio.bind(studioApp),
-          play: studioApp.playAudio.bind(studioApp)
-        },
-        debug: false,
-        customSlowMotion: slowMotionURLParam, // NaN if not set
-        /**
-         * First asset packs to load while video playing, etc.
-         * Won't matter for levels without delayed level initialization
-         * (due to e.g. character / house select popups).
-         */
-        earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
-        afterAssetsLoaded: function () {
-          // preload music after essential game asset downloads completely finished
-          Craft.musicController.preload();
-        },
-        earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
-      });
-
-      if (!config.level.showPopupOnLoad) {
-        Craft.initializeAppLevel(config.level);
-      }
-
-      if (studioApp.hideSource) {
-        // Set visualizationColumn width in share mode so it can be centered
-        var visualizationColumn = document.getElementById('visualizationColumn');
-        visualizationColumn.style.width = this.nativeVizWidth + 'px';
-      }
-    },
-    twitter: {
-      text: "Share on Twitter",
-      hashtag: "Craft"
-    }
-  }));
-
-  var interfaceImagesToLoad = [];
-  interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
-
-  if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
-    interfaceImagesToLoad =
-        interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
-  }
-
-  interfaceImagesToLoad.forEach(function(url) {
-    preloadImage(url);
-  });
-
-  var shareButton = $('.mc-share-button');
-  if (shareButton.length) {
-    dom.addClickTouchEvent(shareButton[0], function () {
-      Craft.reportResult(true);
     });
-  }
+  };
+
+  var generateVisualizationColumnHtmlFromEjs = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({
+          assetUrl: studioApp.assetUrl,
+          shareable: config.level.shareable
+        })
+      }
+    });
+  };
+
+  var onMount = function () {
+    studioApp.init($.extend({}, config, {
+      forceInsertTopBlock: 'when_run',
+      appStrings: {
+        generatedCodeDescription: craftMsg.generatedCodeDescription(),
+      },
+      loadAudio: function () {},
+      afterInject: function () {
+        var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
+        Craft.gameController = new GameController({
+          Phaser: window.Phaser,
+          containerId: 'phaser-game',
+          assetRoot: Craft.skin.assetUrl(''),
+          audioPlayer: {
+            register: studioApp.registerAudio.bind(studioApp),
+            play: studioApp.playAudio.bind(studioApp)
+          },
+          debug: false,
+          customSlowMotion: slowMotionURLParam, // NaN if not set
+          /**
+           * First asset packs to load while video playing, etc.
+           * Won't matter for levels without delayed level initialization
+           * (due to e.g. character / house select popups).
+           */
+          earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
+          afterAssetsLoaded: function () {
+            // preload music after essential game asset downloads completely finished
+            Craft.musicController.preload();
+          },
+          earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
+        });
+
+        if (!config.level.showPopupOnLoad) {
+          Craft.initializeAppLevel(config.level);
+        }
+
+        if (studioApp.hideSource) {
+          // Set visualizationColumn width in share mode so it can be centered
+          var visualizationColumn = document.getElementById('visualizationColumn');
+          visualizationColumn.style.width = this.nativeVizWidth + 'px';
+        }
+      },
+      twitter: {
+        text: "Share on Twitter",
+        hashtag: "Craft"
+      }
+    }));
+
+    var interfaceImagesToLoad = [];
+    interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
+
+    if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
+      interfaceImagesToLoad =
+          interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
+    }
+
+    interfaceImagesToLoad.forEach(function(url) {
+      preloadImage(url);
+    });
+
+    var shareButton = $('.mc-share-button');
+    if (shareButton.length) {
+      dom.addClickTouchEvent(shareButton[0], function () {
+        Craft.reportResult(true);
+      });
+    }
+  };
+
+  ReactDOM.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    onMount: onMount
+  }), document.getElementById(config.containerId));
 };
 
 var preloadImage = function(url) {
@@ -452,6 +472,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     gridDimensions: levelConfig.gridWidth && levelConfig.gridHeight ?
         [levelConfig.gridWidth, levelConfig.gridHeight] :
         null,
+    // eslint-disable-next-line no-eval
     verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0] // TODO(bjordan): add to utils
   });
 };
@@ -729,6 +750,7 @@ Craft.reportResult = function (success) {
         feedbackType: testResultType,
         response: response,
         level: Craft.initialConfig.level,
+        defaultToContinue: Craft.shouldDefaultToContinue(testResultType),
         appStrings: {
           reinfFeedbackMsg: craftMsg.reinfFeedbackMsg(),
           nextLevelMsg: craftMsg.nextLevelMsg({
@@ -742,6 +764,18 @@ Craft.reportResult = function (success) {
       });
     }
   });
+};
+
+/**
+ * Whether pressing "x" or pressing the backdrop of the "level completed" dialog
+ * should default to auto-advancing to the next level.
+ * @param {string} testResultType TestResults type of this level completion
+ * @returns {boolean} whether to continue
+ */
+Craft.shouldDefaultToContinue = function(testResultType) {
+  var isFreePlay = testResultType === TestResults.FREE_PLAY;
+  var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+  return isSuccess && !isFreePlay;
 };
 
 Craft.replayTextForResult = function (testResultType) {

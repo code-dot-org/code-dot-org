@@ -341,6 +341,8 @@ class HocRoutesTest < Minitest::Test
                         created_ip: '0.0.0.0',
                         updated_ip: '0.0.0.0',
                         processed_data: '{}',
+                        created_at: DateTime.now,
+                        updated_at: DateTime.now
       )
     end
 

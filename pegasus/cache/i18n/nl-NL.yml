@@ -80,51 +80,56 @@
   congratulations_volunteer: 'Gefeliciteerd: nu je het Uur van Coderen hebt geprobeerd,
     <a href="https://code.org/volunteer">geef je op om te helpen in een klas</a> en
     help studenten met het leren van het Uur van Coderen!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: Gefeliciteerd met het voltooien van cursus
+    1
+  congratulations_on_completing_course2: Gefeliciteerd met het voltooien van cursus
+    2
+  congratulations_on_completing_course3: Gefeliciteerd met het voltooien van cursus
+    3
+  congratulations_on_completing_course4: Gefeliciteerd met het voltooien van cursus
+    4
+  congratulations_on_completing_accelerated: Gefeliciteerd met het voltooien van de
+    Versnelde Cursus
   congrats_next_tutorials_title: Probeer nu deze opdrachten
   congrats_next_tutorials_desc: Probeer deze kortere opdrachten van een uur of probeer
     een <a href="%{current_path}/next">opdracht van een partner</a>.
   get_a_certificate_of_achievement: Ontvang een certificaat van verworvenheid
-  view_course: View course
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
+  view_course: Toon cursus
+  view_unit: Weergave component
+  make_app: Maak een App
+  congrats_guest_speaker_title: Vind een gastspreker voor je klas
+  congrats_guest_speaker_desc: Nu dat uw studenten een computercursus voltooid hebben,
+    wilt u misschien nadenken over het te vieren en het te connecteren met zaken die
+    ze in de echte wereld kunnen bouwen door een gastspreker uit te nodigen in uw
+    klas. U kan onze map met vrijwilligers gebruiken om lokale vrijwilligers te contacteren
+    om uw klas te bezoeken, of zoek in elke stad om computer wetenschap studenten
+    of technische proffesionals te vinden die klaar zijn om uw klas te inspireren
+    van op afstand, via video chat.
+  congrats_guest_speaker_cta: Vind een gastspreker
+  congrats_third_party_title: Gebruik uw nieuwe vaardigheden met deze apps en websites
+  third_party_gradelevel_kto8: Rang K-8
+  third_party_gradelevel_kto2: Rang K-2
+  third_party_gradelevel_2to8: Rang 2-8
+  third_party_gradelevel_4to12: Rang 4-12
+  third_party_gradelevel_5to12: Rang 5-12
+  third_party_gradelevel_6plus: Rang 6+
+  third_party_gradelevel_8plus: Rang 8+
+  third_party_platform_all: 'Platform: Internet, iPad & Android'
   third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_platform_web: 'Platform: Internet'
+  third_party_price_varies: 'Prijs: variabel'
+  third_party_price_free: 'Prijs: Gratis'
+  third_party_price_299: 'Prijs: $2.99 per download'
+  third_party_price_individual: 'Individuele prijs: gratis demo & $25/maand (=+/-
+    €22,41)'
+  third_party_price_school: 'School prijs: gratis plannen &Pro voor $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
     and game-based programming activities provide an easy introduction to programming,
     and empower children to innovate and create.
   third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_tynker_btn_site: Bezoek Tynker
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
@@ -132,14 +137,14 @@
     add their own voices and sounds, even insert photos of themselves - then use the
     programming blocks to make their characters come to life.
   third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratchjr_btn_site: Bezoek Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
     games, and animations and share your creations with others in the online community.
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Download Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratch_btn_site: Bezoek Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
     or on Android or iOS devices. Students play the initial set of “Basic” levels
@@ -167,7 +172,6 @@
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -183,6 +187,7 @@
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -386,6 +391,9 @@
   homepage_slot_text_link_othercourses: Andere online cursussen
   homepage_slot_text_title_educators: Educatoren
   homepage_slot_text_blurb_educators: Leer het je leerlingen
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Middelbare school
+  homepage_slot_text_link_high: Middelbare school
   homepage_slot_text_link_k5: Lessen voor kleuters
   homepage_slot_text_link_fullcurriculum: Bekijk ons volledige curriculum
   homepage_slot_text_link_pd: Professionele ontwikkeling
@@ -664,6 +672,7 @@
   dashboard_navigation_all_sections: Leerlingaccounts en vooruitgang
   dashboard_navigation_view_progress: bekijk de vooruitgang
   dashboard_navigation_view_text_responses: Bekijk de tekstuele reacties
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Leerlingen Toevoegen
   dashboard_navigation_manage_students: Beheer Leerlingen
   dashboard_navigation_lesson_plans_resources: Lesplan en middelen
@@ -781,10 +790,21 @@
   dashboard_progress_completed_too_many_blocks: voltooid, teveel blokken
   dashboard_progress_completed_perfect: voltooid, perfect
   dashboard_progress_furthest_level_attempted: verste niveau geprobeerd
+  dashboard_progress_submitted: submitted
   dashboard_stage: niveau
   dashboard_puzzle: puzzel
   dashboard_question: Vraag
   dashboard_response: Antwoord
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Juist
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Ongelooflijke statistieken voor de ''Hour of Code'' van
     vorig jaar. In één week alleen al:'
   stats_hoc_2013_image_alt: Statistieken van de 'Hour of Code' van 2013
@@ -940,6 +960,18 @@
   course3_name: Cursus 3
   course4_name: Les 4
   accelerated_name: versnelde cursus
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
+    of computer programming, which unlocks the ability to make rich, interactive apps.
+    This course uses JavaScript as the programming language, and App Lab as the programming
+    environment to build apps, but the concepts learned in these lessons span all
+    programming languages and tools.
+  applab_name: App Lab
+  applab_gradelevel: Ages 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you
+    can make simple apps. Design an app, code with blocks or JavaScript to make it
+    work, then share your app in seconds
   codeorg_gradelevel: Leeftijden 4-104
   codeintl_gradelevel: Leeftijden 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -1653,4 +1685,3 @@
   infinity_shortcode: inf
   playlab_shortcode: afspelen
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

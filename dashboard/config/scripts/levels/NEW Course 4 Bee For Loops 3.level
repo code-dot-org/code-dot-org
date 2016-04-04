@@ -32,9 +32,11 @@
     "markdown_instructions": "Ah, the `for loop` makes this much easier! All the code you need is here, take a look at how it is put together then click `Run` to see how it works. ",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "maze_data": null,
-    "fast_get_nectar_animation": "false"
-  }
+    "fast_get_nectar_animation": "false",
+    "step_speed": "1"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -80,9 +82,13 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml/>
+      <xml>
+        <block type="controls_for" inline="true"/>
+        <block type="math_number"/>
+        <block type="variables_get"/>
+      </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
@@ -92,6 +98,48 @@
           </value>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_for" inline="true">
+              <title name="VAR">counter</title>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="maze_moveForward" deletable="false">
+                  <next>
+                    <block type="controls_repeat_ext" inline="true" deletable="false">
+                      <value name="TIMES">
+                        <block type="variables_get">
+                          <title name="VAR">counter</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="maze_nectar" deletable="false"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

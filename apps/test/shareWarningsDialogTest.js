@@ -1,10 +1,8 @@
-window.React = require('react');
-require('react/addons');
-var ReactTestUtils = React.addons.TestUtils;
-
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales('Applab');
+testUtils.setExternalGlobals();
+var ReactTestUtils = require('react-addons-test-utils');
 var ShareWarningsDialog = require('@cdo/apps/templates/ShareWarningsDialog.jsx');
 var ShareWarnings = require('@cdo/apps/templates/ShareWarnings.jsx');
 var AgeDropdown = require('@cdo/apps/templates/AgeDropdown.jsx');
@@ -16,7 +14,7 @@ describe('ShareWarningsDialog', function () {
     if (!ReactTestUtils.isDOMComponent(childComponent)) {
       return false;
     }
-    var dom = childComponent.getDOMNode();
+    var dom = childComponent;
     return dom.tagName === tagName && dom.innerHTML === text;
   }
 
@@ -131,7 +129,7 @@ describe('ShareWarningsDialog', function () {
       'button')[0];
     assert(okButton, 'have an ok button');
 
-    ReactTestUtils.Simulate.click(okButton.getDOMNode());
+    ReactTestUtils.Simulate.click(okButton);
     assert(handleCloseCalled, 'closed dialog');
 
     assert.equal(componentInstance.state.modalIsOpen, false);
@@ -157,7 +155,7 @@ describe('ShareWarningsDialog', function () {
       'button')[0];
     assert(okButton, 'have an ok button');
 
-    ReactTestUtils.Simulate.click(okButton.getDOMNode());
+    ReactTestUtils.Simulate.click(okButton);
     assert(!handleCloseCalled, 'closed dialog');
 
     assert.equal(componentInstance.state.modalIsOpen, true);
@@ -181,13 +179,13 @@ describe('ShareWarningsDialog', function () {
 
     var select = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
       'select')[0];
-    select.getDOMNode().value = "13";
+    select.value = "13";
 
     var okButton = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
       'button')[0];
     assert(okButton, 'have an ok button');
 
-    ReactTestUtils.Simulate.click(okButton.getDOMNode());
+    ReactTestUtils.Simulate.click(okButton);
     assert(handleCloseCalled, 'closed dialog');
 
     assert.equal(componentInstance.state.modalIsOpen, false);
@@ -211,13 +209,13 @@ describe('ShareWarningsDialog', function () {
 
     var select = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
       'select')[0];
-    select.getDOMNode().value = "12";
+    select.value = "12";
 
     var okButton = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
       'button')[0];
     assert(okButton, 'have an ok button');
 
-    ReactTestUtils.Simulate.click(okButton.getDOMNode());
+    ReactTestUtils.Simulate.click(okButton);
     assert(handleTooYoungCalled, 'closed dialog');
   });
 });

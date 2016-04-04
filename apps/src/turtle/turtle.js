@@ -26,21 +26,29 @@
  */
 'use strict';
 
+var color = require('../color');
 var commonMsg = require('../locale');
 var turtleMsg = require('./locale');
 var levels = require('./levels');
 var Colours = require('./colours');
 var codegen = require('../codegen');
 var ArtistAPI = require('./api');
-var page = require('../templates/page.html.ejs');
+var apiJavascript = require('./apiJavascript');
+var AppView = require('../templates/AppView.jsx');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
+var JSInterpreter = require('../JSInterpreter');
+var JsInterpreterLogger = require('../JsInterpreterLogger');
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
+
+var MAX_STICKER_SIZE = 100;
 
 var JOINT_RADIUS = 4;
 
@@ -86,10 +94,16 @@ var Artist = function () {
   this.level = null;
 
   this.api = new ArtistAPI();
+  apiJavascript.injectArtistAPI(this.api);
+
+  /** @type {JSInterpreter} */
+  this.JSInterpreter = null;
+
+  /** @private {JsInterpreterLogger} */
+  this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
   // image icons and image paths for the 'set pattern block'
   this.lineStylePatternOptions = [];
-  this.stamps = [];
 
   // PID of animation task currently executing.
   this.pid = 0;
@@ -156,14 +170,13 @@ Artist.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
 
-  // Preload stamp images
-  this.stamps = [];
-  for (var i = 0; i < this.skin.stampValues.length; i++) {
-    var url = this.skin.stampValues[i][0];
-    var key = this.skin.stampValues[i][1];
+  // Preload sticker images
+  this.stickers = {};
+  for (var name in this.skin.stickers) {
     var img = new Image();
-    img.src = url;
-    this.stamps[key] = img;
+    img.src = this.skin.stickers[name];
+
+    this.stickers[name] = img;
   }
 
   if (this.skin.id == "anna" || this.skin.id == "elsa") {
@@ -182,8 +195,7 @@ Artist.prototype.init = function(config) {
   if (this.skin.id == "anna") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
-  }
-  else if (this.skin.id == "elsa") {
+  } else if (this.skin.id == "elsa") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
     this.decorationAnimationWidth = 85;
@@ -194,24 +206,41 @@ Artist.prototype.init = function(config) {
   }
 
   var iconPath = 'media/turtle/' + (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
-  config.html = page({
-    assetUrl: this.studioApp_.assetUrl,
-    data: {
-      visualization: '',
-      localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath}),
-      blockUsed : undefined,
-      idealBlockNumber : undefined,
-      editCode: this.level.editCode,
-      blockCounterClass : 'block-counter-default',
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
-  this.studioApp_.init(config);
+  var generateCodeWorkspaceHtmlFromEjs = function () {
+    return codeWorkspaceEjs({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        localeDirection: this.studioApp_.localeDirection(),
+        blockUsed : undefined,
+        idealBlockNumber : undefined,
+        editCode: this.level.editCode,
+        blockCounterClass : 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  var generateVisualizationColumnHtmlFromEjs = function () {
+    return visualizationColumnEjs({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        visualization: '',
+        controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath})
+      }
+    });
+  }.bind(this);
+
+  ReactDOM.render(React.createElement(AppView, {
+    assetUrl: this.studioApp_.assetUrl,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    onMount: this.studioApp_.init.bind(this.studioApp_, config)
+  }), document.getElementById(config.containerId));
 };
 
 Artist.prototype.loadAudio_ = function () {
@@ -477,8 +506,7 @@ Artist.prototype.drawTurtle = function() {
   if (sourceX < 0 ||
       sourceY < 0 ||
       sourceX + sourceWidth  -0 > this.avatarImage.width ||
-      sourceY + sourceHeight > this.avatarImage.height)
-  {
+      sourceY + sourceHeight > this.avatarImage.height) {
     if (console && console.log) {
       // TODO(bjordan): ask Brent, starting to flood grunt mochaTest messages,
       // better fix here?
@@ -600,7 +628,13 @@ Artist.prototype.reset = function (ignore) {
   this.pid = 0;
 
   // Discard the interpreter.
-  this.interpreter = null;
+  this.consoleLogger_.detach();
+
+  // Discard the interpreter.
+  if (this.JSInterpreter) {
+    this.JSInterpreter.deinitialize();
+    this.JSInterpreter = null;
+  }
   this.executionError = null;
 
   // Stop the looping sound.
@@ -617,7 +651,7 @@ Artist.prototype.display = function() {
   // FF on linux retains drawing of previous location of artist unless we clear
   // the canvas first.
   var style = this.ctxDisplay.fillStyle;
-  this.ctxDisplay.fillStyle = 'white';
+  this.ctxDisplay.fillStyle = color.white;
   this.ctxDisplay.clearRect(0, 0, this.ctxDisplay.canvas.width,
     this.ctxDisplay.canvas.width);
   this.ctxDisplay.fillStyle = style;
@@ -691,23 +725,38 @@ Artist.prototype.evalCode = function(code) {
 };
 
 /**
- * Set up this.code, this.interpreter, etc. to run code for editCode levels
+ * Set up the JSInterpreter and consoleLogger for editCode levels
  */
-Artist.prototype.generateTurtleCodeFromJS_ = function () {
-  this.code = dropletUtils.generateCodeAliases(dropletConfig, 'Turtle');
-  this.userCodeStartOffset = this.code.length;
-  this.code += this.studioApp_.editor.getValue();
-  this.userCodeLength = this.code.length - this.userCodeStartOffset;
+Artist.prototype.initInterpreter = function () {
+  if (!this.level.editCode) {
+    return;
+  }
+  this.JSInterpreter = new JSInterpreter({
+    studioApp: this.studioApp_,
+    shouldRunAtMaxSpeed: function () { return false; }
+  });
+  this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
+  this.consoleLogger_.attachTo(this.JSInterpreter);
+  this.JSInterpreter.parse({
+    code: this.studioApp_.getCode(),
+    blocks: dropletConfig.blocks,
+    blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions
+  });
+};
 
-  var session = this.studioApp_.editor.aceEditor.getSession();
-  this.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+/**
+ * Handle an execution error from the interpreter
+ */
+Artist.prototype.handleExecutionError = function (err, lineNumber) {
+  this.consoleLogger_.log(err);
 
-  var initFunc = _.bind(function(interpreter, scope) {
-    codegen.initJSInterpreter(interpreter, null, null, scope, {
-      Turtle: this.api
-    });
-  }, this);
-  this.interpreter = new window.Interpreter(this.code, initFunc);
+  this.executionError = { err: err, lineNumber: lineNumber };
+
+  if (err instanceof SyntaxError) {
+    this.testResults = this.studioApp_.TestResults.SYNTAX_ERROR_FAIL;
+  }
+
+  this.finishExecution_();
 };
 
 /**
@@ -727,7 +776,7 @@ Artist.prototype.execute = function() {
   }
 
   if (this.level.editCode) {
-    this.generateTurtleCodeFromJS_();
+    this.initInterpreter();
   } else {
     this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
     this.evalCode(this.code);
@@ -840,32 +889,28 @@ Artist.prototype.animate = function() {
   this.smoothAnimateStepSize = (stepSpeed === 0 ?
     FAST_SMOOTH_ANIMATE_STEP_SIZE : SMOOTH_ANIMATE_STEP_SIZE);
 
-  if (this.level.editCode) {
-    var stepped = true;
-    while (stepped) {
-      codegen.selectCurrentCode(this.interpreter,
-                                this.cumulativeLength,
-                                this.userCodeStartOffset,
-                                this.userCodeLength,
-                                this.studioApp_.editor);
-      try {
-        stepped = this.interpreter.step();
-      }
-      catch(err) {
-        // TODO (cpirich): populate lineNumber as we do for studio/applab:
-        this.executionError = { err: err, lineNumber: 1 };
-        this.finishExecution_();
-        return;
-      }
-      stepped = this.interpreter.step();
+  if (this.level.editCode &&
+      this.JSInterpreter &&
+      this.JSInterpreter.initialized()) {
 
-      if (this.executeTuple_()) {
-        // We stepped far enough that we executed a commmand, break out:
-        break;
+    var programDone = false;
+    var completedTuple = false;
+
+    do {
+      programDone = this.JSInterpreter.isProgramDone();
+
+      if (!programDone) {
+        this.JSInterpreter.executeInterpreter();
+
+        completedTuple = this.executeTuple_();
       }
+    } while (!programDone && !completedTuple);
+
+    if (!completedTuple) {
+      completedTuple = this.executeTuple_();
     }
-    if (!stepped && !this.executeTuple_()) {
-      // We dropped out of the step loop because we ran out of code, all done:
+    if (programDone && !completedTuple) {
+      // All done:
       this.finishExecution_();
       return;
     }
@@ -969,7 +1014,7 @@ Artist.prototype.step = function(command, values, options) {
     case 'DP':  // Draw Print
       this.ctxScratch.save();
       this.ctxScratch.translate(this.x, this.y);
-      this.ctxScratch.rotate(2 * Math.PI * (this.heading - 90) / 360);
+      this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
       this.ctxScratch.fillText(values[0], 0, 0);
       this.ctxScratch.restore();
       break;
@@ -1011,20 +1056,55 @@ Artist.prototype.step = function(command, values, options) {
     case 'ST':  // Show Turtle
       this.visible = true;
       break;
-    case 'stamp':
-      var img = this.stamps[values[0]];
-      var width = img.width / 2;
-      var height = img.height / 2;
-      var x = this.x - width / 2;
-      var y = this.y - height / 2;
-      if (img.width !== 0) {
-        this.ctxScratch.drawImage(img, x, y, width, height);
-      }
+    case 'sticker':
+      var img = this.stickers[values[0]];
+
+      var dimensions = scaleToBoundingBox(MAX_STICKER_SIZE, img.width, img.height);
+      var width = dimensions.width;
+      var height = dimensions.height;
+
+      // Rotate the image such the the turtle is at the center of the bottom of
+      // the image and the image is pointing (from bottom to top) in the same
+      // direction as the turtle.
+      this.ctxScratch.save();
+      this.ctxScratch.translate(this.x, this.y);
+      this.ctxScratch.rotate(utils.degreesToRadians(this.heading));
+      this.ctxScratch.drawImage(img, -width / 2, -height, width, height);
+      this.ctxScratch.restore();
+
       break;
   }
 
   return tupleDone;
 };
+
+/**
+ * Given the width and height of a rectangle this scales the dimensions
+ * proportionally such that neither is larger than a given maximum size.
+ *
+ * @param maxSize - The maximum size of either dimension
+ * @param width - The current width of a rectangle
+ * @param height - The current height of a rectangle
+ * @return an object containing the scaled width and height.
+ */
+function scaleToBoundingBox(maxSize, width, height) {
+  if (width < maxSize && height < maxSize) {
+    return {width: width, height: height};
+  }
+
+  var newWidth;
+  var newHeight;
+
+  if (width > height) {
+    newWidth = maxSize;
+    newHeight = height * (maxSize / width);
+  } else {
+    newHeight = maxSize;
+    newWidth = width * (maxSize / height);
+  }
+
+  return {width: newWidth, height: newHeight};
+}
 
 Artist.prototype.setPattern = function (pattern) {
   if (this.loadedPathPatterns[pattern]) {
@@ -1037,8 +1117,8 @@ Artist.prototype.setPattern = function (pattern) {
 };
 
 Artist.prototype.jumpForward_ = function (distance) {
-  this.x += distance * Math.sin(2 * Math.PI * this.heading / 360);
-  this.y -= distance * Math.cos(2 * Math.PI * this.heading / 360);
+  this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
+  this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
 };
 
 Artist.prototype.moveByRelativePosition_ = function (x, y) {
@@ -1167,7 +1247,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
     this.ctxPattern.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.ctxPattern.rotate(Math.PI * (this.heading - 90) / 180);
+    this.ctxPattern.rotate(utils.degreesToRadians(this.heading - 90));
 
     var clipSize;
     if (lineDistance % this.smoothAnimateStepSize === 0) {
@@ -1204,7 +1284,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
     this.ctxScratch.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.ctxScratch.rotate(Math.PI * (this.heading - 90) / 180);
+    this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
 
     if (img.width !== 0) {
       this.ctxScratch.drawImage(img,

@@ -15,6 +15,7 @@
 #  type                     :string(255)
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
@@ -23,16 +24,9 @@
 
 class Eval < Blockly
   serialized_attrs %w(
-    solution_blocks
     free_play
     coordinate_grid_background
   )
-
-  before_save :update_ideal_level_source
-
-  def xml_blocks
-    super + %w(solution_blocks)
-  end
 
   # List of possible skins, the first is used as a default.
   def self.skins

@@ -6,23 +6,38 @@ nav: educate_nav
 # Middle School
 Our current middle school curriculum focuses on using computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels. Our newest course-in-development, CS Discoveries, will be a year-long computer science course designed for middle school students.
 
-## Computer Science in Science
+# Computer Science Discoveries
+Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course is currently in development and will be ready for the 2017-2018 school year.
+
+[<button>Learn more about curriculum</button>](/educate/csd)
+
+# Computer Science in Science
 
 <img src="<%= CDO.shared_image_url("courses/logo_science.png") %>">
 
-Code.org has partnered with the award-winning [Project GUTS](http://www.projectguts.org/) (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences, and to prepare students to pursue formal, year-long courses in computer science during high school. CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards.
+<div style="padding-right: 20px; padding-top: 10px; float: left; width: 50%;"> Code.org has partnered with the award-winning <a href="http://www.projectguts.org/">Project GUTS</a> (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences, and to prepare students to pursue formal, year-long courses in computer science during high school. CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards. </div>
+
+[col-50]
+
+<img src="<%= CDO.code_org_url("/images/testimonials/fit-400/cs-in-science-testimonial-2.png") %>">
+
+[/col-50]
+
+<div style="clear: both;"></div>
 
 [<button>Learn more about curriculum</button>](/curriculum/science) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-science)
 
-## Computer Science in Algebra
+# Computer Science in Algebra
 
 <img src="<%= CDO.shared_image_url("courses/logo_algebra.png") %>">
 
 Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The twenty lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
 
-[<button>Learn more about curriculum</button>](/curriculum/algebra) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-algebra)
+<img src="<%= CDO.code_org_url("/images/testimonials/fit-750/cs-in-algebra-testimonial.png") %>">
 
-## Computer Science Fundamentals - Accelerated
+[<button>Learn more about curriculum</button>](/educate/algebra) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-algebra)
+
+# Computer Science Fundamentals - Accelerated
 
 <img src="/images/code20hr.jpg">
 
@@ -30,12 +45,7 @@ Code.org offers a four course [Computer Science Fundamentals](https://studio.cod
 
 [<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
 
-## Computer Science Discoveries
-Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course is currently in development and will be ready for the 2017-2018 school year.
-
-[<button>Learn more about curriculum</button>](/educate/csd)
-
-## 3rd Party resources for middle school CS
+# 3rd Party resources for middle school CS
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 
@@ -52,12 +62,12 @@ Computer Science Discoveries is a full-year introductory computer science survey
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>
 
-## Additional Resources and Videos
+# Additional Resources and Videos
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
 
 [<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)
 
-## Find a guest speaker for your classroom
+# Find a guest speaker for your classroom
 Thousands of engineers and individuals passionate about computer science have signed up to volunteer as a mentor or a guest speaker. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
 
 [<button>Find a guest speaker</button>](/volunteer/local)

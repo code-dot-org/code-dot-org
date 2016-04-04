@@ -13,10 +13,9 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "ideal": "6",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "This house needs a roof! Draw the triangle.  Hint: all three sides are the same length.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "This house needs a roof! Draw the triangle.  \r\n\r\nHint: all three sides are the same length.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -30,8 +29,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To make those little angles, you have to turn *farther* each time than you did with the square.   \",\r\n  \"hint_id\": \"2-3_Artist_6_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.\",\r\n  \"hint_id\": \"2-3_Artist_6_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Each side of the triangle is the same length as each side of the square...100 pixels!\",\r\n  \"hint_id\": \"2-3_Artist_6_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -70,38 +73,39 @@
       <xml/>
     </required_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">120</title>
-        </block>
-      </xml>
+      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_turn_by_constant">
-              <title name="DIR">turnLeft</title>
-              <title name="VALUE">120</title>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">100</title>
               <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE" config="45,60,90,120,180">120</title>
                   <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnLeft</title>
-                      <title name="VALUE">120</title>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
                       <next>
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">100</title>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE" config="45,60,90,120,180">120</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">100</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">120</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
                         </block>
                       </next>
                     </block>

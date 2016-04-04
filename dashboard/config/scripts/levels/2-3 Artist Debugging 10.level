@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "The direction pad on my game controller is too narrow. Hint: Make it wider by 10 pixels",
+    "instructions": "The direction pad on my game controller is too narrow. \r\n\r\nCan you make it wider by 10 pixels?",
     "x": "65",
     "y": "200",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "slider_speed": "0.4",
     "free_play": "false",
     "embed": "false",
-    "markdown_instructions": "The direction pad on my game controller is too narrow. Hint: Make it wider by 10 pixels\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "The direction pad on my game controller is too narrow. \r\n\r\nCan you make it wider by 10 pixels?\r\n\r\n<br/><br/>\r\n\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -30,8 +30,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Remember, you want the control panel 10 pixels *wider*...so be sure to **add** 10 to whatever number you change.\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_10_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"**Trial and error is perfectly fine here!**  \\n\\nStart by changing one number at a time.   \\n\\nWhich numbers do what?  \\n\\nIf you get too lost, just click \\\"Start over\\\" and your code will be reset.\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_10_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -83,13 +87,13 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>

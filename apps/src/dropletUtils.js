@@ -4,10 +4,11 @@ var _ = utils.getLodash();
 /**
  * @name DropletBlock
  * @description Definition of a block to be used in Droplet
- * @property {String} func identifying the function this block runs
+ * @property {string} func identifying the function this block runs
+ * @property {string} blockPrefix Prepend this string before the normal block name in the palette
  * @property {Object} parent object within which this function is defined as a property, keyed by the func name
  * @property {String} category category within which to place the block
- * @property {String} type type of the block (e.g. value, either, property)
+ * @property {String} type type of the block (e.g. value, either, property, readonlyproperty)
  * @property {string[]} paletteParams
  * @property {string[]} params
  * @property {Object.<number, function>} dropdown
@@ -15,6 +16,7 @@ var _ = utils.getLodash();
  * @property {bool} dontMarshal API expects params in interpreter form and will return an interpreter value
  * @property {bool} noAutocomplete Do not include this function in our ace completer
  * @property {bool} nativeIsAsync The native function is internally async and will call a callback function to resume the interpreter
+ * @property {string} tipPrefix Prepend this string before the tooltip formed from the function name and (optionally) parameters
  * @property {string} docFunc Use the provided func as the key for our documentation.
  * @property {string} modeOptionName Alternate name to be used when generating droplet mode options
  */
@@ -172,13 +174,17 @@ standardConfig.categories = {
  * @param {DropletConfig} otherConfig optionally used to supply a standardConfig
  *  object which is not app specific. It will be used first, then overriden
  *  by the primary dropletConfig if there is overlap between the two.
- * @param paletteOnly boolean: ignore blocks not in codeFunctions palette
+ * @param {Object} options
+ * @param {boolean} options.paletteOnly ignore blocks not in codeFunctions palette
+ * @param {boolean} options.ignoreDocFunc don't include based on block.docFunc
  * @returns {Array<DropletBlock>}
  */
-function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, paletteOnly) {
+function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, options) {
   if (!codeFunctions || !dropletConfig || !dropletConfig.blocks) {
     return [];
   }
+
+  options = options || {};
 
   var blocks = [];
   if (otherConfig) {
@@ -192,16 +198,18 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, pal
       return;
     }
 
-    // For cases where we use a different block for our tooltips, make sure that
-    // the target block ends up in the list of blocks we want
-    var docFunc = block.docFunc;
-    if (docFunc && !(docFunc in codeFunctions)) {
-      docFunctions[docFunc] = null;
+    if (!options.ignoreDocFunc) {
+      // For cases where we use a different block for our tooltips, make sure that
+      // the target block ends up in the list of blocks we want
+      var docFunc = block.docFunc;
+      if (docFunc && !(docFunc in codeFunctions)) {
+        docFunctions[docFunc] = null;
+      }
     }
   });
 
   return blocks.filter(function (block) {
-    return !paletteOnly || block.func in codeFunctions || block.func in docFunctions;
+    return !options.paletteOnly || block.func in codeFunctions || block.func in docFunctions;
   }).map(function (block) {
     // We found this particular block, now override the defaults with extend
     return $.extend({}, block, codeFunctions[block.func]);
@@ -264,6 +272,17 @@ function buildFunctionPrototype(prefix, params) {
   return proto + ")";
 }
 
+// Generate a read-write property expansion function:
+function generatePropertyExpansion (propname) {
+  return function (block) {
+    if (!block || block.type === 'socket') {
+      return propname;
+    } else {
+      return propname + ' = __;';
+    }
+  };
+}
+
 /**
  * Generate a palette for the droplet editor based on some level data.
  * @param {object} codeFunctions The set of functions we want to use for this level
@@ -273,27 +292,40 @@ function buildFunctionPrototype(prefix, params) {
  */
 exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
-  var mergedFunctions = filteredBlocksFromConfig(codeFunctions, dropletConfig,
-    standardConfig, true);
+  var mergedFunctions = filteredBlocksFromConfig(
+      codeFunctions,
+      dropletConfig,
+      standardConfig,
+      { paletteOnly: true, ignoreDocFunc: true }
+  );
 
   for (var i = 0; i < mergedFunctions.length; i++) {
     var funcInfo = mergedFunctions[i];
     var block = funcInfo.block;
     var expansion = funcInfo.expansion;
     if (!block) {
-      if (funcInfo.type === 'property') {
-        block = funcInfo.func;
+      var nameWithPrefix = funcInfo.func;
+      if (funcInfo.blockPrefix) {
+        nameWithPrefix = funcInfo.blockPrefix + nameWithPrefix;
+      }
+      if (funcInfo.type === 'property' || funcInfo.type === 'readonlyproperty') {
+        block = nameWithPrefix;
       } else {
-        var prefix = funcInfo.blockPrefix || funcInfo.func;
         var paletteParams = funcInfo.paletteParams || funcInfo.params;
-        block = buildFunctionPrototype(prefix, paletteParams);
+        block = buildFunctionPrototype(nameWithPrefix, paletteParams);
         if (funcInfo.paletteParams) {
           // If paletteParams were specified and used for the 'block', then use
           // the regular params for the 'expansion' which appears when the block
           // is dragged out of the palette:
-          expansion = buildFunctionPrototype(prefix, funcInfo.params);
+          expansion = buildFunctionPrototype(nameWithPrefix, funcInfo.params);
         }
       }
+    }
+
+    // For properties that aren't read-only, we automatically generate an
+    // expansion function so the block can morph to be a setter and a getter:
+    if (!expansion && funcInfo.type === 'property') {
+      expansion = generatePropertyExpansion(block);
     }
 
     /**
@@ -303,7 +335,7 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
     var blockPair = {
       block: block,
       expansion: expansion,
-      title: funcInfo.func
+      title: funcInfo.modeOptionName || funcInfo.func
     };
     mergedCategories[funcInfo.category].blocks.push(blockPair);
   }
@@ -320,7 +352,7 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   return addedPalette;
 };
 
-function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
+function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, configBlocks) {
   for (var i = 0; i < configBlocks.length; i++) {
     var block = configBlocks[i];
     if (!block.noAutocomplete) {
@@ -328,13 +360,13 @@ function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
       // other completers that are suggesting the same name
       var newApi = {
         name: 'api',
-        value: block.func,
+        value: block.modeOptionName || block.func,
         score: 100,
         meta: block.category
       };
       if (opts.autocompleteFunctionsWithParens) {
         newApi.completer = {
-          insertMatch: _.bind(function (editor) {
+          insertMatch: function (value, editor) {
             // Remove the filterText that was already typed (ace's built-in
             // insertMatch would normally do this automatically)
             if (editor.completer.completions.filterText) {
@@ -345,7 +377,7 @@ function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
               }
             }
             // Insert the function name plus parentheses and semicolon:
-            editor.execCommand("insertstring", this.func + '();');
+            editor.execCommand("insertstring", value + '();');
             if (this.params) {
               // Move the selection back so parameters can be entered:
               var curRange = editor.selection.getRange();
@@ -353,10 +385,23 @@ function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
               curRange.end.column -= 2;
               editor.selection.setSelectionRange(curRange);
             }
-          }, block)
+          }.bind(block, newApi.value)
         };
       }
-      apis.push(newApi);
+      if (newApi.value.indexOf('*.') === 0 || newApi.value.indexOf('?.') === 0) {
+        // Populate this in a special methodsAndProperties collection:
+
+        // Store the original name in a docFunc property for the
+        // benefit of our DropletAutocompletePopupTooltipManager:
+        newApi.docFunc = newApi.value;
+        // Update the value to skip over the '*.' or '?.' at the beginning:
+        newApi.value = newApi.value.substring(2);
+        methodsAndProperties.push(newApi);
+
+      } else {
+        // Populate this in the "normal" apis collection:
+        apis.push(newApi);
+      }
     }
   }
 }
@@ -377,6 +422,30 @@ function populateCompleterFromPredefValues(apis, predefValues) {
 }
 
 /**
+ * Determines if the ace editor cursor position is at the beginning of a method
+ * or property (after a dot).
+ * @param {Object} session Ace editor session
+ * @param {Object} pos Ace editor position
+ * @return {boolean} true if position is at the start of a method or property
+ */
+function isPositionAfterDot (session, pos) {
+  var acUtil = window.ace.require("ace/autocomplete/util");
+  var line = session.getLine(pos.row);
+  var identifier = acUtil.retrievePrecedingIdentifier(line, pos.column);
+  // If we're typing a valid identifier, inspect the preceeding
+  // character to see if it is a period and ensure there's at least one
+  // character before
+  if (identifier.length > 0 && identifier.length < pos.column) {
+    // We have an identifier and it is shorter than our column position in
+    // this line, which means it is safe to check the line[] before the
+    // identifier
+    var posBeforeIdentifier = pos.column - identifier.length - 1;
+    return line[posBeforeIdentifier] === '.';
+  }
+  return false;
+}
+
+/**
  * Generate an Ace editor completer for a set of APIs based on some level data.
  *
  * If functionFilter is non-null, use it to filter the dropletConfig
@@ -384,17 +453,19 @@ function populateCompleterFromPredefValues(apis, predefValues) {
  */
 exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   var apis = [];
+  var methodsAndProperties = [];
   var opts = {};
+
   // If autocompleteFunctionsWithParens is set, we will append "();" after functions
   opts.autocompleteFunctionsWithParens = dropletConfig.autocompleteFunctionsWithParens;
 
   if (functionFilter) {
-    var mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, true);
-    populateCompleterApisFromConfigBlocks(opts, apis, mergedBlocks);
+    var mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, { paletteOnly: true });
+    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, mergedBlocks);
   } else {
-    populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletGlobalConfigBlocks);
-    populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletBuiltinConfigBlocks);
-    populateCompleterApisFromConfigBlocks(opts, apis, dropletConfig.blocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, exports.dropletGlobalConfigBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, exports.dropletBuiltinConfigBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, dropletConfig.blocks);
     populateCompleterFromPredefValues(apis, dropletConfig.additionalPredefValues);
   }
 
@@ -404,7 +475,12 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
         callback(null, []);
         return;
       }
-      callback(null, apis);
+      if (isPositionAfterDot(session, pos)) {
+        // Following a dot, we autocomplete from methodsAndProperties:
+        callback(null, methodsAndProperties);
+      } else {
+        callback(null, apis);
+      }
     }
   };
 };
@@ -423,14 +499,19 @@ function getModeOptionFunctionsFromConfig(config) {
   for (var i = 0; i < config.blocks.length; i++) {
     var newFunc = {};
 
-    if (config.blocks[i].type === 'value') {
-      newFunc.value = true;
-    } else if (config.blocks[i].type === 'either') {
-      newFunc.value = true;
-      newFunc.command = true;
-    } else if (config.blocks[i].type === 'property') {
-      newFunc.property = true;
-      newFunc.value = true;
+    switch (config.blocks[i].type) {
+      case 'value':
+        newFunc.value = true;
+        break;
+      case 'either':
+        newFunc.value = true;
+        newFunc.command = true;
+        break;
+      case 'property':
+      case 'readonlyproperty':
+        newFunc.property = true;
+        newFunc.value = true;
+        break;
     }
 
     var category = mergedCategories[config.blocks[i].category];
@@ -464,7 +545,7 @@ exports.generateDropletModeOptions = function (config) {
         beginner: config.level.beginnerMode || false
       },
       functions: { color: COLOR_GREEN },
-      returns: { color: COLOR_BLUE },
+      returns: { color: COLOR_GREEN },
       comments: { color: COLOR_WHITE },
       containers: { color: COLOR_PURPLE },
       value: { color: COLOR_PURPLE },
@@ -497,7 +578,12 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, p
   var hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
   var configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
   if (codeFunctions && hasConfiguredBlocks) {
-    configuredBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, paletteOnly);
+    configuredBlocks = filteredBlocksFromConfig(
+        codeFunctions,
+        dropletConfig,
+        null,
+        { paletteOnly: paletteOnly }
+    );
   }
   return exports.dropletGlobalConfigBlocks
     .concat(exports.dropletBuiltinConfigBlocks)

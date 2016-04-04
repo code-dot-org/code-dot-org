@@ -88,8 +88,10 @@ def determine_frontend_instance_distribution
   instances = @ec2client.describe_instances
 
   frontend_instances = instances.reservations.map do |reservation|
-    reservation.instances.select { |instance| instance.state.name == 'running' &&
-        instance.tags.detect { |tag| tag.key == 'Name' && tag.value.include?('frontend') } }
+    reservation.instances.select do |instance|
+      instance.state.name == 'running' &&
+        instance.tags.detect { |tag| tag.key == 'Name' && tag.value.include?('frontend') }
+    end
   end
 
   frontend_instances.flatten!
@@ -238,7 +240,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   @ec2client.wait_until(:instance_running, instance_ids: [instance_id]) do |waiting|
     waiting.max_attempts = nil
 
-    waiting.before_wait do |attempts, response|
+    waiting.before_wait do |_attempts, _response|
       if Time.now - started_at > MAX_WAIT_TIME
         puts "Instance #{instance_id} still not created. Giving up - check the EC2 console and see if there's an error."
         exit(1)
@@ -253,7 +255,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   @ec2client.wait_until(:instance_status_ok, instance_ids: [instance_id]) do |waiting|
     waiting.max_attempts = nil
 
-    waiting.before_wait do |attempts, response|
+    waiting.before_wait do |_attempts, _response|
       if Time.now - started_at > MAX_WAIT_TIME
         print "Instance #{instance_id} was created but has not passed status checks. Check EC2 console.\n"
         exit(1)
@@ -279,7 +281,6 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   public_dns_name = instance_info.public_dns_name
   instance_provisioning_info.private_dns = private_dns_name
   instance_provisioning_info.public_dns = public_dns_name
-
 
   OUTPUT_MUTEX.synchronize {
     print "\nCreated instance #{instance_id} with name #{instance_provisioning_info.name}\n"
@@ -353,7 +354,6 @@ OptionParser.new do |opts|
   opts.on('-n', '--name NAME', 'Name for newly added frontend instance') do |name|
     @options['name'] = name
   end
-
 
   opts.on('-p', '--name-prefix PREFIX', 'Prefix for frontend names') do |prefix|
     @options['prefix'] = prefix
@@ -440,14 +440,14 @@ instances_to_create.each do |instance_to_create|
   sleep(1)
 end
 
-instance_creation_threads.each {|thread| thread.join}
+instance_creation_threads.each(&:join)
 
 instances_to_create.each do |instance_to_create|
   puts "#{instance_to_create.name}: #{instance_to_create.result}"
 end
 
 #If we've created all instances successfully, and without exceptions, it's safe to update the production daemon.
-if instances_to_create.index {|created_instance| created_instance.result != 'Succeeded'} == nil
+if instances_to_create.index {|created_instance| created_instance.result != 'Succeeded'}.nil?
   puts 'All instances were created successfully'
   puts 'Updating production-daemon chef config with new node.'
   `ssh gateway.code.org -t "ssh production-daemon -t sudo chef-client"`

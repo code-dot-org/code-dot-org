@@ -22,8 +22,15 @@ div#visualizationResizeBar {
   top: $workspace-headers-height;
 }
 
-#designToggleRow > div {
+#playSpaceHeader > div {
   height: $workspace-headers-height;
+}
+
+// Override appliction.scss's defined width for applab, so that embed levels
+// get a better width. Non embed levels will be handled by responsive media
+// queries
+.small-footer-base {
+  width: 340px;
 }
 
 /* Shrink the visualization area on small displays. */
@@ -44,10 +51,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div#codeWorkspace {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -80,10 +87,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div#codeWorkspace {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -116,10 +123,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div#codeWorkspace {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -152,10 +159,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div#codeWorkspace {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -188,10 +195,10 @@ div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  div#codeWorkspace {
+  div.editor-column {
     left: $width;
   }
-  html[dir='rtl'] div#codeWorkspace {
+  html[dir='rtl'] div.editor-column {
     right: $width;
   }
   div#visualizationResizeBar {
@@ -217,7 +224,7 @@ div#visualizationResizeBar {
   margin: 0 auto;
   padding: 20px 0;
 
-  #designToggleRow, #gameButtons {
+  #playSpaceHeader, #gameButtons {
     display: none;
   }
 
@@ -229,7 +236,7 @@ div#visualizationResizeBar {
 }
 
 #visualizationColumn.chromelessShare {
-  #designToggleRow, #gameButtons {
+  #playSpaceHeader, #gameButtons {
     display: none;
   }
 }

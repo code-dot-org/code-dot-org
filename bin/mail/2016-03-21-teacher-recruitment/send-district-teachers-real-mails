@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# 39643 contacts
+../send-to-mailing-list  3-9-recruit-district-teachers ./district-teachers-deduped.csv

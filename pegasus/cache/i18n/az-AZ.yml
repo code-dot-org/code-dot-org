@@ -19,18 +19,18 @@
   petition_message: Hər bir məktəbdə hər bir şagirdin informatikanı öyrənmək imkanı
     olmalıdır
   petition_sign_message: 'Razısınızsa, adınızı yazın. Daha # nəfərə qoşulun.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: "Əgər bizi dəstəkləyirsinizsə, adınızı daxil edin.
+    Bizə qatılın."
   petition_join_others: 'Digər # nəfərə qoşulun'
   name: Ad
   email: E-poçt
   zipcode: "Ölkə və ya poçt indeksi"
   submit: Göndər
   twentyhours_heading: Bizim İnformatika Giriş kursumuzu sınaqdan keçirin
-  twentyhours_text: Finished your first Hour of Code? Learn more core computer science
-    and programming concepts in this follow-up course.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  twentyhours_text: "İlk Kod saatınızı bitirdiniz? Kursları izləyərək kompyuter sahəsi
+    və proqramlaşdırma anlayışları barədə daha çox şey öyrənin."
+  og_title: Hər bir uşaq fürsətə layiqdir
+  og_description: Məktəbdəki hər şagird kompyuter sahəsini öyrənməyə layiqdir.
   hoc2014_heading: <a href="http://hourofcode.com">Kod Saatı</a>na qoşulun<br/>8 -
     14 dekabr, 2014<br/>
   hoc2014_students: "Şagirdlər"
@@ -41,13 +41,13 @@
   hoc2014_support: Dəstək verin &#x25BE;
   hoc2014_whatishoc: Kod Saatı nədir?
   csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_signup: Tədbirinizi qeydiyyatdan keçirin
+  csedweek_map_search_placeholder: Kod Saatı tədbirlərini axtarın
+  csedweek_map_search_search: Axtar
   csedweek_map_search_reset: Yenidən başla
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_title: "Əfsanə"
+  csedweek_map_legend_event: Kod saatı tədbiri
+  csedweek_map_legend_cs_tech_jam: Xüsusi tədbir
   cded_sign_up: Qeydiyyatdan keçin
   cded_try_it: Sınaqdan keçirin
   twentyhours_trynow: Elə indi sınaqdan keçirin
@@ -56,7 +56,7 @@
     deyə bilər. İstənilən ibtidai sinifdə <a href='http://code.org/educate/k5'>informatika
     tədris oluna</a> bilər. Məktəblərdən xahiş edin ki, <a href='http://code.org/educate/districts'>bizimlə
     tərəfdaş olsunlar."
-  california_button: Learn More
+  california_button: Daha çox
   flappy_heading: Qanad günün mübarək, Code.org
   flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
     your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
@@ -83,11 +83,13 @@
   congratulations_on_completing_course4: Congratulations on completing Course 4
   congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
     Course
-  congrats_next_tutorials_title: Try these courses next
+  congrats_next_tutorials_title: Kursları sına
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: Nailiyyət sertifikatı əldə edin
   view_course: View course
+  view_unit: View unit
+  make_app: Make an app
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
@@ -96,11 +98,7 @@
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -112,9 +110,10 @@
   third_party_platform_mobile: 'Platform: iPad & Android'
   third_party_platform_web: 'Platform: Web'
   third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_price_free: 'Hədiyyə: Pulsuz'
+  third_party_price_299: 'Hədiyyə: $2.99/endirin'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
@@ -134,7 +133,7 @@
     games, and animations and share your creations with others in the online community.
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_curriculum: Kurrikulum xəttini endirin
   third_party_scratch_btn_forum: Scratch Educator Forum
   third_party_scratch_btn_site: Visit Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
@@ -164,7 +163,6 @@
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -180,6 +178,7 @@
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -381,6 +380,9 @@
   homepage_slot_text_link_othercourses: Digər onlayn kurslar
   homepage_slot_text_title_educators: Təlimçilər
   homepage_slot_text_blurb_educators: "Şagirdlərinizi öyrədin"
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Middle school
+  homepage_slot_text_link_high: High school
   homepage_slot_text_link_k5: K-5 (11-12 yaşlılar) üçün kurslar
   homepage_slot_text_link_fullcurriculum: Tam kurikulumu nəzərdən keçirin
   homepage_slot_text_link_pd: Peşəkar inkişaf
@@ -653,6 +655,7 @@
   dashboard_navigation_all_sections: Student Accounts and Progress
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -765,10 +768,21 @@
   dashboard_progress_completed_too_many_blocks: tamamlanıb, artıq bloklar var
   dashboard_progress_completed_perfect: tamamlanıb, əladır
   dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_submitted: submitted
   dashboard_stage: mərhələ
   dashboard_puzzle: Tapmaca
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Düzgün
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
@@ -922,6 +936,18 @@
   course3_name: Kurs 3
   course4_name: Kurs 4
   accelerated_name: Sürətləndirilmiş kurs
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
+    of computer programming, which unlocks the ability to make rich, interactive apps.
+    This course uses JavaScript as the programming language, and App Lab as the programming
+    environment to build apps, but the concepts learned in these lessons span all
+    programming languages and tools.
+  applab_name: App Lab
+  applab_gradelevel: Ages 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you
+    can make simple apps. Design an app, code with blocks or JavaScript to make it
+    work, then share your app in seconds
   codeorg_gradelevel: 4-104 yaş
   codeintl_gradelevel: 4-104 yaş
   thinkersmithspanish_gradelevel: Por todos
@@ -1604,4 +1630,3 @@
   infinity_shortcode: inf
   playlab_shortcode: səsləndir
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

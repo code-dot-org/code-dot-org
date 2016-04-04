@@ -42,8 +42,7 @@ exports.install = function(blockly, blockInstallOptions) {
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
 
-  if (skin.id == "anna" || skin.id == "elsa")
-  {
+  if (skin.id == "anna" || skin.id == "elsa") {
     // Create a smaller palette.
     blockly.FieldColour.COLOURS = [
       Colours.FROZEN1, Colours.FROZEN2, Colours.FROZEN3,
@@ -937,30 +936,36 @@ exports.install = function(blockly, blockInstallOptions) {
         '(\'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.turtle_stamp = {
+  // We alias 'turtle_stamp' to be the same as the 'sticker' block for
+  // backwards compatibility.
+  blockly.Blocks.sticker = blockly.Blocks.turtle_stamp = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      this.setHSV(184, 1.00, 0.74);
       var dropdown;
       var input = this.appendDummyInput();
-      input.appendTitle(msg.drawStamp());
-      dropdown = new blockly.FieldImageDropdown(this.VALUES, 50, 30);
+      input.appendTitle(msg.drawSticker());
+
+      // Generates a list of pairs of the form [[url, name]]
+      var values = [];
+      for (var name in skin.stickers) {
+        var url = skin.stickers[name];
+        values.push([url, name]);
+      }
+
+      dropdown = new blockly.FieldImageDropdown(values, 40, 40);
 
       input.appendTitle(dropdown, 'VALUE');
 
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-      this.setTooltip(msg.drawStamp());
+      this.setTooltip(msg.drawSticker());
     }
   };
 
-  // block is currently unused. if we want to add it back in the future, add
-  // stamp images here
-  blockly.Blocks.turtle_stamp.VALUES = skin.stampValues;
-
-  generator.turtle_stamp = function () {
-    return 'Turtle.drawStamp("' + this.getTitleValue('VALUE') +
+  generator.sticker = generator.turtle_stamp = function () {
+    return 'Turtle.drawSticker("' + this.getTitleValue('VALUE') +
         '", \'block_id_' + this.id + '\');\n';
   };
 

@@ -8,6 +8,21 @@ module.exports = function (grunt) {
 
   var config = {};
 
+  /**
+   * Interval for filesystem polling in watch mode.
+   * Warning: 100ms hits 75% CPU on OS X. 700ms is around 10%.
+   * See https://github.com/gruntjs/grunt-contrib-watch/issues/145
+   * If OS X polling remains a CPU issue, can try grunt-este-watch
+   * @const {number}
+   */
+  var DEV_WATCH_INTERVAL = parseInt(grunt.option('delay')) || 700;
+
+  /** @const {number} */
+  var PLAYGROUND_PORT = grunt.option('playground-port') || 8000;
+
+  /** @const {string} */
+  var APP_TO_BUILD = grunt.option('app') || process.env.MOOC_APP;
+
   /** @const {string[]} */
   var APPS = [
     'maze',
@@ -24,80 +39,17 @@ module.exports = function (grunt) {
     'gamelab'
   ];
 
-  if (process.env.MOOC_APP) {
-    var app = process.env.MOOC_APP;
-    if (APPS.indexOf(app) === -1) {
-      throw new Error('Unknown app: ' + app);
+  if (APP_TO_BUILD) {
+    if (APPS.indexOf(APP_TO_BUILD) === -1) {
+      throw new Error('Unknown app: ' + APP_TO_BUILD);
     }
-    APPS = [app];
+    APPS = [APP_TO_BUILD];
   }
 
   // Parse options from environment.
   var envOptions = {
-    localize: (process.env.MOOC_LOCALIZE === '1'),
     dev: (process.env.MOOC_DEV === '1')
   };
-
-  var LOCALES = (envOptions.localize ? [
-    'ar_sa',
-    'az_az',
-    'bg_bg',
-    'bn_bd',
-    'ca_es',
-    'cs_cz',
-    'da_dk',
-    'de_de',
-    'el_gr',
-    'en_us',
-    'en_ploc',
-    'es_es',
-    'eu_es',
-    'fa_ir',
-    'fi_fi',
-    'fil_ph',
-    'fr_fr',
-    'he_il',
-    'hi_in',
-    'hr_hr',
-    'hu_hu',
-    'id_id',
-    'is_is',
-    'it_it',
-    'ja_jp',
-    'ko_kr',
-    'lt_lt',
-    'lv_lv',
-    'ms_my',
-    'nl_nl',
-    'nn_no',
-    'no_no',
-    'pl_pl',
-    'pt_br',
-    'pt_pt',
-    'ro_ro',
-    'ru_ru',
-    'sk_sk',
-    'sl_si',
-    'sq_al',
-    'sr_sp',
-    'sv_se',
-    'ta_in',
-    'th_th',
-    'tr_tr',
-    'uk_ua',
-    'ur_pk',
-    'vi_vn',
-    'zh_cn',
-    'zh_tw'
-  ] : [
-    'en_us',
-    'en_ploc'
-  ]);
-
-  // if specified will, will build en_us, en_ploc, and specified locale
-  if (process.env.MOOC_LOCALE) {
-    LOCALES.push(process.env.MOOC_LOCALE);
-  }
 
   config.clean = {
     all: ['build']
@@ -248,7 +200,7 @@ module.exports = function (grunt) {
           'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
           'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
           'last', 'clone', 'cloneDeep', 'isEqual', 'find', 'sortBy', 'throttle',
-          'uniq'
+          'uniq', 'assign', 'merge'
         ]
       }
     }
@@ -318,17 +270,25 @@ module.exports = function (grunt) {
   });
 
   // Use command-line tools to run browserify (faster/more stable this way)
-  var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc ' +
-      '--cachefile ' + outputDir + 'browserifyinc-cache.json ' +
-      ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ] -d ' + allFilesSrc.join(' ') +
-      (APPS.length > 1 ? ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
-      ' -o ' + allFilesDest[0]);
+  var browserifyExec = 'mkdir -p build/browserified &&' +
+      (envOptions.dev ? '' : ' NODE_ENV=production') + // Necessary for production Redux
+      ' `npm bin`/browserifyinc' +
+      ' -g [ browserify-global-shim ]' +
+      ' --cachefile ' + outputDir + 'browserifyinc-cache.json' +
+      ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
+      (envOptions.dev ? '' : ' -t loose-envify') +
+      ' -d ' + allFilesSrc.join(' ') +
+      (
+          APPS.length > 1 ?
+          ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
+          ' -o ' + allFilesDest[0]
+      );
 
   var fastMochaTest = process.argv.indexOf('--fast') !== -1;
 
   config.exec = {
-    browserify: browserifyExec,
-    watchify: browserifyExec.replace('browserifyinc', 'watchify') + ' -v',
+    browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
+    convertScssVars: './script/convert-scss-variables.js',
     mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
   };
 
@@ -346,12 +306,11 @@ module.exports = function (grunt) {
   };
 
   config.express = {
-    server: {
+    playground: {
       options: {
-        port: 8000,
+        port: PLAYGROUND_PORT,
         bases: path.resolve(__dirname, 'build/package'),
-        server: path.resolve(__dirname, './src/dev/server.js'),
-        livereload: true
+        server: path.resolve(__dirname, './src/dev/server.js')
       }
     }
   };
@@ -388,101 +347,58 @@ module.exports = function (grunt) {
   config.watch = {
     js: {
       files: ['src/**/*.{js,jsx}'],
-      tasks: ['newer:copy:src'],
+      tasks: ['newer:copy:src', 'exec:browserify', 'notify:browserify'],
       options: {
-        interval: 5007
+        interval: DEV_WATCH_INTERVAL,
+        livereload: true
       }
     },
     style: {
       files: ['style/**/*.scss', 'style/**/*.sass'],
-      tasks: ['newer:sass'],
+      tasks: ['newer:sass', 'notify:sass'],
       options: {
-        interval: 5007
+        interval: DEV_WATCH_INTERVAL,
+        livereload: true
       }
     },
     content: {
       files: ['static/**/*'],
-      tasks: ['newer:copy'],
+      tasks: ['newer:copy', 'notify:content'],
       options: {
-        interval: 5007
+        interval: DEV_WATCH_INTERVAL,
+        livereload: true
       }
     },
     vendor_js: {
       files: ['lib/**/*.js'],
-      tasks: ['newer:concat', 'newer:copy:lib'],
+      tasks: ['newer:concat', 'newer:copy:lib', 'notify:vendor_js'],
       options: {
-        interval: 5007
+        interval: DEV_WATCH_INTERVAL,
+        livereload: true
       }
     },
     ejs: {
       files: ['src/**/*.ejs'],
-      tasks: ['ejs'],
+      tasks: ['ejs', 'exec:browserify', 'notify:ejs'],
       options: {
-        interval: 5007
+        interval: DEV_WATCH_INTERVAL,
+        livereload: true
       }
     },
     messages: {
       files: ['i18n/**/*.json'],
-      tasks: ['pseudoloc', 'messages'],
+      tasks: ['pseudoloc', 'messages', 'notify:messages'],
       options: {
-        interval: 5007
+        interval: DEV_WATCH_INTERVAL,
+        livereload: true
       }
     },
-    dist: {
-      files: ['build/package/**/*'],
-      options: {
-        livereload: true,
-        interval: 5007
-      }
-    }
   };
 
-  config.jshint = {
-    options: {
-      browser: true,
-      curly: true,
-      esnext: true,
-      funcscope: true,
-      maxparams: 8,
-      maxstatements: 200,
-      mocha: true,
-      node: true,
-      nonew: true,
-      shadow: false,
-      undef: true,
-      globals: {
-        $: true,
-        jQuery: true,
-        React: true,
-        Blockly: true,
-        Phaser: true,
-        //TODO: Eliminate the globals below here. Could at least warn about them
-        // in their respective files
-        Studio: true,
-        Maze: true,
-        Turtle: true,
-        Bounce: true,
-        Eval: true,
-        Flappy: true,
-        Applab: true,
-        Calc: true,
-        Jigsaw: true
-      }
-    },
-    all: [
-      'Gruntfile.js',
-      'tasks/**/*.js',
-      'src/**/*.js*',
-      'test/**/*.js',
-      '!src/**/*.min.js*',
-      '!src/hammer.js',
-      '!src/lodash.js',
-      '!src/canvg/*.js',
-      '!src/calc/js-numbers/js-numbers.js',
-      '!src/ResizeSensor.js',
-      '!src/applab/colpick.js'
-    ],
-    some: [], // This gets dynamically populated in the register task
+  config.open = {
+    playground: {
+      path: 'http://localhost:' + PLAYGROUND_PORT
+    }
   };
 
   config.strip_code = {
@@ -493,6 +409,15 @@ module.exports = function (grunt) {
     all: {
       src: ['build/js/*.js']
     }
+  };
+
+  config.notify = {
+    browserify: {options: {message: 'Browserify build completed.'}},
+    sass: {options: {message: 'SASS build completed.'}},
+    content: {options: {message: 'Content build completed.'}},
+    ejs: {options: {message: 'EJS build completed.'}},
+    messages: {options: {message: 'i18n messages build completed.'}},
+    vendor_js: { options: {message: 'Blockly concat & vendor JS copy done.'}}
   };
 
   grunt.initConfig(config);
@@ -526,6 +451,7 @@ module.exports = function (grunt) {
     'checkDropletSize',
     'pseudoloc',
     'newer:messages',
+    'exec:convertScssVars',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
@@ -542,6 +468,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'prebuild',
     'exec:browserify',
+    'notify:browserify',
     // Skip minification in development environment.
     envOptions.dev ? 'noop' : ('concurrent:uglify'),
     'postbuild'
@@ -549,41 +476,22 @@ module.exports = function (grunt) {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
-  config.concurrent.watch = {
-    tasks: ['exec:watchify', 'watch'],
-    options: {
-      logConcurrentOutput: true
-    }
-  };
-
   grunt.registerTask('dev', [
-    'prebuild',
-    'postbuild',
-    'express:server',
-    'concurrent:watch'
+    'build',
+    'express:playground',
+    'open:playground',
+    'watch'
   ]);
-
-  grunt.registerTask('jshint:files', function () {
-    var files;
-    if (grunt.option('files')) {
-      files = grunt.option('files').split(",");
-      grunt.config('jshint.some', files);
-    } else if (grunt.option('glob')) {
-      files = glob.sync(grunt.option('glob'));
-      console.log('files: ' + files.join('\n'));
-      grunt.config('jshint.some', files);
-    }
-    grunt.task.run('jshint:some');
-  });
 
   grunt.registerTask('mochaTest', [
     'newer:messages',
+    'exec:convertScssVars',
     'newer:copy:static',
     'newer:concat',
     'exec:mochaTest'
   ]);
 
-  grunt.registerTask('test', ['jshint:all', 'mochaTest']);
+  grunt.registerTask('test', ['mochaTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 

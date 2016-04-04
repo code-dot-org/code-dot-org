@@ -1,3 +1,4 @@
+/* global Promise */
 var _ = require('lodash');
 require("babelify/polyfill"); // required for Promises in IE / Phantom
 

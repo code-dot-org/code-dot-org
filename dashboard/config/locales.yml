@@ -201,8 +201,7 @@
 "ka-GE":
   english: "Georgian"
   native: "ქართული"
-  webfonts: false  
-  debug: true
+  webfonts: false
 
 "ko": "ko-KR"
 "ko-KR":
@@ -327,6 +326,12 @@
   english: "Russian"
   native: "Русский"
   webfonts: false
+
+"se": "se-FI"
+"se-FI":
+  english: "Northern Sami"
+  native: "Davvisámegiella"
+  debug: true
 
 "si": "si-LK"
 "si-LK":

@@ -26,17 +26,4 @@ class HocHardwarePrizes2014
       results.merge! location.to_solr('school_') if location
     end
   end
-
-  def self.solr_query(params)
-    query = '*:*'
-
-    fq = []
-    fq.push("kind_s:#{self.name}")
-
-    {
-      q: query,
-      fq: fq,
-      rows: rows,
-    }
-  end
 end
