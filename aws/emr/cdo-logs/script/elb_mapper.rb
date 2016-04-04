@@ -3,78 +3,77 @@
 # The list of tutorials. Note that relative order matters, e.g., it is important
 # that "starwarsblocks" proceeds "starwars" as the latter will match the regex
 # for the former.
-tutorials = [
-    "russia_mc",
-    "static_mc",
-    "mc",
-    "disney_static_starwarsblocks",
-    "disney_static_starwars",
-    "static_starwars",
-    "starwarsblocks",
-    "starwars",
-    "tynkerapp",
-    "tynker",
-    "frozen",
-    "flappy",
-    "hourofcode",
-    "codecombat",
-    "lightbotintl",
-    "lightbot2",
-    "lightbot",
-    "scratch",
-    "khanes",
-    "khanfr",
-    "khanhe",
-    "khanpl",
-    "khanpt",
-    "khan",
-    "playlab",
-    "makegameswithus",
-    "touchdevelop",
-    "codemonkey",
-    "codecademy",
-    "processing",
-    "codespark",
-    "groklearning",
-    "appinventor",
-    "codeavengers",
-    "codehs",
-    "bitsbox",
-    "agentcubes",
-    "gumball",
-    "artist",
-    "blockly",
-    "infinity",
-    "robomindnl",
-    "robomind",
-    "iceage",
-    "codeintl",
-    "allcancode",
-    "hopscotch",
-    "makeschool",
-    "condcards",
-    "monstercoding",
-    "thinkersmithspanish",
-    "thinkersmith2",
-    "thinkersmith",
-    "lookingglass",
-    "csfirst",
-    "livecode",
-    "alice2",
-    "alice",
-    "quorum",
-    "projguts",
-    "codesters",
-    "boxisland",
-    "teacherled",
-    "kodableunplugged",
-    "kodableapp",
-    "kodable",
-    "texasinstruments",
-    "baymaxes",
-    "pixies",
-    "finchrobot"
-  ]
+tutorials = %w(
+russia_mc 
+static_mc 
+mc 
+disney_static_starwarsblocks 
+disney_static_starwars 
+static_starwars 
+starwarsblocks 
+starwars 
+tynkerapp 
+tynker 
+frozen 
+flappy 
+hourofcode 
+codecombat 
+lightbotintl 
+lightbot2 
+lightbot 
+scratch 
+khanes 
+khanfr 
+khanhe 
+khanpl 
+khanpt 
+khan 
+playlab 
+makegameswithus 
+touchdevelop 
+codemonkey 
+codecademy 
+processing 
+codespark 
+groklearning 
+appinventor 
+codeavengers 
+codehs 
+bitsbox 
+agentcubes 
+gumball 
+artist 
+blockly 
+infinity 
+robomindnl 
+robomind 
+iceage 
+codeintl 
+allcancode 
+hopscotch 
+makeschool 
+condcards 
+monstercoding 
+thinkersmithspanish 
+thinkersmith2 
+thinkersmith 
+lookingglass 
+csfirst 
+livecode 
+alice2 
+alice 
+quorum 
+projguts 
+codesters 
+boxisland 
+teacherled 
+kodableunplugged 
+kodableapp 
+kodable 
+texasinstruments 
+baymaxes 
+pixies 
+finchrobot)
 
 LONG_VALUE_SUM = "LongValueSum:"
 

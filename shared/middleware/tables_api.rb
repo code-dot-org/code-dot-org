@@ -362,7 +362,7 @@ class TablesApi < Sinatra::Base
     column = request.GET['column_name']
     type = request.GET['type']
 
-    return 400 unless ['string', 'boolean', 'number'].include?(type)
+    return 400 unless %w(string boolean number).include?(type)
 
     current_records = table.to_a
     new_records, all_converted = TableCoerce.coerce_column(current_records, column, type.to_sym)

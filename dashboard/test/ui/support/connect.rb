@@ -16,7 +16,7 @@ def local_browser
 end
 
 def slow_browser?
-  ['iPhone', 'iPad'].include? ENV['BROWSER_CONFIG']
+  %w(iPhone iPad).include? ENV['BROWSER_CONFIG']
 end
 
 def saucelabs_browser

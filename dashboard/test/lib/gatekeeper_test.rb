@@ -65,12 +65,12 @@ class GatekeeperTest < ActiveSupport::TestCase
     Gatekeeper.set('shareEnabled', where: {script_name: 'gumball', color: 'red'}, value: true)
     Gatekeeper.set('shareEnabled', where: {script_name: 'mc'}, value: true)
 
-    assert_equal Set.new(['hint_view_request', 'postMilestone', 'shareEnabled']), Gatekeeper.feature_names
-    assert_equal Set.new(['frozen', 'gumball', 'mc']), Gatekeeper.script_names
+    assert_equal Set.new(%w(hint_view_request postMilestone shareEnabled)), Gatekeeper.feature_names
+    assert_equal Set.new(%w(frozen gumball mc)), Gatekeeper.script_names
 
     # Make sure that a deleted feature no longer shows up in the list of feature names.
     Gatekeeper.delete('hint_view_request')
-    assert_equal Set.new(['postMilestone', 'shareEnabled']), Gatekeeper.feature_names
+    assert_equal Set.new(%w(postMilestone shareEnabled)), Gatekeeper.feature_names
   end
 
 end

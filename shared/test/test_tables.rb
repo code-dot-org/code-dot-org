@@ -157,7 +157,7 @@ class TablesTest < Minitest::Test
     assert_equal records.first['city'], 'SFO'
 
     @table_name = 'table2'
-    assert_equal ['state', 'country'], JSON.parse(read_metadata["column_list"])
+    assert_equal %w(state country), JSON.parse(read_metadata["column_list"])
     records = read_records
 
     assert_equal records.last['country'], 'USA'
@@ -175,7 +175,7 @@ class TablesTest < Minitest::Test
     csv_filename = File.expand_path('../roster.csv', __FILE__)
     import(csv_filename)
 
-    assert_equal ['name', 'male', 'age'], JSON.parse(read_metadata["column_list"])
+    assert_equal %w(name male age), JSON.parse(read_metadata["column_list"])
     records = read_records
     assert_equal 34, records.length
     assert_equal 'alice', records[0]['name']
@@ -218,7 +218,7 @@ class TablesTest < Minitest::Test
     assert_equal ['one'], JSON.parse(read_metadata["column_list"])
 
     add_column('two')
-    assert_equal ['one', 'two'], JSON.parse(read_metadata["column_list"])
+    assert_equal %w(one two), JSON.parse(read_metadata["column_list"])
 
     delete_channel
   end
@@ -230,8 +230,8 @@ class TablesTest < Minitest::Test
 
     create_record('name' => 'trevor', 'age' => 30)
     create_record('name' => 'mitra', 'age' => 29)
-    write_column_metadata(['name', 'age'])
-    assert_equal ['name', 'age'], JSON.parse(read_metadata["column_list"])
+    write_column_metadata(%w(name age))
+    assert_equal %w(name age), JSON.parse(read_metadata["column_list"])
 
     delete_column('age')
     assert_equal ['name'], JSON.parse(read_metadata["column_list"])
@@ -300,11 +300,11 @@ class TablesTest < Minitest::Test
 
     populate_table(data1, true)
 
-    assert_equal ['table1', 'table2'], TableType.table_names(decrypted_channel_id)
+    assert_equal %w(table1 table2), TableType.table_names(decrypted_channel_id)
 
     # Now add a data that has no records (but should have metadata)
     populate_table({ 'new_table' => [] }, false)
-    assert_equal ['table1', 'table2', 'new_table'], TableType.table_names(decrypted_channel_id)
+    assert_equal %w(table1 table2 new_table), TableType.table_names(decrypted_channel_id)
 
     delete_channel
   end
@@ -313,14 +313,14 @@ class TablesTest < Minitest::Test
     records = [
       { "id" => 1, "col1" => 1, "col2" => 2 }
     ]
-    expected = ["col1", "col2"]
+    expected = %w(col1 col2)
     assert_equal expected, TableMetadata.generate_column_list(records)
 
     records = [
       { "id" => 1, "col1" => 1, "col2" => 2 },
       { "id" => 2, "col2" => 3, "col3" => 4 }
     ]
-    expected = ["col1", "col2", "col3"]
+    expected = %w(col1 col2 col3)
     assert_equal expected, TableMetadata.generate_column_list(records)
 
     records = []
@@ -329,11 +329,11 @@ class TablesTest < Minitest::Test
   end
 
   def test_metadata_remove_column
-    column_list = ["col1", "col2", "col3"]
+    column_list = %w(col1 col2 col3)
 
-    assert_equal ["col1", "col2"], TableMetadata.remove_column(column_list, "col3")
-    assert_equal ["col1", "col3"], TableMetadata.remove_column(column_list, "col2")
-    assert_equal ["col2", "col3"], TableMetadata.remove_column(column_list, "col1")
+    assert_equal %w(col1 col2), TableMetadata.remove_column(column_list, "col3")
+    assert_equal %w(col1 col3), TableMetadata.remove_column(column_list, "col2")
+    assert_equal %w(col2 col3), TableMetadata.remove_column(column_list, "col1")
 
     assert_raises 'No such column' do
       TableMetadata.remove_column(column_list, "col4")
@@ -345,9 +345,9 @@ class TablesTest < Minitest::Test
   end
 
   def test_metadata_add_column
-    column_list = ["col1", "col2"]
+    column_list = %w(col1 col2)
 
-    assert_equal ["col1", "col2", "col3"], TableMetadata.add_column(column_list, "col3")
+    assert_equal %w(col1 col2 col3), TableMetadata.add_column(column_list, "col3")
 
     assert_raises 'Column already exists' do
       TableMetadata.add_column(column_list, "col1")

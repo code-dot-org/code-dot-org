@@ -6,7 +6,7 @@ class HocHardwarePrizes2014
     result[:name_s] = required stripped data[:name_s]
     result[:school_name_s] = required stripped data[:school_name_s]
     result[:school_address_s] = required stripped data[:school_address_s]
-    result[:school_type_s] = required enum(data[:school_type_s].to_s.strip.downcase, ['elementary', 'middle_school', 'high_school'])
+    result[:school_type_s] = required enum(data[:school_type_s].to_s.strip.downcase, %w(elementary middle_school high_school))
     result[:qualifying_school_b] = required stripped data[:qualifying_school_b]
     result[:number_students_s] = required data[:number_students_s]
 

@@ -5,7 +5,7 @@ class HocSignup2014
     result[:email_s] = required email_address data[:email_s]
     result[:name_s] = required stripped data[:name_s]
     result[:organization_name_s] = required stripped data[:organization_name_s]
-    result[:event_type_s] = enum(data[:event_type_s].to_s.strip.downcase, ['in_school', 'out_of_school'])
+    result[:event_type_s] = enum(data[:event_type_s].to_s.strip.downcase, %w(in_school out_of_school))
     result[:event_location_s] = stripped data[:event_location_s]
     result[:entire_school_flag_b] = stripped data[:entire_school_flag_b]
     result[:send_posters_flag_b] = stripped data[:send_posters_flag_b]

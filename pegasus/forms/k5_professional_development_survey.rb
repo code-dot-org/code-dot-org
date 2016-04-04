@@ -3,9 +3,8 @@ class K5ProfessionalDevelopmentSurvey
   AGREEMENT_ANSWERS = (-2..2).map(&:to_s)
   SCALE_ANSWERS = (1..10).map(&:to_s)
   SIMPLE_ANSWERS = (
-    ['yes',
-    'no',
-    ]
+    %w(yes 
+no)
   )
   DEGREE_TYPE = (
     ['art',
@@ -125,11 +124,10 @@ class K5ProfessionalDevelopmentSurvey
       'other',
     ]
     result[:teacher_describe_other_s] = required stripped data[:teacher_describe_other_s] if result[:teacher_describe_s] == 'other'
-    result[:course_offering_s] = required enum data[:course_offering_s].to_s.strip.downcase, [
-      'yes',
-      'no',
-      'maybe',
-    ]
+    result[:course_offering_s] = required enum data[:course_offering_s].to_s.strip.downcase, %w(
+yes 
+no 
+maybe)
     result[:teaching_cs_s] = required enum data[:teaching_cs_s].to_s.strip.downcase, SIMPLE_ANSWERS
     result[:cs_materials_ss] = enum data[:cs_materials_ss].to_s.strip.downcase, [
       'scratch',

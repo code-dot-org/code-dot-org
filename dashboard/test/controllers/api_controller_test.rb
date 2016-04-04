@@ -146,7 +146,7 @@ class ApiControllerTest < ActionController::TestCase
     # create 2 level_group levels
     level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
     level1.properties['title'] =  'Long assessment 1'
-    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
+    level1.properties['pages'] = [{levels: %w(level_free_response level_multi_unsubmitted)}, {levels: %w(level_multi_correct level_multi_incorrect)}]
     level1.save!
     create :script_level, script: script, level: level1, assessment: true
 

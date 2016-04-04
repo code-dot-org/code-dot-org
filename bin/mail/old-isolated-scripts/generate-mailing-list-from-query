@@ -27,7 +27,7 @@ def query_contacts(params)
   fields = params[:fields] if params[:fields]
 
   [].tap do |results|
-    SOLR.query(params.merge(rows: 10000, fl: ['email_s', 'name_s'] + fields)).each do |i|
+    SOLR.query(params.merge(rows: 10000, fl: %w(email_s name_s) + fields)).each do |i|
       i = yield(i) if block_given?
       results << {email: i['email_s'].downcase.strip, name: i['name_s']}.merge(i.slice(*fields)) if i
     end
