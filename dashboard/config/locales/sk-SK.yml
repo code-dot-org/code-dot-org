@@ -414,6 +414,8 @@
       Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Všetky práva vyhradené.
       Plants vs. Zombies &#8482; © %{current_year} Electronic Arts Inc. Všetky práva
       vyhradené. The Amazing World of Gumball je ochranná známka © 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Poháňaný službami Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org®, CODElogo a Hour of Code
       ® sú ochranné známky Code.org."

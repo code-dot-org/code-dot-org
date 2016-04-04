@@ -1777,6 +1777,10 @@ uk:
       Overworld Avoid Monsters_instruction: |
         Налетіти на Плазуна - погана ідея.
         Обережно пробирайся повз Плазунів та доберись до безпеки свого дому.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Деревина - важливий ресурс. З неї виготовляють багато речей. Підійди до дерева і скористайся командою "знищити блок", щоб зрубати його.'
       Overworld Chop Trees_instruction: Нам потрібно збудувати будинок до заходу сонця. Для цього потрібно багато деревини. Зрубай 3 дерева.
       Overworld Free Play 20x20_instruction: Вітання! Вирішено останнє завдання! Тепер добувай, будуй, створюй щось унікальне, використовуючи все вивчене.
@@ -1977,6 +1981,10 @@ uk:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: 'Ці хмари мене нервують! У деяких хмарках всередині є квіти, а деякі - порожні. Потрібно перевірити кожну хмарку, і добувати нектар лише з квітів.'
       Quantum Bee_instruction: 'Фіолетові квіти можуть мати 1 або 0 нектарів, але не відомо скільки саме! Обережно - не збирай нектар з квітки, якщо його там немає. Перевір, чи нектар рівний 1 за допомогою блоку "якщо".'
       Ryan - 4-5 Bee Conditionals 2_instruction: "Зараз бджолі потрібен тільки нектар. Не всі об'єкти є квітами, тож перевіряй під кожною хмаринкою, чи приховує вона квітку. Якщо так, то можна збирати нектар."

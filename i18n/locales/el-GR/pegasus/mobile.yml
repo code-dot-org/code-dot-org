@@ -21,7 +21,7 @@ el-GR:
   twentyhours_heading: Δοκιμάστε την εισαγωγή μας στη Σειρά Μαθημάτων Επιστήμης των Υπολογιστών
   twentyhours_text: Τελειώσατε την πρώτη σας Ώρα του Κώδικα; Μάθετε περισσότερα για τα βασικά της επιστήμης της πληροφορικής και έννοιες προγραμματισμού στο ακόλουθο μάθημα.
   og_title: Κάθε παιδί δικαιούται μία ευκαιρία
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: Κάθε μαθητής σε κάθε σχολείο αξίζει μια ευκαιρία να σπυδάσει την επιιστήμη των υπολογιστών. Αλλάζει τα πάντα.
   hoc2014_heading: 'Συμμετάσχετε στην <a href="http://hourofcode.com"> Ώρα του Κώδικα</a><br/>8-14 Δεκεμβρίου 2014<br/>'
   hoc2014_students: Μαθητές
   hoc2014_try: Δοκιμάστε το
@@ -179,7 +179,7 @@ el-GR:
   learn_next_level: Δοκιμάστε ένα άλλο μάθημα στο Code Studio
   learn_online: Δοκιμάστε τα άλλα μαθήματα online
   learn_classes: Βρείτε τάξεις κοντά σας
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: 'Μάθετε την επιστήμη των υπολογιστών. Αυτό αλλάζει τα πάντα.  https://youtu.be/xJqSu1IbcHg.'
   just_did_hoc: 'Μόλις ολοκλήρωσα την Ώρα του Κώδικα (#HourOfCode) - ελέγξτε το! @codeorg'
   just_did_course1: 'Μόλις τελειώσα το Μάθημα 1 - Ελεγξέ το! @codeorg'
   just_did_course2: 'Μόλις τελειώσα το Μάθημα 2 - Ελεγξέ το! @codeorg'
@@ -487,7 +487,7 @@ el-GR:
   dashboard_navigation_all_sections: Λογαριασμοί μαθητών και Πρόοδος
   dashboard_navigation_view_progress: Προβολή προόδου
   dashboard_navigation_view_text_responses: Προβολή Αποκρίσεων Κειμένου
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: Αξιολογήσεις
   dashboard_navigation_add_students: Προσθήκη μαθητών
   dashboard_navigation_manage_students: Διαχείριση μαθητών
   dashboard_navigation_lesson_plans_resources: Σχέδια μαθήματος και Πόροι
@@ -586,16 +586,18 @@ el-GR:
   dashboard_puzzle: Παζλ
   dashboard_question: Ερώτηση
   dashboard_response: Απάντηση
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: Ορθότητα
+  dashboard_correctness_free_response: Δωρεάν απάντηση
+  dashboard_correctness_unsubmitted: Ανακλήθηκε
   dashboard_correctness_correct: Σωστό
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_status: Status
-  dashboard_multi_correct: '# multiple choice correct'
-  dashboard_multi_count: '# multiple choice'
-  dashboard_multi_correct_percent: '% multiple choice correct'
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_correctness_incorrect: Εσφαλμένο
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Κατάσταση
+  dashboard_multi_correct: '# η πολλαπλή επιλογή είναι σωστή'
+  dashboard_multi_count: '# πολλαπλή επιλογή'
+  dashboard_multi_correct_percent: '% της πολλαπλής επιλογής σωστά'
+  dashboard_submission_timestamp: Ημενρομηνία και ώρα υποβολής
   stats_hoc_2013_heading: 'Απίστευτα στατιστικά από την περσινή ώρα του κώδικα. Σε μία εβδομάδα μόνο:'
   stats_hoc_2013_image_alt: Στατιστικά στοιχεία από την ώρα του κώδικα του 2013
   dashboard_teacher: Καθηγητής
@@ -614,7 +616,7 @@ el-GR:
   dashboard_faq_k5: Συχνές ερωτήσεις για το επίπεδο πρωτοβάθμιας εκπαίδευσης (K-5)
   dashboard_announcements: Ανακοινώσεις
   dashboard_announce_view_all: Προβολή όλων
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Μάθετε περισσότερα
   dashboard_announce_hoc: "<b>15 Οκτωβρίου 2015</b> - Η Ώρα του Κώδικα πλησιάζει &mdash; κάθε συμμετέχον διοργανωτής θα λάβει μια κάρτα δώρου για το Amazon.com ή το Microsoft's Windows Store ως ευχαριστήριο δώρο. Εγγραφείτε σε τάξεις σε όλο τον κόσμο κατά την περίοδο 7-13 Δεκεμβρίου."
   dashboard_announce_playlab: '<b> 4 Δεκέμβρη, 2015 </b> - Η Ωρα του Κώδικα έφτασε! Δοκιμάστε τα 50 σεμινάρια για κάθε ηλικία και κάθε συσκευή. Νέα τελευταίας εβδομάδας: Προγραμμάτισε της δικές σου ιστορίες και παιχνίδια στο Play Lab! Δες πως μπορείς να προγραμματίσεις τα παιχίδια Ιce Age και Gumball.'

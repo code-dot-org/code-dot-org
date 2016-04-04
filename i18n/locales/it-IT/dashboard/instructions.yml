@@ -2063,6 +2063,10 @@ it:
         eyes and nose in any style you would like.
       October15 stars 1_instruction: 'Usa i cicli e il blocco "intero scelto a caso ..." per riempire la notte di stelle di varie forme e dimensioni.'
       Overworld Avoid Monsters_instruction: Incontrare un Creeper non è una buona idea. Muoviti con attenzione tra i Creeper e mettiti al sicuro a casa tua.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: |-
         Il legno è una risorsa molto importante: serve per costruire molte cose. Raggiungi l'albero e usa l'istruzione "distruggi" per abbatterlo.
       Overworld Chop Trees_instruction: 'Devi costruire una casa prima che il sole tramonti: ti serve molta legna. Abbatti tutti e tre gli alberi.'
@@ -2267,6 +2271,10 @@ it:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only

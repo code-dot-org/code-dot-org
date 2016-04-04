@@ -625,6 +625,8 @@ gl-ES:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Certo
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -648,7 +650,7 @@ gl-ES:
   dashboard_faq_k5: Preguntas frecuentes sobre Primaria
   dashboard_announcements: Anuncios
   dashboard_announce_view_all: Ver todos
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Aprende máis
   dashboard_announce_hoc: '<b>23 de novembro 2015</b> -Gostarías de ter un informártico para te axudar durante a hora do Código? Máis de 7.000 voluntarios procuran motivar os teus estudantes visitando a túa clase ou mediante vídeo-conferencia. Bota un ollo ao mapa de voluntarios para contactar voluntarios na túa zona.'
   dashboard_announce_playlab: '<b>4 de decembro de 2015</b> - A Hora do Código chegou! Proba 50 titoriais para todas as idades e dispositivos. Novidades desta semana: programa as túas propias historias e xogos en novos laboratorios, coa Era do Xeo e Gumball.'

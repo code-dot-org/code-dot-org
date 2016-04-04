@@ -1239,12 +1239,8 @@
         обекти са цветя, така че проверете цветята за събиране на нектар."
       Course 4 Artist 1_instruction: "Помогнете ми да завърша моята кутия. (Всеки
         ред е дълъг 200 пиксела) "
-      Course 4 Artist 10_instruction: "Щракнете тук, за да видите съветите отново!
-        \\r \\r Тук е кодът за създаване на интересна форма.  Какво се случва, когато
-        го повтаряте?   При завоите в тази форма се добавят до 420 градуса, което
-        означава, че когато вашият художник  прави чертеж, той ще бъде е с различна
-        посока от първоначалната.  Тази нова посока е точно 60 градуса вдясно от мястото,
-        където сте започнали."
+      Course 4 Artist 10_instruction: "Сега е време за импровизации! Забавлявайте
+        се и направете това, което Ви харесва. "
       Course 4 Artist 11_instruction: "Сега е време за  предизвикателство!  Ето един
         дизайн, който използва само блокове, които вече са показали.  Можеш ли да
         разбереш как да го пресъздадеш без никаква допълнителна информация?  Съвет:
@@ -1268,7 +1264,7 @@
         че да е симетричен. Триъгълниците са равностранни и с дължина  на страната
         50 пиксела."
       Course 4 Artist 6_instruction: "Попълнете кода, за да начертаете тези триъгълници.
-        Съвет: 3 триъгълници за 360 градуса завъртане. Колко пъти 3 се съдържа в 360?"
+        Съвет: 3 триъгълници за 360 градуса завъртане."
       Course 4 Artist 7_instruction: "Сега, внесете този цикъл в друг, за да начертаете
         10 триъгълници.  Това се нарича вложен цикъл.  Съвет: Всички 10 триъгълници
         образуват окръжност от 360 градуса.  "
@@ -2905,6 +2901,10 @@
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: "Тичането по пълзящи растения е лоша идея.
         Внимателно се придвижете покрай шиповете и достигнете безопасно до дома."
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: Дървесината е много важен ресурс. Много неща
         са направени от нея. Отидете до дървото и използвайте командата "унищожи блок",
         за да го отрежете.
@@ -3136,6 +3136,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only

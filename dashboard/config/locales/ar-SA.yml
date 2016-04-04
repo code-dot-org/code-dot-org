@@ -25,7 +25,7 @@
   welcome_back: "أهلاً بكم من جديد، %{name}"
   submit: "تسجيل"
   unsubmit: "عدم تقديم"
-  next_page: Next page
+  next_page: "الصفحة التالية"
   add_teacher_form:
     code:
       label: "إضافة معلِّماً:"
@@ -406,6 +406,8 @@
       ريفيو المتحدة للترفيه. جميع الحقوق محفوظة. النباتات ضد المتبلدين&#8482;&copy;%{current_year}
       الكترونكس ارتس. جميع الحقوق محفوظة. عالم غامبل المدهش علامة مسجلة و&copy; 2015
       شبكة الكرتون."
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: "تعمل على خدمات أمازون للويب"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;، إن شعار CODE و Hour
       of Code&reg; هما علامات تجارية لـ Code.org."

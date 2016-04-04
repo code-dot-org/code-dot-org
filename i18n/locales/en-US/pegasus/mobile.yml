@@ -587,6 +587,8 @@ en-US:
   dashboard_correctness_unsubmitted: crwdns56259:0crwdne56259:0
   dashboard_correctness_correct: crwdns56260:0crwdne56260:0
   dashboard_correctness_incorrect: crwdns56261:0crwdne56261:0
+  dashboard_submission_submitted: crwdns56272:0crwdne56272:0
+  dashboard_submission_in_progress: crwdns56273:0crwdne56273:0
   dashboard_status: crwdns56262:0crwdne56262:0
   dashboard_multi_correct: crwdns56263:0crwdne56263:0
   dashboard_multi_count: crwdns56264:0crwdne56264:0

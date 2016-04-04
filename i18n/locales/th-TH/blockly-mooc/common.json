@@ -1,6 +1,6 @@
 {
   "and":"และ",
-  "animationMode":"Animation",
+  "animationMode":"ภาพเคลื่อนไหว",
   "backToPreviousLevel":"กลับไปยังระดับก่อนหน้า",
   "blocklyMessage":"Blockly",
   "blocks":"บล็อก",
@@ -195,6 +195,7 @@
   "shareWarningsAge":"โปรดระบุอายุของคุณด้านล่าง และคลิกตกลงเพื่อดำเนินการต่อไป",
   "shareWarningsMoreInfo":"ข้อมูลเพิ่มเติม",
   "shareWarningsStoreData":"App นี้สร้างบนฐานข้อมูลของ Code Studio ที่สามารถดูได้โดยทุกคนที่มีลิ๊งค์นี้ ดังนั้นจึงควรระวัง ถ้าคุณถูกขอให้แจ้งข้อมูลส่วนตัว",
+  "showBlock":"Get a block",
   "showBlocksHeader":"แสดงบล็อก",
   "showCodeHeader":"แสดงรหัส",
   "showGeneratedCode":"แสดงโค้ด",

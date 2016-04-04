@@ -1732,7 +1732,7 @@ pt:
         5. Quanto mais lados adicionarmos a esse algoritmo, maior será o
         padrão! Vamos adicionar uma nova variável chamada "comprimento" e usá-la onde há
         um bloco "avance". Para essa forma, defina a variável "comprimento" como 75.
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the \"length\" variable, let's use a math block with the\n\"sides\" variable inside to make sure that each shape fits correctly. The\nperimeter of each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the `length` variable, let's use a math block with the `sides`\nvariable inside to make sure that each shape fits correctly. The perimeter\nof each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
       Course 4 Artist Vars 14_instruction: |
         Atividade livre: veja, agora seu algoritmo
         está aninhado dentro de mais um laço. Experimente alterar os valores das
@@ -3132,6 +3132,10 @@ pt:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Esbarrar num Creeper é má ideia. Desvia-te cuidadosamente dos Creepers e põe-te em segurança em casa.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'A madeira é um recurso muito importante. Fazem-se muitas coisas com ela. Aproxima-te de uma árvore e utiliza o comando "destruir bloco" para a cortares.'
       Overworld Chop Trees_instruction: Temos de construir uma casa antes que o sol se ponha. As casas precisam de muita madeira. Abate todas as 3 árvores.
       Overworld Free Play 20x20_instruction: 'Parabéns! Completaste todos os nossos quebra-cabeças! Agora escava, constrói e cria algo único, utilizando tudo o que aprendeste até agora. '
@@ -3336,6 +3340,10 @@ pt:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
