@@ -2837,6 +2837,10 @@
       Overworld Avoid Monsters_instruction: |
         Налетіти на Плазуна - погана ідея.
         Обережно пробирайся повз Плазунів та доберись до безпеки свого дому.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: Деревина - важливий ресурс. З неї виготовляють
         багато речей. Підійди до дерева і скористайся командою "знищити блок", щоб
         зрубати його.
@@ -3064,6 +3068,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: "Ці хмари мене нервують! У деяких хмарках всередині
         є квіти, а деякі - порожні. Потрібно перевірити кожну хмарку, і добувати нектар
         лише з квітів."

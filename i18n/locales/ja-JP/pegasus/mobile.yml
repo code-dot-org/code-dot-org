@@ -604,6 +604,8 @@ ja-JP:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: 正解
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -627,7 +629,7 @@ ja-JP:
   dashboard_faq_k5: よくある質問（幼稚園/小学生対象コース）
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: もっと詳しく知る
   dashboard_announce_hoc: '<B> 2015年11月23日</ B> -あなたが情熱を持っボランティアたいコンピュータ科学教育が中を助けるためにあなたの コードの時間イベント7,000以上のボランティアが鼓舞しようとしているあなたの 学生を訪問し、あなたの 教室 や遠隔ビデオチャットを。でボランティアに連絡するボランティアのマップをチェックしてくださいあなたの地域。'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'

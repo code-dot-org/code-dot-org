@@ -970,6 +970,8 @@
           Markdown Details: Markdown Details
           Studio: "工作室"
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: "我的世界"
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "第二阶段在线：混合的暑期学习"
@@ -1572,7 +1574,7 @@
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
-          description_short: Programming
+          description_short: "编程"
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as

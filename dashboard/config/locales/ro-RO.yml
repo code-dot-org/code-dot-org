@@ -419,6 +419,8 @@
     art_from_html_old: Păsări nervoase &#8482; &amp; © 2009-%{current_year} Rovio
       Entertainment Ltd. Toate drepturile rezervate. < br / > plante vs Zombies &#8482;
       &amp; © %{current_year} Electronic Arts Inc Toate drepturile rezervate
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Susținut de Amazon Web Services
     trademark: "&copy;Code.org, %{current_year}. Code.org&reg;, logo-ul CODE şi Hour
       of Code&reg; sunt mărci comerciale ale Code.org."

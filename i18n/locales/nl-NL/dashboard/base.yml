@@ -25,7 +25,7 @@ nl:
   welcome_back: 'Welkom terug, %{name}'
   submit: Insturen
   unsubmit: Intrekken
-  next_page: Next page
+  next_page: Volgende pagina
   add_teacher_form:
     code:
       label: 'Voeg een leraar toe:'
@@ -322,7 +322,7 @@ nl:
     heading_hoc2014: '<h2>Uur Code voor</h2><h1>Alle leeftijden</h1>'
     heading_elementary: '<h2>20 uur cursussen voor</h2><h1>Beginners (alle leeftijden)</h1>'
     heading_apps: '<h2>Leuk voor</h2><h1>Iedereen</h1>'
-    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
+    heading_tools: '<h2>Klaar voor de volgende stap?</h2><h1>JavaScript Tools voor de Middelbare School</h1>'
     heading_legacy: '<h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>'
     your_gallery: Galerij
     no_primary_course: Probeer een cursus bij Code Studio
@@ -345,6 +345,7 @@ nl:
     help_from_html_old: Ontwikkelaars van Google, Microsoft, Facebook en Twitter hebben bijgedragen aan het samenstellen van deze opdrachten.
     art_from_html: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Alle rechten voorbehouden. < br / >Star Wars &#8482; &copy; %{current_year} Disney en Lucasfilm. Alle rechten voorbehouden. < br / >Frozen&#8482; &copy; %{current_year} Disney. Alle rechten voorbehouden. < br / >Ice Age &#8482; &copy; %{current_year} 20th Century Fox. Alle rechten voorbehouden. < br / >Angry Birds &#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Alle rechten voorbehouden. < br / >Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Alle rechten voorbehouden. < br / >The Amazing World of Gumball is handelsmerk en &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Alle rechten voorbehouden. Star Wars &#8482; &copy; %{current_year} Disney en Lucasfilm. Alle rechten voorbehouden. Frozen&#8482; &copy; %{current_year} Disney. Alle rechten voorbehouden. Ice Age &#8482; &copy; %{current_year} 20th Century Fox. Alle rechten voorbehouden. Angry Birds &#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Alle rechten voorbehouden. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Alle rechten voorbehouden. The Amazing World of Gumball is handelsmerk en &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Aangedreven door Amazon webservices
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, het CODE logo en Hour of Code&reg; zijn handelsmerken van Code.org.'
     copyright: Copyright
@@ -420,10 +421,10 @@ nl:
   upsell:
     applab:
       title: App Lab
-      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: App Lab is een programmeer omgeving waar jij simpele apps kan maken. Ontwerp een app, codeer met blokken of JavaScript om het te laten werken, en deel je app dan in een par seconden.
+      body_short: Ontwerp een app, codeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden.
+      audience: Leeftijd 13+
+      cta: Leer om
     hoc:
       title: Klassiek doolhof
       body: Probeer de beginselen van de informatica. Miljoenen gingen je voor!
@@ -468,7 +469,7 @@ nl:
     report_bug: Meld Bug
     support: Help
     support_url: //support.code.org
-    help_resources: Help and Resources
+    help_resources: Hulp en Ondersteuning
   multi:
     wrong_title: Onjuist antwoord
     wrong_body: 'Het antwoord dat je hebt ingevoerd is niet correct.  Probeer het opnieuw!'
@@ -478,21 +479,21 @@ nl:
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Bedankt
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Bedankt voor het insturen van een antwoord.
     correct_title: Bedankt
-    correct_body: Thank you for submitting an answer.
+    correct_body: Bedankt voor het insturen van een antwoord.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Bedankt
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Dank je voor het insturen van antwoorden.
     correct_title: Bedankt
-    correct_body: Thank you for submitting answers.
+    correct_body: Dank je voor het insturen van antwoorden.
   level_group-submittable:
     wrong_title: Bedankt
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Dank je voor het insturen van antwoorden.
     correct_title: Bedankt
-    correct_body: Thank you for submitting answers.
+    correct_body: Dank je voor het insturen van antwoorden.
   match:
     wrong_title: Onjuist antwoord
     wrong_body: 'De oplossing die je hebt ingevoerd is niet juist.  Probeer het opnieuw!'
@@ -565,7 +566,7 @@ nl:
     completed_perfect: voltooid, perfect
     furthest_level_attempted: verste niveau geprobeerd
     assessment: beoordeling
-    submitted: submitted
+    submitted: verstuurd
   studio:
     courses_working_on: Cursussen die u bezig bent
     completed_courses: Voltooide cursussen
@@ -624,5 +625,5 @@ nl:
         acknowledge: 'Door het indienen van deze informatie, erkent u dat het zal worden behandeld in overeenstemming met de voorwaarden van de %{link_start_privacy}Privacy Policy%{link_end} en de %{link_start_tos}Terms van Service%{link_end}'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Zoek voor een icoon...
+      no_icons_found: Geen iconen gevonden

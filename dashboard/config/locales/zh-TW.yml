@@ -366,6 +366,8 @@
       %{current_year} Rovio 娛樂有限公司著作權所有，並保留一切權利。植物大戰僵屍 Plants vs. Zombies &#8482;
       &copy; %{current_year} 美商藝電著作權所有，並保留一切權利。阿甘妙世界 The Amazing World of Gumball
       商標是 &copy; 2015年卡通頻道著作權所有，並保留一切權利。"
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: "由亞馬遜網路服務系統提供服務"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE 標誌以及 Hour of
       Code&reg; 都是 Code.org.的注冊商標。"
