@@ -19,14 +19,16 @@
 
 = render partial: 'levels/common_audio'
 
-:javascript
+-# Don't operate if we're a LevelGroup with a /level/ URL.
+- unless !standalone && @script_level.nil?
+  :javascript
 
-  $(document).ready(function() {
-    window["level_#{index}"] = new TextMatch(
-      "level_#{index}",
-      #{level.id},
-      #{standalone},
-      #{data['answers'] || []},
-      #{last_attempt.to_json}
-      );
-    });
+    $(document).ready(function() {
+      window["level_#{index}"] = new TextMatch(
+        "level_#{index}",
+        #{level.id},
+        #{standalone},
+        #{data['answers'] || []},
+        #{last_attempt.to_json}
+        );
+      });
