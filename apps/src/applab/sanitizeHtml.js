@@ -47,10 +47,29 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
     return 0;
   };
 
+  // Do not warn when these attributes are removed.
+  var ignoredAttributes = ['kl_vkbd_parsed'];
+
   var processed = sanitize(unsafe, {
     allowedTags: false,
     allowedAttributes: false,
-    allowedSchemes: allSchemes
+    allowedSchemes: allSchemes,
+    // Use transformTags to ignore certain attributes, since allowedAttributes
+    // can only accept a whitelist not a blacklist.
+    transformTags: {
+      '*': function(tagName, attribs) {
+        for (var i = 0; i < ignoredAttributes.length; i++) {
+          var ignored = ignoredAttributes[i];
+          if (attribs[ignored]) {
+            delete attribs[ignored];
+          }
+        }
+        return {
+          tagName: tagName,
+          attribs: attribs
+        };
+      }
+    }
   });
   if (processed != safe) {
     warn(removedHtml(processed, safe), unsafe, safe, warnings);
