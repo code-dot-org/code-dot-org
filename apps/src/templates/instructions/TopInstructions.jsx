@@ -1,6 +1,6 @@
 'use strict';
 
-var _ = require('../../lodash');
+var Radium = require('radium');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 
@@ -42,6 +42,15 @@ var styles = {
     position: 'absolute',
     top: HEADER_HEIGHT,
     bottom: 0
+  },
+  hidden: {
+    display: 'none'
+  },
+  embedView: {
+    height: undefined,
+    bottom: 0,
+    // Visualization is hard-coded on embed levels. Do the same for instructions position
+    left: 340
   }
 };
 
@@ -81,18 +90,9 @@ var TopInstructions = React.createClass({
     }
     var id = this.props.id;
 
-    var mainStyle = _.assign({}, styles.main, {
+    var mainStyle = [styles.main, {
       height: this.props.height - RESIZER_HEIGHT
-    }, this.props.isEmbedView && {
-      height: undefined,
-      bottom: 0,
-      // Visualization is hard-coded on embed levels. Do the same for instructions position
-      left: 340
-    });
-
-    var collapseStyle = {
-      display: this.props.collapsed ? 'none' : undefined
-    };
+    }, this.props.isEmbedView && styles.embedView];
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -106,7 +106,7 @@ var TopInstructions = React.createClass({
             puzzle_number: this.props.puzzleNumber
           })}
         </div>
-        <div style={collapseStyle}>
+        <div style={[this.props.collapsed && styles.hidden]}>
           <div style={styles.body}>
             <Instructions
               renderedMarkdown={processMarkdown(this.props.markdown)}
@@ -114,7 +114,7 @@ var TopInstructions = React.createClass({
               />
           </div>
           {!this.props.isEmbedView && <HeightResizer
-            position={mainStyle.height}
+            position={this.props.height}
             onResize={this.onHeightResize}/>
           }
         </div>
@@ -122,4 +122,4 @@ var TopInstructions = React.createClass({
     );
   }
 });
-module.exports = TopInstructions;
+module.exports = Radium(TopInstructions);
