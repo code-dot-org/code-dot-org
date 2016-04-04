@@ -897,8 +897,7 @@ function loadHoc2015(skin, assetUrl) {
   skin.getMap = function(background, map) {
     if (background == "hoth" && (map == "circle" || map == "horizontal")) {
       return map + "_nonjumbo";
-    }
-    else {
+    } else {
       return map;
     }
   };

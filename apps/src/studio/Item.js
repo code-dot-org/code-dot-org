@@ -195,8 +195,7 @@ Item.prototype.update = function () {
           candidate.score += 2;
         } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
           candidate.score += 2;
-        }
-        else {
+        } else {
           candidate.score += 1;
         }
 

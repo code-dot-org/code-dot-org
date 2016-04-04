@@ -195,8 +195,7 @@ Artist.prototype.init = function(config) {
   if (this.skin.id == "anna") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
-  }
-  else if (this.skin.id == "elsa") {
+  } else if (this.skin.id == "elsa") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
     this.decorationAnimationWidth = 85;
@@ -507,8 +506,7 @@ Artist.prototype.drawTurtle = function() {
   if (sourceX < 0 ||
       sourceY < 0 ||
       sourceX + sourceWidth  -0 > this.avatarImage.width ||
-      sourceY + sourceHeight > this.avatarImage.height)
-  {
+      sourceY + sourceHeight > this.avatarImage.height) {
     if (console && console.log) {
       // TODO(bjordan): ask Brent, starting to flood grunt mochaTest messages,
       // better fix here?

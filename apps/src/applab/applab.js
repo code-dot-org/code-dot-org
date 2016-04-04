@@ -865,8 +865,7 @@ Applab.init = function(config) {
             d.type.toUpperCase() === 'DATE' )) ||
             d.tagName.toUpperCase() === 'TEXTAREA') {
           doPrevent = d.readOnly || d.disabled;
-        }
-        else {
+        } else {
           doPrevent = !d.isContentEditable;
         }
 
@@ -1234,10 +1233,13 @@ Applab.onReportComplete = function(response) {
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   // TODO: handle editCode JS interpreter
-  try { codegen.evalWith(code, {
-                         studioApp: studioApp,
-                         Applab: apiBlockly,
-                         Globals: Applab.Globals } ); } catch (e) { }
+  try {
+    codegen.evalWith(code, {
+      studioApp: studioApp,
+      Applab: apiBlockly,
+      Globals: Applab.Globals
+    });
+  } catch (e) { }
 };
 
 /**

@@ -104,8 +104,7 @@ GameLabP5.prototype.init = function (options) {
     var mousePosition;
     if (this.camera.active) {
       mousePosition = this.createVector(this.camera.mouseX, this.camera.mouseY);
-    }
-    else {
+    } else {
       mousePosition = this.createVector(this.mouseX, this.mouseY);
     }
 
