@@ -23,7 +23,8 @@ module.exports = {
     "ReactDOM": true
   },
   "rules": {
-    //"brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "array-bracket-spacing": ["error", "never"],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "comma-dangle": "off",
     "curly": "error",
     "eol-last": "error",
