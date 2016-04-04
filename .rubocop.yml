@@ -28,7 +28,7 @@ Style/ClosingParenthesisIndentation:
 Style/DotPosition:
   EnforcedStyle: trailing
 
-Style/EmptyLineBewteenDefs:
+Style/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true 
 
 Style/ExtraSpacing:
