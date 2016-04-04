@@ -41,6 +41,8 @@ Room 110<br/>
 301 Largo Rd<br/>
 Largo, MD 20774](https://www.google.com/maps/place/Prince+George's+Community+College/@38.8894618,-76.827075,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7bfe1e1594a45:0xd9ddeffedca31ec6)
 
+Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop!
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger

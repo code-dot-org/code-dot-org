@@ -1,10 +1,8 @@
-window.React = require('react');
-window.ReactDOM = require('react-dom');
-var ReactTestUtils = require('react-addons-test-utils');
-
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales();
+testUtils.setExternalGlobals();
 var assert = testUtils.assert;
+var ReactTestUtils = require('react-addons-test-utils');
 
 var DialogButtons = require('@cdo/apps/templates/DialogButtons.jsx');
 var msg = require('@cdo/apps/locale');

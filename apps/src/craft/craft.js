@@ -472,6 +472,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     gridDimensions: levelConfig.gridWidth && levelConfig.gridHeight ?
         [levelConfig.gridWidth, levelConfig.gridHeight] :
         null,
+    // eslint-disable-next-line no-eval
     verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0] // TODO(bjordan): add to utils
   });
 };

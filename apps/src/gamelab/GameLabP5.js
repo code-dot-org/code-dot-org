@@ -1,5 +1,6 @@
 'use strict';
 var gameLabSprite = require('./GameLabSprite');
+var gameLabGroup = require('./GameLabGroup');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var GameLabGame = require('./GameLabGame');
 
@@ -91,8 +92,36 @@ GameLabP5.prototype.init = function (options) {
     return this.pmouseX !== this.mouseX || this.pmouseY !== this.mouseY;
   };
 
+  window.p5.prototype.mouseIsOver = function (sprite) {
+    if (!sprite) {
+      return false;
+    }
+
+    if (!sprite.collider) {
+      sprite.setDefaultCollider();
+    }
+
+    var mousePosition;
+    if (this.camera.active) {
+      mousePosition = this.createVector(this.camera.mouseX, this.camera.mouseY);
+    } else {
+      mousePosition = this.createVector(this.mouseX, this.mouseY);
+    }
+
+    if (sprite.collider instanceof this.CircleCollider) {
+      return window.p5.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
+    } else if (sprite.collider instanceof this.AABB) {
+      return mousePosition.x > sprite.collider.left()
+          && mousePosition.y > sprite.collider.top()
+          && mousePosition.x < sprite.collider.right()
+          && mousePosition.y < sprite.collider.bottom();
+    }
+
+    return false;
+  };
+
   window.p5.prototype.mousePressedOver = function (sprite) {
-    return sprite && sprite.mouseIsPressed;
+    return this.mouseIsPressed && this.mouseIsOver(sprite);
   };
 
   var styleEmpty = 'rgba(0,0,0,0)';
@@ -209,187 +238,18 @@ GameLabP5.prototype.init = function (options) {
     return this;
   };
 
-  // Override p5.createSprite so we can replace the AABBops() function and add
-  // some new methods that are animation shortcuts
-  window.p5.prototype.createSprite = function(x, y, width, height) {
-    /*
-     * Copied code from p5play from createSprite()
-     *
-     * NOTE: this param not needed on this.Sprite() call as we're calling
-     * through the bound constructor, which prepends the first arg.
-     */
-    var s = new this.Sprite(x, y, width, height);
-
-    s.setFrame = function (frame) {
-      if (s.animation) {
-        s.animation.setFrame(frame);
-      }
-    };
-
-    s.nextFrame = function () {
-      if (s.animation) {
-        s.animation.nextFrame();
-      }
-    };
-
-    s.previousFrame = function () {
-      if (s.animation) {
-        s.animation.previousFrame();
-      }
-    };
-
-    s.play = function () {
-      if (s.animation) {
-        s.animation.play();
-      }
-    };
-
-    s.pause = function () {
-      if (s.animation) {
-        s.animation.stop();
-      }
-    };
-
-    s.frameDidChange = function () {
-      return s.animation ? s.animation.frameChanged : false;
-    };
-
-    Object.defineProperty(s, 'frameDelay', {
-      enumerable: true,
-      get: function () {
-        if (s.animation) {
-          return s.animation.frameDelay;
-        }
-      },
-      set: function (value) {
-        if (s.animation) {
-          s.animation.frameDelay = value;
-        }
-      }
-    });
-
-    Object.defineProperty(s, 'x', {
-      enumerable: true,
-      get: function () {
-        return s.position.x;
-      },
-      set: function (value) {
-        s.position.x = value;
-      }
-    });
-
-    Object.defineProperty(s, 'y', {
-      enumerable: true,
-      get: function () {
-        return s.position.y;
-      },
-      set: function (value) {
-        s.position.y = value;
-      }
-    });
-
-    Object.defineProperty(s, 'velocityX', {
-      enumerable: true,
-      get: function () {
-        return s.velocity.x;
-      },
-      set: function (value) {
-        s.velocity.x = value;
-      }
-    });
-
-    Object.defineProperty(s, 'velocityY', {
-      enumerable: true,
-      get: function () {
-        return s.velocity.y;
-      },
-      set: function (value) {
-        s.velocity.y = value;
-      }
-    });
-
-    Object.defineProperty(s, 'lifetime', {
-      enumerable: true,
-      get: function () {
-        return s.life;
-      },
-      set: function (value) {
-        s.life = value;
-      }
-    });
-
-    s.AABBops = gameLabSprite.AABBops.bind(s, this);
-    s.depth = this.allSprites.maxDepth()+1;
-    this.allSprites.add(s);
-    return s;
+  window.p5.prototype.createGroup = function () {
+    return new this.Group();
   };
+
+  // Override p5.createSprite so we can replace the AABBops() function and add
+  // some new methods that are animation shortcuts:
+  window.p5.prototype.createSprite = gameLabSprite.createSprite;
 
   // Override p5.Group so we can override the methods that take callback
   // parameters
   var baseGroupConstructor = window.p5.prototype.Group;
-  window.p5.prototype.Group = function () {
-    var array = baseGroupConstructor();
-
-    /*
-     * Create new helper called _groupCollideGameLab() which can be called as a
-     * stateful nativeFunc by the interpreter. This enables the native method to
-     * be called multiple times so that it can go asynchronous every time it
-     * (or any native function that it calls, such as AABBops) wants to execute
-     * a callback back into interpreter code. The interpreter state object is
-     * retrieved by calling JSInterpreter.getCurrentState().
-     *
-     * Additional properties can be set on the state object to track state
-     * across the multiple executions. If the function wants to be called again,
-     * it should set state.doneExec to false. When the function is complete and
-     * no longer wants to be called in a loop by the interpreter, it should set
-     * state.doneExec to true and return a value.
-     *
-     * Collide each member of group against the target using the given collision
-     * type.  Return true if any collision occurred.
-     * Internal use
-     *
-     * @private
-     * @method _groupCollideGameLab
-     * @param {!string} type one of 'overlap', 'collide', 'displace', 'bounce'
-     * @param {Object} target Group or Sprite
-     * @param {Function} [callback] on collision.
-     * @return {boolean} True if any collision/overlap occurred
-     */
-    function _groupCollideGameLab(type, target, callback) {
-      var state = options.gameLab.JSInterpreter.getCurrentState();
-      if (!state.__i) {
-        state.__i = 0;
-        state.__didCollide = false;
-      }
-      if (state.__i < this.size()) {
-        if (!state.__subState) {
-          // Before we call AABBops (another stateful function), hang a __subState
-          // off of state, so it can use that instead to track its state:
-          state.__subState = { doneExec: true };
-        }
-        var resultAABBops = this.get(state.__i).AABBops(type, target, callback);
-        if (state.__subState.doneExec) {
-          state.__didCollide = resultAABBops || state.__didCollide;
-          delete state.__subState;
-          state.__i++;
-        }
-        state.doneExec = false;
-      } else {
-        state.doneExec = true;
-        return state.__didCollide;
-      }
-    }
-
-    // Replace these four methods that take callback parameters to use the
-    // replaced _groupCollideGameLab() function:
-
-    array.overlap = _groupCollideGameLab.bind(array, 'overlap');
-    array.collide = _groupCollideGameLab.bind(array, 'collide');
-    array.displace = _groupCollideGameLab.bind(array, 'displace');
-    array.bounce = _groupCollideGameLab.bind(array, 'bounce');
-
-    return array;
-  };
+  window.p5.prototype.Group = gameLabGroup.Group.bind(null, baseGroupConstructor);
 
   window.p5.prototype.gamelabPreload = function () {
     this.p5decrementPreload = window.p5._getDecrementPreload.apply(this.p5, arguments);
@@ -562,8 +422,9 @@ GameLabP5.prototype.startExecution = function () {
       }.bind(this);
 
       p5obj.setup = function () {
-
         p5obj.createCanvas(400, 400);
+        p5obj.fill(p5obj.color(127, 127, 127));
+
         this.onSetup();
       }.bind(this);
 

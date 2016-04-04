@@ -1,0 +1,19 @@
+name 'PS U3 Q1-7'
+content1 'Enter prompt here'
+answer 'Enter answer here'
+
+markdown <<MARKDOWN
+Use Top-Down Design strategy to come up with additional functions you may want to create. 
+
+**Top-Down Design Strategy:**
+
+1. Look at the big picture…
+2. Identify a sub-task…
+3. Break down that sub-task into smaller sub-task(s)...
+4. Keep going until you’re down to the commands you already have access to.
+
+Here's an example for the first one:
+
+Function name: drawSnowfalke() <br> Description/Justification: Draw a 6 pointed snowflake
+
+MARKDOWN

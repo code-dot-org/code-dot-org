@@ -1,20 +1,13 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales('applab');
-
-var $ = require('jquery');
-var React = require('react');
-window.$ = $;
-window.jQuery = window.$;
-window.React = React;
+testUtils.setExternalGlobals();
 
 // used in design mode
 window.Applab = {
   appWidth: 320,
   appHeight: 480
 };
-
-window.dashboard = window.dashboard || {};
 
 var Applab = require('@cdo/apps/applab/applab');
 var RecordListener = require('@cdo/apps/applab/RecordListener');
@@ -174,7 +167,7 @@ describe('getText/setText commands', function () {
 
       it('does add leading newline for leading empty div', function () {
         element.innerHTML = '<div><br></div><div>text</div><div>with</div><div>leading empty div</div>';
-        assert.equal(getInnerText(element), '\n\ntext\nwith\nleading empty div');
+        assert.equal(getInnerText(element), '\ntext\nwith\nleading empty div');
       });
 
       it('Unescapes < and >', function () {
@@ -261,6 +254,10 @@ describe('getText/setText commands', function () {
         roundTripTest('text\n\nwith\n\n\nempty newlines');
       });
 
+      it('preserves single leading newline', function () {
+        roundTripTest('\ntext after newline');
+      });
+
       it('preserves leading and trailing newlines', function () {
         roundTripTest('\n\n\ntext between newlines\n\n');
       });
@@ -326,8 +323,6 @@ describe('startSharedAppAfterWarnings', function () {
       originalState[item] = Applab[item];
     });
     originalState.dashboard = window.dashboard;
-
-    window.dashboard = window.dashboard || {};
 
     Applab.user = {};
     Applab.channelId = 'current_channel';

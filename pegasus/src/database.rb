@@ -63,20 +63,6 @@ def grads_nationwide
   DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_graduates_i]
 end
 
-def us_state_from_code(code)
-  DB[:geography_us_states].where(code_s: code.to_s.strip.upcase).first
-end
-
-def us_state_code?(code)
-  !us_state_from_code(code).nil?
-end
-
-def us_state_name_from_code(code)
-  state = us_state_from_code(code)
-  return code unless state
-  state[:name_s]
-end
-
 def zip_code_from_code(code)
   DB[:geography_us_zip_codes].where(code_s: code.to_s.strip).first
 end

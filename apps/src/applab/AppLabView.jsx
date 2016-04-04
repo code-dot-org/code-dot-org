@@ -10,10 +10,9 @@ var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.
 var TopInstructions = require('../templates/instructions/TopInstructions.jsx');
 var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer.jsx');
 var utils = require('../utils');
+var styleConstants = require('../styleConstants');
 
-// TODO These numbers are defined in style-constants.scss. Do the same sort
-// of thing we did with colors
-var HEADER_HEIGHT = 30;
+var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 
 /**
  * Top-level React wrapper for App Lab.
@@ -75,10 +74,8 @@ var AppLabView = React.createClass({
       top: topPaneHeight
     };
 
-
     // TODO - there are a small set of levels that have instructions but not markdownInstructions
     //   (that are also used in scripts). should convert these to have markdown instructions
-    // TODO - changing id of codeWorkspace to codeWorkspaceApplab will break callouts and some UI tests
     return (
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
@@ -88,14 +85,16 @@ var AppLabView = React.createClass({
         <ProtectedStatefulDiv
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
-        <TopInstructions
-            puzzleNumber={this.props.puzzleNumber}
-            stageTotal={this.props.stageTotal}
-            height={topPaneHeight}
-            markdown={this.props.instructionsMarkdown}
-            collapsed={this.props.instructionsCollapsed}
-            onToggleCollapsed={this.props.toggleInstructionsCollapsed}
-            onChangeHeight={this.props.setInstructionsHeight}/>
+        {this.props.instructionsInTopPane && <TopInstructions
+          isEmbedView={this.props.isEmbedView}
+          puzzleNumber={this.props.puzzleNumber}
+          stageTotal={this.props.stageTotal}
+          height={topPaneHeight}
+          markdown={this.props.instructionsMarkdown}
+          collapsed={this.props.instructionsCollapsed}
+          onToggleCollapsed={this.props.toggleInstructionsCollapsed}
+          onChangeHeight={this.props.setInstructionsHeight}/>
+        }
         <CodeWorkspaceContainer
             topMargin={topPaneHeight}
             generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
@@ -111,6 +110,7 @@ module.exports = connect(function propsFromStore(state) {
     instructionsMarkdown: state.level.instructionsMarkdown,
     instructionsCollapsed: state.instructions.collapsed || !state.level.instructionsInTopPane,
     instructionsHeight: state.instructions.height,
+    isEmbedView: state.level.isEmbedView,
     puzzleNumber: state.level.puzzleNumber,
     stageTotal: state.level.stageTotal
   };

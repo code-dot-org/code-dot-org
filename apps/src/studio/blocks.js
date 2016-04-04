@@ -1883,8 +1883,7 @@ exports.install = function(blockly, blockInstallOptions) {
         }
         var dropdown = new blockly.FieldDropdown(functionArray);
         this.appendDummyInput().appendTitle(dropdown, 'VALUE');
-      }
-      else if (options.params) {
+      } else if (options.params) {
         this.appendValueInput('TEXT');
       } else {
         var quotedTextInput = this.appendDummyInput();
