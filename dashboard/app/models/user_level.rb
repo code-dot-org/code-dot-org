@@ -27,16 +27,6 @@ class UserLevel < ActiveRecord::Base
   belongs_to :level
   belongs_to :script
 
-  # user levels can be linked through pair programming. The 'driver'
-  # user level is the one that is linked to the user account that
-  # completed the activity; the 'navigator' user level is the one that
-  # also gets credit for the solution.
-  has_many :paired_user_levels_as_navigator, class_name: 'PairedUserLevel', foreign_key: 'navigator_user_level_id'
-  has_many :paired_user_levels_as_driver, class_name: 'PairedUserLevel', foreign_key: 'driver_user_level_id'
-
-  has_many :navigator_user_levels, through: :paired_user_levels_as_driver
-  has_many :driver_user_levels, through: :paired_user_levels_as_navigator
-
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
   scope :attempted, -> { where.not(best_result: nil) }
@@ -54,4 +44,14 @@ class UserLevel < ActiveRecord::Base
   def passing?
     Activity.passing? best_result
   end
+
+  # user levels can be linked through pair programming. The 'driver'
+  # user level is the one that is linked to the user account that
+  # completed the activity; the 'navigator' user level is the one that
+  # also gets credit for the solution.
+  has_many :paired_user_levels_as_navigator, class_name: 'PairedUserLevel', foreign_key: 'navigator_user_level_id'
+  has_many :paired_user_levels_as_driver, class_name: 'PairedUserLevel', foreign_key: 'driver_user_level_id'
+
+  has_many :navigator_user_levels, through: :paired_user_levels_as_driver
+  has_many :driver_user_levels, through: :paired_user_levels_as_navigator
 end
