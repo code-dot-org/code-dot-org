@@ -1,4 +1,4 @@
-var Radium = require('Radium');
+var Radium = require('radium');
 
 var styles = {
   standard: {
