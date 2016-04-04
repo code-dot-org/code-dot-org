@@ -14,12 +14,12 @@ var utils = require('@cdo/apps/utils');
 var baseLevel = {
   honeyGoal: 1,
   map: [
-    [ 0 ]
+    [0]
   ],
   flowerType: 'redWithNectar',
   startDirection: 1,
   initialDirt: [
-    [ 0 ]
+    [0]
   ]
 };
 

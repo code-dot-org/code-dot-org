@@ -8,6 +8,7 @@ var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var GameLabVisualizationHeader = require('./GameLabVisualizationHeader.jsx');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
+var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer.jsx');
 
 var styles = {
   codeWorkspace: {
@@ -65,11 +66,11 @@ var GameLabView = React.createClass({
           <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <ProtectedStatefulDiv style={codeWorkspaceStyle} id="codeWorkspace" className="editor-column">
-          <ProtectedStatefulDiv
-              id="codeWorkspaceWrapper"
-              contentFunction={this.props.generateCodeWorkspaceHtml} />
-        </ProtectedStatefulDiv>
+        <CodeWorkspaceContainer
+            topMargin={0}
+            noVisualization={false}
+            isRtl={false}
+            generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
       </div>
     );
   },
