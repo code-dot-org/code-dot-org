@@ -65,7 +65,7 @@ class PropertiesTest < Minitest::Test
     # Basic multi-setting
     data = {
       'a' => 1,
-      'b' => ['a', 'b'],
+      'b' => %w(a b),
       'c' => 'string'
     }
     multiset(data, false)
@@ -76,7 +76,7 @@ class PropertiesTest < Minitest::Test
     # Test overwrite off
     data2 = {
       'a' => 2,
-      'b' => ['c', 'b'],
+      'b' => %w(c b),
       'c' => 'yo'
     }
     multiset(data2, false)

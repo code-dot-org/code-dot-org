@@ -86,7 +86,7 @@ class RedisPropertyBagTest < Minitest::Test
     assert_equal({'foo1' => 'value1'}, bag2.to_hash)
 
     # Perform a multiple-delete operation and check the result
-    bag1.delete(['foo1', 'foo3'])
+    bag1.delete(%w(foo1 foo3))
     assert_equal({'foo2' => 'value2'}, bag1.to_hash)
     assert_equal({'foo1' => 'value1'}, bag2.to_hash)
 

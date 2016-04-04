@@ -13,7 +13,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   # Verify that after setting each of the possible modes that the
   # feature mode manager knows we are in that mode.
   def test_round_trip_feature_modes
-    scripts = ['fake1', 'fake2']
+    scripts = %w(fake1 fake2)
     %w{normal scale emergency}.each do |mode|
       FeatureModeManager.set_mode(mode, @gatekeeper, @dcdo, scripts)
       assert_equal mode, FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
@@ -21,7 +21,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   end
 
   def test_get_mode_returns_nil_if_dcdo_property_does_not_match
-    scripts = ['fake1', 'fake2']
+    scripts = %w(fake1 fake2)
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, scripts)
     @dcdo.set('hoc_activity_sample_weight', 2)
     assert_equal nil, FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
@@ -31,7 +31,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   end
 
   def test_get_mode_returns_nil_if_hoc_gatekeeper_property_does_not_match
-    scripts = ['fake1', 'fake2']
+    scripts = %w(fake1 fake2)
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, scripts)
     @gatekeeper.set('postMilestone', where: {script_name: 'fake1'}, value: false)
     assert_equal nil, FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
@@ -40,7 +40,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   end
 
   def test_get_mode_returns_nil_if_general_gatekeeper_property_does_not_match
-    scripts = ['fake1', 'fake2']
+    scripts = %w(fake1 fake2)
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, scripts)
     @gatekeeper.set('puzzle_rating', value: false)
     assert_equal nil, FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)

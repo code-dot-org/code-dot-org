@@ -55,8 +55,8 @@ class RetentionStatsHelperTest < Minitest::Test
     base_hash = {1 => 11, 2 => 22}
     other_hash = {1 => 111}
 
-    add_missing_keys(base_hash, other_hash, ['a', 'b'])
+    add_missing_keys(base_hash, other_hash, %w(a b))
 
-    assert_equal({1 => 111, 2 => ['a', 'b']}, other_hash)
+    assert_equal({1 => 111, 2 => %w(a b)}, other_hash)
   end
 end

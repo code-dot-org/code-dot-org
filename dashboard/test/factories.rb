@@ -391,7 +391,7 @@ FactoryGirl.define do
 
   factory :level_group do
     game {create(:game, app: "level_group")}
-    properties{{title: 'title', pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]}}
+    properties{{title: 'title', pages: [{levels: %w(level1 level2)}, {levels: ['level3']}]}}
   end
 
   factory :survey_result do

@@ -132,7 +132,7 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#left_off', 0
   end
 
-  Script.all.where("name IN (?)", ['hourofcode', 'artist', 'flappy', 'course1']).each do |script|
+  Script.all.where("name IN (?)", %w(hourofcode artist flappy course1)).each do |script|
     next if script.hidden? # only test public facing scripts
     test "logged in user sees resume info and progress for course #{script.name}" do
       user = create(:user)

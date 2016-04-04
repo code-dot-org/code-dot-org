@@ -144,7 +144,7 @@ class DynamoPropertyBag
             comparison_operator: "EQ",
           },
         },
-        attributes_to_get: ['name', 'value'],
+        attributes_to_get: %w(name value),
         exclusive_start_key: last_evaluated_key,
       ).first
 

@@ -335,7 +335,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin']
+  CLEVER_ADMIN_USER_TYPES = %w(district_admin school_admin)
   def self.from_omniauth(auth, params)
     def self.name_from_omniauth(raw_name)
       return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string

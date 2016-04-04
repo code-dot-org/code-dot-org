@@ -38,7 +38,7 @@ class SingleSignOn
       val = decoded_hash[k.to_s]
       val = val.to_i if FIXNUMS.include? k
       if BOOLS.include? k
-        val = ["true", "false"].include?(val) ? val == "true" : nil
+        val = %w(true false).include?(val) ? val == "true" : nil
       end
       sso.send("#{k}=", val)
     end

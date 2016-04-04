@@ -9,7 +9,7 @@ IGNORED_SOLUTION_BLOCK_ATTRS = {
 }
 NEW_CATEGORY_XML = '<category name="NEW BLOCKS"/>'
 STRIPPED_NODES_XPATH = './next|./value|./statement|./title'
-STRIPPED_ATTRS = ['id', 'inline'] + IGNORED_SOLUTION_BLOCK_ATTRS.keys
+STRIPPED_ATTRS = %w(id inline) + IGNORED_SOLUTION_BLOCK_ATTRS.keys
 
 module SolutionBlocks
   extend ActiveSupport::Concern
