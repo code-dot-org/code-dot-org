@@ -28,7 +28,7 @@ class XhrProxyControllerTest < ActionController::TestCase
   test "should log to newrelic" do
     CDO.stubs(:newrelic_logging).returns(true) do
       stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-      assert NewRelic::Agent.events.length == 0, 'no custom events initially recorded'
+      assert NewRelic::Agent.events.empty?, 'no custom events initially recorded'
       get :get, u: XHR_URI, c: CHANNEL_ID
       assert_response :success
       assert NewRelic::Agent.events.length == 1, 'one custom event recorded'
