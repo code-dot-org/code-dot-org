@@ -31,8 +31,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "maze_data": null
-  }
+    "never_autoplay_video": "false",
+    "step_speed": "1",
+    "fast_get_nectar_animation": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -77,7 +81,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
@@ -87,7 +91,7 @@
           </value>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

@@ -22,7 +22,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "The race in that last puzzle wasn't very fair! Change the \"dog_speed\" variable to make sure you can collect more flags than Cat. The first to collect 10 flags wins!",
+    "instructions": "The race in that last puzzle wasn't very fair! Change the `dog_speed` variable to make sure you can collect more flags than Cat. The first to collect 10 flags wins!",
     "predraw_blocks": "<xml><block type=\"studio_whenArrow\" movable=\"false\"><title name=\"VALUE\">right</title><next><block type=\"studio_moveDistance\" movable=\"false\" editable=\"false\"><title name=\"SPRITE\">0</title><title name=\"DIR\">2</title><title name=\"DISTANCE\">25</title></block></next></block><block type=\"studio_repeatForever\"><statement name=\"DO\"><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">1</title><title name=\"DISTANCE\">25</title><next><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">4</title><title name=\"DISTANCE\">25</title></block></next></block></statement></block></xml>",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
@@ -43,8 +43,12 @@
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
     "examples_required": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Make sure to set the number for `dog_speed` to something larger than `cat_speed`.\",\r\n  \"hint_id\": \"Course_4_Play_Lab_Vars_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false",
     "maze_data": null
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -338,9 +342,5 @@
         </block>
       </xml>
     </start_blocks>
-    <required_blocks>
-      <xml>
-</xml>
-    </required_blocks>
   </blocks>
 </Studio>
