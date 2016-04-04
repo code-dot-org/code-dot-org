@@ -1,15 +1,5 @@
 $root: '/blockly/media/jigsaw/'; //TODO: Parameterize for asset pipeline
 
-div#codeWorkspace {
-  left: 0 !important;
-  margin-left: 0 !important;;
-}
-
-html[dir='rtl'] div#codeWorkspace {
-  right: 0 !important;;
-  margin-right: 0 !important;;
-}
-
 #codeApp {
   height: 600px;
   &.pin_bottom {
