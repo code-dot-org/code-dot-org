@@ -85,16 +85,16 @@ var AppLabView = React.createClass({
         <ProtectedStatefulDiv
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
-          {this.props.instructionsInTopPane && <TopInstructions
-            isEmbedView={this.props.isEmbedView}
-            puzzleNumber={this.props.puzzleNumber}
-            stageTotal={this.props.stageTotal}
-            height={topPaneHeight}
-            markdown={this.props.instructionsMarkdown}
-            collapsed={this.props.instructionsCollapsed}
-            onToggleCollapsed={this.props.toggleInstructionsCollapsed}
-            onChangeHeight={this.props.setInstructionsHeight}/>
-          }
+        {this.props.instructionsInTopPane && <TopInstructions
+          isEmbedView={this.props.isEmbedView}
+          puzzleNumber={this.props.puzzleNumber}
+          stageTotal={this.props.stageTotal}
+          height={topPaneHeight}
+          markdown={this.props.instructionsMarkdown}
+          collapsed={this.props.instructionsCollapsed}
+          onToggleCollapsed={this.props.toggleInstructionsCollapsed}
+          onChangeHeight={this.props.setInstructionsHeight}/>
+        }
         <CodeWorkspaceContainer
             topMargin={topPaneHeight}
             generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}

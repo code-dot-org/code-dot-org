@@ -311,11 +311,11 @@ button.arrow:disabled {
   border: 1px solid #ddd;
 }
 
-html[dir='rtl'] #codeWorkspace:not(.applab) {
+html[dir='rtl'] .editor-column {
    right: 400px;
 }
 
-#codeWorkspace:not(.applab) {
+.editor-column {
   left: 400px
 }
 
@@ -385,6 +385,10 @@ html[dir='rtl'] #codeWorkspace:not(.applab) {
   line-height: 400px;
 }
 
+html[dir='rtl'] div#visualizationResizeBar {
+  right: 400px;
+}
+
 #visualization {
   position: relative;
   height: 400px;
@@ -440,23 +444,13 @@ html[dir='rtl'] #codeWorkspace:not(.applab) {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  #codeWorkspace {
+  .editor-column {
     left: $width;
   }
-  // Even though this is already defined above, define it again using the
-  // ":not(.applab)" selector. If we dont do this, then the rule for
-  // #codeWorkspace:not(.applab) defined outside of the media query will always
-  // take precedence as it's more specific, and we wont resize
-  #codeWorkspace:not(.applab) {
-    left: $width;
-  }
-  html[dir='rtl'] #codeWorkspace {
+  html[dir='rtl'] .editor-column {
     right: $width;
   }
-  html[dir='rtl'] #codeWorkspace:not(.applab) {
-    right: $width;
-  }
-  html[dir='rtl'] body.readonly #codeWorkspace {
+  html[dir='rtl'] body.readonly .editor-column {
     right: 0px;
   }
   div#visualizationResizeBar {
