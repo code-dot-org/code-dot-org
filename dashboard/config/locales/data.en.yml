@@ -321,7 +321,7 @@ en:
         'studio_playlab_9': "Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else"
         'studio_playlab_10': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         'studio_iceage_hello1': "Sid wants to gather everyone for a new adventure. Can you help him say \"hello\" by dragging the \"say\" block out into the work area and typing the word \"hello\" inside?"
-        'studio_iceage_hello2': "Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the \"actor say\" block twice."
+        'studio_iceage_hello2': "Manny (actor 1) found Sid (actor 2) and wants to invite him on the adventure. Help them greet each other by using the the \"actor say\" block twice."
         'studio_iceage_move_to_flag': "Scrat is looking for his acorn!  Help him go the last 200 pixels using the \"move\" block."
         'studio_iceage_move_to_actor': "Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the \"move actor\" block. Next, connect a block to the \"when actor touches\" event to play a sound when they find each other."
         'studio_iceage_repeat': "The \"repeat forever\" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?"

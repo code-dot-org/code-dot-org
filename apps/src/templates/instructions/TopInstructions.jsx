@@ -23,6 +23,7 @@ var styles = {
   main: {
     position: 'absolute',
     marginLeft: 15,
+    top: 0,
     right: 0,
     // left handled by media queries for .editor-column
   },
@@ -37,12 +38,17 @@ var styles = {
     backgroundColor: 'white',
     overflowY: 'scroll',
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0
   }
 };
 
 var TopInstructions = React.createClass({
   propTypes: {
+    // If true,
+    isEmbedView: React.PropTypes.bool.isRequired,
     puzzleNumber: React.PropTypes.number.isRequired,
     stageTotal: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
@@ -77,10 +83,11 @@ var TopInstructions = React.createClass({
 
     var mainStyle = _.assign({}, styles.main, {
       height: this.props.height - RESIZER_HEIGHT
-    });
-
-    var bodyStyle = _.assign({}, styles.body, {
-      height: mainStyle.height - styles.header.height,
+    }, this.props.isEmbedView && {
+      height: undefined,
+      bottom: 0,
+      // Visualization is hard-coded on embed levels. Do the same for instructions position
+      left: 340
     });
 
     var collapseStyle = {
@@ -89,9 +96,10 @@ var TopInstructions = React.createClass({
 
     return (
       <div style={mainStyle} className="editor-column">
-        <CollapserIcon
+        {!this.props.isEmbedView && <CollapserIcon
             collapsed={this.props.collapsed}
             onClick={this.props.onToggleCollapsed}/>
+        }
         <div style={styles.header}>
           {msg.puzzleTitle({
             stage_total: this.props.stageTotal,
@@ -99,19 +107,19 @@ var TopInstructions = React.createClass({
           })}
         </div>
         <div style={collapseStyle}>
-          <div style={bodyStyle}>
+          <div style={styles.body}>
             <Instructions
               renderedMarkdown={processMarkdown(this.props.markdown)}
               inTopPane
               />
           </div>
-          <HeightResizer
+          {!this.props.isEmbedView && <HeightResizer
             position={mainStyle.height}
             onResize={this.onHeightResize}/>
+          }
         </div>
       </div>
     );
-
   }
 });
 module.exports = TopInstructions;
