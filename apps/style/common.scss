@@ -312,11 +312,11 @@ button.arrow:disabled {
 }
 
 html[dir='rtl'] .editor-column {
-   right: 400px;
+   right: $visualization-width;
 }
 
 .editor-column {
-  left: 400px
+  left: $visualization-width;
 }
 
 #codeWorkspace.pin_bottom {
@@ -377,7 +377,7 @@ html[dir='rtl'] .editor-column {
   top: 0;
   bottom: 0;
   width: 15px;
-  left: 400px;
+  left: $visualization-width;
   cursor: ew-resize;
   text-align: center;
   color: $lighter_gray;
@@ -386,7 +386,7 @@ html[dir='rtl'] .editor-column {
 }
 
 html[dir='rtl'] div#visualizationResizeBar {
-  right: 400px;
+  right: $visualization-width;
 }
 
 #visualization {
@@ -407,7 +407,8 @@ html[dir='rtl'] div#visualizationResizeBar {
 }
 
 /* Shrink the visualization area on small displays. */
-
+// TODO- visualizationEditor is only used by pixelation these days, but we have
+// scss for it here, and code for it in studioApp. That should be extracted
 #visualizationEditor.responsive {
   margin-left: 400px;
   padding-left: 15px;
@@ -471,7 +472,7 @@ html[dir='rtl'] div#visualizationResizeBar {
 }
 
 @mixin visualization-width($width) {
-  @include visualization-width-height-original($width, $width, 400px);
+  @include visualization-width-height-original($width, $width, $visualization-width);
 }
 
 @mixin bee-counter($font-size, $stroke-width) {
