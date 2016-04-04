@@ -321,28 +321,28 @@ end
 
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
-Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
-  element_has_text(selector, expectedText)
+Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
+  element_has_text(selector, expected_text)
 end
 
 Then /^I set selector "([^"]*)" text to "([^"]*)"$/ do |selector, text|
   @browser.execute_script("$(\"#{selector}\").text(\"#{text}\");")
 end
 
-Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
+Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   # Add more unescaping rules here as needed.
   expectedText.gsub!(/\\n/, "\n")
-  element_has_text(selector, expectedText)
+  element_has_text(selector, expected_text)
 end
 
-Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expectedHtml|
-  element_has_html(selector, expectedHtml)
+Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expected_html|
+  element_has_html(selector, expected_html)
 end
 
-Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     Then I wait to see a ".dialog-title"
-    And element ".dialog-title" has text "#{expectedText}"
+    And element ".dialog-title" has text "#{expected_text}"
   }
 end
 
@@ -355,24 +355,24 @@ end
 
 # pixelation and other dashboard levels pull a bunch of hidden dialog elements
 # into the dom, so we have to check for the dialog more carefully.
-Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     And I wait to see ".modal-body"
     And element ".modal-body .dialog-title" is visible
-    And element ".modal-body .dialog-title" contains text "#{expectedText}"
+    And element ".modal-body .dialog-title" contains text "#{expected_text}"
   }
 end
 
-Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, locKey|
-  element_has_i18n_text(selector, language, locKey)
+Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
+  element_has_i18n_text(selector, language, loc_key)
 end
 
-Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
-  element_contains_text(selector, expectedText)
+Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
+  element_contains_text(selector, expected_text)
 end
 
-Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expectedValue|
-  element_value_is(selector, expectedValue)
+Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expected_value|
+  element_value_is(selector, expected_value)
 end
 
 Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
@@ -380,8 +380,8 @@ Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
   value.should eq negation.nil?
 end
 
-Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expectedText|
-  element_has_attribute(selector, attribute, replace_hostname(expectedText))
+Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expected_text|
+  element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
 
 # The second regex encodes that ids should not contain spaces or quotes.
