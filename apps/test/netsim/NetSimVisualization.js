@@ -22,7 +22,7 @@ var fakeShard = NetSimTestUtils.fakeShard;
 testUtils.setupLocale('netsim');
 
 describe("NetSimVisualization", function () {
-  
+
   var testShard, alphaNode, betaNode, deltaNode, gammaNode, router,
       alphaWire, betaWire, deltaWire, gammaWire, netSimVis;
 

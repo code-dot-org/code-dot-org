@@ -21,7 +21,7 @@ he-IL:
   twentyhours_heading: נסה את קורס המבוא למדעי המחשב
   twentyhours_text: גמרת את שעת הקוד הראשונה שלך? למד עוד מבסיס מדעי המחשב ומושגים בתכנות בקורס הבא הזה.
   og_title: לכל ילד מגיע הזדמנות
-  og_description: לכל תלמיד בכל מוסד לימודי מגיע הזדמנות ללמוד מדעי המחשב.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'הצטרפו ל <a href="http://hourofcode.com">שעה של קוד </a><br/>דצמבר 8-14, 2014<br/>'
   hoc2014_students: סטודנטים
   hoc2014_try: נסו זאת
@@ -179,7 +179,7 @@ he-IL:
   learn_next_level: המשך לשלב הבא
   learn_online: נסה קורסים אחרים באינטרנט
   learn_classes: מצא כיתות מקומיות
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'בדיוק עכשיו עשיתי את ה-HourOfCode# - לכו לבדוק! codeorg@'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -490,6 +490,7 @@ he-IL:
   dashboard_navigation_all_sections: חשבונות תלמידים וההתקדמות שלהם
   dashboard_navigation_view_progress: צפה בהתקדמות
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: הוסף תלמידים
   dashboard_navigation_manage_students: נהל תלמידים
   dashboard_navigation_lesson_plans_resources: מערכי שיעור ומשאבים
@@ -588,6 +589,16 @@ he-IL:
   dashboard_puzzle: חידה
   dashboard_question: Question
   dashboard_response: תגובה
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: נכון
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'סטטיסטיקה מדהימה מן  Hour of Code  שנה שעברה. בשבוע אחד בלבד:'
   stats_hoc_2013_image_alt: 'סטטיסטיקה של  Hour of Code 2013'
   dashboard_teacher: מורה

@@ -14,11 +14,13 @@ var _ = require('lodash');
 require('./consoleShim')(window);
 
 var Sounds = require('./Sounds');
+var activateReferenceAreaOnLoad = require('./reference_area');
 
 require('./videos');
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
+window.Radium = require('radium');
 
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.
@@ -41,6 +43,7 @@ window.dashboard.clientState = require('./clientState.js');
 window.dashboard.createCallouts = require('./callouts');
 window.dashboard.hashEmail = require('./hashEmail');
 window.dashboard.funometer = require('./funometerPercentagesByDay');
+window.dashboard.levelCompletions = require('./levelCompletions');
 window.dashboard.popupWindow = require('./popup-window');
 window.dashboard.progress = require('./progress');
 window.dashboard.reporting = require('./reporting');
@@ -73,5 +76,7 @@ $(document).keydown(function(e) {
 setTimeout(function() {
   $('#codeApp .slow_load').show();
 }, 10000);
+
+activateReferenceAreaOnLoad();
 
 window.CDOSounds = new Sounds();

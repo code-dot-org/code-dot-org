@@ -234,17 +234,10 @@ end
 # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
 task :chef_update do
   if CDO.daemon && CDO.chef_managed
-    Dir.chdir(cookbooks_dir) do
-      old_gemfile = ENV['BUNDLE_GEMFILE']
-      ENV['BUNDLE_GEMFILE'] = File.join(cookbooks_dir, 'Gemfile')
-      begin
-        RakeUtils.bundle_install
-        RakeUtils.bundle_exec 'berks', 'install'
-        RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
-        RakeUtils.bundle_exec 'berks', 'apply', rack_env
-      ensure
-        ENV['BUNDLE_GEMFILE'] = old_gemfile
-      end
+    RakeUtils.with_bundle_dir(cookbooks_dir) do
+      RakeUtils.bundle_exec 'berks', 'install'
+      RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
+      RakeUtils.bundle_exec 'berks', 'apply', rack_env
     end
   end
 end

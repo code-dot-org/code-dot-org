@@ -3153,6 +3153,12 @@
       Ryan - Bee Conditionals_instruction: "Пчела хочет собирать только нектар. Помни,
         что не все объекты являются цветами, поэтому сначала проверяй каждую тучку,
         чтобы увидеть, скрывает ли она цветок. Если так, то можно собирать нектар."
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Эта функция называется "патрулировать."
         Измените её так, чтобы переместить кота на 400 пикселей вверх, а потом на
         400 пикселей вниз.

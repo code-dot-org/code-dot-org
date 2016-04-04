@@ -25,6 +25,7 @@ ar:
   welcome_back: 'أهلاً بكم من جديد، %{name}'
   submit: تسجيل
   unsubmit: عدم تقديم
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'إضافة معلِّماً:'
@@ -464,7 +465,6 @@ ar:
   landing:
     prerelease: "هذا الدرس لا يزال بنسختة التجريبية <span class='betatext'> Beta </span>. مما يعني أن هذة النسخة ليست النسخة النهائية من هذا الدرس وهي عرضة للمراجعة عند الحصول على الآراء وإجراء التغييرات بناء عليها."
     prerelease_hoc2014: "هذا الدرس التعليمي لا يزال بنسختة التجريبية <span class='betatext'> Beta </span>. فهو عرضة للمراجعة عند الحصول على الآراء وإجراء التغييرات بناء عليها."
-    feedback: الإدلاء برأيك
     report_bug: الإبلاغ عن خلل
     support: للحصول على المساعدة
     support_url: support.code.org
@@ -510,6 +510,8 @@ ar:
     placeholder: 'ادخل إجابتك هنا '
     open_response_title: شكرا،
     open_response_body: شكرا لردكم!
+    correct_title: صحيح
+    correct_body: هذا هو الجواب الصحيح.
   dialog:
     ok: موافق
     startover_title: هل أنت متأكد من أنك تريد البدء من جديد؟
@@ -620,3 +622,7 @@ ar:
           other: أخرى
         detail: يرجي تقديم كل التفاصيل الممكنة بشأن المحتوى الذي تريد الابلاغ عنه.
         acknowledge: 'عند تقديم هذه المعلومات, تُقرّ بأنها سوف يتم التعامل معها وفقا للشروط الموجودة في %{link_start_privacy} سياسة الخصوصية %{link_end} و %{link_start_tos}شروط الاستخدام%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

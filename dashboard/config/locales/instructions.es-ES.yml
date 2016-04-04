@@ -3233,6 +3233,12 @@
       Ryan - Bee Conditionals_instruction: La abeja sólo quiere néctar ahora. No todos
         los objetos son flores, así que mira debajo de TODAS LAS NUBES para verlo
         si esta escondiendo una flor. Si es así, puedes coger néctar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Aquí hay una función denominada "patrulla".
         Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400
         píxeles.

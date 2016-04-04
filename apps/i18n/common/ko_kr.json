@@ -1,6 +1,6 @@
 {
   "and": "이면서",
-  "animationMode": "Animation",
+  "animationMode": "애니메이션",
   "backToPreviousLevel": "이전 퍼즐",
   "blocklyMessage": "Blockly(블러클리)",
   "blocks": "블록",
@@ -27,8 +27,8 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
-  "debugWatchHeader": "Watch",
-  "debugWatchNotAvailable": "<not available>",
+  "debugWatchHeader": "살펴보기",
+  "debugWatchNotAvailable": "<사용할 수 없음>",
   "defaultTwitterText": "만든 작품 확인하기",
   "designMode": "디자인",
   "dialogCancel": "취소",
@@ -153,7 +153,7 @@
   "hintSelectInstructions": "설명, 힌트",
   "hintSelectNewHint": "새로운 힌트 얻기",
   "hintTitle": "힌트",
-  "iconSearchPlaceholder": "Search for an icon...",
+  "iconSearchPlaceholder": "아이콘 검색...",
   "ignore": "무시",
   "infinity": "무한",
   "jump": "점프",
@@ -169,7 +169,7 @@
   "nextPuzzle": "다음 퍼즐",
   "nextStage": "축하드립니다! {stageName}을(를) 완료하셨습니다.",
   "nextStageTrophies": "축하합니다. {stageName} 를 완료하였습니다. {numTrophies, plural, one {a trophy} other {# trophies}}.",
-  "noIconsFound": "No icons found",
+  "noIconsFound": "아이콘이 발견되지 않음",
   "numBlocksNeeded": "축하합니다! {puzzleNumber} 번 퍼즐을 해결했습니다. (하지만, {numBlocks, plural, one {1 block} other {# blocks}} 만 사용해야 합니다.)",
   "numLinesOfCodeWritten": "오! 코드 {numLines, plural, one {1 line} other {# 줄}}로 해결했네요!",
   "openWorkspace": "실행 설명",
@@ -177,7 +177,7 @@
   "pause": "Break",
   "play": "실행",
   "print": "인쇄",
-  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
+  "projectWarning": "참고: 큰 프로젝트의 일부 레벨입니다. 이 레벨에서의 변경사항은 프로젝트의 다른 레벨에서도 적용됩니다.",
   "puzzleTitle": "퍼즐 {puzzle_number}/{stage_total}",
   "readonlyWorkspaceHeader": "읽기 전용: ",
   "recommendedBlockContextualHintTitle": "퍼즐을 풀기 위해 블록을 이렇게 사용해 보세요.",
@@ -229,5 +229,6 @@
   "watchVideo": "비디오 보기",
   "when": "~할 때",
   "whenRun": "실행하면",
-  "workspaceHeaderShort": "작업 영역: "
+  "workspaceHeaderShort": "작업 영역: ",
+  "showBlock": "Get a block"
 }

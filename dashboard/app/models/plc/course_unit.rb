@@ -21,4 +21,9 @@ class Plc::CourseUnit < ActiveRecord::Base
   has_many :plc_unit_assignment, class_name: '::Plc::EnrollmentUnitAssignment', foreign_key: 'plc_course_unit_id', dependent: :destroy
 
   validates :plc_course, presence: true
+
+  def get_all_possible_learning_resources
+    plc_evaluation_questions.map(&:plc_evaluation_answers).flatten.map(&:plc_learning_module).compact.map(&:plc_tasks).
+        flatten.select!{|task| task.class == Plc::LearningResourceTask}
+  end
 end

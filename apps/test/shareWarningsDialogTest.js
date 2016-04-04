@@ -1,10 +1,8 @@
-window.React = require('react');
-window.ReactDOM = require('react-dom');
-var ReactTestUtils = require('react-addons-test-utils');
-
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales('Applab');
+testUtils.setExternalGlobals();
+var ReactTestUtils = require('react-addons-test-utils');
 var ShareWarningsDialog = require('@cdo/apps/templates/ShareWarningsDialog.jsx');
 var ShareWarnings = require('@cdo/apps/templates/ShareWarnings.jsx');
 var AgeDropdown = require('@cdo/apps/templates/AgeDropdown.jsx');

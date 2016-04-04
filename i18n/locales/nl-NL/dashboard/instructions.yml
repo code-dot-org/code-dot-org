@@ -2089,6 +2089,12 @@ nl:
       Ryan - Bee Conditionals_instruction: |
         De bij wil nu alleen nectar.
         Niet alles is een bloem, dus kijk onder ELKE WOLK of daar een bloem is verstopt. Zo ja, verzamel dan de nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: 'Hier is een functie genaamd "patrol". Bewerk hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten bewegen.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |

@@ -79,7 +79,7 @@ SamBatLogic.prototype.updateSam_ = function (dir) {
   var centerX = this.sam.x + this.sam.width / 2;
   //invert Y
   var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
-  
+
   switch (dir) {
     case Direction.WEST:
       if (!this.onscreen(centerX - this.sam.speed, centerY)) {

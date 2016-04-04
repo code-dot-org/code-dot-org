@@ -47,7 +47,9 @@ Columbus, OH 43215](https://www.google.com/maps/place/Columbus+State+Child+Devel
 
 Review the [campus map](http://www.cscc.edu/about/columbus/) (the Conference Center is listed as WD on the corner of Cleveland Ave and Grove Street) and [building map](http://www.cscc.edu/community/conference-center/floor-plans-pricing.shtml). 
 
-Please print these [Parking Directions](https://code.org/files/ohio-lot27-s.pdf) and [Parking Pass](/files/1-23-ohio-parking.pdf) to bring with you on the day of the event.
+Please print these [Parking Directions](https://code.org/files/ohio-lot27-s.pdf) and [Parking Pass](/files/4-16-16-columbus-ecs-parking.pdf) to bring with you on the day of the event.
+
+Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop!
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -77,7 +79,10 @@ Breakfast and lunch will be served.
 
 **Location**
 
-More Details Coming Soon!
+[Microsoft Corporation<br/> 
+Suite 400 - MPR 1<br/>
+8800 Lyra Drive<br/>
+Columbus, OH 43240](https://goo.gl/maps/fER4fkFEqvH2)
 
 **What do I bring to Phase 4 PD?**
 

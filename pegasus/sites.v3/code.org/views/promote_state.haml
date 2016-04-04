@@ -1,6 +1,7 @@
+-require 'state_abbr'
 -data = DB[:cdo_state_promote].where(state_code_s:state).first
 -pass if data.nil?
--statename = us_state_name_from_code(state)
+-statename = get_us_state_from_abbr(state)
 -petition_url = data[:petition_url_t]
 %script{type: "text/javascript", src: "/shared/js/helpers.js"}
 %p#state-title

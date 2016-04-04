@@ -1,3 +1,6 @@
+var MarkdownInstructions = require('./MarkdownInstructions.jsx');
+var NonMarkdownInstructions = require('./NonMarkdownInstructions.jsx');
+
 var Instructions = React.createClass({
 
   propTypes: {
@@ -11,7 +14,6 @@ var Instructions = React.createClass({
   },
 
   render: function () {
-
     // Body logic is as follows:
     //
     // If we have been given rendered markdown, render a div containing
@@ -22,51 +24,30 @@ var Instructions = React.createClass({
     // Otherwise, render the title and up to two sets of instructions.
     // These instructions may contain spans and images as determined by
     // StudioApp.substituteInstructionImages
-    var body;
-    var bodyStyle = {
-      marginBottom: '35px'
-    };
+    var instructions;
     if (this.props.renderedMarkdown) {
-      // Optionally give markdown dialog wide left margin so it looks more like a
-      // non-markdown instructions dialog (useful if mixing markdown instructions
-      // with non-markdown instructions in one tutorial).
-      if (this.props.markdownClassicMargins) {
-        bodyStyle.paddingTop = 0;
-        bodyStyle.marginLeft = '90px';
-      }
-
-      body = (<div
-        className='instructions-markdown'
-        style={ bodyStyle }
-        dangerouslySetInnerHTML={{ __html: this.props.renderedMarkdown }}
-      />);
+      instructions = (
+        <MarkdownInstructions
+          renderedMarkdown={this.props.renderedMarkdown}
+          markdownClassicMargins={this.props.markdownClassicMargins}
+          inTopPane={this.props.inTopPane}
+        />
+      );
     } else {
-      bodyStyle.marginLeft = '80px';
-
-      var instructions = (this.props.instructions) ?
-        <p className='instructions' dangerouslySetInnerHTML={{ __html: this.props.instructions }}/> :
-        null;
-
-      var instructions2 = (this.props.instructions2) ?
-        <p className='instructions2' dangerouslySetInnerHTML={{ __html: this.props.instructions2 }}/> :
-        null;
-
-      body = (<div style={ bodyStyle }>
-        <p className='dialog-title'>{ this.props.puzzleTitle }</p>
-        {instructions}
-        {instructions2}
-      </div>);
+      instructions = (
+        <NonMarkdownInstructions
+          puzzleTitle={this.props.puzzleTitle}
+          instructions={this.props.instructions}
+          instructions2={this.props.instructions2}
+        />
+      );
     }
-
-    var aniGif;
-    if (this.props.aniGifURL) {
-      aniGif = <img className="aniGif example-image" src={ this.props.aniGifURL }/>;
-    }
-
     return (
       <div>
-        {body}
-        {aniGif}
+        {instructions}
+        {this.props.aniGifURL &&
+          <img className="aniGif example-image" src={ this.props.aniGifURL }/>
+        }
         {this.props.authoredHints}
       </div>
     );
