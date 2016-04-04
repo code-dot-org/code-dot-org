@@ -92,6 +92,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   private
   def do_expected_answers_yield_expected_module_enrollments(answers, expected_module_enrollments)
     post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answerModuleList: answers
+    assert_redirected_to plc_enrollment_unit_assignment_path(@unit_assignment)
     @unit_assignment.reload
     assert_equal expected_module_enrollments.map(&:id).sort, @enrollment.plc_module_assignments.all.map(&:plc_learning_module_id).sort
   end
