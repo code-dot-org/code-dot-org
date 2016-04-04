@@ -466,12 +466,6 @@ Style/UnneededInterpolation:
 Style/UnneededPercentQ:
   Enabled: false
 
-# Offense count: 34
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: snake_case, camelCase
-Style/VariableName:
-  Enabled: false
-
 # Offense count: 71
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, MinSize, WordRegex.
