@@ -190,6 +190,8 @@ Jigsaw.init = function(config) {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    noVisualization: true,
+    isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
     generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: onMount
