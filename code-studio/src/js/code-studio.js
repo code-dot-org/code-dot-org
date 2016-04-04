@@ -20,6 +20,7 @@ require('./videos');
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
+window.Radium = require('radium');
 
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.
@@ -40,6 +41,7 @@ window.dashboard.clientState = require('./clientState.js');
 window.dashboard.createCallouts = require('./callouts');
 window.dashboard.hashEmail = require('./hashEmail');
 window.dashboard.funometer = require('./funometerPercentagesByDay');
+window.dashboard.levelCompletions = require('./levelCompletions');
 window.dashboard.popupWindow = require('./popup-window');
 window.dashboard.progress = require('./progress');
 window.dashboard.reporting = require('./reporting');

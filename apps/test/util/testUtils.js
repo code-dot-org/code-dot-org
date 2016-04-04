@@ -9,16 +9,44 @@ var tickWrapper = require('./tickWrapper');
 require('require-globify');
 
 var $ = require('jquery');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Radium = require('radium');
+var _ = require('lodash');
 
 exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;
 };
 
-var _ = require('lodash');
-
 var studioApp;
 
 var testBlockFactory = require('./testBlockFactory');
+
+exports.setExternalGlobals = function () {
+  window.React = React;
+  window.ReactDOM = ReactDOM;
+  window.$ = $;
+  window.jQuery = $;
+  window.Radium = Radium;
+
+  window.dashboard = $.extend(window.dashboard, {
+    i18n: {
+      t: function (selector) { return selector; }
+    },
+    // Right now we're just faking some of our dashboard project interactions.
+    // If this becomes insufficient, we might be able to require the project.js
+    // file from shared here.
+    project: {
+      clearHtml: function() {},
+      exceedsAbuseThreshold: function () { return false; },
+      getCurrentId: function () { return 'fake_id'; },
+      isEditing: function () { return true; }
+    }
+  });
+  window.marked = function (str) {
+    return str;
+  };
+};
 
 function setupLocale(app) {
   setupLocales();

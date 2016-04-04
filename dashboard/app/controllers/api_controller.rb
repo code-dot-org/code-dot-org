@@ -26,11 +26,11 @@ class ApiController < ApplicationController
       student_levels = @script.script_levels.map do |script_level|
         user_level = level_map[script_level.level_id]
         if user_level.try(:submitted)
-          levelClass = "submitted"
+          level_class = "submitted"
         else
-          levelClass = activity_css_class(user_level.try(:best_result))
+          level_class = activity_css_class(user_level.try(:best_result))
         end
-        {class: levelClass, title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
+        {class: level_class, title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
       end
       {id: student.id, levels: student_levels}
     end

@@ -23,7 +23,7 @@
     "embed": "false",
     "video_key": "C4_math_artist",
     "disable_sharing": "false",
-    "markdown_instructions": "Now I want to make a rectangle that is twice as tall as it is wide. We've got a variable called `width` that needs to be set to 100. Can you use the math blocks to complete the code?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Now I want to make a rectangle that is twice as tall as it is wide. We've got a variable called `width` that needs to be set to 100. Can you use the math blocks to complete the code?\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -33,7 +33,9 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false"
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -109,42 +111,66 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml/>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">100</title>
+            <block type="variables_set" inline="false" movable="false">
+              <title name="VAR">width</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">100</title>
+                </block>
+              </value>
               <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE">90</title>
-                  <next>
-                    <block type="draw_move_by_constant">
+                <block type="controls_repeat_ext" inline="true" deletable="false" movable="false" editable="false">
+                  <value name="TIMES">
+                    <block type="math_number" movable="false">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true" deletable="false" movable="false" editable="false">
                       <title name="DIR">moveForward</title>
-                      <title name="VALUE">200</title>
+                      <value name="VALUE">
+                        <block type="variables_get">
+                          <title name="VAR">width</title>
+                        </block>
+                      </value>
                       <next>
-                        <block type="draw_turn_by_constant">
+                        <block type="draw_turn" inline="true" deletable="false" movable="false" editable="false">
                           <title name="DIR">turnLeft</title>
-                          <title name="VALUE">90</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">90</title>
+                            </block>
+                          </value>
                           <next>
-                            <block type="draw_move_by_constant">
+                            <block type="draw_move" inline="true" deletable="false" movable="false" editable="false">
                               <title name="DIR">moveForward</title>
-                              <title name="VALUE">100</title>
-                              <next>
-                                <block type="draw_turn_by_constant">
-                                  <title name="DIR">turnLeft</title>
-                                  <title name="VALUE">90</title>
-                                  <next>
-                                    <block type="draw_move_by_constant">
-                                      <title name="DIR">moveForward</title>
-                                      <title name="VALUE">200</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" inline="true" movable="false">
+                                  <title name="OP">MULTIPLY</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">width</title>
                                     </block>
-                                  </next>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number">
+                                      <title name="NUM">2</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn" inline="true" deletable="false" movable="false" editable="false">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
                                 </block>
                               </next>
                             </block>
@@ -152,7 +178,7 @@
                         </block>
                       </next>
                     </block>
-                  </next>
+                  </statement>
                 </block>
               </next>
             </block>

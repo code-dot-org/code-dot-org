@@ -1,13 +1,10 @@
 'use strict';
 
-var _ = require('../../lodash');
+var Radium = require('radium');
 var color = require('../../color');
+var styleConstants = require('../../styleConstants');
 
-// TODO - better handle packages like marked (perhaps using browserify-shim).
-// I'd also like to have a centralized place across all of our mochaTests where
-// we initialize all globals we depend on dashboard/code-studio for (jquery,
-// react, marked, etc.).
-var processMarkup = window.marked || function (str) { return str; };
+var processMarkdown = require('marked');
 
 var Instructions = require('./Instructions.jsx');
 var CollapserIcon = require('./CollapserIcon.jsx');
@@ -15,10 +12,8 @@ var HeightResizer = require('./HeightResizer.jsx');
 var constants = require('../../constants');
 var msg = require('../../locale');
 
-// TODO These numbers are defined in style-constants.scss. Do the same sort
-// of thing we did with colors
-var HEADER_HEIGHT = 30;
-var RESIZER_HEIGHT = 13;
+var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
+var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 // TODO - may want to be smarter about these values
 var INITIAL_HEIGHT = 300;
@@ -28,12 +23,13 @@ var styles = {
   main: {
     position: 'absolute',
     marginLeft: 15,
+    top: 0,
     right: 0,
     // left handled by media queries for .editor-column
   },
   header: {
     height: HEADER_HEIGHT,
-    lineHeight: '30px',
+    lineHeight: HEADER_HEIGHT + 'px',
     fontFamily: '"Gotham 4r"',
     backgroundColor: color.lighter_purple,
     textAlign: 'center'
@@ -42,12 +38,26 @@ var styles = {
     backgroundColor: 'white',
     overflowY: 'scroll',
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0
+  },
+  hidden: {
+    display: 'none'
+  },
+  embedView: {
+    height: undefined,
+    bottom: 0,
+    // Visualization is hard-coded on embed levels. Do the same for instructions position
+    left: 340
   }
 };
 
 var TopInstructions = React.createClass({
   propTypes: {
+    // If true,
+    isEmbedView: React.PropTypes.bool.isRequired,
     puzzleNumber: React.PropTypes.number.isRequired,
     stageTotal: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
@@ -80,40 +90,36 @@ var TopInstructions = React.createClass({
     }
     var id = this.props.id;
 
-    var mainStyle = _.assign({}, styles.main, {
+    var mainStyle = [styles.main, {
       height: this.props.height - RESIZER_HEIGHT
-    });
-
-    var bodyStyle = _.assign({}, styles.body, {
-      height: mainStyle.height - styles.header.height,
-    });
-
-    var collapseStyle = {
-      display: this.props.collapsed ? 'none' : undefined
-    };
+    }, this.props.isEmbedView && styles.embedView];
 
     return (
       <div style={mainStyle} className="editor-column">
-        <CollapserIcon
+        {!this.props.isEmbedView && <CollapserIcon
             collapsed={this.props.collapsed}
             onClick={this.props.onToggleCollapsed}/>
+        }
         <div style={styles.header}>
           {msg.puzzleTitle({
             stage_total: this.props.stageTotal,
             puzzle_number: this.props.puzzleNumber
           })}
         </div>
-        <div style={collapseStyle}>
-          <div style={bodyStyle}>
-            <Instructions renderedMarkdown={processMarkup(this.props.markdown)}/>
+        <div style={[this.props.collapsed && styles.hidden]}>
+          <div style={styles.body}>
+            <Instructions
+              renderedMarkdown={processMarkdown(this.props.markdown)}
+              inTopPane
+              />
           </div>
-          <HeightResizer
-            position={mainStyle.height}
+          {!this.props.isEmbedView && <HeightResizer
+            position={this.props.height}
             onResize={this.onHeightResize}/>
+          }
         </div>
       </div>
     );
-
   }
 });
-module.exports = TopInstructions;
+module.exports = Radium(TopInstructions);
