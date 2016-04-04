@@ -21,10 +21,10 @@ And(/^there is a Tooltipster tooltip with text "([^"]*)"$/) do |tooltip_text|
 end
 
 # This doesn't work in IE or on mobile yet, not sure why.
-When /^I drag droplet block "([^"]*)" to line (\d+)$/ do |blockName, lineNumber|
+When /^I drag droplet block "([^"]*)" to line (\d+)$/ do |block_name, line_number|
   code = %{
-    var block = $("#droplet_palette_block_#{blockName}");
-    var gutterLine = $(".droplet-gutter-line").filter(function (index) { return $(this).text() === "#{lineNumber}"; });
+    var block = $("#droplet_palette_block_#{block_name}");
+    var gutterLine = $(".droplet-gutter-line").filter(function (index) { return $(this).text() === "#{line_number}"; });
     var drag_dx = gutterLine.offset().left + gutterLine.outerWidth() - block.offset().left;
     var drag_dy = gutterLine.offset().top - block.offset().top;
     block.simulate( 'drag', {

@@ -11,12 +11,12 @@ require('require-globify');
 var $ = require('jquery');
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Radium = require('radium');
+var _ = require('lodash');
 
 exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;
 };
-
-var _ = require('lodash');
 
 var studioApp;
 
@@ -27,6 +27,7 @@ exports.setExternalGlobals = function () {
   window.ReactDOM = ReactDOM;
   window.$ = $;
   window.jQuery = $;
+  window.Radium = Radium;
 
   window.dashboard = $.extend(window.dashboard, {
     i18n: {

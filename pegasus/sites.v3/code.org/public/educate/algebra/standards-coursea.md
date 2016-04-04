@@ -26,7 +26,7 @@ nav: educate_nav
     <div class="standards">
     
         <div class="together">
-            <h2><a href="/curriculum/algebra/courseA/">Unit 1: Course A</a></h2>
+            <h2>Course A</h2>
 
             
                 <h3><a href="/curriculum/algebra/courseA/1/">

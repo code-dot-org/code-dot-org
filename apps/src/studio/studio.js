@@ -568,10 +568,8 @@ Studio.removeGoalEffect = function () {
  * @param func Function : The function to execute
  * @param data Object or Array : The data to pass to the function. If the function is also passed arguments, the data is appended to the arguments list. If the data is an Array, each item is appended as a new argument.
  */
-var delegate = function(scope, func, data)
-{
-  return function()
-  {
+var delegate = function(scope, func, data) {
+  return function() {
     var args = Array.prototype.slice.apply(arguments).concat(data);
     func.apply(scope, args);
   };
@@ -1184,8 +1182,7 @@ function edgeCollidableCollisionDistance (collidable, edgeName, yAxis) {
  * executeCollision, which is expected to be called afterwards by the caller.
  */
 function handleActorCollisionsWithCollidableList (
-           spriteIndex, xCenter, yCenter, list, autoDisappear)
-{
+           spriteIndex, xCenter, yCenter, list, autoDisappear) {
   // Traverse the list in reverse order because we may remove elements from the
   // list while inside the loop:
   for (var i = list.length - 1; i >= 0; i--) {
@@ -1352,8 +1349,7 @@ function checkForCollisions() {
                         spriteCollisionDistance(i, j, false),
                         iYCenter,
                         jYCenter,
-                        spriteCollisionDistance(i, j, true)))
-      {
+                        spriteCollisionDistance(i, j, true))) {
         Studio.collideSpriteWith(i, j);
       } else {
         sprite.endCollision(j);
@@ -2471,8 +2467,7 @@ var displayFeedback = function() {
   // For free play, show keep playing, unless it's a big game level
   if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
     tryAgainText = commonMsg.keepPlaying();
-  }
-  else {
+  } else {
     tryAgainText = commonMsg.tryAgain();
   }
 
@@ -2625,10 +2620,13 @@ var registerHandlersWithMultipleSpriteParams =
 
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
-  try { codegen.evalWith(code, {
-                         StudioApp: studioApp,
-                         Studio: api,
-                         Globals: Studio.Globals } ); } catch (e) { }
+  try {
+    codegen.evalWith(code, {
+      StudioApp: studioApp,
+      Studio: api,
+      Globals: Studio.Globals
+    });
+  } catch (e) { }
 };
 
 /**
@@ -5154,8 +5152,7 @@ Studio.setSpriteXY = function (opts) {
   sprite.setDirection(Direction.NONE);
 };
 
-Studio.getPlayspaceBoundaries = function(sprite)
-{
+Studio.getPlayspaceBoundaries = function(sprite) {
   var boundaries;
 
   if (skin.wallCollisionRectWidth && skin.wallCollisionRectHeight && !level.gridAlignedMovement) {

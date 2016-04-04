@@ -370,7 +370,7 @@ exports.escapeText = function (text) {
   escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
   escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
   escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
-  escapedText = escapedText.replace(/  /g,' &nbsp;'); // Escape doubled spaces
+  escapedText = escapedText.replace(/ {2}/g,' &nbsp;'); // Escape doubled spaces
 
   // Now wrap each line except the first line in a <div>,
   // replacing blank lines with <div><br><div>

@@ -146,7 +146,7 @@ Slider.prototype.beginDrag_ = function(startMouseSVG) {
  * @private
  */
 Slider.prototype.snapToPosition_ = function(xPosition) {
-  var x = Math.min(Math.max(xPosition, 
+  var x = Math.min(Math.max(xPosition,
         this.KNOB_MIN_X_), this.KNOB_MAX_X_);
   this.knob_.setAttribute('transform',
       'translate(' + x + ',' + this.KNOB_Y_ + ')');
