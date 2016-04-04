@@ -1,13 +1,9 @@
 class Plc::CourseViewController < ApplicationController
-  before_filter :dashboard_view_requirements
+  before_filter :authenticate_user!
 
   def render_dashboard
-    @enrollments = current_user.plc_enrollments
-  end
+    authorize! :read, Plc::Course
 
-  private
-  def dashboard_view_requirements
-    authenticate_user!
-    require_teacher
+    @enrollments = current_user.plc_enrollments
   end
 end

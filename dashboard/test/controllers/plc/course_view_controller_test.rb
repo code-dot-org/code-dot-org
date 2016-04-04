@@ -28,4 +28,12 @@ class Plc::CourseViewControllerTest < ActionController::TestCase
     get :render_dashboard
     assert_response :forbidden
   end
+
+  test 'Signed out users cannot access course view' do
+    assert_signed_in_as nil
+
+    get :render_dashboard
+    assert_redirected_to_sign_in
+  end
+
 end

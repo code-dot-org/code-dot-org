@@ -223,12 +223,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def require_teacher
-    unless current_user.user_type == User::TYPE_TEACHER || current_user.admin
-      raise CanCan::AccessDenied.new('Teacher dashboard is restricted to teachers')
-    end
-  end
-
   def require_admin
     authorize! :read, :reports
   end
