@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+#
+# Creates/updates LetsEncrypt SSL certificates stored in S3 using acmesmith.
+# Ref: https://github.com/sorah/acmesmith
+# Usage: update_certs [domain]
+#
+# Prerequisites:
+# - AWS credentials provided by the environment with appropriate access policies
+#   (ref: https://github.com/sorah/acmesmith#iam-policy)
+# - Existing valid ACME account key in the object storage (created by `acmesmith register CONTACT`)
+# - configuration in ./acmesmith.yml
+require_relative '../../deployment'
+
+unless ARGV.length == 1
+  puts "Usage: #{$0} [domain]"
+  exit 1
+end
+
+domain = ARGV[0]
+`acmesmith current #{domain} 2>&1`
+unless $?.success?
+  required_certs = ['', 'dashboard-', 'origin-'].map{|prefix|prefix + domain}
+  CDO.log.info "Authorizing SSL certificates for subdomain: #{domain}"
+  required_certs.each do |auth|
+    CDO.log.info `acmesmith authorize #{auth}`
+  end
+  CDO.log.info `acmesmith request #{required_certs.join(' ')}`
+end

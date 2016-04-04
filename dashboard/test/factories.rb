@@ -128,8 +128,14 @@ FactoryGirl.define do
     game {Game.applab}
   end
 
+  factory :makerlab, :parent => Level, :class => Applab do
+    game {Game.applab}
+    properties{{makerlab_enabled: true}}
+  end
+
   factory :multi, :parent => Level, :class => Applab do
-    game {Game.multi}
+    game {create(:game, app: "multi")}
+    properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
   end
 
   factory :level_source do
@@ -159,6 +165,10 @@ FactoryGirl.define do
 
   factory :script_level do
     script
+
+    trait :assessment do
+      assessment true
+    end
 
     stage do |script_level|
       create(:stage, script: script_level.script)
@@ -297,7 +307,7 @@ FactoryGirl.define do
   factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
     plc_user_course_enrollment nil
     plc_course_unit nil
-    status "MyString"
+    status Plc::EnrollmentUnitAssignment::START_BLOCKED
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do
@@ -383,18 +393,8 @@ FactoryGirl.define do
   end
 
   factory :level_group do
-    game_id 1
-    name "MyString"
-    created_at "2016-02-19 20:19:50"
-    updated_at "2016-02-19 20:19:50"
-    level_num "MyString"
-    ideal_level_source_id 1
-    solution_level_source_id 1
-    user_id 1
-    properties "MyText"
-    type ""
-    md5 "MyString"
-    published false
+    game {create(:game, app: "level_group")}
+    properties{{title: 'title', pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]}}
   end
 
   factory :survey_result do

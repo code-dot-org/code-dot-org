@@ -26,11 +26,11 @@ class ApiController < ApplicationController
       student_levels = @script.script_levels.map do |script_level|
         user_level = level_map[script_level.level_id]
         if user_level.try(:submitted)
-          levelClass = "submitted"
+          level_class = "submitted"
         else
-          levelClass = activity_css_class(user_level.try(:best_result))
+          level_class = activity_css_class(user_level.try(:best_result))
         end
-        {class: levelClass, title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
+        {class: level_class, title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
       end
       {id: student.id, levels: student_levels}
     end
@@ -146,6 +146,91 @@ class ApiController < ApplicationController
           question: script_level.level.properties['title'],
           response: response,
           url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+        }
+      end.compact
+    end.flatten
+
+    render json: data
+  end
+
+  # For each student, return an array of each long-assessment LevelGroup in progress or submitted.
+  # Each such array contains an array of individual level results, matching the order of the LevelGroup's
+  # levels.  For each level, the student's answer content is in :student_result, and its correctness
+  # is in :correct.
+  def section_assessments
+    load_section
+    load_script
+
+    level_group_script_levels = @script.script_levels.includes(:level).where("levels.type" => LevelGroup)
+
+    data = @section.students.map do |student|
+      student_hash = {id: student.id, name: student.name}
+
+      level_group_script_levels.map do |script_level|
+        next unless script_level.long_assessment?
+
+        last_attempt = student.last_attempt(script_level.level)
+        response = last_attempt.try(:level_source).try(:data)
+
+        next unless response
+
+        response_parsed = JSON.parse(response)
+
+        user_level = student.user_level_for(script_level)
+
+        # Summarize some key data.
+        multi_count = 0
+        multi_count_correct = 0
+
+        # And construct a listing of all the individual levels and their results.
+        level_results = []
+
+        script_level.level.levels.each do |level|
+          level_response = response_parsed.find{|r| r["level_id"] == level.id}
+
+          if level_response
+            level_result = {}
+
+            case level
+            when TextMatch
+              student_result = level_response["result"]
+              level_result[:student_result] = student_result
+              level_result[:correct] = "free_response"
+            when Multi
+              answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
+              student_result = level_response["result"].split(",").sort.join(",")
+              multi_count += 1
+              level_result[:student_result] = student_result
+              if student_result == "-1"
+                level_result[:student_result] = ""
+                level_result[:correct] = "unsubmitted"
+              elsif student_result == answer_indexes
+                multi_count_correct += 1
+                level_result[:correct] = "correct"
+              else
+                level_result[:correct] = "incorrect"
+              end
+            end
+
+            level_results << level_result
+          end
+        end
+
+        submitted = user_level.try(:submitted)
+
+        timestamp = user_level[:updated_at].to_formatted_s
+
+        {
+          student: student_hash,
+          stage: script_level.stage.localized_title,
+          puzzle: script_level.position,
+          question: script_level.level.properties["title"],
+          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
+          multi_correct: multi_count_correct,
+          multi_count: multi_count,
+          submitted: submitted,
+          timestamp: timestamp,
+          level_results: level_results
         }
       end.compact
     end.flatten

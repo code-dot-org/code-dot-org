@@ -29,7 +29,9 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
 
   def create_enrollment_unit_assignments
     plc_course.plc_course_units.each do |course_unit|
-      Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: self, plc_course_unit: course_unit)
+      Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: self,
+                                           plc_course_unit: course_unit,
+                                           status: Plc::EnrollmentUnitAssignment::START_BLOCKED)
     end
   end
 end

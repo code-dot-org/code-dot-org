@@ -228,8 +228,7 @@ class GameController {
       if (this.OnCompleteCallback) {
           if (this.queue.isSucceeded()) {
               this.OnCompleteCallback(true, this.levelModel);
-          }
-          else {
+          } else {
               this.OnCompleteCallback(false, this.levelModel);
           }
           this.OnCompleteCallback = null;
@@ -268,8 +267,7 @@ class GameController {
       jumpOff = wasOnBlock && wasOnBlock != player.isOnBlock;
       if(player.isOnBlock || jumpOff) {
         groundType = this.levelModel.actionPlane[this.levelModel.yToIndex(player.position[1]) + player.position[0]].blockType;
-      }
-      else {
+      } else {
         groundType = this.levelModel.groundPlane[this.levelModel.yToIndex(player.position[1]) + player.position[0]].blockType;
       }
 
@@ -283,27 +281,22 @@ class GameController {
             this.levelView.playDrownFailureAnimation(player.position, player.facing, player.isOnBlock, () => {
               commandQueueItem.failed();
             } );
-        }
-        else if(this.levelModel.isPlayerStandingInLava()) {
+        } else if(this.levelModel.isPlayerStandingInLava()) {
           this.levelView.playBurnInLavaAnimation(player.position, player.facing, player.isOnBlock, () => {
             commandQueueItem.failed();
           } );
-        }
-        else {
+        } else {
           this.delayPlayerMoveBy(30, 200, () => {
             commandQueueItem.succeeded();
           });
         }
       });
-    }
-    else {
-      if(this.levelModel.isForwardBlockOfType("creeper"))
-      {
+    } else {
+      if(this.levelModel.isForwardBlockOfType("creeper")) {
         this.levelView.playCreeperExplodeAnimation(player.position, player.facing, this.levelModel.getMoveForwardPosition(), player.isOnBlock, () => {
           commandQueueItem.failed();
         });
-      }
-      else {
+      } else {
         this.levelView.playBumpAnimation(player.position, player.facing, false);
         this.delayPlayerMoveBy(400, 800, () => {
           commandQueueItem.succeeded();
@@ -598,13 +591,10 @@ class GameController {
               this.levelView.updateFowPlane(this.levelModel.fowPlane);
             }
         );
-      }
-      else if(this.checkMinecartLevelEndAnimation())
-      {
+      } else if(this.checkMinecartLevelEndAnimation()) {
         this.levelView.playMinecartAnimation(player.position, player.facing, player.isOnBlock,
             () => { commandQueueItem.succeeded(); }, this.levelModel.getMinecartTrack(), this.levelModel.getUnpoweredRails());
-      }
-      else if(this.checkTntAnimation()) {
+      } else if(this.checkTntAnimation()) {
         this.levelView.scaleShowWholeWorld(() => {});
         var tnt = this.levelModel.getTnt();
         var wasOnBlock = player.isOnBlock;
@@ -643,8 +633,7 @@ class GameController {
             });
           });
         });
-      }
-      else {
+      } else {
         this.levelView.playSuccessAnimation(player.position, player.facing, player.isOnBlock,
             () => { commandQueueItem.succeeded(); });
       }

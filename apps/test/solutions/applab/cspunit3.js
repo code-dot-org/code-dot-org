@@ -57,35 +57,6 @@ var levelDefinition = {
   "id": "custom",
 };
 
-
-
-/**
- * Simulates dragging the nth block in the toolbox into the canvas at line
- * targetIndex (assumes all blocks are size 30).
- * @param {number} blockIndex Nth block in toolbox
- * @param {number} targetIndex Nth line in target
- */
-function dragToolboxBlock(blockIndex, targetIndex) {
-  var start = {
-    x: $(".droplet-palette-canvas").eq(0).offset().left + 10,
-    y: $(".droplet-palette-canvas").eq(0).offset().top + 10 +
-      blockIndex * 30
-  };
-  var end = {
-    x: $(".droplet-main-canvas").eq(0).offset().left,
-    y: $(".droplet-main-canvas").eq(0).offset().top +
-      targetIndex * 30
-  };
-
-  var mousedown = testUtils.createMouseEvent('mousedown', start.x, start.y);
-  var drag = testUtils.createMouseEvent('mousemove', end.x, end.y);
-  var mouseup = testUtils.createMouseEvent('mouseup', end.x, end.y);
-
-  $(".droplet-drag-cover")[0].dispatchEvent(mousedown);
-  $(".droplet-drag-cover")[0].dispatchEvent(drag);
-  $(".droplet-drag-cover")[0].dispatchEvent(mouseup);
-}
-
 // Extract a list of those pixels that are actually filled
 function getColoredPixels(imageData, width, height) {
   var list = [];
@@ -113,29 +84,26 @@ module.exports = {
         return levelDefinition;
       },
       runBeforeClick: function (assert) {
-        // Paramaterless moveForward. Moves 25 pixels by default
-        var moveForward = 0;
-        var turnLeft = 1;
+        var expectedCode = '' +
+          'moveForward();\n' +
+          'turnLeft();\n' +
+          'turnLeft();\n' +
+          'turnLeft();\n' +
+          'moveForward();\n' +
+          'turnLeft();\n' +
+          'turnLeft();\n' +
+          'turnLeft();\n' +
+          'moveForward();\n' +
+          'turnLeft();\n' +
+          'turnLeft();\n' +
+          'turnLeft();\n' +
+          'moveForward();\n';
 
-        var nextIndex = 0;
-        function appendToolboxBlock(blockIndex) {
-          dragToolboxBlock(blockIndex, nextIndex++);
-        }
+        $("#show-code-header").click();
+        testUtils.setAceText(expectedCode);
 
-        appendToolboxBlock(moveForward);
-        assert.equal(Applab.getCode(), 'moveForward();\n');
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(moveForward);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(moveForward);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(moveForward);
+        var actualCode = Applab.getCode();
+        assert.equal(actualCode, expectedCode, 'code set properly');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 10, function () {

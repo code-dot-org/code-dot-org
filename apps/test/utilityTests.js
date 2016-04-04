@@ -449,3 +449,258 @@ describe('forceInsertTopBlock', function () {
   });
 
 });
+
+describe('utils.escapeText', function () {
+  var escapeText = utils.escapeText;
+
+  it('no-op on empty string', function () {
+    assert.equal('', escapeText(''));
+  });
+
+  it('no-op on alphanumeric string', function () {
+    var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    var digits = '0123456789';
+    var testString = alphabet + alphabet.toUpperCase() + digits;
+    assert.equal(testString, escapeText(testString));
+  });
+
+  it('replaces all & with &amp;', function () {
+    assert.equal('&amp;', escapeText('&'));
+    assert.equal('&amp;&amp;', escapeText('&&'));
+    assert.equal('&amp;nbsp;', escapeText('&nbsp;'));
+  });
+
+  it('replaces all < with &lt;', function () {
+    assert.equal('&lt;', escapeText('<'));
+    assert.equal('&lt;&lt;', escapeText('<<'));
+    assert.equal('&lt;div', escapeText('<div'));
+  });
+
+  it('replaces all > with &gt;', function () {
+    assert.equal('&gt;', escapeText('>'));
+    assert.equal('&gt;&gt;', escapeText('>>'));
+    assert.equal('/&gt;', escapeText('/>'));
+  });
+
+  it('breaks up all doubled spaces with &nbsp;', function () {
+    assert.equal(' ', escapeText(' '));
+    assert.equal(' &nbsp;', escapeText('  '));
+    assert.equal(' &nbsp; ', escapeText('   '));
+    assert.equal(' &nbsp; &nbsp;', escapeText('    '));
+  });
+
+  it('Escapes already-escaped content', function () {
+    assert.equal('&amp;amp; &amp;nbsp; &amp;gt; &amp;lt;',
+        escapeText('&amp; &nbsp; &gt; &lt;'));
+  });
+
+  it('Wraps second and subsequent lines in <div>, removing line breaks', function () {
+    var input = [
+        'Line 1',
+        'Line 2',
+        'Line 3'
+    ].join('\n');
+    var expected = 'Line 1<div>Line 2</div><div>Line 3</div>';
+    assert.equal(expected, escapeText(input));
+  });
+
+  it('Uses <br> for blank first line when handling multiple lines', function () {
+    var input = [
+      '',
+      'Line 2',
+      'Line 3'
+    ].join('\n');
+    var expected = '<br><div>Line 2</div><div>Line 3</div>';
+    assert.equal(expected, escapeText(input));
+  });
+
+  it('Adds <br> to every other blank line', function () {
+    var input, expected;
+
+    input = [
+      'Line 1',
+      '',
+      'Line 3'
+    ].join('\n');
+    expected = 'Line 1<div><br></div><div>Line 3</div>';
+    assert.equal(expected, escapeText(input));
+
+    input = [
+      'Line 1',
+      'Line 2',
+      ''
+    ].join('\n');
+    expected = 'Line 1<div>Line 2</div><div><br></div>';
+    assert.equal(expected, escapeText(input));
+
+    input = [
+      '',
+      '',
+      ''
+    ].join('\n');
+    expected = '<br><div><br></div><div><br></div>';
+    assert.equal(expected, escapeText(input));
+  });
+});
+
+
+describe('utils.unescapeText', function () {
+  var unescapeText = utils.unescapeText;
+
+  it('no-op on empty string', function () {
+    assert.equal('', unescapeText(''));
+  });
+
+  it('no-op on alphanumeric string', function () {
+    var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    var digits = '0123456789';
+    var testString = alphabet + alphabet.toUpperCase() + digits;
+    assert.equal(testString, unescapeText(testString));
+  });
+
+  it('replaces all &amp; with &', function () {
+    assert.equal('&', unescapeText('&amp;'));
+    assert.equal('&&', unescapeText('&amp;&amp;'));
+    assert.equal('&nbsp;', unescapeText('&amp;nbsp;'));
+  });
+
+  it('replaces all &lt; with <', function () {
+    assert.equal('<', unescapeText('&lt;'));
+    assert.equal('<<', unescapeText('&lt;&lt;'));
+    assert.equal('<div', unescapeText('&lt;div'));
+  });
+
+  it('replaces all &gt; with >', function () {
+    assert.equal('>', unescapeText('&gt;'));
+    assert.equal('>>', unescapeText('&gt;&gt;'));
+    assert.equal('/>', unescapeText('/&gt;'));
+  });
+
+  it('replaces all &nbsp; with spaces', function () {
+    assert.equal(' ', unescapeText(' '));
+    assert.equal(' ', unescapeText('&nbsp;'));
+    assert.equal('  ', unescapeText(' &nbsp;'));
+    assert.equal('  ', unescapeText('&nbsp;&nbsp;'));
+    assert.equal('   ', unescapeText(' &nbsp; '));
+    assert.equal('    ', unescapeText(' &nbsp; &nbsp;'));
+  });
+
+  it('Unescapes pre-escaped content correctly', function () {
+    assert.equal('&amp; &nbsp; &gt; &lt;',
+        unescapeText('&amp;amp; &amp;nbsp; &amp;gt; &amp;lt;'));
+  });
+
+  it('Unwraps <div>-wrapped lines, adding line breaks', function () {
+    var input = 'Line 1<div>Line 2</div><div>Line 3</div>';
+    var expected = [
+      'Line 1',
+      'Line 2',
+      'Line 3'
+    ].join('\n');
+    assert.equal(expected, unescapeText(input));
+  });
+
+  it('If input starts with <div> treats that as the first line', function () {
+    var input = '<div>Line 1</div><div>Line 2</div>';
+    var expected = [
+      'Line 1',
+      'Line 2'
+    ].join('\n');
+    assert.equal(expected, unescapeText(input));
+  });
+
+  it('Converts <div><br></div> to a blank line', function () {
+    var input, expected;
+
+    input = '<div><br></div><div>Line 2</div><div>Line 3</div>';
+    expected = [
+      '',
+      'Line 2',
+      'Line 3'
+    ].join('\n');
+    assert.equal(expected, unescapeText(input), 'first line blank');
+
+    input = 'Line 1<div><br></div><div>Line 3</div>';
+    expected = [
+      'Line 1',
+      '',
+      'Line 3'
+    ].join('\n');
+    assert.equal(expected, unescapeText(input), 'second line blank');
+
+    input = 'Line 1<div>Line 2</div><div><br></div>';
+    expected = [
+      'Line 1',
+      'Line 2',
+      ''
+    ].join('\n');
+    assert.equal(expected, unescapeText(input), 'third line blank');
+
+    input = '<div><br></div><div><br></div><div><br></div>';
+    expected = [
+      '',
+      '',
+      ''
+    ].join('\n');
+    assert.equal(expected, unescapeText(input), 'all lines blank');
+  });
+
+  describe('is the inverse of escapeText', function () {
+    var escapeText = utils.escapeText;
+    var assertRoundTrip = function assertRoundTrip(testString) {
+      var intermediateForm = escapeText(testString);
+      assert.equal(testString, unescapeText(intermediateForm),
+          'Failed with intermediate form ' + intermediateForm);
+    };
+
+    it('With newline', function () {
+      assertRoundTrip('Line1\nLine2');
+    });
+
+    it('With leading newline', function () {
+      assertRoundTrip('\nLine1\nLine2');
+    });
+
+    it('With multiple leading newlines', function () {
+      assertRoundTrip('\n\n \nLine1\nLine2');
+    });
+
+    describe('fuzz tests (randomized)', function () {
+      var stringPool = [
+        '<div>',
+        '</div>',
+        '<br>',
+        '<a>',
+        '&',
+        '<',
+        '>',
+        ' ',
+        '&amp;',
+        '&lt;',
+        '&gt;',
+        '&nbsp;',
+        '\n'
+      ];
+
+      var randomTestString = function randomTestString() {
+        var s = '';
+        for (var i = 0; i < 10; i++) {
+          s += _.sample(stringPool);
+        }
+        return s;
+      };
+
+      // Generate some random test strings and test them all.
+      var fuzzTests = [];
+      for (var i = 0; i < 10; i++) {
+        fuzzTests.push(randomTestString());
+      }
+
+      fuzzTests.forEach(function (testString) {
+        it(testString.replace(/\n/g, '\\n'), function () {
+          assertRoundTrip(testString);
+        });
+      });
+    });
+  });
+});

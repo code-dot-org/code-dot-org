@@ -38,8 +38,13 @@
     "debugger_disabled": "false",
     "encrypted_examples": [
 
-    ]
-  }
+    ],
+    "markdown_instructions": "Backed by a template #2. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

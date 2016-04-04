@@ -1,4 +1,5 @@
 var TestResults = require('./constants').TestResults;
+var utils = require('./utils');
 
 /**
  * Get a testResult and message value based on an examination of the
@@ -24,9 +25,14 @@ module.exports.getResultsFromLog = function (logConditions, executionLog) {
      * @param {!Object} condition
      * @param {string} [condition.matchType] 'exact', 'inexact'
      * @param {number} [condition.minTimes] number of matches required
+     * @param {number} [condition.maxTimes] maximum number of matches allowed
      * @param {string[]} [condition.entries] function or statement names
      * @param {string} [condition.message] message to display if condition fails
      */
+
+    condition.minTimes = condition.minTimes || 0;
+    condition.maxTimes = utils.valueOr(condition.maxTimes, Infinity);
+
     switch (condition.matchType) {
       case 'exact':
         exact = true;
@@ -39,8 +45,11 @@ module.exports.getResultsFromLog = function (logConditions, executionLog) {
             if (entryIndex >= condition.entries.length) {
               entryIndex = 0;
               matchedSequences++;
-              if (matchedSequences >= condition.minTimes) {
-                testResult = TestResults.ALL_PASS;
+              if ((matchedSequences >= condition.minTimes &&
+                  condition.maxTimes === Infinity) ||
+                  matchedSequences > condition.maxTimes) {
+                // Stop checking if we know we've succeeded for minTimes without
+                // a maxTimes or we know we've failed for maxTimes
                 break;
               }
             }
@@ -48,6 +57,10 @@ module.exports.getResultsFromLog = function (logConditions, executionLog) {
             // Start back at the beginning of the sequence if we didn't match
             entryIndex = 0;
           }
+        }
+        if (matchedSequences >= condition.minTimes &&
+            matchedSequences <= condition.maxTimes) {
+          testResult = TestResults.ALL_PASS;
         }
         break;
       default:

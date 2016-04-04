@@ -4,8 +4,7 @@
  * Copyright 2014-2015 Code.org
  *
  */
-/* global Dialog */
-/* global dashboard */
+/* global Dialog, dashboard */
 
 'use strict';
 var studioApp = require('../StudioApp').singleton;
@@ -51,9 +50,12 @@ var rootReducer = require('./reducers').rootReducer;
 var actions = require('./actions');
 var setInitialLevelProps = actions.setInitialLevelProps;
 var changeInterfaceMode = actions.changeInterfaceMode;
+var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
+
+var BoardController = require('../makerlab/BoardController');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -143,6 +145,7 @@ function loadLevel() {
   Applab.softButtons_ = level.softButtons || {};
   Applab.appWidth = level.appWidth || defaultAppWidth;
   Applab.appHeight = level.appHeight || defaultAppHeight;
+  Applab.makerlabEnabled = level.makerlabEnabled;
   // In share mode we need to reserve some number of pixels for our in-app
   // footer. We do that by making the play space slightly smaller elsewhere.
   // Applab.appHeight represents the height of the entire app (footer + other)
@@ -160,6 +163,10 @@ function loadLevel() {
   // Override scalars.
   for (var key in level.scale) {
     Applab.scale[key] = level.scale[key];
+  }
+
+  if (Applab.makerlabEnabled) {
+    Applab.makerlabController = new BoardController();
   }
 }
 
@@ -305,7 +312,7 @@ function adjustAppSizeStyles(container) {
               childRules[k].style.cssText = "max-width: " +
                   (Applab.appWidth * scale + 2) + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#codeWorkspace") {
+            } else if (childRules[k].selectorText === "div.workspace-right") {
               // set the left for the codeWorkspace
               childRules[k].style.cssText = "left: " +
                   Applab.appWidth * scale + "px;";
@@ -316,7 +323,7 @@ function adjustAppSizeStyles(container) {
                   Applab.appWidth * scale + "px; line-height: " +
               Applab.footerlessAppHeight * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
+            } else if (childRules[k].selectorText === "html[dir='rtl'] div.workspace-right") {
               // set the right for the codeWorkspace (RTL mode)
               childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
@@ -764,6 +771,11 @@ Applab.init = function(config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
 
+  // Provide a way for us to have top pane instructions disabled by default, but
+  // able to turn them on.
+  // TODO - should they also be on by default for admin?
+  config.showInstructionsInTopPane = !!localStorage.getItem('showInstructionsInTopPane');
+
   // Applab.initMinimal();
 
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
@@ -860,8 +872,7 @@ Applab.init = function(config) {
             d.type.toUpperCase() === 'DATE' )) ||
             d.tagName.toUpperCase() === 'TEXTAREA') {
           doPrevent = d.readOnly || d.disabled;
-        }
-        else {
+        } else {
           doPrevent = !d.isContentEditable;
         }
 
@@ -894,10 +905,15 @@ Applab.init = function(config) {
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
-    isViewDataButtonHidden: !!config.level.hideViewDataButton
+    isViewDataButtonHidden: !!config.level.hideViewDataButton,
+    instructionsMarkdown: config.level.markdownInstructions,
+    instructionsInTopPane: config.showInstructionsInTopPane,
+    puzzleNumber: config.level.puzzle_number,
+    stageTotal: config.level.stage_total,
   }));
 
-  Applab.reduxStore.dispatch(changeInterfaceMode(Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+  Applab.reduxStore.dispatch(changeInterfaceMode(
+    Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
   Applab.reactInitialProps_ = {
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
@@ -1053,6 +1069,10 @@ Applab.reset = function(first) {
   if (Applab.isInDesignMode()) {
     designMode.resetElementTray(isDesigning);
     designMode.resetPropertyTab();
+  }
+
+  if (Applab.makerlabController) {
+    Applab.makerlabController.reset();
   }
 
   if (level.showTurtleBeforeRun) {
@@ -1224,10 +1244,13 @@ Applab.onReportComplete = function(response) {
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   // TODO: handle editCode JS interpreter
-  try { codegen.evalWith(code, {
-                         studioApp: studioApp,
-                         Applab: apiBlockly,
-                         Globals: Applab.Globals } ); } catch (e) { }
+  try {
+    codegen.evalWith(code, {
+      studioApp: studioApp,
+      Applab: apiBlockly,
+      Globals: Applab.Globals
+    });
+  } catch (e) { }
 };
 
 /**
@@ -1305,6 +1328,16 @@ Applab.execute = function() {
     }
   }
 
+  if (Applab.makerlabController) {
+    Applab.makerlabController
+        .connectAndInitialize(codegen, Applab.JSInterpreter)
+        .then(Applab.beginVisualizationRun);
+  } else {
+    Applab.beginVisualizationRun();
+  }
+};
+
+Applab.beginVisualizationRun = function() {
   // Set focus on the default screen so key events can be handled
   // right from the start without requiring the user to adjust focus.
   Applab.loadDefaultScreen();
