@@ -38,6 +38,7 @@ database:
               dashboard
 test:
     override:
+        - bundle exec rake lint:javascript
         - bundle exec rake test:
             pwd:
                 pegasus
