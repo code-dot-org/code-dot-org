@@ -48,7 +48,10 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
   };
 
   // Do not warn when these attributes are removed.
-  var ignoredAttributes = ['kl_vkbd_parsed'];
+  var ignoredAttributes = [
+    'pmbx_context',   // Used by Chrome plugins such as Bitdefender Wallet.
+    'kl_vkbd_parsed'  // Origin unknown. Assumed to be a plugin of some kind.
+  ];
 
   var processed = sanitize(unsafe, {
     allowedTags: false,
