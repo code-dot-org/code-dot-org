@@ -106,7 +106,8 @@ Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
   @child_item = @browser.find_element(:css, "g[block-id='#{get_block_id(child)}']")
   @parent_item = @browser.find_element(:css, "g[block-id='#{get_block_id(parent)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
-  @parent_item.should eq @actual_parent_item
+  message = "Expected parent of #{@child_item.inspect} #{@child_item.attribute('block-id')} to be #{@parent_item.inspect} #{@parent_item.attribute('block-id')} but was #{@actual_parent_item.inspect} #{@actual_parent_item.attribute('block-id')}"
+  @parent_item.attribute('block-id').should eq(@actual_parent_item.attribute('block-id')), message
 end
 
 Then /^block "([^"]*)" is not child of block "([^"]*)"$/ do |child, parent|
