@@ -48,9 +48,6 @@ test:
         - ./test.sh:
             pwd:
                 apps
-        - npm run lint:
-            pwd:
-                code-studio
         - npm test:
             pwd:
                 code-studio
