@@ -3,6 +3,7 @@
 var _ = require('../lodash');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
 var StudioAppWrapper = require('./StudioAppWrapper.jsx');
+var CodeWorkspaceContainer = require('./CodeWorkspaceContainer.jsx');
 
 var styles = {
   codeWorkspace: {
@@ -50,13 +51,14 @@ var AppView = React.createClass({
           assetUrl={this.props.assetUrl}
           isEmbedView={this.props.isEmbedView}
           isShareView={this.props.isShareView}>
-        <ProtectedStatefulDiv
-            id="visualizationColumn"
+        <div id="visualizationColumn">
+          <ProtectedStatefulDiv
             contentFunction={this.props.generateVisualizationColumnHtml} />
+        </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <ProtectedStatefulDiv style={codeWorkspaceStyle} id="codeWorkspace" className="editor-column">
-          <ProtectedStatefulDiv id="codeWorkspaceWrapper" contentFunction={this.props.generateCodeWorkspaceHtml}/>
-        </ProtectedStatefulDiv>
+        <CodeWorkspaceContainer
+            topMargin={0}
+            generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
       </StudioAppWrapper>
     );
   }
