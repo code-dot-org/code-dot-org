@@ -173,8 +173,7 @@ JSInterpreter.prototype.parse = function (options) {
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
     new window.Interpreter(options.code, initFunc);
-  }
-  catch(err) {
+  } catch(err) {
     this.executionError = err;
     this.handleError();
   }
