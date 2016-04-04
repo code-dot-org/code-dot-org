@@ -6,8 +6,8 @@ import BaseCommand from "./BaseCommand.js";
 export default class WhileCommand extends BaseCommand {
     constructor(gameController, highlightCallback, blockType, callback) {
         super(gameController, highlightCallback);
-        
-        this.iterationsLeft = 15; 
+
+        this.iterationsLeft = 15;
         this.BlockType = blockType;
         this.WhileCode = callback;
         this.queue = new CommandQueue(this);
@@ -24,13 +24,13 @@ export default class WhileCommand extends BaseCommand {
         if (this.queue.isFailed()) {
             this.state = CommandState.FAILURE;
         }
-        
+
         if (this.queue.isSucceeded()) {
             this.handleWhileCheck();
         }
 
     }
-    
+
     begin() {
         super.begin();
         if (this.GameController.DEBUG) {
