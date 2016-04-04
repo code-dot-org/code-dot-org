@@ -18,6 +18,7 @@
   "fillTooltip": "umieść 1 jednostkę śmieci",
   "finalLevel": "Gratulacje! Rozwiązałeś końcową łamigłówkę.",
   "flowerEmptyError": "Kwiat, na którym jesteś nie ma już nektaru.",
+  "didNotCollectEverything": "Upewnij się, że nie zostawiasz za sobą żadnego nektaru albo miodu!",
   "get": "weź",
   "heightParameter": "wysokość",
   "holePresent": "tam jest otwór",
@@ -81,6 +82,5 @@
   "whileTooltip": "Powtarzaj wymienione czynności, aż do osiągnięcia punktu końcowego.",
   "word": "Znajdź słowa",
   "yes": "Tak",
-  "youSpelled": "Przeliterowałeś",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Przeliterowałeś"
 }

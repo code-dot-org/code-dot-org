@@ -164,9 +164,10 @@
           description_short: "얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 사용하세요."
         course4:
           description_short: "과정4는 과정2와 과정3을 먼저 완료했어야 합니다."
-          description: "과정4는 과정2와 과정3을 이미 완료한 학생들을 위해 설계되었습니다. 학생들은 이전 과정에서 배운 프로그래밍
-            내용들을 좀 더 깊이 이해하고 보다 복잡한 문제들을 해결할 수 있게 될 것입니다. 이 과정을 완료하게 되면 학생들은 인터랙티브한
-            이야기와 게임을 스스로 만들고 다른 사람들과 공유할 수 있게 됩니다. 초4~8 학생들에게 권장합니다."
+          description: "과정4는 과정2와 과정3을 모두 수행한 학생들을 위해 설계되었습니다. 학생들은 각각의 복잡한 퍼즐들을 해결하기
+            위해서 여러 가지 개념들을 결합시킴으로서, 더 복잡하게 설계되어있는 퍼즐들을 해결하는 방법을 배우게 될 것입니다. 이 과정을
+            마칠 때 쯤이면, 학생들은 for 반복과 매개변수 함수를 포함한 여러가지 스킬들을 활용한 프로그램들을 만들 수 있게 될 것입니다.
+            초4-중2 학년에 추천됩니다."
           'Artist: Variables': "화가: 변수"
           'Bee: For Loops': "꿀벌: 반복"
           title: "과정4"
@@ -613,6 +614,7 @@
           description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
+          title_short: CSP Unit 3
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
@@ -977,6 +979,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "단계 2 온라인: 혼합된 여름 공부"
@@ -1436,6 +1439,11 @@
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1551,6 +1559,7 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: "아이스 에이지 Play Lab"
           description_short: "아이스 에이지 Play Lab! 과 함께 이야기나 게임을 만들어 보세요!"
@@ -1573,7 +1582,7 @@
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
-          description_short: Programming
+          description_short: "프로그래밍"
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1685,6 +1694,7 @@
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4
@@ -1711,3 +1721,68 @@
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Calc: Evaluation Blocks': "계산: 평가(결과 계산) 블럭"
+          'Eval: Strings and Images': "평가: 문자열(문장)과 이미지"
+          'Unplugged: Contracts': "언플러그드 : 제한 조건"
+          'Eval: Writing Contracts': "평가: 제한 조건 쓰기"
+          'Calc: Defining Variables': "계산: 변수 정의하기"
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': "언플러그드: 디자인 레시피"
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': "언플러그드: 비디오 게임과 좌표 평면"
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: 변수 정의하기 (빅 게임)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: 애니메이션 (빅 게임)'
+          'Unplugged: Booleans': "언플러그드: 참/거짓값"
+          'Eval: Boolean Operators': "평가: 참/거짓(논리) 연산자"
+          'Play Lab: Booleans': 'Play Lab: 불(참 또는 거짓 값)'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: 참/거짓값 (빅 게임)'
+          'Unplugged: Conditionals and Piecewise Functions': "언플러그드: 조건선택과 함수 조각"
+          'Eval: Conditionals': "평가: 조건/선택"
+          'Unplugged: Collision Detection and the Distance Formula': "언플러그드: 충돌 감지와
+            거리 계산식"
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: 충돌 감지 (빅 게임)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

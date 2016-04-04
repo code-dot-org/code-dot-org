@@ -24,6 +24,8 @@
   hello: "مرحباً بالعالم"
   welcome_back: "أهلاً بكم من جديد، %{name}"
   submit: "تسجيل"
+  unsubmit: "عدم تقديم"
+  next_page: Next page
   add_teacher_form:
     code:
       label: "إضافة معلِّماً:"
@@ -362,6 +364,7 @@
     heading_hoc2014: "<h2>ساعة من البرمجة </h2><h1>لجميع الأعمار</h1>"
     heading_elementary: "<h2>دورات 20 ساعة</h2> <h1>أساسيات علوم الكمبيوتر (جميع الإعمار)</h1>"
     heading_apps: "<h2>المتعة</h2><h1>للجميع</h1>"
+    heading_tools: "<h2>جاهزة للخطوة التالية؟</h2> <h1>أدوات جافا سكريبت للمدرسة الثانوية</h1>"
     heading_legacy: "<h2>الدورات المعجلةـ</h2><h1>جميع الأعمار</h1>"
     your_gallery: "معرض"
     no_primary_course: جرب الدورة تدريبية في "كود استوديو"
@@ -483,6 +486,15 @@
       current: "المستويات الحالية"
       unused: "المستويات غير المستخدمة"
   upsell:
+    applab:
+      title: "مختبر التطبيق"
+      body: "مختبر التطبيق هي بيئة برمجة حيث يمكنك جعل تطبيقات بسيطة. تصميم تطبيق،
+        التعليمات البرمجية مع كتل أو JavaScript تجعلها تعمل، ثم قم بشاركة التطبيق
+        الخاص بك في ثوان."
+      body_short: "تصميم تطبيق، التعليمات البرمجية مع كتل أو JavaScript لتعمل، ثم
+        قُم بمشاركة التطبيق الخاص بك في ثوان."
+      audience: "أعمارهم 13 +"
+      cta: "تعلم كيف"
     hoc:
       title: "المتاهة الكلاسيكية"
       body: "جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك."
@@ -535,10 +547,10 @@
     prerelease_hoc2014: "هذا الدرس التعليمي لا يزال بنسختة التجريبية <span class='betatext'>
       Beta </span>. فهو عرضة للمراجعة عند الحصول على الآراء وإجراء التغييرات بناء
       عليها."
-    feedback: "الإدلاء برأيك"
     report_bug: "الإبلاغ عن خلل"
     support: "للحصول على المساعدة"
     support_url: support.code.org
+    help_resources: "المساعدة والموارد"
   multi:
     wrong_title: "الإجابة غير صحيحة"
     wrong_body: "أن الإجابة التي قمت بإدخالها غير صحيحة.  الرجاء المحاولة مرة أخرى!"
@@ -546,6 +558,23 @@
     correct_body: "هذا هو الجواب الصحيح."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: "شكراً"
+    wrong_body: "شكرا لك على تقديم إجابة."
+    correct_title: "شكراً"
+    correct_body: "شكرا لك على تقديم إجابة."
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "شكراً"
+    wrong_body: "شكرا لك على تقديم إجابة"
+    correct_title: "شكراً"
+    correct_body: "شكرا لك على تقديم إجابة"
+  level_group-submittable:
+    wrong_title: "شكراً"
+    wrong_body: "شكرا لك على تقديم إجابة"
+    correct_title: "شكراً"
+    correct_body: "شكرا لك على تقديم إجابة"
   match:
     wrong_title: "الحل غير صحيح"
     wrong_body: "الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!"
@@ -564,6 +593,8 @@
     placeholder: "ادخل إجابتك هنا "
     open_response_title: "شكرا،"
     open_response_body: "شكرا لردكم!"
+    correct_title: "صحيح"
+    correct_body: "هذا هو الجواب الصحيح."
   dialog:
     ok: "موافق"
     startover_title: "هل أنت متأكد من أنك تريد البدء من جديد؟"
@@ -626,6 +657,7 @@
     completed_perfect: "مكتمل, ممتاز"
     furthest_level_attempted: "المستوى الأبعد الذي تمت محاولته"
     assessment: "تقييم"
+    submitted: "تم تقديمه"
   studio:
     courses_working_on: "الدورات التدريبية التي تعمل عليها"
     completed_courses: "الدورات المكتملة"
@@ -693,3 +725,7 @@
         acknowledge: "عند تقديم هذه المعلومات, تُقرّ بأنها سوف يتم التعامل معها وفقا
           للشروط الموجودة في %{link_start_privacy} سياسة الخصوصية %{link_end} و %{link_start_tos}شروط
           الاستخدام%{link_end}"
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

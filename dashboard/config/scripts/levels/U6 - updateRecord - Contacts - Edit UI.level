@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "CONTACTS APP\r\n\r\nAdd UI element for Edit Contact button\r\n\r\nCreate another screen for editing contact details",
+    "markdown_instructions": "# Editing Contacts in the Contacts App\r\n\r\nNow that you’re familiar with how `updateRecord` works, it’s time to add in functionality to the Contacts App so you can edit contacts in your database. First, you’ll need to do some work in Design Mode to set up the UI elements you’ll need.\r\n\r\n# Do This:\r\n\r\n** Your code and database from the Contacts App are provided.**\r\n\r\n* **Change the “Delete” button on the “viewContactsScreen” to an “Edit” button.** Make sure you **change the button text and ID to something descriptive**. You might also want to change the style of the button.\r\n\t* **Note:** Leave the event handler for the old “Delete” button as is. You’ll still use it  later.\r\n* **Add a new screen called “editContactsScreen”** and add UI elements that look similar to the ones in the image. Don’t forget to give your UI elements **descriptive and meaningful names**.\r\n\t* **Note:** Make sure the ID for your new “Delete” button matches the ID in your event handler for the old delete button. If you do this, your new “Delete” button should work without needing to change anything in your event handler.\r\n\r\n| Updated \"viewContactsScreen\": | New \"editContactsScreen\": |\r\n|------|------|\r\n| ![](https://images.code.org/aef7efbfea4493037d127ca97d83fcc6-image-1455919502578.png) | ![](https://images.code.org/ee5ce040dd52239719c2b4c790134d08-image-1455919496715.png) |\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -38,9 +38,11 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "instructions": "(Click to see full instructions)"
+    "instructions": "Set up the UI elements needed to edit contacts. (Click to see full instructions)",
+    "encrypted_examples": "DKHIkXsJpwzLMHadbQls/A14qMk/5IrRM0e+dxRAlaTgba2pePIP1kOGUewP\nYBlr\n"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

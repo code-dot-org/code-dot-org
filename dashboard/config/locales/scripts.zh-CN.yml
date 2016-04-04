@@ -157,7 +157,7 @@
           description_short: "让我们用代码同安娜和爱莎一起去探寻冰雪的魔力与美丽。"
         course4:
           description_short: "学生在上了课程2和3以后才能上课程4。"
-          description: "课程3是为学了课程2的学生准备的。学生将深入理解前面介绍过的编程话题，从而能够用灵活的方案来解决更复杂的问题。到课程结束时，学生们会创建出互动故事和游戏，并且可与任何人分享。建议4到5年级学生学习。"
+          description: "课程4是为已经通过课程2和课程3的同学们准备的。这节课里同学们将学习怎样结合几种概念解决更复杂的问题。当这节课结束的时候，同学们将得以真正地编写程序来展现他们所学会的多种技能，包括用于循环的函数与带有参数的函数。建议4-8年级同学学习。"
           'Artist: Variables': "小艺术家：变量"
           'Bee: For Loops': "蜜蜂：计数循环"
           title: "第4课"
@@ -604,6 +604,7 @@
           description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
+          title_short: CSP Unit 3
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
@@ -968,6 +969,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: "工作室"
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "第二阶段在线：混合的暑期学习"
@@ -1427,6 +1429,11 @@
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1542,6 +1549,7 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: "冰河世界游戏实验室"
           description_short: "用冰河世纪游戏实验室创造故事或游戏！"
@@ -1676,6 +1684,7 @@
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4
@@ -1702,3 +1711,67 @@
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Calc: Evaluation Blocks': "计算器：赋值模块"
+          'Eval: Strings and Images': "赋值：字符串和图像"
+          'Unplugged: Contracts': "离线：契约"
+          'Eval: Writing Contracts': "赋值：契约"
+          'Calc: Defining Variables': "计算： 定义变量"
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': "离线：食谱设计"
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': "离线：视频游戏和坐标面"
+          'Play Lab: Defining Variables (Big Game)': "游戏实验室：定义变量（大游戏）"
+          'Play Lab: Animation (Big Game)': "游戏实验室：动画（大游戏）"
+          'Unplugged: Booleans': "离线：布尔值"
+          'Eval: Boolean Operators': "赋值：布尔操作符"
+          'Play Lab: Booleans': "游戏实验室： 布尔值"
+          'Play Lab: Boolean (Big Game)': "游戏实验室：布尔值（大游戏）"
+          'Unplugged: Conditionals and Piecewise Functions': "离线：条件和分段函数"
+          'Eval: Conditionals': "评价：条件"
+          'Unplugged: Collision Detection and the Distance Formula': "离线：碰撞检测和距离公式"
+          'Play Lab: Collision Detection (Big Game)': "游戏实验室：碰撞检测（大型游戏）"
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

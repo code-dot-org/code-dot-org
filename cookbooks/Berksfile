@@ -7,6 +7,10 @@ cookbook 'build-essential', '~> 2.1.3'
 cookbook 'chef-client', '~> 4.2.0'
 cookbook 'ntp', '~> 1.8.6'
 
+# See https://github.com/hw-cookbooks/omnibus_updater/pull/105 for details on this branch.
+cookbook 'omnibus_updater', github: 'wjordan/omnibus_updater', branch: 'mixlib-install'
+
+# Run `knife cookbook list` against local cookbook path.
 `bundle exec knife cookbook list -z 2>/dev/null`.each_line do |path|
   path = path.split(/\s/).first
   cookbook path, path: path

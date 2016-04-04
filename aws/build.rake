@@ -68,7 +68,7 @@ end
 #
 def create_threads(count)
   [].tap do |threads|
-    (1..count).each do |i|
+    count.times do
       threads << Thread.new do
         yield
       end
@@ -95,84 +95,72 @@ def threaded_each(array, thread_count=2)
   threads.each(&:join)
 end
 
-if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
-  #
-  # Define the BLOCKLY[-CORE] BUILD task
-  #
-  BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
-  BLOCKLY_CORE_PRODUCT_FILES = Dir.glob(blockly_core_dir('build-output', '**/*'))
-  BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PRODUCT_FILES
-  BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCKLY_CORE_SOURCE_FILES) do
+#
+# Define the BLOCKLY[-CORE] BUILD task
+#
+BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
+BLOCKLY_CORE_PRODUCT_FILES = Dir.glob(blockly_core_dir('build-output', '**/*'))
+BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PRODUCT_FILES
+BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCKLY_CORE_SOURCE_FILES) do
+  # only let staging build/commit blockly-core
+  if rack_env?(:staging)
+    apps_sentinel = apps_dir('/lib/blockly/sentinel')
     RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:blockly_core'
+    HipChat.log 'Committing updated <b>blockly core</b> files...', color: 'purple'
+    message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-apps'))}"
+    RakeUtils.system 'git', 'add', *BLOCKLY_CORE_PRODUCT_FILES
+    RakeUtils.system 'echo', "\"#{Time.new}\" >| #{apps_sentinel}"
+    RakeUtils.system 'git', 'add', apps_sentinel
+    RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
+    RakeUtils.git_push
+  end
+end
+
+task :apps_task do
+  packager = S3Packaging.new('apps', apps_dir, dashboard_dir('public/apps-package'))
+
+  updated_package = packager.update_from_s3
+  if updated_package
+    HipChat.log "Downloaded apps package from S3: #{packager.commit_hash}"
+    next # no need to do anything if we already got a package from s3
   end
 
-  #
-  # Define the APPS BUILD task
-  #
-  APPS_DEPENDENCIES = [BLOCKLY_CORE_TASK]
-  APPS_NODE_MODULES = Dir.glob(apps_dir('node_modules', '**/*'))
-  APPS_BUILD_PRODUCTS = ['npm-debug.log'].map{|i| apps_dir(i)} + Dir.glob(apps_dir('build', '**/*'))
-  APPS_SOURCE_FILES = Dir.glob(apps_dir('**/*')) - APPS_NODE_MODULES - APPS_BUILD_PRODUCTS
-  APPS_TASK = build_task('apps', APPS_DEPENDENCIES + APPS_SOURCE_FILES) do
-    RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
-    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:apps'
-    Dir.chdir(apps_dir) { RakeUtils.system 'grunt test' }
-    RakeUtils.system 'rm', '-rf', dashboard_dir('public/apps-package')
-    RakeUtils.system 'cp', '-R', apps_dir('build/package'), dashboard_dir('public/apps-package')
-  end
+  # Test and staging are the only environments that should be uploading new packages
+  raise 'No valid apps package found' unless rack_env?(:staging) || rack_env?(:test)
 
-  #
-  # Define the APPS COMMIT task. If APPS_TASK produces new output, that output needs to be
-  #   committed because it's input for the DASHBOARD task.
-  #
-  APPS_COMMIT_TASK = build_task('apps-commit', [deploy_dir('rebuild'), APPS_TASK]) do
-    blockly_core_changed = !`git status --porcelain #{BLOCKLY_CORE_PRODUCT_FILES.join(' ')}`.strip.empty?
+  raise 'Wont build apps with staged changes' if RakeUtils.git_staged_changes?(apps_dir)
 
-    apps_changed = false
-    Dir.chdir(dashboard_dir('public/apps-package')) do
-      apps_changed = !`git status --porcelain .`.strip.empty?
-    end
+  HipChat.log 'Building apps...'
+  RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:apps'
+  HipChat.log 'apps built'
 
-    if blockly_core_changed || apps_changed
-      if RakeUtils.git_updates_available?
-        # NOTE: If we have local changes as a result of building APPS_TASK, but there are new
-        # commits pending in the repository, it is better to pull the repository first and commit
-        # these changes after we're caught up with the repository because, if we committed the changes
-        # before pulling we would need to manually handle a "merge commit" even though it's impossible
-        # for there to be file conflicts (because nobody changes the files APPS_TASK builds manually).
-        HipChat.log '<b>Apps</b> package updated but git changes are pending; commmiting after next build.', color: 'yellow'
-      else
-        HipChat.log 'Committing updated <b>apps</b> package...', color: 'purple'
-        RakeUtils.system 'git', 'add', *BLOCKLY_CORE_PRODUCT_FILES
-        RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/apps-package')
-        message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-apps'))}"
-        RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
-        RakeUtils.git_push
-        RakeUtils.system 'rm', '-f', deploy_dir('rebuild-apps')
-      end
-    else
-      HipChat.log '<b>apps</b> package unmodified, nothing to commit.'
-      RakeUtils.system 'rm', '-f', deploy_dir('rebuild-apps')
-    end
-  end
-else
-  APPS_COMMIT_TASK = build_task('apps-commit') {}
+  HipChat.log 'testing apps..'
+  Dir.chdir(apps_dir) { RakeUtils.system 'grunt test' }
+  HipChat.log 'apps test finished'
+
+  # upload to s3
+  package = packager.upload_package_to_s3('/build/package')
+  HipChat.log "Uploaded apps package to S3: #{packager.commit_hash}"
+  packager.decompress_package(package)
 end
 
 #
 # Define the CODE STUDIO BUILD task.
 #
-CODE_STUDIO_TASK = build_task('code-studio', Dir.glob(code_studio_dir('**/*'))) do
+task :code_studio_task do
   packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
 
   updated_package = packager.update_from_s3
   if updated_package
-    HipChat.log "Downloaded package from S3: #{packager.commit_hash}"
+    HipChat.log "Downloaded code-studio package from S3: #{packager.commit_hash}"
     next # no need to do anything if we already got a package from s3
   end
 
   # Test and staging are the only environments that should be uploading new packages
-  raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
+  raise 'No valid code-studio package found' unless rack_env?(:staging) || rack_env?(:test)
+
+  raise 'Wont build code-studio with staged changes' if RakeUtils.git_staged_changes?(code_studio_dir)
 
   HipChat.log 'Building code-studio...'
   RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
@@ -181,6 +169,7 @@ CODE_STUDIO_TASK = build_task('code-studio', Dir.glob(code_studio_dir('**/*'))) 
 
   # upload to s3
   package = packager.upload_package_to_s3('/build')
+  HipChat.log "Uploaded code-studio package to S3: #{packager.commit_hash}"
   packager.decompress_package(package)
 end
 
@@ -245,17 +234,10 @@ end
 # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
 task :chef_update do
   if CDO.daemon && CDO.chef_managed
-    Dir.chdir(cookbooks_dir) do
-      old_gemfile = ENV['BUNDLE_GEMFILE']
-      ENV['BUNDLE_GEMFILE'] = File.join(cookbooks_dir, 'Gemfile')
-      begin
-        RakeUtils.bundle_install
-        RakeUtils.bundle_exec 'berks', 'install'
-        RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
-        RakeUtils.bundle_exec 'berks', 'apply', rack_env
-      ensure
-        ENV['BUNDLE_GEMFILE'] = old_gemfile
-      end
+    RakeUtils.with_bundle_dir(cookbooks_dir) do
+      RakeUtils.bundle_exec 'berks', 'install'
+      RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
+      RakeUtils.bundle_exec 'berks', 'apply', rack_env
     end
   end
 end
@@ -307,7 +289,7 @@ task :deploy do
   end
 end
 
-$websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK, CODE_STUDIO_TASK, :build_with_cloudfront, :deploy])
+$websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_CORE_TASK, :apps_task, :code_studio_task, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
 
 task :pegasus_unit_tests do
@@ -355,38 +337,34 @@ file UI_TEST_SYMLINK do
 end
 
 task :regular_ui_tests => [UI_TEST_SYMLINK] do
-  Dir.chdir(dashboard_dir) do
-    Dir.chdir('test/ui') do
-      HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--magic_retry', '--html', '--fail_fast'
-      if failed_browser_count == 0
-        message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
-        HipChat.log message
-        HipChat.developers message, color: 'green'
-      else
-        message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
-        HipChat.log message, color: 'red'
-        HipChat.developers message, color: 'red', notify: 1
-      end
+  Dir.chdir(dashboard_dir('test/ui')) do
+    HipChat.log 'Running <b>dashboard</b> UI tests...'
+    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--magic_retry', '--html', '--fail_fast'
+    if failed_browser_count == 0
+      message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
+      HipChat.log message
+      HipChat.developers message, color: 'green'
+    else
+      message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+      HipChat.log message, color: 'red'
+      HipChat.developers message, color: 'red', notify: 1
     end
   end
 end
 
 task :eyes_ui_tests => [UI_TEST_SYMLINK] do
-  Dir.chdir(dashboard_dir) do
-    Dir.chdir('test/ui') do
-      HipChat.log 'Running <b>dashboard</b> UI visual tests...'
-      eyes_features = `grep -lr '@eyes' features`.split("\n")
-      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
-      if failed_browser_count == 0
-        message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
-        HipChat.log message
-        HipChat.developers message, color: 'green'
-      else
-        message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
-        HipChat.log message, color: 'red'
-        HipChat.developers message, color: 'red', notify: 1
-      end
+  Dir.chdir(dashboard_dir('test/ui')) do
+    HipChat.log 'Running <b>dashboard</b> UI visual tests...'
+    eyes_features = `grep -lr '@eyes' features`.split("\n")
+    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
+    if failed_browser_count == 0
+      message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+      HipChat.log message
+      HipChat.developers message, color: 'green'
+    else
+      message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+      HipChat.log message, color: 'red'
+      HipChat.developers message, color: 'red', notify: 1
     end
   end
 end
@@ -394,6 +372,6 @@ end
 # do the eyes and browserstack ui tests in parallel
 multitask ui_tests: [:eyes_ui_tests, :regular_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), CODE_STUDIO_TASK, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :ui_test_flakiness, :ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), BLOCKLY_CORE_TASK, :apps_task, :code_studio_task, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :ui_test_flakiness, :ui_tests])
 
 task 'test-websites' => [$websites_test]

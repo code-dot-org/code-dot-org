@@ -25,6 +25,8 @@
   hello: Olá mundo
   welcome_back: Ola outra vez, %{name}
   submit: Enviar
+  unsubmit: Cancelar envío
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Agrega un profesor:'
@@ -378,6 +380,8 @@
     heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>Principiantes (todas
       as idades)</h1>"
     heading_apps: "<h2>Diversión para</h2><h1>todos</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>O noso curso acelerado para</h2><h1>Todas as idades</h1>"
     your_gallery: Galería
     no_primary_course: Faga un curso no Code Studio
@@ -504,6 +508,15 @@
       current: Niveis actuais
       unused: Niveis non utilizados
   upsell:
+    applab:
+      title: Laboratorio de aplicacións
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Labirinto clásico
       body: Experimente as nocións básicas da informática. Millóns de persoas xa as
@@ -560,10 +573,10 @@
       segundo imos recibindo comentarios e se fan melloras.
     prerelease_hoc2014: Este titorial está na versión <span class='betatext'>beta</span>.
       Está suxeito a revisións segundo imos recibindo comentarios e se fan melloras.
-    feedback: Enviar comentarios
     report_bug: Comunicar erro
     support: Obter axuda
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Resposta incorrecta
     wrong_body: A resposta que vostede tecleou non é correcta. Tente novamente!
@@ -571,6 +584,23 @@
     correct_body: A túa resposta é correcta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Graciñas
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Graciñas
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Graciñas
+    wrong_body: Thank you for submitting answers.
+    correct_title: Graciñas
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Graciñas
+    wrong_body: Thank you for submitting answers.
+    correct_title: Graciñas
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Solución incorrecta
     wrong_body: A súa solución non é correcta. Tente novamente!
@@ -590,6 +620,8 @@
     placeholder: Insira a súa resposta aquí
     open_response_title: Graciñas
     open_response_body: Graciñas por responderes!
+    correct_title: Certo
+    correct_body: A túa resposta é correcta.
   dialog:
     ok: OK
     startover_title: Estás seguro de que queres empezar de novo?
@@ -653,6 +685,7 @@
     completed_perfect: concluído, perfecto
     furthest_level_attempted: tentativa para o nivel máis avanzado
     assessment: avaliación
+    submitted: submitted
   studio:
     courses_working_on: Cursos que vostede está a facer
     completed_courses: Cursos concluídos
@@ -723,3 +756,7 @@
         acknowledge: Ao enviar esta información, acepta que esta será tratada de acordo
           cos termos da nosa %{link_start_privacy}Política de Privacidade%{link_end}
           e dos %{link_start_tos}Termos de Utilización%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

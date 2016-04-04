@@ -46,6 +46,7 @@ level 'blockly:Bounce:1'
 stage 'Multi'
 level 'K-1 Happy Maps Multi 1'
 level 'Multi Horizontal Scroll Test'
+level 'Submittable Multi'
 
 stage 'Multi2'
 level 'Choose 2 Test'
@@ -101,6 +102,7 @@ level 'allthethings design mode elements'
 level 'allthethings_template_backed1'
 level 'allthethings_template_backed2'
 level 'allthethings_moviebot'
+level 'Applab allthethings onRecordEvent'
 
 stage 'Online PD'
 level 'PDK5 Intro C'
@@ -111,3 +113,14 @@ level 'Test External Markdown'
 
 stage 'Studio'
 level 'Resizing Test'
+
+stage 'Long assessment'
+assessment 'Test longassessment levelgroup'
+assessment 'Test longassessment levelgroup split'
+
+stage 'Star wars'
+level 'blockly:StudioEC:js_hoc2015_event_two_items'
+level 'blockly:Studio:hoc2015_blockly_5'
+
+stage 'Minecraft'
+level 'Overworld Chop Tree - allthethings'

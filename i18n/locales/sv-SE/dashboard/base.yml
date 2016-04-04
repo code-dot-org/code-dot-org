@@ -26,6 +26,8 @@ sv:
   hello: Hej världen
   welcome_back: 'Välkommen tillbaka, %{name}'
   submit: Skicka in
+  unsubmit: Ångra Inlämnad
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Lägg till lärare:'
@@ -227,7 +229,7 @@ sv:
       free_play:
         playlab: Skapa en App
         artist: Rita något
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Skapa en App
     user:
       classroom: Lärare hemsida
@@ -325,6 +327,7 @@ sv:
     heading_hoc2014: '<h2>Timmen med kod för</h2><h1>Alla åldrar</h1>'
     heading_elementary: '<h2>20 timmars kurser för</h2><h1>Nybörjare (alla åldrar)</h1>'
     heading_apps: '<h2>Kul för</h2><h1>Alla</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>'
     your_gallery: Galleri
     no_primary_course: Prova en kurs på Code Studio
@@ -419,6 +422,12 @@ sv:
       current: Nuvarande nivåer
       unused: Oanvända nivåer
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassisk labyrint
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
@@ -460,10 +469,10 @@ sv:
   landing:
     prerelease: "Denna kurs är i <span class='betatext'> beta</span>.  Detta innebär att det inte är den slutliga versionen av kursen, och är föremål för översyn allt eftersom feedback tas emot och förbättringar görs."
     prerelease_hoc2014: "Den här övningen är en <span class='betatext'>betaversion</span>.  Den revideras allteftersom synpunkter kommer in och förbättringar görs."
-    feedback: Ge feedback
     report_bug: Rapportera bugg
     support: Få hjälp
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Felaktigt svar
     wrong_body: 'Svaret du angett är inte korrekt.  Försök igen!'
@@ -471,6 +480,23 @@ sv:
     correct_body: Det är det rätta svaret.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Tack
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tack
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tack
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Fel lösning
     wrong_body: 'Din lösning är inte rätt.  Försök pånytt!'
@@ -488,6 +514,8 @@ sv:
     placeholder: Skriv in ditt svar här
     open_response_title: Tack
     open_response_body: Tack för ditt svar!
+    correct_title: Rätt
+    correct_body: Det är det rätta svaret.
   dialog:
     ok: Ok
     startover_title: Är du säker på att du vill börja om?
@@ -541,6 +569,7 @@ sv:
     completed_perfect: Avklarad perfekt
     furthest_level_attempted: försökt nå bortersta nivån
     assessment: Test
+    submitted: submitted
   studio:
     courses_working_on: Kurser du påbörjat
     completed_courses: Avslutade kurser
@@ -597,3 +626,7 @@ sv:
           other: Annat
         detail: Ange så mycket information som möjligt angående innehållet du rapporterar.
         acknowledge: 'Genom att skicka denna information, erkänner du att det kommer att hanteras i enlighet med villkoren i den %{link_start_privacy}Privacy Policy%{link_end} och %{link_start_tos}Terms av Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: Inga ikoner hittades

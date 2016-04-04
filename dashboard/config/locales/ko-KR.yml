@@ -24,6 +24,8 @@
   hello: Hello world
   welcome_back: "%{name} 님, 어서오세요. "
   submit: "제출하기"
+  unsubmit: "제출 취소"
+  next_page: Next page
   add_teacher_form:
     code:
       label: "선생님 추가:"
@@ -236,10 +238,10 @@
       finished_hoc: Hour of Code 완료
       sign_in_to_save: "로그인(진도 저장)"
       free_play:
-        playlab: "앱 만들기"
+        playlab: Play Lab 앱 만들기
         artist: "아무거나 그리기"
-        calculate: Calculate Something
-        applab: "앱 만들기"
+        calculate: "어떤 것을 계산하기"
+        applab: Play Lab 앱 만들기
     user:
       classroom: "선생님 홈페이지"
       district_dashboard: "대시보드 구역"
@@ -340,6 +342,7 @@
     heading_hoc2014: "<h1>어떠한 나이에도 가능한</h1> <h2>Hour of Code</h2>"
     heading_elementary: "<h1>처음하는 모든 사람들을 위한</h1> <h2>20시간짜리 과정</h2>"
     heading_apps: "<h1> 누구나 </h1><h2> 재미있게 </h2>"
+    heading_tools: "<h2>다음 단계로의 준비가 되었나요?</h2><h1>고등학생들을 위한 자바스크립트 도구</h1>"
     heading_legacy: "<h1>모든 연령대를 위한 </h1><h2>일반 코스</h2>"
     your_gallery: "갤러리"
     no_primary_course: Code Studio 과정들을 해보세요.
@@ -449,6 +452,14 @@
       current: "현재 레벨"
       unused: "비사용 레벨"
   upsell:
+    applab:
+      title: "앱 연구실"
+      body: App Lab 은 간단한 앱들을 만들 수 있는 프로그래밍 환경입니다. 아주 짧은 시간에 앱을 디자인하고, 블록이나 자바스크립트로
+        만들고, 공유할 수 있습니다.
+      body_short: "앱을 디자인하고, 블록이나 자바스크립트를 이용해 실제로 움직이도록 해보세요. 그리고 여러분들이 만든 앱을 바로 공유할
+        수 있습니다."
+      audience: 13세 이상
+      cta: "방법 알아보기"
     hoc:
       title: "고전 미로게임"
       body: "컴퓨터과학(CS, 정보과학)의 기초/개념/원리들을 경험 해보세요. 수 백 만 가지를 가능하게 합니다."
@@ -495,17 +506,34 @@
       코스가 아니며, 여러가지 피드백과 개선작업이 이루어집니다."
     prerelease_hoc2014: "이 튜토리얼은 <span class='betatext'>beta</span> 테스트 중입니다. 여러분들의
       피드백을 통해 개선됩니다."
-    feedback: "피드백 작성하기"
     report_bug: "버그(오류) 신고하기"
     support: "도움 받기"
     support_url: "//support.code.org"
+    help_resources: "도움말 및 리소스"
   multi:
     wrong_title: "오답"
     wrong_body: "정답이 아닙니다. 다시 시도해 보세요."
     correct_title: "정답"
     correct_body: "정답입니다."
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
+    toofew_title: "답변이 너무 적습니다."
+    toofew_body: "제출하기 전에 두 개의 답변을 선택하세요."
+  multi-submittable:
+    wrong_title: "고마워"
+    wrong_body: "답변 주셔서 감사 합니다."
+    correct_title: "고마워"
+    correct_body: "답변 주셔서 감사 합니다."
+    toofew_title: "답변이 너무 적습니다."
+    toofew_body: "제출하기 전에 두 개의 답변을 선택하세요."
+  level_group:
+    wrong_title: "고마워"
+    wrong_body: "답변 주셔서 감사 합니다."
+    correct_title: "고마워"
+    correct_body: "답변 주셔서 감사 합니다."
+  level_group-submittable:
+    wrong_title: "고마워"
+    wrong_body: "답변 주셔서 감사 합니다."
+    correct_title: "고마워"
+    correct_body: "답변 주셔서 감사 합니다."
   match:
     wrong_title: "정답이 아닌 답안"
     wrong_body: "정답이 아닙니다. 다시 시도해 보세요."
@@ -523,6 +551,8 @@
     placeholder: "이름을 입력하세요."
     open_response_title: "감사합니다,"
     open_response_body: "답변해 주셔서 감사합니다!"
+    correct_title: "정답"
+    correct_body: "정답입니다."
   dialog:
     ok: "확인"
     startover_title: "정말 다시 시작하겠습니까?"
@@ -579,6 +609,7 @@
     completed_perfect: "완료"
     furthest_level_attempted: "시도한 가장 높은 레벨"
     assessment: "평가"
+    submitted: "제출됨"
   studio:
     courses_working_on: "진행중인 코스"
     completed_courses: "완료한 코스"
@@ -601,9 +632,9 @@
     name: "이름"
     updated: "업데이트됨"
     project_type: "프로젝트 형식"
-    help_text: "클릭 <strong>응용 프로그램 만들기</strong> 또는 <strong>뭔가를 아래 그려서</strong> 새로운
-      Play Lab이나 예술 프로젝트를 만든다! <br/> 언제든지 다시 와서 당신의 프로젝트를 실행시킬 수 있습니다.."
-    need_help: "시작하는데 도움이 필요하십니까?"
+    help_text: "새로운 프로젝트를 시작하기 위해서 아래의 <strong>앱 만들기</strong> 나 <strong>아무거나 그리기</strong>
+      를 눌러보세요!<br/> 언제든지 다시 돌아와서 프로젝트를 계속할 수 있습니다."
+    need_help: "자신만의 프로젝트를 만드는데 도움이 되기 위해서 이 과정들을 시도해 보세요."
     really_delete: "삭제하시겠습니까?"
     delete_yes: "예"
     delete_no: "아니요"
@@ -640,3 +671,7 @@
         detail: "지금 신고하시는 내용에 관하여 가능한 상세하게 기술해주세요."
         acknowledge: "이 내용을 제출하시면 당신이 신고한 내용이 %{link_start_privacy}개인보호정책link%{link_end}과
           %{link_start_tos}서비스 규정%{link_end}에 따라 처리됨을 승인하게 됩니다."
+  components:
+    icon_library:
+      search_placeholder_text: "아이콘 검색..."
+      no_icons_found: "아이콘이 발견되지 않음"

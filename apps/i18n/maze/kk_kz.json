@@ -18,6 +18,7 @@
   "fillTooltip": "1 жер қыртысын қою",
   "finalLevel": "Құттықтаймыз! Сіз соңғы басқатырғышты шештіңіз.",
   "flowerEmptyError": "Cіздегі гүлде мүлде шырын қалған жоқ.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "алу",
   "heightParameter": "биіктік",
   "holePresent": "саңылау бар",
@@ -81,6 +82,5 @@
   "whileTooltip": "Біріккен іс-әрекеттер аяқталғанша қайталаңыз.",
   "word": "Сөзді табу",
   "yes": "Иә",
-  "youSpelled": "Сіздің жазғаныңыз",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Сіздің жазғаныңыз"
 }

@@ -24,6 +24,8 @@ en:
   hello: crwdns2556:0crwdne2556:0
   welcome_back: 'crwdns3633:0%{name}crwdne3633:0'
   submit: crwdns35673:0crwdne35673:0
+  unsubmit: crwdns56122:0crwdne56122:0
+  next_page: crwdns56247:0crwdne56247:0
   add_teacher_form:
     code:
       label: crwdns23429:0crwdne23429:0
@@ -313,6 +315,7 @@ en:
     heading_hoc2014: crwdns24786:0crwdne24786:0
     heading_elementary: crwdns24787:0crwdne24787:0
     heading_apps: crwdns8816:0crwdne8816:0
+    heading_tools: crwdns56123:0crwdne56123:0
     heading_legacy: crwdns8843:0crwdne8843:0
     your_gallery: crwdns23431:0crwdne23431:0
     no_primary_course: crwdns36301:0crwdne36301:0
@@ -407,6 +410,12 @@ en:
       current: crwdns4646:0crwdne4646:0
       unused: crwdns4647:0crwdne4647:0
   upsell:
+    applab:
+      title: crwdns56124:0crwdne56124:0
+      body: crwdns56125:0crwdne56125:0
+      body_short: crwdns56172:0crwdne56172:0
+      audience: crwdns56126:0crwdne56126:0
+      cta: crwdns56127:0crwdne56127:0
     hoc:
       title: crwdns55279:0crwdne55279:0
       body: crwdns4901:0crwdne4901:0
@@ -448,10 +457,10 @@ en:
   landing:
     prerelease: crwdns6265:0crwdne6265:0
     prerelease_hoc2014: crwdns23502:0crwdne23502:0
-    feedback: crwdns6266:0crwdne6266:0
     report_bug: crwdns6267:0crwdne6267:0
     support: crwdns6268:0crwdne6268:0
     support_url: crwdns19026:0crwdne19026:0
+    help_resources: crwdns56128:0crwdne56128:0
   multi:
     wrong_title: crwdns5096:0crwdne5096:0
     wrong_body: crwdns5097:0crwdne5097:0
@@ -459,6 +468,23 @@ en:
     correct_body: crwdns5343:0crwdne5343:0
     toofew_title: crwdns38737:0crwdne38737:0
     toofew_body: crwdns38738:0crwdne38738:0
+  multi-submittable:
+    wrong_title: crwdns56129:0crwdne56129:0
+    wrong_body: crwdns56130:0crwdne56130:0
+    correct_title: crwdns56131:0crwdne56131:0
+    correct_body: crwdns56132:0crwdne56132:0
+    toofew_title: crwdns56133:0crwdne56133:0
+    toofew_body: crwdns56134:0crwdne56134:0
+  level_group:
+    wrong_title: crwdns56221:0crwdne56221:0
+    wrong_body: crwdns56222:0crwdne56222:0
+    correct_title: crwdns56173:0crwdne56173:0
+    correct_body: crwdns56174:0crwdne56174:0
+  level_group-submittable:
+    wrong_title: crwdns56223:0crwdne56223:0
+    wrong_body: crwdns56224:0crwdne56224:0
+    correct_title: crwdns56225:0crwdne56225:0
+    correct_body: crwdns56226:0crwdne56226:0
   match:
     wrong_title: crwdns5098:0crwdne5098:0
     wrong_body: crwdns5099:0crwdne5099:0
@@ -476,6 +502,8 @@ en:
     placeholder: crwdns22206:0crwdne22206:0
     open_response_title: crwdns37547:0crwdne37547:0
     open_response_body: crwdns37548:0crwdne37548:0
+    correct_title: crwdns56248:0crwdne56248:0
+    correct_body: crwdns56249:0crwdne56249:0
   dialog:
     ok: crwdns5100:0crwdne5100:0
     startover_title: crwdns45297:0crwdne45297:0
@@ -529,6 +557,7 @@ en:
     completed_perfect: crwdns22209:0crwdne22209:0
     furthest_level_attempted: crwdns22210:0crwdne22210:0
     assessment: crwdns35034:0crwdne35034:0
+    submitted: crwdns56189:0crwdne56189:0
   studio:
     courses_working_on: crwdns25902:0crwdne25902:0
     completed_courses: crwdns25903:0crwdne25903:0
@@ -585,3 +614,7 @@ en:
           other: crwdns49680:0crwdne49680:0
         detail: crwdns49681:0crwdne49681:0
         acknowledge: 'crwdns49682:0%{link_start_privacy}crwdnd49682:0%{link_end}crwdnd49682:0%{link_start_tos}crwdnd49682:0%{link_end}crwdne49682:0'
+  components:
+    icon_library:
+      search_placeholder_text: crwdns56250:0crwdne56250:0
+      no_icons_found: crwdns56251:0crwdne56251:0

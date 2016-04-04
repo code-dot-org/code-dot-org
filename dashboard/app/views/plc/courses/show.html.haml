@@ -1,0 +1,19 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+  = javascript_include_tag 'js/plc'
+
+%p
+  %strong Name: #{@course.name}
+
+%p
+  Course units
+  - @course.plc_course_units.each do |course_unit|
+    %li
+      = link_to course_unit.unit_name, course_unit
+
+%p
+  = link_to 'Add new course unit', new_plc_course_unit_path(plc_course_id: @course.id), class: 'btn'
+
+= link_to 'Edit', edit_plc_course_path(@course)
+\|
+= link_to 'Back', plc_content_creator_show_courses_and_modules_path

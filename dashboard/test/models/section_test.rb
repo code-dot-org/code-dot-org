@@ -13,8 +13,9 @@ class SectionTest < ActiveSupport::TestCase
 
     assert_not_equal s1.code, s2.code
 
-    assert s1.code =~ /^[A-Z]{6}$/
-    assert s2.code =~ /^[A-Z]{6}$/
+    letters_without_vowels_regex = /^[A-Z&&[^AEIOU]]{6}$/
+    assert_match letters_without_vowels_regex, s1.code
+    assert_match letters_without_vowels_regex, s2.code
 
     # now do it again
     srand 1
@@ -22,7 +23,7 @@ class SectionTest < ActiveSupport::TestCase
     assert_not_equal s1.code, s3.code
     assert_not_equal s2.code, s3.code
 
-    assert s3.code =~ /^[A-Z]{6}$/
+    assert_match letters_without_vowels_regex, s3.code
   end
 
   test "user must be teacher" do
@@ -37,7 +38,6 @@ class SectionTest < ActiveSupport::TestCase
     assert !student_section.persisted?
     assert_equal ["User must be a teacher"], student_section.errors.full_messages
   end
-
 
   test "can create section with duplicate name" do
     teacher = create(:teacher)

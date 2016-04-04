@@ -14,39 +14,39 @@
         course1:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
           'Maze: Sequence': 'Maze: Sequence'
-          'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
-          Spelling Bee: Spelling Bee
+          'Maze: Debugging': "মেজ: ডিবাগিং"
+          'Artist 1: Intro': "শিল্পী-১: ভূমিকা"
+          Artists 2: "শিল্পী ২"
+          Spelling Bee: "বানান মৌমাছি"
           Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
-          'Maze 2: Loops': 'Maze 2: Loops'
-          'Bee 2: Loops': 'Bee 2: Loops'
+          'Bee 1: Intro': "মৌমাছি ১: ভূমিকা"
+          'Maze 2: Loops': "মেজ ২ঃ লুপ"
+          'Bee 2: Loops': "মৌমাছি ২ঃ লুপ"
           Multi & Match: Multi & Match
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
-          title: Course 1
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
+          title: "কোর্স ১"
+          Artist 2: "শিল্পী ২"
+          Happy Maps: "আনন্দের মানচিত্র"
           Move it, Move it: Move it, Move it
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
+          The Big Event: "বড় ঘটনা"
           Going Places Safely: Going Places Safely
           description: Start with Course 1 for early readers. Students will create
             computer programs that will help them learn to collaborate with others,
             develop problem-solving skills, and persist through difficult tasks. By
             the end of this course, students create their very own custom game or
             story that they can share. Recommended for grades K-1.
-          'Bee: Sequence': 'Bee: Sequence'
+          'Bee: Sequence': "মৌমাছি: অনুক্রম"
           'Artist: Sequence': 'Artist: Sequence'
           'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': 'Maze: Loops'
-          'Bee: Loops': 'Bee: Loops'
+          'Maze: Loops': "মেজ: লুপ"
+          'Bee: Loops': "মৌমাছি: লুপ"
           'Studio: Create a Story': 'Play Lab: Create a Story'
-          'Artist: Loops': 'Artist: Loops'
-          description_audience: Ages 4+ (pre-readers)
+          'Artist: Loops': "শিল্পী: লুপ"
+          description_audience: "বয়স ৪-৬"
           description_short: Start with Course 1 for early readers.
         course2:
           The Maze: "গোলকধাঁধা"
@@ -55,23 +55,23 @@
           Artist Debugging: Artist Debugging
           Bounce: "বল লাফানো"
           'Studio: Create a Story': 'Play Lab: Create a Story'
-          Artist Loops: Artist Loops
+          Artist Loops: "শিল্পী লুপ"
           Bee Conditionals: Bee Conditionals
-          Flappy: Flappy
-          title: Course 2
-          Bee Loops: Bee Loops
+          Flappy: "ফ্লাপি"
+          title: "কোর্স ২"
+          Bee Loops: "মৌমাছি লুপ"
           Artist Functions: Artist Functions
           The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
+          Bee Debugging: "মৌমাছি ডিবাগিং"
+          Bee Functions: "মৌমাছি ফাংশন"
+          Maze Loops: "মেজ লুপ"
           Graph Paper Programming: "ছক-কাগজে প্রোগ্রামিং"
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
+          Relay programming: "রিলে-স্যুইচ প্রোগ্রামিং"
           Conditionals: "শর্তযুক্ত"
           Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
+          The Big Event: "বড় ঘটনা"
           Your Digital Footprint: Your Digital Footprint
           description: Start with Course 2 for students who can read and have no prior
             programming experience. In this course students will create programs to
@@ -79,30 +79,30 @@
             Recommended for grades 2-5.
           'Maze: Sequence': 'Maze: Sequence'
           'Artist: Sequence': 'Artist: Sequence'
-          'Maze: Loops': 'Maze: Loops'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Bee: Debugging': 'Bee: Debugging'
-          'Artist: Debugging': 'Artist: Debugging'
+          'Maze: Loops': "মেজ: লুপ"
+          'Artist: Loops': "শিল্পী: লুপ"
+          'Bee: Loops': "মৌমাছি: লুপ"
+          'Bee: Debugging': "মৌমাছি: ডিবাগিং"
+          'Artist: Debugging': "শিল্পী: ডিবাগিং"
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Sequence2': 'Artist: Sequence2'
           'Maze: Sequence2': 'Maze: Sequence2'
           'Artist: Nested Loops': 'Artist: Nested Loops'
-          description_audience: Ages  6+ (reading required)
+          description_audience: "বয়স ৬-১৮"
           description_short: Start with Course 2 for students who can read.
         course3:
           The Maze: "গোলকধাঁধা"
           'Studio: Create a Story': 'Play Lab: Create a Story'
           The Artist: "শিল্পী"
-          title: Course 3
+          title: "কোর্স ২"
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
           Artist Nested Loops: Artist Nested Loops
           Bee Conditionals: Bee Conditionals
           Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
+          Bee Debuggin: "মৌমাছি ডিবাগিং"
+          Bee Debugging: "মৌমাছি ডিবাগিং"
+          Bee Functions: "মৌমাছি ফাংশন"
           Artist Functions with Params: Artist Functions with Params
           Bounce: "বল লাফানো"
           Maze Conditionals: Maze Conditionals
@@ -110,8 +110,8 @@
           Computational Thinking: "গণিতিক চিন্তা-ভাবনা"
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
-          Internet: Internet
+          Dice Race: "পাশার লড়াই"
+          Internet: "ইন্টারনেট"
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital Citizenship
           Farmer - While Loops: Farmer - While Loops
@@ -121,42 +121,42 @@
             this course, students create interactive stories and games they can share
             with anyone. Recommended for grades 4-5.
           'Studio: Create a Game': 'Play Lab: Create a Game'
-          Maze: Maze
-          Artist: Artist
+          Maze: "গোলকধাঁধা"
+          Artist: "শিল্পী"
           'Artist: Functions': 'Artist: Functions'
-          'Bee: Functions': 'Bee: Functions'
+          'Bee: Functions': "মৌমাছি: ফাংশন"
           'Bee: Conditionals': 'Bee: Conditionals'
           'Maze: Conditionals': 'Maze: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
           'Farmer: While Loops': 'Farmer: While Loops'
           'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Bee: Debugging': 'Bee: Debugging'
-          Maze2: Maze2
-          Artist2: Artist2
+          'Bee: Debugging': "মৌমাছি: ডিবাগিং"
+          Maze2: "মেজ২"
+          Artist2: "শিল্পী২"
           'Artist: Functions2': 'Artist: Functions2'
-          'Bee: Functions2': 'Bee: Functions2'
+          'Bee: Functions2': "মৌমাছি: ফাংশন২ "
           'Bee: Conditionals2': 'Bee: Conditionals2'
           'Maze: Conditionals2': 'Maze: Conditionals2'
           'Artist: Nested Loops2': 'Artist: Nested Loops2'
           'Farmer: While Loops2': 'Farmer: While Loops2'
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
-          'Bee: Debugging2': 'Bee: Debugging2'
+          'Bee: Debugging2': "মৌমাছি: ডিবাগিং২"
           'Artist: Patterns': 'Artist: Patterns'
-          Songwriting: Songwriting
-          description_audience: Ages 8+ (after Course 2)
+          Songwriting: "গান লিখা"
+          description_audience: "বয়স ৮-১৮"
           description_short: Course 3 is a follow-up to Course 2.
         playlab:
-          title: Play Lab
+          title: "প্লে ল্যাব"
           description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
+          Play Lab: "প্লে ল্যাব"
           description_short: Create a story or make a game with Play Lab!
         artist:
-          title: Artist
+          title: "শিল্পী"
           description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
+          Artist: "শিল্পী"
           description_short: Draw cool pictures and designs with the Artist!
         hourofcode:
-          Maze: Maze
+          Maze: "গোলকধাঁধা"
           title: "এক ঘন্টার কোড"
           description: Try the basics of computer science with characters from Angry
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
@@ -166,7 +166,7 @@
           description: Let's use code to join Anna and Elsa as they explore the magic
             and beauty of ice. You will create snowflakes and patterns as you ice-skate
             and make a winter wonderland that you can then share with your friends!
-          Artist: Artist
+          Artist: "শিল্পী"
           description_short: "চলুন কোড ব্যবহার করে আনা এবং এলসার বরফের জাদু ও সৌন্দর্য
             অনুসন্ধানে যোগ দেই।"
         course4:
@@ -179,7 +179,7 @@
             with anyone. Recommended for grades 4-8.
           'Artist: Variables': 'Artist: Variables'
           'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
+          title: "কোর্স ৪"
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
           Variables: "চলকগুলো"
           'Play Lab: Variables': 'Play Lab: Variables'
@@ -189,19 +189,19 @@
           'Play Lab: For Loops': 'Play Lab: For Loops'
           'Artist: Functions': 'Artist: Functions'
           'Unplugged: Tangrams': 'Unplugged: Tangrams'
-          Artist: Artist
-          Bee: Bee
+          Artist: "শিল্পী"
+          Bee: "মৌমাছি"
           'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
           'Unplugged: Madlibs': 'Unplugged: Madlibs'
           'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
           'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
           'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
           'Unplugged: Binary': 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          Bee Binary: "মৌমাছি দ্বিমিক"
+          Farmer Binary: "চাষী দ্বিমিক"
+          Maze and Bee: "মেজ এবং মৌমাছি"
+          Artist Binary: "শিল্পী দ্বিমিক"
+          description_audience: "বয়স ১০-১৮"
           Super Challenge - Variables: Super Challenge - Variables
           Super Challenge - For Loops: Super Challenge - For Loops
           Super Challenge - Functions and Parameters: Super Challenge - Functions
@@ -216,23 +216,23 @@
           Course 4 Prerequisite: Course 4 Prerequisite
           'Maze: Sequence': 'Maze: Sequence'
           'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
+          'Artist: Loops': "শিল্পী: লুপ"
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
           'Farmer: While Loops': 'Farmer: While Loops'
           'Bee: Nested Loops': 'Bee: Nested Loops'
           'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
+          'Bee: Debugging': "মৌমাছি: ডিবাগিং"
         usability:
-          Intro: Intro
+          Intro: "ভুমিকা"
           Variables and For Loops: Variables and For Loops
           Functions and Functions with Parameters: Functions and Functions with Parameters
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
           Variables: "চলকগুলো"
-          For Loops: For Loops
-          Binary: Binary
+          For Loops: "ফর লুপ"
+          Binary: "দ্বি-আঙ্কিক"
         potus:
           title: special
           description_short: special
@@ -243,7 +243,7 @@
           description_short: special
           description: special
           Special: Special
-          Binary: Binary
+          Binary: "দ্বি-আঙ্কিক"
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -277,7 +277,7 @@
           title: Play Lab
           description_short: Create a story or make a game with Play Lab!
           description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
+          Play Lab: "প্লে ল্যাব"
           Infinity: "অসীম"
         algebrademo:
           title: Algebra Demo
@@ -320,8 +320,8 @@
           description_short: ''
           description: ''
           Internet Simulator: Internet Simulator
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Unit 1: "ইউনিট 1"
+          Unit 2: "ইউনিট ২"
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
@@ -356,7 +356,7 @@
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: "'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' (১৫-২৫ ঘন্টা)"
-          description_audience: Ages 10-18
+          description_audience: "বয়স ১০-১৮"
           description: This 20-hour course introduces core computer science and programming
             concepts. The course is designed for use in classrooms for grades K-8,
             but it is fun to learn at all ages.
@@ -375,7 +375,7 @@
           The Artist 3: "পটুয়া ৩"
           Song Writing: "গান লিখা"
           The Farmer 2: "কৃষক ২"
-          Abstraction: Abstraction
+          Abstraction: "অপসারণ"
           The Artist 4: "চিত্রকর ৪"
           Relay Programming: "রিলে-স্যুইচ প্রোগ্রামিং"
           The Farmer 3: "কৃষক ৩"
@@ -389,7 +389,7 @@
           The Maze: "গোলকধাঁধা"
           Applab: Applab
           The Artist: "শিল্পী"
-          Play Lab: Play Lab
+          Play Lab: "প্লে ল্যাব"
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
@@ -401,11 +401,11 @@
           Calc: Calc
           Eval: Eval
         flappy:
-          title: Flappy Code
+          title: "ফ্লাপি কোড"
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
           description_short: Write your own Flappy game in less than 10 minutes!
-          Flappy Code: Flappy Code
+          Flappy Code: "ফ্লাপি কোড"
         jigsaw:
           title: "টুকরো কাঠের ধাঁধা"
           description: ''
@@ -413,8 +413,8 @@
           Jigsaw: "টুকরো কাঠের ধাঁধা"
         step:
           title: "ধাপ"
-          description: ''
-          description_short: Step tutorial
+          description: "ধাপ টিউটোরিয়াল"
+          description_short: "ধাপ টিউটোরিয়াল"
           Step: "ধাপ"
         Hour of Code:
           title: Hour of Code 2013
@@ -460,13 +460,13 @@
           Course 4 Prerequisite: Course 4 Prerequisite
           'Maze: Sequence': 'Maze: Sequence'
           'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
+          'Artist: Loops': "শিল্পী: লুপ"
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
           'Farmer: While Loops': 'Farmer: While Loops'
           'Bee: Nested Loops': 'Bee: Nested Loops'
           'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
+          'Bee: Debugging': "মৌমাছি: ডিবাগিং"
         cspunit1:
           title: CSP Unit 1
           description_short: Make Black and White Images with the pixelation tool
@@ -539,12 +539,12 @@
             (Big Game)'
           Evaluation Blocks: Evaluation Blocks
           Strings and Images: Strings and Images
-          Contracts: Contracts
+          Contracts: "শর্তের"
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
           The Design Recipe: The Design Recipe
           Your Game - Animation: Your Game - Animation
-          Booleans: Booleans
+          Booleans: "বুলিয়ান"
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
@@ -566,7 +566,7 @@
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
-          Booleans: Booleans
+          Booleans: "বুলিয়ান"
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
@@ -640,6 +640,7 @@
           description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
+          title_short: CSP Unit 3
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
@@ -736,7 +737,7 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: While Loops
+          While Loops: "হোয়াইল লুপ"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -966,7 +967,7 @@
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           The Design Recipe: The Design Recipe
           Big Game - Animation: Big Game - Animation
-          Booleans: Booleans
+          Booleans: "বুলিয়ান"
           Sam the Bat: Sam the Bat
           Big Game - Booleans: Big Game - Booleans
           Luigi's Pizza: Luigi's Pizza
@@ -974,15 +975,15 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: Free Play
+          Free Play: "বিনা পয়সায় খেলা"
         allthethings:
           Jigsaw: "টুকরো কাঠের ধাঁধা"
-          Maze: Maze
-          Artist: Artist
-          Bee: Bee
+          Maze: "গোলকধাঁধা"
+          Artist: "শিল্পী"
+          Bee: "মৌমাছি"
           PlayLab: PlayLab
           Farmer: Farmer
-          Flappy: Flappy
+          Flappy: "ফ্লাপি"
           Bounce: "বল লাফানো"
           Multi: Multi
           Match: Match
@@ -1004,6 +1005,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1017,7 +1019,7 @@
           Defining Variables: Defining Variables
           Defining Functions: Defining Functions
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
+          Booleans: "বুলিয়ান"
           'Eval: Conditionals': 'Eval: Conditionals'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
@@ -1029,19 +1031,19 @@
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          App Lab: "অ্যাপ ল্যাব"
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          App Lab: "অ্যাপ ল্যাব"
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -1066,7 +1068,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1138,22 +1140,22 @@
           Defining Variables: Defining Variables
           Defining Functions: Defining Functions
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
+          Booleans: "বুলিয়ান"
           'Eval: Conditionals': 'Eval: Conditionals'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           The Design Recipe: The Design Recipe
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
-          Wrap-Up: Wrap-Up
+          Welcome!: "স্বাগতম!"
+          Wrap-Up: "গুটিয়ে ফেলা"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1169,13 +1171,13 @@
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "গুটিয়ে ফেলা"
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free,
@@ -1187,7 +1189,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1196,12 +1198,12 @@
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "গুটিয়ে ফেলা"
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1225,7 +1227,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1285,15 +1287,15 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
+          Happy Maps: "আনন্দের মানচিত্র"
           Move it, Move it: Move it, Move it
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
           Graph Paper Programming: "ছক-কাগজে প্রোগ্রামিং"
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
+          The Big Event: "বড় ঘটনা"
           Binary Bracelets: Binary Bracelets
-          Songwriting: Songwriting
+          Songwriting: "গান লিখা"
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1342,7 +1344,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1375,7 +1377,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1410,7 +1412,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1445,7 +1447,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1458,11 +1460,16 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1480,7 +1487,7 @@
           'Data App Part 3: Code': 'Data App Part 3: Code'
           Identifying People with Data: Identifying People with Data
           Collecting Personal Information: Collecting Personal Information
-          Privacy Policy: Privacy Policy
+          Privacy Policy: "গোপনীয়তার নীতি"
           'Debate: Privacy vs. Utility': 'Debate: Privacy vs. Utility'
           'Data App Part 4: App Permissions': 'Data App Part 4: App Permissions'
           'Data App Part 5: Clean Data': 'Data App Part 5: Clean Data'
@@ -1528,11 +1535,11 @@
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "গুটিয়ে ফেলা"
           Thinking About Implementation: Thinking About Implementation
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
@@ -1550,7 +1557,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1567,17 +1574,18 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: "বয়স ১০-১৮"
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: "বয়স ১০-১৮"
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1600,7 +1608,7 @@
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
-          description_short: Programming
+          description_short: "প্রোগ্রামিং"
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1617,7 +1625,7 @@
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: While Loops
+          While Loops: "হোয়াইল লুপ"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1656,7 +1664,7 @@
             in a galaxy far, far away.
           Hour of Code 2015: Hour of Code 2015
         minecraft:
-          title: Minecraft
+          title: "মাইনক্র্যাফট"
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
@@ -1677,9 +1685,9 @@
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "স্বাগতম!"
           Thinking About Implementation: Thinking About Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "গুটিয়ে ফেলা"
           Assessing Computer Models: Assessing Computer Models
           "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
             Refresh your connection to Complex Adaptive Systems"
@@ -1717,6 +1725,7 @@
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4
@@ -1743,3 +1752,72 @@
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
+          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Unplugged: Contracts': 'Unplugged: Contracts'
+          'Eval: Writing Contracts': 'Eval: Writing Contracts'
+          'Calc: Defining Variables': 'Calc: Defining Variables'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            and Coordinate Planes'
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
+            (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Eval: Boolean Operators': 'Eval: Boolean Operators'
+          'Play Lab: Booleans': 'Play Lab: Booleans'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            and Piecewise Functions'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
+            Detection and the Distance Formula'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

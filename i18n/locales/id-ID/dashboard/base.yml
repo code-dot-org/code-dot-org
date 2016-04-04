@@ -24,6 +24,8 @@ id:
   hello: Halo dunia
   welcome_back: 'Selamat datang kembali, %{name}'
   submit: Kirim
+  unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Tambahkan seorang guru:'
@@ -223,7 +225,7 @@ id:
       free_play:
         playlab: Buat App
         artist: Gambarlah Sesuatu
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Buat App
     user:
       classroom: Beranda guru
@@ -321,6 +323,7 @@ id:
     heading_hoc2014: '<h2>The Hour of Code untuk</h2><h1>Segala Usia</h1>'
     heading_elementary: '<h2>20 jam kursus untuk</h2><h1>Pemula (segala usia)</h1>'
     heading_apps: '<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>'
+    heading_tools: '<h2>Siap dengan langkah berikutnya?</h2><h1>JavaScript Tools untuk SMA</h1>'
     heading_legacy: '<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>'
     your_gallery: Galeri
     no_primary_course: Coba kursus di Code Studio
@@ -415,6 +418,12 @@ id:
       current: Tingkat saat ini
       unused: Tingkat yang tidak terpakai
   upsell:
+    applab:
+      title: Laboratorium Aplikasi
+      body: App Lab adalah sebuah lingkungan programming dimana kamu dapat membuat aplikasi-aplikasi sederhana. Desain sebuah aplikasi, mengode dengan blok atau JavaScript agar aplikasi tersebut dapat bekerja, kemudian bagikan aplikasi kamu dalam hitungan detik.
+      body_short: Desain sebuah aplikasi, kode dengan blok atau JavaScript agar aplikasi tersebut dapat bekerja, kemudian bagikan aplikasimu dalam hitungan detik.
+      audience: Usia 13+
+      cta: Pelajari caranya
     hoc:
       title: Labirin klasik
       body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
@@ -456,10 +465,10 @@ id:
   landing:
     prerelease: "Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan dibuat."
     prerelease_hoc2014: "Pedoman ini adalah dalam <span class='betatext'>versi beta</span>. Pedoman ini dapat direvisi seiring diterimanya masukan dan dibuatnya perbaikan."
-    feedback: Berikan usulan
     report_bug: Laporkan kesalahan
     support: Dapatkan bantuan
     support_url: //support.code.org
+    help_resources: Bantuan dan Sumber Daya
   multi:
     wrong_title: Jawaban Salah
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!
@@ -467,6 +476,23 @@ id:
     correct_body: Itu jawaban yang benar.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Terima kasih
+    wrong_body: Terima kasih telah memberikan jawabannya.
+    correct_title: Terima kasih
+    correct_body: Terima kasih telah memberikan jawabannya.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Terima kasih
+    wrong_body: Terima kasih telah memberikan jawaban
+    correct_title: Terima kasih
+    correct_body: Terima kasih telah memberikan jawaban
+  level_group-submittable:
+    wrong_title: Terima kasih
+    wrong_body: Terima kasih telah memberikan jawaban
+    correct_title: Terima kasih
+    correct_body: Terima kasih telah memberikan jawaban
   match:
     wrong_title: Solusi yang salah
     wrong_body: Solusi yang anda masukkan salah, Coba Lagi!
@@ -484,6 +510,8 @@ id:
     placeholder: Masukkan jawaban Anda di sini
     open_response_title: Terima kasih
     open_response_body: Terima kasih atas responmu!
+    correct_title: Benar
+    correct_body: Itu jawaban yang benar.
   dialog:
     ok: Oke!
     startover_title: Kamu yakin ingin memulainya dari awal?
@@ -537,6 +565,7 @@ id:
     completed_perfect: selesai, sempurna
     furthest_level_attempted: tingkat terjauh yang dicoba
     assessment: penilaian
+    submitted: terkirim
   studio:
     courses_working_on: Kursus yang sedang Anda kerjakan
     completed_courses: Kursus yang telah diselesaikan
@@ -593,3 +622,7 @@ id:
           other: Lain
         detail: Harap memberikan sedetail mungkin mengenai konten yang Anda laporkan.
         acknowledge: 'Dengan mengirimkan informasi ini, Anda mengakui ini akan di tangani sesuai dengan syarat %{link_start_privacy} kebijakan privasi%{link_end}dan%{link_start_tos}Syarat Layanantautan%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

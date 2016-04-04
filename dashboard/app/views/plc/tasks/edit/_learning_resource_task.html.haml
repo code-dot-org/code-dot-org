@@ -1,0 +1,23 @@
+#editLearningResourceTask
+  =form_for(@task, url: plc_task_path(@task)) do |f|
+    .field
+      = render partial: 'plc/tasks/edit/common_editable', locals: {f: f}
+      = f.label :resource_url
+      = f.text_field :resource_url
+      = f.hidden_field :icon
+
+      %p
+        Icon:
+        %i.fa#previewIcon{class: @task.icon}
+
+        = button_tag 'Edit Icon', type: 'button', id: 'toggleIconLibrary', class: 'btn edit_icon_button'
+
+      #iconDiv{style: 'display: none;'}
+        #iconLibraryContainerDiv
+        = button_tag 'Unset Icon' , type: 'button', id: 'unsetIcon', class: 'btn'
+
+    .actions
+      = f.submit 'Save'
+
+  = javascript_include_tag 'js/plc'
+

@@ -59,7 +59,7 @@ var SendToPhone = React.createClass({
       return;
     }
 
-    var phone = this.refs.phone.getDOMNode();
+    var phone = this.refs.phone;
     $(phone).mask('(000) 000-0000', {
       onComplete: function () {
         this.setState({sendState: SendState.canSubmit});
@@ -76,7 +76,7 @@ var SendToPhone = React.createClass({
     if (this.state.sendState !== SendState.canSubmit) {
       return;
     }
-    var phone = this.refs.phone.getDOMNode();
+    var phone = this.refs.phone;
 
     this.setState({sendState: SendState.sending});
 

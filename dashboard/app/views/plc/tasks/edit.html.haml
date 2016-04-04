@@ -1,0 +1,12 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+
+%h1 Editing plc_task
+
+= render partial: 'plc/tasks/edit/' + @task.class.underscored_task_type
+
+= link_to 'Destroy this task', plc_task_path(@task), method: :delete, data: {confirm: 'Are you sure you want to delete this task?'}
+\|
+= link_to 'Show', plc_task_path(@task)
+\|
+= link_to 'Back to Learning Module', plc_learning_module_path(@task.plc_learning_module)

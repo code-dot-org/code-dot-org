@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you make this hat with a top length of 100?",
+    "instructions": "The width of the top of this hat should be 50 pixels wide.  Can you fix it?",
     "x": "140",
     "y": "225",
     "start_direction": "90",
@@ -30,10 +30,14 @@
     "permitted_errors": "0",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you make this hat with a top length of 100?\r\n\r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)",
+    "markdown_instructions": "The width of the top of this hat should be 100 pixels wide.  \r\nCan you fix it?\r\n\r\n<br/>\r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)",
     "examples_required": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"2-3_Artist_Debugging_1_a\",\r\n  \"callout_text\": \"Artist doesn't have a \\\"Step\\\" button, but you can drag the slider left to watch your program run more carefully.\",\r\n  \"element_id\": \"#fastClipPath\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -131,10 +135,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-</xml>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
@@ -143,33 +143,33 @@
               <title name="DIR">moveForward</title>
               <title name="VALUE">20</title>
               <next>
-                <block type="draw_turn_by_constant">
+                <block type="draw_turn_by_constant_dropdown">
                   <title name="DIR">turnLeft</title>
-                  <title name="VALUE">90</title>
+                  <title name="VALUE" config="45,60,90,120,180">90</title>
                   <next>
                     <block type="draw_move_by_constant">
                       <title name="DIR">moveForward</title>
                       <title name="VALUE">50</title>
                       <next>
-                        <block type="draw_turn_by_constant">
+                        <block type="draw_turn_by_constant_dropdown">
                           <title name="DIR">turnRight</title>
-                          <title name="VALUE">90</title>
+                          <title name="VALUE" config="45,60,90,120,180">90</title>
                           <next>
                             <block type="draw_move_by_constant">
                               <title name="DIR">moveForward</title>
-                              <title name="VALUE">100</title>
+                              <title name="VALUE">50</title>
                               <next>
-                                <block type="draw_turn_by_constant">
+                                <block type="draw_turn_by_constant_dropdown">
                                   <title name="DIR">turnRight</title>
-                                  <title name="VALUE">90</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
                                   <next>
                                     <block type="draw_move_by_constant">
                                       <title name="DIR">moveForward</title>
                                       <title name="VALUE">50</title>
                                       <next>
-                                        <block type="draw_turn_by_constant">
+                                        <block type="draw_turn_by_constant_dropdown">
                                           <title name="DIR">turnLeft</title>
-                                          <title name="VALUE">90</title>
+                                          <title name="VALUE" config="45,60,90,120,180">90</title>
                                           <next>
                                             <block type="draw_move_by_constant">
                                               <title name="DIR">moveForward</title>

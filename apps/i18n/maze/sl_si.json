@@ -18,6 +18,7 @@
   "fillTooltip": "postavi 1 enoto umazanije",
   "finalLevel": "Čestitke! Rešil/a si zadnjo uganko.",
   "flowerEmptyError": "Roža, na kateri si, nima več medu.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "najdi",
   "heightParameter": "višina",
   "holePresent": "tam je luknja",
@@ -81,6 +82,5 @@
   "whileTooltip": "Ponavljaj vključena dejanja, dokler ne dosežeš zaključne točke.",
   "word": "Poišči besedo",
   "yes": "Da",
-  "youSpelled": "Ti si črkoval",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Ti si črkoval"
 }

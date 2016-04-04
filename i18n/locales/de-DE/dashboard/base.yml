@@ -20,10 +20,12 @@ de:
         gender: Geschlecht
         edit_header: Kontodaten bearbeiten
         error:
-          future: kann nicht in der Zukunft sein
+          future: darf nicht in der Zukunft liegen
   hello: Hallo Welt
   welcome_back: 'Willkommen zurück, %{name}'
   submit: Absenden
+  unsubmit: Zurücknehmen
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Lehrer hinzufügen:'
@@ -94,7 +96,7 @@ de:
     mismatch_password: Die eingegebenen Passwörter stimmen nicht überein
     student_terms: "Ich aktzeptiere die <a href='http://code.org/tos'>Agb</a> von Code.org. Wenn ich unter 13 Jahre alt bin, bestätige ich, dass ich die Erlaubnis meiner Eltern/Erziehungsberechtigten habe, Code.org zu benutzen.<br/>Für unter 13 jährige Nutzer: E-Mail Adressen werden nicht so gespeichert, dass wir Kontakt herstellen könnten."
     teacher_terms: "Ich erkläre mich mit den <a href='http://code.org/tos'>Nutzungsbedingungen</a> von Code.org einverstanden."
-    additional_information: Wir benötigen noch einige Informationen, um mit der Anmeldung fortzufahren.
+    additional_information: Wir benötigen noch ein paar weitere Informationen, um mit deiner Anmeldung fortzufahren.
   signin_form:
     title: Hast du bereits einen Account? Einloggen
     login: E-Mail oder Benutzername
@@ -141,7 +143,7 @@ de:
       username_in_use: '%{username} ist bereits vergeben, bitte wähle einen anderen'
       no_teacher: "Es konnte niemand angemeldet mit '%{teacher_email_or_code}' gefunden werden. Bitten Sie bitte denjenigen sich hier registrieren und versuchen Sie es dann erneut."
       section_not_found: "Es konnte kein Abschnitt mit dem Code '%{section_code}' gefunden werden."
-      blank_code: Gib bitte einen Abschnittscode ein
+      blank_code: Bitte gib einen Abschnittscode ein
       cant_join_own_section: Es tut uns leid, aber du kannst nicht an deinem eigenen Abschnitt teilnehmen.
     mail:
       invite_student:
@@ -225,7 +227,7 @@ de:
       free_play:
         playlab: Eine App erstellen
         artist: Zeichne etwas
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Eine App erstellen
     user:
       classroom: Lehrer-Homepage
@@ -282,15 +284,15 @@ de:
     delete: Lösche deinen Account
     delete_text: Klicke auf den unteren Button um deinen Account zu löschen.
     delete_text_teacher_note: 'Bitte beachten Sie: Das Löschen Ihres Accounts löscht nicht automatisch auch die Accounts Ihrer Schüler.'
-    delete_confirm: Sind Sie sicher, dass Sie Ihren Account löschen möchten?
+    delete_confirm: Bist du sicher, dass du deinen Account löschen willst?
   user_level:
     completed: Abgeschlossen
     tried: Versucht
   home:
     title: Code Studio
-    description: Code-Studio ist Heimat von online Kurse erstellt von Code.org
+    description: Code Studio ist die Heimat von Online-Kursen, die von Code.org erstellt wurden
     lines_of_code: '%{lines_count} Codezeilen von den Studenten erstellt'
-    lines_of_code_linebreak: '%{lines_count} Zeilen CODE <br/> von %{students_count} Millionen Studenten geschrieben'
+    lines_of_code_linebreak: '%{lines_count} ZEILEN CODE <br/> GESCHRIEBEN VON %{students_count} MILLIONEN SCHÜLERN'
     all_courses: Übersicht der Level 1, 2 und 3
     lesson_plans: Arbeitsplan
     signin_message: 'Schon registriert? %{link}'
@@ -323,6 +325,7 @@ de:
     heading_hoc2014: '<h2>Die Hour of Code für</h2><h1>jedes Alter</h1>'
     heading_elementary: '<h2>20 Stunden Kurse für</h2><h1>Beginner (allen Alters)</h1>'
     heading_apps: '<h2>Spass für</h2><h1>Alle</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>'
     your_gallery: Galerie
     no_primary_course: Probiere einen Kurs bei Code Studio
@@ -417,6 +420,12 @@ de:
       current: Aktuelle Levels
       unused: Unbenutzte Levels
   upsell:
+    applab:
+      title: App-Labor
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassisches Labyrinth
       body: Versuche die Grundlagen der Informatik zu lernen. Millionen andere haben es schon probiert.
@@ -458,10 +467,10 @@ de:
   landing:
     prerelease: "Dieser Kurs ist als <span class='betatext'> Beta</span> eingestuft.  Das bedeutet, dies ist nicht die endgültige Fassung des Kurses und er unterliegt Änderungen, da Feedback empfangen wird und Verbesserungen vorgenommen werden."
     prerelease_hoc2014: "Die Einführung liegt als <span class='betatext'>Testversion</span> vor. Es wird gemäß den Rückmeldungen überarbeitet und verbessert."
-    feedback: Feedback geben
     report_bug: Fehler melden
     support: Hilfe erhalten
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Falsche Antwort
     wrong_body: Die Antwort, die du eingegeben hast, ist nicht korrekt. Bitte versuche es erneut!
@@ -469,6 +478,23 @@ de:
     correct_body: Das ist die richtige Antwort.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Vielen Dank
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Vielen Dank
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Vielen Dank
+    wrong_body: Thank you for submitting answers.
+    correct_title: Vielen Dank
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Vielen Dank
+    wrong_body: Thank you for submitting answers.
+    correct_title: Vielen Dank
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Falsche Lösung
     wrong_body: Die Lösung, die du eingegeben hast, ist nicht korrekt. Bitte versuche es erneut!
@@ -486,6 +512,8 @@ de:
     placeholder: Gebe hier deine Antwort ein
     open_response_title: Danke
     open_response_body: Danke für deine Antwort!
+    correct_title: Richtig
+    correct_body: Das ist die richtige Antwort.
   dialog:
     ok: OK
     startover_title: Bist du dir sicher das du neu anfangen möchtest?
@@ -539,6 +567,7 @@ de:
     completed_perfect: Abgeschlossen, perfekt
     furthest_level_attempted: Höchste Ebene versucht
     assessment: Bewertung
+    submitted: submitted
   studio:
     courses_working_on: Kurse, an denen du arbeitest
     completed_courses: Abgeschlossene Kurse
@@ -596,3 +625,7 @@ de:
           other: Andere
         detail: Bitte geben Sie so viele Details wie möglich über den Inhalt, den Sie melden möchten.
         acknowledge: 'Durch die Übermittlung dieser Daten, akzeptieren Sie, dass diese gemäß den Bedingungen der %{link_start_privacy}Datenschutzerklärung%{link_end} und die %{link_start_tos}allgemeinen Geschäftsbedingungen%{link_end} behandelt werden'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: Keine Symbole gefunden

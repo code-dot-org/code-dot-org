@@ -18,6 +18,7 @@
   "fillTooltip": "umísti 1 jednotku hlíny",
   "finalLevel": "Dobrá práce! Vyřešil jsi poslední hádanku.",
   "flowerEmptyError": "Květina, na které jsi, už nemá nektar.",
+  "didNotCollectEverything": "Ujistěte se, zda že jste za sebou nenechali nektar nebo med!",
   "get": "získat",
   "heightParameter": "výška",
   "holePresent": "tady je díra",
@@ -81,6 +82,5 @@
   "whileTooltip": "Opakuje obsažené akce dokud nedosáhne cíle.",
   "word": "Najdi slovo",
   "yes": "Ano",
-  "youSpelled": "Vyhláskoval(a) jsi",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Vyhláskoval(a) jsi"
 }

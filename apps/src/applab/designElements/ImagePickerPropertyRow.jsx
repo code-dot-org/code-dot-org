@@ -6,7 +6,7 @@ var rowStyle = require('./rowStyle');
 // I expect that the vast majority of time, people will be copy/pasting URLs
 // instead of typing them manually, which will result in an immediate GET,
 // unless they pasted within USER_INPUT_DELAY ms of editing the field manually
-const USER_INPUT_DELAY = 1500;
+var USER_INPUT_DELAY = 1500;
 
 var PropertyRow = React.createClass({
   propTypes: {

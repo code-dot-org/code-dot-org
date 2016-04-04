@@ -552,11 +552,11 @@
       5:
         image: notes/playlab_intro_5.png
         text: In questo primo esercizio il personaggio è un pinguino. Fagli dire "Ciao!"
-          trascinando il blocco "pronuncia" dalla cassetta degli attrezzi, collegandolo
-          al blocco 'quando si clicca su "Esegui" ' e scrivendo al suo interno "Ciao!".
-          Puoi anche fare muovere il pinguino utilizzando i blocchi "sposta a destra"
-          e "sposta a sinistra". Una volta che i blocchi sono stati posizionati, clicca
-          il pulsante "Esegui" per vedere quello che hai programmato.
+          trascinando il blocco "il personaggio dice ..." dalla cassetta degli attrezzi,
+          collegandolo al blocco 'quando si clicca su "Esegui" ' e scrivendo al suo
+          interno "Ciao!". Puoi anche fare muovere il pinguino utilizzando i blocchi
+          "sposta a destra" e "sposta a sinistra". Una volta che i blocchi sono stati
+          posizionati, clicca il pulsante "Esegui" per vedere quello che hai programmato.
       6:
         image: notes/playlab_intro_6.png
         text: Inizia a lavorarci su e alla fine sarai in grado di creare il tuo gioco
@@ -577,9 +577,10 @@
         image: notes/playlab_events_3.png
         text: In questo esercizio il robot spaziale saluta i terrestri quando un giocatore
           lo clicca. Usa il blocco "quando si clicca sul personaggio" ('when actor
-          clicked') attaccandoci sotto un blocco "pronuncia" ('say'). Quando il giocatore
-          clicca sul robot spaziale, tutto ciò che è attaccato al blocco "quando si
-          clicca sul personaggio" viene eseguito. Cosa dice il tuo robot?
+          clicked') attaccandoci sotto un blocco "il personaggio dice ..." ('say').
+          Quando il giocatore clicca sul robot spaziale, tutto ciò che è attaccato
+          al blocco "quando si clicca sul personaggio" viene eseguito. Cosa dice il
+          tuo robot?
       4:
         image: notes/playlab_events_4.png
         text: Ci sono anche i blocchi  "quando si preme la freccia ..." ('when ...
@@ -962,8 +963,8 @@
         text: I gatti hanno sempre avuto paura dei cani, ma cosa succede se il gatto
           capisce che il cane sta cercando di essere gentile? Il blocco "quando si
           clicca su Esegui" (when run) fa iniziare ogni attività. Il blocco "sposta"
-          (say) farà muovere il tuo personaggio e il blocco "pronuncia" (say) farà
-          in modo che il tuo personaggio dica qualunque cosa tu scriva.
+          (move) farà muovere il tuo personaggio e il blocco "il personaggio dice
+          ..." (say) farà in modo che il tuo personaggio dica qualunque cosa tu scriva.
       3:
         image: notes/C1_playlab_storytelling_3.png
         text: Questo è il blocco per far accadere qualcosa "quando i personaggi si
@@ -1040,10 +1041,13 @@
           del tuo computer.
       4:
         image: notes/C2_artist_intro_4.png
-        text: L'altro blocco che c'è in questo esercizio dice "gira a destra di 90
-          gradi". Quando usi questo blocco "gira a destra" l'artista ruota a destra.
-          Puoi fare dei tentativi per capire di quanto far girare l'artista. Questo
-          disegno rappresenta una rotazione a sinistra di 90 gradi.
+        text: Gli altri due blocchi in questo esercizio dicono "gira a destra di 90
+          gradi" e "gira a sinistra di 90 gradi". Quando usi il blocco "gira a destra"
+          l'artista ruota a destra. Puoi fare dei tentativi per capire di quanto far
+          girare l'artista. L'angolo è misurato rispetto al percorso davanti all'artista.
+          In questo disegno la linea verso l'alto è ciò che disegna l'artista andando
+          avanti dopo aver fatto una rotazione a sinistra di 90 gradi al termine della
+          linea orizzontale.
       5:
         image: notes/C2_artist_intro_5.png
         text: E questo disegno rappresenta una rotazione a sinistra di 120 gradi.
@@ -1345,15 +1349,16 @@
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
-        text: Today we're going to do relay programming. It's all about programming
-          under pressure and debugging the mistakes that sometimes happen when you
-          work really quickly or in teams. We'll use graph paper programming to simulate
-          coding, and use relay races to simulate having a deadline.
+        text: Oggi si svolgerà una staffetta di programmazione. Si tratta di programmare
+          sotto pressione e correggere gli errori che talvolta vengono commessi quando
+          lavori davvero velocemente o in team. Useremo la carta millimetrata per
+          simulare il codice e faremo una staffetta per simulare le scadenze.
       2:
         image: notes/C2_relay_programming_2.png
-        text: In relay programming, teams will be racing to finish a graph paper program.
-          You have to check your teammate's work, or debug it, fix it if there's a
-          mistake, add your arrow, and run back and tag your teammate.
+        text: Nella programmazione a staffetta, le squadre gareggeranno a chi finisce
+          il programma per primo. Dovrai controllare il lavoro dei tuoi compagni e
+          debuggarlo, correggere gli errori se presenti; aggiungi la tua freccia e
+          torna indietro a taggare il tuo compagno.
       3:
         image: notes/C2_relay_programming_3.png
         text: I programmatori usano moltissimo il debug per trovare e correggere eventuali
@@ -1440,10 +1445,13 @@
           del tuo computer.
       4:
         image: notes/C3_artist_intro_4.png
-        text: L'altro blocco che c'è in questo esercizio dice "gira a destra di 90
-          gradi". Quando usi questo blocco "gira a destra" l'artista ruota a destra.
-          Puoi fare dei tentativi per capire di quanto far girare l'artista. Questo
-          disegno rappresenta una rotazione a sinistra di 90 gradi.
+        text: Gli altri due blocchi in questo esercizio dicono "gira a destra di 90
+          gradi" e "gira a sinistra di 90 gradi". Quando usi il blocco "gira a destra"
+          l'artista ruota a destra. Puoi fare dei tentativi per capire di quanto far
+          girare l'artista. L'angolo è misurato rispetto al percorso davanti all'artista.
+          In questo disegno la linea verso l'alto è ciò che disegna l'artista andando
+          avanti dopo aver fatto una rotazione a sinistra di 90 gradi al termine della
+          linea orizzontale.
       5:
         image: notes/C3_artist_intro_5.png
         text: E questo disegno rappresenta una rotazione a sinistra di 120 gradi.
@@ -3249,9 +3257,9 @@
       8:
         image: notes/gumball_intro_8.JPG
         text: In questo primo esercizio, faremo dire qualcosa ai personaggi attaccando
-          il blocco "pronuncia" al blocco 'quando si clicca su "Esegui" ' e scrivendo
-          qualcosa al suo interno. Una volta che i blocchi sono stati posizionati,
-          clicca il pulsante "Esegui" per vedere quello che hai programmato.
+          il blocco "il personaggio dice ..." al blocco 'quando si clicca su "Esegui"
+          ' e scrivendo qualcosa al suo interno. Una volta che i blocchi sono stati
+          posizionati, clicca il pulsante "Esegui" per vedere quello che hai programmato.
       9:
         image: notes/gumball_intro_9.JPG
         text: Inizia a lavorarci su e alla fine sarai in grado di creare il tuo gioco
@@ -3271,9 +3279,9 @@
         image: notes/gumball_events_3.JPG
         text: In questo esercizio, faremo dire qualcosa al personaggio quando il giocatore
           clicca su di lui. Usa il blocco "quando si clicca sul personaggio" ('when
-          actor clicked') attaccandoci sotto un blocco "pronuncia" ('say'). Quando
-          il giocatore clicca sul personaggio, tutto ciò che è attaccato al blocco
-          "quando si clicca sul personaggio" viene eseguito.
+          actor clicked') attaccandoci sotto un blocco "il personaggio dice ..." ('say').
+          Quando il giocatore clicca sul personaggio, tutto ciò che è attaccato al
+          blocco "quando si clicca sul personaggio" viene eseguito.
       4:
         image: notes/gumball_events_4.JPG
         text: Ci sono anche i blocchi  "quando si preme la freccia ..." ('when ...

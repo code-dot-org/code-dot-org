@@ -18,6 +18,7 @@
   "fillTooltip": "maglagay ng 1 unit ng dumi",
   "finalLevel": "Maligayang pagbati! Nalutas mo na ang pinakahuling puzzle.",
   "flowerEmptyError": "Ang bulaklak kung saan ikaw ang nakadapo ay wala ng nectar.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "kunin",
   "heightParameter": "taas",
   "holePresent": "merong butas",
@@ -81,6 +82,5 @@
   "whileTooltip": "Ulitin ang mga nakalakip na mga aksyon hanggang ang dulo ay maabot.",
   "word": "Hanapin ang salita",
   "yes": "Oo",
-  "youSpelled": "Ini-spell mo ang",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Ini-spell mo ang"
 }

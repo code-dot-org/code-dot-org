@@ -248,7 +248,7 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_id(script_level_id)
-    self.script_levels.select { |sl| sl.id == script_level_id.to_i }.first
+    self.script_levels.find { |sl| sl.id == script_level_id.to_i }
   end
 
   def get_script_level_by_stage_and_position(stage_position, puzzle_position)
@@ -262,16 +262,6 @@ class Script < ActiveRecord::Base
     chapter = chapter.to_i
     return nil if chapter < 1 || chapter > self.script_levels.to_a.size
     self.script_levels[chapter - 1] # order is by chapter
-  end
-
-  def feedback_url
-    feedback_url_keys = {
-      course1: 'RJH5D5F',
-      course2: 'H8JLN38',
-      course3: '6T8NZY5',
-    }
-    feedback_url_key = feedback_url_keys[self.name.to_sym]
-    "https://www.surveymonkey.com/s/#{feedback_url_key}" if feedback_url_key
   end
 
   def beta?
@@ -413,6 +403,10 @@ class Script < ActiveRecord::Base
         raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
       end
 
+      if level.game && level.game == Game.gamelab && !script.hidden && !script.admin_required
+        raise 'Gamelab levels can only be added to a script that requires admin (temporarily)'
+      end
+
       if level.game && (level.game == Game.applab || level.game == Game.gamelab) && !script.hidden && !script.login_required
         raise 'Applab/Gamelab levels can only be added to a script that requires login'
       end
@@ -433,10 +427,8 @@ class Script < ActiveRecord::Base
             name: stage_name,
             script: script
           )
-        script_level_attributes.merge!(
-          stage_id: stage.id,
-          position: (script_level_position[stage.id] += 1)
-        )
+        script_level_attributes[:stage_id] = stage.id
+        script_level_attributes[:position] = (script_level_position[stage.id] += 1)
         script_level.reload
         script_level.assign_attributes(script_level_attributes)
         script_level.save! if script_level.changed?
@@ -453,7 +445,20 @@ class Script < ActiveRecord::Base
     end
     script_stages.each do |stage|
       stage.script_levels = script_levels_by_stage[stage.id]
+
+      # Go through all the script levels for this stage, except the last one,
+      # and raise an exception if any of them are a multi-page assessment.
+      # (That's when the script level is marked assessment, and the level itself
+      # has a pages property and more than one page in that array.)
+      # This is because only the final level in a stage can be a multi-page
+      # assessment.
+      stage.script_levels.each do |script_level|
+        if !script_level.end_of_stage? && script_level.long_assessment?
+          raise "Only the final level in a stage may be a multi-page assessment.  Script: #{script.name}"
+        end
+      end
     end
+
     script.stages = script_stages
     script.reload.stages
     script

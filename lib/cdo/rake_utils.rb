@@ -4,11 +4,12 @@ require 'pathname'
 require 'cdo/aws/s3'
 require 'cdo/hip_chat'
 require 'digest'
+require 'sprockets-derailleur'
 
 module RakeUtils
 
   def self.system__(command)
-    puts command
+    CDO.log.info command
     output = `#{command} 2>&1`
     status = $?.exitstatus
     [status, output]
@@ -22,6 +23,7 @@ module RakeUtils
   def self.start_service(id)
     sudo 'service', id.to_s, 'start' if OS.linux? && CDO.chef_managed
   end
+
   def self.stop_service(id)
     sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
   end
@@ -44,18 +46,36 @@ module RakeUtils
       error = RuntimeError.new("'#{command}' returned #{status}")
       raise error, error.message, CDO.filter_backtrace([output])
     end
+    status
+  end
+
+  # Changes the Bundler environment to the specified directory for the specified block.
+  # Runs bundle_install ensuring dependencies are up to date.
+  def self.with_bundle_dir(dir)
+    # Using `with_clean_env` is necessary when shelling out to a different bundle.
+    # Ref: http://bundler.io/man/bundle-exec.1.html#Shelling-out
+    Bundler.with_clean_env do
+      Dir.chdir(dir) do
+        bundle_install
+        yield
+      end
+    end
   end
 
   def self.bundle_exec(*args)
     system "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', *args
   end
 
+  def self.nproc
+    SprocketsDerailleur.worker_count
+  end
+
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
     if CDO.bundler_use_sudo
-      sudo 'bundle', '--without', *without, '--quiet', *args
+      sudo 'bundle', '--without', *without, '--quiet', '--jobs', nproc, *args
     else
-      system 'bundle', '--without', *without, '--quiet', *args
+      system 'bundle', '--without', *without, '--quiet', '--jobs', nproc, *args
     end
   end
 
@@ -97,8 +117,8 @@ module RakeUtils
     `git remote show origin 2>&1 | grep \"local out of date\" | grep \"#{git_branch}\" | wc -l`.strip.to_i > 0
   end
 
-  def self.git_staged_changes?
-    `git status --porcelain 2>/dev/null | egrep \"^(M|A|D)\" | wc -l`.strip.to_i > 0
+  def self.git_staged_changes?(path="")
+    `git status --porcelain #{path} 2>/dev/null | egrep \"^\s*(M|A|D)\" | wc -l`.strip.to_i > 0
   end
 
   # Gets a stable hash of the given directory's git-committed files.
@@ -141,6 +161,23 @@ module RakeUtils
     RakeUtils.sudo 'npm', 'install', '--quiet', '-g', *args if output.empty?
   end
 
+  def self.install_npm
+    # Temporary workaround to play nice with nvm-managed npm installation.
+    # See discussion of a better approach at https://github.com/code-dot-org/code-dot-org/pull/4946
+    return if RakeUtils.system_('which npm') == 0
+
+    if OS.linux?
+      RakeUtils.system 'sudo apt-get install -y nodejs npm'
+      RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
+      RakeUtils.system 'sudo npm install -g npm@2.9.1'
+      RakeUtils.npm_install_g 'grunt-cli'
+    elsif OS.mac?
+      RakeUtils.system 'brew install node'
+      RakeUtils.system 'npm', 'update', '-g', 'npm'
+      RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+    end
+  end
+
   def self.rake(*args)
     bundle_exec 'rake', *args
   end
@@ -180,5 +217,11 @@ module RakeUtils
   # Returns true if file is different from the committed version in git.
   def self.file_changed_from_git?(file)
     !`git status --porcelain #{file}`.strip.empty?
+  end
+
+  # Whether this is a local or adhoc environment where we should install npm and create
+  # a local database.
+  def self.local_environment?
+    (rack_env?(:development, :test) && !CDO.chef_managed) || rack_env?(:adhoc)
   end
 end

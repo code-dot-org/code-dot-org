@@ -24,6 +24,8 @@ sl:
   hello: Pozdravljen svet
   welcome_back: 'Dobrodošel/a nazaj, %{name}'
   submit: Pošlji
+  unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Dodaj učitelja/ico:'
@@ -223,7 +225,7 @@ sl:
       free_play:
         playlab: Izdelja App
         artist: Nariši kaj
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Izdelja App
     user:
       classroom: Učiteljeva domača stran
@@ -321,6 +323,7 @@ sl:
     heading_hoc2014: '<h2>Ura kodiranja za</h2><h1>vse starosti</h1>'
     heading_elementary: '<h2>20 urni tečaji za</h2><h1>začetnike (vseh starosti)</h1>'
     heading_apps: '<h2>Zabavno učenje za</h2><h1>vsakogar</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Naš tečaj za</h2><h1>vse starosti</h1>'
     your_gallery: Galerija
     no_primary_course: Poskusite Code Studio smer
@@ -415,6 +418,12 @@ sl:
       current: Trenutna stopnja
       unused: Neuporabljene stopnje
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klasičen labirint
       body: Preizkusite se v osnovah računalništva. Milijonom je že uspelo.
@@ -456,10 +465,10 @@ sl:
   landing:
     prerelease: "Ta tečaj je <span class='betatext'>beta</span>.  To pomeni, da ni končna različica in ga bomo z vašo pomočjo še izboljševali."
     prerelease_hoc2014: "Ta priročnik je <span class='betatext'>beta</span>.  To pomeni, da ni končna različica in ga bomo z vašo pomočjo še izboljševali."
-    feedback: Tvoje mnenje
     report_bug: Sporoči napako
     support: Pomoč
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Nepravilen odgovor
     wrong_body: 'Odgovor, ki ste ga vnesli, ni pravilen.  Prosimo, poskusite znova!'
@@ -467,6 +476,23 @@ sl:
     correct_body: To je pravilen odgovor.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Hvala
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Hvala
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Hvala
+    wrong_body: Thank you for submitting answers.
+    correct_title: Hvala
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Hvala
+    wrong_body: Thank you for submitting answers.
+    correct_title: Hvala
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Nepravilna rešitev
     wrong_body: 'Rešitev, ki si jo vnesel, ni pravilna.  Prosim, poskusi znova!'
@@ -484,6 +510,8 @@ sl:
     placeholder: Vnesite vaš odgovor tukaj
     open_response_title: Hvala
     open_response_body: Hvala za vaš odgovor!
+    correct_title: Pravilno
+    correct_body: To je pravilen odgovor.
   dialog:
     ok: Vredu
     startover_title: Si prepričan, da želiš začeti znova?
@@ -537,6 +565,7 @@ sl:
     completed_perfect: dokončano, odlično
     furthest_level_attempted: poskusili ste najvišji nivo
     assessment: ocenjevanje
+    submitted: submitted
   studio:
     courses_working_on: Tečaji, ki jih še nisi dokončal/a
     completed_courses: Tečaji, ki si jih dokončal/a
@@ -559,7 +588,7 @@ sl:
     name: Ime
     updated: Posodobljeno
     project_type: Vrsta projekta
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time.'
     need_help: Potrebujete pomoč za začetek?
     really_delete: Izbriši?
     delete_yes: Da
@@ -593,3 +622,7 @@ sl:
           other: Drugi
         detail: Prosimo, navedite čim več podrobnosti glede vsebine, ki jo prijavljate.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

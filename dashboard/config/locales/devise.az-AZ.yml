@@ -78,24 +78,23 @@
         one: '1 səhv bu %{resource} -in yadda saxlanılmasına qadağa qoymuşdur:'
         other: "%{count} səhv bu %{resource} -in yadda saxlanılmasına qadağan qoymuşdur:"
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
+      send_instructions: "%{email} ünvanına dəvət mesajı göndərildi."
+      invitation_token_invalid: Göstərilən dəvət işarəsi etibarlı deyil!
+      updated: "Şifrən müvəffəqiyyətlə təyin edildi. İndi hesab açdın."
+      no_invitations_remaining: Dəvət qalmadı
       invitation_removed: Dəvətiniz silindi.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Dəvət göndər
+        submit_button: Bir dəvətnamə göndər
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: "Şifrənizi təyin edin"
+        submit_button: "Şifrəmi təyin et"
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: Dəvət təlimatları
+        hello: Salam %{email}
+        someone_invited_you: Biri səni %{url} ünvanına dəvət etdi, aşağıdakı keçiddən
+          qəbul edə bilərsən.
+        accept: Dəvətnaməni qəbul et
+        ignore: Dəvətnaməni almaq istəmirsənsə, zəhmət olmasa bu e-poçtu yox hesab
+          et.<br />Aşağıdakı keçidə basmamış və şifrə yaratmamış hesabın yaranmayacaq.

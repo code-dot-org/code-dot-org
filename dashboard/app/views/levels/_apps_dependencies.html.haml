@@ -1,5 +1,6 @@
--# Expected locals: app, use_blockly, use_droplet, use_netsim, use_applab, hide_source, static_asset_base_path
--# Provide default values for some of these
+-#
+  Expected locals: app, use_blockly, use_droplet, use_netsim, use_applab, hide_source, static_asset_base_path
+  Provide default values for some of these
 - use_blockly ||= false
 - use_droplet ||= false
 - use_netsim ||= false
@@ -7,6 +8,7 @@
 - use_gamelab ||= false
 - hide_source ||= false
 - use_phaser ||= false
+- use_makerlab ||= false
 
 -# Common style dependencies
 %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
@@ -17,16 +19,14 @@
   %link{href: asset_path('css/droplet/droplet.min.css'), rel: 'stylesheet', type: 'text/css'}
   %link{href: asset_path('css/tooltipster/tooltipster.min.css'), rel: 'stylesheet', type: 'text/css'}
 
--# Applab style dependencies
-- if use_applab
-  -# Might be possible to not load this on share pages, but right now we get some
-  -# weird display issues when we do that. Good news is this is < 10kb
-  %link{href: asset_path('css/colpick.css'), rel: 'stylesheet', type: 'text/css'}
-
 -# Gamelab script dependencies
 - if use_gamelab
   %script{src: asset_path('js/p5play/p5.js')}
   %script{src: asset_path('js/p5play/p5.play.js')}
+
+-# Gamelab script dependencies
+- if use_makerlab
+  = javascript_include_tag 'js/makerlab'
 
 -# Droplet script dependencies (all editCode - regardless of editor)
 - if use_droplet
@@ -52,7 +52,7 @@
 
 -# Common script dependencies
 %script{src: asset_path('js/marked/marked.js')}
-%script{src: asset_path('js/initApp.js')}
+%script{src: asset_path('js/initApp/initApp.js')}
 %script{src: minifiable_asset_path('js/common.js')}
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: asset_path("js/#{js_locale}/#{app}_locale.js")}

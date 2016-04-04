@@ -50,7 +50,7 @@ et:
       2-3 Artist Loops 6_instruction: Lisa tsüklisse veel üks liikumine ja veel üks pööramine ning vaata kuidas sinu töö muutub.
       2-3 Artist Loops 7_instruction: Me saame kasutada tsükleid et teha igasuguseid hulknurki. Kas suudad luua rombi selle kuusnurga sisse?
       2-3 Artist Loops 8_instruction: Paneme mõlemad elemendid tsüklisse.
-      2-3 Artist Loops 9_instruction: "Me hakkame samu elemente kordama aga nüüd lisame nende vahele natuke distantsi.\r  Kasuta sama koodi mida ennegi aga lisa tsükli lõppu samm edasi."
+      2-3 Artist Loops 9_instruction: "Me hakkame samu elemente kordama aga nüüd lisame nende vahele natuke distantsi.\\r  Kasuta sama koodi mida ennegi aga lisa tsükli lõppu samm edasi."
       2-3 Artist Loops New 1_instruction: Joonistame sellele roboti pea! Kas sa suudad teha ruudu mille küljed on 100 pikslit?
       2-3 Artist Loops New 10_instruction: Nüüd ühendame omavahel hulga V-e, joonistades neid korduvtsüklis.
       2-3 Artist Loops New 11_instruction: Seekord joonistame seda 24 korda. Lisa pööra vasakule 30 kraadi ja pane see kõik korda plokki.
@@ -210,6 +210,11 @@ et:
       4-5 Artist For Loops 13_instruction: 'See projekt algas ilma korduste arvu tsüklita ja võtab liiga palju plokke! Kasuta spiraali lõpetamiseks korduste arvu plokki. Vihje: viimase joone pikkus on 250 pikslit.'
       4-5 Artist For Loops 14_instruction: 'Keegi alustas koodi tegemist, kuid siis avastas, et seda peaks saama teha kiiremini! Kasuta korduste arvu plokki, et asendada plokid ja lõpetada kolmnurkne spiraal. (Vihje: viimase joone pikkus on 300 pikslit.)'
       4-5 Artist For Loops 15_instruction: 'Keegi alustas koodi tegemist, kuid siis avastas, et seda peaks saama teha kiiremini! Kasuta korduste arvu plokki, et asendada plokid ja lõpetada kuusnurkne spiraal. (Vihje: viimase joone pikkus on 200 pikslit.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: Kuidas saame loendada 1...50? Muuda korduste arvu plokki.
       4-5 Artist For Loops 4_instruction: Täida korduste arvu plokk nii, et see loendaks ühe kaupa 1... 10.
       4-5 Artist For Loops 6_instruction: 'Joonista ruudud, mille küljed on 50, 60, 70, 80 ja 90 pikslit. Pead kasutama "joonista ruut" funktsiooni viis korda.'
@@ -323,7 +328,6 @@ et:
       4-5 Maze 9_instruction: Loo tsükkel plokiga „korda kuni“.
       4-5 Maze Assessment 1_instruction: 'Ülesanne: Mine päevalilleni.'
       4-5 Maze Conditionals 1_instruction: Kasuta plokki „korda kuni“, et aidata zombi päevalille juurde.
-      4-5 Maze Conditionals 10_instruction: Kas oskad lisada 3 plokki, et aidata mul lahendada veel keerulisem labürint? Kui sa teed seda õigesti, saan ma läbida erinevaid kurvilisi radu, ükskõik kui pikad need on.
       4-5 Maze Conditionals 2_instruction: Kasuta plokki „korda kuni“, et aidata zombi päevalille juurde.
       4-5 Maze Conditionals 3_instruction: 'Kasuta uut „kui“ plokki, et lasta mul otsustada, millal keerama peab. Vihje: sa vajad ainult ühte lisaplokki, aga õpi, kuidas me selle sätime, nii et oskaksid seda järgmine kord ise teha.'
       4-5 Maze Conditionals 4_instruction: Hea küll, see on nagu viimane mõistatus, aga sa pead meelde tuletama, kuidas sa kasutasid „kui“ plokki ja „korda“ plokki koos.
@@ -338,7 +342,7 @@ et:
       4-5 Nested Loops 11_instruction: Kas oskad joonistada need kõnnitee 10 ruutu, kasutades pesastatud tsüklit? Iga ruudu pikkus on 30 pikslit.
       4-5 Nested Loops 12_instruction: Kas oskad joonistada need 36 kolmnurka, kasutades pesastatud tsüklit?
       4-5 Nested Loops 2_instruction: 'Nüüd pesasta see kordus teise korduse sisse, et joonistada 10 kolmnurka. Seda nimetatakse korduvaks tsükliks. Vihje: kõik 10 kolmnurka annavad 360-kraadise pöörde. '
-      4-5 Nested Loops 3_instruction: "Tee päike, pesastades alguskoodi teises tsüklis. Seda nimetatakse pesastatud tsükliks.\r"
+      4-5 Nested Loops 3_instruction: "Tee päike, pesastades alguskoodi teises tsüklis. Seda nimetatakse pesastatud tsükliks.\\r"
       4-5 Nested Loops 5_instruction: Korda antud koodi, et teha tuuleveski.
       4-5 Nested Loops 6_instruction: Kas oskad joonistada kuusnurga, korrates kolmnurga koodi?
       4-5 Nested Loops 7_instruction: 'Korda seda disaini 10 korda. Kui palju pead sa iga korduse ajal pöörama? (Vihje: kui palju on 360 jagatud 10-ga?)'
@@ -382,6 +386,11 @@ et:
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
       App Lab test_instruction: test
+      Applab allthethings onRecordEvent_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
@@ -403,7 +412,7 @@ et:
         Now nest this loop inside another loop
         to draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
         complete a 360 degree rotation.  
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\r\n"
+      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\\r\n"
       Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
       Artist - Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the
@@ -687,7 +696,7 @@ et:
         function called cube - this function should take in a Number and return that
         number to the power of 3. Make sure to write two example cases! When you're
         done, use your new function to calculate cube(7).
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function sales which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -700,7 +709,7 @@ et:
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
-      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Calc Rocket 1_instruction: |
         In the last puzzle you wrote a contract for the
         function rocket-height that states it has a range of Number, domain of Number,
@@ -840,9 +849,9 @@ et:
       Course 2 Maze Loops 1_instruction: Kas oskad mind viit plokki kasutades põrsa juurde viia?
       Course 4 2_instruction: Mesilane tahab praegu ainult nektarit. Pea meeles, et kõik objektid pole lilled, seega jälgi, et nektarit kogutaks vaid lilledest.
       Course 4 Artist 1_instruction: 'Aita mul joonistada kast. (Iga joon on 200 piksli pikkune) '
-      Course 4 Artist 10_instruction: "Klõpsa siia, et uuesti vihjeid vaadata!\r \r Siin on kood huvitava kuju tegemiseks.  Mis juhtub, kui kordad seda mitu korda, pöörates iga korduse järel?   Arvesta sellega, et selle kujundi pöörded annavad kokku 420 kraadi, nii et kunstnik on joonistamist lõpetades näoga teise suunda kui alguses.  See uus suund on täpselt 60 kraadi algsuunast paremale."
+      Course 4 Artist 10_instruction: "Klõpsa siia, et uuesti vihjeid vaadata!\\r \\r Siin on kood huvitava kuju tegemiseks.  Mis juhtub, kui kordad seda mitu korda, pöörates iga korduse järel?   Arvesta sellega, et selle kujundi pöörded annavad kokku 420 kraadi, nii et kunstnik on joonistamist lõpetades näoga teise suunda kui alguses.  See uus suund on täpselt 60 kraadi algsuunast paremale."
       Course 4 Artist 11_instruction: Nüüd aga väljakutse! Siin on disain, milles kasutatakse ainult neid plokke, mida sa oled juba näinud. Kas oskad välja mõelda, kuidas seda korrata? Katseta julgelt katse-eksituse meetodil. Sa ei pea kohe esimese korraga ideaalset tulemust saama. Kas tahad veel vihjeid näha? Klõpsa siia!
-      Course 4 Artist 12_instruction: "Kas soovid veel korra vaadata näidisdisaini või vihjeid?  Klõpsa siia!\r \r Võid aga ka teha täiesti omaenda disaini!"
+      Course 4 Artist 12_instruction: "Kas soovid veel korra vaadata näidisdisaini või vihjeid?  Klõpsa siia!\\r \\r Võid aga ka teha täiesti omaenda disaini!"
       Course 4 Artist 13_instruction: Kas mängid ikka veel? Siin on tühi lõuend, kus saad disainida ükskõik mida!
       Course 4 Artist 2_instruction: Kas oskad seda koodi korrata, et joonistada tumendatud ruut?
       Course 4 Artist 20_instruction: Kas mängid ikka veel? Siin on tühi lõuend, kus saad luua ükskõik mida!
@@ -852,10 +861,10 @@ et:
       Course 4 Artist 6_instruction: 'Lõpeta kood nende kolmnurkade joonistamiseks. Vihje: seal on 3 kolmnurka 360-kraadises pöördes... mitu korda mahub 3 360-sse?'
       Course 4 Artist 7_instruction: 'Nüüd pesasta see kordus teise korduse sisse, et joonistada 10 kolmnurka. Seda nimetatakse korduvaks tsükliks. Vihje: kõik 10 kolmnurka annavad 360-kraadise pöörde.'
       Course 4 Artist 8_instruction: Joonista see päike, korrates seda koodiplokki mitu korda.
-      Course 4 Artist 8a_instruction: "Kas mäletad seda kujundit? Nüüd laseme sul selle luua nii, et me ei anna sulle alguses ette ühtegi plokki!\r Vihje: 360-kraadises pöördes on 3 kolmnurka... mitu korda mahub 3 360-sse?"
+      Course 4 Artist 8a_instruction: "Kas mäletad seda kujundit? Nüüd laseme sul selle luua nii, et me ei anna sulle alguses ette ühtegi plokki!\\r Vihje: 360-kraadises pöördes on 3 kolmnurka... mitu korda mahub 3 360-sse?"
       Course 4 Artist 9_instruction: 'Korda seda disaini 10 korda ja pööra kindlasti iga joonistatud kujundi järel. Siin on vihje vajaliku pöörde leidmiseks: kui palju on 360 jagatud 10-ga?'
-      Course 4 Artist Binary 1_instruction: "Siin on funktsioon, mis võtab ühtedest ja nullidest koosneva kahendstringi ja juhendab kunstnikku neid järgima vasakult paremale, ülevalt alla.  Kui kunstnik näeb ühte, täidab ta ruudud, ja kui ta näeb nulli, jätab ta need vahele. \r \r Käivita see kood, et näha, kuidas kunstnik kasutab kahendkoodi selle mustri joonistamiseks."
-      Course 4 Artist Binary 1a_instruction: "Siin on funktsioon, mis võtab ühtedest ja nullidest koosneva kahendstringi ja juhendab kunstnikku neid järgima vasakult paremale, ülevalt alla.  Kui kunstnik näeb ühte, täidab ta ruudud, ja kui ta näeb nulli, jätab ta need vahele. \r \r Käivita see kood, et näha, kuidas kunstnik kasutab kahendkoodi selle mustri joonistamiseks."
+      Course 4 Artist Binary 1_instruction: "Siin on funktsioon, mis võtab ühtedest ja nullidest koosneva kahendstringi ja juhendab kunstnikku neid järgima vasakult paremale, ülevalt alla.  Kui kunstnik näeb ühte, täidab ta ruudud, ja kui ta näeb nulli, jätab ta need vahele. \\r \\r Käivita see kood, et näha, kuidas kunstnik kasutab kahendkoodi selle mustri joonistamiseks."
+      Course 4 Artist Binary 1a_instruction: "Siin on funktsioon, mis võtab ühtedest ja nullidest koosneva kahendstringi ja juhendab kunstnikku neid järgima vasakult paremale, ülevalt alla.  Kui kunstnik näeb ühte, täidab ta ruudud, ja kui ta näeb nulli, jätab ta need vahele. \\r \\r Käivita see kood, et näha, kuidas kunstnik kasutab kahendkoodi selle mustri joonistamiseks."
       Course 4 Artist Binary 2_instruction: Millist neist kahendstringidest saad sa 8 korda korrata, et joonistada see pilt?
       Course 4 Artist Binary 3_instruction: Kas oskad selle mustri joonistada, korrates kolmekohalist kahendstringi?
       Course 4 Artist Binary 4_instruction: Iga kahendstring tähistab üht selle pildi rida. Kas oskad need ümber korraldada nii, et see joonistaks kurva näo asemel naeratava näo?
@@ -863,17 +872,17 @@ et:
       Course 4 Artist Binary 6_instruction: Milline on lühim kahendstring, mida sa saad selle pildi joonistamiseks korrata?
       Course 4 Artist Binary 7_instruction: Lõpeta see joonistus.
       Course 4 Artist Binary Free Play 2_instruction: 'Vaba mäng: Siin on valge leht, millele saad joonistada. Hea joonistamist!'
-      Course 4 Artist Binary Free Play 2a_instruction: "Siin on joonistamiseks suurema eraldusvõimega lõuend – 16 korda 16 pikslit!\r \r Kas näed, mis juhtub, kui hakkame bittidesse loominguliselt suhtuma?"
+      Course 4 Artist Binary Free Play 2a_instruction: "Siin on joonistamiseks suurema eraldusvõimega lõuend – 16 korda 16 pikslit!\\r \\r Kas näed, mis juhtub, kui hakkame bittidesse loominguliselt suhtuma?"
       Course 4 Artist Binary Free Play 2b_instruction: Kliki siia, et näha vihjeid.
       Course 4 Artist Binary Free Play_instruction: 'Vaba mäng: Joonista ükskõik mida soovid, kuid kasuta selleks binaarseid võimalusi!'
-      Course 4 Artist Binary pre1_instruction: "Kahendkood ehk binaar võimaldab andmeid tähistada, kasutades selleks ainult kaht olekut või tähist. Siin kasutame olekuid „väljas“ (tähistatuna numbriga 0) ja „sees“ (tähistatuna numbriga 1).  \r \r Tegime sulle „pikslitest“ koosneva ruudustiku, millel sa saad liikuda ja disaine luua, pöörates ainult teatud ruutudel.  Kas oskad teha nii, et kunstnik joonistaks esimesel real kahendkoodis „01010101“?"
-      Course 4 Artist Binary ryan_instruction: "Kahendkood ehk binaar võimaldab andmeid tähistada, kasutades selleks ainult kaht olekut või tähist. Siin kasutame olekuid „väljas“ (tähistatuna numbriga 0) ja „sees“ (tähistatuna numbriga 1).  \r \r Tegime sulle „pikslitest“ koosneva ruudustiku, millel sa saad liikuda ja disaine luua, pöörates ainult teatud ruutudel.  Kas oskad teha nii, et kunstnik joonistaks esimesel real kahendkoodis „01010101“?"
+      Course 4 Artist Binary pre1_instruction: "Kahendkood ehk binaar võimaldab andmeid tähistada, kasutades selleks ainult kaht olekut või tähist. Siin kasutame olekuid „väljas“ (tähistatuna numbriga 0) ja „sees“ (tähistatuna numbriga 1).  \\r \\r Tegime sulle „pikslitest“ koosneva ruudustiku, millel sa saad liikuda ja disaine luua, pöörates ainult teatud ruutudel.  Kas oskad teha nii, et kunstnik joonistaks esimesel real kahendkoodis „01010101“?"
+      Course 4 Artist Binary ryan_instruction: "Kahendkood ehk binaar võimaldab andmeid tähistada, kasutades selleks ainult kaht olekut või tähist. Siin kasutame olekuid „väljas“ (tähistatuna numbriga 0) ja „sees“ (tähistatuna numbriga 1).  \\r \\r Tegime sulle „pikslitest“ koosneva ruudustiku, millel sa saad liikuda ja disaine luua, pöörates ainult teatud ruutudel.  Kas oskad teha nii, et kunstnik joonistaks esimesel real kahendkoodis „01010101“?"
       Course 4 Artist For  Functions 10_instruction: Proovime nüüd midagi pisut raskemat. Kas oskad joonistada tähe, kasutades funktsiooni „joonista sirgjoon“? Jõudu tööle!
       Course 4 Artist For  Functions 11_instruction: Proovime nüüd midagi pisut raskemat. Kas oskad joonistada tähe, kasutades funktsiooni „joonista sirgjoon“? Jõudu tööle!
       Course 4 Artist For Loops 1_instruction: 'Joonista kolmnurk, mis on 50 pikslik lai. Vihje: Kasuta korduse plokki.'
       Course 4 Artist For Loops 10_instruction: Vaba mäng! Joonista mida iganes soovid plokkidega, mille kasutamise oled selgeks saanud
       Course 4 Artist For Loops 11_instruction: 'Kas mäletad, kui kasutasime ühes eelmises etapis muutujat kujundi külgede arvu juhtimiseks? Nüüd teeme sama muutujaga „loendur“. See muster alustab kolmnurgaga ja lisab korraga ühe külje, kuni valmib kümmenurk (10 külge). Iga külg peab olema 100 piksli pikkune. Vihje: 360 jagatud kujundi külgede arvuga annab kraadide arvu, mille võrra tuleb pöörata.'
-      Course 4 Artist For Loops 11a_instruction: "Paneme nüüd kõik selle kokku! Kasuta oma teadmisi korduste arvu tsüklite ja loenduri kohta, et luua see joonistus, kus igal kujundil on eelmisega võrreldes kaks külge rohkem. Iga külg peab olema 10 korda pikem kui hulknurga külgede arv.\r \r Pisut koodi on sulle juba ette antud."
+      Course 4 Artist For Loops 11a_instruction: "Paneme nüüd kõik selle kokku! Kasuta oma teadmisi korduste arvu tsüklite ja loenduri kohta, et luua see joonistus, kus igal kujundil on eelmisega võrreldes kaks külge rohkem. Iga külg peab olema 10 korda pikem kui hulknurga külgede arv.\\r \\r Pisut koodi on sulle juba ette antud."
       Course 4 Artist For Loops 12_instruction: 'See oli päris äge, aga nüüd tahaksin joonistada kõik kujundid eelmise kujundi kõrvale. Iga külje pikkus on nüüd 20 pikslit. Kasuta plokki „hüppa“, et hüpata iga kujundi järel 40 pikslit edasi. '
       Course 4 Artist For Loops 13_instruction: Need kujundid lähevad iga korraga aina suuremaks! Kas me juba ei lahendanud seda probleemi muutujatega? Kuidas saame kasutada loenduri muutujat, et muuta küljed väiksemaks, kuna neid on rohkem? Määratud hulga võrra edasi liikumise asemel proovi liikuda edasi (100/loendur) piksli võrra.
       Course 4 Artist For Loops 14_instruction: Kui pöörate kujundit tehes natuke rohkem või vähem, saad kena efekti. Proovi kasutada osa eelmise taseme koodi, kuid pööra 89 kraadi, et luua see väänatud ruuduspiraal.
@@ -885,26 +894,26 @@ et:
       Course 4 Artist For Loops 6_instruction: Vaba mäng! Kasuta kordust, et joonistada kasvav muster.
       Course 4 Artist For Loops 6a_instruction: Selleks tee kolm väikest muudatust eelmise taseme koodis!
       Course 4 Artist For Loops 7_instruction: Mis juhtub, kui eemaldad sellest algoritmist osa „Korda 3 korda“, säilitades korduste arvu tsüklis plokid „liiguta“ ja „pööra“? Selles kolmnurgaspiraalis on iga külg eelmisest 20 pikslit pikem.
-      Course 4 Artist For Loops 8_instruction: "Selle joonistuse saab luua, muutes eelmise pildi koodis ainult üht väikest asja. Kas saad aru, mida peaks muutma?\r \r Vihje: sa pead midagi eemaldama!"
+      Course 4 Artist For Loops 8_instruction: "Selle joonistuse saab luua, muutes eelmise pildi koodis ainult üht väikest asja. Kas saad aru, mida peaks muutma?\\r \\r Vihje: sa pead midagi eemaldama!"
       Course 4 Artist For Loops 8a_instruction: Selle pildi saab luua, muutes eelmise pildi koodis ainult üht väikest asja. Kas saad aru, mida peaks muutma?
       Course 4 Artist For Loops 9_instruction: Kas oskad spiraali teha? Liigu edasi 1-st 75 pikslini, lisades iga kord ühe piksli.
-      Course 4 Artist For Loops Challenge_instruction: "Kas saad aru, kuidas kasutada kõiki õpitud asju selle pildi loomiseks?\r \r Vajad vihjet? Klõpsa siia."
-      Course 4 Artist For Loops inspire_instruction: "Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\r \r Vajad vihjet? Klõpsa siia."
+      Course 4 Artist For Loops Challenge_instruction: "Kas saad aru, kuidas kasutada kõiki õpitud asju selle pildi loomiseks?\\r \\r Vajad vihjet? Klõpsa siia."
+      Course 4 Artist For Loops inspire_instruction: "Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Vajad vihjet? Klõpsa siia."
       Course 4 Artist Functions 1_instruction: Kas oskad joonistada 100 piksli pikkuse ruudu, kasutades tsüklit?
       Course 4 Artist Functions 10_instruction: Milline plokk tuleb lisada, et saada kolmnurk ruudu peale?
       Course 4 Artist Functions 11_instruction: 'Vaata koodi, mis joonistab kuubi - saad selle liigutada funktsiooni "Joonista kuub"'
       Course 4 Artist Functions 12.1_instruction: Loome funktsiooni nimega „joonista kaheksanurk 20“, mis joonistab kaheksanurga, kus iga külje pikkus on 20 pikslit.
       Course 4 Artist Functions 12_instruction: Kasuta ruudu funktsiooniga tsüklit joone joonistamiseks
-      Course 4 Artist Functions 13.1_instruction: "Teeme nüüd funktsiooni nimega „hüppa üles paremale“, mis liigutab kunstniku just joonistatud kaheksanurga ülemisse parempoolsesse nurka, nii et saame selle mustri lõpetada.\r \r Vihje: ülemisse parempoolsesse nurka jõudmiseks proovi hüpata mustris, mis moodustab ainult 3/8 kaheksanurgast."
+      Course 4 Artist Functions 13.1_instruction: "Teeme nüüd funktsiooni nimega „hüppa üles paremale“, mis liigutab kunstniku just joonistatud kaheksanurga ülemisse parempoolsesse nurka, nii et saame selle mustri lõpetada.\\r \\r Vihje: ülemisse parempoolsesse nurka jõudmiseks proovi hüpata mustris, mis moodustab ainult 3/8 kaheksanurgast."
       Course 4 Artist Functions 13_instruction: Vaata, meil on uus funktsioon nimega „joonista ruutude rida“! Vaata funktsiooniplokist, kuidas me seda tegime. Kui oled järgmiseks mõistatuseks valmis, klõpsa käsku „Käivita“.
       Course 4 Artist Functions 14.1_instruction: Teeme nüüd funktsiooni nimega „hüppa üles paremale“, mis liigutab kunstniku just joonistatud kaheksanurga ülemisse parempoolsesse nurka, nii et saame selle mustri lõpetada.
       Course 4 Artist Functions 14_instruction: Sa oled tubli! Kasuta nüüd oma uut funktsiooni „joonista ruutude rida“, et joonistada ruudu kujund. Pea meeles, et iga ruudu pikkus on 40 pikslit.
       Course 4 Artist Functions 15_instruction: 'Proovime nüüd midagi pisut raskemat. Kas oskad joonistada tähe, kasutades funktsiooni „joonista ruutude rida“? Jõudu tööle! Vihje: vajadusel pead pöörama 144 kraadi.'
       Course 4 Artist Functions 2_instruction: 'Kas oskad joonistada 3 ruutu, mis asuvad üksteisest 20 piksli kaugusel? Vihje: iga ruudu suurus on 100 pikslit'
-      Course 4 Artist Functions 3_instruction: "Kas oskad joonistada selle pildi, kasutades funktsiooniplokki „joonista ruut“? Vihje: ruutude vahe on 120 pikslit.\r"
+      Course 4 Artist Functions 3_instruction: "Kas oskad joonistada selle pildi, kasutades funktsiooniplokki „joonista ruut“? Vihje: ruutude vahe on 120 pikslit.\\r"
       Course 4 Artist Functions 4_instruction: 'Kas oled valmis looma omaenda funktsiooniplokki? Klõpsa tööriistakastis plokki „Funktsioonid“, pane sellele nimeks „joonista kolmnurk“ ja loo siis kolmnurk, nagu sa tegid varem tegevuse ja tsüklite plokkidega. Seejärel klõpsake parempoolses ülemises nurgas käsku Salvesta ja sule. Vihje: loo 100-pikslise küljepikkusega kolmnurk. Jõudu!'
       Course 4 Artist Functions 5 OLD_instruction: Proovime kasutada meie kaht funktsiooni maja joonistamiseks. Mida peab selles koodis parandama, et joonistada korralik maja?
-      Course 4 Artist Functions 5_instruction: "Kas oskad joonistada selle pildi, kasutades funktsiooniplokki „joonista ruut“? Vihje: ruutude vahe on 120 pikslit.\r"
+      Course 4 Artist Functions 5_instruction: "Kas oskad joonistada selle pildi, kasutades funktsiooniplokki „joonista ruut“? Vihje: ruutude vahe on 120 pikslit.\\r"
       Course 4 Artist Functions 6_instruction: Milline plokk tuleb lisada, et saada kolmnurk ruudu peale?
       Course 4 Artist Functions 7_instruction: Kas oskad joonistada ruutudest joone, kasutades ruudu funktsiooni? Iga ruudu pikkus on 40 pikslit.
       Course 4 Artist Functions 8_instruction: 'Kas saad aru, kuidas kasutada funktsiooniplokke? Muudame seda ruutu nii, et selle suurus oleks 200 pikslit. Vihje: klõpsa nuppu „redigeeri“, et muuta funktsiooniredaktori „joonista ruut“ suurust. Funktsiooniredaktorist väljumiseks klõpsa käsku „salvesta ja sule“.'
@@ -912,7 +921,7 @@ et:
       Course 4 Artist Functions challenge_instruction: Kliki siia ja vaata vihjeid uuesti.
       Course 4 Artist Functions Inspiration_instruction: Kliki siia ja vaata vihjeid uuesti.
       Course 4 Artist Functions inspire_instruction: Klõpsa siia, et näidispilti uuesti vaadata.
-      Course 4 Artist Inspire_instruction: "Kas soovid veel korra vaadata näidisdisaini või vihjeid?  Klõpsa siia!\r \r Võid aga ka teha täiesti omaenda disaini!"
+      Course 4 Artist Inspire_instruction: "Kas soovid veel korra vaadata näidisdisaini või vihjeid?  Klõpsa siia!\\r \\r Võid aga ka teha täiesti omaenda disaini!"
       Course 4 Artist Params 1_instruction: Muudame funktsiooni, mis joonistab ruudu, mille külg on 50 pikslit
       Course 4 Artist Params 10_instruction: 'Saad kutsuda funktsioone teiste funktsioonide seest! Võta aluseks oma funktsioon „kujund“ ja loo 3 majakujundit, millest esimene on 50 piksli suurune ja igaüks on eelmisest 20 pikslit suurem. Abiks võib olla loenduri tsükli kasutamine. '
       Course 4 Artist Params 11_instruction: |
@@ -941,14 +950,14 @@ et:
       Course 4 Artist Vars 10_instruction: Siin on algoritm, mis joonistab väiksematest kolmnurkadest kolmnurga. Kas oskad seda nii muuta, et see kasutaks iga kolmnurga joonistamiseks muutujat „küljed“? Vaata kood läbi ja iga kord, kui näed numbrit 3, asenda see oma muutujaga „küljed“. Kasuta kindlasti plokki „määra küljed“.
       Course 4 Artist Vars 11_instruction: Siin on keerulisem kood, mis kasutab eelmise mõistatuse põhimõtteid. Mis sa peaksid määrama muutujaks „küljed“, et joonistada see pilt ruutudest?
       Course 4 Artist Vars 12_instruction: Määrame muutuja „küljed“ väärtuseks 5. Mida rohkem külgi me sellele algoritmile lisame, seda suuremaks kogu muster muutub! Pane tähele, et seal on ka teine muutuja nimega „pikkus“. Saame seda nüüd kasutada igal pool, kus meil on funktsioon „liigu edasi“. Määra selle kujundi muutuja „pikkus“ väärtuseks 75.
-      Course 4 Artist Vars 13_instruction: "Kui kujundil on palju külgi, siis kogu mustri ekraanile mahutamiseks peab iga külg olema lühem. \r Loome uuesti selle võrratu mustri algoritmi, kuid käsitsi määratava muutuja „pikkus“ asemel kasutame matemaatikaplokki muutujaga „küljed“, et kõik kujundid mahuksid ekraanile ära. Iga hulknurga ümbermõõt on 300 pikslit.\r Kas vajad vihjeid? Klõpsa siia."
-      Course 4 Artist Vars 14_instruction: "Vaba mäng: katseta! Nüüd on sinu algoritm pesastatud veel ühes tsüklis. Proovi muuta oma kahe muutuja väärtusi, et joonistada ägedaid mustreid.\r \r Veel uhkema efekti saamiseks proovi lisada ka värve!  Kasuta tsüklites juhuslikke värve, et näha, kuidas see su disaini muudab."
+      Course 4 Artist Vars 13_instruction: "Kui kujundil on palju külgi, siis kogu mustri ekraanile mahutamiseks peab iga külg olema lühem. \\r Loome uuesti selle võrratu mustri algoritmi, kuid käsitsi määratava muutuja „pikkus“ asemel kasutame matemaatikaplokki muutujaga „küljed“, et kõik kujundid mahuksid ekraanile ära. Iga hulknurga ümbermõõt on 300 pikslit.\\r Kas vajad vihjeid? Klõpsa siia."
+      Course 4 Artist Vars 14_instruction: "Vaba mäng: katseta! Nüüd on sinu algoritm pesastatud veel ühes tsüklis. Proovi muuta oma kahe muutuja väärtusi, et joonistada ägedaid mustreid.\\r \\r Veel uhkema efekti saamiseks proovi lisada ka värve!  Kasuta tsüklites juhuslikke värve, et näha, kuidas see su disaini muudab."
       Course 4 Artist Vars 2_instruction: Funktsiooni „liigu edasi 150 võrra“ viitab plokk „liigu“ nüüd muutujale „pikkus“. Kas oskad määrata muutuja „pikkus“ väärtuseks 150, et joonistada see uus kolmnurk?
       Course 4 Artist Vars 3_instruction: 'Siin on tsükkel, mis joonistab ruudu, kuid midagi on puudu. Kas oskad selle korda teha, nii et see kasutaks muutujat „pikkust“ külgede pikkuse määramiseks? '
       Course 4 Artist Vars 4_instruction: Nüüd soovin teha nelinurga, mille kõrgus oleks laiusest kaks korda suurem. Meil on muutuja nimega „laius“, mille väärtuseks peab määrama 100. Kas oskad selle koodi lõpetamiseks kasutada matemaatikaplokke?
       Course 4 Artist Vars 5_instruction: Kasuta muutujat „küljed“, et juhtida selle tsükli käivitamiste arvu.
-      Course 4 Artist Vars 6_instruction: "Siin on kood, millega saab joonistada korrapäraseid hulknurki. Siin on uus muutuja nimega „küljed“, mille väärtuseks on määratud 4. Kas oskad kasutada külgede muutujat (koos matemaatikaplokiga), et pöörata õige nurga võrra olenemata sellest, kui palju külgesid hulknurgal on?\r \r Klõpsa siia, et minna tagasi vihje juurde!"
-      Course 4 Artist Vars 7_instruction: "Kasuta seda, mis sa eelmises mõistatuses õppisid, et luua see kuusnurk muutuja „küljed“ abil.\r \r Kas näed, kuidas saad ainult üht väärtust muutes joonistada kolmnurga, nelinurga, viisnurga või kaheksanurga?"
+      Course 4 Artist Vars 6_instruction: "Siin on kood, millega saab joonistada korrapäraseid hulknurki. Siin on uus muutuja nimega „küljed“, mille väärtuseks on määratud 4. Kas oskad kasutada külgede muutujat (koos matemaatikaplokiga), et pöörata õige nurga võrra olenemata sellest, kui palju külgesid hulknurgal on?\\r \\r Klõpsa siia, et minna tagasi vihje juurde!"
+      Course 4 Artist Vars 7_instruction: "Kasuta seda, mis sa eelmises mõistatuses õppisid, et luua see kuusnurk muutuja „küljed“ abil.\\r \\r Kas näed, kuidas saad ainult üht väärtust muutes joonistada kolmnurga, nelinurga, viisnurga või kaheksanurga?"
       Course 4 Artist Vars 8_instruction: 'Vaba mäng: katseta selle kujundi külgede arvuga. Kas oskad algoritmi nii muuta, et kujundi üldine suurus jääks samaks olenemata sellest, kui palju külgi sellel on? Vihje: kui jagad oma lähtepikkuse külgede arvuga, muutub iga külje pikkus külgede arvu suurenedes lühemaks.'
       Course 4 Artist Vars 9_instruction: Muuda seda algoritmi nii, et see kasutaks kolmnurga joonistamiseks kindla arvu asemel muutujat „küljed“. Ära unusta kasutada plokki „määra küljed“.
       Course 4 Bee 1_instruction: 'Mesilane ei tea, mis on pilve all! Kasuta plokki „kui“, et kontrollida, kas pilve all on lill. Kogu nektarit ainult siis, kui seal on lill. '
@@ -1014,40 +1023,40 @@ et:
       Course 4 Maze 6_instruction: Kas oskad lahendada selle mõistatuse kasutades võimalikult vähe plokke?
       Course 4 Play Lab For Loops 2_instruction: See kord proovime loendada paarisarve 1...100.
       Course 4 Play Lab Params 1_instruction: Siin on funktsioon nimega „hüppa“, millega su peategelane hüppab 100 piksli võrra üles. Kasuta hüppamise funktsiooni kõigi lippude kättesaamiseks.
-      Course 4 Play Lab Params 10_instruction: "Lisasime sinu jaoks ühe viimase funktsiooni. \r \r Kasuta avaldist „kui“, et sinu mäng kutsuks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“ ületab teatud arvu.\r \r Näide: „mängija_skoor“ > 6\r \r Mängi mängu ja jõua 4. tasemelt edasi, et liikuda järgmisele mõistatusele. "
-      Course 4 Play Lab Params 2_instruction: "Nüüd on meil lipud, mis on praeguse hüppe jaoks liiga kõrgel! Kasutame nooli „üles“ ja „alla“, et saada mitu hüppekõrgust.  \r \r Peame lisama oma hüppefunktsioonile parameetri nimega „kõrgus“.  Ülesnoolega peab koer hüppama 200 pikslit ja allanoolega ainult 100 pikslit. \r \r Vihje: pead klõpsama hüppefunktsioonil käsku „redigeeri“ ja funktsiooni uuendama nii, et see kasutaks parameetrit „kõrgus“."
+      Course 4 Play Lab Params 10_instruction: "Lisasime sinu jaoks ühe viimase funktsiooni. \\r \\r Kasuta avaldist „kui“, et sinu mäng kutsuks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“ ületab teatud arvu.\\r \\r Näide: „mängija_skoor“ > 6\\r \\r Mängi mängu ja jõua 4. tasemelt edasi, et liikuda järgmisele mõistatusele. "
+      Course 4 Play Lab Params 2_instruction: "Nüüd on meil lipud, mis on praeguse hüppe jaoks liiga kõrgel! Kasutame nooli „üles“ ja „alla“, et saada mitu hüppekõrgust.  \\r \\r Peame lisama oma hüppefunktsioonile parameetri nimega „kõrgus“.  Ülesnoolega peab koer hüppama 200 pikslit ja allanoolega ainult 100 pikslit. \\r \\r Vihje: pead klõpsama hüppefunktsioonil käsku „redigeeri“ ja funktsiooni uuendama nii, et see kasutaks parameetrit „kõrgus“."
       Course 4 Play Lab Params 3_instruction: 'Lisasime hüppefunktsioonile veel ühe parameetri, et saaksime seda kasutada teiste tegelastega. Iga tegelane on tähistatud numbriga (alates ühest). Muuda funktsiooni „hüppa“ nii, et see kasutaks parameetrit „tegelane“, pannes hüppama õige tegelase. '
       Course 4 Play Lab Params 4_instruction: Siin on funktsioon nimega „patrull“. Muuda seda, et liigutada kassi 400 pikslit üles ja siis 400 pikslit alla.
       Course 4 Play Lab Params 5_instruction: Muuda funktsiooni „patrull“, lisades parameetri „tegelane“, nii et me saame selle kutsuda iga ekraanil oleva tegelase jaoks. Pea meeles, et tegelastele vastavad numbrid 1, 2 ja 3.
       Course 4 Play Lab Params 6_instruction: Lisa funktsioonile „patrull“ teine parameeter nimega „kiirus“. Proovi kasutada kiiruse määramise plokki uue parameetriga „kiirus“, et aidata pingviinil kätte saada mõlemad lipud enne, kui teised tegelased jõuavad esimese lipuni.
-      Course 4 Play Lab Params 7_instruction: "Hakkame nüüd lõbutsema! Vaata seda koodi ja proovi ära arvata, mida iga plokk teeb.  \r \r Kui oled lõpetanud, kasuta nooleklahve koera juhtimiseks ja kõigi lippude korjamiseks."
+      Course 4 Play Lab Params 7_instruction: "Hakkame nüüd lõbutsema! Vaata seda koodi ja proovi ära arvata, mida iga plokk teeb.  \\r \\r Kui oled lõpetanud, kasuta nooleklahve koera juhtimiseks ja kõigi lippude korjamiseks."
       Course 4 Play Lab Params 8_instruction: Kasuta plokki „kui tegelane puudutab“, et saata koer tagasi üles vasakule AINULT siis, kui koer puudutab mõnda muud tegelast.
-      Course 4 Play Lab Params 9_instruction: "Siin on meie mäng varasemast etapist, kuid enamik koodi on peidetud. Seal on uus funktsioon nimega „skoori_punktid“.\r \r Muuda funktsiooni nii, et parameeter „punktid“ lisatakse muutujale „mängija_skoor“. \r \r Muutuja „mängija_skoor“ väärtus peab suurenema iga kord, kui koer saab kassile südametega pihta, ja vähenema iga kord, kui kass saab koerale südametega pihta.\r \r Märkus: kui oled lõpetanud, klõpsa mängimiseks käsku „Käivita“. Kui koer saab 6 punkti, viiakse sind edasi järgmise mõistatuse juurde. "
+      Course 4 Play Lab Params 9_instruction: "Siin on meie mäng varasemast etapist, kuid enamik koodi on peidetud. Seal on uus funktsioon nimega „skoori_punktid“.\\r \\r Muuda funktsiooni nii, et parameeter „punktid“ lisatakse muutujale „mängija_skoor“. \\r \\r Muutuja „mängija_skoor“ väärtus peab suurenema iga kord, kui koer saab kassile südametega pihta, ja vähenema iga kord, kui kass saab koerale südametega pihta.\\r \\r Märkus: kui oled lõpetanud, klõpsa mängimiseks käsku „Käivita“. Kui koer saab 6 punkti, viiakse sind edasi järgmise mõistatuse juurde. "
       Course 4 Play Lab Vars 1_instruction: See kord sa ei pea koodi kirjutama, klõpsa mängu mängimiseks lihtsalt nuppu „Käivita“! Selles mängus oled sa koer, kes püüab saada rohkem lippe kui kass. Kasuta koera juhtimiseks allanoolt. Kui oled mängimise lõpetanud, klõpsa nuppu „Lõpeta“.
       Course 4 Play Lab Vars 2_instruction: Selle viimase mõistatuse võidujooks ei olnud kuigi aus“ Muuda muutujat „koera_kiirus“, et saaksid koguda kassist rohkem lippe. Võidab see, kes kogub esimesena 10 lippu!
       Course 4 Play Lab Vars 3_instruction: 'Siin on uutmoodi mäng! Kasuta liikumiseks vasak- ja paremnoolt ning hüppamiseks ülesnoolt. Vaata, kas sul õnnestub kõik lipud kätte saada.'
       Course 4 Play Lab Vars 4_instruction: Nüüd kasutame muutujat nimega „kõrgus“, et juhtida, kui kõrgele saab koer hüpata. Muuda muutujat „kõrgus“ nii, et koer saaks hüpata piisavalt kõrgele kõigi lippude kättesaamiseks.
       Course 4 Play Lab Vars 5_instruction: 'Teeme ühe mängu! Kõigepealt on meil vaja koodi. Koosta uuesti kood, mida sa nägid eelmisel tasemel, et määrata skooriks 10. '
       Course 4 Play Lab Vars 6 (copy 1)_instruction: Hästi, nüüd on meil skoori muutuja, aga kuidas seda kasutada? Kui suurendaksime skoori muutujat iga kord, kui sa saad vaenlasele tulekeraga pihta? Kasuta sündmust „kui tegelane 2 puudutab midagi“, et suurendada skoori, kui kass saab sinu tulekeraga pihta. Saad skoori suurendada, määrates väärtuse skoor = skoor + 1. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
-      Course 4 Play Lab Vars 6_instruction: "Kasuta paremnoolt südamete tulistamiseks.\r \r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile südamega pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!)."
+      Course 4 Play Lab Vars 6_instruction: "Kasuta paremnoolt südamete tulistamiseks.\\r \\r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile südamega pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!)."
       Course 4 Play Lab Vars 7_instruction: Tore! Teeme nüüd mängu natuke raskemaks. Iga kord, kui koer (tegelane 1) saab kassi (tegelane 2) kollaste südametega pihta, kaotad sina punkti. Alusta 10 punktiga, et mäng ei läheks liiga raskeks. Taseme läbimiseks lase oma skoor langeda kümnelt nullile.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: 'Nüüd veel üks asi: teeme nii, et mängija saab võita (või kaotada). Kasuta igavest tsüklit, et kontrollida skoori väärtust. Kui skoor on suurem kui 20, kaota vaenlane pildilt. Kui skoor on väiksem kui 0, kaota mängija pildilt. Kui mäng töötab nii, nagu sa tahad, klõpsa käsku „Lõpeta“.'
       Course 4 Play Lab Vars 8_instruction: Teeme nii, et koer saab võita (või kaotada). Kasuta igavest tsüklit, et kontrollida skoori väärtust. Kui skoor on suurem kui 20, kaota vaenlane (kass) pildilt. Kui skoor on väiksem kui 0, kaota mängija (koer) pildilt. Kui mäng töötab nii, nagu sa tahad, klõpsa käsku „Lõpeta“.
-      Course 4 Play Lab Vars 9_instruction: "Vaba mängu aeg! Siin on kõik muutujad, millega me oleme selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \r \r Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on vaja korrastada! Siin panime iga tüki sobivasse kategooriasse.  Vaata kõik pakutav läbi. Kui oled sirvimise lõpetanud, loo mäng või lugu, kasutades kordusi, muutujaid ja sündmusi.  \r \r Vihje: kõigi tööruumi käskude nägemiseks keri alla."
+      Course 4 Play Lab Vars 9_instruction: "Vaba mängu aeg! Siin on kõik muutujad, millega me oleme selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \\r \\r Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on vaja korrastada! Siin panime iga tüki sobivasse kategooriasse.  Vaata kõik pakutav läbi. Kui oled sirvimise lõpetanud, loo mäng või lugu, kasutades kordusi, muutujaid ja sündmusi.  \\r \\r Vihje: kõigi tööruumi käskude nägemiseks keri alla."
       Course 4 Play Lab Vars_instruction: 'Nüüd veel üks asi: teeme nii, et mängija saab võita (või kaotada). Kasuta igavest tsüklit, et kontrollida skoori väärtust. Kui skoor on suurem kui 20, kaota vaenlane pildilt. Kui skoor on väiksem kui 0, kaota mängija pildilt.'
       Course 4 Play Labs For Loops 1_instruction: Teeme nii, et koer ütleks kõik numbrid 1...100. Kasuta korduste arvu tsüklit ja loenduri plokki, et öelda loenduri muutuja väärtus iga kord, kui tsüklit käitatakse.
       Course 4 Play Labs For Loops 2_instruction: See kord proovime loendada paarisarve 1...100.
       Course 4 Play Labs For Loops 3_instruction: Kui loendame suuremate arvude kaupa, saame sama ajaga loendada suurema numbrini. Proovi panna koer loendama kümne kaupa 10...1000.
       Course 4 Play Labs For Loops 4_instruction: Juurdekasvu muutmine võib olla kasulik, kuid me loendame endiselt lineaarselt (iga number erineb eelmisest ühepalju). Aga kui tahame loendada eksponentsiaalselt? Kas saad korduste arvu tsükli väärtusi muutmata loendada 1, 4, 5, 16, 25... (loendur ruudus)?
-      Course 4 Play Labs For Loops 4a_instruction: "Kombineerime nüüd 7. etapi muutujad sinu muutujaga „loendur“, et teha midagi ägedat.   \r \r Selles mõistatuses loendab koer 0...1000 „juurdekasvu“ võrra. Määra oma koodi alguses muutuja „juurdekasv“ väärtuseks 10, et näha, mis juhtub."
+      Course 4 Play Labs For Loops 4a_instruction: "Kombineerime nüüd 7. etapi muutujad sinu muutujaga „loendur“, et teha midagi ägedat.   \\r \\r Selles mõistatuses loendab koer 0...1000 „juurdekasvu“ võrra. Määra oma koodi alguses muutuja „juurdekasv“ väärtuseks 10, et näha, mis juhtub."
       Course 4 Play Labs For Loops 5_instruction: Eelmises etapis loendasime iga arvu ruutudega. Proovi muuta „loendur ^ 2“ väärtusele „loendur ^ 3“, et loendada iga arvu kuupi (1, 8, 27, 64, 125, 216, 343…)
-      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach one."
+      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\\r\n\\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\\r\n\\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\\r\n\\r\nRun the loop a couple of times, clicking Dog before\neach one."
       Course 4 Play Labs For Loops 6_instruction: Võib-olla mäletad, et algarv on mis tahes arv, mis jagub ainult iseenda ja ühega. Kasuta funktsiooni „on_algarv“, et öelda ainult algarvud 1 kuni 100.
-      Course 4 Play Labs For Loops 6a_instruction: "Koer jätkab aja arvestamist, loendades meie korduste arvu tsükliga juurdekasvu võrra, kuid see kord lisame võluri. Kas oskad koodi nii muuta, et iga kord, kui võlurit klõpsatakse, suureneks muutuja „juurdekasv“ väärtus kahe võrra?\r \r Vaata ette! Võlur liigub kiiresti!"
+      Course 4 Play Labs For Loops 6a_instruction: "Koer jätkab aja arvestamist, loendades meie korduste arvu tsükliga juurdekasvu võrra, kuid see kord lisame võluri. Kas oskad koodi nii muuta, et iga kord, kui võlurit klõpsatakse, suureneks muutuja „juurdekasv“ väärtus kahe võrra?\\r \\r Vaata ette! Võlur liigub kiiresti!"
       Course 4 Play Labs For Loops 7_instruction: Kas oskad kasutada korduste arvu tsüklit, et aidata mul ette lugeda jada 1, 4, 7, 10, 13, 16, 19, 22, 25?
-      Course 4 Play Labs For Loops 7a_instruction: "Asi hakkab ilmet võtma!  Mis oleks, kui hakkaksime loendama, mitu korda saab võlurit klõpsata, enne kui koer jõuab 30-ni?  \r \r Lõpetuseks lisa võlurile sellised plokid, et iga kord, kui teda klõpsatakse, suureneb muutuja „klõpsatud“ väärtus ühe võrra. Praegu võid muutujat „juurdekasv“ eirata.\r \r Koer alustab loendamist, kui klõpsad käsku „Käivita“."
-      Course 4 Play Labs For Loops 8_instruction: "Aita nüüd tegelastel loendamise ajal liikuda.  \r \r Koer peab liikuma ja loendama, liites iga kord 2 (loendur + 2).  Kass liigub ja loendab, korrutades iga kord kahega (loendur * 2). Pingviin liigub ja loendab iga kord astmes kaks (loendur ^ 2). Kes jõuab esimesena oma lipuni?"
-      Course 4 Play Labs For Loops 8a_instruction: "Mängu lõpetamiseks peame tooma tagasi muutuja „juurdekasv“!    Seome selle mängu tasemega.\r \r 1) Pea arvestust selle üle, mitu korda on võlurit klõpsatud.\r 2) Kui võlurit klõpsatakse vähemalt 10 korda, enne kui koer jõuab loendamisega 30-ni, suurenda väärtust „juurdekasv“ ühe võrra ja alusta uuesti.\r 3) Kui võlurit ei klõpsata vähemalt 10 korda, on mäng läbi."
+      Course 4 Play Labs For Loops 7a_instruction: "Asi hakkab ilmet võtma!  Mis oleks, kui hakkaksime loendama, mitu korda saab võlurit klõpsata, enne kui koer jõuab 30-ni?  \\r \\r Lõpetuseks lisa võlurile sellised plokid, et iga kord, kui teda klõpsatakse, suureneb muutuja „klõpsatud“ väärtus ühe võrra. Praegu võid muutujat „juurdekasv“ eirata.\\r \\r Koer alustab loendamist, kui klõpsad käsku „Käivita“."
+      Course 4 Play Labs For Loops 8_instruction: "Aita nüüd tegelastel loendamise ajal liikuda.  \\r \\r Koer peab liikuma ja loendama, liites iga kord 2 (loendur + 2).  Kass liigub ja loendab, korrutades iga kord kahega (loendur * 2). Pingviin liigub ja loendab iga kord astmes kaks (loendur ^ 2). Kes jõuab esimesena oma lipuni?"
+      Course 4 Play Labs For Loops 8a_instruction: "Mängu lõpetamiseks peame tooma tagasi muutuja „juurdekasv“!    Seome selle mängu tasemega.\\r \\r 1) Pea arvestust selle üle, mitu korda on võlurit klõpsatud.\\r 2) Kui võlurit klõpsatakse vähemalt 10 korda, enne kui koer jõuab loendamisega 30-ni, suurenda väärtust „juurdekasv“ ühe võrra ja alusta uuesti.\\r 3) Kui võlurit ei klõpsata vähemalt 10 korda, on mäng läbi."
       Course 4 SCF 1_instruction: Kasuta soovitatud funktsioone nelja kuusnurkade rea joonistamiseks. Pane tähele, kuidas meie paariarvulised read nihkuvad paremale?
       Course 4 SCF 1a_instruction: Kas saad aru, kuidas kogu nektar kokku koguda võimalikult väheste plokkidega?
       Course 4 SCF 1b_instruction: Kas saad aru, kuidas kogu nektar kokku koguda võimalikult väheste plokkidega?
@@ -1067,18 +1076,22 @@ et:
       Course 4 SCFP 1_instruction: Loo funktsioon parameetritega, mis võimaldavad kunstnikul hüpata edasi ja tagasi x piksli võrra ning üles ja alla y piksli võrra (kasutades positiivseid ja negatiivseid arve).
       Course 4 SCV 1_instruction: Klõpsa siia, et uuesti juhiseid vaadata.
       Course 4 SCV 2_instruction: Klõpsa siia, et uuesti juhiseid vaadata.
-      Course 4 SCV 3_instruction: "Hakkame nüüd kulli mängima!  Puuduta kassi, et saada 2 punkti. Puuduta pingviini, et saada 3 punkti.  Võitmiseks pead koguma 10 punkti!\r Ole ettevaatlik: kui kass ja pingviin puudutavad teineteist, võtab see punkte vähemaks.\r \r Lisa vajalikud plokid, et panna see mäng niimoodi tööle. Kuidas panna koer kõigis suundades liikuma, kasutades selleks nooleklahve?  Kuidas lisada punkte, kui koer puudutab kassi või pingviini?  Kuidas lahutada punkte, kui kass ja pingviin puutuvad omavahel kokku?"
+      Course 4 SCV 3_instruction: "Hakkame nüüd kulli mängima!  Puuduta kassi, et saada 2 punkti. Puuduta pingviini, et saada 3 punkti.  Võitmiseks pead koguma 10 punkti!\\r Ole ettevaatlik: kui kass ja pingviin puudutavad teineteist, võtab see punkte vähemaks.\\r \\r Lisa vajalikud plokid, et panna see mäng niimoodi tööle. Kuidas panna koer kõigis suundades liikuma, kasutades selleks nooleklahve?  Kuidas lisada punkte, kui koer puudutab kassi või pingviini?  Kuidas lahutada punkte, kui kass ja pingviin puutuvad omavahel kokku?"
       Course 4 SCV 4_instruction: Lahenda see mõistatus võimalikult väheste plokkidega.
       Course 4 SCV 5_instruction: Lahenda see mõistatus võimalikult väheste plokkidega.
       Course 4 SCV 6_instruction: Klõpsa siia, et uuesti juhiseid vaadata.
       Course 4 SCVP 1_instruction: Loo funktsioon parameetritega, mis võimaldavad kunstnikul hüpata edasi ja tagasi x piksli võrra ning üles ja alla y piksli võrra (kasutades positiivseid ja negatiivseid arve).
       Course 4 Variables Assessment_instruction: Kas oskad luua selle pildi, kasutades külgede jaoks muutujat? Iga joon peab olema 50 piksli pikkune.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
-      Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
-      Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
-      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
-      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
-      CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
+      Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
+      Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
+      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
+      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
+      CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
       CSP U4 - JSON Object Intro - Bad Way_instruction: |
         Trigger both the keyboard
         and mouse event and examine the event objects displayed in the console. Why
@@ -1165,9 +1178,9 @@ et:
         Here's a similar function red shape with an additional
         variable for size. Complete the conditionals so the correct solid red image
         of a given size is drawn for "circle", "triangle", and "star".
-      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
-      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
+      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\\r\nOne example - and part of the definition -  has already\nbeen done for you!"
+      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\\r\nOne example - and part of the definition -  has\nalready been done for you!\\r\n"
+      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\\r\n"
       Eval Contracts 1_instruction: |
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -1456,7 +1469,7 @@ et:
       K-1 Maze Assessment 2_instruction: 'Ülesanne -- Liiguta mind põrsa juurde!'
       K-1 maze debug 1_instruction: Muud koodi, et jõuaksin põrsani!
       K-1 maze debug 10_instruction: Paranda selle taseme vead, seades ja lisades plokke nii, et jõuaksin põrsani!
-      K-1 maze debug 11_instruction: "See on test!\r Paranda selle taseme vead, seades ja lisades plokke nii, et jõuaksin põrsani"
+      K-1 maze debug 11_instruction: "See on test!\\r Paranda selle taseme vead, seades ja lisades plokke nii, et jõuaksin põrsani"
       K-1 maze debug 2_instruction: Uuri välja, mis on puudu, ja lisa siis plokke, et aidata mind põrsani!
       K-1 maze debug 3_instruction: Uuri välja, mis on puudu, ja EEMALDA siis plokke, et aidata mind põrsani!
       K-1 maze debug 4_instruction: Vaata need plokid läbi ja tee korda! Ma liigun vist vales suunas.
@@ -1482,9 +1495,18 @@ et:
       K-1 Maze Loops Assessment 2_instruction: 'Ülesanne -- Kasuta kordusi, et viia mind põrsa juurde!'
       K-1 Maze Multi 14_instruction: Hindamise tase
       K-1 Maze Multi 15_instruction: Hindamise tase
-      K-1 Maze Sequence Assessment 1_instruction: "See on test!\r Liigu ühte suunda ja siis teise suunda, et jõuaksin põrsani!"
-      K-1 Maze Sequence Assessment 2_instruction: "See on test!\r Liigu ühte suunda ja siis teise suunda, et jõuaksin põrsani."
-      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
+      K-1 Maze Sequence Assessment 1_instruction: "See on test!\\r Liigu ühte suunda ja siis teise suunda, et jõuaksin põrsani!"
+      K-1 Maze Sequence Assessment 2_instruction: "See on test!\\r Liigu ühte suunda ja siis teise suunda, et jõuaksin põrsani."
+      kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -1515,6 +1537,8 @@ et:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -1577,7 +1601,7 @@ et:
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\r\n"
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\\r\n"
       NetSim Standalone Classroom Routers_instruction: |
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -1600,7 +1624,7 @@ et:
         of a packet being dropped, multiple packets may take different paths to the
         destination, and the default max packet size is set to 6 additional characters.
         
-      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\\r\n\\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
       NetSim Standalone SendAB_instruction: |
         You and your partner share a single
         wire that can only be in state A or state B. You can set the wire to either
@@ -1660,7 +1684,7 @@ et:
       NEW Course 4 Artist Functions 1_instruction: Kas saad joonistada 100 piksli pikkuse ruudu kasutades kordusi?
       NEW Course 4 Artist Functions 10.1_instruction: Kasuta eelmise pusle funktsioone selle mustri joonistamiseks.
       NEW Course 4 Artist Functions 10_instruction: Klõpsa nuppu „redigeeri“, et täita funktsiooni määratluses kõik plokid 40-pikslise ruudu tegemiseks.
-      NEW Course 4 Artist Functions 11_instruction: "Nüüd soovime luua uue funktsiooni nimega „joonista ruutude rida“, mis joonistab kuus ruutu ühes reas. Kas oskad selle funktsiooni koostada, kasutades funktsiooni „joonista ruut 20“, mille me oleme juba valmis teinud? Märkus. Pane tähele, et muutsime pliiatsijoone palju peenemaks. Klõpsa funktsioonil „joonista ruut 20“ käsku „redigeeri“, et näha, kuidas me seda tegime!\r"
+      NEW Course 4 Artist Functions 11_instruction: "Nüüd soovime luua uue funktsiooni nimega „joonista ruutude rida“, mis joonistab kuus ruutu ühes reas. Kas oskad selle funktsiooni koostada, kasutades funktsiooni „joonista ruut 20“, mille me oleme juba valmis teinud? Märkus. Pane tähele, et muutsime pliiatsijoone palju peenemaks. Klõpsa funktsioonil „joonista ruut 20“ käsku „redigeeri“, et näha, kuidas me seda tegime!\\r"
       NEW Course 4 Artist Functions 12_instruction: Kasuta selle mustri joonistamiseks viimase mõistatuse funktsiooni „joonista ruutude rida“.
       NEW Course 4 Artist Functions 13_instruction: 'Kas oskad joonistada funktsiooni „joonista ruutude rida“ abil tähe kujundi? Vihje: muuda funktsiooni „joonista ruutude rida“ nii, et sa ei peaks seda kaks korda kutsuma. Pane tähele, et sa pead liikuma edasi teatud arvu pikslite võrra ja pöörama 144 kraadi.'
       NEW Course 4 Artist Functions 14_instruction: 'Vaba mängu aeg! '
@@ -1668,7 +1692,7 @@ et:
       NEW Course 4 Artist Functions 3_instruction: Siin on uut tüüpi plokk nimega „Funktsioon“. Klõpsa käsku „redigeeri“ ja täida see siis koodiga 100-piksliste külgedega ruudu joonistamiseks. Kui oled funktsiooni muutmise lõpetanud, klõpsa käsku „Sule“ oma programmi naasmiseks.
       NEW Course 4 Artist Functions 4_instruction: 'Kasuta funktsiooni „joonista ruut“ selle mustri joonistamiseks. Vihje: sa pead iga ruudu järel kasutama plokki „pööra 120 kraadi paremale“.'
       NEW Course 4 Artist Functions 5_instruction: Kuidas teadis plokk „joonista ruut“, milliseid käske käivitada? Klõpsa funktsiooniplokis „joonista ruut“ käsku „redigeeri“. Funktsiooniredaktoris olevad plokid on määratlus, millest koosneb funktsioon „joonista ruut“. Kui oled selle uurimise lõpetanud, klõpsa käsku „Salvesta ja sule“ ning seejärel „Käivita“.
-      NEW Course 4 Artist Functions 6_instruction: "Kas oskad joonistada selle pildi, kasutades funktsiooniplokki „joonista ruut“? Vihje: ruutude vahe on 20 pikslit.\r"
+      NEW Course 4 Artist Functions 6_instruction: "Kas oskad joonistada selle pildi, kasutades funktsiooniplokki „joonista ruut“? Vihje: ruutude vahe on 20 pikslit.\\r"
       NEW Course 4 Artist Functions 7_instruction: 'Kas saad aru, kuidas kasutada funktsiooniplokke? Muudame seda ruutu nii, et selle suurus oleks 200 pikslit. Vihje: klõpsa nuppu „redigeeri“, et avada funktsiooni „joonista ruut“ redaktor. Funktsiooniredaktorist väljumiseks klõpsa käsku „Sule“. '
       NEW Course 4 Artist Functions 8_instruction: Lõime sinu jaoks uue funktsiooni nimega „joonista kolmnurk“. Kas oskad muuta funktsiooni määratlust nii, et see joonistaks 100-piksliste külgedega kolmnurga?
       NEW Course 4 Artist Functions 9_instruction: Kas oskad selle lahendada, lisades ainult ühe ploki?
@@ -1679,25 +1703,25 @@ et:
       NEW Course 4 Artist Params 11_instruction: Mõtle välja, kuidas seda kujundit joonistada. Lisa funktsioonile parameeter „küljed“.
       NEW Course 4 Artist Params 12_instruction: Kas oskad selle joonistuse lõpetada? Kõigi kujundite küljepikkus on 100 pikslit.
       NEW Course 4 Artist Params 12a_instruction: See pilt on eelmise sarnane. Kas oskad selle pildi tegemiseks kasutada koos oma funktsiooniga korduste arvu tsüklit?
-      NEW Course 4 Artist Params 13_instruction: "Muudame seda hulknurga joonistamise funktsiooni. Selles on juba parameeter „küljed“. Lisame nüüd parameetri „pikkus“. \r Vihje: iga kujundi ümbermõõt on 200 pikslit. Kas mäletad võrrandit, millega teha ühesuuruseid kujundeid, kui neil on erinev külgede arv?"
+      NEW Course 4 Artist Params 13_instruction: "Muudame seda hulknurga joonistamise funktsiooni. Selles on juba parameeter „küljed“. Lisame nüüd parameetri „pikkus“. \\r Vihje: iga kujundi ümbermõõt on 200 pikslit. Kas mäletad võrrandit, millega teha ühesuuruseid kujundeid, kui neil on erinev külgede arv?"
       NEW Course 4 Artist Params 14_instruction: Redigeeri funktsiooni „joonista spiraali serv“ nii, et see kasutaks parameetreid „pikkus“ ja „küljed“, ning loo siis need kujundid uuesti.
       NEW Course 4 Artist Params 15_instruction: 'Vaba mäng: Siin on funktsioonid, mille oled kirjutanud ning veel mõned, millega saad mängida. Joonista midagi ägedat! Katseta pliiatsijoone laiusega, et näha, kuidas see sinu joonistusi muudab!'
       NEW Course 4 Artist Params 2_instruction: 'Loo "joonista kolmnurk mille külg on 50 pikslit" funktsioon'
-      NEW Course 4 Artist Params 3_instruction: "Kasutame nüüd seda funktsiooni viie kolmnurga joonistamiseks ühes reas. Vihje: kolmnurkade vahekaugus on 30 pikslit.\r"
+      NEW Course 4 Artist Params 3_instruction: "Kasutame nüüd seda funktsiooni viie kolmnurga joonistamiseks ühes reas. Vihje: kolmnurkade vahekaugus on 30 pikslit.\\r"
       NEW Course 4 Artist Params 4_instruction: Kas märkad nende funktsiooniplokkide juures mingit erinevust? Klõpsa käsku „Käivita“ ja vaata, mis juhtub.
       NEW Course 4 Artist Params 5_instruction: 'Täida ploki pikkuseparameetri sisend "???" Vihje: viisnurga külg on 100 pikslit. '
       NEW Course 4 Artist Params 6_instruction: Täida nende kujundite joonistamiseks parameeter „pikkus“, asendades koha „???“ õigete arvudega. Ruudu ja kolmnurga küljepikkus on 100 pikslit, kuusnurga küljepikkus on 75 pikslit.
       NEW Course 4 Artist Params 7_instruction: 'Kas oskad selle joonistuse lõpetada? Vihje: iga kolmnurga küljed on eelmisest 25 pikslit pikemad. Esimese kolmnurga küljepikkus on 25 pikslit.'
       NEW Course 4 Artist Params 8_instruction: Selle kolmnurgafunktsiooni kood on katki. Kas oskad funktsiooni parandada ja teha kolmnurgad küljepikkusega 25, 50 ja 75?
       NEW Course 4 Artist Params 9_instruction: Klõpsa käsku „redigeeri“, et täita funktsiooni „joonista ruut“ määratlus ja lisada üks parameeter. Selleks on vaja pikkuse parameetrit, just nagu kolmnurga puhul. See kord joonista kolm ruutu küljepikkusega 25, 50 ja 75, vahekaugus 100 pikslit.
-      NEW Course 4 Artist Params inspire_instruction: "Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\r \r Kas tahad teada, kuidas on tehtud meie näidismuster? "
+      NEW Course 4 Artist Params inspire_instruction: "Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Kas tahad teada, kuidas on tehtud meie näidismuster? "
       NEW Course 4 Artist Vars 1.5_instruction: 'Vaata koodi. Kas näed, kuidas plokk „määra pikkus“ ja „pikkus“ koos toimivad? Klõpsa käsku „Käivita“, et näha, kuidas see töötab. '
       NEW Course 4 Artist Vars 12_instruction: Nüüd koosta uuesti eelmise taseme algoritm ja loo viisnurk küljepikkusega 150.
       NEW Course 4 Artist Vars 2.5_instruction: 'Vaata koodi. Kas näed, kuidas plokk „määra pikkus“ ja „pikkus“ koos toimivad? Klõpsa käsku „Käivita“, et näha, kuidas see töötab. '
       NEW Course 4 Artist Vars 2_instruction: 'Lohista numbriplokk plokki „määra pikkus“, et joonistada 50-piksliste kolmnurkade komplekt. '
       NEW Course 4 Artist Vars 4 5_instruction: Tubli töö eelmises mõistatuses! Proovime seda uuesti, aga teeme nüüd selle ägeda 60-piksliste kuusnurkadega disaini.
       NEW Course 4 Artist Vars 4_instruction: 'Proovime uuesti. Kas oskad määrata pikkuse muutuja nii, et teha see äge disain kuusnurkadega? Vihje: see on arvu 10 kordne.'
-      NEW Course 4 Artist Vars 6_instruction: "Joonista see muster, langetades pikkuse muutujat õigetes kohtades ja määrates siis õige pikkuse. (Vihje: see on arvu 10 kordne).  \r \r Kas märkad, kuidas saad määrata pikkuse väärtuse vaid ühe korra ja kood kasutab igal pool õiget väärtust?\r \r \r"
+      NEW Course 4 Artist Vars 6_instruction: "Joonista see muster, langetades pikkuse muutujat õigetes kohtades ja määrates siis õige pikkuse. (Vihje: see on arvu 10 kordne).  \\r \\r Kas märkad, kuidas saad määrata pikkuse väärtuse vaid ühe korra ja kood kasutab igal pool õiget väärtust?\\r \\r \\r"
       NEW Course 4 Bee For Loops 1_instruction: Kasuta tsüklit, et koguda nektarit igalt lillelt.
       NEW Course 4 Bee For Loops 10_instruction: Kasuta oma korduste arvu tsükli muutujat „loendur“, et määrata, kui kaugele liigutakse horisontaalsuunas.
       NEW Course 4 Bee For Loops 10a_instruction: Kas oled valmis väljakutseks? Kasuta tsüklite kohta õpitut, et proovida lahendada seda probleemi. Pea meeles, et võib-olla pead oma lahendust käivitama mitu korda, enne kui saad kõik vajalikud sammud valmis.
@@ -1709,8 +1733,8 @@ et:
       NEW Course 4 Bee For Loops 5 5_instruction: Kas sul on korduste arvu tsükli kasutamine juba selge? Aitame mesilasel kokku koguda ülejäänud nektari.
       NEW Course 4 Bee For Loops 5_instruction: Saad korduste arvu tsüklit kasutada ka kahanevaks loenduseks. Proovi nektarit koguda, loendades ühe kaupa 5...1.
       NEW Course 4 Bee For Loops 6_instruction: Sinu korduste arvu tsükli viimane number on nimega „juurdekasv“. Iga kord, kui tsüklit käitatakse, muutub loenduri muutuja selle väärtuse võrra. Proovi neist lilledest nektarit koguda, kasutades juurdekasvu 2.
-      NEW Course 4 Bee For Loops 7_instruction: "Kombineerime nüüd loenduri muutuja matemaatikaplokiga! Kuidas saaksid kasutada loenduri muutujat, et liikuda selles aias võimalikult väikese arvu plokkidega? Mida sa pead tegema, et koguda see kord 3, 6, 9, 12, 15 nektarit? Saladus peitub muutujas „loendur“!\r \r Pea meeles, et kui su loendur loendab kasvavalt, lisatakse juurdekasv loenduri muutujale iga korra lõpus."
-      NEW Course 4 Bee For Loops 8_instruction: "Sul on see selge! Mis juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\r Vihje: mis sa pead igale arvule lisama, et saada sellele järgnev arv?"
+      NEW Course 4 Bee For Loops 7_instruction: "Kombineerime nüüd loenduri muutuja matemaatikaplokiga! Kuidas saaksid kasutada loenduri muutujat, et liikuda selles aias võimalikult väikese arvu plokkidega? Mida sa pead tegema, et koguda see kord 3, 6, 9, 12, 15 nektarit? Saladus peitub muutujas „loendur“!\\r \\r Pea meeles, et kui su loendur loendab kasvavalt, lisatakse juurdekasv loenduri muutujale iga korra lõpus."
+      NEW Course 4 Bee For Loops 8_instruction: "Sul on see selge! Mis juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\\r Vihje: mis sa pead igale arvule lisama, et saada sellele järgnev arv?"
       NEW Course 4 Bee For Loops 9_instruction: Kui tsüklis loendatakse kahanevalt, lahutatakse juurdekasv igas tsüklis sinu loenduri muutujast. Milline peab juurdekasv olema, et koguda 15, siis 12, 9, 6 ja 3 nektarit?
       NEW Course 4 Bee For Loops 95_instruction: Vaata kõiki korduste arvu osi, mille sa just lõid. Kas saad aru, milliseid arve tuleb selle mõistatuse lahendamiseks kahega korrutada? Miks see töötab?
       NEW Course 4 Play Lab Params 11_instruction: 'Vaba mängu aeg! Nüüd saad katsetada kõigi oma tööriistakastis olevate plokkidega. '
@@ -1720,7 +1744,7 @@ et:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Vaba mängu aeg! Nüüd saad katsetada kõigi oma tööriistakastis olevate plokkidega. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Väljakutse: kuidas sa kasutaksid korduste arvu tsüklit, et iga tegelane käiks ringi, ütleks oma tegelase numbri ja kaoks siis ekraanilt? '
       New Play Lab Project_instruction: Loo oma lugu või mäng! Sinu projekt salvestatakse ning võid igal ajal selle juurde tagasi pöörduda.
-      Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
@@ -1731,7 +1755,7 @@ et:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
-      October15 bat_instruction: "Freeplay: Here are some functions to play with.  Can\nyou draw a bat?\r\n"
+      October15 bat_instruction: "Freeplay: Here are some functions to play with.  Can\nyou draw a bat?\\r\n"
       October15 ghost 1_instruction: |
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -1791,7 +1815,7 @@ et:
         button and you should see at least one version. Each time you go back to a
         Big Game level you'll get a new record in your version history that you can
         revert back to.
-      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\\r\n\\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
       PDAlg Design Recipe Delete_instruction: |
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -1941,6 +1965,10 @@ et:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee - Ryan_instruction: |
+        These clouds are bugging me! Some of the clouds
+        have flowers inside, and some don't. I should check each cloud, and only
+        get nectar from the flowers.
       Quantum Bee_instruction: |
         Purple flowers may have either 1 or 0 nectar, but
         you don't know which one! Be careful not to collect nectar from a purple
@@ -1948,8 +1976,14 @@ et:
         the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: See mesilane tahab praegu ainult nektarit. Mitte kõik objektid ei ole lilled, seega testi IGAT PILVE, et näha, kas selle taga peidab end lill. Kui leiad lille, kogu sellelt nektar.
       Ryan - Bee Conditionals_instruction: Mesilane tahab ainult nektarit praegu. Kõik asjad ei ole lilled, nii et vaata IGA PILVE alla, et näha kas see peidab lille. Kui peidab, siis saad sa nektarit koguda.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Siin on funktsioon nimega „patrull“. Muuda seda, et liigutada kassi 400 pikslit üles ja siis 400 pikslit alla.
-      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
+      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
         This butterfly is named Sam, and
         the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels
@@ -2069,7 +2103,7 @@ et:
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
         classmates (Click to see full instructions)
-      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\\r\n\\r\nConstraints:\\r\n- Packets may contain\nonly 6 characters\\r\n- Packets may drop with small probability\\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the Internet Simulator,
         a Domain Name System (DNS) is provided for you and knows the IP addresses
@@ -2080,13 +2114,13 @@ et:
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\r\n"
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\\r\n"
       U2L3 NetSim Hub Mode_instruction: |
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
         the message and response?
-      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
-      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\r\n\r\n"
+      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\\r\n\\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\\r\n\\r\n"
       U2L7 NetSim Need for Packets_instruction: |
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
@@ -2254,7 +2288,7 @@ et:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -2324,7 +2358,7 @@ et:
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\r\n"
+      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\\r\n"
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -2372,8 +2406,8 @@ et:
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
         Write a program that simulates the rolling of
-        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
-        is something other than 7 or 11. (Click to see full instructions)
+        two dice. Roll the dice repeatedly until the sum of the dice is either 7 or
+        11.
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -2528,16 +2562,16 @@ et:
       U3 - Practice Create Performance Task_instruction: |
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\r\n"
-      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\\r\n"
+      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\\r\n"
       U3 - Return Values - constrainTurtle_instruction: |
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -2573,12 +2607,12 @@ et:
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -2592,7 +2626,7 @@ et:
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -2717,7 +2751,7 @@ et:
       U313 Two Buttons with Ids_instruction: |
         Predict what will happen. Once you've
         made a prediction, run the code to see what happens. (Click to see full instructions)
-      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto see full instructions)"
+      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\\r\n(Click\nto see full instructions)"
       U3L03 - draw step_instruction: |
         Write the drawStep function. (Click to see
         full instructions)
@@ -2929,7 +2963,7 @@ et:
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
         button.
-      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
+      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\\r\n\\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
       U3L13 - Debug Id Problem_instruction: |
         Improve the button by choosing a descriptive
         and meaningful ID. (Click to see full instructions)
@@ -3103,8 +3137,10 @@ et:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)
@@ -3221,7 +3257,7 @@ et:
       U3L19 - DEMO up down count practice app_instruction: |
         Try out the demo app
         (Click to see full instructions)
-      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto foo to see the string change. \r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \r\n"
+      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \\r\nDo this: \\r\n1. Try changing the value assigned\nto foo to see the string change. \\r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \\r\n"
       U3L19 - fix the var name syntax error v2_instruction: |
         Fix the error and get
         it to print the value of both variables (Click to see full instructions)
@@ -3250,7 +3286,7 @@ et:
         Add another variable called
         "lives" and set the value to 3. Print the value of the variable to the console.
         (Click to see full instructions)
-      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
+      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \\r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \\r\n\\r\n\\r\nGIF: U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |
         Set up the down button to
         decrease the value of count by 1 each time it is clicked. (Click to see full
@@ -3403,7 +3439,7 @@ et:
         You are given the string "Wisdom begins
         with wonder." Use the string.substring(begin, end) function to print "begin"
         and "nder" to the console.
-      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\\r\nPrint the strings and their index to the console.\n"
       U3L25 String Parsing 6_instruction: |
         Write a function that takes a name (first
         last) and reorders it (last, first).
@@ -3448,7 +3484,7 @@ et:
         right of the starting location. (Click to show full instructions)
       U4 - add createRecord to contacts App_instruction: |
         Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
@@ -3474,11 +3510,11 @@ et:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)
@@ -3599,7 +3635,7 @@ et:
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
       U4 - Objects - pullValues_instruction: |
-        Create an event handler for the "Add
+        Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |
@@ -3607,7 +3643,7 @@ et:
         starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |
         Add code to your event handler
-        fro the "Add Contact" button so that when a new contact is added the inputs
+        for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
       U4 - Objects - showContact1_instruction: |
@@ -3627,21 +3663,21 @@ et:
       U4 - Objects - writeWrap_instruction: |
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\r\n"
-      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\r\n"
-      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
-      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\r\n"
-      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\\r\n"
+      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\\r\n"
       U4 - ReadRecords - Contacts App 1_instruction: |
-        Write a function called "updateLocalData"
-        that copies the data in your database into your "contacts" global variable.
+        Use readRecords to copy the
+        data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |
-        Create a function called "refreshLocalData"
+        Create a function called refreshLocalData.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |
         Add a call to "refreshLocalData"
@@ -3662,8 +3698,8 @@ et:
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: Šabloon
-      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
-      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
+      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\\r\n\\r\n"
+      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\\r\n\\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
         We want to improve the user experience.
         Once they have submitted their data for storage, it would be nice to clear
@@ -3685,24 +3721,34 @@ et:
       U4L15 Read Data 1_instruction: |
         Run the level and see what happens. Then edit
         the code to make it print a different column of information.
-      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
-      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
-      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\\r\n\\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
+      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\\r\n\\r\n"
+      U4L15 Read Data 4_instruction: "\\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - Final Project - Project Level_instruction: |
+        Build your final project here.
+        (Click to see full instructions)
+      U6 - updateRecord - Callback Success Parameter_instruction: |
+        Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
       U6 - updateRecord - Contacts - Edit event handler_instruction: |
-        (Click to see
-        full instructions)
-      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+        Write event
+        handlers for the Edit Contacts UI elements. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: |
+        Set up the UI elements
+        needed to edit contacts. (Click to see full instructions)
       U6 - updateRecord - Contacts - Save edited contact_instruction: |
-        (Click to
-        see full instructions)
-      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+        Use updateRecord
+        to store the user's edits in the database. (Click to see full instructions)
+      U6 - updateRecord - Default Block_instruction: |
+        Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
       U6 - updateRecord - Update Nonexistent Record_instruction: |
-        (Click to see full
-        instructions)
+        Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: Mõne ploki all on peidus laava, mis sul tuleb enne edasiliikumist kinni katta. Siin on abi käsust „kui“. Lisa õigesse kohta käsk „liigu edasi“, et need plokid mineerida.
       Underground If Statements_instruction: Nüüd lähevad asjad keeruliseks. Mineeri 3 punast kivi, kuid ära kuku laavasse. Kasuta käsku „kui“, et panna sillutisekivid kõigi laavaaukude peale, mis sa avastad.
       Underground Iron_instruction: Sulalaavasse astumine on halb mõte. Paigalda silla rajamiseks sillutisekivi ja mineeri siis vähemalt kaks raudplokki.
-      Underground Mine in a Circle_instruction: "Mõtle välja, kuidas saaksid koguda 5 teemanti ja 7 punast kivi! Proovi kasutada korduse sees kordust, et kõndida ruudus.\r"
+      Underground Mine in a Circle_instruction: "Mõtle välja, kuidas saaksid koguda 5 teemanti ja 7 punast kivi! Proovi kasutada korduse sees kordust, et kõndida ruudus.\\r"
       Underground Mining Coal_instruction: Kõige väärtuslikumad ressursid leiad maa alt, kuid seal võib pimedaks minna. Pane paika vähemalt kaks tõrvikut ja kaevanda vähemalt kaks sütt.
       Underground Test Level_instruction: Kogu kokku kõik mineraalid!
       Vigenere_instruction: Test

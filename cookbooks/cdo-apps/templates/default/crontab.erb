@@ -57,9 +57,11 @@ if node['cdo-apps']['daemon']
     cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs'), notify:'dev+crontab@code.org'
     cronjob at:'*/2 * * * *', do:dashboard_dir('bin','build_scripts'), notify:'dev+crontab@code.org'
     cronjob at:'*/5 * * * *', do:deploy_dir('bin','fetch-external-resources'), notify:'dev+crontab@code.org'
+    cronjob at:'30 16 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
   end
 
   if node.chef_environment == 'production' # production daemon
+    cronjob at:'20 */2 * * *', do:deploy_dir('bin', 'cron', 'activity-monitor')
     cronjob at:'5 6 * * *', do:deploy_dir('bin', 'send_workshop_reminder_emails')
     cronjob at:'15 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'index-users-in-solr')
@@ -74,13 +76,17 @@ if node['cdo-apps']['daemon']
   cronjob at:'55 8 * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
   cronjob at:'45 5 * * *', do:deploy_dir('bin', 'cron', 'admin_stats')
   cronjob at:'40 4 * * *', do:deploy_dir('bin', 'cron', 'funometer')
-  cronjob at: '30 6 * * *', do: deploy_dir('bin', 'cron', 'admin_progress')
+  cronjob at:'30 6 * * *', do:deploy_dir('bin', 'cron', 'admin_progress')
+  cronjob at:'10 7 * * *', do:deploy_dir('bin', 'cron', 'retention_stats')
 end
 
 # cronjobs that run on all instances in all environments go here:
 
-# Restart at 0, 4, 8, 12, 16, 20  UTC (4AM/PM, 8AM/PM, 12AM/PM) over the holidays since we won't be deploying
-cronjob at:"#{rand(20)} */4 * * *", do:'service dashboard upgrade && service pegasus upgrade'
+# Restart Pegasus and dashboard every 8 hours at 0, 8, 16 UTC (12AM, 8AM, 4PM).
+# The restart interval from from every 4 hours on 2016/4/26. After recent memory
+# leak fixes this is probably no longer necessary, but we are keeping it at this
+# level until we have chance to confirm non-leakage over longer intervals.
+cronjob at:"#{rand(20)} */8 * * *", do:'service dashboard upgrade && service pegasus upgrade'
 
 cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
 %>

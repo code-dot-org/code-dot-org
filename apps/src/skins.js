@@ -8,6 +8,7 @@ exports.load = function(assetUrl, id) {
       return null;
     }
   };
+
   var skin = {
     id: id,
     assetUrl: skinUrl,
@@ -64,7 +65,7 @@ exports.load = function(assetUrl, id) {
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
-    failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')]
+    failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')],
   };
 
   return skin;

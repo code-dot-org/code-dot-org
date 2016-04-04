@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160210194205) do
+ActiveRecord::Schema.define(version: 20160326070943) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -283,9 +283,109 @@ ActiveRecord::Schema.define(version: 20160210194205) do
     t.string   "type",                     limit: 255
     t.string   "md5",                      limit: 255
     t.boolean  "published",                              default: false, null: false
+    t.text     "notes",                    limit: 65535
   end
 
   add_index "levels", ["game_id"], name: "index_levels_on_game_id", using: :btree
+
+  create_table "plc_course_units", force: :cascade do |t|
+    t.integer  "plc_course_id",    limit: 4
+    t.string   "unit_name",        limit: 255
+    t.string   "unit_description", limit: 255
+    t.integer  "unit_order",       limit: 4
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
+  add_index "plc_course_units", ["plc_course_id"], name: "index_plc_course_units_on_plc_course_id", using: :btree
+
+  create_table "plc_courses", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "plc_enrollment_module_assignments", force: :cascade do |t|
+    t.integer  "plc_enrollment_unit_assignment_id", limit: 4
+    t.integer  "plc_learning_module_id",            limit: 4
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+  end
+
+  add_index "plc_enrollment_module_assignments", ["plc_enrollment_unit_assignment_id"], name: "module_assignment_enrollment_index", using: :btree
+  add_index "plc_enrollment_module_assignments", ["plc_learning_module_id"], name: "module_assignment_lm_index", using: :btree
+
+  create_table "plc_enrollment_task_assignments", force: :cascade do |t|
+    t.string   "status",                              limit: 255
+    t.integer  "plc_enrollment_module_assignment_id", limit: 4
+    t.integer  "plc_task_id",                         limit: 4
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.string   "type",                                limit: 255
+    t.text     "properties",                          limit: 65535
+  end
+
+  add_index "plc_enrollment_task_assignments", ["plc_enrollment_module_assignment_id"], name: "task_assignment_module_assignment_index", using: :btree
+  add_index "plc_enrollment_task_assignments", ["plc_task_id"], name: "task_assignment_task_index", using: :btree
+
+  create_table "plc_enrollment_unit_assignments", force: :cascade do |t|
+    t.integer  "plc_user_course_enrollment_id", limit: 4
+    t.integer  "plc_course_unit_id",            limit: 4
+    t.string   "status",                        limit: 255
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+  end
+
+  add_index "plc_enrollment_unit_assignments", ["plc_course_unit_id"], name: "enrollment_unit_assignment_course_unit_index", using: :btree
+  add_index "plc_enrollment_unit_assignments", ["plc_user_course_enrollment_id"], name: "enrollment_unit_assignment_course_enrollment_index", using: :btree
+
+  create_table "plc_evaluation_answers", force: :cascade do |t|
+    t.string   "answer",                     limit: 255
+    t.integer  "plc_evaluation_question_id", limit: 4
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.integer  "plc_learning_module_id",     limit: 4
+  end
+
+  add_index "plc_evaluation_answers", ["plc_evaluation_question_id"], name: "index_plc_evaluation_answers_on_plc_evaluation_question_id", using: :btree
+  add_index "plc_evaluation_answers", ["plc_learning_module_id"], name: "index_plc_evaluation_answers_on_plc_learning_module_id", using: :btree
+
+  create_table "plc_evaluation_questions", force: :cascade do |t|
+    t.string   "question",           limit: 255
+    t.integer  "plc_course_unit_id", limit: 4
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  add_index "plc_evaluation_questions", ["plc_course_unit_id"], name: "index_plc_evaluation_questions_on_plc_course_unit_id", using: :btree
+
+  create_table "plc_learning_modules", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "plc_tasks", force: :cascade do |t|
+    t.string   "name",                   limit: 255
+    t.integer  "plc_learning_module_id", limit: 4
+    t.datetime "created_at",                                                 null: false
+    t.datetime "updated_at",                                                 null: false
+    t.string   "type",                   limit: 255,   default: "Plc::Task", null: false
+    t.text     "properties",             limit: 65535
+  end
+
+  add_index "plc_tasks", ["plc_learning_module_id"], name: "index_plc_tasks_on_plc_learning_module_id", using: :btree
+
+  create_table "plc_user_course_enrollments", force: :cascade do |t|
+    t.string   "status",        limit: 255
+    t.integer  "plc_course_id", limit: 4
+    t.integer  "user_id",       limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "plc_user_course_enrollments", ["plc_course_id"], name: "index_plc_user_course_enrollments_on_plc_course_id", using: :btree
+  add_index "plc_user_course_enrollments", ["user_id"], name: "index_plc_user_course_enrollments_on_user_id", using: :btree
 
   create_table "prize_providers", force: :cascade do |t|
     t.string   "name",              limit: 255
@@ -306,23 +406,6 @@ ActiveRecord::Schema.define(version: 20160210194205) do
 
   add_index "prizes", ["prize_provider_id"], name: "index_prizes_on_prize_provider_id", using: :btree
   add_index "prizes", ["user_id"], name: "index_prizes_on_user_id", using: :btree
-
-  create_table "professional_learning_courses", force: :cascade do |t|
-    t.string "name", limit: 255
-  end
-
-  create_table "professional_learning_modules", force: :cascade do |t|
-    t.string "name",                 limit: 255
-    t.string "learning_module_type", limit: 255
-  end
-
-  create_table "professional_learning_tasks", force: :cascade do |t|
-    t.string  "name",                            limit: 255
-    t.string  "description",                     limit: 255
-    t.integer "professional_learning_module_id", limit: 4
-  end
-
-  add_index "professional_learning_tasks", ["professional_learning_module_id"], name: "task_learning_module_index", using: :btree
 
   create_table "puzzle_ratings", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -467,14 +550,6 @@ ActiveRecord::Schema.define(version: 20160210194205) do
   add_index "unexpected_teachers_workshops", ["unexpected_teacher_id"], name: "index_unexpected_teachers_workshops_on_unexpected_teacher_id", using: :btree
   add_index "unexpected_teachers_workshops", ["workshop_id"], name: "index_unexpected_teachers_workshops_on_workshop_id", using: :btree
 
-  create_table "user_enrollment_module_assignments", force: :cascade do |t|
-    t.integer "professional_learning_module_id",                 limit: 4
-    t.integer "user_professional_learning_course_enrollment_id", limit: 4
-  end
-
-  add_index "user_enrollment_module_assignments", ["professional_learning_module_id"], name: "module_assignment_module_index", using: :btree
-  add_index "user_enrollment_module_assignments", ["user_professional_learning_course_enrollment_id"], name: "module_assignment_enrollment_index", using: :btree
-
   create_table "user_levels", force: :cascade do |t|
     t.integer  "user_id",         limit: 4,             null: false
     t.integer  "level_id",        limit: 4,             null: false
@@ -484,6 +559,7 @@ ActiveRecord::Schema.define(version: 20160210194205) do
     t.integer  "best_result",     limit: 4
     t.integer  "script_id",       limit: 4
     t.integer  "level_source_id", limit: 4
+    t.boolean  "submitted"
   end
 
   add_index "user_levels", ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree
@@ -505,15 +581,6 @@ ActiveRecord::Schema.define(version: 20160210194205) do
   end
 
   add_index "user_permissions", ["user_id", "permission"], name: "index_user_permissions_on_user_id_and_permission", unique: true, using: :btree
-
-  create_table "user_professional_learning_course_enrollments", force: :cascade do |t|
-    t.integer "user_id",                         limit: 4
-    t.integer "professional_learning_course_id", limit: 4
-    t.string  "status",                          limit: 255
-  end
-
-  add_index "user_professional_learning_course_enrollments", ["professional_learning_course_id"], name: "enrollment_plc_index", using: :btree
-  add_index "user_professional_learning_course_enrollments", ["user_id"], name: "index_user_professional_learning_course_enrollments_on_user_id", using: :btree
 
   create_table "user_scripts", force: :cascade do |t|
     t.integer  "user_id",          limit: 4, null: false

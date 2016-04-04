@@ -18,6 +18,7 @@
   "fillTooltip": "Colocar 1 unidad de tierra",
   "finalLevel": "¡ Felicidades! Ha resuelto el rompecabezas final.",
   "flowerEmptyError": "La flor en la que estás no tiene más néctar.",
+  "didNotCollectEverything": "Asegúrate de no olvidarte del néctar y la miel!",
   "get": "obtener",
   "heightParameter": "altura",
   "holePresent": "hay un agujero",
@@ -81,6 +82,5 @@
   "whileTooltip": "Repetir las acciones dentro del bloque hasta alcanzar el punto final.",
   "word": "Encuentra la palabra",
   "yes": "Sí",
-  "youSpelled": "Escribiste",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Escribiste"
 }

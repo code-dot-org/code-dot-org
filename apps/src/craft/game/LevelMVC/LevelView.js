@@ -432,8 +432,7 @@ export default class LevelView {
 
 
 
-  playMinecartAnimation(position, facing, isOnBlock, completionHandler, minecartTrack, unpoweredRails)
-  {
+  playMinecartAnimation(position, facing, isOnBlock, completionHandler, minecartTrack, unpoweredRails) {
     var animation;
     this.track = minecartTrack;
     this.i = 0;
@@ -450,8 +449,7 @@ export default class LevelView {
     });
   }
 
-  playTrack(position, facing, isOnBlock, completionHandler, minecartTrack)
-  {
+  playTrack(position, facing, isOnBlock, completionHandler, minecartTrack) {
     if(this.i < this.track.length) {
       var direction,
           arraydirection = this.track[this.i][0],
@@ -468,16 +466,13 @@ export default class LevelView {
             this.playTrack(position, facing, isOnBlock, completionHandler, minecartTrack);
           });
         });
-      }
-      else {
+      } else {
         this.playMinecartMoveForwardAnimation(position, facing, isOnBlock, completionHandler, nextPosition, speed).onComplete.add(() => {
           this.playTrack(position, facing, isOnBlock, completionHandler, minecartTrack);
         });
       }
       this.i++;
-    }
-    else
-    {
+    } else {
       this.playSuccessAnimation(position, facing, isOnBlock, function(){});
       completionHandler();
     }
@@ -554,8 +549,7 @@ export default class LevelView {
       this.setPlayerPosition(position[0], position[1], isOnBlock);
       tweenWToC.start();
     });
-    if(playSuccessAnimation)
-    {
+    if(playSuccessAnimation) {
       tweenWToC.onComplete.add(() => {
         this.playSuccessAnimation(position, facing, isOnBlock, completionHandler);
       });
@@ -587,18 +581,14 @@ export default class LevelView {
     if(groundType === "stone" || groundType === "cobblestone" || groundType === "bedrock" ||
         oreString === "ore" || groundType === "bricks") {
       this.audioPlayer.play("stepStone");
-    }
-    else if(groundType === "grass" || groundType === "dirt" || groundType === "dirtCoarse" ||
+    } else if(groundType === "grass" || groundType === "dirt" || groundType === "dirtCoarse" ||
         groundType == "wool_orange" || groundType == "wool") {
       this.audioPlayer.play("stepGrass");
-    }
-    else if(groundType === "gravel") {
+    } else if(groundType === "gravel") {
       this.audioPlayer.play("stepGravel");
-    }
-    else if(groundType === "farmlandWet") {
+    } else if(groundType === "farmlandWet") {
       this.audioPlayer.play("stepFarmland");
-    }
-    else{
+    } else{
       this.audioPlayer.play("stepWood");
     }
   }
@@ -816,8 +806,7 @@ export default class LevelView {
 
     let destroyOverlay = this.actionPlane.create(-12 + 40 * destroyPosition[0], -22 + 40 * destroyPosition[1], "destroyOverlay", "destroy1");
     destroyOverlay.sortOrder = this.yToIndex(destroyPosition[1]) + 2;
-    this.onAnimationEnd(destroyOverlay.animations.add("destroy", Phaser.Animation.generateFrameNames("destroy", 1, 12, "", 0), 30, false), () =>
-    {
+    this.onAnimationEnd(destroyOverlay.animations.add("destroy", Phaser.Animation.generateFrameNames("destroy", 1, 12, "", 0), 30, false), () => {
       this.actionPlaneBlocks[blockIndex] = null;
 
       if (blockToDestroy.hasOwnProperty("onBlockDestroy")) {
@@ -928,20 +917,17 @@ export default class LevelView {
     }
 
     explodeAnim.sortOrder = this.yToIndex(destroyPosition[1]) + 2;
-    this.onAnimationEnd(explodeAnim.animations.add("explode", Phaser.Animation.generateFrameNames("BlockBreakParticle", 0, 7, "", 0), 30, false), () =>
-    {
+    this.onAnimationEnd(explodeAnim.animations.add("explode", Phaser.Animation.generateFrameNames("BlockBreakParticle", 0, 7, "", 0), 30, false), () => {
       explodeAnim.kill();
       this.toDestroy.push(explodeAnim);
 
-      if(placeBlock)
-      {
+      if(placeBlock) {
         this.playPlayerAnimation("idle", playerPosition, facing, false);
         this.playItemDropAnimation(playerPosition, facing, destroyPosition, blockType, completionHandler);
       }
     });
     this.playScaledSpeed(explodeAnim.animations, "explode");
-    if(!placeBlock)
-    {
+    if(!placeBlock) {
       completionHandler();
     }
   }
@@ -1184,8 +1170,7 @@ export default class LevelView {
     facingName = this.getDirectionName(facing);
     rand = Math.trunc(Math.random() * 4) + 1;
 
-    switch(rand)
-    {
+    switch(rand) {
       case 1:
       animationName = "idle";
       break;
@@ -1708,7 +1693,7 @@ export default class LevelView {
         break;
 
       case "sheep":
-        let sFrames = 10;
+        var sFrames = 10;
         // Facing Left: Eat Grass: 199-216
         sprite = plane.create(-22 + 40 * x, -12 + 40 * y, "sheep", "Sheep_199");
         frameList = Phaser.Animation.generateFrameNames("Sheep_", 199, 215, "", 0);
@@ -1966,9 +1951,8 @@ export default class LevelView {
         sprite = plane.create(xOffset + 40 * x, yOffset + plane.yOffset + 40 * y, atlas, frame);
 
         frameList = [];
-        let animationFrames = Phaser.Animation.generateFrameNames("Door", 0, 3, "", 1);
-        for(var j = 0; j < 5; ++j)
-        {
+        var animationFrames = Phaser.Animation.generateFrameNames("Door", 0, 3, "", 1);
+        for(var j = 0; j < 5; ++j) {
           frameList.push("Door0");
         }
         frameList = frameList.concat(animationFrames);

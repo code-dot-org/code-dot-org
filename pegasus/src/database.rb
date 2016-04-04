@@ -12,12 +12,11 @@ class Tutorials
     return @contents.find {|row| row[:code] == code}[:url] if @table == :beyond_tutorials
 
     api_domain = domain.gsub('csedweek.org','code.org')
-    api_domain = api_domain.gsub('al.code.org','code.org')
     api_domain = api_domain.gsub('ar.code.org','code.org')
     api_domain = api_domain.gsub('br.code.org','code.org')
-    api_domain = api_domain.gsub('eu.code.org','code.org')
     api_domain = api_domain.gsub('ro.code.org','code.org')
     api_domain = api_domain.gsub('sg.code.org','code.org')
+    api_domain = api_domain.gsub('tr.code.org','code.org')
     api_domain = api_domain.gsub('uk.code.org','code.org')
     api_domain = api_domain.gsub('za.code.org','code.org')
     "http://#{api_domain}/api/hour/begin/#{code}"
@@ -48,45 +47,26 @@ class Tutorials
   end
 end
 
-def event_whitelisted?(name, type)
-  DB[:cdo_events_whitelist].where(organization_name_s: name.to_s.strip).and(event_type_s: type).count == 0
-end
-
-def country_from_code(code)
-  DB[:geography_countries].where(code_s: code.to_s.strip.upcase).first
-end
-def country_name_from_code(code)
-  country = country_from_code(code)
-  return code unless country
-  country[:name_s]
-end
 def no_credit_count
   DB[:cdo_state_promote].where(cs_counts_t: 'No').count
 end
+
 def credit_count
   DB[:cdo_state_promote].where(cs_counts_t: 'Yes').count
 end
+
 def jobs_nationwide
   DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_jobs_i]
 end
+
 def grads_nationwide
   DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_graduates_i]
-end
-def us_state_from_code(code)
-  DB[:geography_us_states].where(code_s: code.to_s.strip.upcase).first
-end
-def us_state_code?(code)
-  !us_state_from_code(code).nil?
-end
-def us_state_name_from_code(code)
-  state = us_state_from_code(code)
-  return code unless state
-  state[:name_s]
 end
 
 def zip_code_from_code(code)
   DB[:geography_us_zip_codes].where(code_s: code.to_s.strip).first
 end
+
 def zip_code?(code)
   !zip_code_from_code(code).nil?
 end
@@ -115,7 +95,6 @@ def geocode_zip_code(code)
   return nil unless zip_code[:latitude_f] && zip_code[:longitude_f]
   "#{zip_code[:latitude_f]},#{zip_code[:longitude_f]}"
 end
-
 
 require 'securerandom'
 require 'json'

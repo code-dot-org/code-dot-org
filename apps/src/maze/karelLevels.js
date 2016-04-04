@@ -1,5 +1,3 @@
-/*jshint multistr: true */
-
 var levelBase = require('../level_base');
 var Direction = require('./tiles').Direction;
 var msg = require('./locale');
@@ -34,7 +32,8 @@ var startBlocks = function(page, level) {
 // This tests for and creates the "move_forward" block.
 var MOVE_FORWARD = {
     'test': function(block) {
-      return block.type == 'maze_moveForward';},
+      return block.type == 'maze_moveForward';
+    },
     'type': 'maze_moveForward'
 };
 
@@ -47,7 +46,8 @@ var FILL = {'test': 'fill', 'type': 'maze_fill'};
 // This tests for and creates the "controls_repeat" block.
 var REPEAT = {
     'test': function(block) {
-      return block.type == 'controls_repeat';},
+      return block.type == 'controls_repeat';
+    },
     'type': 'controls_repeat',
     'titles': {'TIMES': '???'}
 };
@@ -55,21 +55,24 @@ var REPEAT = {
 // This tests for and creates the "controls_repeat_ext" block.
 var REPEAT_EXT = {
     'test': function(block) {
-      return block.type == 'controls_repeat_ext';},
+      return block.type == 'controls_repeat_ext';
+    },
     'type': 'controls_repeat_ext'
 };
 
 // This tests for and creates the "controls_for" block.
 var CONTROLS_FOR = {
     'test': function(block) {
-      return block.type == 'controls_for';},
+      return block.type == 'controls_for';
+    },
     'type': 'controls_for'
 };
 
 // This tests for and creates the "variables_get" block.
 var VARIABLES_GET = {
     'test': function(block) {
-      return block.type == 'variables_get';},
+      return block.type == 'variables_get';
+    },
     'type': 'variables_get',
     'titles': {'VAR': 'i'}
 };

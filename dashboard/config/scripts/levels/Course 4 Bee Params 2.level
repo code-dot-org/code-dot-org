@@ -14,7 +14,7 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "1",
-    "step_mode": 1,
+    "step_mode": "1",
     "nectar_goal": "9",
     "flower_type": "redWithNectar",
     "ideal": "19",
@@ -29,8 +29,12 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "fast_get_nectar_animation": "false"
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -82,7 +86,7 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation/>
           <title name="NAME">get 3 nectar</title>
           <statement name="STACK">
@@ -153,5 +157,98 @@
         </category>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="procedures_defnoreturn" editable="false">
+          <mutation/>
+          <title name="NAME">get 3 nectar</title>
+          <statement name="STACK">
+            <block type="maze_turn">
+              <title name="DIR">turnRight</title>
+              <next>
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">3</title>
+                          <statement name="DO">
+                            <block type="maze_nectar"/>
+                          </statement>
+                          <next>
+                            <block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                              <next>
+                                <block type="maze_move">
+                                  <title name="DIR">moveBackward</title>
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_move">
+              <title name="DIR">moveForward</title>
+              <next>
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="procedures_callnoreturn">
+                      <mutation name="get 3 nectar"/>
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">3</title>
+                          <statement name="DO">
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="get 3 nectar"/>
+                              <next>
+                                <block type="maze_move">
+                                  <title name="DIR">moveForward</title>
+                                  <next>
+                                    <block type="maze_move">
+                                      <title name="DIR">moveForward</title>
+                                      <next>
+                                        <block type="procedures_callnoreturn">
+                                          <mutation name="get 3 nectar"/>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

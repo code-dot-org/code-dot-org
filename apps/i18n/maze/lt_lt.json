@@ -18,6 +18,7 @@
   "fillTooltip": "iškrauk 1 žemių krūvą",
   "finalLevel": "Sveikinu! Tu išsprendei paskutinį galvosūkį.",
   "flowerEmptyError": "Gėlėje, prie kurios esi, nebėra nektaro.",
+  "didNotCollectEverything": "Įsitikink, kad nepraleidai nė vieno nektaro ar medaus!",
   "get": "paimk",
   "heightParameter": "aukštis",
   "holePresent": "čia yra duobė",
@@ -81,6 +82,5 @@
   "whileTooltip": "Pakartok sujungtus veiksmus, kol bus pasiektas finišas.",
   "word": "Surast žodį",
   "yes": "Taip",
-  "youSpelled": "Tu įvedei",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Tu įvedei"
 }

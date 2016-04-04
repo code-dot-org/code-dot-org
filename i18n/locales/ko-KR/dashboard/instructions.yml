@@ -4,64 +4,51 @@ ko:
       2-3 Artist 1 new_instruction: |
         안녕하세요. 저는 화가입니다. 여러분들이 코드를 작성하면 원하는 모든 것들을 그릴 수 있습니다.
         블록들을 사용해서 그림의 회색 선들을 그려보세요.(각 선들은 100 픽셀 길이입니다.)
-      2-3 Artist 11_instruction: |
-        8각형 모양을 만들어 정지 표지판을 만들어보세요. 각 변의 길이는 100 픽셀입니다. 몇 도나 회전시켜야 할까요?
-        (힌트: 360을 8로 나누면?) 
-      2-3 Artist 12_instruction: '"반복 회수"블럭을 설정해서 "원"을 만들어 눈을 완성해보세요. 한 번 움직일 때마다 1도씩 오른쪽으로 움직인다고 할 때, 원을 완성시키려면 몇 번을 반복해야 할까요? 180? 360? 500?'
+      2-3 Artist 11_instruction: "각 변의 길이가 100 픽셀인, 8각형을 만들어 정지 표지판을 만들어보세요.  \\r\n\\r"
+      2-3 Artist 12_instruction: "눈알을 완성하기 위해서 원을 그려보세요!\\r\n\\r\n만약,\n 한 번 움직일 때마다 1도씩 오른쪽으로 움직인다고 한다면, 하나의 원을 완성시키기 위해 몇 번을 반복하면 될까요? 180? 360? 500?"
       2-3 Artist 2 new_instruction: '이 집의 벽은 다 완성되지 않았습니다. 각 측면은 100이지만, 완성되지 않은 벽은 50입니다. 벽을 완성해보세요. '
       2-3 Artist 2_instruction: |
         This house has a half-finished wall. Each side is
         100, but the half-finished wall is only 50. Complete the wall. 
       2-3 Artist 3.4_instruction: |
-        점프 블록은 화가가 선을 그리지 않고 이동하게 해줍니다.
-        점프, 그리기 블록들을 이용해서 파선을 그려보세요.
+        점프 블록은 선을 그리지 않고 이동하게 해줍니다.
+        앞으로 점프, 앞으로 이동하기 블록들을 이용해서 파선을 그려보세요.
       2-3 Artist 3_instruction: 이 모자의 높이는 100픽셀입니다. 70픽셀 더 짧은 모자를 그려보세요.
-      2-3 Artist 3new_instruction: 빨간 모자의 높이는 100픽셀입니다. 이것보다 70픽셀 더 짧은 검은 모자를 그려보세요. 검은 모자의 너비는 50픽셀입니다.
+      2-3 Artist 3new_instruction: "빨간 모자의 높이는 100픽셀입니다.\n이것보다 더 낮은 70픽셀 높이의 검은 모자를 그려보세요.\\r\n(주의: 각 모자의 너비는 50픽셀입니다.)"
       2-3 Artist 4_instruction: 고양이를 위한 집을 완성해주세요.
       2-3 Artist 5_instruction: '똑같은 집을 그릴 수 있도록, "반복 횟수" 블록의 코드를 바꿔주세요. 3개의 블록만 사용하면 됩니다.'
       2-3 Artist 6_instruction: |
         이 집에는 지붕이 필요합니다! 삼각형을 그려주세요. 힌트:
         세 변의 길이는 모두 같습니다.
       2-3 Artist 7_instruction: |
-        마지막 창의 오른쪽 절반을 완성해주세요.
-        각 창의 틀은 25 픽셀 크기입니다. 
+        교실의 모두가 창밖을 볼 수 있도록, 창문들을 학교에 그려주세요.
+        각 창 틀의 길이는 25 픽셀 크기입니다. 
       2-3 Artist 8_instruction: |
         한 개의 사각형을 똑같은 크기의 정사각형 2개로 나누어 보세요.
         사각형의 폭은 200 픽셀이고, 높이는 100 픽셀입니다.
       2-3 Artist 9_instruction: 이 연을 완성해주세요.
-      2-3 Artist Assessment 1_instruction: '형성 평가: 마지막 이빨을 그려주세요. 가로 25 픽셀, 세로 25 픽셀입니다.'
-      2-3 Artist Debugging 1_instruction: 이 모자의 윗 부분을 100 픽셀 길이로 만들어주세요.
-      2-3 Artist Debugging 10_instruction: '게임기의 방향키가 너무 작습니다. 힌트: 10 픽셀 만큼 폭을 넓혀주세요.'
-      2-3 Artist Debugging 11_instruction: 멋진 눈송이를 완성하게 도와 주세요. 완성시키기 위해 “반복”을 얼마나 많이 사용해야 하나요?
+      2-3 Artist Assessment 1_instruction: |
+        형성 평가: 마지막 이빨을 그려주세요.
+        가로 25 픽셀, 세로 25 픽셀입니다.
+      2-3 Artist Debugging 1_instruction: 이 모자의 윗 부분은 100 픽셀이 되어야 합니다. 고쳐 주실 수 있나요?
+      2-3 Artist Debugging 10_instruction: "제 게임기의 방향키가 너무 얇아요.\\r\n\\r\n10 픽셀 만큼 폭을 넓혀주세요."
+      2-3 Artist Debugging 11_instruction: "내 눈송이가 부서지고 있어요!\\r\n\\r\n어디가 잘못 된 것 일까요?"
       2-3 Artist Debugging 12_instruction: 이 장면에 파도를 추가하고 싶습니다. 도와주시겠어요?
-      2-3 Artist Debugging 2_instruction: |
-        수염을 3개 그리기 위한 이 코드에는 오류가 있습니다.
-        힌트: 각 수염의 길이는 75 픽셀입니다. 수염을 그릴 수 있도록 코드를 수정해주세요.
-      2-3 Artist Debugging 3_instruction: '내 보트에 구멍이 났어요! 선을 그리는 각도를 변경해서 고쳐주세요. 힌트: 마지막 각도는 15도 만큼 빼야합니다.'
+      2-3 Artist Debugging 2_instruction: "고양이 수염을 그리는 코드에 문제가 있습니다.\n\\r\n\\r\n고양이 수염의 길이가 같도록 코드를 고쳐주세요."
+      2-3 Artist Debugging 3_instruction: "내 보트에 구멍이 났어요!\\r\n\\r\n선의 끝을 맞추기 위해서는 어떻게 해야할까요?"
       2-3 Artist Debugging 4_instruction: 무엇을 그리려고 하는 것 일까요? 정확한 선들과 각들로 점들을 연결해 주세요.
-      2-3 Artist Debugging 5_instruction: |
-        다리와 발을 그리려고 하는 이 코드에는 오류가 있습니다.
-        힌트: 발이 너무 깁니다. 단계를 줄여야 할 수 있습니다.(장난 일까요?)
-      2-3 Artist Debugging 6_instruction: 다리가 없는 의자에 앉아있는 것 같아요. 의자 다리를 그려주세요.
-      2-3 Artist Debugging 7_instruction: C가 좌우 반대로 그려지는 코드 같습니다. C 처럼 보이게 해주세요.
+      2-3 Artist Debugging 5_instruction: "다리와 발을 그리는 코드에 오류가 있습니다.\\r\n\\r\n어떻게 고쳐야 할까요?"
+      2-3 Artist Debugging 6_instruction: "다리가 없는 의자에 앉아있는 것 같아요.\n\\r\n\\r\n코드를 수정해서 나머지 의자 다리를 그려주세요."
+      2-3 Artist Debugging 7_instruction: "C가 왼쪽으로 그려지는 코드 같습니다!\\r\n\\r\nC를 정확하게 그리려면 어떻게 해야할까요?"
       2-3 Artist Debugging 8_instruction: 바람개비가 완성되지 않았습니다. 완성하려면 얼마나 반복해야 할까요?
-      2-3 Artist Debugging 9_instruction: |
-        줄기를 그리는 코드가 정확하지 않습니다. 힌트:
-        60도가 다릅니다.
-      2-3 Artist Debugging Assessment 1_instruction: |
-        도형이 너무 작습니다. 더 크게 해주세요.
-        힌트: 각 선의 길이가 75 픽셀이 되어야 합니다.
+      2-3 Artist Debugging 9_instruction: "뭔가 이상해요!\\r\n\\r\n줄기를 그리는 코드가 틀렸네요. 화가가 줄기를 정확히 그리려면 어떻게 해야할까요?"
+      2-3 Artist Debugging Assessment 1_instruction: "형성평가: 이 75 픽셀 크기의 사각형으로는 작은가요? \\r\n\\r\n코드의 어느 부분을 고쳐야할까요?"
       2-3 Artist Free Play_instruction: '자유 플레이: 원하는 것을 그려보세요.'
-      2-3 Artist Functions 1_instruction: |
-        안녕하세요. 저는 좀비 화가입니다. 그림 그리기 좋아요!
-        사각형 안경을 그릴 수 있게 도와주세요. 힌트: 안경 알 사이의 길이는
-        안경 한 변의 길이보다 25 픽셀 만큼 작습니다.
+      2-3 Artist Functions 1_instruction: "\"나 화가. 좀비... 그리기 좋아..!\" \\r\n\\r\n사각형 안경을 그릴 수 있게 도와주세요. \\r\n\\r\n안경 알 사이의 다리는 안경 한 변의 길이보다 25 픽셀 만큼 작습니다."
       2-3 Artist Functions 10_instruction: |
         여기에 두 개의 함수가 있습니다. 하나는 큰 기어를 그리는 것이고, 하나는 작은 기어를 그리는 것입니다.
         기계의 내부를 그리는데 사용해보세요!
-      2-3 Artist Functions 11.5_instruction: |
-        여기에 똑같은 "육각형 그리기" 함수가 있습니다.
-        반복 할 때마다 60 도씩만 회전하면 어떻게 될까요?
+      2-3 Artist Functions 11.5_instruction: "여기에 똑같은 '육각형 그리기' 함수가 있습니다. \\r\n\\r\n반복 할 때마다 60도씩 회전시키면 어떻게 될까요?"
       2-3 Artist Functions 11_instruction: |
         “사각형 그리기” 함수의 이름을 “육각형 그리기”로 바꿨지만, 여전히 이 함수는 사각형을 그리고 있습니다!
         "육각형 그리기" 함수를 수정해서, 한 변의 길이가 50 픽셀인 육각형을 그려보세요.
@@ -80,7 +67,7 @@ ko:
       2-3 Artist Functions 3_instruction: |
         한 변의 길이가 115 인 사각형을 그려 더 큰 안경을 만들어보세요.
         사각형들은 이제 45 픽셀 만큼 떨어져 있습니다.
-      2-3 Artist Functions 4_instruction: “반복” 블록을 사용해서 이 정사각형을 3개 그려보세요.
+      2-3 Artist Functions 4_instruction: '이제, 함수를 "반복" 블록 안에 넣고 3개의 사각형을 그려보세요.'
       2-3 Artist Functions 7_instruction: |
         2개의 서로 매개 변수가 있는 "집 그리기" 함수를 이용해 2개의 집을 그려보세요.
         (힌트: 첫 번째 집은 100 픽셀입니다.)
@@ -105,23 +92,28 @@ ko:
         반복 구조들을 이용하면 모든 종류의 다각형들을 만들 수 있습니다.
         이 육각형 안에 마름모를 만들어보세요.
       2-3 Artist Loops 8_instruction: 한 반복 안에 2개의 요소를 모두 넣어 보세요.
-      2-3 Artist Loops 9_instruction: "같은 요소들을 반복 안에 넣되, 그 둘 사이에 거리를 추가하겠습니다.\r\n이전에 사용했던 것과 같은 코드를 넣고, 바깥쪽 반복의 마지막에 앞으로 이동하는 것을 추가해 보세요."
+      2-3 Artist Loops 9_instruction: "같은 요소들을 반복 안에 넣되, 그 둘 사이에 거리를 추가하겠습니다.\\r\n이전에 사용했던 것과 같은 코드를 넣고, 바깥쪽 반복의 마지막에 앞으로 이동하는 것을 추가해 보세요."
       2-3 Artist Loops New 1_instruction: |
         이 로봇의 머리를 그려보세요!
         한 변의 길이가 100 픽셀인 사각형을 그려보세요.
-      2-3 Artist Loops New 10_instruction: "이제 여러 개의 'V'자를 연결해보세요. 반복 안에 넣으면 됩니다."
+      2-3 Artist Loops New 10_instruction: "이제 여러 개의 'V'자를 연결해서, 반복 실행 구조 안에 넣어보세요."
       2-3 Artist Loops New 11_instruction: |
-        이번에는 24번 그려보세요.
-        30도 왼쪽으로 회전하기를 추가한 후, 모두 다시 반복 블럭에 넣어보세요.
+        이번에는 멋진 것을 만들어 볼 시간입니다!
+        왼쪽으로 30도 회전하기를 추가한 후, 24번 반복 시켜보세요.
       2-3 Artist Loops New 12_instruction: |
         한 변의 길이가 100 픽셀인 다이아몬드를 그려보세요.
         
-      2-3 Artist Loops New 13_instruction: 이제 한 반복 안에서, 다이아몬드를 3번 그려보세요.
-      2-3 Artist Loops New 14_instruction: 이번에는 다이아몬드를 10번 그리되, 한 개를 그릴 때마다 90도씩 돌려보세요.
-      2-3 Artist Loops New 15_instruction: 재미있는 것을 그려보세요.
+      2-3 Artist Loops New 13_instruction: |
+        이런 재미있는 패턴을 만들기 위해서
+        이전 퍼즐의 코드를 반복시켜보세요!
+      2-3 Artist Loops New 14_instruction: |
+        다이아몬드 코드를 살펴보고 어떤 패턴들을 만들어낼 수 있는지 생각해보세요.
+        각도와 반복 횟수를 변화시켜가면서 테스트 해보세요.
+      2-3 Artist Loops New 15_instruction: 이제, 그리고 싶은 것들을 그려보세요.
       2-3 Artist Loops New 2_instruction: |
-        사각형을 그릴 때 사용했던 코드가 있습니다.
-        이 코드를 4번 실행시키기 위해 반복 블록을 사용하면 어떻게 될까요?
+        이전에 풀었던 퍼즐과 같은 퍼즐이지만,
+        반복 블록들을 사용해야합니다. 로봇의 머리를 완성시키기 위해서 코드의 처음 부분에
+        반복 블록을 넣어보세요.
       2-3 Artist Loops New 9_instruction: |
         화살 그림을 완성하기 위해서,
         양쪽 모두 50 픽셀인 간단한 V 자를 그려보세요.
@@ -129,7 +121,7 @@ ko:
       2-3 Artist Match Rho Pic_instruction: '맞추기: 빠진 코드를 완성해보세요.'
       2-3 Artist Match Sq Pic_instruction: '맞추기: 빠진 코드를 채워보세요.'
       2-3 Artist Match Tri pic_instruction: '맞추기: 빠진 코드를 채워주세요.'
-      2-3 Artist Nested Loops 1_instruction: "여러 가지 모양들을 그리기 위해서 반복 구조들을 사용했었습니다.\n그런데, 반복 구조 안에 다른 반복을 넣을 수 있다는 것을 알았나요?\r\n패턴을 그리기 위해서, 이 코드 전체를 반복에 넣어 3번 반복 시켜보세요."
+      2-3 Artist Nested Loops 1_instruction: "여러 가지 모양들을 그리기 위해서 반복 구조들을 사용했었습니다.\n그런데, 반복 구조 안에 다른 반복을 넣을 수 있다는 것을 알았나요?\\r\n패턴을 그리기 위해서, 이 코드 전체를 반복에 넣어 3번 반복 시켜보세요."
       2-3 Artist Nested Loops 10_instruction: 패턴을 완성시키기 위해서 이 코드를 12번 반복해 보세요.
       2-3 Artist Nested Loops 11_instruction: |
         이 코드를 4번 반복해서 패턴을 완성해 보세요.
@@ -168,29 +160,18 @@ ko:
       2-3 Bee Conditionals 1_instruction: |
         안녕하세요! 저는 꿀벌입니다.
         제가 꽃에서 꽃꿀을 모을 수 있게 도와주세요.
-      2-3 Bee Conditionals 10_instruction: "자주색 꽃에서는 꿀이 있을 수도 있고 없을 수도 있습니다.\n아무것도 없는 자주색 꽃에서 꽃꿀을 얻어내려고 하지 마세요.\r\n"
-      2-3 Bee Conditionals 11_instruction: 꽃꿀이 있는 꽃에서 꽃꿀을 모아보세요.
-      2-3 Bee Conditionals 12_instruction: |
-        꽃을 확인하고 꽃꿀을 얻을 수 있도록 반복 구조를 사용하세요.
-        모든 꽃들에서 꽃꿀을 모으면 됩니다.
-      2-3 Bee Conditionals 13_instruction: |
-        꽃꿀을 모아 꿀을 만들어 보세요. 힌트:
-        "꽃꿀이 있으면" 이라는 조건 블록을 빨강 꽃 위에서 사용하면 어떤 일이 벌어질까요?
-        이 퍼즐을 반복을 이용해서 풀어보세요.
-      2-3 Bee Conditionals 14_instruction: |
-        꽃꿀을 모아 꿀을 만들어 보세요.
-        자주색 꽃에 꽃꿀이 없으면 꿀을 뽑지 않게 조심하세요.
-      2-3 Bee Conditionals 15_instruction: 4개의 꽃에서 꽃꿀을 모아보세요.
-      2-3 Bee Conditionals 2_instruction: |
-        안녕하세요. 저는 꿀벌이에요!
-        꽃들로부터 꽃꿀을 모을 수 있게 도와주세요. 반복 구조를 사용하면 됩니다.
-      2-3 Bee Conditionals 3_instruction: |
-        꽃들로부터 꽃꿀을 모아 꿀을 만들 수 있게 도와주세요.
-        반복 구조를 사용하면 됩니다.
+      2-3 Bee Conditionals 10_instruction: "자주색 꽃에서는 꿀이 있을 수도 있고 없을 수도 있습니다.\n아무것도 없는 자주색 꽃에서 꽃꿀을 얻어내려고 하지 마세요.\\r\n"
+      2-3 Bee Conditionals 11_instruction: "뭐가 있을까요!\\r\n\\r\n꽃밭을 돌아다니면서 꽃꿀이 있는 꽃들에서만 꽃꿀을 모을 수 있게 도와주세요. "
+      2-3 Bee Conditionals 12_instruction: 최대한 적은 블록들을 사용해서 꽃꿀을 찾아낼 수 있도록 도와주세요!
+      2-3 Bee Conditionals 13_instruction: "와 이번에는 여러 가지들이 있네요!\\r\n\\r\n여러분들이 배운 것들을 이용해 꽃꿀을 모아 꿀을 만들어보세요."
+      2-3 Bee Conditionals 14_instruction: "자 이제 다 모아봅시다!\\r\n\\r\n지금까지 배운 것들을 이용해서 최소한의 블록들로 꽃꿀이 있는 꽃에서 꽃꿀을 모아 보세요.\n마지막에는 꿀을 만들어야 합니다."
+      2-3 Bee Conditionals 15_instruction: "계단 모양의 패턴은 많이 익숙합니다. \\r\n\\r\n최소한의 블록들만 사용해서 꽃꿀이 있는 꽃에서만 꽃꿀을 모아보세요."
+      2-3 Bee Conditionals 2_instruction: "저는 배고픈 꿀벌입니다! \\r\n최소한의 블록만 사용해서 꽃꿀을 모두 모을 수 있게 해주세요."
+      2-3 Bee Conditionals 3_instruction: "저 꽃꿀들을 보세요!\\r\n\\r\n최소한의 블록들을 사용해서 꽃꿀을 모아 꿀을 만들어보세요.  "
       2-3 Bee Conditionals 4_instruction: 꽃들로부터 꽃꿀을 모아 꿀을 만들 수 있게 도와주세요.
-      2-3 Bee Conditionals 5_instruction: 자주색 꽃들은 1 또는 0 의 꽃꿀이 있지만, 정확히 알 수 없습니다. 꽃꿀이 없는 자주색 꽃에서 꿀을 모으지 마세요. if 블록을 사용해서 꽃꿀이 1 만큼 있는지 확인해 주세요.
+      2-3 Bee Conditionals 5_instruction: "꽃꿀이 없는 자주색 꽃에서 꽃꿀을 모으지 않도록 조심하세요. \\r\n먼저 '꽃꿀이 있으면' 블록을 이용해서 꽃꿀의 양이 1인지 확인해야합니다."
       2-3 Bee Conditionals 6_instruction: '"만약" 블록을 사용해서 이 꽃에 꽃꿀이 있는지 확인해보세요.'
-      2-3 Bee Conditionals 7_instruction: 꽃꿀이 꽃에 있을 때, 꽃꿀을 모아주세요.
+      2-3 Bee Conditionals 7_instruction: 꽃꿀이 있는 꽃에서만 꽃꿀을 모아보세요.
       2-3 Bee Conditionals 8_instruction: |
         이 꽃밭에는 빨강 꽃과 자주색 꽃이 있습니다.
         빨강 꽃은 꽃꿀이 얼마나 있는지 나타나있지만, 자주색 꽃에는 얼마나 있는지 알 수 없습니다.
@@ -202,37 +183,18 @@ ko:
       2-3 Bee Debugging 1_instruction: |
         이 블록들에는 오류들이 있어서 짜증이 나네요.
         모든 꽃꿀을 모아서 꿀을 만들 수 있도록 오류들을 수정해주세요.
-      2-3 Bee Debugging 10_instruction: |
-        이 블록들에는 오류들이 있어서 짜증이 나네요.
-        모든 꽃꿀을 모아서 꿀을 만들 수 있도록 오류들을 수정해주세요.
-      2-3 Bee Debugging 2_instruction: |
-        이 블록들에는 오류들이 있어서 짜증이 나네요.
-        모든 꽃꿀을 모아서 꿀을 만들 수 있도록 오류들을 수정해주세요.
-      2-3 Bee Debugging 3_instruction: |
-        이 블록들에는 오류들이 있어서 짜증이 나네요.
-        모든 꽃꿀을 모아서 꿀을 만들 수 있도록 오류들을 수정해주세요.
+      2-3 Bee Debugging 10_instruction: "이 블록들에는 오류들이 있어서 짜증이 나네요. \\r\n모든 꽃꿀을 모아서 꿀을 만들 수 있도록 오류(들)을 수정해주세요."
+      2-3 Bee Debugging 2_instruction: "문제점을 찾을 수 있으세요?\\r\n모든 꽃꿀을 모을 수 있도록 오류(들)을 수정해주세요."
+      2-3 Bee Debugging 3_instruction: "으, 골치아프네요!\\r\n\\r\n모든 꽃꿀을 모을 수 있도록 오류(들)을 수정해주세요."
       2-3 Bee Debugging 4_instruction: |
         이 블록들에는 오류들이 있어서 짜증이 나네요.
-        모든 꽃꿀을 모아서 꿀을 만들 수 있도록 오류들을 수정해주세요.
-      2-3 Bee Debugging 5_instruction: |
-        이 블록들에는 오류들이 있어서 짜증이 나네요.
-        모든 꽃꿀을 모아서 꿀을 만들 수 있도록 오류들을 수정해주세요.
-        실행, 한 단계씩 실행을 사용할 수 있습니다.
-      2-3 Bee Debugging 6_instruction: |
-        이 블록들에는 오류들이 있어서 짜증이 나네요.
-        모든 꽃꿀을 모을 수 있도록 오류들을 수정해주세요.
-      2-3 Bee Debugging 7_instruction: |
-        이 블록들에는 오류들이 있어서 짜증이 나네요.
-        모든 꽃꿀을 모아서 꿀을 만들 수 있도록 오류들을 수정해주세요.
-      2-3 Bee Debugging 8_instruction: |
-        이 블록들에는 오류들이 있어서 짜증이 나네요.
-        모든 꽃꿀을 모아서 꿀을 만들 수 있도록 오류들을 수정해주세요.
-      2-3 Bee Debugging 9_instruction: |
-        이 블록들에는 오류들이 있어서 짜증이 나네요.
-        모든 꽃꿀을 모아서 꿀을 만들 수 있도록 오류들을 수정해주세요.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        형성평가: 이 블록들에는 오류들이 있어서 짜증이 나네요.
-        모든 꽃꿀을 모아서 꿀을 만들 수 있도록 오류들을 수정해주세요.
+        모든 꽃꿀을 모아서 꿀을 만들 수 있도록 오류(들)을 수정해주세요.
+      2-3 Bee Debugging 5_instruction: "꽃들이 맛있어보여요! \\r\n\\r\n모든 꽃꿀들을 모을 수 있도록 오류(들)을 고쳐주세요. 단계별 실행을 사용할 수 있습니다."
+      2-3 Bee Debugging 6_instruction: "달콤한 도전이네요! \\r\n\\r\n모든 꽃꿀들을 모을 수 있도록 오류(들)을 고쳐주세요."
+      2-3 Bee Debugging 7_instruction: 모든 꽃꿀들을 모아 꿀을 만들 수 있도록 오류(들)을 고쳐주세요.
+      2-3 Bee Debugging 8_instruction: "이쁜 꽃들이 아주 많이 있네요! \\r\n\\r\n모든 꽃꿀들을 모을 수 있도록 오류(들)을 고쳐주세요."
+      2-3 Bee Debugging 9_instruction: "\"벌벌\" 떨지 마세요! \\r\n\\r\n모든 꽃꿀들을 모아 꿀을 만들 수 있도록, 이 프로그램의 오류들을 고쳐야 합니다."
+      2-3 Bee Debugging Assessment 1_instruction: "형성평가: 이제 여러분들이 아는 것들을 보여줄 시간입니다!\\r\n\\r\n모든 꽃꿀들을 모아 꿀을 만들 수 있도록 오류(들)을 고쳐주세요."
       2-3 Bee Functions 1_instruction: |
         함수들은 어떤 작업을 수행할 때 사용하는 블럭들의 집합이라고 할 수 있습니다.
         "꽃꿀 2번 모으기" 를 이용해서 각 꽃들에서 꽃꿀을 모아보세요.
@@ -260,9 +222,7 @@ ko:
       2-3 Bee Functions 9_instruction: 길을 따라 아래로 내려간 후, 꽃꿀을 얻고, 꿀을 만들고, 다시 처음 위치로 돌아가는 함수를 만들어보세요.
       2-3 Bee Functions Assessment 1_instruction: '형성평가: 주어진 함수를 이용해서 각 꽃에서 꽃꿀을 모아보세요.'
       2-3 Bee Functions Assessment 2_instruction: '형성평가: 한 번에 3개의 꿀을 만드는 함수를 만들어보세요.'
-      2-3 Bee Loops 1_instruction: |
-        각 꽃에는 1개씩의 꽃꿀이 있습니다.
-        각 꽃에서 꽃꿀을 모아보세요. 
+      2-3 Bee Loops 1_instruction: "저 꽃들이 달콤해 보여요!\\r\n\\r\n최대한 적은 블록들을 사용해 각 꽃들에서 꽃꿀을 모아보세요."
       2-3 Bee Loops 10_instruction: 모든 꽃꿀을 모을 수 있도록, 다른 2개의 반복 구조 안에 반복 구조를 넣으세요.
       2-3 Bee Loops 11_instruction: |
         이 꽃밭에 있는 꽃들에서 꽃꿀을 모두 모을 수 있도록
@@ -270,22 +230,24 @@ ko:
       2-3 Bee Loops 12_instruction: |
         이 꽃밭에 있는 꽃들에서 꽃꿀을 모두 모을 수 있도록
         반복 구조들을 사용해 보세요.
-      2-3 Bee Loops 13_instruction: '형성평가: 반복 블록을 사용해 모든 꽃꿀을 모아 보세요.'
+      2-3 Bee Loops 13_instruction: '형성평가: 최대한 적은 블록들을 사용해서 꽃꿀을 모아보세요.'
       2-3 Bee Loops 1A_instruction: |
         안녕하세요! 여러분? 저는 꿀벌입니다.
         이 꽃들로부터 꽃꿀을 모을 수 있게 도와주세요. 
-      2-3 Bee Loops 2_instruction: 1개의 반복 구조를 사용해서 꽃꿀을 얻은 후, 꿀을 만들어 보세요.
-      2-3 Bee Loops 2A_instruction: 1개의 반복 구조를 사용해서 같은 작업을 더 쉽게 해보세요.
-      2-3 Bee Loops 3_instruction: 각 꽃에서 꽃꿀을 모은 후, 각각의 벌집에 꿀을 만들어 넣어 보세요.
-      2-3 Bee Loops 3A_instruction: 모든 꽃꿀을 모으기 위해, 1개의 반복 구조를 사용해보세요.
-      2-3 Bee Loops 3B_instruction: 새로운 반복 블록을 이용해서, 모든 꽃꿀을 모아 꿀을 만들어보세요.
-      2-3 Bee Loops 4_instruction: 이전 퍼즐에서 사용했던 반복 구조와 비슷하지만, 회전을 한 번 집어넣어 보세요.
-      2-3 Bee Loops 4A_instruction: |
-        이러한 작업을 3번 반복하면 어떻게 될까요?
-        마지막에 꿀을 만드는 것을 잊지 마세요!
-      2-3 Bee Loops 5_instruction: 1개의 반복을 사용해서, 아래로 내려가면서 꽃꿀을 모아보세요.
-      2-3 Bee Loops 6_instruction: 1개의 반복을 사용해서, 꽃에서 꽃꿀을 뽑아서 각 벌집에 꿀을 만들어 주세요.
-      2-3 Bee Loops 7_instruction: 각 꽃에서 꽃꿀을 얻기 위해서, 이 블록들을 반복 구조에 넣어주세요.
+      2-3 Bee Loops 2_instruction: 최대한 적은 블록들을 사용해서 모든 꽃꿀을 모으고 꿀을 만들어 보세요.
+      2-3 Bee Loops 2A_instruction: 이번에는, 1개의 반복 구조를 사용해서 모든 꿀을 모아보세요.
+      2-3 Bee Loops 3_instruction: |
+        최대한 적은 블록들을 사용해서
+        각 꽃에서 꽃꿀을 모은 후, 각각의 벌집에 꿀을 만들어 넣어 보세요.
+      2-3 Bee Loops 3A_instruction: 모든 꽃꿀을 모으기 위해, 반복 구조를 사용해보세요.
+      2-3 Bee Loops 3B_instruction: 반복 블록을 사용해서, 꽃꿀을 모두 모으고 꿀을 만들어보세요.
+      2-3 Bee Loops 4_instruction: "꿀벌이 엄청 바쁘네요!\\r\n\\r\n최대한 적은 블록들을 사용해서\n꽃꿀을 모으고 꿀을 만들 수 있도록 꿀벌을 도와 주세요."
+      2-3 Bee Loops 4A_instruction: "이 퍼즐을 해결하려면 몇 번 반복해야할까요? \\r\n\\r\n반복 실행 구조는 매우 편리합니다!\n반복 실행 구조를 사용해서 최대한 적은 블록들로 해결해 보세요."
+      2-3 Bee Loops 5_instruction: "이 길의 모양은 다른 것들과 다릅니다. \\r\n\\r\n최대한 적은 블록들을 사용해서 꽃꿀을 모두 모아보세요."
+      2-3 Bee Loops 6_instruction: 꿀벌이 꽃꿀을 모으고 꿀을 만들 수 있는 가장 빠른 방법을 찾을 수 있나요?
+      2-3 Bee Loops 7_instruction: |
+        와 꽃밭이 이쁘네요!
+        최대한 적은 블록들을 사용해서 꿀벌이 모든 꽃들을 살펴볼 수 있게 해주세요.
       2-3 Bee Loops 8_instruction: |
         자주색 꽃들은 몇 개의 꽃꿀이 있는지 알 수 없습니다.
         "꽃꿀이 있으면" 반복 블록을 이용해서, 모든 꽃꿀을 모아보세요.
@@ -294,9 +256,7 @@ ko:
         반복(~인 동안) 블럭은 그 안에 "만약" 조건문이 있는 것과 같습니다.
         반복 블럭 안에 이 코드를 추가해서 같은 역할을 하도록 만들어보세요.
       2-3 Bee Loops Assessment 1_instruction: '형성평가: 반복 구조를 이용해서, 이 꽃에서 꽃꿀을 모두 모아보세요.'
-      2-3 Maze 1_instruction: |
-        나쁜 돼지를 잡을 수 있게 도와주세요!
-        "앞으로 이동" 블록들을 여러 개 쌓아 붙인 후, "실행"을 눌러보세요. 
+      2-3 Maze 1_instruction: '나쁜 돼지를 잡을 수 있게 도와주세요! "실행하면" 블록 아래에 "앞으로 이동" 블록들을 여러 개 쌓아 붙인 후, "실행"을 눌러보세요. '
       2-3 Maze 10_instruction: 초록색 나쁜 놈에게 데려다 줘!(TNT 폭탄 조심)
       2-3 Maze 11_instruction: |
         배가 고파요. 꽃으로 움직여주세요!
@@ -308,20 +268,18 @@ ko:
         이전 퍼즐에서의 답을 단 2개의 블록으로 바꿔보세요!
         (힌트: "반복 횟수" 블록을 사용하는 반복 구조를 만들어보세요.)
       2-3 Maze 12 (old)_instruction: 반복 횟수 블록을 이용해서, 돼지에게로 이동시켜 주세요.
-      2-3 Maze 12_instruction: |
-        이 5개의 블록들을, 단 2개의 블록들로 바꿀 수 있을까요?
-        (힌트: "반복 횟수" 블록을 사용해서 반복구조를 만들어보세요.)
+      2-3 Maze 12_instruction: "1개의 '반복' 블록 안에 1개의 '앞으로 이동' 블록이 들어있는 반복 실행 구조를 이용해서 돼지에게로 이동시켜주세요."
       2-3 Maze 13 (old)_instruction: 저를 돼지에게 보내주세요. 이번에는 반복(~할 때까지) 블록을 사용하세요.
-      2-3 Maze 13_instruction: "2개의 블록만 사용해서 저를 돼지에게 보내주세요.\r\n(힌트: \"반복(횟수)\" 블록을 사용해야 합니다.)"
+      2-3 Maze 13_instruction: "2개의 블록만 더 추가해서 돼지에게로 보내주세요.\\r\n(참고: 이 레벨을 깨기 위해서는 마법의 \"반복(횟수)\" 블록을 사용해야 합니다.)"
       2-3 Maze 14 (old)_instruction: '"반복 ~까지" 블록을 사용해서 저를 돼지에게 이동시켜주세요!'
       2-3 Maze 14_instruction: |
         저를 해바라기로 보내주세요!
         ("반복 횟수" 블록이 필요하면 어디에 두어야 할까요?)
       2-3 Maze 15 (old)_instruction: '"반복 ~까지" 블록을 사용해서 저를 돼지에게 이동시켜주세요!'
-      2-3 Maze 15_instruction: 더 적은 블록들을 사용해서 돼지에게 가려면, 두 개의 반복(횟수) 블록을 사용하세요.
+      2-3 Maze 15_instruction: 이 퍼즐에서는 두 개의 반복(횟수) 블록을 이용하면 블록들을 최소한으로 사용할 수 있습니다.
       2-3 Maze 16 (old)_instruction: '"반복 ~까지" 블록을 사용해서 저를 돼지에게 이동시켜주세요!'
-      2-3 Maze 16 before_instruction: 저를 돼지에게 이동시켜 주세요.
-      2-3 Maze 16_instruction: 저를 해바라기로 보내주세요. 단계를 반복시켜보세요!
+      2-3 Maze 16 before_instruction: 어떻게 하면 돼지에게로 최대한 빠르게 이동할 수 있을까요?
+      2-3 Maze 16_instruction: 반복 실행 구조 안에는 여러 개의 블록을 넣을 수 있습니다! 이 단계들을 반복 실행시켜 좀비를 해바라기로 이동시켜주세요.
       2-3 Maze 2_instruction: 돼지가 내 깃털들을 마구 헤집어 놓으며 다니고 있어요. 저를 돼지에게 보내주세요!
       2-3 Maze 3_instruction: 길을 따라 움직여서, 바보 같은 돼지 녀석을 잡아줘. TNT 폭탄을 피하고, 깃털들이 날라다니지 않도록 해야 돼!
       2-3 Maze 4_instruction: 초록색 나쁜 놈에게 데려다 줘!(TNT 폭탄 조심)
@@ -331,11 +289,11 @@ ko:
       2-3 Maze 8_instruction: 저를 돼지에게 이동시켜 주세요.
       2-3 Maze 9_instruction: 초록색 나쁜 놈에게 데려다 줘!(TNT 폭탄 조심)
       2-3 Maze Loops 1_instruction: 5 개의 블록들만 사용해서 돼지로 이동시켜 주세요.
-      2-3 Maze Loops 17_instruction: 저를 해바라기로 이동시켜주세요!
-      2-3 Maze Loops 18_instruction: 저를 해바라기로 이동시켜주세요!
-      2-3 Maze Loops 19_instruction: 저를 해바라기로 이동시켜주세요!
-      2-3 Maze Loops 20_instruction: 저를 해바라기로 이동시켜주세요!
-      2-3 Maze Loops 21_instruction: 저를 해바라기로 이동시켜주세요!
+      2-3 Maze Loops 17_instruction: 해바라기로 이동하기 위해서 여러분들이 배운 것들을 사용해보세요!
+      2-3 Maze Loops 18_instruction: "블록들을 최소한으로 사용해서 해바라기로 이동시켜주세요!\\r\n\\r\n반복 실행 구조 안에 1개의 반복 실행 구조를 넣어서 필요한 코드량을 줄여주세요."
+      2-3 Maze Loops 19_instruction: "다음 레벨로 가기 위해서 이번 레벨을 해결해 봅시다! \\r\n최소한의 반복 실행 구조를 사용해서 해바라기로 이동시켜주세요."
+      2-3 Maze Loops 20_instruction: 블록들을 최대한 적게 사용해서 해바라기로 이동시켜주세요!
+      2-3 Maze Loops 21_instruction: 블록들을 최대한 적게 사용해서 해바라기로 이동시켜주세요!
       2-3 Maze Loops Assessment 1_instruction: '형성평가: 5개의 블록만 사용해서, 저를 해바라기로 보내주세요! '
       2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
@@ -380,8 +338,7 @@ ko:
       4-5 Artist 2_instruction: 사각형을 완성할 수 있도록 이 코드를 반복시켜주세요.
       4-5 Artist 3.5_instruction: |
         그럼 이번에 이 코드를 실행(또는 "실행" 누르기) 하면 
-        무슨일이 벌어질지 생각해 보세요. 그 다음에 충분히 반복해서 그림을 완성해 주세요.
-        색은 그때마다 바뀔 것입니다.
+        무슨일이 벌어질지 생각해 보세요. 그 다음에 여러 번 반복해서 그림을 완성해 보세요!
       4-5 Artist 3_instruction: |
         이 사각형 꽃 침대는 주변 둘레가 600입니다.
         긴 쪽의 길이는 200 입니다. 사각형을 그려보세요.
@@ -411,6 +368,7 @@ ko:
         힌트: 마지막 선은 250 픽셀 크기입니다.
       4-5 Artist For Loops 14_instruction: '코드를 배우기 시작하고나면 더 빠른 방법들이 있다는 것을 알게 됩니다. 삼각 나선구조를 완셩하기 위해서 사용된 블록들을 "for" 블록으로 바꿔보세요. (힌트: 마지막 선의 길이는 300 픽셀입니다.)'
       4-5 Artist For Loops 15_instruction: '코드를 배우기 시작하고나면 더 빠른 방법들이 있다는 것을 알게 됩니다. 육각 나선구조를 완셩하기 위해서 사용된 블록들을 "for" 블록으로 바꿔보세요. (힌트: 마지막 선의 길이는 200 픽셀입니다.)'
+      4-5 Artist For Loops 2_instruction: 이것은 for 반복 블록입니다. 1, 2, 3... 10, 을 일일이 입력하는 대신, for 블록 안에 포함되어있는 블록들을 원하는 만큼 반복 실행시켜줍니다. for 블록 안에 to 부분에 10을 넣어보세요.
       4-5 Artist For Loops 3_instruction: |
         어떻게 하면 1부터 50까지 카운트 할 수 있을까요?
         "반복 ~인 동안" 블록을 수정해 보세요.
@@ -466,32 +424,32 @@ ko:
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: 꿀벌은 꽃인지 벌집인지 말할 수 없습니다. 꽃인 경우에만 꽃꿀을 모아야 하는데, 꽃인지 벌집인지 먼저 확인해 보세요.
+      4-5 Bee Conditionals 1_instruction: |
+        구름으로 가려 잘 보이지 않습니다!
+        구름 아래에 꽃이 있는지 살펴보고, 꽃이 있는 경우에만 꽃꿀을 모아보세요.
+        주의하세요, 계속 바뀝니다!
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: 꿀벌이 꽃꿀을 원합니다. 모두 꽃은 아니기 때문에, 안개 구름 아래에 꽃이 숨어있는지 모두 살펴보아야 합니다. 꽃이면 꽃꿀을 모으면 됩니다.
+      4-5 Bee Conditionals 2_instruction: '구름들이 더 많습니다! 모든 구름 아래에 꽃들이 있는 것은 아니기 때문에 구름 아래에 꽃이 숨어있는지 살펴보고 꽃꿀을 모아야 합니다. 기억하세요: 구름들 아래에 있는 것들이 똑같은 것들은 아닙니다!'
       4-5 Bee Conditionals 3_instruction: |
-        꿀벌이 꿀을 만들고 싶어합니다.
-        벌집에서만 꿀을 만들 수 있도록 해주세요.
+        이제 꿀을 만들고 싶습니다.
+        이 구름들 중 아래에 벌집이 있을 것입니다. 각 구름을 검사해야합니다!
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |
-        가려진 물체들은 꽃 또는 벌집입니다.
-        만약/아니면 블록을 사용해서, 꽃이면 꽃꿀을 뽑고, 아니면 꿀을 만들 수 있도록 해주세요.
-        (꽃이 아니면 벌집이기 때문입니다.)
+      4-5 Bee Conditionals 4_instruction: 이 구름들은 꽃이나 벌집을 가립니다! 만약/아니면 블록을 사용해서 꽃인 경우에 꽃꿀을 모으고, 꽃이 아닌 경우(즉, 벌집인 경우)에는 꿀을 만들도록 해주세요.
       4-5 Bee Conditionals 5_instruction: 이 안개 구름들 아래에는 꽃이나 벌집이 있을 수 있습니다. 만약/그렇지않으면 블록을 이용해서 꽃이면 꽃꿀을 모으고 아니면 (즉, 벌집이라면) 꿀을 만들도록 해보세요.
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: 이 분홍 꽃에는 꽃꿀이 3, 2, 1 만큼 있을 수 있습니다. 여기 만약~아니면 블록은 다른 만약~아니면 블록과 결합되어있는 것으로, 만약/만약~아니면/아니면 영역으로 구분되어 있습니다. 꽃꿀의 양을 모를 때에도 꽃꿀을 모을 수 있도록 방법을 만들어보세요.
-      4-5 Bee Conditionals 7_instruction: '분홍 꽃은 꽃꿀이 3, 2, 1 중 하나입니다. "분홍 꽃 확인" 함수를 완성하고 이용해서 꽃의 모든 꽃꿀들을 모을 수 있도록 해보세요.'
-      4-5 Bee Conditionals 8_instruction: '"꿀을 만드는지 확인" 함수의 안쪽을 완성해 주세요. 분홍 꽃의 꽃꿀이 3, 2, 1 인 경우에는 모든 꽃꿀을 모으고, 그 후에 앞으로 이동해서 꿀을 만들면 됩니다.'
+      4-5 Bee Conditionals 6_instruction: '이 자주색 꽃에는 꽃꿀이 1, 2, 3개 있을 수 있습니다. 이 "만약/아니면" 블록은 다른 "만약/아니면" 블록과 결합되어서, "만약/(아닌데 만약/아니면)" 명령을 만들어낼 수 있습니다. 꽃꿀의 양을 모르는 경우에도 꽃꿀을 모두 얻을 수 있게 해보세요.'
+      4-5 Bee Conditionals 7_instruction: '자주색 꽃은 꽃꿀이 3, 2, 1 중 하나입니다. "자주색 꽃 확인" 함수를 완성하고 이용해서 꽃의 모든 꽃꿀들을 모을 수 있도록 해보세요.'
+      4-5 Bee Conditionals 8_instruction: '"꽃을 확인하고 꿀 만들기" 함수의 내부를 완성해 주세요. 자주색 꽃의 꽃꿀이 3, 2, 1 인 경우에는 모든 꽃꿀을 모으고, 그 후에 앞으로 이동해서 꿀을 만들면 됩니다.'
       4-5 Bee Conditionals Assessment 1_instruction: |
         형성평가: 이 코드에는 오류가 있습니다.
         "꽃꿀을 모으거나 꿀 만들기" 함수를 완성해서, 모든 꽃꿀을 모으거나 꿀을 만들도록 만들어 주세요. 분홍 꽃에는 3, 2, 1 개의 꽃꿀이 있을 수 있습니다.
@@ -554,7 +512,6 @@ ko:
       4-5 Maze Conditionals 1_instruction: |
         "반복 ~할 때까지"블록을 이용해서,
         좀비를 해바라기로 이동시켜주세요.
-      4-5 Maze Conditionals 10_instruction: 더 복잡한 미로를 풀 수 있도록 3개의 블록만 더 더해 주실 수 있으세요? 그렇게만 된다면, 얼마나 멀던지 상관없이 구부러진 길에서 돌아갈 수 있을 것 같아요.
       4-5 Maze Conditionals 2_instruction: |
         "반복 ~할 때까지"블록을 이용해서,
         좀비를 해바라기로 이동시켜주세요.
@@ -581,7 +538,7 @@ ko:
       4-5 Nested Loops 2_instruction: |
         이번에는 반복을 다른 반복에 넣어서 10개의 삼각형을 그려보세요.
         이러한 것을 중첩 반복이라고 합니다. 힌트: 360도를 돌며 10개의 삼각형을 그려야 합니다.  
-      4-5 Nested Loops 3_instruction: "다른 반복 안에 시작 코드를 중첩시켜 넣어서 해를 만들어 주세요. 이러한 것을 중첩 반복이라고 합니다.\r\n"
+      4-5 Nested Loops 3_instruction: "다른 반복 안에 시작 코드를 중첩시켜 넣어서 해를 만들어 주세요. 이러한 것을 중첩 반복이라고 합니다.\\r\n"
       4-5 Nested Loops 5_instruction: 주어진 코드를 반복시켜서 풍차를 만들어 주세요.
       4-5 Nested Loops 6_instruction: 삼각형 코드를 반복시켜서 육각형을 그려 주세요.
       4-5 Nested Loops 7_instruction: '이 디자인을 10번 반복시켜주세요. 한 번 반복하고나서 얼마나 회전해야 할까요? (힌트: 360을 10으로 나누면 얼마일까요?)'
@@ -625,6 +582,11 @@ ko:
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
       App Lab test_instruction: 검사
+      Applab allthethings onRecordEvent_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
@@ -646,7 +608,7 @@ ko:
         Now nest this loop inside another loop
         to draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
         complete a 360 degree rotation.  
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\r\n"
+      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\\r\n"
       Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
       Artist - Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the
@@ -933,7 +895,7 @@ ko:
         function called cube - this function should take in a Number and return that
         number to the power of 3. Make sure to write two example cases! When you're
         done, use your new function to calculate cube(7).
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function sales which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -946,7 +908,7 @@ ko:
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
-      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Calc Rocket 1_instruction: |
         In the last puzzle you wrote a contract for the
         function rocket-height that states it has a range of Number, domain of Number,
@@ -1088,9 +1050,9 @@ ko:
       Course 4 Artist 1_instruction: |
         상자를 그릴 수 있도록 도와주세요.
         (각 선의 길이는 200 픽셀입니다.) 
-      Course 4 Artist 10_instruction: "힌트를 다시 보려면 여기를 눌러보세요!\r\r\n재미있는 모양을 위한 코드가 있습니다. 한 번 실행할 때마다 회전시키면 어떤 일이 일어날까요? 이 모양의 각도는 420도까지 가능하고, 실행할 때마다 화가가 바라보는 방향이 바뀔 것입니다. 그리고 그 각도는 정확히 60도 입니다."
+      Course 4 Artist 10_instruction: "힌트를 다시 보려면 여기를 눌러보세요!\\r\\r\n재미있는 모양을 위한 코드가 있습니다. 한 번 실행할 때마다 회전시키면 어떤 일이 일어날까요? 이 모양의 각도는 420도까지 가능하고, 실행할 때마다 화가가 바라보는 방향이 바뀔 것입니다. 그리고 그 각도는 정확히 60도 입니다."
       Course 4 Artist 11_instruction: 자 이제 도전해보세요! 이전에 보았던 블록들만 사용해서 만들 수 있는 디자인이 있습니다. 어떻게 하면 똑같이 만들 수 있을까요? 실패하더라도 계속 도전해 보세요. 한 번에 성공하는 사람은 거의 없습니다. 힌트가 필요하다고요? 여기를 눌러보세요!
-      Course 4 Artist 12_instruction: "멋진 디자인을 위한 도움말이나 힌트가 필요하면? 여기를 클릭하세요!\r\n\r\n아니면, 자유롭게 디자인해 보세요!"
+      Course 4 Artist 12_instruction: "멋진 디자인을 위한 도움말이나 힌트가 필요하면? 여기를 클릭하세요!\\r\n\\r\n아니면, 자유롭게 디자인해 보세요!"
       Course 4 Artist 13_instruction: 계속 하고 있나요? 빈 캔버스가 있습니다. 마음대로 그려보세요.
       Course 4 Artist 2_instruction: 이 코드를 반복시켜서 회색 사각형을 그려주세요.
       Course 4 Artist 20_instruction: 계속 하고 있나요? 빈 캔버스가 있습니다. 마음대로 그려보세요.
@@ -1102,10 +1064,10 @@ ko:
         이번에는 반복을 다른 반복에 넣어서 10개의 삼각형을 그려보세요.
         이러한 것을 중첩 반복이라고 합니다. 힌트: 360도를 돌며 10개의 삼각형을 그려야 합니다.  
       Course 4 Artist 8_instruction: 이 코드 블록을 여러번 반복시켜 해를 그려보세요.
-      Course 4 Artist 8a_instruction: "이 모양이 기억이 나나요? 이제 처음에 아무 블록들이 없는 상태로 만들어내야 합니다!\r\n힌트: 360도 안에 3개의 삼각형들이 있습니다... 360 안에 3이 몇 번이나 들어갈 수 있을까요?"
+      Course 4 Artist 8a_instruction: "이 모양이 기억이 나나요? 이제 처음에 아무 블록들이 없는 상태로 만들어내야 합니다!\\r\n힌트: 360도 안에 3개의 삼각형들이 있습니다... 360 안에 3이 몇 번이나 들어갈 수 있을까요?"
       Course 4 Artist 9_instruction: '이 디자인을 10번 반복 시키면서, 한 번 그릴 때마다 회전시켜보세요. 얼마나 회전 시켜야 하는지에 대한 힌트: 360을 10으로 나누면?'
-      Course 4 Artist Binary 1_instruction: "여기에 1, 0 로만 이루어진 문자열을 입력해서, 화가를 왼쪽에서 오른쪽으로, 위에서 아래로 움직이는 함수가 있습니다. 화가는 1을 보면 사각형을 채우고, 0이면 무시할 것입니다. \r\n\r\n이 코드를 실행시킨 후, 화가가 2진 정보를 이용해서 이 패턴을 그려내는 것을 살펴보세요."
-      Course 4 Artist Binary 1a_instruction: "여기에 1, 0 로만 이루어진 문자열을 입력해서, 화가를 왼쪽에서 오른쪽으로, 위에서 아래로 움직이는 함수가 있습니다. 화가는 1을 보면 사각형을 채우고, 0이면 무시할 것입니다. \r\n\r\n이 코드를 실행시킨 후, 화가가 2진 정보를 이용해서 이 패턴을 그려내는 것을 살펴보세요."
+      Course 4 Artist Binary 1_instruction: "여기에 1, 0 로만 이루어진 문자열을 입력해서, 화가를 왼쪽에서 오른쪽으로, 위에서 아래로 움직이는 함수가 있습니다. 화가는 1을 보면 사각형을 채우고, 0이면 무시할 것입니다. \\r\n\\r\n이 코드를 실행시킨 후, 화가가 2진 정보를 이용해서 이 패턴을 그려내는 것을 살펴보세요."
+      Course 4 Artist Binary 1a_instruction: "여기에 1, 0 로만 이루어진 문자열을 입력해서, 화가를 왼쪽에서 오른쪽으로, 위에서 아래로 움직이는 함수가 있습니다. 화가는 1을 보면 사각형을 채우고, 0이면 무시할 것입니다. \\r\n\\r\n이 코드를 실행시킨 후, 화가가 2진 정보를 이용해서 이 패턴을 그려내는 것을 살펴보세요."
       Course 4 Artist Binary 2_instruction: 이 이미지를 그려내기 위해서, 어떤 2진 문자열이 8번 반복시켜 줄까요?
       Course 4 Artist Binary 3_instruction: 3자리의 2진 문자열을 반복시켜서 이 패턴을 그려주세요.
       Course 4 Artist Binary 4_instruction: 각 2진 문자는 이 그림의 한 줄을 의미합니다. 2진 문자열을 재배치해서 찡그린 얼굴 모양을 웃는 얼굴 모양으로 만들어 주세요.
@@ -1113,11 +1075,11 @@ ko:
       Course 4 Artist Binary 6_instruction: 이 이미지를 그리기 위해 반복하는 것들 중에서 가장 짧은 2진 문자열은 어떤 것 일까요?
       Course 4 Artist Binary 7_instruction: 이 그림을 마무리 해보세요.
       Course 4 Artist Binary Free Play 2_instruction: '자유 플레이: 빈 캔버스가 있습니다. 마음대로 재미있게 그려보세요!'
-      Course 4 Artist Binary Free Play 2a_instruction: "좀 더 높은 해상도로 표현할 수 있는 캔버스가 여기 있습니다. - 16 픽셀 * 16 픽셀!\r\n\r\n2진 비트 문자열로 어떤 것이 그려지는 지 살펴보세요."
+      Course 4 Artist Binary Free Play 2a_instruction: "좀 더 높은 해상도로 표현할 수 있는 캔버스가 여기 있습니다. - 16 픽셀 * 16 픽셀!\\r\n\\r\n2진 비트 문자열로 어떤 것이 그려지는 지 살펴보세요."
       Course 4 Artist Binary Free Play 2b_instruction: 여기를 눌러 힌트를 살펴보세요.
       Course 4 Artist Binary Free Play_instruction: '자유 플레이: 2진 문자열을 이용해서 자유롭게 그려보세요!'
-      Course 4 Artist Binary pre1_instruction: "2진은 단지 서로 다른 2가지 만 가지고 정보를 표현하는 방법입니다. \"off\"(또는 0 으로 표현) 과 \"on\"(또는 1로 표현) 만 사용한다고 해봅시다.\r\n\r\n주어진 \"픽셀판\"이라는 격자를 사용하면, 그 위를 이동하다가 특정 사각형들에서만 회전이 가능하게 해서 디자인들을 만들 수 있습니다. 화가가 첫 번째 줄에 2진수 표현으로 \"01010101\"을 그리도록 해보세요."
-      Course 4 Artist Binary ryan_instruction: "2진은 단지 서로 다른 2가지 만 가지고 정보를 표현하는 방법입니다. \"off\"(또는 0 으로 표현) 과 \"on\"(또는 1로 표현) 만 사용한다고 해봅시다.\r\n\r\n주어진 \"픽셀판\"이라는 격자를 사용하면, 그 위를 이동하다가 특정 사각형들에서만 회전이 가능하게 해서 디자인들을 만들 수 있습니다. 화가가 첫 번째 줄에 2진수 표현으로 \"01010101\"을 그리도록 해보세요."
+      Course 4 Artist Binary pre1_instruction: "2진은 단지 서로 다른 2가지 만 가지고 정보를 표현하는 방법입니다. \"off\"(또는 0 으로 표현) 과 \"on\"(또는 1로 표현) 만 사용한다고 해봅시다.\\r\n\\r\n주어진 \"픽셀판\"이라는 격자를 사용하면, 그 위를 이동하다가 특정 사각형들에서만 회전이 가능하게 해서 디자인들을 만들 수 있습니다. 화가가 첫 번째 줄에 2진수 표현으로 \"01010101\"을 그리도록 해보세요."
+      Course 4 Artist Binary ryan_instruction: "2진은 단지 서로 다른 2가지 만 가지고 정보를 표현하는 방법입니다. \"off\"(또는 0 으로 표현) 과 \"on\"(또는 1로 표현) 만 사용한다고 해봅시다.\\r\n\\r\n주어진 \"픽셀판\"이라는 격자를 사용하면, 그 위를 이동하다가 특정 사각형들에서만 회전이 가능하게 해서 디자인들을 만들 수 있습니다. 화가가 첫 번째 줄에 2진수 표현으로 \"01010101\"을 그리도록 해보세요."
       Course 4 Artist For  Functions 10_instruction: '조금 더 나아가 봅시다. "사각형 한 변 그리기" 함수를 이용해서 별 모양을 만들어보세요. 행운을 빕니다!'
       Course 4 Artist For  Functions 11_instruction: '조금 더 나아가 봅시다. "사각형 한 변 그리기" 함수를 이용해서 별 모양을 만들어보세요. 행운을 빕니다!'
       Course 4 Artist For Loops 1_instruction: '이 삼각형은 너비가 50 픽셀입니다. 힌트: 반복 블록을 1개 사용하세요.'
@@ -1125,7 +1087,7 @@ ko:
         자유시간입니다!
         여러분이 배운 블록들을 사용해서 원하는 것을 그려보세요.
       Course 4 Artist For Loops 11_instruction: '이전 스테이지에서 어떤 모양의 변의 길이를 조절하기 위해 사용했던 밴수에 대해서 생각해 보세요. 이번에는 "카운터" 변수라는 것을 이용해서 같은 작업을 해 보도록 하겠습니다. 이 패턴은 삼각형으로 시작하고, 한 변을 붙이면서 10각형(10개의 변을 가진 다각형) 을 그립니다. 각 변의 길이는 100 픽셀 입니다. 힌트: 360 나누기 어떤 모양의 변의 개수는 회전시켜야 하는 각도 입니다.'
-      Course 4 Artist For Loops 11a_instruction: "자 이제 모두 함께 사용해 봅시다! \"반복(~인 동안)\"과 \"카운터\"를 이용해서, 앞의 것보다 2개 더 많은 변을 가지고 있는 각각의 도형들을 만들어보세요. 각 변의 길이는 각 다각형의 변의 개수의 10배이어야 합니다.\r\n\r\n아주 적은 코드가 미리 주어져 있습니다."
+      Course 4 Artist For Loops 11a_instruction: "자 이제 모두 함께 사용해 봅시다! \"반복(~인 동안)\"과 \"카운터\"를 이용해서, 앞의 것보다 2개 더 많은 변을 가지고 있는 각각의 도형들을 만들어보세요. 각 변의 길이는 각 다각형의 변의 개수의 10배이어야 합니다.\\r\n\\r\n아주 적은 코드가 미리 주어져 있습니다."
       Course 4 Artist For Loops 12_instruction: |
         꽤 멋져 보이지만, 각 모양을 이전 모양에 붙여서 그리고 싶습니다.
         각 선의 길이는 20 픽셀입니다. 각 모양을 그린 후에는 40 픽셀 만큼 점프를 뛰는
@@ -1149,26 +1111,26 @@ ko:
       Course 4 Artist For Loops 6_instruction: '자유 플레이: 점점 커지는 도형들을 반복(~동안) 을 이용해 자유롭게 만들어 보세요.'
       Course 4 Artist For Loops 6a_instruction: 이 레벨을 완료하기 위해서 지난 번 코드에서 3가지만 수정하면 됩니다.
       Course 4 Artist For Loops 7_instruction: '알고리즘에서 반복 구조 안에 들어있는 "이동하기" 와 "돌기" 블록들은 그대로 두고, "반복 3회" 만 지우면 어떻게 될까요? 이 나선형 삼각형에서 각 선분들은 그 이전 선분보다 20 픽셀 씩 더 깁니다.'
-      Course 4 Artist For Loops 8_instruction: "이전 그림에서 1가지만 바꾸면 이 그림을 만들 수 있습니다. 어떤 것을 바꾼 것인지 찾아낼 수 있나요?\r\n\r\n힌트: 뭔가 제거하면 됩니다!"
+      Course 4 Artist For Loops 8_instruction: "이전 그림에서 1가지만 바꾸면 이 그림을 만들 수 있습니다. 어떤 것을 바꾼 것인지 찾아낼 수 있나요?\\r\n\\r\n힌트: 뭔가 제거하면 됩니다!"
       Course 4 Artist For Loops 8a_instruction: 이전 이미지에서 1가지만 바꾸면 이 이미지를 만들 수 있습니다. 어떤 것을 바꾼 것인지 찾아낼 수 있나요?
       Course 4 Artist For Loops 9_instruction: 나선 구조를 만들 수 있나요? 1 픽셀 부터 75 픽셀까지 한 번에 1 픽셀씩 증가시키면서 이동해 보세요.
-      Course 4 Artist For Loops Challenge_instruction: "이 이미지를 만들어내기 위해서 어떤 것들을 어떻게 써야 할 지 생각해 낼 수 있을까요?\r\n\r\n힌트가 필요한가요? 여기를 클릭하세요."
-      Course 4 Artist For Loops inspire_instruction: "멋진 자유 플레이: 여러분은 이제 이런 패턴을 만들기 위해 필요한 모든 것들을 배웠습니다! 이 그림이 여러분이 느끼기에 멋지다면, 비슷한 것을 한 번 만들어 보세요. 아니면, 만들고 싶은 것을 자유롭게 만들어도 됩니다.\r\n\r\n힌트가 필요한가요? 여기를 클릭하세요."
+      Course 4 Artist For Loops Challenge_instruction: "이 이미지를 만들어내기 위해서 어떤 것들을 어떻게 써야 할 지 생각해 낼 수 있을까요?\\r\n\\r\n힌트가 필요한가요? 여기를 클릭하세요."
+      Course 4 Artist For Loops inspire_instruction: "멋진 자유 플레이: 여러분은 이제 이런 패턴을 만들기 위해 필요한 모든 것들을 배웠습니다! 이 그림이 여러분이 느끼기에 멋지다면, 비슷한 것을 한 번 만들어 보세요. 아니면, 만들고 싶은 것을 자유롭게 만들어도 됩니다.\\r\n\\r\n힌트가 필요한가요? 여기를 클릭하세요."
       Course 4 Artist Functions 1_instruction: 반복을 이용해서 한 변의 길이가 100 인 사각형을 만들어 보세요.
       Course 4 Artist Functions 10_instruction: 사각형 위에 꼭 맞는 삼각형을 그리기 위해서 어떤 블록을 추가해야 할까요?
       Course 4 Artist Functions 11_instruction: '큐브를 그리는 코드를 확인해 보세요 - "큐브 그리기"라는 이름의 함수 안에 넣어주세요.'
       Course 4 Artist Functions 12.1_instruction: '자 이제 "8각형 그리기 20" 이라는 함수를 만들어보세요. 8각형의 각 변의 길이는 20 픽셀입니다.'
       Course 4 Artist Functions 12_instruction: 직선을 그리기 위해서 사각형 함수를 반복시켜보세요.
-      Course 4 Artist Functions 13.1_instruction: "자 이제, \"오른쪽 위로 점프\"라는 함수를 만들어보세요. 이 함수는 8각형 위에 있는 화가가 오른쪽 위로 움직이게 해서 패턴을 다 그릴 수 있게 해줄 것입니다.\r\n\r\n힌트: 여러분이 오른쪽 위로 가려면? 패턴 위에서 8각형의 3/8만큼 점프하면 될 것입니다."
+      Course 4 Artist Functions 13.1_instruction: "자 이제, \"오른쪽 위로 점프\"라는 함수를 만들어보세요. 이 함수는 8각형 위에 있는 화가가 오른쪽 위로 움직이게 해서 패턴을 다 그릴 수 있게 해줄 것입니다.\\r\n\\r\n힌트: 여러분이 오른쪽 위로 가려면? 패턴 위에서 8각형의 3/8만큼 점프하면 될 것입니다."
       Course 4 Artist Functions 13_instruction: '새로운 "사각형의 한 변 그리기" 함수를 살펴보세요. 함수가 어떻게 만들어졌는지 구조를 살펴보세요. 다음 퍼즐을 하기 위해서는 "실행"을 누르면 됩니다.'
       Course 4 Artist Functions 14.1_instruction: '자 이제, "오른쪽 위로 점프" 함수를 만들어서 이 패턴을 완성할 수 있도록, 화가를 8각형의 오른쪽 위로 이동시켜보세요.'
       Course 4 Artist Functions 14_instruction: '잘 했습니다! 이제 새로운 "사각형의 한 변 그리기" 함수를 이용해서 사각형을 그려보세요. 사각형의 한 변의 길이는 40 픽셀입니다.'
       Course 4 Artist Functions 15_instruction: '조금 더 배워 봅시다. "사각형의 한 변 그리기" 함수를 이용해서 별 모양을 그릴 수 있을까요? 행운을 빕니다! 힌트: 144도를 돌아야 합니다.'
       Course 4 Artist Functions 2_instruction: '20 픽셀 만큼 씩 떨어져 있는 3개의 사각형을 그려보세요. 힌트: 각 사각형의 크기는 100 픽셀입니다.'
-      Course 4 Artist Functions 3_instruction: "\"사각형 그리기\" 함수 블록을 이용해서 이 그림을 만들어보세요. 힌트: 각 사각형들은 120 픽셀 만큼 씩 떨어져 있습니다.\r\n"
+      Course 4 Artist Functions 3_instruction: "\"사각형 그리기\" 함수 블록을 이용해서 이 그림을 만들어보세요. 힌트: 각 사각형들은 120 픽셀 만큼 씩 떨어져 있습니다.\\r\n"
       Course 4 Artist Functions 4_instruction: '직접 "함수 블록"을 만들 준비가 되었나요? 도구상자에서 "함수" 블록을 클릭한 후에 "삼각형 그리기" 로 함수 이름을 바꾸세요. 그 다음에 이전에 반복 블록을 이용해서 삼각형을 만들었던 것과 같이 삼각형을 만드세요. 그 다음에 오른쪽 위의 모서리에 있는 저장 후 닫기 를 누르세요. 힌트: 100 픽셀 크기의 삼각형을 만드세요. 행운을 빌어요!'
       Course 4 Artist Functions 5 OLD_instruction: '집을 그리기 위해서 2개의 함수를 사용해 보세요. - 집을 제대로 그리기 위해서, 이 코드에서 어떤 부분을 고쳐야 할까요?'
-      Course 4 Artist Functions 5_instruction: "\"사각형 그리기\" 함수 블록을 이용해서 이 그림을 만들어보세요. 힌트: 각 사각형들은 120 픽셀 만큼 씩 떨어져 있습니다.\r\n"
+      Course 4 Artist Functions 5_instruction: "\"사각형 그리기\" 함수 블록을 이용해서 이 그림을 만들어보세요. 힌트: 각 사각형들은 120 픽셀 만큼 씩 떨어져 있습니다.\\r\n"
       Course 4 Artist Functions 6_instruction: 사각형 위에 꼭 맞는 삼각형을 그리기 위해서 어떤 블록을 추가해야 할까요?
       Course 4 Artist Functions 7_instruction: 사각형 함수를 이용해서 한 줄의 사각형을 그려보세요. 각 사각형의 한 변의 길이는 40 픽셀입니다.
       Course 4 Artist Functions 8_instruction: |
@@ -1181,7 +1143,7 @@ ko:
       Course 4 Artist Functions inspire_instruction: |
         여기를 눌러 멋진 그림을
         다시 살펴보세요.
-      Course 4 Artist Inspire_instruction: "멋진 디자인을 위한 도움말이나 힌트가 필요하면? 여기를 클릭하세요!\r\n\r\n아니면, 자유롭게 디자인해 보세요!"
+      Course 4 Artist Inspire_instruction: "멋진 디자인을 위한 도움말이나 힌트가 필요하면? 여기를 클릭하세요!\\r\n\\r\n아니면, 자유롭게 디자인해 보세요!"
       Course 4 Artist Params 1_instruction: 한 변의 길이가 50 픽셀인 사각형을 그리는 함수를 수정해보세요.
       Course 4 Artist Params 10_instruction: |
         함수 안에서, 다른 함수를 불러 사용할 수 있습니다!
@@ -1245,16 +1207,16 @@ ko:
       Course 4 Artist Vars 12_instruction: |
         자 이제 "면" 변수를 살펴보세요.
         5. 이 알고리즘에 더 많은 면 개수를 추가하면 할 수록, 전체 패턴이 더 커집니다! 그리고 "길이"라는 변수가 더 있습니다. 그리고 이제 "앞으로 이동" 블록이 없어도 할 수 있습니다. 모양을 만들려면 "길이" 변수를 75로 설정하세요.
-      Course 4 Artist Vars 13_instruction: "전체 패턴을 화면에 맞추기 위해서는, 도형에 여러 개의 변들이 있을 때 각 변들의 길이를 줄여야 합니다.\n\r\n이 멋진 패턴을 만들어낸 알고리즘을 새롭게 만들어보세요. 각각의 모양을 정확히 맞추기 위해서 \"변\" 변수와 함께 수학 블록을 사용해서, \"길이\" 변수의 값을 계산할 수 있도록 하면 됩니다. 각 다각형의 둘레는 300 픽셀입니다.\r\n힌트가 필요한가요? 여기를 눌러보세요."
-      Course 4 Artist Vars 14_instruction: "자유 플레이: 확인해보세요! 여러분의 알고리즘은 반복 구조가 한 번 이상 중첩되어있습니다. 두 개의 변수 값들을 바꾸어 멋진 패턴들을 만들어보면서 실험해 보세요.\r\n\r\n더 멋지게 만들어 보려면, 색을 사용해 보세요!\n반복 구조들 안에 랜덤색을 사용해서 디자인이 어떻게 변화 되는지 살펴보세요."
+      Course 4 Artist Vars 13_instruction: "전체 패턴을 화면에 맞추기 위해서는, 도형에 여러 개의 변들이 있을 때 각 변들의 길이를 줄여야 합니다.\n\\r\n이 멋진 패턴을 만들어낸 알고리즘을 새롭게 만들어보세요. 각각의 모양을 정확히 맞추기 위해서 \"변\" 변수와 함께 수학 블록을 사용해서, \"길이\" 변수의 값을 계산할 수 있도록 하면 됩니다. 각 다각형의 둘레는 300 픽셀입니다.\\r\n힌트가 필요한가요? 여기를 눌러보세요."
+      Course 4 Artist Vars 14_instruction: "자유 플레이: 확인해보세요! 여러분의 알고리즘은 반복 구조가 한 번 이상 중첩되어있습니다. 두 개의 변수 값들을 바꾸어 멋진 패턴들을 만들어보면서 실험해 보세요.\\r\n\\r\n더 멋지게 만들어 보려면, 색을 사용해 보세요!\n반복 구조들 안에 랜덤색을 사용해서 디자인이 어떻게 변화 되는지 살펴보세요."
       Course 4 Artist Vars 2_instruction: '이번에는 "앞으로 150 만큼 이동"을 사용하는 대신에 "이동" 블록이 "길이"라는 변수에 저장되어있는 값을 이용합니다. 삼각형을 그리기 위해서 "길이"를 150 으로 입력해 보세요.'
       Course 4 Artist Vars 3_instruction: |
         여기에 사각형을 그릴 수 있는 반복 구조가 있는데, 뭔가 빠진 것 같습니다.
         각 변의 길이를 얼마로 해야할지 가늠하기 위해서 "길이" 변수를 사용하는 함수를 수정해 주세요. 
       Course 4 Artist Vars 4_instruction: '이번에는 너비의 2배 만큼 높이를 가진 사각형을 만들어보세요. "너비"라는 변수를 100 으로 설정하면 됩니다. 수학 블록들을 이용해 코드를 완성해 주세요.'
       Course 4 Artist Vars 5_instruction: '"면" 변수를 이용해서 반복할 횟수를 설정하고 실행시켜보세요.'
-      Course 4 Artist Vars 6_instruction: "모든 정 다각형들을 만들 수 있는 코드가 있습니다.\n그 값이 4 로 입력되어있는 새 변수가 있습니다. (수학 블록과 함께) 면 수 변수를 사용해서, 다각형의 면들이 몇 개인지에 상관없이 자동으로 회전시켜보세요.\r\n\r\n여기를 눌러 힌트를 다시 살펴보세요."
-      Course 4 Artist Vars 7_instruction: "이전 퍼즐을 통해서 배웠던 것을 이용하면 됩니다. \"면\" 변수를 사용해서 육각형을 만들어보세요.\r\n\r\n변수 값 하나만 변화시키면, 삼각형, 사각형, 오각형,..., 팔각형을 모두 만들 수 있습니다."
+      Course 4 Artist Vars 6_instruction: "모든 정 다각형들을 만들 수 있는 코드가 있습니다.\n그 값이 4 로 입력되어있는 새 변수가 있습니다. (수학 블록과 함께) 면 수 변수를 사용해서, 다각형의 면들이 몇 개인지에 상관없이 자동으로 회전시켜보세요.\\r\n\\r\n여기를 눌러 힌트를 다시 살펴보세요."
+      Course 4 Artist Vars 7_instruction: "이전 퍼즐을 통해서 배웠던 것을 이용하면 됩니다. \"면\" 변수를 사용해서 육각형을 만들어보세요.\\r\n\\r\n변수 값 하나만 변화시키면, 삼각형, 사각형, 오각형,..., 팔각형을 모두 만들 수 있습니다."
       Course 4 Artist Vars 8_instruction: '자유 플레이: 이 도형의 면의 수로 실험해 보세요. 면의 개수가 어떻게 바뀌든지 상관없이, 도형의 크기는 같아지도록 알고리즘을 수정해 주세요. 힌트: 처음 시작하는 길이를 면의 개수로 나누면, 면의 개수가 많아지는 만큼 각 면의 길이는 짧아집니다.'
       Course 4 Artist Vars 9_instruction: '삼각형을 그리기 위해서 면의 수를 직접 사용하지 않고, "면" 변수를 사용하는 이 알고리즘을 수정해 보세요. "면 설정" 블록을 사용해야 합니다.'
       Course 4 Bee 1_instruction: |
@@ -1384,8 +1346,8 @@ ko:
       Course 4 Play Lab Params 1_instruction: |
         "점프" 함수는 주 캐릭터가 100 픽셀 만큼 점프하도록 해줍니다.
         점프 함수를 이용해서 모든 깃발들을 모아보세요.
-      Course 4 Play Lab Params 10_instruction: "여러분을 위해서 함수를 하나더 추가했습니다.\r\n\r\n\"if\" 명령어를 이용해서 \"player_score\" 가 일정 점수를 넘으면 \"level_up\" 함수가 실행되도록 프로그램을 만들어 보세요.\r\n\r\n예시: \"player_score\" > 6\r\n\r\n게임을 해보고, 레벨4를 통과해서 다음 퍼즐로 가보세요. "
-      Course 4 Play Lab Params 2_instruction: "지금 점프로는 닿을 수 없을 만큼 아주 높은 곳에 깃발들이 있습니다.\n\"위\", \"아래\" 화살표를 이용해 멀티 점프가 가능하게 해보세요. \r\n\r\n\"높이\" 라는 매개변수를 점프 함수에 추가해야 합니다. \"위\"는 강아지를 200 픽셀 만큼 점프하게 만들고, \"아래\"는 100 픽셀 만큼 점프하도록 해야 합니다.\n\r\n\r\n힌트: 점프 함수를 수정해서 \"높이\" 매개변수를 사용할 수 있도록 해야합니다."
+      Course 4 Play Lab Params 10_instruction: "여러분을 위해서 함수를 하나더 추가했습니다.\\r\n\\r\n\"if\" 명령어를 이용해서 \"player_score\" 가 일정 점수를 넘으면 \"level_up\" 함수가 실행되도록 프로그램을 만들어 보세요.\\r\n\\r\n예시: \"player_score\" > 6\\r\n\\r\n게임을 해보고, 레벨4를 통과해서 다음 퍼즐로 가보세요. "
+      Course 4 Play Lab Params 2_instruction: "지금 점프로는 닿을 수 없을 만큼 아주 높은 곳에 깃발들이 있습니다.\n\"위\", \"아래\" 화살표를 이용해 멀티 점프가 가능하게 해보세요. \\r\n\\r\n\"높이\" 라는 매개변수를 점프 함수에 추가해야 합니다. \"위\"는 강아지를 200 픽셀 만큼 점프하게 만들고, \"아래\"는 100 픽셀 만큼 점프하도록 해야 합니다.\n\\r\n\\r\n힌트: 점프 함수를 수정해서 \"높이\" 매개변수를 사용할 수 있도록 해야합니다."
       Course 4 Play Lab Params 3_instruction: |
         점프 함수에 다른 매개 변수를 더 추가해서, 다른 캐릭터들도 사용할 수 있게 되었습니다.
         각각의 캐릭터들은 1부터 시작되는 수로 나타내져 있습니다.
@@ -1397,9 +1359,9 @@ ko:
         "순찰" 함수에 "캐릭터" 매개변수를 추가해서, 원하는 캐릭터를 화면에 나타낼 수 있도록 해보세요.
         캐릭터들은 1, 2, 3 으로 선택할 수 있도록 해주세요.
       Course 4 Play Lab Params 6_instruction: '"순찰" 함수에 "속도" 매개변수를 더 추가해 보세요. 다른 캐릭터들이 깃발을 잡기 전에 펭귄이 깃발들을 잡을 수 있도록 "속도" 매개변수를 "속도 설정" 블록에 사용하세요.'
-      Course 4 Play Lab Params 7_instruction: "자 이제 즐겨보세요. 주어진 코드가 어떻게 동작하게 될지 한 블록씩 살펴보세요. \r\n\r\n살펴본 다음에, 강아지 캐릭터를 방향키로 움직여 깃발을 모두 모아보세요."
+      Course 4 Play Lab Params 7_instruction: "자 이제 즐겨보세요. 주어진 코드가 어떻게 동작하게 될지 한 블록씩 살펴보세요. \\r\n\\r\n살펴본 다음에, 강아지 캐릭터를 방향키로 움직여 깃발을 모두 모아보세요."
       Course 4 Play Lab Params 8_instruction: '"캐릭터가 닿으면" 블록을 이용해서, 강아지 캐릭터다 다른 캐릭터들에 닿으면, 처음의 가장 위쪽의 가장 왼쪽으로 이동되도록 해 보세요.'
-      Course 4 Play Lab Params 9_instruction: "이전 단계에서 봤던 게임입니다만, 대부분의 코드가 숨겨져있습니다. 여기에 \"score_points\" 함수가 있습니다.\r\n\r\n함수를 수정해서 \"points\" 매개변수를 \"player_score\"의 변수로 추가해 주세요.\r\n\r\n\"play_score\" 변수는 강아지가 고양이에게 하트를 붙일 때마다 증가하고, 고양이가 강아지에게 하트를 붙일 때마다 감소해야합니다.\r\n\r\n참고:\n\"실행\"을 눌러 실행해 보세요. 강아지가 6 포인트를 얻으면 다음 퍼즐로 갈 수 있습니다. "
+      Course 4 Play Lab Params 9_instruction: "이전 단계에서 봤던 게임입니다만, 대부분의 코드가 숨겨져있습니다. 여기에 \"score_points\" 함수가 있습니다.\\r\n\\r\n함수를 수정해서 \"points\" 매개변수를 \"player_score\"의 변수로 추가해 주세요.\\r\n\\r\n\"play_score\" 변수는 강아지가 고양이에게 하트를 붙일 때마다 증가하고, 고양이가 강아지에게 하트를 붙일 때마다 감소해야합니다.\\r\n\\r\n참고:\n\"실행\"을 눌러 실행해 보세요. 강아지가 6 포인트를 얻으면 다음 퍼즐로 갈 수 있습니다. "
       Course 4 Play Lab Vars 1_instruction: |
         이번에는 코드를 작성할 필요가 없습니다. "실행"을 눌러 실행시켜보세요! 이번 게임에서,
         여러분은 고양이보다 더 많은 깃발을 모으기 위해 노력하는 강아지입니다. "아래" 방향키를 이용해서
@@ -1419,7 +1381,7 @@ ko:
         좋아요, 이제 점수 변수를 얻었습니다. 그런데 이제 어떻게 잘 사용할 수 있을까요?
         파이어볼로 적을 맞출 때마다 점수 변수를 붙이는 것은 어떨까요? "캐릭터 2가 물체에 닿을 때" 이벤트를 이용해서 파이어볼이 고양이에 닿을 때 점수를 갱신하도록 해보세요. 점수=점수+1 로 설정해서 점수를 올릴 수 있습니다.
         점수를 10 까지(한 번에 1 씩) 올려서 이 레벨을 통과해보세요.
-      Course 4 Play Lab Vars 6_instruction: "오른쪽 방향키를 이용해 하트를 맞춰보세요.\r\n\r\n이 게임에서는 어떻게 포인트를 올려야 할까요?\n강아지가 하트로 고양이를 맞출 때마다 \"점수\" 변수에 1씩 더해보세요.\n\"캐릭터 2가 물체에 닿으면\" 이벤트를 이용해 점수를 업데이트하면 됩니다. \"점수=점수+1\"로 설정해서\n변수의 값을 하나씩 올리면 됩니다. 점수를 10 까지(한 번에 1 씩) 올려서 이 레벨을 통과해보세요."
+      Course 4 Play Lab Vars 6_instruction: "오른쪽 방향키를 이용해 하트를 맞춰보세요.\\r\n\\r\n이 게임에서는 어떻게 포인트를 올려야 할까요?\n강아지가 하트로 고양이를 맞출 때마다 \"점수\" 변수에 1씩 더해보세요.\n\"캐릭터 2가 물체에 닿으면\" 이벤트를 이용해 점수를 업데이트하면 됩니다. \"점수=점수+1\"로 설정해서\n변수의 값을 하나씩 올리면 됩니다. 점수를 10 까지(한 번에 1 씩) 올려서 이 레벨을 통과해보세요."
       Course 4 Play Lab Vars 7_instruction: |
         좋아요. 이제 이 게임을 좀더 어렵게 만들어보세요. 강아지(캐릭터 1) 가 고양이(캐릭터 2) 가 발사한
         노란 하트를 맞으면, 점수를 잃어야 합니다. 10 포인트에서 시작하기 때문에 아주 어렵지는 않습니다.
@@ -1434,7 +1396,7 @@ ko:
         무한 반복을 사용해 점수의 값을 확인하세요 - 점수가 20 보다 크면 적(고양이) 이 사라지게 하세요.
         점수가 0 보다 작으면, 플레이어(강아지) 가 사라지게 해주세요.
         게임이 그렇게 잘 동작하면 "마침"을 눌러주세요.
-      Course 4 Play Lab Vars 9_instruction: "자유롭게 만들어보세요! 여기에는 지금까지 이 과정에서 사용했던 모든 변수들이 모두 있고,\r\n필요한 몇 가지가 더 있습니다.\r\n\r\n도구 상자에 블록들이 아주 많은데 적당히 분류해야할 것 같습니다!\n이제, 각 블록들을 적당한 카테고리로 묶어 두었습니다. 블록들을 충분히 살펴보세요.\n다 살펴본 이후에 반복 구조, 변수, 이벤트를 이용해 게임이나 이야기를 만들어보세요. \r\n\r\n힌트: 모든 명령들을 작업 공간에서 살펴보려면 스크롤해 내려보세요."
+      Course 4 Play Lab Vars 9_instruction: "자유롭게 만들어보세요! 여기에는 지금까지 이 과정에서 사용했던 모든 변수들이 모두 있고,\\r\n필요한 몇 가지가 더 있습니다.\\r\n\\r\n도구 상자에 블록들이 아주 많은데 적당히 분류해야할 것 같습니다!\n이제, 각 블록들을 적당한 카테고리로 묶어 두었습니다. 블록들을 충분히 살펴보세요.\n다 살펴본 이후에 반복 구조, 변수, 이벤트를 이용해 게임이나 이야기를 만들어보세요. \\r\n\\r\n힌트: 모든 명령들을 작업 공간에서 살펴보려면 스크롤해 내려보세요."
       Course 4 Play Lab Vars_instruction: |
         좋아요. 이제 게임의 마지막 단계를 만들어 보세요.
         - 플레이어가 승리(패) 하도록 설정해 보세요. 무한 반복을 이용해 점수 값을 확인하도록 하세요
@@ -1453,19 +1415,19 @@ ko:
         증가 값을 바꾸는 것도 좋지만, 아직도 일정 값 만큼 변화를 주어 카운팅하고 있습니다.(각 값들은 바로 이전 값에서 똑같은 값 만큼 변합니다.)
         이 반복 구조를 변화시키지 않고, 지수적으로 카운트를 올리고 싶다면 어떻게 할 수 있을까요?
         1, 4, 9, 16, 25 와 같이 (카운터의 제곱값으로) 카운트를 올릴 수는 없을까요?
-      Course 4 Play Labs For Loops 4a_instruction: "자, 이제 단계 7에서의 변수들과 \"카운터\" 변수를 이용해 마술 같은 일을 해봅시다.  \r\n\r\n이 퍼즐에서 강아지는 \"증가 값\"에 따라, 0 부터 1000 까지 카운트 할 것입니다.\n처음 \"증가 값\"을 10으로 시작하면 어떻게 되는지 살펴보세요."
+      Course 4 Play Labs For Loops 4a_instruction: "자, 이제 단계 7에서의 변수들과 \"카운터\" 변수를 이용해 마술 같은 일을 해봅시다.  \\r\n\\r\n이 퍼즐에서 강아지는 \"증가 값\"에 따라, 0 부터 1000 까지 카운트 할 것입니다.\n처음 \"증가 값\"을 10으로 시작하면 어떻게 되는지 살펴보세요."
       Course 4 Play Labs For Loops 5_instruction: |
         이전 단계에서는 제곱 씩 카운트 했었습니다. "카운트^2"을 "카운트^3"으로 바꾸어서
         세제곱으로 카운트하도록 해보세요.(1, 8, 27, 64, 125, 216, 343...)
-      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach one."
+      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\\r\n\\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\\r\n\\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\\r\n\\r\nRun the loop a couple of times, clicking Dog before\neach one."
       Course 4 Play Labs For Loops 6_instruction: |
         소수(prime) 는 1 또는 자기 자신으로만 나누어 떨어지는 수라는 것을 알고 있을 것입니다.
         "소수 판별" 함수를 이용해서 1부터 100까지의 자연수 중에서, 소수만 말하도록 해보세요.
-      Course 4 Play Labs For Loops 6a_instruction: "이번에도 강아지는 \"증가 값\" 이 사용되는 \"반복\" 을 이용해 카운트 하고 있습니다.\r\n\r\n자 그럼 이번에는 마법사를 추가해 넣어 보세요. 마법사를 클릭할 때마다 2만큼 커지도록 \"증가 값\"을 바꿔주세요."
+      Course 4 Play Labs For Loops 6a_instruction: "이번에도 강아지는 \"증가 값\" 이 사용되는 \"반복\" 을 이용해 카운트 하고 있습니다.\\r\n\\r\n자 그럼 이번에는 마법사를 추가해 넣어 보세요. 마법사를 클릭할 때마다 2만큼 커지도록 \"증가 값\"을 바꿔주세요."
       Course 4 Play Labs For Loops 7_instruction: For 반복을 사용해서 1, 4, 7, 10, 13, 16, 19, 22, 25 순서로 수를 말할 수 있게 해 주세요.
-      Course 4 Play Labs For Loops 7a_instruction: "이제 어딘가 도착했네요! \n강아지가 30 을 카운트하기 전에, 마법사를 클릭하는 횟수를 카운팅 할 수 있을까요? \r\n\r\n마법사를 클릭하면, \"클릭됨\" 변수의 값이 1씩 증가되도록 블록들을 추가시켜주세요. 이번에는 \"증가 값\"은 무시해도 됩니다.\r\n\r\n\"실행\"을 누르면 강아지가 카운트를 시작할 것입니다."
-      Course 4 Play Labs For Loops 8_instruction: "자 이제, 캐릭터들이 자기들이 카운트 하는 만큼씩 이동하도록 해보세요.\r\n\r\n강아지는 한 번에 카운트에 2 씩 더해 움직여야합니다.(카운트 + 2)\n고양이는 한 번에 2 배씩 카운트를 곱해 움직여야합니다.(카운트 * 2)\n펭귄은 한 번에 카운트를 제곱해 움직여야 합니다.(카운트 ^ 2)\n깃발에 가장 먼저 도착하는 것은 누구일까요?"
-      Course 4 Play Labs For Loops 8a_instruction: "게임을 마치려면 \"증가값\" 변수를 다시 사용해야 합니다! 이번 레벨을 통과하기 위해 사용해봅시다.\r\n\r\n1) 마법사가 클릭되는 횟수를 계속 검사합니다.\r\n2) 강아지의 카운트가 30이 되기 전에, 마법사의 클릭 횟수가 10 이상이 되면, 1 만큼 \"증가값\"을 올리고 다시 시작합니다.\r\n3) 강아지의 카운트가 30이 되었는데, 마법사의 클릭 횟수가 10 보다 작으면, 게임이 끝납니다."
+      Course 4 Play Labs For Loops 7a_instruction: "이제 어딘가 도착했네요! \n강아지가 30 을 카운트하기 전에, 마법사를 클릭하는 횟수를 카운팅 할 수 있을까요? \\r\n\\r\n마법사를 클릭하면, \"클릭됨\" 변수의 값이 1씩 증가되도록 블록들을 추가시켜주세요. 이번에는 \"증가 값\"은 무시해도 됩니다.\\r\n\\r\n\"실행\"을 누르면 강아지가 카운트를 시작할 것입니다."
+      Course 4 Play Labs For Loops 8_instruction: "자 이제, 캐릭터들이 자기들이 카운트 하는 만큼씩 이동하도록 해보세요.\\r\n\\r\n강아지는 한 번에 카운트에 2 씩 더해 움직여야합니다.(카운트 + 2)\n고양이는 한 번에 2 배씩 카운트를 곱해 움직여야합니다.(카운트 * 2)\n펭귄은 한 번에 카운트를 제곱해 움직여야 합니다.(카운트 ^ 2)\n깃발에 가장 먼저 도착하는 것은 누구일까요?"
+      Course 4 Play Labs For Loops 8a_instruction: "게임을 마치려면 \"증가값\" 변수를 다시 사용해야 합니다! 이번 레벨을 통과하기 위해 사용해봅시다.\\r\n\\r\n1) 마법사가 클릭되는 횟수를 계속 검사합니다.\\r\n2) 강아지의 카운트가 30이 되기 전에, 마법사의 클릭 횟수가 10 이상이 되면, 1 만큼 \"증가값\"을 올리고 다시 시작합니다.\\r\n3) 강아지의 카운트가 30이 되었는데, 마법사의 클릭 횟수가 10 보다 작으면, 게임이 끝납니다."
       Course 4 SCF 1_instruction: |
         4줄의 육각형들을 그리기 위해서 주어진 함수들을 사용해보세요.
         짝수 줄의 육각형들은 오른쪽으로 얼마나 이동되어 그려져 있을까요?
@@ -1489,7 +1451,7 @@ ko:
         (음수, 양수 모두 사용 가능하도록 만들면 됩니다.)
       Course 4 SCV 1_instruction: 설명을 다시 보려면 여기를 클릭하세요.
       Course 4 SCV 2_instruction: 설명을 다시 보려면 여기를 클릭하세요.
-      Course 4 SCV 3_instruction: "이번에는 잡기 게입입니다! 고양이를 잡으면 2 포인트, 펭귄을 잡으면 3 포인트를 얻게 해보세요.\n10 포인트를 먼저 얻으면 이깁니다!\r\n하지만, 고양이와 펭귄이 서로 잡으면, 점수를 잃습니다.\r\n\r\n위에서 설명한 것처럼 게임이 동작하도록 필요한 블록들을 붙이세요. 방향키를 눌러 강아지를 4방향으로 움직이도록 하려면 어떻게 하면 될까요?\n강아지가 고양이나 펭귄을 잡으면 어떻게 점수를 얻게 할 수 있을까요? 고양이와 펭귄에 동시에 닿으면 어떻게 점수를 잃게 할 수 있을까요?"
+      Course 4 SCV 3_instruction: "이번에는 잡기 게입입니다! 고양이를 잡으면 2 포인트, 펭귄을 잡으면 3 포인트를 얻게 해보세요.\n10 포인트를 먼저 얻으면 이깁니다!\\r\n하지만, 고양이와 펭귄이 서로 잡으면, 점수를 잃습니다.\\r\n\\r\n위에서 설명한 것처럼 게임이 동작하도록 필요한 블록들을 붙이세요. 방향키를 눌러 강아지를 4방향으로 움직이도록 하려면 어떻게 하면 될까요?\n강아지가 고양이나 펭귄을 잡으면 어떻게 점수를 얻게 할 수 있을까요? 고양이와 펭귄에 동시에 닿으면 어떻게 점수를 잃게 할 수 있을까요?"
       Course 4 SCV 4_instruction: 최대한 가장 적은 개수의 블록을 사용해서 이 퍼즐을 풀어보세요.
       Course 4 SCV 5_instruction: 최대한 가장 적은 개수의 블록을 사용해서 이 퍼즐을 풀어보세요.
       Course 4 SCV 6_instruction: 설명을 다시 보려면 여기를 클릭하세요.
@@ -1500,11 +1462,15 @@ ko:
         한 변의 크기를 지정하기 위한 변수를 사용해 이 이미지를 만들어보세요.
         각 선의 길이는 50 픽셀입니다.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
-      Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
-      Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
-      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
-      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
-      CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
+      Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
+      Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
+      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
+      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
+      CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
       CSP U4 - JSON Object Intro - Bad Way_instruction: |
         Trigger both the keyboard
         and mouse event and examine the event objects displayed in the console. Why
@@ -1591,9 +1557,9 @@ ko:
         Here's a similar function red shape with an additional
         variable for size. Complete the conditionals so the correct solid red image
         of a given size is drawn for "circle", "triangle", and "star".
-      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
-      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
+      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\\r\nOne example - and part of the definition -  has already\nbeen done for you!"
+      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\\r\nOne example - and part of the definition -  has\nalready been done for you!\\r\n"
+      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\\r\n"
       Eval Contracts 1_instruction: |
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -1909,7 +1875,7 @@ ko:
       K-1 Maze Assessment 2_instruction: '형성평가 -- 돼지에게 이동시켜주세요!'
       K-1 maze debug 1_instruction: 코드를 수정해서 돼지를 잡을 수 있게 해주세요!
       K-1 maze debug 10_instruction: 돼지에게 갈 수 있도록, 디버깅하고 블록들을 추가하거나 다시 배치 해주세요.
-      K-1 maze debug 11_instruction: "연습해보세요!\r\n디버깅해서 돼지에게 갈 수 있도록 블록들을 추가하거나 다시 배치 해주세요."
+      K-1 maze debug 11_instruction: "연습해보세요!\\r\n디버깅해서 돼지에게 갈 수 있도록 블록들을 추가하거나 다시 배치 해주세요."
       K-1 maze debug 2_instruction: 어떤 것이 빠졌는지 살펴본 후, 블록들을 추가해서 돼지에게 갈 수 있도록 해주세요!
       K-1 maze debug 3_instruction: 어떤 것이 빠졌는지 살펴본 후, 블록들을 제거해서 돼지에게 갈 수 있도록 해주세요!
       K-1 maze debug 4_instruction: 이 블록들을 실행해보고 고쳐주세요! 제가 생각하기에 다른 방향으로 가고 있는 것 같아요.
@@ -1937,9 +1903,18 @@ ko:
       K-1 Maze Loops Assessment 2_instruction: 돼지에게 갈 수 있도록 해주세요! 반복(횟수) 구조를 사용하세요.
       K-1 Maze Multi 14_instruction: 형성평가 레벨
       K-1 Maze Multi 15_instruction: 형성평가 레벨
-      K-1 Maze Sequence Assessment 1_instruction: "배운 것을 살펴봅시다!\r\n한 방향으로 움직이다가 다른 방향으로 움직여서 돼지에게 갈 수 있도록 해주세요."
+      K-1 Maze Sequence Assessment 1_instruction: "배운 것을 살펴봅시다!\\r\n한 방향으로 움직이다가 다른 방향으로 움직여서 돼지에게 갈 수 있도록 해주세요."
       K-1 Maze Sequence Assessment 2_instruction: 돼지를 잡을 수 있도록, 한 쪽으로 가다가 다시 다른 쪽으로 움직여주세요!
-      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
+      kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -1970,6 +1945,8 @@ ko:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2032,7 +2009,7 @@ ko:
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\r\n"
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\\r\n"
       NetSim Standalone Classroom Routers_instruction: |
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -2055,7 +2032,7 @@ ko:
         of a packet being dropped, multiple packets may take different paths to the
         destination, and the default max packet size is set to 6 additional characters.
         
-      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\\r\n\\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
       NetSim Standalone SendAB_instruction: |
         You and your partner share a single
         wire that can only be in state A or state B. You can set the wire to either
@@ -2117,7 +2094,7 @@ ko:
       NEW Course 4 Artist Functions 1_instruction: 반복 구조를 이용해서 한 변의 길이가 100 픽셀인 사각형을 그려보세요.
       NEW Course 4 Artist Functions 10.1_instruction: 이 패턴을 그리기 위해서 이전 퍼즐들의 함수들을 사용해보세요.
       NEW Course 4 Artist Functions 10_instruction: '"수정"을 누른 후, 함수를 정의한 블록들을 40 픽셀 사각형을 그릴 수 있도록 만들어주세요.'
-      NEW Course 4 Artist Functions 11_instruction: "한 줄에 6개의 사각형을 그리는 \"사각형 한 줄 그리기\" 함수를 만들어 보세요.\n이전에 만들어 보았던 \"20 크기 사각형 그리기\" 함수를 이용해서 만들면 됩니다.\n참고: 펜의 굵기가 더 두껍게 바뀌었습니다. \"20 크기 사각형 그리기\" 함수를 \"수정\"해서\n어떻게 되나 살펴보세요!\r\n"
+      NEW Course 4 Artist Functions 11_instruction: "한 줄에 6개의 사각형을 그리는 \"사각형 한 줄 그리기\" 함수를 만들어 보세요.\n이전에 만들어 보았던 \"20 크기 사각형 그리기\" 함수를 이용해서 만들면 됩니다.\n참고: 펜의 굵기가 더 두껍게 바뀌었습니다. \"20 크기 사각형 그리기\" 함수를 \"수정\"해서\n어떻게 되나 살펴보세요!\\r\n"
       NEW Course 4 Artist Functions 12_instruction: |
         이 패턴을 그리기 위해서, 마지막 퍼즐에서 사용했던
         "사각형 한 줄 그리기" 함수를 사용해보세요.
@@ -2135,7 +2112,7 @@ ko:
         "사각형 그리기" 블록은 어떻게 실행되는 것일까요? "사각형 그리기" 함수에서 "수정하기"를 눌러보세요.
         수정하기를 눌렀을 때 보이는 것은 "사각형 그리기"를 정의한 것입니다.
         함수를 살펴보았으면, "저장 후 닫기"를 누른 후, 프로그램을 "실행" 시켜 보세요.
-      NEW Course 4 Artist Functions 6_instruction: "\"사각형 그리기\" 함수 블록을 이용해서 이 그림을 만들어보세요. 힌트: 각 사각형들은 120 픽셀 만큼 씩 떨어져 있습니다.\r\n"
+      NEW Course 4 Artist Functions 6_instruction: "\"사각형 그리기\" 함수 블록을 이용해서 이 그림을 만들어보세요. 힌트: 각 사각형들은 120 픽셀 만큼 씩 떨어져 있습니다.\\r\n"
       NEW Course 4 Artist Functions 7_instruction: |
         함수 블록들을 사용하는 것이 어려운가요? 이 함수를 수정해서 200 픽셀 크기가 되도록 바꿔보세요.
         힌트: "사각형 그리기" 함수에서 "수정하기"를 눌러서 고치면 됩니다.
@@ -2165,7 +2142,7 @@ ko:
       NEW Course 4 Artist Params 12a_instruction: |
         이번 이미지는 이전 것과 비슷합니다.
         함수에 "~동안 반복" 을 이용해 이 디자인을 만들어보세요.
-      NEW Course 4 Artist Params 13_instruction: "\"다각형 그리기\" 함수를 수정해 보세요. \"변의 길이\" 매개 변수가 있습니다. 이제 \"길이\"를 매개 변수로 추가해 보세요. \r\n힌트: 각 모양의 둘레의 길이는 200 픽셀입니다. 다각형에서 면의 개수가 달라질 때, 같은 크기로 만드는 공식 기억하고 있으시죠?"
+      NEW Course 4 Artist Params 13_instruction: "\"다각형 그리기\" 함수를 수정해 보세요. \"변의 길이\" 매개 변수가 있습니다. 이제 \"길이\"를 매개 변수로 추가해 보세요. \\r\n힌트: 각 모양의 둘레의 길이는 200 픽셀입니다. 다각형에서 면의 개수가 달라질 때, 같은 크기로 만드는 공식 기억하고 있으시죠?"
       NEW Course 4 Artist Params 14_instruction: |
         "나선 그리기"를
         "길이"와 "한 변의 길이" 변수를 이용할 수 있도록 수정하고, 이 모양을 다시 만들어보세요.
@@ -2173,7 +2150,7 @@ ko:
         자유 플레이: 여기 여러분들이 작성한 함수들과 가지고 놀 수 있는 몇 개의 함수가 더 있습니다.
         멋진 것들을 그려보세요! 선 그리기로 얼마나 많은 것들을 그릴 수 있는지 해보세요.
       NEW Course 4 Artist Params 2_instruction: '한 변의 길이가 50 픽셀인 삼각형을 그리는 "삼각형 그리기" 함수를 만들어보세요.'
-      NEW Course 4 Artist Params 3_instruction: "이제 5개의 삼각형이 한 줄로 그리기 위한 함수를 사용해보세요.\n힌트: 각 삼각형들은 30 픽셀씩 떨어져 있습니다.\r\n"
+      NEW Course 4 Artist Params 3_instruction: "이제 5개의 삼각형이 한 줄로 그리기 위한 함수를 사용해보세요.\n힌트: 각 삼각형들은 30 픽셀씩 떨어져 있습니다.\\r\n"
       NEW Course 4 Artist Params 4_instruction: |
         이 함수 블록들이 뭔가 다르다는 것을 알아차리셨나요?
         "실행"을 눌러 어떤 일이 일어나나 살펴보세요.
@@ -2194,7 +2171,7 @@ ko:
         삼각형 그리기와 마찬가지로 길이를 매개 변수로 사용하면 됩니다.
         이번에는 3개의 사각형들을 그리면 됩니다: 한 변의 길이가 25, 50, 75 픽셀이고,
         100 픽셀 만큼씩 떨어져 있습니다.
-      NEW Course 4 Artist Params inspire_instruction: "멋진 자유 플레이: 여러분들은 이런 패턴을 만들기 위해 필요한 모든 것들을 배웠습니다.\n이 그림이 멋지다고 생각하면, 비슷하게 다른 것을 만들어보세요. 아니면, 만들고 싶은 것을\n만들어보세요.\r\n\r\n이런 멋진 패턴이 어떻게 만들어졌는지 궁금한가요? "
+      NEW Course 4 Artist Params inspire_instruction: "멋진 자유 플레이: 여러분들은 이런 패턴을 만들기 위해 필요한 모든 것들을 배웠습니다.\n이 그림이 멋지다고 생각하면, 비슷하게 다른 것을 만들어보세요. 아니면, 만들고 싶은 것을\n만들어보세요.\\r\n\\r\n이런 멋진 패턴이 어떻게 만들어졌는지 궁금한가요? "
       NEW Course 4 Artist Vars 1.5_instruction: |
         코드를 살펴보세요. "길이 설정" 블록과 "길이" 블록이 어떻게 함께 사용될 수 있는지
         이해할 수 있나요? "실행"을 눌러 어떻게 실행되는지 살펴보세요. 
@@ -2211,7 +2188,7 @@ ko:
       NEW Course 4 Artist Vars 4_instruction: |
         다시 한 번 해보세요. 육각형들로 이런 멋진 디자인을 만들려면 길이 변수의 값을 어떻게 해야할까요?
         힌트: 10의 배수 입니다.
-      NEW Course 4 Artist Vars 6_instruction: "길이 변수를 정확한 위치에 넣어서 이 패턴을 그려보세요. 그 다음에 정확한 길이를 입력하면 됩니다.\n(힌트: 10의 배수입니다). \r\n\r\n길이 변수의 값을 한 번만 입력하면, 그 값을 계속 사용할 수 있다는 것을 알 수 있습니다.\r\n\r\n\r\n"
+      NEW Course 4 Artist Vars 6_instruction: "길이 변수를 정확한 위치에 넣어서 이 패턴을 그려보세요. 그 다음에 정확한 길이를 입력하면 됩니다.\n(힌트: 10의 배수입니다). \\r\n\\r\n길이 변수의 값을 한 번만 입력하면, 그 값을 계속 사용할 수 있다는 것을 알 수 있습니다.\\r\n\\r\n\\r\n"
       NEW Course 4 Bee For Loops 1_instruction: 각 꽃에서 꽃꿀을 모으기 위해서 반복 구조를 사용하세요.
       NEW Course 4 Bee For Loops 10_instruction: |
         수평 방향으로 얼마나 멀리 가야하는지
@@ -2242,8 +2219,8 @@ ko:
         반복 함수의 마지막에 있는 수는 "증가값"이라고 부릅니다.
         반복 구조가 한 번 실행된 후에, 카운터에는 증가값만큼 더해집니다. 2만큼 증가시켜서
         이 꽃들로부터 모아보세요.
-      NEW Course 4 Bee For Loops 7_instruction: "자 이제, \"카운터\" 변수를 수학 블록과 함께 사용해보세요!\n어떻게하면 최대한 적은 블록들로, 이 정원을 돌아다닐 수 있을까요?\n이렇게 3, 6, 9, 12, 15 만큼씩 꽃꿀을 모으려면 어떻게 해야 할까요?\n\"카운터\" 변수를 사용하면 됩니다!\r\n\r\n기억하시죠?: 반복 구조가 실행되면, 한 번 실행 하고 난 후에 \"카운터\"\n변수의 값에 그 만큼 더합니다."
-      NEW Course 4 Bee For Loops 8_instruction: "잘 했어요! 꽃 꿀을 3, 6, 9, 12, 15 로 증가시키려면 어떻게 해야 할까요?\r\n힌트: 이전의 각 값에 얼마를 더하면 될까요?"
+      NEW Course 4 Bee For Loops 7_instruction: "자 이제, \"카운터\" 변수를 수학 블록과 함께 사용해보세요!\n어떻게하면 최대한 적은 블록들로, 이 정원을 돌아다닐 수 있을까요?\n이렇게 3, 6, 9, 12, 15 만큼씩 꽃꿀을 모으려면 어떻게 해야 할까요?\n\"카운터\" 변수를 사용하면 됩니다!\\r\n\\r\n기억하시죠?: 반복 구조가 실행되면, 한 번 실행 하고 난 후에 \"카운터\"\n변수의 값에 그 만큼 더합니다."
+      NEW Course 4 Bee For Loops 8_instruction: "잘 했어요! 꽃 꿀을 3, 6, 9, 12, 15 로 증가시키려면 어떻게 해야 할까요?\\r\n힌트: 이전의 각 값에 얼마를 더하면 될까요?"
       NEW Course 4 Bee For Loops 9_instruction: |
         반복 카운팅이 줄어드는 과정에서는 반복이 한 번씩 끝날 때마다 카운터 변수의 값이 줄어듭니다.
         15, 12, 9, 6, 3의 꽃꿀을 모으기 위해서는 카운터 변수에 더할 값이 어떻게 되어야 할까요?
@@ -2269,7 +2246,7 @@ ko:
       New Play Lab Project_instruction: |
         이야기나 게임을 만들어보세요!
         여러분의 코드는 프로젝트로 저장되어있기 때문에, 아무때나 실행시켜 볼 수 있습니다.
-      Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
@@ -2280,7 +2257,7 @@ ko:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
-      October15 bat_instruction: "Freeplay: Here are some functions to play with.  Can\nyou draw a bat?\r\n"
+      October15 bat_instruction: "Freeplay: Here are some functions to play with.  Can\nyou draw a bat?\\r\n"
       October15 ghost 1_instruction: |
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -2352,7 +2329,7 @@ ko:
         button and you should see at least one version. Each time you go back to a
         Big Game level you'll get a new record in your version history that you can
         revert back to.
-      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\\r\n\\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
       PDAlg Design Recipe Delete_instruction: |
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -2509,20 +2486,28 @@ ko:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee - Ryan_instruction: |
+        이 구름들이 짜증나게 하네요! 어떤 구름 아래에만 꽃이 있습니다.
+        구름들을 하나씩 모두 검사해서 꽃인 경우에만 꽃꿀을 뽑아야 합니다.
       Quantum Bee_instruction: |
-        Purple flowers may have either 1 or 0 nectar, but
-        you don't know which one! Be careful not to collect nectar from a purple
-        flower if it doesn't have any. Check if the nectar is equal to 1 by using
-        the if block.
+        자주색 꽃들에는 꽃꿀이 1 또는 0 인데,
+        어떤 꽃이 1이고 0인지 알 수 없습니다! 자주색 꽃에 꿀이 없으면 뽑지 않도록 주의하세요.
+        만약(if) 블록을 사용해서 꽃꿀이 1인지 확인해보면 됩니다.
       Ryan - 4-5 Bee Conditionals 2_instruction: 꿀벌이 꽃꿀을 원합니다. 모두 꽃은 아니기 때문에, 안개 구름 아래에 꽃이 숨어있는지 모두 살펴보아야 합니다. 꽃이면 꽃꿀을 모으면 됩니다.
       Ryan - Bee Conditionals_instruction: |
         꿀벌은 지금 꽃꿀이 필요합니다.
         모두 꽃은 아니기 때문에, 안개 구름이 있는 모든 곳에서 꽃이 숨어있는지 확인해 보아야 합니다.
         꽃이 있으면 꿀을 모으면 됩니다.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         "순찰" 함수가 있습니다.
         함수를 수정해서 고양이가 400 픽셀 위로 이동 했다가, 다시 400 픽셀 아래로 이동하게 해보세요.
-      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
+      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
         This butterfly is named Sam, and
         the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels
@@ -2652,7 +2637,7 @@ ko:
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
         classmates (Click to see full instructions)
-      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\\r\n\\r\nConstraints:\\r\n- Packets may contain\nonly 6 characters\\r\n- Packets may drop with small probability\\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the Internet Simulator,
         a Domain Name System (DNS) is provided for you and knows the IP addresses
@@ -2663,13 +2648,13 @@ ko:
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\r\n"
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\\r\n"
       U2L3 NetSim Hub Mode_instruction: |
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
         the message and response?
-      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
-      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\r\n\r\n"
+      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\\r\n\\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\\r\n\\r\n"
       U2L7 NetSim Need for Packets_instruction: |
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
@@ -2837,7 +2822,7 @@ ko:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -2907,7 +2892,7 @@ ko:
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\r\n"
+      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\\r\n"
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -2955,8 +2940,8 @@ ko:
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
         Write a program that simulates the rolling of
-        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
-        is something other than 7 or 11. (Click to see full instructions)
+        two dice. Roll the dice repeatedly until the sum of the dice is either 7 or
+        11.
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -3111,16 +3096,16 @@ ko:
       U3 - Practice Create Performance Task_instruction: |
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\r\n"
-      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\\r\n"
+      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\\r\n"
       U3 - Return Values - constrainTurtle_instruction: |
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -3156,12 +3141,12 @@ ko:
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -3175,7 +3160,7 @@ ko:
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -3300,7 +3285,7 @@ ko:
       U313 Two Buttons with Ids_instruction: |
         Predict what will happen. Once you've
         made a prediction, run the code to see what happens. (Click to see full instructions)
-      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto see full instructions)"
+      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\\r\n(Click\nto see full instructions)"
       U3L03 - draw step_instruction: |
         Write the drawStep function. (Click to see
         full instructions)
@@ -3512,7 +3497,7 @@ ko:
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
         button.
-      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
+      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\\r\n\\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
       U3L13 - Debug Id Problem_instruction: |
         Improve the button by choosing a descriptive
         and meaningful ID. (Click to see full instructions)
@@ -3686,8 +3671,10 @@ ko:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)
@@ -3804,7 +3791,7 @@ ko:
       U3L19 - DEMO up down count practice app_instruction: |
         Try out the demo app
         (Click to see full instructions)
-      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto foo to see the string change. \r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \r\n"
+      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \\r\nDo this: \\r\n1. Try changing the value assigned\nto foo to see the string change. \\r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \\r\n"
       U3L19 - fix the var name syntax error v2_instruction: |
         Fix the error and get
         it to print the value of both variables (Click to see full instructions)
@@ -3833,7 +3820,7 @@ ko:
         Add another variable called
         "lives" and set the value to 3. Print the value of the variable to the console.
         (Click to see full instructions)
-      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
+      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \\r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \\r\n\\r\n\\r\nGIF: U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |
         Set up the down button to
         decrease the value of count by 1 each time it is clicked. (Click to see full
@@ -3986,7 +3973,7 @@ ko:
         You are given the string "Wisdom begins
         with wonder." Use the string.substring(begin, end) function to print "begin"
         and "nder" to the console.
-      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\\r\nPrint the strings and their index to the console.\n"
       U3L25 String Parsing 6_instruction: |
         Write a function that takes a name (first
         last) and reorders it (last, first).
@@ -4031,7 +4018,7 @@ ko:
         right of the starting location. (Click to show full instructions)
       U4 - add createRecord to contacts App_instruction: |
         Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
@@ -4057,11 +4044,11 @@ ko:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)
@@ -4182,7 +4169,7 @@ ko:
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
       U4 - Objects - pullValues_instruction: |
-        Create an event handler for the "Add
+        Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |
@@ -4190,7 +4177,7 @@ ko:
         starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |
         Add code to your event handler
-        fro the "Add Contact" button so that when a new contact is added the inputs
+        for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
       U4 - Objects - showContact1_instruction: |
@@ -4210,21 +4197,21 @@ ko:
       U4 - Objects - writeWrap_instruction: |
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\r\n"
-      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\r\n"
-      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
-      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\r\n"
-      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\\r\n"
+      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\\r\n"
       U4 - ReadRecords - Contacts App 1_instruction: |
-        Write a function called "updateLocalData"
-        that copies the data in your database into your "contacts" global variable.
+        Use readRecords to copy the
+        data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |
-        Create a function called "refreshLocalData"
+        Create a function called refreshLocalData.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |
         Add a call to "refreshLocalData"
@@ -4245,8 +4232,8 @@ ko:
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: 템플릿
-      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
-      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
+      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\\r\n\\r\n"
+      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\\r\n\\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
         We want to improve the user experience.
         Once they have submitted their data for storage, it would be nice to clear
@@ -4268,20 +4255,30 @@ ko:
       U4L15 Read Data 1_instruction: |
         Run the level and see what happens. Then edit
         the code to make it print a different column of information.
-      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
-      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
-      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\\r\n\\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
+      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\\r\n\\r\n"
+      U4L15 Read Data 4_instruction: "\\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - Final Project - Project Level_instruction: |
+        Build your final project here.
+        (Click to see full instructions)
+      U6 - updateRecord - Callback Success Parameter_instruction: |
+        Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
       U6 - updateRecord - Contacts - Edit event handler_instruction: |
-        (Click to see
-        full instructions)
-      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+        Write event
+        handlers for the Edit Contacts UI elements. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: |
+        Set up the UI elements
+        needed to edit contacts. (Click to see full instructions)
       U6 - updateRecord - Contacts - Save edited contact_instruction: |
-        (Click to
-        see full instructions)
-      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+        Use updateRecord
+        to store the user's edits in the database. (Click to see full instructions)
+      U6 - updateRecord - Default Block_instruction: |
+        Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
       U6 - updateRecord - Update Nonexistent Record_instruction: |
-        (Click to see full
-        instructions)
+        Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: '이 블록들 아래에 용암이 숨어있습니다. 앞으로 이동하기 전에 덮어야 해요. "if"(만약) 명령은 여기서 유용할 거에요. 올바른 곳에 "앞으로 이동" 명령을 더해서 이 블록을 채굴하세요.'
       Underground If Statements_instruction: '퍼즐이 점점 더 어려워지고 있어요. 레드스톤 3개를 채굴하세요. 하지만 용암으로 떨어지지는 마세요. "if"(만약) 명령을 사용해서 발견한 용암 위에 조약돌을 놓으세요.'
       Underground Iron_instruction: 녹은 용암 속으로 걸어 들어가는 건 좋은 생각이 아니에요. 조약돌을 놓아서 다리를 만든 후 철 블록을 2개 이상 채굴하세요.

@@ -37,7 +37,7 @@ var AgeDropdown = React.createClass({
     }
 
     return (
-      <select name="age" style={style} value={age}>{
+      <select name="age" style={style} defaultValue={age}>{
         ages.map(function (age) {
           return <option key={age} value={age}>{age}</option>;
         })
@@ -70,25 +70,25 @@ var ReportAbuseForm = React.createClass({
 
   handleSubmit: function (event) {
     var i18n = this.props.i18n;
-    if (React.findDOMNode(this.refs.email).value === '') {
+    if (this.refs.email.value === '') {
       alert(i18n.t('project.abuse.report_abuse_form.validation.email'));
       event.preventDefault();
       return;
     }
 
-    if (React.findDOMNode(this.refs.age).value === '') {
+    if (ReactDOM.findDOMNode(this.refs.age).value === '') {
       alert(i18n.t('project.abuse.report_abuse_form.validation.age'));
       event.preventDefault();
       return;
     }
 
-    if (React.findDOMNode(this.refs.abuse_type).value === '') {
+    if (this.refs.abuse_type.value === '') {
       alert(i18n.t('project.abuse.report_abuse_form.validation.abuse_type'));
       event.preventDefault();
       return;
     }
 
-    if (React.findDOMNode(this.refs.abuse_detail).value === '') {
+    if (this.refs.abuse_detail.value === '') {
       alert(i18n.t('project.abuse.report_abuse_form.validation.abuse_detail'));
       event.preventDefault();
       return;

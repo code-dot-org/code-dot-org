@@ -2,7 +2,7 @@ ro:
   data:
     instructions:
       2-3 Artist 1 new_instruction: Bună, eu sunt un artist. Poţi scrie codul care mă face să desenez orice. Folosește câteva blocuri pentru a mă face să desenez peste liniile de gri din imagine. (Fiecare linie este de 100 de pixeli lungime)
-      2-3 Artist 11_instruction: 'Dă semnului stop o bordură făcând un octogon cu 8 laturi, fiecare lungă de 100 de pixeli. Cu câte grade ar trebui să rotești? (Sugestie: cât este 360 împărţit la 8?) '
+      2-3 Artist 11_instruction: 'Dă semnului stop o bordură făcând un octogon cu 8 laturi, fiecare de 100 de pixeli lungime. Cu câte grade ar trebui să rotești? (Sugestie: cât este 360 împărţit la 8?) '
       2-3 Artist 12_instruction: 'Setează blocul "repetă ori" astfel încât acesta să creeze un "cerc" pentru a termina ochiul. Dacă fiecare mişcare se roteşte la dreapta cu un grad, de câte ori trebuie să repeți pentru a finaliza cercul? 180? 360? 500?'
       2-3 Artist 2 new_instruction: 'Această casă are un perete pe jumătate terminat. Fiecare latură este de 100, dar peretele pe jumătate terminat este de numai 50. Completează peretele. '
       2-3 Artist 2_instruction: |
@@ -18,7 +18,7 @@ ro:
       2-3 Artist 8_instruction: Completează camerele pentru fiecare dintre animale prin împărțirea dreptunghiul în 2 pătrate de dimensiuni egale. Dreptunghiul are 200 de pixeli în lăţime şi 100 de pixeli în înălţime.
       2-3 Artist 9_instruction: Finalizează acest zmeu
       2-3 Artist Assessment 1_instruction: 'Evaluare: Termină de desenat ultimul dinte, 25 de pixeli în lățime și 25 de pixeli în înălțime.'
-      2-3 Artist Debugging 1_instruction: Poți face această pălărie cu o lungime până la vârf de 100?
+      2-3 Artist Debugging 1_instruction: Poți face această pălărie până la vârf de 100 lungime?
       2-3 Artist Debugging 10_instruction: 'Butonul de direcţie de pe comanda mea de joc este prea îngust. Sugestie: Faceți-l mai lat cu 10 pixeli'
       2-3 Artist Debugging 11_instruction: 'Ajută-mă să termin frumosul meu fulg de nea. De câte ori trebuie să "repet" pentru a-l termina?'
       2-3 Artist Debugging 12_instruction: Trebuie să adaug un val de ocean la această scenă. Poți să mă ajuți?
@@ -54,7 +54,7 @@ ro:
       2-3 Artist Loops 6_instruction: Adaugă încă o mișcare (move) și o rotație (turn) în interiorul buclei şi vezi cum se schimbă design-ul.
       2-3 Artist Loops 7_instruction: 'Putem folosi bucle pentru a face tot felul de poligoane.  Poţi crea un romb în interiorul acest hexagon?'
       2-3 Artist Loops 8_instruction: Hai sa punem ambele elemente in interiorul unei bucle.
-      2-3 Artist Loops 9_instruction: "Vom bucla aceleaşi elemente, dar acum am de gând să adăug unele distante dintre ele. \r Utilizează acelaşi cod ca înainte, dar adaugă un pas înainte la sfârşitul buclei din exterior."
+      2-3 Artist Loops 9_instruction: "Vom bucla aceleaşi elemente, dar acum am de gând să adăug unele distante dintre ele. \\r Utilizează acelaşi cod ca înainte, dar adaugă un pas înainte la sfârşitul buclei din exterior."
       2-3 Artist Loops New 1_instruction: Hai să desenăm capul acestui robot! Poți face un pătrat cu laturi de 100 de pixeli?
       2-3 Artist Loops New 10_instruction: Hai acum să conectăm o grămadă de V-uri împreună, desenându-le într-o buclă.
       2-3 Artist Loops New 11_instruction: 'Hai să-l desenăm de data aceasta de 24 de ori. La acest cod, adaugă un viraj la stânga de 30 de grade și pune-l cu totul într-un block - repetă.'
@@ -68,7 +68,7 @@ ro:
       2-3 Artist Match Rho Pic_instruction: 'Potrivire: poti completa codul?'
       2-3 Artist Match Sq Pic_instruction: 'Potrivire: completeaza codul lipsa'
       2-3 Artist Match Tri pic_instruction: 'Potrivire: adauga codul lipsa.'
-      2-3 Artist Nested Loops 1_instruction: "Ai folosit înainte bucle pentru a desena forme, dar ști că poţi pune o buclă în interiorul o altă buclă? \r \nPune în buclă acest întreg bloc de trei ori pentru a desena modelul."
+      2-3 Artist Nested Loops 1_instruction: "Ai folosit înainte bucle pentru a desena forme, dar ști că poţi pune o buclă în interiorul o altă buclă? \\r \nPune în buclă acest întreg bloc de trei ori pentru a desena modelul."
       2-3 Artist Nested Loops 10_instruction: Pune acest cod în buclă de 12 ori pentru a completa modelul.
       2-3 Artist Nested Loops 11_instruction: Pune acest cod în buclă de 4 ori pentru a finaliza modelul, virează la 90 de grade după fiecare cerc.
       2-3 Artist Nested Loops 12_instruction: Pune acest cod în buclă de 12 ori pentru a finaliza cârlionții.
@@ -82,7 +82,7 @@ ro:
       2-3 Artist Nested Loops 9_instruction: Vom finaliza acest desen prin adăugarea unei flori. Pune diamantul în buclă de 12 ori pentru a desena floarea ta.
       2-3 Artist Nested Loops Free Play_instruction: Joc la alegere, desenează ceva super cu bucle de nesting.
       2-3 Bee Conditionals 1_instruction: Bună! Sunt o albină. Ajută-mă să culeg nectar din floare.
-      2-3 Bee Conditionals 10_instruction: "Florile violete pot avea 1 sau 0 nectar. Ai grijă să nu colectezi nectar dintr-o floare violetă dacă aceasta nu are deloc.\r\n"
+      2-3 Bee Conditionals 10_instruction: "Florile violete pot avea 1 sau 0 nectar. Ai grijă să nu colectezi nectar dintr-o floare violetă dacă aceasta nu are deloc.\\r\n"
       2-3 Bee Conditionals 11_instruction: Colectează nectar din florile care au nectar.
       2-3 Bee Conditionals 12_instruction: Folosește o buclă pentru a verifica și colecta nectarul din toate aceste flori.
       2-3 Bee Conditionals 13_instruction: |
@@ -339,6 +339,11 @@ ro:
       4-5 Artist For Loops 15_instruction: |
         Cineva a început codul, dar apoi și-a dat seama 
         că trebuie să existe o modalitate mai rapidă! Utilizează un bloc "pentru" cu scopul de a înlocui blocurile şi de a finaliza spirala hexagonală. (Sugestie: lungimea ultimei linii este de 200 de pixeli.)
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: |
         Cum putem număra de la 1 la 50? Editează 
         blocul "pentru".
@@ -521,7 +526,6 @@ ro:
       4-5 Maze 9_instruction: 'Creează o buclă cu blocul "repetă până când".'
       4-5 Maze Assessment 1_instruction: 'Evaluare: Du-te la floarea-soarelui.'
       4-5 Maze Conditionals 1_instruction: 'Utilizează blocul "repetă până când" pentru a-l duce pe zombie la floarea-soarelui.'
-      4-5 Maze Conditionals 10_instruction: Poți adăuga doar 3 blocuri pentru a mă ajuta să rezolv un labirint mai complex? Dacă o faci corect, eu pot străbate orice cale curbată indiferent de lungime/durată.
       4-5 Maze Conditionals 2_instruction: 'Utilizează blocul "repetă până când" pentru a-l duce pe zombie la floarea-soarelui.'
       4-5 Maze Conditionals 3_instruction: 'Folosește blocul "dacă" pentru a mă lăsa pe mine să decid când să virez. Sugestie: ai nevoie numai de un bloc în plus, dar învață cum le aranjăm noi ca să poți proceda și tu la fel data viitoare.'
       4-5 Maze Conditionals 4_instruction: 'Ok, acesta este la fel cu ultimul puzzle dar trebuie să-ți amintești cum ai folosit blocul "dacă" și blocul "repetă" împreună.'
@@ -536,7 +540,7 @@ ro:
       4-5 Nested Loops 11_instruction: Poți desena aceste 10 pătrate ale trotuarului folosind o buclă imbricată? Fiecare pătrat are 30 de pixeli.
       4-5 Nested Loops 12_instruction: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
       4-5 Nested Loops 2_instruction: 'Acum pune acestă buclă în interiorul unei alte bucle pentru  a desena 10 triunghiuri. Aceasta se numește o buclă imbricată. Sugestie: Toate cele 10 triungiuri completează o rotatie de 360 de grade.  '
-      4-5 Nested Loops 3_instruction: "Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r\n"
+      4-5 Nested Loops 3_instruction: "Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\\r\n"
       4-5 Nested Loops 5_instruction: Buclează codul dat pentru a crea o moară de vânt.
       4-5 Nested Loops 6_instruction: Poţi desena un hexagon folosind buclarea codului pentru desenarea unui triunghi?
       4-5 Nested Loops 7_instruction: 'Reia de 10 ori acest proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii lui 360 la 10?)'
@@ -580,6 +584,11 @@ ro:
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
       App Lab test_instruction: test
+      Applab allthethings onRecordEvent_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
@@ -601,7 +610,7 @@ ro:
         Now nest this loop inside another loop
         to draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
         complete a 360 degree rotation.  
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\r\n"
+      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\\r\n"
       Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
       Artist - Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the
@@ -889,7 +898,7 @@ ro:
         function called cube - this function should take in a Number and return that
         number to the power of 3. Make sure to write two example cases! When you're
         done, use your new function to calculate cube(7).
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function sales which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -902,7 +911,7 @@ ro:
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
-      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Calc Rocket 1_instruction: |
         In the last puzzle you wrote a contract for the
         function rocket-height that states it has a range of Number, domain of Number,
@@ -1044,7 +1053,7 @@ ro:
       Course 4 Artist 1_instruction: 'Ajută-mă să desenez o cutie. (Fiecare linie are lungimea de 200 pixeli) '
       Course 4 Artist 10_instruction: 'Este timpul să ne jucăm liber! Aici se află codul pentru o formă interesantă. Oare ce se întâmplă când îl repeţi? Distrează-te şi desenează orice îţi place. '
       Course 4 Artist 11_instruction: 'Acum, o provocare! Iată un proiect care foloseşte construcţii pe care le cunoşti. Reuşeşti să îl creezi din nou fără informaţii suplimentare? Indicaţie: Esti liber să foloseşti modulul încercare şi eroare. Nu te aştepta să reuşeşti din prima.'
-      Course 4 Artist 12_instruction: "Vrei să-ți arunci o a doua privire la designul de inspirație sau indicii? Clic aici\r\n\r\nAltfel, creează un design doar al tău!"
+      Course 4 Artist 12_instruction: "Vrei să-ți arunci o a doua privire la designul de inspirație sau indicii? Clic aici\\r\n\\r\nAltfel, creează un design doar al tău!"
       Course 4 Artist 13_instruction: Joci? Aici este o pânză albă unde poţi schiţa orice doreşti!
       Course 4 Artist 2_instruction: Poţi să reiei acest cod pentru a desena un patrulater de culoare gri?
       Course 4 Artist 20_instruction: Joci? Aici este o pânză albă unde poţi crea orice doreşti!
@@ -1056,10 +1065,10 @@ ro:
         Indicaţie: Există 3 triunghiuri care se rotesc 360 grade...de câte ori intră 3 în 360?
       Course 4 Artist 7_instruction: 'Acum include această buclă în interiorul altei bucle pentru a desena 10 triunghiuri. Aceasta se numește buclă imbricată. Indicație: Toate cele 10 triunghiuri fac o rotație completă de 360 grade.  '
       Course 4 Artist 8_instruction: Desenează acest soare prin buclarea întregii secvențe de cod, de mai multe ori.
-      Course 4 Artist 8a_instruction: "Îți reamintești această formă? Acum o să te lasăm sa o construiești fară să îți dăm nici un bloc pentru început\r\nSugestie: Sunt 3 triunghiuri cu rotație de 360 de grade...de câte ori intră 3 in 360?"
+      Course 4 Artist 8a_instruction: "Îți reamintești această formă? Acum o să te lasăm sa o construiești fară să îți dăm nici un bloc pentru început\\r\nSugestie: Sunt 3 triunghiuri cu rotație de 360 de grade...de câte ori intră 3 in 360?"
       Course 4 Artist 9_instruction: 'Reia rularea acestor instrucţiuni de 10 ori şi asigură-te că fiecare forma este rotită înainte de a fi desenată. Ai aici o indicaţie pentru cât de mult trebuie rotită: Care este rezultatul împărțirii lui 360 la 10?'
-      Course 4 Artist Binary 1_instruction: "Aici avem o funcție care ia un şir binar format din 1 şi 0, care îndrumă artistul să le urmeze de la stânga la dreapta, de sus în jos. Artistul va umple spațiile când vede 1 şi le va ignora când vede 0. \r\n\r\nRulează codul pentru a vedea cum artistul folosește şirul binar pentru a desena acest model."
-      Course 4 Artist Binary 1a_instruction: "Aici avem o funcție care ia un şir binar format din 1 şi 0, care îndrumă artistul să le urmeze de la stânga la dreapta, de sus în jos. Artistul va umple spațiile când vede 1 şi le va ignora când vede 0. \r\n\r\nRulează codul pentru a vedea cum artistul folosește şirul binar pentru a desena acest model."
+      Course 4 Artist Binary 1_instruction: "Aici avem o funcție care ia un şir binar format din 1 şi 0, care îndrumă artistul să le urmeze de la stânga la dreapta, de sus în jos. Artistul va umple spațiile când vede 1 şi le va ignora când vede 0. \\r\n\\r\nRulează codul pentru a vedea cum artistul folosește şirul binar pentru a desena acest model."
+      Course 4 Artist Binary 1a_instruction: "Aici avem o funcție care ia un şir binar format din 1 şi 0, care îndrumă artistul să le urmeze de la stânga la dreapta, de sus în jos. Artistul va umple spațiile când vede 1 şi le va ignora când vede 0. \\r\n\\r\nRulează codul pentru a vedea cum artistul folosește şirul binar pentru a desena acest model."
       Course 4 Artist Binary 2_instruction: Care dintre aceste șiruri binare trebuie rulate de 8 ori pentru a desena această imagine?
       Course 4 Artist Binary 3_instruction: Poţi desena acest model prin rularea în buclă a unui şir binar de trei digiți?
       Course 4 Artist Binary 4_instruction: Fiecare şir binar reprezintă o linie din această imagine. Poţi să rearanjezi liniile astfel încât desenul să reprezinte o faţă zâmbitoare în loc de o faţă tristă?
@@ -1067,17 +1076,17 @@ ro:
       Course 4 Artist Binary 6_instruction: Care este cel mai scurt şir binar pe care tu poţi să-l rulezi repetat pentru a desena această imagine?
       Course 4 Artist Binary 7_instruction: Finalizează acest desen.
       Course 4 Artist Binary Free Play 2_instruction: 'Joc liber: Aici ai o pânză de desen cu o rezoluţie mare - 16 biţi pe 16 biţi!'
-      Course 4 Artist Binary Free Play 2a_instruction: "Aici este o pânză de rezoluţie mai mare pentru a desena - 16 pixeli 16 pixeli! \r \r Vezi ce se întâmplă atunci când începem sa cream cu biţi?"
+      Course 4 Artist Binary Free Play 2a_instruction: "Aici este o pânză de rezoluţie mai mare pentru a desena - 16 pixeli 16 pixeli! \\r \\r Vezi ce se întâmplă atunci când începem sa cream cu biţi?"
       Course 4 Artist Binary Free Play 2b_instruction: Click aici pentru a vedea indicii.
       Course 4 Artist Binary Free Play_instruction: 'Joc liber: Desenează ce-ţi place ţie în binar!'
-      Course 4 Artist Binary pre1_instruction: "Codul binar este un mod de a reprezenta informatia utilizand numai doua optiuni. Aici, vom folosi optiunile \"off\"(reprezentat de numarul zero) si \"on\" (reprezentat de numarul 1). \r\r V-am pus la dispozitie o grila de pixeli prin care va puteti plimba si face design-uri intorcand doar anumite patrate. Il poti face pe artist sa deseneze \"01010101\"in cod binar in primul rand?"
-      Course 4 Artist Binary ryan_instruction: "Codul binar este un mod de a reprezenta informatia utilizand numai doua optiuni. Aici, vom folosi optiunile \"off\"(reprezentat de numarul zero) si \"on\" (reprezentat de numarul 1). \r\r V-am pus la dispozitie o grila de pixeli prin care va puteti plimba si face design-uri intorcand doar anumite patrate. Il poti face pe artist sa deseneze \"01010101\"in cod binar in primul rand?"
+      Course 4 Artist Binary pre1_instruction: "Codul binar este un mod de a reprezenta informatia utilizand numai doua optiuni. Aici, vom folosi optiunile \"off\"(reprezentat de numarul zero) si \"on\" (reprezentat de numarul 1). \\r\\r V-am pus la dispozitie o grila de pixeli prin care va puteti plimba si face design-uri intorcand doar anumite patrate. Il poti face pe artist sa deseneze \"01010101\"in cod binar in primul rand?"
+      Course 4 Artist Binary ryan_instruction: "Codul binar este un mod de a reprezenta informatia utilizand numai doua optiuni. Aici, vom folosi optiunile \"off\"(reprezentat de numarul zero) si \"on\" (reprezentat de numarul 1). \\r\\r V-am pus la dispozitie o grila de pixeli prin care va puteti plimba si face design-uri intorcand doar anumite patrate. Il poti face pe artist sa deseneze \"01010101\"in cod binar in primul rand?"
       Course 4 Artist For  Functions 10_instruction: 'Hai să progresăm un pic, poţi desena o stea folosind funcţia "Draw a Square Line"? Succes!'
       Course 4 Artist For  Functions 11_instruction: 'Hai să progresăm un pic, poţi desena o stea folosind funcţia "Draw a Square Line"? Succes!'
       Course 4 Artist For Loops 1_instruction: 'Desenează acest triunghi de 50 de pixeli mărime. Tip: folosește un bloc "repetă".'
       Course 4 Artist For Loops 10_instruction: Timpul jocului liber! Distrează-te desenând orice îţi place folosind construcţiile învăţate
       Course 4 Artist For Loops 11_instruction: 'Îți amintești cum am folosit o variabilă pentru a controla numărul laturilor unei forme? Acest model începe cu un triunghi și adaugă pe rând câte o latură până când desenează un decagon (10 laturi). Fiecare latură ar trebui să aibă o lungime de 100 de pixeli. Sugestie: 360 împărțit la numărul de laturi ale unei forme dă numărul de grade la care va trebui să virezi.'
-      Course 4 Artist For Loops 11a_instruction: "Hai să le punem la un loc! Folosind cunoştiinţele despre \"bucle\" şi despre \"contor\", crează acest desen unde fiecare formă are două laturi în plus faţă de ultima. Asigură-te că fiecare latură este de 10 ori mai lungă ca numărul de laturi ale poligonului.\r\n\r\nFoarte puţin din cod este completat pentru tine."
+      Course 4 Artist For Loops 11a_instruction: "Hai să le punem la un loc! Folosind cunoştiinţele despre \"bucle\" şi despre \"contor\", crează acest desen unde fiecare formă are două laturi în plus faţă de ultima. Asigură-te că fiecare latură este de 10 ori mai lungă ca numărul de laturi ale poligonului.\\r\n\\r\nFoarte puţin din cod este completat pentru tine."
       Course 4 Artist For Loops 12_instruction: 'Asta arată destul de bine, dar acum aş vrea să desenezi fiecare formă lângă ultima. De data asta fiecare latură este de 20 pixeli. Foloseşte o construcţie de tip salt pentru a sări înainte 40 pixeli după fiecare formă. '
       Course 4 Artist For Loops 13_instruction: Hmmm, aceste forme devin din ce în ce mai mari de fiecare dată! Nu am rezolvat deja această problemă cu variabile? Cum putem folosi noi variabila numărătoare pentru a micșora laturile având în vedere că acestea sunt mai multe la număr? În loc de a muta înainte pe câte o anumită porțiune prestabilită, încearcă să înaintezi (100 / numărător) pixeli.
       Course 4 Artist For Loops 14_instruction: Dacă tu roteşti puţin mai mult sau mai puţin decât ar trebui în mod normal pentru o formă, crează o formă îngrijită. Încearcă rotind 89 grade pentru a crea o spirală pătrată răsucită.
@@ -1092,23 +1101,23 @@ ro:
       Course 4 Artist For Loops 8_instruction: Latura cea mai mică a acestei spirale pătratică este de 10 pixeli, cea mai mare este de 200 pixeli şi fiecare linie este cu 10 pixeli mai lungă decât ultima. Poţi completa blocul de instrucțiuni lipsă pentru a finaliza această imagine minunată?
       Course 4 Artist For Loops 8a_instruction: Latura cea mai mică a acestei spirale pătratică este de 10 pixeli, cea mai mare este de 200 pixeli şi fiecare linie este cu 10 pixeli mai lungă decât ultima. Poţi completa blocul de instrucțiuni lipsă pentru a finaliza această imagine minunată?
       Course 4 Artist For Loops 9_instruction: Poți face o spirală? Înaintează de la 1 pixel la 75 pixeli crescând cu 1 pixel de fiecare dată.
-      Course 4 Artist For Loops Challenge_instruction: "Poți să îți dai seama cum să folosești toate lucrurile pe care le-ai învățat ca sa creezi această imagine?\r\r\nAi nevoie de o sugestie?\nClick/apasa aici."
-      Course 4 Artist For Loops inspire_instruction: "Inspiraţie pentru joc liber: Acum ai învăţat tot ce ai nevoie să ştii pentru a crea un model ca acesta! Dacă această imagine te inspiră, încearcă să faci ceva similar. Altfel, creează ceva pe cont propriu.\r\n\r\nAi nevoie de un indiciu? Fă clic aici."
+      Course 4 Artist For Loops Challenge_instruction: "Poți să îți dai seama cum să folosești toate lucrurile pe care le-ai învățat ca sa creezi această imagine?\\r\\r\nAi nevoie de o sugestie?\nClick/apasa aici."
+      Course 4 Artist For Loops inspire_instruction: "Inspiraţie pentru joc liber: Acum ai învăţat tot ce ai nevoie să ştii pentru a crea un model ca acesta! Dacă această imagine te inspiră, încearcă să faci ceva similar. Altfel, creează ceva pe cont propriu.\\r\n\\r\nAi nevoie de un indiciu? Fă clic aici."
       Course 4 Artist Functions 1_instruction: Poți desena un pătrat care are lungimea laturii de 100 pixeli, folosind o construcție buclă?
       Course 4 Artist Functions 10_instruction: De ce bloc de instrucțiuni ai nevoie pentru a adăuga un triunghi deasupra pătratului?
       Course 4 Artist Functions 11_instruction: 'Verifică acest cod care desenează un cub - poţi să îl transformi într-o funcţie numită "Draw a Cube"'
       Course 4 Artist Functions 12.1_instruction: 'Hai să creăm o funcție numită "desenează un octogon 20" care deseneză un octogon cu fiecare latură de 20 de pixeli lungime.'
       Course 4 Artist Functions 12_instruction: Reia în buclă funcţia square pentru a desena o linie
-      Course 4 Artist Functions 13.1_instruction: "Acum, hai să facem o funcție numită \"salt la dreapta sus\" care mută artistul în partea din dreapta sus a octogonului pe care tocmai l-ai desenat ca să finalizăm acest model\r\n\r\nIndiciu: Pentru a ajunge în colțul din dreapta sus a octogonului, încearcă să sări după un model care realizează doar 3/8 din octogon."
+      Course 4 Artist Functions 13.1_instruction: "Acum, hai să facem o funcție numită \"salt la dreapta sus\" care mută artistul în partea din dreapta sus a octogonului pe care tocmai l-ai desenat ca să finalizăm acest model\\r\n\\r\nIndiciu: Pentru a ajunge în colțul din dreapta sus a octogonului, încearcă să sări după un model care realizează doar 3/8 din octogon."
       Course 4 Artist Functions 13_instruction: 'Verifică dacă avem o funcţie nouă definită "draw a line of squares". Fi liber să arunci o privire în instrucţiunile funcţiei pentru a vedea cum am construit-o. Dă clic pe "Run" când eşti gata pentru puzzle-ul următor.'
       Course 4 Artist Functions 14.1_instruction: 'Acum, hai să facem o funcție numită "salt la dreapta sus" care mută artistul în partea din dreapta sus a octogonului pe care tocmai l-ai desenat ca să finalizăm acest model.'
       Course 4 Artist Functions 14_instruction: 'Ai lucrat bine! Hai să folosim noua ta funcţie "Draw a line of squares" pentru a desena o formă pătrată. Ţine minte fiecare pătrat are 40 pixeli lungime.'
       Course 4 Artist Functions 15_instruction: 'Hai să progresăm un pic, poţi desena o figură în formă de stea folosind funcţia "draw a line of square"? Succes! Indicaţie: trebuie să roteşti la 144 grade'
       Course 4 Artist Functions 2_instruction: 'Poţi desena 3 pătrate situate la 20 pixeli depărtare unul de celălalt? Indicaţie: fiecare pătrat are latura de 100 pixeli'
-      Course 4 Artist Functions 3_instruction: "Folosind blocul de instrucţiuni \"draw a square\" poţi desena această imagine? Indicaţie: fiecare pătrat este depărtat cu 120 pixeli.\r\n"
+      Course 4 Artist Functions 3_instruction: "Folosind blocul de instrucţiuni \"draw a square\" poţi desena această imagine? Indicaţie: fiecare pătrat este depărtat cu 120 pixeli.\\r\n"
       Course 4 Artist Functions 4_instruction: 'Ești gata să-ți creezi propriul "bloc de funcție"? Fă clic pe blocul "Funcții" din cutia de instrumente, numește-l "desenează un triunghi", apoi creează un triunghi așa cum ai mai făcut anterior cu blocurile "Acțiune" și "Bucle". Apoi, fă clic pe Salvează și Închide în colțul din dreapta sus. Tip: Creează un triunghi care are 100 de pixeli lungime. Mult noroc!'
       Course 4 Artist Functions 5 OLD_instruction: 'Hai să încercăm să folosim cele două funcții ale noastre pentru a desena o casă - ce trebuie corectat în acest cod pentru ca acesta să deseneze casa așa cum trebuie?'
-      Course 4 Artist Functions 5_instruction: "Folosind blocul de instrucţiuni \"draw a square\" poţi desena această imagine? Indicaţie: fiecare pătrat este depărtat cu 120 pixeli.\r\n"
+      Course 4 Artist Functions 5_instruction: "Folosind blocul de instrucţiuni \"draw a square\" poţi desena această imagine? Indicaţie: fiecare pătrat este depărtat cu 120 pixeli.\\r\n"
       Course 4 Artist Functions 6_instruction: De ce bloc de instrucțiuni ai nevoie pentru a adăuga un triunghi deasupra pătratului?
       Course 4 Artist Functions 7_instruction: Poți desena o linie de pătrate folosind funcția Pătrat? Fiecare pătrat are lungime de 40 de pixeli.
       Course 4 Artist Functions 8_instruction: 'Începi să-ți dai seama cum să folosești blocurile de funcție? Hai să modificăm acest pătrat astfel încât să aibe o dimensiune de 200 de pixeli. Sugestie: fă clic pe "editează" pentru a schimba dimensiunea în editorul funcției "desenează un pătrat". Amintește-ți să faci clic pe "salvează și închide" pentru a ieși din editorul de funcție. '
@@ -1116,7 +1125,7 @@ ro:
       Course 4 Artist Functions challenge_instruction: Fă clic aici pentru a vedea din nou indiciile.
       Course 4 Artist Functions Inspiration_instruction: Fă clic aici pentru a vedea din nou indiciile.
       Course 4 Artist Functions inspire_instruction: Fă clic aici pentru a vedea din nou imaginea de inspiraţie.
-      Course 4 Artist Inspire_instruction: "Vrei să-ți arunci o a doua privire la designul de inspirație sau indicii? Clic aici\r\n\r\nAltfel, creează un design doar al tău!"
+      Course 4 Artist Inspire_instruction: "Vrei să-ți arunci o a doua privire la designul de inspirație sau indicii? Clic aici\\r\n\\r\nAltfel, creează un design doar al tău!"
       Course 4 Artist Params 1_instruction: Hai să edităm o funcție care desenează un pătrat cu laturi de 50 de pixeli
       Course 4 Artist Params 10_instruction: 'Poți apela funcții din interiorul altor funcții! Folosind ca bază funcția ta de "formă", creează 3 forme de casă fiecare mai mare cu 20 de pixeli decat precedenta, începând cu 50 de pixeli în lungime. Ar putea fi de ajutor folosirea unei bucle numărătoare. '
       Course 4 Artist Params 11_instruction: |
@@ -1155,13 +1164,13 @@ ro:
       Course 4 Artist Vars 10_instruction: 'Iată aici un algoritm care desenează un triunghi din triunghiuri mai mici. Poți să-l modifici așa încât acesta să folosească variabila "laturi" pentru a desena fiecare triunghi? Uită-te prin cod şi, de fiecare dată când vezi numărul 3, înlocuiește-l cu variabila ta "laturi". Aminteaște-ți să utilizezi blocul "setează laturi".'
       Course 4 Artist Vars 11_instruction: 'Iată aici același algoritm pe care l-am inventat pentru ultimul puzzle - la cât ar trebui să setezi variabila "laturi" pentru a desena cu pătrate această imagine?'
       Course 4 Artist Vars 12_instruction: 'Hai să setăm variabila "laturi" la 5. Cu cât adăugam mai multe laturi la acest algoritm, cu atât acest întreg model devine mai mare! Observă că există nouă variabilă numită "lungime". Acum o putem folosi pe aceasta oriunde avem un "mută înainte". Setează variabila "lungime" la 75 pentru acestă formă.'
-      Course 4 Artist Vars 13_instruction: "Cand o forma are mai multe fete, fiecare fata trebuie sa fie mai scurta daca doriti ca intregul model sa se integreze in ecran. \r Haideti sa cream algoritmul pentru acest model, dar in loc sa adaugam manual variabila 'lungime', haideti sa folosim un bloc matematic cu variabila \"parte\" pentru a ne asigura ca fiecare forma se potriveste corect. Perimetrul fiecarui poligon este 300 de pixeli.\r Ai nevoie de niste ponturi? Click aici."
+      Course 4 Artist Vars 13_instruction: "Cand o forma are mai multe fete, fiecare fata trebuie sa fie mai scurta daca doriti ca intregul model sa se integreze in ecran. \\r Haideti sa cream algoritmul pentru acest model, dar in loc sa adaugam manual variabila 'lungime', haideti sa folosim un bloc matematic cu variabila \"parte\" pentru a ne asigura ca fiecare forma se potriveste corect. Perimetrul fiecarui poligon este 300 de pixeli.\\r Ai nevoie de niste ponturi? Click aici."
       Course 4 Artist Vars 14_instruction: 'Joc la alegere: Ia te uită! Acum algoritmul tău este cuprins în cadrul unei bucle suplimentare. Experimentează schimbarea valorilor celor două variabile ale tale pentru a desena modele super tari.'
       Course 4 Artist Vars 2_instruction: 'În loc de "mută înainte cu 100", blocul "mută" se va referi acum la variabila numită "lungime". Poți seta "lungime" la 150 pentru a desena acest triunghi nou?'
       Course 4 Artist Vars 3_instruction: 'Avem aici o buclă ce desenează un pătrat, dar ceva lipsește. Poți s-o repari astfel încât să folosească variabila "lungime" pentru a ne da seama cât de lungă trebuie să fie fiecare latură? '
       Course 4 Artist Vars 4_instruction: 'Acum vreau să fac un dreptunghi care este de două ori mai înalt pe cât este de lat. Avem o variabilă numită "lățime" care este setată la 100. Poți folosi blocurile matematice pentru a completa codul?'
       Course 4 Artist Vars 5_instruction: 'Folosește variabila "laturi" pentru a controla de câte ori se rulează această buclă.'
-      Course 4 Artist Vars 6_instruction: "Am adăugat o variabilă numită \"laturi\" care este setată la 4. Poți folosi variabila \"laturi\" (împreună cu blocul matematic) pentru a te asigura că mă întorc destul pentru a crea un pătrat? \r\n\r\nTip:\nPentru a desena un poligon regulat, eu ar trebui să mă întorc 360/laturi de fiecare dată."
+      Course 4 Artist Vars 6_instruction: "Am adăugat o variabilă numită \"laturi\" care este setată la 4. Poți folosi variabila \"laturi\" (împreună cu blocul matematic) pentru a te asigura că mă întorc destul pentru a crea un pătrat? \\r\n\\r\nTip:\nPentru a desena un poligon regulat, eu ar trebui să mă întorc 360/laturi de fiecare dată."
       Course 4 Artist Vars 7_instruction: 'Poți tu modifica variabila "laturi" pentru a mă ajuta să desenez acest hexagon?'
       Course 4 Artist Vars 8_instruction: 'Joc la alegere: Experimentează cu numărul de laturi pe care le are această formă. Poţi schimba algoritmul astfel încât dimensiunea globală a formei rămâne aceeaşi, indiferent de cât de multe laturi are aceasta? Sugestie: S-ar putea să fie necesar să utilizezi blocurile tale matematice (360 împărţit "laturi" în două locuri de data aceasta) '
       Course 4 Artist Vars 9_instruction: 'Modifică acest algoritm așa încât să folosească variabila "laturi" în loc de un număr fix pentru a desena un triunghi. Nu uita să utilizezi blocul "setare laturi la".'
@@ -1230,17 +1239,17 @@ ro:
       Course 4 Maze 6_instruction: Poți rezolva acest puzzle folosind cel mai mic număr de blocuri posibil?
       Course 4 Play Lab For Loops 2_instruction: De data asta, să încercăm să numărăm crescător numerele impare de la 1 la 100.
       Course 4 Play Lab Params 1_instruction: 'Aici avem o funcţie numită "jump" care determină personajul tău să sară 100 pixeli în sus. Foloseşte funcţia "jump" pentru a colecta toate steagurile.'
-      Course 4 Play Lab Params 10_instruction: "Am adăugat o ultimă funcţie pentru a o utiliza.\r\n\r\nProgramează jocul tău pentru a apela funcţia if \"level up\" cu argumentul \"player_points\" > 10. \r\n\r\nJoacă şi treci de nivelul 4 prin accesarea puzzle-lui următor. "
-      Course 4 Play Lab Params 2_instruction: "Acum avem steaguri care sunt prea mari pentru săritura noastră. Haide să folosim ambele săgeți \"sus\" și \"jos\" astfel încât să putem avea multiple înălțimi pentru sărituri. \r \r Trebuie să adăugăm un parametru funcției cu numele \"înălțime\". Săgeata \"sus\" ar trebui să facă să sară câinele 200 pixeli, iar cea de jos să îl facă să sară doar 100 pixeli.\n\r\n\r\nIndiciu: Va trebui să apeși \"modifică\" pe funcția pentru săritură si să o modifici astfel încât să folosească parametrul \"înălțime\"."
+      Course 4 Play Lab Params 10_instruction: "Am adăugat o ultimă funcţie pentru a o utiliza.\\r\n\\r\nProgramează jocul tău pentru a apela funcţia if \"level up\" cu argumentul \"player_points\" > 10. \\r\n\\r\nJoacă şi treci de nivelul 4 prin accesarea puzzle-lui următor. "
+      Course 4 Play Lab Params 2_instruction: "Acum avem steaguri care sunt prea mari pentru săritura noastră. Haide să folosim ambele săgeți \"sus\" și \"jos\" astfel încât să putem avea multiple înălțimi pentru sărituri. \\r \\r Trebuie să adăugăm un parametru funcției cu numele \"înălțime\". Săgeata \"sus\" ar trebui să facă să sară câinele 200 pixeli, iar cea de jos să îl facă să sară doar 100 pixeli.\n\\r\n\\r\nIndiciu: Va trebui să apeși \"modifică\" pe funcția pentru săritură si să o modifici astfel încât să folosească parametrul \"înălțime\"."
       Course 4 Play Lab Params 3_instruction: 'Hai să adăugăm alt parametru funcţiei "jump" astfel încât să o putem folosi cu alţi actori. Fiecare actor este reprezentat de un număr pornind de la unu. Editează funcţia "jump" astfel încât definiţia acesteia să includă parametrul "actor". '
       Course 4 Play Lab Params 4_instruction: |
         Aici este o funcţie numită "patrol."
         Editeaz-o pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli.
       Course 4 Play Lab Params 5_instruction: 'Completează parametrul de intrare "actor" astfel încât putem apela funcţia "patrol" pentru fiecare dintre actori. Amintiţi-vă, actorii corespund cifrelor 1, 2 şi 3.'
       Course 4 Play Lab Params 6_instruction: 'Adauga un alt parametru numit "viteza" in functia de "preluare". Incearca sa utilizezi un bloc "seteaza viteza" impreuna cu noul parametru "viteza" pentru a ajuta pinguinul sa ia ambele steaguri inainte ca alte spirite sa ajunga la unul din ele.'
-      Course 4 Play Lab Params 7_instruction: "Uită-te la codul furnizat pentru a vedea dacă îţi dai seama ce face fiecare bloc de instrucţiuni. \r\n\r\nCând eşti gata, foloseşte tastele săgeţi pentru a controla câinele şi adună toate steagurile."
+      Course 4 Play Lab Params 7_instruction: "Uită-te la codul furnizat pentru a vedea dacă îţi dai seama ce face fiecare bloc de instrucţiuni. \\r\n\\r\nCând eşti gata, foloseşte tastele săgeţi pentru a controla câinele şi adună toate steagurile."
       Course 4 Play Lab Params 8_instruction: 'Foloseşte blocul de instrucţiuni "when touching" pentru a trimite câinele înapoi în colţul din stânga-sus DOAR dacă acesta atinge oricare unul din celelalte personaje.'
-      Course 4 Play Lab Params 9_instruction: "Aici este jocul nostru dintr-o etapa incipienta, dar majoritatea codului este ascuns. Este o functie noua \"inscrie_puncte.\" \r\n\r\n Editati functia astfel incat paramentrul 'Puncte' sa fie adaugat la variabila ''scorul_jucatorului\". \r\n\r\nVariabila \"scorul_jucatorului\" trebuie sa creasca de fiecare data cand \ncatelul eticheteaza pisica cu inimioare, si descreste cand pisica prinde cainele.\r\n\r\nNota:\nCand ai terminat, apasa \"Ruleaza\" pentru a te juca. Cand cainele inscrie 6 puncte, vei trece la urmatorul puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Aici este jocul nostru dintr-o etapa incipienta, dar majoritatea codului este ascuns. Este o functie noua \"inscrie_puncte.\" \\r\n\\r\n Editati functia astfel incat paramentrul 'Puncte' sa fie adaugat la variabila ''scorul_jucatorului\". \\r\n\\r\nVariabila \"scorul_jucatorului\" trebuie sa creasca de fiecare data cand \ncatelul eticheteaza pisica cu inimioare, si descreste cand pisica prinde cainele.\\r\n\\r\nNota:\nCand ai terminat, apasa \"Ruleaza\" pentru a te juca. Cand cainele inscrie 6 puncte, vei trece la urmatorul puzzle. "
       Course 4 Play Lab Vars 1_instruction: 'De data asta nu trebuie să este nevoie să scrii niciun cod, doar clic pe "Run" pentru a rula jocul! În acest joc, tu eşti câinele care încearcă să adune mai multe steaguri decât pisica. Foloseşte tasta săgeată jos pentru a controla câinele. Apăsă "Finish" când doreşti terminarea jocului.'
       Course 4 Play Lab Vars 2_instruction: 'Cursa în acest ultim puzzle nu a fost foarte corectă! Schimbă variabila "dog_speed" pentru a fi sigur că poţi aduna mai multe steaguri decât pisica. Primul care adună 10 steaguri câştigă!'
       Course 4 Play Lab Vars 3_instruction: Aici avem un nou tip de joc! Foloseşte pentru mutare tastele săgeţi stânga şi dreapta şi pentru a sării tasta săgeată sus. Vezi dacă poţi să aduni toate steagurile.
@@ -1259,15 +1268,15 @@ ro:
       Course 4 Play Labs For Loops 2_instruction: De data asta, să încercăm să numărăm crescător numerele impare de la 1 la 100.
       Course 4 Play Labs For Loops 3_instruction: Dacă contorizăm folosind numere mai mari, obținem un număr mai mare în același timp. Încearcă să realizezi contorul câinelui de la 10 până la 1000, crescând cu 10 o dată.
       Course 4 Play Labs For Loops 4_instruction: Schimbarea incrementului poate fi de ajutor, dar noi numărăm încă liniar (fiecare număr reprezintă aceeaşi distanţă față de ultima) Ce se întâmplă dacă am vrut să număr în mod exponenţial? Fără a schimba setările în această buclă, poți să numeri 1, 4, 9, 16, 25... (numărător la pătrat)?
-      Course 4 Play Labs For Loops 4a_instruction: "Acum, haieți să combinăm variabilele din Etapa 7 cu variabila ta \"numărător\" pentru a face ceva magic.   \r \r \nÎn acest puzzle, câinele va număra de la 0 la 1000 prin \"increment\".  Setează variabila \"increment\" la 10 la începutul codului tău pentru a vedea ce se întâmplă."
+      Course 4 Play Labs For Loops 4a_instruction: "Acum, haieți să combinăm variabilele din Etapa 7 cu variabila ta \"numărător\" pentru a face ceva magic.   \\r \\r \nÎn acest puzzle, câinele va număra de la 0 la 1000 prin \"increment\".  Setează variabila \"increment\" la 10 la începutul codului tău pentru a vedea ce se întâmplă."
       Course 4 Play Labs For Loops 5_instruction: 'În ultima etapă am numărat pătratul fiecărui număr. Încearcă să schimbi "numărător ^ 2" cu "numărător ^ 3" pentru a număra cubul fiecărui număr (1, 8, 27, 64, 125, 216, 343...)'
-      Course 4 Play Labs For Loops 5a_instruction: "În acest puzzle, Câinele va fi gardianul timpului tău.\r \r \nCâinele va cronometra de la 0 la 30 prin \"increment\".  Variabila \"increment\" va începe cu o valoare de 1.\r \r \nPoți face în așa fel încât, de fiecare dată când dai clic pe câine, incrementul să crească cu 2?  Fă clic pe săgeata spre înainte pentru a rula bucla \"pentru\".\r \r \nRulează bucla de doua ori, făcând clic pe câine înainte de fiecare dintre ele."
+      Course 4 Play Labs For Loops 5a_instruction: "În acest puzzle, Câinele va fi gardianul timpului tău.\\r \\r \nCâinele va cronometra de la 0 la 30 prin \"increment\".  Variabila \"increment\" va începe cu o valoare de 1.\\r \\r \nPoți face în așa fel încât, de fiecare dată când dai clic pe câine, incrementul să crească cu 2?  Fă clic pe săgeata spre înainte pentru a rula bucla \"pentru\".\\r \\r \nRulează bucla de doua ori, făcând clic pe câine înainte de fiecare dintre ele."
       Course 4 Play Labs For Loops 6_instruction: 'Poate îți amintești că un număr prim este orice număr întreg care este divizibil cu sine şi 1. Utilizează funcţia de "este_prim" să numească doar numere prime de la 1 la 100.'
-      Course 4 Play Labs For Loops 6a_instruction: "Câinele va continua să contorizeze timpul numarănd cu ajutorul buclei noastre \"pentru\" prin \"increment\", dar, de data aceasta, vom adăuga în combinație Expertul.  Poți schimba codul astfel încât \"incrementul\" să crească cu doi de fiecare dată când se face clic pe Expert?\r \r \nAi grijă!  Expertul se mişcă repede!"
+      Course 4 Play Labs For Loops 6a_instruction: "Câinele va continua să contorizeze timpul numarănd cu ajutorul buclei noastre \"pentru\" prin \"increment\", dar, de data aceasta, vom adăuga în combinație Expertul.  Poți schimba codul astfel încât \"incrementul\" să crească cu doi de fiecare dată când se face clic pe Expert?\\r \\r \nAi grijă!  Expertul se mişcă repede!"
       Course 4 Play Labs For Loops 7_instruction: 'Ai putea folosi o buclă "pentru" ca să mă ajuți să pronunț secvența 1, 4, 7, 10, 13, 16, 22, 25?'
-      Course 4 Play Labs For Loops 7a_instruction: "Acum ajungem unde trebuie!  Ce-ar fi dacă am începe să numărăm de câte ori putem face clic pe Expert înainte ca acest Caine să ajungă la 30? \r\n\r\nFinalizează adăugând blocuri Expertului astfel încât, de câte ori se face clic pe el, variabila \"clicuit\" crește cu câte unu. Poți ignora pentru moment \"increment\"-ul.\r\n\r\nCâinele va începe să cronometreze când faci clic pe \"Rulează\"."
+      Course 4 Play Labs For Loops 7a_instruction: "Acum ajungem unde trebuie!  Ce-ar fi dacă am începe să numărăm de câte ori putem face clic pe Expert înainte ca acest Caine să ajungă la 30? \\r\n\\r\nFinalizează adăugând blocuri Expertului astfel încât, de câte ori se face clic pe el, variabila \"clicuit\" crește cu câte unu. Poți ignora pentru moment \"increment\"-ul.\\r\n\\r\nCâinele va începe să cronometreze când faci clic pe \"Rulează\"."
       Course 4 Play Labs For Loops 8_instruction: 'Ce buclă "pentru" m-ar face pe mine să spun 19, 27, 35, 43, 51?'
-      Course 4 Play Labs For Loops 8a_instruction: "Pentru a finaliza jocul nostru, trebuie să aducem înapoi variabila \"increment\"!    Hai s-o legăm de nivelul de joc.\r\n\r\n1) Ține evidența numărului de câte ori se face clic pe Expert.\r \n2) Dacă expertul este clicuit de cel puţin 10 ori înainte ca și Câinele să numere la 30, ridică \"increment\"-ul cu 1 şi începe din nou.\r 3) dacă expertul nu este apăsat cu clic de cel puţin 10 ori, jocul s-a terminat."
+      Course 4 Play Labs For Loops 8a_instruction: "Pentru a finaliza jocul nostru, trebuie să aducem înapoi variabila \"increment\"!    Hai s-o legăm de nivelul de joc.\\r\n\\r\n1) Ține evidența numărului de câte ori se face clic pe Expert.\\r \n2) Dacă expertul este clicuit de cel puţin 10 ori înainte ca și Câinele să numere la 30, ridică \"increment\"-ul cu 1 şi începe din nou.\\r 3) dacă expertul nu este apăsat cu clic de cel puţin 10 ori, jocul s-a terminat."
       Course 4 SCF 1_instruction: Utilizează funcţiile sugerate pentru a desena patru rânduri de hexagoane. Observi cum rândurile noastre pare sunt întoarse către dreapta?
       Course 4 SCF 1a_instruction: Îţi poți da seama cum să colectezi tot acest nectar cu cât mai puţine blocuri posibil?
       Course 4 SCF 1b_instruction: Îţi poți da seama cum să colectezi tot acest nectar cu cât mai puţine blocuri posibil?
@@ -1287,18 +1296,22 @@ ro:
       Course 4 SCFP 1_instruction: Creează o funcție cu parametri care permite artistului să facă salturi cu x pixeli înapoi și înainte, precum și în sus și în jos cu y pixeli (folosind numere pozitive și negative).
       Course 4 SCV 1_instruction: Click aici pentru a vedea instrucţiunile din nou.
       Course 4 SCV 2_instruction: Click aici pentru a vedea instrucţiunile din nou.
-      Course 4 SCV 3_instruction: "Acum un joc al etichetelor! Prinde pisica pentru a lua 2 puncte. Pinde pinguinul si  faci 3 puncte. Strangeti 10 puncte pentru a castiga!\r Ai grija, cand pisica si pinguinul se intalnesc, iau punctele inapoi. \r\rAdauga blocurile necesare pentru a face jocul sa mearga asa cum e explicat. Cum il vei face pe caine sa se miste in toate directiile folosing sagetile? Cum vei adauga puncte cand cainele prinde pisica sau pinguinul? Cum vei sustrage puncte cand pisica si pinguinul se ating?"
+      Course 4 SCV 3_instruction: "Acum un joc al etichetelor! Prinde pisica pentru a lua 2 puncte. Pinde pinguinul si  faci 3 puncte. Strangeti 10 puncte pentru a castiga!\\r Ai grija, cand pisica si pinguinul se intalnesc, iau punctele inapoi. \\r\\rAdauga blocurile necesare pentru a face jocul sa mearga asa cum e explicat. Cum il vei face pe caine sa se miste in toate directiile folosing sagetile? Cum vei adauga puncte cand cainele prinde pisica sau pinguinul? Cum vei sustrage puncte cand pisica si pinguinul se ating?"
       Course 4 SCV 4_instruction: Rezolva acest puzzle cu cel mai mic număr de blocuri posibil.
       Course 4 SCV 5_instruction: Rezolva acest puzzle cu cel mai mic număr de blocuri posibil.
       Course 4 SCV 6_instruction: Click aici pentru a vedea instrucţiunile din nou.
       Course 4 SCVP 1_instruction: Creează o funcție cu parametri care permite artistului să facă salturi cu x pixeli înapoi și înainte, precum și în sus și în jos cu y pixeli (folosind numere pozitive și negative).
       Course 4 Variables Assessment_instruction: Poţi crea această imagine folosind o variabilă pentru laturi? Fiecare linie trebuie să aibe 50 de pixeli lungime.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
-      Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
-      Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
-      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
-      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
-      CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
+      Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
+      Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
+      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
+      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
+      CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
       CSP U4 - JSON Object Intro - Bad Way_instruction: |
         Trigger both the keyboard
         and mouse event and examine the event objects displayed in the console. Why
@@ -1385,9 +1398,9 @@ ro:
         Here's a similar function red shape with an additional
         variable for size. Complete the conditionals so the correct solid red image
         of a given size is drawn for "circle", "triangle", and "star".
-      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
-      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
+      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\\r\nOne example - and part of the definition -  has already\nbeen done for you!"
+      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\\r\nOne example - and part of the definition -  has\nalready been done for you!\\r\n"
+      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\\r\n"
       Eval Contracts 1_instruction: |
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -1678,7 +1691,7 @@ ro:
       K-1 Maze Assessment 2_instruction: 'Evaluare -- Du-mă la porc!'
       K-1 maze debug 1_instruction: Modifică secvenţa de cod pentru a mă duce la porc!
       K-1 maze debug 10_instruction: Repară acest nivel prin rearanjarea şi adăugarea blocurilor de instrucţiuni pentru a mă duce la porc!
-      K-1 maze debug 11_instruction: "Acesta este un test!\r\nRepară acest nivel prin rearanjarea şi adăugarea blocurilor de instrucțiuni pentru a mă duce la porc"
+      K-1 maze debug 11_instruction: "Acesta este un test!\\r\nRepară acest nivel prin rearanjarea şi adăugarea blocurilor de instrucțiuni pentru a mă duce la porc"
       K-1 maze debug 2_instruction: Găsește ce lipsește şi apoi adaugă blocuri de instrucțiuni pentru a mă duce la porc!
       K-1 maze debug 3_instruction: Găseşte ce lipseşte şi apoi scoate blocurile pentru a mă duce la porc!
       K-1 maze debug 4_instruction: Aleargă printre aceste blocuri şi repară-le! Cred că s-ar putea să merg în direcţia greşită.
@@ -1704,9 +1717,18 @@ ro:
       K-1 Maze Loops Assessment 2_instruction: 'Evaluare -- Foloseşte contricţii de tip buclă pentru a mă duce la porc!'
       K-1 Maze Multi 14_instruction: Nivel de evaluare
       K-1 Maze Multi 15_instruction: Nivel de evaluare
-      K-1 Maze Sequence Assessment 1_instruction: "Acesta este un test!\r\nMută-mă într-o direcţie apoi în cealaltă pentru a mă duce la porc"
-      K-1 Maze Sequence Assessment 2_instruction: "Acesta este un test!\r\nMută-mă într-o direcţie apoi în cealaltă pentru a mă duce la porc."
-      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
+      K-1 Maze Sequence Assessment 1_instruction: "Acesta este un test!\\r\nMută-mă într-o direcţie apoi în cealaltă pentru a mă duce la porc"
+      K-1 Maze Sequence Assessment 2_instruction: "Acesta este un test!\\r\nMută-mă într-o direcţie apoi în cealaltă pentru a mă duce la porc."
+      kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -1737,6 +1759,8 @@ ro:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -1799,7 +1823,7 @@ ro:
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\r\n"
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\\r\n"
       NetSim Standalone Classroom Routers_instruction: |
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -1822,7 +1846,7 @@ ro:
         of a packet being dropped, multiple packets may take different paths to the
         destination, and the default max packet size is set to 6 additional characters.
         
-      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\\r\n\\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
       NetSim Standalone SendAB_instruction: |
         You and your partner share a single
         wire that can only be in state A or state B. You can set the wire to either
@@ -1892,7 +1916,7 @@ ro:
         Poartă numele de "Function block." Clic pe "Run" ca să vezi ce face. 
       NEW Course 4 Artist Functions 4_instruction: 'Folosește funcția "desenează un pătrat" pentru a realiza acest model. Sugestie: Va trebui să folosești un bloc "virează la dreapta cu 120 de grade" după fiecare pătrat.'
       NEW Course 4 Artist Functions 5_instruction: 'Cum a știut blocul "desenează un pătrat" ce comenzi să ruleze? Fă clic pe "editare" în blocul funcţiei "desenează un pătrat". Blocurile din editorul de funcţie sunt definiţia care alcătuiesc "desenează un pătrat." Când ai terminat de observat, fă clic pe "Salvare şi Închidere" şi apoi "Rulează."'
-      NEW Course 4 Artist Functions 6_instruction: "Folosind blocul de funcție \"desenează un pătrat\", poţi desena această imagine? Indicaţie: fiecare pătrat este la 20 de pixeli distanță unul față de celălalt.\r\n"
+      NEW Course 4 Artist Functions 6_instruction: "Folosind blocul de funcție \"desenează un pătrat\", poţi desena această imagine? Indicaţie: fiecare pătrat este la 20 de pixeli distanță unul față de celălalt.\\r\n"
       NEW Course 4 Artist Functions 7_instruction: 'Începi să-ți dai seama cum să folosești blocurile de funcție? Hai să modificăm acest pătrat astfel încât să aibe o dimensiune de 200 de pixeli. Sugestie: fă clic pe "editează" pentru a introduce editorul funcției "desenează un pătrat". Amintește-ți să faci clic pe "Închide" pentru a ieși din editorul de funcție. '
       NEW Course 4 Artist Functions 8_instruction: 'Am creat o nouă funcţie pentru tine numită "Desenează un triunghi".  Poți edita definiţia de funcţie pentru a desena un triunghi cu laturile 100 pixeli?'
       NEW Course 4 Artist Functions 9_instruction: Poți rezolva acest lucru prin adăugarea unui singur bloc?
@@ -1913,7 +1937,7 @@ ro:
         Joc la alegere: Aici sunt funcțiile pe care le-ai scris tu și încă ceva în plus cu care să te joci. Desenează ceva minunat!
         Joacă-te cu lățimea peniței pentru a vedea cât de diferit arată desenele tale!
       NEW Course 4 Artist Params 2_instruction: 'Creează de la zero o funcţie "desenează un triunghi" cu laturile de 50 pixeli'
-      NEW Course 4 Artist Params 3_instruction: "Acum hai să folosim funcția pentru a desena 5 triunghiuri pe un rând. Indiciu: fiecare triunghi este situat la 30 de pixeli distanță unul față de celălalt.\r\n"
+      NEW Course 4 Artist Params 3_instruction: "Acum hai să folosim funcția pentru a desena 5 triunghiuri pe un rând. Indiciu: fiecare triunghi este situat la 30 de pixeli distanță unul față de celălalt.\\r\n"
       NEW Course 4 Artist Params 4_instruction: |
         Observi ceva diferit 
         la aceste blocuri de funcţie? Fă clic pe "Rulează" pentru a vedea ce se întâmplă.
@@ -1922,7 +1946,7 @@ ro:
       NEW Course 4 Artist Params 7_instruction: 'Poţi termina acest desen? Sfat: fiecare triunghi este cu 25 pixeli mai mare decât ultimul. Primul triunghi are latura de 25 pixeli.'
       NEW Course 4 Artist Params 8_instruction: Codul pentru acest triunghi este greşit. Poţi să editezi funcţia pentru a-l depana şi apoi să faci triunghiuri cu laturile de 25, 50 şi 75 pixeli?
       NEW Course 4 Artist Params 9_instruction: 'Fă clic pe "editare" pentru a completa definiția funcţiei "desenează un pătrat" şi pentru a adăuga un parametru. Ar trebui să ia un parametru de lungime, la fel ca și triunghiul. De această dată, desenează 3 pătrate: cu 25, 50 și 75 de pixeli lungime, fiecare la distanță de 100 de pixeli unul față de celălalt.'
-      NEW Course 4 Artist Params inspire_instruction: "Inspiraţie pentru joc liber: Acum ai învăţat tot ce ai nevoie să ştii pentru a crea un model ca acesta! Dacă această imagine te inspiră, încearcă să faci ceva similar. Altfel, creează ceva propriu și personal.\r\n\r\nVrei să știi cum a fost făcut modelul nostru de inspirație? "
+      NEW Course 4 Artist Params inspire_instruction: "Inspiraţie pentru joc liber: Acum ai învăţat tot ce ai nevoie să ştii pentru a crea un model ca acesta! Dacă această imagine te inspiră, încearcă să faci ceva similar. Altfel, creează ceva propriu și personal.\\r\n\\r\nVrei să știi cum a fost făcut modelul nostru de inspirație? "
       NEW Course 4 Artist Vars 1.5_instruction: 'Aruncă o privire la acest cod, poţi vedea cum blocul "setează lungimea" şi blocul "lungime" lucrează împreună? Fă clic pe "Rulează" pentru a-l vedea în acţiune. '
       NEW Course 4 Artist Vars 12_instruction: Acum, recrează algoritmul de la ultimul nivel şi creează un pentagon cu laturile de 150.
       NEW Course 4 Artist Vars 2.5_instruction: 'Aruncă o privire la acest cod, poţi vedea cum blocul "setează lungimea" şi blocul "lungime" lucrează împreună? Fă clic pe "Rulează" pentru a-l vedea în acţiune. '
@@ -1931,7 +1955,7 @@ ro:
         Minunat lucru cu ultimul puzzle,
         hai să-l mai încercăm din nou, de data aceasta hai să facem acest design super cu hexagoane de 60 de pixeli.
       NEW Course 4 Artist Vars 4_instruction: 'Hai să-l încercăm din nou. Poți tu seta variabila de lungime pentru a face acest design minunat cu hexagoane? Indiciu: Este un multiplu de 10.'
-      NEW Course 4 Artist Vars 6_instruction: "Deseneaza acest model prin mutarea variabilei lungime in locurile corecte si apoi setati valoarea corecta pentru lungime. (pont: este un multiplu de 10). \r\r Vezi cum setezi valoarea pentru lungime doar o data, iar codurile folosesc aceeasi valoare peste tot? \r\r\r\n"
+      NEW Course 4 Artist Vars 6_instruction: "Deseneaza acest model prin mutarea variabilei lungime in locurile corecte si apoi setati valoarea corecta pentru lungime. (pont: este un multiplu de 10). \\r\\r Vezi cum setezi valoarea pentru lungime doar o data, iar codurile folosesc aceeasi valoare peste tot? \\r\\r\\r\n"
       NEW Course 4 Bee For Loops 1_instruction: Utilizează o buclă pentru a colecta nectarul din fiecare floare.
       NEW Course 4 Bee For Loops 10_instruction: 'Folosește variabila ta din bucla "pentru" ca să controlezi cât de departe să muți pe orizontal.'
       NEW Course 4 Bee For Loops 10a_instruction: 'Gata pentru o provocare? Foloseste ce ai invatat despre bucle si incearca sa rezolvi problema asta. Aminteste-ti: se poate sa rulezi solutia de mai multe ori inainte sa iti dai seama de toti pasii.'
@@ -1943,8 +1967,8 @@ ro:
       NEW Course 4 Bee For Loops 5 5_instruction: Incepeti sa stii sa folositi buclele? Haideti sa ajutam albinele sa culeaga si nectarul ramas.
       NEW Course 4 Bee For Loops 5_instruction: 'De asemenea, poţi utiliza o buclă "pentru" ca să numere în ordine descrescătoare. Încearcă să colectezi acest nectar numărând în ordine descrescătoare de la 5 la 1 câte 1.'
       NEW Course 4 Bee For Loops 6_instruction: 'Ultimul numar din blocul "pentru bucla" este numit "crescatorul". De fiecare data cand ruleaza bucla, variabila se schimba cu valoarea crescatorului. Incearca sa colectezi aceste flori utilizand crescatorul 2.'
-      NEW Course 4 Bee For Loops 7_instruction: "Acum, haideti sa combinam variabila \"contorul\" cu un bloc matematic! Cum poti utiliza variabila \"contorul\" pentru a naviga prin gradina cu cat mai putine blocuri posibile? Ce trebuie sa faci pentru a colecta 3, 6, 9, 12, sau 15 randuri de polen de data asta? Secretul este variabila \"contorul\"!\r\rAminteste-ti: daca bucla ta numara crescator, cresterea este adaugata variabilei \"Contor\" de fiecare data."
-      NEW Course 4 Bee For Loops 8_instruction: "Ati prins ideea! Care ar trebui sa fie variabila voastra crescatoare pentru a colecta 3, 6, 9, 12 sau 15 randuri de polen?\r\n"
+      NEW Course 4 Bee For Loops 7_instruction: "Acum, haideti sa combinam variabila \"contorul\" cu un bloc matematic! Cum poti utiliza variabila \"contorul\" pentru a naviga prin gradina cu cat mai putine blocuri posibile? Ce trebuie sa faci pentru a colecta 3, 6, 9, 12, sau 15 randuri de polen de data asta? Secretul este variabila \"contorul\"!\\r\\rAminteste-ti: daca bucla ta numara crescator, cresterea este adaugata variabilei \"Contor\" de fiecare data."
+      NEW Course 4 Bee For Loops 8_instruction: "Ati prins ideea! Care ar trebui sa fie variabila voastra crescatoare pentru a colecta 3, 6, 9, 12 sau 15 randuri de polen?\\r\n"
       NEW Course 4 Bee For Loops 9_instruction: Dacă bucla ta este de numărare în ordine descrescătoare, incrementul este scăzut din variabila ta numărător la fiecare buclă. Ce ar trebui să fie incrementul tău pentru a colecta 9 nectaruri, apoi 6, şi apoi 3 nectaruri?
       NEW Course 4 Bee For Loops 95_instruction: 'Aruncati o privire la fiecare piesa de "pentru bucla" pe care ati realizat-o. Iti poti da seama de ce numere ai nevoie pentru a rezolva acest puzzle? Cum functioneaza?'
       NEW Course 4 Play Lab Params 11_instruction: 'Este timpul sa va jucati liberi! Distrati-va cu toate blocurile din bara de instrumente. '
@@ -1954,7 +1978,7 @@ ro:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Este timpul sa va jucati liberi! Distrati-va cu toate blocurile din bara de instrumente. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Provocare: Cum a-ti folosi blocul "pentru bucla" pentru a face fiecare actor sa mearga de jur impresur si sa isi rosteasca numarul, apoi sa dispara de pe ecran? '
       New Play Lab Project_instruction: Creeaza-ti propria poveste sau joc! Codul tau este salvat ca proiect, asa ca te poti intoarce la el in orice moment.
-      Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
@@ -1965,7 +1989,7 @@ ro:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
-      October15 bat_instruction: "Freeplay: Here are some functions to play with.  Can\nyou draw a bat?\r\n"
+      October15 bat_instruction: "Freeplay: Here are some functions to play with.  Can\nyou draw a bat?\\r\n"
       October15 ghost 1_instruction: |
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -2027,7 +2051,7 @@ ro:
         button and you should see at least one version. Each time you go back to a
         Big Game level you'll get a new record in your version history that you can
         revert back to.
-      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\\r\n\\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
       PDAlg Design Recipe Delete_instruction: |
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -2181,6 +2205,10 @@ ro:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee - Ryan_instruction: |
+        These clouds are bugging me! Some of the clouds
+        have flowers inside, and some don't. I should check each cloud, and only
+        get nectar from the flowers.
       Quantum Bee_instruction: |
         Purple flowers may have either 1 or 0 nectar, but
         you don't know which one! Be careful not to collect nectar from a purple
@@ -2191,10 +2219,16 @@ ro:
         Albina vrea doar nectar acum.
         Nu toate obiectele sunt flori, așa că verifică FIECARE NOR pentru a vedea
         dacă ascunde o floare. Dacă da, atunci poți aduna nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Aici este o funcţie numită "patrol."
         Editeaz-o pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli.
-      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
+      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
         This butterfly is named Sam, and
         the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels
@@ -2314,7 +2348,7 @@ ro:
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
         classmates (Click to see full instructions)
-      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\\r\n\\r\nConstraints:\\r\n- Packets may contain\nonly 6 characters\\r\n- Packets may drop with small probability\\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the Internet Simulator,
         a Domain Name System (DNS) is provided for you and knows the IP addresses
@@ -2325,13 +2359,13 @@ ro:
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\r\n"
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\\r\n"
       U2L3 NetSim Hub Mode_instruction: |
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
         the message and response?
-      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
-      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\r\n\r\n"
+      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\\r\n\\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\\r\n\\r\n"
       U2L7 NetSim Need for Packets_instruction: |
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
@@ -2499,7 +2533,7 @@ ro:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -2569,7 +2603,7 @@ ro:
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\r\n"
+      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\\r\n"
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -2617,8 +2651,8 @@ ro:
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
         Write a program that simulates the rolling of
-        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
-        is something other than 7 or 11. (Click to see full instructions)
+        two dice. Roll the dice repeatedly until the sum of the dice is either 7 or
+        11.
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -2773,16 +2807,16 @@ ro:
       U3 - Practice Create Performance Task_instruction: |
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\r\n"
-      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\\r\n"
+      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\\r\n"
       U3 - Return Values - constrainTurtle_instruction: |
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -2818,12 +2852,12 @@ ro:
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -2837,7 +2871,7 @@ ro:
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -2962,7 +2996,7 @@ ro:
       U313 Two Buttons with Ids_instruction: |
         Predict what will happen. Once you've
         made a prediction, run the code to see what happens. (Click to see full instructions)
-      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto see full instructions)"
+      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\\r\n(Click\nto see full instructions)"
       U3L03 - draw step_instruction: |
         Write the drawStep function. (Click to see
         full instructions)
@@ -3174,7 +3208,7 @@ ro:
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
         button.
-      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
+      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\\r\n\\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
       U3L13 - Debug Id Problem_instruction: |
         Improve the button by choosing a descriptive
         and meaningful ID. (Click to see full instructions)
@@ -3348,8 +3382,10 @@ ro:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)
@@ -3466,7 +3502,7 @@ ro:
       U3L19 - DEMO up down count practice app_instruction: |
         Try out the demo app
         (Click to see full instructions)
-      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto foo to see the string change. \r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \r\n"
+      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \\r\nDo this: \\r\n1. Try changing the value assigned\nto foo to see the string change. \\r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \\r\n"
       U3L19 - fix the var name syntax error v2_instruction: |
         Fix the error and get
         it to print the value of both variables (Click to see full instructions)
@@ -3495,7 +3531,7 @@ ro:
         Add another variable called
         "lives" and set the value to 3. Print the value of the variable to the console.
         (Click to see full instructions)
-      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
+      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \\r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \\r\n\\r\n\\r\nGIF: U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |
         Set up the down button to
         decrease the value of count by 1 each time it is clicked. (Click to see full
@@ -3648,7 +3684,7 @@ ro:
         You are given the string "Wisdom begins
         with wonder." Use the string.substring(begin, end) function to print "begin"
         and "nder" to the console.
-      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\\r\nPrint the strings and their index to the console.\n"
       U3L25 String Parsing 6_instruction: |
         Write a function that takes a name (first
         last) and reorders it (last, first).
@@ -3693,7 +3729,7 @@ ro:
         right of the starting location. (Click to show full instructions)
       U4 - add createRecord to contacts App_instruction: |
         Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
@@ -3719,11 +3755,11 @@ ro:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)
@@ -3844,7 +3880,7 @@ ro:
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
       U4 - Objects - pullValues_instruction: |
-        Create an event handler for the "Add
+        Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |
@@ -3852,7 +3888,7 @@ ro:
         starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |
         Add code to your event handler
-        fro the "Add Contact" button so that when a new contact is added the inputs
+        for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
       U4 - Objects - showContact1_instruction: |
@@ -3872,21 +3908,21 @@ ro:
       U4 - Objects - writeWrap_instruction: |
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\r\n"
-      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\r\n"
-      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
-      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\r\n"
-      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\\r\n"
+      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\\r\n"
       U4 - ReadRecords - Contacts App 1_instruction: |
-        Write a function called "updateLocalData"
-        that copies the data in your database into your "contacts" global variable.
+        Use readRecords to copy the
+        data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |
-        Create a function called "refreshLocalData"
+        Create a function called refreshLocalData.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |
         Add a call to "refreshLocalData"
@@ -3907,8 +3943,8 @@ ro:
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: Șablon
-      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
-      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
+      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\\r\n\\r\n"
+      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\\r\n\\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
         We want to improve the user experience.
         Once they have submitted their data for storage, it would be nice to clear
@@ -3930,24 +3966,34 @@ ro:
       U4L15 Read Data 1_instruction: |
         Run the level and see what happens. Then edit
         the code to make it print a different column of information.
-      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
-      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
-      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\\r\n\\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
+      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\\r\n\\r\n"
+      U4L15 Read Data 4_instruction: "\\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - Final Project - Project Level_instruction: |
+        Build your final project here.
+        (Click to see full instructions)
+      U6 - updateRecord - Callback Success Parameter_instruction: |
+        Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
       U6 - updateRecord - Contacts - Edit event handler_instruction: |
-        (Click to see
-        full instructions)
-      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+        Write event
+        handlers for the Edit Contacts UI elements. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: |
+        Set up the UI elements
+        needed to edit contacts. (Click to see full instructions)
       U6 - updateRecord - Contacts - Save edited contact_instruction: |
-        (Click to
-        see full instructions)
-      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+        Use updateRecord
+        to store the user's edits in the database. (Click to see full instructions)
+      U6 - updateRecord - Default Block_instruction: |
+        Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
       U6 - updateRecord - Update Nonexistent Record_instruction: |
-        (Click to see full
-        instructions)
+        Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: 'Sub aceste blocuri se gaseste lava, pe care trebuie sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi de ajutor aici. Adauga o comanda "Mergi inainte" in locul corect pentru a acoperi aceste blocuri.'
       Underground If Statements_instruction: 'Acum lucrurile devin mai dificile. Aduna 3 pietre rosii, dar fara sa cazi in lava. Foloseste o comanda "daca" pentru a acoperi lava cu piatra.'
       Underground Iron_instruction: A merge in lava topita este o idee rea. Plaseaza placi de gresie pentru a crea un pod, apoi aduna cel putin 2 dintre blocurile de fier.
-      Underground Mine in a Circle_instruction: "Gaseste un mod sa aduni 5 diamante si 7 pietre rosii! Incearca sa folosesti o comanda \"repeta\" in interiorul altei comenzi \"repeta\" pentru a intra in patrat.\r\n"
+      Underground Mine in a Circle_instruction: "Gaseste un mod sa aduni 5 diamante si 7 pietre rosii! Incearca sa folosesti o comanda \"repeta\" in interiorul altei comenzi \"repeta\" pentru a intra in patrat.\\r\n"
       Underground Mining Coal_instruction: Vei gasi cele mai valoroase resurse in subteran, dar se poate face intuneric. Plaseaza cel putin 2 torte si cauta cel putin 2 carbuni.
       Underground Test Level_instruction: Colecteaza toate mineralele!
       Vigenere_instruction: Test

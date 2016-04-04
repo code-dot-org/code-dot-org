@@ -13,7 +13,9 @@
     "npm": "^2.9.1"
   },
   "browserify": {
-    "transform": [ "browserify-shim" ]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "browserify-shim": {
     "jquery-shim": "global:$"
@@ -22,7 +24,7 @@
     "postinstall": "linklocal",
     "lint": "npm run lint-js && npm run lint-css",
     "lint-css": "sass-lint src/css/*css",
-    "lint-js": "jshint src/js/*.js",
+    "lint-js": "eslint src/js --ext .js,.jsx",
     "test": "mochify test/**/*.js --transform babelify",
     "debug": "mochify --debug test/**/*.js --transform babelify",
     "coverage": "mochify test/**/*.js --transform babelify --plugin [ mochify-istanbul --report json --report lcov --dir ./coverage ] && istanbul check-coverage ./coverage/coverage-final.json",
@@ -37,7 +39,8 @@
     "build-css:dist": "npm run lint-css && npm run clean-css && scripts/build-css.js --dist",
     "build-js": "scripts/build-js.js",
     "build-js:dist": "npm run lint-js && npm test && npm run clean-js && scripts/build-js.js --dist && scripts/uglify-js.js",
-    "start": "scripts/build-js.js --watch"
+    "start": "scripts/build-js.js --watch",
+    "test-audio": "echo \"Open your browser to http://127.0.0.1:8080/test/audio/audio_test.html\" && http-server ."
   },
   "//": "ejsify is a dependency of apps/src; we declare it here rather than in apps/src/package.json so we can continue to avoid needing to npm install that module.",
   "devDependencies": {
@@ -46,18 +49,24 @@
     "browserify-shim": "^3.8.12",
     "chai": "^3.5.0",
     "chalk": "^1.1.1",
+    "chrome-serialport": "bcjordan/chrome-serialport#2",
     "commander": "^2.9.0",
     "ejsify": "1.0.0",
     "envify": "^3.4.0",
+    "eslint": "^2.3.0",
     "factor-bundle": "^2.5.0",
+    "http-server": "^0.9.0",
     "istanbul": "^0.4.2",
-    "jshint": "^2.8.0",
+    "johnny-five": "bcjordan/johnny-five#with-firmata-fix",
     "mkdirp": "^0.5.1",
     "mocha": "^2.3.4",
     "mochify": "^2.15.0",
     "mochify-istanbul": "^2.4.1",
     "node-sass": "^3.4.2",
+    "object-assign": "^4.0.1",
     "phantomjs-prebuilt": "^2.1.3",
+    "playground-io": "bcjordan/playground-io#more-components",
+    "radium": "^0.17.1",
     "recursive-readdir-sync": "^1.0.6",
     "sass-lint": "^1.4.0",
     "semver": "^5.1.0",
@@ -74,7 +83,8 @@
     "linklocal": "^2.5.2",
     "lodash": "^3.10.1",
     "marked": "0.3.2",
-    "react": "^0.13.1",
+    "react": "0.14.7",
+    "react-dom": "0.14.7",
     "video.js": "4.5.2"
   }
 }

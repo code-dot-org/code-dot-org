@@ -72,7 +72,7 @@ class ApplicationController < ActionController::Base
 
   # missing templates are usually a result of the user agent
   # requesting a file in the wrong format, send a 404 instead of a 500
-  rescue_from ActionView::MissingTemplate do |exception|
+  rescue_from ActionView::MissingTemplate do |_exception|
     render_404
   end
 
@@ -167,6 +167,13 @@ class ApplicationController < ActionController::Base
 
     # logged in users can:
     if current_user
+      # participate in A/B testing
+      # as of March 28, 2016, the text of the block hint button is being
+      # A/B tested. See @cdo/apps/src/templates/DialogButtons.jsx.
+      if Gatekeeper.allows('ab_testing_hint_text', default: true)
+        response[:user_id] = current_user.id
+      end
+
       # save solved levels to a gallery (subject to
       # additional logic in the blockly code because blockly owns
       # which levels are worth saving)

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "bee",
     "instructions": "Create your own function that goes down a path, gets nectar, makes honey, and then returns the bee to the top of the path.",
-    "step_mode": 1,
+    "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "1",
@@ -17,8 +17,25 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,1,0],[0,0,0,1,0,0,1,0],[0,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,7,0,0,7,0],[0,0,0,-7,0,0,-7,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "17"
-  }
+    "ideal": "17",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "true",
+    "authored_hints": "[ {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the puzzle seems challenging, try building your function a little at a time.  \\n\\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\",\r\n  \"hint_id\": \"2-3_Bee_Functions_8_a\",\r\n  \"hint_type\": \"general\"\r\n }]"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -77,15 +94,91 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
+      <block type="procedures_callnoreturn">
+        <mutation name="get 7 make 7"/>
+      </block>
+    </recommended_blocks>
+    <solution_blocks>
       <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="get 7 make 7"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_move">
+              <title name="DIR">moveForward</title>
+              <next>
+                <block type="procedures_callnoreturn">
+                  <mutation name="get 7 make 7"/>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="procedures_callnoreturn">
+                          <mutation name="get 7 make 7"/>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
         </block>
-        <block type="controls_repeat">
-          <title name="TIMES">7</title>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">get 7 make 7</title>
+          <statement name="STACK">
+            <block type="maze_turn">
+              <title name="DIR">turnRight</title>
+              <next>
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">7</title>
+                      <statement name="DO">
+                        <block type="maze_nectar"/>
+                      </statement>
+                      <next>
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="controls_repeat">
+                              <title name="TIMES">7</title>
+                              <statement name="DO">
+                                <block type="maze_honey"/>
+                              </statement>
+                              <next>
+                                <block type="maze_move">
+                                  <title name="DIR">moveBackward</title>
+                                  <next>
+                                    <block type="maze_move">
+                                      <title name="DIR">moveBackward</title>
+                                      <next>
+                                        <block type="maze_turn">
+                                          <title name="DIR">turnLeft</title>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
       </xml>
-    </required_blocks>
+    </solution_blocks>
   </blocks>
 </Karel>

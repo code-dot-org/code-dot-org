@@ -20,8 +20,8 @@
         Rajzolj szaggatott vonalat az "ugrás" és a "menj" blokkok segítségével.
       2-3 Artist 3_instruction: Ez a kalap 100 pixel magas. Rajzolj egy 70 pixellel
         kisebb kalapot.
-      2-3 Artist 3new_instruction: A vörös kalap 100 pixel magas. Fejezd be a fekete
-        kalapot, ami 70 pixellel alacsonyabb. A fekete kalap szélessége 50 pixel.
+      2-3 Artist 3new_instruction: A vörös kalap 100 képpont magas. Fejezd be a fekete
+        kalapot, ami 70 képponttal alacsonyabb. A fekete kalap szélessége 50 pixel.
       2-3 Artist 4_instruction: Segíts befejezni a cica házát!
       2-3 Artist 5_instruction: Helyettesítsd ezt a kódot egy "ismételd...alkalommal"
         blokkal, hogy ugyanazt a házat mindössze 3 blokk felhasználásával rajzold
@@ -114,9 +114,9 @@
       2-3 Artist Loops 7_instruction: Ciklusok segítségével mindenféle sokszöget létre
         tudunk hozni. Tudsz készíteni egy rombuszt a hatszögben?
       2-3 Artist Loops 8_instruction: Legyen mindkét elem a ciklus belsejében.
-      2-3 Artist Loops 9_instruction: "Ugyanazokat a formákat fogjuk újra ismételni,
+      2-3 Artist Loops 9_instruction: Ugyanazokat a formákat fogjuk újra ismételni,
         de távolságot kell megadnod köztük.\r Használd az előzőleg alkalmazott kódot,
-        de a külső ciklus után adj hozzá egy menj blokkot."
+        de a külső ciklus után adj hozzá egy menj blokkot.
       2-3 Artist Loops New 1_instruction: Rajzoljuk meg a robot fejét! Tudnál rajzolni
         egy négyzetet, aminek az oldalai 100 pixel hosszúak?
       2-3 Artist Loops New 10_instruction: Most kössük össze ezt a sok V alakot! Rajzold
@@ -141,9 +141,9 @@
       2-3 Artist Match Sq Pic_instruction: 'Párosítsd össze: Egészítsd ki a hiányzó
         kódot'
       2-3 Artist Match Tri pic_instruction: 'Párosítsd össze: Pótold a hiányzó kódot.'
-      2-3 Artist Nested Loops 1_instruction: "Már használtál ciklusokat ezelőtt, de
-        azt tudtad, hogy egymásba is lehet rakni a ciklusokat? \r\nRakd ciklusba ezt
-        az egész kódot háromszor, hogy kirajzolódjon a minta."
+      2-3 Artist Nested Loops 1_instruction: |-
+        Már használtál ciklusokat ezelőtt, de azt tudtad, hogy egymásba is lehet rakni a ciklusokat? \r
+        Rakd ciklusba ezt az egész kódot háromszor, hogy kirajzolódjon a minta.
       2-3 Artist Nested Loops 10_instruction: Ismételd a ciklust 12-szer, hogy elkészítsd
         a mintát!
       2-3 Artist Nested Loops 11_instruction: Ismételd 4-szer a kódot, hogy elkészítsd
@@ -178,8 +178,8 @@
         izgalmasat egymásba ágyazott ciklusokkal!
       2-3 Bee Conditionals 1_instruction: Szia! Én egy méh vagyok. Segíts nekem nektárt
         gyűjteni a virágról!
-      2-3 Bee Conditionals 10_instruction: "A lila virágokban 1 vagy 0 nektár van.
-        Vigyázz, ne gyűjts nektárt olyan virágból, amelyben nincs nektár.\r\n"
+      2-3 Bee Conditionals 10_instruction: |
+        A lila virágokban 1 vagy 0 nektár van. Vigyázz, ne gyűjts nektárt olyan virágból, amelyben nincs nektár.\r
       2-3 Bee Conditionals 11_instruction: Gyűjts nektárt azokból a virágokból, amelyekben
         van nektár.
       2-3 Bee Conditionals 12_instruction: Használj ciklust, hogy ellenőrizd, és összegyűjtsd
@@ -424,6 +424,11 @@
         gyorsabb úton is meg lehet oldani! A,, for" blokk segítségével cseréld ki
         a blokkot, és készítsd el a hatszögletű spirált! (segítség: az utolsó vonal
         hossza 200 képpont)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: Hogyan tudunk elszámolni 1-től 50-ig?szerkeszd  a
         ,,for" blokkot!
       4-5 Artist For Loops 4_instruction: Töltsd ki az "-ig" blokkot, hogy 1-től tízig
@@ -655,9 +660,6 @@
       4-5 Maze Assessment 1_instruction: "Értékelés: juss el a napraforgóhoz!"
       4-5 Maze Conditionals 1_instruction: Használd az "ismételd amíg" blokkot, hogy
         elvezesd a zombit a napraforgóhoz.
-      4-5 Maze Conditionals 10_instruction: Tudsz segíteni kijutni ebből az összetett
-        útvesztőből mindössze 3 blokk hozzáadásával? Ha jól csinálod, akkor bármilyen
-        kacskaringós utat be tudok járni annak hosszától függetlenül.
       4-5 Maze Conditionals 2_instruction: Használd az "ismételd amíg" blokkot, hogy
         elvezesd a zombit a napraforgóhoz.
       4-5 Maze Conditionals 3_instruction: 'Használd a "ha" blokkot, annak eldöntésére,
@@ -694,8 +696,8 @@
       4-5 Nested Loops 2_instruction: 'Most ágyazd be ezt a ciklust egy másik ciklus
         belsejébe, hogy 10 db háromszöget rajzoljon. Az ilyet  egymásba ágyazott ciklusnak
         nevezik. Tipp: a 10 háromszög 360°-os körben van egyenlően elosztva.  '
-      4-5 Nested Loops 3_instruction: "Készíts egy napocskát a kiindulási kód másik
-        ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r\n"
+      4-5 Nested Loops 3_instruction: |
+        Készíts egy napocskát a kiindulási kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r
       4-5 Nested Loops 5_instruction: Ismételd meg a megadott kódot annyiszor, hogy
         szélmalmot készíts.
       4-5 Nested Loops 6_instruction: Meg tudod rajzolni a hatszöget a háromszög rajzoló
@@ -756,6 +758,11 @@
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
       App Lab test_instruction: 'kifejezés:'
+      Applab allthethings onRecordEvent_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
@@ -1061,11 +1068,13 @@
         function called cube - this function should take in a Number and return that
         number to the power of 3. Make sure to write two example cases! When you're
         done, use your new function to calculate cube(7).
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
-        need to track the cost of making each cookie, the money paid, and the\ntotal
-        profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe
-        function cost, which takes in the number of cookies you intend to sell,\nand
-        returns the cost of making those cookies."
+      Calc Design Recipe 2_instruction: |-
+        Your school is holding a bake sale, and
+        you need to track the cost of making each cookie, the money paid, and the
+        total profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r
+        Write
+        the function cost, which takes in the number of cookies you intend to sell,
+        and returns the cost of making those cookies.
       Calc Design Recipe 3_instruction: |
         Write the function sales which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -1078,11 +1087,17 @@
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
-      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor
-        the function \"rocket-height\" that states it has a range of Number, domain\nof
-        Number, and should return the height of the rocket traveling at 15 m/s\nafter
-        a given number of seconds. Let's write an example case now for the\nheight
-        of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Calc Rocket 1 (copy 1)_instruction: |
+        In the last puzzle you wrote a contract
+        for the function "rocket-height" that states it has a range of Number, domain
+        of Number, and should return the height of the rocket traveling at 15 m/s
+        after a given number of seconds. Let's write an example case now for the
+        height of the rocket at 3 seconds.\r
+        \r
+        \r
+        \r
+          \r
+        \r
       Calc Rocket 1_instruction: |
         In the last puzzle you wrote a contract for the
         function rocket-height that states it has a range of Number, domain of Number,
@@ -1222,8 +1237,11 @@
         uses only blocks that you have already been shown.  Can you figure out how
         to recreate it?  Feel free to use trial and error. You are not expected to
         get it perfect the first time.  Want to see more hints?  Click here!
-      Course 4 Artist 12_instruction: "Want a second peek at the inspiration design\nor
-        the hints?  Click here!\r\n\r\nOtherwise, make a design all your own!"
+      Course 4 Artist 12_instruction: |-
+        Want a second peek at the inspiration design
+        or the hints?  Click here!\r
+        \r
+        Otherwise, make a design all your own!
       Course 4 Artist 13_instruction: Még mindig játszol? Itt egy üres vászon, amire
         azt rajzolsz, amit csak akarsz!
       Course 4 Artist 2_instruction: Ciklusba tudnád rakni ezt a kód részletet, hogy
@@ -1245,22 +1263,31 @@
         nevezik. Segítség: a 10 háromszög egy körben vannak egyenlően elosztva.  '
       Course 4 Artist 8_instruction: Rajzold meg ezt a napocskát egy ciklussal, ami
         12 háromszöget rajzol.
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet
-        you build it without giving you any blocks to start!\r\nHint: There are\n3
-        triangles within the 360 degree rotation...how many times does 3 go into\n360?"
+      Course 4 Artist 8a_instruction: |-
+        Remember this shape?  Now we're going to
+        let you build it without giving you any blocks to start!\r
+        Hint: There are
+        3 triangles within the 360 degree rotation...how many times does 3 go into
+        360?
       Course 4 Artist 9_instruction: 'Rajzold le ezt az ábrát 10-szer. Figyelj arra,
         hogy el kell fordulni két alakzat között. Egy kis segítség: Mennyi 360 elosztva
         10-zel?'
-      Course 4 Artist Binary 1_instruction: "Here's a function that takes a binary\nstring
-        of 1's and 0's and instructs the artist to follow them from left\nto right,
-        top to bottom.  The artist will fill-in the squares when it sees\na 1 and
-        ignore the square when it sees a 0. \r\n\r\nRun this code to see how\nthe
-        artist uses binary to draw this pattern."
-      Course 4 Artist Binary 1a_instruction: "Here's a function that takes a binary\nstring
-        of 1's and 0's and instructs the artist to follow them from left\nto right,
-        top to bottom.  The artist will fill-in the squares when it sees\na 1 and
-        ignore the square when it sees a 0. \r\n\r\nRun this code to see how\nthe
-        artist uses binary to draw this pattern."
+      Course 4 Artist Binary 1_instruction: |-
+        Here's a function that takes a binary
+        string of 1's and 0's and instructs the artist to follow them from left
+        to right, top to bottom.  The artist will fill-in the squares when it sees
+        a 1 and ignore the square when it sees a 0. \r
+        \r
+        Run this code to see how
+        the artist uses binary to draw this pattern.
+      Course 4 Artist Binary 1a_instruction: |-
+        Here's a function that takes a binary
+        string of 1's and 0's and instructs the artist to follow them from left
+        to right, top to bottom.  The artist will fill-in the squares when it sees
+        a 1 and ignore the square when it sees a 0. \r
+        \r
+        Run this code to see how
+        the artist uses binary to draw this pattern.
       Course 4 Artist Binary 2_instruction: |
         Which of these binary strings could
         you loop 8 times to draw this image?
@@ -1279,24 +1306,31 @@
       Course 4 Artist Binary 7_instruction: Fejezd be a rajzot.
       Course 4 Artist Binary Free Play 2_instruction: 'Szabad játék: itt egy üres
         vászon amire azt rajzolsz, amit csak akarsz. Jó játékot!'
-      Course 4 Artist Binary Free Play 2a_instruction: "Itt egy nagyobb felbontású
-        vászon - 16 x 16 pixel!\r\n\r\nNézd mi történik, amikor elkezdünk játszani
-        a bitekkel!"
+      Course 4 Artist Binary Free Play 2a_instruction: |-
+        Itt egy nagyobb felbontású vászon - 16 x 16 pixel!\r
+        \r
+        Nézd mi történik, amikor elkezdünk játszani a bitekkel!
       Course 4 Artist Binary Free Play 2b_instruction: Segítségért kattints ide.
       Course 4 Artist Binary Free Play_instruction: 'Szabad játék: rajzolj bitekkel
         amit csak akarsz!'
-      Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing
-        only two options.  Here, we're going to use the options \"off\" (represented\nby
-        the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided
-        you with a grid of \"pixels\" that you can walk through and make\ndesigns
-        by turning on only certain squares.  Can you have the artist draw\n\"01010101\"
-        in binary in the first row?"
-      Course 4 Artist Binary ryan_instruction: "Binary is a way of representing information\nusing
-        only two options.  Here, we're going to use the options \"off\" (represented\nby
-        the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided
-        you with a grid of \"pixels\" that you can walk through and make\ndesigns
-        by turning on only certain squares.  Can you have the artist draw\n\"01010101\"
-        in binary in the first row?"
+      Course 4 Artist Binary pre1_instruction: |-
+        Binary is a way of representing information
+        using only two options.  Here, we're going to use the options "off" (represented
+        by the number 0) and "on" (represented by the number 1).  \r
+        \r
+        We've
+        provided you with a grid of "pixels" that you can walk through and make
+        designs by turning on only certain squares.  Can you have the artist draw
+        "01010101" in binary in the first row?
+      Course 4 Artist Binary ryan_instruction: |-
+        Binary is a way of representing information
+        using only two options.  Here, we're going to use the options "off" (represented
+        by the number 0) and "on" (represented by the number 1).  \r
+        \r
+        We've
+        provided you with a grid of "pixels" that you can walk through and make
+        designs by turning on only certain squares.  Can you have the artist draw
+        "01010101" in binary in the first row?
       Course 4 Artist For  Functions 10_instruction: |
         Let's Step it up a little,
         can you draw a Star shape using the "Draw a Square Line" function? Good
@@ -1316,11 +1350,14 @@
         starts with a triangle and adds one side at a time until it draws a decagon
         (10 sides). Each side should be 100 pixels long. Hint: 360 divided by the
         number of sides a shape has is the number of degrees you'll need to turn.
-      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour
-        knowledge of \"for loops\" and the \"counter\", create this drawing where\neach
-        shape has two more sides than the last.  Make sure that each side is\n10 times
-        as long as the number of sides in the polygon.\r\n\r\nVery little\nof the
-        code has been provided for you."
+      Course 4 Artist For Loops 11a_instruction: |-
+        Let's put it all together!  Using
+        your knowledge of "for loops" and the "counter", create this drawing where
+        each shape has two more sides than the last.  Make sure that each side is
+        10 times as long as the number of sides in the polygon.\r
+        \r
+        Very little
+        of the code has been provided for you.
       Course 4 Artist For Loops 12_instruction: "That looked pretty cool, but now\nI'd
         like to draw each shape next to the last one. This time each side is\n20 pixels.
         Use a jump block to jump forward 40 pixels after each shape. \n"
@@ -1360,9 +1397,12 @@
         What happens if you remove the "Repeat
         3" from this algorithm, keeping the "move" and "turn" blocks in the for
         loop? In this spiraling triangle, each side is 20 pixels longer than the last.
-      Course 4 Artist For Loops 8_instruction: "Just one little change to the code\nfrom
-        the last image can create this drawing. Can you figure out what that\nchange
-        is?\r\n\r\nHint:  You need to remove something!"
+      Course 4 Artist For Loops 8_instruction: |-
+        Just one little change to the code
+        from the last image can create this drawing. Can you figure out what that
+        change is?\r
+        \r
+        Hint:  You need to remove something!
       Course 4 Artist For Loops 8a_instruction: |
         Just one little change to the code
         from the last image can create this image. Can you figure out what that change
@@ -1370,13 +1410,19 @@
       Course 4 Artist For Loops 9_instruction: |
         Can you make a spiral? Move forward
         from 1 to 75 pixels, increasing by 1 pixel each time.
-      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse
-        all of the things you've learned to create this image?\r\n\r\nNeed a\nhint?
-        Click here."
-      Course 4 Artist For Loops inspire_instruction: "Free-Play Inspiration: You've\nnow
-        learned everything you need to know to make a pattern like this! If this\npicture
-        inspires you, try to make something similar. Otherwise, create something\nall
-        your own.\r\n\r\nNeed a hint? Click here."
+      Course 4 Artist For Loops Challenge_instruction: |-
+        Can you figure out how to
+        use all of the things you've learned to create this image?\r
+        \r
+        Need a
+        hint? Click here.
+      Course 4 Artist For Loops inspire_instruction: |-
+        Free-Play Inspiration: You've
+        now learned everything you need to know to make a pattern like this! If this
+        picture inspires you, try to make something similar. Otherwise, create something
+        all your own.\r
+        \r
+        Need a hint? Click here.
       Course 4 Artist Functions 1_instruction: |
         Can you draw a square that is 100
         pixels in length, using a loop?
@@ -1390,11 +1436,14 @@
         "draw an octagon 20" that draws an octagon where each side is 20 pixels
         long.
       Course 4 Artist Functions 12_instruction: Loop square function to draw a line
-      Course 4 Artist Functions 13.1_instruction: "Now, let's make a function called\n\"jump
-        to upper right\" that moves the artist to the upper-right of the octagon\nthat
-        you just drew so we can finish this pattern.\r\n\r\nHint:  To get yourself\nto
-        the upper-right corner, try jumping in a pattern that makes just 3/8 of\nthe
-        octagon."
+      Course 4 Artist Functions 13.1_instruction: |-
+        Now, let's make a function called
+        "jump to upper right" that moves the artist to the upper-right of the octagon
+        that you just drew so we can finish this pattern.\r
+        \r
+        Hint:  To get yourself
+        to the upper-right corner, try jumping in a pattern that makes just 3/8 of
+        the octagon.
       Course 4 Artist Functions 13_instruction: |
         Check it out we have a new function
         called "draw a line of squares". Feel free to take a look inside the function
@@ -1415,8 +1464,9 @@
       Course 4 Artist Functions 2_instruction: |
         Can you draw 3 squares 20 pixels
         apart from one another? Hint: each square is 100 pixels in size
-      Course 4 Artist Functions 3_instruction: "Using the \"draw a square\" function\nblock,
-        can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist Functions 3_instruction: |
+        Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 120 pixels apart.\r
       Course 4 Artist Functions 4_instruction: |
         Are you ready to create your own
         "Function Block"? Click on the "Functions" block in the tool box, name
@@ -1427,8 +1477,9 @@
       Course 4 Artist Functions 5 OLD_instruction: |
         Let's try to use our two functions
         to draw a house - what needs to be fixed in this code to draw the house properly?
-      Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function\nblock,
-        can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist Functions 5_instruction: |
+        Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 120 pixels apart.\r
       Course 4 Artist Functions 6_instruction: |
         Which block do you need to add to
         get the triangle to sit on top of the square?
@@ -1448,8 +1499,12 @@
       Course 4 Artist Functions Inspiration_instruction: Segítségért kattints ide.
       Course 4 Artist Functions inspire_instruction: Kattints ide az inspiráló kép
         megtekintéséhez.
-      Course 4 Artist Inspire_instruction: "Want a second peek at the inspiration\ndesign
-        or the hints?  Click here!\r\n\r\nOtherwise, make a design all your\nown!"
+      Course 4 Artist Inspire_instruction: |-
+        Want a second peek at the inspiration
+        design or the hints?  Click here!\r
+        \r
+        Otherwise, make a design all your
+        own!
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
         square with 50 pixel sides
@@ -1525,16 +1580,22 @@
         gets! Notice that there is another variable called "length". We can now
         use that wherever we have a "move forward." Set the "length" variable
         to 75 for this shape.
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside
-        needs to be shorter if you want the whole pattern to fit on the screen.\n\r\nLet's
-        recreate the algorithm for this amazing pattern, but instead of\nmanually
-        setting the \"length\" variable, let's use a math block with the\n\"sides\"
-        variable inside to make sure that each shape fits correctly. The\nperimeter
-        of each polygon is 300 pixels.\r\nNeed some hints?  Click here."
-      Course 4 Artist Vars 14_instruction: "Free Play: Check it out! Now your algorithm\nis
-        nested within one more loop. Experiment with changing the values of your\ntwo
-        variables to draw cool patterns.\r\n\r\nFor even more effect, try playing\nwith
-        color!  Use random colors inside loops to see how it changes your design."
+      Course 4 Artist Vars 13_instruction: |-
+        When a shape has lots of sides, each
+        side needs to be shorter if you want the whole pattern to fit on the screen.
+        \r
+        Let's recreate the algorithm for this amazing pattern, but instead of
+        manually setting the "length" variable, let's use a math block with the
+        "sides" variable inside to make sure that each shape fits correctly. The
+        perimeter of each polygon is 300 pixels.\r
+        Need some hints?  Click here.
+      Course 4 Artist Vars 14_instruction: |-
+        Free Play: Check it out! Now your algorithm
+        is nested within one more loop. Experiment with changing the values of your
+        two variables to draw cool patterns.\r
+        \r
+        For even more effect, try playing
+        with color!  Use random colors inside loops to see how it changes your design.
       Course 4 Artist Vars 2_instruction: |
         Instead of using "move forward by 150,"
         the "move" block is now referencing a variable called "length." Can you
@@ -1549,14 +1610,20 @@
       Course 4 Artist Vars 5_instruction: |
         Use the variable "sides" to control
         how many times this loop gets run.
-      Course 4 Artist Vars 6_instruction: "Here’s some code that can draw any regular\npolygon.
-        There’s a new variable called sides that is set to 4. Can you use\nthe sides
-        variable (along with the math block) to turn the right amount regardless\nof
-        how many sides there are in the polygon?\r\n\r\nClick here to go back to\nthe
-        hint!"
-      Course 4 Artist Vars 7_instruction: "Use what you learned in the last puzzle\nto
-        create this hexagon using the \"sides\" variable.\r\n\r\nSee how you could\nchange
-        just one value to draw a triangle,  square, pentagon, or octagon?"
+      Course 4 Artist Vars 6_instruction: |-
+        Here’s some code that can draw any regular
+        polygon. There’s a new variable called sides that is set to 4. Can you use
+        the sides variable (along with the math block) to turn the right amount regardless
+        of how many sides there are in the polygon?\r
+        \r
+        Click here to go back to
+        the hint!
+      Course 4 Artist Vars 7_instruction: |-
+        Use what you learned in the last puzzle
+        to create this hexagon using the "sides" variable.\r
+        \r
+        See how you could
+        change just one value to draw a triangle,  square, pentagon, or octagon?
       Course 4 Artist Vars 8_instruction: |
         Free Play: Experiment with the number
         of sides this shape has. Can you change the algorithm so that the overall
@@ -1758,17 +1825,22 @@
         és hatására a főszereplőd 100 pixelt átugrik. Használd az "ugrás" függvényt
         az összes zászló begyűjtéséhez.
       Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou.
-        \r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction
-        only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
-        \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move
-        to the next puzzle. "
-      Course 4 Play Lab Params 2_instruction: "Now we've got flags that are too\nhigh
-        for our current jump! Let's use both the \"up\" and \"down\" arrows\nso that
-        we can have multiple jump heights.  \r\n\r\nWe need to add a parameter\nto
-        our jump function called \"height\".  The up arrow should cause the dog\nto
-        jump 200 pixels and the down arrow should make it jump only 100 pixels.\n\r\n\r\nHint:
-        You will need to click \"edit\" on the jump function and update\nit so that
-        it uses the \"height\" parameter."
+        \\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction
+        only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
+        \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to
+        move to the next puzzle. "
+      Course 4 Play Lab Params 2_instruction: |-
+        Now we've got flags that are too
+        high for our current jump! Let's use both the "up" and "down" arrows
+        so that we can have multiple jump heights.  \r
+        \r
+        We need to add a parameter
+        to our jump function called "height".  The up arrow should cause the dog
+        to jump 200 pixels and the down arrow should make it jump only 100 pixels.
+        \r
+        \r
+        Hint: You will need to click "edit" on the jump function and update
+        it so that it uses the "height" parameter.
       Course 4 Play Lab Params 3_instruction: "We have added another parameter to\nthe
         jump function so that we can use it with other actors. Each actor is represented\nby
         a number, starting from one. Edit the \"jump\" function so that it uses\nthe
@@ -1785,17 +1857,20 @@
         to the "patrol" function. Try using a "set speed" block with the new "speed"
         parameter to help Penguin get both flags before the other sprites even get
         one.
-      Course 4 Play Lab Params 7_instruction: "Let's have some fun! Look at the\ncode
-        provided to see if you can figure out what each block does.  \r\n\r\nWhen\nyou're
-        done, use the arrow keys to control Dog and collect all of the flags."
+      Course 4 Play Lab Params 7_instruction: |-
+        Let's have some fun! Look at the
+        code provided to see if you can figure out what each block does.  \r
+        \r
+        When
+        you're done, use the arrow keys to control Dog and collect all of the flags.
       Course 4 Play Lab Params 8_instruction: |
         Use a "when actor touches" block
         to send Dog back to the top-left ONLY if Dog touches any of the other actors.
       Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe
+        most of the code is hidden. There’s a new function \"score_points.\"\\r\n\\r\nEdit\nthe
         function so that a \"points\" parameter is added to the \"player_score\"\nvariable.
-        \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags
-        Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen
+        \\r\n\\r\nThe variable \"player_score\" should increase each time\nDog tags
+        Cat with hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen
         you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
         on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
@@ -1825,12 +1900,15 @@
         actor 2 touches anything" event to trigger an update to your score when your
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to shoot hearts.\r\n\r\nIn\nour
-        game, how should we score points? Add 1 to your \"points\" variable each\ntime
-        Dog hits Cat with a heart. Use the \"when actor 2 touches anything\"\nevent
-        to trigger an update to your score. You can increment your variable\nby setting
-        \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to
-        pass the level."
+      Course 4 Play Lab Vars 6_instruction: |-
+        Use the right arrow to shoot hearts.\r
+        \r
+        In
+        our game, how should we score points? Add 1 to your "points" variable each
+        time Dog hits Cat with a heart. Use the "when actor 2 touches anything"
+        event to trigger an update to your score. You can increment your variable
+        by setting "points = points + 1." Get your score up to 10 (going one at
+        a time!) to pass the level.
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
         isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
@@ -1848,13 +1926,18 @@
         ever greater that 20, make the enemy (the Cat) vanish. If the score is ever
         less than 0, make the player (the Dog) vanish. Click "Finish" when the game
         works like you'd like it to.
-      Course 4 Play Lab Vars 9_instruction: "Free Play time! Here are all of the\nvariables
-        we've played with so far in this stage, as well as a few more in\ncase you
-        want them. \r\n\r\nNotice that there are now so many blocks in our\ntoolbox
-        that they need to be organized!  Here, we've put each piece into\nan appropriate
-        category.  Take some time to explore everything that is available.\nWhen you're
-        done browsing, make a game or story using repeats, variables,\nand events.
-        \ \r\n\r\nHint: scroll down to see all the commands in the workspace."
+      Course 4 Play Lab Vars 9_instruction: |-
+        Free Play time! Here are all of the
+        variables we've played with so far in this stage, as well as a few more in
+        case you want them. \r
+        \r
+        Notice that there are now so many blocks in our
+        toolbox that they need to be organized!  Here, we've put each piece into
+        an appropriate category.  Take some time to explore everything that is available.
+        When you're done browsing, make a game or story using repeats, variables,
+        and events.  \r
+        \r
+        Hint: scroll down to see all the commands in the workspace.
       Course 4 Play Lab Vars_instruction: |
         Alright, one last thing for this game
         - let's set it up so the player can win (or lose). Use a forever loop to
@@ -1876,48 +1959,73 @@
         helpful, but we're still counting linearly (each number is the same distance
         from the last) What if I wanted to count exponentially? Without changing the
         settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter squared)?
-      Course 4 Play Labs For Loops 4a_instruction: "Now, let's blend the variables\nfrom
-        Stage 7 together with your \"counter\" variable to make some magic happen.
-        \  \r\n\r\nIn\nthis puzzle, Dog will count from 0 to 1000 by \"increment\".
-        \ Set the \"increment\"\nvariable to 10 at the beginning of your code to see
-        what happens."
+      Course 4 Play Labs For Loops 4a_instruction: |-
+        Now, let's blend the variables
+        from Stage 7 together with your "counter" variable to make some magic happen.   \r
+        \r
+        In
+        this puzzle, Dog will count from 0 to 1000 by "increment".  Set the "increment"
+        variable to 10 at the beginning of your code to see what happens.
       Course 4 Play Labs For Loops 5_instruction: |
         In the last stage we counted the
         square of each number. Try changing "counter ^ 2" to "counter ^ 3" to
         count the cube of each number (1, 8, 27, 64, 125, 216, 343…)
-      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime
-        keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable
-        will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you
-        click Dog, the increment increases by 2?  Click the forward arrow\nto run
-        the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach
-        one."
+      Course 4 Play Labs For Loops 5a_instruction: |-
+        In this puzzle, Dog will be your
+        time keeper.\r
+        \r
+        Dog will count from 0 to 30 by "increment".  The "increment"
+        variable will begin with a value of 1.\r
+        \r
+        Can you make it so that each
+        time you click Dog, the increment increases by 2?  Click the forward arrow
+        to run the for loop.\r
+        \r
+        Run the loop a couple of times, clicking Dog before
+        each one.
       Course 4 Play Labs For Loops 6_instruction: |
         You may recall that a prime number
         is any whole number that is only divisible by itself and 1. Use the "is_prime"
         function to speak out only the prime numbers from 1 to 100.
-      Course 4 Play Labs For Loops 6a_instruction: "Dog will still keep time by counting\nwith
-        our \"for loop\" by \"increment\", but this time, we will add The Wizard\ninto
-        the mix.  Can you change the code so that \"increment\" goes up by two\neach
-        time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!"
+      Course 4 Play Labs For Loops 6a_instruction: |-
+        Dog will still keep time by counting
+        with our "for loop" by "increment", but this time, we will add The Wizard
+        into the mix.  Can you change the code so that "increment" goes up by two
+        each time The Wizard is clicked?\r
+        \r
+        Watch out!  The Wizard moves quickly!
       Course 4 Play Labs For Loops 7_instruction: |
         Could you use a for loop to help
         me speak the sequence 1, 4, 7, 10, 13, 16, 19, 22, 25?
-      Course 4 Play Labs For Loops 7a_instruction: "Now we're getting somewhere!  What\nif
-        we start counting how many times we can click The Wizard before Dog gets\nto
-        30?  \r\n\r\nFinish adding blocks to The Wizard so that every time he's\nclicked
-        the variable \"clicked\" increases by one. You can ignore \"increment\"\nfor
-        now.\r\n\r\nDog will start counting when you click \"Run\"."
-      Course 4 Play Labs For Loops 8_instruction: "Now, help the actors move as they\ncount.
-        \ \r\n\r\nDog should move and count by adding 2 (counter + 2) each time.  Cat\nwill
-        move and count by multiplying by 2 (counter * 2)  each time. Penguin\nwill
-        move and count to the power of 2 (counter ^ 2) each time.  Who will reach\ntheir
-        flag first?"
-      Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring
-        back the \"increment\" variable!    Let's tie it to the level of the\ngame.\r\n\r\n1)
-        Keep track of the number of times The Wizard is clicked.\r\n2)\nIf The Wizard
-        is clicked at least 10 times before Dog counts to 30, raise\n\"increment\"
-        by 1 and start again.\r\n3) If The Wizard does not get clicked\nat least 10
-        times, the game is over."
+      Course 4 Play Labs For Loops 7a_instruction: |-
+        Now we're getting somewhere!  What
+        if we start counting how many times we can click The Wizard before Dog gets
+        to 30?  \r
+        \r
+        Finish adding blocks to The Wizard so that every time he's
+        clicked the variable "clicked" increases by one. You can ignore "increment"
+        for now.\r
+        \r
+        Dog will start counting when you click "Run".
+      Course 4 Play Labs For Loops 8_instruction: |-
+        Now, help the actors move as they
+        count.  \r
+        \r
+        Dog should move and count by adding 2 (counter + 2) each time.  Cat
+        will move and count by multiplying by 2 (counter * 2)  each time. Penguin
+        will move and count to the power of 2 (counter ^ 2) each time.  Who will reach
+        their flag first?
+      Course 4 Play Labs For Loops 8a_instruction: |-
+        To finish our game, we need to
+        bring back the "increment" variable!    Let's tie it to the level of the
+        game.\r
+        \r
+        1) Keep track of the number of times The Wizard is clicked.\r
+        2)
+        If The Wizard is clicked at least 10 times before Dog counts to 30, raise
+        "increment" by 1 and start again.\r
+        3) If The Wizard does not get clicked
+        at least 10 times, the game is over.
       Course 4 SCF 1_instruction: |
         Use the suggested functions to draw four rows
         of hexagons. Notice how our even numbered rows are shifted to the right?
@@ -1960,13 +2068,17 @@
         by y pixels (using positive and negative numbers).
       Course 4 SCV 1_instruction: Click here to view the instructions again.
       Course 4 SCV 2_instruction: Click here to view the instructions again.
-      Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag
-        Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when\nCat
-        and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks\nnecessary
-        to make this game work the way it's been explained.  How will you\nget Dog
-        to move in all directions using the arrow keys?  How will you add\npoints
-        when Dog tags Cat or Penguin?  How will you subtract points when Cat\nand
-        Penguin touch?"
+      Course 4 SCV 3_instruction: |-
+        Now for a game of tag!  Tag Cat to get 2 points.
+        Tag Penguin to get 3 points.  Get exactly 10 points to win!\r
+        But be careful,
+        when Cat and Penguin tag each other, they take points away.\r
+        \r
+        Add the
+        blocks necessary to make this game work the way it's been explained.  How
+        will you get Dog to move in all directions using the arrow keys?  How will
+        you add points when Dog tags Cat or Penguin?  How will you subtract points
+        when Cat and Penguin touch?
       Course 4 SCV 4_instruction: Oldd meg ezt a feladványt a legkevesebb blokk felhasználásával!
       Course 4 SCV 5_instruction: Oldd meg ezt a feladványt a legkevesebb blokk felhasználásával!
       Course 4 SCV 6_instruction: Click here to view the instructions again.
@@ -1978,19 +2090,46 @@
         Can you create this image using
         a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
-      Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother
-        to get me to the pig"
-      Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother
-        to get me to the pig."
-      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing
-        you can count multiple things\r\n\r\nFind out how many people like something\nother
-        than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe
-        math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom
-        this\r\n\r\nx% are dog lovers"
-      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria
-        \r\nfind the length of an array\r\n"
-      CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor
-        all records\r\n2. Way to loop through and count\r\n"
+      Course1MazeAssessment1_instruction: |-
+        This is a test!\r
+        Move one way, then
+        another to get me to the pig
+      Course1MazeAssessment2_instruction: |-
+        This is a test!\r
+        Move one way, then
+        another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
+      CSP Data Unit - Counting Multiple Things_instruction: |-
+        If you can count one
+        thing you can count multiple things\r
+        \r
+        Find out how many people like something
+        other than dogs and cats\r
+        \r
+        Count dogs\r
+        Count cats\r
+        Count total\r
+        Do
+        the math\r
+        \r
+        blank/ blank toal\r
+        \r
+        Can also use this to find percents
+        from this\r
+        \r
+        x% are dog lovers
+      CSP Data Unit -Counting Records - Easy Way_instruction: |
+        ReadRecords with specific
+        criteria \r
+        find the length of an array\r
+      CSP Data Unit -Counting Records - Hard Way_instruction: |
+        \r
+        1. ReadRecords
+        for all records\r
+        2. Way to loop through and count\r
       CSP U4 - JSON Object Intro - Bad Way_instruction: |
         Trigger both the keyboard
         and mouse event and examine the event objects displayed in the console. Why
@@ -2075,22 +2214,28 @@
         Here's a similar function red shape with an additional
         variable for size. Complete the conditionals so the correct solid red image
         of a given size is drawn for "circle", "triangle", and "star".
-      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin
-        the name of a food and produces a String that says how you feel about that\nfood.
-        For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic
-        “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review,
-        but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne
-        example - and part of the definition -  has already\nbeen done for you!"
-      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes
-        in the name of a shape and produces a solid green shape. Your function\nshould
-        work with at least “circle”, “star” and “rectangle”, but you can add\nother
-        shapes if you like. You can choose the size of each shape. Don’t forget\nto
-        add an “else” clause!\r\nOne example - and part of the definition -  has\nalready
-        been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave
-        your own business by 30. Write a function called life-goals, which takes\nin
-        an age and produces a string that describes your life goals by then. Don’t\nforget
-        to add an “else” clause!\r\n"
+      Eval Cond 6_instruction: |-
+        Write a function called food-critic, which takes
+        in the name of a food and produces a String that says how you feel about that
+        food. For example, (food-critic “pizza”) might evaluate to “delicious”, but
+        (food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two
+        foods to review, but you can you write more if you like!  Don’t forget to
+        add an “else” clause!\r
+        One example - and part of the definition -  has already
+        been done for you!
+      Eval Cond 7_instruction: |
+        Free Play: Write a function called green-shape, which
+        takes in the name of a shape and produces a solid green shape. Your function
+        should work with at least “circle”, “star” and “rectangle”, but you can add
+        other shapes if you like. You can choose the size of each shape. Don’t forget
+        to add an “else” clause!\r
+        One example - and part of the definition -  has
+        already been done for you!\r
+      Eval Cond 8_instruction: |
+        Free Play: Suppose you want to own a car at 21, or
+        have your own business by 30. Write a function called life-goals, which takes
+        in an age and produces a string that describes your life goals by then. Don’t
+        forget to add an “else” clause!\r
       Eval Contracts 1_instruction: |
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -2469,9 +2614,9 @@
       K-1 maze debug 1_instruction: Változtasd meg a kódot, hogy elkapjam a malacot!
       K-1 maze debug 10_instruction: Keresd meg a hibát és javítsd ki ezen a szinten!
         Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
-      K-1 maze debug 11_instruction: "Ez egy teszt!\r\nKeresd meg a hibát és javítsd
-        ki ezen a szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat
-        és újakat adsz hozzá!"
+      K-1 maze debug 11_instruction: |-
+        Ez egy teszt!\r
+        Keresd meg a hibát és javítsd ki ezen a szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
       K-1 maze debug 2_instruction: Találd ki, mi hiányzik, egészítsd ki a kódot,
         és juttass el a malachoz!
       K-1 maze debug 3_instruction: Találd ki, mi hiányzik, aztán TÁVOLÍTS EL blokkokat,
@@ -2513,7 +2658,30 @@
         irányba, aztán egy másikba, hogy elérj a malacig!
       K-1 Maze Sequence Assessment 2_instruction: Mozogj egy irányba, aztán egy másikba,
         hogy elérj a malacig!
-      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
+      kikiTesting_instruction: |
+        .\r
+         .\r
+        .\r
+        .\r
+        .\r
+        .\r
+        \r
+        .\r
+        \r
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: |-
+        Figure out how to change this code so that Robin
+        chooses a number between 1 and 20.  \r
+        \r
+        When you're ready, press "Run"
+        and play until you guess Robin's number!
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -2544,6 +2712,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2606,10 +2776,11 @@
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou
-        can connect to up to 5 other people in a room. When you send messages\nin
-        the room, everyone receives them. What are some of the challenges of this\nsystem,
-        and how might you solve them?\r\n"
+      NetSim Standalone Broadcast_instruction: |
+        In this version of the Internet Simulator,
+        you can connect to up to 5 other people in a room. When you send messages
+        in the room, everyone receives them. What are some of the challenges of this
+        system, and how might you solve them?\r
       NetSim Standalone Classroom Routers_instruction: |
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -2631,11 +2802,14 @@
         gets dropped. In this version of the Internet Simulator, there is a 10% chance
         of a packet being dropped, multiple packets may take different paths to the
         destination, and the default max packet size is set to 6 additional characters.
-      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto
-        a router with the others in your group. Important note: The router will\nonly
-        properly route messages where the first 4 bits are the To: address and\nthe
-        second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical
-        addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone Routers Addresses_instruction: |-
+        For this activity, connect
+        to a router with the others in your group. Important note: The router will
+        only properly route messages where the first 4 bits are the To: address and
+        the second 4 bits are the From: address.\r
+        \r
+        [TODO: NetSim needs to support
+        hierarchical addresses. For now, level is set up for 4 bit to and from addresses]
       NetSim Standalone SendAB_instruction: |
         You and your partner share a single
         wire that can only be in state A or state B. You can set the wire to either
@@ -2701,11 +2875,12 @@
       NEW Course 4 Artist Functions 10_instruction: |
         Click "edit" to fill out the
         blocks in the function definition to make a 40 pixel square.
-      NEW Course 4 Artist Functions 11_instruction: "Now we want to create a new\nfunction
-        called \"draw a line of squares\" that draws six squares all in a\nrow.  Can
-        you build this function using the \"draw a square 20\" function\nthat we've
-        already created? Note: See that we've changed the pen to be much\nthinner.
-        Click \"edit\" on the  the \"draw a square 20\" function to see how!\r\n"
+      NEW Course 4 Artist Functions 11_instruction: |
+        Now we want to create a new
+        function called "draw a line of squares" that draws six squares all in a
+        row.  Can you build this function using the "draw a square 20" function
+        that we've already created? Note: See that we've changed the pen to be much
+        thinner. Click "edit" on the  the "draw a square 20" function to see how!\r
       NEW Course 4 Artist Functions 12_instruction: |
         Use the "draw a line of squares"
         function from the last puzzle to draw this pattern."
@@ -2733,8 +2908,9 @@
         function block. The blocks in the function editor are the definition that
         make up "draw a square." When you're done looking around, click "Save
         and Close" and then "Run."
-      NEW Course 4 Artist Functions 6_instruction: "Using the \"draw a square\" function\nblock,
-        can you draw this picture? Hint: each square is 20 pixels apart.\r\n"
+      NEW Course 4 Artist Functions 6_instruction: |
+        Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 20 pixels apart.\r
       NEW Course 4 Artist Functions 7_instruction: "Are you getting the hang of how\nto
         use function blocks? Let's modify this square so that it is 200 pixels\nin
         size. Hint: click on \"edit\" to enter the \"draw a square\" function editor.\nRemember
@@ -2765,11 +2941,13 @@
       NEW Course 4 Artist Params 12a_instruction: |
         This image is similar to the last.
         Can you use a "for loop" with your function to make this design?
-      NEW Course 4 Artist Params 13_instruction: "Let's edit this \"draw a polygon\"\nfunction.
-        It already has a \"sides\" parameter. Now, let's add a \"length\"\nparameter.
-        \r\nHint: The perimeter of each shape is 200 pixels long. Do you\nremember
-        the equation to make shapes the same size when they have a different\nnumber
-        of sides?"
+      NEW Course 4 Artist Params 13_instruction: |-
+        Let's edit this "draw a polygon"
+        function. It already has a "sides" parameter. Now, let's add a "length"
+        parameter. \r
+        Hint: The perimeter of each shape is 200 pixels long. Do you
+        remember the equation to make shapes the same size when they have a different
+        number of sides?
       NEW Course 4 Artist Params 14_instruction: |
         Edit "draw a spiral edge" to
         use "length" and "sides" parameters, then recreate these shapes.
@@ -2779,8 +2957,9 @@
         Play with the pen width to see how different your drawings look!
       NEW Course 4 Artist Params 2_instruction: Készíts egy "rajzolj egy háromszöget
         50 pixeles oldalakkal" funkciót
-      NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n5
-        triangles in a row. Hint: each triangle is 30 pixels apart.\r\n"
+      NEW Course 4 Artist Params 3_instruction: |
+        Now let's use the function to draw
+        5 triangles in a row. Hint: each triangle is 30 pixels apart.\r
       NEW Course 4 Artist Params 4_instruction: |
         Do you notice anything different
         about these function blocks? Click “Run” to see what happens.
@@ -2807,7 +2986,7 @@
       NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow
         learned everything you need to know to make a pattern like this! If this\npicture
         inspires you, try to make something similar. Otherwise, create something\nall
-        your own.\r\n \r\nWant to know how our inspiration pattern was made? "
+        your own.\\r\n \\r\nWant to know how our inspiration pattern was made? "
       NEW Course 4 Artist Vars 1.5_instruction: "Take a look at the code, can you\nsee
         how the \"set length\" block and \"length\" block works together? Click\non
         \"Run\" to see it in action. \n"
@@ -2826,10 +3005,15 @@
         Let's try it again. Can you set the
         length variable to make this cool design with hexagons? Hint: It's a multiple
         of 10.
-      NEW Course 4 Artist Vars 6_instruction: "Draw this pattern by dropping the\nlength
-        variable in the correct places, and then setting the right value for\nlength.
-        (Hint: it's a multiple of 10).  \r\n\r\nSee how you only set the\nvalue for
-        length once, and the code uses the right value everywhere?\r\n\r\n\r\n"
+      NEW Course 4 Artist Vars 6_instruction: |
+        Draw this pattern by dropping the
+        length variable in the correct places, and then setting the right value for
+        length. (Hint: it's a multiple of 10).  \r
+        \r
+        See how you only set the
+        value for length once, and the code uses the right value everywhere?\r
+        \r
+        \r
       NEW Course 4 Bee For Loops 1_instruction: Használj ciklust, hogy minden virágról
         összegyűjtsd a nektárt.
       NEW Course 4 Bee For Loops 10_instruction: |
@@ -2865,9 +3049,8 @@
         Ez a feladvány hasonlít az előzőhöz, de 2,4,6,8,10 nektárt kell gyűjteni.
         Készen van a kód, csak a számláló ciklusok számait kell módosítani. Gyűjtsük
         össze a nektárt!
-      NEW Course 4 Bee For Loops 8_instruction: "Ha a ciklus felfelé számol, akkor
-        minden ciklusban hozzáadódik a lépésköz a változóhoz. Mi legyen a lépésköz,
-        hogy 3,6,9 nektárt gyűjtsünk?\r\n"
+      NEW Course 4 Bee For Loops 8_instruction: |
+        Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\r
       NEW Course 4 Bee For Loops 9_instruction: A for ciklus lefelé számol, és a lépésköz
         minden ciklusban levonódik a számláló változóból. Mi a megfelelő lépésköz,
         ha 9, 6, és 3 nektárt kell összegyűjteni?
@@ -2893,10 +3076,17 @@
       New Play Lab Project_instruction: |
         Create your own story or game! Your code
         is saved as a project you can return to at any time.
-      Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame,
-        and then figuring out how it works. You can use the arrow keys\nto move the
-        ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n
-        \ \r\n\r\n"
+      Ninjacat Demo B (copy 1)_instruction: |
+        \r
+        Let’s begin by exploring a simple
+        videogame, and then figuring out how it works. You can use the arrow keys
+        to move the ninja left, right and jump - try to catch the unicorn and avoid
+        the dragon!\r
+        \r
+        \r
+        \r
+          \r
+        \r
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
@@ -2907,8 +3097,9 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
-      October15 bat_instruction: "Freeplay: Here are some functions to play with.
-        \ Can\nyou draw a bat?\r\n"
+      October15 bat_instruction: |
+        Freeplay: Here are some functions to play with.  Can
+        you draw a bat?\r
       October15 ghost 1_instruction: |
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -2995,10 +3186,13 @@
         button and you should see at least one version. Each time you go back to a
         Big Game level you'll get a new record in your version history that you can
         revert back to.
-      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
-        clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
-        you make after you click Remix will be saved on your new remix and\nnot on
-        your main Big Game."
+      PDAlg Big Game Remix_instruction: |-
+        Here's your Big Game as you last left it.
+        Try clicking the Remix button to spin off a new remix of your project.\r
+        \r
+        Any
+        changes you make after you click Remix will be saved on your new remix and
+        not on your main Big Game.
       PDAlg Design Recipe Delete_instruction: |
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -3152,6 +3346,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee - Ryan_instruction: |
+        These clouds are bugging me! Some of the clouds
+        have flowers inside, and some don't. I should check each cloud, and only
+        get nectar from the flowers.
       Quantum Bee_instruction: |
         Purple flowers may have either 1 or 0 nectar, but
         you don't know which one! Be careful not to collect nectar from a purple
@@ -3164,14 +3362,20 @@
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
         is hiding a flower. If it is, then you can gather nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.
-      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
+      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse
         an \"if\" statement to program your game to call the \"level_up\"\nfunction
-        only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
-        \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move
-        to the next puzzle. "
+        only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
+        \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to
+        move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
         This butterfly is named Sam, and
         the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels
@@ -3324,10 +3528,16 @@
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
         classmates (Click to see full instructions)
-      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor
-        Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly
-        6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay
-        not arrive in order"
+      U2L05 - NetSim - Packets and Building TCP_instruction: |-
+        Develop a Protocol
+        for Reliably Sending a Message.\r
+        \r
+        Constraints:\r
+        - Packets may contain
+        only 6 characters\r
+        - Packets may drop with small probability\r
+        - Packets
+        may not arrive in order
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the Internet Simulator,
         a Domain Name System (DNS) is provided for you and knows the IP addresses
@@ -3338,23 +3548,29 @@
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship
-        moves. For setup, join a Room with your group, and add ships to\nyour paper
-        board for each opponent. When playing, all communication must be\ndone through
-        the tool, so no talking, but have fun!\r\n"
+      U2L2 NetSim Hub Mode_instruction: |
+        Now use the Internet Simulator to send the
+        battleship moves. For setup, join a Room with your group, and add ships to
+        your paper board for each opponent. When playing, all communication must be
+        done through the tool, so no talking, but have fun!\r
       U2L3 NetSim Hub Mode_instruction: |
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
         the message and response?
-      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter
-        with the others in your group. Important note: The router will only\nproperly
-        route messages where the first 4 bits are the To: address and the\nsecond
-        4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical
-        addresses. For now, level is set up for 4 bit to and from addresses]"
-      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na
-        router with the others in your group. The Internet Simulator now provides\na
-        place for you to put the To and From addresses, so you don't have to type\nout
-        the bits manually.\r\n\r\n"
+      U2L4 NetSim Routers Addresses_instruction: |-
+        For this activity, connect to a
+        router with the others in your group. Important note: The router will only
+        properly route messages where the first 4 bits are the To: address and the
+        second 4 bits are the From: address.\r
+        \r
+        [TODO: NetSim needs to support
+        hierarchical addresses. For now, level is set up for 4 bit to and from addresses]
+      U2L5 NetSim Classroom Internet_instruction: |
+        For this activity, connect to
+        a router with the others in your group. The Internet Simulator now provides
+        a place for you to put the To and From addresses, so you don't have to type
+        out the bits manually.\r
+        \r
       U2L7 NetSim Need for Packets_instruction: |
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
@@ -3522,7 +3738,7 @@
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -3592,9 +3808,10 @@
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill
-        tell the user when they are right and when they are wrong. (Click to\nsee
-        full instructions)\r\n"
+      U3 - High Low - Else_instruction: |
+        Add an else statement so that the program
+        will tell the user when they are right and when they are wrong. (Click to
+        see full instructions)\r
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -3642,8 +3859,8 @@
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
         Write a program that simulates the rolling of
-        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
-        is something other than 7 or 11. (Click to see full instructions)
+        two dice. Roll the dice repeatedly until the sum of the dice is either 7 or
+        11.
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -3798,26 +4015,36 @@
       U3 - Practice Create Performance Task_instruction: |
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto
-        readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare
-        read from the new table.(Click to see full instructions)\r\n"
-      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand
-        to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords
-        call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall
-        individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin
-        the records return from the readRecords call. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords
-        return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.2_instruction: |
+        Console.log the records returned by a
+        call to readRecords. (Click to see full instructions)\r
+      U3 - Read Record - 1.5_instruction: |
+        Console.log the records returned by a
+        call to readRecords. (Click to see full instructions)\r
+      U3 - Read Record - 1.6_instruction: |
+        Console.log the records returned by a
+        call to readRecords. (Click to see full instructions)\r
+      U3 - Read Record - 1_instruction: |
+        Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)\r
+      U3 - Read Record - 2_instruction: |
+        Change the table name so that the records
+        are read from the new table.(Click to see full instructions)\r
+      U3 - Read Record - 3_instruction: |
+        Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)\r
+      U3 - Read Record - 4.1_instruction: |
+        Print out each record return from the
+        readRecords call individually. (Click to see full instructions)\r
+      U3 - Read Record - 4_instruction: |
+        Print out each record return from the readRecords
+        call individually. (Click to see full instructions)\r
+      U3 - Read Record - 5 and half_instruction: |
+        Print out the name of each movie
+        in the records return from the readRecords call. (Click to see full instructions)\r
+      U3 - Read Record - 5_instruction: |
+        Print out the name of each movie in the
+        records return from the readRecords call. (Click to see full instructions)\r
       U3 - Return Values - constrainTurtle_instruction: |
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -3853,18 +4080,24 @@
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin
-        2008 and print it out. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing
-        the readRecords search terms. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe
-        search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe
-        search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor
-        have a population of 2,000,000. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor
-        have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 1_instruction: |
+        Create an array of all the movies made
+        in 2008 and print it out. (Click to see full instructions)\r
+      U3 - Search Terms - 2_instruction: |
+        Print out all the movies with year 2008
+        using the readRecords search terms. (Click to see full instructions)\r
+      U3 - Search Terms - 3_instruction: |
+        Print whether or not there are movies matching
+        the search criteria (Click to see full instructions)\r
+      U3 - Search Terms - 4_instruction: |
+        Print whether or not there are movies matching
+        the search criteria (Click to see full instructions)\r
+      U3 - Search Terms - 5_instruction: |
+        Print out the cities that are in California
+        or have a population of 2,000,000. (Click to see full instructions)\r
+      U3 - Search Terms - 6_instruction: |
+        Print out the cities that are in California
+        or have a population of 2,000,000. (Click to see full instructions)\r
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -3878,8 +4111,9 @@
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin
-        a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: |
+        Add functionality that counts how many heads
+        in a row are flipped. (Click to see full instructions)\r
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -4004,8 +4238,10 @@
       U313 Two Buttons with Ids_instruction: |
         Predict what will happen. Once you've
         made a prediction, run the code to see what happens. (Click to see full instructions)
-      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto
-        see full instructions)"
+      U3L03 - draw rect function_instruction: |-
+        Write a function called drawRectangle().\r
+        (Click
+        to see full instructions)
       U3L03 - draw step_instruction: |
         Write the drawStep function. (Click to see
         full instructions)
@@ -4215,13 +4451,16 @@
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
         button.
-      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof
-        syntax error.  App Lab did not understand which object it should be listening\nto
-        for a \"click\" event so it showed an error message in the console to let\nyou
-        know.  Another kind of error is a logical error - the program is valid,\nbut
-        it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA
-        (tricky) syntax error and logical error.  Find them, fix them, and make\nthe
-        program work as expected."
+      U3L13 - Debug Id plus logic problem_instruction: |-
+        The last problem was an example
+        of syntax error.  App Lab did not understand which object it should be listening
+        to for a "click" event so it showed an error message in the console to let
+        you know.  Another kind of error is a logical error - the program is valid,
+        but it's not doing what you want it to do.\r
+        \r
+        This program has 2 errors.
+        A (tricky) syntax error and logical error.  Find them, fix them, and make
+        the program work as expected.
       U3L13 - Debug Id Problem_instruction: |
         Improve the button by choosing a descriptive
         and meaningful ID. (Click to see full instructions)
@@ -4393,8 +4632,10 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)
@@ -4507,12 +4748,16 @@
       U3L19 - DEMO up down count practice app_instruction: |
         Try out the demo app
         (Click to see full instructions)
-      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof
-        code from the previous screen.  Try changing the value assigned to foo\nto
-        see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto
-        foo to see the string change. \r\n2. By only modifying the lines of code\nthat
-        were given to you, try to get the output to say: “The value of foo is:\n9.
-        \ And isn’t that fine.” \r\n"
+      U3L19 - do concatenate string with var_instruction: |
+        We've given you a piece
+        of code from the previous screen.  Try changing the value assigned to foo
+        to see the string change. \r
+        Do this: \r
+        1. Try changing the value assigned
+        to foo to see the string change. \r
+        2. By only modifying the lines of code
+        that were given to you, try to get the output to say: “The value of foo is:
+        9.  And isn’t that fine.” \r
       U3L19 - fix the var name syntax error v2_instruction: |
         Fix the error and get
         it to print the value of both variables (Click to see full instructions)
@@ -4541,14 +4786,18 @@
         Add another variable called
         "lives" and set the value to 3. Print the value of the variable to the console.
         (Click to see full instructions)
-      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe
-        statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).
-        \ Run\nthe program and you should see the output show up in the console area
-        below\nthe workspace.  Then try adding a few more console.log statements.
-        \ Display\nsome text.  Make another variable and display that.  \r\nThe app
-        screen will\nbe blank -- that's the point.  With console.log you can test
-        output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF:
-        U3L19-useconsolelog.gif"
+      U3L19 - try out console log_instruction: |-
+        Try out console.log.  Do this: replace
+        the statement write("foo is: " + foo) with console.log("foo is: " + foo).  Run
+        the program and you should see the output show up in the console area below
+        the workspace.  Then try adding a few more console.log statements.  Display
+        some text.  Make another variable and display that.  \r
+        The app screen will
+        be blank -- that's the point.  With console.log you can test output behind
+        the scenes in a way the user cannot see.  \r
+        \r
+        \r
+        GIF: U3L19-useconsolelog.gif
       U3L19 - up down count practice app_instruction: |
         Set up the down button to
         decrease the value of count by 1 each time it is clicked. (Click to see full
@@ -4700,9 +4949,11 @@
         You are given the string "Wisdom begins
         with wonder." Use the string.substring(begin, end) function to print "begin"
         and "nder" to the console.
-      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto
-        get the strings \"begin\" and \"nder\" from a sentence no matter where\nin
-        the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 5_instruction: |
+        Fill in the function, findBeginNder()
+        to get the strings "begin" and "nder" from a sentence no matter where
+        in the sentence they exist.\r
+        Print the strings and their index to the console.
       U3L25 String Parsing 6_instruction: |
         Write a function that takes a name (first
         last) and reorders it (last, first).
@@ -4746,7 +4997,7 @@
         right of the starting location. (Click to show full instructions)
       U4 - add createRecord to contacts App_instruction: |
         Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
@@ -4772,11 +5023,11 @@
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)
@@ -4896,7 +5147,7 @@
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
       U4 - Objects - pullValues_instruction: |
-        Create an event handler for the "Add
+        Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |
@@ -4904,7 +5155,7 @@
         starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |
         Add code to your event handler
-        fro the "Add Contact" button so that when a new contact is added the inputs
+        for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
       U4 - Objects - showContact1_instruction: |
@@ -4924,30 +5175,39 @@
       U4 - Objects - writeWrap_instruction: |
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords
-        command. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction.
-        (Click to see full instructions)\r\n"
-      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby
-        a call to readRecords. (Click to see full instructions)\r\n"
-      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare
-        read from the new table. (Click to see full instructions)\r\n"
-      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand
-        to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues
-        in the response from the database. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall
-        individually. (Click to see full instructions)\r\n"
-      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie
-        in your database. (Click to see full instructions)\r\n"
-      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe
-        records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.2_instruction: |
+        Place a console.log command below the
+        readRecords command. (Click to see full instructions)\r
+      U4 - Read Record - 1.3_instruction: |
+        Add a console.log command inside the callback
+        function. (Click to see full instructions)\r
+      U4 - Read Record - 1_instruction: |
+        Use console.log to display the records returned
+        by a call to readRecords. (Click to see full instructions)\r
+      U4 - Read Record - 2_instruction: |
+        Change the table name so that the records
+        are read from the new table. (Click to see full instructions)\r
+      U4 - Read Record - 3_instruction: |
+        Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)\r
+      U4 - Read Record - 4.1_instruction: |
+        Use indexes and dot notation to reference
+        values in the response from the database. (Click to see full instructions)\r
+      U4 - Read Record - 4_instruction: |
+        Print out each record return from the readRecords
+        call individually. (Click to see full instructions)\r
+      U4 - Read Record - 5_instruction: |
+        Using a for loop, display the title of each
+        movie in your database. (Click to see full instructions)\r
+      U4 - Read Record - part 1 - template_instruction: |
+        Use console.log to display
+        the records returned by a call to readRecords. (Click to see full instructions)\r
       U4 - ReadRecords - Contacts App 1_instruction: |
-        Write a function called "updateLocalData"
-        that copies the data in your database into your "contacts" global variable.
+        Use readRecords to copy the
+        data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |
-        Create a function called "refreshLocalData"
+        Create a function called refreshLocalData.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |
         Add a call to "refreshLocalData"
@@ -4967,14 +5227,16 @@
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: Sablon
-      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
-        run the app and click the button. Run it multiple times with different\nnames!
-        Watch the console and use the ‘View Data” button to see how the table\nis
-        updated. As you play around make sure you can explain the purpose of each\nof
-        the circled parts of the diagram.\r\n\r\n"
+      U4L06 Data Storage 1_instruction: |
+        Fill in your name instead of "Enter Your
+        Name", run the app and click the button. Run it multiple times with different
+        names! Watch the console and use the ‘View Data” button to see how the table
+        is updated. As you play around make sure you can explain the purpose of each
+        of the circled parts of the diagram.\r
+        \r
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none
         we started. Add a text label to collect the users name and use that as\nthe
-        data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes
+        data input for the record.\\r\n\\r\nRun the app and click the button multiple\ntimes
         and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
         We want to improve the user experience.
@@ -4995,24 +5257,41 @@
       U4L15 Read Data 1_instruction: |
         Run the level and see what happens. Then edit
         the code to make it print a different column of information.
-      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether
-        all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like
-        <<Food>>"
-      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin
-        the array\r\n\r\n"
-      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
-        display your sentence."
+      U4L15 Read Data 2_instruction: |-
+        Student should create a sentence which puts
+        together all the pieces from a record.\r
+        \r
+        <<Name>> is <<Age>> years old
+        and like <<Food>>
+      U4L15 Read Data 3_instruction: |
+        Print the sentence using the first JSON object
+        in the array\r
+        \r
+      U4L15 Read Data 4_instruction: |-
+        \r
+        Use a random record from the list of records
+        to display your sentence.
+      U6 - Final Project - Project Level_instruction: |
+        Build your final project here.
+        (Click to see full instructions)
+      U6 - updateRecord - Callback Success Parameter_instruction: |
+        Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
       U6 - updateRecord - Contacts - Edit event handler_instruction: |
-        (Click to see
-        full instructions)
-      U6 - updateRecord - Contacts - Edit UI_instruction: "(Click to see full instructions)"
+        Write event
+        handlers for the Edit Contacts UI elements. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: |
+        Set up the UI elements
+        needed to edit contacts. (Click to see full instructions)
       U6 - updateRecord - Contacts - Save edited contact_instruction: |
-        (Click to
-        see full instructions)
-      U6 - updateRecord - Default Block_instruction: "(Click to see full instructions)"
+        Use updateRecord
+        to store the user's edits in the database. (Click to see full instructions)
+      U6 - updateRecord - Default Block_instruction: |
+        Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
       U6 - updateRecord - Update Nonexistent Record_instruction: |
-        (Click to see full
-        instructions)
+        Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: Láva rejlik bizonyos blokkok alatt, amelyet
         le kell takarnod, mielőtt tovább mozogsz. A "ha" utasítás jól fog jönni. Használd
         az "előremenni" blokkot a megfelelő módon, hogy kibányászd ezeket a blokkokat.
@@ -5022,9 +5301,8 @@
       Underground Iron_instruction: Nem jó ötlet belesétálni a folyékony lávába. Takard
         le macskakővel, és így készíts hidat. azután legalább két vasérc blokkot bányássz
         ki.
-      Underground Mine in a Circle_instruction: "Találd meg az 5 gyémántot és a 7
-        vöröskő ércet! Próbálj ismételd blokkot használni az ismételd blokkon belül,
-        hogy körbejárj.\r\n"
+      Underground Mine in a Circle_instruction: |
+        Találd meg az 5 gyémántot és a 7 vöröskő ércet! Próbálj ismételd blokkot használni az ismételd blokkon belül, hogy körbejárj.\r
       Underground Mining Coal_instruction: A legértékesebb nyersanyagok a föld alatt
         vannak, de sötét lehet. Legalább két fáklyát helyezz el és bányássz ki legalább
         két szenet.

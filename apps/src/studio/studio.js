@@ -16,7 +16,9 @@ var sharedConstants = require('../constants');
 var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
-var page = require('../templates/page.html.ejs');
+var AppView = require('../templates/AppView.jsx');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Sprite = require('./Sprite');
@@ -566,10 +568,8 @@ Studio.removeGoalEffect = function () {
  * @param func Function : The function to execute
  * @param data Object or Array : The data to pass to the function. If the function is also passed arguments, the data is appended to the arguments list. If the data is an Array, each item is appended as a new argument.
  */
-var delegate = function(scope, func, data)
-{
-  return function()
-  {
+var delegate = function(scope, func, data) {
+  return function() {
     var args = Array.prototype.slice.apply(arguments).concat(data);
     func.apply(scope, args);
   };
@@ -1182,8 +1182,7 @@ function edgeCollidableCollisionDistance (collidable, edgeName, yAxis) {
  * executeCollision, which is expected to be called afterwards by the caller.
  */
 function handleActorCollisionsWithCollidableList (
-           spriteIndex, xCenter, yCenter, list, autoDisappear)
-{
+           spriteIndex, xCenter, yCenter, list, autoDisappear) {
   // Traverse the list in reverse order because we may remove elements from the
   // list while inside the loop:
   for (var i = list.length - 1; i >= 0; i--) {
@@ -1350,8 +1349,7 @@ function checkForCollisions() {
                         spriteCollisionDistance(i, j, false),
                         iYCenter,
                         jYCenter,
-                        spriteCollisionDistance(i, j, true)))
-      {
+                        spriteCollisionDistance(i, j, true))) {
         Studio.collideSpriteWith(i, j);
       } else {
         sprite.endCollision(j);
@@ -1808,22 +1806,6 @@ Studio.init = function(config) {
     finishButton: !finishButtonFirstLine && showFinishButton
   });
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
-      controls: firstControlsRow,
-      extraControlRows: extraControlRows,
-      blockUsed: undefined,
-      idealBlockNumber: undefined,
-      editCode: level.editCode,
-      blockCounterClass: 'block-counter-default',
-      inputOutputTable: level.inputOutputTable,
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
   var levelTracks = [];
   if (level.music && skin.musicMetadata) {
     levelTracks = skin.musicMetadata.filter(function(trackMetadata) {
@@ -1912,11 +1894,14 @@ Studio.init = function(config) {
     }
 
     drawMap();
+
+    if (!!config.level.projectTemplateLevelName) {
+      studioApp.displayWorkspaceAlert('warning', <div>{commonMsg.projectWarning()}</div>);
+    }
   };
 
   config.afterClearPuzzle = function() {
     studioApp.resetButtonClick();
-    annotationList.clearRuntimeAnnotations();
   };
 
   // Since we allow "show code" for some blockly levels with move blocks,
@@ -1975,21 +1960,58 @@ Studio.init = function(config) {
 
   Studio.makeThrottledSpriteWallCollisionHelpers();
 
-  studioApp.init(config);
+  var generateCodeWorkspaceHtmlFromEjs = function () {
+    return codeWorkspaceEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
 
-  var finishButton = document.getElementById('finishButton');
-  if (finishButton) {
-    dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
-  }
+  var generateVisualizationColumnHtmlFromEjs = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: firstControlsRow,
+        extraControlRows: extraControlRows,
+        inputOutputTable: level.inputOutputTable
+      }
+    });
+  };
 
-  // pre-load images asynchronously
-  // (to reduce the likelihood that there is a delay when images
-  //  are changed at runtime)
-  if (config.skin.preloadAssets) {
-    preloadActorImages();
-    preloadProjectileAndItemImages();
-    preloadBackgroundImages();
-  }
+  var onMount = function () {
+    studioApp.init(config);
+
+    var finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
+    }
+
+    // pre-load images asynchronously
+    // (to reduce the likelihood that there is a delay when images
+    //  are changed at runtime)
+    if (config.skin.preloadAssets) {
+      preloadActorImages();
+      preloadProjectileAndItemImages();
+      preloadBackgroundImages();
+    }
+  };
+
+  ReactDOM.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    onMount: onMount
+  }), document.getElementById(config.containerId));
 };
 
 /**
@@ -2445,8 +2467,7 @@ var displayFeedback = function() {
   // For free play, show keep playing, unless it's a big game level
   if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
     tryAgainText = commonMsg.keepPlaying();
-  }
-  else {
+  } else {
     tryAgainText = commonMsg.tryAgain();
   }
 
@@ -2599,10 +2620,13 @@ var registerHandlersWithMultipleSpriteParams =
 
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
-  try { codegen.evalWith(code, {
-                         StudioApp: studioApp,
-                         Studio: api,
-                         Globals: Studio.Globals } ); } catch (e) { }
+  try {
+    codegen.evalWith(code, {
+      StudioApp: studioApp,
+      Studio: api,
+      Globals: Studio.Globals
+    });
+  } catch (e) { }
 };
 
 /**
@@ -2869,15 +2893,10 @@ Studio.execute = function() {
   }
 
   studioApp.reset(false);
+  studioApp.clearAndAttachRuntimeAnnotations();
 
   if (level.editCode) {
     var codeWhenRun = studioApp.getCode();
-    if (!studioApp.hideSource) {
-      // Our ace worker also calls attachToSession, but it won't run on IE9:
-      var session = studioApp.editor.aceEditor.getSession();
-      annotationList.attachToSession(session, studioApp.editor);
-      annotationList.clearRuntimeAnnotations();
-    }
     Studio.JSInterpreter = new JSInterpreter({
       studioApp: studioApp
     });
@@ -5133,8 +5152,7 @@ Studio.setSpriteXY = function (opts) {
   sprite.setDirection(Direction.NONE);
 };
 
-Studio.getPlayspaceBoundaries = function(sprite)
-{
+Studio.getPlayspaceBoundaries = function(sprite) {
   var boundaries;
 
   if (skin.wallCollisionRectWidth && skin.wallCollisionRectHeight && !level.gridAlignedMovement) {

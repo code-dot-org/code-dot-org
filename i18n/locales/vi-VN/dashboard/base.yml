@@ -24,11 +24,13 @@ vi:
   hello: Xin chào thế giới
   welcome_back: 'Chào mừng trở lại, %{name}'
   submit: Chấp nhận
+  unsubmit: Ngưng gửi
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Thêm một giáo viên:'
       placeholder: Phần mã (ABCDEF)
-      instructions: 'Vui lòng nhập mã được chia sẻ với bạn bởi giáo viên của bạn. Nó là một mã 6 chữ như "ABCDEF".'
+      instructions: 'Vui lòng nhập mã được chia sẻ bởi giáo viên của bạn. Nó là một mã gồm 6 chữ cái như "ABCDEF".'
     submit: Thêm giáo viên
   add_hint_form:
     placeholder: Hãy nhập gợi ý mật khẩu của bạn ở đây
@@ -222,7 +224,7 @@ vi:
       free_play:
         playlab: Tạo một ứng dụng
         artist: Vẽ một cái gì đó
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Tạo một ứng dụng
     user:
       classroom: Trang chủ giáo viên
@@ -320,6 +322,7 @@ vi:
     heading_hoc2014: '<h2> Giờ Lập Trình</h2><h1>Mọi lứa tuổi</h1>'
     heading_elementary: '<h2>các khóa học 20 giờ cho</h2> <h1>Người nhập môn (mọi lứa tuổi)</h1>'
     heading_apps: '<h2>Thú vị cho</h2><h1>Tất cả mọi người</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Khóa học cơ bản của chúng tôi</h2><h1>Mọi lứa tuổi</h1>'
     your_gallery: Bộ sưu tập
     no_primary_course: Hãy thử một khóa học ở Code Studio
@@ -414,6 +417,12 @@ vi:
       current: Mức hiện tại
       unused: Không sử dụng cấp độ
   upsell:
+    applab:
+      title: Phòng thí nghiệm ứng dụng
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Mê cung cổ điển
       body: Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học các khóa này.
@@ -455,10 +464,10 @@ vi:
   landing:
     prerelease: "Khóa học này là <span class='betatext'> phiên bản beta</span>.  Điều này có nghĩa là nó không phải là phiên bản cuối cùng của khóa học, và có thể sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các cải tiến."
     prerelease_hoc2014: "Lớp học này là  <span class='betatext'>phiên bản beta</span>. Nó có thể được sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các cải tiến."
-    feedback: Gửi ý kiến phản hồi
     report_bug: Báo cáo lỗi
     support: Nhận trợ giúp
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Câu trả lời không chính xác
     wrong_body: 'Câu trả lời mà bạn đã nhập không chính xác.  Xin vui lòng thử lại!'
@@ -466,6 +475,23 @@ vi:
     correct_body: Đó là câu trả lời chính xác.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Cảm ơn bạn
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Cảm ơn bạn
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Cảm ơn bạn
+    wrong_body: Thank you for submitting answers.
+    correct_title: Cảm ơn bạn
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Cảm ơn bạn
+    wrong_body: Thank you for submitting answers.
+    correct_title: Cảm ơn bạn
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Cách giải chưa chính xác
     wrong_body: Cách giải bạn đã nhập chưa chính xác. Xin vui lòng thử lại!
@@ -483,6 +509,8 @@ vi:
     placeholder: Nhập câu trả lời của bạn ở đây
     open_response_title: Xin cảm ơn
     open_response_body: Cảm ơn câu trả lời của bạn!
+    correct_title: Chính xác
+    correct_body: Đó là câu trả lời chính xác.
   dialog:
     ok: Đồng ý
     startover_title: Bạn có chắc bạn muốn bắt đầu lại?
@@ -536,6 +564,7 @@ vi:
     completed_perfect: hoàn thành, hoàn hảo
     furthest_level_attempted: đã cố gắng ở mức độ cao nhất
     assessment: đánh giá
+    submitted: submitted
   studio:
     courses_working_on: Các khóa học bạn đang tiến hành
     completed_courses: Hoàn thành khóa học
@@ -592,3 +621,7 @@ vi:
           other: Khác
         detail: Xin vui lòng cung cấp càng nhiều chi tiết nếu có thể liên quan đến nội dung bạn đang báo cáo.
         acknowledge: 'Bằng việc gửi thông tin này, bạn xác nhận nó sẽ bị xử lý theo quy định của các điều khoản của %{link_start_privacy}Privacy Policy%{link_end} và %{link_start_tos}Terms Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

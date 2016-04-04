@@ -20,6 +20,12 @@ class ProjectsController < ApplicationController
     },
     gamelab: {
       name: 'New Game Lab Project',
+      admin_required: true,
+      login_required: true
+    },
+    makerlab: {
+      name: 'New Maker Lab Project',
+      admin_required: true,
       login_required: true
     },
     algebra_game: {
@@ -48,6 +54,7 @@ class ProjectsController < ApplicationController
   end
 
   def load
+    return if redirect_if_admin_required_and_not_admin
     if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
@@ -64,6 +71,7 @@ class ProjectsController < ApplicationController
   end
 
   def create_new
+    return if redirect_if_admin_required_and_not_admin
     return if redirect_applab_under_13(@level)
     redirect_to action: 'edit', channel_id: create_channel({
       name: 'Untitled Project',
@@ -95,6 +103,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    return if redirect_if_admin_required_and_not_admin
     if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
@@ -102,6 +111,7 @@ class ProjectsController < ApplicationController
   end
 
   def remix
+    return if redirect_if_admin_required_and_not_admin
     if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
@@ -121,5 +131,13 @@ class ProjectsController < ApplicationController
 
   def get_from_cache(key)
     @@project_level_cache[key] ||= Level.find_by_key(key)
+  end
+
+  # Redirect to home if user not authenticated
+  def redirect_if_admin_required_and_not_admin
+    if STANDALONE_PROJECTS[params[:key]][:admin_required] && !current_user.try(:admin?)
+      redirect_to '/'
+      true
+    end
   end
 end

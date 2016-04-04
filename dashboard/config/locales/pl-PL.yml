@@ -24,6 +24,8 @@
   hello: Witaj świecie
   welcome_back: Witaj z powrotem, %{name}
   submit: Wyślij
+  unsubmit: Nieprzesłane
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Dodaj nauczyciela:'
@@ -378,6 +380,7 @@
     heading_elementary: "<h2>20-godzinne kursy z</h2><h1>Podstaw informatyki (w każdym
       wieku)</h1>"
     heading_apps: "<h2>Zabawy dla</h2><h1>Wszystkich</h1>"
+    heading_tools: "<h2>Gotowy na następny krok?</h2><h1>JavaScript dla Szkół Średnich</h1>"
     heading_legacy: "<h2>Nasz przyspieszony kurs dla</h2><h1>Wszystkich grup wiekowych</h1>"
     your_gallery: Galeria
     no_primary_course: Wypróbuj kurs w Code Studio
@@ -506,6 +509,15 @@
       current: Aktualne poziomy
       unused: Niewykorzystane poziomy
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab jest środowiskiem programistycznym, gdzie można tworzyć proste
+        aplikacje. Zaprojektuj aplikację, koduj za pomocą bloków albo JavaScript aby
+        to zadziałało, następnie udostępnij twoją aplikację w kilka sekund.
+      body_short: Zaprojektuj aplikację, koduj za pomocą bloków albo JavaScript aby
+        to zadziałało, następnie udostępnij twoją aplikację w kilka sekund.
+      audience: Wiek 13+
+      cta: Dowiedz się, jak
     hoc:
       title: Klasyczny labirynt
       body: Wypróbuj podstawy informatyki. Miliony dały im już szansę.
@@ -560,10 +572,10 @@
       opinii, jak i jest ulepszany.
     prerelease_hoc2014: Ten poradnik jest w <span class='betatext'> wersji beta</span>.
       Podlega on rewizji na podstawie otrzymanych opinii, jak i jest ulepszany.
-    feedback: Przekaż opinię
     report_bug: Zgłoś błędy
     support: Uzyskaj pomoc
     support_url: "//support.Code.org"
+    help_resources: Pomoc
   multi:
     wrong_title: Błędna odpowiedź
     wrong_body: Wprowadzona przez Ciebie odpowiedź nie jest poprawna. Spróbuj ponownie!
@@ -571,6 +583,23 @@
     correct_body: To jest poprawna odpowiedź.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Dziękujemy
+    wrong_body: Dziękujemy za wysłanie odpowiedzi.
+    correct_title: Dziękujemy
+    correct_body: Dziękujemy za wysłanie odpowiedzi.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Dziękujemy
+    wrong_body: Dziękujemy za wysłanie odpowiedzi.
+    correct_title: Dziękujemy
+    correct_body: Dziękujemy za wysłanie odpowiedzi.
+  level_group-submittable:
+    wrong_title: Dziękujemy
+    wrong_body: Dziękujemy za wysłanie odpowiedzi.
+    correct_title: Dziękujemy
+    correct_body: Dziękujemy za wysłanie odpowiedzi.
   match:
     wrong_title: Niepoprawne rozwiązanie
     wrong_body: Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!
@@ -590,6 +619,8 @@
     placeholder: Wprowadź swoją odpowiedź tutaj
     open_response_title: Dzięki
     open_response_body: Dzięki za odpowiedź!
+    correct_title: Poprawnie
+    correct_body: To jest poprawna odpowiedź.
   dialog:
     ok: OK
     startover_title: Czy na pewno chcesz zacząć od nowa?
@@ -655,6 +686,7 @@
     completed_perfect: zakończona, doskonale
     furthest_level_attempted: próbowano najdalszy poziom
     assessment: ocena/ewaluacja
+    submitted: Wysłano
   studio:
     courses_working_on: Kursy, w których bierzesz udział
     completed_courses: Ukończone kursy
@@ -723,3 +755,7 @@
         acknowledge: Przesyłając te informacje, potwierdzasz, że będą one wykorzystane
           zgodnie z warunkami %{link_start_privacy}Privacy Policy%{link_end} i %{link_start_tos}Terms
           of Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

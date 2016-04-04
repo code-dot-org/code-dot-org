@@ -13,7 +13,6 @@
     "x": "150",
     "y": "200",
     "free_play": "false",
-    "ideal": "9",
     "slider_speed": "0.7",
     "embed": "false",
     "disable_param_editing": "true",
@@ -29,11 +28,13 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Draw a diamond with sides of 100 pixels. \r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Draw a diamond with sides of 100 pixels. \r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "examples_required": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Before starting the diamond, the artist needs to turn left by 60 degrees to get on the right path.\",\r\n  \"hint_id\": \"2-3_Artist Loops_New_12_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n   {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"After the artist goes forward 100 pixels, he will need to turn right 120 degrees to make the sharp corner.\",\r\n  \"hint_id\": \"2-3_Artist Loops_New_12_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n   {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The artist will need to turn right only 60 degrees to create a wide corner.\",\r\n  \"hint_id\": \"2-3_Artist Loops_New_12_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
-  "published": true
+  "published": true,
+  "notes": "Edited 3/3/16 to remove loop requirement (since next puzzle didn't assume it and it would have created a nested loop situation.) Also added three hints to help construct the diamond.  Removed block count.\r\n\r\n"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -83,69 +84,40 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_turn_by_constant_dropdown">
-              <title name="DIR">turnLeft</title>
-              <title name="VALUE" config="45,60,90,120,180">60</title>
-              <next>
-                <block type="draw_turn_by_constant_dropdown">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE" config="45,60,90,120,180">60</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_turn_by_constant_dropdown">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE" config="45,60,90,120,180">120</title>
-              <next>
-                <block type="draw_turn_by_constant_dropdown">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE" config="45,60,90,120,180">180</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-      </xml>
-    </required_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_turn_by_constant">
+            <block type="draw_turn_by_constant_dropdown">
               <title name="DIR">turnLeft</title>
-              <title name="VALUE">60</title>
+              <title name="VALUE" config="45,60,90,120,180">60</title>
               <next>
                 <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
                   <title name="VALUE">100</title>
                   <next>
-                    <block type="draw_turn_by_constant">
+                    <block type="draw_turn_by_constant_dropdown">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE">120</title>
+                      <title name="VALUE" config="45,60,90,120,180">120</title>
                       <next>
                         <block type="draw_move_by_constant">
                           <title name="DIR">moveForward</title>
                           <title name="VALUE">100</title>
                           <next>
-                            <block type="draw_turn_by_constant">
+                            <block type="draw_turn_by_constant_dropdown">
                               <title name="DIR">turnRight</title>
-                              <title name="VALUE">60</title>
+                              <title name="VALUE" config="45,60,90,120,180">60</title>
                               <next>
                                 <block type="draw_move_by_constant">
                                   <title name="DIR">moveForward</title>
                                   <title name="VALUE">100</title>
                                   <next>
-                                    <block type="draw_turn_by_constant">
+                                    <block type="draw_turn_by_constant_dropdown">
                                       <title name="DIR">turnRight</title>
-                                      <title name="VALUE">120</title>
+                                      <title name="VALUE" config="45,60,90,120,180">120</title>
                                       <next>
                                         <block type="draw_move_by_constant">
                                           <title name="DIR">moveForward</title>

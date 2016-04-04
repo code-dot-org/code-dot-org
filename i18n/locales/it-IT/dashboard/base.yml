@@ -24,6 +24,8 @@ it:
   hello: Ciao a tutti
   welcome_back: 'Bentornato, %{name}'
   submit: Invia
+  unsubmit: "Annulla l'invio"
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Aggiungi un insegnante:'
@@ -224,7 +226,7 @@ it:
       free_play:
         playlab: Costruisci una App
         artist: Disegna qualcosa
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Costruisci una App
     user:
       classroom: "Cruscotto di Controllo dell'insegnante"
@@ -322,6 +324,7 @@ it:
     heading_hoc2014: "<h2>L'Ora del Codice</h2><h1>per iniziare</h1> (a qualunque età)"
     heading_elementary: '<h2>Corsi di 20 ore</h2><h1>per approfondire</h1> (a qualunque età)'
     heading_apps: '<h2>Divertimento per</h2><h1>tutti</h1>'
+    heading_tools: '<h2>Pronto per il prossimo passo?</h2><h1>Strumenti JavaScript Tools per la Scuola Superiore</h1>'
     heading_legacy: '<h2>Corso rapido</h2> per <h1>i più grandi</h1>'
     your_gallery: La tua collezione
     no_primary_course: Prova un corso presso Code Studio
@@ -416,6 +419,12 @@ it:
       current: Livelli correnti
       unused: LIvelli non usati
   upsell:
+    applab:
+      title: Laboratorio per le App
+      body: App Lab è un ambiente di programmazione dove puoi creare semplici applicazioni. Sviluppa un app, programmala con i blocchi o il JavaScript per farla funzionare, e infine condividila in pochi secondi.
+      body_short: Progetta una app, programala con i blocchi o con Javascript per farla funzionare, poi condividi la tua app in pochi istanti.
+      audience: "Eta' 13+"
+      cta: Scopri come
     hoc:
       title: Labirinto Classico
       body: "Impara i concetti base dell'informatica. Milioni di persone l'hanno già fatto."
@@ -457,10 +466,10 @@ it:
   landing:
     prerelease: "Questo corso è in <span class='betatext'>versione provvisoria</span>.  Significa che non è la versione finale ed è soggetto a revisioni man mano che arrivano osservazioni e vengono fatti miglioramenti."
     prerelease_hoc2014: "Questo corso è in <span class='betatext'>versione provvisoria</span>. È soggetto a revisione man mano che arrivano osservazioni in modo da migliorarlo."
-    feedback: Dicci che ne pensi
     report_bug: Segnala un errore
     support: Ottieni aiuto
     support_url: //programmailfuturo.it/aiuto
+    help_resources: Aiuto e Risorse
   multi:
     wrong_title: Risposta non corretta
     wrong_body: 'La risposta che hai scelto non è corretta.  Per favore riprova!'
@@ -468,6 +477,23 @@ it:
     correct_body: Questa è la risposta corretta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Grazie!
+    wrong_body: Grazie per aver inviato una risposta.
+    correct_title: Grazie!
+    correct_body: Grazie per aver inviato una risposta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Grazie!
+    wrong_body: Grazie per aver inviato una risposta
+    correct_title: Grazie!
+    correct_body: Grazie per aver inviato una risposta
+  level_group-submittable:
+    wrong_title: Grazie!
+    wrong_body: Grazie per aver inviato una risposta
+    correct_title: Grazie!
+    correct_body: Grazie per aver inviato una risposta
   match:
     wrong_title: Riprova!
     wrong_body: 'La risposta che hai scelto non è corretta.  Per favore riprova!'
@@ -485,6 +511,8 @@ it:
     placeholder: Inserisci qui la tua risposta
     open_response_title: Grazie
     open_response_body: Grazie per la risposta!
+    correct_title: Molto bene!
+    correct_body: Questa è la risposta corretta.
   dialog:
     ok: Ok
     startover_title: Sei sicuro di voler ripristinare la situazione iniziale?
@@ -539,6 +567,7 @@ it:
     completed_perfect: completato in modo perfetto
     furthest_level_attempted: esercizio più avanzato che è stato provato
     assessment: verifica
+    submitted: inviato
   studio:
     courses_working_on: Corsi su cui stai lavorando
     completed_courses: Corsi completati
@@ -595,3 +624,7 @@ it:
           other: Altro
         detail: Fornite quanti più dettagli possibili riguardanti il contenuto che stai segnalando.
         acknowledge: "Inviando queste informazioni, l'utente riconosce che sarà gestita in conformità con i termini della %{link_start_privacy}Politica della privacy%{link_end} e i %{link_start_tos}Termini del servizio%{link_end}"
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

@@ -18,6 +18,7 @@
   "fillTooltip": "১ একক ময়লা স্থাপন করুন",
   "finalLevel": "অভিনন্দন! আপনি শেষ ধাঁধা সমাধান করছেন।",
   "flowerEmptyError": "আপনি ভ্রমণরত ফুল আর কোন পুষ্পমধু নেই।",
+  "didNotCollectEverything": "আপনি কোনো পুষ্পরেণু বা মধু শুরু ছেড়ে না তা নিশ্চিত করুন",
   "get": "প্রাপ্ত",
   "heightParameter": "উচ্চতা",
   "holePresent": "সেখানে একটি গর্ত আছে।",
@@ -81,6 +82,5 @@
   "whileTooltip": "সমাপ্তি বিন্দুতে না পৌঁছানো পর্যন্ত ঘিরা কাজ পুনরাবৃত্তি করুন।",
   "word": "শব্দটি খুঁজুন",
   "yes": "\"হ্যাঁ\"",
-  "youSpelled": "আপনি বানান করেছেন",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "আপনি বানান করেছেন"
 }

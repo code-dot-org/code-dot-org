@@ -11,6 +11,8 @@ module LevelsHelper
       hoc_chapter_path(script_level.chapter, params)
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
+    elsif params[:puzzle_page]
+      puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
     else
       script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     end
@@ -187,6 +189,7 @@ module LevelsHelper
   # appropriate to the level being rendered.
   def render_app_dependencies
     use_droplet = app_options[:droplet]
+    use_makerlab = @level.game == Game.applab && @level.makerlab_enabled
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
     use_gamelab = @level.game == Game.gamelab
@@ -202,6 +205,7 @@ module LevelsHelper
                use_applab: use_applab,
                use_gamelab: use_gamelab,
                use_phaser: use_phaser,
+               use_makerlab: use_makerlab,
                hide_source: hide_source,
                static_asset_base_path: app_options[:baseUrl]
            }
@@ -233,7 +237,15 @@ module LevelsHelper
     level_options[:lastAttempt] = @last_attempt
     level_options.merge! @level.properties.camelize_keys
 
+    if current_user.nil? || current_user.teachers.empty?
+      # only students with teachers should be able to submit
+      level_options['submittable'] = false
+    end
+
     app_options.merge! view_options.camelize_keys
+
+    app_options[:submitted] = level_view_options[:submitted]
+    app_options[:unsubmitUrl] = level_view_options[:unsubmit_url]
 
     app_options
   end
@@ -297,7 +309,8 @@ module LevelsHelper
     # Process level view options
     level_overrides = level_view_options.dup
     if level_options['embed'] || level_overrides[:embed]
-      level_overrides.merge!(hide_source: true, show_finish: true)
+      level_overrides[:hide_source] = true
+      level_overrides[:show_finish] = true
     end
     if level_overrides[:embed]
       view_options(no_header: true, no_footer: true, white_background: true)
@@ -361,6 +374,7 @@ module LevelsHelper
         :thank_you => URI.escape(I18n.t('footer.thank_you')),
         :help_from_html => I18n.t('footer.help_from_html'),
         :art_from_html => URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+        :code_from_html => URI.escape(I18n.t('footer.code_from_html')),
         :powered_by_aws => I18n.t('footer.powered_by_aws'),
         :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
     }
@@ -382,13 +396,13 @@ module LevelsHelper
   def level_view_options(opts = nil)
     @level_view_options ||= LevelViewOptions.new
     if opts.blank?
-      @level_view_options.freeze.to_h.delete_if { |k, v| v.nil? }
+      @level_view_options.freeze.to_h.delete_if { |_k, v| v.nil? }
     else
       opts.each{|k, v| @level_view_options[k] = v}
     end
   end
 
-  def string_or_image(prefix, text)
+  def string_or_image(prefix, text, source_level = nil)
     return unless text
     path, width = text.split(',')
     if %w(.jpg .png .gif).include? File.extname(path)
@@ -419,12 +433,13 @@ module LevelsHelper
           style: 'border: none;'
         }), {class: 'aspect-ratio'})
     else
-      data_t(prefix + '.' + @level.name, text)
+      level_name = source_level ? source_level.name : @level.name
+      data_t(prefix + '.' + level_name, text)
     end
   end
 
-  def multi_t(text)
-    string_or_image('multi', text)
+  def multi_t(level, text)
+    string_or_image('multi', text, level)
   end
 
   def match_t(text)

@@ -177,12 +177,12 @@
         course4:
           description_short: Leerlingen die les 4 starten moeten eerst lessen 2 en
             3 doorlopen hebben.
-          description: Les 4 is ontwikkeld voor leerlingen die lessen 2 en 3 hebben
-            gevolgd. Leerlingen zullen dieper ingaan op de programmeeronderwerpen
-            die zijn geïntroduceerd in de vorige cursussen om flexibelere oplossingen
-            voor complexere problemen te vinden. Aan het eind van deze cursus maken
-            studenten interactieve verhalen en spellen, die ze met iedereen kunnen
-            delen.
+          description: Cursus 4 is bedoeld voor leerlingen die Cursus 2 en 3 hebben
+            afgerond. Door verschillende concepten te combineren bij het oplossen
+            van de problemen leren de leerlingen om te gaan met moeilijkere opdrachten.
+            Tegen de tijd dat deze Cursus is afgerond kunnen leerlingen programma's
+            schrijven die verschillende vaardigheden vragen, waaronder for loops en
+            functies met parameters. Geschikt voor groep 6 t/m klas 2.
           'Artist: Variables': 'Artiest: variabelen'
           'Bee: For Loops': 'Bij : For-lussen'
           title: Les 4
@@ -651,6 +651,7 @@
           description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
+          title_short: CSP Unit 3
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
@@ -1015,6 +1016,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: Gemengde zomer studie'
@@ -1475,6 +1477,11 @@
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1590,6 +1597,7 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Ijs tijd Speel Lab
           description_short: Maken een verhaal of een spel met de ijs tijd Speel Lab!
@@ -1612,7 +1620,7 @@
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
-          description_short: Programming
+          description_short: Programmeren
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1729,6 +1737,7 @@
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4
@@ -1755,3 +1764,72 @@
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Leer functioneel programmeren door Algebra
+          description: Leer functioneel programmeren door Algebra
+          'Calc: Evaluation Blocks': 'Calc: Evaluatie blokken'
+          'Eval: Strings and Images': 'Eval: Tekenreeksen en afbeeldingen'
+          'Unplugged: Contracts': 'Unplugged: Functies ontwerpen'
+          'Eval: Writing Contracts': 'Samenvatting: Functies ontwerpen'
+          'Calc: Defining Variables': 'Calc: Variabelen definiëren'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Unplugged: Het ontwerp recept'
+          'Play Lab: Defining Functions': 'Play Lab: Functies definiëren'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Informatica in Algebra
+          description_short: Leer functioneel programmeren door Algebra
+          description: Leer functioneel programmeren door Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video-Games
+            en Coordinaat Vliegtuigen'
+          'Play Lab: Defining Variables (Big Game)': 'Speel Lab: Variabelen definiëren
+            (Groot Spel)'
+          'Play Lab: Animation (Big Game)': 'Speel Lab: Animatie (Groot Spel)'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Eval: Boolean Operators': 'Eval: Booleaanse operatoren'
+          'Play Lab: Booleans': 'Speel Lab: Booleans'
+          'Play Lab: Boolean (Big Game)': 'Speel Lab: Booleans (Groot Spel)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            en stuksgewijze functies'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Botsingdetectie
+            en de afstand formule'
+          'Play Lab: Collision Detection (Big Game)': 'Speel Lab: Botsingdetectie
+            (Groot Spel)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

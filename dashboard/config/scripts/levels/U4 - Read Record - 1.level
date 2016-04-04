@@ -6,25 +6,10 @@
   "user_id": 155,
   "properties": {
     "skin": "applab",
-    "code_functions": {
-      "readRecords": {
-        "params": [
-          "\"myTable\"",
-          "{}",
-          "function(records){\n\n}"
-        ],
-        "paletteParams": [
-          "table",
-          "terms",
-          "callback"
-        ]
-      },
-      "console.log": null
-    },
     "edit_code": true,
     "embed": "false",
     "instructions": "Use console.log to display the records returned by a call to readRecords. (Click to see full instructions)\r\n",
-    "markdown_instructions": "# Reading Records\r\nYou have learned how `createRecord` can be used to create permanent copies of your data in a remote database. \r\n\r\n**In order to use this data you'll need a way to read it out of your database and back into your app**.\r\n\r\n<img src=\"https://images.code.org/ac5fb29d4935df7b5825f4cabd6b89e8-image-1449502640243.35.37 AM.png\" style=\"width: 350px; float: right\">\r\n\r\nCheck out the new command `readRecords`. This command **requests from the database *all* the records stored in one table.**. \r\n\r\nThe database responds by the sending an **array of objects** back to your program -- one object for every record in the table.  As with createRecord, the data sent back by the database will come through **callback function in the `records` parameter**.\r\n\r\n# Do This\r\n\r\n**NOTE**: the database with a table called 'myTable' already contains some data.\r\n\r\n* **Open the Data Viewer** to look at the data in 'myTable'\r\n* **Add a `readRecords` command** to your app.\r\n* **Add a `console.log` command** inside the callback function of `readRecords` to **display the `records`**\r\n* Run the program and **confirm that the data from the database is being displayed in the console log.**.\r\n\r\n![](https://images.code.org/fe3db85465b5dd8a983ba5615f4e851d-image-1449504949223.gif)",
+    "markdown_instructions": "# Reading Records\r\nYou have learned how `createRecord` can be used to create permanent copies of your data in a remote database. \r\n\r\n**In order to use this data, you'll need a way to read it out of your database and back into your app**.\r\n\r\n<img src=\"https://images.code.org/ac5fb29d4935df7b5825f4cabd6b89e8-image-1449502640243.35.37 AM.png\" style=\"width: 350px; float: right\">\r\n\r\nCheck out the new command `readRecords`. This command **requests from the database *all* the records stored in one table.**. \r\n\r\nThe database responds by the sending an **array of objects** back to your program - one object for every record in the table.  As with `createRecord`, the data sent back by the database will come through **callback function in the `records` parameter**.\r\n\r\n# Do This:\r\n\r\n**NOTE**: the database with a table called \"myTable\" already contains some data.\r\n\r\n* **Open the Data Viewer** to look at the data in \"myTable.\"\r\n* **Add a `readRecords` command** to your app.\r\n* **Add a `console.log` command** inside the callback function of `readRecords` to **display the `records`**.\r\n* Run the program and **confirm that the data from the database is being displayed in the console log.**\r\n\r\n![](https://images.code.org/fe3db85465b5dd8a983ba5615f4e851d-image-1449504949223.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -54,8 +39,11 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "slider_speed": "1",
-    "project_template_level_name": "U4 - Read Record - part 1 - template"
-  }
+    "project_template_level_name": "U4 - Read Record - part 1 - template",
+    "encrypted_examples": "VInuQnEtDowmA/mpqHpMigAvg9gM/JBKu3WN8A799kdWiNLwdt2YGJOYD6Hm\nYQ7y\n",
+    "data_tables": "{\r\n  \"myTable\" :[\r\n  {\r\n    \"name\": \"New York City\",\r\n    \"state\": \"New York\",\r\n    \"population\": 9000000\r\n  },\r\n  {\r\n     \"name\": \"Los Angeles\",\r\n    \"state\": \"California\",\r\n    \"population\": 4000000\r\n  },\r\n  {\r\n     \"name\": \"Chicago\",\r\n    \"state\": \"Illinios\",\r\n    \"population\": 3000000\r\n  },\r\n  {\r\n    \"name\": \"Houston\",\r\n    \"state\": \"Texas\",\r\n    \"population\": 2000000\r\n  }\r\n]\r\n}"
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

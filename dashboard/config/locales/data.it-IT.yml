@@ -576,8 +576,8 @@
         studio_playlab_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
           Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_iceage_hello1: Sid vuole riunire tutti per una nuova avventura. Puoi
-          aiutarlo a dire "Ciao" trascinando il blocco "pronuncia" nell'area di lavoro
-          e digitando la parola "Ciao" al suo interno?
+          aiutarlo a dire "Ciao" trascinando il blocco "il personaggio dice ..." nell'area
+          di lavoro e digitando la parola "Ciao" al suo interno?
         studio_iceage_hello2: Sid (il personaggio 1) incontra Manny (il personaggio
           2) e vuole invitarlo ad unirsi all'avventura. Puoi aiutarli a salutarsi
           usando due volte il blocco "il personaggio ... dice"?
@@ -616,8 +616,8 @@
           conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco
           ai tuoi amici sui loro smartphone, tablet o computer!"
         studio_gumball_hello1: Anais vuole farsi nuovi amici. Puoi aiutarla a dire
-          "Ciao" trascinando il blocco "pronuncia" nell'area di lavoro e digitando
-          la parola "Ciao" al suo interno?
+          "Ciao" trascinando il blocco "il personaggio dice ..." nell'area di lavoro
+          e digitando la parola "Ciao" al suo interno?
         studio_gumball_hello2: Darwin (personaggio 1) e suo fratello Gumball (personaggio
           2) stanno andando a scuola. Puoi aiutarli a salutarsi usando due volte il
           blocco "il personaggio ... dice"?
@@ -633,9 +633,10 @@
           il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare
           Gumball a riscaldarsi per la sua corsa muovendosi in continuazione a destra
           e a sinistra?
-        studio_gumball_click_hello: Puoi aiutare Anton a dare inizio alla gara pronunciando
-          le parole "Pronti, partenza, via!"? Per provare il tuo programma, non dimenticarti
-          di cliccare su Anton dopo aver cliccato su "Esegui"!
+        studio_gumball_click_hello: Puoi aiutare Anton a dare inizio alla gara dicendo
+          le parole "Ai posti, pronti, via!"? Non dimenticarti di cliccare su Anton
+          dopo aver cliccato su "Esegui", altrimenti non riuscirai a provare il tuo
+          programma!
         studio_gumball_move_events: Darwin partecipa alla gara di raccolta delle bandierine.
           Aiutalo a correre in tutte le direzioni attaccando il blocco "sposta ..."
           a ciascuno degli eventi. Quando hai fatto, clicca su "Esegui" per collezionare
@@ -942,8 +943,8 @@
           e modifica le dimensioni.
         frozen_snowflake_branch: Usa il blocco "disegna un ramo di un fiocco di neve"
         frozen_create_square: Attacca più blocchi qui per creare un quadrato
-        playlab_drag_say: Sposta qui il blocco "pronuncia" e scrivi "ciao" al posto
-          di "scrivi qua"
+        playlab_drag_say: Sposta qui il blocco "il personaggio dice ..." e scrivi
+          "ciao" al posto di "scrivi qua"
         playlab_use_twice: Usa questo blocco due volte e ricordati di cambiare il
           numero del personaggio
         playlab_move_girl: Usa il blocco "sposta a destra" per spostare la tennista

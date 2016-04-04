@@ -1,6 +1,15 @@
 require File.expand_path('../../../../config/environment.rb', __FILE__)
 
 DEFAULT_WAIT_TIMEOUT = 2.minutes
+SHORT_WAIT_TIMEOUT = 30.seconds
+
+def wait_with_timeout(timeout = DEFAULT_WAIT_TIMEOUT)
+  Selenium::WebDriver::Wait.new(timeout: timeout)
+end
+
+def wait_with_short_timeout
+  wait_with_timeout(SHORT_WAIT_TIMEOUT)
+end
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
@@ -28,35 +37,39 @@ end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.find_element(selection_criteria) }
+  wait_with_timeout.until { @browser.find_element(selection_criteria) }
 end
 
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   steps %q{
-    When I wait to see ".x-close"
-    And I press "x-close"
+    When I press "x-close"
     And I wait for 0.75 seconds
   }
 end
 
+When /^I close the React alert$/ do
+  steps %q{
+    When I click selector ".react-alert button"
+  }
+end
+
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';") }
+  wait_with_timeout.until { @browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';") }
 end
 
 When /^I reset the puzzle to the starting version$/ do
   steps %q{
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
+    And I see "#showVersionsModal"
     And I close the dialog
     And I wait for 3 seconds
     Then I click selector "#versions-header"
     And I wait until element "button:contains(Delete Progress)" is visible
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
-    Then I wait for 15 seconds
+    And I wait until element "#showVersionsModal" is gone
   }
 end
 
@@ -66,19 +79,21 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
 end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $(#{selector.dump}).text();").include? text }
+  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).text();").include? text }
 end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
+  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
+end
+
+Then /^I wait until element "([.#])([^"]*)" is gone$/ do |selector_symbol, name|
+  selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
+  wait_with_timeout.until { @browser.find_elements(selection_criteria).empty? }
 end
 
 # Required for inspecting elements within an iframe
 When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
+  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
@@ -117,12 +132,16 @@ When /^I inject simulation$/ do
 end
 
 When /^I press "([^"]*)"$/ do |button|
-  @button = @browser.find_element(:id, button)
+  wait_with_short_timeout.until {
+    @button = @browser.find_element(:id => button)
+  }
   @button.click
 end
 
 When /^I press the first "([^"]*)" element$/ do |selector|
-  @element = @browser.find_element(:css, selector)
+  wait_with_short_timeout.until {
+    @element = @browser.find_element(:css, selector)
+  }
   begin
     @element.click
   rescue
@@ -132,8 +151,10 @@ When /^I press the first "([^"]*)" element$/ do |selector|
   end
 end
 
-When /^I press the "([^"]*)" button$/ do |buttonText|
-  @button = @browser.find_element(:css, "input[value='#{buttonText}']")
+When /^I press the "([^"]*)" button$/ do |button_text|
+  wait_with_short_timeout.until {
+    @button = @browser.find_element(:css, "input[value='#{button_text}']")
+  }
   @button.click
 end
 
@@ -158,18 +179,18 @@ When /^I (?:open|close) the small footer menu$/ do
   }
 end
 
-When /^I press menu item "([^"]*)"$/ do |menuItemText|
-  menu_item_selector = "ul#more-menu a:contains(#{menuItemText})"
+When /^I press menu item "([^"]*)"$/ do |menu_item_text|
+  menu_item_selector = "ul#more-menu a:contains(#{menu_item_text})"
   steps %{
     Then I wait until element "#{menu_item_selector}" is visible
     And I click selector "#{menu_item_selector}"
   }
 end
 
-When /^I select the "([^"]*)" small footer item$/ do |menuItemText|
+When /^I select the "([^"]*)" small footer item$/ do |menu_item_text|
   steps %{
     Then I open the small footer menu
-    And I press menu item "#{menuItemText}"
+    And I press menu item "#{menu_item_text}"
   }
 end
 
@@ -216,7 +237,9 @@ When /^I press dropdown item "([^"]*)"$/ do |index|
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
-  @button = @browser.find_element(:xpath, xpath)
+  wait_with_timeout.until {
+    @button = @browser.find_element(:xpath, xpath)
+  }
   @button.click
 end
 
@@ -248,19 +271,19 @@ When /^I press delete$/ do
   @browser.execute_script(script)
 end
 
-When /^I hold key "([^"]*)"$/ do |keyCode|
-  script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{keyCode}']})"
+When /^I hold key "([^"]*)"$/ do |key_code|
+  script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{key_code}']})"
   @browser.execute_script(script)
 end
 
-When /^I type "([^"]*)" into "([^"]*)"$/ do |inputText, selector|
-  @browser.execute_script("$('" + selector + "').val('" + inputText + "')")
+When /^I type "([^"]*)" into "([^"]*)"$/ do |input_text, selector|
+  @browser.execute_script("$('" + selector + "').val('" + input_text + "')")
   @browser.execute_script("$('" + selector + "').keyup()")
   @browser.execute_script("$('" + selector + "').change()")
 end
 
-When /^I set text compression dictionary to "([^"]*)"$/ do |inputText|
-  @browser.execute_script("editor.setValue('#{inputText}')")
+When /^I set text compression dictionary to "([^"]*)"$/ do |input_text|
+  @browser.execute_script("editor.setValue('#{input_text}')")
 end
 
 Then /^I should see title "([^"]*)"$/ do |title|
@@ -276,7 +299,7 @@ Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
 end
 
 Then /^mark the current level as completed on the client/ do
-  @browser.execute_script %q-sessionStorage.setItem('progress', '{"hourofcode":{"' + appOptions.serverLevelId + '":100}}')-
+  @browser.execute_script 'dashboard.clientState.trackProgress(true, 1, 100, "hourofcode", appOptions.serverLevelId)'
 end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
@@ -298,28 +321,28 @@ end
 
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
-Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
-  element_has_text(selector, expectedText)
+Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
+  element_has_text(selector, expected_text)
 end
 
 Then /^I set selector "([^"]*)" text to "([^"]*)"$/ do |selector, text|
   @browser.execute_script("$(\"#{selector}\").text(\"#{text}\");")
 end
 
-Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
+Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   # Add more unescaping rules here as needed.
   expectedText.gsub!(/\\n/, "\n")
-  element_has_text(selector, expectedText)
+  element_has_text(selector, expected_text)
 end
 
-Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expectedHtml|
-  element_has_html(selector, expectedHtml)
+Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expected_html|
+  element_has_html(selector, expected_html)
 end
 
-Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     Then I wait to see a ".dialog-title"
-    And element ".dialog-title" has text "#{expectedText}"
+    And element ".dialog-title" has text "#{expected_text}"
   }
 end
 
@@ -332,24 +355,24 @@ end
 
 # pixelation and other dashboard levels pull a bunch of hidden dialog elements
 # into the dom, so we have to check for the dialog more carefully.
-Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     And I wait to see ".modal-body"
     And element ".modal-body .dialog-title" is visible
-    And element ".modal-body .dialog-title" contains text "#{expectedText}"
+    And element ".modal-body .dialog-title" contains text "#{expected_text}"
   }
 end
 
-Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, locKey|
-  element_has_i18n_text(selector, language, locKey)
+Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
+  element_has_i18n_text(selector, language, loc_key)
 end
 
-Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
-  element_contains_text(selector, expectedText)
+Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
+  element_contains_text(selector, expected_text)
 end
 
-Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expectedValue|
-  element_value_is(selector, expectedValue)
+Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expected_value|
+  element_value_is(selector, expected_value)
 end
 
 Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
@@ -357,8 +380,8 @@ Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
   value.should eq negation.nil?
 end
 
-Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expectedText|
-  element_has_attribute(selector, attribute, replace_hostname(expectedText))
+Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expected_text|
+  element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
 
 # The second regex encodes that ids should not contain spaces or quotes.
@@ -383,16 +406,16 @@ Then /^element "([^"]*)" is hidden$/ do |selector|
   visible.should eq false
 end
 
-def has_class(selector, class_name)
+def has_class?(selector, class_name)
   @browser.execute_script("return $(#{selector.dump}).hasClass('#{class_name}')")
 end
 
 Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, class_name|
-  has_class(selector, class_name).should eq true
+  has_class?(selector, class_name).should eq true
 end
 
 Then /^element "([^"]*)" (?:does not|doesn't) have class "([^"]*)"$/ do |selector, class_name|
-  has_class(selector, class_name).should eq false
+  has_class?(selector, class_name).should eq false
 end
 
 Then /^SVG element "([^"]*)" within element "([^"]*)" has class "([^"]*)"$/ do |selector, parent_selector, class_name|
@@ -401,16 +424,16 @@ Then /^SVG element "([^"]*)" within element "([^"]*)" has class "([^"]*)"$/ do |
   class_list.should include class_name
 end
 
-def is_disabled(selector)
+def disabled?(selector)
   @browser.execute_script("return $('#{selector}')[0].getAttribute('disabled') !== null || $('#{selector}').hasClass('disabled')")
 end
 
 Then /^element "([^"]*)" is (?:enabled|not disabled)$/ do |selector|
-  is_disabled(selector).should eq false
+  disabled?(selector).should eq false
 end
 
 Then /^element "([^"]*)" is disabled$/ do |selector|
-  is_disabled(selector).should eq true
+  disabled?(selector).should eq true
 end
 
 And /^output url$/ do
@@ -431,8 +454,7 @@ Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
 end
 
 Then /^I wait to see an image "([^"]*)"$/ do |path|
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;") }
+  wait_with_timeout.until { @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;") }
 end
 
 Then /^I click an image "([^"]*)"$/ do |path|
@@ -490,8 +512,12 @@ Then(/^I reload the page$/) do
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
-  @child_item = @browser.find_element(:css, child)
-  @parent_item = @browser.find_element(:css, parent)
+  wait_with_short_timeout.until {
+    @child_item = @browser.find_element(:css, child)
+  }
+  wait_with_short_timeout.until {
+    @parent_item = @browser.find_element(:css, parent)
+  }
   @actual_parent_item = @child_item.find_element(:xpath, "..")
   @parent_item.should eq @actual_parent_item
 end
@@ -667,23 +693,19 @@ When /^I disable onBeforeUnload$/ do
 end
 
 Then /^I get redirected away from "([^"]*)"$/ do |old_path|
-  wait = Selenium::WebDriver::Wait.new(timeout: 30)
-  wait.until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
+  wait_with_short_timeout.until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
 end
 
 Then /^my query params match "(.*)"$/ do |matcher|
-  wait = Selenium::WebDriver::Wait.new(timeout: 30)
-  wait.until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
+  wait_with_short_timeout.until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
 end
 
 Then /^I wait to see element with ID "(.*)"$/ do |element_id_to_seek|
-  wait = Selenium::WebDriver::Wait.new(:timeout => 30)
-  wait.until { @browser.find_element(:id => element_id_to_seek) }
+  wait_with_short_timeout.until { @browser.find_element(:id => element_id_to_seek) }
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
-  wait = Selenium::WebDriver::Wait.new(timeout: 30)
-  wait.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
+  wait_with_short_timeout.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
 
   if redirect_source == 'pushState'
     state = { "modified" => true }
@@ -695,6 +717,7 @@ end
 
 last_shared_url = nil
 Then /^I navigate to the share URL$/ do
+  wait_with_short_timeout.until { @button = @browser.find_element(:id => 'sharing-input') }
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
   @browser.navigate.to last_shared_url
 end
@@ -708,16 +731,16 @@ Then /^I append "([^"]*)" to the URL$/ do |append|
   @browser.navigate.to "#{url}"
 end
 
-Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, className|
+Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
-  classes.include?(className).should eq true
+  classes.include?(class_name).should eq true
 end
 
-Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, className|
+Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
-  classes.include?(className).should eq false
+  classes.include?(class_name).should eq false
 end
 
 Then /^there is no horizontal scrollbar$/ do

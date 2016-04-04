@@ -18,6 +18,7 @@
   "fillTooltip": "placér 1 enhed af jord",
   "finalLevel": "Tillykke! Du har løst den sidste opgave.",
   "flowerEmptyError": "Blomsten du er på, har ikke mere nektar.",
+  "didNotCollectEverything": "Vær sikker på at du ikke efterlader noget nektar eller honning!",
   "get": "hent",
   "heightParameter": "højde",
   "holePresent": "der er et hul",
@@ -81,6 +82,5 @@
   "whileTooltip": "Gentag de lukkede handlinger indtil målet er nået.",
   "word": "Find ordet",
   "yes": "Ja",
-  "youSpelled": "Du har stavet",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Du har stavet"
 }

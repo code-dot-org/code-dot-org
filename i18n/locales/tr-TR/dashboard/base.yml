@@ -24,6 +24,8 @@ tr:
   hello: Merhaba dünya
   welcome_back: 'Hoş geldiniz %{name}'
   submit: Gönder
+  unsubmit: Gönderme
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Öğretmen ekleyin:'
@@ -221,7 +223,7 @@ tr:
       free_play:
         playlab: Uygulama oluşturun
         artist: Bir şeyler çizin
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Uygulama oluşturun
     user:
       classroom: Öğretmen ana sayfa
@@ -319,6 +321,7 @@ tr:
     heading_hoc2014: '<h2>Hour of Code </h2><h1> her yaş için</h1>'
     heading_elementary: '<h2>20 saat ders</h2><h1> yeni başlayanlar (bütün yaşlar) için </h1>'
     heading_apps: '<h1>Herkes</h1> için <h2>eğlence</h2>'
+    heading_tools: '<h2>Bir sonraki adım için hazır mısın?</h2> <h1>Lise için JavaScript araçları</h1>'
     heading_legacy: '<h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>'
     your_gallery: Galeri
     no_primary_course: "Code Studio'daki kurslardan birisini deneyin"
@@ -416,6 +419,12 @@ tr:
       current: Şu anki Seviyeler
       unused: Kullanılmamış Seviyeler
   upsell:
+    applab:
+      title: Uygulama Laboratuvarı
+      body: App Lab basit uygulamalar yapabileceğiniz bir uygulama geliştirme ortamıdır. Kod blokları yada JavaScript ile bir uygulama yapın ve paylaşın.
+      body_short: ' Kod blokları yada JavaScript ile bir uygulama yapın ve paylaşın.'
+      audience: 13 + Yaş grubu
+      cta: Nasıl olduğunu öğren
     hoc:
       title: Klasik Labirent
       body: Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.
@@ -457,10 +466,10 @@ tr:
   landing:
     prerelease: "Bu ders, <span class='betatext'> beta</span> olduğunu.  Bu dersin son hali değildir, geribildirimlerin alındığı ve geliştirmelerin yapıldığı versiyonudur."
     prerelease_hoc2014: "Bu öğretici <span class='betatext'>beta</span>dır. Geri dönüşler aldıkça ve geliştirildikçe düzenlenmeye açıktır."
-    feedback: Geri bildirimde bulun
     report_bug: Hata bildir
     support: Yardım Al
     support_url: //support.code.org
+    help_resources: Yardım ve kaynaklar
   multi:
     wrong_title: Yanlış cevap
     wrong_body: 'Girdiğiniz cevap doğru değil.  Lütfen tekrar deneyin!'
@@ -468,6 +477,23 @@ tr:
     correct_body: İşte bu doğru cevap.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Teşekkür ederiz
+    wrong_body: Cevabınızı gönderdiğiniz için teşekkür ederiz.
+    correct_title: Teşekkür ederiz
+    correct_body: Cevabınızı gönderdiğiniz için teşekkür ederiz.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Teşekkür ederiz
+    wrong_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
+    correct_title: Teşekkür ederiz
+    correct_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
+  level_group-submittable:
+    wrong_title: Teşekkür ederiz
+    wrong_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
+    correct_title: Teşekkür ederiz
+    correct_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
   match:
     wrong_title: Yanlış çözüm
     wrong_body: 'Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!'
@@ -485,6 +511,8 @@ tr:
     placeholder: Cevabınızı buraya girin
     open_response_title: teşekkürler
     open_response_body: cevabınız için teşekkürler!
+    correct_title: Doğru
+    correct_body: İşte bu doğru cevap.
   dialog:
     ok: TAMAM
     startover_title: Baştan başlamak istediğinizden emin misiniz?
@@ -538,6 +566,7 @@ tr:
     completed_perfect: tamamlandı, harika
     furthest_level_attempted: denenen en yüksek seviye
     assessment: değerlendirme
+    submitted: gönderildi
   studio:
     courses_working_on: Üzerinde çalışmakta olduğunuz dersler
     completed_courses: Tamamladığınız dersler
@@ -598,3 +627,7 @@ tr:
           other: Diğer
         detail: Bildirmekte olduğunuz içerik ile ilgili mümkün olduğunca fazla ayrıntı veriniz.
         acknowledge: 'Bu bilgileri göndererek, %{link_start_privacy}Gizlilik Sözleşmesini%{link_end} ve %{link_start_tos}Hizmet Sözleşmesini%{link_end} kabul etmiş olursunuz'
+  components:
+    icon_library:
+      search_placeholder_text: Öğe ara...
+      no_icons_found: Öğe Bulunamadı

@@ -24,6 +24,8 @@ eu:
   hello: Kaixo mundua
   welcome_back: 'Ongi etorria berriro, %{name}'
   submit: Bidali
+  unsubmit: Bidalketa ezeztatu
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Irakaslea gehitu:'
@@ -222,7 +224,7 @@ eu:
       free_play:
         playlab: Aplikazio bat sortu
         artist: Marraztu zerbait
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Aplikazio bat sortu
     user:
       classroom: Irakasleen sarrera orria
@@ -320,6 +322,7 @@ eu:
     heading_hoc2014: '<h2>Kode Ordua</h2><h1>Adin guztietarako</h1>'
     heading_elementary: '<h2>20 orduko ikastaroak</h2><h1>informatikaren oinarriei buruz (adin guztiak)</h1>'
     heading_apps: '<h2>Dibertsioa</h2><h1>Guztiontzat</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Gure kurtso azkarra</h2><h1>adin guztietarako</h1>'
     your_gallery: Galeria
     no_primary_course: Probatu Code Studioko ikastaro bat
@@ -414,6 +417,12 @@ eu:
       current: Uneko mailak
       unused: Erabili gabeko mailak
   upsell:
+    applab:
+      title: App laborategia
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Labirinto klasikoa
       body: Oinarrizko informatikarekin saiatu. Miliokak egin du proba.
@@ -457,10 +466,10 @@ eu:
   landing:
     prerelease: "Kurtso hau <span class='betatext'>beta</span> bertsioa da. Horrek esan nahi du ez dela azken bertsioa eta iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo direla."
     prerelease_hoc2014: "Tutorial hau <span class='betatext'>beta</span> bertsioa da. Iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo dira."
-    feedback: Bidali iruzkina
     report_bug: Akatsa jakinarazi
     support: Lortu laguntza
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Erantzun okerra
     wrong_body: Erantzuna ez da zuzena. Saiatu berriro!
@@ -468,6 +477,23 @@ eu:
     correct_body: Erantzun zuzena.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Soluzio okerra
     wrong_body: Soluzioa ez da zuzena. Saiatu berriro!
@@ -485,6 +511,8 @@ eu:
     placeholder: Idatzi hemen zure erantzuna
     open_response_title: Eskerrik asko
     open_response_body: Eskerrik asko zure erantzunagatik!
+    correct_title: Zuzena
+    correct_body: Erantzun zuzena.
   dialog:
     ok: Ongi
     startover_title: Ziur al zaude berriro hasi nahi duzula?
@@ -538,6 +566,7 @@ eu:
     completed_perfect: burutua, bikain
     furthest_level_attempted: saiatutako maila altuena
     assessment: ebaluazioa
+    submitted: submitted
   studio:
     courses_working_on: Parte hartzen ari zaren kurtsoak
     completed_courses: Bukatutako kurtsoak
@@ -594,3 +623,7 @@ eu:
           other: Beste bat
         detail: Mesedez, salatzen ari zaren edukiaren inguruko ahalik eta xehetasun gehien eman.
         acknowledge: 'Informazio hau bidaliz, %{link_start_privacy}Pibatutasun Politika%{link_end} eta %{link_start_tos}Zerbitzuaren Baldintzak%{link_end} adierazitako terminoetan erabiliko dela onartzen duzu'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

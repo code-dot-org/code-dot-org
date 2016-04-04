@@ -1,0 +1,7 @@
+name 'PS U3 Q1-6'
+question 'Which one of the following statements about functions is TRUE'
+wrong 'A function can change names over the course of a program.'
+wrong 'Code can be added or removed dynamically from a function while the program is running.'
+wrong 'Functions can be called using different names depending on where in the program they are called.'
+wrong 'Two functions can be given identical names as long as their code is identical.'
+right 'Two functions in a single program can have different names but contain identical code.'

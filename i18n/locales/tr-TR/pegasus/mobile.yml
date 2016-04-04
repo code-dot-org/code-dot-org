@@ -22,7 +22,7 @@ tr-TR:
   twentyhours_heading: Bilgisayar Bilimlerine Giriş kursumuzu deneyin
   twentyhours_text: "İlk Kod Saati'ni bitirdin mi? Bir sonraki kursta daha fazla bilgisayar bilimleri ve programlama kavramlarını öğrenebilirsin."
   og_title: Her çocuk uygun fırsatı hak ediyor
-  og_description: Okullarda her öğrenci bilgisayar bilimini okumayı hak ediyor.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: '<a href="http://hourofcode.com">Kodlama Saatine </a><br/> katılın  8 - 14 Aralık, 2014<br/>'
   hoc2014_students: Öğrenciler
   hoc2014_try: Deneyin
@@ -60,82 +60,81 @@ tr-TR:
   congratulations_on_completing_hoc: "Bir KOD SAATİ'ni tamamladığınız için tebrikler"
   congratulations_volunteer: |-
     Tebrikler: Kodlama Saati'ni denediniz, <a href="https://code.org/volunteer">bir sınıfta gönüllü olmak</a> ve öğrencilerin Kodlama Saatini öğrenmesine yardımcı olmak için kaydolun!
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated Course
+  congratulations_on_completing_course1: "Kurs 1'i tamamladığınız için tebrikler"
+  congratulations_on_completing_course2: "Kurs 2'yi tamamladığınız için tebrikler"
+  congratulations_on_completing_course3: "Kurs 3'ü tamamladığınız için tebrikler"
+  congratulations_on_completing_course4: "Kurs 4'ü tamamladığınız için tebrikler"
+  congratulations_on_completing_accelerated: Hızlandırılmış kursu tamamladığınız için tebrikler
   congrats_next_tutorials_title: Sonrasında bu eğitim setlerini dene
   congrats_next_tutorials_desc: '1 saatlik kısa eğitim setlerini veya bir <a href="%{current_path}/next">ortaklık eğitimini</a> dene.'
   get_a_certificate_of_achievement: Başarı belgesi alın
-  view_course: View course
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
-  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
-  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
-  third_party_tynker_btn_site: Visit Tynker
-  third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. With CodeHS, you can get the help that every new programmer needs to work through problems and keep learning. Our tutors are everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
-  third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  view_course: Kursu incele
+  view_unit: Görünüm birimi
+  make_app: Bir uygulama oluşturun
+  congrats_guest_speaker_title: Sınıfın için davetli konuşmacı bul
+  congrats_guest_speaker_desc: Öğrencileriniz bir bilgisayar bilimleri kursunu bitirdiklerinde, sınıfınıza misafir konuşmacı davet ederek onların yaptıklarıyla gerçek dünyada yapabilecekleri şeylerle bağlantı kurmalarını ve bunun mutluluğunu hissetmelerini sağlayın. Sınıfınızı ziyaret etmelerini istediğiniz yerel gönüllülerle iletişim kurmak için gönüllü haritamızı kullanabilir ya da video konferans yöntemiyle öğrencilerinize ilham vermek için herhangi bir şehirdeki bilgisayar bilimleri öğrencilerini ya da teknik uzmanları bulabilirsiniz.
+  congrats_guest_speaker_cta: Misafir konuşmacı bul
+  congrats_third_party_title: Yeni becerilerini bu internet siteleri ve uygulamalarda kullan
+  third_party_gradelevel_kto8: K-8 sınıfları
+  third_party_gradelevel_kto2: K-2 sınıfları
+  third_party_gradelevel_2to8: 2-8 sınıfları
+  third_party_gradelevel_4to12: 4-12 sınıfları
+  third_party_gradelevel_5to12: 5-12 sınıfları
+  third_party_gradelevel_6plus: 6+ sınıfları
+  third_party_gradelevel_8plus: 8+ sınıfları
+  third_party_platform_all: 'Platform: İnternet, iPad ve Android'
+  third_party_platform_mobile: 'Platform: iPad ve Android'
+  third_party_platform_web: 'Platform: İnternet'
+  third_party_price_varies: 'Fiyat: Ödeme çeşitleri'
+  third_party_price_free: 'Fiyat: Ücretsiz'
+  third_party_price_299: 'Fiyat: 2.99$/indirme'
+  third_party_price_individual: 'Bireysel Fiyatı: Ücretsiz deneme & 25$ / ay'
+  third_party_price_school: 'Okul Fiyatı: Ücretsiz plan ve Pro 2500$ +'
+  third_party_tynker_desc: "Tynker'in yaratıcı bilgisayar platformu çocukların düşünme ve programlama yeteneklerini eğlenceli ve yaratıcı bir şekilde geliştirir. İnovatif ve görsel programlama dilimiz, interaktif kişiye özel kurslarımız ve oyun tabanlı programlama aktivitelereimiz programlamaya kolay bir giriş sağlar ve çocukları keşfetmeye ve yaratmaya teşvik eder."
+  third_party_tynker_btn_curriculum: "Tynker'in programını deneyin"
+  third_party_tynker_btn_site: "Tynker'ı ziyaret et"
+  third_party_scratchjr_desc: 'Scratch Jr. küçük çocukların  (5-7 yaş arası) kendi interaktif hikayelerini ve oyunlarını yaratmalarını sağlayan tanıtıcı bir programlama dilidir.  Çocuklar grafik programlama bloklarını biraraya getirerek karakterlerin hareket etmesini,zıplamasını,dans etmesini ve şarkı söylemesini sağlarlar. Çocuklar boyama editörünü kullanarak karakterleri değiştirebilir,kendi seslerini ekleyebilir, ve hatta kendi fotoğraflarını ekleyebilirler - daha sonrada karakterlerini programlama bloglarını  kullanarak canlandırırlar.'
+  third_party_scratchjr_btn_curriculum: Jr. Müfredatı Sıfırdan İndir
+  third_party_scratchjr_btn_site: "Scractch Jr.'ı ziyaret edin."
+  third_party_scratch_desc: 'Scratch ile siz de kendi interaktif hikaye, oyun ve anismasyonlarınızı programlayıp, yarattıklarınızı online topluluklarda paylaşabilirsiniz. Scratch küçük çocukların yaratıcı düşünme, sistematik  sebep sonuç ilişkisi kurma, ekip çalışması gibi 21. yüzyılın olmazsa olmaz becerilerini öğrenmesine yardımcı olur.'
+  third_party_scratch_btn_curriculum: Scratch Zaman Planını İndirin
+  third_party_scratch_btn_forum: Scratch Eğitimci Forumu
+  third_party_scratch_btn_site: "Scratch'i ziyaret edin"
+  third_party_lightbot_desc: Lightbot oyununda, öğrenciler bulmacayı çözmek için komutlarla hareket eden bir robot programı yapmak zorundalar. Öğrenciler bu oyunu tarayıcılarda(flash player gereklidir), Android ya da iOS destekli cihazlarda oynayabilirler. Öğrenciler, Lightbot oyununda “Basit” seviyenin ilk adımlarını ayarlayarak oynayabilir. Basit komut serileriyle bilgisayara ne yapması gerektiğinin nasıl söylendiğini öğrenecekler ve genel işlemlerin hangi bilgisayar programları tarafından yazıldığını kavrayacaklardır.
+  third_party_lightbot_btn_curriculum: Lightbot Eğitim Videosunu indirin
+  third_party_lightbot_btn_site: Lightbot ziyaret edin
+  third_party_khan_desc: JavaScript ve ProcessingJS kullanılarak çizimlerin, animasyonların ve oyunların nasıl programlandığını ya da HTML ve CSS kullanılarak bir web sayfasının nasıl yapıldığını öğrenin. Her ne yaptıysanız paylaşabilirsiniz ve böylece diğer kişilerin neler yaptıklarını ve birbirilerinden neler öğrendiğini keşfedebilirsiniz!
+  third_party_khan_btn_learn: Khan Akademi ile Bilgisayar Bilimleri Öğrenin
+  third_party_khan_btn_forum: Khan Akademi Bilgisayar Bilimleri Forumu
+  third_party_appinv_desc: "MIT App Invertor bir çeşit blok tabanlı programlama aracıdır ve bu araç Android cihazlar için tam fonksiyonlu uygulamalar geliştirmek ve programlamaya başlamak için yeni başlayanlar dahil herkesin kullanımına açıktır. App Inverter'a yeni başlayanlar ilk uygulamalarını yapabilir ve bir saatten daha kısa sürede çalıştırabilirler ve geleneksel metin tabanlı programlama dillerini kullanarak önemli ölçüde kısa zamanda karmaşık uygulamalar yapabilirler."
+  third_party_appinv_btn_curriculum: App Invertor 2 eğitim videosunu indirin
+  third_party_appinv_btn_forum: App Invertor 2 forumu
+  third_party_appinv_btn_site: "App Inventor 2'yi ziyaret edin"
+  third_party_codehs_desc: Kod Saati(CodeHS), kodlamayı eğlenceli hale getirmek ve yeni başlayanların ulaşabilmesi için birçok programlama alıştırması, örnek kodlar, kısa videolarla blok temelli programlamayı tanıtmaktadır. Kod Saati okullar ve öğretmenler için eğitim videoları, öğretmen araçları ve profesyonel geliştiriciler sağlamaktadır. Bireysel öğrenciler, ihtiyacınız olan yardımı eğitici ağımızdan alabilirsiniz.
+  third_party_codehs_btn_try: "Okullar için Bilgisayar Bilimleri'ne Giriş hakkında daha fazla bilgi edinin"
+  third_party_codecademy_desc: 'Eğitimi en alt seviyeden en üst seviyeye kadar yeniden düşünüyoruz. Web hemen hemen herşeyi -ticaret, sosyal ağ, sağlık ve daha fazlası- yeniden düşünmüş. Dünyanın ihtiyacı olan eğitimi inşa ediyoruz. Önce tam anlamıyla yerel eğitim.'
+  third_party_codecademy_btn_curriculum: Codecademy Eğitim videosunu indirin
+  third_party_codecademy_btn_site: "Codeacademy'i ziyaret et"
+  third_party_organization: Organizasyon
   third_party_curriculum: Ders Programı
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: $5/month per class
-  third_party_cost_299: $2.99/download
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: 'Between 10 & 15 lessons, geared toward grades 3-12'
-  third_party_desc_25to40_3to12: 'From 25 - 40 lessons, intended for grades 3-12'
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: 'Between 7 & 22 lessons, geared toward grades 5-12'
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_pricing: Fiyatlandırma
+  third_party_cost_free: Öğrenciler ve öğretmenler için ücretsiz
+  third_party_cost_5permonth: Sınıf başına aylık/5$
+  third_party_cost_299: 2.99$/indir
+  third_party_cost_free_399: Ücretsiz denemek için 399$/sınıf
+  third_party_cost_free_2: Ücretsiz denemek için 2$/öğrenci
+  third_party_cost_free_10: Ücretsiz denemek için 9,99$/ ay
+  third_party_desc_5_4to8: Yaklaşık 5 ders, 4 ila 8. Sınıflara yöneliktir
+  third_party_desc_10to12_kto3: Yaklaşık 10-12 ders, K-3 sınıfına yöneliktir
+  third_party_desc_11_kto5: Yaklaşık 11 ders, K-5 sınıfına yöneliktir
+  third_party_desc_10to12_kto5: Yaklaşık 10-12 ders, K-5 sınıfına yöneliktir
+  third_party_desc_40_4to8: "40'tan fazla ders, 4 ila 8. Sınıflara yöneliktir"
+  third_party_desc_dozens_kto8: K-8 notları için onlarca ders
+  third_party_desc_10to15_3to12: 10 ve 15 arasındaki dersler, 3 ila 12. Sınıflara yöneliktir
+  third_party_desc_25to40_3to12: "25'ten 40'a kadar olan dersler, 3 ila 12. Sınıflara yöneliktir"
+  third_party_desc_20_2to8: Yaklaşık 20 ders, 2 ila 8. Sınıflara yöneliktir
+  third_party_desc_7to22_5to12: 7 ile 22 arasındaki dersler, 5 ila 12. Sınıflara yöneliktir
+  third_party_desc_20_4to12: "20'den fazla ders, 4 ila 12. sınıflara yöneliktir"
   enter_valid_age: Lütfen geçerli bir yaş seçin
   enter_valid_email: Lütfen geçerli bir e-posta adresi girin
   get_a_certificate_message: "Sana <a href='/learn/beyond'>Bir Saatte Öğren</a> hakkında bir belge ve bilgi göndereceğiz"
@@ -182,14 +181,16 @@ tr-TR:
   learn_next_level: Bir sonraki seviyeye devam et
   learn_online: Diğer online kurslarımızı deneyin
   learn_classes: Yerel sınıfları bulun
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: '#HourOfCode yeni yaptım - @codeorg u kontrol edin'
-  just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
-  just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
-  just_did_course3: 'I just finished Course 3 - check it out! @codeorg'
-  just_did_course4: 'I just finished Course 4 - check it out! @codeorg'
-  just_did_accelerated: 'I just finished the Accelerated Course - check it out! @codeorg'
-  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
+  just_did_course1: "Ders1'i yeni bitirdim.@codeorg ile kontrol et"
+  just_did_course2: "Ders2'yi yeni bitirdim. @codeorg ile kontrol et"
+  just_did_course3: "Ders3'ü yeni bitirdim. @codeorg ile kontrol et"
+  just_did_course4: "Ders4'ü yeni bitirdim. @codeorg ile kontrol et"
+  just_did_accelerated: Hızlandırılmış Kursu yeni bitirdim. @codeorg ile kontrol et
+  twitter_teach_cs: |
+    10 kişiden 9'u okulda bilgisayar bilimleri öğretilmesi konusunda hemfikir.
+    http://youtu.be/nKIu9yen5nc. Ziyaret et: https://code.org/.
   learn_hoc: Bir Saat Kodu öğrenin
   beyond_hoc: Bir saat boyunca
   what_gender: Cinsiyetiniz nedir?
@@ -302,6 +303,9 @@ tr-TR:
   homepage_slot_text_link_othercourses: Diğer online kurslar
   homepage_slot_text_title_educators: Eğitmenler
   homepage_slot_text_blurb_educators: Öğrencilerinize öğretin
+  homepage_slot_text_link_elementary: İlköğretim Okulu
+  homepage_slot_text_link_middle: Orta öğretim
+  homepage_slot_text_link_high: Yüksek öğretim
   homepage_slot_text_link_k5: K-5 sınıflar için kurslar
   homepage_slot_text_link_fullcurriculum: Müfredatımızın tamamına göz atın
   homepage_slot_text_link_pd: Mesleki Gelişim
@@ -371,8 +375,8 @@ tr-TR:
   starwars_help_translate: Çevirmemize yardım edin
   starwars_platform_text: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_name: Minecraft Kod Saati
-  mc_longdescription: "Steve veya Alex'i Minecraft dünyasında bir maceraya almak için kod blokları kullan."
-  mc_shortdescription: "Steve veya Alex'i Minecraft dünyasında bir maceraya almak için kod blokları kullan."
+  mc_longdescription: "Steve ya da Alex'i Minecraft dünyasında bir maceraya çıkarmak için kod blokları kullan."
+  mc_shortdescription: "Steve ya da Alex'i Minecraft dünyasında bir maceraya çıkarmak için kod blokları kullan."
   mc_gradelevel: 4-104 Yaş
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_specs: Çoklu dil | Modern tarayıcılar ve tabletler | 6 ve üzeri yaş
@@ -506,6 +510,7 @@ tr-TR:
   dashboard_navigation_all_sections: Öğrenci hesapları ve ilerleme
   dashboard_navigation_view_progress: İlerlemeyi Görüntüle
   dashboard_navigation_view_text_responses: Yanıtları Görüntüle
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Öğrenci EKle
   dashboard_navigation_manage_students: Öğrencileri Yönet
   dashboard_navigation_lesson_plans_resources: Ders planları ve kaynaklar
@@ -601,10 +606,21 @@ tr-TR:
   dashboard_progress_completed_too_many_blocks: tamamlanmadı, fazla blok var
   dashboard_progress_completed_perfect: tamamlandı, harika
   dashboard_progress_furthest_level_attempted: denenen en yüksek seviye
+  dashboard_progress_submitted: gönderildi
   dashboard_stage: kademe
   dashboard_puzzle: Bulmaca
   dashboard_question: Soru
   dashboard_response: Cevap
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Doğru
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Hour of Code'dan geçen yılın inanılmaz istatistikleri. Sadece bir haftada:"
   stats_hoc_2013_image_alt: "Hour of Code 2013'den istatistikler"
   dashboard_teacher: Öğretmen
@@ -623,7 +639,7 @@ tr-TR:
   dashboard_faq_k5: K-5 Sık Sorulan Sorular
   dashboard_announcements: Bildirimler
   dashboard_announce_view_all: Tümünü Gör
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
   dashboard_announce_button_text: Daha fazlasını öğren
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
@@ -738,6 +754,12 @@ tr-TR:
   course3_name: Kurs 3
   course4_name: Ders 4
   accelerated_name: Hızlandırılmış Kurs
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: 9-12. Sınıflar
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  applab_name: Uygulama Laboratuvarı
+  applab_gradelevel: 13 + Yaş grubu
+  applab_shortdescription_congrats: App Lab basit uygulamalar yapabileceğiniz bir uygulama geliştirme ortamıdır. Kod blokları ya da JavaScript ile bir uygulama yapın ve saniyeler içinde paylaşın
   codeorg_gradelevel: 4-104 Yaş
   codeintl_gradelevel: 4-104 Yaş
   thinkersmithspanish_gradelevel: Por todos
@@ -934,13 +956,13 @@ tr-TR:
   hourofcode_longdescription: Yeni code.org/hoc için placeholder
   frozen_longdescription: "Hadi kod kullanarak sihri ve buzun güzelliğini keşfedecek olan Anna ve Elsa'ya katıl. Buz kayağı ve kış harikalar diyarı gibi kar taneleri ve desenler oluşturacaksın sonra bunları arkadaşlarınla paylaşabileceksin!"
   starwars_longdescription: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+  playlab_longdescription: Oyun Laboratuvarını kullanarak bir hikâye yaz ya da bir oyun yap! Hayvanlar, korsanlar, zombiler, ninjalar ve daha çok karakter ekle ve hareket ettir, ateş topu bile firlatabilirsin!
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
   csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
-  texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "
+  codesters_longdescription: 'Python kullanarak kendi oyunlarını, animasyonlarını ve çizimlerini yap. Yaptığın zaman arkadaşlarınla paylaş! Python programı, şirketler tarafından her gün kullanılan gerçek bir programlama dilidir- bizim sürükle bırak araç çubuğumuz bu dilin öğrenilmesini kolaylaştırıyor. Basketbol oyunu, dans gösterisi ya da hareketli kart yapmayı dene! '
+  texasinstruments_longdescription: 'Sırt çantalarında taşıdıkları teknolojileri kullanarak Kodlama ile ilgilenen öğrencileri teşvik etmek için 10 dakikalık kod etkinliği sınıfta kullanılabilir. TI-84&#8482 kodunu kullanarak kodlamanın temellerini öğrenin; Ekleyin ve sadece 10 dakikada programların - deneyim gerektirmez!  '
   teacherled_longdescription: Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Bilgisayar Bilimlerine giriş (K-8. sınıflar)
   khan_beyond_name: Bilgisayar programlama öğrenin
@@ -950,7 +972,7 @@ tr-TR:
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodlanabilir
   scratchjr_beyond_name: Ön okuyucular için ScratchJR
-  hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  hopscotch_beyond_name: "Seksek: iPad'te Programlama"
   pocketcode_beyond_name: Cep kodu
   groklearning_beyond_name: Python programlama öğren
   hacketyhack_beyond_name: Ruby öğren
@@ -1102,7 +1124,7 @@ tr-TR:
   pocketcode_beyond_longdescription: Pocket Code ile akıllı telefonlarınızda kendi oyununuzu oluşturun. Bunu arkadaşlarınızla paylaşabilir ve diğer kullanıcıların denemesini sağlayabilirsiniz!
   groklearning_beyond_longdescription: Hiç programlama tecrübesi olmayanlar için Python ile programlamaya giriş dersi. Hazırladığımız içerik sayesinde Python programlama dilini anlayacak kendini programlamaya başlıyacaksınız. Bu içeriği farklı yaşlardaki öğrencilerinize öğretin göreceksinizki onlar için harika bir deneyim olacak.
   hacketyhack_beyond_longdescription: "Hackety Hack will teach you the absolute basics of programming from the ground up. No previous programming experience is needed! With Hackety Hack, you'll learn the Ruby programming language. Ruby is used for all kinds of programs, including desktop applications and websites. [Note: Desktop install required]"
-  robomind_beyond_longdescription: 'Students learn the basics of programming by controling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
+  robomind_beyond_longdescription: 'Öğrenciler programlamanın temellerini öğrenerek kendi sanal robotlarını kontrol etmeyi öğreniyor. Bu online kendi kontrolünde kurs kısa sunumlar, filmler, testler ve otomatik destek/ipuçları ile programlama egzersizlerine yardım ediyor. '
   makeschool_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
   appinventor_beyond_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
   touchdevelop_beyond_longdescription: TouchDevelop senin İpad,İPhone,Android,PC,Mac ve Windows Telefon için uygulamalar yapmana izin verir.Bizim dost canlısı editörümüz touch kodlamayı eğlenceli hale getiriyor hatta telefonun veya tabletinde bile!

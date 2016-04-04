@@ -6,15 +6,30 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length.",
     "step_mode": "1",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "start_direction": "0",
     "maze": "[[1,1,1,1,1,1,1,1],[1,0,0,0,0,0,0,1],[1,0,1,1,1,1,1,1],[1,0,1,0,0,0,0,0],[1,0,1,0,1,1,1,1],[1,0,1,0,3,0,0,1],[1,0,1,0,0,0,0,1],[2,0,1,1,1,1,1,1]]",
     "ideal": "7",
-    "step_speed": "2"
-  }
+    "step_speed": "1",
+    "markdown_instructions": "Can you add just 3 blocks to help the zombie solve a more complex maze? \r\n\r\nIf you do it right, he can walk any curvy path no matter the length!",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -48,23 +63,41 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
+      <block type="maze_forever"/>
+    </recommended_blocks>
+    <solution_blocks>
       <xml>
-        <block type="maze_forever"/>
-        <block type="maze_ifElse">
-          <title name="DIR">isPathForward</title>
-        </block>
-        <block type="maze_ifElse">
-          <title name="DIR">isPathRight</title>
-        </block>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_forever">
+              <statement name="DO">
+                <block type="maze_ifElse">
+                  <title name="DIR">isPathForward</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="maze_ifElse">
+                      <title name="DIR">isPathRight</title>
+                      <statement name="DO">
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                        </block>
+                      </statement>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
         </block>
       </xml>
-    </required_blocks>
+    </solution_blocks>
   </blocks>
 </Maze>

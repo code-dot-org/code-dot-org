@@ -147,7 +147,6 @@ class RedisTableTest < Minitest::Test
     assert_equal make_pubsub_event('shard1', 'table', {:action => 'delete', :ids => [1, 3]}),
                  @pubsub.publish_history[4]
 
-
     # Clean up
     RedisTable.reset_shard('shard1', @redis, @pubsub)
     RedisTable.reset_shard('shard2', @redis, @pubsub)
@@ -238,7 +237,6 @@ class RedisTableTest < Minitest::Test
     assert_equal row1['id'], row1_c['id']
     refute_equal row1['uuid'], row1_c['uuid']
   end
-
 
   private
 

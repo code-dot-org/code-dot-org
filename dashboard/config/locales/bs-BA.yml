@@ -25,6 +25,8 @@
   hello: Pozdrav svijete
   welcome_back: Dobrodošao/la natrag, %{name}
   submit: Potvrdi
+  unsubmit: Poništi objavu
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Dodaj učitelja:'
@@ -366,6 +368,8 @@
     heading_hoc2014: "<h2>Sat Kodiranja za</h2><h1>sve uzraste</h1>"
     heading_elementary: "<h2>20-satni tečajevi za</h2><h1>početnike (svih uzrasta)</h1>"
     heading_apps: "<h2>Zabava za</h2><h1>sve</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Naš opšti kurs za</h2><h1>sve uzraste</h1>"
     your_gallery: Galerija
     no_primary_course: Probajte Code Studio kurs
@@ -480,6 +484,15 @@
       current: Trenutni nivoi
       unused: Neiskorišteni nivoi
   upsell:
+    applab:
+      title: Laboratorij za Aplikacije
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Sat Kodiranja
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
@@ -533,10 +546,10 @@
       povratnim informacijama i napravljenim poboljšanjima.
     prerelease_hoc2014: Ovaj tutorial je u <span class='betatext'> beta fazi</span>.  Podliježe
       izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima.
-    feedback: Slanje povratnih informacija
     report_bug: Prijavi Grešku
     support: Potraži Pomoći
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Netačan odgovor
     wrong_body: Odgovor koji ste unijeli nije ispravan.  Molimo pokušajte ponovo!
@@ -544,6 +557,23 @@
     correct_body: To je tačan odgovor.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Hvala ti
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Hvala ti
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Hvala ti
+    wrong_body: Thank you for submitting answers.
+    correct_title: Hvala ti
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Hvala ti
+    wrong_body: Thank you for submitting answers.
+    correct_title: Hvala ti
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Netačno rješenje
     wrong_body: Rješenje koje ste unijeli nije ispravno.  Molimo pokušajte ponovo!
@@ -563,6 +593,8 @@
     placeholder: Ovdje unesite vaš odgovor
     open_response_title: Hvala
     open_response_body: Hvala na vašem odgovoru!
+    correct_title: Ispravno
+    correct_body: To je tačan odgovor.
   dialog:
     ok: U redu
     startover_title: Jesi li siguran/na da želiš početi iznova?
@@ -626,6 +658,7 @@
     completed_perfect: dovršeno, savršeno
     furthest_level_attempted: pokušaj posljednjeg nivoa
     assessment: procjena
+    submitted: submitted
   studio:
     courses_working_on: Kursevi na kojima radite
     completed_courses: Kompletirani kursevi
@@ -691,3 +724,7 @@
         detail: Molimo da date što više detalja u vezi sadržaja koji prijavljujete.
         acknowledge: Slanjem ove informacije, vi prihvaćate uvjete date u %{link_start_privacy}Pravilima
           Privatnosti%{link_end} i %{link_start_tos}Uvjetima Korištenja%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

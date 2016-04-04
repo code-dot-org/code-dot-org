@@ -18,6 +18,7 @@
   "fillTooltip": "place 1 unit of soil",
   "finalLevel": "Congratulations! You have solved the final puzzle.",
   "flowerEmptyError": "The flower you're on has no more nectar.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "get",
   "heightParameter": "height",
   "holePresent": "there is a hole",
@@ -81,6 +82,5 @@
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
   "word": "Find the word",
   "yes": "Yes",
-  "youSpelled": "You spelled",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "You spelled"
 }

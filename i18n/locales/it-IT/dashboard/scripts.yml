@@ -156,7 +156,7 @@ it:
           description_short: Usiamo la programmazione per unirci ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio.
         course4:
           description_short: Gli studenti che seguono il Corso 4 dovrebbero aver già svolto i Corsi 2 e 3.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: Il corso 4 è progettato per gli studenti che hanno seguito i corsi 2 e 3. Gli studenti impareranno come affrontare problemi di maggiore complessità e a combinare diversi concetti per risolvere i diversi problemi via via proposti. Una volta completato questo corso, gli studenti saranno in grado di creare programmi che consentono loro di mostrare molteplici competenze, anche per cicli e funzioni con parametri. Consigliato per classi 4-8.
           "Artist: Variables": 'Artista: Variabili'
           "Bee: For Loops": 'Ape: Cicli con Contatore'
           title: Corso 4
@@ -591,7 +591,8 @@ it:
           description: Test Wednesday
         cspunit3:
           title: 'CSP Unit 3 - Programming'
-          description_short: Programming
+          title_short: CSP Unit 3
+          description_short: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: Funzioni
@@ -866,7 +867,7 @@ it:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -929,6 +930,7 @@ it:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -1324,6 +1326,11 @@ it:
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: 'Unit 6 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1384,7 +1391,7 @@ it:
           Discover a Data Story: Discover a Data Story
           Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
           Welcome!: Benvenuto!
@@ -1434,6 +1441,7 @@ it:
           Halloween 2015: Halloween 2015
           description: "Qualcosa di speciale per coloro che ne conoscono l'esistenza. Questi esercizi potrebbero non essere disponibili a lungo, così divertiti finché ci sono!"
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: "Laboratorio con L'Era Glaciale"
           description_short: "Crea una storia oppure fai un gioco con il Laboratorio con L'Era Glaciale!"
@@ -1456,7 +1464,7 @@ it:
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
-          description_short: Programming
+          description_short: Programmazione
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           While Loop Basics: While Loop Basics
           While Loops_ Counting Flips: While Loops_ Counting Flips
@@ -1555,6 +1563,7 @@ it:
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4
@@ -1578,3 +1587,64 @@ it:
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: "Impara la Programmazione Funzionale mediante l'Algebra"
+          description: "Impara la Programmazione Funzionale mediante l'Algebra"
+          "Calc: Evaluation Blocks": 'Calcolo: Blocchi di Valutazione'
+          "Eval: Strings and Images": 'Valutazione: Stringhe e Immagini'
+          "Unplugged: Contracts": 'Tradizionale &ndash; Contratti'
+          "Eval: Writing Contracts": 'Valutazione: Scrittura di Contratti'
+          "Calc: Defining Variables": 'Calcolo: Definizione di Variabili'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Tradizionale &ndash; La Ricetta della Progettazione'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+        AlgebraB:
+          title: Informatica in Algebra
+          description_short: "Impara la Programmazione Funzionale mediante l'Algebra"
+          description: "Impara la Programmazione Funzionale mediante l'Algebra"
+          "Unplugged: Video Games and Coordinate Planes": 'Tradizionale &ndash; Videogiochi e Piani Cartesiani'
+          "Play Lab: Defining Variables (Big Game)": 'Laboratorio: Definizione di Variabili (Big Game)'
+          "Play Lab: Animation (Big Game)": 'Laboratorio: Animazione (Big Game)'
+          "Unplugged: Booleans": 'Tradizionale &ndash; Valori Booleani'
+          "Eval: Boolean Operators": 'Valutazione: Operatori Booleani'
+          "Play Lab: Booleans": 'Laboratorio: Valori Booleani'
+          "Play Lab: Boolean (Big Game)": 'Laboratorio: Valori Booleani (Big Game)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Tradizionale &ndash; Istruzioni Condizionali e Funzioni a Tratti'
+          "Eval: Conditionals": 'Valutazione: Istruzioni Condizionali'
+          "Unplugged: Collision Detection and the Distance Formula": 'Tradizionale &ndash; Rilevamento delle Collisioni e Formula per la Distanza'
+          "Play Lab: Collision Detection (Big Game)": 'Laboratorio: Rilevamento delle Collisioni (Big Game)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

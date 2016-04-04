@@ -25,6 +25,8 @@
   hello: Hola Món
   welcome_back: Benvingut de nou, %{name}
   submit: Envia
+  unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Afegeix un mestre:'
@@ -381,6 +383,8 @@
     heading_elementary: "<h2>Cursos de 20 hores per a</h2><h1>Principiants (totes
       les edats)</h1>"
     heading_apps: "<h2>Diversió per a</h2><h1>Tothom</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>El nostre curs general per a</h2><h1>Totes les edats</h1>"
     your_gallery: Galeria
     no_primary_course: Intenta un curs a Code Studio
@@ -502,6 +506,15 @@
       current: Nivells actuals
       unused: Nivells sense utilitzats
   upsell:
+    applab:
+      title: Laboratori d'aplicacions
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Hora del codi
       body: Provea els conceptes bàsics de la Informàtica. Milions li han donat una
@@ -556,10 +569,10 @@
       comentaris i es fan millores.
     prerelease_hoc2014: Aquest tutorial està en <span class='betatext'> beta</span>.  És
       subjecte a revisió a mida que es reben comentaris i es fan millores.
-    feedback: Digues la teva
     report_bug: Informeu d'errors
     support: Obtenir ajuda
     support_url: support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Resposta incorrecta
     wrong_body: La resposta que he introduït no és correcta.  Si us plau, intenta-ho
@@ -568,6 +581,23 @@
     correct_body: Aquesta és la resposta correcta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Gràcies
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Gràcies
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Gràcies
+    wrong_body: Thank you for submitting answers.
+    correct_title: Gràcies
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Gràcies
+    wrong_body: Thank you for submitting answers.
+    correct_title: Gràcies
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Solució incorrecta
     wrong_body: La solució que has introduït no és correcta.  Si us plau, intenta-ho
@@ -588,6 +618,8 @@
     placeholder: Introdueix la teva resposta aquí
     open_response_title: Gràcies
     open_response_body: Gràcies per la resposta!
+    correct_title: Correcte
+    correct_body: Aquesta és la resposta correcta.
   dialog:
     ok: OK
     startover_title: Estàs segur que vols tornar a començar?
@@ -651,6 +683,7 @@
     completed_perfect: completat, perfecte
     furthest_level_attempted: nivell més alt intentat
     assessment: avaluació
+    submitted: submitted
   studio:
     courses_working_on: Cursos en els que estàs treballant
     completed_courses: Cursos completats
@@ -720,3 +753,7 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

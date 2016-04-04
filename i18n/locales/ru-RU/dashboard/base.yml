@@ -24,6 +24,8 @@ ru:
   hello: Привет, мир!
   welcome_back: 'С возвращением, %{name}'
   submit: Отправить
+  unsubmit: Снять подтверждение
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Добавить учителя:'
@@ -217,7 +219,7 @@ ru:
       free_play:
         playlab: Создать приложение
         artist: Нарисовать что-нибудь
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Создать приложение
     user:
       classroom: Домашняя страница Преподавателя
@@ -315,6 +317,7 @@ ru:
     heading_hoc2014: '<h2>Час Кода для</h2><h1>Для всех возрастов</h1>'
     heading_elementary: '<h2>20-часовые курсы по</h2><h1>Основам Информатики (для всех возрастов)</h1>ы'
     heading_apps: '<h2>Развлечения для</h2><h1>всех</h1>'
+    heading_tools: '<h2>Готовы к следующему шагу?</h2><h1> Использование JavaScript в средней школе</h1>'
     heading_legacy: '<h2>Наш ускоренный курс для</h2><h1>Для всех возрастов</h1>'
     your_gallery: Галерея
     no_primary_course: 'Попробуйте курс "Студии Кода"'
@@ -409,6 +412,12 @@ ru:
       current: Текущие уровни
       unused: Неиспользованные уровни
   upsell:
+    applab:
+      title: Лаборатория Программ
+      body: App Lab является средой программирования, в которой можно создавать простые приложения. Создавай дизайн, пиши код с помощью блоков или JavaScript и смотри результат. После этого в считанные секунды приложением можно поделиться.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Для возрастов 13+
+      cta: Узнать подробности
     hoc:
       title: Классический лабиринт
       body: Ознакомьтесь с основами информатики. Миллионы воспользовались этим шансом.
@@ -450,10 +459,10 @@ ru:
   landing:
     prerelease: "Это <span class='betatext'> бета-версия</span> курса.  Это означает, что это не окончательный вариант курса,  и он будет дорабатываться, с учётом полученных отзывов."
     prerelease_hoc2014: "Этот учебник находится в <span class='betatext'> бета-версии</span>.  Он подлежит пересмотру для получения обратной связи и улучшений."
-    feedback: Оставить отзыв
     report_bug: Сообщить об ошибке
     support: Получить помощь
     support_url: support.code.org
+    help_resources: Помощь и ресурсы
   multi:
     wrong_title: Неправильный ответ
     wrong_body: 'Ответ, который вы ввели неправильный.  Пожалуйста, попробуйте еще раз!'
@@ -461,6 +470,23 @@ ru:
     correct_body: Это правильный ответ.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Спасибо
+    wrong_body: Спасибо за ответ.
+    correct_title: Спасибо
+    correct_body: Спасибо за ответ.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Спасибо
+    wrong_body: Спасибо за ответ
+    correct_title: Спасибо
+    correct_body: Спасибо за ответ
+  level_group-submittable:
+    wrong_title: Спасибо
+    wrong_body: Спасибо за ответ
+    correct_title: Спасибо
+    correct_body: Спасибо за ответ
   match:
     wrong_title: Неправильное решение
     wrong_body: 'Твоё решение неверно.  Пожалуйста, попробуй еще раз!'
@@ -478,6 +504,8 @@ ru:
     placeholder: Внеси сюда свой ответ
     open_response_title: Спасибо
     open_response_body: Спасибо за ваш ответ!
+    correct_title: Верно
+    correct_body: Это правильный ответ.
   dialog:
     ok: Продолжить
     startover_title: Вы уверены, что хотите начать заново?
@@ -531,6 +559,7 @@ ru:
     completed_perfect: Завершено, отлично
     furthest_level_attempted: запрошен слишком высокий уровень
     assessment: оценка
+    submitted: submitted
   studio:
     courses_working_on: Курсы, в процессе изучения
     completed_courses: Завершенные курсы
@@ -587,3 +616,7 @@ ru:
           other: Другое
         detail: Пожалуйста укажите как можно больше подробностей относительно содержания, которое вы сообщаете.
         acknowledge: 'Отправляя эту информацию, вы признаёте, что она будет обрабатываться в соответствии с %{link_start_privacy}Правилами конфиденциальности%{link_end} и %{link_start_tos}Условиями использования%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Искать значок...
+      no_icons_found: Значёк не найден

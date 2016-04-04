@@ -1,3 +1,5 @@
+- cta_url = CDO.code_org_url("/diversity")
+
 %div.teacher-announce
   %a.announce-heading-link{:href=>"http://teacherblog.code.org/"}
     %div.announce-heading
@@ -6,12 +8,12 @@
         = I18n.t(:dashboard_announce_view_all)
         >>
   %div.announce-content
-    %a{:href=>"http://blog.code.org/post/138335868703/the-white-house-announces-plans-to-bring-computer"}
+    %a{:href=>cta_url}
       %div.content-img-container
-        %img.content-img{:src=>"/images/fit-300/professional-learning.jpg"}
-    %div.content-text
+        %img.content-img{:src=>"/images/fit-300/teacher-dashboard/diversity.png"}
+    %div.content-text{:style=>"width: 500px;"}
       = I18n.t(:dashboard_announce_message)
   %div.announce-learn-more
-    %a{:href=>CDO.code_org_url('/educate')}
+    %a{:href=>cta_url}
       %button= I18n.t(:dashboard_announce_button_text)
 

@@ -18,6 +18,7 @@
   "fillTooltip": "Placera 1 lera",
   "finalLevel": "Grattis! Du har löst det sista pusslet.",
   "flowerEmptyError": "Blomman du är på har ingen mer nektar.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "hämta",
   "heightParameter": "höjd",
   "holePresent": "Det finns ett hål",
@@ -81,6 +82,5 @@
   "whileTooltip": "Upprepa de omslutna åtgärderna tills målet nåtts.",
   "word": "Hitta ordet",
   "yes": "Ja",
-  "youSpelled": "Du stavade",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Du stavade"
 }

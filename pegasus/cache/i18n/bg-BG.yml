@@ -80,73 +80,75 @@
   congratulations_volunteer: 'Поздравления: сега, когато сте опитали Hour of Code,
     <a href="https://code.org/volunteer"> регистрирайте се като доброволци в класната
     стая</a> и помогнете на учениците да учат с Hour of Code!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: "Поздравления за завършване на курс 1"
+  congratulations_on_completing_course2: "Поздравления за завършване на курс 2"
+  congratulations_on_completing_course3: "Поздравления за завършване на курс 3"
+  congratulations_on_completing_course4: "Поздравления за завършване на курс 4"
+  congratulations_on_completing_accelerated: "Поздравления за завършване на ускорен
+    курс"
   congrats_next_tutorials_title: "Опитайте тези уроци"
   congrats_next_tutorials_desc: Опитайте тези кратки, едночасови уроци или пробвайте
     <a href="%{current_path}/next"> партньорските предложения</a>.
   get_a_certificate_of_achievement: "Получете сертификат за постижение"
-  view_course: View course
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
+  view_course: "Преглед на курса"
+  view_unit: View unit
+  make_app: "Направи приложение"
+  congrats_guest_speaker_title: "Намери гост-лектор за твоята класна стая"
+  congrats_guest_speaker_desc: "Сега след като твоите студенти завършиха курса по
+    компютърни науки, помислете за празнуване и го свържете с неща, които могат да
+    направят в реалния свят, като ги поканите за гост-лектор във вашата класна стая.
+    Можете да използвате нашата карта на доброволците за да се свържете с местни доброволци
+    които да посетят вашата класна стая, или потърсете в който и да е град студенти
+    по компютърни науки или специалисти по компютърни технологии, които са готови
+    да вдъхновяват вашите студенти от разстояние, чрез видео чат."
+  congrats_guest_speaker_cta: "Намери гост-лектор"
+  congrats_third_party_title: Use your new skills with these apps and websites
+  third_party_gradelevel_kto8: "Класове K-8"
+  third_party_gradelevel_kto2: "Класове K-2"
+  third_party_gradelevel_2to8: "Класове 2-8"
+  third_party_gradelevel_4to12: "Класове 4-12"
+  third_party_gradelevel_5to12: "Класове 5 -12"
+  third_party_gradelevel_6plus: "Клас 6 +"
+  third_party_gradelevel_8plus: "Клас 8 +"
+  third_party_platform_all: "Платформа: Уеб, iPad & андроид"
+  third_party_platform_mobile: "Платформа: iPad & андроид"
+  third_party_platform_web: "Платформа: уеб"
+  third_party_price_varies: "Цена: Варианти на планове"
+  third_party_price_free: "Цена: безплатно"
+  third_party_price_299: "Цена: $2.99/изтегляне"
+  third_party_price_individual: "Индивидуална цена: Безплатен пробен период & 25 $/
+    на месец"
+  third_party_price_school: "Училищна цена: Безплатни планове & Pro от $2500 +"
+  third_party_tynker_desc: "Творческата платформа на Tynker помага на децата да развиват
+    изчислително мислене и умения за програмиране по забавен, интуитивен и творчески
+    начин. Нашият новаторски визуален език за програмиране, интерактивни самостоятелни
+    курсове и програмните дейности, базирани на игра предоставят лесен начин за въведение
+    в програмирането и дава възможност на децата за иновативност и творчество."
+  third_party_tynker_btn_curriculum: "Опитайте Tynker учебна програма за неможещи
+    да четат деца"
+  third_party_tynker_btn_site: "Посетете Tynker"
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
     move, jump, dance, and sing. Children can modify characters in the paint editor,
     add their own voices and sounds, even insert photos of themselves - then use the
     programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratchjr_btn_curriculum: "Изтегляне на Scratch Jr. учебна програма"
+  third_party_scratchjr_btn_site: "Посетете Scratch Jr."
+  third_party_scratch_desc: "В Scratch можете да програмирате свои собствени интерактивни
+    истории, игри и анимации и споделяте творенията си с други хора в онлайн общността.
+    Scratch помага младите хора да се учат да мислят креативно, систематично и да
+    работят в екип - основни умения, необходими през 21 век."
+  third_party_scratch_btn_curriculum: "Изтегляне на Scratch учебна програма"
+  third_party_scratch_btn_forum: Scratch учителски форум
+  third_party_scratch_btn_site: "Посетете Scratch"
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
     or on Android or iOS devices. Students play the initial set of “Basic” levels
     in Lightbot. They will learn how to tell a computer what to do with a series of
     basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_lightbot_btn_curriculum: "Изтегли Lightbot програма"
+  third_party_lightbot_btn_site: "Посетете Lightbot"
   third_party_khan_desc: Learn how to program drawings, animations, and games using
     JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
     can share whatever you create, explore what others have created and learn from
@@ -167,7 +169,6 @@
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -183,6 +184,7 @@
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -377,6 +379,9 @@
   homepage_slot_text_link_othercourses: "Други онлайн курсове"
   homepage_slot_text_title_educators: "Обучители"
   homepage_slot_text_blurb_educators: "Преподавайте на  учениците си"
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: "Средно училище"
+  homepage_slot_text_link_high: "Висше училище"
   homepage_slot_text_link_k5: "Курсове от предучилищна до 5-ти клас"
   homepage_slot_text_link_fullcurriculum: "Вижте нашата пълна програма"
   homepage_slot_text_link_pd: "Професионално развитие"
@@ -663,6 +668,7 @@
   dashboard_navigation_all_sections: "Ученически акаунти и прогрес"
   dashboard_navigation_view_progress: "Преглед на напредъка"
   dashboard_navigation_view_text_responses: "Изглед на текстовите отговори"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "Добавяне на ученици"
   dashboard_navigation_manage_students: "Управление на ученици"
   dashboard_navigation_lesson_plans_resources: "Учебни планове и ресурси"
@@ -784,10 +790,21 @@
   dashboard_progress_completed_too_many_blocks: "завършено, но с повече блокове"
   dashboard_progress_completed_perfect: "завършено, перфектно"
   dashboard_progress_furthest_level_attempted: "последното пробвано ниво"
+  dashboard_progress_submitted: submitted
   dashboard_stage: "Етап"
   dashboard_puzzle: "Пъзел"
   dashboard_question: "Въпрос"
   dashboard_response: "Отговор"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "Правилно"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Невероятната статистика от миналата година за Часът на
     кодирането. Само за една седмица"
   stats_hoc_2013_image_alt: "Статистика Часът на кодирането от 2013"
@@ -945,6 +962,18 @@
   course3_name: "Курс 3"
   course4_name: "Курс 4"
   accelerated_name: "Ускорен курс"
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: "Тази част въвежда фундаменталните концепции
+    за компютърно програмиране, което отключва възможността да се правят богати, интерактивни
+    приложения. Този курс използва JavaScript като език за програмиране, както и Ап
+    лабораторията като програмната среда за изграждане на приложения, но концепцията,
+    която ще научите в тези уроци обхваща всички езици за програмиране и инструменти."
+  applab_name: "Лаборатория за приложения"
+  applab_gradelevel: "Възраст 13 +"
+  applab_shortdescription_congrats: App Lab is a programming environment where you
+    can make simple apps. Design an app, code with blocks or JavaScript to make it
+    work, then share your app in seconds
   codeorg_gradelevel: "Възраст 4-104"
   codeintl_gradelevel: "Възраст 4-104"
   thinkersmithspanish_gradelevel: "От всички"
@@ -1644,4 +1673,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "играй"
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

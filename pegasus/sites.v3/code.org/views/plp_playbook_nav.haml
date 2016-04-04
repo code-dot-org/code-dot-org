@@ -1,0 +1,9 @@
+#about_nav
+  %span.about_list
+    -current_url = "/educate/professional-learning-partner"
+    -{'Workshop planning'=>current_url + '/playbook/workshop-planning','Communications'=>current_url + '/playbook/communications','Community building'=>current_url + '/playbook','Reporting and evaluations'=>current_url + '/playbook/reporting-and-evaluations','Teacher support'=>current_url + '/playbook/teacher-support','Workshop dashboard'=>current_url + '/playbook/dashboard','C/A professional development'=>'/playbook','Facilitator support'=>'/playbook/facilitator-support','FAQ'=>current_url + '/faq'}.each_pair do |label,url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr

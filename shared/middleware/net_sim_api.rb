@@ -116,7 +116,7 @@ class NetSimApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)/delete$} do |shard_id, table_name, id|
+  post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)/delete$} do |_shard_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
@@ -138,7 +138,7 @@ class NetSimApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/netsim/([^/]+)/(\w+)/delete$} do |shard_id, table_name|
+  post %r{/v3/netsim/([^/]+)/(\w+)/delete$} do |_shard_id, _table_name|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
@@ -182,7 +182,7 @@ class NetSimApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/netsim/([^/]+)/delete$} do |shard_id|
+  post %r{/v3/netsim/([^/]+)/delete$} do |_shard_id|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
@@ -203,7 +203,7 @@ class NetSimApi < Sinatra::Base
   #
   post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
-    unsupported_media_type unless has_json_utf8_headers(request)
+    unsupported_media_type unless has_json_utf8_headers?(request)
 
     # Parse JSON
     begin
@@ -322,7 +322,7 @@ class NetSimApi < Sinatra::Base
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
-    unsupported_media_type unless has_json_utf8_headers(request)
+    unsupported_media_type unless has_json_utf8_headers?(request)
 
     begin
       table = get_table(shard_id, table_name)
@@ -336,10 +336,10 @@ class NetSimApi < Sinatra::Base
     content_type :json
     value.to_json
   end
-  patch %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
+  patch %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |_shard_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
-  put %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
+  put %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |_shard_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
@@ -390,7 +390,7 @@ class NetSimApi < Sinatra::Base
   #
   # @param [Request] request
   # @return [Boolean]
-  def has_json_utf8_headers(request)
+  def has_json_utf8_headers?(request)
     request.content_type.to_s.split(';').first == 'application/json' &&
         request.content_charset.to_s.downcase == 'utf-8'
   end

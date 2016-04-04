@@ -25,6 +25,8 @@
   hello: Përshëndetje Botë
   welcome_back: Mirë se erdhët sërish, %{name}
   submit: Dorëzo
+  unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Shto një mësues:'
@@ -372,6 +374,8 @@
     heading_hoc2014: "<h2>Ora e Kodimit për</h2><h1>Të gjitha moshat</h1>"
     heading_elementary: "<h2>20 orë kurse për</h2><h1>Fillestarët (të gjitha moshat)</h1>"
     heading_apps: "<h2>Zbavitje për</h2><h1>Të Gjithë</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Kursi jonë i përgjithshëm për</h2><h1>Të Gjitha Moshat</h1>"
     your_gallery: Galeria
     no_primary_course: Provo një kurs të Code Studio
@@ -489,6 +493,15 @@
       current: Nivelet Aktuale
       unused: Nivelet e Papërdorur
   upsell:
+    applab:
+      title: Laboratori i Aplikacioneve
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Ora e Kodimit
       body: Provo bazat e shkencave kompjuterike. Miliona veta e kanë provuar.
@@ -543,10 +556,10 @@
       të merret dhe të bëhen përmirësime.
     prerelease_hoc2014: Ky tutorial është në <span class='betatext'>beta</span>. Referohet
       të rishikohet sapo feedbacku të merret dhe të bëhen përmirësimet.
-    feedback: Jepni feedback-un tuaj
     report_bug: Raportoni një problem
     support: Merr Ndihmë
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Përgjigje e pasaktë
     wrong_body: Përgjigja që keni futur nuk është e saktë. Ju lutemi provojeni përsëri!
@@ -554,6 +567,23 @@
     correct_body: Kjo është përgjigja e saktë.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Faleminderit
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Faleminderit
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Faleminderit
+    wrong_body: Thank you for submitting answers.
+    correct_title: Faleminderit
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Faleminderit
+    wrong_body: Thank you for submitting answers.
+    correct_title: Faleminderit
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Zgjidhje e pasaktë
     wrong_body: Zgjidhja që keni futur është e pasktë. Ju lutem provojeni përsëri!
@@ -573,6 +603,8 @@
     placeholder: Shkruani përgjigjen tuaj këtu
     open_response_title: Faleminderit
     open_response_body: Faleminderit për përgjigjen!
+    correct_title: E saktë
+    correct_body: Kjo është përgjigja e saktë.
   dialog:
     ok: Në rregull
     startover_title: A jeni i sigurt që doni të filloni nga fillimi?
@@ -635,6 +667,7 @@
     completed_perfect: i përfunduar, në mënyrë perfekte
     furthest_level_attempted: përpjekja e nivelit më të largët
     assessment: Vlerësim
+    submitted: submitted
   studio:
     courses_working_on: Kurset në të cilat po punoni
     completed_courses: Kurset e përfunduara
@@ -705,3 +738,7 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

@@ -196,23 +196,23 @@ end
 
 # Returns the hostname-specific conditional expression for the app provided.
 def if_app(app, req)
-  app == :dashboard ? (req + '.http.host ~ "(dashboard|studio).code.org$"') : nil
+  app == :dashboard ? (req + '.http.host ~ "(dashboard|studio)"') : nil
 end
 
 # Generate an "if(){} else if {} else {}" string from an array of items, conditional Proc, and a block.
 def if_else(items, conditional)
-  _buf = ''
+  buf = ''
   if items.one? && conditional.call(items.first).nil?
     return yield(items.first)
   end
   items.each_with_index do |item, i|
     condition = conditional.call(item)
     next if condition.to_s == 'false'
-    _buf << "#{i != 0 ? 'else ' : ''}#{condition && "if (#{condition}) "}{\n"
-    _buf << yield(item).lines.map{|line| '  ' + line }.join << "\n} "
+    buf << "#{i != 0 ? 'else ' : ''}#{condition && "if (#{condition}) "}{\n"
+    buf << yield(item).lines.map{|line| '  ' + line }.join << "\n} "
   end
-  _buf.slice!(-1)
-  _buf
+  buf.slice!(-1)
+  buf
 end
 
 # Generates a VCL string for all behaviors in the provided config,

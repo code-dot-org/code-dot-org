@@ -650,6 +650,7 @@
           description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
+          title_short: CSP Unit 3
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
@@ -1014,6 +1015,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -1475,6 +1477,11 @@
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1590,6 +1597,7 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Ice Age joku laborategia
           description_short: Ice Age joku laborategiarekin sortu istorio bat edo egin
@@ -1733,6 +1741,7 @@
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4
@@ -1759,3 +1768,72 @@
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Calc: Evaluation Blocks': 'Calc: Ebaluazio Blokeak'
+          'Eval: Strings and Images': 'Eval: Kateak eta Irudiak'
+          'Unplugged: Contracts': 'Lineaz kanpo: Kontratuak'
+          'Eval: Writing Contracts': 'Eval: Kontratuak idazten'
+          'Calc: Defining Variables': 'Calc: Aldagaiak deinitzen'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Lineaz kanpo: Diseinurako errezeta'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Lineaz kanpo: Bideo jokoak
+            eta koordenatuen planoak'
+          'Play Lab: Defining Variables (Big Game)': 'Jolas Laborategia: Aldagaiak
+            definitzen (Joko Handia)'
+          'Play Lab: Animation (Big Game)': 'Jolas laborategia: Animazioak'
+          'Unplugged: Booleans': 'Lineaz kanpo: Boolearrak'
+          'Eval: Boolean Operators': 'Eval: Boolear eragileak'
+          'Play Lab: Booleans': 'Jokoen Laborategia: Boolearrak'
+          'Play Lab: Boolean (Big Game)': 'Jokoen Laborategia: Boolearra (Joko Handia)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Lineaz kanpo: Baldintzazko
+            eta zatikako funtzioak'
+          'Eval: Conditionals': 'Eval: Baldintzak'
+          'Unplugged: Collision Detection and the Distance Formula': 'Lineaz kanpo:
+            Talka Atzematea eta Distantzia Formula'
+          'Play Lab: Collision Detection (Big Game)': 'Jokoen Laborategia: Talka Atzematea
+            (Joko Handia)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

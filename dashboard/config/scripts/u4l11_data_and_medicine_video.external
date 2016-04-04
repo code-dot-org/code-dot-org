@@ -1,0 +1,19 @@
+name 'U4L11 Data and Medicine - Video'
+title 'Data and Medicine- Video'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Video: Data and Medicine
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/bMrDHtGHFR4?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](https://videos.code.org/2015/csp/concept_bigdata_medicine.mp4)**
+
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

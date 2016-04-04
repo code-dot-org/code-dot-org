@@ -79,17 +79,18 @@
   congratulations_volunteer: 'Til hamingju: Nú þegar þú hefur prófað Klukkustund kóðunar,
     getur þú <a href="https://code.org/volunteer">boðið fram liðveislu í skólastofu</a>
     og hjálpað nemendum að læra Klukkustund kóðunar!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: Til hamingju með að ljúka námskeiði 1
+  congratulations_on_completing_course2: Til hamingju með að ljúka námskeiði 2
+  congratulations_on_completing_course3: Til hamingju með að ljúka námskeiði 3
+  congratulations_on_completing_course4: Til hamingju með að ljúka námskeiði 4
+  congratulations_on_completing_accelerated: Til hamingju með að ljúka hraðnámskeiðinu
   congrats_next_tutorials_title: Prófaðu þetta kennsluefni næst
   congrats_next_tutorials_desc: Prófaðu þessar styttri 1 klst. kennslustundir eða
     <a href="%{current_path}/next">kennsluefni hjá samstarfsaðila</a>.
   get_a_certificate_of_achievement: Fáðu viðurkenningarskjal
-  view_course: View course
+  view_course: Skoða námskeið
+  view_unit: Skoða einingu
+  make_app: Búa til app
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
@@ -98,11 +99,7 @@
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -116,7 +113,8 @@
   third_party_price_varies: 'Price: Plans vary'
   third_party_price_free: 'Price: Free'
   third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
@@ -166,7 +164,6 @@
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -182,6 +179,7 @@
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -381,6 +379,9 @@
   homepage_slot_text_link_othercourses: "Önnur námskeið á netinu"
   homepage_slot_text_title_educators: Fræðsluaðilar
   homepage_slot_text_blurb_educators: Kennið nemendum ykkar
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Miðskólastig
+  homepage_slot_text_link_high: Framhaldsskólastig
   homepage_slot_text_link_k5: Námskeið fyrir 5 - 10 ára bekki (K-5)
   homepage_slot_text_link_fullcurriculum: Sjá allt námsefni okkar
   homepage_slot_text_link_pd: Fagmenntun
@@ -661,6 +662,7 @@
   dashboard_navigation_all_sections: Reikningar og árangur nemenda
   dashboard_navigation_view_progress: Skoða framvindu
   dashboard_navigation_view_text_responses: Skoða textasvör
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Bæta við nemendum
   dashboard_navigation_manage_students: Umsjón nemenda
   dashboard_navigation_lesson_plans_resources: Kennsluáætlanir og tilföng
@@ -781,10 +783,21 @@
   dashboard_progress_completed_too_many_blocks: lokið, of margir kubbar
   dashboard_progress_completed_perfect: lokið, fullkomið
   dashboard_progress_furthest_level_attempted: hæsti unninn áfangi
+  dashboard_progress_submitted: sent inn
   dashboard_stage: "Áfangi"
   dashboard_puzzle: "Þraut"
   dashboard_question: Spurning
   dashboard_response: Svar
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Rétt
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Ótrúlegar tölur frá síðasta ári um Klukkustund kóðunar.
     Á aðeins einni viku:"
   stats_hoc_2013_image_alt: Um Klukkustund kóðunar árið 2013
@@ -943,6 +956,18 @@
   course3_name: Námskeið 3
   course4_name: Námskeið 4
   accelerated_name: Hraðnámskeið
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
+    of computer programming, which unlocks the ability to make rich, interactive apps.
+    This course uses JavaScript as the programming language, and App Lab as the programming
+    environment to build apps, but the concepts learned in these lessons span all
+    programming languages and tools.
+  applab_name: Appsmiðja
+  applab_gradelevel: Aldur 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you
+    can make simple apps. Design an app, code with blocks or JavaScript to make it
+    work, then share your app in seconds
   codeorg_gradelevel: 4-104 ára
   codeintl_gradelevel: 4-104 ára
   thinkersmithspanish_gradelevel: Por todos
@@ -1629,4 +1654,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spila
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

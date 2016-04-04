@@ -74,4 +74,40 @@ class UserScriptTest < ActiveSupport::TestCase
                               completed_at: Time.now,
                               last_progress_at: Time.now).empty?
   end
+
+  test "Completing a script updates script completion levels" do
+    #If I have to do this boilerplate setup a lot, put this in a common file
+    @script.update(pd: true)
+    course = create(:plc_course)
+    course_unit = create(:plc_course_unit, plc_course: course)
+    learning_module = create(:plc_learning_module)
+    task1 = create(:plc_script_completion_task, plc_learning_module: learning_module, script_id: @script.id, name: 'script 1')
+    task2 = create(:plc_script_completion_task, plc_learning_module: learning_module, script_id: @script.id + 50, name: 'script 2')
+
+    enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: course)
+    unit_enrollment = Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: enrollment, plc_course_unit: course_unit,
+                                                           status: Plc::EnrollmentUnitAssignment::START_BLOCKED)
+    unit_enrollment.enroll_user_in_unit_with_learning_modules([learning_module])
+
+    #First should be completed, second should not
+    task_assignment = unit_enrollment.plc_task_assignments.find_by(plc_task: task1)
+    never_completed_task_assignment = unit_enrollment.plc_task_assignments.find_by(plc_task: task2)
+
+    assert_equal 'not_started', task_assignment.status
+    @script_levels.each do |script_level|
+      user_level = UserLevel.where(user: @user, level: script_level.level, script: @script).create
+      user_level.best_result = 100
+      user_level.save
+      User.track_script_progress(@user, @script)
+      task_assignment.reload
+      if script_level == @script_levels.last
+        assert @user_script.check_completed?
+        assert_equal 'completed', task_assignment.status
+        assert_equal 'not_started', never_completed_task_assignment.status
+      else
+        assert !@user_script.check_completed?
+        assert_equal 'not_started', task_assignment.status
+      end
+    end
+  end
 end

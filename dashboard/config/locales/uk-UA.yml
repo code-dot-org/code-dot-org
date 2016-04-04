@@ -24,6 +24,8 @@
   hello: "Привіт, світе"
   welcome_back: "З поверненням, %{name}"
   submit: "Надіслати"
+  unsubmit: "Відкликати"
+  next_page: Next page
   add_teacher_form:
     code:
       label: "Додати учителя:"
@@ -373,6 +375,8 @@
     heading_elementary: "<h2>20-годинні курси</h2><h1>вступу до інформатики (для будь-якого
       віку)</h1>"
     heading_apps: "<h2>Цікавинки</h2><h1>для усіх</h1>"
+    heading_tools: "<h2>Готові до наступного кроку?</h2><h1>Інструменти JavaScript
+      для старшої школи</h1>"
     heading_legacy: "<h2>Прискорений курс</h2><h1>для будь-якого віку</h1>"
     your_gallery: "Галерея"
     no_primary_course: "Спробуйте курс Code Studio"
@@ -495,6 +499,15 @@
       current: "Поточні рівні"
       unused: "Невикористані рівні"
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab - це середовище програмування для створення простих додатків.
+        Розробляйте програму, програмуйте її блоками чи JavaScript, а тоді поділіться
+        нею з іншими.
+      body_short: "Розробляйте програму, програмуйте її блоками чи JavaScript, а тоді
+        поділіться нею з іншими."
+      audience: "Вік 13+"
+      cta: "Почати навчання"
     hoc:
       title: "Класичний лабіринт"
       body: "Спробуйте основи інформатики. Мільйони вже скористались цим шансом."
@@ -547,10 +560,10 @@
       до отриманих відгуків."
     prerelease_hoc2014: "Цей підручник є <span class='betatext'>бета-версією</span>.
       \ Він підлягає редагуванню відповідно до отриманих відгуків."
-    feedback: "Залишити відгук"
     report_bug: "Повідомити про помилку"
     support: "Отримати допомогу"
     support_url: "//support.code.org"
+    help_resources: "Довідки та ресурси"
   multi:
     wrong_title: "Неправильна відповідь"
     wrong_body: "Подана відповідь не є правильною.  Будь ласка, спробуйте ще раз!"
@@ -558,6 +571,23 @@
     correct_body: "Це правильна відповідь."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: "Дякую"
+    wrong_body: "Дякуємо за надсилання відповіді."
+    correct_title: "Дякую"
+    correct_body: "Дякуємо за надсилання відповіді."
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "Дякую"
+    wrong_body: "Дякуємо за надсилання відповіді."
+    correct_title: "Дякую"
+    correct_body: "Дякуємо за надсилання відповіді."
+  level_group-submittable:
+    wrong_title: "Дякую"
+    wrong_body: "Дякуємо за надсилання відповіді."
+    correct_title: "Дякую"
+    correct_body: "Дякуємо за надсилання відповіді."
   match:
     wrong_title: "Неправильне рішення"
     wrong_body: "Подане рішення не є правильним.  Будь ласка, спробуйте ще раз!"
@@ -577,6 +607,8 @@
     placeholder: "Введіть свою відповідь тут"
     open_response_title: "Дякуємо"
     open_response_body: "Дякуємо за вашу відповідь!"
+    correct_title: "Правильно"
+    correct_body: "Це правильна відповідь."
   dialog:
     ok: "Гаразд"
     startover_title: "Ви впевнені, що хочете почати все спочатку?"
@@ -641,6 +673,7 @@
     completed_perfect: "виконано, ідеально"
     furthest_level_attempted: "останній відкритий рівень"
     assessment: "оцінювання"
+    submitted: "надіслано"
   studio:
     courses_working_on: "Відкриті курси"
     completed_courses: "Завершені курси"
@@ -710,3 +743,7 @@
         acknowledge: "Надсилаючи цю інформацію, ви підтверджуєте, що він буде оброблятися
           відповідно до умов %{link_start_privacy}Політики конфіденційності%{link_end}
           та %{link_start_tos}Умов надання послуг%{link_end}"
+  components:
+    icon_library:
+      search_placeholder_text: "Шукати значок..."
+      no_icons_found: "Значків не знайдено"

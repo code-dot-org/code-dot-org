@@ -18,8 +18,7 @@ function updateGutter() {
     // Droplet will call aceSession.setAnnotations() under the hood
     // for us
     dropletEditor.setAnnotations(lintAnnotations.concat(runtimeAnnotations));
-  }
-  else {
+  } else {
     aceSession.setAnnotations(lintAnnotations.concat(runtimeAnnotations));
   }
 }
@@ -70,6 +69,9 @@ module.exports = {
   },
 
   clearRuntimeAnnotations: function () {
+    if (runtimeAnnotations.length === 0) {
+      return;
+    }
     runtimeAnnotations = [];
     updateGutter();
   },

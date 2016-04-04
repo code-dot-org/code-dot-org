@@ -28,7 +28,7 @@
           title: Kurz 1
           Artist 2: Umělec 2
           Happy Maps: "Šťastné mapy"
-          Move it, Move it: Pohyb, pohyb
+          Move it, Move it: Přesuň to, Přesuň to
           'Real-life Algorithms: Plant a Seed': 'Algoritmy ze života: Zasadit semínko'
           Building a Foundation: Budování nadace
           Getting Loopy: Bláznit
@@ -171,11 +171,11 @@
             kouzlo a krásu ledu.
         course4:
           description_short: Studenti z kurzu 4 by měli mít kurzy 2 a 3.
-          description: Kurz 4 je určen studentům, kteří měli kurzy 2 a 3. Studenti
-            proniknou hlouběji do témat programování v předchozích kurzů představující
-            flexibilní řešení složitějších problémů. Na konci tohoto kurzu studenti
-            vytvoří interaktivní příběhy a hry, které mohou sdílet s kýmkoli. Doporučeno
-            pro třídy 4-8.
+          description: Kurz 4 je určen pro studenty, kteří se kurzy 2 a 3. Studenti
+            se naučí řešit hádanky s rostoucí složitosti, jak se učí jak zkombinovat
+            několik konceptů, při řešení každé výzvě. V době dokončení tohoto kurzu
+            studenti budou vytvářet programy, které jim předvést více dovedností,
+            včetně smyček a funkce s parametry. Doporučeno pro stupně 4-8.
           'Artist: Variables': 'Umělec: proměnné'
           'Bee: For Loops': 'Včela: For cykly'
           title: Kurz 4
@@ -642,6 +642,7 @@
           description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
+          title_short: CSP Unit 3
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
@@ -927,7 +928,7 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: Internet
+          The Internet: Internet je pro všechny
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
             Tree
@@ -1006,6 +1007,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fáze 2 Online: Promíchané letní studium'
@@ -1288,7 +1290,7 @@
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
           Happy Maps: "Šťastné mapy"
-          Move it, Move it: Pohyb, pohyb
+          Move it, Move it: Přesuň to, Přesuň to
           'Real-life Algorithms: Plant a Seed': 'Algoritmy ze života: Zasadit semínko'
           Graph Paper Programming: Programování Na Milimetrovém Papíru
           Building a Foundation: Budování nadace
@@ -1465,6 +1467,11 @@
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1580,6 +1587,7 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Doba ledová Play Lab
           description_short: Vytvoř příběh nebo udělej hru s ledovou Play Labem!
@@ -1719,6 +1727,7 @@
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4
@@ -1745,3 +1754,72 @@
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Calc: Evaluation Blocks': 'Calc: bloky vyhodnocení'
+          'Eval: Strings and Images': 'Eval: Řetězce a obrázky'
+          'Unplugged: Contracts': 'Nezapojené: kontrakty'
+          'Eval: Writing Contracts': 'Eval: psaní kontraktů'
+          'Calc: Defining Variables': 'Calc: Definice proměnných'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Nezapojené: Návrhový předpis'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Nezapojené: Video hry a
+            souřadnicových roviny'
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Definující proměnné
+            (Velká hra)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animace (Velká hra)'
+          'Unplugged: Booleans': 'Nezapojené: logické hodnoty'
+          'Eval: Boolean Operators': 'Eval: Logické operátory'
+          'Play Lab: Booleans': 'Play Lab: logické hodnoty'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Logická hodnota (Velká hra)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Nezapojené: Podmínky
+            a funkce po částech'
+          'Eval: Conditionals': 'Eval: podmínky'
+          'Unplugged: Collision Detection and the Distance Formula': 'Nezapojené:
+            Detekce kolizí a vzorec vzdálenosti'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Detekce kolizí (Velká
+            hra)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

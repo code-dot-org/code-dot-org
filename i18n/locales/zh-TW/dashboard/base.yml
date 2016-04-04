@@ -24,6 +24,8 @@ zh:
   hello: 世界您好
   welcome_back: '歡迎回來，%{name}'
   submit: 送出
+  unsubmit: 不提交
+  next_page: Next page
   add_teacher_form:
     code:
       label: 增加一位老師：
@@ -225,7 +227,7 @@ zh:
       free_play:
         playlab: 製作一個App
         artist: 畫些什麼東西
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: 製作一個App
     user:
       classroom: 教師主頁
@@ -323,6 +325,7 @@ zh:
     heading_hoc2014: '<h2>一小時的程式設計課程</h2><h1>對所有年齡</h1>'
     heading_elementary: '<h2>20 小時課程</h2><h1>初學者(所有年齡)</h1>'
     heading_apps: '<h2>樂趣</h2><h1>每個人</h1>'
+    heading_tools: '<h2>為下一步的準備好了嗎？</h2><h1>高中的 JavaScript 工具</h1>'
     heading_legacy: '<h2>我們的一般課程</h2>適合<h1>所有年齡</h1>'
     your_gallery: 相片圖庫
     no_primary_course: 試試在 Code Studio 參加一個課程
@@ -417,6 +420,12 @@ zh:
       current: 目前的關卡
       unused: 未使用的關卡
   upsell:
+    applab:
+      title: App Lab
+      body: 應用程序實驗室是一個可以讓你簡單在編寫應用程式的程式設計環境。設計應用程式，代碼塊或 JavaScript 使它運作，然後在幾秒鐘內分享您的應用程式。
+      body_short: 設計應用程式，編寫代碼塊或 JavaScript 使它運作，然後在幾秒鐘內分享您的應用程式。
+      audience: 13歲以上
+      cta: 學習怎樣做
     hoc:
       title: 經典迷宮
       body: 請試試數百萬人已經體驗過的電腦科學基礎課程。
@@ -458,10 +467,10 @@ zh:
   landing:
     prerelease: "本課程還在 <span class='betatext'>beta</span>階段。這表示它不是本課程的最後版本，它會依據收到的回饋，作出修訂與改善。"
     prerelease_hoc2014: "本教程還在 <span class='betatext'>beta</span>階段。它會依據收到的回饋，作出修訂與改善。"
-    feedback: 提供意見
     report_bug: 報告錯誤
     support: 請求幫助
     support_url: //support.code.org
+    help_resources: 説明和資源
   multi:
     wrong_title: 不正確的答案
     wrong_body: 你的答案不正確。請再試一次 ！
@@ -469,6 +478,23 @@ zh:
     correct_body: 這是正確的答案。
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: 謝謝
+    wrong_body: 感謝您提交的答案。
+    correct_title: 謝謝
+    correct_body: 感謝您提交的答案。
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: 謝謝
+    wrong_body: 感謝您提交的答案
+    correct_title: 謝謝
+    correct_body: 感謝您提交的答案
+  level_group-submittable:
+    wrong_title: 謝謝
+    wrong_body: 感謝您提交的答案
+    correct_title: 謝謝
+    correct_body: 感謝您提交的答案
   match:
     wrong_title: 不正確的解決方案
     wrong_body: 您的解決方案不正確。請再試一次 ！
@@ -486,6 +512,8 @@ zh:
     placeholder: 在這裡輸入你的答案
     open_response_title: 謝謝
     open_response_body: 感謝您的回應！
+    correct_title: 正確
+    correct_body: 這是正確的答案。
   dialog:
     ok: 確定
     startover_title: 你確定要重新開始嗎？
@@ -539,6 +567,7 @@ zh:
     completed_perfect: 完美完成
     furthest_level_attempted: 嘗試到的最遠關卡
     assessment: 習題
+    submitted: 已提交
   studio:
     courses_working_on: 您正在進行的課程
     completed_courses: 已完成的課程
@@ -595,3 +624,7 @@ zh:
           other: 其他
         detail: 依據您所回報的內容，請盡可能提供更詳盡的細節。
         acknowledge: '送出這些資訊，代表你已經了解它將依照 %{link_start_privacy}隱私權政策%{link_end} 以及 %{link_start_tos}服務條款%{link_end}進行處理及保管。'
+  components:
+    icon_library:
+      search_placeholder_text: 搜索圖示...
+      no_icons_found: 沒有圖示

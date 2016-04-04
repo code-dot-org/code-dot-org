@@ -1,16 +1,16 @@
 sr-SP:
   hour_of_code: Час кода
   hello: Здраво свете
-  select_language: Молимо изаберите свој језик
+  select_language: Молимо изаберите језик
   en: Информатика
-  computer_science_edweek: Едукацијска седмица о информатици
+  computer_science_edweek: Недеља информатике
   csedweek_dates: 8-14 Децембар, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Сат програмирања </a>долази. Позивамо све учитеље и организаторе, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">да испланирају свој Сат програмирања</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Да ли сте ви учитељ компјутерских наука? Погледајте друге на недељи едукације о компјутерској науци.</a>'
   n_have_learned_an_hoc: '<h1>Испробај</h1><h2>Сат Програмирања</h2><h3># посећено</h3>'
-  anybody_can_learn: Сви могу научити.
+  anybody_can_learn: Сви могу да науче.
   learn_now: Учите сада
-  petition_message: Сваки ученик у свакој школи треба да има прилику да учи компјутерску науку
+  petition_message: Сваки ученик у свакој школи треба да има прилику да учи информатику
   petition_sign_message: 'Ако се слажеш, упиши своје име. Придружи се # осталима.'
   petition_sign_message_support: 'Ако нас подржаваш, упиши своје име. Придружи се # осталима.'
   petition_join_others: Придружи се осталима
@@ -18,31 +18,31 @@ sr-SP:
   email: Електронска пошта
   zipcode: Поштански број или име државе
   submit: Пошаљи
-  twentyhours_heading: Пробајте наш курс Увод у Компјутерску науку
-  twentyhours_text: Завршили сте свој први Сат програмирања?Научите више основа компјутерске науке и концепта програмирања у овом курсу који следи.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
-  hoc2014_heading: 'Придружите се<a href="http://hourofcode.com">Сату програмирања </a><br/>8.-14 .децембар,2014<br/>'
+  twentyhours_heading: Пробајте наш курс Увод у информатику
+  twentyhours_text: Завршили сте свој први Час програмирања? Научите више основа информатике и концепте програмирања у курсу који следи.
+  og_title: Свако дете заслужује шансу
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  hoc2014_heading: 'Придружите се<a href="http://hourofcode.com">Часу програмирања </a><br/>8.-14.децембар,2014<br/>'
   hoc2014_students: Студенти
   hoc2014_try: Пробајте
   hoc2014_teachers: Наставници
   hoc2014_host: Одржите
   hoc2014_everyone: Сви
   hoc2014_support: 'Подржите &#x25BE;'
-  hoc2014_whatishoc: Шта је Сат програмирања?
+  hoc2014_whatishoc: Шта је Час програмирања?
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Пријавите свој догађај
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Тражи
   csedweek_map_search_reset: Почни поново
-  csedweek_map_legend_title: Legenda
+  csedweek_map_legend_title: Легенда
   csedweek_map_legend_event: Час кода догађај
   csedweek_map_legend_cs_tech_jam: Посебан догађај
   cded_sign_up: Региструј се
   cded_try_it: Пробајте
   twentyhours_trynow: Испробај сада
-  california_heading: Замолите Вашу школу да се у њој уче компјутерске науке
-  california_text: "Било који учитељ може да понуди наше<a href='http://studio.code.org/'>бесплатне курсеве</a>.Било која основна школа може да<a href='http://code.org/educate/k5'>учи компјутерску науку</a>.Питајте средње школе да<a href='http://code.org/educate/districts'>буду партнери."
+  california_heading: Замолите Вашу школу да се у њој учи информатика
+  california_text: "Било који наставник може да понуди наше <a href='http://studio.code.org/'>бесплатне курсеве</a>. Било која основна школа може да<a href='http://code.org/educate/k5'>учи информатику</a>. Питајте средње школе да <a href='http://code.org/educate/districts'>буду наши партнери."
   california_button: Сазнајте више
   flappy_heading: Флапи рођендан сајту Code.org
   flappy_text: 'Code.org је управо напунио годину дана.<br/><br/>Прославите са нама прављењем сопствене<b>Флапи</b>игре.Програмирајте своја правила, и поделите их са пријатељима!'
@@ -56,25 +56,23 @@ sr-SP:
   go: Иди
   thank_you_: Хвала!
   congratulations: Честитамо!
-  congratulations_on_completing_hoc: Честитамо на завршавању 1 Сата Програмирања
+  congratulations_on_completing_hoc: Честитамо на завршавању 1 Часа Програмирања
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
   congratulations_on_completing_course1: Congratulations on completing Course 1
   congratulations_on_completing_course2: Congratulations on completing Course 2
   congratulations_on_completing_course3: Congratulations on completing Course 3
   congratulations_on_completing_course4: Congratulations on completing Course 4
   congratulations_on_completing_accelerated: Congratulations on completing the Accelerated Course
-  congrats_next_tutorials_title: Probaj ovaj tutorijal
-  congrats_next_tutorials_desc: 'Isprobaj ovae kratake, jednočasovne tutorijale ili isprobaj <a href="%{current_path}/next">partnerski tutorijali</a>.'
-  get_a_certificate_of_achievement: Узмите сертификат о достигнућу
-  view_course: View course
+  congrats_next_tutorials_title: Пређи на следећи ниво
+  congrats_next_tutorials_desc: 'Пробај ове кратке једночасовне туторијале или пробај <a href="%{current_path}/next">partnerski tutorijali</a>.'
+  get_a_certificate_of_achievement: Узмите сертификат
+  view_course: Види курс
+  view_unit: View unit
+  make_app: Make an app
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -88,7 +86,8 @@ sr-SP:
   third_party_price_varies: 'Price: Plans vary'
   third_party_price_free: 'Price: Free'
   third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
   third_party_tynker_btn_site: Visit Tynker
@@ -109,21 +108,21 @@ sr-SP:
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
   third_party_appinv_btn_forum: App Inventor 2 Forum
   third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. With CodeHS, you can get the help that every new programmer needs to work through problems and keep learning. Our tutors are everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
+  third_party_codehs_btn_try: Intro CS Learn More for Schools
   third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Visit Codecademy
   third_party_organization: Organization
   third_party_curriculum: Наставни план
   third_party_pricing: Pricing
-  third_party_cost_free: Free
+  third_party_cost_free: Free for students and teachers
   third_party_cost_5permonth: $5/month per class
   third_party_cost_299: $2.99/download
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
@@ -152,12 +151,12 @@ sr-SP:
   girls: Девојке
   give_my_hour: 'Дај мој сат следећем:'
   girls_team: Женски тим
-  boys_team: Дечачки тим
+  boys_team: Мушки тим
   tell_the_world: Подели Свету!
   thanks_for_voting: Хвала на гласању!
   share_on_facebook: Подели на Facebook-u
   share_on_twitter: Подели на Тwitteru
-  beyond_an_hour: Више од Сата програмирања
+  beyond_an_hour: После Часа програмирања
   get_started: Покрени
   i_agree: Слажем се
   participant_select: -Изабери-
@@ -180,7 +179,7 @@ sr-SP:
   learn_next_level: Настави до следећег нивоа
   learn_online: Пробајте друге курсеве на интернету
   learn_classes: Пронађите локалне часове
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Управо сам завршио #HourOfCode - погледајте га! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -317,6 +316,9 @@ sr-SP:
   homepage_slot_text_link_othercourses: Остали онлајн курсеви
   homepage_slot_text_title_educators: Едукатори
   homepage_slot_text_blurb_educators: Научи своје ђаке
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Основна школа (од 5. до 8. разреда)
+  homepage_slot_text_link_high: Средња школа
   homepage_slot_text_link_k5: Курсеви за ниво К-5
   homepage_slot_text_link_fullcurriculum: Погледајте цео наставни план
   homepage_slot_text_link_pd: Професионални развој
@@ -374,7 +376,7 @@ sr-SP:
     Ледено доба - Ускоро
     
   playlab_iceage_title_live: Ледено доба
-  starwars_subtitle: Изгради Галаксију Са Кодом
+  starwars_subtitle: Изгради галаксију кôдом
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Користи повуци-испусти блокове и JavaScript.
   starwars_javascript_specs: Samo na engleskom | Moderni pretraživači | Uzrasta 11 +
@@ -471,9 +473,9 @@ sr-SP:
   dashboard_landing_useful_links: Други корисни линкови (само на Енглеском)
   dashboard_landing_office_hours: Питајте питање уживо! Посетите нашу месечну понуду видео разговарања.
   dashboard_landing_print_certificates: Штампај потврде ученицима који су завршили курс
-  dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
-  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_educator_blog: Прочитајте о новостима и ажурирањима наших материјала на нашем едукаторском блогу
+  dashboard_landing_smart_hints: Молимо Вас да нам помогнете да додамо паметне савете на Code.org туторијале
+  dashboard_landing_video_player: Тестирајте наш нови video player у вашој школи
   dashboard_landing_progress_title: Напредак у главном курсу
   dashboard_landing_progress_biggest: Ово је напредак за вашу највећу секцију.
   dashboard_landing_view_progress: 'Видите напредак за%{biggest_section}'
@@ -522,6 +524,7 @@ sr-SP:
   dashboard_navigation_all_sections: Налози за ученике и напредак
   dashboard_navigation_view_progress: Видите напредак
   dashboard_navigation_view_text_responses: Види текстуалне одговоре
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Додајте ученике
   dashboard_navigation_manage_students: Управљање ученицима
   dashboard_navigation_lesson_plans_resources: План лекција и ресурса
@@ -615,10 +618,21 @@ sr-SP:
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_submitted: submitted
   dashboard_stage: фаза
   dashboard_puzzle: Пузла
   dashboard_question: Питање
   dashboard_response: Одговор
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Correct
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Невероватна статистика прошлогодишњег Сата програмирања. За само недељу дана:'
   stats_hoc_2013_image_alt: Статистика за Сат програмирања 2013
   dashboard_teacher: Учитељ
@@ -637,7 +651,7 @@ sr-SP:
   dashboard_faq_k5: K-5 Често постављана питања
   dashboard_announcements: Објаве
   dashboard_announce_view_all: Prikaži sve
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
   dashboard_announce_button_text: Сазнајте више
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
@@ -696,7 +710,7 @@ sr-SP:
   older_systems_subheading: 'Ово би требало радити на старим веб читачима. Да приступите свим туторијалима, инсталирајте <a href="http://browsehappy.com/" target="_blank">модеран веб читач.</a>'
   mobile_devices: Туторијали за мобилне уређаје
   frozen_name: Програмирај са Аном и Елзом
-  starwars_name: 'Ratovi Zvezda: Izgradi Galaksije sa Kôdom'
+  starwars_name: 'Ратови Звезда: Изгради галаксије кôдом'
   codeorg_name: Classic Maze
   codeintl_name: Classic Maze
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -716,7 +730,7 @@ sr-SP:
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
-  codeavengers_name: Направи игрицу са JavaScript-ом
+  codeavengers_name: Направи игрицу JavaScript-ом
   processing_name: Цртање програмрињем
   robomind_name: Програмирајте виртуелног робота
   groklearning_name: Докторка Елиза, виртуелни саговорник
@@ -735,9 +749,9 @@ sr-SP:
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Лист, камен, маказе
   hourofcode_name: Classic Maze
-  playlab_name: Play Lab
+  playlab_name: Играоница
   infinity_name: Infinity Play Lab
-  artist_name: Artist
+  artist_name: Уметник
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
   csfirst_name: CS First
@@ -745,11 +759,17 @@ sr-SP:
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
-  course1_name: Course 1
-  course2_name: Course 2
-  course3_name: Course 3
+  course1_name: Курс 1
+  course2_name: Курс 2
+  course3_name: Курс 3
   course4_name: Course 4
   accelerated_name: Accelerated Course
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  applab_name: App Lab
+  applab_gradelevel: Ages 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: Ages 4-104
   codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -800,11 +820,11 @@ sr-SP:
   codesters_gradelevel: Годишта 12.-14.
   texasinstruments_gradelevel: Узраста 13.-16.
   teacherled_gradelevel: Узраста 5+
-  course1_gradelevel: Ages 4-6
+  course1_gradelevel: Узраст од 4 до 6 година
   course2_gradelevel: Ages 6-18
-  course3_gradelevel: Ages 8-18
-  course4_gradelevel: Ages 10-18
-  accelerated_gradelevel: Ages 10-18
+  course3_gradelevel: За године од 8 до 18
+  course4_gradelevel: Узраст од 10 до 18 година
+  accelerated_gradelevel: Узраст од 10 до 18 година
   codeorg_platformtext: Модерни претраживачи, паметни телефони, таблети
   codeintl_platformtext: Модерни претраживачи, паметни телефони, таблети
   thinkersmithspanish_platformtext: Није укључен
@@ -893,9 +913,9 @@ sr-SP:
   hourofcode_shortdescription: Научи програмирањ са Марком Цукербергом и Љутим Птицама!
   frozen_shortdescription: Хајде да искористимо програмирање да би се придружили Ани и Елзи у истраживању магије и лепоте леда.
   starwars_shortdescription: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
+  playlab_shortdescription: Направи причу или игру у Играоници!
+  infinity_shortdescription: Креирај приче и игре са Дизнијевим ликовима у Играоници.
+  artist_shortdescription: Цртај слике са уметником!
   monsterocding_shortdescription: Шаренолика програмска авантура за децу.
   allcancode_shortdescription: Имресивна игра Марко са видљивим програмским језиком.
   csfirst_shortdescription: Анимирај причу са два морска карактера. Направи свој стил!
@@ -1142,7 +1162,7 @@ sr-SP:
   sphero_beyond_longdescription: "Whether you're an educator or a parent, SPRK lessons give kids a fun crash course in programming robots while sharpening their skills in math and science."
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_hide_this_warning: Сакриј ова обавештења
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

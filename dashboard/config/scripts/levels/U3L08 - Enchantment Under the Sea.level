@@ -36,7 +36,8 @@
       "functionParams_none": null,
       "functionParams_n": null,
       "callMyFunction": null,
-      "callMyFunction_n": null
+      "callMyFunction_n": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -71,8 +72,16 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
-  }
+    "debugger_disabled": "false",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "You have been provided with starter code for an “Under the Sea” scene which includes three functions, one each for the starfish, sea grass, and fish. Create versions of these functions which accept parameters to allow you to add more variation to your scene.  The student worksheet provides more details and guidance.\r\n\r\n<img src=\"https://levelbuilder-studio.code.org/script_assets/k_1_images/instruction_gifs/csp/U3L08%20-%20Under%20the%20sea.gif\" style=\"width: 250px\">",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

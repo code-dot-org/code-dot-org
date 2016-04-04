@@ -18,6 +18,7 @@
   "fillTooltip": "plaats 1 stukje aarde",
   "finalLevel": "Gefeliciteerd! je hebt de laatste puzzel opgelost.",
   "flowerEmptyError": "De bloem waar je op staat heeft geen nectar meer.",
+  "didNotCollectEverything": "Wees er zeker van dat u geen nectar of honing achterlaat!",
   "get": "pak",
   "heightParameter": "hoogte",
   "holePresent": "daar is een gat",
@@ -81,6 +82,5 @@
   "whileTooltip": "Herhaal de acties totdat je de finish hebt bereikt.",
   "word": "Zoek het woord",
   "yes": "Ja",
-  "youSpelled": "Jij spelde",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Jij spelde"
 }

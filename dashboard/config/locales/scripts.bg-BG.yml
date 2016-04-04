@@ -176,11 +176,12 @@
         course4:
           description_short: "Учениците, изучаващи курс 4 трябва да са взели вече
             курсове 2 и 3."
-          description: "Курс 4 е предназначен за ученици, които са минали курс 2 и
-            3. Учениците ще задълбочат знанията си по програмиране, получени в предишни
-            курсове, за да вземат гъвкави решения при по-сложни проблеми. До края
-            на този курс учениците ще създават интерактивни истории и игри, които
-            да могат да споделят с приятели. Препоръчва се за ученици от 4-8 клас."
+          description: "Курс 4 е предназначен за ученици, които са покрили курсове
+            2 и 3. Учениците ще научат как да се справят с пъзели с повишена сложност,
+            тъй като ще се научат как да съчетават няколко концепции при решаване
+            на предизвикателство. След завършване на този курс учениците ще могат
+            да създават програми, в които да покажат няколко умения, като цикли и
+            функции с параметри. Препоръчва се за класове 4-8."
           'Artist: Variables': "Художник: променливи"
           'Bee: For Loops': "Пчела: За повторенията"
           title: "Курс 4"
@@ -659,6 +660,7 @@
           description: Test Wednesday
         cspunit3:
           title: CSP блок 3 - програмиране
+          title_short: CSP Unit 3
           description_short: "Програмиране"
           description: "Тази част въвежда фундаменталните концепции за компютърно
             програмиране, което отключва възможността да се правят богати, интерактивни
@@ -1030,6 +1032,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: "Студио"
+          Long assessment: Long assessment
         algebraPD2b:
           title: "Компютърни науки в алгебрата"
           description: "Фаза 2 онлайн: Смесено лятно учене"
@@ -1491,6 +1494,11 @@
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1606,6 +1614,7 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: "Ледена епоха: игрална лаборатория"
           description_short: "Създай история или си направи игра с Ледена епоха игрална
@@ -1749,6 +1758,7 @@
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4
@@ -1775,3 +1785,73 @@
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: "Научете функционално програмиране чрез алгебра"
+          description: "Научете функционално програмиране чрез алгебра"
+          'Calc: Evaluation Blocks': "Калколиране: Оценка блокове"
+          'Eval: Strings and Images': "Оценка: Низове и изображения"
+          'Unplugged: Contracts': "Ънплъгд: договори"
+          'Eval: Writing Contracts': "Оценка: Писане на договори"
+          'Calc: Defining Variables': "Изчисление: Определяне на променливите"
+          'Eval: Defining Functions': "Оценка: Дефиниране на функции"
+          'Unplugged: The Design Recipe': "Ънплъгд: Напиши рецепта"
+          'Play Lab: Defining Functions': "Театрална лаборатория: Дефиниране на функции"
+          'Eval: Functions': "Оценка: функции"
+        AlgebraB:
+          title: "Компютърни науки в алгебрата"
+          description_short: "Научете функционално програмиране чрез алгебра"
+          description: "Научете функционално програмиране чрез алгебра"
+          'Unplugged: Video Games and Coordinate Planes': "Ънплъгд: видео игрите и
+            координатните системи"
+          'Play Lab: Defining Variables (Big Game)': "Игрална лаборатория: Дефиниране
+            на променливи (голямата игра)"
+          'Play Lab: Animation (Big Game)': "Игрална лаборатория: Анимация (голямата
+            игра)"
+          'Unplugged: Booleans': "Ънплъгд: Booleans"
+          'Eval: Boolean Operators': "Оценка: Булеви оператори"
+          'Play Lab: Booleans': "Театрална лаборатория: Booleans"
+          'Play Lab: Boolean (Big Game)': "Игрална лаборатория: Boolean(голямата игра)"
+          'Unplugged: Conditionals and Piecewise Functions': "Ънплъгд: Условия и Piecewise
+            функции"
+          'Eval: Conditionals': "Оценка: Условия"
+          'Unplugged: Collision Detection and the Distance Formula': "Ънплъгд: Collision
+            Detection и формула за разстояние"
+          'Play Lab: Collision Detection (Big Game)': "Игрална лаборатория: Collision
+            Detection (голямата игра)"
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

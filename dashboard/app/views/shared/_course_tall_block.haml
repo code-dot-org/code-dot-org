@@ -20,6 +20,11 @@
   - title = t('upsell.gallery.title')
   - body = t('upsell.gallery.body')
 
+- elsif id == 'applab'
+  - url = CDO.code_org_url('/educate/applab')
+  - title = t('upsell.applab.title')
+  - body = t('upsell.applab.body_short')
+
 - elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME].include? id
   - url = script_url(id)
   - title = data_t_suffix('script.name', id, 'title')

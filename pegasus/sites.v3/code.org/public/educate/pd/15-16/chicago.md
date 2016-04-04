@@ -29,13 +29,7 @@ Milestone Complete!
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CSP. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates:**
-
-Quarter 1: Saturday, October 24, 2015
-
-Quarter 2: Saturday, December 12, 2015
-
-Quarter 3: Saturday, February 6, 2016
+**Save the date:**
 
 Quarter 4: Saturday, March 19 , 2016
 
@@ -92,25 +86,17 @@ Teachers from Chicago will be attending the East Coast CSP Phase 4 Workshop. Ple
 ### Phase 1: Online Introduction (~2 hours)###
 
 Milestone Complete!
+
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)  ###
-
-
 
 Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates:**
-
-Quarter 1: Saturday, October 17, 2015
-
-Quarter 2: Saturday, November 21, 2015
-
-Quarter 3: Saturday, January 23, 2016
+**Save the date:**
 
 Quarter 4: Saturday, April 30, 2016
 
@@ -147,16 +133,9 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-
 Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
 will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
 
-Takeaways:<br/>
-• I look forward to teaching the course again based on my reflection of the past year.<br/>
-• I am more comfortable with the material that I struggled with the first time teaching this
-course.<br/>
-• I understand how to make changes to the ECS curriculum in order to meet my local needs
-and fit into my context.))
 
 **Save the Dates**
 
@@ -204,7 +183,6 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 **Save the dates:**
 
 <i>Both Group 1 & 2 will attend the following dates</i><br/>
-Semester 1: Saturday, October 24, 2015 
 
 Semester 2: Saturday, April 30, 2016 
 
@@ -253,52 +231,14 @@ Water
 ### Phase 1: Online Introduction (~2 hours)  ###
 
 Milestone Complete!
-### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)  ###
 
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)  ###
 
 Milestone Complete!
 
-
-
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
+Milestone Complete!
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the dates:**
-
-Semester 1: Saturday, October 17, 2015 
-
-Semester 2: Saturday, January 23, 2016 
-
-8:00am - 4:00pm<br/>
-Breakfast and lunch will be served. 
-<br/><br/>
-**Location**
-
-[Inn of Chicago<br/>
-Room TBD<br/>
-162 E. Ohio St.<br/> 
-Chicago, Illinois 60611](https://www.google.com/maps/place/162+E+Ohio+St,+Chicago,+IL+60611/@41.8927912,-87.6252035,17z/data=!3m1!4b1!4m2!3m1!1s0x880e2cab78338a6f:0x9e0b067b20b5dfa0)
-
-
-
-**What to bring to Phase 3 bi-yearly sessions:**
-
-Laptop and Charger
-<br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
-<br/>
-<br/>
-
-|Course Code | Dates | Name|
-|----------- | ----- | ----|
-|**58177** | 10/17/2015 | CS4All CS in Science Phase 3 PD for 1st semester|
-|**58178** | 1/23/2016 | CS4All CS in Science Phase 3 PD for 2nd semester|
 
 [**Back to the top**](#top)
 

@@ -18,6 +18,7 @@
   "fillTooltip": "metti 1 palata di terra",
   "finalLevel": "Complimenti! Hai risolto l'esercizio finale.",
   "flowerEmptyError": "Il fiore su cui ti trovi non ha più nettare.",
+  "didNotCollectEverything": "Assicurati di non lasciare nettare o miele dietro di te!",
   "get": "prendi",
   "heightParameter": "altezza",
   "holePresent": "c'è una buca",
@@ -81,6 +82,5 @@
   "whileTooltip": "Ripete le azioni incluse, smettendo quando diventa vera la condizione di arresto.",
   "word": "Scrivi la parola",
   "yes": "Sì",
-  "youSpelled": "Hai scritto finora",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Hai scritto finora"
 }

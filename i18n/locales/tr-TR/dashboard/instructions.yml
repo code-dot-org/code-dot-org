@@ -3,7 +3,7 @@ tr:
     instructions:
       2-3 Artist 1 new_instruction: Merhaba,ben bir ressamım.Benim herhangi bir şey çizmem için kod yazabilirsin?Bir kaç kod bloğu kullanarak benim resim içine gri çizgiler çizmemi sağla.(Her çizgi 100 pixel uzunluğunda olmalı.)
       2-3 Artist 11_instruction: 'Bir sekizgen yaparak dur işareti ver.8 kenarın her biri 100 pixel uzunluğunda olacak.Kaç derece döndür melisin? (İpucu:360 bölü 8 kaçtır?) '
-      2-3 Artist 12_instruction: '"Tekrarla(repeat times)" bloğunu kullan, böylece göz küresini bitirmek için bir "olay dizisi" oluştur. Eğer her harekette sağa doğru bir derece  dönerse, daireyi tamamlamak için aynı olayı kaç kere tekrarlaman gerekir? 180 mi? 360 mı? 500 mü?'
+      2-3 Artist 12_instruction: "Gözü tamamlamak için daire çiz. \n\\r\nAktör her döngüde 1 derece döner. Çemberi tamamlamak için kaç defa tekrarlamam gerekiyor 180?, 350? 500?"
       2-3 Artist 2 new_instruction: 'Bu evde yarısı tamamlanmış bir duvar var. Her duvar 100 ama tamamlanmamış duvar sadece 50. Duvarı tamamlayın. '
       2-3 Artist 2_instruction: 'Bu evin yarısı tamamlanmış bir duvarı var. Her kenarı 100 birim; fakat yarım tamamlanmış duvarı sadece 50 birim. Duvarı tamamlayın. '
       2-3 Artist 3.4_instruction: |
@@ -12,7 +12,7 @@ tr:
       2-3 Artist 3_instruction: Bu şapka 100 piksel yüksekliğinde.Yüksekliği 70 piksel daha az olan bir şapka çiz.
       2-3 Artist 3new_instruction: Kırmızı şapka 100 piksel uzunluğundadır. 70 piksel daha kısa olan siyah bir şapka çizerek tamamla. Siyah şapkanın genişliği 50 pikseldir.
       2-3 Artist 4_instruction: Kedi için bu evi tamamlamama yardım et.
-      2-3 Artist 5_instruction: 'Sadece 3 kutu kullanarak aynı evi çizmek için bu kodu "kez tekrar et" kutusuyla değiştirin.'
+      2-3 Artist 5_instruction: 'Sadece 3 blok kullanarak aynı evi çizmek için bu kodu "kez tekrar et" bloğuyla değiştirin.'
       2-3 Artist 6_instruction: Bu evin bir çatıya ihtiyacı var!Bir üçgen çiz. İpucu:Üç kenarda aynı uzunlukta olmalı.
       2-3 Artist 7_instruction: |
         Son pencerenin sağ yarısının çizimini bitirin.
@@ -117,7 +117,7 @@ tr:
       2-3 Artist Nested Loops 9_instruction: 'Bu resmi bir çiçek ekleyerek bitireceğiz. Çiçeğini çizmek için 12 kez elmas döngüsü oluştur. '
       2-3 Artist Nested Loops Free Play_instruction: Serbest oyun, içiçe döngülerle havalı bir şeyler çiz.
       2-3 Bee Conditionals 1_instruction: Merhaba! Ben bir arıyım. Çiçekten nektar toplamama yardım et.
-      2-3 Bee Conditionals 10_instruction: "Mor çiçeklerde 1 veya 0 nektar olabilir. Nektarı olmayan mor çiçeklerden nektar almamaya dikkat et.\r"
+      2-3 Bee Conditionals 10_instruction: "Mor çiçeklerde 1 veya 0 nektar olabilir. Nektarı olmayan mor çiçeklerden nektar almamaya dikkat et.\\r"
       2-3 Bee Conditionals 11_instruction: Nektarı olan çiçeklerden nektar topla.
       2-3 Bee Conditionals 12_instruction: 'Tüm bu çiçekleri kontrol edip nektar toplamak için bir döngü kullan.  '
       2-3 Bee Conditionals 13_instruction: 'Nektarı topla ve bal yap. İpucu: "eğer nektar varsa" şartlı komutunu kırmızı çiçek üzerinde kullanırsan ne olur? Bunu bir döngüyle tamamlayabilir misin?'
@@ -202,7 +202,7 @@ tr:
       2-3 Maze 7_instruction: Yeşil şeytana gitmeme önderlik et! (Patlayıcılara dikkat et)
       2-3 Maze 8_instruction: Beni domuza götür!
       2-3 Maze 9_instruction: Yeşil şeytana gitmeme önderlik et! (Patlayıcılara dikkat et)
-      2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
+      2-3 Maze Loops 1_instruction: Beni 5 tane aynı tür blok kullanarak domuzcuğa ulaştırabilir misin?
       2-3 Maze Loops 17_instruction: Beni ayçiçeğine götür!
       2-3 Maze Loops 18_instruction: Beni ayçiçeğine götür!
       2-3 Maze Loops 19_instruction: Beni ayçiçeğine götür!
@@ -216,9 +216,7 @@ tr:
       2-3 Maze sq10v2_instruction: Beni domuza götür! Hangi bloklar tekrarlandı?
       2-3 maze sq11_instruction: Beni domuza götür! Hangi bloklar tekrarlandı?
       2-3 maze sq12_instruction: 'Önceki yanıtı "tekrar sayısı" bloğunu kullanarak döngü ile değiştirebilir misin?'
-      2-3 maze sq13_instruction: |
-        Sevgili kişi. Ben zombi. Ayçiçeğine... ulaşmalıyım... 
-        "Tekrar" bloğu ile döngü oluşturun.
+      2-3 maze sq13_instruction: "Değerli kişi. Ben zombi. Ayçiçeğine ulaşmalıyım. \\\"kadar tekrarla\\\" bloğunu kullanarak döngü oluştur."
       2-3 maze sq14_instruction: Ayçiçeğine sadece 4 blok kullanarak ulaşabilir misin?
       2-3 maze sq15_instruction: Ayçiçeğine sadece 5 blok kullanarak ulaşabilir misin?
       2-3 maze sq16_instruction: Tamam, bu benzer, ama biraz farklı. Sadece 5 blokta yapabilirsin?
@@ -255,6 +253,7 @@ tr:
       4-5 Artist For Loops 13_instruction: 'Bu dizayn "for" döngüsü olmadan çok fazla blok alıyor! "For" bloğu ile satırları azaltın. İpucu: son satır uzunluğu 250 pixel.'
       4-5 Artist For Loops 14_instruction: 'Birisi kodu başlattı ama daha sonra fark etti ki bunun daha kolay bir yolu olmalı! Üçgen sarmal tamamlamak için "For" bloğunu kullanın. (İpucu: son satı ruzunluğu 300 pixeldir.)'
       4-5 Artist For Loops 15_instruction: 'Birisi koda başladı ama daha sonra anladı ki bunun daha kolay bir yolu olmalı! Altıgen sarmal yapmak için "for" bloğunu kullanın.(İpucu: son satır uzunluğu 200 pixeldir.)'
+      4-5 Artist For Loops 2_instruction: 'Bu bir "tekrarla" bloğu. 1,2,3... 10 yazmak yerine, "tekrarla" bloğu içine 10 yazarak döngüyü aynı işlemi yapmasını sağlayabilirsin. Döngü içine 10 yazınız.'
       4-5 Artist For Loops 3_instruction: |-
         1'den 50'ye kadar nasıl sayabiliriz? "For" bloğunu düzenleyin.
       4-5 Artist For Loops 4_instruction: |-
@@ -290,284 +289,127 @@ tr:
         Her kenar 20 piksel uzunluğunda olmalı.
       4-5 Artist Patterns 10_instruction: 'Bu kod altıgenin iki satırını çizer - bütün bir balpeteği çizmek için tüm kodu 4 kere döndür. İpucu: Sanatçının ekranın dışına çıkmamasını sağlamak için en dıştaki döngüde 120 piksele dönmelisin.'
       4-5 Artist Patterns 11_instruction: 'Yarım bir çember çizmek için bunu kaç kere döndürmelisin? İpucu: eğer bir çemberde 360 derece varsa ve her döngü 3 derece çizerse, tam bir çember çizmek için kaç kere döndürmelisin?'
-      4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
-      4-5 Artist Patterns 13_instruction: |
-        Now let's loop that whole thing four
-        times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle,
-        which of these blocks of code will make a quarter circle for the corners?
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: |
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
+      4-5 Artist Patterns 12_instruction: Bu döngüyü kopyalayıp sağa dön yerine sola dön seçerseniz ne olur? Bu dalgayı çizmek için işlemleri tekrarlayabilir misiniz?
+      4-5 Artist Patterns 13_instruction: 'Şimdi fotoğraf çerçevesini yaratmak için bütün şeyi dört kere döndür. Köşelere dikkat et - sadece 90 derece döndüremezsin! Eğer 60 kere 3 dönüş yarım daire yapıyorsa, hangi kod bloğu köşeler için çeyrek daire yapacak?'
+      4-5 Artist Patterns 2_instruction: Eğer kare döngünüzü bir başka döngünün içerisine yerleştirirseniz, biz buna iç içe döngü diyoruz. 15 karenin yan yana hizalandığından emin olmak için dış döngüye ne eklemen gerekir?
+      4-5 Artist Patterns 3_instruction: Şimdi bir düzey daha derin gidelim! Biz bütün bu kod bloğunu bir döngü içine koyun fakat artist tekrar başa dönsün. Hangi kod bloklarını en dıştaki döngü sonunda yerleştirmeliyim?
+      4-5 Artist Patterns 4_instruction: Bu elmasın 50 piksel kenarları ve 120 ve 60 derece açıları vardır. Döngü kullanarak çiziniz.
       4-5 Artist Patterns 5.5_instruction: Bu elması tam çizmek için kaç kere tekrar etmen gerekiyor?
-      4-5 Artist Patterns 5_instruction: |
-        Let's repeat that to make a row of 6 diamonds.
-        Notice that we changed our diamond code to repeat 3 times instead of 2 - why
-        do you think that is?
+      4-5 Artist Patterns 5_instruction: 'Döngü ile 6 elmas çizin.  elmas kodunu değiştirerek 3 kere tekrarlayacağımıza 2 defa tekrarladık. Sizce neden?'
       4-5 Artist Patterns 6_instruction: Elmas çizmek için kaç defa tekrarlamak gerekiyor?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: |
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times to draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
-      4-5 Artist Patterns Free Play_instruction: |
-        Free play - try your hand at making
-        a pattern of your own!
-      4-5 Bee Conditionals - FC Test_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      4-5 Artist Patterns 7_instruction: 'Şimdi bir önceki bulmacayı değiştirerek bu karmaşık deseni oluşturalım. Elmasların nasıl kesiştiğine dikkat edelim. "geriye atla" bloğunu 100 yerine 50 piksel yap. Şimdi artist ikinci ileri atla bloğunda ne kadar ilerlemeli?'
+      4-5 Artist Patterns 8_instruction: Bu altıgeni 40 piksellik kenarlar ile 60 derecelik dönüşler kullanarak çizebilir misin.
+      4-5 Artist Patterns 9.5_instruction: Şimdi döngü kullanarak iki altıgen çizelim. İkinci satırın sağa doğru kayık olduğuna dikkat et.
+      4-5 Artist Patterns 9_instruction: 'Şimdi kodu 3 kez tekrarla ve bütün satırı çiz. İpucu: her bir altıgen en sağ noktadan en sol noktaya 80 piksel genişliğindedir.'
+      4-5 Artist Patterns Free Play_instruction: 'Eğlence zamanı - kendi kendine desen yapmayı dene!'
+      4-5 Bee Conditionals - FC Test_instruction: Arı sadece nektar istiyor. Bütün nesneler çiçek değil bu sebeple her bulutun altını çiçek mi diye kontrol ediniz. Eğer çiçekse nektar alın.
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        The bee can't tell if this is a flower
-        or a honeycomb. Gather nectar only from flowers, but first check if it is
-        a flower or a honeycomb.
+      4-5 Bee Conditionals 1_instruction: Bu bulutun altında ne var? Sadece çiçeklerden nektar topla, fakat önce bulutun altında çiçek var mı kontrol et.
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right now. Not
-        all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding
-        a flower. If it is, then you can gather nectar.
+      4-5 Bee Conditionals 2_instruction: 'Yine bulutlar. Bütün bulutlar çiçek içermez. Nektar almadan önce çiçekmi diye kontrol et. '
       4-5 Bee Conditionals 3_instruction: |
-        Now the bee just wants to make honey.
-        Check to make honey only at honeycombs.
+        Şuan arı sadece bal yapmak istiyor.
+        Balı yalnızca petekte yapıp yapmadığını kontrol et.
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |
-        The unknown object is either a flower
-        or a honeycomb. Use the if/else block to collect nectar if it is a flower,
-        else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 5_instruction: |
-        There might be a flower or a honeycomb
-        under those clouds. Use the if/else block to collect nectar if there is a
-        flower, else to make honey (because there is a honeycomb).
+      4-5 Bee Conditionals 4_instruction: Bazen bulut çiçeği saklar bazende peteği. Eğer/değilse bloğu kullanarak çiçek ise nektar al değilse bal yap( bu durumda petektir).
+      4-5 Bee Conditionals 5_instruction: Bulutların altında çiçek yada petek olabilir. Eğer/değilse bloğu kullan. Eğer çiçek ise polen topla değilse bal yap (çünkü çiçek değilse petektir).
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: |
-        This purple flower may have either 3,
-        2, or 1 nectar. Here an if-else block is combined with another if-else block
-        to create an if, else-if, else block. Complete the solution to collect the
-        unknown amount of nectar.
-      4-5 Bee Conditionals 7_instruction: |
-        Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the "check purple flower" function and use
-        it to collect all of the nectar at the flowers.
+      4-5 Bee Conditionals 6_instruction: Mor çiçeğin ne kadar nektar içerdiğini bilmiyoruz 1, 2 yada 3 olabilir. Burada eğer/değilse bloğu başka bir eğer/değilse bloğu ile beraber kullanılıyor. Çözümü bütün nektarları toplayacak şekilde tamamla.
+      4-5 Bee Conditionals 7_instruction: 'Mor çiçeklerde, 2, 3 veya 1 nektar olabilir. "mor çiçeği kontrol et" fonksiyonunu kullanarak nektarları toparla.'
       4-5 Bee Conditionals 8_instruction: 'Fonksiyonun içine "çiçekler bal yapar" yaz. Fonksiyonunu kontrol etmelisin eğer çiçek morsa has 3, 2, or 1 nectar and collect all of the nectar. Then, move forward and make honey.'
-      4-5 Bee Conditionals Assessment 1_instruction: |
-        Assessment: This code is wrong.
-        Complete the "get nectar or make honey" function, then call it to collect
-        all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
-      4-5 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Can you
-        fix them?
+      4-5 Bee Conditionals Assessment 1_instruction: 'Değerlendirme: Bu kod yanlıştır. "Nektar al ya da bal yap" fonksiyonunu tamamla, sonra tüm nektar ve balı topla. Mor çiçekler 3, 2 veya 1 nektar içerebilir.'
+      4-5 Bee Debugging 1_instruction: Bu bloklar kafamı karıştırıyor. Düzeltmeme yardımcı olabilr misin?
       4-5 Bee Debugging 10_instruction: Hataları bul ve düzelt.
       4-5 Bee Debugging 11_instruction: Doğru mu saydı?
       4-5 Bee Debugging 2_instruction: Arının nektar toplamasına ve bal yapmasına yardım et.
       4-5 Bee Debugging 3_instruction: Hataları bul ve düzelt.
       4-5 Bee Debugging 4_instruction: Bu bloklar çalışmıyor. Şablon nedir?
       4-5 Bee Debugging 5_instruction: Burda bir şeyler doğru değil...
-      4-5 Bee Debugging 6_instruction: |
-        The purple flower has an unknown amount of
-        nectar. Fix the blocks to get all of the nectar from the flower.
+      4-5 Bee Debugging 6_instruction: Mor çiçeklerde bilinmeyen miktarda nektar vardır. Tüm nektarları toplamak için blokları düzelt.
       4-5 Bee Debugging 7_instruction: Fonksiyonda bir şeyler eksik...
-      4-5 Bee Debugging 8_instruction: |
-        This function is fine, but it isn't used
-        properly.
-      4-5 Bee Debugging 9_instruction: "Why isn't the bee making enough honey?"
+      4-5 Bee Debugging 8_instruction: Bu fonksiyon iyi fakat doğru kullanılmamış.
+      4-5 Bee Debugging 9_instruction: Neden arı yeterince bal yapmıyor?
       4-5 Bee Debugging Assessment 1_instruction: 'Değerlendirme: Kodu Düzelt.'
-      4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
-      4-5 Bee Nested Loops 2_instruction: |
-        Collect all of the nectar from each flower.
-        Use a nested loop. 
-      4-5 Bee Nested Loops 3_instruction: |
-        Collect all of the nectar by putting the
-        starter code into a nested loop.
-      4-5 Bee Nested Loops 4_instruction: |
-        Collect all of the nectar from each flower
-        and make honey at each honeycomb. Use a nested loop. 
-      4-5 Bee Nested Loops 5_instruction: |
-        Collect all of the nectar by creating
-        a nested loop.
+      4-5 Bee Nested Loops 1_instruction: Döngü kullanarak bütün nektarı topla.
+      4-5 Bee Nested Loops 2_instruction: Çiçektekş bütün nektarı topla. İç içe döngü kullan.
+      4-5 Bee Nested Loops 3_instruction: Başlangıç kodunu iç içe döngüye koyarak bütün nektarları topla.
+      4-5 Bee Nested Loops 4_instruction: 'Tüm çiçeklerdeki nektarları topla ve peteklere bal yap. İç içe döngü kullan. '
+      4-5 Bee Nested Loops 5_instruction: İç içe döngü kullanarak bütün nektarları topla.
       4-5 Bee Nested Loops 6_instruction: Tüm bitki özlerini topla.
-      4-5 Bee Nested Loops 7_instruction: |
-        Put this loop inside another loop to create
-        a nested loop and collect all of the nectar from the flowers.
-      4-5 Bee Nested Loops 8_instruction: |
-        Collect all of the nectar from these flowers
-        by nesting a while loop. Replace the inner repeat times block with a while
-        block. 
-      4-5 Bee Nested Loops 9_instruction: |
-        Collect all of the nectar from these flowers
-        by nesting a while loop inside a repeat.
-      4-5 Bee Nested Loops Assessment 1_instruction: |
-        Assessment - Collect all of
-        the nectar and make all the honey by using loops.
-      4-5 Bee Nested Loops Rows_instruction: |
-        Gather nectar from the rows of flowers!
-        Use a nested loop.
-      4-5 Maze 1 (copy 1)_instruction: |
-        Dear person. Me zombie. Must... get... to
-        sunflower.
+      4-5 Bee Nested Loops 7_instruction: Bu döngüyü başka bir döngü içine koyarak iç içe döngü oluştur ve çiçeklerdeki nektarları toparla.
+      4-5 Bee Nested Loops 8_instruction: 'İç içe döngü kullanarak çiçeklerden nektar topla. İçteki tekrarla döngüsünü süresince döngüsüne çevir. '
+      4-5 Bee Nested Loops 9_instruction: '"Tekrarla" döngüsü içine "sürece yap" döngüsü yerleştirerek çiçeklerden nektarları topla.'
+      4-5 Bee Nested Loops Assessment 1_instruction: 'Değerlendirme - Döngü kullanarak tüm nektarı topla ve tüm balları yap.'
+      4-5 Bee Nested Loops Rows_instruction: Çiçek sıralarından nektarları toplayın. İç içe döngü kullanın.
+      4-5 Maze 1 (copy 1)_instruction: Sevgili insan. Ben Zombi. Acilen ayçiçeğine gitmem gerek.
       4-5 Maze 1_instruction: Değerli kişi. Ben zombi. Ay... çiçeğine... ulaşmalıyım.
       4-5 Maze 10_instruction: Ayçiçeğine sadece 4 blok kullanarak ulaşabilir misin?
-      4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
-      4-5 Maze 12_instruction: |
-        Ok, this is slightly different. Can you do it in
-        only six blocks?
+      4-5 Maze 11_instruction: Ayçiçeğine sadece 6 blok kullanarak ulaşabilir misin?
+      4-5 Maze 12_instruction: Peki, bu biraz daha farklı. Bunu sadece 6 blokla yapabilir misin?
       4-5 Maze 13_instruction: Beni domuza götür!
       4-5 Maze 14_instruction: Tekrar bloğu kullanarak beni domuza götür!
-      4-5 Maze 2 (copy 1)_instruction: |
-        Get the zombie to the sunflower, but avoid
-        the chomper!
-      4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
+      4-5 Maze 2 (copy 1)_instruction: Zombi yi ayçiçeğine götür. Dişli çiçeğe dikkat!
+      4-5 Maze 2_instruction: Zombi yi ayçiçeğine götür. Dişli çiçeğe dikkat!
       4-5 Maze 3 (copy 1)_instruction: Ay...çiçeğine... ulaşmalı.
       4-5 Maze 3_instruction: Ay...çiçeğine... ulaşmalı.
-      4-5 Maze 4 (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
-      4-5 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
-      4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      4-5 Maze 4 (copy 1)_instruction: '"Tekrarla" bloğunu kullanarak daha az blok ile doku yazın...'
+      4-5 Maze 4_instruction: '"Tekrarla" bloğunu kullanarak daha az blok ile doku yazın...'
+      4-5 Maze 5 (copy 1)_instruction: Bu bulmacayı en az sayıda blok kullanarak çözebilr misin?
+      4-5 Maze 5_instruction: Bu bulmacayı en az sayıda blok kullanarak çözebilir misin?
+      4-5 Maze 6 (copy 1)_instruction: Bu bulmacayı en az sayıda blok kullanarak çözebilr misin?
+      4-5 Maze 6_instruction: Bu bulmacayı en az sayıda blok kullanarak çözebilir misin?
       4-5 Maze 7_instruction: Değerli kişi. Ben zombi. Ay... çiçeğine... ulaşmalıyım.
-      4-5 Maze 8_instruction: |
-        Use the "repeat" block to get the zombie to the
-        sunflower. (Avoid the chompers!)
-      4-5 Maze 9_instruction: 'Create a loop with the "repeat until" block.'
+      4-5 Maze 8_instruction: '"Tekrarla" bloğu kullanaeak zombi yi ayçiçeğine ulaştır (Dişli çiçeklere dikkat)'
+      4-5 Maze 9_instruction: Kadar tekrarla bloğu ile döngü oluştur.
       4-5 Maze Assessment 1_instruction: 'Değerlendirme: Ayçiçeğine ulaş.'
-      4-5 Maze Conditionals 1_instruction: |
-        Use the repeat until block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 10_instruction: Daha karmaşık bir labireti sadece 3 blok ekleyerek çözmeme yardımcı olur musun? Eğer doğru yaptıysan, bu kıvrımlı yolda uzunluğu ne olursa olsun yürüyebilirim.
-      4-5 Maze Conditionals 2_instruction: |
-        Use the repeat until block to get the
-        zombie to the sunflower.
+      4-5 Maze Conditionals 1_instruction: Zombi ayçiçeğine ulaşana kadar tekrarla bloğunu kullan.
+      4-5 Maze Conditionals 2_instruction: Zombi ayçiçeğine ulaşana kadar tekrarla bloğunu kullan.
       4-5 Maze Conditionals 3_instruction: |
-        Use the "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
-      4-5 Maze Conditionals 4_instruction: |
-        Ok, this is just like the last puzzle,
-        but you need to remember how you used the "if" block and the "repeat"
-        block together.
-      4-5 Maze Conditionals 5_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 6_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 7_instruction: |
-        Ok, let's do that again for practice
-        - this isn't very different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_instruction: |
-        The "if/else" block checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
-      4-5 Maze Conditionals 9_instruction: |
-        One more practice of the "if-else"
-        block, can you get it right on your first try?
-      4-5 Maze Conditionals Assessment 1_instruction: |
-        Use a "repeat until" and
-        an "if-else" block to get me to the sunflower in as few blocks as possible.
-      4-5 Nested Loops 1_instruction: |
-        Complete the code to draw these triangles.  The
-        first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
-      4-5 Nested Loops 10_instruction: |
-        Draw the last row of stars on this flag by
-        looping the provided blocks. The stars are 50 pixels apart, but remember that
-        the stars themselves are 30 pixels wide.
-      4-5 Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using a nested
-        loop?
-      4-5 Nested Loops 2_instruction: |
-        Now nest this loop inside another loop to
-        draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
-        complete a 360 degree rotation.  
-      4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother loop. This is called a nested loop.\r\n"
-      4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
-      4-5 Nested Loops 6_instruction: |
-        Can you draw a hexagon by looping the triangle
-        code?
-      4-5 Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      4-5 Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 6?)
-      4-5 Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
-      4-5 Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete the
-        design.
-      4-5 While Loops 1_instruction: |
-        Move me to the hole and fill it with two shovelfuls
-        of dirt, using the "fill" block.
-      4-5 While Loops 2_instruction: |
-        Move me to the pile of dirt and remove it with
-        5 shovel scoops, using the 'remove' block.
-      4-5 While Loops 3_instruction: |
-        Move me to the pile and remove all of it, then
-        move to the hole and fill it completely.  Hint:  Use as few blocks as possible.
-      4-5 While Loops 4_instruction: |
-        Wow, I found a really deep hole! I don't know
-        how many shovelfuls of dirt it needs.  Can you write a program that fills
-        it until the ground is even?  Hint:  Try using the while loop this time.
-      4-5 While Loops 5_instruction: |
-        Wow, now there are two deep holes! Can you
-        write a program that fills them both until the ground is even?
-      4-5 While Loops 6_instruction: |
-        Wow, now there is a large pile of dirt! Can
-        you write a program that removes all of it so the ground is even?
-      4-5 While Loops 7_instruction: |
-        Wow, now there are three piles of dirt! Can
-        you write a program that removes each of them until the ground is even?
-      4-5 While Loops 8_instruction: |2
-         There is a really deep hole and a really large
-        pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both.
-      4-5 While Loops Assessment 1_instruction: |
-        There are a lot of holes and piles.  Help
-        me to fill and remove them to make the ground flat.
+        Eğer bloğunu kullanarak ne zaman döneceğime karar ver. 
+        İpucu: Sadece fazladan bir blok ekleyeceksin. Nasıl yapıldığına iyi dikkat et sonra sen yapacaksın.
+      4-5 Maze Conditionals 4_instruction: 'Bu bir önceki bulmaca gibi. "Eğer" bloğu ile "Tekrarla" bloğunu birlikte kullanmayı unutma.'
+      4-5 Maze Conditionals 5_instruction: 'Ayçiçeğini istiyorum! Sadece bir "Eğer" bloğu kullanarak, en az sayıda blok ile oraya ulaşmamı sağla.'
+      4-5 Maze Conditionals 6_instruction: 'Ayçiçeğini istiyorum! Sadece bir "Eğer" bloğu kullanarak, en az sayıda blok ile oraya ulaşmamı sağla.'
+      4-5 Maze Conditionals 7_instruction: 'Tamam, sadece alıştırma olsun diye bunu tekrar yapalım - çok farklı değil, sadece canavar bitkilere dikkat et!'
+      4-5 Maze Conditionals 8_instruction: Eğer/değilse bloğu koşulu kontrol eder. Koşula göre iki seçenekten birisini yapar. Şimdi ayçiçeği toplamak için bu yeni bloğu kullan.
+      4-5 Maze Conditionals 9_instruction: Eğer/değilse bloğu ile bir uygulama daha. İlk denemen de doğru yapabilir misin?
+      4-5 Maze Conditionals Assessment 1_instruction: 'Kadar tekrarla ve Eğer/değilse  bloklarını kullanarak beni ayçiçeğine ulaştır.'
+      4-5 Nested Loops 1_instruction: 'Bu üçgenleri çizmek için kodu tamamlayın. İlki sizin için yapıldı. İpucu: 3 üçgeni toplam 360 derece dönerek yapılır.'
+      4-5 Nested Loops 10_instruction: Bayrak üzerindeki en son yıldız satırını çizin. Yıldızlar 50 piksel aralıklı. Yıldızların kendisi 30 piksel genişlikte.
+      4-5 Nested Loops 11_instruction: İç içe döngü kullanarak 10 kareyi tamamlayın. Her bir kare 30 pikseldir.
+      4-5 Nested Loops 12_instruction: İç içe döngü ile 36 tane üçken çizebilir misin?
+      4-5 Nested Loops 2_instruction: 'Bu döngüyü başka bir döngü içine koyarak 10 üçgen çizin. Buna iç içe döngü denir. İpucu: 10 üçgenin dönüşü toplam 360 derece olmaktadır.  '
+      4-5 Nested Loops 3_instruction: |
+        Güneşi yaratmak için mevcut kodu başka bir döngü içine koyabilir misin? Buna iç içe döngü denir
+        
+      4-5 Nested Loops 5_instruction: Bir yel değirmeni oluşturmak için döngü kullan.
+      4-5 Nested Loops 6_instruction: Üçken kodunu döngüde kullanarak altıgen çizebilir misin?
+      4-5 Nested Loops 7_instruction: 'Bu kodu 10 defa döngüye koyun. Her seferinde ne kadar dönmen gerektiğini buldun mu? İpucu: 360 ı 10 a bölün'
+      4-5 Nested Loops 8_instruction: 'Bu kodu 6 defa döngüye koyun. Her seferinde ne kadar dönmen gerektiğini buldun mu? İpucu: 360 ı 6ya bölün'
+      4-5 Nested Loops 9_instruction: Timsahın ağzına dişleri çiz!
+      4-5 Nested Loops Assessment 1_instruction: Tasarımı tamamlamak için iç içe döngüler kullan.
+      4-5 While Loops 1_instruction: 'Beni deliğe götür ve "doldur" bloğunu kullanarak, deliği iki kürek dolusu toprak ile doldur.'
+      4-5 While Loops 2_instruction: 'Beni toprak yığınına ulaştır ve "kaldır" bloğu ile 5 kürek toprak at.'
+      4-5 While Loops 3_instruction: 'Beni yığına taşı ve tamamını temizle, sonra çukura götürüp çukuru doldur. İpucu: en az sayıda blok kullanın.'
+      4-5 While Loops 4_instruction: 'Wow, çok derin bir çukur buldum! Kaç kürek dolusu toprağa ihtiyacı olur bilmiyorum. Dolana kadar onu dolduracak bir program yazabilir misin? İpucu: Tekrarla döngüsü kullanın.'
+      4-5 While Loops 5_instruction: Vay iki derin çukur var. Her iki çukuru da doldurabilir misin?
+      4-5 While Loops 6_instruction: Vay canına, işte büyük bir toprak yığını! Hepsini kaldıran bir program yazabilir miyim?
+      4-5 While Loops 7_instruction: Vay canına, işte büyük bir toprak yığını! Hepsini kaldıran bir program yazabilir miyim?
+      4-5 While Loops 8_instruction: ' Gerçekten derin bir çukur ve  büyük bir yığın  toprak var.  Ne kadar toprağı taşımak gerekiyor  İpucu:  Her ikisi içinde tekrarla döngüsü kullanın.'
+      4-5 While Loops Assessment 1_instruction: Birçok çukur ve toprak var. Yardım ederek çukurları doldurmamı ve toprağı temizlememi sağla.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -596,6 +438,11 @@ tr:
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
       App Lab test_instruction: dene
+      Applab allthethings onRecordEvent_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
@@ -617,7 +464,7 @@ tr:
         Now nest this loop inside another loop
         to draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
         complete a 360 degree rotation.  
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\r\n"
+      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\\r\n"
       Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
       Artist - Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the
@@ -635,11 +482,8 @@ tr:
         other functions! Using your "shape" function as a base, create 3 house shapes
         each 20 pixels larger than the last starting at 50 pixels in length. Using
         a counter loop might be helpful. 
-      Bee Recommended Blocks test_instruction: |
-        Purple flowers may have either 1
-        or 0 nectar, but you don't know which one! Be careful not to collect nectar
-        from a purple flower if it doesn't have any. Check if the nectar is equal
-        to 1 by using the if block.
+      Bee Recommended Blocks test_instruction: |-
+        Mor çiçekler 1 veya 0 nektara sahip olabilir, ama hangisi olduğunu bilmiyorsun! Mor çiçekte nektar yoksa toplamamaya dikkat et. "Eğer" bloğunu kullanarak nektarın 1'e eşit olup olmadığını kontrol et.
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -792,12 +636,8 @@ tr:
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
-      Busy Bee 2_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
-      Busy Bee_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
+      Busy Bee 2_instruction: Bu arının çok işi var. Kodunu basitleştirecek bir kalıp farkettin mi?
+      Busy Bee_instruction: Bu arının çok işi var. Kodunu basitleştirecek bir kalıp farkettin mi?
       C3-Farmer While Loops 1_instruction: |
         Move me to the hole and fill it with
         two shovelfuls of dirt, using the "fill" block.
@@ -913,7 +753,7 @@ tr:
         function called cube - this function should take in a Number and return that
         number to the power of 3. Make sure to write two example cases! When you're
         done, use your new function to calculate cube(7).
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function sales which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -926,7 +766,7 @@ tr:
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
-      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Calc Rocket 1_instruction: |
         In the last puzzle you wrote a contract for the
         function rocket-height that states it has a range of Number, domain of Number,
@@ -1063,33 +903,20 @@ tr:
       Course 2 Bee Loops 4_instruction: |
         What happens if you loop this sequence 3
         times? Don't forget to make the honey at the end!
-      Course 2 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
-      Course 4 2_instruction: |
-        The bee only wants nectar right now. Remember, not
-        all objects are flowers, so check to gather nectar only at flowers.
-      Course 4 Artist 1_instruction: |
-        Help me draw a box. (Each line is 200 pixels
-        long) 
-      Course 4 Artist 10_instruction: "Click here to see the hints again!\r\n\r\nHere\nis the code for an interesting shape.  What happens when you repeat it multiple\ntimes, turning between each iteration?   Notice that the turns in this shape\nadd up to 420 degrees, which means that when your artist is done drawing,\nit will be facing a different direction than when you started.  That new direction\nis exactly 60 degrees to the right of where you began."
+      Course 2 Maze Loops 1_instruction: 5 blok kullanarak domuzcuğa ulaştırabilir misin?
+      Course 4 2_instruction: Arı sadece nektar istiyor. Unutmayın ki bütün nesneler çiçek değildir. Sadece çiçeklerden nektar toplamak için kontrol edin.
+      Course 4 Artist 1_instruction: Bir kutu çizmeme yardım et. (Her bir çizgi 200 piksel uzunluğunda)
+      Course 4 Artist 10_instruction: "İpucunu tekrar görmek için bas.\n\\r\nİşte ilginç bir şekil çizen kod. Her seferinde biraz dönerek bu şekli tekrarlarsan ne olur? Bu şekildeki dönüşler 420 dereceye kadar sürüyor. Artist çizimi bitirdiğinde ilk bakış açısından farklı bir yere bakıyor olacak. İlk bakış açısından 60 derece daha sağda."
       Course 4 Artist 11_instruction: |
         Now for a challenge!  Here is a design that
         uses only blocks that you have already been shown.  Can you figure out how
         to recreate it?  Feel free to use trial and error. You are not expected to
         get it perfect the first time.  Want to see more hints?  Click here!
-      Course 4 Artist 12_instruction: "Want a second peek at the inspiration design\nor the hints?  Click here!\r\n\r\nOtherwise, make a design all your own!"
-      Course 4 Artist 13_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can design anything you want!
-      Course 4 Artist 2_instruction: |
-        Can you loop this code to draw the greyed out
-        square?
-      Course 4 Artist 20_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can create whatever you want!
-      Course 4 Artist 3_instruction: |
-        Try to figure out what happens if you run this
-        code (or press "Run" to test it). Then, repeat it enough times to complete
-        the drawing.
+      Course 4 Artist 12_instruction: "Want a second peek at the inspiration design\nor the hints?  Click here!\\r\n\\r\nOtherwise, make a design all your own!"
+      Course 4 Artist 13_instruction: Oynamaya devam ediyor musun? Burada istediğin şekilde bir şeyler yaratabileceğin boş tuval var!
+      Course 4 Artist 2_instruction: Bu kodu döngü kullanarak kareyi çizebilir misin?
+      Course 4 Artist 20_instruction: Oynamaya devam ediyor musun? Burada istediğin yere istediğin şekilde bir şeyler yaratabileceğin boş tuval var!
+      Course 4 Artist 3_instruction: Bu kodu çalıştırdığında ne olacak anlamaya çalış (Çalıştır tuşu ile test edebilirsin). Aynı kodu Tekrarla bloğu ile yeterince tekrarlayarak çizimi tamamla.
       Course 4 Artist 4_instruction: |
         How many degrees are in a circle?  Fill in
         the repeat block with that number to create a circle of colors.
@@ -1106,54 +933,32 @@ tr:
         Now nest this loop inside another loop to draw
         10 triangles. This is called a nested loop. Hint: All 10 triangles complete
         a 360 degree rotation.  
-      Course 4 Artist 8_instruction: |
-        Draw this sun by looping this whole block of
-        code multiple times.
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet you build it without giving you any blocks to start!\r\nHint: There are\n3 triangles within the 360 degree rotation...how many times does 3 go into\n360?"
+      Course 4 Artist 8_instruction: Bütün kodu döngüleyerek güneş çizebilr misin.
+      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet you build it without giving you any blocks to start!\\r\nHint: There are\n3 triangles within the 360 degree rotation...how many times does 3 go into\n360?"
       Course 4 Artist 9_instruction: |
         Loop this design 10 times and make sure to
         turn between each shape that's drawn. Here's a hint for how much you have
         to turn: What is 360 divided by 10?
-      Course 4 Artist Binary 1_instruction: "Here's a function that takes a binary\nstring of 1's and 0's and instructs the artist to follow them from left\nto right, top to bottom.  The artist will fill-in the squares when it sees\na 1 and ignore the square when it sees a 0. \r\n\r\nRun this code to see how\nthe artist uses binary to draw this pattern."
-      Course 4 Artist Binary 1a_instruction: "Here's a function that takes a binary\nstring of 1's and 0's and instructs the artist to follow them from left\nto right, top to bottom.  The artist will fill-in the squares when it sees\na 1 and ignore the square when it sees a 0. \r\n\r\nRun this code to see how\nthe artist uses binary to draw this pattern."
-      Course 4 Artist Binary 2_instruction: |
-        Which of these binary strings could
-        you loop 8 times to draw this image?
-      Course 4 Artist Binary 3_instruction: |
-        Can you draw this pattern by looping
-        a three digit binary string?
+      Course 4 Artist Binary 1_instruction: "Here's a function that takes a binary\nstring of 1's and 0's and instructs the artist to follow them from left\nto right, top to bottom.  The artist will fill-in the squares when it sees\na 1 and ignore the square when it sees a 0. \\r\n\\r\nRun this code to see how\nthe artist uses binary to draw this pattern."
+      Course 4 Artist Binary 1a_instruction: "Here's a function that takes a binary\nstring of 1's and 0's and instructs the artist to follow them from left\nto right, top to bottom.  The artist will fill-in the squares when it sees\na 1 and ignore the square when it sees a 0. \\r\n\\r\nRun this code to see how\nthe artist uses binary to draw this pattern."
+      Course 4 Artist Binary 2_instruction: Bu ikili dizgilerinden hangisini 8 defa kullanarak çizimi yapabilirsin?
+      Course 4 Artist Binary 3_instruction: Bu deseni çizmek için 3 basamaklı dizgeyi döngü de kullanabilirmisin?
       Course 4 Artist Binary 4_instruction: |
         Each binary string represents one row
         of this picture. Can you rearrange them so it draws a smiley face instead
         of a frowny face?
-      Course 4 Artist Binary 5_instruction: |
-        Which 6 digit binary string, repeated
-        11 times, will draw this image?
-      Course 4 Artist Binary 6_instruction: |
-        What is the shortest binary string that
-        you can repeat to draw this image?
+      Course 4 Artist Binary 5_instruction: Hangi 6 basamaklı ikili dizgi 11 kez tekrarlandığında bu resim oluşacak?
+      Course 4 Artist Binary 6_instruction: Bu şekli tamamlamak için gerekli en kısa ikili dizge hangisidir?
       Course 4 Artist Binary 7_instruction: Çizimi bitirin.
-      Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a blank
-        canvas for you to draw on.  Have fun!
-      Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart to get creative with the bits?"
+      Course 4 Artist Binary Free Play 2_instruction: Serbest zaman. İstediğini çize bilmen için boş bir sayfa. İyi eğlenceler!
+      Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\\r\n\\r\nSee what happens when we\nstart to get creative with the bits?"
       Course 4 Artist Binary Free Play 2b_instruction: İpuçlarını görmek için burayı tıklatın.
-      Course 4 Artist Binary Free Play_instruction: |
-        Free Play: Draw whatever you
-        like with binary!
-      Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
-      Course 4 Artist Binary ryan_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
-      Course 4 Artist For  Functions 10_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
-      Course 4 Artist For  Functions 11_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
-      Course 4 Artist For Loops 1_instruction: |
-        Draw this triangle that is 50 pixels
-        wide. Hint: use a repeat block.
+      Course 4 Artist Binary Free Play_instruction: 'Serbest çizim: Ne istersen çizebilirsin!'
+      Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \\r\n\\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
+      Course 4 Artist Binary ryan_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \\r\n\\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
+      Course 4 Artist For  Functions 10_instruction: 'Hadi hızlanalım biraz, "Kare çiz" fonksiyonunu kullanarak bir yıldız şekli çizebilir misin? İyi şanslar!'
+      Course 4 Artist For  Functions 11_instruction: 'Hadi hızlanalım biraz, "Kare çiz" fonksiyonunu kullanarak bir yıldız şekli çizebilir misin? İyi şanslar!'
+      Course 4 Artist For Loops 1_instruction: 'Bu üçgeni 50 piksel genişliğinde çiz. İpucu: Tekrar bloğu kullan.'
       Course 4 Artist For Loops 10_instruction: |
         Free Play Time! Have fun drawing
         whatever you like with the blocks you have learned how to use
@@ -1164,7 +969,7 @@ tr:
         starts with a triangle and adds one side at a time until it draws a decagon
         (10 sides). Each side should be 100 pixels long. Hint: 360 divided by the
         number of sides a shape has is the number of degrees you'll need to turn.
-      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour knowledge of \"for loops\" and the \"counter\", create this drawing where\neach shape has two more sides than the last.  Make sure that each side is\n10 times as long as the number of sides in the polygon.\r\n\r\nVery little\nof the code has been provided for you."
+      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour knowledge of \"for loops\" and the \"counter\", create this drawing where\neach shape has two more sides than the last.  Make sure that each side is\n10 times as long as the number of sides in the polygon.\\r\n\\r\nVery little\nof the code has been provided for you."
       Course 4 Artist For Loops 12_instruction: |
         That looked pretty cool, but now
         I'd like to draw each shape next to the last one. This time each side is
@@ -1184,10 +989,7 @@ tr:
         Free Play: Try making some drawings
         of your own using "for loops". We've added a few useful variables for you
         as well.
-      Course 4 Artist For Loops 2_instruction: |
-        I've put the code for drawing a
-        triangle inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure
-        you look at the code before you hit "Run".
+      Course 4 Artist For Loops 2_instruction: 'Üçgen çizmek için şununla say döngüsü içine kod koy. Döngü 10 ar 10 ar  50 den  100 e kadar  sayacaktır.  Not: "Çalıştır" tuşuna basmadan koda bakın.'
       Course 4 Artist For Loops 3_instruction: |
         Use the last puzzle as a reference
         to complete this one.  The smallest triangle has 20 pixel sides, the largest
@@ -1200,41 +1002,30 @@ tr:
       Course 4 Artist For Loops 5_instruction: |
         Good job on the last puzzle! Let's
         use that "counter" variable block again to draw this cool picture. 
-      Course 4 Artist For Loops 6_instruction: |
-        Free Play! Try using a for loop to
-        draw a growing shape pattern of your own design.
-      Course 4 Artist For Loops 6a_instruction: |
-        Make three small changes to the
-        code from the last level to get this!
+      Course 4 Artist For Loops 6_instruction: Serbest oyun! Döngü kullanarak kendi istediğin bir desen oluştur.
+      Course 4 Artist For Loops 6a_instruction: Bir önceki aşamadaki koda üç ufak değişiklik yaparak bu çizimi yapabilirsin!
       Course 4 Artist For Loops 7_instruction: |
         What happens if you remove the "Repeat
         3" from this algorithm, keeping the "move" and "turn" blocks in the for
         loop? In this spiraling triangle, each side is 20 pixels longer than the last.
-      Course 4 Artist For Loops 8_instruction: "Just one little change to the code\nfrom the last image can create this drawing. Can you figure out what that\nchange is?\r\n\r\nHint:  You need to remove something!"
+      Course 4 Artist For Loops 8_instruction: "Just one little change to the code\nfrom the last image can create this drawing. Can you figure out what that\nchange is?\\r\n\\r\nHint:  You need to remove something!"
       Course 4 Artist For Loops 8a_instruction: |
         Just one little change to the code
         from the last image can create this image. Can you figure out what that change
         is?
-      Course 4 Artist For Loops 9_instruction: |
-        Can you make a spiral? Move forward
-        from 1 to 75 pixels, increasing by 1 pixel each time.
-      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse all of the things you've learned to create this image?\r\n\r\nNeed a\nhint? Click here."
-      Course 4 Artist For Loops inspire_instruction: "Free-Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n\r\nNeed a hint? Click here."
-      Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is 100
-        pixels in length, using a loop?
+      Course 4 Artist For Loops 9_instruction: "Bir sarmal yapabilir misin? 1'den 75 e kadar ilerle ve her seferinde bir artır."
+      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse all of the things you've learned to create this image?\\r\n\\r\nNeed a\nhint? Click here."
+      Course 4 Artist For Loops inspire_instruction: "Free-Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\\r\n\\r\nNeed a hint? Click here."
+      Course 4 Artist Functions 1_instruction: Bir döngü kullanarak 100 piksel uzunluğunda olan bir kare çizebilir misin?
       Course 4 Artist Functions 10_instruction: |
         Which block do you need to add to
         get the triangle to sit on top of the square?
-      Course 4 Artist Functions 11_instruction: |
-        Check out this code that draws a
-        cube - can you move it into a function called "Draw a Cube"
-      Course 4 Artist Functions 12.1_instruction: |
-        Let's create a function called
-        "draw an octagon 20" that draws an octagon where each side is 20 pixels
-        long.
-      Course 4 Artist Functions 12_instruction: Loop square function to draw a line
-      Course 4 Artist Functions 13.1_instruction: "Now, let's make a function called\n\"jump to upper right\" that moves the artist to the upper-right of the octagon\nthat you just drew so we can finish this pattern.\r\n\r\nHint:  To get yourself\nto the upper-right corner, try jumping in a pattern that makes just 3/8 of\nthe octagon."
+      Course 4 Artist Functions 11_instruction: 'Küp çizen bu kodu iyice incele- bu kodu "Küp çiz" fonksiyonu içine taşıyabilir misin?'
+      Course 4 Artist Functions 12.1_instruction: 'Haydi bir her bir kenarı 20 piksel olan bir sekizgeni "20 lik Sekizgen Çiz" fonksiyonu olarak oluşturalım.'
+      Course 4 Artist Functions 12_instruction: Çizgi çizmek için kare fonksiyonunu döngü içinde kullanalım
+      Course 4 Artist Functions 13.1_instruction: |
+        Şimdi "Sağ üste atla" isimli bir fonksiyon yapalım. Bu fonksiyon aktörü sekizgenin sağ üst kısmına götürsün.
+        İpucu: Sağ üst köşeye gitmek için sekizgenin 3/8 i kadar ilerleyelim.
       Course 4 Artist Functions 13_instruction: |
         Check it out we have a new function
         called "draw a line of squares". Feel free to take a look inside the function
@@ -1255,7 +1046,7 @@ tr:
       Course 4 Artist Functions 2_instruction: |
         Can you draw 3 squares 20 pixels
         apart from one another? Hint: each square is 100 pixels in size
-      Course 4 Artist Functions 3_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist Functions 3_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\\r\n"
       Course 4 Artist Functions 4_instruction: |
         Are you ready to create your own
         "Function Block"? Click on the "Functions" block in the tool box, name
@@ -1266,13 +1057,11 @@ tr:
       Course 4 Artist Functions 5 OLD_instruction: |
         Let's try to use our two functions
         to draw a house - what needs to be fixed in this code to draw the house properly?
-      Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\\r\n"
       Course 4 Artist Functions 6_instruction: |
         Which block do you need to add to
         get the triangle to sit on top of the square?
-      Course 4 Artist Functions 7_instruction: |
-        Can you draw a line of squares using
-        a Square function? Each square is 40 pixel's in length.
+      Course 4 Artist Functions 7_instruction: '"Kare" fonksiyonunu kullanarak karelerden çizgi oluşturabilir misin? Her kare 40 piksel uzunluğunda.'
       Course 4 Artist Functions 8_instruction: |
         Are you getting the hang of how to
         use function blocks? Let's modify this square so that it is 200 pixels in
@@ -1283,19 +1072,11 @@ tr:
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
-      Course 4 Artist Functions challenge_instruction: |
-        Click here to see the hints
-        again.
-      Course 4 Artist Functions Inspiration_instruction: |
-        Click here to see the hints
-        again.
-      Course 4 Artist Functions inspire_instruction: |
-        Click here to see the inspiration
-        picture again.
-      Course 4 Artist Inspire_instruction: "Want a second peek at the inspiration\ndesign or the hints?  Click here!\r\n\r\nOtherwise, make a design all your\nown!"
-      Course 4 Artist Params 1_instruction: |
-        Let's edit a function that draws a
-        square with 50 pixel sides
+      Course 4 Artist Functions challenge_instruction: İpucunu tekrar görmek için burayı tıklayın.
+      Course 4 Artist Functions Inspiration_instruction: İpucunu tekrar görmek için burayı tıklayın.
+      Course 4 Artist Functions inspire_instruction: İlham alınan resmi görmek için buraya tıklayın.
+      Course 4 Artist Inspire_instruction: "Want a second peek at the inspiration\ndesign or the hints?  Click here!\\r\n\\r\nOtherwise, make a design all your\nown!"
+      Course 4 Artist Params 1_instruction: Bir kenarı 50 piksel olan kare fonksiyonu yazalım
       Course 4 Artist Params 10_instruction: |
         You can call functions from inside
         other functions! Using your "shape" function as a base, create 3 house shapes
@@ -1307,43 +1088,23 @@ tr:
         calculate how much to turn after each shape using the same math you used to
         figure out the turns for a shape of "sides". Can you recreate this picture?
         Here's a tip each shape is 100 pixel's in length.
-      Course 4 Artist Params 12_instruction: |
-        Use your "pinwheel" function to draw
-        each of these shapes. The side length for each image is 50.
-      Course 4 Artist Params 13_instruction: |
-        Freeplay: Here are the functions you've
-        written, and some more for you to play with. Draw something awesome!
+      Course 4 Artist Params 12_instruction: '"Fırıldak" fonksiyonunu kullanarak bu şekilleri çizebilir misin? Resmin her bir kenarı 50 pikseldir.'
+      Course 4 Artist Params 13_instruction: 'Serbest zaman: Yazdığın fonksiyonlar vede fazladan birkaç tanesi burada. Muhteşem bir şeyler çiz!'
       Course 4 Artist Params 2_instruction: |
         That triangle function would be a whole
         lot more useful if it could draw triangles of different sizes. I've added
         a parameter for line length, but it doesn't do anything yet. Can you update
         the function so it uses the "length" parameter when it draws each side?
         The triangle sizes are 150 pixels, 75 pixels and 25 pixels.
-      Course 4 Artist Params 3_instruction: |
-        Awesome, can you draw each of these
-        triangles with that new function? The first is 25 pixels long, the second
-        is 50, and the third is 75. 
-      Course 4 Artist Params 4_instruction: |
-        Can you add a new function called square?
-        It should also take a length parameter, just like the triangle. This time
-        draw 3 squares 25, 50 and 75 pixels in length,100 pixels apart.
+      Course 4 Artist Params 3_instruction: 'Harika şimdi bu üçgenlerin her biri yazdığın fonksiyonla çizebilir misin? İlki 25 piksel sonraki 50 piksel ve sonuncusu 75 piksel. '
+      Course 4 Artist Params 4_instruction: '"Kare" isimli bir fonksiyon ekleyebilir misin? Üçgende olduğu gibi "uzunluk" parametresi alsın. Bu fonksiyonla 25, 50, 75 piksel genişliğinde 3 adet kare çizin.'
       Course 4 Artist Params 5_instruction: |
-        Use both of your new functions to draw
-        this picture. To make this easier you use a loop with a "counter" parameter.
+        Yeni yazdığın iki fonksiyonu da kullanarak bu resmi çiz. Daha kolay çizmek için "sayaç" parametresi ile döngü kullan.
         
-      Course 4 Artist Params 6_instruction: |
-        Let's edit this "draw a shape" function.
-        It already has a "length" parameter. Now, let's edit the function to also
-        add a "sides" parameter. Remember the angle to turn for a given shape is
-        360 divided by the sides it has. Hint: lengths for each shape are the triangle
-        is 100 pixels, the hexagon is 25 pixels and the square is 50 pixels. 
-      Course 4 Artist Params 7_instruction: |
-        Can you draw these shapes by filling
-        in the "???" The square and triangle are 100 pixels in size while the hexagon
-        is 75 pixels in size. 
+      Course 4 Artist Params 6_instruction: '"Şekil çiz" fonksiyonunu güncelleyin. Mevcut durumda "uzunluk" parametresi var. Şimdi "kenarlar" parametresi ekleyelim. Dönüş açısını 360 ı kenar sayısına bölerek bulun. İpucu: üçgen 100 piksel altıgen 25 piksel ve kare 50 piksel. '
+      Course 4 Artist Params 7_instruction: 'Bu şekli?? yerine sayı yazarak çizebilir misin? Kare ve üçgen 100 piksel altıgen 75 pikseldir. '
       Course 4 Artist Params 8_instruction: |
-        Can you figure out how to draw this
-        shape? Here's a hint create a new function with 6 sides called a hexagon.
+        Bu şekli nasıl çizebileceğini anladın mı? İpucu olarak 6 kenarı olan altıgen fonksiyonu yarat.
         
       Course 4 Artist Params 9_instruction: |
         Do you remember when we used the counter
@@ -1374,8 +1135,8 @@ tr:
         gets! Notice that there is another variable called "length". We can now
         use that wherever we have a "move forward." Set the "length" variable
         to 75 for this shape.
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the \"length\" variable, let's use a math block with the\n\"sides\" variable inside to make sure that each shape fits correctly. The\nperimeter of each polygon is 300 pixels.\r\nNeed some hints?  Click here."
-      Course 4 Artist Vars 14_instruction: "Free Play: Check it out! Now your algorithm\nis nested within one more loop. Experiment with changing the values of your\ntwo variables to draw cool patterns.\r\n\r\nFor even more effect, try playing\nwith color!  Use random colors inside loops to see how it changes your design."
+      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the \"length\" variable, let's use a math block with the\n\"sides\" variable inside to make sure that each shape fits correctly. The\nperimeter of each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 14_instruction: "Free Play: Check it out! Now your algorithm\nis nested within one more loop. Experiment with changing the values of your\ntwo variables to draw cool patterns.\\r\n\\r\nFor even more effect, try playing\nwith color!  Use random colors inside loops to see how it changes your design."
       Course 4 Artist Vars 2_instruction: |
         Instead of using "move forward by 150,"
         the "move" block is now referencing a variable called "length." Can you
@@ -1388,11 +1149,9 @@ tr:
         Now I want to make a rectangle that is
         twice as tall as it is wide. We've got a variable called "width" that needs
         to be set to 100. Can you use the math blocks to complete the code?
-      Course 4 Artist Vars 5_instruction: |
-        Use the variable "sides" to control
-        how many times this loop gets run.
-      Course 4 Artist Vars 6_instruction: "Here’s some code that can draw any regular\npolygon. There’s a new variable called sides that is set to 4. Can you use\nthe sides variable (along with the math block) to turn the right amount regardless\nof how many sides there are in the polygon?\r\n\r\nClick here to go back to\nthe hint!"
-      Course 4 Artist Vars 7_instruction: "Use what you learned in the last puzzle\nto create this hexagon using the \"sides\" variable.\r\n\r\nSee how you could\nchange just one value to draw a triangle,  square, pentagon, or octagon?"
+      Course 4 Artist Vars 5_instruction: '"kenar" değişkenini kullanarak döngünün kaç defa çalışması gerektiğini belirle.'
+      Course 4 Artist Vars 6_instruction: "Here’s some code that can draw any regular\npolygon. There’s a new variable called sides that is set to 4. Can you use\nthe sides variable (along with the math block) to turn the right amount regardless\nof how many sides there are in the polygon?\\r\n\\r\nClick here to go back to\nthe hint!"
+      Course 4 Artist Vars 7_instruction: "Use what you learned in the last puzzle\nto create this hexagon using the \"sides\" variable.\\r\n\\r\nSee how you could\nchange just one value to draw a triangle,  square, pentagon, or octagon?"
       Course 4 Artist Vars 8_instruction: |
         Free Play: Experiment with the number
         of sides this shape has. Can you change the algorithm so that the overall
@@ -1407,40 +1166,20 @@ tr:
         The bee can't tell what's under the cloud! Use
         the "if" block to check whether there is a flower under the cloud, then
         only gather nectar from it if it is a flower. 
-      Course 4 Bee 2_instruction: |
-        Use the "if/else" block to check each object
-        to see if it's a flower or a honeycomb . If it's a flower, collect nectar...otherwise,
-        make honey!
-      Course 4 Bee 3_instruction: |
-        The unknown object is either a flower or a honeycomb.
-        This time, use the if/else block to collect nectar if it is a flower, else
-        make honey (because then it would be a honeycomb).
-      Course 4 Bee 4_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Here an if/else block is combined with another if/else block to create
-        an "if/else-if/else" statement. Complete the solution to collect the unknown
-        amount of nectar.
-      Course 4 Bee 5_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Add an if-else block to create an if, else-if, else block. Complete
-        the solution to collect the unknown amount of nectar.
-      Course 4 Bee 6_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Create an if, else-if, else block to collect the unknown amount of
-        nectar.
+      Course 4 Bee 2_instruction: Eğer/değilse bloklarını kullanarak nesnenin çiçek yada petek olduğunu kontrol et. Çiçek ise nektar al değilse bal yap!
+      Course 4 Bee 3_instruction: Bilinmeyen nesne çiçek yada petek. B sefer eğer/değilse bloğunu kullanarak, eğer Çiçek ise nektar al değilse bal yap (çünkü bu durumda petektir).
+      Course 4 Bee 4_instruction: Mor çiçekte 3, 2 yada 1 nektar olabilir. Burada iki eğer/değilse bloğu birleştirilerek eğer/değilse-eğer/değilse durumu yaratılır. Bilinmeyen miktarda nektarı toplamak için kodu tamamla.
+      Course 4 Bee 5_instruction: Mor çiçekte 3, 2 yada 1 nektar olabilir. Eğer/değilse bloğu ekleyerek eğer/değilse-eğer/değilse durumu yarat. Bilinmeyen miktarda nektarı toplamak için kodu tamamla.
+      Course 4 Bee 6_instruction: Mor çiçekte 3, 2 yada 1 nektar olabilir. eğer/değilse-eğer/değilse durumu kullanarak bilinmeyen miktarda nektarı toplamak için kodu tamamla.
       Course 4 Bee 7_instruction: |
         Use everything you have learned so far to collect
         all the nectar. The purple flower may have either 3, 2, or 1 nectar.
-      Course 4 Bee For Loops 1_instruction: |
-        Use a loop to collect the nectar from
-        each flower.
+      Course 4 Bee For Loops 1_instruction: Döngü kullanarak her bir çiçekten nektar al.
       Course 4 Bee For Loops 10_instruction: |
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
         your increment be to collect 9, then 6, and then 3 nectar?
-      Course 4 Bee For Loops 11_instruction: |
-        What's wrong with this loop? See if
-        you can fix it and make the bee collect all the nectar.
+      Course 4 Bee For Loops 11_instruction: Bu döngüdeki sorun ne? Düzeltip arının bütün nektarı toplamasını sağla.
       Course 4 Bee For Loops 2_instruction: |
         Here's a new kind of loop, called the
         "for" loop. This particular for loop will count from 1 to 5 by 1, and run
@@ -1460,21 +1199,14 @@ tr:
       Course 4 Bee For Loops 6_instruction: |
         You can also use a for loop to count
         down. Try gathering this nectar by counting down from 5 to 1 by 1.
-      Course 4 Bee For Loops 7_instruction: |
-        Use your for loop "counter" variable
-        to control how far to move horizontally.
-      Course 4 Bee For Loops 8_instruction: |
-        Can you use the loop variable to control
-        movement and nectar collection?
+      Course 4 Bee For Loops 7_instruction: '"Sayaç" değişkenini döngüde kullanarak yatay olarak ne kadar ilerleneceğini belirle.'
+      Course 4 Bee For Loops 8_instruction: Döngü kullanarak hareketleri ve nektar almayı başarabilir misin?
       Course 4 Bee For Loops 9_instruction: |
         The last number in your for loop is
         called the "increment,"  and each time the loop is run the counter variable
         changes by the increment. Try collecting these flowers using an increment
         of 2.
-      Course 4 Bee Loops 5 NEW_instruction: |
-        Here are three flowers. Can you find
-        the pattern of instructions that you need to repeat 3 times to collect the
-        nectar with the fewest number of blocks?
+      Course 4 Bee Loops 5 NEW_instruction: Burada üç çiçek vardır. Tekrarla bloğu ile 3 defa tekrarlayarak daha az satır kod ile nektar toplayabilirsiniz.
       Course 4 Bee Loops 5a NEW_instruction: |
         Now, use loops to help the bee collect
         all the nectar on it's way to the honeycomb with as few blocks as possible.  When
@@ -1483,9 +1215,7 @@ tr:
         Use the function "get 3 nectar" which
         turns, moves to collect the nectar, and then returns to the original location.
         Write a sequence to collect all of the nectar using "get 3 nectar."
-      Course 4 Bee Params 2_instruction: |
-        Modify the "get 3 nectar" function so
-        it makes me turn right instead of left to the flowers.
+      Course 4 Bee Params 2_instruction: ' "3 nektar al" işlevini değiştirin ve sağa döneceğime sola dönmemi sağlayın.'
       Course 4 Bee Params 3 (copy 1)_instruction: |
         Now there are flowers on both
         sides! Maybe you can use a parameter so that the same function works for flowers
@@ -1498,9 +1228,7 @@ tr:
         parameter called "direction" to "get 3 nectar". Edit "get 3 nectar"
         so that the bee turns the correct direction when the variables "left" or
         "right" are passed into the function.  
-      Course 4 Bee Params 4 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of the flowers. Remember, 0 = left and 1 = right.
+      Course 4 Bee Params 4 (copy 1)_instruction: Yeni fonksiyonu kullanarak bütün çiçekleri topla. Unutma 0 = sol ve 1= sağ.
       Course 4 Bee Params 4 - Two WhenRun_instruction: |
         Try using your new function
         to collect all of the flowers. Remember to use the left and right variables.
@@ -1513,20 +1241,14 @@ tr:
         Try using your new function to collect
         nectar from all of the flowers. Remember to use the left and right variables.
       Course 4 Bee Params 5_instruction: 'Sıfırdan başlayalım - "5 nektar kazan" isminde ve yön parametreli bir fonksiyon yazabilir misin?'
-      Course 4 Bee Params 6 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of this nectar.
+      Course 4 Bee Params 6 (copy 1)_instruction: Şimdi yeni yazdığınız fonksiyonu kullanarak nektarları toplayın.
       Course 4 Bee Params 6_instruction: |
         Wouldn't it be nice if we could collect
         all of these nectars with the a single function? Try adding a new parameter
         to your function called "nectar units" to control the amount of nectar to
         collect. You'll probably want to rename the function too!
-      Course 4 Bee Params 7 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of this nectar.
-      Course 4 Bee Params 7_instruction: |
-        Try using your new function to collect
-        all of this nectar.
+      Course 4 Bee Params 7 (copy 1)_instruction: Şimdi yeni yazdığınız fonksiyonu kullanarak nektarları toplayın.
+      Course 4 Bee Params 7_instruction: Şimdi yeni yazdığınız fonksiyonu kullanarak nektarları toplayın.
       Course 4 Bee Params 8 Clone 2_instruction: |
         Oooh, now there's honey to deal
         with too! How could you update your function to either get nectar or make
@@ -1547,9 +1269,7 @@ tr:
         too! Rewrite your function to use both the number of honey units and the number
         of nectar units.  How would you use those numbers to decide what you should
         do?
-      Course 4 Bee Params Ex_instruction: |
-        Try using your new function to collect
-        all of this nectar.
+      Course 4 Bee Params Ex_instruction: Şimdi yeni yazdığınız fonksiyonu kullanarak nektarları toplayın.
       Course 4 Binary 1_instruction: |
         Here's a function that takes a binary string
         of 1's and 0's and instructs the farmer to turn on the go from left to right,
@@ -1558,67 +1278,39 @@ tr:
       Course 4 Binary 2_instruction: |
         What binary string could you loop 8 times to
         draw this image? Hint: the number "1" fills a hole.
-      Course 4 Binary 3_instruction: |
-        Can you draw this pattern by looping a single
-        binary string?
-      Course 4 Binary 5 (copy 1)_instruction: |
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 5_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 6 (copy 1)_instruction: |
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 6_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 7_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
+      Course 4 Binary 3_instruction: Bu deseni döngğde ikili dizgiyi kullanarak çizebilir misin?
+      Course 4 Binary 5 (copy 1)_instruction: Hangi ikili dizgiyi 10 defa tekrar ettiğimizde bu görüntüyü oluştururuz?
+      Course 4 Binary 5_instruction: Hangi ikili dizgiyi 10 defa tekrar ettiğimizde bu görüntüyü oluştururuz?
+      Course 4 Binary 6 (copy 1)_instruction: Hangi ikili dizgiyi 10 defa tekrar ettiğimizde bu görüntüyü oluştururuz?
+      Course 4 Binary 6_instruction: Hangi ikili dizgiyi 10 defa tekrar ettiğimizde bu görüntüyü oluştururuz?
+      Course 4 Binary 7_instruction: Hangi ikili dizgiyi 10 defa tekrar ettiğimizde bu görüntüyü oluştururuz?
       Course 4 Binary 8_instruction: |
         You can complete the most of this image by
         looping a 5 bit binary number - then you'll need one more 4 bit number to
         get the bottom right-hand corner.
-      Course 4 EC 1a_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 1b_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 2a_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2b_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2c_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
+      Course 4 EC 1a_instruction: Kural yok. İpucu yok. Haydi bakalım!
+      Course 4 EC 1b_instruction: Kural yok. İpucu yok. Haydi bakalım!
+      Course 4 EC 2a_instruction: '**Sana meydan okunuyor. İpucu yok. Haydi bakalım!'
+      Course 4 EC 2b_instruction: '**Sana meydan okunuyor. İpucu yok. Haydi bakalım!'
+      Course 4 EC 2c_instruction: '**Sana meydan okunuyor. İpucu yok. Haydi bakalım!'
       Course 4 EC 3_instruction: |
         Use what you learned in the previous level to draw
         an image like this. Note: The code becomes more simple if you incorporate
         parameters. 
-      Course 4 EC 3a_instruction: |
-        Extreme Challenge: No rules. No clues. Just the
-        challenge!
-      Course 4 Maze 1_instruction: Get the angry bird to the pig!
+      Course 4 EC 3a_instruction: Sana meydan okunuyor. İpucu yok. Haydi bakalım!
+      Course 4 Maze 1_instruction: Kızgın kuşu domuzcuğa ulaştır!
       Course 4 Maze 2_instruction: Bombadan kaçının!
-      Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
-      Course 4 Maze 4_instruction: |
-        Try the "repeat" block to use fewer blocks
-        when solving this puzzle...
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Play Lab For Loops 2_instruction: |
-        This time, let's try counting
-        the odd numbers from 1 to 100.
+      Course 4 Maze 3_instruction: Kızgın kuşun domuzcua ulaşması için program yaz.
+      Course 4 Maze 4_instruction: '"Tekrar" bloğunu kullanarak daha az sayıda blokla bulmacayı çöz...'
+      Course 4 Maze 5_instruction: Bu bulmacayı en az sayıda blok kullanarak çözebilir misin?
+      Course 4 Maze 6_instruction: Bu bulmacayı en az sayıda blok kullanarak çözebilir misin?
+      Course 4 Play Lab For Loops 2_instruction: Şimdi 1 den 100 e kadar tek sayıları sayalım.
       Course 4 Play Lab Params 1_instruction: |
         Here's a function called "jump"
         that causes your main character to jump up 100 pixels. Use the jump function
         to collect all of the flags.
-      Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou. \r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
-      Course 4 Play Lab Params 2_instruction: "Now we've got flags that are too\nhigh for our current jump! Let's use both the \"up\" and \"down\" arrows\nso that we can have multiple jump heights.  \r\n\r\nWe need to add a parameter\nto our jump function called \"height\".  The up arrow should cause the dog\nto jump 200 pixels and the down arrow should make it jump only 100 pixels.\n\r\n\r\nHint: You will need to click \"edit\" on the jump function and update\nit so that it uses the \"height\" parameter."
+      Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou. \\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
+      Course 4 Play Lab Params 2_instruction: "Now we've got flags that are too\nhigh for our current jump! Let's use both the \"up\" and \"down\" arrows\nso that we can have multiple jump heights.  \\r\n\\r\nWe need to add a parameter\nto our jump function called \"height\".  The up arrow should cause the dog\nto jump 200 pixels and the down arrow should make it jump only 100 pixels.\n\\r\n\\r\nHint: You will need to click \"edit\" on the jump function and update\nit so that it uses the \"height\" parameter."
       Course 4 Play Lab Params 3_instruction: |
         We have added another parameter to
         the jump function so that we can use it with other actors. Each actor is represented
@@ -1636,11 +1328,11 @@ tr:
         to the "patrol" function. Try using a "set speed" block with the new "speed"
         parameter to help Penguin get both flags before the other sprites even get
         one.
-      Course 4 Play Lab Params 7_instruction: "Let's have some fun! Look at the\ncode provided to see if you can figure out what each block does.  \r\n\r\nWhen\nyou're done, use the arrow keys to control Dog and collect all of the flags."
+      Course 4 Play Lab Params 7_instruction: "Let's have some fun! Look at the\ncode provided to see if you can figure out what each block does.  \\r\n\\r\nWhen\nyou're done, use the arrow keys to control Dog and collect all of the flags."
       Course 4 Play Lab Params 8_instruction: |
         Use a "when actor touches" block
         to send Dog back to the top-left ONLY if Dog touches any of the other actors.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe function so that a \"points\" parameter is added to the \"player_score\"\nvariable. \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function \"score_points.\"\\r\n\\r\nEdit\nthe function so that a \"points\" parameter is added to the \"player_score\"\nvariable. \\r\n\\r\nThe variable \"player_score\" should increase each time\nDog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
         This time you don't have to write any
         code, just hit "Run" to play the game! In this game, you're the dog who
@@ -1669,7 +1361,7 @@ tr:
         actor 2 touches anything" event to trigger an update to your score when your
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to shoot hearts.\r\n\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a heart. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
+      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to shoot hearts.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a heart. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
         isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
@@ -1687,7 +1379,7 @@ tr:
         ever greater that 20, make the enemy (the Cat) vanish. If the score is ever
         less than 0, make the player (the Dog) vanish. Click "Finish" when the game
         works like you'd like it to.
-      Course 4 Play Lab Vars 9_instruction: "Free Play time! Here are all of the\nvariables we've played with so far in this stage, as well as a few more in\ncase you want them. \r\n\r\nNotice that there are now so many blocks in our\ntoolbox that they need to be organized!  Here, we've put each piece into\nan appropriate category.  Take some time to explore everything that is available.\nWhen you're done browsing, make a game or story using repeats, variables,\nand events.  \r\n\r\nHint: scroll down to see all the commands in the workspace."
+      Course 4 Play Lab Vars 9_instruction: "Serbest Oyun zamanı! Bu aşamada kullandığın bütün değişkenler ve birkaç tane exta burada.  \n\\r\n\\r\nAraç kutunda organize etmen gereken çok fazla blok var!  \nHer bir parçayı ilgili kategori içine koyduk. biraz dikkatini verip herşeyi keşvet. İncelemeyi bitirince tekrarla, değişkenler ve olaylar kullanarak hikayeni oluştur.\nİpucu: Çalışma alanındaki tüm komutları görmek için kaydır."
       Course 4 Play Lab Vars_instruction: |
         Alright, one last thing for this game
         - let's set it up so the player can win (or lose). Use a forever loop to
@@ -1697,9 +1389,7 @@ tr:
         Let's make the dog speak every
         number from 1 to 100. Use a for loop and the counter block to speak the counter
         variable each time the loop is run.
-      Course 4 Play Labs For Loops 2_instruction: |
-        This time, let's try counting
-        the odd numbers from 1 to 100.
+      Course 4 Play Labs For Loops 2_instruction: Şimdi 1 den 100 e kadar tek sayıları sayalım.
       Course 4 Play Labs For Loops 3_instruction: |
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
@@ -1709,90 +1399,70 @@ tr:
         helpful, but we're still counting linearly (each number is the same distance
         from the last) What if I wanted to count exponentially? Without changing the
         settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter squared)?
-      Course 4 Play Labs For Loops 4a_instruction: "Now, let's blend the variables\nfrom Stage 7 together with your \"counter\" variable to make some magic happen.   \r\n\r\nIn\nthis puzzle, Dog will count from 0 to 1000 by \"increment\".  Set the \"increment\"\nvariable to 10 at the beginning of your code to see what happens."
+      Course 4 Play Labs For Loops 4a_instruction: "Now, let's blend the variables\nfrom Stage 7 together with your \"counter\" variable to make some magic happen.   \\r\n\\r\nIn\nthis puzzle, Dog will count from 0 to 1000 by \"increment\".  Set the \"increment\"\nvariable to 10 at the beginning of your code to see what happens."
       Course 4 Play Labs For Loops 5_instruction: |
         In the last stage we counted the
         square of each number. Try changing "counter ^ 2" to "counter ^ 3" to
         count the cube of each number (1, 8, 27, 64, 125, 216, 343…)
-      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach one."
+      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\\r\n\\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\\r\n\\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\\r\n\\r\nRun the loop a couple of times, clicking Dog before\neach one."
       Course 4 Play Labs For Loops 6_instruction: |
         You may recall that a prime number
         is any whole number that is only divisible by itself and 1. Use the "is_prime"
         function to speak out only the prime numbers from 1 to 100.
-      Course 4 Play Labs For Loops 6a_instruction: "Dog will still keep time by counting\nwith our \"for loop\" by \"increment\", but this time, we will add The Wizard\ninto the mix.  Can you change the code so that \"increment\" goes up by two\neach time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!"
-      Course 4 Play Labs For Loops 7_instruction: |
-        Could you use a for loop to help
-        me speak the sequence 1, 4, 7, 10, 13, 16, 19, 22, 25?
-      Course 4 Play Labs For Loops 7a_instruction: "Now we're getting somewhere!  What\nif we start counting how many times we can click The Wizard before Dog gets\nto 30?  \r\n\r\nFinish adding blocks to The Wizard so that every time he's\nclicked the variable \"clicked\" increases by one. You can ignore \"increment\"\nfor now.\r\n\r\nDog will start counting when you click \"Run\"."
-      Course 4 Play Labs For Loops 8_instruction: "Now, help the actors move as they\ncount.  \r\n\r\nDog should move and count by adding 2 (counter + 2) each time.  Cat\nwill move and count by multiplying by 2 (counter * 2)  each time. Penguin\nwill move and count to the power of 2 (counter ^ 2) each time.  Who will reach\ntheir flag first?"
-      Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring back the \"increment\" variable!    Let's tie it to the level of the\ngame.\r\n\r\n1) Keep track of the number of times The Wizard is clicked.\r\n2)\nIf The Wizard is clicked at least 10 times before Dog counts to 30, raise\n\"increment\" by 1 and start again.\r\n3) If The Wizard does not get clicked\nat least 10 times, the game is over."
+      Course 4 Play Labs For Loops 6a_instruction: "Dog will still keep time by counting\nwith our \"for loop\" by \"increment\", but this time, we will add The Wizard\ninto the mix.  Can you change the code so that \"increment\" goes up by two\neach time The Wizard is clicked?\\r\n\\r\nWatch out!  The Wizard moves quickly!"
+      Course 4 Play Labs For Loops 7_instruction: Döngü kullanarak 4, 7, 10, 13, 16, 19, 22, 25 şeklinde saymamı sağlayabilir misin?
+      Course 4 Play Labs For Loops 7a_instruction: "Now we're getting somewhere!  What\nif we start counting how many times we can click The Wizard before Dog gets\nto 30?  \\r\n\\r\nFinish adding blocks to The Wizard so that every time he's\nclicked the variable \"clicked\" increases by one. You can ignore \"increment\"\nfor now.\\r\n\\r\nDog will start counting when you click \"Run\"."
+      Course 4 Play Labs For Loops 8_instruction: "Now, help the actors move as they\ncount.  \\r\n\\r\nDog should move and count by adding 2 (counter + 2) each time.  Cat\nwill move and count by multiplying by 2 (counter * 2)  each time. Penguin\nwill move and count to the power of 2 (counter ^ 2) each time.  Who will reach\ntheir flag first?"
+      Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring back the \"increment\" variable!    Let's tie it to the level of the\ngame.\\r\n\\r\n1) Keep track of the number of times The Wizard is clicked.\\r\n2)\nIf The Wizard is clicked at least 10 times before Dog counts to 30, raise\n\"increment\" by 1 and start again.\\r\n3) If The Wizard does not get clicked\nat least 10 times, the game is over."
       Course 4 SCF 1_instruction: |
         Use the suggested functions to draw four rows
         of hexagons. Notice how our even numbered rows are shifted to the right?
-      Course 4 SCF 1a_instruction: |
-        Can you figure out how to collect all of this
-        nectar with the fewest blocks possible?
-      Course 4 SCF 1b_instruction: |
-        Can you figure out how to collect all of this
-        nectar with the fewest blocks possible?
+      Course 4 SCF 1a_instruction: En az sayıda blok ile bütün nektarları toplayabilir misin?
+      Course 4 SCF 1b_instruction: En az sayıda blok ile bütün nektarları toplayabilir misin?
       Course 4 SCF 2_instruction: |
         Use what you learned in the previous level to
         draw an image like this. Note: The code becomes more simple if you incorporate
         parameters. 
-      Course 4 SCF 3 Fail 1_instruction: Can you figure out how to...
-      Course 4 SCF 3 Fail 2_instruction: Can you figure out how to...
+      Course 4 SCF 3 Fail 1_instruction: Nasıl yapılacağını çözdünmü...
+      Course 4 SCF 3 Fail 2_instruction: Nasıl yapılacağını çözdünmü...
       Course 4 SCF 3_instruction: |
         Use what you learned in the previous level to
         draw an image like this. Note: The code becomes more simple if you incorporate
         parameters. 
-      Course 4 SCFL 1_instruction: |
-        Solve this puzzle using the fewest number of
-        blocks possible.
-      Course 4 SCFL 1a_instruction: |
-        Can you get Skrat to his acorn using as few
-        blocks as possible?
-      Course 4 SCFL 1b_instruction: |
-        Can you get Skrat to his acorn using as few
-        blocks as possible?
-      Course 4 SCFL 2_instruction: |
-        Solve this puzzle using the fewest number of
-        blocks possible.
-      Course 4 SCFL 3_instruction: Can you figure out how to re-create this drawing?
-      Course 4 SCFL 4_instruction: Can you figure out how to re-create this drawing?
-      Course 4 SCFL 5_instruction: Can you figure out how to re-create this drawing?
-      Course 4 SCFL 6_instruction: |
-        Can you figure out how to re-create this drawing
-        with a single loop?
-      Course 4 SCFL 7_instruction: |
-        The artist wants to catch some waves! Can you
-        figure out how to re-create this drawing?
+      Course 4 SCFL 1_instruction: Bu bulmacayı en az sayıda blok kullanarak tamamla.
+      Course 4 SCFL 1a_instruction: Scrat ı meşe palamuduna en az sayıda blok kullanarak ulaştırabilir misin?
+      Course 4 SCFL 1b_instruction: Scrat ı meşe palamuduna en az sayıda blok kullanarak ulaştırabilir misin?
+      Course 4 SCFL 2_instruction: Bu bulmacayı en az sayıda blok kullanarak tamamla.
+      Course 4 SCFL 3_instruction: Bu çizimi tekrar nasıl yapabileceğini çözebildin mi?
+      Course 4 SCFL 4_instruction: Bu çizimi tekrar nasıl yapabileceğini çözebildin mi?
+      Course 4 SCFL 5_instruction: Bu çizimi tekrar nasıl yapabileceğini çözebildin mi?
+      Course 4 SCFL 6_instruction: Tek bir döngüyle bu çizimi yapabilir misin?
+      Course 4 SCFL 7_instruction: Sanatçı dalgaları yakalamak istiyor. Bu çizime tekrar yaratabilir misin?
       Course 4 SCFP 1_instruction: |
         Create a function with parameters that allows
         the artist to jump backward and forward by x pixels, and also up and down
         by y pixels (using positive and negative numbers).
-      Course 4 SCV 1_instruction: Click here to view the instructions again.
-      Course 4 SCV 2_instruction: Click here to view the instructions again.
-      Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when\nCat and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks\nnecessary to make this game work the way it's been explained.  How will you\nget Dog to move in all directions using the arrow keys?  How will you add\npoints when Dog tags Cat or Penguin?  How will you subtract points when Cat\nand Penguin touch?"
-      Course 4 SCV 4_instruction: |
-        Solve this puzzle with the fewest number of blocks
-        possible.
-      Course 4 SCV 5_instruction: |
-        Solve this puzzle with the fewest number of blocks
-        possible.
-      Course 4 SCV 6_instruction: Click here to view the instructions again.
+      Course 4 SCV 1_instruction: Yönergeleri yeniden görüntülemek için burayı tıklatın.
+      Course 4 SCV 2_instruction: Yönergeleri yeniden görüntülemek için burayı tıklatın.
+      Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag Penguin to get 3 points.  Get exactly 10 points to win!\\r\nBut be careful,\nwhen Cat and Penguin tag each other, they take points away.\\r\n\\r\nAdd the\nblocks necessary to make this game work the way it's been explained.  How\nwill you get Dog to move in all directions using the arrow keys?  How will\nyou add points when Dog tags Cat or Penguin?  How will you subtract points\nwhen Cat and Penguin touch?"
+      Course 4 SCV 4_instruction: Bu bulmacayı en az sayıda blok kullanarak tamamla.
+      Course 4 SCV 5_instruction: Bu bulmacayı en az sayıda blok kullanarak tamamla.
+      Course 4 SCV 6_instruction: Yönergeleri yeniden görüntülemek için burayı tıklatın.
       Course 4 SCVP 1_instruction: |
         Create a function with parameters that allows
         the artist to jump backward and forward by x pixels, and also up and down
         by y pixels (using positive and negative numbers).
-      Course 4 Variables Assessment_instruction: |
-        Can you create this image using
-        a variable for sides? Each line should be 50 pixels long.
+      Course 4 Variables Assessment_instruction: Be şekli kenarlar için değişken kullanarak yapabilir misin? Her bir kenar 50 piksel uzunluğunda olmalıdır.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
-      Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
-      Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
-      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
-      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
-      CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
+      Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
+      Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
+      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
+      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
+      CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
       CSP U4 - JSON Object Intro - Bad Way_instruction: |
         Trigger both the keyboard
         and mouse event and examine the event objects displayed in the console. Why
@@ -1879,9 +1549,9 @@ tr:
         Here's a similar function red shape with an additional
         variable for size. Complete the conditionals so the correct solid red image
         of a given size is drawn for "circle", "triangle", and "star".
-      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
-      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
+      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\\r\nOne example - and part of the definition -  has already\nbeen done for you!"
+      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\\r\nOne example - and part of the definition -  has\nalready been done for you!\\r\n"
+      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\\r\n"
       Eval Contracts 1_instruction: |
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -2049,9 +1719,7 @@ tr:
         that fills it until the ground is even?  Hint:  Try using the while loop this
         time.
       Frequency Analysis_instruction: Test
-      frozen circle function in circle_instruction: |
-        Now let's create 20 overlapping
-        circles, turning 18 degrees between each circle.
+      frozen circle function in circle_instruction: Şimdi herbirini çizdikten sonra 18 derece bırakacağınız 20 tane çember oluşturun.
       frozen circle function with parameter_instruction: |
         Here's a ”Create circle”
         block that can make circles of different sizes. Can you use this to create
@@ -2062,124 +1730,75 @@ tr:
       frozen circle_instruction: |
         A circle is a special shape. Can you figure out
         what number to replace the question marks with to draw a circle?
-      frozen cross rotate dense_instruction: |
-        Let's repeat it 90 times! How many
-        times does 90 go into 360? Hint: It's a really small number.
-      frozen cross rotate_instruction: |
-        Now try repeating it 10 times. How many degrees
-        do you need to turn between each line?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
-      frozen diamond snowflake_instruction: |
-        Now, let's create a new snowflake by
-        using the repeat block to repeat a parallelogram 10 times, turning right by
-        36 degrees between each one.
-      frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
-      frozen freeplay_instruction: |
-        You've officially become a master artist! Create
-        a winter wonderland.
+      frozen cross rotate dense_instruction: "Bu işlemi 90 kez tekrarlayalım! Kaç kere de 90'dan 360'a varılır? İpucu: cevabı gerçekten çok küçük bir sayı."
+      frozen cross rotate_instruction: Şimdi, bu işlemi 10 kez deneyerek tekrarlayınız. Her bir çizgi arasını dönmek için kaç dereceye ihtiyacınız var?
+      frozen cross_instruction: |-
+        Bu komutların dışına "Tekrarla" bloğu koyarak artı işareti yapabilir misin? Elsa'nın ileri ve geri hareket edebildiğini fark ettiniz mi?
+      frozen diamond mini snowflake_instruction: 'Her kar tanesinin birbirinden farklı olduğunu biliyor muydunuz? "Tekrarla" bloğunu kullarak, bir paralelkenarı 4 kez, her bir paralel kenar arasında 90 derece olacak şekilde sağa doğru döndürerek yeni bir kar tanesi oluşturalım.'
+      frozen diamond snowflake_instruction: Şimdi, tekrarla bloğunu kullanarak yeni kar taneleri oluşturalım. Tekrarla bloğu ile 10 tane paralelkenar çizelim her paralelkenar çizildikten sonra sağa doğru 36 derece dönelim.
+      frozen diamond_instruction: '"Tekrarla" bloğunu bir paralelkenar oluşturmak için kullanın. Bir dikdörtgen gibi ama farklı açıları vardır. 4 tane 90 derecelik açı yerine iki tane 60 derece ve iki tane 120 derece açı vardır.'
+      frozen freeplay_instruction: Resmen bir usta sanatçı haline geldiniz! Kış harikalar diyarı yaratın.
       frozen line_instruction: "Merhaba! Ben Arendelle'den Elsa. Bana bir çizgi oluşturmamda yardım et."
       frozen perpendicular_instruction: Haydi şimdi nasıl birbirine 90 derece açılı 2 çizgi oluşturacağımıza bakalım. Dönme bloğunun yanısıra hareket bloğunu da kullanman gerekecek.
       frozen snowflake branch_instruction: |
         Try using the ”Create a snowflake branch”
         block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_instruction: |
-        Now let's repeat it 8 times to make a
-        beautiful snowflake!
-      frozen snowflower_instruction: |
-        Intricate snow patterns can be created with
-        very simple shapes. Can you make a pattern by repeating 5 circles of size
-        5 and 5 circles of size 10?
+      frozen snowflake full_instruction: Şimdi çok güzel bir kar taneciği yapmak için 8 kere tekrar edin!
+      frozen snowflower_instruction: Karmaşık kar tanecikleri aslında basit şekillerle oluşturulur. Bu modeli 5 birim uzunlukta 5 çember ve 10 birim uzunluktaki 5 çember ile oluşturabilir misiniz?
       frozen square iterative_instruction: Kare yapmak için yolu yarıladık gibi görünüyor. Haydi 4 çizgiyi birleştirelim ve bir kare oluşturalım.
       frozen square loop 3x_instruction: Haydi her birinin ardından dönerek, 3 tane kare oluşturalım. Her bir karenin ardından 120 derece dönmem gerektiğine emin ol.
       frozen square loop_instruction: |-
         Merhaba, ben Arendelle'den Anna! Haydi "Tekrarla" bloğunu kullanarak daha az blok kullanarak kare yapalım. Bir kare yapmak için kaç kere (???) "Tekrar" yapmak gerekir?
       frozen square snowflake_instruction: '"Tekrarla" bloğuyla 10 kare çizerek ve her bir karenin arasında "Dönme" bloğuyla 36 derece dönerek bir kar tanesi oluşturabilir misin?'
-      Infinity_catch_instruction: |
-        Can you make Elsa ("actor 2") catch up with
-        Anna by using the arrow keys?
-      Infinity_finale_instruction: Create anything you like and share it!
+      Infinity_catch_instruction: Ok tuşlarını kullanarak Elsa nın Annaya yetişmesini sağlayabilir misin?
+      Infinity_finale_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
       Infinity_move_collide_instruction: |
         Hiro is "actor 1".  Move him right to
         Baymax, and play a sound when they touch.
       Infinity_move_directions_instruction: |
         Baymax is "actor 2".  Add Move blocks
         and then move Baymax using the arrows.  Make him touch the two other characters.
-      Infinity_move_right_instruction: |
-        Hiro is "actor 1".  Use the Move block
-        to move Hiro right to touch Baymax.
-      Infinity_repeat_instruction: |
-        Use a "repeat forever" block to make Anna move
-        up and down 400 pixels.
-      Infinity_say_instruction: 'Make Anna say "Hi there." by using the Say block.'
-      Infinity_shoot_instruction: |
-        Baymax is "actor 2".  Make Baymax throw a rocket
-        at Hiro.
+      Infinity_move_right_instruction: 'Hiro "aktör 1" dir.  İlerle aktör 1 sağa bloğunu kullanarak  Baymax a dokun.'
+      Infinity_repeat_instruction: |-
+        "Sonsuza kadar tekrarla" bloğunu kullanarak Anna'nın aşağı yukarı 400 pixel hareket etmesini sağla.
+      Infinity_say_instruction: 'Söyle bloğunu kullanarak Annanın "Merhaba ordakiler" demesini sağla.'
+      Infinity_shoot_instruction: '"Baymax" ikinci aktör. Baymaxın Hero ya roket atmasını sağlayın.'
       Infinity_shoot_directions_instruction: |
         Hiro is "actor 3".  Make Hiro throw
         a projectile to each of the four characters.  Wait one second between each
         throw.
       Infinity_test_instruction: This is a test Infinity level.
-      Infinity_touch_faster_instruction: Touch even more snowflakes!
-      Infinity_touch_four_instruction: |
-        Move Anna up, down left, and right to touch
-        each of the four snowflakes.
+      Infinity_touch_faster_instruction: Daha fazla kartanesine dokun!
+      Infinity_touch_four_instruction: Anna yı yukarı, aşağı, sağ ve sol hareket ettirerek dört kar tanesine de dokun.
       Infinity_touch_score_instruction: |
         Make Anna score a point when she touches
         a snowflake.  Then click "Run" and steer her to touch each snowflake once.
       jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
-      K-1 Artist 1 Assessment 1_instruction: |
-        Draw a short line up and a long one
-        to the right!
-      K-1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both the
-        jump and draw blocks
+      K-1 Artist 1 Assessment 1_instruction: Yukarıya kısa bir çizgi ve sağa uzun bir çizgi çiz!
+      K-1 artist 1 level 10_instruction: Kesikli çizgiyi atla ve çiz blokları ile yap
       K-1 artist 1 level 9_instruction: Üç satır kullanarak bunu çizin
       K-1 Artist Loops 1_instruction: Doğuya doğru 4 defa hareket ederek çizgi çiz.
-      K-1 Artist Loops 2_instruction: Now, draw the same line using a loop.
-      K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
-      K-1 Artist Loops 4_instruction: |
-        Could a loop help us draw the top of this
-        castle?
-      K-1 Artist Loops 5_instruction: What can you loop 4 times to draw these stairs?
-      K-1 Artist Loops 6_instruction: |
-        This one needs two loops: one to go up the
-        stairs and one to go down.
-      K-1 Artist Loops 7_instruction: Loops can help you finish this pattern.
-      K-1 Artist Loops 8_instruction: This staircase has longer steps.
-      K-1 Artist Loops 9_instruction: What is the easiest way to draw these stairs?
+      K-1 Artist Loops 2_instruction: Şimdi aynı çizgiyi döngü kullanarak yapın.
+      K-1 Artist Loops 3_instruction: 'Bu blokları döngü kullanarak  6 çizgi çizebilir hale getirebilir misin?'
+      K-1 Artist Loops 4_instruction: Döngü bu kaleyi çizmemize yardımcı olabilir mi?
+      K-1 Artist Loops 5_instruction: Bu merdivenleri çizmek için döngüyü 4 defa işletebilirmisin?
+      K-1 Artist Loops 6_instruction: Bu iki döngü gerektiriyor. Birisi merdivenlerden yukarı çıkmak için birisi inmek için.
+      K-1 Artist Loops 7_instruction: Döngü bu deseni bitirmene yardımcı olabilir.
+      K-1 Artist Loops 8_instruction: Bu merdiven daha fazla basamağa sahip.
+      K-1 Artist Loops 9_instruction: Bu merdivenleri çizmenin en kolay yolu nedir?
       K-1 Artist Loops Free Play_instruction: Serbest bölüm,hadi eğlenceli bir şeyler çiz!
       K-1 Artist1 1_instruction: Bir çizgi ile adamın ayağını çiz
-      K-1 Artist1 10_instruction: |
-        Draw and Jump to make the dashed path to the treasure
-        X
-      K-1 Artist1 2_instruction: Draw the whisker on the cat with two lines!
-      K-1 Artist1 3_instruction: |
-        Draw two lines east and two lines north to finish
-        the house!
-      K-1 Artist1 4_instruction: Draw lines up, over, and down to complete the castle!
-      K-1 Artist1 5.5_instruction: |
-        Complete the third tower of the castle using
-        short lines
-      K-1 Artist1 5_instruction: Draw the stem of this flower with two lines!
-      K-1 Artist1 6_instruction: Finish the picture by using a jump block!
-      K-1 Artist1 7_instruction: |
-        Use the jump block to move without drawing. Jump
-        up and draw a line.
-      K-1 Artist1 8_instruction: |
-        Draw the dashed line by using both the jump and
-        draw blocks
-      K-1 Artist1 9_instruction: Draw and Jump to make the dashed line
+      K-1 Artist1 10_instruction: Çiz ve atla kullanarak hazineye çizgili yol oluştur
+      K-1 Artist1 2_instruction: İki çizgi kullanarak kediye bıyık çiz!
+      K-1 Artist1 3_instruction: İki çizgi doğuya ve iki çizgi kuzeye çizerek evi tamamla!
+      K-1 Artist1 4_instruction: Üste ve alta çizerek kaleyi tamamla!
+      K-1 Artist1 5.5_instruction: Kalenin üçüncü kulesini kısa çizgilerle tamamla
+      K-1 Artist1 5_instruction: Bu çiceğin kökünü iki çizgi ile yap!
+      K-1 Artist1 6_instruction: Atla bloğu kullanarak resmi tamamla!
+      K-1 Artist1 7_instruction: Atla bloğunu kullanarak çizmeden ilerle. Atla ve bir çizgi çiz.
+      K-1 Artist1 8_instruction: Kesikli çizgiyi atla ve çiz blokları ile yap
+      K-1 Artist1 9_instruction: Çiz ve atla. Böylelikle kesikli çizgi oluştur.
       K-1 Artist1 Assessment 1_instruction: Kısa ve uzun çizgiler çiz!
       K-1 Artist1 Assessment 2_instruction: Kısa kesik çizgiler çiz!
       K-1 Artist2 1_instruction: Üçgenin altına bir kare çiz.
@@ -2190,7 +1809,7 @@ tr:
       K-1 Artist2 6_instruction: Dikdörtgen yapmak için iki kare çiz!
       K-1 Artist2 Assessment1_instruction: Değerlendirme:Diğer karenin yanına bir kare çizin.
       K-1 Artist2 Free Draw_instruction: Herhangi bir şey çiz!
-      K-1 Artist2_7_instruction: Draw a rectangle to give the dresser a top drawer!
+      K-1 Artist2_7_instruction: Rafa üst çekmece oluşturmak için bir kare çizin!
       K-1 Bee 1_instruction: Beni çiçeğe doğru ilerlet,nektarı topla sonra beni peteğin yanına götür ve bal yap
       K-1 Bee 10_instruction: Dört nektar topla ve iki bal yap!
       K-1 Bee 11.5_instruction: Dört bal yapmak için dört nektar topla!
@@ -2212,22 +1831,16 @@ tr:
       K-1 Bee Loops 1_instruction: Bal yapmak için nektarı al!
       K-1 Bee Loops 10_instruction: Nektar almak, bal yapmak ve ilerlemek için döngüleri kullan!
       K-1 Bee Loops 11_instruction: 'Değerlendirme: Döngüleri kullanarak nektar topla ve bal yap!'
-      K-1 Bee Loops 12_instruction: Get all of the nectar and all of the honey.
-      K-1 Bee Loops 2_instruction: |
-        Use a `repeat` loop to move and then get the
-        nectar and make honey!
+      K-1 Bee Loops 12_instruction: Tüm nektar ve tüm balı topla.
+      K-1 Bee Loops 2_instruction: '"Tekrarla" bloğu kullanarak ilerleyip nektar ve balı alalım!'
       K-1 Bee Loops 3_instruction: Nektar almak ve bal yapmak için döngüleri kullan!
-      K-1 Bee Loops 4_instruction: |
-        Use `repeat` loops to get the nectar, make honey,
-        and to move!
-      K-1 Bee Loops 5_instruction: Use `repeat` loops to get the nectar and honey!
+      K-1 Bee Loops 4_instruction: '"Tekrarla" bloğu kullanarak ilerleyip nektar ve balı alalım ve ilerleyelim!'
+      K-1 Bee Loops 5_instruction: '"Tekrarla" bloğu kullanarak ilerleyip nektar ve balı alalım!'
       K-1 Bee Loops 6_instruction: Nektar almak, bal yapmak ve ilerlemek için döngüleri kullan!
       K-1 Bee Loops 7_instruction: Nektar almak ve bal yapmak için döngüleri kullan!
       K-1 Bee Loops 8_instruction: Nektar almak ve bal yapmak için döngüleri kullan!
       K-1 Bee Loops 9_instruction: Nektar almak, bal yapmak ve ilerlemek için döngüleri kullan!
-      K-1 Bee Loops Assessment 1_instruction: |
-        Get nectar to make honey and use loops
-        to move!
+      K-1 Bee Loops Assessment 1_instruction: Bal yapmak için nektar al ve ilerlemek için döngüleri kullan!
       K-1 Bee Loops Assessment 2_instruction: Bal yapmak için nektar topla. Döngüleri kullan!
       K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
       K-1 Building a Foundation Assessment_instruction: |
@@ -2253,16 +1866,10 @@ tr:
       K-1 Maze Assessment 2_instruction: 'Değerlendirme: Beni domuza götür!'
       K-1 maze debug 1_instruction: Beni domuza götürmek için kodu değiştir!
       K-1 maze debug 10_instruction: Seviyeyi geçmek ve domuza ulaşmam için bloklarını ekleyerek hataları ayıkla!
-      K-1 maze debug 11_instruction: "This is a test!\r\nDebug this level by rearranging\nand changing blocks to get me to the pig"
-      K-1 maze debug 2_instruction: |
-        Figure out what is missing and then add blocks
-        to get me to the pig!
-      K-1 maze debug 3_instruction: |
-        Something is not quite right. REMOVE blocks
-        to get me to the pig!
-      K-1 maze debug 4_instruction: |
-        Run through these blocks and fix them! I think
-        I might be going in the wrong direction.
+      K-1 maze debug 11_instruction: 'Değerlendirme -- Seviyeyi geçmek ve domuza ulaşmam için blokları yeniden düzenle ve değiştir'
+      K-1 maze debug 2_instruction: Ne eksik olduğunu bulun ve bana domuza ulaşmak için blok ekleyin!
+      K-1 maze debug 3_instruction: Birşey doğru değil. Domuzcuğa ulaşmak için blokları KALDIR!
+      K-1 maze debug 4_instruction: Kod üzerinde ilerleyip hatayı düzeltebilir misin. Galiba yanlış yöne gidiyorum.
       K-1 maze debug 5_instruction: Seviyeyi geçmek ve domuza ulaşmam için bloklarını ekleyerek hataları ayıkla!
       K-1 maze debug 6_instruction: Seviyeyi geçmek ve domuza ulaşmam için bloklarını ekleyerek hataları ayıkla!
       K-1 maze debug 7_instruction: Seviyeyi geçmek ve domuza ulaşmam için bloklarını ekleyerek hataları ayıkla!
@@ -2281,19 +1888,22 @@ tr:
       K-1 Maze Loops 7_instruction: Beni domuza götür! Tekrarla döngüsünü kullan.
       K-1 Maze Loops 8_instruction: Beni domuza götür! Tekrarla döngüsünü kullan.
       K-1 Maze Loops 9_instruction: Beni domuza götür!
-      K-1 Maze Loops Assessment 1_instruction: |
-        Look at all we've learned! Use a
-        `repeat` loop to get me to the pig!
-      K-1 Maze Loops Assessment 2_instruction: |
-        Use `repeat` loops to get me to the
-        pig!
+      K-1 Maze Loops Assessment 1_instruction: "Bak neler öğrendik! Bana domuzcuğa ulaşmak için 'tekrarla' döngüsünü kullanın!"
+      K-1 Maze Loops Assessment 2_instruction: "Domuzcuğa ulaşmak için 'tekrarla' döngüsünü kullanın!"
       K-1 Maze Multi 14_instruction: Değerlendirme aşaması
       K-1 Maze Multi 15_instruction: Değerlendirme aşaması
-      K-1 Maze Sequence Assessment 1_instruction: "Let's see what you've learned!\r\nMove\none way, then another to get me to the pig."
-      K-1 Maze Sequence Assessment 2_instruction: |
-        Move one way, then another to
-        get me to the pig.
-      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
+      K-1 Maze Sequence Assessment 1_instruction: "Bakalım neler öğrendiğin! \\r Bir yöne ilerle sonra başka bir yöne ve domuza ulaştır."
+      K-1 Maze Sequence Assessment 2_instruction: Bir yöne ilerle ve sonra başka yöne ve beni domuza götür.
+      kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -2324,6 +1934,8 @@ tr:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2386,7 +1998,7 @@ tr:
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\r\n"
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\\r\n"
       NetSim Standalone Classroom Routers_instruction: |
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -2409,7 +2021,7 @@ tr:
         of a packet being dropped, multiple packets may take different paths to the
         destination, and the default max packet size is set to 6 additional characters.
         
-      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\\r\n\\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
       NetSim Standalone SendAB_instruction: |
         You and your partner share a single
         wire that can only be in state A or state B. You can set the wire to either
@@ -2465,22 +2077,14 @@ tr:
       NetSim_Variant3_instruction: |
         NetSim: Variant 3: Connects groups of 2-6 students
         with a router, and explores issues in routing and DNS
-      New Artist Project_instruction: |
-        Draw something awesome! Your code is saved
-        as a project that you can return to at any time.
-      NEW Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is
-        100 pixels in length, using a repeat loop?
-      NEW Course 4 Artist Functions 10.1_instruction: |
-        Use the functions from the
-        previous puzzles to draw this pattern.
+      New Artist Project_instruction: Muhteşem bir şey çiz! Kodunuzu istediğiniz zaman dönebileceğiniz bir proje olarak kaydedilir.
+      NEW Course 4 Artist Functions 1_instruction: '"Tekrarla" döngüsü kullanarak 100 piksel uzunluğunda olan bir kare çizebilir misin?'
+      NEW Course 4 Artist Functions 10.1_instruction: Bir önceki bulmacada yazdığın fonksiyonu kullanarak bu deseni çiz.
       NEW Course 4 Artist Functions 10_instruction: |
         Click "edit" to fill out the
         blocks in the function definition to make a 40 pixel square.
-      NEW Course 4 Artist Functions 11_instruction: "Now we want to create a new\nfunction called \"draw a line of squares\" that draws six squares all in a\nrow.  Can you build this function using the \"draw a square 20\" function\nthat we've already created? Note: See that we've changed the pen to be much\nthinner. Click \"edit\" on the  the \"draw a square 20\" function to see how!\r\n"
-      NEW Course 4 Artist Functions 12_instruction: |
-        Use the "draw a line of squares"
-        function from the last puzzle to draw this pattern."
+      NEW Course 4 Artist Functions 11_instruction: "Now we want to create a new\nfunction called \"draw a line of squares\" that draws six squares all in a\nrow.  Can you build this function using the \"draw a square 20\" function\nthat we've already created? Note: See that we've changed the pen to be much\nthinner. Click \"edit\" on the  the \"draw a square 20\" function to see how!\\r\n"
+      NEW Course 4 Artist Functions 12_instruction: '"Kareden çizgi çiz " fonksiyonunu kullanarak şekildeki deseni çiz'
       NEW Course 4 Artist Functions 13_instruction: |
         Can you draw a star shape using
         the "draw a line of squares" function? Hint: Edit the "draw a line of squares"
@@ -2505,7 +2109,7 @@ tr:
         function block. The blocks in the function editor are the definition that
         make up "draw a square." When you're done looking around, click "Save
         and Close" and then "Run."
-      NEW Course 4 Artist Functions 6_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 20 pixels apart.\r\n"
+      NEW Course 4 Artist Functions 6_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 20 pixels apart.\\r\n"
       NEW Course 4 Artist Functions 7_instruction: |
         Are you getting the hang of how
         to use function blocks? Let's modify this square so that it is 200 pixels
@@ -2515,15 +2119,9 @@ tr:
         We have created a new function
         for you called "draw a triangle".  Can you edit the function definition
         to draw a triangle with 100 pixel sides?
-      NEW Course 4 Artist Functions 9_instruction: |
-        Can you solve this by adding
-        only one block?
-      NEW Course 4 Artist Functions inspire_instruction: |
-        Click here to see the inspiration
-        picture again.
-      New Course 4 Artist Functions Level 4_instruction: |
-        Use the "draw a square"
-        function to draw this pattern.
+      NEW Course 4 Artist Functions 9_instruction: Bu sadece bir blok ekleyerek çözebilir misiniz?
+      NEW Course 4 Artist Functions inspire_instruction: İlham alınan resmi görmek için buraya tıklayın.
+      New Course 4 Artist Functions Level 4_instruction: '"Kare Çiz" fonksiyonunu kullanarak bu deseni oluştur.'
       NEW Course 4 Artist Params 1_instruction: |
         Let's define this function to draw
         a square with 50 pixel sides. Click "edit" to get started.
@@ -2531,16 +2129,14 @@ tr:
         Create a "draw a hexagon" function
         block with a length parameter. Hint: This hexagon has sides that are 100 pixels
         in length. 
-      NEW Course 4 Artist Params 11_instruction: |
-        Can you figure out how to draw
-        this shape? Edit the function to use the "sides" parameter.
+      NEW Course 4 Artist Params 11_instruction: 'Bu çekli çizebilir misin? "Kenar" parametresini kullanacak şekilde fonksiyonu güncelle.'
       NEW Course 4 Artist Params 12_instruction: |
         Can you complete this drawing?
         The sides of all the shapes are 100 pixels long.
       NEW Course 4 Artist Params 12a_instruction: |
         This image is similar to the last.
         Can you use a "for loop" with your function to make this design?
-      NEW Course 4 Artist Params 13_instruction: "Let's edit this \"draw a polygon\"\nfunction. It already has a \"sides\" parameter. Now, let's add a \"length\"\nparameter. \r\nHint: The perimeter of each shape is 200 pixels long. Do you\nremember the equation to make shapes the same size when they have a different\nnumber of sides?"
+      NEW Course 4 Artist Params 13_instruction: "Let's edit this \"draw a polygon\"\nfunction. It already has a \"sides\" parameter. Now, let's add a \"length\"\nparameter. \\r\nHint: The perimeter of each shape is 200 pixels long. Do you\nremember the equation to make shapes the same size when they have a different\nnumber of sides?"
       NEW Course 4 Artist Params 14_instruction: |
         Edit "draw a spiral edge" to
         use "length" and "sides" parameters, then recreate these shapes.
@@ -2549,7 +2145,7 @@ tr:
         you've written, and some more for you to play with. Draw something awesome!
         Play with the pen width to see how different your drawings look!
       NEW Course 4 Artist Params 2_instruction: '"50 piksel kenarlı bir üçgen çiz" fonksiyonunu sıfırdan yaz'
-      NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n5 triangles in a row. Hint: each triangle is 30 pixels apart.\r\n"
+      NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n5 triangles in a row. Hint: each triangle is 30 pixels apart.\\r\n"
       NEW Course 4 Artist Params 4_instruction: |
         Do you notice anything different
         about these function blocks? Click “Run” to see what happens.
@@ -2574,14 +2170,12 @@ tr:
         definition of "draw a square" and add a parameter. It should take a length
         parameter, just like the triangle. This time, draw 3 squares: 25, 50 and 75
         pixels in length, each 100 pixels apart.
-      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n \r\nWant to know how our inspiration pattern was made? "
+      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\\r\n \\r\nWant to know how our inspiration pattern was made? "
       NEW Course 4 Artist Vars 1.5_instruction: |
         Take a look at the code, can you
         see how the "set length" block and "length" block works together? Click
         on "Run" to see it in action. 
-      NEW Course 4 Artist Vars 12_instruction: |
-        Now, recreate the algorithm from
-        the last level and create a pentagon with sides of 150.
+      NEW Course 4 Artist Vars 12_instruction: Şimdi bir önceki algoritmayı tekrar yaratarak kenar uzunlukları 150 olan beşgen çiz.
       NEW Course 4 Artist Vars 2.5_instruction: |
         Take a look at the code, can you
         see how the "set length" block and "length" block works together? Click
@@ -2597,21 +2191,15 @@ tr:
         Let's try it again. Can you set the
         length variable to make this cool design with hexagons? Hint: It's a multiple
         of 10.
-      NEW Course 4 Artist Vars 6_instruction: "Draw this pattern by dropping the\nlength variable in the correct places, and then setting the right value for\nlength. (Hint: it's a multiple of 10).  \r\n\r\nSee how you only set the\nvalue for length once, and the code uses the right value everywhere?\r\n\r\n\r\n"
-      NEW Course 4 Bee For Loops 1_instruction: |
-        Use a loop to collect the nectar
-        from each flower.
-      NEW Course 4 Bee For Loops 10_instruction: |
-        Use your for loop "counter" variable
-        to control how far to move horizontally.
+      NEW Course 4 Artist Vars 6_instruction: "Draw this pattern by dropping the\nlength variable in the correct places, and then setting the right value for\nlength. (Hint: it's a multiple of 10).  \\r\n\\r\nSee how you only set the\nvalue for length once, and the code uses the right value everywhere?\\r\n\\r\n\\r\n"
+      NEW Course 4 Bee For Loops 1_instruction: Döngü kullanarak her bir çiçekten nektar al.
+      NEW Course 4 Bee For Loops 10_instruction: '"Sayaç" değişkenini döngüde kullanarak yatay olarak ne kadar ilerleneceğini belirle.'
       NEW Course 4 Bee For Loops 10a_instruction: |
         Ready for a challenge?  Take what
         you've learned about loops and try to solve this problem. Remember: You may
         have to run your solution multiple times before you figure out all of the
         steps.
-      NEW Course 4 Bee For Loops 11_instruction: |
-        Can you use the loop variable to
-        control movement and nectar collection?
+      NEW Course 4 Bee For Loops 11_instruction: Döngü kullanarak hareketleri ve nektar almayı başarabilir misin?
       NEW Course 4 Bee For Loops 2_instruction: |
         Add the code necessary to make sure
         the bee collects all the nectar. Look at how much code you need for this puzzle!
@@ -2620,13 +2208,8 @@ tr:
         Ah, the "for loop" makes this
         much easier! All the code you need is here, take a look at how it is put together
         then click "Run" to see how it works. 
-      NEW Course 4 Bee For Loops 4 4_instruction: |
-        Now we need to move forward "counter"
-        times, then get nectar "counter" times.  Can you use two "repeat" loops
-        to solve this challenge?
-      NEW Course 4 Bee For Loops 4_instruction: |
-        Replace the ??? in the "for loop"
-        with the largest amount of nectar the bee has to collect. 
+      NEW Course 4 Bee For Loops 4 4_instruction: 'Şimdi sayaç (counter) kadar ilerlemeliyiz. Sonra sayaç (counter) kadar nektar alalım. Problemi çözmek için "tekrarla" döngüsü kullanabilir misin?'
+      NEW Course 4 Bee For Loops 4_instruction: '?? ifadesini değiştirerek en çok sayıda nektarı toplamasını sağla. '
       NEW Course 4 Bee For Loops 5 5_instruction: |
         Are you getting the hang of using
         the "for loop"? Let's help the bee get the rest of the nectar.
@@ -2638,8 +2221,8 @@ tr:
         is called the "increment". Each time the loop is run, the counter variable
         changes by the value of the increment. Try collecting these flowers using
         an increment of 2.
-      NEW Course 4 Bee For Loops 7_instruction: "Now, let's combine the \"counter\"\nvariable with a math block! How can you use the \"counter\" variable to navigate\nthis garden with the fewest number of blocks possible? What do you need to\ndo to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\r\n\r\nRemember: If your loop is counting up, the increment is added\nto your \"counter\" variable each time through."
-      NEW Course 4 Bee For Loops 8_instruction: "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?\r\nHint: What do you need\nto add to each number to get the number after it?"
+      NEW Course 4 Bee For Loops 7_instruction: "Now, let's combine the \"counter\"\nvariable with a math block! How can you use the \"counter\" variable to navigate\nthis garden with the fewest number of blocks possible? What do you need to\ndo to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\\r\n\\r\nRemember: If your loop is counting up, the increment is added\nto your \"counter\" variable each time through."
+      NEW Course 4 Bee For Loops 8_instruction: "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?\\r\nHint: What do you need\nto add to each number to get the number after it?"
       NEW Course 4 Bee For Loops 9_instruction: |
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
@@ -2648,21 +2231,15 @@ tr:
         Take a look at each piece of the
         "for loop" that you have just created.  Can you figure out which numbers
         you need to double to solve this puzzle? Why does it work?
-      NEW Course 4 Play Lab Params 11_instruction: |
-        It's free play time! Have fun
-        with all the blocks in your tool box. 
+      NEW Course 4 Play Lab Params 11_instruction: 'Bu eğlence zamanı, araç kutundaki bütün bloklarla eğlen. '
       NEW Course 4 Play Lab Params 5 5_instruction: |
         Let's try that again, but with
         less help. What do you need to edit this time to make the actors patrol?
-      NEW Course 4 Play Lab Vars 4 5_instruction: |
-        “What do you think this code will
-        do? Press “Run” to see what happens.”
+      NEW Course 4 Play Lab Vars 4 5_instruction: 'Bu kodun ne yapacağını düşünüyorsun? "Çalıştır" tuşuna bas ve neler olduğunu gör'
       NEW Course 4 Play Labs For Loops 7a_instruction: |
         Using what you learned so
         far, can you have Dinosaur take a step forward every time Penguin counts?
-      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: |
-        It's Free Play
-        time, have fun with all the blocks in your tool box. 
+      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Bu eğlence zamanı, araç kutundaki bütün bloklarla eğlen. '
       NEW Course 4 Play Labs For Loops 8a_instruction: |
         Challenge: How would you
         use the "for loop" to get every actor to go around and say their actor number,
@@ -2670,7 +2247,7 @@ tr:
       New Play Lab Project_instruction: |
         Create your own story or game! Your code
         is saved as a project you can return to at any time.
-      Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
@@ -2681,7 +2258,7 @@ tr:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
-      October15 bat_instruction: "Freeplay: Here are some functions to play with.  Can\nyou draw a bat?\r\n"
+      October15 bat_instruction: "Freeplay: Here are some functions to play with.  Can\nyou draw a bat?\\r\n"
       October15 ghost 1_instruction: |
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -2699,24 +2276,11 @@ tr:
       Overworld Chop Trees_instruction: Güneş batmadan önce bir ev inşa etmemiz gerekiyor. Evler için çok miktarda odun gerekir. 3 ağacın tümünü kesin.
       Overworld Free Play 20x20_instruction: Tebrikler! Tüm bulmacalarımızı tamamladınız! Şimdiye kadar öğrendiklerinizle maden çıkarın inşa edin ve benzersiz bir şey oluşturun.
       Overworld Free Play_instruction: Bu arazi oynamak için size verildi. Ne inşa edeceğinizi seçmek size kalmış.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
+      Overworld House Frame - A_instruction: Hadi yeni evimizi yapalım! Burası iyi görünüyor. Toprak bloklarının üzerine bir iskelet inşa edin.
+      Overworld House Frame - C_instruction: Hadi yeni evimizi yapalım! Burası iyi görünüyor. Toprak bloklarının üzerine bir iskelet inşa edin.
+      Overworld House Frame B_instruction: Bir duvar bitmiş, evin geri kalanını kat planını takip ederek inşa edelim! Burada kendini oldukça fazla tekrar etmen gerekecek.
+      Overworld House Frame B2_instruction: Bir duvar bitmiş, evin geri kalanını kat planını takip ederek inşa edelim! Burada kendini oldukça fazla tekrar etmen gerekecek.
+      Overworld House Frame C_instruction: Bir duvar bitmiş, evin geri kalanını kat planını takip ederek inşa edelim! Burada kendini oldukça fazla tekrar etmen gerekecek.
       Overworld House Frame Chosen_instruction: 'Evin geri kalan kısmını istediğin bir malzemeyi kullanarak inşa et. "Tekrarla" komutu çok işine yarayacak.'
       Overworld House Frame_instruction: Hadi yeni evimizi yapalım! Burası iyi görünüyor. Toprak bloklarının üzerine bir iskelet inşa edin.
       Overworld Minecart Track_instruction: Bir sürü yer altı kaynağıyla yüzeye geri döndünüz. Şimdi evinizin önündeki toprak patika boyunca bir yol yapacağız. İlk iş patikayı temizlemek. Patikayı takip edin ve ağaçları temizleyin.
@@ -2754,7 +2318,7 @@ tr:
         button and you should see at least one version. Each time you go back to a
         Big Game level you'll get a new record in your version history that you can
         revert back to.
-      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\\r\n\\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
       PDAlg Design Recipe Delete_instruction: |
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -2910,23 +2474,30 @@ tr:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee - Ryan_instruction: |
+        These clouds are bugging me! Some of the clouds
+        have flowers inside, and some don't. I should check each cloud, and only
+        get nectar from the flowers.
       Quantum Bee_instruction: |
         Purple flowers may have either 1 or 0 nectar, but
         you don't know which one! Be careful not to collect nectar from a purple
         flower if it doesn't have any. Check if the nectar is equal to 1 by using
         the if block.
-      Ryan - 4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      Ryan - 4-5 Bee Conditionals 2_instruction: Arı sadece nektar istiyor. Bütün nesneler çiçek değil bu sebeple her bulutun altını çiçek mi diye kontrol ediniz. Eğer çiçekse nektar alın.
       Ryan - Bee Conditionals_instruction: |
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
         is hiding a flower. If it is, then you can gather nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.
-      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
+      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
         This butterfly is named Sam, and
         the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels
@@ -2991,23 +2562,14 @@ tr:
         can you get it right on your first try?
       scrat 19_instruction: '"If-else" bloğuyla bir alıştırma daha yapalım, ilk denemende doğru yapabilir misin?'
       scrat 20_instruction: Sadece 3 blok ekleyerek daha karmaşık bir labirenti çözmeme yardım eder misin? Eğer doğru yaparsan, ne kadar uzun olursa olsun dolambaçlı yollardan yürüyebilirim. Çabuk! Buz eriyor!
-      SpecialFrozenLevel_instruction: |
-        You've officially become a master artist!
-        Create a winter wonderland.
+      SpecialFrozenLevel_instruction: Resmen bir usta sanatçı haline geldiniz! Kış harikalar diyarı yaratın.
       Standalone_Artist_1_instruction: |
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
-      Standalone_Artist_2_instruction: |
-        Draw this diamond with 120 and 60 degree
-        angles and 150 pixel long sides.
-      Standalone_Artist_3_instruction: |
-        Can you draw this hexagon with 100 pixel
-        sides and 60 degree turns?
-      Standalone_Artist_4_instruction: |
-        Now you've got a new block to play with,
-        the loop. This will repeat a set of commands. What happens if you loop these
-        commands 6 times?
+      Standalone_Artist_2_instruction: 120 ve 60 derecelik açılar ile 150 piksellik uzun kenarları kullanarak bu elması çiz.
+      Standalone_Artist_3_instruction: Bu altıgeni 100 piksellik kenarlar ile 60 derecelik dönüşler kullanarak çizebilir misin?
+      Standalone_Artist_4_instruction: Şimdi yeni bir döngü bloğun var. Komutlardan bazılarını yineleyecek. Bu komutları 6 kez döndürürsen ne olur?
       Standalone_Artist_5.5_instruction: |
         Notice how we simplified the diamond code
         by turning it into a loop. You can loop that whole sequence 12 times to draw
@@ -3020,11 +2582,7 @@ tr:
         Loop this hexagon code 6 times to create
         the design. How many degrees will you need to turn each time? Hint: divide
         the number of degrees in a circle by the number of times you are looping.
-      Standalone_Artist_7_instruction: |
-        A function is another programming tool to
-        help you avoid repeating yourself. This function draws a flower, so you can
-        use it any time you want to draw a flower. Use this and the new jump block
-        to draw these flowers. Hint: The flowers are 150 pixels apart
+      Standalone_Artist_7_instruction: 'Fonksiyon, kendini tekrarlamandan kaçınmanı sağlayan farklı bir programlama aracıdır. Bu fonksiyon çiçek çizebilir, yani çiçek çizmek istediğin zaman bunu kullanabilirsin. Çiçekleri çizmek için bunu ve yeni atlama bloğunu kullan. İpucu: Çiçekler 150 piksel arayla durmaktalar'
       Standalone_Artist_8_instruction: |
         Here's a function called "Draw a shape"
         that we've programmed to draw hexagons. Run the code to see what it does
@@ -3081,7 +2639,7 @@ tr:
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
         classmates (Click to see full instructions)
-      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\\r\n\\r\nConstraints:\\r\n- Packets may contain\nonly 6 characters\\r\n- Packets may drop with small probability\\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the Internet Simulator,
         a Domain Name System (DNS) is provided for you and knows the IP addresses
@@ -3092,13 +2650,13 @@ tr:
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\r\n"
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\\r\n"
       U2L3 NetSim Hub Mode_instruction: |
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
         the message and response?
-      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
-      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\r\n\r\n"
+      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\\r\n\\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\\r\n\\r\n"
       U2L7 NetSim Need for Packets_instruction: |
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
@@ -3266,7 +2824,7 @@ tr:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -3336,7 +2894,7 @@ tr:
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\r\n"
+      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\\r\n"
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -3384,8 +2942,8 @@ tr:
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
         Write a program that simulates the rolling of
-        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
-        is something other than 7 or 11. (Click to see full instructions)
+        two dice. Roll the dice repeatedly until the sum of the dice is either 7 or
+        11.
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -3540,16 +3098,16 @@ tr:
       U3 - Practice Create Performance Task_instruction: |
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\r\n"
-      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\\r\n"
+      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\\r\n"
       U3 - Return Values - constrainTurtle_instruction: |
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -3585,12 +3143,12 @@ tr:
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -3604,7 +3162,7 @@ tr:
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -3729,7 +3287,7 @@ tr:
       U313 Two Buttons with Ids_instruction: |
         Predict what will happen. Once you've
         made a prediction, run the code to see what happens. (Click to see full instructions)
-      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto see full instructions)"
+      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\\r\n(Click\nto see full instructions)"
       U3L03 - draw step_instruction: |
         Write the drawStep function. (Click to see
         full instructions)
@@ -3941,7 +3499,7 @@ tr:
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
         button.
-      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
+      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\\r\n\\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
       U3L13 - Debug Id Problem_instruction: |
         Improve the button by choosing a descriptive
         and meaningful ID. (Click to see full instructions)
@@ -4115,8 +3673,10 @@ tr:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)
@@ -4233,7 +3793,7 @@ tr:
       U3L19 - DEMO up down count practice app_instruction: |
         Try out the demo app
         (Click to see full instructions)
-      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto foo to see the string change. \r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \r\n"
+      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \\r\nDo this: \\r\n1. Try changing the value assigned\nto foo to see the string change. \\r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \\r\n"
       U3L19 - fix the var name syntax error v2_instruction: |
         Fix the error and get
         it to print the value of both variables (Click to see full instructions)
@@ -4262,7 +3822,7 @@ tr:
         Add another variable called
         "lives" and set the value to 3. Print the value of the variable to the console.
         (Click to see full instructions)
-      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
+      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \\r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \\r\n\\r\n\\r\nGIF: U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |
         Set up the down button to
         decrease the value of count by 1 each time it is clicked. (Click to see full
@@ -4415,7 +3975,7 @@ tr:
         You are given the string "Wisdom begins
         with wonder." Use the string.substring(begin, end) function to print "begin"
         and "nder" to the console.
-      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\\r\nPrint the strings and their index to the console.\n"
       U3L25 String Parsing 6_instruction: |
         Write a function that takes a name (first
         last) and reorders it (last, first).
@@ -4460,7 +4020,7 @@ tr:
         right of the starting location. (Click to show full instructions)
       U4 - add createRecord to contacts App_instruction: |
         Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
@@ -4486,11 +4046,11 @@ tr:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)
@@ -4611,7 +4171,7 @@ tr:
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
       U4 - Objects - pullValues_instruction: |
-        Create an event handler for the "Add
+        Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |
@@ -4619,7 +4179,7 @@ tr:
         starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |
         Add code to your event handler
-        fro the "Add Contact" button so that when a new contact is added the inputs
+        for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
       U4 - Objects - showContact1_instruction: |
@@ -4639,21 +4199,21 @@ tr:
       U4 - Objects - writeWrap_instruction: |
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\r\n"
-      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\r\n"
-      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
-      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\r\n"
-      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\\r\n"
+      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\\r\n"
       U4 - ReadRecords - Contacts App 1_instruction: |
-        Write a function called "updateLocalData"
-        that copies the data in your database into your "contacts" global variable.
+        Use readRecords to copy the
+        data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |
-        Create a function called "refreshLocalData"
+        Create a function called refreshLocalData.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |
         Add a call to "refreshLocalData"
@@ -4673,9 +4233,9 @@ tr:
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: Template
-      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
-      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
+      U4L02 - Objects - Template1_instruction: Şablon
+      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\\r\n\\r\n"
+      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\\r\n\\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
         We want to improve the user experience.
         Once they have submitted their data for storage, it would be nice to clear
@@ -4697,25 +4257,35 @@ tr:
       U4L15 Read Data 1_instruction: |
         Run the level and see what happens. Then edit
         the code to make it print a different column of information.
-      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
-      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
-      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\\r\n\\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
+      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\\r\n\\r\n"
+      U4L15 Read Data 4_instruction: "\\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - Final Project - Project Level_instruction: |
+        Build your final project here.
+        (Click to see full instructions)
+      U6 - updateRecord - Callback Success Parameter_instruction: |
+        Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
       U6 - updateRecord - Contacts - Edit event handler_instruction: |
-        (Click to see
-        full instructions)
-      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+        Write event
+        handlers for the Edit Contacts UI elements. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: |
+        Set up the UI elements
+        needed to edit contacts. (Click to see full instructions)
       U6 - updateRecord - Contacts - Save edited contact_instruction: |
-        (Click to
-        see full instructions)
-      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+        Use updateRecord
+        to store the user's edits in the database. (Click to see full instructions)
+      U6 - updateRecord - Default Block_instruction: |
+        Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
       U6 - updateRecord - Update Nonexistent Record_instruction: |
-        (Click to see full
-        instructions)
+        Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: 'Bu blokların bazılarının altında gizli lav bulunur ve ileri gitmeden önce bunların üstünü örtmeniz gerekir. Burada "eğer" komutu çok işimize yarayacak. Bu blokları çıkarmak için doğru yere bir "ileri git" komutu ekleyin.'
       Underground If Statements_instruction: 'Şimdi işler biraz daha zorlaşıyor. 3 kızıltaş çıkarın ama lavın içine düşmeyin. Ortaya çıkardığınız lavların üstüne kırıktaş yerleştirmek için bir "eğer" komutu kullanın.'
       Underground Iron_instruction: Erimiş lavın içine yürümek kötü bir fikir olabilir. Bir köprü yapmak için kırıktaş yerleştirin ve ardından en az iki demir blok çıkarın.
       Underground Mine in a Circle_instruction: 5 elmas ve 7 kızıltaş bulun! Bir karenin içinde yürümek için bir tekrar döngüsünün içinde bir tekrar komutu kullanmayı deneyin.
       Underground Mining Coal_instruction: En değerli kaynakları yer altında bulabilirsiniz ama içerisi karanlık olabilir. En az 2 meşale yerleştirin ve 2 kömür çıkarın.
-      Underground Test Level_instruction: Collect all of the minerals!
+      Underground Test Level_instruction: Tüm mineralleri topla!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

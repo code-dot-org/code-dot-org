@@ -21,7 +21,7 @@ zh-TW:
   twentyhours_heading: 試試看我們的資訊科學課程簡介
   twentyhours_text: 完成您的第一個小時的程式設計課程了嗎？在此後續課程中你可以瞭解更多資訊科學和程式設計的核心觀念。
   og_title: 每個孩子都應該得到機會
-  og_description: 每個學校的每個學生都應有機會學習電腦科學。
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: '加入<a href="http://hourofcode.com">一小時的程式設計課程</a> <br/>，2014 年 12 月 8 日至 14 日 <br/>'
   hoc2014_students: 學生
   hoc2014_try: 試一試
@@ -58,23 +58,21 @@ zh-TW:
   congratulations: 恭喜你！
   congratulations_on_completing_hoc: 恭喜你，你已完成一小時的程式設計課程。
   congratulations_volunteer: '恭喜：你已經試過一小時的程式設計課程了，你可以<a href="https://code.org/volunteer">開一間教室並註冊為志工</a>來幫助學生學習一小時的程式設計課程'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated Course
+  congratulations_on_completing_course1: 恭喜您完成課程 1
+  congratulations_on_completing_course2: 恭喜您完成課程 2
+  congratulations_on_completing_course3: 恭喜您完成課程 3
+  congratulations_on_completing_course4: 恭喜您完成課程 4
+  congratulations_on_completing_accelerated: 恭喜您完成加速課程
   congrats_next_tutorials_title: 接下來請嘗試下面這些課程
   congrats_next_tutorials_desc: '嘗試這些較短，約一小時的課程或嘗試<a href="%{current_path}/next"> 合作夥伴教程</a>。'
   get_a_certificate_of_achievement: 獲取成就證書
-  view_course: View course
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  view_course: 查看課程
+  view_unit: 查看單元
+  make_app: 製作一個App
+  congrats_guest_speaker_title: 給特別的演講者一個教室。
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_guest_speaker_cta: 尋找一位特約講者
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -85,10 +83,11 @@ zh-TW:
   third_party_platform_all: 'Platform: Web, iPad & Android'
   third_party_platform_mobile: 'Platform: iPad & Android'
   third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_varies: 價格:視方案決定
   third_party_price_free: 'Price: Free'
   third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
   third_party_tynker_btn_site: Visit Tynker
@@ -109,21 +108,21 @@ zh-TW:
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
   third_party_appinv_btn_forum: App Inventor 2 Forum
   third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. With CodeHS, you can get the help that every new programmer needs to work through problems and keep learning. Our tutors are everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
+  third_party_codehs_btn_try: Intro CS Learn More for Schools
   third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Visit Codecademy
   third_party_organization: Organization
   third_party_curriculum: 課程
   third_party_pricing: Pricing
-  third_party_cost_free: Free
+  third_party_cost_free: Free for students and teachers
   third_party_cost_5permonth: $5/month per class
   third_party_cost_299: $2.99/download
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
@@ -180,7 +179,7 @@ zh-TW:
   learn_next_level: 繼續到下一級別
   learn_online: 嘗試其他線上課程
   learn_classes: 尋找當地的教室
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: '我已經完成了 #HourOfCode - 快來看看吧！ @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -279,6 +278,9 @@ zh-TW:
   homepage_slot_text_link_othercourses: 其他線上課程
   homepage_slot_text_title_educators: 教育工作者
   homepage_slot_text_blurb_educators: 教您的學生。
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: 中學
+  homepage_slot_text_link_high: 高中
   homepage_slot_text_link_k5: K-5 年級課程
   homepage_slot_text_link_fullcurriculum: 看看我們完整的課程
   homepage_slot_text_link_pd: 專業發展
@@ -482,6 +484,7 @@ zh-TW:
   dashboard_navigation_all_sections: 學生帳戶及學習進度
   dashboard_navigation_view_progress: 查看進度
   dashboard_navigation_view_text_responses: 觀看文字回應
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: 新增學生
   dashboard_navigation_manage_students: 管理學生們
   dashboard_navigation_lesson_plans_resources: 教案和資源
@@ -575,10 +578,21 @@ zh-TW:
   dashboard_progress_completed_too_many_blocks: 完成，但使用過多積木
   dashboard_progress_completed_perfect: 完美完成
   dashboard_progress_furthest_level_attempted: 嘗試到的最遠關卡
+  dashboard_progress_submitted: 已提交
   dashboard_stage: 階段
   dashboard_puzzle: 關卡
   dashboard_question: '問題 '
   dashboard_response: 回應
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: 正確
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 去年的一小時程式設計有令人難以置信的統計資料。在一個禮拜內：
   stats_hoc_2013_image_alt: 統計來自2013的Hour of Code
   dashboard_teacher: 教師
@@ -597,7 +611,7 @@ zh-TW:
   dashboard_faq_k5: 五年級課程的常見問題
   dashboard_announcements: 公告
   dashboard_announce_view_all: 全部查看
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
   dashboard_announce_button_text: 瞭解更多資訊
   dashboard_announce_hoc: '<b>2015 年 11 月 9 日</b>-全新的一小時程式設計教學課程，以即將上映的電影星際大戰：原力覺醒。與雷伊一同指導新的BB-8機器人完成所有的任務。然後，在遙不可及的銀河系中，加入萊婭來建立並共享你的遊戲。'
   dashboard_announce_playlab: |
@@ -712,6 +726,12 @@ zh-TW:
   course3_name: 課程 3
   course4_name: 課程 4
   accelerated_name: 速成課程
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  applab_name: App Lab
+  applab_gradelevel: 13歲以上
+  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: 適合年齡自 4 至104歲
   codeintl_gradelevel: 適合年齡自 4 至104歲
   thinkersmithspanish_gradelevel: Por todos

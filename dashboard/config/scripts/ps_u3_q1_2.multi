@@ -1,0 +1,40 @@
+name 'PS U3 Q1-2'
+title 'Robots in a grid of square Part 1'
+
+height '160'
+
+wrong 'https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png'
+right 'https://images.code.org/c59d71ecac547d755d63a3f8fca56843-image-1459376262204.png'
+wrong 'https://images.code.org/3e341ed57ac366663807df24b2a7e329-image-1459376286013.png'
+wrong 'https://images.code.org/d658fb7f959603138c39ed5f7666fd63-image-1459376301845.png'
+wrong 'https://images.code.org/841ec4583e3d9f0b41d1b51b496ef94b-image-1459376320683.png'
+
+markdown <<MARKDOWN
+This question and the next one use a robot in a grid of squares.  The robot is represented as a triangle, which is initially facing towards the right side of the grid.  The robot is moved according to the following instructions.
+
+| **Instruction** | **Explanation** |
+|-----------------|-----------------|
+| MOVE\_FORWARD() |The robot moves one square forward in the direction it is facing.|
+| ROTATE\_RIGHT() |The robot rotates in place 90 degrees clockwise (i.e., makes an in-place right turn).|
+| ROTATE\_LEFT()  |The robot rotates in place 90 degrees counterclockwise (i.e., makes an in-place left turn).|
+| REPEAT n TIMES  |The block of instructions contained between the braces { } is repeated n times.|
+
+Consider the following program which uses commands from the pseudocode described above.
+
+	REPEAT 4 TIMES {
+		MOVE_FORWARD()
+		MOVE_FORWARD()
+		MOVE_FORWARD()
+		ROTATE_RIGHT()
+		MOVE_FORWARD()
+		ROTATE_RIGHT()
+		MOVE_FORWARD()
+		ROTATE_RIGHT()
+	}
+
+
+
+Which of the following images shows the path and ending location of the robot that will result from executing the code above? The starting location of the robot is shown as dotted triangle for cases where the robot does not start and end at the same location.
+
+
+MARKDOWN

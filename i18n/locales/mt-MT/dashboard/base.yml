@@ -24,6 +24,8 @@ mt:
   hello: Haw Lilly
   welcome_back: 'Merħba lura, %{name}'
   submit: Submit
+  unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Żid Għalliem:'
@@ -218,7 +220,7 @@ mt:
       free_play:
         playlab: Agħmel App
         artist: Pinġi Xi Ħaġa
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Agħmel App
     user:
       classroom: Teacher Home Page
@@ -316,6 +318,7 @@ mt:
     heading_hoc2014: '<h2>Is-siegħa tal-Kodiċi għall-</h2> <h1>L-etajiet kollha</h1>'
     heading_elementary: '<h2> korsijiet t-20 siegħa għall-</h2> <h1>fundamenti tax-Xjenza fil-Kompjuter (etajiet kollha)</h1>'
     heading_apps: '<h2>Gost għal</h2> <h1>Kulħadd.</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Il-kors aċċellerata għall-</h2> <h1>L-etajiet kollha</h1>'
     your_gallery: Gallery
     no_primary_course: Ipprova kors tal-Code Studio
@@ -411,6 +414,12 @@ mt:
       current: Livelli kurrenti
       unused: Livelli mhux użati
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Classic Maze
       body: Ipprova dan it-taghlim baziku tax-xjenza tal-kompjuter. Milljuni bhalek pprovaw diga.
@@ -452,10 +461,10 @@ mt:
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
     report_bug: Report Bug
     support: Ikseb l-Għajnuna
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: It-tweġiba żbaljata
     wrong_body: "The answer you've entered is not correct.  Please try again!"
@@ -463,6 +472,23 @@ mt:
     correct_body: Dik hi t-tweġiba t-tajba.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Thank you
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting answers.
+    correct_title: Thank you
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting answers.
+    correct_title: Thank you
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Soluzzjoni mhux korretta
     wrong_body: "The solution you've entered is not correct.  Please try again!"
@@ -480,6 +506,8 @@ mt:
     placeholder: Enter your answer here
     open_response_title: Grazzi
     open_response_body: Thanks for your response!
+    correct_title: Korrett
+    correct_body: Dik hi t-tweġiba t-tajba.
   dialog:
     ok: OK
     startover_title: Are you sure you want to start over?
@@ -533,6 +561,7 @@ mt:
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
     assessment: evalwazzjoni
+    submitted: submitted
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
@@ -555,8 +584,8 @@ mt:
     name: Name
     updated: Aġġornat
     project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time.'
+    need_help: Try these courses to help you get started with your new project
     really_delete: Delete?
     delete_yes: 'Yes'
     delete_no: 'No'
@@ -589,3 +618,7 @@ mt:
           other: Other
         detail: Please provide as much detail as possible regarding the content you are reporting.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

@@ -24,6 +24,8 @@ fr:
   hello: Bonjour tout le monde
   welcome_back: 'Bienvenue, %{name}'
   submit: Envoyer
+  unsubmit: Ne plus soumettre le travail
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Ajouter un enseignant :'
@@ -226,7 +228,7 @@ fr:
       free_play:
         playlab: Créer une application
         artist: Dessine quelque chose
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Créer une application
     user:
       classroom: "Page d'accueil de l'enseignant"
@@ -324,6 +326,7 @@ fr:
     heading_hoc2014: "<h2>L'Heure du Code pour</h2><h1>tous les âges</h1>"
     heading_elementary: '<h2>20 heures de cours pour</h2><h1>Débutants en informatique (tous les âges)</h1>'
     heading_apps: '<h2>Amusant pour</h2><h1>Tout le monde</h1>'
+    heading_tools: '<h2>Prêt pour la prochaine étape?</h2> <h1>Outils JavaScript pour le lycée</h1>'
     heading_legacy: '<h2>Nos cours pour</h2><h1>Tous les âges</h1>'
     your_gallery: Galerie
     no_primary_course: Essayer un cours sur Code Studio
@@ -419,6 +422,12 @@ fr:
       current: Niveaux Actuels
       unused: Niveaux Inutilisés
   upsell:
+    applab:
+      title: Labo des applis
+      body: App Lab est un environnement de programmation où vous pouvez créer des applications simples. Concevez une application, codez-la avec Blocky ou JavaScript, puis partagez-la en quelques secondes.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: 'Âge recommandé : 13+'
+      cta: Apprendre comment
     hoc:
       title: Labyrinthe classique
       body: "Lancez-vous dans la découverte des bases de l'informatique. Des millions de personnes ont tenté l'aventure."
@@ -460,10 +469,10 @@ fr:
   landing:
     prerelease: "C'est un cours  <span class='betatext'>bêta</span>. Il ne s'agit pas de la version finale du cours, le cours est susceptible d'être modifié tant que nous recevrons des commentaires à son sujet et que des améliorations seront effectuées."
     prerelease_hoc2014: "Ce tutoriel est en <span class='betatext'> version bêta</span>.  Il est susceptible d'être modifié en fonction des commentaires reçus qui apporteront des améliorations."
-    feedback: Envoyer un commentaire
     report_bug: Signaler un bogue
     support: "Obtenir de l'aide"
     support_url: //support.code.org
+    help_resources: Aide et ressources
   multi:
     wrong_title: Réponse incorrecte
     wrong_body: "La réponse que tu as entrée n'est pas correcte. Essaie encore !"
@@ -471,6 +480,23 @@ fr:
     correct_body: "C'est la bonne réponse."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Merci
+    wrong_body: "Merci d'avoir soumis une réponse."
+    correct_title: Merci
+    correct_body: "Merci d'avoir soumis une réponse."
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Merci
+    wrong_body: Thank you for submitting answers.
+    correct_title: Merci
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Merci
+    wrong_body: Thank you for submitting answers.
+    correct_title: Merci
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Solution incorrecte
     wrong_body: La solution que tu as entrée est incorrecte. Essaie encore !
@@ -488,6 +514,8 @@ fr:
     placeholder: Entrez votre réponse ici
     open_response_title: Merci
     open_response_body: Merci pour ta réponse !
+    correct_title: Correct
+    correct_body: "C'est la bonne réponse."
   dialog:
     ok: OK
     startover_title: Es-tu certain(e) de vouloir recommencer ?
@@ -542,6 +570,7 @@ fr:
     completed_perfect: terminé, parfait
     furthest_level_attempted: le plus haut niveau tenté
     assessment: évaluation
+    submitted: submitted
   studio:
     courses_working_on: Les cours sur lesquels vous travaillez
     completed_courses: Cours terminés
@@ -598,3 +627,7 @@ fr:
           other: Autres
         detail: Veuillez fournir autant de détails que possible au sujet du contenu que vous signalez.
         acknowledge: "En soumettant ces informations, vous reconnaissez qu'elles sont traitée selon les termes de la %{link_start_privacy}Politique de Confidentialité%{link_end} et des %{link_start_tos}Conditions Générales d'Utilisation%{link_end}"
+  components:
+    icon_library:
+      search_placeholder_text: Cherche pour un icon...
+      no_icons_found: "Pas d'icone trouvée"

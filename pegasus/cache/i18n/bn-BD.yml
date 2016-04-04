@@ -79,121 +79,121 @@
   congratulations_volunteer: "অভিনন্দন: আপনি এক ঘন্টার কোড চেষ্টা করেছেন, https://code.org/volunteer
     এখান থেকে শ্রেণীকক্ষে স্বেচ্ছাসেবক হবার জন্য নিবন্ধন করুন এবং ছাত্র এক ঘন্টার
     কোড শিখতে সহায়তা করুন!"
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: "কোর্স ১ সম্পন্ন করার জন্য অভিনন্দন"
+  congratulations_on_completing_course2: "কোর্স ২ সম্পন্ন করার জন্য অভিনন্দন"
+  congratulations_on_completing_course3: "কোর্স ৩ সম্পন্ন করার জন্য অভিনন্দন"
+  congratulations_on_completing_course4: "কোর্স ৪ সম্পন্ন করার জন্য অভিনন্দন"
+  congratulations_on_completing_accelerated: "অ্যাক্সিলারেটেড কোর্স সম্পন্ন করার জন্য
+    অভিনন্দন"
   congrats_next_tutorials_title: "পরবর্তী পাঠ সহায়িকা (টিউটোরিয়াল) গুলী চেষ্টা করুন"
   congrats_next_tutorials_desc: এই ছোট, ১ ঘন্টা টিউটোরিয়াল চেষ্টা করুন বা <a href="%{current_path}/next">
     সঙ্গী টিউটোরিয়াল</a> চেষ্টা করুন।
   get_a_certificate_of_achievement: "আপনার প্রশংসাপত্র গ্রহণ করুন"
-  view_course: View course
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
-    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
-    or on Android or iOS devices. Students play the initial set of “Basic” levels
-    in Lightbot. They will learn how to tell a computer what to do with a series of
-    basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
-    short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  view_course: "কোর্স দেখুন"
+  view_unit: "ইউনিট দেখুন"
+  make_app: "একটি অ্যাপ্লিকেশন তৈরি করুন"
+  congrats_guest_speaker_title: "আপনার শ্রেনীকক্ষের জন্য অতিথি স্পীকার খুঁজুন"
+  congrats_guest_speaker_desc: "এখন আপনার ছাত্র একটি কম্পিউটার বিজ্ঞান কোর্স সমাপ্ত
+    করেছেন, উদযাপন করার চেষ্টা করে দেখতে পারেন এবং একটি অতিথি বক্তাকে আপনার শ্রেণীকক্ষ
+    আমন্ত্রণ করে তারা বাস্তব জীবনে কি গড়ে তুলতে পারেন তা  দেখানোর চেষ্টা করুন। আপনি
+    আমাদের স্বেচ্ছাসেবকদের মানচিত্র ব্যবহার করে, স্থানীয় স্বেচ্ছাসেবকদের সঙ্গে যোগাযোগ
+    করতে পারেন শ্রেণীকক্ষ পরিদর্শন জন্য অথবা যেকোন শহরে কম্পিউটার বিজ্ঞান ছাত্র বা
+    প্রযুক্তিগত পেশাদার খুঁজতে পারেন যারা দূরবর্তী অবস্থান থেকে ভিডিও চ্যাটের মাধ্যমে
+    আপনার ছাত্রদের উদ্বুদ্ধ করার জন্য প্রস্তুত।"
+  congrats_guest_speaker_cta: "অতিথি স্পীকার সন্ধান করুন"
+  congrats_third_party_title: "এই অ্যাপ্লিকেশন এবং ওয়েবসাইটে আপনার নতুন দক্ষতা ব্যবহার
+    করুন"
+  third_party_gradelevel_kto8: "গ্রেড k-৮"
+  third_party_gradelevel_kto2: "গ্রেড k-২"
+  third_party_gradelevel_2to8: "গ্রেড ২-৮"
+  third_party_gradelevel_4to12: "গ্রেড ৪-১২"
+  third_party_gradelevel_5to12: "গ্রেড ৫-১২"
+  third_party_gradelevel_6plus: "গ্রেড ৬ +"
+  third_party_gradelevel_8plus: "গ্রেড ৮ +"
+  third_party_platform_all: "প্ল্যাটফর্ম: ওয়েব, আইপ্যাড & অ্যান্ড্রয়েড"
+  third_party_platform_mobile: "প্ল্যাটফর্ম: আইপ্যাড & অ্যান্ড্রয়েড"
+  third_party_platform_web: "প্ল্যাটফর্ম: ওয়েব"
+  third_party_price_varies: "দাম: পরিকল্পনা মত তারতম্য"
+  third_party_price_free: "দাম: বিনামূল্যে"
+  third_party_price_299: "মূল্য: ২.৯৯ ডলার/ডাউনলোড"
+  third_party_price_individual: "একক মূল্য: বিনামূল্যে ট্রায়াল & $ ২৫/মাস"
+  third_party_price_school: "স্কুল দাম: ফ্রি প্লান ও প্রো $২৫০০++"
+  third_party_tynker_desc: Tynker-এর সৃজনশীল কম্পিউটিং প্ল্যাটফর্ম শিশুদের গণনীয়
+    চিন্তায় সাহায্য করে এবং একটি মজার, স্বজ্ঞাত এবং কল্পনাপ্রবণ উপায়ে প্রোগ্রামিং
+    দক্ষতা বিকশিত করতে সাহায্য করে। আমাদের উদ্ভাবনী চাক্ষুষ প্রোগ্রামিং ভাষা, ইন্টারেক্টিভ
+    স্ব-বিন্যস্ত কোর্স, এবং খেলা ভিত্তিক প্রোগ্রামিং কার্যক্রম প্রোগ্রামিং এর একটি
+    সহজ ভূমিকা প্রদান করে এবং শিশুদের উদ্ভাবন ও সৃজনের ক্ষমতা দেয়।
+  third_party_tynker_btn_curriculum: "শুরুর দিকের পাঠকরা Tynker-এর পাঠক্রম চেষ্টা
+    করুন।"
+  third_party_tynker_btn_site: "ভিজিট করুন Tynker"
+  third_party_scratchjr_desc: Scratch Jr. একটি পরিচায়ক প্রোগ্রামিং ভাষা যা তরুণ শিশুদের
+    (বয়সের ৫-৭) তাদের নিজস্ব ইন্টারেক্টিভ গল্প এবং গেম তৈরি করতে দেয়। শিশু একসঙ্গে
+    গ্রাফিক্যাল প্রোগ্রামিং ব্লক জোড়া দিয়ে চরিত্রদের সরানো, লাফ দেওয়া, নাচ, এবং গাত্তয়া
+    করতে পারে। শিশুরা পেইন্ট এডিটর দিয়ে চরিত্র পরিবর্তন করতে পারেন, তাদের নিজের কন্ঠ
+    ও শব্দসমূহ যোগ করতে , এমনকি নিজেদের ফটো যোগতে পারেন - তারপর তাদের চরিত্রকে জীবন্ত
+    করতে প্রোগ্রামিং ব্লক ব্যবহার করতে পারেন।
+  third_party_scratchjr_btn_curriculum: Scratch Jr. এর পাঠক্রম ডাউনলোড করুন
+  third_party_scratchjr_btn_site: Scratch জুনিয়র ভিজিট করুন।
+  third_party_scratch_desc: Scratch দিয়ে আপনি আপনার নিজের ইন্টারেক্টিভ গল্প, গেম,
+    এবং অ্যানিমেশন প্রোগ্রাম করতে পাড়েন এবং অনলাইন কমিউনিটি অন্যদের সঙ্গে আপনার সৃষ্টিকে
+    শেয়ার করতে পারেন।
+  third_party_scratch_btn_curriculum: Scratch পাঠ্যক্রম ডাউনলোড করুন
+  third_party_scratch_btn_forum: Scratch শিক্ষাবিদ ফোরাম
+  third_party_scratch_btn_site: Scratch পরিদর্শন করুন
+  third_party_lightbot_desc: Lightbot এ শিক্ষার্থীদের পাজল সমাধান করতে কমান্ড দিয়ে
+    একটি রোবট প্রোগ্রাম হবে। শিক্ষার্থীরা ব্রাউজারে (ফ্ল্যাশ প্লেয়ার প্রয়োজন ),
+    অথবা অ্যান্ড্রয়েড বা iOS ডিভাইসে খেলাটি খেলতে পারে। শিক্ষার্থীরা Lightbot এ "প্রাথমিক"
+    স্তরের প্রারম্ভিক সেট খেলাতে পারে। তারা একটি কম্পিউটারলে বলতে শিখবে অনেকগুলো ধারাবাহিক
+    মৌলিক কমান্ড দিয়ে কি করতে হবে এবং সাধারণ প্রক্রিয়া যার মাধ্যমে কম্পিউটার প্রোগ্রাম
+    লেখা হয়।
+  third_party_lightbot_btn_curriculum: Lightbot পাঠক্রম ডাউনলোড করুন
+  third_party_lightbot_btn_site: "ভিজিট করুন Lightbot"
+  third_party_khan_desc: "কিভাবে জাভাস্ক্রিপ্ট ও প্রসেসিংজেএস ব্যবহার করে আঁকা, এনিমেশন
+    ও গেম তৈরি করতে হয় শিখুন, অথবা HTML ও CSS দিয়ে ওয়েব পেজ তৈরি করা শিখুন। আপনি
+    যাই তৈরি করেন না কেন, তা শেয়ার করতে পারেন, অন্যরা কি তৈরি করেছে তা ঘুরে দেখতে
+    পারেন এবং একে অন্যে কাছে থেকে শিখতে পারেন।"
+  third_party_khan_btn_learn: "খান একাডেমী তে কম্পিউটার সাইন্স শিখুন"
+  third_party_khan_btn_forum: "খান একাডেমী সিএস ফোরাম"
+  third_party_appinv_desc: "এমআইটি অ্যাপ ইনভেন্ট একটি ব্লক-ভিত্তিক প্রোগ্রামিং টুল
+    যা সবাইকে, এমনকি নতুন শিক্ষারথীদের, প্রোগ্রামিং শুরু করার এবং অ্যান্ড্রয়েড ডিভাইসের
+    জন্য সম্পূর্ণরূপে কার্যকরী অ্যাপস নির্মাণের আনুমতি দেয়। অ্যাপ ইনভেন্টের নতুনরা
+    তাদের প্রথম অ্যাপ্লিকেশন একটি ঘন্টা বা তার কম সময়ে তৈরি ও চালাতে পাড়েন এবং প্রথাগত,
+    টেক্সট-ভিত্তিক ভাষার সাথে তুলনায় উল্লেখযোগ্যভাবে কম সময় আরও জটিল অ্যাপ্লিকেশান
+    প্রোগ্রাম তৈরী করতে পারেন।"
+  third_party_appinv_btn_curriculum: "অ্যাপ ইনভেন্টর ২ পাঠক্রম ডাউনলোড করুন"
+  third_party_appinv_btn_forum: "অ্যাপ ইনভেন্টর ২ ফোরাম"
+  third_party_appinv_btn_site: "অ্যাপ ইনভেন্টর ২ পরিদর্শন করুন"
+  third_party_codehs_desc: CodeHS, সংক্ষিপ্ত ভিডিও, উদাহরণ কোড দিয়ে প্রোগ্রামিং এর
+    বিল্ডিং ব্লকের পরিচয় করায়, এবং প্রচুর প্রোগ্রামিং অনুশীলনের যা প্রাথমিক শিক্ষার্থীদের
+    জন্য কোডিং মজা এবং অ্যাক্সেসযোগ্য করে। স্কুল ও শিক্ষকদের জন্য CodeHS পাঠ্যক্রম,
+    শিক্ষক সরঞ্জাম ও পিডি প্রদান করে। পৃথক শিক্ষার্থীদের জন্য, আপনি গুরুদের নেটওয়ার্ক
+    থেকে আপনার প্রয়োজনঈয় সাহায্য পেতে পারেন।
+  third_party_codehs_btn_try: "কম্পিউটার বিজ্ঞানের ভুমিকার জন্য CodeHS চেষ্টা করুন।"
+  third_party_codecademy_desc: "আমরা শিক্ষার বিষয়ে আগাগোড়া নতুন করে চিন্তা করছি। ওয়েব
+    প্রায় সবকিছু নতুন আঙ্গিকে দেখাচ্ছে - বাণিজ্য, সামাজিক যোগাযোগ, স্বাস্থ্য, এবং
+    আরো অনেক কিছু।"
+  third_party_codecademy_btn_curriculum: Codecademy পাঠক্রম ডাউনলোড করুন
+  third_party_codecademy_btn_site: "ভিজিট করুন Codecademy"
+  third_party_organization: "প্রতিষ্ঠান"
   third_party_curriculum: "পাঠ্যক্রম"
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_pricing: "মূল্য স্থির করা"
+  third_party_cost_free: "বিনামূল্যে"
+  third_party_cost_5permonth: "প্রতি ক্লাস ৫ ডলার/মাস"
+  third_party_cost_299: "২.৯৯ ডলার/ ডাউনলোড"
+  third_party_cost_free_399: "বিনামুল্যে চেষ্টা করতে পারেন, ৩৯৯ ডলার/শ্রেনীকক্ষ"
+  third_party_cost_free_2: "বিনামুল্যে চেষ্টা করতে পারেন, ২ ডলার ছাত্র"
+  third_party_cost_free_10: "বিনামুল্যে চেষ্টা করতে পারেন, ৯.৯৯ ডলার/মাস"
+  third_party_desc_5_4to8: "প্রায় ৫ পাঠ, ৪-৮ গ্রেডের জন্য বানানো"
+  third_party_desc_10to12_kto3: "প্রায় ১০-১২ পাঠ, K-৩ গ্রডের জন্য সাজানো"
+  third_party_desc_11_kto5: "প্রায় ১১ টি পাঠ, K-৫ গ্রেডের জন্য সাজানো"
+  third_party_desc_10to12_kto5: "প্রায় ১০-১২ পাঠ, K-৫ গ্রডের জন্য সাজানো"
+  third_party_desc_40_4to8: "প্রায় ৪০ টি পাঠ, ৪-৮ গ্রেডের জন্য সাজানো"
+  third_party_desc_dozens_kto8: "সকল গ্রেড K-৮ এর জন্য ডজনে ডজনে পাঠ্যবস্তু"
+  third_party_desc_10to15_3to12: "১০ ও ১৫ পাঠের মধ্যে, ৩-১২ গ্রেডের জন্য সাজানো"
+  third_party_desc_25to40_3to12: "২৫-৪০ পাঠ, ৩-১২ গ্রেডের জন্য "
+  third_party_desc_20_2to8: "প্রায় ২০ টি পাঠ, ২-৮ গ্রেডের জন্য সাজানো"
+  third_party_desc_7to22_5to12: "৭ ও ২২ পাঠের মধ্যে, ৫-১২ গ্রেডের জন্য সাজানো"
+  third_party_desc_20_4to12: "২০ টিরও বেশি পাঠ, ৪-১২ গ্রেডের জন্য সাজানো"
   enter_valid_age: "অনুগ্রহ করে সঠিক বয়স নির্বাচন করুন"
   enter_valid_email: "অনুগ্রহ করে একটি বৈধ ই-মেইল ঠিকানা লিখুন।"
   get_a_certificate_message: "আমরা আপনার সার্টিফিকেট পাঠিয়ে দেব <a href='/learn/beyond'>
@@ -248,16 +248,16 @@
   learn_next_level: "পরবর্তী ধাপে যান"
   learn_online: "অনলাইনে অন্যান্য কোর্স করুন"
   learn_classes: "স্থানীয় শ্রেণি খুঁজুন"
-  hoc_is_here: "#HourOfCode  এসেছে, @codeorg -এ দেখুন"
+  hoc_is_here: "গত কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহে #HourOfCode 50 মিলিয়ন ছাত্রের
+    কাছে পৌঁছেছে।  https://youtu.be/Ofze6CWUCx8."
   just_did_hoc: "#HourOfCode সম্পন্ন করেছি @codeorg"
-  just_did_course1: I just finished Course 1 - check it out! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
-  twitter_teach_cs: "কেন একাধিক স্কুল কম্পিউটার বিজ্ঞান শিক্ষা দেবেন না? আমরা এটি
-    সামাধান করতে পারি। http://youtu.be/nKIu9yen5nc। Http://code.org/ আরও জানতে ভিজিট
-    করুন."
+  just_did_course1: " দেখ আমি কেবল কোর্স ১ শেষ করছে! @codeorg"
+  just_did_course2: " দেখ আমি কেবল কোর্স ২ শেষ করছে! @codeorg"
+  just_did_course3: " দেখ আমি কেবল কোর্স ৩ শেষ করছে! @codeorg"
+  just_did_course4: " দেখ আমি কেবল কোর্স ৪ শেষ করছে! @codeorg"
+  just_did_accelerated: " দেখ আমি কেবল অ্যাক্সিলারেটেড  কোর্স শেষ করছে! @codeorg"
+  twitter_teach_cs: 10 জনের মধ্যে 9 মানুষ একমত যে বিদ্যালয় কম্পিউটার বিজ্ঞান শিক্ষা
+    দেওয়া উচিত। http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: "সম্পন্ন করুন Hour of Code"
   beyond_hoc: "এক ঘণ্টারও বেশি"
   what_gender: "আপনার লিঙ্গ কি?"
@@ -285,7 +285,7 @@
   studiobar_elementary_body: "আমাদের তিনটি নতুন কোর্স জন্য K &#8209; 5"
   studiobar_hoc_title: "কোডিং এর এক ঘণ্টা"
   studiobar_hoc_body: "অ্যাংরি বার্ডস এর সাথে কোড করতে শেখ।"
-  studiobar_flappy_title: Flappy Code
+  studiobar_flappy_title: "ফ্লাপি কোড"
   studiobar_flappy_body: "তোমার নিজের Flappy Game তৈরি করে শেয়ার করো।"
   studiobar_teacher_title: "শিক্ষকদের জন্য তৈরী"
   studiobar_teacher_body: "কোড স্টুডিওকে তোমার শ্রেণীতে পরিচিত করাও।"
@@ -330,9 +330,9 @@
   homepage_slot_text_frozen: "আন্না এবং এলসার সাথে ফ্রোজেন"
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: "আমাদের সব টিউটোরিয়াল"
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: "কোর্স ৪"
   homepage_slot_text_shop: "দোকান"
-  homepage_slot_text_flappy: Flappy Code
+  homepage_slot_text_flappy: "ফ্লাপি কোড"
   homepage_action_text_hoc: "এক ঘন্টা কোড সকল ছাত্রের জন্য।"
   homepage_action_text_num_served: "# সেবা"
   homepage_action_text_join_us: "আমাদের সাথে যোগ দিন"
@@ -371,6 +371,9 @@
   homepage_slot_text_link_othercourses: "অন্যান্য অনলাইন কোর্স"
   homepage_slot_text_title_educators: "জ্ঞাপিত"
   homepage_slot_text_blurb_educators: "আপনার ছাত্রদের শেখান"
+  homepage_slot_text_link_elementary: "প্রাথমিক স্কুল"
+  homepage_slot_text_link_middle: "মাধ্যমিক স্কুল"
+  homepage_slot_text_link_high: "উচ্চ বিদ্যালয়"
   homepage_slot_text_link_k5: "কোর্সগুলো কে-৫ শ্রেণীর জন্য"
   homepage_slot_text_link_fullcurriculum: "আমাদের পুরো কারিকুলাম দেখুন"
   homepage_slot_text_link_pd: "পেশাগত উন্নয়ন"
@@ -601,13 +604,13 @@
     সাথে চেষ্টা করুন। <a href="https://hourofcode.com">কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ
     সময় এক ঘন্টার কোড আন্দোলনে যোগ দিন।</a>
   dashboard_k5_courses: K-5-এর জন্য 20 ঘণ্টার কোর্স
-  dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
-    tutorials with "unplugged" activities that require no computer at all. Each course
-    consists of about 20 lessons that may be implemented as one unit or over the course
-    of a semester. Even kindergarten-aged pre-readers can participate. To help you
-    get started, we offer high quality professional development workshops around the
-    U.S. free of charge. <a href="/professional-development-workshops">Find one near
-    you!</a>
+  dashboard_k5_courses_desc: এই কোর্স অনলাইন মিশানো, স্ব-নির্দেশিত এবং স্ব-বিন্যস্ত
+    টিউটোরিয়াল "আনপ্লাগড" কার্যক্রম যা করার জন্য কোন কম্পিউটার এ প্রয়োজন নেই। প্রতিটি
+    কোর্সের প্রায় 20 পাঠ আছে যা এক একক হিসাবে অথবা একটি সেমিস্টারে ধরে শেখানো যেতে
+    পারে। এমনকি কিন্ডারগার্টেন-বয়সী-প্রাক-পাঠকরাও অংশগ্রহণ করতে পারেন। আপনাকে শুরু
+    করতে সাহায্য করতে, আমরা নিখরচা মার্কিন যুক্তরাষ্ট্রে প্রায় উচ্চ মানের পেশাদারী
+    উন্নয়ন কর্মশালা দিয়ে থাকি। <a href="/professional-development-workshops">আপনার
+    কাছাকাছি এক খুঁজে নিন!</a>
   dashboard_middle_courses: 20 ঘন্টা মধ্যমিক স্কুলের কোর্স
   dashboard_middle_courses_desc: আমাদের মাধ্যমিক স্কুলের পাঠ্যক্রম কম্পিউটার বিজ্ঞান
     এবং প্রোগ্রামিংকে মাধ্যমিক স্কুল গণিত ও বিজ্ঞান প্রসঙ্গের মধ্যে ব্যবহার করে -
@@ -655,6 +658,7 @@
   dashboard_navigation_all_sections: "শিক্ষার্থীদের অ্যাকাউন্ট এবং আগ্রগতি"
   dashboard_navigation_view_progress: "আগ্রগতি দেখুন"
   dashboard_navigation_view_text_responses: "লিখিত জবাব দেখুন"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: " শিক্ষার্থীদের যুক্ত করন"
   dashboard_navigation_manage_students: " শিক্ষার্থীদের পরিচালনা করন"
   dashboard_navigation_lesson_plans_resources: "পাঠ পরিকাল্পনা এবং তথ্য"
@@ -695,8 +699,8 @@
   dashboard_students_progress: "অগ্রগতি"
   dashboard_students_age: "বয়স"
   dashboard_students_gender: "লিঙ্গ"
-  dashboard_students_male: Male
-  dashboard_students_female: Female
+  dashboard_students_male: "পুরুষ"
+  dashboard_students_female: "মহিলা"
   dashboard_students_secret: "গোপন"
   dashboard_students_password: "পাসওআর্ড"
   dashboard_students_username: "ব্যবহারকারীর নাম: %{student_username}"
@@ -762,16 +766,27 @@
   dashboard_login_picture: "ছবি"
   dashboard_login_none: "ই-মেইল"
   dashboard_new_password: "নতুন পাসওয়ার্ড"
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: "শুরু হয়নি"
+  dashboard_progress_in_progress: "অগ্রসর হচ্ছে"
   dashboard_progress_not_completed: "সম্পন্ন নয়"
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_submitted: "দাখিল"
   dashboard_stage: "ধাপ"
   dashboard_puzzle: "ধাঁধা"
   dashboard_question: "প্রশ্ন"
   dashboard_response: "জবাব"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "সঠিক"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "গত বছরের এক ঘন্টার কোড থেকে আসা অবিশ্বাস্য পরিসংখ্যান।
     শুধু এক সপ্তাহেঃ"
   stats_hoc_2013_image_alt: 2013 থেকে ঘন্টা কোড এর stats
@@ -793,11 +808,11 @@
   dashboard_faq_k5: K-5 বহুল জিজ্ঞাসিত প্রশ্নসমূহ
   dashboard_announcements: "ঘোষণা"
   dashboard_announce_view_all: "সব দেখুন"
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>২৯ ফেব্রুয়ারি, ২০১৬</b>- কর্মশালায় অংশগ্রহণকারীদের
+    ৯০% আমাদের প্রোগ্রামকে সবচেয়ে ভাল পেশাদারী উন্নয়ন কর্মশালা বলেছেন। চাহিদার কারণে,
+    আমরা আমাদের হাই স্কুলে কম্পিউটার বিজ্ঞানের জন্য পেশাগত শিখন প্রোগ্রামে একটি একটি
+    সীমিত সংখ্যক স্থান যোগ করছি। আপনার স্থান নিশ্চিত করতে <u>মার্চ ৩১<u> এর মধ্যে
+    আবেদন করুন।"
   dashboard_announce_button_text: "আরও জানুন"
   dashboard_announce_hoc: "<b>নভেম্বর ২৩, ২০১৫</b> - এক ঘন্টার কোড অনুষ্ঠানের সময়
     আপনি কি কম্পিউটার বিজ্ঞান বিষয়ে উত্সাহী স্বেচ্ছাসেবকের সাহায্য চান? ৭০০০ এর ও
@@ -916,9 +931,9 @@
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
   hourofcode_name: "আপনার প্রথম কম্পিউটার প্রোগ্রাম লেখুন"
-  playlab_name: Play Lab
+  playlab_name: "প্লে ল্যাব"
   infinity_name: Infinity Play Lab
-  artist_name: Artist
+  artist_name: "শিল্পী"
   monstercoding_name: "রহস্য দ্বীপের কোডিং অনুসন্ধান"
   allcancode_name: "পালাও মার্কো!"
   csfirst_name: "সিএস প্রথমে"
@@ -926,11 +941,24 @@
   codesters_name: Codesters
   texasinstruments_name: 10 মিনিটের কোড
   teacherled_name: "শিক্ষক পরিচালিত পাঠ পরিকল্পনা"
-  course1_name: Course 1
-  course2_name: Course 2
-  course3_name: Course 3
-  course4_name: Course 4
+  course1_name: "কোর্স ১"
+  course2_name: "কোর্স ২"
+  course3_name: "কোর্স ২"
+  course4_name: "কোর্স ৪"
   accelerated_name: Accelerated Course
+  cspunit3_name: "সিএস এর মূলনীতি ইউনিট ৩"
+  cspunit3_gradelevel: "৯-১২ গ্রেড"
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
+    of computer programming, which unlocks the ability to make rich, interactive apps.
+    This course uses JavaScript as the programming language, and App Lab as the programming
+    environment to build apps, but the concepts learned in these lessons span all
+    programming languages and tools.
+  applab_name: "অ্যাপ ল্যাব"
+  applab_gradelevel: "বয়সের ১৩+"
+  applab_shortdescription_congrats: "অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি
+    সহজ অ্যাপ বানানো হয়। একটি অ্যাপ্লিকেশন নকশা (ডিজাইন) করুন ,তাকে কাজ করানোর জন্য
+    ব্লক বা জাভাস্ক্রিপ্ট দিয়ে কোড করুন, তারপর এক সেকেন্ডের মধ্যে আপনার অ্যাপ্লিকেশন
+    শেয়ার করুন।"
   codeorg_gradelevel: "বয়স 4-104"
   codeintl_gradelevel: "বয়স 4-104"
   thinkersmithspanish_gradelevel: Por todos
@@ -981,11 +1009,11 @@
   codesters_gradelevel: "বয়স 12-14"
   texasinstruments_gradelevel: "বয়স 13-16"
   teacherled_gradelevel: "বয়স ৫+"
-  course1_gradelevel: Ages 4-6
-  course2_gradelevel: Ages 6-18
-  course3_gradelevel: Ages 8-18
-  course4_gradelevel: Ages 10-18
-  accelerated_gradelevel: Ages 10-18
+  course1_gradelevel: "বয়স ৪-৬"
+  course2_gradelevel: "বয়স ৬-১৮"
+  course3_gradelevel: "বয়স ৮-১৮"
+  course4_gradelevel: "বয়স ১০-১৮"
+  accelerated_gradelevel: "বয়স ১০-১৮"
   codeorg_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
   codeintl_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
   thinkersmithspanish_platformtext: "অসংযুক্ত"
@@ -1109,18 +1137,14 @@
     ব্যবহার করে।"
   teacherled_shortdescription: "এই পঠ পরিকল্পনার সাহায্য নিয়ে আপনার নিজস্ব এক ঘন্টার
     কোড আয়জন করতে উদ্বুদ্ধ হন।"
-  course2_shortdescription_congrats: For students with basic reading skills, this
-    course builds on Course 1. Students will create programs to solve problems and
-    develop interactive games or stories they can share. Recommended for grades 2-5.
-  course3_shortdescription_congrats: Ready for the next level? Students will delve
-    deeper into programming topics introduced in previous courses to find flexible
-    solutions to more complex problems. By the end of this course, students create
-    interactive stories and games they can share with anyone. Recommended for grades
-    4-5.
-  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
-    into programming topics introduced in previous courses to find flexible solutions
-    to more complex problems. By the end of this course, students create interactive
-    stories and games they can share with anyone. Recommended for grades 4-8.
+  course2_shortdescription_congrats: "যেসব ছাত্রের পড়ার প্রাথমিক দক্ষতা আছে তাদের
+    উদ্দেশ্যে, এই কোর্সটি কোর্স ১-এর ওপর ভিত্তি করে তৈরি করা হয়েছে।"
+  course3_shortdescription_congrats: |
+    পরবর্তী ধাপে যেতে প্রস্তুত? ছাত্ররা অনেক জটিল সমস্যার সহজবোধ্য সমাধান বের করার জন্য পূর্ববর্তী কোর্সে দেখানো প্রোগ্রামিং বিষয়গুলো আরো ভাল ভাবে দেখবে। এই কোর্সের শেষের দিকে, ছাত্ররা ইন্টারেক্টিভ গল্প এবং গেম তৈরি করতে পারেন যা তারা যে কারো সাথে শেয়ার করতে পারেন।
+    ৪-৮ গ্রেডের জন্য প্রস্তাবিত।
+  course4_shortdescription_congrats: |
+    আরও এগোতে প্রস্তুত? ছাত্ররা অনেক জটিল সমস্যার সহজবোধ্য সমাধান বের করার জন্য পূর্ববর্তী কোর্সে দেখানো প্রোগ্রামিং বিষয়গুলো আরো ভাল ভাবে দেখবে। এই কোর্সের শেষের দিকে, ছাত্ররা ইন্টারেক্টিভ গল্প এবং গেম তৈরি করতে পারেন যা তারা যে কারো সাথে শেয়ার করতে পারেন।
+    ৪-৮ গ্রেডের জন্য প্রস্তাবিত।
   codeorg_longdescription: "ড্রাগ ও ড্রপ প্রোগ্রামিং দিয়ে কম্পিউটার বিজ্ঞানের মৌলিক
     ধারনা শিখুন। এটি একটি খেলার মত, স্বচালিত ভিডিও টিউটোরিয়াল যার পাঠগুলি বিল গেটস,
     মার্ক যকারবার্গ, এংরি বার্ড, প্লান্ট বনাম জম্বি দ্বারা অভিনিত। পুনরায়-চক্র(লুপ),
@@ -1146,11 +1170,12 @@
     প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!"
   khanpl_longdescription: "আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
     প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!"
-  tynker_longdescription: Build your own games and share with friends! Solve fun coding
-    puzzles and learn programming concepts in each level. Personalize games with animated
-    characters, multiple levels and rich props. Make your games realistic using physics.
-    See the code as visual blocks or JavaScript. Take your games mobile on iPads and
-    Android tablets. Over a dozen fun activities to choose from!
+  tynker_longdescription: "আপনার নিজস্ব গেম তৈরি করুন এবং বন্ধুদের সাথে শেয়ার করুন!
+    মজা পাজল কোডিং সমাধান করুন এবং প্রতিটি স্তরে প্রোগ্রামিংএর ধারনা পান। অ্যানিমেটেড
+    চরিত্র, একাধিক ধাপ এবং সমৃদ্ধ সাজসরঞ্জাম সঙ্গে গেমকে ব্যক্তিগত রূপ দিন। আপনার
+    গেমকে বাস্তবধর্মী করে তুলতে পদার্থবিদ্যা ব্যবহার করুন। চাক্ষুষ ব্লক বা জাভাস্ক্রিপ্ট
+    কোড হিসাবে দেখুন। আইপ্যাড এবং অ্যান্ড্রয়েড ট্যাবলেটে আপনার গেমস নিন। এক ডজনেরও
+    বেশি মজা কার্যক্রম থেকে পছন্দ করে নিন!"
   scratch_longdescription: Scratch দিয়ে আপনি আপনার নিজের পরস্পর ক্রিয়াশীল খেলা,
     গল্প, এনিমেশন &mdash তৈরি করতে পারেন; এবং আপনার বন্ধুদের সাথে শেয়ার করতে পারেন।
     আপনার নাম এনিমেশন করে, ছুটির কার্ড তৈরি করে, অথবা পং খেলা বানানোর মাধ্যমে শুরু
@@ -1159,11 +1184,12 @@
     একটি ধাধার খেলা যা প্রগ্রামিং গেম মেশিন ব্যবহার করে ব্যবহারকারীকে মৌলিক কোডিঙের
     ব্যবহারিক বুদ্ধি দেয়। নির্দেশাবলী ক্রমক পদ্ধতি লিখতে, কার্যপ্রণালী লিখতে এবং চক্র(loops)
     ব্যবহার করতে শিখুন। সব বয়সের জন্য আদর্শ।"
-  thinkersmith_longdescription: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
+  thinkersmith_longdescription: প্রথমে আলোচনা না করেই একটি প্রাক-সংজ্ঞায়িত "রোবট
+    শব্দভাণ্ডার" ব্যবহার করে শিক্ষার্থীরা তাদের নির্দিষ্ট কাজগুলো সম্পন্ন করার জন্য
+    কিভাবে একে অপরের গাইড করবে তা বের করার চেষ্টা করবে। এই পাঠ শিশুদের চিহ্ন এবং কর্মের
+    মধ্যে সংযোগ, সেইসাথে ডিবাগিং এর অমূল্য দক্ষতা শেখায়। "আমার রোবোটিক্স বন্ধুরা"
+    একটি গ্রুপ কার্যকলাপ হিসাবে ভাল কাজ করে এবং শ্রেণীকক্ষ ব্যবহারের জন্য একজন শিক্ষক
+    ওয়ার্কবুক অন্তর্ভুক্ত।
   condcards_longdescription: এক বান্ডিল তাস ব্যবহার করে "অসংযুক্ত কার্যকলাপে অ্যালগোরিদম
     ও শর্তাধীন বিবরণ শিখুন। ছাত্ররা দলে এই কাজ করবে এবং প্রতি দল এক বান্ডিল তাস দরকার
     হবে।
@@ -1171,12 +1197,11 @@
     ৪+ বয়সের বাচ্চারা মুল প্রোগ্রামিং যুক্তি শিখতে পারে  অতি-মৌলিক প্রোগ্রামিং থেকে
     শুরু করে। কিভাবে ক্রম নির্দেশ, নমুনা সনাক্তকরণ, সুডকোড ব্যবহার ও লুপ ব্যবহার করতে
     হয় তা শিখুন!"
-  codehs_longdescription: Giving commands to a computer, which is what programming
-    is all about, is just like giving commands to a dog. Learn how to code with Karel
-    the Dog&mdash;a fun, accessible, and visual introduction to programming that teaches
-    fundamental concepts like commands and functions to absolute beginners. Tutorial
-    is student-directed but teachers can sign up to access teacher tools and track
-    student success!
+  codehs_longdescription: "একটি কম্পিউটারকে কমান্ড দেওয়া, প্রোগ্রামিং হচ্ছে যার মূল
+    কথা,  তা মুলত একটি কুকুর কমান্ড দেবার মত। ক্যারেল কুকুর সঙ্গে কোড করা শিখুন&mdash;
+    প্রোগ্রামিং এর একটি মজার, অ্যাক্সেসযোগ্য এবং চাক্ষুষ ভূমিকা যা কমান্ড এবং ফাংশন
+    মত মৌলিক ধারণা একদম নতুনদের শেখায়। টিউটোরিয়াল ছাত্র-পরিচালিত হয় কিন্তু শিক্ষক
+    সরঞ্জাম অ্যাক্সেস এবং ট্র্যাক ছাত্র সাফল্য দেখার জন্য শিক্ষক সাইন আপ করতে পারেন!"
   codecademy_longdescription: "কোডএকাডেমী একটি পরস্পর ক্রিয়াশীল, ছাত্র-নির্দেশিত
     মৌলিক সিএসের ভূমিকা যা জাভাস্ক্রিপ্ট দ্বারা শিখানো হয় ও সারা পৃথিবীর লক্ষ লক্ষ
     ছাত্র দ্বারা ব্যবহৃত হয়। । ছাত্রদের এক ঘন্টার হয়রানইহীন কোড অভিজ্ঞতা দেবার জন্য
@@ -1233,12 +1258,12 @@
     জিততে সাহায্য করার জন্য আপনাকে ভেরিয়েবল, মেথড ও অবজেক্টের ব্যবহার শিখতে হবে।"
   touchdevelop_longdescription: "পিক্সেল আর্টে তৈরি, ভাল্লুক ধাঁধা সমাধান বা আপনার
     নিজের লাফানো পাখি খেলা করতে  স্পর্শ-বন্ধুসুলভ সম্পাদক আপনাকে পথপ্রদর্শন করবে।"
-  appinventor_longdescription: Entertaining, quick video tutorials walk you through
-    building three simple apps for your Android phone or tablet. Designed for novices
-    and experts alike, this hour of code will get you ready to start building your
-    own apps before you know it. Imagine sharing your own app creations with your
-    friends! These activities are suitable for individuals and for teachers leading
-    classes.
+  appinventor_longdescription: "আপনার অ্যান্ড্রয়েড ফোন বা ট্যাবলেট জন্য তিনটি সহজ
+    অ্যাপস নির্মাণের কলাকৌশল মজার ও দূত টিউটোরিয়ালে দেখুন। নতুন শিক্ষারথীদের এবং
+    বিশেষজ্ঞদের জন্য সমভাবে ডিজাইন করা, এই এক ঘন্টার কোড আপনাকে আপনি এটা জানার আগেই
+    আপনার নিজস্ব অ্যাপ্লিকেশন নির্মাণ শুরু করার জন্য প্রস্তুত করে তুলবে। কল্পনা করুন
+    আপনি আপনার বন্ধুদের সঙ্গে আপনার নিজস্ব অ্যাপ্লিকেশন সৃষ্টিকে শেয়ার করছেন! এই কার্যকলাপের
+    সকল পৃথক ব্যক্তিদের জন্য এবং নেতৃস্থানীয় শ্রেণীর শিক্ষকদের জন্য উপযুক্ত।"
   blockly_longdescription: "ধীর  ইন্টারনেট (বা ইন্টারনেট নেই) এমন পিসি ব্যবহার করেন?
     Code.org টিউটোরিয়াল এর পূর্বগামী Blockly টিউটোরিয়াল ডাউনলোড করুন যা একটি ৩ এমবি
     জিপ ফাইল যেকোন কম্পিউটারে লোড করে অথবা মেমরী স্টিক থেকে ব্যবহার করা যায়।"
@@ -1448,20 +1473,19 @@
   alice_beyond_shortdescription: "ত্রিমাত্রিক পরিবেশ প্রোগ্রামিং শিখান"
   sphero_beyond_shortdescription: "এসপিআরকে পাঠ শিশুদের আনন্দায়ক রোবট প্রোগ্রামিং
     কোর্স দিয়ে থাকে যা গণিত ও বিজ্ঞানের দক্ষতা শাণিত করে।"
-  codeorg_beyond_longdescription: Learn the basic concepts of Computer Science with
-    drag and drop programming. 3 full courses, each consists of 15-20 lessons that
-    blend "unplugged" classroom activities interspersed with game-like, self-directed
-    tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds
-    and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions,
-    and variables.
+  codeorg_beyond_longdescription: ড্র্যাগ এবং ড্রপ প্রোগ্রামিং সঙ্গে কম্পিউটার বিজ্ঞানের
+    মৌলিক ধারণা শিখুন। ৩টি পূর্ণ কোর্স, প্রতিটিতে 15-20 পাঠ আছে যা খেলা-মত, আত্মবশ
+    টিউটোরিয়াল যা বিল গেটস, মার্ক জুকারবার্গ, অ্যাংরি বার্ড এবং প্লান্ট বনাম জম্বি
+    দ্বারা অভিনীত ভিডিও লেকচার যাতে শ্রেণীকক্ষ করা যায় এমন "আনপ্লাগড" কাজ বিচ্ছিন্ন
+    ভাবে সাজানো। পুনরাবৃত্তি-লুপ, কন্ডিশন, মৌলিক আলগোরিদিম, ফাংশন, এবং ভেরিয়েবল শিখুন।
   khan_beyond_longdescription: "আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
     প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!"
-  tynker_beyond_longdescription: Tynker makes it fun & easy to learn programming.
-    It makes it visual. Kids build games and mobile apps by arranging blocks of code.
-    It removes the need to know programming syntax. Kids transform ideas into animated
-    stories and math art right away. It promotes progressive learning. As kids learn
-    fundamentals, Tynker introduces more advanced concepts including syntax driven
-    programming.
+  tynker_beyond_longdescription: Tynker প্রোগ্রামিং শেখা এটা মজা ও সহজ করে তোলে। এটা
+    একে চাক্ষুষ করে তোলে। বাচ্চারা কোডের ব্লক সাজিয়ে গেম এবং মোবাইল অ্যাপস নির্মাণ
+    করে। এটা প্রোগ্রামিং সিনট্যাক্স জানা প্রয়োজন সরিয়ে ফেলে। বাচ্চারা সরাসরি অ্যানিমেটেড
+    গল্প এবং গণিত শিল্প মধ্যে তাদের ধারনা রুপান্তর করতে পারে। এটি প্রগতিশীল শিক্ষা
+    প্রচার করে। বাচ্চারা যখন মৌলিক শিখে, Tynker সিনট্যাক্স চালিত প্রোগ্রামিং সহ আরো
+    উন্নত ধারণা প্রবর্তন করে।
   scratch_beyond_longdescription: Scratch দিয়ে আপনি আপনার নিজের পরস্পর ক্রিয়াশীল
     খেলা, গল্প, এনিমেশন &mdash তৈরি করতে পারেন; এবং আপনার বন্ধুদের সাথে শেয়ার করতে
     পারেন। আপনার নাম এনিমেশন করে, ছুটির কার্ড তৈরি করে, অথবা পং খেলা বানানোর মাধ্যমে
@@ -1505,12 +1529,13 @@
     গেম সম্পূর্ণভাবে ব্রাউজারে খেলা ও তারপর বন্ধুদের চেষ্টা করার জন্য ফেসবুকে শেয়ার
     করতে সহায়তা করবে! কোন পূর্বে আইফোন ডেভলপমেন্ট অভিজ্ঞতার প্রয়োজন নেই। আপনি কে
     ভেরিয়েবল, মেথড, এবং অবেজেক্ট বুঝতে হবে।"
-  appinventor_beyond_longdescription: Entertaining, quick video tutorials walk you
-    through building three simple apps for your Android phone or tablet. Designed
-    for novices and experts alike, this hour of code will get you ready to start building
-    your own apps before you know it. Imagine sharing your own app creations with
-    your friends! These activities are suitable for individuals and for teachers leading
-    classes.
+  appinventor_beyond_longdescription: "আপনার অ্যান্ড্রয়েড ফোন বা ট্যাবলেট জন্য তিনটি
+    সহজ অ্যাপস নির্মাণের কলাকৌশল মজার ও দূত টিউটোরিয়ালে দেখুন। নতুন শিক্ষারথীদের
+    এবং বিশেষজ্ঞদের জন্য সমভাবে ডিজাইন করা, এই এক ঘন্টার কোড আপনাকে আপনি এটা জানার
+    আগেই আপনার নিজস্ব অ্যাপ্লিকেশন নির্মাণ শুরু করার জন্য প্রস্তুত করে তুলবে। কল্পনা
+    করুন আপনি আপনার বন্ধুদের সঙ্গে আপনার নিজস্ব অ্যাপ্লিকেশন সৃষ্টিকে শেয়ার করছেন!
+    এই কার্যকলাপের সকল পৃথক ব্যক্তিদের জন্য এবং নেতৃস্থানীয় শ্রেণীর শিক্ষকদের জন্য
+    উপযুক্ত।"
   touchdevelop_beyond_longdescription: TouchDevelop আইপ্যাড, আইফোন, অ্যান্ড্র্যয়েড,
     পিসি, ম্যাক, উইন্ডজ ফোনে আপনাকে অ্যাপ তৈরি করতে দেয়। আমাদের স্পর্শ-বন্ধুসুলভ সম্পাদক
     আপনার ফোন বা ট্যাবলেটে কোডিং মজা করে তোলে!
@@ -1527,37 +1552,36 @@
     বিকাশ ও তৈরি, পিএইচপি এবং মাইএসকিউএল ডাটাবেস সঙ্গে কাজ শিখতে সাহায্য করতে পারেন,
     শুরু করতে পারেন পরিসংখ্যান প্রক্রিয়াকরণ ভাষা R, এবং আরো অনেক কিছু। [উল্লেখ্য:
     পেমেন্ট প্রয়োজন]"
-  edx_beyond_longdescription: CS50x is Harvard College's introduction to the intellectual
-    enterprises of computer science and the art of programming for majors and non-majors
-    alike, with or without prior programming experience. Topics include abstraction,
-    algorithms, data structures, encapsulation, resource management, security, software
-    engineering, and web development. Languages include C, PHP, and JavaScript plus
-    SQL, CSS, and HTML. The on-campus version of CS50x is Harvard's second-largest
-    course.
-  coursera_beyond_longdescription: 'Stanford''s CS 101 class taught by Nick Parlante
-    (FREE!). CS101 teaches the essential ideas of Computer Science for a zero-prior-experience
-    audience. Play and experiment with short bits of code to bring to life to the
-    power and limitations of computers. CS101 also provides a general background on
-    computers today: what is a computer, what is hardware, what is software, what
-    is the internet. No previous experience is required other than the ability to
-    use a web browser.'
-  udacity_beyond_longdescription: In this course you will learn key concepts in computer
-    science and learn how to write your own computer programs in the context of building
-    a web crawler. There is no prior programming knowledge needed for this course.
-    Beginners are welcome! At the end of this course, you will have learned key concepts
-    in computer science and enough programming to be able to write Python programs
-    to solve problems on your own. This course will prepare you to move on to intermediate-level
-    computing courses.
+  edx_beyond_longdescription: CS50x হল মেজর এবং নন-মেজর উভয়ের জন্যেই, পূর্বে প্রোগ্রামিং
+    অভিজ্ঞতাসহ বা ছাড়া, কম্পিউটার বিজ্ঞান এবং প্রোগ্রামিং শিল্প সম্পর্কিত বুদ্ধিবৃত্তিক
+    উদ্যোগের ব্যাপারে হার্ভার্ড কলেজের দেওয়া ভুমিকা। টপিককে আবস্ট্রাকশন, আলগোরিদিম,
+    ডাটা স্ট্রাকচার, এনক্যাপসুলেশন, সম্পদ ব্যবস্থাপনা, নিরাপত্তা, সফটওয়ার ইঞ্জিনিয়ারিং,
+    এবং ওয়েব ডেভেলপমেন্ট অন্তর্ভুক্ত। ভাষাসমূহের মধ্যে সি, পিএইচপি এবং জাভাস্ক্রিপ্ট
+    প্লাস এসকিউএল, সিএসএস এবং HTML অন্তর্ভুক্ত। CS50x অন ক্যাম্পাস সংস্করণ হার্ভার্ড
+    এর দ্বিতীয় বৃহত্তম কোর্স।
+  coursera_beyond_longdescription: "স্ট্যানফোর্ড CS 101 ক্লাস নিক পারলান্টে দ্বারা
+    শেখানো হয় (বিনামূল্যে!)। CS101 শূন্য-পূর্ব-অভিজ্ঞতা দর্শকদের জন্য কম্পিউটার সায়েন্স
+    এর অপরিহার্য ধারণা শেখায়। কোডের সংক্ষিপ্ত বিট সঙ্গে খেলুন এবং পরীক্ষা করুন এবং
+    জীবনে কম্পিউটারের ক্ষমতা ও সীমাবদ্ধতার ফিরিয়ে আনার। CS101 আজকের দিনের কম্পিউটারে
+    একটি সাধারণ পটভূমি দেয়া হয়: কম্পিউটার কি, হার্ডওয়্যার কি, সফটওয়্যার কি, ইন্টারনেট
+    কি। একটি ওয়েব ব্রাউজার ব্যবহার করার ক্ষমতা ছাড়া অন্য কোনো পূর্ববর্তী অভিজ্ঞতার
+    প্রয়োজন নেই।"
+  udacity_beyond_longdescription: "এই কোর্সে আপনি কম্পিউটার বিজ্ঞান মধ্যে মূল ধারণাগুলি
+    শিখবেন এবং কিভাবে একটি ওয়েব ক্রলার নির্মাণের প্রেক্ষাপটে আপনার নিজের কম্পিউটার
+    প্রোগ্রাম লিখতে হয় তা শিখবেন। কোন পূর্বে প্রোগ্রামিং জ্ঞান এই কোর্সের জন্য প্রয়োজনীয়।
+    নতুনদের স্বাগত জানাই! এই কোর্সের শেষে, আপনি কম্পিউটার বিজ্ঞানের যথেষ্ট ধারণা শিখবেন
+    এবং আপনার নিজের সমস্যা সমাধানের জন্য পাইথন প্রোগ্রাম লিখতে পারবেন। এই কোর্সে আপনি
+    মধ্যবর্তী পর্যায়ের কম্পিউটিং কোর্সর জন্য প্রস্তুত করবে।"
   teachingtree_beyond_longdescription: TeachingTree একটি উন্মুক্ত প্ল্যাটফর্ম যা যে
     কেউকে শিক্ষাগত কন্টেন্ট সংগঠিত করতে দেয়। ছাত্র দ্রুত পৃথক ধারণা শিখতে যাতে তারা
     প্রয়োজন সঠিক ক্লিপ পায় তা নিশ্চিত করাই আমাদের লক্ষ্য। প্রত্যেকেই ভিডিও যোগ করা
     অথবা ধারণা ট্যাগিং করে সাহায্য করার জন্য প্রণোদিত করা হয়।
-  kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via
-    a simple visual programming language. Kodu can be used to teach creativity, problem
-    solving, storytelling, as well as programming. Anyone can use Kodu to make a game,
-    young children as well as adults with no design or programming skills. Kodu for
-    the PC is available to download for free. Kodu for the XBox is also available
-    in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
+  kodu_beyond_longdescription: Kodu বাচ্চারা সহজ চাক্ষুষ প্রোগ্রামিং ভাষা মাধ্যমে
+    পিসি এবং এক্সবক্সের জন্য গেম তৈরি করতে দেয়। Kodu সৃজনশীল, সমস্যা সমাধান, গল্প
+    বলার পাশাপাশি প্রোগ্রামিং শেখান ব্যবহার করা যেতে পারে। শিশুদের পাশাপাশি প্রাপ্তবয়স্করা
+    যে কেউ কোন ডিজাইন বা প্রোগ্রামিংয়ে দক্ষতা ছাড়ায় Kodu ব্যবহার করে একটি গেম তৈরি
+    করতে পারেন।  এক্সবক্সের জন্য Kodu যুক্তরাষ্ট্রের এক্সবক্স মার্কেটপ্লেসে পাওয়া
+    যায়, প্রায় $৫ ইন্ডি গেম চ্যানেল এ।
   cargobot_beyond_longdescription: Cargo-Bot একটি ধাঁধার খেলা যেখানে আপনি একটি রোবট
     কিভাবে বাক্স সরায় তা শেখান। শুনতে সহজ, ঠিক? এতে ৩৬ টি বন্ধুসুলভ চতুর পাজল, গা
     ছমছমে গান এবং চোখ ধাঁধানো গ্রাফিক্স আছে। এমনকি আপনি আপনার সমাধান রেকর্ড করতে পারেন
@@ -1582,35 +1606,36 @@
     বীরদের নিয়ন্ত্রণ, গোলকধাঁধা পরিভ্রমণ, রাক্ষস হারানো, শত্রুদের প্রতারিত এবং মিত্রশক্তিকে
     উদ্ধার করুন! HTML 5 ব্যবহার করে তৈরি ওয়েব খেলায় সম্পূর্ণ নতুন হয়েও জাভাস্ক্রিপ্ট
     শিখুন।"
-  codea_beyond_longdescription: Codea for iPad lets you create games and simulations
-    &mdash; or just about any visual idea you have. Turn your thoughts into interactive
-    creations that make use of iPad features like Multi-Touch and the accelerometer.
-    We think Codea is the most beautiful code editor you'll use, and it's easy. Codea
-    is designed to let you touch your code. Want to change a number? Just tap and
-    drag it. How about a color, or an image? Tapping will bring up visual editors
-    that let you choose exactly what you want.
+  codea_beyond_longdescription: iPad এর জন্য Codea আপনাকে গেম এবং সিমিউলেশন তৈরি করতে
+    দেয় &mdash; বা আপনার থাকা শুধু কোন চাক্ষুষ ধারণা সম্পর্কে। iPad এর মাল্টি টাচ
+    এবং অ্যাকসিলরোমিটারটির মত বৈশিষ্ট্য ব্যবহার করতে আপনার চিন্তাধারা কে ইন্টারেক্টিভ
+    সৃষ্টিতে রুপান্তর করুন। আমরা মনে করি Codea হল সবচেয়ে সুন্দর কোড এডিটর যা আপনি
+    ব্যবহার করবেন এবং এটা সহজ. Codea আপনি আপনার কোড ছুঁয়ে ডিজাইন করা হয় জন্য বানানো
+    হয়েছে। সংখ্যা পরিবর্তন করতে চান? শুধু টোকা (ট্যাপ) দিন এবং এটি টেনে আনুন। রং বা
+    একটি চিত্র সম্পর্কে কি ভাবছেন? টোকা দিলে চাক্ষুষ সম্পাদক সামনে আসবে যা থেকে আপনি
+    ঠিক কি আপনি চান তা বেছে নিতে পারবেন।
   lego_beyond_longdescription: "লেগো ব্যবহার করে ছোট, কাস্টমাইজেবল ও র্কমক্ষম রোবট
     তৈরি।"
-  finch_beyond_longdescription: The Finch is a new robot for computer science education.
-    Its design is the result of a four year study at Carnegie Mellon's CREATE lab.
-    The Finch is designed to support an engaging introduction to the art of programming.
-    It has support for over a dozen programming languages and environments, including
-    several environments appropriate for students as young as eight years old. The
-    Finch was designed to allow students to write richly interactive programs.
+  finch_beyond_longdescription: "ফিঞ্চ কম্পিউটার বিজ্ঞান শিক্ষার জন্য একটি নতুন রোবট।
+    কার্নেগী মেলনের CREATE ল্যাবে একটি চার বছরের গবেষণার ফল এর নকশা। ফিঞ্চ প্রোগ্রামিং
+    শিল্পে একটি আকর্ষক ভূমিকা সমর্থন করার জন্য ডিজাইন করা হয়। এটা এক ডজনেরও বেশি
+    প্রোগ্রামিং ভাষা এবং পরিবেশ সমর্থন করে, তরুণ আট বছর বয়সী শিক্ষার্থীদের জন্য উওপযুক্ত
+    বিভিন্ন পরিবেশও অন্তর্ভুক্ত। ফিঞ্চ ছাত্রদের সমৃদ্ধ ইন্টারেক্টিভ প্রোগ্রাম লিখতে
+    পরিকল্পনা করা হয়েছিল।"
   arduino_beyond_longdescription: "আরডুইনো একটি জনপ্রিয় প্ল্যাটফর্ম যা শিল্পী ও ডিজাইনারদের
     প্রকৃত সেন্সর, এলইডি, হর্ণ এবং আরো অনেক কিছু নিয়ে কাজ করার সুযোগ দেয়। স্পার্কফান
     ভার্চুয়াল সান্ডবক্স আপনাকে আপনার ব্রাউজার এ বাস্তব আরডুইনো কোড ঠিক শিখাবে।"
-  processing_beyond_longdescription: Processing is a programming language, development
-    environment, and online community. Since 2001, Processing has promoted software
-    literacy within the visual arts and visual literacy within technology. Initially
-    created to serve as a software sketchbook and to teach computer programming fundamentals
-    within a visual context, Processing evolved into a development tool for professionals.
-    Today, there are tens of thousands of students, artists, designers, researchers,
-    and hobbyists who use Processing for learning, prototyping, and production.
-  alice_beyond_longdescription: Using an innovative programming environment to support
-    the creation of 3D animations, the Alice Project provides tools and materials
-    for teaching and learning computational thinking, problem solving, and computer
-    programming across a spectrum of ages and grade levels.
+  processing_beyond_longdescription: "প্রসেসিং একটি প্রোগ্রামিং ভাষা, উন্নয়ন পরিবেশ,
+    এবং অনলাইন সম্প্রদায়। 2001 সাল থেকে, প্রসেসিং চাক্ষুষ শিল্পকলা ও চাক্ষুষ সাক্ষরতা
+    মধ্যেমে প্রযুক্তি মধ্যে সফ্টওয়্যার সাক্ষরতা হার উন্নীত করেছে। প্রাথমিকভাবে একটি
+    সফ্টওয়্যার স্কেচবুক হিসেবে পরিবেশন করা এবং একটি চাক্ষুষ কনটেক্সট মধ্যেমে কম্পিউটার
+    প্রোগ্রামিং মৌলিক শেখান নির্মিত, প্রসেসিং পেশাদারদের জন্য একটি উন্নয়ন টুল পরিচাযক।
+    আজ, দশ হাজারেরও আধিক ছাত্র, শিল্পী, ডিজাইনার, গবেষক, এবং শৌখিন মানুষরা শেখা, প্রোটোটাইপিং
+    এবং উৎপাদনের জন্য প্রসেসিং ব্যবহার করে।"
+  alice_beyond_longdescription: "এলিস প্রকল্প, একটি উদ্ভাবনী প্রোগ্রামিং এনভায়রনমেন্ট
+    ব্যবহার করে যা 3D অ্যানিমেশন সৃষ্টিতে সক্ষম, বয়সের এবং গ্রেড স্তরের একটি বিস্তীর্ণ
+    এলাকা জুড়ে কম্পিউটেশনাল চিন্তা, সমস্যা সমাধান ও কম্পিউটার প্রোগ্রামিং শিখানো
+    এবং শেখার জন্য সরঞ্জাম ও উপকরণ প্রদান করে।"
   sphero_beyond_longdescription: "আপনি চাই একজন শিক্ষাবিদ বা অভিভাবক হন , এসপিআরকে
     পাঠ শিশুদের আনন্দায়ক রোবট প্রোগ্রামিং কোর্স দিয়ে থাকে যা গণিত ও বিজ্ঞানের দক্ষতা
     শাণিত করে।"
@@ -1627,4 +1652,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "খেলুন"
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites

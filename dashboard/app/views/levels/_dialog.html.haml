@@ -48,14 +48,20 @@
         - elsif app == 'text_match' && data['answers'].blank?
           =t('text_match.open_response_title')
         - else
-          =t("#{app == 'match' ? 'match' : 'multi'}.correct_title")
+          - if data['submittable']
+            =t("#{app}-submittable.correct_title")
+          - else
+            =t("#{app}.correct_title")
       %p
         - if data['options'].try(:[], 'success_body')
           = data['options']['success_body']
         - elsif app == 'text_match' && data['answers'].blank?
           =t('text_match.open_response_body')
         - else
-          =t("#{app == 'match' ? 'match' : 'multi'}.correct_body")
+          - if data['submittable']
+            =t("#{app}-submittable.correct_body")
+          - else
+            =t("#{app}.correct_body")
       .farSide
         %button#ok-button.secondary
           =t('dialog.ok')

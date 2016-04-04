@@ -18,6 +18,7 @@
   "fillTooltip": "stavi 1 komad zemlje",
   "finalLevel": "Čestitamo ! Riješili ste posljednji zadatak.",
   "flowerEmptyError": "Cvijet na kojem se nalaziš nema više nektara.",
+  "didNotCollectEverything": "Provjeri jesi li pokupio sav nektar ili med!",
   "get": "nađi",
   "heightParameter": "visina",
   "holePresent": "ovdje je rupa",
@@ -58,7 +59,7 @@
   "pathAhead": "staza je ispred",
   "pathLeft": "ako je staza lijevo",
   "pathRight": "ako je staza desno",
-  "pilePresent": "ovdje je hrpa",
+  "pilePresent": "tamo je hrpa",
   "putdownTower": "spusti kulu",
   "removeAndAvoidTheCow": "ukloni 1 i izbjegni kravu",
   "removeN": "ukloni {shovelfuls}",
@@ -81,6 +82,5 @@
   "whileTooltip": "Ponavlja umetnute akcije dok se ne dosegne zadani cilj.",
   "word": "Pronađi riječ",
   "yes": "Da",
-  "youSpelled": "Napisano je",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Napisano je"
 }

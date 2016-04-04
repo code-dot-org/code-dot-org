@@ -24,6 +24,8 @@ bg:
   hello: Здравей, свят
   welcome_back: 'Добре дошли отново, %{name}'
   submit: Изпрати
+  unsubmit: Не е добавено
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Добавете учител:'
@@ -220,7 +222,7 @@ bg:
       free_play:
         playlab: Направи приложение
         artist: Начертай нещо
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Направи приложение
     user:
       classroom: Начална страница на учителя
@@ -318,6 +320,7 @@ bg:
     heading_hoc2014: '<h2>Часът на кодирането за</h2><h1>Всички възрасти</h1>'
     heading_elementary: '<h2>20 часа курсове за</h2><h1>Въведение на компютърните науки (всички възрасти)</h1>'
     heading_apps: '<h2>Забавление за</h2><h1>Всеки</h1>'
+    heading_tools: '<h2>Готов ли си за следващата стъпка?</h2> <h1>JavaScript инструменти за гимназия</h1>'
     heading_legacy: '<h2>Нашият общ курс за</h2><h1>всички възрасти</h1>'
     your_gallery: Галерия
     no_primary_course: Опитайте курс в студиото по кодиране
@@ -412,6 +415,12 @@ bg:
       current: Сегашни нива
       unused: Неизползвани нива
   upsell:
+    applab:
+      title: Лаборатория за приложения
+      body: App Lab е програмна среда, в която създавате прости приложения. Създайте дизайна на приложението си, програмирайте с блокове или JavaScript за да проработи, а след това го споделете за секунди.
+      body_short: Създайте дизайна на приложението си, програмирайте с блокове или JavaScript за да проработи, а след това го споделете за секунди.
+      audience: Възраст 13 +
+      cta: Научете как
     hoc:
       title: Класически лабиринт
       body: Опитайте основите на компютърните науки. Милиони направиха първите си стъпки.
@@ -453,10 +462,10 @@ bg:
   landing:
     prerelease: "Този курс е в <span class='betatext'> бета версия</span>.  Това означава, че не е окончателната версия на курса и е предмет на преразглеждане и подобрения."
     prerelease_hoc2014: "Този урок е в <span class='betatext'> бета версия</span>.  Това означава, че е предмет на преразглеждане и подобрения."
-    feedback: Дайте обратна връзка
     report_bug: Доклад за бъгове
     support: Получаване на помощ
     support_url: //support.code.org
+    help_resources: Помощ и ресурси
   multi:
     wrong_title: Неправилен отговор
     wrong_body: 'Отговорът, който сте въвели не е правилен.  Моля опитайте отново!'
@@ -464,6 +473,23 @@ bg:
     correct_body: Това е верният отговор.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Благодаря
+    wrong_body: Благодаря Ви, че подадохте отговор.
+    correct_title: Благодаря
+    correct_body: Благодаря Ви, че подадохте отговор.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Благодаря
+    wrong_body: Благодаря Ви, че подадохте отговор
+    correct_title: Благодаря
+    correct_body: Благодаря Ви, че подадохте отговор
+  level_group-submittable:
+    wrong_title: Благодаря
+    wrong_body: Благодаря Ви, че подадохте отговор
+    correct_title: Благодаря
+    correct_body: Благодаря Ви, че подадохте отговор
   match:
     wrong_title: Неправилно решение
     wrong_body: 'Решението, което сте въвели не е правилно.  Моля опитайте отново!'
@@ -481,6 +507,8 @@ bg:
     placeholder: Въведете отговора си тук
     open_response_title: Благодаря
     open_response_body: Благодаря за вашия отговор!
+    correct_title: Правилно
+    correct_body: Това е верният отговор.
   dialog:
     ok: OK
     startover_title: Наистина ли искате да започнете отначало?
@@ -534,6 +562,7 @@ bg:
     completed_perfect: завършено, перфектно
     furthest_level_attempted: последното пробвано ниво
     assessment: Оценка
+    submitted: submitted
   studio:
     courses_working_on: Курсове, върху които работите
     completed_courses: Завършени курсове
@@ -590,3 +619,7 @@ bg:
           other: Друго
         detail: Моля, опишете подробно колкото е възможно съдържанието, за което съобщавате.
         acknowledge: 'С подаването на тази информация, Вие се съгласявате, че тя ще бъде третирана съобразно условията на %{link_start_privacy}Privacy Policy%{link_end} и %{link_start_tos}Terms на Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

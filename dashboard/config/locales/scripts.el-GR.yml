@@ -14,7 +14,7 @@
         course1:
           'Jigsaw: Learn to drag and drop': "Παζλ: Μάθε την μεταφορά και απόθεση"
           'Maze: Sequence': "Λαβύρινθος: Ακολουθία"
-          'Maze: Debugging': "Λαβύρινθος: εκσφαλμάτωση"
+          'Maze: Debugging': "Λαβύρινθο: εντοπισμός σφαλμάτων"
           'Artist 1: Intro': "Καλλιτέχνης 1: Εισαγωγή"
           Artists 2: "Καλλιτέχνες 2"
           Spelling Bee: "Η μέλισσα της ορθογραφίας"
@@ -23,7 +23,7 @@
           'Maze 2: Loops': "Λαβύρινθος 2: Βρόγχοι"
           'Bee 2: Loops': "Μέλισσα 2: Βρόγχοι"
           Multi & Match: "Πολλαπλότητα και ταίριασμα"
-          K-1 Flappy: "Πουλάκι για Νηπιαγωγείο"
+          K-1 Flappy: "Πουλάκι για Νηπιαγωγείο έως Α' Δημοτικού"
           Flappy non blockly: "Πουλάκι σε μορφή κώδικα χωρίς μπλοκ"
           title: "Μάθημα 1"
           Artist 2: "Καλλιτέχνης 2"
@@ -164,7 +164,7 @@
           description_short: "Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!"
         hourofcode:
           Maze: "Λαβύρινθος"
-          title: "Η Ώρα του Κώδικα"
+          title: "Κλασικός λαβύρινθος"
           description: "Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με χαρακτήρες
             από τα Angry Birds, τα Plants vs. Zombies και τον Scrat από την Εποχή
             των Παγετών!"
@@ -183,13 +183,13 @@
         course4:
           description_short: "Οι μαθητές που λαμβάνουν μέρος στο Μάθημα 4 πρέπει να
             έχουν ολοκληρώσει τα Μαθήματα 2 και 3."
-          description: "Το Μάθημα 4 είναι σχεδιασμένο για μαθητές που έχουν ολοκληρώσει
-            τα Μαθήματα 2 και 3. Οι μαθητές θα εμβαθύνουν σε θέματα προγραμματισμού
-            που έχουν παρουσιαστεί σε προηγούμενα μαθήματα και θα οδηγηθούν σε πιο
-            ευέλικτες λύσεις σε πιο πολύπλοκα προβλήματα. Στο τέλος αυτού του μαθήματος
-            οι μαθητές θα δημιουργήσουν διαδραστικές ιστορίες και παιχνίδια που μπορούν
-            να μοιραστούν με οποιονδήποτε. Συνιστάται για ανώτερες τάξης Δημοτικού
-            και Γυμνασίου."
+          description: Το Μάθημα 4 έχει σχεδιαστεί για τους μαθητές που έχουν πάρει
+            τα μαθήματα 2 και 3. Οι μαθητές θα μάθουν πώς να αντιμετωπίσουν παζλ με
+            αυξημένη πολυπλοκότητα δεδομένου ότι μαθαίνουν πώς να συνδυάσουν πολλές
+            έννοιες κατά την επίλυση κάθε πρόκλησης. Από τη στιγμή που θα ολοκληρωθεί
+            αυτό το μάθημα, οι μαθητές θα δημιουργήσουν προγράμματα που επιτρέπουν
+            να δείχνουν πολλές δεξιότητες, συμπεριλαμβανομένων βρόχων "για" και λειτουργίες
+            με παραμέτρους. Συνιστάται για Τάξεις Δ' Δημοτικού έως Β' Γυμνασίου.
           'Artist: Variables': "Καλλιτέχνης: Μεταβλητές"
           'Bee: For Loops': "Μέλισσα: Βρόχοι Για"
           title: "Μάθημα 4"
@@ -665,6 +665,7 @@
           description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
+          title_short: CSP Unit 3
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
@@ -1029,6 +1030,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "Φάση 2 σε σύνδεση: Θερινή Μελέτη"
@@ -1491,6 +1493,11 @@
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1606,6 +1613,7 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Play Lab Εποχής των Παγετώνων
           description_short: "Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το
@@ -1630,7 +1638,7 @@
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
-          description_short: Programming
+          description_short: "Προγραμματισμός"
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1695,7 +1703,7 @@
         mc:
           title: "Η Ώρα του Κώδικα με το Minecraft"
           description_short: "Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα"
-          description: "Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή τον
+          description: "Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή την
             Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft"
           Hour of Code 2015: "Ώρα του Κώδικα 2015"
         CSPPD3-Unit3-pt2:
@@ -1749,6 +1757,7 @@
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4
@@ -1775,3 +1784,74 @@
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: "Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας"
+          description: "Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας"
+          'Calc: Evaluation Blocks': "Εκτιμητής: Μπλοκ Αξιολόγησης"
+          'Eval: Strings and Images': "Εκτιμητής: Κείμενα και Εικόνες"
+          'Unplugged: Contracts': "Εκτός Σύνδεσης: Συμβόλαια"
+          'Eval: Writing Contracts': "Εκτιμητής: Σύνταξη Συμβολαίων"
+          'Calc: Defining Variables': "Υπολογιστήρας: Ορισμός Μεταβλητών"
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': "Εκτός Σύνδεσης: Συνταγή Σχεδιασμού"
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: "Η Επιστήμη των υπολογιστών στην Άλγεβρα"
+          description_short: "Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας"
+          description: "Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας"
+          'Unplugged: Video Games and Coordinate Planes': "Εκτός Σύνδεσης: Βιντεοπαιχνίδια
+            και Συντονισμένα Αεροπλάνα"
+          'Play Lab: Defining Variables (Big Game)': "Εργαστήριο Παιχνιδιού: Ορισμός
+            Μεταβλητών (Μεγάλο Παιχνίδι)"
+          'Play Lab: Animation (Big Game)': "Εργαστήριο Παιχνιδιού: Κινούμενα Σχέδια
+            (Μεγάλο Παιχνίδι)"
+          'Unplugged: Booleans': "Εκτός Σύνδεσης: Δυαδικοί"
+          'Eval: Boolean Operators': "Εκτιμητής: Δυαδικοί Τελεστές"
+          'Play Lab: Booleans': "Εργαστήριο Παιχνιδιού: Δυαδικοί"
+          'Play Lab: Boolean (Big Game)': "Εργαστήριο Παιχνιδιού: Δυαδικοί (Μεγάλο
+            Παιχνίδι)"
+          'Unplugged: Conditionals and Piecewise Functions': "Εκτός Σύνδεσης: Συνθήκες
+            και Συναρτήσεις Piecewise"
+          'Eval: Conditionals': "Εκτιμητής: Συνθήκες"
+          'Unplugged: Collision Detection and the Distance Formula': "Εκτός Σύνδεσης:
+            Ανίχνευση Σύγκρουσης και Τύπος Απόστασης"
+          'Play Lab: Collision Detection (Big Game)': "Εργαστήριο Παιχνιδιού: Ανίχνευση
+            Σύγκρουσης (Μεγάλο Παιχνίδι)"
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

@@ -31,13 +31,7 @@ Milestone Complete!
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates**
-
-Quarter 1: Saturday, September 12, 2015
-
-Quarter 2: Saturday, December 12, 2015
-
-Quarter 3: Saturday, March 5, 2016
+**Save the date**
 
 Quarter 4: Saturday, April 23, 2016
 
@@ -49,7 +43,7 @@ Breakfast and lunch will be served.
 
 [Gwinnett Technical College<br/>
 Building 100<br/>
-Room 705 <br/>
+Room 106 <br/>
 5150 Sugarloaf Parkway<br/>
 Lawrenceville, GA 30043<br/>](https://www.google.com/maps/place/5150+Sugarloaf+Pkwy,+Lawrenceville,+GA+30043/@33.9624268,-84.069873,17z/data=!3m1!4b1!4m2!3m1!1s0x88f5bcfcf19da851:0xcf6e02aaf2ac5976)
 
@@ -68,7 +62,38 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
+Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
+will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+
+
+**Save the Dates**
+
+Monday, June 27th - Wednesday, June 29th
+<br />
+8:30am - 3:30pm
+<br />
+Breakfast and lunch will be served.
+
+**Location**
+
+[Gwinnett County Public Schools<br/>
+Building 200<br/>
+Brookwood Room<br/>
+437 Old Peachtree Road<br/>
+Suwanee, GA 30024](https://goo.gl/maps/8WFmGDWmSg72)
+
+Parking is free and available in front of the building.
+
+**What do I bring to my Phase 4 Workshop?**
+
+Exploring Computer Science binder with curriculum 
+<br />
+Green Code.org journal 
+<br />
+Laptop and Charger<br/>
+Snacks<br/>
+Water Bottle
+<br />
 
 [**Back to the top**](#top)
 
@@ -89,38 +114,10 @@ Milestone Complete!
 
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the dates**
-
-Semester 1: Saturday, October 10, 2015 
-
-Semester 2: Saturday, March 5, 2016 
-
-8:00am - 4:00pm<br/>
-Breakfast and lunch will be served.
-
-**Location**
-
-[Gwinnett Technical College<br/>
-Building 100<br/>
-Room 106 <br/>
-5150 Sugarloaf Parkway<br/>
-Lawrenceville, GA 30043](https://www.google.com/maps/place/5150+Sugarloaf+Pkwy,+Lawrenceville,+GA+30043/@33.9624268,-84.069873,17z/data=!3m1!4b1!4m2!3m1!1s0x88f5bcfcf19da851:0xcf6e02aaf2ac5976)
-
-Free parking is located in front of the main building. See  a [Campus Map here.](/images/gwinnett-tech-campus-map.pdf)
-
-**What to bring to Phase 3 bi-yearly sessions:**
-
-Laptop and Charger
+In person workshop complete!<br/><br/>
+**Deadline for Online Coursework is June 30th.**<br/>
 <br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
-
+Phase 3 Part 3: Refection - This final online course will launch in early May on your Code Studio Teacher Dashboard. If you need support while finishing your work or teaching the course, check out the CS in Algebra forum [here](http://forum.code.org/c/cs-in-algebra).
 
 
 [**Back to the top**](#top)
@@ -135,44 +132,11 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online)###
 
-
 Milestone Complete!
-
-
-
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) 
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-**Save the dates**
-
-Semester 1: Saturday, September 12, 2015 
-
-Semester 2: Saturday, March 5, 2016 
-
-8:00am - 4:00pm<br/>
-Breakfast and lunch will be served. 
-
-**Location**
-
-[Gwinnett Technical College<br/>
-Building 100<br/>
-Room 701<br/>
-5150 Sugarloaf Parkway<br/>
-Lawrenceville, GA 30043<br/>](https://www.google.com/maps/place/5150+Sugarloaf+Pkwy,+Lawrenceville,+GA+30043/@33.9624268,-84.069873,17z/data=!3m1!4b1!4m2!3m1!1s0x88f5bcfcf19da851:0xcf6e02aaf2ac5976)
-
-Free parking is located in front of the main building. See  a [Campus Map here.](/images/gwinnett-tech-campus-map.pdf)
-
-**What to bring to Phase 3 bi-yearly sessions:**
-
-Laptop and Charger
-<br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Milestone Complete!
 
 
 [**Back to the top**](#top)

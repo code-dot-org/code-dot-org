@@ -1,0 +1,63 @@
+name 'CSPPD3-u5 chapter 2 resources'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Create PT Breakdown > Resources for the Create PT
+
+#### Performance Task Documents
+
+* <a href=”https://drive.google.com/open?id=0B78N8p4zhHFgWHRQVE9PeEs5WmM” target=”_blank”>AP Create Performance Task Overview</a>
+* Official rubric coming soon
+
+#### How to Make a Video
+
+If you have not made any screen-capture videos in class to this point, students may ask how to do it. You will need to use screen-capture software. Two good options are:
+
+* Online/Web: <a href="https://screencast-o-matic.com) (may require download depending on browser/plugins" target=_blank>Screencast-o-matic</a>
+* Windows / Mac: <a href="https://www.techsmith.com/jing.html" target=_blank> Jing from Techsmith</a> (requires download)
+
+#### How to Make and Edit a PDF
+
+If you have not made or annotated any PDFs in class to this point, students may ask how to do it. In most word-processing applications, you can save a document as a PDF by choosing **File -> Save as…** and then changing the file type to “PDF.”<br><br>
+
+To annotate or draw on a PDF:
+
+* Windows: Use Adobe Reader.
+* Mac: Use Preview.
+
+#### Role of the Teacher During Create Task Completion
+
+Now that students have some context for what they will be doing in completing the task, spend some time talking through what types of things they can and cannot get help with. Consult the Teacher Implementation Guidelines from the College Board for the most up to date guidelines. Below is a draft copy of those guidelines:<br><br>
+
+**As the teacher, you specifically should:**<br><br>
+
+1. Assist in resolving technical problems that impede work, such as a failing workstation or difficulty with access to networks, or help with saving files or making movie files.
+2. Monitor progress and remind students of dates by which key milestones need to be achieved and submitted. Suggest a timeframe for completing sections of the Performance Tasks.
+3. Provide opportunities, as needed, for students to consult with outside experts. Instruct students consultants should be cited as sources of information in their written responses to Explore 1g and/or Create 3f.
+4. Allow students’ interests to drive their choice of a computing innovation. Encourage creative choices, and give general guidance to help students focus their topics.
+
+**As the teacher, you are allowed to:**<br><br>
+
+1. Examine selected pieces of work to use for your own summative assessment, as long as you do not provide feedback.
+2. Clarify directions for a component of a performance task when it is clear students do not understand the directions.
+3. Remind students about submission requirements.
+4. Ask questions to help students better define their focus and choice of topics. 
+5. Provide guidance about where students might find coding assistance if needed.
+6. Provide coding support that is restricted to asking questions that help students narrow down a problem to a part of the code; find a solution to a problem in the program or code.
+7. Suggest different times at which partners may choose to collaborate.
+
+**As the teacher, you may not:**<br><br>
+
+1. Debug code.
+2. Write or design functionality in the program.
+3. Test the program.
+4. Make revisions to the program.
+
+
+
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

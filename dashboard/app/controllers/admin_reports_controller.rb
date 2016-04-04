@@ -9,64 +9,83 @@ class AdminReportsController < ApplicationController
   before_action :set_script
   include LevelSourceHintsHelper
 
-  def admin_concepts
-    SeamlessDatabasePool.use_persistent_read_connection do
-      render 'admin_concepts', formats: [:html]
-    end
+  def directory
   end
 
-  def funometer
-    require 'cdo/properties'
+  # Parses and presents the data in the SurveyResult dashboard table.
+  def diversity_survey
     SeamlessDatabasePool.use_persistent_read_connection do
-      @stats = Properties.get(:funometer)
-      @ratings_by_day = @stats['ratings_by_day'] if @stats.present?
-    end
-  end
+      # The number of users that submitted the survey.
+      @respondents = 0
+      # The number of users that submitted or dismissed the survey.
+      @participants = 0
+      # The number of users choosing the i^th answer for the second question.
+      @foodstamps = Array.new(10, 0)
+      # The number of FARM students and total students based on FARM answer and class sizes.
+      @foodstamps_count = 0
+      @foodstamps_all = 0
+      # The number of users of each ethnicity.
+      @ethnicities = {
+        survey2016_ethnicity_american_indian: 0,
+        survey2016_ethnicity_asian: 0,
+        survey2016_ethnicity_black: 0,
+        survey2016_ethnicity_hispanic: 0,
+        survey2016_ethnicity_native: 0,
+        survey2016_ethnicity_white: 0,
+        survey2016_ethnicity_other: 0,
+      }
+      # The number of students with ethnicities and total reported.
+      @ethnic_count = 0
+      @ethnic_all = 0
+      # The number of students in sections associated to respondent teachers. Note that this may
+      # differ from @foodstamps_all and @ethnic_all as a teacher may not answer those questions.
+      @student_count = 0
 
-  def funometer_by_script
-    SeamlessDatabasePool.use_persistent_read_connection do
-      @script_id = params[:script_id]
-      @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+      SurveyResult.all.each do |survey_result|
+        @participants += 1
+        next if survey_result.properties.blank?
+        @respondents += 1
 
-      # Compute the global funometer percentage for the script.
-      ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id)
-      @overall_percentage = get_percentage_positive(ratings)
+        # The number of born students associated with the teacher.
+        teachers_student_count = Follower.
+          where(user_id: survey_result.user_id).
+          joins('INNER JOIN users ON users.id = followers.student_user_id').
+          where('users.last_sign_in_at IS NOT NULL').
+          distinct.
+          count(:student_user_id)
+        @student_count += teachers_student_count
 
-      # Generate the funometer percentages for the script, by day.
-      @ratings_by_day = get_ratings_by_day(ratings)
+        foodstamp_answer = survey_result.properties['survey2016_foodstamps']
+        if foodstamp_answer
+          @foodstamps[foodstamp_answer.to_i] += 1
+          # Note that this assumes XX% for the range XX% to YY%, so should undercount slightly.
+          if foodstamp_answer.to_i <= 7
+            @foodstamps_count += foodstamp_answer.to_f / 10 * teachers_student_count
+            @foodstamps_all += teachers_student_count
+          end
+        end
 
-      # Generate the funometer percentages for the script, by stage.
-      ratings_by_stage = ratings.
-                         joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id AND puzzle_ratings.level_id = script_levels.level_id").
-                         joins("INNER JOIN stages ON stages.id = script_levels.stage_id").
-                         group('script_levels.stage_id').
-                         order('script_levels.stage_id')
-      @ratings_by_stage_headers = ['Stage ID', 'Stage Name', 'Percentage', 'Count']
-      @ratings_by_stage = ratings_by_stage.
-                          select('stage_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+        has_ethnic_data = false
+        @ethnicities.each_key do |ethnicity|
+          ethnicity_answer = survey_result.properties[ethnicity.to_s].to_i
+          if ethnicity_answer > 0
+            has_ethnic_data = true
+            @ethnicities[ethnicity] += ethnicity_answer
+          end
+        end
+        if has_ethnic_data
+          @ethnic_all += teachers_student_count
+        end
+      end
 
-      # Generate the funometer percentages for the script, by level.
-      ratings_by_level = ratings.joins(:level).group(:level_id).order(:level_id)
-      @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
-      @ratings_by_level = ratings_by_level.
-                          select('level_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
-    end
-  end
-
-  def funometer_by_script_level
-    SeamlessDatabasePool.use_persistent_read_connection do
-      @script_id = params[:script_id]
-      @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
-      @level_id = params[:level_id]
-      @level_name = Level.where('id = ?', @level_id).pluck(:name)[0]
-
-      ratings = PuzzleRating.
-                where('puzzle_ratings.script_id = ?', @script_id).
-                where('level_id = ?', @level_id)
-      @overall_percentage = get_percentage_positive(ratings)
-
-      # Generate the funometer percentages for the level, by day.
-      @ratings_by_day = get_ratings_by_day(ratings)
+      @ethnicities.each_value do |count|
+        @ethnic_count += count
+      end
+      @foodstamps_count = @foodstamps_count.to_i
+      respond_to do |format|
+        format.html
+        format.csv { return diversity_survey_csv }
+      end
     end
   end
 
@@ -117,17 +136,25 @@ class AdminReportsController < ApplicationController
 # noinspection RubyResolve
     require Rails.root.join('scripts/archive/ga_client/ga_client')
 
-    @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
-    @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
-
     @is_sampled = false
+    # If the window dates are not explicitly specified, we render the page without data so as to
+    # not make the user wait on a lengthy GA query whose data will be discarded.
+    if params[:start_date].blank? || params[:end_date].blank?
+      @start_date = (DateTime.now - 7).strftime('%Y-%m-%d')
+      @end_date = DateTime.now.prev_day.strftime('%Y-%m-%d')
+
+      (render locals: {headers: [], data: []}) && return
+    end
+
+    @start_date = DateTime.parse(params[:start_date]).strftime('%Y-%m-%d')
+    @end_date = DateTime.parse(params[:end_date]).strftime('%Y-%m-%d')
 
     output_data = {}
     %w(Attempt Success).each do |key|
       dimension = 'ga:eventLabel'
       metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
       filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
-      if params[:filter]
+      if params[:filter].present?
         filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
       end
       ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
@@ -185,16 +212,19 @@ class AdminReportsController < ApplicationController
   end
 
   def admin_progress
+    require 'cdo/properties'
     SeamlessDatabasePool.use_persistent_read_connection do
-      @user_count = User.count
-      @all_script_levels = Script.twenty_hour_script.script_levels.includes({ level: :game })
+      stats = Properties.get(:admin_progress)
+      if stats.present?
+        @user_count = stats['user_count']
+        @levels_attempted = stats['levels_attempted']
+        @levels_attempted.default = 0
+        @levels_passed = stats['levels_passed']
+        @levels_passed.default = 0
 
-      @levels_attempted = User.joins(:user_levels).group(:level_id).where('best_result > 0').count
-      @levels_attempted.default = 0
-      @levels_passed = User.joins(:user_levels).group(:level_id).where('best_result >= 20').count
-      @levels_passed.default = 0
-
-      @stage_map = @all_script_levels.group_by { |sl| sl.level.game }
+        @all_script_levels = Script.twenty_hour_script.script_levels.includes({level: :game})
+        @stage_map = @all_script_levels.group_by {|sl| sl.level.game}
+      end
     end
   end
 
@@ -212,53 +242,57 @@ class AdminReportsController < ApplicationController
     end
   end
 
-  def hoc_signups
+  def retention
+    require 'cdo/properties'
     SeamlessDatabasePool.use_persistent_read_connection do
-      # Requested by Roxanne on 16 November 2015 to track HOC 2015 signups by day.
-      # Get the HOC 2014 and HOC 2015 signup counts by day, deduped by email and name.
-      # We restrict by dates to avoid long trails of (inappropriate?) signups.
-      data_2014 = DB[:forms].
-                  where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2014', '2014-08-01', '2015-01-01').
-                  group(:name, :email).
-                  # TODO(asher): Is this clumsy notation really necessary? Is Sequel
-                  # really this stupid? Also below.
-                  group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
-                  order(:created_at_day).
-                  all.
-                  map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
-      data_2015 = DB[:forms].
-                  where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-08-01', '2016-01-01').
-                  group(:name, :email).
-                  group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
-                  order(:created_at_day).
-                  all.
-                  map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
+      @all_scripts_names_ids = Script.order(:id).pluck(:name, :id).to_h
+      selected_scripts_names = params[:selected_scripts_names] ||
+        ["20-hour", "course1", "course2", "course3", "course4"]
+      @selected_scripts_names_ids = @all_scripts_names_ids.select{|name, _id| selected_scripts_names.include? name}
 
-      # Construct the hash {MM-DD => [count2014, count2015]}.
-      # Start by constructing the key space as the union of the MM-DD dates for
-      # data_2014 and data_2015.
-      require 'set'
-      dates = Set.new []
-      data_2014.each do |day|
-        dates.add(day[0])
+      # Get the cached retention_stats from the DB, trimming those stats to only the selected
+      # scripts, exiting early if the stats are blank.
+      raw_retention_stats = Properties.get(:retention_stats)
+      if raw_retention_stats.blank?
+        render(text: 'Properties.get(:retention_stats) not found. Please contact an engineer.') &&
+          return
       end
-      data_2015.each do |day|
-        dates.add(day[0])
-      end
-      # Then populate the keys of our hash {date=>[count2014,count2015], ..., date=>[...]} with dates.
-      data_by_day = {}
-      dates.each do |date|
-        data_by_day[date] = [0, 0]
-      end
-      # Finally populate the values of our hash.
-      data_2014.each do |day|
-        data_by_day[day[0]][0] = day[1]
-      end
-      data_2015.each do |day|
-        data_by_day[day[0]][1] = day[1]
-      end
+      # Remove the stage_level_counts data, which is not used in this view.
+      raw_retention_stats.delete('stage_level_counts')
 
-      render locals: {data_by_day: data_by_day.sort}
+      @retention_stats = {}
+      raw_retention_stats.each_pair do |key, key_data|
+        @retention_stats[key] = key_data.select do |script_id, _script_data|
+          @selected_scripts_names_ids.values.include? script_id.to_i
+        end
+      end
+      # Transform the count stats into row format to facilitate being added to charts and tables.
+      ['script_level_counts', 'script_stage_counts'].each do |key|
+        @retention_stats[key] = build_row_arrays(@retention_stats[key])
+      end
+    end
+  end
+
+  def retention_stages
+    require 'cdo/properties'
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @stage_ids = params[:stage_ids].present? ?
+        params[:stage_ids].split(',').map(&:to_i) :
+        [2, 6, 25, 105, 107, 108]  # Default to popular HOC stages.
+      # Grab the data from the database, keeping data only for the requested stages.
+      raw_retention_stats = Properties.get(:retention_stats)
+      if raw_retention_stats.blank? || !raw_retention_stats.key?('stage_level_counts')
+        render(text: 'Properties.get(:retention_stats) or '\
+          "Properties.get(:retention_stats)['stage_level_counts'] not found. Please contact an "\
+          'engineer.') && return
+      end
+      raw_retention_stats = raw_retention_stats['stage_level_counts'].
+        select{|stage_id, _stage_data| @stage_ids.include? stage_id.to_i}
+      if raw_retention_stats.blank?
+        render(text: 'No data could be found for the specified stages. Please check the IDs, '\
+          'contacting an engineer as necessary.') && return
+      end
+      @retention_stats = build_row_arrays(raw_retention_stats)
     end
   end
 
@@ -268,22 +302,96 @@ class AdminReportsController < ApplicationController
   end
 
   private
-  def get_ratings_by_day(ratings_to_process)
-    return ratings_to_process.
-           group('DATE(created_at)').
-           order('DATE(created_at)').
-           pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating)')
+  # Manipulates the count_stats hash of arrays to an array of arrays, each inner array representing
+  # a slice across the hash arrays.
+  # Returns nil if the hash is blank.
+  def build_row_arrays(count_stats)
+    # Determine the number of final number of rows, being the maximum array size in the hash.
+    array_length = count_stats.max_by{|_k,v| v.size}[1].size
+
+    # Initialize and construct the row_arrays.
+    row_arrays = Array.new(array_length) {Array.new(count_stats.size + 1, 0)}
+    row_arrays.each_with_index do |subarray, index|
+      subarray[0] = index
+    end
+    count_stats.values.each_with_index do |counts, index|
+      counts.each_with_index do |count, subindex|
+        row_arrays[subindex][index + 1] = count
+      end
+    end
+
+    return row_arrays
   end
 
-  def get_percentage_positive(ratings_to_process)
-    return 100.0 * ratings_to_process.where(rating: 1).count / ratings_to_process.count
+  # Returns an array of arrays, each inner array including the raw responses to
+  # the diversity survey.
+  def diversity_survey_raw_responses
+    header = [
+      "Response ID",
+      "American Indian",
+      "Asian",
+      "Black",
+      "Hispanic",
+      "Native",
+      "White",
+      "Other",
+      "Foodstamps",
+      "System Student Count",
+    ]
+    raw_responses = [header]
+
+    SurveyResult.all.each do |response|
+      this_response = [response['id']]
+
+      data = response['properties']
+      this_response << (data.key?('survey2016_ethnicity_american_indian') ?
+        data['survey2016_ethnicity_american_indian'].to_i : nil)
+      this_response << (data.key?('survey2016_ethnicity_asian') ?
+        data['survey2016_ethnicity_asian'].to_i : nil)
+      this_response << (data.key?('survey2016_ethnicity_black') ?
+        data['survey2016_ethnicity_black'].to_i : nil)
+      this_response << (data.key?('survey2016_ethnicity_hispanic') ?
+        data['survey2016_ethnicity_hispanic'].to_i : nil)
+      this_response << (data.key?('survey2016_ethnicity_native') ?
+        data['survey2016_ethnicity_native'].to_i : nil)
+      this_response << (data.key?('survey2016_ethnicity_white') ?
+        data['survey2016_ethnicity_white'].to_i : nil)
+      this_response << (data.key?('survey2016_ethnicity_other') ?
+        data['survey2016_ethnicity_other'].to_i : nil)
+
+      this_response << (data.key?('survey2016_foodstamps') ?
+        data['survey2016_foodstamps'].to_i : nil)
+
+      teachers_student_count = Follower.
+        where(user_id: response['user_id']).
+        joins('INNER JOIN users ON users.id = followers.student_user_id').
+        where('users.last_sign_in_at IS NOT NULL').
+        distinct.
+        count(:student_user_id)
+      this_response << teachers_student_count
+
+      raw_responses << this_response
+    end
+
+    raw_responses
+  end
+
+  def diversity_survey_csv
+    send_data(
+      CSV.generate do |csv|
+        diversity_survey_raw_responses().each do |response|
+          csv << response
+        end
+        csv
+      end,
+      :type => 'text/csv')
   end
 
   def level_answers_csv
     send_data(
       CSV.generate do |csv|
         csv << @headers
-        @responses.each do |level_id, level_responses|
+        @responses.each_value do |level_responses|
           level_responses.each do |response|
             csv << response
           end

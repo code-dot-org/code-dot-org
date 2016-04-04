@@ -60,10 +60,10 @@ Attached to this email, you will also find a personalized certificate acknowledg
 
 **For a limited time**  
 
-Code.org is offering $50 off [**Dash robots**](https://store.makewonder.com/). These hands-on learning tools reinforce CS concepts taught in Code.org's CS Fundamentals curriculum, like events and loops. [Learn more](https://store.makewonder.com/). *Valid Feb 1st-Feb 29th, 2016 only. Limited to first 1,000 people.*
+Code.org is offering $50 off [**Dash robots**](https://store.makewonder.com/). These hands-on learning tools reinforce CS concepts taught in Code.org's CS Fundamentals curriculum, like events and loops. [Learn more](https://store.makewonder.com/). *Valid March 1st-30th, 2016 only. Limited to first 1,000 people.*
 
-**Redemption code for robots: CODE1389F**   
-*Valid Feb 1st-29th 2016 only.*
+**Redemption code for robots: CODE91738A**   
+*Valid April 1-31st, 2016 only.*
 *Limited to first 1,000*
 
 [Go here](https://help.makewonder.com/) for questions regarding redemption. 

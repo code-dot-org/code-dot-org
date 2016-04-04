@@ -62,9 +62,9 @@ class FrequentUnsuccessfulLevelSource < ActiveRecord::Base
       unsuccessful_level_source.num_of_attempts = count
       # Make active if there are not enough crowdsourced hints yet.
       unsuccessful_level_source.active =
-          LevelSourceHint.where(level_source_id: level_source_id,
-                                source: LevelSourceHint::CROWDSOURCED).
-              size <= MAXIMUM_ACTIVE_HINT_COUNT
+        LevelSourceHint.where(level_source_id: level_source_id,
+                              source: LevelSourceHint::CROWDSOURCED).
+            size <= MAXIMUM_ACTIVE_HINT_COUNT
       unsuccessful_level_source.save!
     end
   end

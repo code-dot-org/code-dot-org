@@ -1,0 +1,81 @@
+name 'CSPPD3-u5 chapter 2 concepts'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+
+### Create PT Breakdown > Concepts
+#### What's Inside?
+<img src="https://images.code.org/c7b52b3db8d2205cf1ee008e37dc1b49-image-1457476053581.46.11 PM.png" width="450" style="float:right; margin-right:10px; margin-left: 30px">
+
+
+The skinny: The Create Performance task asks students to write a program and identify key aspects of it through a) the code itself b) a video demonstration of the program and c) writing. The writing prompts ask students to identify the program’s intended purpose, and the key algorithms and abstractions in the code.<br><br>
+
+**Unit 5 - Lesson 3** gears students up to actually do the task.  In that lesson students will:
+
+- Review the Create Performance Task description and rubric
+- Understand **collaboration strategies** and the role of collaboration in this task
+- Review where and how to identify an **algorithm** in their program
+- Review where and how to identify an **abstraction** in their program
+- Learn how to make a **video screen capture** of themselves using their program
+
+**Unit 5 - Lesson 4** is the actual administration of the task.  The associated lesson plan contains:
+
+- Timeline for administering the task
+- Tips on the role of the role of the instructor
+- Instructor Dos and Don'ts during administration of the Task 
+
+#### Content Overview
+
+##### About the Create Performance Task
+
+Students need to be given 12 hours of class time to complete the Create PT. The AP Create Performance Task and Rubric make a list of all the steps in the process. This list includes:
+
+
+* Planning and wireframing ideas.
+* Creating a program.
+* Getting feedback.
+* Responding to peer feedback.
+* Creating a video.
+* Written responses.
+
+For more details about the performance task, refer to the following documents:
+
+* <a href=”https://drive.google.com/open?id=0B78N8p4zhHFgWHRQVE9PeEs5WmM” target=”_blank”>AP Create Performance Task Overview</a>
+* Official rubric coming soon
+
+##### About Collaboration on the Performance Task
+
+There are multiple ways students can collaborate with a partner on the Create PT. Collaboration on the PT is allowed but not required. Sharing code is acceptable, but each student must have some element of original work that he or she can point to and claim ownership of.
+
+Various forms of collaboration include:
+
+
+* Brainstorming ideas.
+* Working together to write the actual program (by each contributing separate independent components).
+* Giving and receiving feedback on programs created separately.
+* Responding to feedback provided by peers.
+
+##### About Writing in the Performance Task
+
+Students will need to analyze their programs and prepare written responses that highlight examples of algorithms and abstraction in their code, as well as reflecting on the process used to develop the program submitted in the Create Task.  It's important to note that the College Board does not prescribe any particular format for these written elements of the task-- as long as they answer the prompts fully, students are allowed to format their responses however they like (bullet points, paragraph, etc).
+
+##### How Have Students Prepared for This Task?
+
+Previously in this class, students have done a number of practice PTs to prepare them for the actual Create PT, including: 
+
+* Unit 3, Lesson 8: Design a Digital Scene
+* Unit 3, Lesson 29: Improve Your App
+
+In these practice PTs, students practiced the following skills:
+
+* Iteratively designing a program.
+* Testing the program.
+* Working with classmates to give and receive feedback.
+* Creating a video of their program running.
+* Responding in writing to questions about their work.
+
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

@@ -313,64 +313,63 @@ tr:
           Biz buna programlamada döngü diyoruz. Döngü bir kodunuzun nasıl tekrardan tekrar ettiğidir. Bir sonraki puzzle için hedefiniz Anna' nın "Tekrar" bloğu ile bir kare oluşturmasına yardımcı olmaktır.
       3:
         image: notes/frozen2_3.jpg
-        text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
+        text: "'Yenile' bloğu, içine koyduğunuz her kod istediğiniz kadar sırasıyla tekrarlanır."
       4:
         image: notes/frozen2_4.jpg
-        text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
+        text: 'Bir kare çizmek için "ilerle" ve "Sağa dön" bloklarını 4 kez kullanabilirsiniz. Ama daha kolay şekilde yapmak için bilgisayara "İlerle" ve "Sağa doğru 90 derece dön ü bir kere söyleyip aynı komutları 4 defa tekrarlamasını söyleyebilirsiniz. Bunu yapmak için "İlerle" ve "Sağa dön" bloklarını "Tekrarla?? kez tekrarla" bir bloğu içinde koymak gerekir.'
       5:
         image: notes/frozen2_5.jpg
-        text: |-
-          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
+        text: 'Unutmayın, "Tekrar" bloğundaki herşey için sayıyı değiştirebilirsiniz ve bloğun içindekiler sayı kadar tekrar edecektir.'
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
         text: Merhaba, ben Chris Bosh. Ben bir profesyonel basketbol oyuncusuyum ve üniversitemde kodlama ile uğraşıyorum.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
+        text: Bilgisayar Biliminde en önemli kavramlarından biri yeni komut tanımlamadır. Çoğu programlama dillerin yalnızca yaklaşık 100 komutu vardır. Ve gerçekten, işin sırrı bu yapı taşları komutların yanı sıra kendi yeni komutlarını tanımlamadır.
       3:
         image: notes/frozen3_3.jpg
-        text: "Once you've taught a computer how to do an action once using this sequence of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function."
+        text: 'Bilgisayara bir eylemi nasıl yapacağını komutlar kullanarak öğrettin vede bu eyleme kolay hatırlanır bir isim verin. Bu isim daha sonra kolayca aynı eylemi gerçekleştirmek için kullanılabilir. Bu şekilde kendi komutunu tanımlamaya "fonksiyon" denir.'
       4:
         image: notes/frozen3_4.jpg
-        text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
+        text: Merhaba ben Jess, bloklarla programlama yaparken fonksiyonları kullanarak aynı eylemi birçok kere yapabilirsiniz. Örneğin kare yapan bir fonksiyon yazdınız.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Bunu "bir kare oluşturun." adında bir fonksiyona tanımlayabilirsiniz '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple squares.
+        text: Şimdi kare yapma işlemini birçok kere yapabileceğiniz yeni bir blok oluşturdunuz.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns. In the next puzzle, the code you recently wrote to make a circle is available to you as a new function that can make circles of different sizes. Can you use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Basit şekiller çok daha karmaşık desenleri oluşturmak için kullanılabilir. Sonraki Bulmacada, çember yapmak için yazdığınız fonksiyon size farklı boyutlarda çemberler çizmeniz için kullanabilirsiniz. Elsanın karda karmaşık ve güzel desenler oluşturması için bu fonksiyonu için kullanabilirsiniz?
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: "Play Lab'ı kullanarak oyunlar yapacağız. İyi oyunların hikayesi vardır ve her hikayenin de aktörleri vardır. Cadı, uzaylı, hayvan gibi aktörler yaratıp onların ilerlemesini ve birbiri ile iletişime geçmelerini sağlayacağız. Bu öğreticinin sonunda sıfırdan bir oyun yaratıp arkadaşlarımızla paylaşacağız."
       2:
         image: notes/playlab_intro_2.png
         text: Ekran 3 ana bölüme ayrılmıştır. Sol taraf programınızın çalıştırılacağı oyun alanıdır. Her düzey için talimatlar aşağıda yazılmıştır.
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: |
+          Ortadaki alan araç kutusu alanıdır. Bu alandaki her bir blok bir parça koda karşılık gelir.
+          Sağdaki boş alan çalışma alanıdır. Bu alanda kod yazacaksınız.
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: 'Kendi ekleyeceğiniz blokları "Çalıştığı zaman" bloğuna bağlamak gerekir. Blokları sürükleyip sarı çizgi çıkana kadar birbirine yaklaştırarak bağlayabilirsiniz.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: 'Bu ilk bulmacada bizim oyuncu bir penguen ve biz ona "Merhaba!" dedirtmek istiyoruz. Bunun içim Söyle bloğunu çekerek "Çalıştığı Zaman" bloğuna birleştireceğiz. sonra Söyle bloğuna "Merhaba." yazacağız. Ayrıca Sağa hareket, sola hareket bloklarını kullanarak pengueni hareket ettirebilirsiniz. Blokları yerleştirdikten sonra Çalıştır düğmesine basınız.'
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, ateş topu atabilir ve hatta birbirini yok edebilir. Bunların hepsi senin elinde istediğin gibi oyununu yapabilirsin.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: 'Şimdi oyun programcılarının her zaman kullandığı "Olay" kavramını öğreneceğiz. Olay  bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir.'
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: 'Olay;  fare tıklama, yön tuşuna basma yada ekrana tıklama gibi aktivitelerdir.'
       3:
         image: notes/playlab_events_3.png
         text: |-
@@ -392,30 +391,27 @@ tr:
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: These are your draw blocks. Use the correct one to move the artist where he needs to go to fill in the grey lines.
+        text: Bunlar senin çizim blokların. Doğru olanı kullanarak sanatçıyı ilerlet ve gri çizgiyi çiz.
       2:
         image: notes/C1_artist_intro_2.png
-        text: "These are jump blocks. When you use these, your artist moves but doesn't draw, so use these to jump to the next grey line."
+        text: Bunlar atla blokları. Bunları kullandığın zaman sanatçı ilerler fakat çizmez. Bu bkokları bir sonraki gri çizgiye ulaşmak için kullan.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: |-
-          Aren't bees super cool? In this next set of puzzles, your goal is to help the bee get to the flowers and get nectar from the flowers and fly over to the honeycomb to make honey. You'll need to use the "get nectar" and the "make honey" blocks for this exercise.
+        text: 'Arılar süper havalı değil mi? Bir sonraki bulmacada amacın arıyı çiçeklere ilerletip nektarları toplamak ve peteklere ilerleyip bal yapmaktır. "Değer Al" ve "Yap" bloklarını kullanacaksın.'
       2:
         image: notes/C1_bee_level_intro_2.png
-        text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We know how much nectar is in the red flowers, by the little number in the corner. So be sure to get all the nectar from the flower before you move forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or more. So be sure to make as much honey as the honeycomb can hold.'
+        text: 'Her çiçek farklı sayıda nektar içerir: 1, 2 3 yada daha fazla. Kırmızı çiçekte ne kadar nektar olduğunu alt köşesinde yazmaktadır. Bir sonraki adıma ilerlemeden bütün nektarları topla. Benzer şekilde her bir petek 1, 2, 3 yada daha fazla bal alabilir. Peteklere alabileceği kadar bal koyun.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: |-
-          If you're able to get all the nectar and make all the honey, you succeed and go to the next level. Otherwise, you need to try this puzzle again. Play around a while and see what it feels like to "bee" a programmer!
+        text: 'Eğer bütün nektarları toplarsan ve bütün balları peteklere yaparsan başarılı olmuş olursun ve bir sonraki aşamaya geçersin. akis takdirde bulmacayı tekrar deneyin. Biraz takılarak "arı" programcı olmanın nasıl bir şey olduğunu görün!'
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: "A loop is a repetition of activity. So going into a hive to inspect, I look at a frame and then I put it back, so I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: 'Döngü aktivitelerin tekrarlanmasıdır.  '
       2:
         image: notes/C1_bee_loops_2.png
-        text: |-
-          In this level, we want the bee to collect three nectars from the flower. Instead of using three "get nectar" blocks, you're going to use the repeat block to get nectar three times. Hit "Run" and see if you got it right. Nice!
+        text: 'Bu seviyede arının üç nektar toplamasını istiyoruz. üç tane "Nektar Al" bloğu kullanmak yerine "tekrarla" bloğu kullanıp üç nektar alacağız. İpucu: "Çalıştır" tuşuna baş ve doğru yapılmış mı gör. Süperr!'
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
@@ -459,20 +455,20 @@ tr:
         text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
       2:
         image: notes/C1_getting_loopy_2.png
-        text: "When you repeat something multiple times, like my actions to keep the hula hoop spinning, I'm performing a loop of that action. This is a loop. This is a loop. And this is a loop."
+        text: 'Birşeyi birçok kez yapınca "döngü" yapmış oluyoruz. Aynı benim bu çemberi çevirmek için yaptığım gibi. Bu bir döngü bu bir döngü Ve bu bir döngü.'
       3:
         image: notes/C1_getting_loopy_3.png
-        text: "Today we're going to have a dance party. We'll act out loops with a new dance. The Iteration. We're going to learn about loops using a dance. You will learn a couple of easy steps and repeat them over and over to complete the dance."
+        text: Bugün biz bir dans partisi yapacağız. Döngü kullanarak dans edelim. Dans ederek döngüyü öğreneceğiz. Birkaç kolay dans adımı öğrenip onu tekrarlayarak dan edeceğiz.
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands behind your head. Put your hands on your waist. Lift your left hand up. Lift your right hand up. Pretty simple, right? You will discover that you can shorten the directions by putting some dance steps in loops.
+        text: İşte öğrenmen gereken adımlar. El çırp. Ellerini kafanın arkasına koy. Ellerini beline koy. Sol elini kaldır. Sağ elini kaldır. Çok kolay değil mi? Döngü kullanarak dans adımlarını azaltabileceğinizi göreceksiniz.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: "We actually do use loops in our dancing. The dancers are wearing computers, all in the same network. I might loop the lights through to the same dancers over and over again. In the loop I might have an iteration where I'll say you want to go loop through these six dancers over and over again and then within the loop you want to increase the speed of the light. And that's all created through loops. Loops are important in computer science because they make our work shorter and easier."
+        text: Aslında dans sırasında döngüleri kullanırız. Dansçılar bilgisayar giyiyor. Hepsi aynı ağda. Işığı aynı dansçılar üzerinde defalarca döngüleyebilirim. döngüler bilgisayar mühendisliğinin en önemli kavramları çünkü yaptığımız işi kısaltırlar.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: "This lesson is called Happy Maps. Today we're gonna help our furry little friend Flurb get to her fruit."
+        text: 'Bu derse mutlu haritalar denir. Bugün küçük tüylü arkadaşımız "Florb" un meyveyi almasını sağlayacağız.'
       2:
         image: notes/C1_happy_maps_unplugged_2.png
         text: "Make your Flurb go to your fruit. To do this you'll need to figure out which way the Flurb needs to go and direct her with arrows. In order for the Flurb to get to the apple, what direction does the Flurb have to go? Line to make it go up."
@@ -509,10 +505,10 @@ tr:
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: Bilgisayarın iyi olduğu şeylerden birisi aynı komutları tekrarlamasıdır. İnsan olarak aynı şeyleri yapmaktan sıkılabilirsin. Fakat bilgisayar aynı işlemi milyonlarca defa yapar ve sıkılmaz ve gayet güzel yapar.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: Örneğin Eğer Facebooktaki herkese doğum günü mesajı atmak istediğimde herkese ayrı mesaj yazsam yıllarca sürer. Fakat sadece birkaç kod satırıyla Facebooktaki herkese mesaj atıp iyiki doğdun dileklerimi iletebiliyorum.
       3:
         image: notes/C1_maze_loops_3.png
         text: 'To get the bird to the pig in this level... rather than drag three North blocks on to the workspace, you will use the "repeat" block. Drag the "repeat" block on to the workspace and enter the number 3. Then drag the "move North" block into the "repeat" block and hit "Run" to see if you got it right. Congratulations, you got it!'
@@ -602,10 +598,10 @@ tr:
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: Bilgisayarın iyi olduğu şeylerden birisi aynı komutları tekrarlamasıdır. İnsan olarak aynı şeyleri yapmaktan sıkılabilirsin. Fakat bilgisayar aynı işlemi milyonlarca defa yapar ve sıkılmaz ve gayet güzel yapar.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: Örneğin Eğer Facebooktaki herkese doğum günü mesajı atmak istediğimde herkese ayrı mesaj yazsam yıllarca sürer. Fakat sadece birkaç kod satırıyla Facebooktaki herkese mesaj atıp iyiki doğdun dileklerimi iletebiliyorum.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."
@@ -1644,7 +1640,7 @@ tr:
         text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
       5:
         image: notes/gumball_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: Bu orta alan araç kutusu ve buradaki her blok bir kod parçasıdır.
       6:
         image: notes/gumball_intro_6.JPG
         text: Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada yaparsınız.
@@ -1664,7 +1660,7 @@ tr:
         text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
       2:
         image: notes/gumball_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+        text: Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı tuşu veya ekrana bir kere dokunma.
       3:
         image: notes/gumball_events_3.JPG
         text: |-
@@ -1681,7 +1677,7 @@ tr:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/gumball_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+        text: Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana kendi oyununu yaparken tonla zaman kazandıracak.
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
@@ -1697,7 +1693,7 @@ tr:
         text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
       5:
         image: notes/iceage_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: Bu orta alan araç kutusu ve buradaki her blok bir kod parçasıdır.
       6:
         image: notes/iceage_intro_6.JPG
         text: Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada yaparsınız.
@@ -1717,7 +1713,7 @@ tr:
         text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
       2:
         image: notes/iceage_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+        text: Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı tuşu veya ekrana bir kere dokunma.
       3:
         image: notes/iceage_events_3.JPG
         text: |-
@@ -1734,4 +1730,4 @@ tr:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/iceage_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+        text: Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana kendi oyununu yaparken tonla zaman kazandıracak.

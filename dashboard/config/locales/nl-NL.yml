@@ -24,6 +24,8 @@
   hello: Hallo wereld
   welcome_back: Welkom terug, %{name}
   submit: Insturen
+  unsubmit: Intrekken
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Voeg een leraar toe:'
@@ -133,7 +135,7 @@
       email: Email-adres
       submit: Stuur me uitleg over wachtwoord resetten
     change_form:
-      title: Verander je wachtwoord
+      title: Wijzig je wachtwoord
       new_password: Nieuw wachtwoord
       confirm_password: Bevestig je nieuwe wachtwoord
       submit: Wijzig mijn wachtwoord
@@ -382,6 +384,8 @@
     heading_hoc2014: "<h2>Uur Code voor</h2><h1>Alle leeftijden</h1>"
     heading_elementary: "<h2>20 uur cursussen voor</h2><h1>Beginners (alle leeftijden)</h1>"
     heading_apps: "<h2>Leuk voor</h2><h1>Iedereen</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>"
     your_gallery: Galerij
     no_primary_course: Probeer een cursus bij Code Studio
@@ -508,6 +512,15 @@
       current: Huidige niveaus
       unused: Ongebruikte niveaus
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassiek doolhof
       body: Probeer de beginselen van de informatica. Miljoenen gingen je voor!
@@ -562,10 +575,10 @@
     prerelease_hoc2014: Deze handleiding is in <span class='betatext'>beta</span>.
       Deze handleiding wordt bijgewerkt afhankelijk van ontvangen feedback en er worden
       verbeteringen aan aangebracht.
-    feedback: Geef Feedback
     report_bug: Meld Bug
     support: Help
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Onjuist antwoord
     wrong_body: Het antwoord dat je hebt ingevoerd is niet correct.  Probeer het opnieuw!
@@ -573,6 +586,23 @@
     correct_body: Dat is het juiste antwoord.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Bedankt
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Bedankt
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Bedankt
+    wrong_body: Thank you for submitting answers.
+    correct_title: Bedankt
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Bedankt
+    wrong_body: Thank you for submitting answers.
+    correct_title: Bedankt
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Onjuist antwoord
     wrong_body: De oplossing die je hebt ingevoerd is niet juist.  Probeer het opnieuw!
@@ -592,6 +622,8 @@
     placeholder: Voer uw antwoord hier in
     open_response_title: Bedankt
     open_response_body: Bedankt voor uw reactie!
+    correct_title: Juist
+    correct_body: Dat is het juiste antwoord.
   dialog:
     ok: OK
     startover_title: Weet je zeker dat je opnieuw wilt beginnen?
@@ -655,6 +687,7 @@
     completed_perfect: voltooid, perfect
     furthest_level_attempted: verste niveau geprobeerd
     assessment: beoordeling
+    submitted: submitted
   studio:
     courses_working_on: Cursussen die u bezig bent
     completed_courses: Voltooide cursussen
@@ -725,3 +758,7 @@
         acknowledge: Door het indienen van deze informatie, erkent u dat het zal worden
           behandeld in overeenstemming met de voorwaarden van de %{link_start_privacy}Privacy
           Policy%{link_end} en de %{link_start_tos}Terms van Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

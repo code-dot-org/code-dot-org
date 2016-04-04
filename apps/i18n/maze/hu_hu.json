@@ -18,6 +18,7 @@
   "fillTooltip": "rakj le 1 adag földet",
   "finalLevel": "Gratulálok, megoldottad az utolsó feladatot.",
   "flowerEmptyError": "Ebben a virágban nincs több nektár.",
+  "didNotCollectEverything": "Győződj meg róla hogy sem nektár, sem méz nem maradt hátra!",
   "get": "listából értéke",
   "heightParameter": "magasság",
   "holePresent": "van egy lyuk",
@@ -81,6 +82,5 @@
   "whileTooltip": "Ismételd a közbülső műveleteket a végpont eléréséig.",
   "word": "Ezt a szót keresd",
   "yes": "Igen",
-  "youSpelled": "Amit találtál",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Amit találtál"
 }

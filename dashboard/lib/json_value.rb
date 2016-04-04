@@ -1,11 +1,11 @@
 # Utility for formatting JSON values from string input
 class JSONValue
   def self.numeric?(val)
-    Float(val) != nil rescue false
+    !Float(val).nil? rescue false
   end
 
   def self.integral?(val)
-    Integer(val) != nil rescue false
+    !Integer(val).nil? rescue false
   end
 
   def self.boolean?(val)

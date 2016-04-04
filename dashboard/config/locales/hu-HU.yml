@@ -25,6 +25,8 @@
   hello: Helló világ
   welcome_back: "Üdv újra, %{name}"
   submit: Elküldés
+  unsubmit: Visszavon
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
@@ -370,6 +372,8 @@
     heading_elementary: "<h2>20 órás tanfolyamok</h2><h1>Számítástechnika alapjai
       (minden korosztálynak)</h1>"
     heading_apps: "<h2>Vidámság </h2><h1>Mindenkinek</h1>"
+    heading_tools: "<h2>Kész vagy a következő képésre?</h2><h1>JavaScript Eszközök
+      középiskoláknak</h1>"
     heading_legacy: "<h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>"
     your_gallery: Galéria
     no_primary_course: Próbálj ki egy tanfolyamot a Kód stúdióban
@@ -499,6 +503,15 @@
       current: Aktuális szintek
       unused: Nem használt szintek
   upsell:
+    applab:
+      title: App Lab
+      body: Az App Lab egy programozási környezet egyszerű alkalmazásokra. Tervezd
+        meg, kódolj blokkokkal vagy JavaScript-el hogy működjön, majd oszd meg másodpercek
+        alatt.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Kor 13+
+      cta: Ismerd meg hogyan
     hoc:
       title: Hagyományos Útvesztö
       body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
@@ -553,10 +566,10 @@
     prerelease_hoc2014: Ez a tananyag <span class='betatext'> béta állapotban van</span>.
       A visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés
       várható.
-    feedback: Visszajelzés küldése
     report_bug: Hiba bejelentése
     support: Segítség kérés
     support_url: "//support.code.org"
+    help_resources: Súgó és erőforrások
   multi:
     wrong_title: Helytelen válasz
     wrong_body: A megadott válasz nem megfelelő.  Próbáld újra!
@@ -564,6 +577,23 @@
     correct_body: Ez a helyes válasz.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Köszönöm
+    wrong_body: Köszönjük hogy elküldtél egy választ.
+    correct_title: Köszönöm
+    correct_body: Köszönjük hogy elküldtél egy választ.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Köszönöm
+    wrong_body: Thank you for submitting answers.
+    correct_title: Köszönöm
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Köszönöm
+    wrong_body: Thank you for submitting answers.
+    correct_title: Köszönöm
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Helytelen megoldás
     wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
@@ -583,6 +613,8 @@
     placeholder: Itt add meg a válaszod
     open_response_title: Köszönjük
     open_response_body: Köszönjük a választ!
+    correct_title: Helyes
+    correct_body: Ez a helyes válasz.
   dialog:
     ok: OK
     startover_title: Biztosan újra szeretnéd kezdeni?
@@ -647,6 +679,7 @@
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
     assessment: "értékelés"
+    submitted: submitted
   studio:
     courses_working_on: Tanfolyamok, amelyeken dolgozol
     completed_courses: Teljesített tanfolyamok
@@ -717,3 +750,7 @@
         acknowledge: Az alábbi információk megadásával tudomásul veszed, hogy azokat
           az %{link_start_privacy}Adatvédelmi szabályzatnak%{link_end} és a %{link_start_tos}Felhasználói
           szabályoknak%{link_end} megfelelően kezeljük
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

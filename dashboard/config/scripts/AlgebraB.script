@@ -1,0 +1,85 @@
+title 'Computer Science in Algebra'
+description "Learn Functional Programming through Algebra"
+description_short "Learn Functional Programming through Algebra"
+hidden 'false'
+login_required 'true'
+
+stage 'Unplugged: Video Games and Coordinate Planes'
+level 'VideoGamesCoordinatePlanes'
+level 'Ninjacat Demo B'
+level 'Coordinates Multi 1'
+
+stage 'Play Lab: Defining Variables (Big Game)'
+level 'Big Game Vars 1'
+level 'Big Game Vars 2'
+level 'Big Game Vars 3'
+level 'Big Game Vars 4'
+
+stage 'Play Lab: Animation (Big Game)'
+level 'Big Game Animation 1'
+level 'Big Game Animation 2'
+level 'Big Game Animation 3'
+level 'Big Game Animation 4'
+
+stage 'Unplugged: Booleans'
+level 'Booleans'
+
+stage 'Eval: Boolean Operators'
+level 'Eval Booleans 1'
+level 'Eval Booleans 2'
+level 'Eval Booleans 3'
+level 'Eval Booleans 4'
+level 'Eval Booleans 5'
+level 'Eval Booleans 6'
+level 'Blocks to Bools 1'
+#level 'Blocks to Bools 2'
+level 'Blocks to Bools 3'
+level 'Blocks to Bools 4'
+level 'Eval Booleans Free Play'
+
+stage 'Play Lab: Booleans'
+level 'Sam the Butterfly 1'
+level 'Sam the Butterfly 2'
+level 'Sam the Butterfly 3'
+level 'Sam the Butterfly 4'
+level 'Sam the Butterfly 5'
+#level 'Sam the Butterfly 6'
+#level 'Sam the Butterfly 7'
+#level 'MSM Play Lab Butterfly 1'
+#level 'MSM Play Lab Butterfly 2'
+#level 'MSM Play Lab Butterfly 3'
+
+stage 'Play Lab: Boolean (Big Game)'
+level 'Big Game Booleans 1'
+level 'Big Game Booleans 4'
+level 'Big Game Booleans 2'
+level 'Big Game Booleans 3'
+level 'Big Game Booleans 5'
+
+stage 'Unplugged: Conditionals and Piecewise Functions'
+level 'ConditionalsPiecewiseFunctions'
+
+stage 'Eval: Conditionals'
+level "Luigi's Pizza 1"
+level "Luigi's Pizza 2"
+level "Luigi's Pizza 3"
+level "Luigi's Pizza 4"
+#level 'Eval Cond 1'
+#level 'Eval Cond 2'
+#level 'Eval Cond 3'
+level 'Eval Cond 4'
+level 'Eval Cond 5'
+#level 'Eval Cond 6'
+#level 'Eval Cond 7'
+#level 'Eval Cond 8'
+level 'Big Game Player 1'
+level 'Big Game Player 2'
+
+stage 'Unplugged: Collision Detection and the Distance Formula'
+level 'CollisionDetection'
+
+stage 'Play Lab: Collision Detection (Big Game)'
+level 'Big Game Collision 1'
+level 'Big Game Collision 3'
+level 'Big Game Collision 4'
+level 'Big Game Final'

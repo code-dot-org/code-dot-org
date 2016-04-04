@@ -50,6 +50,10 @@ Contact information from teacher:
 - **School name:** <%= school_name_s %>
 - **School location:** <%= school_location_s %>
 
+Need to update the information you submitted when you signed up to volunteer? Update it any time.
+
+- [Update my information](<%= update_preferences %>)
+
 Getting too many email requests? It means there aren't enough volunteers in your region. Please recruit a friend to help out too. :-)
 
 - [Unsubscribe from additional teacher requests **this year**](<%= update_preferences %>)

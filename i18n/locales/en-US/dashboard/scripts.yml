@@ -589,6 +589,7 @@ en:
           description: crwdns43250:0crwdne43250:0
         cspunit3:
           title: crwdns37941:0crwdne37941:0
+          title_short: crwdns56137:0crwdne56137:0
           description_short: crwdns37942:0crwdne37942:0
           description: crwdns38391:0crwdne38391:0
           Getting to know AppLab: crwdns37944:0crwdne37944:0
@@ -922,6 +923,7 @@ en:
           Multi2: crwdns41853:0crwdne41853:0
           Markdown Details: crwdns43376:0crwdne43376:0
           Studio: crwdns55916:0crwdne55916:0
+          Long assessment: crwdns56190:0crwdne56190:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
@@ -1305,6 +1307,11 @@ en:
           Unit 6 Overview: crwdns48498:0crwdne48498:0
           Introduction to the Unit 6 Challenge: crwdns48499:0crwdne48499:0
           Unit 6 Challenge Planning & Creation: crwdns48500:0crwdne48500:0
+          Getting Started: crwdns56179:0crwdne56179:0
+          Unit 6 lessons: crwdns56180:0crwdne56180:0
+          Alternative Ideas for Unit 6: crwdns56181:0crwdne56181:0
+          Unit 6 Challenge: crwdns56191:0crwdne56191:0
+          Share out and Submit: crwdns56192:0crwdne56192:0
         cspunit4draft:
           title: crwdns48501:0crwdne48501:0
           description_short: crwdns48502:0crwdne48502:0
@@ -1412,6 +1419,7 @@ en:
           Halloween 2015: crwdns50717:0crwdne50717:0
           description: crwdns51271:0crwdne51271:0
           Valentine 2016: crwdns55907:0crwdne55907:0
+          Spring 2016: crwdns56182:0crwdne56182:0
         iceage:
           title: crwdns51272:0crwdne51272:0
           description_short: crwdns51273:0crwdne51273:0
@@ -1533,6 +1541,7 @@ en:
           Identifying People with Data: crwdns55942:0crwdne55942:0
           Privacy Abandoned: crwdns55943:0crwdne55943:0
           Practice PT - Propose an Innovation: crwdns55944:0crwdne55944:0
+          The Cost of Free: crwdns56183:0crwdne56183:0
         CSPPD3-Unit4:
           title: crwdns55955:0crwdne55955:0
           description_short: crwdns55956:0crwdne55956:0
@@ -1556,3 +1565,64 @@ en:
           Visualizing Data: crwdns56110:0crwdne56110:0
           Updating Records: crwdns56111:0crwdne56111:0
           Deleting Records: crwdns56112:0crwdne56112:0
+          Sample Apps: crwdns56115:0crwdne56115:0
+          Final Project: crwdns56138:0crwdne56138:0
+        CSPPD3-Unit5:
+          title: crwdns56139:0crwdne56139:0
+          description_short: crwdns56140:0crwdne56140:0
+          description: crwdns56141:0crwdne56141:0
+          Getting Started: crwdns56142:0crwdne56142:0
+          Unit 5 Overview: crwdns56143:0crwdne56143:0
+          Explore PT Breakdown: crwdns56144:0crwdne56144:0
+          Create PT Breakdown: crwdns56145:0crwdne56145:0
+          Challenge Overview: crwdns56146:0crwdne56146:0
+          Complete the Challlege: crwdns56147:0crwdne56147:0
+          Share out and Submit: crwdns56148:0crwdne56148:0
+          Complete the Challlenge: crwdns56149:0crwdne56149:0
+          Complete the Challenge: crwdns56193:0crwdne56193:0
+        cspunit6:
+          title: crwdns56150:0crwdne56150:0
+          description_short: crwdns56151:0crwdne56151:0
+          description: crwdns56152:0crwdne56152:0
+          Creating Javascript Objects: crwdns56153:0crwdne56153:0
+          Permanent Data Storage: crwdns56154:0crwdne56154:0
+          Reading Records: crwdns56155:0crwdne56155:0
+          Deleting Records: crwdns56156:0crwdne56156:0
+          Updating Records: crwdns56157:0crwdne56157:0
+          Importing and Exporting Data: crwdns56158:0crwdne56158:0
+          Visualizing Data: crwdns56159:0crwdne56159:0
+          Sample Apps: crwdns56160:0crwdne56160:0
+          Final Project: crwdns56161:0crwdne56161:0
+        AlgebraA:
+          title: crwdns56194:0crwdne56194:0
+          description_short: crwdns56195:0crwdne56195:0
+          description: crwdns56196:0crwdne56196:0
+          "Calc: Evaluation Blocks": crwdns56197:0crwdne56197:0
+          "Eval: Strings and Images": crwdns56198:0crwdne56198:0
+          "Unplugged: Contracts": crwdns56199:0crwdne56199:0
+          "Eval: Writing Contracts": crwdns56200:0crwdne56200:0
+          "Calc: Defining Variables": crwdns56201:0crwdne56201:0
+          "Eval: Defining Functions": crwdns56202:0crwdne56202:0
+          "Unplugged: The Design Recipe": crwdns56203:0crwdne56203:0
+          "Play Lab: Defining Functions": crwdns56204:0crwdne56204:0
+          "Eval: Functions": crwdns56205:0crwdne56205:0
+        AlgebraB:
+          title: crwdns56206:0crwdne56206:0
+          description_short: crwdns56207:0crwdne56207:0
+          description: crwdns56208:0crwdne56208:0
+          "Unplugged: Video Games and Coordinate Planes": crwdns56209:0crwdne56209:0
+          "Play Lab: Defining Variables (Big Game)": crwdns56210:0crwdne56210:0
+          "Play Lab: Animation (Big Game)": crwdns56211:0crwdne56211:0
+          "Unplugged: Booleans": crwdns56212:0crwdne56212:0
+          "Eval: Boolean Operators": crwdns56213:0crwdne56213:0
+          "Play Lab: Booleans": crwdns56214:0crwdne56214:0
+          "Play Lab: Boolean (Big Game)": crwdns56215:0crwdne56215:0
+          "Unplugged: Conditionals and Piecewise Functions": crwdns56216:0crwdne56216:0
+          "Eval: Conditionals": crwdns56217:0crwdne56217:0
+          "Unplugged: Collision Detection and the Distance Formula": crwdns56218:0crwdne56218:0
+          "Play Lab: Collision Detection (Big Game)": crwdns56219:0crwdne56219:0
+        gamelab-hackathon:
+          Middle_School_Hackathon: crwdns56233:0crwdne56233:0
+          title: crwdns56234:0crwdne56234:0
+          description_short: crwdns56235:0crwdne56235:0
+          description: crwdns56236:0crwdne56236:0

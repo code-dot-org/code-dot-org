@@ -1,0 +1,8 @@
+#!/bin/sh
+# ubuntu@production-console:~/production/bin/mail/hoc-2015-nov-9-mailing$ wc -l teachers-deduped.csv
+# 275332 teachers-deduped.csv
+# 275,332
+
+./send-to-mailing-list --start       0 --limit 100000 11-9-hoc-teachers hoc-2015-nov-9-mailing/teachers-deduped.csv
+./send-to-mailing-list --start  100000 --limit 100000 11-9-hoc-teachers hoc-2015-nov-9-mailing/teachers-deduped.csv
+./send-to-mailing-list --start  200000 --limit 100000 11-9-hoc-teachers hoc-2015-nov-9-mailing/teachers-deduped.csv

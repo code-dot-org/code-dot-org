@@ -21,7 +21,7 @@ da-DK:
   twentyhours_heading: Prøv vores intro til programmeringskursus
   twentyhours_text: 'Færdig med din første Hour of Code? Lær flere centrale datalogi- og programmeringbegreber i dette opfølgende kursus.'
   og_title: Ethvert barn fortjener muligheder
-  og_description: Alle elev i alle skoler fortjener muligheden for at studere computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Vær med i <a href="http://hourofcode.com">Hour of Code</a> <br/>8. - 14. December 2014 <br/>'
   hoc2014_students: Elever
   hoc2014_try: Prøv det
@@ -67,14 +67,12 @@ da-DK:
   congrats_next_tutorials_desc: 'Prøv disse kortere, 1 times øvelser eller prøv en <a href="%{current_path}/next">partner-øvelse</a>.'
   get_a_certificate_of_achievement: Få et certifikat for gennemførelsen
   view_course: View course
+  view_unit: View unit
+  make_app: Make an app
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -88,7 +86,8 @@ da-DK:
   third_party_price_varies: 'Price: Plans vary'
   third_party_price_free: 'Price: Free'
   third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
   third_party_tynker_btn_site: Visit Tynker
@@ -109,21 +108,21 @@ da-DK:
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
   third_party_appinv_btn_forum: App Inventor 2 Forum
   third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. With CodeHS, you can get the help that every new programmer needs to work through problems and keep learning. Our tutors are everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
+  third_party_codehs_btn_try: Intro CS Learn More for Schools
   third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Visit Codecademy
   third_party_organization: Organization
   third_party_curriculum: Læseplan
   third_party_pricing: Pricing
-  third_party_cost_free: Free
+  third_party_cost_free: Free for students and teachers
   third_party_cost_5permonth: $5/month per class
   third_party_cost_299: $2.99/download
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
@@ -180,7 +179,7 @@ da-DK:
   learn_next_level: Fortsæt til det næste niveau
   learn_online: Prøv andre online kurser
   learn_classes: Find lokale klasser
-  hoc_is_here: 'Denne sidste Computer videnskab uddannelse uge, #HourOfCode har nået 50 millioner studerende.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Jeg har lige taget en #HourOfCode - tjek det ud! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -305,6 +304,9 @@ da-DK:
   homepage_slot_text_link_othercourses: Andre online kurser
   homepage_slot_text_title_educators: Undervisere
   homepage_slot_text_blurb_educators: Undervis dine elever
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Folkeskole
+  homepage_slot_text_link_high: Gymnasium
   homepage_slot_text_link_k5: Kurser for 0.-5. klasse
   homepage_slot_text_link_fullcurriculum: Se alle vore kurser
   homepage_slot_text_link_pd: Efteruddannelse
@@ -508,6 +510,7 @@ da-DK:
   dashboard_navigation_all_sections: Elevernes konti og fremskridt
   dashboard_navigation_view_progress: Se fremskridt
   dashboard_navigation_view_text_responses: Vis tekstsvar
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Tilføj elever
   dashboard_navigation_manage_students: Administrer elever
   dashboard_navigation_lesson_plans_resources: Lektionsplaner og ressourcer
@@ -601,10 +604,21 @@ da-DK:
   dashboard_progress_completed_too_many_blocks: afsluttet, for mange blokke
   dashboard_progress_completed_perfect: Afsluttet, perfekt
   dashboard_progress_furthest_level_attempted: længst opnåede niveau
+  dashboard_progress_submitted: submitted
   dashboard_stage: trin
   dashboard_puzzle: Opgave
   dashboard_question: Spørgsmål
   dashboard_response: Svar
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Rigtigt
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Utrolige statistikker fra sidste års "Hour of Code". I en uge alene:'
   stats_hoc_2013_image_alt: 'Statistik fra 2013 "Hour of Code"'
   dashboard_teacher: Lærer
@@ -623,7 +637,7 @@ da-DK:
   dashboard_faq_k5: K-5 Ofte stillede spørgsmål
   dashboard_announcements: Meddelelser
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
   dashboard_announce_button_text: Lær mere
   dashboard_announce_hoc: '<b>23 November 2015</b> - Ønsker du en frivillig, som er dedikeret i datalogi uddannelse, til at hjælpe dig under din Hour of Code? Over 7.000 frivillige ønsker at inspirere dine elever ved at besøge dit klasseværelse eller videochatte. Tjek kortet over frivillige for at kontakte frivillige i dit område.'
   dashboard_announce_playlab: '<b>4. December 2015</b> - The Hour of Code er her! Prøv 50 tutorials for alle aldre, og enhver enhed. Nyt i denne uge: Kod dine egne historier og spil i nye Spil-Labs, Ice Age og Gumball.'
@@ -736,6 +750,12 @@ da-DK:
   course3_name: Kursus 3
   course4_name: Kursus 4
   accelerated_name: Accelereret kursus
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  applab_name: App Lab
+  applab_gradelevel: Ages 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: For 4-104-årige
   codeintl_gradelevel: For 4-104-årige
   thinkersmithspanish_gradelevel: Por todos

@@ -14,7 +14,9 @@ var skins = require('../skins');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html.ejs');
+var AppView = require('../templates/AppView.jsx');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var Hammer = require('../hammer');
 var utils = require('../utils');
@@ -257,8 +259,7 @@ var drawMap = function() {
         left = WALL_TILE_SHAPES[tile][0];
         top = WALL_TILE_SHAPES[tile][1];
         image = skin.tiles;
-      }
-      else {
+      } else {
         // Compute the tile index.
         tile = goalNormalize(x, y) +
             goalNormalize(x, y - 1) +  // North.
@@ -443,10 +444,8 @@ Bounce.isBallOutOfBounds = function(i) {
  * @param func Function : The function to execute
  * @param data Object or Array : The data to pass to the function. If the function is also passed arguments, the data is appended to the arguments list. If the data is an Array, each item is appended as a new argument.
  */
-var delegate = function(scope, func, data)
-{
-  return function()
-  {
+var delegate = function(scope, func, data) {
+  return function() {
     var args = Array.prototype.slice.apply(arguments).concat(data);
     func.apply(scope, args);
   };
@@ -666,20 +665,6 @@ Bounce.init = function(config) {
   window.addEventListener("keydown", Bounce.onKey, false);
   window.addEventListener("keyup", Bounce.onKey, false);
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
-      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
-      blockUsed: undefined,
-      idealBlockNumber: undefined,
-      editCode: level.editCode,
-      blockCounterClass: 'block-counter-default',
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
@@ -786,10 +771,45 @@ Bounce.init = function(config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  studioApp.init(config);
+  var generateCodeWorkspaceHtmlFromEjs = function () {
+    return codeWorkspaceEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
 
-  var finishButton = document.getElementById('finishButton');
-  dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
+  var generateVisualizationColumnHtmlFromEjs = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
+      }
+    });
+  };
+
+  var onMount = function () {
+    studioApp.init(config);
+
+    var finishButton = document.getElementById('finishButton');
+    dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
+  };
+
+  ReactDOM.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    onMount: onMount
+  }), document.getElementById(config.containerId));
 };
 
 /**
@@ -1296,8 +1316,7 @@ Bounce.setBackground = function (value) {
       // Draw the tile.
       if (WALL_TILE_SHAPES[tile]) {
         image = skinTheme(value).tiles;
-      }
-      else {
+      } else {
         // Compute the tile index.
         tile = goalNormalize(x, y) +
             goalNormalize(x, y - 1) +  // North.

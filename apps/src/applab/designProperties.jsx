@@ -1,14 +1,16 @@
 /* global $*/
 
 var applabMsg = require('./locale');
+var color = require('../color');
 var elementLibrary = require('./designElements/library');
+var elementUtils = require('./designElements/elementUtils');
 
 var DeleteElementButton = require('./designElements/DeleteElementButton.jsx');
 var ElementSelect = require('./ElementSelect.jsx');
 
 var nextKey = 0;
 
-var DesignProperties = module.exports = React.createClass({
+var DesignProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement),
     elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
@@ -66,7 +68,7 @@ var DesignProperties = module.exports = React.createClass({
     var element = this.props.element;
     // First screen is not deletable
     var isOnlyScreen = elementType === elementLibrary.ElementType.SCREEN &&
-        $('#designModeViz .screen').length === 1;
+        elementUtils.getScreens().length === 1;
     if (!isOnlyScreen) {
       deleteButton = (<DeleteElementButton
         shouldConfirm={elementType === elementLibrary.ElementType.SCREEN}
@@ -74,8 +76,8 @@ var DesignProperties = module.exports = React.createClass({
     }
 
     var tabHeight = 35;
-    var borderColor = '#c6cacd';
-    var bgColor = '#e7e8ea';
+    var borderColor = color.lighter_gray;
+    var bgColor = color.lightest_gray;
 
     // Diagram of how tabs outlines are drawn. 'x' represents solid border.
     // '-' and '|' represent no border.
@@ -229,3 +231,4 @@ var TabType = {
   EVENTS: 'events'
 };
 DesignProperties.TabType = TabType;
+module.exports = DesignProperties;

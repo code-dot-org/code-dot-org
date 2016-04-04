@@ -25,6 +25,8 @@
   hello: Salam, dünya
   welcome_back: Bir daha xoş gəldiniz, %{name}
   submit: Göndər
+  unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Müəllim əlavə edin:'
@@ -33,7 +35,7 @@
         6 letter code like "ABCDEF".
     submit: Müəllim əlavə edin
   add_hint_form:
-    placeholder: Please enter your hint here
+    placeholder: Xahiş olunur ip-ucunu bura daxil edesiniz
     submit: Məsləhət əlavə et
   appname: Code.org
   stage: mərhələ
@@ -83,15 +85,15 @@
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
     teacher_pitch: '"Code.org" üçün müəllim qeydiyyatı'
     teacher_title: Müəllim kimi qeydiyyatdan keçin
-    student_pitch: Student sign up for Code.org
-    student_title: Student sign up
+    student_pitch: Code.org üçün tələbə qeydiyyatı
+    student_title: "Şagird qeydiyyatı"
     school_name: Məktəbin Adı (vacib deyil)
     school_address: Məktəbin ünvanı (vacib deyil)
     address_placeholder: "ünvan, şəhər, vilayət, poçt indeksi"
     gender: Cins (vacib deyil)
     birthday: Ad günü (vacib deyil)
     age: Yaşınız
-    user_type: Are you a student or teacher?
+    user_type: Siz tələbəsiniz ya müəllim?
     submit: Qeydiyyatdan keçin
     teacher: Müəllimsiniz?
     valid_username: Olar!
@@ -107,8 +109,8 @@
       ünvanları bizim onlarla əlaqə saxlaya biləcəyimiz formada saxlanmır.
     teacher_terms: Mən "Code.org" <a href='http://code.org/tos'>xidmət şərtləri</a>nə
       tabe olmağımı qəbul edirəm.
-    additional_information: We need some additional information to continue signing
-      you up.
+    additional_information: Qeydiyyatı davam etdirmək üçün bəzi əlavə məlumatlara
+      ehtiyacımız var.
   signin_form:
     title: Artıq hesabınız var? Daxil olun
     login: E-poçt və ya istifadəçi adı
@@ -117,13 +119,13 @@
     submit: Daxil olun
   signin:
     try_heading: Qeydiyyatdan keçmədən özünüzü proqramlaşdırmada sınamaq istəyirsiniz?
-    try_hoc: Try one Hour of Code first
-    try_20hours: Try our 20 hour Intro to Computer Science
+    try_hoc: "Əvvəlcə Hour of Code yoxlayın"
+    try_20hours: Bizim 20 saatliq İnformatikaya Giriş-i yoxlayın
   signinsection:
     welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    name: Adınızı seçin
+    picture: "İndi isə gizli şəkilinizi seçin"
+    words: "İndi isə gizli sözünüzü daxil edin"
     login: Daxil olun
   password:
     reset_form:
@@ -378,6 +380,8 @@
     heading_elementary: "<h2>20 saatlıq kurslar</h2><h1>Başlayanlar (bütün yaşlar)
       üçün</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Bizim ümumi kursumuz</h2><h1>Bütün yaşlar üçün</h1>"
     your_gallery: Qalereya
     no_primary_course: Try a course at Code Studio
@@ -495,6 +499,15 @@
       current: Cari Səviyyələr
       unused: Unused Levels
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Kod Saatı
       body: "İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
@@ -549,10 +562,10 @@
       is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
-    feedback: Rəy verin
     report_bug: Report Bug
     support: Kömək istə
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Yanlış cavab
     wrong_body: Daxil etdiyiniz cavab yanlışdır. Lütfən, bir daha cəhd edin!
@@ -560,6 +573,23 @@
     correct_body: Bu düzgün cavabdır.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Təşəkkür
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Təşəkkür
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Təşəkkür
+    wrong_body: Thank you for submitting answers.
+    correct_title: Təşəkkür
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Təşəkkür
+    wrong_body: Thank you for submitting answers.
+    correct_title: Təşəkkür
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Yanlış həll
     wrong_body: Daxil etdiyiniz həll yanlışdır. Lütfən, bir daha cəhd edin!
@@ -579,6 +609,8 @@
     placeholder: Cavabınızı buraya daxil edin
     open_response_title: Thanks
     open_response_body: Thanks for your response!
+    correct_title: Düzgün
+    correct_body: Bu düzgün cavabdır.
   dialog:
     ok: Oldu
     startover_title: Yenidən başlamaq istədiyinizə əminsiniz?
@@ -644,6 +676,7 @@
     completed_perfect: tamamlanıb, əladır
     furthest_level_attempted: furthest level attempted
     assessment: qiymətləndirilir
+    submitted: submitted
   studio:
     courses_working_on: "Üzərində işlədiyiniz kurslar"
     completed_courses: Tamamlanmış kurslar
@@ -713,3 +746,7 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

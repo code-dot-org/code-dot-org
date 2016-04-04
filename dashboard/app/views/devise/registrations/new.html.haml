@@ -30,36 +30,36 @@
         .itemblock
           .labelblock
             = t('activerecord.attributes.user.name')
-          = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true
+          = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
         %br/
         .itemblock
           .labelblock
             = t('activerecord.attributes.user.email')
-          = f.email_field :email, class: 'input-xlarge fieldblock'
+          = f.email_field :email, class: 'input-xlarge fieldblock', maxlength: 255
         %br/
         - if f.object.password_required?
           .itemblock
             .labelblock
               = t('activerecord.attributes.user.password')
-            = f.password_field :password, class: 'input-xlarge fieldblock'
+            = f.password_field :password, class: 'input-xlarge fieldblock', maxlength: 255
             %span#password_message
           %br/
           .itemblock
             .labelblock
               = t('activerecord.attributes.user.password_confirmation')
-            = f.password_field :password_confirmation, class: 'input-xlarge fieldblock'
+            = f.password_field :password_confirmation, class: 'input-xlarge fieldblock', maxlength: 255
           %span#password_message_confirmation
         %br/
         - if resource.teacher?
           .itemblock
             .labelblock
               = t('signup_form.school_name')
-            = f.text_field :school, class: 'input-xlarge fieldblock'
+            = f.text_field :school, class: 'input-xlarge fieldblock', maxlength: 255
           %br/
           .itemblock
             .labelblock
               = t('signup_form.school_address')
-            = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4
+            = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4, maxlength: 1024
           %br/
 
           = f.hidden_field :age, value: '21'
@@ -124,7 +124,7 @@
   $( "#user_school" ).placeholder();
 
   $( ".signupform" ).on("submit", function(e){
-    hashEmail({ email_selector: '#user_email',
-                hashed_email_selector: '#user_hashed_email',
-                age_selector: '#user_age'});
+    window.dashboard.hashEmail({ email_selector: '#user_email',
+      hashed_email_selector: '#user_hashed_email',
+      age_selector: '#user_age'});
   });

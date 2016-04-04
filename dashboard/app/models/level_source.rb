@@ -114,7 +114,7 @@ class LevelSource < ActiveRecord::Base
         experiment_hints.push(hint)
       end
     end
-    if result.nil? && experiment_hints.length > 0
+    if result.nil? && !experiment_hints.empty?
       result = experiment_hints.sample
     end
 

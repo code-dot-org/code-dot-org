@@ -24,6 +24,8 @@
   hello: "سلام دنیا"
   welcome_back: "%{name}، خوش آمدید"
   submit: "ارسال کنید"
+  unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: "افزودن یک معلم:"
@@ -372,6 +374,8 @@
     heading_hoc2014: "<h2> ساعت کد نویسی برای </h2><h1> تمام سنین </h1>"
     heading_elementary: "<h2> دوره 20 ساعته برای </h2><h1> مبتدیان (تمام سنین) </h1>"
     heading_apps: "<h2>سرگرم کننده برای</h2><h1>برای همه</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2> دوره عمومی ما </h2><h1>همه سنین</h1>"
     your_gallery: "گالری"
     no_primary_course: "یک کلاس را در کد استدیو امتحان کنید"
@@ -490,6 +494,15 @@
       current: "مرحله فعلی"
       unused: "مراحل استفاده نشده"
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: "هزارتوی کلاسیک"
       body: "مفاهیم اساسی علم کامپیوتر را امتحان کنید. میلیون‌ها نفر آن را امتحان
@@ -543,10 +556,10 @@
       نبوده بر مبنای بازخورد دریافت شده مورد تجدید نظر واقع شده و بهتر می گردد."
     prerelease_hoc2014: "این آموزش <span class='betatext'> در مرحله بتا</span> است.
       \ بر اساس بازخورد دریافت شده مورد بهینه سازی قرار گرفته."
-    feedback: "دادن بازخورد"
     report_bug: "گزارش اشکال"
     support: "کمک گرفتن"
     support_url: support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: "پاسخ اشتباه"
     wrong_body: "پاسخی که وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!"
@@ -554,6 +567,23 @@
     correct_body: "این پاسخ صحیح است"
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Thank you
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting answers.
+    correct_title: Thank you
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting answers.
+    correct_title: Thank you
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: "راه‌حل نادرست"
     wrong_body: "راه‌حلی که شما وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!"
@@ -573,6 +603,8 @@
     placeholder: "پاسخ خود را اینجا وارد کنید"
     open_response_title: "متشکرم"
     open_response_body: "برای پاسختان سپاسگزارم!"
+    correct_title: Correct
+    correct_body: That is the correct answer.
   dialog:
     ok: "باشه"
     startover_title: "آیا مطمئنی که می خواهی دوباره شروع کنی؟"
@@ -638,6 +670,7 @@
     completed_perfect: "تکمیل, کامل"
     furthest_level_attempted: "تلاش برای دسترسی به سطح دسترسی خارج از محدوده "
     assessment: "ارزیابی"
+    submitted: submitted
   studio:
     courses_working_on: "دوره های شما در حال کار بر روی"
     completed_courses: "دوره های تکمیل شده"
@@ -707,3 +740,7 @@
         acknowledge: "با ارسال این اطلاعات، شما می پذیرید که مطابق با سیاست %{link_start_privacy}
           حفظ حریم شخصی %{link_end} و %{link_start_tos} شرایط سرویس %{link_end} با
           موضوع برخورد می شود."
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

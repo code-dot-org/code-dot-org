@@ -24,6 +24,8 @@ da:
   hello: Hej verden
   welcome_back: 'Velkommen tilbage %{name}'
   submit: Indsend
+  unsubmit: Fortryd indsendelse
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Tilføje en lærer:'
@@ -222,7 +224,7 @@ da:
       free_play:
         playlab: Lav en App
         artist: Tegn noget
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Lav en App
     user:
       classroom: Lærerens startside
@@ -320,6 +322,7 @@ da:
     heading_hoc2014: '<h2>Hour of Code for</h2><h1>Alle - uanset alder</h1>'
     heading_elementary: '<h2>20 timers kurser for</h2><h1>Begyndere (alle aldre)</h1>'
     heading_apps: '<h2>Sjov for</h2><h1>Alle</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>'
     your_gallery: Galleri
     no_primary_course: Prøv et kursusforløb på Code Studio
@@ -414,6 +417,12 @@ da:
       current: Nuværende niveau
       unused: Ubrugte niveauer
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassisk labyrint
       body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
@@ -455,10 +464,10 @@ da:
   landing:
     prerelease: "Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder, at det ikke er den endelige version af kurset, men at ændringer vil forekomme efterhånden som feedback modtages og forbedringer foretages."
     prerelease_hoc2014: "Denne øvelse er i <span class='betatext'> beta</span>.  Det er undergivet revision så feedback modtages og der arbejdes på forbedringer."
-    feedback: Giv feedback
     report_bug: Rapporter fejl
     support: Få hjælp
     support_url: Support.Code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Forkert svar
     wrong_body: 'Det svar, du har angivet er ikke korrekte.  Prøv venligst igen!'
@@ -466,6 +475,23 @@ da:
     correct_body: Det er det korrekte svar.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Tak skal du have
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Tak skal du have
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Tak skal du have
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tak skal du have
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Tak skal du have
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tak skal du have
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Forkert løsning
     wrong_body: 'Den løsning, du har angivet er ikke korrekte.  Prøv venligst igen!'
@@ -483,6 +509,8 @@ da:
     placeholder: Skriv dit svar her
     open_response_title: Tak
     open_response_body: Tak for dit svar!
+    correct_title: Rigtigt
+    correct_body: Det er det korrekte svar.
   dialog:
     ok: Ok
     startover_title: Sikker på, at du vil starte forfra?
@@ -536,6 +564,7 @@ da:
     completed_perfect: Afsluttet, perfekt
     furthest_level_attempted: længst opnåede niveau
     assessment: vurdering
+    submitted: submitted
   studio:
     courses_working_on: Kurser du er i gang med
     completed_courses: Afsluttede kurser
@@ -592,3 +621,7 @@ da:
           other: Andre
         detail: Anfør så mange detaljer som muligt om det indhold, du rapporterer.
         acknowledge: 'Ved at indsende disse oplysninger, anerkender du det vil blive behandlet i overensstemmelse med de %{link_start_privacy}Privacy Policy%{link_end} og %{link_start_tos}Terms af Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

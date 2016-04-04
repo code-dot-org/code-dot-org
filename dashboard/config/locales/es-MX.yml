@@ -25,6 +25,8 @@
   hello: Hola mundo
   welcome_back: Bienvenido, %{name}
   submit: Enviar
+  unsubmit: No enviar
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Agregar un maestro:'
@@ -384,6 +386,8 @@
     heading_elementary: "<h2>Cursos de 20 Horas para</h2><h1>Principiantes (todas
       las edades)</h1>"
     heading_apps: "<h2>Diversión para</h2><h1>Todos</h1>"
+    heading_tools: "<h2>¿Listo para el siguiente paso?</h2><h1>Herramientas JavaScript
+      para la escuela secundaria</h1>"
     heading_legacy: "<h2>Nuestro curso general para</h2><h1>Todas las edades</h1>"
     your_gallery: Galeria
     no_primary_course: Inénta un curso en Code Studio
@@ -513,6 +517,15 @@
       current: Niveles actuales
       unused: Niveles no utilizados
   upsell:
+    applab:
+      title: Laboratorio de App
+      body: App Lab es un entorno de programación en el que puedes hacer aplicaciones
+        simples. Diseña una aplicación, codifícala con bloques o JavaScript para hacerla
+        funcionar y luego compartela en segundos.
+      body_short: Diseña una aplicación, codifícala con bloques o JavaScript para
+        hacerla funcionar y luego compartela en segundos.
+      audience: Edad 13+
+      cta: Cómo hacerlo
     hoc:
       title: Laberinto clásico
       body: Prueba los fundamentos de la ciencia de la computación. Millones lo han
@@ -568,10 +581,10 @@
       comentarios y hacemos mejoras.
     prerelease_hoc2014: Este tutorial está en <span class='betatext'> beta</span>.  Es
       objeto de revisión a medida que se reciben comentarios y se hacen mejoras.
-    feedback: Envía comentarios
     report_bug: Informar sobre un error
     support: Obtener ayuda
     support_url: "//support.code.org"
+    help_resources: Ayuda y Recursos
   multi:
     wrong_title: Respuesta incorrecta
     wrong_body: La respuesta no es correcta. Por favor ¡intenta de nuevo!
@@ -579,6 +592,23 @@
     correct_body: Esa respuesta es la correcta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Gracias
+    wrong_body: Gracias por enviarnos su respuesta.
+    correct_title: Gracias
+    correct_body: Gracias por enviarnos su respuesta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Gracias
+    wrong_body: Gracias por enviarnos su respuesta
+    correct_title: Gracias
+    correct_body: Gracias por enviarnos su respuesta
+  level_group-submittable:
+    wrong_title: Gracias
+    wrong_body: Gracias por enviarnos su respuesta
+    correct_title: Gracias
+    correct_body: Gracias por enviarnos su respuesta
   match:
     wrong_title: Solución incorrecta
     wrong_body: La solución ingresada no es la correcta.  ¡Intenta nuevamente!
@@ -598,6 +628,8 @@
     placeholder: Escribe aquí tu respuesta
     open_response_title: Gracias
     open_response_body: Gracias por tu respuesta!
+    correct_title: Correcto
+    correct_body: Esa respuesta es la correcta.
   dialog:
     ok: Aceptar
     startover_title: "¿Seguro que quieres empezar de nuevo?"
@@ -662,6 +694,7 @@
     completed_perfect: completado, perfecto
     furthest_level_attempted: Nivel más alto intentado
     assessment: evaluación
+    submitted: enviado
   studio:
     courses_working_on: Cursos en los que estás participando
     completed_courses: Cursos finalizados
@@ -733,3 +766,7 @@
         acknowledge: Al enviar esta información usted sabe que se tratará de acuerdocon
           los terminos de la %{link_start_privacy} politica de privacidad %{link_end}
           y de los %{link_start_tos}terminos de servicio %{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

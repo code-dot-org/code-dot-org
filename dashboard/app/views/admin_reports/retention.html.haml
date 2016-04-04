@@ -1,0 +1,125 @@
+- content_for :head do
+  %script{src:'https://www.google.com/jsapi'}
+  %script{src:'https://www.gstatic.com/charts/loader.js'}
+
+%h1
+  = "Retention for Scripts"
+%h2
+  = @selected_scripts_names_ids.keys.join(', ')
+The data is restricted to users whose last script progress was between eight
+weeks and six weeks ago.
+
+%br
+%br
+
+%form{method: 'get'}
+  Please select one or more scripts.
+  %br
+  = select_tag "selected_scripts_names[]", options_for_select(@all_scripts_names_ids.keys), multiple: true
+  %br
+  %input{type: "submit", name: "submit"}
+
+%br
+
+#table-starts-and-finishes
+
+%br
+
+#chart-script-level-counts
+#chart-script-stage-counts
+
+%br
+
+#table-script-level-counts
+
+%br
+
+#table-script-stage-counts
+
+- content_for :body_scripts do
+  :javascript
+    // Load the Visualization API and the appropriate packages, setting a
+    // callback to run when the API is loaded.
+    google.load('visualization', '1.0', {'packages':['corechart', 'table']});
+    google.setOnLoadCallback(drawChartsAndTables);
+
+    // The callback that creates and populates the data tables, instantiates the
+    // charts and tables, and draws them.
+    function drawChartsAndTables() {
+      var scripts = #{@selected_scripts_names_ids.keys}
+      drawStartsAndFinishesChart(
+          #{@selected_scripts_names_ids.try(:to_json)},
+          #{@retention_stats['script_starts'].try(:to_json)},
+          #{@retention_stats['script_finishes'].try(:to_json)});
+      drawChartAndTable(
+          'script-level-counts',
+          'Script Level Count Cumulative Percentages',
+          'Levels',
+          scripts,
+          #{@retention_stats['script_level_counts'].try(:to_json)});
+      drawChartAndTable(
+          'script-stage-counts',
+          'Script Stage Count Cumulative Percentages',
+          'Stages',
+          scripts,
+          #{@retention_stats['script_stage_counts'].try(:to_json)});
+    }
+
+    // Populates the table_starts_and_finishes DOM element with the script
+    // retention data contained within start_data and finish_data.
+    // namesAndIds: A map from script name to script_id.
+    // startData: A map from script_id to the number of users starting the
+    //     script.
+    // finishData: A map from script_id to the number of users finishing the
+    //     script.
+    function drawStartsAndFinishesChart(
+        namesAndIds, startData, finishData) {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Script ID');
+      data.addColumn('string', 'Script Name');
+      data.addColumn('number', 'Number of Starts');
+      data.addColumn('number', 'Number of Finishes');
+      data.addColumn('string', 'Percentage');
+      for (var i = 0; i < Object.keys(namesAndIds).length; i++) {
+        var scriptName = Object.keys(namesAndIds)[i];
+        var scriptId = namesAndIds[scriptName];
+        var newRow = [
+            scriptId,
+            scriptName,
+            startData[scriptId],
+            finishData[scriptId],
+            (100.0 * finishData[scriptId] / startData[scriptId]).toFixed(2)
+        ];
+        data.addRow(newRow);
+      }
+      var table = new google.visualization.Table(
+          document.getElementById('table-starts-and-finishes'));
+      table.draw(data);
+    }
+
+    // domElementSuffix: The suffix of the DOM ID for the chart and table.
+    // chartTitle: The title of the chart to be made.
+    // columnCount: A string describing the counts, e.g., 'Stages' or 'Levels'.
+    // scriptNames: An array of script names.
+    // stats: The data to insert into the chart and table.
+    function drawChartAndTable(
+        domElementSuffix, chartTitle, columnCount, scriptNames, stats) {
+      // Trasnfer stats into a Google DataTable.
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Number of ' + columnCount);
+      for (var i = 0; i < scriptNames.length; i++) {
+        data.addColumn('number', scriptNames[i]);
+      }
+      data.addRows(stats);
+
+      // Push the Google DataTable into the chart.
+      var options = {'title': chartTitle, 'width': 800, 'height': 500};
+      var chart = new google.visualization.LineChart(
+          document.getElementById('chart-' + domElementSuffix));
+      chart.draw(data, options);
+
+      // Push the Google DataTable into the table.
+      var table = new google.visualization.Table(
+        document.getElementById('table-' + domElementSuffix));
+      table.draw(data);
+    }

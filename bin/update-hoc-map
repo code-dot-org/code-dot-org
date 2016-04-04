@@ -67,7 +67,6 @@ client.authorization = Signet::OAuth2::Client.new(
   :signing_key => key)
 client.authorization.fetch_access_token!
 
-
 fusiontables = client.discovered_api('fusiontables', 'v2')
 
 media = Google::APIClient::UploadIO.new(file.path, 'application/octet-stream')

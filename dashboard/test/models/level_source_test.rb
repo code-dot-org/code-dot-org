@@ -22,8 +22,8 @@ class LevelSourceTest < ActiveSupport::TestCase
     # Set up crowdsourced hints.
     @selected_crowdsourced_message = 'selected crowdsourced hint'
 
-    @experimental_crowdsourced_messages = [ 'experiment crowdsourced 1',
-                                            'experiment crowdsourced 2' ]
+    @experimental_crowdsourced_messages = ['experiment crowdsourced 1',
+                                           'experiment crowdsourced 2']
     setup_helper(@level_source.id,
                  LevelSourceHint::CROWDSOURCED,
                  @selected_crowdsourced_message,
@@ -31,7 +31,7 @@ class LevelSourceTest < ActiveSupport::TestCase
 
     # Set up external (Stanford) hints.
     @selected_stanford_message = 'selected stanford hint'
-    @experimental_stanford_messages = ['stanford exp1', 'stanford exp2' ]
+    @experimental_stanford_messages = ['stanford exp1', 'stanford exp2']
     setup_helper(@level_source.id,
                  LevelSourceHint::STANFORD,
                  @selected_stanford_message,
@@ -40,7 +40,7 @@ class LevelSourceTest < ActiveSupport::TestCase
     # Set up standardized and variant level_sources.
     @standard_data = 'dummy data'
     @variant_data =
-        LevelSource::XMLNS_STRING + @standard_data + LevelSource::XMLNS_STRING
+      LevelSource::XMLNS_STRING + @standard_data + LevelSource::XMLNS_STRING
     @ls1_standard = create(:level_source,
         level_id: @level.id, data: @standard_data)
     @ls1_variant = create(:level_source,
@@ -49,12 +49,12 @@ class LevelSourceTest < ActiveSupport::TestCase
 
     level2_id = create(:level).id
     @ls2_standard =
-        create(:level_source, level_id: level2_id, data: @standard_data)
+      create(:level_source, level_id: level2_id, data: @standard_data)
     @ls2_variant =
-        create(:level_source, level_id: level2_id, data: @variant_data)
+      create(:level_source, level_id: level2_id, data: @variant_data)
     level3_id = create(:level).id
     @ls3_variant =
-        create(:level_source, level_id: level3_id, data: @variant_data)
+      create(:level_source, level_id: level3_id, data: @variant_data)
   end
 
   test "should not create level source with utf8mb8" do
@@ -92,7 +92,6 @@ class LevelSourceTest < ActiveSupport::TestCase
                    @level_source.get_external_hint
     end
   end
-
 
   test "should get selected external hint" do
     assert_equal @selected_stanford_message,

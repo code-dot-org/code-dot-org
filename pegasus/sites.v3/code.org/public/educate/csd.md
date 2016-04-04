@@ -8,7 +8,7 @@ nav: educate_nav
 ## <a name="what"></a>What is CS Discoveries?
 CS Discoveries is our newest curriculum-in-development - an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.
 
-<img src="/educate/csd/ms.jpg" height="280px" style="float:right; margin:20px 0px 0px 0px;">
+<img src="/images/fit-500/csd/ms.jpg" height="280px" style="float:right; margin:20px 0px 0px 0px;">
 
 ### <a name="equity"></a>A CS course for everyone, designed with equity in mind
 CS Discoveries is designed from the ground up to be an accessible and engaging course for all students, regardless of background or prior experience. By providing students opportunities to engage with culturally and personally relevant topics in a wide variety of CS related fields we hope to show all students that CS can be for them.
@@ -105,7 +105,7 @@ We're looking to assemble a summer writing cohort from June 27 - Aug 19, 2016 to
 
 <h4> Pilot the curriculum in your classroom </h4>
 
-If you're in one of Code.org's partner districts and are teaching a CS or technology class in Spring 2017, consider applying to be a pilot teacher! We're looking for a small but dedicated group of teachers to give our team ongoing feedback on the curriculum and tools. Applications will be accepted on a rolling basis through the beginning of the summer.
+If you're in one of Code.org's partner districts and are teaching a CS or technology class in Spring 2017, consider applying to be a pilot teacher! We're looking for a small but dedicated group of teachers to give our team ongoing feedback on the curriculum and tools. Applications will be accepted on a rolling basis through April 2016.
 
 <br><br>
 

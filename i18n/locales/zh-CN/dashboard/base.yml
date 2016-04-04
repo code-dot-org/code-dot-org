@@ -24,6 +24,8 @@ zh:
   hello: 你好，世界！
   welcome_back: '欢迎回来，%{name}'
   submit: 提交
+  unsubmit: 未提交
+  next_page: Next page
   add_teacher_form:
     code:
       label: '添加一个老师:'
@@ -219,7 +221,7 @@ zh:
       free_play:
         playlab: 构建一个应用程序
         artist: 绘画一些东西
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: 构建一个应用程序
     user:
       classroom: 教师主页
@@ -317,6 +319,7 @@ zh:
     heading_hoc2014: '<h2>编程一小时</h2>适合<h1>所有年龄</h1>'
     heading_elementary: '<h2>20 小时课程</h2><h1>初学者 （所有年龄）</h1>'
     heading_apps: '<h1>为每个人</h1><h2>的乐趣</h2>'
+    heading_tools: '<h2>准备好进行下一步了吗？</h2><h1>高中的JavaScript工具</h1>'
     heading_legacy: '<h1>为所有年龄</h1><h2>的加速课程</h2>'
     your_gallery: 作品
     no_primary_course: 试试代码工作室的课程
@@ -411,6 +414,12 @@ zh:
       current: 目前的关卡
       unused: 未使用的关卡
   upsell:
+    applab:
+      title: 应用实验室
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: 经典迷宫
       body: 请尝试计算机科学的基本知识。数百万人尝试了它。
@@ -452,10 +461,10 @@ zh:
   landing:
     prerelease: "本课程是在 <span class='betatext'> beta 版</span> 中. 这表示它不是最终版本. 它会根据反馈而被修订和改善."
     prerelease_hoc2014: "本教程是在 <span class='betatext'> beta 版</span> 中. 它会根据反馈而被修订和改善."
-    feedback: 提供反馈。
     report_bug: 报告错误
     support: 获取帮助
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: 不正确的答案
     wrong_body: 你已输入的答案不正确。请再试一次 ！
@@ -463,6 +472,23 @@ zh:
     correct_body: 这是正确的答案。
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: 谢谢你
+    wrong_body: Thank you for submitting an answer.
+    correct_title: 谢谢你
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: 谢谢你
+    wrong_body: Thank you for submitting answers.
+    correct_title: 谢谢你
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: 谢谢你
+    wrong_body: Thank you for submitting answers.
+    correct_title: 谢谢你
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: 不正确的解决方案
     wrong_body: 您输入的解决方案不正确。请再试一次 ！
@@ -480,6 +506,8 @@ zh:
     placeholder: 在这里输入你的答案
     open_response_title: 感谢
     open_response_body: 感谢您的回复！
+    correct_title: 正确。
+    correct_body: 这是正确的答案。
   dialog:
     ok: 确定
     startover_title: 你确定要重新开始吗？
@@ -533,6 +561,7 @@ zh:
     completed_perfect: 完美完成
     furthest_level_attempted: 尝试过最远的关卡
     assessment: 评估
+    submitted: submitted
   studio:
     courses_working_on: 您正在进行的课程
     completed_courses: 已完成的课程
@@ -589,3 +618,7 @@ zh:
           other: 其他
         detail: 请提供尽可能详细的信息，尽可能关于您所报告的内容。
         acknowledge: '提交的信息将会根据%{link_start_privacy}隐藏策略%{link_end} 和 %{link_start_tos}服务条款%{link_end}的职权范围进行处理。'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

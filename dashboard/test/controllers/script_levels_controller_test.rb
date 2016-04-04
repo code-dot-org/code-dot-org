@@ -11,6 +11,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
+    @admin = create :admin
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user_id: @teacher.id)
 
@@ -32,8 +33,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show script level for twenty hour' do
-    @controller.expects :slog
-
     get_show_script_level_page(@script_level)
     assert_response :success
 
@@ -104,11 +103,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should not log an activity monitor start for netsim' do
-    @controller.expects(:slog).never # don't log activity monitor start
-
     allthethings_script = Script.find_by_name('allthethings')
-    netsim_level = allthethings_script.levels.select { |level| level.game == Game.netsim }.first
-    netsim_script_level = allthethings_script.script_levels.select { |script_level| script_level.level_id == netsim_level.id }.first
+    netsim_level = allthethings_script.levels.find { |level| level.game == Game.netsim }
+    netsim_script_level = allthethings_script.script_levels.find { |script_level| script_level.level_id == netsim_level.id }
     get :show, script_id: allthethings_script, stage_id: netsim_script_level.stage.position, id: netsim_script_level.position
     assert_response :success
 
@@ -163,8 +160,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     app_options = assigns(:level).blockly_options
     assert_equal '<div><label id="label1">expected html</label></div>', app_options[:level]['startHtml']
   end
-
-
 
   test 'project template level sets toolbox blocks' do
     template_level = create :level
@@ -278,13 +273,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to build_script_level_path(sl)
   end
 
-
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, script_id: Script.twenty_hour_script, chapter: '99999999999999999999999999'
     end
   end
-
 
   test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
@@ -401,8 +394,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should show special script level by chapter" do
-    @controller.expects :slog
-
     # this works for 'special' scripts like flappy, hoc
     expected_script_level = ScriptLevel.where(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5).first
 
@@ -421,8 +412,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should show script level by stage and puzzle position" do
-    @controller.expects :slog
-
     # this works for custom scripts
 
     get :show, script_id: @custom_script, stage_id: 2, id: 1
@@ -433,8 +422,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show new style unplugged level with PDF link' do
-    @controller.expects(:slog).never
-
     script_level = Script.find_by_name('course1').script_levels.first
 
     get :show, script_id: script_level.script, stage_id: script_level.stage.position, id: script_level.position
@@ -506,8 +493,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should render blockly partial for blockly levels" do
-    @controller.expects :slog
-
     script = create(:script)
     level = create(:level, :blockly)
     stage = create(:stage, script: script)
@@ -521,8 +506,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "with callout defined should define callout JS" do
-    @controller.expects :slog
-
     script = create(:script)
     level = create(:level, :blockly, user_id: nil)
     stage = create(:stage, script: script)
@@ -719,6 +702,28 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '#codeApp', 0
   end
 
+  test 'includes makerlab javascript dependencies when makerlab level' do
+    sign_in @admin
+
+    level = create :makerlab
+    script_level = create :script_level, level: level
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
+
+    assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab')
+  end
+
+  test 'excludes makerlab javascript dependencies when applab level' do
+    sign_in @admin
+
+    level = create :applab
+    script_level = create :script_level, level: level
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
+
+    assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab'), false
+  end
+
   test 'shows expanded teacher panel when student is chosen' do
     sign_in @teacher
 
@@ -809,7 +814,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [], assigns(:view_options)[:callouts]
   end
 
-
   test 'student cannot view solution' do
     sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('K-1 Artist1 1'))
 
@@ -847,7 +851,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     level = create(:applab, submittable: true)
     script_level = create(:script_level, level: level)
     Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
-    ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::SUBMITTED_RESULT)
+    ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::FREE_PLAY_RESULT, submitted: true)
 
     get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level
     assert_response :success
@@ -897,7 +901,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal true, assigns(:view_options)[:post_milestone]
   end
 
-
   test "should not see examples if an unauthorized teacher is signed in" do
     CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')
 
@@ -910,7 +913,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select 'button', text: I18n.t('teacher.panel.example'), count: 0
   end
-
 
   test "should see examples if an authorized teacher is signed in" do
     CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')

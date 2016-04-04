@@ -239,7 +239,28 @@ en:
       CSPPD3-u4 tips for prep: {}
       CSPPD3-u4 unit 4 overview: {}
       CSPPD3-u4 what is a challenge: {}
+      CSPPD3-u5 Welcome: {}
+      CSPPD3-u5 breakdown of u5 chunks: {}
+      CSPPD3-u5 challenge overview: {}
+      CSPPD3-u5 chapter 1 concepts: {}
+      CSPPD3-u5 chapter 1 resources: {}
+      CSPPD3-u5 chapter 2 concepts: {}
+      CSPPD3-u5 chapter 2 resources: {}
+      CSPPD3-u5 complete the challenge overview: {}
+      CSPPD3-u5 completing the challenge: {}
+      CSPPD3-u5 do the challenge: {}
       CSPPD3-u5 intro to u5: {}
+      CSPPD3-u5 list of challenges: {}
+      CSPPD3-u5 overview: {}
+      CSPPD3-u5 philosophy and tools: {}
+      CSPPD3-u5 pick a challenge: {}
+      CSPPD3-u5 post survey: {}
+      CSPPD3-u5 post to forum: {}
+      CSPPD3-u5 reflect on challenge: {}
+      CSPPD3-u5 share out overview: {}
+      CSPPD3-u5 tips for prep: {}
+      CSPPD3-u5 unit 5 overview: {}
+      CSPPD3-u5 what is a challenge: {}
       CSPPD3-u5 what is data: {}
       CSPStudentLessonPlanTemplate:
         description here: description here
@@ -501,6 +522,37 @@ en:
       ECSPD3-u5 share out overview: {}
       ECSPD3-u5 tools: {}
       ECSPD3-u5 what is a challenge: {}
+      ECSPD3-u6 about: {}
+      ECSPD3-u6 alt lesson overview: {}
+      ECSPD3-u6 challenge details: {}
+      ECSPD3-u6 challenge inside: {}
+      ECSPD3-u6 complete the challenge: {}
+      ECSPD3-u6 connections: {}
+      ECSPD3-u6 day 1: {}
+      ECSPD3-u6 day 10-13: {}
+      ECSPD3-u6 day 14: {}
+      ECSPD3-u6 day 15: {}
+      ECSPD3-u6 day 16-18: {}
+      ECSPD3-u6 day 19-23: {}
+      ECSPD3-u6 day 2-3: {}
+      ECSPD3-u6 day 24-33: {}
+      ECSPD3-u6 day 4: {}
+      ECSPD3-u6 day 5: {}
+      ECSPD3-u6 day 6-7: {}
+      ECSPD3-u6 day 8-9: {}
+      ECSPD3-u6 do the challenge: {}
+      ECSPD3-u6 ideas for culminating projects: {}
+      ECSPD3-u6 intro to u6: {}
+      ECSPD3-u6 lesson ideas: {}
+      ECSPD3-u6 lesson overview: {}
+      ECSPD3-u6 links to online simulations: {}
+      ECSPD3-u6 list of challenges: {}
+      ECSPD3-u6 overview: {}
+      ECSPD3-u6 plan: {}
+      ECSPD3-u6 post survey: {}
+      ECSPD3-u6 post to forum: {}
+      ECSPD3-u6 share out overview: {}
+      ECSPD3-u6 why study robotics: {}
       ECSU4 Challenge Submission: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
@@ -1164,6 +1216,9 @@ en:
       U4L10 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L11 Data and Medicine - Video:
+        Data and Medicine- Video: Data and Medicine- Video
+        description here: description here
       U4L11 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1222,6 +1277,9 @@ en:
         description here: description here
         title: title
       U6 - Charts - Student Introduction:
+        description here: description here
+        title: title
+      U6 - Final Project - Student Introduction:
         description here: description here
         title: title
       U6 - ImportExport - Student Introduction:
@@ -1519,6 +1577,12 @@ en:
         title: title
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
+    level_group:
+      name:
+        PS U3 Assessment1: 
+        Test level group by Brendan: 
+        Test longassessment levelgroup: 
+        Test longassessment levelgroup split: 
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -1583,7 +1647,7 @@ en:
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
-        Artist Loops Matching One: Artist Loops Matching One
+        Artist Loops Matching 1: Artist Loops Matching 1
         Match the loop to the shape: Match the loop to the shape
       2-3 artist match 1:
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
@@ -2335,7 +2399,7 @@ en:
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         Maze Multiple Choice: Maze Multiple Choice
-        Which blocks work?: Which blocks work?
+        Which set of blocks will get me to the pig?: Which set of blocks will get me to the pig?
       2-3 Relay Programming Multi 1:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
@@ -2355,8 +2419,8 @@ en:
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700"
-        Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
-        Why won't this circle go all the way around?: Why won't this circle go all the way around?
+        Artist Debugging Multiple Choice 1: Artist Debugging Multiple Choice 1
+        What would you need to fix to make this a finished circle?: What would you need to fix to make this a finished circle?
       2-3 artist functions multi 1:
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
@@ -2385,7 +2449,7 @@ en:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
-        Bee Conditionals Multiple Choice One: Bee Conditionals Multiple Choice One
+        Bee Conditionals Multiple Choice 1: Bee Conditionals Multiple Choice 1
         Which comparison below is true?: Which comparison below is true?
       2-3 bee conditionals multi 2:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png"
@@ -2401,7 +2465,7 @@ en:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500"
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
+        Bee Conditionals Multiple Choice 2: Bee Conditionals Multiple Choice 2
         Choose the best blocks.: Choose the best blocks.
       2-3 bee loops multi 1:
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
@@ -2658,7 +2722,25 @@ en:
         I feel like I could teach this right now: I feel like I could teach this right now
         I feel like I need to do A LOT of review of lessons, content, etc before I teach this: I feel like I need to do A LOT of review of lessons, content, etc before I teach this
         I feel like I need to do SOME review of lessons, content, etc before I teach this: I feel like I need to do SOME review of lessons, content, etc before I teach this
+      CSPPD3-u5 Create PT checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u5 Explore PT checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u5 unit overview checkin:
+        I feel like I could run this unit right now: I feel like I could run this unit right now
+        I feel like I need to do A LOT of review of the tasks before I run this unit: I feel like I need to do A LOT of review of the tasks before I run this unit
+        I feel like I need to do SOME review of the tasks before I run this unit: I feel like I need to do SOME review of the tasks before I run this unit
       Choose 2 Test:
+        Line 2: Line 2
+        Line 3: Line 3
+        Line 4: Line 4
+        Line 5: Line 5
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers
+      Choose 2 Test tight:
         Line 2: Line 2
         Line 3: Line 3
         Line 4: Line 4
@@ -2962,6 +3044,22 @@ en:
           The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
 
           How many bits would you need to encode everything that could be typed on this keyboard?
+      Multi Horizontal Scroll Test tight:
+        12 bits: 12 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        7 bits: 7 bits
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        ? |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
+        : |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
@@ -3104,6 +3202,58 @@ en:
         a secret password: a secret password
         a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
         a week-long course to learn about computers: a week-long course to learn about computers
+      PS U3 Q1-1:
+        Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.
+        Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
+        Statements about programming languages: Statements about programming languages
+        The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
+        There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
+      PS U3 Q1-2:
+        Robots in a grid of square Part 1: Robots in a grid of square Part 1
+        https://images.code.org/3e341ed57ac366663807df24b2a7e329-image-1459376286013.png: https://images.code.org/3e341ed57ac366663807df24b2a7e329-image-1459376286013.png
+        https://images.code.org/841ec4583e3d9f0b41d1b51b496ef94b-image-1459376320683.png: https://images.code.org/841ec4583e3d9f0b41d1b51b496ef94b-image-1459376320683.png
+        https://images.code.org/c59d71ecac547d755d63a3f8fca56843-image-1459376262204.png: https://images.code.org/c59d71ecac547d755d63a3f8fca56843-image-1459376262204.png
+        https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png: https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png
+        https://images.code.org/d658fb7f959603138c39ed5f7666fd63-image-1459376301845.png: https://images.code.org/d658fb7f959603138c39ed5f7666fd63-image-1459376301845.png
+      PS U3 Q1-3:
+        Line 3 and Line 4: Line 3 and Line 4
+        Line 5, 6, 7, 8 and 9: Line 5, 6, 7, 8 and 9
+        Line 8 and Line 9: Line 8 and Line 9
+        Line 9: Line 9
+      PS U3 Q1-4:
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions within the same program.: Functions cannot make calls to other functions within the same program.
+        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
+        Which of the following is NOT true about functions in programming?: Which of the following is NOT true about functions in programming?
+      PS U3 Q1-5:
+        A function name should be as descriptive as possible to indicate what the function does.: A function name should be as descriptive as possible to indicate what the function does.
+        A function name should indicate how long the function takes to run.: A function name should indicate how long the function takes to run.
+        Function names should be organized alphabetically.: Function names should be organized alphabetically.
+        The function name should begin with a number that indicates the order in which it should be executed.: The function name should begin with a number that indicates the order in which it should be executed.
+        Two functions with similar behavior should be given identical names to indicate the relationship between them.: Two functions with similar behavior should be given identical names to indicate the relationship between them.
+        What is one important naming convention of functions?: What is one important naming convention of functions?
+      PS U3 Q1-6:
+        A function can change names over the course of a program.: A function can change names over the course of a program.
+        Code can be added or removed dynamically from a function while the program is running.: Code can be added or removed dynamically from a function while the program is running.
+        Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
+        Two functions can be given identical names as long as their code is identical.: Two functions can be given identical names as long as their code is identical.
+        Two functions in a single program can have different names but contain identical code.: Two functions in a single program can have different names but contain identical code.
+        Which one of the following statements about functions is TRUE: Which one of the following statements about functions is TRUE
+      PS U3 Q1-8:
+        drawStar();: drawStar();
+        drawStar;: drawStar;
+        function drawStar(): function drawStar()
+        ? 'function drawStar(){ <br>&nbsp;&nbsp;&nbsp;&nbsp; for(var i = 0; i &lt 5; i++){ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moveForward(100); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnLeft(36);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>} '
+        : 'function drawStar(){ <br>&nbsp;&nbsp;&nbsp;&nbsp; for(var i = 0; i &lt 5; i++){ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moveForward(100); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnLeft(36);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>} '
+        function drawStar;: function drawStar;
+      PS U3 Q1-9:
+        Parameters allow for more flexible, generalized behaviors in functions.: Parameters allow for more flexible, generalized behaviors in functions.
+        Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve
+        Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
+        Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
+        Why are parameters useful when programming?: Why are parameters useful when programming?
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
         rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds * 48
@@ -3122,6 +3272,15 @@ en:
         rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds * 10 - 3
         rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds * 7 + 10
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3
+      Submittable Multi:
+        Submittable Multiple choice: Submittable Multiple choice
+        What is your favorite color?: What is your favorite color?
+        blue: blue
+        green: green
+        real orange of course: real orange of course
+        red: red
+        teal: teal
+        yellow: yellow
       U1L07 Assessment 1:
         A: A
         B: B
@@ -4487,6 +4646,7 @@ en:
       CSPPD3-u3 pick a challenge: {}
       CSPPD3-u3 submit forum link: {}
       CSPPD3-u4 submit forum link: {}
+      CSPPD3-u5 submit forum link: {}
       ECSPD Fence post Q1: {}
       ECSPD Handshake Q1: {}
       ECSPD Online U1D1-2 Assessment 1:
@@ -4544,6 +4704,8 @@ en:
       ECSPD3-u5 pick a challenge: {}
       ECSPD3-u5 submit: {}
       ECSPD3-u5 submit forum link: {}
+      ECSPD3-u6 pick a challenge: {}
+      ECSPD3-u6 submit forum link: {}
       ECSU2 Challenge Submission: {}
       ECSU3 Challenge Submission: {}
       ECSU4 Challenge Submission fin: {}
@@ -4610,6 +4772,9 @@ en:
         Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
       PDK5 Test5:
         Big Test: Big Test
+      PS U3 Q1-7:
+        Enter answer here: Enter answer here
+        Enter prompt here: Enter prompt here
       Test Free Response Assessment Question:
         Enter your reflection here: Enter your reflection here
         ? Imagine that you have to send a list of 10 numbers to friend in binary using the bit-sending widget. The numbers are all between 0 and 100. Describe the issues or problems that you and your friend would encounter in trying to do this. How would you address these problem?

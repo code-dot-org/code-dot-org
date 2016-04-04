@@ -21,7 +21,7 @@ lt-LT:
   twentyhours_heading: Išbandykite įvadą į programavimo kursą
   twentyhours_text: 'Baigėte savo „Programavimo valandą“?  Išmokite daugiau apie informatiką ir programavimą kituose kursuose.'
   og_title: Kiekvienas vaikas nusipelno galimybės
-  og_description: Kiekvienas moksleivis kiekvienoje mokykloje nusipelno galimybės mokytis kompiuterių mokslo.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Prisijunkite prie <a href="http://hourofcode.com">Programavimo valandos</a><br/>2014 gruodžio 8–14 dienomis<br/>'
   hoc2014_students: Mokiniai
   hoc2014_try: Išmėginkite
@@ -66,15 +66,13 @@ lt-LT:
   congrats_next_tutorials_title: Pabandyk šias instrukcijas toliau
   congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: Gauti pasiekimo sertifikatą
-  view_course: View course
+  view_course: Peržiūrėti kursą
+  view_unit: View unit
+  make_app: Make an app
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -82,13 +80,14 @@ lt-LT:
   third_party_gradelevel_5to12: Grades 5-12
   third_party_gradelevel_6plus: Grades 6+
   third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
+  third_party_platform_all: 'Platforma: Internetas, iPad ir Android'
+  third_party_platform_mobile: 'Platforma: iPad ir Android'
+  third_party_platform_web: 'Platforma: internetas'
   third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
+  third_party_price_free: 'Kaina: nemokamai'
   third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
   third_party_tynker_btn_site: Visit Tynker
@@ -109,21 +108,21 @@ lt-LT:
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
   third_party_appinv_btn_forum: App Inventor 2 Forum
   third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. With CodeHS, you can get the help that every new programmer needs to work through problems and keep learning. Our tutors are everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
+  third_party_codehs_btn_try: Intro CS Learn More for Schools
   third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Visit Codecademy
   third_party_organization: Organization
   third_party_curriculum: Curriculum
   third_party_pricing: Pricing
-  third_party_cost_free: Free
+  third_party_cost_free: Free for students and teachers
   third_party_cost_5permonth: $5/month per class
   third_party_cost_299: $2.99/download
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
@@ -180,7 +179,7 @@ lt-LT:
   learn_next_level: Pabandykite kitą Code Studio kursą
   learn_online: Išmėginkite kitus internetinius kursus
   learn_classes: Suraskite kursus savo gyvenvietėje
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Aš užbaigiau #HourOfCode - pažiūrėk! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -287,6 +286,9 @@ lt-LT:
   homepage_slot_text_link_othercourses: Kiti internetiniai kursai
   homepage_slot_text_title_educators: Pedagogai
   homepage_slot_text_blurb_educators: Mokykite savo mokinius
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Vidurinė mokykla
+  homepage_slot_text_link_high: Gimnazija
   homepage_slot_text_link_k5: Kursai darželinukams
   homepage_slot_text_link_fullcurriculum: Peržiūrėkite pilną mokymo programą
   homepage_slot_text_link_pd: Profesinis tobulinimasis
@@ -490,6 +492,7 @@ lt-LT:
   dashboard_navigation_all_sections: Mokinių paskyros ir pažanga
   dashboard_navigation_view_progress: Peržiūrėti pažangą
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Pridėti mokinius
   dashboard_navigation_manage_students: Tvarkyti ir pridėti mokinius
   dashboard_navigation_lesson_plans_resources: Pamokų planai ir ištekliai
@@ -583,10 +586,21 @@ lt-LT:
   dashboard_progress_completed_too_many_blocks: baigtas, panaudota per daug blokų
   dashboard_progress_completed_perfect: puikiai išspręsta
   dashboard_progress_furthest_level_attempted: išmėgintas aukščiausias lygis
+  dashboard_progress_submitted: submitted
   dashboard_stage: Etapas
   dashboard_puzzle: Galvosūkis
   dashboard_question: Klausimas
   dashboard_response: Atsakymas
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Teisingai
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Neįtikėtini praėjusių metų „Programavimo valandos“ rezultatai. Per vieną savaitę:'
   stats_hoc_2013_image_alt: „Programavimo valandos“ statistika nuo 2013 metų
   dashboard_teacher: Mokytojas
@@ -605,7 +619,7 @@ lt-LT:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: Peržiūrėti visus
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
   dashboard_announce_button_text: Sužinok daugiau
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
@@ -704,7 +718,7 @@ lt-LT:
   projguts_name: „Akmuo, popierius, žirklės“
   hourofcode_name: Klasikinis labirintas
   playlab_name: Laboratorija
-  infinity_name: Žaidimų laboratorija Infinity
+  infinity_name: Žaidimų laboratorija „Infinity“
   artist_name: Menininkas
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Paleisti Marko!
@@ -718,6 +732,12 @@ lt-LT:
   course3_name: Kursas 3
   course4_name: Kursas 4
   accelerated_name: Pagreitintas kursas
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  applab_name: App Lab
+  applab_gradelevel: Amžius 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: Amžius 4-104
   codeintl_gradelevel: Amžius 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -860,7 +880,7 @@ lt-LT:
   projguts_shortdescription: Išmokite modeliuoti ir simuliuoti žaisdami „akmuo, popierius, žirklės“
   hourofcode_shortdescription: Išmokite koduoti su Marku Zuckerbergu ir Angry Birds!
   frozen_shortdescription: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo grožį ir magiją.
-  starwars_shortdescription: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą tolimoje galaktikoje.
+  starwars_shortdescription: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
   playlab_shortdescription: Sukurk istoriją arba žaidimą!
   infinity_shortdescription: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus Infinity personažai.
   artist_shortdescription: Nupiešk šaunius piešinius ir ornamentus su menininku!
@@ -914,7 +934,7 @@ lt-LT:
   projguts_longdescription: Ši veikla be kompiuterio padės mokiniams suprasti, kaip vyksta kompiuterių simuliacija ir modeliavimas. Mokiniai grupelėmis žais žaidimą „Akmuo, popierius, žirklės“ ir užfiksuos gautus rezultatus kaip modeliavimo eksperimentus.
   hourofcode_longdescription: Placeholder for new code.org/hoc
   frozen_longdescription: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo grožį ir magiją. Čiuožinėdami pačiūžomis, piešime snaigių raštus. Savo kūriniais galėsite pasidalinti su draugais!
-  starwars_longdescription: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą tolimoje galaktikoje.
+  starwars_longdescription: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'

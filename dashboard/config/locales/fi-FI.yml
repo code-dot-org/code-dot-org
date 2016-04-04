@@ -25,6 +25,8 @@
   hello: Hei maailma
   welcome_back: Tervetuloa takaisin, %{name}
   submit: Jatka
+  unsubmit: Peruuta lähetys
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Lisää opettaja:'
@@ -362,6 +364,8 @@
     heading_hoc2014: "<h2>Koodaustunti</h2><h1>kaikille ikäryhmille</h1>"
     heading_elementary: "<h2>20 tunnin kurssit</h2><h1>aloittelijoille (kaikki ikäryhmät)</h1>"
     heading_apps: "<h2>Hauskaa</h2><h1>kaikille</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>"
     your_gallery: Galleria
     no_primary_course: Kokeile kurssia Code Studiossa
@@ -476,6 +480,15 @@
       current: Nykyiset tasot
       unused: Käyttämättömät tasot
   upsell:
+    applab:
+      title: Sovelluksien laboratorio
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassinen sokkelo
       body: Kokeile tietojenkäsittelytieteen perusteita. Jo miljoonat ovat kokeilleet.
@@ -528,10 +541,10 @@
       versioita reaktiona saatuun palautteeseen.
     prerelease_hoc2014: Tämä opetusohjelma on <span class='betatext'>beta</span>.
       Sitä muutetaan palautteen mukaisesti sen parantamiseksi.
-    feedback: Anna palautetta
     report_bug: Raportoi ongelma
     support: Katso ohjeet
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Väärä vastaus
     wrong_body: Antamasi vastaus ei ole oikein. Yritä uudelleen!
@@ -539,6 +552,23 @@
     correct_body: Tämä on oikea vastaus.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Kiitos
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Kiitos
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Kiitos
+    wrong_body: Thank you for submitting answers.
+    correct_title: Kiitos
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Kiitos
+    wrong_body: Thank you for submitting answers.
+    correct_title: Kiitos
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Väärä vastaus
     wrong_body: Antamasi ratkaisu ei ole oikea. Yritä uudestaan!
@@ -558,6 +588,8 @@
     placeholder: Kirjoita vastauksesi tähän
     open_response_title: Kiitos
     open_response_body: Kiitos vastauksestasi!
+    correct_title: Oikein
+    correct_body: Tämä on oikea vastaus.
   dialog:
     ok: OK
     startover_title: Oletko varma, että haluat aloittaa alusta?
@@ -620,6 +652,7 @@
     completed_perfect: valmis, täydellinen
     furthest_level_attempted: vaikein taso jota yritetty
     assessment: arviointi
+    submitted: submitted
   studio:
     courses_working_on: Kurssit, joita työstät
     completed_courses: Valmiit kurssit
@@ -687,3 +720,7 @@
           josta raportoit.
         acknowledge: Toimittamalla nämä tiedot huomioit, että niitä käsitellään %{link_start_privacy}Yksityisyyskäytännön%{link_end}
           ja %{link_end}Palvelukuvauksen%{link_start_tos} mukaisesti
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

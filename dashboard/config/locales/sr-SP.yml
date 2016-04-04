@@ -24,32 +24,34 @@
   hello: "Здраво свете"
   welcome_back: "Добродошао назад, %{name}"
   submit: "Пошаљи"
+  unsubmit: "Откажи предају"
+  next_page: Next page
   add_teacher_form:
     code:
       label: "Додај наставника:"
       placeholder: "Шифра секције(ABCDEF)"
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Молим вас унесите шифру коју вам је професор доделио. Шифра се
+        састоји од 6 слова као "ABCDEF".
     submit: "Додај наставника"
   add_hint_form:
     placeholder: "Молимо унесите ваш савет овде"
     submit: "Додај савет"
   appname: Code.org
   stage: "фаза"
-  stage_number: "Стаза%{number}"
+  stage_number: "Стаза %{number}"
   puzzle: "Пузла"
   trophies: "трофеји"
   courses: "курсеви"
-  unplugged_activity: Unplugged Activity
+  unplugged_activity: "Активност ван мреже"
   of: "од"
   more: "ВИШЕ"
   less: "МАЊЕ"
   beta: "пробна верзија"
-  try_hoc: "Испробајте Hour of Code.Кликните овде >> "
+  try_hoc: "Испробајте Hour of Code. Кликните овде >> "
   try_k8intro: "Пробај наш К-8 курс Увод у рачунарство (15-25 часова)"
   k8intro: "К-8 курс Увод у рачунарство (15-25 часова)"
   already_started: "Већ почели? Наставите овде >>"
-  demos: 'Admin: All Demos'
+  demos: "Администратор: Сви демои"
   continue: "Настави"
   prize: "награда"
   more_info: "Више информација"
@@ -71,8 +73,8 @@
   signup_form:
     student_count: "%{count} ученика се већ пријавило."
     teacher_count: "%{count} наставника се већ пријавило."
-    overview_student: Пријавите се да би сте пратили свој прогрес.Ваш имејл се примарно
-      користи да би се улоговали и да би вратили лозинку.За више информација, погледајте<a
+    overview_student: Пријавите се да би сте пратили свој напредак. Ваш имејл се примарно
+      користи да би се улоговали и да би вратили лозинку. За више информација, погледајте<a
       href="http://code.org/privacy">Правила приватности</a>.
     overview_teacher: "Научи информатику у својој учионици тако што ћеш се пријавити.<p/>Моћи
       ћеш да додаш ученика и да пратиш њихово напредовање."
@@ -175,12 +177,12 @@
     donorschoose_register: "Региструјте се као наставник на DonorsChoose.org"
     donorschoose_project: "Постави пројекат"
     donorschoose_how_to: "Како да користите вашу шифру"
-    success: "Ваша је награда успешно откуплјена, погледајте код испод."
-    error: "Ваша награда није могла бити откуплјена, молимо покушајте поновно."
+    success: "Ваша је награда успешно откупљена, погледајте код испод."
+    error: "Ваша награда није могла бити откупљена, молимо покушајте поновно."
     error_us_only: "Понуда награде важи само за кориснике Уједињених држава (САД)."
     error_not_earned: "Нисте још освојили ову награду."
     error_already_redeemed: "Ваша награда већ је откупљена."
-    no_prizes_available: "Извињавамо се, тенутно немамо доступних награда."
+    no_prizes_available: "Извињавамо се, тренутно немамо доступних награда."
     teacher_info_required: "Награде за учитеље захтевају информације о имену школе
       и адреси:"
     teacher_email_required: "Награде за учитеље захтевају потврђену имејл адресу:"
@@ -207,17 +209,16 @@
       choose: "Изабери награду:"
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: "Заслужили сте награду! (само за студенте САД-а)"
-      not_earned_title: "Заврши туторијал и освоји награде(само за ученике из УН)"
-      not_earned: "Научи све научне принципе рачунарства, сакупи све %{num_trophies}
-        трофеје, и заради праве награде. Можеш да бираш између 10ГБ бесплатног простора
-        на Дропбоксу, $10 Скајп кредита и бесплатно преузимање игара. Напомена: понуда
+      not_earned_title: "Заврши туторијал и освоји награде(само за ученике из САД-а)"
+      not_earned: "Научи све принципе информатике, сакупи %{num_trophies} трофеја,
+        и заради праве награде. Можеш да бираш између 10ГБ бесплатног простора на
+        Дропбоксу, $10 Скајп кредита и бесплатно преузимање игара. Напомена: понуда
         важи само за УН ученике и док трају залихе."
       teacher:
-        earned: 15 or more students collected all %{num_trophies} trophies. You have
-          won a teacher prize! (U.S. teachers only)
-        not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-          only)
+        earned: 15 или више ученика је сакупило све %{num_trophies} трофеје. Освојили
+          сте професорску награду! (Само за професоре из САД-а)
+        not_earned_title: Подучавај разред, заради до $1,000 <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+          кредита (само за професоре из САД-а)
         not_earned: Како бих наградили учитеље који учествују први пут, можете зарадити
           до $1,000  <a href="http://DonorsChoose.org">DonorsChoose.org</a> у кредитима  за
           вођење учионице кроз К-8 уводни курс. Да бих се квалификовали потребно је
@@ -229,9 +230,9 @@
           credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
           кредите могу искористити само учитељи из САД-а.
         bonus:
-          not_earned_title: You can still earn an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-            only)
+          not_earned_title: Још увек можете зарадити додатних $250 у <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> кредиту (само за професоре
+            из САД-а)
           earned: 7 или више ученика који су освојили све %{num_trophies} трофеје
             су девојчице.Освојили сте награду бонуса! (важи само за наставнике из
             САД-а)
@@ -247,11 +248,11 @@
     edit_model: "Уреди %{model}"
     update: "Ажурирај"
     destroy: "Уништи"
-    back: "Побратак"
+    back: "Назад"
     confirm: "Јесте ли сигурни?"
-    created: "%{model} је успешно направлјен."
+    created: "%{model} је успешно направљен."
     updated: "%{model} је успешно ажуриран."
-    destroyed: "%{model} was successfully deleted."
+    destroyed: "%{model} је успешно избрисан."
     access_denied: "Немаш приступ овом %{model}."
   nav:
     header:
@@ -264,17 +265,17 @@
         applab: "Направи апликацију"
     user:
       classroom: "Почетна страница за учитеље"
-      district_dashboard: District Dashboard
+      district_dashboard: "Регионална огласна табла"
       label: "Здраво %{username}"
       stats: "Мој напредак"
-      settings: "Мој рачун"
+      settings: "Мој налог"
       prizes: "Награде"
       logout: "Одјави се"
       signin: "Пријави се"
       signup: "Региструј се"
       already_registered: "Већ си регистрован?"
     popup:
-      progress_for_user: "Напредак%{name}"
+      progress_for_user: "Напредак %{name}"
       progress: "Напредак"
       lines: "Укупно линија кода: %{lines}"
       close: "ЗАТВОРИ"
@@ -298,7 +299,7 @@
     user_not_found: "Наставник није пронађен."
     student_teacher_disassociated: "Уклонили сте %{teacher_name} из листе ваших наставника."
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: "Преглед одговора"
       student: "студент"
       viewing_solution: "Види решење"
       try_it_yourself: "Испробај"
@@ -342,44 +343,47 @@
     teacher_averages: У просјеку су ваши студенти зарадили %{trophy_average} од %{trophy_max}
       "Concept Mastery" трофеја.
     teacher_print_certificates: "Штампај потврде ученицима који су завршили курс"
-    teacher_read_blog: Read about news and updates to our materials at our Educator
-      Blog
+    teacher_read_blog: "Прочитајте о новостима и ажурирањима наших материјала на нашем
+      едукаторском блогу"
     classroom: "Ваша учионица"
     student_progress: "Ваш напредак у ученју"
     student_stats: Ви сте зарадили %{trophy_count} од %{trophy_max} "Concept Mastery"
       трофеја.
     student_left_off: "Гдје сте оставили заднји пут:"
-    student_finished: You've completed all tutorials, pick another class %{online_link}
-      or at a %{local_school_link}
+    student_finished: "Завршили сте све Code.org туторијале. Одаберите други курс
+      class %{online_link} или на %{local_school_link}."
     local_school: "локална школа"
     online: "пријавлјен"
     see_details: "Погледај деталје"
-    view_course: View Course
-    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
-      $1,000 in classroom rewards.'
+    view_course: "Погледајте курс"
+    prize_info: "Награде за учествовање (само за професоре државних школа из САД-а):
+      До $1,000 за награде за учионице."
     tryfirst: "Или, можеш прво да пробаш, а да се региструјеш касније:"
     trynow: "Испробај сада"
-    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    add_hint_help: "Молимо Вас да нам помогнете да додамо паметне савете на Code.org
+      туторијале"
     20hour_overview: "Овај 20-часовни  курс представља срж компјутерских наука и програмерских
       основа. Курс је дизајниран за употребу у учионицама за разреде К-8, али је забавно
       учити у било којем животном периоду."
-    test_videos_help: Test our new video player at your school
-    try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
-    heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
-      (all ages)</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
-    your_gallery: Gallery
-    no_primary_course: Try a course at Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    test_videos_help: "Тестирајте наш нови video player у вашој школи"
+    try_beta_courses: "Ново! Пробајте наше бета курсеве за ученике разредне наставе"
+    use_as_teacher: "Користите овај сајт као наставник"
+    heading_hoc2014: "<h2>Сат програмирања за</h2><h1>За све узрасте</h1>"
+    heading_elementary: "<h2>20-сатни курсеви за</h2><h1>Основе компјутерске науке
+      (за све узрасте)</h1>"
+    heading_apps: "<h2>Забава за</h2><h1>Све</h1>"
+    heading_tools: "<h2>Да ли си спреман за следећи корак?</h2><h1>JavaScript алати
+      за средњу школу</h1>"
+    heading_legacy: "<h2>Наш убрзани курс за</h2><h1>За све узрасте</h1>"
+    your_gallery: "Галерија"
+    no_primary_course: "Испробајте Code Studio курс"
+    choose_next_course: "Испробајте Code Studio курс одабиром једног испод"
+    print_certificate: "Одштампајте сертификат"
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
-    try_hour_of_code: Try an Hour of Code!
+    title: "Научите о Code Studio-ју"
+    description: "Свако може да научи компјутерску науку. Да направи игрице, апликације
+      и уметност помоћу кодирања."
+    try_hour_of_code: "Испробај сат програмирања!"
   gender:
     male: "Мушко"
     female: "Женско"
@@ -405,21 +409,21 @@
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."
-    copyright: Copyright
+    copyright: "Ауторска права"
     more: "Више"
     feedback: "Обезбедити податке о резултатима"
     translate: "Помози нам превести на твој језик"
-    support: Support
+    support: "Подршка"
     support_url: http://support.code.org
-    tos_short: Terms
-    tos: Terms
+    tos_short: "Услови"
+    tos: "Услови коришћења"
     privacy: "Политика приватности"
-    secure: Secure Version
-    report_abuse: Report Abuse
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
-    try_hour_of_code: Try an Hour of Code!
+    secure: "Сигурна верзија"
+    report_abuse: "Пријави злоупотребу"
+    built_on_code_studio: "Израђено на Code Studio-ју"
+    make_my_own_app: "Направи своју личну апликацију"
+    how_it_works: "Како функционише"
+    try_hour_of_code: "Испробај сат програмирања!"
   reference_area:
     title: "Требаш помоћ?"
     subtitle: "Погледај ове снимке и савете"
@@ -441,7 +445,7 @@
         issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
         any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
         your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      hide_this_warning: "Сакриј ова обавештења"
     upgrade:
       header: "Молимо набавите савременији претраживаћ."
       message: Code.org uses modern web technology. This makes the site faster to
@@ -486,6 +490,15 @@
       current: "Тренутни Нивои"
       unused: "Неупотребљени Нивои"
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: "Час кода"
       body: Try the basics of computer science. Millions have given it a shot.
@@ -504,7 +517,7 @@
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: "Уметник са Аном и Елзом из Залеђеног краљевства"
     gallery:
-      title: Gallery
+      title: "Галерија"
       body: View a gallery of app and artist images created by our users
     frozen:
       title: "Залеђено краљевство"
@@ -512,7 +525,7 @@
       title: Star Wars
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: "Креирај приче и игре са Дизнијевим ликовима у Играоници."
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
@@ -529,7 +542,7 @@
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: "%{time_ago} ago"
-    header: Gallery
+    header: "Галерија"
     header_playlab: Play Lab
     header_artist: Artist
   landing:
@@ -538,10 +551,10 @@
       is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
-    feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -549,6 +562,23 @@
     correct_body: That is the correct answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: "Хвала"
+    wrong_body: Thank you for submitting an answer.
+    correct_title: "Хвала"
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "Хвала"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Хвала"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "Хвала"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Хвала"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Incorrect solution
     wrong_body: The solution you've entered is not correct.  Please try again!
@@ -568,6 +598,8 @@
     placeholder: Enter your answer here
     open_response_title: Thanks
     open_response_body: Thanks for your response!
+    correct_title: Correct
+    correct_body: That is the correct answer.
   dialog:
     ok: "У реду"
     startover_title: Da li ste sigurni da želite da počnete ponovo?
@@ -631,6 +663,7 @@
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
     assessment: assessment
+    submitted: submitted
   studio:
     courses_working_on: Courses you're working on
     completed_courses: Completed courses
@@ -700,3 +733,7 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: "Потражи иконицу..."
+      no_icons_found: "Нема нађене иконице"

@@ -18,6 +18,7 @@
   "fillTooltip": "coloque 1 unidade de terra",
   "finalLevel": "Parabéns! Você resolveu o último desafio.",
   "flowerEmptyError": "A flor em que você está não tem mais néctar.",
+  "didNotCollectEverything": "Certifique-se de não deixar qualquer néctar ou mel para trás!",
   "get": "obter",
   "heightParameter": "altura",
   "holePresent": "houver um buraco",
@@ -81,6 +82,5 @@
   "whileTooltip": "Repita as ações até satisfazer a condição.",
   "word": "Encontre a palavra",
   "yes": "Sim",
-  "youSpelled": "Você escreveu",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Você escreveu"
 }

@@ -311,22 +311,12 @@ button.arrow:disabled {
   border: 1px solid #ddd;
 }
 
-html[dir='rtl'] #codeWorkspace {
-  right: 400px;
-  left: 0px;
-  margin-right: 15px;
-  margin-left: 0px;
+html[dir='rtl'] .editor-column {
+   right: 400px;
 }
 
-#codeWorkspace {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  left: 400px;
-  bottom: 0;
-  margin-left: 15px;
-  border: 1px solid #ddd;
-  overflow: hidden;
+.editor-column {
+  left: 400px
 }
 
 #codeWorkspace.pin_bottom {
@@ -395,6 +385,10 @@ html[dir='rtl'] #codeWorkspace {
   line-height: 400px;
 }
 
+html[dir='rtl'] div#visualizationResizeBar {
+  right: 400px;
+}
+
 #visualization {
   position: relative;
   height: 400px;
@@ -450,13 +444,13 @@ html[dir='rtl'] #codeWorkspace {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  #codeWorkspace {
+  .editor-column {
     left: $width;
   }
-  html[dir='rtl'] #codeWorkspace {
+  html[dir='rtl'] .editor-column {
     right: $width;
   }
-  html[dir='rtl'] body.readonly #codeWorkspace {
+  html[dir='rtl'] body.readonly .editor-column {
     right: 0px;
   }
   div#visualizationResizeBar {
@@ -776,7 +770,6 @@ input[type="radio"] {
 
   $red: #FF3014;
   $dark-red: #7F150A;
-  $blue: #0094CA;
   $dark-blue: #00647F;
   $gray: #333333;
   $dark-gray: #4D4D4D;
@@ -820,7 +813,7 @@ input[type="radio"] {
         fill: $dark-gray;
       }
       &.enabled {
-        fill: $blue;
+        fill: $cyan;
       }
       &.enabled:hover {
         fill: $dark-blue;
@@ -861,15 +854,22 @@ input[type="radio"] {
     #lightbulb {
       position: absolute;
       left: 40px;
+    }
+  }
+}
 
-      #hintCount {
-        font-weight: bold;
-        font-size: 400px;
-        fill: white;
-        stroke: black;
-        stroke-width: 30px;
-        font-family: Verdana, Geneva, sans-serif;
-      }
+.qtip.cdo-qtips.qtip-authored-hint {
+  .qtip-content {
+    font-family: $gotham-regular;
+    padding: 10px 10px 0 10px;
+    color: $charcoal;
+
+    h3 {
+      margin-top: 0;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 20px;
     }
   }
 }
@@ -881,6 +881,35 @@ input[type="radio"] {
 #prompt2 {
   font-size: 12px;
   color: $charcoal;
+}
+
+.authored-hints {
+
+  h1, p, pre {
+    color: $charcoal;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  #hint-button {
+    margin-left: 35px;
+  }
+
+  ol {
+    counter-reset: list;
+    margin: 0 0 35px 35px;
+
+    li {
+      list-style: none;
+      &:before {
+        content: counter(list, decimal) ") ";
+        counter-increment: list;
+        position: absolute;
+        left: 35px;
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .modal-content {
@@ -945,6 +974,10 @@ $aniGifPreviewHeight: 60px;
     right: 0px;
     top: 0px;
   }
+}
+
+.workspace-header-height {
+  height: $workspace-headers-height;
 }
 
 .workspace-header {
@@ -1024,7 +1057,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-#headers {
+#headers, .purple-header {
   height: $workspace-headers-height;
   background-color: $purple;
   overflow-y: hidden;
@@ -1137,42 +1170,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   margin: 15px 0 0 0;
 }
 
-#rotateContainer {
-  position: fixed;
-  z-index: 10001;
-  background-color: white;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  background-position: 50% 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  #rotateText {
-    position: relative;
-    top: 50%;
-    left: -50%;
-    margin-left: 50px;
-    margin-right: -50px;
-  }
-
-  p {
-    text-align: center;
-    font-size: 26px;
-    line-height: 26px;
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-  }
-
-  @media screen and (orientation: portrait) and (max-device-width: 900px) {
-    display: block;
-  }
-}
-
 .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,
     .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {
   @include font;
@@ -1198,6 +1195,17 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     .goog-menuitem-highlight, .goog-menuitem-hover {
       margin: -4px -4px 0 0 !important
     }
+  }
+}
+
+.show-code {
+  summary {
+    color: $charcoal;
+    font-family: $gotham-bold;
+  }
+
+  .generated-code-container {
+    margin: 25px 10px 25px -80px;
   }
 }
 
@@ -1638,3 +1646,5 @@ a.WireframeSendToPhone_send-to-phone-link {
     display: none;
   }
 }
+
+@import "RotateContainer";

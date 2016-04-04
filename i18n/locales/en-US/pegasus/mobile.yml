@@ -21,7 +21,7 @@ en-US:
   twentyhours_heading: crwdns4529:0crwdne4529:0
   twentyhours_text: crwdns4530:0crwdne4530:0
   og_title: crwdns55865:0crwdne55865:0
-  og_description: crwdns55866:0crwdne55866:0
+  og_description: crwdns56254:0crwdne56254:0
   hoc2014_heading: crwdns20155:0crwdne20155:0
   hoc2014_students: crwdns20156:0crwdne20156:0
   hoc2014_try: crwdns20157:0crwdne20157:0
@@ -67,14 +67,12 @@ en-US:
   congrats_next_tutorials_desc: 'crwdns48531:0%{current_path}crwdne48531:0'
   get_a_certificate_of_achievement: crwdns3615:0crwdne3615:0
   view_course: crwdns56012:0crwdne56012:0
+  view_unit: crwdns56162:0crwdne56162:0
+  make_app: crwdns56163:0crwdne56163:0
   congrats_guest_speaker_title: crwdns56013:0crwdne56013:0
   congrats_guest_speaker_desc: crwdns56014:0crwdne56014:0
   congrats_guest_speaker_cta: crwdns56015:0crwdne56015:0
-  congrats_third_party_course1: crwdns56016:0crwdne56016:0
-  congrats_third_party_course2: crwdns56017:0crwdne56017:0
-  congrats_third_party_course3: crwdns56018:0crwdne56018:0
-  congrats_third_party_course4: crwdns56019:0crwdne56019:0
-  congrats_third_party_accelerated: crwdns56020:0crwdne56020:0
+  congrats_third_party_title: crwdns56116:0crwdne56116:0
   third_party_gradelevel_kto8: crwdns56021:0crwdne56021:0
   third_party_gradelevel_kto2: crwdns56022:0crwdne56022:0
   third_party_gradelevel_2to8: crwdns56023:0crwdne56023:0
@@ -88,7 +86,8 @@ en-US:
   third_party_price_varies: crwdns56031:0crwdne56031:0
   third_party_price_free: crwdns56032:0crwdne56032:0
   third_party_price_299: crwdns56033:0crwdne56033:0
-  third_party_price_2500: crwdns56034:0crwdne56034:0
+  third_party_price_individual: crwdns56164:0crwdne56164:0
+  third_party_price_school: crwdns56165:0crwdne56165:0
   third_party_tynker_desc: crwdns56035:0crwdne56035:0
   third_party_tynker_btn_curriculum: crwdns56036:0crwdne56036:0
   third_party_tynker_btn_site: crwdns56037:0crwdne56037:0
@@ -111,7 +110,6 @@ en-US:
   third_party_appinv_btn_site: crwdns56054:0crwdne56054:0
   third_party_codehs_desc: crwdns56055:0crwdne56055:0
   third_party_codehs_btn_try: crwdns56056:0crwdne56056:0
-  third_party_codehs_btn_demos: crwdns56057:0crwdne56057:0
   third_party_codecademy_desc: crwdns56058:0crwdne56058:0
   third_party_codecademy_btn_curriculum: crwdns56059:0crwdne56059:0
   third_party_codecademy_btn_site: crwdns56060:0crwdne56060:0
@@ -124,6 +122,7 @@ en-US:
   third_party_cost_free_399: crwdns56067:0crwdne56067:0
   third_party_cost_free_2: crwdns56068:0crwdne56068:0
   third_party_cost_free_10: crwdns56069:0crwdne56069:0
+  third_party_desc_5_4to8: crwdns56117:0crwdne56117:0
   third_party_desc_10to12_kto3: crwdns56070:0crwdne56070:0
   third_party_desc_11_kto5: crwdns56071:0crwdne56071:0
   third_party_desc_10to12_kto5: crwdns56072:0crwdne56072:0
@@ -180,7 +179,7 @@ en-US:
   learn_next_level: crwdns4684:0crwdne4684:0
   learn_online: crwdns4685:0crwdne4685:0
   learn_classes: crwdns3857:0crwdne3857:0
-  hoc_is_here: crwdns55997:0crwdne55997:0
+  hoc_is_here: crwdns56255:0crwdne56255:0
   just_did_hoc: crwdns3942:0crwdne3942:0
   just_did_course1: crwdns56080:0crwdne56080:0
   just_did_course2: crwdns56081:0crwdne56081:0
@@ -279,6 +278,9 @@ en-US:
   homepage_slot_text_link_othercourses: crwdns35776:0crwdne35776:0
   homepage_slot_text_title_educators: crwdns35777:0crwdne35777:0
   homepage_slot_text_blurb_educators: crwdns35778:0crwdne35778:0
+  homepage_slot_text_link_elementary: crwdns56118:0crwdne56118:0
+  homepage_slot_text_link_middle: crwdns56119:0crwdne56119:0
+  homepage_slot_text_link_high: crwdns56120:0crwdne56120:0
   homepage_slot_text_link_k5: crwdns35779:0crwdne35779:0
   homepage_slot_text_link_fullcurriculum: crwdns35780:0crwdne35780:0
   homepage_slot_text_link_pd: crwdns35781:0crwdne35781:0
@@ -481,6 +483,7 @@ en-US:
   dashboard_navigation_all_sections: crwdns22277:0crwdne22277:0
   dashboard_navigation_view_progress: crwdns7797:0crwdne7797:0
   dashboard_navigation_view_text_responses: crwdns50087:0crwdne50087:0
+  dashboard_navigation_view_assessments: crwdns56256:0crwdne56256:0
   dashboard_navigation_add_students: crwdns7798:0crwdne7798:0
   dashboard_navigation_manage_students: crwdns7799:0crwdne7799:0
   dashboard_navigation_lesson_plans_resources: crwdns22278:0crwdne22278:0
@@ -574,10 +577,21 @@ en-US:
   dashboard_progress_completed_too_many_blocks: crwdns27940:0crwdne27940:0
   dashboard_progress_completed_perfect: crwdns27941:0crwdne27941:0
   dashboard_progress_furthest_level_attempted: crwdns27942:0crwdne27942:0
+  dashboard_progress_submitted: crwdns56220:0crwdne56220:0
   dashboard_stage: crwdns50088:0crwdne50088:0
   dashboard_puzzle: crwdns50089:0crwdne50089:0
   dashboard_question: crwdns50090:0crwdne50090:0
   dashboard_response: crwdns50091:0crwdne50091:0
+  dashboard_correctness: crwdns56257:0crwdne56257:0
+  dashboard_correctness_free_response: crwdns56258:0crwdne56258:0
+  dashboard_correctness_unsubmitted: crwdns56259:0crwdne56259:0
+  dashboard_correctness_correct: crwdns56260:0crwdne56260:0
+  dashboard_correctness_incorrect: crwdns56261:0crwdne56261:0
+  dashboard_status: crwdns56262:0crwdne56262:0
+  dashboard_multi_correct: crwdns56263:0crwdne56263:0
+  dashboard_multi_count: crwdns56264:0crwdne56264:0
+  dashboard_multi_correct_percent: crwdns56265:0crwdne56265:0
+  dashboard_submission_timestamp: crwdns56266:0crwdne56266:0
   stats_hoc_2013_heading: crwdns18198:0crwdne18198:0
   stats_hoc_2013_image_alt: crwdns18199:0crwdne18199:0
   dashboard_teacher: crwdns20754:0crwdne20754:0
@@ -596,7 +610,7 @@ en-US:
   dashboard_faq_k5: crwdns41887:0crwdne41887:0
   dashboard_announcements: crwdns50092:0crwdne50092:0
   dashboard_announce_view_all: crwdns50093:0crwdne50093:0
-  dashboard_announce_message: crwdns55999:0crwdne55999:0
+  dashboard_announce_message: crwdns56188:0crwdne56188:0
   dashboard_announce_button_text: crwdns55869:0crwdne55869:0
   dashboard_announce_hoc: crwdns50094:0crwdne50094:0
   dashboard_announce_playlab: crwdns55290:0crwdne55290:0
@@ -709,6 +723,12 @@ en-US:
   course3_name: crwdns56087:0crwdne56087:0
   course4_name: crwdns56088:0crwdne56088:0
   accelerated_name: crwdns56089:0crwdne56089:0
+  cspunit3_name: crwdns56166:0crwdne56166:0
+  cspunit3_gradelevel: crwdns56167:0crwdne56167:0
+  cspunit3_shortdescription_congrats: crwdns56168:0crwdne56168:0
+  applab_name: crwdns56169:0crwdne56169:0
+  applab_gradelevel: crwdns56170:0crwdne56170:0
+  applab_shortdescription_congrats: crwdns56171:0crwdne56171:0
   codeorg_gradelevel: crwdns21487:0crwdne21487:0
   codeintl_gradelevel: crwdns23748:0crwdne23748:0
   thinkersmithspanish_gradelevel: crwdns21488:0crwdne21488:0

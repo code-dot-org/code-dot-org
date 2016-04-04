@@ -1,7 +1,7 @@
 lt:
   errors:
     messages:
-      not_saved: 'Ištaisykite šias klaidas:'
+      not_saved: 'Ištaisyk šias klaidas:'
       too_young: Šis turinys turi amžiaus apribojimus ir yra neprieinamas jaunesniems mokiniams
   activerecord:
     errors:
@@ -24,18 +24,20 @@ lt:
   hello: Sveikas, pasauli
   welcome_back: 'Sveiki sugrįžę, %{name}'
   submit: Pateikti
+  unsubmit: Atšaukti
+  next_page: Next page
   add_teacher_form:
     code:
-      label: 'Pridėkite mokytoja:'
+      label: 'Pridėti mokytoją:'
       placeholder: Grupės kodas (ABCDEF)
-      instructions: 'Prašome įrašyti kodą, kuriuo su jumis pasidalino jūsų mokytojas. Tai yra 6 raidžių kodas, pavyzdžiui "ABCDEF".'
+      instructions: 'Įrašyk kodą, kurį tau davė mokytojas. Tai yra 6 raidžių kodas, pavyzdžiui "ABCDEF".'
     submit: Pridėk mokytoją
   add_hint_form:
     placeholder: Įvesk savo suflerį čia
     submit: Pridėk suflerį
   appname: Code.org
   stage: Etapas
-  stage_number: 'Etapas %{number}'
+  stage_number: '%{number} etapas'
   puzzle: Galvosūkis
   trophies: Laimėjimai
   courses: Kursai
@@ -45,9 +47,9 @@ lt:
   less: MAŽIAU
   beta: beta
   try_hoc: 'Išmėgink „Programavimo valandą“, spausk čia >> '
-  try_k8intro: Išmėginkite mūsų programavimo įvado kursą (15-25 valandos)
+  try_k8intro: Išmėgink mūsų programavimo įvado kursą (15-25 valandos)
   k8intro: Programavimo įvadas 5-8 klasėms (15-25 valandos)
-  already_started: 'Jau esate pradėjęs? Tęskite čia >> '
+  already_started: 'Jau pradėjai? Tęsk čia >> '
   demos: 'Administratorius: Visos demonstracijos'
   continue: Tęsti
   prize: prizas
@@ -67,9 +69,9 @@ lt:
     need_confirmation: Negavai patvirtinimo instrukcijų?
     need_unlock: Negavai atrakinimo instrukcijų?
   signup_form:
-    student_count: 'Jau yra užsiregistravę %{count} mokinių(-iai).'
-    teacher_count: 'Jau yra užsiregistravę %{count} mokytojų(-ai).'
-    overview_student: 'Užsiregistruok, kad galėtum sekti savo progresą. Tavo el. paštas bus naudojamas, kad galėtum prisijungti bei pasikeisti savo slaptažodį. Daugiau informacijos skaityk <a href="http://code.org/privacy">privatimo politikoje</a>.'
+    student_count: 'Jau užsiregistravo %{count} mokinių(-iai).'
+    teacher_count: 'Jau užsiregistravo %{count} mokytojų(-ai).'
+    overview_student: 'Užsiregistruok, kad galėtum sekti savo progresą. Tavo el. paštas reikalingas tam, kad galėtum prisijungti bei pasikeisti savo slaptažodį. Daugiau informacijos skaityk <a href="http://code.org/privacy">privatimo politikoje</a>.'
     overview_teacher: 'Mokykite informatikos savo klasėje ir prisiregistruokite. <p/>Galėsite pridėti savo mokinius ir stebėti jų pažangą.'
     no_signup_message: 'Jūs galite <a target="_blank" href="http://learn.code.org"> peržiūrėti įvairius etapus bei galvosūkius </a>, bet Jums reikės prisiregistruoti, kad Jūsų veiksmai išsisaugotų.'
     teacher_educator_guide: Peržiūrėti pedagogo vadovą
@@ -77,13 +79,13 @@ lt:
     teacher_title: Mokytojų registracija
     student_pitch: Mokinių registracija prie Code.org
     student_title: Mokinių registracija
-    school_name: Mokyklos vardas (nebūtina)
+    school_name: Mokyklos pavadinimas (nebūtina)
     school_address: Mokyklos adresas (nebūtina)
     address_placeholder: adresas, miestas, rajonas, pašto indeksas
     gender: Lytis (neprivaloma)
     birthday: Gimimo data (neprivaloma)
     age: Amžius
-    user_type: 'Kas esi: mokinys ar mokytojas?'
+    user_type: 'Kas tu: mokinys ar mokytojas?'
     submit: Užsiregistruoti
     teacher: Ar jūs mokytojas?
     valid_username: Galima!
@@ -96,15 +98,15 @@ lt:
     teacher_terms: "Sutinku su Code.org<a href='http://code.org/tos'>taisyklėmis</a>."
     additional_information: Mums reikia papildomos informacijos, kad galėtum prisiregistruoti.
   signin_form:
-    title: Jau esate prisiregistravęs? Prisijunkite
+    title: Jau registravotės? Prisijunkite
     login: El. pašto adresas arba naudotojo vardas
     password: Slaptažodis
     remember: Prisiminti mane
     submit: Prisijungti
   signin:
     try_heading: Nori išmėginti programavimą neprisiregistravęs?
-    try_hoc: Pirmiausia išmėginkite „Programavimo valandą“
-    try_20hours: Išmėginkite 20-ties valandų įvadą į informatiką
+    try_hoc: Pirmiausia išmėgink „Programavimo valandą“
+    try_20hours: Išmėgink 20-ties valandų įvadą į informatiką
   signinsection:
     welcome: 'Sveiki atvykę į %{section_name}'
     name: Pasirink savo vardą
@@ -122,7 +124,7 @@ lt:
       confirm_password: Patvirtinkite naują slaptažodį
       submit: Pakeisti mano slaptažodį
   welcome_email:
-    subject: Prisijungti prie mano klasės (Code.org svetainėje)
+    subject: Prisijunk prie mano klasės (Code.org svetainėje)
     body: |
       Nuspauskite žemiau esančią nuorodą, kad prisiregistruotumėte prie informatikos įvado Core.org svetainėję (aš būsiu Jūsų „mokytojas“):
       
@@ -136,18 +138,18 @@ lt:
     added_teacher: '%{name} pridėtas(-a) kaip tavo mokytojas(-a)'
     registered: 'Jūs užsiregistravote į %{section_name}.'
     error:
-      signed_in: Prieš tęsdami prašome atsijungti
+      signed_in: Prieš tęsiant reikia atsijungti
       username_not_found: 'Naudotojo vardas %{username} nerastas'
       username_in_use: '%{username} jau užimtas, prašome pasirinkti kitokį'
-      no_teacher: "Nepavyko rasti nieko prisijungusio su '%{teacher_email_or_code}'. Prašome paprašyti to žmogaus prisijungti čia ir dabar, o tada mėginkite dar kartą"
+      no_teacher: "Nepavyko rasti nieko prisijungusio su '%{teacher_email_or_code}'. Prašome paprašyti to žmogaus prisiregistruoti čia, o tada mėginkite dar kartą"
       section_not_found: "Nepavyko rasti grupės su kodu '%{section_code}'."
       blank_code: Įveskite grupės kodą
       cant_join_own_section: Atsiprašome, bet prie savo grupės prisijungti negalite.
     mail:
       invite_student:
-        subject: 'Prisijunk prie klasės su %{teacher_name} Code.org svetainėje!'
+        subject: 'Prisijunk prie Code.org klasės su %{teacher_name}!'
       student_disassociated:
-        subject: '%{student_name} nebėra susijęs su Jūsų mokiniais.'
+        subject: '%{student_name} nebėra Jūsų mokinys.'
       teacher_disassociated:
         subject: '%{teacher_name} nebėra pažymėtas kaip tavo mokytojas(-a).'
   reports:
@@ -212,7 +214,7 @@ lt:
     update: Atnaujinti
     destroy: Sunaikinti
     back: Atgal
-    confirm: Ar esate tuo tikras?
+    confirm: Ar tikrai?
     created: '%{model} buvo sėkmingai sukurtas.'
     updated: '%{model} buvo sėkmingai atnaujintas.'
     destroyed: '%{model} buvo sėkmingai pašalintas.'
@@ -224,7 +226,7 @@ lt:
       free_play:
         playlab: Sukurk programėlę
         artist: Nupiešk ką nors
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Sukurk programėlę
     user:
       classroom: Mokytojo namų puslapis
@@ -260,7 +262,7 @@ lt:
     students:
       dashboard: Eiti į mokytojo puslapį
     user_not_found: Mokytojas nerastas.
-    student_teacher_disassociated: 'Jūs pašalinote %{teacher_name} kaip savo mokytoją.'
+    student_teacher_disassociated: 'Tu pašalinai savo mokytoją %{teacher_name}.'
     panel:
       answer_viewer: Atsakymų apžvalga
       student: Mokinys
@@ -269,8 +271,8 @@ lt:
       section: Grupė
       example: Sprendimo pavyzdys
       example_with_number: 'Sprendimo pavyzdys %{solution_number}'
-      submitted_on: 'Pateikitas:'
-      unsubmit: Atšaukti pateikimą
+      submitted_on: 'Pateiktas:'
+      unsubmit: Atšaukti
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
     email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'
@@ -286,10 +288,10 @@ lt:
     completed: Baigta
     tried: Išbandyta
   home:
-    title: Programavimo kursai
-    description: Code Studio yra pagridinis online kursų puslapis, kuriuos sukūrė Code.org
+    title: Code Studio
+    description: „Code Studio“ yra internetinių kursų puslapis, sukurtas Code.org
     lines_of_code: 'MOKINIAI PARAŠĖ %{lines_count} KODO EILUČIŲ'
-    lines_of_code_linebreak: '%{lines_count} KODŲ EILUTĖS <br/>PARAŠYTOS %{students_count} MILIJONŲ STUDENTŲ'
+    lines_of_code_linebreak: '%{students_count} MILIJONŲ MOKINIŲ <br/>JAU PARAŠĖ %{lines_count} KODO EILUČIŲ'
     all_courses: 1, 2 ir 3 kursų apžvalga
     lesson_plans: Pamokų planai
     signin_message: 'Jau užsiregistravote? %{link}'
@@ -306,7 +308,7 @@ lt:
     student_progress: Tavo mokymosi pažanga
     student_stats: 'Tu gavai %{trophy_count} iš %{trophy_max} "Concept Mastery" laimėjimus(-ų).'
     student_left_off: 'Kur baigei paskutinį kartą:'
-    student_finished: 'Jūs baigėte visas Code.org pamokėles. Išmėginkite kitus užsiėmimus aplankydami %{online_link} arba %{local_school_link}.'
+    student_finished: 'Tu baigei visas Code.org pamokėles. Išmėgink kitus užsiėmimus čia %{online_link} arba čia %{local_school_link}.'
     local_school: vietinėje mokykloje
     online: internetu
     see_details: Peržiūrėti informaciją
@@ -322,15 +324,16 @@ lt:
     heading_hoc2014: '<h2>Programavimo valanda</h2><h1>Visoms amžiaus grupėms</h1>'
     heading_elementary: '<h2>20 valandų kursas</h2><h1>Kompiuterių mokslo pradmenys (visoms amžiaus grupėms)</h1>'
     heading_apps: '<h2>Smagumynai</h2><h1>visiems</h1>'
-    heading_legacy: '<h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>'
+    heading_tools: '<h2>Pasiruošęs kitam žingsniui?</h2><h1>JavaScript įrankiai gimnazijoms</h1>'
+    heading_legacy: '<h2>Pagreitinti kursai</h2><h1>visoms amžių grupėms</h1>'
     your_gallery: Galerija
-    no_primary_course: Išmėginkite Code Studio kursą
-    choose_next_course: Išbandykite Code Studio kursą pasirinkdami vieną iš žemiau
+    no_primary_course: Išmėgink „Code Studio“ kursą
+    choose_next_course: Išbandyk „Code Studio“ kursą, pasirink vieną iš pateiktų žemiau
     print_certificate: Atsispausdinti sertifikatą
   share:
-    title: Mokytis su Code Studio
-    description: Kiekvienas gali išmokti informatikos. Programuodami daryti žaidimus, programėles ir grafikos elementus.
-    try_hour_of_code: Išbandykite „Programavimo valandą”!
+    title: Mokytis su „Code Studio“
+    description: Kiekvienas gali išmokti informatikos. Kurk žaidimus, programėles ir piešinius programuodamas.
+    try_hour_of_code: Išmėgink „Programavimo valandą”!
   gender:
     male: Vyras
     female: Moteris
@@ -339,13 +342,13 @@ lt:
     student: Mokinys
     teacher: Mokytojas
   footer:
-    thank_you: 'Mes dėkojame mūsų <a href="https://code.org/about/donors">rėmėjams</a>, <a href="https://code.org/about/partners">partneriams</a>,mūsų <a href="https://code.org/about/team"> plačiai komandai</a>, mūsų video grupei ir mūsų <a href="https://code.org/about/advisors">mokymų patarėjams</a> už jų pagalbą kuriant Code Studio.'
-    help_from_html: Mes ypatingai norime padėkoti inžinieriams iš Google, Microsoft, Facebook, Twitter ir daugeliui kitų, kurie padėjo sukurti šias pamokėles.
+    thank_you: 'Mes dėkojame mūsų <a href="https://code.org/about/donors">rėmėjams</a>, <a href="https://code.org/about/partners">partneriams</a>, mūsų <a href="https://code.org/about/team"> didelei komandai</a>, mūsų vaizdo įrašų grupei ir mūsų <a href="https://code.org/about/advisors"> patarėjams</a> už jų pagalbą kuriant „Code Studio“.'
+    help_from_html: Dėkojame Google, Microsoft, Facebook, Twitter ir daugeliui kitų inžinierių ir žmonių, kurie padėjo sukurti šias pamokėles.
     help_from_html_old: Šią medžiagą padėjo sukurti inžinieriai iš Google, Microsoft, Facebook ir Twitter.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Visos teisės saugomos.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Visos teisės saugomos.<br />Frozen&#8482; &copy; %{current_year} Disney. Visos teisės saugomos.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Visos teisės saugomos.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Visos teisės saugomos.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Visos teisės saugomos.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Visos teisės saugomos. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Visos teisės saugomos. Frozen&#8482; &copy; %{current_year} Disney. Visos teisės saugomos. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Visos teisės saugomos. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Visos teisės saugomos. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Visos teisės saugomos. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: 'Rėmėjas: Amazon Web Services'
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotipas ir Hour of Code&reg; yra Code.org priklausantys prekės ženklai.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotipas ir „Programavimo valanda“&reg; yra Code.org priklausantys prekės ženklai.'
     copyright: Autorinės teisės
     more: Daugiau
     feedback: Pateikti atsiliepimus
@@ -358,9 +361,9 @@ lt:
     secure: Saugaus ryšio versija
     report_abuse: Praneškite apie piktnaudžiavimą
     built_on_code_studio: Sukurta naudojant „Code Studio”
-    make_my_own_app: Kurti savo programėlę
-    how_it_works: Kaip tai veikia?
-    try_hour_of_code: Išbandykite „Programavimo valandą”!
+    make_my_own_app: Sukurk savo programėlę
+    how_it_works: Kaip tai veikia
+    try_hour_of_code: Išmėgink „Programavimo valandą”!
   reference_area:
     title: Reikia pagalbos?
     subtitle: Peržiūrėkite šiuos vaizdo įrašus bei patarimus
@@ -416,6 +419,12 @@ lt:
       current: Dabartinis lygis
       unused: Nepanaudoti lygiai
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab yra programavimo aplinka, su kuria galima sukurti paprastas programėles. Kurti galima su blokeliais arba su JavaScript, o po to ja pasidalinti su draugais.
+      body_short: Sukurk programėlę naudodamas blokelius arba Javascript ir pasidalink ja su draugais.
+      audience: Amžius 13+
+      cta: Sužinok, kaip
     hoc:
       title: Klasikinis labirintas
       body: Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.
@@ -425,7 +434,7 @@ lt:
     20-hour:
       title: Pagreitintas kursas
       body: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.
-      body_short: Išmokite kompiuterių mokslo pagrindų pagreitintuose kursuose 2-4.
+      body_short: Išmok informatikos pagrindų pagreitintuose kursuose (panašiuose į 2-4 kursus).
     hoc2014:
       try_new_tutorial: Išbandykite naująsias „Programavimo valandos“ pamokėles beta versijoje
       try_frozen: 'Piešimas su Ana ir Elze iš "Ledo šalies"'
@@ -437,11 +446,11 @@ lt:
     starwars:
       title: Žvaigždžių karai
     infinity:
-      title: Žaidimų laboratorija Infinity
+      title: Žaidimų laboratorija „Infinity“
       body: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus Infinity personažai.
     minecraft:
       title: Minecraft
-      body: Tyrinėkite Minecraft pasaulį per kodą.
+      body: Tyrinėk Minecraft pasaulį koduodamas.
   gallery:
     students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
     students_made_these_with_code: Mokinių sukurti pavyzdžiai.
@@ -452,15 +461,15 @@ lt:
     caption_by_name_age: 'sukūrė %{name}  (%{age} m.)'
     caption_time_ago: 'prieš %{time_ago} '
     header: Galerija
-    header_playlab: Žaidimų laboratorija
+    header_playlab: Istorijos ir žaidimai
     header_artist: Menininkas
   landing:
     prerelease: "Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas."
     prerelease_hoc2014: "Šios pamokėlės yra <span class='betatext'>beta versijoje</span>. Į pasiūlymus ir klaidų pranešimus bus atsižvelgta."
-    feedback: Pateikti atsiliepimus
     report_bug: Pranešti apie problemą
     support: Pagalba
     support_url: //support.code.org
+    help_resources: Pagalba ir ištekliai
   multi:
     wrong_title: Neteisingas atsakymas
     wrong_body: Atsakymas, kurį įvedei, nėra teisingas. Pabandyk dar kartą!
@@ -468,6 +477,23 @@ lt:
     correct_body: Tai yra teisingas atsakymas.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Ačiū
+    wrong_body: Ačiū už atsakymą.
+    correct_title: Ačiū
+    correct_body: Ačiū už atsakymą.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Ačiū
+    wrong_body: Ačiū už atsakymą
+    correct_title: Ačiū
+    correct_body: Ačiū už atsakymą
+  level_group-submittable:
+    wrong_title: Ačiū
+    wrong_body: Ačiū už atsakymą
+    correct_title: Ačiū
+    correct_body: Ačiū už atsakymą
   match:
     wrong_title: Neteisingas sprendimas
     wrong_body: Sprendimas, kurį įvedei, nėra teisingas. Pamėgink dar kartą!
@@ -485,10 +511,12 @@ lt:
     placeholder: Įveskite savo atsakymą čia
     open_response_title: Ačiū
     open_response_body: Ačiū už atsakymą!
+    correct_title: Teisingai
+    correct_body: Tai yra teisingas atsakymas.
   dialog:
     ok: gerai
     startover_title: Ar tikrai norite pradėti iš naujo?
-    startover_body: Tai atkurs jūsų dėlionę į pradinę versiją ir atstatys visus duomenis, kuriuos jūs jau pridėjote ar pakeitėte.
+    startover_body: Tavo visi pakeitimai išnyks ir užduotį galėsi atlikti iš naujo.
     startover_ok: Pradėti iš naujo
     startover_cancel: Atšaukti
   time:
@@ -538,6 +566,7 @@ lt:
     completed_perfect: puikiai išspręsta
     furthest_level_attempted: išmėgintas aukščiausias lygis
     assessment: vertinimas
+    submitted: submitted
   studio:
     courses_working_on: Kursai, kuriuose dalyvaujate
     completed_courses: Užbaigti kursai
@@ -560,8 +589,8 @@ lt:
     name: Vardas
     updated: Atnaujinta
     project_type: Projekto rūšis
-    help_text: 'Nuspauskite <strong>Sukurti programėlę</strong> arba <strong>Kažką nupiešti</strong> žemiau, kad sukurtumėte Žaidimo laboratorijos projektą!<br/>Bet kuriuo metu galėsite sugrįžti ir pratęsti savo projektą.'
-    need_help: Nežinote nuo ko pradėti?
+    help_text: 'Nuspausk<strong>Sukurti programėlę</strong> arba <strong>Kažką nupiešti</strong> žemiau, kad sukurtum Žaidimo laboratorijos projektą!<br/>Bet kuriuo metu galėsi sugrįžti ir pratęsti savo projektą.'
+    need_help: Išmėgink šiuos kursus, kurie tau padės sukurti naują projektą
     really_delete: Ištrinti?
     delete_yes: Taip
     delete_no: Ne
@@ -572,25 +601,29 @@ lt:
     delete_confirm_text: Jei ištrinsite projektą, jis bus visam laikui pašalintas iš projektų sąrašo. Kiekvienas žmogus, kuriam buvote nusiuntęs nuorodą į jį, nebegalės jo peržiūrėti.
     view_all: Peržiūrėti mano projektus
     remix: Remiksas
-    click_to_remix: Spustelėkite „Remiksas“ ir iškraipysite savo versiją!
+    click_to_remix: Paspausk ant „Remiksas“ ir sukurk savo versiją!
     edit_project: Redaguoti projektą
     abuse:
-      tos: "Šis projektas buvo praneštas, kad pažeidė Code.org <a href='http://code.org/tos'>Paslaugų teikimo sąlygas</a> ir negalima juo dalintis su kitais."
-      contact_us: "Jei Jūs manote, kad tai klaida, <a href='https://code.org/contact'>susisiekite su mumis.</a>"
-      go_to_code_studio: Eiti į Code Studio
+      tos: "Buvo pranešta, kad šis projektas pažeidė Code.org <a href='http://code.org/tos'>Naudojimosi sąlygas</a>, todėl juo negalima dalintis su kitais."
+      contact_us: "Jeigu manai, kad įvyko klaida, <a href='https://code.org/contact'>susisiek su mumis.</a>"
+      go_to_code_studio: Eiti į „Code Studio“
       report_abuse_form:
-        intro: Jei, naudojantis Code Studio pagamintomis programėlėmis, Jūs aptikote įžeidžiantį turinį, grasinimus, patyčias, priekabiavimą ar autorinių teisių pažeidimą jums priklausančiam turiniui, prašome užpildyti formą esančią žemiau. Į Jūsų pranešimą mes reaguosime labai rimtai, ištirsime numatyta tvarka ir imsimės atitinkamų veiksmų.
+        intro: Jei, naudojantis su „Code Studio“ sukurtomis programėlėmis, Jūs aptikote įžeidžiantį turinį, grasinimus, patyčias, priekabiavimą ar autorinių teisių pažeidimą jums priklausančiam turiniui, prašome užpildyti formą esančią žemiau. Į Jūsų pranešimą mes reaguosime labai rimtai, ištirsime numatyta tvarka ir imsimės atitinkamų veiksmų.
         validation:
-          email: Nurodykite el. pašto adresą
-          age: Nurodykite amžių
-          abuse_type: Prašome atsakyti kaip šis turinys pažeidžia Paslaugų teikimo sąlygas
-          abuse_detail: Nurodykite išsamią informacija dėl turinio, kurį Jūs panešate
-        abusive_url: Nuoroda (URL) į pranešamą turinį
+          email: Įvesk el. pašto adresą
+          age: Pasirink amžių
+          abuse_type: Pagrįsk, kaip šis turinys pažeidžia Naudojimosi sąlygas
+          abuse_detail: Prašom pateikti išsamią informaciją dėl turinio, apie kurį tu nori pranešti
+        abusive_url: Nuoroda į pranešamą turinį
         abuse_type:
-          question: 'Kaip šis turinys pažeidžia %{link_start}Paslaugų teikimo sąlygas%{link_end}?'
+          question: 'Kaip šis turinys pažeidžia %{link_start}Naudojimosi sąlygas%{link_end}?'
           harassment: Grasinimai, patyčios, priekabiavimas
           offensive: Įžeidžiantis turinys
           infringement: Autorinių teisių pažeidimas
           other: Kita
         detail: Prašome nurodyti kuo daugiau informacijos dėl turinio, kurį Jūs pranešate.
-        acknowledge: 'Pateikdami šią informaciją Jūs sutinkate, kad ji bus naudojama pagal %{link_start_privacy}Privatumo politika%{link_end} ir %{link_start_tos}Paslaugų teikimo sąlygomis%{link_end}'
+        acknowledge: 'Pateikdami šią informaciją Jūs sutinkate, kad ji bus naudojama pagal %{link_start_privacy}Privatumo politiką%{link_end} ir %{link_start_tos}Naudojimosi sąlygas%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

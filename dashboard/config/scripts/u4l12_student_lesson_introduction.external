@@ -4,10 +4,10 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 4: Lesson 12 - Indentifying People with Data
+## Unit 4: Lesson 12 - Identifying People with Data
 
 # Background
-While there are many potential benefits associated with the collection and analysis of large amounts of data, these advances pose a constant risk to our collective security and privacy. Large scale data breaches mean that the details of our personal, professional, and financial lives may be at risk. In order to prevent personal data from being linked to an individual person, personally identifying information like name, address, or identification number are often removed from publicly available data. Nevertheless, through the use of computational analysis it is often possible to “re-identify” individuals within data based on seemingly innocuous information. 
+While there are many potential benefits associated with the collection and analysis of large amounts of data, these advances pose a constant risk to our collective security and privacy. Large-scale data breaches mean that the details of our personal, professional, and financial lives may be at risk. In order to prevent personal data from being linked to an individual person, personally identifying information, such as name, address, or identification number, is often removed from publicly available data. Nevertheless, through the use of computational analysis it is often possible to “re-identify” individuals within data based on seemingly innocuous information. 
 
 # Lesson
 

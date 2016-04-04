@@ -18,6 +18,7 @@
   "fillTooltip": "поставя 1 купчина пръст",
   "finalLevel": "Поздравления! Вие решихте последния пъзел.",
   "flowerEmptyError": "Цветето, на което се намираш, няма повече нектар.",
+  "didNotCollectEverything": "Уверете се, че не оставяте невзет нектар или мед!",
   "get": "взима",
   "heightParameter": "височина",
   "holePresent": "има дупка",
@@ -81,6 +82,5 @@
   "whileTooltip": "Повтори поставените в блока действия, докато целта не бъде достигната.",
   "word": "Намерете думата",
   "yes": "Да",
-  "youSpelled": "ти образува думи",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "ти образува думи"
 }

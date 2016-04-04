@@ -1,11 +1,5 @@
 /** @file Helper for getting or creating image filters by name (so we can
  *        specify them in plain level definitions or skins) */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var GlowFilter = require('./GlowFilter');

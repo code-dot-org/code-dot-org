@@ -21,7 +21,7 @@ cs-CZ:
   twentyhours_heading: Vyzkoušej si náš kurz Úvod do Informatiky
   twentyhours_text: 'Dokončil jsi svou první Hodinu kódu? Nauč se více o informatice a programovacích pojmech v  následujícím kurzu.'
   og_title: Každé dítě si zaslouží příležitost
-  og_description: Každý student v každé škole si zaslouží možnost studovat informatiku.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Připojte se k <a href="http://hourofcode.com">Hodině kódu</a> <br/> 8. až 14. prosince 2014 <br/>'
   hoc2014_students: Studenti
   hoc2014_try: Zkuste to
@@ -58,23 +58,21 @@ cs-CZ:
   congratulations: Blahopřejeme!
   congratulations_on_completing_hoc: Gratulujeme k dokončení jedné Hodiny kódu
   congratulations_volunteer: 'Gratulujeme: teď, že jsi si zkusil Hodinu kódu, <a href="https://code.org/volunteer"> Přihlás se u dobrovolníka v učebně</a> a pomoz studentům učit se Hodinu kódu!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated Course
+  congratulations_on_completing_course1: Gratulujeme ti k dokončení kurzu 1
+  congratulations_on_completing_course2: Gratulujeme ti k dokončení kurzu 2
+  congratulations_on_completing_course3: Gratulujeme ti k dokončení kurzu 3
+  congratulations_on_completing_course4: Gratulujeme ti k dokončení kurzu 4
+  congratulations_on_completing_accelerated: Gratulujeme ti k dokončení zrychleného kurzu
   congrats_next_tutorials_title: Dále vyzkoušejte tyto výukové programy
   congrats_next_tutorials_desc: 'Vyzkoušejte tyto kratší, jednohodinovou výuku nebo zkuste <a href="%{current_path}/next"> partnerská výuka</a>.'
   get_a_certificate_of_achievement: Získej osvědčení o účasti
-  view_course: View course
+  view_course: Zobrazit kurz
+  view_unit: Zobrazit lekci
+  make_app: Vytvoř aplikaci
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -88,7 +86,8 @@ cs-CZ:
   third_party_price_varies: 'Price: Plans vary'
   third_party_price_free: 'Price: Free'
   third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
   third_party_tynker_btn_site: Visit Tynker
@@ -109,21 +108,21 @@ cs-CZ:
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
   third_party_appinv_btn_forum: App Inventor 2 Forum
   third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. With CodeHS, you can get the help that every new programmer needs to work through problems and keep learning. Our tutors are everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
+  third_party_codehs_btn_try: Intro CS Learn More for Schools
   third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Visit Codecademy
   third_party_organization: Organization
   third_party_curriculum: Kurikulum
   third_party_pricing: Pricing
-  third_party_cost_free: Free
+  third_party_cost_free: Free for students and teachers
   third_party_cost_5permonth: $5/month per class
   third_party_cost_299: $2.99/download
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
@@ -180,7 +179,7 @@ cs-CZ:
   learn_next_level: Pokračuj na další úroveň
   learn_online: Vyzkoušet další kurzy online
   learn_classes: Najdi místní kurzy
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Právě jsem dokončil #HourOfCode - vyzkoušej to! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -307,6 +306,9 @@ cs-CZ:
   homepage_slot_text_link_othercourses: Další on-line kurzy
   homepage_slot_text_title_educators: Pedagogové
   homepage_slot_text_blurb_educators: Učte žáky
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: 2. stupeň ZŠ
+  homepage_slot_text_link_high: Střední škola
   homepage_slot_text_link_k5: Kurzy pro 1. stupeň ZŠ
   homepage_slot_text_link_fullcurriculum: Prohlédněte si naše kurikulum
   homepage_slot_text_link_pd: Profesní rozvoj
@@ -510,6 +512,7 @@ cs-CZ:
   dashboard_navigation_all_sections: Studentské účty a pokrok
   dashboard_navigation_view_progress: Zobrazit průběh
   dashboard_navigation_view_text_responses: Zobrazit textové odpovědi
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Přidat studenty
   dashboard_navigation_manage_students: Správa studentů
   dashboard_navigation_lesson_plans_resources: Plány hodin a zdroje
@@ -603,10 +606,21 @@ cs-CZ:
   dashboard_progress_completed_too_many_blocks: dokončeno, až příliš mnoho bloků
   dashboard_progress_completed_perfect: dokončeno, perfektní
   dashboard_progress_furthest_level_attempted: pokus o další úroveň
+  dashboard_progress_submitted: submitted
   dashboard_stage: Fáze
   dashboard_puzzle: Hádanka
   dashboard_question: Dotaz
   dashboard_response: Odpověď
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Správně
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Neuvěřitelná statistika z loňské Hodiny kódu. Během jediného týdne:'
   stats_hoc_2013_image_alt: Statistika z Hodiny kódu 2013
   dashboard_teacher: Učitel
@@ -625,7 +639,7 @@ cs-CZ:
   dashboard_faq_k5: K-5, nejčastější dotazy
   dashboard_announcements: Oznámení
   dashboard_announce_view_all: Zobrazit vše
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
   dashboard_announce_button_text: Zjisti více
   dashboard_announce_hoc: '<b>15. října 2015</b> - Hodina kódu se blíží &mdash; každý zúčastněný organizátor obdrží dárkovou kartu na Amazon.com nebo Microsoft Windows Store jako dárek. Připojte se učebny po celém světě během prosince 7-13.'
   dashboard_announce_playlab: '<b>4. Prosince 2015</b> Hodinový kód je zde! Zkus 50 návodů pro každou dobu a zařízení. Novinka týdne: Programuj tvůj vlastní příběh a hry v nových herních laboratořích, Doba Ledová a Gumball.'
@@ -738,6 +752,12 @@ cs-CZ:
   course3_name: Kurz 3
   course4_name: Kurz 4
   accelerated_name: Zrychlený kurz
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  applab_name: App Lab
+  applab_gradelevel: Ages 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: Věk 4+
   codeintl_gradelevel: Stáří 4-104
   thinkersmithspanish_gradelevel: Por todos

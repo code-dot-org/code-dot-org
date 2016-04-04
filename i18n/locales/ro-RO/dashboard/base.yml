@@ -24,6 +24,8 @@ ro:
   hello: Salutare lume
   welcome_back: 'Bine ai revenit, %{name}'
   submit: Trimite
+  unsubmit: Retrage
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Adaugă un profesor:'
@@ -220,10 +222,10 @@ ro:
       finished_hoc: Am terminat Ora mea de Programare
       sign_in_to_save: Loghează-te pentru a salva progresul
       free_play:
-        playlab: Creează o aplicație
+        playlab: Creare aplicație
         artist: Desenează ceva
-        calculate: Calculate Something
-        applab: Creează o aplicație
+        calculate: Calculate something
+        applab: Creare aplicație
     user:
       classroom: Pagina de Start a Profesorilor
       district_dashboard: Tabel de instrumente pe zonă districtuală
@@ -320,6 +322,7 @@ ro:
     heading_hoc2014: '<h2>Ora de Programare pentru</h2><h1>toate vârstele</h1>'
     heading_elementary: '<h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>'
     heading_apps: '<h2>Distracţie pentru</h2><h1>Toată lumea</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>'
     your_gallery: Galerie
     no_primary_course: Încearcă un curs cu Atelierul de programare
@@ -414,6 +417,12 @@ ro:
       current: Niveluri curente
       unused: Niveluri neutilizate
   upsell:
+    applab:
+      title: Laboratului Aplicației
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Labirint Clasic
       body: Încearcă bazele programarii. Milioane de oameni au încercat.
@@ -455,10 +464,10 @@ ro:
   landing:
     prerelease: "Acest curs este în <span class='betatext'>versiune beta</span>. Asta înseamnă că aceasta nu este versiunea finală a cursului şi el poate fi revizuit în momentul în care se primește feedback şi se fac îmbunătățiri."
     prerelease_hoc2014: "Acest tutorial este în <span class='betatext'> versiune beta</span>.  Acesta face obiectul revizuirii pe măsură ce se primește feedback şi sunt făcute îmbunătăţiri."
-    feedback: Trimite feedback
     report_bug: Raporteazã eroare
     support: Obţine ajutor
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Răspuns incorect
     wrong_body: 'Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!'
@@ -466,6 +475,23 @@ ro:
     correct_body: Acela este răspunsul corect.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Mulţumesc
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Mulţumesc
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Mulţumesc
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mulţumesc
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Mulţumesc
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mulţumesc
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Soluţie incorectă
     wrong_body: 'Soluţia introdusă nu este corectă.  Te rugăm să încerci din nou!'
@@ -483,6 +509,8 @@ ro:
     placeholder: Completează răspunsul tău aici
     open_response_title: Mulţumim
     open_response_body: Îți mulţumim pentru răspuns!
+    correct_title: Corect
+    correct_body: Acela este răspunsul corect.
   dialog:
     ok: OK
     startover_title: Ești sigur că dorești să reîncepi?
@@ -536,6 +564,7 @@ ro:
     completed_perfect: finalizat, perfect
     furthest_level_attempted: cel mai îndepărtat nivel încercat
     assessment: evaluare
+    submitted: submitted
   studio:
     courses_working_on: Cursurile pe care le studiezi
     completed_courses: Cursuri terminate
@@ -592,3 +621,7 @@ ro:
           other: Alte
         detail: Vă rugăm să oferiți cât mai multe detalii posibil cu privire la conţinutul pe care îl raportați.
         acknowledge: 'Prin trimiterea acestor informaţii, sunteţi de acord că acesta vor fi gestionate în conformitate cu termenii %{link_start_privacy}Politicii de confidențialitate%{link_end} și %{link_start_tos}Termenii și condițiile de utilizare a serviciilor%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

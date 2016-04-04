@@ -8,10 +8,9 @@ module CookieHelpers
     end
   end
 
-
   def decrypt_cookie(cookies)
     return nil unless cookies
-    session_cookie = cookies.select {|cookie| cookie[:name] == '_learn_session_test'}.first
+    session_cookie = cookies.find {|cookie| cookie[:name] == '_learn_session_test'}
     return nil unless session_cookie
 
     message = CGI.unescape(session_cookie[:value])

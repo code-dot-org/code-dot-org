@@ -1,10 +1,4 @@
 /* global define */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var savedAmd;
@@ -265,14 +259,14 @@ exports.isInfiniteRecursionError = function (err) {
   }
 
   // Firefox
-  /* jshint ignore:start */
+  /*eslint-disable */
   // Linter doesn't like our use of InternalError, even though we gate on its
   // existence.
   if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
       err.message === 'too much recursion') {
     return true;
   }
-  /* jshint ignore:end */
+  /*eslint-enable */
 
   // IE
   if (err instanceof Error &&
@@ -321,7 +315,7 @@ exports.browserSupportsCssMedia = function () {
     try {
       if (rules.length > 0) {
         // see if we can access media
-        var media = rules[0].media; // jshint ignore:line
+        var media = rules[0].media;
       }
     } catch (e) {
       return false;
@@ -337,28 +331,38 @@ exports.browserSupportsCssMedia = function () {
  */
 exports.unescapeText = function(text) {
   var cleanedText = text;
-  cleanedText = cleanedText.replace(/<div>/gi, '\n'); // Divs generate newlines
-  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
 
-  // This next step requires some explanation
+  // Handling of line breaks:
   // In multiline text it's possible for the first line to render wrapped or unwrapped.
   //     Line 1
   //     Line 2
-  //   Can render as either of:
+  //   Can render as any of:
   //     Line 1<div>Line 2</div>
+  //     Line 1<br><div>Line 2</div>
   //     <div>Line 1</div><div>Line 2</div>
   //
-  // But leading blank lines will always render wrapped and should be preserved
+  // Most blank lines are rendered as <div><br></div>
+  //     Line 1
+  //
+  //     Line 3
+  //   Can render as any of:
+  //     Line 1<div><br></div><div>Line 3</div>
+  //     Line 1<br><div><br></div><div>Line 3</div>
+  //     <div>Line 1</div><div><br></div><div>Line 3</div>
+  //
+  // Leading blank lines render wrapped or as placeholder breaks and should be preserved
   //
   //     Line 2
-  //     Line 3
-  //   Renders as
-  //    <div><br></div><div>Line 2</div><div>Line 3</div>
-  //
-  // To handle this behavior we strip leading newlines UNLESS they are followed
-  // by another newline, using a negative lookahead (?!)
-  cleanedText = cleanedText.replace(/^\n(?!\n)/, ''); // Strip leading nondoubled newline
+  //   Renders as any of:
+  //    <br><div>Line 2</div>
+  //    <div><br></div><div>Line 2</div>
 
+  // First, convert every <div> tag that isn't at the very beginning of the string
+  // to a newline.  This avoids generating an incorrect blank line at the start
+  // if the first line is wrapped in a <div>.
+  cleanedText = cleanedText.replace(/(?!^)<div>/gi, '\n');
+
+  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
   cleanedText = cleanedText.replace(/&nbsp;/gi, ' '); // Unescape nonbreaking spaces
   cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
   cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
@@ -376,14 +380,45 @@ exports.escapeText = function (text) {
   escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
   escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
   escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
-  escapedText = escapedText.replace(/  /g,' &nbsp;'); // Escape doubled spaces
+  escapedText = escapedText.replace(/ {2}/g,' &nbsp;'); // Escape doubled spaces
 
   // Now wrap each line except the first line in a <div>,
   // replacing blank lines with <div><br><div>
   var lines = escapedText.split('\n');
-  var returnValue = lines[0] + lines.slice(1).map(function (line) {
-      return '<div>' + (line.length ? line : '<br>') + '</div>';
-    }).join('');
+  var first = lines[0];
+  var rest = lines.slice(1);
 
-  return returnValue;
+  // If first line is blank and not the only line, convert it to a <br> tag:
+  if (first.length === 0 && lines.length > 1) {
+    first = '<br>';
+  }
+
+  // Wrap the rest of the lines
+  return first + rest.map(function (line) {
+    return '<div>' + (line.length ? line : '<br>') + '</div>';
+  }).join('');
+};
+
+/**
+ * Converts degrees into radians.
+ *
+ * @param degrees - The degrees to convert to radians
+ * @return `degrees` converted to radians
+ */
+exports.degreesToRadians = function (degrees) {
+    return degrees * (Math.PI / 180);
+};
+
+/**
+ * Simple wrapper around localStorage.setItem that catches any exceptions (for
+ * example when we call setItem in Safari's private mode)
+ * @return {boolean} True if we set successfully
+ */
+exports.trySetLocalStorage = function (item, value) {
+  try {
+    localStorage.setItem(item, value);
+    return true;
+  } catch (e) {
+    return false;
+  }
 };

@@ -15,6 +15,7 @@
 #  type                     :string(255)
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
@@ -23,6 +24,8 @@
 
 require 'nokogiri'
 class Blockly < Level
+  include SolutionBlocks
+
   serialized_attrs %w(
     level_url
     skin
@@ -30,6 +33,7 @@ class Blockly < Level
     toolbox_blocks
     required_blocks
     recommended_blocks
+    solution_blocks
     ani_gif_url
     is_k1
     skip_instructions_popup
@@ -62,13 +66,15 @@ class Blockly < Level
     lock_zero_param_functions
   )
 
+  before_save :update_ideal_level_source
+
   before_validation {
     self.scrollbars = nil if scrollbars == 'nil'
   }
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
-    %w(start_blocks toolbox_blocks required_blocks recommended_blocks)
+    %w(start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
   end
 
   def to_xml(options={})

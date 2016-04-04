@@ -56,7 +56,7 @@ eu:
       2-3 Artist Loops 6_instruction: Gehitu mugimendu berri bat eta biraketa berri bat begiztaren barruan eta aztertu nola aldatzen den zure diseinua.
       2-3 Artist Loops 7_instruction: Era guztietako poligonoak egiteko erabil ditzakegu begiztak. Sortu dezakezu erronbo bat hexagonoaren barruan?
       2-3 Artist Loops 8_instruction: Jarri bi osagaiak begizta batean.
-      2-3 Artist Loops 9_instruction: "Elementu berdinekin egingo ditugu errepikapenak, baina orain distantzia txiki bat jarriko dugu beraien artean.\r\nLehengo kodea erabili, baina urrats bat aurrera egin kanpoko begizta bukatu ondoren."
+      2-3 Artist Loops 9_instruction: "Elementu berdinekin egingo ditugu errepikapenak, baina orain distantzia txiki bat jarriko dugu beraien artean.\\r\nLehengo kodea erabili, baina urrats bat aurrera egin kanpoko begizta bukatu ondoren."
       2-3 Artist Loops New 1_instruction: Marraztu dezagun robot honen burua! Egingo duzu 100 pixeleko aldea duen karratu bat?
       2-3 Artist Loops New 10_instruction: Orain konekta ditzagun V mordo bat elkarrekin, begizta batean denak marraztuta.
       2-3 Artist Loops New 11_instruction: 'Oraingoan marraztu dezagun hori 24 aldiz. Gehitu kode honi 30 graduko biraketa bat eta jarri dena "errepikatu" bloke batean.'
@@ -72,7 +72,7 @@ eu:
       2-3 Artist Match Rho Pic_instruction: 'Elkartu: bukatu falta de kodea.'
       2-3 Artist Match Sq Pic_instruction: 'Elkartu: osatu falta den kodea'
       2-3 Artist Match Tri pic_instruction: 'Elkartu: bete falta den kodea.'
-      2-3 Artist Nested Loops 1_instruction: "Jadanik erabili dituzu begiztak formak irudikatzeko, baina ba al zenekien begizta bat beste begizta baten barnean jarri dezakezula?\r Sar ezazu 3 aldiz begizta batean kode honi dagokion bloke osoa patroia marrazteko."
+      2-3 Artist Nested Loops 1_instruction: "Jadanik erabili dituzu begiztak formak irudikatzeko, baina ba al zenekien begizta bat beste begizta baten barnean jarri dezakezula?\\r Sar ezazu 3 aldiz begizta batean kode honi dagokion bloke osoa patroia marrazteko."
       2-3 Artist Nested Loops 10_instruction: Errepikatu kode hau 12 aldiz patroia osatzeko.
       2-3 Artist Nested Loops 11_instruction: Errepikatu kode hau 4 aldiz patroia osatzeko, biratu 90 gradu zirkulu bakoitzaren ondoren.
       2-3 Artist Nested Loops 12_instruction: Kurbak osatzeko sartu kode zati hau begizta batean 12 aldiz errepikatuz.
@@ -88,7 +88,7 @@ eu:
       2-3 Artist Nested Loops 9_instruction: Irudi hau amaitzeko lore bat gehituko dugu. Errepikatu diamantea 12 aldiz zure lorea marrazteko.
       2-3 Artist Nested Loops Free Play_instruction: Jolas askea, marraztu zerbait zoragarria habiatutako begiztekin.
       2-3 Bee Conditionals 1_instruction: Kaixo! Erle bat naiz. Lagundu nazazu loretik nektarra lortzen.
-      2-3 Bee Conditionals 10_instruction: "Lore moreek 1 edo 0 nektar izan dezakete. Kontuz ibili nektarra ez jasotzeko lore more batetik, bat ere ez badu.\r\n"
+      2-3 Bee Conditionals 10_instruction: "Lore moreek 1 edo 0 nektar izan dezakete. Kontuz ibili nektarra ez jasotzeko lore more batetik, bat ere ez badu.\\r\n"
       2-3 Bee Conditionals 11_instruction: Bildu nektarra nektarra duten loreetatik.
       2-3 Bee Conditionals 12_instruction: Erabili begizta bat lore hauek guztiek nektarra duten egiaztatu eta jasotzeko.
       2-3 Bee Conditionals 13_instruction: 'Bildu nektarra eta eztia egin. Pista: zer gertatzen da "baldin nektar" baldintza erabiltzen baduzu lore gorri batean? Begizta batekin osatu dezakezu hau?'
@@ -221,6 +221,11 @@ eu:
       4-5 Artist For Loops 13_instruction: 'Diseinu hau "for" begiztarik gabe egindakoa da eta bloke gehiegi ari da erabiltzen! Erabili "for" bloke bat espirala osatzeko. Pista: azken zuzenak 250 pixeleko luzera dauka.'
       4-5 Artist For Loops 14_instruction: 'Norbaitek kodea hasi du, baina modu arinagoren bat egon behar dela konturatu da! Erabili "for" bloke bat blokeak ordezteko eta triangelu formako espirala osatzeko. (Pista: azken zuzenak 300 pixeleko luzera du.)'
       4-5 Artist For Loops 15_instruction: 'Norbaitek kodea hasi du, baina modu arinagoren bat egon behar dela konturatu da! Erabili "for" bloke bat blokeak ordezteko eta hexagono formako espirala osatzeko. (Pista: azken zuzenak 200 pixeleko luzera du.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: 'Nola zenbatu dezakegu 1etik 50era? Editatu "for" blokea.'
       4-5 Artist For Loops 4_instruction: 'Osatu "for" blokea" 1etik 10era zenbatzeko, banaka.'
       4-5 Artist For Loops 6_instruction: '50, 60, 70, 80 eta 90 pixeleko aldeak dituzten karratuak irudikatu. "Marraztu karratua" funtzioa erabili beharko duzu, bost aldiz.'
@@ -337,7 +342,6 @@ eu:
       4-5 Maze 9_instruction: 'Sor ezazu begizta bat "errepikatu arte" blokearekin.'
       4-5 Maze Assessment 1_instruction: 'Ebaluazioa: iritsi ekilorera.'
       4-5 Maze Conditionals 1_instruction: 'Zonbia ekiloreraino eramateko "errepikatu arte" blokea erabi ezazu.'
-      4-5 Maze Conditionals 10_instruction: 3 bloke hain justu gehitu al ditzakezu niri labirinto konplexuago bat ebazten laguntzeko? Ondo egiten baduzu, kurbadun edozein bidetik pasa ahalko dut, luzera edozein dela ere.
       4-5 Maze Conditionals 2_instruction: 'Zonbia ekiloreraino eramateko "errepikatu arte" blokea erabi ezazu.'
       4-5 Maze Conditionals 3_instruction: '"baldin" blokea erabil ezazu, noiz biratu niri erabakitzen uzteko. Iradokizuna: bloke bat gehiago soilik behar duzu, baina ikasi nola konfiguratzen dugun hurrengoan zure kasa egiteko gai izan zaitezen.'
       4-5 Maze Conditionals 4_instruction: 'Ongi, hau azkeneko ariketa bezalakoa da, baina "baldin" blokea eta "errepikatu" blokea batera nola erabili zenituen gogoratu behar duzu.'
@@ -352,7 +356,7 @@ eu:
       4-5 Nested Loops 11_instruction: Marraztu ditzakezu espaloi honetako 10 karratuak begizta kabiatu bat erabiliz? Karratu bakoitza 30 pixelekoa da.
       4-5 Nested Loops 12_instruction: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat erabiliz?
       4-5 Nested Loops 2_instruction: 'Orain sartu begizta hau beste begizta baten barnean 10 triangelu marrazteko. Honi begizta kabiatua deitzen zaio. Pista: 10 triangeluek 360 graduko biraketa osatzen dute.  '
-      4-5 Nested Loops 3_instruction: "Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r\n"
+      4-5 Nested Loops 3_instruction: "Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\\r\n"
       4-5 Nested Loops 5_instruction: Errepikatu emandako kodea haize-errota bat sortzeko.
       4-5 Nested Loops 6_instruction: Marraztu dezakezu hexagono bat triangeluaren kodea errepikatuz?
       4-5 Nested Loops 7_instruction: 'Errepikatu diseinu hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)'
@@ -396,6 +400,11 @@ eu:
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
       App Lab test_instruction: proba
+      Applab allthethings onRecordEvent_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
@@ -417,7 +426,7 @@ eu:
         Now nest this loop inside another loop
         to draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
         complete a 360 degree rotation.  
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\r\n"
+      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\\r\n"
       Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
       Artist - Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the
@@ -701,7 +710,7 @@ eu:
         function called cube - this function should take in a Number and return that
         number to the power of 3. Make sure to write two example cases! When you're
         done, use your new function to calculate cube(7).
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function sales which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -714,7 +723,7 @@ eu:
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
-      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Calc Rocket 1_instruction: |
         In the last puzzle you wrote a contract for the
         function rocket-height that states it has a range of Number, domain of Number,
@@ -854,9 +863,9 @@ eu:
       Course 2 Maze Loops 1_instruction: Zerriraino eraman nazakezu 5 bloke erabiliz?
       Course 4 2_instruction: Erleak orain nektarra baino ez du nahi. Gogoratu, objektu guztiak ez dira loreak, beraz egiaztatu nektarra loreetatik soilik biltzen duzula.
       Course 4 Artist 1_instruction: 'Lagundu iezadazu kutxa bat marrazten. (Lerro bakoitzak 200 pixeleko luzera dauka) '
-      Course 4 Artist 10_instruction: "Egin klik hemen pistak berriro ikusteko!\r\n\r\nHemen duzu forma interesgarri batentzako kodea. Zer gertatzen da errepikatzen baduzu? Kontuan izan forma honetan biraketek 420 gradu batzen dituztela eta, ondorioz, zure artistak marrazkia amaitzen duenean ez dela hasierako noranzkoan geldituko. Noranzko berria hasierakoaren 60 grado eskuinera izango da."
+      Course 4 Artist 10_instruction: "Egin klik hemen pistak berriro ikusteko!\\r\n\\r\nHemen duzu forma interesgarri batentzako kodea. Zer gertatzen da errepikatzen baduzu? Kontuan izan forma honetan biraketek 420 gradu batzen dituztela eta, ondorioz, zure artistak marrazkia amaitzen duenean ez dela hasierako noranzkoan geldituko. Noranzko berria hasierakoaren 60 grado eskuinera izango da."
       Course 4 Artist 11_instruction: Eta orain erronka bat! Hemen diseinu bat aurkezten dugu, zuk jadanik ikusita dituzun blokeak bakarrik erabiltzen dituena. Pentsa al dezakezu nola berregin daitekeen? proba eta errorea teknika aplikatzeko libre zara. Lehen aldian borobil-borobil egitea ez da espero. Iradokizun gehiago ikusi nahi? Hemen klikatu!
-      Course 4 Artist 12_instruction: "Inspiraziorako diseinuan bigarren begirada bat nahi al duzu edo iradokizunak? hemen klikatu!\r\n\r\nBestela, diseinu osoa zure kasa egin ezazu!"
+      Course 4 Artist 12_instruction: "Inspiraziorako diseinuan bigarren begirada bat nahi al duzu edo iradokizunak? hemen klikatu!\\r\n\\r\nBestela, diseinu osoa zure kasa egin ezazu!"
       Course 4 Artist 13_instruction: Oraindik jolasean? hemen canvas edo oihal zuria duzu, non nahi duzun guztia diseina dezakezun!
       Course 4 Artist 2_instruction: Honako kodearekin begizta sor al dezakezu laukia grisean marraz dezan?
       Course 4 Artist 20_instruction: Oraindik jolasean? hemen canvas edo oihal zuria duzu, non nahi duzun guztia sor dezakezun!
@@ -868,10 +877,10 @@ eu:
         Iradokizuna: 360 graduko biraketan 3 triangelu daude... zenbat aldiz dago 3 zenbakia 360-an?
       Course 4 Artist 7_instruction: 'Orain begizta hau beste begizta baten barnean sar ezazu 10 triangelu marrazteko. Honi habiaratutako begizta esaten zaio. Iradokizuna: 10 triangelu horiek guztiak 360 graduko biraketa osatzen dute.  '
       Course 4 Artist 8_instruction: Eguzki hau marraz ezazu kode bloke honen gainean hainbat aldiz begizta burutuz.
-      Course 4 Artist 8a_instruction: "Irudi hau gogoratzen? Oraingoan hori eraikitzen utziko dizugu baina hasteko inolako blokerik eman gabe!\r\nIradokizuna: 360 graduko biraketan 3 triangelu daude... zenbat aldiz dago 3 zenbakia 360-an?"
+      Course 4 Artist 8a_instruction: "Irudi hau gogoratzen? Oraingoan hori eraikitzen utziko dizugu baina hasteko inolako blokerik eman gabe!\\r\nIradokizuna: 360 graduko biraketan 3 triangelu daude... zenbat aldiz dago 3 zenbakia 360-an?"
       Course 4 Artist 9_instruction: 'Diseinu hau 10 aldiko begiztan sartu, eta marrazten den forma bakoitzaren ondoren biraketa egiten dela ziurtatu. Hona hemen iradokizuna biraketa zenbatekoa izan behar den jakiteko: zenbat da 360 zati 10?'
-      Course 4 Artist Binary 1_instruction: "Hona hemen funtzio bat, 1-z eta 0-z osatutako kate bitarra hartzen duena eta zenbaki horiek ezkerretik eskuinera eta goitik behera jarraitzeko agindua ematen diona artistari. Artistak, 1 ikusten duenean, laukiak beteko ditu, eta 0 ikusten duenean, laukia ez ikusiarena egingo du.\r\n\r\nKode hau abiarazi patroi hau marrazteko artistak bitarra nola erabiltzen duen ikusteko."
-      Course 4 Artist Binary 1a_instruction: "Hona hemen funtzio bat, 1-z eta 0-z osatutako kate bitarra hartzen duena eta zenbaki horiek ezkerretik eskuinera eta goitik behera jarraitzeko agindua ematen diona artistari. Artistak, 1 ikusten duenean, laukiak beteko ditu, eta 0 ikusten duenean, laukia ez ikusiarena egingo du.\r\n\r\nKode hau abiarazi patroi hau marrazteko artistak bitarra nola erabiltzen duen ikusteko."
+      Course 4 Artist Binary 1_instruction: "Hona hemen funtzio bat, 1-z eta 0-z osatutako kate bitarra hartzen duena eta zenbaki horiek ezkerretik eskuinera eta goitik behera jarraitzeko agindua ematen diona artistari. Artistak, 1 ikusten duenean, laukiak beteko ditu, eta 0 ikusten duenean, laukia ez ikusiarena egingo du.\\r\n\\r\nKode hau abiarazi patroi hau marrazteko artistak bitarra nola erabiltzen duen ikusteko."
+      Course 4 Artist Binary 1a_instruction: "Hona hemen funtzio bat, 1-z eta 0-z osatutako kate bitarra hartzen duena eta zenbaki horiek ezkerretik eskuinera eta goitik behera jarraitzeko agindua ematen diona artistari. Artistak, 1 ikusten duenean, laukiak beteko ditu, eta 0 ikusten duenean, laukia ez ikusiarena egingo du.\\r\n\\r\nKode hau abiarazi patroi hau marrazteko artistak bitarra nola erabiltzen duen ikusteko."
       Course 4 Artist Binary 2_instruction: Honako kate edo segida bitarretik zeinen gainean egin daiteke 8 aldiko begizta irudi hau marrazteko?
       Course 4 Artist Binary 3_instruction: Patroi hau marraz al dezakezu hiru digituko kate edo segida bitarraren gainean begizta burutuz?
       Course 4 Artist Binary 4_instruction: Kate edo segida bitar bakoitzak irudi honetako lerro bat adierazten du. Berrantola al ditzakezu aurpegi kopetilun baten ordez aurpegi irribarretsua marraz dezan?
@@ -879,21 +888,21 @@ eu:
       Course 4 Artist Binary 6_instruction: Zein da errepika dezakezun kate edo segida bitar motzena honako irudia marrazteko?
       Course 4 Artist Binary 7_instruction: Honako marrazkia buka ezazu.
       Course 4 Artist Binary Free Play 2_instruction: 'Joku askea: hona hemen canvas edo oihal zuria, beraren gainean marraz dezazun. Ondo pasa!'
-      Course 4 Artist Binary Free Play 2a_instruction: "Hona hemen marrazteko bereizmen handiagoko canvas edo oihala - 16 pixel bider 16 pixel \r\n\r\nBitekin kreatiboak izaten hasten garenean zer gertatzen den ikusten?"
+      Course 4 Artist Binary Free Play 2a_instruction: "Hona hemen marrazteko bereizmen handiagoko canvas edo oihala - 16 pixel bider 16 pixel \\r\n\\r\nBitekin kreatiboak izaten hasten garenean zer gertatzen den ikusten?"
       Course 4 Artist Binary Free Play 2b_instruction: Hemen klikatu iradokizunak ikusteko.
       Course 4 Artist Binary Free Play_instruction: 'Joku Askea: gustukoa duzun edozein gauza marraztu bitarrekin!'
-      Course 4 Artist Binary pre1_instruction: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \r \r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
-      Course 4 Artist Binary ryan_instruction: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \r \r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
+      Course 4 Artist Binary pre1_instruction: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
+      Course 4 Artist Binary ryan_instruction: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
       Course 4 Artist For  Functions 10_instruction: 'Goazen aurrera pauso bat ematea. Marraz dezakezu Izar bat "Marraztu karratuko marra" funtzioa erabiliz? Zorte on!'
       Course 4 Artist For  Functions 11_instruction: 'Goazen aurrera pauso bat ematea. Marraz dezakezu Izar bat "Marraztu karratuko marra" funtzioa erabiliz? Zorte on!'
       Course 4 Artist For Loops 1_instruction: 'Marraztu 50 pixeleko zabalera duen triangelu hau. Pista: erabili errepikatu bloke bat.'
       Course 4 Artist For Loops 10_instruction: Joko librearen garaia! Dibertitu nahi duzuna marrazten, erabiltzen ikasi duzun blokeen bidez
       Course 4 Artist For Loops 11_instruction: 'Gogoratzen duzu 6. atalean erabili genuen aldagaia forma bateko alde kopurua kontrolatzeko? Orain berdina egingo dugu "kontagailua" aldagaiarekin. Patroi hau triangelu batekin hasten da eta alde bat gehitzen zaio banan-banan dekagono bat (10 alde) osatu arte. Alde bakoitzak 100 pixeleko luzera izan behar du. Pista: 360 gradu forma batek duen alde kopuruarekin zatituta, biratu beharreko gradu kopurua lortuko duzu.'
-      Course 4 Artist For Loops 11a_instruction: "Jarri ditzagun denak elkarrekin! \"for begiztak\" eta \"kontagailua\"ri buruzko zure jakintzarekin, forma bakoitzak aurrekoak baina bi alde gehiago dituen marrazki hau sortu. Ziurtatu alde bakoitza poligonoaren alde kopurua baino hamar aldiz luzeagoa dela. \r\r Kodearen oso zati txikia eman zaizu."
+      Course 4 Artist For Loops 11a_instruction: "Jarri ditzagun denak elkarrekin! \"for begiztak\" eta \"kontagailua\"ri buruzko zure jakintzarekin, forma bakoitzak aurrekoak baina bi alde gehiago dituen marrazki hau sortu. Ziurtatu alde bakoitza poligonoaren alde kopurua baino hamar aldiz luzeagoa dela. \\r\\r Kodearen oso zati txikia eman zaizu."
       Course 4 Artist For Loops 12_instruction: 'Hori polita izan da, baina orain irudi bakoitza azkenekoaren ondoan marraztea nahiko nuke. Oraingo honetan alde bakoitzak 20 pixel ditu. Erabili jauzi blokea 40 pixel aurrera jauzi egiteko forma bakoitzaren ondoren. '
       Course 4 Artist For Loops 13_instruction: 'Hmmm, forma horiek gero eta handiagoak dira! Ez al dugu jadanik ebatzi arazo hau aldagaiak erabiliz? Nola erabili genezake "kontagailua" aldagaia aldeak txikiagoak egiteko alde kopurua handiagoa den heinean? Aurrera distantzia finko bat mugitu beharrean, saiatu (100/kontagailua) pixel aurrera mugituz.'
       Course 4 Artist For Loops 14_instruction: Forma bat egiteko normalean baino piskat gehiago edo gutxiago biratzen baduzu, efektu egituratuagoa lortuko duzu. Saia zaitez azken mailako kodea erabiltzen baina, oraingoan 89 grado biratu, espiral karratu txirikordatu hau sortzeko.
-      Course 4 Artist For Loops 15_instruction: "Joko librea: Saia zure gustoko irudiak marrazten For Begiztak erabiliz. Zenbait aldagai orokor sortu ditugu, erabil ditzazun.\r\n\r\nKontuan izan orain tresna-kutxan hainbat bloke dituzula eta, berriro, kategoriatan antolatu behar ditugula. Klikatu inguruan maila honetan erabil ditzakezun bloke guztiak ikusteko."
+      Course 4 Artist For Loops 15_instruction: "Joko librea: Saia zure gustoko irudiak marrazten For Begiztak erabiliz. Zenbait aldagai orokor sortu ditugu, erabil ditzazun.\\r\n\\r\nKontuan izan orain tresna-kutxan hainbat bloke dituzula eta, berriro, kategoriatan antolatu behar ditugula. Klikatu inguruan maila honetan erabil ditzakezun bloke guztiak ikusteko."
       Course 4 Artist For Loops 2_instruction: 'Triangelua marrazten duen kodea 50etik 100era hamarnaka kontatzen duen begizta baten barruan jarri dut. OHARRA: Ziurtatu kodea begiratzen duzula "Hasi" botoia sakatu aurretik.'
       Course 4 Artist For Loops 3_instruction: |
         Erabili azken ariketa hau osatzeko erreferentzia gisa. Triangelu txikienak 20 pixeleko aldeak ditu, handienak 200 pixelekoak, eta triangelu bakoitza aurrekoa baino 20 pixel handiagoa da.
@@ -903,17 +912,17 @@ eu:
       Course 4 Artist For Loops 6_instruction: Joko librea! Saia zaitez begizta bat erabiltzen zuk zeuk diseinatutako patroi-forma hazkorra marrazteko.
       Course 4 Artist For Loops 6a_instruction: Egin hiru aldaketatxo azken mailako kodean hau lortzeko!
       Course 4 Artist For Loops 7_instruction: 'Ze gertatzen da algoritmo honetatik "Errepikatu 3" kentzen badugu, "mugitu" eta "biratu" blokeak bigiztaren barnean mantenduz? espiral moduko triangelu honetan, alde bakoitzaren luzera azkenekoarena baino 20 pixel handiagoa da.'
-      Course 4 Artist For Loops 8_instruction: "Azken irudiko kodeari aldaketa txiki bat eginez  marrazki hau sor dezakezu. Asma dezakezu zein den aldaketa?\r\n\r\nPista: zerbait ezabatu behar duzu!"
+      Course 4 Artist For Loops 8_instruction: "Azken irudiko kodeari aldaketa txiki bat eginez  marrazki hau sor dezakezu. Asma dezakezu zein den aldaketa?\\r\n\\r\nPista: zerbait ezabatu behar duzu!"
       Course 4 Artist For Loops 8a_instruction: Azken irudiko kodeari aldaketa txiki bat eginez marrazki hau sor dezakezu. Asma dezakezu zein den aldaketa?
       Course 4 Artist For Loops 9_instruction: Espiral bat egin dezakezu? Mugitu aurrera 1 pixeletik 75raino, banaka.
-      Course 4 Artist For Loops Challenge_instruction: "Asma dezakezu nola erabili ikasi duzun guztia irudi hau sortzeko?\r\n\r\nPista txiki bat behar duzu? egin klik hemen."
-      Course 4 Artist For Loops inspire_instruction: "Joko askeko sormena: Honelako patroi bat egiteko behar duzun guztia ikasi duzu iada! Irudi honek sormena pizten badizu, saia zaitez antzeko zerbait egiten. Bestela, sor ezazu zerbait zure kabuz.\r\n\r\nPista bat behar duzu? egin klik hemen."
+      Course 4 Artist For Loops Challenge_instruction: "Asma dezakezu nola erabili ikasi duzun guztia irudi hau sortzeko?\\r\n\\r\nPista txiki bat behar duzu? egin klik hemen."
+      Course 4 Artist For Loops inspire_instruction: "Joko askeko sormena: Honelako patroi bat egiteko behar duzun guztia ikasi duzu iada! Irudi honek sormena pizten badizu, saia zaitez antzeko zerbait egiten. Bestela, sor ezazu zerbait zure kabuz.\\r\n\\r\nPista bat behar duzu? egin klik hemen."
       Course 4 Artist Functions 1_instruction: Marraztu al dezakezu 100 pixeleko luzera duen karratua begizta bat erabiliz?
       Course 4 Artist Functions 10_instruction: Ze bloke gehitu behar duzu triangelua karratuaren gainean jartzeko?
       Course 4 Artist Functions 11_instruction: 'Begira kubo bat marrazten duen kode hau - bihur al dezakezu "Marraztu kubo bat" izeneko funtzioan'
       Course 4 Artist Functions 12.1_instruction: 'Sor dezagun "marraztu oktogono bat 20" izeneko funtzioa, alde bakoitza 20 pixelekoa izango duen oktogonoa marrazteko.'
       Course 4 Artist Functions 12_instruction: Errepikatu karratu funtzioa lerro bat marrazteko
-      Course 4 Artist Functions 13.1_instruction: "Orain, patroi hau bukatzeko, egin dezagun \"jauzi gora eta eskuinaldera\" izeneko funtzio bat, artista marraztu berri duzun oktogonoaren goiko eskuinaldera mugituko duena.\r\n\r\nIradokizuna: Goiko eta eskuineko erpinera joateko, saiatu oktogonoaren 3/8 den patroi batean jauzi egiten."
+      Course 4 Artist Functions 13.1_instruction: "Orain, patroi hau bukatzeko, egin dezagun \"jauzi gora eta eskuinaldera\" izeneko funtzio bat, artista marraztu berri duzun oktogonoaren goiko eskuinaldera mugituko duena.\\r\n\\r\nIradokizuna: Goiko eta eskuineko erpinera joateko, saiatu oktogonoaren 3/8 den patroi batean jauzi egiten."
       Course 4 Artist Functions 13_instruction: '"marraztu karratu errenkada" izeneko funtzio berri bat dugu. Begiratu lasai funtzio blokeren barrualdea, nola eraiki dugun ikusteko. Klikatu "Hasi" hurrengo puzlerako prest zaudenean.'
       Course 4 Artist Functions 14.1_instruction: 'Orain, patroi hau bukatzeko, egin dezagun "jauzi gora eta eskuinaldera" izeneko funtzio bat, artista marraztu berri duzun oktogonoaren goiko eskuinaldera mugituko duena.'
       Course 4 Artist Functions 14_instruction: 'Oso ondo ari zara! Erabili "Marraztu karratu lerro bat" funtzioa Karratu bat marrazteko. Gogoratu karratu bakoitza 40 pixel luze dela.'
@@ -934,7 +943,7 @@ eu:
       Course 4 Artist Functions challenge_instruction: Klikatu hemen iradokizunak berriz ikusteko.
       Course 4 Artist Functions Inspiration_instruction: Klikatu hemen iradokizunak berriz ikusteko.
       Course 4 Artist Functions inspire_instruction: Hemen klikatu ezazu irudi inspiragarria berriro ikusteko.
-      Course 4 Artist Inspire_instruction: "Inspiraziorako diseinuan bigarren begirada bat nahi al duzu edo iradokizunak? hemen klikatu!\r \r Bestela, diseinu osoa zure kasa egin ezazu!"
+      Course 4 Artist Inspire_instruction: "Inspiraziorako diseinuan bigarren begirada bat nahi al duzu edo iradokizunak? hemen klikatu!\\r \\r Bestela, diseinu osoa zure kasa egin ezazu!"
       Course 4 Artist Params 1_instruction: Edita dezagun funtzio bat, 50 pixeleko aldeak dituen karratu bat marrazten duena
       Course 4 Artist Params 10_instruction: 'Funtzioen barrenetik beste funtzio batzuk deitu ditzakezu! Zure "forma" funtzioa oinarri moduan erabiliz, 3 etxe irudi edo forma sortu, bakoitza aurrekoa baino 20 pixel luzeagoa eta 50 pixeleko luzerarekin hasiz. Kontagailu begizta bat erabiltzea lagungarria izan liteke. '
       Course 4 Artist Params 11_instruction: |
@@ -969,14 +978,14 @@ eu:
       Course 4 Artist Vars 10_instruction: 'Hona hemen beste triangelu txikiago batzuetan oinarrituz triangelu bat marrazten duen algoritmoa. Berau alda al dezakezu triangelu bakoitza marrazteko "aldeak" aldagaia erabil dezan? Kodea behatu, eta 3 zenbakia ikusten duzun bakoitzean, zure "aldeak" aldagaiarekin ordezkatu. Gogoratu "aldeak ezarri" blokea erabiltzea.'
       Course 4 Artist Vars 11_instruction: 'Hona hemen kode konplikatuago bat, azkeneko ariketaren kontzeptu berdinak erabiltzen dituena - zer balio eman behar diozu "aldeak" aldagaiari laukiz osatutako irudi hau marrazteko?'
       Course 4 Artist Vars 12_instruction: '"aldeak" aldagaian 5 balioa ezarriko dugu. Zenbat eta alde gehiago gehitu algoritmoan, orduan eta handiagoa izango da patroia! Kontuan izan "luzera" izeneko beste aldagai bat dagoela. Orain hori erabil dezakegu "mugitu aurrera" daukagun toki guztietan. Forma honentzat "luzera" aldagaiari 75 balioa eman.'
-      Course 4 Artist Vars 13_instruction: "Irudi geometriko batek alde asko dituenean, alde bakoitzaren luzerak txikiagoa izan beharko du irudi osoa pantailan sartzea nahi baduzu. \r Berregin dezagun irudi zoragarri hau sortzeko algoritmoa, baina, \"luzera\" aldagaiaren balioa eskuz aldatu beharrean, erabil dezagun matematikako bloke bat, \"aldeak\" aldagaia barruan duena, ziur egoteko irudi bakoitza ondo sartzen dela. Poligono bakoitzaren perimetroa 300 pixel da.\r Laguntzarik behar? Klikatu hemen."
-      Course 4 Artist Vars 14_instruction: "Joko librea: Probatu! Orain zure algoritmoa kabiatuta dago begizta baten edo gehiagoren barnean. Zure bi aldagaien balioak aldatu, patroi politak marrazteko.\r\n\r\nEfektu handiagoa lortzeko, jolastu kolorearekin! Erabili  ausazko koloreak begizten barnean zure diseinua nola aldatzen den ikusteko."
+      Course 4 Artist Vars 13_instruction: "Irudi geometriko batek alde asko dituenean, alde bakoitzaren luzerak txikiagoa izan beharko du irudi osoa pantailan sartzea nahi baduzu. \\r Berregin dezagun irudi zoragarri hau sortzeko algoritmoa, baina, \"luzera\" aldagaiaren balioa eskuz aldatu beharrean, erabil dezagun matematikako bloke bat, \"aldeak\" aldagaia barruan duena, ziur egoteko irudi bakoitza ondo sartzen dela. Poligono bakoitzaren perimetroa 300 pixel da.\\r Laguntzarik behar? Klikatu hemen."
+      Course 4 Artist Vars 14_instruction: "Joko librea: Probatu! Orain zure algoritmoa kabiatuta dago begizta baten edo gehiagoren barnean. Zure bi aldagaien balioak aldatu, patroi politak marrazteko.\\r\n\\r\nEfektu handiagoa lortzeko, jolastu kolorearekin! Erabili  ausazko koloreak begizten barnean zure diseinua nola aldatzen den ikusteko."
       Course 4 Artist Vars 2_instruction: '"Mugitu aurrera 150" ordez, oraingoan "mugitu" blokeak "luzera" izeneko aldagaiari egiten dio erreferentzia. Eman diezaiokezu "luzera" aldagaiari 150 balioa triangelu berri hau marrazteko?'
       Course 4 Artist Vars 3_instruction: 'Hemen duzu karratu bat marrazten duen begizta, baina zerbait falta du. Zuzendu dezakezu eta "luzera" aldagaia erabili alde bakoitzaren luzera zein izan behar den admatzeko? '
       Course 4 Artist Vars 4_instruction: 'Orain altuera zabaleraren bikoitza duen laukizuzena egin nahi dut. "zabalera" izeneko aldagai bat dugu 100 balioa eman behar ziona. Erabili ditzakezu matematikako blokeak kodea osatzeko?'
       Course 4 Artist Vars 5_instruction: 'Erabili "aldeak" aldagaia begizta hau zenbat aldiz exekutatzen den kontrolatzeko.'
-      Course 4 Artist Vars 6_instruction: "Hemen duzu edozein poligono erregular marraztu dezakeen kodea. \"aldeak\" izeneko aldagai berri bat dago eta 4 balioa du. Erabili dezakezu \"aldeak\" aldagaia (matematikako blokeren batekin) biraketa egokiak egiteko poligonoaren alde kopurua edozein izanda?\r\n\r\nEgin klik hemen pistara itzultzeko!"
-      Course 4 Artist Vars 7_instruction: "Erabili azkeneko puzlean ikasitakoa hexagono hau sortzeko \"aldeak\" aldagaia erabiliz.\r\n\r\nIkusten duzu nola balio bakar bat aldatuz triangelua, karratua, pentagonoa edo oktogonoa marraztu dezakezun?"
+      Course 4 Artist Vars 6_instruction: "Hemen duzu edozein poligono erregular marraztu dezakeen kodea. \"aldeak\" izeneko aldagai berri bat dago eta 4 balioa du. Erabili dezakezu \"aldeak\" aldagaia (matematikako blokeren batekin) biraketa egokiak egiteko poligonoaren alde kopurua edozein izanda?\\r\n\\r\nEgin klik hemen pistara itzultzeko!"
+      Course 4 Artist Vars 7_instruction: "Erabili azkeneko puzlean ikasitakoa hexagono hau sortzeko \"aldeak\" aldagaia erabiliz.\\r\n\\r\nIkusten duzu nola balio bakar bat aldatuz triangelua, karratua, pentagonoa edo oktogonoa marraztu dezakezun?"
       Course 4 Artist Vars 8_instruction: 'Joko librea: jolastu formak duen alde kopuruarekin. Alda dezakezu algoritmoa formaren tamaina orokorra mantentzeko, alde kopuruak eragin gabe? Pista: agian oraingoan zure matematikako blokeak erabili behar dituzu (360 zati "aldeak") bi tokitan.'
       Course 4 Artist Vars 9_instruction: 'Aldatu algoritmo hau kopuru finko baten ordez "aldeak" aldagaia erabil dezan triangelu bat marrazteko. Ez ahaztu "aldeak ezarri" blokea erabiltzea.'
       Course 4 Bee 1_instruction: 'Erleak ezin du esan zer dagoen lainoaren azpian! Lehenengo, erabili "baldin" blokea lorea edo abaraska den egiaztatzeko. Ondoren, bildu nektarra lorea bada soilik. '
@@ -1042,42 +1051,42 @@ eu:
       Course 4 Maze 6_instruction: Ebatz dezakezu puzle hau ahal den bloke kopuru txikiena erabiliz?
       Course 4 Play Lab For Loops 2_instruction: Oraingo honetan, konta ditzagun 1etik 100erako zenbaki bakoitiak.
       Course 4 Play Lab Params 1_instruction: 'Hona hemen "salto" funtzioa, zure protagonistak 100 pixeleko saltoa ematea eragiten duena. Erabili salto funtzioa bandera guztiak biltzeko.'
-      Course 4 Play Lab Params 10_instruction: "Azken funtzio bat gehitu dizugu. \r\n\r\nErabili \"baldin eta\" adierazpena zure jokuak \"mailaz igo\" funtzioari dei diezaion \"jokalariaren puntuazioa\" zenbaki jakin bat baino handiagoa deneanl.\r\n\r\nAdibidez: \"jokalariaren puntuazioa\">6\r\n\r\nJoka ezazu eta pasa 4. mailara hurrengo puzlera joan ahal izateko. "
-      Course 4 Play Lab Params 2_instruction: "Orain gure saltoentzeko altuegi dauden banderak ditugu! Erabil ditzagun \"gora\" eta \"behera\" geziak hainbat altueratako saltoak izateko. \r\n\r\nGure salto funtzioari \"altuera\" izeneko parametro bat gehitu beharrean gaude. Gora geziak txakurrak 200 pixeleko saltoa egitea eragin beharko luke, eta behera geziak 100 pixeleko saltoa egitea.\n\r\n\r\nIradokizuna: Salto funtzioan \"editatu\" klikatu beharko duzu eta eguneratu, \"altuera\" parametroa erabil dezan."
+      Course 4 Play Lab Params 10_instruction: "Azken funtzio bat gehitu dizugu. \\r\n\\r\nErabili \"baldin eta\" adierazpena zure jokuak \"mailaz igo\" funtzioari dei diezaion \"jokalariaren puntuazioa\" zenbaki jakin bat baino handiagoa deneanl.\\r\n\\r\nAdibidez: \"jokalariaren puntuazioa\">6\\r\n\\r\nJoka ezazu eta pasa 4. mailara hurrengo puzlera joan ahal izateko. "
+      Course 4 Play Lab Params 2_instruction: "Orain gure saltoentzeko altuegi dauden banderak ditugu! Erabil ditzagun \"gora\" eta \"behera\" geziak hainbat altueratako saltoak izateko. \\r\n\\r\nGure salto funtzioari \"altuera\" izeneko parametro bat gehitu beharrean gaude. Gora geziak txakurrak 200 pixeleko saltoa egitea eragin beharko luke, eta behera geziak 100 pixeleko saltoa egitea.\n\\r\n\\r\nIradokizuna: Salto funtzioan \"editatu\" klikatu beharko duzu eta eguneratu, \"altuera\" parametroa erabil dezan."
       Course 4 Play Lab Params 3_instruction: 'Salto egiteko funtzioari alagai bat gehitu diogu beste aktoreekin erabili ahal izateko. Aktore bakoitza zenbaki batez dago adierazita, batetik hasita. Aldatu "salto egin" funtzioa, aktorea aldagaia erabiliz dagokion pertsonaiak salto egin dezan. '
       Course 4 Play Lab Params 4_instruction: |
         Hemen "patruila" izeneko funtzioa dago. 
         Aldatu katua 400 pixel gora mugitzeko eta gero 400 pixel behera.
       Course 4 Play Lab Params 5_instruction: 'Aldatu "patruila" funtzioa "aktore" aldagaia gehitzeko, pantailako aktore bakoitzeko dei ahal diezaiogun. Gogoratu, atoreek 1, 2 eta 3 zenbakiak dituzte.'
       Course 4 Play Lab Params 6_instruction: 'Gehitu beste parametro bat, "abiadura" izenekoa, "patruila" funtzioari. Saia zaitez "ezarri abiadura" blokea erabiltzen "abiadura" parametro berriarekin, pinguinoari laguntzeko bi banderak harrapatzen iratxoek bandera bat eskuratu baino lehen.'
-      Course 4 Play Lab Params 7_instruction: "Ondo pasa dezagun! Begiratu emandako kodea ikusteko ea bloke bakoitzak egiten duena asmatu dezakezun. \r\r Bukatutakoan, erabili gezi teklak txakurra kontrolatzeko eta bandera guztiak biltzeko."
+      Course 4 Play Lab Params 7_instruction: "Ondo pasa dezagun! Begiratu emandako kodea ikusteko ea bloke bakoitzak egiten duena asmatu dezakezun. \\r\\r Bukatutakoan, erabili gezi teklak txakurra kontrolatzeko eta bandera guztiak biltzeko."
       Course 4 Play Lab Params 8_instruction: 'Erabili "aktoreak ikutzen duenean" blokea txakurra goi-ezker eskinera atzera bueltatzeko BAKARRIK txakurrak beste aktoreetako bat ikutzen badu.'
-      Course 4 Play Lab Params 9_instruction: "Hona hemen aurreko urrats bateko jokoa, baina kode gehiena ezkutatuta dago. Funtzio berri bat dago, \"gehitu_puntuak\".\"\r \r Editatu funtzioa \"puntuak\" parametroa gehitzeko \"jokalariaren_puntuazioa\" aldagaiari. \r \r \"jokalariaren_puntuazioa\" aldagaiaren balioa eguneratu behar da gora (inkrementatu) Txakurrak Katuaren gainean bihotzak marrazten dituenean, eta behera (dekrementatu) Katuak Txakurraren gainean bihotzak marrazten dituenean.\r \r Oharra:\nHori guztia egin ondoren, klikatu \"Hasi\" jolasteko. Txakurrak 6 puntu eskuratzen dituenena, hurrengo ariketara pasatuko zara."
+      Course 4 Play Lab Params 9_instruction: "Hona hemen aurreko urrats bateko jokoa, baina kode gehiena ezkutatuta dago. Funtzio berri bat dago, \"gehitu_puntuak\".\"\\r \\r Editatu funtzioa \"puntuak\" parametroa gehitzeko \"jokalariaren_puntuazioa\" aldagaiari. \\r \\r \"jokalariaren_puntuazioa\" aldagaiaren balioa eguneratu behar da gora (inkrementatu) Txakurrak Katuaren gainean bihotzak marrazten dituenean, eta behera (dekrementatu) Katuak Txakurraren gainean bihotzak marrazten dituenean.\\r \\r Oharra:\nHori guztia egin ondoren, klikatu \"Hasi\" jolasteko. Txakurrak 6 puntu eskuratzen dituenena, hurrengo ariketara pasatuko zara."
       Course 4 Play Lab Vars 1_instruction: 'Oraingoan ez duzu koderik idatzi behar, sakatu "Exekutatu" joko honetan aritzeko! Jokoan, katuak baino bandera gehiago biltzen saiatzen ari den zakurra zara zu. Erabili gezia behera zakurra kontrolatzeko. Sakatu "Amaitu" jokatzeari uzteko.'
       Course 4 Play Lab Vars 2_instruction: 'Azkeneko puzleko lasterketa ez da oso justua izan! Aldatu "zakurraren_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago bil ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!'
       Course 4 Play Lab Vars 3_instruction: Joko mota berri bat duzu hemen! Erabili ezker eta eskuin geziak mugitzeko, eta gora gezia salto egiteko. Saiatu bandera guztiak biltzen.
       Course 4 Play Lab Vars 4_instruction: 'Orain "altuera" izeneko aldagai bat erabiltzen ari gara zakurrak egiten dituen jauzien altuera kontrolatzeko. Eguneratu "altuera" aldagaia zakurra gai izan dadin nahikoa salto egin eta bandera guztietara iristeko.'
       Course 4 Play Lab Vars 5_instruction: 'Goazen joko bat egitera! Lehenengo markagailua behar dugu. Azkeneko mailan ikusi duzun kodea berregin puntuazioa 10ean ezartzeko. '
       Course 4 Play Lab Vars 6 (copy 1)_instruction: 'Primeran, orain gure "puntuazioa" aldagaia daukagu, baina nola egin erabilgarri? zer dirudizu aldagaia gehitzen badugu arerioak suzko bolarekin astintzen dituzun bakoitzean? Erabili "2. aktoreak zerbait ikutu" gertaera markagailuaren eguneraketa bat aktibatzeko suzko bolak katua astintzen duen bakoitzean. Markagailua inkrementatu dezakezu puntuazioa = puntuazioa + 1 ezarriz. Lortu 10eko puntuazioa (banaka inkrementatuz!) maila gainditzeko.'
-      Course 4 Play Lab Vars 6_instruction: "Erabili eskuin gezia bihotzak jaurtikitzeko.\r\n\r\nGure jokoan, nola lor ditzakegu puntuak? Gehitu 1 zure \"puntuak\" aldagaiari Zakurrak Katua bihotz batekin astintzen duen bakoitzean. Erabili \"2. aktoreak zerbait ukitu\" gertaera, zure puntuazioa eguneratzeko. Zure aldagaia inkrementatu dezakezu \"puntuak = puntuak + 1\" ezarriz. Lortu 10eko puntuazioa (banaka inkrementatuz!) maila gainditzeko."
+      Course 4 Play Lab Vars 6_instruction: "Erabili eskuin gezia bihotzak jaurtikitzeko.\\r\n\\r\nGure jokoan, nola lor ditzakegu puntuak? Gehitu 1 zure \"puntuak\" aldagaiari Zakurrak Katua bihotz batekin astintzen duen bakoitzean. Erabili \"2. aktoreak zerbait ukitu\" gertaera, zure puntuazioa eguneratzeko. Zure aldagaia inkrementatu dezakezu \"puntuak = puntuak + 1\" ezarriz. Lortu 10eko puntuazioa (banaka inkrementatuz!) maila gainditzeko."
       Course 4 Play Lab Vars 7_instruction: Bikain, orain ziurtatu dezagun joko hau ez dela errazegia. Katuak (2. aktorea) jaurtikitako bihotz hori batek Zakurra (1. aktorea) kolpatzen duen aldi bakoitzean puntu bat galdu behar duzu. Hasi 10 punturekin zailegi gerta ez dadin. 10 puntu galdu behar dituzu maila gainditzeko.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: 'Ondo da, azkeneko kontu bat joko honekin amaitzeko - jokalariak irabazi (edo galdu) dezan prestatuko dugu. Erabili "errepikatu betirako" begizta markagailuaren balioa aztertzeko - puntuazioa 20 baino handiagoa bada, arerioak ezabatu behar dituzu. Puntuazioa 0 baino txikiagoa bada, jokalaria ezabatu. Egin klik "Amaitu" botoian jokoak zuk nahi bezala funtzionatzen duenean.'
       Course 4 Play Lab Vars 8_instruction: 'Zakurrak irabazteko (edo galtzeko) aukera izan dezan prestatuko dugu jokoa. Erabili "errepikatu betirako" begizta bat puntuazioaren balioa aztertzeko - puntuazioa 20 baino handiagoa denean, arerioa (Katua) ezabatu behar duzu. Puntuazioa 0 baino txikiagoa bada, jokalaria (Zakurra) ezabatu. Egin klik "Amaitu" botoian jokoak zuk nahi bezala funtzionatzen duenean.'
-      Course 4 Play Lab Vars 9_instruction: "Joko librerako tartea! Hemen dituzu maila honetan erabili ditugun aldagai guztiak, baita erabili ditzakezun beste gutxi batzuk ere.\r\n\r\nKontuan izan orain gure tresna-kutxan hainbat bloke daudela eta antolatu behar direla! Hemen, elementu bakoitzari kategoria bat eman zaio. Hartu zure denbora eskura daukazun guztiaz jabetzeko. Nabigatzen amaitzen duzunean, sortu joko edo istorio bat errepikak, aldagaiak eta gertaerak erabiliz.\r\n\r\nPista: korritu behera laneremuko komando guztiak ikusteko."
+      Course 4 Play Lab Vars 9_instruction: "Joko librerako tartea! Hemen dituzu maila honetan erabili ditugun aldagai guztiak, baita erabili ditzakezun beste gutxi batzuk ere.\\r\n\\r\nKontuan izan orain gure tresna-kutxan hainbat bloke daudela eta antolatu behar direla! Hemen, elementu bakoitzari kategoria bat eman zaio. Hartu zure denbora eskura daukazun guztiaz jabetzeko. Nabigatzen amaitzen duzunean, sortu joko edo istorio bat errepikak, aldagaiak eta gertaerak erabiliz.\\r\n\\r\nPista: korritu behera laneremuko komando guztiak ikusteko."
       Course 4 Play Lab Vars_instruction: 'Ondo da, azkeneko kontu bat joko honekin - jokalariak irabazi (edo galdu) dezan prestatuko dugu. Erabili "errepikatu betirako" begizta markagailuaren balioa aztertzeko - puntuazioa 20 baino handiagoa bada, arerioa ezabatu. Puntuazioa 0 baino txikiagoa bada, jokalaria ezabatu.'
       Course 4 Play Labs For Loops 1_instruction: Eragin dezagun txakurrak 1etik 100erako zenbaki guztiak esatea. Erabili for begizta bat eta kontagailu blokea begizta abiarazten den bakoitzean kontagailu aldagaiak hitz egin dezan.
       Course 4 Play Labs For Loops 2_instruction: Oraingo honetan, konta ditzagun 1etik 100erako zenbaki bakoitiak.
       Course 4 Play Labs For Loops 3_instruction: Zenbaki handiak erabiliz kontatzen badugu, denbora berean zenbaki handiago batera iritsiko gara. Saiatu txakurrari 10etik 1000ra arte 10naka kontarazten.
       Course 4 Play Labs For Loops 4_instruction: Inkrementua aldatzea erabilgarria izan daiteke, baina oraindik linealki zenbatzen ari gara (zenbaki bakoitza aurrekotik distantzia berdinera dago!) Eta esponentzialki zenbatu nahiko bagenu? begizta honen ezarpenak aldatu gabe, zenatu dezakezu 1, 4, 9, 16, 25... (kontagailuaren karratua)?
-      Course 4 Play Labs For Loops 4a_instruction: "Orain, nahas ditzagun 7. etapako aldagaiak zure \"kontagailu\" aldagaiarekin magia egiteko.  \r\n\r\nPuzle honetan, txakurrak 0tik 1000ra arte kontatuko du, batuz. Ezarri \"batuketa\" aldagaia 10en kodearen hasieran, zer gertatzen den ikusteko."
+      Course 4 Play Labs For Loops 4a_instruction: "Orain, nahas ditzagun 7. etapako aldagaiak zure \"kontagailu\" aldagaiarekin magia egiteko.  \\r\n\\r\nPuzle honetan, txakurrak 0tik 1000ra arte kontatuko du, batuz. Ezarri \"batuketa\" aldagaia 10en kodearen hasieran, zer gertatzen den ikusteko."
       Course 4 Play Labs For Loops 5_instruction: 'Azken etapan zenbakien karratuak kontatu dugu. Saiatu "kontagailua^2" "kontagailua^3"-ra aldatzen, zenbakien kuboak kontatzeko (1, 8, 27, 64, 125, 216, 343...)'
-      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach one."
+      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\\r\n\\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\\r\n\\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\\r\n\\r\nRun the loop a couple of times, clicking Dog before\neach one."
       Course 4 Play Labs For Loops 6_instruction: 'Gogoratuko duzu zenbaki lehenak 1ez eta bere buruaz soilik zatigarriak diren zenbaki arruntak direla. Erabili "lehena_da" funtzioa 1etik 100erako zenbaki lehenak soilik esateko.'
-      Course 4 Play Labs For Loops 6a_instruction: "Txakurrak jarraituko du denbora kontatzen gure \"for\" begiztarekin, \"inkrementua\" kontuan harturik, baina oraingo honetan Aztia sartuko dugu jokoan. Aldatu dezakezu kodea \"inkrementua\" bi unitatetan handitzeko Aztia sakatzen den bakoitzean?\r \r Kontuz! Aztia azkar mugitzen da eta!"
+      Course 4 Play Labs For Loops 6a_instruction: "Txakurrak jarraituko du denbora kontatzen gure \"for\" begiztarekin, \"inkrementua\" kontuan harturik, baina oraingo honetan Aztia sartuko dugu jokoan. Aldatu dezakezu kodea \"inkrementua\" bi unitatetan handitzeko Aztia sakatzen den bakoitzean?\\r \\r Kontuz! Aztia azkar mugitzen da eta!"
       Course 4 Play Labs For Loops 7_instruction: 'Erabil dezakezu "for" begizta bat niri laguntzeko sekuentzia hau egiten: 1, 4, 7, 10, 13, 16, 19, 22, 25?'
-      Course 4 Play Labs For Loops 7a_instruction: "Bagoaz aurrera! Zer moduz hasten bagara kontatzen zenbat aldiz klikatu dezakegun Aztiaren gainean Txakurra 30era iritsi baino lehen? \r \r Gehitu blokeak Aztiari bere gainean klikatzen dugun bakoitzean \"klikatua\" aldagaia unitate batean handitzeko. Oraingoz, ez duzu \"inkrementua\" kontuan hartu behar.\r \r Txakurra kontatzen hasiko da \"Egikaritu\" sakatzen duzunean."
-      Course 4 Play Labs For Loops 8_instruction: "Orain, lagundu aktoreei mugitzen kontatzen duten bitartean. \r \r Txakurra mugitu eta binaka (kontagailua + 2) kontatu beharko du. Katua mugitu eta 2rekin biderkatuz (kontagailua * 2) kontatu beharko du. Pinguinoa mugitu eta 2ren berreturak gehitzen (kontagailua ^ 2) kontatu behar du. Zein iritsiko da lehenago dagokion helburura?"
-      Course 4 Play Labs For Loops 8a_instruction: "Gure jolasa amaitzeko, \"inkrementua\" aldagaia erabili behar dugu berriro! Jolasaren mailaren arabera hartuko dugu kontuan.\r \r 1) Kontatu zenbat aldiz klikatzen den Aztiaren gainean.\r 2) Aztia gutxienez 10 aldiz klikatua baldin bada Txakurra 30era iritsi baino lehen, handitu \"inkrementua\" aldagaia unitate batean eta hasi berriro.\r 3) Aztia gutxienez 10 aldiz klikatua ez bada, jolasa amaituko da."
+      Course 4 Play Labs For Loops 7a_instruction: "Bagoaz aurrera! Zer moduz hasten bagara kontatzen zenbat aldiz klikatu dezakegun Aztiaren gainean Txakurra 30era iritsi baino lehen? \\r \\r Gehitu blokeak Aztiari bere gainean klikatzen dugun bakoitzean \"klikatua\" aldagaia unitate batean handitzeko. Oraingoz, ez duzu \"inkrementua\" kontuan hartu behar.\\r \\r Txakurra kontatzen hasiko da \"Egikaritu\" sakatzen duzunean."
+      Course 4 Play Labs For Loops 8_instruction: "Orain, lagundu aktoreei mugitzen kontatzen duten bitartean. \\r \\r Txakurra mugitu eta binaka (kontagailua + 2) kontatu beharko du. Katua mugitu eta 2rekin biderkatuz (kontagailua * 2) kontatu beharko du. Pinguinoa mugitu eta 2ren berreturak gehitzen (kontagailua ^ 2) kontatu behar du. Zein iritsiko da lehenago dagokion helburura?"
+      Course 4 Play Labs For Loops 8a_instruction: "Gure jolasa amaitzeko, \"inkrementua\" aldagaia erabili behar dugu berriro! Jolasaren mailaren arabera hartuko dugu kontuan.\\r \\r 1) Kontatu zenbat aldiz klikatzen den Aztiaren gainean.\\r 2) Aztia gutxienez 10 aldiz klikatua baldin bada Txakurra 30era iritsi baino lehen, handitu \"inkrementua\" aldagaia unitate batean eta hasi berriro.\\r 3) Aztia gutxienez 10 aldiz klikatua ez bada, jolasa amaituko da."
       Course 4 SCF 1_instruction: Erabili iradokitako funtzioak lau hexagono ilara marrazteko. Konturatzen al zara nola zenbaki bikoitia duten lerroak eskuinera desplazatzen diren?
       Course 4 SCF 1a_instruction: Badakizu nola bildu nektar hauek guztiak ahalik eta bloke gutxien erabiliz?
       Course 4 SCF 1b_instruction: Badakizu nola bildu nektar hauek guztiak ahalik eta bloke gutxien erabiliz?
@@ -1097,18 +1106,22 @@ eu:
       Course 4 SCFP 1_instruction: Parametrodun funtzio bat egin behar duzu artistak aurrera eta atzera x pixel salto egin ditzan, eta baita gora eta behera y pixel (zenbaki positiboak eta negatiboak erabiiz).
       Course 4 SCV 1_instruction: Klikatu hemen jarraibideak berriro ikusteko.
       Course 4 SCV 2_instruction: Klikatu hemen jarraibideak berriro ikusteko.
-      Course 4 SCV 3_instruction: "Goazen orain harrapaketan jolastera! Harrapatu katua 2 puntu lortzeko. Harrapatu pinguinoa 3 puntu lortzeko. Lortu 10 puntu irabazteko!\r\nBaina kontuz ibili, katuak eta pinguinoak elkar ukitzen dutenean, puntuak eramaten dituzte eta.\r\n\r\nGehitu jolasa behar bezala ibil dadin beharrezko diren blokeak. Nola lortuko duzu txakurra geizdun teklak erabiliz norabide guztietan mugitzea? Nola gehituko dituzu puntuak txakurrak katua edo pinguinoa harrapatzen dituenean? Nola kenduko dituzu puntuak katuak eta pinguinoak elkar ukitzen dutenean?"
+      Course 4 SCV 3_instruction: "Goazen orain harrapaketan jolastera! Harrapatu katua 2 puntu lortzeko. Harrapatu pinguinoa 3 puntu lortzeko. Lortu 10 puntu irabazteko!\\r\nBaina kontuz ibili, katuak eta pinguinoak elkar ukitzen dutenean, puntuak eramaten dituzte eta.\\r\n\\r\nGehitu jolasa behar bezala ibil dadin beharrezko diren blokeak. Nola lortuko duzu txakurra geizdun teklak erabiliz norabide guztietan mugitzea? Nola gehituko dituzu puntuak txakurrak katua edo pinguinoa harrapatzen dituenean? Nola kenduko dituzu puntuak katuak eta pinguinoak elkar ukitzen dutenean?"
       Course 4 SCV 4_instruction: Puzzle hau ebatz ezazu ahalik eta bloke gutxien erabiliz.
       Course 4 SCV 5_instruction: Puzzle hau ebatz ezazu ahalik eta bloke gutxien erabiliz.
       Course 4 SCV 6_instruction: Klikatu hemen jarraibideak berriro ikusteko.
       Course 4 SCVP 1_instruction: Parametrodun funtzio bat egin behar duzu artistak aurrera eta atzera x pixel salto egin ditzan, eta baita gora eta behera y pixel (zenbaki positiboak eta negatiboak erabiiz).
       Course 4 Variables Assessment_instruction: Sor al dezakezu irudi hau aldeetarako aldagai bat erabiliz? Lerro bakoitza 50 pixelekoa izan beharko zukeen.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
-      Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
-      Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
-      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
-      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
-      CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
+      Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
+      Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
+      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
+      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
+      CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
       CSP U4 - JSON Object Intro - Bad Way_instruction: |
         Trigger both the keyboard
         and mouse event and examine the event objects displayed in the console. Why
@@ -1195,9 +1208,9 @@ eu:
         Here's a similar function red shape with an additional
         variable for size. Complete the conditionals so the correct solid red image
         of a given size is drawn for "circle", "triangle", and "star".
-      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
-      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
+      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\\r\nOne example - and part of the definition -  has already\nbeen done for you!"
+      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\\r\nOne example - and part of the definition -  has\nalready been done for you!\\r\n"
+      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\\r\n"
       Eval Contracts 1_instruction: |
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -1486,7 +1499,7 @@ eu:
       K-1 Maze Assessment 2_instruction: 'Ebaluazioa -- Eraman nazazu zerriarengana!'
       K-1 maze debug 1_instruction: Aldatu kodea zerriarengana joan nadin!
       K-1 maze debug 10_instruction: Araztu maila hau blokeak birrordenatuz eta gehituz zerriarekin elkar nadin!
-      K-1 maze debug 11_instruction: "Hau froga bat da!\r\nAraztu maila hau blokeak birrordenatuz eta gehituz zerriarekin elkar nadin"
+      K-1 maze debug 11_instruction: "Hau froga bat da!\\r\nAraztu maila hau blokeak birrordenatuz eta gehituz zerriarekin elkar nadin"
       K-1 maze debug 2_instruction: Pentsatu zer falta den eta gehitu blokeak zerriarekin elkar nadin!
       K-1 maze debug 3_instruction: Pentsatu zer falta den eta kendu blokeak zerriarekin elkar nadin!
       K-1 maze debug 4_instruction: Abiarazi blokeak eta konpondu! Uste dut norabide okerrean noala.
@@ -1512,9 +1525,18 @@ eu:
       K-1 Maze Loops Assessment 2_instruction: 'Ebaluazioa -- Erabili begiztak zerriarengana joan nadin!'
       K-1 Maze Multi 14_instruction: Ebaluazio maila
       K-1 Maze Multi 15_instruction: Ebaluazio maila
-      K-1 Maze Sequence Assessment 1_instruction: "Hau proba da!\r\nMugitu norabide batean, eta gero bestean, txerriraino iritsi nadin"
-      K-1 Maze Sequence Assessment 2_instruction: "Hau proba da!\r\nMugitu norabide batean, eta gero bestean, txerriraino iritsi nadin."
-      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
+      K-1 Maze Sequence Assessment 1_instruction: "Hau proba da!\\r\nMugitu norabide batean, eta gero bestean, txerriraino iritsi nadin"
+      K-1 Maze Sequence Assessment 2_instruction: "Hau proba da!\\r\nMugitu norabide batean, eta gero bestean, txerriraino iritsi nadin."
+      kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -1545,6 +1567,8 @@ eu:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -1607,7 +1631,7 @@ eu:
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\r\n"
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\\r\n"
       NetSim Standalone Classroom Routers_instruction: |
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -1630,7 +1654,7 @@ eu:
         of a packet being dropped, multiple packets may take different paths to the
         destination, and the default max packet size is set to 6 additional characters.
         
-      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\\r\n\\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
       NetSim Standalone SendAB_instruction: |
         You and your partner share a single
         wire that can only be in state A or state B. You can set the wire to either
@@ -1690,7 +1714,7 @@ eu:
       NEW Course 4 Artist Functions 1_instruction: Marraz dezakezu 100 pixeleko luzera duen karratu bat errepikatu begizta erabiliz?
       NEW Course 4 Artist Functions 10.1_instruction: Aurreko ariketetako funtzioak erabil itzazu patroi hau marrazteko.
       NEW Course 4 Artist Functions 10_instruction: '"editatu" klikatu, funtzioaren definizioan ageri diren blokeak betetzeko, eta horrela 40 pixeleko laukia egiteko.'
-      NEW Course 4 Artist Functions 11_instruction: "Orain \"marraztu karratu errenkada\" izeneko funtzio berria sortu nahi dugu, sei karratu errenkada batean marraztuko dituena. Funtzio hau eraiki al dezakezu jadanik sortuta dugun \"marraztu karratua 20\" funtzioa erabiliz? Oharra: ikusi arkatza aldatu dugula askoz finagoa izan dadin. Nola egin dugun ikusteko \"marraztu karratua 20\" funtzioaren gainean \"editatu\" klikatu!\r\n"
+      NEW Course 4 Artist Functions 11_instruction: "Orain \"marraztu karratu errenkada\" izeneko funtzio berria sortu nahi dugu, sei karratu errenkada batean marraztuko dituena. Funtzio hau eraiki al dezakezu jadanik sortuta dugun \"marraztu karratua 20\" funtzioa erabiliz? Oharra: ikusi arkatza aldatu dugula askoz finagoa izan dadin. Nola egin dugun ikusteko \"marraztu karratua 20\" funtzioaren gainean \"editatu\" klikatu!\\r\n"
       NEW Course 4 Artist Functions 12_instruction: 'Azken ariketako "marraztu karratu errenkada" funtzioa erabili, patroi hau marrazteko."'
       NEW Course 4 Artist Functions 13_instruction: '"marraztu karratu errenkada" funtzioa erabiliz izar itxurako forma bat marraz al dezakezu? Iradokizuna: begizta bakoitzean "marraztu karratu errenkada" funtzioa hainbat aldiz deitu ondoren, pixel kopuru batean aurrerantz mugitu beharko duzu, eta gero 144 gradu biratu.'
       NEW Course 4 Artist Functions 14_instruction: 'Jolas librerako ordua! '
@@ -1698,7 +1722,7 @@ eu:
       NEW Course 4 Artist Functions 3_instruction: 'Hona hemen Bloke mota berri bat. "Funtzioa" blokea deitzen da. "editatu" klikatu eta orduan 100 pixeleko aldea duen lauki edo karratu bat marrazteko behar den kodearekin bete. Funtzioaren edizioa bukatzen duzunean, "Itxi" klikatu zure programara itzultzeko.'
       NEW Course 4 Artist Functions 4_instruction: '"Marraztu karratu bat" funtzioa erabil ezazu patroi hau marrazteko. Iradokizuna: karratu edo lauki bakoitzaren ondoren "eskuinerantz 120 gradu biratu" blokea erabili beharko duzu.'
       NEW Course 4 Artist Functions 5_instruction: 'Nola jakin zezakeen "marraztu karratua" blokeak zein komando exekutatu? Egin klik "edit" aukeran "marraztu karratua" funtzio blokean. Funtzio editorean dauden blokeak "marraztu laukia" definitzen dute. Hau ulertu duzunean, sakatu "Gorde eta itxi" eta "Hasi."'
-      NEW Course 4 Artist Functions 6_instruction: "\"Marraztu karratu bat\" funtzio blokea erabiliz, marraz dezakezu irudi hau? Iradokizuna: karratuen artean 20 pixeleko tartea dago.\r\n"
+      NEW Course 4 Artist Functions 6_instruction: "\"Marraztu karratu bat\" funtzio blokea erabiliz, marraz dezakezu irudi hau? Iradokizuna: karratuen artean 20 pixeleko tartea dago.\\r\n"
       NEW Course 4 Artist Functions 7_instruction: 'Ari al zara funtzio blokeak nola erabiltzen diren ulertzen? Eralda dezagun laukia 200 pixeleko tamaina izan dezan. Pista: egin klik "editatu" aukeran "marraztu laukia" funtzioa eraldatzeko. Ez ahaztu "itxi" aukeran klik egitea funtzio editoretik ateratzeko.'
       NEW Course 4 Artist Functions 8_instruction: '"marraztu triangelua" deituriko funtzio berria sortu dugu zuretzako.  Funtzioaren definizioa aldatu dezakezu 100 pixel-eko aldeak dituen hirukia marrazteko?'
       NEW Course 4 Artist Functions 9_instruction: Ebatzi al dezakezu hau bloke bakarra erantsiz?
@@ -1722,7 +1746,7 @@ eu:
       NEW Course 4 Artist Params 7_instruction: 'Irudi hau osatu al dezakezu? Pista: Triangelu bakoitzaren aldea aurrekoarena baino 25 pixel handiagoa da. Lehenengo triangeluak 25 pixeleko aldeak ditu.'
       NEW Course 4 Artist Params 8_instruction: Triangelu honen kodea gaizki dago. Funtzioa editatu al dezakezu berau konpontzeko, eta 25, 50 eta 75 luzeradun triangeluak egiteko?
       NEW Course 4 Artist Params 9_instruction: 'Klikatu "editatu", "karratu bat marraztu" funtzioaren definizioa betetzeko, bertan parametro bat gehituz. Luzera parametro bat izan beharko luke, triangeluak bezala. Oraingoan, 3 karratu marraztu : 25, 50 eta 75 pixeleko luzeerekin eta beraien artean 100 pixelez banatuak daudenak.'
-      NEW Course 4 Artist Params inspire_instruction: "Jolas librea: Era honetakoak egiteko jakin beharreko guztia dakizu jada! irudi honek inspiratzen bazaitu, antzeko zerbait egitera saiatu. Bestela, zure kabuz sortu zerbait. \r\n\r\nJakin nahi al duzu gure inspirazioa patroia nola sortu zen? "
+      NEW Course 4 Artist Params inspire_instruction: "Jolas librea: Era honetakoak egiteko jakin beharreko guztia dakizu jada! irudi honek inspiratzen bazaitu, antzeko zerbait egitera saiatu. Bestela, zure kabuz sortu zerbait. \\r\n\\r\nJakin nahi al duzu gure inspirazioa patroia nola sortu zen? "
       NEW Course 4 Artist Vars 1.5_instruction: 'Begira ezazu kodea, ikusi dezakezu "ezarri luzera" blokeak eta "luzera" blokeak batera lan nola egiten duten? Egikaritu eta ikusi ezazu martxan.'
       NEW Course 4 Artist Vars 12_instruction: Orain, algoritmoa berregin eta 150 pixeleko aldeak dituen pentagono bat sor dezazu.
       NEW Course 4 Artist Vars 2.5_instruction: 'Begira ezazu kodea, ikusi dezakezu "ezarri luzera" blokeak eta "luzera" blokeak batera lan nola egiten duten? Egikaritu eta ikusi ezazu martxan.'
@@ -1731,7 +1755,7 @@ eu:
         Lan paregabea azken ariketan,
         saia gaitezen berriro; egin dezagun marrazki bikain hau 60 pixeleko hexagonoz.
       NEW Course 4 Artist Vars 4_instruction: 'Saia gaitezen berriro. Luzera aldagaia alda al dezakezu diseinu eder hau hexagonoekin egiteko? Pista: 10en multiploa da.'
-      NEW Course 4 Artist Vars 6_instruction: "Marraz ezazu patroia \"luzera\" aldagaia leku egokian jarriz eta, ondoren, balio egokia ezarriz. (Pista: 10-en multiplo bat da).\r\n\r\nIkusten al duzu luzera behin bakarrik definitu duzula eta kodeak beti balio egokia erabiltzen duela?\r\n\r\n\r\n"
+      NEW Course 4 Artist Vars 6_instruction: "Marraz ezazu patroia \"luzera\" aldagaia leku egokian jarriz eta, ondoren, balio egokia ezarriz. (Pista: 10-en multiplo bat da).\\r\n\\r\nIkusten al duzu luzera behin bakarrik definitu duzula eta kodeak beti balio egokia erabiltzen duela?\\r\n\\r\n\\r\n"
       NEW Course 4 Bee For Loops 1_instruction: Begizta bat erabil ezazu loreen nektarra jasotzeko.
       NEW Course 4 Bee For Loops 10_instruction: 'Erabili zuren begiztaren "kontagailua" aldagaia mugimendu horizontalaren irismena kontrolatzeko.'
       NEW Course 4 Bee For Loops 10a_instruction: 'Erronkarako prest? begiztei buruz ikasi duzuna erabili arazo hau ebazteko. Gogoratu: Baliteke zure erantzuna birritan abiatu behar izatea pausu guztiez jabetu aurretik.'
@@ -1743,7 +1767,7 @@ eu:
       NEW Course 4 Bee For Loops 5 5_instruction: 'Ari al zara "for loop" aukera behar bezala ulertzen? Lor dezagun erleak beste nektar guztia biltzea.'
       NEW Course 4 Bee For Loops 5_instruction: For begizta bat ere erabil dezakezu kontaketa egiteko. Saia zaitez nektarra jasotzen 5 etik hasita beherantz zenbatuz, banaka-banaka.
       NEW Course 4 Bee For Loops 6_instruction: Begiztako azken zenbakia inkrementua deitzen da. Begizta exekutatzen den bakoitzean, aldagai zenbatzailea aldatu egiten da inkrementuaren balioaren arabera. Saia zaitez lore hauek biltzen inkrementu gisa 2 balioa erabiliz.
-      NEW Course 4 Bee For Loops 7_instruction: "Orain, nahas dezagun \"kontagailu\" aldagaia matematikako bloke batekin! Nola erabil dezakezu \"kontagailu\" aldagaia lorategi honetatik ibiltzeko, ahal den bloke kopururik txikiena erabiltzen? Zer egin behar duzu 3, 6, 9, 12, 15 nektar biltzeko oraingo honetan? Sekretua \"kontagailu\" aldagaian dago!\r\n\r\nGogoratu: zure begiztak goruntz kontatzen badu, inkrementua gehitzen zaio zure \"kontagailua\" aldagaiari urrats bakoitzean."
+      NEW Course 4 Bee For Loops 7_instruction: "Orain, nahas dezagun \"kontagailu\" aldagaia matematikako bloke batekin! Nola erabil dezakezu \"kontagailu\" aldagaia lorategi honetatik ibiltzeko, ahal den bloke kopururik txikiena erabiltzen? Zer egin behar duzu 3, 6, 9, 12, 15 nektar biltzeko oraingo honetan? Sekretua \"kontagailu\" aldagaian dago!\\r\n\\r\nGogoratu: zure begiztak goruntz kontatzen badu, inkrementua gehitzen zaio zure \"kontagailua\" aldagaiari urrats bakoitzean."
       NEW Course 4 Bee For Loops 8_instruction: |
         Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?
         
@@ -1756,7 +1780,7 @@ eu:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Nahi bezala jolasteko garaia da! Zure tresna kutxatxoan dituzun blokeekin diberti zaitez. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Erronka: zelan erabiliko zenuke "for loop" aktore bakoitza mugitu eta euren aktore zenbakia esateko eta gero pantailatik desagertzeko?'
       New Play Lab Project_instruction: Sortu zure istorio edota jokoa! Zure kodea proiektu eran gordeko da eta bertara bueltatu ahalko duzu nahi duzunean.
-      Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
@@ -1767,7 +1791,7 @@ eu:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
-      October15 bat_instruction: "Freeplay: Here are some functions to play with.  Can\nyou draw a bat?\r\n"
+      October15 bat_instruction: "Freeplay: Here are some functions to play with.  Can\nyou draw a bat?\\r\n"
       October15 ghost 1_instruction: |
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -1827,7 +1851,7 @@ eu:
         button and you should see at least one version. Each time you go back to a
         Big Game level you'll get a new record in your version history that you can
         revert back to.
-      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\\r\n\\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
       PDAlg Design Recipe Delete_instruction: |
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -1981,6 +2005,10 @@ eu:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee - Ryan_instruction: |
+        These clouds are bugging me! Some of the clouds
+        have flowers inside, and some don't. I should check each cloud, and only
+        get nectar from the flowers.
       Quantum Bee_instruction: |
         Purple flowers may have either 1 or 0 nectar, but
         you don't know which one! Be careful not to collect nectar from a purple
@@ -1988,10 +2016,16 @@ eu:
         the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu.
       Ryan - Bee Conditionals_instruction: Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen den ikusteko. Horrela bada, nektarra bildu dezakezu.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Hemen "patruila" izeneko funtzioa dago. 
         Aldatu katua 400 pixel gora mugitzeko eta gero 400 pixel behera.
-      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
+      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
         This butterfly is named Sam, and
         the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels
@@ -2115,7 +2149,7 @@ eu:
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
         classmates (Click to see full instructions)
-      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\\r\n\\r\nConstraints:\\r\n- Packets may contain\nonly 6 characters\\r\n- Packets may drop with small probability\\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the Internet Simulator,
         a Domain Name System (DNS) is provided for you and knows the IP addresses
@@ -2126,13 +2160,13 @@ eu:
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\r\n"
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\\r\n"
       U2L3 NetSim Hub Mode_instruction: |
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
         the message and response?
-      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
-      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\r\n\r\n"
+      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\\r\n\\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\\r\n\\r\n"
       U2L7 NetSim Need for Packets_instruction: |
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
@@ -2300,7 +2334,7 @@ eu:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -2370,7 +2404,7 @@ eu:
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\r\n"
+      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\\r\n"
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -2418,8 +2452,8 @@ eu:
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
         Write a program that simulates the rolling of
-        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
-        is something other than 7 or 11. (Click to see full instructions)
+        two dice. Roll the dice repeatedly until the sum of the dice is either 7 or
+        11.
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -2574,16 +2608,16 @@ eu:
       U3 - Practice Create Performance Task_instruction: |
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\r\n"
-      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\\r\n"
+      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\\r\n"
       U3 - Return Values - constrainTurtle_instruction: |
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -2619,12 +2653,12 @@ eu:
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -2638,7 +2672,7 @@ eu:
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -2763,7 +2797,7 @@ eu:
       U313 Two Buttons with Ids_instruction: |
         Predict what will happen. Once you've
         made a prediction, run the code to see what happens. (Click to see full instructions)
-      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto see full instructions)"
+      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\\r\n(Click\nto see full instructions)"
       U3L03 - draw step_instruction: |
         Write the drawStep function. (Click to see
         full instructions)
@@ -2975,7 +3009,7 @@ eu:
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
         button.
-      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
+      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\\r\n\\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
       U3L13 - Debug Id Problem_instruction: |
         Improve the button by choosing a descriptive
         and meaningful ID. (Click to see full instructions)
@@ -3149,8 +3183,10 @@ eu:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)
@@ -3267,7 +3303,7 @@ eu:
       U3L19 - DEMO up down count practice app_instruction: |
         Try out the demo app
         (Click to see full instructions)
-      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto foo to see the string change. \r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \r\n"
+      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \\r\nDo this: \\r\n1. Try changing the value assigned\nto foo to see the string change. \\r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \\r\n"
       U3L19 - fix the var name syntax error v2_instruction: |
         Fix the error and get
         it to print the value of both variables (Click to see full instructions)
@@ -3296,7 +3332,7 @@ eu:
         Add another variable called
         "lives" and set the value to 3. Print the value of the variable to the console.
         (Click to see full instructions)
-      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
+      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \\r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \\r\n\\r\n\\r\nGIF: U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |
         Set up the down button to
         decrease the value of count by 1 each time it is clicked. (Click to see full
@@ -3449,7 +3485,7 @@ eu:
         You are given the string "Wisdom begins
         with wonder." Use the string.substring(begin, end) function to print "begin"
         and "nder" to the console.
-      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\\r\nPrint the strings and their index to the console.\n"
       U3L25 String Parsing 6_instruction: |
         Write a function that takes a name (first
         last) and reorders it (last, first).
@@ -3494,7 +3530,7 @@ eu:
         right of the starting location. (Click to show full instructions)
       U4 - add createRecord to contacts App_instruction: |
         Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
@@ -3520,11 +3556,11 @@ eu:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)
@@ -3645,7 +3681,7 @@ eu:
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
       U4 - Objects - pullValues_instruction: |
-        Create an event handler for the "Add
+        Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |
@@ -3653,7 +3689,7 @@ eu:
         starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |
         Add code to your event handler
-        fro the "Add Contact" button so that when a new contact is added the inputs
+        for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
       U4 - Objects - showContact1_instruction: |
@@ -3673,21 +3709,21 @@ eu:
       U4 - Objects - writeWrap_instruction: |
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\r\n"
-      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\r\n"
-      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
-      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\r\n"
-      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\\r\n"
+      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\\r\n"
       U4 - ReadRecords - Contacts App 1_instruction: |
-        Write a function called "updateLocalData"
-        that copies the data in your database into your "contacts" global variable.
+        Use readRecords to copy the
+        data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |
-        Create a function called "refreshLocalData"
+        Create a function called refreshLocalData.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |
         Add a call to "refreshLocalData"
@@ -3708,8 +3744,8 @@ eu:
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: Txantiloia
-      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
-      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
+      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\\r\n\\r\n"
+      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\\r\n\\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
         We want to improve the user experience.
         Once they have submitted their data for storage, it would be nice to clear
@@ -3731,24 +3767,34 @@ eu:
       U4L15 Read Data 1_instruction: |
         Run the level and see what happens. Then edit
         the code to make it print a different column of information.
-      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
-      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
-      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\\r\n\\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
+      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\\r\n\\r\n"
+      U4L15 Read Data 4_instruction: "\\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - Final Project - Project Level_instruction: |
+        Build your final project here.
+        (Click to see full instructions)
+      U6 - updateRecord - Callback Success Parameter_instruction: |
+        Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
       U6 - updateRecord - Contacts - Edit event handler_instruction: |
-        (Click to see
-        full instructions)
-      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+        Write event
+        handlers for the Edit Contacts UI elements. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: |
+        Set up the UI elements
+        needed to edit contacts. (Click to see full instructions)
       U6 - updateRecord - Contacts - Save edited contact_instruction: |
-        (Click to
-        see full instructions)
-      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+        Use updateRecord
+        to store the user's edits in the database. (Click to see full instructions)
+      U6 - updateRecord - Default Block_instruction: |
+        Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
       U6 - updateRecord - Update Nonexistent Record_instruction: |
-        (Click to see full
-        instructions)
+        Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: 'Laba izkutuan dago bloke batzuen azpian. Blokeak suntsitu behar dituzu aurrera egin baino lehen. "Baldin" agindua erabilgarri izango zaizu hemen. Gehitu "mugitu aurrera" agindu bat leku egokian bloke horiek suntsitzeko.'
       Underground If Statements_instruction: 'Gauzak konplikatzen ari dira. 3 harri gorri suntsitu baina laban erori gabe. Erabili "baldin" agindua estaldu gabe uzten duzun labaren gainean galtzada-harriak jartzeko.'
       Underground Iron_instruction: Urtutako labaren gainean ibiltzea ez da ideia ona. Jarri galtzada-harriak zubi bat egiteko, ondoren suntsitu gutxienez bi burdin bloke.
-      Underground Mine in a Circle_instruction: "Bilatu moduren bat 5 diamante eta 7 harrigorri lortzeko! Saiatu errepikatu agindu baten barnean beste errepikatu agindu bat erabiltzen laukizuzen batean ibiltzeko.\r\n"
+      Underground Mine in a Circle_instruction: "Bilatu moduren bat 5 diamante eta 7 harrigorri lortzeko! Saiatu errepikatu agindu baten barnean beste errepikatu agindu bat erabiltzen laukizuzen batean ibiltzeko.\\r\n"
       Underground Mining Coal_instruction: Baliabide preziatuenak lurazpian aurkituko dituzu, baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
       Underground Test Level_instruction: Bildu mineral guztiak!
       Vigenere_instruction: Test

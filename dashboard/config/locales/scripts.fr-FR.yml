@@ -176,12 +176,12 @@
         course4:
           description_short: Les cours 2 et 3 sont nécessaires pour suivre le cours
             4.
-          description: Le cours 4 s'adresse aux élèves qui ont suivit les cours 2
-            et 3. Ils vont approfondir les sujets introduits dans les cours précédents
-            pour donner des solutions adaptables à des problèmes plus complexes. A
-            la fin de ce cours, les élèves créeront des histoires interactives et
-            des jeux, qu'ils pourront partager. Convient à partir du CM1 jusqu'à la
-            4è.
+          description: Ce 4ème cours s'adresse aux étudiants qui ont déjà réalisé
+            les cours 2 et 3. Les puzzles à réaliser sont d'une plus grande complexité,
+            et apprennent aux étudiants à combiner plusieurs concepts pour résoudre
+            des défis. Une fois ce cours achevé, les élèves seront capables de réaliser
+            des programmes qui mettront en avant de multiples compétences, comme l'utilisation
+            de boucles et de fonctions avec paramètres.
           'Artist: Variables': 'Artiste : Les variables'
           'Bee: For Loops': 'Abeille : Les boucles "pour"'
           title: Cours 4
@@ -658,6 +658,7 @@
           description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
+          title_short: CSP Unit 3
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
@@ -1024,6 +1025,7 @@
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Informatique en DP d'algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
@@ -1484,6 +1486,11 @@
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1599,6 +1606,7 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Labo Age de Glace
           description_short: Crée une histoire ou fais un jeu avec le Labo Age de
@@ -1741,6 +1749,7 @@
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4
@@ -1767,3 +1776,72 @@
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Apprendre la programmation fonctionnelle par l'algèbre
+          description: Apprendre la programmation fonctionnelle par l'algèbre
+          'Calc: Evaluation Blocks': 'Calc : Blocs d''évaluation'
+          'Eval: Strings and Images': 'Evaluation : Textes et des Images'
+          'Unplugged: Contracts': 'Activité débranchée : les contrats'
+          'Eval: Writing Contracts': 'Evaluation : Rédaction de contrats'
+          'Calc: Defining Variables': 'Calc : Définir les variables'
+          'Eval: Defining Functions': 'Eval : Définition de fonctions'
+          'Unplugged: The Design Recipe': 'Activité débranchée : les recettes de conception'
+          'Play Lab: Defining Functions': 'Labo : Définition de fonctions'
+          'Eval: Functions': 'Eval : fonctions'
+        AlgebraB:
+          title: Informatique en algèbre
+          description_short: Apprendre la programmation fonctionnelle par l'algèbre
+          description: Apprendre la programmation fonctionnelle par l'algèbre
+          'Unplugged: Video Games and Coordinate Planes': 'Activité débranchée : jeux
+            vidéo et les plans de coordonnées'
+          'Play Lab: Defining Variables (Big Game)': 'Labo : définir les variables
+            (grand jeu)'
+          'Play Lab: Animation (Big Game)': 'Labo : Animation (grand jeu)'
+          'Unplugged: Booleans': 'Activité débranchée : les booléens'
+          'Eval: Boolean Operators': 'Eval : Opérateurs Booléens'
+          'Play Lab: Booleans': 'Play Lab : Booléens'
+          'Play Lab: Boolean (Big Game)': 'Labo : les booléens (grand jeu)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Activité débranchée
+            : les conditions et fonctions par morceaux'
+          'Eval: Conditionals': 'Evaluation : instructions conditionnelles'
+          'Unplugged: Collision Detection and the Distance Formula': 'Activité débranchée
+            : la détection de collision et la formule de la distance'
+          'Play Lab: Collision Detection (Big Game)': 'Labo : détection de Collision
+            (grand jeu)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

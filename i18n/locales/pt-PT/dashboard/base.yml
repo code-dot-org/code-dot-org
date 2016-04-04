@@ -18,12 +18,14 @@ pt:
         locale: Idioma
         age: Idade
         gender: Género
-        edit_header: Edita os detalhes da conta
+        edit_header: Edita os detalhes da tua conta
         error:
           future: não pode estar no futuro
   hello: Olá mundo
-  welcome_back: 'Olá outra vez, %{name}'
+  welcome_back: 'Olá mais uma vez, %{name}'
   submit: OK
+  unsubmit: Remover submissão
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Adiciona um professor:'
@@ -39,13 +41,13 @@ pt:
   puzzle: Desafio
   trophies: Troféus
   courses: Cursos
-  unplugged_activity: Atividade off-line
+  unplugged_activity: Atividade offline
   of: de
   more: MAIS
   less: MENOS
   beta: beta
   try_hoc: 'Experimenta a Hora de Código >> '
-  try_k8intro: Experimente o nosso curso de Introdução às Ciências da Computação para o Ensino Básico (15-25 horas)
+  try_k8intro: Experimenta o nosso curso de introdução à Ciência da Computação para o Ensino Básico (15 a 25 horas)
   k8intro: Curso de Introdução às Ciências da Computação para Ensino Básico (15-25 horas)
   already_started: 'Já começaste? Retoma >> '
   demos: 'Administrador: Todas as demonstrações'
@@ -56,7 +58,7 @@ pt:
     sign_in_with: 'Iniciar sessão com o %{provider}'
     signed_in: Sessão iniciada!
     signed_out: 'Acabaste de terminar sessão no <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Usaste o %{provider} para iniciares sessão. <a href="%{url}">Clica aqui</a> para terminares sessão no %{provider}.'
+    sign_out_of: 'Usaste o %{provider} para iniciar sessão. <a href="%{url}">Clica aqui</a> para terminares sessão no %{provider}.'
     already_signedup: Já criaste uma conta?
     notyet_signedup: Ainda não criaste uma conta?
     google_oauth2: Google
@@ -92,19 +94,19 @@ pt:
     valid_password: Palavra-passe válida!
     invalid_password: A palavra-passe tem de ter, pelo menos, 6 caracteres
     mismatch_password: As duas palavras-passe que digitaste não correspondem
-    student_terms: "Concordo com os<a href='http://code.org/tos'>Termos de utilização</a> do Code.org. Se tiver menos de 13 anos, declaro, ao submeter este formulário, que tenho autorização dos meus pais para usar os serviços do Code.org.<br/>No caso dos alunos com menos de 13 anos, os respetivos endereços de e-mail são registados de forma a que não possamos entrar em contacto com eles."
-    teacher_terms: "Concordo com os<a href='http://code.org/tos'>Termos de utilização</a> do Code.org."
+    student_terms: "Concordo com os <a href='http://code.org/tos'>Termos de utilização</a> do Code.org. Se tiver menos de 13 anos, declaro, ao submeter este formulário, que tenho autorização dos meus pais para usar os serviços do Code.org.<br/>No caso dos alunos com menos de 13 anos, os respetivos endereços de e-mail não são registados, o que nos impede de entrar em contacto com eles."
+    teacher_terms: "Concordo com os <a href='http://code.org/tos'>Termos de utilização</a> do Code.org."
     additional_information: Precisamos de mais informações para continuarmos o processo de criação da conta.
   signin_form:
-    title: Já tem conta? Inicie a sessão
+    title: Já tens uma conta? Inicia sessão
     login: E-mail ou utilizador
     password: Palavra-passe
     remember: Manter sessão iniciada
     submit: Iniciar sessão
   signin:
-    try_heading: Queres programar sem criares uma conta?
-    try_hoc: Primeiro, experimente a Hora de Código
-    try_20hours: Experimente introdução de 20 horas às Ciências da Computação
+    try_heading: Queres programar sem teres de criar uma conta?
+    try_hoc: Primeiro, experimenta a Hora de Código
+    try_20hours: Experimenta o nosso curso de introdução à Ciência da Computação (20 horas)
   signinsection:
     welcome: '%{section_name} dá-te as boas-vindas'
     name: Escolha o nome de utilizador
@@ -207,9 +209,9 @@ pt:
     show: Mostrar
     edit: Editar
     edit_model: 'Editar %{model}'
-    update: Actualizar
+    update: Atualizar
     destroy: Eliminar
-    back: Voltar
+    back: Anterior
     confirm: Tens a certeza?
     created: '% {modelo} foi criado com êxito.'
     updated: '% {modelo} foi actualizado com sucesso.'
@@ -220,10 +222,10 @@ pt:
       finished_hoc: Terminei a minha Hora de Código
       sign_in_to_save: Inicia sessão para guardares o teu progresso
       free_play:
-        playlab: Desenvolver uma aplicação
+        playlab: Desenvolver uma aplicação Play Lab
         artist: Desenhar alguma coisa
-        calculate: Calculate Something
-        applab: Desenvolver uma aplicação
+        calculate: Calculate something
+        applab: Desenvolver uma aplicação App Lab
     user:
       classroom: Página inicial do Professor
       district_dashboard: Painel do distrito
@@ -238,7 +240,7 @@ pt:
     popup:
       progress_for_user: "progresso de %{name}'s"
       progress: O teu progresso
-      lines: 'Total de linhas de código: % {linhas}'
+      lines: 'Total de linhas de código: %{lines}'
       close: FECHAR
       mastery: Conceitos
       puzzle_map: Etapas
@@ -258,7 +260,7 @@ pt:
     students:
       dashboard: Vá para o painel de controle do professor
     user_not_found: O professor não foi encontrado.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    student_teacher_disassociated: 'Você removeu %{teacher_name} como seu professor.'
     panel:
       answer_viewer: Resposta
       student: Aluno
@@ -287,7 +289,7 @@ pt:
     title: Code Studio
     description: No Code Studio podes encontrar os cursos online do Code.org
     lines_of_code: '%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS'
-    lines_of_code_linebreak: '%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS %{students_count} MILHÕES DE ALUNOS'
+    lines_of_code_linebreak: '%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS POR %{students_count} MILHÕES DE ALUNOS'
     all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Planos das aulas
     signin_message: 'Já criaste uma conta? %{link}'
@@ -320,6 +322,7 @@ pt:
     heading_hoc2014: '<h2>A Hora de Código para</h2><h1>Todas as idades</h1>'
     heading_elementary: '<h2>Cursos de 20 horas para</h2><h1>Iniciantes (todas as idades)</h1>'
     heading_apps: '<h2>Diversão para</h2><h1>todos</h1>'
+    heading_tools: '<h2>Pronto para o próximo passo?</h2> <h1>Ferramentas de JavaScript para o ensino</h1>'
     heading_legacy: '<h2>O nosso curso acelerado para</h2><h1>Todas as idades</h1>'
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
@@ -328,7 +331,7 @@ pt:
   share:
     title: Aprende no Code Studio
     description: Todos podem aprender a programar. Constrói jogos, aplicações e desenhos com código.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Exprimenta uma Hora de Código!
   gender:
     male: Masculino
     female: Feminino
@@ -339,15 +342,15 @@ pt:
   footer:
     thank_you: 'Agradecemos aos <a href="https://code.org/about/donors">doadores</a>, <a href="https://code.org/about/partners">parceiros</a>, à <a href="https://code.org/about/team">nossa equipa</a>, aos produtores dos vídeos e aos <a href="https://code.org/about/advisors">professores</a> pelo apoio na criação do Code Studio.'
     help_from_html: Agradecemos aos engenheiros da Google, da Microsoft, do Facebook e do Twitter que nos ajudaram a criar estes materiais.
-    help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram a criar estes materiais.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    help_from_html_old: Os engenheiros da Google, da Microsoft, do Facebook e do Twitter ajudaram a criar estes materiais.
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados.<br />The Amazing World of Gumball é uma marca registada. &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logótipo do CODE e a Hora de Código&reg; são marcas registadas do Code.org.'
     copyright: Copyright
     more: Mais
     feedback: Fornecer feedback
-    translate: Ajuda-nos a traduzir para o teu idioma
+    translate: Traduções
     support: Suporte
     support_url: http://support.code.org
     tos_short: Termos
@@ -358,7 +361,7 @@ pt:
     built_on_code_studio: 'Construído no "Code Studio"'
     make_my_own_app: 'Fazer a minha própria "app"'
     how_it_works: Como funciona
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Exprimenta uma Hora de Código!
   reference_area:
     title: Precisas de ajuda?
     subtitle: Vê estes vídeos e sugestões
@@ -414,16 +417,22 @@ pt:
       current: Níveis atuais
       unused: Níveis por utilizar
   upsell:
+    applab:
+      title: Laboratório de aplicações
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Maiores de 13 anos
+      cta: Learn how
     hoc:
       title: Labirinto clássico
-      body: Experimente as noções básicas de ciência da computação. Milhões de pessoas já experimentaram.
+      body: Explora as noções básicas da Ciência da Computação. Milhões de pessoas já experimentaram.
     flappy:
       title: Flappy Bird
       body: Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!
     20-hour:
       title: Curso acelerado
       body: Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.
-      body_short: Aprenda os fundamentos da ciência da computação em uma versão acelerada dos cursos 2 a 4.
+      body_short: Aprende as bases da Ciência da Computação com a versão acelerada dos cursos 2 a 4.
     hoc2014:
       try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão beta
       try_frozen: O Artista com Anna e Elsa, do filme Frozen
@@ -455,10 +464,10 @@ pt:
   landing:
     prerelease: "Este curso está em sua versão <span class='betatext'>beta</span>. Isso significa que esta não é a versão final do curso, e ele está sujeito a revisões conforme os feedbacks são recebidos e as melhorias são feitas."
     prerelease_hoc2014: "Este tutorial está na versão <span class='betatext'>beta</span>. Ele está sujeito a revisões, conforme são recebidos feedbacks e melhorias são feitas."
-    feedback: Enviar comentários
     report_bug: Comunicar erro
     support: Obter ajuda
     support_url: //support.code.org
+    help_resources: Ajuda e recursos
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
@@ -466,6 +475,23 @@ pt:
     correct_body: A tua resposta está correta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Obrigado
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Obrigado
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Obrigado
+    wrong_body: Thank you for submitting answers.
+    correct_title: Obrigado
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Obrigado
+    wrong_body: Thank you for submitting answers.
+    correct_title: Obrigado
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Solução incorreta
     wrong_body: Sua solução não está correta. Tente novamente!
@@ -483,6 +509,8 @@ pt:
     placeholder: Insira sua resposta aqui
     open_response_title: Obrigado
     open_response_body: Obrigado por responderes!
+    correct_title: Certo
+    correct_body: A tua resposta está correta.
   dialog:
     ok: OK
     startover_title: Tens a certeza de que pretendes recomeçar?
@@ -515,7 +543,7 @@ pt:
           title: Flappy Bird
           description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!
         jigsaw:
-          title: Quebra-cabeça
+          title: Quebra-cabeças
           description: ""
         step:
           title: Avançar
@@ -532,10 +560,11 @@ pt:
   progress:
     not_started: por iniciar
     in_progress: em progresso
-    completed_too_many_blocks: concluído, muitos blocos
-    completed_perfect: concluído, perfeito
+    completed_too_many_blocks: concluído, mas com muitos blocos
+    completed_perfect: concluído, na perfeição
     furthest_level_attempted: tentativa para o nível mais avançado
     assessment: avaliação
+    submitted: submitted
   studio:
     courses_working_on: Cursos que estás a frequentar
     completed_courses: Cursos concluídos
@@ -592,3 +621,7 @@ pt:
           other: Outros
         detail: Por favor, dá-nos o máximo possível de detalhes relacionados com o conteúdo que estás a denunciar.
         acknowledge: 'Ao submeter esta informação, aceita que esta será tratada de acordo com os termos da nossa %{link_start_privacy}Política de Privacidade%{link_end} e dos %{link_start_tos}Termos de Utilização%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Procura por um ícone...
+      no_icons_found: Não foram encontrados ícones

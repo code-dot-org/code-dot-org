@@ -25,6 +25,8 @@
   hello: Ahoj svet
   welcome_back: Vitajte späť, %{name}
   submit: Odoslať
+  unsubmit: Neodoslať
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Pridať učiteľa:'
@@ -369,6 +371,8 @@
     heading_hoc2014: "<h2>Hodina kódovania pre</h2><h1>všetky vekové kategórie</h1>"
     heading_elementary: "<h2>20 hodín kurzov pre</h2><h1>Začiatočníkov (rôzneho veku)</h1>"
     heading_apps: "<h2>Zábava pre</h2><h1>všetkých</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Náš všeobecný kurz pre</h2><h1>Všetky vekové kategórie</h1>"
     your_gallery: Galéria
     no_primary_course: Vyskúšajte kurz v Štúdiu kódu
@@ -494,6 +498,15 @@
       current: Aktuálne úrovne
       unused: Nepoužité úrovne
   upsell:
+    applab:
+      title: Laboratórium aplikácií
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klasické bludisko
       body: Skúste základy informatiky. Milióny jej dali šancu.
@@ -545,10 +558,10 @@
       a vylepšení, ktoré sú vykonané.
     prerelease_hoc2014: Tento tutoriál je v <span class='betatext'> beta verzii</span>
       a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané.
-    feedback: Poskytnúť spätnú väzbu
     report_bug: Nahlásiť chybu
     support: Získať pomoc
     support_url: support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Nesprávna odpoveď
     wrong_body: Zadaná odpoveď je nesprávna.  Prosím skúste to znova!
@@ -556,6 +569,23 @@
     correct_body: To je správna odpoveď.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: "Ďakujeme"
+    wrong_body: Thank you for submitting an answer.
+    correct_title: "Ďakujeme"
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "Ďakujeme"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Ďakujeme"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "Ďakujeme"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Ďakujeme"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Nesprávne riešenie
     wrong_body: Zadané riešenie nie je správne.  Prosím skúste to znova!
@@ -575,6 +605,8 @@
     placeholder: Zadajte vašu odpoveď
     open_response_title: Vďaka
     open_response_body: "Ďakujeme za Vašu reakciu!"
+    correct_title: Správne
+    correct_body: To je správna odpoveď.
   dialog:
     ok: ok
     startover_title: Naozaj chceš začať odznova?
@@ -638,6 +670,7 @@
     completed_perfect: dokončené, super
     furthest_level_attempted: najvyššia dosiahnutá úroveň
     assessment: ocenenie
+    submitted: submitted
   studio:
     courses_working_on: Kurzy na ktorých pracujete
     completed_courses: Absolvované kurzy
@@ -705,3 +738,7 @@
         acknowledge: Odoslaním týchto informácií, beriete na vedomie, sa bude zaobchádzať
           v súlade s podmienkami %{link_start_privacy}Ochrana súkromia%{link_end}
           a %{link_start_tos}Podmienky používania%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

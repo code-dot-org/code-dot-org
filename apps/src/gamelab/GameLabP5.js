@@ -1,5 +1,8 @@
 'use strict';
+var gameLabSprite = require('./GameLabSprite');
+var gameLabGroup = require('./GameLabGroup');
 var assetPrefix = require('../assetManagement/assetPrefix');
+var GameLabGame = require('./GameLabGame');
 
 /**
  * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
@@ -7,6 +10,7 @@ var assetPrefix = require('../assetManagement/assetPrefix');
  */
 var GameLabP5 = function () {
   this.p5 = null;
+  this.gameLabGame = null;
   this.p5decrementPreload = null;
   this.p5eventNames = [
     'mouseMoved', 'mouseDragged', 'mousePressed', 'mouseReleased',
@@ -24,6 +28,7 @@ GameLabP5.baseP5loadImage = null;
  * Initialize this GameLabP5 instance.
  *
  * @param {!Object} options
+ * @param {!Function} options.gameLab instance of parent GameLab object
  * @param {!Function} options.onExecutionStarting callback to run during p5 init
  * @param {!Function} options.onPreload callback to run during preload()
  * @param {!Function} options.onSetup callback to run during setup()
@@ -35,32 +40,6 @@ GameLabP5.prototype.init = function (options) {
   this.onPreload = options.onPreload;
   this.onSetup = options.onSetup;
   this.onDraw = options.onDraw;
-
-  window.p5.prototype.setupGlobalMode = function () {
-    /*
-     * Copied code from p5 for no-sketch Global mode
-     */
-    var p5 = window.p5;
-
-    this._isGlobal = true;
-    // Loop through methods on the prototype and attach them to the window
-    for (var p in p5.prototype) {
-      if(typeof p5.prototype[p] === 'function') {
-        var ev = p.substring(2);
-        if (!this._events.hasOwnProperty(ev)) {
-          window[p] = p5.prototype[p].bind(this);
-        }
-      } else {
-        window[p] = p5.prototype[p];
-      }
-    }
-    // Attach its properties to the window
-    for (var p2 in this) {
-      if (this.hasOwnProperty(p2)) {
-        window[p2] = this[p2];
-      }
-    }
-  };
 
   // Override p5.loadImage so we can modify the URL path param
   if (!GameLabP5.baseP5loadImage) {
@@ -102,6 +81,180 @@ GameLabP5.prototype.init = function (options) {
     });
     this.pop();
   };
+
+  // Disable fullScreen() method:
+  window.p5.prototype.fullScreen = function (val) {
+    return false;
+  };
+
+  // Add new p5 methods:
+  window.p5.prototype.mouseDidMove = function () {
+    return this.pmouseX !== this.mouseX || this.pmouseY !== this.mouseY;
+  };
+
+  window.p5.prototype.mouseIsOver = function (sprite) {
+    if (!sprite) {
+      return false;
+    }
+
+    if (!sprite.collider) {
+      sprite.setDefaultCollider();
+    }
+
+    var mousePosition;
+    if (this.camera.active) {
+      mousePosition = this.createVector(this.camera.mouseX, this.camera.mouseY);
+    } else {
+      mousePosition = this.createVector(this.mouseX, this.mouseY);
+    }
+
+    if (sprite.collider instanceof this.CircleCollider) {
+      return window.p5.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
+    } else if (sprite.collider instanceof this.AABB) {
+      return mousePosition.x > sprite.collider.left()
+          && mousePosition.y > sprite.collider.top()
+          && mousePosition.x < sprite.collider.right()
+          && mousePosition.y < sprite.collider.bottom();
+    }
+
+    return false;
+  };
+
+  window.p5.prototype.mousePressedOver = function (sprite) {
+    return this.mouseIsPressed && this.mouseIsOver(sprite);
+  };
+
+  var styleEmpty = 'rgba(0,0,0,0)';
+
+  window.p5.Renderer2D.prototype.regularPolygon = function (sides, size, x, y, rotation) {
+    var ctx = this.drawingContext;
+    var doFill = this._doFill, doStroke = this._doStroke;
+    if (doFill && !doStroke) {
+      if(ctx.fillStyle === styleEmpty) {
+        return this;
+      }
+    } else if (!doFill && doStroke) {
+      if(ctx.strokeStyle === styleEmpty) {
+        return this;
+      }
+    }
+    if (sides < 3) {
+      return;
+    }
+    ctx.beginPath();
+    ctx.moveTo(x + size * Math.cos(rotation), y + size * Math.sin(rotation));
+    for (var i = 1; i < sides; i++) {
+      var angle = rotation + (i * 2 * Math.PI / sides);
+      ctx.lineTo(x + size * Math.cos(angle), y + size * Math.sin(angle));
+    }
+    ctx.closePath();
+    if (doFill) {
+      ctx.fill();
+    }
+    if (doStroke) {
+      ctx.stroke();
+    }
+  };
+
+  window.p5.prototype.regularPolygon = function (sides, size, x, y, rotation) {
+    if (!this._renderer._doStroke && !this._renderer._doFill) {
+      return this;
+    }
+    var args = new Array(arguments.length);
+    for (var i = 0; i < args.length; ++i) {
+      args[i] = arguments[i];
+    }
+
+    if (typeof rotation === 'undefined') {
+      rotation = -(Math.PI / 2);
+      if (0 === sides % 2) {
+        rotation += Math.PI / sides;
+      }
+    } else if (this._angleMode === this.DEGREES) {
+      rotation = this.radians(rotation);
+    }
+
+    // NOTE: only implemented for non-3D
+    if (!this._renderer.isP3D) {
+      this._validateParameters(
+        'regularPolygon',
+        args,
+        [
+          ['Number', 'Number', 'Number', 'Number'],
+          ['Number', 'Number', 'Number', 'Number', 'Number']
+        ]
+      );
+      this._renderer.regularPolygon(
+        args[0],
+        args[1],
+        args[2],
+        args[3],
+        rotation
+      );
+    }
+    return this;
+  };
+
+  window.p5.Renderer2D.prototype.shape = function () {
+    var ctx = this.drawingContext;
+    var doFill = this._doFill, doStroke = this._doStroke;
+    if (doFill && !doStroke) {
+      if(ctx.fillStyle === styleEmpty) {
+        return this;
+      }
+    } else if (!doFill && doStroke) {
+      if(ctx.strokeStyle === styleEmpty) {
+        return this;
+      }
+    }
+    var numCoords = arguments.length / 2;
+    if (numCoords < 1) {
+      return;
+    }
+    ctx.beginPath();
+    ctx.moveTo(arguments[0], arguments[1]);
+    for (var i = 1; i < numCoords; i++) {
+      ctx.lineTo(arguments[i * 2], arguments[i * 2 + 1]);
+    }
+    ctx.closePath();
+    if (doFill) {
+      ctx.fill();
+    }
+    if (doStroke) {
+      ctx.stroke();
+    }
+  };
+
+  window.p5.prototype.shape = function () {
+    if (!this._renderer._doStroke && !this._renderer._doFill) {
+      return this;
+    }
+    // NOTE: only implemented for non-3D
+    if (!this._renderer.isP3D) {
+      // TODO: call this._validateParameters, once it is working in p5.js and
+      // we understand if it can be used for var args functions like this
+      this._renderer.shape.apply(this._renderer, arguments);
+    }
+    return this;
+  };
+
+  window.p5.prototype.createGroup = function () {
+    return new this.Group();
+  };
+
+  // Override p5.createSprite so we can replace the AABBops() function and add
+  // some new methods that are animation shortcuts:
+  window.p5.prototype.createSprite = gameLabSprite.createSprite;
+
+  // Override p5.Group so we can override the methods that take callback
+  // parameters
+  var baseGroupConstructor = window.p5.prototype.Group;
+  window.p5.prototype.Group = gameLabGroup.Group.bind(null, baseGroupConstructor);
+
+  window.p5.prototype.gamelabPreload = function () {
+    this.p5decrementPreload = window.p5._getDecrementPreload.apply(this.p5, arguments);
+  }.bind(this);
+
 };
 
 /**
@@ -113,56 +266,21 @@ GameLabP5.prototype.resetExecution = function () {
     this.p5.remove();
     this.p5 = null;
     this.p5decrementPreload = null;
-
-    /*
-     * Copied code from various p5/p5play init code
-     */
-
-    // Clear registered methods on the prototype:
-    for (var member in window.p5.prototype._registeredMethods) {
-      delete window.p5.prototype._registeredMethods[member];
-    }
-    window.p5.prototype._registeredMethods = { pre: [], post: [], remove: [] };
-    delete window.p5.prototype._registeredPreloadMethods.gamelabPreload;
-
-    window.p5.prototype.allSprites = new window.Group();
-    window.p5.prototype.spriteUpdate = true;
-
-    window.p5.prototype.camera = new window.Camera(0, 0, 1);
-    window.p5.prototype.camera.init = false;
-
-    //keyboard input
-    window.p5.prototype.registerMethod('pre', window.p5.prototype.readPresses);
-
-    //automatic sprite update
-    window.p5.prototype.registerMethod('pre', window.p5.prototype.updateSprites);
-
-    //quadtree update
-    window.p5.prototype.registerMethod('post', window.updateTree);
-
-    //camera push and pop
-    window.p5.prototype.registerMethod('pre', window.cameraPush);
-    window.p5.prototype.registerMethod('post', window.cameraPop);
-
+    this.gameLabGame = null;
   }
 
   // Important to reset these after this.p5 has been removed above
   this.drawInProgress = false;
   this.setupInProgress = false;
-
-  window.p5.prototype.gamelabPreload = function () {
-    this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
-  }.bind(this);
 };
 
 /**
  * Instantiate a new p5 and start execution
  */
 GameLabP5.prototype.startExecution = function () {
-
-  /* jshint nonew:false */
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
+      this.gameLabGame = new GameLabGame(p5obj);
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
 
@@ -184,9 +302,17 @@ GameLabP5.prototype.startExecution = function () {
         // if looping is off, so we bypass the time delay if that
         // is the case.
         var epsilon = 5;
-        if (!this.loop ||
+        if (!this._loop ||
             time_since_last >= target_time_between_frames - epsilon) {
+
+          //mandatory update values(matrixs and stack) for 3d
+          if(this._renderer.isP3D){
+            this._renderer._update();
+          }
+
           this._setProperty('frameCount', this.frameCount + 1);
+          this._updateMouseCoords();
+          this._updateTouchCoords();
           this.redraw();
         } else {
           this._drawEpilogue();
@@ -197,10 +323,6 @@ GameLabP5.prototype.startExecution = function () {
         /*
          * Copied code from p5 _draw()
          */
-        this._updatePAccelerations();
-        this._updatePRotations();
-        this._updatePMouseCoords();
-        this._updatePTouchCoords();
         this._frameRate = 1000.0/(this._thisFrameTime - this._lastFrameTime);
         this._lastFrameTime = this._thisFrameTime;
 
@@ -211,11 +333,6 @@ GameLabP5.prototype.startExecution = function () {
         /*
          * Copied code from p5 _draw()
          */
-
-        //mandatory update values(matrixs and stack) for 3d
-        if(this._renderer.isP3D){
-          this._renderer._update();
-        }
 
         // get notified the next time the browser gives us
         // an opportunity to draw.
@@ -235,6 +352,9 @@ GameLabP5.prototype.startExecution = function () {
         if (typeof context.preload === 'function') {
           for (var f in this._preloadMethods) {
             context[f] = this._preloadMethods[f][f];
+            if (context[f] && this) {
+              context[f] = context[f].bind(this);
+            }
           }
         }
 
@@ -269,52 +389,51 @@ GameLabP5.prototype.startExecution = function () {
 
       }.bind(p5obj);
 
-      // Do this after we're done monkeying with the p5obj instance methods:
-      p5obj.setupGlobalMode();
+      p5obj.preload = function () {
+        // Create new camera.isActive() that maps to the readonly property:
+        p5obj.camera.isActive = function () {
+          return p5obj.camera.active;
+        };
 
-      window.preload = function () {
+        // Create new camera.x and camera.y properties to alias camera.position:
+        Object.defineProperty(p5obj.camera, 'x', {
+          enumerable: true,
+          get: function () {
+            return p5obj.camera.position.x;
+          },
+          set: function (value) {
+            p5obj.camera.position.x = value;
+          }
+        });
+
+        Object.defineProperty(p5obj.camera, 'y', {
+          enumerable: true,
+          get: function () {
+            return p5obj.camera.position.y;
+          },
+          set: function (value) {
+            p5obj.camera.position.y = value;
+          }
+        });
+
         // Call our gamelabPreload() to force _start/_setup to wait.
-        window.gamelabPreload();
-
-        /*
-         * p5 "preload methods" were modified before this preload function was
-         * called and substituted with wrapped version that increment a preload
-         * count and will later decrement a preload count upon async load
-         * completion. Since p5 is running in global mode, it only wrapped the
-         * methods on the window object. We need to place the wrapped methods on
-         * the p5 object as well before we marshal to the interpreter
-         */
-        for (var method in this.p5._preloadMethods) {
-          this.p5[method] = window[method];
-        }
-
+        p5obj.gamelabPreload();
         this.onPreload();
-
       }.bind(this);
-      window.setup = function () {
-        /*
-         * p5 "preload methods" have now been restored and the wrapped version
-         * are no longer in use. Since p5 is running in global mode, it only
-         * restored the methods on the window object. We need to restore the
-         * methods on the p5 object to match
-         */
-        for (var method in this.p5._preloadMethods) {
-          this.p5[method] = window[method];
-        }
 
+      p5obj.setup = function () {
         p5obj.createCanvas(400, 400);
+        p5obj.fill(p5obj.color(127, 127, 127));
 
         this.onSetup();
-
       }.bind(this);
 
-      window.draw = this.onDraw.bind(this);
+      p5obj.draw = this.onDraw.bind(this);
 
       this.onExecutionStarting();
 
     }.bind(this),
     'divGameLab');
-  /* jshint nonew:true */
 };
 
 /**
@@ -374,46 +493,70 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
   };
 };
 
-GameLabP5.prototype.getCustomMarshalObjectList = function () {
+GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
   return [
-    window.p5,
-    window.Sprite,
-    window.Camera,
-    window.Animation,
-    window.p5.Vector,
-    window.p5.Color,
-    window.p5.Image,
-    window.p5.Renderer,
-    window.p5.Graphics,
-    window.p5.Font,
-    window.p5.Table,
-    window.p5.TableRow,
-    window.p5.Element
+    '_userNode',
+    '_elements',
+    '_curElement',
+    'elt',
+    'canvas',
+    'parent',
+    'p5'
   ];
 };
 
-GameLabP5.prototype.getCustomMarshalModifiedObjectList = function () {
-
-  // The p5play Group object should be custom marshalled, but its constructor
-  // actually creates a standard Array instance with a few additional methods
-  // added. The customMarshalModifiedObjectList allows us to set up additional
-  // object types to be custom marshalled by matching both the instance type
-  // and the presence of additional method name on the object.
-  return [ { instance: Array, methodName: 'draw' } ];
+GameLabP5.prototype.getCustomMarshalObjectList = function () {
+  return [
+    { instance: GameLabGame },
+    {
+      instance: this.p5.Sprite,
+      methodOpts: {
+        nativeCallsBackInterpreter: true
+      }
+    },
+    // The p5play Group object should be custom marshalled, but its constructor
+    // actually creates a standard Array instance with a few additional methods
+    // added. We solve this by putting "Array" in this list, but with "draw" as
+    // a requiredMethod:
+    {
+      instance: Array,
+      requiredMethod: 'draw',
+      methodOpts: {
+        nativeCallsBackInterpreter: true
+      }
+    },
+    { instance: window.p5 },
+    { instance: this.p5.Camera },
+    { instance: this.p5.Animation },
+    { instance: window.p5.Vector },
+    { instance: window.p5.Color },
+    { instance: window.p5.Image },
+    { instance: window.p5.Renderer },
+    { instance: window.p5.Graphics },
+    { instance: window.p5.Font },
+    { instance: window.p5.Table },
+    { instance: window.p5.TableRow },
+  ];
 };
 
 GameLabP5.prototype.getGlobalPropertyList = function () {
 
   var propList = {};
+  var blockedProps = this.getCustomMarshalBlockedProperties();
 
-  // Include every property on the p5 instance in the global property list:
+  // Include every property on the p5 instance in the global property list
+  // except those on the custom marshal blocked list:
   for (var prop in this.p5) {
-    propList[prop] = [ this.p5[prop], this.p5 ];
+    if (-1 === blockedProps.indexOf(prop)) {
+      propList[prop] = [ this.p5[prop], this.p5 ];
+    }
   }
-  // And the Group constructor from p5play:
-  propList.Group = [ window.Group, window ];
-  // And also create a 'p5' object in the global namespace:
+
+  // Create a 'p5' object in the global namespace:
   propList.p5 = [ { Vector: window.p5.Vector }, window ];
+
+  // Create a 'Game' object in the global namespace:
+  propList.Game = [ this.gameLabGame, this ];
 
   return propList;
 };

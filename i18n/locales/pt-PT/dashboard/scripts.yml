@@ -28,7 +28,7 @@ pt:
           title: Curso 1
           Artist 2: Artista 2
           Happy Maps: Mapas felizes
-          Move it, Move it: Criando caminhos
+          Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Algoritmos da Vida Real: Plante uma Semente'
           Building a Foundation: Criar uma base
           Getting Loopy: Repetindo
@@ -43,7 +43,7 @@ pt:
           "Studio: Create a Story": 'Laboratório do Jogo: Criar uma História'
           "Artist: Loops": 'Artista: Ciclos'
           description_audience: Dos 4 aos 6 anos
-          description_short: Começar com o Curso 1, para os leitores principiantes.
+          description_short: O curso 1 é destinado às crianças que estão a aprender a ler.
         course2:
           The Maze: O Labirinto
           Suzi: Suzi
@@ -82,7 +82,7 @@ pt:
           "Maze: Sequence2": 'Labirinto: Sequência 2'
           "Artist: Nested Loops": 'Artista: Laços Aninhados'
           description_audience: Dos 6 aos 18 anos
-          description_short: O Curso 2 é destinado aos alunos que já sabem ler.
+          description_short: O curso 2 é destinado aos alunos que já sabem ler.
         course3:
           The Maze: O Labirinto
           "Studio: Create a Story": 'Laboratório do Jogo: Criar uma História'
@@ -133,7 +133,7 @@ pt:
           "Artist: Patterns": 'Artista: Padrões'
           Songwriting: Composição
           description_audience: Dos 8 aos 18 anos
-          description_short: O Curso 3 é uma continuação do Curso 2.
+          description_short: O curso 3 é a continuação do curso 2.
         playlab:
           title: Laboratório
           description: Crie uma história ou um jogo no Laboratório!
@@ -155,8 +155,8 @@ pt:
           Artist: Artista
           description_short: Use a programação para explorar a mágica e a beleza do gelo com Anna e Elsa.
         course4:
-          description_short: Os alunos do Curso 4 já deverão ter concluído os Cursos 2 e 3.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description_short: O curso 4 é destinado aos alunos que já concluíram os cursos 2 e 3.
+          description: Curso 4 foi projetado para estudantes que concluíram os Cursos 2 e 3. Os alunos aprenderão a resolver quebra-cabeças com maior complexidade e combinar vários conceitos, enquanto resolvem cada desafio. Após concluírem este curso, os alunos terão criado programas que mostram habilidades múltiplas, incluindo ciclos e funções com parâmetros. Recomendado para alunos do 4° ao 8° ano.
           "Artist: Variables": 'Artista: variáveis'
           "Bee: For Loops": 'Abelha: laços for'
           title: Curso 4
@@ -181,15 +181,15 @@ pt:
           Farmer Binary: 'Fazendeira: binário'
           Maze and Bee: Labirinto e abelha
           Artist Binary: 'Artista: binário'
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           Super Challenge - Variables: 'Super desafio - variáveis'
           Super Challenge - For Loops: 'Super desafio - For Loops'
           Super Challenge - Functions and Parameters: 'Super desafio - funções e parâmetros'
           Extreme Challenge - Comprehensive: 'Desafio extremo - abrangente'
         Course4pre:
           title: Pré-requisitos do curso 4
-          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
-          description: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
+          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os cursos 2 e 3.
+          description: Uma breve revisão dos conceitos para os alunos que não fizeram os cursos 2 e 3.
           Course 4 Prerequisite: Pré-requisitos do curso 4
           "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
@@ -323,7 +323,7 @@ pt:
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: Curso de introdução acelerada ao CS
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           description: Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.
           description_short: Este curso de 20 horas aborda os conceitos fundamentais de ciência da computação e programação nos cursos de 2 a 4.
           Introduction to Computer Science: Introdução à Ciência Computacional
@@ -360,7 +360,7 @@ pt:
           title: Eventos
           description: Eventos
           description_short: Eventos
-          Bounce: Pingue-pongue
+          Bounce: Bounce
           Studio: Studio
           Calc: Calc
           Eval: Eval
@@ -370,10 +370,10 @@ pt:
           description_short: Escreva seu próprio jogo no estilo Flappy Bird em menos de 10 minutos!
           Flappy Code: Flappy Bird
         jigsaw:
-          title: Quebra-cabeça
+          title: Quebra-cabeças
           description: Experimente nosso tutorial sobre quebra-cabeça
           description_short: Experimente nosso tutorial sobre quebra-cabeça
-          Jigsaw: Quebra-cabeça
+          Jigsaw: Quebra-cabeças
         step:
           title: Avançar
           description: Etapa do tutorial
@@ -416,8 +416,8 @@ pt:
           Puzzles: Puzzles
         course4pre:
           title: Pré-requisitos do curso 4
-          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
-          description: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
+          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os cursos 2 e 3.
+          description: Uma breve revisão dos conceitos para os alunos que não fizeram os cursos 2 e 3.
           Course 4 Prerequisite: Pré-requisitos do curso 4
           "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
@@ -589,7 +589,8 @@ pt:
           description: Test Wednesday
         cspunit3:
           title: 'CSP Unit 3 - Programming'
-          description_short: Programming
+          title_short: CSP Unit 3
+          description_short: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: Funções
@@ -864,7 +865,7 @@ pt:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -899,14 +900,14 @@ pt:
           Big Game - Collision Detection: 'Big Game - Collision Detection'
           Free Play: Atividade livre
         allthethings:
-          Jigsaw: Quebra-cabeça
+          Jigsaw: Quebra-cabeças
           Maze: Labirinto
           Artist: Artista
           Bee: Abelha
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy Bird
-          Bounce: Pingue-pongue
+          Bounce: Bounce
           Multi: Multi
           Match: Match
           TextMatch: TextMatch
@@ -927,6 +928,7 @@ pt:
           Multi2: Multi2
           Markdown Details: Markdown Details
           Studio: Studio
+          Long assessment: Long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: combinado de estudos de verão'
@@ -1167,7 +1169,7 @@ pt:
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
           Happy Maps: Mapas felizes
-          Move it, Move it: Criando caminhos
+          Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Algoritmos da Vida Real: Plante uma Semente'
           Graph Paper Programming: Programação em Papel Quadriculado
           Building a Foundation: Criar uma base
@@ -1322,6 +1324,11 @@ pt:
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: 'Unit 6 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1382,7 +1389,7 @@ pt:
           Discover a Data Story: Discover a Data Story
           Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
           Welcome!: Olá!
@@ -1423,15 +1430,16 @@ pt:
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Laboratório de brincadeiras da Idade do gelo
           description_short: Criar uma história ou faz um jogo com o Laboratório de Jogar da Era do Gelo!
@@ -1553,6 +1561,7 @@ pt:
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+          The Cost of Free: The Cost of Free
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description_short: Support for CSP Unit 4
@@ -1576,3 +1585,64 @@ pt:
           Visualizing Data: Visualizing Data
           Updating Records: Updating Records
           Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          "Calc: Evaluation Blocks": 'Calc: Blocos de cálculo'
+          "Eval: Strings and Images": 'Eval: Strings e imagens'
+          "Unplugged: Contracts": 'Offline: contratos'
+          "Eval: Writing Contracts": 'Eval: Escrever contratos'
+          "Calc: Defining Variables": 'Cálculo: definir variáveis'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Offline: a receita de design'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Offline: video games e planos de coordenadas'
+          "Play Lab: Defining Variables (Big Game)": 'Laboratório: Definição de variáveis (O Grande Jogo)'
+          "Play Lab: Animation (Big Game)": 'Laboratório: Animação (O Grande Jogo)'
+          "Unplugged: Booleans": 'Offline: booleanos'
+          "Eval: Boolean Operators": 'Eval: Operadores booleanos'
+          "Play Lab: Booleans": 'Laboratório: booleanos'
+          "Play Lab: Boolean (Big Game)": 'Laboratório: Booleano (O Grande Jogo)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Offline: condicionais e funções definidas por partes'
+          "Eval: Conditionals": 'Eval: Condicionais'
+          "Unplugged: Collision Detection and the Distance Formula": 'Offline: deteção de colisão e fórmula da distância'
+          "Play Lab: Collision Detection (Big Game)": 'Laboratório: Deteção de colisão (O Grande Jogo)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

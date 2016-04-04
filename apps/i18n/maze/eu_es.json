@@ -18,6 +18,7 @@
   "fillTooltip": "kokatu lur unitate bat",
   "finalLevel": "Zorionak! Amaierako puzlea ebatzi duzu.",
   "flowerEmptyError": "Lore honek ez du nektar gehiago.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "jaso",
   "heightParameter": "Altuera",
   "holePresent": "Zulo bat dago",
@@ -81,6 +82,5 @@
   "whileTooltip": "Errepikatu barruko ekintzak bukaerako puntua eskuratu arte.",
   "word": "Bilatu hitza",
   "yes": "Bai",
-  "youSpelled": "Idatzi duzu",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Idatzi duzu"
 }

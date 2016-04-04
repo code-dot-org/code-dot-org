@@ -24,6 +24,8 @@
   hello: Ahoj světe
   welcome_back: Vítej zpět, %{name}
   submit: Odeslat
+  unsubmit: Neodesláno
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Přidat učitele:'
@@ -366,6 +368,8 @@
     heading_elementary: "<h2>20 hodinové kurzy pro</h2> <h1>Základy počítačové vědy
       (všechny věkové kategorie)</h1>"
     heading_apps: "<h2>Zábava pro</h2> <h1>kohokoliv</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Náš všeobecný kurz pro</h2><h1>Všechny věkové kategorie</h1>"
     your_gallery: Galerie
     no_primary_course: Zkuste Code Studio kurz
@@ -481,6 +485,15 @@
       current: Současné úrovně
       unused: Nepoužívané úrovně
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klasické bludiště
       body: Zkuste základy informatiky. Miliony lidí to už zkusili.
@@ -531,10 +544,10 @@
       že to není finální verze kurzu a je předmětem úprav podle zpětné vazby a vylepšeních.
     prerelease_hoc2014: Tento výukový kurz je v <span class='betatext'> beta verzi</span>.  To
       je předmětem uprav po obdržení zpětné vazby a vylepšeních.
-    feedback: Poskytnout zpětnou vazbu
     report_bug: Nahlásit chybu
     support: Získat pomoc
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Nesprávná odpověď
     wrong_body: Odpověď, kterou jste zadali, není správné.  Opakujte akci!
@@ -542,6 +555,23 @@
     correct_body: To je správná odpověď.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Děkuji
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Děkuji
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Děkuji
+    wrong_body: Thank you for submitting answers.
+    correct_title: Děkuji
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Děkuji
+    wrong_body: Thank you for submitting answers.
+    correct_title: Děkuji
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Nesprávné řešení
     wrong_body: "Řešení, které jste zadali, není správné.  Opakujte akci!"
@@ -561,6 +591,8 @@
     placeholder: Zadejte svou odpověď zde
     open_response_title: Děkujeme
     open_response_body: Děkujeme za odpověď!
+    correct_title: Správně
+    correct_body: To je správná odpověď.
   dialog:
     ok: OK
     startover_title: Jste si jisti, že chcete začít znovu?
@@ -623,6 +655,7 @@
     completed_perfect: dokončeno, perfektní
     furthest_level_attempted: pokus o další úroveň
     assessment: hodnocení
+    submitted: submitted
   studio:
     courses_working_on: Kurzy, na kterých právě pracuješ
     completed_courses: Dokončené kurzy
@@ -689,3 +722,7 @@
         acknowledge: Poskytnutím těchto informací potvrzujete, že bude zpracována
           v souladu s podmínkami %{link_start_privacy}zásad ochrany osobních údajů%{link_end}
           a %{link_start_tos}podmínek služeb%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

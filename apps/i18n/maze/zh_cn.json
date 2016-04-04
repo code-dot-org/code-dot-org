@@ -18,6 +18,7 @@
   "fillTooltip": "填充1单位的土",
   "finalLevel": "恭喜你！你完成了最后一个谜题。",
   "flowerEmptyError": "你呆的这朵花里没有更多的花蜜。",
+  "didNotCollectEverything": "请确保您没有遗漏任何花蜜或者蜂蜜！",
   "get": "获得",
   "heightParameter": "高度",
   "holePresent": "地上有一个坑",
@@ -81,6 +82,5 @@
   "whileTooltip": "重复所包含的操作直到完成。",
   "word": "找到一个单词",
   "yes": "是",
-  "youSpelled": "你拼写的",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "你拼写的"
 }

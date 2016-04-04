@@ -25,6 +25,8 @@
   hello: Sveika, pasaule
   welcome_back: Laipni lūdzu atpakaļ, %{name}
   submit: Iesniegt
+  unsubmit: Atcelt iesniegšanu
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Pievienot skolotāju:'
@@ -362,6 +364,8 @@
     heading_hoc2014: "<h2>Programmēšanas stunda</h2><h1>visiem vecumiem</h1>"
     heading_elementary: "<h2>20 stundu kurss</h2><h1>visu vecumu iesācējiem</h1>"
     heading_apps: "<h2>Izklaide </h2><h1>visiem</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>"
     your_gallery: Galerija
     no_primary_course: Izmēģināt Code Studio kursu
@@ -477,6 +481,15 @@
       current: Pašreizējie līmeņi
       unused: Neizmantotie līmeņi
   upsell:
+    applab:
+      title: Aplikāciju laborotorija
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Programmēšanas stunda
       body: Mēģini datorzinātņu pamatus. Miljoniem ir mēģinājuši.
@@ -529,10 +542,10 @@
       saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti."
     prerelease_hoc2014: "Šī pamācība ir <span class='betatext'>beta</span >stadijā.
       Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes."
-    feedback: Sniegt atsauksmes
     report_bug: Kļūdas ziņojums
     support: Saņemt palīdzību
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Nepareiza atbilde
     wrong_body: Ievadītā atbilde ir nekorekta. Lūdzu mēģini vēlreiz!
@@ -540,6 +553,23 @@
     correct_body: Tā ir pareizā atbilde.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Paldies
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Paldies
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Paldies
+    wrong_body: Thank you for submitting answers.
+    correct_title: Paldies
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Paldies
+    wrong_body: Thank you for submitting answers.
+    correct_title: Paldies
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Nepareizs risinājums
     wrong_body: Ievadītais risinājums nav pareizs. Lūdzu mēģini vēl!
@@ -559,6 +589,8 @@
     placeholder: Ievadi savu atbildi šeit
     open_response_title: Thanks
     open_response_body: Thanks for your response!
+    correct_title: Pareizi
+    correct_body: Tā ir pareizā atbilde.
   dialog:
     ok: Labi
     startover_title: Vai esat pārliecināts, ka vēlaties sākt no jauna?
@@ -622,6 +654,7 @@
     completed_perfect: pabeigts, ideāli
     furthest_level_attempted: tālākais līmenis mēģināts
     assessment: assessment
+    submitted: submitted
   studio:
     courses_working_on: Kursi, pie kuriem tu strādā
     completed_courses: Pabeigtie kursi
@@ -691,3 +724,7 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

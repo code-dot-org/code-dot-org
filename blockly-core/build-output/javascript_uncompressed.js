@@ -64,21 +64,21 @@ Blockly.JavaScript.translateVarName = function(a) {
   var b = Blockly.JavaScript.variableDB_.getName(a, Blockly.Variables.NAME_TYPE);
   return Blockly.varsInGlobals ? Blockly.JavaScript.variableDB_.checkSpecificType(a, Blockly.Variables.NAME_TYPE, Blockly.Variables.NAME_TYPE_LOCAL) ? b : "Globals." + b : b
 };
-Blockly.JavaScript.scrub_ = function(a, b) {
+Blockly.JavaScript.scrub_ = function(a, b, c) {
   if(null === b) {
     return""
   }
-  var c = "";
+  var d = "";
   if(!a.outputConnection || !a.outputConnection.targetConnection) {
-    var d = a.getCommentText();
-    d && (c += Blockly.Generator.prefixLines(d, "// ") + "\n");
-    for(var e = 0;e < a.inputList.length;e++) {
-      a.inputList[e].type == Blockly.INPUT_VALUE && (d = a.inputList[e].connection.targetBlock()) && (d = Blockly.Generator.allNestedComments(d)) && (c += Blockly.Generator.prefixLines(d, "// "))
+    var e = a.getCommentText();
+    e && (d += Blockly.Generator.prefixLines(e, "// ") + "\n");
+    for(var g = 0;g < a.inputList.length;g++) {
+      a.inputList[g].type == Blockly.INPUT_VALUE && (e = a.inputList[g].connection.targetBlock()) && (e = Blockly.Generator.allNestedComments(e)) && (d += Blockly.Generator.prefixLines(e, "// "))
     }
   }
-  e = a.nextConnection && a.nextConnection.targetBlock();
-  e = this.blockToCode(e);
-  return c + b + e
+  a = a.nextConnection && a.nextConnection.targetBlock();
+  c = this.blockToCode(a, c);
+  return d + b + c
 };
 Blockly.JavaScript.colour = {};
 Blockly.JavaScript.colour_picker = function() {

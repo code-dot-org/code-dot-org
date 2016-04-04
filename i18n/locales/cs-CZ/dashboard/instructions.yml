@@ -52,7 +52,7 @@ cs:
       2-3 Artist Loops 6_instruction: Přidej ještě jeden pohyb a další otočku uvnitř cyklu a uvidíš, jak se změní tvůj návrh.
       2-3 Artist Loops 7_instruction: 'Můžeme použít cykly na všechny druhy mnohoúhelníků.  Umíš vytvořit kosočtverec uvnitř tohoto šestiúhelníku?'
       2-3 Artist Loops 8_instruction: Teď dáme oba prvky dovnitř cyklu.
-      2-3 Artist Loops 9_instruction: "Zopakujeme stejné prvky, ale musíme nyní přidat určité vzdálenosti mezi nimi. \r použij stejný kód jako dříve, ale přidej krok vpřed na konec vnějšího cyklu."
+      2-3 Artist Loops 9_instruction: "Zopakujeme stejné prvky, ale musíme nyní přidat určité vzdálenosti mezi nimi. \\r použij stejný kód jako dříve, ale přidej krok vpřed na konec vnějšího cyklu."
       2-3 Artist Loops New 1_instruction: Nakresleme hlavu tohoto robota! Dokážeš vytvořit čtverec o straně 100 pixelů?
       2-3 Artist Loops New 10_instruction: Spojme svazek dohromady kreslením v cyklu.
       2-3 Artist Loops New 11_instruction: Tentokrát to nakreslíme 24 krát. Do tohoto kódu přidej 30 stupňů doleva a dej všechno do bloku opakování.
@@ -68,7 +68,7 @@ cs:
       2-3 Artist Match Rho Pic_instruction: 'Porovnání: Dokonči chybějící kód.'
       2-3 Artist Match Sq Pic_instruction: 'Porovnání: Dokonči chybějící kód'
       2-3 Artist Match Tri pic_instruction: 'Odsouhlasení: Vyplň chybějící kód.'
-      2-3 Artist Nested Loops 1_instruction: "Už jsi použil cykly pro kreslení tvarů předtím, ale věděl jsi, že můžeš dát cyklus do jiného cyklu?\r Zopakuj tento celý blok kódu 3 krát, abys nakreslil vzor."
+      2-3 Artist Nested Loops 1_instruction: "Už jsi použil cykly pro kreslení tvarů předtím, ale věděl jsi, že můžeš dát cyklus do jiného cyklu?\\r Zopakuj tento celý blok kódu 3 krát, abys nakreslil vzor."
       2-3 Artist Nested Loops 10_instruction: Opakuj tento kód 12 krát k dokončení vzoru.
       2-3 Artist Nested Loops 11_instruction: Opakovat tento kód 4 krát k dokončení vzoru, otoč o 90 ° po každém průchodu.
       2-3 Artist Nested Loops 12_instruction: Opakovat tento kód 12 krát dokončit kudrlinek.
@@ -82,7 +82,7 @@ cs:
       2-3 Artist Nested Loops 9_instruction: Dokončíme tento obrázek přidáním květ. Cykluj kosodélník 12 krát k nakreslení tvé květiny.
       2-3 Artist Nested Loops Free Play_instruction: Zahraj si zdarma, nakresli něco cool s vnořenými cykly.
       2-3 Bee Conditionals 1_instruction: Ahoj! Já jsem včela. Pomoz mi dostat nektar z květu.
-      2-3 Bee Conditionals 10_instruction: "Fialové květiny mohou mít 0 nebo 1 nektar. Buď opatrný abys nesbíral nektar z květin, které jej nemají. \r\n"
+      2-3 Bee Conditionals 10_instruction: "Fialové květiny mohou mít 0 nebo 1 nektar. Buď opatrný abys nesbíral nektar z květin, které jej nemají. \\r\n"
       2-3 Bee Conditionals 11_instruction: Sbírej nektar, kde květy mají nektar.
       2-3 Bee Conditionals 12_instruction: Použij cyklus ke kontrole a sběru nektaru ze všech těchto květin.
       2-3 Bee Conditionals 13_instruction: 'Sbírej nektar a udělej med. Rada: co se stane, když používáš "if nektar" na červený květ? Můžeš to dokončit s cyklem?'
@@ -235,6 +235,11 @@ cs:
       4-5 Artist For Loops 13_instruction: 'Tento návrh začal bez cyklu "pro" a bere až příliš mnoho bloků.  Použijte blok "for" k dokončení spirály.  Rada: Délka poslední linky je 250 pixelů.'
       4-5 Artist For Loops 14_instruction: 'Někdo začal kód, ale pak si uvědomil, že musí být rychlejší způsob! Použij blok "for" k nahrazení bloků a dokonči trojúhelníkovou spirálu. (Rada: Délka poslední linky je 300 pixelů.)'
       4-5 Artist For Loops 15_instruction: 'Někdo začal kód, ale pak si uvědomil, že musí být rychlejší způsob! Použij blok "for" k nahrazení bloků a dokonči šestihrannou spirálu. (Rada: Délka poslední linky je 200 pixelů.)'
+      4-5 Artist For Loops 2_instruction: |
+        This is a "for" block. Instead of typing
+        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
+        numbers for you. Place the number 10 into the "to" section of the "for"
+        block.
       4-5 Artist For Loops 3_instruction: 'Jak můžeš počítat od 1 do 50? Uprav blok "for".'
       4-5 Artist For Loops 4_instruction: 'Dokonči blok "for" tak, aby počítal od 1 do 10 po 1.'
       4-5 Artist For Loops 6_instruction: 'Nakresli čtverce o stranách 50, 60, 70, 80 a 90 pixelů. Budeš potřebovat pětkrát použít funkci "nakreslit čtverec".'
@@ -361,7 +366,6 @@ cs:
       4-5 Maze 9_instruction: 'Vytvoř smyčku s blokem "opakovat do".'
       4-5 Maze Assessment 1_instruction: 'Zhodnocení: Dostaň se ke slunečnici.'
       4-5 Maze Conditionals 1_instruction: Použij bloku opakování až do dostat zombie ke slunečnici.
-      4-5 Maze Conditionals 10_instruction: Dokážeš přidat jen 3 bloky a vyřešit složitější bludiště? Pokud to uděláš správně, mohu jít všemi křivolakými cestami bez ohledu na délku.
       4-5 Maze Conditionals 2_instruction: Použij bloku opakování až do dostat zombie ke slunečnici.
       4-5 Maze Conditionals 3_instruction: 'Použij blok "if" abych se rozhodoval, kdy se otočit. Rada: stačí ti pouze jeden další blok, ale naučit se, jak jsme ti to nachystali, aby si to příště dokázal sám.'
       4-5 Maze Conditionals 4_instruction: 'Dobře, tohle je stejné jako předchozí puzzle, ale musíš si pamatovat, jak jsi použil dohromady bloky "if" a "opakovat".'
@@ -376,7 +380,7 @@ cs:
       4-5 Nested Loops 11_instruction: Umíš nakreslit těchto 10 čtverců na tomto chodníku pomocí vnořených cyklů? Každý čtverec je 30 pixelů.
       4-5 Nested Loops 12_instruction: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených cyklů?
       4-5 Nested Loops 2_instruction: 'Nyní vnoř tento cyklus dovnitř dalšího cyklu k nakreslení 10 trojúhelníků.  Tomu se říká vnořené cykly.  Rada: Všech 10 trojúhelníků vytváří 360 stupňů otáčení.  '
-      4-5 Nested Loops 3_instruction: "Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \r\n"
+      4-5 Nested Loops 3_instruction: "Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \\r\n"
       4-5 Nested Loops 5_instruction: Zacykluj daný kód k vytvoření větrného mlýnu.
       4-5 Nested Loops 6_instruction: Umíš nakreslit šestiúhelník opakováním kódu trojúhelníku?
       4-5 Nested Loops 7_instruction: 'Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)'
@@ -420,6 +424,11 @@ cs:
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
       App Lab test_instruction: otestuj
+      Applab allthethings onRecordEvent_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
@@ -441,7 +450,7 @@ cs:
         Now nest this loop inside another loop
         to draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
         complete a 360 degree rotation.  
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\r\n"
+      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\\r\n"
       Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
       Artist - Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the
@@ -709,7 +718,7 @@ cs:
         function called cube - this function should take in a Number and return that
         number to the power of 3. Make sure to write two example cases! When you're
         done, use your new function to calculate cube(7).
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function sales which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -722,7 +731,7 @@ cs:
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
-      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Calc Rocket 1_instruction: |
         In the last puzzle you wrote a contract for the
         function rocket-height that states it has a range of Number, domain of Number,
@@ -864,9 +873,9 @@ cs:
       Course 4 Artist 1_instruction: |
         Pomoz mi dokreslit mou krabičku. (Každá čára je dlouhá 300
         pixelů) 
-      Course 4 Artist 10_instruction: "Chceš-li vidět znova  pokyny! \r \r zde je kód pro zajímavé tvary.  Co se stane, když je opakuješ?   Všimni si, že se střídavě v tomto tvaru přidává až 420 stupňů, což znamená, že když tvůj umělec dodělá kreslení, bude čelem jiným směrem, než když jste začali.  Tento nový směr je přesně o 60 stupňů vpravo od toho,  kde jste začali."
+      Course 4 Artist 10_instruction: "Chceš-li vidět znova  pokyny! \\r \\r zde je kód pro zajímavé tvary.  Co se stane, když je opakuješ?   Všimni si, že se střídavě v tomto tvaru přidává až 420 stupňů, což znamená, že když tvůj umělec dodělá kreslení, bude čelem jiným směrem, než když jste začali.  Tento nový směr je přesně o 60 stupňů vpravo od toho,  kde jste začali."
       Course 4 Artist 11_instruction: 'Nyní výzva!  Tady je návrh, který využívá pouze bloky, které se již ukázaly.  Umíš zjistit, jak je znovu vytvořit?  Bez obav zkoušej metodou pokus a omyl. Neočekává se, že to bude perfektní napoprvé.  Chceš vidět další pokyny?  Klepni zde!'
-      Course 4 Artist 12_instruction: "Chceš druhý impulz na inspiraci návrhu nebo tipy?  Klepni sem! \r \r, jinak udělej návrh zcela sám!"
+      Course 4 Artist 12_instruction: "Chceš druhý impulz na inspiraci návrhu nebo tipy?  Klepni sem! \\r \\r, jinak udělej návrh zcela sám!"
       Course 4 Artist 13_instruction: 'Stále si hraješ?  Zde je prázdné plátno, kde si můžeš navrhnout cokoliv chceš!'
       Course 4 Artist 2_instruction: Dovedeš opakovat tento kód k nakreslení vyšedlého čtverce?
       Course 4 Artist 20_instruction: 'Stále si hraješ?  Zde je prázdné plátno, kde si můžeš navrhnout cokoliv chceš!'
@@ -876,10 +885,10 @@ cs:
       Course 4 Artist 6_instruction: 'Dokonči kód k nakreslení těchto trojúhelníků. Rada: Jsou to 3 trojúhelníky v rozsahu otáčení o 360 stupňů... kolikrát se 3 vejde do 360?'
       Course 4 Artist 7_instruction: 'Nyní vnoř tento cyklus dovnitř dalšího cyklu k nakreslení 10 trojúhelníků. Tomu se říká vnořený cyklus. Rada: Všech 10 trojúhelníků vytváří 360 stupňů otáčení.  '
       Course 4 Artist 8_instruction: Nakresli slunce opakováním tohoto celého bloku kódu.
-      Course 4 Artist 8a_instruction: "Nezapomeň na tento tvar?  Nyní umožníme  postavit bez udání bloky začít! \r Rada: existují 3 trojúhelníky v otáčení o 360 stupňů... kolikrát se 3 vejde do 360?"
+      Course 4 Artist 8a_instruction: "Nezapomeň na tento tvar?  Nyní umožníme  postavit bez udání bloky začít! \\r Rada: existují 3 trojúhelníky v otáčení o 360 stupňů... kolikrát se 3 vejde do 360?"
       Course 4 Artist 9_instruction: 'Opakuj tento návrh 10 krát a ujisti se, že je otočení mezi každým nakresleným tvarem. Zde je rada kolik budeš se muset obrátit: je to 360 děleno 10?'
-      Course 4 Artist Binary 1_instruction: "Zde je funkce přejímající binární řetězec 1 a 0 a pověřuje umělce, aby je sledoval  zleva doprava, od shora dolů.  Umělec vyplní čtverce, když vidí 1 a ignoruje čtverec s  0. \r \r Spusť tento kód, aby si viděl, jak umělec používá binárity ke kreslení tohoto  vzoru."
-      Course 4 Artist Binary 1a_instruction: "Zde je funkce přejímající binární řetězec 1 a 0 a pověřuje umělce, aby je sledoval  zleva doprava, od shora dolů.  Umělec vyplní čtverce, když vidí 1 a ignoruje čtverec s  0. \r \r Spusť tento kód, aby si viděl, jak umělec používá binárity ke kreslení tohoto  vzoru."
+      Course 4 Artist Binary 1_instruction: "Zde je funkce přejímající binární řetězec 1 a 0 a pověřuje umělce, aby je sledoval  zleva doprava, od shora dolů.  Umělec vyplní čtverce, když vidí 1 a ignoruje čtverec s  0. \\r \\r Spusť tento kód, aby si viděl, jak umělec používá binárity ke kreslení tohoto  vzoru."
+      Course 4 Artist Binary 1a_instruction: "Zde je funkce přejímající binární řetězec 1 a 0 a pověřuje umělce, aby je sledoval  zleva doprava, od shora dolů.  Umělec vyplní čtverce, když vidí 1 a ignoruje čtverec s  0. \\r \\r Spusť tento kód, aby si viděl, jak umělec používá binárity ke kreslení tohoto  vzoru."
       Course 4 Artist Binary 2_instruction: Který z těchto binárních řetězců mohl bys opakovat 8 krát k nakreslení tohoto obrázku?
       Course 4 Artist Binary 3_instruction: Mohl bys nakreslit tento vzor opakováním tří číslicovým binárním řetězcem?
       Course 4 Artist Binary 4_instruction: Každý binární řetězec představuje jeden řádek tohoto obrázku. Lze je přeuspořádat, aby nakreslil smajlíka místo zamračeného obličeje?
@@ -887,21 +896,21 @@ cs:
       Course 4 Artist Binary 6_instruction: Jaký je nejkratší binární řetězec, který lze opakovat k nakreslení tohoto obrázku?
       Course 4 Artist Binary 7_instruction: Dokonči tuto kresbu.
       Course 4 Artist Binary Free Play 2_instruction: 'Pohraj si: Zde je prázdné plátno pro tebe, na které můžeš  čerpat.  Pobav se!'
-      Course 4 Artist Binary Free Play 2a_instruction: "Zde je vyšší rozlišení plátna na - 16 x 16 pixelů! \r \r je vidět, co se stane, když začneme být kreativní s bity?"
+      Course 4 Artist Binary Free Play 2a_instruction: "Zde je vyšší rozlišení plátna na - 16 x 16 pixelů! \\r \\r je vidět, co se stane, když začneme být kreativní s bity?"
       Course 4 Artist Binary Free Play 2b_instruction: Klepnutím sem se zobrazí pokyny.
       Course 4 Artist Binary Free Play_instruction: 'Volná hra: Nakresli, co chceš s binárními!'
-      Course 4 Artist Binary pre1_instruction: "Binární soubor je způsob, jak zobrazit informace pomocí jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0) a \"zapnuto\" (představované číslem 1).  \r \r Poskytli jsme mřížku \"pixelů\", které můžete procházet a udělat návrhy zapnutím pouze některých políček.  Můžete mít umělce, který nakreslí \"01010101\"  binárně v prvním řádku?"
-      Course 4 Artist Binary ryan_instruction: "Binární soubor je způsob, jak zobrazit informace pomocí jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0) a \"zapnuto\" (představované číslem 1).  \r \r Poskytli jsme mřížku \"pixelů\", které můžete procházet a udělat návrhy zapnutím pouze některých políček.  Můžete mít umělce, který nakreslí \"01010101\"  binárně v prvním řádku?"
+      Course 4 Artist Binary pre1_instruction: "Binární soubor je způsob, jak zobrazit informace pomocí jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0) a \"zapnuto\" (představované číslem 1).  \\r \\r Poskytli jsme mřížku \"pixelů\", které můžete procházet a udělat návrhy zapnutím pouze některých políček.  Můžete mít umělce, který nakreslí \"01010101\"  binárně v prvním řádku?"
+      Course 4 Artist Binary ryan_instruction: "Binární soubor je způsob, jak zobrazit informace pomocí jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0) a \"zapnuto\" (představované číslem 1).  \\r \\r Poskytli jsme mřížku \"pixelů\", které můžete procházet a udělat návrhy zapnutím pouze některých políček.  Můžete mít umělce, který nakreslí \"01010101\"  binárně v prvním řádku?"
       Course 4 Artist For  Functions 10_instruction: 'Pojďme to trochu zrychlit, můžeš nakreslit tvar hvězdy pomocí funkce "Kreslit čtvercovou linku"? Hodně zdaru!'
       Course 4 Artist For  Functions 11_instruction: 'Pojďme to trochu zrychlit, můžeš nakreslit tvar hvězdy pomocí funkce "Kreslit čtvercovou linku"? Hodně zdaru!'
       Course 4 Artist For Loops 1_instruction: 'Nakresli tento trojúhelník, který je široký 50 pixelů. Rada: použij blok opakování.'
       Course 4 Artist For Loops 10_instruction: Čas volné hry! Pobav se kreslením s bloky, které jsi se naučil používat
       Course 4 Artist For Loops 11_instruction: 'Připomeňme si fázi 6, když jsme použili proměnnou k řízení počtu stran v obrazci? Udělejme totéž s proměnnou "čítač". Tento vzor začíná s trojúhelníkem a přidává jednu stranu najednou, dokud se nenakreslí deseti-úhelník (10 stran). Každá strana bude dlouhá 100 pixelů. Rada: 360 děleno počtem stran, tvar má počet stupňů, podle kterého se otočí.'
-      Course 4 Artist For Loops 11a_instruction: "Dejme to všechno dohromady!  Pomocí znalostí o \"for cyklech\" a \"čítači\", vytvořte tuto kresbu, kde každý obrazec má o dvě strany více než ta poslední.  Ujistěte se, že každá strana je 10 krát dlouhá jako počet stran mnohoúhelníku. \r \r Velmi málo kódu jsme udělali za vás."
+      Course 4 Artist For Loops 11a_instruction: "Dejme to všechno dohromady!  Pomocí znalostí o \"for cyklech\" a \"čítači\", vytvořte tuto kresbu, kde každý obrazec má o dvě strany více než ta poslední.  Ujistěte se, že každá strana je 10 krát dlouhá jako počet stran mnohoúhelníku. \\r \\r Velmi málo kódu jsme udělali za vás."
       Course 4 Artist For Loops 12_instruction: 'Vypadalo to docela v pohodě, ale teď bych rád nakreslil každý tvar vedle posledního. Tentokrát je každá strana 20 pixelů. Použij blok skok vpřed 40 pixelů po každém tvaru. '
       Course 4 Artist For Loops 13_instruction: Hmmm tyto obrazce jsou čím dál pokaždé větší! Neměli jsme již vyřešit ten problém s proměnnými? Jak můžeme použít proměnné čítače, aby strany byly menší než jako jsou? Namísto přesunutí vpřed o stanovené množství, zkus přesunout vpřed (100 / počítadlo) pixelů.
       Course 4 Artist For Loops 14_instruction: Pokud otočíte ještě trochu více či méně, než byste normálně pro tvar, vytváří se pěkný efekt. Zkus použít kód z poslední úrovně, ale obracení o 89 stupňů vytváří zkroucenou čtvercovou spirálu.
-      Course 4 Artist For Loops 15_instruction: "Volná hra: Zkus některé vlastní  kresby pomocí For cyklů. Přidali jsme pár obecných proměnných za tebe k použití. \r \r Všimni si, že nyní je mnoho bloků ve tvém panelu nástrojů, které  musíme znova uspořádat do kategorií.  Klepněte na tlačítko kolem k objevení všech bloky, které můžeš  použít na této úrovni."
+      Course 4 Artist For Loops 15_instruction: "Volná hra: Zkus některé vlastní  kresby pomocí For cyklů. Přidali jsme pár obecných proměnných za tebe k použití. \\r \\r Všimni si, že nyní je mnoho bloků ve tvém panelu nástrojů, které  musíme znova uspořádat do kategorií.  Klepněte na tlačítko kolem k objevení všech bloky, které můžeš  použít na této úrovni."
       Course 4 Artist For Loops 2_instruction: 'Dal jsem kód pro kreslení uvnitř trojúhelníku for cyklus, která se počítá od 50 do 100 po 10.  Poznámka: Ujisti se, že se díváš na kód, než stiskneš "Run".'
       Course 4 Artist For Loops 3_instruction: |
         Použij poslední puzzle jako odkaz k dokončení tohoto.  Nejmenší trojúhelník má stranu 20 pixelů, největší má stranu 200 pixelu a každý trojúhelník je větší 20 pixelů než ten poslední.
@@ -911,26 +920,26 @@ cs:
       Course 4 Artist For Loops 6_instruction: Volná hra! Zkus použít for cyklus k nakreslení rostoucího tvaru vzorku vlastního návrhu.
       Course 4 Artist For Loops 6a_instruction: Udělej tři malé změny do kódu z poslední úrovni, abys to dosáhl!
       Course 4 Artist For Loops 7_instruction: 'Co se stane, pokud odebereš "Opakovat 3" z tohoto algoritmu, ponech bloky "posun" a "otočku" ve for cyklu? V tomto spirálovitém trojúhelníku každá strana je delší o 20 pixelů než poslední.'
-      Course 4 Artist For Loops 8_instruction: "Jen jedna malá změna kódu z posledního obrázku může vytvořit tuto kresbu. Můžeš zjistit, jaká je to změna? \r \r Rada: musíš něco odstranit!"
+      Course 4 Artist For Loops 8_instruction: "Jen jedna malá změna kódu z posledního obrázku může vytvořit tuto kresbu. Můžeš zjistit, jaká je to změna? \\r \\r Rada: musíš něco odstranit!"
       Course 4 Artist For Loops 8a_instruction: Jen jedna malá změna kódu z posledního obrázku může vytvořit tento obraz. Můžeš zjistit, jaká je to změna?
       Course 4 Artist For Loops 9_instruction: Umíš vytvořit spirálu? Přesuň se vpřed od 1 do 75 pixelů s krokem pokaždé 1 pixel.
-      Course 4 Artist For Loops Challenge_instruction: "Nevíš, jak využít všechny věci, co jsi se naučil k vytvoření tohoto obrázku? \r \r Potřebuješ radu? Klepni sem."
-      Course 4 Artist For Loops inspire_instruction: "Volná hra inspirace: Nyní už víš vše, co potřebuješ znát, abys udělal vzor jako je tento! Pokud tento obrázek tě inspiruje, pokus se provést něco podobného. Jinak, vytvoř něco podobného, ale vlastního. \r \r Potřebuješ radu? Klepni sem."
+      Course 4 Artist For Loops Challenge_instruction: "Nevíš, jak využít všechny věci, co jsi se naučil k vytvoření tohoto obrázku? \\r \\r Potřebuješ radu? Klepni sem."
+      Course 4 Artist For Loops inspire_instruction: "Volná hra inspirace: Nyní už víš vše, co potřebuješ znát, abys udělal vzor jako je tento! Pokud tento obrázek tě inspiruje, pokus se provést něco podobného. Jinak, vytvoř něco podobného, ale vlastního. \\r \\r Potřebuješ radu? Klepni sem."
       Course 4 Artist Functions 1_instruction: Umíš nakreslit čtverec délky 100 pixelů pomocí cyklu?
       Course 4 Artist Functions 10_instruction: Který blok je třeba přidat, abys dostal trojúhelník na vrchu čtverce?
       Course 4 Artist Functions 11_instruction: 'Zkontroluj tento kód, který kreslí krychli - umíš ji přesunout do funkce nazvanou "Kreslit krychli"'
       Course 4 Artist Functions 12.1_instruction: 'Vytvořme funkci nazvanou "nakreslit osmiúhelník 20", který nakreslí osmiúhelník se stranou dlouhou 20 pixelů.'
       Course 4 Artist Functions 12_instruction: Cyklicá čtvercová funkce k nakreslení čáry
-      Course 4 Artist Functions 13.1_instruction: "Nyní uděláme funkci zvanou \"Přejít na pravém horním rohu\", která přesunuje umělce na pravý horní osmiúhelník, který jsi nakreslil, takže můžeme dokončit tento vzor. \r \r Rada: dostat se do pravého horního rohu, zkus skákání ve vzorku, který dělá jen 3/8 osmiúhelníka."
+      Course 4 Artist Functions 13.1_instruction: "Nyní uděláme funkci zvanou \"Přejít na pravém horním rohu\", která přesunuje umělce na pravý horní osmiúhelník, který jsi nakreslil, takže můžeme dokončit tento vzor. \\r \\r Rada: dostat se do pravého horního rohu, zkus skákání ve vzorku, který dělá jen 3/8 osmiúhelníka."
       Course 4 Artist Functions 13_instruction: 'Zkontroluj, zda máme novou funkci nazvanou "nakreslit čáru čtverců". Neváhej se podívat dovnitř bloku funkce, abys viděl, jak jsme ji vytvořili. Klepni na "Run", když jsi připraven na další puzzle.'
       Course 4 Artist Functions 14.1_instruction: 'Nyní uděláme funkci nazvanou "Přejít nahoru vpravo", která přesune umělce na horním okraji nakresleného osmiúhelníku, takže můžeš dokončit tento vzor.'
       Course 4 Artist Functions 14_instruction: 'Děláš to skvěle! Využijme tvou novou funkci "Nakreslit čáru čtverců" k nakreslení čtvercového tvaru. Pamatuj si, že každý čtverec má délku 40 pixelů.'
       Course 4 Artist Functions 15_instruction: 'Pojďme to trochu zrychlit, umíš nakreslit tvar hvězdy pomocí funkce "nakreslit čáru čtverců"? Hodně zdaru! Rada: budeš muset otáčet o 144 stupňů'
       Course 4 Artist Functions 2_instruction: 'Umíš nakreslit 3 čtverce 20 pixelů od sebe? Rada: každý čtverec má velikost 100 pixelů'
-      Course 4 Artist Functions 3_instruction: "Použij funkční blok \"nakreslit čtverec\", umíš nakreslit obrázek? Rada: každý čtverec je od sebe 120 pixelů. \r\n"
+      Course 4 Artist Functions 3_instruction: "Použij funkční blok \"nakreslit čtverec\", umíš nakreslit obrázek? Rada: každý čtverec je od sebe 120 pixelů. \\r\n"
       Course 4 Artist Functions 4_instruction: 'Jsi připraven vytvořit si vlastní "funkční blok"? Klepni na blok "Funkce" v poli nástrojů, pojmenuj to "kreslit trojúhelník", pak vytvoř trojúhelník, jak jsi to dělal před tím bloky akce a cyklů. Klepni na tlačítko Uložit a Zavřít v pravém horním rohu. Rada: Vytvoř trojúhelník, který má délku 100 pixelů. Hodně zdaru!'
       Course 4 Artist Functions 5 OLD_instruction: 'Zkusme použít naše dvě funkce k nakreslení domu - co je třeba opravit v tomto kódu ke správnému nakreslení domu?'
-      Course 4 Artist Functions 5_instruction: "Použij funkční blok \"nakreslit čtverec\", umíš nakreslit obrázek? Rada: každý čtverec je od sebe 120 pixelů. \r\n"
+      Course 4 Artist Functions 5_instruction: "Použij funkční blok \"nakreslit čtverec\", umíš nakreslit obrázek? Rada: každý čtverec je od sebe 120 pixelů. \\r\n"
       Course 4 Artist Functions 6_instruction: Který blok je třeba přidat, abys dostal trojúhelník na vrchu čtverce?
       Course 4 Artist Functions 7_instruction: Umíš nakreslit čáru čtverců pomocí funkce čtverec? Každý čtverec má délku 40 pixelů.
       Course 4 Artist Functions 8_instruction: 'Dostáváš se na kloub, jak používat funkční bloky? Umíš upravit tento čtverec s rozměrem 200 pixelů. Rada: klepni na "upravit" ke změně velikosti editoru funkcí "nakreslit čtverec". Nezapomeň klepnout na "uložit a zavřít" v editoru funkcí. '
@@ -938,7 +947,7 @@ cs:
       Course 4 Artist Functions challenge_instruction: Klepnutím sem se zobrazí znova pokyny.
       Course 4 Artist Functions Inspiration_instruction: Klepnutím sem se zobrazí znova pokyny.
       Course 4 Artist Functions inspire_instruction: Klepni sem znova k zobrazení obrázku k inspiraci.
-      Course 4 Artist Inspire_instruction: "Chceš druhý impulz k inspiraci návrhu nebo tipy?  Klepni sem! \r \r, jinak udělej návrh zcela sám!"
+      Course 4 Artist Inspire_instruction: "Chceš druhý impulz k inspiraci návrhu nebo tipy?  Klepni sem! \\r \\r, jinak udělej návrh zcela sám!"
       Course 4 Artist Params 1_instruction: Musíme upravit funkci, která nakreslí čtverec se stranou 50 pixelů
       Course 4 Artist Params 10_instruction: 'Můžeš volat funkci uvnitř jiné funkce! Pomocí funkce "tvar" jako základ, vytvoř 3 tvary domu každý o 20 pixelů větší než poslední, začíná se na délce 50 pixelů. Použití čítače cyklu mohlo by být užitečné. '
       Course 4 Artist Params 11_instruction: |
@@ -971,14 +980,14 @@ cs:
       Course 4 Artist Vars 10_instruction: 'Zde je algoritmus, který kreslí trojúhelník z menších trojúhelníků. Umíš upravit jej tak, aby používal proměnnou "strany" ke kreslení trojúhelníka? Prohlédni si kód a pokaždé, když bude číslo 3, nahraď jej tvou proměnnou "strany". Nezapomeň použít blok "nastav strany".'
       Course 4 Artist Vars 11_instruction: 'Zde je složitější kód používající stejné pojmy z posledního puzzlu - jak by se měla nastavit proměnná "strany" k nakreslení tohoto obrázků ze čtverců?'
       Course 4 Artist Vars 12_instruction: 'Nastavíme proměnnou "strany" na 5. Čím více stran přidáme do tohoto algoritmu, tím větší dostaneme celý tento vzor! Všimni si, že existuje další proměnná "Délka". Můžeme teď toho využít všude tam, kde máme "posun vpřed." Nastav proměnnou "Délka" na 75 u tohoto obrazce.'
-      Course 4 Artist Vars 13_instruction: "Když tvar má spoustu stran, každá strana musí být kratší, když chcete celý vzor dostat na obrazovku. \r Pojďme znovu vytvořit algoritmus pro tento úžasný vzor, ale namísto ručního nastavení proměnné \"length\", použijeme matematický blok s proměnnou \"sides\" uvnitř. Ujisti se, že každý tvar se nastaví správně. Obvod každého mnohoúhelník je 300 pixelů. \r Potřebuješ poradit?  Klepni sem."
-      Course 4 Artist Vars 14_instruction: "Volná hra: Zkontroluj si to! Nyní tvůj algoritmus je vnořen do jednoho  dalšího cyklu. Experimentuj s hodnotami tvých dvou proměnných k nakreslení cool vzorů. \r \r Pro ještě větší efekt zkus si pohrát s barvou!  Použij náhodné barvy uvnitř cyklů, abys viděl, jak změní barvy tvůj návrh."
+      Course 4 Artist Vars 13_instruction: "Když tvar má spoustu stran, každá strana musí být kratší, když chcete celý vzor dostat na obrazovku. \\r Pojďme znovu vytvořit algoritmus pro tento úžasný vzor, ale namísto ručního nastavení proměnné \"length\", použijeme matematický blok s proměnnou \"sides\" uvnitř. Ujisti se, že každý tvar se nastaví správně. Obvod každého mnohoúhelník je 300 pixelů. \\r Potřebuješ poradit?  Klepni sem."
+      Course 4 Artist Vars 14_instruction: "Volná hra: Zkontroluj si to! Nyní tvůj algoritmus je vnořen do jednoho  dalšího cyklu. Experimentuj s hodnotami tvých dvou proměnných k nakreslení cool vzorů. \\r \\r Pro ještě větší efekt zkus si pohrát s barvou!  Použij náhodné barvy uvnitř cyklů, abys viděl, jak změní barvy tvůj návrh."
       Course 4 Artist Vars 2_instruction: 'Místo "posunout vpřed 150" blok "posunutí" se nyní odkazuje na proměnnou "Délka". Umíš nastavit "Délka" na 150 k nakreslení nového trojúhelníka?'
       Course 4 Artist Vars 3_instruction: 'Zde je cyklus kreslící čtverec, ale něco chybí. Umíš to opravit tak, že použiješ proměnnou "Délka" na vyřešení, jak by měla být dlouhá každá strana? '
       Course 4 Artist Vars 4_instruction: 'Nyní chci, aby obdélník, který je dvakrát tak vysoký jako je široký. Máme proměnnou "šířka", která má být nastavena na hodnotu 100. Umíš použít matematických bloků k dokončení kódu?'
       Course 4 Artist Vars 5_instruction: 'Použij proměnnou "strany" k řízení kolikrát tento cyklus proběhne.'
-      Course 4 Artist Vars 6_instruction: "Zde je kód, který umí nakreslit jakýkoliv pravidelný mnohoúhelník. Je tu nová proměnná pojmenovaná strany nastavená na 4. Umíš použít proměnnou strany (spolu s matematickým blokem) k vracení správné velikosti bez ohledu na to, kolik stran je v polygonu? \r \r klepnutím sem přejdi zpět k pokynu!"
-      Course 4 Artist Vars 7_instruction: "Použij to, co si se naučil v posledním puzzlu\nk vytvoření tohoto šestiúhelníku pomocí proměnné \"proměnné\".\r\n\r\nPodívej se, co by změnilo změnou právě jedné hodnoty ke kreslení \ntrojúhelníku, čtverce, pětiúhelníku nebo osmiúhelníku?"
+      Course 4 Artist Vars 6_instruction: "Zde je kód, který umí nakreslit jakýkoliv pravidelný mnohoúhelník. Je tu nová proměnná pojmenovaná strany nastavená na 4. Umíš použít proměnnou strany (spolu s matematickým blokem) k vracení správné velikosti bez ohledu na to, kolik stran je v polygonu? \\r \\r klepnutím sem přejdi zpět k pokynu!"
+      Course 4 Artist Vars 7_instruction: "Použij to, co si se naučil v posledním puzzlu\nk vytvoření tohoto šestiúhelníku pomocí proměnné \"proměnné\".\\r\n\\r\nPodívej se, co by změnilo změnou právě jedné hodnoty ke kreslení \ntrojúhelníku, čtverce, pětiúhelníku nebo osmiúhelníku?"
       Course 4 Artist Vars 8_instruction: 'Volná hra: Experiment s počtem stran, které má tento tvar. Umíš změnit algoritmus tak, aby celková velikost tvaru zůstala stejná, bez ohledu na to kolik stran má? Rada: Budeš muset použít matematické bloky (360 děleno "strany") tentokrát na dvou místech.'
       Course 4 Artist Vars 9_instruction: 'Uprav tento algoritmus, takže používá proměnnou "strany" místo pevného čísla k nakreslení trojúhelníku. Nezapomeň použít blok "nastavení stran na".'
       Course 4 Bee 1_instruction: 'Včela neumí říct, co je pod mrakem! Nejprve pomocí bloku "if" se zkontroluje, zda je to květina nebo plástev. Pak sesbírá nektar jen z květiny. '
@@ -1050,26 +1059,26 @@ cs:
         Tentokrát, zkusme počítat
         lichá čísla od 1 do 100.
       Course 4 Play Lab Params 1_instruction: 'Zde je funkce nazvaná "skok", která způsobí, že tvoje hlavní postava poskočí o 100 pixelů. Použij skokovou funkci ke sběru všech vlajek.'
-      Course 4 Play Lab Params 10_instruction: "Přidali jsme pro tebe jednu poslední funkci. \r \r použij \"If\" příkaz k naprogramování tvé hry, která volat funkci \"úroveň_výš\" jen tehdy, když \"hráče_skóre\" se stane větší než jisté číslo. \r \r, Např.: \"hráče_skóre\" > 6\r \r si zahraje hru a udělá ji přes úroveň 4 k posunu na další puzzle. "
-      Course 4 Play Lab Params 2_instruction: "Nyní máme vlajky, které jsou příliš vysoké pro náš současný skok! Využijeme obojí šipky \"nahoru\" a \"dolů\" tak, že můžeme mít více výškových skoků.  \r \r musíme přidat parametr do naší skokovou funkci nazvanou \"výška\".  Šipku nahoru by měla způsobit, že psa skočí 200 pixelů a šipka dolů udělá skok pouze 100 pixelů. \r \r Rada: budeš muset klepnou na \"upravit\" na funkci skoku a aktualizovat tak, aby používala parametr \"výška\"."
+      Course 4 Play Lab Params 10_instruction: "Přidali jsme pro tebe jednu poslední funkci. \\r \\r použij \"If\" příkaz k naprogramování tvé hry, která volat funkci \"úroveň_výš\" jen tehdy, když \"hráče_skóre\" se stane větší než jisté číslo. \\r \\r, Např.: \"hráče_skóre\" > 6\\r \\r si zahraje hru a udělá ji přes úroveň 4 k posunu na další puzzle. "
+      Course 4 Play Lab Params 2_instruction: "Nyní máme vlajky, které jsou příliš vysoké pro náš současný skok! Využijeme obojí šipky \"nahoru\" a \"dolů\" tak, že můžeme mít více výškových skoků.  \\r \\r musíme přidat parametr do naší skokovou funkci nazvanou \"výška\".  Šipku nahoru by měla způsobit, že psa skočí 200 pixelů a šipka dolů udělá skok pouze 100 pixelů. \\r \\r Rada: budeš muset klepnou na \"upravit\" na funkci skoku a aktualizovat tak, aby používala parametr \"výška\"."
       Course 4 Play Lab Params 3_instruction: 'Přidali jsme další parametr pro funkci skoku, můžeme ji použít s dalšími aktéry. Každý aktér je reprezentován číslem počínaje jedničkou. Uprav funkci "skok", tak, že používá parametr "aktér" pro správný skok postavy. '
       Course 4 Play Lab Params 4_instruction: 'Zde je funkce nazvaná "hlídka." Uprav ji k přesunutí Kočky 400 pixelů a pak dolů 400 pixelů.'
       Course 4 Play Lab Params 5_instruction: 'Upravit funkci "hlídku" přidáním parametru "aktér", tak, že můžeme nazvat každého aktéra na obrazovce. Pamatuj si, že herci mají odpovídající čísla 1, 2 a 3.'
       Course 4 Play Lab Params 6_instruction: 'Přidej další parametr s názvem "speed" na funkci "patrol". Zkus použít blok "set speed" s novým parametrem "speed", abys pomohl tučňákovi dostat obě vlajky než ostatní skřítci by dostali i jednu.'
-      Course 4 Play Lab Params 7_instruction: "Pobavme se! Podívej se na kód, jestli umíš zjistit, co každý blok děláš.  \r \r Když to uděláš, použij šipky k ovládání psa a shromaždi všechny vlajky."
+      Course 4 Play Lab Params 7_instruction: "Pobavme se! Podívej se na kód, jestli umíš zjistit, co každý blok děláš.  \\r \\r Když to uděláš, použij šipky k ovládání psa a shromaždi všechny vlajky."
       Course 4 Play Lab Params 8_instruction: 'Použij blok "když aktér se dotkne" pošle psa zpět do levého horního pouze když pes se dotkne některého z ostatních aktérů.'
-      Course 4 Play Lab Params 9_instruction: "Zde je naše hra z dřívějška, ale většina kódu je skrytá. Zde je nová funkce \"score_points.\" \r \r Uprav funkci tak, že parametr \"points\" je přidán do proměnné \"player_score\". \r \r Proměnná \"player_score\" by se měla pokaždé zvýšit, když Dog se dotkne Cat se srdíčky a snížit pokaždé, když Cat se dotkne Dog se srdíčky. \r \r Poznámka: když budeš hotov, klepni na tlačítko \"Run\" k zahrání.  Když Dog zaskóruje 6 bodů, jde se dál na další hádanku. "
+      Course 4 Play Lab Params 9_instruction: "Zde je naše hra z dřívějška, ale většina kódu je skrytá. Zde je nová funkce \"score_points.\" \\r \\r Uprav funkci tak, že parametr \"points\" je přidán do proměnné \"player_score\". \\r \\r Proměnná \"player_score\" by se měla pokaždé zvýšit, když Dog se dotkne Cat se srdíčky a snížit pokaždé, když Cat se dotkne Dog se srdíčky. \\r \\r Poznámka: když budeš hotov, klepni na tlačítko \"Run\" k zahrání.  Když Dog zaskóruje 6 bodů, jde se dál na další hádanku. "
       Course 4 Play Lab Vars 1_instruction: 'Tentokrát se není nutné psát jakýkoli kód, stačí klepnout na "Run" přehrát si hru! V této hře jsi pes, který se snaží shromáždit více vlajek než kočka. Používej šipku dolů pro ovládání psa. Stiskni tlačítko "Končit", když si dohrál.'
       Course 4 Play Lab Vars 2_instruction: 'Závod v tom posledním puzzle nebyl velmi fér! Změň proměnnou "pes_rychlost", a ujisti se, že můžeš sesbírat více vlajek než kočka. Kdo první sesbírá 10 vyhrává!'
       Course 4 Play Lab Vars 3_instruction: Tady je nový druh hry! Použij levé a pravé šipky k pohybu a šipky nahoru ke skoku. Podívej se, jestli umíš sesbírat všechny vlajky.
       Course 4 Play Lab Vars 4_instruction: 'Nyní jsme pomocí proměnné "výška" řídili, jak vysoko pes skáče. Aktualizuj proměnnou "výška" tak, aby pes mohl skočit dost vysoko, aby dosáhl na na všechny vlajky.'
       Course 4 Play Lab Vars 5_instruction: 'Vytvořme hru! Nejprve budeme potřebovat skóre. Znovu si vytvořit kód, který jsi viděl v poslední úrovni pro nastavení skóre na 10. '
       Course 4 Play Lab Vars 6 (copy 1)_instruction: 'Prima. teď máme naší proměnnou pro skóre, ale jak to bude užitečné? Jak přidat do proměnné skóre pokaždé, když zasáhneš nepřítele ohnivou koulí? Použij událost "kdy herec 2 dotkne čehokoli", spustí se aktualizace skóre, když ohnivé koule zasáhly kočku. Můžeš zvýšit skóre nastavením skóre = skóre + 1. Získej skóre na 10 (jde tp jeden po druhém!) projdeš na další úroveň.'
-      Course 4 Play Lab Vars 6_instruction: "Použij pravou šipku ke střílení srdcí. \r \r V naší hře, jak jsme skóre body? Přidáš 1 k proměnné \"body\" pokaždé, když pes trefí kočku s velkým srdcem. Použij událost \"kdy aktér 2 dotkne se čehokoli\" ke spuštění aktualizace tvého skóre. Proměnné lze zvýšit nastavením \"body = body + 1.\" Dostat skóre na 10 (jde jeden po druhém!) projdeš na další úroveň."
+      Course 4 Play Lab Vars 6_instruction: "Použij pravou šipku ke střílení srdcí. \\r \\r V naší hře, jak jsme skóre body? Přidáš 1 k proměnné \"body\" pokaždé, když pes trefí kočku s velkým srdcem. Použij událost \"kdy aktér 2 dotkne se čehokoli\" ke spuštění aktualizace tvého skóre. Proměnné lze zvýšit nastavením \"body = body + 1.\" Dostat skóre na 10 (jde jeden po druhém!) projdeš na další úroveň."
       Course 4 Play Lab Vars 7_instruction: Prima, nyní se ujistíme, že není příliš snadné vyhrát tuto hru. Kdykoli pes (aktér 1) dostane zásah se žlutými srdci od Kočky (aktér 2), ztrácí se bod. Začíná se s 10 body, takže to není příliš těžké. Skórujte dolů od 10 do 0 k průchodu úrovní.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: 'Dobře, ještě poslední věc pro tuto hru - Nastavme tak, že hráč může vyhrát (nebo prohrát). Použij trvalý cyklus ke kontrole hodnoty skóre - je-li skóre větší než 20, dej nepřítele zmizet. Je-li skóre je menší než 0, hráč zmizí. Klepni na "Končit" když hra pracuje, jako bys to chtěl.'
       Course 4 Play Lab Vars 8_instruction: 'Připravme si tuto hru tak, že pes vítězí (nebo prohrává). Používej nekonečný cyklu ke kontrole hodnoty skóre - je-li skóre stále větší než 20, nepřítel (kočka) zmizí. Pokud skóre je menší než 0, tak hráč (pes) zmizí. Klepni na "Dokončit" když hra funguje, jak bys sis přál.'
-      Course 4 Play Lab Vars 9_instruction: "Čas k volnému hraní! Zde jsou všechny proměnné, se kterými jsme hráli až dosud v této fázi, stejně jako pár dalších v případě, že je chcete. \r \r Všimni si, že zde nyní máme tolik bloků v našem panelu nástrojů, které potřebují být zorganizované!  Zde si dáme každý kus do příslušné kategorie.  Věnuj nějaký čas k prozkoumání všeho, co je k dispozici. Až budeš hotov s průzkumem, udělej hru nebo příběh  s pomocí opakování, proměnných a událostí.  \r \r Rada: Přejdi dolů, abys viděl všechny příkazy v pracovním prostoru."
+      Course 4 Play Lab Vars 9_instruction: "Čas k volnému hraní! Zde jsou všechny proměnné, se kterými jsme hráli až dosud v této fázi, stejně jako pár dalších v případě, že je chcete. \\r \\r Všimni si, že zde nyní máme tolik bloků v našem panelu nástrojů, které potřebují být zorganizované!  Zde si dáme každý kus do příslušné kategorie.  Věnuj nějaký čas k prozkoumání všeho, co je k dispozici. Až budeš hotov s průzkumem, udělej hru nebo příběh  s pomocí opakování, proměnných a událostí.  \\r \\r Rada: Přejdi dolů, abys viděl všechny příkazy v pracovním prostoru."
       Course 4 Play Lab Vars_instruction: 'Dobře, ještě poslední věc pro tuto hru - nastavme to tak, že hráč může vyhrát (nebo prohrát). Použij nekonečný cyklus ke kontrole hodnoty skóre - je-li skóre ještě větší než 20 nepřítel zmizí. Je-li skóre je menší než 0, hráč zmizí.'
       Course 4 Play Labs For Loops 1_instruction: Udělejme, aby pes řekl každé číslo od 1 do 100. Použij for cyklus a čítač, aby řekl proměnnou čítače pokaždé, když běží cyklus.
       Course 4 Play Labs For Loops 2_instruction: |
@@ -1077,15 +1086,15 @@ cs:
         lichá čísla od 1 do 100.
       Course 4 Play Labs For Loops 3_instruction: Když počítáme větší čísla, počítáme dokonce větší za stejnou dobu. Zkus udělat psa počítající najednou od 10 do 1000 po 10.
       Course 4 Play Labs For Loops 4_instruction: Změna kroku může být užitečná, ale stále jsme počítali lineárně (každé číslo je ve stejné vzdálenosti od souseda), Co když bych chtěl počítat exponenciálně? Beze změny nastavení v tomto for cyklu, dokážeš 1, 4, 9, 16, 25... (druhá mocnina čítače)?
-      Course 4 Play Labs For Loops 4a_instruction: "Nyní slučme proměnné z fáze 7 spolu s tvou proměnnou \"čítač\", aby se stalo nějaké kouzlo.   \r \r V tomto puzzlu, pes bude počítat od 0 do 1000 s \"krokem\".  Nastavte proměnnou \"krok\" na 10 na začátku kódu, abys viděl, co se stane."
+      Course 4 Play Labs For Loops 4a_instruction: "Nyní slučme proměnné z fáze 7 spolu s tvou proměnnou \"čítač\", aby se stalo nějaké kouzlo.   \\r \\r V tomto puzzlu, pes bude počítat od 0 do 1000 s \"krokem\".  Nastavte proměnnou \"krok\" na 10 na začátku kódu, abys viděl, co se stane."
       Course 4 Play Labs For Loops 5_instruction: 'V poslední fázi jsme počítali čtverec pro každé číslo. Zkus změnit "čítač ^ 2" na "čítač ^ 3" počítá se třetí mocnina pro každé číslo (1, 8, 27, 64, 125, 216, 343...)'
-      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach one."
+      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\\r\n\\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\\r\n\\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\\r\n\\r\nRun the loop a couple of times, clicking Dog before\neach one."
       Course 4 Play Labs For Loops 6_instruction: 'Možná si vzpomínáš, že prvočíslo je jakékoli celé číslo dělitelné samo sebou a 1. Použijte funkci "is_prvocislo" vypovídá prvočísla od 1 do 100.'
-      Course 4 Play Labs For Loops 6a_instruction: "Psa necháme stále počítat s naším  \"for cyklus\" s \"krok\", ale tentokrát přidáme průvodce do mixu.  Umíš změnit kód tak, aby \"krok\" se zvýšil pokaždé o dva, když se klepne na průvodce? \r \r Pozor!  Průvodce se pohybuje rychle!"
+      Course 4 Play Labs For Loops 6a_instruction: "Psa necháme stále počítat s naším  \"for cyklus\" s \"krok\", ale tentokrát přidáme průvodce do mixu.  Umíš změnit kód tak, aby \"krok\" se zvýšil pokaždé o dva, když se klepne na průvodce? \\r \\r Pozor!  Průvodce se pohybuje rychle!"
       Course 4 Play Labs For Loops 7_instruction: Dovedeš použít for cyklus, abys mi pomohl říci posloupnost 1, 4, 7, 10, 13, 16, 19, 22, 25?
-      Course 4 Play Labs For Loops 7a_instruction: "Nyní jsme se někam dostali!  Co když začneme počítat, kolikrát jsme klepli na průvodce než pes  dostane 30?  \r \r Dokonči přidáním bloků do průvodce tak, aby pokaždé, když je klepnuto  proměnná \"klepnutí\" se zvýšila  o jedničku. Prozatím  ignoruj  \"přírůstek\". \r \r Pes začne po klepnutí na \"Run\"."
-      Course 4 Play Labs For Loops 8_instruction: "Nyní pomoz aktérům, aby počítali.  \r \r Pes by se měl pohybovat a počítat pokaždé přičtením 2 (počítadlo + 2).  Kočka bude se pohybovat a počítat pokaždé násobením 2 (čítač * 2), Tučňák se pohybuje a počítá pokaždé mocninou 2 (čítač ^ 2). Kdo první dosáhne svou první vlajku?"
-      Course 4 Play Labs For Loops 8a_instruction: "K dokončení naši hry musíme zpět zavést proměnnou \"krok\"!    Napojíme ji na úroveň hry. \r \r 1) Udržet si přehled o počtu klepnutí průvodce. \r 2) Když průvodce je klepnut nejméně 10 krát předtím, než pes napočítá na 30, zvýší se \"krok\" o jedničku a začne se znova. \r 3) Když klepnutí na průvodce nedosáhlo nejméně 10 krát, hra skončí."
+      Course 4 Play Labs For Loops 7a_instruction: "Nyní jsme se někam dostali!  Co když začneme počítat, kolikrát jsme klepli na průvodce než pes  dostane 30?  \\r \\r Dokonči přidáním bloků do průvodce tak, aby pokaždé, když je klepnuto  proměnná \"klepnutí\" se zvýšila  o jedničku. Prozatím  ignoruj  \"přírůstek\". \\r \\r Pes začne po klepnutí na \"Run\"."
+      Course 4 Play Labs For Loops 8_instruction: "Nyní pomoz aktérům, aby počítali.  \\r \\r Pes by se měl pohybovat a počítat pokaždé přičtením 2 (počítadlo + 2).  Kočka bude se pohybovat a počítat pokaždé násobením 2 (čítač * 2), Tučňák se pohybuje a počítá pokaždé mocninou 2 (čítač ^ 2). Kdo první dosáhne svou první vlajku?"
+      Course 4 Play Labs For Loops 8a_instruction: "K dokončení naši hry musíme zpět zavést proměnnou \"krok\"!    Napojíme ji na úroveň hry. \\r \\r 1) Udržet si přehled o počtu klepnutí průvodce. \\r 2) Když průvodce je klepnut nejméně 10 krát předtím, než pes napočítá na 30, zvýší se \"krok\" o jedničku a začne se znova. \\r 3) Když klepnutí na průvodce nedosáhlo nejméně 10 krát, hra skončí."
       Course 4 SCF 1_instruction: Používej navrhované funkce k nakreslení čtyř řád šestiúhelníků. Všimni si, jak naše i číslované řádky jsou posunuté doprava?
       Course 4 SCF 1a_instruction: Umíš zjistit, jak shromažďovat všechen tento nektar s nejmenším možný počtem bloků?
       Course 4 SCF 1b_instruction: Umíš zjistit, jak shromažďovat všechen tento nektar s nejmenším možný počtem bloků?
@@ -1105,18 +1114,22 @@ cs:
       Course 4 SCFP 1_instruction: Vytvoř funkci s parametry, které umožní umělci skákat dozadu a dopředu o x pixelů a také nahoru a dolů y pixelů (pomocí kladných a záporných čísel).
       Course 4 SCV 1_instruction: Klepnutím sem se znova zobrazí pokyny.
       Course 4 SCV 2_instruction: Klepnutím sem se znova zobrazí pokyny.
-      Course 4 SCV 3_instruction: "Nyní na hru značek!  Značka Kočka dostane 2 body. Značka Tučňák dostane 3 body.  Získejte 10 bodů k vítězství! \r, ale buďte opatrní, když značky Kočka a Tučňák jsou navzájem, body jdou pryč.\r \r Přidej potřebné bloky, aby hra fungovala, způsobem,, jak je vysvětleno.  Jak se Pes má pohybovat ve všech směrech pomocí kurzorových kláves, se šipkami?  Jak přidat body značkám Pes, Kočka nebo Tučňák?  Jak odečíst body, když se dotknou Kočka a Tučňák?"
+      Course 4 SCV 3_instruction: "Nyní na hru značek!  Značka Kočka dostane 2 body. Značka Tučňák dostane 3 body.  Získejte 10 bodů k vítězství! \\r, ale buďte opatrní, když značky Kočka a Tučňák jsou navzájem, body jdou pryč.\\r \\r Přidej potřebné bloky, aby hra fungovala, způsobem,, jak je vysvětleno.  Jak se Pes má pohybovat ve všech směrech pomocí kurzorových kláves, se šipkami?  Jak přidat body značkám Pes, Kočka nebo Tučňák?  Jak odečíst body, když se dotknou Kočka a Tučňák?"
       Course 4 SCV 4_instruction: Vyřeš tento puzzle s co nejmenším možným počtem bloků.
       Course 4 SCV 5_instruction: Vyřeš tento puzzle s co nejmenším možným počtem bloků.
       Course 4 SCV 6_instruction: Klepnutím sem se znova zobrazí pokyny.
       Course 4 SCVP 1_instruction: Vytvoř funkci s parametry, které umožní umělci skákat dozadu a dopředu o x pixelů a také nahoru a dolů y pixelů (pomocí kladných a záporných čísel).
       Course 4 Variables Assessment_instruction: Dovedeš vytvořit tento obraz pomocí proměnné pro strany? Každý řádek by měl být dlouhý 50 pixelů.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
-      Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
-      Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
-      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
-      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
-      CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
+      Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
+      Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
+      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
+      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
+      CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
       CSP U4 - JSON Object Intro - Bad Way_instruction: |
         Trigger both the keyboard
         and mouse event and examine the event objects displayed in the console. Why
@@ -1203,9 +1216,9 @@ cs:
         Here's a similar function red shape with an additional
         variable for size. Complete the conditionals so the correct solid red image
         of a given size is drawn for "circle", "triangle", and "star".
-      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
-      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
+      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\\r\nOne example - and part of the definition -  has already\nbeen done for you!"
+      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\\r\nOne example - and part of the definition -  has\nalready been done for you!\\r\n"
+      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\\r\n"
       Eval Contracts 1_instruction: |
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -1543,7 +1556,7 @@ cs:
       K-1 Maze Assessment 2_instruction: Hodnocení – Dostaňte mne k prasátku!
       K-1 maze debug 1_instruction: Změň kód, abys mne dostal k prasátku!
       K-1 maze debug 10_instruction: Odlaď tuto úroveň uspořádáním a přidáním bloků, abys mne dostal mne k prasátku!
-      K-1 maze debug 11_instruction: "Toto je test! \r Odlaď tuto úroveň uspořádáním a přidáním bloků, abys mne dostal k prasátku"
+      K-1 maze debug 11_instruction: "Toto je test! \\r Odlaď tuto úroveň uspořádáním a přidáním bloků, abys mne dostal k prasátku"
       K-1 maze debug 2_instruction: Přijdi na to, co chybí a pak přidej bloky, aby mne dostal k prasátku!
       K-1 maze debug 3_instruction: Příjdi na to, co chybí a pak ODSTRAŃ bloky, abys mne dostal k prasátku!
       K-1 maze debug 4_instruction: Spusť tyto bloky a oprav je. Myslím, že jsem mohl jít špatným směrem.
@@ -1569,9 +1582,18 @@ cs:
       K-1 Maze Loops Assessment 2_instruction: Hodnocení – použij cykly, abys mne dostal k prasátku!
       K-1 Maze Multi 14_instruction: Hodnocení úrovně
       K-1 Maze Multi 15_instruction: Hodnocení úrovně
-      K-1 Maze Sequence Assessment 1_instruction: "Toto je test! \r Táhni jedním způsobem, abys mne dostal k prasátku"
-      K-1 Maze Sequence Assessment 2_instruction: "Toto je test! \r Táhni jedním způsobem, abys mne dostal k prasátku."
-      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
+      K-1 Maze Sequence Assessment 1_instruction: "Toto je test! \\r Táhni jedním způsobem, abys mne dostal k prasátku"
+      K-1 Maze Sequence Assessment 2_instruction: "Toto je test! \\r Táhni jedním způsobem, abys mne dostal k prasátku."
+      kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      love_spring_1_instruction: |
+        Let's celebrate Spring!  We have put some seeds
+        in the ground to prepare for the season's flowers.  Can you cover them up
+        so that the birds don't eat them?
+      love_spring_2_instruction: |
+        Our flowers are in full bloom!  Now we need the
+        bee to grab nectar from each one so he can make plenty of honey back at his
+        hive!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses a number between 1 and 20.  \\r\n\\r\nWhen you're ready, press \"Run\"\nand play until you guess Robin's number!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -1602,6 +1624,8 @@ cs:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -1664,7 +1688,7 @@ cs:
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\r\n"
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\\r\n"
       NetSim Standalone Classroom Routers_instruction: |
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -1687,7 +1711,7 @@ cs:
         of a packet being dropped, multiple packets may take different paths to the
         destination, and the default max packet size is set to 6 additional characters.
         
-      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\\r\n\\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
       NetSim Standalone SendAB_instruction: |
         You and your partner share a single
         wire that can only be in state A or state B. You can set the wire to either
@@ -1747,7 +1771,7 @@ cs:
       NEW Course 4 Artist Functions 1_instruction: Umíš nakreslit čtverec na délku 100 pixelů s pomocí opakovacího cyklu?
       NEW Course 4 Artist Functions 10.1_instruction: Použij funkci z předchozích puzzlů k nakreslení tohoto vzoru.
       NEW Course 4 Artist Functions 10_instruction: 'Klepni na tlačítko "upravit" k vyplnění bloků v definici funkce tak, aby udělala čtverec 40 pixelů.'
-      NEW Course 4 Artist Functions 11_instruction: "Nyní chceme vytvořit novou funkci nazvanou \"nakreslit čáru čtverců\", která kreslí šest čtverců v řadě.  Umíš vytvořit pomocí funkce \"nakreslit čtverec 20\" funkce, kterou jsme již vytvořili? Poznámka: Podívej se, že jsme změnili pero na mnohem užší. Klepni \"Upravit\"  na funkci \"nakreslit čtverec 20\", abys to viděl, jak to pracuje! \r\n"
+      NEW Course 4 Artist Functions 11_instruction: "Nyní chceme vytvořit novou funkci nazvanou \"nakreslit čáru čtverců\", která kreslí šest čtverců v řadě.  Umíš vytvořit pomocí funkce \"nakreslit čtverec 20\" funkce, kterou jsme již vytvořili? Poznámka: Podívej se, že jsme změnili pero na mnohem užší. Klepni \"Upravit\"  na funkci \"nakreslit čtverec 20\", abys to viděl, jak to pracuje! \\r\n"
       NEW Course 4 Artist Functions 12_instruction: 'Použij funkci "nakreslit čáru čtverců" z posledního puzzlu, abys nakreslil tento vzor."'
       NEW Course 4 Artist Functions 13_instruction: 'Umíš nakreslit tvar hvězdu pomocí funkce "nakreslit čáru čtverců"? Rada: Každým průchodem po volání "nakreslit čáru čtverců" vícekrát, budeš muset posunout vpřed o určitý počet pixelů a otočit o 144 stupňů.'
       NEW Course 4 Artist Functions 14_instruction: 'Volný čas na hraní! '
@@ -1755,7 +1779,7 @@ cs:
       NEW Course 4 Artist Functions 3_instruction: 'Zde je nový typ bloku. Nazývá "Funkce" blok. Klepni na tlačítko "Upravit" a pak vyplň jej kódem pro kreslení čtverce o stranách 100 pixelů. Po dokončení úprav funkci, klepni na tlačítko "Zavřít" přejdi zpět do programu.'
       NEW Course 4 Artist Functions 4_instruction: 'Použij funkci "nakreslit čtverec" k nakreslení tohoto vzoru. Rada: Budeš muset použít blok "otočte se doprava o 120 stupňů" po každém čtverci.'
       NEW Course 4 Artist Functions 5_instruction: 'Jak si poznal, které povely běží v bloku "nakreslit čtverec"? Klepni na "Upravit" v bloku funkce "nakreslit čtverec". Bloky v editoru funkce jsou definice, která vytváří "nakreslit čtverec." Když máš hotovo, prohlédni si to a klepni na tlačítko "Uložit a zavřít" a pak "Spusť."'
-      NEW Course 4 Artist Functions 6_instruction: "Umíš nakreslit obrázek s pomocí bloku funkce \"nakreslit čtverec\"? Rada: každý čtverec je od sebe 120 pixelů. \r\n"
+      NEW Course 4 Artist Functions 6_instruction: "Umíš nakreslit obrázek s pomocí bloku funkce \"nakreslit čtverec\"? Rada: každý čtverec je od sebe 120 pixelů. \\r\n"
       NEW Course 4 Artist Functions 7_instruction: 'Dostáváš se na kloub, jak používat funkční bloky? Umíš upravit tento čtverec s rozměrem 200 pixelů. Rada: klepni na "upravit" ke změně velikosti v editoru funkcí "nakreslit čtverec". Nezapomeň klepnout na "uložit a zavřít" v editoru funkcí. '
       NEW Course 4 Artist Functions 8_instruction: 'Vytvořili jsme novou funkci pro tebe, kterou si nazval "nakreslit trojúhelník".  Můžeš upravit definici funkci, abys nakreslil trojúhelník o stranách 100 pixelů?'
       NEW Course 4 Artist Functions 9_instruction: Umíš to vyřešit přidáním pouze jednoho bloku?
@@ -1770,21 +1794,21 @@ cs:
       NEW Course 4 Artist Params 14_instruction: 'Uprav "nakreslete okraj spirály" s použitím parametrů "délka" a "strany", potom znovu vytvoř tyto obrazce.'
       NEW Course 4 Artist Params 15_instruction: 'Volná hra: Zde jsou funkce, které jste napsali a ještě víc pro vás k zahrání. Nakresli něco super! Zaraj si se šířkou pera, abys viděl, jak odlišně vypadají tvoje kresby!'
       NEW Course 4 Artist Params 2_instruction: 'Vytvoř funkci "nakreslit trojúhelník" se stranami 50 pixelů od začátku'
-      NEW Course 4 Artist Params 3_instruction: "Použijme funkci k nakreslení 5 trojúhelníkůů v řadě. Rada: každý trojúhelník je od sebe 30 pixelů. \r\n"
+      NEW Course 4 Artist Params 3_instruction: "Použijme funkci k nakreslení 5 trojúhelníkůů v řadě. Rada: každý trojúhelník je od sebe 30 pixelů. \\r\n"
       NEW Course 4 Artist Params 4_instruction: 'Všiml jsi si něčeho neobvyklého na těchto funkčních blocích? Klepni na "Run", abys vidělco se stane.'
       NEW Course 4 Artist Params 5_instruction: 'Vyplň ??? v délkovém parametrů vstupního bloku. rada: Pětiúhelník má strany 100 pixelů. '
       NEW Course 4 Artist Params 6_instruction: 'Vyplň parametr "délka" v "???" s správným číslem, abys nakreslil tyto tvary. Čtverec a trojúhelník mají strany100 pixelů, zatímco každá strana šestiúhelník je dlouhá 75 pixelů.'
       NEW Course 4 Artist Params 7_instruction: 'Umíš dokončit tuto kresbu? Rada: Strany každého trojúhelníku jsou větší než ten předcházející o 25 pixelů.  První trojúhelník má stranu 25 pixelů.'
       NEW Course 4 Artist Params 8_instruction: Kód pro tuto funkci trojúhelníka je porouchaný. Umíš upravit funkci, abys to opravil a poté udělal trojúhelníky délky 25, 50 a 75?
       NEW Course 4 Artist Params 9_instruction: 'Klepni na tlačítko "upravit" definice funkce "nakreslit čtverec" a přidej parametr. Mělo by to být délkový parametr, právě jako trojúhelník. Tentokrát akresli 3 čtverce délky: 25, 50 a 75 pixelů, každý od sebe 100 pixelů.'
-      NEW Course 4 Artist Params inspire_instruction: "Volná hra inspirace: Nyní už víš vše, co potřebuješ vědět, abys udělal tento vzor! Pokud tento obrázek tě inspiruje, pokus se provést něco podobného. Jinak, vytvoř něco, co všechny vlastníš. \r \r Chtěj vědět, jak náš vzor byl udělán pro inspiraci? "
+      NEW Course 4 Artist Params inspire_instruction: "Volná hra inspirace: Nyní už víš vše, co potřebuješ vědět, abys udělal tento vzor! Pokud tento obrázek tě inspiruje, pokus se provést něco podobného. Jinak, vytvoř něco, co všechny vlastníš. \\r \\r Chtěj vědět, jak náš vzor byl udělán pro inspiraci? "
       NEW Course 4 Artist Vars 1.5_instruction: 'Podívej se na kód, můžeš vidět, jak bloky "nastavit délku" a "délka" pracuje dohromady? Kleplni na "Run", abys to viděl v akci. '
       NEW Course 4 Artist Vars 12_instruction: Nyní znovu vytvoř algoritmus z poslední úrovně a vytvoř pětiúhelník se stranami 150.
       NEW Course 4 Artist Vars 2.5_instruction: 'Podívej se na kód, můžeš vidět, jak bloky "nastavit délku" a "délka" pracuje dohromady? Kleplni na "Run", abys to viděl v akci. '
       NEW Course 4 Artist Vars 2_instruction: 'Přetáhni číslo bloku do bloku "nastavit délku" k nakreslení sady 50 pixelových trojúhelníků. '
       NEW Course 4 Artist Vars 4 5_instruction: Super práce na posledním puzzlu, zkus to tentokrát znovu tak, abys udělal tento cool návrh 60 pixelového šestihranu.
       NEW Course 4 Artist Vars 4_instruction: 'Zkusme to znova. Lze nastavit proměnnou délka, abys udělal tento cool návrh šestiúhelníků? Rada: Je to násobkem 10.'
-      NEW Course 4 Artist Vars 6_instruction: "Nakresli tento vzor do správných míst zavěšením proměnné délky, pak nastavením správné hodnoty pro délku. (Rada: Je to násobek 10).  \r \r Uvidíš, jak jen  nastavíš hodnotu pro délku, a kód používá všude správnou hodnotu? \r \r \r\n"
+      NEW Course 4 Artist Vars 6_instruction: "Nakresli tento vzor do správných míst zavěšením proměnné délky, pak nastavením správné hodnoty pro délku. (Rada: Je to násobek 10).  \\r \\r Uvidíš, jak jen  nastavíš hodnotu pro délku, a kód používá všude správnou hodnotu? \\r \\r \\r\n"
       NEW Course 4 Bee For Loops 1_instruction: Použij cyklus ke sběru nektaru z každého květu.
       NEW Course 4 Bee For Loops 10_instruction: 'Použij tvou proměnnou "počítadlo" for cyklu zkontrolovat, jak daleko vodorovně se posuneme.'
       NEW Course 4 Bee For Loops 10a_instruction: 'Připraven na výzvu?  Použij, co jsi se dozvěděl o cyklech a pokus se vyřešit tento problém. Pamatuj si: Budeš muset vícekrát spustit řešení než zjistíš všechny kroky.'
@@ -1796,8 +1820,8 @@ cs:
       NEW Course 4 Bee For Loops 5 5_instruction: 'Jak se dostat na to pomocí "for cyklus"? Pomoz včele dostat zbytek nektaru.'
       NEW Course 4 Bee For Loops 5_instruction: 'Umíš také použít "for cyklus" k odpočítání dolů. Zkus sesbírat tento nektar odpočítáváním od 5 do 1 po 1.'
       NEW Course 4 Bee For Loops 6_instruction: 'Poslední číslo ve tvém cyklu se nazývá "krok". Pokaždé, když cyklus je spuštěn, změní se proměnná čítače o hodnotu kroku. Zkus sesbírat tyto květiny pomocí kroku 2.'
-      NEW Course 4 Bee For Loops 7_instruction: "Nyní zkomibujme proměnnou \"čítač\" s matematickým blokem! Jak lze použít proměnnou \"čítač\" k procházení touto zahradou s nejmenším počtem bloků? Co je třeba udělat, aby tentokrát se sesbíralo 3, 6, 9, 12, 15 nektarů? Tajemství je v proměnné \"čítač\"! \r \r Pamatuj: Pokud tvůj cyklus počítí, krok se přičítá do tvé proměnné \"čítač\" při průchodu."
-      NEW Course 4 Bee For Loops 8_instruction: "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3, 6, 9, 12, 15? \r\n"
+      NEW Course 4 Bee For Loops 7_instruction: "Nyní zkomibujme proměnnou \"čítač\" s matematickým blokem! Jak lze použít proměnnou \"čítač\" k procházení touto zahradou s nejmenším počtem bloků? Co je třeba udělat, aby tentokrát se sesbíralo 3, 6, 9, 12, 15 nektarů? Tajemství je v proměnné \"čítač\"! \\r \\r Pamatuj: Pokud tvůj cyklus počítí, krok se přičítá do tvé proměnné \"čítač\" při průchodu."
+      NEW Course 4 Bee For Loops 8_instruction: "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3, 6, 9, 12, 15? \\r\n"
       NEW Course 4 Bee For Loops 9_instruction: Když tvůj cyklus se odpočítává dolů, krok se odečte od proměnné čítače při každém průchodu. Jaký by měl být tvůj krok pro sběr nektaru 9, pak 6 a pak 3?
       NEW Course 4 Bee For Loops 95_instruction: 'Podívejte se na každý kus "for cyklu", který jsi právě vytvořil.  Umíš zjistit čísla, které je třeba zdvojnásobit, aby vyřešil tento puzzle? Proč to funguje?'
       NEW Course 4 Play Lab Params 11_instruction: 'Volný čas hraní! Pobab se se všemi bloky v tvém panel nástrojů. '
@@ -1807,7 +1831,7 @@ cs:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Volný čas hraní! Pobab se se všemi bloky ve tvém panelu nástrojů. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Výzva: Jak bys použil "for cyklus" dostat každého aktéra chodit kolem a říkat číslo herce, poté zmizet z obrazovky? '
       New Play Lab Project_instruction: Vytvoř si vlastní příběh nebo hru! Tvůj kód se uloží jako projekt, ke kterému se můžeš kdykoli vrátit.
-      Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
@@ -1818,7 +1842,7 @@ cs:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
-      October15 bat_instruction: "Freeplay: Here are some functions to play with.  Can\nyou draw a bat?\r\n"
+      October15 bat_instruction: "Freeplay: Here are some functions to play with.  Can\nyou draw a bat?\\r\n"
       October15 ghost 1_instruction: |
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -1878,7 +1902,7 @@ cs:
         button and you should see at least one version. Each time you go back to a
         Big Game level you'll get a new record in your version history that you can
         revert back to.
-      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\\r\n\\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
       PDAlg Design Recipe Delete_instruction: |
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -2032,6 +2056,10 @@ cs:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee - Ryan_instruction: |
+        These clouds are bugging me! Some of the clouds
+        have flowers inside, and some don't. I should check each cloud, and only
+        get nectar from the flowers.
       Quantum Bee_instruction: |
         Purple flowers may have either 1 or 0 nectar, but
         you don't know which one! Be careful not to collect nectar from a purple
@@ -2039,8 +2067,14 @@ cs:
         the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: Včela chce právě teď jen nektar. Ne všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM se zjistí, jestli se skrývá květ. Pokud ano, můžeš získat nektar.
       Ryan - Bee Conditionals_instruction: Včela chce právě teď jen nektar. Ne všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjistětei, jestli se skrývá květ. Pokud ano, můžeš získat nektar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: 'Zde je funkce nazvaná "hlídka." Uprav ji k přesunutí Kočky 400 pixelů a pak dolů 400 pixelů.'
-      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
+      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
         This butterfly is named Sam, and
         the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels
@@ -2173,7 +2207,7 @@ cs:
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
         classmates (Click to see full instructions)
-      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\\r\n\\r\nConstraints:\\r\n- Packets may contain\nonly 6 characters\\r\n- Packets may drop with small probability\\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the Internet Simulator,
         a Domain Name System (DNS) is provided for you and knows the IP addresses
@@ -2184,13 +2218,13 @@ cs:
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\r\n"
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\\r\n"
       U2L3 NetSim Hub Mode_instruction: |
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
         the message and response?
-      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
-      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\r\n\r\n"
+      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\\r\n\\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\\r\n\\r\n"
       U2L7 NetSim Need for Packets_instruction: |
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
@@ -2358,7 +2392,7 @@ cs:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -2428,7 +2462,7 @@ cs:
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\r\n"
+      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\\r\n"
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -2476,8 +2510,8 @@ cs:
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
         Write a program that simulates the rolling of
-        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
-        is something other than 7 or 11. (Click to see full instructions)
+        two dice. Roll the dice repeatedly until the sum of the dice is either 7 or
+        11.
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -2632,16 +2666,16 @@ cs:
       U3 - Practice Create Performance Task_instruction: |
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\r\n"
-      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\\r\n"
+      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\\r\n"
+      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\\r\n"
       U3 - Return Values - constrainTurtle_instruction: |
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -2677,12 +2711,12 @@ cs:
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
+      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -2696,7 +2730,7 @@ cs:
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -2821,7 +2855,7 @@ cs:
       U313 Two Buttons with Ids_instruction: |
         Predict what will happen. Once you've
         made a prediction, run the code to see what happens. (Click to see full instructions)
-      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto see full instructions)"
+      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\\r\n(Click\nto see full instructions)"
       U3L03 - draw step_instruction: |
         Write the drawStep function. (Click to see
         full instructions)
@@ -3033,7 +3067,7 @@ cs:
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
         button.
-      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
+      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\\r\n\\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
       U3L13 - Debug Id Problem_instruction: |
         Improve the button by choosing a descriptive
         and meaningful ID. (Click to see full instructions)
@@ -3207,8 +3241,10 @@ cs:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)
@@ -3325,7 +3361,7 @@ cs:
       U3L19 - DEMO up down count practice app_instruction: |
         Try out the demo app
         (Click to see full instructions)
-      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto foo to see the string change. \r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \r\n"
+      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \\r\nDo this: \\r\n1. Try changing the value assigned\nto foo to see the string change. \\r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \\r\n"
       U3L19 - fix the var name syntax error v2_instruction: |
         Fix the error and get
         it to print the value of both variables (Click to see full instructions)
@@ -3354,7 +3390,7 @@ cs:
         Add another variable called
         "lives" and set the value to 3. Print the value of the variable to the console.
         (Click to see full instructions)
-      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
+      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \\r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \\r\n\\r\n\\r\nGIF: U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |
         Set up the down button to
         decrease the value of count by 1 each time it is clicked. (Click to see full
@@ -3507,7 +3543,7 @@ cs:
         You are given the string "Wisdom begins
         with wonder." Use the string.substring(begin, end) function to print "begin"
         and "nder" to the console.
-      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\\r\nPrint the strings and their index to the console.\n"
       U3L25 String Parsing 6_instruction: |
         Write a function that takes a name (first
         last) and reorders it (last, first).
@@ -3552,7 +3588,7 @@ cs:
         right of the starting location. (Click to show full instructions)
       U4 - add createRecord to contacts App_instruction: |
         Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
@@ -3578,11 +3614,11 @@ cs:
         full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
-        and then use the data viewer to import the data from the file into the “mydata”
+        and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |
-        Call readRecords on the “mydata”
-        table and print each record to the console. (Click to see full instructions)
+        Call readRecords on “mytable” and
+        print each record to the console. (Click to see full instructions)
       U4 - Charts - Line Chart 1_instruction: |
         Create a line chart showing the change
         in popularity of “#tbt” over time. (Click to see full instructions)
@@ -3703,7 +3739,7 @@ cs:
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
       U4 - Objects - pullValues_instruction: |
-        Create an event handler for the "Add
+        Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |
@@ -3711,7 +3747,7 @@ cs:
         starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |
         Add code to your event handler
-        fro the "Add Contact" button so that when a new contact is added the inputs
+        for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
       U4 - Objects - showContact1_instruction: |
@@ -3731,21 +3767,21 @@ cs:
       U4 - Objects - writeWrap_instruction: |
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\r\n"
-      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\r\n"
-      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
-      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\r\n"
-      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\\r\n"
+      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\\r\n"
+      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\\r\n"
       U4 - ReadRecords - Contacts App 1_instruction: |
-        Write a function called "updateLocalData"
-        that copies the data in your database into your "contacts" global variable.
+        Use readRecords to copy the
+        data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |
-        Create a function called "refreshLocalData"
+        Create a function called refreshLocalData.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |
         Add a call to "refreshLocalData"
@@ -3766,8 +3802,8 @@ cs:
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: Předloha
-      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
-      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
+      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\\r\n\\r\n"
+      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\\r\n\\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
         We want to improve the user experience.
         Once they have submitted their data for storage, it would be nice to clear
@@ -3789,24 +3825,34 @@ cs:
       U4L15 Read Data 1_instruction: |
         Run the level and see what happens. Then edit
         the code to make it print a different column of information.
-      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
-      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
-      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\\r\n\\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
+      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\\r\n\\r\n"
+      U4L15 Read Data 4_instruction: "\\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - Final Project - Project Level_instruction: |
+        Build your final project here.
+        (Click to see full instructions)
+      U6 - updateRecord - Callback Success Parameter_instruction: |
+        Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
       U6 - updateRecord - Contacts - Edit event handler_instruction: |
-        (Click to see
-        full instructions)
-      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+        Write event
+        handlers for the Edit Contacts UI elements. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: |
+        Set up the UI elements
+        needed to edit contacts. (Click to see full instructions)
       U6 - updateRecord - Contacts - Save edited contact_instruction: |
-        (Click to
-        see full instructions)
-      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+        Use updateRecord
+        to store the user's edits in the database. (Click to see full instructions)
+      U6 - updateRecord - Default Block_instruction: |
+        Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
       U6 - updateRecord - Update Nonexistent Record_instruction: |
-        (Click to see full
-        instructions)
+        Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: 'Pod některými z těchto bloků je ukrytá láva, kterou musíš před přesunem vpřed zakrýt. K tomu se hodí příkaz "pokud". Přidej jeden příkaz "posunout vpřed" na správné místo a vytěž bloky.'
       Underground If Statements_instruction: 'Teď to začíná být obtížnější. Vytěž 3 rudity, ale nespadni při tom do lávy. Použij příkaz "pokud" k položení dlažebního kamene na každou lávu, kterou odkryješ.'
       Underground Iron_instruction: Vejít do žhavé lávy není dobrý nápad. Postav most položením dlažebního kamene, a pak vytěž nejméně dva bloky železa.
-      Underground Mine in a Circle_instruction: "Najdi způsob, jak získat 5 diamantů a 7 ruditů! Zkus použít příkaz \"opakuj\" uvnitř jiného příkazu \"opakuj\" abys chodil po obvodu čtverce.\r\n"
+      Underground Mine in a Circle_instruction: "Najdi způsob, jak získat 5 diamantů a 7 ruditů! Zkus použít příkaz \"opakuj\" uvnitř jiného příkazu \"opakuj\" abys chodil po obvodu čtverce.\\r\n"
       Underground Mining Coal_instruction: Nejcennější suroviny najdeš v podzemí, ale je tam tma. Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
       Underground Test Level_instruction: Sežeň všechny materiály!
       Vigenere_instruction: Test

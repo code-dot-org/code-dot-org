@@ -24,6 +24,8 @@ fil:
   hello: Mabuhay!
   welcome_back: 'Maligayang pagbabalik, %{name}'
   submit: Ipasa
+  unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Magdagdag ng guro:'
@@ -225,7 +227,7 @@ fil:
       free_play:
         playlab: Lumikha ng App
         artist: Gumuhit ng isang bagay
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Lumikha ng App
     user:
       classroom: Home Page ng Teacher
@@ -324,6 +326,7 @@ fil:
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
     heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
     no_primary_course: Try a Code Studio course
@@ -418,6 +421,12 @@ fil:
       current: Current Levels
       unused: Unused Levels
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Classic Maze
       body: Try the basics of computer science. Millions have given it a shot.
@@ -459,10 +468,10 @@ fil:
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Incorrect answer
     wrong_body: Ang sagot na iyong ipinasok ay hindi tama. Pakisubukang uli!
@@ -470,6 +479,23 @@ fil:
     correct_body: Iyon ay ang tamang sagot.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Thank you
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting answers.
+    correct_title: Thank you
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting answers.
+    correct_title: Thank you
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Incorrect solution
     wrong_body: "The solution you've entered is not correct.  Please try again!"
@@ -487,6 +513,8 @@ fil:
     placeholder: Enter your answer here
     open_response_title: Thanks
     open_response_body: Thanks for your response!
+    correct_title: Tama
+    correct_body: Iyon ay ang tamang sagot.
   dialog:
     ok: OK
     startover_title: Sigurado ka bang gusto mong magsimula muli?
@@ -540,6 +568,7 @@ fil:
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
     assessment: assessment
+    submitted: submitted
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
@@ -562,8 +591,8 @@ fil:
     name: Pangalan
     updated: Updated
     project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time.'
+    need_help: Try these courses to help you get started with your new project
     really_delete: I-delete?
     delete_yes: Oo
     delete_no: Hindi
@@ -596,3 +625,7 @@ fil:
           other: Iba
         detail: Please provide as much detail as possible regarding the content you are reporting.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

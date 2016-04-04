@@ -25,6 +25,8 @@
   hello: "हैलो वर्ल्ड"
   welcome_back: "वापस, %{name} में आपका स्वागत है"
   submit: "सबमिट करें"
+  unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: "शिक्षक जोड़ें:"
@@ -135,8 +137,8 @@
       submit: Send me reset password instructions
     change_form:
       title: Change your password
-      new_password: New password
-      confirm_password: Confirm new password
+      new_password: "नया पासवर्ड"
+      confirm_password: "नए पासवर्ड की पुष्टि करें"
       submit: Change my password
   welcome_email:
     subject: Join my class (on Code.org)
@@ -176,7 +178,7 @@
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
     provider: 'Provider:'
-    code: 'Code:'
+    code: "कोड:"
     redeem_header: 'To redeem:'
     donorschoose_register: Register as a teacher on DonorsChoose.org
     donorschoose_project: Post a project
@@ -196,7 +198,7 @@
       msg: Are you sure you want to claim the %{prize_name} prize?
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
-      msg_visit_website: Visit website
+      msg_visit_website: "वेब साइट पर जाएँ"
     providers:
       apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
@@ -253,7 +255,7 @@
     update: Update
     destroy: Destroy
     back: Back
-    confirm: Are you sure?
+    confirm: "क्या आपको यकीन है?"
     created: "%{model} was successfully created."
     updated: "%{model} was successfully updated."
     destroyed: "%{model} was successfully deleted."
@@ -309,14 +311,14 @@
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
       section: Section
-      example: Example Solution
+      example: "उदाहरण समाधान"
       example_with_number: Example Solution %{solution_number}
       submitted_on: Submitted on %{date}
       unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: "(Wrong email address?)"
+    email_confirm_wrong_email: "(गलत ईमेल पता?)"
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: "(we need your current password to confirm your changes)"
@@ -326,8 +328,8 @@
       your students'' accounts.'
     delete_confirm: Are you sure you want to delete your account?
   user_level:
-    completed: Completed
-    tried: Tried
+    completed: "पूरा हो गया"
+    tried: "कोशिश की"
   home:
     title: Code Studio
     description: Code Studio is home to online courses created by Code.org
@@ -375,6 +377,8 @@
     heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
       (all ages)</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
@@ -386,8 +390,8 @@
       code.
     try_hour_of_code: Try an Hour of Code!
   gender:
-    male: Male
-    female: Female
+    male: "पुरूष"
+    female: "महिला"
     none: Prefer not to answer
   user_type:
     student: "छात्र"
@@ -491,6 +495,15 @@
       current: Current Levels
       unused: Unused Levels
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Hour of Code
       body: Try the basics of computer science. Millions have given it a shot.
@@ -543,24 +556,41 @@
       is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
-    feedback: Give Feedback
     report_bug: Report Bug
-    support: Get Help
+    support: "मदद प्राप्त करें"
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
-    wrong_title: Incorrect answer
+    wrong_title: "गलत जवाब"
     wrong_body: The answer you've entered is not correct.  Please try again!
-    correct_title: Correct
+    correct_title: "सही"
     correct_body: That is the correct answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: "धन्यवाद"
+    wrong_body: Thank you for submitting an answer.
+    correct_title: "धन्यवाद"
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "धन्यवाद"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "धन्यवाद"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "धन्यवाद"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "धन्यवाद"
+    correct_body: Thank you for submitting answers.
   match:
-    wrong_title: Incorrect solution
+    wrong_title: "गलत समाधान"
     wrong_body: The solution you've entered is not correct.  Please try again!
-    correct_title: Correct
+    correct_title: "सही"
     correct_body: That is the correct answer.
   contract_match:
-    wrong_title: Incorrect answer
+    wrong_title: "गलत जवाब"
     badname: Your contract has the wrong name.
     badname_case: Function names are case-sensitive. Try changing the case of your
       contract's name.
@@ -570,9 +600,11 @@
     baddomaintype: One or more of your domain items has the wrong type, or they are
       in the wrong order.
   text_match:
-    placeholder: Enter your answer here
-    open_response_title: Thanks
+    placeholder: "अपना उत्तर यहाँ दर्ज करें"
+    open_response_title: "धन्यवाद"
     open_response_body: Thanks for your response!
+    correct_title: "सही"
+    correct_body: That is the correct answer.
   dialog:
     ok: "ठीक है"
     startover_title: Aapko यकीन है कि आप prarambh se शुरू करना चाहते हैं?
@@ -581,9 +613,9 @@
     startover_ok: "पुन: प्रारंभ करें"
     startover_cancel: "रद्द करें"
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: 1 घंटा
+    day: "दिन"
+    week: "सप्ताह"
   data:
     script:
       name:
@@ -636,24 +668,25 @@
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
     assessment: assessment
+    submitted: submitted
   studio:
     courses_working_on: Courses you're working on
     completed_courses: Completed courses
     all_courses: All courses
   project:
     projects: Projects
-    create: Create Project
+    create: "प्रोजेक्ट बनाएँ"
     create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
-    save: Save
-    delete: Delete
-    exit: Return to Course
+    new: "नया बनाएँ"
+    rename: "नाम बदलें"
+    save: "सहेजें"
+    delete: "मिटाएँ"
+    exit: "पाठ्यक्रम पर लौटें"
     my_projects: My Projects
     share: "शेयर करें"
     share_title: Share your project
     share_copy_link: 'Copy the link:'
-    close: Close
+    close: "बंद करें"
     more: More
     name: "नाम"
     updated: Updated
@@ -662,10 +695,10 @@
       below to make a new Play Lab or Artist project!<br/>You can come back and work
       on your projects at any time.
     need_help: Need help getting started?
-    really_delete: Delete?
+    really_delete: "मिटाएँ?"
     delete_yes: 'Yes'
     delete_no: 'No'
-    saved: Saved
+    saved: "सहेजा गया"
     not_saved: Not saved
     cancel: "रद्द करें"
     delete_confirm_title: Are you sure you want to delete this project?
@@ -705,3 +738,7 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found
