@@ -60,7 +60,7 @@ var CodeWorkspaceContainer = React.createClass({
     // TODO - These probably better belong as props (and possibly in the redux
     // store), but I'd like to get the quick and dirty fix in ASAP as RTL is
     // currently broken
-    var noViz = appOptions.app === 'jigsaw';
+    var noViz = window.appOptions && appOptions.app === 'jigsaw';
     var rtl = document.querySelector('html').getAttribute('dir') === 'rtl';
 
     var mainStyle = [styles.main, {
