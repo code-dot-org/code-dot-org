@@ -26,7 +26,8 @@
   twentyhours_text: أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب
     ومفاهيم البرمجة الأساسية في الدورة التالية.
   og_title: "كل طفل يستحق فرصة"
-  og_description: "كل طالب في المدرسة يستحق الفرصة لدراسة علوم الحاسوب."
+  og_description: "كل طالب في كل مدرسة يستحق الفرصة ليدرس علوم الحاسب . إنها تغير
+    كل شيء."
   hoc2014_heading: انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/>
     8-14 كانون الأول/ديسمبر، عام 2014 <br/>
   hoc2014_students: "الطلاب"
@@ -105,8 +106,8 @@
   third_party_platform_web: "البرنامج: شبكة الإنترنت"
   third_party_price_varies: "السعر: تختلف البرامج"
   third_party_price_free: "السعر: مجانًا"
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_299: "السعر: 2.99$/تحميل"
+  third_party_price_individual: "السعر الفردي : تجربة مجانية  و25$ بالشهر"
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
@@ -161,17 +162,17 @@
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
     native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_curriculum: "تحميل مناهج اكاديمية كود"
+  third_party_codecademy_btn_site: "زر اكاديمية كود"
+  third_party_organization: "منظمة"
   third_party_curriculum: "المناهج"
   third_party_pricing: Pricing
-  third_party_cost_free: Free
+  third_party_cost_free: "مجاني للطلبة  والمدرسين"
   third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
+  third_party_cost_299: 2.99$ / تحميل
   third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_cost_free_2: "مجاني للتجربة : 2$ للطالب"
+  third_party_cost_free_10: "مجاني للتجربة : 9.99$ بالشهر"
   third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
@@ -756,6 +757,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: "صحيح"
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
