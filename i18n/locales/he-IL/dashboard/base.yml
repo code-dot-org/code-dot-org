@@ -25,6 +25,7 @@ he:
   welcome_back: 'ברוך שובך, %{name}'
   submit: שלח
   unsubmit: בטל הגשה
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'הוסף מורה:'
@@ -472,7 +473,6 @@ he:
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
-    feedback: תן משוב
     report_bug: דווח על באג
     support: קבל עזרה
     support_url: //support.code.org
@@ -491,6 +491,16 @@ he:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: תודה רבה
+    wrong_body: Thank you for submitting answers.
+    correct_title: תודה רבה
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: תודה רבה
+    wrong_body: Thank you for submitting answers.
+    correct_title: תודה רבה
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: פתרון לא נכון
     wrong_body: הפתרון שענית אינו נכון.נא נסה שנית!
@@ -508,9 +518,8 @@ he:
     placeholder: הכנס את התשובה שלך כאן
     open_response_title: תודה
     open_response_body: תודה על תגובתך!
-  level_group:
-    correct_title: תודה רבה
-    correct_body: Thank you for submitting an answer
+    correct_title: נכון
+    correct_body: זאת התשובה הנכונה.
   dialog:
     ok: אישור
     startover_title: האם אתה בטוח שאתה רוצה להתחיל מחדש?
@@ -621,3 +630,7 @@ he:
           other: אחר
         detail: אנא ספק כמה שיותר מידע אודות התוכן עליו אתה מדווח.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

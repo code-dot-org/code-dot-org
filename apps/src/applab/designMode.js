@@ -17,6 +17,9 @@ var gridUtils = require('./gridUtils');
 var logToCloud = require('../logToCloud');
 var actions = require('./actions');
 
+var ICON_PREFIX = applabConstants.ICON_PREFIX;
+var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
+
 var currentlyEditedElement = null;
 var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
@@ -172,6 +175,26 @@ designMode.onPropertyChange = function(element, name, value) {
 };
 
 /**
+ * Create a data-URI with the image data of the given icon glyph.
+ * @param value {string} An icon identifier of the format "icon://fa-icon-name".
+ * @param element {Element}
+ * @return {string}
+ */
+function renderIconToString(value, element) {
+  var canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 400;
+  var ctx = canvas.getContext('2d');
+  ctx.font = '300px FontAwesome, serif';
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'center';
+  ctx.fillStyle = element.getAttribute('data-icon-color');
+  var regex = new RegExp('^' + ICON_PREFIX + 'fa-');
+  var unicode = '0x' + dashboard.iconsUnicode[value.replace(regex, '')];
+  ctx.fillText(String.fromCharCode(unicode), 200, 200);
+  return canvas.toDataURL();
+}
+
+/**
  * After handling properties generically, give elementLibrary a chance
  * to do any element specific changes.
  * @param element
@@ -239,41 +262,64 @@ designMode.updateProperty = function(element, name, value) {
     case 'textAlign':
       element.style.textAlign = value;
       break;
+    case 'icon-color':
+      element.setAttribute('data-icon-color', value);
+      break;
     case 'image':
-      var backgroundImage = new Image();
       var originalValue = element.getAttribute('data-canonical-image-url');
+      element.setAttribute('data-canonical-image-url', value);
+
+      var fitImage = function() {
+        // Fit the image into the button
+        element.style.backgroundSize = 'contain';
+        element.style.backgroundPosition = '50% 50%';
+        element.style.backgroundRepeat = 'no-repeat';
+
+        // Re-render properties
+        if (currentlyEditedElement === element) {
+          designMode.editElementProperties(element);
+        }
+      };
+
+      if (ICON_PREFIX_REGEX.test(value)) {
+        element.style.backgroundImage = 'url(' + renderIconToString(value, element) + ')';
+        fitImage();
+        break;
+      }
+
+      var backgroundImage = new Image();
       backgroundImage.src = assetPrefix.fixPath(value);
       element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
-      element.setAttribute('data-canonical-image-url', value);
+
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
-        backgroundImage.onload = function() {
-          // Fit the image into the button
-          element.style.backgroundSize = 'contain';
-          element.style.backgroundPosition = '50% 50%';
-          element.style.backgroundRepeat = 'no-repeat';
-
-          // Re-render properties
-          if (currentlyEditedElement === element) {
-            designMode.editElementProperties(element);
-          }
-        };
+        backgroundImage.onload = fitImage;
       }
       break;
 
     case 'screen-image':
+      element.setAttribute('data-canonical-image-url', value);
+
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
-      element.style.backgroundImage = 'url(' + assetPrefix.fixPath(value) + ')';
-      element.setAttribute('data-canonical-image-url', value);
       element.style.backgroundSize = width + 'px ' + height + 'px';
+
+      var url = ICON_PREFIX_REGEX.test(value) ? renderIconToString(value, element) : assetPrefix.fixPath(value);
+      element.style.backgroundImage = 'url(' + url + ')';
+
       break;
 
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
-      element.src = assetPrefix.fixPath(value);
       element.setAttribute('data-canonical-image-url', value);
+
+      if (ICON_PREFIX_REGEX.test(value)) {
+        element.src = renderIconToString(value, element);
+        break;
+      }
+
+      element.src = assetPrefix.fixPath(value);
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
         var resizeElement = function (width, height) {
@@ -493,6 +539,12 @@ designMode.serializeToLevelHtml = function () {
     elementUtils.removeIdPrefix(this);
   });
 
+  // Remove the "data:img/png..." URI from icon images
+  designModeVizClone.find('[data-canonical-image-url^="' + ICON_PREFIX + '"]').each(function () {
+    this.removeAttribute('src');
+    this.style.backgroundImage = '';
+  });
+
   var serialization = designModeVizClone[0] ? designModeVizClone[0].outerHTML : '';
   if (madeUndraggable) {
     makeDraggable(designModeViz.children().children());
@@ -500,6 +552,21 @@ designMode.serializeToLevelHtml = function () {
 
   Applab.levelHtml = serialization;
 };
+
+
+function getUnsafeHtmlReporter(sanitizationTarget) {
+  return function (removed, unsafe, safe) {
+    var msg = "The following lines of HTML were modified or removed:\n" + removed +
+      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe + "\ntarget: " + sanitizationTarget;
+    console.log(msg);
+    logToCloud.addPageAction(logToCloud.PageAction.SanitizedLevelHtml, {
+      removedHtml: removed,
+      unsafeHtml: unsafe,
+      safeHtml: safe,
+      sanitizationTarget: sanitizationTarget
+    });
+  };
+}
 
 /**
  * Replace the contents of rootEl with the children of the DOM node obtained by
@@ -520,18 +587,8 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   if (!Applab.levelHtml) {
     return;
   }
-  function reportUnsafeHtml(removed, unsafe, safe) {
-    var msg = "The following lines of HTML were modified or removed:\n" + removed +
-      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe + "\ntarget: " + rootEl.id;
-    console.log(msg);
-    logToCloud.addPageAction(logToCloud.PageAction.SanitizedLevelHtml, {
-      removedHtml: removed,
-      unsafeHtml: unsafe,
-      safeHtml: safe,
-      sanitizationTarget: rootEl.id
-    });
-  }
 
+  var reportUnsafeHtml = getUnsafeHtmlReporter(rootEl.id);
   var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
   var children = $(levelDom).children();
 
@@ -924,6 +981,8 @@ designMode.renderDesignWorkspace = function(element) {
  * screen app.
  */
 designMode.addScreenIfNecessary = function(html) {
+  var reportUnsafeHtml = getUnsafeHtmlReporter('levelHtml');
+  html = sanitizeHtml(html, reportUnsafeHtml);
   var rootDiv = $(html);
   if (rootDiv.children().length === 0 ||
       rootDiv.children().eq(0).hasClass('screen')) {

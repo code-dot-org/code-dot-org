@@ -20,7 +20,7 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 <div style="margin-left: 20px;">
 
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "S1vFrz4NETg", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center' %>
 
 </div>
 
@@ -106,6 +106,14 @@ We have forums for educators to discuss and trade ideas about CSP and talk about
 * [Post-AP Stage-Specific Forums](http://forum.code.org/c/csp-post-ap)
 
 ## Frequently Asked Questions
+
+#### How can I access answer keys? 
+Any teacher can apply for Code Studio access to protected teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong>.
+<br>
+
+#### How Can I communicate with other teachers who are using the curriulum? 
+Check out our forum at <a href ="forum.code.org" target=_blank>http://forum.code.org</a>. There you'll find a space for general CSP discussion as well as unit- and lesson-specific threads.
+<br>
 
 #### When will lessons be published?
 

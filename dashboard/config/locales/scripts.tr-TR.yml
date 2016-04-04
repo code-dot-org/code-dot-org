@@ -1824,3 +1824,8 @@
             Algılama ve Mesafe Formülü'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Kaza Algılama (Büyük
             Oyun)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

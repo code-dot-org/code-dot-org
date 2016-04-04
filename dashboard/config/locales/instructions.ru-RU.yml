@@ -680,9 +680,6 @@
       4-5 Maze Assessment 1_instruction: "Подсказка: Доберись к подсолнечнику."
       4-5 Maze Conditionals 1_instruction: Используй блок "Повторять до" чтобы доставить
         зомби к подсолнечнику.
-      4-5 Maze Conditionals 10_instruction: "Можешь добавить всего 3 блока чтобы помочь
-        мне пройти более сложный лабиринт? Если сделаешь все правильно, я смогу ходить
-        по любой извилистой дороге любой длины."
       4-5 Maze Conditionals 2_instruction: Используй блок "Повторять до" чтобы доставить
         зомби к подсолнечнику.
       4-5 Maze Conditionals 3_instruction: 'Используй блок "Если" чтобы я решил когда
@@ -1948,6 +1945,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2551,6 +2552,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3150,6 +3153,12 @@
       Ryan - Bee Conditionals_instruction: "Пчела хочет собирать только нектар. Помни,
         что не все объекты являются цветами, поэтому сначала проверяй каждую тучку,
         чтобы увидеть, скрывает ли она цветок. Если так, то можно собирать нектар."
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Эта функция называется "патрулировать."
         Измените её так, чтобы переместить кота на 400 пикселей вверх, а потом на
         400 пикселей вниз.

@@ -1,0 +1,140 @@
+---
+layout: none
+theme: none
+content-type: text/ng-template
+---
+
+%br/
+
+.loading{'ng-hide' => 'assessmentsLoaded'}
+  = I18n.t('dashboard_landing_loading')
+
+%div{'ng-show' => 'assessmentsLoaded'}
+  View assesments in:
+  %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeScript(course_id)'}
+
+%br/
+
+:ruby
+  assessments_filtered = "assessments | orderBy:order | filter:(stageFilter && {stage: stageFilter}):true"
+
+%div{style: "padding-left:20px", 'ng-show' => '!assessments.length'}
+  No assessments
+%div{style: "padding-left:20px", 'ng-show' => 'assessments.length'}
+  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'assessments.length', "ng-form" => "allForm"}
+    %colgroup
+      %col{width: "100"}/
+      %col{width: "175"}/
+      %col{width: "75"}/
+      %col{width: "125"}/
+      %col{width: "75"}/
+      %col{width: "75"}/
+      %col{width: "75"}/
+      %col{width: "125"}/
+    %tr
+      %th.manage-th{colspan: 8}
+        %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
+          Filter by stage:
+          %select{'ng-model' => 'stageFilter', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
+            %option{value: ""} All
+        %button.btn.btn-white{'ng-csv' => assessments_filtered,
+                filename: "assessments.csv",
+                'csv-header' => "['Name', 'Stage', 'Puzzle', 'Status', 'Multi correct', 'Multi count', 'Multi correct percent', 'Submission timestamp']",
+                'csv-column-order' => "['student.name', 'stage', 'puzzle', 'status' , 'multi_correct', 'multi_count', 'multi_correct_percent', 'timestamp']",
+                style: 'float: right'}
+          %i.fa.fa-download
+          Download CSV
+
+    %tr
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'stage'"}= I18n.t('dashboard_stage')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_puzzle')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'status'"}= I18n.t('dashboard_status')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'multi_correct'"}= I18n.t('dashboard_multi_correct')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'multi_count'"}= I18n.t('dashboard_multi_count')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'multi_correct_percent'"}= I18n.t('dashboard_multi_correct_percent')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'submission_timestamp'"}= I18n.t('dashboard_submission_timestamp')
+
+    %tr{"ng-repeat" => "assessment in #{assessments_filtered}", "ng-form" => "form"}
+      %td
+        %a{"ng-href" => "#/sections/{{section.id}}/student/{{assessment.student.id}}"} {{assessment.student.name}}
+      %td
+        {{assessment.stage}}
+      %td
+        {{assessment.puzzle}}
+      %td
+        {{submission_list[assessment.status]}}
+      %td
+        {{assessment.multi_correct}}
+      %td
+        {{assessment.multi_count}}
+      %td
+        {{assessment.multi_correct_percent}}
+      %td
+        {{assessment.timestamp}}
+
+%p
+  &nbsp;
+
+:ruby
+  levels_filtered = "levels | orderBy:order | filter:(stageFilter && {stage: stageFilter}):true"
+
+%div{style: "padding-left:20px", 'ng-show' => 'assessments.length'}
+  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'assessments.length', "ng-form" => "allForm"}
+    %colgroup
+      %col{width: "100"}/
+      %col{width: "175"}/
+      %col{width: "75"}/
+      %col{width: "75"}/
+      %col{width: "275"}/
+      %col{width: "125"}/
+
+    %tr
+      %th.manage-th{colspan: 6}
+        %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
+          Filter by stage:
+          %select{'ng-model' => 'stageFilter', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
+            %option{value: ""} All
+        %button.btn.btn-white{'ng-csv' => levels_filtered,
+                filename: "assessment_levels.csv",
+                'csv-header' => "['Name', 'Stage', 'Puzzle', 'Question', 'Response', 'Correctness']",
+                'csv-column-order' => "['student.name', 'stage', 'puzzle', 'question', 'studentResult', 'correct']",
+                style: 'float: right'}
+          %i.fa.fa-download
+          Download CSV
+
+    %tr
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'stage'"}= I18n.t('dashboard_stage')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_puzzle')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'question'"}= I18n.t('dashboard_question')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'response'"}= I18n.t('dashboard_response')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'correctness'"}= I18n.t('dashboard_correctness')
+
+    %tr{"ng-repeat" => "level in #{levels_filtered}", "ng-form" => "form"}
+      %td
+        %a{"ng-href" => "#/sections/{{section.id}}/student/{{level.student.id}}"} {{level.student.name}}
+      %td
+        {{level.stage}}
+      %td
+        {{level.puzzle}}
+      %td
+        {{level.question}}
+      %td
+        {{level.studentResult}}
+      %td
+        {{correctness_list[level.correct]}}

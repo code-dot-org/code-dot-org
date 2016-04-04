@@ -23,13 +23,7 @@ Teachers from Seattle, Denver and Utah will travel to Spokane for PD and virtual
 Teachers from San Francisco will travel to Los Angeles for PD and can find more details about their workshop on the [LAUSD page](/educate/pd/15-16/lausd).
 
 
-**Save the dates:**
-
-Quarter 1: Saturday, October 3, 2015
-
-Quarter 2: Saturday, November 21, 2015
-
-Quarter 3: Saturday, January 30, 2016
+**Save the date:**
 
 Quarter 4: Saturday, April 16, 2016
 
@@ -45,7 +39,7 @@ PACCAR 107<br/>
 502 E. Boone Avenue<br/>
 Spokane WA 99258](https://www.google.com/maps/place/Gonzaga+University/@47.6681035,-117.4112584,14z/data=!4m2!3m1!1s0x0:0xdb160d1679b907e7)
 
-Free parking is located on level 3 and 4 of the BARC parking garage on Hamilton and Boone Ave. See a [campus map here](/files/GU-campus-fall-2015-16.pdf).
+Parking will be free on level 3 and 4 of the BARC parking garage on Hamilton and Boone Ave.. See a [campus map here](/files/GU-campus-fall-2015-16.pdf).
 <br/>
 <br/>
 _Agendas_ for our frist Phase 3 in-person workshop can be found [here](/files/CSPFirstQuarterWorkshop-teachers.pdf). 

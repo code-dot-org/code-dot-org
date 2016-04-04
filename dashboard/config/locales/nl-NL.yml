@@ -25,6 +25,7 @@
   welcome_back: Welkom terug, %{name}
   submit: Insturen
   unsubmit: Intrekken
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Voeg een leraar toe:'
@@ -134,7 +135,7 @@
       email: Email-adres
       submit: Stuur me uitleg over wachtwoord resetten
     change_form:
-      title: Verander je wachtwoord
+      title: Wijzig je wachtwoord
       new_password: Nieuw wachtwoord
       confirm_password: Bevestig je nieuwe wachtwoord
       submit: Wijzig mijn wachtwoord
@@ -574,7 +575,6 @@
     prerelease_hoc2014: Deze handleiding is in <span class='betatext'>beta</span>.
       Deze handleiding wordt bijgewerkt afhankelijk van ontvangen feedback en er worden
       verbeteringen aan aangebracht.
-    feedback: Geef Feedback
     report_bug: Meld Bug
     support: Help
     support_url: "//support.code.org"
@@ -593,6 +593,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Bedankt
+    wrong_body: Thank you for submitting answers.
+    correct_title: Bedankt
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Bedankt
+    wrong_body: Thank you for submitting answers.
+    correct_title: Bedankt
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Onjuist antwoord
     wrong_body: De oplossing die je hebt ingevoerd is niet juist.  Probeer het opnieuw!
@@ -612,9 +622,8 @@
     placeholder: Voer uw antwoord hier in
     open_response_title: Bedankt
     open_response_body: Bedankt voor uw reactie!
-  level_group:
-    correct_title: Bedankt
-    correct_body: Thank you for submitting an answer
+    correct_title: Juist
+    correct_body: Dat is het juiste antwoord.
   dialog:
     ok: OK
     startover_title: Weet je zeker dat je opnieuw wilt beginnen?
@@ -749,3 +758,7 @@
         acknowledge: Door het indienen van deze informatie, erkent u dat het zal worden
           behandeld in overeenstemming met de voorwaarden van de %{link_start_privacy}Privacy
           Policy%{link_end} en de %{link_start_tos}Terms van Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

@@ -1,6 +1,7 @@
-/* global Blockly, ace:true, droplet, marked, dashboard, addToHome */
+/* global Blockly, ace:true, droplet, dashboard, addToHome */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
+var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
@@ -18,12 +19,14 @@ var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
-var Instructions = require('./templates/Instructions.jsx');
+var Instructions = require('./templates/instructions/Instructions.jsx');
 var DialogButtons = require('./templates/DialogButtons.jsx');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
+var annotationList = require('./acemode/annotationList');
+var processMarkdown = require('marked');
 var copyrightStrings;
 
 /**
@@ -40,6 +43,12 @@ var ENGLISH_LOCALE = 'en_us';
  * Treat mobile devices with screen.width less than the value below as phones.
  */
 var MAX_PHONE_WIDTH = 500;
+
+/**
+ * Object representing everything in window.appOptions (often passed around as
+ * config)
+ * @typedef {Object} AppOptionsConfig
+ */
 
 var StudioApp = function () {
   this.feedback_ = new FeedbackUtils(this);
@@ -227,12 +236,24 @@ StudioApp.prototype.configure = function (options) {
   this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 };
 
+/**
+ * @param {AppOptionsConfig}
+ */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
   return !!(config.level.instructions || config.level.aniGifURL);
 };
 
 /**
+ * Some functionality - most notably markdown instructions - is only
+ * supported when running in English. This helper exposes that check.
+ */
+StudioApp.prototype.localeIsEnglish = function () {
+  return this.LOCALE === ENGLISH_LOCALE;
+};
+
+/**
  * Common startup tasks for all apps. Happens after configure.
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.init = function(config) {
   if (!config) {
@@ -349,10 +370,13 @@ StudioApp.prototype.init = function(config) {
   }
 
   if (config.showInstructionsWrapper) {
-    config.showInstructionsWrapper(_.bind(function () {
+    config.showInstructionsWrapper(function () {
+      if (config.showInstructionsInTopPane) {
+        return;
+      }
       var shouldAutoClose = !!config.level.aniGifURL;
-      this.showInstructions_(config.level, shouldAutoClose, false);
-    }, this));
+      this.showInstructionsDialog_(config.level, shouldAutoClose, false);
+    }.bind(this));
   }
 
   // In embed mode, the display scales down when the width of the
@@ -393,40 +417,8 @@ StudioApp.prototype.init = function(config) {
     config.loadAudio();
   }
 
-  var promptDiv = document.getElementById('prompt');
-  var prompt2Div = document.getElementById('prompt2');
-  if (config.level.instructions) {
-    var instructionsHtml = this.substituteInstructionImages(config.level.instructions);
-    $(promptDiv).html(instructionsHtml);
-  }
-  if (config.level.instructions2) {
-    var instructions2Html = this.substituteInstructionImages(config.level.instructions2);
-    $(prompt2Div).html(instructions2Html);
-    $(prompt2Div).show();
-  }
-
-  if (this.hasInstructionsToShow(config)) {
-    var promptIcon = document.getElementById('prompt-icon');
-    if (this.smallIcon) {
-      promptIcon.src = this.smallIcon;
-      $('#prompt-icon-cell').show();
-    }
-
-    var bubble = document.getElementById('bubble');
-
-    this.authoredHintsController_.display(promptIcon, bubble, function () {
-      this.showInstructions_(config.level, false, true);
-    }.bind(this));
-  }
-
-  var aniGifPreview = document.getElementById('ani-gif-preview');
-  if (config.level.aniGifURL) {
-    aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-    var promptTable = document.getElementById('prompt-table');
-    promptTable.className += " with-ani-gif";
-  } else {
-    var wrapper = document.getElementById('ani-gif-preview-wrapper');
-    wrapper.style.display = 'none';
+  if (!config.showInstructionsInTopPane) {
+    this.configureAndShowInstructions_(config);
   }
 
   if (this.editCode) {
@@ -530,6 +522,50 @@ StudioApp.prototype.init = function(config) {
 };
 
 /**
+ * Sets html for prompts below playspace, anigif, and shows instructions dialog
+ * @param {AppOptionsConfig}
+ */
+StudioApp.prototype.configureAndShowInstructions_ = function (config) {
+  var promptDiv = document.getElementById('prompt');
+  var prompt2Div = document.getElementById('prompt2');
+  if (config.level.instructions) {
+    var instructionsHtml = this.substituteInstructionImages(
+      config.level.instructions, this.skin.instructions2ImageSubstitutions);
+    $(promptDiv).html(instructionsHtml);
+  }
+  if (config.level.instructions2) {
+    var instructions2Html = this.substituteInstructionImages(
+      config.level.instructions2, this.skin.instructions2ImageSubstitutions);
+    $(prompt2Div).html(instructions2Html);
+    $(prompt2Div).show();
+  }
+
+  if (this.hasInstructionsToShow(config)) {
+    var promptIcon = document.getElementById('prompt-icon');
+    if (this.smallIcon) {
+      promptIcon.src = this.smallIcon;
+      $('#prompt-icon-cell').show();
+    }
+
+    var bubble = document.getElementById('bubble');
+
+    this.authoredHintsController_.display(promptIcon, bubble, function () {
+      this.showInstructionsDialog_(config.level, false, true);
+    }.bind(this));
+  }
+
+  var aniGifPreview = document.getElementById('ani-gif-preview');
+  if (config.level.aniGifURL) {
+    aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
+    var promptTable = document.getElementById('prompt-table');
+    promptTable.className += " with-ani-gif";
+  } else {
+    var wrapper = document.getElementById('ani-gif-preview-wrapper');
+    wrapper.style.display = 'none';
+  }
+};
+
+/**
  * Create a phone frame and container. Scale shared content (everything currently inside the visualization column)
  * to container width, fit container to the phone frame and add share footer.
  */
@@ -576,10 +612,15 @@ StudioApp.prototype.scaleLegacyShare = function() {
   applyTransformScale(vizContainer, 'scale(' + scale + ')');
 };
 
-StudioApp.prototype.substituteInstructionImages = function(htmlText) {
+/**
+ * @param {string} htmlText
+ * @param {Object.<string, string>} [substitutions] Dictionary strings (keys) to
+ *   replacement values.
+ */
+StudioApp.prototype.substituteInstructionImages = function(htmlText, substitutions) {
   if (htmlText) {
-    for (var prop in this.skin.instructions2ImageSubstitutions) {
-      var value = this.skin.instructions2ImageSubstitutions[prop];
+    for (var prop in substitutions) {
+      var value = substitutions[prop];
       var substitutionHtml = '<span class="instructionsImageContainer"><img src="' + value + '" class="instructionsImage"/></span>';
       var re = new RegExp('\\[' + prop + '\\]', 'g');
       htmlText = htmlText.replace(re, substitutionHtml);
@@ -610,7 +651,7 @@ StudioApp.prototype.setIconsFromSkin = function (skin) {
 /**
  * Reset the puzzle back to its initial state.
  * Search aliases: "Start Over", startOver
- * @param {Object} config - same config object passed to studioApp.init().
+ * @param {AppOptionsConfig}- same config object passed to studioApp.init().
  */
 StudioApp.prototype.handleClearPuzzle = function (config) {
   if (this.isUsingBlockly()) {
@@ -635,6 +676,8 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     // Remove this line once that bug is fixed and our Droplet lib is updated.
     this.editor.getValue();
     this.editor.setValue(resetValue);
+
+    annotationList.clearRuntimeAnnotations();
   }
   if (config.afterClearPuzzle) {
     config.afterClearPuzzle();
@@ -976,15 +1019,63 @@ StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 };
 
-StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
-  var isMarkdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+/**
+ * Given a level definition, do we want to show instructions in markdown form.
+ * @param {object} level
+ * @returns {boolean}
+ */
+StudioApp.prototype.isMarkdownMode = function (level) {
+  return level.markdownInstructions && this.localeIsEnglish();
+};
+
+/**
+ * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
+ *   have markdown instructions
+ * @param {object} level
+ * @param {boolean} showHints
+ * @returns {React.element}
+ */
+StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
+  var renderedMarkdown;
+
+  if (this.isMarkdownMode(level)) {
+    var markdownWithImages = this.substituteInstructionImages(
+      level.markdownInstructions, this.skin.instructions2ImageSubstitutions);
+    renderedMarkdown = processMarkdown(markdownWithImages);
+  }
+
+  var authoredHints;
+  if (showHints) {
+    authoredHints = this.authoredHintsController_.getHintsDisplay();
+  }
+
+  return (
+    <Instructions
+      puzzleTitle={puzzleTitle}
+      instructions={this.substituteInstructionImages(level.instructions,
+        this.skin.instructions2ImageSubstitutions)}
+      instructions2={this.substituteInstructionImages(level.instructions2,
+        this.skin.instructions2ImageSubstitutions)}
+      renderedMarkdown={renderedMarkdown}
+      markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
+      aniGifURL={level.aniGifURL}
+      authoredHints={authoredHints}/>
+  );
+};
+
+/**
+ * @param {object} level
+ * @param {boolean} autoClose - closes instructions after 32s if true
+ * @param {boolean} showHints
+ */
+StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose, showHints) {
+  var isMarkdownMode = this.isMarkdownMode(level);
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
     'markdown-instructions-container' :
     'instructions-container';
 
-  var renderedMarkdown;
   var headerElement;
 
   var puzzleTitle = msg.puzzleTitle({
@@ -993,8 +1084,6 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   });
 
   if (isMarkdownMode) {
-    var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
-    renderedMarkdown = marked(markdownWithImages);
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
     headerElement.innerHTML = puzzleTitle;
@@ -1003,20 +1092,8 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     }
   }
 
-  var authoredHints;
-  if (showHints) {
-    authoredHints = this.authoredHintsController_.getHintsDisplay();
-  }
-
-  var instructionsContent = React.createElement(Instructions, {
-    puzzleTitle: puzzleTitle,
-    instructions: this.substituteInstructionImages(level.instructions),
-    instructions2: this.substituteInstructionImages(level.instructions2),
-    renderedMarkdown: renderedMarkdown,
-    markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
-    aniGifURL: level.aniGifURL,
-    authoredHints: authoredHints
-  });
+  var instructionsContent = this.getInstructionsContent_(puzzleTitle, level,
+    showHints);
 
   // Create a div to eventually hold this content, and add it to the
   // overall container. We don't want to render directly into the
@@ -1028,9 +1105,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
 
   var buttons = document.createElement('div');
   instructionsDiv.appendChild(buttons);
-  ReactDOM.render(React.createElement(DialogButtons, {
-    ok: true
-  }), buttons);
+  ReactDOM.render(<DialogButtons ok={true}/>, buttons);
 
   // If there is an instructions block on the screen, we want the instructions dialog to
   // shrink down to that instructions block when it's dismissed.
@@ -1096,7 +1171,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
 
   this.instructionsDialog.show({hideOptions: hideOptions});
 
-  if (renderedMarkdown) {
+  if (isMarkdownMode) {
     // process <details> tags with polyfill jQuery plugin
     $('details').details();
   }
@@ -1243,7 +1318,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
  * Resize the visualization to the given width
  */
 StudioApp.prototype.resizeVisualization = function (width) {
-  var codeWorkspace = document.getElementById('codeWorkspace');
+  var editorColumn = $(".editor-column");
   var visualization = document.getElementById('visualization');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -1258,10 +1333,10 @@ StudioApp.prototype.resizeVisualization = function (width) {
 
   if (this.isRtl()) {
     visualizationResizeBar.style.right = newVizWidthString;
-    codeWorkspace.style.right = newVizWidthString;
+    editorColumn.css('right', newVizWidthString);
   } else {
     visualizationResizeBar.style.left = newVizWidthString;
-    codeWorkspace.style.left = newVizWidthString;
+    editorColumn.css('left', newVizWidthString);
   }
   visualizationResizeBar.style.lineHeight = newVizHeightString;
   // Add extra width to visualizationColumn if visualization has a border:
@@ -1473,6 +1548,23 @@ StudioApp.prototype.report = function(options) {
 };
 
 /**
+ * Set up the runtime annotation system as appropriate. Typically called
+ * during an app's execute() immediately after calling reset().
+ */
+StudioApp.prototype.clearAndAttachRuntimeAnnotations = function () {
+  if (this.editCode && !this.hideSource) {
+    // Our ace worker also calls attachToSession, but it won't run on IE9:
+    var session = this.editor.aceEditor.getSession();
+    annotationList.attachToSession(session, this.editor);
+    annotationList.clearRuntimeAnnotations();
+    this.editor.aceEditor.session.on("change", function () {
+      // clear any runtime annotations whenever a change is made
+      annotationList.clearRuntimeAnnotations();
+    });
+  }
+};
+
+/**
 * Click the reset button.  Reset the application.
 */
 StudioApp.prototype.resetButtonClick = function() {
@@ -1558,7 +1650,7 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
 };
 
 /**
- *
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.setConfigValues_ = function (config) {
   this.share = config.share;
@@ -1605,7 +1697,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
-  this.showInstructions = this.showInstructions_.bind(this, config.level, false);
+  this.showInstructions = this.showInstructionsDialog_.bind(this, config.level, false);
   this.polishCodeHook = config.polishCodeHook;
 };
 
@@ -1621,6 +1713,7 @@ StudioApp.prototype.runButtonClickWrapper = function (callback) {
 /**
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
@@ -1758,8 +1851,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   }
 };
 
-StudioApp.prototype.handleEditCode_ = function (config) {
 
+StudioApp.prototype.handleEditCode_ = function (config) {
   if (this.hideSource) {
     // In hide source mode, just call afterInject and exit immediately
     if (config.afterInject) {
@@ -1990,6 +2083,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
 
 /**
  * Show the configured starting function definition.
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.openFunctionDefinition_ = function(config) {
   if (Blockly.contractEditor) {
@@ -2008,7 +2102,7 @@ StudioApp.prototype.openFunctionDefinition_ = function(config) {
 };
 
 /**
- *
+ * @param {AppOptionsConfig}
  */
 StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // Allow empty blocks if editing blocks.
@@ -2313,7 +2407,7 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
     text.setAttribute('y', CANVAS_HEIGHT);
     text.setAttribute('font-weight', 'bold');
     rect = rectFromElementBoundingBox(text);
-    rect.setAttribute('fill', 'white');
+    rect.setAttribute('fill', color.white);
     svg.insertBefore(rect, text);
 
     // create y axis labels
@@ -2326,7 +2420,7 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
     text.setAttribute('dominant-baseline', 'central');
     text.setAttribute('font-weight', 'bold');
     rect = rectFromElementBoundingBox(text);
-    rect.setAttribute('fill', 'white');
+    rect.setAttribute('fill', color.white);
     svg.insertBefore(rect, text);
   }
 };
@@ -2400,7 +2494,7 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
   var renderElement = container[0];
 
   var handleAlertClose = function () {
-    React.unmountComponentAtNode(renderElement);
+    ReactDOM.unmountComponentAtNode(renderElement);
   };
   ReactDOM.render(
     <Alert onClose={handleAlertClose} type={props.type} sideMargin={props.sideMargin}>

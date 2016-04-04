@@ -12,7 +12,7 @@ class Slack
 
   CHANNEL_MAP = {
     'developers' => 'general',
-    'server operations' => 'general',
+    'server operations' => 'server-operations',
     'staging' => 'infra-staging',
     'test' => 'infra-test',
     'production' => 'infra-production'

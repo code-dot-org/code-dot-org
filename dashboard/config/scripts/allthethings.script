@@ -115,4 +115,12 @@ stage 'Studio'
 level 'Resizing Test'
 
 stage 'Long assessment'
-level 'Test longassessment levelgroup'
+assessment 'Test longassessment levelgroup'
+assessment 'Test longassessment levelgroup split'
+
+stage 'Star wars'
+level 'blockly:StudioEC:js_hoc2015_event_two_items'
+level 'blockly:Studio:hoc2015_blockly_5'
+
+stage 'Minecraft'
+level 'Overworld Chop Tree - allthethings'

@@ -652,6 +652,7 @@
   dashboard_navigation_all_sections: Elevkonton och framsteg
   dashboard_navigation_view_progress: Visa framsteg
   dashboard_navigation_view_text_responses: Visa Text svar
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Lägg till elever
   dashboard_navigation_manage_students: Hantera elever
   dashboard_navigation_lesson_plans_resources: Lektionsplaner och resurser
@@ -770,6 +771,16 @@
   dashboard_puzzle: Pussel
   dashboard_question: Fråga
   dashboard_response: Svar
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Rätt
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Fantastiska fakta om förra årets Hour of Code. På bara
     en vecka:'
   stats_hoc_2013_image_alt: Statistik från Hour of Code 2013

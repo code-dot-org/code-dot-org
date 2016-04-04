@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Loop this design 10 times and make sure to turn between each shape that's drawn. Here's a hint for how much you have to turn: What is 360 divided by 10?",
+    "instructions": "Loop this design 10 times and make sure to turn between each shape that's drawn. \r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -29,9 +29,13 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Loop this design 10 times and make sure to turn between each shape that's drawn. Here's a hint for how much you have to turn: What is 360 divided by 10?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
-    "examples_required": "false"
-  }
+    "markdown_instructions": "Loop this design 10 times and make sure to turn between each shape that's drawn. \r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Need to know how much to turn? \\n\\nWhat is 360 divided by 10?\",\r\n  \"hint_id\": \"Course_4_Artist_9_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -82,13 +86,9 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="18,36,54,72,90">90</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="18,36,54,72,90">90</title>
+          <title name="VALUE">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
@@ -111,63 +111,74 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="pick_one">
           <statement name="PICK">
-            <block type="draw_turn_by_constant_dropdown">
+            <block type="draw_turn_by_constant">
               <title name="DIR">turnRight</title>
-              <title name="VALUE" config="18,36,54,72,90">36</title>
+              <title name="VALUE">36</title>
               <next>
-                <block type="draw_turn_by_constant_dropdown">
+                <block type="draw_turn_by_constant">
                   <title name="DIR">turnLeft</title>
-                  <title name="VALUE" config="18,36,54,72,90">36</title>
+                  <title name="VALUE">36</title>
                 </block>
               </next>
             </block>
           </statement>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">10</title>
-          <statement name="DO">
+        <block type="when_run" deletable="false" movable="false">
+          <next>
             <block type="controls_repeat">
-              <title name="TIMES">2</title>
+              <title name="TIMES">10</title>
               <statement name="DO">
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
+                <block type="draw_colour" inline="true" id="draw-color">
+                  <value name="COLOUR">
+                    <block type="colour_random"/>
+                  </value>
                   <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">60</title>
-                      <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
                         <block type="draw_move_by_constant">
                           <title name="DIR">moveForward</title>
-                          <title name="VALUE">50</title>
+                          <title name="VALUE">100</title>
                           <next>
                             <block type="draw_turn_by_constant">
                               <title name="DIR">turnRight</title>
-                              <title name="VALUE">120</title>
+                              <title name="VALUE">60</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">50</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant">
+                                      <title name="DIR">turnRight</title>
+                                      <title name="VALUE">120</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
                             </block>
                           </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">36</title>
                         </block>
                       </next>
                     </block>
                   </next>
                 </block>
               </statement>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE">36</title>
-                </block>
-              </next>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </solution_blocks>

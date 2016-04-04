@@ -476,6 +476,7 @@ $default-modal-width: 640px;
     .modal-image {
       margin-top: -100px;
       float: left;
+      position: relative;
     }
   }
 }
@@ -1831,13 +1832,18 @@ $information-desktop: "only screen and (min-width: 1024px)";
       font-size: 15px;
     }
   }
-  .answerbutton {
+  .answerbutton-default {
     margin-top: 15px;
     margin-right: 15px;
     padding-left: 10px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+  .answerbutton-tight {
+    display: block;
+    clear: both;
+    padding-left: 10px;
   }
 }
 
@@ -1860,6 +1866,7 @@ $modal-no-icon-gap: 22px;
     font-size: 24px;
     color: $purple;
   }
+
   .congrats {
     font-size: 27px;
     line-height: 30px;
@@ -1976,7 +1983,8 @@ $modal-no-icon-gap: 22px;
 .modal-image {
   width: $modal-image-width;
   height: auto;
-  margin-top: -60px;
+  margin-top: -75px;
+  position: absolute;
   html[dir=rtl] & {
     float: right;
     -webkit-transform: scaleX(-1);
@@ -1996,7 +2004,7 @@ $modal-no-icon-gap: 22px;
 .modal-content.markdown-instructions-container {
   margin-left: $modal-no-icon-gap;
   margin-right: $modal-no-icon-gap;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   margin-bottom: 15px;
   float: left;
   padding: 0 0 15px;
@@ -2006,7 +2014,7 @@ $modal-no-icon-gap: 22px;
 }
 
 .modal-content.instructions-container {
-  margin: 0 10px 20px 20px;
+  margin: 15px 10px 20px 20px;
 
   button {
     margin: 0;
@@ -2028,6 +2036,7 @@ $modal-no-icon-gap: 22px;
 
 .markdown-level-header-text {
   margin-left: $modal-image-width + $modal-image-margin-gap;
+  margin-top: 15px;
   font-weight: normal;
   line-height: 27px;
   font-size: 24px;

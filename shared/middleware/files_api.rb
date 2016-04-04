@@ -3,11 +3,11 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 
 class FilesApi < Sinatra::Base
-  def self.max_file_size
+  def max_file_size
     5_000_000 # 5 MB
   end
 
-  def self.max_app_size
+  def max_app_size
     2_000_000_000 # 2 GB
   end
 
@@ -58,7 +58,7 @@ class FilesApi < Sinatra::Base
   end
 
   def quota_crossed_half_used?(app_size, body_length)
-    app_size < FilesApi::max_app_size / 2 && app_size + body_length >= FilesApi::max_app_size / 2
+    (app_size < max_app_size / 2) && (app_size + body_length >= max_app_size / 2)
   end
 
   def quota_crossed_half_used(quota_type, encrypted_channel_id)
@@ -128,6 +128,7 @@ class FilesApi < Sinatra::Base
 
     type = File.extname(filename)
     not_found if type.empty?
+    unsupported_media_type unless allowed_file_type?(endpoint, type)
     content_type type
 
     result = get_bucket_impl(endpoint).new.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
@@ -145,7 +146,7 @@ class FilesApi < Sinatra::Base
   def put_file(endpoint, encrypted_channel_id, filename, body)
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    file_too_large(endpoint) unless body.length < FilesApi::max_file_size
+    file_too_large(endpoint) unless body.length < max_file_size
 
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
@@ -158,7 +159,7 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     app_size = buckets.app_size(encrypted_channel_id)
 
-    quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < FilesApi::max_app_size
+    quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
     quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 

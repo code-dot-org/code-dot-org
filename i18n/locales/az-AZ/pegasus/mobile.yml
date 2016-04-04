@@ -21,7 +21,7 @@ az-AZ:
   twentyhours_heading: Bizim İnformatika Giriş kursumuzu sınaqdan keçirin
   twentyhours_text: İlk Kod saatınızı bitirdiniz? Kursları izləyərək kompyuter sahəsi və proqramlaşdırma anlayışları barədə daha çox şey öyrənin.
   og_title: Hər bir uşaq fürsətə layiqdir
-  og_description: Məktəbdəki hər şagird kompyuter sahəsini öyrənməyə layiqdir.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: '<a href="http://hourofcode.com">Kod Saatı</a>na qoşulun<br/>8 - 14 dekabr, 2014<br/>'
   hoc2014_students: Şagirdlər
   hoc2014_try: Sınaqdan keçirin
@@ -179,7 +179,7 @@ az-AZ:
   learn_next_level: Növbəti mərhələyə keçin
   learn_online: Digər onlayn kursları sınaqdan keçirin
   learn_classes: Yerli siniflər tapın
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Mən elə indicə #HourOfCode Kod Saatını bitirdim - özünüz baxın! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -523,6 +523,7 @@ az-AZ:
   dashboard_navigation_all_sections: Student Accounts and Progress
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -621,6 +622,16 @@ az-AZ:
   dashboard_puzzle: Tapmaca
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Düzgün
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Müəllim

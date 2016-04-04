@@ -30,9 +30,12 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "maze_data": null,
-    "fast_get_nectar_animation": "false"
-  }
+    "fast_get_nectar_animation": "false",
+    "markdown_instructions": "Add the code necessary to make sure the bee collects all the nectar. \r\n\r\nLook at how much code you need for this puzzle!   \r\n(We'll learn a simpler way in the next puzzle.)",
+    "step_speed": "1"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -100,9 +103,10 @@
         <block type="math_number">
           <title name="NUM">1</title>
         </block>
+        <block type="maze_moveForward"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
@@ -112,7 +116,7 @@
           </value>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
@@ -129,25 +133,36 @@
                               <next>
                                 <block type="maze_moveForward">
                                   <next>
-                                    <block type="controls_repeat_dropdown">
-                                      <title name="TIMES" config="3-10">3</title>
+                                    <block type="controls_repeat_ext" inline="true">
+                                      <value name="TIMES">
+                                        <block type="math_number">
+                                          <title name="NUM">3</title>
+                                        </block>
+                                      </value>
                                       <statement name="DO">
                                         <block type="maze_nectar"/>
                                       </statement>
                                       <next>
                                         <block type="maze_moveForward">
                                           <next>
-                                            <block type="controls_repeat_dropdown">
-                                              <title name="TIMES" config="3-10">4</title>
+                                            <block type="controls_repeat_ext" inline="true">
+                                              <value name="TIMES">
+                                                <block type="math_number">
+                                                  <title name="NUM">4</title>
+                                                </block>
+                                              </value>
                                               <statement name="DO">
                                                 <block type="maze_nectar"/>
                                               </statement>
                                               <next>
-                                                <block type="maze_move">
-                                                  <title name="DIR">moveForward</title>
+                                                <block type="maze_moveForward">
                                                   <next>
-                                                    <block type="controls_repeat_dropdown">
-                                                      <title name="TIMES" config="3-10">5</title>
+                                                    <block type="controls_repeat_ext" inline="true">
+                                                      <value name="TIMES">
+                                                        <block type="math_number">
+                                                          <title name="NUM">5</title>
+                                                        </block>
+                                                      </value>
                                                       <statement name="DO">
                                                         <block type="maze_nectar"/>
                                                       </statement>

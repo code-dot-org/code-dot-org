@@ -83,16 +83,19 @@
         \r
         코드의 어느 부분을 고쳐야할까요?
       2-3 Artist Free Play_instruction: "자유 플레이: 원하는 것을 그려보세요."
-      2-3 Artist Functions 1_instruction: |
-        안녕하세요. 저는 좀비 화가입니다. 그림 그리기 좋아요!
-        사각형 안경을 그릴 수 있게 도와주세요. 힌트: 안경 알 사이의 길이는
-        안경 한 변의 길이보다 25 픽셀 만큼 작습니다.
+      2-3 Artist Functions 1_instruction: |-
+        "나 화가. 좀비... 그리기 좋아..!" \r
+        \r
+        사각형 안경을 그릴 수 있게 도와주세요. \r
+        \r
+        안경 알 사이의 다리는 안경 한 변의 길이보다 25 픽셀 만큼 작습니다.
       2-3 Artist Functions 10_instruction: |
         여기에 두 개의 함수가 있습니다. 하나는 큰 기어를 그리는 것이고, 하나는 작은 기어를 그리는 것입니다.
         기계의 내부를 그리는데 사용해보세요!
-      2-3 Artist Functions 11.5_instruction: |
-        여기에 똑같은 "육각형 그리기" 함수가 있습니다.
-        반복 할 때마다 60 도씩만 회전하면 어떻게 될까요?
+      2-3 Artist Functions 11.5_instruction: |-
+        여기에 똑같은 '육각형 그리기' 함수가 있습니다. \r
+        \r
+        반복 할 때마다 60도씩 회전시키면 어떻게 될까요?
       2-3 Artist Functions 11_instruction: |
         “사각형 그리기” 함수의 이름을 “육각형 그리기”로 바꿨지만, 여전히 이 함수는 사각형을 그리고 있습니다!
         "육각형 그리기" 함수를 수정해서, 한 변의 길이가 50 픽셀인 육각형을 그려보세요.
@@ -109,7 +112,7 @@
       2-3 Artist Functions 3_instruction: |
         한 변의 길이가 115 인 사각형을 그려 더 큰 안경을 만들어보세요.
         사각형들은 이제 45 픽셀 만큼 떨어져 있습니다.
-      2-3 Artist Functions 4_instruction: "“반복” 블록을 사용해서 이 정사각형을 3개 그려보세요."
+      2-3 Artist Functions 4_instruction: 이제, 함수를 "반복" 블록 안에 넣고 3개의 사각형을 그려보세요.
       2-3 Artist Functions 7_instruction: |
         2개의 서로 매개 변수가 있는 "집 그리기" 함수를 이용해 2개의 집을 그려보세요.
         (힌트: 첫 번째 집은 100 픽셀입니다.)
@@ -666,8 +669,6 @@
       4-5 Maze Conditionals 1_instruction: |
         "반복 ~할 때까지"블록을 이용해서,
         좀비를 해바라기로 이동시켜주세요.
-      4-5 Maze Conditionals 10_instruction: "더 복잡한 미로를 풀 수 있도록 3개의 블록만 더 더해 주실 수 있으세요?
-        그렇게만 된다면, 얼마나 멀던지 상관없이 구부러진 길에서 돌아갈 수 있을 것 같아요."
       4-5 Maze Conditionals 2_instruction: |
         "반복 ~할 때까지"블록을 이용해서,
         좀비를 해바라기로 이동시켜주세요.
@@ -1816,6 +1817,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2370,6 +2375,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2978,6 +2985,12 @@
         꿀벌은 지금 꽃꿀이 필요합니다.
         모두 꽃은 아니기 때문에, 안개 구름이 있는 모든 곳에서 꽃이 숨어있는지 확인해 보아야 합니다.
         꽃이 있으면 꿀을 모으면 됩니다.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         "순찰" 함수가 있습니다.
         함수를 수정해서 고양이가 400 픽셀 위로 이동 했다가, 다시 400 픽셀 아래로 이동하게 해보세요.

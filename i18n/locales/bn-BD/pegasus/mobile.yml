@@ -21,7 +21,7 @@ bn-BD:
   twentyhours_heading: আমাদের কম্পিউটার সায়েন্স কোর্সের সূচনাটি করার চেষ্টা করুন।
   twentyhours_text: আপনার প্রথম Houe of Code শেষ? এরপর একাধিক কোর কম্পিউটার বিজ্ঞান এবং প্রোগ্রামিং প্রাযুক্তিক পরবর্তী কোর্স, সম্বন্ধে জানুন।
   og_title: প্রতিটি শিশু সুযোগের দাবীদার
-  og_description: প্রত্যেক স্কুলে প্রতিটি ছাত্র কম্পিউটার বিজ্ঞানের পড়াশোনা করার সুযোগের দাবীদার।
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'যুক্ত হন <a href="http://hourofcode.com"> Hour of Code</a><br/> ডিসেম্বর 8-14, ২০১৪ <br/>'
   hoc2014_students: ছাত্র
   hoc2014_try: এটা চেষ্টা করুন।
@@ -180,7 +180,7 @@ bn-BD:
   learn_next_level: পরবর্তী ধাপে যান
   learn_online: অনলাইনে অন্যান্য কোর্স করুন
   learn_classes: স্থানীয় শ্রেণি খুঁজুন
-  hoc_is_here: 'গত কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহে #HourOfCode 50 মিলিয়ন ছাত্রের কাছে পৌঁছেছে।  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: '#HourOfCode সম্পন্ন করেছি @codeorg'
   just_did_course1: ' দেখ আমি কেবল কোর্স ১ শেষ করছে! @codeorg'
   just_did_course2: ' দেখ আমি কেবল কোর্স ২ শেষ করছে! @codeorg'
@@ -492,6 +492,7 @@ bn-BD:
   dashboard_navigation_all_sections: শিক্ষার্থীদের অ্যাকাউন্ট এবং আগ্রগতি
   dashboard_navigation_view_progress: আগ্রগতি দেখুন
   dashboard_navigation_view_text_responses: লিখিত জবাব দেখুন
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: ' শিক্ষার্থীদের যুক্ত করন'
   dashboard_navigation_manage_students: ' শিক্ষার্থীদের পরিচালনা করন'
   dashboard_navigation_lesson_plans_resources: পাঠ পরিকাল্পনা এবং তথ্য
@@ -579,17 +580,27 @@ bn-BD:
   dashboard_login_picture: ছবি
   dashboard_login_none: ই-মেইল
   dashboard_new_password: নতুন পাসওয়ার্ড
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: শুরু হয়নি
+  dashboard_progress_in_progress: অগ্রসর হচ্ছে
   dashboard_progress_not_completed: সম্পন্ন নয়
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: দাখিল
   dashboard_stage: ধাপ
   dashboard_puzzle: ধাঁধা
   dashboard_question: প্রশ্ন
   dashboard_response: জবাব
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: সঠিক
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: গত বছরের এক ঘন্টার কোড থেকে আসা অবিশ্বাস্য পরিসংখ্যান। শুধু এক সপ্তাহেঃ
   stats_hoc_2013_image_alt: 2013 থেকে ঘন্টা কোড এর stats
   dashboard_teacher: শিক্ষক

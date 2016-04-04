@@ -26,6 +26,7 @@
  */
 'use strict';
 
+var color = require('../color');
 var commonMsg = require('../locale');
 var turtleMsg = require('./locale');
 var levels = require('./levels');
@@ -47,7 +48,7 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
-var MAX_STICKER_SIZE = 150;
+var MAX_STICKER_SIZE = 100;
 
 var JOINT_RADIUS = 4;
 
@@ -170,13 +171,12 @@ Artist.prototype.init = function(config) {
   this.level = config.level;
 
   // Preload sticker images
-  this.stickers = [];
-  for (var i = 0; i < this.skin.stickerValues.length; i++) {
-    var url = this.skin.stickerValues[i][0];
-    var key = this.skin.stickerValues[i][1];
+  this.stickers = {};
+  for (var name in this.skin.stickers) {
     var img = new Image();
-    img.src = url;
-    this.stickers[key] = img;
+    img.src = this.skin.stickers[name];
+
+    this.stickers[name] = img;
   }
 
   if (this.skin.id == "anna" || this.skin.id == "elsa") {
@@ -195,8 +195,7 @@ Artist.prototype.init = function(config) {
   if (this.skin.id == "anna") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
-  }
-  else if (this.skin.id == "elsa") {
+  } else if (this.skin.id == "elsa") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
     this.decorationAnimationWidth = 85;
@@ -507,8 +506,7 @@ Artist.prototype.drawTurtle = function() {
   if (sourceX < 0 ||
       sourceY < 0 ||
       sourceX + sourceWidth  -0 > this.avatarImage.width ||
-      sourceY + sourceHeight > this.avatarImage.height)
-  {
+      sourceY + sourceHeight > this.avatarImage.height) {
     if (console && console.log) {
       // TODO(bjordan): ask Brent, starting to flood grunt mochaTest messages,
       // better fix here?
@@ -653,7 +651,7 @@ Artist.prototype.display = function() {
   // FF on linux retains drawing of previous location of artist unless we clear
   // the canvas first.
   var style = this.ctxDisplay.fillStyle;
-  this.ctxDisplay.fillStyle = 'white';
+  this.ctxDisplay.fillStyle = color.white;
   this.ctxDisplay.clearRect(0, 0, this.ctxDisplay.canvas.width,
     this.ctxDisplay.canvas.width);
   this.ctxDisplay.fillStyle = style;
@@ -894,7 +892,7 @@ Artist.prototype.animate = function() {
   if (this.level.editCode &&
       this.JSInterpreter &&
       this.JSInterpreter.initialized()) {
-      
+
     var programDone = false;
     var completedTuple = false;
 

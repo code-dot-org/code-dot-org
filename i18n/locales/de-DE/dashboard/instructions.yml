@@ -344,7 +344,6 @@ de:
       4-5 Maze 9_instruction: 'Erzeuge eine Schleife mit dem "Wiederholen bis"-Baustein.'
       4-5 Maze Assessment 1_instruction: 'Aufgabe: Erreiche die Sonnenblume.'
       4-5 Maze Conditionals 1_instruction: 'Benutze den "Wiederholen"-Baustein um den Zombie zur Sonnenblume zu bringen.'
-      4-5 Maze Conditionals 10_instruction: Kannst du einfach drei Bausteine hinzufügen und so einen komplizierteres Labyrinth bewältigen? Wenn du es richtig machst, kann ich jeden gekrümmten Weg gehen, unabhängig von seiner Länge.
       4-5 Maze Conditionals 2_instruction: 'Benutze den "Wiederholen"-Baustein um den Zombie zur Sonnenblume zu bringen.'
       4-5 Maze Conditionals 3_instruction: 'Benutze den "wenn"-Baustein, damit ich entscheiden kann, wann ich mich drehe. Hinweis: du brauchst nur einen weiteren Baustein, aber sieh dir an, wie wir das machen, damit du es beim nächsten Mal alleine hinbekommst.'
       4-5 Maze Conditionals 4_instruction: 'Okay, das ist genauso wie bei der letzten Aufgabe, aber du musst dich daran erinnern, wie du den "Wenn"-Baustein zusammen mit dem "Wiederholen"-Baustein verwendet hast.'
@@ -1134,6 +1133,10 @@ de:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1588,6 +1591,8 @@ de:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2120,6 +2125,12 @@ de:
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
         is hiding a flower. If it is, then you can gather nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: 'Ändere die Funktion "patrol" so, dass die Katze sich 400 Pixel auf- und abwärts bewegt.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |

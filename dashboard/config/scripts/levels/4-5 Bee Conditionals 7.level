@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Remember that purple flowers can have 3, 2, or 1 nectar. Complete the \"check purple flower\" function and use it to collect all of the nectar at the flowers.",
+    "instructions": "These flowers can have 3, 2, or 1 nectar. \r\n\r\nComplete the `check purple flower` function and use it to collect all of the nectar at the flowers.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -15,7 +15,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,1,\"P\",\"P\",\"P\",2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,3,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "12",
+    "ideal": "8",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -30,10 +30,11 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false",
-    "authored_hints": "[]",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":3},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]"
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":3},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "markdown_instructions": "These flowers can have 3, 2, or 1 nectar. \r\n\r\nComplete the `check purple flower` function and use it to collect all of the nectar at the flowers."
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -58,7 +59,12 @@
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
-        <block type="bee_ifelseNectarAmount" inline="true">
+        <block type="bee_ifNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">==</title>
+          <title name="ARG2">0</title>
+        </block>
+        <block type="bee_ifelseNectarAmount">
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">==</title>
           <title name="ARG2">1</title>
@@ -73,23 +79,6 @@
         <block type="procedures_callnoreturn">
           <mutation name="check purple flower"/>
         </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="bee_ifelseNectarAmount">
-              <title name="ARG1">nectarRemaining</title>
-              <title name="OP">==</title>
-              <title name="ARG2">1</title>
-              <next>
-                <block type="bee_ifelseNectarAmount">
-                  <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">==</title>
-                  <title name="ARG2">3</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="maze_nectar"/>
       </xml>
     </recommended_blocks>
     <solution_blocks>
@@ -114,32 +103,14 @@
           <mutation/>
           <title name="NAME">check purple flower</title>
           <statement name="STACK">
-            <block type="bee_ifelseNectarAmount">
-              <title name="ARG1">nectarRemaining</title>
-              <title name="OP">==</title>
-              <title name="ARG2">3</title>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
               <statement name="DO">
-                <block type="controls_repeat">
-                  <title name="TIMES">3</title>
-                  <statement name="DO">
-                    <block type="maze_nectar"/>
-                  </statement>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="bee_ifelseNectarAmount">
+                <block type="bee_ifNectarAmount">
                   <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">==</title>
-                  <title name="ARG2">2</title>
+                  <title name="OP">&gt;</title>
+                  <title name="ARG2">0</title>
                   <statement name="DO">
-                    <block type="controls_repeat">
-                      <title name="TIMES">2</title>
-                      <statement name="DO">
-                        <block type="maze_nectar"/>
-                      </statement>
-                    </block>
-                  </statement>
-                  <statement name="ELSE">
                     <block type="maze_nectar"/>
                   </statement>
                 </block>

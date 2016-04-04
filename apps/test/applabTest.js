@@ -1,20 +1,13 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales('applab');
-
-var $ = require('jquery');
-var React = require('react');
-window.$ = $;
-window.jQuery = window.$;
-window.React = React;
+testUtils.setExternalGlobals();
 
 // used in design mode
 window.Applab = {
   appWidth: 320,
   appHeight: 480
 };
-
-window.dashboard = window.dashboard || {};
 
 var Applab = require('@cdo/apps/applab/applab');
 var RecordListener = require('@cdo/apps/applab/RecordListener');
@@ -57,7 +50,7 @@ describe('applab: designMode.addScreenIfNecessary', function () {
     var html =
       '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" tabindex="1" style="width: 320px; height: 480px;">' +
         '<div class="screen" id="screen1" style="display: block; height: 480px; width: 320px; left: 0px; top: 0px; position: relative;">' +
-          '<button id="button1" class="" style="padding: 0px; margin: 0px; height: 40px; width: 80px; font-size: 14px; color: rgb(0, 0, 0); position: absolute; left: 120px; top: 75px; background-color: rgb(238, 238, 238);">Button</button>' +
+          '<button id="button1" style="padding: 0px; margin: 0px; height: 40px; width: 80px; font-size: 14px; color: rgb(0, 0, 0); position: absolute; left: 120px; top: 75px; background-color: rgb(238, 238, 238);">Button</button>' +
         '</div>' +
       '</div>';
 
@@ -174,7 +167,7 @@ describe('getText/setText commands', function () {
 
       it('does add leading newline for leading empty div', function () {
         element.innerHTML = '<div><br></div><div>text</div><div>with</div><div>leading empty div</div>';
-        assert.equal(getInnerText(element), '\n\ntext\nwith\nleading empty div');
+        assert.equal(getInnerText(element), '\ntext\nwith\nleading empty div');
       });
 
       it('Unescapes < and >', function () {
@@ -261,6 +254,10 @@ describe('getText/setText commands', function () {
         roundTripTest('text\n\nwith\n\n\nempty newlines');
       });
 
+      it('preserves single leading newline', function () {
+        roundTripTest('\ntext after newline');
+      });
+
       it('preserves leading and trailing newlines', function () {
         roundTripTest('\n\n\ntext between newlines\n\n');
       });
@@ -326,8 +323,6 @@ describe('startSharedAppAfterWarnings', function () {
       originalState[item] = Applab[item];
     });
     originalState.dashboard = window.dashboard;
-
-    window.dashboard = window.dashboard || {};
 
     Applab.user = {};
     Applab.channelId = 'current_channel';

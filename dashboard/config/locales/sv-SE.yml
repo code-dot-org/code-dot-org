@@ -26,6 +26,7 @@
   welcome_back: Välkommen tillbaka, %{name}
   submit: Skicka in
   unsubmit: "Ångra Inlämnad"
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Lägg till lärare:'
@@ -550,7 +551,6 @@
       allt eftersom feedback tas emot och förbättringar görs.
     prerelease_hoc2014: Den här övningen är en <span class='betatext'>betaversion</span>.  Den
       revideras allteftersom synpunkter kommer in och förbättringar görs.
-    feedback: Ge feedback
     report_bug: Rapportera bugg
     support: Få hjälp
     support_url: "//support.code.org"
@@ -569,6 +569,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tack
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tack
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Fel lösning
     wrong_body: Din lösning är inte rätt.  Försök pånytt!
@@ -587,9 +597,8 @@
     placeholder: Skriv in ditt svar här
     open_response_title: Tack
     open_response_body: Tack för ditt svar!
-  level_group:
-    correct_title: Tack
-    correct_body: Thank you for submitting an answer
+    correct_title: Rätt
+    correct_body: Det är det rätta svaret.
   dialog:
     ok: Ok
     startover_title: "Är du säker på att du vill börja om?"
@@ -721,3 +730,7 @@
         acknowledge: Genom att skicka denna information, erkänner du att det kommer
           att hanteras i enlighet med villkoren i den %{link_start_privacy}Privacy
           Policy%{link_end} och %{link_start_tos}Terms av Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: Inga ikoner hittades

@@ -1,0 +1,26 @@
+.module_assignments {
+  display: flex;
+
+  .module_task_view {
+    .not_started {
+      background-color: rgba(255, 128, 128, .25)
+    }
+
+    .completed {
+      background-color: rgba(128, 255, 128, .25);
+    }
+
+    width: 100%;
+
+    margin: 1em;
+  }
+
+  .module_task_view:first-child {
+    margin-left: 0em;
+  }
+
+  .module_task_view:last-child {
+    margin-right: 0em;
+  }
+}
+

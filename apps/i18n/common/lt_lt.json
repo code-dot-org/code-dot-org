@@ -1,5 +1,6 @@
 {
   "and": "ir",
+  "animationMode": "Animation",
   "backToPreviousLevel": "Grįžti į ankstesnį lygį",
   "blocklyMessage": "Blockly",
   "blocks": "blokeliai",
@@ -26,6 +27,8 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
+  "debugWatchHeader": "Watch",
+  "debugWatchNotAvailable": "<not available>",
   "defaultTwitterText": "Pažiūrėkite, ką aš sukūriau",
   "designMode": "Dizainas",
   "dialogCancel": "Atšaukti",
@@ -150,6 +153,7 @@
   "hintSelectInstructions": "Instrukcijos ir ankstesni patarimai",
   "hintSelectNewHint": "Gauk naują užuominą",
   "hintTitle": "Patarimas:",
+  "iconSearchPlaceholder": "Search for an icon...",
   "ignore": "Ignoruoti",
   "infinity": "Begalybė",
   "jump": "šok",
@@ -165,6 +169,7 @@
   "nextPuzzle": "Kitas galvosūkis",
   "nextStage": "Sveikinu! Tu užbaigei {stageName}.",
   "nextStageTrophies": "Sveikinu! Tu užbaigei lygį {stageName} ir laimėjai {numTrophies, plural, one {trofėjų} other {# trofėjus}}.",
+  "noIconsFound": "No icons found",
   "numBlocksNeeded": "Sveikinu! Tu išsprendei {puzzleNumber} užduotį. (Beje, galėjai panaudoti tik {numBlocks, plural, vieną {1 blokelį} other {# blokelių}}.)",
   "numLinesOfCodeWritten": "Tu parašei {numLines, plural, one {1 eilutės} other {# eilučių}} programą!",
   "openWorkspace": "Kaip tai veikia",
@@ -172,6 +177,7 @@
   "pause": "Break",
   "play": "žaisti",
   "print": "Spausdinti",
+  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
   "puzzleTitle": "Užduotis {puzzle_number} iš {stage_total}",
   "readonlyWorkspaceHeader": "Rodyti tik: ",
   "recommendedBlockContextualHintTitle": "Norėdama(-s) išspręsti galvosūkį, pabandyk blokelį panaudoti štai taip.",
@@ -210,7 +216,6 @@
   "syntaxErrorMsg": "Tavo programoje yra rašybos klaida. Pašalink {lineNumber} eilutę ir bandyk dar kartą.",
   "textVariable": "tekstas",
   "toggleBlocksErrorMsg": "Programoje reikia ištaisyti klaidą, antraip ji nebus atvaizduojama blokeliais.",
-  "tooFewBlocksMsg": "Tu naudoji visus reikiamus blokelių tipus, tačiau pabandyk naudoti daugiau tokio tipo blokelių, kad išspręstum galvosūkį.",
   "tooManyBlocksMsg": "Ši užduotis gali būti išspręsta su <x id='START_SPAN'/><x id='END_SPAN'/> blokais.",
   "tooMuchWork": "Tu privertei mane tiek daug dirbti! Ar galėtum atlikti užduotį su mažiau kartojimų?",
   "toolboxHeader": "Blokeliai",
@@ -225,5 +230,5 @@
   "when": "kada",
   "whenRun": "paleidus",
   "workspaceHeaderShort": "Darbo laukas: ",
-  "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project."
+  "showBlock": "Get a block"
 }

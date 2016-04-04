@@ -25,6 +25,7 @@ eu:
   welcome_back: 'Ongi etorria berriro, %{name}'
   submit: Bidali
   unsubmit: Bidalketa ezeztatu
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Irakaslea gehitu:'
@@ -465,7 +466,6 @@ eu:
   landing:
     prerelease: "Kurtso hau <span class='betatext'>beta</span> bertsioa da. Horrek esan nahi du ez dela azken bertsioa eta iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo direla."
     prerelease_hoc2014: "Tutorial hau <span class='betatext'>beta</span> bertsioa da. Iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo dira."
-    feedback: Bidali iruzkina
     report_bug: Akatsa jakinarazi
     support: Lortu laguntza
     support_url: //support.code.org
@@ -484,6 +484,16 @@ eu:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Soluzio okerra
     wrong_body: Soluzioa ez da zuzena. Saiatu berriro!
@@ -501,9 +511,8 @@ eu:
     placeholder: Idatzi hemen zure erantzuna
     open_response_title: Eskerrik asko
     open_response_body: Eskerrik asko zure erantzunagatik!
-  level_group:
-    correct_title: Mila esker
-    correct_body: Thank you for submitting an answer
+    correct_title: Zuzena
+    correct_body: Erantzun zuzena.
   dialog:
     ok: Ongi
     startover_title: Ziur al zaude berriro hasi nahi duzula?
@@ -614,3 +623,7 @@ eu:
           other: Beste bat
         detail: Mesedez, salatzen ari zaren edukiaren inguruko ahalik eta xehetasun gehien eman.
         acknowledge: 'Informazio hau bidaliz, %{link_start_privacy}Pibatutasun Politika%{link_end} eta %{link_start_tos}Zerbitzuaren Baldintzak%{link_end} adierazitako terminoetan erabiliko dela onartzen duzu'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

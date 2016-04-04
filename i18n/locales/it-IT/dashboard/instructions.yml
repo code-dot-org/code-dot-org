@@ -382,7 +382,6 @@ it:
         Esso mi farà "ripetere" le azioni "fino a che" raggiungo il girasole.
       4-5 Maze Assessment 1_instruction: 'Questo è un esercizio di riepilogo -- Fammi arrivare al girasole.'
       4-5 Maze Conditionals 1_instruction: 'Usa il blocco "ripeti fino a che" per far arrivare lo zombie fino al girasole.'
-      4-5 Maze Conditionals 10_instruction: Riesci ad aggiungere solo 3 blocchi per farmi uscire da un labirinto più complesso? Se lo fai correttamente, riuscirò a camminare lungo un percorso tortuoso di qualsiasi lunghezza.
       4-5 Maze Conditionals 2_instruction: 'Usa il blocco "ripeti fino a che" per far arrivare lo zombie fino al girasole.'
       4-5 Maze Conditionals 3_instruction: |-
         Usa il blocco "se c'è strada" per decidere quando farmi svoltare. Attenzione: in questo caso devi aggiungere solo un blocco! Osserva, però, il modo in cui abbiamo impostato questo programma in modo tale che, la prossima volta, tu riesca a farlo tutto da solo.
@@ -1335,6 +1334,10 @@ it:
       Course1BeePuzzle12_instruction: Prendi tre dosi di nettare e poi fai due dosi di miele
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1785,6 +1788,8 @@ it:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2271,6 +2276,12 @@ it:
       Ryan - Bee Conditionals_instruction: |
         L'ape ora desidera solo il nettare.
         Non tutti gli oggetti sono fiori, controlla sotto OGNI NUVOLA per vedere se si nasconde dietro a un fiore. Se si nasconde puoi raccogliere il nettare.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |-
         In questo esercizio c'è una funzione chiamata "pattuglia" (patrol) in cui devi inserire il codice che serve per far muovere il gatto prima in su e poi in giù di 400 pixel.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
@@ -2342,8 +2353,10 @@ it:
       SpecialFrozenLevel_instruction: Sei ufficialmente diventato un maestro artista! Crea un meraviglioso paesaggio invernale.
       Standalone_Artist_1_instruction: |-
         Benvenuto all'Artista! Prima di tutto, cerchiamo di disegnare un semplice quadrato utilizzando il blocco "gira a destra" e il blocco "vai avanti". Ogni lato è lungo 100 pixel.
-      Standalone_Artist_2_instruction: Disegna questo rombo che ha gli angoli da 120 e 60 gradi e i lati lunghi 150 pixel.
-      Standalone_Artist_3_instruction: Come fai a disegnare questo esagono che ha i lati lunghi 100 pixel e gli angoli da 60 gradi?
+      Standalone_Artist_2_instruction: |-
+        Disegna questo rombo che ha i lati lunghi 150 pixel.<br><br><b>Attenzione</b>: un rombo ha gli angoli di 60 e 120 gradi, ma i gradi dell’istruzione “gira” sono misurati rispetto al percorso davanti all’Artista. Vedi anche le spiegazioni del video del <a href="https://studio.code.org/s/course2/stage/4/puzzle/1">primo esercizio dell'Artista nel Corso 2</a>.
+      Standalone_Artist_3_instruction: |-
+        Come fai a disegnare questo esagono che ha i lati lunghi 100 pixel? <br><br><b>Attenzione</b>: un esagono ha gli angoli di 120 gradi, ma i gradi dell’istruzione “gira” sono misurati rispetto al percorso davanti all’Artista. Vedi anche le spiegazioni del video del <a href="https://studio.code.org/s/course2/stage/4/puzzle/1">primo esercizio dell'Artista nel Corso 2</a>.
       Standalone_Artist_4_instruction: |-
         Adesso c'è il nuovo blocco "ripeti 6 volte". Questo blocco di ripetizione, detto anche "ciclo", ripete 6 volte quello che si trova al suo interno. Cosa succede se si ripete 6 volte il codice in grigio che trovi già pronto?
       Standalone_Artist_5.5_instruction: 'Osserva come abbiamo semplificato il codice utilizzando il blocco "ripeti ... volte" (ciclo). Per disegnare un fiore devi adesso ripetere per 12 volte tutta la sequenza di blocchi in grigio. Attenzione: ruota di 30 gradi dopo ogni ciclo del rombo altrimenti disegni sempre la stessa figura.'

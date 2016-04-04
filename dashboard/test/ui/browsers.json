@@ -50,16 +50,16 @@
     "platform": "Windows 10"
   },
   {
-    "name": "FirefoxLatestElCapitan",
+    "name": "FirefoxLatest-2Yosemite",
     "browserName": "firefox",
-    "version": "latest",
-    "platform": "OS X 10.11"
+    "version": "latest-2",
+    "platform": "OS X 10.10"
   },
   {
-    "name": "FirefoxPreviousWin10",
+    "name": "FirefoxLatestWin7",
     "browserName": "firefox",
-    "version": "latest-1",
-    "platform": "Windows 10"
+    "version": "latest",
+    "platform": "Windows 7"
   },
   {
     "name": "iPhone",
@@ -87,7 +87,7 @@
 
 // Top browsers as of Mar 15 2016:
 // Browser	Browser Version	Sessions
-// Chrome	48	3,596,078	42.86% (latest)
+// Chrome	48	3,596,078	42.86% (latest)git st
 // Internet Explorer	11	967,261	11.53% (latest)
 // Safari	9	717,540	8.55% (latest)
 // Chrome	47	318,167	3.79%

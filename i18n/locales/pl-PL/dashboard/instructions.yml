@@ -212,11 +212,7 @@ pl:
       4-5 Artist For Loops 13_instruction: 'Ten rysunek rozpoczęto bez użycia pętli "dla" i użyto zbyt wielu bloków!  Użyj bloku "dla" do wykonania spirali.  Wskazówka: Długość ostatniej linii wynosi 250 pikseli.'
       4-5 Artist For Loops 14_instruction: 'Ktoś zaczął pisać kod, ale uświadomił sobie, że musi istnieć szybszy sposób! Użyj bloku "dla", by zastąpić inne bloki i ukończyć trójkątną spiralę. Wskazówka: Długość ostatniej linii wynosi 300 pikseli.'
       4-5 Artist For Loops 15_instruction: 'Ktoś zaczął pisać kod, ale uświadomił sobie, że musi istnieć szybszy sposób! Użyj bloku "dla", by zastąpić inne bloki i ukończyć sześciokątną spiralę. Wskazówka: Długość ostatniej linii wynosi 200 pikseli.'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: 'To jest blok "dla". Zamiast wypisywać 1, 2, 3,..., 10, blok "dla" służy do powtarzania bloków w nim zawartych, może także zliczać liczby. Umieść liczbę 10 w sekcji "do" w bloku "dla".'
       4-5 Artist For Loops 3_instruction: 'Jak możemy liczyć od 1 do 50? Zmodyfikuj blok "dla".'
       4-5 Artist For Loops 4_instruction: 'Uzupełnij blok "dla" tak, że liczy on od 1 co 1 do 10.'
       4-5 Artist For Loops 6_instruction: 'Narysuj kwadraty o bokach 50, 60, 70, 80 i 90 pikseli. Musisz użyć funkcji "draw a square" (rysuj kwadrat) pięć razy.'
@@ -317,7 +313,6 @@ pl:
       4-5 Maze 9_instruction: 'Utwórz pętlę z użyciem bloku "powtarzaj aż".'
       4-5 Maze Assessment 1_instruction: 'Sprawdzian: Dostać się do słonecznika.'
       4-5 Maze Conditionals 1_instruction: 'Użyj bloku "powtarzaj aż", by doprowadzić zombie do słonecznika.'
-      4-5 Maze Conditionals 10_instruction: Czy możesz dodać tylko 3 bloki, aby pomóc mi przejść bardziej skomplikowany labirynt? Jeśli znajdziesz prawidłowe rozwiązanie, to pokonam każdą krętą drogę bez względu na jej długość.
       4-5 Maze Conditionals 2_instruction: 'Użyj bloku "powtarzaj aż", by doprowadzić zombie do słonecznika.'
       4-5 Maze Conditionals 3_instruction: 'Użyj bloku "jeśli", abym mógł decydować, kiedy skręcić. Wskazówka: wystarczy użyć tylko jednego więcej bloku, ale zobacz, jak to zrobiliśmy, byś następnym razem mógł to wykonać samodzielnie.'
       4-5 Maze Conditionals 4_instruction: 'OK, to jest podobne do poprzedniej łamigłówki, ale musisz pamiętać, jak użyłeś bloków "jeśli" i "powtórz" razem.'
@@ -1086,6 +1081,10 @@ pl:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1534,6 +1533,8 @@ pl:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -1974,13 +1975,15 @@ pl:
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
         get nectar from the flowers.
-      Quantum Bee_instruction: |
-        Purple flowers may have either 1 or 0 nectar, but
-        you don't know which one! Be careful not to collect nectar from a purple
-        flower if it doesn't have any. Check if the nectar is equal to 1 by using
-        the if block.
+      Quantum Bee_instruction: 'Fioletowe kwiaty mogą mieć 1 lub 0 nektaru, ale nie wiesz który. Uważaj, by nie zbierać nektaru z fioletowego kwiatka, jeśli go nie ma. Sprawdzaj, czy nektar jest równy 1 przy użyciu bloku "jeśli".'
       Ryan - 4-5 Bee Conditionals 2_instruction: Pszczółka chce teraz tylko nektaru. Nie wszystkie obiekty są kwiatami, więc sprawdź pod KAŻDĄ CHMURKĄ, czy ukrywa kwiatek. Jeśli tak, to wtedy możesz zebrać nektar.
       Ryan - Bee Conditionals_instruction: Pszczółka chce teraz tylko nektaru. Nie wszystkie obiekty są kwiatami, więc sprawdź pod KAŻDĄ CHMURKĄ, czy ukrywa kwiatek. Jeśli tak, to wtedy możesz zebrać nektar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: 'Mamy tu funkcję "patrol" (patrol). Zmień ją tak, by Kot przeszedł 400 pikseli w górę, po czym 400 pikseli w dół.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |

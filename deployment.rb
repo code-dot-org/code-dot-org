@@ -70,7 +70,7 @@ def load_configuration()
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
-    'partners'                    => %w(al ar br eu italia ro sg uk za),
+    'partners'                    => %w(ar br italia ro sg tr uk za),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
@@ -150,6 +150,10 @@ class CDOImpl < OpenStruct
   end
 
   def canonical_hostname(domain)
+    # Allow hostname overrides
+    return CDO.override_dashboard if CDO.override_dashboard && domain == 'studio.code.org'
+    return CDO.override_pegasus if CDO.override_pegasus && domain == 'code.org'
+
     return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
     return domain if rack_env?(:production)
 

@@ -1641,3 +1641,8 @@ id:
           "Eval: Conditionals": 'Eval: Kondisional'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged/tidak terpasang: pendeeteksi benturan dan Formula jarak'
           "Play Lab: Collision Detection (Big Game)": 'Bermain Lab: Pendeteksi benturan (Big Game)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab
