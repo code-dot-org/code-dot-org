@@ -1,5 +1,4 @@
-var TextMatch = function(id, levelId, standalone, answers, lastAttempt)
-{
+var TextMatch = function(id, levelId, standalone, answers, lastAttempt) {
   this.id = id;
 
   this.levelId = levelId;
@@ -16,33 +15,28 @@ var TextMatch = function(id, levelId, standalone, answers, lastAttempt)
 };
 
 // called on $.ready
-TextMatch.prototype.ready = function()
-{
+TextMatch.prototype.ready = function() {
   // Pre-fill text area with previous response content
   $("#" + this.id + " textarea.response").val(this.lastAttempt);
 
   // If we are relying on the containing page's submission buttons/dialog, then
   // we need to provide a window.getResult function.
-  if (this.standalone)
-  {
+  if (this.standalone) {
     window.getResult = $.proxy(this.getResult, this);
   }
 };
 
-TextMatch.prototype.getCurrentAnswer = function()
-{
+TextMatch.prototype.getCurrentAnswer = function() {
   var response = $("#" + this.id + " textarea.response").val();
 
   return encodeURIComponent(response);
 };
 
-TextMatch.prototype.getLevelId = function()
-{
+TextMatch.prototype.getLevelId = function() {
   return this.levelId;
 };
 
-TextMatch.prototype.getResult = function()
-{
+TextMatch.prototype.getResult = function() {
   var response = $("#" + this.id + " textarea.response").val();
   var answers = this.answers;
   if (answers && answers.length > 0) {
