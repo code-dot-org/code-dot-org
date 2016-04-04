@@ -23,21 +23,19 @@ var styles = {
 /**
  * Simple icon that either points up or down, and supports onClick
  */
-var CollapserIcon = React.createClass({
-  propTypes: {
-    onClick: React.PropTypes.func.isRequired,
-    collapsed: React.PropTypes.bool.isRequired
-  },
+var CollapserIcon = function (props) {
+  var iconClass = props.collapsed ? 'fa-chevron-circle-up' : 'fa-chevron-circle-down';
 
-  render: function () {
-    var iconClass = this.props.collapsed ? 'fa-chevron-circle-up' :
-      'fa-chevron-circle-down';
+  return (
+    <i style={styles.showHideButton}
+        onClick={props.onClick}
+        className={iconClass + " fa"}/>
+  );
+};
 
-    return (
-      <i style={styles.showHideButton}
-          onClick={this.props.onClick}
-          className={iconClass + " fa"}/>
-    );
-  }
-});
+CollapserIcon.propTypes = {
+  onClick: React.PropTypes.func.isRequired,
+  collapsed: React.PropTypes.bool.isRequired
+};
+
 module.exports = Radium(CollapserIcon);
