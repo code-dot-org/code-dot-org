@@ -46,6 +46,7 @@ var styles = {
 var CodeWorkspaceContainer = React.createClass({
   propTypes: {
     topMargin: React.PropTypes.number.isRequired,
+    hidden: React.PropTypes.bool,
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
     onSizeChange: React.PropTypes.func
   },
@@ -67,7 +68,8 @@ var CodeWorkspaceContainer = React.createClass({
       top: this.props.topMargin
     },
       noViz && styles.noVisualization,
-      rtl && styles.mainRTL
+      rtl && styles.mainRTL,
+      this.props.hidden && styles.hidden
     ];
 
     return (

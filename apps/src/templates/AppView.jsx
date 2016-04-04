@@ -58,6 +58,7 @@ var AppView = React.createClass({
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <CodeWorkspaceContainer
             topMargin={0}
+            hidden={this.props.isShareView}
             generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
       </StudioAppWrapper>
     );
