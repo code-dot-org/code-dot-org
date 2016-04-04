@@ -29,7 +29,7 @@ module ProxyHelper
       media.content_type = Rack::Mime.mime_type(File.extname(url.path))
     end
 
-    if media.kind_of? Net::HTTPRedirection
+    if media.is_a? Net::HTTPRedirection
       # Follow up to five redirects.
       render_proxied_url(
           media['location'],
@@ -38,7 +38,7 @@ module ProxyHelper
           infer_content_type: infer_content_type,
           redirect_limit: redirect_limit - 1)
 
-    elsif !media.kind_of? Net::HTTPSuccess
+    elsif !media.is_a? Net::HTTPSuccess
       # Pass through failure codes.
       render_error_response media.code, "Failed request #{media.code}"
 
