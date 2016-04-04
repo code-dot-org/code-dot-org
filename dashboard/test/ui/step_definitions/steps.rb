@@ -596,6 +596,22 @@ And(/^I create a (student|teacher) named "([^"]*)"$/) do |user_type, name|
   end
 end
 
+# used for tests that touch components that are being A/B tested
+And(/^I create a student with an (even|odd) ID named "([^"]*)"$/) do |id_type, name|
+  new_user = nil
+  begin
+    new_user = User.find_or_create_by!(email: "user#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
+      user.name = name
+      user.password = name + "password" # hack
+      user.user_type = 'student'
+      user.age = 16
+      user.confirmed_at = Time.now
+    end
+  end until (id_type == 'even' && new_user.id.even?) || (id_type == 'odd' && new_user.id.odd?)
+  @users ||= {}
+  @users[name] = new_user
+end
+
 And(/I fill in username and password for "([^"]*)"$/) do |name|
   steps %Q{
     And I type "#{@users[name].email}" into "#user_login"
