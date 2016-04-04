@@ -915,13 +915,13 @@ StudioApp.prototype.inject = function(div, options) {
 };
 
 /**
- * Returns true if the current HTML page is in right-to-left language mode.
+ * @returns {boolean} True if the current HTML page is in right-to-left language mode.
  */
 StudioApp.prototype.isRtl = function() {
   var head = document.getElementsByTagName('head')[0];
   if (head && head.parentElement) {
     var dir = head.parentElement.getAttribute('dir');
-    return (dir && dir.toLowerCase() === 'rtl');
+    return !!(dir && dir.toLowerCase() === 'rtl');
   } else {
     return false;
   }
