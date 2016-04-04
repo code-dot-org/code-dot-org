@@ -151,9 +151,9 @@ When /^I press the first "([^"]*)" element$/ do |selector|
   end
 end
 
-When /^I press the "([^"]*)" button$/ do |buttonText|
+When /^I press the "([^"]*)" button$/ do |button_text|
   wait_with_short_timeout.until {
-    @button = @browser.find_element(:css, "input[value='#{buttonText}']")
+    @button = @browser.find_element(:css, "input[value='#{button_text}']")
   }
   @button.click
 end
@@ -179,18 +179,18 @@ When /^I (?:open|close) the small footer menu$/ do
   }
 end
 
-When /^I press menu item "([^"]*)"$/ do |menuItemText|
-  menu_item_selector = "ul#more-menu a:contains(#{menuItemText})"
+When /^I press menu item "([^"]*)"$/ do |menu_item_text|
+  menu_item_selector = "ul#more-menu a:contains(#{menu_item_text})"
   steps %{
     Then I wait until element "#{menu_item_selector}" is visible
     And I click selector "#{menu_item_selector}"
   }
 end
 
-When /^I select the "([^"]*)" small footer item$/ do |menuItemText|
+When /^I select the "([^"]*)" small footer item$/ do |menu_item_text|
   steps %{
     Then I open the small footer menu
-    And I press menu item "#{menuItemText}"
+    And I press menu item "#{menu_item_text}"
   }
 end
 
@@ -271,19 +271,19 @@ When /^I press delete$/ do
   @browser.execute_script(script)
 end
 
-When /^I hold key "([^"]*)"$/ do |keyCode|
-  script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{keyCode}']})"
+When /^I hold key "([^"]*)"$/ do |key_code|
+  script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{key_code}']})"
   @browser.execute_script(script)
 end
 
-When /^I type "([^"]*)" into "([^"]*)"$/ do |inputText, selector|
-  @browser.execute_script("$('" + selector + "').val('" + inputText + "')")
+When /^I type "([^"]*)" into "([^"]*)"$/ do |input_text, selector|
+  @browser.execute_script("$('" + selector + "').val('" + input_text + "')")
   @browser.execute_script("$('" + selector + "').keyup()")
   @browser.execute_script("$('" + selector + "').change()")
 end
 
-When /^I set text compression dictionary to "([^"]*)"$/ do |inputText|
-  @browser.execute_script("editor.setValue('#{inputText}')")
+When /^I set text compression dictionary to "([^"]*)"$/ do |input_text|
+  @browser.execute_script("editor.setValue('#{input_text}')")
 end
 
 Then /^I should see title "([^"]*)"$/ do |title|
@@ -731,16 +731,16 @@ Then /^I append "([^"]*)" to the URL$/ do |append|
   @browser.navigate.to "#{url}"
 end
 
-Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, className|
+Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
-  classes.include?(className).should eq true
+  classes.include?(class_name).should eq true
 end
 
-Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, className|
+Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
-  classes.include?(className).should eq false
+  classes.include?(class_name).should eq false
 end
 
 Then /^there is no horizontal scrollbar$/ do
