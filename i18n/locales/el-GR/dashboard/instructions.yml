@@ -1837,6 +1837,10 @@ el:
       Overworld Avoid Monsters_instruction: |
         Το να πηγαίνεις προς ένα creeper (κριπερ) είναι κακή ιδέα.
         Προχώρησε προσεκτικά τριγύρω τους για να φτάσεις στην ασφάλεια του σπιτιού σου.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: |
         Το ξύλο είναι πολύ σημαντικός πόρος. Πολλά πράγματα
         φτιάχνονται από αυτό. Πήγαινε σε ένα δέντρο και χρησιμοποίησε την εντολή "κατάστρεψε μπλοκ" για
@@ -2080,6 +2084,10 @@ el:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: Αυτά τα σύννεφα με ενοχλούν! Μερικά από τα σύννεφα έχουν λουλούδια στο εσωτερικό, και μερικά όχι. Θα πρέπει να ελέγξω κάθε σύννεφο, και να πάρω νέκταρ μόνο από τα λουλούδια.
       Quantum Bee_instruction: 'Τα μωβ λουλούδια μπορεί να έχουν είτε 1 ή 0 νέκταρ, αλλά δεν γνωρίζεις ποιο! Πρόσεξε να μην συλλέξεις νέκταρ από ένα μωβ λουλούδι, αν δεν έχει καθόλου. Ελεγξε αν το νέκταρ είναι ίσο με 1 χρησιμοποιώντας το μπλοκ "αν".'
       Ryan - 4-5 Bee Conditionals 2_instruction: Η μέλισσα θέλει μόνο νέκταρ αυτή τη στιγμή. Δεν είναι όλα τα αντικείμενα λουλούδια, έτσι κάντε έλεγχο κάτω από κάθε ΣΎΝΝΕΦΟ, να δει αν κρύβεται ένα λουλούδι. Αν είναι, τότε μπορείτε να συγκεντρώσετε νέκταρ.

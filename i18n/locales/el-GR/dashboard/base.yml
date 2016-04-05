@@ -346,6 +346,7 @@ el:
     help_from_html_old: Μηχανικών από το Google, Microsoft, Facebook και Twitter βοήθησε στη δημιουργία αυτών των εκπαιδεευτικών υλικών.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Με την υποστήριξη των Amazon Web Services
     trademark: '© Code.org, οι %{current_year}. Code.org®, το λογότυπο του κώδικα και την ώρα του κώδικα ® αποτελούν εμπορικά σήματα της Code.org.'
     copyright: Πνευματικά δικαιώματα
@@ -624,5 +625,5 @@ el:
         acknowledge: 'Υποβάλλοντας αυτές τις πληροφορίες, αναγνωρίζετε ότι θα τη μεταχειριστούμε σύμφωνα με τους όρους της Policy%{link_end} το %{link_start_privacy}Privacy και το %{link_start_tos}Terms του Service%{link_end}'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Αναζήτηση για ένα εικονίδιο...
+      no_icons_found: Δεν βρέθηκαν εικονίδια

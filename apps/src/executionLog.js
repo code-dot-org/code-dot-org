@@ -1,4 +1,5 @@
 var TestResults = require('./constants').TestResults;
+var utils = require('./utils');
 
 /**
  * Get a testResult and message value based on an examination of the
@@ -30,9 +31,7 @@ module.exports.getResultsFromLog = function (logConditions, executionLog) {
      */
 
     condition.minTimes = condition.minTimes || 0;
-    if (typeof condition.maxTimes === 'undefined') {
-      condition.maxTimes = Infinity;
-    }
+    condition.maxTimes = utils.valueOr(condition.maxTimes, Infinity);
 
     switch (condition.matchType) {
       case 'exact':
@@ -41,7 +40,7 @@ module.exports.getResultsFromLog = function (logConditions, executionLog) {
       case 'inexact':
         var entryIndex = 0, matchedSequences = 0;
         for (var i = 0; i < executionLog.length; i++) {
-          if (executionLog[i] === condition.entries[entryIndex]) {
+          if (matchLogEntry(executionLog[i], condition.entries[entryIndex])) {
             entryIndex++;
             if (entryIndex >= condition.entries.length) {
               entryIndex = 0;
@@ -78,3 +77,29 @@ module.exports.getResultsFromLog = function (logConditions, executionLog) {
 
   return results;
 };
+
+/**
+ * Match an executionLog entry (in the form 'function:2' or '[forInit]') with
+ * a conditionEntry (in the form 'function:1' or '[forInit]'), where argument
+ * counts are stored after the colon following the function name.
+ *
+ * The colon and argument count are optional in the conditionEntry. When present,
+ * the argument count in the conditionEntry represents the minimum number of
+ * arguments in order to consider this a match.
+ *
+ * @param {Object[]} logConditions an array of logCondition objects
+ * @param {string[]} executionLog an array of function or statement names
+ * @returns {!Object}
+ */
+function matchLogEntry(logEntry, conditionEntry) {
+  var logItems = logEntry.split(':');
+  if (logItems.length < 2) {
+    return logEntry == conditionEntry;
+  }
+  var conditionItems = conditionEntry.split(':');
+  var conditionMinArgs = Number(conditionItems[1]);
+  if (isNaN(conditionMinArgs)) {
+    conditionMinArgs = 0;
+  }
+  return logItems[0] === conditionItems[0] && logItems[1] >= conditionMinArgs;
+}

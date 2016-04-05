@@ -588,6 +588,8 @@ zh-TW:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: 正確
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -611,7 +613,7 @@ zh-TW:
   dashboard_faq_k5: 五年級課程的常見問題
   dashboard_announcements: 公告
   dashboard_announce_view_all: 全部查看
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: 瞭解更多資訊
   dashboard_announce_hoc: '<b>2015 年 11 月 9 日</b>-全新的一小時程式設計教學課程，以即將上映的電影星際大戰：原力覺醒。與雷伊一同指導新的BB-8機器人完成所有的任務。然後，在遙不可及的銀河系中，加入萊婭來建立並共享你的遊戲。'
   dashboard_announce_playlab: |

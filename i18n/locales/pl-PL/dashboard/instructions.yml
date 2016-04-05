@@ -1771,6 +1771,10 @@ pl:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Wpadnięcie na creepera to zły pomysł. Ostrożnie omijaj creepery, aby bezpiecznie dotrzeć do domu.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Drewno to bardzo ważny materiał. Można z niego zbudować wiele rzeczy. Podejdź do drzewa i skorzystaj z polecenia "zniszcz blok", aby je ściąć.'
       Overworld Chop Trees_instruction: Musimy wybudować dom, zanim zajdzie słońce. Na dom potrzeba dużo drewna. Zetnij wszystkie 3 drzewa.
       Overworld Free Play 20x20_instruction: 'Gratulacje! Udało Ci się ułożyć wszystkie nasze układanki! Teraz wydobywaj, buduj i twórz co tylko zechcesz, korzystając ze swoich nowych umiejętności. '
@@ -1971,6 +1975,10 @@ pl:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only

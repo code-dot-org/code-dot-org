@@ -12,7 +12,7 @@ export default class LevelModel {
 
     this.player = {};
 
-    this.railMap = 
+    this.railMap =
       ["","","","","","","","","","",
       "","","","","","","","","","",
       "","","","railsUnpoweredVertical","","","","","","",
@@ -220,7 +220,7 @@ export default class LevelModel {
         break;
     }
 
-    return [cx, cy];    
+    return [cx, cy];
   }
 
   isForwardBlockOfType(blockType) {
@@ -277,19 +277,16 @@ export default class LevelModel {
     if ((!blockType && (this.actionPlane[this.coordinatesToIndex(position)].blockType !== ""))|| this.isBlockOfType(position, blockType)) {
       objectArray.push([true, position]);
       return true;
-    }
-    else
-    {
+    } else {
       objectArray.push([false, null]);
       return false;
     }
   }
 
-  houseGroundToFloorHelper(position, woolType, arrayCheck)
-  {
+  houseGroundToFloorHelper(position, woolType, arrayCheck) {
     var checkActionBlock,
         checkGroundBlock,
-        posAbove, 
+        posAbove,
         posBelow,
         posRight,
         posLeft,
@@ -297,8 +294,7 @@ export default class LevelModel {
         array = arrayCheck;
         let index = this.yToIndex(position[2]) + position[1];
 
-        if(index === 44)
-        {
+        if(index === 44) {
           index = 44;
         }
 
@@ -310,7 +306,7 @@ export default class LevelModel {
 
     posRight =  [0, position[1] + 1, position[2]];
     posRight[0] = this.yToIndex(posRight[2]) + posRight[1];
-    
+
     posLeft =  [0, position[1] - 1, position[2]];
     posRight[0] = this.yToIndex(posRight[2]) + posRight[1];
 
@@ -325,8 +321,7 @@ export default class LevelModel {
 
     if(checkActionBlock.blockType !== "") {
       return {};
-    }
-    else if(array.length > 0 && checkIndex === -1) {
+    } else if(array.length > 0 && checkIndex === -1) {
         return {};
     }
     array.push(position);
@@ -600,7 +595,7 @@ export default class LevelModel {
     let blockPosition = position;
     let blockIndex = this.yToIndex(blockPosition[1]) + blockPosition[0];
     let [x, y] = [blockPosition[0], blockPosition[1]];
-    
+
     if (this.inBounds(x, y)) {
       block = this.actionPlane[blockIndex];
       if (block !== null) {
@@ -623,7 +618,7 @@ export default class LevelModel {
     let blockForwardPosition = this.getMoveForwardPosition();
     let blockIndex = this.yToIndex(blockForwardPosition[1]) + blockForwardPosition[0];
     let [x, y] = [blockForwardPosition[0], blockForwardPosition[1]];
-    
+
     if (this.inBounds(x, y)) {
       block = this.actionPlane[blockIndex];
       if (block !== null) {
@@ -755,26 +750,21 @@ export default class LevelModel {
       this.pushIfHigherPrecedence(index, { x: x, y: y, type: "FogOfWar_Bottom", precedence: 1});
     }
 
-    //fully lit
     if( (botRightQuad && topLeftQuad) || (botLeftQuad && topRightQuad) || leftQuad && rightQuad || topQuad && botQuad || (rightQuad && botQuad && topLeftQuad) ||
         (botQuad && topRightQuad && topLeftQuad) || (topQuad && botRightQuad && botLeftQuad) || (leftQuad && topRightQuad && botRightQuad) || (leftQuad && botQuad && topRightQuad)) {
+      //fully lit
       this.fowPlane[index] = "";
-    }
-
-    //darkend botleft corner
-    else if( (botQuad && leftQuad) || (botQuad && topLeftQuad) || (leftQuad && botRightQuad) ){
+    } else if( (botQuad && leftQuad) || (botQuad && topLeftQuad) || (leftQuad && botRightQuad) ){
+      // darkend botleft corner
       this.pushIfHigherPrecedence(index, { x: x, y: y, type: "FogOfWar_Bottom_Left", precedence: 2});
-    }
-    //darkend botRight corner
-    else if((botQuad && rightQuad) || (botQuad && topRightQuad) || (rightQuad && botLeftQuad)) {
+    } else if((botQuad && rightQuad) || (botQuad && topRightQuad) || (rightQuad && botLeftQuad)) {
+      // darkend botRight corner
       this.pushIfHigherPrecedence(index, { x: x, y: y, type: "FogOfWar_Bottom_Right", precedence: 2});
-    }
-    //darkend topRight corner
-    else if((topQuad && rightQuad) || (topQuad && botRightQuad) || (rightQuad && topLeftQuad)) {
+    } else if((topQuad && rightQuad) || (topQuad && botRightQuad) || (rightQuad && topLeftQuad)) {
+      // darkend topRight corner
       this.pushIfHigherPrecedence(index, { x: x, y: y, type: "FogOfWar_Top_Right", precedence: 2});
-    }
-    //darkend topLeft corner
-    else if((topQuad && leftQuad) || (topQuad && botLeftQuad) || (leftQuad && topRightQuad)){
+    } else if((topQuad && leftQuad) || (topQuad && botLeftQuad) || (leftQuad && topRightQuad)){
+      // darkend topLeft corner
       this.pushIfHigherPrecedence(index, { x: x, y: y, type: "FogOfWar_Top_Left", precedence: 2});
     }
   }
@@ -807,8 +797,7 @@ export default class LevelModel {
   findBlocksAffectedByEmissives(emissives) {
     var blocksTouchedByEmissives = {};
     //find emissives that are close enough to light us.
-    for(var torch in emissives)
-    {
+    for(var torch in emissives) {
       var currentTorch = emissives[torch];
       let y = currentTorch[1];
       let x = currentTorch[0];
@@ -821,7 +810,7 @@ export default class LevelModel {
           }
 
           //Ignore the indexes directly around us.
-          //Theyre taken care of on the FOW first pass 
+          //Theyre taken care of on the FOW first pass
           if( (yIndex >= y - 1 && yIndex <= y + 1) && (xIndex >= x - 1 && xIndex <= x + 1) ) {
             continue;
           }
@@ -848,7 +837,7 @@ export default class LevelModel {
           continue;
         }
 
-        //Ignore the indexes directly around us. 
+        //Ignore the indexes directly around us.
         if( (yIndex >= y - 1 && yIndex <= y + 1) && (xIndex >= x - 1 && xIndex <= x + 1) ) {
           continue;
         }
@@ -889,7 +878,7 @@ export default class LevelModel {
       for (y = 0; y < this.planeHeight; ++y) {
         for (x = 0; x < this.planeWidth; ++x) {
           let blockIndex = this.yToIndex(y) + x;
-          
+
           if (this.groundPlane[blockIndex].isEmissive && this.actionPlane[blockIndex].isEmpty ||
             (!this.actionPlane[blockIndex].isEmpty && this.actionPlane[blockIndex].isEmissive)) {
             this.clearFowAround(x, y);
@@ -933,7 +922,7 @@ export default class LevelModel {
 
       hasLeft = false;
       hasRight = false;
-      
+
       if (this.actionPlane[index].isEmpty || this.actionPlane[index].isTransparent) {
         if (y === 0) {
           this.shadingPlane.push({ x: x, y: y, type: 'AOeffect_Bottom' });
@@ -974,7 +963,7 @@ export default class LevelModel {
           // needs a bottom side AO shadow
           this.shadingPlane.push({ x: x, y: y, type: 'AOeffect_Bottom' });
         } else if (y > 0) {
-          if (x < this.planeWidth - 1 && 
+          if (x < this.planeWidth - 1 &&
               !this.actionPlane[this.yToIndex(y - 1) + x + 1].getIsEmptyOrEntity() &&
               this.actionPlane[this.yToIndex(y) + x + 1].getIsEmptyOrEntity()) {
             // needs a bottom left side AO shadow
@@ -988,7 +977,7 @@ export default class LevelModel {
         }
 
         if (y < this.planeHeight - 1) {
-          if (x < this.planeWidth - 1 && 
+          if (x < this.planeWidth - 1 &&
               !this.actionPlane[this.yToIndex(y + 1) + x + 1].getIsEmptyOrEntity() &&
               this.actionPlane[this.yToIndex(y) + x + 1].getIsEmptyOrEntity()) {
             // needs a bottom left side AO shadow

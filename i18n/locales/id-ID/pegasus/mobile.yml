@@ -617,6 +617,8 @@ id-ID:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Benar
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -640,7 +642,7 @@ id-ID:
   dashboard_faq_k5: K-5 Frequently Asked Questions/pertanyaan yang sering diajukan
   dashboard_announcements: Pengumuman
   dashboard_announce_view_all: Lihat semua
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Pelajari lebih banyak
   dashboard_announce_hoc: '<b>9 November 2015</b> - tutorial Hour of Code baru ada di sini, menampilkan film terbaru dari Star Wars: The Force Awakens. Bekerja samalah dengan Rey untuk membimbing droid baru, BB-8, melalui misi. Kemudian, bergabung dengan Leia untuk membuat dan berbagi pertandingan Anda sendiri di sebuah galaksi yang sangat jauh.'
   dashboard_announce_playlab: '<b>4 Desember 2015</b> - Jam Berkode sudah hadir! Cobalah 50 tutorial untuk setiap umur dan setiap alat. Baru di minggu ini: Kodekan cerita-ceritamu sendiri dan permainan di Play Labs yang baru, Ice Age dan Gumball.'

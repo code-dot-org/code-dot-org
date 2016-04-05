@@ -48,6 +48,8 @@ Boise, ID 83706](https://www.google.com/maps/place/Micron+Engineering+Center/@43
 
 The building location has changed so please carefully look at the  [BSU map here](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
 
+Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop!
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger

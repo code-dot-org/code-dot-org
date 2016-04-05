@@ -26,7 +26,7 @@
   welcome_back: Willkommen zurück, %{name}
   submit: Absenden
   unsubmit: Zurücknehmen
-  next_page: Next page
+  next_page: Nächste Seite
   add_teacher_form:
     code:
       label: 'Lehrer hinzufügen:'
@@ -384,8 +384,8 @@
     heading_hoc2014: "<h2>Die Hour of Code für</h2><h1>jedes Alter</h1>"
     heading_elementary: "<h2>20 Stunden Kurse für</h2><h1>Beginner (allen Alters)</h1>"
     heading_apps: "<h2>Spass für</h2><h1>Alle</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Bereit für den nächsten Schritt?</h2> <h1>JavaScript-Tools
+      für High School</h1>"
     heading_legacy: "<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>"
     your_gallery: Galerie
     no_primary_course: Probiere einen Kurs bei Code Studio
@@ -428,6 +428,8 @@
       Entertainment Ltd. Alle Rechte vorbehalten. Plants vs Zombies &#8482; &copy;
       %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten. Die erstaunliche
       Welt von Gumball ist Warenzeichen und &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Betrieben von Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, das CODE Logo und
       Hour of Code&reg; sind eingetragene Marken der Code.org."
@@ -515,13 +517,13 @@
   upsell:
     applab:
       title: App-Labor
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: App-Lab ist eine Programmierumgebung, wo man einfache apps machen kann.
+        Entwerfe eine Anwendung/App, Code mit Blöcken oder JavaScript damit es funktioniert,
+        dann teile die App in Sekunden.
+      body_short: Entwerfe eine App, Code mit Blöcken oder JavaScript damit es funktioniert,
+        dann teile die App in Sekunden.
+      audience: Ab 13 Jahren
+      cta: Lerne wie
     hoc:
       title: Klassisches Labyrinth
       body: Versuche die Grundlagen der Informatik zu lernen. Millionen andere haben
@@ -592,21 +594,21 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Vielen Dank
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Vielen Dank für das Einsenden Ihrer Frage.
     correct_title: Vielen Dank
-    correct_body: Thank you for submitting an answer.
+    correct_body: Vielen Dank für das Einsenden Ihrer Frage.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Vielen Dank
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Vielen Dank für das Einsenden Ihrer Fragen.
     correct_title: Vielen Dank
-    correct_body: Thank you for submitting an answer
+    correct_body: Vielen Dank für das Einsenden Ihrer Fragen.
   level_group-submittable:
     wrong_title: Vielen Dank
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Vielen Dank für das Einsenden Ihrer Fragen.
     correct_title: Vielen Dank
-    correct_body: Thank you for submitting answers.
+    correct_body: Vielen Dank für das Einsenden Ihrer Fragen.
   match:
     wrong_title: Falsche Lösung
     wrong_body: Die Lösung, die du eingegeben hast, ist nicht korrekt. Bitte versuche
@@ -691,7 +693,7 @@
     completed_perfect: Abgeschlossen, perfekt
     furthest_level_attempted: Höchste Ebene versucht
     assessment: Bewertung
-    submitted: submitted
+    submitted: eingereicht
   studio:
     courses_working_on: Kurse, an denen du arbeitest
     completed_courses: Abgeschlossene Kurse
@@ -767,5 +769,5 @@
           werden
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
+      search_placeholder_text: Suche für ein Symbol...
       no_icons_found: Keine Symbole gefunden

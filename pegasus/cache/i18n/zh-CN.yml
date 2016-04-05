@@ -24,7 +24,7 @@
   twentyhours_heading: "看看我们对计算机科学课程的简介"
   twentyhours_text: "完成您的第一个编程一小时了吗？在此后续课程中更深入的了解计算机科学和编程的概念。"
   og_title: "每个孩子都应该有机会"
-  og_description: "每个学校的每个学生都应该有机会学习计算机科学"
+  og_description: "每个学校的每个学生都应该有学习计算机科学的机会。计算机科学正在改变所有的东西。"
   hoc2014_heading: 加入<a href="http://hourofcode.com">编程一小时</a><br/>2014年12月8至14日<br/>
   hoc2014_students: "学生"
   hoc2014_try: "体验一下"
@@ -74,68 +74,50 @@
     合作伙伴教程</a>。
   get_a_certificate_of_achievement: "获取结业证书"
   view_course: "查看课程"
-  view_unit: View unit
-  make_app: Make an app
+  view_unit: "查看单元"
+  make_app: "创建一个应用"
   congrats_guest_speaker_title: "为你的班级找到了一位演讲人"
   congrats_guest_speaker_desc: "既然你的学生们已经完成了一门计算机科学课程，你可以考虑庆祝一下，并通过邀请一个演讲嘉宾到你的教室，使它与能在现实世界中的制作联系起来。你可以利用我们的'志愿者地图'去邀请当地的志愿者参观你的教室，你也可以在任意城市里寻找愿意远程辅导你的学生的计算机科学的学生或者专业的技术人员。"
   congrats_guest_speaker_cta: "找到的特邀演讲者"
   congrats_third_party_title: "在这些应用和网站上使用你的新技能"
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
+  third_party_gradelevel_kto8: 8年级
+  third_party_gradelevel_kto2: 2年级
+  third_party_gradelevel_2to8: 2-8年级
+  third_party_gradelevel_4to12: 4-12 年级
+  third_party_gradelevel_5to12: 5-12年级
+  third_party_gradelevel_6plus: 6年级以上
+  third_party_gradelevel_8plus: 8年级以上
   third_party_platform_all: "平台：网络，ipad和安卓系统"
   third_party_platform_mobile: "平台: iPad & 安卓"
   third_party_platform_web: "平台: 网络"
   third_party_price_varies: "价格：根据方案变化"
   third_party_price_free: "价格：免费"
   third_party_price_299: "价格：2.99美元／下载"
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_price_individual: "个人价格 ︰ 免费试用 & 25 美元/月"
+  third_party_price_school: "学校价格 ︰ 免费计划 & Pro 在 $2500年 +"
+  third_party_tynker_desc: Tynker 的创意计算平台帮助孩子愉快的，直观和富有想象力的养成计算机思维和培养编程技巧。我们创新的可视化编程语言，交互式自学课程，和游戏为基础的编程活动提供了一个简单的方式介绍编程并且让孩子学会创新和创造。
+  third_party_tynker_btn_curriculum: "早期的读者尝试 Tynker 课程"
   third_party_tynker_btn_site: "访问 Tynker"
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
-    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
-    or on Android or iOS devices. Students play the initial set of “Basic” levels
-    in Lightbot. They will learn how to tell a computer what to do with a series of
-    basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_scratchjr_desc: Scratch Jr. 是一种能够让孩子（5-7岁）创造他们自己的互动故事和游戏的介绍性编程语言。孩子只要将图形化的编程块扣合在一起，就能让角色移动、跳跃、跳舞和唱歌。孩子可以在编辑器中修改角色，可以添加他们自己的声音，甚至可以插入他们自己的照片——然后用编程块使他们的角色活灵活现。
+  third_party_scratchjr_btn_curriculum: "下载Scratch Jr. 的课程"
+  third_party_scratchjr_btn_site: "访问 Scratch Jr."
+  third_party_scratch_desc: "在 Scratch 中，你可以通过编程的方式来设计你自己的互动故事、游戏和动画，还可以在在线社区与他人分享你的创作。Scratch帮助年轻人学会创造性思考、系统性学习以及协同工作——21世纪生活的基本技能。"
+  third_party_scratch_btn_curriculum: "下载Scratch Jr. 的课程"
+  third_party_scratch_btn_forum: Scratch 教育家论坛
+  third_party_scratch_btn_site: "访问 Scratch"
+  third_party_lightbot_desc: "在Lightbot上，学生们必须通过给机器人编写命令程序来解决难题。学生可以在浏览器中（需要Flash
+    Player), 或在Android或iOS设备上玩游戏。学生们在Lightbot中玩“基本”级别的初始集时，他们将学会如何让计算机做一系列的基本命令，以及获得编写计算机程序的一般过程。"
+  third_party_lightbot_btn_curriculum: "下载 Lightbot 课程"
+  third_party_lightbot_btn_site: "访问 Lightbot"
   third_party_khan_desc: "学习怎么使用JavaScript & ProcessingJS去编辑绘画，动漫和游戏的程序，或者学习怎么使用HTML
     & CSS去创建网页。你可以任意分享你的创作，也可以通过探索别人的创作从中互相学习。"
   third_party_khan_btn_learn: "与Khan Academy一起学习cs"
-  third_party_khan_btn_forum: Khan Academy CS Forum
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_khan_btn_forum: Khan 学院 CS 论坛
+  third_party_appinv_desc: MIT App Inventor是一款以模块为基础的的编程工具，可以让包括新手在内的所有人来进行编程并且创建功能齐全的安卓应用程序。第一次使用App
+    Inventor的用户可以在一小时内创建并且运行自制的应用，而且比起传统的编程语言来讲，可以更快速的制作功能更加复杂的应用程序。
+  third_party_appinv_btn_curriculum: "下载 App Inventor 2 课程"
+  third_party_appinv_btn_forum: App Inventor 2 论坛
+  third_party_appinv_btn_site: "访问 App Inventor 2"
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
     fun and accessible for beginners. With CodeHS, you can get the help that every
@@ -150,13 +132,13 @@
   third_party_codecademy_btn_site: Visit Codecademy
   third_party_organization: "组织"
   third_party_curriculum: "课程"
-  third_party_pricing: Pricing
+  third_party_pricing: "定价"
   third_party_cost_free: "学生和教师免费"
-  third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_cost_5permonth: "每节课每月5美元"
+  third_party_cost_299: "每次下载要2.99美元"
+  third_party_cost_free_399: "免费试用，每间教室399美元"
+  third_party_cost_free_2: "免费试用，每位学生2美元"
+  third_party_cost_free_10: "免费试用，每月9.99美元"
   third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
@@ -538,7 +520,7 @@
   dashboard_navigation_all_sections: "学生账户和进度"
   dashboard_navigation_view_progress: "查看进度"
   dashboard_navigation_view_text_responses: "查看文字回应"
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: "测验"
   dashboard_navigation_add_students: "添加学生"
   dashboard_navigation_manage_students: "管理学生"
   dashboard_navigation_lesson_plans_resources: "课程计划及资源"
@@ -636,7 +618,7 @@
   dashboard_progress_completed_too_many_blocks: "完成，使用太多块"
   dashboard_progress_completed_perfect: "完美完成"
   dashboard_progress_furthest_level_attempted: "尝试过最远的关卡"
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: "已提交"
   dashboard_stage: "阶段"
   dashboard_puzzle: "关卡"
   dashboard_question: "问题"
@@ -645,8 +627,10 @@
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: "正确。"
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_status: Status
+  dashboard_correctness_incorrect: "错误"
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: "状态"
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
   dashboard_multi_correct_percent: "% multiple choice correct"
@@ -798,7 +782,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: "应用实验室"
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: 13岁以上
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

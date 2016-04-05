@@ -25,7 +25,7 @@ ar:
   welcome_back: 'أهلاً بكم من جديد، %{name}'
   submit: تسجيل
   unsubmit: عدم تقديم
-  next_page: Next page
+  next_page: الصفحة التالية
   add_teacher_form:
     code:
       label: 'إضافة معلِّماً:'
@@ -346,6 +346,7 @@ ar:
     help_from_html_old: ساعد مهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر في إنشاء هذه البرنامج التعليمية.
     art_from_html: 'ماينكرافت &#8482;&copy;%{current_year} مايكروسوفت. جميع الحقوق محفوظة.<br /> حروب النج&#8482;&copy; م%{current_year} ديزني و لوكاس فيلم. جميع الحقوق محفوظة.<br /> متجمد &#8482;&copy;%{current_year} ديزني. جميع الحقوق محفوظة.<br /> العصر الجليدي&#8482;&copy;%{current_year} القرن العشرين فوكس. جميع الحقوق محفوظة.<br /> الطيور الغاضبة&#8482;&copy; 2009-%{current_year} ريفيو المتحدة للترفيه.<br /> جميع الحقوق محفوظة. <br />النباتات ضد المتبلدين &#8482; &copy; %{current_year} الكترونكس ارتس. <br />جميع الحقوق محفوظة. عالم غامبل المدهش علامة مسجلة و&copy; 2015 شبكة الكرتون.'
     art_from_html_old: 'ماينكرافت&#8482;&copy;%{current_year} مايكروسوفت. جميع الحقوق محفوظة. حروب النجم&#8482;&copy;%{current_year} ديزني و لوكاس فيلم. جميع الحقوق محفوظة. متجمد&#8482;&copy;%{current_year} ديزني. جميع الحقوق محفوظة. العصر الجليدي.&#8482;&copy;%{current_year} القرن العشرين فوكس. جميع الحقوق محفوظة. الطيور الغاضبة&#8482;&copy; 2009-%{current_year} ريفيو المتحدة للترفيه. جميع الحقوق محفوظة. النباتات ضد المتبلدين&#8482;&copy;%{current_year} الكترونكس ارتس. جميع الحقوق محفوظة. عالم غامبل المدهش علامة مسجلة و&copy; 2015 شبكة الكرتون.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: تعمل على خدمات أمازون للويب
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;، إن شعار CODE و Hour of Code&reg; هما علامات تجارية لـ Code.org.'
     copyright: حقوق النسخ

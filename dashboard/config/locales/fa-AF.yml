@@ -408,6 +408,8 @@
     art_from_html_old: "پرنده های خشمگین &#8482;&amp;&copy; 2009-%{current_year} کمپانی
       سرگرمی روویو. تمامی حقوق محفوظ است.<br />گیاهان در برابر زامبی ها&#8482;&amp;&copy;%{current_year}
       شرکت هنرهای الکترونیک. تمامی حقوق محفوظ است"
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: "قدرت گرفته شده توسط وب سرویس های آمازون"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, لوگوی کد نویسی و
       ساعت کد نویسی &reg; علائم تجاری Code.org هستند."

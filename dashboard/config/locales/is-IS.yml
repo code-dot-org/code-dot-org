@@ -25,7 +25,7 @@
   welcome_back: Velkomin/n aftur, %{name}
   submit: Senda inn
   unsubmit: Afturkalla innsendingu
-  next_page: Next page
+  next_page: Næsta síða
   add_teacher_form:
     code:
       label: 'Bæta við kennara:'
@@ -423,6 +423,8 @@
       réttindi áskilin. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
       Arts Inc. Öll réttindi áskilin. The Amazing World of Gumball er vörumerki og
       &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Knúið af Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE merkið og Hour
       of Code&reg; eru vörumerki Code.org."
@@ -752,5 +754,5 @@
           og %{link_start_tos}Þjónustuskilmála%{link_end}
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Leita að tákni...
+      no_icons_found: Engin tákn fundust

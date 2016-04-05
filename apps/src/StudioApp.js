@@ -26,7 +26,7 @@ var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
 var annotationList = require('./acemode/annotationList');
-var procesMarkdown = require('marked');
+var processMarkdown = require('marked');
 var copyrightStrings;
 
 /**
@@ -915,13 +915,13 @@ StudioApp.prototype.inject = function(div, options) {
 };
 
 /**
- * Returns true if the current HTML page is in right-to-left language mode.
+ * @returns {boolean} True if the current HTML page is in right-to-left language mode.
  */
 StudioApp.prototype.isRtl = function() {
   var head = document.getElementsByTagName('head')[0];
   if (head && head.parentElement) {
     var dir = head.parentElement.getAttribute('dir');
-    return (dir && dir.toLowerCase() === 'rtl');
+    return !!(dir && dir.toLowerCase() === 'rtl');
   } else {
     return false;
   }
@@ -1041,7 +1041,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
   if (this.isMarkdownMode(level)) {
     var markdownWithImages = this.substituteInstructionImages(
       level.markdownInstructions, this.skin.instructions2ImageSubstitutions);
-    renderedMarkdown = procesMarkdown(markdownWithImages);
+    renderedMarkdown = processMarkdown(markdownWithImages);
   }
 
   var authoredHints;

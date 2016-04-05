@@ -1198,6 +1198,10 @@ is:
       Overworld Avoid Monsters_instruction: |
         Það er ekki góð hugmynd að rekast á laumupúka. 
         Farðu varlega framhjá þeim til að komast í öryggi heimilisins.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Viður er mjög mikilvægt hráefni. Alls konar hlutir eru búnir til úr viði. Gakktu að trénu og notaðu "eyða blokk" skipunina til að höggva það niður.'
       Overworld Chop Trees_instruction: Við þurfum að byggja hús áður en sólin sest. Hús þurfa mikið af viði. Höggðu niður öll 3 trén.
       Overworld Free Play 20x20_instruction: Til hamingju! Þú hefur lokið við allar þrautirnar okkar! Nú getur þú grafið, byggt og búið til eitthvað sérstakt með því að nota allt sem þú hefur lært hingað til.
@@ -1358,6 +1362,10 @@ is:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -1365,12 +1373,10 @@ is:
       Quantum Bee_instruction: Fjólublá blóm geta haft annað hvort 1 eða 0 af blómasafa, en þú veist ekki hvort! Gættu þess að safna ekki blómasafa ef blóm hefur ekki safa. Athugaðu hvort safinn sé 1 með því að nota ef kubbinn.
       Ryan - 4-5 Bee Conditionals 2_instruction: Þessa stundina vill býflugan bara blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
       Ryan - Bee Conditionals_instruction: Nú vill býflugan bara blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
-      Ryan Doily Step 1_instruction: |
-        Now we're going to draw a doily step by step.
-        First, draw a square.
+      Ryan Doily Step 1_instruction: Nú ætlum við að teikna dúllu skref fyrir skref. Teiknaðu fyrst ferning.
       Ryan Doily Step 2_instruction: |
-        Now you need to turn and repeat it 20 times!
-        How many degrees do you turn to get 360 after 20 iterations?
+        Nú þarftu að snúa og endurtaka hann 20 sinnum!
+        Um hve margar gráður á að snúa til að fá 360 eftir 20 endurtekningar?
       Ryan Test Locked Blocks_instruction: 'Hér er fallið "rása". Breyttu því svo að Köttur færist upp 400 díla og svo niður 400.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: Þetta fiðrildi heitir Sammi og leiksvæðið er garður Samma. Garður Samma er 400 dílar á breidd og 400 díla hár! Eins og þú sérð getur Sammi hreyft sig um garðinn og hnitatölurnar efst á skjánum uppfærast til að sýna hvar hann er. Notaðu örvarlyklana til að færa Samma um garðinn sinn. Hjálpaðu Samma að safna öllum flöggunum til að komast áfram.

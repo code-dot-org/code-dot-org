@@ -436,6 +436,8 @@
       droits réservés. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
       Arts Inc. tous droits réservés. Le monde incroyable de Gumball est une marque
       déposée &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Fourni par Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE ainsi
       que Heures de Code&reg; sont des marques commerciales de Code.org."
@@ -776,5 +778,5 @@
           et des %{link_start_tos}Conditions Générales d'Utilisation%{link_end}
   components:
     icon_library:
-      search_placeholder_text: Cherche pour un icon...
-      no_icons_found: Pas d'icone trouvée
+      search_placeholder_text: Chercher pour une icône...
+      no_icons_found: Aucune icône trouvée
