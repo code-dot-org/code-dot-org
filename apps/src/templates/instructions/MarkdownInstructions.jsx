@@ -1,3 +1,5 @@
+var Radium = require('radium');
+
 var styles = {
   standard: {
     marginBottom: 35,
@@ -18,17 +20,14 @@ var styles = {
 };
 
 var MarkdownInstructions = function (props) {
-  var style = styles.standard;
-  if (props.inTopPane) {
-    style = styles.inTopPane;
-  } else if (props.markdownClassicMargins) {
-    style = styles.classic;
-  }
-
   return (
     <div
       className='instructions-markdown'
-      style={style}
+      style={[
+        styles.standard,
+        props.inTopPane && styles.inTopPane,
+        props.markdownClassicMargins && styles.classic
+      ]}
       dangerouslySetInnerHTML={{ __html: props.renderedMarkdown }}/>
   );
 };
@@ -39,4 +38,4 @@ MarkdownInstructions.propTypes = {
   inTopPane: React.PropTypes.bool
 };
 
-module.exports = MarkdownInstructions;
+module.exports = Radium(MarkdownInstructions);

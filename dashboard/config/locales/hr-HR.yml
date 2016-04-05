@@ -414,6 +414,8 @@
       prava pridržana. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic
       Arts Inc Sva prava pridržana. < br / > The amazing world of Gumball je zaštitni
       znak i © 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Potpomognuto s Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotip i Hour
       of Code&reg; su zaštitni znaci tvrtke Code.org."

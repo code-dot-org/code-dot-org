@@ -523,7 +523,7 @@ var isTouching = function (p5Inst, target) {
                                  abs(this.position.x -this.previousPosition.x) + this.collider.extents.x,
                                  abs(this.position.y -this.previousPosition.y) + this.collider.extents.y);
 
-            var bbox = new AABB(pInst, c, e, this.collider.offset);
+            var bbox = new AABB(p5Inst, c, e, this.collider.offset);
 
             //bbox.draw();
 

@@ -415,6 +415,8 @@
       Ltd. Все права защищены. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
       Arts Inc. Все права защищены. Удивительный мир Гамбола является торговой маркой
       и &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: "Создано с помощью Amazon Web Services"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE и Hour
       of Code&reg; являются товарными знаками Code.org."

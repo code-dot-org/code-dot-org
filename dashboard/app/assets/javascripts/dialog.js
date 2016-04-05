@@ -105,7 +105,7 @@ window.Dialog = (function () {
     var thisDialog = this;
     $(this.div).on(
         'hidden.bs.modal',
-        function() {
+        function () {
           if (resizeCallback) {
             thisDialog.isVisible = false;
             $(window).off('resize', resizeCallback);
@@ -125,7 +125,7 @@ window.Dialog = (function () {
 
     $(this.div).on(
         'hide.bs.modal',
-        function(e) {
+        function (e) {
           if (this.hideOptions) {
             // Let's have the dialog object handle hide options.
             this.processHideOptions(this.hideOptions);
@@ -151,7 +151,7 @@ window.Dialog = (function () {
    * close the dialog when clicked.
    * The caller can also specify hideOptions, for special behavior when the dialog is dismissed.
    */
-  Dialog.prototype.show = function(options) {
+  Dialog.prototype.show = function (options) {
     options = options || {};
 
     $(this.div).modal({
@@ -171,11 +171,11 @@ window.Dialog = (function () {
     this.div.offset(options);
   };
 
-  Dialog.prototype.hide = function() {
+  Dialog.prototype.hide = function () {
     $(this.div).modal('hide');
   };
 
-  Dialog.prototype.focus = function() {
+  Dialog.prototype.focus = function () {
     if (this.isVisible) {
       $(this.div).focus();
     }
@@ -188,7 +188,7 @@ window.Dialog = (function () {
    * Certain elements are faded out more quickly so that they are gone before
    * the dialog gets too small.
    */
-  Dialog.prototype.processHideOptions = function(options) {
+  Dialog.prototype.processHideOptions = function (options) {
 
     var startCss = {};
     startCss.opacity = '1';
@@ -230,7 +230,7 @@ window.Dialog = (function () {
     this.div.find(".markdown-instructions-container").animate({opacity: 0}, fastFadeTime);
 
     // Slide the instruction box from its current position to its destination.
-    $(this.div).css(startCss).animate(endCss, totalFadeTime, "swing", function() {
+    $(this.div).css(startCss).animate(endCss, totalFadeTime, "swing", function () {
       // Just hide the dialog at the end.
       $(this).modal('hide');
     });

@@ -1367,12 +1367,14 @@
           dopo passaggio fino a trovare il problema, e risolverlo.
       4:
         image: notes/C2_relay_programming_4.png
-        text: Here, I'm trying to do a back handspring, but I keep falling off. I
-          walk through each part, step by step, and realize where my mistake was.
-          My coach showed me I wasn't putting my hands on the beam correctly. So I
-          tried another back handspring on the beam with my new hand position, and
-          I stuck it! I was really glad I debugged my back  handspring. We figured
-          it out! Debugging is finding and fixing problems. Nice, good job!
+        text: Qui, sto cercando di fare un salto mortale all'indietro, ma continuo
+          a cadere. Rieprcorro ogni momento, passo dopo passo, e mi rendo conto di
+          quale sia stato il mio errore. Il mio allenatore mi ha mostrato che non
+          stavo mettendo le mani sulla trave in modo corretto. Così ho provato un
+          altro salto mortale all'indietro sulla trave con una nuova posizione della
+          mano, e ce l'ho fatta! Sono stato davvero felice di aver corretto gli errori
+          [debug] del mio salto mortale all'indietro. L'abbiamo capito! Debug è trovare
+          e risolvere i problemi. Bello, buon lavoro!
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
@@ -1623,13 +1625,13 @@
           di creare le immagini che vogliono sullo schermo.
       4:
         image: notes/C3_crowdsourcing_4.png
-        text: For example, in Finding Nemo, when Crush and Squirt and all their friends
-          are flying through the East Australian Current. You're seeing images of
-          water flowing by, you're seeing the colors on the back of the turtle, you're
-          seeing the sides of the fish. All of those things are generated through
-          math and computer programs that we write, that we then give to the artist
-          and they take that to create that final image and tweak it and make it look
-          beautiful and look fun.
+        text: Ad esempio, in "Alla ricerca di Nemo", quando Crush, Squirt e tutti
+          i loro amici stanno volando attraverso la corrente australiana orientale,
+          si vede un flusso d'acqua che scorre, si vedono i colori sulla parte posteriore
+          della tartaruga, si vedono i lati del pesce. Tutte queste cose vengono generate
+          grazie alla matematica e ai programmi informatici che scriviamo, dati al
+          creativo al fine di creare l'immagine finale e modificarla in modo che sembri
+          bella e divertente.
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
@@ -1688,9 +1690,10 @@
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: This lesson is functional suncatchers. You'll be creating these pretty
-          suncatchers using functions. There are several steps in creating one of
-          these suncatchers. Some of the steps you have to repeat many times.
+        text: Questa lezione è funzionale alla creazione di cristalli multicolore.
+          Sono immagini carine che si creano usando funzioni. Ci sono diversi passaggi
+          nella creazione di uno di questi cristalli. Alcuni dei passaggi vanno ripetuti
+          diverse volte.
       2:
         image: notes/C3_functional_suncatchers_2.png
         text: Il primo passo è semplificare il processo per creare un cattura sole
@@ -2156,12 +2159,12 @@
           got a 0 and a 1.
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: The most common way you use binary is in an if statement. It's a classic
-          thing from programming. The program runs along and it says if something
-          is true, then do this. Or it's not true and you do something else. What
-          if you want to do something maybe a little more complicated. Instead an
-          if statement, you want to work with something like an image or a sound in
-          a computer.
+        text: Il modo più comune di utilizzare il codice binario è in un'istruzione
+          if ... then ... (se ... allora ...). È un classico della programmazione.
+          Il programma viene eseguito e ci dice se qualcosa è true (vero), allora
+          procedi. O se non lo è, fa' qualcos'altro. Cosa succede se si desidera fare
+          qualcosa di forse un po' più complicato? Al posto di un'istruzione if ...
+          then ... , puoi voler trattare un'immagine o un suono al computer.
       3:
         image: notes/C4_unplugged_binary_3.png
         text: Un computer conosce solo il codice binario ma un'immagine, non è binaria,

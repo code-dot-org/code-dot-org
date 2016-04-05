@@ -430,6 +430,8 @@
       Ltd. Bản Quyền Đã Được Bảo Hộ. Plants vs. Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Bản Quyền Đã Được Bảo Hộ. The Amazing World of Gumball
       là thương hiệu và &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: "Được tài trợ bởi Amazon Web Services"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, biểu tượng CODE và
       Giờ Lập Trình &reg; là nhãn hiệu của Code.org."

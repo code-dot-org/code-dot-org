@@ -419,6 +419,8 @@
       запазени. Растения срещу зомбита &#8482; © %{current_year} Electronic Arts Инк.
       Всички права запазени. Невероятният свят на Гъмбол е запазена марка и © 2015
       Картун Нетуърк.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: "Създадено с Amazon Web Services"
     trademark: "&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, the CODE
       logo и Hour of Code&reg; са търговски марки на Code.org."

@@ -612,6 +612,8 @@ ro-RO:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Corect
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -635,7 +637,7 @@ ro-RO:
   dashboard_faq_k5: 'Întrebări frecvente - clasele primare'
   dashboard_announcements: Anunțuri
   dashboard_announce_view_all: Vizualizare toate
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Află mai mult
   dashboard_announce_hoc: '<b>30 Septembrie 2015</b> - Ora de Cod 2015 se apropie! Alatura-te claselor din toata lumea din cadrul celui mai mare eveniment didactic din istorie.'
   dashboard_announce_playlab: '<b>4 Decembrie 2015</b>-Ora de cod este aici! Incearca 50 de tutoriale pentru orice varsta sau device. Nou saptamana aceasta: Programeaza-ti propiile povesti sau jocuri in noul Play Lab, Epoca de Gheata si Gumball.'

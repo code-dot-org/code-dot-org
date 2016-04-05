@@ -2,7 +2,7 @@ var constants = require('./constants');
 
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
-exports.endGame = function(value) {
+exports.endGame = function (value) {
   Studio.queueCmd(null, 'endGame', {'value': value});
 };
 
@@ -75,11 +75,11 @@ exports.setSpriteXY = function (spriteIndex, xpos, ypos) {
 };
 */
 
-exports.playSound = function(soundName) {
+exports.playSound = function (soundName) {
   Studio.queueCmd(null, 'playSound', {'soundName': soundName});
 };
 
-exports.throwProjectile = function(spriteIndex, dir, className) {
+exports.throwProjectile = function (spriteIndex, dir, className) {
   Studio.queueCmd(null, 'throwProjectile', {
     'spriteIndex': spriteIndex,
     'dir': dir,
@@ -96,118 +96,118 @@ exports.makeProjectile = function(className, action) {
 };
 */
 
-exports.move = function(spriteIndex, dir) {
+exports.move = function (spriteIndex, dir) {
   Studio.queueCmd(null, 'move', {
     'spriteIndex': spriteIndex,
     'dir': dir
   });
 };
 
-exports.moveRight = function() {
+exports.moveRight = function () {
   Studio.queueCmd(null, 'moveRight');
 };
 
-exports.moveLeft = function() {
+exports.moveLeft = function () {
   Studio.queueCmd(null, 'moveLeft');
 };
 
-exports.moveUp = function() {
+exports.moveUp = function () {
   Studio.queueCmd(null, 'moveUp');
 };
 
-exports.moveDown = function() {
+exports.moveDown = function () {
   Studio.queueCmd(null, 'moveDown');
 };
 
 // goUp/Down/LeftRight are wrappers for moveUp/Down/Left/Right (used by hoc2015)
-exports.goRight = function() {
+exports.goRight = function () {
   Studio.queueCmd(null, 'moveRight');
 };
 
-exports.goLeft = function() {
+exports.goLeft = function () {
   Studio.queueCmd(null, 'moveLeft');
 };
 
-exports.goUp = function() {
+exports.goUp = function () {
   Studio.queueCmd(null, 'moveUp');
 };
 
-exports.goDown = function() {
+exports.goDown = function () {
   Studio.queueCmd(null, 'moveDown');
 };
 
 // addPoints is a wrapper for changeScore (used by hoc2015)
 
-exports.addPoints = function(value) {
+exports.addPoints = function (value) {
   Studio.queueCmd(null, 'changeScore', {'value': value});
 };
 
 // removePoints is a wrapper for reduceScore (used by hoc2015)
 
-exports.removePoints = function(value) {
+exports.removePoints = function (value) {
   Studio.queueCmd(null, 'reduceScore', {'value': value});
 };
 
-exports.changeScore = function(value) {
+exports.changeScore = function (value) {
   Studio.queueCmd(null, 'changeScore', {'value': value});
 };
 
-exports.addCharacter = function(className) {
+exports.addCharacter = function (className) {
   Studio.queueCmd(null, 'addItem', {
     'className': className
   });
 };
 
-exports.setToChase = function(className) {
+exports.setToChase = function (className) {
   Studio.queueCmd(null, 'setItemActivity', {
     'className': className,
     'type': 'chase'
   });
 };
 
-exports.setToFlee = function(className) {
+exports.setToFlee = function (className) {
   Studio.queueCmd(null, 'setItemActivity', {
     'className': className,
     'type': 'flee'
   });
 };
 
-exports.setToRoam = function(className) {
+exports.setToRoam = function (className) {
   Studio.queueCmd(null, 'setItemActivity', {
     'className': className,
     'type': 'roam'
   });
 };
 
-exports.setToStop = function(className) {
+exports.setToStop = function (className) {
   Studio.queueCmd(null, 'setItemActivity', {
     'className': className,
     'type': 'none'
   });
 };
 
-exports.moveFast = function(className, speed) {
+exports.moveFast = function (className, speed) {
   Studio.queueCmd(null, 'setItemSpeed', {
     'className': className,
     'speed': 'fast'
   });
 };
 
-exports.moveNormal = function(className, speed) {
+exports.moveNormal = function (className, speed) {
   Studio.queueCmd(null, 'setItemSpeed', {
     'className': className,
     'speed': 'normal'
   });
 };
 
-exports.moveSlow = function(className, speed) {
+exports.moveSlow = function (className, speed) {
   Studio.queueCmd(null, 'setItemSpeed', {
     'className': className,
     'speed': 'slow'
   });
 };
 
-exports.showDebugInfo = function(value) {
+exports.showDebugInfo = function (value) {
   Studio.queueCmd(null, 'showDebugInfo', {
     'value': value
   });

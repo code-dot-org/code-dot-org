@@ -38,7 +38,7 @@ var ShareDialogBody = React.createClass({
     };
   },
 
-  showSendToPhone: function(event) {
+  showSendToPhone: function (event) {
     this.setState({showSendToPhone: true });
     event.preventDefault();
   },

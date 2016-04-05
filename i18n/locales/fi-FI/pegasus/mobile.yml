@@ -614,6 +614,8 @@ fi-FI:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Oikein
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -637,7 +639,7 @@ fi-FI:
   dashboard_faq_k5: 'Esi- ja alakoulu, usein kysyttyjä kysymyksiä'
   dashboard_announcements: Ilmoituksia
   dashboard_announce_view_all: Näytä kaikki
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Lue lisää
   dashboard_announce_hoc: '<b>9. Marraskuuta 2015</b> - Uusi Kooditunti-harjoitus on täällä, teemanaan elokuva Star Wars: The Force Awakens. Auta Rey:tä opastamaan uutta droidia, BB-8:aa, joukossa tehtäviä. Sitten, yhdessä Leian kanssa, luo ja jaa oma, kaukaiseen galaksiin sijoittuva, pelisi.'
   dashboard_announce_playlab: '<b>4. joulukuuta 2015</b> - Koodauskoodi on täällä! 50 harjoitusta kaikenikäisille ja kaikille eri laitteille. Uutta tällä viikolla: Ohjelmoi omia tarinoita ja pelejä Pelilabrassa, tai Ice Age- ja Gumball-maailmoissa.'

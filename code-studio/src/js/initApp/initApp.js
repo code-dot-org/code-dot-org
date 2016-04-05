@@ -35,7 +35,7 @@ window.apps = {
       Dialog: Dialog,
       cdoSounds: CDOSounds,
       position: {blockYCoordinateInterval: 25},
-      onInitialize: function() {
+      onInitialize: function () {
         createCallouts(this.level.callouts || this.callouts);
         if (userAgentParser.isChrome34()) {
           chrome34Fix.fixup();
@@ -49,7 +49,7 @@ window.apps = {
         }
         $(document).trigger('appInitialized');
       },
-      onAttempt: function(report) {
+      onAttempt: function (report) {
         if (appOptions.level.isProjectLevel) {
           return;
         }
@@ -83,10 +83,10 @@ window.apps = {
           clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
         }
       },
-      onResetPressed: function() {
+      onResetPressed: function () {
         reporting.cancelReport();
       },
-      onContinue: function() {
+      onContinue: function () {
         var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.videoInfo) {
           showVideoDialog(lastServerResponse.videoInfo);
@@ -94,13 +94,13 @@ window.apps = {
           window.location.href = lastServerResponse.nextRedirect;
         }
       },
-      backToPreviousLevel: function() {
+      backToPreviousLevel: function () {
         var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.previousLevelRedirect) {
           window.location.href = lastServerResponse.previousLevelRedirect;
         }
       },
-      showInstructionsWrapper: function(showInstructions) {
+      showInstructionsWrapper: function (showInstructions) {
         // Always skip all pre-level popups on share levels or when configured thus
         if (this.share || appOptions.level.skipInstructionsPopup) {
           return;
@@ -138,9 +138,8 @@ window.apps = {
       for (var i in node) {
         if (/^fn_/.test(i)) {
           try {
-            /* jshint ignore:start */
+            // eslint-disable-next-line no-eval
             node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
-            /* jshint ignore:end */
           } catch (e) {
           }
         } else {
@@ -157,7 +156,7 @@ window.apps = {
 
   // Set up projects, skipping blockly-specific steps. Designed for use
   // by levels of type "external".
-  setupProjectsExternal: function() {
+  setupProjectsExternal: function () {
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
     }
