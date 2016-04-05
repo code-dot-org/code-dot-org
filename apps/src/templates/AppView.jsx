@@ -38,6 +38,7 @@ var AppView = React.createClass({
               contentFunction={this.props.generateVisualizationColumnHtml} />
           </div>
           <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
+          {/* TODO - the legacy /edit page isShareView is true but we dont want it to be hidden*/}
           <CodeWorkspaceContainer
               topMargin={0}
               hidden={this.props.hideSource}

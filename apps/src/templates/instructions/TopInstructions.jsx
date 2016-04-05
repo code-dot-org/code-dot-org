@@ -1,8 +1,10 @@
 'use strict';
 
+var _ = require('../../lodash');
 var Radium = require('radium');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
+var sharedStyles = require('../sharedStyles');
 
 var processMarkdown = require('marked');
 
@@ -20,13 +22,12 @@ var INITIAL_HEIGHT = 300;
 var MAX_HEIGHT = 600;
 
 var styles = {
-  main: {
+  main: _.assign({
     position: 'absolute',
     marginLeft: 15,
     top: 0,
     right: 0,
-    // left handled by media queries for .editor-column
-  },
+  }, sharedStyles.editorColumnMedia.width, sharedStyles.editorColumnMedia.height),
   header: {
     height: HEADER_HEIGHT,
     lineHeight: HEADER_HEIGHT + 'px',

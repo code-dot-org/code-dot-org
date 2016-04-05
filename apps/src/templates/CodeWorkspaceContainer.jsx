@@ -5,19 +5,22 @@
  * us to position it vertically. Causes resize events to fire when receiving new props
  */
 
+var _ = require('../lodash');
 var Radium = require('radium');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
 var utils = require('../utils');
+var sharedStyles = require('./sharedStyles');
 
 var styles = {
-  main: {
+  main: _.assign({
     position: 'absolute',
-    // left gets set externally
     // top is set in render
     right: 0,
     bottom: 0,
     marginLeft: 15, // margin gives space for vertical resizer
-  },
+    }, sharedStyles.editorColumnMedia.width),
+  // only some callers want to resize based on height media queries
+  mainResizesOnHeight: sharedStyles.editorColumnMedia.height,
   mainRtl: {
     right: undefined,
     left: 0,
@@ -53,6 +56,7 @@ var CodeWorkspaceContainer = React.createClass({
     hidden: React.PropTypes.bool,
     isRtl: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
+    visualizationResizesOnHeight: React.PropTypes.bool,
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
     onSizeChange: React.PropTypes.func
   },
@@ -67,6 +71,7 @@ var CodeWorkspaceContainer = React.createClass({
     var mainStyle = [styles.main, {
       top: this.props.topMargin
     },
+      this.props.visualizationResizesOnHeight && styles.mainResizesOnHeight,
       this.props.noVisualization && styles.noVisualization,
       this.props.isRtl && styles.mainRtl,
       this.props.noVisualization && this.props.isRtl && styles.noVisualizationRtl,

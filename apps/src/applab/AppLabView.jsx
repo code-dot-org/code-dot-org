@@ -102,6 +102,7 @@ var AppLabView = React.createClass({
               isRtl={false}
               noVisualization={false}
               hidden={this.props.isShareView}
+              visualizationResizesOnHeight={true}
               generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
               onSizeChange={utils.fireResizeEvent}/>
         </ConnectedStudioAppWrapper>

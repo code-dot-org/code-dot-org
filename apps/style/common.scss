@@ -311,14 +311,6 @@ button.arrow:disabled {
   border: 1px solid #ddd;
 }
 
-// html[dir='rtl'] .editor-column {
-//    right: $visualization-width;
-// }
-//
-// .editor-column {
-//   left: $visualization-width;
-// }
-
 #codeWorkspace.pin_bottom {
   border: none;
   border-top: 1px solid #ddd;
@@ -445,12 +437,7 @@ html[dir='rtl'] div#visualizationResizeBar {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  // .editor-column {
-  //   left: $width;
-  // }
-  html[dir='rtl'] .editor-column {
-    right: $width;
-  }
+  // TODO - validate this one
   html[dir='rtl'] body.readonly .editor-column {
     right: 0px;
   }
