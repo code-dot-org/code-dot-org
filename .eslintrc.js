@@ -41,6 +41,7 @@ module.exports = {
     "no-undef": "error",
     "no-unused-vars": "off",
     "no-with": "error",
+    "object-curly-spacing": "off",
     "semi": "error",
     "space-before-function-paren": ["error", {
       "anonymous": "always",
