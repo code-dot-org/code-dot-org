@@ -290,11 +290,13 @@ Dashboard::Application.routes.draw do
     get '/plc/' + object, to: redirect('plc/content_creator/show_courses_and_modules')
   end
 
+  get '/plc/course_view', to: 'plc/user_course_enrollments#course_view'
+
   namespace :plc do
     resources :courses
     resources :learning_modules
     resources :tasks
-    resources :user_course_enrollments, only: [:new, :create]
+    resources :user_course_enrollments
     resources :enrollment_task_assignments
     resources :course_units
     resources :enrollment_unit_assignments
@@ -303,8 +305,6 @@ Dashboard::Application.routes.draw do
 
   get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
   post '/plc/enrollment_evaluations/:unit_assignment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
-
-  get '/plc/course_view', to: 'plc/course_view#render_dashboard'
 
   get '/plc/learning_modules/:id/new_learning_resource_for_module', to: 'plc/learning_modules#new_learning_resource_for_module', as: 'new_learning_resource_for_module'
 
