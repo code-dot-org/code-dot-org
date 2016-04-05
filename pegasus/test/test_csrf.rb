@@ -74,17 +74,7 @@ class CsrfTest < Minitest::Test
     env = {'rack.session' => session_with_csrf_token}
     DashboardSection.stubs(:create).returns(1)
     response = post('/v2/sections', '{}', env)
-    show_errors(response)
     assert_equal 302, response.status
-  end
-end
-
-def show_errors(response)
-  if response.status != 200
-    response.body.scan(/<h2>.*?<\/h2>/i).each do |line|
-      puts line
-    end
-    puts
   end
 end
 
