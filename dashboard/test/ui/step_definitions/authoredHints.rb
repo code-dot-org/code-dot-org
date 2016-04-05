@@ -7,10 +7,10 @@ Then /^the hint lightbulb shows (\d*) hints available$/ do |hint_count|
 end
 
 Then /^the hint lightbulb shows no hints available$/ do
-  steps '
+  steps <<STEPS
     Then element "#lightbulb" is visible
     And element "#hintCount" does not exist
-  '
+  STEPS
 end
 
 When /^I wait for the hint image to load$/ do
@@ -19,18 +19,18 @@ When /^I wait for the hint image to load$/ do
 end
 
 When /^I view the next authored hint$/ do
-  steps '
+  steps <<STEPS
     When I press "prompt-table"
     And I wait to see ".qtip"
     And I press the first ".qtip a.show-hint" element
     And I wait to see ".qtip"
-  '
+  STEPS
 end
 
 When /^I view the instructions and old hints$/ do
-  steps '
+  steps <<STEPS
     When I press "prompt-table"
     And I wait to see ".qtip"
     And I press the first ".qtip a.show-instructions" element
-  '
+  STEPS
 end
