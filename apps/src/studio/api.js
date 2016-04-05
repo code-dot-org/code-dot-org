@@ -10,7 +10,7 @@ exports.random = function (values) {
   return values[key];
 };
 
-exports.endGame = function(id, value) {
+exports.endGame = function (id, value) {
   Studio.queueCmd(id, 'endGame', {'value': value});
 };
 
@@ -99,15 +99,15 @@ exports.setSpriteXY = function (id, spriteIndex, xpos, ypos) {
   });
 };
 
-exports.playSound = function(id, soundName) {
+exports.playSound = function (id, soundName) {
   Studio.queueCmd(id, 'playSound', {'soundName': soundName});
 };
 
-exports.stop = function(id, spriteIndex) {
+exports.stop = function (id, spriteIndex) {
   Studio.queueCmd(id, 'stop', {'spriteIndex': spriteIndex});
 };
 
-exports.throwProjectile = function(id, spriteIndex, dir, className) {
+exports.throwProjectile = function (id, spriteIndex, dir, className) {
   Studio.queueCmd(id, 'throwProjectile', {
     'spriteIndex': spriteIndex,
     'dir': Number(dir),
@@ -115,21 +115,21 @@ exports.throwProjectile = function(id, spriteIndex, dir, className) {
   });
 };
 
-exports.makeProjectile = function(id, className, action) {
+exports.makeProjectile = function (id, className, action) {
   Studio.queueCmd(id, 'makeProjectile', {
     'className': className,
     'action': action
   });
 };
 
-exports.move = function(id, spriteIndex, dir) {
+exports.move = function (id, spriteIndex, dir) {
   Studio.queueCmd(id, 'move', {
     'spriteIndex': spriteIndex,
     'dir': Number(dir)
   });
 };
 
-exports.moveDistance = function(id, spriteIndex, dir, distance) {
+exports.moveDistance = function (id, spriteIndex, dir, distance) {
   Studio.queueCmd(id, 'moveDistance', {
     'spriteIndex': spriteIndex,
     'dir': dir,
@@ -139,76 +139,76 @@ exports.moveDistance = function(id, spriteIndex, dir, distance) {
 
 // addPoints is a wrapper for changeScore (used by hoc2015)
 
-exports.addPoints = function(id, value) {
+exports.addPoints = function (id, value) {
   Studio.queueCmd(id, 'changeScore', {'value': value});
 };
 
 // removePoints is a wrapper for reduceScore (used by hoc2015)
 
-exports.removePoints = function(id, value) {
+exports.removePoints = function (id, value) {
   Studio.queueCmd(id, 'reduceScore', {'value': value});
 };
 
-exports.changeScore = function(id, value) {
+exports.changeScore = function (id, value) {
   Studio.queueCmd(id, 'changeScore', {'value': value});
 };
 
-exports.addCharacter = function(id, className) {
+exports.addCharacter = function (id, className) {
   Studio.queueCmd(id, 'addItem', {
     'className': className
   });
 };
 
-exports.setItemActivity = function(id, className, type) {
+exports.setItemActivity = function (id, className, type) {
   Studio.queueCmd(id, 'setItemActivity', {
     'className': className,
     'type': type
   });
 };
 
-exports.setItemSpeed = function(id, className, speed) {
+exports.setItemSpeed = function (id, className, speed) {
   Studio.queueCmd(id, 'setItemSpeed', {
     'className': className,
     'speed': speed
   });
 };
 
-exports.moveFast = function(id, className) {
+exports.moveFast = function (id, className) {
   Studio.queueCmd(id, 'setItemSpeed', {
     'className': className,
     'speed': constants.SpriteSpeed.FAST
   });
 };
 
-exports.moveNormal = function(id, className) {
+exports.moveNormal = function (id, className) {
   Studio.queueCmd(id, 'setItemSpeed', {
     'className': className,
     'speed': constants.SpriteSpeed.SLOW
   });
 };
 
-exports.moveSlow = function(id, className) {
+exports.moveSlow = function (id, className) {
   Studio.queueCmd(id, 'setItemSpeed', {
     'className': className,
     'speed': constants.SpriteSpeed.VERY_SLOW
   });
 };
 
-exports.showDebugInfo = function(value) {
+exports.showDebugInfo = function (value) {
   Studio.queueCmd(null, 'showDebugInfo', {
     'value': value
   });
 };
 
-exports.setScoreText = function(id, text) {
+exports.setScoreText = function (id, text) {
   Studio.queueCmd(id, 'setScoreText', {'text': text});
 };
 
-exports.showCoordinates = function(id) {
+exports.showCoordinates = function (id) {
   Studio.queueCmd(id, 'showCoordinates', {});
 };
 
-exports.wait = function(id, value) {
+exports.wait = function (id, value) {
   Studio.queueCmd(id, 'wait', {'value': value});
 };
 

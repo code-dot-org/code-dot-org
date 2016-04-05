@@ -2,13 +2,13 @@
  * Installs some default block stubs for use in tests
  * @param blockly
  */
-exports.installTestBlocks = function(blockly) {
+exports.installTestBlocks = function (blockly) {
   blockly.Blocks.empty_block = {
-    init: function() {
+    init: function () {
     }
   };
   blockly.Blocks.block_with_3_titles = {
-    init: function() {
+    init: function () {
       var displayText = "dummy text";
       this.appendDummyInput()
         .appendTitle(displayText, "A")

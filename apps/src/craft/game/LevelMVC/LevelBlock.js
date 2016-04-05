@@ -26,7 +26,7 @@ export default class LevelBlock {
       this.isPlacable = true;
     }
 
-    if(blockType.substring(0, 5) == "rails") {
+    if (blockType.substring(0, 5) == "rails") {
       this.isEntity = true;
       this.isWalkable = true;
       this.isUsable = true;
@@ -86,7 +86,7 @@ export default class LevelBlock {
       this.isDestroyable = true;
     }
 
-    if(blockType == "door") {
+    if (blockType == "door") {
       this.isEntity = true;
       this.isWalkable = true;
       this.isUsable = true;

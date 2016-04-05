@@ -198,7 +198,7 @@ NetSimRouterLogModal.prototype.render = function () {
   this.rootDiv_.html(renderedMarkup);
 
   // Add input handlers
-  this.getRouterLogToggleButton().one('click', function() {
+  this.getRouterLogToggleButton().one('click', function () {
     this.toggleRouterLogMode_();
     this.render();
   }.bind(this));

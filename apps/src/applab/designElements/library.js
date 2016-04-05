@@ -107,7 +107,7 @@ module.exports = {
     return elements[elementType].PropertyTab;
   },
 
-  getElementEventTab: function(elementType) {
+  getElementEventTab: function (elementType) {
     return elements[elementType].EventTab;
   },
 
