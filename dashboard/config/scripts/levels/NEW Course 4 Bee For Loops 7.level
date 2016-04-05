@@ -20,7 +20,7 @@
     "nectar_goal": "45",
     "flower_type": "redWithNectar",
     "instructions": "Now, let's combine the \"counter\" variable with a math block! How can you use the \"counter\" variable to navigate this garden with the fewest number of blocks possible? What do you need to do to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\" variable!\r\n\r\nRemember: If your loop is counting up, the increment is added to your \"counter\" variable each time through.",
-    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nNow, let's combine the `counter` variable with a math block! How can you use the `counter` variable to navigate this garden with the fewest number of blocks possible? What do you need to do to collect 3, 6, 9, 12, 15 nectar this time?  The secret is in the `counter` variable!\r\n\r\nRemember: If your loop is counting up, the increment is added to your `counter` variable each time through.\r\n\r\n<h4 class=\"hint\">\r\n<details>\r\n<summary><b>Hints</b></summary>\r\n\t<br/><br/>\r\n       <h5 class=\"hintInner\">\r\n        Hint: Try doing some math with the counter variable.  What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?\r\n    </h5>\r\n</details>\r\n</h4>",
+    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nNow, let's combine the `counter` variable with a math block! How can you use the `counter` variable to navigate this garden with the fewest number of blocks possible? \r\n\r\nWhat do you need to do to collect 3, 6, 9, 12, 15 nectar this time?  The secret is in the `counter` variable!\r\n\r\n<br/>\r\nRemember: If your loop is counting up, the increment is added to your `counter` variable each time through.\r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -32,7 +32,8 @@
     "step_speed": "1",
     "ideal": "14",
     "never_autoplay_video": "false",
-    "fast_get_nectar_animation": "true"
+    "fast_get_nectar_animation": "true",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Try doing some math with the counter variable.\\n\\nWhat do you have to do to the counter at each flower to equal the amount of nectar you need to collect?\",\r\n  \"hint_id\": \"NEW_Course_4_Bee_For_Loops_7_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
   "notes": ""
@@ -93,7 +94,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
@@ -102,10 +103,8 @@
             </block>
           </value>
         </block>
-        <block type="maze_moveForward"/>
-        <block type="maze_nectar"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
@@ -114,17 +113,17 @@
               <title name="VAR">counter</title>
               <value name="FROM">
                 <block type="math_number">
-                  <title name="NUM">3</title>
+                  <title name="NUM">1</title>
                 </block>
               </value>
               <value name="TO">
                 <block type="math_number">
-                  <title name="NUM">15</title>
+                  <title name="NUM">5</title>
                 </block>
               </value>
               <value name="BY">
                 <block type="math_number">
-                  <title name="NUM">3</title>
+                  <title name="NUM">1</title>
                 </block>
               </value>
               <statement name="DO">

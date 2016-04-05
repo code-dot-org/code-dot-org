@@ -84,7 +84,7 @@ var SliderEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getInputEventCode: function() {
+  getInputEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "input", function(event) {\n' +
@@ -93,7 +93,7 @@ var SliderEvents = React.createClass({
     return code;
   },
 
-  insertInput: function() {
+  insertInput: function () {
     this.props.onInsertEvent(this.getInputEventCode());
   },
 

@@ -63,7 +63,7 @@ function checkId(element, prefix) {
  * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
  * @returns {Element}
  */
-var getPrefixedElementById = module.exports.getPrefixedElementById = function(elementId, prefix) {
+var getPrefixedElementById = module.exports.getPrefixedElementById = function (elementId, prefix) {
   prefix = prefix === undefined ? constants.DESIGN_ELEMENT_ID_PREFIX : prefix;
   return document.getElementById(prefix + elementId);
 };
@@ -117,7 +117,7 @@ var TURTLE_CANVAS_ID = 'turtleCanvas';
  *     to be created. Default: false
  * @returns {boolean}
  */
-module.exports.isIdAvailable = function(newId, options) {
+module.exports.isIdAvailable = function (newId, options) {
   options = options || {};
   if (!newId) {
     return false;

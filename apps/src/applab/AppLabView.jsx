@@ -74,10 +74,8 @@ var AppLabView = React.createClass({
       top: topPaneHeight
     };
 
-
     // TODO - there are a small set of levels that have instructions but not markdownInstructions
     //   (that are also used in scripts). should convert these to have markdown instructions
-    // TODO - changing id of codeWorkspace to codeWorkspaceApplab will break callouts and some UI tests
     return (
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
@@ -87,17 +85,20 @@ var AppLabView = React.createClass({
         <ProtectedStatefulDiv
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
-          {this.props.instructionsInTopPane && <TopInstructions
-            puzzleNumber={this.props.puzzleNumber}
-            stageTotal={this.props.stageTotal}
-            height={topPaneHeight}
-            markdown={this.props.instructionsMarkdown}
-            collapsed={this.props.instructionsCollapsed}
-            onToggleCollapsed={this.props.toggleInstructionsCollapsed}
-            onChangeHeight={this.props.setInstructionsHeight}/>
-          }
+        {this.props.instructionsInTopPane && <TopInstructions
+          isEmbedView={this.props.isEmbedView}
+          puzzleNumber={this.props.puzzleNumber}
+          stageTotal={this.props.stageTotal}
+          height={topPaneHeight}
+          markdown={this.props.instructionsMarkdown}
+          collapsed={this.props.instructionsCollapsed}
+          onToggleCollapsed={this.props.toggleInstructionsCollapsed}
+          onChangeHeight={this.props.setInstructionsHeight}/>
+        }
         <CodeWorkspaceContainer
             topMargin={topPaneHeight}
+            isRtl={false}
+            noVisualization={false}
             generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
             onSizeChange={utils.fireResizeEvent}/>
       </ConnectedStudioAppWrapper>
@@ -111,6 +112,7 @@ module.exports = connect(function propsFromStore(state) {
     instructionsMarkdown: state.level.instructionsMarkdown,
     instructionsCollapsed: state.instructions.collapsed || !state.level.instructionsInTopPane,
     instructionsHeight: state.instructions.height,
+    isEmbedView: state.level.isEmbedView,
     puzzleNumber: state.level.puzzleNumber,
     stageTotal: state.level.stageTotal
   };

@@ -225,7 +225,7 @@ function letterValue(val) {
 /**
  * Return a random uppercase letter that isn't in the list of restrictions
  */
-function randomLetter (restrictions) {
+function randomLetter(restrictions) {
   var letterPool;
   if (restrictions) {
     // args consists of ALL_CHARS followed by the set of restricted letters

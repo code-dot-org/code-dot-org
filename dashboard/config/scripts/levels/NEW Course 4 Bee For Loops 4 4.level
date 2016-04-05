@@ -88,7 +88,6 @@
           <title name="DIR">moveForward</title>
         </block>
         <block type="maze_nectar"/>
-        <block type="controls_for" inline="true"/>
         <block type="maze_moveForward"/>
       </xml>
     </toolbox_blocks>

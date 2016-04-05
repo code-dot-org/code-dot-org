@@ -17,7 +17,7 @@ var ZOrderRow = React.createClass({
     this.setState({value: newProps.initialValue});
   },
 
-  render: function() {
+  render: function () {
     var element = this.props.element;
 
     // Element will be wrapped in a resizable div
