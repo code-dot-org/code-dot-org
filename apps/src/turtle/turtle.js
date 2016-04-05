@@ -237,6 +237,7 @@ Artist.prototype.init = function(config) {
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    hideSource: !!config.hideSource,
     noVisualization: false,
     isRtl: this.studioApp_.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
