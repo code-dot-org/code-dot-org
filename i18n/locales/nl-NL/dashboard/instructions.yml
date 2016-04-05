@@ -253,11 +253,7 @@ nl:
       4-5 Artist For Loops 13_instruction: 'Dit ontwerp is begonnen zonder een "for" lus en gebruikt te veel blokken! Gebruik een "for" blok om de spiraal af te maken. Tip: de lengte van de laatste lijn is 250 pixels.'
       4-5 Artist For Loops 14_instruction: 'Iemand begon de code, maar besefte toen dat er een snellere manier moest zijn! Gebruik een "for" blok om de blokken te vervangen en de driehoekige spiraal af te maken (Tip: de lengte van de laatste lijn is 300 pixels).'
       4-5 Artist For Loops 15_instruction: 'Iemand begon de code, maar besefte toen dat er een snellere manier moest zijn! Gebruik een "for" blok om de blokken te vervangen en de zeshoekige spiraal af te maken (Tip: de lengte van de laatste lijn is 200 pixels).'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: 'Dit is een "for" blok. In plaats van 1,2,3... 10 te typen, kan het "for" blok de blokken in zichzelf herhalen en de getallen voor jou tellen. Plaats het getal 10 in de "to" sectie van het "for" blok.'
       4-5 Artist For Loops 3_instruction: 'Hoe kunnen we van 1 tot 50 tellen? Bewerk het "for" blok.'
       4-5 Artist For Loops 4_instruction: 'Maak het "for" blok af zodat het telt van 1 tot 10 met 1.'
       4-5 Artist For Loops 6_instruction: 'Teken vierkanten met zijden van 50, 60, 70, 80 en 90 pixels. Je zult de "teken een vierkant" functie vijf keer moeten gebruiken.'
@@ -1876,6 +1872,10 @@ nl:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Het is een slecht idee om tegen een Creeper aan te botsen. Beweeg voorzichtig langs de Creepers om veilig je huis te bereiken.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Hout is een zeer belangrijke grondstof. Veel dingen zijn ervan gemaakt. Loop naar de boom en gebruik het \“vernietig blok\”-commando om hem om te hakken.'
       Overworld Chop Trees_instruction: We moeten een huis bouwen voordat de zon ondergaat. Voor een huis is veel hout nodig. Hak alle drie bomen om.
       Overworld Free Play 20x20_instruction: Gefeliciteerd! Je hebt al onze puzzels voltooid! Nu kun je wat je hebt geleerd gebruiken om te delven en te bouwen, om zo iets unieks te maken.
@@ -2076,6 +2076,10 @@ nl:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only

@@ -625,7 +625,9 @@ pt-BR:
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Correto
-  dashboard_correctness_incorrect: Incorrect
+  dashboard_correctness_incorrect: Incorreto
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -649,7 +651,7 @@ pt-BR:
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
   dashboard_announce_view_all: Ver todos
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Saiba mais
   dashboard_announce_hoc: '<b>9 de novembro 2015</b> - Um novo tutorial da Hora do Código está disponível, trazendo o novo filme de Star Wars: O Despertar da Força. Trabalhe junto com Rey para guiar o novo androide, BB-8, em uma missão. Então, junte-se a Leia para criar e compartilhar seu próprio jogo em uma galáxia muito, muito distante.'
   dashboard_announce_playlab: '<b>4 de dezembro de 2015</b> - A Hora do Código chegou! Experimente 50 tutoriais para todas as idades e dispositivos. Novidades desta semana: programe suas próprias histórias e jogos em novos laboratórios, com A Era do Gelo e Gumball.'

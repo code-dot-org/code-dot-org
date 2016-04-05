@@ -2912,6 +2912,10 @@
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: "Криперов лучше не трогать. Осторожно
         обойдите их и зайдите в свой безопасный дом."
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: "Дерево – это очень важный ресурс, из которого
         изготавливаются многие предметы. Подойдите к дереву и используйте команду
         «уничтожить блок», чтобы срубить его."
@@ -3140,6 +3144,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: "Эти облака меня раздражают! Некоторые из облаков
         имеют цветы внутри, а некоторые нет. Я должен проверить каждое облако, и только
         получить нектар из цветков."

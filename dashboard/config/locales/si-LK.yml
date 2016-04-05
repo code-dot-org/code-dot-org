@@ -100,7 +100,7 @@
     teacher: "ඔබ ගුරුවරයෙක් ද?"
     valid_username: "ලබාගත හැක !"
     invalid_username: Username must be at least 5 characters
-    taken_username: Username is already taken
+    taken_username: "මෙම පරිශීලක නාමය දැනටමත් භාවිතා කර ඇත‍"
     valid_password: "මුර පදය වලංගුයි!"
     invalid_password: Password එක අකුරු 6ට වැඩිවිය යුතුයි
     mismatch_password: "යෙදු මුර පද දෙක සමාන වී නැත"
@@ -415,6 +415,8 @@
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."

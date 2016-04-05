@@ -21,7 +21,7 @@ ar-SA:
   twentyhours_heading: 'جرب  لدينا دورة العلوم مقدمة إلى الكمبيوتر'
   twentyhours_text: 'أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب ومفاهيم البرمجة الأساسية في الدورة التالية.'
   og_title: كل طفل يستحق فرصة
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: كل طالب في كل مدرسة يستحق الفرصة ليدرس علوم الحاسب . إنها تغير كل شيء.
   hoc2014_heading: 'انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/> 8-14 كانون الأول/ديسمبر، عام 2014 <br/>'
   hoc2014_students: الطلاب
   hoc2014_try: جربها
@@ -85,8 +85,8 @@ ar-SA:
   third_party_platform_web: 'البرنامج: شبكة الإنترنت'
   third_party_price_varies: 'السعر: تختلف البرامج'
   third_party_price_free: 'السعر: مجانًا'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_299: 'السعر: 2.99$/تحميل'
+  third_party_price_individual: 'السعر الفردي : تجربة مجانية  و25$ بالشهر'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
@@ -111,17 +111,17 @@ ar-SA:
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
   third_party_codehs_btn_try: Intro CS Learn More for Schools
   third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_curriculum: تحميل مناهج اكاديمية كود
+  third_party_codecademy_btn_site: زر اكاديمية كود
+  third_party_organization: منظمة
   third_party_curriculum: المناهج
   third_party_pricing: Pricing
-  third_party_cost_free: Free for students and teachers
+  third_party_cost_free: 'مجاني للطلبة  والمدرسين'
   third_party_cost_5permonth: $5/month per class
-  third_party_cost_299: $2.99/download
+  third_party_cost_299: 2.99$ / تحميل
   third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_cost_free_2: 'مجاني للتجربة : 2$ للطالب'
+  third_party_cost_free_10: 'مجاني للتجربة : 9.99$ بالشهر'
   third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -590,6 +590,8 @@ ar-SA:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: صحيح
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -615,7 +617,7 @@ ar-SA:
   dashboard_faq_k5: الأسئلة المتاوترة الطرح في المستوى الخامس K-5
   dashboard_announcements: إعلانات
   dashboard_announce_view_all: عرض الكل
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: اعرف المزيد
   dashboard_announce_hoc: '<b>23 نوفمبر 2015</b>--هل تريد متطوع متحمساً لتعليم علوم الكمبيوتر للمساعدة أثناء الحدث "مدار للتعليمات البرمجية" الخاصة بك؟ المتطوعين ما يزيد على 7,000 يتطلعون إلى الهام الخاص بك الطلاب بزيارة الفصول الدراسية الخاصة بك أو الفيديو الدردشة عن بعد. تحقق من الخريطة المتطوعين للاتصال بالمتطوعين في المجال الخاص بك.'
   dashboard_announce_playlab: '<b>4 ديسمبر 2015</b>-"ساعة من التعليمات البرمجية" هنا! حاول 50 الدروس لكل عصر وكل جهاز. جديد هذا الأسبوع: رمز القصص والألعاب في مختبرات اللعب الجديدة والعصر الجليدي و Gumball الخاصة بك.'

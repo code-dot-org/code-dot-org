@@ -1743,9 +1743,9 @@
         side needs to be shorter if you want the whole pattern to fit on the screen.
         \r
         Let's recreate the algorithm for this amazing pattern, but instead of
-        manually setting the "length" variable, let's use a math block with the
-        "sides" variable inside to make sure that each shape fits correctly. The
-        perimeter of each polygon is 300 pixels.\r
+        manually setting the `length` variable, let's use a math block with the `sides`
+        variable inside to make sure that each shape fits correctly. The perimeter
+        of each polygon is 300 pixels.\r
         Need some hints?  Click here.
       Course 4 Artist Vars 14_instruction: 'Loje e Lire: Shiko, algoritmi yt eshte
         bashkuar me nje litar tjeter. Eksperimento duke ndryshuar vlerat e variablave
@@ -3166,6 +3166,10 @@
       Overworld Avoid Monsters_instruction: |
         Running into a Creeper is a bad idea.
         Carefully move past the Creepers and reach the safety of your home.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: |
         Wood is a very important resource. Many things
         are made from it. Walk to the tree and use the “destroy block” command to
@@ -3416,6 +3420,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only

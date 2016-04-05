@@ -778,6 +778,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Correct
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -1106,7 +1108,7 @@
   infinity_shortdescription: Use Play Lab to create a story or game starring Disney
     Infinity characters.
   artist_shortdescription: Draw cool pictures and designs with the Artist!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
+  monsterocding_shortdescription: A colourful self-guided programming adventure for
     children.
   allcancode_shortdescription: An immersive game to guide Marco with a visual programming
     language.
@@ -1273,7 +1275,7 @@
     offers a fun filled self guided adventure that teaches several key programming
     concepts to children. Each block based activity builds on the previous, introducing
     kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
+    colourful animated graphics, audio instructions.
   allcancode_longdescription: Students play an adventure game based on an original
     story. They guide Marco - the main character - through each level by giving him
     step-by-step instructions in the form of the visual programming language used
@@ -1587,7 +1589,7 @@
     creations that make use of iPad features like Multi-Touch and the accelerometer.
     We think Codea is the most beautiful code editor you'll use, and it's easy. Codea
     is designed to let you touch your code. Want to change a number? Just tap and
-    drag it. How about a color, or an image? Tapping will bring up visual editors
+    drag it. How about a colour, or an image? Tapping will bring up visual editors
     that let you choose exactly what you want.
   lego_beyond_longdescription: Create small, customizable and programmable robots
     using LEGO pieces.

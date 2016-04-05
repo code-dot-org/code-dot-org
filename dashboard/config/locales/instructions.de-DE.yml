@@ -463,10 +463,8 @@
         "Für"-Baustein, um die bereits vorhandenen Bausteine auszutauschen und zeichne
         die Sechsecksspirale zu Ende. (Hinweis: Die letzte Linie ist 200 Pixel lang.'
       4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+        Das ist ein "for"-Baustein.
+        Anstatt 1, 2, 3 ... 10 zu schreiben, kann der Baustein die Bausteine innerhalb ausführen und für dich zählen. Platziere die Nummer 10 in das "to"-Feld des "for"-Bausteins.
       4-5 Artist For Loops 3_instruction: Wie können wir von 1 bis 50 zählen? Ändere
         den "Für"-Baustein.
       4-5 Artist For Loops 4_instruction: Vervollständige den "Für"-Baustein, so dass
@@ -2958,11 +2956,9 @@
         Nun kombinieren wir die Zählvariable mit einem Mathematik-Baustein. Wie kann man sich mit möglichst wenigen Bausteinen mithilfe der Zählvariable durch den Garten bewegen? Wie kannst du 3, 6, 9, 12, 14 Portionen Nektar einsammeln? Die Lösung steckt in der Zähvariablen.\r
         \r
         Beachte: Beim durchlaufen der Schleife wird die Zählvariable jedesmal um die Schrittweite erhöht.
-      NEW Course 4 Bee For Loops 8_instruction: |-
+      NEW Course 4 Bee For Loops 8_instruction: |
         You've got this! What should your
-        increment be to collect 3, 6, 9, 12, 15 nectar?\r
-        Hint: What do you need
-        to add to each number to get the number after it?
+        increment be to collect 3, 6, 9, 12, 15 nectar?
       NEW Course 4 Bee For Loops 9_instruction: |
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
@@ -3029,6 +3025,10 @@
       Overworld Avoid Monsters_instruction: Auf einen Creeper zu treffen, ist nicht
         so gut. Bewege dich vorsichtig an den Creeper vorbei und erreiche dein sicheres
         Zuhause.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: Holz ist ein sehr wichtiger Rohstoff. Daraus
         kann man vieles herstellen. Gehe zum Baum und benutze den Befehl "Block zerstören",
         um ihn zu fällen.
@@ -3261,6 +3261,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only

@@ -47,10 +47,32 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
     return 0;
   };
 
+  // Do not warn when these attributes are removed.
+  var ignoredAttributes = [
+    'pmbx_context',   // Used by Chrome plugins such as Bitdefender Wallet.
+    'kl_vkbd_parsed'  // Origin unknown. Assumed to be a plugin of some kind.
+  ];
+
   var processed = sanitize(unsafe, {
     allowedTags: false,
     allowedAttributes: false,
-    allowedSchemes: allSchemes
+    allowedSchemes: allSchemes,
+    // Use transformTags to ignore certain attributes, since allowedAttributes
+    // can only accept a whitelist not a blacklist.
+    transformTags: {
+      '*': function(tagName, attribs) {
+        for (var i = 0; i < ignoredAttributes.length; i++) {
+          var ignored = ignoredAttributes[i];
+          if (attribs[ignored]) {
+            delete attribs[ignored];
+          }
+        }
+        return {
+          tagName: tagName,
+          attribs: attribs
+        };
+      }
+    }
   });
   if (processed != safe) {
     warn(removedHtml(processed, safe), unsafe, safe, warnings);
@@ -90,7 +112,7 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
 
   var safe = sanitize(unsafe, {
     allowedTags: sanitize.defaults.allowedTags.concat([
-      'button', 'canvas', 'img', 'input', 'option', 'label', 'select', 'span', 'font']),
+      'button', 'canvas', 'img', 'input', 'option', 'label', 'select', 'span', 'font', 'u', 'b', 'em', 'i', 'table', 'th', 'tr', 'td']),
     allowedAttributes: $.extend({}, sanitize.defaults.allowedAttributes, {
       button: defaultAttributes.concat(['data-canonical-image-url']),
       canvas: defaultAttributes,
@@ -100,7 +122,15 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
       input: defaultAttributes.concat(['autocomplete', 'checked', 'max', 'min', 'name', 'placeholder', 'step', 'type', 'value']),
       label: defaultAttributes,
       select: defaultAttributes,
-      span: defaultAttributes
+      span: defaultAttributes,
+      u: defaultAttributes,
+      b: defaultAttributes,
+      em: defaultAttributes,
+      i: defaultAttributes,  // This could allow people to covertly specify font awesome icons, which seems ok
+      table: defaultAttributes,
+      th: defaultAttributes,
+      tr: defaultAttributes,
+      td: defaultAttributes
     }),
     allowedSchemes: sanitize.defaults.allowedSchemes.concat(['data']),
     transformTags: {

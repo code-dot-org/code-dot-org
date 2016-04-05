@@ -2594,6 +2594,10 @@
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: "Það er ekki góð hugmynd að rekast á laumupúka.
         \nFarðu varlega framhjá þeim til að komast í öryggi heimilisins.\n"
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: Viður er mjög mikilvægt hráefni. Alls konar
         hlutir eru búnir til úr viði. Gakktu að trénu og notaðu "eyða blokk" skipunina
         til að höggva það niður.
@@ -2816,6 +2820,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -2829,12 +2837,11 @@
       Ryan - Bee Conditionals_instruction: Nú vill býflugan bara blómasafa. Hlutur
         er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá
         hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
-      Ryan Doily Step 1_instruction: |
-        Now we're going to draw a doily step by step.
-        First, draw a square.
+      Ryan Doily Step 1_instruction: Nú ætlum við að teikna dúllu skref fyrir skref.
+        Teiknaðu fyrst ferning.
       Ryan Doily Step 2_instruction: |
-        Now you need to turn and repeat it 20 times!
-        How many degrees do you turn to get 360 after 20 iterations?
+        Nú þarftu að snúa og endurtaka hann 20 sinnum!
+        Um hve margar gráður á að snúa til að fá 360 eftir 20 endurtekningar?
       Ryan Test Locked Blocks_instruction: Hér er fallið "rása". Breyttu því svo að
         Köttur færist upp 400 díla og svo niður 400.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse

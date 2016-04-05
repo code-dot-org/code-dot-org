@@ -690,10 +690,9 @@ bs:
       Course 4 Artist 1_instruction: 'Pomozi mi da završim crtati moju kutiju. (Svaka linija je duga 300 piksela) '
       Course 4 Artist 10_instruction: 'Vrijeme je za slobodno igranje! Zabavi se i nacrtaj šta god želiš. '
       Course 4 Artist 11_instruction: |
-        Now for a challenge!  Here is a design that
-        uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it?  Feel free to use trial and error. You are not expected to
-        get it perfect the first time.  Want to see more hints?  Click here!
+        Now for a challenge!  Feel free to use trial
+        and error. You are not expected to get the image perfect the first time.   Want
+        to see more hints?  Click here!
       Course 4 Artist 12_instruction: "Want a second peek at the inspiration design\nor the hints?  Click here!\\r\n\\r\nOtherwise, make a design all your own!"
       Course 4 Artist 13_instruction: |
         Still playing?  Here is a blank canvas where
@@ -708,7 +707,9 @@ bs:
       Course 4 Artist 6_instruction: 'Dovrši kod za crtanje ovih trokutova. Savjet: 3 trokuta koji zatvaraju ugao od 360 stepeni.'
       Course 4 Artist 7_instruction: 'Sada ugnijezdi ovu petlju unutar druge petlje da bi nacrtao/la 10 trokutova. Ovo se zove ugniježdena petlja. Savjet: Svih 10 trokutova zatvaraju ugao od 360 stepeni.  '
       Course 4 Artist 8_instruction: Nacrtaj ovo sunce tako što ćeš ponoviti ovaj čitav blok u petlji 12 puta.
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet you build it without giving you any blocks to start!\\r\nHint: There are\n3 triangles within the 360 degree rotation...how many times does 3 go into\n360?"
+      Course 4 Artist 8a_instruction: |
+        Remember this shape?  Now we're going to
+        let you build it without giving you any blocks to start!
       Course 4 Artist 9_instruction: 'Ponavljaj ovaj crtež u petlji 10 puta i pobrini se da okreneš između svakog oblika koji je nacrtan. Evo savjet o za koliko okrenuti: Koliko je 360 podijeljeno sa 10?'
       Course 4 Artist Binary 1_instruction: Evo funkcija koja uzima binarni niz jedinica i nula i upućuje umjetnika da se okrene kada ide s lijeva na desno, sa vrha na dno, i da se popunjava kvadrate kada vidi 1, a ignoriše kvadrate koji sadrže 0. Pokreni ovaj kod da vidiš kako umjetnik koristi binarni sistem da nacrta ovaj uzorak.
       Course 4 Artist Binary 1a_instruction: Evo funkcija koja uzima binarni niz jedinica i nula i upućuje umjetnika da se okrene kada ide s lijeva na desno, sa vrha na dno, i da se popunjava kvadrate kada vidi 1, a ignoriše kvadrate koji sadrže 0. Pokreni ovaj kod da vidiš kako umjetnik koristi binarni sistem da nacrta ovaj uzorak.
@@ -811,7 +812,7 @@ bs:
       Course 4 Artist Vars 10_instruction: 'Evo algoritma koji crta trokut sastavljen od manjih trokutova. Možeš li ga promijeniti tako da koristi varijablu "stranice" za crtanje trokuta? Pogledaj malo kroz kod, i svaki put kada vidiš broj 3, zamijeni ga sa tvojom "stranice" varijablom. Sjeti se da koristiš "postavi stranice" blok.'
       Course 4 Artist Vars 11_instruction: 'Evo istog algoritma kojeg smo smislili u zadnjem zadatku. Na šta trebaš postaviti "stranice" varijablu kako bi se nacrtala ova slika s kvadratima?'
       Course 4 Artist Vars 12_instruction: 'Hajde da postavimo "stranice" varijablu na vrijednost 5. Što više strana dodajemo ovom algoritmu, to uzorak postaje veći! Hajde da dodamo novu varijablu naziva "dužina" i upotrijebimo je kada god treba napraviti "pomak naprijed". Postavi "dužina" varijablu na 75 za ovaj oblik.'
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the \"length\" variable, let's use a math block with the\n\"sides\" variable inside to make sure that each shape fits correctly. The\nperimeter of each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the `length` variable, let's use a math block with the `sides`\nvariable inside to make sure that each shape fits correctly. The perimeter\nof each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
       Course 4 Artist Vars 14_instruction: Vrijeme za slobodno igranje! Provjeri sada svoj algoritam koji je ugniježden u još jednoj petlji. Eksperimentiši sa mijenjanjem vrijednosti tvoje dvije varijable da bi nacrtao/la cool uzorke.
       Course 4 Artist Vars 2_instruction: 'Umjesto "pomjeranja naprijed za 100", blok za "pokretanje" sada ima varijablu "dužina". Možeš li postaviti dužinu na 150 da bi nacrtao/la novi trokut?'
       Course 4 Artist Vars 3_instruction: 'Evo petlja za crtanje kvadrata, ali nešto nedostaje. Možeš li je popraviti tako da koristi varijablu "dužina" za računanje koliko svaka od stranica mora biti duga? '
@@ -1617,6 +1618,10 @@ bs:
       Overworld Avoid Monsters_instruction: |
         Running into a Creeper is a bad idea.
         Carefully move past the Creepers and reach the safety of your home.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: |
         Wood is a very important resource. Many things
         are made from it. Walk to the tree and use the “destroy block” command to
@@ -1854,6 +1859,10 @@ bs:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only

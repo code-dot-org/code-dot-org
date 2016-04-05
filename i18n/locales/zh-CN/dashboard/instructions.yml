@@ -212,11 +212,7 @@ zh:
       4-5 Artist For Loops 13_instruction: 这份代码没有使用计数循环，所以用了非常多的模块！用一个计数循环模块来完成这个螺旋。提示：最后一条线的长度是250像素。
       4-5 Artist For Loops 14_instruction: '有人开始写代码后，认识到应该有更快的办法！用一个“计数循环"模块来替代其它模块，并完成这个三角形螺旋。（提示：最后一行的长度是300像素）'
       4-5 Artist For Loops 15_instruction: '有人开始写代码后，认识到应该有更快的办法！用一个“计数循环"模块来替代其它模块，并完成这个六边形螺旋。（提示：最后一行的长度是200像素）'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: '这是一段“for”循环的代码，把数字10代入"for"循环的"to"区段内，它可以重复"for"中的代码然后为你算出内部的数字，而不是人为用键盘打出1,2,3... 10。'
       4-5 Artist For Loops 3_instruction: 我们怎么从1计数到50？编辑”计数循环“模块。
       4-5 Artist For Loops 4_instruction: 完成”计数循环“模块，从而能够从1数到10，并且每次数1.
       4-5 Artist For Loops 6_instruction: '试试画大小为50，60，70，80，和90的正方形。你可以使用五次"画一个正方形"的函数。'
@@ -1775,6 +1771,10 @@ zh:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: 碰上爬行者可不妙。小心绕过爬行者，安全到达自己的家才是上策。
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 木头是非常重要的资源，很多东西都要用到它。走到树边，使用“摧毁方块”命令，即可将树砍倒。
       Overworld Chop Trees_instruction: 我们必须在太阳下山之前，建造一座房子。房子需要用到大量木头。将这所有 3 棵树砍倒吧。
       Overworld Free Play 20x20_instruction: 恭喜！你完成了我们所有谜题！现在，快用你至今为止学会的知识，采矿、建造和创造一些独特的东西吧。
@@ -1975,16 +1975,20 @@ zh:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: 这些云正在打搅我！在这些云里，一部分有花，而另一部分没有花。我需要从这些有花的云里采集到蜂蜜。
       Quantum Bee_instruction: 紫色的花里可能会有一个花蜜，但也可能没有花蜜，而且你不知道哪些花有花蜜！请注意不要从没有花蜜的紫花里收集花蜜。你可以用“如果”模块来检查（花朵里的）花蜜是否等于1。
       Ryan - 4-5 Bee Conditionals 2_instruction: 蜜蜂现在只想要花蜜。不是所有的目标都是花，所以检查每朵云下面是不是藏着花。如果是的话，再采集花蜜。
       Ryan - Bee Conditionals_instruction: 蜜蜂现在只想要花蜜。不是所有的目标都是花，所以检查每朵云下面是不是藏着花。如果是的话，再采集花蜜。
       Ryan Doily Step 1_instruction: |
-        Now we're going to draw a doily step by step.
-        First, draw a square.
+        现在我们要分步骤来画一个小桌垫。
+        首先，画一个正方形。
       Ryan Doily Step 2_instruction: |
-        Now you need to turn and repeat it 20 times!
-        How many degrees do you turn to get 360 after 20 iterations?
+        现在你要把它重复旋转20次！
+        那么每次转多少度，迭代20次以后能得到360度呢？
       Ryan Test Locked Blocks_instruction: 这里有个函数叫做“巡逻”。编辑它来让猫向上移动400像素，再向下移动400像素。
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |

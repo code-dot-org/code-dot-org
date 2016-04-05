@@ -3114,6 +3114,10 @@ pt-BR:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Não é uma boa ideia topar com um Creeper. Passe com cuidado pelos Creepers e chegue na sua casa em segurança.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Madeira é um recurso muito importante. Muitas coisas são feitas com ela. Ande até a árvore e use o comando "destruir bloco" para derrubá-la.'
       Overworld Chop Trees_instruction: Precisamos construir uma casa antes que o sol se ponha. Casas utilizam muita madeira. Corte todas as 3 árvores.
       Overworld Free Play 20x20_instruction: Parabéns! Você concluiu todas as nossas tarefas! Agora, minere, construa e crie algo único, usando tudo que você já aprendeu.
@@ -3333,6 +3337,10 @@ pt-BR:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -3349,9 +3357,7 @@ pt-BR:
       Ryan Doily Step 1_instruction: |
         Now we're going to draw a doily step by step.
         First, draw a square.
-      Ryan Doily Step 2_instruction: |
-        Now you need to turn and repeat it 20 times!
-        How many degrees do you turn to get 360 after 20 iterations?
+      Ryan Doily Step 2_instruction: Agora, você precisa ativar e repeti-lo 20 vezes! Quantos graus se obter 360 depois de 20 iterações?
       Ryan Test Locked Blocks_instruction: |
         Aqui temos uma função chamada "patrulhe".
         Edite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo.

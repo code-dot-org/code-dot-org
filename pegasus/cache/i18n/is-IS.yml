@@ -30,8 +30,8 @@
   twentyhours_text: Búin(n) að ljúka fyrstu Klukkustund kóðunar? Fylgdu eftir með
     því að læra fleiri mikilvæg hugtök í tölvunarfræði og forritun á þessu námskeiði.
   og_title: Hvert barn á skilið tækifæri
-  og_description: Sérhver nemandi í sérhverjum skóla ætti að fá tækifæri til að læra
-    tölvunarfræði.
+  og_description: Sérhver nemandi í sérhverjum skóla á skilið að fá tækifæri til að
+    læra tölvunarfræði. Hún er að breyta öllu.
   hoc2014_heading: Vertu með í <a href="http://hourofcode.com">Klukkustund kóðunar</a><br/>8.
     - 14. desember 2014<br/>
   hoc2014_students: Nemendur
@@ -91,37 +91,37 @@
   view_course: Skoða námskeið
   view_unit: Skoða einingu
   make_app: Búa til app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  congrats_guest_speaker_title: Finna gestafyrirlesara til að koma í skólann
+  congrats_guest_speaker_desc: Nú þegar nemendur þínir hafa lokið námskeiði í tölvunarfræði,
+    ættir þú að íhuga að halda upp á það og mynda tengsl við það sem er að gerast
+    út í heiminum með því að fá fyrirlesara í heimsókn. Þú getur notað kort okkar
+    yfir sjálfboðaliða til að finna fyrirlesara í nágrenninu eða leitað í hvaða borg
+    sem er  að tölvunarfræðinemum eða starfandi sérfræðingum sem eru reiðubúnir að
+    hvetja nemendur þína til dáða gegnum netspjall.
+  congrats_guest_speaker_cta: Finna gestafyrirlesara
+  congrats_third_party_title: Notaðu hina nýju færni þína með þessum öppum og vefsetrum
+  third_party_gradelevel_kto8: 5-14 ára
+  third_party_gradelevel_kto2: 5-8 ára
+  third_party_gradelevel_2to8: 8-14 ára
+  third_party_gradelevel_4to12: 10-18 ára
+  third_party_gradelevel_5to12: 11-18 ára
+  third_party_gradelevel_6plus: 12 ára og eldri
+  third_party_gradelevel_8plus: 14 ára og eldri
+  third_party_platform_all: Fyrir vef, iPad og Android
+  third_party_platform_mobile: Fyrir iPad og Android
+  third_party_platform_web: Fyrir vef
+  third_party_price_varies: 'Verð: Ýmsir valkostir'
+  third_party_price_free: 'Verð: Frítt'
+  third_party_price_299: 'Verð: $2,99/niðurhal'
+  third_party_price_individual: 'Einstaklingsgjald: Frí prófun, síðan $25/mán.'
+  third_party_price_school: 'Verð til skóla: Frí áætlanagerð & Pro á $2.500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
     and game-based programming activities provide an easy introduction to programming,
     and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_tynker_btn_curriculum: Prófaðu námsefni Tynker fyrir byrjendur í lestri
+  third_party_tynker_btn_site: Heimsækja Tynker
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
@@ -793,6 +793,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Rétt
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"

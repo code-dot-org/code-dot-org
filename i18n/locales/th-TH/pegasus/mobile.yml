@@ -623,6 +623,8 @@ th-TH:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Correct
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -646,7 +648,7 @@ th-TH:
   dashboard_faq_k5: คำถามที่พบบ่อย ของ ประถม5 ( K-5 )
   dashboard_announcements: ประกาศ
   dashboard_announce_view_all: ดูทั้งหมด
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: สิ่งที่น่าเรียนรู้ยังมีอีก
   dashboard_announce_hoc: '<b>15 ตุลาคม 2015</b> - Hour of Code กำลังมา &mdash; ทุกคนที่เข้าร่วมจะได้รับบัตรของขวัญสำหรับซื้อสินค้าใน Amazon.com หรือ Microsoft.com เป็นของขวัญขอบคุณ เข้าร่วมห้องเรียนทั่วโลกในระหว่างวันที่ 7-13 ธันวาคม'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'

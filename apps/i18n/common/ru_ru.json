@@ -195,6 +195,7 @@
   "shareWarningsAge": "Пожалуйста укажите ваш возраст ниже и нажмите ОК для продолжения.",
   "shareWarningsMoreInfo": "Больше информации",
   "shareWarningsStoreData": "Данное приложение созданное в Code Studio содержит информацию, которая может быть доступна любому используя эту общую ссылку. Будьте внимательны, если вас просят предоставить личную информацию.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "Показать блоки",
   "showCodeHeader": "Показать код",
   "showGeneratedCode": "Показать код",
@@ -229,6 +230,5 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "При запуске",
-  "workspaceHeaderShort": "Место сбора блоков: ",
-  "showBlock": "Get a block"
+  "workspaceHeaderShort": "Место сбора блоков: "
 }

@@ -184,7 +184,7 @@ Artist.prototype.init = function(config) {
     this.level.images = [{}];
     this.level.images[0].filename = 'background.jpg';
 
-    this.level.images[0].position = [ 0, 0 ];
+    this.level.images[0].position = [0, 0];
     this.level.images[0].scale = 1;
   }
 
@@ -237,6 +237,8 @@ Artist.prototype.init = function(config) {
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    noVisualization: false,
+    isRtl: this.studioApp_.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
     generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: this.studioApp_.init.bind(this.studioApp_, config)

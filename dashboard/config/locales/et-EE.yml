@@ -411,6 +411,8 @@
       Ltd. Kõik õigused kaitstud. Plants vs. Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Kõik õigused kaitstud. The Amazing World of Gumball on
       kaubamärk ja &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Amazoni poolt toetatud
     trademark: "&copy;Code.org,%{current_year}. Code.org&reg;, CODE-i logo ja KoodiTund&reg;
       on Code.org kaubamärgid."
