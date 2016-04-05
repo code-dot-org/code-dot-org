@@ -16,7 +16,7 @@ var SharingWarnings = module.exports = React.createClass({
     handleTooYoung: React.PropTypes.func.isRequired
   },
 
-  handleOk: function() {
+  handleOk: function () {
     if (this.props.is13Plus) {
       this.props.handleClose();
       return;

@@ -45,7 +45,7 @@ DropletAutocompleteParameterTooltipManager.prototype.installTooltipsForEditor_ =
 
   var cursorMovementHandler = this.onCursorMovement_.bind(this, aceEditor);
   aceEditor.commands.on('afterExec', cursorMovementHandler);
-  aceEditor.on('mousedown', function(e) {
+  aceEditor.on('mousedown', function (e) {
     this.getCursorTooltip_().tooltipster('hide');
   }.bind(this));
 };
@@ -147,7 +147,7 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
       });
     });
     editor.completer.overrideCompleter = {
-      getCompletions: function(editor, session, pos, prefix, callback) {
+      getCompletions: function (editor, session, pos, prefix, callback) {
         callback(null, dropdownCompletions);
       }
     };
@@ -199,9 +199,9 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   var chooseAsset = tooltipInfo.parameterInfos[paramInfo.currentParameterIndex].assetTooltip;
   if (chooseAsset) {
     var chooseAssetLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-choose-link > a')[0];
-    dom.addClickTouchEvent(chooseAssetLink, function(event) {
+    dom.addClickTouchEvent(chooseAssetLink, function (event) {
       cursorTooltip.tooltipster('hide');
-      chooseAsset(function(filename) {
+      chooseAsset(function (filename) {
         aceEditor.onTextInput('"' + filename + '"');
       });
       event.stopPropagation();

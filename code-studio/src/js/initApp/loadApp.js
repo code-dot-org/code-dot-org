@@ -36,7 +36,7 @@ module.exports = function (callback) {
   var isViewingStudentAnswer = !!clientState.queryParams('user_id');
 
   if (appOptions.share && !window.navigator.standalone && userAgentParser.isSafari()) {
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
       addToHome.show(true);
     }, false);
   }

@@ -215,39 +215,39 @@ var projects = module.exports = {
   },
 
   // Whether the current level is a project level (i.e. at the /projects url).
-  isProjectLevel: function() {
+  isProjectLevel: function () {
     return (appOptions.level && appOptions.level.isProjectLevel);
   },
 
-  shouldUpdateHeaders: function() {
+  shouldUpdateHeaders: function () {
     return !appOptions.isExternalProjectLevel;
   },
 
-  showProjectHeader: function() {
+  showProjectHeader: function () {
     if (this.shouldUpdateHeaders()) {
       header.showProjectHeader();
     }
   },
 
-  showMinimalProjectHeader: function() {
+  showMinimalProjectHeader: function () {
     if (this.shouldUpdateHeaders()) {
       header.showMinimalProjectHeader();
     }
   },
 
-  showHeaderForProjectBacked: function() {
+  showHeaderForProjectBacked: function () {
     if (this.shouldUpdateHeaders()) {
       header.showHeaderForProjectBacked();
     }
   },
-  setName: function(newName) {
+  setName: function (newName) {
     current = current || {};
     if (newName) {
       current.name = newName;
       this.setTitle(newName);
     }
   },
-  setTitle: function(newName) {
+  setTitle: function (newName) {
     if (newName && appOptions.gameDisplayName) {
       document.title = newName + ' - ' + appOptions.gameDisplayName;
     }
@@ -285,7 +285,7 @@ var projects = module.exports = {
           this.setName('My Project');
         }
 
-        $(window).on(events.appModeChanged, function(event, callback) {
+        $(window).on(events.appModeChanged, function (event, callback) {
           this.save(callback);
         }.bind(this));
 
@@ -328,7 +328,7 @@ var projects = module.exports = {
     // here whether we're an admin, and depend on dashboard getting this right.
     showProjectAdmin();
   },
-  projectChanged: function() {
+  projectChanged: function () {
     hasProjectChanged = true;
   },
   /**
@@ -374,7 +374,7 @@ var projects = module.exports = {
    * Explicitly clear the HTML, circumventing safety measures which prevent it from
    * being accidentally deleted.
    */
-  clearHtml: function() {
+  clearHtml: function () {
     currentSources.html = '';
   },
   /**
@@ -385,7 +385,7 @@ var projects = module.exports = {
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
-  save: function(sourceAndHtml, callback, forceNewVersion) {
+  save: function (sourceAndHtml, callback, forceNewVersion) {
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -487,17 +487,17 @@ var projects = module.exports = {
   /**
    * Renames and saves the project.
    */
-  rename: function(newName, callback) {
+  rename: function (newName, callback) {
     this.setName(newName);
     this.save(callback);
   },
   /**
    * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
    */
-  freeze: function(callback) {
+  freeze: function (callback) {
     current.frozen = true;
     current.hidden = true;
-    this.save(function(data) {
+    this.save(function (data) {
       executeCallback(callback, data);
       redirectEditView();
     });
@@ -506,7 +506,7 @@ var projects = module.exports = {
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
    */
-  copy: function(newName, callback) {
+  copy: function (newName, callback) {
     var srcChannel = current.id;
     var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
     delete current.id;
@@ -523,7 +523,7 @@ var projects = module.exports = {
       return;
     }
     var destChannel = current.id;
-    assets.copyAll(srcChannel, destChannel, function(err) {
+    assets.copyAll(srcChannel, destChannel, function (err) {
       if (err) {
         $('.project_updated_at').text('Error copying files');  // TODO i18n
         return;
@@ -531,7 +531,7 @@ var projects = module.exports = {
       executeCallback(callback);
     });
   },
-  serverSideRemix: function() {
+  serverSideRemix: function () {
     if (current && !current.name) {
       var url = projects.appToProjectUrl();
       if (url === '/projects/algebra_game') {
@@ -550,14 +550,14 @@ var projects = module.exports = {
       redirectToRemix();
     }
   },
-  createNew: function() {
+  createNew: function () {
     projects.save(function () {
       location.href = projects.appToProjectUrl() + '/new';
     });
   },
-  delete: function(callback) {
+  delete: function (callback) {
     var channelId = current.id;
-    channels.delete(channelId, function(err, data) {
+    channels.delete(channelId, function (err, data) {
       executeCallback(callback, data);
     });
   },
@@ -603,7 +603,7 @@ var projects = module.exports = {
       }
     } else if (appOptions.isChannelBacked) {
       isEditing = true;
-      channels.fetch(appOptions.channel, function(err, data) {
+      channels.fetch(appOptions.channel, function (err, data) {
         if (err) {
           deferred.reject();
         } else {
