@@ -18,7 +18,6 @@ class CsrfTest < Minitest::Test
   end
 
   def test_poste_send_message_without_csrf_token
-    puts "WITHOUT TOKEN"
     as_admin_user
     header 'host', 'code.org'
     params = {
