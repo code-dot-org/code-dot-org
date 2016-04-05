@@ -9,7 +9,7 @@ var PlaygroundIO = require('playground-io');
 require("babelify/polyfill"); // required for Promises in IE / Phantom
 
 /** @const {string} */
-var CHROME_APP_ID = 'himpmjbkjeenflliphlaaeggkkanoglo';
+var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
 
 var BoardController = module.exports = function () {
   ChromeSerialPort.extensionId = CHROME_APP_ID;
