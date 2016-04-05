@@ -16,19 +16,19 @@ module.exports = React.createClass({
     isDimmed: React.PropTypes.bool.isRequired
   },
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       isToolboxVisible: true
     };
   },
 
-  onToggleToolbox: function() {
+  onToggleToolbox: function () {
     this.setState({
       isToolboxVisible: !this.state.isToolboxVisible
     });
   },
 
-  render: function() {
+  render: function () {
     return <div id="designWorkspaceWrapper">
       <DesignModeHeaders
         handleManageAssets={this.props.handleManageAssets}

@@ -67,7 +67,7 @@ var ChartEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getDrawChartCode: function() {
+  getDrawChartCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'drawChart("' + id + '", "bar", ' +
@@ -75,7 +75,7 @@ var ChartEvents = React.createClass({
     return code;
   },
 
-  getDrawChartFromRecordsCode: function() {
+  getDrawChartFromRecordsCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'drawChartFromRecords("' + id + '", "bar", "tableName", ' +
@@ -83,11 +83,11 @@ var ChartEvents = React.createClass({
     return code;
   },
 
-  insertDrawChart: function() {
+  insertDrawChart: function () {
     this.props.onInsertEvent(this.getDrawChartCode());
   },
 
-  insertDrawChartFromRecords: function() {
+  insertDrawChartFromRecords: function () {
     this.props.onInsertEvent(this.getDrawChartFromRecordsCode());
   },
 
