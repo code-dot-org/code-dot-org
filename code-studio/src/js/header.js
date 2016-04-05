@@ -196,7 +196,7 @@ function remixProject() {
     // or we're on a blank project page that hasn't been saved for the first time
     // yet. In both cases, copy will create a new project for us.
     var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
-    dashboard.project.copy(newName, function() {
+    dashboard.project.copy(newName, function () {
       $(".project_name").text(newName);
     });
   }

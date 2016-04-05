@@ -212,7 +212,7 @@ function getFirstSetPropertyParam(block, editor) {
       return textToken.value;
     }
     token = token.next;
-  } while(token);
+  } while (token);
   return null;
 }
 
