@@ -230,5 +230,6 @@
   "watchVideo": "Vaata videot",
   "when": "kui",
   "whenRun": "pärast käivitamist",
-  "workspaceHeaderShort": "Tööruum: "
+  "workspaceHeaderShort": "Tööruum: ",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
 }

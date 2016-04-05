@@ -158,8 +158,8 @@ describe("Function.prototype.inherits", function () {
   });
 });
 
-describe("utils", function() {
-  it("can debounce a repeated function call", function() {
+describe("utils", function () {
+  it("can debounce a repeated function call", function () {
     var counter = 0;
     var incrementCounter = function () { counter++; };
     var debounced = _.debounce(incrementCounter, 2000, true);
@@ -171,7 +171,7 @@ describe("utils", function() {
     incrementCounter();
     assert(counter === 2);
   });
-  it("can remove quotes from a string", function() {
+  it("can remove quotes from a string", function () {
     assert(utils.stripQuotes("t'e's't'") === "test");
     assert(utils.stripQuotes('t"e"s"t"') === "test");
     assert(utils.stripQuotes('test') === "test");
