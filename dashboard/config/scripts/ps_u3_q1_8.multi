@@ -1,6 +1,5 @@
 name 'PS U3 Q1-8'
 
-#height 'auto'
 layout 'wrap'
 
 wrong 'drawStar;'
