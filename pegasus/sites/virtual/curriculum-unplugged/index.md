@@ -9,7 +9,7 @@ video_player: true
 
 
 <%
-course = 'Algebra'
+course = 'Unplugged'
 lessons = DB[:cdo_unplugged].where(course_s:course)
 %>
 
