@@ -259,7 +259,7 @@
   "moveDistance100": "100 pixels",
   "moveDistance200": "200 pixels",
   "moveDistance400": "400 pixels",
-  "moveDistancePixels": "pixels",
+  "moveDistancePixels": "pixeles",
   "moveDistanceRandom": "random pixels",
   "moveDistanceTooltip": "Move an actor a specific distance in the specified direction.",
   "moveSprite": "move",

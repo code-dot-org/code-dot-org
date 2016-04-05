@@ -425,6 +425,8 @@
       &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.
       < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon
       Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Zasilany przez Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour
       of Code&reg; są znakami handlowymi Code.org."

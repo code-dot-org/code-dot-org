@@ -1805,6 +1805,10 @@ eu:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Landare igokari baten kontra jotzea ez da batere ideia ona. Mugi zaitez kontu handiz landare igokariak saihestuz eta iritsi zure etxeko segurtasunera.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Egurra baliabide garrantzitsua da. Gauza asko egiten dira egurrarekin. Joan zuhaitzera eta erabili "txikitu blokea" agindua zuhaitza botatzeko.'
       Overworld Chop Trees_instruction: Etxe bat eraiki behar dugu eguzkia ezkutatu aurretik. Etxeek egur asko eskatzen dute. Bota 3 zuhaitzak.
       Overworld Free Play 20x20_instruction: Zorionak! puzle guztiak osatu dituzu! Orain erauzi, eraiki eta sortu zerbait berezia ikasitako guztia erabiliz.
@@ -2005,6 +2009,10 @@ eu:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only

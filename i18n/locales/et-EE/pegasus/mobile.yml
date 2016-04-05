@@ -588,6 +588,8 @@ et-EE:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Õige
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -611,7 +613,7 @@ et-EE:
   dashboard_faq_k5: K-5 korduma kippuvad küsimused
   dashboard_announcements: Teated
   dashboard_announce_view_all: Vaata kõiki
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Lisateave
   dashboard_announce_hoc: '<b>23. november 2015</b> - Kas otsid arvutiteaduse õpetamist armastavat vabatahtlikku, kes aitaks sind KoodiTunni sündmusega? Üle 7000 vabatahtliku soovib inspireerida sinu õpilasi, külastades sinu klassiruumi või kaugvideovestluse teel. Vaata vabatahtlike kaardilt sinu läheduses paiknevate vabatahtlike kontaktandmeid.'
   dashboard_announce_playlab: '<b>4. detsembril 2015</b> - KoodiTund on siin! Proovige 50 õpetust, mis on sobilikud igale vanusele ja igas seadmes. Uus sel nädalal: programmeeri enda lood ja mängud uues keskkonnas Play Lab, Jääaeg ja Gumball.'

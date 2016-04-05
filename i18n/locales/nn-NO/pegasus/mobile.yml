@@ -609,6 +609,8 @@ no-NO:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Riktig
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -632,7 +634,7 @@ no-NO:
   dashboard_faq_k5: K-5 Ofte stilte spørsmål
   dashboard_announcements: Kunngjøringer
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Lær mer
   dashboard_announce_hoc: '<b>9 November 2015</b> - en ny time av koden tutorial er her, med kommende film Star Wars: The Force våkner. Arbeide med Rey å veilede nye droid, BB-8, gjennom et oppdrag. Deretter delta Leia for å opprette og dele dine egne spill i en galakse langt, langt borte.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'

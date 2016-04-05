@@ -17,7 +17,7 @@ var DeleteElementButton = React.createClass({
     };
   },
 
-  handleDeleteInternal: function(event) {
+  handleDeleteInternal: function (event) {
     if (this.props.shouldConfirm) {
       this.setState({confirming: true});
     } else {
@@ -33,7 +33,7 @@ var DeleteElementButton = React.createClass({
     this.setState({confirming: false});
   },
 
-  render: function() {
+  render: function () {
     var buttonStyle = {
       paddingTop: '5px',
       paddingBottom: '5px',

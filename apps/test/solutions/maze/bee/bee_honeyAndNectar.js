@@ -3,8 +3,9 @@ var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');
 
 var REPEAT_REQUIREMENT = {
-  'test': function(block) {
-    return block.type == 'controls_repeat';},
+  'test': function (block) {
+    return block.type == 'controls_repeat';
+  },
   'type': 'controls_repeat',
   'titles': {'TIMES': '???'}
 };
@@ -20,25 +21,25 @@ var levelDef = {
   nectarGoal: 3,
   honeyGoal: 3,
   'map': [
-    [ 0, 0, 0, 0, 0, 1, 1, 1 ],
-    [ 0, 1, 1, 0, 0, 1, 1, 1 ],
-    [ 0, 0, 0, 0, 0, 1, 1, 1 ],
-    [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-    [ 2, 1, 1, 1, 1, 0, 0, 0 ],
-    [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-    [ 0, 0, 1, 1, 0, 0, 0, 0 ],
-    [ 0, 0, 1, 1, 0, 0, 0, 0 ]
+    [0, 0, 0, 0, 0, 1, 1, 1],
+    [0, 1, 1, 0, 0, 1, 1, 1],
+    [0, 0, 0, 0, 0, 1, 1, 1],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [2, 1, 1, 1, 1, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 1, 0, 0, 0, 0],
+    [0, 0, 1, 1, 0, 0, 0, 0]
   ],
   'startDirection': 1, // Direction.EAST,
   'initialDirt': [
-    [ 0, 0,  0,  0, 0, 0, 0, 0 ],
-    [ 0, 0,  0,  0, 0, 0, 0, 0 ],
-    [ 0, 0,  0,  0, 0, 0, 0, 0 ],
-    [ 0, 0,  0,  0, 0, 0, 0, 0 ],
-    [ 0, 3, -99,  0, 0, 0, 0, 0 ],
-    [ 0, 0,  0,  0, 0, 0, 0, 0 ],
-    [ 0, 0,  0,  0, 0, 0, 0, 0 ],
-    [ 0, 0,  0,  0, 0, 0, 0, 0 ]
+    [0, 0,  0,  0, 0, 0, 0, 0],
+    [0, 0,  0,  0, 0, 0, 0, 0],
+    [0, 0,  0,  0, 0, 0, 0, 0],
+    [0, 0,  0,  0, 0, 0, 0, 0],
+    [0, 3, -99,  0, 0, 0, 0, 0],
+    [0, 0,  0,  0, 0, 0, 0, 0],
+    [0, 0,  0,  0, 0, 0, 0, 0],
+    [0, 0,  0,  0, 0, 0, 0, 0]
   ],
   flowerType: 'redWithNectar',
   requiredBlocks: [[REPEAT_REQUIREMENT]]

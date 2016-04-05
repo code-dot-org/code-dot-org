@@ -11,7 +11,7 @@ var utils = require('../utils');
 var LEVELBUILDER_LEVEL = 7;
 
 //TODO: Fix hacky level-number-dependent toolbox.
-var toolbox = function(page, level) {
+var toolbox = function (page, level) {
   return require('./toolbox.xml.ejs')({
     page: page,
     level: level
@@ -19,7 +19,7 @@ var toolbox = function(page, level) {
 };
 
 //TODO: Fix hacky level-number-dependent startBlocks.
-var startBlocks = function(page, level) {
+var startBlocks = function (page, level) {
   return require('./startBlocks.xml.ejs')({
     page: page,
     level: level
@@ -61,19 +61,19 @@ var blocks = {
   SIMPLE_MOVE_DOWN_LENGTH: blockUtils.blockOfType('simple_move_down_length'),
   SIMPLE_MOVE_LEFT_LENGTH: blockUtils.blockOfType('simple_move_left_length'),
   SIMPLE_MOVE_RIGHT_LENGTH: blockUtils.blockOfType('simple_move_right_length'),
-  simpleMoveBlocks: function() {
+  simpleMoveBlocks: function () {
     return this.SIMPLE_MOVE_UP +
       this.SIMPLE_MOVE_DOWN +
       this.SIMPLE_MOVE_LEFT +
       this.SIMPLE_MOVE_RIGHT;
   },
-  simpleJumpBlocks: function() {
+  simpleJumpBlocks: function () {
     return this.SIMPLE_JUMP_UP +
       this.SIMPLE_JUMP_DOWN +
       this.SIMPLE_JUMP_LEFT +
       this.SIMPLE_JUMP_RIGHT;
   },
-  simpleMoveLengthBlocks: function() {
+  simpleMoveLengthBlocks: function () {
     return this.SIMPLE_MOVE_UP_LENGTH +
       this.SIMPLE_MOVE_DOWN_LENGTH +
       this.SIMPLE_MOVE_LEFT_LENGTH +
@@ -130,7 +130,7 @@ var levels = module.exports = {
       [repeat(3)],
       [{
         // allow turn right or left, but show turn right block if they've done neither
-        test: function(block) {
+        test: function (block) {
           return block.type == 'draw_turn_by_constant_restricted';
         },
         type: 'draw_turn_by_constant',
@@ -220,7 +220,7 @@ var levels = module.exports = {
       [repeat(4)],
       [{
         // allow turn right or left, but show turn right block if they've done neither
-        test: function(block) {
+        test: function (block) {
           return block.type == 'draw_turn';
         },
         type: 'draw_turn',
@@ -229,7 +229,7 @@ var levels = module.exports = {
       }],
       [{
         // allow move forward or backward, but show forward block if they've done neither
-        test: function(block) {
+        test: function (block) {
           return block.type == 'draw_move';
         },
         type: 'draw_move',
@@ -614,7 +614,7 @@ var levels = module.exports = {
       [repeat(3)],
       [{
         // allow turn right or left, but show turn right block if they've done neither
-        test: function(block) {
+        test: function (block) {
           return block.type == 'draw_turn_by_constant';
         },
         type: 'draw_turn_by_constant',

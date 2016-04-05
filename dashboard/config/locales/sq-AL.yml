@@ -410,6 +410,8 @@
     art_from_html_old: Zogj të nevrikosur&#8482;&#8482;&amp;&copy; 2009 %{current_year}  Zbavitje
       Rivio Ltd. Të drejtat e rezervuara.<br />Bimë dhe Xombi &#8482;&amp;&copy;%{current_year}
       Artet Elektronike Inc. Të drejtat e rezervuara
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Mundësuar nga Amazon Web Services
     trademark: "&copy;Code.org%{current_year}Code.org&reg; logoja e Kodit dhe Ora
       e Kodit&reg;  janë marka tregtare të Code.org."

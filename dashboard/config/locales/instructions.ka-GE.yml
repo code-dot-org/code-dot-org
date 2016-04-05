@@ -1277,9 +1277,9 @@
         გრადუსიან მობრუნებას ასრულებს.  "
       Course 4 Artist 8_instruction: "დახატეთ ეს მზე ამ კოდის ბლოკის რამდენჯერმე ციკლში
         გატარებით."
-      Course 4 Artist 8a_instruction: "გახსოვთ ეს ფორმა? ახლა აგაწყობინებთ მას ყველანაირი
-        ბლოკების გარეშე.  \\r მინიშნება: 360 გრადუსში ჩატეულია 3 სამკუთხედი... რამდენია
-        360 გაყოფილი 3–ზე?"
+      Course 4 Artist 8a_instruction: |-
+        გახსოვთ ეს ფორმა? ახლა აგაწყობინებთ მას ყველანაირი ბლოკების გარეშე!\r
+        მინიშნება: 360 გრადუსში ჩატეულია 3 სამკუთხედი... რამდენია 360 გაყოფილი 3–ზე?
       Course 4 Artist 9_instruction: "გაიმეორეთ ციკლში ეს დიზაინი 10-ჯერ და არ დაგავიწყდეთ
         ყოველი ფიგურის დახატვის შემდეგ მობრუნება. ესეც მინიშნება, თუ რამდენით უნდა
         მობრუნდეთ: რას უდრის 360 გაყოფილი 10-ზე?"
@@ -2848,6 +2848,10 @@
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: "ქვეწარმავალთან შეჯახება ცუდი იდეაა. ჩუმად
         უნდა შეიპაროთ თქვენს სახლში."
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: ხე ძალიან მნიშვნელოვანი რესურსია. ბევრი რამ
         შედგება მისგან. მიდით ხესთან და გამოიყენეთ "ბლოკის განადგურების" ბრძანება
         მის მოსაჭრელად.
@@ -3076,6 +3080,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: "ეს ღრუბლები მაბნევს! ზოგში არის ყვავილი და
         ზოგში არა. ყოველი ღრუბელი უნდა შევამოწმო, თაფლი კი მხოლოდ ყვავილებიდან მოვკრიბო."
       Quantum Bee_instruction: იისფერ ყვავილებს აქვთ 1 ან 0 ნექტარი, მაგრამ თქვენ

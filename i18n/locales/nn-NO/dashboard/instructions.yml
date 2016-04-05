@@ -1785,6 +1785,10 @@
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Det er ikke bra å møte på en smyger. Beveg deg forsiktig forbi smygere og kom deg trygt hjem.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Tre er en veldig viktig ressurs. Det er mange ting som lages av det. Gå til treet og bruk kommandoen "ødelegg blokk" for å hugge det ned.'
       Overworld Chop Trees_instruction: Vi må bygge et hus før sola går ned. Du trenger masse tre for å bygge et hus. Hogg ned de tre trærne.
       Overworld Free Play 20x20_instruction: Gratulerer! Du har fullført alle oppgavene våre! Nå kan du utvinne, bygge og lage noe unikt ved å bruke alt du har lært.
@@ -1985,6 +1989,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
