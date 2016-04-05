@@ -31,7 +31,7 @@ var VersionRow = React.createClass({
           target="_blank">
           <button><i className="fa fa-eye"></i></button>
         </a>,
-        <button className="btn-info" onClick={this.props.onChoose}>{msg.viewThisVersion()}</button>
+        <button className="btn-info" onClick={this.props.onChoose}>{msg.restoreThisVersion()}</button>
       ];
     }
 
@@ -41,7 +41,7 @@ var VersionRow = React.createClass({
           <p>Saved <time className="versionTimestamp" dateTime={this.props.lastModified.toISOString()}>{this.getLastModifiedTimestamp()}</time></p>
           {this.getLastModifiedTimestamp()}
         </td>
-        <td width="250" style={{textAlign: 'right'}}>
+        <td width="275" style={{textAlign: 'right'}}>
           {button}
         </td>
       </tr>
