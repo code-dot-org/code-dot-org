@@ -524,6 +524,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function (options) {
             msg.levelIncompleteError();
         break;
       case TestResults.LEVEL_INCOMPLETE_FAIL:
+      case TestResults.LOG_CONDITION_FAIL:
         message = options.level.levelIncompleteError ||
             msg.levelIncompleteError();
         break;
@@ -538,6 +539,9 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function (options) {
         break;
       case TestResults.APP_SPECIFIC_FAIL:
         message = options.level.appSpecificFailError;
+        break;
+      case TestResults.GENERIC_LINT_FAIL:
+        message = msg.errorGenericLintError();
         break;
       case TestResults.UNUSED_PARAM:
         message = msg.errorUnusedParam();
