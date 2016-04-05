@@ -18,11 +18,11 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
       post :create, user_email: @user.email, plc_course_id: @plc_course.id
     end
 
-    assert_redirected_to plc_course_view_path
+    assert_redirected_to plc_user_course_enrollments_path
   end
 
   test 'Admins can access course view' do
-    get :course_view
+    get :index
     assert_response :success
   end
 
@@ -31,7 +31,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     teacher = create :teacher
 
     sign_in(teacher)
-    get :course_view
+    get :index
     assert_response :success
   end
 
@@ -40,7 +40,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     student = create :student
 
     sign_in(student)
-    get :course_view
+    get :index
     assert_response :forbidden
   end
 
@@ -48,7 +48,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     sign_out @user
     assert_signed_in_as nil
 
-    get :course_view
+    get :index
     assert_redirected_to_sign_in
   end
 end

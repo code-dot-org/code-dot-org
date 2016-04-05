@@ -1,7 +1,10 @@
 class Plc::UserCourseEnrollmentsController < ApplicationController
   before_filter :create_enrollment, only: :create
-  load_and_authorize_resource except: :course_view
-  authorize_resource only: :course_view
+  load_and_authorize_resource
+
+  def index
+    @user_course_enrollments = @user_course_enrollments.where(user: current_user)
+  end
 
   # GET /plc/user_course_enrollments/new
   def new
@@ -11,14 +14,10 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   # POST /plc/user_course_enrollments.json
   def create
     if @user_course_enrollment.save
-      redirect_to action: :course_view
+      redirect_to action: :index
     else
       redirect_to action: :new
     end
-  end
-
-  def course_view
-    @enrollments = current_user.plc_enrollments
   end
 
   private

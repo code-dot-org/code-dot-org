@@ -3,7 +3,7 @@
 
 %p Hello #{current_user.name}, here is your progress for your courses
 
-- @enrollments.each do |user_course_enrollment|
+- @user_course_enrollments.each do |user_course_enrollment|
   %h2 #{user_course_enrollment.plc_course.name}
   - user_course_enrollment.plc_unit_assignments.each do |enrollment_unit_assignment|
     .outlined_section
