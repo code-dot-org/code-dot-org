@@ -555,13 +555,31 @@ var isTouching = function (p5Inst, target) {
 
             //if the other is a circle I calculate the displacement from here
             //and reverse it
-            if(this.collider instanceof CircleCollider)
-            {
+            if(this.collider instanceof CircleCollider) {
               displacement = other.collider.collide(this.collider).mult(-1);
             }
-            else
+            else {
               displacement = this.collider.collide(other.collider);
+            }
 
+            /*
+             * check for adjacency using overlap method when displacement is 0,0
+             * We do this to ensure isTouching returns true for cases when
+             * bounce, collide would return true and also when overlap would
+             * return true.
+             * NOTE: this.touching will remain all false in the adjacent case,
+             * but the function will return true.
+             */
+            if (displacement.x === 0 && displacement.y === 0) {
+              if(this.collider instanceof CircleCollider) {
+                if (other.collider.overlap(this.collider)) {
+                  result = true;
+                }
+              }
+              else if (this.collider.overlap(other.collider)) {
+                result = true;
+              }
+            }
           }
 
           if(displacement.x !== 0 || displacement.y !== 0)
@@ -578,7 +596,6 @@ var isTouching = function (p5Inst, target) {
 
             result = true;
           }
-
         }//end collider exists
       }//end this != others[i] && !this.removed
 
