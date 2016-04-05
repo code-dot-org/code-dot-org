@@ -32,6 +32,7 @@ var AppView = React.createClass({
     assetUrl: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
+    hideSource: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
@@ -60,7 +61,7 @@ var AppView = React.createClass({
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <CodeWorkspaceContainer
             topMargin={0}
-            hidden={this.props.isShareView}
+            hidden={this.props.hideSource}
             noVisualization={this.props.noVisualization}
             isRtl={this.props.isRtl}
             generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
