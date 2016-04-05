@@ -13,10 +13,6 @@ FAKE_CSRF_TOKEN = 'fake_token'
 class CsrfTest < Minitest::Test
   include Rack::Test::Methods
 
-  def with_role(role)
-    Documents.any_instance.stubs(:dashboard_user_id).returns(role.nil? ? nil : role[:id])
-  end
-
   def app
     Rack::Builder.parse_file(File.absolute_path('../config.ru', __dir__)).first
   end
