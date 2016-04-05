@@ -48,11 +48,19 @@ var VersionHistory = React.createClass({
   },
 
   /**
+   * Called when the server responds to a request to restore a previous version.
+   */
+  onRestoreSuccess: function () {
+    location.reload();
+  },
+
+  /**
    * Called when the user chooses a previous version to restore.
    * @param versionId
    */
   onChooseVersion: function (versionId) {
-    location.search += '&version=' + versionId;
+    // TODO: Use Dave's client api when it's finished.
+    sourcesApi.ajax('PUT', 'main.json/restore?version=' + versionId, this.onRestoreSuccess, this.onAjaxFailure);
 
     // Show the spinner.
     this.setState({showSpinner: true});
@@ -94,6 +102,7 @@ var VersionHistory = React.createClass({
       var rows = this.state.versions.map(function (version) {
         return <VersionRow
           key={version.versionId}
+          versionId={version.versionId}
           lastModified={new Date(version.lastModified)}
           isLatest={version.isLatest}
           onChoose={this.onChooseVersion.bind(this, version.versionId)} />;
