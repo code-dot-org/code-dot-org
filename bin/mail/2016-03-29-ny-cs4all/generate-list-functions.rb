@@ -27,7 +27,7 @@ def query_k5_pd_teachers
   section_ids = query_k5_pd_section_ids
   puts "#{section_ids.count} K5 workshop section Ids loaded."
 
-  k5_pd_teachers = query_dashboard_teachers <<SQL
+  k5_pd_teachers = query_dashboard_teachers <<-SQL
     SELECT DISTINCT culled_users.id, culled_users.email, culled_users.name
     FROM (
       SELECT * FROM users WHERE user_type = 'teacher' AND email like '%@schools.nyc.gov'
@@ -44,7 +44,7 @@ end
 # We already have k5 workshop teachers above. Get ops workshop teachers,
 # combine them, and query the complement (i.e. teachers not in either).
 def query_non_pd_teachers(k5_pd_teachers)
-  ops_pd_teachers = query_dashboard_teachers <<SQL
+  ops_pd_teachers = query_dashboard_teachers <<-SQL
     SELECT DISTINCT culled_users.id, culled_users.email, culled_users.name
     FROM (
       SELECT * FROM users WHERE user_type = 'teacher' AND email LIKE '%@schools.nyc.gov'
@@ -56,7 +56,7 @@ def query_non_pd_teachers(k5_pd_teachers)
   puts "#{ops_pd_teachers.length} @schools.nyc.gov ops-pd teachers."
 
   all_pd_teachers_ids = k5_pd_teachers.merge(ops_pd_teachers).values.map{|teacher| teacher[:id]}
-  non_pd_teachers = query_dashboard_teachers <<SQL
+  non_pd_teachers = query_dashboard_teachers <<-SQL
     SELECT DISTINCT users.email, users.name
     FROM users
     WHERE users.user_type = 'teacher' AND users.email like '%schools.nyc.gov'
