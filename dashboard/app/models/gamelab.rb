@@ -136,7 +136,7 @@ class Gamelab < Blockly
         "visible": null,
 
         // Groups
-        "var group = new Group": null,
+        "var group = createGroup": null,
         "add": null,
         "group.remove": null,
         "clear": null,
@@ -148,6 +148,24 @@ class Gamelab < Blockly
         "group.overlap": null,
         "maxDepth": null,
         "minDepth": null,
+        "setColorEach": null,
+        "setColorRGBEach": null,
+        "setColliderEach": null,
+        "setDepthEach": null,
+        "setHeightEach": null,
+        "setLifetimeEach": null,
+        "setMirrorXEach": null,
+        "setMirrorYEach": null,
+        "setRotateToDirectionEach": null,
+        "setRotationEach": null,
+        "setRotationSpeedEach": null,
+        "setScaleEach": null,
+        "setSpeedEach": null,
+        "setVelocityEach": null,
+        "setVelocityXEach": null,
+        "setVelocityYEach": null,
+        "setVisibleEach": null,
+        "setWidthEach": null,
 
         // Input
         "keyDown": null,

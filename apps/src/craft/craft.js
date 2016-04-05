@@ -334,6 +334,8 @@ Craft.init = function (config) {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    noVisualization: false,
+    isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
     generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: onMount
@@ -472,6 +474,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     gridDimensions: levelConfig.gridWidth && levelConfig.gridHeight ?
         [levelConfig.gridWidth, levelConfig.gridHeight] :
         null,
+    // eslint-disable-next-line no-eval
     verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0] // TODO(bjordan): add to utils
   });
 };
@@ -786,4 +789,3 @@ Craft.replayTextForResult = function (testResultType) {
     return craftMsg.replayButton();
   }
 };
-

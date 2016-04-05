@@ -4,10 +4,11 @@
  * which handles any movement.
  */
 
-var _ = require('../../lodash');
+var Radium = require('radium');
 var color = require('../../color');
+var styleConstants = require('../../styleConstants');
 
-var RESIZER_HEIGHT = 13; // TODO $resize-bar-width from style-constants
+var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 var styles = {
   main: {
@@ -86,9 +87,9 @@ var HeightResizer = React.createClass({
   },
 
   render: function () {
-    var mainStyle = _.assign({}, styles.main, {
-      top: this.props.position
-    });
+    var mainStyle = [styles.main, {
+      top: this.props.position - RESIZER_HEIGHT
+    }];
 
     return (
       <div style={mainStyle}
@@ -101,4 +102,4 @@ var HeightResizer = React.createClass({
   }
 });
 
-module.exports = HeightResizer;
+module.exports = Radium(HeightResizer);

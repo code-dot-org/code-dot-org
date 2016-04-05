@@ -55,6 +55,8 @@ var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
 
+var BoardController = require('../makerlab/BoardController');
+
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
@@ -143,6 +145,7 @@ function loadLevel() {
   Applab.softButtons_ = level.softButtons || {};
   Applab.appWidth = level.appWidth || defaultAppWidth;
   Applab.appHeight = level.appHeight || defaultAppHeight;
+  Applab.makerlabEnabled = level.makerlabEnabled;
   // In share mode we need to reserve some number of pixels for our in-app
   // footer. We do that by making the play space slightly smaller elsewhere.
   // Applab.appHeight represents the height of the entire app (footer + other)
@@ -160,6 +163,10 @@ function loadLevel() {
   // Override scalars.
   for (var key in level.scale) {
     Applab.scale[key] = level.scale[key];
+  }
+
+  if (Applab.makerlabEnabled) {
+    Applab.makerlabController = new BoardController();
   }
 }
 
@@ -227,7 +234,7 @@ function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
 function adjustAppSizeStyles(container) {
   var vizScale = 1;
   // We assume these are listed in this order:
-  var defaultScaleFactors = [ 1.0, 0.875, 0.75, 0.625, 0.5 ];
+  var defaultScaleFactors = [1.0, 0.875, 0.75, 0.625, 0.5];
   var scaleFactors = defaultScaleFactors.slice(0);
   if (vizAppWidth !== Applab.appWidth) {
     vizScale = vizAppWidth / Applab.appWidth;
@@ -247,7 +254,7 @@ function adjustAppSizeStyles(container) {
   // (4) there is no 5th height rule in the array because the 5th rule in the
   // stylesheet has no minimum specified. It just uses the max-height from the
   // 4th item in the array.
-  var defaultHeightRules = [ 600, 550, 500, 450 ];
+  var defaultHeightRules = [600, 550, 500, 450];
   var newHeightRules = defaultHeightRules.slice(0);
   for (var z = 0; z < newHeightRules.length; z++) {
     newHeightRules[z] += container.offsetTop +
@@ -865,8 +872,7 @@ Applab.init = function(config) {
             d.type.toUpperCase() === 'DATE' )) ||
             d.tagName.toUpperCase() === 'TEXTAREA') {
           doPrevent = d.readOnly || d.disabled;
-        }
-        else {
+        } else {
           doPrevent = !d.isContentEditable;
         }
 
@@ -1065,6 +1071,10 @@ Applab.reset = function(first) {
     designMode.resetPropertyTab();
   }
 
+  if (Applab.makerlabController) {
+    Applab.makerlabController.reset();
+  }
+
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
   }
@@ -1234,10 +1244,13 @@ Applab.onReportComplete = function(response) {
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   // TODO: handle editCode JS interpreter
-  try { codegen.evalWith(code, {
-                         studioApp: studioApp,
-                         Applab: apiBlockly,
-                         Globals: Applab.Globals } ); } catch (e) { }
+  try {
+    codegen.evalWith(code, {
+      studioApp: studioApp,
+      Applab: apiBlockly,
+      Globals: Applab.Globals
+    });
+  } catch (e) { }
 };
 
 /**
@@ -1269,7 +1282,7 @@ Applab.execute = function() {
     for (var x = 0; blocks[x]; x++) {
       var block = blocks[x];
       if (block.type === 'when_run') {
-        codeWhenRun = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
+        codeWhenRun = Blockly.Generator.blocksToCode('JavaScript', [block]);
         break;
       }
     }
@@ -1315,6 +1328,16 @@ Applab.execute = function() {
     }
   }
 
+  if (Applab.makerlabController) {
+    Applab.makerlabController
+        .connectAndInitialize(codegen, Applab.JSInterpreter)
+        .then(Applab.beginVisualizationRun);
+  } else {
+    Applab.beginVisualizationRun();
+  }
+};
+
+Applab.beginVisualizationRun = function() {
   // Set focus on the default screen so key events can be handled
   // right from the start without requiring the user to adjust focus.
   Applab.loadDefaultScreen();

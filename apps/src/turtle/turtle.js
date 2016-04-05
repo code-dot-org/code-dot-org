@@ -184,7 +184,7 @@ Artist.prototype.init = function(config) {
     this.level.images = [{}];
     this.level.images[0].filename = 'background.jpg';
 
-    this.level.images[0].position = [ 0, 0 ];
+    this.level.images[0].position = [0, 0];
     this.level.images[0].scale = 1;
   }
 
@@ -195,8 +195,7 @@ Artist.prototype.init = function(config) {
   if (this.skin.id == "anna") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
-  }
-  else if (this.skin.id == "elsa") {
+  } else if (this.skin.id == "elsa") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
     this.decorationAnimationWidth = 85;
@@ -238,6 +237,8 @@ Artist.prototype.init = function(config) {
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    noVisualization: false,
+    isRtl: this.studioApp_.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
     generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: this.studioApp_.init.bind(this.studioApp_, config)
@@ -507,8 +508,7 @@ Artist.prototype.drawTurtle = function() {
   if (sourceX < 0 ||
       sourceY < 0 ||
       sourceX + sourceWidth  -0 > this.avatarImage.width ||
-      sourceY + sourceHeight > this.avatarImage.height)
-  {
+      sourceY + sourceHeight > this.avatarImage.height) {
     if (console && console.log) {
       // TODO(bjordan): ask Brent, starting to flood grunt mochaTest messages,
       // better fix here?
@@ -894,7 +894,7 @@ Artist.prototype.animate = function() {
   if (this.level.editCode &&
       this.JSInterpreter &&
       this.JSInterpreter.initialized()) {
-      
+
     var programDone = false;
     var completedTuple = false;
 

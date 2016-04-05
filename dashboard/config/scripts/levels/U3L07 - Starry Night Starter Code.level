@@ -30,7 +30,8 @@
       "forLoop_i_0_4": null,
       "randomNumber_min_max": null,
       "functionParams_none": null,
-      "callMyFunction": null
+      "callMyFunction": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -54,8 +55,26 @@
     "app_height": "480",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L07-starryNightExample.gif",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false"
-  }
+    "autocomplete_palette_apis_only": "false",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "You are going to use loops and random numbers to generate an image of starry night sky similar to one shown here.  We have given you some starter code to generate the ground and sky (just two giant dots), you will add code to this project to make the stars, grass, and moon.  All of the effects are clever applications of turtle dots, lines, and colors.  To get started, follow the series of steps suggested in the accompanying worksheet. \r\n\r\n<img src=\"https://images.code.org/0f42e475e7600ac33d31bdf5dee70726-image-1459547325746.gif\" style=\"width: 250px\">",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

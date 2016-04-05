@@ -45,4 +45,26 @@ Scenario: Frozen tutorial in Portuguese
   Then element "#prompt" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
   Given I am on "http://learn.code.org/reset_session/lang/en"
   And I wait for 2 seconds
-  
+
+Scenario: HoC tutorial in Arabic (RTL)
+  Given I am on "http://learn.code.org/hoc/15/lang/ar-sa"
+  And I rotate to landscape
+  Then I wait to see a dialog titled "اللغز 15 من 20"
+  Then element ".modal-content p:nth-child(2)" has "ar-sa" text from key "data.level.instructions.maze_2_14"
+  Then element "#runButton" is visible
+  And element "#resetButton" is hidden
+  Then element "#prompt" has "ar-sa" text from key "data.level.instructions.maze_2_14"
+  Given I am on "http://learn.code.org/reset_session/lang/en"
+  And I wait for 2 seconds
+
+Scenario: Frozen tutorial in Arabic (RTL)
+  Given I am on "http://learn.code.org/s/frozen/stage/1/puzzle/2/lang/ar-sa"
+  And I rotate to landscape
+  Then I wait to see a dialog titled "اللغز 2 من 20"
+  Then element ".modal-content p:nth-child(2)" has "ar-sa" text from key "data.instructions.frozen perpendicular_instruction"
+  And I close the dialog
+  Then element "#runButton" is visible
+  And element "#resetButton" is hidden
+  Then element "#prompt" has "ar-sa" text from key "data.instructions.frozen perpendicular_instruction"
+  Given I am on "http://learn.code.org/reset_session/lang/en"
+  And I wait for 2 seconds
