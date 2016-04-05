@@ -27,6 +27,7 @@ var SmallFooter = React.createClass({
       thank_you: React.PropTypes.string.isRequired,
       help_from_html: React.PropTypes.string.isRequired,
       art_from_html: React.PropTypes.string.isRequired,
+      code_from_html: React.PropTypes.string.isRequired,
       powered_by_aws: React.PropTypes.string.isRequired,
       trademark: React.PropTypes.string.isRequired
     }),
@@ -195,6 +196,7 @@ var SmallFooter = React.createClass({
             <EncodedParagraph text={this.props.copyrightStrings.thank_you}/>
             <p>{this.props.copyrightStrings.help_from_html}</p>
             <EncodedParagraph text={this.props.copyrightStrings.art_from_html}/>
+            <EncodedParagraph text={this.props.copyrightStrings.code_from_html}/>
             <p>{this.props.copyrightStrings.powered_by_aws}</p>
             <EncodedParagraph text={this.props.copyrightStrings.trademark}/>
           </div>

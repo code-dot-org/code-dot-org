@@ -161,6 +161,23 @@ module RakeUtils
     RakeUtils.sudo 'npm', 'install', '--quiet', '-g', *args if output.empty?
   end
 
+  def self.install_npm
+    # Temporary workaround to play nice with nvm-managed npm installation.
+    # See discussion of a better approach at https://github.com/code-dot-org/code-dot-org/pull/4946
+    return if RakeUtils.system_('which npm') == 0
+
+    if OS.linux?
+      RakeUtils.system 'sudo apt-get install -y nodejs npm'
+      RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
+      RakeUtils.system 'sudo npm install -g npm@2.9.1'
+      RakeUtils.npm_install_g 'grunt-cli'
+    elsif OS.mac?
+      RakeUtils.system 'brew install node'
+      RakeUtils.system 'npm', 'update', '-g', 'npm'
+      RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+    end
+  end
+
   def self.rake(*args)
     bundle_exec 'rake', *args
   end
@@ -200,5 +217,11 @@ module RakeUtils
   # Returns true if file is different from the committed version in git.
   def self.file_changed_from_git?(file)
     !`git status --porcelain #{file}`.strip.empty?
+  end
+
+  # Whether this is a local or adhoc environment where we should install npm and create
+  # a local database.
+  def self.local_environment?
+    (rack_env?(:development, :test) && !CDO.chef_managed) || rack_env?(:adhoc)
   end
 end

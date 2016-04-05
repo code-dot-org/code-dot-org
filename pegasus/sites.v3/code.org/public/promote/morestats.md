@@ -43,7 +43,5 @@ We are interested in seeing what's happening in computer science education inter
 - [Twice as many Americans](http://changetheequation.org/blog/hidden-half) use computing in their jobs than previously reported, and half of those are in non-STEM fields. Outside of STEM fields, 40% of those doing complex computing work are [women](http://changetheequation.org/blog/grid-uncounted-women-computing). 
 - Change the Equation has a [summary](http://changetheequation.org/blog/talent-hidden-plain-sight-addressing-gaps-computer-science) of untapped minority talent in computing.
 - [Americans believe](http://www.prnewswire.com/news-releases/horizon-media-study-reveals-americans-prioritize-stem-subjects-over-the-arts-science-is-cool-coding-is-new-literacy-300154137.html) computer science is cool and one of the most important subjects of study in school. 
+- For each new high-tech job in a city, five jobs outside of tech are [ultimately created](http://eml.berkeley.edu//~moretti/book.htm).
 
-
-## Master slide deck 
-Coming soon!

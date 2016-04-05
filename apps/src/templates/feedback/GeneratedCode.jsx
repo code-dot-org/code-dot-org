@@ -1,7 +1,7 @@
 var msg = require('../../locale');
 
 var GeneratedCode = React.createClass({
-  
+
   propTypes: {
     message: React.PropTypes.string.isRequired,
     code: React.PropTypes.string.isRequired,

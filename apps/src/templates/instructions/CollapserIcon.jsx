@@ -1,5 +1,6 @@
 'use strict';
 
+var Radium = require('radium');
 var _ = require('../../lodash');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
@@ -12,28 +13,29 @@ var styles = {
     margin: 0,
     lineHeight: styleConstants['workspace-headers-height'] + 'px',
     fontSize: 18,
-    // get hover behavior from CollapserIcon_showHideButton
+    ':hover': {
+      cursor: 'pointer',
+      color: color.white
+    }
   },
 };
 
 /**
  * Simple icon that either points up or down, and supports onClick
  */
-var CollapserIcon = React.createClass({
-  propTypes: {
-    onClick: React.PropTypes.func.isRequired,
-    collapsed: React.PropTypes.bool.isRequired
-  },
+var CollapserIcon = function (props) {
+  var iconClass = props.collapsed ? 'fa-chevron-circle-up' : 'fa-chevron-circle-down';
 
-  render: function () {
-    var iconClass = this.props.collapsed ? 'fa-chevron-circle-up' :
-      'fa-chevron-circle-down';
+  return (
+    <i style={styles.showHideButton}
+        onClick={props.onClick}
+        className={iconClass + " fa"}/>
+  );
+};
 
-    return (
-      <i style={styles.showHideButton}
-          onClick={this.props.onClick}
-          className={iconClass + " fa CollapserIcon_showHideButton"}/>
-    );
-  }
-});
-module.exports = CollapserIcon;
+CollapserIcon.propTypes = {
+  onClick: React.PropTypes.func.isRequired,
+  collapsed: React.PropTypes.bool.isRequired
+};
+
+module.exports = Radium(CollapserIcon);

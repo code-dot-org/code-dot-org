@@ -3,7 +3,7 @@ var rowStyle = require('./rowStyle');
 var elementUtils = require('./elementUtils');
 
 var DefaultScreenButtonPropertyRow = React.createClass({
-  handleMakeDefault: function(event) {
+  handleMakeDefault: function (event) {
     this.props.handleChange(true);
   },
 
@@ -22,7 +22,7 @@ var DefaultScreenButtonPropertyRow = React.createClass({
       backgroundColor: '#0aa',
       color: color.white
     });
-    
+
     return (
       <div style={{marginLeft: 15}}>
         <button

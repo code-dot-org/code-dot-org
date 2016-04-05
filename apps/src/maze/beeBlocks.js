@@ -19,7 +19,7 @@ var TOOLTIPS = {
 };
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -75,7 +75,7 @@ exports.install = function(blockly, blockInstallOptions) {
 function addIfOnlyFlower(blockly, generator) {
   blockly.Blocks.bee_ifOnlyFlower = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(196, 1.0, 0.79);
       this.appendDummyInput()
           .appendTitle(msg.ifCode());
@@ -92,7 +92,7 @@ function addIfOnlyFlower(blockly, generator) {
 
   // EXAMPLE:
   // if (Maze.atFlower()) { code }
-  generator.bee_ifOnlyFlower = function() {
+  generator.bee_ifOnlyFlower = function () {
     // Generate JavaScript for 'if' conditional if we're at a flower
     var argument = 'Maze.atFlower' + '(\'block_id_' + this.id + '\')';
     var branch = generator.statementToCode(this, 'DO');
@@ -107,7 +107,7 @@ function addIfOnlyFlower(blockly, generator) {
 function addIfFlowerHive(blockly, generator) {
   blockly.Blocks.bee_ifFlower = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       var LOCATIONS = [
         [msg.atFlower(), 'atFlower'],
         [msg.atHoneycomb(), 'atHoneycomb']
@@ -130,7 +130,7 @@ function addIfFlowerHive(blockly, generator) {
   // EXAMPLES:
   // if (Maze.atFlower()) { code }
   // if (Maze.atHoneycomb()) { code }
-  generator.bee_ifFlower = function() {
+  generator.bee_ifFlower = function () {
     // Generate JavaScript for 'if' conditional if we're at a flower/hive
     var argument = 'Maze.' + this.getTitleValue('LOC') +
         '(\'block_id_' + this.id + '\')';
@@ -146,7 +146,7 @@ function addIfFlowerHive(blockly, generator) {
 function addIfElseFlowerHive(blockly, generator) {
   blockly.Blocks.bee_ifElseFlower = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       var LOCATIONS = [
         [msg.atFlower(), 'atFlower'],
         [msg.atHoneycomb(), 'atHoneycomb']
@@ -171,7 +171,7 @@ function addIfElseFlowerHive(blockly, generator) {
   // EXAMPLES:
   // if (Maze.atFlower()) { code } else { morecode }
   // if (Maze.atHoneycomb()) { code } else { morecode }
-  generator.bee_ifElseFlower = function() {
+  generator.bee_ifElseFlower = function () {
     // Generate JavaScript for 'if' conditional if we're at a flower/hive
     var argument = 'Maze.' + this.getTitleValue('LOC') +
         '(\'block_id_' + this.id + '\')';
@@ -186,7 +186,7 @@ function addIfElseFlowerHive(blockly, generator) {
 function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
   blockly.Blocks[name] = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       var self = this;
 
       var conditionalMsg;
@@ -228,7 +228,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
 
-      this.setTooltip(function() {
+      this.setTooltip(function () {
         var op = self.getTitleValue('OP');
         return TOOLTIPS[op];
       });
@@ -237,7 +237,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
 
   // if (Maze.nectarCollected() > 0) { code }
   // if (Maze.honeyCreated() == 1) { code }
-  generator[name] = function() {
+  generator[name] = function () {
     // Generate JavaScript for 'if' conditional if we're at a flower/hive
     var argument1 = 'Maze.' + this.getTitleValue('ARG1') +
         '(\'block_id_' + this.id + '\')';

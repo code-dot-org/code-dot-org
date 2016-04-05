@@ -167,7 +167,7 @@ describe('getText/setText commands', function () {
 
       it('does add leading newline for leading empty div', function () {
         element.innerHTML = '<div><br></div><div>text</div><div>with</div><div>leading empty div</div>';
-        assert.equal(getInnerText(element), '\n\ntext\nwith\nleading empty div');
+        assert.equal(getInnerText(element), '\ntext\nwith\nleading empty div');
       });
 
       it('Unescapes < and >', function () {
@@ -252,6 +252,10 @@ describe('getText/setText commands', function () {
 
       it('preserves empty newlines', function () {
         roundTripTest('text\n\nwith\n\n\nempty newlines');
+      });
+
+      it('preserves single leading newline', function () {
+        roundTripTest('\ntext after newline');
       });
 
       it('preserves leading and trailing newlines', function () {
@@ -404,12 +408,12 @@ describe('startSharedAppAfterWarnings', function () {
   });
 });
 
-describe('RecordListener', function() {
-  describe('TableHandler', function() {
+describe('RecordListener', function () {
+  describe('TableHandler', function () {
     var TableHandler = RecordListener.__TestInterface.TableHandler;
     var records, oldIdToJsonMap, newIdToJsonMap, events, callback;
 
-    beforeEach (function() {
+    beforeEach (function () {
       records = [];
       oldIdToJsonMap = {};
       newIdToJsonMap = {};
@@ -436,7 +440,7 @@ describe('RecordListener', function() {
       newIdToJsonMap[record.id] = JSON.stringify(record);
     }
 
-    it('reports "create" events', function() {
+    it('reports "create" events', function () {
       var alice = createRecord(1, 'Alice', 7);
       addNewRecord(alice);
 
@@ -450,7 +454,7 @@ describe('RecordListener', function() {
       assert.equal(actualEventType, 'create', 'Event has correct type');
     });
 
-    it('reports "update" events', function() {
+    it('reports "update" events', function () {
       var alice = createRecord(1, 'Alice', 7);
       var bob = createRecord(1, 'Bob', 8);
       addOldRecord(alice);
@@ -466,7 +470,7 @@ describe('RecordListener', function() {
       assert.equal(actualEventType, 'update', 'Event has correct type');
     });
 
-    it('reports "delete" events', function() {
+    it('reports "delete" events', function () {
       var bob = createRecord(1, 'Bob', 8);
       addOldRecord(bob);
 
@@ -480,7 +484,7 @@ describe('RecordListener', function() {
       assert.equal(actualEventType, 'delete', 'Event has correct type');
     });
 
-    it('reports multiple events', function() {
+    it('reports multiple events', function () {
       var alice = createRecord(1, 'Alice', 7);
       var bob = createRecord(2, 'Bob', 8);
       var charlie = createRecord(3, 'Charlie', 9);
