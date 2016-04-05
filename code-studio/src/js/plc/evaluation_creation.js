@@ -23,7 +23,7 @@ $(window).load(function () {
   });
 
   function handleNewQuestionName() {
-    $('#newQuestionsList').val(JSON.stringify($('.new_question_row .new_question_name').map(function() {
+    $('#newQuestionsList').val(JSON.stringify($('.new_question_row .new_question_name').map(function () {
       return $(this).val();
     }).get()));
 

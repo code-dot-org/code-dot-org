@@ -38,7 +38,7 @@ reporting.getLastServerResponse = function () {
   return lastServerResponse;
 };
 
-reporting.sendReport = function(report) {
+reporting.sendReport = function (report) {
   // jQuery can do this implicitly, but when url-encoding it, jQuery calls a method that
   // shows the result dialog immediately
   var queryItems = [];
@@ -63,7 +63,7 @@ reporting.sendReport = function(report) {
       timeout: 15000,
       data: queryString,
       dataType: 'json',
-      beforeSend: function(xhr) {
+      beforeSend: function (xhr) {
         xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
       },
       success: function (response) {
@@ -93,7 +93,7 @@ reporting.sendReport = function(report) {
 
 };
 
-reporting.cancelReport = function() {
+reporting.cancelReport = function () {
   if (lastAjaxRequest) {
     lastAjaxRequest.abort();
   }
