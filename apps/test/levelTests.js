@@ -78,12 +78,12 @@ function loadSource(src) {
   return deferred;
 }
 
-describe('Level tests', function() {
+describe('Level tests', function () {
   var studioApp;
   var originalRender;
   var clock, tickInterval;
 
-  before(function(done) {
+  before(function (done) {
     this.timeout(15000);
 
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
@@ -171,7 +171,7 @@ describe('Level tests', function() {
 });
 
 // Loads a test collection at path and runs all the tests specified in it.
-function runTestCollection (item) {
+function runTestCollection(item) {
   var runLevelTest = require('./util/runLevelTest');
   // Append back the .js so that we can distinguish 2_1.js from 2_10.js when grepping
   var path = item.path + '.js';

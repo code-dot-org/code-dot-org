@@ -1,13 +1,13 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   'use strict';
 
   var path = require('path');
   var MessageFormat = require('messageformat');
   var EOL = require('os').EOL;
 
-  grunt.registerMultiTask('messages', 'Compile messages!', function() {
-    this.files.forEach(function(filePair) {
-      filePair.src.forEach(function(src) {
+  grunt.registerMultiTask('messages', 'Compile messages!', function () {
+    this.files.forEach(function (filePair) {
+      filePair.src.forEach(function (src) {
         var locale = path.basename(src, '.json');
         var namespace = path.basename(filePair.dest).split('.js')[0];
         try {
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
           grunt.file.write(filePair.dest, formatted);
         } catch (e) {
           var errorMsg = "Error processing localization file " + src + ": " + e;
-          if(grunt.option('force')) {
+          if (grunt.option('force')) {
             grunt.log.warn(errorMsg);
           } else {
             throw new Error(errorMsg);
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       mf = new MessageFormat(locale, false, namespace);
     } catch (e) {
       // Fallback to en if locale is not found
-      if(locale != 'en') {
+      if (locale != 'en') {
         return process('en', namespace, json);
       } else {
         throw e;

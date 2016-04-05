@@ -29,6 +29,7 @@ module.exports = {
     "curly": "error",
     "dot-location": ["error", "property"],
     "eol-last": "error",
+    "keyword-spacing": "error",
     "no-array-constructor": "error",
     "no-console": "off",
     "no-empty": "off",
@@ -41,6 +42,10 @@ module.exports = {
     "no-unused-vars": "off",
     "no-with": "error",
     "object-curly-spacing": "off",
-    "semi": "error"
+    "semi": "error",
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never"
+    }]
   }
 };

@@ -174,9 +174,9 @@ class GSheetToCsv
           # Determine the set of columns to be output.
           columns = row.headers
           if !@include_columns.empty?
-            columns = columns & @include_columns
+            columns &= @include_columns
           end
-          columns = columns - @exclude_columns
+          columns -= @exclude_columns
           # Output the columns.
           csv << columns
         end

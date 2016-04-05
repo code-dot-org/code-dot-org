@@ -64,14 +64,14 @@ window.onerror = function (msg, url, ln) {
 
 // Prevent escape from canceling page loads.
 var KEY_ESCAPE = 27;
-$(document).keydown(function(e) {
+$(document).keydown(function (e) {
   if (e.keyCode === KEY_ESCAPE) {
     e.stopPropagation();
     e.preventDefault();
   }
 });
 
-setTimeout(function() {
+setTimeout(function () {
   $('#codeApp .slow_load').show();
 }, 10000);
 
