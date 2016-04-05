@@ -54,6 +54,7 @@ if node['cdo-apps']['daemon']
   cronjob h: 4, m: 40, cmd: "#{bin}/cron/funometer"
   cronjob h: 6, m: 30, cmd: "#{bin}/cron/admin_progress"
   cronjob h: 7, m: 10, cmd: "#{bin}/cron/retention_stats"
+  cronjob m: '*/1',    cmd: "#{root}/aws/ci_build", notify: 'dev+build@code.org'
 end
 
 # cronjobs that run on all instances in all environments go here:
