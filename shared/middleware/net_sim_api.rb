@@ -95,7 +95,7 @@ class NetSimApi < Sinatra::Base
   get %r{/v3/netsim/([^/]+)$} do |shard_id|
     dont_cache
     content_type :json
-    table_map = parse_table_map_from_query_string(CGI::unescape(request.query_string))
+    table_map = parse_table_map_from_query_string(CGI.unescape(request.query_string))
     RedisTable.get_tables(get_redis_client, shard_id, table_map).to_json
   end
 
@@ -128,7 +128,7 @@ class NetSimApi < Sinatra::Base
   delete %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     content_type :json
-    ids = parse_ids_from_query_string(CGI::unescape(request.query_string))
+    ids = parse_ids_from_query_string(CGI.unescape(request.query_string))
     delete_many(shard_id, table_name, ids)
     no_content
   end
@@ -456,7 +456,7 @@ end
 # @private
 def parse_table_map_from_query_string(query_string)
   {}.tap do |result|
-    CGI::parse(query_string)['t[]'].each do |tv|
+    CGI.parse(query_string)['t[]'].each do |tv|
       table, min_id = tv.split('@')
       result[table] = min_id.to_i  # defaults to 0 for invalid ints.
     end
@@ -468,7 +468,7 @@ end
 # are simply omitted from the result.
 def parse_ids_from_query_string(query_string)
   [].tap do |ids|
-    CGI::parse(query_string)['id[]'].each do |id|
+    CGI.parse(query_string)['id[]'].each do |id|
       ids << Integer(id, 10) rescue ArgumentError
     end
   end

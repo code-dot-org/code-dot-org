@@ -70,7 +70,7 @@ module FakeDashboard
     @@fake_db = Sequel.sqlite(DATABASE_FILENAME)
 
     ActiveRecord::Migration.suppress_messages do
-      ActiveRecord::Base::establish_connection(
+      ActiveRecord::Base.establish_connection(
           adapter: 'sqlite3',
           database: DATABASE_FILENAME
       )
