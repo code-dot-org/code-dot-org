@@ -42,16 +42,16 @@ end
 
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
-  steps %q{
+  steps <<-STEPS
     When I press "x-close"
     And I wait for 0.75 seconds
-  }
+  STEPS
 end
 
 When /^I close the React alert$/ do
-  steps %q{
+  steps <<-STEPS
     When I click selector ".react-alert button"
-  }
+  STEPS
 end
 
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
@@ -59,7 +59,7 @@ When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
 end
 
 When /^I reset the puzzle to the starting version$/ do
-  steps %q{
+  steps <<-STEPS
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
@@ -70,7 +70,7 @@ When /^I reset the puzzle to the starting version$/ do
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
     And I wait until element "#showVersionsModal" is gone
-  }
+  STEPS
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
