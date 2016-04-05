@@ -86,6 +86,12 @@
     levelbuilder.initializeCodeMirror('log_conditions', 'javascript');
 
 .field
+  = f.label :fail_on_lint_errors
+  %p
+    Lint warnings and errors (in the editor's gutter area) will prevent the student from continuing when the Finish button is pressed.
+  = boolean_check_box f, :fail_on_lint_errors
+
+.field
   = f.label 'Table Data'
   Step 1: Create a project at studio.code.org/p/applab and edit the data for a table in the data browser. Step 2: Copy the data via the debug area at the bottom of the table. Step 3: Paste the data below in the format { "tablename": <paste> }
   %pre
