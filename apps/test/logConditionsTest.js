@@ -30,7 +30,7 @@ describe('logConditions: getResultsFromLog', function () {
         [{ entries: ['function3'], matchType: 'exact', minTimes: 1, message: 'test-2' }],
         ['function1:0', 'function2:0']);
 
-    assert.deepEqual(results, { testResult: TestResults.LEVEL_INCOMPLETE_FAIL, message: 'test-2' });
+    assert.deepEqual(results, { testResult: TestResults.LOG_CONDITION_FAIL, message: 'test-2' });
   });
 
   it ('returns ALL_PASS with multi-item logConditions', function () {
@@ -52,7 +52,7 @@ describe('logConditions: getResultsFromLog', function () {
         ],
         ['function1:0', 'function2:0']);
 
-    assert.deepEqual(results, { testResult: TestResults.LEVEL_INCOMPLETE_FAIL, message: 'test-6' });
+    assert.deepEqual(results, { testResult: TestResults.LOG_CONDITION_FAIL, message: 'test-6' });
   });
 
   it ('returns ALL_PASS with two item exact logCondition', function () {
@@ -72,7 +72,7 @@ describe('logConditions: getResultsFromLog', function () {
         ],
         ['function1:0', 'function2:0']);
 
-    assert.deepEqual(results, { testResult: TestResults.LEVEL_INCOMPLETE_FAIL, message: 'test-8' });
+    assert.deepEqual(results, { testResult: TestResults.LOG_CONDITION_FAIL, message: 'test-8' });
   });
 
   it ('returns ALL_PASS with two item inexact logCondition', function () {
@@ -92,7 +92,7 @@ describe('logConditions: getResultsFromLog', function () {
         ],
         ['function1:0', 'other:0', 'function2:0', 'function2:0', 'function1:0']);
 
-    assert.deepEqual(results, { testResult: TestResults.LEVEL_INCOMPLETE_FAIL, message: 'test-10' });
+    assert.deepEqual(results, { testResult: TestResults.LOG_CONDITION_FAIL, message: 'test-10' });
   });
 
   it ('returns ALL_PASS with two item inexact logCondition not exceeding maxTimes', function () {
@@ -112,7 +112,7 @@ describe('logConditions: getResultsFromLog', function () {
         ],
         ['function1:0', 'other:0', 'function2:0', 'function1:0', 'function2:0', 'other:0', 'function1:0', 'function2:0']);
 
-    assert.deepEqual(results, { testResult: TestResults.LEVEL_INCOMPLETE_FAIL, message: 'test-12' });
+    assert.deepEqual(results, { testResult: TestResults.LOG_CONDITION_FAIL, message: 'test-12' });
   });
 
   it ('returns ALL_PASS with sufficient arguments logCondition', function () {
@@ -132,7 +132,7 @@ describe('logConditions: getResultsFromLog', function () {
         ],
         ['function1:0', 'other:1', 'function2:0', 'function1:0', 'function2:0', 'other:1', 'function1:0', 'function2:0']);
 
-    assert.deepEqual(results, { testResult: TestResults.LEVEL_INCOMPLETE_FAIL, message: 'test-14' });
+    assert.deepEqual(results, { testResult: TestResults.LOG_CONDITION_FAIL, message: 'test-14' });
   });
 
 });
