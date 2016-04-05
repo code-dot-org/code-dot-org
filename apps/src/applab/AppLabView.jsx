@@ -11,6 +11,7 @@ var TopInstructions = require('../templates/instructions/TopInstructions.jsx');
 var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer.jsx');
 var utils = require('../utils');
 var styleConstants = require('../styleConstants');
+var Radium = require('radium');
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 
@@ -77,31 +78,35 @@ var AppLabView = React.createClass({
     // TODO - there are a small set of levels that have instructions but not markdownInstructions
     //   (that are also used in scripts). should convert these to have markdown instructions
     return (
-      <ConnectedStudioAppWrapper>
-        <div id="visualizationColumn">
-          {playSpaceHeader}
-          <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
-        </div>
-        <ProtectedStatefulDiv
-            id="visualizationResizeBar"
-            className="fa fa-ellipsis-v" />
-        {this.props.instructionsInTopPane && <TopInstructions
-          isEmbedView={this.props.isEmbedView}
-          puzzleNumber={this.props.puzzleNumber}
-          stageTotal={this.props.stageTotal}
-          height={topPaneHeight}
-          markdown={this.props.instructionsMarkdown}
-          collapsed={this.props.instructionsCollapsed}
-          onToggleCollapsed={this.props.toggleInstructionsCollapsed}
-          onChangeHeight={this.props.setInstructionsHeight}/>
-        }
-        <CodeWorkspaceContainer
-            topMargin={topPaneHeight}
-            isRtl={false}
-            noVisualization={false}
-            generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
-            onSizeChange={utils.fireResizeEvent}/>
-      </ConnectedStudioAppWrapper>
+      <Radium.StyleRoot>
+        <ConnectedStudioAppWrapper>
+          <div id="visualizationColumn">
+            {playSpaceHeader}
+            <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
+          </div>
+          <ProtectedStatefulDiv
+              id="visualizationResizeBar"
+              className="fa fa-ellipsis-v" />
+          {this.props.instructionsInTopPane && <TopInstructions
+            isEmbedView={this.props.isEmbedView}
+            puzzleNumber={this.props.puzzleNumber}
+            stageTotal={this.props.stageTotal}
+            height={topPaneHeight}
+            markdown={this.props.instructionsMarkdown}
+            collapsed={this.props.instructionsCollapsed}
+            onToggleCollapsed={this.props.toggleInstructionsCollapsed}
+            onChangeHeight={this.props.setInstructionsHeight}/>
+          }
+          <CodeWorkspaceContainer
+              topMargin={topPaneHeight}
+              isRtl={false}
+              noVisualization={false}
+              hidden={this.props.isShareView}
+              visualizationResizesOnHeight={true}
+              generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
+              onSizeChange={utils.fireResizeEvent}/>
+        </ConnectedStudioAppWrapper>
+      </Radium.StyleRoot>
     );
   }
 });
@@ -113,6 +118,7 @@ module.exports = connect(function propsFromStore(state) {
     instructionsCollapsed: state.instructions.collapsed || !state.level.instructionsInTopPane,
     instructionsHeight: state.instructions.height,
     isEmbedView: state.level.isEmbedView,
+    isShareView: state.level.isShareView,
     puzzleNumber: state.level.puzzleNumber,
     stageTotal: state.level.stageTotal
   };
@@ -126,4 +132,4 @@ module.exports = connect(function propsFromStore(state) {
     }
   };
 }
-)(AppLabView);
+)(Radium(AppLabView));

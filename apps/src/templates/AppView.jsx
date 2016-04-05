@@ -4,25 +4,7 @@ var _ = require('../lodash');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
 var StudioAppWrapper = require('./StudioAppWrapper.jsx');
 var CodeWorkspaceContainer = require('./CodeWorkspaceContainer.jsx');
-
-var styles = {
-  codeWorkspace: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    // left is controlled by CSS rules
-    bottom: 0,
-    marginLeft: 15,
-    border: '1px solid #ddd',
-    overflow: 'hidden',
-  },
-  codeWorkspaceRTL: {
-    // right is controlled by CSS rules
-    left: 0,
-    marginRight: 15,
-    marginLeft: 0
-  }
-};
+var Radium = require('radium');
 
 /**
  * Top-level React wrapper for our standard blockly apps.
@@ -45,28 +27,27 @@ var AppView = React.createClass({
   },
 
   render: function () {
-    var isRTL = !!document.querySelector('html[dir="rtl"]');
-
-    var codeWorkspaceStyle = _.assign({}, styles.codeWorkspace,
-      isRTL && styles.codeWorkspaceRTL);
     return (
-      <StudioAppWrapper
-          assetUrl={this.props.assetUrl}
-          isEmbedView={this.props.isEmbedView}
-          isShareView={this.props.isShareView}>
-        <div id="visualizationColumn">
-          <ProtectedStatefulDiv
-            contentFunction={this.props.generateVisualizationColumnHtml} />
-        </div>
-        <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <CodeWorkspaceContainer
-            topMargin={0}
-            hidden={this.props.hideSource}
-            noVisualization={this.props.noVisualization}
-            isRtl={this.props.isRtl}
-            generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
-      </StudioAppWrapper>
+      <Radium.StyleRoot>
+        <StudioAppWrapper
+            assetUrl={this.props.assetUrl}
+            isEmbedView={this.props.isEmbedView}
+            isShareView={this.props.isShareView}>
+          <div id="visualizationColumn">
+            <ProtectedStatefulDiv
+              contentFunction={this.props.generateVisualizationColumnHtml} />
+          </div>
+          <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
+          {/* TODO - the legacy /edit page isShareView is true but we dont want it to be hidden*/}
+          <CodeWorkspaceContainer
+              topMargin={0}
+              hidden={this.props.hideSource}
+              noVisualization={this.props.noVisualization}
+              isRtl={this.props.isRtl}
+              generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
+        </StudioAppWrapper>
+      </Radium.StyleRoot>
     );
   }
 });
-module.exports = AppView;
+module.exports = Radium(AppView);
