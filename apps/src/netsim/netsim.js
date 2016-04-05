@@ -160,7 +160,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
  */
-NetSim.prototype.init = function(config) {
+NetSim.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("NetSim requires a StudioApp");
   }
@@ -994,7 +994,7 @@ var netsimDebouncedResizeFooter = _.debounce(function () {
  * Should be bound against StudioApp instance.
  * @private
  */
-NetSim.onResizeOverride_ = function() {
+NetSim.onResizeOverride_ = function () {
   var div = document.getElementById('appcontainer');
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);

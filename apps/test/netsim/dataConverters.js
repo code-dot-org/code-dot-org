@@ -207,7 +207,7 @@ describe("DataConverters", function () {
     });
   });
 
-  describe("formatBinary", function() {
+  describe("formatBinary", function () {
     var formatBinary = DataConverters.formatBinary;
 
     it("is identity for empty string", function () {
@@ -251,7 +251,7 @@ describe("DataConverters", function () {
     });
   });
 
-  describe("formatHex", function() {
+  describe("formatHex", function () {
     var formatHex = DataConverters.formatHex;
 
     it("is identity for empty string", function () {
@@ -759,7 +759,7 @@ describe("DataConverters", function () {
       assert.notEqual(longerb64, binaryToBase64('1010110100000001').string);
     });
 
-    it("saves the original string length, even when padding", function() {
+    it("saves the original string length, even when padding", function () {
         var binaryString = "1";
         var binaryStringLen = binaryString.length;
         var b64 = binaryToBase64(binaryString);
@@ -769,16 +769,16 @@ describe("DataConverters", function () {
             b64 = binaryToBase64(binaryString);
             assert.notEqual(b64.len, binaryStringLen);
             binaryStringLen = binaryString.length;
-        } while(binaryString.length <= 32);
+        } while (binaryString.length <= 32);
     });
 
-    it("converts reversably to a base64 value", function() {
+    it("converts reversably to a base64 value", function () {
       var binaryString = '10101110101010101010101101011011110100110';
       var base64 = binaryToBase64(binaryString);
       assert.equal(binaryString, base64ToBinary(base64.string, base64.len));
     });
 
-    it("converts uniquely to a base64 (string, length) pair", function() {
+    it("converts uniquely to a base64 (string, length) pair", function () {
       var base64Values = [
         '0',
         '1',
@@ -941,7 +941,7 @@ describe("DataConverters", function () {
     });
   });
 
-  describe("formatBinaryForAddressHeader", function() {
+  describe("formatBinaryForAddressHeader", function () {
     var formatBinaryForAddressHeader = DataConverters.formatBinaryForAddressHeader;
 
     it("is identity for empty string", function () {

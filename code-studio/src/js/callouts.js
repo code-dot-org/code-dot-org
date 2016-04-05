@@ -59,7 +59,7 @@ module.exports = function createCallouts(callouts) {
   });
 
   $.fn.qtip.zindex = 500;
-  callouts.forEach(function(callout) {
+  callouts.forEach(function (callout) {
     var selector = callout.element_id; // jquery selector.
     if ($(selector).length === 0 && !callout.on) {
       return;

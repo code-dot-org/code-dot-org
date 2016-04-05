@@ -255,7 +255,7 @@ StudioApp.prototype.localeIsEnglish = function () {
  * Common startup tasks for all apps. Happens after configure.
  * @param {AppOptionsConfig}
  */
-StudioApp.prototype.init = function(config) {
+StudioApp.prototype.init = function (config) {
   if (!config) {
     config = {};
   }
@@ -331,7 +331,7 @@ StudioApp.prototype.init = function(config) {
 
   var showCode = document.getElementById('show-code-header');
   if (showCode && this.enableShowCode) {
-    dom.addClickTouchEvent(showCode, _.bind(function() {
+    dom.addClickTouchEvent(showCode, _.bind(function () {
       if (this.editCode) {
         var result;
         var nonDropletError = false;
@@ -381,9 +381,9 @@ StudioApp.prototype.init = function(config) {
 
   // In embed mode, the display scales down when the width of the
   // visualizationColumn goes below the min width
-  if(config.embed && config.centerEmbedded) {
+  if (config.embed && config.centerEmbedded) {
     var resized = false;
-    var resize = function() {
+    var resize = function () {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
@@ -397,7 +397,7 @@ StudioApp.prototype.init = function(config) {
       vizCol.style.width = '';
       vizCol.style.maxWidth = displayWidth + 'px';
       // Needs to run twice on initialization
-      if(!resized) {
+      if (!resized) {
         resized = true;
         resize();
       }
@@ -407,7 +407,7 @@ StudioApp.prototype.init = function(config) {
     ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
-  var orientationHandler = function() {
+  var orientationHandler = function () {
     window.scrollTo(0, 0);  // Browsers like to mess with scroll on rotate.
   };
   window.addEventListener('orientationchange', orientationHandler);
@@ -458,7 +458,7 @@ StudioApp.prototype.init = function(config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
-    Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function() {
+    Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function () {
       this.updateBlockCount();
     }, this));
 
@@ -471,8 +471,8 @@ StudioApp.prototype.init = function(config) {
   var hideIcon = utils.valueOr(config.skin.hideIconInClearPuzzle, false);
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
   if (clearPuzzleHeader) {
-    dom.addClickTouchEvent(clearPuzzleHeader, (function() {
-      this.feedback_.showClearPuzzleConfirmation(this.Dialog, hideIcon, (function() {
+    dom.addClickTouchEvent(clearPuzzleHeader, (function () {
+      this.feedback_.showClearPuzzleConfirmation(this.Dialog, hideIcon, (function () {
         this.handleClearPuzzle(config);
       }).bind(this));
     }).bind(this));
@@ -481,7 +481,7 @@ StudioApp.prototype.init = function(config) {
   // Bind listener to 'Version History' button
   var versionsHeader = document.getElementById('versions-header');
   if (versionsHeader) {
-    dom.addClickTouchEvent(versionsHeader, (function() {
+    dom.addClickTouchEvent(versionsHeader, (function () {
       var codeDiv = document.createElement('div');
       var dialog = this.createModalDialog({
         Dialog: this.Dialog,
@@ -569,7 +569,7 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
  * Create a phone frame and container. Scale shared content (everything currently inside the visualization column)
  * to container width, fit container to the phone frame and add share footer.
  */
-StudioApp.prototype.setupLegacyShareView = function() {
+StudioApp.prototype.setupLegacyShareView = function () {
   var vizContainer = document.createElement('div');
   vizContainer.id = 'visualizationContainer';
   var vizColumn = document.getElementById('visualizationColumn');
@@ -591,7 +591,7 @@ StudioApp.prototype.setupLegacyShareView = function() {
   this.scaleLegacyShare();
 };
 
-StudioApp.prototype.scaleLegacyShare = function() {
+StudioApp.prototype.scaleLegacyShare = function () {
   var vizContainer = document.getElementById('visualizationContainer');
   var vizColumn = document.getElementById('visualizationColumn');
   var phoneFrameScreen = document.getElementById('phoneFrameScreen');
@@ -617,7 +617,7 @@ StudioApp.prototype.scaleLegacyShare = function() {
  * @param {Object.<string, string>} [substitutions] Dictionary strings (keys) to
  *   replacement values.
  */
-StudioApp.prototype.substituteInstructionImages = function(htmlText, substitutions) {
+StudioApp.prototype.substituteInstructionImages = function (htmlText, substitutions) {
   if (htmlText) {
     for (var prop in substitutions) {
       var value = substitutions[prop];
@@ -733,7 +733,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
   }
 };
 
-StudioApp.prototype.renderShareFooter_ = function(container) {
+StudioApp.prototype.renderShareFooter_ = function (container) {
   var footerDiv = document.createElement('div');
   footerDiv.setAttribute('id', 'footerDiv');
   container.appendChild(footerDiv);
@@ -808,13 +808,13 @@ StudioApp.prototype.reset = function (shouldPlayOpeningAnimation) {
 /**
  * Override to change run behavior.
  */
-StudioApp.prototype.runButtonClick = function() {};
+StudioApp.prototype.runButtonClick = function () {};
 
 /**
  * Toggle whether run button or reset button is shown
  * @param {string} button Button to show, either "run" or "reset"
  */
-StudioApp.prototype.toggleRunReset = function(button) {
+StudioApp.prototype.toggleRunReset = function (button) {
   var showRun = (button === 'run');
   if (button !== 'run' && button !== 'reset') {
     throw "Unexpected input";
@@ -837,7 +837,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
  * and grunt dev preview mode
  * @param {Object} audioConfig sound configuration
  */
-StudioApp.prototype.registerAudio = function(audioConfig) {
+StudioApp.prototype.registerAudio = function (audioConfig) {
   if (!this.cdoSounds) {
     return;
   }
@@ -852,7 +852,7 @@ StudioApp.prototype.registerAudio = function(audioConfig) {
  * @param {Array.<string>} filenames file paths for sounds
  * @param {string} name ID to associate sound effect with
  */
-StudioApp.prototype.loadAudio = function(filenames, name) {
+StudioApp.prototype.loadAudio = function (filenames, name) {
   if (!this.cdoSounds) {
     return;
   }
@@ -867,7 +867,7 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
  * @param {number} options.volume value between 0.0 and 1.0 specifying volume
  * @param {function} [options.onEnded]
  */
-StudioApp.prototype.playAudio = function(name, options) {
+StudioApp.prototype.playAudio = function (name, options) {
   if (!this.cdoSounds) {
     return;
   }
@@ -882,7 +882,7 @@ StudioApp.prototype.playAudio = function(name, options) {
  * Stops looping a given sound
  * @param {string} name ID of sound
  */
-StudioApp.prototype.stopLoopingAudio = function(name) {
+StudioApp.prototype.stopLoopingAudio = function (name) {
   if (!this.cdoSounds) {
     return;
   }
@@ -902,7 +902,7 @@ StudioApp.prototype.stopLoopingAudio = function(name) {
 *    true.
 * @param {Element} div The parent div in which to insert Blockly.
 */
-StudioApp.prototype.inject = function(div, options) {
+StudioApp.prototype.inject = function (div, options) {
   var defaults = {
     assetUrl: this.assetUrl,
     rtl: this.isRtl(),
@@ -917,7 +917,7 @@ StudioApp.prototype.inject = function(div, options) {
 /**
  * @returns {boolean} True if the current HTML page is in right-to-left language mode.
  */
-StudioApp.prototype.isRtl = function() {
+StudioApp.prototype.isRtl = function () {
   var head = document.getElementsByTagName('head')[0];
   if (head && head.parentElement) {
     var dir = head.parentElement.getAttribute('dir');
@@ -930,7 +930,7 @@ StudioApp.prototype.isRtl = function() {
 /**
  * @return {string} Locale direction string based on app direction.
  */
-StudioApp.prototype.localeDirection = function() {
+StudioApp.prototype.localeDirection = function () {
   return (this.isRtl() ? 'rtl' : 'ltr');
 };
 
@@ -939,7 +939,7 @@ StudioApp.prototype.localeDirection = function() {
 * XML argument may be generated from the console with:
 * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
 */
-StudioApp.prototype.initReadonly = function(options) {
+StudioApp.prototype.initReadonly = function (options) {
   Blockly.inject(document.getElementById('codeWorkspace'), {
     assetUrl: this.assetUrl,
     readOnly: true,
@@ -953,7 +953,7 @@ StudioApp.prototype.initReadonly = function(options) {
 * Load the editor with blocks.
 * @param {string} blocksXml Text representation of blocks.
 */
-StudioApp.prototype.loadBlocks = function(blocksXml) {
+StudioApp.prototype.loadBlocks = function (blocksXml) {
   var xml = parseXmlElement(blocksXml);
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 };
@@ -971,7 +971,7 @@ StudioApp.prototype.loadBlocks = function(blocksXml) {
 * @return {string} String representation of start blocks xml, including
 *    block position.
 */
-StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
+StudioApp.prototype.arrangeBlockPosition = function (startBlocks, arrangement) {
 
   var type, xmlChild;
 
@@ -1000,7 +1000,7 @@ StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
   return Blockly.Xml.domToText(xml);
 };
 
-StudioApp.prototype.createModalDialog = function(options) {
+StudioApp.prototype.createModalDialog = function (options) {
   options.Dialog = utils.valueOr(options.Dialog, this.Dialog);
   return this.feedback_.createModalDialog(options);
 };
@@ -1068,7 +1068,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
  * @param {boolean} autoClose - closes instructions after 32s if true
  * @param {boolean} showHints
  */
-StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose, showHints) {
+StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
   var isMarkdownMode = this.isMarkdownMode(level);
 
   var instructionsDiv = document.createElement('div');
@@ -1118,7 +1118,7 @@ StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose, showHin
     hideOptions.endTarget = endTargetSelector;
   }
 
-  var hideFn = _.bind(function() {
+  var hideFn = _.bind(function () {
     // Momentarily flash the instruction block white then back to regular.
     if ($(endTargetSelector).length) {
       $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
@@ -1155,14 +1155,14 @@ StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose, showHin
   });
 
   if (autoClose) {
-    setTimeout(_.bind(function() {
+    setTimeout(_.bind(function () {
       this.instructionsDialog.hide();
     }, this), 32000);
   }
 
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
-    dom.addClickTouchEvent(okayButton, _.bind(function() {
+    dom.addClickTouchEvent(okayButton, _.bind(function () {
       if (this.instructionsDialog) {
         this.instructionsDialog.hide();
       }
@@ -1186,7 +1186,7 @@ StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose, showHin
 /**
 *  Resizes the blockly workspace.
 */
-StudioApp.prototype.onResize = function() {
+StudioApp.prototype.onResize = function () {
   var workspaceWidth = document.getElementById('codeWorkspace').clientWidth;
 
   // Keep blocks static relative to the right edge in RTL mode
@@ -1399,7 +1399,7 @@ StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
 *  Updates the width of the toolbox-header to match the width of the toolbox
 *  or palette in the workspace below the header.
 */
-StudioApp.prototype.resizeToolboxHeader = function() {
+StudioApp.prototype.resizeToolboxHeader = function () {
   var toolboxWidth = 0;
   if (this.editCode && this.editor && this.editor.paletteEnabled) {
     // If in the droplet editor, set toolboxWidth based on the block palette width:
@@ -1416,7 +1416,7 @@ StudioApp.prototype.resizeToolboxHeader = function() {
 * @param {?string} id ID of block that triggered this action.
 * @param {boolean} spotlight Optional.  Highlight entire block if true
 */
-StudioApp.prototype.highlight = function(id, spotlight) {
+StudioApp.prototype.highlight = function (id, spotlight) {
   if (this.isUsingBlockly()) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
@@ -1447,7 +1447,7 @@ StudioApp.prototype.clearHighlighting = function () {
 * @param {{feedbackType: number}} Test results (a constant property of
 *     this.TestResults).
 */
-StudioApp.prototype.displayFeedback = function(options) {
+StudioApp.prototype.displayFeedback = function (options) {
   options.Dialog = this.Dialog;
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
@@ -1469,7 +1469,7 @@ StudioApp.prototype.displayFeedback = function(options) {
  * @param {Object} options
  * @return {number} The appropriate property of TestResults.
  */
-StudioApp.prototype.getTestResults = function(levelComplete, options) {
+StudioApp.prototype.getTestResults = function (levelComplete, options) {
   return this.feedback_.getTestResults(levelComplete,
       this.requiredBlocks_, this.recommendedBlocks_, this.checkForEmptyBlocks_, options);
 };
@@ -1477,7 +1477,7 @@ StudioApp.prototype.getTestResults = function(levelComplete, options) {
 // Builds the dom to get more info from the user. After user enters info
 // and click "create level" onAttemptCallback is called to deliver the info
 // to the server.
-StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
+StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
   var builderDetails = document.createElement('div');
   builderDetails.innerHTML = require('./templates/builder.html.ejs')();
   var dialog = this.createModalDialog({
@@ -1485,7 +1485,7 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
     icon: this.icon
   });
   var createLevelButton = document.getElementById('create-level-button');
-  dom.addClickTouchEvent(createLevelButton, function() {
+  dom.addClickTouchEvent(createLevelButton, function () {
     var instructions = builderDetails.querySelector('[name="instructions"]').value;
     var name = builderDetails.querySelector('[name="level_name"]').value;
     var query = url.parse(window.location.href, true).query;
@@ -1510,7 +1510,7 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
 * {string} program The user program, which will get URL-encoded.
 * {function} onComplete Function to be called upon completion.
 */
-StudioApp.prototype.report = function(options) {
+StudioApp.prototype.report = function (options) {
   // copy from options: app, level, result, testResult, program, onComplete
   var report = $.extend({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
@@ -1528,8 +1528,8 @@ StudioApp.prototype.report = function(options) {
   // there with the Reset button as the only option.
   var self = this;
   if (!(this.hideSource && this.share)) {
-    var onAttemptCallback = (function() {
-      return function(builderDetails) {
+    var onAttemptCallback = (function () {
+      return function (builderDetails) {
         for (var option in builderDetails) {
           report[option] = builderDetails[option];
         }
@@ -1567,7 +1567,7 @@ StudioApp.prototype.clearAndAttachRuntimeAnnotations = function () {
 /**
 * Click the reset button.  Reset the application.
 */
-StudioApp.prototype.resetButtonClick = function() {
+StudioApp.prototype.resetButtonClick = function () {
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
@@ -1581,7 +1581,7 @@ StudioApp.prototype.resetButtonClick = function() {
 /**
 * Add count of blocks used.
 */
-StudioApp.prototype.updateBlockCount = function() {
+StudioApp.prototype.updateBlockCount = function () {
   // If the number of block used is bigger than the ideal number of blocks,
   // set it to be yellow, otherwise, keep it as black.
   var element = document.getElementById('blockUsed');
@@ -1602,7 +1602,7 @@ StudioApp.prototype.updateBlockCount = function() {
 /**
  * Set the ideal Number of blocks.
  */
-StudioApp.prototype.setIdealBlockNumber_ = function() {
+StudioApp.prototype.setIdealBlockNumber_ = function () {
   var element = document.getElementById('idealBlockNumber');
   if (!element) {
     return;
@@ -1891,7 +1891,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   // Extend the command list on the ace Autocomplete object to include the period:
   var Autocomplete = window.ace.require("ace/autocomplete").Autocomplete;
-  Autocomplete.prototype.commands['.'] = function(editor) {
+  Autocomplete.prototype.commands['.'] = function (editor) {
     // First, insert the period and update the completions:
     editor.insert(".");
     editor.completer.updateCompletions(true);
@@ -1953,7 +1953,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   if (hideToolboxHeader && hideToolboxIcon && showToolboxHeader) {
     hideToolboxHeader.className += ' toggleable';
     hideToolboxIcon.style.display = 'inline-block';
-    var handleTogglePalette = (function() {
+    var handleTogglePalette = (function () {
       if (this.editor) {
         this.editor.enablePalette(!this.editor.paletteEnabled);
         showToolboxHeader.style.display =
@@ -2001,7 +2001,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
-  this.editor.on('palettetoggledone', function(e) {
+  this.editor.on('palettetoggledone', function (e) {
     // Reposition callouts after block/text toggle (in case they need to move)
     $('.cdo-qtips').qtip('reposition', null, false);
   });
@@ -2032,7 +2032,7 @@ StudioApp.prototype.enableBreakpoints = function () {
   }
 
   // Set up an event handler to create breakpoints when clicking in the gutter:
-  this.editor.on('guttermousedown', function(e) {
+  this.editor.on('guttermousedown', function (e) {
     var bps = this.editor.getBreakpoints();
     if (bps[e.line]) {
       this.editor.clearBreakpoint(e.line);
@@ -2085,7 +2085,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
  * Show the configured starting function definition.
  * @param {AppOptionsConfig}
  */
-StudioApp.prototype.openFunctionDefinition_ = function(config) {
+StudioApp.prototype.openFunctionDefinition_ = function (config) {
   if (Blockly.contractEditor) {
     Blockly.contractEditor.autoOpenWithLevelConfiguration({
       autoOpenFunction: config.level.openFunctionDefinition,
@@ -2303,7 +2303,7 @@ StudioApp.prototype.getFunctionWithoutTwoExamples = function () {
 
   var definitionWithLessThanTwoExamples;
   definitionNames.forEach(function (def) {
-    var definitionExamples = exampleNames.filter(function(example) {
+    var definitionExamples = exampleNames.filter(function (example) {
       return def === example;
     });
 
@@ -2446,7 +2446,7 @@ StudioApp.prototype.displayWorkspaceAlert = function (type, alertContents) {
   var toolbarWidth;
   if (this.usingBlockly_) {
     toolbarWidth = $(".blocklyToolboxDiv").width();
-  } else{
+  } else {
     toolbarWidth = $(".droplet-palette-element").width() + $(".droplet-gutter").width();
   }
 

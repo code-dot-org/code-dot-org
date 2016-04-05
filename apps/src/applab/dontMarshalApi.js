@@ -40,7 +40,7 @@ function dmapiValidateType(funcName, varName, varValue, expectedType, opt) {
 
 // Array functions
 
-var getInt = function(obj, def) {
+var getInt = function (obj, def) {
   // Return an integer, or the default.
   var n = obj ? Math.floor(obj.toNumber()) : def;
   if (isNaN(n)) {

@@ -3,7 +3,7 @@ var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');
 
 var REPEAT_REQUIREMENT = {
-  'test': function(block) {
+  'test': function (block) {
     return block.type == 'controls_repeat';
   },
   'type': 'controls_repeat',

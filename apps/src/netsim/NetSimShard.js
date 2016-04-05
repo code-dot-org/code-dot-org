@@ -151,9 +151,9 @@ NetSimShard.prototype.resetEverything = function (onComplete) {
     type: 'delete',
     contentType: 'application/json; charset=utf-8',
     dataType: "json"
-  }).done(function() {
+  }).done(function () {
     onComplete(null, true);
-  }).fail(function(request, status, error) {
+  }).fail(function (request, status, error) {
     var err = new Error('status: ' + status + '; error: ' + error);
     onComplete(err, false);
   });
