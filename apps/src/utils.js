@@ -28,7 +28,7 @@ exports.getHammer = function () {
   return Hammer;
 };
 
-exports.shallowCopy = function(source) {
+exports.shallowCopy = function (source) {
   var result = {};
   for (var prop in source) {
     result[prop] = source[prop];
@@ -40,14 +40,14 @@ exports.shallowCopy = function(source) {
 /**
  * Returns a clone of the object, stripping any functions on it.
  */
-exports.cloneWithoutFunctions = function(object) {
+exports.cloneWithoutFunctions = function (object) {
   return JSON.parse(JSON.stringify(object));
 };
 
 /**
  * Returns a string with a double quote before and after.
  */
-exports.quote = function(str) {
+exports.quote = function (str) {
   return '"' + str + '"';
 };
 
@@ -56,7 +56,7 @@ exports.quote = function(str) {
  * properties in options. Leaves defaults and options unchanged.
  * NOTE: For new code, use $.extend({}, defaults, options) instead
  */
-exports.extend = function(defaults, options) {
+exports.extend = function (defaults, options) {
   var finalOptions = exports.shallowCopy(defaults);
   for (var prop in options) {
     finalOptions[prop] = options[prop];
@@ -65,7 +65,7 @@ exports.extend = function(defaults, options) {
   return finalOptions;
 };
 
-exports.escapeHtml = function(unsafe) {
+exports.escapeHtml = function (unsafe) {
   return unsafe
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -80,14 +80,14 @@ exports.escapeHtml = function(unsafe) {
  * @param number
  * @param mod
  */
-exports.mod = function(number, mod) {
+exports.mod = function (number, mod) {
   return ((number % mod) + mod) % mod;
 };
 
 /**
  * Generates an array of integers from start to end inclusive
  */
-exports.range = function(start, end) {
+exports.range = function (start, end) {
   var ints = [];
   for (var i = start; i <= end; i++) {
     ints.push(i);
@@ -112,7 +112,7 @@ exports.executeIfConditional = function (conditional, fn) {
  * @param inputString
  * @returns {string} string without quotes
  */
-exports.stripQuotes = function(inputString) {
+exports.stripQuotes = function (inputString) {
   return inputString.replace(/["']/g, "");
 };
 
@@ -170,7 +170,7 @@ exports.randomKey = function (obj) {
  * @returns {string} RFC4122-compliant UUID
  */
 exports.createUuid = function () {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
     return v.toString(16);
   });
@@ -194,7 +194,7 @@ if (!String.prototype.repeat) {
    * @param {number} count
    * @returns {string}
    */
-  String.prototype.repeat = function(count) {
+  String.prototype.repeat = function (count) {
     if (this === null) {
       throw new TypeError('can\'t convert ' + this + ' to object');
     }
@@ -278,14 +278,14 @@ exports.isInfiniteRecursionError = function (err) {
 };
 
 // TODO(dave): move this logic to dashboard.
-exports.getPegasusHost = function() {
+exports.getPegasusHost = function () {
   switch (window.location.hostname) {
     case 'studio.code.org':
     case 'learn.code.org':
       return 'code.org';
     default:
       var name = window.location.hostname.split('.')[0];
-      switch(name) {
+      switch (name) {
         case 'localhost':
           return 'localhost.code.org:3000';
         case 'development':
@@ -329,7 +329,7 @@ exports.browserSupportsCssMedia = function () {
  * @param text
  * @returns String that has no more escape characters and multiple divs converted to newlines
  */
-exports.unescapeText = function(text) {
+exports.unescapeText = function (text) {
   var cleanedText = text;
 
   // Handling of line breaks:

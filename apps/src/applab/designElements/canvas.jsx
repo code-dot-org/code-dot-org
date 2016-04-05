@@ -57,7 +57,7 @@ var CanvasEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getClickEventCode: function() {
+  getClickEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
@@ -68,7 +68,7 @@ var CanvasEvents = React.createClass({
     return code;
   },
 
-  insertClick: function() {
+  insertClick: function () {
     this.props.onInsertEvent(this.getClickEventCode());
   },
 

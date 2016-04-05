@@ -46,7 +46,7 @@ exports.randomNumber = function (min, max) {
   return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
 };
 
-exports.getTime = function() {
+exports.getTime = function () {
   return (new Date()).getTime();
 };
 
@@ -273,7 +273,7 @@ function buildFunctionPrototype(prefix, params) {
 }
 
 // Generate a read-write property expansion function:
-function generatePropertyExpansion (propname) {
+function generatePropertyExpansion(propname) {
   return function (block) {
     if (!block || block.type === 'socket') {
       return propname;
@@ -428,7 +428,7 @@ function populateCompleterFromPredefValues(apis, predefValues) {
  * @param {Object} pos Ace editor position
  * @return {boolean} true if position is at the start of a method or property
  */
-function isPositionAfterDot (session, pos) {
+function isPositionAfterDot(session, pos) {
   var acUtil = window.ace.require("ace/autocomplete/util");
   var line = session.getLine(pos.row);
   var identifier = acUtil.retrievePrecedingIdentifier(line, pos.column);
@@ -470,7 +470,7 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   }
 
   return {
-    getCompletions: function(editor, session, pos, prefix, callback) {
+    getCompletions: function (editor, session, pos, prefix, callback) {
       if (prefix.length === 0) {
         callback(null, []);
         return;

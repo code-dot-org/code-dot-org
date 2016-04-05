@@ -75,7 +75,7 @@ Item.prototype.getElement = function () {
 /**
  * Returns the frame of the spritesheet for the current walking direction.
  */
-Item.prototype.getDirectionFrame = function() {
+Item.prototype.getDirectionFrame = function () {
 
   // Every other frame, if we aren't yet rendering in the correct direction,
   // assign a new displayDir from state table; only one turn at a time.
@@ -349,7 +349,7 @@ Item.prototype.getAnimationFrameDuration = function () {
 /**
  * Returns true if the item is currently fading away.
  */
-Item.prototype.isFading = function() {
+Item.prototype.isFading = function () {
   return !!this.startFadeTime;
 };
 
@@ -358,7 +358,7 @@ Item.prototype.isFading = function() {
  * Returns true if the item has finished fading away.  The caller will usually
  * then call removeElement to destroy this item's assets.
  */
-Item.prototype.hasCompletedFade = function() {
+Item.prototype.hasCompletedFade = function () {
   var currentTime = new Date().getTime();
 
   return this.startFadeTime && currentTime > this.startFadeTime + this.fadeTime;
