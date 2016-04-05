@@ -97,6 +97,8 @@ var AppLabView = React.createClass({
         }
         <CodeWorkspaceContainer
             topMargin={topPaneHeight}
+            isRtl={false}
+            noVisualization={false}
             generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
             onSizeChange={utils.fireResizeEvent}/>
       </ConnectedStudioAppWrapper>

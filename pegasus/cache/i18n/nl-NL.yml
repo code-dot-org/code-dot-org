@@ -790,7 +790,7 @@
   dashboard_progress_completed_too_many_blocks: voltooid, teveel blokken
   dashboard_progress_completed_perfect: voltooid, perfect
   dashboard_progress_furthest_level_attempted: verste niveau geprobeerd
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: verstuurd
   dashboard_stage: niveau
   dashboard_puzzle: puzzel
   dashboard_question: Vraag
@@ -800,6 +800,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Juist
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -968,7 +970,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: App Lab
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Leeftijd 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
