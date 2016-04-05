@@ -122,7 +122,7 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
   var obj = {x: 1}; // This is okay
   var obj = { x: 1 }; // This is okay too
   ```
-  See ESLint rule [**object-curly-spacing**](http://eslint.org/docs/rules/object-curly-spacing) and ([Google's styleguide](https://google.github.io/styleguide/javascriptguide.xml?showone=Code_formatting#Code_formatting)) for more information.
+  See ESLint rule [**object-curly-spacing**](http://eslint.org/docs/rules/object-curly-spacing) and [this section of Google's styleguide](https://google.github.io/styleguide/javascriptguide.xml?showone=Code_formatting#Code_formatting) for more information.
 
 * <a name="js-ambiguous-this"></a>
   Avoid `this` in functions where callers might not bind the correct scope. Generally this means not using `this` in static methods and bare functions.
