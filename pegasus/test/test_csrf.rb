@@ -13,6 +13,10 @@ FAKE_CSRF_TOKEN = 'fake_token'
 class CsrfTest < Minitest::Test
   include Rack::Test::Methods
 
+  def with_role(role)
+    Documents.any_instance.stubs(:dashboard_user_id).returns(role.nil? ? nil : role[:id])
+  end
+
   def app
     Rack::Builder.parse_file(File.absolute_path('../config.ru', __dir__)).first
   end
@@ -51,7 +55,7 @@ class CsrfTest < Minitest::Test
     as_admin_user
     set_xhr_headers
     env = {}
-    response = post('/v2/sections', {}, env)
+    response = post('/v2/sections', '{}', env)
     assert_equal 403, response.status
   end
 
@@ -60,17 +64,27 @@ class CsrfTest < Minitest::Test
     set_xhr_headers
     header 'X-CSRF-TOKEN', 'bad_token'
     env = {'rack.session' => session_with_csrf_token}
-    response = post('/v2/sections', {}, env)
+    response = post('/v2/sections', '{}', env)
     assert_equal 403, response.status
   end
 
   def test_section_api_csrf_with_valid_csrf_token
-    as_admin_user
     set_xhr_headers
     header 'X-CSRF-TOKEN', FAKE_CSRF_TOKEN
     env = {'rack.session' => session_with_csrf_token}
-    response = post('/v2/sections', {}, env)
-    assert_equal 200, response.status
+    DashboardSection.stubs(:create).returns(1)
+    response = post('/v2/sections', '{}', env)
+    show_errors(response)
+    assert_equal 302, response.status
+  end
+end
+
+def show_errors(response)
+  if response.status != 200
+    response.body.scan(/<h2>.*?<\/h2>/i).each do |line|
+      puts line
+    end
+    puts
   end
 end
 
