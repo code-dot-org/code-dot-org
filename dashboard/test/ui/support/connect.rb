@@ -123,7 +123,7 @@ all_passed = true
 
 After do |scenario|
   # log to saucelabs
-  all_passed = all_passed && scenario.passed?
+  all_passed &&= scenario.passed?
   log_result all_passed
 end
 

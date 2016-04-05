@@ -363,11 +363,6 @@ Style/RegexpLiteral:
 Style/RescueModifier:
   Enabled: false
 
-# Offense count: 3
-# Cop supports --auto-correct.
-Style/SelfAssignment:
-  Enabled: false
-
 # Offense count: 180
 # Cop supports --auto-correct.
 Style/SpaceAfterComma:
