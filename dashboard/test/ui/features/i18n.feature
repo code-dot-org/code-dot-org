@@ -48,7 +48,7 @@ Scenario: Frozen tutorial in Portuguese
 
 @no_ie9
 Scenario: HoC tutorial in Arabic (RTL)
-  Given I am on "http://learn.code.org/hoc/15/lang/ar-sa"
+  Given I am on "http://learn.code.org/hoc/1/lang/ar-sa"
   And I rotate to landscape
   Then I wait to see a dialog titled "اللغز 15 من 20"
   Then element ".modal-content p:nth-child(2)" has "ar-sa" text from key "data.level.instructions.maze_2_14"
