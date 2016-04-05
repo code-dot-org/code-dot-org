@@ -7,6 +7,7 @@ var msg = require('../locale');
  */
 var VersionRow = React.createClass({
   propTypes: {
+    versionId: React.PropTypes.string.isRequired,
     lastModified: React.PropTypes.instanceOf(Date),
     isLatest: React.PropTypes.bool,
     onChoose: React.PropTypes.func
@@ -25,7 +26,13 @@ var VersionRow = React.createClass({
     if (this.props.isLatest) {
       button = <button className="btn-default" disabled="disabled" style={{cursor: "default"}}>{msg.currentVersion()}</button>;
     } else {
-      button = <button className="btn-info" onClick={this.props.onChoose}>{msg.viewThisVersion()}</button>;
+      button = [
+        <a href={location.href + '?version=' + this.props.versionId}
+          target="_blank">
+          <button><i className="fa fa-eye"></i></button>
+        </a>,
+        <button className="btn-info" onClick={this.props.onChoose}>{msg.viewThisVersion()}</button>
+      ];
     }
 
     return (
