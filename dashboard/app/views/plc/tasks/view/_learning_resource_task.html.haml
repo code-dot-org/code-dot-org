@@ -5,4 +5,5 @@
   %i.fa.preview_icon{class: @task.icon.to_s}
 
 -if @task.resource_url
-  %p It points to #{link_to @task.resource_url}
+  %p It points to
+  = link_to @task.resource_url, @task.resource_url, target: '_blank'

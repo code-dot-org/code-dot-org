@@ -29,7 +29,7 @@ class Plc::WrittenEnrollmentTaskAssignment < Plc::EnrollmentTaskAssignment
         return 'fa-adjust', 'color: goldenrod'
       when 'review_rejected'
         return 'fa-exclamation-circle', 'color: red'
-      when 'complete'
+      when 'completed'
         return 'fa-check-circle', 'color: green'
     end
   end
