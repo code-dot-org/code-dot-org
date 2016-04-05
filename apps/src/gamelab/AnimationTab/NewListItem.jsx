@@ -2,13 +2,17 @@
 'use strict';
 
 var color = require('../../color');
+var Radium = require('radium');
 
 var staticStyles = {
   tile: {
     width: '100%',
     paddingTop: 4,
     paddingBottom: 4,
-    marginBottom: 4
+    marginBottom: 4,
+    ':hover': {
+      cursor: 'pointer'
+    }
   },
   wrapper: {
     position: 'relative',
@@ -52,10 +56,17 @@ var NewListItem = React.createClass({
   },
 
   render: function () {
+    var dynamicStyles = {
+      dottedBorder: {
+        backgroundColor: Radium.getState(this.state, 'main', ':hover')
+            ? color.lightest_purple : undefined
+      }
+    };
+
     return (
       <div style={staticStyles.tile}>
         <div style={staticStyles.wrapper}>
-          <div style={staticStyles.dottedBorder}>
+          <div style={[staticStyles.dottedBorder, dynamicStyles.dottedBorder]}>
             <i className="fa fa-plus" style={staticStyles.addButton}></i>
           </div>
         </div>
@@ -66,4 +77,4 @@ var NewListItem = React.createClass({
     );
   }
 });
-module.exports = NewListItem;
+module.exports = Radium(NewListItem);
