@@ -43,6 +43,7 @@ var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
 var DialogButtons = require('../templates/DialogButtons.jsx');
 var executionLog = require('../executionLog');
+var annotationList = require('../acemode/annotationList');
 
 var createStore = require('../redux');
 var Provider = require('react-redux').Provider;
@@ -1481,6 +1482,14 @@ Applab.onPuzzleComplete = function (submit) {
     Applab.message = results.message;
   } else if (!submit) {
     Applab.testResults = TestResults.FREE_PLAY;
+  }
+
+  // If we're failing due to failOnLintErrors, replace the previous test result
+  // when it is a more positive (relatively more successful) test result
+  if (level.failOnLintErrors && annotationList.getJSLintAnnotations().length) {
+    if (Applab.testResults > TestResults.GENERIC_LINT_FAIL) {
+      Applab.testResults = TestResults.GENERIC_LINT_FAIL;
+    }
   }
 
   // Stop everything on screen
