@@ -68,7 +68,7 @@ class ScriptLevelsController < ApplicationController
     # generation of the script level path.
     extra_params = {}
     if @script_level.long_assessment?
-      if (params[:puzzle_page])
+      if params[:puzzle_page]
         extra_params[:puzzle_page] = params[:puzzle_page]
       else
         extra_params[:puzzle_page] = 1
