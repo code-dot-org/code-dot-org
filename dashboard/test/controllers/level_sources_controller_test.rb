@@ -200,7 +200,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test 'migrates old flappy levels' do
-    old_source = <<XML
+    old_source = <<-XML
       <xml>
         <block type="flappy_whenRunButtonClick" deletable="false">
           <next>
@@ -214,7 +214,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
       </xml>
     XML
 
-    new_source = <<XML
+    new_source = <<-XML
       <xml>
         <block type="when_run" deletable="false">
           <next>

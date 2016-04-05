@@ -25,7 +25,7 @@ And /^Applab HTML has no button$/ do
 end
 
 Given /^I start a new Applab project$/ do
-  steps <<STEPS
+  steps <<-STEPS
     And I am on "http://learn.code.org/projects/applab/new"
     And I rotate to landscape
     And I wait to see "#runButton"
@@ -37,21 +37,21 @@ Given /^I start a new Applab project$/ do
 end
 
 When /^I switch to design mode$/ do
-  steps <<STEPS
+  steps <<-STEPS
     When I press "designModeButton"
     And I wait to see Applab design mode
   STEPS
 end
 
 When /^I switch to code mode$/ do
-  steps <<STEPS
+  steps <<-STEPS
     When I press "codeModeButton"
     And I wait to see Applab code mode
   STEPS
 end
 
 When /^I switch to text mode$/ do
-  steps <<STEPS
+  steps <<-STEPS
     When I press "show-code-header"
     And I wait to see Droplet text mode
   STEPS
@@ -94,7 +94,7 @@ When /^I drag a (\w+) into the app$/ do |element_type|
 end
 
 When /^I navigate to the shared version of my project$/ do
-  steps <<STEPS
+  steps <<-STEPS
     When I click selector ".project_share"
     And I wait to see a dialog titled "Share your project"
     And I navigate to the share URL
@@ -218,7 +218,7 @@ And /^I hover over the screen at xpos ([\d]+) and ypos ([\d]+)$/ do |xpos, ypos|
 end
 
 def get_mouse_event_creator_script
-  return <<FUNCTION
+  return <<-FUNCTION
     function createMouseEvent(type, clientX, clientY) {
       var evt;
       var e = {
@@ -257,7 +257,7 @@ def get_mouse_event_creator_script
 end
 
 def get_scale_script
-  return <<FUNCTION
+  return <<-FUNCTION
     function getScale(element) {
       return element.getBoundingClientRect().width / element.offsetWidth;
     };
@@ -265,7 +265,7 @@ def get_scale_script
 end
 
 And /^I save the project$/ do
-  script = <<SCRIPT
+  script = <<-SCRIPT
     Applab.serializeAndSave();
   SCRIPT
 
