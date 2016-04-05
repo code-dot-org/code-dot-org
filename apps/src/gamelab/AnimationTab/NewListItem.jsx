@@ -48,12 +48,13 @@ var staticStyles = {
  */
 var NewListItem = React.createClass({
   propTypes: {
-    label: React.PropTypes.string.isRequired
+    label: React.PropTypes.string.isRequired,
+    onClick: React.PropTypes.func // TODO: Should be required?
   },
 
   render: function () {
     return (
-      <div style={staticStyles.tile}>
+      <div style={staticStyles.tile} onClick={this.props.onClick}>
         <div style={staticStyles.wrapper}>
           <div style={staticStyles.dottedBorder}>
             <i className="fa fa-plus" style={staticStyles.addButton}></i>
