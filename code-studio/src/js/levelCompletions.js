@@ -7,7 +7,7 @@
  * @param {boolean} isSampled - whether Google Analytics sampled.
  * @param {boolean} startDatePresent - whether a start_date parameter was given.
  */
-exports.hideAndShowDomElements = function(isSampled, startDatePresent) {
+exports.hideAndShowDomElements = function (isSampled, startDatePresent) {
   if (isSampled) {
     $('#samplingMessage').show();
   }
@@ -36,8 +36,8 @@ function successRateRenderer(
   ];
   Handsontable.renderers.NumericRenderer.apply(this, arguments);
   var val = parseFloat(value);
-  for(var i=0; i < conditions.length; i++) {
-    if(val >= conditions[i][0]) {
+  for (var i=0; i < conditions.length; i++) {
+    if (val >= conditions[i][0]) {
       td.style.background = conditions[i][1];
       return;
     }
@@ -64,8 +64,8 @@ function uniqueSuccessRateRenderer(
   ];
   Handsontable.renderers.NumericRenderer.apply(this, arguments);
   var val = parseFloat(value);
-  for(var i=0; i < conditions.length; i++) {
-    if(val >= conditions[i][0]) {
+  for (var i=0; i < conditions.length; i++) {
+    if (val >= conditions[i][0]) {
       td.style.background = conditions[i][1];
       return;
     }
@@ -79,7 +79,7 @@ function uniqueSuccessRateRenderer(
 function timeOnSiteRenderer(
     instance, td, row, col, prop, value, cellProperties) {
   var percent = 0;
-  if(value) {
+  if (value) {
     var val = parseFloat(value);
     var minutes = Math.floor(val / 60);
     var seconds = val - minutes*60;
@@ -95,7 +95,7 @@ function timeOnSiteRenderer(
 /**
  * Populates the completionTable DOM element.
  */
-exports.populateTable = function(headers, data) {
+exports.populateTable = function (headers, data) {
   $("#completionTable").handsontable({
     data: data,
     startRows: 10,
@@ -148,8 +148,8 @@ exports.populateTable = function(headers, data) {
         data: "timeOnSite"
       }
     ],
-    cells: function(row, col, prop) {
-      if(col == 3) {
+    cells: function (row, col, prop) {
+      if (col == 3) {
         return {renderer: successRateRenderer};
       } else if (col == 8) {
         return {renderer: uniqueSuccessRateRenderer};
