@@ -16,7 +16,12 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
     if @user_course_enrollment.save
       redirect_to action: :index
     else
-      redirect_to action: :new
+      @user_course_enrollment = Plc::UserCourseEnrollment.find_by(user: @user_course_enrollment.user, plc_course: @user_course_enrollment.plc_course)
+      if @user_course_enrollment
+        redirect_to action: :index
+      else
+        redirect_to action: :new
+      end
     end
   end
 
