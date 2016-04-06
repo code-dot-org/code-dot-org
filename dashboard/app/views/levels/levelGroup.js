@@ -72,7 +72,7 @@ function initLevelGroup(
   };
 
   function nextPage() {
-    var newLocation = window.location.href.replace("/page/" + (page+1), "/page/" + (page+2));
+    var newLocation = window.location.href.replace("/page/" + page, "/page/" + (page+1));
     window.location.href = newLocation;
   }
 
