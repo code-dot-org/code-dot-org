@@ -12,7 +12,7 @@ var ScrollableList = require('./ScrollableList.jsx');
 var AnimationFrameList = React.createClass({
   render: function () {
     return (
-      <ScrollableList className="animation-frame-list">
+      <ScrollableList style={{flex: '1 0 0'}} className="animation-frame-list">
         <AnimationFrameListItem index={1} />
         <AnimationFrameListItem index={2} />
         <AnimationFrameListItem index={3} isSelected />
