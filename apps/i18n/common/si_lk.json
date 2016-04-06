@@ -230,5 +230,6 @@
   "watchVideo": "වීඩියෝව නරඹන්න",
   "when": "විට",
   "whenRun": "දුවන විට",
-  "workspaceHeaderShort": "වැඩ අවකාශය: "
+  "workspaceHeaderShort": "වැඩ අවකාශය: ",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
 }

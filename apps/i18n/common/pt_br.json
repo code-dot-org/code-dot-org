@@ -230,5 +230,6 @@
   "watchVideo": "Assista ao vídeo",
   "when": "quando",
   "whenRun": "quando executar",
-  "workspaceHeaderShort": "Área de trabalho: "
+  "workspaceHeaderShort": "Área de trabalho: ",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
 }

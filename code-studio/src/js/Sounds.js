@@ -414,7 +414,7 @@ Sound.prototype.isPlaying = function () {
   return this.isPlaying_;
 };
 
-Sound.prototype.newPlayableBufferSource = function(buffer, options) {
+Sound.prototype.newPlayableBufferSource = function (buffer, options) {
   var newSound = this.audioContext.createBufferSource();
 
   // Older versions of chrome call this createGainNode instead of createGain
@@ -547,7 +547,7 @@ Sound.prototype.getPlayableFile = function () {
     if (this.config.hasOwnProperty('wav') && audioTest.canPlayType('audio/wav')) {
       return this.config.wav;
     }
-  } catch(e) {
+  } catch (e) {
 
   }
 

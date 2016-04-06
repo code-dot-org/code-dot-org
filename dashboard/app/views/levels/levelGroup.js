@@ -22,7 +22,7 @@ function initLevelGroup(
     }
   }
 
-  window.getResult = function() {
+  window.getResult = function () {
     // Construct an array of all the level results.
     // When submitted it's something like this:
     //
@@ -76,7 +76,7 @@ function initLevelGroup(
     window.location.href = newLocation;
   }
 
-  $(".nextPageButton").click($.proxy(function(event) {
+  $(".nextPageButton").click($.proxy(function (event) {
 
     // Are we read-only?  This can be because we're a teacher OR because an answer
     // has been previously submitted.
@@ -110,7 +110,7 @@ function initLevelGroup(
   }, this));
 
   // Unsubmit button should only be available when this is a standalone level.
-  $('.unsubmitButton').click(function() {
+  $('.unsubmitButton').click(function () {
 
     var dialog = new Dialog({
       body:
@@ -130,7 +130,7 @@ function initLevelGroup(
     dialogDiv.find('#continue-button').click(function () {
       $.post(window.appOptions.unsubmitUrl,
         {"_method": 'PUT', user_level: {submitted: false}},
-        function(data) {
+        function (data) {
           // Just reload so that the progress in the header is shown correctly.
           location.reload();
         }

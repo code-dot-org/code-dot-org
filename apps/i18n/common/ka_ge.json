@@ -230,5 +230,6 @@
   "watchVideo": "უყურეთ ვიდეოს",
   "when": "როდის",
   "whenRun": "გაშვებისას",
-  "workspaceHeaderShort": "სამუშაო სივრცე: "
+  "workspaceHeaderShort": "სამუშაო სივრცე: ",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
 }

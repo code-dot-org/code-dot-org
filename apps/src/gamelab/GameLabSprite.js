@@ -523,7 +523,7 @@ var isTouching = function (p5Inst, target) {
                                  abs(this.position.x -this.previousPosition.x) + this.collider.extents.x,
                                  abs(this.position.y -this.previousPosition.y) + this.collider.extents.y);
 
-            var bbox = new AABB(pInst, c, e, this.collider.offset);
+            var bbox = new AABB(p5Inst, c, e, this.collider.offset);
 
             //bbox.draw();
 
@@ -552,21 +552,32 @@ var isTouching = function (p5Inst, target) {
           }
           else //non tunnel overlap
           {
+            /* First, check for adjacency using overlap method.
+             *
+             * We do this to ensure isTouching returns true for cases when
+             * bounce, collide would return true and also when overlap would
+             * return true.
+             *
+             * NOTE: this.touching will remain all false in the adjacent case,
+             * but the function will return true.
+             */
 
             //if the other is a circle I calculate the displacement from here
             //and reverse it
-            if(this.collider instanceof CircleCollider)
-            {
-              displacement = other.collider.collide(this.collider).mult(-1);
+            if (this.collider instanceof CircleCollider) {
+              if (other.collider.overlap(this.collider)) {
+                result = true;
+                displacement = other.collider.collide(this.collider).mult(-1);
+              }
             }
-            else
+            else if (this.collider.overlap(other.collider)) {
+              result = true;
               displacement = this.collider.collide(other.collider);
-
+            }
           }
 
           if(displacement.x !== 0 || displacement.y !== 0)
           {
-
             if(displacement.x > 0)
               this.touching.left = true;
             if(displacement.x < 0)
@@ -575,10 +586,7 @@ var isTouching = function (p5Inst, target) {
               this.touching.bottom = true;
             if(displacement.y > 0)
               this.touching.top = true;
-
-            result = true;
           }
-
         }//end collider exists
       }//end this != others[i] && !this.removed
 

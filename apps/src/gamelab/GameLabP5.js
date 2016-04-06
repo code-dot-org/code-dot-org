@@ -130,11 +130,11 @@ GameLabP5.prototype.init = function (options) {
     var ctx = this.drawingContext;
     var doFill = this._doFill, doStroke = this._doStroke;
     if (doFill && !doStroke) {
-      if(ctx.fillStyle === styleEmpty) {
+      if (ctx.fillStyle === styleEmpty) {
         return this;
       }
     } else if (!doFill && doStroke) {
-      if(ctx.strokeStyle === styleEmpty) {
+      if (ctx.strokeStyle === styleEmpty) {
         return this;
       }
     }
@@ -199,11 +199,11 @@ GameLabP5.prototype.init = function (options) {
     var ctx = this.drawingContext;
     var doFill = this._doFill, doStroke = this._doStroke;
     if (doFill && !doStroke) {
-      if(ctx.fillStyle === styleEmpty) {
+      if (ctx.fillStyle === styleEmpty) {
         return this;
       }
     } else if (!doFill && doStroke) {
-      if(ctx.strokeStyle === styleEmpty) {
+      if (ctx.strokeStyle === styleEmpty) {
         return this;
       }
     }
@@ -306,7 +306,7 @@ GameLabP5.prototype.startExecution = function () {
             time_since_last >= target_time_between_frames - epsilon) {
 
           //mandatory update values(matrixs and stack) for 3d
-          if(this._renderer.isP3D){
+          if (this._renderer.isP3D){
             this._renderer._update();
           }
 
@@ -342,7 +342,7 @@ GameLabP5.prototype.startExecution = function () {
       }.bind(p5obj);
 
       // Overload _setup function to make it two-phase
-      p5obj._setup = function() {
+      p5obj._setup = function () {
         /*
          * Copied code from p5 _setup()
          */
