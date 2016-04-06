@@ -14,6 +14,8 @@ require 'json'
 require 'set'
 require 'thread'
 
+CHEF_VERSION='12.7.2'
+
 # A map from a supported environment to the corresponding Chef role to use for
 # that environment.
 ROLE_MAP = {
@@ -316,7 +318,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
     ssh.exec!("rm /tmp/*#{file_suffix}*")
   end
 
-  cmd = "ssh gateway.code.org -t \"/bin/sh -c 'knife bootstrap #{private_dns_name} -x ubuntu --sudo -E #{environment} -N #{instance_provisioning_info.name} -r role[#{role}]'\""
+  cmd = "ssh gateway.code.org -t \"/bin/sh -c 'knife bootstrap #{private_dns_name} -x ubuntu --sudo --bootstrap-version #{CHEF_VERSION} -E #{environment} -N #{instance_provisioning_info.name} -r role[#{role}]'\""
   print "Bootstrapping #{environment} frontend, please be patient. This takes ~15 minutes.\n"
   print cmd + "\n"
   bootstrap_result = `#{cmd}`
