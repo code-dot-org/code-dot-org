@@ -68,7 +68,7 @@ var ScreenEvents = React.createClass({
   // The screen click event handler code currently receives clicks to any
   // other design element. This could be worked around by checking for
   // event.targetId === "<id>" here, at the expense of added complexity.
-  getClickEventCode: function() {
+  getClickEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
@@ -78,11 +78,11 @@ var ScreenEvents = React.createClass({
     return code;
   },
 
-  insertClick: function() {
+  insertClick: function () {
     this.props.onInsertEvent(this.getClickEventCode());
   },
 
-  getKeyEventCode: function() {
+  getKeyEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "keydown", function(event) {\n' +
@@ -91,7 +91,7 @@ var ScreenEvents = React.createClass({
     return code;
   },
 
-  insertKey: function() {
+  insertKey: function () {
     this.props.onInsertEvent(this.getKeyEventCode());
   },
 

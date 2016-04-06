@@ -290,7 +290,7 @@ NetSimSendPanel.prototype.removePacket_ = function (packet) {
   // Remove from DOM
   var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   packet.getRoot()
-      .slideUp('fast', function() {
+      .slideUp('fast', function () {
         $(this).remove();
         updateLayout();
       });

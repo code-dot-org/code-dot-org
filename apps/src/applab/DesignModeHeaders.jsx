@@ -8,15 +8,15 @@ module.exports = React.createClass({
     isToolboxVisible: React.PropTypes.bool.isRequired
   },
 
-  handleManageAssets: function() {
+  handleManageAssets: function () {
     this.props.handleManageAssets();
   },
 
-  onToggleToolbox: function() {
+  onToggleToolbox: function () {
     this.props.onToggleToolbox();
   },
 
-  render: function() {
+  render: function () {
     var styles = {
       toolboxHeader: {
         display: this.props.isToolboxVisible ? 'block' : 'none',

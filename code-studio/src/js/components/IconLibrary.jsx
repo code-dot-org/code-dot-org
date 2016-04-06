@@ -11,7 +11,7 @@ var IconLibrary = React.createClass({
     assetChosen: React.PropTypes.func.isRequired
   },
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {search: ''};
   },
 

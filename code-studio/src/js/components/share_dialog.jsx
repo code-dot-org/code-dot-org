@@ -57,8 +57,3 @@ var ShareDialog = React.createClass({
   }
 });
 module.exports = ShareDialog;
-
-// TODO - ShareDialog is placed on dashboard namespace since it's used by header.js,
-// code that should probably eventually move into code-studio
-window.dashboard = window.dashboard || {};
-window.dashboard.ShareDialog = ShareDialog;

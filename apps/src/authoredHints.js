@@ -222,7 +222,7 @@ AuthoredHints.prototype.getHintsDisplay = function () {
 AuthoredHints.prototype.showHint_ = function (hint, callback) {
   $('#prompt-icon').qtip({
     content: {
-      text: function(html, api) {
+      text: function (html, api) {
         var container = document.createElement('div');
 
         var element = React.createElement(HintSelect, {

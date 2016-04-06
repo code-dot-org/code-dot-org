@@ -7,7 +7,7 @@ var utils = require('../utils');
 var _ = utils.getLodash();
 
 
-exports.install = function(blockly, generator, gensym) {
+exports.install = function (blockly, generator, gensym) {
  installDrawASquare(blockly, generator, gensym);
  installCreateACircle(blockly, generator, gensym);
  installCreateASnowflakeBranch(blockly, generator, gensym);
@@ -29,7 +29,7 @@ exports.install = function(blockly, generator, gensym) {
 
 var LENGTH_PARAM = msg.lengthParameter();
 
-function createACircleCode (size, gensym, indent) {
+function createACircleCode(size, gensym, indent) {
   var loopVar = gensym('count');
   indent = indent || '';
   return [
@@ -51,7 +51,7 @@ function createACircleCode (size, gensym, indent) {
  */
 function makeBlockInitializer(title, parameter) {
   return {
-    init: function() {
+    init: function () {
       this.setHSV(94, 0.84, 0.60);
 
       this.appendDummyInput().appendTitle(title);
@@ -80,7 +80,7 @@ function installDrawASquare(blockly, generator, gensym) {
 
   blockly.Blocks.draw_a_square_custom = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_square_custom = function() {
+  generator.draw_a_square_custom = function () {
     // Generate JavaScript for drawing a square.
     var value_length = generator.valueToCode(
         this, 'VALUE', generator.ORDER_ATOMIC);
@@ -108,11 +108,11 @@ function installCreateACircle(blockly, generator, gensym) {
 
   blockly.Blocks.create_a_circle_size = makeBlockInitializer(title, param);
 
-  generator.create_a_circle = function() {
+  generator.create_a_circle = function () {
     return createACircleCode(10, gensym);
   };
 
-  generator.create_a_circle_size = function() {
+  generator.create_a_circle_size = function () {
     var size = generator.valueToCode(this, 'VALUE', generator.ORDER_ATOMIC);
     return createACircleCode(size, gensym);
   };
@@ -127,7 +127,7 @@ function installCreateASnowflakeBranch(blockly, generator, gensym) {
 
   blockly.Blocks.create_a_snowflake_branch = makeBlockInitializer(title);
 
-  generator.create_a_snowflake_branch = function() {
+  generator.create_a_snowflake_branch = function () {
     var loopVar = gensym('count');
     var loopVar2 = gensym('count');
     return [
@@ -158,7 +158,7 @@ function installDrawARhombus(blockly, generator, gensym) {
 
   blockly.Blocks.draw_a_rhombus = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_rhombus = function() {
+  generator.draw_a_rhombus = function () {
     var value_length = generator.valueToCode(
         this, 'VALUE', generator.ORDER_ATOMIC);
     var loopVar = gensym('count');
@@ -182,7 +182,7 @@ function installDrawATriangle(blockly, generator, gensym) {
 
   blockly.Blocks.draw_a_triangle = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_triangle = function() {
+  generator.draw_a_triangle = function () {
     var value_length = generator.valueToCode(
         this, 'VALUE', generator.ORDER_ATOMIC);
     var loopVar = gensym('count');
@@ -205,7 +205,7 @@ function installDrawAHexagon(blockly, generator, gensym) {
 
   blockly.Blocks.draw_a_hexagon = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_hexagon = function() {
+  generator.draw_a_hexagon = function () {
     var value_length = generator.valueToCode(
         this, 'VALUE', generator.ORDER_ATOMIC);
     var loopVar = gensym('count');
@@ -228,7 +228,7 @@ function installDrawAHouse(blockly, generator, gensym) {
 
   blockly.Blocks.draw_a_house = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_house = function() {
+  generator.draw_a_house = function () {
     var value_length = generator.valueToCode(
         this, 'VALUE', generator.ORDER_ATOMIC);
     var loopVar = gensym('count');
@@ -259,7 +259,7 @@ function installDrawAFlower(blockly, generator, gensym) {
 
   blockly.Blocks.draw_a_flower = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_flower = function() {
+  generator.draw_a_flower = function () {
     var value_length = generator.valueToCode(
         this, 'VALUE', generator.ORDER_ATOMIC);
     var loopVar = gensym('count');
@@ -290,7 +290,7 @@ function installDrawASnowflake(blockly, generator, gensym) {
 
   blockly.Blocks.draw_a_snowflake = makeBlockInitializer(title);
 
-  generator.draw_a_snowflake = function() {
+  generator.draw_a_snowflake = function () {
     var loopVar = gensym('count');
 
     var color_random = generator.colour_random()[0];
@@ -319,7 +319,7 @@ function installDrawAStar(blockly, generator, gensym) {
 
   blockly.Blocks.draw_a_star = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_star = function() {
+  generator.draw_a_star = function () {
     var value_length = generator.valueToCode(
         this, 'VALUE', generator.ORDER_ATOMIC);
     var loopVar = gensym('count');
@@ -343,7 +343,7 @@ function installDrawARobot(blockly, generator, gensym) {
 
   blockly.Blocks.draw_a_robot = makeBlockInitializer(title);
 
-  generator.draw_a_robot = function() {
+  generator.draw_a_robot = function () {
     var loopVar = gensym('count');
 
     return [
@@ -390,7 +390,7 @@ function installDrawARocket(blockly, generator, gensym) {
 
   blockly.Blocks.draw_a_rocket = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_rocket = function() {
+  generator.draw_a_rocket = function () {
     var value_length = generator.valueToCode(
         this, 'VALUE', generator.ORDER_ATOMIC);
     var loopVar = gensym('count');
@@ -431,7 +431,7 @@ function installDrawAPlanet(blockly, generator, gensym) {
 
   blockly.Blocks.draw_a_planet = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_planet = function() {
+  generator.draw_a_planet = function () {
     var value_length = generator.valueToCode(
         this, 'VALUE', generator.ORDER_ATOMIC);
     var loopVar = gensym('count');
@@ -456,7 +456,7 @@ function installDrawUpperWave(blockly, generator, gensym) {
 
   blockly.Blocks.draw_upper_wave = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_upper_wave = function() {
+  generator.draw_upper_wave = function () {
     var value_length = generator.valueToCode(
         this, 'VALUE', generator.ORDER_ATOMIC);
     var loopVar = gensym('count');
@@ -479,7 +479,7 @@ function installDrawLowerWave(blockly, generator, gensym) {
 
   blockly.Blocks.draw_lower_wave = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_lower_wave = function() {
+  generator.draw_lower_wave = function () {
     var value_length = generator.valueToCode(
         this, 'VALUE', generator.ORDER_ATOMIC);
     var loopVar = gensym('count');
@@ -508,7 +508,7 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
   blockly.Blocks.create_snowflake_dropdown = {
     // We use custom initialization (instead of makeBlockInitializer) here
     // because each initialization needs a new instance of the FieldDropdown.
-    init: function() {
+    init: function () {
       this.setHSV(94, 0.84, 0.60);
 
       var title = new blockly.FieldDropdown(snowflakes);

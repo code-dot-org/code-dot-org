@@ -352,7 +352,7 @@ describe("NetSimRouterNode", function () {
     it("returns null for error and a NetSimRouterNode when router is found", function () {
       routerID = routerA.entityID;
 
-      NetSimRouterNode.get(routerID, testShard, function(_err, _result) {
+      NetSimRouterNode.get(routerID, testShard, function (_err, _result) {
         err = _err;
         result = _result;
       });
