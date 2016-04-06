@@ -14,7 +14,7 @@ require 'set'
 class XhrProxyController < ApplicationController
   include ProxyHelper
 
-  ALLOWED_CONTENT_TYPES = Set.new(['application/json'])
+  ALLOWED_CONTENT_TYPES = Set.new(['application/json', 'text/json', 'text/javascript'])
 
   # How long the content is allowed to be cached
   EXPIRY_TIME = 1.minute
@@ -25,7 +25,7 @@ class XhrProxyController < ApplicationController
     url = params[:u]
 
     begin
-      owner_storage_id, _ = storage_decrypt_channel_id channel_id
+      owner_storage_id, _ = storage_decrypt_channel_id(channel_id)
     rescue Exception => e
       render_error_response 403, "Invalid token: '#{channel_id}' for url: '#{url}' exception: #{e.message}"
       return
