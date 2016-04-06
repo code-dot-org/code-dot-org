@@ -58,14 +58,17 @@ var AnimationTab = function (props) {
         </div>
       </ResizablePanes>
       {props.isAnimationPickerShowing &&
-          <AnimationPicker handleClose={props.hideAnimationPicker} />}
+          <AnimationPicker
+              handleClose={props.hideAnimationPicker}
+              channelId={props.channelId} />}
     </div>
   );
 };
 
 AnimationTab.propTypes = {
-  isAnimationPickerShowing: React.PropTypes.bool.isRequired,
-  hideAnimationPicker: React.PropTypes.func.isRequired
+  channelId: React.PropTypes.string.isRequired,
+  hideAnimationPicker: React.PropTypes.func.isRequired,
+  isAnimationPickerShowing: React.PropTypes.bool.isRequired
 };
 
 module.exports = connect(function propsFromStore(state) {
