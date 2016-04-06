@@ -53,14 +53,14 @@ module SerializedProperties
 
       define_method(cleartext_property_name) do
         begin
-          Encryption::decrypt_object(read_attribute('properties')[property_name])
+          Encryption.decrypt_object(read_attribute('properties')[property_name])
         rescue OpenSSL::Cipher::CipherError, Encryption::KeyMissingError
           return nil
         end
       end
 
       define_method("#{cleartext_property_name}=") do |value|
-        read_attribute('properties')[property_name] = Encryption::encrypt_object(value)
+        read_attribute('properties')[property_name] = Encryption.encrypt_object(value)
       end
 
       define_method("#{cleartext_property_name}?") do
