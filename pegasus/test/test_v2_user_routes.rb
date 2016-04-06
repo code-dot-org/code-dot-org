@@ -9,7 +9,7 @@ require_relative 'fixtures/mock_pegasus'
 class V2UserRoutesTest < Minitest::Test
   describe 'User Routes' do
     before do
-      FakeDashboard::use_fake_database
+      FakeDashboard.use_fake_database
       $log.level = Logger::ERROR # Pegasus spams debug logging otherwise
       @pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
     end

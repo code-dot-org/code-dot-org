@@ -33,7 +33,7 @@ end
 delete '/v2/sections/:id' do |id|
   only_for 'code.org'
   dont_cache
-  forbidden! unless DashboardSection::delete_if_owner(id, dashboard_user_id)
+  forbidden! unless DashboardSection.delete_if_owner(id, dashboard_user_id)
   no_content!
 end
 post '/v2/sections/:id/delete' do |id|
@@ -44,7 +44,7 @@ patch '/v2/sections/:id' do |id|
   only_for 'code.org'
   dont_cache
   unsupported_media_type! unless payload = request.json_body
-  forbidden! unless section = DashboardSection::update_if_owner(payload.merge(id: id, user: dashboard_user))
+  forbidden! unless section = DashboardSection.update_if_owner(payload.merge(id: id, user: dashboard_user))
   content_type :json
   JSON.pretty_generate(section.to_owner_hash)
 end
@@ -73,7 +73,7 @@ end
 delete '/v2/sections/:id/students/:student_id' do |id, student_id|
   only_for 'code.org'
   dont_cache
-  forbidden! unless section = DashboardSection::fetch_if_teacher(id, dashboard_user_id)
+  forbidden! unless section = DashboardSection.fetch_if_teacher(id, dashboard_user_id)
   forbidden! unless section.remove_student(student_id)
   no_content!
 end

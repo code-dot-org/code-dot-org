@@ -565,7 +565,7 @@ def log_in_as(user)
     params[:domain] = '.code.org' # top level domain cookie
   end
 
-  puts "Setting cookie: #{CGI::escapeHTML params.inspect}"
+  puts "Setting cookie: #{CGI.escapeHTML params.inspect}"
 
   @browser.manage.delete_all_cookies
   @browser.manage.add_cookie params
@@ -652,7 +652,7 @@ When(/^I sign out$/) do
 end
 
 When(/^I debug cookies$/) do
-  puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
+  puts "DEBUG: url=#{CGI.escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
 end
 

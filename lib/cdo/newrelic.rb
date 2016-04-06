@@ -99,7 +99,7 @@ class NewRelicClient
     response = http.start { http.request(req) }
 
     if response.code == "200"
-      JSON::parse(response.body)
+      JSON.parse(response.body)
     else
       raise "HTTP Error #{response.code}: #{response.message} #{response.body}"
     end
