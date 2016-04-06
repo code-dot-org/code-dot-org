@@ -1027,6 +1027,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: "მაინკრაფტი"
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა"
@@ -1846,3 +1848,8 @@
             გარეშე: შეჯახების დაფიქსირება და მანძილის ფორმულა"
           'Play Lab: Collision Detection (Big Game)': "თამაშების ლაბორატორია: შეჯახების
             დაფიქსირება (დიდი თამაში)"
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

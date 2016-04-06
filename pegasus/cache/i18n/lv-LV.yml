@@ -676,6 +676,7 @@
   dashboard_navigation_all_sections: Skolēnu konti un progress
   dashboard_navigation_view_progress: Apskatīt sekmes
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Pievienot skolēnus
   dashboard_navigation_manage_students: Pārvaldīt skolēnus
   dashboard_navigation_lesson_plans_resources: Stundu plāni un resursi
@@ -794,6 +795,18 @@
   dashboard_puzzle: Puzle
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Pareizi
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Neticama statistika no pagāšā gada "Programmēšanas Stundas".
     Nieka nedēļā:'
   stats_hoc_2013_image_alt: Statistika no 2013 "Programmēšanas stunda"

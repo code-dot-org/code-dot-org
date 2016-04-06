@@ -32,6 +32,10 @@ content-type: text/ng-template
         %a{'ng-href' => "#/sections/{{section.id}}/responses"}= I18n.t('dashboard_navigation_view_text_responses')
 
       %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
+          'ng-class' => 'tab == "assessments" ? "active tab" : "tab"'}
+        %a{'ng-href' => "#/sections/{{section.id}}/assessments"}= I18n.t('dashboard_navigation_view_assessments')
+
+      %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
           'ng-class' => 'tab == "stats" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/stats"}= I18n.t('dashboard_navigation_view_stats')
 

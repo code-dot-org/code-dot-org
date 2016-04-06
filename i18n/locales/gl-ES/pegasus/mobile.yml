@@ -21,7 +21,7 @@ gl-ES:
   twentyhours_heading: Proba o noso curso de Introducción á Informática
   twentyhours_text: Remataches a túa primeira Hora do Código? Coñece máis sobre a informática e os conceptos de programación neste curso de seguimento.
   og_title: Todos os rapaces merecen unha oportunidade
-  og_description: Todos os rapaces de todas as escolas merecen a oportunidade de estudar informática e programación.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Únete a <a href="http://hourofcode.com">Hora do Código</a><br/>Decembro 8 - 14, 2014<br/>'
   hoc2014_students: Alumnas/os
   hoc2014_try: Próbao
@@ -179,7 +179,7 @@ gl-ES:
   learn_next_level: Probar outro curso do Code Studio
   learn_online: Proba outros cursos online
   learn_classes: Atopa clases preto de ti
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Eu xa rematei unha #HourofCode - Dalle un vistazo! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -521,6 +521,7 @@ gl-ES:
   dashboard_navigation_all_sections: Contas e progreso do alumno
   dashboard_navigation_view_progress: Exhibir progreso
   dashboard_navigation_view_text_responses: Ver respostas de texto
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Engadir alumnas/os
   dashboard_navigation_manage_students: Administrar as alumnas/os
   dashboard_navigation_lesson_plans_resources: Plans e recursos da clase
@@ -619,6 +620,18 @@ gl-ES:
   dashboard_puzzle: Quebracabeza
   dashboard_question: Pregunta
   dashboard_response: Resposta
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Certo
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Estatísticas incríbeis da Hora do Código do ano pasado. En só unha semana:'
   stats_hoc_2013_image_alt: Estatísticas da Hora do Código de 2013
   dashboard_teacher: Profesor
@@ -637,7 +650,7 @@ gl-ES:
   dashboard_faq_k5: Preguntas frecuentes sobre Primaria
   dashboard_announcements: Anuncios
   dashboard_announce_view_all: Ver todos
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Aprende máis
   dashboard_announce_hoc: '<b>23 de novembro 2015</b> -Gostarías de ter un informártico para te axudar durante a hora do Código? Máis de 7.000 voluntarios procuran motivar os teus estudantes visitando a túa clase ou mediante vídeo-conferencia. Bota un ollo ao mapa de voluntarios para contactar voluntarios na túa zona.'
   dashboard_announce_playlab: '<b>4 de decembro de 2015</b> - A Hora do Código chegou! Proba 50 titoriais para todas as idades e dispositivos. Novidades desta semana: programa as túas propias historias e xogos en novos laboratorios, coa Era do Xeo e Gumball.'

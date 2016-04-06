@@ -643,6 +643,7 @@
   dashboard_navigation_all_sections: "Õpilaste kontod ja edenemine"
   dashboard_navigation_view_progress: Vaata edenemist
   dashboard_navigation_view_text_responses: Vaata teksti vastuseid
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Lisa õpilasi
   dashboard_navigation_manage_students: "Õpilaste haldamine"
   dashboard_navigation_lesson_plans_resources: Tunnikavad ja ressursid
@@ -765,6 +766,18 @@
   dashboard_puzzle: Mõistatus
   dashboard_question: Küsimus
   dashboard_response: Vastus
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "Õige"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Eelmise aasta KoodiTunni uskumatud tulemused. Ainult ühe
     nädala jooksul:'
   stats_hoc_2013_image_alt: 2013. aasta TunniKoodi tulemused

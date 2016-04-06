@@ -253,11 +253,7 @@ nl:
       4-5 Artist For Loops 13_instruction: 'Dit ontwerp is begonnen zonder een "for" lus en gebruikt te veel blokken! Gebruik een "for" blok om de spiraal af te maken. Tip: de lengte van de laatste lijn is 250 pixels.'
       4-5 Artist For Loops 14_instruction: 'Iemand begon de code, maar besefte toen dat er een snellere manier moest zijn! Gebruik een "for" blok om de blokken te vervangen en de driehoekige spiraal af te maken (Tip: de lengte van de laatste lijn is 300 pixels).'
       4-5 Artist For Loops 15_instruction: 'Iemand begon de code, maar besefte toen dat er een snellere manier moest zijn! Gebruik een "for" blok om de blokken te vervangen en de zeshoekige spiraal af te maken (Tip: de lengte van de laatste lijn is 200 pixels).'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: 'Dit is een "for" blok. In plaats van 1,2,3... 10 te typen, kan het "for" blok de blokken in zichzelf herhalen en de getallen voor jou tellen. Plaats het getal 10 in de "to" sectie van het "for" blok.'
       4-5 Artist For Loops 3_instruction: 'Hoe kunnen we van 1 tot 50 tellen? Bewerk het "for" blok.'
       4-5 Artist For Loops 4_instruction: 'Maak het "for" blok af zodat het telt van 1 tot 10 met 1.'
       4-5 Artist For Loops 6_instruction: 'Teken vierkanten met zijden van 50, 60, 70, 80 en 90 pixels. Je zult de "teken een vierkant" functie vijf keer moeten gebruiken.'
@@ -371,7 +367,6 @@ nl:
       4-5 Maze 9_instruction: 'Maak een lus met het "herhaal tot" blok.'
       4-5 Maze Assessment 1_instruction: 'Test: Ga naar de zonnebloem.'
       4-5 Maze Conditionals 1_instruction: Gebruik het herhaal tot blok om de zombie bij de zonnebloem te brengen.
-      4-5 Maze Conditionals 10_instruction: Kun je slechts 3 blokken toevoegen om me te helpen een ingewikkelder doolhof op te lossen? Als je het goed doet kan ik elk kronkelig pad lopen, ongeacht de lengte.
       4-5 Maze Conditionals 2_instruction: Gebruik het herhaal tot blok om de zombie bij de zonnebloem te brengen.
       4-5 Maze Conditionals 3_instruction: 'Gebruik het "als" blok om me te laten beslissen wanneer te draaien. Tip: je hebt nog slechts een blok nodig, maar leer hoe wij het instelden zodat je het de volgende keer zelf kunt.'
       4-5 Maze Conditionals 4_instruction: 'OK, dit is net als de vorige puzzel, maar je moet onthouden hoe je het "als" blok en het "herhaal" blok samen gebruikte.'
@@ -1189,6 +1184,10 @@ nl:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "Dit is een test!\\r Beweeg me eerst één kant op, daarna een andere kant, om me bij het varken te krijgen"
       Course1MazeAssessment2_instruction: "Dit is een test!\\r Beweeg me eerst één kant op, daarna een andere kant, om me bij het varken te krijgen."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1637,6 +1636,8 @@ nl:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -1871,6 +1872,10 @@ nl:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Het is een slecht idee om tegen een Creeper aan te botsen. Beweeg voorzichtig langs de Creepers om veilig je huis te bereiken.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Hout is een zeer belangrijke grondstof. Veel dingen zijn ervan gemaakt. Loop naar de boom en gebruik het \“vernietig blok\”-commando om hem om te hakken.'
       Overworld Chop Trees_instruction: We moeten een huis bouwen voordat de zon ondergaat. Voor een huis is veel hout nodig. Hak alle drie bomen om.
       Overworld Free Play 20x20_instruction: Gefeliciteerd! Je hebt al onze puzzels voltooid! Nu kun je wat je hebt geleerd gebruiken om te delven en te bouwen, om zo iets unieks te maken.
@@ -2071,6 +2076,10 @@ nl:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -2084,6 +2093,12 @@ nl:
       Ryan - Bee Conditionals_instruction: |
         De bij wil nu alleen nectar.
         Niet alles is een bloem, dus kijk onder ELKE WOLK of daar een bloem is verstopt. Zo ja, verzamel dan de nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: 'Hier is een functie genaamd "patrol". Bewerk hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten bewegen.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |

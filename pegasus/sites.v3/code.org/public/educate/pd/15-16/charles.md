@@ -16,7 +16,7 @@ nav: pd2_nav
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-Teachers from Charles County, Maryland will attend PD in Charles County and connect the to Broward CSP workshop virtually. 
+Teachers from Charles County, Maryland will attend PD in Montogomery County with the New York City Cohort. 
 
 **Save the Date:**
 

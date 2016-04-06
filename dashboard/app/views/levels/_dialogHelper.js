@@ -106,7 +106,7 @@ window.dashboard.dialog = (function () {
     // Avoid multiple simultaneous submissions.
     submitButton.attr('disabled', true);
 
-    var onComplete = function(willRedirect) {
+    var onComplete = function (willRedirect) {
       if (!willRedirect) {
         $('.submitButton').attr('disabled', false);
       }

@@ -464,11 +464,9 @@
         cuenta que debe haber una manera más rápida! Utilice un bloque \"for\" para
         reemplazar los bloques y completar la espiral hexagonal.\nSugerencia: \nLa
         longitud de la última línea es de 200 píxeles.\n"
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: Este es un bloque "para". En lugar de escribir
+        1,2,3... 10, el bloque 'para' puede repetir los bloques en su interior y cuentan
+        los números. Coloque el número 10 en la sección "a" del bloque "para".
       4-5 Artist For Loops 3_instruction: |
         ¿Cómo podemos contar de 1 a 50?
         Editar el bloque "for" .
@@ -705,9 +703,6 @@
         Evaluzción: LLega hasta el girasol.
       4-5 Maze Conditionals 1_instruction: Utiliza el bloque repetir hasta para llevar
         al zombie hasta el girasol.
-      4-5 Maze Conditionals 10_instruction: "¿Puedes agregar sólo tres bloques para
-        ayudarme a resolver un laberinto más complejo? si lo haces correctamente,
-        puedo caminar cualquier camino curvo sin importar la longitud."
       4-5 Maze Conditionals 2_instruction: Utiliza el bloque repetir hasta para llevar
         al zombie hasta el girasol.
       4-5 Maze Conditionals 3_instruction: 'Utiliza el bloque "if" para dejarme decidir
@@ -2007,6 +2002,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2625,6 +2624,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2987,6 +2988,10 @@
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Ir contra un Creeper no es buena idea.
         Evítalos con cuidado y llega a casa para estar a salvo.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: La madera es un recurso muy importante. Sirve
         para hacer muchas cosas. Ve hacia el árbol y usa el comando "destruir bloque"
         para talarlo.
@@ -3219,6 +3224,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: Estas nubes me están molestando! Algunas de
         las nubes tienen flores dentro, y otras no. Debo comprobar cada nube y obtener
         el néctar sólo de las flores.
@@ -3232,6 +3241,12 @@
       Ryan - Bee Conditionals_instruction: La abeja sólo quiere néctar ahora. No todos
         los objetos son flores, así que mira debajo de TODAS LAS NUBES para verlo
         si esta escondiendo una flor. Si es así, puedes coger néctar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Aquí hay una función denominada "patrulla".
         Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400
         píxeles.

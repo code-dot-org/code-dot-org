@@ -328,7 +328,6 @@ bg:
       4-5 Maze 9_instruction: 'Създай повторение(цикъл) с "повтаряй докато" блок.'
       4-5 Maze Assessment 1_instruction: 'Оценяване: Стигни до слънчогледа.'
       4-5 Maze Conditionals 1_instruction: Използвайте блока за повторение, за да заведете зомбито до слънчогледа.
-      4-5 Maze Conditionals 10_instruction: Можеш ли да добавиш само 3 блока, за да ми помогнеш да разгадая един по-сложен лабиринт? Ако го направиш правилно, аз ще мога да вървя по всяка крива пътека, независимо колко е дълга.
       4-5 Maze Conditionals 2_instruction: Използвайте блока за повторение, за да заведете зомбито до слънчогледа.
       4-5 Maze Conditionals 3_instruction: 'Използвай "Ако" блок, за да ми позволиш да реша кога да обърна. Съвет: трябва само още един блок, но научи как ние правим цялото нещо, така че да можеш ти сам да го направиш следващия път.'
       4-5 Maze Conditionals 4_instruction: 'Добре, това е точно като последната загадка, но трябва да си спомниш как използва заедно блока "ако" и блока "повтаряй".'
@@ -750,7 +749,7 @@ bg:
       Course 2 Maze Loops 1_instruction: Можеш ли да ме заведеш до прасето с 5 блока?
       Course 4 2_instruction: Пчелата иска нектар точно сега. Не забравяйте, не всички обекти са цветя, така че проверете цветята за събиране на нектар.
       Course 4 Artist 1_instruction: 'Помогнете ми да завърша моята кутия. (Всеки ред е дълъг 200 пиксела) '
-      Course 4 Artist 10_instruction: "Щракнете тук, за да видите съветите отново! \\r \\r Тук е кодът за създаване на интересна форма.  Какво се случва, когато го повтаряте?   При завоите в тази форма се добавят до 420 градуса, което означава, че когато вашият художник  прави чертеж, той ще бъде е с различна посока от първоначалната.  Тази нова посока е точно 60 градуса вдясно от мястото, където сте започнали."
+      Course 4 Artist 10_instruction: 'Сега е време за импровизации! Забавлявайте се и направете това, което Ви харесва. '
       Course 4 Artist 11_instruction: 'Сега е време за  предизвикателство!  Ето един дизайн, който използва само блокове, които вече са показали.  Можеш ли да разбереш как да го пресъздадеш без никаква допълнителна информация?  Съвет: Чувствай се свободен да пробваш колкото е нужно. Не е задължително да успееш от  първия път.'
       Course 4 Artist 12_instruction: "Искате ли втори поглед на как да създадете вдъхновен дизайн или съвети?  Щракнете тук! \\r \\r Или направете собствен дизайн!"
       Course 4 Artist 13_instruction: 'Искате ли още да поиграете?  Ето чисто платно, където можете да проектирате каквото искате!'
@@ -759,7 +758,7 @@ bg:
       Course 4 Artist 3_instruction: 'Добре, опитайте се да разберете какво ще стане ако стартирате този код (или натиснете "Старт", за да го пробвате). След това го повторете достатъчно пъти, за да завършите чертежа.'
       Course 4 Artist 4_instruction: 'Колко градуса има една окръжност?  Попълнете блокът за повторение с такова число, че да се създаде кръг от цветове.'
       Course 4 Artist 5_instruction: 'Начертайте другата половина на този дизайн така, че да е симетричен. Триъгълниците са равностранни и с дължина  на страната 50 пиксела.'
-      Course 4 Artist 6_instruction: 'Попълнете кода, за да начертаете тези триъгълници. Съвет: 3 триъгълници за 360 градуса завъртане. Колко пъти 3 се съдържа в 360?'
+      Course 4 Artist 6_instruction: 'Попълнете кода, за да начертаете тези триъгълници. Съвет: 3 триъгълници за 360 градуса завъртане.'
       Course 4 Artist 7_instruction: 'Сега, внесете този цикъл в друг, за да начертаете 10 триъгълници.  Това се нарича вложен цикъл.  Съвет: Всички 10 триъгълници образуват окръжност от 360 градуса.  '
       Course 4 Artist 8_instruction: Начертайте това слънце като повторите целия блок от код 12 пъти.
       Course 4 Artist 8a_instruction: "Запомнихте ли тази форма?  Сега  ще  Ви позволим да я изградите без да даваме предварително блокове! \\r Съвет: има 3 триъгълника в рамките на 360 градуса ротация... колко пъти 360 се дели 3?"
@@ -1012,6 +1011,10 @@ bg:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1457,6 +1460,8 @@ bg:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -1687,6 +1692,10 @@ bg:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Тичането по пълзящи растения е лоша идея. Внимателно се придвижете покрай шиповете и достигнете безопасно до дома.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Дървесината е много важен ресурс. Много неща са направени от нея. Отидете до дървото и използвайте командата "унищожи блок", за да го отрежете.'
       Overworld Chop Trees_instruction: Преди да залезе слънцето трябва да построим къща. Къщите изискват много дървен материал. Отсечете всички 3 дървета.
       Overworld Free Play 20x20_instruction: Поздравления! Вие приключите всички наши пъзели! Сега копайте, изградете и създайте нещо уникално с помощта на всичко, което сте научили досега.
@@ -1882,6 +1891,10 @@ bg:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -1889,6 +1902,12 @@ bg:
       Quantum Bee_instruction: 'Лилавите цветя могат да имат 1 или 0 нектар, но не знаем кои имат и кои не! Бъдете внимателни и не събирайте от лилаво цвете, което няма нектар. Проверете дали нектара е равен на 1 с помощта на "ако" блок.'
       Ryan - 4-5 Bee Conditionals 2_instruction: Пчела иска нектар точно сега. Не всички обекти са цветя, така че проверете всеки ОБЛАК, за да се види дали отдолу се крие цвете. Ако е така, тогава можете да съберете нектар.
       Ryan - Bee Conditionals_instruction: Пчелата иска само нектар сега. Не всички обекти под облачетата са цветя, така че направете проверка и събирайте нектар само от цветята.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Тази функция се нарича "патрул". 
         Редактирайте я, за да преместите котката с 400 пиксела нагоре или надолу.

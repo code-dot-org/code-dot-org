@@ -5,9 +5,9 @@
 
 var dom = require('./dom');
 var msg = require('./locale');
-var HintSelect = require('./templates/HintSelect.jsx');
-var HintsDisplay = require('./templates/HintsDisplay.jsx');
-var HintDialogContent = require('./templates/HintDialogContent.jsx');
+var HintSelect = require('./templates/instructions/HintSelect.jsx');
+var HintsDisplay = require('./templates/instructions/HintsDisplay.jsx');
+var HintDialogContent = require('./templates/instructions/HintDialogContent.jsx');
 var authoredHintUtils = require('./authoredHintUtils');
 var Lightbulb = require('./templates/Lightbulb.jsx');
 
@@ -127,7 +127,7 @@ AuthoredHints.prototype.init = function (hints, scriptId, levelId) {
  *        lightbulb
  * @param {Element} clickTarget
  * @param {function} callback - a StudioApp function to be treated as
- *        the "default" action when there are no unseen hints. 
+ *        the "default" action when there are no unseen hints.
  */
 AuthoredHints.prototype.display = function (promptIcon, clickTarget, callback) {
   this.promptIcon = promptIcon;
@@ -172,7 +172,7 @@ AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
 AuthoredHints.prototype.updateLightbulbDisplay_ = function (shouldAnimate) {
   shouldAnimate = shouldAnimate || false;
 
-  var hintCount = this.getUnseenHints().length; 
+  var hintCount = this.getUnseenHints().length;
 
   // If we have hints to show, but are not in the DOM, insert ourselves
   // into the DOM. This can happen when contextual hints appear in a
@@ -183,25 +183,33 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function (shouldAnimate) {
     this.promptIcon.parentNode.insertBefore(this.lightbulb, this.promptIcon);
   }
 
-  ReactDOM.render(React.createElement(Lightbulb, {
-    count: hintCount,
-    lit: hintCount > 0,
-    shouldAnimate: shouldAnimate,
-  }), this.lightbulb);
+  ReactDOM.render(
+    <Lightbulb
+        count={hintCount}
+        lit={hintCount > 0}
+        shouldAnimate={shouldAnimate}/>,
+    this.lightbulb);
 };
 
-AuthoredHints.prototype.getHintsDisplay = function () {
-  var hintsDisplay = React.createElement(HintsDisplay, {
-    hintReviewTitle: msg.hintReviewTitle(),
-    seenHints: this.getSeenHints(),
-    unseenHints: this.getUnseenHints(),
-    onUserViewedHint: function () {
-      var nextHint = this.getUnseenHints()[0];
-      this.recordUserViewedHint_(nextHint);
-    }.bind(this)
-  });
+/**
+ * Marks the next unseen hint as being viewed.
+ */
+AuthoredHints.prototype.userViewedHint_ = function () {
+  var nextHint = this.getUnseenHints()[0];
+  this.recordUserViewedHint_(nextHint);
+};
 
-  return hintsDisplay;
+/**
+ * @returns {React.Element}
+ */
+AuthoredHints.prototype.getHintsDisplay = function () {
+  return (
+    <HintsDisplay
+      hintReviewTitle={msg.hintReviewTitle()}
+      seenHints={this.getSeenHints()}
+      unseenHints={this.getUnseenHints()}
+      onUserViewedHint={this.userViewedHint_.bind(this)}/>
+  );
 };
 
 /**
@@ -214,7 +222,7 @@ AuthoredHints.prototype.getHintsDisplay = function () {
 AuthoredHints.prototype.showHint_ = function (hint, callback) {
   $('#prompt-icon').qtip({
     content: {
-      text: function(html, api) {
+      text: function (html, api) {
         var container = document.createElement('div');
 
         var element = React.createElement(HintSelect, {
@@ -266,4 +274,3 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
     show: false // don't show on mouseover
   }).qtip('show');
 };
-

@@ -999,6 +999,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Informatika algebroje
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -1811,3 +1813,8 @@
             susidūrimo aptikimas ir atstumo formulė'
           'Play Lab: Collision Detection (Big Game)': "Žaidimų laboratorija: Susidūrimo
             nustatymas (Big Game)"
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

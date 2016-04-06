@@ -646,6 +646,7 @@
   dashboard_navigation_all_sections: "บัญชีผู้ใช้ของนักเรียนและความคืบหน้า"
   dashboard_navigation_view_progress: "ดูความคืบหน้า"
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "เพิ่มนักเรียน"
   dashboard_navigation_manage_students: "จัดการนักเรียน"
   dashboard_navigation_lesson_plans_resources: "แผนการเรียนและแหล่งข้อมูล"
@@ -753,6 +754,18 @@
   dashboard_puzzle: "ปริศนา"
   dashboard_question: "คำถาม"
   dashboard_response: "คำตอบ"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Correct
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "สถิติที่น่าทึ่งของ Hour of Code.  ในหนึ่งสัปดาห์ "
   stats_hoc_2013_image_alt: "สถิติจาก Hour of Code ปี 2013 "
   dashboard_teacher: "ครู"

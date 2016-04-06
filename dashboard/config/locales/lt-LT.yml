@@ -26,6 +26,7 @@
   welcome_back: Sveiki sugrįžę, %{name}
   submit: Pateikti
   unsubmit: Atšaukti
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Pridėti mokytoją:'
@@ -399,6 +400,8 @@
       teisės saugomos. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
       Arts Inc. Visos teisės saugomos. The Amazing World of Gumball is trademark and
       &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: 'Rėmėjas: Amazon Web Services'
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotipas ir
       „Programavimo valanda“&reg; yra Code.org priklausantys prekės ženklai."
@@ -542,7 +545,6 @@
       tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas."
     prerelease_hoc2014: "Šios pamokėlės yra <span class='betatext'>beta versijoje</span>.
       Į pasiūlymus ir klaidų pranešimus bus atsižvelgta."
-    feedback: Pateikti atsiliepimus
     report_bug: Pranešti apie problemą
     support: Pagalba
     support_url: "//support.code.org"
@@ -561,6 +563,16 @@
     correct_body: Ačiū už atsakymą.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Ačiū
+    wrong_body: Ačiū už atsakymą
+    correct_title: Ačiū
+    correct_body: Ačiū už atsakymą
+  level_group-submittable:
+    wrong_title: Ačiū
+    wrong_body: Ačiū už atsakymą
+    correct_title: Ačiū
+    correct_body: Ačiū už atsakymą
   match:
     wrong_title: Neteisingas sprendimas
     wrong_body: Sprendimas, kurį įvedei, nėra teisingas. Pamėgink dar kartą!
@@ -580,9 +592,8 @@
     placeholder: "Įveskite savo atsakymą čia"
     open_response_title: Ačiū
     open_response_body: Ačiū už atsakymą!
-  level_group:
-    correct_title: Ačiū
-    correct_body: Ačiū už atsakymą
+    correct_title: Teisingai
+    correct_body: Tai yra teisingas atsakymas.
   dialog:
     ok: gerai
     startover_title: Ar tikrai norite pradėti iš naujo?
@@ -715,3 +726,7 @@
         acknowledge: Pateikdami šią informaciją Jūs sutinkate, kad ji bus naudojama
           pagal %{link_start_privacy}Privatumo politiką%{link_end} ir %{link_start_tos}Naudojimosi
           sąlygas%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

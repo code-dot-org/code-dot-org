@@ -79,16 +79,22 @@ class UserScriptTest < ActiveSupport::TestCase
     #If I have to do this boilerplate setup a lot, put this in a common file
     @script.update(pd: true)
     course = create(:plc_course)
+    course_unit = create(:plc_course_unit, plc_course: course)
     learning_module = create(:plc_learning_module)
     task1 = create(:plc_script_completion_task, plc_learning_module: learning_module, script_id: @script.id, name: 'script 1')
     task2 = create(:plc_script_completion_task, plc_learning_module: learning_module, script_id: @script.id + 50, name: 'script 2')
 
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: course)
-    enrollment.enroll_user_in_course_with_learning_modules([learning_module])
+    unit_enrollment = Plc::EnrollmentUnitAssignment.create(
+      plc_user_course_enrollment: enrollment,
+      plc_course_unit: course_unit,
+      status: Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
+    )
+    unit_enrollment.enroll_user_in_unit_with_learning_modules([learning_module])
 
     #First should be completed, second should not
-    task_assignment = enrollment.plc_task_assignments.find_by(plc_task: task1)
-    never_completed_task_assignment = enrollment.plc_task_assignments.find_by(plc_task: task2)
+    task_assignment = unit_enrollment.plc_task_assignments.find_by(plc_task: task1)
+    never_completed_task_assignment = unit_enrollment.plc_task_assignments.find_by(plc_task: task2)
 
     assert_equal 'not_started', task_assignment.status
     @script_levels.each do |script_level|

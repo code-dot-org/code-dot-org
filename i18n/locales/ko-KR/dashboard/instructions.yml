@@ -44,16 +44,11 @@ ko:
       2-3 Artist Debugging 9_instruction: "뭔가 이상해요!\\r\n\\r\n줄기를 그리는 코드가 틀렸네요. 화가가 줄기를 정확히 그리려면 어떻게 해야할까요?"
       2-3 Artist Debugging Assessment 1_instruction: "형성평가: 이 75 픽셀 크기의 사각형으로는 작은가요? \\r\n\\r\n코드의 어느 부분을 고쳐야할까요?"
       2-3 Artist Free Play_instruction: '자유 플레이: 원하는 것을 그려보세요.'
-      2-3 Artist Functions 1_instruction: |
-        안녕하세요. 저는 좀비 화가입니다. 그림 그리기 좋아요!
-        사각형 안경을 그릴 수 있게 도와주세요. 힌트: 안경 알 사이의 길이는
-        안경 한 변의 길이보다 25 픽셀 만큼 작습니다.
+      2-3 Artist Functions 1_instruction: "\"나 화가. 좀비... 그리기 좋아..!\" \\r\n\\r\n사각형 안경을 그릴 수 있게 도와주세요. \\r\n\\r\n안경 알 사이의 다리는 안경 한 변의 길이보다 25 픽셀 만큼 작습니다."
       2-3 Artist Functions 10_instruction: |
         여기에 두 개의 함수가 있습니다. 하나는 큰 기어를 그리는 것이고, 하나는 작은 기어를 그리는 것입니다.
         기계의 내부를 그리는데 사용해보세요!
-      2-3 Artist Functions 11.5_instruction: |
-        여기에 똑같은 "육각형 그리기" 함수가 있습니다.
-        반복 할 때마다 60 도씩만 회전하면 어떻게 될까요?
+      2-3 Artist Functions 11.5_instruction: "여기에 똑같은 '육각형 그리기' 함수가 있습니다. \\r\n\\r\n반복 할 때마다 60도씩 회전시키면 어떻게 될까요?"
       2-3 Artist Functions 11_instruction: |
         “사각형 그리기” 함수의 이름을 “육각형 그리기”로 바꿨지만, 여전히 이 함수는 사각형을 그리고 있습니다!
         "육각형 그리기" 함수를 수정해서, 한 변의 길이가 50 픽셀인 육각형을 그려보세요.
@@ -72,7 +67,7 @@ ko:
       2-3 Artist Functions 3_instruction: |
         한 변의 길이가 115 인 사각형을 그려 더 큰 안경을 만들어보세요.
         사각형들은 이제 45 픽셀 만큼 떨어져 있습니다.
-      2-3 Artist Functions 4_instruction: “반복” 블록을 사용해서 이 정사각형을 3개 그려보세요.
+      2-3 Artist Functions 4_instruction: '이제, 함수를 "반복" 블록 안에 넣고 3개의 사각형을 그려보세요.'
       2-3 Artist Functions 7_instruction: |
         2개의 서로 매개 변수가 있는 "집 그리기" 함수를 이용해 2개의 집을 그려보세요.
         (힌트: 첫 번째 집은 100 픽셀입니다.)
@@ -517,7 +512,6 @@ ko:
       4-5 Maze Conditionals 1_instruction: |
         "반복 ~할 때까지"블록을 이용해서,
         좀비를 해바라기로 이동시켜주세요.
-      4-5 Maze Conditionals 10_instruction: 더 복잡한 미로를 풀 수 있도록 3개의 블록만 더 더해 주실 수 있으세요? 그렇게만 된다면, 얼마나 멀던지 상관없이 구부러진 길에서 돌아갈 수 있을 것 같아요.
       4-5 Maze Conditionals 2_instruction: |
         "반복 ~할 때까지"블록을 이용해서,
         좀비를 해바라기로 이동시켜주세요.
@@ -1470,6 +1464,10 @@ ko:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1947,6 +1945,8 @@ ko:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2271,6 +2271,10 @@ ko:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: 크리퍼와 마주치는 건 좋지 않습니다. 크리퍼를 조심스럽게 지나쳐서 안전한 집에 도달하세요.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: '나무는 매우 중요한 자원입니다. 나무로 많은 것들을 만들 수 있지요. 나무로 걸어간 후 "블록 부수기" 명령을 이용해 나무를 베세요.'
       Overworld Chop Trees_instruction: 해가 지기 전에 집을 지어야 해요. 집을 지으려면 나무가 많이 필요하죠. 나무 3그루를 모두 베세요.
       Overworld Free Play 20x20_instruction: 축하해요! 모든 퍼즐을 완료했어요! 이제 여태까지 배운 모든 것을 이용해서 채굴하고 건설하며 무언가 독특한 것을 만들어보세요.
@@ -2486,6 +2490,10 @@ ko:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         이 구름들이 짜증나게 하네요! 어떤 구름 아래에만 꽃이 있습니다.
         구름들을 하나씩 모두 검사해서 꽃인 경우에만 꽃꿀을 뽑아야 합니다.
@@ -2498,6 +2506,12 @@ ko:
         꿀벌은 지금 꽃꿀이 필요합니다.
         모두 꽃은 아니기 때문에, 안개 구름이 있는 모든 곳에서 꽃이 숨어있는지 확인해 보아야 합니다.
         꽃이 있으면 꿀을 모으면 됩니다.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         "순찰" 함수가 있습니다.
         함수를 수정해서 고양이가 400 픽셀 위로 이동 했다가, 다시 400 픽셀 아래로 이동하게 해보세요.

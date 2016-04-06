@@ -1026,6 +1026,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Informatique en DP d'algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
@@ -1840,3 +1842,8 @@
             : la détection de collision et la formule de la distance'
           'Play Lab: Collision Detection (Big Game)': 'Labo : détection de Collision
             (grand jeu)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

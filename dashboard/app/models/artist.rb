@@ -41,7 +41,7 @@ class Artist < Blockly
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['artist', 'artist_zombie', 'elsa', 'anna']
+    %w(artist artist_zombie elsa anna)
   end
 
   def self.create_from_level_builder(params, level_params)

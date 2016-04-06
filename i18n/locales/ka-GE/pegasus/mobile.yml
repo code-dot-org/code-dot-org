@@ -21,7 +21,7 @@ ka-GE:
   twentyhours_heading: სცადეთ ჩვენი პროგრამირების კურსი
   twentyhours_text: დაასრულეთ თქვენი პირველი კოდის ერთი საათი? გაიგეთ მეტი ინფორმატიკისა და პროგრამირების შესახებ მომდევნო კურსში.
   og_title: ყოველი ბავშვი იმსახურებს შესაძლებლობას
-  og_description: ყოველი სკოლის ყოველ მოსწავლეს უნდა ჰქონდეს შესაძლებლობა ისწავლოს პროგრამირება.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'შეუერთდით<a href="http://hourofcode.com">კოდის ერთ საათს</a><br/> 2014 წლის დეკემბერში<br/>'
   hoc2014_students: მოსწავლეები
   hoc2014_try: სცადეთ
@@ -179,7 +179,7 @@ ka-GE:
   learn_next_level: კოდის სტუდიის სხვა კურსზე გადასვლა
   learn_online: სცადეთ სხვა ონლაინ-კურსები
   learn_classes: იპოვეთ ადგილობრივი კლასები
-  hoc_is_here: უკანასკნელი კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის ფარგლებში კოდის ერთი საათი 50–მა მილიონმა მოსწავლემ გაიარა. https://youtu.be/Ofze6CWUCx8.
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'ახლახან დავასრულე #HourOfCode - ნახე! @codeorg'
   just_did_course1: 'ახლახან დავასრულე 1-ლი კურსი - ნახე! @codeorg'
   just_did_course2: 'ახლახან დავასრულე მე–2 კურსი - ნახე! @codeorg'
@@ -484,6 +484,7 @@ ka-GE:
   dashboard_navigation_all_sections: მოსწავლეების ანგარიშები და პროგრესი
   dashboard_navigation_view_progress: პროგრესის ნახვა
   dashboard_navigation_view_text_responses: ტექსტური პასუხების ნახვა
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: მოსწავლეებს დამატება
   dashboard_navigation_manage_students: სტუდენტების მართვა
   dashboard_navigation_lesson_plans_resources: გაკვეთილების გეგმები და რესურსები
@@ -582,6 +583,18 @@ ka-GE:
   dashboard_puzzle: თავსატეხი
   dashboard_question: კითხვა
   dashboard_response: პასუხი
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: სწორია
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'წარმოუდგენელი სტატისტიკა წინა წლის კოდის ერთი საათიდან. მხოლოდ ერთი კვირის განმავლობაში:'
   stats_hoc_2013_image_alt: 2013 წლის კოდის ერთი საათის სტატისტიკა
   dashboard_teacher: მასწავლებელი

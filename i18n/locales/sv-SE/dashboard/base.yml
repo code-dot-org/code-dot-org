@@ -27,6 +27,7 @@ sv:
   welcome_back: 'Välkommen tillbaka, %{name}'
   submit: Skicka in
   unsubmit: Ångra Inlämnad
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Lägg till lärare:'
@@ -349,6 +350,7 @@ sv:
     help_from_html_old: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte till med att skapa detta material.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Drivs av Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotypen och Hour of Code&reg; är varumärken som tillhör Code.org.'
     copyright: Copyright
@@ -468,7 +470,6 @@ sv:
   landing:
     prerelease: "Denna kurs är i <span class='betatext'> beta</span>.  Detta innebär att det inte är den slutliga versionen av kursen, och är föremål för översyn allt eftersom feedback tas emot och förbättringar görs."
     prerelease_hoc2014: "Den här övningen är en <span class='betatext'>betaversion</span>.  Den revideras allteftersom synpunkter kommer in och förbättringar görs."
-    feedback: Ge feedback
     report_bug: Rapportera bugg
     support: Få hjälp
     support_url: //support.code.org
@@ -487,6 +488,16 @@ sv:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tack
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tack
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Fel lösning
     wrong_body: 'Din lösning är inte rätt.  Försök pånytt!'
@@ -504,9 +515,8 @@ sv:
     placeholder: Skriv in ditt svar här
     open_response_title: Tack
     open_response_body: Tack för ditt svar!
-  level_group:
-    correct_title: Tack
-    correct_body: Thank you for submitting an answer
+    correct_title: Rätt
+    correct_body: Det är det rätta svaret.
   dialog:
     ok: Ok
     startover_title: Är du säker på att du vill börja om?
@@ -617,3 +627,7 @@ sv:
           other: Annat
         detail: Ange så mycket information som möjligt angående innehållet du rapporterar.
         acknowledge: 'Genom att skicka denna information, erkänner du att det kommer att hanteras i enlighet med villkoren i den %{link_start_privacy}Privacy Policy%{link_end} och %{link_start_tos}Terms av Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: Inga ikoner hittades

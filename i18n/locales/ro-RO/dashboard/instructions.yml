@@ -526,7 +526,6 @@ ro:
       4-5 Maze 9_instruction: 'Creează o buclă cu blocul "repetă până când".'
       4-5 Maze Assessment 1_instruction: 'Evaluare: Du-te la floarea-soarelui.'
       4-5 Maze Conditionals 1_instruction: 'Utilizează blocul "repetă până când" pentru a-l duce pe zombie la floarea-soarelui.'
-      4-5 Maze Conditionals 10_instruction: Poți adăuga doar 3 blocuri pentru a mă ajuta să rezolv un labirint mai complex? Dacă o faci corect, eu pot străbate orice cale curbată indiferent de lungime/durată.
       4-5 Maze Conditionals 2_instruction: 'Utilizează blocul "repetă până când" pentru a-l duce pe zombie la floarea-soarelui.'
       4-5 Maze Conditionals 3_instruction: 'Folosește blocul "dacă" pentru a mă lăsa pe mine să decid când să virez. Sugestie: ai nevoie numai de un bloc în plus, dar învață cum le aranjăm noi ca să poți proceda și tu la fel data viitoare.'
       4-5 Maze Conditionals 4_instruction: 'Ok, acesta este la fel cu ultimul puzzle dar trebuie să-ți amintești cum ai folosit blocul "dacă" și blocul "repetă" împreună.'
@@ -1306,6 +1305,10 @@ ro:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1756,6 +1759,8 @@ ro:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2000,6 +2005,10 @@ ro:
       Overworld Avoid Monsters_instruction: |
         Intalnirea unui Vierme nu este o idee buna.
         Mergeti cu atentie pe langa ei si ajungeti in siguranta in casa.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Lemnul este o resursa importanta. Se pot construi multe cu ajutorul lui. Mergeti la copac si utilizati blocul "Distrugeti" pentru a-l taia.'
       Overworld Chop Trees_instruction: 'Trebuie sa construim o casa inainte de apus. Este necesar mult lemn. Taie toti cei trei copaci. '
       Overworld Free Play 20x20_instruction: Felicitări! Ai finalizat toate puzzle-urile! Acum extrage, construieste si creeaza ceva unic folosind tot ceea ce ai invatat pana acum.
@@ -2200,6 +2209,10 @@ ro:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -2214,6 +2227,12 @@ ro:
         Albina vrea doar nectar acum.
         Nu toate obiectele sunt flori, așa că verifică FIECARE NOR pentru a vedea
         dacă ascunde o floare. Dacă da, atunci poți aduna nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Aici este o funcţie numită "patrol."
         Editeaz-o pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli.

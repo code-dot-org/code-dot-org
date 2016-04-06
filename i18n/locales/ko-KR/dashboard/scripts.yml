@@ -929,6 +929,8 @@ ko:
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: 마인크래프트
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: '단계 2 온라인: 혼합된 여름 공부'
@@ -1641,3 +1643,8 @@ ko:
           "Eval: Conditionals": '평가: 조건/선택'
           "Unplugged: Collision Detection and the Distance Formula": '언플러그드: 충돌 감지와 거리 계산식'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: 충돌 감지 (빅 게임)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

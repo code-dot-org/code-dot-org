@@ -376,6 +376,6 @@ exports.makeContinueButton = function (onPanel) {
       },
       {
         secondary: false,
-        classes: [ 'submitButton' ]
+        classes: ['submitButton']
       });
 };

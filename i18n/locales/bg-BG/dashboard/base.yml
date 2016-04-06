@@ -25,6 +25,7 @@ bg:
   welcome_back: 'Добре дошли отново, %{name}'
   submit: Изпрати
   unsubmit: Не е добавено
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Добавете учител:'
@@ -342,6 +343,7 @@ bg:
     help_from_html_old: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за създаването на тези материали.
     art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Всички права запазени. < br / > Междузвездни войни &#8482; © %{current_year} Дисни и Lucasfilm. Всички права запазени. < br / > замразени &#8482; © %{current_year} Disney. Всички права запазени. < br / > Ледена епоха &#8482; © %{current_year} 20th Century Fox. Всички права запазени. < br / > ядосан птици &#8482; © 2009-%{current_year} Rovio Ентъртеймънт Оод Всички права запазени. < br / > растения срещу зомбита &#8482; © %{current_year} Electronic Arts Инк. Всички права запазени. < br / > Невероятният свят на Гъмбол е запазена марка и © 2015 Картун Нетуърк.'
     art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Всички права запазени. Междузвездни войни &#8482; © %{current_year} Дисни и Lucasfilm. Всички права запазени. Замразени &#8482; © %{current_year} Disney. Всички права запазени. Ледена епоха &#8482; © %{current_year} 20th Century Fox. Всички права запазени. Ядосан птици &#8482; © 2009-%{current_year} Rovio Ентъртеймънт Оод Всички права запазени. Растения срещу зомбита &#8482; © %{current_year} Electronic Arts Инк. Всички права запазени. Невероятният свят на Гъмбол е запазена марка и © 2015 Картун Нетуърк.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Създадено с Amazon Web Services
     trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, the CODE logo и Hour of Code&reg; са търговски марки на Code.org.'
     copyright: Авторско право
@@ -461,7 +463,6 @@ bg:
   landing:
     prerelease: "Този курс е в <span class='betatext'> бета версия</span>.  Това означава, че не е окончателната версия на курса и е предмет на преразглеждане и подобрения."
     prerelease_hoc2014: "Този урок е в <span class='betatext'> бета версия</span>.  Това означава, че е предмет на преразглеждане и подобрения."
-    feedback: Дайте обратна връзка
     report_bug: Доклад за бъгове
     support: Получаване на помощ
     support_url: //support.code.org
@@ -480,6 +481,16 @@ bg:
     correct_body: Благодаря Ви, че подадохте отговор.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Благодаря
+    wrong_body: Благодаря Ви, че подадохте отговор
+    correct_title: Благодаря
+    correct_body: Благодаря Ви, че подадохте отговор
+  level_group-submittable:
+    wrong_title: Благодаря
+    wrong_body: Благодаря Ви, че подадохте отговор
+    correct_title: Благодаря
+    correct_body: Благодаря Ви, че подадохте отговор
   match:
     wrong_title: Неправилно решение
     wrong_body: 'Решението, което сте въвели не е правилно.  Моля опитайте отново!'
@@ -497,9 +508,8 @@ bg:
     placeholder: Въведете отговора си тук
     open_response_title: Благодаря
     open_response_body: Благодаря за вашия отговор!
-  level_group:
-    correct_title: Благодаря
-    correct_body: Благодаря Ви, че подадохте отговор
+    correct_title: Правилно
+    correct_body: Това е верният отговор.
   dialog:
     ok: OK
     startover_title: Наистина ли искате да започнете отначало?
@@ -610,3 +620,7 @@ bg:
           other: Друго
         detail: Моля, опишете подробно колкото е възможно съдържанието, за което съобщавате.
         acknowledge: 'С подаването на тази информация, Вие се съгласявате, че тя ще бъде третирана съобразно условията на %{link_start_privacy}Privacy Policy%{link_end} и %{link_start_tos}Terms на Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

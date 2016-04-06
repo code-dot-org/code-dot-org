@@ -939,6 +939,8 @@ vi:
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
@@ -1651,3 +1653,8 @@ vi:
           "Eval: Conditionals": 'Eval: các điều kiện'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Phát hiện sự va chạm và Công thức khoảng cách'
           "Play Lab: Collision Detection (Big Game)": 'Phòng thí nghiệm trò chơi: Phát hiện va chạm (Trò chơi lớn)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

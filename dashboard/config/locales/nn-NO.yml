@@ -26,6 +26,7 @@
   welcome_back: Velkommen tilbake, %{name}
   submit: Send
   unsubmit: Trekk tilbake
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Legg til en lærer:'
@@ -416,6 +417,8 @@
       / > planter vs. Zombies &#8482; &copy %{current_year} Electronic Arts Inc. Alle
       rettigheter reservert. < br / > Gumballs fantastiske verden er varemerke og
       &copy 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Drevet av Amazon Web Services
     trademark: "© Code.org, %{current_year}. Code.org®, CODE-logoen og Hour of Code
       (Kodetimen) ® er varemerker tilhørende Code.org."
@@ -562,7 +565,6 @@
       vi får tilbakemeldinger og forbedringer er laget.
     prerelease_hoc2014: Denne veiledningen er i <span class='betatext'> beta</span>.  Den
       vil kunne endres ettersom vi mottar tilbakemeldinger og gjør forbedringer.
-    feedback: Gi tilbakemelding
     report_bug: Rapporter feil
     support: Få hjelp
     support_url: "//support.code.org"
@@ -581,6 +583,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Tusen takk
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tusen takk
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Tusen takk
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tusen takk
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Feil løsning
     wrong_body: Løsningen du har angitt er ikke riktig.  Prøv på nytt!
@@ -599,9 +611,8 @@
     placeholder: Angi svaret her
     open_response_title: Takk
     open_response_body: Takk for ditt svar!
-  level_group:
-    correct_title: Tusen takk
-    correct_body: Thank you for submitting an answer
+    correct_title: Riktig
+    correct_body: Det er riktig svar.
   dialog:
     ok: OK
     startover_title: Er du sikker på at du vil starte på nytt?
@@ -731,3 +742,7 @@
         acknowledge: Ved å sende inn denne informasjonen aksepterer vil det bli håndtert
           i henhold til vilkårene for%{link_start_privacy}Personvernerklæring%{link_end}
           og %{link_start_tos}Bruksvillkår%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

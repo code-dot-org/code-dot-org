@@ -4,7 +4,7 @@ title: Dashboard 101
 ---
 <a id="top"></a>
 
-# Dashboard 101
+# Dashboard 
 
 Code.org will provide access to and training on the Dashboard for the Professional Learning Partner Program Manager. Program Managers will be able use the Dashboard to manage the workshops for all programs they implement. 
 

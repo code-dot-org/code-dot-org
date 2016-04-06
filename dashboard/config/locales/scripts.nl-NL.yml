@@ -177,12 +177,12 @@
         course4:
           description_short: Leerlingen die les 4 starten moeten eerst lessen 2 en
             3 doorlopen hebben.
-          description: Les 4 is ontwikkeld voor leerlingen die lessen 2 en 3 hebben
-            gevolgd. Leerlingen zullen dieper ingaan op de programmeeronderwerpen
-            die zijn geïntroduceerd in de vorige cursussen om flexibelere oplossingen
-            voor complexere problemen te vinden. Aan het eind van deze cursus maken
-            studenten interactieve verhalen en spellen, die ze met iedereen kunnen
-            delen.
+          description: Cursus 4 is bedoeld voor leerlingen die Cursus 2 en 3 hebben
+            afgerond. Door verschillende concepten te combineren bij het oplossen
+            van de problemen leren de leerlingen om te gaan met moeilijkere opdrachten.
+            Tegen de tijd dat deze Cursus is afgerond kunnen leerlingen programma's
+            schrijven die verschillende vaardigheden vragen, waaronder for loops en
+            functies met parameters. Geschikt voor groep 6 t/m klas 2.
           'Artist: Variables': 'Artiest: variabelen'
           'Bee: For Loops': 'Bij : For-lussen'
           title: Les 4
@@ -1017,6 +1017,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: Gemengde zomer studie'
@@ -1620,7 +1622,7 @@
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
-          description_short: Programming
+          description_short: Programmeren
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1828,3 +1830,8 @@
             en de afstand formule'
           'Play Lab: Collision Detection (Big Game)': 'Speel Lab: Botsingdetectie
             (Groot Spel)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

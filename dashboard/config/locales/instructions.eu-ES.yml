@@ -663,9 +663,6 @@
       4-5 Maze Assessment 1_instruction: 'Ebaluazioa: iritsi ekilorera.'
       4-5 Maze Conditionals 1_instruction: Zonbia ekiloreraino eramateko "errepikatu
         arte" blokea erabi ezazu.
-      4-5 Maze Conditionals 10_instruction: 3 bloke hain justu gehitu al ditzakezu
-        niri labirinto konplexuago bat ebazten laguntzeko? Ondo egiten baduzu, kurbadun
-        edozein bidetik pasa ahalko dut, luzera edozein dela ere.
       4-5 Maze Conditionals 2_instruction: Zonbia ekiloreraino eramateko "errepikatu
         arte" blokea erabi ezazu.
       4-5 Maze Conditionals 3_instruction: '"baldin" blokea erabil ezazu, noiz biratu
@@ -1931,6 +1928,10 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2531,6 +2532,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2897,6 +2900,10 @@
       Overworld Avoid Monsters_instruction: Landare igokari baten kontra jotzea ez
         da batere ideia ona. Mugi zaitez kontu handiz landare igokariak saihestuz
         eta iritsi zure etxeko segurtasunera.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: Egurra baliabide garrantzitsua da. Gauza asko
         egiten dira egurrarekin. Joan zuhaitzera eta erabili "txikitu blokea" agindua
         zuhaitza botatzeko.
@@ -3127,6 +3134,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -3142,6 +3153,12 @@
       Ryan - Bee Conditionals_instruction: Erleak orain nektarra baino ez du nahi.
         Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat
         izkutatzen den ikusteko. Horrela bada, nektarra bildu dezakezu.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: "Hemen \"patruila\" izeneko funtzioa dago.
         \nAldatu katua 400 pixel gora mugitzeko eta gero 400 pixel behera.\n"
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse

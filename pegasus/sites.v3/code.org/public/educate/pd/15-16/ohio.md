@@ -47,7 +47,9 @@ Columbus, OH 43215](https://www.google.com/maps/place/Columbus+State+Child+Devel
 
 Review the [campus map](http://www.cscc.edu/about/columbus/) (the Conference Center is listed as WD on the corner of Cleveland Ave and Grove Street) and [building map](http://www.cscc.edu/community/conference-center/floor-plans-pricing.shtml). 
 
-Please print these [Parking Directions](https://code.org/files/ohio-lot27-s.pdf) and [Parking Pass](/files/1-23-ohio-parking.pdf) to bring with you on the day of the event.
+Please print these [Parking Directions](https://code.org/files/ohio-lot27-s.pdf) and [Parking Pass](/files/4-16-16-columbus-ecs-parking.pdf) to bring with you on the day of the event.
+
+Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop!
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -66,12 +68,6 @@ Water
 Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
 will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
 
-Takeaways:<br/>
-• I look forward to teaching the course again based on my reflection of the past year.<br/>
-• I am more comfortable with the material that I struggled with the first time teaching this
-course.<br/>
-• I understand how to make changes to the ECS curriculum in order to meet my local needs
-and fit into my context.
 
 **Save the Dates**
 
@@ -83,7 +79,10 @@ Breakfast and lunch will be served.
 
 **Location**
 
-More Details Coming Soon!
+[Microsoft Corporation<br/> 
+Suite 400 - MPR 1<br/>
+8800 Lyra Drive<br/>
+Columbus, OH 43240](https://goo.gl/maps/fER4fkFEqvH2)
 
 **What do I bring to Phase 4 PD?**
 

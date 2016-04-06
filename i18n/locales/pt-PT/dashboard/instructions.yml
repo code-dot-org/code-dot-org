@@ -56,9 +56,7 @@ pt:
       2-3 Artist Debugging 6_instruction: |
         Parece que estou sentado em uma cadeira
         sem uma perna. Edite os blocos para desenhar a perna.
-      2-3 Artist Debugging 7_instruction: |
-        Parece que o C no código está desenhado ao contrário.
-        Você consegue fazê-lo parecer com um C?
+      2-3 Artist Debugging 7_instruction: "Parece que o C no código está desenhado ao contrário.\\r\n\\r\nConsegues voltar a transformá-lo num C?"
       2-3 Artist Debugging 8_instruction: |
         Meu cata-vento não está pronto. Quantas
         vezes eu preciso repetir para terminá-lo?
@@ -380,8 +378,8 @@ pt:
         Avaliação - use um laço enquanto para coletar
         todo o néctar dessa flor.
       2-3 Maze 1_instruction: |
-        Você pode me ajudar a pegar o porco malvado? Junte alguns
-        blocos "avance" e clique em "Executar".
+        Consegues ajudar-me a apanhar o porquinho malvado?
+        Empilha alguns blocos `mover para a frente` por baixo do bloco `quando executar` e depois clica em "Executar". 
       2-3 Maze 10_instruction: Guia-me até à maldade verde! (Cuidado com a dinamite)
       2-3 Maze 11_instruction: |
         Estou com fome, leve-me até a flor! Quantas vezes
@@ -532,10 +530,10 @@ pt:
         deve haver uma forma mais rápida! Use um bloco "para" para substituir os blocos e
         complete a espiral hexagonal. (Dica: a última linha tem 200 pixels.
       4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+        Este é um bloco "para". Ao invés de digitar
+        1, 2, 3... 10, o bloco "para" pode repetir os blocos que estão dentro dele e contar os
+        números por ti. Coloca o número 10 na seção "até" do bloco
+        "para".
       4-5 Artist For Loops 3_instruction: |
         Como podemos contar de 1 até 50? Edite o
         bloco "para".
@@ -827,10 +825,6 @@ pt:
       4-5 Maze Conditionals 1_instruction: |
         Use o bloco repita até para levar o
         zumbi até o girassol.
-      4-5 Maze Conditionals 10_instruction: |
-        Você pode adicionar apenas 3 blocos para me ajudar
-        a resolver um labirinto mais complexo? Se você fizer isso corretamente, eu poderei andar por qualquer caminho cheio de curvas,
-        não importa o comprimento.
       4-5 Maze Conditionals 2_instruction: |
         Use o bloco repita até para levar o
         zumbi até o girassol.
@@ -1738,7 +1732,7 @@ pt:
         5. Quanto mais lados adicionarmos a esse algoritmo, maior será o
         padrão! Vamos adicionar uma nova variável chamada "comprimento" e usá-la onde há
         um bloco "avance". Para essa forma, defina a variável "comprimento" como 75.
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the \"length\" variable, let's use a math block with the\n\"sides\" variable inside to make sure that each shape fits correctly. The\nperimeter of each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the `length` variable, let's use a math block with the `sides`\nvariable inside to make sure that each shape fits correctly. The perimeter\nof each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
       Course 4 Artist Vars 14_instruction: |
         Atividade livre: veja, agora seu algoritmo
         está aninhado dentro de mais um laço. Experimente alterar os valores das
@@ -2176,6 +2170,10 @@ pt:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -2755,6 +2753,8 @@ pt:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3132,6 +3132,10 @@ pt:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Esbarrar num Creeper é má ideia. Desvia-te cuidadosamente dos Creepers e põe-te em segurança em casa.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'A madeira é um recurso muito importante. Fazem-se muitas coisas com ela. Aproxima-te de uma árvore e utiliza o comando "destruir bloco" para a cortares.'
       Overworld Chop Trees_instruction: Temos de construir uma casa antes que o sol se ponha. As casas precisam de muita madeira. Abate todas as 3 árvores.
       Overworld Free Play 20x20_instruction: 'Parabéns! Completaste todos os nossos quebra-cabeças! Agora escava, constrói e cria algo único, utilizando tudo o que aprendeste até agora. '
@@ -3336,6 +3340,10 @@ pt:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -3350,6 +3358,12 @@ pt:
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
         is hiding a flower. If it is, then you can gather nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Aqui temos uma função chamada "patrulhe".
         Edite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo.
@@ -3425,10 +3439,7 @@ pt:
       scrat 19_instruction: |
         Vamos praticar o uso do bloco "se-senão" mais uma vez. Você consegue
         acertar na primeira tentativa?
-      scrat 20_instruction: |
-        Você consegue adicionar somente 3 blocos para me ajudar a resolver um labirinto mais
-        complexo? Se você fizer isso corretamente, eu posso percorrer qualquer caminho cheio de curvas,
-        não importa o comprimento. Depressa! O gelo está derretendo!
+      scrat 20_instruction: 'Podes adicionar mais 3 blocos para me ajudares a resolver um labirinto mais complicado? Se o fizeres bem, eu consigo andar qualquer caminho com curvas, não interessa o comprimento.  Despacha-te! O gelo está a derreter!'
       SpecialFrozenLevel_instruction: |
         Você se tornou oficialmente um artista mestre!
         Crie um país das maravilhas de gelo.

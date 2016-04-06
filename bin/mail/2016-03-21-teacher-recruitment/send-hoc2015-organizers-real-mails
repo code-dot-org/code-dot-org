@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# 157303 contacts
+../send-to-mailing-list --start      0 --limit 100000 3-17-recruit-hoc-code-studio ./hoc2015-organizers-deduped.csv
+../send-to-mailing-list --start 100000 --limit 100000 3-17-recruit-hoc-code-studio ./hoc2015-organizers-deduped.csv

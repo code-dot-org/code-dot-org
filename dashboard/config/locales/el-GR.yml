@@ -26,6 +26,7 @@
   welcome_back: "Καλώς ήρθες, %{name}"
   submit: "Υποβολή"
   unsubmit: "Ανακλήθηκε"
+  next_page: Next page
   add_teacher_form:
     code:
       label: "Προσθέστε ένα δάσκαλο:"
@@ -430,6 +431,8 @@
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: "Με την υποστήριξη των Amazon Web Services"
     trademark: "© Code.org, οι %{current_year}. Code.org®, το λογότυπο του κώδικα
       και την ώρα του κώδικα ® αποτελούν εμπορικά σήματα της Code.org."
@@ -585,7 +588,6 @@
     prerelease_hoc2014: "Αυτές οι οδηγίες είναι σε έκδοση <span class='betatext'>βήτα
       (beta)</span>. Αυτό σημαίνει ότι υπόκεινται σε αναθεώρηση καθώς λαμβάνεται ανατροφοδότηση
       και γίνονται βελτιώσεις."
-    feedback: "Αφήστε αξιολόγηση"
     report_bug: "Αναφορά σφάλματος"
     support: "Λάβετε βοήθεια"
     support_url: "//support.code.org"
@@ -605,6 +607,16 @@
     correct_body: "Ευχαριστούμε για την υποβολή της απάντησης."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "Ευχαριστούμε"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Ευχαριστούμε"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "Ευχαριστούμε"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Ευχαριστούμε"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: "Λανθασμένη λύση"
     wrong_body: "Η λύση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
@@ -626,9 +638,8 @@
     placeholder: "Εισάγετε την απάντησή σας εδώ"
     open_response_title: "Ευχαριστούμε"
     open_response_body: "Ευχαριστούμε για την απάντησή σου!"
-  level_group:
-    correct_title: "Ευχαριστούμε"
-    correct_body: Thank you for submitting an answer
+    correct_title: "Σωστό"
+    correct_body: "Αυτή είναι η σωστή απάντηση."
   dialog:
     ok: OΚ
     startover_title: "Είστε βέβαιος ότι θέλετε να ξεκινήσετε από την αρχή;"
@@ -767,3 +778,7 @@
         acknowledge: "Υποβάλλοντας αυτές τις πληροφορίες, αναγνωρίζετε ότι θα τη μεταχειριστούμε
           σύμφωνα με τους όρους της Policy%{link_end} το %{link_start_privacy}Privacy
           και το %{link_start_tos}Terms του Service%{link_end}"
+  components:
+    icon_library:
+      search_placeholder_text: "Αναζήτηση για ένα εικονίδιο..."
+      no_icons_found: "Δεν βρέθηκαν εικονίδια"

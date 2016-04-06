@@ -1011,6 +1011,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description: Predaji Funkcionalno Programiranje kroz Algebru
@@ -1822,3 +1824,8 @@
             Detekcija sudara i udaljenost Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Detekcije Kolizije
             (Big Game)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

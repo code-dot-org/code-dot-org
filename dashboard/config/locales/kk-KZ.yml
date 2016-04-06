@@ -26,6 +26,7 @@
   welcome_back: "Қайта оралуыңызбен, %{name}"
   submit: "Жіберу"
   unsubmit: "Жібермеу"
+  next_page: Next page
   add_teacher_form:
     code:
       label: "Мұғалімді қосу:"
@@ -420,6 +421,8 @@
       />Өсімдіктер Зомбилерге қарсы&#8482; &copy; %{current_year} Electronic Arts
       Inc. Барлық құқықтар қорғалған.<br />Гамболаның таңғажайып әлемі сауда белгісі
       болып табылады және &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Amazon Web Services серверінде жұмыс істейді
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE логотипі және
       Код Жазу Сағаты&reg; Code.org сауда белгісі болып табылады."
@@ -567,7 +570,6 @@
       еңгізіледі."
     prerelease_hoc2014: "Бұл сабақ <span class='betatext'>бета нұсқада</span>. Бұл
       сабаққа кері байланыс кезінде өзгертулер еңгізіледі.."
-    feedback: "Кері байланыс"
     report_bug: "Қате туралы хабарлау"
     support: "Көмек Сұрау"
     support_url: "//support.code.org"
@@ -586,6 +588,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "Рахмет"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Рахмет"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "Рахмет"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Рахмет"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: "Дұрыс емес шешім"
     wrong_body: "Сіз еңгізген жауап дұрыс емес. Қайталап көріңіз!"
@@ -605,9 +617,8 @@
     placeholder: "Жауабыңызды мұнда еңгізіңіз"
     open_response_title: "Рахмет"
     open_response_body: "Жауап бергеніңіз үшін рахмет!"
-  level_group:
-    correct_title: "Рахмет"
-    correct_body: Thank you for submitting an answer
+    correct_title: "Дұрыс"
+    correct_body: "Бұл дұрыс жауап."
   dialog:
     ok: OK
     startover_title: "Сіз басынан бастауға сенімдісіз бе?"
@@ -741,3 +752,7 @@
         acknowledge: "Сіз бұл хабарламаны жіберу арқылы %{link_start_privacy}Құпиялылық
           Саясаты%{link_end} және %{link_start_tos}Қызмет көрсету шарттары%{link_end}
           аясында қаралатынына келісесіз бе?"
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

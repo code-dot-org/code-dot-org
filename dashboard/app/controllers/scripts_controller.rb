@@ -46,6 +46,7 @@ class ScriptsController < ApplicationController
   end
 
   def edit
+    @show_all_instructions = params[:show_all_instructions]
   end
 
   def update

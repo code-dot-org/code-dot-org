@@ -1016,6 +1016,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -1832,3 +1834,8 @@
             Talka Atzematea eta Distantzia Formula'
           'Play Lab: Collision Detection (Big Game)': 'Jokoen Laborategia: Talka Atzematea
             (Joko Handia)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

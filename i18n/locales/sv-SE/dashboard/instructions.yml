@@ -333,7 +333,6 @@ sv:
       4-5 Maze 9_instruction: 'Skapa en slinga med blocket "upprepa tills".'
       4-5 Maze Assessment 1_instruction: 'Uppgift: Ta dig till solrosen.'
       4-5 Maze Conditionals 1_instruction: 'Använd blocket "upprepa tills" för att ta zombien till solrosen.'
-      4-5 Maze Conditionals 10_instruction: Kan du lägga till endast 3 block för att hjälpa mig klara en svårare labyrint? Om du gör det rätt, kan jag ta mig fram vilken snirklig väg som helst oavsett hur lång den är.
       4-5 Maze Conditionals 2_instruction: 'Använd blocket "upprepa tills" för att ta zombien till solrosen.'
       4-5 Maze Conditionals 3_instruction: 'Använd "om"-blocket för att låta mig välja när jag ska svänga. Tips: du behöver bara ett block till, men lär dig hur man gör det så att du kan göra det själv nästa gång.'
       4-5 Maze Conditionals 4_instruction: 'Ok, det här är precis som förra pusslet, men du behöver kunna använda "om"-blocket och "upprepa"-blocket tillsammans.'
@@ -1116,6 +1115,10 @@ sv:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1564,6 +1567,8 @@ sv:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -1797,6 +1802,10 @@ sv:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Att springa på en smygare är en dålig idé. Gå försiktigt förbi smygarna och nå tryggheten i ditt hem.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Trä är en viktig resurs. Mycket kan tillverkas av det. Gå till trädet och använd kommandot "förstör block" för att hugga ned det.'
       Overworld Chop Trees_instruction: Vi måste bygga ett hus innan solen går ned. Hus kräver mycket träd. Hugg ned alla 3 träd.
       Overworld Free Play 20x20_instruction: Grattis! Du har klarat alla pussel! Bryt, bygg och skapa något unikt med allt du har lärt dig hittills.
@@ -1997,6 +2006,10 @@ sv:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -2008,6 +2021,12 @@ sv:
         the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: Biet vill bara ha nektar just nu. Inte alla saker är blommor, så kolla under ALLA MOLN för att se om det döljer en blomma. Om det gör det kan du samla nektar.
       Ryan - Bee Conditionals_instruction: Biet vill bara ha nektar just nu. Alla objekt är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer en blomma. Om det är en blomma så kan du samla nektar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: 'Här är en funktion som kallas "patrol." Redigera den för att flytta Katt 400 pixlar upp och sedan ner 400 pixlar.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |

@@ -25,6 +25,7 @@
   welcome_back: "%{name} 님, 어서오세요. "
   submit: "제출하기"
   unsubmit: "제출 취소"
+  next_page: Next page
   add_teacher_form:
     code:
       label: "선생님 추가:"
@@ -374,6 +375,8 @@
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."
@@ -505,7 +508,6 @@
       코스가 아니며, 여러가지 피드백과 개선작업이 이루어집니다."
     prerelease_hoc2014: "이 튜토리얼은 <span class='betatext'>beta</span> 테스트 중입니다. 여러분들의
       피드백을 통해 개선됩니다."
-    feedback: "피드백 작성하기"
     report_bug: "버그(오류) 신고하기"
     support: "도움 받기"
     support_url: "//support.code.org"
@@ -524,6 +526,16 @@
     correct_body: "답변 주셔서 감사 합니다."
     toofew_title: "답변이 너무 적습니다."
     toofew_body: "제출하기 전에 두 개의 답변을 선택하세요."
+  level_group:
+    wrong_title: "고마워"
+    wrong_body: "답변 주셔서 감사 합니다."
+    correct_title: "고마워"
+    correct_body: "답변 주셔서 감사 합니다."
+  level_group-submittable:
+    wrong_title: "고마워"
+    wrong_body: "답변 주셔서 감사 합니다."
+    correct_title: "고마워"
+    correct_body: "답변 주셔서 감사 합니다."
   match:
     wrong_title: "정답이 아닌 답안"
     wrong_body: "정답이 아닙니다. 다시 시도해 보세요."
@@ -541,9 +553,8 @@
     placeholder: "이름을 입력하세요."
     open_response_title: "감사합니다,"
     open_response_body: "답변해 주셔서 감사합니다!"
-  level_group:
-    correct_title: "고마워"
-    correct_body: "답변 주셔서 감사 합니다."
+    correct_title: "정답"
+    correct_body: "정답입니다."
   dialog:
     ok: "확인"
     startover_title: "정말 다시 시작하겠습니까?"
@@ -662,3 +673,7 @@
         detail: "지금 신고하시는 내용에 관하여 가능한 상세하게 기술해주세요."
         acknowledge: "이 내용을 제출하시면 당신이 신고한 내용이 %{link_start_privacy}개인보호정책link%{link_end}과
           %{link_start_tos}서비스 규정%{link_end}에 따라 처리됨을 승인하게 됩니다."
+  components:
+    icon_library:
+      search_placeholder_text: "아이콘 검색..."
+      no_icons_found: "아이콘이 발견되지 않음"

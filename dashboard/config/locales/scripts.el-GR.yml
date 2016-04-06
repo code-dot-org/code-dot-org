@@ -1031,6 +1031,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "Φάση 2 σε σύνδεση: Θερινή Μελέτη"
@@ -1850,3 +1852,8 @@
             Ανίχνευση Σύγκρουσης και Τύπος Απόστασης"
           'Play Lab: Collision Detection (Big Game)': "Εργαστήριο Παιχνιδιού: Ανίχνευση
             Σύγκρουσης (Μεγάλο Παιχνίδι)"
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

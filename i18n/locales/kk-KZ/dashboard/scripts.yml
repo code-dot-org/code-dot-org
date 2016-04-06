@@ -929,6 +929,8 @@ kk:
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
@@ -1641,3 +1643,8 @@ kk:
           "Eval: Conditionals": 'Eval: Шарттар'
           "Unplugged: Collision Detection and the Distance Formula": 'Компьютерсіз: Қақтығыстарды анықтау және Арақашықтық Формуласы'
           "Play Lab: Collision Detection (Big Game)": 'Ойындар Лабораториясы: Қақтығыстарды анықтау (Үлкен Ойын)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

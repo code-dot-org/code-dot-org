@@ -109,7 +109,7 @@ Breakfast and lunch will be served.
 
 [NOVA Southeastern University<br/>
 Carl Desantis Building<br/>
-Room TBD<br/>
+Room 1052<br/>
 3301 College Ave<br/>
 Fort Lauderdale, FL 33314](https://www.google.com/maps/place/Nova+Southeastern+University/@26.0802004,-80.2520141,14z/data=!4m2!3m1!1s0x0:0xa8e3f75c01d290b6)
 
@@ -132,12 +132,6 @@ Water
 Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
 will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
 
-Takeaways:<br/>
-• I look forward to teaching the course again based on my reflection of the past year.<br/>
-• I am more comfortable with the material that I struggled with the first time teaching this
-course.<br/>
-• I understand how to make changes to the ECS curriculum in order to meet my local needs
-and fit into my context.
 
 **Save the Dates**
 

@@ -114,6 +114,15 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
   function test() { ... }
   while (n < 1) { ... }
   ```
+  
+* <a name="js-object-curly-spacing"></a>
+  Unlike Google's JavaScript styleguide, we don't require padding spaces inside object literals.
+  <sup>[[link](#js-object-curly-spacing)]</sup>
+  ```javascript
+  var obj = {x: 1}; // This is okay
+  var obj = { x: 1 }; // This is okay too
+  ```
+  See ESLint rule [**object-curly-spacing**](http://eslint.org/docs/rules/object-curly-spacing) and [this section of Google's styleguide](https://google.github.io/styleguide/javascriptguide.xml?showone=Code_formatting#Code_formatting) for more information.
 
 * <a name="js-ambiguous-this"></a>
   Avoid `this` in functions where callers might not bind the correct scope. Generally this means not using `this` in static methods and bare functions.
@@ -220,7 +229,7 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
 ### React
 Our default style if not mentioned here should be that mentioned in the AirBnb guide https://github.com/airbnb/javascript/tree/master/react (perhaps with the exception of closing tags on their own line).
 * <a name="js-react-inline-styles"></a>
-Prefer single object for all styles vs. inlined style objects
+Prefer single object for all styles vs. inlined style objects.  Define static styles outside the component, and only dynamic styles in the render method.
 ```jsx
 // Bad
 var component = (
@@ -246,6 +255,29 @@ var component = (
     <div style={styles.child}>I'm a child</div>
   </div>
 );
+
+// Example of defining static and dynamic styles separately
+var staticStyles = {
+  root: {
+    display: 'block'
+  },
+  child: {
+    color: 'blue',
+    fontSize: 10
+  }
+};
+var Component = function (props) {
+  var styles = _.merge({}, staticStyles, {
+    root: {
+      color: this.props.color
+    }
+  });
+  return (
+    <div style={styles.root}>
+      <div style={styles.child}>I'm a child</div>
+    </div>
+  );
+};
 ```
 * <a name="js-react-pixel-numbers"></a>
 Prefer numbers vs strings for pixel values

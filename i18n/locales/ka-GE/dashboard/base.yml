@@ -25,6 +25,7 @@ ka:
   welcome_back: 'კარგია, რომ დაბრუნდით, %{name}'
   submit: გაგზავნა
   unsubmit: ჩაბარების გაუქმება
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'მასწავლებლის დამატება:'
@@ -344,6 +345,7 @@ ka:
     help_from_html_old: ამ რესურსების შექმნაში გვეხმარებოდნენ Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია.<br /> Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. <br/>Frozen&#8482; &copy; %{current_year} Disney. ყველა უფლება დაცულია.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია.<br />The Amazing World of Gumball არის სავაჭრო ნიშანი &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია. Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. Frozen&#8482; &copy; %{current_year} Disney. ყველა უფლება დაცულია. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია. The Amazing World of Gumball არის სავაჭრო ნიშანი &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: შექმნილია Amazon Web Services დახმარებით
     trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო და Hour of Code&reg; Code.org-ის სავაჭრო ნიშნებია.'
     copyright: საავტორო უფლება
@@ -463,7 +465,6 @@ ka:
   landing:
     prerelease: "ეს არის კურსის <span class='betatext'>ბეტა-ვერსია</span>. ანუ, ეს არ არის საბოლოო ვარიანტი, კურსი გაუმჯობესდება მიღებული უკუკავშირის საფუძველზე."
     prerelease_hoc2014: "ეს არის ტუტორიალის <span class='betatext'>ბეტა-ვერსია</span>. რაც იმას ნიშნავს, რომ ჩვენ მას გავაუმჯობესებთ მიღებული უკუკავშირის საფუძველზე."
-    feedback: უკუკავშირი
     report_bug: შეცდომის შესახებ შეტყობინება
     support: დახმარება მჭირდება
     support_url: //support.code.org
@@ -482,6 +483,16 @@ ka:
     correct_body: მადლობა პასუხისთვის.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: მადლობა
+    wrong_body: მადლობა პასუხისთვის
+    correct_title: მადლობა
+    correct_body: მადლობა პასუხისთვის
+  level_group-submittable:
+    wrong_title: მადლობა
+    wrong_body: მადლობა პასუხისთვის
+    correct_title: მადლობა
+    correct_body: მადლობა პასუხისთვის
   match:
     wrong_title: არასწორი გადაწყვეტაა
     wrong_body: პასუხი, რომელიც თქვენ შეიყვანეთ, არასწორია. სცადეთ თავიდან!
@@ -499,9 +510,8 @@ ka:
     placeholder: შეიყვანეთ პასუხი აქ
     open_response_title: მადლობა
     open_response_body: მადლობა პასუხისთვის!
-  level_group:
-    correct_title: მადლობა
-    correct_body: მადლობა პასუხისთვის
+    correct_title: სწორია
+    correct_body: ეს პასუხი სწორია.
   dialog:
     ok: OK
     startover_title: დარწმუნებული ხართ, რომ ხელახლა დაწყება გსურთ?
@@ -612,3 +622,7 @@ ka:
           other: სხვა
         detail: თუ შეიძლება შეგვატყობინეთ რაც შეიძლება მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით.
         acknowledge: 'ამ ინფორმაციის გამოგზავნისას თქვენ აცნობიერებთ, რომ ის დამუშავდება %{link_start_privacy}კონფიდენციალურობის პოლიტიკისა%{link_end} და %{link_start_tos}სერვისის პირობების%{link_end} თანახმად'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

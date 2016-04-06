@@ -662,6 +662,7 @@
   dashboard_navigation_all_sections: "Учетные записи и прогресс студента"
   dashboard_navigation_view_progress: "Просмотр хода выполнения"
   dashboard_navigation_view_text_responses: "Просмотр текстовых ответов"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "Добавить Учеников"
   dashboard_navigation_manage_students: "Управление Учениками"
   dashboard_navigation_lesson_plans_resources: "Планы уроков и ресурсы"
@@ -785,6 +786,18 @@
   dashboard_puzzle: "Головоломка"
   dashboard_question: "Вопрос"
   dashboard_response: "Ответ"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "Верно"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Невероятная статистика с прошлогоднего Часа Кода. Всего
     за одну неделю:"
   stats_hoc_2013_image_alt: "Статистика с Часа Кода 2013 года"

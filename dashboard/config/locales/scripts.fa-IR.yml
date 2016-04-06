@@ -1018,6 +1018,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: "ماینکرفت"
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1829,3 +1831,8 @@
             تشخیص برخورد و فرمول فاصله"
           'Play Lab: Collision Detection (Big Game)': "آزمایشگاه بازی: تشخیص برخورد
             (بازی بزرگ)"
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

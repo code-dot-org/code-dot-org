@@ -46,6 +46,7 @@ locales = {
   'Maltese' => 'mt-MT',
   'Marathi' => 'mr-IN',
   'Nepali' => 'ne-NP',
+  'Northern Sami' => 'se',
   'Norwegian' => 'no-NO',
   'Norwegian Nynorsk' => 'nn-NO',
   'Pashto' => 'ps-AF',
@@ -69,12 +70,12 @@ locales = {
   'Vietnamese' => 'vi-VN'
 }
 
-untranslated_apps = [
-  'applab',
-  'calc',
-  'eval',
-  'netsim'
-]
+untranslated_apps = %w(
+  applab
+  calc
+  eval
+  netsim
+)
 
 locales.each_value do |locale|
   if locale != 'en-US'

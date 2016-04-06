@@ -929,6 +929,8 @@ hr:
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Faza 2 online: Mješoviti ljetni studij'
@@ -1641,3 +1643,8 @@ hr:
           "Eval: Conditionals": 'Provjera: Uvjeti'
           "Unplugged: Collision Detection and the Distance Formula": 'Izvanmrežno: Opažanje sudara i Formula udaljenosti'
           "Play Lab: Collision Detection (Big Game)": 'Laboratorij igara: Opažanje sudara (velika igra)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

@@ -929,6 +929,8 @@ es-MX:
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: 'Fase 2 en línea: Estudio mezclado de verano'
@@ -1462,7 +1464,7 @@ es-MX:
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
-          description_short: Programming
+          description_short: Programación
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           While Loop Basics: While Loop Basics
           While Loops_ Counting Flips: While Loops_ Counting Flips
@@ -1641,3 +1643,8 @@ es-MX:
           "Eval: Conditionals": 'Eval: condicionales'
           "Unplugged: Collision Detection and the Distance Formula": 'Desconectado: Detección de colisiones y la fórmula de distancia'
           "Play Lab: Collision Detection (Big Game)": 'Laboratorio de juegos: Detección de colisiones (Big Game)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

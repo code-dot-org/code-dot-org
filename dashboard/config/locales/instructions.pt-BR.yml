@@ -316,9 +316,9 @@
         As flores roxas podem ter 1 ou 0 néctar.  Crie
         uma função que coleta néctar apenas das flores que têm néctar.
       2-3 Bee Functions 2_instruction: |
-        Funções são blocos de código que realizam
-        uma tarefa. Use a função "obtenha 5" para coletar 5 néctares de uma vez. Lembre-se também
-        de usar um laço para obter um contador de bloco ideal.
+        As funções são blocos de código que realizam
+        uma tarefa. Use a função "obtenha 5" para obter 5 néctares por vez. Lembre-se também
+        de usar um laço para obter um bloco contador ideal.
       2-3 Bee Functions 3_instruction: Colete todo o néctar de cada flor.
       2-3 Bee Functions 4_instruction: |
         A função "mova e obtenha néctar" vira
@@ -561,11 +561,9 @@
         Alguém começou o código, mas então percebeu que
         deve haver uma forma mais rápida! Use um bloco "para" para substituir os blocos e
         complete a espiral hexagonal. (Dica: a última linha tem 200 pixels).
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: Este é um bloco de "para". Em vez de digitar
+        1, 2,3... 10, o bloco "para" pode repetir os blocos dentro dele e contar os
+        números para você. Coloque o número 10 na seção "a" do bloco "para".
       4-5 Artist For Loops 3_instruction: |
         Como podemos contar de 1 até 50? Edite o
         bloco "para".
@@ -861,10 +859,6 @@
       4-5 Maze Conditionals 1_instruction: |
         Use o bloco repita até para levar o
         zumbi até o girassol.
-      4-5 Maze Conditionals 10_instruction: |
-        Você pode adicionar apenas 3 blocos para me ajudar
-        a resolver um labirinto mais complexo? Se você fizer isso corretamente, eu poderei andar por qualquer caminho cheio de curvas,
-        não importa o comprimento.
       4-5 Maze Conditionals 2_instruction: |
         Use o bloco repita até para levar o
         zumbi até o girassol.
@@ -931,7 +925,7 @@
         o design.
       4-5 While Loops 1_instruction: |
         Mova-me para o buraco e preencha-o com
-        duas pás de terra, usando o bloco "preencha".
+        duas pás cheias de terra, usando o bloco "preencha".
       4-5 While Loops 2_instruction: |
         Mova-me para o monte de terra e remova-o
         com 5 pás de terra, usando o bloco "remova".
@@ -2414,6 +2408,10 @@
         Isso é um teste!\r
         Mova-me por um caminho e então
         por outro para me levar até o porco.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -3100,6 +3098,8 @@
         -
         Permitir o pedido de várias pizzas\r
         - Adicionar um cupom com código para um desconto de 50%
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         Todas as variáveis e funções atualmente são
         campos vazios. A progressão de cada desafio será concentrada na definição e em vários
@@ -3523,6 +3523,10 @@
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Não é uma boa ideia topar com um Creeper.
         Passe com cuidado pelos Creepers e chegue na sua casa em segurança.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: Madeira é um recurso muito importante. Muitas
         coisas são feitas com ela. Ande até a árvore e use o comando "destruir bloco"
         para derrubá-la.
@@ -3762,15 +3766,17 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
         get nectar from the flowers.
-      Quantum Bee_instruction: |
-        Purple flowers may have either 1 or 0 nectar, but
-        you don't know which one! Be careful not to collect nectar from a purple
-        flower if it doesn't have any. Check if the nectar is equal to 1 by using
-        the if block.
+      Quantum Bee_instruction: Flores roxas podem ter 1 ou 0 néctar, mas você não
+        saberá qual delas! Tenha cuidado para não recolher o néctar de uma flor roxa
+        que não tem nenhum. Verifique se o néctar é igual a 1, usando o bloco "if".
       Ryan - 4-5 Bee Conditionals 2_instruction: |
         Agora, a abelha só quer néctar.
         Nem todos os objetos são flores, então olhe embaixo de TODAS AS NUVENS para ver se
@@ -3779,6 +3785,11 @@
         Agora, a abelha só quer néctar.
         Nem todos os objetos são flores, então olhe embaixo de TODAS AS NUVENS para ver se
         ela está escondendo uma flor. Se estiver, então você pode coletar o néctar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: Agora, você precisa ativar e repeti-lo 20 vezes!
+        Quantos graus se obter 360 depois de 20 iterações?
       Ryan Test Locked Blocks_instruction: |
         Aqui temos uma função chamada "patrulhe".
         Edite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo.

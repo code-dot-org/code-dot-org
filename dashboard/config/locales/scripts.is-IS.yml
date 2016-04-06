@@ -175,10 +175,10 @@
           description_short: Nemendur sem taka Námskeið 4 ættu að hafa lokið námskeiðum
             2 og 3 áður.
           description: Námskeið 4 er ætlað nemendum sem hafa lokið námskeiðum 2 og
-            3. Nemendur munu kafa dýpra í efni sem var kynnt á fyrri forritunarnámskeiðum
-            til að geta beitt sveigjanlegum lausnum á flóknari verkefni. Í lok þessa
-            námskeiðs búa nemendur til gagnvirkar sögur og leiki sem þeir geta svo
-            deilt með öðrum. Mælt með fyrir 4. - 8. bekk.
+            3. Nemendur læra að fást við þrautir sem verða æ flóknari en læra um leið
+            að samnýta ýmiss hugtök við lausn þrautanna. Í lok námskeiðsins munu nemendur
+            hafa búið til forrit sem sýna margvíslega færni þeirra svo sem notkun
+            "frá" lykkja og falla með stikum. Hentar 4 - 8 bekk.
           'Artist: Variables': 'Listamaður: Breytur'
           'Bee: For Loops': 'Býfluga: Frá lykkjur'
           title: Námskeið 4
@@ -1014,6 +1014,8 @@
           Markdown Details: Markdown Details
           Studio: Stúdíó
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Tölvunarfræði í algebru - fagmenntun
           description: '2. áfangi á neti: Blandað sumarnám'
@@ -1616,7 +1618,7 @@
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
-          description_short: Programming
+          description_short: Forritun
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1824,3 +1826,8 @@
             tölvu: Skynjun árekstra og fjarlægðarformúlan'
           'Play Lab: Collision Detection (Big Game)': 'Leikjasmiðjan: Skynjun árekstra
             (Stórleikur)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

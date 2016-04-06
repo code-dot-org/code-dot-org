@@ -17,14 +17,14 @@
           'Maze: Debugging': "Лавиринт: Исправљање грешака"
           'Artist 1: Intro': "Уметник 1: Увод"
           Artists 2: "Уметник 2"
-          Spelling Bee: Spelling Пчела
-          Spelling Bee not blockly: Spelling Пчела not blockly
+          Spelling Bee: "Пчелица словарица"
+          Spelling Bee not blockly: "Пчелица словарица без блокова"
           'Bee 1: Intro': "Пчела 1: Увод"
           'Maze 2: Loops': "Лавиринт 2: Петље"
           'Bee 2: Loops': "Пчела 2: Петље"
           Multi & Match: "Вишеструки избор и упаривање"
           K-1 Flappy: K-1 Флапи
-          Flappy non blockly: Flappy non blockly
+          Flappy non blockly: "Флапи без блокова"
           title: "Курс 1"
           Artist 2: "Уметник 2"
           Happy Maps: "Веселе мапе"
@@ -70,10 +70,10 @@
           Binary Bracelets: "Бинарне наруквице"
           The Big Event: "Велики догађај"
           Your Digital Footprint: "Твој дигитални траг"
-          description: Start with Course 2 for students who can read and have no prior
-            programming experience. In this course students will create programs to
-            solve problems and develop interactive games or stories they can share.
-            Recommended for grades 2-5.
+          description: "Курс 2 могу да раде ученици који знају да читају и немају
+            искуства са програмирањем. У овом курсу ученици ће писати програме који
+            решавају проблеме и развијати интерактивне игре и приче које могу да деле
+            са другима. Препоручено за ученике до петог разреда."
           'Maze: Sequence': "Лавиринт: Линијски програми"
           'Artist: Sequence': "Уметник: Линијски програми"
           'Maze: Loops': "Лавиринт: Петље"
@@ -86,7 +86,7 @@
           'Maze: Sequence2': "Лавиринт: Линијски програми 2"
           'Artist: Nested Loops': "Уметник: Угњеждене петље"
           description_audience: Ages  6+ (reading required)
-          description_short: Start with Course 2 for students who can read.
+          description_short: "Курс 2 могу да раде ученици који знају да читају ."
         course3:
           The Maze: "Лавиринт"
           'Studio: Create a Story': "Студио: Направи причу"
@@ -153,8 +153,8 @@
         hourofcode:
           Maze: "Лавиринт"
           title: "Час кода"
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: "Испробај основе рачунарских наука са љутим птичицама, цвећем
+            против зомбија, и Скречом из леденог доба!"
           description_short: Try the basics of computer science with many fun characters!
         frozen:
           title: "Програмирај са Аном и Елзом"
@@ -166,13 +166,14 @@
           description_short: "Хајде да искористимо програмирање да би се придружили
             Ани и Елзи у истраживању магије и лепоте леда."
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
+          description_short: "Ученици који пробају курс 4 би требало пре тога да прођу
+            курсеве 2 и 3."
+          description: "Курс 4 је направљен за ученике који су прошли курсеве 2 и
+            3. Ученици ће научити како да решавају сложеније проблеме док уче како
+            да комбинују различите наредбе којима могу да решавају различите проблеме.
+            Када заврше курс 4, ученици ће бити способни да праве програме са понављањима
+            (петљама), функцијама са параметрима, итд. Препоручено за ученике од 4.
+            до 8. разреда."
           'Artist: Variables': "Уметник: Променљиве"
           'Bee: For Loops': "Пчела: Бројачке петље"
           title: Course 4
@@ -360,7 +361,7 @@
           Introduction to Computer Science: "Увод у Компјутерске Науке"
           The Maze: "Лавиринт"
           Computational Thinking: "Компјутерско Размишљање"
-          Graph Paper Programming: "Графиконско - Папирно Програмирање"
+          Graph Paper Programming: "Графичко програмирање"
           The Artist: "Уметник"
           Algorithms: "Алгоритми"
           The Artist 2: "Уметник 2"
@@ -399,12 +400,12 @@
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: "Направи своју Флапи игру за мање од 10 минута!"
           Flappy Code: Flappy Code
         jigsaw:
           title: "Слагалица"
-          description: ''
-          description_short: Try our Jigsaw tutorial
+          description: "Пробај нашу слагалицу"
+          description_short: "Пробај нашу слагалицу"
           Jigsaw: "Слагалица"
         step:
           title: "Корак"
@@ -582,7 +583,7 @@
           description_short: 'Phase 1: Online Introduction for CSP'
           What is CSP?: What is CSP?
           Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
-          Impact of Computer Science: "Утицај науке о компјутерима"
+          Impact of Computer Science: "Утицај рачунарских наука"
           Growth Mindset: Growth Mindset
           Teaching Strategies: Teaching Strategies
           Preparing for in-person PD: Preparing for in-person PD
@@ -602,7 +603,7 @@
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          Impact of Computer Science: "Утицај науке о компјутерима"
+          Impact of Computer Science: "Утицај рачунарских наука"
         sciencePD:
           Introduction to PD: Introduction to PD
           title: Computer Science in Science PD
@@ -784,7 +785,7 @@
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          Impact of Computer Science: "Утицај науке о компјутерима"
+          Impact of Computer Science: "Утицај рачунарских наука"
         ECSPD-iZone:
           Introduction to PD: Introduction to PD
           What is ECS?: What is ECS?
@@ -795,7 +796,7 @@
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          Impact of Computer Science: "Утицај науке о компјутерима"
+          Impact of Computer Science: "Утицај рачунарских наука"
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -921,7 +922,7 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: "Интернет"
+          The Internet: "Интернет је за свакога"
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
             Tree
@@ -1001,6 +1002,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1285,7 +1288,7 @@
           Happy Maps: "Веселе мапе"
           Move it, Move it: "Помери га, помери"
           'Real-life Algorithms: Plant a Seed': "Прави алгоритми: Засади семе"
-          Graph Paper Programming: "Графиконско - Папирно Програмирање"
+          Graph Paper Programming: "Графичко програмирање"
           Building a Foundation: "Изградња темеља"
           Getting Loopy: "Запетљанције"
           The Big Event: "Велики догађај"
@@ -1811,3 +1814,8 @@
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': "Играоница: Collision Detection
             (Big Game)"
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

@@ -34,7 +34,7 @@ Promise.all([
     filenames: [
       'code-studio.js',
       'levelbuilder.js',
-      'levelbuilder_dsl.js',
+      'levelbuilder_markdown.js',
       'levelbuilder_studio.js',
       'levels/contract_match.jsx',
       'levels/widget.js',
@@ -70,9 +70,18 @@ Promise.all([
   build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
       'plc/perform_evaluation.js',
-      'plc/evaluation_creation.js'
+      'plc/evaluation_creation.js',
+      'plc/task_creation.js'
     ],
     commonFile: 'plc'
+  })),
+
+  // makerlab-only dependencies for app lab
+  build_commands.bundle(_.extend({}, defaultOptions, {
+    filenames: [
+      'makerlab/makerlabDependencies.js'
+    ],
+    commonFile: 'makerlab'
   }))
 ]).then(function (results) {
   var allStepsSucceeded = !results.some(function (result) {

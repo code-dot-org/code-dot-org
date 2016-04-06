@@ -21,7 +21,7 @@ no-NO:
   twentyhours_heading: Prøv vår introduksjon til koding
   twentyhours_text: Fullført din første kodetime? Lær mer grunnleggende koding og programmering i dette oppfølgingskurset.
   og_title: Hvert eneste barn fortjener en mulighet
-  og_description: Hver eneste student i hver skole fortjener muligheten til å studere Informatikk.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Bli med i <a href="http://hourofcode.com">Kodetimen</a><br/> 8. – 14. desember 2014<br/>'
   hoc2014_students: Elever
   hoc2014_try: Prøv
@@ -179,7 +179,7 @@ no-NO:
   learn_next_level: Fortsett til neste nivå
   learn_online: Prøv andre kurs på nettet
   learn_classes: Finn lokale kodeklubber
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Jeg ble nettopp ferdig med #kodetimen! @kidsakoder'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -505,6 +505,7 @@ no-NO:
   dashboard_navigation_all_sections: Studentkontoer og Progresjon
   dashboard_navigation_view_progress: Vis fremdrift
   dashboard_navigation_view_text_responses: Se tekstsvarene
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Legg til elever
   dashboard_navigation_manage_students: Administrer elever
   dashboard_navigation_lesson_plans_resources: Lærerplaner og Resurser
@@ -603,6 +604,18 @@ no-NO:
   dashboard_puzzle: Oppgave
   dashboard_question: Spørsmål
   dashboard_response: Svar
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Riktig
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Utrolig statistikk fra fjorårets Kodetime. På kun en uke:'
   stats_hoc_2013_image_alt: Statistikk fra Kodetimen 2013
   dashboard_teacher: Lærer
@@ -621,7 +634,7 @@ no-NO:
   dashboard_faq_k5: K-5 Ofte stilte spørsmål
   dashboard_announcements: Kunngjøringer
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Lær mer
   dashboard_announce_hoc: '<b>9 November 2015</b> - en ny time av koden tutorial er her, med kommende film Star Wars: The Force våkner. Arbeide med Rey å veilede nye droid, BB-8, gjennom et oppdrag. Deretter delta Leia for å opprette og dele dine egne spill i en galakse langt, langt borte.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'

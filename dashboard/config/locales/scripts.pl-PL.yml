@@ -178,11 +178,12 @@
         course4:
           description_short: Uczniowie uczestniczący w Kursie 4 powinni wcześniej
             ukończyć Kursy 2 i 3.
-          description: Kurs 4 jest przeznaczony dla uczniów, którzy ukończyli Kursy
-            2 i 3. Uczniowie będą głębiej wnikać w zagadnienia programowania omówione
-            w poprzednich kursach, by swobodniej rozwiązywać bardziej złożone problemy.
-            Pod koniec kursu uczniowie będą tworzyć interaktywne opowiadania i gry,
-            którymi mogą dzielić się z innymi. Zalecany dla klas 4-8.
+          description: Kurs 4 przeznaczony jest dla uczniów, którzy ukończyli Kursy
+            2 i 3. Uczniowie nauczą się jak rozwiązywać bardziej złożone zagadki,
+            uczą się jak połączyć kilka pomysłów przy rozwiązywaniu każdego wyzwania.
+            Do czasu ukończenia tego Kursu, uczniowie stworzą programy, które pozwolą
+            im pokazać wiele umiejętności, w tym dla pętli i funkcji z parametrami.
+            Zalecane dla klas 4-8.
           'Artist: Variables': 'Artysta: Zmienne'
           'Bee: For Loops': 'Pszczółka: Pętle "dla" (for)'
           title: Kurs 4
@@ -1016,6 +1017,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Faza 2 Online: Mieszane letnie studia'
@@ -1620,7 +1623,7 @@
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
-          description_short: Programming
+          description_short: Programowanie
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1828,3 +1831,8 @@
             Wykrywanie kolizji i formuły odległości'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Wykrywanie kolizji
             (Big Game)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

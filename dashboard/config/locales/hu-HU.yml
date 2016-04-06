@@ -26,6 +26,7 @@
   welcome_back: "Üdv újra, %{name}"
   submit: Elküldés
   unsubmit: Visszavon
+  next_page: Következő oldal
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
@@ -417,6 +418,8 @@
       Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &copy;
       %{current_year} Electronic Arts Inc. Minden jog fenntartva.<br /> a Gumball
       csodálatos világa a Cartoon Network bejegyzett védjegye.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Az Amazon Web Services működteti
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az
       Hour of Code&reg; a Code.org védjegyei."
@@ -565,7 +568,6 @@
     prerelease_hoc2014: Ez a tananyag <span class='betatext'> béta állapotban van</span>.
       A visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés
       várható.
-    feedback: Visszajelzés küldése
     report_bug: Hiba bejelentése
     support: Segítség kérés
     support_url: "//support.code.org"
@@ -584,6 +586,16 @@
     correct_body: Köszönjük hogy elküldtél egy választ.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Köszönöm
+    wrong_body: Köszönjük az elküldött válaszokat.
+    correct_title: Köszönöm
+    correct_body: Köszönjük az elküldött válaszokat.
+  level_group-submittable:
+    wrong_title: Köszönöm
+    wrong_body: Köszönjük az elküldött válaszokat.
+    correct_title: Köszönöm
+    correct_body: Köszönjük az elküldött válaszokat.
   match:
     wrong_title: Helytelen megoldás
     wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
@@ -603,9 +615,8 @@
     placeholder: Itt add meg a válaszod
     open_response_title: Köszönjük
     open_response_body: Köszönjük a választ!
-  level_group:
-    correct_title: Köszönöm
-    correct_body: Thank you for submitting an answer
+    correct_title: Helyes
+    correct_body: Ez a helyes válasz.
   dialog:
     ok: OK
     startover_title: Biztosan újra szeretnéd kezdeni?
@@ -670,7 +681,7 @@
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
     assessment: "értékelés"
-    submitted: submitted
+    submitted: elküldve
   studio:
     courses_working_on: Tanfolyamok, amelyeken dolgozol
     completed_courses: Teljesített tanfolyamok
@@ -741,3 +752,7 @@
         acknowledge: Az alábbi információk megadásával tudomásul veszed, hogy azokat
           az %{link_start_privacy}Adatvédelmi szabályzatnak%{link_end} és a %{link_start_tos}Felhasználói
           szabályoknak%{link_end} megfelelően kezeljük
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

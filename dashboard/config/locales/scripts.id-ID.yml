@@ -1029,6 +1029,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Ilmu komputer dalam aljabar PD
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -1845,3 +1847,8 @@
             terpasang: pendeeteksi benturan dan Formula jarak'
           'Play Lab: Collision Detection (Big Game)': 'Bermain Lab: Pendeteksi benturan
             (Big Game)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

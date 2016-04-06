@@ -50,7 +50,8 @@
           'Studio: Create a Story': 'Laboratório do Jogo: Criar uma História'
           'Artist: Loops': 'Artista: Ciclos'
           description_audience: Dos 4 aos 6 anos
-          description_short: Começar com o Curso 1, para os leitores principiantes.
+          description_short: O curso 1 é destinado às crianças que estão a aprender
+            a ler.
         course2:
           The Maze: O Labirinto
           Suzi: Suzi
@@ -94,7 +95,7 @@
           'Maze: Sequence2': 'Labirinto: Sequência 2'
           'Artist: Nested Loops': 'Artista: Laços Aninhados'
           description_audience: Dos 6 aos 18 anos
-          description_short: O Curso 2 é destinado aos alunos que já sabem ler.
+          description_short: O curso 2 é destinado aos alunos que já sabem ler.
         course3:
           The Maze: O Labirinto
           'Studio: Create a Story': 'Laboratório do Jogo: Criar uma História'
@@ -150,7 +151,7 @@
           'Artist: Patterns': 'Artista: Padrões'
           Songwriting: Composição
           description_audience: Dos 8 aos 18 anos
-          description_short: O Curso 3 é uma continuação do Curso 2.
+          description_short: O curso 3 é a continuação do curso 2.
         playlab:
           title: Laboratório
           description: Crie uma história ou um jogo no Laboratório!
@@ -179,14 +180,14 @@
           description_short: Use a programação para explorar a mágica e a beleza do
             gelo com Anna e Elsa.
         course4:
-          description_short: Os alunos do Curso 4 já deverão ter concluído os Cursos
-            2 e 3.
-          description: O Curso 4 foi elaborado para os alunos que já concluíram os
-            Cursos 2 e 3. Os alunos mergulharão mais fundo nos tópicos da programação
-            apresentados nos cursos anteriores, para obter soluções flexíveis para
-            problemas mais complexos. Ao final deste curso, os alunos vão criar histórias
-            e jogos interativos que poderão ser compartilhados com qualquer pessoa.
-            Recomendado para alunos do 4º ao 8º ano.
+          description_short: O curso 4 é destinado aos alunos que já concluíram os
+            cursos 2 e 3.
+          description: Curso 4 foi projetado para estudantes que concluíram os Cursos
+            2 e 3. Os alunos aprenderão a resolver quebra-cabeças com maior complexidade
+            e combinar vários conceitos, enquanto resolvem cada desafio. Após concluírem
+            este curso, os alunos terão criado programas que mostram habilidades múltiplas,
+            incluindo ciclos e funções com parâmetros. Recomendado para alunos do
+            4° ao 8° ano.
           'Artist: Variables': 'Artista: variáveis'
           'Bee: For Loops': 'Abelha: laços for'
           title: Curso 4
@@ -212,7 +213,7 @@
           Farmer Binary: 'Fazendeira: binário'
           Maze and Bee: Labirinto e abelha
           Artist Binary: 'Artista: binário'
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           Super Challenge - Variables: Super desafio - variáveis
           Super Challenge - For Loops: Super desafio - For Loops
           Super Challenge - Functions and Parameters: Super desafio - funções e parâmetros
@@ -220,9 +221,9 @@
         Course4pre:
           title: Pré-requisitos do curso 4
           description_short: Uma breve revisão dos conceitos para os alunos que não
-            fizeram os Cursos 2 e 3.
+            fizeram os cursos 2 e 3.
           description: Uma breve revisão dos conceitos para os alunos que não fizeram
-            os Cursos 2 e 3.
+            os cursos 2 e 3.
           Course 4 Prerequisite: Pré-requisitos do curso 4
           'Maze: Sequence': 'Labirinto: Sequência'
           'Artist: Sequence': 'Artista: Sequência'
@@ -368,7 +369,7 @@
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: Curso de introdução acelerada ao CS
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           description: Este curso de 20 horas apresenta o informática de núcleo e
             conceitos de programação. O curso é projetado para uso em salas de aula
             para os graus K-8, mas é divertido de aprender em todos os tempos.
@@ -420,10 +421,10 @@
             de 10 minutos!
           Flappy Code: Flappy Bird
         jigsaw:
-          title: Quebra-cabeça
+          title: Quebra-cabeças
           description: Experimente nosso tutorial sobre quebra-cabeça
           description_short: Experimente nosso tutorial sobre quebra-cabeça
-          Jigsaw: Quebra-cabeça
+          Jigsaw: Quebra-cabeças
         step:
           title: Avançar
           description: Etapa do tutorial
@@ -469,9 +470,9 @@
         course4pre:
           title: Pré-requisitos do curso 4
           description_short: Uma breve revisão dos conceitos para os alunos que não
-            fizeram os Cursos 2 e 3.
+            fizeram os cursos 2 e 3.
           description: Uma breve revisão dos conceitos para os alunos que não fizeram
-            os Cursos 2 e 3.
+            os cursos 2 e 3.
           Course 4 Prerequisite: Pré-requisitos do curso 4
           'Maze: Sequence': 'Labirinto: Sequência'
           'Artist: Sequence': 'Artista: Sequência'
@@ -993,7 +994,7 @@
           Big Game - Collision Detection: Big Game - Collision Detection
           Free Play: Atividade livre
         allthethings:
-          Jigsaw: Quebra-cabeça
+          Jigsaw: Quebra-cabeças
           Maze: Labirinto
           Artist: Artista
           Bee: Abelha
@@ -1022,6 +1023,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: combinado de estudos de verão'
@@ -1591,13 +1594,13 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
@@ -1837,3 +1840,8 @@
             de colisão e fórmula da distância'
           'Play Lab: Collision Detection (Big Game)': 'Laboratório: Deteção de colisão
             (O Grande Jogo)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

@@ -14,20 +14,22 @@ var _ = require('lodash');
 require('./consoleShim')(window);
 
 var Sounds = require('./Sounds');
+var activateReferenceAreaOnLoad = require('./reference_area');
 
 require('./videos');
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
+window.Radium = require('radium');
 
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.
 require('./components/abuse_error.jsx');
 require('./components/report_abuse_form.jsx');
 require('./components/send_to_phone.jsx');
-require('./components/share_dialog.jsx');
 require('./components/small_footer.jsx');
 require('./components/GridEditor.jsx');
+require('./components/IconLibrary.jsx');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
@@ -38,6 +40,7 @@ window.dashboard.clientState = require('./clientState.js');
 window.dashboard.createCallouts = require('./callouts');
 window.dashboard.hashEmail = require('./hashEmail');
 window.dashboard.funometer = require('./funometerPercentagesByDay');
+window.dashboard.levelCompletions = require('./levelCompletions');
 window.dashboard.popupWindow = require('./popup-window');
 window.dashboard.progress = require('./progress');
 window.dashboard.reporting = require('./reporting');
@@ -60,15 +63,17 @@ window.onerror = function (msg, url, ln) {
 
 // Prevent escape from canceling page loads.
 var KEY_ESCAPE = 27;
-$(document).keydown(function(e) {
+$(document).keydown(function (e) {
   if (e.keyCode === KEY_ESCAPE) {
     e.stopPropagation();
     e.preventDefault();
   }
 });
 
-setTimeout(function() {
+setTimeout(function () {
   $('#codeApp .slow_load').show();
 }, 10000);
+
+activateReferenceAreaOnLoad();
 
 window.CDOSounds = new Sounds();
