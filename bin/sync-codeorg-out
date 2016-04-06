@@ -28,7 +28,7 @@ end
 
 # For untranslated apps, copy English file for all locales
 def copy_untranslated_apps
-  untranslated_apps = ['applab', 'calc', 'eval', 'gamelab', 'netsim']
+  untranslated_apps = %w(applab calc eval gamelab netsim)
 
   Languages.get_locale.each do |prop|
     if prop[:locale_s] != 'en-US'
@@ -41,7 +41,7 @@ def copy_untranslated_apps
 end
 
 def cleanup_portuguese_codes
-  dashboard_categories = ['data', 'devise', 'dsls', 'instructions', 'scripts', 'slides', 'unplugged']
+  dashboard_categories = %w(data devise dsls instructions scripts slides unplugged)
 
   # Fix portuguese codes
   file = "dashboard/config/locales/pt-BR.yml"
