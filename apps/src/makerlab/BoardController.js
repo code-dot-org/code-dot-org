@@ -82,7 +82,7 @@ BoardController.prototype.reset = function () {
     return;
   }
 
-  this.board_.register.forEach(function (component) {
+  this.board_.register.concat([this.prewiredComponents.tap, this.prewiredComponents.touch]).forEach(function (component) {
     try {
       if (component.state && component.state.intervalId) {
         clearInterval(component.state.intervalId);
@@ -201,8 +201,8 @@ function initializeCircuitPlaygroundComponents(io) {
       controller: PlaygroundIO.Gyro
     }),
 
-    Tap: new PlaygroundIO.Tap(io),
+    tap: new PlaygroundIO.Tap(io),
 
-    CapTouch: PlaygroundIO.CapTouch(io)
+    touch: new PlaygroundIO.CapTouch(io)
   };
 }
