@@ -29,6 +29,7 @@ GameLabP5.baseP5loadImage = null;
  *
  * @param {!Object} options
  * @param {!Function} options.gameLab instance of parent GameLab object
+ * @param {Number} [options.scale] Scale ratio of containing element (<1 is small)
  * @param {!Function} options.onExecutionStarting callback to run during p5 init
  * @param {!Function} options.onPreload callback to run during preload()
  * @param {!Function} options.onSetup callback to run during setup()
@@ -40,6 +41,9 @@ GameLabP5.prototype.init = function (options) {
   this.onPreload = options.onPreload;
   this.onSetup = options.onSetup;
   this.onDraw = options.onDraw;
+  this.scale = options.scale || 1;
+
+  var self = this;
 
   // Override p5.loadImage so we can modify the URL path param
   if (!GameLabP5.baseP5loadImage) {
@@ -86,6 +90,93 @@ GameLabP5.prototype.init = function (options) {
   window.p5.prototype.fullScreen = function (val) {
     return false;
   };
+
+  // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
+  // positions before reporting touch coordinates
+  //
+  // NOTE: _updateNextTouchCoords() is nearly identical, but calls a modified
+  // getTouchInfo() function below that can return undefined
+  window.p5.prototype._updateNextTouchCoords = function (e) {
+    if (e.type === 'mousedown' ||
+        e.type === 'mousemove' ||
+        e.type === 'mouseup'){
+      this._setProperty('_nextTouchX', this._nextMouseX);
+      this._setProperty('_nextTouchY', this._nextMouseY);
+    } else {
+      if (this._curElement !== null) {
+        var touchInfo = getTouchInfo(this._curElement.elt, e, 0);
+
+        if (touchInfo) {
+          this._setProperty('_nextTouchX', touchInfo.x);
+          this._setProperty('_nextTouchY', touchInfo.y);
+        }
+
+        var touches = [];
+        var touchIndex = 0;
+        for (var i = 0; i < e.touches.length; i++) {
+          touchInfo = getTouchInfo(this._curElement.elt, e, i);
+          if (touchInfo) {
+            touches[touchIndex] = touchInfo;
+            touchIndex++;
+          }
+        }
+        this._setProperty('touches', touches);
+      }
+    }
+  };
+
+  // NOTE: returns undefined if the position is outside of the valid range
+  function getTouchInfo(canvas, e, i) {
+    i = i || 0;
+    var rect = canvas.getBoundingClientRect();
+    var touch = e.touches[i] || e.changedTouches[i];
+    var xPos = touch.clientX - rect.left;
+    var yPos = touch.clientY - rect.top;
+    if (xPos >= 0 && xPos < rect.width && yPos >= 0 && yPos < rect.height) {
+      return {
+        x: Math.round(xPos / self.scale),
+        y: Math.round(yPos / self.scale),
+        id: touch.identifier
+      };
+    }
+  }
+
+  // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
+  // positions before reporting mouse coordinates
+  //
+  // NOTE: _updateNextMouseCoords() is nearly identical, but calls a modified
+  // getMousePos() function below that can return undefined
+  window.p5.prototype._updateNextMouseCoords = function (e) {
+    if (e.type === 'touchstart' ||
+        e.type === 'touchmove' ||
+        e.type === 'touchend') {
+      this._setProperty('_nextMouseX', this._nextTouchX);
+      this._setProperty('_nextMouseY', this._nextTouchY);
+    } else {
+      if (this._curElement !== null) {
+        var mousePos = getMousePos(this._curElement.elt, e);
+        if (mousePos) {
+          this._setProperty('_nextMouseX', mousePos.x);
+          this._setProperty('_nextMouseY', mousePos.y);
+        }
+      }
+    }
+    this._setProperty('winMouseX', e.pageX);
+    this._setProperty('winMouseY', e.pageY);
+  };
+
+  // NOTE: returns undefined if the position is outside of the valid range
+  function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    var xPos = evt.clientX - rect.left;
+    var yPos = evt.clientY - rect.top;
+    if (xPos >= 0 && xPos < rect.width && yPos >= 0 && yPos < rect.height) {
+      return {
+        x: Math.round(xPos / self.scale),
+        y: Math.round(yPos / self.scale)
+      };
+    }
+  }
 
   // Add new p5 methods:
   window.p5.prototype.mouseDidMove = function () {
