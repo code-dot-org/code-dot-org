@@ -74,8 +74,6 @@ var AppLabView = React.createClass({
       top: topPaneHeight
     };
 
-    // TODO - there are a small set of levels that have instructions but not markdownInstructions
-    //   (that are also used in scripts). should convert these to have markdown instructions
     return (
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
