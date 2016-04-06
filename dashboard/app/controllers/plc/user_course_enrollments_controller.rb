@@ -2,14 +2,8 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   before_filter :create_enrollment, only: :create
   load_and_authorize_resource
 
-  # GET /plc/user_course_enrollments
-  # GET /plc/user_course_enrollments.json
   def index
-  end
-
-  # GET /plc/user_course_enrollments/1
-  # GET /plc/user_course_enrollments/1.json
-  def show
+    @user_course_enrollments = @user_course_enrollments.where(user: current_user)
   end
 
   # GET /plc/user_course_enrollments/new
@@ -20,17 +14,10 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   # POST /plc/user_course_enrollments.json
   def create
     if @user_course_enrollment.save
-      redirect_to @user_course_enrollment, notice: 'User course enrollment was successfully created.'
+      redirect_to action: :index
     else
       redirect_to action: :new
     end
-  end
-
-  # DELETE /plc/user_course_enrollments/1
-  # DELETE /plc/user_course_enrollments/1.json
-  def destroy
-    @user_course_enrollment.destroy
-    redirect_to action: :index
   end
 
   private

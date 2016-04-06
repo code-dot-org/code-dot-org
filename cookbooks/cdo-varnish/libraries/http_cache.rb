@@ -41,6 +41,7 @@ class HttpCache
       'videos_seen',
       'callouts_seen',
       'pm',
+      'rack.session',
       session_key,
       storage_id,
     ]

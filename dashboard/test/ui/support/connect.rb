@@ -41,7 +41,7 @@ def saucelabs_browser
   capabilities[:name] = ENV['TEST_RUN_NAME']
   capabilities[:build] = ENV['BUILD']
 
-  puts "DEBUG: Capabilities: #{CGI::escapeHTML capabilities.inspect}"
+  puts "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
   browser = nil
   Time.now.to_i.tap do |start_time|
@@ -60,7 +60,7 @@ def saucelabs_browser
     puts "DEBUG: Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
   end
 
-  puts "DEBUG: Browser: #{CGI::escapeHTML browser.inspect}"
+  puts "DEBUG: Browser: #{CGI.escapeHTML browser.inspect}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
   unless ENV['MOBILE']
@@ -87,7 +87,7 @@ end
 browser = nil
 
 Before do
-  puts "DEBUG: @browser == #{CGI::escapeHTML @browser.inspect}"
+  puts "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
 
   if slow_browser?
     browser ||= get_browser
