@@ -606,6 +606,21 @@ Applab.startSharedAppAfterWarnings = function () {
 };
 
 /**
+ * Look at localStorage to see if we want to show instructions in the top pane.
+ */
+function showInstructionsInTopPane() {
+  // enable instructions in top pane based on query param
+  if (/topInstructions=true/.test(location.search)) {
+    localStorage.setItem('showInstructionsInTopPane', true);
+  }
+  // disable instructions in top pane based on query param
+  if (/topInstructions=false/.test(location.search)) {
+    localStorage.removeItem('showInstructionsInTopPane');
+  }
+  return !!localStorage.getItem('showInstructionsInTopPane');
+}
+
+/**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
 Applab.init = function (config) {
@@ -774,8 +789,7 @@ Applab.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  // TODO - should they also be on by default for admin?
-  config.showInstructionsInTopPane = !!localStorage.getItem('showInstructionsInTopPane');
+  config.showInstructionsInTopPane = showInstructionsInTopPane();
 
   // Applab.initMinimal();
 
