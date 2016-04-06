@@ -80,12 +80,8 @@ class XhrProxyControllerTest < ActionController::TestCase
 
   test "should fail with bad channel id" do
     stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-    begin
-      get :get, u: XHR_URI, c: '12345'
-      raise 'Invalid channel id should raise an exception'
-    rescue Exception => e
-      assert e.message.include?(BAD_CHANNEL_MSG), 'Exception message should indicate invalid channel'
-    end
+    get :get, u: XHR_URI, c: '12345'
+    assert_response 403
   end
 
   test "should fail with missing channel id" do
