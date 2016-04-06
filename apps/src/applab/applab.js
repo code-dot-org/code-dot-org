@@ -131,7 +131,7 @@ var twitterOptions = {
 };
 
 // The unscaled dimensions of the visualization area
-var VIZ_APP_WIDTH = 400;
+var vizAppWidth = 400;
 var VIZ_APP_HEIGHT = 400;
 
 var hasSeenRateLimitAlert = false;
@@ -231,8 +231,8 @@ function adjustAppSizeStyles(container) {
   // We assume these are listed in this order:
   var defaultScaleFactors = [1.0, 0.875, 0.75, 0.625, 0.5];
   var scaleFactors = defaultScaleFactors.slice(0);
-  if (VIZ_APP_WIDTH !== Applab.appWidth) {
-    vizScale = VIZ_APP_WIDTH / Applab.appWidth;
+  if (vizAppWidth !== Applab.appWidth) {
+    vizScale = vizAppWidth / Applab.appWidth;
     for (var ind = 0; ind < scaleFactors.length; ind++) {
       scaleFactors[ind] *= vizScale;
     }
@@ -276,7 +276,7 @@ function adjustAppSizeStyles(container) {
         if (rules[j].selectorText === "div#visualization") {
           // set the 'normal' width/height for the visualization itself
           rules[j].style.cssText = "height: " + targetVizAppHeight +
-                                   "px; width: " + VIZ_APP_WIDTH + "px;";
+                                   "px; width: " + vizAppWidth + "px;";
           changedRules++;
         } else if (rules[j].media && childRules) {
           adjustMediaHeightRule(rules[j].media, defaultHeightRules, newHeightRules);
@@ -641,9 +641,9 @@ Applab.init = function (config) {
   }
 
   // If we are in mobile sharing mode, allow the viewport to handle scaling
-  // and override our default width target in VIZ_APP_WIDTH with the actual width
+  // and override our default width target in vizAppWidth with the actual width
   if (dom.isMobile() && config.hideSource) {
-    VIZ_APP_WIDTH = Applab.appWidth;
+    vizAppWidth = Applab.appWidth;
   }
 
   adjustAppSizeStyles(document.getElementById(config.containerId));
