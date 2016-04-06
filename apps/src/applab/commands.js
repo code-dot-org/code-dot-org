@@ -1390,7 +1390,7 @@ applabCommands.startWebRequest = function (opts) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
   var url = XHR_PROXY_PATH + '?u=' + encodeURIComponent(opts.url) +
-      '&c=' + Applab.channelId;
+      '&c=' + encodeURIComponent(Applab.channelId);
   req.open('GET', url, true);
   req.send();
 };
