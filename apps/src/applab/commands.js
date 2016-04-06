@@ -20,6 +20,9 @@ var color = require('../color');
 
 var OPTIONAL = true;
 
+// For proxying non-https xhr requests
+var XHR_PROXY_PATH = '//' + location.host + '/xhr';
+
 var applabCommands = module.exports;
 
 /**
@@ -1386,7 +1389,14 @@ applabCommands.startWebRequest = function (opts) {
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
-  req.open('GET', opts.url, true);
+  if (!Applab.channelId) {
+    // In the unlikely event that the rest of App Lab hasn't broken in the absence
+    // of a channel id, let the user know its out fault that startWebRequest is failing.
+    throw new Error('Internal error: A channel id is required to execute startWebRequest.');
+  }
+  var url = XHR_PROXY_PATH + '?u=' + encodeURIComponent(opts.url) +
+      '&c=' + encodeURIComponent(Applab.channelId);
+  req.open('GET', url, true);
   req.send();
 };
 
