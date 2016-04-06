@@ -57,7 +57,7 @@ BoardController.prototype.ensureBoardConnected = function () {
 
 BoardController.prototype.installComponentsOnInterpreter = function (codegen, jsInterpreter) {
   this.prewiredComponents = this.prewiredComponents ||
-      initializeCircuitPlaygroundComponents();
+      initializeCircuitPlaygroundComponents(this.board_.io);
 
   codegen.customMarshalObjectList = [
     {instance: five.Led},
@@ -67,6 +67,8 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
     {instance: five.Piezo},
     {instance: five.Thermometer},
     {instance: five.Sensor},
+    {instance: PlaygroundIO.CapTouch},
+    {instance: PlaygroundIO.Tap},
     {instance: five.Gyro}
   ];
 
@@ -151,7 +153,7 @@ function deviceOnPortAppearsUsable(port) {
  * Circuit Playground board.
  * @returns {Object.<String, Object>} board components
  */
-function initializeCircuitPlaygroundComponents() {
+function initializeCircuitPlaygroundComponents(io) {
   return {
     pixels: Array.from({length: 10}, function (_, index) {
       return new five.Led.RGB({
@@ -197,6 +199,10 @@ function initializeCircuitPlaygroundComponents() {
 
     gyro: new five.Gyro({
       controller: PlaygroundIO.Gyro
-    })
+    }),
+
+    Tap: new PlaygroundIO.Tap(io),
+
+    CapTouch: PlaygroundIO.CapTouch(io)
   };
 }
