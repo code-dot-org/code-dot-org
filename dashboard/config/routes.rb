@@ -291,6 +291,7 @@ Dashboard::Application.routes.draw do
   end
 
   namespace :plc do
+    root to: 'plc#index'
     resources :courses
     resources :learning_modules
     resources :tasks
