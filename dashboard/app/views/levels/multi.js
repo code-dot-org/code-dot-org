@@ -125,7 +125,7 @@ Multi.prototype.ready = function () {
     }
   }
 
-  $("#" + this.id + " .answerbutton").click($.proxy(function(event) {
+  $("#" + this.id + " .answerbutton").click($.proxy(function (event) {
     //console.log("answerbutton clicked", this.id);
     this.choiceClicked($(event.currentTarget));
   }, this));

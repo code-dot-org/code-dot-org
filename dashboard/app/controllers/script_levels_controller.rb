@@ -207,7 +207,7 @@ class ScriptLevelsController < ApplicationController
 
     load_level_source
 
-    if @level.properties["pages"] && params[:puzzle_page]
+    if @level.try(:pages) && params[:puzzle_page]
       @pages = [@level.pages[params[:puzzle_page].to_i - 1]]
       @total_page_count = @level.pages.count
     end

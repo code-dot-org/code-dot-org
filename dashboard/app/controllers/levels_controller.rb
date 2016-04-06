@@ -23,7 +23,7 @@ class LevelsController < ApplicationController
   # GET /levels/1
   # GET /levels/1.json
   def show
-    if @level.properties["pages"]
+    if @level.try(:pages)
       @pages = @level.pages
     end
 
