@@ -58,6 +58,8 @@ var AnimationSequenceListItem = React.createClass({
       tile: {
         backgroundColor: this.props.isSelected ? color.purple : 'none'
       }
+    }, {
+      tile: this.props.style
     });
 
     var sequenceName;
