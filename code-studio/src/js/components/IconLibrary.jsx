@@ -1,6 +1,6 @@
 /* global dashboard */
 
-var IconList = require('./IconList.jsx');
+var IconList = require('./IconList');
 
 /**
  * A component for managing icons.

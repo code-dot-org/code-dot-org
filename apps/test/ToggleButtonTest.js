@@ -7,7 +7,7 @@ testUtils.setExternalGlobals();
 var ReactTestUtils = require('react-addons-test-utils');
 
 describe('ToggleButton', function () {
-  var ToggleButton = require('@cdo/apps/templates/ToggleButton.jsx');
+  var ToggleButton = require('@cdo/apps/templates/ToggleButton');
   var renderer;
 
   beforeEach(function () {
