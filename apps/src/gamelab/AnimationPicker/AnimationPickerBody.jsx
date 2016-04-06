@@ -3,21 +3,15 @@
 
 var AnimationPickerListItem = require('./AnimationPickerListItem.jsx');
 var AnimationPickerSearchBar = require('./AnimationPickerSearchBar.jsx');
-var color = require('../../color');
 var Radium = require('radium');
 var ScrollableList = require('../AnimationTab/ScrollableList.jsx');
-
-var styles = {
-  title: {
-    color: color.purple,
-    textAlign: 'center',
-    margin: 0,
-    fontSize: '140%',
-    lineHeight: '140%'
-  }
-};
+var styles = require('./styles');
 
 var AnimationPickerBody = React.createClass({
+  propTypes: {
+    onUploadClick: React.PropTypes.func.isRequired
+  },
+
   render: function () {
     return <div>
       <h1 style={styles.title}>Animation library</h1>
@@ -28,7 +22,8 @@ var AnimationPickerBody = React.createClass({
             icon="pencil" />
         <AnimationPickerListItem
             label="Upload image"
-            icon="upload" />
+            icon="upload"
+            onClick={this.props.onUploadClick} />
         <AnimationPickerListItem
             label="asterisk_circle (9)" />
         <AnimationPickerListItem
