@@ -12,7 +12,7 @@
 # Indexes
 #
 #  index_plc_user_course_enrollments_on_plc_course_id              (plc_course_id)
-#  index_plc_user_course_enrollments_on_user_id_and_plc_course_id  (user_id,plc_course_id)
+#  index_plc_user_course_enrollments_on_user_id_and_plc_course_id  (user_id,plc_course_id) UNIQUE
 #
 
 class Plc::UserCourseEnrollment < ActiveRecord::Base
