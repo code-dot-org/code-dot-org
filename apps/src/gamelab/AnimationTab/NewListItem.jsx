@@ -56,7 +56,7 @@ var styles = {
 var NewListItem = React.createClass({
   propTypes: {
     label: React.PropTypes.string.isRequired,
-    onClick: React.PropTypes.func // TODO: Should be required?
+    onClick: React.PropTypes.func.isRequired
   },
 
   render: function () {
