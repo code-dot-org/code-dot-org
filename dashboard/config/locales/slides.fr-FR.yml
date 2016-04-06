@@ -2430,86 +2430,93 @@
           Je peux placer un bloc entre autres blocs.
       4:
         image: notes/tutorial_puzzle_challenge_4.png
-        text: Let's take a turn block and place it in between the move forwards. Turn
-          left 45 degrees. Let's run it again. Reset, run, awesome! Here's another
-          puzzle. Sometimes you are given starter code to complete. Here I need to
-          add the appropriate lengths and degrees.
+        text: Prends un bloc "Tourner" et place-le entre les deux "avancer". Tourne
+          à gauche à 45 degrés. Execute-le à nouveau. Réinitialise, exécute, génial!
+          Voici un autre puzzle. Parfois on te donne le début d'un code que tu dois
+          completer. Ici, tu dois ajouter les longueurs et degrés qui correspondent.
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: You may sometimes accidentally trash the starter code. What do you do
-          then? You can press clear puzzle and start all over again. I'm going to
-          drag this number block into the different pixel areas. Select 100 for pixels,
-          45 for degrees and 100 for pixels again. Awesome! Here is the Code Studio
-          bee. I need to move the bee to each flower and get nectar.
+        text: Parfois, il arrive de gâcher le code de démarrage. Que-est ce que tu
+          fais dans ce cas là? Tu peux appuyer sur Recommencer et reprendre dès le
+          début. Je vais glisser ce bloc de chiffre dans les différentes zones de
+          pixel. Sélectionné 100 pour pixels, 45 pour degrés et encore 100 pour pixels.
+          Super! Voici l'abeille de Code studio, j'ai besoin de déplacer l'abeille
+          dans chaque fleur et récupérer le nectar.
       6:
         image: notes/tutorial_puzzle_challenge_6.png
-        text: The first flower is three blocks away so I need three move forwards.
-          1, 2, 3. Then a get nectar, then another get nectar. Well that didn't work!
-          I'll place another move forward between the get nectars and run it again.
-          Yay, it works! You just learned how to use the Code Studio artist and bee
-          puzzles. Good luck on the Code Studio puzzle challenge.
+        text: La première fleur est à 3 cases de distance donc j'ai besoin d'avancer
+          trois fois. 1, 2, 3. Ensuite un "Obtenir nectar", puis un autre "Obtenir
+          nectar". Tiens! Ça n'a pas marché! Je mets donc un autre "Avancer" être
+          les "Obtenir nectar" et je l'exécute à nouveau. Trop bien, ça marche! Tu
+          viens d'apprendre comment utiliser les puzzles d'artiste et abeille de Code
+          Studio. Bon courage sur le challenge puzzle de Code Studio.
     unplug1:
       1:
         image: notes/unplug1_1.png
-        text: What do you want to be when you grow up Olivia? Umm, an astronaut! Do
-          you happen to know what a computer programmer is? Yeahh, umm, no. Umm, what
-          what? I'm not really sure how to explain it. Computer programming is pretty
-          simple. It's a set of instructions, like a recipe. You have to follow them
-          step by step to get the end result you want.
+        text: Que-veux tu devenir quand tu seras grande, Olivia? Euh, une astronaute!
+          Est-ce que tu sais ce qu'est un programmeur? Ouiiii, euh, non. Qu'est-ce
+          que quoi? Je ne sais pas trop comment l'expliquer. Le programmation est
+          très simple. C'est une liste d'instructions, comme une recette. Tu dois
+          suivre chaque instruction étape par étape pour obtenir le résultat final
+          que tu veux.
       2:
         image: notes/unplug1_2.png
-        text: Computer science is a way to impact the world. It can be music videos,
-          it can be games, detect whether or not someone is related to someone else.
-          Find you know, people's friends. You can do all sorts of other crazy things
-          that actually save lives. You do have to have a drive I think. It is to
-          me like a paintbrush. I think great programming is not all that dissimilar
-          from great art.
+        text: L'informatique est un moyen d'avoir un impact sur le monde. Ça peut
+          être des vidéos de musique, ça peut être des jeux, reconnaitre si quelqu'un
+          est lié à quelqu'un d'autre. Trouver les amis des gens. Tu peux faire plein
+          de choses étranges qui peuvent en réalité sauver des vies. Il faut être
+          motivé(e) je pense. Pour moi, c'est comme un pinceau. Je pense que la bonne
+          programmation n'est pas si différente de l'art.
       3:
         image: notes/unplug1_3.png
-        text: When I finally learned a little bit of programming, that blank wall
-          resolved into a bunch of doors and you open them and of course then you
-          find behind them is another hallway filled with a bunch of doors. Programming
-          is fun and easy. You can do anything your mind wants to do. Finally you
-          start to open enough doors the light comes in. To me a finished program
-          is like a structure filled with light. All the corners are illuminated.
-          The number of people that you can touch and interact with is something the
-          world has never seen before.
+        text: Quand j'ai enfin appris un peu de programmation, ce mûr blanc s'est
+          transformé en un tas de portes et quand tu ouvre ces portes tu trouves un
+          couloir rempli avec plein de portes. La programmation est amusante et simple.
+          tu peux fair ce que ton esprit désire. Finalement, tu commences à ouvrir
+          assez de portes et ça commence à s'éclairer. Pour moi, un programme terminé
+          est comme un bâtiment rempli de lumière. Tous les coins sont illuminés.
+          Le nombre de personnes qui peuvent être touchées par ce que tu fais est
+          avec qui tu peux interagir est quelque chose que le monde n'a jamais vu
+          auparavant.
       4:
         image: notes/unplug1_4.png
-        text: Our first lesson in this series is all about what computer science is,
-          what a computer scientist does and how you can be more responsible in your
-          use of technology. It's a very important lesson but it is a little text-heavy.
-          At the end, you get to make your very own customized encoding using your
-          initials. It's a fun activity and it's very empowering because binary is
-          one of those things that feels very technical but once you understand it,
-          it's like you speak a secret language.
+        text: Notre premier cours de cette série est sur le sujet de l'informatique,
+          ce que fait un informaticien et comment tu peux devenir plus responsable
+          dans ton utilisation de la technologie. C'est un cours important mais il
+          y aura beaucoup de texte. A la fin, tu pourras créer ton propre encodage
+          en utilisant tes initiales. C'est une activité amusante et très enrichissante
+          car le binaire est l'une de ces choses qui semble très technique, mais une
+          fois que tu l'as compris c'est comme si tu parlais une langue secrete.
     unplug2:
       1:
         image: notes/unplug2_1.png
-        text: The lesson on computational thinking is intended to teach you how to
-          take a big difficult problem and break it down into several simpler problems.
-          The goal of this lesson is to write a set of instructions that someone can
-          follow to draw one of the monsters included in the lesson plan.
+        text: Le cours sur la pensée informatique est destiné à t'apprendre comment
+          prendre un problème gros et difficile et le décomposer en plusieurs problèmes
+          plus simples. L'objectif de ce cours es d'écrire une liste d'instructions
+          que quelqu'un peut suivre à fin de dessiner l'un des monstres inclus dans
+          le plan du cours.
       2:
         image: notes/unplug2_2.png
-        text: 'Students will break into groups to write instructions and then they''ll
-          switch them with another group that will have to draw the monster. Groups
-          will write instructions using the four steps of computational thinking:
-          decomposition, pattern location, abstraction and algorithms.'
+        text: 'Les étudiants feront des groupes et écriront des instructions. Ils
+          vont ensuite échanger avec un autre groupe qui devra dessiner le monstre.
+          Les groupes écriront les instructions en utilisant les quatre étapes de
+          la pensée informatique : decomposition, repérer les motifs, abstraction
+          et algorithmes.'
       3:
         image: notes/unplug2_3.png
-        text: First groups will decompose the task which means make a game plan. Then
-          they'll look for patterns between all the monsters in the catalog. When
-          they come across differences between the monsters, they'll abstract or remove
-          those details. For instance, one monster in the catalog has vegitas eyes
-          and another has spritem eyes. But they both have eyes so we can write a
-          line that says the monster has blank eyes.
+        text: Tout d'abord, les groupes von decomposer la tâche, ce qui veut dire
+          mettre en place une stratégie de jeu. Ensuite, ils vont repérer les similitudes
+          entre tous les monstres du catalogue. Quand ils trouvent une difference
+          entre les monstres, ces details vont devenir abstraits ou seront supprimés.
+          Par example, un monstre du catalogue a les yeux veritas et un autre a les
+          yeux spritem. Les deux ont des yeux donc on peut écrire une ligne qui dit
+          "le monstre a x yeux".
       4:
         image: notes/unplug2_4.png
-        text: So students will be able to write a set of instructions, called an algorithm,
-          that list the monsters' parts with blanks for what the styles should be.
-          This is the set of instructions they'll pass to other students to recreate
-          their very own monster.
+        text: Les étudiants vont donc écrire une liste d'instructions, appelée un
+          algorithme, qui indique quel style doit avoir chaque partie du corps du
+          monstre. Cette liste d'instructions sera donnée à d'autres étudiants qui
+          vont recréer leur propre monstre.
     unplug3:
       1:
         image: notes/unplug3_1.png

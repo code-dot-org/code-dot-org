@@ -195,6 +195,7 @@
   "shareWarningsAge": "Prašome žemiau pateikti savo amžių ir spausti Gerai.",
   "shareWarningsMoreInfo": "Daugiau informacijos",
   "shareWarningsStoreData": "Šios programėlės, sukurtos su Code Sudio, duomenis gali peržiūrėti bet kas, kas atvers nuorodą, todėl būkite atsargūs, jei Jūsų prašys pateikti asmeninę informaciją.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "Rodyti blokus",
   "showCodeHeader": "Rodyti kodą",
   "showGeneratedCode": "Rodyti kodą",
@@ -229,5 +230,6 @@
   "watchVideo": "Peržiūrėk šį vaizdo įrašą",
   "when": "kada",
   "whenRun": "paleidus",
-  "workspaceHeaderShort": "Darbo laukas: "
+  "workspaceHeaderShort": "Darbo laukas: ",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
 }

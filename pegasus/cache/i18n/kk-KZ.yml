@@ -656,6 +656,7 @@
   dashboard_navigation_all_sections: "Студенттің тіркелу және ілгерілеуі туралы"
   dashboard_navigation_view_progress: "Орындалу барысын көру"
   dashboard_navigation_view_text_responses: "Жауаптарды қарау"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "Оқушыларды қосу"
   dashboard_navigation_manage_students: "Оқушыларды басқару"
   dashboard_navigation_lesson_plans_resources: "Сабақ жоспары мен оқу материалдары"
@@ -776,6 +777,18 @@
   dashboard_puzzle: "Басқатырғыш"
   dashboard_question: "Сұрақ"
   dashboard_response: "Жауап"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "Дұрыс"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Өткен жылғы Код Жазу Сағытының таңқалдырар сараптамасы.
     Бір аптаның өзінде:"
   stats_hoc_2013_image_alt: "Код Жазу Сағытының 2013 жылға арналған сараптамасы"

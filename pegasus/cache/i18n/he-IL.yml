@@ -630,6 +630,7 @@
   dashboard_navigation_all_sections: "חשבונות תלמידים וההתקדמות שלהם"
   dashboard_navigation_view_progress: "צפה בהתקדמות"
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "הוסף תלמידים"
   dashboard_navigation_manage_students: "נהל תלמידים"
   dashboard_navigation_lesson_plans_resources: "מערכי שיעור ומשאבים"
@@ -743,6 +744,18 @@
   dashboard_puzzle: "חידה"
   dashboard_question: Question
   dashboard_response: "תגובה"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "נכון"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "סטטיסטיקה מדהימה מן  Hour of Code  שנה שעברה. בשבוע אחד
     בלבד:"
   stats_hoc_2013_image_alt: "סטטיסטיקה של  Hour of Code 2013"

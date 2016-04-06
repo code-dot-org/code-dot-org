@@ -195,6 +195,7 @@
   "shareWarningsAge": "Skriv inn alder under og klikk OK for å halde fram.",
   "shareWarningsMoreInfo": "Meir info",
   "shareWarningsStoreData": "Denne appen, som er bygd i Code Studio, lagrar data som kan sjåast av alle som har lenka, så ver varsam om du vert spurd om personleg informasjon.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "Vis blokker",
   "showCodeHeader": "Vis kode",
   "showGeneratedCode": "Vis kode",
@@ -229,5 +230,6 @@
   "watchVideo": "Sjå videoen",
   "when": "når",
   "whenRun": "når den køyrer",
-  "workspaceHeaderShort": "Arbeidsområde: "
+  "workspaceHeaderShort": "Arbeidsområde: ",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
 }

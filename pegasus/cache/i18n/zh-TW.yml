@@ -560,6 +560,7 @@
   dashboard_navigation_all_sections: "學生帳戶及學習進度"
   dashboard_navigation_view_progress: "查看進度"
   dashboard_navigation_view_text_responses: "觀看文字回應"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "新增學生"
   dashboard_navigation_manage_students: "管理學生們"
   dashboard_navigation_lesson_plans_resources: "教案和資源"
@@ -662,6 +663,18 @@
   dashboard_puzzle: "關卡"
   dashboard_question: "問題 "
   dashboard_response: "回應"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "正確"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "去年的一小時程式設計有令人難以置信的統計資料。在一個禮拜內："
   stats_hoc_2013_image_alt: "統計來自2013的Hour of Code"
   dashboard_teacher: "教師"

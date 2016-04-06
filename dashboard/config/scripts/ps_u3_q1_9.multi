@@ -1,0 +1,6 @@
+name 'PS U3 Q1-9'
+question 'Parameters determine the number of times the function will run.'
+wrong 'Why are parameters useful when programming?'
+right 'Parameters allow for more flexible, generalized behaviors in functions.'
+wrong 'Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve'
+wrong 'Parameters change the order of operations within a function.'

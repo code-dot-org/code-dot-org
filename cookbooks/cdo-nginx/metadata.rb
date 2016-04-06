@@ -4,7 +4,7 @@ maintainer_email 'will@code.org'
 license          'All rights reserved'
 description      'Installs/Configures cdo-nginx'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.0.7'
+version          '0.0.8'
 
 depends 'apt'
 depends 'ssl_certificate'

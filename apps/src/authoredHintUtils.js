@@ -1,4 +1,4 @@
-/* global marked */
+var processMarkdown = require('marked');
 var parseXmlElement = require('./xml').parseElement;
 var msg = require('./locale');
 
@@ -128,7 +128,7 @@ authoredHintUtils.finalizeHints_ = function () {
   localStorage.removeItem('last_attempt_record');
   var hints = authoredHintUtils.getFinishedHints_();
   if (finalAttemptRecord) {
-    hints = hints.map(function(hint){
+    hints = hints.map(function (hint){
       hint = $.extend({
         finalTime: finalAttemptRecord.time,
         finalAttempt: finalAttemptRecord.attempt,
@@ -176,7 +176,7 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
   localStorage.setItem('last_attempt_record', JSON.stringify(nextAttemptRecord));
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   authoredHintUtils.clearUnfinishedHints();
-  var finishedHintViews = unfinishedHintViews.map(function(hint){
+  var finishedHintViews = unfinishedHintViews.map(function (hint){
     hint = $.extend({
       nextTime: nextAttemptRecord.time,
       nextAttempt: nextAttemptRecord.attempt,
@@ -237,7 +237,7 @@ authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
     var xmlBlock = parseXmlElement(block.blockDisplayXML);
     var blockType = xmlBlock.firstChild.getAttribute("type");
     return {
-      content: marked(msg.recommendedBlockContextualHintTitle()),
+      content: processMarkdown(msg.recommendedBlockContextualHintTitle()),
       block: xmlBlock,
       hintId: "recommended_block_" + blockType,
       hintClass: 'recommended',
@@ -254,9 +254,6 @@ authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
  * @return {AuthoredHint[]}
  */
 authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
-  if (!marked) {
-    return [];
-  }
   var hints;
   try {
     hints = JSON.parse(levelBuilderAuthoredHints);
@@ -265,7 +262,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
   }
   return hints.map(function (hint) {
     return {
-      content: marked(hint.hint_markdown),
+      content: processMarkdown(hint.hint_markdown),
       hintId: hint.hint_id,
       hintClass: hint.hint_class,
       hintType: hint.hint_type,
@@ -273,4 +270,3 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
     };
   });
 };
-

@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+require 'open-uri'
+require 'json'
+require_relative '../../deployment'
+
+slack_token = CDO.slack_token
+pagerduty_token = CDO.pagerduty_token
+channel_id = CDO.developers_channel_id
+
+# Get current developers room topic
+channel_info = open("https://slack.com/api/channels.info?token=#{slack_token}&channel=#{channel_id}").read
+current_topic = JSON.parse(channel_info)["channel"]["topic"]["value"]
+
+# Get DOTD on call from Pager Duty
+on_call = `curl -H "Content-type: application/json" -H "Authorization: Token token=#{pagerduty_token}" -X GET -G "https://codeorg.pagerduty.com/api/v1/users/on_call"`
+dotd_email = JSON.parse(on_call)["users"].first["email"]
+
+# Match Pager Duty email to Slack mention name
+users_list = open("https://slack.com/api/users.list?token=#{slack_token}").read
+dotd_user = JSON.parse(users_list)["members"].find { |member| dotd_email == member["profile"]["email"] }
+dotd_mention = dotd_user ? "@#{dotd_user["name"]} is DotD" : "(error: check schedule for DotD)"
+
+# Set the new developers room topic
+new_topic = current_topic.gsub(/[^\s]* is DotD|^(?!.* is DotD)/, dotd_mention)
+open("https://slack.com/api/channels.setTopic?token=#{slack_token}&channel=#{channel_id}&topic=#{new_topic}")

@@ -677,6 +677,7 @@
   dashboard_navigation_all_sections: Akun dan perkembangan siswa
   dashboard_navigation_view_progress: Lihat perkembangan
   dashboard_navigation_view_text_responses: Lihat Balasan Teks
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Tambahkan murid
   dashboard_navigation_manage_students: Kelola murid
   dashboard_navigation_lesson_plans_resources: Rencana pelajaran dan sumber daya
@@ -798,6 +799,18 @@
   dashboard_puzzle: Teka-teki
   dashboard_question: Pertanyaan
   dashboard_response: Respon
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Benar
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Terdapat statistik yang luar biasa dari Hour of Code tahun
     lalu. Dalam satu minggu saja:'
   stats_hoc_2013_image_alt: Statistik Hour of Code tahun 2013

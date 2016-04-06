@@ -1883,6 +1883,10 @@ fr:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: 'Un conseil : évitez les Creepers. Slalomez prudemment pour atteindre votre maison indemne.'
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: |-
         Le bois est une ressource très importante qui permet de fabriquer beaucoup de choses. Atteignez l'arbre et utilisez la commande "détruire un bloc" pour le couper.
       Overworld Chop Trees_instruction: Nous devons construire une maison avant que le Soleil se couche. Pour cela, il faut beaucoup de bois. Coupez les 3 arbres.
@@ -2085,6 +2089,10 @@ fr:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -2092,6 +2100,12 @@ fr:
       Quantum Bee_instruction: "Les fleurs violettes peuvent avoir 1 ou 0 nectar, mais tu ne sais pas lesquelles ! Veille à ne pas butiner de fleur violette si elle n'en a pas. Vérifie si le nectar est égal à 1 à l'aide du bloc « si »."
       Ryan - 4-5 Bee Conditionals 2_instruction: "L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, donc vérifie sous chaque nuage pour voir si une fleur s'y cache. Si c'est le cas, alors tu peux recueillir son nectar."
       Ryan - Bee Conditionals_instruction: "L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, donc vérifie sous chaque nuage pour voir si une fleur s'y cache. Si c'est le cas, alors tu peux récolter son nectar."
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Voilà une fonction appelée "patrouille".
         Edite-la pour déplacer le chat de 400 pixels vers le haut puis 400 pixels vers le bas.

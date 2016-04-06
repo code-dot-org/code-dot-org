@@ -25,6 +25,7 @@ kk:
   welcome_back: 'Қайта оралуыңызбен, %{name}'
   submit: Жіберу
   unsubmit: Жібермеу
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Мұғалімді қосу:'
@@ -344,6 +345,7 @@ kk:
     help_from_html_old: Google, Microsoft, Facebook, және Twitter инженерлері бұл материалдарды жасауға көмектесті.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Барлық құқықтар қорғалған.<br />Жұлдызды Соғыстар&#8482; &copy; %{current_year} Disney және Lucasfilm. Барлық құқықтар қорғалған.<br />Frozen&#8482; &copy; %{current_year} Disney. Барлық құқықтар қорғалған.<br />Мұзды Дәуір&#8482; &copy; %{current_year} 20th Century Fox. Барлық құқықтар қорғалған.<br />Ашулы Құстар&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Барлық құқықтар қорғалған.<br />Өсімдіктер Зомбилерге қарсы&#8482; &copy; %{current_year} Electronic Arts Inc. Барлық құқықтар қорғалған.<br />Гамболаның таңғажайып әлемі сауда белгісі болып табылады және &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Барлық құқықтар қорғалған.<br />Жұлдызды Соғыстар&#8482; &copy; %{current_year} Disney және Lucasfilm. Барлық құқықтар қорғалған.<br />Frozen&#8482; &copy; %{current_year} Disney. Барлық құқықтар қорғалған.<br />Мұзды Дәуір&#8482; &copy; %{current_year} 20th Century Fox. Барлық құқықтар қорғалған.<br />Ашулы Құстар&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Барлық құқықтар қорғалған.<br />Өсімдіктер Зомбилерге қарсы&#8482; &copy; %{current_year} Electronic Arts Inc. Барлық құқықтар қорғалған.<br />Гамболаның таңғажайып әлемі сауда белгісі болып табылады және &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Amazon Web Services серверінде жұмыс істейді
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE логотипі және Код Жазу Сағаты&reg; Code.org сауда белгісі болып табылады.'
     copyright: Авторлық құқық
@@ -463,7 +465,6 @@ kk:
   landing:
     prerelease: "Бұл курс <span class='betatext'>бета нұсқада</span>. Бұл деген курстың әлі толық жасалып бітпегенін көрсетеді және кері байланыс кезінде өзгертулер еңгізіледі."
     prerelease_hoc2014: "Бұл сабақ <span class='betatext'>бета нұсқада</span>. Бұл сабаққа кері байланыс кезінде өзгертулер еңгізіледі.."
-    feedback: Кері байланыс
     report_bug: Қате туралы хабарлау
     support: Көмек Сұрау
     support_url: //support.code.org
@@ -509,6 +510,8 @@ kk:
     placeholder: Жауабыңызды мұнда еңгізіңіз
     open_response_title: Рахмет
     open_response_body: Жауап бергеніңіз үшін рахмет!
+    correct_title: Дұрыс
+    correct_body: Бұл дұрыс жауап.
   dialog:
     ok: OK
     startover_title: Сіз басынан бастауға сенімдісіз бе?
@@ -619,3 +622,7 @@ kk:
           other: Басқасы
         detail: Өтінеміз, хабарламаны барынша түсінікті және толық жазыңыз.
         acknowledge: 'Сіз бұл хабарламаны жіберу арқылы %{link_start_privacy}Құпиялылық Саясаты%{link_end} және %{link_start_tos}Қызмет көрсету шарттары%{link_end} аясында қаралатынына келісесіз бе?'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

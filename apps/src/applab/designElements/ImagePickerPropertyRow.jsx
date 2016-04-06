@@ -57,7 +57,7 @@ var PropertyRow = React.createClass({
     this.setState({value: filename});
   },
 
-  render: function() {
+  render: function () {
     return (
       <div style={rowStyle.container}>
         <div style={rowStyle.description}>{this.props.desc}</div>

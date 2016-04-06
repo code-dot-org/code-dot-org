@@ -25,6 +25,7 @@
   welcome_back: 'Velkommen tilbake, %{name}'
   submit: Send
   unsubmit: Trekk tilbake
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Legg til en lærer:'
@@ -344,6 +345,7 @@
     help_from_html_old: Utviklere fra Google, Microsoft, Facebook og Twitter hjelpte til med å lage disse kursene.
     art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Alle rettigheter reservert. < br / > Star Wars &#8482; © %{current_year} Disney og Lucasfilm. Alle rettigheter reservert. < br / > Frost &#8482; © %{current_year} Disney. Alle rettigheter reservert. < br / > Istid &#8482; © %{current_year} 20th Century Fox. Alle rettigheter reservert. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd Alle rettigheter reservert. < br / > planter vs. Zombies &#8482; © %{current_year} Electronic Arts Inc. Alle rettigheter reservert. < br / > Gumballs fantastiske verden er varemerke og © 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft &#8482; &copy %{current_year} Microsoft. Alle rettigheter reservert. < br / > Star Wars &#8482; &copy %{current_year} Disney og Lucasfilm. Alle rettigheter reservert. < br / > Frost &#8482; &copy %{current_year} Disney. Alle rettigheter reservert. < br / > Istid &#8482; &copy %{current_year} 20th Century Fox. Alle rettigheter reservert. < br / > Angry Birds &#8482; &copy 2009-%{current_year} Rovio Entertainment Ltd Alle rettigheter reservert. < br / > planter vs. Zombies &#8482; &copy %{current_year} Electronic Arts Inc. Alle rettigheter reservert. < br / > Gumballs fantastiske verden er varemerke og &copy 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Drevet av Amazon Web Services
     trademark: '© Code.org, %{current_year}. Code.org®, CODE-logoen og Hour of Code (Kodetimen) ® er varemerker tilhørende Code.org.'
     copyright: Opphavsrett
@@ -463,7 +465,6 @@
   landing:
     prerelease: "Dette kurset er i <span class='betatext'> beta</span>.  Det betyr at det ikke er den endelige versjonen av kurset, men at det blir endret når vi får tilbakemeldinger og forbedringer er laget."
     prerelease_hoc2014: "Denne veiledningen er i <span class='betatext'> beta</span>.  Den vil kunne endres ettersom vi mottar tilbakemeldinger og gjør forbedringer."
-    feedback: Gi tilbakemelding
     report_bug: Rapporter feil
     support: Få hjelp
     support_url: //support.code.org
@@ -509,6 +510,8 @@
     placeholder: Angi svaret her
     open_response_title: Takk
     open_response_body: Takk for ditt svar!
+    correct_title: Riktig
+    correct_body: Det er riktig svar.
   dialog:
     ok: OK
     startover_title: Er du sikker på at du vil starte på nytt?
@@ -619,3 +622,7 @@
           other: Andre
         detail: Vennligst oppgi så mange detaljer som mulig om innholdet du rapporterer.
         acknowledge: 'Ved å sende inn denne informasjonen aksepterer vil det bli håndtert i henhold til vilkårene for%{link_start_privacy}Personvernerklæring%{link_end} og %{link_start_tos}Bruksvillkår%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

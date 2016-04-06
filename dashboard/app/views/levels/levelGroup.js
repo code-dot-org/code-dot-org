@@ -11,21 +11,18 @@ function initLevelGroup(
 
   // Are we read-only?  This can be because we're a teacher OR because an answer
   // has been previously submitted.
-  if (window.appOptions.readonlyWorkspace)
-  {
+  if (window.appOptions.readonlyWorkspace) {
     // hide the Submit button.
     $('.submitButton').hide();
 
     // Are we a student viewing their own previously-submitted work?
-    if (window.appOptions.submitted)
-    {
+    if (window.appOptions.submitted) {
       // show the Unsubmit button.
       $('.unsubmitButton').show();
     }
   }
 
-  window.getResult = function()
-  {
+  window.getResult = function () {
     // Construct an array of all the level results.
     // When submitted it's something like this:
     //
@@ -33,24 +30,21 @@ function initLevelGroup(
     //
 
     // Add any new results to the existing lastAttempt results.
-    for (var i = 0; i < levelCount; i++)
-    {
-      var multiName = "multi_" + i;
-      var multiResult = window[multiName].getCurrentAnswer().toString();
-      var levelId = window[multiName].getLevelId();
+    for (var i = 0; i < levelCount; i++) {
+      var levelName = "level_" + i;
+      var levelResult = window[levelName].getCurrentAnswer().toString();
+      var levelId = window[levelName].getLevelId();
 
       // But before storing, if we had a previous result for the same level,
       // remove that from the array, since we want to overwrite that previous
       // answer.
-      for (var j = lastAttempt.length - 1; j >= 0; j--)
-      {
-        if (lastAttempt[j].level_id == levelId)
-        {
+      for (var j = lastAttempt.length - 1; j >= 0; j--) {
+        if (lastAttempt[j].level_id == levelId) {
           lastAttempt.splice(j, 1);
         }
       }
 
-      lastAttempt.push({level_id: levelId, result: multiResult});
+      lastAttempt.push({level_id: levelId, result: levelResult});
     }
 
     var response = JSON.stringify(lastAttempt);
@@ -61,13 +55,10 @@ function initLevelGroup(
     var result;
     var submitted;
 
-    if (window.appOptions.level.submittable || this.forceSubmittable)
-    {
+    if (window.appOptions.level.submittable || this.forceSubmittable) {
       result = true;
       submitted = true;
-    }
-    else
-    {
+    } else {
       result = true; // this.validateAnswers();
       submitted = false;
     }
@@ -80,43 +71,53 @@ function initLevelGroup(
     };
   };
 
-  $(".nextPageButton").click($.proxy(function(event) {
+  function nextPage() {
+    var newLocation = window.location.href.replace("/page/" + (page+1), "/page/" + (page+2));
+    window.location.href = newLocation;
+  }
 
-    // Submit what we have, and when that's done, go to the next page of the
-    // long assessment.
+  $(".nextPageButton").click($.proxy(function (event) {
 
-    var results = window.getResult();
-    var response = results.response;
-    var result = results.result;
-    var errorType = results.errorType;
-    var submitted = appOptions.submitted;
+    // Are we read-only?  This can be because we're a teacher OR because an answer
+    // has been previously submitted.
+    if (window.appOptions.readonlyWorkspace) {
+      nextPage();
+    } else {
+      // Submit what we have, and when that's done, go to the next page of the
+      // long assessment.
 
-    window.dashboard.reporting.sendReport({
-      program: response,
-      fallbackResponse: fallbackResponse,
-      callback: callback,
-      app: app,
-      level: level,
-      result: result,
-      pass: result,
-      testResult: result ? 100 : 0,
-      submitted: submitted,
-      onComplete: function () {
-        var newLocation = window.location.href.replace("/page/" + (page+1), "/page/" + (page+2));
-        window.location.href = newLocation;
-      }
-    });
+      var results = window.getResult();
+      var response = results.response;
+      var result = results.result;
+      var errorType = results.errorType;
+      var submitted = appOptions.submitted;
+
+      window.dashboard.reporting.sendReport({
+        program: response,
+        fallbackResponse: fallbackResponse,
+        callback: callback,
+        app: app,
+        level: level,
+        result: result,
+        pass: result,
+        testResult: result ? 100 : 0,
+        submitted: submitted,
+        onComplete: function () {
+          nextPage();
+        }
+      });
+    }
   }, this));
 
-  // Unsubmit button should only be available when this is a standalone Multi.
-  $('.unsubmitButton').click(function() {
+  // Unsubmit button should only be available when this is a standalone level.
+  $('.unsubmitButton').click(function () {
 
     var dialog = new Dialog({
       body:
         '<div class="modal-content no-modal-icon">' +
           '<p class="dialog-title">Unsubmit answer</p>' +
           '<p class="dialog-body">' +
-          'This will unsubmit your last answer.' +
+          'This will unsubmit your previous answers.' +
           '</p>' +
           '<button id="continue-button">Okay</button>' +
           '<button id="cancel-button">Cancel</button>' +
@@ -129,8 +130,7 @@ function initLevelGroup(
     dialogDiv.find('#continue-button').click(function () {
       $.post(window.appOptions.unsubmitUrl,
         {"_method": 'PUT', user_level: {submitted: false}},
-        function(data)
-        {
+        function (data) {
           // Just reload so that the progress in the header is shown correctly.
           location.reload();
         }

@@ -25,6 +25,7 @@ da:
   welcome_back: 'Velkommen tilbage %{name}'
   submit: Indsend
   unsubmit: Fortryd indsendelse
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Tilføje en lærer:'
@@ -344,6 +345,7 @@ da:
     help_from_html_old: Ingeniører fra Google, Microsoft, Facebook og Twitter har bidraget til at skabe denne øvelse.
     art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Alle rettigheder forbeholdes. < br / > Star Wars &#8482; © %{current_year} Disney og Lucasfilm. Alle rettigheder forbeholdes. < br / > Frozen &#8482; © %{current_year} Disney. Alle rettigheder forbeholdes. < br / > Ice Age &#8482; © %{current_year} 20th Century Fox. Alle rettigheder forbeholdes. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Alle rettigheder forbeholdes. < br / > Plants vs. Zombies &#8482; © %{current_year} Electronic Arts Inc. Alle rettigheder forbeholdes. < br / > The Amazing World of Gumball er varemærke og © 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo og Hour of Code&reg; er varemærker tilhørende Code.org.'
     copyright: Copyright
@@ -463,7 +465,6 @@ da:
   landing:
     prerelease: "Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder, at det ikke er den endelige version af kurset, men at ændringer vil forekomme efterhånden som feedback modtages og forbedringer foretages."
     prerelease_hoc2014: "Denne øvelse er i <span class='betatext'> beta</span>.  Det er undergivet revision så feedback modtages og der arbejdes på forbedringer."
-    feedback: Giv feedback
     report_bug: Rapporter fejl
     support: Få hjælp
     support_url: Support.Code.org
@@ -509,6 +510,8 @@ da:
     placeholder: Skriv dit svar her
     open_response_title: Tak
     open_response_body: Tak for dit svar!
+    correct_title: Rigtigt
+    correct_body: Det er det korrekte svar.
   dialog:
     ok: Ok
     startover_title: Sikker på, at du vil starte forfra?
@@ -619,3 +622,7 @@ da:
           other: Andre
         detail: Anfør så mange detaljer som muligt om det indhold, du rapporterer.
         acknowledge: 'Ved at indsende disse oplysninger, anerkender du det vil blive behandlet i overensstemmelse med de %{link_start_privacy}Privacy Policy%{link_end} og %{link_start_tos}Terms af Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

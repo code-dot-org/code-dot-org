@@ -676,6 +676,7 @@
   dashboard_navigation_all_sections: Tài khoản sinh viên và Tiến độ
   dashboard_navigation_view_progress: Xem tiến trình
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Thêm sinh viên
   dashboard_navigation_manage_students: Quản lý sinh viên
   dashboard_navigation_lesson_plans_resources: Kế hoạch bài học và tài nguyên
@@ -795,6 +796,18 @@
   dashboard_puzzle: Câu đố
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Chính xác
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Đáng kinh ngạc số liệu thống kê từ cuối năm Giờ Mã. Trong
     một tuần:"
   stats_hoc_2013_image_alt: Số liệu thống kê Giờ Lập Trình từ năm 2013

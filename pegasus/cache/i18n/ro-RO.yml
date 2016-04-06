@@ -677,6 +677,7 @@
   dashboard_navigation_all_sections: Conturile elevilor şi progresul lor
   dashboard_navigation_view_progress: Vedeți progresele
   dashboard_navigation_view_text_responses: Vizualizare text raspunsuri
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Adaugă elevi
   dashboard_navigation_manage_students: Gestionează elevi
   dashboard_navigation_lesson_plans_resources: Planuri de lecţie şi resurse
@@ -802,6 +803,18 @@
   dashboard_puzzle: Puzzle
   dashboard_question: "Întrebare"
   dashboard_response: Răspuns
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Corect
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Statistici incredibile de la Ora de Cod de anul trecut.
     Într-o singură săptămână:'
   stats_hoc_2013_image_alt: Statistici de la Ora de Cod din 2013

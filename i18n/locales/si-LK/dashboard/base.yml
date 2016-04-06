@@ -25,6 +25,7 @@ si:
   welcome_back: '%{name}, ඔබව නැවතත් පිළිගන්නවා'
   submit: යොමුකරන්න
   unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'ගුරුවරයෙක් එකතු කරන්න:'
@@ -90,7 +91,7 @@ si:
     teacher: ඔබ ගුරුවරයෙක් ද?
     valid_username: ලබාගත හැක !
     invalid_username: Username must be at least 5 characters
-    taken_username: Username is already taken
+    taken_username: මෙම පරිශීලක නාමය දැනටමත් භාවිතා කර ඇත‍
     valid_password: මුර පදය වලංගුයි!
     invalid_password: Password එක අකුරු 6ට වැඩිවිය යුතුයි
     mismatch_password: යෙදු මුර පද දෙක සමාන වී නැත
@@ -346,6 +347,7 @@ si:
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
@@ -465,7 +467,6 @@ si:
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
     report_bug: Report Bug
     support: උපකාර ලබාගන්න
     support_url: //support.code.org
@@ -511,6 +512,8 @@ si:
     placeholder: ඔබගේ පිළිතුර මෙතනට ඇතුල් කරන්න
     open_response_title: ස්තූතියි
     open_response_body: ඔබගේ ප්‍රතිචාරය සඳහා ස්තූතියි!
+    correct_title: නිවැරදියි
+    correct_body: That is the correct answer.
   dialog:
     ok: හරි
     startover_title: මුල සිට පටන් ගැනීම ඔබ තහවුරු කරනවද?
@@ -621,3 +624,7 @@ si:
           other: වෙනත්
         detail: Please provide as much detail as possible regarding the content you are reporting.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

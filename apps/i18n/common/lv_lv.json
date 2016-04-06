@@ -195,6 +195,7 @@
   "shareWarningsAge": "Lūdzu, zemāk norādiet savu vecumu un noklikšķiniet uz LABI, lai turpinātu.",
   "shareWarningsMoreInfo": "Vairāk informācijas",
   "shareWarningsStoreData": "Šīs aplikācijas pamatā ir Code Studio saglabātie dati, kas būs apskatāmi ikvienam ar šo koplietošanas saiti, tāpēc esiet uzmanīgs, ja jums tiek pieprasīts norādīt savu personisko informāciju.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "Parādīt blokus",
   "showCodeHeader": "Parādīt Kodu",
   "showGeneratedCode": "Parādīt kodu",
@@ -229,5 +230,6 @@
   "watchVideo": "Noskaties video",
   "when": "kad",
   "whenRun": "kad izpilda",
-  "workspaceHeaderShort": "Darba virsma: "
+  "workspaceHeaderShort": "Darba virsma: ",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
 }

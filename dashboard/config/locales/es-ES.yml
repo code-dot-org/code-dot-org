@@ -26,6 +26,7 @@
   welcome_back: Bienvenido, %{name}
   submit: Enviar
   unsubmit: NO enviado
+  next_page: Siguiente pagina
   add_teacher_form:
     code:
       label: 'Agregar un maestro:'
@@ -433,6 +434,8 @@
       />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos
       los derechos reservados.<br />The Amazing World of Gumball es marca registrada
       y &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, el logotipo de CODE
       y el de Hora de Código &reg; son marcas registradas de Code.org."
@@ -582,7 +585,6 @@
       comentarios y hacemos mejoras.
     prerelease_hoc2014: Este tutorial está en <span class='betatext'> beta</span>.  Es
       objeto de revisión a medida que se reciben comentarios y se hacen mejoras.
-    feedback: Envía comentarios
     report_bug: Informar sobre un error
     support: Obtener ayuda
     support_url: "//support.code.org"
@@ -630,6 +632,8 @@
     placeholder: Escribe aquí tu respuesta
     open_response_title: Gracias
     open_response_body: Gracias por tu respuesta!
+    correct_title: Correcto
+    correct_body: Esa respuesta es la correcta.
   dialog:
     ok: OK
     startover_title: "¿Seguro que quieres empezar de nuevo?"
@@ -763,3 +767,7 @@
         acknowledge: Al enviar esta información, usted reconoce que se tratarán de
           un acuerdo con los términos de %{link_start_privacy}Privacy Policy%{link_end}%y
           de%{link_start_tos}Terminos de Servicio%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

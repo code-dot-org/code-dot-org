@@ -8,6 +8,7 @@
 - use_gamelab ||= false
 - hide_source ||= false
 - use_phaser ||= false
+- use_makerlab ||= false
 
 -# Common style dependencies
 %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
@@ -22,6 +23,10 @@
 - if use_gamelab
   %script{src: asset_path('js/p5play/p5.js')}
   %script{src: asset_path('js/p5play/p5.play.js')}
+
+-# Gamelab script dependencies
+- if use_makerlab
+  = javascript_include_tag 'js/makerlab'
 
 -# Droplet script dependencies (all editCode - regardless of editor)
 - if use_droplet

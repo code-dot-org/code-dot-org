@@ -18,34 +18,20 @@
 class Plc::UserCourseEnrollment < ActiveRecord::Base
   belongs_to :plc_course, class_name: '::Plc::Course'
   belongs_to :user, class_name: 'User'
-  has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_user_course_enrollment_id', dependent: :destroy
-  has_many :plc_task_assignments, through: :plc_module_assignments, class_name: '::Plc::EnrollmentTaskAssignment', dependent: :destroy
+  has_many :plc_unit_assignments, class_name: '::Plc::EnrollmentUnitAssignment', foreign_key: 'plc_user_course_enrollment_id', dependent: :destroy
+  has_many :plc_module_assignments, through: :plc_unit_assignments, class_name: '::Plc::EnrollmentModuleAssignment', dependent: :destroy
+  has_many :plc_task_assignments, through: :plc_unit_assignments, class_name: '::Plc::EnrollmentTaskAssignment', dependent: :destroy
 
   validates :user, presence: true
   validates :plc_course, presence: true
 
-  def enroll_user_in_course_with_learning_modules(learning_modules)
-    transaction do
-      plc_module_assignments.destroy_all
+  after_create :create_enrollment_unit_assignments
 
-      learning_modules.each do |learning_module|
-        module_assignment = Plc::EnrollmentModuleAssignment.find_or_create_by(plc_user_course_enrollment: self, plc_learning_module: learning_module)
-
-        learning_module.plc_tasks.each do |task|
-          Plc::EnrollmentTaskAssignment.find_or_create_by(plc_enrollment_module_assignment: module_assignment,
-                                                          plc_task: task, status: :not_started,
-                                                          type: task.class.task_assignment_type.name)
-        end
-      end
-    end
-
-    self.status = :in_progress
-    self.save!
-  end
-
-  def check_for_course_completion
-    if !plc_task_assignments.exists?(['status != ?', 'completed'])
-      update!(status: :completed)
+  def create_enrollment_unit_assignments
+    plc_course.plc_course_units.each do |course_unit|
+      Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: self,
+                                           plc_course_unit: course_unit,
+                                           status: Plc::EnrollmentUnitAssignment::PENDING_EVALUATION)
     end
   end
 end

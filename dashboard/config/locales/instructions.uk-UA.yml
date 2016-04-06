@@ -420,11 +420,9 @@
       4-5 Artist For Loops 15_instruction: 'Хтось почав писати код, але потім зрозумів,
         що має бути швидший спосіб! Використай блок "для", щоб змінити блоки та завершити
         шестикутну спіраль. (Підказка: остання лінія має довжину 200 пікселів.'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: Це блок "для". Замість того, щоб друкувати
+        1,2,3...10, блок "для" може повторювати блоки, розміщені всередині, та перелічувати
+        послідовні числа. Розмісти число 10 у розділі "до" блоку "для".
       4-5 Artist For Loops 3_instruction: Як ми можемо рахувати від 1 до 50? Відредагуй
         блок "для".
       4-5 Artist For Loops 4_instruction: Заповни блок "для" так, що він рахував по
@@ -553,8 +551,8 @@
       4-5 Bee Conditionals 2_instruction: "Бджола хоче збирати лише нектар. Пам'ятай,
         що не всі об'єкти є квітами, тож спершу перевіряй кожну хмаринку, щоб побачити,
         чи приховує вона квітку. Якщо так, то можна збирати нектар."
-      4-5 Bee Conditionals 3_instruction: "Тепер Бджола хоче лише робити мед. Перевіряй,
-        щоб робити мед лише у стільниках."
+      4-5 Bee Conditionals 3_instruction: "Тепер я просто хочу робити мед. Деякі з
+        цих хмаринок мають всередині стільники. Перевір під кожною хмаринкою!"
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
@@ -2337,8 +2335,8 @@
       K-1 Bee Loops 10_instruction: "Збери весь нектар та зроби мед."
       K-1 Bee Loops 11_instruction: "Збери весь нектар та мед!"
       K-1 Bee Loops 12_instruction: "Збери весь нектар та мед."
-      K-1 Bee Loops 2_instruction: "Використай цикл, щоб пересуватись, а потім збери
-        нектар і зроби мед!"
+      K-1 Bee Loops 2_instruction: Використай цикл "повторити", щоб пересуватись,
+        а потім збери нектар і зроби мед!
       K-1 Bee Loops 3_instruction: "Використай цикли, щоб зібрати нектар і зробити
         мед!"
       K-1 Bee Loops 4_instruction: "Використай цикли, щоб зібрати нектар, зробити
@@ -2839,6 +2837,10 @@
       Overworld Avoid Monsters_instruction: |
         Налетіти на Плазуна - погана ідея.
         Обережно пробирайся повз Плазунів та доберись до безпеки свого дому.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: Деревина - важливий ресурс. З неї виготовляють
         багато речей. Підійди до дерева і скористайся командою "знищити блок", щоб
         зрубати його.
@@ -3066,6 +3068,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: "Ці хмари мене нервують! У деяких хмарках всередині
         є квіти, а деякі - порожні. Потрібно перевірити кожну хмарку, і добувати нектар
         лише з квітів."
@@ -3078,6 +3084,12 @@
       Ryan - Bee Conditionals_instruction: "Бджола хоче збирати лише нектар. Пам'ятай,
         що не всі об'єкти є квітами, тож спершу перевіряй кожну хмаринку, щоб побачити,
         чи приховує вона квітку. Якщо так, то можна збирати нектар."
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Ось функції, яка називається "патрулювати."
         Зміни її так, щоб перемістити кішку на 400 пікселів вгору, а потім на 400
         пікселів вниз.

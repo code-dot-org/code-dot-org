@@ -25,6 +25,7 @@ pl:
   welcome_back: 'Witaj z powrotem, %{name}'
   submit: Wyślij
   unsubmit: Nieprzesłane
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Dodaj nauczyciela:'
@@ -345,6 +346,7 @@ pl:
     help_from_html_old: Inżynierowie z Google, Microsoft, Facebook i Twitter pomogli utworzyć te materiały.
     art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Zasilany przez Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour of Code&reg; są znakami handlowymi Code.org.'
     copyright: Prawa autorskie
@@ -464,11 +466,10 @@ pl:
   landing:
     prerelease: "Ten kurs jest w <span class='betatext'> wersji beta</span>.  Oznacza to, że to nie jest ostateczna jego wersja, podlega on rewizji na podstawie otrzymanych opinii, jak i jest ulepszany."
     prerelease_hoc2014: "Ten poradnik jest w <span class='betatext'> wersji beta</span>. Podlega on rewizji na podstawie otrzymanych opinii, jak i jest ulepszany."
-    feedback: Przekaż opinię
     report_bug: Zgłoś błędy
     support: Uzyskaj pomoc
     support_url: //support.Code.org
-    help_resources: Help and Resources
+    help_resources: Pomoc
   multi:
     wrong_title: Błędna odpowiedź
     wrong_body: Wprowadzona przez Ciebie odpowiedź nie jest poprawna. Spróbuj ponownie!
@@ -478,21 +479,21 @@ pl:
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Dziękujemy
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Dziękujemy za wysłanie odpowiedzi.
     correct_title: Dziękujemy
-    correct_body: Thank you for submitting an answer.
+    correct_body: Dziękujemy za wysłanie odpowiedzi.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Dziękujemy
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Dziękujemy za wysłanie odpowiedzi.
     correct_title: Dziękujemy
-    correct_body: Thank you for submitting answers.
+    correct_body: Dziękujemy za wysłanie odpowiedzi.
   level_group-submittable:
     wrong_title: Dziękujemy
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Dziękujemy za wysłanie odpowiedzi.
     correct_title: Dziękujemy
-    correct_body: Thank you for submitting answers.
+    correct_body: Dziękujemy za wysłanie odpowiedzi.
   match:
     wrong_title: Niepoprawne rozwiązanie
     wrong_body: Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!
@@ -510,6 +511,8 @@ pl:
     placeholder: Wprowadź swoją odpowiedź tutaj
     open_response_title: Dzięki
     open_response_body: Dzięki za odpowiedź!
+    correct_title: Poprawnie
+    correct_body: To jest poprawna odpowiedź.
   dialog:
     ok: OK
     startover_title: Czy na pewno chcesz zacząć od nowa?
@@ -563,7 +566,7 @@ pl:
     completed_perfect: zakończona, doskonale
     furthest_level_attempted: próbowano najdalszy poziom
     assessment: ocena/ewaluacja
-    submitted: submitted
+    submitted: Wysłano
   studio:
     courses_working_on: Kursy, w których bierzesz udział
     completed_courses: Ukończone kursy
@@ -620,3 +623,7 @@ pl:
           other: Inni/inne
         detail: Proszę podać jak najwięcej szczegółów dotyczących treści, które zgłaszasz.
         acknowledge: 'Przesyłając te informacje, potwierdzasz, że będą one wykorzystane zgodnie z warunkami %{link_start_privacy}Privacy Policy%{link_end} i %{link_start_tos}Terms of Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

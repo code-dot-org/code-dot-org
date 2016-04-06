@@ -195,6 +195,7 @@
   "shareWarningsAge":"Palun lisa alla oma vanus ning vajuta jätkamiseks nuppu OK.",
   "shareWarningsMoreInfo":"Lisainfo",
   "shareWarningsStoreData":"See Code Studio abil ehitatud äpp salvestab andmed ning neid näevad kõik, kellele see viide on jagatud. Seega ole tähelepanelik, kui sul palutakse anda isiklikku infot.",
+  "showBlock":"Get a block",
   "showBlocksHeader":"Näita plokke",
   "showCodeHeader":"Näita koodi",
   "showGeneratedCode":"Näita koodi",
