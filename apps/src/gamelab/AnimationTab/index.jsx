@@ -2,7 +2,10 @@
 'use strict';
 
 var AnimationFrameList = require('./AnimationFrameList.jsx');
+var AnimationPicker = require('../AnimationPicker/index.jsx');
+var animationPickerActions = require('../AnimationPicker/actions');
 var AnimationSequenceList = require('./AnimationSequenceList.jsx');
+var connect = require('react-redux').connect;
 var GameLabVisualizationHeader = require('../GameLabVisualizationHeader.jsx');
 var ResizablePanes = require('./ResizablePanes.jsx');
 
@@ -31,28 +34,48 @@ var staticStyles = {
 /**
  * Root of the animation editor interface mode for GameLab
  */
-var AnimationTab = function () {
+var AnimationTab = function (props) {
   return (
-    <ResizablePanes style={staticStyles.root}>
-      <div id='sequences-column' style={staticStyles.sequencesColumn}>
-        <GameLabVisualizationHeader />
-        <AnimationSequenceList />
-      </div>
-      <div id='frames-column' style={staticStyles.framesColumn}>
-        <div className="purple-header workspace-header">
-          <span>Frames</span>
+    <div>
+      <ResizablePanes style={staticStyles.root}>
+        <div id='sequences-column' style={staticStyles.sequencesColumn}>
+          <GameLabVisualizationHeader />
+          <AnimationSequenceList />
         </div>
-        <AnimationFrameList />
-      </div>
-      <div id='editor-column'>
-        <div className="purple-header workspace-header">
-          <span>Workspace</span>
+        <div id='frames-column' style={staticStyles.framesColumn}>
+          <div className="purple-header workspace-header">
+            <span>Frames</span>
+          </div>
+          <AnimationFrameList />
         </div>
-        <div style={staticStyles.editorRegion}>
-          TODO: Piskel editor goes here!
+        <div id='editor-column'>
+          <div className="purple-header workspace-header">
+            <span>Workspace</span>
+          </div>
+          <div style={staticStyles.editorRegion}>
+            TODO: Piskel editor goes here!
+          </div>
         </div>
-      </div>
-    </ResizablePanes>
+      </ResizablePanes>
+      {props.isAnimationPickerShowing &&
+          <AnimationPicker handleClose={props.hideAnimationPicker} />}
+    </div>
   );
 };
-module.exports = AnimationTab;
+
+AnimationTab.propTypes = {
+  isAnimationPickerShowing: React.PropTypes.bool.isRequired,
+  hideAnimationPicker: React.PropTypes.func.isRequired
+};
+
+module.exports = connect(function propsFromStore(state) {
+  return {
+    isAnimationPickerShowing: state.animationPicker.isShowing
+  };
+}, function propsFromDispatch(dispatch) {
+  return {
+    hideAnimationPicker: function () {
+      dispatch(animationPickerActions.hideAnimationPicker());
+    }
+  };
+})(AnimationTab);
