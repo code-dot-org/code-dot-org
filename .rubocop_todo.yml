@@ -455,10 +455,3 @@ Style/UnneededInterpolation:
 # Cop supports --auto-correct.
 Style/UnneededPercentQ:
   Enabled: false
-
-# Offense count: 90
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, MinSize, WordRegex.
-# SupportedStyles: percent, brackets
-Style/WordArray:
-  Enabled: false
