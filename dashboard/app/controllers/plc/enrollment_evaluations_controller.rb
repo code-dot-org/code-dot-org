@@ -20,6 +20,6 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
 
     enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
     enrollment_unit_assignment.update(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
-    redirect_to controller: :user_course_enrollments, action: :show, id: enrollment_unit_assignment.plc_user_course_enrollment.id
+    redirect_to controller: :enrollment_unit_assignments, action: :show, id: enrollment_unit_assignment.id
   end
 end
