@@ -18,7 +18,7 @@ var AnimationFrameList = React.createClass({
         <AnimationFrameListItem index={3} isSelected />
         <AnimationFrameListItem index={4} />
         <AnimationFrameListItem index={151} />
-        <NewListItem label="new frame" onClick={function () {}} />
+        <NewListItem label="new frame" />
       </ScrollableList>
     );
   }
