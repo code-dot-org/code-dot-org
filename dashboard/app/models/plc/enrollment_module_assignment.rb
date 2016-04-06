@@ -21,4 +21,24 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
 
   validates :plc_enrollment_unit_assignment, presence: true
   validates :plc_learning_module, presence: true
+
+  MODULE_ASSIGNMENT_STATUS_STATES = [
+      NOT_STARTED = 'not_started',
+      IN_PROGRESS = 'in_progress',
+      COMPLETED = 'completed'
+  ]
+
+  # Rather than make a db field indicating status, let's just use the task assignments
+  def status
+    tasks_to_complete = plc_task_assignments.joins(:plc_task).where('plc_tasks.type != ?', 'Plc::LearningResourceTask')
+    completed_tasks = tasks_to_complete.where(status: Plc::EnrollmentTaskAssignment::COMPLETED)
+
+    if completed_tasks.empty?
+      return NOT_STARTED
+    elsif completed_tasks.size == tasks_to_complete.size
+      return COMPLETED
+    else
+      return IN_PROGRESS
+    end
+  end
 end

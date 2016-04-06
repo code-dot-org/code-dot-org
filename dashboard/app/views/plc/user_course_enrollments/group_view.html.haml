@@ -1,0 +1,26 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/plc', media: 'all'
+
+- @courses.each do |course|
+  - enrollments = @user_course_enrollments.where(plc_course: course)
+  - next if enrollments.length == 0
+  Viewing progress for for #{course.name}
+
+  %table
+    %th
+      Teacher name
+    - course.plc_course_units.each do |course_unit|
+      %th #{course_unit.unit_name}
+    - enrollments.each do |enrollment|
+      %tr
+        %td #{enrollment.user.name}
+        - enrollment.plc_unit_assignments.each do |unit_assignment|
+          %td
+            - if unit_assignment.status == Plc::EnrollmentUnitAssignment::IN_PROGRESS
+              - unit_assignment.plc_module_assignments.each do |module_assignment|
+                %p
+                  #{module_assignment.status.titleize}
+            - else
+              #{unit_assignment.status.titleize}
+
+  %br

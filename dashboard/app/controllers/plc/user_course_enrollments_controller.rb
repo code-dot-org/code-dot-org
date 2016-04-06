@@ -26,6 +26,11 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
     end
   end
 
+  def group_view
+    @courses = Plc::Course.all
+    @user_course_enrollment = Plc::UserCourseEnrollment.all
+  end
+
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_course_enrollment_params
