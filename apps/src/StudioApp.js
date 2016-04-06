@@ -548,7 +548,7 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
     }
 
     var bubble = document.getElementById('bubble');
-    bubble.addEventListener('click', function () {
+    dom.addClickTouchEvent(bubble, function () {
       this.showInstructionsDialog_(config.level, false, true);
     }.bind(this));
     this.authoredHintsController_.display(promptIcon);
