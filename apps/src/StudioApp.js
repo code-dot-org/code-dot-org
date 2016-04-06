@@ -548,10 +548,10 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
     }
 
     var bubble = document.getElementById('bubble');
-
-    this.authoredHintsController_.display(promptIcon, bubble, function () {
+    bubble.addEventListener('click', function () {
       this.showInstructionsDialog_(config.level, false, true);
     }.bind(this));
+    this.authoredHintsController_.display(promptIcon);
   }
 
   var aniGifPreview = document.getElementById('ani-gif-preview');
