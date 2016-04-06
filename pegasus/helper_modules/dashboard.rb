@@ -24,7 +24,7 @@ module Dashboard
 
     # @returns [User] for given user_id, or nil if not found in database
     def self.get(user_id)
-      row = Dashboard::db[:users][id: user_id]
+      row = Dashboard.db[:users][id: user_id]
       return nil unless row
       Dashboard::User.new(row)
     end
@@ -50,7 +50,7 @@ module Dashboard
       case permission
         when 'admin' then admin?
         when 'teacher' then teacher?
-        else !!Dashboard::db[:user_permissions][user_id: id, permission: permission]
+        else !!Dashboard.db[:user_permissions][user_id: id, permission: permission]
       end
     end
 
@@ -75,13 +75,13 @@ module Dashboard
     end
 
     def followed_by?(other_user_id)
-      !!Dashboard::db[:followers].
+      !!Dashboard.db[:followers].
           where(student_user_id: other_user_id, user_id: id).
           first
     end
 
     def owned_sections
-      Dashboard::db[:sections].select(:id).where(user_id: id).all
+      Dashboard.db[:sections].select(:id).where(user_id: id).all
     end
 
   end
