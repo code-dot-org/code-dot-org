@@ -1,0 +1,17 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/plc', media: 'all'
+
+%h2 PLC Admin
+
+= link_to 'View courses', plc_content_creator_show_courses_and_modules_path
+
+%h3 Create professional learning content
+%ul
+  %li= link_to 'Build a Course', new_plc_course_path
+  %li= link_to 'Build a Course Unit', new_plc_course_unit_path
+  %li= link_to 'Build a Learning Module', new_plc_learning_module_path
+  %li= link_to 'Build a Task', new_plc_task_path
+
+%h3 Manage enrollment
+%ul
+  %li= link_to 'Enroll users in a course by email', new_plc_user_course_enrollment_path

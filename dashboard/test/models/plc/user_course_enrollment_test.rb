@@ -12,6 +12,6 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
 
     assert_equal [@course_unit1, @course_unit2], enrollment.plc_unit_assignments.map(&:plc_course_unit)
-    assert_equal [Plc::EnrollmentUnitAssignment::START_BLOCKED], enrollment.plc_unit_assignments.map(&:status).uniq
+    assert_equal [Plc::EnrollmentUnitAssignment::PENDING_EVALUATION], enrollment.plc_unit_assignments.map(&:status).uniq
   end
 end
