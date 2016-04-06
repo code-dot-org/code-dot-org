@@ -6,7 +6,6 @@
  */
 var Dialog = React.createClass({
   propTypes: {
-    children: React.PropTypes.element.isRequired,
     isOpen: React.PropTypes.bool.isRequired,
     handleClose: React.PropTypes.func.isRequired
   },
