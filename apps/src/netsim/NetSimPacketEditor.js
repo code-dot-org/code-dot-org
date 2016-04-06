@@ -709,7 +709,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     rowFields.message.focus(removeWatermark);
     rowFields.message.keypress(
         makeKeypressHandlerWithWhitelist(rowType.messageAllowedCharacters));
-    rowFields.message.keydown(function(jqueryEvent){
+    rowFields.message.keydown(function (jqueryEvent){
       if (isUnmodifiedEnterPress(jqueryEvent)) {
         this.enterKeyPressedCallback_(jqueryEvent);
       }

@@ -95,13 +95,13 @@
   view_course: Visualizza il corso
   view_unit: Guarda unità
   make_app: Fai un'app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_title: Trova un relatore da ospitare per la tua classe
+  congrats_guest_speaker_desc: Ora che i tuoi studenti hanno finito un corso di informatica,
+    considera l'idea di festeggiare e di fare collegamenti con cose che possono creare
+    nel mondo reale invitando un ospite d'onore per la tua classe. Puoi usare la nostra
+    mappa di volontari per contattare volontari in zona per visitare la tua classe,
+    oppure cerca in qualsiasi citta' per trovare studenti di informatica o professionisti
+    pronti ad ispirare i tuoi studenti da remoto, tramite video chat.
   congrats_guest_speaker_cta: Trova un ospite parlante
   congrats_third_party_title: Usa la tua nuova abilità con queste app e siti
   third_party_gradelevel_kto8: Classi K-8
@@ -119,54 +119,60 @@
   third_party_price_299: 'Prezzo: $ 2,99/per download'
   third_party_price_individual: 'Prezzo individuale: Prova gratuita & $25/mese'
   third_party_price_school: 'Prezzo della scuola: Progetti gratuiti & pro a $2500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_tynker_desc: La piattaforma Tynker di computazione creativa aiuta i
+    bambini a sviluppare il pensiero computazionale e le abilita' di programmazione
+    in maniera divertente, intuitiva e fantasiosa. Il nostro innovativo linguaggio
+    di programmazione visuale, corsi interattivi autoregolati e attivita' di programmazione
+    basate sul gioco, forniscono un'introduzione semplice alla programmazione e permettono
+    ai bambini di innovare e creare.
+  third_party_tynker_btn_curriculum: Prova il Curriculum di Trynker per primi lettori
   third_party_tynker_btn_site: Visita Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
+  third_party_scratchjr_desc: Scratch Junior e' un linguaggio di programmazione introduttivo
+    che consente a bambini piccoli (eta' 5-7) di creare i propri giochi e le proprie
+    storie interattive. I bambini collegano insieme dei blocchi di programmazione
+    grafica per far muovere, saltare, ballare e cantare i personaggi. I bambini possono
+    modificare i personaggi nell'editor di disegno, aggiungere le proprie voci e suoni,
+    perfino aggiungere foto di se' stessi, e poi usare i blocchi di programmazione
+    per dar vita ai propri personaggi.
   third_party_scratchjr_btn_curriculum: Scarica il curriculum di Scratch Jr.
   third_party_scratchjr_btn_site: Visita Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_desc: Con Scratch puoi programmare le tue storie interattive,
+    giochi e animazioni e puoi condividere le tue creazione con altri nella comunita'
+    online. Scratch aiuta i giovani ad imparare a pensare in modo creativo, ragionare
+    in maniera sistematica e a lavorare in modo collaborativo - competenze essenziali
+    per la vita nel 21mo secolo.
   third_party_scratch_btn_curriculum: Scarica il curriculum di Scratch
   third_party_scratch_btn_forum: Forum docenti di Scratch
   third_party_scratch_btn_site: Visita il sito del programma Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
-    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
-    or on Android or iOS devices. Students play the initial set of “Basic” levels
-    in Lightbot. They will learn how to tell a computer what to do with a series of
-    basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_desc: In Lightbot, gli studenti devono programmare un robot
+    con comandi per risolvere dei puzzle. Gli studenti possono giocare nel Broswer
+    (Flash Player e' richiesto), o su dispositivi Android e iOS. Gli studenti giocano
+    ai livelli iniziali del set  "Base" in Lightbot. Impareranno come dire ad un computer
+    come eseguire una serie di comandi base e apprenderanno il processo generale con
+    il quale si scrivono programmi per computer.
   third_party_lightbot_btn_curriculum: Scarica il curriculum di Lightbot
   third_party_lightbot_btn_site: Visita Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
+  third_party_khan_desc: Impara come programmare disegni, animazioni e giochi usando
+    JavaScript e ProcessingJS, oppure impara come creare pagine web con HTML e CSS.
+    Potrai condividere qualsiasi cosa tu crei, esplorare cosa hanno creato gli altri
+    e imparare l'uno dall'altro!
   third_party_khan_btn_learn: Imparare l'informatica con Khan Academy
   third_party_khan_btn_forum: Forum sull'informatica della Khan Academy
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
+  third_party_appinv_desc: MIT App Inventor e' uno strumento di programmazione basato
+    su blocchi che permette a tutti, anche ai principianti, di iniziare a programmare
+    e creare app completamente funzionanti su dispositivi Android. Chi e' agli inizi
+    con App Inventor sara' capace di avere la loro prima app pronta e funzionante
+    in un'ora o meno e puo' programmare app piu' complesse in molto meno tempo che
+    usando i tradizionali linguaggi basati su testo.
   third_party_appinv_btn_curriculum: Scarica il curriculum di App Inventor 2
   third_party_appinv_btn_forum: Forum di App Inventor 2
   third_party_appinv_btn_site: Visita App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
-    short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
+  third_party_codehs_desc: CodeHS introduce i blocchi di programmazione con brevi
+    video, esempi di codice e tantissimi esercizi di programmazione che rendono scrivere
+    codice divertente e accessibile ai principianti. Per le scuole e gli insegnanti,
+    CodeHS fornisce un curriculum, strumenti di insegnamento e sviluppo professionale.
+    I singoli studenti possono ottenere l'aiuto necessario lungo il percorso tramite
+    una rete di tutor.
   third_party_codehs_btn_try: Prova l'ntroduzione all'informatica di CodeHS
   third_party_codecademy_desc: Stiamo ripensare l'istruzione dal basso verso l'alto.
     Il web ha ripensato quasi tutto - commercio, social networking, assistenza sanitaria
@@ -183,9 +189,10 @@
   third_party_cost_free_399: Prova gratuita, $399/classe
   third_party_cost_free_2: Prova gratuita, $2/studente
   third_party_cost_free_10: Prova gratuita, $9.99/ mese
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
+  third_party_desc_5_4to8: Approssimativamente 5 lezioni, orientate verso studenti
+    tra quarta elementare e terza media
+  third_party_desc_10to12_kto3: Circa 10-12 lezioni, per gli studenti di asilo fino
+    alla terza elementare
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
     K-5
@@ -392,7 +399,7 @@
   homepage_slot_text_link_othercourses: Altri corsi online
   homepage_slot_text_title_educators: Insegnanti
   homepage_slot_text_blurb_educators: Insegna ai tuoi studenti
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: Scuola elementare
   homepage_slot_text_link_middle: Scuola media
   homepage_slot_text_link_high: Scuola superiore
   homepage_slot_text_link_k5: Corsi per studenti della scuola elementare
@@ -689,6 +696,7 @@
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
   dashboard_navigation_view_progress: Controlla i progressi
   dashboard_navigation_view_text_responses: Visualizza il testo delle risposte
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -814,11 +822,23 @@
   dashboard_progress_completed_perfect: completato in modo perfetto
   dashboard_progress_furthest_level_attempted: esercizio più avanzato che è stato
     provato
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: inviato
   dashboard_stage: Lezione
   dashboard_puzzle: Esercizio
   dashboard_question: Domanda
   dashboard_response: Risposta
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Molto bene!
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'incredibili statistiche dell''Ora del Codice dello scorso
     anno. In una settimana soltanto:'
   stats_hoc_2013_image_alt: Statistiche dell'Ora del Codice per il 2013
@@ -988,7 +1008,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: Laboratorio per le App
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Eta' 13+
   applab_shortdescription_congrats: App Lab è un programma ambientale con cui puoi
     fare semplici app. Fare il design, scrivere il codice con blocchi o JavaScript
     per farla funzionare, quindi condividi la tua app in pochi secondi

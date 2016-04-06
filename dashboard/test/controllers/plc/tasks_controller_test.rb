@@ -8,19 +8,14 @@ class Plc::TasksControllerTest < ActionController::TestCase
     @learning_resource_task = create(:plc_learning_resource_task, name: 'task', type: 'Plc::LearningResourceTask', plc_learning_module: @learning_module)
   end
 
-  test 'get index' do
-    get :index
-    assert_response :success
-  end
-
   test 'should get new' do
-    get :new
+    get :new, plc_learning_module_id: @learning_module.id
     assert_response :success
   end
 
   test 'should create new tasks for all task types' do
     [
-        [Plc::LearningResourceTask, {resource_url: 'Some url'}],
+        [Plc::LearningResourceTask, {resource_url: 'Some url', icon: 'Some icon class'}],
         [Plc::ScriptCompletionTask, {script_id: '1'}],
         [Plc::WrittenAssignmentTask, {assignment_description: 'Tell me how you really feel'}]
 
@@ -76,6 +71,6 @@ class Plc::TasksControllerTest < ActionController::TestCase
       delete :destroy, id: @learning_resource_task
     end
 
-    assert_redirected_to plc_tasks_path
+    assert_redirected_to plc_learning_module_path(@learning_module)
   end
 end

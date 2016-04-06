@@ -3,11 +3,9 @@ chai.config.includeStack = true;
 var assert = chai.assert;
 var sinon = require('sinon');
 
-
-window.React = require('react');
-window.$ = require('jquery');
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales('applab');
+testUtils.setExternalGlobals();
 
 var dropletUtils = require('@cdo/apps/dropletUtils');
 

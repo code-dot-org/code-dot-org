@@ -1,0 +1,30 @@
+- data = level.properties
+- app = 'text_match'
+
+.text-match{id: "level_#{index}"}
+  .mainblock
+    = render partial: 'levels/content', locals: {app: app, data: data}
+    - height = data['height'] || '80'
+    %textarea.response{placeholder: data['placeholder'] ? string_or_image(app, data['placeholder']) : t(app + '.placeholder'), style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}
+
+    - if standalone
+      = render partial: 'levels/dialog', locals: {app: app, data: data}
+
+    = render partial: 'levels/teacher_markdown', locals: {data: data}
+
+  .clear
+
+= render partial: 'levels/common_audio'
+
+:javascript
+
+  $(document).ready(function() {
+    window["level_#{index}"] = new TextMatch(
+      "level_#{index}",
+      #{level.id},
+      #{standalone},
+      #{data['answers'] || []},
+      #{last_attempt.to_json}
+      );
+    });
+

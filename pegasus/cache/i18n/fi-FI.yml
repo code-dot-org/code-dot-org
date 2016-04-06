@@ -652,6 +652,7 @@
   dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_view_progress: Tarkastele etenemistä
   dashboard_navigation_view_text_responses: Näytä tekstin vastaukset
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Lisää oppilaita
   dashboard_navigation_manage_students: Hallinnoi oppilaita
   dashboard_navigation_lesson_plans_resources: Tuntisuunnitelmat ja resurssit
@@ -769,6 +770,18 @@
   dashboard_puzzle: Tehtävä
   dashboard_question: Kysymys
   dashboard_response: Vastaus
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Oikein
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Uskomattomia tilastoja viime vuoden Koodaustunnista. Vain
     yhdessä viikossa:'
   stats_hoc_2013_image_alt: Tilastoja vuoden 2013 Koodaustunnista

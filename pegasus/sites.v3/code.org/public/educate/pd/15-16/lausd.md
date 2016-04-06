@@ -42,8 +42,6 @@ Los Angeles, CA, 90038](https://www.google.com/maps/place/9+Dots/@34.0880332,-11
 
 The parking entrance is in the alleyway between Highland Ave and Citrus Ave. [See parking map here.](/images/9-dots-parking-map.png)
 
-If the lot is full, there is plenty of street parking around the block. 
-
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -89,7 +87,12 @@ Breakfast and lunch will be served.
 
 **Location**
 
-More information coming soon!
+[Alliance College-Ready Public Schools<br/>
+Columbia Building, 1st Floor<br/>
+515 Columbia Ave<br/>
+Los Angeles, CA 90017<br/>](https://goo.gl/maps/koYEEZbTqPU2)
+
+Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop! 
 
 **What to bring to Phase 3 quarterly sessions:**
 

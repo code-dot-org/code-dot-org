@@ -656,6 +656,7 @@
   dashboard_navigation_all_sections: Učenički računi i napredak
   dashboard_navigation_view_progress: Prikaz napretka
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Dodavanje učenika
   dashboard_navigation_manage_students: Upravljanje učenicima
   dashboard_navigation_lesson_plans_resources: Nastavni planovi i resursi
@@ -773,6 +774,18 @@
   dashboard_puzzle: Zadatak
   dashboard_question: Pitanje
   dashboard_response: Odgovor
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Ispravno
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Nevjerojatna statistika prošlogodišnjeg Sata Kodiranja.
     U samo jednom tjednu:'
   stats_hoc_2013_image_alt: Statistika Sata Kodiranja 2013

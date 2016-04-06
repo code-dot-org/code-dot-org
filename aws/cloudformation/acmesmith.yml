@@ -1,0 +1,11 @@
+endpoint: https://acme-v01.api.letsencrypt.org/
+# For staging API, use this endpoint instead:
+#endpoint: https://acme-staging.api.letsencrypt.org/
+storage:
+  type: s3
+  region: 'us-east-1'
+  bucket: 'cdo-dist'
+  prefix: 'ssl'
+
+challenge_responders:
+  - route53: {}

@@ -16,7 +16,6 @@ var utils = require('../utils');
 var gridUtils = require('./gridUtils');
 var logToCloud = require('../logToCloud');
 var actions = require('./actions');
-var icons = require('../assetManagement/icons');
 
 var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
@@ -111,7 +110,7 @@ designMode.createElement = function (elementType, left, top) {
   return element;
 };
 
-designMode.editElementProperties = function(element) {
+designMode.editElementProperties = function (element) {
   var designPropertiesElement = document.getElementById('design-properties');
   if (!designPropertiesElement) {
     // design-properties won't exist when !user.isAdmin
@@ -128,7 +127,7 @@ designMode.editElementProperties = function(element) {
  * Loads the current element or current screen into the property tab.
  * Also makes sure we re-render design mode to update properties such as isDimmed.
  */
-designMode.resetPropertyTab = function() {
+designMode.resetPropertyTab = function () {
   var element = currentlyEditedElement || designMode.activeScreen();
   designMode.editElementProperties(element);
   Applab.render();
@@ -139,7 +138,7 @@ designMode.resetPropertyTab = function() {
  * @param allowEditing {boolean}
  */
 designMode.resetElementTray = function (allowEditing) {
-  $('#design-toolbox .new-design-element').each(function() {
+  $('#design-toolbox .new-design-element').each(function () {
     $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
 };
@@ -148,7 +147,7 @@ designMode.resetElementTray = function (allowEditing) {
  * Given an input value produce a valid css value that is
  * either in pixels or empty.
  */
-function appendPx (input) {
+function appendPx(input) {
   // Don't append if we already have a px
   if (/px/.test(input)) {
     return input;
@@ -170,7 +169,7 @@ function isDraggableContainer(element) {
  * @param name {string}
  * @param value {string}
  */
-designMode.onPropertyChange = function(element, name, value) {
+designMode.onPropertyChange = function (element, name, value) {
   designMode.updateProperty(element, name, value);
   designMode.editElementProperties(element);
 };
@@ -190,7 +189,7 @@ function renderIconToString(value, element) {
   ctx.textAlign = 'center';
   ctx.fillStyle = element.getAttribute('data-icon-color');
   var regex = new RegExp('^' + ICON_PREFIX + 'fa-');
-  var unicode = '0x' + icons.unicode[value.replace(regex, '')];
+  var unicode = '0x' + dashboard.iconsUnicode[value.replace(regex, '')];
   ctx.fillText(String.fromCharCode(unicode), 200, 200);
   return canvas.toDataURL();
 }
@@ -202,7 +201,7 @@ function renderIconToString(value, element) {
  * @param name
  * @param value
  */
-designMode.updateProperty = function(element, name, value) {
+designMode.updateProperty = function (element, name, value) {
   var handled = true;
   switch (name) {
     case 'id':
@@ -270,7 +269,7 @@ designMode.updateProperty = function(element, name, value) {
       var originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
 
-      var fitImage = function() {
+      var fitImage = function () {
         // Fit the image into the button
         element.style.backgroundSize = 'contain';
         element.style.backgroundPosition = '50% 50%';
@@ -388,7 +387,7 @@ designMode.updateProperty = function(element, name, value) {
         optionElement.textContent = value[i];
       }
       // remove any extra options
-      while(element.children[i]) {
+      while (element.children[i]) {
         element.removeChild(element.children[i]);
       }
       break;
@@ -450,7 +449,7 @@ designMode.updateProperty = function(element, name, value) {
   }
 };
 
-designMode.onDeletePropertiesButton = function(element, event) {
+designMode.onDeletePropertiesButton = function (element, event) {
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
     element = element.parentNode;
@@ -518,7 +517,7 @@ designMode.onDepthChange = function (element, depthDirection) {
   designMode.editElementProperties(element);
 };
 
-designMode.onInsertEvent = function(code) {
+designMode.onInsertEvent = function (code) {
   Applab.appendToEditor(code);
   $('#codeModeButton').click(); // TODO(dave): reactify / extract toggle state
   Applab.scrollToEnd();
@@ -533,10 +532,10 @@ designMode.serializeToLevelHtml = function () {
   // Make a copy so that we don't affect designModeViz contents as we
   // remove prefixes from the element ids.
   var designModeVizClone = designModeViz.clone();
-  designModeVizClone.children().each(function() {
+  designModeVizClone.children().each(function () {
     elementUtils.removeIdPrefix(this);
   });
-  designModeVizClone.children().children().each(function() {
+  designModeVizClone.children().children().each(function () {
     elementUtils.removeIdPrefix(this);
   });
 
@@ -554,6 +553,21 @@ designMode.serializeToLevelHtml = function () {
   Applab.levelHtml = serialization;
 };
 
+
+function getUnsafeHtmlReporter(sanitizationTarget) {
+  return function (removed, unsafe, safe) {
+    var msg = "The following lines of HTML were modified or removed:\n" + removed +
+      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe + "\ntarget: " + sanitizationTarget;
+    console.log(msg);
+    logToCloud.addPageAction(logToCloud.PageAction.SanitizedLevelHtml, {
+      removedHtml: removed,
+      unsafeHtml: unsafe,
+      safeHtml: safe,
+      sanitizationTarget: sanitizationTarget
+    });
+  };
+}
+
 /**
  * Replace the contents of rootEl with the children of the DOM node obtained by
  * parsing Applab.levelHtml (the root node in the levelHtml is ignored).
@@ -562,7 +576,7 @@ designMode.serializeToLevelHtml = function () {
  * @param prefix {string} Optional prefix to attach to element ids of children and
  *     grandchildren after parsing. Defaults to ''.
  */
-designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
+designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   if (!rootEl) {
     return;
   }
@@ -573,25 +587,15 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   if (!Applab.levelHtml) {
     return;
   }
-  function reportUnsafeHtml(removed, unsafe, safe) {
-    var msg = "The following lines of HTML were modified or removed:\n" + removed +
-      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe + "\ntarget: " + rootEl.id;
-    console.log(msg);
-    logToCloud.addPageAction(logToCloud.PageAction.SanitizedLevelHtml, {
-      removedHtml: removed,
-      unsafeHtml: unsafe,
-      safeHtml: safe,
-      sanitizationTarget: rootEl.id
-    });
-  }
 
+  var reportUnsafeHtml = getUnsafeHtmlReporter(rootEl.id);
   var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
   var children = $(levelDom).children();
 
   children.each(function () {
     elementUtils.addIdPrefix(this, prefix);
   });
-  children.children().each(function() {
+  children.children().each(function () {
     elementUtils.addIdPrefix(this, prefix);
   });
 
@@ -604,13 +608,13 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   children.each(function () {
     elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
   });
-  children.children().each(function() {
+  children.children().each(function () {
     var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
     elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
   });
 };
 
-designMode.toggleDesignMode = function(enable) {
+designMode.toggleDesignMode = function (enable) {
   Applab.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 };
 
@@ -672,7 +676,7 @@ function boundedResize(left, top, width, height, preserveAspectRatio) {
  * @param {jQuery} jqueryElements jQuery object containing DOM elements to make
  *   draggable.
  */
-function makeDraggable (jqueryElements) {
+function makeDraggable(jqueryElements) {
   // For a non-div to be draggable & resizable it needs to be wrapped in a div.
   jqueryElements.each(function () {
     var elm = $(this);
@@ -946,14 +950,14 @@ designMode.loadDefaultScreen = function () {
   designMode.changeScreen(defaultScreen);
 };
 
-designMode.renderDesignWorkspace = function(element) {
+designMode.renderDesignWorkspace = function (element) {
   var designWorkspace = document.getElementById('designWorkspace');
   if (!designWorkspace) {
     return;
   }
 
   var props = {
-    handleDragStart: function() {
+    handleDragStart: function () {
       if ($('#resetButton').is(':visible')) {
         studioApp.resetButtonClick();
       }
@@ -976,7 +980,9 @@ designMode.renderDesignWorkspace = function(element) {
  * existed under the root div. If we find one of those, convert it to be a single
  * screen app.
  */
-designMode.addScreenIfNecessary = function(html) {
+designMode.addScreenIfNecessary = function (html) {
+  var reportUnsafeHtml = getUnsafeHtmlReporter('levelHtml');
+  html = sanitizeHtml(html, reportUnsafeHtml);
   var rootDiv = $(html);
   if (rootDiv.children().length === 0 ||
       rootDiv.children().eq(0).hasClass('screen')) {
@@ -1031,6 +1037,6 @@ designMode.addKeyboardHandlers = function () {
   });
 };
 
-designMode.resetIds = function() {
+designMode.resetIds = function () {
   elementLibrary.resetIds();
 };

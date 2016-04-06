@@ -30,10 +30,13 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Here’s some code that can draw any regular polygon. There’s a new variable called `sides` that is set to 4. Can you use the `sides` variable (along with the math block) to turn the right amount regardless of how many sides are in the polygon?\r\n\r\n<h5 style=\"padding: 15px 15px 15px 40px; background-color:#eeeeee; border-radius:10px;\">\r\n<details>\r\n<summary>Hint</summary>\r\n\t<br/>\r\n\tTo draw a regular polygon I should turn **360/sides** each time.\r\n</details>\r\n</h5>\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Here’s some code that can draw any regular polygon. \r\n\r\nThere’s a new variable called `sides` that is set to 4. \r\n\r\nCan you use the `sides` variable (along with the math block) to turn the right amount regardless of how many sides are in the polygon?\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "examples_required": "false",
-    "never_autoplay_video": "false"
-  }
+    "never_autoplay_video": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To draw a regular polygon, turn **360/sides** each time.\",\r\n  \"hint_id\": \"Course_4_Artist_Vars_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -130,18 +133,19 @@
         <block type="variables_get">
           <title name="VAR">sides</title>
         </block>
+        <block type="draw_move_by_constant"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="variables_get">
           <title name="VAR">sides</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="variables_set" inline="false">
               <title name="VAR">sides</title>

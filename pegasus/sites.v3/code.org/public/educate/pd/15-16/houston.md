@@ -44,6 +44,10 @@ Room PL7<br/>
 4001 Hardy Street<br/>
 Houston, TX 77009](https://www.google.com/maps/place/Houston+Independent+School+District/@29.7965147,-95.3534077,19z/data=!4m7!1m4!3m3!1s0x8640b8e008405e8f:0x898b37886b4ad089!2s4001+Hardy+St,+Houston,+TX+77009!3b1!3m1!1s0x0000000000000000:0x887b49612ae7419a)
 
+Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop! 
+
+Free parking is available at the building. 
+
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -61,12 +65,6 @@ Water
 Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
 will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
 
-Takeaways:<br/>
-• I look forward to teaching the course again based on my reflection of the past year.<br/>
-• I am more comfortable with the material that I struggled with the first time teaching this
-course.<br/>
-• I understand how to make changes to the ECS curriculum in order to meet my local needs
-and fit into my context.
 
 **Save the Dates**
 

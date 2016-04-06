@@ -1,0 +1,82 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+  = javascript_include_tag 'js/plc'
+
+%p#notice= notice
+
+%p
+  %b Plc course:
+  = link_to @course_unit.plc_course.name, @course_unit.plc_course
+%p
+  %b Unit name:
+  = @course_unit.unit_name
+%p
+  %b Unit description:
+  = @course_unit.unit_description
+%p
+  %b Unit order:
+  = @course_unit.unit_order
+
+%p
+  Evaluation Questions
+
+%p
+  %table#evaluationTable
+    %th
+      Question
+    %th
+      Answer
+    %th
+      Associated Module
+    %th
+    - @course_unit.plc_evaluation_questions.each do |question|
+      %tbody.question_section
+        %tr
+          %td
+            = question.question
+          %td
+          %td
+          %td
+            = link_to '', question, method: :delete, data: { confirm: 'Are you sure you want to delete this question?' }, class: 'fa fa-trash btn'
+        - question.plc_evaluation_answers.each do |answer|
+          %tr
+            %td
+            %td
+              = answer.answer
+            %td
+              = answer.plc_learning_module.try(:name)
+            %td
+        %tr.cloneableAnswerRow
+          %td
+          %td
+            = text_field_tag ''
+          %td
+            = select_tag '', options_for_select(options_for_plc_task_learning_modules), include_blank: ''
+          %td
+        %tr.new_answer_button_row{question_id: question.id}
+          %td
+          %td
+            = button_tag 'Add a new answer', class: 'btn new_answer', id: 'newAnswerForQuestion' + question.id.to_s, question_id: question.id
+          %td
+          %td
+    %tr.cloneableQuestionRow
+      %td
+        = text_field_tag ''
+      %td
+      %td
+      %td
+    %tr
+      %td
+        = button_tag 'Add a new question', class: 'btn new_question'
+      %td
+      %td
+      %td
+
+=form_tag(action: 'submit_new_questions_and_answers') do
+  =hidden_field_tag 'newQuestionsList', '[]'
+  =hidden_field_tag 'newAnswersList', '[]'
+  =submit_tag 'Submit new questions and answers', id: 'submitNewQuestions', disabled: true
+
+= link_to 'Edit', edit_plc_course_unit_path(@course_unit)
+\|
+= link_to 'Back', plc_course_path(@course_unit.plc_course)

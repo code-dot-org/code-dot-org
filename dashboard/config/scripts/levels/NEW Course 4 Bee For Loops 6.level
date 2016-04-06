@@ -31,9 +31,10 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "maze_data": null,
     "fast_get_nectar_animation": "true"
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -75,7 +76,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_for" inline="true">
           <title name="VAR">counter</title>
@@ -95,9 +96,8 @@
             </block>
           </value>
         </block>
-        <block type="maze_nectar"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

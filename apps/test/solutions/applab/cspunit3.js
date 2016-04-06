@@ -10,8 +10,6 @@ var levelDefinition = {
   "freePlay": true,
   "editCode": true,
   "sliderSpeed": 0.1,
-  "appWidth": 200,
-  "appHeight": 200,
   "codeFunctions": {
     "moveForward": {
       "params": [""],
@@ -57,35 +55,6 @@ var levelDefinition = {
   "id": "custom",
 };
 
-
-
-/**
- * Simulates dragging the nth block in the toolbox into the canvas at line
- * targetIndex (assumes all blocks are size 30).
- * @param {number} blockIndex Nth block in toolbox
- * @param {number} targetIndex Nth line in target
- */
-function dragToolboxBlock(blockIndex, targetIndex) {
-  var start = {
-    x: $(".droplet-palette-canvas").eq(0).offset().left + 10,
-    y: $(".droplet-palette-canvas").eq(0).offset().top + 10 +
-      blockIndex * 30
-  };
-  var end = {
-    x: $(".droplet-main-canvas").eq(0).offset().left,
-    y: $(".droplet-main-canvas").eq(0).offset().top +
-      targetIndex * 30
-  };
-
-  var mousedown = testUtils.createMouseEvent('mousedown', start.x, start.y);
-  var drag = testUtils.createMouseEvent('mousemove', end.x, end.y);
-  var mouseup = testUtils.createMouseEvent('mouseup', end.x, end.y);
-
-  $(".droplet-drag-cover")[0].dispatchEvent(mousedown);
-  $(".droplet-drag-cover")[0].dispatchEvent(drag);
-  $(".droplet-drag-cover")[0].dispatchEvent(mouseup);
-}
-
 // Extract a list of those pixels that are actually filled
 function getColoredPixels(imageData, width, height) {
   var list = [];
@@ -113,29 +82,26 @@ module.exports = {
         return levelDefinition;
       },
       runBeforeClick: function (assert) {
-        // Paramaterless moveForward. Moves 25 pixels by default
-        var moveForward = 0;
-        var turnLeft = 1;
+        var expectedCode = '' +
+          'moveForward();\n' +
+          'turnLeft();\n' +
+          'turnLeft();\n' +
+          'turnLeft();\n' +
+          'moveForward();\n' +
+          'turnLeft();\n' +
+          'turnLeft();\n' +
+          'turnLeft();\n' +
+          'moveForward();\n' +
+          'turnLeft();\n' +
+          'turnLeft();\n' +
+          'turnLeft();\n' +
+          'moveForward();\n';
 
-        var nextIndex = 0;
-        function appendToolboxBlock(blockIndex) {
-          dragToolboxBlock(blockIndex, nextIndex++);
-        }
+        $("#show-code-header").click();
+        testUtils.setAceText(expectedCode);
 
-        appendToolboxBlock(moveForward);
-        assert.equal(Applab.getCode(), 'moveForward();\n');
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(moveForward);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(moveForward);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(turnLeft);
-        appendToolboxBlock(moveForward);
+        var actualCode = Applab.getCode();
+        assert.equal(actualCode, expectedCode, 'code set properly');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 10, function () {
@@ -146,37 +112,40 @@ module.exports = {
 
           // Diagram of which pixels we expect to be colored.
           //
-          //   x->   1           1 1
-          //  y    9 0           2 2
+          //   x-> 1 1           1 1
+          //  y    5 6           8 8
           //  |    9 0           4 5
           //  v
           //     0 0 0 0 0   0 0 0 0 0
-          //  74 0 1 1 1 1...1 1 1 1 0
-          //  75 0 1 1 1 1...1 1 1 1 0
-          //  76 0 1 1 0 0   0 0 1 1 0
+          // 214 0 1 1 1 1...1 1 1 1 0
+          // 215 0 1 1 1 1...1 1 1 1 0
+          // 216 0 1 1 0 0   0 0 1 1 0
           //     0 1 1 0 0   0 0 1 1 0
           //       ...           ...
           //     0 1 1 0 0   0 0 1 1 0
-          //  98 0 1 1 0 0   0 0 1 1 0
-          //  99 0 1 1 1 1...1 1 1 1 0
-          // 100 0 1 1 1 1...1 1 1 1 0
+          // 238 0 1 1 0 0   0 0 1 1 0
+          // 239 0 1 1 1 1...1 1 1 1 0
+          // 240 0 1 1 1 1...1 1 1 1 0
           //     0 0 0 0 0   0 0 0 0 0
           //
+          // Used to start at 100, 100
+          // Now starts at 160, 240
+
           var expectedPixels = [];
           var x, y;
-          for (y = 74; y <= 75; y++) {
-            for (x = 99; x <= 125; x++) {
+          for (y = 214; y <= 215; y++) {
+            for (x = 159; x <= 185; x++) {
               expectedPixels.push([x, y]);
             }
           }
-          for (y = 76; y <= 98; y++) {
-            expectedPixels.push([99, y]);
-            expectedPixels.push([100, y]);
-            expectedPixels.push([124, y]);
-            expectedPixels.push([125, y]);
+          for (y = 216; y <= 238; y++) {
+            expectedPixels.push([159, y]);
+            expectedPixels.push([160, y]);
+            expectedPixels.push([184, y]);
+            expectedPixels.push([185, y]);
           }
-          for (y = 99; y <= 100; y++) {
-            for (x = 99; x <= 125; x++) {
+          for (y = 239; y <= 240; y++) {
+            for (x = 159; x <= 185; x++) {
               expectedPixels.push([x, y]);
             }
           }

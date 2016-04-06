@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+require 'set'
+
+# Teachers in all regions from February email, minus NYC and Chicago
+
+# Exported from https://docs.google.com/spreadsheets/d/1T_cd7CDlOuuLe_hObSzNX7BbN7PwU_EzEpjuIHuwoNM
+REGION_LIST_FILE = 'Code.org Partners with Regions - Sheet1.csv'
+SKIP_REGIONS = ['New York', 'Chicago']
+
+# https://www.dropbox.com/s/upxdp1yam0jd9lf/1.2.2016.csv?dl=0
+CURRENT_TEACHERS_FILE = 'current-teachers.csv'
+EXCLUDED_EMAILS = Set.new
+REGIONS = {}
+
+def query_with_location(base_query, city, state)
+  query = "(#{base_query}) &&
+    ((location_state_s:\"#{state}\" && location_city_s:\"#{city}\") ||
+    (create_ip_state_s:\"#{state}\" && create_ip_city_s:\"#{city}\"))"
+
+  results = query_subscribed_contacts(q: query)
+
+  puts "#{results.length} results"
+  results
+end
+
+def query_teachers_with_location(city, state)
+  base_query =
+    # BringToSchool2013
+    '(kind_s:BringToSchool2013 && role_s:teacher) || ' +
+
+      # Petition teachers
+      '(kind_s:Petition && role_s:educator) || ' +
+
+      # Past 2013 organizers
+      '(kind_s:CSEdWeekEvent2013 && role_s:teacher) || ' +
+
+      # Past 2014 organizers
+      'kind_s:HocSignup2014 || ' +
+
+      # HOC 2015 organizers
+      'kind_s:HocSignup2015 || ' +
+
+      # Code studio teachers
+      '(kind_s:user && role_s:teacher)'
+
+  query_with_location(base_query, city, state)
+end
+
+# Load current teachers, so they can be excluded from the email lists
+CSV.foreach(CURRENT_TEACHERS_FILE, headers: true) do |row|
+  EXCLUDED_EMAILS.add row['teacher_email']
+end
+
+# This csv file lists school districts one per row grouped by region.
+# Every row has: City, State, Region
+CSV.foreach(REGION_LIST_FILE, headers: true) do |row|
+  region_name = row['Region']
+  next if SKIP_REGIONS.include? region_name
+
+  state_abbrev = row['State']
+  state = get_us_state_from_abbr state_abbrev
+  city = row['City']
+
+  puts "Querying teachers in #{region_name}: #{city}, #{state}"
+  query_teachers_with_location city, state
+end
+
+export_contacts_to_csv ALL, 'district-teachers.csv'

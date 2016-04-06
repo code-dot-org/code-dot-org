@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Remember this shape?  Now we're going to let you build it without giving you any blocks to start!\r\nHint: There are 3 triangles within the 360 degree rotation...how many times does 3 go into 360?",
+    "instructions": "Remember this shape?  Now we're going to let you build it without giving you any blocks to start!",
     "level_num": "custom",
     "x": "200",
     "y": "200",
@@ -31,9 +31,13 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Remember this shape?  Now we're going to let you build it without giving you any blocks to start!\r\n\r\n*Hint: There are 3 triangles within the 360 degree rotation...how many times does 3 go into 360?*\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
-    "examples_required": "false"
-  }
+    "markdown_instructions": "Remember this shape?  Now we're going to let you build it without giving you any blocks to start!\r\n\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Need help figuring out how far to turn?\\n\\nThere are 3 triangles within the 360 degree rotation.\\n\\nHow many times does 3 go into 360?\",\r\n  \"hint_id\": \"Course_4_Artist_8a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -42,13 +46,9 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
@@ -76,25 +76,11 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
-          <statement name="DO">
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">100</title>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE">120</title>
-                </block>
-              </next>
-            </block>
-          </statement>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_turn_by_constant">
-              <title name="DIR">turnLeft</title>
-              <title name="VALUE">120</title>
-              <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
                 <block type="controls_repeat">
                   <title name="TIMES">3</title>
                   <statement name="DO">
@@ -113,27 +99,10 @@
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnLeft</title>
                       <title name="VALUE">120</title>
-                      <next>
-                        <block type="controls_repeat">
-                          <title name="TIMES">3</title>
-                          <statement name="DO">
-                            <block type="draw_move_by_constant">
-                              <title name="DIR">moveForward</title>
-                              <title name="VALUE">100</title>
-                              <next>
-                                <block type="draw_turn_by_constant">
-                                  <title name="DIR">turnLeft</title>
-                                  <title name="VALUE">120</title>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
-                        </block>
-                      </next>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>

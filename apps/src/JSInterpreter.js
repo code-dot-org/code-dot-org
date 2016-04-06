@@ -17,9 +17,10 @@ var utils = require('./utils');
  */
 var JSInterpreter = module.exports = function (options) {
   this.studioApp = options.studioApp;
-  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return true; };
+  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function () { return true; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
   this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
+  this.customMarshalBlockedProperties = options.customMarshalBlockedProperties || [];
 
   // Publicly-exposed events that anyone with access to the JSInterpreter can
   // observe and respond to.
@@ -172,8 +173,7 @@ JSInterpreter.prototype.parse = function (options) {
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
     new window.Interpreter(options.code, initFunc);
-  }
-  catch(err) {
+  } catch (err) {
     this.executionError = err;
     this.handleError();
   }
@@ -654,14 +654,20 @@ JSInterpreter.prototype.logStep_ = function () {
     return;
   }
 
+  // Log call and new expressions just before we step into a function (after the
+  // last argument has been processed). (NOTE: as a result, a single stateful
+  // async function call may appear multiple times in the log)
   if ((node.type === "CallExpression" || node.type === "NewExpression") &&
-      !state.doneCallee_) {
+      state.doneCallee_ &&
+      !state.doneExec &&
+      !node.arguments[state.n_ || 0]) {
     switch (node.callee.type) {
       case "Identifier":
-        this.executionLog.push(node.callee.name);
+        this.executionLog.push(node.callee.name + ':' + node.arguments.length);
         break;
       case "MemberExpression":
-        this.executionLog.push(JSInterpreter.getMemberExpressionName_(node.callee));
+        this.executionLog.push(JSInterpreter.getMemberExpressionName_(node.callee) +
+            ':' + node.arguments.length);
         break;
       default:
         throw "Unexpected callee node property type: " + node.object.type;
@@ -743,6 +749,9 @@ JSInterpreter.prototype.getProperty = function (
       (obj === this.globalScope &&
           (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
     var value;
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseGetProperty.call(interpreter, obj, name);
+    }
     if (obj.isCustomMarshal) {
       value = obj.data[name];
     } else {
@@ -780,7 +789,9 @@ JSInterpreter.prototype.hasProperty = function (
   if (obj.isCustomMarshal ||
       (obj === this.globalScope &&
           (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
-    if (obj.isCustomMarshal) {
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseHasProperty.call(interpreter, obj, name);
+    } else if (obj.isCustomMarshal) {
       return name in obj.data;
     } else {
       return name in nativeParent;
@@ -802,7 +813,7 @@ JSInterpreter.prototype.hasProperty = function (
  * @param {boolean} opt_fixed Unchangeable property if true.
  * @param {boolean} opt_nonenum Non-enumerable property if true.
  */
-JSInterpreter.prototype.setProperty = function(
+JSInterpreter.prototype.setProperty = function (
     interpreter,
     baseSetProperty,
     obj,
@@ -813,9 +824,17 @@ JSInterpreter.prototype.setProperty = function(
   name = name.toString();
   var nativeParent;
   if (obj.isCustomMarshal) {
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseSetProperty.call(
+          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    }
     obj.data[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else if (obj === this.globalScope &&
       (!!(nativeParent = this.customMarshalGlobalProperties[name]))) {
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseSetProperty.call(
+          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    }
     nativeParent[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else {
     return baseSetProperty.call(
@@ -1019,7 +1038,7 @@ JSInterpreter.prototype.findGlobalFunction = function (funcName) {
  * in the interpreter's global scope. Built-in global functions are excluded.
  */
 JSInterpreter.prototype.getGlobalFunctionNames = function () {
-  var builtInExclusionList = [ "eval", "getCallback", "setCallbackRetVal" ];
+  var builtInExclusionList = ["eval", "getCallback", "setCallbackRetVal"];
 
   var names = [];
   for (var objName in this.globalScope.properties) {
