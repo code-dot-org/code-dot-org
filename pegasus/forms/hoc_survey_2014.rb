@@ -34,7 +34,7 @@ class HocSurvey2014
       result[:teacher_district_s] = stripped data[:teacher_district_s]
     end
 
-    result[:prize_choice_s] = required enum(data[:prize_choice_s].to_s.strip, %w(Dropbox Skype None))
+    result[:prize_choice_s] = required enum(data[:prize_choice_s].to_s.strip, ['Dropbox', 'Skype', 'None'])
 
     result
   end
@@ -142,11 +142,12 @@ class HocSurvey2014
 
   def self.event_experiences()
     %w(
-Great 
-Good 
-OK 
-Bad 
-Terrible)
+      Great
+      Good
+      OK
+      Bad
+      Terrible
+    )
   end
 
   def self.teacher_how_heards()

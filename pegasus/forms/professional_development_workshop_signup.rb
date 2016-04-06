@@ -75,8 +75,9 @@ class ProfessionalDevelopmentWorkshopSignup
 
   def self.receipt()
     %w(
-workshop_signup_receipt 
-workshop_signup_notice)
+      workshop_signup_receipt
+      workshop_signup_notice
+    )
   end
 
   def self.index(data)

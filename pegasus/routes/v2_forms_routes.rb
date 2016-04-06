@@ -87,7 +87,7 @@ end
 get '/v2/forms/ProfessionalDevelopmentWorkshopSignup/:secret/status/cancelled' do |secret|
 
   def send_receipts(form)
-    templates = %w(workshop_signup_cancel_receipt workshop_signup_cancel_notice)
+    templates = ['workshop_signup_cancel_receipt','workshop_signup_cancel_notice']
     recipient = Poste2.create_recipient(form[:email], name: form[:name], ip_address: form[:updated_ip])
     templates.each do |template|
       Poste2.send_message(template, recipient, form_id: form[:id])

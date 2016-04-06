@@ -17,8 +17,8 @@ class ClassSubmission
     result[:school_address_s] = result[:class_format_s] =~ /^online_/ ? nil_if_empty(stripped(data[:school_address_s])) : required(stripped(data[:school_address_s]))
     result[:school_website_s] = required stripped data[:school_website_s]
     result[:school_level_ss] = required downcased stripped data[:school_level_ss]
-    result[:school_gender_s] = required enum(data[:school_gender_s].to_s.strip.downcase, %w(both girls boys))
-    result[:school_tuition_s] = required enum(data[:school_tuition_s].to_s.strip.downcase, %w(yes no))
+    result[:school_gender_s] = required enum(data[:school_gender_s].to_s.strip.downcase, ['both', 'girls', 'boys'])
+    result[:school_tuition_s] = required enum(data[:school_tuition_s].to_s.strip.downcase, ['yes', 'no'])
 
     # Public contact fields (optional)
     result[:contact_name_s] = nil_if_empty stripped data[:contact_name_s]
@@ -36,26 +36,28 @@ class ClassSubmission
 
   def self.formats()
     (@formats ||= {})[I18n.locale] ||= formats_with_i18n_labels({
-      'in_school'=>%w(
-daily_programming_course 
-ap_computer_science 
-full_university_cs_curriculum 
-robotics_club 
-programming_integrated_in_other_classes 
-summer_school_cs_program 
-exploring_computer_science 
-other),
-      'out_of_school'=>[
-        'summer_camp',
-        'afterschool_program',
-        'all-day_workshop',
-        'multi-week_workshop',
-        'other',
-      ],
-      'online'=>%w(
-programming_class 
-teacher_resource 
-other)
+      'in_school' => %w(
+        daily_programming_course
+        ap_computer_science
+        full_university_cs_curriculum
+        robotics_club
+        programming_integrated_in_other_classes
+        summer_school_cs_program
+        exploring_computer_science
+        other
+      ),
+      'out_of_school' => %w(
+        summer_camp
+        afterschool_program
+        all-day_workshop
+        multi-week_workshop
+        other
+      ),
+      'online' => %w(
+        programming_class
+        teacher_resource
+        other
+      )
     })
   end
 
@@ -121,9 +123,10 @@ other)
 
   def self.published_states()
     %w(
-approved 
-rejected 
-undecided)
+      approved
+      rejected
+      undecided
+    )
   end
 
   def self.process(data)
@@ -134,7 +137,7 @@ undecided)
   end
 
   def self.index(data)
-    %w(in_school out_of_school online).each do |prefix|
+    ['in_school', 'out_of_school', 'online'].each do |prefix|
       class_format = data['class_format_s']
       if class_format =~ /^#{prefix}_/
         data['class_format_category_s'] = prefix
@@ -180,7 +183,7 @@ undecided)
       fq: fq,
       fl: fl,
       facet: true,
-      'facet.field'=>%w(class_format_category_s class_languages_all_ss school_level_ss school_tuition_s),
+      'facet.field'=>['class_format_category_s', 'class_languages_all_ss', 'school_level_ss', 'school_tuition_s'],
       rows: rows,
       sort: "school_name_s asc"
     }

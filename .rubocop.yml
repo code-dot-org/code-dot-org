@@ -43,6 +43,9 @@ Style/IfInsideElse:
 Style/RedundantReturn:
   Enabled: false
 
+Style/WordArray:
+  MinSize: 5
+
 Metrics/AbcSize:
   Enabled: false
 

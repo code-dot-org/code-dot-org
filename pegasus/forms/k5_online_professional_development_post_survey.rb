@@ -1,9 +1,9 @@
 class K5OnlineProfessionalDevelopmentPostSurvey
   AGREEMENT_ANSWERS = (-2..2).map(&:to_s)
   SCALE_ANSWERS = (1..10).map(&:to_s)
-  SIMPLE_ANSWERS = (
-  %w(yes 
-no)
+  SIMPLE_ANSWERS = %w(
+    yes
+    no
   )
 
   def self.normalize(data)
@@ -95,9 +95,10 @@ no)
     result[:teacher_describe_other_s] = required stripped data[:teacher_describe_other_s] if result[:teacher_describe_s] == 'other'
     result[:teaching_cs_s] = required enum data[:teaching_cs_s].to_s.strip.downcase, SIMPLE_ANSWERS
     result[:course_offering_s] = required enum data[:course_offering_s].to_s.strip.downcase, %w(
-yes 
-no 
-maybe)
+      yes
+      no
+      maybe
+    )
     result[:number_teaching_i] = required stripped data[:number_teaching_i]
     result[:attend_in_person_pd_i] = required enum data[:attend_in_person_pd_i], SCALE_ANSWERS
 

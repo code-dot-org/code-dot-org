@@ -12,7 +12,7 @@ class ProfessionalDevelopmentWorkshop
     result[:location_name_s] = required stripped data[:location_name_s]
     result[:location_address_s] = required stripped data[:location_address_s]
     result[:grade_level_s] = 'K-5'
-    result[:type_s] = required enum(data[:type_s].to_s.strip, %w(Public Private District))
+    result[:type_s] = required enum(data[:type_s].to_s.strip, ['Public', 'Private', 'District'])
     result[:capacity_s] = required stripped data[:capacity_s]
     result[:notes_s] = stripped data[:notes_s]
     result[:section_id_s] = stripped data[:section_id_s]
