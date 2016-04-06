@@ -1,3 +1,5 @@
+require_relative '../../deployment'
+
 # Rake tasks for asset packages.
 namespace :package do
   # Special package-specific configurations listed here.

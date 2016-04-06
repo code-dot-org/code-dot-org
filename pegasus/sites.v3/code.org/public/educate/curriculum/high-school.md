@@ -41,6 +41,11 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 [<button>Learn more about curriculum</button>](/educate/csd)
 
+# Computer Science Fundamentals - Accelerated
+Code.org offers a four course [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students. If your students have not already taken all of these courses, the 20-hour accelerated course covers the core concepts from the first four courses at an accelerated pace designed for students ages 10-18. This can be worked into a high school school after-school program or as a unit in a technology or programming class.
+
+[<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
+
 # 3rd Party resources for high school CS
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)

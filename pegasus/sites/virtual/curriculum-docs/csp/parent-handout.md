@@ -13,7 +13,7 @@ Software and technology are everywhere - in our computers, in our pockets, in ou
 ### What is Code Studio?
 Code Studio is a fun, creative platform for learning basic coding and computer science! Using a blended learning model, your children are learning with a mix of online activities (on the computer) and “unplugged” classroom activities that use no computer at all.
 
-This format helps nurture creativity, problem solving, collaboration, and logic through interactive tutorials, featuring short video lectures and game-like puzzles. 
+This format helps nurture creativity, problem solving, collaboration, and logic through interactive tutorials, featuring short video lectures and game-like puzzles.  
 
 ### What is Computer Science Principles?
 Code.org's year-long, high school Computer Science Principles course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. 

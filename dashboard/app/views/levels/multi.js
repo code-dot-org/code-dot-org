@@ -31,18 +31,18 @@ var Multi = function (id, levelId, standalone, numAnswers, answers, lastAttemptS
 
   this.forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
-  $(document).ready($.proxy(function() {
+  $(document).ready($.proxy(function () {
     this.ready();
   }, this));
 
 };
 
 
-Multi.prototype.enableButton = function(enable) {
+Multi.prototype.enableButton = function (enable) {
   $("#" + this.id + ' .submitButton').attr('disabled', !enable);
 };
 
-Multi.prototype.choiceClicked = function(button) {
+Multi.prototype.choiceClicked = function (button) {
   if (!this.submitAllowed) {
     return;
   }
@@ -54,7 +54,7 @@ Multi.prototype.choiceClicked = function(button) {
 };
 
 
-Multi.prototype.clickItem = function(index) {
+Multi.prototype.clickItem = function (index) {
   // If this button is already crossed, do nothing more.
   if (this.crossedAnswers.indexOf(index) !== -1) {
     return;
@@ -96,7 +96,7 @@ Multi.prototype.clickItem = function(index) {
   return true;
 };
 
-Multi.prototype.unclickItem = function(index) {
+Multi.prototype.unclickItem = function (index) {
   var selectedItemIndex = this.selectedAnswers.indexOf(index);
   this.selectedAnswers.splice(selectedItemIndex, 1);
 
@@ -106,7 +106,7 @@ Multi.prototype.unclickItem = function(index) {
 };
 
 // called on $.ready
-Multi.prototype.ready = function() {
+Multi.prototype.ready = function () {
   // Are we read-only?  This can be because we're a teacher OR because an answer
   // has been previously submitted.
   if (window.appOptions.readonlyWorkspace) {
@@ -130,7 +130,7 @@ Multi.prototype.ready = function() {
     this.choiceClicked($(event.currentTarget));
   }, this));
 
-  $("#" + this.id + ' #voteform img').on('dragstart', $.proxy(function(event) {
+  $("#" + this.id + ' #voteform img').on('dragstart', $.proxy(function (event) {
     // Prevent button images from being dragged, click the button instead.
     var button = $(event.currentTarget).parent().parent().parent();
     this.choiceClicked(button);
@@ -161,7 +161,7 @@ Multi.prototype.ready = function() {
   }
 };
 
-Multi.prototype.getCurrentAnswer = function() {
+Multi.prototype.getCurrentAnswer = function () {
   var answer;
 
   if (this.numAnswers == 1) {
@@ -173,12 +173,12 @@ Multi.prototype.getCurrentAnswer = function() {
   return answer;
 };
 
-Multi.prototype.getLevelId = function() {
+Multi.prototype.getLevelId = function () {
   return this.levelId;
 };
 
 // called by external result-posting code
-Multi.prototype.getResult = function() {
+Multi.prototype.getResult = function () {
   var answer;
   var errorType = null;
 
@@ -213,7 +213,7 @@ Multi.prototype.getResult = function() {
 };
 
 // This behavior should only be available when this is a standalone Multi.
-Multi.prototype.submitButtonClick = function() {
+Multi.prototype.submitButtonClick = function () {
   // Don't show right/wrong answers for submittable.
   if (window.appOptions.level.submittable || this.forceSubmittable) {
     return;
@@ -231,7 +231,7 @@ Multi.prototype.submitButtonClick = function() {
 };
 
 // Unsubmit button should only be available when this is a standalone Multi.
-Multi.prototype.unsubmitButtonClick = function() {
+Multi.prototype.unsubmitButtonClick = function () {
   var dialog = new Dialog({
     body:
       '<div class="modal-content no-modal-icon">' +
@@ -250,7 +250,7 @@ Multi.prototype.unsubmitButtonClick = function() {
   dialogDiv.find('#continue-button').click(function () {
     $.post(window.appOptions.unsubmitUrl,
       {"_method": 'PUT', user_level: {submitted: false}},
-      function(data) {
+      function (data) {
         // Just reload so that the progress in the header is shown correctly.
         location.reload();
       }
@@ -263,7 +263,7 @@ Multi.prototype.unsubmitButtonClick = function() {
 };
 
 
-Multi.prototype.validateAnswers = function() {
+Multi.prototype.validateAnswers = function () {
   if (this.selectedAnswers.length == this.numAnswers) {
     for (var i = 0; i < this.numAnswers; i++) {
       if (! this.answers[this.selectedAnswers[i]]) {

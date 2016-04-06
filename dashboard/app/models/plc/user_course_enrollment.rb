@@ -31,7 +31,7 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
     plc_course.plc_course_units.each do |course_unit|
       Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: self,
                                            plc_course_unit: course_unit,
-                                           status: Plc::EnrollmentUnitAssignment::START_BLOCKED)
+                                           status: Plc::EnrollmentUnitAssignment::PENDING_EVALUATION)
     end
   end
 end

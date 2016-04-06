@@ -57,12 +57,12 @@ exports.setPaddleSpeed = function (id, value) {
   Bounce.paddleSpeed = value;
 };
 
-exports.playSound = function(id, soundName) {
+exports.playSound = function (id, soundName) {
   studioApp.highlight(id);
   studioApp.playAudio(soundName);
 };
 
-exports.moveLeft = function(id) {
+exports.moveLeft = function (id) {
   studioApp.highlight(id);
   Bounce.paddleX -= Bounce.paddleSpeed;
   if (Bounce.paddleX < 0) {
@@ -70,7 +70,7 @@ exports.moveLeft = function(id) {
   }
 };
 
-exports.moveRight = function(id) {
+exports.moveRight = function (id) {
   studioApp.highlight(id);
   Bounce.paddleX += Bounce.paddleSpeed;
   if (Bounce.paddleX > (Bounce.COLS - 1)) {
@@ -78,7 +78,7 @@ exports.moveRight = function(id) {
   }
 };
 
-exports.moveUp = function(id) {
+exports.moveUp = function (id) {
   studioApp.highlight(id);
   Bounce.paddleY -= Bounce.paddleSpeed;
   if (Bounce.paddleY < 0) {
@@ -86,7 +86,7 @@ exports.moveUp = function(id) {
   }
 };
 
-exports.moveDown = function(id) {
+exports.moveDown = function (id) {
   studioApp.highlight(id);
   Bounce.paddleY += Bounce.paddleSpeed;
   if (Bounce.paddleY > (Bounce.ROWS - 1)) {
@@ -94,19 +94,19 @@ exports.moveDown = function(id) {
   }
 };
 
-exports.incrementOpponentScore = function(id) {
+exports.incrementOpponentScore = function (id) {
   studioApp.highlight(id);
   Bounce.opponentScore++;
   Bounce.displayScore();
 };
 
-exports.incrementPlayerScore = function(id) {
+exports.incrementPlayerScore = function (id) {
   studioApp.highlight(id);
   Bounce.playerScore++;
   Bounce.displayScore();
 };
 
-exports.launchBall = function(id) {
+exports.launchBall = function (id) {
   studioApp.highlight(id);
 
   // look for an "out of play" ball to re-launch:
@@ -128,7 +128,7 @@ exports.launchBall = function(id) {
   Bounce.playSoundAndResetBall(i);
 };
 
-exports.bounceBall = function(id) {
+exports.bounceBall = function (id) {
   studioApp.highlight(id);
 
   var i;
