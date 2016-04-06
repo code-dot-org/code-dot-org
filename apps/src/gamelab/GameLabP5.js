@@ -29,7 +29,7 @@ GameLabP5.baseP5loadImage = null;
  *
  * @param {!Object} options
  * @param {!Function} options.gameLab instance of parent GameLab object
- * @param {Number} options.scale Scale ratio of containing element (<1 is small)
+ * @param {Number} [options.scale] Scale ratio of containing element (<1 is small)
  * @param {!Function} options.onExecutionStarting callback to run during p5 init
  * @param {!Function} options.onPreload callback to run during preload()
  * @param {!Function} options.onSetup callback to run during setup()
