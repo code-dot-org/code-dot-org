@@ -1,8 +1,12 @@
 require 'webmock/minitest'
 WebMock.disable_net_connect!(:allow_localhost => true)
-require 'test_helper'
 require_relative '../../../shared/test/spy_newrelic_agent'
 require_relative '../../../shared/middleware/helpers/storage_id'
+# test_helper fakes storage_id(), but we should only need
+# storage_[encrypt|decrypt]_channel_id() from storage_id.rb.
+# require test_helper last so this test doesn't cause a non-fake
+# storage_id() to be used in other tests.
+require 'test_helper'
 
 class XhrProxyControllerTest < ActionController::TestCase
   XHR_REDIRECT_URI = 'https://www.example.com/foo/a1b2'
