@@ -11,6 +11,7 @@ require 'test_helper'
 class XhrProxyControllerTest < ActionController::TestCase
   XHR_REDIRECT_URI = 'https://www.example.com/foo/a1b2'
   XHR_URI = 'https://www.example.com/foo?a=1&b=2'
+  BAD_DOMAIN_URI = 'https://ip-192.168.0.1.ec2.internal/my/secret/api'
   XHR_DATA = '{"key1":"value1", "key2":2, "obj":{"x":3, "y":4}}'
   XHR_CONTENT_TYPE = 'application/json'
   CHANNEL_ID = storage_encrypt_channel_id('33', '44')
@@ -76,6 +77,12 @@ class XhrProxyControllerTest < ActionController::TestCase
     assert_response 400
   end
 
+  test "should fail with bad top level domain" do
+    stub_request(:get, BAD_DOMAIN_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
+    get :get, u: BAD_DOMAIN_URI
+    assert_response 403
+  end
+
   test "should pass through server errors" do
     stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE}, status: 503)
     get :get, u: XHR_URI, c: CHANNEL_ID
@@ -93,4 +100,5 @@ class XhrProxyControllerTest < ActionController::TestCase
     get :get, u: XHR_URI
     assert_response 403
   end
+
 end

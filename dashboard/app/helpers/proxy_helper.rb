@@ -2,6 +2,8 @@ require 'net/http'
 require 'uri'
 
 module ProxyHelper
+  include DomainHelper
+
   def render_proxied_url(location, allowed_content_types:, expiry_time:, infer_content_type:, redirect_limit: 5)
     if redirect_limit == 0
       render_error_response 500, 'Redirect loop'
@@ -11,7 +13,7 @@ module ProxyHelper
     # Give up if the host doesn't respond within 3 seconds to avoid
     # tying up Rails thread.
     url = URI.parse(location)
-    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
+    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil? || !valid_top_level_domain?(url.host)
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
     uri = url.request_uri.empty? ? '/' : url.request_uri
