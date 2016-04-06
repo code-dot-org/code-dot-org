@@ -16,7 +16,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   test "should create plc_user_course_enrollment" do
     @user_course_enrollment.destroy
 
-    assert_difference('Plc::UserCourseEnrollment.count') do
+    assert_creates(Plc::UserCourseEnrollment) do
       post :create, user_email: @user.email, plc_course_id: @plc_course.id
     end
 

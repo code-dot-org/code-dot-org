@@ -386,7 +386,6 @@ ActiveRecord::Schema.define(version: 20160406004158) do
 
   add_index "plc_user_course_enrollments", ["plc_course_id"], name: "index_plc_user_course_enrollments_on_plc_course_id", using: :btree
   add_index "plc_user_course_enrollments", ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", using: :btree
-  add_index "plc_user_course_enrollments", ["user_id"], name: "index_plc_user_course_enrollments_on_user_id", using: :btree
 
   create_table "prize_providers", force: :cascade do |t|
     t.string   "name",              limit: 255

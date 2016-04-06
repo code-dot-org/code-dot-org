@@ -12,7 +12,6 @@
 # Indexes
 #
 #  index_plc_user_course_enrollments_on_plc_course_id              (plc_course_id)
-#  index_plc_user_course_enrollments_on_user_id                    (user_id)
 #  index_plc_user_course_enrollments_on_user_id_and_plc_course_id  (user_id,plc_course_id)
 #
 
@@ -26,7 +25,7 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
   validates :user, presence: true
   validates :plc_course, presence: true
 
-  validates_uniqueness_of :user_id, scope: :plc_course_id
+  validates :user_id, uniqueness: {scope: :plc_course_id}, on: :create
 
   after_create :create_enrollment_unit_assignments
 
