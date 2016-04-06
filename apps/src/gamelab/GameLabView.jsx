@@ -1,4 +1,5 @@
 /** @file Top-level view for GameLab */
+/* global dashboard */
 'use strict';
 
 var _ = require('../lodash');
@@ -21,6 +22,13 @@ var GameLabView = React.createClass({
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
     generateVisualizationColumnHtml: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
+  },
+
+  getChannelId: function () {
+    if (dashboard && dashboard.project) {
+      return dashboard.project.getCurrentId();
+    }
+    return undefined;
   },
 
   componentDidMount: function () {
@@ -53,7 +61,7 @@ var GameLabView = React.createClass({
 
   renderAnimationMode: function () {
     return this.props.interfaceMode === GameLabInterfaceMode.ANIMATION ?
-        <AnimationTab /> :
+        <AnimationTab channelId={this.getChannelId()} /> :
         undefined;
   },
 
