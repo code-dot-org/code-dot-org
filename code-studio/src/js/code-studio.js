@@ -27,7 +27,6 @@ window.Radium = require('radium');
 require('./components/abuse_error.jsx');
 require('./components/report_abuse_form.jsx');
 require('./components/send_to_phone.jsx');
-require('./components/share_dialog.jsx');
 require('./components/small_footer.jsx');
 require('./components/GridEditor.jsx');
 require('./components/IconLibrary.jsx');

@@ -94,7 +94,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "maze"
-  Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
+  Given I am on "http://learn.code.org/hoc/1/lang/ar-sa?noautoplay=true"
   And I rotate to landscape
   And I close the dialog
   And I wait to see "#runButton"
