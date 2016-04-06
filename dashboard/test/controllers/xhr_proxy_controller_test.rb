@@ -2,14 +2,14 @@ require 'webmock/minitest'
 WebMock.disable_net_connect!(:allow_localhost => true)
 require 'test_helper'
 require_relative '../../../shared/test/spy_newrelic_agent'
-require_relative '../../../shared/middleware/helpers/storage_id'
+#require_relative '../../../shared/middleware/helpers/storage_id'
 
 class XhrProxyControllerTest < ActionController::TestCase
   XHR_REDIRECT_URI = 'https://www.example.com/foo/a1b2'
   XHR_URI = 'https://www.example.com/foo?a=1&b=2'
   XHR_DATA = '{"key1":"value1", "key2":2, "obj":{"x":3, "y":4}}'
   XHR_CONTENT_TYPE = 'application/json'
-  CHANNEL_ID = storage_encrypt_channel_id('33', '44')
+  CHANNEL_ID = 'ABCDEF0123456789' #storage_encrypt_channel_id('33', '44')
   BAD_CHANNEL_MSG = "XhrProxyController request with invalid channel_id"
 
   test "should fetch proxied media with correct content type" do
