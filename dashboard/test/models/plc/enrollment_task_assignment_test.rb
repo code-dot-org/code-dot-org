@@ -7,9 +7,9 @@ class Plc::EnrollmentTaskAssignmentTest < ActiveSupport::TestCase
     @course_unit = create(:plc_course_unit, plc_course: @course)
     @learning_module1 = create(:plc_learning_module, name: 'Module1')
     @learning_module2 = create(:plc_learning_module, name: 'Module2')
-    @task1 = create(:plc_task, name: 'Task1', plc_learning_module: @learning_module1)
-    @task2 = create(:plc_task, name: 'Task2', plc_learning_module: @learning_module1)
-    @task3 = create(:plc_task, name: 'Task3', plc_learning_module: @learning_module2)
+    @task1 = create(:plc_task, name: 'Task1', plc_learning_modules: [@learning_module1])
+    @task2 = create(:plc_task, name: 'Task2', plc_learning_modules: [@learning_module1])
+    @task3 = create(:plc_task, name: 'Task3', plc_learning_modules: [@learning_module2])
   end
 
   test 'Completing tasks does not mark module / course complete until all are complete' do
