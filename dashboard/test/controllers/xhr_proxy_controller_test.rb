@@ -1,11 +1,6 @@
 require 'webmock/minitest'
 WebMock.disable_net_connect!(:allow_localhost => true)
 require_relative '../../../shared/test/spy_newrelic_agent'
-require_relative '../../../shared/middleware/helpers/storage_id'
-# test_helper fakes storage_id(), but we should only need
-# storage_[encrypt|decrypt]_channel_id() from storage_id.rb.
-# require test_helper last so this test doesn't cause a non-fake
-# storage_id() to be used in other tests.
 require 'test_helper'
 
 class XhrProxyControllerTest < ActionController::TestCase
@@ -14,7 +9,7 @@ class XhrProxyControllerTest < ActionController::TestCase
   BAD_DOMAIN_URI = 'https://ip-192.168.0.1.ec2.internal/my/secret/api'
   XHR_DATA = '{"key1":"value1", "key2":2, "obj":{"x":3, "y":4}}'
   XHR_CONTENT_TYPE = 'application/json'
-  CHANNEL_ID = storage_encrypt_channel_id('33', '44')
+  CHANNEL_ID = $stub_encrypted_channel_id
   BAD_CHANNEL_MSG = "XhrProxyController request with invalid channel_id"
 
   test "should fetch proxied media with correct content type" do
