@@ -668,6 +668,7 @@
   dashboard_navigation_all_sections: Schülerkonten und Fortschritt
   dashboard_navigation_view_progress: Fortschritt ansehen
   dashboard_navigation_view_text_responses: Textantworten anzeigen
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Schüler hinzufügen
   dashboard_navigation_manage_students: Schüler verwalten
   dashboard_navigation_lesson_plans_resources: Unterrichtspläne und Material
@@ -788,11 +789,23 @@
   dashboard_progress_completed_too_many_blocks: abgeschlossen, zu viele Blöcke
   dashboard_progress_completed_perfect: Abgeschlossen, perfekt
   dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: eingereicht
   dashboard_stage: Bühne
   dashboard_puzzle: Aufgabe
   dashboard_question: Frage
   dashboard_response: Antwort
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Richtig
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Fantastische Ergebnisse der Hour of Code aus dem Vorjahr.
     Allein in einer Woche:'
   stats_hoc_2013_image_alt: Ergebnisse der Hour of Code 2013
@@ -964,7 +977,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: App-Labor
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Ab 13 Jahren
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

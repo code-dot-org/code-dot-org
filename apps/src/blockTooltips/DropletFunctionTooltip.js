@@ -55,7 +55,7 @@ var DropletFunctionTooltip = function (appMsg, definition) {
   this.functionName = definition.func;
 
   /** @type {boolean} */
-  this.isProperty = definition.type === 'property';
+  this.isProperty = definition.type === 'property' || definition.type === 'readonlyproperty';
 
   /** @type {string} */
   this.tipPrefix = definition.tipPrefix;

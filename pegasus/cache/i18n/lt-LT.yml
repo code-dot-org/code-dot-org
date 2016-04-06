@@ -647,6 +647,7 @@
   dashboard_navigation_all_sections: Mokinių paskyros ir pažanga
   dashboard_navigation_view_progress: Peržiūrėti pažangą
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Pridėti mokinius
   dashboard_navigation_manage_students: Tvarkyti ir pridėti mokinius
   dashboard_navigation_lesson_plans_resources: Pamokų planai ir ištekliai
@@ -763,6 +764,18 @@
   dashboard_puzzle: Galvosūkis
   dashboard_question: Klausimas
   dashboard_response: Atsakymas
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Teisingai
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Neįtikėtini praėjusių metų „Programavimo valandos“ rezultatai.
     Per vieną savaitę:'
   stats_hoc_2013_image_alt: "„Programavimo valandos“ statistika nuo 2013 metų"

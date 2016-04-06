@@ -577,6 +577,7 @@
   dashboard_navigation_all_sections: "학생 계정 및 진도"
   dashboard_navigation_view_progress: "진도 보기"
   dashboard_navigation_view_text_responses: "텍스트 응답 보기"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "학생 추가"
   dashboard_navigation_manage_students: "학생 관리"
   dashboard_navigation_lesson_plans_resources: "수업 계획 및 자료"
@@ -684,6 +685,18 @@
   dashboard_puzzle: "퍼즐"
   dashboard_question: "질문"
   dashboard_response: "응답"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "정답"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "지난 Hour of Code 이후의 폭발적 통계수치. 지난 1주일:"
   stats_hoc_2013_image_alt: 203 Hour of Code 이후 통계수치
   dashboard_teacher: "선생님"

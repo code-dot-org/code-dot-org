@@ -38,6 +38,7 @@ database:
               dashboard
 test:
     override:
+        - bundle exec rake lint:javascript
         - bundle exec rake test:
             pwd:
                 pegasus
@@ -47,9 +48,6 @@ test:
         - ./test.sh:
             pwd:
                 apps
-        - npm run lint:
-            pwd:
-                code-studio
         - npm test:
             pwd:
                 code-studio

@@ -682,6 +682,7 @@
   dashboard_navigation_all_sections: Contas e progreso do alumno
   dashboard_navigation_view_progress: Exhibir progreso
   dashboard_navigation_view_text_responses: Ver respostas de texto
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Engadir alumnas/os
   dashboard_navigation_manage_students: Administrar as alumnas/os
   dashboard_navigation_lesson_plans_resources: Plans e recursos da clase
@@ -807,6 +808,18 @@
   dashboard_puzzle: Quebracabeza
   dashboard_question: Pregunta
   dashboard_response: Resposta
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Certo
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Estatísticas incríbeis da Hora do Código do ano pasado.
     En só unha semana:'
   stats_hoc_2013_image_alt: Estatísticas da Hora do Código de 2013

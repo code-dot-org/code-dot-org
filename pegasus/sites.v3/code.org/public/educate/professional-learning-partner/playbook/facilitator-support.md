@@ -8,18 +8,19 @@ nav: plp_playbook_nav
 # Facilitator Support
 
 
-### The role of the facilitator & the PLP
+### The role of the facilitator & the Professional Learning Partner
 
 # Resources
 
-### Facilitator Playbook
-Link to facilitator playbook for K-12 (find out status for Laura)- example of a playbook that PLPs could build for their facilitators 
 
-### Example Workshop One Pager 
+### <a href="/files/ExampleFacilitatorOnePager.pdf" target=_blank>Example Facilitator One Pager</a>
+This one pager is an example of how to format the information that facilitators will need to run a successful workshop. 
 
-### Example contract 
-Language that is a disclaimer for Code.org that this is an example contract, Code.org recommends you consult a lawyer for any legal advice around contracts.
+### [Example contract]() 
+This contract is only an example of the agreement a facilitator will sign for Code.org. You should consult a lawyer for any advice about contracts, the language therein, or other legal advice about contracts.
 
+### Facilitator Playbook - Coming Soon!
+The facilitator playbook is a virtual guide that will be given to all facilitators to reference.
 
 
 

@@ -6,14 +6,13 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Can you loop this code to draw the greyed out square?",
+    "instructions": "Can you use a loop to draw the greyed out square?  (Each side is 300px long)",
     "x": "350",
     "y": "50",
     "start_direction": "180",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "ideal": "4",
     "slider_speed": "0.4",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -22,7 +21,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you loop this code to draw the greyed out square?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Can you use a loop to draw the greyed out square?  \r\n(Each side is 300px long)\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -30,46 +29,28 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">300</title>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE">90</title>
-                </block>
-              </next>
-            </block>
-          </next>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="draw_turn_by_constant" deletable="false" y="200" x="30">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">???</title>
+        </block>
+        <block type="draw_move_by_constant" deletable="false" y="100" x="75">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">???</title>
         </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-        </block>
-        <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">100</title>
-        </block>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
@@ -85,6 +66,8 @@
             <block type="colour_random"/>
           </value>
         </block>
+        <block type="draw_move_by_constant"/>
+        <block type="draw_turn_by_constant"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
@@ -92,41 +75,27 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">300</title>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_turn_by_constant">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE">90</title>
+            <block type="draw_colour" inline="true" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_random"/>
+              </value>
               <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">300</title>
-                  <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">90</title>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">300</title>
                       <next>
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">300</title>
-                          <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnRight</title>
-                              <title name="VALUE">90</title>
-                              <next>
-                                <block type="draw_move_by_constant">
-                                  <title name="DIR">moveForward</title>
-                                  <title name="VALUE">300</title>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
                         </block>
                       </next>
                     </block>
-                  </next>
+                  </statement>
                 </block>
               </next>
             </block>

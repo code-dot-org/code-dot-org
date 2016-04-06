@@ -30,7 +30,7 @@ class QueueProcessorManager
   # @return [Hash<String, SQS::Metric] A map from name to metrics for each queue.
   def start_queue_processors(json)
     metrics_map = {}
-    configs = SQS::QueueProcessorConfig::create_configs_from_json(json)
+    configs = SQS::QueueProcessorConfig.create_configs_from_json(json)
     configs.each do |config|
       logger.info "Starting queue processor for #{config.name}"
       sqs_metrics = SQS::Metrics.new

@@ -649,6 +649,7 @@
   dashboard_navigation_all_sections: Studentkontoer og Progresjon
   dashboard_navigation_view_progress: Vis fremdrift
   dashboard_navigation_view_text_responses: Se tekstsvarene
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Legg til elever
   dashboard_navigation_manage_students: Administrer elever
   dashboard_navigation_lesson_plans_resources: Lærerplaner og Resurser
@@ -766,6 +767,18 @@
   dashboard_puzzle: Oppgave
   dashboard_question: Spørsmål
   dashboard_response: Svar
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Riktig
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Utrolig statistikk fra fjorårets Kodetime. På kun en uke:'
   stats_hoc_2013_image_alt: Statistikk fra Kodetimen 2013
   dashboard_teacher: Lærer

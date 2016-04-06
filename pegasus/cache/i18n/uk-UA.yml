@@ -667,6 +667,7 @@
   dashboard_navigation_all_sections: "Облікові записи учнів та їх прогрес"
   dashboard_navigation_view_progress: "Перегляд прогресу"
   dashboard_navigation_view_text_responses: "Переглянути тексти відповідей"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "Додати учнів"
   dashboard_navigation_manage_students: "Керування учнями"
   dashboard_navigation_lesson_plans_resources: "Плани уроків та ресурси"
@@ -779,11 +780,23 @@
   dashboard_progress_completed_too_many_blocks: "завершено, забагато блоків"
   dashboard_progress_completed_perfect: "виконано, ідеально"
   dashboard_progress_furthest_level_attempted: "останній відкритий рівень"
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: "надіслано"
   dashboard_stage: "Етап"
   dashboard_puzzle: "Завдання"
   dashboard_question: "Питання"
   dashboard_response: "Відповідь"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "Правильно"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Неймовірна статистика з минулорічної Години коду. Лише
     за тиждень:"
   stats_hoc_2013_image_alt: "Статистика Години коду 2013 року"
@@ -951,7 +964,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: App Lab
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: "Вік 13+"
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

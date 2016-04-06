@@ -148,6 +148,7 @@ module Cdo
       def assert_miss(response)
         assert_cache response, false
       end
+
       def assert_hit(response)
         assert_cache response, true
       end

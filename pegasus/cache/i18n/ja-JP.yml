@@ -593,6 +593,7 @@
   dashboard_navigation_all_sections: "生徒用アカウントと進捗状況"
   dashboard_navigation_view_progress: "進行状況の表示"
   dashboard_navigation_view_text_responses: "表示テキストの回答"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "生徒を追加"
   dashboard_navigation_manage_students: "生徒の管理"
   dashboard_navigation_lesson_plans_resources: "レッスンプランと資料"
@@ -692,6 +693,18 @@
   dashboard_puzzle: "パズル"
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "正解"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "昨年のHour of Codeによる、ほんの一週間での素晴らしい成果："
   stats_hoc_2013_image_alt: 2013年の Hour of Codeの成果
   dashboard_teacher: "先生"
