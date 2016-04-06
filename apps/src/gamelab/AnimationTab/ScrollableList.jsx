@@ -5,7 +5,6 @@ var Radium = require('radium');
 
 var staticStyles = {
   root: {
-    flex: '1 0 0',
     overflowX: 'hidden',
     overflowY: 'scroll'
   },

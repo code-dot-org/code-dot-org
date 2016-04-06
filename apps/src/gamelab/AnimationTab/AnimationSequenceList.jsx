@@ -18,7 +18,7 @@ var AnimationSequenceList = React.createClass({
 
   render: function () {
     return (
-      <ScrollableList className="animation-sequence-list">
+      <ScrollableList style={{flex: '1 0 0'}} className="animation-sequence-list">
         <AnimationSequenceListItem sequenceName="sequence01" />
         <AnimationSequenceListItem sequenceName="sequence02" isSelected />
         <NewListItem label="new sequence" onClick={this.props.onNewItemClick} />
