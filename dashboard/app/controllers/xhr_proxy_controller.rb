@@ -27,7 +27,8 @@ class XhrProxyController < ApplicationController
     begin
       owner_storage_id, _ = storage_decrypt_channel_id channel_id
     rescue Exception => e
-      raise "XhrProxyController request with invalid channel_id: '#{channel_id}' for url: '#{url}' exception: #{e.message}"
+      render_error_response 403, "Invalid token: '#{channel_id}' for url: '#{url}' exception: #{e.message}"
+      return
     end
 
     event_details = {
