@@ -166,7 +166,7 @@ class S3Packaging
       url = Aws::S3::Bucket.new(BUCKET_NAME).object(s3_key).public_url
       File.open(package, 'wb') do |file|
         begin
-            IO.copy_stream open(url), file
+          IO.copy_stream open(url), file
         rescue OpenURI::HTTPError
           raise Aws::S3::Errors::NoSuchKey.new(nil, file)
         end
