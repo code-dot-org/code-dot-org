@@ -1389,7 +1389,7 @@ applabCommands.startWebRequest = function (opts) {
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
-  var url = XHR_PROXY_PATH + '?u=' + encodeURIComponent(opts.url.replace(/ /g, '%20')) +
+  var url = XHR_PROXY_PATH + '?u=' + encodeURIComponent(opts.url) +
       '&c=' + Applab.channelId;
   req.open('GET', url, true);
   req.send();
