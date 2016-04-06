@@ -14,7 +14,7 @@ describe("JSInterpreter", function () {
     // Setup a jsInterpreter instance with `hideSource: true` so an editor isn't
     // needed.
     jsInterpreter = new JSInterpreter({
-      shouldRunAtMaxSpeed: function() { return false; },
+      shouldRunAtMaxSpeed: function () { return false; },
       studioApp: {hideSource: true}
     });
 

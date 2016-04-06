@@ -514,7 +514,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function () {
   } else if (!mutualConnectionRow && !this.myRemoteClient) {
     // The client we're trying to connect to might have connected to
     // someone else; check if they did and if so, stop trying to connect
-    myConnectionTargetWireRow = _.find(wireRows, function(row) {
+    myConnectionTargetWireRow = _.find(wireRows, function (row) {
       return row.localNodeID === myWire.remoteNodeID &&
           row.remoteNodeID !== myWire.localNodeID;
     }.bind(this));

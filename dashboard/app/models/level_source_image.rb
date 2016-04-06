@@ -26,7 +26,7 @@ class LevelSourceImage < ActiveRecord::Base
     return false if image.blank?
 
     begin
-      image = ImageLib::to_png(image)
+      image = ImageLib.to_png(image)
     rescue MiniMagick::Invalid, MiniMagick::Error # something wrong with the image or runtime error.
       return false
     end
@@ -60,7 +60,7 @@ class LevelSourceImage < ActiveRecord::Base
     end
 
     begin
-      framed_image = ImageLib::overlay_image(:background_url => Rails.root.join(frame_image_filename),
+      framed_image = ImageLib.overlay_image(:background_url => Rails.root.join(frame_image_filename),
                                              :foreground_blob => image).to_blob
     rescue MiniMagick::Invalid, MiniMagick::Error # something wrong with the image or runtime error.
       return false

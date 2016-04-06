@@ -117,7 +117,7 @@ ExecutionInfo.prototype.stopCollecting = function () {
  * If the user has executed too many actions, we're probably in an infinite
  * loop.  Set termination value to Infinity
  */
-ExecutionInfo.prototype.checkTimeout = function() {
+ExecutionInfo.prototype.checkTimeout = function () {
   if (this.ticks-- < 0) {
     this.terminateWithValue(Infinity);
   }

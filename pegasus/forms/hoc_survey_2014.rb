@@ -141,13 +141,13 @@ class HocSurvey2014
   end
 
   def self.event_experiences()
-    [
-      'Great',
-      'Good',
-      'OK',
-      'Bad',
-      'Terrible',
-    ]
+    %w(
+      Great
+      Good
+      OK
+      Bad
+      Terrible
+    )
   end
 
   def self.teacher_how_heards()

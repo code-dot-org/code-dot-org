@@ -27,7 +27,6 @@ window.Radium = require('radium');
 require('./components/abuse_error.jsx');
 require('./components/report_abuse_form.jsx');
 require('./components/send_to_phone.jsx');
-require('./components/share_dialog.jsx');
 require('./components/small_footer.jsx');
 require('./components/GridEditor.jsx');
 require('./components/IconLibrary.jsx');
@@ -64,14 +63,14 @@ window.onerror = function (msg, url, ln) {
 
 // Prevent escape from canceling page loads.
 var KEY_ESCAPE = 27;
-$(document).keydown(function(e) {
+$(document).keydown(function (e) {
   if (e.keyCode === KEY_ESCAPE) {
     e.stopPropagation();
     e.preventDefault();
   }
 });
 
-setTimeout(function() {
+setTimeout(function () {
   $('#codeApp .slow_load').show();
 }, 10000);
 
