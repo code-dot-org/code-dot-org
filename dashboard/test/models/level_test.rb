@@ -26,13 +26,13 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "reads and converts data" do
-    csv = stub(:read => [%w(0 1), %w(1 2)])
+    csv = stub(:read => [['0', '1'], ['1', '2']])
     maze = Maze.load_maze(csv, 2)
     assert_equal [[0, 1], [1, 2]], maze
   end
 
   test "parses maze data" do
-    csv = stub(:read => [%w(0 1), %w(1 2)])
+    csv = stub(:read => [['0', '1'], ['1', '2']])
     maze = Maze.parse_maze(Maze.load_maze(csv, 2).to_json)
     assert_equal({'maze' => [[0, 1], [1, 2]].to_json}, maze)
   end
@@ -331,13 +331,13 @@ EOS
     CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
 
     level = Applab.create(name: 'applab_with_example')
-    level.examples = %w(xxxxxx yyyyyy)
+    level.examples = ['xxxxxx', 'yyyyyy']
 
     # go through a save/load
     level.save!
     level = level.reload
 
-    assert_equal %w(xxxxxx yyyyyy), level.examples
+    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
 
     # this property is encrypted, not plaintext
     assert_nil level.properties['examples']
@@ -350,7 +350,7 @@ EOS
     level.save!
     level = level.reload
 
-    assert_equal %w(xxxxxx yyyyyy), level.examples
+    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
 
     # does not crash if decryption is busted
     CDO.stubs(:properties_encryption_key).returns(nil)

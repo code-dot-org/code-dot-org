@@ -67,24 +67,26 @@ HOC_SIGNUP_COUNTRIES = ["Guatemala",
                         "Argentina",
                         "Puerto Rico"]
 
-CSEDWEEK_COUNTRIES = %w(gt 
-sv 
-cr 
-ni 
-bz 
-pa 
-cu 
-do 
-ve 
-co 
-ec 
-pe 
-bo 
-py 
-uy 
-cl 
-ar 
-pr)
+CSEDWEEK_COUNTRIES = %w(
+  gt
+  sv
+  cr
+  ni
+  bz
+  pa
+  cu
+  do
+  ve
+  co
+  ec
+  pe
+  bo
+  py
+  uy
+  cl
+  ar
+  pr
+)
 
 HOC_SIGNUP_QUERY = HOC_SIGNUP_COUNTRIES.
   map {|country| %Q|(kind_s:"HocSignup2014" && location_country_s:"#{country}")| }.

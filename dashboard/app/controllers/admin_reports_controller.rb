@@ -267,7 +267,7 @@ class AdminReportsController < ApplicationController
         end
       end
       # Transform the count stats into row format to facilitate being added to charts and tables.
-      %w(script_level_counts script_stage_counts).each do |key|
+      ['script_level_counts', 'script_stage_counts'].each do |key|
         @retention_stats[key] = build_row_arrays(@retention_stats[key])
       end
     end

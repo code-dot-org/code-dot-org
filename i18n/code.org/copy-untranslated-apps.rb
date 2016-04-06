@@ -71,10 +71,11 @@ locales = {
 }
 
 untranslated_apps = %w(
-applab 
-calc 
-eval 
-netsim)
+  applab
+  calc
+  eval
+  netsim
+)
 
 locales.each_value do |locale|
   if locale != 'en-US'

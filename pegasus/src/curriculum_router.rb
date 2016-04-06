@@ -300,7 +300,7 @@ module Pegasus
       base = File.join(root,uri)
 
       extnames = settings.template_extnames
-      indexes = %w(index _all)
+      indexes = ['index','_all']
 
       headers = {
         'Cache-Control'   => "max-age=#{settings.document_max_age}, public, must-revalidate",
