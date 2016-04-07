@@ -42,39 +42,30 @@ var styles = {
   }
 };
 
-var AnimationPickerListItem = React.createClass({
-  propTypes: {
-    label: React.PropTypes.string.isRequired,
-    icon: React.PropTypes.string
-  },
+var AnimationPickerListItem = function (props) {
+  var thumbnailStyle = [
+    styles.thumbnail,
+    props.icon && styles.thumbnailIcon
+  ];
 
-  renderThumbnail: function () {
-    if (this.props.icon) {
-      return (
-        <div style={[styles.thumbnail, styles.thumbnailIcon]}>
-          <i className={"fa fa-" + this.props.icon} />
-        </div>
-      );
-    }
+  var labelStyle = [
+    styles.label,
+    props.icon && styles.labelIcon
+  ];
 
-    return <div style={styles.thumbnail}></div>;
-  },
-
-  renderLabel: function () {
-    return (
-      <div style={[styles.label, this.props.icon && styles.labelIcon]}>
-        {this.props.label}
+  return (
+    <div style={styles.root}>
+      <div style={thumbnailStyle}>
+        {props.icon && <i className={"fa fa-" + props.icon} />}
       </div>
-    );
-  },
-
-  render: function () {
-    var thumbnail;
-
-    return <div style={styles.root}>
-      {this.renderThumbnail()}
-      {this.renderLabel()}
-    </div>;
-  }
-});
+      <div style={labelStyle}>
+        {props.label}
+      </div>
+    </div>
+  );
+};
+AnimationPickerListItem.propTypes = {
+  label: React.PropTypes.string.isRequired,
+  icon: React.PropTypes.string
+};
 module.exports = Radium(AnimationPickerListItem);
