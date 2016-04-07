@@ -1,9 +1,9 @@
 'use strict';
 
 var _ = require('../lodash');
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
-var StudioAppWrapper = require('./StudioAppWrapper.jsx');
-var CodeWorkspaceContainer = require('./CodeWorkspaceContainer.jsx');
+var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
+var StudioAppWrapper = require('./StudioAppWrapper');
+var CodeWorkspaceContainer = require('./CodeWorkspaceContainer');
 
 /**
  * Top-level React wrapper for our standard blockly apps.
