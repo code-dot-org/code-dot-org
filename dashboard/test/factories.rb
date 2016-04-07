@@ -1,58 +1,4 @@
-FactoryGirl.define do  factory :user_proficiency do
-    user_id 1
-last_progress_at "2016-04-07 11:01:45"
-sequencing_d1_count 1
-sequencing_d2_count 1
-sequencing_d3_count 1
-sequencing_d4_count 1
-sequencing_d5_count 1
-debugging_d1_count 1
-debugging_d2_count 1
-debugging_d3_count 1
-debugging_d4_count 1
-debugging_d5_count 1
-repeat_loops_d1_count 1
-repeat_loops_d2_count 1
-repeat_loops_d3_count 1
-repeat_loops_d4_count 1
-repeat_loops_d5_count 1
-repeat_until_while_d1_count 1
-repeat_until_while_d2_count 1
-repeat_until_while_d3_count 1
-repeat_until_while_d4_count 1
-repeat_until_while_d5_count 1
-for_loops_d1_count 1
-for_loops_d2_count 1
-for_loops_d3_count 1
-for_loops_d4_count 1
-for_loops_d5_count 1
-events_d1_count 1
-events_d2_count 1
-events_d3_count 1
-events_d4_count 1
-events_d5_count 1
-variables_d1_count 1
-variables_d2_count 1
-variables_d3_count 1
-variables_d4_count 1
-variables_d5_count 1
-functions_d1_count 1
-functions_d2_count 1
-functions_d3_count 1
-functions_d4_count 1
-functions_d5_count 1
-functions_with_params_d1_count 1
-functions_with_params_d2_count 1
-functions_with_params_d3_count 1
-functions_with_params_d4_count 1
-functions_with_params_d5_count 1
-conditionals_d1_count 1
-conditionals_d2_count 1
-conditionals_d3_count 1
-conditionals_d4_count 1
-conditionals_d5_count 1
-  end
-
+FactoryGirl.define do
   factory :user do
     birthday Date.new(1991, 03, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }
@@ -454,4 +400,13 @@ conditionals_d5_count 1
     properties {{survey2016_ethnicity_asian: "1"}}
     properties {{survey2016_foodstamps: "3"}}
   end
+
+  factory :user_proficiency do
+    user { create :student }
+    sequencing_d1_count 1
+    repeat_loops_d2_count 2
+    repeat_loops_d4_count 3
+    conditionals_d5_count 4
+  end
+
 end
