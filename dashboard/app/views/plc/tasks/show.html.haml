@@ -6,13 +6,13 @@
   = @task.name
 
 %p
-  %strong Associated module
-  = @task.plc_learning_module.try(:name)
+  %strong Associated modules:
+%ul
+  - @task.plc_learning_modules.pluck(:name, :id).sort.each do |name, id|
+    %li= link_to name, plc_learning_module_path(id)
 
 -unless @task.type == :plc_task
   %p
     = render partial: 'plc/tasks/view/' + @task.class.underscored_task_type
 
 = link_to 'Edit', edit_plc_task_path(@task)
-\|
-= link_to 'Back to Learning Module', plc_learning_module_path(@task.plc_learning_module)
