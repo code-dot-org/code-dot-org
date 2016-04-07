@@ -6,9 +6,9 @@ var styleConstants = require('../../styleConstants');
 
 var processMarkdown = require('marked');
 
-var Instructions = require('./Instructions.jsx');
-var CollapserIcon = require('./CollapserIcon.jsx');
-var HeightResizer = require('./HeightResizer.jsx');
+var Instructions = require('./Instructions');
+var CollapserIcon = require('./CollapserIcon');
+var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
 var msg = require('../../locale');
 

@@ -34,9 +34,9 @@ var constants = require('./constants');
 var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
 var puzzleRatingUtils = require('./puzzleRatingUtils');
-var DialogButtons = require('./templates/DialogButtons.jsx');
-var CodeWritten = require('./templates/feedback/CodeWritten.jsx');
-var GeneratedCode = require('./templates/feedback/GeneratedCode.jsx');
+var DialogButtons = require('./templates/DialogButtons');
+var CodeWritten = require('./templates/feedback/CodeWritten');
+var GeneratedCode = require('./templates/feedback/GeneratedCode');
 
 /**
  * @typedef {Object} TestableBlock
