@@ -17,21 +17,18 @@ var styles = {
  * Vertical scrolling list of animation sequences associated with the
  * project.
  */
-var AnimationSequenceList = React.createClass({
-  propTypes: {
-    onNewItemClick: React.PropTypes.func.isRequired
-  },
-
-  render: function () {
-    return (
-      <ScrollableList style={styles.root} className="animation-sequence-list">
-        <AnimationSequenceListItem sequenceName="sequence01" />
-        <AnimationSequenceListItem sequenceName="sequence02" isSelected />
-        <NewListItem label="new sequence" onClick={this.props.onNewItemClick} />
-      </ScrollableList>
-    );
-  }
-});
+var AnimationSequenceList = function (props) {
+  return (
+    <ScrollableList style={styles.root} className="animation-sequence-list">
+      <AnimationSequenceListItem sequenceName="sequence01" />
+      <AnimationSequenceListItem sequenceName="sequence02" isSelected />
+      <NewListItem label="new sequence" onClick={props.onNewItemClick} />
+    </ScrollableList>
+  );
+};
+AnimationSequenceList.propTypes = {
+  onNewItemClick: React.PropTypes.func.isRequired
+};
 module.exports = connect(function propsFromState(state) {
   return {};
 }, function propsFromDispatch(dispatch) {
