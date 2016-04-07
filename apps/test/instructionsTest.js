@@ -4,8 +4,8 @@ testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
 var ReactTestUtils = require('react-addons-test-utils');
 
-var MarkdownInstructions = require('@cdo/apps/templates/instructions/MarkdownInstructions.jsx');
-var NonMarkdownInstructions = require('@cdo/apps/templates/instructions/NonMarkdownInstructions.jsx');
+var MarkdownInstructions = require('@cdo/apps/templates/instructions/MarkdownInstructions');
+var NonMarkdownInstructions = require('@cdo/apps/templates/instructions/NonMarkdownInstructions');
 
 function shallowRender(element) {
   var renderer = ReactTestUtils.createRenderer();

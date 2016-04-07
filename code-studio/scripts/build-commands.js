@@ -1,4 +1,5 @@
 /** @file Build commands for use by build scripts in the code-studio package. */
+/* global Promise */
 'use strict';
 
 var _ = require('lodash');
@@ -79,6 +80,9 @@ exports.bundle = function (config) {
   var bundler = browserify({
     // Enables source map
     debug: true,
+
+    // Allow requiring jsx without specifying extension
+    extensions: ['.jsx'],
 
     // Required for watchify
     cache: {},
