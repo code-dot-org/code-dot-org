@@ -4,11 +4,11 @@
 var _ = require('../lodash');
 var connect = require('react-redux').connect;
 var actions = require('./actions');
-var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
-var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
-var TopInstructions = require('../templates/instructions/TopInstructions.jsx');
-var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer.jsx');
+var PlaySpaceHeader = require('./PlaySpaceHeader');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
+var TopInstructions = require('../templates/instructions/TopInstructions');
+var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer');
 var utils = require('../utils');
 var styleConstants = require('../styleConstants');
 

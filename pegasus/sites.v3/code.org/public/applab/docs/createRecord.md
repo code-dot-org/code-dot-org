@@ -121,8 +121,8 @@ When *createRecord()* is finished executing, the callback function is automatica
 [/tips]
 
 [advanced]
-
 ### Advanced
+
 
 *createRecord()* has an additional optional callback function that gets called only if an error occurs when trying to create a record.  For example, when the maximum number of rows in a table is reached, the error callback will be called. 
 
@@ -151,7 +151,7 @@ onEvent("submit", "click", function() {
     }
   }); 
 });
-``` 
+```
 
 **Syntax:**
 
@@ -162,7 +162,6 @@ createRecord(table, record, function(record){
     //onError callback function code goes here
 });
 ```
-
 [/advanced]
 
 [bug]
@@ -172,3 +171,4 @@ Found a bug in the documentation? Let us know at documentation@code.org
 [/bug]
 
 <%= view :applab_docs_common %>
+

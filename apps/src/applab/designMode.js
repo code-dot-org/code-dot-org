@@ -2,7 +2,7 @@
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
-var DesignWorkspace = require('./DesignWorkspace.jsx');
+var DesignWorkspace = require('./DesignWorkspace');
 var showAssetManager = require('../assetManagement/show');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');

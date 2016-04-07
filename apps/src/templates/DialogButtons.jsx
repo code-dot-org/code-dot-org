@@ -1,5 +1,5 @@
 var msg = require('../locale');
-var Lightbulb = require('./Lightbulb.jsx');
+var Lightbulb = require('./Lightbulb');
 
 var DialogButtons = React.createClass({
   propTypes: {

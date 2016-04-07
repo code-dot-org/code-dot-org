@@ -28,7 +28,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var actions = require('./actions');
 var createStore = require('../redux');
 var gamelabReducer = require('./reducers').gamelabReducer;
-var GameLabView = require('./GameLabView.jsx');
+var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
@@ -212,6 +212,12 @@ GameLab.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
+GameLab.prototype.calculateVisualizationScale_ = function () {
+  var divGameLab = document.getElementById('divGameLab');
+  // Calculate current visualization scale:
+  return divGameLab.getBoundingClientRect().width / divGameLab.offsetWidth;
+};
+
 /**
  * Code called after the blockly div + blockly core is injected into the document
  */
@@ -231,6 +237,12 @@ GameLab.prototype.afterInject_ = function (config) {
   divGameLab.style.width = '400px';
   divGameLab.style.height = '400px';
 
+  // Update gameLabP5's scale and keep it updated with future resizes:
+  this.gameLabP5.scale = this.calculateVisualizationScale_();
+
+  window.addEventListener('resize', function () {
+    this.gameLabP5.scale = this.calculateVisualizationScale_();
+  }.bind(this));
 };
 
 /**

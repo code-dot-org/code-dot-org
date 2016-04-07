@@ -27,8 +27,6 @@ class Applab < Blockly
   before_save :fix_examples
 
   serialized_attrs %w(
-    app_width
-    app_height
     free_play
     show_turtle_before_run
     autocomplete_palette_apis_only
