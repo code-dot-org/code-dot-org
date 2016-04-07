@@ -1,7 +1,7 @@
 'use strict';
 
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
-var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+var StudioAppWrapper = require('../templates/StudioAppWrapper');
 
 /**
  * Top-level React wrapper for our NetSim app.

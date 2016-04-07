@@ -1,8 +1,8 @@
 /* globals dashboard, appOptions  */
 
 var clientState = require('./clientState');
-var StageProgress = require('./components/progress/stage_progress.jsx');
-var CourseProgress = require('./components/progress/course_progress.jsx');
+var StageProgress = require('./components/progress/stage_progress');
+var CourseProgress = require('./components/progress/course_progress');
 
 var progress = module.exports;
 
