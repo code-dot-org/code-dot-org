@@ -1,5 +1,5 @@
-var MarkdownInstructions = require('./MarkdownInstructions.jsx');
-var NonMarkdownInstructions = require('./NonMarkdownInstructions.jsx');
+var MarkdownInstructions = require('./MarkdownInstructions');
+var NonMarkdownInstructions = require('./NonMarkdownInstructions');
 
 var Instructions = React.createClass({
 

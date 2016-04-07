@@ -1,8 +1,8 @@
 /* global $ */
 
 var color = require('../color');
-var DesignToolbox = require('./DesignToolbox.jsx');
-var DesignProperties = require('./designProperties.jsx');
+var DesignToolbox = require('./DesignToolbox');
+var DesignProperties = require('./designProperties');
 
 module.exports = React.createClass({
   propTypes: {

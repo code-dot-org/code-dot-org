@@ -28,7 +28,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var actions = require('./actions');
 var createStore = require('../redux');
 var gamelabReducer = require('./reducers').gamelabReducer;
-var GameLabView = require('./GameLabView.jsx');
+var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;

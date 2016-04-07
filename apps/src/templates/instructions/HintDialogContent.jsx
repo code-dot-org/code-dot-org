@@ -1,6 +1,6 @@
 var msg = require('../../locale');
-var Lightbulb = require('../Lightbulb.jsx');
-var ReadOnlyBlockSpace = require('../ReadOnlyBlockSpace.jsx');
+var Lightbulb = require('../Lightbulb');
+var ReadOnlyBlockSpace = require('../ReadOnlyBlockSpace');
 
 var HintDialogContent = React.createClass({
   propTypes: {

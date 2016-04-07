@@ -2,13 +2,13 @@
 'use strict';
 
 var _ = require('../lodash');
-var AnimationTab = require('./AnimationTab/index.jsx');
+var AnimationTab = require('./AnimationTab/index');
 var connect = require('react-redux').connect;
-var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
+var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
-var GameLabVisualizationHeader = require('./GameLabVisualizationHeader.jsx');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
-var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer.jsx');
+var GameLabVisualizationHeader = require('./GameLabVisualizationHeader');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer');
 
 /**
  * Top-level React wrapper for GameLab
