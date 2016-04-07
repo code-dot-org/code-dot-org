@@ -16,4 +16,5 @@
 class UserPermission < ActiveRecord::Base
   FACILITATOR = 'facilitator'
   DISTRICT_CONTACT = 'district_contact'
+  WORKSHOP_ORGANIZER = 'workshop_organizer'
 end
