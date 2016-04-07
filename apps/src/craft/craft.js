@@ -12,7 +12,7 @@ var dom = require('../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../MusicController');
-var AppView = require('../templates/AppView.jsx');
+var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 

@@ -3,7 +3,10 @@
 
 .text-match{id: "level_#{index}"}
   .mainblock
-    = render partial: 'levels/content', locals: {app: app, data: data}
+    - unless standalone
+      .number
+        = "#{number}. "
+    = render partial: 'levels/content', locals: {app: app, data: data, source_level: level, hide_header: !standalone}
     - height = data['height'] || '80'
     %textarea.response{placeholder: data['placeholder'] ? string_or_image(app, data['placeholder']) : t(app + '.placeholder'), style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}
 
@@ -16,15 +19,16 @@
 
 = render partial: 'levels/common_audio'
 
-:javascript
+-# Don't operate if we're a LevelGroup with a /level/ URL.
+- if standalone || @script_level
+  :javascript
 
-  $(document).ready(function() {
-    window["level_#{index}"] = new TextMatch(
-      "level_#{index}",
-      #{level.id},
-      #{standalone},
-      #{data['answers'] || []},
-      #{last_attempt.to_json}
-      );
-    });
-
+    $(document).ready(function() {
+      window["level_#{index}"] = new TextMatch(
+        "level_#{index}",
+        #{level.id},
+        #{standalone},
+        #{data['answers'] || []},
+        #{last_attempt.to_json}
+        );
+      });

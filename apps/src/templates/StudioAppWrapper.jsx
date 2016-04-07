@@ -1,6 +1,6 @@
 'use strict';
 
-var RotateContainer = require('../templates/RotateContainer.jsx');
+var RotateContainer = require('../templates/RotateContainer');
 
 /**
  * Wrapper component for all Code Studio app types, which provides rotate

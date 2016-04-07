@@ -1,10 +1,10 @@
 /** @file Root of the animation editor interface mode for GameLab */
 'use strict';
 
-var AnimationFrameList = require('./AnimationFrameList.jsx');
-var AnimationSequenceList = require('./AnimationSequenceList.jsx');
-var GameLabVisualizationHeader = require('../GameLabVisualizationHeader.jsx');
-var ResizablePanes = require('./ResizablePanes.jsx');
+var AnimationFrameList = require('./AnimationFrameList');
+var AnimationSequenceList = require('./AnimationSequenceList');
+var GameLabVisualizationHeader = require('../GameLabVisualizationHeader');
+var ResizablePanes = require('./ResizablePanes');
 
 var staticStyles = {
   root: {
