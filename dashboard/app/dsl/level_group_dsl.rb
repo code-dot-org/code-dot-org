@@ -8,6 +8,7 @@ class LevelGroupDSL < BaseDSL
     @hash[:pages] = []
     @levels = []
     @i18n_strings = Hash.new({})
+    @level_names = []
   end
 
   integer :id
@@ -27,6 +28,19 @@ class LevelGroupDSL < BaseDSL
   end
 
   def level(name)
+    # Ensure level name hasn't already been used.
+    if @level_names.include? name
+      raise "Don't use the same level twice in a LevelGroup (#{name})."
+    end
+    @level_names << name
+
+    # Ensure level is appropriate type.
+    level = Level.find_by_name(name)
+    level_class = level.class.to_s.underscore
+    if !['multi', 'text_match'].include? level_class
+      raise "LevelGroup can only contain multi and text_match levels. (#{name})"
+    end
+
     @levels << name
   end
 
