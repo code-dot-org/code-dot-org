@@ -347,8 +347,8 @@ var AABBops = function (p5Inst, type, target, callback) {
                   m1 = 2 * other.mass / totalMass;
                   m2 = 2 * this.mass / totalMass;
                 }
-                newVel1 = dx1.mult(m1 * p5.Vector.sub(this.velocity, other.velocity).dot(dx1) / magnitude);
-                newVel2 = dx2.mult(m2 * p5.Vector.sub(other.velocity, this.velocity).dot(dx2) / magnitude);
+                var newVel1 = dx1.mult(m1 * p5.Vector.sub(this.velocity, other.velocity).dot(dx1) / magnitude);
+                var newVel2 = dx2.mult(m2 * p5.Vector.sub(other.velocity, this.velocity).dot(dx2) / magnitude);
 
                 this.velocity.sub(newVel1.mult(this.restitution));
                 other.velocity.sub(newVel2.mult(other.restitution));
