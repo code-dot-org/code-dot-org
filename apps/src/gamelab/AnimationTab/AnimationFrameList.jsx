@@ -1,9 +1,9 @@
 /** @file Vertical scrolling list of animation frames. */
 'use strict';
 
-var AnimationFrameListItem = require('./AnimationFrameListItem.jsx');
-var NewListItem = require('./NewListItem.jsx');
-var ScrollableList = require('./ScrollableList.jsx');
+var AnimationFrameListItem = require('./AnimationFrameListItem');
+var NewListItem = require('./NewListItem');
+var ScrollableList = require('./ScrollableList');
 
 /**
  * Vertical scrolling list of animation frames for the selected animation.

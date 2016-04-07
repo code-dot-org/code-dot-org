@@ -10,8 +10,6 @@ var levelDefinition = {
   "freePlay": true,
   "editCode": true,
   "sliderSpeed": 0.1,
-  "appWidth": 200,
-  "appHeight": 200,
   "codeFunctions": {
     "moveForward": {
       "params": [""],
@@ -114,37 +112,40 @@ module.exports = {
 
           // Diagram of which pixels we expect to be colored.
           //
-          //   x->   1           1 1
-          //  y    9 0           2 2
+          //   x-> 1 1           1 1
+          //  y    5 6           8 8
           //  |    9 0           4 5
           //  v
           //     0 0 0 0 0   0 0 0 0 0
-          //  74 0 1 1 1 1...1 1 1 1 0
-          //  75 0 1 1 1 1...1 1 1 1 0
-          //  76 0 1 1 0 0   0 0 1 1 0
+          // 214 0 1 1 1 1...1 1 1 1 0
+          // 215 0 1 1 1 1...1 1 1 1 0
+          // 216 0 1 1 0 0   0 0 1 1 0
           //     0 1 1 0 0   0 0 1 1 0
           //       ...           ...
           //     0 1 1 0 0   0 0 1 1 0
-          //  98 0 1 1 0 0   0 0 1 1 0
-          //  99 0 1 1 1 1...1 1 1 1 0
-          // 100 0 1 1 1 1...1 1 1 1 0
+          // 238 0 1 1 0 0   0 0 1 1 0
+          // 239 0 1 1 1 1...1 1 1 1 0
+          // 240 0 1 1 1 1...1 1 1 1 0
           //     0 0 0 0 0   0 0 0 0 0
           //
+          // Used to start at 100, 100
+          // Now starts at 160, 240
+
           var expectedPixels = [];
           var x, y;
-          for (y = 74; y <= 75; y++) {
-            for (x = 99; x <= 125; x++) {
+          for (y = 214; y <= 215; y++) {
+            for (x = 159; x <= 185; x++) {
               expectedPixels.push([x, y]);
             }
           }
-          for (y = 76; y <= 98; y++) {
-            expectedPixels.push([99, y]);
-            expectedPixels.push([100, y]);
-            expectedPixels.push([124, y]);
-            expectedPixels.push([125, y]);
+          for (y = 216; y <= 238; y++) {
+            expectedPixels.push([159, y]);
+            expectedPixels.push([160, y]);
+            expectedPixels.push([184, y]);
+            expectedPixels.push([185, y]);
           }
-          for (y = 99; y <= 100; y++) {
-            for (x = 99; x <= 125; x++) {
+          for (y = 239; y <= 240; y++) {
+            for (x = 159; x <= 185; x++) {
               expectedPixels.push([x, y]);
             }
           }

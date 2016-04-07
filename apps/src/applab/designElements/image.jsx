@@ -1,12 +1,12 @@
 /* global $ */
 
-var PropertyRow = require('./PropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
+var PropertyRow = require('./PropertyRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var ImagePickerPropertyRow = require('./ImagePickerPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
 var ICON_PREFIX_REGEX = require('../constants').ICON_PREFIX_REGEX;
 
 var elementUtils = require('./elementUtils');

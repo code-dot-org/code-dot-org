@@ -1,9 +1,9 @@
 /** @file Vertical scrolling list of animation sequences */
 'use strict';
 
-var AnimationSequenceListItem = require('./AnimationSequenceListItem.jsx');
-var NewListItem = require('./NewListItem.jsx');
-var ScrollableList = require('./ScrollableList.jsx');
+var AnimationSequenceListItem = require('./AnimationSequenceListItem');
+var NewListItem = require('./NewListItem');
+var ScrollableList = require('./ScrollableList');
 
 /**
  * Vertical scrolling list of animation sequences associated with the
