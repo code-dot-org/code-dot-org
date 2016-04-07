@@ -360,7 +360,7 @@ FactoryGirl.define do
 
   factory :plc_task, :class => 'Plc::Task' do
     name "MyString"
-    plc_learning_module nil
+    plc_learning_modules []
   end
 
   factory :plc_learning_module, :class => 'Plc::LearningModule' do

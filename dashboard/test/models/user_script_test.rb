@@ -81,8 +81,8 @@ class UserScriptTest < ActiveSupport::TestCase
     course = create(:plc_course)
     course_unit = create(:plc_course_unit, plc_course: course)
     learning_module = create(:plc_learning_module)
-    task1 = create(:plc_script_completion_task, plc_learning_module: learning_module, script_id: @script.id, name: 'script 1')
-    task2 = create(:plc_script_completion_task, plc_learning_module: learning_module, script_id: @script.id + 50, name: 'script 2')
+    task1 = create(:plc_script_completion_task, plc_learning_modules: [learning_module], script_id: @script.id, name: 'script 1')
+    task2 = create(:plc_script_completion_task, plc_learning_modules: [learning_module], script_id: @script.id + 50, name: 'script 2')
 
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: course)
     unit_enrollment = Plc::EnrollmentUnitAssignment.create(

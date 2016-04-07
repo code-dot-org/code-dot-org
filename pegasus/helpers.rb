@@ -82,7 +82,11 @@ def unsupported_media_type!()
 end
 
 def csrf_token
-  Rack::Csrf.csrf_token(env)
+  if env['rack.session']
+    Rack::Csrf.csrf_token(env)
+  else
+    ''  # In some tests, there is no session defined, so don't use a CSRF token.
+  end
 end
 
 def csrf_tag
