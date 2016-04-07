@@ -4,9 +4,9 @@ var constants = require('./constants');
 var msg = require('../locale');
 var actions = require('./actions');
 var connect = require('react-redux').connect;
-var ScreenSelector = require('./ScreenSelector.jsx');
-var ToggleGroup = require('../templates/ToggleGroup.jsx');
-var ViewDataButton = require('./ViewDataButton.jsx');
+var ScreenSelector = require('./ScreenSelector');
+var ToggleGroup = require('../templates/ToggleGroup');
+var ViewDataButton = require('./ViewDataButton');
 
 var ApplabInterfaceMode = constants.ApplabInterfaceMode;
 

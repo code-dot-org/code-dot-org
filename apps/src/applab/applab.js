@@ -16,7 +16,7 @@ var api = require('./api');
 var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
-var AppLabView = require('./AppLabView.jsx');
+var AppLabView = require('./AppLabView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
@@ -39,9 +39,9 @@ var JsDebuggerUi = require('../JsDebuggerUi');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var VisualizationOverlay = require('./VisualizationOverlay');
-var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
+var ShareWarningsDialog = require('../templates/ShareWarningsDialog');
 var logToCloud = require('../logToCloud');
-var DialogButtons = require('../templates/DialogButtons.jsx');
+var DialogButtons = require('../templates/DialogButtons');
 var executionLog = require('../executionLog');
 var annotationList = require('../acemode/annotationList');
 
@@ -130,13 +130,9 @@ var twitterOptions = {
   hashtag: "ApplabCode"
 };
 
-var FOOTER_HEIGHT = applabConstants.FOOTER_HEIGHT;
-
-// The typical width of the visualization area (indepdendent of appWidth)
+// The unscaled dimensions of the visualization area
 var vizAppWidth = 400;
-// The default values for appWidth and appHeight (if not specified in the level)
-var defaultAppWidth = 400;
-var defaultAppHeight = 400;
+var VIZ_APP_HEIGHT = 400;
 
 var hasSeenRateLimitAlert = false;
 
@@ -144,22 +140,20 @@ function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
-  Applab.appWidth = level.appWidth || defaultAppWidth;
-  Applab.appHeight = level.appHeight || defaultAppHeight;
+
+  // Historically, appWidth and appHeight were customizable on a per level basis.
+  // This led to lots of hackery in the code to properly scale the visualization
+  // area. Width/height are now constant, but much of the hackery still remains
+  // since I don't understand it well enough.
+  Applab.appWidth = applabConstants.APP_WIDTH;
+  Applab.appHeight = applabConstants.APP_HEIGHT;
   Applab.makerlabEnabled = level.makerlabEnabled;
+
   // In share mode we need to reserve some number of pixels for our in-app
   // footer. We do that by making the play space slightly smaller elsewhere.
   // Applab.appHeight represents the height of the entire app (footer + other)
   // Applab.footerlessAppHeight represents the height of only the "other"
-  if (Applab.appHeight > 480) {
-    throw new Error('Strange things may happen with appHeight > 480');
-  }
-  if (Applab.appHeight + FOOTER_HEIGHT >= 480) {
-    // If footer will extend past 480, make room for it.
-    Applab.footerlessAppHeight = Applab.appHeight - FOOTER_HEIGHT;
-  } else {
-    Applab.footerlessAppHeight = Applab.appHeight;
-  }
+  Applab.footerlessAppHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
   // Override scalars.
   for (var key in level.scale) {
@@ -243,10 +237,10 @@ function adjustAppSizeStyles(container) {
       scaleFactors[ind] *= vizScale;
     }
   }
-  var vizAppHeight = Applab.footerlessAppHeight * vizScale;
+  var targetVizAppHeight = Applab.footerlessAppHeight * vizScale;
 
   // Compute new height rules:
-  // (1) defaults are scaleFactors * defaultAppHeight + 200 (belowViz estimate)
+  // (1) defaults are scaleFactors * VIZ_APP_HEIGHT + 200 (belowViz estimate)
   // (2) we adjust the height rules to take into account where the codeApp
   // div is anchored on the page. If this changes after this function is called,
   // the media rules for height are no longer valid.
@@ -259,7 +253,7 @@ function adjustAppSizeStyles(container) {
   var newHeightRules = defaultHeightRules.slice(0);
   for (var z = 0; z < newHeightRules.length; z++) {
     newHeightRules[z] += container.offsetTop +
-        (vizAppHeight - defaultAppHeight) * defaultScaleFactors[z];
+        (targetVizAppHeight - VIZ_APP_HEIGHT) * defaultScaleFactors[z];
   }
 
   if (!utils.browserSupportsCssMedia()) {
@@ -281,7 +275,7 @@ function adjustAppSizeStyles(container) {
         var childRules = rules[j].cssRules || rules[j].rules;
         if (rules[j].selectorText === "div#visualization") {
           // set the 'normal' width/height for the visualization itself
-          rules[j].style.cssText = "height: " + vizAppHeight +
+          rules[j].style.cssText = "height: " + targetVizAppHeight +
                                    "px; width: " + vizAppWidth + "px;";
           changedRules++;
         } else if (rules[j].media && childRules) {
@@ -415,7 +409,7 @@ function renderFooterInSharedGame() {
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
     baseMoreMenuString: applabMsg.builtOnCodeStudio(),
-    rowHeight: FOOTER_HEIGHT,
+    rowHeight: applabConstants.FOOTER_HEIGHT,
     style: {
       fontSize: 18
     },
@@ -606,6 +600,21 @@ Applab.startSharedAppAfterWarnings = function () {
 };
 
 /**
+ * Look at localStorage to see if we want to show instructions in the top pane.
+ */
+function showInstructionsInTopPane() {
+  // enable instructions in top pane based on query param
+  if (/topInstructions=true/.test(location.search)) {
+    localStorage.setItem('showInstructionsInTopPane', true);
+  }
+  // disable instructions in top pane based on query param
+  if (/topInstructions=false/.test(location.search)) {
+    localStorage.removeItem('showInstructionsInTopPane');
+  }
+  return !!localStorage.getItem('showInstructionsInTopPane');
+}
+
+/**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
 Applab.init = function (config) {
@@ -761,9 +770,7 @@ Applab.init = function (config) {
 
   config.appMsg = applabMsg;
 
-  // Since the app width may not be 400, set this value in the config to
-  // ensure that the viewport is set up properly for scaling it up/down
-  config.mobileNoPaddingShareWidth = config.level.appWidth;
+  config.mobileNoPaddingShareWidth = applabConstants.APP_WIDTH;
 
   config.enableShowLinesCount = false;
 
@@ -774,8 +781,7 @@ Applab.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  // TODO - should they also be on by default for admin?
-  config.showInstructionsInTopPane = !!localStorage.getItem('showInstructionsInTopPane');
+  config.showInstructionsInTopPane = showInstructionsInTopPane();
 
   // Applab.initMinimal();
 

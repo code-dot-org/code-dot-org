@@ -1,6 +1,6 @@
 /* globals dashboard */
 
-var IconLibrary = require('../components/IconLibrary.jsx');
+var IconLibrary = require('../components/IconLibrary');
 
 $(window).load(function () {
   $('#toggleIconLibrary').click(function () {

@@ -9,9 +9,9 @@ var BeeCell = require('@cdo/apps/maze/beeCell');
 var Cell = require('@cdo/apps/maze/cell');
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 
-var BeeCellEditor = require('./BeeCellEditor.jsx');
-var CellEditor = require('./CellEditor.jsx');
-var Grid = require('./Grid.jsx');
+var BeeCellEditor = require('./BeeCellEditor');
+var CellEditor = require('./CellEditor');
+var Grid = require('./Grid');
 
 var CellJSON = React.createClass({
   propTypes: {
