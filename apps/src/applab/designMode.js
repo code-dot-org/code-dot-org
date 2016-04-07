@@ -721,42 +721,76 @@ function makeDraggable (jqueryElements) {
         highlightElement(elm[0]);
       }
     }).draggable({
-      cancel: false,  // allow buttons and inputs to be dragged
+      cancel: false,        // allow buttons and inputs to be dragged
+      appendTo: '#codeApp', // draggable can break free of design mode container
+      helper: 'clone',      // clone original ui component
+      zIndex: 2,            // put dragged item in front of design mode container
       drag: function (event, ui) {
-        // draggables are not compatible with CSS transform-scale,
-        // so adjust the position in various ways here.
-
-        // dragging
-        var scale = getVisualizationScale();
-        var newLeft  = ui.position.left / scale;
-        var newTop = ui.position.top / scale;
-
-        // snap top-left corner to nearest location in the grid
-        newLeft = gridUtils.snapToGridSize(newLeft);
-        newTop = gridUtils.snapToGridSize(newTop);
-
-        // containment
         var container = $('#designModeViz');
-        var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
-        var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
-        newLeft = Math.min(newLeft, maxLeft);
-        newLeft = Math.max(newLeft, 0);
-        newTop = Math.min(newTop, maxTop);
-        newTop = Math.max(newTop, 0);
+        var scale = getVisualizationScale();
+        var newPosition = getNewPosition(container, ui.helper, scale);
+        var newLeft = newPosition.left;
+        var newTop = newPosition.top;
+        var boundsCheck = checkBoundaries(container, ui.helper, newLeft, newTop);
+        var opacity = boundsCheck.deleteElement ? 0.3 : 1;
 
-        ui.position.left = newLeft;
-        ui.position.top = newTop;
-
-        elm.css({
-          top: newTop,
-          left: newLeft
-        });
+        ui.helper.css('opacity', opacity);
 
         designMode.renderDesignWorkspace(elm[0]);
       },
-      start: function () {
+      start: function (event, ui) {
         highlightElement(elm[0]);
+        ui.helper.addClass('draggingParent');
+
+        // adjust / scale cloned element
+        var scale = getVisualizationScale();
+        ui.helper.css('transform', 'scale(' + scale + ')');
+
+        // hide grip / handle when dragging
+        var grip = elm.parent();
+        grip.hide();
       },
+      stop: function(event, ui) {
+        // show original element and grip when drag stops
+        elm.css('visibility', '');
+        elm.parent().show();
+ 
+        // get outer boundaries of design mode 
+        var container = $('#designModeViz');
+
+        // get left and top of dragging element
+        var scale = getVisualizationScale();
+
+        var newPosition = getNewPosition(container, ui.helper, scale);
+        var newLeft = newPosition.left;
+        var newTop = newPosition.top;
+        var boundsCheck = checkBoundaries(container, ui.helper, newLeft, newTop);
+
+        var updatedPosition = {
+            left: newLeft - container.offset().left,
+            top: newTop - container.offset().top
+        };
+        if (boundsCheck.deleteElement) {
+          designMode.onDeletePropertiesButton(elm[0], event);
+        } else if (boundsCheck.snapSide) {
+          var snapLeft = container.outerWidth(true) - ui.helper.outerWidth(true);
+          updatedPosition.left = snapLeft;
+        } else if (boundsCheck.snapBottom) {
+          var snapTop = container.outerHeight(true) - ui.helper.outerHeight(true);
+          updatedPosition.top = snapTop;
+        }
+
+        // set original element to adjusted new position
+        $(this).css(updatedPosition);
+       
+        var point = gridUtils.scaledDropPoint($(this));
+         
+        // update design mode inputs with new coordinates
+        if (!boundsCheck.deleteElement) {
+          designMode.onPropertyChange(elm[0], 'top', point.top);
+          designMode.onPropertyChange(elm[0], 'left', point.left);
+        }
+      }
     }).css({
       position: 'absolute',
       lineHeight: '0px'
@@ -783,6 +817,55 @@ function makeDraggable (jqueryElements) {
 
     elm.css('position', 'static');
   });
+}
+
+/* 
+ * check if dragged element should be snapped to the design area or deleted
+ */
+function checkBoundaries(container, element, newLeft, newTop) {
+  var canvasWidth = container.outerWidth(true);
+  var elementWidth = element.outerWidth(true);
+  var canvasHeight = container.outerHeight(true);
+  var elementHeight = element.outerHeight(true);
+  var containerOffset = container.offset();
+
+  /* 
+    check if scaled UI component midpoint (of left or top)
+    is past the total width or height of the design mode container and offset
+  */
+  var sideDeleteBoundary = canvasWidth + containerOffset.left - (elementWidth / 2);
+  var sideSnapBoundary = canvasWidth + containerOffset.left - elementWidth;
+  var bottomDeleteBoundary = canvasHeight + containerOffset.top - (elementHeight / 2);
+  var bottomSnapBoundary = canvasHeight + containerOffset.top - elementHeight;
+
+  //var opacity = newLeft > sideDeleteBoundary || newTop > bottomDeleteBoundary ? 0.3 : 1;
+  var deleteElement = newLeft > sideDeleteBoundary || newTop > bottomDeleteBoundary;
+  var snapSide = newLeft > sideSnapBoundary && !deleteElement;
+  var snapBottom = newTop > bottomSnapBoundary && !deleteElement;
+
+  return {
+    snapSide: snapSide,
+    snapBottom: snapBottom,
+    deleteElement: deleteElement
+  };
+}
+
+
+/*
+ * Calculates the new scaled position of ui helper element 
+ */
+function getNewPosition(container, element, scale) {
+  var newLeft = ((element.offset().left - container.offset().left) / scale) 
+              + container.offset().left;
+  var newTop = ((element.offset().top - container.offset().top) / scale) 
+             + container.offset().top;
+  newLeft = gridUtils.snapToGridSize(newLeft);
+  newTop = gridUtils.snapToGridSize(newTop);
+
+  return {
+    left: newLeft,
+    top: newTop
+  };
 }
 
 /**
