@@ -5,8 +5,8 @@ var color = require('../color');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 
-var DeleteElementButton = require('./designElements/DeleteElementButton.jsx');
-var ElementSelect = require('./ElementSelect.jsx');
+var DeleteElementButton = require('./designElements/DeleteElementButton');
+var ElementSelect = require('./ElementSelect');
 
 var nextKey = 0;
 
