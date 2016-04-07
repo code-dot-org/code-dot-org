@@ -2,7 +2,10 @@ class CreateUserProficiencies < ActiveRecord::Migration
   def change
     create_table :user_proficiencies do |t|
       t.integer :user_id
+
+      t.timestamps null: false
       t.datetime :last_progress_at
+
       t.integer :sequencing_d1_count
       t.integer :sequencing_d2_count
       t.integer :sequencing_d3_count
@@ -53,9 +56,8 @@ class CreateUserProficiencies < ActiveRecord::Migration
       t.integer :conditionals_d3_count
       t.integer :conditionals_d4_count
       t.integer :conditionals_d5_count
-
-      t.timestamps null: false
     end
+
     add_index :user_proficiencies, :user_id, unique: true
   end
 end
