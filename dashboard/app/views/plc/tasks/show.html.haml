@@ -8,7 +8,7 @@
 %p
   %strong Associated modules:
 %ul
-  - @task.plc_learning_modules.pluck(:id, :name).each do |id, name|
+  - @task.plc_learning_modules.pluck(:name, :id).sort.each do |name, id|
     %li= link_to name, plc_learning_module_path(id)
 
 -unless @task.type == :plc_task
