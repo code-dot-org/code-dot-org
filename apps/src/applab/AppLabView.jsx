@@ -34,8 +34,36 @@ var AppLabView = React.createClass({
     onMount: React.PropTypes.func.isRequired
   },
 
+  getInitialState() {
+    // only used so that we can rerender when resized
+    return {
+      width: undefined,
+      height: undefined
+    };
+  },
+
+  onResize: function () {
+    this.setState({
+      width: $(window).width(),
+      height: $(window).height()
+    });
+  },
+
   componentDidMount: function () {
     this.props.onMount();
+    var top = this.refs.topInstructions;
+    var child = top.refs.instructions;
+    // TODO  onResize
+    // var instructionsHeight = $(ReactDOM.findDOMNode(child)).height();
+    // if (instructionsHeight < this.props.instructionsHeight - HEADER_HEIGHT - 13) {
+    //   this.props.setInstructionsHeight(instructionsHeight + HEADER_HEIGHT + 13);
+    // }
+
+    window.addEventListener('resize', this.onResize);
+  },
+
+  componentWillUnmount: function () {
+    window.removeEventListener("resize", this.onResize);
   },
 
   /**
@@ -69,10 +97,18 @@ var AppLabView = React.createClass({
           onScreenCreate={this.props.onScreenCreate} />;
     }
 
+    // 150 is min editor size
+    // 120 is min debugger size
+    var maxHeight = $("#codeApp").height() - 150 - 120;
+    // console.log(this.topPaneHeight(), maxHeight);
+    // var topPaneHeight = Math.min(this.topPaneHeight(), maxHeight);
     var topPaneHeight = this.topPaneHeight();
     var codeWorkspaceContainerStyle = {
       top: topPaneHeight
     };
+    // maxHeight is at least current height
+    maxHeight = Math.max(maxHeight, topPaneHeight);
+    console.log('ALV:', maxHeight, topPaneHeight);
 
     return (
       <ConnectedStudioAppWrapper>
@@ -84,10 +120,12 @@ var AppLabView = React.createClass({
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
         {this.props.instructionsInTopPane && <TopInstructions
+          ref="topInstructions"
           isEmbedView={this.props.isEmbedView}
           puzzleNumber={this.props.puzzleNumber}
           stageTotal={this.props.stageTotal}
           height={topPaneHeight}
+          maxHeight={maxHeight}
           markdown={this.props.instructionsMarkdown}
           collapsed={this.props.instructionsCollapsed}
           onToggleCollapsed={this.props.toggleInstructionsCollapsed}

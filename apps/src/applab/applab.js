@@ -52,6 +52,7 @@ var actions = require('./actions');
 var setInitialLevelProps = actions.setInitialLevelProps;
 var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
+var setInstructionsHeight = actions.setInstructionsHeight;
 
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
@@ -921,6 +922,25 @@ Applab.init = function (config) {
 
   Applab.reduxStore.dispatch(changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+
+  // TODO - create a const
+
+  // console.log('setHeight: ' + startingInstructionHeight);
+  // At 1024x768, the editor still ends up with > 200 pixels when our instructions
+  // are 250. Though we don't explicitly support resolutions lower than this, we
+  // don't want things to look too badly either
+  var MIN_DEBUGGER_HEIGHT = 120;
+  var startingInstructionHeight = 250;
+  var estimatedCodeAppHeight = $(window).height() - 95;
+  var estimatedWorkspaceHeight = estimatedCodeAppHeight - startingInstructionHeight - MIN_DEBUGGER_HEIGHT;
+  if (estimatedWorkspaceHeight < 150) {
+    if (estimatedWorkspaceHeight > MIN_DEBUGGER_HEIGHT) {
+      startingInstructionHeight = Math.round((startingInstructionHeight + estimatedWorkspaceHeight) / 2);
+    } else {
+      startingInstructionHeight = Math.round((startingInstructionHeight + estimatedWorkspaceHeight + MIN_DEBUGGER_HEIGHT) / 3);
+    }
+  }
+  Applab.reduxStore.dispatch(setInstructionsHeight(startingInstructionHeight));
 
   Applab.reactInitialProps_ = {
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
