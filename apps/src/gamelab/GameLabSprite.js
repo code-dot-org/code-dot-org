@@ -56,6 +56,19 @@ module.exports.createSprite = function (x, y, width, height) {
     s.shapeColor = p5Inst.color.apply(p5Inst, arguments);
   };
 
+  s.destroy = function () {
+    s.remove();
+  };
+
+  s.pointTo = function (x, y) {
+    var yDelta = y - s.position.y;
+    var xDelta = x - s.position.x;
+    if (xDelta !== 0 || yDelta !== 0) {
+      var radiansAngle = Math.atan2(yDelta, xDelta);
+      s.rotation = 360 * radiansAngle / (2 * Math.PI);
+    }
+  };
+
   Object.defineProperty(s, 'frameDelay', {
     enumerable: true,
     get: function () {
