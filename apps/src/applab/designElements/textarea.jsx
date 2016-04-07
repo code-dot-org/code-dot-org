@@ -1,14 +1,14 @@
 /* global $ */
 
-var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
+var PropertyRow = require('./PropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
 var utils = require('../../utils');
 var elementUtils = require('./elementUtils');
-var EnumPropertyRow = require('./EnumPropertyRow.jsx');
+var EnumPropertyRow = require('./EnumPropertyRow');
 
 var TextAreaProperties = React.createClass({
   propTypes: {
