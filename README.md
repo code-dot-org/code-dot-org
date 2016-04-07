@@ -55,7 +55,7 @@ You'll need to do this once:
   1. Add `use_my_apps: true`
 1. To build code_studio js, edit `locals.yml` to add:
   1. Add `use_my_code_studio: true`
-1. `rake install`
+1. `rake package`
 
 This configures your system to build apps/blockly-core/code-studio whenever you run `rake build` and to use the versions that you build yourself.
 
