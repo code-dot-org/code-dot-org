@@ -7,6 +7,12 @@ var connect = require('react-redux').connect;
 var NewListItem = require('./NewListItem.jsx');
 var ScrollableList = require('./ScrollableList.jsx');
 
+var styles = {
+  root: {
+    flex: '1 0 0'
+  }
+};
+
 /**
  * Vertical scrolling list of animation sequences associated with the
  * project.
@@ -18,7 +24,7 @@ var AnimationSequenceList = React.createClass({
 
   render: function () {
     return (
-      <ScrollableList style={{flex: '1 0 0'}} className="animation-sequence-list">
+      <ScrollableList style={styles.root} className="animation-sequence-list">
         <AnimationSequenceListItem sequenceName="sequence01" />
         <AnimationSequenceListItem sequenceName="sequence02" isSelected />
         <NewListItem label="new sequence" onClick={this.props.onNewItemClick} />
