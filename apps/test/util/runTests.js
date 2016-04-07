@@ -70,6 +70,7 @@ exec(command, function (err, stdout, stderr) {
   mochify(globs.join(' '), {
     grep: grep,
     debug: process.env.mocha_debug,
+    extension: ['.jsx'],
     invert: process.env.mocha_invert,
     reporter : 'spec',
     timeout: 14000,
