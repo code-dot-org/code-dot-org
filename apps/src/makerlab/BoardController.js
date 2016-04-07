@@ -82,7 +82,12 @@ BoardController.prototype.reset = function () {
     return;
   }
 
-  this.board_.register.concat([this.prewiredComponents.tap, this.prewiredComponents.touch]).forEach(function (component) {
+  var standaloneComponents = [
+    this.prewiredComponents.tap,
+    this.prewiredComponents.touch
+  ];
+
+  this.board_.register.concat(standaloneComponents).forEach(function (component) {
     try {
       if (component.state && component.state.intervalId) {
         clearInterval(component.state.intervalId);
