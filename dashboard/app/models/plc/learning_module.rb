@@ -9,7 +9,7 @@
 #
 
 class Plc::LearningModule < ActiveRecord::Base
-  has_many :plc_tasks, class_name: '::Plc::Task', foreign_key: 'plc_learning_module_id', dependent: :destroy
+  has_and_belongs_to_many :plc_tasks, class_name: '::Plc::Task', foreign_key: 'plc_learning_module_id', association_foreign_key: 'plc_task_id'
   has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_learning_module_id', dependent: :destroy
   has_many :plc_evaluation_answers, class_name: '::Plc::EvaluationAnswer', foreign_key: 'plc_learning_module_id', dependent: :destroy
 end
