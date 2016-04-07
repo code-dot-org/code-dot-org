@@ -1,5 +1,5 @@
 var AnimationPickerBody = require('./AnimationPickerBody.jsx');
-var Dialog = require('../../templates/Dialog.jsx');
+var Dialog = require('../../templates/DialogComponent.jsx');
 
 var AnimationPicker = React.createClass({
   propTypes: {
