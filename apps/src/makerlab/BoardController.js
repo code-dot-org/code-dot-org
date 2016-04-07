@@ -202,7 +202,7 @@ function initializeCircuitPlaygroundComponents(io) {
       freq: 100
     }),
 
-    gyro: new five.Gyro({
+    accelerometer: new five.Gyro({
       controller: PlaygroundIO.Gyro
     }),
 
