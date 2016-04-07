@@ -15,9 +15,7 @@ var msg = require('../../locale');
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-// TODO - may want to be smarter about these values
-var INITIAL_HEIGHT = 300;
-var MAX_HEIGHT = 600;
+var MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
 var styles = {
   main: {
@@ -61,27 +59,28 @@ var TopInstructions = React.createClass({
     puzzleNumber: React.PropTypes.number.isRequired,
     stageTotal: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
+    maxHeight: React.PropTypes.number.isRequired,
     markdown: React.PropTypes.string,
     collapsed: React.PropTypes.bool.isRequired,
     onToggleCollapsed: React.PropTypes.func.isRequired,
     onChangeHeight: React.PropTypes.func.isRequired,
   },
 
+  /**
+   * Given a prospective delta, determines how much we can actually change the
+   * height (accounting for min/max) and changes height by that much.
+   * @param {number} delta
+   * @returns {number} How much we actually changed
+   */
   onHeightResize: function (delta) {
-    var minHeight = HEADER_HEIGHT + RESIZER_HEIGHT;
+    var minHeight = MIN_HEIGHT;
     var currentHeight = this.props.height;
 
     var newHeight = Math.max(minHeight, currentHeight + delta);
-    newHeight = Math.min(newHeight, MAX_HEIGHT);
+    newHeight = Math.min(newHeight, this.props.maxHeight);
 
     this.props.onChangeHeight(newHeight);
     return newHeight - currentHeight;
-  },
-
-  componentWillMount: function () {
-    if (this.props.markdown) {
-      this.props.onChangeHeight(INITIAL_HEIGHT);
-    }
   },
 
   render: function () {
@@ -93,6 +92,8 @@ var TopInstructions = React.createClass({
     var mainStyle = [styles.main, {
       height: this.props.height - RESIZER_HEIGHT
     }, this.props.isEmbedView && styles.embedView];
+
+    console.log('height, max: ', this.props.height, this.props.maxHeight);
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -109,6 +110,7 @@ var TopInstructions = React.createClass({
         <div style={[this.props.collapsed && styles.hidden]}>
           <div style={styles.body}>
             <Instructions
+              ref="instructions"
               renderedMarkdown={processMarkdown(this.props.markdown)}
               inTopPane
               />
