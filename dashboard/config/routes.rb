@@ -286,11 +286,12 @@ Dashboard::Application.routes.draw do
   end
 
   get '/plc/content_creator/show_courses_and_modules', to: 'plc/content_creator#show_courses_and_modules'
-  ['courses', 'learning_modules', 'tasks', 'course_units', 'evaluation_questions'].each do |object|
+  %w(courses learning_modules tasks course_units evaluation_questions).each do |object|
     get '/plc/' + object, to: redirect('plc/content_creator/show_courses_and_modules')
   end
 
   namespace :plc do
+    root to: 'plc#index'
     resources :courses
     resources :learning_modules
     resources :tasks

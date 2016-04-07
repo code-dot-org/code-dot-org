@@ -252,7 +252,7 @@ class Documents < Sinatra::Base
     #
     # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
     def dashboard_user
-      @dashboard_user ||= Dashboard::db[:users][id: dashboard_user_id]
+      @dashboard_user ||= Dashboard.db[:users][id: dashboard_user_id]
     end
 
     # Get the current dashboard user wrapped in a helper
