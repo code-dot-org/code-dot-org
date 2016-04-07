@@ -16,6 +16,7 @@ FactoryGirl.define do
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 03, 14)
+      admin false
       factory :facilitator do
         name 'Facilitator Person'
         after(:create) do |facilitator|
@@ -32,6 +33,7 @@ FactoryGirl.define do
 
     factory :student do
       user_type User::TYPE_STUDENT
+      admin false
     end
 
     factory :young_student do
@@ -302,7 +304,7 @@ FactoryGirl.define do
   factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
     plc_user_course_enrollment nil
     plc_course_unit nil
-    status Plc::EnrollmentUnitAssignment::START_BLOCKED
+    status Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do

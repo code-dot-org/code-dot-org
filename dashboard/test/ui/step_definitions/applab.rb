@@ -157,18 +157,18 @@ And /^I delete the current design mode element$/ do
   elements[-1].click
 end
 
-And /^I drag the grippy by ([-|\d]+) pixels$/ do |delta|
+def drag_grippy(element_js, delta_x, delta_y)
   script = get_mouse_event_creator_script
 
   script += %Q{
-    var element = $("#visualizationResizeBar");
+    var element = #{element_js};
     var start = {
       x: element.offset().left,
       y: element.offset().top
     };
     var end = {
-      x: start.x + #{delta},
-      y: start.y
+      x: start.x + #{delta_x},
+      y: start.y + #{delta_y}
     }
     var mousedown = createMouseEvent('mousedown', start.x, start.y);
     var drag = createMouseEvent('mousemove', end.x, end.y);
@@ -180,6 +180,14 @@ And /^I drag the grippy by ([-|\d]+) pixels$/ do |delta|
   }
 
   @browser.execute_script(script)
+end
+
+And /^I drag the instructions grippy by ([-|\d]+) pixels$/ do |delta|
+  drag_grippy('$(".fa-ellipsis-h").eq(0).parent()', 0, delta)
+end
+
+And /^I drag the visualization grippy by ([-|\d]+) pixels$/ do |delta|
+  drag_grippy('$("#visualizationResizeBar")', delta, 0)
 end
 
 And /^I hover over element with id "([^"]*)"$/ do |element_id|

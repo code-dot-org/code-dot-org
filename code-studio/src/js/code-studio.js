@@ -24,13 +24,12 @@ window.Radium = require('radium');
 
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.
-require('./components/abuse_error.jsx');
-require('./components/report_abuse_form.jsx');
-require('./components/send_to_phone.jsx');
-require('./components/share_dialog.jsx');
-require('./components/small_footer.jsx');
-require('./components/GridEditor.jsx');
-require('./components/IconLibrary.jsx');
+require('./components/abuse_error');
+require('./components/report_abuse_form');
+require('./components/send_to_phone');
+require('./components/small_footer');
+require('./components/GridEditor');
+require('./components/IconLibrary');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
