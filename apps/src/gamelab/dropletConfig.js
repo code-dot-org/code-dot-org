@@ -44,7 +44,7 @@ module.exports.blocks = [
   {func: 'stroke', category: 'Game Lab', paletteParams: ['color'], params: ["'blue'"], customDocURL: "http://p5js.org/reference/#/p5/stroke" },
   {func: 'strokeWeight', category: 'Game Lab', paletteParams: ['size'], params: ["3"], customDocURL: "http://p5js.org/reference/#/p5/strokeWeight" },
   {func: 'noStroke', category: 'Game Lab', customDocURL: "http://p5js.org/reference/#/p5/noStroke" },
-  {func: 'arc', category: 'Game Lab', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "HALF_PI"], customDocURL: "http://p5js.org/reference/#/p5/arc" },
+  {func: 'arc', category: 'Game Lab', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "90"], customDocURL: "http://p5js.org/reference/#/p5/arc" },
   {func: 'ellipse', category: 'Game Lab', paletteParams: ['x','y','w','h'], params: ["200", "200", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/ellipse" },
   {func: 'line', category: 'Game Lab', paletteParams: ['x1','y1','x2','y2'], params: ["0", "0", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/line" },
   {func: 'point', category: 'Game Lab', paletteParams: ['x','y'], params: ["200", "200"], customDocURL: "http://p5js.org/reference/#/p5/point" },
