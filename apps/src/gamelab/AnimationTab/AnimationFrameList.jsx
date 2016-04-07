@@ -5,6 +5,12 @@ var AnimationFrameListItem = require('./AnimationFrameListItem.jsx');
 var NewListItem = require('./NewListItem.jsx');
 var ScrollableList = require('./ScrollableList.jsx');
 
+var styles = {
+  root: {
+    flex: '1 0 0'
+  }
+};
+
 /**
  * Vertical scrolling list of animation frames for the selected animation.
  * This component should be unique within the animation tab.
@@ -12,7 +18,7 @@ var ScrollableList = require('./ScrollableList.jsx');
 var AnimationFrameList = React.createClass({
   render: function () {
     return (
-      <ScrollableList style={{flex: '1 0 0'}} className="animation-frame-list">
+      <ScrollableList style={styles.root} className="animation-frame-list">
         <AnimationFrameListItem index={1} />
         <AnimationFrameListItem index={2} />
         <AnimationFrameListItem index={3} isSelected />
