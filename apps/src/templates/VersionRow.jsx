@@ -29,7 +29,7 @@ var VersionRow = React.createClass({
       button = [
         <a href={location.href + '?version=' + this.props.versionId}
           target="_blank">
-          <button><i className="fa fa-eye"></i></button>
+          <button className="version-preview"><i className="fa fa-eye"></i></button>
         </a>,
         <button className="btn-info" onClick={this.props.onChoose}>{msg.restoreThisVersion()}</button>
       ];
