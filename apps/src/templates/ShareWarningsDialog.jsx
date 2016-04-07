@@ -1,5 +1,5 @@
 var color = require('../color');
-var ShareWarnings = require('./ShareWarnings.jsx');
+var ShareWarnings = require('./ShareWarnings');
 
 /**
  * Modal for our SharingWarnings.

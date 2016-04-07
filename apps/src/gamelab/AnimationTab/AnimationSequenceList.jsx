@@ -2,10 +2,10 @@
 'use strict';
 
 var animationPickerActions = require('../AnimationPicker/actions');
-var AnimationSequenceListItem = require('./AnimationSequenceListItem.jsx');
+var AnimationSequenceListItem = require('./AnimationSequenceListItem');
 var connect = require('react-redux').connect;
-var NewListItem = require('./NewListItem.jsx');
-var ScrollableList = require('./ScrollableList.jsx');
+var NewListItem = require('./NewListItem');
+var ScrollableList = require('./ScrollableList');
 
 /**
  * Vertical scrolling list of animation sequences associated with the

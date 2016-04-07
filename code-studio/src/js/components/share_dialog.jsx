@@ -1,5 +1,5 @@
-var ShareDialogBody = require('./share_dialog_body.jsx');
-var Dialog = require('@cdo/apps/templates/DialogComponent.jsx');
+var ShareDialogBody = require('./share_dialog_body');
+var Dialog = require('@cdo/apps/templates/DialogComponent');
 
 /**
  * Share Dialog used by projects
