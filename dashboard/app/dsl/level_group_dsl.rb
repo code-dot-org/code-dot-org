@@ -7,6 +7,7 @@ class LevelGroupDSL < BaseDSL
     @description = nil
     @hash[:pages] = []
     @levels = []
+    @i18n_strings = Hash.new({})
   end
 
   integer :id
@@ -17,6 +18,8 @@ class LevelGroupDSL < BaseDSL
   def parse_output
     {name: @name, properties: @hash}
   end
+
+  def title(text) @hash[:title] = text end
 
   def page
     @levels = []
