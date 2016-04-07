@@ -1,0 +1,25 @@
+dashboard_enable_pegasus: true
+build_apps: true
+use_my_apps: true
+use_my_shared_js: true
+build_code_studio: true
+use_my_code_studio: true
+levelbuilder_mode: false
+
+
+# Configuration for Pusher.com integration
+# Optional for most devs
+# Optional but very useful if working on Internet Simulator
+
+# use_pusher: true
+# pusher_app_id: ''
+# pusher_application_key: ''
+# pusher_application_secret: ''
+
+netsim_shard_expiry_seconds: 1800
+
+properties_encryption_key: ''
+applitools_eyes_api_key: ''
+saucelabs_username: ''
+saucelabs_authkey: ''
+
