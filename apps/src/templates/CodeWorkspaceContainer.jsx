@@ -6,7 +6,7 @@
  */
 
 var Radium = require('radium');
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
+var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
 
 var styles = {

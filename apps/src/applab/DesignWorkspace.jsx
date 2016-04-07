@@ -1,6 +1,6 @@
 var applabMsg = require('./locale');
-var DesignModeBox = require('./DesignModeBox.jsx');
-var DesignModeHeaders = require('./DesignModeHeaders.jsx');
+var DesignModeBox = require('./DesignModeBox');
+var DesignModeHeaders = require('./DesignModeHeaders');
 
 module.exports = React.createClass({
   propTypes: {

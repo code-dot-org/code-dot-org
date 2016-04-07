@@ -1,5 +1,5 @@
 /* global dashboard */
-var VersionRow = require('./VersionRow.jsx');
+var VersionRow = require('./VersionRow');
 var sourcesApi = require('../clientApi').sources;
 
 /**
