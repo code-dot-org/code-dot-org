@@ -3,6 +3,7 @@
 # http://www.w3.org/TR/upgrade-insecure-requests
 
 require 'cdo/rack/process_html'
+require 'dynamic_config/dcdo'
 
 module Rack
   class UpgradeInsecureRequests < ProcessHtml
