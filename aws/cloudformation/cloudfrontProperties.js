@@ -1,6 +1,6 @@
 // Lambda function for missing CloudFront properties.
 // TODO remove once CloudFormation adds support for CloudFront ACM.
-exports.handler = function (event, context) {
+exports.handler = function(event, context) {
   var response = require('cfn-response');
   console.log('REQUEST RECEIVED:\\n', JSON.stringify(event));
   var props = event.ResourceProperties;
@@ -15,11 +15,12 @@ exports.handler = function (event, context) {
     oldCert['CloudFrontDefaultCertificate'] = JSON.parse(oldCert['CloudFrontDefaultCertificate']);
     var AWS = require('aws-sdk');
     var cloudfront = new AWS.CloudFront();
-    cloudfront.getDistributionConfig({Id: distributionId}, function (err, data) {
+    cloudfront.getDistributionConfig({Id: distributionId}, function(err, data) {
       if (err) {
         console.log('getDistributionConfig failed:\\n', err);
         response.send(event, context, response.FAILED, responseData);
-      } else {
+      }
+      else {
         var etag = data.ETag;
         var config = data.DistributionConfig;
         config['ViewerCertificate'] = event.RequestType == 'Delete' ? oldCert : cert;
@@ -29,7 +30,7 @@ exports.handler = function (event, context) {
           Id: distributionId,
           DistributionConfig: config,
           IfMatch: etag
-        }, function (err, data) {
+        }, function(err, data) {
           if (err) {
             console.log('updateDistribution call failed:\\n', err);
             response.send(event, context, response.FAILED, responseData);

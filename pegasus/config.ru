@@ -2,16 +2,7 @@ require File.expand_path('../router', __FILE__)
 
 require 'rack/csrf'
 use Rack::Session::Cookie, secret: (CDO.sinatra_session_secret || 'dev_mode')
-
-# The following routes are protected against CSRF by including
-# an unguessable session token as a form parameter or AJAX
-# request header.
-CSRF_PROTECTED_ROUTES = [
-  'POST:/v2/poste/send-message',
-  'POST:/v2/sections',
-  'POST:/v2/sections/.*'
-]
-use Rack::Csrf, check_only: CSRF_PROTECTED_ROUTES
+use Rack::Csrf, check_only: ['POST:/v2/poste/send-message']
 
 require 'rack/ssl-enforcer'
 use Rack::SslEnforcer,
