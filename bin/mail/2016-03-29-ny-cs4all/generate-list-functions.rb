@@ -76,7 +76,7 @@ def query_hoc_organizers_no_code_studio
 
   hoc_organizer_code_studio_users = query_dashboard_teachers %Q(
     SELECT email FROM users
-    WHERE email IN (#{hoc_organizers.keys.map{|email|"'#{email}'"}.join(',')})
+    WHERE email IN (#{hoc_organizers.keys.map{|email| "'#{email}'"}.join(',')})
   )
   puts "#{hoc_organizer_code_studio_users.length} of those are code studio users."
 
