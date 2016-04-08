@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160406190753) do
+ActiveRecord::Schema.define(version: 20160407173756) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -360,10 +360,13 @@ ActiveRecord::Schema.define(version: 20160406190753) do
   add_index "plc_evaluation_questions", ["plc_course_unit_id"], name: "index_plc_evaluation_questions_on_plc_course_unit_id", using: :btree
 
   create_table "plc_learning_modules", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "name",               limit: 255
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "plc_course_unit_id", limit: 4,   null: false
   end
+
+  add_index "plc_learning_modules", ["plc_course_unit_id"], name: "index_plc_learning_modules_on_plc_course_unit_id", using: :btree
 
   create_table "plc_learning_modules_tasks", id: false, force: :cascade do |t|
     t.integer "plc_learning_module_id", limit: 4, null: false
@@ -723,5 +726,6 @@ ActiveRecord::Schema.define(version: 20160406190753) do
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
+  add_foreign_key "plc_learning_modules", "plc_course_units"
   add_foreign_key "survey_results", "users"
 end
