@@ -71,28 +71,3 @@ JavaScript code specific to our **Code Studio** learning platform.  This also be
 * **cookbooks**: Configuration management through [Chef](https://www.chef.io/).
 * **shared**: Source and assets used by many parts of our application.
 * **tools**: Git commit hooks.
-
-
-## Building Javascript (apps, blockly-core, and code-studio) (optional)
-
-The studio.code.org default dashboard install includes a static build of blockly and of code-studio js, but if you want to make modifications to these you'll want to enable building them in the build:
-
-### Enabling Apps Builds
-
-You'll need to do this once:
-
-1. OS X:
-  1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-1. `cd code-dot-org`
-1. To build apps/blocky-core, edit `locals.yml` to add:
-  1. Add `build_apps: true`
-  1. Add `build_blockly_core: true` (if you want to build blockly core -- not necessary if you only want to make changes to apps)
-  1. Add `use_my_apps: true`
-1. To build code_studio js, edit `locals.yml` to add:
-  1. Add `use_my_code_studio: true`
-1. `rake package`
-
-This configures your system to build apps/blockly-core/code-studio whenever you run `rake build` and to use the versions that you build yourself.
-
-
-
