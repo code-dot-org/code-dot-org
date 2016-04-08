@@ -66,6 +66,16 @@ var TopInstructions = React.createClass({
     collapsed: React.PropTypes.bool.isRequired,
     onToggleCollapsed: React.PropTypes.func.isRequired,
     onChangeHeight: React.PropTypes.func.isRequired,
+    onLoadImage: React.PropTypes.func.isRequired
+  },
+
+  /**
+   * Called externally
+   * @returns {number} The height of the rendered contents in pixels
+   */
+  getContentHeight: function () {
+    var instructionsContent = this.refs.instructions.refs.instructionsMarkdown;
+    return $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true);
   },
 
   /**
@@ -83,6 +93,11 @@ var TopInstructions = React.createClass({
 
     this.props.onChangeHeight(newHeight);
     return newHeight - currentHeight;
+  },
+
+  componentDidMount: function () {
+    // Parent needs to readjust some sizing after images have loaded
+    $(ReactDOM.findDOMNode(this)).find('img').load(this.props.onLoadImage);
   },
 
   render: function () {

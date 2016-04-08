@@ -45,7 +45,7 @@ var AppLabView = React.createClass({
 
   /**
    * Called when the window resizes. Look to see if width/height changed, then
-   * call adjustHeights as our maxHeight may need adjusting.
+   * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
   onResize: function () {
     var windowWidth = $(window).width();
@@ -54,39 +54,32 @@ var AppLabView = React.createClass({
     // We fire window resize events when the grippy is dragged so that non-React
     // controlled components are able to rerender the editor. If width/height
     // didn't change, we don't need to do anything else here
-    if (windowWidth === this.state.width && windowHeight === this.state.height) {
+    if (windowWidth === this.state.windowWidth &&
+        windowHeight === this.state.windowHeight) {
       return;
     }
 
     this.setState({
-      width: $(window).width(),
-      height: $(window).height()
+      windowWidth: $(window).width(),
+      windowHeight: $(window).height()
     });
 
-    this.adjustHeights();
+    this.adjustTopPaneHeight();
   },
 
   /**
-   * Adjust the height/maxHeight of our instructions based on the rendered size
+   * Adjust the height and maxHeight of our top pane based on the rendered size
    * of the instructions, and the rendered size of the workspace.
+   * Our strategy in doing so is as follows:
+   * The top pane should never be longer than the rendered height of the instructions
+   * The workspace area has a minimum size, and we shouldn't allow the top pane
+   * to grow enough to exceed this.
+   * At small enough window sizes where we can't shrink enough to meet all of
+   * our minimum sizes, shrink the debugger, editor, and instructions pane equally
    */
-  adjustHeights: function () {
+  adjustTopPaneHeight: function () {
     if (!this.props.instructionsInTopPane) {
       return;
-    }
-
-    var instructionsContent = this.refs.topInstructions.refs.instructions.refs.instructionsMarkdown;
-    var instructionsContentHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true);
-    var workspaceHeight = $(ReactDOM.findDOMNode(this.refs.codeWorkspace)).height();
-    var totalHeight = workspaceHeight + this.props.instructionsHeight;
-
-    var height = this.props.instructionsHeight || 300;
-    var maxHeight;
-
-    // Dont want height to extend past rendered length of content.
-    maxHeight = instructionsContentHeight + HEADER_HEIGHT + RESIZER_HEIGHT;
-    if (maxHeight < height) {
-      height = maxHeight;
     }
 
     // Have a preference for showing at least 150px of editor and 120px of
@@ -96,40 +89,49 @@ var AppLabView = React.createClass({
     var DEBUGGER_RESERVE = 120;
     var INSTRUCTIONS_RESERVE = 150;
 
+    var topPaneHeight = this.props.instructionsHeight;
+    var totalHeight = topPaneHeight + this.refs.codeWorkspace.getContentHeight();
+    var instructionsContentHeight = this.refs.topInstructions.getContentHeight();
+
+    // What the max space we could use for our top pane if editor/debugger used
+    // only the reserved amount of space.
     var topSpaceAvailable = totalHeight - EDITOR_RESERVE - DEBUGGER_RESERVE;
-    if (topSpaceAvailable < height) {
-      // if we'll still be at least 150px, just make our height smaller
+
+    // Dont want topPaneHeight to extend past rendered length of content.
+    var maxHeight = instructionsContentHeight + HEADER_HEIGHT + RESIZER_HEIGHT;
+    if (maxHeight < topPaneHeight) {
+      topPaneHeight = maxHeight;
+    }
+
+    if (topSpaceAvailable < topPaneHeight) {
+      // if we'll still be at least 150px, just make our topPaneHeight smaller
       if (topSpaceAvailable > INSTRUCTIONS_RESERVE) {
-        height = topSpaceAvailable;
+        topPaneHeight = topSpaceAvailable;
       } else {
-        height = Math.round(totalHeight / 3);
+        topPaneHeight = Math.round(totalHeight / 3);
       }
-      maxHeight = height;
+      maxHeight = topPaneHeight;
     } else if (topSpaceAvailable < maxHeight) {
       maxHeight = topSpaceAvailable;
     }
-    this.props.setInstructionsHeight(Math.min(height, maxHeight));
+    this.props.setInstructionsHeight(Math.min(topPaneHeight, maxHeight));
     this.props.setInstructionsMaxHeight(maxHeight);
   },
 
   componentDidMount: function () {
     if (this.props.instructionsInTopPane) {
-      this.adjustHeights();
+      this.adjustTopPaneHeight();
 
-      // Image loading can change the size of our instructions. Call adjustHeights
-      // so that our maxHeight is updated appropriately.
-      var dom = ReactDOM.findDOMNode(this.refs.topInstructions);
-      $(dom).find('img').load(function () {
-        this.adjustHeights();
-      }.bind(this));
+      window.addEventListener('resize', this.onResize);
     }
 
     this.props.onMount();
-    window.addEventListener('resize', this.onResize);
   },
 
   componentWillUnmount: function () {
-    window.removeEventListener("resize", this.onResize);
+    if (this.props.instructionsInTopPane) {
+      window.removeEventListener("resize", this.onResize);
+    }
   },
 
   /**
@@ -187,7 +189,8 @@ var AppLabView = React.createClass({
             markdown={this.props.instructionsMarkdown}
             collapsed={this.props.instructionsCollapsed}
             onToggleCollapsed={this.props.toggleInstructionsCollapsed}
-            onChangeHeight={this.props.setInstructionsHeight}/>
+            onChangeHeight={this.props.setInstructionsHeight}
+            onLoadImage={this.adjustTopPaneHeight}/>
         }
         <CodeWorkspaceContainer
             ref="codeWorkspace"
