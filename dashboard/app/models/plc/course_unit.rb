@@ -24,6 +24,6 @@ class Plc::CourseUnit < ActiveRecord::Base
   validates :plc_course, presence: true
 
   def get_all_possible_learning_resources
-    plc_learning_modules.map(&:plc_tasks).flatten
+    plc_learning_modules.map(&:plc_tasks).flatten.select{ |task| task.class == Plc::LearningResourceTask }
   end
 end
