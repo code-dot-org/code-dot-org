@@ -176,6 +176,7 @@ standardConfig.categories = {
  *  by the primary dropletConfig if there is overlap between the two.
  * @param {Object} options
  * @param {boolean} options.paletteOnly ignore blocks not in codeFunctions palette
+ * @param {boolean} options.ignoreNoAutocompleteBlocks ignore blocks with noAutocomplete property
  * @param {boolean} options.ignoreDocFunc don't include based on block.docFunc
  * @returns {Array<DropletBlock>}
  */
@@ -579,8 +580,9 @@ exports.IGNORE_NO_AUTOCOMPLETE_BLOCKS = true;
  * Returns a set of all blocks
  * @param {DropletConfig|null} dropletConfig custom configuration, may be null
  * @param {codeFunctions|null} codeFunctions with block overrides, may be null
- * @param paletteOnly boolean: filter to only those blocks that are in codeFunctions
+ * @param {boolean} paletteOnly filter to only those blocks that are in codeFunctions
  *   palette, or who share documentation (via docFunc) with other blocks that are
+ * @param {boolean} ignoreNoAutocompleteBlocks ignore blocks with noAutocomplete property
  * @returns {DropletBlock[]} a list of all available Droplet blocks,
  *      including the given config's blocks
  */
