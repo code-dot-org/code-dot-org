@@ -1,9 +1,24 @@
+# Setup
 This document describes how to set up your workstation to develop for Code.org.
 
-# Install OS-specific prerequisites
-You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM). Setup for Windows is more complicated and relatively few developers use it. Start with the instructions for your platform in the subsections below, followed by the Common Setup section.
+You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM). Setup for Windows is more complicated and relatively few developers use it. Make sure you follow the instructions for your platform in the subsections below.
 
-## OS X Mavericks / Yosemite / El Capitan
+## Overview
+
+1. Install OS-specific prerequisites
+   - See the appropriate section below: [OSX](#os-x-mavericks--yosemite--el-capitan), [Ubuntu](#ubuntu-1404), [Windows](#windows-note-use-an-ubuntu-vm)
+1. `git clone https://github.com/code-dot-org/code-dot-org.git`
+1. `gem install bundler -v 1.10.6`
+1. `rbenv rehash`
+1. `cd code-dot-org`
+1. `bundle install`
+1. `rake install`
+1. (Optional) [Enable JavaScript builds](#enabling-javascript-builds)
+1. `rake build`
+
+## OS-specific prerequisites
+
+### OS X Mavericks / Yosemite / El Capitan
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql nvm imagemagick rbenv ruby-build coreutils sqlite phantomjs`
@@ -39,7 +54,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. `node --version  # --> v0.12.4`
   1. `npm --version   # --> 2.10.1`
 
-## Ubuntu 14.04
+### Ubuntu 14.04
 
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk libsqlite3-dev phantomjs build-essential`
@@ -92,17 +107,32 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
   1. Goto step 2 of the common setup instructions
 * Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
-# Common setup
+## Enabling JavaScript builds
+The default dashboard install uses a static build of apps and of code-studio JS, but if you want to make modifications to these you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
 
-1. `git clone https://github.com/code-dot-org/code-dot-org.git`
-1. `gem install bundler -v 1.10.6`
-1. `rbenv rehash`
-1. `cd code-dot-org`
-1. `bundle install`
-1. `rake install`
-1. `rake build`
+1. (OS X) Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+1. Edit locals.yml and enable the following options:
+   
+   ```
+   # code-dot-org/locals.yml
+   
+   # These enable the local apps build
+   build_apps: true
+   use_my_apps: true
+   
+   # These enable the local code-studio build
+   build_code_studio: true
+   use_my_code_studio: true
+   
+   # This enables the local blockly-core build
+   build_blockly_core: true
+   ```
 
-# More Information
+1. Run `rake package` for the changes to take effect.
+
+This configures dashboard to rebuild apps/code-studio/blockly-core whenever you run `rake build` and to use the versions that you built yourself.  See the documentation in those directories faster ways to build and iterate.
+
+## More Information
 Please also see our other documentation, including our:
 * [Main README](./README.md)
 * [Contributing Documentation](./CONTRIBUTING.md)
@@ -110,5 +140,4 @@ Please also see our other documentation, including our:
 * [Styleguide Documentation](./STYLEGUIDE.md)
 * [License](./LICENSE)
 
-Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md)
-for more information on helping us out.
+Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) for more information on helping us out.
