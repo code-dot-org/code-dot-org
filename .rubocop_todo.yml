@@ -363,13 +363,6 @@ Style/RescueModifier:
 Style/SpaceAfterComma:
   Enabled: false
 
-# Offense count: 38
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyleInsidePipes, SupportedStyles.
-# SupportedStyles: space, no_space
-Style/SpaceAroundBlockParameters:
-  Enabled: false
-
 # Offense count: 197
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
