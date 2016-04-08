@@ -73,6 +73,7 @@ var instructionsInitialState = {
   collapsed: false,
   // represents the uncollapsed height
   height: 0,
+  maxHeight: 0,
   inTopPane: false
 };
 
@@ -97,6 +98,12 @@ function instructions(state, action) {
   if (action.type === ActionType.SET_INSTRUCTIONS_HEIGHT) {
     return _.assign({}, state, {
       height: action.height
+    });
+  }
+
+  if (action.type === ActionType.SET_INSTRUCTIONS_MAX_HEIGHT) {
+    return _.assign({}, state, {
+      maxHeight: action.maxHeight
     });
   }
 
