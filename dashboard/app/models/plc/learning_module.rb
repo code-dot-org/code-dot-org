@@ -20,4 +20,5 @@ class Plc::LearningModule < ActiveRecord::Base
   has_many :plc_evaluation_answers, class_name: '::Plc::EvaluationAnswer', foreign_key: 'plc_learning_module_id', dependent: :destroy
 
   validates_presence_of :plc_course_unit_id
+  attr_readonly :plc_course_unit_id
 end
