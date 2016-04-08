@@ -473,7 +473,7 @@ SQL
   end
 
   def concept_progress(script = Script.twenty_hour_script)
-    # todo: cache everything but the user's progress
+    # TODO: cache everything but the user's progress
     user_levels_map = self.user_levels.includes([{level: :concepts}]).index_by(&:level_id)
     user_trophy_map = self.user_trophies.includes(:trophy).index_by(&:concept_id)
     result = Hash.new{|h,k| h[k] = {obj: k, current: 0, max: 0}}
