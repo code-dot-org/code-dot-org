@@ -546,6 +546,20 @@ GameLabP5.prototype.notifyPreloadPhaseComplete = function () {
   }
 };
 
+GameLabP5.prototype.notifyKeyCodeDown = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keydown
+  if (this.p5) {
+    this.p5._onkeydown({ which: keyCode });
+  }
+};
+
+GameLabP5.prototype.notifyKeyCodeUp = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keyup
+  if (this.p5) {
+    this.p5._onkeyup({ which: keyCode });
+  }
+};
+
 GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
   return {
     width: this.p5,
