@@ -6,7 +6,7 @@
 #  name               :string(255)
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
-#  plc_course_unit_id :integer
+#  plc_course_unit_id :integer          not null
 #
 # Indexes
 #

@@ -368,8 +368,8 @@ module LevelsHelper
   end
 
   def build_copyright_strings
-    # TODO (brent) - these would ideally also go in _javascript_strings.html right now, but it can't
-    # deal with params
+    # TODO(brent): These would ideally also go in _javascript_strings.html right now, but it can't
+    # deal with params.
     {
         :thank_you => URI.escape(I18n.t('footer.thank_you')),
         :help_from_html => I18n.t('footer.help_from_html'),
