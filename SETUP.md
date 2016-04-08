@@ -1,9 +1,23 @@
+# Setup
 This document describes how to set up your workstation to develop for Code.org.
 
-# Install OS-specific prerequisites
 You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM). Setup for Windows is more complicated and relatively few developers use it. Start with the instructions for your platform in the subsections below, followed by the Common Setup section.
 
-## OS X Mavericks / Yosemite / El Capitan
+## Overview
+
+1. Install OS-specific prerequisites
+   - See the appropriate section below: [OSX](#os-x-mavericks--yosemite--el-capitan), [Ubuntu](#ubuntu-1404), [Windows](#windows-note-use-an-ubuntu-vm)
+1. `git clone https://github.com/code-dot-org/code-dot-org.git`
+1. `gem install bundler -v 1.10.6`
+1. `rbenv rehash`
+1. `cd code-dot-org`
+1. `bundle install`
+1. `rake install`
+1. `rake build`
+
+## OS-specific prerequisites
+
+### OS X Mavericks / Yosemite / El Capitan
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql nvm imagemagick rbenv ruby-build coreutils sqlite phantomjs`
@@ -39,7 +53,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. `node --version  # --> v0.12.4`
   1. `npm --version   # --> 2.10.1`
 
-## Ubuntu 14.04
+### Ubuntu 14.04
 
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk libsqlite3-dev phantomjs build-essential`
@@ -92,17 +106,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
   1. Goto step 2 of the common setup instructions
 * Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
-# Common setup
-
-1. `git clone https://github.com/code-dot-org/code-dot-org.git`
-1. `gem install bundler -v 1.10.6`
-1. `rbenv rehash`
-1. `cd code-dot-org`
-1. `bundle install`
-1. `rake install`
-1. `rake build`
-
-# More Information
+## More Information
 Please also see our other documentation, including our:
 * [Main README](./README.md)
 * [Contributing Documentation](./CONTRIBUTING.md)
@@ -110,5 +114,4 @@ Please also see our other documentation, including our:
 * [Styleguide Documentation](./STYLEGUIDE.md)
 * [License](./LICENSE)
 
-Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md)
-for more information on helping us out.
+Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) for more information on helping us out.
