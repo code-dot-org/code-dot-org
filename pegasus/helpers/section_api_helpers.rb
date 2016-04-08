@@ -3,7 +3,7 @@ require 'cdo/script_constants'
 require_relative '../helper_modules/dashboard'
 require 'cdo/section_helpers'
 
-# TODO: -- change the APIs below to check logged in user instead of passing in a user id
+# TODO: Change the APIs below to check logged in user instead of passing in a user id
 class DashboardStudent
 
   def self.fetch_user_students(user_id)
@@ -40,7 +40,7 @@ class DashboardStudent
 
   def self.fetch_if_allowed(id_or_ids, dashboard_user_id)
     if id_or_ids.is_a?(Array)
-      # TODO: this should actually send a where id in (,,,) type query
+      # TODO: This should actually send a where id in (,,,) type query.
       return id_or_ids.map {|id| fetch_if_allowed(id, dashboard_user_id)}
     end
 
@@ -72,7 +72,7 @@ class DashboardStudent
     fields[:encrypted_password] = encrypt_password(params[:password]) unless params[:password].nil_or_empty?
     fields[:gender] = params[:gender] if valid_gender?(params[:gender])
     fields[:birthday] = age_to_birthday(params[:age]) if age_to_birthday(params[:age])
-    # TODO: only save birthday if age changed
+    # TODO: Only save birthday if age changed.
     fields.merge!(random_secrets) if params[:secrets].to_s == 'reset'
 
     rows_updated = Dashboard.db[:users].
@@ -85,7 +85,7 @@ class DashboardStudent
 
   def self.birthday_to_age(birthday)
     return if birthday.nil?
-    age = ((Date.today - birthday) / 365).to_i # TODO: should this be 365.25
+    age = ((Date.today - birthday) / 365).to_i # TODO: Should this be 365.25?
     age = "21+" if age >= 21
     age
   end
@@ -255,9 +255,9 @@ class DashboardSection
   end
 
   def self.fetch_if_allowed(id, user_id)
-    # TODO: allow caller to specify fields that they want because the
+    # TODO: Allow caller to specify fields that they want because the
     # recursion is getting a bit out of control (eg. you don't want to
-    # get all the students passwords when we get the list of sections)
+    # get all the students passwords when we get the list of sections).
 
     return nil unless row = Dashboard.db[:sections].
       join(:users, :id=>:user_id).
