@@ -1,3 +1,4 @@
+require 'active_support/core_ext/string' # Get String#underscore
 require 'aws-sdk'
 require 'logger'
 
@@ -39,7 +40,7 @@ class S3Packaging
     begin
       ensure_updated_package
     rescue Aws::S3::Errors::NoSuchKey
-      @logger.info "Package does not exist on S3. If you have made local changes to #{@package_name}, you need to set build_#{@package_name} and use_my_#{@package_name} to true in locals.yml"
+      @logger.info "Package does not exist on S3. If you have made local changes to #{@package_name}, you need to set build_#{@package_name.underscore} and use_my_#{@package_name.underscore} to true in locals.yml"
       return false
     rescue Exception => e
       @logger.info "update_from_s3 failed: #{e.message}"
