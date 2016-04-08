@@ -12,8 +12,6 @@
 #  index_pd_plps_on_contact_id  (contact_id)
 #
 
-module Pd
-  class Plp < ActiveRecord::Base
-    belongs_to :contact, class_name: 'User'
-  end
+class Pd::Plp < ActiveRecord::Base
+  belongs_to :contact, class_name: 'User'
 end
