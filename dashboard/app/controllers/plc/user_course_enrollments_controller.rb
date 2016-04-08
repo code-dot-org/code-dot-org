@@ -1,9 +1,10 @@
 class Plc::UserCourseEnrollmentsController < ApplicationController
-  load_and_authorize_resource except: :create
-  authorize_resource only: :create
+  load_and_authorize_resource except: [:create, :enrollments_for_user]
+  authorize_resource only: [:create, :enrollments_for_user]
 
   def index
-    @user_course_enrollments = @user_course_enrollments.where(user: current_user)
+    @user_course_enrollments = @user_course_enrollments.where(user: current_user.admin? ? params[:user] || current_user : current_user)
+    @enable_links = (current_user.id.to_s == params[:user]) || params[:user].nil?
   end
 
   # GET /plc/user_course_enrollments/new
@@ -26,9 +27,18 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
     end
   end
 
+  def group_view
+    @courses = Plc::Course.all
+    @user_course_enrollment = Plc::UserCourseEnrollment.all
+  end
+
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_course_enrollment_params
     params.permit(:user_email, :plc_course_id)
+  end
+
+  def view_user_enrollment_params
+    params.permit(:user)
   end
 end

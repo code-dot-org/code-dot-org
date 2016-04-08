@@ -7,8 +7,9 @@
 %p
   = link_to 'Back to my learning plan', plc_user_course_enrollments_path
 
-%h4
-  Get Badged
+- if @enrollment_unit_assignment.status == Plc::EnrollmentUnitAssignment::IN_PROGRESS
+  %h4
+    Get Badged
 
 .module_assignments
   - @enrollment_unit_assignment.plc_module_assignments.each do |module_assignment|
@@ -18,9 +19,12 @@
       - module_assignment.plc_task_assignments.each do |task_assignment|
         - icon_class, icon_style = task_assignment.get_icon_and_style
         %i{class: 'fa ' + icon_class.to_s, style: icon_style}
-        = link_to task_assignment.plc_task.name,
-                  task_assignment.plc_task.try(:resource_url) ? "http://#{task_assignment.plc_task.resource_url}" : plc_enrollment_task_assignment_path(task_assignment),
-                  target: '_blank'
+        - if @enable_links
+          = link_to task_assignment.plc_task.name,
+                    task_assignment.plc_task.try(:resource_url) ? "http://#{task_assignment.plc_task.resource_url}" : plc_enrollment_task_assignment_path(task_assignment),
+                    target: '_blank'
+        - else
+          #{task_assignment.plc_task.name}
         %br
 
 .all_possible_resources
@@ -28,5 +32,8 @@
     All learning resources
   - @enrollment_unit_assignment.plc_course_unit.get_all_possible_learning_resources.each do |learning_resource|
     %i{class: 'fa ' + (learning_resource.icon.nil? ? 'fa-book' : learning_resource.icon)}
-    = link_to learning_resource.name, "http://#{learning_resource.resource_url}", target: '_blank'
+    - if @enable_links
+      = link_to learning_resource.name, "http://#{learning_resource.resource_url}", target: '_blank'
+    - else
+      = learning_resource.name
     %br

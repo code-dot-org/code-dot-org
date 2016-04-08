@@ -1,0 +1,34 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/plc', media: 'all'
+
+- @courses.each do |course|
+  - enrollments = @user_course_enrollments.where(plc_course: course)
+  - next if enrollments.length == 0
+  Viewing progress for for #{course.name}
+
+  %table#groupView
+    %th
+      Teacher name
+    - course.plc_course_units.each do |course_unit|
+      %th #{course_unit.unit_name}
+    - enrollments.each do |enrollment|
+      %tr{style: 'border-top: solid grey; border-bottom: solid grey'}
+        %td{style: 'border-right: solid grey'}
+          = link_to enrollment.user.name, plc_user_course_enrollments_path(user: enrollment.user.id)
+        - enrollment.plc_unit_assignments.each do |unit_assignment|
+          - status, icon, color, icon_color = unit_assignment.status_and_icon_and_color_and_icon_color
+          %td{style: "border-right: solid #aaaaaa; background-color: #{color}"}
+            - if unit_assignment.status == Plc::EnrollmentUnitAssignment::IN_PROGRESS
+              - unit_assignment.plc_module_assignments.each do |module_assignment|
+              - status, color = module_assignment.status_and_style
+                %div{style: "background-color: #{color}"}
+                  = link_to module_assignment.plc_learning_module.name, module_assignment.plc_enrollment_unit_assignment
+            - else
+              %i{class: icon + ' fa-lg', style: "color: #{icon_color}"}
+              %span
+                - if unit_assignment.status == Plc::EnrollmentUnitAssignment::COMPLETED
+                  = link_to status, unit_assignment
+                - else
+                  = status
+
+  %br
