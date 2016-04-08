@@ -28,7 +28,7 @@ npm run build
 
 1. To make your changes show up in dashboard, do the following after the first time you build apps:
   - Add `use_my_apps: true` to your locals.yml config file, by editing it yourself or running the following command from the repository root: `echo "use_my_apps: true" >> locals.yml`
-  - Run `rake install:apps_symlink` to pick up the configuration change.
+  - Run `rake package:apps:symlink` to pick up the configuration change.
   - If you are currently running dashboard, stop and restart dashboard-server.
 
 1. If you find your changes are not showing up within dashboard, you may have accidentally reverted your symlink to point to the pre-built version of apps (e.g. when switching branches or stashing changes). To check your symlink, run:
