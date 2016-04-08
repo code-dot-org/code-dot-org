@@ -13,6 +13,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `cd code-dot-org`
 1. `bundle install`
 1. `rake install`
+1. (Optional) [Enable JavaScript builds](#enabling-javascript-builds)
 1. `rake build`
 
 ## OS-specific prerequisites
