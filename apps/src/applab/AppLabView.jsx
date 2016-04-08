@@ -71,6 +71,10 @@ var AppLabView = React.createClass({
    * of the instructions, and the rendered size of the workspace.
    */
   adjustHeights: function () {
+    if (!this.props.instructionsInTopPane) {
+      return;
+    }
+
     var instructionsContent = this.refs.topInstructions.refs.instructions.refs.instructionsMarkdown;
     var instructionsContentHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true);
     var workspaceHeight = $(ReactDOM.findDOMNode(this.refs.codeWorkspace)).height();
@@ -109,14 +113,16 @@ var AppLabView = React.createClass({
   },
 
   componentDidMount: function () {
-    this.adjustHeights();
-
-    // Image loading can change the size of our instructions. Call adjustHeights
-    // so that our maxHeight is updated appropriately.
-    var dom = ReactDOM.findDOMNode(this.refs.topInstructions);
-    $(dom).find('img').load(function () {
+    if (this.props.instructionsInTopPane) {
       this.adjustHeights();
-    }.bind(this));
+
+      // Image loading can change the size of our instructions. Call adjustHeights
+      // so that our maxHeight is updated appropriately.
+      var dom = ReactDOM.findDOMNode(this.refs.topInstructions);
+      $(dom).find('img').load(function () {
+        this.adjustHeights();
+      }.bind(this));
+    }
 
     this.props.onMount();
     window.addEventListener('resize', this.onResize);
