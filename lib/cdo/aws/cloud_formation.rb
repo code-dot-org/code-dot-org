@@ -14,11 +14,11 @@ module AWS
     # Hard-coded values for our CloudFormation template.
 
     DOMAIN = 'cdn-code.org'
-
+    BRANCH = ENV['branch'] || RakeUtils.git_branch
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
-    STACK_NAME = "#{rack_env}-#{RakeUtils.git_branch}".gsub(STACK_NAME_INVALID_REGEX, '-')
+    STACK_NAME = "#{rack_env}-#{BRANCH}".gsub(STACK_NAME_INVALID_REGEX, '-')
 
     # Fully qualified domain name
     FQDN = "#{STACK_NAME}.#{DOMAIN}"
@@ -110,7 +110,7 @@ module AWS
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
               Aws::S3::Client.new(region: CDO.aws_region).put_object(
                 bucket: S3_BUCKET,
-                key: "chef/#{RakeUtils.git_branch}.tar.gz",
+                key: "chef/#{BRANCH}.tar.gz",
                 body: tmp.read
               )
             end
@@ -163,6 +163,10 @@ module AWS
       end
 
       def json_template(cdn_enabled:)
+        unless system("git ls-remote --exit-code 'https://github.com/code-dot-org/code-dot-org.git' #{BRANCH} > /dev/null")
+          raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
+To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
+        end
         template_string = File.read(aws_dir('cloudformation', 'cloud_formation_adhoc_standalone.yml.erb'))
         @@local_variables = OpenStruct.new(
           local_mode: !!CDO.chef_local_mode,
@@ -170,7 +174,7 @@ module AWS
           ssh_key_name: SSH_KEY_NAME,
           image_id: IMAGE_ID,
           instance_type: INSTANCE_TYPE,
-          branch: RakeUtils.git_branch,
+          branch: BRANCH,
           region: CDO.aws_region,
           environment: rack_env,
           ssh_ip: SSH_IP,
