@@ -14,7 +14,6 @@
 #
 # Indexes
 #
-#  index_script_levels_on_level_id   (level_id)
 #  index_script_levels_on_script_id  (script_id)
 #  index_script_levels_on_stage_id   (stage_id)
 #
@@ -25,7 +24,7 @@ class ScriptLevel < ActiveRecord::Base
   include LevelsHelper
   include Rails.application.routes.url_helpers
 
-  belongs_to :level
+  has_and_belongs_to_many :levels
   belongs_to :script, inverse_of: :script_levels
   belongs_to :stage, inverse_of: :script_levels
   acts_as_list scope: :stage
@@ -35,6 +34,22 @@ class ScriptLevel < ActiveRecord::Base
 
   def script
     Script.get_from_cache(script_id)
+  end
+
+  def level
+    levels[0]
+  end
+
+  def level=(l)
+    levels[0] = l
+  end
+
+  def level_id
+    levels[0].id
+  end
+
+  def level_id=(new_level_id)
+    levels[0] = Level.find(new_level_id)
   end
 
   def next_level

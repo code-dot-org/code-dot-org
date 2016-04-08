@@ -471,7 +471,8 @@ select
   (select coalesce(sum(trophy_id), 0) from user_trophies where user_id = #{self.id}) as current_trophies,
   (select count(*) * 3 from concepts) as max_trophies
 from script_levels sl
-left outer join user_levels ul on ul.level_id = sl.level_id and ul.user_id = #{self.id}
+left outer join levels_script_levels lsl on lsl.script_level_id = sl.id
+left outer join user_levels ul on ul.level_id = lsl.level_id and ul.user_id = #{self.id}
 where sl.script_id = #{script.id}
 SQL
   end

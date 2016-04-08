@@ -185,17 +185,17 @@ FactoryGirl.define do
     end
 
     trait :with_autoplay_video do
-      level {create(:level, :with_autoplay_video)}
+      levels {[create(:level, :with_autoplay_video)]}
     end
 
-    level
+    levels {[create(:level)]}
 
     trait :never_autoplay_video_true do
-      level {create(:level, :never_autoplay_video_true)}
+      levels {[create(:level, :never_autoplay_video_true)]}
     end
 
     trait :never_autoplay_video_false do
-      level {create(:level, :never_autoplay_video_false)}
+      levels {[create(:level, :never_autoplay_video_false)]}
     end
 
     chapter do |script_level|
