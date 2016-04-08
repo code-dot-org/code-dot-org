@@ -6,19 +6,19 @@
 
 Welcome! You've found the source code for [the Code.org website](https://code.org/) and [the Code Studio platform](https://studio.code.org/). Code.org is a non-profit dedicated to expanding access to computer science education. You can read more about our efforts at [code.org/about](https://code.org/about).
 
-## Quick Start
+## Quick start
 
 1. Follow our [setup guide](./SETUP.md) to configure your workstation.
 2. `rake build` to build the application.
 3. `bin/dashboard-server` to launch the development server.
 4. Open your browser to [http://localhost-studio.code.org:3000/](http://localhost-studio.code.org:3000/).
 
-## Want to help?
+## How to help
 
 Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md).
 
 ## What's in this repo?
-We know our repository can be overwhelming.  Here's a quick overview of the major landmarks:
+Here's a quick overview of the major landmarks:
 
 ### [dashboard](./dashboard)
 
@@ -41,7 +41,7 @@ The server for [the **Code.org** website](https://code.org/), a [Sinatra](http:/
 ### [apps](./apps)
 
 The JavaScript 'engine' for all of our tutorials, puzzle types and online tools.  It gets built into a static package that we serve through dashboard.  Start here if you are looking for:
-* The **Hour of Code** tutorials: [Star Wars](https://code.org/starwars), [Minecraft](https://code.org/api/hour/begin/mc), [Frozen](https://studio.code.org/s/frozen) and [Classic Maze](http://studio.code.org/hoc/1)
+* The Hour of Code tutorials: [Star Wars](https://code.org/starwars), [Minecraft](https://code.org/api/hour/begin/mc), [Frozen](https://studio.code.org/s/frozen) and [Classic Maze](http://studio.code.org/hoc/1)
 * Tools like [Artist](https://studio.code.org/projects/artist), [Play Lab](https://studio.code.org/projects/playlab) and [App Lab](https://code.org/educate/applab)
 * Other core puzzle types: Maze, Farmer, Bee, Bounce, Calc, Eval
 
