@@ -273,7 +273,7 @@ FactoryGirl.define do
   factory :district do
     sequence(:name) { |n| "District #{n}" }
     location 'Panem'
-    contact {create(:district_contact).tap{|dc|dc.permission = 'district_contact'}}
+    contact {create(:district_contact).tap{|dc| dc.permission = 'district_contact'}}
   end
 
   factory :workshop do
@@ -308,7 +308,7 @@ FactoryGirl.define do
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do
-    plc_course nil
+    plc_course {create(:plc_course)}
     unit_name "MyString"
     unit_description "MyString"
     unit_order 1
@@ -365,6 +365,7 @@ FactoryGirl.define do
 
   factory :plc_learning_module, :class => 'Plc::LearningModule' do
     name "MyString"
+    plc_course_unit {create(:plc_course_unit)}
   end
   factory :plc_course, :class => 'Plc::Course' do
     name "MyString"
@@ -399,4 +400,13 @@ FactoryGirl.define do
     properties {{survey2016_ethnicity_asian: "1"}}
     properties {{survey2016_foodstamps: "3"}}
   end
+
+  factory :user_proficiency do
+    user { create :student }
+    sequencing_d1_count 1
+    repeat_loops_d2_count 2
+    repeat_loops_d4_count 3
+    conditionals_d5_count 4
+  end
+
 end
