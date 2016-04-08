@@ -291,8 +291,8 @@ class NetSimApi < Sinatra::Base
   # @param [Hash] message - The message we're validating
   # @return [String] a validation error, or nil if no problems were found
   def validate_message(shard_id, message)
-    # TODO validate the base64
-    # TODO this is wildly inefficient, particularly when validating
+    # TODO: Validate the base64.
+    # TODO: This is wildly inefficient, particularly when validating.
     # multi-insert messages
     node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
       node['id'] == message['simulatedBy']

@@ -43,7 +43,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     @answer5_1 = create(:plc_evaluation_answer, answer: 'What do you mean, an African or European Swallow', plc_evaluation_question: @question5, plc_learning_module: @module2)
     @answer5_2 = create(:plc_evaluation_answer, answer: '15 m/s', plc_evaluation_question: @question5, plc_learning_module: nil)
 
-    @user = create :admin
+    @user = create :teacher
     sign_in(@user)
 
     @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @course)

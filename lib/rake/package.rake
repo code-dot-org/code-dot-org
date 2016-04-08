@@ -39,8 +39,8 @@ namespace :package do
       end
     end
     desc "Update #{package} package and create Dashboard symlink."
-    task(package => %w(update symlink).map{|x|"package:#{package}:#{x}"})
+    task(package => %w(update symlink).map{|x| "package:#{package}:#{x}"})
   end
 end
 desc "Update all packages (#{PACKAGES.keys.join(', ')})."
-task package: PACKAGES.keys.map{|x|"package:#{x}"}
+task package: PACKAGES.keys.map{|x| "package:#{x}"}
