@@ -27,8 +27,7 @@ npm run build
 ### Seeing your development version of Apps in Dashboard
 
 1. To make your changes show up in dashboard, do the following after the first time you build apps:
-  - Add `use_my_apps: true` to your locals.yml config file.
-    - If you don't have a locals.yml, start by copying locals.yml.default (`cp locals.yml.default locals.yml`)
+  - Set `use_my_apps: true` to your locals.yml config file.
   - Run `rake package:apps:symlink` to pick up the configuration change.
   - If you are currently running dashboard, stop and restart dashboard-server.
 
