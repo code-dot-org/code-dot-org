@@ -90,8 +90,7 @@ function instructions(state, action) {
     });
   }
 
-  if (action.type === ActionType.TOGGLE_INSTRUCTIONS_COLLAPSED &&
-      action.collapsed !== state.collapsed) {
+  if (action.type === ActionType.TOGGLE_INSTRUCTIONS_COLLAPSED) {
     return _.assign({}, state, {
       collapsed: !state.collapsed
     });

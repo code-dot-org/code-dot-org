@@ -93,7 +93,7 @@ var AppLabView = React.createClass({
     var totalHeight = topPaneHeight + this.refs.codeWorkspace.getContentHeight();
     var instructionsContentHeight = this.refs.topInstructions.getContentHeight();
 
-    // What the max space we could use for our top pane if editor/debugger used
+    // The max space we could use for our top pane if editor/debugger used
     // only the reserved amount of space.
     var topSpaceAvailable = totalHeight - EDITOR_RESERVE - DEBUGGER_RESERVE;
 
