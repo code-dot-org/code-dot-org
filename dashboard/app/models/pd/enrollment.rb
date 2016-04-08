@@ -14,15 +14,13 @@
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
 #
 
-module Pd
-  class Enrollment < ActiveRecord::Base
-    belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
-    validates :name, :email, presence: true
+class Pd::Enrollment < ActiveRecord::Base
+  belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
+  validates :name, :email, presence: true
 
-    validates_confirmation_of :email
+  validates_confirmation_of :email
 
-    def user
-      User.find_by_email_or_hashed_email self.email
-    end
+  def user
+    User.find_by_email_or_hashed_email self.email
   end
 end

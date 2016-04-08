@@ -13,19 +13,17 @@
 #  index_pd_attendances_on_pd_session_id  (pd_session_id)
 #
 
-module Pd
-  class Attendance < ActiveRecord::Base
-    belongs_to :session, :class_name => 'Pd::Session', foreign_key: :pd_session_id
-    belongs_to :teacher, class_name: 'User', foreign_key: :teacher_id
+class Pd::Attendance < ActiveRecord::Base
+  belongs_to :session, class_name: 'Pd::Session', foreign_key: :pd_session_id
+  belongs_to :teacher, class_name: 'User', foreign_key: :teacher_id
 
-    has_one :workshop, class_name: 'Pd::Workshop', through: :session
+  has_one :workshop, class_name: 'Pd::Workshop', through: :session
 
-    def self.for_teacher_in_workshop(teacher, workshop)
-      joins(:workshop).where(teacher: teacher, pd_workshops: {id: workshop.id})
-    end
+  def self.for_teacher_in_workshop(teacher, workshop)
+    joins(:workshop).where(teacher: teacher, pd_workshops: {id: workshop.id})
+  end
 
-    def hours
-      session.hours
-    end
+  def hours
+    session.hours
   end
 end
