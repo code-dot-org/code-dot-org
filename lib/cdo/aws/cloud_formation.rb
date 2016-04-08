@@ -159,6 +159,7 @@ module AWS
           return
         end
         CDO.log.info "\nStack #{action} complete."
+        CDO.log.info "Don't forget to clean up AWS resources by running `rake adhoc:stop` after you're done testing your instance!" if action == :create
       end
 
       def json_template(cdn_enabled:)
