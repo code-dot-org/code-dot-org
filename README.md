@@ -55,6 +55,7 @@ JavaScript code specific to our **Code Studio** learning platform.  This also be
 * [TESTING](./TESTING.md): How to be sure nothing broke.
 * [STYLEGUIDE](./STYLEGUIDE.md): Our code style conventions.
 * Our [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
+* There are many more topical guides in the [docs](./docs) folder.
 * In addition, several sections of the repository have their own documentation:
   * [apps/README](./apps/README.md)
   * [blockly-core/README](./blockly-core/README.md)
@@ -66,7 +67,6 @@ JavaScript code specific to our **Code Studio** learning platform.  This also be
 * **bin**: Developer utilties.
 * **blockly-core**: Our custom version of [Google Blockly](https://developers.google.com/blockly/), the visual programming language used for many of our interactive tutorials.
 * **cookbooks**: Configuration management through [Chef](https://www.chef.io/).
-* **docs**: Additional documentation.
 * **shared**: Source and assets used by many parts of our application.
 * **tools**: Git commit hooks.
 
