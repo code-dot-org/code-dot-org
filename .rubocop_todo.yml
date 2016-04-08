@@ -137,13 +137,6 @@ Style/ClassVars:
 Style/CollectionMethods:
   Enabled: false
 
-# Offense count: 22
-# Cop supports --auto-correct.
-# Configuration parameters: Keywords.
-# Keywords: TODO, FIXME, OPTIMIZE, HACK, REVIEW
-Style/CommentAnnotation:
-  Enabled: false
-
 # Offense count: 27
 # Cop supports --auto-correct.
 Style/CommentIndentation:
@@ -361,13 +354,6 @@ Style/RescueModifier:
 # Offense count: 180
 # Cop supports --auto-correct.
 Style/SpaceAfterComma:
-  Enabled: false
-
-# Offense count: 38
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyleInsidePipes, SupportedStyles.
-# SupportedStyles: space, no_space
-Style/SpaceAroundBlockParameters:
   Enabled: false
 
 # Offense count: 197
