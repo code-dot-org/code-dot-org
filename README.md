@@ -6,21 +6,32 @@
 
 Welcome! You've found the source code for [the Code.org website](https://code.org/) and [the Code Studio platform](https://studio.code.org/). Code.org is a non-profit dedicated to expanding access to computer science education. You can read more about our efforts at [code.org/about](https://code.org/about).
 
+## Quick Start
+
+1. Follow our [setup guide](./SETUP.md) to configure your workstation.
+2. `rake build` to build the application.
+3. `bin/dashboard-server` to launch the development server.
+4. Open your browser to [http://localhost-studio.code.org:3000/](http://localhost-studio.code.org:3000/).
+
+## Want to help?
+
+Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md).
+
 ## What's in this repo?
 We know our repository can be overwhelming.  Here's a quick overview of the major landmarks:
 
 ### [dashboard](./dashboard)
 
-The server for our **Code Studio** learning platform, this [Ruby on Rails](http://rubyonrails.org/) application serves [studio.code.org](https://studio.code.org/) and is responsible for:
+The server for our [**Code Studio** learning platform](https://studio.code.org/), a [Ruby on Rails](http://rubyonrails.org/) application responsible for:
 
+* Our courses, tutorials, and puzzle configurations
 * User accounts
 * Student progress and projects
-* Our courses, tutorials, and puzzle configurations
 * The "levelbuilder" content creation tools
 
 ### [pegasus](./pegasus)
 
-The server for [the Code.org website](https://code.org/), a [Sinatra](http://www.sinatrarb.com/) application responsible for:
+The server for [the **Code.org** website](https://code.org/), a [Sinatra](http://www.sinatrarb.com/) application responsible for:
 
 * [code.org](https://code.org)
 * [hourofcode.com](https://hourofcode.com)
@@ -38,7 +49,18 @@ The JavaScript 'engine' for all of our tutorials, puzzle types and online tools.
 
 JavaScript code specific to our **Code Studio** learning platform.  This also becomes a static package served by dashboard, and is tightly coupled to dashboard code.
 
-### The rest of it
+### Documentation
+
+* [SETUP](./SETUP.md): Instructions to get everything up and running.
+* [TESTING](./TESTING.md): How to be sure nothing broke.
+* [STYLEGUIDE](./STYLEGUIDE.md): Our code style conventions.
+* Our [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
+* In addition, several sections of the repository have their own documentation:
+  * [apps/README](./apps/README.md)
+  * [blockly-core/README](./blockly-core/README.md)
+  * [code-studio/README](./code-studio/README.md)
+
+### Everything else
 
 * **aws**: Configuration and scripts that manage our deployments.
 * **bin**: Developer utilties.
@@ -48,17 +70,9 @@ JavaScript code specific to our **Code Studio** learning platform.  This also be
 * **shared**: Source and assets used by many parts of our application.
 * **tools**: Git commit hooks.
 
-## The documentation
 
-* [SETUP](./SETUP.md): Instructions to get everything up and running.
-* [TESTING](./TESTING.md): How to be sure nothing broke.
-* [STYLEGUIDE](./STYLEGUIDE.md): Our code style conventions.
-* In addition, several sections of the repository have their own documentation:
-  * [apps/README](./apps/README.md)
-  * [blockly-core/README](./blockly-core/README.md)
-  * [code-studio/README](./code-studio/README.md)
 
-## Quick Start
+## Running parts of the application
 
 ### Running Dashboard
 
@@ -95,7 +109,7 @@ You'll need to do this once:
 
 This configures your system to build apps/blockly-core/code-studio whenever you run `rake build` and to use the versions that you build yourself.
 
-#### Building
+### Building
 
 1. `cd code-dot-org`
 1. `rake build`
@@ -108,7 +122,4 @@ You can also set `build_dashboard: false` and/or `build_pegasus: false` in `loca
 
 Alternatively, you can run: `rake build:core_and_apps_dev`, which will build blockly core and the apps bundle without running tests and without localization.
 
-### Want to help?
 
-Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md)
-for more information on helping us out.
