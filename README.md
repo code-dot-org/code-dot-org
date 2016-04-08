@@ -13,6 +13,8 @@ Welcome! You've found the source code for [the Code.org website](https://code.or
 3. `bin/dashboard-server` to launch the development server.
 4. Open your browser to [http://localhost-studio.code.org:3000/](http://localhost-studio.code.org:3000/).
 
+To see a list of all build commands, run `rake` from the repository root.
+
 ## How to help
 
 Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md).
@@ -71,28 +73,11 @@ JavaScript code specific to our **Code Studio** learning platform.  This also be
 * **tools**: Git commit hooks.
 
 
-
-## Running parts of the application
-
-### Running Dashboard
-
-1. `cd code-dot-org`
-2. `rake build:dashboard` (Generally, do this after each pull)
-3. `bin/dashboard-server`
-4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
-
-### Running Pegasus
-
-1. `cd code-dot-org`
-2. `rake build:pegasus` (Generally, do this after each pull)
-3. `bin/pegasus-server`
-4. Visit [http://localhost.code.org:3000/](http://localhost.code.org:3000/)
-
-### Building Javascript (apps, blockly-core, and code-studio) (optional)
+## Building Javascript (apps, blockly-core, and code-studio) (optional)
 
 The studio.code.org default dashboard install includes a static build of blockly and of code-studio js, but if you want to make modifications to these you'll want to enable building them in the build:
 
-#### Enabling Apps Builds
+### Enabling Apps Builds
 
 You'll need to do this once:
 
@@ -109,17 +94,5 @@ You'll need to do this once:
 
 This configures your system to build apps/blockly-core/code-studio whenever you run `rake build` and to use the versions that you build yourself.
 
-### Building
-
-1. `cd code-dot-org`
-1. `rake build`
-
-This will build everything you have set to build in `locals.yml`.
-
-You can use `rake build:apps`, `rake build:blockly_core` and `rake build:code_studio` to build a specific project.
-
-You can also set `build_dashboard: false` and/or `build_pegasus: false` in `locals.yml` if you don't need to build these frequently. They default to `true`.
-
-Alternatively, you can run: `rake build:core_and_apps_dev`, which will build blockly core and the apps bundle without running tests and without localization.
 
 
