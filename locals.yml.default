@@ -8,29 +8,29 @@ dashboard_enable_pegasus: true
 
 
 # Run dashboard-server with the level editing interface enabled (for admins)
-levelbuilder_mode: false
+#levelbuilder_mode: true
 
 
 # Whether rake:build should rebuild the blockly-core package
-build_blockly_core: false
+#build_blockly_core: true
 
 
 # Whether rake:build should rebuild the apps package
-build_apps: false
+#build_apps: true
 
 
 # Whether rake:build should rebuild the code-studio package
-build_code_studio: false
+#build_code_studio: true
 
 
 # Whether dashboard should use your local build of the apps package.
 # If false, dashboard will try to use a prepackaged version from S3.
-use_my_apps: false
+#use_my_apps: true
 
 
 # Whether dashboard should use your local build of the code-studio package.
 # If false, dashboard will try to use a prepackaged version from S3.
-use_my_code_studio: false
+#use_my_code_studio: true
 
 
 # Encryption key required for decoding certain protected level sources.
