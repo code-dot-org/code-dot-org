@@ -104,7 +104,7 @@ namespace :seed do
   task callouts: :environment do
     Callout.transaction do
       Callout.reset_db
-      # TODO if the id of the callout is important, specify it in the tsv
+      # TODO: if the id of the callout is important, specify it in the tsv
       # preferably the id of the callout is not important ;)
       Callout.find_or_create_all_from_tsv!('config/callouts.tsv')
     end

@@ -526,7 +526,7 @@ class UserTest < ActiveSupport::TestCase
     old_password = user.encrypted_password
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
-    # HACK fix my syntax highlighting "
+    # HACK: fix my syntax highlighting "
     token = $1
 
     User.reset_password_by_token(reset_password_token: token,

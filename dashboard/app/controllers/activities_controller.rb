@@ -143,7 +143,7 @@ class ActivitiesController < ApplicationController
     attributes = {
         user: current_user,
         level: @level,
-        action: solved, # TODO I think we don't actually use this. (maybe in a report?)
+        action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
         test_result: test_result,
         attempt: params[:attempt].to_i,
         lines: lines,
