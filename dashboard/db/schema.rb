@@ -536,7 +536,6 @@ ActiveRecord::Schema.define(version: 20160503010123) do
     t.boolean  "assessment"
   end
 
-  add_index "script_levels", ["level_id"], name: "index_script_levels_on_level_id", using: :btree
   add_index "script_levels", ["script_id"], name: "index_script_levels_on_script_id", using: :btree
   add_index "script_levels", ["stage_id"], name: "index_script_levels_on_stage_id", using: :btree
 
