@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160408183812) do
+ActiveRecord::Schema.define(version: 20160408190000) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -590,6 +590,65 @@ ActiveRecord::Schema.define(version: 20160408183812) do
 
   add_index "user_permissions", ["user_id", "permission"], name: "index_user_permissions_on_user_id_and_permission", unique: true, using: :btree
 
+  create_table "user_proficiencies", force: :cascade do |t|
+    t.integer  "user_id",                        limit: 4,             null: false
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
+    t.datetime "last_progress_at"
+    t.integer  "sequencing_d1_count",            limit: 4, default: 0
+    t.integer  "sequencing_d2_count",            limit: 4, default: 0
+    t.integer  "sequencing_d3_count",            limit: 4, default: 0
+    t.integer  "sequencing_d4_count",            limit: 4, default: 0
+    t.integer  "sequencing_d5_count",            limit: 4, default: 0
+    t.integer  "debugging_d1_count",             limit: 4, default: 0
+    t.integer  "debugging_d2_count",             limit: 4, default: 0
+    t.integer  "debugging_d3_count",             limit: 4, default: 0
+    t.integer  "debugging_d4_count",             limit: 4, default: 0
+    t.integer  "debugging_d5_count",             limit: 4, default: 0
+    t.integer  "repeat_loops_d1_count",          limit: 4, default: 0
+    t.integer  "repeat_loops_d2_count",          limit: 4, default: 0
+    t.integer  "repeat_loops_d3_count",          limit: 4, default: 0
+    t.integer  "repeat_loops_d4_count",          limit: 4, default: 0
+    t.integer  "repeat_loops_d5_count",          limit: 4, default: 0
+    t.integer  "repeat_until_while_d1_count",    limit: 4, default: 0
+    t.integer  "repeat_until_while_d2_count",    limit: 4, default: 0
+    t.integer  "repeat_until_while_d3_count",    limit: 4, default: 0
+    t.integer  "repeat_until_while_d4_count",    limit: 4, default: 0
+    t.integer  "repeat_until_while_d5_count",    limit: 4, default: 0
+    t.integer  "for_loops_d1_count",             limit: 4, default: 0
+    t.integer  "for_loops_d2_count",             limit: 4, default: 0
+    t.integer  "for_loops_d3_count",             limit: 4, default: 0
+    t.integer  "for_loops_d4_count",             limit: 4, default: 0
+    t.integer  "for_loops_d5_count",             limit: 4, default: 0
+    t.integer  "events_d1_count",                limit: 4, default: 0
+    t.integer  "events_d2_count",                limit: 4, default: 0
+    t.integer  "events_d3_count",                limit: 4, default: 0
+    t.integer  "events_d4_count",                limit: 4, default: 0
+    t.integer  "events_d5_count",                limit: 4, default: 0
+    t.integer  "variables_d1_count",             limit: 4, default: 0
+    t.integer  "variables_d2_count",             limit: 4, default: 0
+    t.integer  "variables_d3_count",             limit: 4, default: 0
+    t.integer  "variables_d4_count",             limit: 4, default: 0
+    t.integer  "variables_d5_count",             limit: 4, default: 0
+    t.integer  "functions_d1_count",             limit: 4, default: 0
+    t.integer  "functions_d2_count",             limit: 4, default: 0
+    t.integer  "functions_d3_count",             limit: 4, default: 0
+    t.integer  "functions_d4_count",             limit: 4, default: 0
+    t.integer  "functions_d5_count",             limit: 4, default: 0
+    t.integer  "functions_with_params_d1_count", limit: 4, default: 0
+    t.integer  "functions_with_params_d2_count", limit: 4, default: 0
+    t.integer  "functions_with_params_d3_count", limit: 4, default: 0
+    t.integer  "functions_with_params_d4_count", limit: 4, default: 0
+    t.integer  "functions_with_params_d5_count", limit: 4, default: 0
+    t.integer  "conditionals_d1_count",          limit: 4, default: 0
+    t.integer  "conditionals_d2_count",          limit: 4, default: 0
+    t.integer  "conditionals_d3_count",          limit: 4, default: 0
+    t.integer  "conditionals_d4_count",          limit: 4, default: 0
+    t.integer  "conditionals_d5_count",          limit: 4, default: 0
+  end
+
+  add_index "user_proficiencies", ["user_id"], name: "index_user_proficiencies_on_user_id", using: :btree
+
   create_table "user_scripts", force: :cascade do |t|
     t.integer  "user_id",          limit: 4, null: false
     t.integer  "script_id",        limit: 4, null: false
@@ -727,4 +786,5 @@ ActiveRecord::Schema.define(version: 20160408183812) do
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "survey_results", "users"
+  add_foreign_key "user_proficiencies", "users"
 end
