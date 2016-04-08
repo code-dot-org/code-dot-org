@@ -13,7 +13,12 @@ module AWS
     # Hard-coded values for our CloudFormation template.
 
     DOMAIN = 'cdn-code.org'
-    STACK_NAME = "#{rack_env}-#{RakeUtils.git_branch}"
+
+    # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
+    # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
+    STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
+    STACK_NAME = "#{rack_env}-#{RakeUtils.git_branch}".gsub(STACK_NAME_INVALID_REGEX, '-')
+
     # Fully qualified domain name
     FQDN = "#{STACK_NAME}.#{DOMAIN}"
     SSH_KEY_NAME = 'server_access_key'
