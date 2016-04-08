@@ -26,4 +26,10 @@ class LevelConceptDifficulty < ActiveRecord::Base
   include ConceptDifficulties
   belongs_to :level
   validates :level, presence: true
+
+  def serializable_hash(options=nil)
+    super.delete_if { |key, _|
+      %w(id level_id updated_at created_at).include? key
+    }
+  end
 end

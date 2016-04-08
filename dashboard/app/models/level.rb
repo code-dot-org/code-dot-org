@@ -41,7 +41,7 @@ class Level < ActiveRecord::Base
   after_save :write_custom_level_file
   after_destroy :delete_custom_level_file
 
-  accepts_nested_attributes_for :level_concept_difficulty
+  accepts_nested_attributes_for :level_concept_difficulty, update_only: true
 
   include StiFactory
   include SerializedProperties
@@ -62,8 +62,13 @@ class Level < ActiveRecord::Base
 
   # https://github.com/rails/rails/issues/3508#issuecomment-29858772
   # Include type in serialization.
+  # also include level_concept_difficulty
   def serializable_hash(options=nil)
-    super.merge 'type' => type
+    super(:include => :level_concept_difficulty).merge 'type' => type
+  end
+
+  def changed?
+    super || (level_concept_difficulty && level_concept_difficulty.changed?)
   end
 
   def related_videos
