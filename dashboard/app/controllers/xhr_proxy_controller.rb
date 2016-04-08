@@ -6,7 +6,7 @@
 # which changes frequently such as news or sports scores.
 #
 # To reduce the likelihood of abuse, we only proxy content with an allowed
-# whitelist of media types. We will need to monitor usage to detect
+# whitelist of JSON response types. We will need to monitor usage to detect
 # abuse and potentially add other abuse prevention measures.
 
 require 'set'
@@ -19,14 +19,16 @@ class XhrProxyController < ApplicationController
   # How long the content is allowed to be cached
   EXPIRY_TIME = 1.minute
 
-  # Return the proxied api at the given URL.
+  # Return the proxied api at the URL specified in the 'u' parameter. The 'c' parameter
+  # is an unforgeable token which identifies the app lab app which is generating the request,
+  # and may be used to enforce a per-app rate-limit.
   def get
     channel_id = params[:c]
     url = params[:u]
 
     begin
       owner_storage_id, _ = storage_decrypt_channel_id(channel_id)
-    rescue Exception => e
+    rescue ArgumentError, OpenSSL::Cipher::CipherError => e
       render_error_response 403, "Invalid token: '#{channel_id}' for url: '#{url}' exception: #{e.message}"
       return
     end

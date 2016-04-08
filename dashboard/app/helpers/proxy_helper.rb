@@ -1,6 +1,7 @@
 require 'net/http'
 require 'uri'
 
+# Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
   include DomainHelper
 
@@ -13,6 +14,10 @@ module ProxyHelper
     # Give up if the host doesn't respond within 3 seconds to avoid
     # tying up Rails thread.
     url = URI.parse(location)
+
+    # Require a valid URL with a valid top-level domain. This protects us from
+    # the proxy being used to directly access our infrastructure via internal
+    # AWS hostnames or IP addresses.
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil? || !valid_top_level_domain?(url.host)
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
