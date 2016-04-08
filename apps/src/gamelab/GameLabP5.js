@@ -202,10 +202,10 @@ GameLabP5.prototype.init = function (options) {
     if (sprite.collider instanceof this.CircleCollider) {
       return window.p5.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
     } else if (sprite.collider instanceof this.AABB) {
-      return mousePosition.x > sprite.collider.left()
-          && mousePosition.y > sprite.collider.top()
-          && mousePosition.x < sprite.collider.right()
-          && mousePosition.y < sprite.collider.bottom();
+      return mousePosition.x > sprite.collider.left() &&
+          mousePosition.y > sprite.collider.top() &&
+          mousePosition.x < sprite.collider.right() &&
+          mousePosition.y < sprite.collider.bottom();
     }
 
     return false;
@@ -366,6 +366,14 @@ GameLabP5.prototype.resetExecution = function () {
 };
 
 /**
+ * Register a p5 event handler function. The provided function replaces the
+ * method stored on our p5 instance.
+ */
+GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
+  this.p5[eventName] = handler;
+};
+
+/**
  * Instantiate a new p5 and start execution
  */
 GameLabP5.prototype.startExecution = function () {
@@ -507,14 +515,20 @@ GameLabP5.prototype.startExecution = function () {
           }
         });
 
-        // Call our gamelabPreload() to force _start/_setup to wait.
-        p5obj.gamelabPreload();
-        this.onPreload();
+        if (!this.onPreload()) {
+          // If onPreload() returns false, it means that the preload phase has
+          // not completed, so we need to grab increment p5's preloadCount by
+          // calling the gamelabPreload() method.
+
+          // Call our gamelabPreload() to force _start/_setup to wait.
+          p5obj.gamelabPreload();
+        }
       }.bind(this);
 
       p5obj.setup = function () {
         p5obj.createCanvas(400, 400);
         p5obj.fill(p5obj.color(127, 127, 127));
+        p5obj.angleMode(p5obj.DEGREES);
 
         this.onSetup();
       }.bind(this);
@@ -528,13 +542,29 @@ GameLabP5.prototype.startExecution = function () {
 };
 
 /**
- * Called when all global code is done executing. This allows us to release
- * our "preload" count reference in p5, which means that setup() can begin.
+ * Called when the preload phase is complete. When a distinct setup() method is
+ * provided, a student's global code must finish executing before this phase is
+ * done. This allows us to release our "preload" count reference in p5, which
+ * means that setup() can begin.
  */
-GameLabP5.prototype.notifyUserGlobalCodeComplete = function () {
+GameLabP5.prototype.notifyPreloadPhaseComplete = function () {
   if (this.p5decrementPreload) {
     this.p5decrementPreload();
     this.p5decrementPreload = null;
+  }
+};
+
+GameLabP5.prototype.notifyKeyCodeDown = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keydown
+  if (this.p5) {
+    this.p5._onkeydown({ which: keyCode });
+  }
+};
+
+GameLabP5.prototype.notifyKeyCodeUp = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keyup
+  if (this.p5) {
+    this.p5._onkeyup({ which: keyCode });
   }
 };
 

@@ -4,7 +4,7 @@
  * Copyright 2014-2015 Code.org
  *
  */
-/* global Dialog, dashboard */
+/* global dashboard */
 
 'use strict';
 var studioApp = require('../StudioApp').singleton;
@@ -1409,7 +1409,6 @@ Applab.showConfirmationDialog = function (config) {
   contentDiv.appendChild(buttons);
 
   var dialog = studioApp.createModalDialog({
-    Dialog: Dialog,
     contentDiv: contentDiv,
     defaultBtnSelector: '#confirm-button'
   });

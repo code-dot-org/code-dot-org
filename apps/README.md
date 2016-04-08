@@ -1,16 +1,16 @@
-# Blockly 20 Hour Curriculum
+# The Apps Package
+
+The **Apps Package** contains most of our client-side JavaScript, particularly the source code for the [Blockly](https://code.google.com/p/blockly/) based 20 hour curriculum, Hour of Code, and our Droplet-based levels (including App Lab). Information about Blockly can be found in the [wiki](https://code.google.com/p/blockly/w/list).
 
 Blockly is a web-based, graphical programming editor. Users can drag blocks together to build an application. No typing required. Credit goes to these awesome [developers](https://code.google.com/p/blockly/wiki/Credits#Engineers)
 and a small army of [translators](https://code.google.com/p/blockly/wiki/Credits#Translators).
-
-This repository contains the source code for the apps [Blockly](https://code.google.com/p/blockly/) based 20 hour curriculum and Hour of Code. Information about Blockly can be found in the [wiki](https://code.google.com/p/blockly/w/list).
 
 - [Quick Start](#quick-start)
 - [Contributing](#contributing)
 
 ## Quick Start
 
-### Installing Blockly
+### Installing Apps
 
 ```
 cd apps
@@ -24,16 +24,14 @@ npm install
 npm run build
 ```
 
-### Seeing your development version of Blockly in Dashboard
+### Seeing your development version of Apps in Dashboard
 
-1. To make your changes show up in dashboard, run the following after the first time you build blockly: [has this been replaced with locals.yml?]
-  ```
-  cd ../dashboard
-  bundle exec rake 'blockly:dev[../apps]'
-  cd ../apps
-  ```
+1. To make your changes show up in dashboard, do the following after the first time you build apps:
+  - Set `use_my_apps: true` to your locals.yml config file.
+  - Run `rake package:apps:symlink` to pick up the configuration change.
+  - If you are currently running dashboard, stop and restart dashboard-server.
 
-1. If you find your changes are not showing up within dashboard, you may have accidentally reverted your symlink to point to the pre-built version of blockly (e.g. when switching branches or stashing changes). To check your symlink, run:
+1. If you find your changes are not showing up within dashboard, you may have accidentally reverted your symlink to point to the pre-built version of apps (e.g. when switching branches or stashing changes). To check your symlink, run:
 ```
 > ls -l dashboard/public/blockly
 ```
@@ -41,7 +39,7 @@ and look for something like:
 ```
 lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps/build/package
 ```
-If the symlink is in place, then when you run later builds of blockly, your results should show up in Dashboard.
+If the symlink is in place, then as you rebuild apps, your results should show up in Dashboard.  If not, run through step 1 again.
 
 ### Building during development
 
@@ -66,7 +64,9 @@ See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
 npm start
 ```
 
-This will perform an initial build, then serve and open a playground with a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to apps.  Caveats:
+This will perform an initial build, then serve and open a playground with a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to apps.  If you followed the steps above for seeing your development version in Dashboard, the rebuilt apps code will be immediately available to Dashboard too. 
+
+Caveats:
 * The live-reload server does not pick up changes to blockly-core.  For that, see [Full build with blockly-core](#full-build-with-blockly-core-changes).
 * If you get `Error: EMFILE, too many open files` while running the live-reload server (common on OSX) try increasing the OS open file limit by running `ulimit -n 1024` (and adding it to your `.bashrc`).
 

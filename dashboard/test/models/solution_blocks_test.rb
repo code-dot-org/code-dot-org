@@ -125,6 +125,12 @@ XML
 </block>
 XML
 
+    @proc_call_xml = <<XML
+<block type="procedures_callnoreturn">
+  <mutation name="draw a square"></mutation>
+</block>
+XML
+
     @toolbox_doc = Nokogiri::XML '<xml></xml>'
     @solution_doc = Nokogiri::XML '<xml></xml>'
     @level = Blockly.new
@@ -226,6 +232,12 @@ XML
     toolbox_block = make_toolbox_node @controls_repeat_simplified_xml
     solution_block = make_solution_node @controls_repeat_simplified_dropdown_xml
     refute @level.blocks_match? toolbox_block, solution_block
+  end
+
+  test 'name mutation is not stripped from procedure call block' do
+    solution_block = make_solution_node @proc_call_xml
+    toolbox_block = @level.create_toolbox_block(solution_block)
+    refute toolbox_block.xpath('./mutation[@name="draw a square"]').empty?
   end
 
   test 'add missing block' do
