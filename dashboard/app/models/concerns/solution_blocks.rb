@@ -19,7 +19,9 @@ module SolutionBlocks
     stripped_block.xpath(STRIPPED_NODES_XPATH).remove
     stripped_block['type'] = stripped_block['type'].chomp '_dropdown' if toolbox_block
     STRIPPED_ATTRS.each {|attr| stripped_block.remove_attribute(attr)} unless create_for_toolbox
-    stripped_block.content = stripped_block.content.strip
+    stripped_block.traverse do |node|
+      node.content = node.content.strip if node.text?
+    end
     return create_for_toolbox ? stripped_block : stripped_block.to_xml
   end
 
