@@ -57,6 +57,14 @@ var CodeWorkspaceContainer = React.createClass({
     onSizeChange: React.PropTypes.func
   },
 
+  /**
+   * Called externally
+   * @returns {number} The height of the rendered contents in pixels
+   */
+  getContentHeight: function () {
+    return $(ReactDOM.findDOMNode(this)).height();
+  },
+
   componentDidUpdate: function (prevProps) {
     if (this.props.onSizeChange && this.props.topMargin !== prevProps.topMargin) {
       this.props.onSizeChange();
