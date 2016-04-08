@@ -137,13 +137,6 @@ Style/ClassVars:
 Style/CollectionMethods:
   Enabled: false
 
-# Offense count: 22
-# Cop supports --auto-correct.
-# Configuration parameters: Keywords.
-# Keywords: TODO, FIXME, OPTIMIZE, HACK, REVIEW
-Style/CommentAnnotation:
-  Enabled: false
-
 # Offense count: 27
 # Cop supports --auto-correct.
 Style/CommentIndentation:
