@@ -4,34 +4,49 @@
 [![Circle CI](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging.svg?style=svg)](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging)
 [![Coverage Status](https://coveralls.io/repos/github/code-dot-org/code-dot-org/badge.svg?branch=staging)](https://coveralls.io/github/code-dot-org/code-dot-org?branch=staging)
 
-Welcome! You've found the source code for [the Code.org website](https://code.org/) and [the Code Studio platform](https://studio.code.org/). Code.org is a non-profit dedicated to expanding access to computer science education. You can read more about our efforts at [Code.org/about](https://code.org/about).
+Welcome! You've found the source code for [the Code.org website](https://code.org/) and [the Code Studio platform](https://studio.code.org/). Code.org is a non-profit dedicated to expanding access to computer science education. You can read more about our efforts at [code.org/about](https://code.org/about).
 
 ## What's in this repo?
 We know our repository can be overwhelming.  Here's a quick overview of the major landmarks:
 
-### apps
+### [dashboard](./dashboard)
 
-### blockly-core
+The server for our **Code Studio** learning platform, this [Ruby on Rails](http://rubyonrails.org/) application serves [studio.code.org](https://studio.code.org/) and is responsible for:
 
-Our custom version of [Google Blockly](https://developers.google.com/blockly/) is the visual programming language used for many of our interactive tutorials.
+* User accounts
+* Student progress and projects
+* Our courses, tutorials, and puzzle configurations
+* The "levelbuilder" content creation tools
 
-### code-studio
+### [pegasus](./pegasus)
 
-### dashboard
+The server for [the Code.org website](https://code.org/), a [Sinatra](http://www.sinatrarb.com/) application responsible for:
 
-### pegasus
+* [code.org](https://code.org)
+* [hourofcode.com](https://hourofcode.com)
+* [csedweek.org](https://csedweek.org)
+* [Teacher Dashboard](http://code.org/teacher-dashboard)
+
+### [apps](./apps)
+
+The JavaScript 'engine' for all of our tutorials, puzzle types and online tools.  It gets built into a static package that we serve through dashboard.  Start here if you are looking for:
+* The **Hour of Code** tutorials: [Star Wars](https://code.org/starwars), [Minecraft](https://code.org/api/hour/begin/mc), [Frozen](https://studio.code.org/s/frozen) and [Classic Maze](http://studio.code.org/hoc/1)
+* Tools like [Artist](https://studio.code.org/projects/artist), [Play Lab](https://studio.code.org/projects/playlab) and [App Lab](https://code.org/educate/applab)
+* Other core puzzle types: Maze, Farmer, Bee, Bounce, Calc, Eval
+
+### [code-studio](./code-studio)
+
+JavaScript code specific to our **Code Studio** learning platform.  This also becomes a static package served by dashboard, and is tightly coupled to dashboard code.
 
 ### The rest of it
 
-* **.chef**
-* **aws**
-* **bin**
-* **cookbooks**
-* **docs**
-* **i18n**
-* **lib**
-* **shared**
-* **tools**
+* **aws**: Configuration and scripts that manage our deployments.
+* **bin**: Developer utilties.
+* **blockly-core**: Our custom version of [Google Blockly](https://developers.google.com/blockly/), the visual programming language used for many of our interactive tutorials.
+* **cookbooks**: Configuration management through [Chef](https://www.chef.io/).
+* **docs**: Additional documentation.
+* **shared**: Source and assets used by many parts of our application.
+* **tools**: Git commit hooks.
 
 ## The documentation
 
@@ -43,25 +58,7 @@ Our custom version of [Google Blockly](https://developers.google.com/blockly/) i
   * [blockly-core/README](./blockly-core/README.md)
   * [code-studio/README](./code-studio/README.md)
 
-
-## Build setup
-This [Setup](./SETUP.md) document describes how to set up your workstation to develop for Code.org.
-
-## Codebase
-
-### Organizational Structure
-
-Our code is segmented into four parts:
-
-* Blockly Core is the visual programming language platform used for the interactive tutorials.
-* Blockly includes apps—blockly puzzles built based on Blockly Core.
-  * [Hour of Code](http://studio.code.org/hoc/1)
-* Dashboard, is the tutorial platform which organizes blockly levels into tutorials.
-  * [Code Studio](http://studio.code.org)
-* Pegasus is the main site which also includes the teacher dashboard (support for teachers to track student progress).
-  * [code.org](http://code.org)
-  * [csedweek.org](http://csedweek.org)
-  * [Teacher Dashboard](http://code.org/teacher-dashboard)
+## Quick Start
 
 ### Running Dashboard
 
