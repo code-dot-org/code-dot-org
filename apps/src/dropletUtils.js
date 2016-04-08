@@ -209,7 +209,7 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, opt
   });
 
   return blocks.filter(function (block) {
-    return (!options.hideNoAutocompleteBlocks || !block.noAutocomplete) &&
+    return (!options.ignoreNoAutocompleteBlocks || !block.noAutocomplete) &&
         (!options.paletteOnly ||
         block.func in codeFunctions ||
         block.func in docFunctions);
@@ -582,7 +582,7 @@ exports.IGNORE_NO_AUTOCOMPLETE_BLOCKS = true;
 exports.getAllAvailableDropletBlocks = function (dropletConfig,
     codeFunctions,
     paletteOnly,
-    hideNoAutocompleteBlocks) {
+    ignoreNoAutocompleteBlocks) {
   var hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
   var configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
   if (codeFunctions && hasConfiguredBlocks) {
@@ -592,7 +592,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig,
         null,
         {
           paletteOnly: paletteOnly,
-          hideNoAutocompleteBlocks: hideNoAutocompleteBlocks
+          ignoreNoAutocompleteBlocks: ignoreNoAutocompleteBlocks
         }
     );
   }
