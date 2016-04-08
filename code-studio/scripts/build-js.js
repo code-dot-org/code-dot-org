@@ -38,6 +38,7 @@ Promise.all([
       'levelbuilder_studio.js',
       'levels/contract_match.jsx',
       'levels/widget.js',
+      'levels/external.js',
       'initApp/initApp.js'
     ],
     commonFile: 'code-studio-common',
@@ -82,14 +83,6 @@ Promise.all([
       'makerlab/makerlabDependencies.js'
     ],
     commonFile: 'makerlab'
-  })),
-
-  // Have a bundle for plc stuff - no sense in expanding this to everything yet
-  build_commands.bundle(_.extend({}, defaultOptions, {
-    filenames: [
-      'external/external.js'
-    ],
-    commonFile: 'external'
   }))
 ]).then(function (results) {
   var allStepsSucceeded = !results.some(function (result) {
