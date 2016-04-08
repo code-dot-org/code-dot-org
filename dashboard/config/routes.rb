@@ -291,7 +291,6 @@ Dashboard::Application.routes.draw do
   end
 
   get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
-
   namespace :plc do
     root to: 'plc#index'
     resources :courses
@@ -310,7 +309,6 @@ Dashboard::Application.routes.draw do
   get '/plc/learning_modules/:id/new_learning_resource_for_module', to: 'plc/learning_modules#new_learning_resource_for_module', as: 'new_learning_resource_for_module'
 
   post '/plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
-
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'

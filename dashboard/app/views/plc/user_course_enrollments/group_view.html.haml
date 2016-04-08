@@ -14,7 +14,7 @@
     - enrollments.each do |enrollment|
       %tr{style: 'border-top: solid grey; border-bottom: solid grey'}
         %td{style: 'border-right: solid grey'}
-          = link_to enrollment.user.name, enrollment
+          = link_to enrollment.user.name, plc_user_course_enrollments_path(user: enrollment.user.id)
         - enrollment.plc_unit_assignments.each do |unit_assignment|
           - status, icon, color, icon_color = unit_assignment.status_and_icon_and_color
           %td{style: "border-right: solid #aaaaaa; background-color: #{color}"}
