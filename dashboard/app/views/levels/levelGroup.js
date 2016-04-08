@@ -112,7 +112,7 @@ function initLevelGroup(
   // Unsubmit button should only be available when this is a standalone level.
   $('.unsubmitButton').click(function () {
 
-    var dialog = new Dialog({
+    var dialog = new window.Dialog({
       body:
         '<div class="modal-content no-modal-icon">' +
           '<p class="dialog-title">Unsubmit answer</p>' +

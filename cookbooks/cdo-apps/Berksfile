@@ -12,7 +12,7 @@ metadata
   nginx
   nodejs
   java-7
-).map{|x|"cdo-#{x}"}.
+).map{|x| "cdo-#{x}"}.
   push('sudo-user').
   each do |dep|
   cookbook dep, path: "../#{dep}"
