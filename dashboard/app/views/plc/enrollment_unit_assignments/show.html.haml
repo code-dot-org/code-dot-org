@@ -7,10 +7,9 @@
 %p
   = link_to 'Back to my learning plan', plc_user_course_enrollments_path
 
-%h4
-  Get Badged
-
-= @enable_links
+- if @enrollment_unit_assignment.status == Plc::EnrollmentUnitAssignment::IN_PROGRESS
+  %h4
+    Get Badged
 
 .module_assignments
   - @enrollment_unit_assignment.plc_module_assignments.each do |module_assignment|

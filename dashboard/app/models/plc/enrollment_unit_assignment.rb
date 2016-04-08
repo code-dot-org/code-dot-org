@@ -57,7 +57,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     end
   end
 
-  def status_and_icon_and_color
+  def status_and_icon_and_color_and_icon_color
     case status
       when START_BLOCKED
         return status.titleize, 'fa fa-minus-circle', 'rgba(255, 0, 0, .1)', 'red'
