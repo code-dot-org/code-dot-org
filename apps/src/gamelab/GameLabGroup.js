@@ -110,6 +110,8 @@ module.exports.Group = function (baseConstructor) {
   array.setHeightEach = array.setPropertyEach.bind(array, 'height');
   array.setWidthEach = array.setPropertyEach.bind(array, 'width');
 
+  array.destroyEach = array.callMethodEach.bind(array, 'destroy');
+  array.pointToEach = array.callMethodEach.bind(array, 'pointTo');
   array.setColorRGBEach = array.callMethodEach.bind(array, 'setColorRGB');
   array.setColliderEach = array.callMethodEach.bind(array, 'setCollider');
   array.setSpeedEach = array.callMethodEach.bind(array, 'setSpeed');

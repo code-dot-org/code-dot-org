@@ -413,7 +413,7 @@ module Ops
       response = JSON.parse(@response.body)
       assert_equal response['id'], @cohort.id
       # Ensure extra association info is provided in the right format
-      assert_equal response['districts'].map{|d|d['id']}, @cohort.district_ids
+      assert_equal response['districts'].map{|d| d['id']}, @cohort.district_ids
     end
 
     test 'ops team can list teachers in a cohort as a csv' do
