@@ -14,7 +14,15 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   end
 
   test "should create plc_user_course_enrollment" do
-    assert_difference('Plc::UserCourseEnrollment.count') do
+    @user_course_enrollment.destroy
+
+    assert_creates(Plc::UserCourseEnrollment) do
+      post :create, user_email: @user.email, plc_course_id: @plc_course.id
+    end
+
+    assert_redirected_to plc_user_course_enrollments_path
+
+    assert_no_difference('Plc::UserCourseEnrollment.count') do
       post :create, user_email: @user.email, plc_course_id: @plc_course.id
     end
 

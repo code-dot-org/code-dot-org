@@ -9,6 +9,11 @@
   .field
     = f.label :name
     = f.text_field :name
+    = f.label :plc_course_unit
+    - if @learning_module.new_record?
+      = f.select :plc_course_unit_id, options_for_select(options_for_course_units)
+    - else
+      = @learning_module.plc_course_unit.unit_name
 
   .actions
     = f.submit 'Save'
