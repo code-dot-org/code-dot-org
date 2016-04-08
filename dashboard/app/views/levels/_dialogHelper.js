@@ -41,7 +41,7 @@ window.dashboard.dialog = (function () {
 
     // Use our prefabricated dialog content.
     var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
-    var dialog = new Dialog({
+    var dialog = new window.Dialog({
       body: content,
       onHidden: dialogHidden,
       autoResizeScrollableElement: appOptions.dialog.autoResizeScrollableElement
