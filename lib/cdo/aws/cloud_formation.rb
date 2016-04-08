@@ -5,6 +5,7 @@ require 'json'
 require 'yaml'
 require 'erb'
 require 'tempfile'
+require 'base64'
 
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
@@ -26,6 +27,8 @@ module AWS
     INSTANCE_TYPE = 'c4.xlarge'
     SSH_IP = '0.0.0.0/0'
     S3_BUCKET = 'cdo-dist'
+
+    STACK_ERROR_LINES = 5
 
     # Use AWS Certificate Manager for ELB and CloudFront SSL certificates.
     ACM_REGION = 'us-east-1'
@@ -139,7 +142,19 @@ module AWS
             break if event.timestamp < start_time
           end
           events.reject { |event| event.resource_status_reason.nil? }.sort_by(&:timestamp).each do |event|
-            puts "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
+            CDO.log.info "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
+            if (match = event.resource_status_reason.match /with UniqueId (?<instance>i-\w+)/)
+              instance = match[:instance]
+              CDO.log.info "Printing the last #{STACK_ERROR_LINES} lines to help debug the instance failure.."
+              CDO.log.info "To get full console output, run `aws ec2 get-console-output --instance-id #{instance} | jq -r .Output`."
+              ec2 = Aws::EC2::Client.new
+              lines = Base64.decode64(ec2.get_console_output(instance_id: instance).output).lines
+              CDO.log.info lines[-[lines.length,STACK_ERROR_LINES].min..-1].join
+            end
+          end
+          if action == :create
+            CDO.log.info 'Cleaning up failed stack creation...'
+            self.delete
           end
           return
         end
