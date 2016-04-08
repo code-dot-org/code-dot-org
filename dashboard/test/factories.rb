@@ -308,7 +308,7 @@ FactoryGirl.define do
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do
-    plc_course nil
+    plc_course {create(:plc_course)}
     unit_name "MyString"
     unit_description "MyString"
     unit_order 1
@@ -365,6 +365,7 @@ FactoryGirl.define do
 
   factory :plc_learning_module, :class => 'Plc::LearningModule' do
     name "MyString"
+    plc_course_unit {create(:plc_course_unit)}
   end
   factory :plc_course, :class => 'Plc::Course' do
     name "MyString"
