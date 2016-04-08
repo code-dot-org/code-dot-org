@@ -22,7 +22,7 @@ namespace :install do
   task :locals_yml do
     config_file = deploy_dir('locals.yml')
     config_defaults = deploy_dir('locals.yml.default')
-    unless File.exists?(config_file)
+    unless File.exist?(config_file)
       RakeUtils.system 'cp', config_defaults, config_file
     end
   end
