@@ -126,7 +126,7 @@ DropletTooltipManager.prototype.showDocFor = function (functionName) {
   }
 
   $('.tooltipstered').tooltipster('hide');
-  var dialog = this.Dialog({
+  var dialog = new this.Dialog({
     body: $('<iframe>')
       .addClass('markdown-instructions-container')
       .width('100%')
