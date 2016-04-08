@@ -1,16 +1,55 @@
-[![Build Status](https://travis-ci.org/code-dot-org/code-dot-org.svg?branch=staging)](https://travis-ci.org/code-dot-org/code-dot-org) on Travis
+# Code.org
 
-[![Circle CI](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging.svg?style=svg)](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging) on Circle
+[![Build Status](https://travis-ci.org/code-dot-org/code-dot-org.svg?branch=staging)](https://travis-ci.org/code-dot-org/code-dot-org)
+[![Circle CI](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging.svg?style=svg)](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging)
+[![Coverage Status](https://coveralls.io/repos/github/code-dot-org/code-dot-org/badge.svg?branch=staging)](https://coveralls.io/github/code-dot-org/code-dot-org?branch=staging)
 
-[![Coverage Status](https://coveralls.io/repos/github/code-dot-org/code-dot-org/badge.svg?branch=staging)](https://coveralls.io/github/code-dot-org/code-dot-org?branch=staging) for dashboard unit tests
+Welcome! You've found the source code for [the Code.org website](https://code.org/) and [the Code Studio platform](https://studio.code.org/). Code.org is a non-profit dedicated to expanding access to computer science education. You can read more about our efforts at [Code.org/about](https://code.org/about).
+
+## What's in this repo?
+We know our repository can be overwhelming.  Here's a quick overview of the major landmarks:
+
+### apps
+
+### blockly-core
+
+Our custom version of [Google Blockly](https://developers.google.com/blockly/) is the visual programming language used for many of our interactive tutorials.
+
+### code-studio
+
+### dashboard
+
+### pegasus
+
+### The rest of it
+
+* **.chef**
+* **aws**
+* **bin**
+* **cookbooks**
+* **docs**
+* **i18n**
+* **lib**
+* **shared**
+* **tools**
+
+## The documentation
+
+* [SETUP](./SETUP.md): Instructions to get everything up and running.
+* [TESTING](./TESTING.md): How to be sure nothing broke.
+* [STYLEGUIDE](./STYLEGUIDE.md): Our code style conventions.
+* In addition, several sections of the repository have their own documentation:
+  * [apps/README](./apps/README.md)
+  * [blockly-core/README](./blockly-core/README.md)
+  * [code-studio/README](./code-studio/README.md)
 
 
-# Build setup
+## Build setup
 This [Setup](./SETUP.md) document describes how to set up your workstation to develop for Code.org.
 
-# Codebase
+## Codebase
 
-## Organizational Structure
+### Organizational Structure
 
 Our code is segmented into four parts:
 
@@ -24,25 +63,25 @@ Our code is segmented into four parts:
   * [csedweek.org](http://csedweek.org)
   * [Teacher Dashboard](http://code.org/teacher-dashboard)
 
-## Running Dashboard
+### Running Dashboard
 
 1. `cd code-dot-org`
 2. `rake build:dashboard` (Generally, do this after each pull)
 3. `bin/dashboard-server`
 4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
 
-## Running Pegasus
+### Running Pegasus
 
 1. `cd code-dot-org`
 2. `rake build:pegasus` (Generally, do this after each pull)
 3. `bin/pegasus-server`
 4. Visit [http://localhost.code.org:3000/](http://localhost.code.org:3000/)
 
-## Building Javascript (apps, blockly-core, and code-studio) (optional)
+### Building Javascript (apps, blockly-core, and code-studio) (optional)
 
 The studio.code.org default dashboard install includes a static build of blockly and of code-studio js, but if you want to make modifications to these you'll want to enable building them in the build:
 
-### Enabling Apps Builds
+#### Enabling Apps Builds
 
 You'll need to do this once:
 
@@ -59,7 +98,7 @@ You'll need to do this once:
 
 This configures your system to build apps/blockly-core/code-studio whenever you run `rake build` and to use the versions that you build yourself.
 
-### Building
+#### Building
 
 1. `cd code-dot-org`
 1. `rake build`
@@ -72,7 +111,7 @@ You can also set `build_dashboard: false` and/or `build_pegasus: false` in `loca
 
 Alternatively, you can run: `rake build:core_and_apps_dev`, which will build blockly core and the apps bundle without running tests and without localization.
 
-## Contributing
+### Want to help?
 
 Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md)
 for more information on helping us out.
