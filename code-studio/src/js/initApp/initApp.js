@@ -9,7 +9,7 @@ var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 var createCallouts = require('../callouts');
 var reporting = require('../reporting');
-var Dialog = require('../Dialog');
+var Dialog = require('../dialog');
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
