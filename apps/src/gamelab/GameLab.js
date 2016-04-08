@@ -64,9 +64,11 @@ var GameLab = function () {
   this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
+  this.interpreterStarted = false;
+  this.globalCodeRunsDuringPreload = false;
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.startedHandlingEvents = false;
+  this.preloadInProgress = false;
   this.gameLabP5 = new GameLabP5();
   this.api = api;
   this.api.injectGameLab(this);
@@ -285,7 +287,8 @@ GameLab.prototype.reset = function (ignore) {
   // Import to reset these after this.gameLabP5 has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.startedHandlingEvents = false;
+  this.preloadInProgress = false;
+  this.globalCodeRunsDuringPreload = false;
 
   this.debugger_.detach();
   this.consoleLogger_.detach();
@@ -294,6 +297,7 @@ GameLab.prototype.reset = function (ignore) {
   if (this.JSInterpreter) {
     this.JSInterpreter.deinitialize();
     this.JSInterpreter = null;
+    this.interpreterStarted = false;
   }
   this.executionError = null;
 };
@@ -503,6 +507,8 @@ GameLab.prototype.initInterpreter = function () {
     }
   }, this);
 
+  this.globalCodeRunsDuringPreload = !!this.eventHandlers.setup;
+
   codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
 
   var propList = this.gameLabP5.getGlobalPropertyList();
@@ -527,14 +533,11 @@ GameLab.prototype.onTick = function () {
   this.tickCount++;
 
   if (this.JSInterpreter) {
-    this.JSInterpreter.executeInterpreter();
-
-    if (!this.startedHandlingEvents && this.JSInterpreter.startedHandlingEvents) {
-      // Call this once after we've started handling events
-      this.startedHandlingEvents = true;
-      this.gameLabP5.notifyUserGlobalCodeComplete();
+    if (this.interpreterStarted) {
+      this.JSInterpreter.executeInterpreter();
     }
 
+    this.completePreloadIfPreloadComplete();
     this.completeSetupIfSetupComplete();
     this.completeRedrawIfDrawComplete();
   }
@@ -558,18 +561,34 @@ GameLab.prototype.onP5ExecutionStarting = function () {
 /**
  * This is called while this.gameLabP5 is in the preload phase. We initialize
  * the interpreter, start its execution, and call the user's preload function.
+ *
+ * @return {Boolean} whether or not the preload has completed
  */
 GameLab.prototype.onP5Preload = function () {
   this.initInterpreter();
   // And execute the interpreter for the first time:
   if (this.JSInterpreter && this.JSInterpreter.initialized()) {
-    this.JSInterpreter.executeInterpreter(true);
+    // Start executing the interpreter's global code as long as a setup() method
+    // was provided. If not, we will skip running any interpreted code in the
+    // preload phase and wait until the setup phase.
+    this.preloadInProgress = true;
+    if (this.globalCodeRunsDuringPreload) {
+      this.JSInterpreter.executeInterpreter(true);
+      this.interpreterStarted = true;
 
-    // In addition, execute the global function called preload()
-    if (this.eventHandlers.preload) {
-      this.eventHandlers.preload.apply(null);
+      // In addition, execute the global function called preload()
+      if (this.eventHandlers.preload) {
+        this.eventHandlers.preload.apply(null);
+      }
+    } else {
+      if (this.eventHandlers.preload) {
+        this.log("WARNING: preload() was ignored because setup() was not provided");
+        this.eventHandlers.preload = null;
+      }
     }
+    this.completePreloadIfPreloadComplete();
   }
+  return !this.preloadInProgress;
 };
 
 /**
@@ -579,9 +598,7 @@ GameLab.prototype.onP5Preload = function () {
  */
 GameLab.prototype.onP5Setup = function () {
   if (this.JSInterpreter) {
-    // TODO: (cpirich) Remove this code once p5play supports instance mode:
-
-    // Replace restored preload methods for the interpreter:
+    // Re-marshal restored preload methods for the interpreter:
     for (var method in this.gameLabP5.p5._preloadMethods) {
       this.JSInterpreter.createGlobalProperty(
           method,
@@ -589,20 +606,55 @@ GameLab.prototype.onP5Setup = function () {
           this.gameLabP5.p5);
     }
 
-    if (this.eventHandlers.setup) {
-      this.setupInProgress = true;
-      this.eventHandlers.setup.apply(null);
-      this.completeSetupIfSetupComplete();
-    } else {
-      this.gameLabP5.afterSetupComplete();
+    this.setupInProgress = true;
+    if (!this.globalCodeRunsDuringPreload) {
+      // If the setup() method was not provided, we need to run the interpreter
+      // for the first time at this point:
+      this.JSInterpreter.executeInterpreter(true);
+      this.interpreterStarted = true;
     }
+    if (this.eventHandlers.setup) {
+      this.eventHandlers.setup.apply(null);
+    }
+    this.completeSetupIfSetupComplete();
   }
 };
 
 GameLab.prototype.completeSetupIfSetupComplete = function () {
-  if (this.setupInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
+  if (!this.setupInProgress) {
+    return;
+  }
+
+  if (!this.globalCodeRunsDuringPreload &&
+      !this.JSInterpreter.startedHandlingEvents) {
+    // Global code should run during the setup phase, but global code hasn't
+    // completed.
+    return;
+  }
+
+  if (!this.eventHandlers.setup ||
+      this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
     this.gameLabP5.afterSetupComplete();
     this.setupInProgress = false;
+  }
+};
+
+GameLab.prototype.completePreloadIfPreloadComplete = function () {
+  if (!this.preloadInProgress) {
+    return;
+  }
+
+  if (this.globalCodeRunsDuringPreload &&
+      !this.JSInterpreter.startedHandlingEvents) {
+    // Global code should run during the preload phase, but global code hasn't
+    // completed.
+    return;
+  }
+
+  if (!this.eventHandlers.preload ||
+      this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
+    this.gameLabP5.notifyPreloadPhaseComplete();
+    this.preloadInProgress = false;
   }
 };
 
