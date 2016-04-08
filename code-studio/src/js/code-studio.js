@@ -48,6 +48,8 @@ window.dashboard.utils ={
   debounce: _.debounce
 };
 window.dashboard.header = require('./header');
+// usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
+// arguably each of the above files belongs in code-studio
 window.Dialog = require('./dialog');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
