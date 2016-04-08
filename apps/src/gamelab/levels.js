@@ -33,6 +33,12 @@ levels.sandbox =  {
 // Base config for levels created via levelbuilder
 levels.custom = utils.extend(levels.sandbox, {
   editCode: true,
+  softButtons: [
+    'leftButton',
+    'rightButton',
+    'downButton',
+    'upButton'
+  ],
   codeFunctions: {
     // Game Lab
     "fill": null,
