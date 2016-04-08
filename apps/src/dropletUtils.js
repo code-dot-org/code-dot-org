@@ -209,10 +209,15 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, opt
   });
 
   return blocks.filter(function (block) {
-    return (!options.ignoreNoAutocompleteBlocks || !block.noAutocomplete) &&
-        (!options.paletteOnly ||
+    var cfBlockOverrides = codeFunctions[block.func] || {};
+    var blockNoAutocomplete = utils.valueOr(cfBlockOverrides.noAutocomplete,
+        block.noAutocomplete);
+    var passedAutocompleteCheck = !options.ignoreNoAutocompleteBlocks ||
+        !blockNoAutocomplete;
+    var passedPaletteOnlyCheck = !options.paletteOnly ||
         block.func in codeFunctions ||
-        block.func in docFunctions);
+        block.func in docFunctions;
+    return passedAutocompleteCheck && passedPaletteOnlyCheck;
   }).map(function (block) {
     // We found this particular block, now override the defaults with extend
     return $.extend({}, block, codeFunctions[block.func]);
