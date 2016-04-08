@@ -29,6 +29,7 @@ class Level < ActiveRecord::Base
   belongs_to :solution_level_source, :class_name => "LevelSource" # TODO do we even use this
   belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
   belongs_to :user
+  has_one :level_concept_difficulty
   has_many :level_sources
   has_many :hint_view_requests
 
@@ -39,6 +40,8 @@ class Level < ActiveRecord::Base
 
   after_save :write_custom_level_file
   after_destroy :delete_custom_level_file
+
+  accepts_nested_attributes_for :level_concept_difficulty
 
   include StiFactory
   include SerializedProperties

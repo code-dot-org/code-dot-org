@@ -242,6 +242,7 @@ class LevelsController < ApplicationController
       :published,
       {poems: []},
       {concept_ids: []},
+      {level_concept_difficulty_attributes: [:id] + LevelConceptDifficulty::CONCEPTS},
       {soft_buttons: []},
       {examples: []}
     ]
