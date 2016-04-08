@@ -1,25 +1,56 @@
+# Example configuration file set up with sensible defaults for local development.
+# Copy this file to locals.yml to customize your local environment.
+
+
+# Causes dashboard-server to run pegasus as middleware, starting both in a
+# single command.  This is preferred (and default) in development mode.
 dashboard_enable_pegasus: true
-build_apps: true
-use_my_apps: true
-use_my_shared_js: true
-build_code_studio: true
-use_my_code_studio: true
+
+
+# Run dashboard-server with the level editing interface enabled (for admins)
 levelbuilder_mode: false
 
 
-# Configuration for Pusher.com integration
-# Optional for most devs
-# Optional but very useful if working on Internet Simulator
+# Whether rake:build should rebuild the blockly-core package
+build_blockly_core: false
 
-# use_pusher: true
-# pusher_app_id: ''
-# pusher_application_key: ''
-# pusher_application_secret: ''
 
-netsim_shard_expiry_seconds: 1800
+# Whether rake:build should rebuild the apps package
+build_apps: false
 
-properties_encryption_key: ''
-applitools_eyes_api_key: ''
-saucelabs_username: ''
-saucelabs_authkey: ''
 
+# Whether rake:build should rebuild the code-studio package
+build_code_studio: false
+
+
+# Whether dashboard should use your local build of the apps package.
+# If false, dashboard will try to use a prepackaged version from S3.
+use_my_apps: false
+
+
+# Whether dashboard should use your local build of the code-studio package.
+# If false, dashboard will try to use a prepackaged version from S3.
+use_my_code_studio: false
+
+
+# Encryption key required for decoding certain protected level sources.
+# Ask a Code.org dev for this if you need access to protected levels.
+#properties_encryption_key: ''
+
+
+# Credentials for SauceLabs.com, used to for running selenium tests against
+# multiple browsers
+#saucelabs_username: ''
+#saucelabs_authkey: ''
+
+
+# Credentails for applitools.com, used for running automated visual tests
+#applitools_eyes_api_key: ''
+
+
+# Configuration Options for Pusher.com integration
+# Optional for most devs, very useful if working on Internet Simulator
+#use_pusher: true
+#pusher_app_id: ''
+#pusher_application_key: ''
+#pusher_application_secret: ''
