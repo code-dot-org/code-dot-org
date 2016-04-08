@@ -16,11 +16,6 @@ require('./consoleShim')(window);
 var Sounds = require('./Sounds');
 var activateReferenceAreaOnLoad = require('./reference_area');
 
-var videos = require('./videos');
-window.createVideoWithFallback = videos.createVideoWithFallback;
-window.showVideoDialog = videos.showVideoDialog;
-window.onYouTubeBlocked = videos.onYouTubeBlocked;
-
 window.React = require('react');
 window.ReactDOM = require('react-dom');
 window.Radium = require('radium');
@@ -51,6 +46,8 @@ window.dashboard.utils ={
   debounce: _.debounce
 };
 window.dashboard.header = require('./header');
+window.dashboard.videos = require('./videos');
+
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
 // arguably each of the above files belongs in code-studio
 window.Dialog = require('./dialog');
