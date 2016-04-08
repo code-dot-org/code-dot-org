@@ -16,7 +16,10 @@ require('./consoleShim')(window);
 var Sounds = require('./Sounds');
 var activateReferenceAreaOnLoad = require('./reference_area');
 
-require('./videos');
+var videos = require('./videos');
+window.createVideoWithFallback = videos.createVideoWithFallback;
+window.showVideoDialog = videos.showVideoDialog;
+window.onYouTubeBlocked = videos.onYouTubeBlocked;
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
