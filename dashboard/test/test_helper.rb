@@ -328,10 +328,12 @@ end
 
 $stub_channel_owner = 33
 $stub_channel_id = 44
-def storage_decrypt_channel_id(encrypted)
-  # throw if not valid Base64
-  Base64.urlsafe_decode64(encrypted)
-  [$stub_channel_owner, $stub_channel_id]
+# stubbing storage_decrypt is inappropriate access, but
+# allows storage_decrypt_channel_id to throw the right
+# errors if the input is malformed and keeps us from
+# having to access the Pegasus DB from Dashboard tests.
+def storage_decrypt(encrypted)
+  "#{$stub_channel_owner}:#{$stub_channel_id}"
 end
 
 # A fake slogger implementation that captures the records written to it.

@@ -1,4 +1,6 @@
-
+# Helper which validates whether a hostname points to a valid top-level domain.
+# This can be used to filter out internal hostnames or IP addresses
+# which might provide unauthorized access to our infrastructure.
 module DomainHelper
   def valid_top_level_domain?(host)
     host = host.upcase
