@@ -13,6 +13,7 @@ var utils = require('../utils');
 var styleConstants = require('../styleConstants');
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
+var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 /**
  * Top-level React wrapper for App Lab.
@@ -42,23 +43,82 @@ var AppLabView = React.createClass({
     };
   },
 
+  /**
+   * Called when the window resizes. Look to see if width/height changed, then
+   * call adjustHeights as our maxHeight may need adjusting.
+   */
   onResize: function () {
+    var windowWidth = $(window).width();
+    var windowHeight = $(window).height();
+
+    // We fire window resize events when the grippy is dragged so that non-React
+    // controlled components are able to rerender the editor. If width/height
+    // didn't change, we don't need to do anything else here
+    if (windowWidth === this.state.width && windowHeight === this.state.height) {
+      return;
+    }
+
     this.setState({
       width: $(window).width(),
       height: $(window).height()
     });
+
+    this.adjustHeights();
+  },
+
+  /**
+   * Adjust the height/maxHeight of our instructions based on the rendered size
+   * of the instructions, and the rendered size of the workspace.
+   */
+  adjustHeights: function () {
+    var instructionsContent = this.refs.topInstructions.refs.instructions.refs.instructionsMarkdown;
+    var instructionsContentHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true);
+    var workspaceHeight = $(ReactDOM.findDOMNode(this.refs.codeWorkspace)).height();
+    var totalHeight = workspaceHeight + this.props.instructionsHeight;
+
+    var height = this.props.instructionsHeight || 300;
+    var maxHeight;
+
+    // Dont want height to extend past rendered length of content.
+    maxHeight = instructionsContentHeight + HEADER_HEIGHT + RESIZER_HEIGHT;
+    if (maxHeight < height) {
+      height = maxHeight;
+    }
+
+    // Have a preference for showing at least 150px of editor and 120px of
+    // debugger. Shrink instructions to make room. If that doesn't provide
+    // enough space, start also shrinking workspace
+    var EDITOR_RESERVE = 150;
+    var DEBUGGER_RESERVE = 120;
+    var INSTRUCTIONS_RESERVE = 150;
+
+    var topSpaceAvailable = totalHeight - EDITOR_RESERVE - DEBUGGER_RESERVE;
+    if (topSpaceAvailable < height) {
+      // if we'll still be at least 150px, just make our height smaller
+      if (topSpaceAvailable > INSTRUCTIONS_RESERVE) {
+        height = topSpaceAvailable;
+      } else {
+        height = Math.round(totalHeight / 3);
+      }
+      maxHeight = height;
+    } else if (topSpaceAvailable < maxHeight) {
+      maxHeight = topSpaceAvailable;
+    }
+    this.props.setInstructionsHeight(Math.min(height, maxHeight));
+    this.props.setInstructionsMaxHeight(maxHeight);
   },
 
   componentDidMount: function () {
-    this.props.onMount();
-    var top = this.refs.topInstructions;
-    var child = top.refs.instructions;
-    // TODO  onResize
-    // var instructionsHeight = $(ReactDOM.findDOMNode(child)).height();
-    // if (instructionsHeight < this.props.instructionsHeight - HEADER_HEIGHT - 13) {
-    //   this.props.setInstructionsHeight(instructionsHeight + HEADER_HEIGHT + 13);
-    // }
+    this.adjustHeights();
 
+    // Image loading can change the size of our instructions. Call adjustHeights
+    // so that our maxHeight is updated appropriately.
+    var dom = ReactDOM.findDOMNode(this.refs.topInstructions);
+    $(dom).find('img').load(function () {
+      this.adjustHeights();
+    }.bind(this));
+
+    this.props.onMount();
     window.addEventListener('resize', this.onResize);
   },
 
@@ -97,18 +157,10 @@ var AppLabView = React.createClass({
           onScreenCreate={this.props.onScreenCreate} />;
     }
 
-    // 150 is min editor size
-    // 120 is min debugger size
-    var maxHeight = $("#codeApp").height() - 150 - 120;
-    // console.log(this.topPaneHeight(), maxHeight);
-    // var topPaneHeight = Math.min(this.topPaneHeight(), maxHeight);
     var topPaneHeight = this.topPaneHeight();
     var codeWorkspaceContainerStyle = {
       top: topPaneHeight
     };
-    // maxHeight is at least current height
-    maxHeight = Math.max(maxHeight, topPaneHeight);
-    console.log('ALV:', maxHeight, topPaneHeight);
 
     return (
       <ConnectedStudioAppWrapper>
@@ -120,18 +172,19 @@ var AppLabView = React.createClass({
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
         {this.props.instructionsInTopPane && <TopInstructions
-          ref="topInstructions"
-          isEmbedView={this.props.isEmbedView}
-          puzzleNumber={this.props.puzzleNumber}
-          stageTotal={this.props.stageTotal}
-          height={topPaneHeight}
-          maxHeight={maxHeight}
-          markdown={this.props.instructionsMarkdown}
-          collapsed={this.props.instructionsCollapsed}
-          onToggleCollapsed={this.props.toggleInstructionsCollapsed}
-          onChangeHeight={this.props.setInstructionsHeight}/>
+            ref="topInstructions"
+            isEmbedView={this.props.isEmbedView}
+            puzzleNumber={this.props.puzzleNumber}
+            stageTotal={this.props.stageTotal}
+            height={topPaneHeight}
+            maxHeight={this.props.instructionsMaxHeight}
+            markdown={this.props.instructionsMarkdown}
+            collapsed={this.props.instructionsCollapsed}
+            onToggleCollapsed={this.props.toggleInstructionsCollapsed}
+            onChangeHeight={this.props.setInstructionsHeight}/>
         }
         <CodeWorkspaceContainer
+            ref="codeWorkspace"
             topMargin={topPaneHeight}
             isRtl={false}
             noVisualization={false}
@@ -148,6 +201,7 @@ module.exports = connect(function propsFromStore(state) {
     instructionsMarkdown: state.level.instructionsMarkdown,
     instructionsCollapsed: state.instructions.collapsed || !state.level.instructionsInTopPane,
     instructionsHeight: state.instructions.height,
+    instructionsMaxHeight: state.instructions.maxHeight,
     isEmbedView: state.level.isEmbedView,
     puzzleNumber: state.level.puzzleNumber,
     stageTotal: state.level.stageTotal
@@ -159,6 +213,9 @@ module.exports = connect(function propsFromStore(state) {
     },
     setInstructionsHeight: function (height) {
       dispatch(actions.setInstructionsHeight(height));
+    },
+    setInstructionsMaxHeight: function (maxHeight) {
+      dispatch(actions.setInstructionsMaxHeight(maxHeight));
     }
   };
 }

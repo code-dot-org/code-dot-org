@@ -39,7 +39,9 @@ var styles = {
     paddingRight: 10,
     position: 'absolute',
     top: HEADER_HEIGHT,
-    bottom: 0
+    bottom: 0,
+    left: 0,
+    right: 0
   },
   hidden: {
     display: 'none'
@@ -92,8 +94,6 @@ var TopInstructions = React.createClass({
     var mainStyle = [styles.main, {
       height: this.props.height - RESIZER_HEIGHT
     }, this.props.isEmbedView && styles.embedView];
-
-    console.log('height, max: ', this.props.height, this.props.maxHeight);
 
     return (
       <div style={mainStyle} className="editor-column">
