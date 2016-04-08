@@ -93,7 +93,7 @@ module TableCoerce
   def TableCoerce.number?(val)
     return true if val.is_a?(Numeric)
     return false unless val.is_a?(String)
-    # TODO - doesnt work on things like 1,234
+    # TODO: Doesn't work on things like 1,234.
     return !NUMBER.match(val).nil?
   end
 
