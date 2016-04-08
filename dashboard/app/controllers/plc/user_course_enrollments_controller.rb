@@ -3,7 +3,7 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   authorize_resource only: [:create, :enrollments_for_user]
 
   def index
-    @user_course_enrollments = @user_course_enrollments.where(user: params[:user] || current_user)
+    @user_course_enrollments = @user_course_enrollments.where(user: current_user.admin? ? params[:user] || current_user : current_user)
   end
 
   # GET /plc/user_course_enrollments/new
