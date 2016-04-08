@@ -366,6 +366,14 @@ GameLabP5.prototype.resetExecution = function () {
 };
 
 /**
+ * Register a p5 event handler function. The provided function replaces the
+ * method stored on our p5 instance.
+ */
+GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
+  this.p5[eventName] = handler;
+};
+
+/**
  * Instantiate a new p5 and start execution
  */
 GameLabP5.prototype.startExecution = function () {
@@ -543,6 +551,20 @@ GameLabP5.prototype.notifyPreloadPhaseComplete = function () {
   if (this.p5decrementPreload) {
     this.p5decrementPreload();
     this.p5decrementPreload = null;
+  }
+};
+
+GameLabP5.prototype.notifyKeyCodeDown = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keydown
+  if (this.p5) {
+    this.p5._onkeydown({ which: keyCode });
+  }
+};
+
+GameLabP5.prototype.notifyKeyCodeUp = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keyup
+  if (this.p5) {
+    this.p5._onkeyup({ which: keyCode });
   }
 };
 
