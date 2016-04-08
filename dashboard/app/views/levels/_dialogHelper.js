@@ -161,7 +161,7 @@ window.dashboard.dialog = (function () {
         }
 
         if (lastServerResponse.videoInfo) {
-          showVideoDialog(lastServerResponse.videoInfo);
+          window.showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
             showDialog("success");

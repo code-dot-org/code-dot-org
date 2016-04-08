@@ -5,7 +5,9 @@ var videojs = require('video.js');
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
 
-window.createVideoWithFallback = function (parentElement, options, width, height) {
+var videos = module.exports = {};
+
+videos.createVideoWithFallback = function (parentElement, options, width, height) {
   upgradeInsecureOptions(options);
   var video = createVideo(options);
   video.width(width).height(height);
@@ -54,7 +56,7 @@ function createVideo(options) {
 //   redirect - the redirect page after the video is dismissed.
 //   onClose - actions to take after closing the video dialog, or immediately
 //             if the video isn't shown.
-window.showVideoDialog = function (options, forceShowVideo) {
+videos.showVideoDialog = function (options, forceShowVideo) {
   if (forceShowVideo === undefined) {
     forceShowVideo = false;
   }
@@ -226,7 +228,7 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
     return;
   }
 
-  window.onYouTubeBlocked(function () {
+  videos.onYouTubeBlocked(function () {
     if (!shouldStillAddCallback()) {
       return;
     }
@@ -234,8 +236,8 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
   });
 }
 
-// This is on window because it gets accessed externally for our video test page.
-window.onYouTubeBlocked = function (callback) {
+// This is exported (and placed on window) because it gets accessed externally for our video test page.
+videos.onYouTubeBlocked = function (callback) {
   testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(), function (){}, callback);
 };
 
