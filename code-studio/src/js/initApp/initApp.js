@@ -1,5 +1,5 @@
 // TODO (brent) - way too many globals
-/* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, ga, digestManifest*/
+/* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, ga*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
