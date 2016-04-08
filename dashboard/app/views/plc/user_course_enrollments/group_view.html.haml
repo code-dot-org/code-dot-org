@@ -6,21 +6,25 @@
   - next if enrollments.length == 0
   Viewing progress for for #{course.name}
 
-  %table
+  %table#groupView
     %th
       Teacher name
     - course.plc_course_units.each do |course_unit|
       %th #{course_unit.unit_name}
     - enrollments.each do |enrollment|
-      %tr
-        %td #{enrollment.user.name}
+      %tr{style: 'border-top: solid grey; border-bottom: solid grey'}
+        %td{style: 'border-right: solid grey'} #{enrollment.user.name}
         - enrollment.plc_unit_assignments.each do |unit_assignment|
-          %td
+          %td{style: 'border-right: solid #aaaaaa'}
             - if unit_assignment.status == Plc::EnrollmentUnitAssignment::IN_PROGRESS
               - unit_assignment.plc_module_assignments.each do |module_assignment|
-                %p
-                  #{module_assignment.status.titleize}
+              - status, color = module_assignment.status_and_style
+                %p{style: "background-color: #{color}"}
+                  #{module_assignment.plc_learning_module.name}
             - else
-              #{unit_assignment.status.titleize}
+              - status, icon, color = unit_assignment.status_and_icon_and_color
+              %i{class: icon + ' fa-lg', style: "color: #{color}"}
+              %span
+                = status
 
   %br

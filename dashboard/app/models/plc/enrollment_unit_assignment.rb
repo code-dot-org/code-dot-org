@@ -56,4 +56,17 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
       update!(status: COMPLETED)
     end
   end
+
+  def status_and_icon_and_color
+    case status
+      when START_BLOCKED
+        return status.titleize, 'fa fa-minus-circle', 'red'
+      when PENDING_EVALUATION
+        return status.titleize, 'fa fa-question-circle', 'blue'
+      when IN_PROGRESS
+        return status.titleize, 'fa fa-adjust', 'goldenrod'
+      when COMPLETED
+        return status.titleize, 'fa fa-check-circle', 'green'
+    end
+  end
 end
