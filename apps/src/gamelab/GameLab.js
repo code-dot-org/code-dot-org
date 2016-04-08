@@ -625,11 +625,11 @@ GameLab.prototype.onTick = function () {
  */
 GameLab.prototype.onP5ExecutionStarting = function () {
   this.gameLabP5.p5eventNames.forEach(function (eventName) {
-    window[eventName] = function () {
+    this.gameLabP5.registerP5EventHandler(eventName, function () {
       if (this.JSInterpreter && this.eventHandlers[eventName]) {
         this.eventHandlers[eventName].apply(null);
       }
-    }.bind(this);
+    }.bind(this));
   }, this);
 };
 

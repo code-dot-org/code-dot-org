@@ -366,6 +366,14 @@ GameLabP5.prototype.resetExecution = function () {
 };
 
 /**
+ * Register a p5 event handler function. The provided function replaces the
+ * method stored on our p5 instance.
+ */
+GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
+  this.p5[eventName] = handler;
+};
+
+/**
  * Instantiate a new p5 and start execution
  */
 GameLabP5.prototype.startExecution = function () {
