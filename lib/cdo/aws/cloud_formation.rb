@@ -28,7 +28,7 @@ module AWS
     SSH_IP = '0.0.0.0/0'
     S3_BUCKET = 'cdo-dist'
 
-    STACK_ERROR_LINES = 100
+    STACK_ERROR_LINES = 250
 
     # Use AWS Certificate Manager for ELB and CloudFront SSL certificates.
     ACM_REGION = 'us-east-1'
