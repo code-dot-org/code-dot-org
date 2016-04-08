@@ -67,7 +67,7 @@ class HttpCache
               /v3/*
               /private*
             ) +
-            # TODO: Collapse these paths into /private to simplify Pegasus caching config
+            # TODO: Collapse these paths into /private to simplify Pegasus caching config.
             %w(
               /create-company-profile*
               /edit-company-profile*
