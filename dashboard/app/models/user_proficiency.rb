@@ -27,6 +27,7 @@ class UserProficiency < ActiveRecord::Base
 
     num_levels = 0
     (difficulty_number..MAXIMUM_CONCEPT_DIFFICULTY).each do |d|
+      field_name = "#{concept}_d#{d}_count"
       field_name = concept + "_" + "d" + d.to_s + "_" + "count"
       num_levels += self.send(field_name).to_i
     end
