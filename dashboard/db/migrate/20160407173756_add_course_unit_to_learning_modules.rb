@@ -16,6 +16,11 @@ class AddCourseUnitToLearningModules < ActiveRecord::Migration
       end
     end
 
+    if default_course_unit.plc_learning_modules.count == 0
+      default_course_unit.delete!
+      default_course.delete!
+    end
+
     change_column_null :plc_learning_modules, :plc_course_unit_id, false
   end
 
