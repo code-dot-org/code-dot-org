@@ -1,5 +1,4 @@
 # Example configuration file set up with sensible defaults for local development.
-# Copy this file to locals.yml to customize your local environment.
 
 
 # Causes dashboard-server to run pegasus as middleware, starting both in a
