@@ -34,11 +34,11 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
     completed_tasks = tasks_to_complete.where(status: Plc::EnrollmentTaskAssignment::COMPLETED)
 
     if completed_tasks.empty?
-      return NOT_STARTED.titleize, 'rgba(255, 0, 0, .3)'
+      return NOT_STARTED.titleize, 'rgba(255, 0, 0, .1)'
     elsif completed_tasks.size == tasks_to_complete.size
-      return COMPLETED.titleize, 'rgba(0, 255, 0, .3)'
+      return COMPLETED.titleize, 'rgba(0, 255, 0, .1)'
     else
-      return IN_PROGRESS.titleize, 'rgba(202, 165, 20, .3)'
+      return IN_PROGRESS.titleize, 'rgba(202, 165, 20, .1)'
     end
   end
 end

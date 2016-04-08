@@ -9,6 +9,7 @@ class Plc::EnrollmentUnitAssignmentsController < ApplicationController
   # GET /plc/enrollment_unit_assignments/1
   # GET /plc/enrollment_unit_assignments/1.json
   def show
+    @enable_links = @enrollment_unit_assignment.plc_user_course_enrollment.user == current_user
   end
 
   # GET /plc/enrollment_unit_assignments/new

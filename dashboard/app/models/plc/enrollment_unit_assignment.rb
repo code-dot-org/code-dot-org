@@ -60,13 +60,13 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   def status_and_icon_and_color
     case status
       when START_BLOCKED
-        return status.titleize, 'fa fa-minus-circle', 'red'
+        return status.titleize, 'fa fa-minus-circle', 'rgba(255, 0, 0, .1)', 'red'
       when PENDING_EVALUATION
-        return status.titleize, 'fa fa-question-circle', 'blue'
+        return status.titleize, 'fa fa-question-circle', 'rgba(0, 0, 255, .1)', 'blue'
       when IN_PROGRESS
-        return status.titleize, 'fa fa-adjust', 'goldenrod'
+        return status.titleize, 'fa fa-adjust', 'rgba(202, 165, 20, .1)', 'goldenrod'
       when COMPLETED
-        return status.titleize, 'fa fa-check-circle', 'green'
+        return status.titleize, 'fa fa-check-circle', 'rgba(0, 255, 0, .1)', 'green'
     end
   end
 end
