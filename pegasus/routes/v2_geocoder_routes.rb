@@ -2,8 +2,8 @@ get '/v2/client-location' do
   dont_cache
 
   location = request.location
-  if location
-    location = {
+  location = if location
+    {
                 ip_address: request.ip,
                 city: location.city,
                 state: location.state,
@@ -14,8 +14,8 @@ get '/v2/client-location' do
                 postal_code: location.postal_code,
                }
   else
-    location = {ip_address: request.ip}
-  end
+    {ip_address: request.ip}
+             end
 
   content_type :json
   JSON.pretty_generate(location)

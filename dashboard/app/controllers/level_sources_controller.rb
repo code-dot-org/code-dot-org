@@ -75,11 +75,11 @@ class LevelSourcesController < ApplicationController
   protected
 
   def set_level_source
-    if current_user && current_user.admin?
-      @level_source = LevelSource.find(params[:id])
+    @level_source = if current_user && current_user.admin?
+      LevelSource.find(params[:id])
     else
-      @level_source = LevelSource.where(hidden: false).find(params[:id])
-    end
+      LevelSource.where(hidden: false).find(params[:id])
+                    end
     @level_source.replace_old_when_run_blocks
     @level = Level.cache_find(@level_source.level_id)
     @game = @level.game

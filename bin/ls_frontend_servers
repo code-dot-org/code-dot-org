@@ -23,15 +23,15 @@ def describe_frontends(path = nil, json_format = false)
       reservation.instances.each do |instance|
         name = instance.tags.detect{|tag| tag.key == 'Name'}
         next unless name && name.value.start_with?('frontend')
-        if json_format
+        result << if json_format
           # Format output as json.
-          result << %Q{"#{name.value}": "#{instance.private_dns_name}",}
+          %Q{"#{name.value}": "#{instance.private_dns_name}",}
         else
           # Format output as tab separated values.
-          result << [(name ? name.value : '').ljust(16),
+          [(name ? name.value : '').ljust(16),
                      instance.private_dns_name,
                      "http://#{instance.public_dns_name}:8080/#{path || ''}"]
-        end
+                  end
       end
     end
   end

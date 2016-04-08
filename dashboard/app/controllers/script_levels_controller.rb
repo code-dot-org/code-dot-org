@@ -68,11 +68,11 @@ class ScriptLevelsController < ApplicationController
     # generation of the script level path.
     extra_params = {}
     if @script_level.long_assessment?
-      if params[:puzzle_page]
-        extra_params[:puzzle_page] = params[:puzzle_page]
+      extra_params[:puzzle_page] = if params[:puzzle_page]
+        params[:puzzle_page]
       else
-        extra_params[:puzzle_page] = 1
-      end
+        1
+                                   end
     end
 
     if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
@@ -131,13 +131,13 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_script_level
-    if params[:chapter]
-      @script_level = @script.get_script_level_by_chapter(params[:chapter])
+    @script_level = if params[:chapter]
+      @script.get_script_level_by_chapter(params[:chapter])
     elsif params[:stage_id]
-      @script_level = @script.get_script_level_by_stage_and_position(params[:stage_id], params[:id])
+      @script.get_script_level_by_stage_and_position(params[:stage_id], params[:id])
     else
-      @script_level = @script.get_script_level_by_id(params[:id])
-    end
+      @script.get_script_level_by_id(params[:id])
+                    end
     raise ActiveRecord::RecordNotFound unless @script_level
     authorize! :read, @script_level
   end

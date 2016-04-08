@@ -118,13 +118,13 @@ module Dashboard
     config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
 
     MAX_CACHED_BYTES = 256.megabytes
-    if CDO.memcached_hosts.present?
-      config.cache_store = :mem_cache_store, CDO.memcached_hosts, {
+    config.cache_store = if CDO.memcached_hosts.present?
+      :mem_cache_store, CDO.memcached_hosts, {
           value_max_bytes: MAX_CACHED_BYTES
       }
     else
-      config.cache_store = :memory_store, { size: MAX_CACHED_BYTES }
-    end
+      :memory_store, { size: MAX_CACHED_BYTES }
+                         end
 
   end
 end

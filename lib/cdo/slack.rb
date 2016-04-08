@@ -21,8 +21,8 @@ class Slack
   def self.message(text, params={})
     return false unless CDO.slack_endpoint
 
-    if params[:color]
-      payload = {
+    payload = if params[:color]
+      {
         attachments: [{
           fallback: text,
           text: text,
@@ -31,11 +31,11 @@ class Slack
         }]
       }.merge params
     else
-      payload = {
+      {
         text: text,
         unfurl_links: true
       }.merge params
-    end
+              end
 
     url = URI.parse("https://hooks.slack.com/services/#{CDO.slack_endpoint}")
     begin

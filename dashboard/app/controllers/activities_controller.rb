@@ -156,11 +156,11 @@ class ActivitiesController < ApplicationController
     synchronous_save = solved &&
         (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
             @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
-    if synchronous_save
-      @activity = Activity.create!(attributes)
+    @activity = if synchronous_save
+      Activity.create!(attributes)
     else
-      @activity = Activity.create_async!(attributes)
-    end
+      Activity.create_async!(attributes)
+                end
 
     if @script_level
       @new_level_completed = current_user.track_level_progress_async(@script_level, test_result, params[:submitted])
@@ -234,11 +234,11 @@ class ActivitiesController < ApplicationController
 
   def log_milestone(level_source, params)
     log_string = 'Milestone Report:'
-    if current_user || session.id
-      log_string += "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id))}"
+    log_string += if current_user || session.id
+      "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id))}"
     else
-      log_string += "\tanon"
-    end
+      "\tanon"
+                  end
     log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" +
                   "\t#{params[:testResult]}\t#{params[:time]}\t#{params[:attempt]}\t#{params[:lines]}"
     log_string += level_source.try(:id) ? "\t#{level_source.id}" : "\t"
