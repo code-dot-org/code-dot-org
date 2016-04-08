@@ -1940,7 +1940,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     this.appMsg,
     config.dropletConfig,
     config.level.codeFunctions,
-    config.level.autocompletePaletteApisOnly);
+    config.level.autocompletePaletteApisOnly,
+    this.Dialog);
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
