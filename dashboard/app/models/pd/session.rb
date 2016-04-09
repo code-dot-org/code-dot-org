@@ -23,6 +23,6 @@ class Pd::Session < ActiveRecord::Base
   end
 
   def hours
-    ((self.end - self.start) / 1.hour).round
+    (self.end - self.start) / 1.hour
   end
 end

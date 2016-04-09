@@ -72,7 +72,8 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def friendly_name
-    "Workshop #{sessions.first.start.strftime('%m/%d/%y')} at #{location_name}"
+    start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
+    "Workshop #{start_time} at #{location_name}"
   end
 
   def start!
