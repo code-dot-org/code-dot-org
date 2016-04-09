@@ -40,8 +40,4 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   def user_course_enrollment_params
     params.permit(:user_email, :plc_course_id)
   end
-
-  def manager_view_params
-    params.require(:plc_user_course_enrollment)
-  end
 end
