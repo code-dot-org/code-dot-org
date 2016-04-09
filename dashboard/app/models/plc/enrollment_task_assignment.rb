@@ -28,6 +28,12 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
   include SerializedProperties
   include StiFactory
 
+  TASK_STATUS_STATES = [
+      NOT_STARTED = 'not_started',
+      IN_PROGRESS = 'in_progress',
+      COMPLETED = 'completed'
+  ]
+
   def complete_assignment!
     update!(status: :completed)
   end
@@ -41,11 +47,11 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
 
     case status
       # Need to move these statuses to some constant eventually - will address with next checkin
-      when 'not_started'
+      when NOT_STARTED
         return 'fa-circle-o', ''
-      when 'in_progress'
+      when IN_PROGRESS
         return 'fa-adjust', 'color: darkgoldenrod'
-      when 'completed'
+      when COMPLETED
         return 'fa-check-circle', 'color: green'
     end
   end

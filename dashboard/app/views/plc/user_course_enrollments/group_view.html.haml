@@ -13,10 +13,12 @@
       %th
         Teacher Name
       - course.plc_course_units.each do |course_unit|
-        %th #{course_unit.unit_name}
+        %th
+          #{course_unit.unit_name}
     %tbody
       - enrollments.each do |enrollment|
         %tr
-          %td #{enrollment.user.name}
+          %td
+            = link_to enrollment.user.name, '/plc/user_course_enrollments/manager_view/' + enrollment.id.to_s
           - enrollment.plc_unit_assignments.each do |unit_assignment|
             %td #{unit_assignment.status.titleize}
