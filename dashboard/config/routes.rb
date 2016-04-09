@@ -290,6 +290,9 @@ Dashboard::Application.routes.draw do
     get '/plc/' + object, to: redirect('plc/content_creator/show_courses_and_modules')
   end
 
+  get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
+  get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
+
   namespace :plc do
     root to: 'plc#index'
     resources :courses

@@ -6,6 +6,15 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
     @user_course_enrollments = @user_course_enrollments.where(user: current_user)
   end
 
+  def group_view
+    # This is a method to view many different people's course enrollments
+    @courses = Plc::Course.all
+    @user_course_enrollments = Plc::UserCourseEnrollment.all
+  end
+
+  def manager_view
+  end
+
   # GET /plc/user_course_enrollments/new
   def new
   end
@@ -30,5 +39,9 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_course_enrollment_params
     params.permit(:user_email, :plc_course_id)
+  end
+
+  def manager_view_params
+    params.require(:plc_user_course_enrollment)
   end
 end
