@@ -16,7 +16,7 @@ class Pd::DistrictReport
   def self.generate_district_report_row(district, teacher, workshop)
     payment_term = Pd::DistrictPaymentTerm.where(district_id: district.id, course: workshop.course).first
     attendances = Pd::Attendance.for_teacher_in_workshop(teacher, workshop)
-    hours = attendances.map(&:hours).reduce(&:+)
+    hours = attendances.map(&:session).map(&:hours).reduce(&:+)
     days = attendances.count
     qualified = (payment_term && workshop.workshop_type == Pd::Workshop::TYPE_DISTRICT && workshop.course != Pd::Workshop::COURSE_CSF)
     payment_type = payment_term ? payment_term.rate_type : nil
@@ -28,7 +28,7 @@ class Pd::DistrictReport
         when 'daily'
           days * payment_term.rate
         else
-          0
+          raise "Unexpected district payment term rate type #{payment_term.rate_type} for id #{payment_term.id}"
       end
 
     {

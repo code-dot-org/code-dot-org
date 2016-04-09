@@ -22,8 +22,4 @@ class Pd::Attendance < ActiveRecord::Base
   def self.for_teacher_in_workshop(teacher, workshop)
     joins(:workshop).where(teacher: teacher, pd_workshops: {id: workshop.id})
   end
-
-  def hours
-    session.hours
-  end
 end
