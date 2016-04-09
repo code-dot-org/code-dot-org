@@ -22,7 +22,7 @@ class GAClient
   ## A single metrics data request to be retrieved from the API is limited to a maximum of 10 metrics
 
   ## Function to query google for a set of analytics attributes
-  def self.query_ga (start_date, end_date, dimensions, metrics, filter)
+  def self.query_ga(start_date, end_date, dimensions, metrics, filter)
     client, analytics = get_client
     # noinspection RubyStringKeysInHashInspection,RubyClassVariableUsageInspection
     client.execute(:api_method => analytics.data.ga.get, :parameters => {
@@ -49,8 +49,6 @@ class GAClient
     key_secret = CDO.ga_api_secret                         # Password to unlock private key
     @@profile_id = CDO.ga_profile_id.to_s                   # Analytics profile ID.
 
-
-
     @@client = Google::APIClient.new(
         :application_name => 'cdo-ga-analytics',
         :application_version => '0.0.1')
@@ -71,7 +69,7 @@ class GAClient
     @@analytics = nil
     ## Load cached discovered API, if it exists. This prevents retrieving the
     ## discovery document on every run, saving a round-trip to the discovery service.
-    if File.exists? CACHED_API_FILE
+    if File.exist? CACHED_API_FILE
       File.open(CACHED_API_FILE) do |file|
         @@analytics = Marshal.load(file)
       end
