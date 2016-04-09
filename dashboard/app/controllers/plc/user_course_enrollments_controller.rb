@@ -12,6 +12,9 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
     @user_course_enrollments = Plc::UserCourseEnrollment.all
   end
 
+  def manager_view
+  end
+
   # GET /plc/user_course_enrollments/new
   def new
   end
