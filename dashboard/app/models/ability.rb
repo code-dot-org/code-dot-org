@@ -65,7 +65,7 @@ class Ability
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty?
         end
-        can :index, Plc::UserCourseEnrollment
+        can :read, Plc::UserCourseEnrollment
       end
 
       if user.facilitator?
