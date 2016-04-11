@@ -28,6 +28,19 @@
     "step_speed": "2",
     "instructions": "No rules. No clues. Just the challenge!",
     "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "debugging": null,
+    "repeat_loops": null,
+    "repeat_until_while": 4,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
   }
 }]]></config>
   <blocks>

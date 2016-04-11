@@ -28,7 +28,19 @@
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \\n\\nConnect it all back to the `when run` block and you're good to go!\",\r\n  \"hint_id\": \"2-3_Maze_16_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 2,
+    "debugging": null,
+    "repeat_loops": 1,
+    "repeat_until_while": null,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

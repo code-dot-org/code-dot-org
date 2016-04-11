@@ -39,6 +39,19 @@
     "disable_examples": "false",
     "disable_sharing": "false",
     "timeout_after_when_run": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": null,
+    "repeat_loops": null,
+    "repeat_until_while": null,
+    "for_loops": null,
+    "events": 4,
+    "variables": 4,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
   }
 }]]></config>
   <blocks>

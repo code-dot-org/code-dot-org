@@ -30,7 +30,19 @@
     "instructions": "Can you get Skrat to his acorn using as few blocks as possible?"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "debugging": null,
+    "repeat_loops": 4,
+    "repeat_until_while": null,
+    "for_loops": 4,
+    "events": null,
+    "variables": 3,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

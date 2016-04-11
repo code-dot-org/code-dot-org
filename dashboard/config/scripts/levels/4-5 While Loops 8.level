@@ -27,6 +27,19 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": null,
+    "repeat_loops": null,
+    "repeat_until_while": 4,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
   }
 }]]></config>
   <blocks>

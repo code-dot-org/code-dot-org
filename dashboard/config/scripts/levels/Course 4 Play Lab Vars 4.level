@@ -40,8 +40,20 @@
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
     "min_workspace_height": "600",
-    "examples_required": "false",
-    "maze_data": null
+    "examples_required": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": null,
+    "repeat_loops": null,
+    "repeat_until_while": null,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
   }
 }]]></config>
   <blocks>

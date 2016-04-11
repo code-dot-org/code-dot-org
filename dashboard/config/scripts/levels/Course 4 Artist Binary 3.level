@@ -28,6 +28,19 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "images": "[{\"filename\":\"binary_grid.svg\",\"position\":[0,0]}]"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": null,
+    "repeat_loops": 1,
+    "repeat_until_while": null,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
   }
 }]]></config>
   <blocks>
@@ -268,6 +281,13 @@
         </block>
         <block type="text">
           <title name="TEXT">0</title>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#000000</title>
+            </block>
+          </value>
         </block>
       </xml>
     </toolbox_blocks>

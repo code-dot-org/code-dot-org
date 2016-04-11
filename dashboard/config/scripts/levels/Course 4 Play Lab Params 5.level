@@ -39,8 +39,20 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null,
     "min_workspace_height": "600"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "debugging": null,
+    "repeat_loops": null,
+    "repeat_until_while": 1,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": 3,
+    "conditionals": null
   }
 }]]></config>
   <blocks>

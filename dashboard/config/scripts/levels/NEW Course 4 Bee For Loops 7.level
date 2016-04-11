@@ -36,7 +36,19 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Try doing some math with the counter variable.\\n\\nWhat do you have to do to the counter at each flower to equal the amount of nectar you need to collect?\",\r\n  \"hint_id\": \"NEW_Course_4_Bee_For_Loops_7_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": null,
+    "repeat_loops": 4,
+    "repeat_until_while": null,
+    "for_loops": 4,
+    "events": null,
+    "variables": 3,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>
