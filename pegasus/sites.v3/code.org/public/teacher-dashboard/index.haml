@@ -698,6 +698,12 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
           }
           assessment.status = assessment.submitted ? "submitted" : "in_progress";
 
+          // Don't show a timestamp for non-submittted assessments.
+          if (!assessment.submitted)
+          {
+            assessment.timestamp = null;
+          }
+
           // Each LevelGroup's result has a list of the results for the levels in that order.
           // Because angular's nested iterators are kind of funky when trying to generate a table,
           // let's just generate a flat list of the level results to go into $scope.
