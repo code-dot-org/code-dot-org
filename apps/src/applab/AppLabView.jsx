@@ -206,7 +206,7 @@ var AppLabView = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
-    instructionsInTopPane: state.level.instructionsInTopPane,
+    instructionsInTopPane: state.level.instructionsInTopPane && !!state.level.instructionsMarkdown,
     instructionsMarkdown: state.level.instructionsMarkdown,
     instructionsCollapsed: state.instructions.collapsed || !state.level.instructionsInTopPane,
     instructionsHeight: state.instructions.height,
