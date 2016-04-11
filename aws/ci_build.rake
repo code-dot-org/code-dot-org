@@ -376,7 +376,7 @@ task :eyes_ui_tests => [UI_TEST_SYMLINK] do
   end
 end
 
-# do the eyes and browserstack ui tests in parallel
+# do the eyes and sauce labs ui tests in parallel
 multitask ui_tests: [:eyes_ui_tests, :regular_ui_tests]
 
 $websites_test = build_task('websites-test', [
