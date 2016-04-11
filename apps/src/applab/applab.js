@@ -18,6 +18,7 @@ var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var Visualization = require('./Visualization');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
@@ -808,10 +809,10 @@ Applab.init = function (config) {
     return visualizationColumnEjs({
       assetUrl: studioApp.assetUrl,
       data: {
-        visualization: require('./visualization.html.ejs')({
-          appWidth: Applab.appWidth,
-          appHeight: Applab.footerlessAppHeight
-        }),
+        visualization: React.renderToStaticMarkup(
+          <Visualization
+            appWidth={Applab.appWidth}
+            appHeight={Applab.footerlessAppHeight}/>),
         controls: firstControlsRow
       }
     });
