@@ -66,3 +66,4 @@ end
 cronjob h: '*/8', m: rand(20), cmd: 'service dashboard upgrade && service pegasus upgrade'
 
 cronjob m: rand(60), cmd: "#{bin}/upload-logs-to-s3 dashboard pegasus"
+cronjob at:'@reboot', do:'chef-client'
