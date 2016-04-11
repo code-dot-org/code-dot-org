@@ -1,7 +1,7 @@
 /** @file Tests of App Lab event sanitization. */
 'use strict';
 
-var testUtils = require('./util/testUtils');
+var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var EventSandboxer = require('@cdo/apps/applab/EventSandboxer');
 
