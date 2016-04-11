@@ -15,6 +15,7 @@ var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
+var queryParams = require('../utils').queryParams;
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -594,7 +595,7 @@ var projects = module.exports = {
               fetchAbuseScore(function () {
                 deferred.resolve();
               });
-            });
+            }, queryParams('version'));
           }
         });
       } else {
@@ -612,7 +613,7 @@ var projects = module.exports = {
             fetchAbuseScore(function () {
               deferred.resolve();
             });
-          });
+          }, queryParams('version'));
         }
       });
     } else {
@@ -641,8 +642,9 @@ var projects = module.exports = {
  * sources api
  * @param {object} channelData Data we fetched from channels api
  * @param {function} callback
+ * @param {string?} version Optional version to load
  */
-function fetchSource(channelData, callback) {
+function fetchSource(channelData, callback, version) {
   // Explicitly remove levelSource/levelHtml from channels
   delete channelData.levelSource;
   delete channelData.levelHtml;
@@ -654,12 +656,16 @@ function fetchSource(channelData, callback) {
 
   projects.setTitle(current.name);
   if (channelData.migratedToS3) {
-    sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
+    var url = current.id + '/' + SOURCE_FILE;
+    if (version) {
+      url += '?version=' + version;
+    }
+    sources.fetch(url, function (err, data) {
       if (err) {
         console.warn('unable to fetch project source file', err);
         data = {
           source: '',
-          html: '',
+          html: ''
         };
       }
       unpackSources(data);
@@ -698,7 +704,7 @@ function executeCallback(callback, data) {
  * is the current project (if any) editable by the logged in user (if any)?
  */
 function isEditable() {
-  return (current && current.isOwner && !current.frozen);
+  return current && current.isOwner && !current.frozen && !queryParams('version');
 }
 
 /**
@@ -747,7 +753,6 @@ function redirectFromHashUrl() {
     return false;
   }
 
-  var pathInfo = parsePath();
   location.href = newUrl;
   return true;
 }
@@ -765,18 +770,20 @@ function parsePath() {
     pathname += location.hash.replace('#', '/');
   }
 
-  if (pathname.split('/')[PathPart.PROJECTS] !== 'p' &&
-      pathname.split('/')[PathPart.PROJECTS] !== 'projects') {
+  var tokens = pathname.split('/');
+
+  if (tokens[PathPart.PROJECTS] !== 'p' &&
+    tokens[PathPart.PROJECTS] !== 'projects') {
     return {
       appName: null,
       channelId: null,
-      action: null,
+      action: null
     };
   }
 
   return {
-    appName: pathname.split('/')[PathPart.APP],
-    channelId: pathname.split('/')[PathPart.CHANNEL_ID],
-    action: pathname.split('/')[PathPart.ACTION]
+    appName: tokens[PathPart.APP],
+    channelId: tokens[PathPart.CHANNEL_ID],
+    action: tokens[PathPart.ACTION]
   };
 }
