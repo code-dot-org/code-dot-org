@@ -155,6 +155,11 @@ describe('getText/setText commands', function () {
         assert.equal(getInnerText(element), 'text\nwith\nnewlines');
       });
 
+      it('converts divs with attributes to newlines', function () {
+        element.innerHTML = 'Line 1<div style="line-height: 10.8px;">Line 2</div>';
+        assert.equal(getInnerText(element), 'Line 1\nLine 2');
+      });
+
       it('converts <div><br></div> to blank lines', function () {
         element.innerHTML = 'text<div><br></div><div>with</div><div><br></div><div><br></div><div>empty newlines</div>';
         assert.equal(getInnerText(element), 'text\n\nwith\n\n\nempty newlines');
