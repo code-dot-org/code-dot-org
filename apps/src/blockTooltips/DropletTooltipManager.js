@@ -95,7 +95,8 @@ DropletTooltipManager.prototype.registerBlocks = function () {
   var blocks = dropletUtils.getAllAvailableDropletBlocks(
     this.dropletConfig,
     this.codeFunctions,
-    this.autocompletePaletteApisOnly);
+    this.autocompletePaletteApisOnly,
+    dropletUtils.IGNORE_NO_AUTOCOMPLETE_BLOCKS);
   blocks.forEach(function (dropletBlockDefinition) {
     var key = dropletBlockDefinition.modeOptionName || dropletBlockDefinition.func;
     if (dropletBlockDefinition.docFunc) {

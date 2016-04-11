@@ -20,7 +20,7 @@ while numbers.length < NUMBER_TO_BUY
     sms_enabled: true,
     contains: '***2633' # (XXX)XXX-CODE
   )
-  CDO.log.info  "Found #{@numbers.length} numbers"
+  CDO.log.info "Found #{@numbers.length} numbers"
   break if @numbers.empty?
   @numbers.each do |num|
     if numbers.length < NUMBER_TO_BUY

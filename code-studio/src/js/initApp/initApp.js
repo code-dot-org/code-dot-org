@@ -1,5 +1,5 @@
 // TODO (brent) - way too many globals
-/* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, showVideoDialog, ga, digestManifest*/
+/* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, ga*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
@@ -10,6 +10,7 @@ var clientState = require('../clientState');
 var createCallouts = require('../callouts');
 var reporting = require('../reporting');
 var Dialog = require('../dialog');
+var showVideoDialog = require('../videos').showVideoDialog;
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
@@ -44,7 +45,7 @@ window.apps = {
         if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
           $('#clear-puzzle-header').hide();
           // Only show Version History button if the user owns this project
-          if (project.isOwner()) {
+          if (project.isEditable()) {
             $('#versions-header').show();
           }
         }
