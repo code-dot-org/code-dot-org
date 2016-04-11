@@ -37,15 +37,7 @@
   "notes": "Edited 3/3/16 to remove loop requirement (since next puzzle didn't assume it and it would have created a nested loop situation.) Also added three hints to help construct the diamond.  Removed block count.\r\n\r\n",
   "level_concept_difficulty": {
     "sequencing": 3,
-    "debugging": null,
-    "repeat_loops": 3,
-    "repeat_until_while": null,
-    "for_loops": null,
-    "events": null,
-    "variables": null,
-    "functions": null,
-    "functions_with_params": null,
-    "conditionals": null
+    "repeat_loops": 3
   }
 }]]></config>
   <blocks>

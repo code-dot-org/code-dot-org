@@ -36,15 +36,9 @@
   "published": false,
   "level_concept_difficulty": {
     "sequencing": 5,
-    "debugging": null,
-    "repeat_loops": null,
     "repeat_until_while": 3,
-    "for_loops": null,
-    "events": null,
     "variables": 3,
-    "functions": null,
-    "functions_with_params": 4,
-    "conditionals": null
+    "functions_with_params": 4
   }
 }]]></config>
   <blocks>
