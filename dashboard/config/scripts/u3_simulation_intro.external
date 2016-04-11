@@ -1,6 +1,5 @@
 name 'U3 - Simulation - Intro'
 css 'unplugged'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Make a Hypothesis
 

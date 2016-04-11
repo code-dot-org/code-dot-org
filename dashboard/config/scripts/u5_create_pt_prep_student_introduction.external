@@ -1,7 +1,6 @@
 name 'U5 - Create PT Prep - Student Introduction'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
 ## Unit 5: Lesson 03 - Create PT Preparation
