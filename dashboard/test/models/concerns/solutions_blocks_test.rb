@@ -12,9 +12,9 @@ class SolutionBlocksTest < ActiveSupport::TestCase
           <block type="maze_move">
             <title name="DIR">moveForward</title>
             <next>
-              <block type="maze_nectar" deletable="false">
+              <block type="maze_nectar">
                 <next>
-                  <block type="maze_nectar" deletable="false"></block>
+                  <block type="maze_nectar"></block>
                 </next>
               </block>
             </next>
