@@ -40,7 +40,8 @@
     "sequencing": 5,
     "for_loops": 4,
     "variables": 5,
-    "functions_with_params": 5
+    "functions_with_params": 5,
+    "conditionals": 3
   }
 }]]></config>
   <blocks>

@@ -50,7 +50,8 @@
     "repeat_until_while": 2,
     "events": 1,
     "functions": 1,
-    "functions_with_params": 1
+    "functions_with_params": 1,
+    "conditionals": 2
   }
 }]]></config>
   <blocks>
