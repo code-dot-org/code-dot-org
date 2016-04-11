@@ -414,7 +414,7 @@ puts @options
 instance_type = aws_instance_type(environment)
 instances_to_create = []
 
-if (@options['count'] == 1)
+if @options['count'] == 1
   determined_instance_zone, instance_name = generate_instance_zone_and_name(@ec2client, @username, @options['name'])
 
   puts "Naming instance #{instance_name}, creating frontend server with instance type #{instance_type}"

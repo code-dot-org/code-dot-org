@@ -87,12 +87,12 @@
   videoInfo['enable_fallback'] = true;
   videoInfo['src'] = videoInfo['src'].replace('#{Video.youtube_base_url}', 'https://www.youtube.com');
 
-  createVideoWithFallback($('#video-container'), videoInfo, 600, 400);
+  window.dashboard.videos.createVideoWithFallback($('#video-container'), videoInfo, 600, 400);
 
   var fakingYouTubeBlocked = "#{params.has_key?(:force_youtube_fallback) ? 'Faking YouTube blocked' : ''}";
   $('.blockedStatus').css('color', 'green');
   formLink.fillFieldEncoded('youtubeReachable', 'Yes, reached');
-  onYouTubeBlocked(function() {
+  window.dashboard.videos.onYouTubeBlocked(function() {
     $('.blockedStatus').html('YouTube could not be reached. Assuming YouTube is blocked. Using fallback.').css('color', 'red');
     formLink.fillFieldEncoded('youtubeReachable', fakingYouTubeBlocked || 'No, not reached');
   });

@@ -4,14 +4,14 @@
 require_relative '../../config/environment'
 
 def followers_without_section
- Follower.where(section_id: nil)
+  Follower.where(section_id: nil)
 end
 
 def users_with_followers_without_sections_count
   followers_without_section.distinct.count(:user_id)
 end
 
-def users_with_followers_without_sections 
+def users_with_followers_without_sections
   User.where('id in (select user_id from followers where followers.section_id is null)')
 end
 

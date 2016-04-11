@@ -90,10 +90,10 @@ ARGF.each do |line|
     if line.include? "begin" + "\/" + t
       puts LONG_VALUE_SUM + date + " begin " + t + "\t" + "1"
       break
-    elsif (line.include? "begin_" + t + ".png")
+    elsif line.include? "begin_" + t + ".png"
       puts LONG_VALUE_SUM + date + " beginpng " + t + "\t" + "1"
       break
-    elsif (line.include? "443" + "\/" + t)
+    elsif line.include? "443" + "\/" + t
       puts LONG_VALUE_SUM + date + " 443 " + t + "\t" + "1"
       break
     end

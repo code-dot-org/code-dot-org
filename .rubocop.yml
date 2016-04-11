@@ -5,7 +5,6 @@ inherit_from:
 AllCops:
   Exclude:
     - 'apps/**/*'
-    - 'dashboard/scripts/**/*'
     - 'dashboard/db/**/*'
     - 'dashboard/db/*'
   DisplayCopNames: true
