@@ -400,4 +400,13 @@ FactoryGirl.define do
     properties {{survey2016_ethnicity_asian: "1"}}
     properties {{survey2016_foodstamps: "3"}}
   end
+
+  factory :user_proficiency do
+    user { create :student }
+    sequencing_d1_count 1
+    repeat_loops_d2_count 2
+    repeat_loops_d4_count 3
+    conditionals_d5_count 4
+  end
+
 end

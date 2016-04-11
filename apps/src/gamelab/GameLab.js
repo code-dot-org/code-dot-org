@@ -24,6 +24,7 @@ var gamelabCommands = require('./commands');
 var errorHandler = require('../errorHandler');
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
+var dom = require('../dom');
 
 var actions = require('./actions');
 var createStore = require('../redux');
@@ -32,6 +33,18 @@ var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
+
+var ButtonState = {
+  UP: 0,
+  DOWN: 1
+};
+
+var ArrowIds = {
+  LEFT: 'leftButton',
+  UP: 'upButton',
+  RIGHT: 'rightButton',
+  DOWN: 'downButton'
+};
 
 /**
  * An instantiable GameLab class
@@ -63,6 +76,7 @@ var GameLab = function () {
 
   this.eventHandlers = {};
   this.Globals = {};
+  this.btnState = {};
   this.currentCmdQueue = null;
   this.interpreterStarted = false;
   this.globalCodeRunsDuringPreload = false;
@@ -118,6 +132,8 @@ GameLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+
+  this.level.softButtons = this.level.softButtons || {};
 
   config.usesAssets = true;
 
@@ -225,6 +241,15 @@ GameLab.prototype.calculateVisualizationScale_ = function () {
  */
 GameLab.prototype.afterInject_ = function (config) {
 
+  // Connect up arrow button event handlers
+  for (var btn in ArrowIds) {
+    dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
+        this.onArrowButtonUp.bind(this, ArrowIds[btn]));
+    dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
+        this.onArrowButtonDown.bind(this, ArrowIds[btn]));
+  }
+  document.addEventListener('mouseup', this.onMouseUp.bind(this), false);
+
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
@@ -300,6 +325,16 @@ GameLab.prototype.reset = function (ignore) {
     this.interpreterStarted = false;
   }
   this.executionError = null;
+
+  // Soft buttons
+  var softButtonCount = 0;
+  for (var i = 0; i < this.level.softButtons.length; i++) {
+    document.getElementById(this.level.softButtons[i]).style.display = 'inline';
+    softButtonCount++;
+  }
+  if (softButtonCount) {
+    $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
+  }
 };
 
 GameLab.prototype.onPuzzleComplete = function (submit) {
@@ -406,6 +441,46 @@ GameLab.prototype.runButtonClick = function () {
   }
   this.studioApp_.attempts++;
   this.execute();
+};
+
+function p5KeyCodeFromArrow(idBtn) {
+  switch (idBtn) {
+    case ArrowIds.LEFT:
+      return window.p5.prototype.LEFT_ARROW;
+    case ArrowIds.RIGHT:
+      return window.p5.prototype.RIGHT_ARROW;
+    case ArrowIds.UP:
+      return window.p5.prototype.UP_ARROW;
+    case ArrowIds.DOWN:
+      return window.p5.prototype.DOWN_ARROW;
+  }
+}
+
+GameLab.prototype.onArrowButtonDown = function (buttonId, e) {
+  // Store the most recent event type per-button
+  this.btnState[buttonId] = ButtonState.DOWN;
+  e.preventDefault();  // Stop normal events so we see mouseup later.
+
+  this.gameLabP5.notifyKeyCodeDown(p5KeyCodeFromArrow(buttonId));
+};
+
+GameLab.prototype.onArrowButtonUp = function (buttonId, e) {
+  // Store the most recent event type per-button
+  this.btnState[buttonId] = ButtonState.UP;
+
+  this.gameLabP5.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
+};
+
+GameLab.prototype.onMouseUp = function (e) {
+  // Reset all arrow buttons on "global mouse up" - this handles the case where
+  // the mouse moved off the arrow button and was released somewhere else
+  for (var buttonId in this.btnState) {
+    if (this.btnState[buttonId] === ButtonState.DOWN) {
+
+      this.btnState[buttonId] = ButtonState.UP;
+      this.gameLabP5.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
+    }
+  }
 };
 
 GameLab.prototype.evalCode = function (code) {
@@ -550,11 +625,11 @@ GameLab.prototype.onTick = function () {
  */
 GameLab.prototype.onP5ExecutionStarting = function () {
   this.gameLabP5.p5eventNames.forEach(function (eventName) {
-    window[eventName] = function () {
+    this.gameLabP5.registerP5EventHandler(eventName, function () {
       if (this.JSInterpreter && this.eventHandlers[eventName]) {
         this.eventHandlers[eventName].apply(null);
       }
-    }.bind(this);
+    }.bind(this));
   }, this);
 };
 

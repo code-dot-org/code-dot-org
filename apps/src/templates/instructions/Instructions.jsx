@@ -28,6 +28,7 @@ var Instructions = React.createClass({
     if (this.props.renderedMarkdown) {
       instructions = (
         <MarkdownInstructions
+          ref="instructionsMarkdown"
           renderedMarkdown={this.props.renderedMarkdown}
           markdownClassicMargins={this.props.markdownClassicMargins}
           inTopPane={this.props.inTopPane}
