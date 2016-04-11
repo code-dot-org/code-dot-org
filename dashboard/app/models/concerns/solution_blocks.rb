@@ -50,8 +50,7 @@ module SolutionBlocks
     if create_for_toolbox
       # strip out blocks that shouldn't be in a toolbox
       solution_blocks.reject! { |block|
-        block.get_attribute('type') == 'when_run' ||
-            block.get_attribute('type') == 'procedures_defnoreturn'
+        IGNORED_SOLUTION_BLOCK_ATTRS.any? {|key, value| block.attr(key) == value}
       }
     end
 
@@ -72,7 +71,7 @@ module SolutionBlocks
     toolbox = Nokogiri::XML(properties['toolbox_blocks'])
     toolbox_blocks = toolbox.xpath('//block')
     Nokogiri::XML(properties['solution_blocks']).xpath('//block').each do |block|
-      next if IGNORED_SOLUTION_BLOCK_ATTRS.any? {|kvpair| block.attr(kvpair[0]) == kvpair[1]}
+      next if IGNORED_SOLUTION_BLOCK_ATTRS.any? {|key, value| block.attr(key) == value}
 
       next if toolbox_blocks.any? do |toolbox_block|
         blocks_match? toolbox_block, block
