@@ -39,15 +39,8 @@
   "notes": "",
   "level_concept_difficulty": {
     "sequencing": 5,
-    "debugging": null,
-    "repeat_loops": null,
-    "repeat_until_while": null,
     "for_loops": 5,
-    "events": null,
-    "variables": null,
-    "functions": null,
-    "functions_with_params": 4,
-    "conditionals": null
+    "functions_with_params": 4
   }
 }]]></config>
   <blocks>
