@@ -23,6 +23,10 @@ class LevelsController < ApplicationController
   # GET /levels/1
   # GET /levels/1.json
   def show
+    if @level.try(:pages)
+      @pages = @level.pages
+    end
+
     view_options(
         full_width: true,
         small_footer: @game.uses_small_footer? || enable_scrolling?,

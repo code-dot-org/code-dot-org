@@ -13,15 +13,15 @@ var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
-var VersionHistory = require('./templates/VersionHistory.jsx');
-var Alert = require('./templates/alert.jsx');
+var VersionHistory = require('./templates/VersionHistory');
+var Alert = require('./templates/alert');
 var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
-var Instructions = require('./templates/instructions/Instructions.jsx');
-var DialogButtons = require('./templates/DialogButtons.jsx');
-var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
+var Instructions = require('./templates/instructions/Instructions');
+var DialogButtons = require('./templates/DialogButtons');
+var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
@@ -1940,7 +1940,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     this.appMsg,
     config.dropletConfig,
     config.level.codeFunctions,
-    config.level.autocompletePaletteApisOnly);
+    config.level.autocompletePaletteApisOnly,
+    this.Dialog);
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }

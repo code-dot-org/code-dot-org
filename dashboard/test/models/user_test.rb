@@ -526,7 +526,7 @@ class UserTest < ActiveSupport::TestCase
     old_password = user.encrypted_password
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
-    # HACK fix my syntax highlighting "
+    # HACK: Fix my syntax highlighting "
     token = $1
 
     User.reset_password_by_token(reset_password_token: token,
@@ -897,7 +897,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'generates usernames' do
     names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', 'this is a really long name blah blah blah blah blah blah']
-    expected_usernames = ['coder_a', 'coder_b', 'captain_picard', 'captain_picard1', 'captain_picard2', 'this_is_a_really']
+    expected_usernames = %w(coder_a coder_b captain_picard captain_picard1 captain_picard2 this_is_a_really)
 
     i = 0
     users = names.map do |name|

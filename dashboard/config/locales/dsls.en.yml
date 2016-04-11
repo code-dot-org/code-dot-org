@@ -672,6 +672,7 @@ en:
       PDAlg 3BGo: {}
       PDAlg 3BPlanning: {}
       PDAlg 3BWelcome: {}
+      PDAlg 3CWelcome: {}
       PDAlg 4-7 Big Game: {}
       PDAlg 4-7 Contracts: {}
       PDAlg 4-7 Variables: {}
@@ -1579,10 +1580,10 @@ en:
         Scratch Jr: Scratch Jr
     level_group:
       name:
-        PS U3 Assessment1: 
-        Test level group by Brendan: 
-        Test longassessment levelgroup: 
-        Test longassessment levelgroup split: 
+        PS U3 Assessment1: {}
+        Test level group by Brendan: {}
+        Test longassessment levelgroup: {}
+        Test longassessment levelgroup split: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -3205,7 +3206,6 @@ en:
       PS U3 Q1-1:
         Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
-        Statements about programming languages: Statements about programming languages
         The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
         There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
       PS U3 Q1-2:
@@ -3254,6 +3254,11 @@ en:
         Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
         Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
         Why are parameters useful when programming?: Why are parameters useful when programming?
+      PS U3-bakertest:
+        These are my instructions. <h1>how's this!</h1>: These are my instructions. <h1>how's this!</h1>
+        description here: description here
+        foo: foo
+        title: title
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
         rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds * 48

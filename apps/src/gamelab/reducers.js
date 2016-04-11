@@ -4,6 +4,7 @@
 
 var _ = require('../lodash');
 var ActionType = require('./actions').ActionType;
+var animationPicker = require('./AnimationPicker/reducers').animationPicker;
 var combineReducers = require('redux').combineReducers;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 
@@ -48,6 +49,7 @@ function level(state, action) {
 }
 
 var gamelabReducer = combineReducers({
+  animationPicker: animationPicker,
   interfaceMode: interfaceMode,
   level: level
 });

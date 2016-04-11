@@ -4,8 +4,9 @@ var _ = require('lodash');
 
 var clientState = require('./clientState');
 var popupWindow = require('./popup-window');
-var ShareDialog = require('./components/share_dialog.jsx');
+var ShareDialog = require('./components/share_dialog');
 var progress = require('./progress');
+var Dialog = require('./dialog');
 
 /**
  * Dynamic header generation and event bindings for header actions.

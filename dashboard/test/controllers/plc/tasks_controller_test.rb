@@ -5,7 +5,7 @@ class Plc::TasksControllerTest < ActionController::TestCase
     @user = create :admin
     sign_in(@user)
     @learning_module = create :plc_learning_module
-    @learning_resource_task = create(:plc_learning_resource_task, name: 'task', type: 'Plc::LearningResourceTask', plc_learning_module: @learning_module)
+    @learning_resource_task = create(:plc_learning_resource_task, name: 'task', type: 'Plc::LearningResourceTask', plc_learning_modules: [@learning_module])
   end
 
   test 'should get new' do
@@ -25,7 +25,7 @@ class Plc::TasksControllerTest < ActionController::TestCase
       task_name = SecureRandom.hex
       initial_task_params = {}
       initial_task_params[:name] = task_name
-      initial_task_params[:plc_learning_module_id] = @learning_module.id
+      initial_task_params[:plc_learning_module_ids] = [@learning_module.id]
       initial_task_params[:type] = task_type.name
 
       assert_creates(task_type) do
@@ -45,13 +45,13 @@ class Plc::TasksControllerTest < ActionController::TestCase
 
   test 'should not allow plain PLC tasks to be created' do
     assert_raises(RuntimeError) do
-      post :create, plc_task: {name: 'Some name', type: 'Plc::Task', plc_learning_module_id: @learning_module_id}
+      post :create, plc_task: {name: 'Some name', type: 'Plc::Task', plc_learning_module_ids: [@learning_module_id]}
     end
   end
 
   test 'tasks are updatable but task type is not' do
     assert_equal 'task', @learning_resource_task.name
-    patch :update, id: @learning_resource_task, plc_learning_resource_task: {name: 'New name', type: 'Plc::ScriptCompletionTask', plc_learning_module_id: @learning_module.id}
+    patch :update, id: @learning_resource_task, plc_learning_resource_task: {name: 'New name', type: 'Plc::ScriptCompletionTask', plc_learning_module_ids: [@learning_module.id]}
     @learning_resource_task.reload
     assert_equal 'New name', @learning_resource_task.name
     assert_equal Plc::LearningResourceTask, @learning_resource_task.class
@@ -71,6 +71,6 @@ class Plc::TasksControllerTest < ActionController::TestCase
       delete :destroy, id: @learning_resource_task
     end
 
-    assert_redirected_to plc_learning_module_path(@learning_module)
+    assert_redirected_to plc_content_creator_show_courses_and_modules_path
   end
 end

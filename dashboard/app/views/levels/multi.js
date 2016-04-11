@@ -125,7 +125,7 @@ Multi.prototype.ready = function () {
     }
   }
 
-  $("#" + this.id + " span.answerbutton").click($.proxy(function (event) {
+  $("#" + this.id + " .answerbutton").click($.proxy(function (event) {
     //console.log("answerbutton clicked", this.id);
     this.choiceClicked($(event.currentTarget));
   }, this));
@@ -232,7 +232,7 @@ Multi.prototype.submitButtonClick = function () {
 
 // Unsubmit button should only be available when this is a standalone Multi.
 Multi.prototype.unsubmitButtonClick = function () {
-  var dialog = new Dialog({
+  var dialog = new window.Dialog({
     body:
       '<div class="modal-content no-modal-icon">' +
         '<p class="dialog-title">Unsubmit answer</p>' +

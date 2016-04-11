@@ -16,7 +16,7 @@ var sharedConstants = require('../constants');
 var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
-var AppView = require('../templates/AppView.jsx');
+var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
@@ -1183,17 +1183,19 @@ function edgeCollidableCollisionDistance(collidable, edgeName, yAxis) {
  */
 function handleActorCollisionsWithCollidableList(
            spriteIndex, xCenter, yCenter, list, autoDisappear) {
+  var collidable, next, className, numItemsOfClass;
+  var distanceScaling = constants.SPRITE_COLLIDE_DISTANCE_SCALING;
+
+  // For collisions, only consider sprites/items that are not already fading out.
+  var activeCollidables = list.filter(function (collidable) {
+    return !(collidable.isFading && collidable.isFading());
+  });
+
   // Traverse the list in reverse order because we may remove elements from the
   // list while inside the loop:
-  for (var i = list.length - 1; i >= 0; i--) {
-    var collidable = list[i];
-    var next = collidable.getNextPosition();
-
-    if (collidable.isFading && collidable.isFading()) {
-      continue;
-    }
-
-    var distanceScaling = constants.SPRITE_COLLIDE_DISTANCE_SCALING;
+  for (var i = activeCollidables.length - 1; i >= 0; i--) {
+    collidable = activeCollidables[i];
+    next = collidable.getNextPosition();
 
     Studio.drawDebugRect("itemCollision",
       next.x,
@@ -1233,20 +1235,17 @@ function handleActorCollisionsWithCollidableList(
             // NOTE: if items are allowed to move outOfBounds(), this may never
             // be called because the last item may not be removed here.
 
-            if (list.length === 1) {
+            if (activeCollidables.length === 1) {
               callHandler('whenGetAllItems');
               Studio.trackedBehavior.gotAllItems = true;
             }
 
-            var className = collidable.className;
-            var itemCount = 0;
-            for (var j = 0; j < list.length; j++) {
-              if (className === list[j].className) {
-                itemCount++;
-              }
-            }
+            className = collidable.className;
+            numItemsOfClass = activeCollidables.reduce(function (sum, nextItem) {
+              return sum + (className === nextItem.className ? 1 : 0);
+            }, 0);
 
-            if (itemCount === 1) {
+            if (numItemsOfClass === 1) {
               callHandler('whenGetAll-' + className);
             }
           }
@@ -1255,8 +1254,9 @@ function handleActorCollisionsWithCollidableList(
             collidable.beginRemoveElement();
           } else {
             collidable.removeElement();
-            list.splice(i, 1);
+            list.splice(list.indexOf(collidable), 1);
           }
+          activeCollidables.splice(i, 1);
         }
       }
     } else {

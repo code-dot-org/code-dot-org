@@ -8,7 +8,7 @@ class Plc::TasksController < ApplicationController
 
   # GET /plc/tasks/new
   def new
-    @task.plc_learning_module_id = params[:plc_learning_module_id]
+    @task.plc_learning_module_ids = [params[:plc_learning_module_id]]
     @task.type = params[:type]
   end
 
@@ -41,9 +41,8 @@ class Plc::TasksController < ApplicationController
   # DELETE /plc/tasks/1
   # DELETE /plc/tasks/1.json
   def destroy
-    learning_module = @task.plc_learning_module
     @task.destroy
-    redirect_to plc_learning_module_path(learning_module)
+    redirect_to plc_content_creator_show_courses_and_modules_path
   end
 
   private
@@ -51,13 +50,13 @@ class Plc::TasksController < ApplicationController
   def task_params
     #Rails forms use the full name of the class including the module they are in, so we'll do the same
     if params[:plc_learning_resource_task]
-      params.require(:plc_learning_resource_task).permit(:name, :plc_learning_module_id, :type, :resource_url, :icon)
+      params.require(:plc_learning_resource_task).permit(:name, {plc_learning_module_ids: []}, :type, :resource_url, :icon)
     elsif params[:plc_script_completion_task]
-      params.require(:plc_script_completion_task).permit(:name, :plc_learning_module_id, :type, :script_id)
+      params.require(:plc_script_completion_task).permit(:name, {plc_learning_module_ids: []}, :type, :script_id)
     elsif params[:plc_written_assignment_task]
-      params.require(:plc_written_assignment_task).permit(:name, :plc_learning_module_id, :type, :assignment_description)
+      params.require(:plc_written_assignment_task).permit(:name, {plc_learning_module_ids: []}, :type, :assignment_description)
     elsif params[:plc_task]
-      params.require(:plc_task).permit(:name, :plc_learning_module_id, :type)
+      params.require(:plc_task).permit(:name, {plc_learning_module_ids: []}, :type)
     end
   end
 end
