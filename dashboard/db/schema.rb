@@ -316,14 +316,6 @@ ActiveRecord::Schema.define(version: 20160411090000) do
 
   add_index "pd_enrollments", ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
 
-  create_table "pd_plps", force: :cascade do |t|
-    t.string  "name",       limit: 255, null: false
-    t.integer "contact_id", limit: 4,   null: false
-    t.boolean "urban"
-  end
-
-  add_index "pd_plps", ["contact_id"], name: "index_pd_plps_on_contact_id", using: :btree
-
   create_table "pd_sessions", force: :cascade do |t|
     t.integer  "pd_workshop_id", limit: 4
     t.datetime "start",                    null: false

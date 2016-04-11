@@ -47,11 +47,5 @@ class AddPdWorkshopTables < ActiveRecord::Migration
       t.decimal :rate, precision: 8, scale: 2, null: false
       t.index [:district_id, :course]
     end
-
-    create_table :pd_plps do |t|
-      t.string :name, null: false
-      t.references :contact, null: false, index: true
-      t.boolean :urban
-    end
   end
 end
