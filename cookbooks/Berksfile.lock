@@ -51,7 +51,7 @@ GRAPH
     seven_zip (>= 0.0.0)
     windows (>= 0.0.0)
   build-essential (2.1.3)
-  cdo-apps (0.2.18)
+  cdo-apps (0.2.17)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-java-7 (>= 0.0.0)
