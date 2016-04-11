@@ -38,6 +38,7 @@ Promise.all([
       'levelbuilder_studio.js',
       'levels/contract_match.jsx',
       'levels/widget.js',
+      'levels/external.js',
       'initApp/initApp.js'
     ],
     commonFile: 'code-studio-common',

@@ -6,7 +6,8 @@ class LevelGroupDSL < BaseDSL
     @description_short = nil
     @description = nil
     @hash[:pages] = []
-    @levels = []
+    @current_page_level_names = []
+    @level_names = []
     @i18n_strings = Hash.new({})
   end
 
@@ -22,12 +23,25 @@ class LevelGroupDSL < BaseDSL
   def title(text) @hash[:title] = text end
 
   def page
-    @levels = []
-    @hash[:pages] << {levels: @levels}
+    @current_page_level_names = []
+    @hash[:pages] << {levels: @current_page_level_names}
   end
 
   def level(name)
-    @levels << name
+    # Ensure level name hasn't already been used.
+    if @level_names.include? name
+      raise "Don't use the same level twice in a LevelGroup (#{name})."
+    end
+    @level_names << name
+
+    # Ensure level is appropriate type.
+    level = Level.find_by_name(name)
+    level_class = level.class.to_s.underscore
+    if !['multi', 'text_match'].include? level_class
+      raise "LevelGroup can only contain multi and text_match levels. (#{name} #{level_class})"
+    end
+
+    @current_page_level_names << name
   end
 
   def submittable(text)

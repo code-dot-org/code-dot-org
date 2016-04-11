@@ -29,26 +29,38 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     assert_redirected_to plc_user_course_enrollments_path
   end
 
-  test 'Admins can access course view' do
+  test 'Admins can access course and group view and manager view' do
     get :index
+    assert_response :success
+    get :group_view
+    assert_response :success
+    get :manager_view, id: @user_course_enrollment
     assert_response :success
   end
 
-  test 'Teachers can view dashboard' do
+  test 'Teachers can view dashboard but not group view' do
     sign_out @user
     teacher = create :teacher
 
     sign_in(teacher)
     get :index
     assert_response :success
+    get :group_view
+    assert_response :forbidden
+    get :manager_view, id: @user_course_enrollment
+    assert_response :forbidden
   end
 
-  test 'Students cannot access course view' do
+  test 'Students cannot access course view nor group view' do
     sign_out @user
     student = create :student
 
     sign_in(student)
     get :index
+    assert_response :forbidden
+    get :group_view
+    assert_response :forbidden
+    get :manager_view, id: @user_course_enrollment
     assert_response :forbidden
   end
 
