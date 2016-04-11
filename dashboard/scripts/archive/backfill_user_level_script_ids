@@ -8,7 +8,7 @@ require_relative '../../config/environment'
 
 level_id_to_script_ids = Hash[Level.all.map do |level|
   # for each level, find all scripts that it is in, except for hidden scripts (but including old hoc which is now hidden)
-  [level.id, level.script_levels.collect(&:script).reject {|s| s.id != 2 && s.hidden?}.collect(&:id)] 
+  [level.id, level.script_levels.collect(&:script).reject {|s| s.id != 2 && s.hidden?}.collect(&:id)]
 end]
 
 UserLevel.where(script_id: nil).find_in_batches do |batch|
