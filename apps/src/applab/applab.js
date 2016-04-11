@@ -800,19 +800,6 @@ Applab.init = function (config) {
   }.bind(this);
 
   var generateVisualizationColumnHtmlFromEjs = function () {
-    // TODO - create a test for submittable edge case (i.e.
-    // http://localhost-studio.code.org:3000/s/cspunit3/stage/7/puzzle/13)
-    // TODO - better off passing submittable/submitted and letting controls
-    // figure things out itself?
-    var firstControlsRow = React.renderToStaticMarkup(
-      <Controls
-        imgUrl={studioApp.assetUrl('media/1x1.gif')}
-        finishButton={!level.isProjectLevel && !level.submittable}
-        submitButton={!!(level.submittable && !level.submitted)}
-        unsubmitButton={!!(level.submittable && level.submitted)}
-      />
-    );
-
     return visualizationColumnEjs({
       assetUrl: studioApp.assetUrl,
       data: {
@@ -820,7 +807,14 @@ Applab.init = function (config) {
           <Visualization
             appWidth={Applab.appWidth}
             appHeight={Applab.footerlessAppHeight}/>),
-        controls: firstControlsRow
+        controls: React.renderToStaticMarkup(
+          <Controls
+            imgUrl={studioApp.assetUrl('media/1x1.gif')}
+            projectLevel={!!level.isProjectLevel}
+            submittable={!!level.submittable}
+            submitted={!!level.submitted}
+          />
+        )
       }
     });
   }.bind(this);
