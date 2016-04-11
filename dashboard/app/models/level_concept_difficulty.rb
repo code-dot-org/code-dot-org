@@ -28,7 +28,7 @@ class LevelConceptDifficulty < ActiveRecord::Base
   validates :level, presence: true
 
   def serializable_hash(options=nil)
-    super.delete_if do |key, _|
+    super.compact.delete_if do |key, _|
       %w(id level_id updated_at created_at).include? key
     end
   end
