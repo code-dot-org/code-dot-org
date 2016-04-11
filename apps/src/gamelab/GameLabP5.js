@@ -29,6 +29,7 @@ GameLabP5.baseP5loadImage = null;
  *
  * @param {!Object} options
  * @param {!Function} options.gameLab instance of parent GameLab object
+ * @param {Number} [options.scale] Scale ratio of containing element (<1 is small)
  * @param {!Function} options.onExecutionStarting callback to run during p5 init
  * @param {!Function} options.onPreload callback to run during preload()
  * @param {!Function} options.onSetup callback to run during setup()
@@ -40,6 +41,9 @@ GameLabP5.prototype.init = function (options) {
   this.onPreload = options.onPreload;
   this.onSetup = options.onSetup;
   this.onDraw = options.onDraw;
+  this.scale = options.scale || 1;
+
+  var self = this;
 
   // Override p5.loadImage so we can modify the URL path param
   if (!GameLabP5.baseP5loadImage) {
@@ -87,6 +91,93 @@ GameLabP5.prototype.init = function (options) {
     return false;
   };
 
+  // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
+  // positions before reporting touch coordinates
+  //
+  // NOTE: _updateNextTouchCoords() is nearly identical, but calls a modified
+  // getTouchInfo() function below that can return undefined
+  window.p5.prototype._updateNextTouchCoords = function (e) {
+    if (e.type === 'mousedown' ||
+        e.type === 'mousemove' ||
+        e.type === 'mouseup'){
+      this._setProperty('_nextTouchX', this._nextMouseX);
+      this._setProperty('_nextTouchY', this._nextMouseY);
+    } else {
+      if (this._curElement !== null) {
+        var touchInfo = getTouchInfo(this._curElement.elt, e, 0);
+
+        if (touchInfo) {
+          this._setProperty('_nextTouchX', touchInfo.x);
+          this._setProperty('_nextTouchY', touchInfo.y);
+        }
+
+        var touches = [];
+        var touchIndex = 0;
+        for (var i = 0; i < e.touches.length; i++) {
+          touchInfo = getTouchInfo(this._curElement.elt, e, i);
+          if (touchInfo) {
+            touches[touchIndex] = touchInfo;
+            touchIndex++;
+          }
+        }
+        this._setProperty('touches', touches);
+      }
+    }
+  };
+
+  // NOTE: returns undefined if the position is outside of the valid range
+  function getTouchInfo(canvas, e, i) {
+    i = i || 0;
+    var rect = canvas.getBoundingClientRect();
+    var touch = e.touches[i] || e.changedTouches[i];
+    var xPos = touch.clientX - rect.left;
+    var yPos = touch.clientY - rect.top;
+    if (xPos >= 0 && xPos < rect.width && yPos >= 0 && yPos < rect.height) {
+      return {
+        x: Math.round(xPos / self.scale),
+        y: Math.round(yPos / self.scale),
+        id: touch.identifier
+      };
+    }
+  }
+
+  // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
+  // positions before reporting mouse coordinates
+  //
+  // NOTE: _updateNextMouseCoords() is nearly identical, but calls a modified
+  // getMousePos() function below that can return undefined
+  window.p5.prototype._updateNextMouseCoords = function (e) {
+    if (e.type === 'touchstart' ||
+        e.type === 'touchmove' ||
+        e.type === 'touchend') {
+      this._setProperty('_nextMouseX', this._nextTouchX);
+      this._setProperty('_nextMouseY', this._nextTouchY);
+    } else {
+      if (this._curElement !== null) {
+        var mousePos = getMousePos(this._curElement.elt, e);
+        if (mousePos) {
+          this._setProperty('_nextMouseX', mousePos.x);
+          this._setProperty('_nextMouseY', mousePos.y);
+        }
+      }
+    }
+    this._setProperty('winMouseX', e.pageX);
+    this._setProperty('winMouseY', e.pageY);
+  };
+
+  // NOTE: returns undefined if the position is outside of the valid range
+  function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    var xPos = evt.clientX - rect.left;
+    var yPos = evt.clientY - rect.top;
+    if (xPos >= 0 && xPos < rect.width && yPos >= 0 && yPos < rect.height) {
+      return {
+        x: Math.round(xPos / self.scale),
+        y: Math.round(yPos / self.scale)
+      };
+    }
+  }
+
   // Add new p5 methods:
   window.p5.prototype.mouseDidMove = function () {
     return this.pmouseX !== this.mouseX || this.pmouseY !== this.mouseY;
@@ -111,10 +202,10 @@ GameLabP5.prototype.init = function (options) {
     if (sprite.collider instanceof this.CircleCollider) {
       return window.p5.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
     } else if (sprite.collider instanceof this.AABB) {
-      return mousePosition.x > sprite.collider.left()
-          && mousePosition.y > sprite.collider.top()
-          && mousePosition.x < sprite.collider.right()
-          && mousePosition.y < sprite.collider.bottom();
+      return mousePosition.x > sprite.collider.left() &&
+          mousePosition.y > sprite.collider.top() &&
+          mousePosition.x < sprite.collider.right() &&
+          mousePosition.y < sprite.collider.bottom();
     }
 
     return false;
@@ -130,11 +221,11 @@ GameLabP5.prototype.init = function (options) {
     var ctx = this.drawingContext;
     var doFill = this._doFill, doStroke = this._doStroke;
     if (doFill && !doStroke) {
-      if(ctx.fillStyle === styleEmpty) {
+      if (ctx.fillStyle === styleEmpty) {
         return this;
       }
     } else if (!doFill && doStroke) {
-      if(ctx.strokeStyle === styleEmpty) {
+      if (ctx.strokeStyle === styleEmpty) {
         return this;
       }
     }
@@ -199,11 +290,11 @@ GameLabP5.prototype.init = function (options) {
     var ctx = this.drawingContext;
     var doFill = this._doFill, doStroke = this._doStroke;
     if (doFill && !doStroke) {
-      if(ctx.fillStyle === styleEmpty) {
+      if (ctx.fillStyle === styleEmpty) {
         return this;
       }
     } else if (!doFill && doStroke) {
-      if(ctx.strokeStyle === styleEmpty) {
+      if (ctx.strokeStyle === styleEmpty) {
         return this;
       }
     }
@@ -275,6 +366,14 @@ GameLabP5.prototype.resetExecution = function () {
 };
 
 /**
+ * Register a p5 event handler function. The provided function replaces the
+ * method stored on our p5 instance.
+ */
+GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
+  this.p5[eventName] = handler;
+};
+
+/**
  * Instantiate a new p5 and start execution
  */
 GameLabP5.prototype.startExecution = function () {
@@ -306,7 +405,7 @@ GameLabP5.prototype.startExecution = function () {
             time_since_last >= target_time_between_frames - epsilon) {
 
           //mandatory update values(matrixs and stack) for 3d
-          if(this._renderer.isP3D){
+          if (this._renderer.isP3D){
             this._renderer._update();
           }
 
@@ -342,7 +441,7 @@ GameLabP5.prototype.startExecution = function () {
       }.bind(p5obj);
 
       // Overload _setup function to make it two-phase
-      p5obj._setup = function() {
+      p5obj._setup = function () {
         /*
          * Copied code from p5 _setup()
          */
@@ -416,14 +515,20 @@ GameLabP5.prototype.startExecution = function () {
           }
         });
 
-        // Call our gamelabPreload() to force _start/_setup to wait.
-        p5obj.gamelabPreload();
-        this.onPreload();
+        if (!this.onPreload()) {
+          // If onPreload() returns false, it means that the preload phase has
+          // not completed, so we need to grab increment p5's preloadCount by
+          // calling the gamelabPreload() method.
+
+          // Call our gamelabPreload() to force _start/_setup to wait.
+          p5obj.gamelabPreload();
+        }
       }.bind(this);
 
       p5obj.setup = function () {
         p5obj.createCanvas(400, 400);
         p5obj.fill(p5obj.color(127, 127, 127));
+        p5obj.angleMode(p5obj.DEGREES);
 
         this.onSetup();
       }.bind(this);
@@ -437,13 +542,29 @@ GameLabP5.prototype.startExecution = function () {
 };
 
 /**
- * Called when all global code is done executing. This allows us to release
- * our "preload" count reference in p5, which means that setup() can begin.
+ * Called when the preload phase is complete. When a distinct setup() method is
+ * provided, a student's global code must finish executing before this phase is
+ * done. This allows us to release our "preload" count reference in p5, which
+ * means that setup() can begin.
  */
-GameLabP5.prototype.notifyUserGlobalCodeComplete = function () {
+GameLabP5.prototype.notifyPreloadPhaseComplete = function () {
   if (this.p5decrementPreload) {
     this.p5decrementPreload();
     this.p5decrementPreload = null;
+  }
+};
+
+GameLabP5.prototype.notifyKeyCodeDown = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keydown
+  if (this.p5) {
+    this.p5._onkeydown({ which: keyCode });
+  }
+};
+
+GameLabP5.prototype.notifyKeyCodeUp = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keyup
+  if (this.p5) {
+    this.p5._onkeyup({ which: keyCode });
   }
 };
 
@@ -548,15 +669,15 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   // except those on the custom marshal blocked list:
   for (var prop in this.p5) {
     if (-1 === blockedProps.indexOf(prop)) {
-      propList[prop] = [ this.p5[prop], this.p5 ];
+      propList[prop] = [this.p5[prop], this.p5];
     }
   }
 
   // Create a 'p5' object in the global namespace:
-  propList.p5 = [ { Vector: window.p5.Vector }, window ];
+  propList.p5 = [{ Vector: window.p5.Vector }, window];
 
   // Create a 'Game' object in the global namespace:
-  propList.Game = [ this.gameLabGame, this ];
+  propList.Game = [this.gameLabGame, this];
 
   return propList;
 };

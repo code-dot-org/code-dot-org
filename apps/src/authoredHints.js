@@ -5,11 +5,11 @@
 
 var dom = require('./dom');
 var msg = require('./locale');
-var HintSelect = require('./templates/instructions/HintSelect.jsx');
-var HintsDisplay = require('./templates/instructions/HintsDisplay.jsx');
-var HintDialogContent = require('./templates/instructions/HintDialogContent.jsx');
+var HintSelect = require('./templates/instructions/HintSelect');
+var HintsDisplay = require('./templates/instructions/HintsDisplay');
+var HintDialogContent = require('./templates/instructions/HintDialogContent');
 var authoredHintUtils = require('./authoredHintUtils');
-var Lightbulb = require('./templates/Lightbulb.jsx');
+var Lightbulb = require('./templates/Lightbulb');
 
 var AuthoredHints = function (studioApp) {
   this.studioApp_ = studioApp;
@@ -222,7 +222,7 @@ AuthoredHints.prototype.getHintsDisplay = function () {
 AuthoredHints.prototype.showHint_ = function (hint, callback) {
   $('#prompt-icon').qtip({
     content: {
-      text: function(html, api) {
+      text: function (html, api) {
         var container = document.createElement('div');
 
         var element = React.createElement(HintSelect, {

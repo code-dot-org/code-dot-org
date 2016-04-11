@@ -7,9 +7,9 @@
  * @return {Object} A required blocks dictionary able to check for and
  *     generate the specified block.
  */
-exports.call = function(name) {
+exports.call = function (name) {
   return {
-    test: function(block) {
+    test: function (block) {
       return block.type == 'procedures_callnoreturn' &&
           block.getTitleValue('NAME').toLowerCase() == name.toLowerCase();
     },
@@ -25,9 +25,9 @@ exports.call = function(name) {
  * @return {Object} A required blocks dictionary able to check for and
  *     generate the specified block.
  */
-exports.callWithArg = function(func_name, arg_name) {
+exports.callWithArg = function (func_name, arg_name) {
   return {
-    test: function(block) {
+    test: function (block) {
       return block.type == 'procedures_callnoreturn' &&
           block.getTitleValue('NAME').toLowerCase() == func_name.toLowerCase();
     },
@@ -45,9 +45,9 @@ exports.callWithArg = function(func_name, arg_name) {
  * @return {Object} A required blocks dictionary able to check for and
  *     generate the specified block.
  */
-exports.define = function(name) {
+exports.define = function (name) {
   return {
-    test: function(block) {
+    test: function (block) {
       return block.type == 'procedures_defnoreturn' &&
           block.getTitleValue('NAME').toLowerCase() == name.toLowerCase();
     },

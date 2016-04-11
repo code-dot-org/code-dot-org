@@ -12,7 +12,7 @@ var dom = require('../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../MusicController');
-var AppView = require('../templates/AppView.jsx');
+var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 
@@ -128,7 +128,7 @@ Craft.init = function (config) {
   config.level.disableFinalStageMessage = true;
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
-  var getIEVersion = function() {
+  var getIEVersion = function () {
     return document.documentMode;
   };
 
@@ -156,7 +156,7 @@ Craft.init = function (config) {
           showInstructions();
         });
       } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
-        Craft.showHouseSelectionPopup(function(selectedHouse) {
+        Craft.showHouseSelectionPopup(function (selectedHouse) {
           trackEvent('Minecraft', 'ChoseHouse', selectedHouse);
           if (!levelConfig.edit_blocks) {
             $.extend(config.level, houseLevels[selectedHouse]);
@@ -185,7 +185,7 @@ Craft.init = function (config) {
 
   var levelTracks = [];
   if (Craft.level.songs && MUSIC_METADATA) {
-    levelTracks = MUSIC_METADATA.filter(function(trackMetadata) {
+    levelTracks = MUSIC_METADATA.filter(function (trackMetadata) {
       return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
     });
   }
@@ -318,7 +318,7 @@ Craft.init = function (config) {
           interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
     }
 
-    interfaceImagesToLoad.forEach(function(url) {
+    interfaceImagesToLoad.forEach(function (url) {
       preloadImage(url);
     });
 
@@ -334,13 +334,16 @@ Craft.init = function (config) {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    hideSource: !!config.hideSource,
+    noVisualization: false,
+    isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
     generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };
 
-var preloadImage = function(url) {
+var preloadImage = function (url) {
   var img = new Image();
   img.src = url;
 };
@@ -538,7 +541,7 @@ Craft.foldInArray = function (arrayA, arrayB) {
 
 Craft.foldInCustomHouseBlocks = function (houseBlockMap, levelConfig) {
   var planesToCustomize = [levelConfig.groundPlane, levelConfig.actionPlane];
-  planesToCustomize.forEach(function(plane) {
+  planesToCustomize.forEach(function (plane) {
     for (var i = 0; i < plane.length; i++) {
       var item = plane[i];
       if (item.match(/house/)) {
@@ -705,7 +708,7 @@ Craft.executeUserCode = function () {
     var playerInventoryTypes = JSON.parse(window.localStorage.getItem('craftPlayerInventory')) || [];
 
     var newInventorySet = {};
-    attemptInventoryTypes.concat(playerInventoryTypes).forEach(function(type) {
+    attemptInventoryTypes.concat(playerInventoryTypes).forEach(function (type) {
       newInventorySet[type] = true;
     });
 
@@ -772,7 +775,7 @@ Craft.reportResult = function (success) {
  * @param {string} testResultType TestResults type of this level completion
  * @returns {boolean} whether to continue
  */
-Craft.shouldDefaultToContinue = function(testResultType) {
+Craft.shouldDefaultToContinue = function (testResultType) {
   var isFreePlay = testResultType === TestResults.FREE_PLAY;
   var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
   return isSuccess && !isFreePlay;
@@ -787,4 +790,3 @@ Craft.replayTextForResult = function (testResultType) {
     return craftMsg.replayButton();
   }
 };
-

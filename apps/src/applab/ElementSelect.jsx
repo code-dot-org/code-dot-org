@@ -12,7 +12,7 @@ module.exports = React.createClass({
     this.props.onChangeElement(element, null);
   },
 
-  render: function() {
+  render: function () {
     var selected = elementUtils.getId(this.props.selected);
 
     return (

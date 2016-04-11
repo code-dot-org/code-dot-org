@@ -92,10 +92,10 @@ Scenario: Applab visualization scaling
   And I press "runButton"
   And I see no difference for "medium scaling"
 
-  Then I drag the grippy by 100 pixels
+  Then I drag the visualization grippy by 100 pixels
   And I see no difference for "large scaling"
 
-  Then I drag the grippy by -400 pixels
+  Then I drag the visualization grippy by -400 pixels
   And I see no difference for "small scaling"
 
   Then I close my eyes
@@ -110,9 +110,7 @@ Scenario: Applab embedded level
 
 Scenario: Applab Instructions in Top Pane
   When I open my eyes to test "Applab Instructions in top pane"
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
-  And execute JavaScript expression "window.localStorage.setItem('showInstructionsInTopPane', true)"
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
+  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?topInstructions=true"
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on standard level"
   Then I click selector ".fa-chevron-circle-down"
@@ -143,4 +141,18 @@ Scenario: Applab Instructions in Top Pane
   When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
   And I wait to see "#runButton"
   And I see no difference for "top instructions disabled on embed level"
+  Then I close my eyes
+
+Scenario: Applab Instructions Resize
+  When I open my eyes to test "Applab instructions resize"
+  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?topInstructions=true"
+  And I wait to see "#runButton"
+  And I see no difference for "base case"
+  Then I drag the instructions grippy by -150 pixels
+  And I see no difference for "small instructions"
+  Then I drag the instructions grippy by 250 pixels
+  And I see no difference for "big instructions"
+  Then I drag the visualization grippy by -200 pixels
+  And I see no difference for "small visualization"
+  Then execute JavaScript expression "window.localStorage.removeItem('showInstructionsInTopPane')"
   Then I close my eyes

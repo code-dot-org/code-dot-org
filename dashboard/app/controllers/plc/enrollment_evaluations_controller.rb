@@ -1,6 +1,6 @@
 class Plc::EnrollmentEvaluationsController < ApplicationController
   def perform_evaluation
-    authorize! :read, Plc::Course
+    authorize! :read, Plc::UserCourseEnrollment
     plc_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
 
     if plc_unit_assignment.status != Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
@@ -12,7 +12,7 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
   end
 
   def submit_evaluation
-    authorize! :read, Plc::Course
+    authorize! :read, Plc::UserCourseEnrollment
     question_responses = params[:answerModuleList].split(',')
     enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
 
@@ -20,6 +20,6 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
 
     enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
     enrollment_unit_assignment.update(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
-    redirect_to controller: :user_course_enrollments, action: :show, id: enrollment_unit_assignment.plc_user_course_enrollment.id
+    redirect_to controller: :enrollment_unit_assignments, action: :show, id: enrollment_unit_assignment.id
   end
 end

@@ -78,7 +78,7 @@ class Section < ActiveRecord::Base
 
   def unused_random_code
     loop do
-      code = SectionHelpers::random_code
+      code = SectionHelpers.random_code
       return code unless Section.exists?(code: code)
     end
   end

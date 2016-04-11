@@ -82,16 +82,14 @@ The following guidelines will need to be met for teachers to be able to particip
 
 Please review each of these sites for the general guidlines for whitelisting:
 
-[Teacher Participtaion Guidelines](/educate/it) <br/>
+[Teacher Participation Guidelines](/educate/it) <br/>
 [Classroom Requirements for Teaching](/educate/pd/supports) <br/>
-[Receiving Code.org Newsletter Guidelines](http://mailchimp.com/about/ips/?_ga=1.79156244.163239085.1437758796) <br/>
 
 The following email addresses should also be whitelisted:
 
-[teacher@code.org](teacher@code.org)<br/>
-[hadi_partovi@code.org](hadi_partovi@code.org)<br/>
+teacher@code.org<br/>
+hadi_partovi@code.org<br/>
 amazonses.com <br/>
-mail221.suw14.mcdlv.net<br/>
 
 Should a district contact you with issues regarding technology, please email us at partner@code.org.
 

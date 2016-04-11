@@ -2,6 +2,7 @@ name 'PS U3 Q1-2'
 title 'Robots in a grid of square Part 1'
 
 height '160'
+layout 'wrap'
 
 wrong 'https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png'
 right 'https://images.code.org/c59d71ecac547d755d63a3f8fca56843-image-1459376262204.png'

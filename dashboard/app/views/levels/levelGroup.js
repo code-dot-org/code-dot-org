@@ -11,21 +11,18 @@ function initLevelGroup(
 
   // Are we read-only?  This can be because we're a teacher OR because an answer
   // has been previously submitted.
-  if (window.appOptions.readonlyWorkspace)
-  {
+  if (window.appOptions.readonlyWorkspace) {
     // hide the Submit button.
     $('.submitButton').hide();
 
     // Are we a student viewing their own previously-submitted work?
-    if (window.appOptions.submitted)
-    {
+    if (window.appOptions.submitted) {
       // show the Unsubmit button.
       $('.unsubmitButton').show();
     }
   }
 
-  window.getResult = function()
-  {
+  window.getResult = function () {
     // Construct an array of all the level results.
     // When submitted it's something like this:
     //
@@ -33,8 +30,7 @@ function initLevelGroup(
     //
 
     // Add any new results to the existing lastAttempt results.
-    for (var i = 0; i < levelCount; i++)
-    {
+    for (var i = 0; i < levelCount; i++) {
       var levelName = "level_" + i;
       var levelResult = window[levelName].getCurrentAnswer().toString();
       var levelId = window[levelName].getLevelId();
@@ -42,10 +38,8 @@ function initLevelGroup(
       // But before storing, if we had a previous result for the same level,
       // remove that from the array, since we want to overwrite that previous
       // answer.
-      for (var j = lastAttempt.length - 1; j >= 0; j--)
-      {
-        if (lastAttempt[j].level_id == levelId)
-        {
+      for (var j = lastAttempt.length - 1; j >= 0; j--) {
+        if (lastAttempt[j].level_id == levelId) {
           lastAttempt.splice(j, 1);
         }
       }
@@ -61,13 +55,10 @@ function initLevelGroup(
     var result;
     var submitted;
 
-    if (window.appOptions.level.submittable || this.forceSubmittable)
-    {
+    if (window.appOptions.level.submittable || this.forceSubmittable) {
       result = true;
       submitted = true;
-    }
-    else
-    {
+    } else {
       result = true; // this.validateAnswers();
       submitted = false;
     }
@@ -81,11 +72,11 @@ function initLevelGroup(
   };
 
   function nextPage() {
-    var newLocation = window.location.href.replace("/page/" + (page+1), "/page/" + (page+2));
+    var newLocation = window.location.href.replace("/page/" + page, "/page/" + (page+1));
     window.location.href = newLocation;
   }
 
-  $(".nextPageButton").click($.proxy(function(event) {
+  $(".nextPageButton").click($.proxy(function (event) {
 
     // Are we read-only?  This can be because we're a teacher OR because an answer
     // has been previously submitted.
@@ -119,9 +110,9 @@ function initLevelGroup(
   }, this));
 
   // Unsubmit button should only be available when this is a standalone level.
-  $('.unsubmitButton').click(function() {
+  $('.unsubmitButton').click(function () {
 
-    var dialog = new Dialog({
+    var dialog = new window.Dialog({
       body:
         '<div class="modal-content no-modal-icon">' +
           '<p class="dialog-title">Unsubmit answer</p>' +
@@ -139,8 +130,7 @@ function initLevelGroup(
     dialogDiv.find('#continue-button').click(function () {
       $.post(window.appOptions.unsubmitUrl,
         {"_method": 'PUT', user_level: {submitted: false}},
-        function(data)
-        {
+        function (data) {
           // Just reload so that the progress in the header is shown correctly.
           location.reload();
         }

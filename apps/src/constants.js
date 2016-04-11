@@ -51,6 +51,8 @@ exports.TestResults = {
   MISSING_RECOMMENDED_BLOCK_UNFINISHED: -4, // The level was attempted but not solved without a recommended block
   EXTRA_FUNCTION_FAIL: -5,            // The program contains a JavaScript function when it should not
   LOCAL_FUNCTION_FAIL: -6,            // The program contains an unexpected JavaScript local function
+  GENERIC_LINT_FAIL: -7,              // The program contains a lint error
+  LOG_CONDITION_FAIL: -8,             // The program execution log did not pass a required condition
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,               // More than the ideal number of blocks were used.

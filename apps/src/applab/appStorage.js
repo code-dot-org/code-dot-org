@@ -57,7 +57,7 @@ function onErrorStatus(onError, commandName, status, detailedErrorMessage) {
        value retrieved from storage.
  * @param {function(string, number)} onError Function to call on error with error msg and http status.
  */
-AppStorage.getKeyValue = function(key, onSuccess, onError) {
+AppStorage.getKeyValue = function (key, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
   var url = '/v3/shared-properties/' + Applab.channelId + '/' + key;
@@ -65,7 +65,7 @@ AppStorage.getKeyValue = function(key, onSuccess, onError) {
   req.send();
 };
 
-var handleGetKeyValue = function(onSuccess, onError) {
+var handleGetKeyValue = function (onSuccess, onError) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
     return;
@@ -90,7 +90,7 @@ var handleGetKeyValue = function(onSuccess, onError) {
  * @param {function(string, number)} onError Function to call on error with error msg and
  *    http status.
  */
-AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
+AppStorage.setKeyValue = function (key, value, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
   var url = '/v3/shared-properties/' + Applab.channelId + '/' + key;
@@ -99,7 +99,7 @@ AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
   req.send(JSON.stringify(value));
 };
 
-var handleSetKeyValue = function(onSuccess, onError) {
+var handleSetKeyValue = function (onSuccess, onError) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
     return;
@@ -120,7 +120,7 @@ var handleSetKeyValue = function(onSuccess, onError) {
  * @param {function(string, number)} onError Function to call with an error message
  *    and http status in case of failure.
  */
-AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
+AppStorage.createRecord = function (tableName, record, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
   var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
@@ -129,7 +129,7 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
   req.send(JSON.stringify(record));
 };
 
-var handleCreateRecord = function(onSuccess, onError) {
+var handleCreateRecord = function (onSuccess, onError) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
     return;
@@ -154,7 +154,7 @@ var handleCreateRecord = function(onSuccess, onError) {
  * @param {function(string, number)} onError Function to call with an error message
  *     and http status in case of failure.
  */
-AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
+AppStorage.readRecords = function (tableName, searchParams, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadRecords.bind(req,
       searchParams, onSuccess, onError);
@@ -164,7 +164,7 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
 
 };
 
-var handleReadRecords = function(searchParams, onSuccess, onError) {
+var handleReadRecords = function (searchParams, onSuccess, onError) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
     return;
@@ -174,7 +174,7 @@ var handleReadRecords = function(searchParams, onSuccess, onError) {
     return;
   }
   var records = JSON.parse(this.responseText);
-  records = records.filter(function(record) {
+  records = records.filter(function (record) {
     for (var prop in searchParams) {
       if (record[prop] !== searchParams[prop]) {
         return false;
@@ -196,7 +196,7 @@ var handleReadRecords = function(searchParams, onSuccess, onError) {
  * @param {function(string, number)} onError Function to call with an error message
  *     and http status in case of other types of failures.
  */
-AppStorage.updateRecord = function(tableName, record, onComplete, onError) {
+AppStorage.updateRecord = function (tableName, record, onComplete, onError) {
   var recordId = record.id;
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onComplete, onError);
@@ -207,7 +207,7 @@ AppStorage.updateRecord = function(tableName, record, onComplete, onError) {
   req.send(JSON.stringify(record));
 };
 
-var handleUpdateRecord = function(tableName, record, onComplete, onError) {
+var handleUpdateRecord = function (tableName, record, onComplete, onError) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
     return;
@@ -233,7 +233,7 @@ var handleUpdateRecord = function(tableName, record, onComplete, onError) {
  * @param {function(string, number)} onError Function to call with an error message
  *     and http status in case of other types of failures.
  */
-AppStorage.deleteRecord = function(tableName, record, onComplete, onError) {
+AppStorage.deleteRecord = function (tableName, record, onComplete, onError) {
   var recordId = record.id;
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onComplete, onError);
@@ -244,7 +244,7 @@ AppStorage.deleteRecord = function(tableName, record, onComplete, onError) {
   req.send(JSON.stringify(record));
 };
 
-var handleDeleteRecord = function(tableName, record, onComplete, onError) {
+var handleDeleteRecord = function (tableName, record, onComplete, onError) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
     return;
@@ -274,7 +274,7 @@ var recordListener = new RecordListener();
  * @param {function(string, number)} onError Callback to call with an error to show to the user and
  *   http status code.
  */
-AppStorage.onRecordEvent = function(tableName, onRecord, onError) {
+AppStorage.onRecordEvent = function (tableName, onRecord, onError) {
   if (!onError || typeof onError !== 'function') {
     throw new Error('onError is a required parameter to AppStorage.onRecordEvent');
   }

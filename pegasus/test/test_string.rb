@@ -25,7 +25,7 @@ class StringTest < Minitest::Test
   end
 
   def test_to_bool
-    ['true','t','yes','y','1'].each{|true_value| assert true_value.to_bool}
+    %w(true t yes y 1).each{|true_value| assert true_value.to_bool}
     ['', 'false','f','no','n','0'].each{|false_value| assert !false_value.to_bool}
   end
 

@@ -664,7 +664,7 @@
   dashboard_navigation_all_sections: "Öğrenci hesapları ve ilerleme"
   dashboard_navigation_view_progress: "İlerlemeyi Görüntüle"
   dashboard_navigation_view_text_responses: Yanıtları Görüntüle
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: Değerlendirmeler
   dashboard_navigation_add_students: "Öğrenci EKle"
   dashboard_navigation_manage_students: "Öğrencileri Yönet"
   dashboard_navigation_lesson_plans_resources: Ders planları ve kaynaklar
@@ -791,6 +791,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Doğru
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"

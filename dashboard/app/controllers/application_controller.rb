@@ -168,10 +168,15 @@ class ApplicationController < ActionController::Base
     # logged in users can:
     if current_user
       # participate in A/B testing
-      # as of March 28, 2016, the text of the block hint button is being
-      # A/B tested. See @cdo/apps/src/templates/DialogButtons.jsx.
-      if Gatekeeper.allows('ab_testing_hint_text', default: true)
-        response[:user_id] = current_user.id
+      # as of April 5, 2016, whether or not we prompt the user before
+      # showing them a required or recommended block is being A/B
+      # tested. Users with odd IDs will be shown the block directly,
+      # without prompting. Anonymous users and users with even ids will
+      # get the existing functionality.
+      if Gatekeeper.allows('ab_testing_hint_button', default: true)
+        response[:abtests] = {
+          hint_button: current_user.id.odd?
+        }
       end
 
       # save solved levels to a gallery (subject to
@@ -187,7 +192,7 @@ class ApplicationController < ActionController::Base
 
     unless options[:solved?]
       # Call method to generate hint and related attributes, copying results into response.
-      hint_details = ExperimentActivity::determine_hint({
+      hint_details = ExperimentActivity.determine_hint({
                                                          level_source: options[:level_source],
                                                          current_user: current_user,
                                                          enable_external_hints: Rails.env.production?,

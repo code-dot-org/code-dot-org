@@ -27,7 +27,7 @@ var commonMsg = require('../locale');
 var calcMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
-var AppView = require('../templates/AppView.jsx');
+var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
@@ -128,7 +128,7 @@ function asExpressionNode(val) {
 /**
  * Initialize Blockly and the Calc.  Called on page load.
  */
-Calc.init = function(config) {
+Calc.init = function (config) {
   // replace studioApp methods with our own
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
@@ -149,13 +149,13 @@ Calc.init = function(config) {
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
 
-  config.loadAudio = function() {
+  config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
-  config.afterInject = function() {
+  config.afterInject = function () {
     var svg = document.getElementById('svgCalc');
     svg.setAttribute('width', CANVAS_WIDTH);
     svg.setAttribute('height', CANVAS_HEIGHT);
@@ -230,6 +230,9 @@ Calc.init = function(config) {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    hideSource: !!config.hideSource,
+    noVisualization: false,
+    isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
     generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: studioApp.init.bind(studioApp, config)
@@ -336,7 +339,7 @@ function displayGoal(targetSet) {
 /**
  * Click the run button.  Start the program.
  */
-Calc.runButtonClick = function() {
+Calc.runButtonClick = function () {
   studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   studioApp.attempts++;
@@ -691,7 +694,7 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
 /**
  * Execute the user's code.
  */
-Calc.execute = function() {
+Calc.execute = function () {
   Calc.generateResults_();
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -1035,7 +1038,7 @@ function clearSvgExpression(id) {
  * Draws a user expression and each step collapsing it, up to given depth.
  * @returns True if it couldn't collapse any further at this depth.
  */
-function animateUserExpression (maxNumSteps) {
+function animateUserExpression(maxNumSteps) {
   var userEquation = appState.userSet.computeEquation();
   if (!userEquation) {
     throw new Error('require user expression');

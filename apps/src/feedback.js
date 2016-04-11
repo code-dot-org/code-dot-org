@@ -34,9 +34,9 @@ var constants = require('./constants');
 var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
 var puzzleRatingUtils = require('./puzzleRatingUtils');
-var DialogButtons = require('./templates/DialogButtons.jsx');
-var CodeWritten = require('./templates/feedback/CodeWritten.jsx');
-var GeneratedCode = require('./templates/feedback/GeneratedCode.jsx');
+var DialogButtons = require('./templates/DialogButtons');
+var CodeWritten = require('./templates/feedback/CodeWritten');
+var GeneratedCode = require('./templates/feedback/GeneratedCode');
 
 /**
  * @typedef {Object} TestableBlock
@@ -71,7 +71,7 @@ var GeneratedCode = require('./templates/feedback/GeneratedCode.jsx');
  * @param {number} maxRecommendedBlocksToFlag The number of recommended blocks to
  *   give hints about at any one time.  Set this to Infinity to show all.
  */
-FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
+FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     maxRequiredBlocksToFlag, recommendedBlocks, maxRecommendedBlocksToFlag) {
 
   options.level = options.level || {};
@@ -158,13 +158,6 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var finalLevel = (options.response &&
     (options.response.message === "no more levels"));
 
-  var userId;
-  var isABTestingHintText = this.studioApp_.localeIsEnglish() &&
-      options.response && options.response.user_id;
-  if (isABTestingHintText) {
-    userId = options.response.user_id;
-  }
-
   feedback.appendChild(
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
@@ -174,8 +167,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
       freePlay: options.level.freePlay,
-      finalLevel: finalLevel,
-      userId: userId
+      finalLevel: finalLevel
     })
   );
 
@@ -261,7 +253,12 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
           return requestMatchesFeedback;
         });
 
-    if (alreadySeen) {
+    var isABTestingHintButton;
+    if (options.response && options.response.abtests) {
+      isABTestingHintButton = options.response.abtests.hint_button;
+    }
+
+    if (alreadySeen || isABTestingHintButton) {
       // Remove "Show hint" button.  Making it invisible isn't enough,
       // because it will still take up space.
       hintRequestButton.parentNode.removeChild(hintRequestButton);
@@ -345,7 +342,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
     dom.addClickTouchEvent(saveToGalleryButton, function () {
       $.post(options.response.save_to_gallery_url,
-             function() { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
+             function () { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
     });
   }
 
@@ -524,6 +521,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function (options) {
             msg.levelIncompleteError();
         break;
       case TestResults.LEVEL_INCOMPLETE_FAIL:
+      case TestResults.LOG_CONDITION_FAIL:
         message = options.level.levelIncompleteError ||
             msg.levelIncompleteError();
         break;
@@ -538,6 +536,9 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function (options) {
         break;
       case TestResults.APP_SPECIFIC_FAIL:
         message = options.level.appSpecificFailError;
+        break;
+      case TestResults.GENERIC_LINT_FAIL:
+        message = msg.errorGenericLintError();
         break;
       case TestResults.UNUSED_PARAM:
         message = msg.errorUnusedParam();
@@ -743,7 +744,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
         var submitButton = sharingDiv.querySelector('#phone-submit');
         submitButton.disabled = true;
         phone.mask('(000) 000-0000', {
-            onComplete:function(){
+            onComplete:function (){
               if (!submitted) {
                 submitButton.disabled = false;
               }
@@ -1294,7 +1295,7 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
  * @param {Object} options
  * @return {number} The appropriate property of TestResults.
  */
-FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
+FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks,
     recommendedBlocks, shouldCheckForEmptyBlocks, options) {
   options = options || {};
   if (this.studioApp_.editCode) {

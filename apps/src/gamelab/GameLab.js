@@ -24,14 +24,27 @@ var gamelabCommands = require('./commands');
 var errorHandler = require('../errorHandler');
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
+var dom = require('../dom');
 
 var actions = require('./actions');
 var createStore = require('../redux');
 var gamelabReducer = require('./reducers').gamelabReducer;
-var GameLabView = require('./GameLabView.jsx');
+var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
+
+var ButtonState = {
+  UP: 0,
+  DOWN: 1
+};
+
+var ArrowIds = {
+  LEFT: 'leftButton',
+  UP: 'upButton',
+  RIGHT: 'rightButton',
+  DOWN: 'downButton'
+};
 
 /**
  * An instantiable GameLab class
@@ -63,10 +76,13 @@ var GameLab = function () {
 
   this.eventHandlers = {};
   this.Globals = {};
+  this.btnState = {};
   this.currentCmdQueue = null;
+  this.interpreterStarted = false;
+  this.globalCodeRunsDuringPreload = false;
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.startedHandlingEvents = false;
+  this.preloadInProgress = false;
   this.gameLabP5 = new GameLabP5();
   this.api = api;
   this.api.injectGameLab(this);
@@ -117,6 +133,8 @@ GameLab.prototype.init = function (config) {
   this.skin = config.skin;
   this.level = config.level;
 
+  this.level.softButtons = this.level.softButtons || {};
+
   config.usesAssets = true;
 
   this.gameLabP5.init({
@@ -127,7 +145,7 @@ GameLab.prototype.init = function (config) {
     onDraw: this.onP5Draw.bind(this)
   });
 
-  config.afterClearPuzzle = function() {
+  config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -212,10 +230,25 @@ GameLab.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
+GameLab.prototype.calculateVisualizationScale_ = function () {
+  var divGameLab = document.getElementById('divGameLab');
+  // Calculate current visualization scale:
+  return divGameLab.getBoundingClientRect().width / divGameLab.offsetWidth;
+};
+
 /**
  * Code called after the blockly div + blockly core is injected into the document
  */
 GameLab.prototype.afterInject_ = function (config) {
+
+  // Connect up arrow button event handlers
+  for (var btn in ArrowIds) {
+    dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
+        this.onArrowButtonUp.bind(this, ArrowIds[btn]));
+    dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
+        this.onArrowButtonDown.bind(this, ArrowIds[btn]));
+  }
+  document.addEventListener('mouseup', this.onMouseUp.bind(this), false);
 
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution evironment
@@ -231,6 +264,12 @@ GameLab.prototype.afterInject_ = function (config) {
   divGameLab.style.width = '400px';
   divGameLab.style.height = '400px';
 
+  // Update gameLabP5's scale and keep it updated with future resizes:
+  this.gameLabP5.scale = this.calculateVisualizationScale_();
+
+  window.addEventListener('resize', function () {
+    this.gameLabP5.scale = this.calculateVisualizationScale_();
+  }.bind(this));
 };
 
 /**
@@ -273,7 +312,8 @@ GameLab.prototype.reset = function (ignore) {
   // Import to reset these after this.gameLabP5 has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.startedHandlingEvents = false;
+  this.preloadInProgress = false;
+  this.globalCodeRunsDuringPreload = false;
 
   this.debugger_.detach();
   this.consoleLogger_.detach();
@@ -282,8 +322,19 @@ GameLab.prototype.reset = function (ignore) {
   if (this.JSInterpreter) {
     this.JSInterpreter.deinitialize();
     this.JSInterpreter = null;
+    this.interpreterStarted = false;
   }
   this.executionError = null;
+
+  // Soft buttons
+  var softButtonCount = 0;
+  for (var i = 0; i < this.level.softButtons.length; i++) {
+    document.getElementById(this.level.softButtons[i]).style.display = 'inline';
+    softButtonCount++;
+  }
+  if (softButtonCount) {
+    $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
+  }
 };
 
 GameLab.prototype.onPuzzleComplete = function (submit) {
@@ -331,7 +382,7 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
 
   this.waitingForReport = true;
 
-  var sendReport = function() {
+  var sendReport = function () {
     this.studioApp_.report({
       app: 'gamelab',
       level: this.level.id,
@@ -354,7 +405,7 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
     sendReport();
   } else {
     divGameLab.toDataURL("image/png", {
-      callback: function(pngDataUrl) {
+      callback: function (pngDataUrl) {
         this.feedbackImage = pngDataUrl;
         this.encodedFeedbackImage = encodeURIComponent(this.feedbackImage.split(',')[1]);
 
@@ -392,7 +443,47 @@ GameLab.prototype.runButtonClick = function () {
   this.execute();
 };
 
-GameLab.prototype.evalCode = function(code) {
+function p5KeyCodeFromArrow(idBtn) {
+  switch (idBtn) {
+    case ArrowIds.LEFT:
+      return window.p5.prototype.LEFT_ARROW;
+    case ArrowIds.RIGHT:
+      return window.p5.prototype.RIGHT_ARROW;
+    case ArrowIds.UP:
+      return window.p5.prototype.UP_ARROW;
+    case ArrowIds.DOWN:
+      return window.p5.prototype.DOWN_ARROW;
+  }
+}
+
+GameLab.prototype.onArrowButtonDown = function (buttonId, e) {
+  // Store the most recent event type per-button
+  this.btnState[buttonId] = ButtonState.DOWN;
+  e.preventDefault();  // Stop normal events so we see mouseup later.
+
+  this.gameLabP5.notifyKeyCodeDown(p5KeyCodeFromArrow(buttonId));
+};
+
+GameLab.prototype.onArrowButtonUp = function (buttonId, e) {
+  // Store the most recent event type per-button
+  this.btnState[buttonId] = ButtonState.UP;
+
+  this.gameLabP5.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
+};
+
+GameLab.prototype.onMouseUp = function (e) {
+  // Reset all arrow buttons on "global mouse up" - this handles the case where
+  // the mouse moved off the arrow button and was released somewhere else
+  for (var buttonId in this.btnState) {
+    if (this.btnState[buttonId] === ButtonState.DOWN) {
+
+      this.btnState[buttonId] = ButtonState.UP;
+      this.gameLabP5.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
+    }
+  }
+};
+
+GameLab.prototype.evalCode = function (code) {
   try {
     codegen.evalWith(code, {
       GameLab: this.api
@@ -416,7 +507,7 @@ GameLab.prototype.evalCode = function(code) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-GameLab.prototype.execute = function() {
+GameLab.prototype.execute = function () {
   this.result = this.studioApp_.ResultType.UNSET;
   this.testResults = this.studioApp_.TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
@@ -491,6 +582,8 @@ GameLab.prototype.initInterpreter = function () {
     }
   }, this);
 
+  this.globalCodeRunsDuringPreload = !!this.eventHandlers.setup;
+
   codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
 
   var propList = this.gameLabP5.getGlobalPropertyList();
@@ -515,14 +608,11 @@ GameLab.prototype.onTick = function () {
   this.tickCount++;
 
   if (this.JSInterpreter) {
-    this.JSInterpreter.executeInterpreter();
-
-    if (!this.startedHandlingEvents && this.JSInterpreter.startedHandlingEvents) {
-      // Call this once after we've started handling events
-      this.startedHandlingEvents = true;
-      this.gameLabP5.notifyUserGlobalCodeComplete();
+    if (this.interpreterStarted) {
+      this.JSInterpreter.executeInterpreter();
     }
 
+    this.completePreloadIfPreloadComplete();
     this.completeSetupIfSetupComplete();
     this.completeRedrawIfDrawComplete();
   }
@@ -535,29 +625,45 @@ GameLab.prototype.onTick = function () {
  */
 GameLab.prototype.onP5ExecutionStarting = function () {
   this.gameLabP5.p5eventNames.forEach(function (eventName) {
-    window[eventName] = function () {
+    this.gameLabP5.registerP5EventHandler(eventName, function () {
       if (this.JSInterpreter && this.eventHandlers[eventName]) {
         this.eventHandlers[eventName].apply(null);
       }
-    }.bind(this);
+    }.bind(this));
   }, this);
 };
 
 /**
  * This is called while this.gameLabP5 is in the preload phase. We initialize
  * the interpreter, start its execution, and call the user's preload function.
+ *
+ * @return {Boolean} whether or not the preload has completed
  */
 GameLab.prototype.onP5Preload = function () {
   this.initInterpreter();
   // And execute the interpreter for the first time:
   if (this.JSInterpreter && this.JSInterpreter.initialized()) {
-    this.JSInterpreter.executeInterpreter(true);
+    // Start executing the interpreter's global code as long as a setup() method
+    // was provided. If not, we will skip running any interpreted code in the
+    // preload phase and wait until the setup phase.
+    this.preloadInProgress = true;
+    if (this.globalCodeRunsDuringPreload) {
+      this.JSInterpreter.executeInterpreter(true);
+      this.interpreterStarted = true;
 
-    // In addition, execute the global function called preload()
-    if (this.eventHandlers.preload) {
-      this.eventHandlers.preload.apply(null);
+      // In addition, execute the global function called preload()
+      if (this.eventHandlers.preload) {
+        this.eventHandlers.preload.apply(null);
+      }
+    } else {
+      if (this.eventHandlers.preload) {
+        this.log("WARNING: preload() was ignored because setup() was not provided");
+        this.eventHandlers.preload = null;
+      }
     }
+    this.completePreloadIfPreloadComplete();
   }
+  return !this.preloadInProgress;
 };
 
 /**
@@ -567,9 +673,7 @@ GameLab.prototype.onP5Preload = function () {
  */
 GameLab.prototype.onP5Setup = function () {
   if (this.JSInterpreter) {
-    // TODO: (cpirich) Remove this code once p5play supports instance mode:
-
-    // Replace restored preload methods for the interpreter:
+    // Re-marshal restored preload methods for the interpreter:
     for (var method in this.gameLabP5.p5._preloadMethods) {
       this.JSInterpreter.createGlobalProperty(
           method,
@@ -577,20 +681,55 @@ GameLab.prototype.onP5Setup = function () {
           this.gameLabP5.p5);
     }
 
-    if (this.eventHandlers.setup) {
-      this.setupInProgress = true;
-      this.eventHandlers.setup.apply(null);
-      this.completeSetupIfSetupComplete();
-    } else {
-      this.gameLabP5.afterSetupComplete();
+    this.setupInProgress = true;
+    if (!this.globalCodeRunsDuringPreload) {
+      // If the setup() method was not provided, we need to run the interpreter
+      // for the first time at this point:
+      this.JSInterpreter.executeInterpreter(true);
+      this.interpreterStarted = true;
     }
+    if (this.eventHandlers.setup) {
+      this.eventHandlers.setup.apply(null);
+    }
+    this.completeSetupIfSetupComplete();
   }
 };
 
 GameLab.prototype.completeSetupIfSetupComplete = function () {
-  if (this.setupInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
+  if (!this.setupInProgress) {
+    return;
+  }
+
+  if (!this.globalCodeRunsDuringPreload &&
+      !this.JSInterpreter.startedHandlingEvents) {
+    // Global code should run during the setup phase, but global code hasn't
+    // completed.
+    return;
+  }
+
+  if (!this.eventHandlers.setup ||
+      this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
     this.gameLabP5.afterSetupComplete();
     this.setupInProgress = false;
+  }
+};
+
+GameLab.prototype.completePreloadIfPreloadComplete = function () {
+  if (!this.preloadInProgress) {
+    return;
+  }
+
+  if (this.globalCodeRunsDuringPreload &&
+      !this.JSInterpreter.startedHandlingEvents) {
+    // Global code should run during the preload phase, but global code hasn't
+    // completed.
+    return;
+  }
+
+  if (!this.eventHandlers.preload ||
+      this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
+    this.gameLabP5.notifyPreloadPhaseComplete();
+    this.preloadInProgress = false;
   }
 };
 
@@ -636,7 +775,7 @@ GameLab.prototype.executeCmd = function (id, name, opts) {
  * App specific displayFeedback function that calls into
  * this.studioApp_.displayFeedback when appropriate
  */
-GameLab.prototype.displayFeedback_ = function() {
+GameLab.prototype.displayFeedback_ = function () {
   var level = this.level;
 
   this.studioApp_.displayFeedback({

@@ -32,7 +32,7 @@
     μάθημα."
   og_title: "Κάθε παιδί δικαιούται μία ευκαιρία"
   og_description: "Κάθε μαθητής σε κάθε σχολείο αξίζει μια ευκαιρία να σπυδάσει την
-    επιιστήμη των υπολογιστών."
+    επιιστήμη των υπολογιστών. Αλλάζει τα πάντα."
   hoc2014_heading: Συμμετάσχετε στην <a href="http://hourofcode.com"> Ώρα του Κώδικα</a><br/>8-14
     Δεκεμβρίου 2014<br/>
   hoc2014_students: "Μαθητές"
@@ -274,8 +274,7 @@
   learn_next_level: "Δοκιμάστε ένα άλλο μάθημα στο Code Studio"
   learn_online: "Δοκιμάστε τα άλλα μαθήματα online"
   learn_classes: "Βρείτε τάξεις κοντά σας"
-  hoc_is_here: "Η τελευταία Εβδομάδα Εκπαίδευσης στην Επιστήμη των Υπολογιστών έχει
-    φτασει τα 50 εκατομμύρια μαθητές.  https://youtu.be/Ofze6CWUCx8."
+  hoc_is_here: "Μάθετε την επιστήμη των υπολογιστών. Αυτό αλλάζει τα πάντα.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: "Μόλις ολοκλήρωσα την Ώρα του Κώδικα (#HourOfCode) - ελέγξτε το! @codeorg"
   just_did_course1: "Μόλις τελειώσα το Μάθημα 1 - Ελεγξέ το! @codeorg"
   just_did_course2: "Μόλις τελειώσα το Μάθημα 2 - Ελεγξέ το! @codeorg"
@@ -710,7 +709,7 @@
   dashboard_navigation_all_sections: "Λογαριασμοί μαθητών και Πρόοδος"
   dashboard_navigation_view_progress: "Προβολή προόδου"
   dashboard_navigation_view_text_responses: "Προβολή Αποκρίσεων Κειμένου"
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: "Αξιολογήσεις"
   dashboard_navigation_add_students: "Προσθήκη μαθητών"
   dashboard_navigation_manage_students: "Διαχείριση μαθητών"
   dashboard_navigation_lesson_plans_resources: "Σχέδια μαθήματος και Πόροι"
@@ -844,16 +843,18 @@
   dashboard_puzzle: "Παζλ"
   dashboard_question: "Ερώτηση"
   dashboard_response: "Απάντηση"
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: "Ορθότητα"
+  dashboard_correctness_free_response: "Δωρεάν απάντηση"
+  dashboard_correctness_unsubmitted: "Ανακλήθηκε"
   dashboard_correctness_correct: "Σωστό"
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_correctness_incorrect: "Εσφαλμένο"
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: "Κατάσταση"
+  dashboard_multi_correct: "# η πολλαπλή επιλογή είναι σωστή"
+  dashboard_multi_count: "# πολλαπλή επιλογή"
+  dashboard_multi_correct_percent: "% της πολλαπλής επιλογής σωστά"
+  dashboard_submission_timestamp: "Ημενρομηνία και ώρα υποβολής"
   stats_hoc_2013_heading: "Απίστευτα στατιστικά από την περσινή ώρα του κώδικα. Σε
     μία εβδομάδα μόνο:"
   stats_hoc_2013_image_alt: "Στατιστικά στοιχεία από την ώρα του κώδικα του 2013"

@@ -27,8 +27,6 @@ class Applab < Blockly
   before_save :fix_examples
 
   serialized_attrs %w(
-    app_width
-    app_height
     free_play
     show_turtle_before_run
     autocomplete_palette_apis_only
@@ -44,6 +42,7 @@ class Applab < Blockly
     data_tables
     data_properties
     hide_view_data_button
+    fail_on_lint_errors
     debugger_disabled
     makerlab_enabled
   )

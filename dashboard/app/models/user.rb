@@ -120,7 +120,7 @@ class User < ActiveRecord::Base
 
   belongs_to :invited_by, :polymorphic => true
 
-  # TODO: I think we actually want to do this
+  # TODO: I think we actually want to do this.
   # you can be associated with distrits through cohorts
 #   has_many :districts, through: :cohorts
 
@@ -475,7 +475,7 @@ SQL
   end
 
   def concept_progress(script = Script.twenty_hour_script)
-    # todo: cache everything but the user's progress
+    # TODO: Cache everything but the user's progress.
     user_levels_map = self.user_levels.includes([{level: :concepts}]).index_by(&:level_id)
     user_trophy_map = self.user_trophies.includes(:trophy).index_by(&:concept_id)
     result = Hash.new{|h,k| h[k] = {obj: k, current: 0, max: 0}}
@@ -854,7 +854,7 @@ SQL
       end
     end
 
-    if new_level_completed && script_id # todo do this as a callback
+    if new_level_completed && script_id # TODO: do this as a callback
       User.track_script_progress(user_id, script_id)
     end
 
