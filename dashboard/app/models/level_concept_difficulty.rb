@@ -6,16 +6,16 @@
 #  level_id              :integer
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
-#  sequencing            :integer          default(0), not null
-#  debugging             :integer          default(0), not null
-#  repeat_loops          :integer          default(0), not null
-#  repeat_until_while    :integer          default(0), not null
-#  for_loops             :integer          default(0), not null
-#  events                :integer          default(0), not null
-#  variables             :integer          default(0), not null
-#  functions             :integer          default(0), not null
-#  functions_with_params :integer          default(0), not null
-#  conditionals          :integer          default(0), not null
+#  sequencing            :integer
+#  debugging             :integer
+#  repeat_loops          :integer
+#  repeat_until_while    :integer
+#  for_loops             :integer
+#  events                :integer
+#  variables             :integer
+#  functions             :integer
+#  functions_with_params :integer
+#  conditionals          :integer
 #
 # Indexes
 #

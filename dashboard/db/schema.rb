@@ -238,18 +238,18 @@ ActiveRecord::Schema.define(version: 20160408190000) do
 
   create_table "level_concept_difficulties", force: :cascade do |t|
     t.integer  "level_id",              limit: 4
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
-    t.integer  "sequencing",            limit: 4, default: 0, null: false
-    t.integer  "debugging",             limit: 4, default: 0, null: false
-    t.integer  "repeat_loops",          limit: 4, default: 0, null: false
-    t.integer  "repeat_until_while",    limit: 4, default: 0, null: false
-    t.integer  "for_loops",             limit: 4, default: 0, null: false
-    t.integer  "events",                limit: 4, default: 0, null: false
-    t.integer  "variables",             limit: 4, default: 0, null: false
-    t.integer  "functions",             limit: 4, default: 0, null: false
-    t.integer  "functions_with_params", limit: 4, default: 0, null: false
-    t.integer  "conditionals",          limit: 4, default: 0, null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "sequencing",            limit: 4
+    t.integer  "debugging",             limit: 4
+    t.integer  "repeat_loops",          limit: 4
+    t.integer  "repeat_until_while",    limit: 4
+    t.integer  "for_loops",             limit: 4
+    t.integer  "events",                limit: 4
+    t.integer  "variables",             limit: 4
+    t.integer  "functions",             limit: 4
+    t.integer  "functions_with_params", limit: 4
+    t.integer  "conditionals",          limit: 4
   end
 
   add_index "level_concept_difficulties", ["level_id"], name: "index_level_concept_difficulties_on_level_id", using: :btree
