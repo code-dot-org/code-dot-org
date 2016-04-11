@@ -34,3 +34,21 @@
             = "'#{level.name}'"
             = link_to edit_level_path(level) do
               %i.fa.fa-pencil-square-o
+
+- if @show_all_instructions
+  - @script.stages.each do |stage|
+    %br
+      %h1= "Stage #{stage.position}: #{stage.name}"
+      %br
+      - stage.script_levels.each do |sl|
+        %div(style='padding-left:40px;')
+          = link_to edit_level_path(sl.level) do
+            %h2= "Puzzle #{sl.position} Instructions (#{sl.level.name}):"
+        %br
+        %div(style='padding-left:80px;')
+          - md = sl.level.properties['markdown'] || sl.level.properties['markdown_instructions']
+          - if md.present?
+            = ActionView::Base.new.render(inline: md, type: :md)
+          - else
+            = sl.level.properties['instructions']
+        %br

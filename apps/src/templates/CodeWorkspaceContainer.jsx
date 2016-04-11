@@ -6,7 +6,7 @@
  */
 
 var Radium = require('radium');
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
+var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
 
 var styles = {
@@ -55,6 +55,14 @@ var CodeWorkspaceContainer = React.createClass({
     noVisualization: React.PropTypes.bool.isRequired,
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
     onSizeChange: React.PropTypes.func
+  },
+
+  /**
+   * Called externally
+   * @returns {number} The height of the rendered contents in pixels
+   */
+  getContentHeight: function () {
+    return $(ReactDOM.findDOMNode(this)).height();
   },
 
   componentDidUpdate: function (prevProps) {

@@ -1,5 +1,5 @@
 // TODO (brent) - way too many globals
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, showVideoDialog, ga, digestManifest*/
+/* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, ga*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
@@ -9,6 +9,8 @@ var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 var createCallouts = require('../callouts');
 var reporting = require('../reporting');
+var Dialog = require('../dialog');
+var showVideoDialog = require('../videos').showVideoDialog;
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;

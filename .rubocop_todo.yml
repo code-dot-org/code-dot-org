@@ -137,18 +137,6 @@ Style/ClassVars:
 Style/CollectionMethods:
   Enabled: false
 
-# Offense count: 131
-# Cop supports --auto-correct.
-Style/ColonMethodCall:
-  Enabled: false
-
-# Offense count: 22
-# Cop supports --auto-correct.
-# Configuration parameters: Keywords.
-# Keywords: TODO, FIXME, OPTIMIZE, HACK, REVIEW
-Style/CommentAnnotation:
-  Enabled: false
-
 # Offense count: 27
 # Cop supports --auto-correct.
 Style/CommentIndentation:
@@ -317,12 +305,6 @@ Style/NegatedIf:
 Style/Next:
   Enabled: false
 
-# Offense count: 11
-# Cop supports --auto-correct.
-# Configuration parameters: AllowSafeAssignment.
-Style/ParenthesesAroundCondition:
-  Enabled: false
-
 # Offense count: 3
 # Configuration parameters: NamePrefix, NamePrefixBlacklist, NameWhitelist.
 # NamePrefix: is_, has_, have_
@@ -366,13 +348,6 @@ Style/RescueModifier:
 # Offense count: 180
 # Cop supports --auto-correct.
 Style/SpaceAfterComma:
-  Enabled: false
-
-# Offense count: 38
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyleInsidePipes, SupportedStyles.
-# SupportedStyles: space, no_space
-Style/SpaceAroundBlockParameters:
   Enabled: false
 
 # Offense count: 197
@@ -459,11 +434,4 @@ Style/UnneededInterpolation:
 # Offense count: 22
 # Cop supports --auto-correct.
 Style/UnneededPercentQ:
-  Enabled: false
-
-# Offense count: 90
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, MinSize, WordRegex.
-# SupportedStyles: percent, brackets
-Style/WordArray:
   Enabled: false

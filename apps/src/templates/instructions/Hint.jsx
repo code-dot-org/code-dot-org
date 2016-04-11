@@ -1,4 +1,4 @@
-var ReadOnlyBlockSpace = require('../ReadOnlyBlockSpace.jsx');
+var ReadOnlyBlockSpace = require('../ReadOnlyBlockSpace');
 
 var Hint = React.createClass({
 

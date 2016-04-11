@@ -1,6 +1,6 @@
 var msg = require('../../locale');
-var Hint = require('./Hint.jsx');
-var Lightbulb = require('../Lightbulb.jsx');
+var Hint = require('./Hint');
+var Lightbulb = require('../Lightbulb');
 
 /**
  * @overview React Component for displaying Authored Hints in the

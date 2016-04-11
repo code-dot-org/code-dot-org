@@ -3,6 +3,5 @@ class Plc::ContentCreatorController < ApplicationController
     authorize! :manage, Plc::Course
 
     @courses = Plc::Course.all
-    @learning_modules = Plc::LearningModule.all
   end
 end
