@@ -369,7 +369,7 @@ task :eyes_ui_tests => [UI_TEST_SYMLINK] do
   end
 end
 
-# do the eyes and browserstack ui tests in parallel
+# do the eyes and sauce labs ui tests in parallel
 multitask ui_tests: [:eyes_ui_tests, :regular_ui_tests]
 
 $websites_test = build_task('websites-test', [deploy_dir('rebuild'), BLOCKLY_CORE_TASK, :apps_task, :code_studio_task, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :ui_test_flakiness, :ui_tests])
