@@ -21,8 +21,8 @@ end
 When /^I view the next authored hint$/ do
   steps <<-STEPS
     When I press "prompt-table"
-    And I wait to see ".qtip"
-    And I press the first ".qtip a.show-hint" element
+    And I wait to see "#hint-button"
+    And I press "hint-button"
     And I wait to see ".qtip"
   STEPS
 end
@@ -30,7 +30,6 @@ end
 When /^I view the instructions and old hints$/ do
   steps <<-STEPS
     When I press "prompt-table"
-    And I wait to see ".qtip"
-    And I press the first ".qtip a.show-instructions" element
+    And I wait to see ".instructions-content"
   STEPS
 end
