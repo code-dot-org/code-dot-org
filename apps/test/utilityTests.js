@@ -611,7 +611,7 @@ describe('utils.unescapeText', function () {
     assert.equal(expected, unescapeText(input), 'div with attribute');
   });
 
-  it('Does not add newline for span-wrapped leading line', function () {
+  it('Does not add leading newline for span-wrapped leading line', function () {
     var input, expected;
 
     input = '<span>Line1</span><div>Line2</div>';
