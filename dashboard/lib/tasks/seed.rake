@@ -65,7 +65,7 @@ namespace :seed do
   # detect changes to dsldefined level files
   # LevelGroup must be last here so that LevelGroups are seeded after all levels that they can contain
   DSL_TYPES = %w(TextMatch ContractMatch External Match Multi LevelGroup)
-  DSLS_GLOB = DSL_TYPES.map{|x| Dir.glob("config/scripts/**/*.#{x.underscore}*")}.flatten
+  DSLS_GLOB = DSL_TYPES.map{|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort }.flatten
   file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
     Rake::Task['seed:dsls'].invoke
     touch t.name
