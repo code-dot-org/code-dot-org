@@ -23,9 +23,9 @@ class Pd::DistrictReport
     payment_rate = payment_term ? payment_term.rate : nil
     payment_amount = !qualified ? 0 :
       case payment_term.rate_type
-        when 'hourly'
+        when Pd::DistrictPaymentTerm::RATE_HOURLY
           hours * payment_term.rate
-        when 'daily'
+        when Pd::DistrictPaymentTerm::RATE_DAILY
           days * payment_term.rate
         else
           raise "Unexpected district payment term rate type #{payment_term.rate_type} for id #{payment_term.id}"
