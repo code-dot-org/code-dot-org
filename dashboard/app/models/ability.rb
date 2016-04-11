@@ -36,7 +36,12 @@ class Ability
         Plc::LearningModule,
         Plc::Task,
         Plc::UserCourseEnrollment,
-        Plc::CourseUnit
+        Plc::CourseUnit,
+        # PD models
+        Pd::Workshop,
+        Pd::Enrollment,
+        Pd::Attendance,
+        Pd::DistrictPaymentTerm
       ]
     end
 
@@ -66,6 +71,7 @@ class Ability
           !user.students.where(id: user_level.user_id).empty?
         end
         can :read, Plc::UserCourseEnrollment
+        can :manage, Pd::Enrollment, teacher_id: user.id
       end
 
       if user.facilitator?
@@ -80,6 +86,8 @@ class Ability
         can :manage, Workshop do |workshop|
           workshop.facilitators.include? user
         end
+        can [:read, :start, :end], Pd::Workshop, facilitators: {id: user.id}
+        can :manage, Pd::Attendance, workshop: {facilitators: {id: user.id}}
       end
 
       if user.district_contact?
@@ -89,6 +97,12 @@ class Ability
             district.contact_id == user.id
           end
         end
+      end
+
+      if user.workshop_organizer?
+        can :create, Pd::Workshop
+        can :manage, Pd::Workshop, organizer_id: user.id
+        can :manage, Pd::Attendance, workshop: {organizer_id: user.id}
       end
     end
 
