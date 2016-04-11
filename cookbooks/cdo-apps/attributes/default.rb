@@ -14,4 +14,3 @@ default['cdo-apps'] = {
   },
   'nginx_enabled' => true
 }
-default['omnibus_updater']['version'] = '12.7.2'
