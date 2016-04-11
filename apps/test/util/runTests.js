@@ -51,6 +51,8 @@ exec(command, function (err, stdout, stderr) {
   var globs = [
     './test/*.js',
     './test/calc/*.js',
+    './test/craft/*.js',
+    './test/gamelab/*.js',
     './test/netsim/*.js'
   ];
 
