@@ -5,11 +5,11 @@
 /* global React, dashboard */
 
 var SectionSelector = React.createClass({
-  handleChange: function(event) {
+  handleChange: function (event) {
     this.props.handleChange(event);
   },
 
-  render: function() {
+  render: function () {
     if (this.props.sections.length === 1) {
       return null;
     }
@@ -28,13 +28,13 @@ var SectionSelector = React.createClass({
 });
 
 var StudentSelector = React.createClass({
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       selectedStudentIds: []
     };
   },
 
-  handleStudentClicked: function(event) {
+  handleStudentClicked: function (event) {
     var selectedStudentIds = this.state.selectedStudentIds;
     var studentId = $(event.target).data('id');
     var index = selectedStudentIds.indexOf(studentId);
@@ -48,12 +48,12 @@ var StudentSelector = React.createClass({
     this.setState({selectedStudentIds: selectedStudentIds});
   },
 
-  handleSubmit: function(event) {
+  handleSubmit: function (event) {
     this.props.handleSubmit(this.state.selectedStudentIds);
     event.preventDefault();
   },
 
-  render: function() {
+  render: function () {
     if (!this.props.students || this.props.students.length === 0) {
       return null;
     }
@@ -88,7 +88,7 @@ var Pairing = React.createClass({
     source: React.PropTypes.string,
   },
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       pairings: [],
       sections: [],
@@ -96,32 +96,23 @@ var Pairing = React.createClass({
     };
   },
 
-  componentDidMount: function() {
+  componentDidMount: function () {
     $.ajax({url: this.props.source,
             method: 'GET',
-            dataType: 'json'}).
-      done(function(result) {
+            dataType: 'json'})
+      .done(function (result) {
         this.setState({
           pairings: result.pairings,
           sections: result.sections,
           selectedSectionId: ''
         });
-      }.bind(this)).
-      fail(function(result) {
+      }.bind(this))
+      .fail(function (result) {
         // TODO what to do here?
       }.bind(this));
-
-    // $.get(this.props.source,
-    //       function(result) {
-    //         this.setState({
-    //           pairings: result.pairings,
-    //           sections: result.sections,
-    //           selectedSectionId: ''
-    //         });
-    //       }.bind(this), 'json');
   },
 
-  handleSectionChange: function(event) {
+  handleSectionChange: function (event) {
     this.setState({
       pairings: [],
       sections: this.state.sections,
@@ -146,12 +137,12 @@ var Pairing = React.createClass({
             data: JSON.stringify({pairings: pairings}),
             contentType: 'application/json; charset=utf-8',
             method: 'PUT',
-            dataType: 'json'}).
-      done(function(result) {
+            dataType: 'json'})
+      .done(function (result) {
         // close dialog
         // TODO what to do here?
-      }.bind(this)).
-      fail(function(result) {
+      }.bind(this))
+      .fail(function (result) {
         // TODO what to do here?
       }.bind(this));
   },
@@ -164,7 +155,7 @@ var Pairing = React.createClass({
     event.preventDefault();
   },
 
-  selectedSectionId: function() {
+  selectedSectionId: function () {
     if (this.state.sections.length === 1) {
       return this.state.sections[0].id;
     } else {
@@ -172,7 +163,7 @@ var Pairing = React.createClass({
     }
   },
 
-  selectedSection: function() {
+  selectedSection: function () {
     if (this.selectedSectionId()) {
       // todo use jquery find
       for (var i = 0; i < this.state.sections.length; i++) {
@@ -184,7 +175,7 @@ var Pairing = React.createClass({
     return null;
   },
 
-  studentsInSection: function() {
+  studentsInSection: function () {
     if (this.selectedSection()) {
       return this.selectedSection().students;
     }
@@ -211,7 +202,7 @@ var Pairing = React.createClass({
     );
   },
 
-  renderPairingState: function() {
+  renderPairingState: function () {
     return (
         <div style={{width: DROPDOWN_WIDTH}}>
         <h1>Pair Programming</h1>
