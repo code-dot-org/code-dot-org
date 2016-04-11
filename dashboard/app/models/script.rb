@@ -531,7 +531,7 @@ class Script < ActiveRecord::Base
   end
 
   def csf_finish_url
-    if (name == Script::TWENTY_HOUR_NAME)
+    if name == Script::TWENTY_HOUR_NAME
       # Rename from 20-hour to public facing Accelerated
       CDO.code_org_url "/congrats/#{Script::ACCELERATED_NAME}"
     else

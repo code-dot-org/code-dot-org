@@ -23,7 +23,8 @@ iPhone.
 
 To run locally, you must have the Applitools secret key installed in your `locals.yml`.
 
-```
+```yaml
+# code-dot-org/locals.yml
 applitools_eyes_api_key: 'my_applitools_eyes_key'
 ```
 
