@@ -15,23 +15,8 @@ var Controls = React.createClass({
   },
 
   render: function () {
-    // TODO - are soft buttons used in applab?
     return (
       <div style={styles.main}>
-        <div id="soft-buttons" className="soft-buttons-none">
-          <button id="leftButton" disabled className="arrow">
-            <img src={this.props.imgUrl} className="left-btn icon21"/>
-          </button>
-          <button id="rightButton" disabled className="arrow">
-            <img src={this.props.imgUrl} className="right-btn icon21"/>
-          </button>
-          <button id="upButton" disabled className="arrow">
-            <img src={this.props.imgUrl} className="up-btn icon21"/>
-          </button>
-          <button id="downButton" disabled className="arrow">
-            <img src={this.props.imgUrl} className="down-btn icon21"/>
-          </button>
-        </div>
         {this.props.finishButton &&
           <div id="share-cell" className="share-cell-none">
             <button id="finishButton" className="share">

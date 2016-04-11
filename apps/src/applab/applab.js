@@ -1045,17 +1045,6 @@ Applab.reset = function (first) {
   var i;
   Applab.clearEventHandlersKillTickLoop();
 
-  // Soft buttons
-  var softButtonCount = 0;
-  for (i = 0; i < Applab.softButtons_.length; i++) {
-    document.getElementById(Applab.softButtons_[i]).style.display = 'inline';
-    softButtonCount++;
-  }
-  if (softButtonCount) {
-    var softButtonsCell = document.getElementById('soft-buttons');
-    softButtonsCell.className = 'soft-buttons-' + softButtonCount;
-  }
-
   // Reset configurable variables
   Applab.message = null;
   delete Applab.activeCanvas;
