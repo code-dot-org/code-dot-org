@@ -51,6 +51,7 @@ module WorkshopConstants
       PHASE_3A => '19Cfv0tzvBh7JOUWhFWv5phDvcDkxYWm1nBLKXESVyB4',
       PHASE_3B => '1U92feb_2lJ8lg2uU4dLeabK9zbmznkNogYtEP-N5IH4',
       PHASE_3C => '156hOBI42fcQx6rYsuMmdMH5NqElbAsCTd5MXDs70_Vc',
+      PHASE_3D => '10_5kTEDVNn46HleKyDIEjWrk6U1iiHHPIgpZATwL4vw',
       PHASE_4 => '1KygTcSauHkt5AA_RF_PM5OIYVpvXPLOlG8O79yVRi48'
     },
     CSP => {
