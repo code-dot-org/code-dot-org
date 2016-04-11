@@ -88,14 +88,6 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="variables_set" inline="false">
-          <title name="VAR">sides</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">5</title>
-            </block>
-          </value>
-        </block>
         <block type="variables_get">
           <title name="VAR">sides</title>
         </block>
