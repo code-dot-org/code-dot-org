@@ -1,0 +1,42 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-11T19:29:25.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "markdown_instructions": "# Rectanlges\r\n\r\nWelcome to Game Lab!  Game Lab allows you to great interactive games and animations!\r\n\r\nWe are going to start off with just some shapes and build up to games over time.\r\n\r\nIn order to create games we will first need to learn how to deal with simple shapes. The rectangle is a simple shape to deal with. \r\n\r\nThe canvas is 400 by 400. The top left corner of the canvas is 0,0 on the grid.\r\n# Do This\r\n\r\n* Add a rect block\r\n* Change the parameters of rect so that covers the whole game area"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Gamelab>
