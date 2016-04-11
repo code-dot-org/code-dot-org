@@ -1,7 +1,6 @@
 name 'U6 - Sample Apps - Student Introduction'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
 ## Unit 4: Lesson 08 - Sample Apps

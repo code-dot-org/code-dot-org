@@ -1,6 +1,5 @@
 name 'ECSPD U3 D 3-4 Intro'
 
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 3 Day 3-4: Basic HTML -- Paragraph and Header Tags
 
