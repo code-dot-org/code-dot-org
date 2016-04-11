@@ -5,7 +5,7 @@ var CONFIGS = {
   }
 };
 
-exports.load = function(assetUrl, id) {
+exports.load = function (assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
   return skin;
 };

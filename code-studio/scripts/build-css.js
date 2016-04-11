@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /** @file Build script for CSS assets in the code-studio package, which is loaded
     by dashboard (our "Code Studio" Rails app). */
+/* global Promise */
 'use strict';
 
 var commander = require('commander');

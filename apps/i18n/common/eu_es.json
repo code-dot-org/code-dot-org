@@ -195,6 +195,7 @@
   "shareWarningsAge": "Mesedez idatzi zure adina azpian eta klikatu OK jarraitzeko.",
   "shareWarningsMoreInfo": "Informazio gehiago",
   "shareWarningsStoreData": "Code Studion egindako app honek elkarbanatze esteka hau duen edonork ikusteko moduan gordetzen ditu datuak; beraz, kontuz ibili informazio pertsonala emateko eskatuz gero.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "Erakutsi blokeak",
   "showCodeHeader": "Ikusi kodea",
   "showGeneratedCode": "Ikusi kodea",
@@ -230,5 +231,5 @@
   "when": "-enean",
   "whenRun": "martxan dagoenean",
   "workspaceHeaderShort": "Lan eremua: ",
-  "showBlock": "Get a block"
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
 }

@@ -33,6 +33,12 @@ levels.sandbox =  {
 // Base config for levels created via levelbuilder
 levels.custom = utils.extend(levels.sandbox, {
   editCode: true,
+  softButtons: [
+    'leftButton',
+    'rightButton',
+    'downButton',
+    'upButton'
+  ],
   codeFunctions: {
     // Game Lab
     "fill": null,
@@ -71,7 +77,8 @@ levels.custom = utils.extend(levels.sandbox, {
     "setSpeed": null,
     "getDirection": null,
     "getSpeed": null,
-    "remove": null,
+    "destroy": null,
+    "pointTo": null,
     "bounce": null,
     "collide": null,
     "displace": null,
@@ -105,7 +112,7 @@ levels.custom = utils.extend(levels.sandbox, {
     // Groups
     "var group = createGroup": null,
     "add": null,
-    "group.remove": null,
+    "remove": null,
     "clear": null,
     "contains": null,
     "get": null,
@@ -115,6 +122,8 @@ levels.custom = utils.extend(levels.sandbox, {
     "group.overlap": null,
     "maxDepth": null,
     "minDepth": null,
+    "destroyEach": null,
+    "pointToEach": null,
     "setColorEach": null,
     "setColorRGBEach": null,
     "setColliderEach": null,

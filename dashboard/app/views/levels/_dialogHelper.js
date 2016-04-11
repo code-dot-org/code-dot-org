@@ -41,7 +41,7 @@ window.dashboard.dialog = (function () {
 
     // Use our prefabricated dialog content.
     var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
-    var dialog = new Dialog({
+    var dialog = new window.Dialog({
       body: content,
       onHidden: dialogHidden,
       autoResizeScrollableElement: appOptions.dialog.autoResizeScrollableElement
@@ -106,7 +106,7 @@ window.dashboard.dialog = (function () {
     // Avoid multiple simultaneous submissions.
     submitButton.attr('disabled', true);
 
-    var onComplete = function(willRedirect) {
+    var onComplete = function (willRedirect) {
       if (!willRedirect) {
         $('.submitButton').attr('disabled', false);
       }
@@ -161,7 +161,7 @@ window.dashboard.dialog = (function () {
         }
 
         if (lastServerResponse.videoInfo) {
-          showVideoDialog(lastServerResponse.videoInfo);
+          window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
             showDialog("success");

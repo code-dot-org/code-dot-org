@@ -5,7 +5,6 @@ inherit_from:
 AllCops:
   Exclude:
     - 'apps/**/*'
-    - 'dashboard/scripts/**/*'
     - 'dashboard/db/**/*'
     - 'dashboard/db/*'
   DisplayCopNames: true
@@ -42,6 +41,9 @@ Style/IfInsideElse:
 
 Style/RedundantReturn:
   Enabled: false
+
+Style/WordArray:
+  MinSize: 5
 
 Metrics/AbcSize:
   Enabled: false

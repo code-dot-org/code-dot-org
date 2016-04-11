@@ -9,7 +9,7 @@
 
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
-var AppView = require('../templates/AppView.jsx');
+var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
@@ -74,7 +74,7 @@ Jigsaw.scale = {
   'stepSpeed': 33
 };
 
-var loadLevel = function() {
+var loadLevel = function () {
   // Load maps.
   // Override scalars.
   for (var key in level.scale) {
@@ -87,7 +87,7 @@ var loadLevel = function() {
   Jigsaw.block1Clicked = false;
 };
 
-var drawMap = function() {
+var drawMap = function () {
   // Hide the left column and the resize bar.
   var visualizationColumn = document.getElementById('visualizationColumn');
   visualizationColumn.style.display = 'none';
@@ -112,7 +112,7 @@ var drawMap = function() {
 /**
  * Initialize Blockly and the Jigsaw app.  Called on page load.
  */
-Jigsaw.init = function(config) {
+Jigsaw.init = function (config) {
   // Jigsaw.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -124,13 +124,13 @@ Jigsaw.init = function(config) {
   Blockly.SNAP_RADIUS = level.snapRadius || 90;
 
   // TODO (br-pair) : I think this is something that's happening in all apps?
-  config.loadAudio = function() {
+  config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
-  config.afterInject = function() {
+  config.afterInject = function () {
     /**
      * The richness of block colours, regardless of the hue.
      * MOOC blocks should be brighter (target audience is younger).
@@ -173,7 +173,7 @@ Jigsaw.init = function(config) {
     studioApp.init(config);
 
     document.getElementById('runButton').style.display = 'none';
-    Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function(evt) {
+    Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function (evt) {
       checkForSuccess();
     });
 
@@ -190,6 +190,9 @@ Jigsaw.init = function(config) {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    hideSource: !!config.hideSource,
+    noVisualization: true,
+    isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
     generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: onMount
@@ -210,7 +213,7 @@ function checkForSuccess() {
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
  */
-var displayFeedback = function() {
+var displayFeedback = function () {
   if (!Jigsaw.waitingForReport) {
     studioApp.displayFeedback({
       app: 'Jigsaw',
@@ -226,7 +229,7 @@ var displayFeedback = function() {
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
  */
-Jigsaw.onReportComplete = function(response) {
+Jigsaw.onReportComplete = function (response) {
   Jigsaw.response = response;
   Jigsaw.waitingForReport = false;
   studioApp.onReportComplete(response);
@@ -236,11 +239,11 @@ Jigsaw.onReportComplete = function(response) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-Jigsaw.execute = function() {
+Jigsaw.execute = function () {
   // execute is a no-op for jigsaw
 };
 
-Jigsaw.onPuzzleComplete = function() {
+Jigsaw.onPuzzleComplete = function () {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run

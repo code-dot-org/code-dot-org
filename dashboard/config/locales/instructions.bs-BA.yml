@@ -1169,10 +1169,9 @@
       Course 4 Artist 10_instruction: 'Vrijeme je za slobodno igranje! Zabavi se i
         nacrtaj šta god želiš. '
       Course 4 Artist 11_instruction: |
-        Now for a challenge!  Here is a design that
-        uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it?  Feel free to use trial and error. You are not expected to
-        get it perfect the first time.  Want to see more hints?  Click here!
+        Now for a challenge!  Feel free to use trial
+        and error. You are not expected to get the image perfect the first time.   Want
+        to see more hints?  Click here!
       Course 4 Artist 12_instruction: |-
         Want a second peek at the inspiration design
         or the hints?  Click here!\r
@@ -1200,12 +1199,9 @@
         10 trokutova zatvaraju ugao od 360 stepeni.  '
       Course 4 Artist 8_instruction: Nacrtaj ovo sunce tako što ćeš ponoviti ovaj
         čitav blok u petlji 12 puta.
-      Course 4 Artist 8a_instruction: |-
+      Course 4 Artist 8a_instruction: |
         Remember this shape?  Now we're going to
-        let you build it without giving you any blocks to start!\r
-        Hint: There are
-        3 triangles within the 360 degree rotation...how many times does 3 go into
-        360?
+        let you build it without giving you any blocks to start!
       Course 4 Artist 9_instruction: 'Ponavljaj ovaj crtež u petlji 10 puta i pobrini
         se da okreneš između svakog oblika koji je nacrtan. Evo savjet o za koliko
         okrenuti: Koliko je 360 podijeljeno sa 10?'
@@ -1481,9 +1477,9 @@
         side needs to be shorter if you want the whole pattern to fit on the screen.
         \r
         Let's recreate the algorithm for this amazing pattern, but instead of
-        manually setting the "length" variable, let's use a math block with the
-        "sides" variable inside to make sure that each shape fits correctly. The
-        perimeter of each polygon is 300 pixels.\r
+        manually setting the `length` variable, let's use a math block with the `sides`
+        variable inside to make sure that each shape fits correctly. The perimeter
+        of each polygon is 300 pixels.\r
         Need some hints?  Click here.
       Course 4 Artist Vars 14_instruction: Vrijeme za slobodno igranje! Provjeri sada
         svoj algoritam koji je ugniježden u još jednoj petlji. Eksperimentiši sa mijenjanjem
@@ -2838,6 +2834,10 @@
       Overworld Avoid Monsters_instruction: |
         Running into a Creeper is a bad idea.
         Carefully move past the Creepers and reach the safety of your home.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: |
         Wood is a very important resource. Many things
         are made from it. Walk to the tree and use the “destroy block” command to
@@ -3086,6 +3086,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only

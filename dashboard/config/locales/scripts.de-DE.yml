@@ -293,7 +293,7 @@
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bewertungsblöcke
           Making Pictures: Making Pictures
           Defining Variables: Variablen definieren
           Defining Simple Functions: Defining Simple Functions
@@ -547,7 +547,7 @@
             und Abstandsformeln'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bewertungsblöcke
           Strings and Images: Text und Bilder
           Contracts: Verträge
           Your Game - Defining Variables: Your Game - Defining Variables
@@ -571,7 +571,7 @@
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bewertungsblöcke
           Strings and Images: Text und Bilder
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
@@ -765,7 +765,7 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bewertungsblöcke
           The Big Game: The Big Game
           Strings and Images: Text und Bilder
           The Design Recipe: Das Design-Rezept
@@ -816,7 +816,7 @@
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bewertungsblöcke
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -829,7 +829,7 @@
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bewertungsblöcke
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -970,7 +970,7 @@
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bewertungsblöcke
           Strings and Images: Text und Bilder
           Defining Variables: Variablen definieren
           Big Game - Variables: Big Game - Variables
@@ -1016,6 +1016,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1023,7 +1025,7 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bewertungsblöcke
           Strings and Images: Text und Bilder
           Writing Contracts: Writing Contracts
           Defining Variables: Variablen definieren
@@ -1144,7 +1146,7 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bewertungsblöcke
           Strings and Images: Text und Bilder
           Writing Contracts: Writing Contracts
           Defining Variables: Variablen definieren

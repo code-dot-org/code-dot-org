@@ -2746,6 +2746,10 @@
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: "크리퍼와 마주치는 건 좋지 않습니다. 크리퍼를 조심스럽게 지나쳐서
         안전한 집에 도달하세요."
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 나무는 매우 중요한 자원입니다. 나무로 많은 것들을 만들 수 있지요. 나무로
         걸어간 후 "블록 부수기" 명령을 이용해 나무를 베세요.
       Overworld Chop Trees_instruction: "해가 지기 전에 집을 지어야 해요. 집을 지으려면 나무가 많이 필요하죠.
@@ -2972,6 +2976,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         이 구름들이 짜증나게 하네요! 어떤 구름 아래에만 꽃이 있습니다.
         구름들을 하나씩 모두 검사해서 꽃인 경우에만 꽃꿀을 뽑아야 합니다.

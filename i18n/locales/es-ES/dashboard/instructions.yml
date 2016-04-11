@@ -2044,6 +2044,10 @@ es:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Ir contra un Creeper no es buena idea. Evítalos con cuidado y llega a casa para estar a salvo.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'La madera es un recurso muy importante. Sirve para hacer muchas cosas. Ve hacia el árbol y usa el comando "destruir bloque" para talarlo.'
       Overworld Chop Trees_instruction: Necesitamos construir una casa antes de que se ponga el sol. Las casas necesitan mucha madera. Tala los tres árboles.
       Overworld Free Play 20x20_instruction: ¡Enhorabuena! Has completado todos los rompecabezas. Ahora extrae recursos, construye y crea algo único con todo lo que has aprendido.
@@ -2244,6 +2248,10 @@ es:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: Estas nubes me están molestando! Algunas de las nubes tienen flores dentro, y otras no. Debo comprobar cada nube y obtener el néctar sólo de las flores.
       Quantum Bee_instruction: '¡ Las flores moradas pueden tener un tipo de néctar de 1 ó 0, pero tu no sabes cuál !. Ten cuidado de no recolectar el néctar de una flor morada sin  néctar. Revisa si el valor del néctar es igual a 1 usando el bloque “if”. '
       Ryan - 4-5 Bee Conditionals 2_instruction: La abeja sólo quiere néctar ahora. No todo los objetos son flores, así que compruebe debajo de cada nube para ver si está ocultando una flor. Si es así, puede recolectar néctar.

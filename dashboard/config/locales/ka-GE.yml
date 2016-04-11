@@ -417,6 +417,8 @@
       უფლება დაცულია. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
       Arts Inc. ყველა უფლება დაცულია. The Amazing World of Gumball არის სავაჭრო ნიშანი
       &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: "შექმნილია Amazon Web Services დახმარებით"
     trademark: "&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო
       და Hour of Code&reg; Code.org-ის სავაჭრო ნიშნებია."

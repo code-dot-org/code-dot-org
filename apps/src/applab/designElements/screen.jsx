@@ -1,11 +1,11 @@
 
-var PropertyRow = require('./PropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
-var DefaultScreenButtonPropertyRow = require('./DefaultScreenButtonPropertyRow.jsx');
+var PropertyRow = require('./PropertyRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var ImagePickerPropertyRow = require('./ImagePickerPropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
+var DefaultScreenButtonPropertyRow = require('./DefaultScreenButtonPropertyRow');
 var ICON_PREFIX_REGEX = require('../constants').ICON_PREFIX_REGEX;
 
 var elementUtils = require('./elementUtils');
@@ -68,7 +68,7 @@ var ScreenEvents = React.createClass({
   // The screen click event handler code currently receives clicks to any
   // other design element. This could be worked around by checking for
   // event.targetId === "<id>" here, at the expense of added complexity.
-  getClickEventCode: function() {
+  getClickEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
@@ -78,11 +78,11 @@ var ScreenEvents = React.createClass({
     return code;
   },
 
-  insertClick: function() {
+  insertClick: function () {
     this.props.onInsertEvent(this.getClickEventCode());
   },
 
-  getKeyEventCode: function() {
+  getKeyEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "keydown", function(event) {\n' +
@@ -91,7 +91,7 @@ var ScreenEvents = React.createClass({
     return code;
   },
 
-  insertKey: function() {
+  insertKey: function () {
     this.props.onInsertEvent(this.getKeyEventCode());
   },
 

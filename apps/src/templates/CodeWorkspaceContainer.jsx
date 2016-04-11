@@ -6,19 +6,19 @@
  */
 
 var Radium = require('radium');
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
+var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
 
 var styles = {
   main: {
     position: 'absolute',
-    // left gets set externally
+    // left gets set externally :(
     // top is set in render
     right: 0,
     bottom: 0,
     marginLeft: 15, // margin gives space for vertical resizer
   },
-  mainRTL: {
+  mainRtl: {
     right: undefined,
     left: 0,
     marginRight: 15
@@ -38,16 +38,31 @@ var styles = {
     zIndex: 0
   },
   noVisualization: {
+    // Overrides left set in css
     left: 0,
     marginLeft: 0
+  },
+  noVisualizationRtl: {
+    right: 0
   }
 };
 
 var CodeWorkspaceContainer = React.createClass({
   propTypes: {
     topMargin: React.PropTypes.number.isRequired,
+    hidden: React.PropTypes.bool,
+    isRtl: React.PropTypes.bool.isRequired,
+    noVisualization: React.PropTypes.bool.isRequired,
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
     onSizeChange: React.PropTypes.func
+  },
+
+  /**
+   * Called externally
+   * @returns {number} The height of the rendered contents in pixels
+   */
+  getContentHeight: function () {
+    return $(ReactDOM.findDOMNode(this)).height();
   },
 
   componentDidUpdate: function (prevProps) {
@@ -57,17 +72,13 @@ var CodeWorkspaceContainer = React.createClass({
   },
 
   render: function () {
-    // TODO - These probably better belong as props (and possibly in the redux
-    // store), but I'd like to get the quick and dirty fix in ASAP as RTL is
-    // currently broken
-    var noViz = window.appOptions && appOptions.app === 'jigsaw';
-    var rtl = document.querySelector('html').getAttribute('dir') === 'rtl';
-
     var mainStyle = [styles.main, {
       top: this.props.topMargin
     },
-      noViz && styles.noVisualization,
-      rtl && styles.mainRTL
+      this.props.noVisualization && styles.noVisualization,
+      this.props.isRtl && styles.mainRtl,
+      this.props.noVisualization && this.props.isRtl && styles.noVisualizationRtl,
+      this.props.hidden && styles.hidden
     ];
 
     return (

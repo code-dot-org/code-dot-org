@@ -30,9 +30,9 @@
   twentyhours_heading: "دوره‌ی مقدماتی علوم کامپیوتر ما را شروع کنید"
   twentyhours_text: "اولین ساعت کدنویسی را به پایان رساندید؟ علوم کامپیوتر و مفاهیم
     برنامه نویسی را در درس بعدی، بیشتر یاد بگیرید."
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: "هر کودک فرصت سزاوار"
+  og_description: "هر دانش آموز در هر مدرسه فرصت مطالعه علوم کامپیوتر سزاوار. آن همه
+    چیز در حال تغییر است."
   hoc2014_heading: به <a href="http://hourofcode.com">ساعتِ کدنویسی</a> بپیوندید <br/>از
     8 تا 14 دسامبر  2014<br/>
   hoc2014_students: "دانش آموزان"
@@ -789,7 +789,7 @@
   dashboard_progress_completed_perfect: "تکمیل, کامل"
   dashboard_progress_furthest_level_attempted: "تلاش برای دسترسی به سطح دسترسی خارج
     از محدوده "
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: "ثبت شده"
   dashboard_stage: "مرحله"
   dashboard_puzzle: "پازل"
   dashboard_question: "سوال"
@@ -799,6 +799,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: "صحیح است"
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -971,7 +973,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: "آزمایشگاه نرم افزار"
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: "سنین سیزده به بالا"
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

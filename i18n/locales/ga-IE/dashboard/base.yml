@@ -23,7 +23,7 @@ ga:
           future: "can't be in the future"
   hello: Hello world
   welcome_back: 'Welcome back, %{name}'
-  submit: Submit
+  submit: Seol
   unsubmit: Unsubmit
   next_page: Next page
   add_teacher_form:
@@ -264,10 +264,10 @@ ga:
     student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Answer Viewer
-      student: Student
+      student: Dalta
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
-      section: Section
+      section: Rannán
       example: Example Solution
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
@@ -339,18 +339,19 @@ ga:
     female: Female
     none: Prefer not to answer
   user_type:
-    student: Student
-    teacher: Teacher
+    student: Dalta
+    teacher: Múinteoir
   footer:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
-    more: More
+    more: Tuilleadh
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
@@ -420,7 +421,7 @@ ga:
       unused: Unused Levels
   upsell:
     applab:
-      title: App Lab
+      title: Saotharlann Aipeanna
       body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
       body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
       audience: Ages 13+
@@ -433,7 +434,7 @@ ga:
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
     20-hour:
       title: Accelerated Course
-      body: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
+      body: "Is cúrsa 20 uair an chloig é seo a chlúdaíonn bunchoincheapa ríomheolaíochta agus ríomhchláraithe ó chúrsaí 2-4. Tá sé dírithe ar dhaltaí idir 10 agus 18 bliain d'aois. Féach ar chúrsaí 2-4 chun eolas níos cuimsithí a fháil!"
       body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
@@ -447,7 +448,7 @@ ga:
       title: Star Wars
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Úsáid Súgradh is Dáiríre chun scéal nó cluiche a chruthú ina bhfuil carachtair Disney Infinity.
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
@@ -536,7 +537,7 @@ ga:
           title: Edit Code
           description: ""
         events:
-          title: Events
+          title: Teagmhais
           description: ""
         builder:
           title: Builder
@@ -545,7 +546,7 @@ ga:
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
         jigsaw:
-          title: Jigsaw
+          title: Míreanna Mearaí
           description: ""
         step:
           title: Céim
@@ -577,21 +578,21 @@ ga:
     create_a_project: 'Create a new project:'
     new: Create New
     rename: Rename
-    save: Save
-    delete: Delete
+    save: Sábháil
+    delete: Scrios
     exit: Return to Course
     my_projects: My Projects
     share: Comhroinn
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     close: Close
-    more: More
-    name: Name
+    more: Tuilleadh
+    name: Ainm
     updated: Updated
     project_type: Project Type
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time.'
     need_help: Try these courses to help you get started with your new project
-    really_delete: Delete?
+    really_delete: Scrios?
     delete_yes: Tá
     delete_no: Níl
     saved: Sábháilte
@@ -620,7 +621,7 @@ ga:
           harassment: Threats, cyberbullying, harassement
           offensive: Offensive content
           infringement: Copyright Infringement
-          other: Other
+          other: Eile
         detail: Please provide as much detail as possible regarding the content you are reporting.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
   components:

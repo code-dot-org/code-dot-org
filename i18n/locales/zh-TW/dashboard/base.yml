@@ -348,6 +348,7 @@ zh:
     help_from_html_old: 來自google 微軟 Fb及推特的工程師的協助創造了這些元素
     art_from_html: '當個創世神 Minecraft &#8482; &copy; %{current_year} Microsoft 著作權所有，並保留一切權利。<br />星際大戰 Star Wars &#8482; &copy; %{current_year} 迪士尼和盧卡斯影業著作權所有，並保留一切權利。<br />冰雪奇緣 Frozen &#8482; &copy; %{current_year} 迪士尼著作權所有，並保留一切權利。<br />冰原歷險記 Ice Age &#8482; &copy; %{current_year} 二十世紀福斯影片公司著作權所有，並保留一切權利。<br />憤怒鳥 Angry Birds &#8482; &copy; 2009年 %{current_year} Rovio 娛樂有限公司著作權所有，並保留一切權利。<br />植物大戰僵屍 Plants vs. Zombies &#8482; &copy; %{current_year} 美商藝電著作權所有，並保留一切權利。<br />阿甘妙世界 The Amazing World of Gumball 商標是 &copy; 2015年卡通頻道著作權所有，並保留一切權利。'
     art_from_html_old: '當個創世神 Minecraft &#8482; &copy; %{current_year} Microsoft 著作權所有，並保留一切權利。星際大戰 Star Wars &#8482; &copy; %{current_year} 迪士尼和盧卡斯影業著作權所有，並保留一切權利。冰雪奇緣 Frozen &#8482; &copy; %{current_year} 迪士尼著作權所有，並保留一切權利。冰原歷險記 Ice Age &#8482; &copy; %{current_year} 二十世紀福斯影片公司著作權所有，並保留一切權利。憤怒鳥 Angry Birds &#8482; &copy; 2009年 %{current_year} Rovio 娛樂有限公司著作權所有，並保留一切權利。植物大戰僵屍 Plants vs. Zombies &#8482; &copy; %{current_year} 美商藝電著作權所有，並保留一切權利。阿甘妙世界 The Amazing World of Gumball 商標是 &copy; 2015年卡通頻道著作權所有，並保留一切權利。'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: 由亞馬遜網路服務系統提供服務
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE 標誌以及 Hour of Code&reg; 都是 Code.org.的注冊商標。'
     copyright: 版權所有

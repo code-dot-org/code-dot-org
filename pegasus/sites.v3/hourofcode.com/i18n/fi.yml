@@ -1,7 +1,7 @@
 fi:
   site_name: Koodaustunti
   hour_of_code: Hour of Code
-  language: englanti
+  language: Suomi
   front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Tulossa pian
   campaign_date_start_short: Dec. 7

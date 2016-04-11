@@ -987,10 +987,9 @@ zh:
       Course 4 Artist 1_instruction: '請幫我畫完我的箱子。(每一條線的長度是 200 像素) '
       Course 4 Artist 10_instruction: "點這裡再看一次提示！\\r\\r\n這是一個有趣圖案的程式碼。當你重複程式碼很多次，每次都轉一點方向會發生什麼事呢？注意在此圖案中會轉到 420 度，這表示說你的角色晝完時，他會朝向與開始不同的方向。他會朝著從開始方向右邊 60 度的方向。"
       Course 4 Artist 11_instruction: |
-        Now for a challenge!  Here is a design that
-        uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it?  Feel free to use trial and error. You are not expected to
-        get it perfect the first time.  Want to see more hints?  Click here!
+        Now for a challenge!  Feel free to use trial
+        and error. You are not expected to get the image perfect the first time.   Want
+        to see more hints?  Click here!
       Course 4 Artist 12_instruction: "Want a second peek at the inspiration design\nor the hints?  Click here!\\r\n\\r\nOtherwise, make a design all your own!"
       Course 4 Artist 13_instruction: 還在玩嗎？這裡有一張你可以設計任何東西的空白畫布！
       Course 4 Artist 2_instruction: 你可以用迴圈包住這段程式碼，來繪製外層灰色的正方形嗎？
@@ -1009,11 +1008,10 @@ zh:
         提示:在360度旋轉內有三個三角形，需要多少次才能從3到360?
       Course 4 Artist 7_instruction: '現在把這個迴圈嵌進另一個迴圈內來畫出10個三角形。這被稱作巢狀迴圈。 提示: 全部10個三角形完成了360度的旋轉。  '
       Course 4 Artist 8_instruction: 用迴圈包住這些程式積木，重覆執行多次來畫出這個太陽
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet you build it without giving you any blocks to start!\\r\nHint: There are\n3 triangles within the 360 degree rotation...how many times does 3 go into\n360?"
-      Course 4 Artist 9_instruction: |
-        Loop this design 10 times and make sure to
-        turn between each shape that's drawn. Here's a hint for how much you have
-        to turn: What is 360 divided by 10?
+      Course 4 Artist 8a_instruction: |
+        Remember this shape?  Now we're going to
+        let you build it without giving you any blocks to start!
+      Course 4 Artist 9_instruction: "Loop this design 10 times and make sure to\nturn between each shape that's drawn. \\r\n"
       Course 4 Artist Binary 1_instruction: "Here's a function that takes a binary\nstring of 1's and 0's and instructs the artist to follow them from left\nto right, top to bottom.  The artist will fill-in the squares when it sees\na 1 and ignore the square when it sees a 0. \\r\n\\r\nRun this code to see how\nthe artist uses binary to draw this pattern."
       Course 4 Artist Binary 1a_instruction: "Here's a function that takes a binary\nstring of 1's and 0's and instructs the artist to follow them from left\nto right, top to bottom.  The artist will fill-in the squares when it sees\na 1 and ignore the square when it sees a 0. \\r\n\\r\nRun this code to see how\nthe artist uses binary to draw this pattern."
       Course 4 Artist Binary 2_instruction: |
@@ -1243,9 +1241,7 @@ zh:
         Here's the algorithm to draw a triangle,
         modify it so it uses the "sides" variable instead. Replace the number 3
         with the "sides" variable. Hint: remember to use the "set sides to" block.
-      Course 4 Artist Vars 1_instruction: |
-        Can you help me draw an equilateral triangle?
-        It has to be exactly 100 pixels long on each side.
+      Course 4 Artist Vars 1_instruction: "Let's draw an equilateral triangle. \\r\n\\r\nIt\nhas to be exactly 100 pixels long on each side."
       Course 4 Artist Vars 10_instruction: |
         Here's an algorithm that draws a triangle
         out of smaller triangles. Can you modify it so that it uses the "sides"
@@ -1262,7 +1258,7 @@ zh:
         gets! Notice that there is another variable called "length". We can now
         use that wherever we have a "move forward." Set the "length" variable
         to 75 for this shape.
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the \"length\" variable, let's use a math block with the\n\"sides\" variable inside to make sure that each shape fits correctly. The\nperimeter of each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the `length` variable, let's use a math block with the `sides`\nvariable inside to make sure that each shape fits correctly. The perimeter\nof each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
       Course 4 Artist Vars 14_instruction: "Free Play: Check it out! Now your algorithm\nis nested within one more loop. Experiment with changing the values of your\ntwo variables to draw cool patterns.\\r\n\\r\nFor even more effect, try playing\nwith color!  Use random colors inside loops to see how it changes your design."
       Course 4 Artist Vars 2_instruction: |
         Instead of using "move forward by 150,"
@@ -1291,18 +1287,15 @@ zh:
         Modify this algorithm so it uses the "sides"
         variable instead of a fixed number to draw a triangle. Don't forget to use
         the "set sides to" block.
-      Course 4 Bee 1_instruction: |
-        The bee can't tell what's under the cloud! Use
-        the "if" block to check whether there is a flower under the cloud, then
-        only gather nectar from it if it is a flower. 
+      Course 4 Bee 1_instruction: "The bee can't tell what's under the cloud! \\r\n\\r\nUse\nthe `if` block to check whether there is a flower under the cloud. \\r\n\\r\nGet\nnectar one time, ONLY if there is a flower."
       Course 4 Bee 2_instruction: |
         Use the "if/else" block to check each object
-        to see if it's a flower or a honeycomb . If it's a flower, collect nectar...otherwise,
-        make honey!
+        to see if it's a flower or a honeycomb . If it's a flower, collect one nectar...otherwise,
+        make one honey!
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
-        This time, use the if/else block to collect nectar if it is a flower, else
-        make honey (because then it would be a honeycomb).
+        This time, use the if/else block to collect one nectar if it is a flower,
+        else make one honey (because then it would be a honeycomb).
       Course 4 Bee 4_instruction: |
         This purple flower may have either 3, 2, or 1
         nectar. Here an if/else block is combined with another if/else block to create
@@ -1534,12 +1527,11 @@ zh:
         the dog. Press "Finish" when you're done playing.
       Course 4 Play Lab Vars 2_instruction: |
         The race in that last puzzle wasn't
-        very fair! Change the "dog_speed" variable to make sure you can collect
-        more flags than Cat. The first to collect 10 flags wins!
+        very fair! Change the `dog_speed` variable to make sure you can collect more
+        flags than Cat. The first to collect 10 flags wins!
       Course 4 Play Lab Vars 3_instruction: |
-        Here's a new kind of game! Use the
-        left and right arrows to move, and the up arrow to jump. See if you can collect
-        all of the flags.
+        Use the left and right arrows to move,
+        and the up arrow to jump. See if you can collect all of the flags.
       Course 4 Play Lab Vars 4_instruction: |
         Now we're using a variable called "height"
         to control how high the dog can jump. Update the "height" variable so that
@@ -2399,14 +2391,15 @@ zh:
         on "Run" to see it in action. 
       NEW Course 4 Artist Vars 12_instruction: |
         Now, recreate the algorithm from
-        the last level and create a pentagon with sides of 150.
+        the last level and create a pentagon with sides of length 150.
       NEW Course 4 Artist Vars 2.5_instruction: |
         Take a look at the code, can you
         see how the "set length" block and "length" block works together? Click
         on "Run" to see it in action. 
       NEW Course 4 Artist Vars 2_instruction: |
-        Drag a number block to the "set length"
-        block to draw a set of 50 pixel triangles. 
+        Drag a number block to both the `set
+        length` block and the `repeat _ times` block to draw a set of 50 pixel triangles.
+        
       NEW Course 4 Artist Vars 4 5_instruction: |
         Awesome job on the last puzzle,
         let's try it again this time let's make this cool design with with 60 pixel
@@ -2450,7 +2443,9 @@ zh:
         changes by the value of the increment. Try collecting these flowers using
         an increment of 2.
       NEW Course 4 Bee For Loops 7_instruction: "Now, let's combine the \"counter\"\nvariable with a math block! How can you use the \"counter\" variable to navigate\nthis garden with the fewest number of blocks possible? What do you need to\ndo to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\\r\n\\r\nRemember: If your loop is counting up, the increment is added\nto your \"counter\" variable each time through."
-      NEW Course 4 Bee For Loops 8_instruction: "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?\\r\nHint: What do you need\nto add to each number to get the number after it?"
+      NEW Course 4 Bee For Loops 8_instruction: |
+        You've got this! What should your
+        increment be to collect 3, 6, 9, 12, 15 nectar?
       NEW Course 4 Bee For Loops 9_instruction: |
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
@@ -2502,6 +2497,10 @@ zh:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: 撞上苦力怕是一件相當糟的事情。小心的從苦力怕身邊通過並安全地抵達你的家裡。
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: '木材是相當重要的資源。有許多物品都是由木材所製成。走到樹木前面使用"摧毀方塊"將它砍下。'
       Overworld Chop Trees_instruction: 我們需要在日落之前蓋好一棟房屋，而蓋房屋需要使用大量木材。請將 3 棵樹全部砍倒。
       Overworld Free Play 20x20_instruction: 恭喜！您已解開所有謎題！現在請運用您目前為止所學的一切，開採、建造並創造出獨特的成品。
@@ -2717,6 +2716,10 @@ zh:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only

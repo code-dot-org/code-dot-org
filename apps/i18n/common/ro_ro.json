@@ -195,6 +195,7 @@
   "shareWarningsAge": "Te rugăm să-ți completezi vârsta mai jos și să apeși butonul OK pentru a continua.",
   "shareWarningsMoreInfo": "Informații suplimentare",
   "shareWarningsStoreData": "Această aplicație construită în Studio-ul Code stochează informații care ar putea fi vizualizate de către oricine prin intermediul acestui link, deci ai grijă dacă ți se cere să furnizezi informații personale.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "Afișează blocurile",
   "showCodeHeader": "Arată codul",
   "showGeneratedCode": "Arată codul",
@@ -230,5 +231,5 @@
   "when": "când",
   "whenRun": "când rulezi",
   "workspaceHeaderShort": "Spaţiu de lucru: ",
-  "showBlock": "Get a block"
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
 }

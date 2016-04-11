@@ -2005,6 +2005,10 @@ ro:
       Overworld Avoid Monsters_instruction: |
         Intalnirea unui Vierme nu este o idee buna.
         Mergeti cu atentie pe langa ei si ajungeti in siguranta in casa.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Lemnul este o resursa importanta. Se pot construi multe cu ajutorul lui. Mergeti la copac si utilizati blocul "Distrugeti" pentru a-l taia.'
       Overworld Chop Trees_instruction: 'Trebuie sa construim o casa inainte de apus. Este necesar mult lemn. Taie toti cei trei copaci. '
       Overworld Free Play 20x20_instruction: Felicitări! Ai finalizat toate puzzle-urile! Acum extrage, construieste si creeaza ceva unic folosind tot ceea ce ai invatat pana acum.
@@ -2205,6 +2209,10 @@ ro:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only

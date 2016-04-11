@@ -103,13 +103,13 @@ class DSLDefined < Level
 
   def encrypted_dsl_text(dsl_text)
     ["name '#{name}'",
-     "encrypted '#{Encryption::encrypt_object(dsl_text)}'"].join("\n")
+     "encrypted '#{Encryption.encrypt_object(dsl_text)}'"].join("\n")
   end
 
   def self.decrypt_dsl_text_if_necessary(dsl_text)
     if dsl_text =~ /^encrypted '(.*)'$/m
       begin
-        return Encryption::decrypt_object($1)
+        return Encryption.decrypt_object($1)
       rescue Exception
         # just return the encrypted text
       end

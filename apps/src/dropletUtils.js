@@ -46,7 +46,7 @@ exports.randomNumber = function (min, max) {
   return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
 };
 
-exports.getTime = function() {
+exports.getTime = function () {
   return (new Date()).getTime();
 };
 
@@ -176,6 +176,7 @@ standardConfig.categories = {
  *  by the primary dropletConfig if there is overlap between the two.
  * @param {Object} options
  * @param {boolean} options.paletteOnly ignore blocks not in codeFunctions palette
+ * @param {boolean} options.ignoreNoAutocompleteBlocks ignore blocks with noAutocomplete property
  * @param {boolean} options.ignoreDocFunc don't include based on block.docFunc
  * @returns {Array<DropletBlock>}
  */
@@ -209,7 +210,15 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, opt
   });
 
   return blocks.filter(function (block) {
-    return !options.paletteOnly || block.func in codeFunctions || block.func in docFunctions;
+    var cfBlockOverrides = codeFunctions[block.func] || {};
+    var blockNoAutocomplete = utils.valueOr(cfBlockOverrides.noAutocomplete,
+        block.noAutocomplete);
+    var passedAutocompleteCheck = !options.ignoreNoAutocompleteBlocks ||
+        !blockNoAutocomplete;
+    var passedPaletteOnlyCheck = !options.paletteOnly ||
+        block.func in codeFunctions ||
+        block.func in docFunctions;
+    return passedAutocompleteCheck && passedPaletteOnlyCheck;
   }).map(function (block) {
     // We found this particular block, now override the defaults with extend
     return $.extend({}, block, codeFunctions[block.func]);
@@ -273,7 +282,7 @@ function buildFunctionPrototype(prefix, params) {
 }
 
 // Generate a read-write property expansion function:
-function generatePropertyExpansion (propname) {
+function generatePropertyExpansion(propname) {
   return function (block) {
     if (!block || block.type === 'socket') {
       return propname;
@@ -428,7 +437,7 @@ function populateCompleterFromPredefValues(apis, predefValues) {
  * @param {Object} pos Ace editor position
  * @return {boolean} true if position is at the start of a method or property
  */
-function isPositionAfterDot (session, pos) {
+function isPositionAfterDot(session, pos) {
   var acUtil = window.ace.require("ace/autocomplete/util");
   var line = session.getLine(pos.row);
   var identifier = acUtil.retrievePrecedingIdentifier(line, pos.column);
@@ -470,7 +479,7 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   }
 
   return {
-    getCompletions: function(editor, session, pos, prefix, callback) {
+    getCompletions: function (editor, session, pos, prefix, callback) {
       if (prefix.length === 0) {
         callback(null, []);
         return;
@@ -565,16 +574,22 @@ exports.generateDropletModeOptions = function (config) {
   return modeOptions;
 };
 
+exports.IGNORE_NO_AUTOCOMPLETE_BLOCKS = true;
+
 /**
  * Returns a set of all blocks
  * @param {DropletConfig|null} dropletConfig custom configuration, may be null
  * @param {codeFunctions|null} codeFunctions with block overrides, may be null
- * @param paletteOnly boolean: filter to only those blocks that are in codeFunctions
+ * @param {boolean} paletteOnly filter to only those blocks that are in codeFunctions
  *   palette, or who share documentation (via docFunc) with other blocks that are
+ * @param {boolean} ignoreNoAutocompleteBlocks ignore blocks with noAutocomplete property
  * @returns {DropletBlock[]} a list of all available Droplet blocks,
  *      including the given config's blocks
  */
-exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, paletteOnly) {
+exports.getAllAvailableDropletBlocks = function (dropletConfig,
+    codeFunctions,
+    paletteOnly,
+    ignoreNoAutocompleteBlocks) {
   var hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
   var configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
   if (codeFunctions && hasConfiguredBlocks) {
@@ -582,7 +597,10 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, p
         codeFunctions,
         dropletConfig,
         null,
-        { paletteOnly: paletteOnly }
+        {
+          paletteOnly: paletteOnly,
+          ignoreNoAutocompleteBlocks: ignoreNoAutocompleteBlocks
+        }
     );
   }
   return exports.dropletGlobalConfigBlocks
