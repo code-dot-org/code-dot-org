@@ -360,7 +360,7 @@ exports.unescapeText = function (text) {
   // First, convert every <div> tag that isn't at the very beginning of the string
   // to a newline.  This avoids generating an incorrect blank line at the start
   // if the first line is wrapped in a <div>.
-  cleanedText = cleanedText.replace(/(?!^)<div>/gi, '\n');
+  cleanedText = cleanedText.replace(/(?!^)<div[^>]*>/gi, '\n');
 
   cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
   cleanedText = cleanedText.replace(/&nbsp;/gi, ' '); // Unescape nonbreaking spaces
