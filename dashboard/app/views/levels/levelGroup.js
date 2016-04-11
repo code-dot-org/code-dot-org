@@ -32,7 +32,7 @@ function initLevelGroup(
     // Add any new results to the existing lastAttempt results.
     for (var i = 0; i < levelCount; i++) {
       var levelName = "level_" + i;
-      var levelResult = window[levelName].getCurrentAnswer().toString();
+      var levelResult = decodeURI(window[levelName].getCurrentAnswer().toString());
       var levelId = window[levelName].getLevelId();
 
       // But before storing, if we had a previous result for the same level,
