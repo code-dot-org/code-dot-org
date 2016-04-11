@@ -20,6 +20,9 @@ function initLevelGroup(
       // show the Unsubmit button.
       $('.unsubmitButton').show();
     }
+
+    // Set the entire page background to be light grey.
+    $('.full_container').addClass("level_group_readonly");
   }
 
   window.getResult = function () {
