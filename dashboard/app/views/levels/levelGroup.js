@@ -2,7 +2,7 @@
 
 function initLevelGroup(
   levelCount,
-  page,
+  currentPage,
   fallbackResponse,
   callback,
   app,
@@ -71,17 +71,21 @@ function initLevelGroup(
     };
   };
 
-  function nextPage() {
-    var newLocation = window.location.href.replace("/page/" + page, "/page/" + (page+1));
+
+  // Called by gotoPage when it's ready to actually change the page.
+  function changePage(targetPage) {
+    var newLocation = window.location.href.replace("/page/" + currentPage, "/page/" + targetPage);
     window.location.href = newLocation;
   }
 
-  $(".nextPageButton").click($.proxy(function (event) {
+  // Called by previous/next button handlers.
+  // Goes to a new page, first saving current answers if necessary.
+  function gotoPage(targetPage) {
 
     // Are we read-only?  This can be because we're a teacher OR because an answer
     // has been previously submitted.
     if (window.appOptions.readonlyWorkspace) {
-      nextPage();
+      changePage(targetPage);
     } else {
       // Submit what we have, and when that's done, go to the next page of the
       // long assessment.
@@ -103,11 +107,20 @@ function initLevelGroup(
         testResult: result ? 100 : 0,
         submitted: submitted,
         onComplete: function () {
-          nextPage();
+          changePage(targetPage);
         }
       });
     }
+  }
+
+  $(".nextPageButton").click($.proxy(function (event) {
+    gotoPage(currentPage+1);
   }, this));
+
+  $(".previousPageButton").click($.proxy(function (event) {
+    gotoPage(currentPage-1);
+  }, this));
+
 
   // Unsubmit button should only be available when this is a standalone level.
   $('.unsubmitButton').click(function () {

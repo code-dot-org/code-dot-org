@@ -40,6 +40,9 @@
       = render partial: 'levels/single_text_match', locals: {index: index, number: page.offset + index + 1, standalone: false, level: level, last_attempt: last_attempt }
 
   - unless @script_level.nil?
+    - if page.page_number > 1
+      %a.btn.btn-large.btn-primary.previousPageButton
+        =t('previous_page')
     - if page.page_number < @total_page_count
       %a.btn.btn-large.btn-primary.nextPageButton
         =t('next_page')
