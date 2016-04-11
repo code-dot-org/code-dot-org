@@ -35,7 +35,6 @@ module WorkshopConstants
     8 => {id: 8, short_name: PHASE_4, long_name: 'Phase 4: Summer Wrap Up'}
   }
 
-
   # These are ids for google form surveys sent in email at the completion of various workshops.
   # See Workshop.exit_survey_url
   EXIT_SURVEY_IDS = {
