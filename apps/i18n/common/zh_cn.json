@@ -230,5 +230,6 @@
   "watchVideo": "观看视频",
   "when": "当",
   "whenRun": "当运行时",
-  "workspaceHeaderShort": "工作区域"
+  "workspaceHeaderShort": "工作区域",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
 }

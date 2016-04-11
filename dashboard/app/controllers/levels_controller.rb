@@ -23,6 +23,10 @@ class LevelsController < ApplicationController
   # GET /levels/1
   # GET /levels/1.json
   def show
+    if @level.try(:pages)
+      @pages = @level.pages
+    end
+
     view_options(
         full_width: true,
         small_footer: @game.uses_small_footer? || enable_scrolling?,
@@ -43,9 +47,21 @@ class LevelsController < ApplicationController
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
 
     blocks_xml = Blockly.convert_category_to_toolbox(blocks_xml) if type == 'toolbox_blocks'
+
+    # By default, allow levels to define their own toolboxes for all
+    # types
+    toolbox_blocks = @level.complete_toolbox(type)
+
+    # Levels which support solution blocks use those blocks as the
+    # toolbox for required and recommended block editors
+    if @level.respond_to?("get_solution_blocks") &&
+        (type == 'required_blocks' || type == 'recommended_blocks')
+      toolbox_blocks = "<xml>#{@level.get_solution_blocks.join('')}</xml>"
+    end
+
     level_view_options(
       start_blocks: blocks_xml,
-      toolbox_blocks: @level.complete_toolbox(type), # Provide complete toolbox for editing start/toolbox blocks.
+      toolbox_blocks: toolbox_blocks,
       edit_blocks: type,
       skip_instructions_popup: true
     )

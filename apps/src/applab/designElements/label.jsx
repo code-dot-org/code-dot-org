@@ -1,12 +1,12 @@
 /* global $ */
 
-var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
-var EnumPropertyRow = require('./EnumPropertyRow.jsx');
+var PropertyRow = require('./PropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
+var EnumPropertyRow = require('./EnumPropertyRow');
 
 var elementUtils = require('./elementUtils');
 
@@ -96,7 +96,7 @@ var LabelEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getClickEventCode: function() {
+  getClickEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
@@ -105,7 +105,7 @@ var LabelEvents = React.createClass({
     return code;
   },
 
-  insertClick: function() {
+  insertClick: function () {
     this.props.onInsertEvent(this.getClickEventCode());
   },
 

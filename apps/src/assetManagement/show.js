@@ -1,6 +1,6 @@
 /* global dashboard */
 
-var ImagePicker = require('./ImagePicker.jsx');
+var ImagePicker = require('./ImagePicker');
 var studioApp = require('../StudioApp').singleton;
 
 /**
@@ -10,7 +10,7 @@ var studioApp = require('../StudioApp').singleton;
  * @param typeFilter {String} The type of assets to show and allow to be
  *   uploaded.
  */
-module.exports = function(assetChosen, typeFilter) {
+module.exports = function (assetChosen, typeFilter) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
   var dialog = studioApp.createModalDialog({

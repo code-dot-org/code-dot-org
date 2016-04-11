@@ -1,23 +1,39 @@
 - data = level.properties
 - app = 'multi'
 - use_tight_layout = data['layout'] == "tight" || tight_layout
+- force_wrap_layout = data['layout'] == "wrap"
 
-.multi{id: "level_#{index}"}
+- layout_class = use_tight_layout ? "tight" : "default"
+
+.multi{id: "level_#{index}", class: layout_class}
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
-  = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_blank ? nil : 'question'}
+  - if question_content_blank
+    - question_content_class = nil
+  - else
+    - question_content_class = "question"
 
-  .answers{class: question_content_blank ? 'question-content-blank' : ''}
+  - if !standalone
+    .number
+      = "#{number}. "
+
+  = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone}
+
+  - if data['questions']
+    - question_text = multi_t(level, data['questions'][0]['text'])
+    .multi-question!= question_text
+
+  - answers_class = 'answers ' + (question_content_blank ? 'question-content-blank' : '')
+
+  %div{class: answers_class}
+
     - if data['options'].try(:[], 'answer_line')
       :css
         .btn {
           display: table;
         }
 
-    %span
-      %h4.multi-question!= multi_t(level, data['questions'][0]['text']) if data['questions']
-
+    %br/
     - unless use_tight_layout
-      %br/
       %br/
 
     - if standalone && !data['options'].try(:[], 'hide_submit')
@@ -27,10 +43,10 @@
         %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
           =t('unsubmit')
 
-    - if data['height'] == 'auto'
+    - if data['height'] == 'auto' || data['height'].blank?
       - height = 'auto'
     - else
-      - height = "#{data['height'] || '20'}px"
+      - height = "#{data['height']}px"
 
     -# multi2 gets checkboxes; regular multi gets radio buttons.
     - if data['type'] == 'multi2'
@@ -46,8 +62,8 @@
       %form#voteform{onsubmit: 'return false;'}
         - data['answers'].each_with_index do |answer, i|
           - correct = answer['correct']
-          - answer_class = use_tight_layout ? "answerbutton answerbutton-tight" : "answerbutton answerbutton-default btn"
-          %span{class: answer_class, style: "height: #{height}", correct: "#{correct}", index: "#{i}"}
+          - answer_class = "answerbutton " + (use_tight_layout ? "" : "btn")
+          %div{class: answer_class, style: "display: inline-block; height: #{height}", correct: "#{correct}", index: "#{i}"}
             .item-mark{id: "unchecked_#{i}"}
               .fa{class: unchecked_class}
             .item-mark{id: "checked_#{i}", style: 'display: none;'}
@@ -56,6 +72,8 @@
               .fa{class: cross_class}
             .item-label
               %label{style: "height: #{height}"}!= multi_t(level, answer['text'])
+          - if use_tight_layout && !force_wrap_layout
+            %br/
 
       .clear
 
@@ -67,20 +85,23 @@
   = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
 
   %br/
-  %br/
-  %br/
+  - if standalone
+    %br/
+    %br/
 
   .clear
 
-:javascript
+-# Don't operate if we're a LevelGroup with a /level/ URL.
+- if standalone || @script_level
+  :javascript
 
-  $(document).ready(function() {
-    window["level_#{index}"] = new Multi(
-      "level_#{index}",
-      #{level.id},
-      #{standalone},
-      "#{data['type']}" == "multi2" ? 2 : 1,
-      #{data['answers'].map {|answer| answer['correct']}},
-      #{last_attempt.to_json}
-      );
-    });
+    $(document).ready(function() {
+      window["level_#{index}"] = new Multi(
+        "level_#{index}",
+        #{level.id},
+        #{standalone},
+        "#{data['type']}" == "multi2" ? 2 : 1,
+        #{data['answers'].map {|answer| answer['correct']}},
+        #{last_attempt.to_json}
+        );
+      });

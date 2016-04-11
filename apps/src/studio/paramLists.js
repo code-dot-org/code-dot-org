@@ -29,7 +29,7 @@ exports.getPlaySoundValues = function (withRandom) {
   }
   var restrictions = level.paramRestrictions && level.paramRestrictions.playSound;
   if (restrictions) {
-    names = names.filter(function(name) {
+    names = names.filter(function (name) {
       return restrictions[name];
     });
   }

@@ -158,8 +158,8 @@ describe("Function.prototype.inherits", function () {
   });
 });
 
-describe("utils", function() {
-  it("can debounce a repeated function call", function() {
+describe("utils", function () {
+  it("can debounce a repeated function call", function () {
     var counter = 0;
     var incrementCounter = function () { counter++; };
     var debounced = _.debounce(incrementCounter, 2000, true);
@@ -171,7 +171,7 @@ describe("utils", function() {
     incrementCounter();
     assert(counter === 2);
   });
-  it("can remove quotes from a string", function() {
+  it("can remove quotes from a string", function () {
     assert(utils.stripQuotes("t'e's't'") === "test");
     assert(utils.stripQuotes('t"e"s"t"') === "test");
     assert(utils.stripQuotes('test') === "test");
@@ -598,6 +598,28 @@ describe('utils.unescapeText', function () {
       'Line 3'
     ].join('\n');
     assert.equal(expected, unescapeText(input));
+  });
+
+  it('Adds line break for divs with attributes', function () {
+    var input, expected;
+
+    input = 'Line 1<div style="line-height: 10.8px;">Line 2</div>';
+    expected = [
+      'Line 1',
+      'Line 2'
+    ].join('\n');
+    assert.equal(expected, unescapeText(input), 'div with attribute');
+  });
+
+  it('Does not add leading newline for span-wrapped leading line', function () {
+    var input, expected;
+
+    input = '<span>Line1</span><div>Line2</div>';
+    expected = [
+      'Line1',
+      'Line2'
+    ].join('\n');
+    assert.equal(expected, unescapeText(input), 'first line span');
   });
 
   it('If input starts with <div> treats that as the first line', function () {

@@ -230,5 +230,6 @@
   "watchVideo": "Pozrieť video",
   "when": "keď",
   "whenRun": "pri spustení",
-  "workspaceHeaderShort": "Pracovná plocha: "
+  "workspaceHeaderShort": "Pracovná plocha: ",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
 }

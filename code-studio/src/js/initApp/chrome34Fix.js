@@ -49,8 +49,8 @@ function handleClipPathChanges() {
   var newImages = {};
   var newClipPaths = {};
 
-  var observer = new WebKitMutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
+  var observer = new WebKitMutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
       for (i = 0; i < mutation.addedNodes.length; i++) {
         var newNode = mutation.addedNodes[i];
         if (newNode.nodeName == 'image') { newImages[$(newNode).attr('id')] = newNode; }
@@ -64,7 +64,7 @@ function handleClipPathChanges() {
       }
     });
 
-    $.each(newImages, function(key, image) {
+    $.each(newImages, function (key, image) {
       var clipPathID = clipPathIDForImage(image);
       if (newClipPaths.hasOwnProperty(clipPathID)) {
         wrapImageAndClipPathWithSVG(image);
@@ -78,7 +78,7 @@ function handleClipPathChanges() {
 }
 
 function wrapExistingClipPaths() {
-  $('[clip-path]').each(function(i, image){
+  $('[clip-path]').each(function (i, image){
     if ($(image).attr('class') === PEGMAN_ORDERING_CLASS) {
       // Special case for Farmer, whose class is used for element ordering
       $(image).attr('class', '');

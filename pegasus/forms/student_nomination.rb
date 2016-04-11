@@ -16,11 +16,7 @@ class StudentNomination
   end
 
   def self.receipt()
-    [
-      'student_nomination_notice',
-      'student_nomination_notice_2',
-      'student_nomination_notice_3',
-    ]
+    'student_nomination_notice'
   end
 
 end

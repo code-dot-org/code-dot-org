@@ -11,8 +11,8 @@
 #
 # Indexes
 #
-#  index_plc_user_course_enrollments_on_plc_course_id  (plc_course_id)
-#  index_plc_user_course_enrollments_on_user_id        (user_id)
+#  index_plc_user_course_enrollments_on_plc_course_id              (plc_course_id)
+#  index_plc_user_course_enrollments_on_user_id_and_plc_course_id  (user_id,plc_course_id) UNIQUE
 #
 
 class Plc::UserCourseEnrollment < ActiveRecord::Base
@@ -25,13 +25,15 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
   validates :user, presence: true
   validates :plc_course, presence: true
 
+  validates :user_id, uniqueness: {scope: :plc_course_id}, on: :create
+
   after_create :create_enrollment_unit_assignments
 
   def create_enrollment_unit_assignments
     plc_course.plc_course_units.each do |course_unit|
       Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: self,
                                            plc_course_unit: course_unit,
-                                           status: Plc::EnrollmentUnitAssignment::START_BLOCKED)
+                                           status: Plc::EnrollmentUnitAssignment::PENDING_EVALUATION)
     end
   end
 end

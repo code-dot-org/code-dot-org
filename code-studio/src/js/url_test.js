@@ -7,7 +7,7 @@ function testImageAccess(url, successCallback, failureCallback, timeoutMs) {
   var img = new Image();
   var called = false;
   function finish(callback) {
-    return function() {
+    return function () {
       if (called) {
         return;
       }

@@ -56,6 +56,19 @@ module.exports.createSprite = function (x, y, width, height) {
     s.shapeColor = p5Inst.color.apply(p5Inst, arguments);
   };
 
+  s.destroy = function () {
+    s.remove();
+  };
+
+  s.pointTo = function (x, y) {
+    var yDelta = y - s.position.y;
+    var xDelta = x - s.position.x;
+    if (!isNaN(xDelta) && !isNaN(yDelta) && (xDelta !== 0 || yDelta !== 0)) {
+      var radiansAngle = Math.atan2(yDelta, xDelta);
+      s.rotation = 360 * radiansAngle / (2 * Math.PI);
+    }
+  };
+
   Object.defineProperty(s, 'frameDelay', {
     enumerable: true,
     get: function () {
@@ -185,15 +198,15 @@ var AABBops = function (p5Inst, type, target, callback) {
       state.__others.push(target);
     else if(target instanceof Array)
     {
-      if(quadTree != undefined && quadTree.active)
+      if(quadTree !== undefined && quadTree.active)
         state.__others = quadTree.retrieveFromGroup( this, target);
 
-      if(state.__others.length == 0)
+      if(state.__others.length === 0)
         state.__others = target;
 
     }
     else
-      throw("Error: overlap can only be checked between sprites or groups");
+      throw('Error: overlap can only be checked between sprites or groups');
 
   } else {
     state.__i++;
@@ -201,14 +214,15 @@ var AABBops = function (p5Inst, type, target, callback) {
   if (state.__i < state.__others.length) {
     var i = state.__i;
 
-    if(this != state.__others[i] && !this.removed) //you can check collisions within the same group but not on itself
+    if(this !== state.__others[i] && !this.removed) //you can check collisions within the same group but not on itself
     {
+      var displacement;
       var other = state.__others[i];
 
-      if(this.collider == undefined)
+      if(this.collider === undefined)
         this.setDefaultCollider();
 
-      if(other.collider == undefined)
+      if(other.collider === undefined)
         other.setDefaultCollider();
 
       /*
@@ -219,7 +233,7 @@ var AABBops = function (p5Inst, type, target, callback) {
       }*/
       if(this.collider != undefined && other.collider != undefined)
       {
-      if(type=="overlap")  {
+      if(type === 'overlap')  {
           var over;
 
           //if the other is a circle I calculate the displacement from here
@@ -233,19 +247,19 @@ var AABBops = function (p5Inst, type, target, callback) {
 
             result = true;
 
-            if(callback != undefined && typeof callback == "function")
+            if(callback !== undefined && typeof callback == 'function')
               callback.call(this, this, other);
           }
         }
-      else if(type=="collide" || type == "bounce")
+      else if(type === 'collide' || type === 'bounce')
         {
-          var displacement = createVector(0,0);
+          displacement = createVector(0, 0);
 
           //if the sum of the speed is more than the collider i may
           //have a tunnelling problem
-          var tunnelX = abs(this.velocity.x-other.velocity.x) >= other.collider.extents.x/2 && round(this.deltaX - this.velocity.x) == 0;
+          var tunnelX = abs(this.velocity.x-other.velocity.x) >= other.collider.extents.x/2 && round(this.deltaX - this.velocity.x) === 0;
 
-          var tunnelY = abs(this.velocity.y-other.velocity.y) >=  other.collider.size().y/2  && round(this.deltaY - this.velocity.y) == 0;
+          var tunnelY = abs(this.velocity.y-other.velocity.y) >= other.collider.size().y/2 && round(this.deltaY - this.velocity.y) === 0;
 
 
           if(tunnelX || tunnelY)
@@ -312,6 +326,7 @@ var AABBops = function (p5Inst, type, target, callback) {
 
           if(displacement.x !== 0 || displacement.y !== 0 )
           {
+            var newVelX1, newVelY1, newVelX2, newVelY2;
 
             if(!this.immovable)
             {
@@ -329,61 +344,78 @@ var AABBops = function (p5Inst, type, target, callback) {
             if(displacement.y > 0)
               this.touching.top = true;
 
-            if(type == "bounce")
+            if(type === 'bounce')
             {
-              if(other.immovable)
-              {
-                var newVelX1 = -this.velocity.x+other.velocity.x;
-                var newVelY1 = -this.velocity.y+other.velocity.y;
-              }
-              else
-              {
-                //
-                var newVelX1 = (this.velocity.x * (this.mass - other.mass) + (2 * other.mass * other.velocity.x)) / (this.mass + other.mass);
+              if (this.collider instanceof CircleCollider && other.collider instanceof CircleCollider) {
+                var dx1 = p5.Vector.sub(this.position, other.position);
+                var dx2 = p5.Vector.sub(other.position, this.position);
+                var magnitude = dx1.magSq();
+                var totalMass = this.mass + other.mass;
+                var m1 = 0, m2 = 0;
+                if (this.immovable) {
+                  m2 = 2;
+                } else if (other.immovable) {
+                  m1 = 2;
+                } else {
+                  m1 = 2 * other.mass / totalMass;
+                  m2 = 2 * this.mass / totalMass;
+                }
+                var newVel1 = dx1.mult(m1 * p5.Vector.sub(this.velocity, other.velocity).dot(dx1) / magnitude);
+                var newVel2 = dx2.mult(m2 * p5.Vector.sub(other.velocity, this.velocity).dot(dx2) / magnitude);
 
-                var newVelY1 = (this.velocity.y * (this.mass - other.mass) + (2 * other.mass * other.velocity.y)) / (this.mass + other.mass);
-
-                var newVelX2 = (other.velocity.x * (other.mass - this.mass) + (2 * this.mass * this.velocity.x)) / (this.mass + other.mass);
-
-                var newVelY2 = (other.velocity.y * (other.mass - this.mass) + (2 * this.mass * this.velocity.y)) / (this.mass + other.mass);
-              }
-
-              //var bothCircles = (this.collider instanceof CircleCollider &&
-              //                   other.collider  instanceof CircleCollider);
-
-              //if(this.touching.left || this.touching.right || this.collider instanceof CircleCollider)
-
-              //print(displacement);
-
-              if(abs(displacement.x)>abs(displacement.y))
-              {
-
-
-                if(!this.immovable)
+                this.velocity.sub(newVel1.mult(this.restitution));
+                other.velocity.sub(newVel2.mult(other.restitution));
+              } else {
+                if(other.immovable)
                 {
-                  this.velocity.x = newVelX1*this.restitution;
-
+                  newVelX1 = -this.velocity.x+other.velocity.x;
+                  newVelY1 = -this.velocity.y+other.velocity.y;
+                }
+                else
+                {
+                  newVelX1 = (this.velocity.x * (this.mass - other.mass) + (2 * other.mass * other.velocity.x)) / (this.mass + other.mass);
+                  newVelY1 = (this.velocity.y * (this.mass - other.mass) + (2 * other.mass * other.velocity.y)) / (this.mass + other.mass);
+                  newVelX2 = (other.velocity.x * (other.mass - this.mass) + (2 * this.mass * this.velocity.x)) / (this.mass + other.mass);
+                  newVelY2 = (other.velocity.y * (other.mass - this.mass) + (2 * this.mass * this.velocity.y)) / (this.mass + other.mass);
                 }
 
-                if(!other.immovable)
-                  other.velocity.x = newVelX2*other.restitution;
+                //var bothCircles = (this.collider instanceof CircleCollider &&
+                //                   other.collider  instanceof CircleCollider);
 
-              }
-              //if(this.touching.top || this.touching.bottom || this.collider instanceof CircleCollider)
-              if(abs(displacement.x)<abs(displacement.y))
-              {
+                //if(this.touching.left || this.touching.right || this.collider instanceof CircleCollider)
 
-                if(!this.immovable)
-                  this.velocity.y = newVelY1*this.restitution;
+                //print(displacement);
 
-                if(!other.immovable)
-                  other.velocity.y = newVelY2*other.restitution;
+                if(abs(displacement.x)>abs(displacement.y))
+                {
+
+
+                  if(!this.immovable)
+                  {
+                    this.velocity.x = newVelX1*this.restitution;
+
+                  }
+
+                  if(!other.immovable)
+                    other.velocity.x = newVelX2*other.restitution;
+
+                }
+                //if(this.touching.top || this.touching.bottom || this.collider instanceof CircleCollider)
+                if(abs(displacement.x)<abs(displacement.y))
+                {
+
+                  if(!this.immovable)
+                    this.velocity.y = newVelY1*this.restitution;
+
+                  if(!other.immovable)
+                    other.velocity.y = newVelY2*other.restitution;
+                }
               }
             }
             //else if(type == "collide")
               //this.velocity = createVector(0,0);
 
-            if(callback != undefined && typeof callback == "function")
+            if(callback !== undefined && typeof callback === 'function')
               callback.call(this, this, other);
 
             result = true;
@@ -392,7 +424,7 @@ var AABBops = function (p5Inst, type, target, callback) {
 
 
         }
-        else if(type=="displace")  {
+        else if(type === 'displace') {
 
           //if the other is a circle I calculate the displacement from here
           //and reverse it
@@ -474,36 +506,37 @@ var isTouching = function (p5Inst, target) {
     others.push(target);
   else if(target instanceof Array)
   {
-    if(quadTree != undefined && quadTree.active)
+    if(quadTree !== undefined && quadTree.active)
       others = quadTree.retrieveFromGroup( this, target);
 
-    if(others.length == 0)
+    if(others.length === 0)
       others = target;
 
   }
   else
-    throw("Error: isTouching can only be checked between sprites or groups");
+    throw('Error: isTouching can only be checked between sprites or groups');
 
     for(var i=0; i<others.length; i++)
-      if(this != others[i] && !this.removed) //you can check collisions within the same group but not on itself
+      if(this !== others[i] && !this.removed) //you can check collisions within the same group but not on itself
       {
+        var displacement;
         var other = others[i];
 
-        if(this.collider == undefined)
+        if(this.collider === undefined)
           this.setDefaultCollider();
 
-        if(other.collider == undefined)
+        if(other.collider === undefined)
           other.setDefaultCollider();
 
-        if(this.collider != undefined && other.collider != undefined)
+        if(this.collider !== undefined && other.collider !== undefined)
         {
-          var displacement = createVector(0,0);
+          displacement = createVector(0, 0);
 
           //if the sum of the speed is more than the collider i may
           //have a tunnelling problem
-          var tunnelX = abs(this.velocity.x-other.velocity.x) >= other.collider.extents.x/2 && round(this.deltaX - this.velocity.x) == 0;
+          var tunnelX = abs(this.velocity.x-other.velocity.x) >= other.collider.extents.x/2 && round(this.deltaX - this.velocity.x) === 0;
 
-          var tunnelY = abs(this.velocity.y-other.velocity.y) >=  other.collider.size().y/2  && round(this.deltaY - this.velocity.y) == 0;
+          var tunnelY = abs(this.velocity.y-other.velocity.y) >= other.collider.size().y/2 && round(this.deltaY - this.velocity.y) === 0;
 
 
           if(tunnelX || tunnelY)
@@ -523,7 +556,7 @@ var isTouching = function (p5Inst, target) {
                                  abs(this.position.x -this.previousPosition.x) + this.collider.extents.x,
                                  abs(this.position.y -this.previousPosition.y) + this.collider.extents.y);
 
-            var bbox = new AABB(pInst, c, e, this.collider.offset);
+            var bbox = new AABB(p5Inst, c, e, this.collider.offset);
 
             //bbox.draw();
 
@@ -552,21 +585,32 @@ var isTouching = function (p5Inst, target) {
           }
           else //non tunnel overlap
           {
+            /* First, check for adjacency using overlap method.
+             *
+             * We do this to ensure isTouching returns true for cases when
+             * bounce, collide would return true and also when overlap would
+             * return true.
+             *
+             * NOTE: this.touching will remain all false in the adjacent case,
+             * but the function will return true.
+             */
 
             //if the other is a circle I calculate the displacement from here
             //and reverse it
-            if(this.collider instanceof CircleCollider)
-            {
-              displacement = other.collider.collide(this.collider).mult(-1);
+            if (this.collider instanceof CircleCollider) {
+              if (other.collider.overlap(this.collider)) {
+                result = true;
+                displacement = other.collider.collide(this.collider).mult(-1);
+              }
             }
-            else
+            else if (this.collider.overlap(other.collider)) {
+              result = true;
               displacement = this.collider.collide(other.collider);
-
+            }
           }
 
           if(displacement.x !== 0 || displacement.y !== 0)
           {
-
             if(displacement.x > 0)
               this.touching.left = true;
             if(displacement.x < 0)
@@ -575,10 +619,7 @@ var isTouching = function (p5Inst, target) {
               this.touching.bottom = true;
             if(displacement.y > 0)
               this.touching.top = true;
-
-            result = true;
           }
-
         }//end collider exists
       }//end this != others[i] && !this.removed
 

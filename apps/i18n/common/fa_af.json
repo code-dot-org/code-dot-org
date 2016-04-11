@@ -230,5 +230,6 @@
   "watchVideo": "ویدیو را ببینید",
   "when": "وقتی",
   "whenRun": "زمان اجرا",
-  "workspaceHeaderShort": "محیط کار: "
+  "workspaceHeaderShort": "محیط کار: ",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
 }
