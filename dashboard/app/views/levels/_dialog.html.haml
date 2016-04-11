@@ -2,10 +2,12 @@
 - app, data = %i(app data).map{ |x| local_assigns[x] }
 
 - unless app == 'external'
-  .buttons
+  - button_class = app == 'level_group' ? 'level_group_buttons' : 'buttons'
+  %div{class: button_class}
     %a.btn.btn-large.btn-primary.next-stage.submitButton
       =t('submit')
-.clear
+- unless app == "level_group"
+  .clear
 %div{style: 'display: none;'}
   #error-dialogcontent
     .modal-content.no-modal-icon.scrollable-element

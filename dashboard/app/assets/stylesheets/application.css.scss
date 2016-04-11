@@ -1755,6 +1755,24 @@ div.mini_gallery_activity {
   padding: 10px;
 }
 
+.level_group_buttons {
+  display: inline-block;
+
+  .submitButton {
+    border-color: $purple;
+    background-color: $purple;
+    color: white;
+    background-image: none;
+  }
+
+  .unsubmitButton {
+    border-color: $light_purple;
+    background-color: $light_purple;
+    color: white;
+    background-image: none;
+  }
+}
+
 /* multiple choice */
 
 $information-phone-narrow: "only screen and  (max-width: 320px)";

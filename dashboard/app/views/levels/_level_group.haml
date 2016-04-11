@@ -43,13 +43,17 @@
     - if page.page_number > 1
       %a.btn.btn-large.btn-primary.previousPageButton
         =t('previous_page')
+      &nbsp;
+      &nbsp;
     - if page.page_number < @total_page_count
       %a.btn.btn-large.btn-primary.nextPageButton
         =t('next_page')
     - else
       = render partial: 'levels/dialog', locals: {app: app, data: data}
-      %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
-        =t('unsubmit')
+      .level_group_buttons
+        %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
+          =t('unsubmit')
+
 
 - unless @script_level.nil?
   :javascript
