@@ -35,7 +35,19 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Trial and error is a great method, but you can also solve the problem by dividing the 90 degree angle into thirds.\\n\\n**90 / 3 = _____**\",\r\n  \"hint_id\": \"4-5_Artist_5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": null,
+    "repeat_loops": 1,
+    "repeat_until_while": null,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

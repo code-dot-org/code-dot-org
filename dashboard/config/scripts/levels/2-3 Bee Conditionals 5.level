@@ -36,25 +36,30 @@
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]"
   },
   "published": true,
-  "notes": ""
+  "notes": "yay",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": null,
+    "repeat_loops": 1,
+    "repeat_until_while": null,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_dropdown">
               <title name="TIMES" config="3-10">3</title>
               <statement name="DO">
                 <block type="maze_moveForward"/>
               </statement>
-              <next>
-                <block type="bee_ifNectarAmount">
-                  <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">==</title>
-                  <title name="ARG2">1</title>
-                </block>
-              </next>
             </block>
           </next>
         </block>
@@ -62,22 +67,18 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="maze_nectar"/>
-        <block type="maze_honey"/>
         <block type="controls_repeat">
-          <title name="TIMES">???</title>
+          <title name="TIMES">5</title>
         </block>
+        <block type="maze_moveForward"/>
         <block type="bee_ifNectarAmount">
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">==</title>
-          <title name="ARG2">1</title>
+          <title name="ARG2">0</title>
+        </block>
+        <block type="maze_nectar"/>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES">uninitialized</title>
         </block>
       </xml>
     </toolbox_blocks>
@@ -111,14 +112,8 @@
                 <block type="maze_moveForward"/>
               </statement>
               <next>
-                <block type="bee_ifNectarAmount">
-                  <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">==</title>
-                  <title name="ARG2">1</title>
-                  <statement name="DO">
-                    <block type="maze_nectar"/>
-                  </statement>
-                </block>
+                <block type="bee_ifElseIfElseFlower">
+          </block>
               </next>
             </block>
           </next>

@@ -34,7 +34,19 @@
     "fast_get_nectar_animation": "true"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "debugging": null,
+    "repeat_loops": 3,
+    "repeat_until_while": null,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": 5,
+    "conditionals": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -108,6 +120,10 @@
             <title name="VAR">right</title>
           </block>
         </category>
+        <category name="NEW BLOCKS">
+          <block type="procedures_callnoreturn" inline="false"/>
+          <block type="parameters_get"/>
+        </category>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
@@ -122,7 +138,7 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
+        <block type="when_run" deletable="false" movable="false" uservisible="false">
           <next>
             <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">left</title>

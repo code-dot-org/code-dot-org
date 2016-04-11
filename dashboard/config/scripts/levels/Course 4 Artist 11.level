@@ -35,7 +35,19 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The half-hexagon has a **length of 30** and turns right by **60 degrees**.  \",\r\n  \"hint_id\": \"Course_4_Artist_11_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n   {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. \",\r\n  \"hint_id\": \"Course_4_Artist_11_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": null,
+    "repeat_loops": 5,
+    "repeat_until_while": null,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

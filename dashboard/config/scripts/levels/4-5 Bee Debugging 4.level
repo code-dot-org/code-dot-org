@@ -18,6 +18,19 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,-1,0],[0,0,0,0,0,-1,1,0],[0,0,0,0,-1,1,0,0],[0,0,0,-1,1,0,0,0],[0,0,-1,1,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "8"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 3,
+    "repeat_loops": 3,
+    "repeat_until_while": null,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
   }
 }]]></config>
   <blocks>

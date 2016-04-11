@@ -35,7 +35,19 @@
     "step_speed": "1"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": null,
+    "repeat_loops": 2,
+    "repeat_until_while": 1,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

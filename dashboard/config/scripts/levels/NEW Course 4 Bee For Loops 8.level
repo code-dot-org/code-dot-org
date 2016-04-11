@@ -36,7 +36,19 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If your loop is counting up, the increment is added to your counter variable each time through. \\n\\nWhat do you need to add to each number to get the number after it?\",\r\n  \"hint_id\": \"NEW_Course_4_Bee_For_Loops_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": null,
+    "repeat_loops": 2,
+    "repeat_until_while": null,
+    "for_loops": 4,
+    "events": null,
+    "variables": 3,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

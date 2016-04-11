@@ -14,6 +14,19 @@
     "skip_instructions_popup": "false",
     "free_play": "true",
     "slider_speed": "0.4"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": null,
+    "debugging": null,
+    "repeat_loops": null,
+    "repeat_until_while": null,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": null,
+    "conditionals": null
   }
 }]]></config>
   <blocks>

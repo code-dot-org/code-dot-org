@@ -46,7 +46,19 @@
     "min_workspace_height": "1200",
     "examples_required": "false"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": null,
+    "repeat_loops": null,
+    "repeat_until_while": 1,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": null,
+    "functions_with_params": 1,
+    "conditionals": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -28,8 +28,20 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false",
-    "maze_data": null
+    "disable_examples": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "debugging": null,
+    "repeat_loops": 3,
+    "repeat_until_while": null,
+    "for_loops": null,
+    "events": null,
+    "variables": null,
+    "functions": 3,
+    "functions_with_params": null,
+    "conditionals": null
   }
 }]]></config>
   <blocks>
