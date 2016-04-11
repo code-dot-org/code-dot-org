@@ -50,6 +50,7 @@ exec(command, function (err, stdout, stderr) {
 
   var globs = [
     './test/*.js',
+    './test/applab/*.js',
     './test/calc/*.js',
     './test/craft/*.js',
     './test/gamelab/*.js',
