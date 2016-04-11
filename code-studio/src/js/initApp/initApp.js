@@ -43,7 +43,7 @@ window.apps = {
         if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
           $('#clear-puzzle-header').hide();
           // Only show Version History button if the user owns this project
-          if (project.isOwner()) {
+          if (project.isEditable()) {
             $('#versions-header').show();
           }
         }
