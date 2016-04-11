@@ -163,6 +163,8 @@ class ApiController < ApplicationController
 
     level_group_script_levels = @script.script_levels.includes(:level).where("levels.type" => LevelGroup)
 
+    multi_answer_characters = ("A".."Z").to_a
+
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
@@ -200,7 +202,16 @@ class ApiController < ApplicationController
               answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
               student_result = level_response["result"].split(",").sort.join(",")
               multi_count += 1
-              level_result[:student_result] = student_result
+
+              student_result_values = []
+              # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
+              student_result.split(',').each do |result|
+                student_result_values << multi_answer_characters[result.to_i]
+              end
+              viewable_student_result = student_result_values.join(', ')
+
+              level_result[:student_result] = viewable_student_result
+
               if student_result == "-1"
                 level_result[:student_result] = ""
                 level_result[:correct] = "unsubmitted"
