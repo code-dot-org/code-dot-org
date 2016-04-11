@@ -52,7 +52,8 @@
     "repeat_loops": 1,
     "repeat_until_while": 1,
     "events": 1,
-    "variables": 1
+    "variables": 1,
+    "conditionals": 1
   }
 }]]></config>
   <blocks>

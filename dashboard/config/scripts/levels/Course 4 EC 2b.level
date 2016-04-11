@@ -39,7 +39,8 @@
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_loops": 5,
-    "repeat_until_while": 3
+    "repeat_until_while": 3,
+    "conditionals": 3
   }
 }]]></config>
   <blocks>

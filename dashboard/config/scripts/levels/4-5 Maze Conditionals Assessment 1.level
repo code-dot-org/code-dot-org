@@ -33,7 +33,8 @@
   "notes": "",
   "level_concept_difficulty": {
     "sequencing": 4,
-    "repeat_until_while": 3
+    "repeat_until_while": 3,
+    "conditionals": 4
   }
 }]]></config>
   <blocks>

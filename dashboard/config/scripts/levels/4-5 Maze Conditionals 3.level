@@ -34,7 +34,8 @@
   "notes": "",
   "level_concept_difficulty": {
     "sequencing": 4,
-    "repeat_until_while": 2
+    "repeat_until_while": 2,
+    "conditionals": 2
   }
 }]]></config>
   <blocks>

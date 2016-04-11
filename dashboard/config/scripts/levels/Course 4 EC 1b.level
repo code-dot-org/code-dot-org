@@ -32,7 +32,8 @@
   "published": false,
   "level_concept_difficulty": {
     "sequencing": 5,
-    "repeat_until_while": 4
+    "repeat_until_while": 4,
+    "conditionals": 5
   }
 }]]></config>
   <blocks>

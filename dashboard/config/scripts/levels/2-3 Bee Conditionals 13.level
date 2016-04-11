@@ -38,7 +38,8 @@
   "notes": "",
   "level_concept_difficulty": {
     "sequencing": 5,
-    "repeat_loops": 3
+    "repeat_loops": 3,
+    "conditionals": 3
   }
 }]]></config>
   <blocks>

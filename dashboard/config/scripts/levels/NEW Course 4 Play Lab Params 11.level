@@ -53,7 +53,8 @@
     "events": 1,
     "variables": 1,
     "functions": 1,
-    "functions_with_params": 1
+    "functions_with_params": 1,
+    "conditionals": 1
   }
 }]]></config>
   <blocks>

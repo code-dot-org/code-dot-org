@@ -37,7 +37,8 @@
   "level_concept_difficulty": {
     "sequencing": 3,
     "debugging": 3,
-    "repeat_loops": 1
+    "repeat_loops": 1,
+    "conditionals": 4
   }
 }]]></config>
   <blocks>
