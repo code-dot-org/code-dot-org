@@ -19,6 +19,7 @@ var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var Visualization = require('./Visualization');
+var Controls = require('./Controls');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
@@ -670,13 +671,6 @@ Applab.init = function (config) {
                           !config.level.debuggerDisabled);
   var breakpointsEnabled = !config.level.debuggerDisabled;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var firstControlsRow = require('./controls.html.ejs')({
-    assetUrl: studioApp.assetUrl,
-    showSlider: showSlider,
-    finishButton: (!level.isProjectLevel && !level.submittable),
-    submitButton: level.submittable && !level.submitted,
-    unsubmitButton: level.submittable && level.submitted
-  });
   var extraControlRows = '';
 
   // Construct a logging observer for interpreter events
@@ -806,6 +800,19 @@ Applab.init = function (config) {
   }.bind(this);
 
   var generateVisualizationColumnHtmlFromEjs = function () {
+    // TODO - create a test for submittable edge case (i.e.
+    // http://localhost-studio.code.org:3000/s/cspunit3/stage/7/puzzle/13)
+    // TODO - better off passing submittable/submitted and letting controls
+    // figure things out itself?
+    var firstControlsRow = React.renderToStaticMarkup(
+      <Controls
+        imgUrl={studioApp.assetUrl('media/1x1.gif')}
+        finishButton={!level.isProjectLevel && !level.submittable}
+        submitButton={!!(level.submittable && !level.submitted)}
+        unsubmitButton={!!(level.submittable && level.submitted)}
+      />
+    );
+
     return visualizationColumnEjs({
       assetUrl: studioApp.assetUrl,
       data: {
