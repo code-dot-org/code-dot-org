@@ -25,6 +25,27 @@ function initLevelGroup(
     $('.full_container').addClass("level_group_readonly");
   }
 
+  // Whenever an embedded level notifies us that the user has made a change,
+  // check for any changes in the response set, and if so, attempt to save
+  // these answers.  Saving is throttled to not occur more than once every 20
+  // seconds, and is done as soon as possible ("leading edge"), as well as at
+  // the end of a 20 second period if a change was made before then ("trailing
+  // edge").  Any pending throttled calls are cancelled when we go to a new page
+  // and save for that reason.
+
+  this.throttledSaveAnswers =
+    window.dashboard.utils.throttle(saveAnswers, 20 * 1000, {'leading': true, 'trailing': true});
+
+  var lastResponse = null;
+
+  window.answerChangedFn = function () {
+    var currentResponse = window.getResult().response;
+    if (lastResponse !== null && lastResponse !== currentResponse) {
+      this.throttledSaveAnswers();
+    }
+    lastResponse = currentResponse;
+  };
+
   window.getResult = function () {
     // Construct an array of all the level results.
     // When submitted it's something like this:
@@ -52,7 +73,6 @@ function initLevelGroup(
 
     var response = JSON.stringify(lastAttempt);
 
-
     var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
     var result;
@@ -74,6 +94,28 @@ function initLevelGroup(
     };
   };
 
+  // Called by gotoPage and checkForChanges to save current answers.
+  // Calls the completeFn function when transmission is complete.
+  function saveAnswers(completeFn) {
+    var results = window.getResult();
+    var response = results.response;
+    var result = results.result;
+    var errorType = results.errorType;
+    var submitted = appOptions.submitted;
+
+    window.dashboard.reporting.sendReport({
+      program: response,
+      fallbackResponse: fallbackResponse,
+      callback: callback,
+      app: app,
+      level: level,
+      result: result,
+      pass: result,
+      testResult: result ? 100 : 0,
+      submitted: submitted,
+      onComplete: completeFn
+    });
+  }
 
   // Called by gotoPage when it's ready to actually change the page.
   function changePage(targetPage) {
@@ -91,27 +133,10 @@ function initLevelGroup(
       changePage(targetPage);
     } else {
       // Submit what we have, and when that's done, go to the next page of the
-      // long assessment.
-
-      var results = window.getResult();
-      var response = results.response;
-      var result = results.result;
-      var errorType = results.errorType;
-      var submitted = appOptions.submitted;
-
-      window.dashboard.reporting.sendReport({
-        program: response,
-        fallbackResponse: fallbackResponse,
-        callback: callback,
-        app: app,
-        level: level,
-        result: result,
-        pass: result,
-        testResult: result ? 100 : 0,
-        submitted: submitted,
-        onComplete: function () {
-          changePage(targetPage);
-        }
+      // long assessment.  Cancel any pending throttled attempts at saving state.
+      this.throttledSaveAnswers.cancel();
+      saveAnswers(function () {
+        changePage(targetPage);
       });
     }
   }

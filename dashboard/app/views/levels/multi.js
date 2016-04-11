@@ -51,6 +51,10 @@ Multi.prototype.choiceClicked = function (button) {
   window.CDOSounds.play('click');
 
   this.clickItem(index);
+
+  if (window.answerChangedFn) {
+    window.answerChangedFn();
+  }
 };
 
 

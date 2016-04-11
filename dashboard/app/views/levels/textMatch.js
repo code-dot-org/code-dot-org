@@ -24,7 +24,14 @@ TextMatch.prototype.ready = function () {
   if (this.standalone) {
     window.getResult = $.proxy(this.getResult, this);
   }
+
+  if (window.answerChangedFn) {
+    $("#" + this.id + " textarea.response").blur(function () {
+      window.answerChangedFn();
+    });
+  }
 };
+
 
 TextMatch.prototype.getCurrentAnswer = function () {
   var response = $("#" + this.id + " textarea.response").val();
