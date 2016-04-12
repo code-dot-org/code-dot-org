@@ -162,16 +162,22 @@ var AppLabView = React.createClass({
     };
 
     // TODO - appWidth/height
+    // TODO - arguably PlaySpaceHeader is part of VizCol
     return (
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
-          {!this.props.isReadOnlyWorkspace && <ApplabVisualizationColumn
+          {!this.props.isReadOnlyWorkspace && <PlaySpaceHeader
+              isEditingProject={this.props.isEditingProject}
+              screenIds={this.props.screenIds}
+              onViewDataButton={this.props.onViewDataButton}
+              onScreenCreate={this.props.onScreenCreate} />
+          }
+          <ApplabVisualizationColumn
               appWidth={Applab.appWidth}
               appHeight={Applab.footerlessAppHeight}
               isProjectLevel={this.props.isProjectLevel}
               isSubmittable={this.props.isSubmittable}
               isSubmitted={this.props.isSubmitted}/>
-          }
         </div>
         <ProtectedStatefulDiv
             id="visualizationResizeBar"
