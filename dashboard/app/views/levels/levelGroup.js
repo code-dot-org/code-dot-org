@@ -153,18 +153,8 @@ function initLevelGroup(
   // Unsubmit button should only be available when this is a standalone level.
   $('.unsubmitButton').click(function () {
 
-    var dialog = new window.Dialog({
-      body:
-        '<div class="modal-content no-modal-icon">' +
-          '<p class="dialog-title">Unsubmit answer</p>' +
-          '<p class="dialog-body">' +
-          'This will unsubmit your previous answers.' +
-          '</p>' +
-          '<button id="continue-button">Okay</button>' +
-          '<button id="cancel-button">Cancel</button>' +
-        '</div>'
-    });
-
+    var content = document.querySelector("#unsubmit-dialogcontent").cloneNode(true);
+    var dialog = new window.Dialog({body: content});
     var dialogDiv = $(dialog.div);
     dialog.show();
 
@@ -178,7 +168,7 @@ function initLevelGroup(
       );
     });
 
-    dialogDiv.find('#cancel-button').click(function () {
+    dialogDiv.find('#again-button').click(function () {
       dialog.hide();
     });
   });

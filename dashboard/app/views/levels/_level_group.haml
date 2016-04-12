@@ -54,6 +54,13 @@
         %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
           =t('unsubmit')
 
+.dialog-contents{style: "display: none"}
+  #unsubmit-dialogcontent{style: "overflow:hidden"}
+    .modal-content.no-modal-icon
+      %p.dialog-title= t('level_group-submittable.unsubmit-title')
+      %p.dialog-body=  t('level_group-submittable.unsubmit-body')
+      %button#again-button.secondary{style: "float: left"}= t('cancel')
+      %button#continue-button{style: "float: right"}= t('okay')
 
 - unless @script_level.nil?
   :javascript
