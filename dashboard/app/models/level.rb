@@ -62,13 +62,18 @@ class Level < ActiveRecord::Base
 
   # https://github.com/rails/rails/issues/3508#issuecomment-29858772
   # Include type in serialization.
-  # also include level_concept_difficulty
   def serializable_hash(options=nil)
-    super(:include => :level_concept_difficulty).merge 'type' => type
+    super.merge 'type' => type
   end
 
-  def changed?
-    super || (level_concept_difficulty && level_concept_difficulty.changed?)
+  # Rails won't natively assign one-to-one association attributes for
+  # us, even though we've specified accepts_nested_attributes_for above.
+  # So, we must do it manually.
+  def assign_attributes(attributes)
+    concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
+    assign_nested_attributes_for_one_to_one_association(:level_concept_difficulty,
+        concept_difficulty_attributes) if concept_difficulty_attributes
+    super(attributes)
   end
 
   def related_videos
@@ -150,8 +155,13 @@ class Level < ActiveRecord::Base
     (level_paths - written_level_paths).each { |path| File.delete path }
   end
 
+  def should_write_custom_level_file?
+    changed = changed? || (level_concept_difficulty && level_concept_difficulty.changed?)
+    changed && write_to_file? && self.published
+  end
+
   def write_custom_level_file
-    if changed? && write_to_file? && self.published
+    if should_write_custom_level_file?
       file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
@@ -162,7 +172,8 @@ class Level < ActiveRecord::Base
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.send(self.type) do
         xml.config do
-          config_attributes = filter_level_attributes(self.serializable_hash.deep_dup)
+          hash = self.serializable_hash(:include => :level_concept_difficulty).deep_dup
+          config_attributes = filter_level_attributes(hash)
           xml.cdata(JSON.pretty_generate(config_attributes.as_json))
         end
       end
