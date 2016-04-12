@@ -288,7 +288,6 @@ ActiveRecord::Schema.define(version: 20160411090000) do
 
   add_index "levels", ["game_id"], name: "index_levels_on_game_id", using: :btree
 
-<<<<<<< HEAD
   create_table "paired_user_levels", force: :cascade do |t|
     t.integer  "driver_user_level_id",    limit: 4
     t.integer  "navigator_user_level_id", limit: 4
@@ -296,7 +295,6 @@ ActiveRecord::Schema.define(version: 20160411090000) do
     t.datetime "updated_at",                        null: false
   end
 
-=======
   create_table "pd_attendances", force: :cascade do |t|
     t.integer  "pd_session_id", limit: 4, null: false
     t.integer  "teacher_id",    limit: 4, null: false
@@ -361,7 +359,6 @@ ActiveRecord::Schema.define(version: 20160411090000) do
   add_index "pd_workshops_facilitators", ["pd_workshop_id"], name: "index_pd_workshops_facilitators_on_pd_workshop_id", using: :btree
   add_index "pd_workshops_facilitators", ["user_id"], name: "index_pd_workshops_facilitators_on_user_id", using: :btree
 
->>>>>>> staging
   create_table "plc_course_units", force: :cascade do |t|
     t.integer  "plc_course_id",    limit: 4
     t.string   "unit_name",        limit: 255
