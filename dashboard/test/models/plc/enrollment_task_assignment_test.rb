@@ -5,8 +5,8 @@ class Plc::EnrollmentTaskAssignmentTest < ActiveSupport::TestCase
     @user = create :teacher
     @course = create :plc_course
     @course_unit = create(:plc_course_unit, plc_course: @course)
-    @learning_module1 = create(:plc_learning_module, name: 'Module1')
-    @learning_module2 = create(:plc_learning_module, name: 'Module2')
+    @learning_module1 = create(:plc_learning_module, name: 'Module1', plc_course_unit: @course_unit)
+    @learning_module2 = create(:plc_learning_module, name: 'Module2', plc_course_unit: @course_unit)
     @task1 = create(:plc_task, name: 'Task1', plc_learning_modules: [@learning_module1])
     @task2 = create(:plc_task, name: 'Task2', plc_learning_modules: [@learning_module1])
     @task3 = create(:plc_task, name: 'Task3', plc_learning_modules: [@learning_module2])

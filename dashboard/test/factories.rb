@@ -397,6 +397,7 @@ FactoryGirl.define do
   factory :professional_learning_module do
     name "Some module"
     learning_module_type "Some learning module type"
+    required false
   end
 
   factory :professional_learning_task do

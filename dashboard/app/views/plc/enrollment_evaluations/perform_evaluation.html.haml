@@ -15,6 +15,6 @@
       %p
         %input.radio{type: "radio", name: question.id, value: answer.plc_learning_module_id, checked: answer == answers.first, style: 'margin-left: 20px'}
           #{answer.answer} (corresponds with #{answer.plc_learning_module.try(:name)})
-  = hidden_field_tag('answerModuleList')
-  = submit_tag('Submit evaluation', id: 'submitEvaluation')
+  = hidden_field_tag('answer_module_list')
+  = submit_tag('Submit evaluation', id: 'submit_evaluation')
 
