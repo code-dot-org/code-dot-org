@@ -1,4 +1,8 @@
 .field
+  = f.label :title
+  %p Title to show on level pages (but not in level groups).
+  = f.text_field :title
+.field
   = f.label :height
   %p Height of the answer textarea in px.
   = f.number_field :height, step: 50
