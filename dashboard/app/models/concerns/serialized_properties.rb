@@ -40,6 +40,10 @@ module SerializedProperties
       (serialized_properties[self.to_s] ||= []).concat args
     end
 
+    def permitted_params
+      serialized_properties.values.flatten.map{ |s| s.to_s.gsub(ENCRYPTED_PROPERTY_REGEX, '') }
+    end
+
     def define_methods_for_property(property_name)
       define_method(property_name) { read_attribute('properties')[property_name] }
       define_method("#{property_name}=") { |value| read_attribute('properties')[property_name] = value }
