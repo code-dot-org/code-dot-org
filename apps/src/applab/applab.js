@@ -801,25 +801,14 @@ Applab.init = function (config) {
   }.bind(this);
 
   var generateVisualizationColumnHtmlFromEjs = function () {
-    var visualizationElement = (
-      <Visualization
-        appWidth={Applab.appWidth}
-        appHeight={Applab.footerlessAppHeight}/>
-    );
-    var controlsElement = (
-      <Controls
-        imgUrl={studioApp.assetUrl('media/1x1.gif')}
-        projectLevel={!!level.isProjectLevel}
-        submittable={!!level.submittable}
-        submitted={!!level.submitted}
-      />
-    );
-
     return React.renderToStaticMarkup(
       <ApplabVisualizationColumn
           imgUrl={studioApp.assetUrl('media/1x1.gif')}
-          visualizationElement={visualizationElement}
-          controlsElement={controlsElement}
+          appWidth={Applab.appWidth}
+          appHeight={Applab.footerlessAppHeight}
+          projectLevel={!!level.isProjectLevel}
+          submittable={!!level.submittable}
+          submitted={!!level.submitted}
       />
     );
   }.bind(this);
