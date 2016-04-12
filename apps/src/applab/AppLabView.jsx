@@ -176,7 +176,7 @@ var AppLabView = React.createClass({
         <div id="visualizationColumn">
           {playSpaceHeader}
           <ApplabVisualizationColumn
-              imgUrl={this.props.assetUrl('media/1x1.gif')}
+              buttonImageUrl="/blockly/media/1x1.gif"
               appWidth={Applab.appWidth}
               appHeight={Applab.footerlessAppHeight}
               isProjectLevel={this.props.isProjectLevel}
@@ -213,7 +213,6 @@ var AppLabView = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
-    assetUrl: state.level.assetUrl,
     isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
     showInstructions: state.level.instructionsInTopPane && !!state.level.instructionsMarkdown,
     instructionsMarkdown: state.level.instructionsMarkdown,

@@ -13,7 +13,7 @@ var styles = {
  */
 var CompletionButton = React.createClass({
   propTypes: {
-    imgUrl: React.PropTypes.string.isRequired,
+    buttonImageUrl: React.PropTypes.string.isRequired,
     isProjectLevel: React.PropTypes.bool.isRequired,
     isSubmittable: React.PropTypes.bool.isRequired,
     isSubmitted: React.PropTypes.bool.isRequired,
@@ -46,7 +46,7 @@ var CompletionButton = React.createClass({
       <div style={styles.main}>
         <div id="share-cell" className={divClass}>
           <button id={id} className="share">
-            <img src={this.props.imgUrl}/>
+            <img src={this.props.buttonImageUrl}/>
             {contents}
           </button>
         </div>
