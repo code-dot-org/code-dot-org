@@ -109,6 +109,10 @@ class Game < ActiveRecord::Base
     @@game_multi ||= find_by_name("Multi")
   end
 
+  def self.free_response
+    @@game_free_response ||= find_by_name("FreeResponse")
+  end
+
   def unplugged?
     app == UNPLUG
   end
