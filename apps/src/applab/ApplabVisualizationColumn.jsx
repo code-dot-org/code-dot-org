@@ -1,8 +1,5 @@
-var msg = require('../locale');
-
 var Visualization = require('./Visualization');
-var CompletionButton = require('./CompletionButton');
-
+var GameButtons = require('./GameButtons');
 
 var styles = {
   hidden: {
@@ -10,44 +7,13 @@ var styles = {
   }
 };
 
-var GameButtons = React.createClass({
-  propTypes: {
-    // TODO - better name?
-    imgUrl: React.PropTypes.string.isRequired,
-    projectLevel: React.PropTypes.bool.isRequired,
-    submittable: React.PropTypes.bool.isRequired,
-    submitted: React.PropTypes.bool.isRequired,
-  },
-
-  render: function () {
-    return (
-      <div id="gameButtons">
-        <button id="runButton" className="launch blocklyLaunch">
-          <div>{msg.runProgram()}</div>
-          <img src={this.props.imgUrl} className="run26"/>
-        </button>
-        <button id="resetButton" className="launch blocklyLaunch" style={styles.hidden}>
-          <div>{msg.resetProgram()}</div>
-          <img src={this.props.imgUrl} className="reset26"/>
-        </button>
-        {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
-        <CompletionButton
-            imgUrl={this.props.imgUrl}
-            projectLevel={this.props.projectLevel}
-            submittable={this.props.submittable}
-            submitted={this.props.submitted}
-        />
-      </div>
-    );
-  }
-});
-
 /**
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
  * portions used by App Lab
  */
 var VisualizationColumn = React.createClass({
   propTypes: {
+    // TODO - beter name for this everywhere?
     imgUrl: React.PropTypes.string.isRequired,
     appWidth: React.PropTypes.number.isRequired,
     appHeight: React.PropTypes.number.isRequired,
