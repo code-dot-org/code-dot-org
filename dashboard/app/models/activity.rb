@@ -37,6 +37,11 @@ class Activity < ActiveRecord::Base
     (result == BEST_PASS_RESULT)
   end
 
+  def Activity.perfect?(result)
+    return false if result.nil?
+    (result > MAXIMUM_NONOPTIMAL_RESULT)
+  end
+
   def Activity.passing?(result)
     return false if result.nil?
     (result >= MINIMUM_PASS_RESULT)
@@ -49,6 +54,10 @@ class Activity < ActiveRecord::Base
 
   def best?
     Activity.best? test_result
+  end
+
+  def perfect?
+    Activity.perfect? test_result
   end
 
   def passing?

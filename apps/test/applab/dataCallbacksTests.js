@@ -1,5 +1,5 @@
 var sinon = require('sinon');
-var testUtils = require('./util/testUtils');
+var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();

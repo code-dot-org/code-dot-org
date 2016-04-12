@@ -1,4 +1,4 @@
-var testUtils = require('./util/testUtils');
+var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
@@ -153,6 +153,11 @@ describe('getText/setText commands', function () {
       it('converts divs to newlines', function () {
         element.innerHTML = 'text<div>with</div><div>newlines</div>';
         assert.equal(getInnerText(element), 'text\nwith\nnewlines');
+      });
+
+      it('converts divs with attributes to newlines', function () {
+        element.innerHTML = 'Line 1<div style="line-height: 10.8px;">Line 2</div>';
+        assert.equal(getInnerText(element), 'Line 1\nLine 2');
       });
 
       it('converts <div><br></div> to blank lines', function () {

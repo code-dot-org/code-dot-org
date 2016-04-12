@@ -488,7 +488,7 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:static',
-    'newer:concat',
+    'concat',
     'exec:mochaTest'
   ]);
 
