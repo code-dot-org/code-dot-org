@@ -5,8 +5,25 @@ video_player: true
 ---
 
 
-# Computer Science Fundamentals: Unplugged
+<link rel="stylesheet" type="text/css" href="/curriculum/unplugged/css/jumbotron-banner.css"/>
 
+<div class="jumbo-container">
+  <div class="img-container">
+    <img class="jumbo-img" src="/curriculum/unplugged/images/unplugged-hero-2.png">
+  </div>
+
+  <div class="jumbo-tutorial">
+    <h1 class="jumbo-h1">CS Fundamentals Unplugged</h1>
+    <div class="jumbo-tutorial-box">
+      <div class="jumbo-tutorial-info">
+        <h1 class="jumbo-h1-second-box">CS Fundamentals Unplugged</h1
+        <p class="jumbo-tutorial-description">We've compiled a list of all of our unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand alone course or as complementary lessons for any computer science course.</p>
+        <p>
+        <p class="jumbo-tutorial-specs">Ages 6+, English only</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%
 def youtube_embed(youtube_url)
