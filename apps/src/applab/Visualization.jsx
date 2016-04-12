@@ -1,3 +1,5 @@
+var applabConstants = require('./constants');
+
 var styles = {
   hidden: {
     display: 'none'
@@ -5,12 +7,9 @@ var styles = {
 };
 
 var Visualization = React.createClass({
-  propTypes: {
-    appWidth: React.PropTypes.number.isRequired,
-    appHeight: React.PropTypes.number.isRequired,
-  },
-
   render: function () {
+    var appWidth = applabConstants.APP_WIDTH;
+    var appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
     return (
       <div>
         <div id="divApplab" className="appModern" tabIndex="1">
@@ -21,9 +20,9 @@ var Visualization = React.createClass({
              baseProfile="full"
              xmlns="http://www.w3.org/2000/svg"
              id="visualizationOverlay"
-             width={this.props.appWidth}
-             height={this.props.appHeight}
-             viewBox={"0 0 " + this.props.appWidth + " " + this.props.appHeight}
+             width={appWidth}
+             height={appHeight}
+             viewBox={"0 0 " + appWidth + " " + appHeight}
              pointer-events="none"></svg>
       </div>
     );

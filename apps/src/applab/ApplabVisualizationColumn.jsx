@@ -13,8 +13,6 @@ var styles = {
  */
 var VisualizationColumn = React.createClass({
   propTypes: {
-    appWidth: React.PropTypes.number.isRequired,
-    appHeight: React.PropTypes.number.isRequired,
     isProjectLevel: React.PropTypes.bool.isRequired,
     isSubmittable: React.PropTypes.bool.isRequired,
     isSubmitted: React.PropTypes.bool.isRequired,
@@ -24,9 +22,7 @@ var VisualizationColumn = React.createClass({
     return (
       <div>
         <div id="visualization">
-          <Visualization
-            appWidth={this.props.appWidth}
-            appHeight={this.props.appHeight}/>
+          <Visualization/>
         </div>
         <GameButtons
             isProjectLevel={this.props.isProjectLevel}
