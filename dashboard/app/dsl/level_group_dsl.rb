@@ -35,7 +35,10 @@ class LevelGroupDSL < BaseDSL
     @level_names << name
 
     # Ensure level is appropriate type.
-    level = Level.find_by_name(name)
+    level = Level.where(name: name).first # For some reason find_by_name doesn't always work here!
+    if level.nil?
+      raise "Unable to locate level '#{name}'"
+    end
     level_class = level.class.to_s.underscore
     if !['multi', 'text_match'].include? level_class
       raise "LevelGroup can only contain multi and text_match levels. (#{name} #{level_class})"
