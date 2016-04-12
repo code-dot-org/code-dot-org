@@ -1,7 +1,7 @@
 var msg = require('../locale');
 
 var Visualization = require('./Visualization');
-var Controls = require('./Controls');
+var CompletionButton = require('./CompletionButton');
 
 
 var styles = {
@@ -31,7 +31,7 @@ var GameButtons = React.createClass({
           <img src={this.props.imgUrl} className="reset26"/>
         </button>
         {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
-        <Controls
+        <CompletionButton
             imgUrl={this.props.imgUrl}
             projectLevel={this.props.projectLevel}
             submittable={this.props.submittable}
