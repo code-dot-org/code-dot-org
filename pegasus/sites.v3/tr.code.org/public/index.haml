@@ -6,7 +6,7 @@ responsivePadMobile: yes
 social:
   'og:title' : 'Her çocuk bir fırsatı hak eder.'
   'og:description' : "Öğrenciler ve Sınıflar; Kod Saatine sadece bir saatinizi ayırarak programlamanın ne kadar eğlenceli olduğunu keşfedin"
-  'og:image' : "http://<%=request.host%>/images/code-video-thumbnail.jpg"
+  'og:image' : "http://<%=request.host%>/images/ogimage.png"
   "og:image:width": 1705
   "og:image:height": 949
   "og:url": "http://tr.code.org"
@@ -21,16 +21,15 @@ social:
     = view :hocvideo, id:"r990CWYtx_o"
 
   #start.col-36{:style=>'text-align:center;'}
-    %h2{:style=>"font-size: 40px; margin: 0;"}
+    %h2{:style=>"font-size: 36px; line-height: 36px; font-weight: 600; margin-top: 5px; margin-bottom: 0;"}<
       Türkiye’de
-    %h2{:style=>"font-size: 35px; line-height: 30px; margin-top: 0;"}<
       =format_integer_with_commas(fetch_hoc_metrics['countries']['Turkey'].to_i).to_s
       kişi
-    %h1{:style=>"font-size: 50px; margin: 0;"}
+    %h1{:style=>"font-size: 56px; line-height: 56px; margin-top: 10px; margin-bottom: 0px"}<
       Kod Saati’ni
-    %h2{:style=>"font-size: 35px; line-height: 30px; margin-top: 0;"}<
+    %h2{:style=>"font-size: 36px; line-height: 36px; font-weight: 600; margin-top: 5px; margin-bottom: 0;"}<
       denedi.
-    %h2
+    %h3{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 10px; margin-bottom: 0;"}<
       Herkes öğrenebilir.
     %a{:href=>'/learn', :style=>"text-decoration: none;"}
       %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;margin-top: 10px;"}
