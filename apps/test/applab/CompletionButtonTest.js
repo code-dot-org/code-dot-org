@@ -11,7 +11,6 @@ describe('CompletionButton', function () {
   it('non-project level, can submit, havent', function () {
     var component = ReactTestUtils.renderIntoDocument(
       <CompletionButton
-        imgUrl="foo"
         isProjectLevel={false}
         isSubmittable={true}
         isSubmitted={false}
@@ -26,7 +25,6 @@ describe('CompletionButton', function () {
   it('non-project level, can submit, have', function () {
     var component = ReactTestUtils.renderIntoDocument(
       <CompletionButton
-        imgUrl="foo"
         isProjectLevel={false}
         isSubmittable={true}
         isSubmitted={true}
@@ -41,7 +39,6 @@ describe('CompletionButton', function () {
   it('non-project level, cant submit', function () {
     var component = ReactTestUtils.renderIntoDocument(
       <CompletionButton
-        imgUrl="foo"
         isProjectLevel={false}
         isSubmittable={false}
         isSubmitted={false}
@@ -57,7 +54,6 @@ describe('CompletionButton', function () {
   it('project level (cant submit)', function () {
     var component = ReactTestUtils.renderIntoDocument(
       <CompletionButton
-        imgUrl="foo"
         isProjectLevel={true}
         isSubmittable={false}
         isSubmitted={false}

@@ -166,7 +166,6 @@ var AppLabView = React.createClass({
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
           {!this.props.isReadOnlyWorkspace && <ApplabVisualizationColumn
-              buttonImageUrl="/blockly/media/1x1.gif"
               appWidth={Applab.appWidth}
               appHeight={Applab.footerlessAppHeight}
               isProjectLevel={this.props.isProjectLevel}
