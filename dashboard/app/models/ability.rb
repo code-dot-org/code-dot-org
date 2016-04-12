@@ -70,9 +70,7 @@ class Ability
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty?
         end
-        can :read, Plc::UserCourseEnrollment do |enrollment|
-          enrollment.user == user
-        end
+        can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :manage, Pd::Enrollment, teacher_id: user.id
       end
 
