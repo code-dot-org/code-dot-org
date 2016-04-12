@@ -147,6 +147,11 @@ var projects = module.exports = {
   },
 
   /**
+   * Is the current project (if any) editable by the logged in user (if any)?
+   */
+  isEditable: isEditable,
+
+  /**
    * @returns {boolean} true if we're frozen
    */
   isFrozen: function () {
