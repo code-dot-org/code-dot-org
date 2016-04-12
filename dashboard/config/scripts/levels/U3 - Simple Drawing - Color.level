@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-04-11T19:45:20.000Z",
+  "created_at": "2016-04-12T18:02:40.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -34,8 +34,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Fill\r\n\r\nsay what the fill is before draw the shape\r\n\r\nspecify fill with the name of the color - colors you can use -\r\n\r\ncode executed from top to bottom\r\n\r\n# Do This\r\n\r\n* Add a rect\r\n* Change the fill of the rect to a color of choice - some you can try are :",
-    "start_blocks": "rect(0, 0, 400, 400);\r\n"
+    "markdown_instructions": "# RGB Color\r\n\r\nJust like in HTML and CSS we can use RGB values to determine the color.\r\n\r\nIn game lab we do this with the color block\r\n\r\n\r\n# Do This\r\n\r\n* Make each rectangle a different color using the rgb color functions",
+    "start_blocks": "rect(0, 0, 400, 400);\r\nrect(100, 100, 300, 300);\r\nrect(200, 200, 200, 200);\r\nrect(300, 300, 100, 100);"
   },
   "published": true,
   "notes": ""
