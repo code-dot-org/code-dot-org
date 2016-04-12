@@ -1,5 +1,8 @@
 - if current_user
   .header_button.header_user.user_menu
+    - if session[:pairings].present?
+      %i.fa.fa-users
+      %sup= session[:pairings].length
     %span= t('nav.user.label', username: h(current_user.short_name))
     %span.user_menu_glyph
       &#x25BC;
