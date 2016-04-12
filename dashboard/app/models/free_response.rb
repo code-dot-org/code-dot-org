@@ -22,7 +22,7 @@
 #  index_levels_on_game_id  (game_id)
 #
 
-class OpenResponse < Level
+class FreeResponse < Level
   serialized_attrs %w(
     height
     placeholder
