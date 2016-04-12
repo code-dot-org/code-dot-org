@@ -24,7 +24,7 @@ social:
     %h2{:style=>"font-size: 40px; margin: 0;"}
       Türkiye’de
     %h2{:style=>"font-size: 35px; line-height: 30px; margin-top: 0;"}<
-      =format_integer_with_commas(fetch_hoc_metrics['started'].to_i).to_s 
+      =format_integer_with_commas(fetch_hoc_metrics['countries']['Turkey'].to_i).to_s
       kişi
     %h1{:style=>"font-size: 50px; margin: 0;"}
       Kod Saati’ni
@@ -39,3 +39,10 @@ social:
 
 %div{:style=>'clear:both'}
 
+%br
+%br
+
+#partner{:style=>"text-align:center;"}
+  RobinCode, Türkiye’de çocukların hayallerini kodlaması için çalışıyor. Ve artık RobinCode -  Code.org’un Türkiye sorumlusu ve partneri.
+  %a{:href=>"http://www.robincode.org/", :title=>'RobinCode', :target=>"_blank"}
+    %img{:src=>"/images/robincode.png"}
