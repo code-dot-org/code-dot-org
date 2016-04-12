@@ -800,19 +800,6 @@ Applab.init = function (config) {
     });
   }.bind(this);
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return React.renderToStaticMarkup(
-      <ApplabVisualizationColumn
-          imgUrl={studioApp.assetUrl('media/1x1.gif')}
-          appWidth={Applab.appWidth}
-          appHeight={Applab.footerlessAppHeight}
-          projectLevel={!!level.isProjectLevel}
-          submittable={!!level.submittable}
-          submitted={!!level.submitted}
-      />
-    );
-  }.bind(this);
-
   var onMount = function () {
     studioApp.init(config);
 
@@ -909,6 +896,9 @@ Applab.init = function (config) {
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
+    isProjectLevel: !!config.level.isProjectLevel,
+    isSubmittable: !!config.level.submittable,
+    isSubmitted: !!config.level.submitted,
     instructionsMarkdown: config.level.markdownInstructions,
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: config.level.puzzle_number,
@@ -920,7 +910,6 @@ Applab.init = function (config) {
 
   Applab.reactInitialProps_ = {
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: onMount
   };
 

@@ -5,6 +5,7 @@ var _ = require('../lodash');
 var connect = require('react-redux').connect;
 var actions = require('./actions');
 var PlaySpaceHeader = require('./PlaySpaceHeader');
+var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
 var TopInstructions = require('../templates/instructions/TopInstructions');
@@ -31,7 +32,6 @@ var AppLabView = React.createClass({
     onScreenCreate: React.PropTypes.func.isRequired,
 
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
-    generateVisualizationColumnHtml: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
 
@@ -170,11 +170,19 @@ var AppLabView = React.createClass({
       top: topPaneHeight
     };
 
+    // TODO - appWidth/height
     return (
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
           {playSpaceHeader}
-          <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
+          <ApplabVisualizationColumn
+              imgUrl={this.props.assetUrl('media/1x1.gif')}
+              appWidth={Applab.appWidth}
+              appHeight={Applab.footerlessAppHeight}
+              isProjectLevel={this.props.isProjectLevel}
+              isSubmittable={this.props.isSubmittable}
+              isSubmitted={this.props.isSubmitted}
+          />
         </div>
         <ProtectedStatefulDiv
             id="visualizationResizeBar"
@@ -205,6 +213,7 @@ var AppLabView = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
+    assetUrl: state.level.assetUrl,
     isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
     showInstructions: state.level.instructionsInTopPane && !!state.level.instructionsMarkdown,
     instructionsMarkdown: state.level.instructionsMarkdown,
@@ -212,6 +221,9 @@ module.exports = connect(function propsFromStore(state) {
     instructionsHeight: state.instructions.height,
     instructionsMaxHeight: state.instructions.maxHeight,
     isEmbedView: state.level.isEmbedView,
+    isProjectLevel: state.level.isProjectLevel,
+    isSubmittable: state.level.isSubmittable,
+    isSubmitted: state.level.isSubmitted,
     puzzleNumber: state.level.puzzleNumber,
     stageTotal: state.level.stageTotal
   };

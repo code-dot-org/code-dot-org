@@ -17,9 +17,9 @@ var VisualizationColumn = React.createClass({
     imgUrl: React.PropTypes.string.isRequired,
     appWidth: React.PropTypes.number.isRequired,
     appHeight: React.PropTypes.number.isRequired,
-    projectLevel: React.PropTypes.bool.isRequired,
-    submittable: React.PropTypes.bool.isRequired,
-    submitted: React.PropTypes.bool.isRequired,
+    isProjectLevel: React.PropTypes.bool.isRequired,
+    isSubmittable: React.PropTypes.bool.isRequired,
+    isSubmitted: React.PropTypes.bool.isRequired,
   },
 
   render: function () {
@@ -32,9 +32,9 @@ var VisualizationColumn = React.createClass({
         </div>
         <GameButtons
             imgUrl={this.props.imgUrl}
-            projectLevel={this.props.projectLevel}
-            submittable={this.props.submittable}
-            submitted={this.props.submitted}
+            isProjectLevel={this.props.isProjectLevel}
+            isSubmittable={this.props.isSubmittable}
+            isSubmitted={this.props.isSubmitted}
         />
         <div id="belowVisualization">
           <div id="bubble" className="clearfix">

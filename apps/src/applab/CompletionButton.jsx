@@ -14,9 +14,9 @@ var styles = {
 var CompletionButton = React.createClass({
   propTypes: {
     imgUrl: React.PropTypes.string.isRequired,
-    projectLevel: React.PropTypes.bool.isRequired,
-    submittable: React.PropTypes.bool.isRequired,
-    submitted: React.PropTypes.bool.isRequired,
+    isProjectLevel: React.PropTypes.bool.isRequired,
+    isSubmittable: React.PropTypes.bool.isRequired,
+    isSubmitted: React.PropTypes.bool.isRequired,
   },
 
   render: function () {
@@ -24,12 +24,12 @@ var CompletionButton = React.createClass({
     var contents;
     var divClass = 'share-cell-none';
 
-    if (this.props.projectLevel) {
+    if (this.props.isProjectLevel) {
       return <div/>;
     }
 
-    if (this.props.submittable) {
-      if (this.props.submitted) {
+    if (this.props.isSubmittable) {
+      if (this.props.isSubmitted) {
         id = 'unsubmitButton';
         contents = msg.unsubmit();
         divClass = 'share-cell-enabled';
