@@ -193,7 +193,6 @@ Examples:
   | http://learn.code.org/s/allthethings/stage/23/puzzle/1?noautoplay=true | star wars |
   | http://learn.code.org/s/allthethings/stage/23/puzzle/2?noautoplay=true | star wars blocks |
   | http://learn.code.org/s/allthethings/stage/24/puzzle/1?noautoplay=true | minecraft |
-  | http://learn.code.org/s/course4/stage/1/puzzle/1                       | unplugged video level |
 
 @dashboard_db_access
 Scenario Outline: Logged in simple page view without instructions dialog
@@ -214,6 +213,8 @@ Examples:
   | http://studio.code.org/                                           | logged in studio homepage  |
   | http://studio.code.org/s/allthethings                             | logged in script progress  |
   | https://studio.code.org/s/allthethings/stage/13/puzzle/3?noautoplay=true | embedded blocks     |
+  | http://learn.code.org/s/course4/stage/1/puzzle/1                  | unplugged video level |
+  | http://learn.code.org/s/allthethings/stage/18/puzzle/14           | embed video |
 
 Scenario Outline: Logged out simple page view without instructions dialog
   Given I am on "http://learn.code.org/"
