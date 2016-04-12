@@ -6,7 +6,12 @@ var styles = {
   }
 };
 
-var Controls = React.createClass({
+/**
+ * Component for for potentially showing a completion button in applab.
+ * Depending on props, this button (if it exists) will say "Finish", "Submit",
+ * or "Unsubmit"
+ */
+var CompletionButton = React.createClass({
   propTypes: {
     imgUrl: React.PropTypes.string.isRequired,
     projectLevel: React.PropTypes.bool.isRequired,
@@ -50,4 +55,4 @@ var Controls = React.createClass({
   }
 });
 
-module.exports = Controls;
+module.exports = CompletionButton;
