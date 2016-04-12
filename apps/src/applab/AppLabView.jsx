@@ -161,7 +161,6 @@ var AppLabView = React.createClass({
       top: topPaneHeight
     };
 
-    // TODO - arguably PlaySpaceHeader is part of VizCol
     return (
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
