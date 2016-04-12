@@ -1,5 +1,9 @@
 var msg = require('../locale');
 
+var Visualization = require('./Visualization');
+var Controls = require('./Controls');
+
+
 var styles = {
   hidden: {
     display: 'none'
@@ -10,7 +14,9 @@ var GameButtons = React.createClass({
   propTypes: {
     // TODO - better name?
     imgUrl: React.PropTypes.string.isRequired,
-    controlsElement: React.PropTypes.element.isRequired
+    projectLevel: React.PropTypes.bool.isRequired,
+    submittable: React.PropTypes.bool.isRequired,
+    submitted: React.PropTypes.bool.isRequired,
   },
 
   render: function () {
@@ -25,7 +31,12 @@ var GameButtons = React.createClass({
           <img src={this.props.imgUrl} className="reset26"/>
         </button>
         {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
-        {this.props.controlsElement}
+        <Controls
+            imgUrl={this.props.imgUrl}
+            projectLevel={this.props.projectLevel}
+            submittable={this.props.submittable}
+            submitted={this.props.submitted}
+        />
       </div>
     );
   }
@@ -38,19 +49,26 @@ var GameButtons = React.createClass({
 var VisualizationColumn = React.createClass({
   propTypes: {
     imgUrl: React.PropTypes.string.isRequired,
-    visualizationElement: React.PropTypes.element.isRequired,
-    controlsElement: React.PropTypes.element.isRequired
+    appWidth: React.PropTypes.number.isRequired,
+    appHeight: React.PropTypes.number.isRequired,
+    projectLevel: React.PropTypes.bool.isRequired,
+    submittable: React.PropTypes.bool.isRequired,
+    submitted: React.PropTypes.bool.isRequired,
   },
 
   render: function () {
     return (
       <div>
         <div id="visualization">
-          {this.props.visualizationElement}
+          <Visualization
+            appWidth={this.props.appWidth}
+            appHeight={this.props.appHeight}/>
         </div>
         <GameButtons
-            controlsElement={this.props.controlsElement}
             imgUrl={this.props.imgUrl}
+            projectLevel={this.props.projectLevel}
+            submittable={this.props.submittable}
+            submitted={this.props.submitted}
         />
         <div id="belowVisualization">
           <div id="bubble" className="clearfix">
