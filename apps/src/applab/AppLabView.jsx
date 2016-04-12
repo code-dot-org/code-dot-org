@@ -156,15 +156,6 @@ var AppLabView = React.createClass({
   },
 
   render: function () {
-    var playSpaceHeader;
-    if (!this.props.isReadOnlyWorkspace) {
-      playSpaceHeader = <PlaySpaceHeader
-          isEditingProject={this.props.isEditingProject}
-          screenIds={this.props.screenIds}
-          onViewDataButton={this.props.onViewDataButton}
-          onScreenCreate={this.props.onScreenCreate} />;
-    }
-
     var topPaneHeight = this.topPaneHeight();
     var codeWorkspaceContainerStyle = {
       top: topPaneHeight
@@ -174,15 +165,14 @@ var AppLabView = React.createClass({
     return (
       <ConnectedStudioAppWrapper>
         <div id="visualizationColumn">
-          {playSpaceHeader}
-          <ApplabVisualizationColumn
+          {!this.props.isReadOnlyWorkspace && <ApplabVisualizationColumn
               buttonImageUrl="/blockly/media/1x1.gif"
               appWidth={Applab.appWidth}
               appHeight={Applab.footerlessAppHeight}
               isProjectLevel={this.props.isProjectLevel}
               isSubmittable={this.props.isSubmittable}
-              isSubmitted={this.props.isSubmitted}
-          />
+              isSubmitted={this.props.isSubmitted}/>
+          }
         </div>
         <ProtectedStatefulDiv
             id="visualizationResizeBar"
