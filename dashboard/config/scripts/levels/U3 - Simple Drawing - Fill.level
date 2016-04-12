@@ -35,7 +35,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "markdown_instructions": "# Fill\r\n\r\nsay what the fill is before draw the shape\r\n\r\nspecify fill with the name of the color - colors you can use -\r\n\r\ncode executed from top to bottom\r\n\r\n# Do This\r\n\r\n* Add a rect\r\n* Change the fill of the rect to a color of choice - some you can try are :",
-    "start_blocks": "draw(){\r\n  rect(0, 0, 400, 400);\r\n}"
+    "start_blocks": "rect(0, 0, 400, 400);\r\n"
   },
   "published": true,
   "notes": ""
