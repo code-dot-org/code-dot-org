@@ -34,7 +34,7 @@
 .jumbo-tutorial {
   position: absolute;
   top: 10px;
-  left: 470px;
+  left: -20px;
   width: 410px;
   line-height: 16px;
 }
@@ -111,7 +111,7 @@
     color: white;
     padding: 20px;
     border-radius: 5px;
-    margin-top: 100px;
+    margin-top: 20px;
     margin-left: 60px;
   }
 }
@@ -124,7 +124,7 @@
     padding-top: 10px;
     position: static;
     color: dimgray;
-    margin-top: 100px;
+    margin-top: 20px;
   }
 
   .jumbo-tutorial-box {
