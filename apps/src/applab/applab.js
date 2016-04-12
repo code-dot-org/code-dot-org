@@ -20,6 +20,7 @@ var AppLabView = require('./AppLabView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var Visualization = require('./Visualization');
 var Controls = require('./Controls');
+var VisualizationColumn = require('../templates/VisualizationColumn');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
@@ -800,23 +801,27 @@ Applab.init = function (config) {
   }.bind(this);
 
   var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: React.renderToStaticMarkup(
-          <Visualization
-            appWidth={Applab.appWidth}
-            appHeight={Applab.footerlessAppHeight}/>),
-        controls: React.renderToStaticMarkup(
-          <Controls
-            imgUrl={studioApp.assetUrl('media/1x1.gif')}
-            projectLevel={!!level.isProjectLevel}
-            submittable={!!level.submittable}
-            submitted={!!level.submitted}
-          />
-        )
-      }
-    });
+    var visualizationElement = (
+      <Visualization
+        appWidth={Applab.appWidth}
+        appHeight={Applab.footerlessAppHeight}/>
+    );
+    var controlsElement = (
+      <Controls
+        imgUrl={studioApp.assetUrl('media/1x1.gif')}
+        projectLevel={!!level.isProjectLevel}
+        submittable={!!level.submittable}
+        submitted={!!level.submitted}
+      />
+    );
+
+    return React.renderToStaticMarkup(
+      <VisualizationColumn
+          imgUrl={studioApp.assetUrl('media/1x1.gif')}
+          visualizationElement={visualizationElement}
+          controlsElement={controlsElement}
+      />
+    );
   }.bind(this);
 
   var onMount = function () {
