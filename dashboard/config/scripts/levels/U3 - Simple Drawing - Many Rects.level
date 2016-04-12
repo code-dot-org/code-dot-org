@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-04-11T19:45:20.000Z",
+  "created_at": "2016-04-12T17:48:56.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -34,8 +34,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Fill\r\n\r\nsay what the fill is before draw the shape\r\n\r\nspecify fill with the name of the color - colors you can use -\r\n\r\ncode executed from top to bottom\r\n\r\n# Do This\r\n\r\n* Add a rect\r\n* Change the fill of the rect to a color of choice - some you can try are :",
-    "start_blocks": "rect(0, 0, 400, 400);\r\n"
+    "markdown_instructions": "# Many Rects\r\n\r\nWe can have more than one rect on the screen at a time\r\n\r\ncurrently there are 4 rectangles on the screen but its hard to tell\r\n\r\n\r\n\r\n# Do This\r\n\r\n* Make each rectangle a different color\r\n* Make the rects each take up one corner of the screen like such\r\n\r\n<img src=\"https://images.code.org/8dd4caff4b06c5d0738c47a0601be445-image-1460483873266.57.23 PM.png\" width=200>",
+    "start_blocks": "rect(0, 40, 200, 300);\r\nrect(50, 10, 100, 50);\r\nrect(200, 100, 350, 220);\r\nrect(75, 200, 130, 130);"
   },
   "published": true,
   "notes": ""
