@@ -69,9 +69,13 @@ def build()
       RakeUtils.system 'sudo', 'chef-client'
     end
 
-    status = 1
+    status = 0
     Dir.chdir(aws_dir) do
-      status = RakeUtils.rake '--rakefile', 'ci_build.rake', *ARGV
+      status = begin
+        RakeUtils.rake '--rakefile', 'ci_build.rake', *ARGV
+      rescue => e
+        CDO.backtrace e
+      end
     end
 
     FileUtils.rm STARTED if File.file?(STARTED)
@@ -91,6 +95,7 @@ def main()
     commit_url = "https://github.com/code-dot-org/code-dot-org/commit/#{RakeUtils.git_revision}"
     # Notify the HipChat channels about what happened.
     projects = ARGV.join(' ')
+    projects = 'websites' if projects.empty?
     time_message = " 🕐 #{format_duration(Time.now.to_i - start_time)}"
     if status == 0
       message = "<b>#{projects}</b> built." + time_message
@@ -104,6 +109,7 @@ def main()
 
       HipChat.log message, color: 'red'
       HipChat.log "/quote #{log}", color: 'gray', message_format: 'text'
+      HipChat.log "/quote #{status}", color: 'gray', message_format: 'text'
 
       HipChat.developers message, color: 'red', notify: 1
       HipChat.developers commit_url, color: 'gray', message_format: 'text'
