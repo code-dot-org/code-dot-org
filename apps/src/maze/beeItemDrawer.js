@@ -1,5 +1,3 @@
-/*jshint -W086 */
-
 var DirtDrawer = require('./dirtDrawer');
 require('../utils');
 
@@ -13,17 +11,14 @@ var SQUARE_SIZE = 50;
  * @param dirtMap The dirtMap from the maze, which shows the current state of
  *   the dirt (or flowers/honey in this case).
  * @param skin The app's skin, used to get URLs for our images
- * @param initialDirtMap The state of the dirtMap at start time.
  * @param bee The maze's Bee object.
  */
-function BeeItemDrawer(dirtMap, skin, initialDirtMap, bee) {
+function BeeItemDrawer(map, skin, bee) {
   this.__base = BeeItemDrawer.superPrototype;
 
-  DirtDrawer.call(this, dirtMap, '');
+  DirtDrawer.call(this, map, '');
 
   this.skin_ = skin;
-  this.initialDirt_ = initialDirtMap;
-
   this.bee_ = bee;
 
   this.honeyImages_ = [];
@@ -32,13 +27,32 @@ function BeeItemDrawer(dirtMap, skin, initialDirtMap, bee) {
   this.pegman_ = null;
 
   // is item currently covered by a cloud?
-  this.clouded_ = dirtMap.map(function (row) {
-    return [];
-  });
+  this.clouded_ = undefined;
+  this.resetClouded();
 }
 
 BeeItemDrawer.inherits(DirtDrawer);
 module.exports = BeeItemDrawer;
+
+/**
+ * Generic reset function, shared by DirtDrawer so that we can call
+ * Maze.gridItemDrawer.reset() blindly.
+ * @override
+ */
+BeeItemDrawer.prototype.reset = function () {
+  this.resetClouded();
+};
+
+/**
+ * Resets our tracking of clouded/revealed squares. Used on
+ * initialization and also to reset the drawer between randomized
+ * conditionals runs.
+ */
+BeeItemDrawer.prototype.resetClouded = function () {
+  this.clouded_ = this.map_.currentStaticGrid.map(function (row) {
+    return [];
+  });
+};
 
 /**
  * Override DirtDrawer's updateItemImage.
@@ -51,10 +65,10 @@ BeeItemDrawer.prototype.updateItemImage = function (row, col, running) {
     href: null,
     unclippedWidth: SQUARE_SIZE
   };
-  // Negative values represent honey, positive values represent nectar.
-  if (this.initialDirt_[row][col] < 0) {
+
+  if (this.bee_.isHive(row, col, false)) {
     baseImage.href = this.skin_.honey;
-  } else if (this.initialDirt_[row][col] > 0) {
+  } else if (this.bee_.isFlower(row, col, false)) {
     baseImage.href = this.flowerImageHref_(row, col);
   }
 
@@ -65,7 +79,7 @@ BeeItemDrawer.prototype.updateItemImage = function (row, col, running) {
   var counterText;
   var ABS_VALUE_UNLIMITED = 99;  // Repesents unlimited nectar/honey.
   var ABS_VALUE_ZERO = 98;  // Represents zero nectar/honey.
-  var absVal = Math.abs(this.dirtMap_[row][col]);
+  var absVal = Math.abs(this.bee_.getValue(row, col));
   if (isClouded) {
     counterText = "";
   } else if (!running && baseImage.href === this.skin_.purpleFlower) {
@@ -83,14 +97,17 @@ BeeItemDrawer.prototype.updateItemImage = function (row, col, running) {
   if (baseImage.href) {
     this.updateImageWithIndex_('beeItem', row, col, baseImage, 0);
     this.updateCounter_('counter', row, col, counterText);
+  } else {
+    this.updateImageWithIndex_('beeItem', row, col, baseImage, -1);
+    this.updateCounter_('counter', row, col, "");
+  }
 
-    if (isClouded) {
-      this.showCloud_(row, col);
-      this.clouded_[row][col] = true;
-    } else if (wasClouded) {
-      this.hideCloud_(row, col);
-      this.clouded_[row][col] = false;
-    }
+  if (isClouded) {
+    this.showCloud_(row, col);
+    this.clouded_[row][col] = true;
+  } else if (wasClouded) {
+    this.hideCloud_(row, col);
+    this.clouded_[row][col] = false;
   }
 };
 
@@ -106,7 +123,7 @@ BeeItemDrawer.prototype.updateCounter_ = function (prefix, row, col, counterText
   counterElement.firstChild.nodeValue = counterText;
 };
 
-function createText (prefix, row, col, counterText) {
+function createText(prefix, row, col, counterText) {
   var pegmanElement = document.getElementsByClassName('pegman-location')[0];
   var svg = document.getElementById('svgMaze');
 
@@ -211,7 +228,7 @@ BeeItemDrawer.prototype.getPegmanElement_ = function () {
 /**
  * Show the cloud icon.
  */
-BeeItemDrawer.prototype.showCloud_ = function(row, col) {
+BeeItemDrawer.prototype.showCloud_ = function (row, col) {
   var cloudImageInfo  = {
     href: this.skin_.cloud,
     unclippedWidth: 50
@@ -225,7 +242,7 @@ BeeItemDrawer.prototype.showCloud_ = function(row, col) {
 /**
  * Hide the cloud icon, and display the cloud hiding animation.
  */
-BeeItemDrawer.prototype.hideCloud_ = function(row, col) {
+BeeItemDrawer.prototype.hideCloud_ = function (row, col) {
   var cloudElement = document.getElementById(cellId('cloud', row, col));
   if (cloudElement) {
     cloudElement.setAttribute('visibility', 'hidden');
@@ -237,7 +254,7 @@ BeeItemDrawer.prototype.hideCloud_ = function(row, col) {
 /**
  * Create the cloud animation element, and perform the animation if necessary
  */
-BeeItemDrawer.prototype.displayCloudAnimation_ = function(row, col, animate) {
+BeeItemDrawer.prototype.displayCloudAnimation_ = function (row, col, animate) {
   var id = cellId('cloudAnimation', row, col);
 
   var cloudAnimation = document.getElementById(id);

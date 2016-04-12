@@ -1,4 +1,4 @@
-"pt-PT":
+"pt":
   slides:
     maze_intro:
       1:
@@ -35,14 +35,14 @@
           Usarás estas para construir o teu código.
       9:
         image: notes/hoc1_9.jpg
-        text: À direita está o teu espaço de trabalho, que é a área para onde irás
+        text: "À direita está o teu espaço de trabalho, que é a área para onde irás
           arrastar os blocos da caixa de ferramentas que vais usar para criares o
           teu programa. Para apagares um bloco, arrasta-o para o lixo que aparece
-          no canto.
+          no canto."
       10:
         image: notes/hoc1_10.jpg
-        text: Cada bloco é uma instrução. Se arrastares o bloco "Avançar" para a tua
-          área de trabalho e pressionares "Executar programa", o pássaro move-se um
+        text: Cada bloco é uma instrução. Se arrastares o bloco "mover para a frente"
+          para o teu espaço de trabalho e clicares em "Executar", o pássaro anda um
           espaço no labirinto.
       11:
         image: notes/hoc1_11.jpg
@@ -157,11 +157,12 @@
         text: Podemos usar o novo bloco "repetir" para nos ajudar.
       4:
         image: notes/hoc2_4.jpg
-        text: Em vez de arrastares 5 blocos "avançar" ...
+        text: Em vez de usares 5 blocos "mover para a frente"...
       5:
         image: notes/hoc2_5.jpg
-        text: Podemos colocar o bloco "avançar" dentro do bloco "repetir" e escrever
-          um número no bloco para definir quantas vezes repetir.
+        text: Podemos colocar o bloco "mover para a frente" dentro do bloco "repetir"
+          e escrever um número no bloco para definirmos quantas vezes a instrução
+          será repetida.
       6:
         image: notes/hoc2_6.jpg
         text: 'E isto é importante: podes colocar mais do que um comando dentro de
@@ -181,8 +182,9 @@
           chegar ao porco?
       3:
         image: notes/hoc3_3.jpg
-        text: Se pusermos um bloco "avançar" dentro do bloco "repetir até", o pássaro
-          irá mover-se em frente ATÉ que chegue ao porco (ou choque contra o muro).
+        text: Se colocarmos um bloco "mover para a frente" dentro do bloco "repetir
+          até", o pássaro irá mover-se para a frente ATÉ chegar ao porquinho malvado
+          (ou chocar contra o muro).
       4:
         image: notes/hoc3_4.jpg
         text: 'E isto é importante: tal como anteriormente, podemos por múltiplos
@@ -208,10 +210,11 @@
           inserimos dentro dele um bloco "virar esquerda".
       5:
         image: notes/hoc4_5.jpg
-        text: Agora, se pusermos um bloco "avançar" acima dele e um bloco "repetir"
-          a envolver tudo, cada vez que o zombie se mova, irá verificar se existe
-          algum caminho à esquerda e vira. O comando "repetir" é fundamental para
-          verificar, a cada passo, se existe uma viragem.
+        text: Agora, se pusermos um bloco "mover para a frente" por cima e envolvermos
+          tudo num ciclo com o bloco "repetir", cada vez que o zombie se mover, irá
+          verificar se existe algum caminho à esquerda e mudar de direção. O comando
+          "repetir" é fundamental para verificar, a cada passo, se existe uma mudança
+          de direção.
       6:
         image: notes/hoc4_6.jpg
         text: 'Instruções se são muito importantes nas ciências da computação. Um
@@ -703,13 +706,13 @@
           instruções, colocando alguns passos de dança em loops.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: We actually do use loops in our dancing. The dancers are wearing computers,
-          all in the same network. I might loop the lights through to the same dancers
-          over and over again. In the loop I might have an iteration where I'll say
-          you want to go loop through these six dancers over and over again and then
-          within the loop you want to increase the speed of the light. And that's
-          all created through loops. Loops are important in computer science because
-          they make our work shorter and easier.
+        text: Na verdade usamos loops na nossa dança. Os dançarinos vestem computadores,
+          todos na mesma rede. Eu poderia repetir as luzes nos mesmos dançarinos vezes
+          sem conta. No loop tenho uma iteração onde eu vou dizer para repetir pelos
+          seis dançarinos vezes sem conta e depois dentro do loop dizer para aumentar
+          a velocidade da luz. E que tudo isso é criado através de loops. Loops são
+          importantes na ciência da computação, porque eles fazem nosso trabalho mais
+          curto e fácil.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
@@ -2666,17 +2669,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2791,17 +2794,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2950,9 +2953,9 @@
           Tu é que escolhes.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[estudantes a falar] Agora é que vai ser. Tosquiar. Fiz um L com tochas.
+        text: "[estudantes a falar] Agora é que vai ser. Tosquiar. Fiz um L com tochas.
           Eu fiz um A com pranchas de bétula. Funcionou, funcionou. Construímos uma
-          casa com lã!'
+          casa com lã!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Quando acabares a tua criação, escolhe "partilhar" para obteres uma
@@ -2968,9 +2971,9 @@
           Tu é que escolhes.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[estudantes a falar] Agora é que vai ser. Tosquiar. Fiz um L com tochas.
+        text: "[estudantes a falar] Agora é que vai ser. Tosquiar. Fiz um L com tochas.
           Eu fiz um A com pranchas de bétula. Funcionou, funcionou. Construímos uma
-          casa com lã!'
+          casa com lã!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Agora podes construir o que quiseres. Diverte-te!
@@ -3088,8 +3091,8 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: 'O espaço branco à direita é chamado o espaço de trabalho, e é aí que
+          vamos construir o nosso programa. '
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

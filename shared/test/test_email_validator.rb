@@ -1,8 +1,7 @@
 # coding: utf-8
-require 'minitest/autorun'
-require 'rack/test'
+require_relative 'test_helper'
 
-require_relative '../../lib/cdo/email_validator'
+require 'cdo/email_validator'
 
 class EmailValidatorTest < Minitest::Test
 
@@ -23,7 +22,7 @@ class EmailValidatorTest < Minitest::Test
       'firstname-lastname@example.com']
 
     valid_addresses.each do |address|
-      assert EmailValidator::email_address?(address), "#{address} should be a valid email address"
+      assert EmailValidator.email_address?(address), "#{address} should be a valid email address"
     end
   end
 
@@ -51,7 +50,7 @@ class EmailValidatorTest < Minitest::Test
       'email@example..com']
 
     invalid_addresses.each do |address|
-      assert !EmailValidator::email_address?(address), "#{address} should be an invalid email address"
+      assert !EmailValidator.email_address?(address), "#{address} should be an invalid email address"
     end
   end
 

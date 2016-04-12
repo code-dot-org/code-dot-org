@@ -114,14 +114,6 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
 
 .instructions-markdown {
 
-  // Optionally give markdown dialog wide left margin so it looks more like a
-  // non-markdown instructions dialog (useful if mixing markdown instructions
-  // with non-markdown instructions in one tutorial).
-  &.classic-margins {
-    padding-top: 0;
-    margin-left: 90px;
-  }
-
   // Imitates the text style of the first line of instructions text in our
   // classic dialogues, useful for creating that effect in markdown.
   .character-text {

@@ -1,0 +1,24 @@
+name 'sciPD33 refresh'
+title 'Emergent Phenomena in Complex Systems'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+
+### Emergent Phenomena in Complex Systems
+
+<br/>
+Reconnect with concepts relating to complex adaptive systems by watching this 12 minute video from Nova science.
+
+- <a href="http://www.pbs.org/wgbh/nova/nature/emergence.html" target="_new">PBS Nova Emergence video</a>        
+![](https://images.code.org/cf0c2d9d31112c0303487fb56c41c04c-image-1450474628505.jpeg)
+
+> Task: Watch the video and consider concepts that you could bring into your classroom.
+<br/>
+
+When you're done watching the video, click below to move on to the next task.
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+</div>
+MARKDOWN

@@ -24,10 +24,13 @@ ka:
   hello: ჰეი, სამყარო
   welcome_back: 'კარგია, რომ დაბრუნდით, %{name}'
   submit: გაგზავნა
+  unsubmit: ჩაბარების გაუქმება
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'მასწავლებლის დამატება:'
       placeholder: სექციის კოდი (ABCDEF)
+      instructions: 'გთხოვთ შეიყვანეთ კოდი, რომელიც მოგაწოდათ თქვენმა მასწავლებელმა. ის არის 6–ნიშნა და გამოიყურება ასე "ABCDEF".'
     submit: მასწავლებლის დამატება
   add_hint_form:
     placeholder: თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ
@@ -38,6 +41,7 @@ ka:
   puzzle: თავსატეხი
   trophies: ჯილდოები
   courses: კურსები
+  unplugged_activity: აქტივობა უკომპიუტეროდ
   of: მიეკუთვნება
   more: მეტის ნახვა
   less: ნაკლების ნახვა
@@ -218,10 +222,10 @@ ka:
       finished_hoc: 'მე დავასრულე ჩემი "კოდის ერთი საათი"'
       sign_in_to_save: დარეგისტრირება და პროგრესის შენახვა
       free_play:
-        playlab: აპლიკაციის შექმნა
+        playlab: აპლიკაციის შექმნა თამაშების ლაბორატორიაში
         artist: დახატეთ რამე
-        calculate: Calculate Something
-        applab: აპლიკაციის შექმნა
+        calculate: Calculate something
+        applab: აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში
     user:
       classroom: მასწავლებლის მთავარი გვერდი
       district_dashboard: განყოფილების მართვის პანელი
@@ -253,57 +257,10 @@ ka:
     remove: (მასწავლებლის წაშლა)
     confirm:
       remove: დარწმუნებული ხართ, რომ ამ მასწავლებლის წაშლა გინდათ?
-    tools: მასწავლებლის ინსტრუმენტები
-    followers:
-      section: 'სექცია:'
-      stages: 'გამოვაჩინოთ ეტაპე(ბ)ი:'
-      show_past: 'მოსწავლის (%{bullet_html}) ძველი აქტივობის ჩვენება:'
-      levels_key: დონეების მნიშვნელი
-      perfect: დასრულებულია, იდეალურად
-      completed: დასრულებულია, მაგრამ ზედმეტად ბევრი ბლოკის გამოყენებით
-      tried: დაწყებულია, მაგრამ არა დასრულებული
-      not_tried: ჯერ არც კი გიცდიათ
-      activity: 'გაჩვენებთ მოსწავლის აქტივობას ბოლო %{hours} %{plural}'
-      no_section: არ არის მიკუთვნებული სექცია
-      trophies: ჯილდოები
     students:
-      name: სახელი
-      username: მომხმარებლის სახელი
-      password: პაროლი
-      manage: მოსწავლეების მართვა
       dashboard: მასწავლებლის მართვის პანელზე გადასვლა
-      add: მოსწავლეების დამატება
-      remove: მოსწავლის წაშლა
-      confirm_remove: დარწმუნებული ხართ, რომ ამ მოსწავლის წაშლა გინდათ?
-      help_reassign: კლასის სხვადასხვა სექციებად დასაყოფად აირჩიეთ სტუდენტების ჯგუფი და გადაიყვანეთ ისინი ახალ სექციაში.
-      help_register: არ დახარჯოთ დრო თქვენი მოსწავლეების მონაცემების შეყვანაზე, უბრალოდ, სთხოვეთ მათ, რომ დარეგისტრირდნენ. მათ დასჭირდებათ მომხმარებლის სახელისა და პაროლის შერჩევა, მაგრამ ელ.ფოსტის შეყვანა აუცილებელი არ არის. თუ რომელიმეს დაავიწყდება თავისი პაროლი, თქვენ შეძლებთ მის აღდგენას.
-      register: სთხოვეთ მოსწავლეებს დამოუკიდებლად დარეგისტრირება
-      vist: შესთავაზეთ თქვენს მოსწავლეებს ეწვიონ
-      section_code: 'და შეიყვანონ თავიანთი სექციის კოდი:'
-      first_please: 'პირველ რიგში, %{add_section}'
-      for: '"მიზნისთვის"'
-      enter: 'შეიყვანეთ:'
-    sections:
-      add: დაამატეთ სექცია
-      manage: სექციების მართვა
-      section: სექცია
-      students: მოსწვლეები
-      section_code: სექციის კოდი
-      add_section_code: სტუდენტებისთვის სექციის კოდის დამატება
-      secret: საიდუმლოს ტიპი
-      grade: შეფასება
-      course: კურსი
-      rename: სახელის შეცვლა
-      edit: რედაქტირება
-      delete: წაშლა
-      confirm_delete: დარწმუნებული ხართ, რომ ამ სექციის წაშლა გინდათ?
-      email: ელ.ფოსტით გაგზავნა
-    rollup: პროგრესის მართვის პანელი
-    activity: კლასის უკანასკნელი აქტივობა
-    user_not_found: მასწავლებელი ან მოსწავლე არ მოიძებნა
-    cant_remove_student_no_email: '%{student_name} ვერ წაიშლება თქვენი მოსწავლეების სიიდან, იმიტომ რომ %{student_name}-მა არ დაარეგისტრირა ელ.ფოსტა'
-    cant_remove_teacher_no_email: '%{teacher_name} ვერ წაიშლება თქვენი მასწავლებლებიდან, იმიტომ რომ თქვენ არ დაგირეგისტრირებიათ ელ.ფოსტა'
-    student_teacher_disassociated: '%{teacher_name} აღარ არის %{student_name}ს მასწავლებელი'
+    user_not_found: მასწავლებელი ვერ მოიძებნა.
+    student_teacher_disassociated: 'თქვენ წაშალეთ %{teacher_name} მასწავლებელი.'
     panel:
       answer_viewer: პასუხების ნახვა
       student: მოსწავლე
@@ -328,10 +285,6 @@ ka:
   user_level:
     completed: დასრულებულია
     tried: უკვე ნაცადია
-  user_stats:
-    recent_activity: უკანასკნელი აქტივობა
-    show_more: მაჩვენე მეტი
-    classroom_activity: აქტივობა უკომპიუტეროდ
   home:
     title: კოდის სტუდია
     description: კოდის სტუდიაში ინახება Code.org-ის მიერ შექმნილი ონლაინ-კურსები
@@ -369,6 +322,7 @@ ka:
     heading_hoc2014: '<h2>კოდის ერთი საათი</h2><h1>ნებისმიერი ასაკისთვის</h1>'
     heading_elementary: '<h2>ოცსაათიანი კურსები</h2><h1>დამწყებთათვის (ასაკი: ნებისმიერი)</h1>'
     heading_apps: '<h2>გასართობი</h2><h1>ყველასთვის</h1>'
+    heading_tools: '<h2>მზად ხართ შემდეგი ნაბიჯისთვის?</h2><h1>JavaScript დამამთავრებელი კლასებისთვის</h1>'
     heading_legacy: '<h2>ჩვენი დაჩქარებული კურსი</h2><h1>ნებისმიერი ასაკისთვის</h1>'
     your_gallery: გალერეა
     no_primary_course: ნახეთ კურსი კოდის სტუდიაში
@@ -377,6 +331,7 @@ ka:
   share:
     title: ისწავლეთ კოდის სტუდიაში
     description: ნებისმიერს შეუძლია კომპიუტერული მეცნერების სწავლა. შექმენით თამაშები, აპლიკაციები და ხელოვნების ნიმუშები კოდით.
+    try_hour_of_code: სცადეთ კოდის ერთი საათი!
   gender:
     male: მამრობითი
     female: მდედრობითი
@@ -388,8 +343,9 @@ ka:
     thank_you: 'ჩვენ მადლობას ვუხდით ჩვენს<a href="https://code.org/about/donors">დონორებს</a>, <a href="https://code.org/about/partners">პარტნიორებს</a>, our <a href="https://code.org/about/team">გავრცობილ ჯგუფს</a>, ვიდეოს გადამღებ ჯგუფსა და <a href="https://code.org/about/advisors">მრჩევლებს განათლების დარგში</a> კოდის სტუდიის შექმნაში დახმარებისთვის.'
     help_from_html: 'ამ ტუტორიალის შექმნაში გვეხმარებოდნენ  Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.'
     help_from_html_old: ამ რესურსების შექმნაში გვეხმარებოდნენ Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.
-    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია.<br /> Star Warss&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. <br/>Frozen&#8482; &amp; &copy; %{current_year} Disney. ყველა უფლება დაცულია.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio entertainment Ltd. ყველა უფლება რეზერვირებულია.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts inc. ყველა უფლება დაცულია'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია.<br /> Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. <br/>Frozen&#8482; &copy; %{current_year} Disney. ყველა უფლება დაცულია.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია.<br />The Amazing World of Gumball არის სავაჭრო ნიშანი &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია. Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. Frozen&#8482; &copy; %{current_year} Disney. ყველა უფლება დაცულია. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია. The Amazing World of Gumball არის სავაჭრო ნიშანი &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: შექმნილია Amazon Web Services დახმარებით
     trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო და Hour of Code&reg; Code.org-ის სავაჭრო ნიშნებია.'
     copyright: საავტორო უფლება
@@ -406,6 +362,7 @@ ka:
     built_on_code_studio: დაწერეთ კოდი კოდის სტუდიაში
     make_my_own_app: ჩემი საკუთარი აპლიკაციის შექმნა
     how_it_works: როგორ მუშაობს ეს სივრცე
+    try_hour_of_code: სცადეთ კოდის ერთი საათი!
   reference_area:
     title: გჭირდებათ დახმარება?
     subtitle: ნახეთ ეს ვიდეოები და მინიშნებები
@@ -437,7 +394,7 @@ ka:
   pdf_download: გადმოიწერეთ PDF
   download_coming_soon: მალე ჩამოტვირთვაც შესაძლებელი გახდება.
   video_coming_soon: ვიდეო მალე დაემატება!
-  not_started: მოსწავლეთ არ უცდია ამ დონის გავლა.
+  not_started: მოსწავლეს არ უცდია ამ დონის გავლა.
   share_code:
     title: 'დააჭირეთ "გაშვებას" და ნახეთ, როგორ მუშაობს ჩემი პროგრამა'
     bounce_og_title: ნახეთ ჩემი Bounce თამაში
@@ -461,12 +418,18 @@ ka:
       current: მიმდინარე დონეები
       unused: გამოუყენებელი დონეები
   upsell:
+    applab:
+      title: App Lab
+      body: აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით შემდეგ კი გაუზიარეთ იგი სხვებს.
+      body_short: შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით, შემდეგ კი გაუზიარეთ იგი მეგობრებს.
+      audience: ასაკი 13+
+      cta: ისწავლეთ, როგორ
     hoc:
-      title: Classic Maze
+      title: ლაბირინთი
       body: სცადეთ პროგრამირების საფუძვლების სწავლა. ეს შანსი უკვე მილიონებმა გამოიყენეს.
     flappy:
       title: Flappy კოდი
-      body: 'გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy Code"!'
+      body: 'გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy კოდი"!'
     20-hour:
       title: დაჩქარებული კურსი
       body: ეს ოცსაათიანი კურსი შეიცავს კომპიუტერული მეცნიერებისა და პროგრამირების ძირითად ნაწილებს კურსებიდან 2-4. კურსი შექმნილია 10-18 წლის მოსწავლეებისთვის. სრული გამოცდილების მისაღებად გაეცანით კურსებს 2-4!
@@ -478,7 +441,7 @@ ka:
       title: გალერეა
       body: ნახეთ ჩვენი მომხმარებლების მეირ შექნილი აპლიკაციებისა და სურათების გალერეა
     frozen:
-      title: '"გაყინული"'
+      title: გაყინული
     starwars:
       title: ვარსკვლავური ომები
     infinity:
@@ -502,10 +465,10 @@ ka:
   landing:
     prerelease: "ეს არის კურსის <span class='betatext'>ბეტა-ვერსია</span>. ანუ, ეს არ არის საბოლოო ვარიანტი, კურსი გაუმჯობესდება მიღებული უკუკავშირის საფუძველზე."
     prerelease_hoc2014: "ეს არის ტუტორიალის <span class='betatext'>ბეტა-ვერსია</span>. რაც იმას ნიშნავს, რომ ჩვენ მას გავაუმჯობესებთ მიღებული უკუკავშირის საფუძველზე."
-    feedback: უკუკავშირი
     report_bug: შეცდომის შესახებ შეტყობინება
-    support: დახმარების მიღება
+    support: დახმარება მჭირდება
     support_url: //support.code.org
+    help_resources: დახმარება და რესურსები
   multi:
     wrong_title: პასუხი არასწორია
     wrong_body: ეს პასუხი არასწორია. სცადეთ კიდევ ერთხელ!
@@ -513,6 +476,23 @@ ka:
     correct_body: ეს პასუხი სწორია.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: მადლობა
+    wrong_body: მადლობა პასუხისთვის.
+    correct_title: მადლობა
+    correct_body: მადლობა პასუხისთვის.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: მადლობა
+    wrong_body: მადლობა პასუხისთვის
+    correct_title: მადლობა
+    correct_body: მადლობა პასუხისთვის
+  level_group-submittable:
+    wrong_title: მადლობა
+    wrong_body: მადლობა პასუხისთვის
+    correct_title: მადლობა
+    correct_body: მადლობა პასუხისთვის
   match:
     wrong_title: არასწორი გადაწყვეტაა
     wrong_body: პასუხი, რომელიც თქვენ შეიყვანეთ, არასწორია. სცადეთ თავიდან!
@@ -530,6 +510,8 @@ ka:
     placeholder: შეიყვანეთ პასუხი აქ
     open_response_title: მადლობა
     open_response_body: მადლობა პასუხისთვის!
+    correct_title: სწორია
+    correct_body: ეს პასუხი სწორია.
   dialog:
     ok: OK
     startover_title: დარწმუნებული ხართ, რომ ხელახლა დაწყება გსურთ?
@@ -560,7 +542,7 @@ ka:
           description: ""
         flappy:
           title: Flappy კოდი
-          description: 'გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy Code"!'
+          description: 'გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy კოდი"!'
         jigsaw:
           title: ფაზლი
           description: ""
@@ -582,7 +564,8 @@ ka:
     completed_too_many_blocks: დასრულებულია, ბლოკი ძალიან ბევრია
     completed_perfect: დასრულებულია, იდეალურად
     furthest_level_attempted: ეს დონე ძალიან მაღალია
-    assessment: შეფასება
+    assessment: ტესტი
+    submitted: ჩაბარებულია
   studio:
     courses_working_on: მიმდინარე კურსები
     completed_courses: დასრულებული კურსები
@@ -606,7 +589,7 @@ ka:
     updated: განახლებულია
     project_type: პროექტის ტიპი
     help_text: 'აირჩიეთ <strong>აპლიკაციის გაკეთება</strong> ან <strong>დახატეთ რამე</strong> და შექმენით ახალი პროექტი აპლიკაციების ლაბორატორიაში ან სამხატვროში!<br/> დაბრუნება და პროექტებზე მუშაობა ნებისმიერ დროს შეგეძლებათ.'
-    need_help: გჭირდებათ დახმარება დასაწყებად?
+    need_help: თქვენი ახალი პროექტის დასაწყებად სცადეთ ეს კურსები – გამოგადგებათ
     really_delete: წავშალოთ?
     delete_yes: დიახ
     delete_no: არა
@@ -629,8 +612,8 @@ ka:
           email: შეგვატყობინეთ თქვენი ელ. ფოსტა
           age: თუ შეიძლება, მიუთითეთ ასაკი
           abuse_type: აგვიღწერეთ, როგორ არღვევს ეს კონტენტი სერვისის პირობებს
-          abuse_detail: თუ შეიძლება შეგვატყობინეთ მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით
-        abusive_url: გასაჩივრებული კონტენტი URL
+          abuse_detail: თუ შეიძლება, შეგვატყობინეთ მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით
+        abusive_url: გასაჩივრებული კონტენტის URL
         abuse_type:
           question: 'როგორ არღვევს ეს კონტენტი %{link_start}სერვისის პირობებს%{link_end}?'
           harassment: მუქარები, კიბერ-ბულინგი, შეწუხება
@@ -639,3 +622,7 @@ ka:
           other: სხვა
         detail: თუ შეიძლება შეგვატყობინეთ რაც შეიძლება მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით.
         acknowledge: 'ამ ინფორმაციის გამოგზავნისას თქვენ აცნობიერებთ, რომ ის დამუშავდება %{link_start_privacy}კონფიდენციალურობის პოლიტიკისა%{link_end} და %{link_start_tos}სერვისის პირობების%{link_end} თანახმად'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

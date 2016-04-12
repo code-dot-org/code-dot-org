@@ -22,14 +22,15 @@ var Eval = module.exports;
  * Create a namespace for the application.
  */
 var studioApp = require('../StudioApp').singleton;
-var Eval = module.exports;
 var commonMsg = require('../locale');
 var evalMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html.ejs');
+var AppView = require('../templates/AppView');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
@@ -66,7 +67,7 @@ Eval.encodedFeedbackImage = null;
 /**
  * Initialize Blockly and the Eval.  Called on page load.
  */
-Eval.init = function(config) {
+Eval.init = function (config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   skin = config.skin;
@@ -82,29 +83,13 @@ Eval.init = function(config) {
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
-      controls: require('./controls.html.ejs')({
-        assetUrl: studioApp.assetUrl
-      }),
-      blockUsed : undefined,
-      idealBlockNumber : undefined,
-      editCode: level.editCode,
-      blockCounterClass : 'block-counter-default',
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
-  config.loadAudio = function() {
+  config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
-  config.afterInject = function() {
+  config.afterInject = function () {
     var svg = document.getElementById('svgEval');
     if (!svg) {
       throw "something bad happened";
@@ -159,9 +144,49 @@ Eval.init = function(config) {
       Blockly.contractEditor.registerTestHandler(getEvalExampleFailure);
       Blockly.contractEditor.registerTestResetHandler(resetExampleDisplay);
     }
+
+    if (!!config.level.projectTemplateLevelName) {
+      studioApp.displayWorkspaceAlert('warning', <div>{commonMsg.projectWarning()}</div>);
+    }
   };
 
-  studioApp.init(config);
+  var generateCodeWorkspaceHtmlFromEjs = function () {
+    return codeWorkspaceEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        blockUsed : undefined,
+        idealBlockNumber : undefined,
+        editCode: level.editCode,
+        blockCounterClass : 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
+
+  var generateVisualizationColumnHtmlFromEjs = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({
+          assetUrl: studioApp.assetUrl
+        })
+      }
+    });
+  };
+
+  ReactDOM.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    hideSource: !!config.hideSource,
+    noVisualization: false,
+    isRtl: studioApp.isRtl(),
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    onMount: studioApp.init.bind(studioApp, config)
+  }), document.getElementById(config.containerId));
 };
 
 /**
@@ -241,7 +266,7 @@ function displayCallAndExample() {
 /**
  * Click the run button.  Start the program.
  */
-Eval.runButtonClick = function() {
+Eval.runButtonClick = function () {
   studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   studioApp.attempts++;
@@ -273,7 +298,7 @@ Eval.resetButtonClick = function () {
  * @return {EvalImage|CustomEvalError} EvalImage on success, CustomEvalError on
  *  handleable failure, null on unexpected failure.
  */
-function evalCode (code) {
+function evalCode(code) {
   try {
     codegen.evalWith(code, {
       StudioApp: studioApp,
@@ -425,7 +450,7 @@ Eval.haveBooleanMismatch_ = function (object1, object2) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-Eval.execute = function() {
+Eval.execute = function () {
   Eval.result = ResultType.UNSET;
   Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
@@ -498,7 +523,7 @@ Eval.execute = function() {
     studioApp.report(reportData);
   } else {
     document.getElementById('svgEval').toDataURL("image/png", {
-      callback: function(pngDataUrl) {
+      callback: function (pngDataUrl) {
         Eval.feedbackImage = pngDataUrl;
         Eval.encodedFeedbackImage = encodeURIComponent(Eval.feedbackImage.split(',')[1]);
 
@@ -549,7 +574,7 @@ Eval.checkExamples_ = function (resetPlayspace) {
  * Calling outerHTML on svg elements in safari does not work. Instead we stick
  * it inside a div and get that div's inner html.
  */
-function outerHTML (element) {
+function outerHTML(element) {
   var div = document.createElement('div');
   div.appendChild(element.cloneNode(true));
   return div.innerHTML;
@@ -593,7 +618,7 @@ function canvasesMatch(canvasA, canvasB) {
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
  */
-var displayFeedback = function(response) {
+var displayFeedback = function (response) {
   if (Eval.result === ResultType.UNSET) {
     // This can happen if we hit reset before our dialog popped up.
     return;

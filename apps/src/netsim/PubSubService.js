@@ -1,18 +1,6 @@
 /**
  * @overview Wrapped pub/sub service client APIs (like Pusher)
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 /* global Pusher */
 'use strict';
 
@@ -64,8 +52,6 @@ PubSubService.create = function (pubSubConfig) {
  * @constructor
  * @implements PubSubService
  */
-// Disable "unused variable" errors for null implementation declarations
-/* jshint unused:false */
 PubSubService.NullService = function () { };
 
 /**
@@ -82,9 +68,6 @@ PubSubService.NullService.prototype.subscribe = function (channelID) {
  * @param {string} channelID
  */
 PubSubService.NullService.prototype.unsubscribe = function (channelID) { };
-
-// Re-enable "unused variable" error
-/* jshint unused:true */
 
 /**
  * Wrapped Pusher.com API.

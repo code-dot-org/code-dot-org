@@ -11,25 +11,25 @@ The videos introduce teachers to the curriculum materials and tools,  data model
 
 <%= partial('video_grid', :videos => [ 
 
-  {title: "1. Why is Algebra so Hard?", yt: "5MbL4jxHTvY", dl: "https://www.dropbox.com/s/2sh8tvt4vorkr1s/Math-10-Why%20Is_algerbra_So_Hard-06162014.mp4", dltext: "Download the video"},
+  {title: "1. Why is Algebra so Hard?", yt: "5MbL4jxHTvY", dl: "https://videos.code.org/cs-in-algebra/why-is-algebra-so-hard.mp4", dltext: "Download the video"},
   
-  {title: "2. Modeling and Coordinates", yt: "KSt_3ovWfjk", dl: "https://www.dropbox.com/s/wl4fb15ihjwkr2d/Math-1-Modeling_Coordinates_06162014.mp4", dltext: "Download the video"},  
+  {title: "2. Modeling and Coordinates", yt: "KSt_3ovWfjk", dl: "https://videos.code.org/cs-in-algebra/modeling-coordinates.mp4", dltext: "Download the video"},  
 
-  {title: "3. Order of Operations", yt: "AMFaPKHp3Mg", dl: "https://www.dropbox.com/s/2ux7oadsyekjl6v/Math-2-Order_Of_Operation_06232014_1.mp4", dltext: "Download the video"},  
+  {title: "3. Order of Operations", yt: "AMFaPKHp3Mg", dl: "https://videos.code.org/cs-in-algebra/order-of-operations.mp4", dltext: "Download the video"},  
 
-  {title: "4. Domain and Range", yt: "88WhYoMxrGw", dl: "https://www.dropbox.com/s/zf4d2emzaf4cb9k/Math-3_Domain%20and%20Range_06112014.mp4", dltext: "Download the video"},  
+  {title: "4. Domain and Range", yt: "88WhYoMxrGw", dl: "https://videos.code.org/cs-in-algebra/domain-and-range.mp4", dltext: "Download the video"},  
 
-  {title: "5. Defining Values", yt: "xRUoQO1AdVs", dl: "https://www.dropbox.com/s/a5wnu2m2tp7rsw5/Math-4_DefiningValues_06232014.mp4", dltext: "Download the video"},
+  {title: "5. Defining Values", yt: "xRUoQO1AdVs", dl: "https://videos.code.org/cs-in-algebra/defining-values.mp4", dltext: "Download the video"},
 
-  {title: "6. Using the Design Recipe to Solve Word Problems", yt: "ZWdLNtPu6PQ", dl: "https://www.dropbox.com/s/sknc8yn75wg7cep/Math-5_WordProblems_1_06232014_1.mp4", dltext: "Download the video"},  
+  {title: "6. Using the Design Recipe to Solve Word Problems", yt: "ZWdLNtPu6PQ", dl: "https://videos.code.org/cs-in-algebra/word-problems-part1.mp4", dltext: "Download the video"},  
 
-  {title: "7. Using the Design Recipe to Help Students", yt: "SL2zLs2P-mU", dl: "https://www.dropbox.com/s/y424rgtwklf48px/Math-6_WordProblem_2_06182014_1.mp4?dl=0", dltext: "Download the video"},  
+  {title: "7. Using the Design Recipe to Help Students", yt: "SL2zLs2P-mU", dl: "https://videos.code.org/cs-in-algebra/word-problems-part2.mp4", dltext: "Download the video"},  
 
-  {title: "8. Boolean Logic and Inequalities in the Plane", yt: "OMQO66wWqjk", dl: "https://www.dropbox.com/s/2wpc4qc7tidj4dj/Math-7-BooleanLogic-june9.mp4", dltext: "Download the video"},  
+  {title: "8. Boolean Logic and Inequalities in the Plane", yt: "OMQO66wWqjk", dl: "https://videos.code.org/cs-in-algebra/boolean-logic.mp4", dltext: "Download the video"},  
 
-  {title: "9. Piecewise Functions", yt: "joF6lOgCN14", dl: "https://www.dropbox.com/s/6z9k1aoiclrn2y1/Math-8-Piecewise_Functions-06232014_1.mp4", dltext: "Download the video"},
+  {title: "9. Piecewise Functions", yt: "joF6lOgCN14", dl: "https://videos.code.org/cs-in-algebra/piecewise-functions.mp4", dltext: "Download the video"},
 
-  {title: "10. The Pythagorean Theorem", yt: "Bbq0oCmvSmA", dl: "https://www.dropbox.com/s/wdzc8wtn9sxotm5/Math-9-Pythagorean%20Theorem_06112013.mp4", dltext: "Download the video"}
+  {title: "10. The Pythagorean Theorem", yt: "Bbq0oCmvSmA", dl: "https://videos.code.org/cs-in-algebra/pythagorean-theorem.mp4", dltext: "Download the video"}
   ]) %>  
 
 

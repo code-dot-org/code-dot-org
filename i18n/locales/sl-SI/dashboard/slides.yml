@@ -30,29 +30,29 @@ sl:
         text: Na desni je tvoja delovna površina, kamor boš vlekel/a bloke z orodij, da zgradiš tvoj program. Da zbrišeš blok, ga povleci do smetnjaka v kotu.
       10:
         image: notes/hoc1_10.jpg
-        text: 'Each block is one instruction. If you drag a "move forward" block to your workspace and press "Run Program", the bird moves one space on the maze.'
+        text: 'Vsak blok je eno navodilo. Če povlečete blok "korak naprej" v delovno mesto in pritisnete "Zaženi program", se ptič premakne za en prostor v labirintu.'
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
+        text: Če želite narediti več kot eno dejanje, lahko povlečete več blokov v vaš delovni prostor in jih pritrdite skupaj. Ptica bo izvršila ukaze od zgoraj navzdol.
       12:
         image: notes/hoc1_12.jpg
-        text: 'If you run a program and want to fix it and try again, press the "Reset" button.'
+        text: 'Če zaženete program in želite popraviti in poskusiti znova, pritisnite gumb "Reset"'
       13:
         image: notes/hoc1_13.jpg
-        text: "Let's go get those pigs!"
+        text: Gremo nad te pujse!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: "Hi, I'm JR! Every race car team need computer scientists to win. They analyze data from the car to make it go faster."
+        text: Zdravo, sem JR! vsaka avtomobilska ekipa potrebuje računalniškega strokovnjaka da zmaga. Podatke iz avta analizira, da lahko avto vozi še hitreje.
       2:
         image: notes/stage5_2.jpg
-        text: "In these puzzles, you'll be an artist that draws a line behind them everywhere they go."
+        text: V teh sestavljankah boš umetnik, ki riše sled za sabo, kamorkoli gre.
       3:
         image: notes/stage5_3.jpg
-        text: 'This block says "move forward by 100 pixels." Pixels are just really tiny dots on your screen.'
+        text: 'Ta blok pravi "premakni se za 100 slikovnih pik naprej". Slikovne pike so res drobne pike na vašem zaslonu.'
       4:
         image: notes/stage5_4.jpg
-        text: 'This block says "turn right by 90 degrees." This will turn your artist the same amount as the "turn" blocks in the maze puzzles.'
+        text: 'Ta blok pravi "obrni se za 90 stopinj desno". To bo tvojega risarja obrnilo za enako vrednost kot "obrni" blok v labirintih.'
       5:
         image: notes/stage5_5.jpg
         text: Click on the arrow in either of these blocks to change the amount the artist moves forward or turns. Play around to get familiar with these new blocks.
@@ -1375,7 +1375,7 @@ sl:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
       2:
         image: notes/starwars_intro_2.JPG
         text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
@@ -1431,7 +1431,7 @@ sl:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1506,7 +1506,7 @@ sl:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."

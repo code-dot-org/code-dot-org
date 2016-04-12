@@ -28,10 +28,14 @@ There are many ways to get involved in our community. Review the options below a
 <br />
 
 ## Leadership Opportunities
-### Become a K-5 Affiliate - for your district or region
-Code.org is interested in partnering with local [school districts](/educate/k5-district-partnership) and experienced [computer science educators](/educate/k5-affiliates) to host K-5 workshops.
+### Become a Code.org Professional Learning Partner
+Code.org Professional Learning Partners help increase the sustainability of our Computer Science programs at the local level. Code.org is partnering with organizations who can host local workshops for teachers new to computer science and build and sustain a community of computer science educators. 
 <br /><br />
-[<button>Learn More</button>](/educate/k5-affiliates)<br />
+[<button>Learn More</button>](/educate/professional-learning-partner)<br />
+### Become a Code.org Facilitator
+Code.org is interested in partnering with experienced [computer science educators](/educate/facilitator) to host local workshops for teachers enrolled in our Professional Learning Program.
+<br /><br />
+[<button>Learn More</button>](/educate/facilitator)<br />
 
 ## Other Community Resources
 Looking for other ways to get connected to computer science teachers around the world? Check out these great community programs from our partners:

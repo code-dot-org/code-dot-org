@@ -2,18 +2,6 @@
  * @overview Extended error type returned for failed interactions with NetSim
  * server API (net_sim_api.rb) that extracts and exposes additional error info.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 require('../utils'); // provide Function.prototype.inherits

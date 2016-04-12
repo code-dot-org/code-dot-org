@@ -1,0 +1,37 @@
+name 'ECSPD3-u6 intro to u6'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+### Unit 6 Overview > What's Covered? 
+ 
+#### Concepts 
+As we dive into the final unit, we continue to see the spiral of the curriculum where students are reinforcing and applying the skills they’ve learned in past units now with robotics. Students will have the opportunity to use their problem solving and programming skills to have a fun experience working with Lego Mindstorm robots. 
+<br> <br>
+The LEGO software they will work with is a drag and drop type of software with some additional depth than the Scratch environment used in unit 4. Students will need to troubleshoot both the programs that run on their robots, as well as the physical construction of the robot, in order to make the robot perform the task or challenge given.
+<br><br> 
+NOTE: If you don't have robots for Unit 6, we will discuss alternate activities: other robot options, online robot simulated environments, culminating projects or portfolios in stage 4.
+<br/><br/> 
+ 
+#### Pacing 
+ 
+- Days 1-3 introduces the idea of robots 
+    - Day 1 What is a robot / what makes a computer robotic?
+    - Days 2-3 Evaluate robot body designs and  algorithms that control robot behavior
+- Days 4-7 students are building the robot 
+    - Day 4 Set up the Lego kit  
+    - Day 5 Build robot base
+    - Day 6-7 Introduce NXT brick features 
+- Day 8-13 students are learning how to use the software 
+    - Day 8-9 Introduce NXT software
+    - Day 10-13 Program robot using tutorials (using sensors for input) 
+- Day 14-33 give students an opportunity to program their robots to perform tasks and challenges 
+    - Day 14 Describe RoboCup & RoboCupJunior  
+    - Day 15 Human robot tic-tac-toe 
+    - Days 16-18 Program dancing robot
+    - Days 19-23 Program rescue robot
+    - Days 24-33 Final projects and presentations
+ 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

@@ -6,17 +6,16 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "The jump block moves the artist without drawing. Draw the dashed line by using both the jump and draw blocks.",
+    "instructions": "The jump block moves the artist without drawing. Draw the dashed line using both the `jump forward` and `move forward` blocks.",
     "x": "100",
     "y": "300",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "ideal": "9",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "The jump block moves the artist without drawing. Draw the dashed line by using both the jump and draw blocks.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "The jump block moves the artist without drawing. Draw the dashed line using both the `jump forward` and `move forward` blocks.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -32,7 +31,9 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false"
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -85,49 +86,41 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="jump" inline="true">
-              <title name="DIR">jumpForward</title>
-              <value name="VALUE">
-                <block type="math_number">
-                  <title name="NUM">50</title>
-                </block>
-              </value>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
               <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
+                <block type="jump_by_constant">
+                  <title name="DIR">jumpForward</title>
                   <title name="VALUE">50</title>
                   <next>
-                    <block type="jump" inline="true">
-                      <title name="DIR">jumpForward</title>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">50</title>
-                        </block>
-                      </value>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">50</title>
                       <next>
-                        <block type="draw_turn_by_constant">
-                          <title name="DIR">turnLeft</title>
-                          <title name="VALUE">90</title>
+                        <block type="jump_by_constant">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE">50</title>
                           <next>
-                            <block type="draw_move_by_constant">
-                              <title name="DIR">moveForward</title>
-                              <title name="VALUE">50</title>
+                            <block type="draw_turn_by_constant_dropdown">
+                              <title name="DIR">turnLeft</title>
+                              <title name="VALUE" config="45,60,90,120,180">90</title>
                               <next>
-                                <block type="jump" inline="true">
-                                  <title name="DIR">jumpForward</title>
-                                  <value name="VALUE">
-                                    <block type="math_number">
-                                      <title name="NUM">50</title>
-                                    </block>
-                                  </value>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">50</title>
                                   <next>
-                                    <block type="draw_move_by_constant">
-                                      <title name="DIR">moveForward</title>
+                                    <block type="jump_by_constant">
+                                      <title name="DIR">jumpForward</title>
                                       <title name="VALUE">50</title>
+                                      <next>
+                                        <block type="draw_move_by_constant">
+                                          <title name="DIR">moveForward</title>
+                                          <title name="VALUE">50</title>
+                                        </block>
+                                      </next>
                                     </block>
                                   </next>
                                 </block>

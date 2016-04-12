@@ -1,0 +1,48 @@
+name 'ECSPD3-u6 list of challenges'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+### Unit 6 Challenge  > List of Challenges  
+ 
+#### Teaching Unit 6 from the Curriculum? 
+See below for the list of challenge lessons. Feel free to click through to the lesson plans and explore the materials so you can select one to complete. **Your goal right now is to pick the lesson that you will complete later.** 
+<br><br>
+ 
+Day 1-3 introduces the ideas of robots 
+
+- <a href = "https://studio.code.org/s/ECSPD3-Unit6/stage/3/puzzle/2" target=_blank>Day: 1 What is a robot / what makes a computer robotic?/a> 
+- <a href = "https://studio.code.org/s/ECSPD3-Unit6/stage/3/puzzle/3" target=_blank>Days: 2-3 Evaluate robot body designs and  algorithms that control robot behavior</a> 
+
+Days 4-7 students are building the robots 
+
+- <a href = "https://studio.code.org/s/ECSPD3-Unit6/stage/3/puzzle/4" target=_blank>Day: 4 Set up the Lego kit</a> 
+- <a href = "https://studio.code.org/s/ECSPD3-Unit6/stage/3/puzzle/5" target=_blank>Day: 5 Build robot base</a> 
+- <a href = "https://studio.code.org/s/ECSPD3-Unit6/stage/3/puzzle/6 " target=_blank> Day: 6-7 Introduce NXT brick features</a> 
+
+Day 8-13 students are learning how to use the software
+
+- <a href = "https://studio.code.org/s/ECSPD3-Unit6/stage/3/puzzle/7" target=_blank>
+Day: 8-9 Introduce NXT software</a> 
+- <a href = "https://studio.code.org/s/ECSPD3-Unit6/stage/3/puzzle/8" target=_blank>Day: 10-13 Program robot using tutorials (using sensors for input)</a> 
+ 
+Day 14-33 give students program their robots to perform certain tasks and challenges
+  
+- <a href = "https://studio.code.org/s/ECSPD3-Unit6/stage/3/puzzle/9" target=_blank>Day: 14 Describe RoboCup & RoboCupJunior</a> 
+- <a href = "https://studio.code.org/s/ECSPD3-Unit6/stage/3/puzzle/10" target=_blank>
+Day: 15 Human robot tic-tac-toe</a> 
+- <a href = "https://studio.code.org/s/ECSPD3-Unit6/stage/3/puzzle/11" target=_blank>Days: 16-18 Program dancing robot</a>  
+- <a href = "https://studio.code.org/s/ECSPD3-Unit6/stage/3/puzzle/12" target=_blank>Days: 19-23 Program rescue robot </a>  
+- <a href = "https://studio.code.org/s/ECSPD3-Unit6/stage/3/puzzle/13" target=_blank>Days: 24-33 Final projects and presentation for design challenge </a> 
+ 
+#### Don't have robots? 
+If you don't have robots and aren't able to complete Unit 6 as written, use your challenge time to review the materials posted in stage 4 and make a decision about what you're going to do for the final unit. Keep in mind that whatever you choose to do should provide students with an opportunity to extend on what they learned in units 1-4. 
+
+- <a href="https://studio.code.org/s/ECSPD3-Unit6/stage/4/puzzle/3" target=_blank>Online  simulations and other physical computing options</a>
+- <a href="https://studio.code.org/s/ECSPD3-Unit6/stage/4/puzzle/4" target=_blank>Projects and portfolios</a>
+
+Once you've selected a challenge topic, click **continue** below.  
+<br><br> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

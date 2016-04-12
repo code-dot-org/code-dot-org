@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://cdo-build-package.s3.amazonaws.com/test-package/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.tar.gz
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIANaZBVcAA+3TQWrDMBCFYR3FJygaeSR5TlMkYZOUhJTaptev225CFw20
+        uKHwf5tZjEAPpNcu5/NxeTyU+eD24jcp6fuUHP31/CDeOwnZSy+aQ3JeJGfv
+        Or9boivrvJSXrnOvx9Ppu3O39v/U2FffVIMNU5MmamWqk7bBLE3VgoZcRpVR
+        k1q1XltRi2ZS8xBDHWK8d378zmVdntfl4Wne8Y5b/d+2X/uv28+i/3/g8/3v
+        nQIAAAAAAAAAAAAAAAA/9QZV2C22ACgAAA==
+    headers:
+      X-Amz-Acl:
+      - public-read
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - gSyUQJ07gi6vxihfW3Ixhw==
+      Content-Length:
+      - '205'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Apr 2016 23:20:56 GMT
+      Etag:
+      - '"812c94409d3b822eafc6285f5b723187"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 06 Apr 2016 23:20:55 GMT
+- request:
+    method: get
+    uri: https://cdo-build-package.s3.amazonaws.com/test-package/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.tar.gz
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Apr 2016 23:20:56 GMT
+      Last-Modified:
+      - Wed, 06 Apr 2016 23:20:56 GMT
+      Etag:
+      - '"812c94409d3b822eafc6285f5b723187"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '205'
+      Server:
+      - AmazonS3
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIANaZBVcAA+3TQWrDMBCFYR3FJygaeSR5TlMkYZOUhJTaptev225CFw20
+        uKHwf5tZjEAPpNcu5/NxeTyU+eD24jcp6fuUHP31/CDeOwnZSy+aQ3JeJGfv
+        Or9boivrvJSXrnOvx9Ppu3O39v/U2FffVIMNU5MmamWqk7bBLE3VgoZcRpVR
+        k1q1XltRi2ZS8xBDHWK8d378zmVdntfl4Wne8Y5b/d+2X/uv28+i/3/g8/3v
+        nQIAAAAAAAAAAAAAAAA/9QZV2C22ACgAAA==
+    http_version: 
+  recorded_at: Wed, 06 Apr 2016 23:20:55 GMT
+recorded_with: VCR 3.0.0

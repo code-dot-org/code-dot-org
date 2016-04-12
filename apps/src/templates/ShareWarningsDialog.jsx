@@ -1,4 +1,5 @@
-var ShareWarnings = require('./ShareWarnings.jsx');
+var color = require('../color');
+var ShareWarnings = require('./ShareWarnings');
 
 /**
  * Modal for our SharingWarnings.
@@ -11,7 +12,7 @@ var SharingWarningsDialog = module.exports = React.createClass({
     handleTooYoung: React.PropTypes.func.isRequired
   },
 
-  getInitialState: function() {
+  getInitialState: function () {
     return { modalIsOpen: !this.props.is13Plus || this.props.showStoreDataAlert };
   },
 
@@ -23,7 +24,7 @@ var SharingWarningsDialog = module.exports = React.createClass({
     }
   },
 
-  handleClose: function() {
+  handleClose: function () {
     this.setState({modalIsOpen: false});
     this.props.handleClose();
   },
@@ -53,7 +54,7 @@ var SharingWarningsDialog = module.exports = React.createClass({
       overlay: {
         position: 'fixed',
         opacity: 0.8,
-        backgroundColor: 'black',
+        backgroundColor: color.black,
         top: 0,
         left: 0,
         bottom: 0,

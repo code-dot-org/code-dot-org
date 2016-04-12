@@ -545,6 +545,7 @@
   color: #f00;
 }
 
+
 /* Partner tutorial landing pages */
 @media screen and (min-width: 971px) {
   .mc-container .mc-tutorial {
@@ -583,17 +584,18 @@
   margin-bottom: 10px !important;
 }
 
-.starwars-js-tutorial {
-  /* Hide the js tutorial in non-EN */
-  display: none;
-}
-
 .starwars-blocks-tutorial {
   /* When we hide the js tutorial, make the blockly tutorial take up whole width */
   width: 100% !important;
+}
+
+.starwars-container .img-container {
+  min-height: 202px;
 }
 
 .tutorial-box {
   /* Ensure background doesn't repeat in the wider box */
   background-size: cover;
 }
+
+

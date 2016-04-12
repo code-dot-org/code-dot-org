@@ -11,6 +11,8 @@ function setGlobals() {
 }
 
 var Bee = require('@cdo/apps/maze/bee');
+var BeeCell = require('@cdo/apps/maze/beeCell');
+var MazeMap = require('@cdo/apps/maze/mazeMap');
 var BeeItemDrawer = require('@cdo/apps/maze/beeItemDrawer');
 var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');
 var cellId = require('@cdo/apps/maze/mazeUtils').cellId;
@@ -41,7 +43,7 @@ function validateImages(setup, defaultFlower) {
   var initialDirtMap = [setup.map(function (item) { return item[2]; })];
 
   var fakeMaze = {
-    map: map
+    map: MazeMap.parseFromOldValues(map, initialDirtMap, BeeCell)
   };
 
   // create a config with a level based on the contraints from setup
@@ -58,7 +60,7 @@ function validateImages(setup, defaultFlower) {
   // create a bee with a shim maze
   var bee = new Bee(fakeMaze, null, config);
 
-  var drawer = new BeeItemDrawer(dirtMap, skin, initialDirtMap, bee);
+  var drawer = new BeeItemDrawer(fakeMaze.map, skin, bee);
 
   var row = 0;
 
@@ -113,40 +115,38 @@ describe("beeItemDrawer", function () {
     // map, dirtMap, initialDirtmap, running, expected index, expected image
     var setup = [
       // everything but the last 3 rows is the same whether or not we're running
-      [  2,   0,   0, true, false,  '', null],
-      [  1,   1,   1, true, false, '1', 'redFlower'],
-      [  1,   2,   2, true, false, '2', 'redFlower'],
-      [  1,  11,  11, true, false,'11', 'redFlower'],
-      [  1,  98,  98, true, false, '0', 'redFlower'], // 98 -> 0
-      [  1,  99,  99, true, false,  '', 'redFlower'], // 99 -> unlimited
-      [  1,  -1,  -1, true, false, '1', 'honey'],
-      [  1,  -2,  -2, true, false, '2', 'honey'],
-      [  1, -11, -11, true, false,'11', 'honey'],
-      [  1, -98, -98, true, false, '0', 'honey'],
-      [  1, -99, -99, true, false,  '', 'honey'],
-      [  0,   0,   1, true, false, '0', 'redFlower'],
+      [2,   0,   0, true, false,  '', null],
+      [1,   1,   1, true, false, '1', 'redFlower'],
+      [1,   2,   2, true, false, '2', 'redFlower'],
+      [1,  11,  11, true, false,'11', 'redFlower'],
+      [1,  98,  98, true, false, '0', 'redFlower'], // 98 -> 0
+      [1,  99,  99, true, false,  '', 'redFlower'], // 99 -> unlimited
+      [1,  -1,  -1, true, false, '1', 'honey'],
+      [1,  -2,  -2, true, false, '2', 'honey'],
+      [1, -11, -11, true, false,'11', 'honey'],
+      [1, -98, -98, true, false, '0', 'honey'],
+      [1, -99, -99, true, false,  '', 'honey'],
       // red with default red - behaves same as map = 1
-      [ 'R',  1,   1, true, false, '1', 'redFlower'],
+      ['R',  1,   1, true, false, '1', 'redFlower'],
       // purple with default red
-      [ 'P',  1,   1, true, false, '1', 'purpleFlower'],
+      ['P',  1,   1, true, false, '1', 'purpleFlower'],
       ['FC',  1,   1, true, false, '1', 'redFlower'], // flowercomb
       ['FC', -1,  -1, true, false, '1', 'honey'],     // flowercomb
 
-      [  2,   0,   0, false, false,  '', null],
-      [  1,   1,   1, false, false, '1', 'redFlower'],
-      [  1,   2,   2, false, false, '2', 'redFlower'],
-      [  1,  11,  11, false, false,'11', 'redFlower'],
-      [  1,  98,  98, false, false, '0', 'redFlower'], // 98 -> 0
-      [  1,  99,  99, false, false,  '', 'redFlower'], // 99 -> unlimited
-      [  1,  -1,  -1, false, false, '1', 'honey'],
-      [  1,  -2,  -2, false, false, '2', 'honey'],
-      [  1, -11, -11, false, false,'11', 'honey'],
-      [  1, -98, -98, false, false, '0', 'honey'],
-      [  1, -99, -99, false, false,  '', 'honey'],
-      [  0,   0,   1, false, false, '0', 'redFlower'],
-      [ 'R',  1,   1, false, false, '1', 'redFlower'],
+      [2,   0,   0, false, false,  '', null],
+      [1,   1,   1, false, false, '1', 'redFlower'],
+      [1,   2,   2, false, false, '2', 'redFlower'],
+      [1,  11,  11, false, false,'11', 'redFlower'],
+      [1,  98,  98, false, false, '0', 'redFlower'], // 98 -> 0
+      [1,  99,  99, false, false,  '', 'redFlower'], // 99 -> unlimited
+      [1,  -1,  -1, false, false, '1', 'honey'],
+      [1,  -2,  -2, false, false, '2', 'honey'],
+      [1, -11, -11, false, false,'11', 'honey'],
+      [1, -98, -98, false, false, '0', 'honey'],
+      [1, -99, -99, false, false,  '', 'honey'],
+      ['R',  1,   1, false, false, '1', 'redFlower'],
       // purple with default red
-      [ 'P',  1,   1, false, false, '?', 'purpleFlower'],
+      ['P',  1,   1, false, false, '?', 'purpleFlower'],
       ['FC',  1,   1, false, true,   '', 'redFlower'], // flowercomb
       ['FC', -1,  -1, false, true,   '', 'honey'],     // flowercomb
     ];
@@ -160,41 +160,39 @@ describe("beeItemDrawer", function () {
     // map, dirtMap, initialDirtmap, expected index, expected image
     var setup = [
       // everything but the last 3 rows is the same whether or not we're running
-      [  2,   0,   0, true, false,  '', null],
-      [  1,   1,   1, true, false, '1', 'purpleFlower'],
-      [  1,   2,   2, true, false, '2', 'purpleFlower'],
-      [  1,  11,  11, true, false,'11', 'purpleFlower'],
-      [  1,  98,  98, true, false, '0', 'purpleFlower'], // 98 -> 0
-      [  1,  99,  99, true, false,  '', 'purpleFlower'], // 99 -> unlimited
-      [  1,  -1,  -1, true, false, '1', 'honey'],
-      [  1,  -2,  -2, true, false, '2', 'honey'],
-      [  1, -11, -11, true, false,'11', 'honey'],
-      [  1, -98, -98, true, false, '0', 'honey'],
-      [  1, -99, -99, true, false,  '', 'honey'],
-      [  0,   0,   1, true, false, '0', 'purpleFlower'],
+      [2,   0,   0, true, false,  '', null],
+      [1,   1,   1, true, false, '1', 'purpleFlower'],
+      [1,   2,   2, true, false, '2', 'purpleFlower'],
+      [1,  11,  11, true, false,'11', 'purpleFlower'],
+      [1,  98,  98, true, false, '0', 'purpleFlower'], // 98 -> 0
+      [1,  99,  99, true, false,  '', 'purpleFlower'], // 99 -> unlimited
+      [1,  -1,  -1, true, false, '1', 'honey'],
+      [1,  -2,  -2, true, false, '2', 'honey'],
+      [1, -11, -11, true, false,'11', 'honey'],
+      [1, -98, -98, true, false, '0', 'honey'],
+      [1, -99, -99, true, false,  '', 'honey'],
       // red with default purple - visible whether or not running
-      [ 'R',  1,   1, true, false, '1', 'redFlower'],
+      ['R',  1,   1, true, false, '1', 'redFlower'],
       // purple with default purple - same as map = 1
-      [ 'P',  1,   1, true, false, '1', 'purpleFlower'],
+      ['P',  1,   1, true, false, '1', 'purpleFlower'],
       ['FC',  1,   1, true, false, '1', 'purpleFlower'], // flowercomb
       ['FC', -1,  -1, true, false, '1', 'honey'],        // flowercomb
 
-      [  2,   0,   0, false, false,  '', null],
-      [  1,   1,   1, false, false, '?', 'purpleFlower'],
-      [  1,   2,   2, false, false, '?', 'purpleFlower'],
-      [  1,  11,  11, false, false, '?', 'purpleFlower'],
-      [  1,  98,  98, false, false, '?', 'purpleFlower'],
-      [  1,  99,  99, false, false, '?', 'purpleFlower'],
-      [  1,  -1,  -1, false, false, '1', 'honey'],
-      [  1,  -2,  -2, false, false, '2', 'honey'],
-      [  1, -11, -11, false, false,'11', 'honey'],
-      [  1, -98, -98, false, false, '0', 'honey'],
-      [  1, -99, -99, false, false,  '', 'honey'],
-      [  0,   0,   1, false, false, '?', 'purpleFlower'],
+      [2,   0,   0, false, false,  '', null],
+      [1,   1,   1, false, false, '?', 'purpleFlower'],
+      [1,   2,   2, false, false, '?', 'purpleFlower'],
+      [1,  11,  11, false, false, '?', 'purpleFlower'],
+      [1,  98,  98, false, false, '?', 'purpleFlower'],
+      [1,  99,  99, false, false, '?', 'purpleFlower'],
+      [1,  -1,  -1, false, false, '1', 'honey'],
+      [1,  -2,  -2, false, false, '2', 'honey'],
+      [1, -11, -11, false, false,'11', 'honey'],
+      [1, -98, -98, false, false, '0', 'honey'],
+      [1, -99, -99, false, false,  '', 'honey'],
       // red with default purple - visible whether or not running
-      [ 'R',  1,   1, false, false, '1', 'redFlower'],
+      ['R',  1,   1, false, false, '1', 'redFlower'],
       // purple with default purple - same as map = 1
-      [ 'P',  1,   1, false, false, '?', 'purpleFlower'],
+      ['P',  1,   1, false, false, '?', 'purpleFlower'],
       ['FC',  1,   1, false, true,   '', 'purpleFlower'], // flowercomb
       ['FC', -1,  -1, false, true,   '', 'honey'],        // flowercomb
     ];

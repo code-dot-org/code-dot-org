@@ -1,13 +1,10 @@
-require 'minitest/autorun'
-require 'rack/test'
-require_relative '../../deployment'
-require_relative '../middleware/net_sim_api'
+require_relative 'test_helper'
+require 'net_sim_api'
 require_relative 'fake_redis_client'
 require_relative 'spy_pub_sub_api'
 
-ENV['RACK_ENV'] = 'test'
-
 class NetSimApiTest < Minitest::Test
+  include SetupTest
 
   TABLE_NAMES = NetSimApi::TABLE_NAMES
   NODE_TYPES = NetSimApi::NODE_TYPES
@@ -147,7 +144,6 @@ class NetSimApiTest < Minitest::Test
     assert_equal 200, @net_sim_api.last_response.status
     assert_equal({}, JSON.parse(@net_sim_api.last_response.body))
   end
-
 
   def test_get_400_on_bad_json_insert
     # Send malformed JSON with an INSERT operation

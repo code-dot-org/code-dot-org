@@ -1,0 +1,19 @@
+name 'ECSPD3-u6 complete the challenge'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+### Complete the Challenge > What’s Inside 
+ 
+<br/> 
+#### What goes into completing the challenge?  
+ 
+>- Get into the lesson or other materials
+- Extend the lesson by creating an extended learning activity or an assessment question, or write up plans for alternate unit 6 project or topic
+ 
+Click “Continue” below to get started with the Unit 6 challenge!  
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

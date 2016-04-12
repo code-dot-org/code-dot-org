@@ -10,6 +10,11 @@ Dashboard::Application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  # Use the schema cache dump to avoid forcing every front end to fetch the schema from
+  # the database. (Fetching the schema adds undesirable load and can trigger expensive
+  # recomputations of schema statistics.)
+  config.use_schema_cache_dump = true
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -82,8 +87,6 @@ Dashboard::Application.configure do
   # Whether or not to display pretty shared js assets
   config.pretty_sharedjs = false
 
-  # Serve a production version of React
-  config.react.variant = :production
   config.lograge.enabled = true
 
   # don't act like a levelbuilder by default

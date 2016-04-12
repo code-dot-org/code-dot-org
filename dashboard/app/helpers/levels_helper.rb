@@ -1,3 +1,4 @@
+require 'cdo/script_config'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 
@@ -10,6 +11,8 @@ module LevelsHelper
       hoc_chapter_path(script_level.chapter, params)
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
+    elsif params[:puzzle_page]
+      puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
     else
       script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     end
@@ -156,7 +159,7 @@ module LevelsHelper
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
 
-    @public_caching = @script ? Gatekeeper.allows('public_caching_for_script', where: {script_name: @script.name}) : false
+    @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
     view_options(public_caching: @public_caching)
 
     if PuzzleRating.enabled?
@@ -186,8 +189,10 @@ module LevelsHelper
   # appropriate to the level being rendered.
   def render_app_dependencies
     use_droplet = app_options[:droplet]
+    use_makerlab = @level.game == Game.applab && @level.makerlab_enabled
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
+    use_gamelab = @level.game == Game.gamelab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim
     hide_source = app_options[:hideSource]
@@ -198,7 +203,9 @@ module LevelsHelper
                use_netsim: use_netsim,
                use_blockly: use_blockly,
                use_applab: use_applab,
+               use_gamelab: use_gamelab,
                use_phaser: use_phaser,
+               use_makerlab: use_makerlab,
                hide_source: hide_source,
                static_asset_base_path: app_options[:baseUrl]
            }
@@ -230,7 +237,15 @@ module LevelsHelper
     level_options[:lastAttempt] = @last_attempt
     level_options.merge! @level.properties.camelize_keys
 
+    if current_user.nil? || current_user.teachers.empty?
+      # only students with teachers should be able to submit
+      level_options['submittable'] = false
+    end
+
     app_options.merge! view_options.camelize_keys
+
+    app_options[:submitted] = level_view_options[:submitted]
+    app_options[:unsubmitUrl] = level_view_options[:unsubmit_url]
 
     app_options
   end
@@ -294,20 +309,19 @@ module LevelsHelper
     # Process level view options
     level_overrides = level_view_options.dup
     if level_options['embed'] || level_overrides[:embed]
-      level_overrides.merge!(hide_source: true, show_finish: true)
+      level_overrides[:hide_source] = true
+      level_overrides[:show_finish] = true
     end
     if level_overrides[:embed]
-      view_options(no_padding: true, no_header: true, no_footer: true, white_background: true)
+      view_options(no_header: true, no_footer: true, white_background: true)
     end
-
-    level_overrides.merge!(no_padding: view_options[:no_padding])
 
     # Add all level view options to the level_options hash
     level_options.merge! level_overrides.camelize_keys
     app_options.merge! view_options.camelize_keys
 
     # Move these values up to the app_options hash
-    %w(hideSource share noPadding embed).each do |key|
+    %w(hideSource share embed).each do |key|
       if level_options[key]
         app_options[key.to_sym] = level_options.delete key
       end
@@ -318,7 +332,7 @@ module LevelsHelper
     app_options[:isLegacyShare] = true if @is_legacy_share
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
-    app_options[:isAdmin] = true if (@game == Game.applab && current_user && current_user.admin?)
+    app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if enable_scrolling?
@@ -346,7 +360,7 @@ module LevelsHelper
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
-    if @game and @game.owns_footer_for_share?
+    if (@game && @game.owns_footer_for_share?) || @is_legacy_share
       app_options[:copyrightStrings] = build_copyright_strings
     end
 
@@ -354,12 +368,13 @@ module LevelsHelper
   end
 
   def build_copyright_strings
-    # TODO (brent) - these would ideally also go in _javascript_strings.html right now, but it can't
-    # deal with params
+    # TODO(brent): These would ideally also go in _javascript_strings.html right now, but it can't
+    # deal with params.
     {
         :thank_you => URI.escape(I18n.t('footer.thank_you')),
         :help_from_html => I18n.t('footer.help_from_html'),
         :art_from_html => URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+        :code_from_html => URI.escape(I18n.t('footer.code_from_html')),
         :powered_by_aws => I18n.t('footer.powered_by_aws'),
         :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
     }
@@ -381,13 +396,13 @@ module LevelsHelper
   def level_view_options(opts = nil)
     @level_view_options ||= LevelViewOptions.new
     if opts.blank?
-      @level_view_options.freeze.to_h.delete_if { |k, v| v.nil? }
+      @level_view_options.freeze.to_h.delete_if { |_k, v| v.nil? }
     else
       opts.each{|k, v| @level_view_options[k] = v}
     end
   end
 
-  def string_or_image(prefix, text)
+  def string_or_image(prefix, text, source_level = nil)
     return unless text
     path, width = text.split(',')
     if %w(.jpg .png .gif).include? File.extname(path)
@@ -418,12 +433,13 @@ module LevelsHelper
           style: 'border: none;'
         }), {class: 'aspect-ratio'})
     else
-      data_t(prefix + '.' + @level.name, text)
+      level_name = source_level ? source_level.name : @level.name
+      data_t(prefix + '.' + level_name, text)
     end
   end
 
-  def multi_t(text)
-    string_or_image('multi', text)
+  def multi_t(level, text)
+    string_or_image('multi', text, level)
   end
 
   def match_t(text)

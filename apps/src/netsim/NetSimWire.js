@@ -2,17 +2,6 @@
  * @overview Simulation Entity: A connection between two nodes and related
  *           metadata.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
 'use strict';
 
 require('../utils');

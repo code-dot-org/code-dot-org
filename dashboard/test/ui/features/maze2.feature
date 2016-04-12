@@ -29,8 +29,8 @@ Feature: Complete a simple maze level
     Then element "#hint-request-button" is visible
     Then I press "hint-request-button"
     And element ".congrats" has text "Try using one of the blocks below:"
-    And element ".modal-content div:nth-child(2) iframe:nth-child(1)" is visible
-    And element ".modal-content div:nth-child(2) iframe:nth-child(1)" has id "feedbackBlocks"
+    And element ".modal-content #feedbackBlocks" is visible
+    And element ".modal-content #feedbackBlocks svg" is visible
     Then I press "again-button"
     And I press "resetButton"
     Then element "#runButton" is visible

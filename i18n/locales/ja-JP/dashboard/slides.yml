@@ -358,38 +358,41 @@ ja:
         text: 「正方形を作成」という関数として定義することができます。
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple squares.
+        text: これで　しかくが　たくさんつくれる　あたらしい　ブロックは　なんかいも　つかえます。
       7:
         image: notes/frozen3_7.jpg
         text: たくさんの簡単な図形で、複雑な模様を作ることができます。次のパズルでは、今あなたが円を作るために書いたコードが、様々な大きさの円を作る新たな関数として利用できます。あなたはそれで、エルサの綺麗で緻密な雪の模様を作ることができますか？
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: 私たちはPlay Labを使ってゲームを作成します。よいゲームは物語があり、全ての物語にはキャラがいます。私たちはどうやってキャラたちが魔女、エイリアンのようなものを作り、そして動物たちが話し動きお互いに交流するか教わるでしょう。このチュートリアルの最後ではscratch でゲームを作成し、それをあなたの友達と共有します。
       2:
         image: notes/playlab_intro_2.png
         text: 画面が3つに分割されます。左は、あなたが書いたプログラムが実行されるゲームの画面です。その下に、各レベルの説明が書いてあります。
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: 真ん中はツールボックスで、それぞれのブロックにコードが書かれています。右側の空白はワークスペースと呼ばれ、そこで私たちのプログラムを構築します。
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: |
+          まず最初に、オレンジ色の「実行時」ブロックに他のブロックをつなげる必要があります。
+          黄色い線が見えるまでブロックをドラッグすることによって、たくさんの種類のブロックを一緒につなげることが出来ます。
+          
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: 「言う」ブロックをドラッグして「実行した時」ブロックにくっつけて、「こんにちは」と入力することによって「こんにちは」と’話すペンギンになります。私たちはまた「右へ動く」と「左へ動く」ブロックを使うことによってペンギンを動かすこともできます。ブロックを配置したら’実行’ボタンを押すとあなたがプログラミングした結果が見られます。
       6:
         image: notes/playlab_intro_6.png
         text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: |
+          今、私たちはすべてのゲームプログラマーが毎日使う何かについてを教わる予定です。
+          それらは「イベント」と呼ばれます。イベントは何かが起こった時、それをあなたのプログラムに教えてくれます。何かが起こった時、アクションが実行されます。
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: イベントの例としては、マウスをクリックしたり、矢印ボタンやスクリーンを軽くタッチする事を聞くことです。
       3:
         image: notes/playlab_events_3.png
         text: |-
@@ -403,18 +406,17 @@ ja:
         text: これは「ずっと繰り返す」ブロックです。このブロックの中にあるものは、プログラムが終わるまでずっと繰り返されます。
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: もし私たちがキャラに何かを繰り返しさせたかったりプレイヤーがなにもしないとき、私たちは「永遠に繰り返す」ブロックの中にそれらのブロックを置きます。
       3:
         image: notes/playlab_repeat_forever_3.png
         text: この次のパズルでは、魔法使いが王国中を常に右へ左へパトロールできるように助けることが目標です。繰り返しのコマンドを学ぶことで、後で自分のゲームを作る時に役に立つでしょう。
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: These are your draw blocks. Use the correct one to move the artist where he needs to go to fill in the grey lines.
+        text: これらは描画ブロックです。それらをアーティストが灰色の線をつくるのに必要な場所に適切なものを動かして使ってください。
       2:
         image: notes/C1_artist_intro_2.png
-        text: "These are jump blocks. When you use these, your artist moves but doesn't draw, so use these to jump to the next grey line."
+        text: それらはジャンプブロックです。アーティストは動くけれど線が描かれないとき、これらを使用して次の灰色の線にジャンプさせます。
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
@@ -541,28 +543,37 @@ ja:
         text: "This lesson is called move it, move it. Together we're going to write a program to get our friends from the starting with the compass rose to the smiley face goal."
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: "But the smiley is face down and only one person knows how to get there. Let's get this program started."
+        text: |
+          スマイリーは顔を下げたが、たった一人の人はどうやってそこへ行けるか知っている。
+          さあこのプログラムをスタートしよう。
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."
+        text: |
+          プログラムは機械で実行することができるコードを符号化しているアルゴリズムです。
+          ほとんどの人はプログラムはコンピュータのために私たちが書く何かだと考えています。
+          プログラムは他の場面でも役に立つ素晴らしいものです。あなたは自分でゲームを作ることが出来るし、そのプログラムはあなたのためにロボットがする何かにもなります。
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: |-
-          My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
+        text: |
+          エレミヤといいます。こんにちは！私は 7 歳です。
+          私はお母さんのコンピューターで遊ぶことが大好きです。もちろんいつも最初に許可をとりますよ。
+          「お母さん、コンピューターを使っていいでしょ？ねっ！」って。
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: 私はインターネットが使えるので私のお母さんのコンピューターが大好きです。インターネットは、あなたの近所のようなものです。あなたはカッコいい場所を訪れることができますし、あなたは家族や友達と（コンピュータで）話せるし、たくさんの新しいことを教わることができます。
       3:
         image: notes/C1_going_places_safely_3.png
-        text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
+        text: 昨日、私は家の近くの動物園を訪れたの。私は赤ちゃんのシマウマをみたよ。私は写真を撮って縞模様の色を変えて、帽子を追加して、それを私の風変わりな動物コレクションに追加したの。すごいでしょ。そして、私はとっても遠くの場所へ行ったの。私はケニアを訪れたわ。その国はアフリカにあるの。そこにはたくさんのシマウマがいるのよ。
       4:
         image: notes/C1_going_places_safely_4.png
-        text: |-
-          Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the Internet had smellorama!" I can talk to different people on the Internet, like my cousin but I only talk to people I know.
+        text: |
+          時々インターネットでおばあちゃんのような他の地域に住んでいる知っている人と話します。
+          こんにちは。おばあちゃん！彼女は私にクッキーを焼いていて、私の誕生日に送ってくれるの。
+          「おいしいよ。インターネットは smellorama！のようね。」私はインターネットで他の人（知らない人）とはなすこともできるけど、いとこのように私の知っている人とだけ話すわ。
       5:
         image: notes/C1_going_places_safely_5.png
-        text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
+        text: 私が一番好きなインターネットはゲームで遊ぶこと。スコア！私は描いたり新しい何かを作ることや、それを友達と共有することも好きだ。かっこいい！時々私はウェブサイトを訪れて新しい何かを教わるけど、いつもお気に入りのウェブサイトに夢中になってしまいます。うわー恐竜！
       6:
         image: notes/C1_going_places_safely_6.png
         text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
@@ -1440,116 +1451,118 @@ ja:
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: こんにちは、私の名前はチャリ―タ・カーターです。ウォルトディズニーイメージニアリングのシニアクリエイティブプロデューサーです。私はゲストのみなさんが体験するアトラクションを実際に生産するチームで指揮を取っています。いつも心の中にはゲストのみなさんがより良い体験をできるようどう改善していくべきかを見つけています。
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: やったね、おめでとうございます！BB-8をプログラムできました。次はもっと難しいことを用意しています。やってみましょう。もうプログラミングの基礎について勉強したので、R2-D2-とC3POを使って自分のゲームを作るところに戻りましょう。
       3:
         image: notes/starwars_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: ゲームを作るのに、ゲームプログラマーが毎日つかうものを覚えましょう。イベントと呼ばれるものです。イベントはあなたのプログラムに何かしたり、何かあったときに、聞いたり待ったりすることを伝えて、それを実際に実行します。
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: イベントの例としては、マウスをクリックしたり、矢印ボタンやスクリーンを軽くタッチする事を聞くことです。
       5:
         image: notes/starwars_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: 'それではここで、R2-D2を上に移動して、反ぎゃく者にメッセージを伝えて、他の反ぎゃく者を下に移動させます。プレーヤー（ゲームをやる人）がup(上）  /down(下)矢印を使うか、up(上）  /down(下)ボタンを使ったとき、私たちはイベントを使って彼をうごかします。'
       6:
         image: notes/starwars_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down."
+        text: わたしたちは whenUp() のイベント ブロックを使い、goUp() ブロックをくっつけます。プレイヤーが、上矢印キーをおしたら、whenUp() ブロックにくっついているコードが実行されます。そして、R2-d2 を下に移動して同じことを行います。
       7:
         image: notes/starwars_events_7.JPG
-        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+        text: これをやるには、 whenUp() と呼ばれるコマンドを使います。ツールボックスからコマンドを引っ張って持ってくると、それがはじまり、セミコロン（；）のかわりに、中かっこ（｛｝）とおわりが表示されます。これはわたしたちに、途中で他のコマンドを配置するスペースをくれます。かっこの中におく全部のコマンドは、プレイヤーが上矢印を押すと、実行するようになっています。
       8:
         image: notes/starwars_events_8.JPG
-        text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
+        text: R2-D2 を上に動いてほしいので、コマンドの中にgoUp();ブロックをいれてみましょう。そして、R2-D2を下に動かしたいので、同じことをします。
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive.
+        text: そして今、事前にドロイドを操作するのに、全部のコードを書かなくても、R2-D2がスクリーンの周りを動くイベントボタンを押させることができます。一歩一歩あなたのゲームに動きがついてきましたね。
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: 私の名前はアリスです。Code.orgで製品とエンジニアリングチームを受け持っています。そして、今あなたがプレイしているこのチュートリアルを作りました。
       2:
         image: notes/starwars_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: 今最後のレベルに達しました、おめでとう！Star Warsのゲームを自分で作るのに必要なことを全部勉強しました。もうこれ以上の指導はありません、問題を解くパズルもありません。どう動かすかを決めて自分のゲームを作れます。もうひとつ、新しい音と、新しいコマンドをアンロックしたので、もっと出来ることがあります。
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: '[生徒が話している]基本的にブタをつかまえてポイントを取るゲームを作ったんだね。ツイストはブタをつかまえるたびにストーム ・ トルーパーが現れるんだね。本当はスクリーンいっぱいにブタが埋まっていて、10,000回ブタにタッチすると、君の勝ちだよ。'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: '[生徒が話している]全部殺すとポイントがもらえて、負けがないゲームを作ったよ。僕のプログラムでは、キーを逆にしたんだ、そうすると上にクリックすると、君のキャラクターが下に動く、右に行くと、君のキャラクタが左に動く。すごく難しいんだよ！自分でゲームを作ると自分に不利なことも有利にできるんだ。あれできたかな？やったぁ！'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: 自分のゲームが作れたら、共有を選択して友達とみせあえるリンクを得たり、自分の携帯で遊べることもできるよ。楽しんでね！
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: "Hi I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: こんにちは、私はキャスリーン ・ ケネディで、す。私は「スター ・ ウォーズ　フォースの覚醒」のプロデューサーです。今日は私たちのメインキャラクタ―である BB-8と一緒に作業をやっていきます。BB-8は球型のドロイドです。彼の動き、彼のやることすべてはコンピューターのソフトウェアによって作られています。コンピュータ 科学は、広告から、医療、映画などあらゆる業界に影響を与えています。　事実、何百ものコンピューター エンジニアの力によって、「フォースの覚醒」のような映画も作られているのです。
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: "Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artist develop rigs, which are the parts of the character that move that allow the character to look very believable in a galaxy far, far away."
+        text: こんにちは私はレイチェル・ローズ、私は ILM でシニア研究開発エンジニアとして、アニメーションと生き物の開発チームをリードしています。「フォースの覚醒」で、私はアーティストが、はるか遠くの銀河でもリグというキャラクターが本物そっくりに動いているような動きができる開発をする支援をしています。
       3:
         image: notes/starwars_blocks_intro_3.JPG
         text: 次の１時間は、自分でスターウォーズのゲームを作りながら、プログラミングの基本的な考え方を学びます。ふつう、プログラミングはテキストで書かれますが、ここではブロックを移動したりはなしたりして、プログラミングを書いていきます。それでは初めに、レイと一緒に、BB-8の部品を回収しながら歩くプログラミングを作る作業を行います。
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
+        text: 画面は、3 つの部分に分割されます。左はスター ・ ウォーズのゲーム スペース コードが実行されます。各レベルの指示は、ゲーム空間下に書いてあります。
       5:
         image: notes/starwars_blocks_intro_5.JPG
         text: 真ん中はツールボックスになっていてそれぞれのブロックはBB-8が理解できる命令を下します。
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we're going to build our program."
+        text: 右側にある白いスペースはワークスペースと呼ばれ、ここが私たちのプログラムを作るところです。
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8 moves left one block on the grid.
+        text: moveLeft(); ブロックをワークスペースの方にドラッグをすると、何が起こるでしょう？BB-8 は、グリッドの上をブロック一つ分左に動きます。
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together. When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace."
+        text: もしBB-8で moveLeft();ブロックの後、何かをしたかったら？別のブロックを自分のプログラムにいれることができます。それでは私はMoveUp(); を選んで、私の moveLeft(); ブロックの下にハイライトが出てくるまで移動させます。2つのブロックがくっついたらマウスを離します。実行をもう一度押すと、BB-8がワークスペースの上と下にくっついた命令に従います。
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox.
+        text: |
+          ブロックがいらなかったら、くっついているところから離して、ツールボックスの中に移動します。
+          
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: "After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: 実行をした後は、休憩ボタンを押せばBB-8 を初めに戻せます。それでは一緒にやってみましょう!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: こんにちは、私の名前はチャリ―タ・カーターです。ウォルトディズニーイメージニアリングのシニアクリエイティブプロデューサーです。私はゲストのみなさんが体験するアトラクションを実際に生産するチームで指揮を取っています。いつも心の中にはゲストのみなさんがより良い体験をできるようどう改善していくべきかを見つけています。
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: やったね、おめでとうございます！BB-8をプログラムできました。次はもっと難しいことを用意しています。やってみましょう。もうプログラミングの基礎について勉強したので、R2-D2-とC3POを使って自分のゲームを作るところに戻りましょう。
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: ゲームを作るのに、ゲームプログラマーが毎日つかうものを覚えましょう。イベントと呼ばれるものです。イベントはあなたのプログラムに何かしたり、何かあったときに、聞いたり待ったりすることを伝えて、それを実際に実行します。
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: イベントの例としては、マウスをクリックしたり、矢印ボタンやスクリーンを軽くタッチする事を聞くことです。
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: 'それではここで、R2-D2を上に移動して、反ぎゃく者にメッセージを伝えて、他の反ぎゃく者を下に移動させます。プレーヤー（ゲームをやる人）がup(上）  /down(下)矢印を使うか、up(上）  /down(下)ボタンを使ったとき、私たちはイベントを使って彼をうごかします。'
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
+        text: whenUp() イベント ブロックを使って、goUp()に ブロックをくっつけます。プレイヤーは、上矢印キーを押したときに、whenUp() ブロックについているコードが実行されます。R2-D2 を下に移動して同じことを行います。今度は、事前にコードを全部を書く代わりに、R2-D2に自分をスクリーンの周りを回転させるイベントボタンを押させることができます。
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: だんだん、あなたのゲームに動きがついてきました。
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: 私の名前はアリスです。Code.orgで製品とエンジニアリングチームを受け持っています。そして、今あなたがプレイしているこのチュートリアルを作りました。
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: 今最後のレベルに達しました、おめでとう！Star Warsのゲームを自分で作るのに必要なことを全部勉強しました。もうこれ以上の指導はありません、問題を解くパズルもありません。どう動かすかを決めて自分のゲームを作れます。もうひとつ、新しい音と、新しいコマンドをアンロックしたので、もっと出来ることがあります。
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: '[生徒が話している]基本的にブタをつかまえてポイントを取るゲームを作ったんだね。ツイストはブタをつかまえるたびにストーム ・ トルーパーが現れるんだね。本当はスクリーンいっぱいにブタが埋まっていて、10,000回ブタにタッチすると、君の勝ちだよ。'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: '[生徒が話している]全部殺すとポイントがもらえて、負けがないゲームを作ったよ。僕のプログラムでは、キーを逆にしたんだ、そうすると上にクリックすると、君のキャラクターが下に動く、右に行くと、君のキャラクタが左に動く。すごく難しいんだよ！自分でゲームを作ると自分に不利なことも有利にできるんだ。あれできたかな？やったぁ！'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: 自分のゲームが作れたら、共有を選択して友達とみせあえるリンクを得たり、自分の携帯で遊べることもできるよ。楽しんでね！
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
@@ -1719,7 +1732,7 @@ ja:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: 右のワークスペースでプログラムを組みます。
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

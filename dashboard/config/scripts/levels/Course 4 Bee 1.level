@@ -6,12 +6,11 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "The bee can't tell what's under the cloud! Use the \"if\" block to check whether there is a flower under the cloud, then only gather nectar from it if it is a flower. ",
+    "instructions": "The bee can't tell what's under the cloud! \r\n\r\nUse the `if` block to check whether there is a flower under the cloud. \r\n\r\nGet nectar one time, ONLY if there is a flower.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "1",
-    "nectar_goal": "1",
     "flower_type": "redWithNectar",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,\"FC\",0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
@@ -21,7 +20,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"if_bee_nectar\",\"callout_text\":\"Use the \\\"if\\\" block to decide if the bee should get nectar\",\"element_id\":\"#if_bee_nectar_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"right center\",\"at\":\"left center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"if_bee_nectar\",\r\n  \"callout_text\": \"Use the \\\"if\\\" block to decide if the bee should get nectar or make honey\",\r\n  \"element_id\": \"#if_bee_nectar_qtip\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "video_key": "C4_bee_conditional",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -30,11 +29,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "The bee can't tell what's under the cloud! Use the `if` block to check whether there is a flower under the cloud, then only gather nectar from it **if** it is a flower. ",
+    "markdown_instructions": "The bee can't tell what's under the cloud! \r\n\r\nUse the `if` block to check whether there is a flower under the cloud. \r\n\r\nGet nectar one time, **ONLY** if there is a flower.",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "fast_get_nectar_animation": "false"
-  }
+    "fast_get_nectar_animation": "false",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":2,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -47,7 +49,6 @@
           <title name="DIR">turnLeft</title>
         </block>
         <block type="maze_nectar"/>
-        <block type="maze_honey"/>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
@@ -56,9 +57,8 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
-        <block type="maze_moveForward"/>
         <block type="pick_one">
           <statement name="PICK">
             <block type="bee_ifFlower">
@@ -71,8 +71,29 @@
             </block>
           </statement>
         </block>
-        <block type="maze_nectar"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+              <next>
+                <block type="bee_ifFlower" id="if_bee_nectar_qtip">
+                  <title name="LOC">atFlower</title>
+                  <statement name="DO">
+                    <block type="maze_nectar"/>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

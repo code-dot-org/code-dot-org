@@ -6,7 +6,6 @@ module Ops
 
     setup do
       @admin = create(:admin)
-      sign_in @admin
       @workshop = create(:workshop)
       @cohort = @workshop.cohorts.first
       @cohort_district = create(:cohorts_district, cohort: @cohort)
@@ -24,7 +23,6 @@ module Ops
     test 'Facilitators can view all workshops they are facilitating' do
       # GET /ops/workshops
       #87055150 (part 1)
-      sign_out @admin
       sign_in @workshop.facilitators.first
       get :index
       assert_response :success
@@ -62,6 +60,7 @@ module Ops
     end
 
     test 'Ops team can add multiple cohorts to a workshop' do
+      sign_in @admin
       another_cohort = create(:cohort)
       workshop_params = {"id"=>@workshop.id, "name"=>@workshop.name, "program_type"=>"5", "location"=>@workshop.location, "instructions"=>nil, "cohorts"=>[{"id"=>@cohort.id}, {"id"=>another_cohort.id}], "facilitators"=>nil, "teachers"=>nil}
       patch :update, id: @workshop.id, workshop: workshop_params
@@ -72,7 +71,6 @@ module Ops
 
     test 'District contacts can view all workshops in all cohorts in their district' do
       #87054994 (part 1)
-      sign_out @admin
       sign_in @district.contact
       get :index
       assert_response :success
@@ -82,13 +80,18 @@ module Ops
     # Test index + CRUD controller actions
 
     test 'list all workshops' do
+      sign_in @admin
+
       assert_routing({ path: "#{API}/workshops", method: :get }, { controller: 'ops/workshops', action: 'index' })
 
       get :index
       assert_response :success
+
+      assert_equal Workshop.count, JSON.parse(@response.body).length
     end
 
     test 'Ops team can create workshops' do
+      sign_in @admin
       #87054134
       assert_routing({ path: "#{API}/workshops", method: :post }, { controller: 'ops/workshops', action: 'create' })
 
@@ -109,6 +112,8 @@ module Ops
     end
 
     test 'ops team can add facilitators to workshops' do
+      sign_in @admin
+
       assert_routing({ path: "#{API}/workshops/1", method: :patch }, { controller: 'ops/workshops', action: 'update', id: '1' })
 
       facilitator_params = @workshop.facilitators.map {|facilitator| {ops_first_name: facilitator.name, email: facilitator.email, id: facilitator.id}}
@@ -129,6 +134,7 @@ module Ops
     end
 
     test 'read workshop info' do
+      sign_in @admin
       assert_routing({ path: "#{API}/workshops/1", method: :get }, { controller: 'ops/workshops', action: 'show', id: '1' })
 
       get :show, id: @workshop.id
@@ -136,6 +142,7 @@ module Ops
     end
 
     test 'update workshop info' do
+      sign_in @admin
       assert_routing({ path: "#{API}/workshops/1", method: :patch }, { controller: 'ops/workshops', action: 'update', id: '1' })
 
       new_name = 'New workshop name'
@@ -147,6 +154,7 @@ module Ops
     end
 
     test 'delete workshop' do
+      sign_in @admin
       assert_routing({ path: "#{API}/workshops/1", method: :delete }, { controller: 'ops/workshops', action: 'destroy', id: '1' })
 
       assert_difference 'Workshop.count', -1 do
@@ -157,12 +165,10 @@ module Ops
 
     # Access tests
     test 'Anonymous users cannot affect workshops' do
-      sign_out @admin
       all_forbidden
     end
 
     test 'Logged-in teachers cannot affect workshops' do
-      sign_out @admin
       sign_in create(:user)
       all_forbidden
     end
@@ -173,6 +179,5 @@ module Ops
       get :show, id: @workshop.id
       assert_response :forbidden
     end
-
   end
 end

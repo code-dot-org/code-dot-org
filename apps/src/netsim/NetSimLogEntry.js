@@ -1,18 +1,6 @@
 /**
  * @overview Simulation entity for router log entries.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 5,
- maxstatements: 200
- */
 'use strict';
 
 var moment = require('moment');

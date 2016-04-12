@@ -142,8 +142,7 @@
 "gl": "gl-ES"
 "gl-ES":
   english: "Galician"
-  native: "Galiza"
-  debug: true
+  native: "Galego"
 
 "he": "he-IL"
 "he-IL":
@@ -202,8 +201,7 @@
 "ka-GE":
   english: "Georgian"
   native: "ქართული"
-  webfonts: false  
-  debug: true
+  webfonts: false
 
 "ko": "ko-KR"
 "ko-KR":
@@ -214,9 +212,8 @@
 "kk": "kk-KZ"
 "kk-KZ":
   english: "Kazakh"
-  native: "Қазақ Tілі"
+  native: "Қазақша"
   webfonts: false
-  debug: true
 
 "km": "km-KH"
 "km-KH":
@@ -242,6 +239,12 @@
   english: "Latvian"
   native: "Latviešu"
   webfonts: false
+
+"mi": "mi-NZ"
+"mi-NZ":
+  english: "Maori"
+  native: "Māori"
+  debug: true
 
 "mk": "mk-MK"
 "mk-MK":
@@ -323,6 +326,12 @@
   english: "Russian"
   native: "Русский"
   webfonts: false
+
+"se": "se-FI"
+"se-FI":
+  english: "Northern Sami"
+  native: "Davvisámegiella"
+  debug: true
 
 "si": "si-LK"
 "si-LK":

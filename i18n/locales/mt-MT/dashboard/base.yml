@@ -24,10 +24,14 @@ mt:
   hello: Haw Lilly
   welcome_back: 'Merħba lura, %{name}'
   submit: Submit
+  unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Żid Għalliem:'
       placeholder: Sezzjoni kodiċi (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Żid għalliem
   add_hint_form:
     placeholder: Daħħal suġġeriment tiegħek hawn
@@ -38,6 +42,7 @@ mt:
   puzzle: Loghba
   trophies: Trofej
   courses: Korsijiet
+  unplugged_activity: Attivita bla kompjuter
   of: "ta'"
   more: AKTAR
   less: ANQAS
@@ -215,7 +220,7 @@ mt:
       free_play:
         playlab: Agħmel App
         artist: Pinġi Xi Ħaġa
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Agħmel App
     user:
       classroom: Teacher Home Page
@@ -248,57 +253,10 @@ mt:
     remove: (neħħi l-għalliem)
     confirm:
       remove: Żgur tixtieq tneħħi dan l-għalliem?
-    tools: Għodod tal-Għalliem
-    followers:
-      section: 'Taqsima:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Komplut, perfett
-      completed: "Lest, iżda bl-użu ta' wisq blokok"
-      tried: Ippruvajt, iżda mhux lest
-      not_tried: "Għadni ma' ppruvajtx"
-      activity: 'Indicates student activity in the last %{hours} %{plural}'
-      no_section: L-ebda taqsima assenjata
-      trophies: Trofej
     students:
-      name: Name
-      username: Isem l-utent
-      password: Password
-      manage: Iġġestixxi l-istudenti
       dashboard: Żur il-Pannell tal-Kontroll tal-Għalliem
-      add: Żid l-istudenti
-      remove: neħħi l-istudent
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Itlob l-istudenti tiegħek iżuru
-      section_code: 'u jdaħħlu l-kodiċi tat-taqsima tagħhom:'
-      first_please: 'First, please %{add_section}'
-      for: Għall-
-      enter: 'daħħal:'
-    sections:
-      add: Żid Sezzjoni
-      manage: Immaniġġja sezzjonijiet
-      section: It-Taqsima
-      students: Studenti
-      section_code: Kodici tas-Sezzjoni
-      add_section_code: Żid kodiċi tat-Taqsima tal-istudenti
-      secret: "Tip ta' Sigriet"
-      grade: Grad
-      course: Kors
-      rename: Ibdel l-isem
-      edit: editja
-      delete: ħassar
-      confirm_delete: Żgur tixtieq tħassar din is-Sezzjoni?
-      email: Ibgħat bil-posta elettronika
-    rollup: Progress Dashboard
-    activity: L-attività riċenti tal-klassi
-    user_not_found: L-għalliem jew student ma nstabx
-    cant_remove_student_no_email: '%{student_name} ma jistax jitneħħa bħala student tiegħek għax %{student_name} ma irregistrax l-indirizz elettroniku tieghu'
-    cant_remove_teacher_no_email: '%{teacher_name} ma jistax jitneħħa bħala għalliem tiegħek għax inti ma rreġistrajtx indirizz elettroniku'
-    student_teacher_disassociated: "%{teacher_name} tneħħa bħala għalliem ta' %{student_name}"
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Werrej tar-risposta
       student: Student
@@ -323,10 +281,6 @@ mt:
   user_level:
     completed: Lesta
     tried: Ppruvat
-  user_stats:
-    recent_activity: Attività riċenti
-    show_more: Uri aktar
-    classroom_activity: Attivita bla kompjuter
   home:
     title: Code Stuwdjo
     description: Code Studio huwa id-dar tal-korsijiet online maħluqa mill-Code.org
@@ -364,6 +318,7 @@ mt:
     heading_hoc2014: '<h2>Is-siegħa tal-Kodiċi għall-</h2> <h1>L-etajiet kollha</h1>'
     heading_elementary: '<h2> korsijiet t-20 siegħa għall-</h2> <h1>fundamenti tax-Xjenza fil-Kompjuter (etajiet kollha)</h1>'
     heading_apps: '<h2>Gost għal</h2> <h1>Kulħadd.</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Il-kors aċċellerata għall-</h2> <h1>L-etajiet kollha</h1>'
     your_gallery: Gallery
     no_primary_course: Ipprova kors tal-Code Studio
@@ -372,6 +327,7 @@ mt:
   share:
     title: Tgħallem fil-Code Studio
     description: "Kulħadd jistgħa jitgħallem ix-xjenza tal-kompjuter. Ghamel logħob, apps u arti b ' kodiċi."
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Maskili
     female: Femminili
@@ -384,8 +340,9 @@ mt:
       Aħna jirringrazzjaw <a href="https://code.org/about/donors"> donaturi</a>, <a href="https://code.org/about/partners"> imsieħba</a>, <a href="https://code.org/about/team"> tim estiż</a>, tagħna, tal-vidjo, tagħna <a href="https://code.org/about/advisors"> konsulenti ta ' l-edukazzjoni</a> għall-appoġġ tagħhom fil-ħolqien tal-Code Studio.
     help_from_html: "Irridu speċjalment li jirrikonoxxu l-inġiniera minn Google, Microsoft, Facebook, Twitter, u ħafna oħrajn li għenu fil-holqien ta' dawn il-materjali."
     help_from_html_old: Inġiniera minn Google, Microsoft, Facebook u Twitter għenu biex jinholqu dawn il-materjali.
-    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Drittijiet tal-Awtur
@@ -402,6 +359,7 @@ mt:
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Teħtieġ l-għajnuna?
     subtitle: Ara dawn il-vidjos u suġġerimenti
@@ -457,6 +415,12 @@ mt:
       current: Livelli kurrenti
       unused: Livelli mhux użati
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Classic Maze
       body: Ipprova dan it-taghlim baziku tax-xjenza tal-kompjuter. Milljuni bhalek pprovaw diga.
@@ -493,15 +457,15 @@ mt:
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} ilu'
     header: Gallery
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Stories and games
+    header_artist: Code art
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
     report_bug: Report Bug
     support: Ikseb l-Għajnuna
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: It-tweġiba żbaljata
     wrong_body: "The answer you've entered is not correct.  Please try again!"
@@ -509,6 +473,23 @@ mt:
     correct_body: Dik hi t-tweġiba t-tajba.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Thank you
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting answers.
+    correct_title: Thank you
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting answers.
+    correct_title: Thank you
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Soluzzjoni mhux korretta
     wrong_body: "The solution you've entered is not correct.  Please try again!"
@@ -526,6 +507,8 @@ mt:
     placeholder: Enter your answer here
     open_response_title: Grazzi
     open_response_body: Thanks for your response!
+    correct_title: Korrett
+    correct_body: Dik hi t-tweġiba t-tajba.
   dialog:
     ok: OK
     startover_title: Are you sure you want to start over?
@@ -579,6 +562,7 @@ mt:
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
     assessment: evalwazzjoni
+    submitted: submitted
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
@@ -601,8 +585,8 @@ mt:
     name: Name
     updated: Aġġornat
     project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time.'
+    need_help: Try these courses to help you get started with your new project
     really_delete: Delete?
     delete_yes: 'Yes'
     delete_no: 'No'
@@ -635,3 +619,7 @@ mt:
           other: Other
         detail: Please provide as much detail as possible regarding the content you are reporting.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

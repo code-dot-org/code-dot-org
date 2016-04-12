@@ -6,6 +6,10 @@ var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('lodash');
 
+// take advantage of the fact that we expose the filesystem via
+// localhost:8001
+var imageUrl = '//localhost:8001/apps/static/flappy_promo.png';
+
 module.exports = {
   app: "applab",
   skinId: "applab",
@@ -17,6 +21,7 @@ module.exports = {
     // up with any errors
     {
       description: "UI controls",
+      timeout: 20000,
       editCode: true,
       xml:
           'button("id1", "text");\n' +
@@ -139,7 +144,7 @@ module.exports = {
         testUtils.runOnAppTick(Applab, 2, function () {
           var debugOutput = document.getElementById('debug-output');
           assert.equal(debugOutput.textContent, "WARNING: Line: 1: button() id parameter refers to an id (button1) which already exists.");
-          Applab.onPuzzleComplete(); 
+          Applab.onPuzzleComplete();
         });
       },
       expected: {
@@ -151,13 +156,18 @@ module.exports = {
       description: "testIllegalNameError",
       editCode: true,
       xml: "" +
-        "button('runButton', 'Bad name for a button');",
+        "button('runButton', 'Bad name for a run button');" +
+        "button('submitButton', 'Bad name for a submit button');",
       runBeforeClick: function (assert) {
         testUtils.runOnAppTick(Applab, 2, function () {
           var debugOutput = document.getElementById('debug-output');
-          assert.equal(debugOutput.textContent, "ERROR: Line: 1: Error: button() id parameter refers to an id " +
-              "(runButton) which is already in use outside of Applab. Choose a different id.");
+          assert.equal(debugOutput.textContent,
+              "ERROR: Line: 1: Error: button() id parameter refers to an id " +
+              "(runButton) which is already in use outside of Applab. Choose a different id." +
+              "ERROR: Line: 2: Error: button() id parameter refers to an id " +
+              "(submitButton) which is already in use outside of Applab. Choose a different id.");
           assert(!$('#divApplab #runButton')[0], 'No button named runButton should appear in applab');
+          assert(!$('#divApplab #runButton')[0], 'No button named submitButton should appear in applab');
           Applab.onPuzzleComplete();
         });
       },
@@ -188,5 +198,150 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
+    {
+      description: "cosmetic changes in html sanitization do not cause warnings",
+      timeout: 20000,
+      editCode: true,
+      xml: '' +
+      'write(\'' +
+        '<div id="container">' +
+        '<img id="image1" src="">' +
+        '<img id="image2" src="' + imageUrl + '" />' +
+        '</div>' +
+      '\')\n;',
+
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          // Element.outerHTML undoes some of the cosmetic changes made by the sanitizer.
+          var expectedHtml = '' +
+            '<div id="container">' +
+            '<img id="image1" src="">' +
+            '<img id="image2" src="' + imageUrl + '">' +
+            '</div>';
+          assert.equal($('#divApplab #container')[0].outerHTML, expectedHtml, 'container has unexpected outerHTML');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      description: "substantial changes in html sanitization do cause warnings",
+      timeout: 20000,
+      editCode: true,
+      xml: '' +
+      'write(\'' +
+        '<div id="container">' +
+          '<img id="image3" src="">' +
+          '<img id="image4" src="' + imageUrl + '" />' +
+          '<img id="image5" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />' +
+          '<img id="image6" src="javascript:alert()" />' +
+          '<script>alert()</script>' +
+        '</div>' +
+      '\')\n;',
+
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var expectedHtml = '' +
+            '<div id="container">' +
+            '<img id="image3" src="">' +
+            '<img id="image4" src="' + imageUrl + '">' +
+            '<img id="image5" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">' +
+            '<img id="image6">' +
+            '</div>';
+          assert.equal($('#divApplab #container')[0].outerHTML, expectedHtml, 'container has unexpected outerHTML');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        var expectedOutput ='' +
+          'WARNING: Line: 1: The following lines of HTML were modified or removed:\n' +
+          '<img id="image6" src="javascript:alert()" />\n' +
+          '<script>alert()\n</script>\n' +
+          'original html:\n' +
+          '<div id="container">' +
+          '<img id="image3" src="">' +
+          '<img id="image4" src="//localhost:8001/apps/static/flappy_promo.png" />' +
+          '<img id="image5" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />' +
+          '<img id="image6" src="javascript:alert()" /><script>alert()</script></div>\n' +
+          'modified html:\n' +
+          '<div id="container">' +
+          '<img id="image3" src />' +
+          '<img id="image4" src="//localhost:8001/apps/static/flappy_promo.png" />' +
+          '<img id="image5" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />' +
+          '<img id="image6" /></div>';
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, expectedOutput);
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      description: "invalid ids in html sanitization give specific warnings",
+      timeout: 20000,
+      editCode: true,
+      xml: '' +
+      'write(\'' +
+      '<div id="container">' +
+      '<div id="mydiv">one</div>' +
+      '<div id="divApplab">two</div>' +
+      '<div id="runButton">three</div>' +
+      '<div id="submitButton">four</div>' +
+      '</div>' +
+      '\')\n;',
+
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var expectedHtml = '' +
+            '<div id="container">' +
+            '<div id="mydiv">one</div>' +
+            '<div>two</div>' +
+            '<div>three</div>' +
+            '<div>four</div>' +
+            '</div>';
+          assert.equal($('#divApplab #container')[0].outerHTML, expectedHtml, 'container has unexpected outerHTML');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        var expectedOutput ='' +
+          'WARNING: Line: 1: The following lines of HTML were modified or removed:\n' +
+          '<div id="divApplab">two\n' +
+          '<div id="runButton">three\n' +
+          '<div id="submitButton">four\n' +
+          'original html:\n' +
+          '<div id="container"><div id="mydiv">one</div><div id="divApplab">two</div><div id="runButton">three</div><div id="submitButton">four</div></div>\n' +
+          'modified html:\n' +
+          '<div id="container"><div id="mydiv">one</div><div>two</div><div>three</div><div>four</div></div>\n' +
+          'warnings:\n' +
+          'element id is already in use: divApplab\n' +
+          'element id is already in use: runButton\n' +
+          'element id is already in use: submitButton';
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, expectedOutput);
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    }
   ]
 };

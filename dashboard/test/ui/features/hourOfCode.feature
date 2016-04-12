@@ -17,17 +17,12 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   Then I wait to see a dialog titled "Puzzle 2 of 20"
   And I close the dialog
   When element "#runButton" is visible
-  Then element ".header_middle a.level_link:first" has class "perfect"
+  And I verify progress in the header of the current page is "perfect" for level 1
   # Course overview should also show progress
-  Then I am on "http://studio.code.org/s/hourofcode"
-  And I wait to see ".user-stats-block"
-  And element ".user-stats-block a.level_link:first" has class "perfect"
+  Then I navigate to the course page and verify progress for course "hourofcode" stage 1 level 1 is "perfect"
   # Course overview in a different script shouldn't show progress
   Then I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/2?noautoplay=true"
-  And I wait to see a dialog titled "Puzzle 2 of 20"
-  And I close the dialog
-  And element "#runButton" is visible
-  And element ".header_middle a.level_link:first" does not have class "perfect"
+  And I verify progress in the header of the current page is "not_tried" for level 1
   # Level source is saved
   Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I wait to see a dialog titled "Puzzle 1 of 20"

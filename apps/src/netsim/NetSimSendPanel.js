@@ -3,18 +3,6 @@
  *           which is used to transmit packets.
  * @see NetSimPacketEditor which is used extensively here.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 var utils = require('../utils');
@@ -302,7 +290,7 @@ NetSimSendPanel.prototype.removePacket_ = function (packet) {
   // Remove from DOM
   var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   packet.getRoot()
-      .slideUp('fast', function() {
+      .slideUp('fast', function () {
         $(this).remove();
         updateLayout();
       });

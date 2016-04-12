@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# 74639 contacts
+../send-to-mailing-list 3-17-recruit-code-studio ./inactive-teachers-deduped.csv

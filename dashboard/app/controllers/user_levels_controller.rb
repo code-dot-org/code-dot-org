@@ -2,6 +2,7 @@ class UserLevelsController < ApplicationController
   before_filter :authenticate_user!
   check_authorization
   load_and_authorize_resource
+  protect_from_forgery except: [:update] # referer is the script level page which is publically cacheable
 
   before_action :set_user_level
 
@@ -23,6 +24,6 @@ class UserLevelsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_level_params
-    params.require(:user_level).permit(:best_result)
+    params.require(:user_level).permit(:best_result, :submitted)
   end
 end

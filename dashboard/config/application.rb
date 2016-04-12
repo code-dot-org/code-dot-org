@@ -23,13 +23,32 @@ module Dashboard
   class Application < Rails::Application
 
     if Rails.env.development?
-      require 'cdo/rack/whitelist_cookies'
+      require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
-      config.middleware.insert_before ActionDispatch::Cookies, Rack::WhitelistCookies,
+      config.middleware.insert_before ActionDispatch::Cookies, Rack::Whitelist::Downstream,
         HttpCache.config(rack_env)[:dashboard]
+
+      require 'rack/cache'
+      config.middleware.insert_before ActionDispatch::Cookies, Rack::Cache, ignore_headers: []
+
+      config.middleware.insert_after Rack::Cache, Rack::Whitelist::Upstream,
+        HttpCache.config(rack_env)[:dashboard]
+
+      Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
     end
+
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
     config.middleware.insert_after VarnishEnvironment, FilesApi
+
+    if CDO.throttle_data_apis
+      require 'cdo/rack/attack'
+
+      # Start dynamic RackAttack configuration updates.
+      RackAttackConfigUpdater.new.start
+
+      config.middleware.insert_after VarnishEnvironment, Rack::Attack
+    end
+
     config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, PropertiesApi
     config.middleware.insert_after PropertiesApi, TablesApi
@@ -80,7 +99,6 @@ module Dashboard
     config.prize_providers = YAML.load_file("#{Rails.root}/config/prize_providers.yml")
 
     config.assets.paths << Rails.root.join('./public/blockly')
-    config.assets.paths << Rails.root.join('./public/shared/js')
     config.assets.paths << Rails.root.join('./public/code-studio')
     config.assets.paths << Rails.root.join('../shared/css')
     config.assets.paths << Rails.root.join('../shared/js')
@@ -88,20 +106,12 @@ module Dashboard
     config.assets.precompile += %w(
       js/*.js
       css/*.css
+      assets/**/*
       angularProjects.js
-      shared.js
-      shared.min.js
-      editor/blockly_editor.css
-      editor/embedded_markdown_editor.js
-      editor/json_editor.css
-      editor/json_editor.js
       levels/*
       jquery.handsontable.full.css
       jquery.handsontable.full.js
-      video/video.js video-js.css video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff
     )
-    config.react.variant = :development
-    config.react.addons = true
     config.autoload_paths << Rails.root.join('lib')
 
     # use https://(*-)studio.code.org urls in mails

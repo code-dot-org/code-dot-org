@@ -1,19 +1,6 @@
 /**
  * @overview Interface to dashboard user data API.
  */
-
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 /**

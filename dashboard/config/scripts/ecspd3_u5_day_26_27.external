@@ -1,0 +1,25 @@
+name 'ECSPD3-u5 day 26-27'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+## Unit 5 Lessons > Days 26-27
+
+#### Concepts Covered 
+No new concepts. 
+
+#### Lesson Overview
+Students will work with their group to incorporate all of the objectives explored in the unit into their final project.  This lesson is a good time to review project expectations, review assessment of learning or a rubric, etc.
+
+#### Lesson Resources 
+
+##### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=258" target=_blank>Lesson Plan link >> </a>
+
+- <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=261" target=_blank>Final Project</a>
+- <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=262" target=_blank>Final Project Sample Rubric</a>
+
+Click “Continue” below to learn about the next lesson. 
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

@@ -1,0 +1,46 @@
+pd 'true'
+title 'Computer Science Principles: Unit 5 PD'
+description ‘Online Support for CSP Unit 5’
+description_short ‘Support for CSP Unit 5'
+login_required 'true'
+
+stage 'Getting Started'
+level 'CSPPD3-u5 Welcome'
+level 'CSPPD3-u5 overview'
+level 'PD check your progress'
+level 'CSPPD3-u5 tips for prep'
+level 'CSPPD3-u2 plan'
+
+stage 'Unit 5 Overview'
+level 'CSPPD3-u5 unit 5 overview'
+level 'CSPPD3-u5 breakdown of u5 chunks'
+level 'CSPPD3-u5 philosophy and tools'
+level 'CSPPD3-u5 unit overview checkin'
+
+stage 'Explore PT Breakdown'
+level 'CSPPD3-u5 chapter 1 concepts'
+level 'CSPPD3-u5 chapter 1 resources'
+level 'CSPPD3-u5 Explore PT checkin'
+
+stage 'Create PT Breakdown'
+level 'CSPPD3-u5 chapter 2 concepts'
+level 'CSPPD3-u5 chapter 2 resources'
+level 'CSPPD3-u5 Create PT checkin'
+
+stage 'Challenge Overview'
+level 'CSPPD3-u5 challenge overview'
+level 'CSPPD3-u5 completing the challenge'
+level 'CSPPD3-u5 list of challenges'
+level 'CSPPD3-u5 pick a challenge'
+
+stage 'Complete the Challenge'
+level 'CSPPD3-u5 complete the challenge overview'
+level 'CSPPD3-u5 do the challenge'
+level 'CSPPD3-u5 reflect on challenge'
+
+stage 'Share out and Submit'
+level 'CSPPD3-u5 share out overview'
+level 'CSPPD3-u5 post to forum'
+level 'CSPPD3-u5 submit forum link'
+level 'CSPPD3-u5 post survey'
+

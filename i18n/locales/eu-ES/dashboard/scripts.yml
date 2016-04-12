@@ -13,14 +13,14 @@ eu:
           description_short: Just an internal test course.
         course1:
           "Jigsaw: Learn to drag and drop": 'Buruhaustea: ikasi arrastatu eta askatzen'
-          "Maze: Sequence": 'Labirinto: Sekuentzia'
+          "Maze: Sequence": 'Labirintoa: Sekuentzia'
           "Maze: Debugging": 'Labirintoa: Arazketa'
           "Artist 1: Intro": 'Artista 1: Sarrera'
           Artists 2: Artistak 2
           Spelling Bee: Letraz-letra
           Spelling Bee not blockly: Letraz-letra ez blocky
           "Bee 1: Intro": 'Erlea 1: Sarrera'
-          "Maze 2: Loops": 'Labirinto 2: Begiztak'
+          "Maze 2: Loops": 'Labirintoa 2: Begiztak'
           "Bee 2: Loops": 'Erle 2: Begiztak'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: LH-1 Flappy
@@ -35,46 +35,46 @@ eu:
           The Big Event: Gertaera Handia
           Going Places Safely: Joan segurtasunez
           description: 'Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago. Ikasleek programazioko oinarrizko kontzeptuak ulertuko dituzte, beste batrzuekin lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak eta lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute, eta elkarbanatu.'
-          "Bee: Sequence": 'Erelea: sekuentzia'
+          "Bee: Sequence": 'Erlea: sekuentzia'
           "Artist: Sequence": 'Artista: sekuentzia'
           "Artist: Shapes": 'Artista: Formak'
-          "Maze: Loops": 'Labirinto: Begiztak'
-          "Bee: Loops": 'Erle: Begiztak'
-          "Studio: Create a Story": 'Joku laborategia: sortu istorioa'
-          "Artist: Loops": 'Artista: begiztak'
+          "Maze: Loops": 'Labirintoa: Begiztak'
+          "Bee: Loops": 'Erlea: Begiztak'
+          "Studio: Create a Story": 'Jolas laborategia: sortu istorioa'
+          "Artist: Loops": 'Artista: Begiztak'
           description_audience: 4-6 urte
-          description_short: Hasi 1 kurtsoarekin irakurle goiztiarrekin.
+          description_short: Hasi 1. kurtsoarekin irakurle goiztiarrekin.
         course2:
           The Maze: labirintoa
           Suzi: Suzi
           The Artist: Artista
-          Artist Debugging: Artistaren arazketa
+          Artist Debugging: 'Artista: Arazketa'
           Bounce: Errebotea
-          "Studio: Create a Story": 'Joku laborategia: sortu istorioa'
-          Artist Loops: Artistaren begiztak
-          Bee Conditionals: Erlearen baldintzazkoak
+          "Studio: Create a Story": 'Jolas laborategia: sortu istorioa'
+          Artist Loops: 'Artista: Begiztak'
+          Bee Conditionals: 'Erlea: Baldintzak'
           Flappy: Flappy
           title: 2. Kurtsoa
-          Bee Loops: Erlearen begiztak
-          Artist Functions: Artistaren funtzioak
-          The Artist Debugging: Artistaren arazketa
-          Bee Debugging: Erlearen arazketa
-          Bee Functions: Erlearen funtzioak
-          Maze Loops: Labiriontoaren begiztak
+          Bee Loops: 'Erlea: Begiztak'
+          Artist Functions: 'Artista: Funtzioak'
+          The Artist Debugging: 'Artista: Arazketa'
+          Bee Debugging: 'Erlea: Arazketa'
+          Bee Functions: 'Erlea: Funtzioak'
+          Maze Loops: 'Labirintoa: Begiztak'
           Graph Paper Programming: Paper grafiko programazioa
           "Real-life Algorithms: Paper Planes": 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
           Getting Loopy: Iteratzen
-          Relay programming: Erreleen programazioa
+          Relay programming: Txandaka programatzen
           Conditionals: Baldintzak
-          Binary Bracelets: Eskumuturreko binarioak
+          Binary Bracelets: Eskumuturreko bitarrak
           The Big Event: Gertaera Handia
           Your Digital Footprint: Zure aztarna digitala
           description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.
-          "Maze: Sequence": 'Labirinto: Sekuentzia'
+          "Maze: Sequence": 'Labirintoa: Sekuentzia'
           "Artist: Sequence": 'Artista: sekuentzia'
-          "Maze: Loops": 'Labirinto: Begiztak'
-          "Artist: Loops": 'Artista: begiztak'
-          "Bee: Loops": 'Erle: Begiztak'
+          "Maze: Loops": 'Labirintoa: Begiztak'
+          "Artist: Loops": 'Artista: Begiztak'
+          "Bee: Loops": 'Erlea: Begiztak'
           "Bee: Debugging": 'Erlea: Arazketa'
           "Artist: Debugging": 'Artista: arazketa'
           "Bee: Conditionals": 'Erlea: baldintzazkoak'
@@ -85,23 +85,23 @@ eu:
           description_short: Hasi 2 kurtosarekin irakurtzen dakiten ikasleekin.
         course3:
           The Maze: labirintoa
-          "Studio: Create a Story": 'Joku laborategia: sortu istorioa'
+          "Studio: Create a Story": 'Jolas laborategia: sortu istorioa'
           The Artist: Artista
           title: 3. Kurtsoa
-          Artist Functions: Artistaren funtzioak
+          Artist Functions: 'Artista: Funtzioak'
           Artist For Loops: Artista begiztentzako
           Artist Nested Loops: Artistaren habiatutako begiztak
-          Bee Conditionals: Erlearen baldintzazkoak
+          Bee Conditionals: 'Erlea: Baldintzak'
           Bee Nested Loops: Erlearen habiatutako begiztak
           Bee Debuggin: Erlearen arazketa
-          Bee Debugging: Erlearen arazketa
-          Bee Functions: Erlearen funtzioak
+          Bee Debugging: 'Erlea: Arazketa'
+          Bee Functions: 'Erlea: Funtzioak'
           Artist Functions with Params: Artistaren parametrodun funtzioak
           Bounce: Errebotea
           Maze Conditionals: Labirintoaren baldintzazkoak
           Artist Functions with Parameters: Artistaren parametrodun funtzioak
           Computational Thinking: Pentsamendu konputazionala
-          Functional Suncatchers: Argizulo funtzionalak
+          Functional Suncatchers: Funtzioak aztertzen
           Songwriting Parameters: Abesti konposaketaren parametroak
           Dice Race: Dado lasterketa
           Internet: Internet
@@ -146,7 +146,7 @@ eu:
           description_short: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
         hourofcode:
           Maze: Labirintoa
-          title: Classic Maze
+          title: Labirinto klasikoa
           description: Informatikaren oinarriak ikasi itzazu Angry Birds, Plants vs Zombies eta Ice Age-ko Scrat-ekin!
           description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
         frozen:
@@ -156,7 +156,7 @@ eu:
           description_short: Erabil dezagun kodea Ana eta Elsarekin bat egin dezagun izotz mundu magiko eta ederra esploratzeko.
         course4:
           description_short: 4. kurtsoa egin ahal izateko, ikasleek 2, eta 3. kurtsoak eginda izan behar dituzte.
-          description: Laugarren ikastaroa, bigarren eta hirugarren ikastaroa egin duten ikasleentzat dago diseinatuta. Ikasleak aurreko mailetan emandako irakasgaietan gehiago sakonduko dute, arazo konplexuagoei erantzun malguagoak emateko. Maila honen amaierarako, ikasleak gai izango dira istorio interaktiboak eta jokoak sortu, eta edozeinekin partekatzeko. 4-8 urte bitartekoentzat gomendatua.
+          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
           "Artist: Variables": 'Artista: aldagaiak'
           "Bee: For Loops": 'Erlea: For Begiztak'
           title: 4. Kurtsoa
@@ -191,9 +191,9 @@ eu:
           description_short: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
           description: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
           Course 4 Prerequisite: 4 kurtsoko aurrebaldintza
-          "Maze: Sequence": 'Labirinto: Sekuentzia'
+          "Maze: Sequence": 'Labirintoa: Sekuentzia'
           "Artist: Sequence": 'Artista: sekuentzia'
-          "Artist: Loops": 'Artista: begiztak'
+          "Artist: Loops": 'Artista: Begiztak'
           "Bee: Conditionals": 'Erlea: baldintzazkoak'
           "Artist: Nested Loops": 'Artista: habiatutako begiztak'
           "Farmer: While Loops": 'Nekazaria: While begiztak'
@@ -421,9 +421,9 @@ eu:
           description_short: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
           description: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
           Course 4 Prerequisite: 4 kurtsoko aurrebaldintza
-          "Maze: Sequence": 'Labirinto: Sekuentzia'
+          "Maze: Sequence": 'Labirintoa: Sekuentzia'
           "Artist: Sequence": 'Artista: sekuentzia'
-          "Artist: Loops": 'Artista: begiztak'
+          "Artist: Loops": 'Artista: Begiztak'
           "Bee: Conditionals": 'Erlea: baldintzazkoak'
           "Artist: Nested Loops": 'Artista: habiatutako begiztak'
           "Farmer: While Loops": 'Nekazaria: While begiztak'
@@ -591,7 +591,8 @@ eu:
           description: Test Wednesday
         cspunit3:
           title: 'CSP Unit 3 - Programming'
-          description_short: Programming
+          title_short: CSP Unit 3
+          description_short: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: Funtzioak
@@ -682,6 +683,7 @@ eu:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -865,7 +867,7 @@ eu:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -918,7 +920,7 @@ eu:
           AppLab: AppLab
           Online PD: Online PD
           title: All the Things!
-          description: All the level types for UI testing
+          description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           description_short: All the level types for UI testing
           Odometer: Odometer
           Vigenere: Vigenere
@@ -927,6 +929,10 @@ eu:
           Pixelation: Pixelation
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
+          Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -1173,7 +1179,7 @@ eu:
           Building a Foundation: Oinarri bat Eraikitzen
           Getting Loopy: Iteratzen
           The Big Event: Gertaera Handia
-          Binary Bracelets: Eskumuturreko binarioak
+          Binary Bracelets: Eskumuturreko bitarrak
           Songwriting: Musika idazten
         afterschool1:
           title: Afterschool 1
@@ -1236,6 +1242,7 @@ eu:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1308,6 +1315,10 @@ eu:
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 5 lessons: Unit 5 lessons
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1317,6 +1328,11 @@ eu:
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: 'Unit 6 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1354,8 +1370,30 @@ eu:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
           Welcome!: Ongi etorri!
@@ -1404,6 +1442,8 @@ eu:
           description_audience: 10-18 bitarteko adina
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Ice Age joku laborategia
           description_short: Ice Age joku laborategiarekin sortu istorio bat edo egin joku bat!
@@ -1464,12 +1504,12 @@ eu:
           description: Gumball joku laborategiarekin sortu istorio bat edo egin joku bat!
           Gumball Play Lab: Gumball joko laborategia
         starwars:
-          title: 'Star Wars: Galaxia bat Coderekin eraikiz'
+          title: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen'
           description_short: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
           description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
           Hour of Code 2015: 2015 Code ordua
         starwarsblocks:
-          title: 'Star Wars: Galaxia bat Coderekin eraikiz'
+          title: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen'
           description_short: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
           description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
           Hour of Code 2015: 2015 Code ordua
@@ -1497,3 +1537,116 @@ eu:
           Welcome!: Ongi etorri!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Itxi
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems
+        cspunit5:
+          title: 'CSP Unit 5 - Performance Tasks'
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: 'CSP Unit 4 - Data'
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Intro to Data: Introduction to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+          The Cost of Free: The Cost of Free
+        CSPPD3-Unit4:
+          title: 'Computer Science Principles: Unit 4 PD'
+          description_short: Support for CSP Unit 4
+          description: Online Support for CSP Unit 4
+          Getting Started: Getting Started
+          Unit 4 Overview: Unit 4 Overview
+          Chapter 1 Overview: Chapter 1 Overview
+          Chapter 2 Overview: Chapter 2 Overview
+          Practice Performance Tasks: Practice Performance Tasks
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit6draft:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, and it concludes with a sampling of example projects that can be built using these tools.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Updating Records: Updating Records
+          Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          "Calc: Evaluation Blocks": 'Calc: Ebaluazio Blokeak'
+          "Eval: Strings and Images": 'Eval: Kateak eta Irudiak'
+          "Unplugged: Contracts": 'Lineaz kanpo: Kontratuak'
+          "Eval: Writing Contracts": 'Eval: Kontratuak idazten'
+          "Calc: Defining Variables": 'Calc: Aldagaiak deinitzen'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Lineaz kanpo: Diseinurako errezeta'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+        AlgebraB:
+          title: Computer Science in Algebra
+          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Lineaz kanpo: Bideo jokoak eta koordenatuen planoak'
+          "Play Lab: Defining Variables (Big Game)": 'Jolas Laborategia: Aldagaiak definitzen (Joko Handia)'
+          "Play Lab: Animation (Big Game)": 'Jolas laborategia: Animazioak'
+          "Unplugged: Booleans": 'Lineaz kanpo: Boolearrak'
+          "Eval: Boolean Operators": 'Eval: Boolear eragileak'
+          "Play Lab: Booleans": 'Jokoen Laborategia: Boolearrak'
+          "Play Lab: Boolean (Big Game)": 'Jokoen Laborategia: Boolearra (Joko Handia)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Lineaz kanpo: Baldintzazko eta zatikako funtzioak'
+          "Eval: Conditionals": 'Eval: Baldintzak'
+          "Unplugged: Collision Detection and the Distance Formula": 'Lineaz kanpo: Talka Atzematea eta Distantzia Formula'
+          "Play Lab: Collision Detection (Big Game)": 'Jokoen Laborategia: Talka Atzematea (Joko Handia)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

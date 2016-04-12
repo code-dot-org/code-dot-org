@@ -132,14 +132,17 @@ function loadGumball(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: 19,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: skin.walkValues[i],
-        emotionCycles: 0,
-        extraEmotions: 3
+        extraEmotions: 3,
+        walkingEmotions: 3
       },
-      timePerFrame: 100
+      animations: {
+        turns: 8,
+        walkingEmotions: 3,
+      },
+      animationFrameDuration: 3
     };
   });
 
@@ -314,14 +317,17 @@ function loadIceAge(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: 19,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: 12,
-        emotionCycles: 0,
-        extraEmotions: 3
+        extraEmotions: 3,
+        walkingEmotions: 3
       },
-      timePerFrame: 100
+      animations: {
+        turns: 8,
+        walkingEmotions: 3,
+      },
+      animationFrameDuration: 3
     };
   });
 
@@ -450,12 +456,14 @@ function loadInfinity(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: 19,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: 12
       },
-      timePerFrame: 100
+      animations: {
+        turns: 8
+      },
+      animationFrameDuration: 3
     };
   });
 
@@ -806,12 +814,14 @@ function loadHoc2015(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: name == 'r2-d2' ? 14 : 16,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: name == 'r2-d2' ? 14 : 8
       },
-      timePerFrame: 100
+      animations: {
+        turns: 8
+      },
+      animationFrameDuration: 3
     };
   });
 
@@ -884,11 +894,10 @@ function loadHoc2015(skin, assetUrl) {
   // of the two maps that use jumbo pieces ("circle" and "horizontal") we
   // return a special version of the map that just uses regular tile pieces.
 
-  skin.getMap = function(background, map) {
+  skin.getMap = function (background, map) {
     if (background == "hoth" && (map == "circle" || map == "horizontal")) {
       return map + "_nonjumbo";
-    }
-    else {
+    } else {
       return map;
     }
   };
@@ -1195,7 +1204,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+    'hazard': { frames: 13, animationFrameDuration: 6, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
   };
 
   // Spritesheet for animated goal.
@@ -1267,12 +1276,15 @@ function loadHoc2015x(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: 21,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: 19
       },
-      timePerFrame: 100
+      drawScale: 2,
+      animations: {
+        turns: 8
+      },
+      animationFrameDuration: 3
     };
   });
   skin['bb-8'].movementAudio = [
@@ -1308,7 +1320,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
 
   // Sounds.
-  skin.sounds = [ 'move1', 'move2', 'move3', 'move4' ];
+  skin.sounds = ['move1', 'move2', 'move3', 'move4'];
 
   skin.soundChoices = [
     ];
@@ -1428,7 +1440,7 @@ function loadStudio(skin, assetUrl) {
     background: skin.assetUrl('background_grid.png'),
   };
 
-  skin.avatarList = [ "dog", "cat", "penguin", "dinosaur", "octopus", "witch",
+  skin.avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus", "witch",
     "bat", "bird", "dragon", "squirrel", "wizard", "alien", "ghost", "monster",
     "robot", "unicorn", "zombie", "knight", "ninja", "pirate", "caveboy",
     "cavegirl", "princess", "spacebot", "soccergirl", "soccerboy", "tennisgirl",
@@ -1444,11 +1456,12 @@ function loadStudio(skin, assetUrl) {
       sprite: skin.assetUrl(name + '_spritesheet_200px.png'),
       dropdownThumbnail: skin.assetUrl(name + '_thumb.png'),
       frameCounts: {
-        normal: 1,
-        animation: 1,
+        normal: 2,
+        holdIdleFrame0Count: 8,
         turns: 7,
         emotions: 3
-      }
+      },
+      animationFrameDuration: 6
     };
   });
 
@@ -1558,7 +1571,7 @@ function loadStudio(skin, assetUrl) {
 }
 
 
-exports.load = function(assetUrl, id) {
+exports.load = function (assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
@@ -1611,7 +1624,7 @@ exports.load = function(assetUrl, id) {
   skin.goalSuccess = skin.assetUrl('goal_success.png');
 
   // Sounds
-  skin.builtinSounds = [ 'start', 'win', 'failure', 'flag' ];
+  skin.builtinSounds = ['start', 'win', 'failure', 'flag'];
   skin.sounds = [
     'rubber', 'crunch', 'goal1', 'goal2', 'wood', 'retro', 'slap', 'hit',
     'winpoint', 'winpoint2', 'losepoint', 'losepoint2'

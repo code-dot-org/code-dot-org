@@ -1,18 +1,6 @@
 /**
  * @overview UI component: An animated SVG metronome.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 var markup = require('./NetSimMetronome.html.ejs');

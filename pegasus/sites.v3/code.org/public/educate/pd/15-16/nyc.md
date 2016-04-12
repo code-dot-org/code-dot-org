@@ -25,16 +25,7 @@ Teachers from Broward, Florida will attend PD in Broward. Please visit the [Brow
 
 All teachers from Boston, New York, and Montogomery County, MD will travel to the PD location to attend the workshop in-person. 
 
-**Save the dates:**
-
-Quarter 1: Saturday, October 17, 2015<br/>
-This workshop will be in New York.
-
-Quarter 2: Saturday, December 5, 2015<br/>
-This workshop will be in Montgomery County, Maryland.
-
-Quarter 3: Saturday, February 27, 2016<br/>
-This workshop will be in New York.
+**Save the date:**
 
 Quarter 4: Saturday, April 9, 2016<br/>
 This workshop will be in Montgomery County, Maryland.
@@ -44,12 +35,14 @@ This workshop will be in Montgomery County, Maryland.
 Breakfast and lunch will be served.
 
 
-**February 27th Location**
+**Location**
 
-[General Assembly <br/>
-Level 3 Concourse Room<br/>
-10 E 21st St<br/>
-New York, NY 10010](https://www.google.com/maps/place/General+Assembly+New+York/@40.739884,-73.990081,15z/data=!4m2!3m1!1s0x0:0x3884039b8867e84b)
+[I/O Spaces
+<br/>
+8120 Fenton Street<br/>Suite 202<br/> 
+Silver Spring, MD 20910](https://goo.gl/maps/puTUhhZYrMA2)
+
+Free parking is available in front of the building, and  in the lot near the track.
 
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -65,7 +58,7 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
+Teachers from Maryland, Boston, and New York will be attending the East Coast CSP Phase 4 Workshop. Please visit [this page](/educate/pd/15-16/csp-east) for your workshop details.
 
 [**Back to the top**](#top)
 
@@ -80,14 +73,7 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-**Save the dates:**<br/>
-
-<i>Due to low attendance, all attendees will now be in one group.</i><br/>
-Quarter 1: Saturday, October 3, 2015
- 
-Quarter 2: Saturday, November 14, 2015
-
-Quarter 3: Saturday, February 6, 2016
+**Save the date:**<br/>
 
 Quarter 4: Saturday, April 16, 2016
 
@@ -95,7 +81,7 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**February 6th Location**
+**Location**
 
 [Microsoft<br/>
 Music Box 5411<br/>
@@ -116,7 +102,36 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
+Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
+will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+
+
+**Save the Dates**
+
+Monday, July 18th - Wednesday, July 20th
+<br />
+8:30am - 3:30pm
+<br />
+
+Breakfast and lunch will be served.
+
+**Location**
+
+[General Assembly <br/>
+Level 3 Concourse Room<br/>
+10 E 21st St<br/>
+New York, NY 10010](https://www.google.com/maps/place/General+Assembly+New+York/@40.739884,-73.990081,15z/data=!4m2!3m1!1s0x0:0x3884039b8867e84b)
+
+**What do I bring to my Phase 4 Workshop?**
+
+Exploring Computer Science binder with curriculum 
+<br />
+Green Code.org journal 
+<br />
+Laptop and Charger<br/>
+Snacks<br/>
+Water Bottle
+<br />
 
 [**Back to the top**](#top)
 
@@ -132,43 +147,12 @@ Milestone Complete!
 Milestone Complete!
 ### Phase 2: Blended Learning Institute (2 days in-person) ###
 
-
-
 Milestone Complete!
 
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the dates:**
-
-Semester 1: Saturday, October 3, 2015
-
-Semester 2: Saturday, February 6, 2016
-
-8:00am - 4:00pm
-<br/>
-Breakfast and lunch will be served.
-
-**February 6th Location**
-
-[Microsoft<br/>
-Central Park East 6501A<br/>
-11 Times Square<br/>
-New York, NY 10036](https://www.google.com/maps/search/Microsoft,+11+Times+Square,+New+York,+NY+10036/@40.7567826,-73.9906628,18z)
-
-
-**What to bring to Phase 3 bi-yearly sessions:**
-
-Laptop and Charger
-<br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Milestone Complete!
 
 
 [**Back to the top**](#top)

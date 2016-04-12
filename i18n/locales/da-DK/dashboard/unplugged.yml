@@ -177,8 +177,8 @@ da:
         desc: Opdag, hvordan dine elskede computerspil faktisk er styret af algebra! Udforsk hvordan koordinatsystemet og algebra kan hjælpe os til at forstå hvordan computerspil virker, og begynd så at planlægge det computerspil, du vil bygge.
         video: alg_11_coordinate_plane
       Contracts:
-        title: Contracts, Domain, and Range
-        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
+        title: Kontrakter, domæne og rækkevidde
+        desc: Kontrakter, der giver os en måde at forstå og diskutere funktioner. I denne lektion vil vi se på hvordan kontrakter kan hjælpe os med at finde op og ned på et nyt programmeringssprog eller funktion.
         video: alg_5_contracts
       DesignRecipe:
         title: Design opskrift
@@ -186,13 +186,13 @@ da:
         video: alg_8_design_recipe
       Booleans:
         title: Booleanske værdier og logik
-        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
+        desc: Boolesk er den fjerde og sidste datatype, som du vil lære om i dette kursus. Her vil du lære hvad boolesk er, og hvordan de kan hjælpe os skrive funktioner der tænker logisk
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Konditioner og stykvise funktioner
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        desc: De parametre, vi sender til funktioner resultere i varieret resultater baseret på et meget styrret mønster. Hvad hvis vi vil have parametre med nogle værdier til at give nogen resultater ved hjælp af et mønster, men andre værdier til at bruge et andet mønster. Det er her hvor betingelser kommer ind...
         video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection and the Pythagorean Theorem
-        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        title: Opdage sammenstød og den pythagoræiske læresætning
+        desc: At afgøre hvornår objekter på skærmen røre er et vigtigt aspekt af de fleste spil. I denne lektion vil vi se på hvordan den pythagoræiske læresætning og afstandsformlen kan bruges til at måle afstanden mellem to punkter på skærmen, og derefter beslutte, om disse to punkter (eller spilobjekter) rører.
         video: alg_16_biggame_collision_detection

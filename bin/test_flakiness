@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+# Determine how flaky our UI tests by measuring recent failure rate
+# using data from the Saucelabs API. Prints out every UI test from
+# least flaky to most flaky.
+
+require_relative '../deployment'
+require 'cdo/test_flakiness'
+
+limit = ARGV[0] ? ARGV[0].to_i : -1
+
+puts TestFlakiness.test_flakiness.to_a.sort_by(&:last).reverse[0..limit].map{|pair| pair.reverse.join("\t")}.join("\n")

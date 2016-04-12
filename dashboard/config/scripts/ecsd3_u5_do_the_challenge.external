@@ -1,0 +1,25 @@
+name 'ECSD3-u5 do the challenge'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Complete the Challenge > Get into the Lesson 
+<br/>
+
+It's time to go read the lesson plan and complete the activities related to your lesson! 
+<br><br>
+#### What to Do
+>-  **Read through** the lesson plan you selected in the previous stage
+-  **Do the activities from the lesson**. Save any artifacts (visualizations, etc) 
+- While you review the lesson plan and do the activity, make sure to **jot down your thoughts** about: 
+    - ahha! moments during the activity
+    - what was difficult about this activity?
+    - what did you enjoy about this lesson?
+    - what additional resources might be useful for teaching this lesson? 
+
+When you're finished reading your lesson plan and completing the levels, come back and hit 'Continue'!
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

@@ -2,19 +2,21 @@ var studioApp = require('../StudioApp').singleton;
 var AppStorage = require('./appStorage');
 var apiTimeoutList = require('../timeoutList');
 var ChartApi = require('./ChartApi');
+var EventSandboxer = require('./EventSandboxer');
 var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
-var keyEvent = require('./keyEvent');
+var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var elementLibrary = require('./designElements/library');
+var elementUtils = require('./designElements/elementUtils');
+var setPropertyDropdown = require('./setPropertyDropdown');
+var assetPrefix = require('../assetManagement/assetPrefix');
 
-var errorHandler = require('./errorHandler');
-var outputApplabConsole = errorHandler.outputApplabConsole;
-var outputError = errorHandler.outputError;
+var errorHandler = require('../errorHandler');
 var ErrorLevel = errorHandler.ErrorLevel;
 var applabTurtle = require('./applabTurtle');
 var ChangeEventHandler = require('./ChangeEventHandler');
-var colors = require('../sharedJsxStyles').colors;
+var color = require('../color');
 
 var OPTIONAL = true;
 
@@ -27,6 +29,24 @@ var applabCommands = module.exports;
  * the browser.
  */
 var toBeCached = {};
+
+/**
+ * Utility for converting browser events into standardized, sandboxed event
+ * objects for use in student code.
+ * @type {EventSandboxer}
+ */
+var eventSandboxer = new EventSandboxer();
+
+function outputWarning(errorString) {
+  var line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
+  errorHandler.outputError(errorString, ErrorLevel.WARNING, line);
+}
+
+function outputError(errorString) {
+  var line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
+  errorHandler.outputError(errorString, ErrorLevel.ERROR, line);
+}
+
 
 /**
  * @param value
@@ -47,47 +67,59 @@ function isPrimitiveType(value) {
   }
 }
 
+/**
+ * Validates a user function paramer, and outputs error to the console if invalid
+ * @returns {boolean} True if param passed validation.
+ */
 function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
     var properType;
-    if (expectedType === 'color') {
-      // Special handling for colors, must be a string and a valid RGBColor:
-      properType = (typeof varValue === 'string');
-      if (properType) {
-        var color = new RGBColor(varValue);
-        properType = color.ok;
-      }
-    } else if (expectedType === 'uistring') {
-      properType = (typeof varValue === 'string') ||
-                   (typeof varValue === 'number') ||
-                   (typeof varValue === 'boolean');
-    } else if (expectedType === 'function') {
-      // Special handling for functions, it must be an interpreter function:
-      properType = (typeof varValue === 'object') && (varValue.type === 'function');
-    } else if (expectedType === 'number') {
-      properType = (typeof varValue === 'number' ||
-                    (typeof varValue === 'string' && !isNaN(varValue)));
-    } else if (expectedType === 'primitive') {
-      properType = isPrimitiveType(varValue);
-      if (!properType) {
-        // Ensure a descriptive error message is displayed.
-        expectedType = 'string, number, boolean, undefined or null';
-      }
-    } else if (expectedType === 'array') {
-      properType = Array.isArray(varValue);
-    } else {
-      properType = (typeof varValue === expectedType);
+    switch (expectedType) {
+      case 'color':
+        // Special handling for colors, must be a string and a valid RGBColor:
+        properType = (typeof varValue === 'string');
+        if (properType) {
+          var color = new RGBColor(varValue);
+          properType = color.ok;
+        }
+        break;
+      case 'uistring':
+        properType = (typeof varValue === 'string') ||
+          (typeof varValue === 'number') || (typeof varValue === 'boolean');
+        break;
+      case 'number':
+        properType = (typeof varValue === 'number' ||
+          (typeof varValue === 'string' && !isNaN(varValue)));
+        break;
+      case 'primitive':
+        properType = isPrimitiveType(varValue);
+        if (!properType) {
+          // Ensure a descriptive error message is displayed.
+          expectedType = 'string, number, boolean, undefined or null';
+        }
+        break;
+      case 'array':
+        properType = Array.isArray(varValue);
+        break;
+      case 'record':
+        // Validate that we have a data record. These must be objects, and
+        // not arrays
+        properType = typeof varValue === 'object' && !Array.isArray(varValue);
+        break;
+      default:
+        properType = (typeof varValue === expectedType);
+        break;
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
-      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-      var errorString = funcName + "() " + varName + " parameter value (" +
-        varValue + ") is not a " + expectedType + ".";
-      outputError(errorString, ErrorLevel.WARNING, line);
+      outputWarning(funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not a " + expectedType + ".");
+
     }
     opts[validatedTypeKey] = properType;
   }
+  return !!opts[validatedTypeKey];
 }
 
 function apiValidateTypeAndRange(opts, funcName, varName, varValue,
@@ -102,10 +134,8 @@ function apiValidateTypeAndRange(opts, funcName, varName, varValue,
     }
     inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!inRange) {
-      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-      var errorString = funcName + "() " + varName + " parameter value (" +
-        varValue + ") is not in the expected range.";
-      outputError(errorString, ErrorLevel.WARNING, line);
+      outputWarning(funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not in the expected range.");
     }
     opts[validatedRangeKey] = inRange;
   }
@@ -116,10 +146,8 @@ function apiValidateActiveCanvas(opts, funcName) {
   if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
     var activeCanvas = Boolean(Applab.activeCanvas);
     if (!activeCanvas) {
-      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-      var errorString = funcName + "() called without an active canvas. Call " +
-        "createCanvas() first.";
-      outputError(errorString, ErrorLevel.WARNING, line);
+      outputWarning(funcName + "() called without an active canvas. Call " +
+        "createCanvas() first.");
     }
     if (opts) {
       opts[validatedActiveCanvasKey] = activeCanvas;
@@ -136,22 +164,26 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
     var element = document.getElementById(id);
 
     var existsInApplab = Boolean(element && divApplab.contains(element));
-    var existsOutsideApplab = Boolean(element && !divApplab.contains(element));
+    var options = {
+      allowCodeElements: true,
+      allowDesignPrefix: true,
+      allowDesignElements: true,
+      allowTurtleCanvas: Boolean(opts.turtleCanvas)
+    };
+    var existsOutsideApplab = !elementUtils.isIdAvailable(id, options);
 
     var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
 
     if (!valid) {
-      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
       var errorString = "";
       if (existsOutsideApplab) {
         errorString = funcName + "() " + varName + " parameter refers to an id (" + id +
             ") which is already in use outside of Applab. Choose a different id.";
         throw new Error(errorString);
       } else {
-        errorString = funcName + "() " + varName +
+        outputWarning(funcName + "() " + varName +
             " parameter refers to an id (" + id + ") which " +
-            (existsInApplab ? "already exists." : "does not exist.");
-        outputError(errorString, ErrorLevel.WARNING, line);
+            (existsInApplab ? "already exists." : "does not exist."));
       }
     }
     opts[validatedDomKey] = valid;
@@ -164,12 +196,21 @@ applabCommands.setScreen = function (opts) {
   apiValidateDomIdExistence(opts, 'setScreen', 'screenId', opts.screenId, true);
   var element = document.getElementById(opts.screenId);
   var divApplab = document.getElementById('divApplab');
-  if (!divApplab.contains(element)) {
+  if (!element || (element.parentNode != divApplab)) {
     return;
   }
 
   Applab.changeScreen(opts.screenId);
 };
+
+function reportUnsafeHtml(removed, unsafe, safe, warnings) {
+  var msg = "The following lines of HTML were modified or removed:\n" + removed +
+      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
+  if (warnings.length > 0) {
+    msg += '\nwarnings:\n' + warnings.join('\n');
+  }
+  outputWarning(msg);
+}
 
 applabCommands.container = function (opts) {
   if (opts.elementId) {
@@ -179,7 +220,8 @@ applabCommands.container = function (opts) {
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
-  newDiv.innerHTML = opts.html;
+  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
+  newDiv.innerHTML = sanitized;
   newDiv.style.position = 'relative';
 
   return Boolean(Applab.activeScreen().appendChild(newDiv));
@@ -199,8 +241,8 @@ applabCommands.button = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
-  newButton.style.color = colors.white;
-  newButton.style.backgroundColor = colors.teal;
+  newButton.style.color = color.white;
+  newButton.style.backgroundColor = color.applab_button_teal;
 
   return Boolean(newButton.appendChild(textNode) &&
     Applab.activeScreen().appendChild(newButton));
@@ -212,7 +254,8 @@ applabCommands.image = function (opts) {
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
   var newImage = document.createElement("img");
-  newImage.src = Applab.maybeAddAssetPathPrefix(opts.src);
+  newImage.src = assetPrefix.fixPath(opts.src);
+  newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
 
@@ -470,11 +513,7 @@ applabCommands.speed = function (opts) {
   // DOCBUG: range is 0-100, not 1-100
   apiValidateTypeAndRange(opts, 'speed', 'value', opts.percent, 'number', 0, 100);
   if (opts.percent >= 0 && opts.percent <= 100) {
-    var sliderSpeed = opts.percent / 100;
-    if (Applab.speedSlider) {
-      Applab.speedSlider.setValue(sliderSpeed);
-    }
-    Applab.scale.stepSpeed = Applab.stepSpeedFromSliderSpeed(sliderSpeed);
+    Applab.setStepSpeed(opts.percent / 100);
   }
 };
 
@@ -679,12 +718,12 @@ applabCommands.drawImageURL = function (opts) {
   var jsInterpreter = Applab.JSInterpreter;
   var callback = function (success) {
     if (opts.callback) {
-      queueCallback(jsInterpreter, opts.callback, [success]);
+      opts.callback.call(null, success);
     }
   };
 
   var image = new Image();
-  image.src = Applab.maybeAddAssetPathPrefix(opts.url);
+  image.src = assetPrefix.fixPath(opts.url);
   image.onload = function () {
     var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
     if (!ctx) {
@@ -835,8 +874,8 @@ applabCommands.dropdown = function (opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
-  newSelect.style.color = colors.white;
-  newSelect.style.backgroundColor = colors.teal;
+  newSelect.style.color = color.white;
+  newSelect.style.backgroundColor = color.applab_button_teal;
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
@@ -845,12 +884,12 @@ applabCommands.getAttribute = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   var attribute = String(opts.attribute);
-  return divApplab.contains(element) ? element[attribute] : false;
+  return divApplab.contains(element) ? String(element[attribute]) : false;
 };
 
 // Whitelist of HTML Element attributes which can be modified, to
 // prevent DOM manipulation which would violate the sandbox.
-var MUTABLE_ATTRIBUTES = ['innerHTML', 'scrollTop'];
+var MUTABLE_ATTRIBUTES = ['scrollTop'];
 
 applabCommands.setAttribute = function (opts) {
   var divApplab = document.getElementById('divApplab');
@@ -898,6 +937,18 @@ applabCommands.setText = function (opts) {
     return true;
   }
   return false;
+};
+
+applabCommands.getNumber = function (opts) {
+  apiValidateDomIdExistence(opts, 'getNumber', 'id', opts.elementId, true);
+  return parseFloat(applabCommands.getText(opts), 10);
+};
+
+applabCommands.setNumber = function (opts) {
+  apiValidateDomIdExistence(opts, 'setNumber', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setNumber', 'value', opts.number, 'number');
+  opts.text = opts.number;
+  return applabCommands.setText(opts);
 };
 
 /**
@@ -956,7 +1007,7 @@ applabCommands.getImageURL = function (opts) {
   if (divApplab.contains(element)) {
     // We return a URL if it is an IMG element or our special img-upload label
     if (element.tagName === 'IMG') {
-      return element.src;
+      return element.getAttribute('data-canonical-image-url');
     } else if (element.tagName === 'LABEL' && element.className === 'img-upload') {
       var fileObj = element.children[0].files[0];
       if (fileObj) {
@@ -973,7 +1024,8 @@ applabCommands.setImageURL = function (opts) {
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
-    element.src = Applab.maybeAddAssetPathPrefix(opts.src);
+    element.src = assetPrefix.fixPath(opts.src);
+    element.setAttribute('data-canonical-image-url', opts.src);
 
     if (!toBeCached[element.src]) {
       var img = new Image();
@@ -990,7 +1042,7 @@ applabCommands.playSound = function (opts) {
   apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
 
   if (studioApp.cdoSounds) {
-    var url = Applab.maybeAddAssetPathPrefix(opts.url);
+    var url = assetPrefix.fixPath(opts.url);
     if (studioApp.cdoSounds.isPlayingURL(url)) {
       return;
     }
@@ -1023,7 +1075,7 @@ applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = opts.html;
+    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
     return true;
   }
   return false;
@@ -1132,6 +1184,33 @@ function setSize_(elementId, width, height) {
   }
 }
 
+applabCommands.setProperty = function (opts) {
+  apiValidateDomIdExistence(opts, 'setProperty', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setProperty', 'property', opts.property, 'string');
+
+  var elementId = opts.elementId;
+  var property = opts.property;
+  var value = opts.value;
+
+  var element = document.getElementById(elementId);
+  if (!element) {
+    return;
+  }
+
+  var info = setPropertyDropdown.getInternalPropertyInfo(element, property);
+  if (!info) {
+    outputError('Cannot set property "' + property + '" on element "' + elementId + '".');
+    return;
+  }
+
+  var valid = apiValidateType(opts, 'setProperty', 'value', opts.value, info.type);
+  if (!valid) {
+    return;
+  }
+
+  Applab.updateProperty(element, info.internalName, value);
+};
+
 applabCommands.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
   apiValidateDomIdExistence(opts, 'getXPosition', 'id', opts.elementId, true);
@@ -1176,78 +1255,17 @@ applabCommands.getYPosition = function (opts) {
 };
 
 applabCommands.onEventFired = function (opts, e) {
+  var funcArgs = opts.extraArgs;
   if (typeof e != 'undefined') {
-    var div = document.getElementById('divApplab');
-    var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-    var yScale = div.getBoundingClientRect().height / div.offsetHeight;
-    var xOffset = 0;
-    var yOffset = 0;
-    while (div) {
-      xOffset += div.offsetLeft;
-      yOffset += div.offsetTop;
-      div = div.offsetParent;
-    }
-
-    var applabEvent = {};
-    // Pass these properties through to applabEvent:
-    ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
-      'keyLocation', 'location', 'metaKey', 'movementX', 'movementY', 'offsetX',
-      'offsetY', 'repeat', 'shiftKey', 'type', 'which'].forEach(
-      function (prop) {
-        if (typeof e[prop] !== 'undefined') {
-          applabEvent[prop] = e[prop];
-        }
-      });
-    // Convert x coordinates and then pass through to applabEvent:
-    ['clientX', 'pageX', 'x'].forEach(
-      function (prop) {
-        if (typeof e[prop] !== 'undefined') {
-          applabEvent[prop] = (e[prop] - xOffset) / xScale;
-        }
-      });
-    // Convert y coordinates and then pass through to applabEvent:
-    ['clientY', 'pageY', 'y'].forEach(
-      function (prop) {
-        if (typeof e[prop] !== 'undefined') {
-          applabEvent[prop] = (e[prop] - yOffset) / yScale;
-        }
-      });
-    // Replace DOM elements with IDs and then add them to applabEvent:
-    ['fromElement', 'srcElement', 'currentTarget', 'relatedTarget', 'target',
-      'toElement'].forEach(
-      function (prop) {
-        if (e[prop]) {
-          applabEvent[prop + "Id"] = e[prop].id;
-        }
-      });
-    // Attempt to populate key property (not yet supported in Chrome/Safari):
-    //
-    // keyup/down has no charCode and can be translated with the keyEvent[] map
-    // keypress can use charCode
-    //
-    var keyProp = e.charCode ? String.fromCharCode(e.charCode) : keyEvent[e.keyCode];
-    if (typeof keyProp !== 'undefined') {
-      applabEvent.key = keyProp;
-    }
+    eventSandboxer.setTransformFromElement(document.getElementById('divApplab'));
+    var applabEvent = eventSandboxer.sandboxEvent(e);
 
     // Push a function call on the queue with an array of arguments consisting
     // of the applabEvent parameter (and any extraArgs originally supplied)
-    Applab.JSInterpreter.queueEvent(opts.func, [applabEvent].concat(opts.extraArgs));
-  } else {
-    Applab.JSInterpreter.queueEvent(opts.func, opts.extraArgs);
+    funcArgs = [applabEvent].concat(opts.extraArgs);
   }
-  if (Applab.JSInterpreter) {
-    // Execute the interpreter and if a return value is sent back from the
-    // interpreter's event handler, pass that back in the native world
-
-    // NOTE: the interpreter will not execute forever, if the event handler
-    // takes too long, executeInterpreter() will return and the native side
-    // will just see 'undefined' as the return value. The rest of the interpreter
-    // event handler will run in the next onTick(), but the return value will
-    // no longer have any effect.
-    Applab.JSInterpreter.executeInterpreter(false, true);
-    return Applab.JSInterpreter.lastCallbackRetVal;
-  }
+  // Call the callback function:
+  return opts.func.apply(null, funcArgs);
 };
 
 applabCommands.onEvent = function (opts) {
@@ -1308,7 +1326,6 @@ applabCommands.onEvent = function (opts) {
       case 'click':
       case 'change':
       case 'keyup':
-      case 'mousemove':
       case 'dblclick':
       case 'mousedown':
       case 'mouseup':
@@ -1323,6 +1340,26 @@ applabCommands.onEvent = function (opts) {
         domElement.addEventListener(
             opts.eventName,
             applabCommands.onEventFired.bind(this, opts));
+        // To allow INPUT type="range" (Slider) events to work on downlevel browsers, we need to
+        // register a 'change' listener whenever an 'input' listner is requested.  Downlevel
+        // browsers typically only sent 'change' events.
+        if (opts.eventName === 'input' &&
+            domElement.tagName.toUpperCase() === 'INPUT' &&
+            domElement.type === 'range') {
+          domElement.addEventListener(
+              'change',
+              applabCommands.onEventFired.bind(this, opts));
+        }
+        break;
+      case 'mousemove':
+        domElement.addEventListener(
+          opts.eventName,
+          applabCommands.onEventFired.bind(this, opts));
+        // Additional handler needed to ensure correct calculation of
+        // movementX and movementY.
+        domElement.addEventListener(
+          'mouseout',
+          eventSandboxer.clearLastMouseMoveEvent.bind(eventSandboxer));
         break;
       default:
         return false;
@@ -1333,24 +1370,20 @@ applabCommands.onEvent = function (opts) {
 };
 
 applabCommands.onHttpRequestEvent = function (opts) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.JSInterpreter === Applab.JSInterpreter) {
-    if (this.readyState === 4) {
-      Applab.JSInterpreter.queueEvent(
-        opts.func,
-        [ Number(this.status),
-          String(this.getResponseHeader('content-type')),
-          String(this.responseText)
-        ]);
-    }
+  if (this.readyState === 4) {
+    // Call the callback function:
+    opts.func.call(
+        null,
+        Number(this.status),
+        String(this.getResponseHeader('content-type')),
+        String(this.responseText)
+    );
   }
 };
 
 applabCommands.startWebRequest = function (opts) {
   apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
-  opts.JSInterpreter = Applab.JSInterpreter;
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
   req.open('GET', opts.url, true);
@@ -1358,12 +1391,7 @@ applabCommands.startWebRequest = function (opts) {
 };
 
 applabCommands.onTimerFired = function (opts) {
-  // ensure that this event came from the active interpreter instance:
-  Applab.JSInterpreter.queueEvent(opts.func);
-  // NOTE: the interpreter will not execute forever, if the event handler
-  // takes too long, executeInterpreter() will return and the rest of the
-  // user's code will execute in the next onTick()
-  Applab.JSInterpreter.executeInterpreter(false, true);
+  opts.func.call(null);
 };
 
 applabCommands.setTimeout = function (opts) {
@@ -1402,61 +1430,98 @@ applabCommands.createRecord = function (opts) {
   // PARAMNAME: createRecord: table vs. tableName
   // PARAMNAME: createRecord: callback vs. callbackFunction
   apiValidateType(opts, 'createRecord', 'table', opts.table, 'string');
-  apiValidateType(opts, 'createRecord', 'record', opts.record, 'object');
-  apiValidateType(opts, 'createRecord', 'record.id', opts.record.id, 'undefined');
+  var validRecord = apiValidateType(opts, 'createRecord', 'record', opts.record, 'record');
   apiValidateType(opts, 'createRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'createRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.JSInterpreter = Applab.JSInterpreter;
+  if (!validRecord) {
+    return;
+  }
+  if (!opts.table) {
+    outputError('missing required parameter "tableName"');
+    return;
+  }
+  if (opts.record.id) {
+    outputError('record must not have an "id" property');
+    return;
+  }
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-applabCommands.handleCreateRecord = function(opts, record) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onSuccess, [record]);
+applabCommands.handleCreateRecord = function (opts, record) {
+  if (opts.onSuccess) {
+    opts.onSuccess.call(null, record);
   }
 };
 
-applabCommands.getKeyValue = function(opts) {
+applabCommands.getKeyValue = function (opts) {
   // PARAMNAME: getKeyValue: callback vs. callbackFunction
   apiValidateType(opts, 'getKeyValue', 'key', opts.key, 'string');
   apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.JSInterpreter = Applab.JSInterpreter;
   var onSuccess = applabCommands.handleReadValue.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
 };
 
-applabCommands.handleReadValue = function(opts, value) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onSuccess, [value]);
+applabCommands.handleReadValue = function (opts, value) {
+  if (opts.onSuccess) {
+    opts.onSuccess.call(null, value);
   }
 };
 
-applabCommands.setKeyValue = function(opts) {
+applabCommands.getKeyValueSync = function (opts) {
+  apiValidateType(opts, 'getKeyValueSync', 'key', opts.key, 'string');
+  var onSuccess = handleGetKeyValueSync.bind(this, opts);
+  var onError = handleGetKeyValueSyncError.bind(this, opts);
+  AppStorage.getKeyValue(opts.key, onSuccess, onError);
+};
+
+var handleGetKeyValueSync = function (opts, value) {
+  opts.callback(value);
+};
+
+var handleGetKeyValueSyncError = function (opts, message) {
+  // Call callback with no value parameter (sync func will return undefined)
+  opts.callback();
+  Applab.log(message);
+};
+
+applabCommands.setKeyValue = function (opts) {
   // PARAMNAME: setKeyValue: callback vs. callbackFunction
   apiValidateType(opts, 'setKeyValue', 'key', opts.key, 'string');
   apiValidateType(opts, 'setKeyValue', 'value', opts.value, 'primitive');
   apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.JSInterpreter = Applab.JSInterpreter;
   var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
-applabCommands.handleSetKeyValue = function(opts) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onSuccess);
+applabCommands.handleSetKeyValue = function (opts) {
+  if (opts.onSuccess) {
+    opts.onSuccess.call(null);
   }
+};
+
+applabCommands.setKeyValueSync = function (opts) {
+  apiValidateType(opts, 'setKeyValueSync', 'key', opts.key, 'string');
+  apiValidateType(opts, 'setKeyValueSync', 'value', opts.value, 'primitive');
+  var onSuccess = handleSetKeyValueSync.bind(this, opts);
+  var onError = handleSetKeyValueSyncError.bind(this, opts);
+  AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+};
+
+var handleSetKeyValueSync = function (opts) {
+  // Return 'true' to indicate the setKeyValueSync succeeded
+  opts.callback(true);
+};
+
+var handleSetKeyValueSyncError = function (opts, message) {
+  // Return 'false' to indicate the setKeyValueSync failed
+  opts.callback(false);
+  Applab.log(message);
 };
 
 applabCommands.readRecords = function (opts) {
@@ -1467,17 +1532,18 @@ applabCommands.readRecords = function (opts) {
   apiValidateType(opts, 'readRecords', 'searchTerms', opts.searchParams, 'object');
   apiValidateType(opts, 'readRecords', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.JSInterpreter = Applab.JSInterpreter;
+  if (!opts.table) {
+    outputError('missing required parameter "tableName"');
+    return;
+  }
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
-applabCommands.handleReadRecords = function(opts, records) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onSuccess, [records]);
+applabCommands.handleReadRecords = function (opts, records) {
+  if (opts.onSuccess) {
+    opts.onSuccess.call(null, records);
   }
 };
 
@@ -1485,21 +1551,29 @@ applabCommands.updateRecord = function (opts) {
   // PARAMNAME: updateRecord: table vs. tableName
   // PARAMNAME: updateRecord: callback vs. callbackFunction
   apiValidateType(opts, 'updateRecord', 'table', opts.table, 'string');
-  apiValidateType(opts, 'updateRecord', 'record', opts.record, 'object');
+  var validRecord = apiValidateType(opts, 'updateRecord', 'record', opts.record, 'record');
   apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
   apiValidateType(opts, 'updateRecord', 'callback', opts.onComplete, 'function', OPTIONAL);
   apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.JSInterpreter = Applab.JSInterpreter;
+  if (!validRecord) {
+    return;
+  }
+  if (!opts.table) {
+    outputError('missing required parameter "tableName"');
+    return;
+  }
+  if (opts.record.id === undefined) {
+    outputError('missing required property "id"');
+    return;
+  }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.updateRecord(opts.table, opts.record, onComplete, onError);
 };
 
-applabCommands.handleUpdateRecord = function(opts, record) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onComplete && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onComplete, [record]);
+applabCommands.handleUpdateRecord = function (opts, record, success) {
+  if (opts.onComplete) {
+    opts.onComplete.call(null, record, success);
   }
 };
 
@@ -1507,22 +1581,37 @@ applabCommands.deleteRecord = function (opts) {
   // PARAMNAME: deleteRecord: table vs. tableName
   // PARAMNAME: deleteRecord: callback vs. callbackFunction
   apiValidateType(opts, 'deleteRecord', 'table', opts.table, 'string');
-  apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'object');
+  var validRecord = apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'record');
   apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
   apiValidateType(opts, 'deleteRecord', 'callback', opts.onComplete, 'function', OPTIONAL);
   apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.JSInterpreter = Applab.JSInterpreter;
+  if (!validRecord) {
+    return;
+  }
+  if (!opts.table) {
+    outputError('missing required parameter "tableName"');
+    return;
+  }
+  if (opts.record.id === undefined) {
+    outputError('missing required property "id"');
+    return;
+  }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.deleteRecord(opts.table, opts.record, onComplete, onError);
 };
 
-applabCommands.handleDeleteRecord = function(opts) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onComplete && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onComplete);
+applabCommands.handleDeleteRecord = function (opts, success) {
+  if (opts.onComplete) {
+    opts.onComplete.call(null, success);
   }
+};
+
+applabCommands.onRecordEvent = function (opts) {
+  apiValidateType(opts, 'onRecordEvent', 'table', opts.table, 'string');
+  apiValidateType(opts, 'onRecordEvent', 'callback', opts.onRecord, 'function');
+  var onError = errorHandler.handleError.bind(this, opts);
+  AppStorage.onRecordEvent(opts.table, opts.onRecord, onError);
 };
 
 applabCommands.getUserId = function (opts) {
@@ -1555,12 +1644,6 @@ applabCommands.drawChart = function (opts) {
   apiValidateType(opts, 'drawChart', 'callback', opts.callback, 'function', OPTIONAL);
   apiValidateDomIdExistence(opts, 'drawChart', 'chartId', opts.chartId, true);
 
-  // Bind a reference to the current interpreter so we can later make sure we're
-  // not doing anything asynchronous across re-runs.
-  var jsInterpreter = Applab.JSInterpreter;
-
-  var currentLineNumber = getCurrentLineNumber(jsInterpreter);
-
   var chartApi = new ChartApi();
 
   /**
@@ -1575,9 +1658,11 @@ applabCommands.drawChart = function (opts) {
   var onSuccess = function () {
     stopLoadingSpinnerFor(opts.chartId);
     chartApi.warnings.forEach(function (warning) {
-      outputError(warning.message, ErrorLevel.WARNING, currentLineNumber);
+      outputWarning(warning.message);
     });
-    queueCallback(jsInterpreter, opts.callback);
+    if (opts.callback) {
+      opts.callback.call(null);
+    }
   };
 
   /**
@@ -1588,7 +1673,7 @@ applabCommands.drawChart = function (opts) {
    */
   var onError = function (error) {
     stopLoadingSpinnerFor(opts.chartId);
-    outputError(error.message, ErrorLevel.ERROR, currentLineNumber);
+    outputError(error.message);
   };
 
   startLoadingSpinnerFor(opts.chartId);
@@ -1625,12 +1710,6 @@ applabCommands.drawChartFromRecords = function (opts) {
   apiValidateType(opts, 'drawChartFromRecords', 'callback', opts.callback, 'function', OPTIONAL);
   apiValidateDomIdExistence(opts, 'drawChartFromRecords', 'chartId', opts.chartId, true);
 
-  // Bind a reference to the current interpreter so we can later make sure we're
-  // not doing anything asynchronous across re-runs.
-  var jsInterpreter = Applab.JSInterpreter;
-
-  var currentLineNumber = getCurrentLineNumber(jsInterpreter);
-
   var chartApi = new ChartApi();
 
   /**
@@ -1645,9 +1724,11 @@ applabCommands.drawChartFromRecords = function (opts) {
   var onSuccess = function () {
     stopLoadingSpinnerFor(opts.chartId);
     chartApi.warnings.forEach(function (warning) {
-      outputError(warning.message, ErrorLevel.WARNING, currentLineNumber);
+      outputWarning(warning.message);
     });
-    queueCallback(jsInterpreter, opts.callback);
+    if (opts.callback) {
+      opts.callback.call(null);
+    }
   };
 
   /**
@@ -1658,7 +1739,7 @@ applabCommands.drawChartFromRecords = function (opts) {
    */
   var onError = function (error) {
     stopLoadingSpinnerFor(opts.chartId);
-    outputError(error.message, ErrorLevel.ERROR, currentLineNumber);
+    outputError(error.message);
   };
 
   startLoadingSpinnerFor(opts.chartId);
@@ -1702,30 +1783,3 @@ function stopLoadingSpinnerFor(elementId) {
     return !(/loading/i.test(x));
   }).join(' ');
 }
-
-/**
- * Queue the given callback in the given interpreter IF the callback exists
- * AND the interpreter is still the active interpreter for Applab.
- * @param {JSInterpreter} jsInterpreter
- * @param {function} callback
- * @param {Object[]} args
- */
-var queueCallback = function (jsInterpreter, callback, args) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active, so we don't queue callbacks for slow async events
-  // from past executions of the app.
-  // (We use a different interpreter instance for every run.)
-  if (callback && jsInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(callback, args);
-  }
-};
-
-/**
- * For the provided interpreter, get the nearest line number in user code
- * up the stack from the last executed command.
- * @param {JSInterpreter} jsInterpreter
- * @returns {number}
- */
-var getCurrentLineNumber = function (jsInterpreter) {
-  return 1 + jsInterpreter.getNearestUserCodeLine();
-};

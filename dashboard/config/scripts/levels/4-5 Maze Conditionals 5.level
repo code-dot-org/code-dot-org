@@ -6,14 +6,31 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Me want sunflower! Use an \"if\" block to get me there with the fewest number of blocks.",
+    "instructions": "\"Me want sunflower!\"  \r\n\r\nUse an `if` statement to get the zombie to the sunflower with the fewest number of blocks.",
     "step_mode": "1",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "start_direction": "0",
     "maze": "[[0,0,0,4,0,0,0,0],[0,0,0,1,0,0,0,0],[0,1,1,1,1,1,0,0],[0,1,0,0,0,1,0,0],[0,1,0,3,0,1,1,4],[0,1,0,1,0,1,0,0],[0,1,1,1,0,2,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "5"
-  }
+    "ideal": "5",
+    "markdown_instructions": "\"Me want sunflower!\"  \r\n\r\nUse an `if` statement to get the zombie to the sunflower with the fewest number of blocks.",
+    "never_autoplay_video": "false",
+    "step_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -36,10 +53,6 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
         <block type="maze_if">
           <title name="DIR">isPathLeft</title>
         </block>
@@ -50,5 +63,29 @@
         <block type="maze_forever"/>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_forever">
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_if">
+                      <title name="DIR">isPathLeft</title>
+                      <statement name="DO">
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

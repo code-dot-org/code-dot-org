@@ -1,6 +1,6 @@
 /* global $ */
 
-var DesignToolboxElement = require('./DesignToolboxElement.jsx');
+var DesignToolboxElement = require('./DesignToolboxElement');
 var applabMsg = require('./locale');
 
 var IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
@@ -80,6 +80,11 @@ module.exports = React.createClass({
             imageUrl={IMAGE_BASE_URL + 'chart.png'}
             desc={'Chart'}
             elementType={'CHART'}
+            handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+            imageUrl={IMAGE_BASE_URL + 'slider.png'}
+            desc={'Slider'}
+            elementType={'SLIDER'}
             handleDragStart={this.props.handleDragStart} />
       </div>
     );

@@ -61,7 +61,6 @@ node['cdo-users'].each_pair do |user_name, user_data|
     group user_name
   end
 
-
   #
   #
   # Configure SSH
@@ -97,7 +96,6 @@ node['cdo-users'].each_pair do |user_name, user_data|
     group user_name
     mode '0600'
   end
-
 
   #
   #

@@ -1,5 +1,6 @@
 $root: '/blockly/media/craft/'; //TODO: Parameterize for asset pipeline
 
+@import 'color';
 @import '../common';
 @import 'font';
 
@@ -303,7 +304,7 @@ $height-to-width: 434 / 477;
   #select-character-text {
     line-height: 50px;
     font-size: 22px;
-    color: #e7e8ea;
+    color: $lightest_gray;
   }
 
   .minecraft-character {
@@ -432,7 +433,7 @@ $height-to-width: 434 / 477;
   #select-house-text {
     line-height: 50px;
     font-size: 22px;
-    color: #e7e8ea;
+    color: $lightest_gray;
   }
 
 
@@ -721,7 +722,7 @@ $height-to-width: 434 / 477;
   width: 100%;
 }
 
-.dash_modal {
+.minecraft .dash_modal {
   top: 80px;
   margin-left: -340px;
 
@@ -745,7 +746,7 @@ $height-to-width: 434 / 477;
       margin-right: -32px;
     }
 
-    margin-top: -100px;
+    margin-top: -115px;
     width: auto;
   }
 
@@ -753,7 +754,7 @@ $height-to-width: 434 / 477;
     @include mc-x-close-button();
   }
 
-  .modal-content .lines-of-code-message {
+  .modal-content .lines-of-code-message, .show-code summary {
     color: $lighter_gray;
   }
 
@@ -761,6 +762,10 @@ $height-to-width: 434 / 477;
     margin-left: -100px;
     html[dir=rtl] & {
       margin-right: -100px;
+      margin-left: 0;
+    }
+
+    .generated-code-container {
       margin-left: 0;
     }
   }
@@ -827,10 +832,6 @@ $height-to-width: 434 / 477;
   #feedbackButtons:after {
     display: none;
   }
-
-  .after-feedback-buttons {
-    clear: both;
-  }
 }
 
 // callout styling
@@ -886,6 +887,10 @@ $height-to-width: 434 / 477;
     width: 50px;
     height: 50px;
   }
+}
+
+.ieVersion9 #open-workspace {
+  background-color: $very-dark-gray;
 }
 
 .cdo-qtips .qtip-tip {

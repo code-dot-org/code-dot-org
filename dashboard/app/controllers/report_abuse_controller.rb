@@ -2,7 +2,7 @@ require 'json'
 require 'httparty'
 
 class ReportAbuseController < ApplicationController
-  AGE_CUSTOM_FIELD_ID = 24024923
+  AGE_CUSTOM_FIELD_ID = 24_024_923
 
   def report_abuse
     unless Rails.env.development?
@@ -21,7 +21,7 @@ class ReportAbuseController < ApplicationController
                 "user detail:",
                 "#{params[:abuse_detail]}"].join("\n")
             },
-            custom_fields: [ { id: AGE_CUSTOM_FIELD_ID, value: params[:age] }],
+            custom_fields: [{ id: AGE_CUSTOM_FIELD_ID, value: params[:age] }],
             tags: (params[:abuse_type] == 'infringement' ? ['report_abuse', 'infringement'] : ['report_abuse'])
           }
         }.to_json,

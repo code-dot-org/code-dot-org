@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: Turtle
@@ -20,11 +19,11 @@ Category: Turtle
 
 [short_description]
 
-Returns (gets) the current direction that the turtle is facing. 0 degrees is pointing up
+Returns the current direction that the turtle is facing. Zero degrees is pointing up and the durection increase clockwise.
 
 [/short_description]
 
-
+Sometimes the user controls the turtle and your app might need to know what direction the turtle is facing. The direction is a number between 0 and 359 degrees.
 
 [/description]
 
@@ -33,14 +32,9 @@ ____________________________________________________
 
 [example]
 
-**Example 1**
-
-This example turns the turtle a pseudorandom number of degrees, and then displays the direction of the turtle to the screen.
-
 ```
-turnRight(randomNumber(359));                     // turns the turtle a pseudorandom number of degrees
-textLabel("direction", getDirection(), "forId");  // creates a text label that displays the direction
-                                                  // to the screen
+turnRight(randomNumber(359));
+console.log(getDirection());
 ```
 
 [/example]
@@ -49,56 +43,14 @@ ____________________________________________________
 
 [example]
 
-**Example 2**
-
-This example creates a button that the user can click to turn the turtle a pseudorandom number of degrees. The current direction the turtle is facing is displayed on the screen.
-
+**Turning on your Command** Turn the turtle in a random direction, and display the direction, on every user click of a button.
 
 ```
-speed(50);                                                        // sets the speed to 50 so its easier to
-                                                                  //    see the turtle turn
-textLabel("direction", "direction: " + getDirection(), "forId");  // creates a text label to display the
-                                                                  //    turtle's current direction
-button("random-direction", "Random Direction");                   // creates a button to turn the turtle to
-                                                                  //    pseduorandom number of degrees
-onEvent("random-direction", "click", function(event) {            // when the random direction button is
-                                                                  //    clicked this function will be called
-  turnRight(randomNumber(359));                                   // turns right a pseudorandom number
-                                                                  //    of degrees
-  setText("direction", "direction: " + getDirection());           // updates the text label with the turtle's
-                                                                  //    current direction
-});
-```
-
-
-[/example]
-
-____________________________________________________
-
-[example]
-
-**Example 3**
-
-This example creates two buttons, one to turn the turtle left and one to turn the turtle left. It reports the current direction the turtle is facing on the screen.
-
-
-```
-textLabel("direction", "direction: " + getDirection(), "forId");  // creates a text label to display the
-                                                                  //    turtle's current direction
-button("turn-left", "Turn Left");                                 // creates a turn left button
-button("turn-right", "Turn Right");                               // creates a turn right button
-onEvent("turn-left", "click", function(event) {                   // when the turn left button is clicked
-                                                                  //    the turtle will turn 1 degree to
-                                                                  //    the left and the current direction
-                                                                  //    of the turtle will be updated
-  turnLeft(1);
-  setText("direction", "direction: " + getDirection());
-});
-onEvent("turn-right", "click", function(event) {                   // when the turn right button is clicked
-                                                                   //     the turtle will turn 1 degree to
-                                                                   //     the right and the current direction
-                                                                   //    of the turtle will be updated
-  turnRight(1);
+// Turn the turtle in a random direction, and display the direction, on every user click of a button.
+textLabel("direction", "direction: " + getDirection());
+button("random-direction", "Random Direction");
+onEvent("random-direction", "click", function() {
+  turnRight(randomNumber(359));
   setText("direction", "direction: " + getDirection());
 });
 ```
@@ -121,25 +73,20 @@ getDirection()
 [parameters]
 
 ### Parameters
-`getDirection()` does not take any parameters.
+getDirection() does not take any parameters.
 
 [/parameters]
 
 [returns]
 
 ### Returns
-Returns an integer representing the direction the turtle is facing. For reference, the values of the cardinal directions are shown below.
-North: 0
-East: 90
-South: 180
-West: 270
-
+Returns an integer between 0 and 359 representing the direction the turtle is facing. 
 [/returns]
 
 [tips]
 
 ### Tips
-
+- The values of the compass directions are: North:0, East:90, South:180, West:270.
 
 [/tips]
 

@@ -19,7 +19,10 @@
       "penDown": null,
       "penWidth": null,
       "penColor": null,
-      "penRGB": null
+      "penRGB": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -57,7 +60,8 @@
     "encrypted_examples": "Lw+9Kkhyxqfvk9gjoWqa6ov3+8pLzsilAKeVlNRs9T4uPBinCbmKchk2PPdy\n1i8H\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

@@ -2,6 +2,7 @@ require 'test_helper'
 
 class CalloutsTest < ActionDispatch::IntegrationTest
   setup do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
     @maze_data = {game_id: 25, user_id: 1, name: '__bob4', level_num: 'custom', skin: 'birds', instructions: 'sdfdfs'}
     @level = Maze.create(@maze_data)
     @level.callout_json = '[{"localization_key": "run", "element_id": "#runButton"}]'

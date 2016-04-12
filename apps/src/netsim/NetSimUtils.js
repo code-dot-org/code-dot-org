@@ -1,18 +1,6 @@
 /**
  * @overview Static helper methods for NetSim.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 var utils = require('../utils');
@@ -388,6 +376,6 @@ exports.makeContinueButton = function (onPanel) {
       },
       {
         secondary: false,
-        classes: [ 'submitButton' ]
+        classes: ['submitButton']
       });
 };

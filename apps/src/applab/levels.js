@@ -1,5 +1,3 @@
-/*jshint multistr: true */
-
 var msg = require('./locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
@@ -31,15 +29,13 @@ levels.custom = {
   'freePlay': true,
   'editCode': true,
   'sliderSpeed': 1,
-  'appWidth': 320,
-  'appHeight': 480,
 
   /**
    * This is the default set of functions available to us if the levelbuilder
    * leaves codeFunctions blank.
    * Applab.rb self.palette serves a similar function, intially providing
    * levelbuilders with the text for the default set of blocks.
-   * These two places shouldbe kept in sync
+   * These two places should be kept in sync
    */
   'codeFunctions': {
     // UI Controls
@@ -50,6 +46,8 @@ levels.custom = {
     "dropdown": null,
     "getText": null,
     "setText": null,
+    "getNumber": null,
+    "setNumber": null,
     "checkbox": null,
     "radioButton": null,
     "getChecked": null,
@@ -63,6 +61,7 @@ levels.custom = {
     "deleteElement": null,
     "setPosition": null,
     "setSize": null,
+    "setProperty": null,
     "write": null,
     "getXPosition": null,
     "getYPosition": null,
@@ -184,6 +183,7 @@ levels.custom = {
     "callMyFunction": null,
     "callMyFunction_n": null,
     "return": null,
+    "comment": null
   },
 
   // "randomNumber_max": null, // DEPRECATED

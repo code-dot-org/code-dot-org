@@ -4,44 +4,11 @@ skip_dialog true
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
 
-### BEST PRACTICES > Instructional Design Tips
-<br><br>
-<img src="https://images.code.org/c0bc198491572e088f17f66a7f5bd2c9-image-1434400835789.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
-<br><br>
-When designing all of our CS curriculum, code.org observes the following best practices which are common across many disciplines:
-<br><br>
-**We use a spiraling curriculum design**, in which concepts and skills are revisited in each course while delving deeper each time.
-<br><br>
-**We strive to create a blended experience** of online activities and "unplugged" activities, which are lessons where students learn computing concepts without a computer. The online experiences are composed of self-guided and self-paced tutorials, which use scaffolded sets of programming instructions to explore and practice algorithmic thinking. The unplugged lessons take a hands-on, often kinesthetic approach, making use of physical manipulatives to model computational concepts.
-<br><br>
-**We break our curriculum design down into modules** (called "stages" and "puzzles" in Code Studio) that make it easy for teachers to **squeeze or stretch** the content to fit local constraints and take advantage of local opportunity. For example, in our K-5 curriculum, each course consists of about 18 to 20 lessons, each lasting between 25 and 45 minutes. They can be taught at a comfortable pace, whether in consecutive days as a sub-unit or one day a week for 18 weeks. The content of each course builds conceptually on the previous course, so that a student can progress through all three experiences learning new concepts along the way.
-<br><br>
-**We align our curriculum to standards.** For example, Code.org's K-5 curriculum aligns to CSTA computer science Standards and ISTE standards, while some lessons also integrate national Math, English Language Arts, and Science standards.
-<br><br>
-**We weave important concepts across each curriculum, instead of siloing understandings.** For example, across the entire Code Studio curriculum, the use of computer science themes scaffolds the development of ideas and recognizes the continual construction of knowledge:
-- Algorithms
-- Data
-- Abstraction
-- Computing Practice and Programming (Use of computational tools)
-- Computers and Communication Devices (Elements of computing devices and networks)
-- Community, Global, and Ethical Impacts
-<br><br>
-**We ground our curriculum in core competencies required for college and career success.** For example, across the entire Code Studio curriculum, students will develop the skills of a computer scientist through the development of Computational Thinking Practices:
-- Creativity
-- Collaboration
-- Communication
-- Persistence
-- Problem Solving
-<br><br>
-* * * 
-As you can see, many of the best practices for teaching CS are similar to best practices for teaching other subjects. For more ideas on how to design your CS classroom experience, refer to [this handout](http://code.org/curriculum/docs/k-5/ClassroomStrategies.pdf) which is also available in the Teacher Dashboard in the "Lesson Plans and Resources" tile.
+### BEST PRACTICES > Lesson Planning
 <br><br>
 
->### Reflect
-Take a moment to reflect on how you might approach CS through an interdisciplinary lens by <a href="http://forum.code.org/t/teaching-cs-across-the-curriculum/492">commenting in the forums</a>.<br><br>
-<a href="http://forum.code.org/t/teaching-cs-across-the-curriculum/492" target="blank"><button class="plc">Discuss in the forums >></button></a><br>
+<iframe width="640" height="390" src="https://www.youtube.com/embed/WBA-jP4HtR8" frameborder="0" allowfullscreen></iframe>
 
-After commenting in the forum, return here and click below to move on.
 <br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

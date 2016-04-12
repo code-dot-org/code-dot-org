@@ -1,8 +1,6 @@
-/* global $ */
+/* global ColorPicker */
 var rowStyle = require('./rowStyle');
-var colors = require('../../sharedJsxStyles').colors;
-
-var colorPicker = require('../colpick');
+var ColorPicker = require('react-color').default;
 
 var ColorPickerPropertyRow = React.createClass({
   propTypes: {
@@ -12,37 +10,40 @@ var ColorPickerPropertyRow = React.createClass({
 
   getInitialState: function () {
     return {
-      value: this.props.initialValue
+      value: this.props.initialValue,
+      displayColorPicker: false
     };
   },
 
   componentDidMount: function () {
-    this.ensureColorPicker();
+    window.addEventListener('mousedown', this.handlePageClick);
   },
 
-  componentDidUpdate: function () {
-    this.ensureColorPicker();
+  componentWillUnmount: function () {
+    window.removeEventListener('mousedown', this.handlePageClick);
   },
 
-  /**
-   * Make our button a colpick color picker, if it isn't already
-   */
-  ensureColorPicker: function () {
-    var element = React.findDOMNode(this.refs.colorPicker);
-    $(element).colpick({
-      color: this.state.value,
-    	layout: 'rgbhex',
-    	submit: 0,
-      onChange: this.handleColorChange
-    });
+  handlePageClick: function (e) {
+    if (e.target === ReactDOM.findDOMNode(this.refs.button)) {
+      return;
+    }
+    var ref = this.refs.colorPicker;
+    if (ref && !ReactDOM.findDOMNode(ref).contains(e.target)) {
+      this.setState({displayColorPicker: false});
+    }
   },
 
-  handleChangeInternal: function(event) {
+  handleChangeInternal: function (event) {
     this.changeColor(event.target.value);
   },
 
-  handleColorChange: function (hsbColor, hexColor) {
-    this.changeColor('#' + hexColor);
+  handleColorChange: function (color) {
+    if (color.rgb.a == 1) {
+      // no transparency set
+      this.changeColor('#' + color.hex);
+    } else {
+      this.changeColor(`rgba(${color.rgb.r},${color.rgb.g},${color.rgb.b},${color.rgb.a})`);
+    }
   },
 
   changeColor: function (color) {
@@ -50,12 +51,21 @@ var ColorPickerPropertyRow = React.createClass({
     this.setState({value: color});
   },
 
-  render: function() {
+  toggleColorPicker: function () {
+    this.setState({displayColorPicker: !this.state.displayColorPicker});
+  },
+
+  render: function () {
     var buttonStyle = {
       backgroundColor: this.state.value,
       verticalAlign: 'top'
     };
-
+    let colorPicker = this.state.displayColorPicker ? (
+      <ColorPicker
+        ref="colorPicker"
+        color={this.state.value}
+        onChangeComplete={this.handleColorChange}/>
+    ) : null;
     return (
       <div style={rowStyle.container}>
         <div style={rowStyle.description}>{this.props.desc}</div>
@@ -65,10 +75,12 @@ var ColorPickerPropertyRow = React.createClass({
             onChange={this.handleChangeInternal}
             style={rowStyle.input} />
           <button
+            ref="button"
             className={this.state.value === '' ? 'rainbow-gradient' : undefined}
             style={buttonStyle}
-            ref='colorPicker'>
+            onClick={this.toggleColorPicker}>
           </button>
+          {colorPicker}
         </div>
       </div>
     );

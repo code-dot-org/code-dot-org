@@ -2,6 +2,7 @@
 #
 # Helper methods for the analyze_hoc_activity cron job.
 #
+require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'cdo/properties'
 
@@ -30,12 +31,25 @@ def analyze_day_fast(date)
     " WHERE (finished_at >= '#{day}' AND finished_at < '#{next_day}')" +
     "   OR (pixel_finished_at >= '#{day}' AND pixel_finished_at < '#{next_day}')"
 
+  # Generate a list of Code.org tutorials so that we can generate the count for
+  # Code.org hosted tutorials below.
+  codedotorg_tutorials = []
+  PEGASUS_REPORTING_DB_READONLY.fetch(
+    "SELECT code FROM tutorials WHERE orgname = 'Code.org'"
+  ).each do |row|
+    codedotorg_tutorials.push(row[:code])
+  end
+
+  codedotorg_tutorial_count = 0
   tutorials = {}
   PEGASUS_REPORTING_DB_READONLY.fetch(
     "SELECT tutorial, #{weighted_count} #{from_where} GROUP BY tutorial ORDER BY count DESC"
   ).each do |row|
     next if row[:tutorial].nil_or_empty?
     add_count_to_hash tutorials, row[:tutorial], row[:count].to_i
+    if codedotorg_tutorials.include? row[:tutorial]
+      codedotorg_tutorial_count += row[:count].to_i
+    end
   end
 
   countries = {}
@@ -73,6 +87,7 @@ def analyze_day_fast(date)
     'states'=>states,
     'countries'=>countries,
     'tutorials'=>tutorials,
+    'codedotorg_tutorial_count'=>codedotorg_tutorial_count,
     'votes'=>{ 'boys'=>'0', 'girls'=>'0' },
   }
 end
@@ -80,7 +95,6 @@ end
 def add_hashes(h1, h2)
   unsorted = {}
   (h1.keys + h2.keys).uniq.each { |key| unsorted[key] = h1[key].to_i + h2[key].to_i }
-  unsorted
 
   sorted = {}
   unsorted.keys.sort { |a,b| unsorted[b] <=> unsorted[a] }.each { |i| sorted[i] = unsorted[i] }

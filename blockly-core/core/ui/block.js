@@ -225,7 +225,7 @@ Blockly.Block.prototype.getIcons = function() {
 Blockly.Block.prototype.initSvg = function() {
   this.svg_ = new this.blockSvgClass_(this, this.customOptions_);
   this.svg_.init();
-  if (!Blockly.readOnly) {
+  if (!this.blockSpace.isReadOnly()) {
     Blockly.bindEvent_(this.svg_.getRootElement(), 'mousedown', this,
                        this.onMouseDown_);
   }
@@ -319,9 +319,6 @@ Blockly.Block.terminateDrag_ = function() {
   if (selected) {
     selected.blockSpace.fireChangeEvent();
     selected.blockSpace.blockSpaceEditor.setCursor(Blockly.Css.Cursor.OPEN);
-  } else {
-    // If not, at least trigger a cursor change on blocks.
-    Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN, null);
   }
 
   Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_NOT_DRAGGING;
@@ -806,7 +803,7 @@ Blockly.Block.prototype.duplicate_ = function() {
  * @private
  */
 Blockly.Block.prototype.showContextMenu_ = function(e) {
-  if (Blockly.readOnly || !this.contextMenu) {
+  if (this.blockSpace.isReadOnly() || !this.contextMenu) {
     return;
   }
   // Save the current block in a variable for use in closures.
@@ -1404,7 +1401,7 @@ Blockly.Block.prototype.areBlockAndDescendantsDeletable = function() {
  * @return {boolean} True if deletable.
  */
 Blockly.Block.prototype.isDeletable = function() {
-  return this.deletable_ && !Blockly.readOnly;
+  return this.deletable_ && !this.blockSpace.isReadOnly();
 };
 
 /**
@@ -1424,7 +1421,7 @@ Blockly.Block.prototype.setDeletable = function(deletable) {
 Blockly.Block.prototype.shouldBeGrayedOut = function() {
   return Blockly.grayOutUndeletableBlocks
     && !this.isDeletable()
-    && !Blockly.readOnly;
+    && !this.blockSpace.isReadOnly();
 };
 
 /**
@@ -1432,7 +1429,7 @@ Blockly.Block.prototype.shouldBeGrayedOut = function() {
  * @return {boolean} True if movable.
  */
 Blockly.Block.prototype.isMovable = function() {
-  return this.movable_ && !Blockly.readOnly;
+  return this.movable_ && !this.blockSpace.isReadOnly();
 };
 
 /**
@@ -1449,7 +1446,7 @@ Blockly.Block.prototype.setMovable = function(movable) {
  * @return {boolean} True if editable.
  */
 Blockly.Block.prototype.isEditable = function() {
-  return this.editable_ && !Blockly.readOnly;
+  return this.editable_ && !this.blockSpace.isReadOnly();
 };
 
 /**

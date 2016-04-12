@@ -320,7 +320,7 @@
   hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='%{codeorg_url}'>Check out the tutorials</a>."
   hoc_faq_last_year: "Try the tutorials"
   hoc_faq_when_is_hoc_q: 'When is the Hour of Code?'
-  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='http://csedweek.org'>Computer Science Education Week</a>. Computer Science Education Week was December 7-13, 2015, but you can host an Hour of Code all year round."
+  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='http://csedweek.org'>Computer Science Education Week</a>. Computer Science Education Week was December 7-13, 2015, and this year's will be December 5-11, but you can host an Hour of Code all year round."
   hoc_faq_why_cs_q: 'Why computer science?'
   hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats on <a href='%{codeorg_url}'>%{partner_url}</a>."
   hoc_faq_how_participate_q: 'How do I participate in the Hour of Code?'
@@ -360,7 +360,7 @@
   hoc_faq_posters_q: "Where are my posters?"
   hoc_faq_posters_a: "We are so sorry to share that we ran out of posters to send everyone who requested them. We've more than tripled signups from last year which means we grossly underestimated how many posters to print for organizers. We are working to find a solution to distribute more. You can always print posters yourself on our <a href='/promote/resources'>resources page</a>."
   hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
-  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
 
   stats_hoc_2013_image_alt: 'Stats from 2013 Hour of Code'
   stats_growth: "It was the fastest to reach 15 million users."
@@ -453,6 +453,10 @@
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: event
   events: events
+
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
 
   footer_copyright_message: 'Copyright 2015 Code.org. All rights reserved.'
   footer_trademark_message: 'Hour of Code™ is a trademark of Code.org.'

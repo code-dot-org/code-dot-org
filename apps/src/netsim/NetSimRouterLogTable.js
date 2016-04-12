@@ -1,17 +1,6 @@
 /**
  * @overview Router log table UI component on the "Router" tab.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
 'use strict';
 
 var markup = require('./NetSimRouterLogTable.html.ejs');

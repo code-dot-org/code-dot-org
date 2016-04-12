@@ -14,79 +14,46 @@
 #  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
 #  index_levels_on_game_id  (game_id)
 #
 
-# Used by Bee to indicate a flower/honeycomb of capacity 0
-ZERO_DIRT_ITEM = 98
-
 class Karel < Maze
-  serialized_attrs :nectar_goal, :honey_goal, :flower_type, :fast_get_nectar_animation
+  serialized_attrs :nectar_goal, :honey_goal, :flower_type, :fast_get_nectar_animation, :serialized_maze
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['farmer', 'farmer_night', 'bee', 'bee_night']
+    %w(farmer farmer_night bee bee_night)
   end
 
   # List of possible flower types
   def self.flower_types
-    ['redWithNectar', 'purpleNectarHidden']
+    %w(redWithNectar purpleNectarHidden)
+  end
+
+  def self.load_maze(maze_file, size)
+    raw_maze = maze_file.read[0...size]
+    raw_maze.map {|row| row.map {|cell| JSON.parse(cell)}}
   end
 
   # If type is "Karel" return a 3 entry hash with keys 'maze', 'initial_dirt',
-  # and 'final_dirt', the keys map to 2d arrays blockly can render.
-  # final_dirt is always zeroed out until it is removed from Blockly.
+  # and 'raw', the keys map to 2d arrays blockly can render.
   def self.parse_maze(maze_json)
     maze_json = maze_json.to_json if maze_json.is_a? Array
     maze = JSON.parse(maze_json)
-    map, initial_dirt, final_dirt = (0...3).map { Array.new(maze.length) { Array.new(maze[0].length, 0) }}
     maze.each_with_index do |row, x|
       row.each_with_index do |cell, y|
-        # optional +/-
-        # followed by the number
-        # followed by optional R/P/FC, used to override default flower color
-        match = /([+|-])?(\d+)(R|P|FC)?/.match(cell.to_s)
-
-        if match[1] # we have +/-
-          map[x][y] = match[3] || 1 # R/P/FC can be used to override flowertype
-
-          digits = (match[2] == '0' ? ZERO_DIRT_ITEM.to_s : match[2])
-
-          initial_dirt[x][y] = (match[1] + digits).to_i
-        else
-          map[x][y] = cell.to_i
+        unless cell.is_a?(Hash) && cell.has_key?('tileType')
+          raise ArgumentError.new("Cell (#{x},#{y}) has no defined tileType")
         end
       end
     end
 
-    { 'maze' => map.to_json, 'initial_dirt' => initial_dirt.to_json, 'final_dirt' => final_dirt.to_json }
-  end
-
-  def self.unparse_maze(contents)
-    maze, initial_dirt = %w(maze initial_dirt).map do |x|
-      data = contents[x]
-      data = JSON.parse(data) if data.is_a?(String)
-      data
-    end
-    output = Array.new(maze.size) { Array.new(maze[0].size, 0) }
-    maze.each_with_index do |row, x|
-      row.each_with_index do |map, y|
-        dirt = initial_dirt[x][y]
-        if map.to_s =~ /[1|R|P|FC]/ and dirt != 0
-          prefix = dirt > 0 ? '+' : '-'
-          digits = dirt.abs == ZERO_DIRT_ITEM ? '0' : dirt.abs.to_s
-          suffix = map == 1 ? '' : map.to_s
-
-          output[x][y] = prefix + digits + suffix
-        else
-          output[x][y] = map
-        end
-      end
-    end
-    output
+    { 'serialized_maze' => maze_json }
   end
 
   def toolbox(type)

@@ -40,21 +40,26 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         var assertSpriteFrame = function (frame) {
-          var x = document.getElementById('sprite0').getAttribute('x');
+          var x = Studio.sprite[0].getLegacyElement().getAttribute('x');
           var actualFrame = 0.5 - x / 100;
           assert(actualFrame === frame, 'Expected: ' + frame + '  Actual: ' + actualFrame);
         };
 
-        testUtils.runOnStudioTick(6, function () {
-          assert(Studio.sprite[0].emotion === Emotions.HAPPY);
-          // eye blink
-          assertSpriteFrame(1);
+        testUtils.runOnStudioTick(1, function () {
+          // disable skewAnimations so we can check for proper blink frames
+          Studio.sprite[0].legacyAnimation_.skewAnimations_ = false;
         });
 
         testUtils.runOnStudioTick(25, function () {
           assert(Studio.sprite[0].emotion === Emotions.HAPPY);
           // happy frame
           assertSpriteFrame(9);
+        });
+
+        testUtils.runOnStudioTick(48, function () {
+          assert(Studio.sprite[0].emotion === Emotions.HAPPY);
+          // eye blink
+          assertSpriteFrame(1);
         });
 
         // add a completion on timeout since this is a freeplay level
@@ -84,21 +89,26 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         var assertSpriteFrame = function (frame) {
-          var x = document.getElementById('sprite0').getAttribute('x');
+          var x = Studio.sprite[0].getLegacyElement().getAttribute('x');
           var actualFrame = 0.5 - x / 100;
           assert(actualFrame === frame, 'Expected: ' + frame + '  Actual: ' + actualFrame);
         };
 
-        testUtils.runOnStudioTick(6, function () {
-          assert(Studio.sprite[0].emotion === Emotions.ANGRY);
-          // eye blink
-          assertSpriteFrame(1);
+        testUtils.runOnStudioTick(1, function () {
+          // disable skewAnimations so we can check for proper blink frames
+          Studio.sprite[0].legacyAnimation_.skewAnimations_ = false;
         });
 
         testUtils.runOnStudioTick(25, function () {
           assert(Studio.sprite[0].emotion === Emotions.ANGRY);
           // happy frame
           assertSpriteFrame(10);
+        });
+
+        testUtils.runOnStudioTick(48, function () {
+          assert(Studio.sprite[0].emotion === Emotions.ANGRY);
+          // eye blink
+          assertSpriteFrame(1);
         });
 
         // add a completion on timeout since this is a freeplay level
@@ -128,21 +138,26 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         var assertSpriteFrame = function (frame) {
-          var x = document.getElementById('sprite0').getAttribute('x');
+          var x = Studio.sprite[0].getLegacyElement().getAttribute('x');
           var actualFrame = 0.5 - x / 100;
           assert(actualFrame === frame, 'Expected: ' + frame + '  Actual: ' + actualFrame);
         };
 
-        testUtils.runOnStudioTick(6, function () {
-          assert(Studio.sprite[0].emotion === Emotions.SAD);
-          // eye blink
-          assertSpriteFrame(1);
+        testUtils.runOnStudioTick(1, function () {
+          // disable skewAnimations so we can check for proper blink frames
+          Studio.sprite[0].legacyAnimation_.skewAnimations_ = false;
         });
 
         testUtils.runOnStudioTick(25, function () {
           assert(Studio.sprite[0].emotion === Emotions.SAD);
           // happy frame
           assertSpriteFrame(11);
+        });
+
+        testUtils.runOnStudioTick(48, function () {
+          assert(Studio.sprite[0].emotion === Emotions.SAD);
+          // eye blink
+          assertSpriteFrame(1);
         });
 
         // add a completion on timeout since this is a freeplay level

@@ -69,7 +69,7 @@ theme: pdf
             computer science graduate
           - else
             computer science graduates
-        in 2013;
+        in 2014;
         - if state_info[:percent_female_cs_grad_i] == 0
           %b none
         - else
@@ -125,7 +125,7 @@ theme: pdf
           = surround "(", "% of" do
             = state_info[:percent_schools_ap_cs_i]
           = state_info[:state_code_s]
-          schools with AP programs) offered the AP Computer Science course in 2013-2014.
+          schools with AP programs) offered the AP Computer Science course in 2014-2015.
         - else
           No schools in
           = state_info[:state_code_s]
@@ -141,6 +141,10 @@ theme: pdf
       %ol
         %li Call on your school to expand computer science offerings at every grade level.
         %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
+        %li 
+          Visit
+          %a{href: "https://code.org/educate/3rdparty"} https://code.org/educate/3rdparty
+          to find out about courses and curriculum from a variety of third parties, including Code.org.
         %li
           Visit
           %a{href: state_info[:website_url_s]}= state_info[:website_url_s]
@@ -167,24 +171,26 @@ theme: pdf
       - if state_info[:num_affiliates_i] + state_info[:num_elementary_trained_i] != 0
         %li
           - if state_info[:num_affiliates_i] == 0
-            There are no Code.org affiliates in the state to offer professional development for elementary teachers.
+            There are no Code.org K-12 facilitators in the state to offer professional learning for elementary teachers.
           - else
             - if state_info[:num_elementary_trained_i] == 0
               There are
               = state_info[:num_affiliates_i]
-              Code.org Affiliates that offer professional development for elementary teachers in
+              Code.org K-12 facilitators that offer professional learning for elementary teachers in
               = state_info[:state_name_s]
             - else
               = format_integer_with_commas(state_info[:num_affiliates_i])
               Code.org
               - if state_info[:num_affiliates_i] == 1
-                Affiliate,
+                K-12 facilitator
               - else
-                Affiliates,
-              offering professional development for elementary teachers in
-              = succeed ',' do
-                = state_info[:state_name_s]
-              have already trained
+                K-12 facilitators
+              in
+              = state_info[:state_name_s]
+              - if state_info[:num_affiliates_i] == 1
+                has provided professional learning for
+              - else
+                have provided professional learning for
               %b
                 = format_integer_with_commas(state_info[:num_elementary_trained_i])
                 elementary
@@ -194,7 +200,7 @@ theme: pdf
                   teachers.
       - if state_info[:num_ms_trained_i] + state_info[:num_hs_trained_i] != 0
         %li
-          Code.org has trained
+          Code.org has provided professional learning for 
           %b
             = format_integer_with_commas(state_info[:num_ms_trained_i])
             middle school
@@ -237,7 +243,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            have rigorous computer science standards. Computer science has often been confused with broader technology education in schools. States should adopt discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. The Computer Science Teachers Association has model K-12 CS standards.
+            have rigorous computer science standards publicly available across K-12. Computer science has often been confused with broader technology education in schools. States could strengthen their computer science programs by publicly adopting discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. The Computer Science Teachers Association has model K-12 CS standards.
         - elsif state_info[:cs_standards_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -255,7 +261,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            provide funding for rigorous computer science professional development and course support. States should provide professional development resources by creating matching fund opportunities to bring computer science to school districts.
+            provide dedicated funding for rigorous computer science professional development and course support. Although funds may be available via broader programs, the state can strengthen its computer science programs by creating specific opportunities to bring computer science to school districts, such as matching fund programs.
         - elsif state_info[:pd_funding_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -327,7 +333,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            require that all secondary schools offer computer science. States should adopt policies that require schools to offer a computer science course based on rigorous standards, with appropriate implementation timelines and allowing for remote and/or in-person courses.
+            require that all secondary schools offer computer science. The state can support the expansion of computer science courses by adopting policies that require schools to offer a computer science course based on rigorous standards, with appropriate implementation timelines and allowing for remote and/or in-person courses.
         - elsif state_info[:require_hs_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -339,7 +345,7 @@ theme: pdf
           %div
             %i.fa.fa-check-square-o
             = state_info[:state_name_s]
-            allows computer science to count for a core graduation requirement. Find out how 
+            allows computer science to count for a core graduation requirement. Find out how
             = state_info[:state_name_s]
             allows computer science to count towards graduation at
             = succeed "." do
@@ -372,7 +378,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            allow computer science to count as a mathematics or science admission requirement at institutions of higher education.  Admission policies that do not include rigorous computer science courses as meeting the mathematics or science entrance requirements discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
+            allow computer science to count as a mathematics or science admission requirement at institutions of higher education. Admission policies that do not include rigorous computer science courses as meeting the mathematics or science entrance requirements discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
         - elsif state_info[:higher_ed_entrance_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -392,5 +398,5 @@ theme: pdf
         %a{href: "https://twitter.com/codeorg"} Twitter
     %div
       %p Launched in 2013, Code.org® is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
-    %p.clear-both.sources Data is from the Conference Board, the Bureau of Labor Statistics, the College Board, the National Science Foundation, the National Center for Education Statistics, and the Gallup research study Searching for Computer Science: Access and Barriers in K-12 Education.
+    %p.clear-both.sources Data is from the Conference Board for job demand, the Bureau of Labor Statistics for state salary and national job projections data, the College Board for AP exam data, the National Center for Education Statistics for university graduate data, the Gallup research study Searching for Computer Science: Access and Barriers in K-12 Education for schools that offer computer science and parent demand, and Code.org for its own courses, professional learning programs, and participation data.
 

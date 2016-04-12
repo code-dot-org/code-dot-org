@@ -235,14 +235,14 @@ exports.dropdown = function (blockId, elementId) {
                            'optionsArray': optionsArray });
 };
 
-exports.getAttribute = function(blockId, elementId, attribute) {
+exports.getAttribute = function (blockId, elementId, attribute) {
   return Applab.executeCmd(blockId,
                            'getAttribute',
                            {elementId: elementId,
                             attribute: attribute});
 };
 
-exports.setAttribute = function(blockId, elementId, attribute, value) {
+exports.setAttribute = function (blockId, elementId, attribute, value) {
   return Applab.executeCmd(blockId,
                            'setAttribute',
                            {elementId: elementId,
@@ -261,6 +261,19 @@ exports.setText = function (blockId, elementId, text) {
                           'setText',
                           {'elementId': elementId,
                            'text': text });
+};
+
+exports.getNumber = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getNumber',
+                          {'elementId': elementId });
+};
+
+exports.setNumber = function (blockId, elementId, number) {
+  return Applab.executeCmd(blockId,
+                          'setNumber',
+                          {'elementId': elementId,
+                           'number': number });
 };
 
 exports.getImageURL = function (blockId, elementId) {
@@ -346,7 +359,7 @@ exports.playSound = function (blockId, url) {
                           {'url': url});
 };
 
-exports.getKeyValue = function(blockId, key, onSuccess, onError) {
+exports.getKeyValue = function (blockId, key, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                            'getKeyValue',
                            {'key':key,
@@ -354,7 +367,7 @@ exports.getKeyValue = function(blockId, key, onSuccess, onError) {
                             'onError': onError});
 };
 
-exports.setKeyValue = function(blockId, key, value, onSuccess, onError) {
+exports.setKeyValue = function (blockId, key, value, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                            'setKeyValue',
                            {'key':key,
@@ -397,6 +410,13 @@ exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
                            'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
+};
+
+exports.onRecordEvent = function (blockId, table, onRecord) {
+  return Applab.executeCmd(blockId,
+                          'onRecordEvent',
+                          {'table': table,
+                           'onRecord': onRecord});
 };
 
 exports.getUserId = function (blockId) {

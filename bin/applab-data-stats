@@ -1,0 +1,163 @@
+#!/usr/bin/env ruby
+
+#
+# USAGE: bin/applab-data-stats > output.csv
+#
+# This file is useful to generate per-table stats so that we can see how our data
+# APIs are being used, filtering out admins, deleted channels, etc and breaking down
+# by teachers vs students, and students in sections vs not in sections. This data can
+# help with choosing what rate limts and data size limits we should impose as well
+# as for estimating our future data storage and transfer costs.
+#
+
+require 'aws-sdk'
+require_relative '../deployment'
+require 'cdo/db'
+require_relative '../shared/middleware/helpers/storage_id'
+
+db = Aws::DynamoDB::Client.new
+
+last_evaluated_key = nil
+# Map containing all values in the 'hash' column of the "#{rack_env}_tables"
+# table in DynamoDB.
+hash_map = {}
+# Map containing all values in the 'channel_id' column of the "#{rack_env}_tables"
+# table in DynamoDB.
+channel_map = {}
+rows = 0
+consumed_capacity = 0
+
+begin
+  response = db.scan(
+      table_name: CDO.dynamo_tables_table,
+      attributes_to_get: ['channel_id', 'hash'],
+      exclusive_start_key: last_evaluated_key,
+      return_consumed_capacity: 'TOTAL'
+  )
+  consumed_capacity += response.consumed_capacity.capacity_units
+  page = response.first
+
+  page[:items].each do |item|
+    channel_map[item['channel_id']] = 1
+    hash_map[item['hash']] = 1
+    rows += 1
+  end
+
+  last_evaluated_key = page[:last_evaluated_key]
+end while last_evaluated_key
+
+# We log things to STDERR so that we can capture only the CSV output
+# when we redirect the output to a CSV file. The cleaner approach would
+# be to take an output filename as input and log these messages to STDOUT.
+
+$stderr.puts "tables: #{hash_map.keys.length}"
+$stderr.puts "channels: #{channel_map.keys.length}"
+$stderr.puts "rows: #{rows}"
+$stderr.puts "1st pass consumed_capacity: #{consumed_capacity}"
+
+consumed_capacity = 0
+
+def get_item_size(item)
+  $stderr.puts "bogus item #{item}" unless item['table_name']
+  table_name_length = item['table_name'] ? item['table_name'].length : 0
+  item['value'].length + 2 * table_name_length + 130
+end
+
+# memoize channel metadata computed by querying pegasus and dashboard dbs.
+$channel_info_map = {}
+def get_channel(channel_id)
+  return $channel_info_map[channel_id] if $channel_info_map[channel_id]
+
+  channel = PEGASUS_DB[:storage_apps].where(id: channel_id).first
+  return ($channel_info_map[channel_id] = {state: 'missing'}) unless channel
+
+  origin = get_channel_origin(channel)
+
+  $channel_info_map[channel_id] = {
+    owner_storage_id: channel[:storage_id],
+    state: channel[:state],
+    abuse_score: channel[:abuse_score],
+    origin: origin
+  }
+end
+
+$applab_project_level_id = DASHBOARD_DB[:levels].where(name: 'New App Lab Project').first[:id]
+def get_channel_origin(channel)
+  return 'invalid-channel' unless channel
+  channel_id = channel[:id]
+  owner_storage_id = channel[:storage_id]
+  encrypted_channel_id = storage_encrypt_channel_id(owner_storage_id, channel_id)
+  channel_token = DASHBOARD_DB[:channel_tokens].where(channel: encrypted_channel_id).first
+  return 'project' unless channel_token
+  channel_token[:level_id] == $applab_project_level_id ? 'applab-project' : 'script'
+end
+
+$user_map = {}
+def get_user_from_storage_id(storage_id)
+  return $user_map[storage_id] if $user_map[storage_id]
+
+  user_storage_id = PEGASUS_DB[:user_storage_ids].where(id: storage_id).first
+  return ($user_map[storage_id] = {}) unless user_storage_id
+  user_id = user_storage_id[:user_id]
+  return ($user_map[storage_id] = {}) unless user_id
+
+  user = DASHBOARD_DB[:users].where(id: user_id).first
+  return ($user_map[storage_id] = {id: user_id}) unless user
+
+  is_section_member = !DASHBOARD_DB[:followers][student_user_id: user_id].nil?
+  $user_map[storage_id] = {
+    id: user_id,
+    is_admin: user[:admin],
+    user_type: user[:user_type],
+    is_section_member: is_section_member
+  }
+end
+
+puts "table_id,table_rows,table_size,table_data_length,table_name_length,app_id,app_state,app_abuse_score,app_from_script_level,user_id,user_is_admin,user_type,user_in_section"
+
+hash_map.keys.each_with_index do |hash, table_id|
+  last_evaluated_key = nil
+  channel_id, table_name, _ = hash.split(':')
+
+  # ignore old netsim data
+  next if channel_id == '42'
+
+  channel = get_channel(channel_id)
+  #puts "channel info #{channel}"
+  user = get_user_from_storage_id(channel[:owner_storage_id])
+  table_rows = 0
+  table_size = 0
+  value_size = 0
+  begin
+    response = db.query(
+        table_name: CDO.dynamo_tables_table,
+        exclusive_start_key: last_evaluated_key,
+        return_consumed_capacity: 'TOTAL',
+        attributes_to_get: ['channel_id', 'hash', 'table_name', 'value'],
+        key_conditions: {
+            "hash" => {
+                attribute_value_list: [hash],
+                comparison_operator: "EQ",
+            },
+        },
+
+    )
+    consumed_capacity += response.consumed_capacity.capacity_units
+    page = response.first
+
+    page[:items].each do |item|
+      channel_map[item['channel_id']] = 1
+      hash_map[item['hash']] = 1
+      table_rows += 1
+      table_size += get_item_size(item)
+      value_size += item['value'].length
+    end
+
+    last_evaluated_key = page[:last_evaluated_key]
+  end while last_evaluated_key
+
+  $stderr.print '.'
+  puts "#{table_id},#{table_rows},#{table_size},#{value_size},#{table_name.length},#{channel_id},#{channel[:state]},#{channel[:abuse_score]},#{channel[:origin]},#{user[:id]},#{user[:is_admin]},#{user[:user_type]},#{user[:is_section_member]}"
+end
+
+$stderr.puts "\n2nd pass consumed_capacity #{consumed_capacity}"

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Assessment: Finish drawing the last tooth, 25 pixels wide and 25 pixels tall.",
+    "instructions": "Assessment: Finish drawing the last tooth. It is 25 pixels wide and 25 pixels tall.",
     "x": "250",
     "y": "250",
     "start_direction": "90",
@@ -31,9 +31,12 @@
     "impressive": "false",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Assessment: Finish drawing the last tooth, 25 pixels wide and 25 pixels tall.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
-    "examples_required": "false"
-  }
+    "markdown_instructions": "**Assessment:** Finish drawing the last tooth. It is 25 pixels wide and 25 pixels tall.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>
@@ -72,20 +75,7 @@
       </xml>
     </toolbox_blocks>
     <required_blocks>
-      <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">25</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-        </block>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">25</title>
-        </block>
-      </xml>
+      <xml/>
     </required_blocks>
     <solution_blocks>
       <xml>

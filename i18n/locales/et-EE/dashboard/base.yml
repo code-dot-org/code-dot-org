@@ -24,10 +24,13 @@ et:
   hello: Tere maailm
   welcome_back: 'Tere tulemast tagasi, %{name}'
   submit: Esita
+  unsubmit: Võta vastus tagasi
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Lisa õpetaja:'
       placeholder: Üksuse kood (ABCDEF)
+      instructions: 'Palun sisesta kood, mille andis sulle su õpetaja. See on 6-kohaline tähtedest koosnev kood, näiteks "ABCDEF".'
     submit: Lisa õpetaja
   add_hint_form:
     placeholder: Palun sisesta oma vihje siia
@@ -38,6 +41,7 @@ et:
   puzzle: Mõistatus
   trophies: Trofeed
   courses: Kursused
+  unplugged_activity: Lahutatud tegevus
   of: kohta
   more: NÄITA ROHKEM
   less: NÄITA VÄHEM
@@ -213,7 +217,7 @@ et:
       free_play:
         playlab: Loo äpp
         artist: Joonista midagi
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Loo äpp
     user:
       classroom: Õpetaja kodulehekülg
@@ -246,57 +250,10 @@ et:
     remove: (eemalda õpetaja)
     confirm:
       remove: Oled kindel, et tahad seda õpetajat eemaldada?
-    tools: Õpetaja töövahendid
-    followers:
-      section: 'Jaotis:'
-      stages: 'Etappide kuvamine:'
-      show_past: 'Kuva õpilase aktiivsus (%{bullet_html}):'
-      levels_key: Tasemete võti
-      perfect: Tehtud, suurepärane
-      completed: Tehtud, kuid liiga paljude plokkidega
-      tried: Proovitud, aga ei lõpetanud
-      not_tried: Pole veel proovinud
-      activity: 'Näitab õpilase aktiivsust viimasel %{hours}%{plural}'
-      no_section: Pole määratud sektsiooni
-      trophies: Trofeed
     students:
-      name: Nimi
-      username: Kasutajanimi
-      password: Salasõna
-      manage: Halda õpilasi
       dashboard: Mine õpetaja menüüsse
-      add: Lisa õpilasi
-      remove: eemalda õpilane
-      confirm_remove: Kas olete kindel et soovite selle õpilase eemaldada?
-      help_reassign: Et oma klassi erinevateks osadeks jagada, valige õpilased keda tahate uude jaotisesse määrata.
-      help_register: Selle asemel, et iga õpilase infot eraldi importida, saate oma klassi kiirelt kokku panna, lastes neil registreeruda. Teie õpilased peavad valima kasutajanimed ja paroolid, aga nad ei pea andma oma meiliaadressi. Kui õpilane unustab oma parooli, saate selle ise lähtestada.
-      register: Palun laske oma õpilastel ise registreeruda
-      vist: Paluge õpilastel külastada
-      section_code: 'ja sisestage nende jaotise kood:'
-      first_please: 'Esiteks, palun %{add_section}'
-      for: Jaoks
-      enter: 'Sisestage:'
-    sections:
-      add: Jaotise lisamine
-      manage: Halda jaotisi
-      section: Jaotis
-      students: Õpilased
-      section_code: Jaotise kood
-      add_section_code: Lisa õpilaste jagu-kood
-      secret: Salajane tüüp
-      grade: Klass
-      course: Kursus
-      rename: nimeta ümber
-      edit: muuda
-      delete: kustuta
-      confirm_delete: Oled kindel, et soovid selle sektsiooni kustutada?
-      email: Saada meiliga
-    rollup: Edusammude ülevaade
-    activity: Hiljutine klassi tegevus
-    user_not_found: Õpetajat või õpilast ei leitud
-    cant_remove_student_no_email: '%{student_name} ei saa eemaldada teie õpilasena, sest %{student_name} ei ole registreeritud e-posti aadressi'
-    cant_remove_teacher_no_email: '%{teacher_name} ei saa eemaldada oma õpetajat, kuna sul pole registreeritud e posti aadress'
-    student_teacher_disassociated: '%{teacher_name} on eemaldatud %{student_name} õpetajana'
+    user_not_found: Õpetajat ei leitud.
+    student_teacher_disassociated: 'Olete eemaldanud %{teacher_name} oma õpetajate nimekirjast.'
     panel:
       answer_viewer: Vastuse Vaataja
       student: Õpilane
@@ -321,10 +278,6 @@ et:
   user_level:
     completed: Tehtud
     tried: Proovisin
-  user_stats:
-    recent_activity: Viimane tegevus
-    show_more: Näita rohkem
-    classroom_activity: Lahutatud tegevus
   home:
     title: Kood stuudio
     description: Code Stuudio on koduks online kursustele, mis on loodud Code.org poolt.
@@ -362,6 +315,7 @@ et:
     heading_hoc2014: '<h2>Koodi Tund </h2><h1>Kõikidele vanustele</h1>'
     heading_elementary: '<h2>20-tunnised kursused </h2><h1> Arvutiteaduse Põhialused (kõik vanused)</h1>'
     heading_apps: '<h2>Lõbu</h2> <h1>Kõigile</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Meie kiirendatud kursus</h2> <h1>Igas vanuses</h1>'
     your_gallery: Galerii
     no_primary_course: Proovige Code Studio kursust
@@ -370,6 +324,7 @@ et:
   share:
     title: Õpi Code stuudios
     description: Igaüks saab õppida arvutiteadust. Tee mänge, äppe ja kunsti koodimisega.
+    try_hour_of_code: Proovi Koodi Tundi!
   gender:
     male: Mees
     female: Naine
@@ -381,8 +336,9 @@ et:
     thank_you: 'Me täname oma <a href="https://code.org/about/donors"> sponsoreid </a>,<a href="https://code.org/about/partners">partnereid</a>, meie <a href="https://code.org/about/team"> tervet meeskonda</a>, video tiimi, ja meie <a href="https://code.org/about/advisors"> haridusnõustajaid</a> nende teenete eest Code Studio valmimisele.'
     help_from_html: Insenerid Google´st, Microsoftist, Facebookist ja Twitterist aitasid luua selle õppekeskkonna.
     help_from_html_old: "Insenerid Google'st, Microsoft'st, Facebook'st ja Twitter'st aitasid luua neid materjale."
-    art_from_html: 'Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. Kõik õigused on reserveeritud.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. Kõik õigused on reserveeritud.<br />Jääaeg&#8482; &amp; &copy; %{current_year} 20th Century Fox. Kõik õigused on reserveeritud.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused on reserveeritud.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Kõik õigused on reserveeritud'
-    art_from_html_old: 'Vihased Linnud (Angry Birds)&#8482;&amp;&copy; 2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused kaitstud.<br />Taimed vs Koolnud (Plants vs. Zombies)&#8482;&amp;&copy;%{current_year} Electronic Arts Inc. Kõik õigused kaitstud'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Kõik õigused kaitstud.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Kõik õigused kaitstud.<br />Frozen&#8482; &copy; %{current_year} Disney. Kõik õigused kaitstud.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Kõik õigused kaitstud.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused kaitstud.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Kõik õigused kaitstud.<br />The Amazing World of Gumball on kaubamärk ja &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Kõik õigused kaitstud. Star Wars&#8482; &copy; %{current_year} Disney ja Lucasfilm. Kõik õigused kaitstud. Frozen&#8482; &copy; %{current_year} Disney. Kõik õigused kaitstud. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Kõik õigused kaitstud. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused kaitstud. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Kõik õigused kaitstud. The Amazing World of Gumball on kaubamärk ja &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Amazoni poolt toetatud
     trademark: '&copy;Code.org,%{current_year}. Code.org&reg;, CODE-i logo ja KoodiTund&reg; on Code.org kaubamärgid.'
     copyright: Autoriõigus
@@ -399,6 +355,7 @@ et:
     built_on_code_studio: Code Studio abil loodud
     make_my_own_app: Oma rakenduse loomine
     how_it_works: Tööpõhimõtted
+    try_hour_of_code: Proovi Koodi Tundi!
   reference_area:
     title: Vajad abi?
     subtitle: Vaata neid videosid ja vihjeid
@@ -454,8 +411,14 @@ et:
       current: Olemasolevad tasemed
       unused: Kasutamata tasemed
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
-      title: Classic Maze
+      title: Klassikaline labürint
       body: Proovige arvutiteaduse alused. Miljonid on proovinud.
     flappy:
       title: Flappy kood
@@ -495,10 +458,10 @@ et:
   landing:
     prerelease: "See kursus on <span class='betatext'> beeta</span>.  See tähendab, et see ei ole  lõplik versioon ja  tuleb läbi vaadata, kui saadakse tagasisidet ja parandused on tehtud."
     prerelease_hoc2014: "See õpetus on <span class='betatext'> Beta</span>.  Tuleb läbi vaadata, kui on saabunud tagasiside ja parandused on tehtud."
-    feedback: Anna tagasisidet
     report_bug: Raporteeri veast
     support: Abi saamine
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Vale vastus
     wrong_body: Sinu poolt sisestatud vastus ei ole õige. Palun proovi uuesti!
@@ -506,6 +469,23 @@ et:
     correct_body: See on õige vastus.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting answers.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting answers.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Vale lahendus
     wrong_body: Sinu poolt sisestatud lahendus ei ole õige. Palun proovi uuesti!
@@ -523,6 +503,8 @@ et:
     placeholder: Sisesta siia oma vastus
     open_response_title: Tänud
     open_response_body: Täname vastuse eest!
+    correct_title: Õige
+    correct_body: See on õige vastus.
   dialog:
     ok: Olgu
     startover_title: Oled sa kindel et tahad uuesti alustada?
@@ -576,6 +558,7 @@ et:
     completed_perfect: tehtud, suurepärane
     furthest_level_attempted: kõige viimane tase proovitud
     assessment: hinnang
+    submitted: submitted
   studio:
     courses_working_on: Kursused, millega töötate
     completed_courses: Lõpetatud kursused
@@ -599,7 +582,7 @@ et:
     updated: Uuendatud
     project_type: Projekti tüüp
     help_text: 'Klõpsake <strong>teha App</strong> või <strong>Joonista midagi</strong> allpool, et teha uus Play Lab või kunstniku projekt<br/> Sa võid tagasi tulla oma projekti juurde ja jätkata nendega tööd igal ajal.'
-    need_help: Vajad abi kuidas alustada?
+    need_help: Vajad abi, kuidas alustada?
     really_delete: Kas kustutan?
     delete_yes: Jah
     delete_no: Ei
@@ -632,3 +615,7 @@ et:
           other: Muu
         detail: Palun kirjeldage võimalikult detailselt teksti, mida raporteerite.
         acknowledge: 'Selle informatsiooni esitamisel nõustute, et seda käsitletakse vastavalt %{link_start_privacy} privaatsuse tingimustele %{link_end}ja %{link_start_tos} kasutajatingimustele %{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

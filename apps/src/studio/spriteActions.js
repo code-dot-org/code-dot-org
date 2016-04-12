@@ -1,15 +1,4 @@
 /** @file Actions that can be given to a playlab sprite to execute over a set time. */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
 'use strict';
 
 var utils = require('../utils');
@@ -80,7 +69,7 @@ exports.GridMove.prototype.update = function (sprite) {
   var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
   sprite.displayX = this.startX_ + this.towardDeltaX_ * normalizedProgress;
   sprite.displayY = this.startY_ + this.towardDeltaY_ * normalizedProgress;
-  sprite.dir = getDirection(this.towardDeltaX_, this.towardDeltaY_);
+  sprite.setDirection(getDirection(this.towardDeltaX_, this.towardDeltaY_));
   this.elapsedSteps_++;
 };
 
@@ -127,7 +116,7 @@ exports.GridMoveAndCancel.prototype.update = function (sprite) {
       (normalizedProgress < 0.5 ? normalizedProgress : (1 - normalizedProgress));
   sprite.displayX = sprite.x + this.towardDeltaX_ * percentOffset;
   sprite.displayY = sprite.y + this.towardDeltaY_ * percentOffset;
-  sprite.dir = getDirection(this.towardDeltaX_, this.towardDeltaY_);
+  sprite.setDirection(getDirection(this.towardDeltaX_, this.towardDeltaY_));
   // Could do a forced reversal of animation here, depends on how it looks
   // with the real assets.
   this.elapsedSteps_++;

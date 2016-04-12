@@ -32,7 +32,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to 'http://blahblah'
   end
 
-
   test "handle nonsense in return_to" do
     sign_in User.new # devise uses an empty user instead of nil? Hm
 
@@ -246,6 +245,13 @@ class HomeControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_select '.alert', 0
+  end
+
+  test 'no more debug' do
+    # this action is now in AdminReportsController and requires admin privileges
+    assert_raises AbstractController::ActionNotFound do
+      get :debug
+    end
   end
 
 end

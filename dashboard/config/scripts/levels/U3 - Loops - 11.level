@@ -15,6 +15,9 @@
       "greaterThanOrEqualOperator": null,
       "lessThanOperator": null,
       "lessThanOrEqualOperator": null,
+      "andOperator": null,
+      "orOperator": null,
+      "notOperator": null,
       "randomNumber_min_max": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
@@ -55,7 +58,8 @@
     "start_blocks": "var die1 = -1;\r\nwhile (die1 != 2 || die1 != 3) {\r\n  die1 = randomNumber(1, 6);\r\n  write(\"Rolled a \" + die1);\r\n}\r\nwrite(\"Done.\");",
     "instructions": "Fix the condition so that it keeps rolling the die as long as the value is not a 2 or a 3 instead of rolling infinitely. (Click to see full instructions)",
     "encrypted_examples": "R9l2efb5rP+QetFG3istOGEmJRsXA8HnXOYmAm9H07vJh72+Sf0zGi8x5wFN\neygs\n"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,4 +1,4 @@
-var showAssetManager = require('../assetManagement/show.js');
+var showAssetManager = require('../../assetManagement/show.js');
 var rowStyle = require('./rowStyle');
 
 // We'd prefer not to make GET requests every time someone types a character.
@@ -6,7 +6,7 @@ var rowStyle = require('./rowStyle');
 // I expect that the vast majority of time, people will be copy/pasting URLs
 // instead of typing them manually, which will result in an immediate GET,
 // unless they pasted within USER_INPUT_DELAY ms of editing the field manually
-const USER_INPUT_DELAY = 1500;
+var USER_INPUT_DELAY = 1500;
 
 var PropertyRow = React.createClass({
   propTypes: {
@@ -57,7 +57,7 @@ var PropertyRow = React.createClass({
     this.setState({value: filename});
   },
 
-  render: function() {
+  render: function () {
     return (
       <div style={rowStyle.container}>
         <div style={rowStyle.description}>{this.props.desc}</div>

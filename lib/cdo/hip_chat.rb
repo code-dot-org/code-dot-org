@@ -71,7 +71,11 @@ class HipChat
     end
 
     # Make the initial request synchronously.
-    succeeded = post_hipchat_form(room, message, options).is_a?(Net::HTTPSuccess)
+    begin
+      succeeded = post_hipchat_form(room, message, options).is_a?(Net::HTTPSuccess)
+    rescue  # Handle timeouts and other exceptions gracefully.
+      succeeded = false
+    end
     return if succeeded
 
     # If that failed, back off exponentially and retry, working
@@ -79,7 +83,7 @@ class HipChat
     @@current_retry_thread_for_test = Thread.new do
       backoff = @@initial_backoff
       retries = 1
-      while !succeeded and retries <= MAX_RETRIES
+      while !succeeded && retries <= MAX_RETRIES
         @@total_backoff_for_test += backoff
         @@retries_for_test += 1
         sleep(backoff)

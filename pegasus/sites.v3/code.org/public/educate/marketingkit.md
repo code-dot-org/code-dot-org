@@ -1,20 +1,39 @@
 ---
 title: Marketing Kit
-nav: blank
+nav: educate_nav
 ---
 # Marketing Kit
 
 Here is how you can promote your school's new computer science program:
 
-## 1) Show one of these videos at a school-wide assembly, or ask counselors to share with students. 
-[![image](/images/csvideo.png)](http://www.youtube.com/watch?v=xgOYvG1WAbM)
-[![image](/images/ecsvideo.png)](http://www.youtube.com/watch?v=juXqFtaPmNk)
-[![image](/images/apcspvideo.png)](http://www.youtube.com/watch?v=mjMLCpXz3eo)
+## 1) Play these videos for students.
+Teachers, administrators, or counselors can inspire all students to take a computer science course by playing one of these videos at a school-wide assembly. 
 
-## 2) And this video to inspire. 
-[![image](/images/codevideosmall.png)](http://www.youtube.com/watch?v=nKIu9yen5nc)
+[col-50]
+### Sign up for Computer Science (general)
 
-[**YouTube**](http://www.youtube.com/watch?v=nKIu9yen5nc) | [**Download**](https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1)
+<%=view :display_video_thumbnail, id: "signup", video_code: "xgOYvG1WAbM", play_button: 'center' %>
+
+[**YouTube**](http://www.youtube.com/watch?v=xgOYvG1WAbM) | [**Download**](https://www.dropbox.com/s/pkj38135cqegu29/CS-high-school-pitch-GENERAL.mp4?dl=0)
+
+[/col-50]
+
+[col-50]
+
+
+### Sign up for AP Computer Science Principles
+
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center' %>
+
+[**YouTube**](http://www.youtube.com/watch?v=jQm0z894CG0) | 
+[**Download**](https://www.dropbox.com/s/4olrpah7c2jo3gf/CSP_Students_v4.mp4?dl=0)
+
+[/col-50]
+
+<p style="clear:both">&nbsp;</p>
+
+## 2) Use [these resources] (/educate/resources/inspire) to help inspire students
+With these videos, posters, student and teacher testimonials, and other materials, you have the resources you'll need to recruit students in your school to take a computer science course. Find them at [code.org/educate/resources/inspire](/educate/resources/inspire). 
 
 ## 3) Print and send home one of these fliers:
 [CS in Algebra](/files/CSinAlgebra_one_pager.pdf)<br/>
@@ -26,14 +45,14 @@ Here is how you can promote your school's new computer science program:
  
 ## 5) Direct parents or students to these pages for more info on your new computer science program
 
-| Grade level | URL |
+| Grade Level | URL |
 | -------- | ------- |
-| [high school](/educate/hs) | code.org/highschool  |
-| [middle school](/educate/ms) | code.org/middleschool |
-| [elementary school](/educate/k5) | code.org/k5 |
+| High School | [code.org/highschool](/educate/curriculum/high-school)  |
+| Middle School | [code.org/middleschool](/educate/curriculum/middle-school) |
+| Elementary School | [code.org/k5](/educate/curriculum/elementary-school) |
 
 
-<a id="classgraphics"></a> 
+<a id="classgraphics"></a>
 
 ## 6) Add one of these graphics to your website.
 
@@ -51,10 +70,5 @@ Here is how you can promote your school's new computer science program:
 
 [Download graphics file](/files/partner-logo.zip)
 
-### More resources to share with teachers
-- [Top 4 Ways to Recruit Girls to Try Computer Science](/girls)
-- [Ways to Recruit High School Women](https://www.ncwit.org/resources/top-10-ways-recruiting-high-school-women-your-computing-classes/top-10-ways-recruiting) from [NCWIT](http://ncwit.org).
-- One-pager: [What can you do with CS?](/files/What_is_CS_and_Careers.pdf)
-
-<br /><br />
-
+<br />
+<br />

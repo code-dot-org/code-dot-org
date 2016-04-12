@@ -408,7 +408,12 @@ Interpreter.prototype.initArray = function(scope) {
       removed.properties[removed.length++] = this.properties[i];
       this.properties[i] = this.properties[i + howmany];
     }
-    for (var i = index + howmany; i < this.length; i++) {
+    // Move other element to fill the gap.
+    for (var i = index + howmany; i < this.length - howmany; i++) {
+      this.properties[i] = this.properties[i + howmany];
+    }
+    // Delete superfluous properties.
+    for (var i = this.length - howmany; i < this.length; i++) {
       delete this.properties[i];
     }
     this.length -= howmany;
@@ -553,7 +558,7 @@ Interpreter.prototype.initNumber = function(scope) {
       this.toBoolean = function() {return !!value;};
       this.toNumber = function() {return value;};
       this.toString = function() {return String(value);};
-      return undefined;
+      return thisInterpreter.UNDEFINED;
     } else {
       return thisInterpreter.createPrimitive(value);
     }
@@ -597,7 +602,7 @@ Interpreter.prototype.initNumber = function(scope) {
     var n = this.toNumber();
     return thisInterpreter.createPrimitive(n.toString(radix));
   };
-  this.setProperty(this.OBJECT.properties.prototype, 'toString',
+  this.setProperty(this.NUMBER.properties.prototype, 'toString',
                    this.createNativeFunction(wrapper), false, true);
 };
 
@@ -617,7 +622,7 @@ Interpreter.prototype.initString = function(scope) {
       this.toString = function() {return value;};
       this.valueOf = function() {return value;};
       this.data = value;
-      return undefined;
+      return thisInterpreter.UNDEFINED;
     } else {
       return thisInterpreter.createPrimitive(value);
     }
@@ -799,7 +804,7 @@ Interpreter.prototype.initBoolean = function(scope) {
       this.toNumber = function() {return Number(value);};
       this.toString = function() {return String(value);};
       this.valueOf = function() {return value;};
-      return undefined;
+      return thisInterpreter.UNDEFINED;
     } else {
       return thisInterpreter.createPrimitive(value);
     }
@@ -833,24 +838,7 @@ Interpreter.prototype.initDate = function(scope) {
       for (var i = 0; i < arguments.length; i++) {
         args[i] = arguments[i] ? arguments[i].toNumber() : undefined
       }
-      // Sadly there is no way to use 'apply' on a constructor.
-      if (args.length == 1) {
-        newDate.date = new Date(args[0]);
-      } else if (args.length == 2) {
-        newDate.date = new Date(args[0], args[1]);
-      } else if (args.length == 3) {
-        newDate.date = new Date(args[0], args[1], args[2]);
-      } else if (args.length == 4) {
-        newDate.date = new Date(args[0], args[1], args[2], args[3]);
-      } else if (args.length == 5) {
-        newDate.date = new Date(args[0], args[1], args[2], args[3], args[4]);
-      } else if (args.length == 6) {
-        newDate.date = new Date(args[0], args[1], args[2], args[3], args[4],
-                                args[5]);
-      } else {
-        newDate.date = new Date(args[0], args[1], args[2], args[3], args[4],
-                                args[5], args[6]);
-      }
+      newDate.date = new (Function.prototype.bind.apply(Date, args));
     }
     newDate.toString = function() {return String(this.date);};
     newDate.toNumber = function() {return Number(this.date);};
@@ -1219,7 +1207,7 @@ Interpreter.prototype.createObject = function(parent) {
     nonenumerable: Object.create(null),
     properties: Object.create(null),
     toBoolean: function() {return true;},
-    toNumber: function() {return 0;},
+    toNumber: function() {return NaN;},
     toString: function() {return '[' + this.type + ']';},
     valueOf: function() {return this;}
   };
@@ -1231,6 +1219,7 @@ Interpreter.prototype.createObject = function(parent) {
   // Arrays have length.
   if (this.isa(obj, this.ARRAY)) {
     obj.length = 0;
+    obj.toNumber = function () {return 0;};
     obj.toString = function() {
       var strs = [];
       for (var i = 0; i < this.length; i++) {
@@ -1470,6 +1459,20 @@ Interpreter.prototype.createScope = function(node, parentScope) {
     this.initGlobalScope(scope);
   }
   this.populateScope_(node, scope);
+
+  // Determine if this scope starts with 'use strict'.
+  scope.strict = false;
+  if (parentScope && parentScope.strict) {
+    scope.strict = true;
+  } else {
+    var firstNode = node.body && node.body[0];
+    if (firstNode && firstNode.expression) {
+      if (firstNode.expression.type == 'Literal' &&
+          firstNode.expression.value == 'use strict') {
+        scope.strict = true;
+      }
+    }
+  }
   return scope;
 };
 
@@ -1487,7 +1490,7 @@ Interpreter.prototype.getValueFromScope = function(name) {
     }
     scope = scope.parentScope;
   }
-  throw 'Unknown identifier: ' + nameStr;
+  this.throwException('Unknown identifier: ' + nameStr);
 };
 
 /**
@@ -1497,14 +1500,15 @@ Interpreter.prototype.getValueFromScope = function(name) {
  */
 Interpreter.prototype.setValueToScope = function(name, value) {
   var scope = this.getScope();
+  var strict = scope.strict;
   var nameStr = name.toString();
   while (scope) {
-    if (this.hasProperty(scope, nameStr)) {
+    if (this.hasProperty(scope, nameStr) || (!strict && !scope.parentScope)) {
       return this.setProperty(scope, nameStr, value);
     }
     scope = scope.parentScope;
   }
-  throw 'Unknown identifier: ' + nameStr;
+  this.throwException('Unknown identifier: ' + nameStr);
 };
 
 /**
@@ -1751,7 +1755,9 @@ Interpreter.prototype['stepBreakStatement'] = function() {
     label = node.label.name;
   }
   state = this.stateStack.shift();
-  while (state && state.node.type != 'callExpression') {
+  while (state &&
+          state.node.type != 'CallExpression' &&
+          state.node.type != 'NewExpression') {
     if (label ? label == state.label : (state.isLoop || state.isSwitch)) {
       return;
     }
@@ -1862,8 +1868,7 @@ Interpreter.prototype['stepCallExpression'] = function() {
       } else if (state.func_.asyncFunc) {
         var thisInterpreter = this;
         var callback = function(value) {
-          state.value = value || this.UNDEFINED;
-          thisInterpreter.stateStack.unshift(state)
+          state.value = value || thisInterpreter.UNDEFINED;
           thisInterpreter.paused_ = false;
         };
         var argsWithCallback = state.arguments.concat(callback);
@@ -1893,8 +1898,11 @@ Interpreter.prototype['stepCallExpression'] = function() {
       }
     } else {
       this.stateStack.shift();
-      this.stateStack[0].value = state.isConstructor_ ?
-          state.funcThis_ : state.value;
+      if (state.isConstructor_ && state.value.type !== 'object') {
+        this.stateStack[0].value = state.funcThis_;
+      } else {
+        this.stateStack[0].value = state.value;
+      }
     }
   }
 };
@@ -1928,7 +1936,9 @@ Interpreter.prototype['stepContinueStatement'] = function() {
     label = node.label.name;
   }
   var state = this.stateStack[0];
-  while (state && state.node.type != 'callExpression') {
+  while (state &&
+          state.node.type != 'CallExpression' &&
+          state.node.type != 'NewExpression') {
     if (state.isLoop) {
       if (!label || (label == state.label)) {
         return;
@@ -2198,7 +2208,8 @@ Interpreter.prototype['stepReturnStatement'] = function() {
         throw new SyntaxError('Illegal return statement');
       }
       state = this.stateStack[0];
-    } while (state.node.type != 'CallExpression');
+    } while (state.node.type != 'CallExpression' &&
+              state.node.type != 'NewExpression');
     state.value = value;
   }
 };
@@ -2268,14 +2279,14 @@ Interpreter.prototype['stepThisExpression'] = function() {
   throw 'No this expression found.';
 };
 
-Interpreter.prototype['stepThrowStatement'] = function() {
+Interpreter.prototype['stepThrowStatement'] = function () {
   var state = this.stateStack[0];
   var node = state.node;
   if (!state.argument) {
     state.argument = true;
     this.stateStack.unshift({node: node.argument});
   } else {
-    throw state.value.toString();
+    this.throwException(state.value);
   }
 };
 
@@ -2297,11 +2308,7 @@ Interpreter.prototype['stepUnaryExpression'] = function() {
     } else if (node.operator == '+') {
       value = state.value.toNumber();
     } else if (node.operator == '!') {
-      if (state.value.isPrimitive) {
-        value = !state.value.data;
-      } else {
-        value = !state.value.toNumber();
-      }
+      value = !state.value.toBoolean();
     } else if (node.operator == '~') {
       value = ~state.value.toNumber();
     } else if (node.operator == 'typeof') {
@@ -2376,6 +2383,93 @@ Interpreter.prototype['stepVariableDeclarator'] = function() {
 
 Interpreter.prototype['stepWhileStatement'] =
     Interpreter.prototype['stepDoWhileStatement'];
+
+Interpreter.prototype['stepTryStatement'] = function () {
+  var state = this.stateStack[0];
+  var node = state.node;
+  if (!state.doneBlock) {
+    state.doneBlock = true;
+    this.stateStack.unshift({node: node.block});
+  } else if (!state.doneFinalizer && node.finalizer) {
+    state.doneFinalizer = true;
+    this.stateStack.unshift({node: node.finalizer});
+  } else {
+    this.stateStack.shift();
+  }
+};
+
+/**
+ * Create a new special scope dictionary. Similar to createScope(), but
+ * doesn't assume that the scope is for a function body. This is used for
+ * the catch clause and with statement.
+ * @param {Object} parentScope Scope to link to.
+ * @param {Object} [startingObj] Object to transform into scope.
+ * @return {!Object} New scope.
+ */
+Interpreter.prototype.createSpecialScope = function (parentScope, startingObj) {
+  if (!parentScope) {
+    throw "parentScope required";
+  }
+  var scope = startingObj || this.createObject(null);
+  scope.parentScope = parentScope;
+  scope.strict = parentScope.strict;
+  return scope;
+};
+
+/**
+ * Throw an exception in the interpreter that can be handled by a
+ * interpreter try/catch statement. If unhandled, a real exception will
+ * be thrown.
+ * @param {Object} throwValue Value being thrown.
+ */
+Interpreter.prototype.throwException = function (throwValue) {
+  var state = this.stateStack[0];
+  do {
+    this.stateStack.shift();
+    state = this.stateStack[0];
+  } while (state && state.node.type !== 'TryStatement');
+  if (state) {
+    this.stateStack.unshift({
+      node: state.node.handler,
+      throwValue: throwValue
+    });
+  } else {
+    throw 'Unhandled exception: ' + throwValue.toString();
+  }
+};
+
+Interpreter.prototype['stepCatchClause'] = function () {
+  var state = this.stateStack[0];
+  var node = state.node;
+  if (!state.doneBody) {
+    state.doneBody = true;
+    var scope;
+    if (node.param) {
+      scope = this.createSpecialScope(this.getScope());
+      // Add the argument:
+      var paramName = this.createPrimitive(node.param.name);
+      this.setProperty(scope, paramName, state.throwValue);
+    }
+    this.stateStack.unshift({node: node.body, scope: scope});
+  } else {
+    this.stateStack.shift();
+  }
+};
+
+Interpreter.prototype['stepWithStatement'] = function () {
+  var state = this.stateStack[0];
+  var node = state.node;
+  if (!state.doneObject) {
+    state.doneObject = true;
+    this.stateStack.unshift({node: node.object});
+  } else if (!state.doneBody) {
+    state.doneBody = true;
+    var scope = this.createSpecialScope(this.getScope(), state.value);
+    this.stateStack.unshift({node: node.body, scope: scope});
+  } else {
+    this.stateStack.shift();
+  }
+};
 
 // Preserve top-level API functions from being pruned by JS compilers.
 // Add others as needed.

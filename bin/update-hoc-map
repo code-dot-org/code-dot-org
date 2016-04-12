@@ -24,7 +24,7 @@ DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
 TABLE_ID = CDO.hoc_map_table_id
 
-# TODO this file is not checked in so this won't work unless you also get the key file
+# TODO: This file is not checked in so this won't work unless you also get the key file.
 PRIVATE_KEY_FILENAME = 'code-dot-org-hoc-map-c3fc0a673b37.p12'
 
 all_forms = DB_READONLY[:forms].where(kind: 'HocSignup2015')
@@ -39,7 +39,13 @@ CSV.open(file.path, 'w') do |csv|
   all_forms.each do |form|
     data = JSON.parse(form[:data])
     processed_data = JSON.parse(form[:processed_data])
-    next if data['organization_name_s'].nil? || processed_data['location_city_s'].nil? || processed_data['location_p'].nil?
+
+    # In order to be placed on the map, all events require an organization name,
+    # processed location, and city. With the exception that approved special events
+    # don't need a city so we can show events like the Cocos Keeling Islands.
+    next if data['organization_name_s'].nil? || processed_data['location_p'].nil?
+    next if form[:review] != "approved" && processed_data['location_city_s'].nil?
+
     row = [form[:id], data['organization_name_s'], processed_data['location_city_s'], processed_data['location_p'], form[:review], data['special_event_details_s']]
     exported += 1
     csv << row
@@ -60,7 +66,6 @@ client.authorization = Signet::OAuth2::Client.new(
   :issuer => CDO.hoc_map_service_account_email,
   :signing_key => key)
 client.authorization.fetch_access_token!
-
 
 fusiontables = client.discovered_api('fusiontables', 'v2')
 

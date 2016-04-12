@@ -1,7 +1,8 @@
--# A set of strings taken from dashboard's I18n that are used by our JS. We
--# can't just do this in .erb files in the assets directory, since those get
--# precompiled and end up English only.
--# A better longer term solution may be to use something like the i18n-js gem
+-#
+  A set of strings taken from dashboard's I18n that are used by our JS. We can't
+  just do this in .erb files in the assets directory, since those get
+  precompiled and end up English only. A better longer term solution may be to
+  use something like the i18n-js gem.
 
 :ruby
   def escape_t(key)
@@ -18,6 +19,7 @@
       more: "#{escape_t('more')}",
       beta: "#{escape_t('beta')}",
       submit: "#{escape_t('submit')}",
+      view_lesson_plan: "#{escape_t('view_lesson_plan')}",
       activerecord: {
         attributes: {
           user: {
@@ -27,7 +29,13 @@
         }
       },
       footer: {
+        built_on_code_studio: "#{escape_t('footer.built_on_code_studio')}",
         report_abuse: "#{escape_t('footer.report_abuse')}",
+        try_hour_of_code: "#{escape_t('footer.try_hour_of_code')}",
+        how_it_works: "#{escape_t('footer.how_it_works')}",
+        copyright: "#{escape_t('footer.copyright')}",
+        tos: "#{escape_t('footer.tos')}",
+        privacy: "#{escape_t('footer.privacy')}"
       },
       project: {
         share_title: "#{escape_t('project.share_title')}",
@@ -69,6 +77,12 @@
             detail: "#{escape_t('project.abuse.report_abuse_form.detail')}",
             acknowledge: "#{escape_t('project.abuse.report_abuse_form.acknowledge')}",
           }
+        }
+      },
+      components: {
+        icon_library: {
+          search_placeholder: "#{escape_t('components.icon_library.search_placeholder_text')}",
+          no_icons_found: "#{escape_t('components.icon_library.no_icons_found')}",
         }
       }
     };

@@ -1,13 +1,5 @@
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true
- */
 'use strict';
-/* globaldescribe, beforeEach, it */
+/* global describe, beforeEach, it */
 
 var testUtils = require('../util/testUtils');
 var NetSimTestUtils = require('../util/netsimTestUtils');
@@ -30,7 +22,7 @@ var fakeShard = NetSimTestUtils.fakeShard;
 testUtils.setupLocale('netsim');
 
 describe("NetSimVisualization", function () {
-  
+
   var testShard, alphaNode, betaNode, deltaNode, gammaNode, router,
       alphaWire, betaWire, deltaWire, gammaWire, netSimVis;
 
@@ -93,7 +85,7 @@ describe("NetSimVisualization", function () {
   };
 
   var getVizNodeByEntityID_ = function (_type, id) {
-    return this.filter(function(element){
+    return this.filter(function (element){
       return element instanceof NetSimVizNode &&
           element.getCorrespondingEntityId &&
           element.getCorrespondingEntityId() === id;

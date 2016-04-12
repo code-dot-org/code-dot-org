@@ -3,13 +3,13 @@
     confirmations:
       confirmed: Tu dirección de correo electrónico ha sido confirmada con éxito.
       send_instructions: Recibirás un correo electrónico con instrucciones para confirmar
-        tu cuenta en pocos minutos.
+        tu cuenta en unos minutos.
       send_paranoid_instructions: Si tu dirección de email existe en nuestra base
         de datos, recibirás un correo electrónico con instrucciones para confirmar
         tu cuenta en pocos minutos.
     failure:
       already_authenticated: Ya has iniciado sesión.
-      inactive: Tu cuenta todavía no ha sido activada.
+      inactive: Tu cuenta todavía no esta activada.
       invalid: Correo electrónico o contraseña inválidos.
       invalid_token: Token de autenticación no válido.
       locked: Tu cuenta está bloqueada.
@@ -40,8 +40,8 @@
       updated: Tu contraseña fue cambiada con éxito. Ya has iniciado sesión.
       updated_not_active: Tu contraseña fue cambiada con éxito.
     registrations:
-      destroyed: ¡Adiós! Tu cuenta fue cancelada con éxito. Esperamos verte pronto.
-      signed_up: ¡Bienvenido! Te has registrado exitosamente.
+      destroyed: "¡Adiós! Tu cuenta fue cancelada con éxito. Esperamos verte pronto."
+      signed_up: "¡Bienvenido! Te has registrado exitosamente."
       signed_up_but_inactive: Te has registrado con éxito. Sin embargo, no has podido
         iniciar sesión porque tu cuenta aún no está activada.
       signed_up_but_locked: Te has registrado con éxito. Sin embargo, no has podido
@@ -74,7 +74,7 @@
       not_locked: no estaba bloqueada
       not_saved:
         one: '1 error impidió que este %{resource} se guardara:'
-        other: '%{count} errores impiden que este %{resource} sea guardado:'
+        other: "%{count} errores impiden que este %{resource} sea guardado:"
     invitations:
       send_instructions: Se ha enviado una invitación por correo electrónico a %{email}.
       invitation_token_invalid: La clave de invitacion proporcionada es invalida!

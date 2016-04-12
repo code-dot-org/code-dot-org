@@ -21,7 +21,7 @@ content-type: text/ng-template
 %div{style: "padding-left:20px", 'ng-show' => '!responses.length'}
   No text responses
 %div{style: "padding-left:20px", 'ng-show' => 'responses.length'}
-  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
+  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'responses.length', "ng-form" => "allForm"}
     %colgroup
       %col{width: "200"}/
       %col{width: "175"}/

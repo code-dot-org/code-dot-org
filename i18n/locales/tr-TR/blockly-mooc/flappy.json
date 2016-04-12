@@ -125,7 +125,7 @@
   "whenCollideObstacle":"Bir engele çarptığı zaman",
   "whenCollideObstacleTooltip":"Flappy bir engele çarptığı zaman aşağıdaki eylemler yürüt.",
   "whenEnterObstacle":"Engel geçildiği zaman",
-  "whenEnterObstacleTooltip":"Flappy bir engele giriş yaptığı zaman aşağıdaki eylemler yürüt.",
+  "whenEnterObstacleTooltip":"Flappy bir engele giriş yaptığı zaman aşağıdaki eylemleri yürüt.",
   "whenRunButtonClick":"oyun başladığında",
   "whenRunButtonClickTooltip":"Oyun başladığında aşağıdaki eylemleri yürüt.",
   "yes":"Evet"

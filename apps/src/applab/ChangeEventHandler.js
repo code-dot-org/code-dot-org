@@ -35,16 +35,22 @@ ChangeEventHandler.prototype.onFocus = function () {
   this.initialValue_ = this.getValue();
 };
 
-ChangeEventHandler.prototype.onEnter = function () {
+/**
+ * @param {!Event} event
+ */
+ChangeEventHandler.prototype.onEnter = function (event) {
   if (this.getValue() !== this.initialValue_) {
     this.initialValue_ = this.getValue();
-    this.callback_();
+    this.callback_(event);
   }
 };
 
-ChangeEventHandler.prototype.onBlur = function () {
+/**
+ * @param {!Event} event
+ */
+ChangeEventHandler.prototype.onBlur = function (event) {
   if (this.getValue() !== this.initialValue_) {
-    this.callback_();
+    this.callback_(event);
   }
 };
 
@@ -56,7 +62,7 @@ ChangeEventHandler.prototype.onBlur = function () {
  */
 ChangeEventHandler.prototype.getValue = function () {
   var elementType = elementLibrary.getElementType(this.element_);
-  switch(elementType) {
+  switch (elementType) {
     case elementLibrary.ElementType.TEXT_INPUT:
       return this.element_.value;
     case elementLibrary.ElementType.TEXT_AREA:
@@ -72,15 +78,15 @@ ChangeEventHandler.prototype.getValue = function () {
  * @param {Element} element
  * @param {Function} callback
  */
-ChangeEventHandler.addChangeEventHandler = function(element, callback) {
+ChangeEventHandler.addChangeEventHandler = function (element, callback) {
   var handler = new ChangeEventHandler(element, callback);
   element.addEventListener("focus", handler.onFocus.bind(handler));
   // Handle enter key for text inputs, which cannot contain newlines.
   var elementType = elementLibrary.getElementType(element);
   if (elementType === elementLibrary.ElementType.TEXT_INPUT) {
-    element.addEventListener("keydown", function(event) {
+    element.addEventListener("keydown", function (event) {
       if (event.keyCode === KeyCodes.ENTER) {
-        this.onEnter();
+        this.onEnter(event);
       }
     }.bind(handler));
   }

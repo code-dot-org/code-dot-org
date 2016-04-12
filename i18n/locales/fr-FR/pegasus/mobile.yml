@@ -8,7 +8,7 @@ fr-FR:
   csedweek_banner_hoc: |-
     L' <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Heure de Code</a> approche. Appel à tous les enseignants et les organisateurs : <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">organisez votre heure de Code</a>
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Etes vous un enseignant en informatique ? Consultez nos autres ressources CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>Essaie une</h1><h2>Heure de Code</h2><h3># servie</h3>'
+  n_have_learned_an_hoc: '<h1>Essayez </h1><h2>Une Heure de Code</h2><h3># ont été formés</h3>'
   anybody_can_learn: Tout le monde peut apprendre.
   learn_now: Apprends maintenant
   petition_message: "Tous les étudiants dans toutes les écoles devraient avoir la possibilité d'apprendre l'informatique"
@@ -21,6 +21,8 @@ fr-FR:
   submit: Envoyer
   twentyhours_heading: Essaie notre introduction au cours de Programmation Informatique
   twentyhours_text: "Tu as fini ta première heure de programmation ? Apprend encore plus sur les concepts fondamentaux de l'informatique dans la suite ce cours."
+  og_title: Chaque enfant mérite sa chance
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: |-
     Rejoignez<a href="http://hourofcode.com"> l'heure de Code</a> <br/> le 8-14 décembre 2014 <br/>
   hoc2014_students: Élèves
@@ -36,8 +38,8 @@ fr-FR:
   csedweek_map_search_search: Rechercher
   csedweek_map_search_reset: Réinitialiser
   csedweek_map_legend_title: Légende
-  csedweek_map_legend_event: Heure de code
-  csedweek_map_legend_cs_tech_jam: Jam Informatique
+  csedweek_map_legend_event: 'Un événement : Heure de code'
+  csedweek_map_legend_cs_tech_jam: Événement spécial
   cded_sign_up: Inscription
   cded_try_it: Participez
   twentyhours_trynow: Essaie maintenant
@@ -59,26 +61,92 @@ fr-FR:
   thank_you_: Merci !
   congratulations: Félicitations!
   congratulations_on_completing_hoc: Félicitations, tu as terminé une Heure de Code !
-  congratulations_volunteer: 'Félicitations : maintenant que tu as essayé Une Heure de Code, <a href="https://code.org/volunteer"> inscris-toi pour faire du bénévolat dans une salle de classe</a> et aider les élèves à apprendre une heure de Code !'
-  course_name_accelerated: Cours accéléré
-  course_name_course1: Cours 1
-  course_name_course2: Cours 2
-  course_name_course3: Cours 3
-  course_name_course4: Cours 4
-  congratulations_on_completing_course: 'Félicitations pour avoir complété %{course}'
-  congrats_next_tutorials_title: Essaye ensuite ces tutoriels
+  congratulations_volunteer: 'Félicitations : maintenant que vous avez essayé Une Heure de Code, <a href="https://code.org/volunteer"> inscrivez-vous pour faire du bénévolat dans une salle de classe</a> et aider les élèves à apprendre avec une Heure de Code !'
+  congratulations_on_completing_course1: Congratulations on completing Course 1
+  congratulations_on_completing_course2: Congratulations on completing Course 2
+  congratulations_on_completing_course3: Congratulations on completing Course 3
+  congratulations_on_completing_course4: Congratulations on completing Course 4
+  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated Course
+  congrats_next_tutorials_title: Essayez ensuite ces tutoriels
   congrats_next_tutorials_desc: |-
-    Essaye ces tutoriels plus courts d'une heure ou essaye un <a href="%{current_path}/next"> tutoriel partenaire</a>.
+    Essaye ces tutoriels plus courts d'une durée d'une heure ou essaye un <a href="%{current_path}/next"> tutoriel partenaire</a>.
   get_a_certificate_of_achievement: Obtenir un certificat de réussite
+  view_course: View course
+  view_unit: View unit
+  make_app: Make an app
+  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_third_party_title: Use your new skills with these apps and websites
+  third_party_gradelevel_kto8: Grades K-8
+  third_party_gradelevel_kto2: Grades K-2
+  third_party_gradelevel_2to8: Grades 2-8
+  third_party_gradelevel_4to12: Grades 4-12
+  third_party_gradelevel_5to12: Grades 5-12
+  third_party_gradelevel_6plus: Grades 6+
+  third_party_gradelevel_8plus: Grade 8+
+  third_party_platform_all: 'Platform: Web, iPad & Android'
+  third_party_platform_mobile: 'Platform: iPad & Android'
+  third_party_platform_web: 'Platform: Web'
+  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_free: 'Price: Free'
+  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
+  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
+  third_party_tynker_btn_site: Visit Tynker
+  third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
+  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_site: Visit Scratch
+  third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
+  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
+  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
+  third_party_appinv_btn_forum: App Inventor 2 Forum
+  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
+  third_party_codehs_btn_try: Intro CS Learn More for Schools
+  third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
+  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
+  third_party_codecademy_btn_site: Visit Codecademy
+  third_party_organization: Organization
+  third_party_curriculum: "Programme d'études"
+  third_party_pricing: Pricing
+  third_party_cost_free: Free for students and teachers
+  third_party_cost_5permonth: $5/month per class
+  third_party_cost_299: $2.99/download
+  third_party_cost_free_399: Free to try, $399/classroom
+  third_party_cost_free_2: Free to try, $2/student
+  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
+  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
+  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
+  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
+  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
+  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
+  third_party_desc_10to15_3to12: 'Between 10 & 15 lessons, geared toward grades 3-12'
+  third_party_desc_25to40_3to12: 'From 25 - 40 lessons, intended for grades 3-12'
+  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_7to22_5to12: 'Between 7 & 22 lessons, geared toward grades 5-12'
+  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: Veuillez sélectionner un âge valide
   enter_valid_email: Veuillez saisir une adresse de messagerie valide
   get_a_certificate_message: "Nous vous enverrons un certificat et des informations sur comment <a href='/learn/beyond'>Apprendre au-delà d'Une Heure</a>"
   get_a_certificate_message_after: "Clique sur le certificat pour le télécharger ou l'imprimer. Maintenant, continue avec nos <a href='http://studio.code.org'>autres cours</a>, ou choisis une autre option pour <a href='/learn/beyond'>Apprendre après Une Heure</a>."
   thanks_for_submitting: Merci pour votre participation !
   if_you_enjoyed: Si vous avez apprécié apprendre, proposez à des amis de participer aussi ! Nous voulons que le monde entier apprenne.
-  personalize_certificate: Personnalise ton certificat
+  personalize_certificate: Personnalisez votre certificat
   share_achievement: Partagez votre travail
-  beyond_hour_message: "Continue avec nos <a href='http://studio.code.org'>autres cours</a>, ou choisis une autre option pour <a href='/learn/beyond'>Apprendre après Une Heure</a>."
+  beyond_hour_message: "Continue avec nos <a href='http://studio.code.org'>autres cours</a>, ou choisis une autre option pour <a href='/learn/beyond'>Apprendre après Une Heure de Code</a>."
   leaderboards_for_hoc: "Classements pour l'Heure de Code."
   support_url: http://support.code.org/
   country: Pays
@@ -93,7 +161,7 @@ fr-FR:
   thanks_for_voting: Merci pour votre vote !
   share_on_facebook: Partagez sur Facebook
   share_on_twitter: Partage sur Twitter
-  beyond_an_hour: "Plus loin qu'une Heure de Code"
+  beyond_an_hour: Après Une Heure de Code
   get_started: Commencer
   i_agree: "J'accepte"
   participant_select: -Sélectionner-
@@ -111,17 +179,22 @@ fr-FR:
   used_infrequent_updates: Utilisé uniquement pour les mises à jour peu fréquentes
   privacy_practices_children: Voir nos règles de confidentialité pour les enfants
   petition_thankyou: "Merci d'avoir signé la pétition"
-  continue_learning_header: Continue à apprendre après Une Heure
+  continue_learning_header: "Continuez à apprendre au delà de l'Heure de Code"
   continue_learning_body: "Il y a de nombreuses possibilités. Vous pouvez apprendre en ligne, dans une école près de chez vous ou à l'occasion de stage durant l'été."
-  learn_next_level: Continuer au prochain niveau
+  learn_next_level: Essayez un autre cours de Code Studio
   learn_online: "Essaie d'autres cours en ligne"
   learn_classes: Trouver des cours près de chez vous
-  hoc_is_here: "#HourOfCode L'Heure de Code est là — jettes-y un œil ! @codeorg"
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: "Je viens de faire l'Heure de Code #HourOfCode — jettes-y un œil ! @codeorg"
-  twitter_teach_cs: "Pourquoi n'y a-t-il pas plus d'écoles qui enseignent l'informatique ? Nous pouvons résoudre cela. http://youtu.be/nKIu9yen5nc. Visitez http://code.org/ pour en savoir plus."
+  just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
+  just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
+  just_did_course3: 'I just finished Course 3 - check it out! @codeorg'
+  just_did_course4: 'I just finished Course 4 - check it out! @codeorg'
+  just_did_accelerated: 'I just finished the Accelerated Course - check it out! @codeorg'
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Apprendre une Heure de Code
-  beyond_hoc: "Plus loin qu'Une Heure"
-  what_gender: Es-tu un garçon ou une fille ?
+  beyond_hoc: "Au delà d'Une heure"
+  what_gender: De quel sexe êtes vous ?
   girl: Fille
   boy: Garçon
   help_recruit_coders: Aide-nous à recruter plus de programmeurs dans ton équipe !
@@ -200,7 +273,7 @@ fr-FR:
   homepage_action_text_volunteers: Bénévoles techniques recherchés
   homepage_action_text_codevideo: Voir la vidéo
   homepage_action_text_teachervideo: Voir la vidéo
-  homepage_action_text_girlvideo: "Soyez source d'inspiration pour une fille"
+  homepage_action_text_girlvideo: Encouragez une fille
   homepage_action_text_learn: Commencer à apprendre
   homepage_action_text_signpetition: Signez la pétition
   homepage_signpetition_dropdown: 'Signez notre pétition &#x25BE;'
@@ -211,6 +284,8 @@ fr-FR:
   homepage_banner_text_link: Pour en savoir plus
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Pour en savoir plus
+  homepage_banner_20k_teachers: "20 000 enseignants formés enseignant maintenant l'informatique dans les classes."
+  homepage_banner_20k_teachers_link: Pour en savoir plus
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: "Tout le monde peut apprendre. Commence aujourd'hui"
   homepage_slot_text_link_hoc: "Essayer l'Heure de Code"
@@ -219,11 +294,15 @@ fr-FR:
   homepage_solot_text_link_volunteer: Soyez bénévole pour Une Heure de Code
   homepage_slot_text_title_students: Élèves
   homepage_slot_text_blurb_students: "Découvre l'ensemble de nos tutoriels"
+  homepage_slot_text_blurb_students_courses: Explorer nos cours
   homepage_slot_text_link_codestudio: Essaie le Code Studio
   homepage_slot_text_link_local: Trouve un cours près de chez toi
   homepage_slot_text_link_othercourses: Autres cours en ligne
   homepage_slot_text_title_educators: Éducateurs
   homepage_slot_text_blurb_educators: "Ressources d'enseignement"
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Collège
+  homepage_slot_text_link_high: Lycée
   homepage_slot_text_link_k5: 'Cours pour les classes Grande Section - CM2'
   homepage_slot_text_link_fullcurriculum: Voir notre programme complet
   homepage_slot_text_link_pd: Développement professionnel
@@ -240,7 +319,7 @@ fr-FR:
   contact_form_topic_parent: Je suis un parent
   contact_form_topic_teacher: Je suis enseignant/éducateur
   contact_form_topic_outside_us: "Je n'habite pas aux États-Unis"
-  contact_form_topic_contribution: Contribution charitable
+  contact_form_topic_contribution: Contribution gracieuse
   contact_form_topic_partner: Je souhaiterais être un partenaire
   contact_form_topic_other: Autres
   contact_form_label_topic: Sujet
@@ -249,7 +328,7 @@ fr-FR:
   contact_form_label_submit: Envoyer un message
   class_submission_in_school: "À l'école"
   class_submission_in_school_daily_programming_course: Cours de programmation quotidien
-  class_submission_in_school_ap_computer_science: "Examen d'informatique AP"
+  class_submission_in_school_ap_computer_science: Programme de formation approfondie en informatique
   class_submission_in_school_full_university_cs_curriculum: "Programme complet d'études universitaires informatiques"
   class_submission_in_school_robotics_club: Club de Robotique
   class_submission_in_school_programming_integrated_in_other_classes: "Cours de programmation intégrés dans d'autres matières (maths, sciences, etc.)"
@@ -274,7 +353,7 @@ fr-FR:
   class_submission_level_vocational: Professionnelle
   class_submission_languages_other: Autre(s) langue(s)
   inspirational_videos_more: 'Plus de <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> vidéos inspirantes</a> de personnalités icônes et de célébrités'
-  playlab_choose_theme: Choose your Play Lab theme
+  playlab_choose_theme: Choisis ton thème Labo
   playlab_classic_title: Classique
   playlab_gumball_title: Gumball
   playlab_iceage_title: 'Age de Glace - Bientôt disponible'
@@ -286,7 +365,7 @@ fr-FR:
   starwars_javascript_start_button: Essaie maintenant
   starwars_blocks_title: Blocs
   starwars_blocks_description: Utilise les blocs.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Multi-langues | Navigateurs récents, smartphones, tablettes | 6 à 10 ans
   starwars_blocks_start_button: En savoir plus
   starwars_watch_videos: "Avant de commencer, regarde une de ces vidéos pour t'inspirer"
   starwars_speak_languages: Vous parlez une autre langue ?
@@ -297,7 +376,7 @@ fr-FR:
   mc_shortdescription: Utilise des blocs de code pour vivre une aventure dans le monde de Minecraft avec Steve ou Alex.
   mc_gradelevel: 6 ans et plus
   mc_platformtext: Navigateurs récents, smartphones, tablettes
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Plusieurs langages | Les fureteurs modernes et les tablettes | De 6 à 106 ans
   minecraft_subtitle: Une Heure de Code Minecraft
   volunteer_engineer_submission_title: "Soyez une source d'inspiration et bénévoles pour Une Heure de Code."
   volunteer_engineer_submission_subtitle_generic: '100 000 enseignants vont accueillir Une Heure de Code dans leur classe cette année, du 7 au 13 décembre 2015. Ils ont besoin de votre aide ! '
@@ -309,6 +388,7 @@ fr-FR:
     Veuillez saisir les informations suivantes si vous êtes étudiant en informatique ou développeur. Les champs marqués d'une <span class="form-required-field"> *</span> sont obligatoires.
   volunteer_engineer_submission_intro_links: |-
     Pas à la recherche de bénévolat ? <a href="%{learn_more}">Apprenez plus</a> sur l'organisation de votre propre Heure de Code et trouvez un bénévole local sur notre <a href="%{volunteer_local}">carte des bénévoles</a>.
+  volunteer_engineer_submission_update_information: Mettre à jour vos informations
   volunteer_engineer_submission_header_shared: Informations partagées avec les enseignants sur la carte des bénévoles
   volunteer_engineer_submission_field_name: Nom
   volunteer_engineer_submission_field_name_placeholder: Nom Complet
@@ -351,7 +431,7 @@ fr-FR:
   volunteer_engineer_submission_location_flexibility_curriculum: "Désireux de contribuer à des projets d'études open source"
   volunteer_engineer_submission_experience_unspecified: Non spécifié
   volunteer_engineer_submission_experience_tech_company: Non-ingénieur dans une entreprise technologique
-  volunteer_engineer_submission_experience_university_student_or_researcher: "Actuellement étudiant (ou chercheur) à l'Université"
+  volunteer_engineer_submission_experience_university_student_or_researcher: "Etudiant en informatique à l'université"
   volunteer_engineer_submission_experience_software_professional: Professionnel du développement logiciel
   volunteer_engineer_submission_distance_8: 8 km
   volunteer_engineer_submission_distance_16: 16 km
@@ -434,6 +514,7 @@ fr-FR:
   dashboard_navigation_all_sections: "Comptes et progression de l'élève"
   dashboard_navigation_view_progress: Voir la progression
   dashboard_navigation_view_text_responses: Afficher les réponses écrites
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Ajouter des élèves
   dashboard_navigation_manage_students: Gérer les élèves
   dashboard_navigation_lesson_plans_resources: Plans de cours et ressources
@@ -527,10 +608,23 @@ fr-FR:
   dashboard_progress_completed_too_many_blocks: terminé, trop de blocs
   dashboard_progress_completed_perfect: terminé, parfait
   dashboard_progress_furthest_level_attempted: le plus haut niveau tenté
+  dashboard_progress_submitted: submitted
   dashboard_stage: étape
   dashboard_puzzle: Puzzle
   dashboard_question: Question
   dashboard_response: Réponse
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Correct
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Les statistiques incroyables de l'Heure de Code de l'année dernière. En une seule semaine :"
   stats_hoc_2013_image_alt: "Statistiques de l'Heure de Code en 2013"
   dashboard_teacher: Enseignant
@@ -549,8 +643,10 @@ fr-FR:
   dashboard_faq_k5: 'GS - CM2 Questions Fréquemment Posées'
   dashboard_announcements: Annonces
   dashboard_announce_view_all: Voir tous
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_button_text: Pour en savoir plus
   dashboard_announce_hoc: '<b>15 octobre 2015</b> - Une Heure de Code arrive &mdash; chaque organisateur participant recevra une carte-cadeau Amazon.com ou Microsoft Windows Store comme cadeau de remerciement. Rejoignez les salles de classe dans le monde entier du 7 au 13 décembre.'
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
+  dashboard_announce_playlab: "<b>4 décembre 2015</b> - l'heure du Code est ici ! Essayez 50 tutoriels pour tous les âges et tous les appareils. Nouveauté de la semaine : coder vos propres histoires et des jeux à nouveau jouer Labs, période glaciaire et Gumball."
   code_hoc_coming: "L'Heure de Code est ici — du 8 au 14 décembre !"
   code_sign_up: "Enregistre-toi pour participer à la Semaine de l'Éducation de l'Informatique"
   learn_more: En savoir plus
@@ -594,7 +690,8 @@ fr-FR:
   carousel_heading_ide: Plateformes populaires parmi les enseignants
   educator_notes: "Notes de l'enseignant"
   teach_led_lesson_plans: Plan de cours Une Heure de Code pour les enseignants
-  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
+  learn_footer_all_tutorials: |-
+    Voir la <a href="https://code.org/educate/allhourofcode"> liste complète des tutoriels de l'Heure du Code</a>. Pour voir nos critères et directives de soumission pour les tutoriels de l'Heure du Code, <a href="https://hourofcode.com/tutorial-guidelines"> cliquez ici.</a>
   how_to_teach_hoc: Comment enseigner une Heure de Code
   more_resources_educators: Plus de ressources pour enseignants et éducateurs
   beyond_submission: "Tu veux soumettre un tutoriel pour Au-delà d'Une Heure? Consulte les critères et la forme d'envoi."
@@ -608,8 +705,8 @@ fr-FR:
   mobile_devices: Tutoriels pour appareils mobiles
   frozen_name: Code avec Anna et Elsa
   starwars_name: 'Star Wars : Construire une galaxie avec du Code'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Labyrinthe classique
+  codeintl_name: Labyrinthe classique
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Introduction au JavaScript
   khanes_name: Introduction au JavaScript
@@ -645,17 +742,28 @@ fr-FR:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pierre, papier, ciseaux
-  hourofcode_name: Classic Maze
+  hourofcode_name: Labyrinthe classique
   playlab_name: Labo
   infinity_name: Infinity Play Lab
   artist_name: Artiste
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  monstercoding_name: "Développement de la Quête de l'Île Mystérieuse"
+  allcancode_name: Cours Marco!
   csfirst_name: CS First
-  boxisland_name: Box Island
+  boxisland_name: Île des boîte
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minutes de Code
   teacherled_name: Plan de cours Une Heure de Code pour les enseignants
+  course1_name: Cours 1
+  course2_name: Cours 2
+  course3_name: Cours 3
+  course4_name: Cours 4
+  accelerated_name: Cours accéléré
+  cspunit3_name: CS Principles Unit 3
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  applab_name: Labo des applis
+  applab_gradelevel: 'Âge recommandé : 13+'
+  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: De 4 à 104 ans
   codeintl_gradelevel: De 4 à 104 ans
   thinkersmithspanish_gradelevel: Por todos
@@ -700,12 +808,17 @@ fr-FR:
   infinity_gradelevel: De 4 à 104 ans
   artist_gradelevel: De 4 à 104 ans
   monstercoding_gradelevel: De 5 à 13 ans
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: de 5 à 10 ans
+  csfirst_gradelevel: de 9 à 14 ans
   boxisland_gradelevel: École primaire
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: de 12 à 14 ans
+  texasinstruments_gradelevel: de 13 à 16 ans
+  teacherled_gradelevel: 5 ans et plus
+  course1_gradelevel: 4-6 ans
+  course2_gradelevel: 6 ans et + (lecture indispensable)
+  course3_gradelevel: 8 ans et + (après le cours 2)
+  course4_gradelevel: 10 ans et + (après le Cours 3)
+  accelerated_gradelevel: 10 ans et + (après le Cours 3)
   codeorg_platformtext: Navigateurs récents, smartphones, tablettes
   codeintl_platformtext: Navigateurs récents, smartphones, tablettes
   thinkersmithspanish_platformtext: Débranché
@@ -747,12 +860,12 @@ fr-FR:
   frozen_platformtext: Navigateurs récents + tablettes
   starwars_platformtext: Navigateurs récents + tablettes
   playlab_platformtext: Navigateurs récents, smartphones, tablettes
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Navigateurs web modernes, iOS, Android
+  allcancode_platformtext: Navigateurs web modernes, iOS
   csfirst_platformtext: Navigateurs web récents
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Navigateurs web récents
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: Calculatrices TI
   teacherled_platformtext: Navigateurs récents, smartphones, tablettes
   codeorg_shortdescription: Apprends à coder avec Mark Zuckerberg et Angry Birds !
   codeintl_shortdescription: Apprends à coder avec Mark Zuckerberg et Angry Birds !
@@ -797,13 +910,16 @@ fr-FR:
   playlab_shortdescription: Programme une histoire ou un jeu avec le Labo !
   infinity_shortdescription: Utilisez le labo pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infiny.
   artist_shortdescription: "Dessine des super images et schémas avec l'Artiste!"
-  monsterocding_shortdescription: A colorful self-guided programming adventure for children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using Python.
-  texasinstruments_shortdescription: 'Learn basic coding using the TI-84&#8482; Plus calculator.'
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
+  monsterocding_shortdescription: Une aventure colorée autoguidée de programmation pour les enfants.
+  allcancode_shortdescription: "Un jeu immersif pour guider Marco à l'aide d'un langage de programmation visuelle."
+  csfirst_shortdescription: "Animer une histoire sur deux personnages sur l'océan. Ajouter votre propre style !"
+  boxisland_shortdescription: "Faites une excursion de développement sur l'île de la Box avec le vaillant Hiro."
+  codesters_shortdescription: "Créez vos propres jeux, animations et illustrations à l'aide du langage Python."
+  texasinstruments_shortdescription: "Apprendre la base de codage à l'aide de la calculatrice TI-84 plus."
+  teacherled_shortdescription: Sois inspire pour designer ton Heure de Code avec ses lecions.
+  course2_shortdescription_congrats: For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+  course3_shortdescription_congrats: Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+  course4_shortdescription_congrats: Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
   codeorg_longdescription: "Apprends les concepts de base de l'informatique avec le glisser-déposer. Il s'agit d'un didacticiel ludique, autogéré, mettant en vedette les conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs Zombies. Apprends les notions de boucles, d'instructions conditionnelles et des algorithmes de base. Disponible en 34 langues."
   codeintl_longdescription: "Apprends les concepts de base de l'informatique avec le glisser-déposer. Il s'agit d'un didacticiel ludique, autogéré, mettant en vedette les conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs Zombies. Apprends les notions de boucles, d'instructions conditionnelles et des algorithmes de base. Disponible en 34 langues."
   thinkersmithspanish_longdescription: "En utilisant un « Robot Vocabulaire » prédéfini, les élèves découvriront comment se guider pour exécuter des tâches spécifiques sans en discuter au préalable. Cette leçon apprend aux enfants la relation entre les symboles et les actions, ainsi que l'inestimable capacité du débogage."
@@ -847,13 +963,13 @@ fr-FR:
   frozen_longdescription: Utilisons le code pour rejoindre Anna et Elsa dans leur exploration de la magie et de la beauté de la glace. Tu vas créer des flocons de neige et des motifs en patinant sur la glace et faire un pays des merveilles hivernal que tu pourras partager avec tes amis !
   starwars_longdescription: Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.
   playlab_longdescription: "Créez une histoire ou un jeu avec Play Lab! Faites bouger des animaux, des pirates, des zombies, des ninjas et beaucoup d'autres personnages, créez des sons, marquez des points et jetez des boules de feu!"
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
-  allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
-  texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "
-  teacherled_longdescription: Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans.
+  monstercoding_longdescription: "La quête de codage Mystery Island de Monster Coding vous propose une aventure personnelle et guidée qui permet d'enseigner aux enfants les différents concepts clés de la programmation. Chaque module de formation s'appuie sur le précédent et permettent d'introduire auprès des enfants les concepts de fonctions, valeurs booléennes, boucles, les déclarations If/Else et les tableaux , Tout ceci à l'aide de graphiques animés et colorés ainsi que d'instructions audio."
+  allcancode_longdescription: "Les étudiants jouent un jeu d'aventure basé sur une histoire originale. Ils orientent Marco - le personnage principal - à travers chaque niveau en lui donnant des instructions étape par étape sous la forme du langage de programmation visuel utilisé par l'heure de Code. Ils sont initiés aux commandes séquentielles, itératives et conditionnelles sans même s'en apercevoir."
+  csfirst_longdescription: "Cree une histoire qui decris two personnages a la mer. Anime l'eau, et customizer lea scene. Utilisez code pour dire l'histoire que tu veux racconter"
+  boxisland_longdescription: "Fais une excursion sur l'île des boîtes et aide Hiro à recueillir toutes les horloges dispersées dans le désert ! Dans ce tutoriel, tu apprendras les rudiments de l'algorithmie, les séquences, les boucles et les conditions !"
+  codesters_longdescription: 'Créez vos propres jeux, des animations, et dessins avec Python. Une fois que vous avez terminé, partagez-les avec vos amis ! Programmer en Python, un vrai langage de programmation utilisé chaque jour dans les entreprises - notre système de "drag and drop" le rend facile à apprendre! Essaye de concevoir un jeu de basket-ball, une chorégraphie ou une carte animée ! '
+  texasinstruments_longdescription: "Les 10 Minutes de Code peuvent être utilisées en classe comme un moyen de susciter l'intérêt des étudiants pour la programmation de la technologie TI qu'ils ont dans leur sac à dos tous les jours.  Apprends les bases du codage à l'aide de la TI-84 &#8482; Commence à programmer en 10 minutes seulement – aucune expérience n'est nécessaire !  "
+  teacherled_longdescription: "Maintenant que des dizaines de milliers d'enseignants ont essayé l'heure de Code, de nombreuses classes sont prêtes pour des activités plus créatives, moins standards qui apprennent les rudiments de l'informatique. Pour aider les enseignants à trouver l'inspiration, nous avons conçu et organisée une heure de cours dirigée par un professeur et des plans d'activités dans différents domaines pour les utilisateurs plus avancés de l'heure de Code."
   codeorg_beyond_name: "Introduction à l'informatique (4ème)"
   khan_beyond_name: Apprends la programmation informatique
   tynker_beyond_name: Apprends à programmer à la maison

@@ -9,7 +9,7 @@ require 'cdo/google_drive'
 def format_enus_yml_with_quotes(line)
   match_data = /^ +[a-zA-Z0-9_ ]+?: *(.+)$/.match(line)
   if match_data # formats the values
-    unless /^(".*"|'.*'|\|.*)$/.match(match_data[1])
+    unless /^(".*"|'.*'|\|.*)$/ =~ match_data[1]
       line.gsub!(/"/, '\\"')
       line.gsub!(/^([ a-zA-Z0-9_ ]+?): *(.*)$/, '\1: "\2"')
     end
@@ -19,6 +19,7 @@ def format_enus_yml_with_quotes(line)
 
   return line
 end
+
 def hash_to_yml_with_quoted_values(hash, yml_path)
   buffer = StringIO.new(hash.to_yaml(line_width: -1))
 

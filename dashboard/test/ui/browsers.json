@@ -4,7 +4,7 @@
   {
     "name": "ChromeLatestWin7",
     "browserName": "chrome",
-    "version": "",
+    "version": "latest",
     "platform": "Windows 7"
   },
   {
@@ -38,33 +38,35 @@
     "platform": "Windows 10"
   },
   {
-    "name": "Firefox38Yosemite",
+    "name": "FirefoxLatest-2Yosemite",
     "browserName": "firefox",
-    "version": "38.0",
+    "version": "latest-2",
     "platform": "OS X 10.10"
   },
   {
-    "name": "Firefox39Win7",
+    "name": "FirefoxLatestWin7",
     "browserName": "firefox",
-    "version": "39.0",
+    "version": "latest",
     "platform": "Windows 7"
   },
   {
     "name": "iPhone",
-    "browserName": "iphone",
-    "version": "8.2",
+    "platformName": "iOS",
+    "platformVersion": "9.2",
+    "browserName": "safari",
     "deviceName": "iPhone Simulator",
-    "platform": "OS X 10.10",
+    "appiumVersion": "1.4.16",
     "mobile": true,
     "deviceOrientation": "landscape",
     "rotatable": true
   },
   {
     "name": "iPad",
-    "browserName": "iphone",
-    "version": "7.1", /* ipad simulator 8.2 browser crashes on some tests (where iphone 8.2, ipad 7.1, and real ipad 8.3 both work) */
+    "platformName": "iOS",
+    "platformVersion": "9.2",
+    "browserName": "safari",
     "deviceName": "iPad Simulator",
-    "platform": "OS X 10.10",
+    "appiumVersion": "1.4.16",
     "mobile": true,
     "deviceOrientation": "landscape",
     "rotatable": true

@@ -1,6 +1,9 @@
 require 'test_helper'
 
 class DslTest < ActiveSupport::TestCase
+  def setup
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+  end
 
   test 'test Script DSL' do
     input_dsl = "

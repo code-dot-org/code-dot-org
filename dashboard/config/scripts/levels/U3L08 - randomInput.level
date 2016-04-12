@@ -129,7 +129,7 @@
     "encrypted_examples": "b10lBKdKe7XgOJJEHks4NxhajfBMJ1fVKObXlXg2Prkuw6aA7ZrxNyegsbjd\nr38f\n",
     "embed": "false",
     "instructions": "Use the randomNumber() blocks to test the functions you designed with random input. (Click to see full instructions)",
-    "markdown_instructions": "# Random Input\r\n\r\nYou have two new blocks that allow you to generate **pseudo-random** values. You can use them in the place of selecting a fixed value every time you call a function.\r\n\r\n![](https://images.code.org/70a3e3dca95d743827e4b67b28d64bd9-image-1442609204491.46.14 PM.png)\r\n\r\n**Read the documentation** for the these blocks.\r\n\r\n**Use them to provide random input** to your functions. This is a great way to **test** out functions and also get some **interesting looking images**. Every time you run the program you can get slightly different looking scenes like the ones below.\r\n\r\n![](https://images.code.org/d2031f555ed23bcfa4a6a6165074b559-image-1442852053630.png)",
+    "markdown_instructions": "# Random Input\r\n\r\nYou have two new blocks that allow you to generate **pseudo-random** values. You can use them in the place of selecting a fixed value every time you call a function.\r\n\r\n![](https://images.code.org/70a3e3dca95d743827e4b67b28d64bd9-image-1442609204491.46.14 PM.png)\r\n\r\n**Read the documentation** for these blocks.\r\n\r\n**Use them to provide random input** to your functions. This is a great way to **test** out functions and also get some **interesting looking images**. Every time you run the program you can get slightly different looking scenes like the ones below.\r\n\r\n![](https://images.code.org/d2031f555ed23bcfa4a6a6165074b559-image-1442852053630.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -159,7 +159,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

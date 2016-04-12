@@ -15,7 +15,7 @@ content-type: text/ng-template
     %dl
       %dt= I18n.t('dashboard_students_url')
       %dd
-        http:#{CDO.studio_url('/sections/{{section.code}}')}
+        https:#{CDO.studio_url('/sections/{{section.code}}')}
     %dl
       %dt= I18n.t('dashboard_students_name')
       %dd {{student.name}}

@@ -7,6 +7,8 @@ class ScriptsControllerTest < ActionController::TestCase
   setup do
     @admin = create(:admin)
     @not_admin = create(:user)
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
   test "should get index" do
@@ -111,7 +113,6 @@ class ScriptsControllerTest < ActionController::TestCase
     get :show, id: Script.find_by_name('hourofcode').id
     assert_redirected_to '/s/hourofcode'
   end
-
 
   test "should get show if not signed in" do
     get :show, id: Script::FLAPPY_NAME

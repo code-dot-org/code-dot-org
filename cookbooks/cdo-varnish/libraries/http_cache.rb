@@ -10,10 +10,23 @@ class HttpCache
   LANGUAGE_HEADER = %w(Accept-Language)
   LANGUAGE_COOKIES = %w(language_ pm)
 
+  # A map from script name to script level URL pattern.
+  CACHED_SCRIPTS_MAP = {
+      # We specify the "special case" routes here; standard routes are handled by the loop below.
+      'hourofcode' => '/hoc/*'
+  }
+  %w(starwars starwarsblocks mc frozen gumball).each do |script_name|
+    CACHED_SCRIPTS_MAP[script_name] = "/s/#{script_name}/stage/1/puzzle/*"
+  end
+
+  def self.cached_scripts
+    CACHED_SCRIPTS_MAP.keys
+  end
+
   # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
-# Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
-# This hash provides extra application-specific configuration for whitelisting specific request headers and
-# cookies based on the request path.
+  # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
+  # This hash provides extra application-specific configuration for whitelisting specific request headers and
+  # cookies based on the request path.
   def self.config(env)
     env_suffix = env.to_s == 'production' ? '' : "_#{env}"
     session_key = "_learn_session#{env_suffix}"
@@ -28,6 +41,7 @@ class HttpCache
       'videos_seen',
       'callouts_seen',
       'pm',
+      'rack.session',
       session_key,
       storage_id,
     ]
@@ -53,7 +67,7 @@ class HttpCache
               /v3/*
               /private*
             ) +
-            # Todo: Collapse these paths into /private to simplify Pegasus caching config
+            # TODO: Collapse these paths into /private to simplify Pegasus caching config.
             %w(
               /create-company-profile*
               /edit-company-profile*
@@ -99,14 +113,19 @@ class HttpCache
             cookies: whitelisted_cookies
           },
           {
-            path: %w{
-               /s/starwars/stage/1/puzzle/*
-               /s/starwarsblocks/stage/1/puzzle/*
-               /s/mc/stage/1/puzzle/*
-               /s/frozen/stage/1/puzzle/*
-               /s/gumball/stage/1/puzzle/*
-               /hoc/*
-            },
+            # Pass through the user agent to the /api/user_progress and
+            # /milestone actions so the activity monitor can track script
+            # completion by user agent. These responses are never cached so this
+            # won't hurt cachability.
+            path: %w(
+              /api/user_progress/*
+              /milestone/*
+            ),
+            headers: LANGUAGE_HEADER + ['User-Agent'],
+            cookies: whitelisted_cookies
+          },
+          {
+            path: CACHED_SCRIPTS_MAP.values,
             headers: LANGUAGE_HEADER,
             cookies: LANGUAGE_COOKIES
           },
@@ -135,5 +154,10 @@ class HttpCache
         }
       }
     }
+  end
+
+  # Return true if the levels for the given script name can be publicly cached by proxies.
+  def self.allows_public_caching_for_script(script_name)
+    CACHED_SCRIPTS_MAP.include?(script_name)
   end
 end

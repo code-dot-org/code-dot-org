@@ -9,16 +9,5 @@ class HocSurveyPrize2015
     result
   end
 
-  def self.process(data)
-    {}.tap do |results|
-      results['prize_code_s'] = claim_prize_code(data['prize_choice_s'], data['email_s'], 'Hoc2015');
-    end
-  end
-
-  def self.receipt(data)
-    suffix = data['prize_choice_s'].partition('.').first.downcase
-    return if suffix == 'none' # no receipt email for none
-    suffix = 'msft' if suffix == 'microsoft'
-    "12-18-hoc-organizer-survey-#{suffix}"
-  end
+  # Survey closed on 2016-1-15. Do not claim any more prizes.
 end

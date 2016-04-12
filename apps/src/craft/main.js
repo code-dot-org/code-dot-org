@@ -7,7 +7,7 @@ var blocks = require('./blocks');
 var levels = require('./levels');
 var skins = require('./skins');
 
-window.craftMain = function(options) {
+window.craftMain = function (options) {
   options.skinsModule = skins;
 
   options.blocksModule = blocks;
@@ -16,7 +16,6 @@ window.craftMain = function(options) {
   var appHeight = 477;
   options.nativeVizWidth = appWidth;
   options.vizAspectRatio = appWidth / appHeight;
-  options.mobileNoPaddingShareWidth = options.nativeVizWidth;
 
   appMain(window.Craft, levels, options);
 };

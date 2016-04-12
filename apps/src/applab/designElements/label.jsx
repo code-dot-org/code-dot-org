@@ -1,11 +1,12 @@
 /* global $ */
 
-var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
+var PropertyRow = require('./PropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
+var EnumPropertyRow = require('./EnumPropertyRow');
 
 var elementUtils = require('./elementUtils');
 
@@ -67,6 +68,11 @@ var LabelProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
+        <EnumPropertyRow
+          desc={'text alignment'}
+          initialValue={element.style.textAlign || 'center'}
+          options={['left','right','center','justify']}
+          handleChange={this.props.handleChange.bind(this, 'textAlign')} />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
@@ -90,7 +96,7 @@ var LabelEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getClickEventCode: function() {
+  getClickEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
@@ -99,7 +105,7 @@ var LabelEvents = React.createClass({
     return code;
   },
 
-  insertClick: function() {
+  insertClick: function () {
     this.props.onInsertEvent(this.getClickEventCode());
   },
 

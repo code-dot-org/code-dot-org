@@ -1,0 +1,46 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2016-03-01T23:10:04.000Z",
+  "level_num": "custom",
+  "user_id": 208,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "start_blocks": "deleteRecord(\"mytable\", {id:1}, function(success){\r\n  console.log(\"Delete successful\"); \r\n});\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "data_tables": "{\r\n \"mytable\":\r\n [\r\n  {\r\n    \"id\": 1,\r\n    \"name\": \"Greg\",\r\n    \"age\": 16\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"name\": \"Karen\",\r\n    \"age\": 17\r\n  },\r\n  {\r\n    \"id\": 3,\r\n    \"name\": \"Crystal\",\r\n    \"age\": 16\r\n  },\r\n  {\r\n    \"id\": 4,\r\n    \"name\": \"Adrion\",\r\n    \"age\": 17\r\n  }\r\n]\r\n}",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

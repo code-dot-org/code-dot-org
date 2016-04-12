@@ -1,17 +1,6 @@
 /**
  * @overview Constants and enums used across Internet Simulator.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
 /* global exports */
 'use strict';
 

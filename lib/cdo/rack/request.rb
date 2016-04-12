@@ -1,5 +1,6 @@
 require 'rack/request'
 require 'ipaddr'
+require 'json'
 
 module Rack
   class Request
@@ -9,7 +10,7 @@ module Rack
       end
 
       def trusted_proxy?(ip)
-        super(ip) || TRUSTED_PROXIES.any?{|proxy| proxy === ip}
+        super(ip) || TRUSTED_PROXIES.any?{|proxy| proxy === ip rescue false}
       end
     end
 
@@ -50,7 +51,7 @@ module Rack
       parts = host_parts.split('.')
 
       if parts.count >= 3
-        domains = (%w(studio learn i18n) + CDO.partners).map{|x|x + '.code.org'} + %w(translate.hourofcode.com)
+        domains = (%w(studio learn i18n) + CDO.partners).map{|x| x + '.code.org'} + %w(translate.hourofcode.com)
         domain = parts.last(3).join('.').split(':').first
         return domain if domains.include? domain
       end

@@ -12,7 +12,7 @@ var dropletUtils = require('../dropletUtils');
  * Store for finding tooltips for blocks
  * @constructor
  */
-function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocompletePaletteApisOnly) {
+function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocompletePaletteApisOnly, Dialog) {
   /**
    * App-specific strings (to override common msg)
    * @type {Object.<String, Function>}
@@ -40,7 +40,14 @@ function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocomplet
    * Map of block types to tooltip objects
    * @type {Object.<String, DropletFunctionTooltip>}
    */
-  this.blockTypeToTooltip = {};
+  this.blockTypeToTooltip_ = {};
+
+  /**
+   * Maps func from one block type to another, such that we use the target for
+   * documentation instead of the source
+   * @type {Object.<String, String>}
+   */
+  this.docFuncMapping_ = {};
 
   /**
    * @type {DropletBlockTooltipManager}
@@ -59,6 +66,8 @@ function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocomplet
    * @private
    */
   this.dropletAutocompleteParameterTooltipManager_ = new DropletAutocompleteParameterTooltipManager(this);
+
+  this.Dialog = Dialog;
 }
 
 /**
@@ -79,40 +88,50 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
 };
 
 /**
- * Registers blocks based on the dropletBlocks and codeFunctions passed to the constructor
+ * Registers block tooltips for blocks based on the dropletBlocks and
+ * codeFunctions passed to the constructor
  */
 DropletTooltipManager.prototype.registerBlocks = function () {
-  dropletUtils.getAllAvailableDropletBlocks(
+  var blocks = dropletUtils.getAllAvailableDropletBlocks(
     this.dropletConfig,
     this.codeFunctions,
-    this.autocompletePaletteApisOnly).forEach(
-    function (dropletBlockDefinition) {
-      if (this.autocompletePaletteApisOnly &&
-          this.codeFunctions &&
-          typeof this.codeFunctions[dropletBlockDefinition.func] === 'undefined') {
-        // autocompletePaletteApisOnly mode enabled and block is not in palette:
-        return;
-      }
-      this.blockTypeToTooltip[dropletBlockDefinition.func] =
+    this.autocompletePaletteApisOnly,
+    dropletUtils.IGNORE_NO_AUTOCOMPLETE_BLOCKS);
+  blocks.forEach(function (dropletBlockDefinition) {
+    var key = dropletBlockDefinition.modeOptionName || dropletBlockDefinition.func;
+    if (dropletBlockDefinition.docFunc) {
+      // If a docFunc was specified, update our mapping
+      this.docFuncMapping_[key] = dropletBlockDefinition.docFunc;
+    } else {
+      this.blockTypeToTooltip_[key] =
         new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
-    },
-    this);
+    }
+  }, this);
 };
 
-DropletTooltipManager.prototype.hasDocFor = function (functionName) {
-  return this.blockTypeToTooltip.hasOwnProperty(functionName);
+DropletTooltipManager.prototype.getDocFor = function (functionName) {
+  var docFuncName = this.docFuncMapping_[functionName] || functionName;
+  return this.blockTypeToTooltip_[docFuncName];
 };
 
 DropletTooltipManager.prototype.showDocFor = function (functionName) {
   if (!this.tooltipsEnabled) {
     return;
   }
+
+  var tooltip = this.getDropletTooltip(functionName);
+  if (tooltip.customDocURL) {
+    var win = window.open(tooltip.customDocURL, '_blank');
+    win.focus();
+    return;
+  }
+
   $('.tooltipstered').tooltipster('hide');
-  var dialog = new window.Dialog({
+  var dialog = new this.Dialog({
     body: $('<iframe>')
       .addClass('markdown-instructions-container')
       .width('100%')
-      .attr('src', this.getDropletTooltip(functionName).getFullDocumentationURL()),
+      .attr('src', tooltip.getFullDocumentationURL()),
     autoResizeScrollableElement: '.markdown-instructions-container',
     id: 'block-documentation-lightbox'
   });
@@ -124,11 +143,12 @@ DropletTooltipManager.prototype.showDocFor = function (functionName) {
  * @returns {DropletFunctionTooltip}
  */
 DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
-  if (!this.blockTypeToTooltip.hasOwnProperty(functionName)) {
+  var tooltip = this.getDocFor(functionName);
+  if (!tooltip) {
     throw "Function name " + functionName + " not registered in documentation manager.";
   }
 
-  return this.blockTypeToTooltip[functionName];
+  return tooltip;
 };
 
 /**

@@ -3,9 +3,7 @@
 # real instance on localhost by setting the USE_REAL_REDIS environment variable;
 # e.g. "USE_REAL_REDIS=true ruby test_redis_property_bag.rb".
 
-require 'minitest/autorun'
-require 'rack/test'
-require_relative '../../deployment'
+require_relative 'test_helper'
 require_relative '../middleware/helpers/redis_property_bag'
 require_relative 'fake_redis_client'
 
@@ -112,7 +110,6 @@ class RedisPropertyBagTest < Minitest::Test
     bag.set('foo3', 'value3')
     assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
-
     # Make sure the bag contents are still intact
     assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
@@ -138,7 +135,6 @@ class RedisPropertyBagTest < Minitest::Test
 
     # Make sure the bag contents are still intact
     assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
-
 
     # Jump to just before expiration
     time_travel test_delay_seconds - 0.1

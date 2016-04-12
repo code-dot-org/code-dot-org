@@ -6,6 +6,8 @@ nav: about_nav
 We especially want to recognize the engineers from Facebook, Google, Microsoft, Twitter and many others who helped create these materials.
 
 ## Active Contributors
+<%= view :about_headshots, people:DB[:cdo_contributors].where(kind_s:'active_headshot'), :columns=>3 %>
+
 <%= view :about_people, people:DB[:cdo_contributors].where(kind_s:'active') %>
 
 ## Past Contributors

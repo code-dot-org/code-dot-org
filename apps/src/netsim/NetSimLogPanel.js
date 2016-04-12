@@ -6,17 +6,6 @@
  * @see INetSimLogPanel for the interface implemented here.
  * @see NetSimBitLogPanel for the component used in bit-sending mode.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
 'use strict';
 
 var utils = require('../utils');

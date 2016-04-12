@@ -6,18 +6,6 @@
  *           Access to environment-specific asset URLs.
  *           Reproducible random number functions for easy testing.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 var seedrandom = require('seedrandom');

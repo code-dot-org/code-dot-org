@@ -12,10 +12,10 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "This code draws two rows of hexagons - loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need to jump back 120 pixels in your outermost loop to make sure the artist doesn't draw off the screen.",
+    "instructions": "This code draws two rows of hexagons - loop the whole thing 4 times to draw the whole honeycomb. \r\n\r\nYou'll need to jump back 120 pixels in your outermost loop to make sure the artist doesn't draw off the screen.\r\n",
     "ideal": "15",
     "embed": "false",
-    "markdown_instructions": "This code draws two rows of hexagons - loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need to jump back 120 pixels in your outermost loop to make sure the artist doesn't draw off the screen.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "This code draws two rows of hexagons - loop the whole thing 4 times to draw the whole honeycomb. \r\n\r\nYou'll need to jump back 120 pixels in your outermost loop to make sure the artist doesn't draw off the screen.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -29,8 +29,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>

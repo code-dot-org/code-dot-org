@@ -1,11 +1,5 @@
 require 'twilio-ruby'
 class SmsController < ApplicationController
-
-  # put your own credentials here
-  ACCOUNT_SID = CDO.twilio_sid
-  AUTH_TOKEN = CDO.twilio_auth
-  MESSAGING_SERVICE = CDO.twilio_messaging_service
-
   protect_from_forgery except: [:send_to_phone] # the page that posts here is cached
 
   # set up a client to talk to the Twilio REST API
@@ -24,12 +18,21 @@ class SmsController < ApplicationController
 
   def send_sms(link, phone)
     # set up a client to talk to the Twilio REST API
-    @client = Twilio::REST::Client.new ACCOUNT_SID, AUTH_TOKEN
+    @client = Twilio::REST::Client.new CDO.twilio_sid, CDO.twilio_auth
     @client.messages.create(
-      :messaging_service_sid => MESSAGING_SERVICE,
-      :to => phone,
-      :body => "Check this out on Code Studio: #{link} (reply STOP to stop receiving this)"
+      messaging_service_sid: CDO.twilio_messaging_service,
+      to: phone,
+      body: "Check this out on Code Studio: #{link} (reply STOP to stop receiving this)"
     )
-    render status: :ok, nothing: true
+    head :ok
+  rescue Twilio::REST::RequestError => e
+    if e.message == "The message From/To pair violates a blacklist rule."
+      # recipient unsubscribed from twilio, pretend it succeeded
+      head :ok
+    elsif e.message =~ /The \'To\' number .* is not a valid phone number\./
+      head :bad_request
+    else
+      raise
+    end
   end
 end

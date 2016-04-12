@@ -1,5 +1,6 @@
 - content_for(:head) do
   = stylesheet_link_tag 'editor/collapse', media: 'all'
+  = javascript_include_tag 'js/levelbuilder'
 
 #validation-error.validation-error{style: 'background-color: yellow'}
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
@@ -28,6 +29,7 @@
     = render partial: 'levels/category', locals: {f: f, category: 'karel', partial: 'levels/editors/karel'} if @level.is_a? Karel
     = render partial: 'levels/category', locals: {f: f, category: 'artist', partial: 'levels/editors/artist'} if @level.is_a? Artist
     = render partial: 'levels/category', locals: {f: f, category: 'applab', partial: 'levels/editors/applab'} if @level.is_a? Applab
+    = render partial: 'levels/category', locals: {f: f, category: 'gamelab', partial: 'levels/editors/gamelab'} if @level.is_a? Gamelab
     = render partial: 'levels/category', locals: {f: f, category: 'dsl', partial: 'levels/editors/dsl'} if @level.is_a? DSLDefined
     = render partial: 'levels/category', locals: {f: f, category: 'netsim', partial: 'levels/editors/netsim'} if @level.is_a? NetSim
 
@@ -36,8 +38,23 @@
     = render partial: 'levels/category', locals: {f: f, category: 'odometer', partial: 'levels/editors/odometer'} if @level.is_a? Odometer
     = render partial: 'levels/category', locals: {f: f, category: 'vigenere', partial: 'levels/editors/vigenere'} if @level.is_a? Vigenere
     = render partial: 'levels/category', locals: {f: f, category: 'frequency_analysis', partial: 'levels/editors/frequency_analysis'} if @level.is_a? FrequencyAnalysis
+
+  .field
+    = f.hidden_field :published
   .actions
-    = f.submit
+    = f.submit 'Save your progress but do not publish', {:id => 'saveProgress'}
+    %br
+    %br
+    = f.submit 'Save and publish your completed work', {:id => 'publishLevel', :style => "background-color: #f0c14b"}
 #validation-error.validation-error{style: 'background-color: yellow'}
 :javascript
-  #{render partial: 'shared/ajax_submit', formats: [:js],  locals: {form_selector: @level.new_record? ? '#new_level' : '.edit_level'}}
+  window.levelbuilder.ajaxSubmit("#{@level.new_record? ? '#new_level' : '.edit_level'}");
+  $(document).ready(function () {
+    $('#saveProgress').click(function() {
+      $('#level_published').val(false);
+    });
+
+    $('#publishLevel').click(function() {
+      $('#level_published').val(true);
+    });
+  });

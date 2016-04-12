@@ -1,18 +1,6 @@
 /**
  * @overview Wrapped pub/sub service channel APIs (like Pusher's Channel)
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 /**
@@ -30,9 +18,6 @@ var PubSubChannel = exports;
  * @param {function} callback - A function to be called whenever the event is
  *        triggered.
  */
-
-// Disable "unused variable" errors for null implementation declarations
-/* jshint unused:false */
 
 /**
  * @constructor
@@ -53,9 +38,6 @@ PubSubChannel.NullChannel.prototype.subscribe = function (eventName, callback) {
  * @param {string} eventName
  */
 PubSubChannel.NullChannel.prototype.unsubscribe = function (eventName) { };
-
-// Re-enable "unused variable" error
-/* jshint unused:true */
 
 /**
  * @constructor

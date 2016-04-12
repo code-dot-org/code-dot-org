@@ -1,17 +1,6 @@
 /**
  * @overview Base implementation of NetSim UI sliders.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
 'use strict';
 
 var utils = require('../utils');

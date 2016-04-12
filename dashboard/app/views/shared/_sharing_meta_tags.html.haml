@@ -28,6 +28,7 @@
       = tag 'meta', attr => "#{namespace}:image:width", content: meta_image_width
       = tag 'meta', attr => "#{namespace}:image:height", content: meta_image_height
 
+    = tag :meta, name: 'mobile-web-app-capable', content: 'yes'
     = tag :meta, name: 'apple-mobile-web-app-capable', content: 'yes'
     = tag :meta, name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent'
     - if @level_source.try(:level_source_image).try(:image)

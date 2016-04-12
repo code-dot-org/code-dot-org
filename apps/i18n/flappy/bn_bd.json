@@ -18,7 +18,7 @@
   "incrementPlayerScoreTooltip": "বর্তমান খেলোয়াড়ের হিসাবে একটি যোগ করুন।",
   "nextLevel": "অভিনন্দন! আপনি এই ধাঁধা সম্পন্ন করেছেন।",
   "no": "না",
-  "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
+  "numBlocksNeeded": "এই ধাঁধাটি %1 ব্লক দিয়ে সমাধান করা যেতে পারে।",
   "playSoundRandom": "ইচ্ছামত শব্দ বাজান",
   "playSoundBounce": "বাউন্স শব্দ বাজান",
   "playSoundCrunch": "কড়মড়ে শব্দ বাজান",

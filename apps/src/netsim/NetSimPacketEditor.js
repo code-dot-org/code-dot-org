@@ -3,18 +3,6 @@
  *           encodings at once and lives inside the send panel.
  * @see NetSimSendPanel for how this is used.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
@@ -721,7 +709,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     rowFields.message.focus(removeWatermark);
     rowFields.message.keypress(
         makeKeypressHandlerWithWhitelist(rowType.messageAllowedCharacters));
-    rowFields.message.keydown(function(jqueryEvent){
+    rowFields.message.keydown(function (jqueryEvent){
       if (isUnmodifiedEnterPress(jqueryEvent)) {
         this.enterKeyPressedCallback_(jqueryEvent);
       }

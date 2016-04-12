@@ -4,18 +4,6 @@
  * @see NetSimClientNode for the controller used for other client nodes
  *      in the simulation.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 var utils = require('../utils');
@@ -526,7 +514,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function () {
   } else if (!mutualConnectionRow && !this.myRemoteClient) {
     // The client we're trying to connect to might have connected to
     // someone else; check if they did and if so, stop trying to connect
-    myConnectionTargetWireRow = _.find(wireRows, function(row) {
+    myConnectionTargetWireRow = _.find(wireRows, function (row) {
       return row.localNodeID === myWire.remoteNodeID &&
           row.remoteNodeID !== myWire.localNodeID;
     }.bind(this));

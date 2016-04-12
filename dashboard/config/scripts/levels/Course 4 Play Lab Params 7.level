@@ -44,9 +44,9 @@
     "scrollbars": "false",
     "never_autoplay_video": "false",
     "min_workspace_height": "1200",
-    "examples_required": "false",
-    "maze_data": null
-  }
+    "examples_required": "false"
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -203,7 +203,7 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <arg name="actor"/>
             <arg name="speed"/>

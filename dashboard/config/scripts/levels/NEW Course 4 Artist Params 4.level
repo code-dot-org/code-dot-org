@@ -30,8 +30,10 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  }
+    "disable_examples": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -94,7 +96,7 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false" movable="false">
+        <block type="procedures_defnoreturn" movable="false">
           <mutation>
             <arg name="length"/>
           </mutation>

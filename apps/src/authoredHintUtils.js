@@ -1,4 +1,6 @@
-/* global marked */
+var processMarkdown = require('marked');
+var parseXmlElement = require('./xml').parseElement;
+var msg = require('./locale');
 
 /**
  * @overview A helper class for all actions associated with the Authored
@@ -126,7 +128,7 @@ authoredHintUtils.finalizeHints_ = function () {
   localStorage.removeItem('last_attempt_record');
   var hints = authoredHintUtils.getFinishedHints_();
   if (finalAttemptRecord) {
-    hints = hints.map(function(hint){
+    hints = hints.map(function (hint){
       hint = $.extend({
         finalTime: finalAttemptRecord.time,
         finalAttempt: finalAttemptRecord.attempt,
@@ -174,7 +176,7 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
   localStorage.setItem('last_attempt_record', JSON.stringify(nextAttemptRecord));
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   authoredHintUtils.clearUnfinishedHints();
-  var finishedHintViews = unfinishedHintViews.map(function(hint){
+  var finishedHintViews = unfinishedHintViews.map(function (hint){
     hint = $.extend({
       nextTime: nextAttemptRecord.time,
       nextAttempt: nextAttemptRecord.attempt,
@@ -222,14 +224,36 @@ authoredHintUtils.submitHints = function (url) {
 };
 
 /**
+ * Generates contextual hints as used by StudioApp from Blockly XML
+ * @param {Object[]} blocks An array of objects representing the
+ *        missing recommended Blockly Blocks for which we want to
+ *        create hints.
+ * @param {string} blocks[].blockDisplayXML
+ * @param {boolean} blocks[].alreadySeen
+ * @return {AuthoredHint[]}
+ */
+authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
+  var hints = blocks.map(function (block) {
+    var xmlBlock = parseXmlElement(block.blockDisplayXML);
+    var blockType = xmlBlock.firstChild.getAttribute("type");
+    return {
+      content: processMarkdown(msg.recommendedBlockContextualHintTitle()),
+      block: xmlBlock,
+      hintId: "recommended_block_" + blockType,
+      hintClass: 'recommended',
+      hintType: 'contextual',
+      alreadySeen: block.alreadySeen
+    };
+  });
+  return hints;
+};
+
+/**
  * Generates authored hints as used by StudioApp from levelbuilder JSON.
  * @param {string} - JSON representing an array of hints
- * @return {Object[]}
+ * @return {AuthoredHint[]}
  */
 authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
-  if (!marked) {
-    return [];
-  }
   var hints;
   try {
     hints = JSON.parse(levelBuilderAuthoredHints);
@@ -238,7 +262,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
   }
   return hints.map(function (hint) {
     return {
-      content: marked(hint.hint_markdown),
+      content: processMarkdown(hint.hint_markdown),
       hintId: hint.hint_id,
       hintClass: hint.hint_class,
       hintType: hint.hint_type,
@@ -246,4 +270,3 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
     };
   });
 };
-

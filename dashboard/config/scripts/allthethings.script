@@ -35,6 +35,7 @@ level 'Course 4 Play Lab Params 2'
 
 stage 'Farmer'
 level '4-5 While Loops 4'
+level 'Farmer for Authored Hint testing'
 
 stage 'Flappy'
 level 'blockly:Flappy:1'
@@ -45,6 +46,7 @@ level 'blockly:Bounce:1'
 stage 'Multi'
 level 'K-1 Happy Maps Multi 1'
 level 'Multi Horizontal Scroll Test'
+level 'Submittable Multi'
 
 stage 'Multi2'
 level 'Choose 2 Test'
@@ -100,6 +102,7 @@ level 'allthethings design mode elements'
 level 'allthethings_template_backed1'
 level 'allthethings_template_backed2'
 level 'allthethings_moviebot'
+level 'Applab allthethings onRecordEvent'
 
 stage 'Online PD'
 level 'PDK5 Intro C'
@@ -107,3 +110,20 @@ level 'PDK5 Foundations F'
 
 stage 'Markdown Details'
 level 'Test External Markdown'
+
+stage 'Studio'
+level 'Resizing Test'
+
+stage 'Long assessment'
+assessment 'Test longassessment levelgroup'
+assessment 'Test longassessment levelgroup split'
+
+stage 'Star wars'
+level 'blockly:StudioEC:js_hoc2015_event_two_items'
+level 'blockly:Studio:hoc2015_blockly_5'
+
+stage 'Minecraft'
+level 'Overworld Chop Tree - allthethings'
+
+stage 'Rich long assessment'
+assessment 'PS U3 Assessment1'

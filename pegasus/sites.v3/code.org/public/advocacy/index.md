@@ -60,7 +60,11 @@ For more information, please contact advocacy@code.org.
 * <a href="https://www.studentsfirst.org/">Students First</a> 
 * <a href="https://www.teachforamerica.org/about-us/our-initiatives/stem-initiative/">Teach for America</a> 
 * <a href="http://www.technet.org/">TechNet</a> 
-
+* <a href="https://www.ieee.org/index.html">IEEE</a> 
+* <a href="http://cra.org/">Computing Research Association</a>
+* <a href="http://www.afterschoolalliance.org/">Afterschool Alliance</a>
+* <a href="https://www.commonsensemedia.org/kids-action">Common Sense Media</a>
+* <a href="https://www.sas.com">SAS</a>
 
 [#tools-section]
 

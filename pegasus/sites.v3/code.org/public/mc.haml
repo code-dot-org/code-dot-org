@@ -1,6 +1,7 @@
 ---
 title: Minecraft
 theme: responsive
+video_player: true
 social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
@@ -19,8 +20,9 @@ social:
   "og:video:type": ""
 ---
 
--# Because of partner requirements, all urls need to use mc, but our internal shortcut is "mchoc".
--# Hoc.com has a mc.redirect to his page and the router has a check for "code.org/MC" and "hoc.com/MC"
+-#
+  Because of partner requirements, all urls need to use mc, but our internal shortcut is "mchoc".
+  Hoc.com has a mc.redirect to his page and the router has a check for "code.org/MC" and "hoc.com/MC"
 
 %link{href: "/css/mc.css", rel: "stylesheet"}
 
@@ -50,3 +52,8 @@ social:
 .mc-videos{style: "clear: both;"}
   %h2.mc-header2= I18n.t(:starwars_watch_videos)
   =view :inspirational_videos
+
+%h2.mc-header2
+  = I18n.t(:starwars_speak_languages)
+  %a{href: "/translate/mc"}= I18n.t(:starwars_help_translate)
+

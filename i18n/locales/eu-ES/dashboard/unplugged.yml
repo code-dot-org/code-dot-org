@@ -88,7 +88,7 @@ eu:
         desc: Ikastaro honek begizta( agindu errepikatuak) kontzeptua dantzaren bidez irakasten digu. Ikasleek koreografia erraz bat ikasiko dute, ondoren errepikatu egin beharko dute.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Erreleen programazioa
+        title: Txandaka programatzen
         desc: 'Ikasleak lasterketa bat errepikatzen dute non jolastokia zearkatzen duten "Grafo Papera Programazioan" oinarritutako algoritmoa idatziz. Agindu bakarra idazt dezakete aldiro eta errora bat egonez gero atzera egin behar dute egindakoa ezabatuz.'
         video: C2_relay_programming
       Conditionals:
@@ -112,7 +112,7 @@ eu:
         desc: Lekzio honetan erakusten da nolatan erabiltzen ditugun algoritmoak gure bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak diren bere zati esentzialetako bat.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Eskumuturreko binarioak
+        title: Eskumuturreko bitarrak
         desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela ikasten dute honela.
         video: C2_binary_bracelets
       DigitalFootprint:
@@ -124,7 +124,7 @@ eu:
         desc: Ikasleek pentsamendu konputazionaleko pausoetan pentsatzen dute( deskonposatu, patroien bat egitea, abstrakzioa, algoritmoak) imajinatzeko joko baten jokatzeko pausoak instrukzioak eduki gabe.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Argizulo funtzionalak
+        title: Funtzioak aztertzen
         desc: Ikasleek algoritmo bat sortzen dute aldagai eta funtzioekin (kode zatiak erabil nahi ditugunak behin eta berriz) kristalezko apaingarriak sortzeko kateak eta aleak erabiliz.
         video: C3_functional_suncatchers
       SongwritingParameters:

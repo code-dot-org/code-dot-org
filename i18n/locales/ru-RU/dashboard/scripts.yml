@@ -22,14 +22,14 @@ ru:
           "Bee 1: Intro": 'Пчела 1: Введение'
           "Maze 2: Loops": 'Лабиринт 2: Циклы'
           "Bee 2: Loops": 'Пчела 2: Циклы'
-          Multi & Match: Много и совпадение
+          Multi & Match: Множество и соответствие
           K-1 Flappy: Птичка для детского сада
           Flappy non blockly: Flappy без использования блоков
           title: Курс 1
           Artist 2: Художник 2
           Happy Maps: Весёлые карты
           Move it, Move it: Двигай это, двигай это
-          "Real-life Algorithms: Plant a Seed": 'Реальные алгоритмы: Посади зерно'
+          "Real-life Algorithms: Plant a Seed": 'Алгоритмы из повседневной жизни: Посади семена'
           Building a Foundation: Создание основы
           Getting Loopy: Зацикливание
           The Big Event: Большое Событие
@@ -42,11 +42,11 @@ ru:
           "Bee: Loops": 'Пчела: Циклы'
           "Studio: Create a Story": 'Лаборатория игр: Создать историю'
           "Artist: Loops": 'Художник: Циклы'
-          description_audience: Возраст 4+ (для начинающих и ещё не умеющих читать)
-          description_short: Курс 1 создан для тех, кто начинает читать.
+          description_audience: От 4 до 6 лет
+          description_short: Начните с Курса 1 для тех, кто начинает читать.
         course2:
           The Maze: Лабиринт
-          Suzi: Сюзи
+          Suzi: Сьюзи
           The Artist: Художник
           Artist Debugging: 'Художник: Отладка'
           Bounce: Прыжок
@@ -62,7 +62,7 @@ ru:
           Bee Functions: 'Пчела: Процедуры'
           Maze Loops: 'Лабиринт: Циклы'
           Graph Paper Programming: Программирование на бумаге в клеточку
-          "Real-life Algorithms: Paper Planes": 'Реальные алгоритмы: Бумажные самолетики'
+          "Real-life Algorithms: Paper Planes": 'Алгоритмы из повседневной жизни: Бумажные самолетики'
           Getting Loopy: Зацикливание
           Relay programming: Эстафетное программирование
           Conditionals: Условные команды
@@ -81,8 +81,8 @@ ru:
           "Artist: Sequence2": 'Художник: Последовательность2'
           "Maze: Sequence2": 'Лабиринт: Последовательность2'
           "Artist: Nested Loops": 'Художник: Вложенные циклы'
-          description_audience: Возраст 6+ (необходимо уметь читать)
-          description_short: Курс 2 создан для учеников, умеющих читать.
+          description_audience: От 6 до 18 лет
+          description_short: Начните с Курса 2, который создан для учеников, умеющих читать.
         course3:
           The Maze: Лабиринт
           "Studio: Create a Story": 'Лаборатория игр: Создать историю'
@@ -96,7 +96,7 @@ ru:
           Bee Debuggin: 'Пчела: Отладка'
           Bee Debugging: 'Пчела: Отладка'
           Bee Functions: 'Пчела: Процедуры'
-          Artist Functions with Params: 'Художник: процедуры с параметрами'
+          Artist Functions with Params: 'Художник: Метод Параметры'
           Bounce: Прыжок
           Maze Conditionals: 'Лабиринт: Условные команды'
           Artist Functions with Parameters: 'Художник: процедуры с параметрами'
@@ -107,7 +107,7 @@ ru:
           Internet: интернет
           Crowdsourcing: Краудсорсинг
           Digital Citizenship: Цифровое гражданство
-          Farmer - While Loops: 'Фермер - Цикл "Пока"'
+          Farmer - While Loops: 'Фермер: Цикл "Пока"'
           description: Курс 3 разработан для учеников, освоивших Курс 2. Ученики будут глубже вникать в темы, с которыми познакомились в предыдущем курсе, осваивая решение более сложных задач. К концу курса ученики создают интерактивные истории и игры, которыми они могут поделиться с другими. Рекомендовано для 4-5 классов.
           "Studio: Create a Game": 'Лаборатория игр: Создай игру'
           Maze: Лабиринт
@@ -132,7 +132,7 @@ ru:
           "Bee: Debugging2": 'Пчела: Отладка2'
           "Artist: Patterns": 'Художник: Узоры'
           Songwriting: Написание песен
-          description_audience: Возраст 8+ (для закончивших Курс 2)
+          description_audience: От 8 до 18 лет
           description_short: Курс 3 является продолжением Курса 2.
         playlab:
           title: Лаборатория игр
@@ -146,7 +146,7 @@ ru:
           description_short: Рисуйте картины и узоры вместе с Художником!
         hourofcode:
           Maze: Лабиринт
-          title: Classic Maze
+          title: Классический лабиринт
           description: Постигай азы программирования с персонажами Angry Birds, Plants vs. Zombies, и Скратом из Ледникового периода!
           description_short: Постигай азы программирования с персонажами Angry Birds, Plants vs. Zombies, и Скратом из Ледникового периода!
         frozen:
@@ -155,8 +155,8 @@ ru:
           Artist: Художник
           description_short: Давайте использовать код, чтобы присоединиться к Анне и Эльзе, открывающим магию и красоту льда.
         course4:
-          description_short: Для изучения Курса 4, ученики должны предварительно пройти Курсы 2 и 3.
-          description: Курс 4 разработан для учеников, которые уже освоили Курсы 2 и 3. Учащиеся рассмотрят более подробно разделы программирования, с которыми ознакомились ранее, и будут разрабатывать гибкие решения для сложных задач. Во время обучения, учащиеся будут создавать интерактивные игры или истории, которыми смогут поделиться с другими. Рекомендуется для 4-8 классов.
+          description_short: Для изучения Курса 4 ученики должны предварительно пройти Курсы 2 и 3.
+          description: 4 курс предназначен для студентов, которые прошли курсы 2 и 3. Студенты научатся решать головоломки повышенной сложности, обучаясь тому, как совмещать сразу несколько принципов, работая над решением каждой задачи. К моменту завершения этого курса студенты будут создавать программы, которые позволят им продемонстрировать многочисленные навыки, включая цикл for и функции с параметрами. Рекомендуется для 4-8 классов.
           "Artist: Variables": 'Художник: Переменные'
           "Bee: For Loops": 'Пчела: циклы с параметром'
           title: Курс 4
@@ -589,7 +589,8 @@ ru:
           description: Test Wednesday
         cspunit3:
           title: 'CSP Unit 3 - Programming'
-          description_short: Programming
+          title_short: CSP Unit 3
+          description_short: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: Процедуры
@@ -680,6 +681,7 @@ ru:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -863,7 +865,7 @@ ru:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -916,7 +918,7 @@ ru:
           AppLab: AppLab
           Online PD: Online PD
           title: All the Things!
-          description: All the level types for UI testing
+          description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           description_short: All the level types for UI testing
           Odometer: Odometer
           Vigenere: Vigenere
@@ -925,6 +927,10 @@ ru:
           Pixelation: Пикселизация
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
+          Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Фаза 2 онлайн: Смешанная летняя учёба'
@@ -1166,7 +1172,7 @@ ru:
           description_audience: Ages 6-13
           Happy Maps: Весёлые карты
           Move it, Move it: Двигай это, двигай это
-          "Real-life Algorithms: Plant a Seed": 'Реальные алгоритмы: Посади зерно'
+          "Real-life Algorithms: Plant a Seed": 'Алгоритмы из повседневной жизни: Посади семена'
           Graph Paper Programming: Программирование на бумаге в клеточку
           Building a Foundation: Создание основы
           Getting Loopy: Зацикливание
@@ -1234,6 +1240,7 @@ ru:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1306,6 +1313,10 @@ ru:
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 5 lessons: Unit 5 lessons
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1315,6 +1326,11 @@ ru:
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: 'Unit 6 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1352,8 +1368,30 @@ ru:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
           Welcome!: Добро пожаловать!
@@ -1402,6 +1440,8 @@ ru:
           description_audience: Возраст 10+ (после курса 3)
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Лаборатория игр Ледниковый период
           description_short: Создай сказку или игру с игровой лабораторией Ледниковый период!
@@ -1424,7 +1464,7 @@ ru:
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
-          description_short: Programming
+          description_short: Программирование
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           While Loop Basics: While Loop Basics
           While Loops_ Counting Flips: While Loops_ Counting Flips
@@ -1462,12 +1502,12 @@ ru:
           description: Создай сказку или игру с лабораторией игр Gumball!
           Gumball Play Lab: Лаборатория игр Gumball
         starwars:
-          title: 'Звездные войны: Создай галактику, вместе с Code.org'
+          title: 'Звездные войны: Создай галактику, программируя'
           description_short: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           description: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           Hour of Code 2015: Час кода 2015
         starwarsblocks:
-          title: 'Звездные войны: Создай галактику, вместе с Code.org'
+          title: 'Звездные войны: Создай галактику, программируя'
           description_short: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           description: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           Hour of Code 2015: Час кода 2015
@@ -1495,3 +1535,116 @@ ru:
           Welcome!: Добро пожаловать!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Итоги
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems
+        cspunit5:
+          title: 'CSP Unit 5 - Performance Tasks'
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: 'CSP Unit 4 - Data'
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Intro to Data: Introduction to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+          The Cost of Free: The Cost of Free
+        CSPPD3-Unit4:
+          title: 'Computer Science Principles: Unit 4 PD'
+          description_short: Support for CSP Unit 4
+          description: Online Support for CSP Unit 4
+          Getting Started: Getting Started
+          Unit 4 Overview: Unit 4 Overview
+          Chapter 1 Overview: Chapter 1 Overview
+          Chapter 2 Overview: Chapter 2 Overview
+          Practice Performance Tasks: Practice Performance Tasks
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit6draft:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, and it concludes with a sampling of example projects that can be built using these tools.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Updating Records: Updating Records
+          Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Изучайте функциональное программирование используя алгебру
+          description: Изучайте функциональное программирование используя алгебру
+          "Calc: Evaluation Blocks": 'Калькулятор: Блоки оценивания'
+          "Eval: Strings and Images": 'Оценка: строки и картинки'
+          "Unplugged: Contracts": 'Урок без компьютера: контракты'
+          "Eval: Writing Contracts": 'Оценка: написание контрактов'
+          "Calc: Defining Variables": 'Калькулятор: определение переменных'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Урок без компьютера: Создание рецепта'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+        AlgebraB:
+          title: Информатика в алгебре
+          description_short: Изучайте функциональное программирование используя алгебру
+          description: Изучайте функциональное программирование используя алгебру
+          "Unplugged: Video Games and Coordinate Planes": 'Урок без компьютера: Видеоигры и координатные плоскости'
+          "Play Lab: Defining Variables (Big Game)": 'Лаборатория игр: определение переменных (большая игра)'
+          "Play Lab: Animation (Big Game)": 'Лаборатория игр: анимация (большая игра)'
+          "Unplugged: Booleans": 'Урок без компьютера: Логические выражения'
+          "Eval: Boolean Operators": 'Оценка: логические операторы'
+          "Play Lab: Booleans": 'Лаборатория игр: логические выражения'
+          "Play Lab: Boolean (Big Game)": 'Лаборатория игр: логические выражения (большая игра)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Урок без компьютера: Условные выражения и сложные функции'
+          "Eval: Conditionals": 'Оценка: Условные выражения'
+          "Unplugged: Collision Detection and the Distance Formula": 'Урок без компьютера: Обнаружение столкновений и формула расстояния'
+          "Play Lab: Collision Detection (Big Game)": 'Лаборатория игр: обнаружение столкновений (большая игра)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

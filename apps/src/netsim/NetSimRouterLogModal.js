@@ -2,17 +2,6 @@
  * @overview a modal dialog showing the union of all router logs for the
  *           current shard.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
 'use strict';
 
 var i18n = require('./locale');
@@ -209,7 +198,7 @@ NetSimRouterLogModal.prototype.render = function () {
   this.rootDiv_.html(renderedMarkup);
 
   // Add input handlers
-  this.getRouterLogToggleButton().one('click', function() {
+  this.getRouterLogToggleButton().one('click', function () {
     this.toggleRouterLogMode_();
     this.render();
   }.bind(this));

@@ -2,18 +2,6 @@
  * @overview Utility methods for generating the right kinds of node controllers
  *           from raw node table rows.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 var NetSimConstants = require('./NetSimConstants');

@@ -1,0 +1,189 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:_testTable:"}],"ComparisonOperator":"EQ"}},"AttributesToGet":["row_id"]}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '154'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - 6O3EGVH6K1GRDPRAK87HGTOM1NVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3413411624'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '39'
+      Date:
+      - Sat, 19 Mar 2016 04:29:42 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":0,"Items":[],"ScannedCount":0}'
+    http_version: 
+  recorded_at: Sat, 19 Mar 2016 04:29:43 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_table_metadata","Key":{"hash":{"S":"1:_testTable:shared:metadata"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.DeleteItem
+      Content-Length:
+      - '87'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - A4RNL25UEL7FKFK6B5S639LKBVVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '2745614147'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '2'
+      Date:
+      - Sat, 19 Mar 2016 04:29:43 GMT
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Sat, 19 Mar 2016 04:29:44 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:mytable:"}],"ComparisonOperator":"EQ"}},"AttributesToGet":["row_id"],"Limit":1,"ScanIndexForward":false}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '186'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - GNPVRJU5EVM2KQJ7EMURNRVL7BVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '3826814598'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '127'
+      Date:
+      - Sat, 19 Mar 2016 04:29:44 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":1,"Items":[{"row_id":{"N":"27"}}],"LastEvaluatedKey":{"row_id":{"N":"27"},"hash":{"S":"1:mytable:"}},"ScannedCount":1}'
+    http_version: 
+  recorded_at: Sat, 19 Mar 2016 04:29:44 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","Item":{"hash":{"S":"1:mytable:"},"channel_id":{"N":"1"},"table_name":{"S":"mytable"},"row_id":{"N":"28"},"updated_at":{"S":"2016-03-18T23:29:44-05:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"{\"mycolumn\":\"myvalue\"}"}},"Expected":{"row_id":{"Value":{"N":"28"},"ComparisonOperator":"NE"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.PutItem
+      Content-Length:
+      - '324'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - MRUN1E93QVM844HIK96P01MVONVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '2745614147'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '2'
+      Date:
+      - Sat, 19 Mar 2016 04:29:44 GMT
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Sat, 19 Mar 2016 04:29:45 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","ConsistentRead":true,"KeyConditions":{"hash":{"AttributeValueList":[{"S":"1:mytable:"}],"ComparisonOperator":"EQ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '144'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - 1TVBS2F0BC2T9OHQ4TDKOC15GBVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '391774867'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '6219'
+      Date:
+      - Sat, 19 Mar 2016 04:29:45 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":28,"Items":[{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"1"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-17T23:15:40-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"2"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-17T23:16:12-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"3"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-17T23:19:24-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"4"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-17T23:21:11-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"5"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-17T23:21:41-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"6"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-17T23:23:19-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"7"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-17T23:24:07-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"8"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T08:51:25-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"9"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T08:51:38-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"10"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T08:51:59-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"11"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T08:52:41-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"12"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T08:52:59-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"13"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T08:57:53-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"14"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T08:58:48-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"15"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T08:59:18-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"16"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T08:59:51-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"17"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T09:00:49-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"18"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T09:01:10-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"19"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T09:01:32-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"20"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T09:02:06-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"21"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T09:03:48-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"22"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T09:04:20-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"23"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T09:05:48-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"24"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T09:07:26-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"25"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T09:08:12-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"26"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T09:08:46-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"27"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T23:10:55-05:00"}},{"value":{"S":"{\"mycolumn\":\"myvalue\"}"},"hash":{"S":"1:mytable:"},"row_id":{"N":"28"},"channel_id":{"N":"1"},"updated_ip":{"S":"127.0.0.1"},"table_name":{"S":"mytable"},"updated_at":{"S":"2016-03-18T23:29:44-05:00"}}],"ScannedCount":28}'
+    http_version: 
+  recorded_at: Sat, 19 Mar 2016 04:29:45 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_tables","Item":{"hash":{"S":"1:mytable:"},"channel_id":{"N":"1"},"table_name":{"S":"mytable"},"row_id":{"N":"28"},"updated_at":{"S":"2016-03-18T23:29:45-05:00"},"updated_ip":{"S":"127.0.0.1"},"value":{"S":"{\"mycolumn\":\"myvalue\"}"}},"Expected":{"row_id":{"Value":{"N":"28"},"ComparisonOperator":"EQ"}}}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.PutItem
+      Content-Length:
+      - '324'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - TB8A77UM1TNBKBLEEF356LDDOBVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '2745614147'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '2'
+      Date:
+      - Sat, 19 Mar 2016 04:29:46 GMT
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Sat, 19 Mar 2016 04:29:47 GMT
+recorded_with: VCR 3.0.0

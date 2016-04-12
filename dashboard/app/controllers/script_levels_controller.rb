@@ -1,3 +1,4 @@
+require 'cdo/script_config'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 
@@ -17,16 +18,16 @@ class ScriptLevelsController < ApplicationController
   before_action :disable_session_for_cached_pages
 
   def disable_session_for_cached_pages
-    if ScriptLevelsController.is_cachable_request?(request)
+    if ScriptLevelsController.cachable_request?(request)
       request.session_options[:skip] = true
     end
   end
 
   # Return true if request is one that can be publicly cached.
-  def self.is_cachable_request?(request)
+  def self.cachable_request?(request)
     script_id = request.params[:script_id]
     script = Script.get_from_cache(script_id) if script_id
-    script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+    script && ScriptConfig.allows_public_caching_for_script(script.name)
   end
 
   def reset
@@ -54,7 +55,7 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
     configure_caching(@script)
-    redirect_to(build_script_level_path(next_script_level)) and return
+    redirect_to(build_script_level_path(next_script_level)) && return
   end
 
   def show
@@ -63,7 +64,18 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    if request.path != (canonical_path = build_script_level_path(@script_level))
+    # In the case of the puzzle_page, send it through to be included in the
+    # generation of the script level path.
+    extra_params = {}
+    if @script_level.long_assessment?
+      if params[:puzzle_page]
+        extra_params[:puzzle_page] = params[:puzzle_page]
+      else
+        extra_params[:puzzle_page] = 1
+      end
+    end
+
+    if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
       return
@@ -76,12 +88,6 @@ class ScriptLevelsController < ApplicationController
     return if redirect_applab_under_13(@script_level.level)
 
     present_level
-
-    slog(tag: 'activity_start',
-         script_level_id: @script_level.id,
-         level_id: @script_level.level.id,
-         user_agent: request.user_agent,
-         locale: locale) if @script_level.level.finishable?
   end
 
   private
@@ -95,7 +101,7 @@ class ScriptLevelsController < ApplicationController
   # described here:
   # https://console.aws.amazon.com/support/home?region=us-east-1#/case/?caseId=1540449361&displayId=1540449361&language=en
   def configure_caching(script)
-    if script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+    if script && ScriptConfig.allows_public_caching_for_script(script.name)
       max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_CLIENT_MAX_AGE)
       proxy_max_age = DCDO.get('public_proxy_max_age', DEFAULT_PUBLIC_PROXY_MAX_AGE)
       response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
@@ -137,9 +143,6 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_level_source
-    # never load solutions for Jigsaw
-    return if @level.game.name == 'Jigsaw'
-
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
       # load the solution for teachers clicking "See the Solution"
       authorize! :manage, :teacher
@@ -176,7 +179,7 @@ class ScriptLevelsController < ApplicationController
 
     user = User.find(params[:user_id])
 
-    # TODO this should use cancan/authorize
+    # TODO: This should use cancan/authorize.
     if user.student_of?(current_user)
       @user = user
       @user_level = @user.user_level_for(@script_level)
@@ -187,7 +190,7 @@ class ScriptLevelsController < ApplicationController
     if params[:section_id]
       section = Section.find(params[:section_id])
 
-      # TODO this should use cancan/authorize
+      # TODO: This should use cancan/authorize.
       if section.user == current_user
         @section = section
       end
@@ -203,6 +206,12 @@ class ScriptLevelsController < ApplicationController
     @stage = @script_level.stage
 
     load_level_source
+
+    if @level.try(:pages)
+      puzzle_page = params[:puzzle_page] || 1
+      @pages = [@level.pages[puzzle_page.to_i - 1]]
+      @total_page_count = @level.pages.count
+    end
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
 

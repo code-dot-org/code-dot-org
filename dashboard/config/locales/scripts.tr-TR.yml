@@ -6,7 +6,7 @@
           'Jigsaw: Learn to drag and drop': 'Yapboz: Nasıl sürükleyip bırakacağınızı
             öğrenin'
           The Maze: Labirent
-          Multi: Çoklu
+          Multi: "Çoklu"
           Match: Eşleştir
           Math Image: Matematik Görseli
           title: Deneme Kursu
@@ -24,7 +24,7 @@
           'Bee 1: Intro': 'Arı 1: Giriş'
           'Maze 2: Loops': 'Labirent 2: Döngüler'
           'Bee 2: Loops': 'Arı 2: Döngüler'
-          Multi & Match: Çoklu & Eşleştirme
+          Multi & Match: "Çoklu & Eşleştirme"
           K-1 Flappy: K-1 Salınım
           Flappy non blockly: Bloksuz salınma
           title: Ders 1
@@ -74,7 +74,7 @@
           Getting Loopy: Döngüselleşme
           Relay programming: Röle Programlama
           Conditionals: Koşullar
-          Binary Bracelets: İkilik Bileklikler
+          Binary Bracelets: "İkilik Bileklikler"
           The Big Event: Büyük Olay
           Your Digital Footprint: Dijital İziniz
           description: Ders 2 önceden herhangi bir programlama deneyimi olmayan ve
@@ -115,10 +115,10 @@
           Functional Suncatchers: Fonksiyonel Güneş Avcıları
           Songwriting Parameters: Müzik yazarlığı parametreleri
           Dice Race: Zar Yarışı
-          Internet: İnternet
+          Internet: "İnternet"
           Crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
           Digital Citizenship: Sayısal Vatandaşlık
-          Farmer - While Loops: Çiftçi - While Döngüleri
+          Farmer - While Loops: "Çiftçi - While Döngüleri"
           description: Ders 3, Ders 2'yi alan öğrenciler için tasarlanmıştır. Öğrenciler,
             daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki
             derste öğrendikleri programlama konularını daha çok inceleyecekler. Dersin
@@ -132,7 +132,7 @@
           'Bee: Conditionals': 'Arı: Koşullandırıcılar'
           'Maze: Conditionals': 'Labirent: Koşullandırıcılar'
           'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
-          'Farmer: While Loops': 'Çiftçi: While Döngüleri'
+          'Farmer: While Loops': "Çiftçi: While Döngüleri"
           'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
           'Bee: Debugging': 'Arı: Ayıklama'
           Maze2: Labirent2
@@ -142,11 +142,11 @@
           'Bee: Conditionals2': 'Arı: Koşullandırıcılar2'
           'Maze: Conditionals2': 'Labirent: Koşullandırıcılar2'
           'Artist: Nested Loops2': 'Aktör: Yerleştirilmiş Döngüler2'
-          'Farmer: While Loops2': 'Çiftçi: While Döngüleri2'
+          'Farmer: While Loops2': "Çiftçi: While Döngüleri2"
           'Bee: Nested Loops2': 'Arı: Yerleştirilmiş Döngüler2'
           'Bee: Debugging2': 'Arı: Ayıklama2'
           'Artist: Patterns': 'Sanatçı: Desenler'
-          Songwriting: Şarkı yazma
+          Songwriting: "Şarkı yazma"
           description_audience: 8 yaş ve üstü (Ders 2 sonrası)
           description_short: Ders 3, Ders 2'nin devamıdır.
         playlab:
@@ -161,7 +161,7 @@
           description_short: Sanatçı ile harika resimler ve tasarımlar yap!
         hourofcode:
           Maze: Labirent
-          title: Saat Kodu
+          title: Klasik Labirent
           description: Angry Birds, Plants vs. Zombies karakterlerini ve Buz Devrinden
             sincap Scrat ile birlikte bilgisayar biliminin temel yapısını dene!
           description_short: Birçok eğlenceli karakterler ile birlikte bilgisayar
@@ -204,7 +204,7 @@
           'Artist: Functions with Parameters': 'Sanatçı: Fonksiyonlar ve Parametreler'
           'Unplugged: Binary': 'Unplugged: İkili Taban'
           Bee Binary: Arı İkili Taban
-          Farmer Binary: Çiftçi İkili Taban
+          Farmer Binary: "Çiftçi İkili Taban"
           Maze and Bee: Labirent ve Arı
           Artist Binary: Sanaçtı İkili Taban
           description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
@@ -223,7 +223,7 @@
           'Artist: Loops': 'Aktör: Döngüler'
           'Bee: Conditionals': 'Arı: Koşullandırıcılar'
           'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
-          'Farmer: While Loops': 'Çiftçi: While Döngüleri'
+          'Farmer: While Loops': "Çiftçi: While Döngüleri"
           'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
           'Artist: Functions': 'Aktör: Fonksiyonlar'
           'Bee: Debugging': 'Arı: Ayıklama'
@@ -237,18 +237,18 @@
           description: Kullanılabilirlik testi için Ders 4 seviyelerinden bir seçim.
           Variables: Değişkenler
           For Loops: For Döngüleri
-          Binary: İkili
+          Binary: "İkili"
         potus:
-          title: özel
-          description_short: özel
-          description: özel
-          Special: Özel
+          title: "özel"
+          description_short: "özel"
+          description: "özel"
+          Special: "Özel"
         special:
-          title: özel
-          description_short: özel
-          description: özel
-          Special: Özel
-          Binary: İkili
+          title: "özel"
+          description_short: "özel"
+          description: "özel"
+          Special: "Özel"
+          Binary: "İkili"
         algebra:
           title: Cebirde Bilgisayar Bilimi
           description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
@@ -286,10 +286,10 @@
           Infinity: Sonsuz
         algebrademo:
           title: Cebir Demo
-          description_short: Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar
-            biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar
-          description: Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar biliminde
-            kullanılan programlama dilini göstermek için kullanışlı bulmacalar
+          description_short: "Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar
+            biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar"
+          description: "Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar
+            biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar"
           Algebra Demo: Cebir Demo
           Evaluation Blocks: Değerlendirme Blokları
           Making Pictures: Resim Yapma
@@ -303,7 +303,7 @@
           Introduction to PD: Kişisel Geliştirme Giriş
           Blockly Basics: Balockly'nin temelleri
           Writing computer programs: Bilgisayar programları yazma
-          Navigating the teacher dashboard: Öğretmen panosunda gezinme
+          Navigating the teacher dashboard: "Öğretmen panosunda gezinme"
           Unplugged lessons: Bağımsız dersler
           Classroom Culture: Sınıf kültürü
           Ways to go beyond Courses 1, 2, and 3: kurs 1,2 ve 3 ünde ilersine gitmek
@@ -321,12 +321,12 @@
           'Programming Concept: Functions': 'Programming Concept: Functions'
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
-          title: İnternet Simülatörü
+          title: "İnternet Simülatörü"
           description_short: ''
           description: ''
-          Internet Simulator: İnternet Simülatörü
-          Unit 1: Ünite 1
-          Unit 2: İkinci Ünite
+          Internet Simulator: "İnternet Simülatörü"
+          Unit 1: "Ünite 1"
+          Unit 2: "İkinci Ünite"
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
@@ -375,18 +375,18 @@
           Algorithms: Algoritmalar
           The Artist 2: Sanatçı 2
           Functions: Fonksiyonlar
-          The Farmer: Çiftçi
+          The Farmer: "Çiftçi"
           Conditionals: Koşullar
           The Artist 3: Sanatçı 3
-          Song Writing: Şarkı Yazma
-          The Farmer 2: Çiftçi 2
+          Song Writing: "Şarkı Yazma"
+          The Farmer 2: "Çiftçi 2"
           Abstraction: Soyutlama
           The Artist 4: Sanatçı 4
           Relay Programming: Röle Programlama
-          The Farmer 3: Çiftçi 3
-          The Internet: İnternet
+          The Farmer 3: "Çiftçi 3"
+          The Internet: "İnternet"
           The Artist 5: Sanatçı 5
-          Wrap-up: Özet
+          Wrap-up: "Özet"
         edit-code:
           title: Kodu Düzenle
           description: Kodu Düzenle
@@ -468,7 +468,7 @@
           'Artist: Loops': 'Aktör: Döngüler'
           'Bee: Conditionals': 'Arı: Koşullandırıcılar'
           'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
-          'Farmer: While Loops': 'Çiftçi: While Döngüleri'
+          'Farmer: While Loops': "Çiftçi: While Döngüleri"
           'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
           'Artist: Functions': 'Aktör: Fonksiyonlar'
           'Bee: Debugging': 'Arı: Ayıklama'
@@ -489,12 +489,12 @@
           Lesson 7: Ders 7
           Lesson 1: Ders 1
           Innovation: Yenilik
-          Sending Binary Messages: İkili Mesajları Gönderiyor
+          Sending Binary Messages: "İkili Mesajları Gönderiyor"
           Sending More Complex Messages: Daha fazla kompleks mesaj gönderiyor
           Bit Sending Widget: Bit Sending Widget
           Sending Bits in the Real World: Sending Bits in the Real World
           Number Systems: Sayı Sistemleri
-          Binary Numbers: İkili Sayılar
+          Binary Numbers: "İkili Sayılar"
           Sending Numbers: Sending Numbers
           Encoding Numbers in the Real World: Encoding Numbers in the Real World
           Encoding and Sending Text: Encoding and Sending Text
@@ -645,6 +645,7 @@
           description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
+          title_short: CSP Unit 3
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
@@ -749,6 +750,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -876,7 +878,7 @@
           description_short: Script for test. Careful, don't change level ordering.
           All the Tests: All the Tests
           Free Response: Free Response
-          Multi: Çoklu
+          Multi: "Çoklu"
           Big Game: Big Game
           new stage: yeni kademe
         sciencePD2:
@@ -910,7 +912,7 @@
           description_short: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
-          description_short: İnternet
+          description_short: "İnternet"
           description: |
             In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
             structure and design of the internet and the implications of those design decisions including
@@ -929,7 +931,7 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: İnternet
+          The Internet: "İnternet"
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
             Tree
@@ -978,7 +980,7 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: Ücretsiz Oyna
+          Free Play: "Ücretsiz Oyna"
         allthethings:
           Jigsaw: Yapboz
           Maze: Labirent
@@ -988,7 +990,7 @@
           Farmer: Farmer
           Flappy: Flappy
           Bounce: Sıçrama
-          Multi: Çoklu
+          Multi: "Çoklu"
           Match: Eşleştir
           TextMatch: TextMatch
           CSinA: CSinA
@@ -1007,6 +1009,10 @@
           Pixelation: Pikselleşme
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Stüdyo
+          Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Algebra PD'de Bilgisayar Bilimi
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
@@ -1031,7 +1037,7 @@
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: İnternet Simülatörü
+          Internet Simulator: "İnternet Simülatörü"
           App Lab: Uygulama Laboratuvarı
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
@@ -1043,7 +1049,7 @@
           Welcome!: Hoşgeldiniz!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: İnternet Simülatörü
+          Internet Simulator: "İnternet Simülatörü"
           App Lab: Uygulama Laboratuvarı
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
@@ -1078,7 +1084,7 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: Özet
+          Wrap-up: "Özet"
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
@@ -1223,7 +1229,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Özet
+          Wrap-up: "Özet"
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
@@ -1247,7 +1253,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Özet
+          Wrap-up: "Özet"
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1296,8 +1302,8 @@
           Building a Foundation: Bir Temel Oluşturma
           Getting Loopy: Döngüselleşme
           The Big Event: Büyük Olay
-          Binary Bracelets: İkilik Bileklikler
-          Songwriting: Şarkı yazma
+          Binary Bracelets: "İkilik Bileklikler"
+          Songwriting: "Şarkı yazma"
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1374,6 +1380,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1453,6 +1460,10 @@
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: Unit 5 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 5 lessons: Unit 5 lessons
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1462,6 +1473,11 @@
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description_short: Data
@@ -1501,6 +1517,28 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1554,6 +1592,8 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Buz Devri Oyun Laboratuvarı
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1576,7 +1616,7 @@
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
-          description_short: Programming
+          description_short: Programlama
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1613,19 +1653,21 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: Gumball oyun Labaratuarı
+          description_short: Bir hikaye oluşturmak veya bir oyun yartmak için Gumball
+            Lab kullanın!
+          description: Bir hikaye oluşturmak veya bir oyun yartmak için Gumball Lab
+            kullanın!
+          Gumball Play Lab: Gumball oyun Labaratuarı
         starwars:
-          title: 'Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek'
+          title: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek'
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
             kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
             kendi Yıldız Savaşları oyununu yaratmayı öğren.
           Hour of Code 2015: Kodlama saati 2015
         starwarsblocks:
-          title: 'Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek'
+          title: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek'
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
             kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
@@ -1656,3 +1698,136 @@
           Welcome!: Hoşgeldiniz!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: paketlemek
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"
+        cspunit5:
+          title: CSP Unit 5 - Performance Tasks
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore
+            and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: CSP Unit 4 - Data
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, identify
+            patterns, trends and possible meanings are important practical skills
+            that computer scientists do every day. The data rich world we live in
+            also introduces many complex questions related to public policy, law,
+            ethics and societal impact. Understanding where data comes from, having
+            intuitions about what could be learned or extracted from it, and being
+            able to use computational tools to manipulate data and communicate about
+            it are the primary skills addressed in the unit.
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          The Cost of Free: The Cost of Free
+        CSPPD3-Unit4:
+          title: 'Computer Science Principles: Unit 4 PD'
+          description_short: Support for CSP Unit 4
+          description: Online Support for CSP Unit 4
+          Getting Started: Getting Started
+          Unit 4 Overview: Unit 4 Overview
+          Chapter 1 Overview: Chapter 1 Overview
+          Chapter 2 Overview: Chapter 2 Overview
+          Practice Performance Tasks: Practice Performance Tasks
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit6draft:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, and it concludes with a sampling of example projects
+            that can be built using these tools.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Updating Records: Updating Records
+          Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: CSP Post-AP Material - Databases and Using Data in Your Apps
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+          description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+          'Calc: Evaluation Blocks': 'Calc: Değerlendirme Blokları'
+          'Eval: Strings and Images': 'Eval: Diziler ve Görüntüler'
+          'Unplugged: Contracts': 'Unplugged: Teknikler'
+          'Eval: Writing Contracts': 'Eval: Yazım Teknikleri'
+          'Calc: Defining Variables': 'Hesaplama: Değişkenleri Tanımlama'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Unplugged: Tasarım Tarifi'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+        AlgebraB:
+          title: Cebirde Bilgisayar Bilimi
+          description_short: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+          description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Oyunları
+            ve Koordinat Düzlemleri'
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Değişkenleri Tanımlama
+            (Büyük Oyun)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animasyon (Büyük Oyun)'
+          'Unplugged: Booleans': 'Unplugged: Boolean Değerleri'
+          'Eval: Boolean Operators': 'Eval: Boolean Operatörleri'
+          'Play Lab: Booleans': 'Play Lab: Boolean Değerleri'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Büyük Oyun)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Şartlar ve
+            Parçalı Fonksiyonlar'
+          'Eval: Conditionals': 'Eval: Şartlar'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Kaza
+            Algılama ve Mesafe Formülü'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Kaza Algılama (Büyük
+            Oyun)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

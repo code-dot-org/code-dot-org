@@ -130,7 +130,7 @@
           pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Les algorithmes : Planter une graine'
+        title: 'Les algorithmes de la vraie vie : Planter une graine'
         desc: Cette leçon fait appel à la manière dont on utilise les algorithmes
           dans nos vies quotidiennes, en utilisant l'acte de planter une graine comme
           exemple. Elle se concentre aussi sur le sujet plus large de l'informatique

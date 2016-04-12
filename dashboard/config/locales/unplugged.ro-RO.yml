@@ -53,7 +53,7 @@
         video: Unplug4
       Unplug5:
         title: Funcţii
-        desc: În această lecție, elevii vor crea un suncatcher din șir, mărgele și
+        desc: "În această lecție, elevii vor crea un suncatcher din șir, mărgele și
           un talisman special. Elevii vor urma o serie de pași repetitivi, apoi li
           se va cere să identifice anumite seturi de ”competențe” care vor fi multiplicate
           de câteva ori. Odată definite acele competențe, ele vor fi apelate dintr-un
@@ -63,7 +63,7 @@
           acesta să funcționeze în mod eficient, elevii trebuie să facă abstracție
           de detaliile materialelor lor și să formuleze termeni vagi pentru materialele
           de lucru al unui individ. Această utilizare a unor substituienți generici
-          este o introducere minunată în variabile.
+          este o introducere minunată în variabile."
         pdfs:
         - unplug5
         video: Unplug5
@@ -104,8 +104,8 @@
         video: Unplug9
       Unplug10:
         title: Internetul
-        desc: În această lecție, elevii își vor imagina că parcurg Internetul, în
-          timp ce vor învăța despre adresele web, IP-uri și DNS.
+        desc: "În această lecție, elevii își vor imagina că parcurg Internetul, în
+          timp ce vor învăța despre adresele web, IP-uri și DNS."
         pdfs:
         - unplug10
         video: Unplug10
@@ -260,8 +260,8 @@
         video: C4_madlib-uri_fără_calculator
       ForLoopFun:
         title: Pentru distracția cu bucle
-        desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
-          vom învăța cum să folosim bucle cu structură extra încorporată.
+        desc: "Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
+          vom învăța cum să folosim bucle cu structură extra încorporată."
         video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Compozitie cu parametri
@@ -295,10 +295,10 @@
         video: alg_5_contracts
       DesignRecipe:
         title: Rețeta pentru design
-        desc: În ultima etapă elevii au scris niște funcţii foarte simple - dar funcțiile
+        desc: "În ultima etapă elevii au scris niște funcţii foarte simple - dar funcțiile
           mai sofisticate solicită o abordare mai în profunzime. Rețeta Design este
           o abordare structurată în scrierea funcţiilor, care include teste de scriere
-          menite să verifice dacă funcţia funcționează cum era de aşteptat.
+          menite să verifice dacă funcţia funcționează cum era de aşteptat."
         video: alg_8_design_recipe
       Booleans:
         title: Boolean și Logică

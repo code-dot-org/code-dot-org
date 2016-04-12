@@ -8,6 +8,7 @@ require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
+require 'cdo/languages'
 require 'dynamic_config/page_mode'
 require 'active_support'
 require 'base64'
@@ -53,7 +54,7 @@ class Documents < Sinatra::Base
 
     Dir.entries(dir).each do |site|
       site_dir = File.join(dir, site)
-      next if site == '.' or site == '..' or !File.directory?(site_dir)
+      next if site == '.' || site == '..' || !File.directory?(site_dir)
       configs[site] = load_config_in(site_dir)
     end
 
@@ -67,7 +68,9 @@ class Documents < Sinatra::Base
 
   # Use dynamic config for max_age settings, with the provided default as fallback.
   def self.set_max_age(type, default)
-    set "#{type}_max_age", Proc.new { DCDO.get("pegasus_#{type}_max_age", rack_env?(:staging) ? 60 : default) }
+    default = 60 if rack_env? :staging
+    default = 0 if rack_env? :development
+    set "#{type}_max_age", Proc.new { DCDO.get("pegasus_#{type}_max_age", default) }
   end
 
   ONE_HOUR = 3600
@@ -187,98 +190,15 @@ class Documents < Sinatra::Base
   # rubocop:enable Lint/Eval
 
   # Manipulated images
-  get "/images/*" do |path|
+  get '/images/*' do |path|
     path = File.join('/images', path)
-
-    extname = File.extname(path).downcase
-    pass unless settings.image_extnames.include?(extname)
-    image_format = extname[1..-1]
-
-    basename = File.basename(path, extname)
-    dirname = File.dirname(path)
-
-    # Manipulated?
-    if dirname =~ /\/(fit-|fill-)?(\d+)x?(\d*)$/ || dirname =~ /\/(fit-|fill-)?(\d*)x(\d+)$/
-      manipulation = File.basename(dirname)
-      dirname = File.dirname(dirname)
-    end
-
-    # Assume we are returning the same resolution as we're reading.
-    retina_in = retina_out = basename[-3..-1] == '_2x'
-
-    path = nil
-    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
-      path = resolve_image File.join(@language, dirname, basename)
-    end
-    path ||= resolve_image File.join(dirname, basename)
-    unless path
-      # Didn't find a match at this resolution, look for a match at the other resolution.
-      if retina_out
-        basename = basename[0...-3]
-        retina_in = false
-      else
-        basename += '_2x'
-        retina_in = true
-      end
-      path = resolve_image File.join(dirname, basename)
-    end
-    pass unless path # No match at any resolution.
-    last_modified(File.mtime(path))
-
-    if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
-      # No [useful] modifications to make, return the original.
-      content_type image_format.to_sym
-      cache :image
-      send_file(path)
-    else
-      image = Magick::Image.read(path).first
-
-      mode = :resize
-
-      if manipulation
-        matches = manipulation.match /(?<mode>fit-|fill-)?(?<width>\d*)x?(?<height>\d*)$/m
-        mode = matches[:mode][0...-1].to_sym unless matches[:mode].blank?
-        width = matches[:width].to_i unless matches[:width].blank?
-        height = matches[:height].to_i unless matches[:height].blank?
-
-        if retina_out
-          # Manipulated images always specify non-retina sizes in the manipulation string.
-          width *= 2 if width
-          height *= 2 if height
-        end
-      else
-        width = image.columns
-        height = image.rows
-
-        # Retina sources need to be downsampled for non-retina output
-        if retina_in && !retina_out
-          width /= 2
-          height /= 2
-        end
-      end
-    end
-
-    case mode
-    when :fill
-      # If only one dimension provided, assume a square
-      width ||= height
-      image = image.resize_to_fill(width, height)
-    when :fit
-      image = image.resize_to_fit(width, height)
-    when :resize
-      # If only one dimension provided, assume a square
-      height ||= width
-      width ||= height
-      image = image.resize(width, height)
-    else
-      raise StandardError, 'Unreachable code reached!'
-    end
-
-    image.format = image_format
-
-    content_type image_format.to_sym
+    image_data = process_image(path, settings.image_extnames, @language, request.site)
+    pass if image_data.nil?
+    last_modified image_data[:last_modified]
+    content_type image_data[:content_type]
     cache :image
-    image.to_blob
+    send_file(image_data[:file]) if image_data[:file]
+    image_data[:content]
   end
 
   # Documents
@@ -332,7 +252,7 @@ class Documents < Sinatra::Base
     #
     # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
     def dashboard_user
-      @dashboard_user ||= Dashboard::db[:users][id: dashboard_user_id]
+      @dashboard_user ||= Dashboard.db[:users][id: dashboard_user_id]
     end
 
     # Get the current dashboard user wrapped in a helper
@@ -348,7 +268,6 @@ class Documents < Sinatra::Base
     def dashboard_user_id
       request.user_id
     end
-
 
     def document(path)
       content = IO.read(path)
@@ -370,6 +289,11 @@ class Documents < Sinatra::Base
         cache_for @header['max_age']
       else
         cache :document
+      end
+
+      if request.post? && !@header['allow_post']
+        response.headers['Allow'] = 'GET, HEAD'
+        error 405
       end
 
       response.headers['X-Pegasus-Version'] = '3'
@@ -542,6 +466,14 @@ class Documents < Sinatra::Base
           metadata.delete(key)
         else
           metadata[key] = value
+        end
+      end
+
+      if !metadata['og:image']
+        if request.site != 'csedweek.org'
+          metadata['og:image'] = CDO.code_org_url('/images/default-og-image.png', 'https:')
+          metadata['og:image:width'] = 1220
+          metadata['og:image:height'] = 640
         end
       end
 

@@ -3,11 +3,11 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 
 class FilesApi < Sinatra::Base
-  def self.max_file_size
+  def max_file_size
     5_000_000 # 5 MB
   end
 
-  def self.max_app_size
+  def max_app_size
     2_000_000_000 # 2 GB
   end
 
@@ -36,13 +36,13 @@ class FilesApi < Sinatra::Base
   end
 
   def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
-    return true if admin? or new_score.nil?
+    return true if admin? || new_score.nil?
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
   end
 
   def can_view_abusive_assets?(encrypted_channel_id)
-    return true if owns_channel?(encrypted_channel_id) or admin?
+    return true if owns_channel?(encrypted_channel_id) || admin?
 
     # teachers can see abusive assets of their students
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
@@ -58,7 +58,7 @@ class FilesApi < Sinatra::Base
   end
 
   def quota_crossed_half_used?(app_size, body_length)
-    app_size < FilesApi::max_app_size / 2 && app_size + body_length >= FilesApi::max_app_size / 2
+    (app_size < max_app_size / 2) && (app_size + body_length >= max_app_size / 2)
   end
 
   def quota_crossed_half_used(quota_type, encrypted_channel_id)
@@ -128,6 +128,7 @@ class FilesApi < Sinatra::Base
 
     type = File.extname(filename)
     not_found if type.empty?
+    unsupported_media_type unless allowed_file_type?(endpoint, type)
     content_type type
 
     result = get_bucket_impl(endpoint).new.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
@@ -135,8 +136,9 @@ class FilesApi < Sinatra::Base
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
 
-    abuse_score = result[:metadata]['abuse_score'].to_i
-    not_found if abuse_score > 0 and !can_view_abusive_assets?(encrypted_channel_id)
+    metadata = result[:metadata]
+    abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
+    not_found if abuse_score > 0 && !can_view_abusive_assets?(encrypted_channel_id)
 
     result[:body]
   end
@@ -144,7 +146,7 @@ class FilesApi < Sinatra::Base
   def put_file(endpoint, encrypted_channel_id, filename, body)
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    file_too_large(endpoint) unless body.length < FilesApi::max_file_size
+    file_too_large(endpoint) unless body.length < max_file_size
 
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
@@ -157,7 +159,7 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     app_size = buckets.app_size(encrypted_channel_id)
 
-    quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < FilesApi::max_app_size
+    quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
     quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 

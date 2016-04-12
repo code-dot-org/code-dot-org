@@ -1,15 +1,4 @@
 /** @file Increases the brightness of the image up to pure white and back. */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
 'use strict';
 
 require('../utils');

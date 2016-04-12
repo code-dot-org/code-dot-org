@@ -24,10 +24,13 @@ ar:
   hello: مرحباً بالعالم
   welcome_back: 'أهلاً بكم من جديد، %{name}'
   submit: تسجيل
+  unsubmit: عدم تقديم
+  next_page: الصفحة التالية
   add_teacher_form:
     code:
       label: 'إضافة معلِّماً:'
       placeholder: مقطع التعليمات البرمجية (ABCDEF)
+      instructions: 'الرجاء ادخال الكود الذي اعطاه اليك معلمك, انه مكون من 6 حروف مثل "ABCDEF".'
     submit: إضافة معلِّم
   add_hint_form:
     placeholder: الرجاء إدخال التلميح الخاص بك هنا
@@ -38,6 +41,7 @@ ar:
   puzzle: لغز
   trophies: الجوائز
   courses: الدروس
+  unplugged_activity: نشاط غير موصول
   of: من
   more: أكثر
   less: أقل
@@ -221,7 +225,7 @@ ar:
       free_play:
         playlab: اصنع تطبيقا
         artist: ارسم شيئا
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: اصنع تطبيقا
     user:
       classroom: الصفحة الرئيسية المعلم
@@ -254,57 +258,10 @@ ar:
     remove: (إزالة معلم)
     confirm:
       remove: هل أنت متأكد من أنك تريد إزالة هذا المعلم؟
-    tools: أدوات المعلم
-    followers:
-      section: 'القسم:'
-      stages: 'مرحلة (مراحل) للعرض:'
-      show_past: 'إظهار نشاط الطالب (%{bullet_html}) في الماضي:'
-      levels_key: مفتاح المستويات
-      perfect: تم! عمل رائع !
-      completed: تم ! ولكن استخدمت عدد كبير من المربعات البرمجية
-      tried: محاولة جيدة، ولكن لم يكتمل
-      not_tried: لم تحاول بعد
-      activity: 'يشير إلى نشاط الطالب في %{hours} %{plural} الأخيرة'
-      no_section: لم يتم تعيين قسم
-      trophies: الجوائز
     students:
-      name: الاسم
-      username: اسم المستخدم
-      password: كلمة المرور
-      manage: إدارة الطلاب
       dashboard: انتقل إلى لوحة المعلم
-      add: إضف الطلاب
-      remove: إزالة طالب
-      confirm_remove: هل أنت متأكد من أنك تريد إزالة هذا الطالب؟
-      help_reassign: لتقسيم طلاب فصلك إلى أقسام متعددة، حدد الطلاب لوضعهم في القسم الجديد.
-      help_register: بدلا من جعلك تقضي الكثير من الوقت في إدخال بيانات كل طالب على حدة، يمكنك ترتيب طلاب فصلك بسرعة بطلبك منهم التسجيل في الموقع. سوف يحتاج كل طالب إلى اختيار اسم المستخدم وكلمة المرور الخاصة به ولكن لن يطلب منهم تقديم بريد إلكتروني أثناء التسجيل. وإذا ما نسي الطالب كلمة السر الخاصة به سوف تكون قادر على إعادة تعيينها له.
-      register: أطلب من طلابك أن يقوموا بتسجيل أنفسهم
-      vist: أطلب من طلابك زيارة
-      section_code: 'وإدخال رمز أقسامهم:'
-      first_please: 'أولاً، من فضلك %{add_section}'
-      for: من أجل
-      enter: 'قم بإدخال:'
-    sections:
-      add: إضافة قسم
-      manage: إدارة الأقسام
-      section: القسم
-      students: الطلاب
-      section_code: قسم البرمجة
-      add_section_code: إضافة رمز قسم الطلاب
-      secret: النوع السري
-      grade: الصف الدراسي
-      course: الدورة
-      rename: إعادة تسمية
-      edit: تعديل
-      delete: حذف
-      confirm_delete: هل أنت متأكد من أنك تريد حذف هذا القسم؟
-      email: إرسال بالبريد الإلكتروني
-    rollup: لوحة معلومات التقدم
-    activity: آخر نشاطات الصف
-    user_not_found: تعذر العثور على المعلم أو الطالب
-    cant_remove_student_no_email: 'لا يمكن إزالة %{student_name} كالطالب الخاص بك لأن %{student_name} لم يقم بتسجيل عنوان بريد إلكتروني'
-    cant_remove_teacher_no_email: 'لا يمكن إزالة %{teacher_name} كالمعلم الخاص بك لأك لم تقم بتسجيل عنوان بريد إلكتروني'
-    student_teacher_disassociated: 'تم إزالة %{teacher_name} كمدرس لـ %{student_name}'
+    user_not_found: لا يمكن العثور على المعلم.
+    student_teacher_disassociated: 'لقد قمت بإزالة %{teacher_name} كالمعلم الخاص بك.'
     panel:
       answer_viewer: عارض الأجوبة
       student: طالب
@@ -329,10 +286,6 @@ ar:
   user_level:
     completed: أكمل
     tried: حاول
-  user_stats:
-    recent_activity: آخر النشاطات
-    show_more: إظهار المزيد
-    classroom_activity: نشاط غير موصول
   home:
     title: ستوديو كود
     description: Code Studio هو موقع الدروس المتوفرة على الإنترنت من Code.org
@@ -370,6 +323,7 @@ ar:
     heading_hoc2014: '<h2>ساعة من البرمجة </h2><h1>لجميع الأعمار</h1>'
     heading_elementary: '<h2>دورات 20 ساعة</h2> <h1>أساسيات علوم الكمبيوتر (جميع الإعمار)</h1>'
     heading_apps: '<h2>المتعة</h2><h1>للجميع</h1>'
+    heading_tools: '<h2>جاهزة للخطوة التالية؟</h2> <h1>أدوات جافا سكريبت للمدرسة الثانوية</h1>'
     heading_legacy: '<h2>الدورات المعجلةـ</h2><h1>جميع الأعمار</h1>'
     your_gallery: معرض
     no_primary_course: 'جرب الدورة تدريبية في "كود استوديو"'
@@ -378,6 +332,7 @@ ar:
   share:
     title: تعلّم على كود استوديو
     description: أي شخص يمكن تعلّم علوم الكمبيوتر. اصنع الألعاب والتطبيقات والفن مع التعليمات البرمجية.
+    try_hour_of_code: جرب ساعة من البرمجة!
   gender:
     male: ذكر
     female: أنثى
@@ -389,8 +344,9 @@ ar:
     thank_you: 'نشكر <a href="https://code.org/about/donors"> الجهات المانحة</a> و <a href="https://code.org/about/partners"> الشركاء</a>، و <a href="https://code.org/about/team"> الفريق الموسع</a>، وفريق تصوير الفيديو و <a href="https://code.org/about/advisors"> مستشاري التعليم</a> لدعمهم في إنشاء "استوديو التعليمات البرمجية".'
     help_from_html: نود بالأخص تكريم المهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر الذين ساعدوا في إنشاء هذه البرامج التعليمية.
     help_from_html_old: ساعد مهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر في إنشاء هذه البرنامج التعليمية.
-    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. كافة الحقوق محفوظة.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. كافة الحقوق محفوظة.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. كافة الحقوق محفوظة'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. كافة الحقوق محفوظة.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. كافة الحقوق محفوظة'
+    art_from_html: 'ماينكرافت &#8482;&copy;%{current_year} مايكروسوفت. جميع الحقوق محفوظة.<br /> حروب النج&#8482;&copy; م%{current_year} ديزني و لوكاس فيلم. جميع الحقوق محفوظة.<br /> متجمد &#8482;&copy;%{current_year} ديزني. جميع الحقوق محفوظة.<br /> العصر الجليدي&#8482;&copy;%{current_year} القرن العشرين فوكس. جميع الحقوق محفوظة.<br /> الطيور الغاضبة&#8482;&copy; 2009-%{current_year} ريفيو المتحدة للترفيه.<br /> جميع الحقوق محفوظة. <br />النباتات ضد المتبلدين &#8482; &copy; %{current_year} الكترونكس ارتس. <br />جميع الحقوق محفوظة. عالم غامبل المدهش علامة مسجلة و&copy; 2015 شبكة الكرتون.'
+    art_from_html_old: 'ماينكرافت&#8482;&copy;%{current_year} مايكروسوفت. جميع الحقوق محفوظة. حروب النجم&#8482;&copy;%{current_year} ديزني و لوكاس فيلم. جميع الحقوق محفوظة. متجمد&#8482;&copy;%{current_year} ديزني. جميع الحقوق محفوظة. العصر الجليدي.&#8482;&copy;%{current_year} القرن العشرين فوكس. جميع الحقوق محفوظة. الطيور الغاضبة&#8482;&copy; 2009-%{current_year} ريفيو المتحدة للترفيه. جميع الحقوق محفوظة. النباتات ضد المتبلدين&#8482;&copy;%{current_year} الكترونكس ارتس. جميع الحقوق محفوظة. عالم غامبل المدهش علامة مسجلة و&copy; 2015 شبكة الكرتون.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: تعمل على خدمات أمازون للويب
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;، إن شعار CODE و Hour of Code&reg; هما علامات تجارية لـ Code.org.'
     copyright: حقوق النسخ
@@ -407,6 +363,7 @@ ar:
     built_on_code_studio: 'بني في "Code Studio"'
     make_my_own_app: بناء التطبيق الخاص بي
     how_it_works: كيفية العمل
+    try_hour_of_code: جرب ساعة من البرمجة!
   reference_area:
     title: بحاجة إلى مساعدة؟
     subtitle: مشاهدة اشرطة الفيديو والتلميحات
@@ -462,8 +419,14 @@ ar:
       current: المستويات الحالية
       unused: المستويات غير المستخدمة
   upsell:
+    applab:
+      title: مختبر التطبيق
+      body: مختبر التطبيق هي بيئة برمجة حيث يمكنك جعل تطبيقات بسيطة. تصميم تطبيق، التعليمات البرمجية مع كتل أو JavaScript تجعلها تعمل، ثم قم بشاركة التطبيق الخاص بك في ثوان.
+      body_short: تصميم تطبيق، التعليمات البرمجية مع كتل أو JavaScript لتعمل، ثم قُم بمشاركة التطبيق الخاص بك في ثوان.
+      audience: أعمارهم 13 +
+      cta: تعلم كيف
     hoc:
-      title: Classic Maze
+      title: المتاهة الكلاسيكية
       body: جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك.
     flappy:
       title: رمز لعبة flappy
@@ -503,10 +466,10 @@ ar:
   landing:
     prerelease: "هذا الدرس لا يزال بنسختة التجريبية <span class='betatext'> Beta </span>. مما يعني أن هذة النسخة ليست النسخة النهائية من هذا الدرس وهي عرضة للمراجعة عند الحصول على الآراء وإجراء التغييرات بناء عليها."
     prerelease_hoc2014: "هذا الدرس التعليمي لا يزال بنسختة التجريبية <span class='betatext'> Beta </span>. فهو عرضة للمراجعة عند الحصول على الآراء وإجراء التغييرات بناء عليها."
-    feedback: الإدلاء برأيك
     report_bug: الإبلاغ عن خلل
     support: للحصول على المساعدة
     support_url: support.code.org
+    help_resources: المساعدة والموارد
   multi:
     wrong_title: الإجابة غير صحيحة
     wrong_body: 'أن الإجابة التي قمت بإدخالها غير صحيحة.  الرجاء المحاولة مرة أخرى!'
@@ -514,6 +477,23 @@ ar:
     correct_body: هذا هو الجواب الصحيح.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: شكراً
+    wrong_body: شكرا لك على تقديم إجابة.
+    correct_title: شكراً
+    correct_body: شكرا لك على تقديم إجابة.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: شكراً
+    wrong_body: شكرا لك على تقديم إجابة
+    correct_title: شكراً
+    correct_body: شكرا لك على تقديم إجابة
+  level_group-submittable:
+    wrong_title: شكراً
+    wrong_body: شكرا لك على تقديم إجابة
+    correct_title: شكراً
+    correct_body: شكرا لك على تقديم إجابة
   match:
     wrong_title: الحل غير صحيح
     wrong_body: 'الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!'
@@ -531,6 +511,8 @@ ar:
     placeholder: 'ادخل إجابتك هنا '
     open_response_title: شكرا،
     open_response_body: شكرا لردكم!
+    correct_title: صحيح
+    correct_body: هذا هو الجواب الصحيح.
   dialog:
     ok: موافق
     startover_title: هل أنت متأكد من أنك تريد البدء من جديد؟
@@ -584,6 +566,7 @@ ar:
     completed_perfect: مكتمل, ممتاز
     furthest_level_attempted: المستوى الأبعد الذي تمت محاولته
     assessment: تقييم
+    submitted: تم تقديمه
   studio:
     courses_working_on: الدورات التدريبية التي تعمل عليها
     completed_courses: الدورات المكتملة
@@ -625,7 +608,7 @@ ar:
       contact_us: "إذا كنت تعتقد أن هذا خطأ، الرجاء <a href='https://code.org/contact'> مراسلتنا.</a>"
       go_to_code_studio: الذهاب الي Code Studio
       report_abuse_form:
-        intro: اذا واجهت محتوى مسئ, اخطار, التهديد عبر الانترنت, التحرش او اي شكل من اشكال انتهاك حقوق النشر للمحتوى الذي تمتلكه اثناء استخدامك للتطبيقات الموجودة على Code Studio, الرجء ملء النموذج الموجود بالاسفل, سوف نتخذ شكواك على محمل الجد, و نقوم بالتحقيقات اللازمة و اتخاذ التصرّف المناسب.
+        intro: اذا واجهت محتوى مسئ, اخطار, التهديد عبر الانترنت, التحرش او اي شكل من اشكال انتهاك حقوق النشر للمحتوى الذي تمتلكه اثناء استخدامك للتطبيقات الموجودة على Code Studio, الرجاء ملء النموذج الموجود بالاسفل, سوف نتخذ شكواك على محمل الجد, و نقوم بالتحقيقات اللازمة و اتخاذ التصرّف المناسب.
         validation:
           email: الرجاء تقديم بريد إلكتروني
           age: الرجاء تحديد سن
@@ -640,3 +623,7 @@ ar:
           other: أخرى
         detail: يرجي تقديم كل التفاصيل الممكنة بشأن المحتوى الذي تريد الابلاغ عنه.
         acknowledge: 'عند تقديم هذه المعلومات, تُقرّ بأنها سوف يتم التعامل معها وفقا للشروط الموجودة في %{link_start_privacy} سياسة الخصوصية %{link_end} و %{link_start_tos}شروط الاستخدام%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

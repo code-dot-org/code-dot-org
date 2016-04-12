@@ -90,6 +90,10 @@ XML
 XML
   end
 
+  test 'count xml blocks' do
+    assert_equal 4, Blockly.count_xml_blocks(@xml)
+  end
+
   test 'convert toolbox to category' do
     assert_equal_xml @category_xml, Blockly.convert_toolbox_to_category(@toolbox_xml)
   end
@@ -108,8 +112,8 @@ XML
   end
 
   def assert_equal_xml(a, b)
-    assert_equal Nokogiri::XML.parse(a) {|config| config.noblanks}.to_xml,
-      Nokogiri::XML.parse(b) {|config| config.noblanks}.to_xml
+    assert_equal Nokogiri::XML.parse(a, &:noblanks).to_xml,
+      Nokogiri::XML.parse(b, &:noblanks).to_xml
   end
 
   test 'block XML contains no blank nodes' do

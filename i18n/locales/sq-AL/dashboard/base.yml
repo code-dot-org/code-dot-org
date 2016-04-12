@@ -24,10 +24,14 @@ sq:
   hello: Përshëndetje Botë
   welcome_back: 'Mirë se erdhët sërish, %{name}'
   submit: Dorëzo
+  unsubmit: Unsubmit
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Shto një mësues:'
       placeholder: Kodi i Seksionit (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Shto mësues
   add_hint_form:
     placeholder: Të lutem fut udhëzimin tënd këtu
@@ -38,6 +42,7 @@ sq:
   puzzle: Enigmë
   trophies: Trofetë
   courses: Kurset
+  unplugged_activity: Aktiviteti Unplugged
   of: i
   more: MË SHUMË
   less: ME PAK
@@ -222,7 +227,7 @@ sq:
       free_play:
         playlab: Bëj një Aplikacion
         artist: Vizato Diçka
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Bëj një Aplikacion
     user:
       classroom: Faqja Kryesore e Mësuesit
@@ -255,63 +260,16 @@ sq:
     remove: (hiq mësuesin)
     confirm:
       remove: A jeni i sigurtë që dëshironi ta hiqni këtë mësues?
-    tools: Mjetet e Mësuesit
-    followers:
-      section: 'Seksioni:'
-      stages: 'Faza(t) për tu shfaqur:'
-      show_past: 'Shfaq aktivitetin e studentit (%{bullet_html}) në të kaluarën:'
-      levels_key: Çelësi i niveleve
-      perfect: I përfunduar, perfekt
-      completed: I përfunduar, por ke përdorur shumë blloqe
-      tried: U përpoqe, por nuk u përfundua
-      not_tried: Nuk je përpjekur ende
-      activity: 'Tregon aktivitetin e studentit në %{hours}%{plural} të fundit'
-      no_section: Asnjë seksion i caktuar
-      trophies: Trofetë
     students:
-      name: Emri
-      username: Emri i përdoruesit
-      password: Fjalëkalimi
-      manage: Menaxhoni studentët
       dashboard: Shko tek Paneli i Mësuesit
-      add: Shto studentë
-      remove: hiq student
-      confirm_remove: A jeni i sigurtë që do ta heqësh këtë student?
-      help_reassign: Për të ndarë klasën tënde në shumë pjesë, përzgjidh studentët të caktojnë një pjesë të re.
-      help_register: "Në vend t'ju bëjmë të kaloni më shumë kohë në futjen e të dhënave të studentëve, ju mund të ngrini klasën tuaj shumë shpejt duke ju kërkuar atyre të rregjistrohen. Studentët tuaj do të zgjedhin emërin e përdoruesit dhe fjalëkalimin, por atyre NUK DO TU kërkohet një adresë email-i. Nëse një student harron fjalëkalimin, ju do ju duhet t'i rivendosni një për atë."
-      register: Pyet studentët për të rregjistruar veten e tyre
-      vist: Kërkoji studentët të vizitojnë
-      section_code: 'dhe fusni kodin e seksionit të tyre:'
-      first_please: 'Së pari, ju lutem %{add_section}'
-      for: Për
-      enter: 'hyr:'
-    sections:
-      add: Shto pjesë
-      manage: Menaxho seksionet
-      section: Seksion
-      students: Studentët
-      section_code: Kodi i Seksionit
-      add_section_code: Shto Studentët Pjesë-Kodi
-      secret: Lloj sekret
-      grade: Klasa
-      course: Kurs
-      rename: riemëro
-      edit: modifiko
-      delete: fshi
-      confirm_delete: A jeni i sigurtë që dëshironi të fshini këtë seksion?
-      email: Dërgoni në email
-    rollup: Paneli i ecurisë
-    activity: Aktivitetet e fundit të klasës
-    user_not_found: Mësuesi ose studenti nuk mund te gjendet
-    cant_remove_student_no_email: '%{student_name} nuk mund të hiqet si studenti juaj, sepse %{student_name} nuk ka rregjistruar një adresë emaili'
-    cant_remove_teacher_no_email: '%{teacher_name} nuk mund të hiqet si mësuesi juaj, sepse nuk keni rregjistruar një adresë emaili'
-    student_teacher_disassociated: '%{teacher_name} është hequr si mësues për %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Shfaqja e Pergjigjeve
       student: student
       viewing_solution: Duke parë zgjidhjen
       try_it_yourself: Bëje vetë
-      section: Seksion
+      section: Pjesë
       example: Shëmbuj Zgjidhjesh
       example_with_number: 'Shëmbuj Zgjidhjesh %{solution_number}'
       submitted_on: 'Submitted on:'
@@ -330,10 +288,6 @@ sq:
   user_level:
     completed: E përfunduar
     tried: U përpoqe
-  user_stats:
-    recent_activity: Aktiviteti i fundit
-    show_more: Shfaq më shumë
-    classroom_activity: Aktiviteti Unplugged
   home:
     title: Code Studio
     description: Code Studio është një shtëpi për kurset online të krijuara nga Code.org
@@ -371,6 +325,7 @@ sq:
     heading_hoc2014: '<h2>Ora e Kodimit për</h2><h1>Të gjitha moshat</h1>'
     heading_elementary: '<h2>20 orë kurse për</h2><h1>Fillestarët (të gjitha moshat)</h1>'
     heading_apps: '<h2>Zbavitje për</h2><h1>Të Gjithë</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Kursi jonë i përgjithshëm për</h2><h1>Të Gjitha Moshat</h1>'
     your_gallery: Galeria
     no_primary_course: Provo një kurs të Code Studio
@@ -379,6 +334,7 @@ sq:
   share:
     title: Mëso në Code Studio
     description: Çdokush mund të mësojë shkencat kompjuterike. Krijoni lojra, aplikacione dhe art me kode.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Mashkull
     female: Femër
@@ -390,8 +346,9 @@ sq:
     thank_you: 'Falenderojmë <a href="https://code.org/about/donors"> sponsorat </a>,<a href="https://code.org/about/partners"> partnerët </a>, skuadrën tonë të gjerë të punës<a href="https://code.org/about/team"><a href="https://code.org/about/team"></a>, grupin e videos, dhe <a href="https://code.org/about/advisors"><a href="https://code.org/about/advisors"> këshilltarin tonë të arsimit</a> për mbështetjen e dhënë në krijimin e Studios së Kodit.'
     help_from_html: Inxhinerë nga Google, Microsoft, Facebook dhe Twitter ndihmuan në krijimin e këtij tutoriali.
     help_from_html_old: Inxhinierët e Google, Microsoft, Facebook dhe Twitter kanë ndihmuar në krijimin e këtyre materialeve.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara.<br/>Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Të gjitha të drejtat e rezervuara.'
-    art_from_html_old: 'Zogj të nevrikosur&#8482;&#8482;&amp;&copy; 2009 %{current_year}  Zbavitje Rivio Ltd. Të drejtat e rezervuara.<br />Bimë dhe Xombi &#8482;&amp;&copy;%{current_year} Artet Elektronike Inc. Të drejtat e rezervuara'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Mundësuar nga Amazon Web Services
     trademark: '&copy;Code.org%{current_year}Code.org&reg; logoja e Kodit dhe Ora e Kodit&reg;  janë marka tregtare të Code.org.'
     copyright: E drejta e autorit
@@ -408,6 +365,7 @@ sq:
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Keni nevojë për ndihmë?
     subtitle: Shiko këto video dhe udhëzimet
@@ -463,6 +421,12 @@ sq:
       current: Nivelet Aktuale
       unused: Nivelet e Papërdorur
   upsell:
+    applab:
+      title: Laboratori i Aplikacioneve
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Classic Maze
       body: Provo bazat e shkencave kompjuterike. Miliona veta e kanë provuar.
@@ -504,10 +468,10 @@ sq:
   landing:
     prerelease: "Ky kurs është në<span class='betatext'>beta</span>. Kjo nënkupton që nuk është versioni final i këtij kursi dhe referohet të përsëritet sapo feedbacku të merret dhe të bëhen përmirësime."
     prerelease_hoc2014: "Ky tutorial është në <span class='betatext'>beta</span>. Referohet të rishikohet sapo feedbacku të merret dhe të bëhen përmirësimet."
-    feedback: Jepni feedback-un tuaj
     report_bug: Raportoni një problem
     support: Merr Ndihmë
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Përgjigje e pasaktë
     wrong_body: Përgjigja që keni futur nuk është e saktë. Ju lutemi provojeni përsëri!
@@ -515,6 +479,23 @@ sq:
     correct_body: Kjo është përgjigja e saktë.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Faleminderit
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Faleminderit
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Faleminderit
+    wrong_body: Thank you for submitting answers.
+    correct_title: Faleminderit
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Faleminderit
+    wrong_body: Thank you for submitting answers.
+    correct_title: Faleminderit
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Zgjidhje e pasaktë
     wrong_body: Zgjidhja që keni futur është e pasktë. Ju lutem provojeni përsëri!
@@ -532,6 +513,8 @@ sq:
     placeholder: Shkruani përgjigjen tuaj këtu
     open_response_title: Faleminderit
     open_response_body: Faleminderit për përgjigjen!
+    correct_title: E saktë
+    correct_body: Kjo është përgjigja e saktë.
   dialog:
     ok: Në rregull
     startover_title: A jeni i sigurt që doni të filloni nga fillimi?
@@ -585,6 +568,7 @@ sq:
     completed_perfect: i përfunduar, në mënyrë perfekte
     furthest_level_attempted: përpjekja e nivelit më të largët
     assessment: Vlerësim
+    submitted: submitted
   studio:
     courses_working_on: Kurset në të cilat po punoni
     completed_courses: Kurset e përfunduara
@@ -641,3 +625,7 @@ sq:
           other: Tjetër
         detail: Please provide as much detail as possible regarding the content you are reporting.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

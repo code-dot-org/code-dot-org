@@ -1,4 +1,5 @@
 /* global $ */
+var color = require('../../color');
 var rowStyle = require('./rowStyle');
 var elementUtils = require('./elementUtils');
 var utils = require('../../utils');
@@ -37,9 +38,25 @@ var PropertyRow = React.createClass({
     });
   },
 
-  handleChangeInternal: function(event) {
+  isIdAvailable: function (value) {
+    if (value === this.props.initialValue) {
+      return true;
+    }
+
+    // Elements in divApplab must be allowed since divApplab may be stale
+    // with respect to what's in design mode, and we will catch any collisions
+    // with design mode elements by not setting allowDesignElements.
+    var options = {
+      allowCodeElements: true,
+      allowDesignElements: false,
+      allowDesignPrefix: false
+    };
+    return elementUtils.isIdAvailable(value, options);
+  },
+
+  handleChangeInternal: function (event) {
     var value = event.target.value;
-    var isValidValue = !this.props.isIdRow || elementUtils.isIdAvailable(value, this.props.initialValue);
+    var isValidValue = !this.props.isIdRow || this.isIdAvailable(value);
     this.setValue(value, isValidValue);
   },
 
@@ -68,16 +85,16 @@ var PropertyRow = React.createClass({
     }
   },
 
-  onIdRowBlur: function() {
+  onIdRowBlur: function () {
     if (!this.state.isValidValue) {
       var value = this.props.initialValue;
       this.setValue(value);
     }
   },
 
-  render: function() {
+  render: function () {
     var idRowStyle = $.extend({}, rowStyle.container, rowStyle.maxWidth, {
-      backgroundColor: '#a69bc1',
+      backgroundColor: color.light_purple,
       paddingBottom: 10
     });
     var inputStyle = $.extend({}, rowStyle.input, {

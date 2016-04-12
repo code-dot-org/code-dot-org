@@ -7,7 +7,9 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "drawChartFromRecords": null
+      "readRecords": null,
+      "drawChartFromRecords": null,
+      "console.log": null
     },
     "edit_code": true,
     "embed": "false",

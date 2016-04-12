@@ -8,14 +8,14 @@ end
 to: <%= format_email_address(volunteer_email_s, volunteer_name_s).inspect %>
 from: 'Tanya Parker (Code.org) <tanya_parker@code.org>'
 reply-to: <%= format_email_address(email_s, name_s).inspect %>
-subject: "A teacher is requesting your help for the Hour of Code"
+subject: "A teacher is requesting your help"
 ---
 
 <% update_preferences = "https://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{volunteer_secret_s}/" %>
 
 Hi <%= volunteer_name_s %>,
 
-<%= name_s %> is a teacher at <%= school_name_s %>. S/he found you on the Hour of Code site and after reviewing your profile specifically requested if you could help their class with the Hour of Code this year. S/he would like it if you could:
+<%= name_s %> is a teacher at <%= school_name_s %>. S/he found you on the [volunteer site](https://code.org/volunteer/local) and after reviewing your profile specifically requested if you could help their class. S/he would like it if you could:
 
 <ul>
 <% if type_task_onsite_b %>
@@ -49,6 +49,10 @@ Contact information from teacher:
 - **Email address:** [<%= email_s %>](<%= "mailto:" + email_s %>)
 - **School name:** <%= school_name_s %>
 - **School location:** <%= school_location_s %>
+
+Need to update the information you submitted when you signed up to volunteer? Update it any time.
+
+- [Update my information](<%= update_preferences %>)
 
 Getting too many email requests? It means there aren't enough volunteers in your region. Please recruit a friend to help out too. :-)
 

@@ -146,7 +146,7 @@ bg:
           description_short: Начертайте готини картинки и дизайни с художника!
         hourofcode:
           Maze: Лабиринт
-          title: Classic Maze
+          title: Класически лабиринт
           description: Опитайте основите на програмирането с героите отAngry Birds, Plants vs. Zombies и Scrat от Ледена епоха!
           description_short: Опитайте основите на програмирането с много забавни герои!
         frozen:
@@ -156,7 +156,7 @@ bg:
           description_short: 'Нека да използваме кода, за да се присъединим към Анна и Елза и заедно  опознаем  магията и красотата на леда.'
         course4:
           description_short: Учениците, изучаващи курс 4 трябва да са взели вече курсове 2 и 3.
-          description: Курс 4 е предназначен за ученици, които са минали курс 2 и 3. Учениците ще задълбочат знанията си по програмиране, получени в предишни курсове, за да вземат гъвкави решения при по-сложни проблеми. До края на този курс учениците ще създават интерактивни истории и игри, които да могат да споделят с приятели. Препоръчва се за ученици от 4-8 клас.
+          description: Курс 4 е предназначен за ученици, които са покрили курсове 2 и 3. Учениците ще научат как да се справят с пъзели с повишена сложност, тъй като ще се научат как да съчетават няколко концепции при решаване на предизвикателство. След завършване на този курс учениците ще могат да създават програми, в които да покажат няколко умения, като цикли и функции с параметри. Препоръчва се за класове 4-8.
           "Artist: Variables": 'Художник: променливи'
           "Bee: For Loops": 'Пчела: За повторенията'
           title: Курс 4
@@ -589,6 +589,7 @@ bg:
           description: Test Wednesday
         cspunit3:
           title: 'CSP блок 3 - програмиране'
+          title_short: CSP Unit 3
           description_short: Програмиране
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
           Getting to know AppLab: Запознаване с AppLab
@@ -680,6 +681,7 @@ bg:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране
@@ -863,7 +865,7 @@ bg:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -925,6 +927,10 @@ bg:
           Pixelation: Пикселизация
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Студио
+          Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Компютърни науки в алгебрата
           description: 'Фаза 2 онлайн: Смесено лятно учене'
@@ -1234,6 +1240,7 @@ bg:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1306,6 +1313,10 @@ bg:
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 5 lessons: Unit 5 lessons
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1315,6 +1326,11 @@ bg:
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: 'Unit 6 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1352,8 +1368,30 @@ bg:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
           Welcome!: Добре дошли!
@@ -1402,6 +1440,8 @@ bg:
           description_audience: Възраст 10 + (след курс 3)
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: 'Ледена епоха: игрална лаборатория'
           description_short: Създай история или си направи игра с Ледена епоха игрална лаборатория!
@@ -1457,10 +1497,10 @@ bg:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: 'Гъмбъл- игрална лаборатория'
-          description_short: Създай история или си направи игра с Гъмбълl игрална лаборатория!
-          description: Създай история или си направи игра с Гъмбълl игрална лаборатория!
-          Gumball Play Lab: 'Гъмбъл- игрална лаборатория'
+          title: 'Гъмбол- игрална лаборатория'
+          description_short: Създай история или си направи игра с Гъмбол в игралната лаборатория!
+          description: Създай история или си направи игра с Гъмбол в игралната лаборатория!
+          Gumball Play Lab: 'Гъмбол- игрална лаборатория'
         starwars:
           title: 'Междузвездни войни: Изграждане на галактика с код'
           description_short: Научете се да програмирате дроиди и създайте своя собствена Междузвездни войни игра в галактиката далече, далече.
@@ -1495,3 +1535,116 @@ bg:
           Welcome!: Добре дошли!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Заключение
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems
+        cspunit5:
+          title: 'CSP Unit 5 - Performance Tasks'
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: 'CSP Unit 4 - Data'
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Intro to Data: Introduction to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+          The Cost of Free: The Cost of Free
+        CSPPD3-Unit4:
+          title: 'Computer Science Principles: Unit 4 PD'
+          description_short: Support for CSP Unit 4
+          description: Online Support for CSP Unit 4
+          Getting Started: Getting Started
+          Unit 4 Overview: Unit 4 Overview
+          Chapter 1 Overview: Chapter 1 Overview
+          Chapter 2 Overview: Chapter 2 Overview
+          Practice Performance Tasks: Practice Performance Tasks
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit6draft:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, and it concludes with a sampling of example projects that can be built using these tools.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Updating Records: Updating Records
+          Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: Научете функционално програмиране чрез алгебра
+          description: Научете функционално програмиране чрез алгебра
+          "Calc: Evaluation Blocks": 'Калколиране: Оценка блокове'
+          "Eval: Strings and Images": 'Оценка: Низове и изображения'
+          "Unplugged: Contracts": 'Ънплъгд: договори'
+          "Eval: Writing Contracts": 'Оценка: Писане на договори'
+          "Calc: Defining Variables": 'Изчисление: Определяне на променливите'
+          "Eval: Defining Functions": 'Оценка: Дефиниране на функции'
+          "Unplugged: The Design Recipe": 'Ънплъгд: Напиши рецепта'
+          "Play Lab: Defining Functions": 'Театрална лаборатория: Дефиниране на функции'
+          "Eval: Functions": 'Оценка: функции'
+        AlgebraB:
+          title: Компютърни науки в алгебрата
+          description_short: Научете функционално програмиране чрез алгебра
+          description: Научете функционално програмиране чрез алгебра
+          "Unplugged: Video Games and Coordinate Planes": 'Ънплъгд: видео игрите и координатните системи'
+          "Play Lab: Defining Variables (Big Game)": 'Игрална лаборатория: Дефиниране на променливи (голямата игра)'
+          "Play Lab: Animation (Big Game)": 'Игрална лаборатория: Анимация (голямата игра)'
+          "Unplugged: Booleans": 'Ънплъгд: Booleans'
+          "Eval: Boolean Operators": 'Оценка: Булеви оператори'
+          "Play Lab: Booleans": 'Театрална лаборатория: Booleans'
+          "Play Lab: Boolean (Big Game)": 'Игрална лаборатория: Boolean(голямата игра)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Ънплъгд: Условия и Piecewise функции'
+          "Eval: Conditionals": 'Оценка: Условия'
+          "Unplugged: Collision Detection and the Distance Formula": 'Ънплъгд: Collision Detection и формула за разстояние'
+          "Play Lab: Collision Detection (Big Game)": 'Игрална лаборатория: Collision Detection (голямата игра)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

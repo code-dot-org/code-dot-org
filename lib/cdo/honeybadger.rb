@@ -26,6 +26,7 @@ module Honeybadger
         backtrace: backtrace,
         context: {
             stdout: stdout,
+            stderr: stderr, # include full stderr in case honeybadger truncates the error_message/backtrace thing
             environment_variables: ENV.with_sensitive_values_redacted
         }
     }

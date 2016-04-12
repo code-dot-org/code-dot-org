@@ -24,21 +24,23 @@ var ElementType = {
   IMAGE: 'IMAGE',
   CANVAS: 'CANVAS',
   SCREEN: 'SCREEN',
-  CHART: 'CHART'
+  CHART: 'CHART',
+  SLIDER: 'SLIDER'
 };
 
 var elements = {};
-elements[ElementType.BUTTON] = require('./button.jsx');
-elements[ElementType.LABEL] = require('./label.jsx');
-elements[ElementType.TEXT_INPUT] = require('./textInput.jsx');
-elements[ElementType.CHECKBOX] = require('./checkbox.jsx');
-elements[ElementType.DROPDOWN] = require('./dropdown.jsx');
-elements[ElementType.RADIO_BUTTON] = require('./radioButton.jsx');
-elements[ElementType.TEXT_AREA] = require('./textarea.jsx');
-elements[ElementType.IMAGE] = require('./image.jsx');
-elements[ElementType.CANVAS] = require('./canvas.jsx');
-elements[ElementType.SCREEN] = require('./screen.jsx');
-elements[ElementType.CHART] = require('./chart.jsx');
+elements[ElementType.BUTTON] = require('./button');
+elements[ElementType.LABEL] = require('./label');
+elements[ElementType.TEXT_INPUT] = require('./textInput');
+elements[ElementType.CHECKBOX] = require('./checkbox');
+elements[ElementType.DROPDOWN] = require('./dropdown');
+elements[ElementType.RADIO_BUTTON] = require('./radioButton');
+elements[ElementType.TEXT_AREA] = require('./textarea');
+elements[ElementType.IMAGE] = require('./image');
+elements[ElementType.CANVAS] = require('./canvas');
+elements[ElementType.SCREEN] = require('./screen');
+elements[ElementType.CHART] = require('./chart');
+elements[ElementType.SLIDER] = require('./slider');
 
 module.exports = {
   ElementType: ElementType,
@@ -84,7 +86,7 @@ module.exports = {
       throw new Error('Unknown elementType: ' + elementType);
     }
 
-    var element = elementClass.create();
+    var element = elementClass.create(withoutId);
 
     // Stuff that's common across all elements
     if (!withoutId) {
@@ -105,15 +107,16 @@ module.exports = {
     return elements[elementType].PropertyTab;
   },
 
-  getElementEventTab: function(elementType) {
+  getElementEventTab: function (elementType) {
     return elements[elementType].EventTab;
   },
 
   /**
    * @param {HTMLElement} element
+   * @param {boolean?} allowUnknown If true, we won't throw on unknown element types
    * @returns {string} String representing elementType
    */
-  getElementType: function (element) {
+  getElementType: function (element, allowUnknown) {
     var tagname = element.tagName.toLowerCase();
 
     switch (tagname) {
@@ -140,10 +143,15 @@ module.exports = {
             return ElementType.CHECKBOX;
           case 'radio':
             return ElementType.RADIO_BUTTON;
+          case 'range':
+            return ElementType.SLIDER;
           default:
             return ElementType.TEXT_INPUT;
         }
-        break;
+    }
+    // Unknown elements are expected. Return null because we don't know type.
+    if (allowUnknown) {
+      return null;
     }
     throw new Error('unknown element type');
   },

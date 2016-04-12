@@ -13,7 +13,9 @@ var flappyMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html.ejs');
+var AppView = require('../templates/AppView');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
@@ -79,7 +81,7 @@ var AVATAR_HEIGHT = constants.AVATAR_HEIGHT;
 var AVATAR_WIDTH = constants.AVATAR_WIDTH;
 var AVATAR_Y_OFFSET = constants.AVATAR_Y_OFFSET;
 
-var loadLevel = function() {
+var loadLevel = function () {
   // Load maps.
   infoText = utils.valueOr(level.infoText, true);
   if (!infoText) {
@@ -144,7 +146,7 @@ var loadLevel = function() {
   }
 };
 
-var drawMap = function() {
+var drawMap = function () {
   var svg = document.getElementById('svgFlappy');
   var i, x, y, k, tile;
 
@@ -301,11 +303,11 @@ var drawMap = function() {
   svg.appendChild(clickRect);
 };
 
-Flappy.calcDistance = function(xDist, yDist) {
+Flappy.calcDistance = function (xDist, yDist) {
   return Math.sqrt(xDist * xDist + yDist * yDist);
 };
 
-var essentiallyEqual = function(float1, float2, opt_variance) {
+var essentiallyEqual = function (float1, float2, opt_variance) {
   var variance = opt_variance || 0.01;
   return (Math.abs(float1 - float2) < variance);
 };
@@ -348,7 +350,7 @@ Flappy.callUserGeneratedCode = function (fn) {
 };
 
 
-Flappy.onTick = function() {
+Flappy.onTick = function () {
   var avatarWasAboveGround, avatarIsAboveGround;
 
   if (Flappy.firstActiveTick < 0 && Flappy.gameState === Flappy.GameStates.ACTIVE) {
@@ -482,7 +484,7 @@ Flappy.onMouseDown = function (e) {
 /**
  * Initialize Blockly and the Flappy app.  Called on page load.
  */
-Flappy.init = function(config) {
+Flappy.init = function (config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
@@ -495,21 +497,7 @@ Flappy.init = function(config) {
 
   loadLevel();
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
-      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl, shareable: level.shareable}),
-      blockUsed: undefined,
-      idealBlockNumber: undefined,
-      editCode: level.editCode,
-      blockCounterClass: 'block-counter-default',
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
-  config.loadAudio = function() {
+  config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
     studioApp.loadAudio(skin.failureSound, 'failure');
@@ -530,7 +518,7 @@ Flappy.init = function(config) {
     studioApp.loadAudio(skin.wall0Sound, 'wall0');
   };
 
-  config.afterInject = function() {
+  config.afterInject = function () {
     /**
      * The richness of block colours, regardless of the hue.
      * MOOC blocks should be brighter (target audience is younger).
@@ -588,16 +576,54 @@ Flappy.init = function(config) {
     config.blockArrangement.flappy_whenClick.y = row2;
   }
 
-  studioApp.init(config);
+  var generateCodeWorkspaceHtmlFromEjs = function () {
+    return codeWorkspaceEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
 
-  var rightButton = document.getElementById('rightButton');
-  dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+  var generateVisualizationColumnHtmlFromEjs = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl, shareable: level.shareable})
+      }
+    });
+  };
+
+  var onMount = function () {
+    studioApp.init(config);
+
+    var rightButton = document.getElementById('rightButton');
+    dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+  };
+
+  ReactDOM.render(React.createElement(AppView, {
+    assetUrl: studioApp.assetUrl,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    hideSource: !!config.hideSource,
+    noVisualization: false,
+    isRtl: studioApp.isRtl(),
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    onMount: onMount
+  }), document.getElementById(config.containerId));
 };
 
 /**
  * Clear the event handlers and stop the onTick timer.
  */
-Flappy.clearEventHandlersKillTickLoop = function() {
+Flappy.clearEventHandlersKillTickLoop = function () {
   Flappy.whenClick = null;
   Flappy.whenCollideGround = null;
   Flappy.whenCollideObstacle = null;
@@ -613,7 +639,7 @@ Flappy.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Flappy.reset = function(first) {
+Flappy.reset = function (first) {
   var i;
   Flappy.clearEventHandlersKillTickLoop();
 
@@ -667,7 +693,7 @@ Flappy.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Flappy.runButtonClick = function() {
+Flappy.runButtonClick = function () {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -698,7 +724,7 @@ Flappy.runButtonClick = function() {
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
  */
-var displayFeedback = function() {
+var displayFeedback = function () {
   if (!Flappy.waitingForReport) {
     studioApp.displayFeedback({
       app: 'flappy', //XXX
@@ -720,7 +746,7 @@ var displayFeedback = function() {
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
  */
-Flappy.onReportComplete = function(response) {
+Flappy.onReportComplete = function (response) {
   Flappy.response = response;
   Flappy.waitingForReport = false;
   studioApp.onReportComplete(response);
@@ -730,7 +756,7 @@ Flappy.onReportComplete = function(response) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-Flappy.execute = function() {
+Flappy.execute = function () {
   var code;
   Flappy.result = ResultType.UNSET;
   Flappy.testResults = TestResults.NO_TESTS_RUN;
@@ -803,7 +829,7 @@ Flappy.execute = function() {
   Flappy.intervalId = window.setInterval(Flappy.onTick, Flappy.scale.stepSpeed);
 };
 
-Flappy.onPuzzleComplete = function() {
+Flappy.onPuzzleComplete = function () {
   if (level.freePlay) {
     Flappy.result = ResultType.SUCCESS;
   }
@@ -866,7 +892,7 @@ Flappy.onPuzzleComplete = function() {
  * @param {number} x Horizontal Pixel location.
  * @param {number} y Vertical Pixel location.
  */
-Flappy.displayAvatar = function(x, y) {
+Flappy.displayAvatar = function (x, y) {
   var avatarIcon = document.getElementById('avatar');
   avatarIcon.setAttribute('x', x);
   avatarIcon.setAttribute('y', y);
@@ -875,7 +901,7 @@ Flappy.displayAvatar = function(x, y) {
 /**
  * display moving goal
  */
-Flappy.displayGoal = function() {
+Flappy.displayGoal = function () {
   if (!Flappy.goalX) {
     return;
   }
@@ -888,7 +914,7 @@ Flappy.displayGoal = function() {
 /**
  * Display ground at given tickCount
  */
-Flappy.displayGround = function(tickCount) {
+Flappy.displayGround = function (tickCount) {
   if (!level.ground) {
     return;
   }
@@ -917,7 +943,7 @@ Flappy.displayObstacles = function () {
   }
 };
 
-Flappy.displayScore = function() {
+Flappy.displayScore = function () {
   var score = document.getElementById('score');
   score.textContent = Flappy.playerScore;
 };
@@ -980,7 +1006,7 @@ Flappy.setGround = function (value) {
   }
 };
 
-var checkTickLimit = function() {
+var checkTickLimit = function () {
   if (!level.tickLimit) {
     return false;
   }

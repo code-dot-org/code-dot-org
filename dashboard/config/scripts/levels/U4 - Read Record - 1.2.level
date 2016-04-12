@@ -6,25 +6,10 @@
   "user_id": 155,
   "properties": {
     "skin": "applab",
-    "code_functions": {
-      "readRecords": {
-        "params": [
-          "\"myTable\"",
-          "{}",
-          "function(records){\n\n}"
-        ],
-        "paletteParams": [
-          "table",
-          "terms",
-          "callback"
-        ]
-      },
-      "console.log": null
-    },
     "edit_code": true,
     "embed": "false",
     "instructions": "Place a console.log command below the readRecords command. (Click to see full instructions)\r\n",
-    "markdown_instructions": "# Callback Functions\r\n\r\nIn the last exercise you **read records from a remote database back into your app**. There are a few steps that happened in that process.  When you `readRecords` you can think of it as triggering a 4-step process as shown in the diagram below.\r\n\r\n![](https://images.code.org/b8c366da4d02776920cfbb229b108c40-image-1450104325687.png)\r\n\r\nBecause the Internet is involved there's actually a **delay between when your program calls `readRecords` and when the callback function is called**. We can even see this delay in App Lab.\r\n\r\n# Do This\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n**NOTE:** The speed on App Lab has been set to its slowest setting -- this will make it easier to see the sequence of events in the program.  You can set the speed to the fastest setting and it will function the same.\r\n\r\n* **Add another `console.log` statement after your `readRecords` command**\r\n* **Run the program** and pay close attention to **the sequence of events**. \r\n* **Check the Debug Console** to see which `console.log` command ran first.\r\n\r\n![](https://images.code.org/7c2a7362736e0796aa191b03760552c3-image-1449687909231.gif)\r\n\r\n",
+    "markdown_instructions": "# Callback Functions\r\n\r\nIn the last exercise, you **read records from a remote database back into your app**. There are a few steps that happened in that process.  When you `readRecords` you can think of it as triggering a 4-step process as shown in the diagram below.\r\n\r\n![](https://images.code.org/b8c366da4d02776920cfbb229b108c40-image-1450104325687.png)\r\n\r\nBecause the Internet is involved, there's actually a **delay between when your program calls `readRecords` and when the callback function is called**. We can even see this delay in App Lab.\r\n\r\n# Do This:\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n**NOTE:** The speed on App Lab has been set to its slowest setting; this will make it easier to see the sequence of events in the program.  You can set the speed to the fastest setting and it will function the same.\r\n\r\n* **Add another `console.log` statement after your `readRecords` command**.\r\n* **Run the program** and pay close attention to **the sequence of events**. \r\n* **Check the Debug Console** to see which `console.log` command ran first.\r\n\r\n![](https://images.code.org/7c2a7362736e0796aa191b03760552c3-image-1449687909231.gif)\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -55,8 +40,10 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "slider_speed": "0",
-    "project_template_level_name": "U4 - Read Record - part 1 - template"
-  }
+    "project_template_level_name": "U4 - Read Record - part 1 - template",
+    "encrypted_examples": "ZBkGNbjarQmAMXznRYXhgKZlvZsEADqZTqvBOzV2pyuwbQ321ix5pixxQRUj\nWemE\n"
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

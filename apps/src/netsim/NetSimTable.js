@@ -1,18 +1,6 @@
 /**
  * @overview Wraps remote storage interface and polling behavior.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 4,
- maxstatements: 200
- */
 'use strict';
 
 var _ = require('../utils').getLodash();

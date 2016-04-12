@@ -4,6 +4,9 @@ class AdminReportsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
+    # Stub used by :admin_stats.
+    Properties.stubs(:get).returns(nil)
+
     @admin = create(:admin)
     sign_in(@admin)
 
@@ -24,13 +27,15 @@ class AdminReportsControllerTest < ActionController::TestCase
     @follower = Follower.create(:section => @teacher_section, :user => @teacher, :student_user => @student)
   end
 
-  generate_admin_only_tests_for :all_usage
-  generate_admin_only_tests_for :admin_concepts
   generate_admin_only_tests_for :admin_progress
   generate_admin_only_tests_for :admin_stats
-  generate_admin_only_tests_for :funometer
-  # TODO(asher): Add :funometer_by_script and :funometer_by_script_level after fixing routing.
-  # TODO(asher): Add :hoc_signups after fixing the pegasus-test DB issue.
+  generate_admin_only_tests_for :all_usage
+  generate_admin_only_tests_for :debug
+  generate_admin_only_tests_for :directory
+  generate_admin_only_tests_for :diversity_survey
+  generate_admin_only_tests_for :level_answers
+  generate_admin_only_tests_for :retention
+  generate_admin_only_tests_for :retention_stages
 
   test 'should get admin progress page' do
     get :admin_progress

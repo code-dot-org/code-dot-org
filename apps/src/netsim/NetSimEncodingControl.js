@@ -1,18 +1,6 @@
 /**
  * @overview UI controller for set of radio buttons used to select display encodings.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 var markup = require('./NetSimEncodingControl.html.ejs');

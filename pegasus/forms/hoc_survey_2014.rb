@@ -41,7 +41,7 @@ class HocSurvey2014
 
   def self.process(data)
     {}.tap do |results|
-      results['prize_code_s'] = claim_prize_code(data['prize_choice_s'], data['email_s']);
+      results['prize_code_s'] = claim_prize_code(data['prize_choice_s'], data['email_s'])
     end
   end
 
@@ -141,13 +141,13 @@ class HocSurvey2014
   end
 
   def self.event_experiences()
-    [
-      'Great',
-      'Good',
-      'OK',
-      'Bad',
-      'Terrible',
-    ]
+    %w(
+      Great
+      Good
+      OK
+      Bad
+      Terrible
+    )
   end
 
   def self.teacher_how_heards()

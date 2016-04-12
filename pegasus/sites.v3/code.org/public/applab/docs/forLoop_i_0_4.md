@@ -90,7 +90,7 @@ ____________________________________________________
 **Example: Rake** Draw a rake ranging the angles from -45 to 45 by 5s.
 
 ```
-// 
+// Draw a rake ranging the angles from -45 to 45 by 5s.
 for(var angle=-45; angle<=45; angle=angle+5){
 	turnTo(angle);
 	moveForward(100);

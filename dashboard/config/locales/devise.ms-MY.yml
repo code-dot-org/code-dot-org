@@ -71,7 +71,7 @@
       not_locked: tidak dikunci
       not_saved:
         one: '1 kesilapan menghalang %{resource} daripada disimpan:'
-        other: '%{count} kesalahan menghalang %{resource} daripada disimpan:'
+        other: "%{count} kesalahan menghalang %{resource} daripada disimpan:"
     invitations:
       send_instructions: An invitation email has been sent to %{email}.
       invitation_token_invalid: The invitation token provided is not valid!

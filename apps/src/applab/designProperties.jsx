@@ -1,22 +1,27 @@
 /* global $*/
 
 var applabMsg = require('./locale');
+var color = require('../color');
 var elementLibrary = require('./designElements/library');
+var elementUtils = require('./designElements/elementUtils');
 
-var DeleteElementButton = require('./designElements/DeleteElementButton.jsx');
+var DeleteElementButton = require('./designElements/DeleteElementButton');
+var ElementSelect = require('./ElementSelect');
 
 var nextKey = 0;
 
-var DesignProperties = module.exports = React.createClass({
+var DesignProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement),
+    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     handleChange: React.PropTypes.func.isRequired,
+    onChangeElement: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired,
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {selectedTab: TabType.PROPERTIES};
   },
 
@@ -24,11 +29,11 @@ var DesignProperties = module.exports = React.createClass({
    * Handle a click on a tab, such as 'properties' or 'events'.
    * @param newTab {TabType} Tab to switch to.
    */
-  handleTabClick: function(newTab) {
+  handleTabClick: function (newTab) {
     this.setState({selectedTab: newTab});
   },
 
-  render: function() {
+  render: function () {
     if (!this.props.element || !this.props.element.parentNode) {
       return <p>{applabMsg.designWorkspaceDescription()}</p>;
     }
@@ -63,7 +68,7 @@ var DesignProperties = module.exports = React.createClass({
     var element = this.props.element;
     // First screen is not deletable
     var isOnlyScreen = elementType === elementLibrary.ElementType.SCREEN &&
-        $('#designModeViz .screen').length === 1;
+        elementUtils.getScreens().length === 1;
     if (!isOnlyScreen) {
       deleteButton = (<DeleteElementButton
         shouldConfirm={elementType === elementLibrary.ElementType.SCREEN}
@@ -71,8 +76,8 @@ var DesignProperties = module.exports = React.createClass({
     }
 
     var tabHeight = 35;
-    var borderColor = '#c6cacd';
-    var bgColor = '#e7e8ea';
+    var borderColor = color.lighter_gray;
+    var bgColor = color.lightest_gray;
 
     // Diagram of how tabs outlines are drawn. 'x' represents solid border.
     // '-' and '|' represent no border.
@@ -128,6 +133,11 @@ var DesignProperties = module.exports = React.createClass({
         height: 28,
         overflow: 'hidden'
       },
+      workspaceDescriptionText: {
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap'
+      },
       workspaceTabs: {
         borderColor: borderColor,
         borderStyle: 'solid',
@@ -168,7 +178,9 @@ var DesignProperties = module.exports = React.createClass({
     return (
       <div style={{height: '100%'}}>
         <div id="designDescription" style={styles.workspaceDescription}>
-          <p>{applabMsg.designWorkspaceDescription()}</p>
+          <p style={styles.workspaceDescriptionText} title={applabMsg.designWorkspaceDescription()}>
+            {applabMsg.designWorkspaceDescription()}
+          </p>
         </div>
         <div id="designWorkspaceTabs" style={styles.workspaceTabs}>
           <div id="propertiesTab"
@@ -184,6 +196,9 @@ var DesignProperties = module.exports = React.createClass({
             <span style={styles.tabLabel}>EVENTS</span>
           </div>
           <div id="emptyTab" style={styles.emptyTab}>
+            <ElementSelect onChangeElement={this.props.onChangeElement}
+              elementIdList={this.props.elementIdList}
+              selected={this.props.element} />
           </div>
         </div>
         <div id="designWorkspaceBody" style={styles.workspaceBody}>
@@ -216,3 +231,4 @@ var TabType = {
   EVENTS: 'events'
 };
 DesignProperties.TabType = TabType;
+module.exports = DesignProperties;

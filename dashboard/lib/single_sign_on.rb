@@ -68,11 +68,9 @@ class SingleSignOn
     @custom_fields ||= {}
   end
 
-
   def sign(payload)
     OpenSSL::HMAC.hexdigest("sha256", sso_secret, payload)
   end
-
 
   def to_url(base_url=nil)
     base = "#{base_url || sso_url}"
@@ -81,7 +79,7 @@ class SingleSignOn
 
   def payload
     payload = Base64.encode64(unsigned_payload)
-    "sso=#{CGI::escape(payload)}&sig=#{sign(payload)}"
+    "sso=#{CGI.escape(payload)}&sig=#{sign(payload)}"
   end
 
   def unsigned_payload

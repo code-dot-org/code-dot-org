@@ -1,0 +1,289 @@
+
+<html>
+    <head>
+        
+        <script type="text/javascript" src="graph.js"></script>
+        <script type="text/javascript">
+           var G;
+           var bestDist = Infinity; //Number.MAX_VALUE;
+           
+           function numNodesChanged(){
+               
+               // get the current code
+               var mapCode = getMapCode();
+               // replace the numNodes with value from input box
+               mapCode.numNodes = document.getElementById("numNodes").value;
+               
+               // set the text box
+               setMapCode(mapCode);
+               
+               //make a new graph out of it
+               makeGraph();
+
+           }
+           
+           //given a mapCode object, set the value in the text box
+           function setMapCode(mapCode){
+                 console.debug("inside setMapCode = "+JSON.stringify(mapCode))
+                 document.getElementById("mapNumber").value = mapCode.numNodes+"."+mapCode.mapNum;
+           }
+           
+           //return a 2 element array with values set to whatever is in text.  Might be [-1,-1];
+           function getMapCode(){
+               var inputText = document.getElementById("mapNumber").value;
+               var dataArr = inputText.replace(/[^0-9.]/g,"").split(".");
+               var mapCode = {};
+               mapCode.numNodes = -1;
+               mapCode.mapNum = -1;
+               
+              console.debug("getMapCode after init: "+JSON.stringify(mapCode));
+
+
+                //BAKER TODO: dataArr might have right length but emptyStrings
+                
+               if(dataArr.length>=2){
+                   mapCode.numNodes=Math.min(26, parseInt(dataArr[0]));
+                   mapCode.mapNum=Math.min(9999,parseInt(dataArr[1]));
+                   console.debug("getMapCode after len>2: "+JSON.stringify(mapCode));
+
+               }
+               else if(dataArr.length==1 && dataArr[0]!=""){
+                    mapCode.mapNum=Math.min(9999,parseInt(dataArr[0]));
+                    console.debug("getMapCode after len==1: "+JSON.stringify(mapCode));
+
+
+               }
+               
+               console.debug("getMapCode after first pass: "+JSON.stringify(mapCode));
+
+               if(mapCode.numNodes==-1) mapCode.numNodes = parseInt(Math.random()*4)+5;
+               if(mapCode.mapNum==-1) mapCode.mapNum = parseInt(Math.random()*9999);
+               
+               console.debug("getMapCode returning: "+JSON.stringify(mapCode));
+               setMapCode(mapCode);
+               return mapCode;
+               
+           }
+        //   function makeGraphFromNumber(){
+               
+        //       //validate whatever was typed into the box.
+        //       //var inputText = document.getElementById("mapNumber").value;
+        //       var mapCode = getMapCode(inputText); 
+               
+              
+        //       // input has now been validated.  Can go on to make graph
+               
+               
+               
+        //       makeGraph();
+        //   }
+           function makeNewMap(){
+               seed = -1;
+               document.getElementById("mapNumber").value="";
+               var mc = getMapCode();
+               setMapCode(mc);
+               makeGraph();
+           }
+           function makeGraph(){
+		        //if(seed==-1) setSeed(parseInt(Math.random()*9999)); //var seed imported from graph.js...could also just set directly
+        		
+        		//read seed and numNodes from map# box
+        		// ASSUME that mapNumber input is validated.
+        		var mapCode = getMapCode();
+        		
+        		var num = parseInt(mapCode.numNodes);
+        		seed = parseInt(mapCode.mapNum);
+
+
+        	    //mapNumber is: numNodes.seedValue
+        	   
+        	   console.debug("making Graph with numNodes: "+num+", seed:"+seed);
+                
+                //preserve ghost edges if they were on.
+                var oldEdgeColor = "";
+        	    if(G!=null) oldEdgeColor = G.edgeColor; 
+        	    
+        	    
+        		G = new Graph(); //doesn't affect seed unless it hasn't been set
+
+        	
+        	    for(var i=0; i<num; i++){
+        	       console.debug("TSP.html about to add node...")
+        	        G.addNode(String.fromCharCode(65+i)); // 65 == "A"
+        	    }
+        		
+        		G.graphNum = mapCode.numNodes+"."+mapCode.mapNum;
+        		G.isUndirected = true;
+        		G.autoEdgeSelection = false;
+        		G.edgeSelectionOn = true;
+        		G.showWeights=true;
+        		G.edgeColor = "rgba(0,0,0,0)";
+        		if(oldEdgeColor!="") G.edgeColor = oldEdgeColor;
+        		G.showWeightOnlyWhenSelected = true;
+        		G.canDragNodes= true;
+        		G.showNodeShadows = true;
+
+        		for(var i=0; i<G.nodes.length; i++){
+        		    G.nodes[i].setSize(10);
+        		    for(var j=i+1; j<G.nodes.length; j++){
+        		        var dist = G.geoDist(G.nodes[i], G.nodes[j]);
+        		        dist=dist/100.0;
+        		        G.addEdge(G.nodes[i], G.nodes[j], dist);
+        		    }
+        		}
+            	
+        	    console.debug(G);
+        	    G.draw(document.getElementById("myCanvas"));
+
+           }
+               
+               
+           
+           function processMouse(e){
+                 
+                    G.handleMouseEvent(e);
+                   // console.debug("draw");
+                   
+                   //see if selected edges is exactly 2 for every node
+                   var isTour = true;
+                   var numEdgesTour = 0;
+                   var numSelectedEdges = 0;
+                   var numNodesConnected=0;
+                   for(var i=0; i<G.nodes.length; i++){
+                    
+                       var numEdges = G.nodes[i].numSelectedEdges();
+                       numSelectedEdges+=(numEdges/2); //because undirected graph is 2*directed graph
+
+                       if(numEdges == 2){
+                           numNodesConnected++; 
+                       }
+                       else isTour=false;
+                       
+                   }
+                   
+
+                   var statusText = "Not a tour. ";
+                   statusText += "You need to add "+(G.nodes.length-numSelectedEdges)+" edges ";
+                   statusText += "connecting "+(G.nodes.length-numNodesConnected)+" nodes.";
+                   
+                   var newBest = false;
+                   if(isTour){
+                       statusText = "You found a ";
+                       if(G.totalWeight < bestDist){
+                           bestDist = G.totalWeight;
+                           statusText += "NEW BEST ";
+                           newBest = true;       
+
+                          
+
+                       }
+                       statusText += "tour.";
+                       
+
+                   }
+                   statusText +="Best Dist: "+bestDist.toFixed(2);
+                   
+                   G.statusText = statusText;
+                   
+                   G.draw(document.getElementById("myCanvas"));
+                   
+                   //need to save AFTER doing most recent drawing
+                   if(newBest){
+                        var canvas = document.getElementById("myCanvas");
+                        var imgTag = "<a href='"+canvas.toDataURL()+"' target=top><img src='"+canvas.toDataURL()+"' width=150/></a><br>Dist: "+bestDist;
+                       document.getElementById("bestToursTable").insertRow(0).insertCell().innerHTML=imgTag;
+                   }
+                
+                
+
+             }  
+             
+             function toggleShowGhostEdges(val){
+                 console.debug("Check box val: "+val);
+                 if(val==true) G.edgeColor = "rgba(0,0,0,0.1)";
+                 else G.edgeColor = "rgba(0,0,0,0)";
+
+                 G.draw(document.getElementById("myCanvas"));
+
+             }
+             
+            //  function processEdgeListText(){
+            //      G = new Graph();
+            //      var lines = document.getElementById("edgeListText").value.split("\n");
+            //      //console.debug(lines);
+            //      var nodesList = []; //assoc. array of nodes added key = name
+                 
+            //      for(var i=0; i<lines.length; i++){
+            //          if(lines[i].length > 0){
+            //              var tokens = lines[i].split(",");  // name1, name2, weight
+            //              console.debug(tokens)
+                         
+            //              //if tokens[0] not in graph -- add it
+            //              var node1 = G.getNodeByName(tokens[0].trim());
+            //              if(node1==null){
+            //                  node1 = G.addNode(tokens[0].trim());
+            //              }
+                         
+            //              // if tokens[1] not in graph -- add it
+            //              if(tokens.length >=2){
+            //                  var node2 = G.getNodeByName(tokens[1].trim());
+            //                  if(node2==null) node2 = G.addNode(tokens[1].trim());
+                             
+            //                  var w = 0;
+            //                  if(tokens.length>=3) w = parseInt(tokens[2].trim());
+                         
+            //                  G.addEdge(node1, node2, w);
+            //              }
+            //          }
+            //          //add edge between
+            //      }
+            //      G.setAllLocations();
+            //      G.draw(document.getElementById("myCanvas"));
+
+                 
+            //  }
+
+            $(document).ready(function(){
+              makeGraph();
+              toggleShowGhostEdges(true);
+              console.log('foo')
+            });
+            
+               
+           
+           
+    </script>
+    </head>
+    <body>
+    <h1>Traveling Salesperson</h1>
+    <p>Directions:</p>
+    <li>Make a map, and then try to find the minimum cost tour.
+    <li>Move your mouse over the map.  Double-click a line to add it to the tour.
+    <li>When you successfully highlight a tour that's better than any found so far, it will be saved on the right side of the page.</li>
+    <li>Click and drag a node to move it if a line is hard to click
+    <li>If you find a solution, share the map number with someone else to see if they can find a better one.
+   <br>
+   <button onClick="makeNewMap()">Make New Map</button> 
+   Number of nodes:<input type=range min=3 max=26 step=1 style="width: 100px" value=6 id="numNodes" oninput="numNodesChanged()"/> 
+   
+   Map# <input type=number id="mapNumber" onChange="makeGraph()">
+   <button onClick="makeGraph()">Use Map #</button>
+   show ghost edges: <input type=checkbox id="ghostEdgeToggle" checked onChange="toggleShowGhostEdges(this.checked)"><br>
+    <br>
+    
+     <canvas id="myCanvas" width="600px" height="400px" style="float: left; border:1px solid #000000;" onmousemove="processMouse(event)" ondblclick="processMouse(event)" onclick="processMouse(event)" onmouseup="processMouse(event)" onmousedown="processMouse(event)"></canvas>
+    <div style="float: left; width: 200px; background-color: #AAAAAA; text-align: center; padding: 20px">
+        Best Tours:<br>
+        <table style="float: left" id="bestToursTable">
+            
+        </table>
+    </div>
+    <footer style="clear:both">
+	<a  rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+			<img alt="Creative Commons License" style="border-width:0; float:left" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+All<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Code.org CSP Widgets</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Baker Franke</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+</footer>
+        
+    </body>
+</html>

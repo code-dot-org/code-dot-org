@@ -1,7 +1,7 @@
 {
   "blockDestroyBlock": "uništi blok",
   "blockIf": "ako",
-  "blockIfLavaAhead": "ukoliko je lava ispred",
+  "blockIfLavaAhead": "ako je lava ispred",
   "blockMoveForward": "idi naprijed",
   "blockPlaceTorch": "postavite baklju",
   "blockPlaceXAheadAhead": "ispred",
@@ -15,7 +15,7 @@
   "blockTypeBedrock": "temelj",
   "blockTypeBricks": "blokovi",
   "blockTypeClay": "glina",
-  "blockTypeClayHardened": "cigla",
+  "blockTypeClayHardened": "tvrda glina",
   "blockTypeCobblestone": "kaldrma",
   "blockTypeDirt": "blato",
   "blockTypeDirtCoarse": "krupno blato",

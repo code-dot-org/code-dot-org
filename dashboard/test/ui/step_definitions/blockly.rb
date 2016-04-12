@@ -40,7 +40,7 @@ When /^I drag block "([^"]*)" above block "([^"]*)"$/ do |from, to|
   to_id = get_block_id(to)
   height = @browser.execute_script("return $(\"[block-id='#{from_id}']\")[0].getBoundingClientRect().height;") - 10
   destination_has_parent = @browser.execute_script("return $(\"[block-id='#{to_id}']\").parent().attr('block-id') !== undefined;")
-  code = generate_drag_code(from_id, to_id, 0, destination_has_parent ? 0 : -height);
+  code = generate_drag_code(from_id, to_id, 0, destination_has_parent ? 0 : -height)
   @browser.execute_script code
 end
 
@@ -174,16 +174,24 @@ Then(/^block "([^"]*)" has (not )?been deleted$/) do |block_id, negation|
   end
 end
 
-Then /^block "([^"]*)" has class "(.*?)"$/ do |block_id, className|
+Then /^block "([^"]*)" has class "(.*?)"$/ do |block_id, class_name|
   item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
-  classes.include?(className).should eq true
+  classes.include?(class_name).should eq true
 end
 
-Then /^block "([^"]*)" doesn't have class "(.*?)"$/ do |block_id, className|
+Then /^block "([^"]*)" doesn't have class "(.*?)"$/ do |block_id, class_name|
   item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
-  classes.include?(className).should eq false
+  classes.include?(class_name).should eq false
+end
+
+Then /^the modal function editor is closed$/ do
+  modal_dialog_visible.should eq false
+end
+
+Then /^the modal function editor is open$/ do
+  modal_dialog_visible.should eq true
 end
 
 When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do |block_id, value, title|
@@ -198,6 +206,6 @@ When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do 
 
 end
 
-When(/^"(.+)" refers to block "(.+)"$/) do |blockAlias, block_id|
-  add_block_alias(blockAlias, block_id)
+When(/^"(.+)" refers to block "(.+)"$/) do |block_alias, block_id|
+  add_block_alias(block_alias, block_id)
 end

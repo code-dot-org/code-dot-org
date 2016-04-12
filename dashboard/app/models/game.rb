@@ -40,12 +40,14 @@ class Game < ActiveRecord::Base
   PLAYLAB = STUDIO = 'studio'
   STUDIO_EC = 'StudioEC'
   APPLAB = WEBAPP = 'applab'
+  GAMELAB = 'gamelab'
   NETSIM = 'netsim'
   CRAFT = 'craft'
   MAZE = 'maze'
   CALC = 'calc'
   EVAL = 'eval'
-  TEXT_COMPRESSION = 'text_compression';
+  TEXT_COMPRESSION = 'text_compression'
+  LEVEL_GROUP = 'level_group'
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
@@ -69,6 +71,10 @@ class Game < ActiveRecord::Base
 
   def self.applab
     @@game_applab ||= find_by_name("Applab")
+  end
+
+  def self.gamelab
+    @@game_gamelab ||= find_by_name("Gamelab")
   end
 
   def self.netsim
@@ -99,6 +105,10 @@ class Game < ActiveRecord::Base
     @@game_frequency_analysis ||= find_by_name("FrequencyAnalysis")
   end
 
+  def self.multi
+    @@game_multi ||= find_by_name("Multi")
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -112,7 +122,7 @@ class Game < ActiveRecord::Base
   end
 
   def supports_sharing?
-    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT
+    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT || app == GAMELAB
   end
 
   def flappy?
@@ -120,7 +130,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_droplet?
-    name == "MazeEC" || name == "ArtistEC" || name == "Applab" || name == "StudioEC"
+    name == "MazeEC" || name == "ArtistEC" || name == "Applab" || name == "StudioEC" || name == "Gamelab"
   end
 
   def uses_pusher?
@@ -128,7 +138,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION
+    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION || app == GAMELAB
   end
 
   # True if the app takes responsibility for showing footer info
@@ -137,7 +147,7 @@ class Game < ActiveRecord::Base
   end
 
   def has_i18n?
-    !(app == NETSIM || app == APPLAB)
+    !(app == NETSIM || app == APPLAB || app == GAMELAB)
   end
 
   def self.setup
@@ -195,6 +205,8 @@ class Game < ActiveRecord::Base
         FrequencyAnalysis:frequency_analysis
         Vigenere:vigenere
         Craft:craft
+        Gamelab:gamelab
+        LevelGroup:level_group
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

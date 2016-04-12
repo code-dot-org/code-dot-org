@@ -14,6 +14,8 @@
 #  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
@@ -74,14 +76,8 @@ class Grid < Blockly
     { 'maze' => JSON.parse(maze_json).map { |row| row.map { |cell| Integer(cell) } }.to_json}
   end
 
-  # Returns an 'unparsed' array object from the parsed properties
-  def self.unparse_maze(contents)
-    maze = contents['maze']
-    maze.is_a?(Array) ? maze.to_json : maze
-  end
-
   def filter_level_attributes(level_hash)
-    %w(maze initial_dirt final_dirt).map do |maze_type|
+    %w(maze initial_dirt raw_dirt).map do |maze_type|
       prop = level_hash['properties']
       prop[maze_type] = prop[maze_type].to_json if prop[maze_type].is_a?(Array)
     end

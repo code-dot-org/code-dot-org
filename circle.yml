@@ -1,6 +1,9 @@
 machine:
   ruby:
     version: 2.2.3
+  environment:
+    RAILS_ENV: test
+    SPROCKETS_DERAILLEUR_WORKER_COUNT: 2 # CircleCI build VMs have a memory limit of 4G
   services:
     - docker
 dependencies:
@@ -10,17 +13,17 @@ dependencies:
   override:
     - sudo apt-get install libicu-dev
     - bundle install
-    - rake install:pegasus
-    - "printf \"assets_s3_directory: assets_circle/$RANDOM\nsources_s3_directory: sources_circle/$RANDOM\n\" > locals.yml"
+    - "printf \"bundler_use_sudo: false\n\" > locals.yml"
+    - bundle exec rake install:pegasus
     - npm install:
         pwd:
             apps
     - bash build_with_core.sh:
         pwd:
             apps
-    - bundle exec rake assets:precompile:
+    - npm install:
         pwd:
-            dashboard
+            code-studio
 database:
     override:
       - bundle exec rake db:create:
@@ -29,17 +32,25 @@ database:
       - bundle exec rake db:schema:load:
           pwd:
               dashboard
+    post:
+      - bundle exec rake assets:precompile:
+          pwd:
+              dashboard
 test:
     override:
+        - bundle exec rake lint:javascript
         - bundle exec rake test:
             pwd:
                 pegasus
         - bundle exec rake test:
             pwd:
                 shared
-        - for i in 1 2; do grunt test && break; done:
+        - ./test.sh:
             pwd:
                 apps
+        - npm test:
+            pwd:
+                code-studio
         - bundle exec rake konacha:run:
             pwd:
                 dashboard

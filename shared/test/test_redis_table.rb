@@ -1,8 +1,6 @@
-require 'minitest/autorun'
-require 'rack/test'
-require_relative '../../deployment'
-require_relative '../middleware/helpers/null_pub_sub_api'
-require_relative '../middleware/helpers/redis_table'
+require_relative 'test_helper'
+require 'helpers/null_pub_sub_api'
+require 'helpers/redis_table'
 require_relative 'fake_redis_client'
 require_relative 'spy_pub_sub_api'
 
@@ -149,7 +147,6 @@ class RedisTableTest < Minitest::Test
     assert_equal make_pubsub_event('shard1', 'table', {:action => 'delete', :ids => [1, 3]}),
                  @pubsub.publish_history[4]
 
-
     # Clean up
     RedisTable.reset_shard('shard1', @redis, @pubsub)
     RedisTable.reset_shard('shard2', @redis, @pubsub)
@@ -240,7 +237,6 @@ class RedisTableTest < Minitest::Test
     assert_equal row1['id'], row1_c['id']
     refute_equal row1['uuid'], row1_c['uuid']
   end
-
 
   private
 

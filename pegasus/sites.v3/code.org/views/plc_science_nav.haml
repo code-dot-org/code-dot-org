@@ -1,0 +1,9 @@
+#about_nav
+  %span.about_list
+    -current_url = '/educate/professional-learning/cs-in-science'
+    -{'Middle School Courses'=>'/educate/curriculum/middle-school', 'Apply to the Program'=>'cs-in-science-apply', 'About the Professional Learning Program'=>current_url+'#about', 'How does it work?'=> current_url+ '#components', 'What are the commitments?'=> current_url+'#commitments', 'Where is it offered?'=>current_url+'#locations'}.each_pair do |label,url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr

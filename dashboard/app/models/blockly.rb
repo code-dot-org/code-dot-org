@@ -14,6 +14,8 @@
 #  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
@@ -22,6 +24,8 @@
 
 require 'nokogiri'
 class Blockly < Level
+  include SolutionBlocks
+
   serialized_attrs %w(
     level_url
     skin
@@ -29,6 +33,7 @@ class Blockly < Level
     toolbox_blocks
     required_blocks
     recommended_blocks
+    solution_blocks
     ani_gif_url
     is_k1
     skip_instructions_popup
@@ -61,13 +66,15 @@ class Blockly < Level
     lock_zero_param_functions
   )
 
+  before_save :update_ideal_level_source
+
   before_validation {
     self.scrollbars = nil if scrollbars == 'nil'
   }
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
-    %w(start_blocks toolbox_blocks required_blocks recommended_blocks)
+    %w(start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
   end
 
   def to_xml(options={})
@@ -79,7 +86,7 @@ class Blockly < Level
         end
       end
     end
-    self.class.pretty_print(xml_node.to_xml)
+    self.class.pretty_print_xml(xml_node.to_xml)
   end
 
   def load_level_xml(xml_node)
@@ -116,7 +123,20 @@ class Blockly < Level
 
   def pretty_block(block_name)
     xml_string = self.send("#{block_name}_blocks")
-    self.class.pretty_print(xml_string)
+    self.class.pretty_print_xml(xml_string)
+  end
+
+  def self.count_xml_blocks(xml_string)
+    unless xml_string.blank?
+      xml = Nokogiri::XML(xml_string, &:noblanks)
+      # The structure of the XML will be
+      # <document>
+      #   <xml>
+      #     ... blocks ...
+      # So the blocks will be the children of the first child of the document
+      return xml.try(:children).try(:first).try(:children).try(:length) || 0
+    end
+    0
   end
 
   def self.convert_toolbox_to_category(xml_string)
@@ -224,7 +244,7 @@ class Blockly < Level
       level_prop['scale'] = {'stepSpeed' => level_prop['stepSpeed']} if level_prop['stepSpeed'].present?
 
       # Blockly requires these fields to be objects not strings
-      %w(map initialDirt finalDirt goal softButtons inputOutputTable).
+      %w(map initialDirt serializedMaze goal softButtons inputOutputTable).
           concat(NetSim.json_object_attrs).
           concat(Craft.json_object_attrs).
           each do |x|

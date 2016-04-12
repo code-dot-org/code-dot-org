@@ -7,7 +7,7 @@ nav: educate_nav
 
 ## Unit 2
 
-**Quick Links**
+### Quick Links
 
 [General CSP Forum](http://forum.code.org/c/csp) | [Unit 2 Discussion Forum](http://forum.code.org/c/csp-unit2) | [CSP Unit 2 in Code Studio](https://studio.code.org/s/cspunit2)  | [Writing Team](team) 
 
@@ -16,7 +16,7 @@ nav: educate_nav
 <table>
 	<tr>
 		<td width=66% style="padding: 3px; border-color: white">
-		<strong>Important notes about lessons and digital tools</strong>
+		<h3>Important notes about lessons and digital tools</h3>
 		<ul>
 				<li>To use the tools in this course and be able to see your students' progress, you will continue to use the section you set up for Unit 1. When moving on to Unit 2, from the <a href="/teacher-dashboard#/sections">sections list</a> of the teacher dashboard, you can simply click the 'Edit' button for your section and toggle the Course dropdown to 'cspunit2'. You and your students will still be able to access their work from the previous unit. <i>Note:</i> Students must be part of the same section to use the Internet Simulator together.</li> 
 				

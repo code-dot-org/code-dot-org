@@ -11,7 +11,7 @@ class ActivitiesController < ApplicationController
   # for some script level pages.
   protect_from_forgery except: :milestone
 
-  MAX_INT_MILESTONE = 2147483647
+  MAX_INT_MILESTONE = 2_147_483_647
   USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"']
 
   MIN_LINES_OF_CODE = 0
@@ -29,6 +29,15 @@ class ActivitiesController < ApplicationController
     elsif params[:level_id]
       # TODO: do we need a cache_find for Level like we have for ScriptLevel?
       @level = Level.find(params[:level_id].to_i)
+    end
+
+    # Immediately return with a "Service Unavailable" status if milestone posts are
+    # disabled. (A cached view might post to this action even if milestone posts
+    # are disabled in the gatekeeper.)
+    enabled = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
+    if !enabled
+      head 503
+      return
     end
 
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
@@ -98,7 +107,7 @@ class ActivitiesController < ApplicationController
   private
 
   def find_share_failure(program)
-    return nil unless program.match /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
+    return nil unless program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
 
     xml_tag_regexp = /<[^>]*>/
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
@@ -134,7 +143,7 @@ class ActivitiesController < ApplicationController
     attributes = {
         user: current_user,
         level: @level,
-        action: solved, # TODO I think we don't actually use this. (maybe in a report?)
+        action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
         test_result: test_result,
         attempt: params[:attempt].to_i,
         lines: lines,
@@ -154,7 +163,7 @@ class ActivitiesController < ApplicationController
     end
 
     if @script_level
-      @new_level_completed = current_user.track_level_progress_async(@script_level, test_result)
+      @new_level_completed = current_user.track_level_progress_async(@script_level, test_result, params[:submitted])
     end
 
     passed = Activity.passing?(test_result)

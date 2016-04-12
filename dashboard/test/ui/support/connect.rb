@@ -41,7 +41,7 @@ def saucelabs_browser
   capabilities[:name] = ENV['TEST_RUN_NAME']
   capabilities[:build] = ENV['BUILD']
 
-  puts "DEBUG: Capabilities: #{CGI::escapeHTML capabilities.inspect}"
+  puts "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
   browser = nil
   Time.now.to_i.tap do |start_time|
@@ -51,15 +51,16 @@ def saucelabs_browser
                                         url: url,
                                         desired_capabilities: capabilities,
                                         http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
-    rescue URI::InvalidURIError, Net::ReadTimeout
+    rescue StandardError
       raise if retries >= MAX_CONNECT_RETRIES
+      puts 'Failed to get browser, retrying...'
       retries += 1
       retry
     end
     puts "DEBUG: Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
   end
 
-  puts "DEBUG: Browser: #{CGI::escapeHTML browser.inspect}"
+  puts "DEBUG: Browser: #{CGI.escapeHTML browser.inspect}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
   unless ENV['MOBILE']
@@ -83,11 +84,10 @@ def get_browser
   end
 end
 
-
 browser = nil
 
 Before do
-  puts "DEBUG: @browser == #{CGI::escapeHTML @browser.inspect}"
+  puts "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
 
   if slow_browser?
     browser ||= get_browser
@@ -121,17 +121,28 @@ end
 
 all_passed = true
 
-# Do something after each scenario.
-# The +scenario+ argument is optional, but
-# if you use it, you can inspect status with
-# the #failed?, #passed? and #exception methods.
+After do |scenario|
+  # log to saucelabs
+  all_passed &&= scenario.passed?
+  log_result all_passed
+end
+
+After do |_s|
+  unless @browser.nil?
+    # clear session state (or get a new browser)
+    if slow_browser?
+      @browser.execute_script 'sessionStorage.clear()'
+    else
+      @browser.quit unless @browser.nil?
+    end
+  end
+end
 
 After do |scenario|
-  all_passed = all_passed && scenario.passed?
-  log_result all_passed
-
-  @browser.execute_script 'sessionStorage.clear()'
-  @browser.quit unless @browser.nil? || slow_browser?
+  if ENV['FAIL_FAST'] == 'true'
+    # Tell Cucumber to quit after this scenario is done - if it failed.
+    Cucumber.wants_to_quit = true if scenario.failed?
+  end
 end
 
 at_exit do

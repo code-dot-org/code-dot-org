@@ -1,15 +1,4 @@
 /** @file A three-part loopable audio effect (start-loop-end). */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
 'use strict';
 
 var utils = require('../utils');

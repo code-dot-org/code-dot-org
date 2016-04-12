@@ -29,12 +29,12 @@ fr:
           Artist 2: "L'Artiste 2"
           Happy Maps: Cartes joyeuses
           Move it, Move it: Déplacez le, déplacez le
-          "Real-life Algorithms: Plant a Seed": 'Les algorithmes : Planter une graine'
+          "Real-life Algorithms: Plant a Seed": 'Les algorithmes de la vraie vie : Planter une graine'
           Building a Foundation: Créer une Fondation
           Getting Loopy: Tourner en rond
           The Big Event: Le Grand Evénement
           Going Places Safely: Se déplacer en toute sécurité
-          description: "Ce 1er cours est conçu pour les lecteurs débutants, afin de leur permettre de créer des programmes informatiques qui les aideront à apprendre à collaborer les uns avec les autres, développer les compétences de résolution de problèmes et persister à travers des tâches difficiles. A la fin de ce cours, les élèves créeront leur propre jeu personnalisé ou une histoire qu'ils pourront partager. Recommandé pour les maternelles moyenne-section."
+          description: "Ce 1er cours est conçu pour les lecteurs débutants, afin de leur permettre de créer des programmes informatiques qui leur aprendront à collaborer les uns avec les autres, développer les compétences de résolution de problèmes et persévérer malgré des tâches difficiles. A la fin de ce cours, les élèves créeront leur propre jeu personnalisé ou une histoire qu'ils pourront partager. Recommandé pour les maternelles de grande section et les CP."
           "Bee: Sequence": 'Abeille : séquence'
           "Artist: Sequence": "L'Artiste : Séquence"
           "Artist: Shapes": "L'Artiste : les Formes"
@@ -42,7 +42,7 @@ fr:
           "Bee: Loops": 'Abeille : Les boucles'
           "Studio: Create a Story": 'Labo: Créer une histoire'
           "Artist: Loops": 'Artiste : Les boucles'
-          description_audience: 4 ans et plus
+          description_audience: 4-6 ans
           description_short: "Le cours 1 s'adresse aux élèves qui commencent à lire."
         course2:
           The Maze: Le labyrinthe
@@ -102,14 +102,14 @@ fr:
           Artist Functions with Parameters: 'Artiste : fonctions avec paramètres'
           Computational Thinking: Algorithmique
           Functional Suncatchers: Vitraux fonctionnels
-          Songwriting Parameters: Paramètres de composition
+          Songwriting Parameters: Paramètres de composition de chansons
           Dice Race: Course de Dés
           Internet: Internet
           Crowdsourcing: Financement participatif
           Digital Citizenship: Citoyenneté numérique
           Farmer - While Loops: 'Fermier - les boucles "tant que"'
           description: "Le cours 3 s'adresse aux élèves qui ont suivi le cours 2. Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. A la fin de ce cours, les élèves pourront créer des histoires interactives et des jeux qu'ils pourront partager avec leurs amis. Recommandé pour les CM1-CM2."
-          "Studio: Create a Game": 'Laboratoire : Créer un jeu'
+          "Studio: Create a Game": 'Laboratoire de jeu : Créer un jeu'
           Maze: Labyrinthe
           Artist: Artiste
           "Artist: Functions": 'Artiste : les fonctions'
@@ -146,7 +146,7 @@ fr:
           description_short: "Dessinez des super images et schémas avec l'Artiste!"
         hourofcode:
           Maze: Labyrinthe
-          title: Classic Maze
+          title: Labyrinthe classique
           description: "Apprends à programmer avec les personnages d'Angry Birds, de Plantes contre Zombies et Scrat de l'age de glace !"
           description_short: Apprends à programmer avec des personnages rigolos !
         frozen:
@@ -156,7 +156,7 @@ fr:
           description_short: Aidons Anna et Elsa à explorer la magie et la beauté de la glace.
         course4:
           description_short: Les cours 2 et 3 sont nécessaires pour suivre le cours 4.
-          description: "Le cours 4 s'adresse aux élèves qui ont suivit les cours 2 et 3. Ils vont approfondir les sujets introduits dans les cours précédents pour donner des solutions adaptables à des problèmes plus complexes. A la fin de ce cours, les élèves créeront des histoires interactives et des jeux, qu'ils pourront partager. Convient à partir du CM1 jusqu'à la 4è."
+          description: "Ce 4ème cours s'adresse aux étudiants qui ont déjà réalisé les cours 2 et 3. Les puzzles à réaliser sont d'une plus grande complexité, et apprennent aux étudiants à combiner plusieurs concepts pour résoudre des défis. Une fois ce cours achevé, les élèves seront capables de réaliser des programmes qui mettront en avant de multiples compétences, comme l'utilisation de boucles et de fonctions avec paramètres."
           "Artist: Variables": 'Artiste : Les variables'
           "Bee: For Loops": 'Abeille : Les boucles "pour"'
           title: Cours 4
@@ -227,7 +227,7 @@ fr:
           description_short: "Apprendre la programmation fonctionnelle par l'algèbre"
           "Unplugged: Video Games and Coordinate Planes": 'Activité débranchée : jeux vidéo et les plans de coordonnées'
           "Calc: Evaluation Blocks": "Blocs d'évaluation et expressions arithmétiques"
-          "Eval: Strings and Images": Textes et Images
+          "Eval: Strings and Images": Chaînes et Images
           "Unplugged: Contracts": 'Activité débranchée : contrats, domaine, et gamme'
           "Eval: Writing Contracts": Rédaction de contrats
           "Calc: Defining Variables": Définition de Variables et Substitution
@@ -492,7 +492,7 @@ fr:
           "Unplugged: Collision Detection and the Distance Formula": 'Activité débranchée : la détection de collision et la formule de la distance'
           "Play Lab: Collision Detection (Big Game)": 'Labo : détection de Collision (grand jeu)'
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Contracts: Contrats
           Your Game - Defining Variables: 'Votre jeu - définition des Variables'
           Simple Function Definition: Définition de fonction simple
@@ -515,7 +515,7 @@ fr:
           description: "Enseigner l'algèbre par le biais de la programmation fonctionnelle"
           description_short: "Enseigner l'algèbre par le biais de la programmation fonctionnelle"
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Rocket-Height: Hauteur de la fusée
           Design Recipe Practice: Pratique de conception de recette
           Your Game - Animation: 'Votre jeu - Animation'
@@ -589,7 +589,8 @@ fr:
           description: Test Wednesday
         cspunit3:
           title: 'CSP Unit 3 - Programming'
-          description_short: Programming
+          title_short: CSP Unit 3
+          description_short: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: Fonctions
@@ -680,6 +681,7 @@ fr:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -690,7 +692,7 @@ fr:
           Teacher Dashboard: Tableau de bord enseignant
           Evaluation Blocks: "Blocs d'évaluation"
           The Big Game: The Big Game
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           The Design Recipe: La Recette de la Conception
           Next Steps: Prochaines étapes
         sciPD complex adaptive 2:
@@ -863,7 +865,7 @@ fr:
           Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
           Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          One Way Functions - Ice Cream Vans: 'One-Way Functions - The WiFi Hotspot Problem'
           Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
@@ -882,7 +884,7 @@ fr:
           description: "Apprendre la programmation fonctionnelle par l'algèbre"
           description_short: "Apprendre la programmation fonctionnelle par l'algèbre"
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Defining Variables: Définition de Variables
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Labo : Définition de fonctions'
@@ -925,6 +927,10 @@ fr:
           Pixelation: Pixellisation
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
+          Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: "Informatique en DP d'algèbre"
           description: "Apprendre la programmation fonctionnelle par l'algèbre"
@@ -933,7 +939,7 @@ fr:
           Computer Science Pedagogy: Pédagogie des sciences informatiques
           Teacher Dashboard: Tableau de bord enseignant
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Writing Contracts: Rédaction de contrats
           Defining Variables: Définition de Variables
           Defining Functions: Définition de fonctions
@@ -1039,7 +1045,7 @@ fr:
           Computer Science Pedagogy: Pédagogie des sciences informatiques
           Teacher Dashboard: Tableau de bord enseignant
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Writing Contracts: Rédaction de contrats
           Defining Variables: Définition de Variables
           Defining Functions: Définition de fonctions
@@ -1166,7 +1172,7 @@ fr:
           description_audience: Ages 6-13
           Happy Maps: Cartes joyeuses
           Move it, Move it: Déplacez le, déplacez le
-          "Real-life Algorithms: Plant a Seed": 'Les algorithmes : Planter une graine'
+          "Real-life Algorithms: Plant a Seed": 'Les algorithmes de la vraie vie : Planter une graine'
           Graph Paper Programming: Programmation sur papier quadrillé
           Building a Foundation: Créer une Fondation
           Getting Loopy: Tourner en rond
@@ -1234,6 +1240,7 @@ fr:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1306,6 +1313,10 @@ fr:
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 5 lessons: Unit 5 lessons
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1315,6 +1326,11 @@ fr:
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
           Unit 6 Challenge Planning & Creation: 'Unit 6 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
         cspunit4draft:
           title: 'CS Principles Unit 4 - Data'
           description_short: Data
@@ -1352,8 +1368,30 @@ fr:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
           Welcome!: Bienvenue !
@@ -1402,6 +1440,8 @@ fr:
           description_audience: 10 ans et + (après le Cours 3)
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
+          Spring 2016: Spring 2016
         iceage:
           title: Labo Age de Glace
           description_short: Crée une histoire ou fais un jeu avec le Labo Age de Glace !
@@ -1495,3 +1535,116 @@ fr:
           Welcome!: Bienvenue !
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Conclusions
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems
+        cspunit5:
+          title: 'CSP Unit 5 - Performance Tasks'
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: 'CSP Unit 4 - Data'
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Intro to Data: Introduction to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+          The Cost of Free: The Cost of Free
+        CSPPD3-Unit4:
+          title: 'Computer Science Principles: Unit 4 PD'
+          description_short: Support for CSP Unit 4
+          description: Online Support for CSP Unit 4
+          Getting Started: Getting Started
+          Unit 4 Overview: Unit 4 Overview
+          Chapter 1 Overview: Chapter 1 Overview
+          Chapter 2 Overview: Chapter 2 Overview
+          Practice Performance Tasks: Practice Performance Tasks
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit6draft:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, and it concludes with a sampling of example projects that can be built using these tools.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Updating Records: Updating Records
+          Deleting Records: Deleting Records
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        CSPPD3-Unit5:
+          title: 'Computer Science Principles: Unit 5 PD'
+          description_short: Support for CSP Unit 5
+          description: Online Support for CSP Unit 5
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Explore PT Breakdown: Explore PT Breakdown
+          Create PT Breakdown: Create PT Breakdown
+          Challenge Overview: Challenge Overview
+          Complete the Challlege: Complete the Challlege
+          Share out and Submit: Share out and Submit
+          Complete the Challlenge: Complete the Challlenge
+          Complete the Challenge: Complete the Challenge
+        cspunit6:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Deleting Records: Deleting Records
+          Updating Records: Updating Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Sample Apps: Sample Apps
+          Final Project: Final Project
+        AlgebraA:
+          title: 'Computer Science in Algebra: Course A'
+          description_short: "Apprendre la programmation fonctionnelle par l'algèbre"
+          description: "Apprendre la programmation fonctionnelle par l'algèbre"
+          "Calc: Evaluation Blocks": "Calc : Blocs d'évaluation"
+          "Eval: Strings and Images": 'Evaluation : Textes et des Images'
+          "Unplugged: Contracts": 'Activité débranchée : les contrats'
+          "Eval: Writing Contracts": 'Evaluation : Rédaction de contrats'
+          "Calc: Defining Variables": 'Calc : Définir les variables'
+          "Eval: Defining Functions": 'Eval : Définition de fonctions'
+          "Unplugged: The Design Recipe": 'Activité débranchée : les recettes de conception'
+          "Play Lab: Defining Functions": 'Labo : Définition de fonctions'
+          "Eval: Functions": 'Eval : fonctions'
+        AlgebraB:
+          title: Informatique en algèbre
+          description_short: "Apprendre la programmation fonctionnelle par l'algèbre"
+          description: "Apprendre la programmation fonctionnelle par l'algèbre"
+          "Unplugged: Video Games and Coordinate Planes": 'Activité débranchée : jeux vidéo et les plans de coordonnées'
+          "Play Lab: Defining Variables (Big Game)": 'Labo : définir les variables (grand jeu)'
+          "Play Lab: Animation (Big Game)": 'Labo : Animation (grand jeu)'
+          "Unplugged: Booleans": 'Activité débranchée : les booléens'
+          "Eval: Boolean Operators": 'Eval : Opérateurs Booléens'
+          "Play Lab: Booleans": 'Play Lab : Booléens'
+          "Play Lab: Boolean (Big Game)": 'Labo : les booléens (grand jeu)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Activité débranchée : les conditions et fonctions par morceaux'
+          "Eval: Conditionals": 'Evaluation : instructions conditionnelles'
+          "Unplugged: Collision Detection and the Distance Formula": 'Activité débranchée : la détection de collision et la formule de la distance'
+          "Play Lab: Collision Detection (Big Game)": 'Labo : détection de Collision (grand jeu)'
+        gamelab-hackathon:
+          Middle_School_Hackathon: Middle_School_Hackathon
+          title: Gamelab Hackathon
+          description_short: Gamelab Hackathon
+          description: A place to try things out in Game Lab

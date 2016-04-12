@@ -1,7 +1,4 @@
-require 'minitest/autorun'
-require 'rack/test'
-
-require File.expand_path '../../../deployment', __FILE__
+require_relative 'test_helper'
 
 class CdoTest < Minitest::Test
   def test_with_default

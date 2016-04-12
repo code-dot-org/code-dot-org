@@ -3,18 +3,6 @@
  * available in all browsers.  Also makes it easy to turn logging on and off
  * in tests.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 /**

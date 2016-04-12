@@ -11,7 +11,7 @@
     "y": "180",
     "is_k1": "true",
     "skip_instructions_popup": "false",
-    "ideal": "8",
+    "ideal": "6",
     "slider_speed": "0.4",
     "free_play": "false",
     "start_direction": "90",
@@ -31,7 +31,8 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -1,0 +1,265 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:32 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:31 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1/
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:32 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:31 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/testac0a7f8c2faac49775a6.png
+    body:
+      encoding: ASCII-8BIT
+      string: version 1
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 2z7AQOIN/GV9q1EK6rdHWQ==
+      Content-Length:
+      - '9'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:33 GMT
+      Etag:
+      - '"db3ec040e20dfc657dab510aeab74759"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:32 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/testac0a7f8c2faac49775a6.png
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:33 GMT
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Last-Modified:
+      - Mon, 16 Nov 2015 23:11:33 GMT
+      Etag:
+      - '"db3ec040e20dfc657dab510aeab74759"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '9'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: version 1
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:32 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1/
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:35 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/1/testac0a7f8c2faac49775a6.png</Key><LastModified>2015-11-16T23:11:33.000Z</LastModified><ETag>&quot;db3ec040e20dfc657dab510aeab74759&quot;</ETag><Size>9</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:34 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/testac0a7f8c2faac49775a6.png
+    body:
+      encoding: ASCII-8BIT
+      string: version 1
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 2z7AQOIN/GV9q1EK6rdHWQ==
+      Content-Length:
+      - '9'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:35 GMT
+      Etag:
+      - '"db3ec040e20dfc657dab510aeab74759"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:34 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/testac0a7f8c2faac49775a6.png
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      If-Modified-Since:
+      - Mon, 16 Nov 2015 23:11:33 GMT
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:36 GMT
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Last-Modified:
+      - Mon, 16 Nov 2015 23:11:35 GMT
+      Etag:
+      - '"db3ec040e20dfc657dab510aeab74759"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '9'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: version 1
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:35 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/testac0a7f8c2faac49775a6.png
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      If-Modified-Since:
+      - Mon, 16 Nov 2015 23:11:35 GMT
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 304
+      message: Not Modified
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:36 GMT
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Last-Modified:
+      - Mon, 16 Nov 2015 23:11:35 GMT
+      Etag:
+      - '"db3ec040e20dfc657dab510aeab74759"'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:35 GMT
+recorded_with: VCR 3.0.0

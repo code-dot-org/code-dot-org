@@ -27,54 +27,53 @@ ar:
         video: Unplug4
       Unplug5:
         title: دوال
-        desc: |-
-          In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of "skills" that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to "abstract out" the details of their specific materials and create vague terms for an individual's supplies.  This use of generic placeholders is a wonderful introduction to variables.
+        desc: 'في هذا الدرس، سوف تجعل الطلاب suncatcher من السلسلة، والخرز، وسحر خاص. الطلاب سوف تتبع سلسلة من الخطوات المتكررة، ثم يطلب منك تحديد مجموعات معينة من "المهارات" التي يتم تكرارها عدة مرات. حالما يتم تعريف هذه المهارات، أنهم سوف يطلق من برنامج الرئيسي وسيتم تسجيل عملية إنشاء أسرة جميلة على ورقة واحدة من الورقة. وسوف يكون البرنامج النهائي موجهة نحو فئة كاملة، أيا كان نوع السلسلة، والخرز، والسحر. للسماح بفعالية لهذا، سوف يلزم الطلاب "مجردة من" التفاصيل المتعلقة مواد محددة، وإنشاء عبارات مبهمة للإمدادات للفرد.  وهذا الاستخدام للعناصر النائبة العامة مقدمة رائعة للمتغيرات.'
         pdfs:
           - unplug5
         video: Unplug5
       Unplug6:
         title: الشروط
-        desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
+        desc: 'هذه لعبة الطبقة.  بعد إدخال فكرة الشرطية، وإذا كانت تصريحات، والحلقات، ممارسة الفئة معا باستخدام برنامج مكتوب مسبقاً، وأوراق اللعب، والحظ في القرعة.'
         pdfs:
           - unplug6
         video: Unplug6
       Unplug7:
         title: كتابة الاغنية
-        desc: "Reading lyrics is a pretty intuitive venture for most students.  We'll take an activity that's already common knowledge and shift it into a solid education on defining and calling functions. Once students are familiar with the define/call process, we will add the extra capabilities that come along with passing parameters within those function calls."
+        desc: 'كلمات القراءة مشروع بديهية جداً لمعظم الطلاب.  سنقوم باتخاذ نشاط موجود بالفعل المعرفة المشتركة والتحول إلى تعليم بشكل متين على تعريف واستدعاء دالات. وبمجرد الطلاب على دراية بعملية تعريف الاتصال، سوف نضيف القدرات الإضافية التي تأتي جنبا إلى جنب مع تمرير المعلمات داخل تلك المكالمات الدالة.'
         pdfs:
           - unplug7
         video: Unplug7
       Unplug8:
         title: خلاصة
-        desc: "This activity combines your students' everyday routine and a Mad-Lib style thinking game to help your class learn about the effectiveness of abstraction."
+        desc: هذا النشاط يجمع بين اليومية الروتينية الطلاب الخاص بك ولعبة ليب جنون نمط تفكير لمساعدة الفئة الخاصة بك التعرف على فعالية التجريد.
         pdfs:
           - unplug8
         video: Unplug8
       Unplug9:
         title: برمجة السباق
-        desc: 'This lesson will take an idea from a previous activity (4. Graph Paper Programming) and use those skills to emphasize the importance of completing programs that operate in sequence and frequently checking programs for "bugs".'
+        desc: 'هذا الدرس سوف تأخذ فكرة من نشاط سابق (4. ورق الرسم البياني البرمجة) واستخدام تلك المهارات للتأكيد على أهمية استكمال البرامج التي تعمل في تسلسل وغالباً التحقق من البرامج ل "الأخطاء".'
         pdfs:
           - unplug9
         video: Unplug9
       Unplug10:
         title: الانترنت
-        desc: In this lesson, students will pretend to flow through the Internet, all the while learning about web addresses, IPs and the DNS.
+        desc: في هذا الدرس، سوف نتظاهر الطلاب لتدفق من خلال شبكة الإنترنت، حين أن جميع التعلم عن عناوين ويب، البرامج المتكاملة ونظام أسماء النطاقات.
         pdfs:
           - unplug10
         video: Unplug10
       Unplug11:
         title: الجلسة الختامية
-        desc: The final wrap-up in the first 20-hour series will help the class relive all of their favorite moments, while giving them next steps that they can take on their own if they are interested in continuing their computer science journey.
+        desc: الاختتام النهائي في السلسلة الأولى من 20 ساعة سوف تساعد الفئة تسترجع كل من تلك اللحظات المفضلة، بينما منحهم التالية الخطوات التي يمكنهم الخاصة بهم إذا لم تكن مهتما بمواصلة رحلتهم علوم الكمبيوتر.
         pdfs:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
         title: الخرائط السعيدة
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        desc: الطلاب إنشاء خوارزميات بسيطة (مجموعات من التعليمات) لنقل حرف من خلال متاهة استخدام أمر واحد.
         video: C1_happy_maps_unplugged
       MoveIt:
         title: حركها ! حركها
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        desc: الطلاب إنشاء خوارزميات بسيطة (مجموعات من التعليمات) لنقل حرف من خلال متاهة استخدام أمر واحد.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'خوارزميات الحياة الحقيقية: زراعة البذور'
@@ -82,24 +81,23 @@ ar:
         video: C1_planting_seed
       BuildingAFoundation:
         title: بناء قاعدة
-        desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
+        desc: الطلاب بناء استخدام هيكل فقط توفير الإمدادات. يجب إكمال هياكل مهمة (تصل إلى ارتفاع معين أو تحمل وزن معينة)، والطلاب مناقشة فكرة يجري المستمرة عندما تتعقد الأمور.
         video: C1_building_foundation
       GettingLoopy:
         title: القبض على المعتوهون
-        desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
+        desc: هذا الدرس يقدم مفهوم البرمجة للحلقات (التعليمات المتكررة) من خلال نشاط رقص. الطلاب سوف تتعلم الرقص بسيطة، ثم أن تصدر تعليمات إلى تكرار ذلك.
         video: C1_getting_loopy
       RelayProgramming:
         title: برمجة السباق
-        desc: |-
-          Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
+        desc: 'تشغيل الطلاب سباق التتابع، حيث أنها اندفاعه عبر الساحة كتابة خوارزمية استناداً إلى صورة "برمجة ورقة الرسم البياني". أنهم فقط كتابة تعليمة واحدة في كل مرة، وإذا كان هناك خطأ في مكان ما، لديهم لمحو كل شيء العودة إلى هذه النقطة.'
         video: C2_relay_programming
       Conditionals:
         title: الجمل الشرطية
-        desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
+        desc: 'لمعرفة المزيد حول عبارات شرطية، تلعب لعبة بطاقة الطلاب وإنشاء قواعد مثل "إذا كان لي أن أوجه بطاقة حمراء، احصل على نقطة" و "إذا كنت التعادل بطاقة سوداء، تحصل نقطة"'
         video: C2_conditionals_with_cards
       BigEvent:
         title: الحدث الكبير
-        desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
+        desc: 'يتم تقديم الطلاب إلى مفهوم "الأحداث"، وهي الإجراءات التي تراقب جهاز كمبيوتر باستمرار للبرمجة. المعلم سوف اضغط الأزرار على ورقة بعد وسيكون رد فعل الطلاب استناداً إلى أي يتم الضغط على زر.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: الذهاب للأماكن بأمان
@@ -107,92 +105,92 @@ ar:
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: برمجة ورقة الرسم البياني
-        desc: Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
+        desc: الطلاب كتابة خوارزمية (مجموعة من التعليمات) باستخدام مجموعة من معرفة مسبقاً الأوامر لتوجيه زملائهم في إعادة إنشاء رسم.
         video: C2_graph_paper
       PaperPlanes:
         title: 'خوارزميات من واقع الحياة : طائرات ورقية'
-        desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
+        desc: ينادي هذا الدرس طرق نستخدم الخوارزميات في حياتنا اليومية، وعلى وجه التحديد صنع الطائرات الورقية. هذا الدرس أيضا يركز على الصورة الأكبر لعلوم الحاسوب وكيف خوارزميات تلعب دوراً أساسيا.
         video: C2_paper_airplanes
       BinaryBracelets:
         title: أساور الثنائية
-        desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
+        desc: الطلاب إنشاء أساور تمثيل ثنائي للحرف الأول من الاسم. يتعلم الطلاب أن يمكن تمثيل البيانات وتخزينها في أكثر من طريقة واحدة.
         video: C2_binary_bracelets
       DigitalFootprint:
         title: البصمة الرقمية الخاصة بك
-        desc: 'Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.'
+        desc: 'إدخال المدرسين إلى الطلاب فكرة أن وضع معلومات عن أنفسهم على الإنترنت يخلق البصمة الرقمية أو "درب" له عواقب.'
         video: C2_digital_footprint
       ComputationalThinking:
         title: التفكير الحسابي
-        desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
+        desc: الطلاب باستخدام خطوات التفكير الحسابي (تتحلل، نمط المباراة، مجردة، خوارزمية) لمعرفة كيفية لعب لعبة التي تأتي مع أي تعليمات.
         video: C3_computational_thinking
       FunctionalSuncatchers:
         title: سونكاتشيرس الوظيفية
-        desc: Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads.
+        desc: الطلاب إنشاء خوارزمية مع المتغيرات والدالات (قطعة من التعليمات البرمجية التي تريد استخدامها مرارا وتكرارا) لإنشاء سونكاتشيرس باستخدام سلسلة والخرز.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Songwriting with Parameters
-        desc: Students use the concept of the chorus in a song to learn about passing parameters (which customize a function without having to rewrite the entire function).
+        title: تأليف الأغاني مع المعلمات
+        desc: الطلاب باستخدام مفهوم الجوقة في أغنية للتعرف على تمرير المعلمات (وهو تخصيص دالة دون الحاجة إلى إعادة كتابة الدالة كامل).
         video: C3_songwriting_with_parameters
       DiceRace:
         title: 'خوارزميات الحياة الحقيقية: سباق النرد'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game.
+        desc: ينادي هذا الدرس طرق يمكننا استخدام الخوارزميات في حياتنا اليومية. وكجزء من ذلك، سيتم تحديد الطلاب وكتابة الخوارزمية للعبة سباق النرد.
         video: C3_dice_race
       Internet:
         title: الإنترنت
-        desc: Students send messages representing various Internet transmission methods using pieces of paper.
+        desc: الطلاب إرسال رسائل يمثلون مختلف أساليب الإرسال إنترنت باستخدام قطعة من الورق.
         video: C3_internet
       Crowdsourcing:
         title: التعهيد الجماعي
-        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
+        desc: الطلاب باستخدام crowdsourcing، أسلوب حل المشكلات شائعة في علوم الحاسوب، لإكمال مهمة معا كأحد فصول أكثر كفاءة من إذا كان طالب حاول وحدها.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: المواطنة الرقمية
-        desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
+        desc: استكشاف الطلاب الفرق بين معلومات القطاع الخاص والمعلومات الشخصية، التمييز بين ما هو آمنة وغير آمنة مشاركتها عبر الإنترنت.
       TangramAlgorithms:
         title: خوارزميات tangram
-        desc: This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail.
+        desc: هذا الدرس يبين لنا شيء مهم حول خوارزميات. إذا كنت تحتفظ خوارزمية بسيطة وهناك الكثير من الطرق لاستخدامها. إذا كنت ترغب في التأكد من الجميع ينتهي مع نفس الشيء، ثم خوارزمية الخاص بك يحتاج إلى مزيد من التفصيل.
         video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: Envelope Variables
-        desc: 'Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.'
+        title: المتغيرات المغلف
+        desc: 'متغيرات تتيح قدرا كبيرا من الحرية في علوم الكمبيوتر.  ويساعد هذا الدرس لشرح ما المتغيرات وكيف يمكننا استخدامها في العديد من الطرق المختلفة. استخدم هذا النشاط قبل (أو بالاقتران مع) الدرس على تجريد حقاً ضرب الفكرة الرئيسية.'
         video: C4_unplugged_variables
       MadGlibs:
-        title: Mad Glibs
-        desc: 'Abstraction is one of the most important skills for a computer scientist to understand.  This activity will have your students analyzing stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.'
+        title: 'يبس جنون هي اللعبة التي يلعب الأطفال هنا في الولايات المتحدة. يتم منح الطلاب الفراغات مع أجزاء من الكلام مثل "<إسم> و <صفة>" التي تنتمي إلى هذه العبارة المخفية. أنها اختيار أي كلمة عشوائية لتتناسب مع هذا الجزء من الكلام، ثم يتم عرض العبارة الأصلية. على سبيل المثال "بي <إسم> هو <صفة>!" انها لعبة ممتعة للطلاب لأن العبارات هي في كثير من الأحيان لا معنى لها. هذه خطة الدرس جنون Glibs لديها مفهوم مماثل، حيث الطلاب ملء الفراغات لخلق قصة. نحن نستخدم مصطلح "Glibs جنون" بسبب "جنون يبس" وعلامة تجارية'
+        desc: 'التجريد واحد من أهم المهارات لعالم كمبيوتر لفهم.  وسيكون هذا النشاط الطلاب تحليل قصص للفروق حيث أن هم يمكن مجردة منها بعيداً. تلك القصص مجردة تصبح قوالب للمتعة ومجنون جديدة.'
         video: C4_unplugged_madlibs
       ForLoopFun:
         title: حلقة فور، مرح
-        desc: We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in.
+        desc: ونحن نعلم أن الحلقات تتيح لنا القيام بأشياء مرارا وتكرارا، ولكن الآن نحن في طريقنا لمعرفة كيفية استخدام الحلقات مع هيكل إضافي بني الحق في.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: تأليف الأغاني مع المعلمات
-        desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
+        desc: 'أحد الهياكل الأكثر روعة في العالم علوم الحاسوب هي الدالة.  وظائف (تسمى في بعض الأحيان إجراءات) هي برامج صغيرة يمكنك استخدامها مرارا وتكرارا داخل البرنامج الخاص بك أكبر. هذا الدرس سوف يساعد الطلاب على فهم حدسي الجمع بين أجزاء من التعليمات البرمجية في الوظائف لماذا هذه ممارسة مفيدة.  '
         video: C4_unplugged_parameters
       BinaryImages:
         title: صور ثنائية
-        desc: 'Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.'
+        desc: 'دوراتنا السابقة على الرغم من أن الكثير من الناس يعتقدون من ثنائي دقة أصفار وآحاد، يدرس الطلاب أن المعلومات يمكن أن تكون ممثلة في مجموعة متنوعة من الخيارات الثنائية.  هذا الدرس يأخذ هذا المفهوم خطوة أخرى إلى الأمام كما أنه يوضح كيف يمكن لجهاز كمبيوتر تخزين معلومات أكثر تعقيداً (مثل الصور والألوان) بصورة ثنائية، كذلك.'
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
+        title: ألعاب الفيديو وتنسيق الطائرات
+        desc: اكتشف كيف تحب أن تلعب ألعاب الفيديو هي التي تحرك فعلا بالجبر! عبارات جبرية كيفية استكشاف وتنسيق الطائرة يمكن أن يساعدنا على فهم كيفية عمل ألعاب الفيديو، ومن ثم بدء التخطيط للعبة الفيديو التي ستقوم بإنشائها.
         video: alg_11_coordinate_plane
       Contracts:
-        title: Contracts, Domain, and Range
-        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
+        title: العقود والمجال والنطاق
+        desc: عقود تعطينا طريقة لفهم ومناقشة المهام. في هذا الدرس سنلقي نظرة على كيفية العقود يمكن أن يساعدنا على معنى لغة برمجة جديدة أو دالة.
         video: alg_5_contracts
       DesignRecipe:
         title: وصفه التصميم
-        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
+        desc: في آخر كتب طلاب المرحلة بعض وظائف بسيطة جداً--ولكن وظائف أكثر تعقيداً تتطلب نهجاً أكثر عمقاً. وصفه التصميم هو نهج منظم لكتابة الوظائف التي تتضمن كتابة حالات الاختبار التأكد من أن الدالة يعمل كما هو متوقع.
         video: alg_8_design_recipe
       Booleans:
         title: القيم المنطقية والمنطق
-        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
+        desc: القيم المنطقية هي نوع البيانات الرابع والأخير الذي سنتعرف في هذه الدورة. سوف تتعلم في هذا النشاط حول ما القيم المنطقية، وكيف أنها يمكن أن تساعد لنا كتابة وظائف التفكير المنطقي
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: الجمل الشرطية ووظائف مقطّعة
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        desc: معلمات نعبر إلى وظائف تتسبب النواتج التي تختلف استناداً إلى نمط صارم جداً. لنفترض أننا نريد معلمات مع بعض القيم لخلق النواتج باستخدام نمط واحد ولكن قيم أخرى باستخدام نمط مختلف. هذه التي تحتاج إلى الشرطية...
         video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection and the Pythagorean Theorem
-        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        title: اكتشاف التصادم ونظرية فيثاغورس
+        desc: تحديد عند لمس الأشياء على الشاشة أحد جوانب هامة لمعظم الألعاب. في هذا الدرس سنلقي نظرة على كيفية استخدام نظرية فيثاغورس وصيغة المسافة قياس المسافة بين نقطتين على متن الطائرة، ومن ثم تقرر ما إذا كان لمس تلك نقطتان (أو لعبة الأحرف).
         video: alg_16_biggame_collision_detection

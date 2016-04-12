@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [[ $1 == "debug" ]]; then
-  export MOOC_DEV=1
-fi
-
 (
   if [[ ( -d "../blockly-core" ) && ( -d "../apps" ) ]] ; then
     cd ../blockly-core
@@ -17,7 +13,12 @@ fi
   if [ -d "../apps" ] ; then
     cd ../apps
     npm install
-    grunt build
+
+    if [[ $1 == "debug" ]]; then
+      npm run build
+    else
+      npm run build:dist
+    fi
   else
     echo "Skipping blockly. No ../apps"
   fi

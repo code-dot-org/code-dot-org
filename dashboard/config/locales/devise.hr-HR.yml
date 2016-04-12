@@ -70,7 +70,7 @@
       not_locked: nije zaključan
       not_saved:
         one: '1 greška zabranjuje spremanje ovom %{resource} : '
-        other: '%{count} grešaka zabranjuju %{resource} da se spremi:'
+        other: "%{count} grešaka zabranjuju %{resource} da se spremi:"
     invitations:
       send_instructions: E-mail pozivnica je poslana na %{email}.
       invitation_token_invalid: Dan token pozivnice nije valjan!

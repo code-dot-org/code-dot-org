@@ -20,7 +20,7 @@ module.exports = {
     expected: {
       testResult: TestResults.MISSING_BLOCK_UNFINISHED
     },
-    xml: '"<xml><block type="when_run" deletable="false" movable="false"></block></next></block></xml>'
+    xml: '"<xml><block type="when_run" deletable="false" movable="false"></block></xml>'
   }, {
     description: "Level With Recommended Blocks: Completed without recommended block",
     expected: {

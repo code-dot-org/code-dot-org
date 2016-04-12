@@ -29,7 +29,7 @@ Scenario: Losing the first level
   And element "#resetButton" is visible
   And I wait to see ".congrats"
   And element ".congrats" is visible
-  And element ".congrats" has text "You are using all of the necessary types of blocks, but try using more of these types of blocks to complete this puzzle."
+  And element ".congrats" has text "Keep coding! Something's not quite right yet."
   And there's an image "artist/failure_avatar"
   And I press "again-button"
   And I press "resetButton"

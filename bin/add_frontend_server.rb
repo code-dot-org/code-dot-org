@@ -14,6 +14,8 @@ require 'json'
 require 'set'
 require 'thread'
 
+CHEF_VERSION='12.7.2'
+
 # A map from a supported environment to the corresponding Chef role to use for
 # that environment.
 ROLE_MAP = {
@@ -88,8 +90,10 @@ def determine_frontend_instance_distribution
   instances = @ec2client.describe_instances
 
   frontend_instances = instances.reservations.map do |reservation|
-    reservation.instances.select { |instance| instance.state.name == 'running' &&
-        instance.tags.detect { |tag| tag.key == 'Name' && tag.value.include?('frontend') } }
+    reservation.instances.select do |instance|
+      instance.state.name == 'running' &&
+        instance.tags.detect { |tag| tag.key == 'Name' && tag.value.include?('frontend') }
+    end
   end
 
   frontend_instances.flatten!
@@ -238,7 +242,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   @ec2client.wait_until(:instance_running, instance_ids: [instance_id]) do |waiting|
     waiting.max_attempts = nil
 
-    waiting.before_wait do |attempts, response|
+    waiting.before_wait do |_attempts, _response|
       if Time.now - started_at > MAX_WAIT_TIME
         puts "Instance #{instance_id} still not created. Giving up - check the EC2 console and see if there's an error."
         exit(1)
@@ -253,7 +257,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   @ec2client.wait_until(:instance_status_ok, instance_ids: [instance_id]) do |waiting|
     waiting.max_attempts = nil
 
-    waiting.before_wait do |attempts, response|
+    waiting.before_wait do |_attempts, _response|
       if Time.now - started_at > MAX_WAIT_TIME
         print "Instance #{instance_id} was created but has not passed status checks. Check EC2 console.\n"
         exit(1)
@@ -280,14 +284,13 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   instance_provisioning_info.private_dns = private_dns_name
   instance_provisioning_info.public_dns = public_dns_name
 
-
   OUTPUT_MUTEX.synchronize {
     print "\nCreated instance #{instance_id} with name #{instance_provisioning_info.name}\n"
     print "Private dns name: #{private_dns_name}\n\n"
     puts "Writing new configuration file\n"
   }
 
-  file_suffix = rand(100000000)
+  file_suffix = rand(100_000_000)
 
   Net::SSH.start('gateway.code.org', @username) do |ssh|
     ssh.exec!("knife environment show #{environment} -F json > /tmp/old_knife_config#{file_suffix}")
@@ -296,15 +299,14 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   Net::SCP.download!('gateway.code.org', @username, "/tmp/old_knife_config#{file_suffix}",
                      "/tmp/knife_config#{file_suffix}")
 
-  configuration_json = JSON.parse(File.read("/tmp/knife_config#{file_suffix}"))
   OUTPUT_MUTEX.synchronize {
+    configuration_json = JSON.parse(File.read("/tmp/knife_config#{file_suffix}"))
     configuration_json['override_attributes']['cdo-secrets']['app_servers'] ||= {}
     configuration_json['override_attributes']['cdo-secrets']['app_servers'][instance_provisioning_info.name] = private_dns_name
+    File.open('/tmp/new_knife_config.json', 'w') do |f|
+      f.write(JSON.dump(configuration_json))
+    end
   }
-
-  File.open('/tmp/new_knife_config.json', 'w') do |f|
-    f.write(JSON.dump(configuration_json))
-  end
 
   Net::SCP.upload!('gateway.code.org', @username, '/tmp/new_knife_config.json', "/tmp/new_knife_config#{file_suffix}.json")
   print "New configuration file uploaded, now loading it.\n"
@@ -316,7 +318,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
     ssh.exec!("rm /tmp/*#{file_suffix}*")
   end
 
-  cmd = "ssh gateway.code.org -t \"/bin/sh -c 'knife bootstrap #{private_dns_name} -x ubuntu --sudo -E #{environment} -N #{instance_provisioning_info.name} -r role[#{role}]'\""
+  cmd = "ssh gateway.code.org -t \"/bin/sh -c 'knife bootstrap #{private_dns_name} -x ubuntu --sudo --bootstrap-version #{CHEF_VERSION} -E #{environment} -N #{instance_provisioning_info.name} -r role[#{role}]'\""
   print "Bootstrapping #{environment} frontend, please be patient. This takes ~15 minutes.\n"
   print cmd + "\n"
   bootstrap_result = `#{cmd}`
@@ -355,7 +357,6 @@ OptionParser.new do |opts|
     @options['name'] = name
   end
 
-
   opts.on('-p', '--name-prefix PREFIX', 'Prefix for frontend names') do |prefix|
     @options['prefix'] = prefix
   end
@@ -385,6 +386,12 @@ end.parse!
 environment = @options['environment']
 raise OptionParser::MissingArgument, 'Environment is required' if environment.nil?
 
+raise OptionParser::MissingArgument, 'Name is required when creating one new instance' if @options['count'].nil? &&
+  @options['name'].nil?
+
+raise OptionParser::MissingArgument, 'Prefix is required when creating multiple instances' if !@options['count'].nil? &&
+  @options['prefix'].nil?
+
 role = @options['role'] || ROLE_MAP[environment]
 raise "Unsupported environment #{environment}" unless role
 
@@ -407,7 +414,7 @@ puts @options
 instance_type = aws_instance_type(environment)
 instances_to_create = []
 
-if (@options['count'] == 1)
+if @options['count'] == 1
   determined_instance_zone, instance_name = generate_instance_zone_and_name(@ec2client, @username, @options['name'])
 
   puts "Naming instance #{instance_name}, creating frontend server with instance type #{instance_type}"
@@ -432,17 +439,17 @@ instances_to_create.each do |instance_to_create|
       instance_to_create.result = "Failed: #{e}"
     end
   end
-  sleep(1);
+  sleep(1)
 end
 
-instance_creation_threads.each {|thread| thread.join}
+instance_creation_threads.each(&:join)
 
 instances_to_create.each do |instance_to_create|
   puts "#{instance_to_create.name}: #{instance_to_create.result}"
 end
 
 #If we've created all instances successfully, and without exceptions, it's safe to update the production daemon.
-if instances_to_create.index {|created_instance| created_instance.result != 'Succeeded'} == nil
+if instances_to_create.index {|created_instance| created_instance.result != 'Succeeded'}.nil?
   puts 'All instances were created successfully'
   puts 'Updating production-daemon chef config with new node.'
   `ssh gateway.code.org -t "ssh production-daemon -t sudo chef-client"`

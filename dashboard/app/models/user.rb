@@ -120,12 +120,16 @@ class User < ActiveRecord::Base
 
   belongs_to :invited_by, :polymorphic => true
 
-  # TODO: I think we actually want to do this
+  # TODO: I think we actually want to do this.
   # you can be associated with distrits through cohorts
 #   has_many :districts, through: :cohorts
 
   def facilitator?
     permission? UserPermission::FACILITATOR
+  end
+
+  def workshop_organizer?
+    permission? UserPermission::WORKSHOP_ORGANIZER
   end
 
   def delete_permission(permission)
@@ -197,6 +201,9 @@ class User < ActiveRecord::Base
   STUDENTS_FEMALE_FOR_BONUS = 7
 
   attr_accessor :login
+
+  has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
+  has_many :plc_task_assignments, class_name: '::Plc::EnrollmentTaskAssignment', through: :plc_enrollments
 
   has_many :user_levels, -> {order 'id desc'}
   has_many :activities
@@ -286,8 +293,16 @@ class User < ActiveRecord::Base
   end
 
   def User.find_by_email_or_hashed_email(email)
+    return nil if email.blank?
+
     User.find_by_email(email.downcase) ||
       User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
+  end
+
+  def User.find_channel_owner(encrypted_channel_id)
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
+    User.find(user_id)
   end
 
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
@@ -324,6 +339,7 @@ class User < ActiveRecord::Base
     end
   end
 
+  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin']
   def self.from_omniauth(auth, params)
     def self.name_from_omniauth(raw_name)
       return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
@@ -338,8 +354,13 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
       user.user_type = params['user_type'] || auth.info.user_type || User::TYPE_STUDENT
 
+      # treat clever admin types as teachers
+      if CLEVER_ADMIN_USER_TYPES.include? user.user_type
+        user.user_type = User::TYPE_TEACHER
+      end
+
       # clever provides us these fields
-      if auth.info.user_type == TYPE_TEACHER
+      if user.user_type == TYPE_TEACHER
         # if clever told us that the user is a teacher, we just trust
         # that they are adults; we don't actually care about age
         user.age = 21
@@ -456,7 +477,7 @@ SQL
   end
 
   def concept_progress(script = Script.twenty_hour_script)
-    # todo: cache everything but the user's progress
+    # TODO: Cache everything but the user's progress.
     user_levels_map = self.user_levels.includes([{level: :concepts}]).index_by(&:level_id)
     user_trophy_map = self.user_trophies.includes(:trophy).index_by(&:concept_id)
     result = Hash.new{|h,k| h[k] = {obj: k, current: 0, max: 0}}
@@ -574,7 +595,6 @@ SQL
     return nil if name.blank?
     return name.strip[0].upcase
   end
-
 
   # override the default devise password to support old and new style hashed passwords
   # based on Devise::Models::DatabaseAuthenticatable#valid_password?
@@ -782,7 +802,7 @@ SQL
 
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level, new_result)
+  def track_level_progress_async(script_level, new_result, submitted)
     level_id = script_level.level_id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(user_id: self.id,
@@ -794,7 +814,8 @@ SQL
                 'user_id' => self.id,
                 'level_id' => level_id,
                 'script_id' => script_id,
-                'new_result' => new_result}
+                'new_result' => new_result,
+                'submitted' => submitted}
     if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
       User.progress_queue.enqueue(async_op.to_json)
     else
@@ -806,7 +827,7 @@ SQL
   end
 
   # The synchronous handler for the track_level_progress helper.
-  def User.track_level_progress_sync(user_id, level_id, script_id, new_result)
+  def User.track_level_progress_sync(user_id, level_id, script_id, new_result, submitted)
     new_level_completed = false
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.where(user_id: user_id,
@@ -818,6 +839,7 @@ SQL
       # update the user_level with the new attempt
       user_level.attempts += 1 unless user_level.best?
       user_level.best_result = new_result if new_result > (user_level.best_result || -1)
+      user_level.submitted = submitted
 
       user_level.save!
     end
@@ -831,7 +853,7 @@ SQL
     raise 'Model must be User' if op['model'] != 'User'
     case op['action']
       when 'track_level_progress'
-        User.track_level_progress_sync(op['user_id'], op['level_id'], op['script_id'], op['new_result'])
+        User.track_level_progress_sync(op['user_id'], op['level_id'], op['script_id'], op['new_result'], op['submitted'])
       else
         raise "Unknown action in #{op}"
     end
@@ -889,6 +911,18 @@ SQL
 
   def User.progress_queue
     AsyncProgressHandler.progress_queue
+  end
+
+  # can this user edit their own account?
+  def can_edit_account?
+    return true if teacher? || encrypted_password.present? || oauth?
+
+    # sections_as_student should be a method but I already did that in another branch so I'm avoiding conflicts for now
+    sections_as_student = followeds.collect(&:section)
+    return true if sections_as_student.empty?
+
+    # if you log in only through picture passwords you can't edit your account
+    return !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
   end
 
 end

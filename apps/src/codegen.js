@@ -1,14 +1,27 @@
-/* global Interpreter, CanvasPixelArray */
+/* global Interpreter, CanvasPixelArray, ace, Uint8ClampedArray */
 
 var dropletUtils = require('./dropletUtils');
+var utils = require('./utils');
+
+/*
+ * Note: These are defined to match the state.mode of the interpreter. The
+ * values must stay in sync with interpreter.js
+ */
+
+exports.ForStatementMode = {
+  INIT: 0,
+  TEST: 1,
+  BODY: 2,
+  UPDATE: 3
+};
 
 /**
  * Evaluates a string of code parameterized with a dictionary.
  */
-exports.evalWith = function(code, options) {
+exports.evalWith = function (code, options) {
   if (options.StudioApp && options.StudioApp.editCode) {
     // Use JS interpreter on editCode levels
-    var initFunc = function(interpreter, scope) {
+    var initFunc = function (interpreter, scope) {
       exports.initJSInterpreter(interpreter, null, null, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
@@ -23,7 +36,7 @@ exports.evalWith = function(code, options) {
       args.push(options[k]);
     }
     params.push(code);
-    var ctor = function() {
+    var ctor = function () {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
@@ -34,7 +47,7 @@ exports.evalWith = function(code, options) {
 /**
  * Returns a function based on a string of code parameterized with a dictionary.
  */
-exports.functionFromCode = function(code, options) {
+exports.functionFromCode = function (code, options) {
   if (options.StudioApp && options.StudioApp.editCode) {
     // Since this returns a new native function, it doesn't make sense in the
     // editCode case (we assume that the app will be using JSInterpreter)
@@ -47,7 +60,7 @@ exports.functionFromCode = function(code, options) {
       args.push(options[k]);
     }
     params.push(code);
-    var ctor = function() {
+    var ctor = function () {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
@@ -68,7 +81,7 @@ var LOOP_HIGHLIGHT_RE =
 /**
  * Returns javascript code to call a timeout check
  */
-exports.loopTrap = function() {
+exports.loopTrap = function () {
   return INFINITE_LOOP_TRAP;
 };
 
@@ -85,7 +98,7 @@ exports.loopHighlight = function (apiName, blockId) {
  * @param {string} code Generated code.
  * @return {string} The code without serial numbers and timeout checks.
  */
-exports.strip = function(code) {
+exports.strip = function (code) {
   return (code
     // Strip out serial numbers.
     .replace(/(,\s*)?'block_id_\d+'\)/g, ')')
@@ -107,8 +120,8 @@ exports.strip = function(code) {
 /**
  * Extract the user's code as raw JavaScript.
  */
-exports.workspaceCode = function(blockly) {
-  var code = blockly.Generator.blockSpaceToCode('JavaScript');
+exports.workspaceCode = function (blockly) {
+  var code = blockly.Generator.blockSpaceToCode('JavaScript', null, false);
   return exports.strip(code);
 };
 
@@ -129,10 +142,30 @@ function safeReadProperty(object, property) {
 // (Chrome V8 says ForInStatement is not fast case)
 //
 
-function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
-  var retVal = interpreter.createObject(interpreter.OBJECT);
+/**
+ * Marshal a native object to an interpreter object.
+ *
+ * @param {Interpreter} interpreter Interpreter instance
+ * @param {Object} nativeObject Object to marshal
+ * @param {Number} maxDepth Optional maximum depth to traverse in properties
+ * @param {Object} interpreterObject Optional existing interpreter object
+ * @return {!Object} The interpreter object, which was created if needed.
+ */
+function marshalNativeToInterpreterObject(
+    interpreter,
+    nativeObject,
+    maxDepth,
+    interpreterObject) {
+  var retVal = interpreterObject || interpreter.createObject(interpreter.OBJECT);
+  var isFunc = interpreter.isa(retVal, interpreter.FUNCTION);
   for (var prop in nativeObject) {
     var value = safeReadProperty(nativeObject, prop);
+    if (isFunc &&
+        (value === Function.prototype.trigger ||
+            value === Function.prototype.inherits)) {
+      // Don't marshal these that were added by jquery or else we will recurse
+      continue;
+    }
     interpreter.setProperty(retVal,
                             prop,
                             exports.marshalNativeToInterpreter(interpreter,
@@ -152,19 +185,85 @@ function isCanvasImageData(nativeVar) {
 }
 
 
+/**
+ * Create a new "custom marshal" interpreter object that corresponds to a native
+ * object.
+ * @param {Interpreter} interpreter Interpreter instance
+ * @param {Object} nativeObj Object to wrap
+ * @param {Object} nativeParentObj Parent of object to wrap
+ * @return {!Object} New interpreter object.
+ */
+var createCustomMarshalObject = function (interpreter, nativeObj, nativeParentObj) {
+  if (nativeObj === undefined && interpreter.UNDEFINED) {
+    return interpreter.UNDEFINED;  // Reuse the same object.
+  }
+  var type = typeof nativeObj;
+  var obj = {
+    data: nativeObj,
+    isPrimitive: false,
+    isCustomMarshal: true,
+    type: typeof nativeObj,
+    parent: nativeParentObj, // TODO (cpirich): replace with interpreter object?
+    toBoolean: function () {return Boolean(this.data);},
+    toNumber: function () {return Number(this.data);},
+    toString: function () {return String(this.data);},
+    valueOf: function () {return this.data;}
+  };
+  return obj;
+};
+
+exports.customMarshalObjectList = [];
+exports.asyncFunctionList = [];
+exports.nativeCallsInterpreterFunctionList = [];
+
+// If this is on our list of "custom marshal" objects - or if it a property
+// on one of those objects (other than a function), return true
+
+var shouldCustomMarshalObject = function (nativeVar, nativeParentObj) {
+  for (var i = 0; i < exports.customMarshalObjectList.length; i++) {
+    var marshalObj = exports.customMarshalObjectList[i];
+    if ((nativeVar instanceof marshalObj.instance &&
+          (typeof marshalObj.requiredMethod === 'undefined' ||
+            nativeVar[marshalObj.requiredMethod] !== undefined)) ||
+        (typeof nativeVar !== 'function' &&
+            nativeParentObj instanceof marshalObj.instance)) {
+      return true;
+    }
+  }
+  return false;
+};
+
+// When marshaling methods on "custom marshal" objects, we may need to augment
+// the marshaling options. This returns those options.
+
+var getCustomMarshalMethodOptions = function (nativeParentObj) {
+  for (var i = 0; i < exports.customMarshalObjectList.length; i++) {
+    var marshalObj = exports.customMarshalObjectList[i];
+    if (nativeParentObj instanceof marshalObj.instance) {
+      if (typeof marshalObj.requiredMethod === 'undefined' ||
+           nativeParentObj[marshalObj.requiredMethod] !== undefined) {
+        return marshalObj.methodOpts || {};
+      } else {
+        return {};
+      }
+    }
+  }
+  return {};
+};
+
 //
 // Droplet/JavaScript/Interpreter codegen functions:
 //
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
-  if (typeof nativeVar === 'undefined') {
+  if (maxDepth === 0 || typeof nativeVar === 'undefined') {
     return interpreter.UNDEFINED;
   }
   var i, retVal;
   if (typeof maxDepth === "undefined") {
-    maxDepth = Infinity; // default to inifinite levels of depth
+    maxDepth = Infinity; // default to infinite levels of depth
   }
-  if (maxDepth === 0) {
-    return interpreter.createPrimitive(undefined);
+  if (shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
+    return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
   }
   if (nativeVar instanceof Array) {
     retVal = interpreter.createObject(interpreter.ARRAY);
@@ -181,12 +280,33 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     }
     retVal.length = nativeVar.length;
   } else if (nativeVar instanceof Function) {
-    var wrapper = exports.makeNativeMemberFunction({
-        interpreter: interpreter,
-        nativeFunc: nativeVar,
-        nativeParentObj: nativeParentObj,
-    });
-    retVal = interpreter.createNativeFunction(wrapper);
+    var makeNativeOpts = {
+      interpreter: interpreter,
+      nativeFunc: nativeVar,
+      nativeParentObj: nativeParentObj,
+    };
+    if (exports.asyncFunctionList.indexOf(nativeVar) !== -1) {
+      // Mark if this should be nativeIsAsync:
+      makeNativeOpts.nativeIsAsync = true;
+    }
+    if (exports.nativeCallsInterpreterFunctionList.indexOf(nativeVar) !== -1) {
+      // Mark if this should be nativeCallsBackInterpreter:
+      makeNativeOpts.nativeCallsBackInterpreter = true;
+    }
+    var extraOpts = getCustomMarshalMethodOptions(nativeParentObj);
+    // Add extra options if the parent of this function is in our custom marshal
+    // modified object list:
+    for (var prop in extraOpts) {
+      makeNativeOpts[prop] = extraOpts[prop];
+    }
+    var wrapper = exports.makeNativeMemberFunction(makeNativeOpts);
+    if (makeNativeOpts.nativeIsAsync) {
+      retVal = interpreter.createAsyncFunction(wrapper);
+    } else {
+      retVal = interpreter.createNativeFunction(wrapper);
+    }
+    // Also marshal properties on the native function object:
+    marshalNativeToInterpreterObject(interpreter, nativeVar, maxDepth - 1, retVal);
   } else if (nativeVar instanceof Object) {
     // note Object must be checked after Function and Array (since they are also Objects)
     if (interpreter.isa(nativeVar, interpreter.FUNCTION)) {
@@ -207,8 +327,10 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
+exports.createNativeFunctionFromInterpreterFunction = null;
+
 exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
-  if (interpreterVar.isPrimitive) {
+  if (interpreterVar.isPrimitive || interpreterVar.isCustomMarshal) {
     return interpreterVar.data;
   } else if (interpreter.isa(interpreterVar, interpreter.ARRAY)) {
     var nativeArray = [];
@@ -218,18 +340,92 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
                                                           interpreterVar.properties[i]);
     }
     return nativeArray;
-  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT) ||
+      interpreterVar.type === 'object') {
     var nativeObject = {};
     for (var prop in interpreterVar.properties) {
       nativeObject[prop] = exports.marshalInterpreterToNative(interpreter,
                                                               interpreterVar.properties[prop]);
     }
     return nativeObject;
+  } else if (interpreter.isa(interpreterVar, interpreter.FUNCTION)) {
+    if (exports.createNativeFunctionFromInterpreterFunction) {
+      return exports.createNativeFunctionFromInterpreterFunction(interpreterVar);
+    } else {
+      // Just return the interpreter object if we can't convert it. This is needed
+      // for passing interpreter callback functions into native.
+
+      return interpreterVar;
+    }
   } else {
-    // Just return the interpreter object if we can't convert it. This is needed
-    // for passing interpreter callback functions into native.
-    return interpreterVar;
+    throw "Can't marshal type " + typeof interpreterVar;
   }
+};
+
+/**
+ * Generate a function wrapper for an interpreter async function callback.
+ * The interpreter async function callback takes a single parameter, which
+ * becomes the return value of the synchronous function in the interpreter
+ * world. Here, we wrap the supplied callback to marshal the single parameter
+ * from native to interpreter before calling the supplied callback.
+ *
+ * @param {Object} opts Options block with interpreter and maxDepth provided
+ * @param {function} callback The interpreter supplied callback function
+ */
+var createNativeCallbackForAsyncFunction = function (opts, callback) {
+  return function (nativeValue) {
+    callback(
+        exports.marshalNativeToInterpreter(
+            opts.interpreter,
+            nativeValue,
+            null,
+            opts.maxDepth));
+  };
+};
+
+/**
+ * Generate a function wrapper for an interpreter callback that will be
+ * invoked by a special native function that can execute these callbacks inline
+ * on the interpreter stack.
+ *
+ * @param {!Object} opts Options block
+ * @param {!Interpreter} opts.interpreter Interpreter instance
+ * @param {number} [opts.maxDepth] Maximum depth to marshal objects
+ * @param {boolean} [opts.dontMarshal] Do not marshal parameters if true
+ * @param {Object} [opts.callbackState] callback state object, which will
+          hold the unmarshaled return value as a 'value' property later.
+ * @param {Function} intFunc The interpreter supplied callback function
+ */
+exports.createNativeInterpreterCallback = function (opts, intFunc) {
+  return function (nativeValue) {
+    var args = Array.prototype.slice.call(arguments);
+    var intArgs;
+    if (opts.dontMarshal) {
+      intArgs = args;
+    } else {
+      intArgs = [];
+      for (var i = 0; i < args.length; i++) {
+        intArgs[i] = exports.marshalNativeToInterpreter(
+            opts.interpreter,
+            args[i],
+            null,
+            opts.maxDepth);
+      }
+    }
+    // Shift a CallExpression node on the stack that already has its func_,
+    // arguments, and other state populated:
+    var state = opts.callbackState || {};
+    state.node = {
+      type: 'CallExpression',
+      arguments: intArgs /* this just needs to be an array of the same size */
+    };
+    state.doneCallee_ = true;
+    state.func_ = intFunc;
+    state.arguments = intArgs;
+    state.n_ = intArgs.length;
+
+    opts.interpreter.stateStack.unshift(state);
+  };
 };
 
 /**
@@ -237,18 +433,31 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
  */
 exports.makeNativeMemberFunction = function (opts) {
   if (opts.dontMarshal) {
-    return function() {
+    return function () {
       // Just call the native function and marshal the return value:
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, arguments);
       return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
         null, opts.maxDepth);
     };
   } else {
-    return function() {
+    return function () {
       // Call the native function after marshalling parameters:
       var nativeArgs = [];
       for (var i = 0; i < arguments.length; i++) {
-        nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
+        if (opts.nativeIsAsync && (i === arguments.length - 1)) {
+          // Async functions receive a native callback method as their last
+          // parameter, and we want to wrap that callback to ease marshalling:
+          nativeArgs[i] = createNativeCallbackForAsyncFunction(opts, arguments[i]);
+        } else if (opts.nativeCallsBackInterpreter &&
+            typeof arguments[i] === 'object' &&
+            opts.interpreter.isa(arguments[i], opts.interpreter.FUNCTION)) {
+          // A select class of native functions is aware of the interpreter and
+          // capable of calling the interpreter on the stack immediately. We
+          // marshal these differently:
+          nativeArgs[i] = exports.createNativeInterpreterCallback(opts, arguments[i]);
+        } else {
+          nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
+        }
       }
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
       return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
@@ -257,18 +466,18 @@ exports.makeNativeMemberFunction = function (opts) {
   }
 };
 
-function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
+function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj, options) {
   for (var prop in funcsObj) {
     var func = funcsObj[prop];
     if (func instanceof Function) {
       // Populate the scope with native functions
       // NOTE: other properties are not currently passed to the interpreter
       var parent = parentObj ? parentObj : funcsObj;
-      var wrapper = exports.makeNativeMemberFunction({
+      var wrapper = exports.makeNativeMemberFunction(utils.extend(options, {
           interpreter: interpreter,
           nativeFunc: func,
           nativeParentObj: parent,
-      });
+      }));
       interpreter.setProperty(scope,
                               prop,
                               interpreter.createNativeFunction(wrapper));
@@ -300,11 +509,16 @@ function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
           interpreter: interpreter,
           nativeFunc: func,
           nativeParentObj: block.parent,
-          dontMarshal: block.dontMarshal
+          dontMarshal: block.dontMarshal,
+          nativeIsAsync: block.nativeIsAsync
       });
-      interpreter.setProperty(funcScope,
-                              funcName,
-                              interpreter.createNativeFunction(wrapper));
+      var intFunc;
+      if (block.nativeIsAsync) {
+        intFunc = interpreter.createAsyncFunction(wrapper);
+      } else {
+        intFunc = interpreter.createNativeFunction(wrapper);
+      }
+      interpreter.setProperty(funcScope, funcName, intFunc);
     }
   }
 }
@@ -326,7 +540,7 @@ function populateJSFunctions(interpreter) {
   }
 
   // Add String.prototype.includes
-  wrapper = function(searchStr) {
+  wrapper = function (searchStr) {
     // Polyfill based off of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
     return interpreter.createPrimitive(
       String.prototype.indexOf.apply(this, arguments) !== -1);
@@ -344,20 +558,27 @@ function populateJSFunctions(interpreter) {
  * blockFilter (optional): an object with block-name keys that should be used
  *  to filter which blocks are populated.
  * scope (required): interpreter's global scope.
- * options (optional): objects containing functions to placed in a new scope
+ * globalObjects (optional): objects containing functions to placed in a new scope
  *  created beneath the supplied scope.
  */
-exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, options) {
-  for (var optsObj in options) {
-    // The options object contains objects that will be referenced
+exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, globalObjects) {
+  for (var globalObj in globalObjects) {
+    // The globalObjects object contains objects that will be referenced
     // by the code we plan to execute. Since these objects exist in the native
     // world, we need to create associated objects in the interpreter's world
     // so the interpreted code can call out to these native objects
 
     // Create global objects in the interpreter for everything in options
     var obj = interpreter.createObject(interpreter.OBJECT);
-    interpreter.setProperty(scope, optsObj.toString(), obj);
-    populateFunctionsIntoScope(interpreter, obj, options[optsObj]);
+    interpreter.setProperty(scope, globalObj.toString(), obj);
+    // Marshal return values with a maxDepth of 2 (just an object and its child
+    // methods and properties only)
+    populateFunctionsIntoScope(
+        interpreter,
+        obj,
+        globalObjects[globalObj],
+        null,
+        { maxDepth: 2 });
   }
   populateGlobalFunctions(
       interpreter,
@@ -384,20 +605,20 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
   if (state.done) {
     return true;
   }
-  if (type === "ForStatement") {
-    var mode = state.mode || 0;
-    // Safe to skip over ForStatement's in mode 0 (init) and 3 (update),
-    // but not mode 1 (test) or mode 2 (body) while unwinding...
-    return mode === 0 || mode === 3;
-  }
   if (type === "SwitchStatement") {
     // Safe to skip over SwitchStatement's except the very start (before a
     // switchValue has been set):
     return typeof state.switchValue !== 'undefined';
   }
+  if (type === "VariableDeclaration") {
+    // Only stop the first time this VariableDeclaration is processed (the
+    // interpreter will stop on this node multiple times, but with different
+    // `state.n` representing which VariableDeclarator is being executed).
+    return state.n > 0;
+  }
   switch (type) {
     // Declarations:
-    case "VariableDeclaration":
+    case "VariableDeclarator":
     // Statements:
     case "BlockStatement":
     case "BreakStatement":
@@ -428,19 +649,17 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
 
 // session is an instance of Ace editSession
 // Usage
-// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// var lengthArray = calculateCumulativeLength(editor.getSession());
 // Need to call this only if the document is updated after the last call.
-exports.aceCalculateCumulativeLength = function (session) {
-  var cumulativeLength = [];
-  var cnt = session.getLength();
-  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
-  cumulativeLength.push(cuml);
-  var text = session.getLines(0, cnt);
-  for (var i = 0; i < cnt; i++) {
-    cuml += text[i].length + nlLength;
-    cumulativeLength.push(cuml);
-  }
-  return cumulativeLength;
+exports.calculateCumulativeLength = function (code) {
+  var regex = /\n/g, result = [];
+  do {
+    result.push(regex.lastIndex);
+    regex.exec(code);
+  } while (regex.lastIndex !== 0);
+
+  result.push(code.length + 1);
+  return result;
 };
 
 // Fast binary search implementation
@@ -460,7 +679,7 @@ exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
 
   if (pos < cumulativeLength[mid]) {
     return exports.aceFindRow(cumulativeLength, rows, mid, pos);
-  } else if(pos > cumulativeLength[mid]) {
+  } else if (pos > cumulativeLength[mid]) {
     return exports.aceFindRow(cumulativeLength, mid, rowe, pos);
   }
   return mid;
@@ -479,7 +698,7 @@ var lastHighlightMarkerIds = {};
 /**
  * Clears all highlights that we have added in the ace editor.
  */
-function clearAllHighlightedAceLines (aceEditor) {
+function clearAllHighlightedAceLines(aceEditor) {
   var session = aceEditor.getSession();
   for (var hlClass in lastHighlightMarkerIds) {
     session.removeMarker(lastHighlightMarkerIds[hlClass]);
@@ -493,7 +712,7 @@ function clearAllHighlightedAceLines (aceEditor) {
  *
  * If the row parameters are not supplied, just clear the last highlight.
  */
-function highlightAceLines (aceEditor, className, startRow, endRow) {
+function highlightAceLines(aceEditor, className, startRow, startColumn, endRow, endColumn) {
   var session = aceEditor.getSession();
   className = className || 'ace_step';
   if (lastHighlightMarkerIds[className]) {
@@ -501,8 +720,12 @@ function highlightAceLines (aceEditor, className, startRow, endRow) {
     lastHighlightMarkerIds[className] = null;
   }
   if (typeof startRow !== 'undefined') {
-    lastHighlightMarkerIds[className] = aceEditor.getSession().highlightLines(
-        startRow, endRow, className).id;
+    lastHighlightMarkerIds[className] = session.addMarker(
+        new (window.ace.require('ace/range').Range)(
+            startRow, startColumn, endRow, endColumn), className, 'text');
+    if (!aceEditor.isRowFullyVisible(startRow)) {
+      aceEditor.scrollToLine(startRow, true);
+    }
   }
 }
 
@@ -533,7 +756,8 @@ exports.selectEditorRowColError = function (editor, row, col) {
     // scrolling to the right
     selection.setSelectionRange(range, true);
   }
-  highlightAceLines(editor.aceEditor, "ace_error", row, row);
+  lastHighlightMarkerIds.ace_error = editor.aceEditor.getSession()
+      .highlightLines(row, row, 'ace_error').id;
 };
 
 /**
@@ -558,7 +782,7 @@ exports.clearDropletAceHighlighting = function (editor, allClasses) {
   }
 };
 
-function selectAndHighlightCode (aceEditor, cumulativeLength, start, end, highlightClass) {
+function selectAndHighlightCode(aceEditor, cumulativeLength, start, end, highlightClass) {
   var selection = aceEditor.getSelection();
   var range = selection.getRange();
 
@@ -567,11 +791,8 @@ function selectAndHighlightCode (aceEditor, cumulativeLength, start, end, highli
   range.end.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
   range.end.column = end - cumulativeLength[range.end.row];
 
-  // calling with the backwards parameter set to true - this prevents horizontal
-  // scrolling to the right while stepping through in the debugger
-  selection.setSelectionRange(range, true);
   highlightAceLines(aceEditor, highlightClass || "ace_step", range.start.row,
-      range.end.row);
+      range.start.column, range.end.row, range.end.column);
 }
 
 /**
@@ -589,8 +810,28 @@ exports.selectCurrentCode = function (interpreter,
                                       editor,
                                       highlightClass) {
   var userCodeRow = -1;
-  if (interpreter.stateStack[0]) {
+  if (interpreter && interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
+
+    if (node.type === 'ForStatement') {
+      var mode = interpreter.stateStack[0].mode || 0, subNode;
+      switch (mode) {
+        case exports.ForStatementMode.INIT:
+          subNode = node.init;
+          break;
+        case exports.ForStatementMode.TEST:
+          subNode = node.test;
+          break;
+        case exports.ForStatementMode.BODY:
+          subNode = node.body;
+          break;
+        case exports.ForStatementMode.UPDATE:
+          subNode = node.update;
+          break;
+      }
+      node = subNode || node;
+    }
+
     // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - userCodeStartOffset;
@@ -605,11 +846,7 @@ exports.selectCurrentCode = function (interpreter,
       if (editor.currentlyUsingBlocks) {
         var style = {color: '#FFFF22'};
         editor.clearLineMarks();
-        // NOTE: replace markLine with this new mark() call once we have a new
-        // version of droplet
-
-        //editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
-        editor.markLine(userCodeRow, style);
+        editor.mark({row: userCodeRow, col: start - cumulativeLength[userCodeRow]}, style);
       } else {
         selectAndHighlightCode(editor.aceEditor, cumulativeLength, start, end,
             highlightClass);

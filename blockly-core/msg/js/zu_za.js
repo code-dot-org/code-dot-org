@@ -1,4 +1,4 @@
-Blockly.Msg.ACTUAL = "call";
+Blockly.Msg.ACTUAL = "biza";
 Blockly.Msg.ADD = "Add";
 Blockly.Msg.ADD_COMMENT = "Add Comment";
 Blockly.Msg.ADD_PARAMETER = "Add Parameter";

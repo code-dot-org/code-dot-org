@@ -2,18 +2,6 @@
  * @overview Router node simulation entity.  Also contains logic for the
  *           auto-DNS system.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 var utils = require('../utils');
@@ -211,17 +199,17 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   /**
    * Local cache of our remote row, used to decide whether our state has
    * changed.
-   * 
+   *
    * Not persisted to server.
-   * 
+   *
    * @type {Object}
    * @private
    */
   this.stateCache_ = {};
-  
+
   /**
    * Event others can observe, which we fire when our own remote row changes.
-   * 
+   *
    * @type {ObservableEvent}
    */
   this.stateChange = new ObservableEvent();
@@ -256,16 +244,16 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   /**
    * Local cache of log rows associated with this router, used for detecting
    * and broadcasting relevant changes.
-   * 
+   *
    * @type {Array}
    * @private
    */
   this.myLogRowCache_ = [];
-  
+
   /**
    * Event others can observe, which we fire when the router's log content
    * changes.
-   * 
+   *
    * @type {ObservableEvent}
    */
   this.logChange = new ObservableEvent();
@@ -821,7 +809,7 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
     var nodeChangeEvent = this.shard_.nodeTable.tableChange;
     var nodeChangeHandler = this.onNodeTableChange_.bind(this);
     this.nodeChangeKey_ = nodeChangeEvent.register(nodeChangeHandler);
-    
+
     var wireChangeEvent = this.shard_.wireTable.tableChange;
     var wireChangeHandler = this.onWireTableChange_.bind(this);
     this.wireChangeKey_ = wireChangeEvent.register(wireChangeHandler);
@@ -852,7 +840,7 @@ NetSimRouterNode.prototype.stopSimulation = function () {
     nodeChangeEvent.unregister(this.nodeChangeKey_);
     this.nodeChangeKey_ = undefined;
   }
-  
+
   if (this.wireChangeKey_ !== undefined) {
     var wireChangeEvent = this.shard_.wireTable.tableChange;
     wireChangeEvent.unregister(this.wireChangeKey_);
@@ -1404,7 +1392,7 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function () {
     throw new Error("Non-simulating router got message table change notifiction");
   }
 
-  var messages = this.shard_.messageTable.readAll().map(function(row){
+  var messages = this.shard_.messageTable.readAll().map(function (row){
     return new NetSimMessage(this.shard_, row);
   }.bind(this));
 
@@ -1583,7 +1571,7 @@ NetSimRouterNode.prototype.forwardMessageToAll_ = function (message, onComplete)
 NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
     nodeIDs, onComplete) {
 
-  var messages = nodeIDs.map(function(nodeID) {
+  var messages = nodeIDs.map(function (nodeID) {
     return {
         fromNodeID: this.entityID,
         toNodeID: nodeID,

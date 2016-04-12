@@ -1,10 +1,10 @@
-var colors = require('../sharedJsxStyles').colors;
-var AgeDropdown = require('./AgeDropdown.jsx');
+var color = require('../color');
+var AgeDropdown = require('./AgeDropdown');
 
 var commonMsg = require('../locale');
 
 /**
- * Dialog contents for when you visit a shared Applab page. If not signed in,
+ * Dialog contents for when you visit a shred Applab page. If not signed in,
  * it will ask your age. If the app stores data, it will also alert you to
  * that.
  */
@@ -16,13 +16,13 @@ var SharingWarnings = module.exports = React.createClass({
     handleTooYoung: React.PropTypes.func.isRequired
   },
 
-  handleOk: function() {
+  handleOk: function () {
     if (this.props.is13Plus) {
       this.props.handleClose();
       return;
     }
 
-    var ageElement = React.findDOMNode(this.refs.age);
+    var ageElement = ReactDOM.findDOMNode(this.refs.age);
     if (ageElement.value === '') {
       // ignore close if we haven't selected a value from dropdown
       return;
@@ -53,9 +53,9 @@ var SharingWarnings = module.exports = React.createClass({
         marginLeft: 0
       },
       ok: {
-        backgroundColor: colors.orange,
-        border: '1px solid ' + colors.orange,
-        color: colors.white,
+        backgroundColor: color.orange,
+        border: '1px solid ' + color.orange,
+        color: color.white,
         float: 'right'
       }
     };

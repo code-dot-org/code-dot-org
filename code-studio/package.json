@@ -1,36 +1,90 @@
 {
   "name": "@cdo/code-studio",
   "version": "0.0.1",
+  "private": "true",
   "description": "Pipeline for static assets used by our Code Studio rails app (i.e. dashboard)",
   "author": "Code.org",
   "license": "Apache-2.0",
+  "config": {
+    "engine-strict": true
+  },
   "engines": {
-    "node": ">=0.10.25 <0.13",
+    "node": ">=0.12.0",
     "npm": "^2.9.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery-shim": "global:$"
   },
   "scripts": {
     "postinstall": "linklocal",
-    "build": "browserify --debug src/js/blockly_editor.js -o build/js/blockly_editor.js",
-    "build:min": "browserify src/js/blockly_editor.js | uglifyjs -o build/js/blockly_editor.min.js",
-    "prebuild": "mkdir -p build/js",
-    "prebuild:min": "mkdir -p build/js",
+    "lint": "npm run lint-js && npm run lint-css",
+    "lint-css": "sass-lint src/css/*css",
+    "lint-js": "eslint src/js --ext .js,.jsx",
+    "test": "mochify test/**/*.js --transform babelify",
+    "debug": "mochify --debug test/**/*.js --transform babelify",
+    "coverage": "mochify test/**/*.js --transform babelify --plugin [ mochify-istanbul --report json --report lcov --dir ./coverage ] && istanbul check-coverage ./coverage/coverage-final.json",
     "clean": "rm -rf build",
-    "env": "env",
-    "lint": "npm run lint:js -s",
-    "lint:js": "jshint src/js/*.js",
-    "start": "echo \"Unimplemented.\"",
-    "stop": "echo \"Unimplemented.\"",
-    "test": "test"
+    "clean-assets": "rm -rf build/assets",
+    "clean-css": "rm -rf build/css",
+    "clean-js": "rm -rf build/js",
+    "copy-assets": "scripts/copy-assets.js",
+    "build": "npm run copy-assets && npm run build-css && npm run build-js",
+    "build:dist": "npm run clean && npm run copy-assets && npm run build-css:dist && npm run build-js:dist",
+    "build-css": "scripts/build-css.js",
+    "build-css:dist": "npm run lint-css && npm run clean-css && scripts/build-css.js --dist",
+    "build-js": "scripts/build-js.js",
+    "build-js:dist": "npm run lint-js && npm test && npm run clean-js && scripts/build-js.js --dist && scripts/uglify-js.js",
+    "start": "scripts/build-js.js --watch",
+    "test-audio": "echo \"Open your browser to http://127.0.0.1:8080/test/audio/audio_test.html\" && http-server ."
   },
+  "//": "ejsify is a dependency of apps/src; we declare it here rather than in apps/src/package.json so we can continue to avoid needing to npm install that module.",
   "devDependencies": {
+    "babelify": "^6.3.0",
     "browserify": "^12.0.1",
-    "jshint": "^2.8.0",
-    "uglify-js": "^2.6.1"
+    "browserify-shim": "^3.8.12",
+    "chai": "^3.5.0",
+    "chalk": "^1.1.1",
+    "chrome-serialport": "bcjordan/chrome-serialport#2",
+    "commander": "^2.9.0",
+    "ejsify": "1.0.0",
+    "envify": "^3.4.0",
+    "eslint": "^2.3.0",
+    "factor-bundle": "^2.5.0",
+    "http-server": "^0.9.0",
+    "istanbul": "^0.4.2",
+    "johnny-five": "bcjordan/johnny-five#with-firmata-fix",
+    "mkdirp": "^0.5.1",
+    "mocha": "^2.3.4",
+    "mochify": "^2.15.0",
+    "mochify-istanbul": "^2.4.1",
+    "node-sass": "^3.4.2",
+    "object-assign": "^4.0.1",
+    "phantomjs-prebuilt": "^2.1.3",
+    "playground-io": "bcjordan/playground-io#more-components",
+    "radium": "^0.17.1",
+    "recursive-readdir-sync": "^1.0.6",
+    "sass-lint": "^1.4.0",
+    "semver": "^5.1.0",
+    "uglify-js": "^2.6.1",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.7.0"
   },
   "dependencies": {
+    "@cdo/apps": "file:../apps/src",
     "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
+    "jquery": "^2.2.0",
+    "jquery.cookie": "^1.4.1",
     "linklocal": "^2.5.2",
-    "marked": "0.3.2"
+    "lodash": "^3.10.1",
+    "marked": "0.3.2",
+    "react": "0.14.7",
+    "react-dom": "0.14.7",
+    "video.js": "4.5.2"
   }
 }

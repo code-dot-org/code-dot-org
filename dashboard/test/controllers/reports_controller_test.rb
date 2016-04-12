@@ -30,56 +30,10 @@ class ReportsControllerTest < ActionController::TestCase
     assert_equal @script_level.script, @script_level2.script
   end
 
-  test "should get user_stats" do
-    get :user_stats, :user_id => @not_admin.id
-    assert_response :success
-  end
-
-  test "should not get user_stats if not signed in" do
-    sign_out @admin
-    get :user_stats, :user_id => @not_admin.id
-
-    assert_redirected_to_sign_in
-  end
-
-  test "should get user_stats for yourself if not admin" do
-    sign_in @not_admin
-
-    get :user_stats, :user_id => @not_admin.id
-
-    assert_response :success
-  end
-
-  test "should get user_stats for students if teacher" do
-    sign_in @teacher
-
-    get :user_stats, :user_id => @student.id
-
-    assert_response :success
-  end
-
-  test "should not get user_stats for other users if not admin" do
-    sign_in create(:user)
-
-    get :user_stats, :user_id => @not_admin.id
-
-    assert_response :forbidden
-  end
-
   test "should have two game groups if two stages" do
     get :header_stats, script_id: @script_level.script.id, user_id: @not_admin.id
     css = css_select "div.game-group"
     assert_equal 2, css.count
-  end
-
-  test "should have one game group if one stage" do
-    @script = create(:script, name: 'Single Stage Script')
-    @stage = create(:stage, script: @script, name: 'Stage 1')
-    @script_level = create(:script_level, script: @script, stage: @stage)
-
-    get :user_stats, script_id: @script_level.script.id, user_id: @not_admin.id
-    css = css_select "div.game-group"
-    assert_equal 1, css.count
   end
 
   test 'should show lesson plan link if course[1,2,3], not if legacy curriculum' do
@@ -148,50 +102,6 @@ class ReportsControllerTest < ActionController::TestCase
     end
   end
 
-  test "should return 20h curriculum by default" do
-    get :user_stats, user_id: @not_admin.id
-    css = css_select "div.game-group"
-    assert_equal 20, css.count
-  end
-
-
-  test "should get usage" do
-    get :usage, :user_id => @not_admin.id
-    assert_response :success
-  end
-
-  test "should not get usage if not signed in" do
-    sign_out @admin
-    get :usage, :user_id => @not_admin.id
-
-    assert_redirected_to_sign_in
-  end
-
-  test "should get usage for yourself if not admin" do
-    sign_in @not_admin
-
-    get :usage, :user_id => @not_admin.id
-
-    assert_response :success
-  end
-
-
-  test "should get usage for students if teacher" do
-    sign_in @teacher
-
-    get :usage, :user_id => @student.id
-
-    assert_response :success
-  end
-
-  test "should not get usage for other users if not admin or teacher" do
-    sign_in create(:user)
-
-    get :usage, :user_id => @not_admin.id
-
-    assert_response :forbidden
-  end
-
   test "should get header_stats" do
     sign_out @admin
 
@@ -214,7 +124,6 @@ class ReportsControllerTest < ActionController::TestCase
     get :header_stats, user_id: @admin.id
     assert_response :forbidden
   end
-
 
   test "should not get header_stats with user_id when not signed in" do
     sign_out @admin
@@ -248,82 +157,6 @@ class ReportsControllerTest < ActionController::TestCase
   test "should not get prizes if not signed in" do
     sign_out @admin
     get :prizes
-
-    assert_redirected_to_sign_in
-  end
-
-  generate_admin_only_tests_for :csp_pd_responses
-
-  test "should get level_stats" do
-    get :level_stats, {:level_id => create(:level).id}
-    assert_response :success
-  end
-
-  test "should not get level_stats if not admin" do
-    sign_in @not_admin
-    get :level_stats, {:level_id => create(:level).id}
-    assert_response :forbidden
-  end
-
-  test "should not get level_stats if not signed in" do
-    sign_out @admin
-    get :level_stats, {:level_id => create(:level).id}
-
-    assert_redirected_to_sign_in
-  end
-
-  generate_admin_only_tests_for :assume_identity_form
-
-  test "should assume_identity" do
-    post :assume_identity, {:user_id => @not_admin.id}
-    assert_redirected_to '/'
-
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first
-  end
-
-  test "should assume_identity by username" do
-    post :assume_identity, {:user_id => @not_admin.username}
-    assert_redirected_to '/'
-
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first
-  end
-
-  test "should assume_identity by email" do
-    post :assume_identity, {:user_id => @not_admin.email}
-    assert_redirected_to '/'
-
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first
-  end
-
-
-  test "should assume_identity by hashed email" do
-    email = 'someone_under13@somewhere.xx'
-    user = create :user, age: 12, email: email
-
-    post :assume_identity, {:user_id => email}
-    assert_redirected_to '/'
-
-    assert_equal user.id, session['warden.user.user.key'].first.first
-  end
-
-  test "should assume_identity error if not found" do
-    post :assume_identity, {:user_id => 'asdkhaskdj'}
-
-    assert_response :success
-
-    assert_select '.container .alert-danger', 'User not found'
-  end
-
-  test "should not assume_identity if not admin" do
-    sign_in @not_admin
-    post :assume_identity, {:user_id => @admin.id}
-    assert_response :forbidden
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first # no change
-  end
-
-  test "should not assume_identity if not signed in" do
-    sign_out @admin
-    post :assume_identity, {:user_id => @admin.id}
 
     assert_redirected_to_sign_in
   end

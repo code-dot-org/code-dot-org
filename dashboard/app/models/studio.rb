@@ -14,6 +14,8 @@
 #  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
@@ -63,7 +65,7 @@ class Studio < Grid
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['studio', 'infinity', 'hoc2015']
+    %w(studio infinity hoc2015)
   end
 
   def self.default_success_condition

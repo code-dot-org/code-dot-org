@@ -72,7 +72,7 @@ class ApplicationController < ActionController::Base
 
   # missing templates are usually a result of the user agent
   # requesting a file in the wrong format, send a 404 instead of a 500
-  rescue_from ActionView::MissingTemplate do |exception|
+  rescue_from ActionView::MissingTemplate do |_exception|
     render_404
   end
 
@@ -167,6 +167,18 @@ class ApplicationController < ActionController::Base
 
     # logged in users can:
     if current_user
+      # participate in A/B testing
+      # as of April 5, 2016, whether or not we prompt the user before
+      # showing them a required or recommended block is being A/B
+      # tested. Users with odd IDs will be shown the block directly,
+      # without prompting. Anonymous users and users with even ids will
+      # get the existing functionality.
+      if Gatekeeper.allows('ab_testing_hint_button', default: true)
+        response[:abtests] = {
+          hint_button: current_user.id.odd?
+        }
+      end
+
       # save solved levels to a gallery (subject to
       # additional logic in the blockly code because blockly owns
       # which levels are worth saving)
@@ -180,7 +192,7 @@ class ApplicationController < ActionController::Base
 
     unless options[:solved?]
       # Call method to generate hint and related attributes, copying results into response.
-      hint_details = ExperimentActivity::determine_hint({
+      hint_details = ExperimentActivity.determine_hint({
                                                          level_source: options[:level_source],
                                                          current_user: current_user,
                                                          enable_external_hints: Rails.env.production?,
@@ -214,5 +226,9 @@ class ApplicationController < ActionController::Base
     unless Rails.application.config.levelbuilder_mode
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
+  end
+
+  def require_admin
+    authorize! :read, :reports
   end
 end

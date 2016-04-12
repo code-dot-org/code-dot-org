@@ -1,12 +1,4 @@
 /** @file Tests for NetSimRouterLogModal */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true
- */
 'use strict';
 /* globaldescribe, beforeEach, it */
 

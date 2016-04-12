@@ -30,7 +30,7 @@
     ga('send', 'event', 'showvideo', 'click', {'id': "#{id}"});
   };
 
-  $("#showVideo_#{id}").on('hidden.bs.modal', function () 
+  $("#showVideo_#{id}").on('hidden.bs.modal', function ()
   {
     // Pause the video.
     window["playVideo_#{id}"](false);
@@ -38,8 +38,28 @@
 
   window["playVideo_#{id}"] = function(play)
   {
-    var div = $("#showVideo_#{id} .videodiv")[0];
-    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
-    func = play ? 'playVideo' : 'pauseVideo';
-    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    var fallbackVideo = $("#showVideo_#{id} video");
+
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_#{id} .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
   }

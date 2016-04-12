@@ -33,8 +33,7 @@ goog.require('goog.cssom');
  */
 Blockly.Css.Cursor = {
   OPEN: 'handopen',
-  CLOSED: 'handclosed',
-  DELETE: 'handdelete'
+  CLOSED: 'handclosed'
 };
 
 /**
@@ -63,9 +62,10 @@ Blockly.Css.inject = function(container) {
   // Expand paths.
   text = text
     .replace(/%CONTAINER_ID%/g, container.id)
-    .replace(/%TREE_PATH%/g, Blockly.assetUrl('media/tree.png'));
+    .replace(/%TREE_PATH%/g, Blockly.assetUrl('media/tree.png'))
+    .replace(/%CURSOR_OPEN_PATH%/g, Blockly.assetUrl('media/handopen.cur'))
+    .replace(/%CURSOR_CLOSED_PATH%/g, Blockly.assetUrl('media/handclosed.cur'));
   Blockly.Css.styleSheet_ = goog.cssom.addCssText(text).sheet;
-  Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN);
 };
 
 /**
@@ -80,50 +80,18 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
     return;
   }
 
-  if (Blockly.Css.currentCursor_ != cursor) {
+  if (Blockly.Css.currentCursor_ !== cursor) {
     Blockly.Css.currentCursor_ = cursor;
 
-    /*
-    Hotspot coordinates are baked into the CUR file, but they are still
-    required in the CSS due to a Chrome bug.
-    https://code.google.com/p/chromium/issues/detail?id=1446
-    */
-    if (cursor == Blockly.Css.Cursor.OPEN) {
-      var xy = '8 5';
-    } else {
-      var xy = '7 3';
+    // Set cursor on the toolbox and SVG surface, so that rapid movements
+    // don't result in cursor changing to an arrow momentarily.
+    if (opt_svg) {
+      if (cursor == Blockly.Css.Cursor.OPEN) {
+        Blockly.removeClass_(opt_svg.parentNode, 'dragging');
+      } else {
+        Blockly.addClass_(opt_svg.parentNode, 'dragging');
+      }
     }
-    var cursorRuleRHS = 'url(' +
-    Blockly.assetUrl('media/' + cursor + '.cur') +
-    ') ' + xy + ', auto';
-    var rule = '.blocklyDraggable {\ncursor: ' + cursorRuleRHS + ';\n}\n';
-    var ruleIndex = 0;
-    // Guard against empty stylesheet for tests.
-    if (Blockly.Css.styleSheet_ && Blockly.Css.styleSheet_.cssRules.length > ruleIndex) {
-      // There are potentially hundreds of draggable objects.  Changing their style
-      // properties individually is too slow, so change the CSS rule instead.
-      goog.cssom.replaceCssRule('', rule, Blockly.Css.styleSheet_, ruleIndex);
-    }
-  }
-
-  var setCursorOnBackgroundElement = function(element) {
-    if (cursor == Blockly.Css.Cursor.OPEN) {
-      element.style.cursor = '';
-    } else {
-      element.style.cursor = cursorRuleRHS;
-    }
-  };
-
-  // There is probably only one toolbox, so just change its style property.
-  var toolboxen = document.getElementsByClassName('blocklyToolboxDiv');
-  for (var i = 0, toolbox; toolbox = toolboxen[i]; i++) {
-    setCursorOnBackgroundElement(toolbox);
-  }
-
-  // Set cursor on the SVG surface as well, so that rapid movements
-  // don't result in cursor changing to an arrow momentarily.
-  if (opt_svg) {
-    setCursorOnBackgroundElement(opt_svg);
   }
 };
 
@@ -132,7 +100,10 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
  */
 Blockly.Css.CONTENT = [
   '.blocklyDraggable {',
-    // Placeholder for cursor rule. Must be first rule (index 0).
+  '  cursor: url(%CURSOR_OPEN_PATH%) 8 5, auto;',
+  '}',
+  '.dragging, .dragging .blocklySvg, .dragging .blocklyDraggable {',
+  '  cursor: url(%CURSOR_CLOSED_PATH%) 7 3, auto !important;',
   '}',
   '#%CONTAINER_ID% {',
   '  border: 1px solid #ddd;',

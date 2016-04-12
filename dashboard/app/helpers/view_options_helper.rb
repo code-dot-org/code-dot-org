@@ -4,10 +4,8 @@ module ViewOptionsHelper
     no_header
     no_footer
     small_footer
-    share_footer
-    try_hoc_banner
+    code_studio_logo
     has_i18n
-    no_padding
     white_background
     callouts
     autoplay_video
@@ -29,7 +27,7 @@ module ViewOptionsHelper
   def view_options(opts = nil)
     @view_options ||= AppViewOptions.new
     if opts.blank?
-      @view_options.freeze.to_h.delete_if { |k, v| v.nil? }
+      @view_options.freeze.to_h.delete_if { |_k, v| v.nil? }
     else
       opts.each{|k, v| @view_options[k] = v}
     end

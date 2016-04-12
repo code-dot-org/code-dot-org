@@ -2,8 +2,7 @@ var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('lodash');
 var $ = require('jquery');
-require('react/addons');
-var ReactTestUtils = React.addons.TestUtils;
+var ReactTestUtils = require('react-addons-test-utils');
 
 // i'd like this test to not run through level tests, which has a lot of hacks,
 // but this is the easiest approach for now. hopefully at some point in the
@@ -136,11 +135,13 @@ module.exports = {
         var assetUrl = '//localhost:8001/apps/static/flappy_promo.png';
         var imageInput = $("#propertyRowContainer input").last()[0];
 
+        var buttonElement = $("#design_button1")[0];
+        var originalButtonWidth = buttonElement.style.width;
+        var originalButtonHeight = buttonElement.style.height;
+
         ReactTestUtils.Simulate.change(imageInput, {
           target: { value: assetUrl }
         });
-
-        var buttonElement = $("#design_button1")[0];
 
         // wait until image has loaded to do validation
         var img = new Image();
@@ -153,9 +154,15 @@ module.exports = {
           // add a completion on timeout since this is a freeplay level
           setTimeout(function () {
             assert.equal(buttonElement.style.backgroundImage, 'url(http:' + assetUrl + ')');
-            assert.equal(buttonElement.style.width, '200px');
-            assert.equal(buttonElement.style.height, '113px');
-            assert.equal(buttonElement.style.backgroundSize, '200px 113px');
+
+            // Validate that the button wasn't resized
+            assert.equal(buttonElement.style.width, originalButtonWidth);
+            assert.equal(buttonElement.style.height, originalButtonHeight);
+
+            // Validate that background image is centered and fit to the button size
+            assert.equal(buttonElement.style.backgroundSize, 'contain');
+            assert.equal(buttonElement.style.backgroundPosition, '50% 50%');
+            assert.equal(buttonElement.style.backgroundRepeat, 'no-repeat');
 
             Applab.onPuzzleComplete();
           }, 1);
@@ -355,6 +362,7 @@ module.exports = {
           assert.equal($('#my_button').length, 0, 'API created element should be gone');
           assert.equal($('#design_my_button').length, 0, 'API created element should not appear in design mode');
           assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible when designing');
+          assert.equal($('#screenSelector:disabled').length, 0, 'screen select enabled when designing');
 
           Applab.onPuzzleComplete();
         });
@@ -373,12 +381,15 @@ module.exports = {
 
         $("#designModeButton").click();
         assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible when designing');
+        assert.equal($('#screenSelector:disabled').length, 0, 'screen select enabled when designing');
 
         $("#runButton").click();
         assert.equal($('#design-mode-dimmed').length, 1, 'transparency layer visible when running in design mode');
+        assert.equal($('#screenSelector:disabled').length, 1, 'screen select disabled when running');
 
         $("#resetButton").click();
         assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible after resetting');
+        assert.equal($('#screenSelector:disabled').length, 0, 'screen select enabled after');
 
         testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
@@ -540,14 +551,13 @@ module.exports = {
 
         // Validate property rows and some default values
         assertPropertyRowValue(0, 'id', 'image1', assert);
-        assertPropertyRowValue(1, 'text', '', assert);
-        assertPropertyRowValue(2, 'width (px)', 100, assert);
-        assertPropertyRowValue(3, 'height (px)', 100, assert);
-        assertPropertyRowExists(4, 'x position (px)', assert);
-        assertPropertyRowExists(5, 'y position (px)', assert);
-        assertPropertyRowExists(6, 'picture Choose...', assert);
-        assertPropertyRowExists(7, 'hidden', assert);
-        assertPropertyRowExists(8, 'depth', assert);
+        assertPropertyRowValue(1, 'width (px)', 100, assert);
+        assertPropertyRowValue(2, 'height (px)', 100, assert);
+        assertPropertyRowExists(3, 'x position (px)', assert);
+        assertPropertyRowExists(4, 'y position (px)', assert);
+        assertPropertyRowExists(5, 'picture Choose...', assert);
+        assertPropertyRowExists(6, 'hidden', assert);
+        assertPropertyRowExists(7, 'depth', assert);
 
         // Make sure it's draggable
         var manipulator = newImage.parent();
@@ -604,8 +614,10 @@ module.exports = {
 
         // a remixed button with a previous channel id in its background image url.
         var yellowImageRegex = new RegExp("^url\\(http://localhost:[0-9]+/v3/assets/applab-channel-id/yellow\\.png\\)$");
-        assert.isTrue(yellowImageRegex.test($('#design_button1').css('background-image')), 'after init, design mode button image prefixed with new channel id');
-        assert.isTrue(yellowImageRegex.test($('#button1').css('background-image')), 'after init, code mode button image prefixed with new channel id');
+        assert.isTrue(yellowImageRegex.test($('#design_button1').css('background-image')),
+          'after init, design mode button image prefixed with new channel id: ' + $('#design_button1').css('background-image'));
+        assert.isTrue(yellowImageRegex.test($('#button1').css('background-image')),
+          'after init, code mode button image prefixed with new channel id: ' + $('#button1').css('background-image'));
 
         // a legacy image element whose image url was never set.
         assert.equal($('#design_image2').attr('src'), '/blockly/media/1x1.gif', 'after init, in design mode, empty image has placeholder image src');
@@ -640,6 +652,52 @@ module.exports = {
 
           Applab.onPuzzleComplete();
         });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "images reset when picture is cleared",
+      editCode: true,
+      xml: '',
+      // Use an asset path which we can access so that image loading will succeed
+      assetPathPrefix: '//localhost:8001/apps/test/assets/',
+      levelHtml: '' +
+      '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="width: 320px; height: 450px; display: block;">' +
+        '<div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
+          '<img src="/v3/assets/Adks1c9Ko6WdR2PuwkA6cw/flappy_promo.png" id="image1" data-canonical-image-url="flappy_promo.png" style="height: 105px; width: 110px; position: absolute; left: 10px; top: 10px; margin: 0px;" />' +
+        '</div>' +
+      '</div>',
+      runBeforeClick: function (assert) {
+        var flappyUrl = '//localhost:8001/apps/test/assets/applab-channel-id/flappy_promo.png';
+        assert.equal($('#design_image1').attr('src'), flappyUrl, 'after init, design mode img src prefixed with new prefix');
+        assert.equal($('#image1').attr('src'), flappyUrl, 'after init, code mode img src prefixed with new prefix');
+
+        // Enter design mode, and select image
+        $('#designModeButton').click();
+        $('#design_image1').click();
+
+        assertPropertyRowExists(5, 'picture Choose...', assert);
+
+        var input = $('#propertyRowContainer input').eq(5)[0];
+        var designImage = $('#design_image1')[0];
+        assert.equal(designImage.style.width, '110px');
+        assert.equal(designImage.style.height, '105px');
+        assert(!/1x1.gif$/.test(designImage.src), 'src became 1x1.gif');
+        assert.equal(designImage.getAttribute('data-canonical-image-url'), 'flappy_promo.png');
+
+        ReactTestUtils.Simulate.change(input, { target: { value: '' } });
+        assert.equal(input.value, '');
+
+        assert(/1x1.gif$/.test(designImage.src), 'src became 1x1.gif');
+        assert.equal(designImage.getAttribute('data-canonical-image-url'), '');
+        assert.equal(designImage.style.width, '100px', 'width is reset');
+        assert.equal(designImage.style.height, '100px', 'height is reset');
+
+        Applab.onPuzzleComplete();
       },
       expected: {
         result: true,
@@ -787,8 +845,18 @@ module.exports = {
 
         // Renaming to runButton fails.
         ReactTestUtils.Simulate.change(idInput, { target: { value: 'runButton' } });
-        assert.equal(targetButton.id, "design_button5", "target button still has id 'design_button5'");
+        assert.equal(targetButton.id, "design_button5", "target button still has id 'design_button5, not runButton'");
         assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "invalid id input 'runButton' has light red background color");
+
+        // Renaming to something with the 'design_' prefix fails.
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'design_button' } });
+        assert.equal(targetButton.id, "design_button5", "target button still has id 'design_button5, not design_button'");
+        assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "invalid id input 'design_button' has light red background color");
+
+        // Renaming to a blacklisted element id fails.
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'submitButton' } });
+        assert.equal(targetButton.id, "design_button5", "target button still has id 'design_button5, not submitButton'");
+        assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "invalid id input 'submitButton' has light red background color");
 
         // Make sure it works for screens too.
         testUtils.dragToVisualization('SCREEN', 100, 100);
@@ -804,6 +872,99 @@ module.exports = {
         ReactTestUtils.Simulate.change(idInput, { target: { value: 'screen1' } });
         assert.equal(targetScreen.id, "design_screen2", "target screen still has id 'design_screen2'");
         assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "duplicate id input 'screen1' has light red background color");
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "can use element select to switch elements",
+      editCode: true,
+      xml: '',
+      levelHtml: '' +
+      '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="width: 320px; height: 450px; display: block;">' +
+      '<div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
+      '<button id="button1" style="padding: 0px; margin: 0px; height: 130px; width: 120px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 120px; top: 130px;">Button 1</button>' +
+      '<button id="button2" style="padding: 0px; margin: 0px; height: 130px; width: 120px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 120px; top: 180px;">Button 2</button>' +
+      '</div>' +
+      '</div>',
+      runBeforeClick: function (assert) {
+        var elementSelect = $('#emptyTab').find('select')[0];
+
+        // Switch to design mode
+        var designModeButton = $('#designModeButton');
+        designModeButton.click();
+
+        assertPropertyRowValue(0, 'id', 'screen1', assert);
+
+        function selectElementAndValidate(id) {
+          ReactTestUtils.Simulate.change(elementSelect, {
+            target: {value: id}
+          });
+          assertPropertyRowValue(0, 'id', id, assert);
+        }
+
+        selectElementAndValidate('button1');
+        selectElementAndValidate('screen1');
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "new radio buttons have default group ids",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // Switch to design mode
+        $('#designModeButton').click();
+
+        // Add first radio button
+        testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
+        var radio1 = $("#design_radio_button1")[0];
+
+        // Validate that a default group id got generated and shown in properties tab
+        assert.equal(radio1.name, 'radio_group1', "default group id generated for new radio button");
+        assertPropertyRowValue(1, 'group id', 'radio_group1', assert);
+
+        // Add second radio button
+        testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
+        var radio2 = $('#design_radio_button2')[0];
+
+        // Validate that it has the same group id as the first radio button
+        assert.equal(radio2.name, radio1.name, "new radio button reused group id of existing radio button");
+        assertPropertyRowValue(1, 'group id', 'radio_group1', assert);
+
+        // Change the group id of radio button 2
+        radio2.name = "radio_group_changed";
+
+        // Add third radio button
+        testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
+        var radio3 = $('#design_radio_button3')[0];
+
+        // Validate that it has the same group id as the most recently created radio button, i.e. radio button 2
+        assert.equal(radio3.name, radio2.name, "new radio button reused updated group id of existing radio button");
+        assertPropertyRowValue(1, 'group id', 'radio_group_changed', assert);
+
+        // Add a new screen
+        testUtils.dragToVisualization('SCREEN', 10, 10);
+
+        // Add fourth radio button
+        testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
+        var radio4 = $('#design_radio_button4')[0];
+
+        // Validate that a new group id got generated, and not group id from the other screen
+        assert.equal(radio4.name, "radio_group2");
+        assertPropertyRowValue(1, 'group id', 'radio_group2', assert);
 
         Applab.onPuzzleComplete();
       },

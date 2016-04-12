@@ -187,7 +187,7 @@ it:
         video: alg_5_contracts
       DesignRecipe:
         title: La Ricetta della Progettazione
-        desc: 'In questa ultima lezione gli studenti hanno scitto alcune funzioni molto semplici - ma più sofisticate funzioni richiedono un approccio più riflessivo. La Design Recipe è un approccio strutturato alla scrittura di funzioni che include la scrittura di controlli per assicurarsi che la funzione funzioni nel modo atteso.'
+        desc: 'In questa ultima lezione gli studenti hanno scritto alcune funzioni molto semplici - ma più sofisticate funzioni richiedono un approccio più riflessivo. La Design Recipe è un approccio strutturato alla scrittura di funzioni che include la scrittura di controlli per assicurarsi che la funzione funzioni nel modo atteso.'
         video: alg_8_design_recipe
       Booleans:
         title: Valori booleani e logica

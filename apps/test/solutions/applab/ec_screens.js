@@ -2,8 +2,7 @@ var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('lodash');
 var $ = require('jquery');
-require('react/addons');
-var ReactTestUtils = React.addons.TestUtils;
+var ReactTestUtils = require('react-addons-test-utils');
 
 // i'd like this test to not run through level tests, which has a lot of hacks,
 // but this is the easiest approach for now. hopefully at some point in the
@@ -18,6 +17,11 @@ function validatePropertyRow(index, label, value, assert) {
   assert.equal(propertyRow.children(0).text(), label);
   // second col has an input with val screen 2
   assert.equal(propertyRow.children(1).children(0).val(), value);
+}
+
+function validateElementSelect(expected, assert) {
+  var actual = $('#emptyTab').find('select option').map(function (_, element) { return element.value; }).get();
+  assert.deepEqual(actual, expected);
 }
 
 module.exports = {
@@ -100,11 +104,13 @@ module.exports = {
         assert.equal($(screenSelector).val(), 'screen2');
 
         validatePropertyRow(0, 'id', 'screen2', assert);
+        validateElementSelect(['screen2'], assert);
 
         // drag a button onto our new screen
         testUtils.dragToVisualization('BUTTON', 10, 10);
 
         validatePropertyRow(0, 'id', 'button1', assert);
+        validateElementSelect(['screen2', 'button1'], assert);
         var buttonElement = $('#design_button1')[0];
         var buttonParent = buttonElement.parentNode;
         assert($(buttonParent).hasClass('ui-draggable'));
@@ -116,6 +122,7 @@ module.exports = {
           { target: { value: 'screen1' } });
 
         validatePropertyRow(0, 'id', 'screen1', assert);
+        validateElementSelect(['screen1'], assert);
         assert(!$('#button1').is(':visible'));
 
         // add a completion on timeout since this is a freeplay level
@@ -587,6 +594,42 @@ module.exports = {
         validatePropertyRow(0, 'id', 'screen4', assert);
 
         Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      description: "can load an run a level with bogus nested screens without javascript error",
+      editCode: true,
+      xml: 'setScreen("screen2");\n' +
+        'write("<div class=\'screen\' id=\'myscreen\'></div>");\n' +
+        'setScreen("myscreen");\n' +
+        'button("mybutton", "My Button");\n',
+      levelHtml: '' +
+        '<div id="designModeViz" class="appModern withCrosshair" style="display: none; width: 320px; height: 450px;">' +
+        '  <div class="screen" tabindex="1" id="screen1" style="height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
+        '    <div class="screen" tabindex="1" id="screen2" style="display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute;">' +
+        '      <div class="screen" tabindex="1" id="screen3" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
+        '        <button id="button1" style="padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); ' +
+        '            position: absolute; left: 105px; top: 65px; background-color: rgb(26, 188, 156);">Button</button>' +
+        '      </div>' +
+        '    </div>' +
+        '  </div>' +
+        '</div>',
+      runBeforeClick: function (assert) {
+        assert.equal($("#divApplab").is(':visible'), true, '#divApplab is visible');
+        assert.equal($("#designModeButton").is(':visible'), true, '#designModeButton is visible');
+        assert.equal($("#versions-header").is(':visible'), true, '#versions-header is visible');
+
+        testUtils.runOnAppTick(Applab, 20, function () {
+          assert.equal($("#screen1").is(':visible'), true, '#screen1 is visible');
+          assert.equal($("#mybutton").is(':visible'), true, '#mybutton is visible');
+
+          Applab.onPuzzleComplete();
+        });
+
       },
       expected: {
         result: true,

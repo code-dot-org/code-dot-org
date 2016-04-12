@@ -1,0 +1,9 @@
+%h1 Editing Course Unit: #{@course_unit.unit_name}
+
+= render 'form'
+
+= link_to 'Destroy this unit', plc_course_unit_path(@course_unit), method: :delete, data: {confirm: 'Are you sure you want to delete this unit?'}
+\|
+= link_to 'Show', @course_unit
+\|
+= link_to 'Back', plc_course_units_path

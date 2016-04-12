@@ -2,17 +2,6 @@
  * @overview base class for all "panels" (visual boxes) in the NetSim
  *           interface, provides some common expand/collapse functionality.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
 'use strict';
 
 var utils = require('../utils');
@@ -174,7 +163,7 @@ NetSimPanel.prototype.isMinimized = function () {
  * @param {string[]} [options.classes] - default [], additional classes on the
  *        button element.
  */
-NetSimPanel.prototype.addButton = function(buttonText, pressCallback, options) {
+NetSimPanel.prototype.addButton = function (buttonText, pressCallback, options) {
   options = ArgumentUtils.extendOptionsObject(options || {});
 
   var button = $('<span>')

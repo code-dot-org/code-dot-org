@@ -1,0 +1,280 @@
+// Style rules associated with our visual debugger for the JSInterpreter.
+@import "color";
+@import "mixins";
+@import "style-constants";
+
+#debugResizeBar {
+  width: 100%;
+  height: $resize-bar-width;
+  line-height: $resize-bar-width;
+  color: $lighter_gray;
+  font-size: 24px;
+  text-align: center;
+  cursor: ns-resize;
+  white-space: nowrap;
+}
+
+#debug-buttons {
+  display: inline;
+  white-space: normal;
+}
+
+img#turtleImage {
+  position: absolute;
+  height: 24px;
+  margin: 0px;
+}
+
+.debugger_button {
+  border: 1px solid $cyan;
+  background-color: $cyan;
+  color: #fff;
+  margin-left: 0px;
+  margin-right: 3px;
+  padding: 3px 6px;
+  font-size: 14px;
+  min-width: 120px;
+}
+
+#continueButton {
+  border-color: $orange;
+  background-color: $orange;
+}
+
+.debugger_button:focus {
+  outline-style: none;
+}
+
+.debugger_button > img {
+  float: left;
+  opacity: 1;
+}
+
+$debug-area-initial-height: 120px;
+#debug-area {
+  position: absolute;
+  bottom: 0;
+  height: $debug-area-initial-height;
+  left: 0;
+  right: 0;
+  max-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+}
+
+// Make sure the workspace default lines up with the debug area default
+#codeTextbox.pin_bottom {
+  bottom: $debug-area-initial-height;
+}
+
+#debug-area-header {
+  position: absolute;
+  top: $resize-bar-width;
+  height: $workspace-headers-height;
+  left: 0;
+  right: 0;
+  background-color: $lighter_purple;
+  text-align: center;
+
+  & > span {
+    line-height: $workspace-headers-height;
+  }
+
+  & > span, .workspace-header {
+    color: $dark_charcoal;
+  }
+
+  .workspace-header-button {
+    background-color: $lightest_purple;
+    color: $charcoal;
+    margin-right: 6px;
+
+    &:hover {
+      background-color: $cyan;
+      color: $white;
+    }
+  }
+
+  span {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  #show-hide-debug-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    margin: 0;
+    line-height: $workspace-headers-height;
+    font-size: 18px;
+
+    &:hover {
+      cursor: pointer;
+      color: white;
+    }
+  }
+}
+
+$debug-commands-column-width: 270px;
+$debug-console-min-column-width: 130px;
+$debug-watch-max-column-width: 150px;
+$debug-header-border-width: 1px;
+
+#debug-commands-header {
+  width: $debug-commands-column-width;
+  float: left;
+  border-right: $debug-header-border-width solid gray;
+
+  .fa {
+    margin: 0 0.25em;
+  }
+}
+
+#debug-watch-header {
+  width: $debug-watch-max-column-width + $debug-header-border-width;
+  max-width: calc(100% - #{$debug-commands-column-width} - #{$debug-console-min-column-width} + #{$debug-header-border-width});
+  float: right;
+  border-left: $debug-header-border-width solid gray;
+}
+
+.debug-commands, .debug-console, .debug-watch {
+  display: block;
+  background-color: $white;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: $resize-bar-width + $workspace-headers-height;
+  bottom: 0;
+}
+
+.debug-commands {
+  left: 0;
+  width: $debug-commands-column-width;
+  text-align: center;
+}
+
+.debug-watch {
+  &.no-commands {
+    max-width: calc(100% - #{$debug-console-min-column-width});
+  }
+  right: 0;
+  width: $debug-watch-max-column-width;
+  max-width: calc(100% - #{$debug-commands-column-width} - #{$debug-console-min-column-width});
+  font-family: monospace;
+  font-size: 12px;
+  overflow-y: scroll;
+}
+
+.debug-watch-item {
+  margin: 0 5px;
+  line-height: 14px;
+
+  .watch-variable, .watch-separator {
+    color: purple;
+  }
+  .watch-unavailable {
+    color: red;
+  }
+}
+
+.debug-console {
+  &.no-commands {
+    left: 0;
+  }
+  &.no-watch {
+    right: 0;
+  }
+  left: $debug-commands-column-width;
+  right: $debug-watch-max-column-width;
+  min-width: $debug-console-min-column-width
+}
+
+.debug-console * {
+  font-family: monospace;
+  font-size: 12px;
+}
+
+$debug-console-left-padding: 3px;
+$debug-prompt-width: 15px;
+$debug-input-height: 16px;
+
+.debug-input-prompt {
+  position: absolute;
+  bottom: 0;
+  height: $debug-input-height;
+  display: block;
+  left: $debug-console-left-padding;
+  width: $debug-prompt-width;
+}
+
+.debug-input, .debug-output {
+  position: absolute;
+  border-width: 0px;
+  padding: 0px;
+  outline: none;
+  @include user-selects(text);
+}
+
+.debug-output {
+  top: 0;
+  bottom: $debug-input-height;
+  left: $debug-console-left-padding;
+  right: 0;
+  overflow: auto;
+  line-height: normal;
+  cursor: text;
+  white-space: pre-wrap;
+}
+
+.debug-input {
+  bottom: 0;
+  max-height: $debug-input-height;
+  height: $debug-input-height;
+  left: $debug-console-left-padding + $debug-prompt-width;
+  right: 0;
+  margin-top: -3px;
+}
+
+#slider-cell {
+  float: left;
+  cursor: default;
+}
+
+/* Slider. */
+.sliderContainer {
+  float: left
+}
+.sliderTrack {
+  stroke: $lightest_purple;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+.sliderKnob {
+  fill: #ddd;
+  stroke: #bbc;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
+.sliderKnob:hover {
+  fill: #eee;
+}
+
+/* Sprited icons. */
+.pause-btn {
+  background-position: 0px -84px;
+  margin-right: 3px;
+}
+.continue-btn {
+  background-position: -21px -84px;
+  margin-right: 3px;
+}
+.step-in-btn {
+  background-position: 0px -105px;
+  margin-right: 3px;
+}
+.step-out-btn {
+  background-position: -21px -105px;
+  margin-right: 3px;
+}
+.step-over-btn {
+  background-position: 0px 21px;
+  margin-right: 3px;
+}

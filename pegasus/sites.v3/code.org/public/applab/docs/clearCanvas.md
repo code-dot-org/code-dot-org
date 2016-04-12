@@ -20,13 +20,11 @@ Category: Canvas
 
 [short_description]
 
-Clear all data on the active canvas.
+Clears all data on the active canvas.
 
 [/short_description]
 
-Clearing a canvas is typically done after some event, so that whatever was drawn has a chance to be seen before it is erased. Examples below will make use of [`setTimeout()`](/applab/docs/setTimeout) and [`onEvent()`](/applab/docs/onEvent) to more clearly demonstrate `clearCanvas`.
-
-**Note**: When a canvas element is created, it will have no data to clear. Create a canvas element in Design mode, or call [`createCanvas()`](/applab/docs/createCanvas).
+Just like you can delete all the data in a document, App Lab provides a way to clear the active canvas. Clearing a canvas is typically done after some event, so that whatever was drawn has a chance to be seen before it is erased. Examples below will make use of [setTimeout](/applab/docs/setTimeout) and [onEvent](/applab/docs/onEvent) to more clearly demonstrate clearCanvas.
 
 [/description]
 
@@ -35,15 +33,11 @@ ____________________________________________________
 
 [example]
 
-This example draws a square and then erases it, leaving the screen empty. The drawing is erased so fast that it cannot be seen.
-
-
 ```
-// Create a canvas and draw a square in its center
-createCanvas();
+// Draw a square and then erase it immediately. Use the slider in the Debug Console to slow down App Lab so you can see it.
+createCanvas("canvas1");
 setStrokeWidth(10);
 rect(120, 200, 80, 80);
-// Clear the canvas right away
 clearCanvas();
 ```
 
@@ -53,15 +47,13 @@ ____________________________________________________
 
 [example]
 
-This example draws a square, then uses [`setTimeout()`](/applab/docs/setTimeout) to wait 3000 milliseconds (3 seconds) before clearing the canvas.
-
+**Example: Time Out** Draw a square and then erase it in three seconds using [setTimeout](/applab/docs/setTimeout).
 
 ```
-// Create a canvas and draw a square in its center
-createCanvas();
+// Draw a square and then erase it in three seconds using setTimeout.
+createCanvas("canvas1");
 setStrokeWidth(10);
 rect(120, 200, 80, 80);
-// Clear the canvas after 3 seconds
 setTimeout(function() {
     clearCanvas();
 }, 3000);
@@ -73,18 +65,29 @@ ____________________________________________________
 
 [example]
 
-This example uses [`onEvent()`](/applab/docs/onEvent) to draw a circle wherever the canvas is clicked. Each time the canvas is clicked, the canvas is cleared and a new circle is drawn. This ensures that only one circle is visible at a time.
-
+**Example: Change the Smile** Draw a new mouth where you click.
 
 ```
-textLabel("instruction", "Click on the screen below this text...");
-createCanvas("canvas");
-onEvent("canvas", "click", function(click) {
-  clearCanvas(); // Erase anything that was drawn before the click
-  circle(click.offsetX, click.offsetY, 20); // Draw a circle where the click occurred
+// Draw a new mouth where you click.
+textLabel("instruction", "Click on the mouth to draw a new mouth where you click.");
+createCanvas("face");
+setFillColor("yellow");
+circle(160, 240, 100);
+setFillColor("black");
+circle(125, 215, 20);
+circle(195, 215, 20);
+setFillColor("white");
+createCanvas("mouth", 120, 50);
+setActiveCanvas("mouth");
+setPosition("mouth", 100, 260);
+setStrokeWidth(15);
+circle(60, -15, 50);
+onEvent("mouth", "click", function(click) {
+  setActiveCanvas("mouth");
+  clearCanvas();
+  circle(click.offsetX, click.offsetY, 25);
 });
 ```
-
 
 [/example]
 
@@ -104,7 +107,7 @@ clearCanvas();
 
 ### Parameters
 
-`clearCanvas()` has no parameters.
+clearCanvas() does not take any parameters.
 
 [/parameters]
 
@@ -112,9 +115,17 @@ clearCanvas();
 
 ### Returns
 
-No return value. Outputs to the display only.
+No return value. Alters the display only.
 
 [/returns]
+
+[tips]
+
+### Tips
+- Only the active canvas is cleared.
+- Clearing the active canvas may reveal hidden drawing on a canvas that was behind the active canvas.
+
+[/tips]
 
 [bug]
 

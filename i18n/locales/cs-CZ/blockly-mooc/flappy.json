@@ -119,7 +119,7 @@
   "speedFast":"nastavit vysokou rychlost",
   "speedVeryFast":"nastavit velmi vysokou rychlost",
   "whenClick":"když klikneš",
-  "whenClickTooltip":"Provést akce uvedené níže, když dojde ke kliknutí.",
+  "whenClickTooltip":"Provést akce uvedené níže, když klikneš.",
   "whenCollideGround":"když se dotkne země",
   "whenCollideGroundTooltip":"Provést akce uvedené níže, když se Flappy dotkne země.",
   "whenCollideObstacle":"když se dotkne překážky",

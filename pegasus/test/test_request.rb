@@ -1,5 +1,7 @@
+require_relative '../../shared/test/test_helper'
 require_relative '../../lib/cdo/rack/request'
-require 'minitest/autorun'
+require 'geocoder'
+require 'webmock/minitest'
 
 class RequestTest < Minitest::Test
   def test_shared_cookie_domain
@@ -18,5 +20,11 @@ class RequestTest < Minitest::Test
       req = Rack::Request.new({'HTTP_HOST' => host})
       assert_equal cookie_domain, req.shared_cookie_domain
     end
+  end
+
+  def test_unknown_ip
+    stub_request(:get, "#{CDO.freegeoip_host || 'freegeoip.net'}/json/unknown").to_return(status: 404, body: '<html><title>404')
+    req = Rack::Request.new({'HTTP_X_FORWARDED_FOR' => 'unknown'})
+    assert_equal nil, req.location
   end
 end

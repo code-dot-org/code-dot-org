@@ -8,9 +8,11 @@
     - heroes_arranged = heroes
     - hero_display_time = 6 * 1000
   - else
-    - # The order alternates person & stat.  Person alternates non-celeb and celeb.  Non-celeb is student or teacher.
-    - # We open with a celeba.
-    - # i.e. celeba, stat, non-celeb, stat, celeb, stat, non-celeb, stat, celeb, stat, etc.
+    -# 
+      The order alternates person & stat.  Person alternates non-celeb and
+      celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,
+      celeb, stat, non-celeb, stat, celeb, stat, non-celeb, stat, celeb, stat,
+      etc.
     - heroes.shuffle!
     - heroes_nonceleb = heroes.select {|hero| ["student", "teacher"].include? hero[:param2_s]}
     - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
@@ -53,7 +55,7 @@
         - unless entry[:text1_s].nil_or_empty?
           - text = I18n.t(entry[:text1_s])
 
-          - # Replace special tags
+          -# Replace special tags
           - text.gsub!("#student_count", format_integer_with_commas(fetch_user_metrics['number_students']))
           - text.gsub!("#served", format_integer_with_commas(fetch_hoc_metrics['started']))
           - text.gsub!("#loc", format_integer_with_commas(fetch_metrics['lines_of_code']))

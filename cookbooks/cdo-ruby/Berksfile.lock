@@ -1,13 +1,14 @@
 DEPENDENCIES
+  apt
   cdo-ruby
     path: .
     metadata: true
+  sudo-user
+    path: ../sudo-user
 
 GRAPH
-  apt (2.8.2)
-  brightbox-ruby (1.2.1)
-    apt (>= 0.0.0)
-  build-essential (2.2.3)
-  cdo-ruby (0.1.0)
-    brightbox-ruby (>= 0.0.0)
-    build-essential (>= 0.0.0)
+  apt (2.9.2)
+  cdo-ruby (0.2.0)
+  ohai (2.1.0)
+  sudo-user (0.1.0)
+    ohai (>= 0.0.0)

@@ -1,11 +1,3 @@
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true
- */
 'use strict';
 /* global describe, beforeEach, it */
 
@@ -57,7 +49,6 @@ describe("NetSimTable", function () {
   });
 
   it("throws if constructed with missing arguments", function () {
-    /* jshint unused: false */
     assert.throws(function () {
       var _ = new NetSimTable('just-one-argument');
     }, TypeError);
@@ -65,11 +56,9 @@ describe("NetSimTable", function () {
     assert.throws(function () {
       var _ = new NetSimTable('just-two', 'arguments');
     }, TypeError);
-    /* jshint unused: true */
   });
 
   describe("throws if constructed with invalid options", function () {
-    /* jshint unused: false */
     describe("useIncrementalRefresh", function () {
       it("accepts `undefined`, defaults to false", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
@@ -147,7 +136,7 @@ describe("NetSimTable", function () {
         }, TypeError);
       });
     });
-    
+
     describe("minimumDelayBeforeRefresh", function () {
       it("accepts `undefined`", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
@@ -363,7 +352,6 @@ describe("NetSimTable", function () {
         }, TypeError);
       });
     });
-    /* jshint unused: true */
   });
 
   it("calls readAll on the API table", function () {

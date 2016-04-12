@@ -76,6 +76,15 @@ exports.setSize = function (elementId, width, height) {
                            'height': height });
 };
 
+exports.setProperty = function (elementId, property, value) {
+  return Applab.executeCmd(null,
+                          'setProperty',
+                          {'elementId': elementId,
+                           'property': property,
+                           'value': value });
+};
+
+
 exports.getXPosition = function (elementId) {
   return Applab.executeCmd(null,
                           'getXPosition',
@@ -247,14 +256,14 @@ exports.dropdown = function (elementId) {
                            'optionsArray': optionsArray });
 };
 
-exports.getAttribute = function(elementId, attribute) {
+exports.getAttribute = function (elementId, attribute) {
   return Applab.executeCmd(null,
                            'getAttribute',
                            {elementId: elementId,
                             attribute: attribute});
 };
 
-exports.setAttribute = function(elementId, attribute, value) {
+exports.setAttribute = function (elementId, attribute, value) {
   return Applab.executeCmd(null,
                            'setAttribute',
                            {elementId: elementId,
@@ -273,6 +282,19 @@ exports.setText = function (elementId, text) {
                           'setText',
                           {'elementId': elementId,
                            'text': text });
+};
+
+exports.getNumber = function (elementId) {
+  return Applab.executeCmd(null,
+                          'getNumber',
+                          {'elementId': elementId });
+};
+
+exports.setNumber = function (elementId, number) {
+  return Applab.executeCmd(null,
+                          'setNumber',
+                          {'elementId': elementId,
+                           'number': number });
 };
 
 exports.getImageURL = function (elementId) {
@@ -358,7 +380,7 @@ exports.playSound = function (url) {
                           {'url': url});
 };
 
-exports.getKeyValue = function(key, onSuccess, onError) {
+exports.getKeyValue = function (key, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'getKeyValue',
                            {'key':key,
@@ -366,13 +388,28 @@ exports.getKeyValue = function(key, onSuccess, onError) {
                             'onError': onError});
 };
 
-exports.setKeyValue = function(key, value, onSuccess, onError) {
+exports.getKeyValueSync = function (key, callback) {
+  return Applab.executeCmd(null,
+                           'getKeyValueSync',
+                           {'key':key,
+                            'callback': callback});
+};
+
+exports.setKeyValue = function (key, value, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'setKeyValue',
                            {'key':key,
                             'value': value,
                             'onSuccess': onSuccess,
                             'onError': onError});
+};
+
+exports.setKeyValueSync = function (key, value, callback) {
+  return Applab.executeCmd(null,
+                           'setKeyValueSync',
+                           {'key':key,
+                            'value': value,
+                            'callback': callback});
 };
 
 exports.createRecord = function (table, record, onSuccess, onError) {
@@ -409,6 +446,13 @@ exports.deleteRecord = function (table, record, onComplete, onError) {
                            'record': record,
                            'onComplete': onComplete,
                            'onError': onError});
+};
+
+exports.onRecordEvent = function (table, onRecord) {
+  return Applab.executeCmd(null,
+                           'onRecordEvent',
+                           {'table': table,
+                            'onRecord': onRecord});
 };
 
 exports.getUserId = function () {

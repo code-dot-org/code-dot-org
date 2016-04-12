@@ -82,7 +82,6 @@ class Course
     lessons
   end
 
-
   def lesson_number(lesson_id)
     lesson_id.scan(/\d+/).last.to_s
   end
@@ -92,7 +91,7 @@ class Course
   end
 
   def valid_lesson_directory?(lesson_id)
-    File.directory?(File.join(@dir, lesson_id)) and valid_lesson_directory_name(lesson_id)
+    File.directory?(File.join(@dir, lesson_id)) && valid_lesson_directory_name(lesson_id)
   end
 
   def valid_lesson_directory_name(lesson_dirname)

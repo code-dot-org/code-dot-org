@@ -1,13 +1,14 @@
 /* global $ */
 
-var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
+var PropertyRow = require('./PropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
 var utils = require('../../utils');
 var elementUtils = require('./elementUtils');
+var EnumPropertyRow = require('./EnumPropertyRow');
 
 var TextAreaProperties = React.createClass({
   propTypes: {
@@ -72,6 +73,11 @@ var TextAreaProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
+        <EnumPropertyRow
+          desc={'text alignment'}
+          initialValue={element.style.textAlign || 'left'}
+          options={['left','right','center','justify']}
+          handleChange={this.props.handleChange.bind(this, 'textAlign')} />
         <BooleanPropertyRow
           desc={'read only'}
           initialValue={!element.isContentEditable}
@@ -99,7 +105,7 @@ var TextAreaEvents = React.createClass({
     handleChange: React.PropTypes.func.isRequired
   },
 
-  getChangeEventCode: function() {
+  getChangeEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
@@ -108,7 +114,7 @@ var TextAreaEvents = React.createClass({
     return code;
   },
 
-  insertChange: function() {
+  insertChange: function () {
     this.props.onInsertEvent(this.getChangeEventCode());
   },
 
@@ -138,7 +144,7 @@ module.exports = {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
 
-  create: function() {
+  create: function () {
     var element = document.createElement('div');
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';

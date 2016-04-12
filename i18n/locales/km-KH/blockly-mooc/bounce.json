@@ -1,6 +1,6 @@
 {
-  "bounceBall":"bounce ball",
-  "bounceBallTooltip":"Bounce a ball off of an object.",
+  "bounceBall":"គ្រាប់បាល់លោត",
+  "bounceBallTooltip":"គ្រាប់បាល់ទីមួយចេញពីវត្ថុមួយ។",
   "continue":"បន្ត",
   "dirE":"ខាងកើត",
   "dirN":"ខាងជើង",
@@ -18,7 +18,7 @@
   "incrementOpponentScoreTooltip":"Add one to the current opponent score.",
   "incrementPlayerScore":"ពិន្ទុ",
   "incrementPlayerScoreTooltip":"Add one to the current player score.",
-  "isWall":"is this a wall",
+  "isWall":"នេះគឺជាជញ្ជាំង",
   "isWallTooltip":"Returns true if there is a wall here",
   "launchBall":"ដំណើរការគ្រាប់បាល់ថ្មី",
   "launchBallTooltip":"ដំណើរការគ្រាប់បាល់ក្នុងការលេង។",

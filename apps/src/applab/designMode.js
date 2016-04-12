@@ -2,22 +2,46 @@
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
-var DesignWorkspace = require('./DesignWorkspace.jsx');
-var DesignToggleRow = require('./DesignToggleRow.jsx');
-var showAssetManager = require('./assetManagement/show.js');
+var DesignWorkspace = require('./DesignWorkspace');
+var showAssetManager = require('../assetManagement/show');
+var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
 var KeyCodes = require('../constants').KeyCodes;
-var constants = require('./constants');
-var applabCommands = require('./commands');
+var applabConstants = require('./constants');
 var designMode = module.exports;
+var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
+var gridUtils = require('./gridUtils');
+var logToCloud = require('../logToCloud');
+var actions = require('./actions');
+
+var ICON_PREFIX = applabConstants.ICON_PREFIX;
+var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
 
 var currentlyEditedElement = null;
-var currentScreenId = null;
+var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
-var GRID_SIZE = 5;
+/**
+ * Subscribe to state changes on the store.
+ * @param {!Store} store
+ */
+designMode.setupReduxSubscribers = function (store) {
+  var state = {};
+  store.subscribe(function () {
+    var lastState = state;
+    state = store.getState();
+
+    if (state.currentScreenId !== lastState.currentScreenId) {
+      onScreenChange(state.currentScreenId);
+    }
+
+    if (state.interfaceMode !== lastState.interfaceMode) {
+      onInterfaceModeChange(state.interfaceMode);
+    }
+  });
+};
 
 /**
  * If in design mode and program is not running, display Properties
@@ -54,7 +78,7 @@ designMode.onDesignModeVizClick = function (event) {
  * @returns {HTMLElement} The currently visible screen element.
  */
 designMode.activeScreen = function () {
-  return $('#designModeViz .screen').filter(function () {
+  return elementUtils.getScreens().filter(function () {
     return this.style.display !== 'none';
   }).first()[0];
 };
@@ -86,7 +110,7 @@ designMode.createElement = function (elementType, left, top) {
   return element;
 };
 
-designMode.editElementProperties = function(element) {
+designMode.editElementProperties = function (element) {
   var designPropertiesElement = document.getElementById('design-properties');
   if (!designPropertiesElement) {
     // design-properties won't exist when !user.isAdmin
@@ -103,9 +127,10 @@ designMode.editElementProperties = function(element) {
  * Loads the current element or current screen into the property tab.
  * Also makes sure we re-render design mode to update properties such as isDimmed.
  */
-designMode.resetPropertyTab = function() {
+designMode.resetPropertyTab = function () {
   var element = currentlyEditedElement || designMode.activeScreen();
   designMode.editElementProperties(element);
+  Applab.render();
 };
 
 /**
@@ -113,7 +138,7 @@ designMode.resetPropertyTab = function() {
  * @param allowEditing {boolean}
  */
 designMode.resetElementTray = function (allowEditing) {
-  $('#design-toolbox .new-design-element').each(function() {
+  $('#design-toolbox .new-design-element').each(function () {
     $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
 };
@@ -122,7 +147,7 @@ designMode.resetElementTray = function (allowEditing) {
  * Given an input value produce a valid css value that is
  * either in pixels or empty.
  */
-function appendPx (input) {
+function appendPx(input) {
   // Don't append if we already have a px
   if (/px/.test(input)) {
     return input;
@@ -131,15 +156,43 @@ function appendPx (input) {
 }
 
 /**
+ * While in design mode, elements get wrapped in a ui-draggable container.
+ * @returns {true} If element is currently wrapped
+ */
+function isDraggableContainer(element) {
+  return $(element).hasClass('ui-draggable');
+}
+
+/**
  * Handle a change from our properties table.
  * @param element {Element}
  * @param name {string}
  * @param value {string}
  */
-designMode.onPropertyChange = function(element, name, value) {
+designMode.onPropertyChange = function (element, name, value) {
   designMode.updateProperty(element, name, value);
   designMode.editElementProperties(element);
 };
+
+/**
+ * Create a data-URI with the image data of the given icon glyph.
+ * @param value {string} An icon identifier of the format "icon://fa-icon-name".
+ * @param element {Element}
+ * @return {string}
+ */
+function renderIconToString(value, element) {
+  var canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 400;
+  var ctx = canvas.getContext('2d');
+  ctx.font = '300px FontAwesome, serif';
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'center';
+  ctx.fillStyle = element.getAttribute('data-icon-color');
+  var regex = new RegExp('^' + ICON_PREFIX + 'fa-');
+  var unicode = '0x' + dashboard.iconsUnicode[value.replace(regex, '')];
+  ctx.fillText(String.fromCharCode(unicode), 200, 200);
+  return canvas.toDataURL();
+}
 
 /**
  * After handling properties generically, give elementLibrary a chance
@@ -148,7 +201,7 @@ designMode.onPropertyChange = function(element, name, value) {
  * @param name
  * @param value
  */
-designMode.updateProperty = function(element, name, value) {
+designMode.updateProperty = function (element, name, value) {
   var handled = true;
   switch (name) {
     case 'id':
@@ -163,12 +216,16 @@ designMode.updateProperty = function(element, name, value) {
     case 'left':
       var newLeft = appendPx(value);
       element.style.left = newLeft;
-      element.parentNode.style.left = newLeft;
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.left = newLeft;
+      }
       break;
     case 'top':
       var newTop = appendPx(value);
       element.style.top = newTop;
-      element.parentNode.style.top = newTop;
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.top = newTop;
+      }
       break;
     case 'width':
       element.setAttribute('width', appendPx(value));
@@ -179,21 +236,15 @@ designMode.updateProperty = function(element, name, value) {
     case 'style-width':
       var newWidth = appendPx(value);
       element.style.width = newWidth;
-      element.parentNode.style.width = newWidth;
-
-      if (element.style.backgroundSize) {
-        element.style.backgroundSize = element.style.width + ' ' +
-          element.style.height;
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.width = newWidth;
       }
       break;
     case 'style-height':
       var newHeight = appendPx(value);
       element.style.height = newHeight;
-      element.parentNode.style.height = newHeight;
-
-      if (element.style.backgroundSize) {
-        element.style.backgroundSize = element.style.width + ' ' +
-          element.style.height;
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.height = newHeight;
       }
       break;
     case 'text':
@@ -208,56 +259,95 @@ designMode.updateProperty = function(element, name, value) {
     case 'fontSize':
       element.style.fontSize = appendPx(value);
       break;
-
+    case 'textAlign':
+      element.style.textAlign = value;
+      break;
+    case 'icon-color':
+      element.setAttribute('data-icon-color', value);
+      break;
     case 'image':
-      var backgroundImage = new Image();
       var originalValue = element.getAttribute('data-canonical-image-url');
-      backgroundImage.src = Applab.maybeAddAssetPathPrefix(value);
-      element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
       element.setAttribute('data-canonical-image-url', value);
+
+      var fitImage = function () {
+        // Fit the image into the button
+        element.style.backgroundSize = 'contain';
+        element.style.backgroundPosition = '50% 50%';
+        element.style.backgroundRepeat = 'no-repeat';
+
+        // Re-render properties
+        if (currentlyEditedElement === element) {
+          designMode.editElementProperties(element);
+        }
+      };
+
+      if (ICON_PREFIX_REGEX.test(value)) {
+        element.style.backgroundImage = 'url(' + renderIconToString(value, element) + ')';
+        fitImage();
+        break;
+      }
+
+      var backgroundImage = new Image();
+      backgroundImage.src = assetPrefix.fixPath(value);
+      element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
+
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
-        backgroundImage.onload = function() {
-          element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
-            backgroundImage.naturalHeight + 'px';
-          element.style.width = backgroundImage.naturalWidth + 'px';
-          element.style.height = backgroundImage.naturalHeight + 'px';
-          // Re-render properties
-          if (currentlyEditedElement === element) {
-            designMode.editElementProperties(element);
-          }
-        };
+        backgroundImage.onload = fitImage;
       }
       break;
 
     case 'screen-image':
+      element.setAttribute('data-canonical-image-url', value);
+
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
-      element.style.backgroundImage = 'url(' + Applab.maybeAddAssetPathPrefix(value) + ')';
-      element.setAttribute('data-canonical-image-url', value);
       element.style.backgroundSize = width + 'px ' + height + 'px';
+
+      var url = ICON_PREFIX_REGEX.test(value) ? renderIconToString(value, element) : assetPrefix.fixPath(value);
+      element.style.backgroundImage = 'url(' + url + ')';
+
       break;
 
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
-      element.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
+
+      if (ICON_PREFIX_REGEX.test(value)) {
+        element.src = renderIconToString(value, element);
+        break;
+      }
+
+      element.src = assetPrefix.fixPath(value);
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
-        element.onload = function () {
-          // naturalWidth/Height aren't populated until image has loaded.
-          element.style.width = element.naturalWidth + 'px';
-          element.style.height = element.naturalHeight + 'px';
-          if ($(element.parentNode).is('.ui-resizable')) {
-            element.parentNode.style.width = element.naturalWidth + 'px';
-            element.parentNode.style.height = element.naturalHeight + 'px';
+        var resizeElement = function (width, height) {
+          element.style.width = width + 'px';
+          element.style.height = height + 'px';
+          if (isDraggableContainer(element.parentNode)) {
+            element.parentNode.style.width = width + 'px';
+            element.parentNode.style.height = height + 'px';
           }
           // Re-render properties
           if (currentlyEditedElement === element) {
             designMode.editElementProperties(element);
           }
         };
+        if (value === '') {
+          element.src = '/blockly/media/1x1.gif';
+          resizeElement(100, 100);
+        } else {
+          element.onload = function () {
+            // naturalWidth/Height aren't populated until image has loaded.
+            var left = parseFloat(element.style.left);
+            var top = parseFloat(element.style.top);
+            var dimensions = boundedResize(left, top, element.naturalWidth, element.naturalHeight, true);
+            resizeElement(dimensions.width, dimensions.height);
+            // only perform onload once
+            element.onload = null;
+          };
+        }
       }
       break;
     case 'hidden':
@@ -297,7 +387,7 @@ designMode.updateProperty = function(element, name, value) {
         optionElement.textContent = value[i];
       }
       // remove any extra options
-      for (i = value.length; i < element.children.length; i++) {
+      while (element.children[i]) {
         element.removeChild(element.children[i]);
       }
       break;
@@ -323,7 +413,7 @@ designMode.updateProperty = function(element, name, value) {
 
         //Resort elements in the dropdown list
         var options = $('#screenSelector option');
-        var newScreenText = constants.NEW_SCREEN;
+        var newScreenText = applabConstants.NEW_SCREEN;
         var defaultScreenId = elementUtils.getId(element);
         options.sort(function (a, b) {
           if (a.text === defaultScreenId) {
@@ -359,7 +449,7 @@ designMode.updateProperty = function(element, name, value) {
   }
 };
 
-designMode.onDeletePropertiesButton = function(element, event) {
+designMode.onDeletePropertiesButton = function (element, event) {
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
     element = element.parentNode;
@@ -369,7 +459,9 @@ designMode.onDeletePropertiesButton = function(element, event) {
   if (isScreen) {
     designMode.loadDefaultScreen();
   } else {
-    designMode.editElementProperties(elementUtils.getPrefixedElementById(currentScreenId));
+    designMode.editElementProperties(
+        elementUtils.getPrefixedElementById(
+            Applab.reduxStore.getState().currentScreenId));
   }
 };
 
@@ -425,9 +517,10 @@ designMode.onDepthChange = function (element, depthDirection) {
   designMode.editElementProperties(element);
 };
 
-designMode.onInsertEvent = function(code) {
+designMode.onInsertEvent = function (code) {
   Applab.appendToEditor(code);
   $('#codeModeButton').click(); // TODO(dave): reactify / extract toggle state
+  Applab.scrollToEnd();
 };
 
 /**/
@@ -439,20 +532,41 @@ designMode.serializeToLevelHtml = function () {
   // Make a copy so that we don't affect designModeViz contents as we
   // remove prefixes from the element ids.
   var designModeVizClone = designModeViz.clone();
-  designModeVizClone.children().each(function() {
+  designModeVizClone.children().each(function () {
     elementUtils.removeIdPrefix(this);
   });
-  designModeVizClone.children().children().each(function() {
+  designModeVizClone.children().children().each(function () {
     elementUtils.removeIdPrefix(this);
   });
 
-  var serialization = new XMLSerializer().serializeToString(designModeVizClone[0]);
+  // Remove the "data:img/png..." URI from icon images
+  designModeVizClone.find('[data-canonical-image-url^="' + ICON_PREFIX + '"]').each(function () {
+    this.removeAttribute('src');
+    this.style.backgroundImage = '';
+  });
+
+  var serialization = designModeVizClone[0] ? designModeVizClone[0].outerHTML : '';
   if (madeUndraggable) {
     makeDraggable(designModeViz.children().children());
   }
 
   Applab.levelHtml = serialization;
 };
+
+
+function getUnsafeHtmlReporter(sanitizationTarget) {
+  return function (removed, unsafe, safe) {
+    var msg = "The following lines of HTML were modified or removed:\n" + removed +
+      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe + "\ntarget: " + sanitizationTarget;
+    console.log(msg);
+    logToCloud.addPageAction(logToCloud.PageAction.SanitizedLevelHtml, {
+      removedHtml: removed,
+      unsafeHtml: unsafe,
+      safeHtml: safe,
+      sanitizationTarget: sanitizationTarget
+    });
+  };
+}
 
 /**
  * Replace the contents of rootEl with the children of the DOM node obtained by
@@ -462,7 +576,7 @@ designMode.serializeToLevelHtml = function () {
  * @param prefix {string} Optional prefix to attach to element ids of children and
  *     grandchildren after parsing. Defaults to ''.
  */
-designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
+designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   if (!rootEl) {
     return;
   }
@@ -473,13 +587,15 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   if (!Applab.levelHtml) {
     return;
   }
-  var levelDom = $.parseHTML(Applab.levelHtml);
+
+  var reportUnsafeHtml = getUnsafeHtmlReporter(rootEl.id);
+  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
   var children = $(levelDom).children();
 
   children.each(function () {
     elementUtils.addIdPrefix(this, prefix);
   });
-  children.children().each(function() {
+  children.children().each(function () {
     elementUtils.addIdPrefix(this, prefix);
   });
 
@@ -492,13 +608,18 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   children.each(function () {
     elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
   });
-  children.children().each(function() {
+  children.children().each(function () {
     var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
     elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
   });
 };
 
-designMode.toggleDesignMode = function(enable) {
+designMode.toggleDesignMode = function (enable) {
+  Applab.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+};
+
+function onInterfaceModeChange(mode) {
+  var enable = (ApplabInterfaceMode.DESIGN === mode);
   var designWorkspace = document.getElementById('designWorkspace');
   if (!designWorkspace) {
     // Currently we don't run design mode in some circumstances (i.e. user is
@@ -510,11 +631,8 @@ designMode.toggleDesignMode = function(enable) {
   var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
   codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
 
-  var debugArea = document.getElementById('debug-area');
-  debugArea.style.display = enable ? 'none' : 'block';
-
   Applab.toggleDivApplab(!enable);
-};
+}
 
 /**
  * When we make elements resizable, we wrap them in an outer div. Given an outer
@@ -526,11 +644,39 @@ function getInnerElement(outerElement) {
 }
 
 /**
+ * Returns a new width/height bounded to the visualization area.
+ * @param {number} left
+ * @param {number} top
+ * @param {number} width Requested width.
+ * @param {number} height Requested height.
+ * @param {boolean} preserveAspectRatio Constrain the width/height to the
+ *   initial aspect ratio.
+ * @return {{width: number, height: number}}
+ */
+function boundedResize(left, top, width, height, preserveAspectRatio) {
+  var container = $('#designModeViz');
+  var maxWidth = container.outerWidth() - left;
+  var maxHeight = container.outerHeight() - top;
+  var newWidth = Math.min(width, maxWidth);
+  newWidth = Math.max(newWidth, 20);
+  var newHeight = Math.min(height, maxHeight);
+  newHeight = Math.max(newHeight, 20);
+
+  if (preserveAspectRatio) {
+    var ratio = Math.min(newWidth / width, newHeight / height);
+    newWidth = width * ratio;
+    newHeight = height * ratio;
+  }
+
+  return {width: newWidth, height: newHeight};
+}
+
+/**
  *
  * @param {jQuery} jqueryElements jQuery object containing DOM elements to make
  *   draggable.
  */
-function makeDraggable (jqueryElements) {
+function makeDraggable(jqueryElements) {
   // For a non-div to be draggable & resizable it needs to be wrapped in a div.
   jqueryElements.each(function () {
     var elm = $(this);
@@ -550,23 +696,17 @@ function makeDraggable (jqueryElements) {
         var newHeight = ui.originalSize.height + (deltaHeight / scale);
 
         // snap width/height to nearest grid increment
-        newWidth = snapToGridSize(newWidth, GRID_SIZE);
-        newHeight = snapToGridSize(newHeight, GRID_SIZE);
+        newWidth = gridUtils.snapToGridSize(newWidth);
+        newHeight = gridUtils.snapToGridSize(newHeight);
 
         // Bound at app edges
-        var container = $('#designModeViz');
-        var maxWidth = container.outerWidth() - ui.position.left;
-        var maxHeight = container.outerHeight() - ui.position.top;
-        newWidth = Math.min(newWidth, maxWidth);
-        newWidth = Math.max(newWidth, 20);
-        newHeight = Math.min(newHeight, maxHeight);
-        newHeight = Math.max(newHeight, 20);
+        var dimensions = boundedResize(ui.position.left, ui.position.top, newWidth, newHeight, false);
 
         ui.size.width = newWidth;
         ui.size.height = newHeight;
         wrapper.css({
-          width: newWidth,
-          height: newHeight
+          width: dimensions.width,
+          height: dimensions.height
         });
 
         elm.outerWidth(wrapper.width());
@@ -596,8 +736,8 @@ function makeDraggable (jqueryElements) {
         var newTop = ui.position.top / scale;
 
         // snap top-left corner to nearest location in the grid
-        newLeft = snapToGridSize(newLeft, GRID_SIZE);
-        newTop = snapToGridSize(newTop, GRID_SIZE);
+        newLeft = gridUtils.snapToGridSize(newLeft);
+        newTop = gridUtils.snapToGridSize(newTop);
 
         // containment
         var container = $('#designModeViz');
@@ -658,17 +798,6 @@ function getVisualizationScale() {
   return div.getBoundingClientRect().width / div.offsetWidth;
 }
 
-/**
- * Given a coordinate on either axis and a grid size, returns a coordinate
- * near the given coordinate that snaps to the given grid size.
- * @param {number} coordinate
- * @param {number} gridSize
- * @returns {number}
- */
-var snapToGridSize = function (coordinate, gridSize) {
-  var halfGrid = gridSize / 2;
-  return coordinate - ((coordinate + halfGrid) % gridSize - halfGrid);
-};
 
 /**
  * Inverse of `makeDraggable`.
@@ -730,18 +859,9 @@ designMode.configureDragAndDrop = function () {
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
-      var div = document.getElementById('designModeViz');
-      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+      var point = gridUtils.scaledDropPoint(ui.helper);
 
-      var left = (ui.helper.offset().left - $('#designModeViz').offset().left) / xScale;
-      var top = (ui.helper.offset().top - $('#designModeViz').offset().top) / yScale;
-
-      // snap top-left corner to nearest location in the grid
-      left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-      top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-
-      var element = designMode.createElement(elementType, left, top);
+      var element = designMode.createElement(elementType, point.left, point.top);
       if (elementType === elementLibrary.ElementType.SCREEN) {
         designMode.changeScreen(elementUtils.getId(element));
       }
@@ -765,15 +885,6 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configureDesignToggleRow = function () {
-  var designToggleRow = document.getElementById('designToggleRow');
-  if (!designToggleRow) {
-    return;
-  }
-
-  designMode.loadDefaultScreen();
-};
-
 /**
  * Create a new screen
  * @returns {string} The id of the newly created screen
@@ -786,42 +897,42 @@ designMode.createScreen = function () {
 };
 
 /**
- * Changes the active screen by toggling all screens to be non-visible, unless
- * they match the provided screenId. Also updates our dropdown to reflect the
- * change, and opens the element property editor for the new screen.
+ * Changes the active screen by triggering a 'CHANGE_SCREEN' action on the
+ * Redux store.  This change propagates across the app, updates the state of
+ * React-rendered components, and eventually calls onScreenChange, below.
+ * @param {!string} screenId
  */
 designMode.changeScreen = function (screenId) {
-  currentScreenId = screenId;
-  var screenIds = [];
-  $('#designModeViz .screen').each(function () {
-    screenIds.push(elementUtils.getId(this));
-    $(this).toggle(elementUtils.getId(this) === screenId);
-  });
-
-  var designToggleRow = document.getElementById('designToggleRow');
-  if (designToggleRow) {
-    React.render(
-      React.createElement(DesignToggleRow, {
-        hideToggle: Applab.hideDesignModeToggle(),
-        hideViewDataButton: Applab.hideViewDataButton(),
-        startInDesignMode: Applab.startInDesignMode(),
-        initialScreen: screenId,
-        screens: screenIds,
-        onDesignModeButton: Applab.onDesignModeButton,
-        onCodeModeButton: Applab.onCodeModeButton,
-        onViewDataButton: Applab.onViewData,
-        onScreenChange: designMode.changeScreen,
-        onScreenCreate: designMode.createScreen
-      }),
-      designToggleRow
-    );
-  }
-
-  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
+  Applab.reduxStore.dispatch(actions.changeScreen(screenId));
 };
 
-designMode.getCurrentScreenId = function() {
-  return currentScreenId;
+/**
+ * Responds to changing the active screen by toggling all screens to be
+ * non-visible, unless they match the provided screenId, and opens the element
+ * property editor for the new screen.
+ *
+ * This method is called in response to a change in the application state.  If
+ * you want to change the current screen, call designMode.changeScreen instead.
+ *
+ * @param {!string} screenId
+ */
+function onScreenChange(screenId) {
+  elementUtils.getScreens().each(function () {
+    $(this).toggle(elementUtils.getId(this) === screenId);
+  });
+  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
+
+  // We still have to call render() to get an updated list of screens, in case
+  // we added or removed one.  Can probably stop doing this once the screens
+  // list is also in Redux and managed through actions.
+  Applab.render();
+}
+
+/** @returns {string[]} Array of all screen Ids in current app */
+designMode.getAllScreenIds = function () {
+  return elementUtils.getScreens().get().map(function (screen) {
+    return elementUtils.getId(screen);
+  });
 };
 
 /**
@@ -831,35 +942,37 @@ designMode.getCurrentScreenId = function() {
 designMode.loadDefaultScreen = function () {
   var defaultScreen;
 
-  if ($('#designModeViz .screen').length === 0) {
+  if (elementUtils.getScreens().length === 0) {
     defaultScreen = designMode.createScreen();
   } else {
-    defaultScreen = elementUtils.getId($('#designModeViz .screen')[0]);
+    defaultScreen = elementUtils.getId(elementUtils.getScreens()[0]);
   }
   designMode.changeScreen(defaultScreen);
 };
 
-designMode.renderDesignWorkspace = function(element) {
+designMode.renderDesignWorkspace = function (element) {
   var designWorkspace = document.getElementById('designWorkspace');
   if (!designWorkspace) {
     return;
   }
 
   var props = {
-    handleDragStart: function() {
+    handleDragStart: function () {
       if ($('#resetButton').is(':visible')) {
         studioApp.resetButtonClick();
       }
     },
     element: element || null,
+    elementIdList: Applab.getIdDropdownForCurrentScreen(),
     handleChange: designMode.onPropertyChange.bind(this, element),
+    onChangeElement: designMode.editElementProperties.bind(this),
     onDepthChange: designMode.onDepthChange,
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleManageAssets: showAssetManager,
     isDimmed: Applab.running
   };
-  React.render(React.createElement(DesignWorkspace, props), designWorkspace);
+  ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };
 
 /**
@@ -867,7 +980,9 @@ designMode.renderDesignWorkspace = function(element) {
  * existed under the root div. If we find one of those, convert it to be a single
  * screen app.
  */
-designMode.addScreenIfNecessary = function(html) {
+designMode.addScreenIfNecessary = function (html) {
+  var reportUnsafeHtml = getUnsafeHtmlReporter('levelHtml');
+  html = sanitizeHtml(html, reportUnsafeHtml);
   var rootDiv = $(html);
   if (rootDiv.children().length === 0 ||
       rootDiv.children().eq(0).hasClass('screen')) {
@@ -922,6 +1037,6 @@ designMode.addKeyboardHandlers = function () {
   });
 };
 
-designMode.resetIds = function() {
+designMode.resetIds = function () {
   elementLibrary.resetIds();
 };

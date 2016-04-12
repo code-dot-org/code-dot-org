@@ -5,17 +5,6 @@
  * @see INetSimLogPanel for the interface implemented here.
  * @see NetSimLogPanel for the component used in packet-sending mode.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()

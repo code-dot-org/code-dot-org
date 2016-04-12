@@ -1,0 +1,37 @@
+- content_for :head do
+  %script{src:'https://www.google.com/jsapi'}
+
+%h1
+  Fun-O-Meter Stats
+
+%h2
+  = 'Script: ' + @script_name
+
+%h3
+  Overall Percentage:
+  = number_to_percentage(@overall_percentage, precision: 2)
+
+= render 'funometer_percentages_by_day'
+
+.by-stage
+  %h3
+    Percentages by Stage
+  %table
+    %tr
+      - @ratings_by_stage_headers.each do |header|
+        %th
+          %span= header
+    - @ratings_by_stage.each do |stage|
+      %tr
+        %td
+          %span
+            = link_to funometer_by_stage_path(:stage_id => stage.stage_id) do
+              = stage.stage_id
+        %td
+          %span= stage.name
+        %td
+          %span= number_to_percentage(stage.percentage, precision: 2)
+        %td
+          %span= stage.cnt
+
+= render 'funometer_levels'

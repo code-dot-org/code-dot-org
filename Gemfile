@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.2.4'
+gem 'rails', '~> 4.2.6'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
@@ -21,6 +21,12 @@ gem 'dalli' # memcached
 gem 'parallel'
 
 gem 'google-api-client'
+gem 'sprockets-derailleur' # Multi-cpu assets precompile
+
+gem 'crowdin-cli'
+
+# CSRF protection for Sinatra.
+gem 'rack_csrf'
 
 group :development do
   gem 'annotate', '~> 2.6.6'
@@ -32,6 +38,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'rack-cache'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
   gem 'konacha'  # Mocha + Chai JS testing in Rails
@@ -45,17 +52,20 @@ group :development, :test do
   gem 'active_record_query_trace'
   # for unit testing
   gem 'factory_girl_rails'
-  gem 'fakeweb'
+  gem 'webmock', require: false
+  gem 'vcr', require: false
+
   gem 'simplecov', '~> 0.9', require: false
+  gem 'coveralls', require: false # test coverage; https://coveralls.zendesk.com/hc/en-us/articles/201769485-Ruby-Rails
   gem 'mocha', require: false
-  gem "codeclimate-test-reporter", require: false
   gem 'sqlite3'
   gem 'timecop'
   gem 'fake_sqs'
+  gem 'fakeredis', require: false
 
   # for ui testing
   gem 'cucumber'
-  gem 'selenium-webdriver', '~> 2.41.0'
+  gem 'selenium-webdriver', '~> 2.45.0'
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
@@ -63,7 +73,8 @@ group :development, :test do
   gem 'spring-commands-testunit'
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
-  gem 'eyes_selenium', '~> 2.5.0'
+  gem 'minitest-around'
+  gem 'eyes_selenium', '~> 2.28.0'
 end
 
 group :doc do
@@ -97,7 +108,7 @@ gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-windowslive', '~> 0.0.9'
-gem 'omniauth-clever', git: 'https://github.com/code-dot-org/omniauth-clever.git'
+gem 'omniauth-clever', '~> 1.2.1'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
@@ -112,7 +123,7 @@ gem 'honeybadger', '~> 1.11' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.2.3'
+gem 'redcarpet', '~> 3.3.4'
 
 gem 'geocoder'
 
@@ -127,13 +138,11 @@ gem 'stringex', '~> 2.5.2' # Provides String.to_ascii
 
 gem 'naturally' # for sorting string naturally
 
-gem 'videojs_rails'
-
 gem 'retryable' # retry code blocks when they throw exceptions
 
 # Used by a build script.
 gem 'execjs'
-gem 'therubyracer', :platforms => :ruby
+gem 'therubyracer', '~> 0.12.2', platforms: :ruby
 
 gem 'jwt' # single signon for zendesk
 
@@ -151,12 +160,11 @@ gem 'heroku_rails_deflate', group: [:staging, :production, :test, :levelbuilder]
 
 gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
 
-gem 'react-rails', '~> 1.0'
 # JSON model serializer for REST APIs
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 gem 'aws-sdk', '~> 2'
 
-gem 'rubocop', '0.34.2', require: false, group: [:development, :staging]
+gem 'rubocop', '0.37.2', require: false, group: [:development, :staging]
 gem 'haml_lint', require: false, group: [:development, :staging]
 
 # Reduce volume of production logs
@@ -168,7 +176,7 @@ gem 'rack-ssl-enforcer'
 # PubSub for NetSim
 gem 'pusher', '~> 0.14.5'
 
-gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
+gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'net-ssh'
 gem 'net-scp'
@@ -176,3 +184,10 @@ gem 'httparty'
 gem 'jquery-cookie-rails'
 gem 'oj'
 gem 'daemons'
+
+gem 'rest-client', '~> 1.8'
+
+gem 'rack-attack', '~> 4.4'
+
+# Generate SSL certificates
+gem 'acmesmith'

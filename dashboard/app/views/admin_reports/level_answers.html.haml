@@ -1,0 +1,56 @@
+%h1
+  Level Answers Retrieval
+
+%br
+
+%form{method: 'get'}
+  Please enter the (production) level IDs for the levels you'd like to see user
+  responses. Note that this page will return at most one hundred responses per
+  question.
+
+  %p
+
+  %table
+    %tr
+      %td
+        Levels
+      %td
+        %input.text{name: "levels", id: "levels", value: params[:levels]}
+
+  %br
+
+  %center
+    %input{type: "submit", name: "submit"}
+
+%br
+
+- if @responses.size > 0
+  %h3
+    #{link_to 'Download CSV', {:format => :csv, :levels => params[:levels]}}
+
+  - @responses.each do |level_id, level_responses|
+    %h3
+      Responses for Level
+      = level_id
+    - if level_responses.size > 0
+      - if level_responses.size == @response_limit
+        -# This is actually not true if the there were exactly @response_limit
+        -# records.
+        WARNING: The results are truncated, there are additional records not
+        being displayed.
+        %br
+      %table
+        %tr
+        - @headers.each do |header|
+          %th
+            %span= header
+        - level_responses.each do |response|
+          %tr
+          - response.each do |field|
+            %td
+              %span= field
+    - else
+      No data.
+    %br
+- else
+  No levels queried.

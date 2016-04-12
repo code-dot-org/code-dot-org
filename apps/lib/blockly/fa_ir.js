@@ -1,4 +1,4 @@
-Blockly.Msg.ACTUAL = "فراخوانی";
+Blockly.Msg.ACTUAL = "تماس";
 Blockly.Msg.ADD = "اضافه کردن";
 Blockly.Msg.ADD_COMMENT = "اضافه کردن نظر";
 Blockly.Msg.ADD_PARAMETER = "اضافه کردن پارامتر";
@@ -183,7 +183,7 @@ Blockly.Msg.LOGIC_COMPARE_TOOLTIP_NEQ = "اگر هر دو ورودی با یکد
 Blockly.Msg.LOGIC_NEGATE_HELPURL = "http://code.google.com/p/blockly/wiki/Not";
 Blockly.Msg.LOGIC_NEGATE_TITLE = "برعکس 1%";
 Blockly.Msg.LOGIC_NEGATE_TOOLTIP = "اگر ورودی برار False  بود، مقدار بولین true را برمیگرداند. اگر ورودی برابر true بود مقدار بولین  False را برمیگرداند.";
-Blockly.Msg.LOGIC_NULL = "تهی";
+Blockly.Msg.LOGIC_NULL = "خالی";
 Blockly.Msg.LOGIC_NULL_HELPURL = "http://en.wikipedia.org/wiki/Nullable_type";
 Blockly.Msg.LOGIC_NULL_TOOLTIP = "تهی بازمی‌گرداند.";
 Blockly.Msg.LOGIC_OPERATION_AND = "و";

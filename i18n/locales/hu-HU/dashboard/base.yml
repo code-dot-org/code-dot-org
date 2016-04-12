@@ -24,10 +24,13 @@ hu:
   hello: Helló világ
   welcome_back: 'Üdv újra, %{name}'
   submit: Elküldés
+  unsubmit: Visszavon
+  next_page: Következő oldal
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
       placeholder: Szakasz kód (ABCDEF)
+      instructions: 'Kélek, írd be a tanárod által megadott kódot. Ez egy 6 betűs kód - például "ABCDEF".'
     submit: Tanár hozzáadása
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
@@ -38,6 +41,7 @@ hu:
   puzzle: Kirakós
   trophies: trófeák
   courses: tanfolyamok
+  unplugged_activity: Offline tevékenység
   of: /
   more: TÖBB
   less: KEVESEBB
@@ -216,7 +220,7 @@ hu:
       free_play:
         playlab: Készíts egy applikációt
         artist: Rajzolj valamit
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Készíts egy applikációt
     user:
       classroom: Tanári kezdőlap
@@ -249,57 +253,10 @@ hu:
     remove: (tanár eltávolítása)
     confirm:
       remove: Biztosan el szeretné bocsátani ezt a tanárt?
-    tools: Tanári eszközök
-    followers:
-      section: 'Szakasz:'
-      stages: 'Elérhető szintek:'
-      show_past: 'Mutasd meg a diákok tevékenységét (%{bullet_html}):'
-      levels_key: Szint kódja
-      perfect: Tökéletesen megcsináltad
-      completed: Sikeresen megcsináltad de túl sok blokkot használtál
-      tried: Megpróbáltad, de nem sikerült
-      not_tried: Még nem próbáltam
-      activity: 'Diákok tevékenységét jelzi az utóbbi %{hours}%{plural} órában'
-      no_section: Nincs feladott szakasz
-      trophies: trófeák
     students:
-      name: Név
-      username: felhasználónév
-      password: jelszó
-      manage: Diákok kezelése
       dashboard: Vissza a Tanári Nyitólapra
-      add: Diákok hozzáadása
-      remove: diák eltávolítása
-      confirm_remove: Biztos el akarod távolítani ezt a diákot?
-      help_reassign: Ahhoz, hogy az osztályodat több részre oszd, válassz ki néhány diákot, és adj fel nekik egy új szakaszt.
-      help_register: Ahelyett, hogy neked kéne sok időt töltened azzal, hogy egyesével hozzáadd a diákjaidat a csoportodhoz, megkérheted őket, hogy regisztráljanak az osztályodba. A diákjaidnak meg kell adniuk egy felhasználó nevet és jelszót, de nekik NEM kell e-mail címet megadniuk. ha egy diák elfelejti a jelszavát, te újat tudsz neki adni.
-      register: Kérd meg a diákjaidat, hogy regisztrálják magukat
-      vist: Kérd meg a diákjaidat, hogy látogassák meg
-      section_code: 'és írják be ezt a kódot:'
-      first_please: 'Először is kérjük, %{add_section}'
-      for: nak
-      enter: 'írd be:'
-    sections:
-      add: Adj hozzá egy szakaszt
-      manage: Vezetési szakasz
-      section: Szakasz
-      students: Diákok
-      section_code: Szakasz kódja
-      add_section_code: Adj a listához diákokat a kódjukkal
-      secret: Titkos
-      grade: Évfolyam
-      course: Tanfolyam
-      rename: átnevezés
-      edit: szerkeszt
-      delete: törlés
-      confirm_delete: Biztos vagy benne, hogy törölni szeretnéd ezt a szakaszt?
-      email: Küldj e-mailt
-    rollup: Nyomonkövetési felület
-    activity: Legutóbbi osztálytermi aktivitás
-    user_not_found: A tanár vagy a diák nem található
-    cant_remove_student_no_email: '%{student_name} nem törölhető a listáról, mert %{student_name} nem regisztrált e-mail címet'
-    cant_remove_teacher_no_email: '%{teacher_name} nem törölhető, mert még nem regisztráltál e-mail címet'
-    student_teacher_disassociated: '%{teacher_name} már nem %{student_name} tanára a rendszerben'
+    user_not_found: Ez a tanár nem található.
+    student_teacher_disassociated: 'Eltávolítottad %{teacher_name} a tanáraid közül.'
     panel:
       answer_viewer: Válasz megtekintő
       student: Diák
@@ -315,7 +272,7 @@ hu:
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
     email_confirm_wrong_email: (Helytelen e-mail cím?)
     email_resend_confirm: Megerősítés újraküldése
-    new_password_hint: (hagyja üresen, ha nem akarja megváltoztatni)
+    new_password_hint: (hagyd üresen, ha nem akarod megváltoztatni)
     current_password_hint: (szükségünk van a jelenlegi jelszavadra a módosítások végrehajtásához)
     delete: Fiók törlése
     delete_text: Az alábbi gombra kattintva törlöd a fiókot.
@@ -324,10 +281,6 @@ hu:
   user_level:
     completed: Befejezve
     tried: Próbáltam
-  user_stats:
-    recent_activity: Legutóbbi tevékenységek
-    show_more: Mutass többet
-    classroom_activity: Offline tevékenység
   home:
     title: Kód stúdió
     description: A Kód stúdió az online tanfolyamok otthona, melyet a Code.org készített
@@ -358,13 +311,14 @@ hu:
     tryfirst: 'Akár ki is próbálhatja, és csak utána jelentkezik be:'
     trynow: Próbálja ki most
     add_hint_help: Segíts, hogy okos tippekkel láthassuk el oktatóanyagainkat a Code.org-on
-    20hour_overview: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
+    20hour_overview: Ez a 20 órás kurzus bemutatja a számítástechnika és programozás alapfogalmait. A kurzus általános iskolai használatra lett kitalálva, de mindenki számára jó időtöltés lehet.
     test_videos_help: Teszteld az új videó lejátszót az iskolában
     try_beta_courses: ÚJ! Próbáld ki a béta kurzusokat alsó tagozatos diákoknak
     use_as_teacher: használd ezt az oldalt tanárként
-    heading_hoc2014: '<h2>A Kódolás Órája</h2><h1>Minden korosztály számára</h1>'
-    heading_elementary: '<h2>20 órás tanfolyamok</h2><h1>Kezdőknek (minden korosztály)</h1>'
+    heading_hoc2014: '<h2>A Kódolás Órája</h2><h1>Minden korosztálynak</h1>'
+    heading_elementary: '<h2>20 órás tanfolyamok</h2><h1>Számítástechnika alapjai (minden korosztálynak)</h1>'
     heading_apps: '<h2>Vidámság </h2><h1>Mindenkinek</h1>'
+    heading_tools: '<h2>Kész vagy a következő képésre?</h2><h1>JavaScript Eszközök középiskoláknak</h1>'
     heading_legacy: '<h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>'
     your_gallery: Galéria
     no_primary_course: Próbálj ki egy tanfolyamot a Kód stúdióban
@@ -373,6 +327,7 @@ hu:
   share:
     title: Tanulj a Kód Stúdióban
     description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat, alkalmazásokat vagy alkoss a kódolás segítségével!
+    try_hour_of_code: Próbáld ki a Kódolás Óráját!
   gender:
     male: Férfi
     female: Nő
@@ -384,8 +339,9 @@ hu:
     thank_you: 'A Kód Stúdió létrehozásában segítettek minket támogatóink: <a href="https://code.org/about/donors">, partnereink: </a>, <a href="https://code.org/about/partners">tágabb csapatunk tagjai:</a>, our <a href="https://code.org/about/team">videó stábunk tagjai: </a>, és oktatási tanácsadóink: <a href="https://code.org/about/advisors">education advisors</a>, akiknek köszönetet mondunk a támogatásért.'
     help_from_html: A Google, a Microsoft, a Facebook és a Twitter mérnökei segítettek létrehozni ezt a gyakorlatot.
     help_from_html_old: A Google, Microsoft, Facebook, és a Twitter mérnökei segítettek létrehozni ezeket a tartalmakat.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Minden jog fenntartva.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Minden jog fenntartva.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Minden jog fenntartva'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Minden jog fenntartva.<br />Star Wars&#8482; &copy; %{current_year} Disney és Lucasfilm. Minden jog fenntartva.<br />Frozen&#8482; &copy; %{current_year} Disney. Minden jog fenntartva.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Minden jog fenntartva.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Minden jog fenntartva.<br /> a Gumball csodálatos világa a Cartoon Network beejgyzett védjegye.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Minden jog fenntartva.<br />Star Wars&#8482; &copy; %{current_year} Disney és Lucasfilm. Minden jog fenntartva.<br />Frozen&#8482; &copy; %{current_year} Disney. Minden jog fenntartva.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Minden jog fenntartva.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Minden jog fenntartva.<br /> a Gumball csodálatos világa a Cartoon Network bejegyzett védjegye.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Az Amazon Web Services működteti
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az Hour of Code&reg; a Code.org védjegyei.'
     copyright: Szerzői jog
@@ -399,12 +355,13 @@ hu:
     privacy: Adatvédelmi Elvek
     secure: Biztonságos változat
     report_abuse: Visszaélés jelentése
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Készült a Code Studio seggítségével
+    make_my_own_app: Készítsd el saját alkalmazásod
+    how_it_works: Hogyan működik
+    try_hour_of_code: Próbáld ki a Kódolás Óráját!
   reference_area:
     title: Segítségre van szükséged?
-    subtitle: Nézd meg ezeket a videókat és tanácsokat
+    subtitle: Nézd meg ezeket a videókat és tippeket
     teacher: Megoldás megtekintése
     auth_error: Nem vagy jogosult a megoldás megtekintésére.
     submit: Frissítsd a szereplő helyét
@@ -457,8 +414,14 @@ hu:
       current: Aktuális szintek
       unused: Nem használt szintek
   upsell:
+    applab:
+      title: App Lab
+      body: Az App Lab egy programozási környezet egyszerű alkalmazásokra. Tervezd meg, kódolj blokkokkal vagy JavaScript-el hogy működjön, majd oszd meg másodpercek alatt.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Kor 13+
+      cta: Ismerd meg hogyan
     hoc:
-      title: Classic Maze
+      title: Hagyományos Útvesztö
       body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
     flappy:
       title: Flappy kód
@@ -479,7 +442,7 @@ hu:
       title: Star Wars
     infinity:
       title: Infinity játéklabor
-      body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney Infinity karakterek szereplésével.
+      body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel.
     minecraft:
       title: Minecraft
       body: Fedezd fel a Minecraft világát kódokkal.
@@ -498,10 +461,10 @@ hu:
   landing:
     prerelease: "Ez a tananyag <span class='betatext'> béta állapotban van</span>.  Ez azt jelenti, hogy ez nem a tananyag végleges változata, és a visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés várható."
     prerelease_hoc2014: "Ez a tananyag <span class='betatext'> béta állapotban van</span>. A visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés várható."
-    feedback: Visszajelzés küldése
     report_bug: Hiba bejelentése
     support: Segítség kérés
     support_url: //support.code.org
+    help_resources: Súgó és erőforrások
   multi:
     wrong_title: Helytelen válasz
     wrong_body: 'A megadott válasz nem megfelelő.  Próbáld újra!'
@@ -509,6 +472,23 @@ hu:
     correct_body: Ez a helyes válasz.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Köszönöm
+    wrong_body: Köszönjük hogy elküldtél egy választ.
+    correct_title: Köszönöm
+    correct_body: Köszönjük hogy elküldtél egy választ.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Köszönöm
+    wrong_body: Köszönjük az elküldött válaszokat.
+    correct_title: Köszönöm
+    correct_body: Köszönjük az elküldött válaszokat.
+  level_group-submittable:
+    wrong_title: Köszönöm
+    wrong_body: Köszönjük az elküldött válaszokat.
+    correct_title: Köszönöm
+    correct_body: Köszönjük az elküldött válaszokat.
   match:
     wrong_title: Helytelen megoldás
     wrong_body: 'A megadott megoldás nem megfelelő.  Próbáld újra.'
@@ -526,6 +506,8 @@ hu:
     placeholder: Itt add meg a válaszod
     open_response_title: Köszönjük
     open_response_body: Köszönjük a választ!
+    correct_title: Helyes
+    correct_body: Ez a helyes válasz.
   dialog:
     ok: OK
     startover_title: Biztosan újra szeretnéd kezdeni?
@@ -579,6 +561,7 @@ hu:
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
     assessment: értékelés
+    submitted: elküldve
   studio:
     courses_working_on: Tanfolyamok, amelyeken dolgozol
     completed_courses: Teljesített tanfolyamok
@@ -635,3 +618,7 @@ hu:
           other: Egyéb
         detail: Kérjük, adj meg a lehető legtöbb részletet a jelenteni kívánt tartalommal kapcsolatban!
         acknowledge: 'Az alábbi információk megadásával tudomásul veszed, hogy azokat az %{link_start_privacy}Adatvédelmi szabályzatnak%{link_end} és a %{link_start_tos}Felhasználói szabályoknak%{link_end} megfelelően kezeljük'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

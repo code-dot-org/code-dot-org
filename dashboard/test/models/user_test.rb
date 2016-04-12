@@ -98,7 +98,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal ['Email has already been taken'], user.errors.full_messages
   end
 
-
   test "cannot create young user with duplicate email" do
     # actually create a user
     User.create!(@good_data_young)
@@ -134,7 +133,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-
   test "cannot create a user with age that's not a number" do
     assert_no_difference('User.count') do
       user = User.create(@good_data.merge({age: 'old', email: 'new@email.com'}))
@@ -157,7 +155,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot create a user with too large age" do
     assert_no_difference('User.count') do
-      user = User.create(@good_data.merge({age: 15000000, email: 'new@email.com'}))
+      user = User.create(@good_data.merge({age: 15_000_000, email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
       # should not be able to select -1 (they have a dropdown from
@@ -175,7 +173,6 @@ class UserTest < ActiveSupport::TestCase
       assert_equal 9, user.age
     end
   end
-
 
   test "can save a user with age" do
     user = create :user, age: 10
@@ -231,7 +228,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-
   test "cannot create self-managed user without email or hashed email" do
     assert_no_difference('User.count') do
       User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
@@ -250,7 +246,6 @@ class UserTest < ActiveSupport::TestCase
     user.user_type = 'teacher'
     assert !user.save
   end
-
 
   test "cannot make an account without email an admin" do
     user = User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
@@ -292,7 +287,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'Laurel', create(:user, :name => 'Laurel').short_name # just one name
     assert_equal 'some', create(:user, :name => '  some whitespace in front  ').short_name # whitespace in front
   end
-
 
   test "initial" do
     assert_equal 'L', create(:user, :name => 'Laurel Fan').initial # first name last name
@@ -407,7 +401,6 @@ class UserTest < ActiveSupport::TestCase
     assert !user.email.present?
     assert user.hashed_email.present?
   end
-
 
   test 'users over 13 have plaintext email and hashed email' do
     user = create :user, birthday: Date.new(1990, 10, 4), email: 'will_be_hashed@email.xx'
@@ -533,7 +526,7 @@ class UserTest < ActiveSupport::TestCase
     old_password = user.encrypted_password
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
-    # HACK fix my syntax highlighting "
+    # HACK: Fix my syntax highlighting "
     token = $1
 
     User.reset_password_by_token(reset_password_token: token,
@@ -812,7 +805,6 @@ class UserTest < ActiveSupport::TestCase
     assert !user.needs_to_backfill_user_scripts?
   end
 
-
   test 'update_with_password does not require current password for users without passwords' do
     student = create(:student)
     student.update_attribute(:encrypted_password, '')
@@ -830,7 +822,6 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal "JADENDUMPLING", student.name
   end
-
 
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
@@ -856,7 +847,6 @@ class UserTest < ActiveSupport::TestCase
 
     create(:user, name: 'Same Name')
   end
-
 
   test 'generate username' do
     def create_user_with_username(username)
@@ -907,7 +897,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'generates usernames' do
     names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', 'this is a really long name blah blah blah blah blah blah']
-    expected_usernames = ['coder_a', 'coder_b', 'captain_picard', 'captain_picard1', 'captain_picard2', 'this_is_a_really']
+    expected_usernames = %w(coder_a coder_b captain_picard captain_picard1 captain_picard2 this_is_a_really)
 
     i = 0
     users = names.map do |name|
@@ -943,7 +933,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [follow], student.followeds
 
     other_user = create :student
-
 
     assert !student.student_of?(student)
     assert !student.student_of?(other_user)
@@ -988,5 +977,53 @@ class UserTest < ActiveSupport::TestCase
     assert admin.authorized_teacher?
   end
 
+  test "can_edit_account?" do
+    # a student who only logs in with picture accounts cannot edit their account
+
+    assert create(:student).can_edit_account?
+    assert create(:student, age: 4).can_edit_account?
+    assert create(:teacher).can_edit_account?
+
+    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+    assert picture_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
+    assert word_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
+
+    student_without_password = create(:student, encrypted_password: '')
+
+    # join picture section
+    create(:follower, student_user: student_without_password, section: picture_section)
+    student_without_password.reload
+    assert !student_without_password.can_edit_account? # only in a picture section
+
+    # join word section
+    create(:follower, student_user: student_without_password, section: word_section)
+    student_without_password.reload
+    assert student_without_password.can_edit_account? # only in a picture section
+
+    student_with_password = create(:student, encrypted_password: 'xxxxxx')
+
+    # join picture section
+    create(:follower, student_user: student_with_password, section: picture_section)
+    student_with_password.reload
+    assert student_with_password.can_edit_account? # only in a picture section
+
+    # join word section
+    create(:follower, student_user: student_with_password, section: word_section)
+    student_with_password.reload
+    assert student_with_password.can_edit_account? # only in a picture section
+
+    student_with_oauth = create(:student, encrypted_password: nil, provider: 'facebook', uid: '1111111')
+
+    # join picture section
+    create(:follower, student_user: student_with_oauth, section: picture_section)
+    student_with_oauth.reload
+    assert student_with_oauth.can_edit_account? # only in a picture section
+
+    # join word section
+    create(:follower, student_user: student_with_oauth, section: word_section)
+    student_with_oauth.reload
+    assert student_with_oauth.can_edit_account? # only in a picture section
+  end
 
 end

@@ -25,8 +25,8 @@
       unlock_instructions:
         subject: Talimatların kilidini aç
     omniauth_callbacks:
-      failure: '%{kind} kimliği %{reason} nedeniyle doğrulanamadı.'
-      success: '%{kind} hesabından başarıyla kimlik doğrulandı.'
+      failure: "%{kind} kimliği %{reason} nedeniyle doğrulanamadı."
+      success: "%{kind} hesabından başarıyla kimlik doğrulandı."
     passwords:
       no_token: Parola sıfırlama epostası dışından bu sayfaya erişemezsin. Eğer parola
         sıfırlama epostasından geldiysen, lütfen verilen URL'nin tamamını kullandığından
@@ -36,7 +36,7 @@
       send_paranoid_instructions: Eğer e-posta adresiniz veritabanımızda kayıtlı ise,
         birkaç dakika içinde parola kurtarma bağlantısı içeren bir e-posta alacaksınız.
       updated: Parolan başarıyla değiştirildi. Şu anda oturum açtın.
-      updated_not_active: Şifreniz başarıyla değiştirildi.
+      updated_not_active: "Şifreniz başarıyla değiştirildi."
     registrations:
       destroyed: Hoşçakal! Hesabın başarıyla iptal edildi. Seni tekrar aramızda görmeyi
         umuyoruz.
@@ -64,16 +64,16 @@
   errors:
     messages:
       already_confirmed: zaten onaylandı, lütfen giriş yapmayı dene
-      confirmation_period_expired: '%{period} içinde onaylanması gerekliydi.Lütfen
-        yeni bir istekte bulunun'
+      confirmation_period_expired: "%{period} içinde onaylanması gerekliydi.Lütfen
+        yeni bir istekte bulunun"
       expired: süresi doldu, lütfen yeni bir tane iste
       not_found: bulunamadı
       not_locked: kilitli değil
       not_saved:
         one: '1 hata %{resource} nesnesinin kaydedilmesini engelledi:'
-        other: '%{count} hata %{resource} kaynağının kaydedilmesini engelledi:'
+        other: "%{count} hata %{resource} kaynağının kaydedilmesini engelledi:"
     invitations:
-      send_instructions: '%{email} adresine davetiye epostası gönderildi.'
+      send_instructions: "%{email} adresine davetiye epostası gönderildi."
       invitation_token_invalid: Sağlanan davet işareti geçerli değil!
       updated: Parolan başarıyla ayarlandı. Şimdi oturum açtın.
       no_invitations_remaining: Davet kalmadı

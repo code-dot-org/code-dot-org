@@ -2,18 +2,6 @@
  * @overview Represents a collection of tables that map to a particular
  *           class section's simulation, isolated from other class sections.
  */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
 'use strict';
 
 var NetSimTable = require('./NetSimTable');
@@ -163,9 +151,9 @@ NetSimShard.prototype.resetEverything = function (onComplete) {
     type: 'delete',
     contentType: 'application/json; charset=utf-8',
     dataType: "json"
-  }).done(function() {
+  }).done(function () {
     onComplete(null, true);
-  }).fail(function(request, status, error) {
+  }).fail(function (request, status, error) {
     var err = new Error('status: ' + status + '; error: ' + error);
     onComplete(err, false);
   });

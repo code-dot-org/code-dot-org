@@ -5,14 +5,18 @@ inherit_from:
 AllCops:
   Exclude:
     - 'apps/**/*'
-    - 'dashboard/scripts/**/*'
-  RunRailsCops: true
+    - 'dashboard/db/**/*'
+    - 'dashboard/db/*'
   DisplayCopNames: true
+  TargetRubyVersion: 2.2
 
 # Listed are rules we don't plan to enable in the foreseeable future.
 # Add rules we plan to fix (but are currently failing) to .rubocop_todo.yml.
 
 Style/BarePercentLiterals:
+  Enabled: false
+
+Style/ClosingParenthesisIndentation:
   Enabled: false
 
 # Require trailing dots for method chaining in ruby
@@ -23,8 +27,23 @@ Style/BarePercentLiterals:
 Style/DotPosition:
   EnforcedStyle: trailing
 
+Style/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true 
+
 Style/ExtraSpacing:
   Enabled: false
+
+Style/IdenticalConditionalBranches:
+  Enabled: false
+
+Style/IfInsideElse:
+  Enabled: false
+
+Style/RedundantReturn:
+  Enabled: false
+
+Style/WordArray:
+  MinSize: 5
 
 Metrics/AbcSize:
   Enabled: false
@@ -34,3 +53,12 @@ Metrics/LineLength:
 
 Metrics/ModuleLength:
   Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
+
+Style/NumericLiterals:
+  MinDigits: 7
