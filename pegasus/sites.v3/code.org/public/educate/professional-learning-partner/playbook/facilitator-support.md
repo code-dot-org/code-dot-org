@@ -8,7 +8,7 @@ nav: plp_playbook_nav
 # Facilitator Support
 
 
-### The role of the facilitator & the Professional Learning Partner
+### Facilitators are key to building a sustainable computer science community in your region. They are the bridge between your organization and the teachers you serve and impact the quality of the professional learning programs. The following resources will help you sustain and grow a strong corps of local facilitators.
 
 # Resources
 

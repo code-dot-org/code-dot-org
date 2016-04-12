@@ -86,6 +86,7 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      CSD U3 Variables Reassign Predict No Response: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -2650,6 +2651,11 @@ en:
         Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
         There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
         What is 2 + 2?: What is 2 + 2?
+      CSD U3 Variables Reassign Predict Multi:
+        A 10 will be displayed. Once a variable is full you cannot put another value in it: A 10 will be displayed. Once a variable is full you cannot put another value in it
+        A 20 will be displayed. New values replace old values in a variable: A 20 will be displayed. New values replace old values in a variable
+        A 30 will be displayed. Variables grow as you add more to them: A 30 will be displayed. Variables grow as you add more to them
+        An error will be generated.: An error will be generated.
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
@@ -4626,9 +4632,7 @@ en:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
-      CSD U3 Variables Reassign Predict:
-        Enter prompt here: Enter prompt here
-        Make a Prediction: Make a Prediction
+      CSD U3 Variables Reassign Predict: {}
       'CSP U4L04 Assessment 2 ':
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here
