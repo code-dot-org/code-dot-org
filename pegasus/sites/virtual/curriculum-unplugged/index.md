@@ -9,7 +9,7 @@ video_player: true
 
 <div class="jumbo-container">
   <div class="img-container">
-    <img class="jumbo-img" src="/curriculum/unplugged/images/unplugged-hero-2.png">
+    <img class="jumbo-img" src="/curriculum/unplugged/images/unplugged-hero.png">
   </div>
 
   <div class="jumbo-tutorial">
