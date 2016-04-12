@@ -2,7 +2,6 @@ name 'U4 - Unique Ids Explanation'
 title 'title'
 css 'unplugged'
 description 'Records Have Unique IDs'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Records Have Unique IDs
 

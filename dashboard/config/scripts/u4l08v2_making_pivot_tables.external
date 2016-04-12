@@ -1,7 +1,6 @@
 name 'U4L08v2 Making Pivot Tables'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
 # Getting Started - Copy the Data

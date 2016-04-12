@@ -231,5 +231,7 @@
   "when": "apabila",
   "whenRun": "when run",
   "workspaceHeaderShort": "Workspace: ",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more."
+  "currentVersion": "Current Version",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
+  "restoreThisVersion": "Restore this Version"
 }

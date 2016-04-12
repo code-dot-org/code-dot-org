@@ -1,5 +1,4 @@
 name 'ECSPD 1 page template'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
 
