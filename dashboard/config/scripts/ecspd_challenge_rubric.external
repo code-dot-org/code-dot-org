@@ -1,7 +1,6 @@
 name 'ECSPD Challenge Rubric'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Challenge Rubric
 

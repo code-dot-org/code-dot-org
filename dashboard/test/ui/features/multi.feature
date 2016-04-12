@@ -30,10 +30,6 @@ Scenario: Submitting an incorrect option
   And I press ".modal #ok-button" using jQuery
   And I wait until element "#cross_0" is visible
 
-# This scenario is marked no_mobile because the Browserstack iPhone6 emulator
-# has trouble with the "there is no horizontal scrollbar" step every time.
-#  It works fine on all other mobile browsers; should re-enable for mobile eventually.
-@no_mobile
 Scenario: Does not scroll horizontally
   Given I am on "http://learn.code.org/s/allthethings/stage/9/puzzle/2?noautoplay=true"
   When I rotate to landscape

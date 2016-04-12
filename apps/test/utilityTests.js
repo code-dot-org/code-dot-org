@@ -600,6 +600,28 @@ describe('utils.unescapeText', function () {
     assert.equal(expected, unescapeText(input));
   });
 
+  it('Adds line break for divs with attributes', function () {
+    var input, expected;
+
+    input = 'Line 1<div style="line-height: 10.8px;">Line 2</div>';
+    expected = [
+      'Line 1',
+      'Line 2'
+    ].join('\n');
+    assert.equal(expected, unescapeText(input), 'div with attribute');
+  });
+
+  it('Does not add leading newline for span-wrapped leading line', function () {
+    var input, expected;
+
+    input = '<span>Line1</span><div>Line2</div>';
+    expected = [
+      'Line1',
+      'Line2'
+    ].join('\n');
+    assert.equal(expected, unescapeText(input), 'first line span');
+  });
+
   it('If input starts with <div> treats that as the first line', function () {
     var input = '<div>Line 1</div><div>Line 2</div>';
     var expected = [
