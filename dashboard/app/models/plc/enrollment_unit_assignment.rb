@@ -36,6 +36,9 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     transaction do
       plc_module_assignments.destroy_all
 
+      # Make sure the required learning modules are included here
+      learning_modules |=  self.plc_course_unit.plc_learning_modules.where(required: true)
+
       learning_modules.each do |learning_module|
         module_assignment = Plc::EnrollmentModuleAssignment.find_or_create_by(plc_enrollment_unit_assignment: self, plc_learning_module: learning_module)
         learning_module.plc_tasks.each do |task|
