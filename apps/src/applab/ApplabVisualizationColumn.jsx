@@ -21,9 +21,7 @@ var VisualizationColumn = React.createClass({
   render: function () {
     return (
       <div>
-        <div id="visualization">
-          <Visualization/>
-        </div>
+        <Visualization/>
         <GameButtons
             isProjectLevel={this.props.isProjectLevel}
             isSubmittable={this.props.isSubmittable}
