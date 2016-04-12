@@ -1606,7 +1606,7 @@ a.download-video {
   }
 }
 
-.text-match {
+.text-match, .open-response {
   p {
     font-size: 16px;
     line-height: 24px;
@@ -1629,6 +1629,7 @@ a.download-video {
 
 .external,
 .text-match,
+.open-response,
 .multi,
 .match {
   #markdown.teacher {
@@ -1657,7 +1658,7 @@ a.download-video {
   max-width: 100%;
 }
 
-.text-match #markdown.teacher {
+.text-match #markdown.teacher, .open-response #markdown.teacher {
   margin-left: 0;
   margin-right: 0;
 }
