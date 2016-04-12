@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160408190000) do
+ActiveRecord::Schema.define(version: 20160411090000) do
+
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
     t.integer  "level_id",        limit: 4
@@ -287,6 +288,7 @@ ActiveRecord::Schema.define(version: 20160408190000) do
 
   add_index "levels", ["game_id"], name: "index_levels_on_game_id", using: :btree
 
+<<<<<<< HEAD
   create_table "paired_user_levels", force: :cascade do |t|
     t.integer  "driver_user_level_id",    limit: 4
     t.integer  "navigator_user_level_id", limit: 4
@@ -294,6 +296,72 @@ ActiveRecord::Schema.define(version: 20160408190000) do
     t.datetime "updated_at",                        null: false
   end
 
+=======
+  create_table "pd_attendances", force: :cascade do |t|
+    t.integer  "pd_session_id", limit: 4, null: false
+    t.integer  "teacher_id",    limit: 4, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pd_attendances", ["pd_session_id"], name: "index_pd_attendances_on_pd_session_id", using: :btree
+
+  create_table "pd_district_payment_terms", force: :cascade do |t|
+    t.integer "district_id", limit: 4
+    t.string  "course",      limit: 255,                         null: false
+    t.string  "rate_type",   limit: 255,                         null: false
+    t.decimal "rate",                    precision: 8, scale: 2, null: false
+  end
+
+  add_index "pd_district_payment_terms", ["district_id", "course"], name: "index_pd_district_payment_terms_on_district_id_and_course", using: :btree
+
+  create_table "pd_enrollments", force: :cascade do |t|
+    t.integer  "pd_workshop_id", limit: 4,   null: false
+    t.string   "name",           limit: 255, null: false
+    t.string   "email",          limit: 255, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pd_enrollments", ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
+
+  create_table "pd_sessions", force: :cascade do |t|
+    t.integer  "pd_workshop_id", limit: 4
+    t.datetime "start",                    null: false
+    t.datetime "end",                      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pd_sessions", ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id", using: :btree
+
+  create_table "pd_workshops", force: :cascade do |t|
+    t.string   "workshop_type",    limit: 255, null: false
+    t.integer  "organizer_id",     limit: 4,   null: false
+    t.string   "location_name",    limit: 255
+    t.string   "location_address", limit: 255
+    t.string   "course",           limit: 255, null: false
+    t.string   "subject",          limit: 255
+    t.integer  "capacity",         limit: 4,   null: false
+    t.string   "notes",            limit: 255
+    t.integer  "section_id",       limit: 4
+    t.datetime "started_at"
+    t.datetime "ended_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pd_workshops", ["organizer_id"], name: "index_pd_workshops_on_organizer_id", using: :btree
+
+  create_table "pd_workshops_facilitators", id: false, force: :cascade do |t|
+    t.integer "pd_workshop_id", limit: 4, null: false
+    t.integer "user_id",        limit: 4, null: false
+  end
+
+  add_index "pd_workshops_facilitators", ["pd_workshop_id"], name: "index_pd_workshops_facilitators_on_pd_workshop_id", using: :btree
+  add_index "pd_workshops_facilitators", ["user_id"], name: "index_pd_workshops_facilitators_on_user_id", using: :btree
+
+>>>>>>> staging
   create_table "plc_course_units", force: :cascade do |t|
     t.integer  "plc_course_id",    limit: 4
     t.string   "unit_name",        limit: 255

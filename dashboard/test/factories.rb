@@ -29,6 +29,13 @@ FactoryGirl.define do
           facilitator.save
         end
       end
+      factory :workshop_organizer do
+        name 'Workshop Organizer Person'
+        after(:create) do |workshop_organizer|
+          workshop_organizer.permission = 'workshop_organizer'
+          workshop_organizer.save
+        end
+      end
       factory :district_contact do
         name 'District Contact Person'
         ops_first_name 'District'
@@ -414,4 +421,34 @@ FactoryGirl.define do
     conditionals_d5_count 4
   end
 
+  factory :pd_workshop, class: 'Pd::Workshop' do
+    organizer {create(:workshop_organizer)}
+    workshop_type Pd::Workshop::TYPES.first
+    course Pd::Workshop::COURSES.first
+    capacity 10
+  end
+
+  factory :pd_session, class: 'Pd::Session' do
+    association :workshop, factory: :pd_workshop
+    start {DateTime.now.utc}
+    self.send(:end, DateTime.now.utc + 6.hours)
+  end
+
+  factory :pd_enrollment, class: 'Pd::Enrollment' do
+    association :workshop, factory: :pd_workshop
+    sequence(:name) { |n| "Workshop Participant #{n} " }
+    sequence(:email) { |n| "testuser#{n}@example.com.xx" }
+  end
+
+  factory :pd_attendance, class: 'Pd::Attendance' do
+    association :session, factory: :pd_session
+    teacher {create :teacher}
+  end
+
+  factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
+    district {create :district}
+    course Pd::Workshop::COURSES.first
+    rate_type Pd::DistrictPaymentTerm::RATE_TYPES.first
+    rate 10
+  end
 end

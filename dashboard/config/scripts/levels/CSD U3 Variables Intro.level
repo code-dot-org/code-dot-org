@@ -1,0 +1,47 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-11T13:01:39.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Your first variable\r\n\r\nThere are really only 3 things you can do with a variable, and we're about to do all 3!\r\n\r\n* **Create a variable**: using the `var` command will create a variable with whatever name you like\r\n* **Change a variable's value**: using the `=` or \"gets\" command\r\n* **Use a variable's value**: use the variable's name in your program where you'd like to use the value it holds\r\n\r\n# Do This\r\n\r\n* Create a new variable with a **name of your choosing**\r\n* Use the \"gets\" command to give it a value\r\n* Use the `console.log` command to display its value in the console.",
+    "start_blocks": "var size;\r\nsize = 10;\r\nconsole.log(size);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "instructions": "Create your own variable, give it a value, and display that value in the console."
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Gamelab>

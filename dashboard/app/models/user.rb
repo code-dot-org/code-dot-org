@@ -128,6 +128,10 @@ class User < ActiveRecord::Base
     permission? UserPermission::FACILITATOR
   end
 
+  def workshop_organizer?
+    permission? UserPermission::WORKSHOP_ORGANIZER
+  end
+
   def delete_permission(permission)
     permission = permissions.find_by(permission: permission)
     permissions.delete permission if permission

@@ -1,5 +1,5 @@
 %link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
-= javascript_include_tag 'levels/external'
+%script{src: asset_path('js/levels/external.js')}
 :javascript
   var options = #{@level.properties['options'].to_json}
   function getResult() {

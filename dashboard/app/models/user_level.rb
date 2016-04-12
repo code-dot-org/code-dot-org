@@ -37,6 +37,10 @@ class UserLevel < ActiveRecord::Base
     Activity.best? best_result
   end
 
+  def perfect?
+    Activity.perfect? best_result
+  end
+
   def finished?
     Activity.finished? best_result
   end

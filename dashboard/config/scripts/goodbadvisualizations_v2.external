@@ -2,7 +2,6 @@ name 'GoodBadVisualizations_v2'
 title 'title'
 css 'unplugged'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Collection B -- Good and Bad Data Visualization
 
