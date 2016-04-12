@@ -16,7 +16,15 @@
 %p
   %b Unit order:
   = @course_unit.unit_order
-
+%hr
+%p
+  %b Learning Modules
+  - @course_unit.plc_learning_modules.each do |learning_module|
+    %li
+      = link_to learning_module.name, learning_module
+      - if learning_module.required
+        %span.required REQUIRED
+%hr
 %p
   Evaluation Questions
 
@@ -51,7 +59,7 @@
           %td
             = text_field_tag ''
           %td
-            = select_tag '', options_for_select(options_for_plc_task_learning_modules), include_blank: ''
+            = select_tag '', options_for_select(options_for_evaluation_answer_modules(@course_unit)), include_blank: ''
           %td
         %tr.new_answer_button_row{question_id: question.id}
           %td

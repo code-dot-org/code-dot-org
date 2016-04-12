@@ -447,6 +447,7 @@ ActiveRecord::Schema.define(version: 20160413225640) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.integer  "plc_course_unit_id", limit: 4,   null: false
+    t.boolean  "required"
   end
 
   add_index "plc_learning_modules", ["plc_course_unit_id"], name: "index_plc_learning_modules_on_plc_course_unit_id", using: :btree
