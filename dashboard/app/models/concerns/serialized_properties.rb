@@ -40,7 +40,7 @@ module SerializedProperties
       (serialized_properties[self.to_s] ||= []).concat args
     end
 
-    def get_external_params
+    def permitted_params
       serialized_properties.values.flatten.map{ |s| s.to_s.gsub(ENCRYPTED_PROPERTY_REGEX, '') }
     end
 
