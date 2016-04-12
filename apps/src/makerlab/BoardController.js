@@ -69,7 +69,7 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
     {instance: five.Sensor},
     {instance: PlaygroundIO.CapTouch},
     {instance: PlaygroundIO.Tap},
-    {instance: five.Gyro}
+    {instance: five.Accelerometer}
   ];
 
   Object.keys(this.prewiredComponents).forEach(function (key) {
@@ -202,8 +202,8 @@ function initializeCircuitPlaygroundComponents(io) {
       freq: 100
     }),
 
-    accelerometer: new five.Gyro({
-      controller: PlaygroundIO.Gyro
+    accelerometer: new five.Accelerometer({
+      controller: PlaygroundIO.Accelerometer
     }),
 
     tap: new PlaygroundIO.Tap(io),
