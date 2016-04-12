@@ -15,10 +15,6 @@ module SerializedProperties
     attributes = new_attributes.stringify_keys
     new_properties = attributes.delete('properties').try(:stringify_keys!)
 
-    concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
-    assign_nested_attributes_for_one_to_one_association(:level_concept_difficulty,
-        concept_difficulty_attributes) if concept_difficulty_attributes
-
     super(attributes)
     # If the properties hash is explicitly assigned then merge its keys with existing properties
     # instead of replacing the entire hash
