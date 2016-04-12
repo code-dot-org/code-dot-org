@@ -207,6 +207,7 @@ class Game < ActiveRecord::Base
         Craft:craft
         Gamelab:gamelab
         LevelGroup:level_group
+        OpenResponse:open_response
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))
