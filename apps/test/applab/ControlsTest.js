@@ -4,17 +4,17 @@ var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales();
 testUtils.setExternalGlobals();
-var Controls = require('@cdo/apps/applab/Controls');
+var CompletionButton = require('@cdo/apps/applab/CompletionButton');
 var ReactTestUtils = require('react-addons-test-utils');
 
-describe('Controls', function () {
+describe('CompletionButton', function () {
   it('non-project level, can submit, havent', function () {
     var component = ReactTestUtils.renderIntoDocument(
-      <Controls
+      <CompletionButton
         imgUrl="foo"
-        projectLevel={false}
-        submittable={true}
-        submitted={false}
+        isProjectLevel={false}
+        isSubmittable={true}
+        isSubmitted={false}
       />
     );
     var buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(component, 'button');
@@ -25,11 +25,11 @@ describe('Controls', function () {
 
   it('non-project level, can submit, have', function () {
     var component = ReactTestUtils.renderIntoDocument(
-      <Controls
+      <CompletionButton
         imgUrl="foo"
-        projectLevel={false}
-        submittable={true}
-        submitted={true}
+        isProjectLevel={false}
+        isSubmittable={true}
+        isSubmitted={true}
       />
     );
     var buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(component, 'button');
@@ -40,11 +40,11 @@ describe('Controls', function () {
 
   it('non-project level, cant submit', function () {
     var component = ReactTestUtils.renderIntoDocument(
-      <Controls
+      <CompletionButton
         imgUrl="foo"
-        projectLevel={false}
-        submittable={false}
-        submitted={false}
+        isProjectLevel={false}
+        isSubmittable={false}
+        isSubmitted={false}
       />
     );
     var buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(component, 'button');
@@ -56,11 +56,11 @@ describe('Controls', function () {
 
   it('project level (cant submit)', function () {
     var component = ReactTestUtils.renderIntoDocument(
-      <Controls
+      <CompletionButton
         imgUrl="foo"
-        projectLevel={true}
-        submittable={false}
-        submitted={false}
+        isProjectLevel={true}
+        isSubmittable={false}
+        isSubmitted={false}
       />
     );
     var buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(component, 'button');

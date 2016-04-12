@@ -11,9 +11,9 @@ var styles = {
 var GameButtons = React.createClass({
   propTypes: {
     imgUrl: React.PropTypes.string.isRequired,
-    projectLevel: React.PropTypes.bool.isRequired,
-    submittable: React.PropTypes.bool.isRequired,
-    submitted: React.PropTypes.bool.isRequired,
+    isProjectLevel: React.PropTypes.bool.isRequired,
+    isSubmittable: React.PropTypes.bool.isRequired,
+    isSubmitted: React.PropTypes.bool.isRequired,
   },
 
   render: function () {
@@ -30,9 +30,9 @@ var GameButtons = React.createClass({
         {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
         <CompletionButton
             imgUrl={this.props.imgUrl}
-            projectLevel={this.props.projectLevel}
-            submittable={this.props.submittable}
-            submitted={this.props.submitted}
+            isProjectLevel={this.props.isProjectLevel}
+            isSubmittable={this.props.isSubmittable}
+            isSubmitted={this.props.isSubmitted}
         />
       </div>
     );
