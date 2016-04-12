@@ -1,4 +1,4 @@
-var testUtils = require('./util/testUtils');
+var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 
 testUtils.setupLocales();

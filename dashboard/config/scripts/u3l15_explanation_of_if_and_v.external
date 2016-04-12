@@ -2,7 +2,6 @@ name 'U3L15 - explanation of IF and =v=='
 title 'title'
 description 'description here'
 css 'unplugged'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Having Your App Make Decisions
 
