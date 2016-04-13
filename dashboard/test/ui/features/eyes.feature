@@ -94,11 +94,8 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "maze"
-  Given I am on "http://learn.code.org/hoc/1/lang/ar-sa"
+  Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
   And I rotate to landscape
-  # noautoplay doesn't work with the language redirect, so we have to close the
-  # video dialog and the instructions
-  And I close the dialog
   And I close the dialog
   And I wait to see "#runButton"
   And I press "runButton"
@@ -196,6 +193,7 @@ Examples:
   | http://learn.code.org/s/allthethings/stage/23/puzzle/1?noautoplay=true | star wars |
   | http://learn.code.org/s/allthethings/stage/23/puzzle/2?noautoplay=true | star wars blocks |
   | http://learn.code.org/s/allthethings/stage/24/puzzle/1?noautoplay=true | minecraft |
+  | http://learn.code.org/s/course4/stage/1/puzzle/1                       | unplugged video level |
 
 @dashboard_db_access
 Scenario Outline: Logged in simple page view without instructions dialog

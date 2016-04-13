@@ -1,7 +1,6 @@
 name 'U5 - Explore PT - Student Introduction'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
 ## Unit 5: Lesson 02 - Explore Performance Task

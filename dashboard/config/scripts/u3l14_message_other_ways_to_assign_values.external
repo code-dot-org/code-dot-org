@@ -1,7 +1,6 @@
 name 'U3L14 - Message - Other ways to assign values'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
 # Controlling Memory - Other ways to store values

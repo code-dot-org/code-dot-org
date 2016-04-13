@@ -47,9 +47,25 @@ class LevelsController < ApplicationController
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
 
     blocks_xml = Blockly.convert_category_to_toolbox(blocks_xml) if type == 'toolbox_blocks'
+
+    # By default, allow levels to define their own toolboxes for all
+    # types
+    toolbox_blocks = @level.complete_toolbox(type)
+
+    # Levels which support (and have )solution blocks use those blocks
+    # as the toolbox for required and recommended block editors, plus
+    # the special "pick one" block
+    can_use_solution_blocks = @level.respond_to?("get_solution_blocks") &&
+        @level.properties['solution_blocks']
+    should_use_solution_blocks = type == 'required_blocks' || type == 'recommended_blocks'
+    if can_use_solution_blocks && should_use_solution_blocks
+      blocks = @level.get_solution_blocks + ["<block type=\"pick_one\"></block>"]
+      toolbox_blocks = "<xml>#{blocks.join('')}</xml>"
+    end
+
     level_view_options(
       start_blocks: blocks_xml,
-      toolbox_blocks: @level.complete_toolbox(type), # Provide complete toolbox for editing start/toolbox blocks.
+      toolbox_blocks: toolbox_blocks,
       edit_blocks: type,
       skip_instructions_popup: true
     )
@@ -249,7 +265,7 @@ class LevelsController < ApplicationController
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
     params[:level][:soft_buttons].delete_if(&:empty?) if params[:level][:soft_buttons].is_a? Array
-    permitted_params.concat(Level.serialized_properties.values.flatten)
+    permitted_params.concat(Level.permitted_params)
     params[:level].permit(permitted_params)
   end
 end
