@@ -23,11 +23,7 @@
     }
 
 .free-response
-  - if index
-    .number= "#{number}. "
-  - else
-    %h2= level.title if level.title
-
+  %h2= level.title if level.title && !index
   %div= render(inline: level.markdown_instructions, type: :md)
 
   - height = level.height || '80'

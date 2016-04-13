@@ -1606,17 +1606,22 @@ a.download-video {
   }
 }
 
+.level-group-number {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  float: left;
+  width: 30px;
+}
+
+.level-group-content {
+  overflow: hidden;
+}
+
 .text-match, .free-response {
   p {
     font-size: 16px;
     line-height: 24px;
-  }
-  .number {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 0px;
-    float: left;
-    width: 30px;
   }
   #markdown {
     // By default, nothing in the page body is selectable.
@@ -1771,13 +1776,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
   p {
     font-size: 16px;
     line-height: 24px;
-  }
-  .number {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 0px;
-    float: left;
-    width: 30px;
   }
   $multi-left-margin: 50px;
 
