@@ -22,7 +22,7 @@ platforms:
       - recipe[cdo-apps]
 suites:
   - name: default
-  - name: nginx
+  - name: daemon
     attributes:
       cdo-apps:
-        nginx_enabled: true
+        daemon: true
