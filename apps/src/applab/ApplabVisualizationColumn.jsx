@@ -11,6 +11,7 @@ var connect = require('react-redux').connect;
  */
 var ApplabVisualizationColumn = React.createClass({
   propTypes: {
+    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     isEditingProject: React.PropTypes.bool.isRequired,
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
