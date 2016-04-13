@@ -7,7 +7,14 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "rect": null
+      "rect": {
+        "params": [
+          "0",
+          "0",
+          "200",
+          "200"
+        ]
+      }
     },
     "edit_code": true,
     "embed": "false",
@@ -33,10 +40,15 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Rectanlges\r\n\r\nWelcome to Game Lab!  Game Lab allows you to great interactive games and animations!\r\n\r\nWe are going to start off with just some shapes and build up to games over time.\r\n\r\nIn order to create games we will first need to learn how to deal with simple shapes. The rectangle is a simple shape to deal with. \r\n\r\nThe canvas is 400 by 400. The top left corner of the canvas is 0,0 on the grid.\r\n# Do This\r\n\r\n* Add a rect block\r\n* Change the parameters of rect so that covers the whole game area"
+    "markdown_instructions": "# Rectanlges\r\n\r\nWelcome to Game Lab!  Game Lab allows you to create interactive games and animations!\r\n\r\nWe are going to start off with drawing with shapes and build up to games over time.\r\n\r\nThe first shape we are going to use is the rectangle. \r\n\r\nCheck out the Toolbox and find the rectanlge block. You can drag it out into the Workspace.\r\n\r\nExplain the width and height parameters.\r\n\r\n# Do This\r\n\r\n* Add a rect block in the Workspace\r\n* Run the program to see what happens\r\n* Change the parameters of rect so that covers the whole game area",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \"#droplet_palette_block_rect\",\r\n  \"callout_text\": \"Use this block to draw a rectangle\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"top right\",\r\n      \"at\": \"bottom left\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \".droplet-gutter-line:nth-of-type(1)\",\r\n  \"callout_text\": \"Add your blocks here to write your program\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"bottom left\",\r\n      \"at\": \"center center\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "start_blocks": "// Add a rectangle here",
+    "instructions": "Do This"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

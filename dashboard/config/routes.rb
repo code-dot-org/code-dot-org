@@ -46,6 +46,9 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  post '/dashboardapi/sections/transfers', to: 'transfers#create'
+  post '/api/sections/transfers', to: 'transfers#create'
+
   get '/sh/:id', to: redirect('/c/%{id}')
   get '/sh/:id/:action', to: redirect('/c/%{id}/%{action}')
 

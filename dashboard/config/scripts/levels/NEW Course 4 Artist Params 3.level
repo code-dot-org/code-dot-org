@@ -33,7 +33,12 @@
     "examples_required": "false",
     "never_autoplay_video": "false"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 4,
+    "functions": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

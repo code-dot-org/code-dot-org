@@ -38,7 +38,11 @@
     "never_autoplay_video": "false",
     "examples_required": "false"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "functions_with_params": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -35,7 +35,13 @@
     "never_autoplay_video": "false"
   },
   "published": true,
-  "notes": "4/9/16 - Taking the red herring parameters out to make it arguably easier."
+  "notes": "4/9/16 - Taking the red herring parameters out to make it arguably easier.",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2,
+    "for_loops": 2,
+    "variables": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>
