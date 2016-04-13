@@ -1,6 +1,7 @@
 var Visualization = require('./Visualization');
 var GameButtons = require('./GameButtons');
 var PlaySpaceHeader = require('./PlaySpaceHeader');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var commonStyles = require('../commonStyles');
 var connect = require('react-redux').connect;
 
@@ -10,7 +11,6 @@ var connect = require('react-redux').connect;
  */
 var ApplabVisualizationColumn = React.createClass({
   propTypes: {
-    // TODO - move these props into redux so that we can connect them?
     isEditingProject: React.PropTypes.bool.isRequired,
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
@@ -26,7 +26,7 @@ var ApplabVisualizationColumn = React.createClass({
         }
         <Visualization/>
         <GameButtons/>
-        <div id="belowVisualization">
+        <ProtectedStatefulDiv id="belowVisualization">
           <div id="bubble" className="clearfix">
             <table id="prompt-table">
               <tbody>
@@ -46,7 +46,7 @@ var ApplabVisualizationColumn = React.createClass({
               </div>
             </div>
           </div>
-        </div>
+        </ProtectedStatefulDiv>
       </div>
     );
   }
