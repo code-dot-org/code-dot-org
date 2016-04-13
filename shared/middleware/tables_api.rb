@@ -422,7 +422,7 @@ class TablesApi < Sinatra::Base
   #
   # @return [Redis]
   def get_redis_client
-    Redis.new(url: redis_url)
+    @@redis ||= Redis.new(url: redis_url)
   end
 
   # Returns the URL (configuration string) of the redis service in the current
