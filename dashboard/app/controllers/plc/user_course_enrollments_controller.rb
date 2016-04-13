@@ -11,8 +11,8 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
     @courses = Plc::Course.all
 
     if current_user.admin?
-      # This should be okay with Thousands of enrollments, but we still may want to kill the view for safety sake
-      @user_course_enrollments = Plc::UserCourseEnrollment.all
+      # This should be okay with a thousand enrollments but it's really just a placeholder while we develop this
+      @user_course_enrollments = Plc::UserCourseEnrollment.all.limit(1000)
     elsif current_user.district_contact?
       @user_course_enrollments = Plc::UserCourseEnrollment.where(user: District.where(contact: current_user).map(&:users).flatten)
     end

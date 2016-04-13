@@ -101,7 +101,7 @@ class Ability
         end
         can :group_view, Plc::UserCourseEnrollment
         can :manager_view, Plc::UserCourseEnrollment do |enrollment|
-          DistrictsUsers.exists?(user: enrollment.user, district: District.where(contact: user.id))
+          DistrictsUsers.exists?(user: enrollment.user, district: District.where(contact: user.id).pluck(:id))
         end
       end
 
