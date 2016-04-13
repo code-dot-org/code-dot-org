@@ -4,7 +4,6 @@
 var _ = require('../lodash');
 var connect = require('react-redux').connect;
 var actions = require('./actions');
-var PlaySpaceHeader = require('./PlaySpaceHeader');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
@@ -22,7 +21,6 @@ var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 var AppLabView = React.createClass({
   propTypes: {
     isEditingProject: React.PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     instructionsMarkdown: React.PropTypes.string,
     instructionsCollapsed: React.PropTypes.bool.isRequired,
     instructionsHeight: React.PropTypes.number.isRequired,
@@ -163,15 +161,11 @@ var AppLabView = React.createClass({
 
     return (
       <ConnectedStudioAppWrapper>
-        <div id="visualizationColumn">
-          {!this.props.isReadOnlyWorkspace && <PlaySpaceHeader
-              isEditingProject={this.props.isEditingProject}
-              screenIds={this.props.screenIds}
-              onViewDataButton={this.props.onViewDataButton}
-              onScreenCreate={this.props.onScreenCreate} />
-          }
-          <ApplabVisualizationColumn/>
-        </div>
+        <ApplabVisualizationColumn
+            isEditingProject={this.props.isEditingProject}
+            screenIds={this.props.screenIds}
+            onViewDataButton={this.props.onViewDataButton}
+            onScreenCreate={this.props.onScreenCreate} />
         <ProtectedStatefulDiv
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
@@ -201,7 +195,6 @@ var AppLabView = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
-    isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
     showInstructions: state.level.instructionsInTopPane && !!state.level.instructionsMarkdown,
     instructionsMarkdown: state.level.instructionsMarkdown,
     instructionsCollapsed: state.instructions.collapsed || !state.level.instructionsInTopPane,
