@@ -1,7 +1,10 @@
+/* global Applab */
+
 /** @file Row of controls above the visualization. */
 
 var constants = require('./constants');
 var msg = require('../locale');
+var utils = require('../utils');
 var actions = require('./actions');
 var connect = require('react-redux').connect;
 var ScreenSelector = require('./ScreenSelector');
@@ -18,10 +21,15 @@ var PlaySpaceHeader = React.createClass({
     isViewDataButtonHidden: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.oneOf([ApplabInterfaceMode.CODE, ApplabInterfaceMode.DESIGN]).isRequired,
     screenIds: React.PropTypes.array.isRequired,
-    onViewDataButton: React.PropTypes.func.isRequired,
     onScreenChange: React.PropTypes.func.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
     onInterfaceModeChange: React.PropTypes.func.isRequired
+  },
+
+  handleViewData: function () {
+    window.open(
+      '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + Applab.channelId,
+      '_blank');
   },
 
   handleScreenChange: function (evt) {
@@ -45,7 +53,7 @@ var PlaySpaceHeader = React.createClass({
     }
 
     if (this.props.interfaceMode === ApplabInterfaceMode.CODE && !this.shouldHideViewDataButton()) {
-      rightSide = <ViewDataButton onClick={this.props.onViewDataButton} />;
+      rightSide = <ViewDataButton onClick={this.handleViewData} />;
     } else if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN) {
       rightSide = <ScreenSelector
           screenIds={this.props.screenIds}
