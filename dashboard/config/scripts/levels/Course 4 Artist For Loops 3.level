@@ -31,6 +31,13 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2,
+    "for_loops": 2,
+    "variables": 3
   }
 }]]></config>
   <blocks>
