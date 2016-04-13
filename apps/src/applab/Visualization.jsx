@@ -1,12 +1,13 @@
 var applabConstants = require('./constants');
 var commonStyles = require('../commonStyles');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
 var Visualization = React.createClass({
   render: function () {
     var appWidth = applabConstants.APP_WIDTH;
     var appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
     return (
-      <div>
+      <ProtectedStatefulDiv>
         <div id="visualization">
           <div id="divApplab" className="appModern" tabIndex="1"/>
           <div id="designModeViz" className="appModern" style={commonStyles.hidden}/>
@@ -19,7 +20,7 @@ var Visualization = React.createClass({
                viewBox={"0 0 " + appWidth + " " + appHeight}
                pointerEvents="none"/>
         </div>
-      </div>
+      </ProtectedStatefulDiv>
     );
   }
 });

@@ -1,6 +1,7 @@
 var msg = require('../locale');
 
 var connect = require('react-redux').connect;
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
 var styles = {
   main: {
@@ -44,14 +45,14 @@ var CompletionButton = React.createClass({
     }
 
     return (
-      <div style={styles.main}>
+      <ProtectedStatefulDiv style={styles.main}>
         <div id="share-cell" className={divClass}>
           <button id={id} className="share">
             <img src="/blockly/media/1x1.gif"/>
             {contents}
           </button>
         </div>
-      </div>
+      </ProtectedStatefulDiv>
     );
   }
 });
