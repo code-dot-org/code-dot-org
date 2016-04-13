@@ -21,9 +21,10 @@ var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 var AppLabView = React.createClass({
   propTypes: {
     isEditingProject: React.PropTypes.bool.isRequired,
-    instructionsMarkdown: React.PropTypes.string,
+    showInstructions: React.PropTypes.bool.isRequired,
     instructionsCollapsed: React.PropTypes.bool.isRequired,
     instructionsHeight: React.PropTypes.number.isRequired,
+    instructionsMaxHeight: React.PropTypes.number.isRequired,
 
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
@@ -75,7 +76,7 @@ var AppLabView = React.createClass({
    * our minimum sizes, shrink the debugger, editor, and instructions pane equally
    */
   adjustTopPaneHeight: function () {
-    if (!this.props.instructionsInTopPane) {
+    if (!this.props.showInstructions) {
       return;
     }
 
@@ -88,7 +89,8 @@ var AppLabView = React.createClass({
 
     var topPaneHeight = this.props.instructionsHeight;
     var totalHeight = topPaneHeight + this.refs.codeWorkspace.getContentHeight();
-    var instructionsContentHeight = this.refs.topInstructions.getContentHeight();
+    var topInstructions = this.refs.topInstructions.getWrappedInstance();
+    var instructionsContentHeight = topInstructions.getContentHeight();
 
     // The max space we could use for our top pane if editor/debugger used
     // only the reserved amount of space.
@@ -169,15 +171,7 @@ var AppLabView = React.createClass({
             className="fa fa-ellipsis-v" />
         {this.props.showInstructions && <TopInstructions
             ref="topInstructions"
-            isEmbedView={this.props.isEmbedView}
-            puzzleNumber={this.props.puzzleNumber}
-            stageTotal={this.props.stageTotal}
             height={topPaneHeight}
-            maxHeight={this.props.instructionsMaxHeight}
-            markdown={this.props.instructionsMarkdown}
-            collapsed={this.props.instructionsCollapsed}
-            onToggleCollapsed={this.props.toggleInstructionsCollapsed}
-            onChangeHeight={this.props.setInstructionsHeight}
             onLoadImage={this.adjustTopPaneHeight}/>
         }
         <CodeWorkspaceContainer
@@ -194,19 +188,12 @@ var AppLabView = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     showInstructions: state.level.instructionsInTopPane && !!state.level.instructionsMarkdown,
-    instructionsMarkdown: state.level.instructionsMarkdown,
     instructionsCollapsed: state.instructions.collapsed || !state.level.instructionsInTopPane,
     instructionsHeight: state.instructions.height,
     instructionsMaxHeight: state.instructions.maxHeight,
-    isEmbedView: state.level.isEmbedView,
-    puzzleNumber: state.level.puzzleNumber,
-    stageTotal: state.level.stageTotal
   };
 }, function propsFromDispatch(dispatch) {
   return {
-    toggleInstructionsCollapsed: function () {
-      dispatch(actions.toggleInstructionsCollapsed());
-    },
     setInstructionsHeight: function (height) {
       dispatch(actions.setInstructionsHeight(height));
     },
