@@ -55,7 +55,7 @@ function initLevelGroup(
     var result;
     var submitted;
 
-    if (window.appOptions.level.submittable || this.forceSubmittable) {
+    if (window.appOptions.level.submittable || forceSubmittable) {
       result = true;
       submitted = true;
     } else {
