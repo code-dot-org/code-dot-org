@@ -170,10 +170,7 @@ var AppLabView = React.createClass({
               onViewDataButton={this.props.onViewDataButton}
               onScreenCreate={this.props.onScreenCreate} />
           }
-          <ApplabVisualizationColumn
-              isProjectLevel={this.props.isProjectLevel}
-              isSubmittable={this.props.isSubmittable}
-              isSubmitted={this.props.isSubmitted}/>
+          <ApplabVisualizationColumn/>
         </div>
         <ProtectedStatefulDiv
             id="visualizationResizeBar"
@@ -211,9 +208,6 @@ module.exports = connect(function propsFromStore(state) {
     instructionsHeight: state.instructions.height,
     instructionsMaxHeight: state.instructions.maxHeight,
     isEmbedView: state.level.isEmbedView,
-    isProjectLevel: state.level.isProjectLevel,
-    isSubmittable: state.level.isSubmittable,
-    isSubmitted: state.level.isSubmitted,
     puzzleNumber: state.level.puzzleNumber,
     stageTotal: state.level.stageTotal
   };
