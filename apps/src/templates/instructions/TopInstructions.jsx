@@ -1,6 +1,8 @@
 'use strict';
 
 var Radium = require('radium');
+var connect = require('react-redux').connect;
+var actions = require('../../applab/actions');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
@@ -54,7 +56,6 @@ var styles = {
 
 var TopInstructions = React.createClass({
   propTypes: {
-    // If true,
     isEmbedView: React.PropTypes.bool.isRequired,
     puzzleNumber: React.PropTypes.number.isRequired,
     stageTotal: React.PropTypes.number.isRequired,
@@ -62,8 +63,8 @@ var TopInstructions = React.createClass({
     maxHeight: React.PropTypes.number.isRequired,
     markdown: React.PropTypes.string,
     collapsed: React.PropTypes.bool.isRequired,
-    onToggleCollapsed: React.PropTypes.func.isRequired,
-    onChangeHeight: React.PropTypes.func.isRequired,
+    toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
+    setInstructionsHeight: React.PropTypes.func.isRequired,
     onLoadImage: React.PropTypes.func.isRequired
   },
 
@@ -89,7 +90,7 @@ var TopInstructions = React.createClass({
     var newHeight = Math.max(minHeight, currentHeight + delta);
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
-    this.props.onChangeHeight(newHeight);
+    this.props.setInstructionsHeight(newHeight);
     return newHeight - currentHeight;
   },
 
@@ -112,7 +113,7 @@ var TopInstructions = React.createClass({
       <div style={mainStyle} className="editor-column">
         {!this.props.isEmbedView && <CollapserIcon
             collapsed={this.props.collapsed}
-            onClick={this.props.onToggleCollapsed}/>
+            onClick={this.props.toggleInstructionsCollapsed}/>
         }
         <div style={styles.header}>
           {msg.puzzleTitle({
@@ -137,4 +138,23 @@ var TopInstructions = React.createClass({
     );
   }
 });
-module.exports = Radium(TopInstructions);
+module.exports = connect(function propsFromStore(state) {
+  return {
+    isEmbedView: state.level.isEmbedView,
+    puzzleNumber: state.level.puzzleNumber,
+    stageTotal: state.level.stageTotal,
+    maxHeight: state.instructions.maxHeight,
+    markdown: state.level.instructionsMarkdown,
+    collapsed: state.instructions.collapsed,
+  };
+}, function propsFromDispatch(dispatch) {
+  return {
+    toggleInstructionsCollapsed: function () {
+      dispatch(actions.toggleInstructionsCollapsed());
+    },
+    setInstructionsHeight: function (height) {
+      dispatch(actions.setInstructionsHeight(height));
+    }
+  };
+}, null, { withRef: true }
+)(Radium(TopInstructions));
