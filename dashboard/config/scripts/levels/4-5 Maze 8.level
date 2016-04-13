@@ -29,7 +29,11 @@
     "step_speed": "1"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

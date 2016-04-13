@@ -36,7 +36,12 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To draw a regular polygon, turn **360/sides** each time.\",\r\n  \"hint_id\": \"Course_4_Artist_Vars_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "variables": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

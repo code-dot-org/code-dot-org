@@ -31,8 +31,14 @@
     "disable_examples": "false",
     "step_speed": "1",
     "never_autoplay_video": "false",
-    "maze_data": null,
     "fast_get_nectar_animation": "true"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_loops": 2,
+    "for_loops": 4,
+    "variables": 3
   }
 }]]></config>
   <blocks>

@@ -88,7 +88,13 @@ def main()
   start_time = Time.now.to_i
   # Run the build command and exit if it didn't do anything.
   status = 0
-  log = capture_stdout { status = build }
+  log = capture_stdout do
+    begin
+      status = build
+    rescue => e
+      status = "Error: #{e.message}\n#{CDO.backtrace e}"
+    end
+  end
   return status if status == 0 && log.empty?
 
   Dir.chdir(deploy_dir) do
@@ -108,8 +114,8 @@ def main()
       message = "<b>#{projects}</b> failed to build!" + time_message
 
       HipChat.log message, color: 'red'
-      HipChat.log "/quote #{log}", color: 'gray', message_format: 'text'
-      HipChat.log "/quote #{status}", color: 'gray', message_format: 'text'
+      HipChat.log "/quote #{log}", color: 'gray', message_format: 'text' unless log.empty?
+      HipChat.log "/quote #{status}", color: 'gray', message_format: 'text' unless status.is_a?(String) && status.empty?
 
       HipChat.developers message, color: 'red', notify: 1
       HipChat.developers commit_url, color: 'gray', message_format: 'text'

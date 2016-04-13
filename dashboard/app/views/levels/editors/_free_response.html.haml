@@ -1,0 +1,12 @@
+.field
+  = f.label :height
+  %p Height of the answer textarea in px.
+  = f.number_field :height, step: 50
+.field
+  = f.label :placeholder
+  %p Placeholder text to show in the answer textarea.
+  = f.text_field :placeholder
+.field
+  = f.label :solution
+  %p Optional solution markdown to display to teachers.
+  = f.text_area :solution, rows: 20

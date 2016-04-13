@@ -33,7 +33,11 @@
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":2,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "conditionals": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

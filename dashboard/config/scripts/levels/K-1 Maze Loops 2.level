@@ -28,6 +28,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "markdown_instructions": "Use the `repeat` block to get me to the pig!"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
   }
 }]]></config>
   <blocks>
