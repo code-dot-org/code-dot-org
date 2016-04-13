@@ -44,7 +44,9 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "debugger_disabled": "false"
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

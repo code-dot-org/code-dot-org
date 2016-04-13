@@ -37,7 +37,6 @@
     "examples_required": "false",
     "timeout_after_when_run": "false",
     "never_autoplay_video": "false",
-    "maze_data": null,
     "first_sprite_index": "9",
     "protaganist_sprite_index": "0"
   },
