@@ -35,7 +35,11 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Each repeated shape is the combination of **half of a hexagon**, followed by **2/3 of a triangle**. \",\r\n  \"hint_id\": \"Course_4_Artist_12_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The unit shape is almost the same as in the last puzzle, except the half-hexagon is a bit bigger. \",\r\n  \"hint_id\": \"Course_4_Artist_12_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"1) The first three lines are 60 pixels long and you need to turn 60 degrees.  \\n 2) The next two lines are 80 pixels long and you need to turn 120 degrees \",\r\n  \"hint_id\": \"Course_4_Artist_12_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**\\n\\n![Image of solution blocks](https://images.code.org/0aac1032df04c82fe4446e1121eb1407-image-1440051412783.01.33.png)\",\r\n  \"hint_id\": \"Course_4_Artist_12_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
