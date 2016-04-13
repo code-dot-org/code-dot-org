@@ -38,7 +38,7 @@ You can find that key by [logging in](https://eyes.applitools.com/app/sessions/)
 1. Visit the [Applitools sessions dashboard](https://eyes.applitools.com/app/sessions/) to see your test run
   1. **Accept** the changes and **Save** (bottom right)
 
-### Try it targeting BrowserStack
+### Try it targeting Sauce Labs
 
 1. `bundle exec ./runner.rb --eyes -c Chrome33Win7,iPhone`
 
