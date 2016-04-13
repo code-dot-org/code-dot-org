@@ -25,7 +25,7 @@
   = link_to 'Edit Predraw Blocks', level_edit_blocks_path(@level, :predraw_blocks) unless @level.new_record?
   = f.text_area :predraw_blocks, placeholder: 'Predraw Blocks', rows: 4, value: @level.pretty_block('predraw')
   :javascript
-    levelbuilder.initializeCodeMirror('predraw_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+    levelbuilder.initializeCodeMirror('level_predraw_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 .field
   = f.label :images, 'Image field in JSON array format, e.g.:'
   %div
