@@ -27,7 +27,11 @@
     "definition_collapse": "false",
     "disable_examples": "false"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

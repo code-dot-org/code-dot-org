@@ -33,6 +33,13 @@
     "examples_required": "false",
     "fast_get_nectar_animation": "false",
     "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 5,
+    "for_loops": 4,
+    "variables": 3
   }
 }]]></config>
   <blocks>

@@ -39,6 +39,11 @@
     "maze_data": null
   },
   "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "for_loops": 4,
+    "variables": 3
+  },
   "notes": ""
 }]]></config>
   <blocks>
