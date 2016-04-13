@@ -26,6 +26,11 @@
     "disable_examples": "false",
     "examples_required": "false",
     "step_speed": "3"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5
   }
 }]]></config>
   <blocks>

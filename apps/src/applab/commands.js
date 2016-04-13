@@ -17,6 +17,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var applabTurtle = require('./applabTurtle');
 var ChangeEventHandler = require('./ChangeEventHandler');
 var color = require('../color');
+var logToCloud = require('../logToCloud');
 
 var OPTIONAL = true;
 
@@ -1381,9 +1382,25 @@ applabCommands.onHttpRequestEvent = function (opts) {
   }
 };
 
+/**
+ * Log the hostname and url to New Relic as a StartWebRequest event.
+ * @param {string} url
+ */
+function logWebRequest(url) {
+  var a = document.createElement('a');
+  a.href = url;
+  var hostname = a.hostname;
+
+  logToCloud.addPageAction(logToCloud.PageAction.StartWebRequest, {
+    hostname: hostname,
+    url: url
+  });
+}
+
 applabCommands.startWebRequest = function (opts) {
   apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
+  logWebRequest(opts.url);
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
   req.open('GET', opts.url, true);
