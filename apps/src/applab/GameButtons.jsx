@@ -1,12 +1,7 @@
 var msg = require('../locale');
 
 var CompletionButton = require('./CompletionButton');
-
-var styles = {
-  hidden: {
-    display: 'none'
-  }
-};
+var commonStyles = require('../commonStyles');
 
 var GameButtons = function (props) {
   return (
@@ -15,7 +10,7 @@ var GameButtons = function (props) {
         <div>{msg.runProgram()}</div>
         <img src="/blockly/media/1x1.gif" className="run26"/>
       </button>
-      <button id="resetButton" className="launch blocklyLaunch" style={styles.hidden}>
+      <button id="resetButton" className="launch blocklyLaunch" style={commonStyles.hidden}>
         <div>{msg.resetProgram()}</div>
         <img src="/blockly/media/1x1.gif" className="reset26"/>
       </button>

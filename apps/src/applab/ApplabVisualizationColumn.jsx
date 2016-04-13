@@ -1,11 +1,6 @@
 var Visualization = require('./Visualization');
 var GameButtons = require('./GameButtons');
-
-var styles = {
-  hidden: {
-    display: 'none'
-  }
-};
+var commonStyles = require('../commonStyles');
 
 /**
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
@@ -21,12 +16,12 @@ var VisualizationColumn = function (props) {
           <table id="prompt-table">
             <tbody>
               <tr>
-                <td id="prompt-icon-cell" style={styles.hidden}>
+                <td id="prompt-icon-cell" style={commonStyles.hidden}>
                   <img id="prompt-icon"/>
                 </td>
                 <td id="prompt-cell">
                   <p id="prompt"/>
-                  <p id="prompt2" style={styles.hidden}/>
+                  <p id="prompt2" style={commonStyles.hidden}/>
                 </td>
               </tr>
             </tbody>

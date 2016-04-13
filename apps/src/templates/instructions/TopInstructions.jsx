@@ -3,6 +3,7 @@
 var Radium = require('radium');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
+var commonStyles = require('../../commonStyles');
 
 var processMarkdown = require('marked');
 
@@ -42,9 +43,6 @@ var styles = {
     bottom: 0,
     left: 0,
     right: 0
-  },
-  hidden: {
-    display: 'none'
   },
   embedView: {
     height: undefined,
@@ -122,7 +120,7 @@ var TopInstructions = React.createClass({
             puzzle_number: this.props.puzzleNumber
           })}
         </div>
-        <div style={[this.props.collapsed && styles.hidden]}>
+        <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
             <Instructions
               ref="instructions"
