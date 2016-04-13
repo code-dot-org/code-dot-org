@@ -1,5 +1,7 @@
 var msg = require('../locale');
 
+var connect = require('react-redux').connect;
+
 var styles = {
   main: {
     display: 'inline'
@@ -54,4 +56,14 @@ var CompletionButton = React.createClass({
   }
 });
 
-module.exports = CompletionButton;
+module.exports = connect(function propsFromStore(state) {
+  return {
+    isProjectLevel: state.level.isProjectLevel,
+    isSubmittable: state.level.isSubmittable,
+    isSubmitted: state.level.isSubmitted,
+  };
+})(CompletionButton);
+
+module.exports.__TestInterface__ = {
+  UnconnectedCompletionButton: CompletionButton
+};

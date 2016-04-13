@@ -4,7 +4,7 @@ var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales();
 testUtils.setExternalGlobals();
-var CompletionButton = require('@cdo/apps/applab/CompletionButton');
+var CompletionButton = require('@cdo/apps/applab/CompletionButton').__TestInterface__.UnconnectedCompletionButton;
 var ReactTestUtils = require('react-addons-test-utils');
 
 describe('CompletionButton', function () {
