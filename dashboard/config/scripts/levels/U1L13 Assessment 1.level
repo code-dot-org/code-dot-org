@@ -1,0 +1,14 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:12.937Z",
+  "user_id": 0,
+  "properties": {
+    "title": "Why Compress?",
+    "markdown_instructions": "Why do you want to compress anything? What's the point?\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:17.510Z",
+  "user_id": 0,
+  "properties": {
+    "title": "The Need For Addressing: Assessment 3",
+    "markdown_instructions": "Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?",
+    "encrypted_solution": "TIzENjJr0V8LR0DGAcu+xld1yh08pINT9G3gEFoHhA9eJXLMjH3uIvihjRa+\nJKSDg7rEe/tpgolgfEo3y4CWq2OutdoPdrO2jGpSHvTy1DWvUJ5NgvjLmFq7\nvX37pF0uf9PivCnofsvE+n84cfGnBSxsOztD9HGu4nrqyeRFlEYtZY3je5SO\nKDWpBGhWQcTI8qt8RwNYIVF/PtGbsBosqvXQ1Vl8GXkdVx/rzu1MMzx038tW\n4kXHYRH24/xCgnrSaPMh/tI4Hfhi5/jcCjnTeE/xy+E2qBwQ22TmCWzTM1cS\nHBCEIBFv47sYq4LkZrT5nnR9UNbTLobUQ/5967f3ew==\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>
