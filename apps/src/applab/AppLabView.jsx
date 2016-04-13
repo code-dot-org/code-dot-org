@@ -119,7 +119,7 @@ var AppLabView = React.createClass({
   },
 
   componentDidMount: function () {
-    if (this.props.instructionsInTopPane) {
+    if (this.props.showInstructions) {
       this.adjustTopPaneHeight();
 
       window.addEventListener('resize', this.onResize);
@@ -129,7 +129,7 @@ var AppLabView = React.createClass({
   },
 
   componentWillUnmount: function () {
-    if (this.props.instructionsInTopPane) {
+    if (this.props.showInstructions) {
       window.removeEventListener("resize", this.onResize);
     }
   },
@@ -148,7 +148,7 @@ var AppLabView = React.createClass({
     }
 
     // Or we may not display the instructions pane at all
-    if (!this.props.instructionsInTopPane) {
+    if (!this.props.showInstructions) {
       height = 0;
     }
 
@@ -179,7 +179,7 @@ var AppLabView = React.createClass({
         <ProtectedStatefulDiv
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
-        {this.props.instructionsInTopPane && <TopInstructions
+        {this.props.showInstructions && <TopInstructions
             ref="topInstructions"
             isEmbedView={this.props.isEmbedView}
             puzzleNumber={this.props.puzzleNumber}
@@ -206,7 +206,7 @@ var AppLabView = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
-    instructionsInTopPane: state.level.instructionsInTopPane,
+    showInstructions: state.level.instructionsInTopPane && !!state.level.instructionsMarkdown,
     instructionsMarkdown: state.level.instructionsMarkdown,
     instructionsCollapsed: state.instructions.collapsed || !state.level.instructionsInTopPane,
     instructionsHeight: state.instructions.height,

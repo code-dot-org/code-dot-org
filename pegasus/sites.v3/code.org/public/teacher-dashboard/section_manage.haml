@@ -4,6 +4,54 @@ layout: none
 theme: none
 content-type: text/ng-template
 ---
+%div{class: "modal fade move-students-modal", id: "move-students", "ng-controller" => "MovingStudentsController as msCtrl", "ng-init" => "transferUrl = '#{CDO.studio_url("/sections/transfer")}'"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button{ type: "button", class: "close", :"data-dismiss"=> "modal" }
+          %span{ :"aria-hidden"=>"true" } &times;
+          %span.sr-only Close
+        .move-students-error
+        .move-students-header Select students to move to a new section. Moving students will not clear their progress.
+        .move-students-container
+          .student-selection-area
+            %table
+              %tr
+                %th.manage-th.checkboxes
+                  %input{ type: "checkbox", "ng-model" => "selectedAll", "ng-click" => "checkAll()" }
+                %th.manage-th
+                  Name
+              %tr{ "ng-repeat" => "student in students" }
+                %td
+                  %input{ type: "checkbox", "ng-model" => "student.selected" }
+                %td
+                  {{student.name}}
+          .destination-section-area
+            %label
+              .section-title.selection Move to section:
+              %select{ "ng-model" => "selectedSectionCode" }
+                %option{"ng-repeat" => "section in sections | filter: {id: '!' + currentSection.id}", value: "{{section.code}}"}
+                  {{section.name}}
+                %option{value: "Other Section"}
+                  {{otherSection}}
+            %div{ "ng-show" => "selectedSectionCode != 'Other Section'" }
+              Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+            %div{ "ng-show" => "selectedSectionCode == 'Other Section'" }
+              %label
+                .section-title.selection Enter section code:
+                %input{ class: "text-box selection-text", type: 'text', maxlength: 6, "ng-model" => "manuallySelectedSectionCode", placeholder: "6-character code (ABCDEF)" }
+              %div
+                .section-title Would you like the student(s) to be in both sections?
+                %form
+                  %label.selection-text
+                    %input{ type: 'radio', "ng-model" => "stayEnrolledInCurrentSection", value: "true" }
+                    .option Yes, I want to copy student(s) to be in this current section AND the new section
+                  %label.selection-text
+                    %input{ type: 'radio', "ng-model" => "stayEnrolledInCurrentSection", value: "false" }
+                    .option No, I want to move student(s) to be in the new section only.
+            .modal-buttons
+              %button{ :type=>"button", :class=>"btn btn-primary btn-white", :"data-dismiss"=>"modal" }= "Cancel"
+              %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "moveStudents()" }= "Move Students"
 
 %div{style: "padding-left:20px"}
 

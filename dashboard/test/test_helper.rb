@@ -333,3 +333,7 @@ class FakeSlogger
     @records << json
   end
 end
+
+def json_response
+  JSON.parse @response.body
+end
