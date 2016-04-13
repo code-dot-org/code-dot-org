@@ -955,7 +955,6 @@ Applab.render = function () {
   var nextProps = $.extend({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
-    onViewDataButton: Applab.onViewData,
     onScreenCreate: designMode.createScreen
   });
   ReactDOM.render(
@@ -1330,12 +1329,6 @@ Applab.beginVisualizationRun = function () {
 
 Applab.feedbackImage = '';
 Applab.encodedFeedbackImage = '';
-
-Applab.onViewData = function () {
-  window.open(
-    '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + Applab.channelId,
-    '_blank');
-};
 
 /**
  * Handle code/design mode change.

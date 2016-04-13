@@ -13,7 +13,6 @@ var ApplabVisualizationColumn = React.createClass({
     // TODO - move these props into redux so that we can connect them?
     isEditingProject: React.PropTypes.bool.isRequired,
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    onViewDataButton: React.PropTypes.func.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
   },
 
@@ -23,7 +22,6 @@ var ApplabVisualizationColumn = React.createClass({
         {!this.props.isReadOnlyWorkspace && <PlaySpaceHeader
             isEditingProject={this.props.isEditingProject}
             screenIds={this.props.screenIds}
-            onViewDataButton={this.props.onViewDataButton}
             onScreenCreate={this.props.onScreenCreate} />
         }
         <Visualization/>

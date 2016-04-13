@@ -26,7 +26,6 @@ var AppLabView = React.createClass({
     instructionsHeight: React.PropTypes.number.isRequired,
 
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    onViewDataButton: React.PropTypes.func.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
 
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
@@ -164,7 +163,6 @@ var AppLabView = React.createClass({
         <ApplabVisualizationColumn
             isEditingProject={this.props.isEditingProject}
             screenIds={this.props.screenIds}
-            onViewDataButton={this.props.onViewDataButton}
             onScreenCreate={this.props.onScreenCreate} />
         <ProtectedStatefulDiv
             id="visualizationResizeBar"
