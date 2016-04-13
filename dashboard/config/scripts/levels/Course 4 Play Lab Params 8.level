@@ -45,7 +45,13 @@
     "examples_required": "false",
     "min_workspace_height": "1200"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_until_while": 1,
+    "events": 3,
+    "functions_with_params": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

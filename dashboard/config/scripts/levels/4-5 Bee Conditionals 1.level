@@ -36,7 +36,12 @@
     "markdown_instructions": "This cloud is blocking my view! \r\n\r\nCheck to see if there's a flower under the cloud, and only get nectar if there's a flower.   \r\nBe careful, it can change!"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 3,
+    "conditionals": 2
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
