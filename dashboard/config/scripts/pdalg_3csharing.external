@@ -1,0 +1,40 @@
+name 'PDAlg 3CSharing'
+css 'k5pd'
+skip_dialog true
+
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
+
+# Sharing Student Work > Finding Projects to Share
+
+## Things that can be shared
+
+Many of the activites that students complete are intented as skill-building puzzles, and not designed for sharing broadly. To identify "shareable" programs you'll want to look in a couple of places:
+
+* The Big Game (which can be shared from any Big Game level)
+* The Free Play puzzles that show up at the end of most stages
+* Mini projects like Rocket Height, Sam the Bat, and Luigi's Pizza
+* Anything the students have done in the standalone freeplay apps
+
+## What makes a good artifact to share
+
+Though it's tempting to focus only on the most impressive programs that your students have made, consider also looking for the following when identifying artifacts to share:
+
+* A program that was a major breakthrough for a struggling student
+* A problem that was solved in a unique way
+* Thourough use of examples that cover all potential inputs
+* Free play programs based on your own curriculum
+* Particularly effective use of the contract and purpose statement
+
+## Getting a shareable link
+
+To share out your student artifacts, you'll need to grab a shareable link. Programs that can be shared will have a **Share** button in the header that you can use to get the link
+
+![Share Link](/script_assets/pd/share.gif)
+
+<br><br>
+Click the “Continue” button below once you have gathered at least 3-5 student artifacts.
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

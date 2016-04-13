@@ -33,13 +33,13 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The foundation of this code is the same as the solution to the previous challenge puzzle...with a couple of changes.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_inspire_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try a `for` loop that goes from 3 to 10 with an increment of 1.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_inspire_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"There are two iterations of the same repeat loop inside the `for` loop, but the second repeat turns the opposite direction.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_inspire_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**  ![Solution](https://images.code.org/d619892fc17ff491c201d86bb917e523-image-1441005190828.12.30.png) \",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_inspire_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1,
     "for_loops": 1,
     "variables": 1
-  },
-  "notes": ""
+  }
 }]]></config>
   <blocks>
     <start_blocks>

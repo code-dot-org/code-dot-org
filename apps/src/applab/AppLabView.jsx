@@ -78,7 +78,7 @@ var AppLabView = React.createClass({
    * our minimum sizes, shrink the debugger, editor, and instructions pane equally
    */
   adjustTopPaneHeight: function () {
-    if (!this.props.instructionsInTopPane) {
+    if (!this.props.showInstructions) {
       return;
     }
 
