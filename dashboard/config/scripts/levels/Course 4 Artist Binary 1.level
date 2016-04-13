@@ -28,11 +28,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "images": "[{\"filename\":\"Halloween.svg\",\"position\":[0,0]}]",
+    "images": "[{\"filename\":\"binary_grid.svg\",\"position\":[0,0]}]",
     "never_autoplay_video": "false",
     "examples_required": "false"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1
@@ -289,19 +290,6 @@
         <block type="text">
           <title name="TEXT">0</title>
         </block>
-        <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-            <block type="colour_picker">
-              <title name="COLOUR">#000000</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-            <block type="colour_blend">
-      </block>
-          </value>
-        </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="binary"/>
@@ -547,10 +535,5 @@
         </block>
       </xml>
     </solution_blocks>
-    <predraw_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-      </xml>
-    </predraw_blocks>
   </blocks>
 </Artist>
