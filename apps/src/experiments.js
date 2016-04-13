@@ -1,11 +1,15 @@
 /**
  * This module contains logic for tracking various experiments. Experiments
  * can be enabled/disabled one of two ways
- * (1) enable: localStorage.set('experimentName', true)
- *     disable: localStorage.removeItem('experimentName')
+ * (1) enable: localStorage.set('experiments-experimentName', true)
+ *     disable: localStorage.removeItem('experiments-experimentName')
  * (2) Add a query param, i.e. http://foo.com?experimentName=true or
  *     http://foo.com?experimentName=false
  * The latter approach ends up toggling the localStorage state.
+ * As long as you check isEnabled once for some experiment, data for all
+ * experiments will be loaded from localStorage and the query params will be
+ * parsed.
+ * To support a new experiment, just add it as a key in experimentList
  */
 var experiments = module.exports;
 
@@ -42,9 +46,9 @@ function processQueryParams(queryString) {
     if (match) {
       var val = match[1] === 'true';
       if (val) {
-        localStorage.setItem(key, val);
+        localStorage.setItem('experiments-' + key, val);
       } else {
-        localStorage.removeItem(key);
+        localStorage.removeItem('experiments-' + key);
       }
       experimentList[key] = val;
     }
@@ -56,7 +60,7 @@ function processQueryParams(queryString) {
  */
 function loadFromLocalStorage() {
   Object.keys(experimentList).forEach(function (key) {
-    if (localStorage.getItem(key) === "true") {
+    if (localStorage.getItem('experiments-' + key) === "true") {
       experimentList[key] = true;
     }
   });
