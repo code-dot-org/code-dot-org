@@ -15,46 +15,46 @@ describe('experiments', function () {
 
   beforeEach(function () {
     experiments.__TestInterface__.reset();
-    localStorage.removeItem('topInstructions');
-    localStorage.removeItem('runModeIndicators');
+    localStorage.removeItem('experiments-topInstructions');
+    localStorage.removeItem('experiments-runModeIndicators');
   });
 
   it('can toggle an existing experiment', function () {
     assert.strictEqual(experiments.isEnabled('topInstructions'), false);
-    assert.strictEqual(localStorage.getItem('topInstructions'), null);
+    assert.strictEqual(localStorage.getItem('experiments-topInstructions'), null);
 
     processQueryParams('?topInstructions=true');
     assert.strictEqual(experiments.isEnabled('topInstructions'), true);
-    assert.strictEqual(localStorage.getItem('topInstructions'), 'true');
+    assert.strictEqual(localStorage.getItem('experiments-topInstructions'), 'true');
 
     processQueryParams('?topInstructions=false');
     assert.strictEqual(experiments.isEnabled('topInstructions'), false);
-    assert.strictEqual(localStorage.getItem('topInstructions'), null);
+    assert.strictEqual(localStorage.getItem('experiments-topInstructions'), null);
   });
 
   it('can toggle multiple experiments', function () {
     assert.strictEqual(experiments.isEnabled('topInstructions'), false);
-    assert.strictEqual(localStorage.getItem('topInstructions'), null);
+    assert.strictEqual(localStorage.getItem('experiments-topInstructions'), null);
     assert.strictEqual(experiments.isEnabled('runModeIndicators'), false);
-    assert.strictEqual(localStorage.getItem('runModeIndicators'), null);
+    assert.strictEqual(localStorage.getItem('experiments-runModeIndicators'), null);
 
     processQueryParams('?topInstructions=true&runModeIndicators=true');
     assert.strictEqual(experiments.isEnabled('topInstructions'), true);
-    assert.strictEqual(localStorage.getItem('topInstructions'), 'true');
+    assert.strictEqual(localStorage.getItem('experiments-topInstructions'), 'true');
     assert.strictEqual(experiments.isEnabled('runModeIndicators'), true);
-    assert.strictEqual(localStorage.getItem('runModeIndicators'), 'true');
+    assert.strictEqual(localStorage.getItem('experiments-runModeIndicators'), 'true');
   });
 
   it('ignores unknown experiments', function () {
     processQueryParams('?notatest=true');
     assert.strictEqual(experiments.isEnabled('notatest'), false);
-    assert.strictEqual(localStorage.getItem('notatest'), null);
+    assert.strictEqual(localStorage.getItem('experiments-notatest'), null);
   });
 
   it('can load from localStorage', function () {
     assert.strictEqual(experiments.isEnabled('topInstructions'), false);
 
-    localStorage.setItem('topInstructions', true);
+    localStorage.setItem('experiments-topInstructions', true);
     loadFromLocalStorage();
     assert.strictEqual(experiments.isEnabled('topInstructions'), true);
   });
