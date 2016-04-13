@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-04-13T02:32:54.000Z",
+  "created_at": "2016-04-13T20:17:33.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -182,7 +182,7 @@
     "debugger_disabled": "false",
     "project_template_level_name": "U3 - Simple Drawing - Rings Template",
     "instructions": "Do this",
-    "markdown_instructions": "# Color, Stroke, Stroke Weight and No Fill\r\n\r\nLets start adding color!\r\n\r\nThe first thing we are going to want to do is remove the fill from the ellipses so that they only will have an outline\r\n\r\nWe will change the look of the outline\r\n\r\nWe can change the look of the outline using Stroke which sets the color of the outline\r\n\r\nWe could use 'red' and 'orange' etc but those might not be true to the actual colors of the rainbow\r\n\r\ninstead we can say color(r,g,b) where this works just like the rgb we saw in HTML and CSS\r\n\r\nstroke needs to go before the objects it is working on just like fill\r\n\r\n# Do This\r\n\r\n* Add noFill as the first line in the program so that the gray middle of all the shapes disappears\r\n* Set the stroke for each ring of the rainbow to the appropriate color given below\r\n\r\n| Color | RGB Values |\r\n|---|---|\r\n| red | (255,0,0) |\r\n| orange | (255,127,0) |\r\n| yellow | (255, 255, 0) |\r\n| green | (0,255,0) |\r\n| blue | (0, 0, 255) |\r\n| indigo | (75, 0, 130) |\r\n| violet | (139, 0, 255) |\r\n\r\n\r\n"
+    "markdown_instructions": "# No Fill and No Stroke\r\n\r\nThe first thing we are going to want to do is remove the fill from the ellipses so that they only will have an outline\r\n\r\nWe will change the look of the outline\r\n\r\nWe can change the look of the outline using Stroke which sets the color of the outline\r\n\r\nWe could use 'red' and 'orange' etc but those might not be true to the actual colors of the rainbow\r\n\r\ninstead we can say color(r,g,b) where this works just like the rgb we saw in HTML and CSS\r\n\r\nstroke needs to go before the objects it is working on just like fill\r\n\r\n# Do This\r\n\r\n* Add noFill as the first line in the program so that the gray middle of all the shapes disappears\r\n* Notice that the fill disappeared for the grass add Fill for grass\r\n* Remove the border on the grass by using noStroke\r\n\r\n\r\n"
   },
   "published": true,
   "notes": "",
