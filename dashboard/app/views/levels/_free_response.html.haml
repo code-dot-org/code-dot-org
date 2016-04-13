@@ -22,7 +22,8 @@
     }
 
 .free-response
-  %h2= level.title if level.title && !index
+  - if level.title.present? && !index
+    %h2= level.title
   %div= render(inline: level.markdown_instructions, type: :md)
 
   - height = level.height || '80'
