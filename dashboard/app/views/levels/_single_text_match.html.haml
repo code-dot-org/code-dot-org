@@ -20,12 +20,10 @@
 - if standalone || @script_level
   :javascript
 
-    $(document).ready(function() {
-      window["level_#{index}"] = new TextMatch(
-        "level_#{index}",
-        #{level.id},
-        #{standalone},
-        #{data['answers'] || []},
-        #{last_attempt.to_json}
-        );
-      });
+    window.levelGroup.results[#{level.id}] = new TextMatch(
+      "level_#{index}",
+      #{level.id},
+      #{standalone},
+      #{data['answers'] || []},
+      #{last_attempt.to_json}
+    );

@@ -2,7 +2,12 @@
 - data = @level.properties
 
 :javascript
+  #{render template: 'levels/multi.js', formats: [:js]}
+  #{render template: 'levels/textMatch.js', formats: [:js]}
+  #{render template: 'levels/levelGroup.js', formats: [:js]}
+
   window.levelData = #{data.to_json};
+  window.levelGroup = {results: {}};
 
 = render partial: 'levels/common_audio'
 
@@ -54,11 +59,6 @@
 
 - unless @script_level.nil?
   :javascript
-    #{render template: 'levels/multi.js', formats: [:js]}
-    #{render template: 'levels/textMatch.js', formats: [:js]}
-
-    #{render template: 'levels/levelGroup.js', formats: [:js]}
-
     var levelCount = #{@pages[0].levels.length};
     var page = #{current_page || -1};
 
