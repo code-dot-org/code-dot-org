@@ -13,6 +13,7 @@ var ApplabInterfaceMode = constants.ApplabInterfaceMode;
 
 var PlaySpaceHeader = React.createClass({
   propTypes: {
+    channelId: React.PropTypes.string.isRequired,
     isDesignModeHidden: React.PropTypes.bool.isRequired,
     isEditingProject: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
