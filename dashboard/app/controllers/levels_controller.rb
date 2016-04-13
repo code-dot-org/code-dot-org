@@ -52,11 +52,13 @@ class LevelsController < ApplicationController
     # types
     toolbox_blocks = @level.complete_toolbox(type)
 
-    # Levels which support solution blocks use those blocks as the
-    # toolbox for required and recommended block editors, plus the
-    # special "pick one" block
-    if @level.respond_to?("get_solution_blocks") &&
-        (type == 'required_blocks' || type == 'recommended_blocks')
+    # Levels which support (and have )solution blocks use those blocks
+    # as the toolbox for required and recommended block editors, plus
+    # the special "pick one" block
+    can_use_solution_blocks = @level.respond_to?("get_solution_blocks") &&
+        @level.properties['solution_blocks']
+    should_use_solution_blocks = type == 'required_blocks' || type == 'recommended_blocks'
+    if can_use_solution_blocks && should_use_solution_blocks
       blocks = @level.get_solution_blocks + ["<block type=\"pick_one\"></block>"]
       toolbox_blocks = "<xml>#{blocks.join('')}</xml>"
     end
