@@ -44,7 +44,18 @@
     "definition_collapse": "false",
     "disable_examples": "false"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "repeat_until_while": 1,
+    "for_loops": 1,
+    "events": 1,
+    "variables": 1,
+    "functions": 1,
+    "functions_with_params": 1,
+    "conditionals": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
